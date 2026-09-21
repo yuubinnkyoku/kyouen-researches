@@ -1,0 +1,105 @@
+# Preregistration: F-E R-outside 4-stone holdout
+
+Date: 2026-09-21
+Base: `224f0dae89f95bfafa20290e872d96b9567dc6d7`
+Status: **FROZEN BEFORE HOLDOUT OUTCOMES ARE COLLECTED OR INSPECTED**
+
+## Question
+
+Finding F-E was discovered inside the 70 four-stone subsets of the selected 8-stone LOSS route R = `{90,61,2,73,69,66,13,91}`. In that development set, LOSS states have larger `Sigma d` than WIN states. This experiment asks only whether the **direction** generalizes outside R:
+
+`P(LOSS | high Sigma d) > P(LOSS | low Sigma d)`.
+
+No claim about the R-development effect size is required for success.
+
+## Clean universe
+
+1. Enumerate all 10x10 four-stone states and reduce by the solver's D4 canonicalization.
+2. Require the state itself to be legal/safe (it contains no dangerous four-point set).
+3. Exclude every state whose four stones are a subset of R.
+4. Exclude every D4 orbit whose four-stone state/outcome occurs anywhere in git history at freeze base `224f0da`, including result CSV/JSON, certificates, probe/holdout/benchmark artifacts, docs containing explicit labelled states, and outcome caches. Exclusion is by canonical key, not raw spelling.
+5. Selection code may use geometry and `Sigma d`, but MUST NOT read game outcome, solver memo, proof witness, visited count, or any descendant-derived feature.
+
+The exclusion list and its source-path audit are frozen before solving any selected state.
+
+## Geometry score
+
+For each board point p, `d(p)` is the exact number of 10x10 dangerous quadruples (concyclic or collinear) containing p, computed by integer determinant as in `scripts/analysis/quadruple_stats.py`.
+
+For state S, `Sigma d(S) = sum(d(p) for p in S)`.
+
+No alternate geometry score may replace or be combined with this score on this holdout.
+
+## Frozen sampling
+
+After exclusions, sort the clean canonical universe by `Sigma d` and define three strata by rank:
+
+- LOW: bottom 20%
+- MID: middle 20% centered on the median (40th through <60th percentile)
+- HIGH: top 20%
+
+Within each stratum rank candidates by ascending
+
+`SHA256("kyouen-10x10-f-e-r-outside-v1-20260921:" + canonical_state)`.
+
+Select the first 12 states per stratum: 36 states total. Ties at percentile boundaries are resolved by `(Sigma d, canonical_state)` before percentile slicing. No replacement or state dropping is allowed after the 36-state manifest is frozen, except a solver/infrastructure failure that prevents an exact result; every such failure remains in the report and is not replaced.
+
+Before exact solving, commit:
+
+- this preregistration;
+- complete canonical exclusion list plus source audit;
+- clean-universe counts and stratum boundaries;
+- the 36-state sampling manifest containing raw/canonical state, stratum, `Sigma d`, and selection hash;
+- solver source commit/digest and exact-run protocol.
+
+## Exact solving
+
+Use the repository's validated 10x10 exact solver with a fresh process and fresh memo for each state. Use the same fixed solver configuration for all 36 states. Exact classification has no visited-node budget; resource/time failures are censored failures, not outcomes and not reasons to substitute another state.
+
+Raw solver output must be committed before aggregate endpoint analysis.
+
+## Primary endpoint
+
+Primary statistic:
+
+`Delta = LOSS_rate(HIGH) - LOSS_rate(LOW)`.
+
+Success criterion: `Delta > 0`.
+
+Report the raw 2x2 HIGH/LOW counts and an exact two-sided Fisher test as descriptive uncertainty. The sign criterion, not p<0.05, is the preregistered success rule because n=24 for the primary contrast is intentionally a small confirmatory screen.
+
+If either HIGH or LOW has an unsolved/censored state, primary status is `INCOMPLETE`; do not silently analyze only completed states as the confirmatory endpoint.
+
+## Secondary endpoints
+
+On all 36 completed states, report without changing the primary decision:
+
+1. AUC for `Sigma d` discriminating LOSS from WIN (LOSS is positive).
+2. Rank-biserial effect size.
+3. Mean and median `Sigma d` by outcome.
+4. Spearman association between `Sigma d` and binary LOSS label.
+5. LOW/MID/HIGH LOSS counts and rates.
+6. Exact conditional label-randomization statistic for the observed number of LOSS labels, clearly marked descriptive because sampled states are not an iid population sample.
+7. Exact visited and wall-time distributions by stratum/outcome as exploratory solver-cost diagnostics only.
+
+## Interpretation gates
+
+- `Delta > 0`: F-E's **direction** survives a clean R-outside holdout; R-specific combinatorics alone no longer explain the observation.
+- `Delta = 0`: no directional replication.
+- `Delta < 0`: directional contradiction on this holdout.
+- The cohort MUST NOT be enlarged, strata changed, or seed changed after labels are inspected. Any revised hypothesis requires a new holdout.
+- Because selection deliberately samples score extremes, the observed LOSS rates are not estimates of the unconditional prevalence of LOSS among all four-stone states.
+
+## Non-claims
+
+This experiment does not establish causality of `Sigma d`, does not estimate the population LOSS rate, does not validate a move-order heuristic, and does not turn the within-R label-randomization p-value into a population significance claim.
+
+## Planned artifacts
+
+- `results/10x10/f-e-r-outside-holdout/exclusion.csv`
+- `results/10x10/f-e-r-outside-holdout/exclusion_audit.json`
+- `results/10x10/f-e-r-outside-holdout/sampling_manifest.csv`
+- `results/10x10/f-e-r-outside-holdout/sampling_manifest.json`
+- `results/10x10/f-e-r-outside-holdout/exact_raw.csv`
+- `results/10x10/f-e-r-outside-holdout/summary.json`
+- `results/10x10/f-e-r-outside-holdout/REPORT.md`
