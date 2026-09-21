@@ -32,17 +32,21 @@ No alternate geometry score may replace or be combined with this score on this h
 
 ## Frozen sampling
 
-After exclusions, sort the clean canonical universe by `Sigma d` and define three strata by rank:
+After exclusions, sort the clean canonical universe by the tuple `(Sigma d, canonical_state)`. Let `N` be its size and `q = floor(N/5)`. Define the strata by exact Python-style half-open slices of that sorted list:
 
-- LOW: bottom 20%
-- MID: middle 20% centered on the median (40th through <60th percentile)
-- HIGH: top 20%
+- LOW: `sorted_states[0:q]`
+- MID: `sorted_states[floor(2*N/5):floor(3*N/5)]`
+- HIGH: `sorted_states[N-q:N]`
 
-Within each stratum rank candidates by ascending
+Thus LOW and HIGH each contain exactly `floor(N/5)` states; MID uses the fixed 40%-to-60% rank interval. No alternate percentile convention or rounding rule is permitted.
 
-`SHA256("kyouen-10x10-f-e-r-outside-v1-20260921:" + canonical_state)`.
+`canonical_state` has one frozen textual serialization everywhere selection or hashing depends on it: sort the four canonical point IDs numerically ascending, encode each as unsigned ASCII decimal with no leading zeros, and join them with a single ASCII comma. There are no brackets, spaces, quotes, or trailing newline. Example: the state with point IDs 4, 9, 33, 57 serializes exactly as `4,9,33,57`.
 
-Select the first 12 states per stratum: 36 states total. Ties at percentile boundaries are resolved by `(Sigma d, canonical_state)` before percentile slicing. No replacement or state dropping is allowed after the 36-state manifest is frozen, except a solver/infrastructure failure that prevents an exact result; every such failure remains in the report and is not replaced.
+Within each stratum rank candidates by ascending SHA-256 digest interpreted lexicographically as its 64-character lowercase hexadecimal representation. The hashed byte string is exactly UTF-8/ASCII
+
+`kyouen-10x10-f-e-r-outside-v1-20260921:` + `canonical_state`
+
+with no BOM, NUL, whitespace, or newline before or after it. Select the first 12 states per stratum: 36 states total. Because `(Sigma d, canonical_state)` totally orders the pre-slice universe and SHA-256 of the frozen serialization orders candidates within a stratum, no implementation-dependent tie handling remains. No replacement or state dropping is allowed after the 36-state manifest is frozen, except a solver/infrastructure failure that prevents an exact result; every such failure remains in the report and is not replaced.
 
 Before exact solving, commit:
 
