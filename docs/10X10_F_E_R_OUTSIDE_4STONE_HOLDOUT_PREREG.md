@@ -16,7 +16,7 @@ No claim about the R-development effect size is required for success.
 
 1. Enumerate all 10x10 four-stone states and reduce by the solver's D4 canonicalization.
 2. Require the state itself to be legal/safe (it contains no dangerous four-point set).
-3. Exclude every state whose four stones are a subset of R.
+3. Exclude the **entire D4 orbit** of every four-stone subset of R. Operationally, canonicalize all `C(8,4)=70` development states first, collect their canonical keys, and exclude those keys from the canonical universe. Merely testing whether the chosen canonical representative is literally a subset of the raw R is insufficient, because a D4-equivalent representative need not use point IDs from R.
 4. Exclude every D4 orbit whose four-stone state/outcome occurs anywhere in git history at freeze base `224f0da`, including result CSV/JSON, certificates, probe/holdout/benchmark artifacts, docs containing explicit labelled states, and outcome caches. Exclusion is by canonical key, not raw spelling.
 5. Selection code may use geometry and `Sigma d`, but MUST NOT read game outcome, solver memo, proof witness, visited count, or any descendant-derived feature.
 
