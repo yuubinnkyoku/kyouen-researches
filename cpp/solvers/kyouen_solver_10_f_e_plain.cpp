@@ -410,10 +410,10 @@ int main(int argc, char** argv) {
             std::string st = format_points(pts);
             try {
                 auto r = solver.solve_root(pts);
-                std::cout << st << ',' << r.outcome << ',' << r.visited_delta << ','
+                std::cout << '"' << st << '"' << ',' << r.outcome << ',' << r.visited_delta << ','
                           << r.memo_used << ',' << r.seconds << '\n';
             } catch (const std::exception& e) {
-                std::cout << st << ",ERROR,0,0,0\n";
+                std::cout << '"' << st << '"' << ",ERROR,0,0,0\n";
                 std::cerr << "error on " << st << ": " << e.what() << "\n";
             }
         }

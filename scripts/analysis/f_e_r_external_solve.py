@@ -70,7 +70,7 @@ def main() -> None:
     if OUT_CSV.exists():
         with OUT_CSV.open(newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):
-                completed.add(r["state"])
+                completed.add(r.get("raw_state") or r.get("state"))
     pending = [r for r in rows if r["raw_state"] not in completed]
     print(f"pending={len(pending)} completed={len(completed)}", flush=True)
 
@@ -138,7 +138,7 @@ def main() -> None:
         )
         out_f.flush()
         print(
-            f"[{row['index']:02d}/{len(rows)}] {state} {outcome} "
+            f"[{int(row['index']):02d}/{len(rows)}] {state} {outcome} "
             f"visited={visited} wall={wall:.1f}s",
             flush=True,
         )
