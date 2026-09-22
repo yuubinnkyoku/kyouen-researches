@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 """Audit historical 4-stone outcome labels reachable from a frozen git commit.
 
-This deliberately walks commits and their trees, rather than only the current
-checkout or `git rev-list --objects`, so every detected label retains exact
-(commit, path, blob) provenance. Blob contents are parsed once per blob SHA.
-
-The extractor is conservative: it only accepts explicit 4-point states paired
-with an explicit WIN/LOSS token in CSV or JSON/text-like records. Ambiguous
-content is counted but not silently promoted to a known label.
+Walk every commit/tree reachable from the frozen base so every finding keeps
+exact (commit, path, blob) provenance.  Automatic exclusions are deliberately
+limited to structured records that explicitly bind a state field to an outcome
+field.  Unstructured text/source is never promoted automatically: suspicious
+provenances are emitted for review instead.
 """
 from __future__ import annotations
 
@@ -15,13 +13,20 @@ import argparse
 import csv
 import io
 import json
+import os
 import re
 import subprocess
 from collections import defaultdict
 
 STATE_RE = re.compile(r"(?<!\d)(\d{1,2})\s*,\s*(\d{1,2})\s*,\s*(\d{1,2})\s*,\s*(\d{1,2})(?!\d)")
 OUTCOME_RE = re.compile(r"\b(WIN|LOSS)\b", re.I)
-TEXT_EXT = {'.csv','.json','.jsonl','.md','.txt','.log','.tsv'}
+STRUCTURED_EXT = {'.csv', '.tsv', '.json', '.jsonl'}
+REVIEW_EXT = {
+    '.md', '.txt', '.log', '.py', '.pyi', '.cpp', '.cc', '.cxx', '.c', '.h',
+    '.hpp', '.inc', '.rs', '.sh', '.ps1', '.yml', '.yaml', '.toml'
+}
+STATE_KEYS = ('state', 'position', 'stones')
+OUTCOME_KEYS = ('outcome', 'result', 'label')
 
 
 def git(*args: str, binary: bool = False):
@@ -30,8 +35,7 @@ def git(*args: str, binary: bool = False):
 
 
 def canonical(st):
-    pts = tuple(sorted(st))
-    best = None
+    pts = tuple(sorted(st)); best = None
     for t in range(8):
         q=[]
         for p in pts:
@@ -45,40 +49,97 @@ def canonical(st):
             elif t==6: a,b=y,x
             else: a,b=9-y,9-x
             q.append(b*10+a)
-        z=tuple(sorted(q))
-        best=z if best is None or z<best else best
+        z=tuple(sorted(q)); best=z if best is None or z<best else best
     return ','.join(map(str,best))
 
 
 def valid_state(xs):
-    return len(set(xs))==4 and all(0 <= x < 100 for x in xs)
+    return len(set(xs)) == 4 and all(0 <= x < 100 for x in xs)
 
 
-def parse_csv(text):
+def state_from_value(v):
+    if isinstance(v, (list, tuple)) and len(v) == 4 and all(isinstance(x, int) and not isinstance(x, bool) for x in v):
+        xs=tuple(v)
+    elif isinstance(v, str):
+        m=STATE_RE.fullmatch(v.strip())
+        if not m: return None
+        xs=tuple(map(int,m.groups()))
+    else:
+        return None
+    return xs if valid_state(xs) else None
+
+
+def explicit_record(obj):
+    if not isinstance(obj, dict): return None
+    lower={str(k).lower():k for k in obj}
+    sk=next((lower[k] for k in STATE_KEYS if k in lower),None)
+    ok=next((lower[k] for k in OUTCOME_KEYS if k in lower),None)
+    if sk is None or ok is None: return None
+    xs=state_from_value(obj.get(sk)); outcome=str(obj.get(ok, '')).strip().upper()
+    if xs is None or outcome not in {'WIN','LOSS'}: return None
+    return canonical(xs), outcome
+
+
+def parse_delimited(text, delimiter):
     out=[]
-    try: rows=list(csv.DictReader(io.StringIO(text)))
+    try: rows=csv.DictReader(io.StringIO(text), delimiter=delimiter)
     except csv.Error: return out
-    for i,r in enumerate(rows,2):
-        keys={str(k).lower():k for k in r if k is not None}
-        sk=next((keys[k] for k in ('state','position','stones') if k in keys),None)
-        ok=next((keys[k] for k in ('outcome','result','label') if k in keys),None)
-        if sk is None or ok is None: continue
-        m=STATE_RE.fullmatch((r.get(sk) or '').strip())
-        val=(r.get(ok) or '').strip().upper()
-        if m and val in {'WIN','LOSS'}:
-            xs=tuple(map(int,m.groups()))
-            if valid_state(xs): out.append((canonical(xs),val,f'row:{i}'))
+    try:
+        for i,r in enumerate(rows,2):
+            hit=explicit_record(r)
+            if hit: out.append((*hit,f'row:{i}'))
+    except csv.Error:
+        return out
     return out
 
 
-def parse_lines(text):
+def walk_json(obj, loc='$'):
     out=[]
-    for i,line in enumerate(text.splitlines(),1):
-        ms=list(STATE_RE.finditer(line)); os=list(OUTCOME_RE.finditer(line))
-        if len(ms)==1 and len(os)==1:
-            xs=tuple(map(int,ms[0].groups()))
-            if valid_state(xs): out.append((canonical(xs),os[0].group(1).upper(),f'line:{i}'))
+    hit=explicit_record(obj)
+    if hit: out.append((*hit,loc))
+    if isinstance(obj, dict):
+        for k,v in obj.items(): out.extend(walk_json(v, f'{loc}.{k}'))
+    elif isinstance(obj, list):
+        for i,v in enumerate(obj): out.extend(walk_json(v, f'{loc}[{i}]'))
     return out
+
+
+def parse_json(text, jsonl=False):
+    out=[]
+    try:
+        if jsonl:
+            for i,line in enumerate(text.splitlines(),1):
+                if not line.strip(): continue
+                obj=json.loads(line)
+                out.extend(walk_json(obj, f'line:{i}'))
+        else:
+            out=walk_json(json.loads(text))
+    except (json.JSONDecodeError, TypeError):
+        return []
+    return out
+
+
+def parser_kind(path):
+    ext=os.path.splitext(path.lower())[1]
+    if ext == '.csv': return 'csv'
+    if ext == '.tsv': return 'tsv'
+    if ext == '.json': return 'json'
+    if ext == '.jsonl': return 'jsonl'
+    if ext in REVIEW_EXT: return 'review'
+    return None
+
+
+def review_hits(text, radius=3):
+    lines=text.splitlines(); hits=[]
+    state_lines={i for i,line in enumerate(lines) if STATE_RE.search(line)}
+    outcome_lines={i for i,line in enumerate(lines) if OUTCOME_RE.search(line)}
+    for i in sorted(state_lines):
+        near=[j for j in outcome_lines if abs(j-i) <= radius]
+        if not near: continue
+        lo=max(0,min([i,*near])-radius); hi=min(len(lines),max([i,*near])+radius+1)
+        hits.append({'state_line':i+1,'outcome_lines':[j+1 for j in near],
+                     'context_start':lo+1,'context':'\n'.join(lines[lo:hi])})
+    return hits
 
 
 def main():
@@ -94,27 +155,55 @@ def main():
             if not rec: continue
             meta,path=rec.split(b'\t',1); mode,typ,sha=meta.decode().split()
             if typ=='blob': blob_prov[sha].append((c,path.decode('utf-8','surrogateescape')))
+
     labels=defaultdict(lambda: {'WIN':[], 'LOSS':[]})
-    stats={'commits':len(commits),'unique_blobs':len(blob_prov),'text_blobs':0,'decoded_blobs':0,'skipped_binary_or_nontext':0,'ambiguous_decode':0}
-    parsed_cache={}
+    review=[]
+    stats={'commits':len(commits),'unique_blobs':len(blob_prov),'candidate_blobs':0,
+           'decoded_blobs':0,'skipped_binary_or_nontext':0,'ambiguous_decode':0,
+           'structured_provenances':0,'review_candidate_provenances':0}
+    text_cache={}; parse_cache={}; review_cache={}
+
     for sha,prov in blob_prov.items():
-        paths=[p for _,p in prov]
-        if not any('.'+p.rsplit('.',1)[-1].lower() in TEXT_EXT for p in paths if '.' in p):
+        relevant=[(c,p,parser_kind(p)) for c,p in prov if parser_kind(p) is not None]
+        if not relevant:
             stats['skipped_binary_or_nontext']+=1; continue
-        stats['text_blobs']+=1
-        data=git('cat-file','blob',sha,binary=True)
-        try: text=data.decode('utf-8')
-        except UnicodeDecodeError:
+        stats['candidate_blobs']+=1
+        if sha not in text_cache:
+            data=git('cat-file','blob',sha,binary=True)
+            try: text_cache[sha]=data.decode('utf-8')
+            except UnicodeDecodeError: text_cache[sha]=None
+        text=text_cache[sha]
+        if text is None:
             stats['ambiguous_decode']+=1; continue
         stats['decoded_blobs']+=1
-        parsed=parse_csv(text) if any(p.lower().endswith(('.csv','.tsv')) for p in paths) else parse_lines(text)
-        parsed_cache[sha]=parsed
-        for key,outcome,loc in parsed:
-            for c,p in prov: labels[key][outcome].append({'commit':c,'path':p,'blob':sha,'location':loc})
+
+        for c,p,kind in relevant:
+            if kind == 'review':
+                key=(sha,'review')
+                if key not in review_cache: review_cache[key]=review_hits(text)
+                if review_cache[key]:
+                    stats['review_candidate_provenances']+=1
+                    review.append({'commit':c,'path':p,'blob':sha,'hits':review_cache[key]})
+                continue
+
+            stats['structured_provenances']+=1
+            key=(sha,kind)
+            if key not in parse_cache:
+                if kind == 'csv': parsed=parse_delimited(text, ',')
+                elif kind == 'tsv': parsed=parse_delimited(text, '\t')
+                elif kind == 'json': parsed=parse_json(text)
+                else: parsed=parse_json(text, jsonl=True)
+                parse_cache[key]=parsed
+            for state,outcome,loc in parse_cache[key]:
+                labels[state][outcome].append({'commit':c,'path':p,'blob':sha,'location':loc})
+
     conflicts={k:v for k,v in labels.items() if v['WIN'] and v['LOSS']}
-    report={'base':a.base,'stats':stats,'canonical_keys':len(labels),'conflict_keys':len(conflicts),'labels':dict(labels),'conflicts':conflicts}
-    print(json.dumps({k:v for k,v in report.items() if k not in {'labels','conflicts'}},indent=2))
+    report={'base':a.base,'stats':stats,'canonical_keys':len(labels),
+            'conflict_keys':len(conflicts),'manifest_gate_open':not conflicts and not review,
+            'labels':dict(labels),'conflicts':conflicts,'review_candidate_provenances':review}
+    print(json.dumps({k:v for k,v in report.items() if k not in {'labels','conflicts','review_candidate_provenances'}},indent=2))
     if conflicts: print(f'WARNING: {len(conflicts)} canonical keys have both WIN and LOSS', flush=True)
+    if review: print(f'BLOCKED: {len(review)} review candidate provenances remain', flush=True)
     if a.json_out:
         with open(a.json_out,'w',encoding='utf-8') as f: json.dump(report,f,ensure_ascii=False,indent=2,sort_keys=True)
 
