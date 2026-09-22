@@ -81,6 +81,10 @@ D4軌道14クラス（中心を除く）を独立に逐次探索した結果、*
 
 fixed rule / two-stone subset probe の盲検追試後に行った反例解析・訂正・棄却済み仮説・次の実験は [`docs/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md`](docs/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md) にまとめています。
 
+## 関連研究
+
+既存の公開研究では、3×3〜6×6の完全探索や、一般の共円ゲーム必勝判定の計算量に関する研究が確認されています。本リポジトリとの違い、7×7〜9×9への拡張、および新規性の主張範囲は [docs/RELATED_WORK.md](docs/RELATED_WORK.md) に整理しています。
+
 ## リポジトリ構成
 
 ```text
