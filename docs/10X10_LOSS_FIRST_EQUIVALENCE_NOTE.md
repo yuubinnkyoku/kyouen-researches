@@ -3,10 +3,11 @@
 Base: `224f0dae89f95bfafa20290e872d96b9567dc6d7`
 
 The confirmatory endpoint at `ec2d69f` found exact `visited` equality between
-loss-first-only (L) and full cache-aware (F) on all 12 frozen parents.  This
-note records a stronger observation: for the current solver semantics, the
-relevant equality is structural rather than merely an empirical property of
-that cohort.
+loss-first-only (L) and full cache-aware (F) on all 12 frozen parents. This
+note strengthens that observation: under the current solver semantics, L and F
+are structurally equivalent for `visited`, returned outcome, and recursive
+unknown-child order. The 12/12 equality is therefore expected, not an
+independent empirical effect of the cohort.
 
 ## Definitions
 
@@ -18,55 +19,85 @@ At a below-root nonterminal node, let B be the blind total order
 - F partitions children by cached class `LOSS < unknown < WIN` and sorts each
   class by the same B key.
 
-Therefore, whenever at least one cached LOSS exists, L and F have the same
-first child: the B-minimum cached LOSS.
+Cached child outcomes are consumed directly from the prefetched value. Only an
+unknown child is entered recursively. A cached LOSS makes the current node WIN
+and returns immediately; a cached WIN merely continues the child loop.
 
-## Lemma
+## Theorem: L and F are visited-equivalent
 
-For a visited nonterminal node with at least one prefetched cached-LOSS child,
-L and F perform the same work at that node and return WIN immediately.
+Consider any visited nonterminal node.
 
-Reason: the common first child already has cached outcome LOSS.  The child loop
-uses the prefetched value instead of recursion.  On `!cw`, the solver records
-the winning result and returns immediately, so no second child is inspected.
-Thus the relative order of the remaining cached LOSS, unknown, and cached WIN
-children is observationally irrelevant to `visited` and to the returned
-outcome at that node.
+### Case 1: at least one cached LOSS exists
 
-If there is no cached LOSS, L is exactly B.  F may still differ from B by
-moving unknown children before cached WIN children.  Consequently the only
-possible source of an F-vs-L `visited` difference is a node with **zero cached
-LOSS and at least one cached WIN whose placement relative to unknown children
-changes subsequent recursive work**.
+L and F choose the same first child: the B-minimum cached LOSS. Its cached
+outcome is consumed without recursion and the current node returns WIN
+immediately. No second child is inspected. Therefore all remaining ordering is
+irrelevant.
 
-## Consequence for the 12-parent endpoint
+### Case 2: no cached LOSS exists
 
-The result `L == F` for 12/12 parents does not by itself show that
-"multi-LOSS ordering" was empirically unimportant: under these solver
-semantics, ordering among cached LOSS children cannot matter after the first
-cached LOSS is selected.  The informative residual question is narrower:
+L is exactly B. F removes/interleaves cached-WIN children by moving every
+unknown child ahead of them, while preserving B order inside the unknown
+bucket.
 
-> Does cached-WIN demotion ever save visited work at nodes with no cached LOSS?
+This does not change recursive work. Under L, every cached-WIN child encountered
+before the next unknown child is consumed without recursion and cannot cause a
+return; it only continues the loop. Thus the sequence of recursively entered
+unknown children under L is exactly the B-projection onto unknown children.
+F visits exactly that same unknown projection, in exactly the same order.
+Cached-WIN evaluations do not increment `visited` and do not create a recursive
+memo update.
 
-The frozen cohort answers "not detectably here" because L and F are exactly
-equal end-to-end, but the multi-LOSS part is eliminated analytically rather
-than statistically.
+Inductively, both policies therefore enter the same recursive unknown states in
+the same order, see the same memo evolution at each recursive boundary, and
+return the same outcome with the same `visited` count.
 
-## Highest-value follow-up
+So cached-WIN demotion cannot improve `visited` in this solver. The only
+semantically active ordering operation in F is selecting the B-earliest cached
+LOSS before any recursive unknown work; L implements exactly that operation.
 
-Before adding expensive parent-to-child DAG logging, existing instrumentation
-can test the only remaining residual mechanism.  Add/derive counts at each
-depth for nodes satisfying:
+## Existing instrumentation is consistent with the theorem
 
-1. no prefetched cached LOSS;
-2. at least one prefetched cached WIN;
-3. at least one unknown child;
-4. F changes the first recursively-entered unknown child or the amount of work
-   before cutoff relative to B/L.
+The frozen 12-parent memo-instrumentation run contains 193,606,274 visited
+nonterminal nodes. It reports:
 
-If condition (1)-(3) is rare or absent in the frozen 12-parent traces, L==F is
-explained without invoking a broader DAG-convergence hypothesis.  If it is
-common yet still contributes zero delta, inspect those nodes before designing
-new heavy cohorts.
+- `nodes_cache_changes_first_child = 41,677,154`;
+- `actual_first_cached_loss = 80,710,588`;
+- `fallback_first_cached_loss = 60,736,764`.
+
+The first-child changes attributable to LOSS promotion are therefore
+`80,710,588 - 60,736,764 = 19,973,824`. The remaining
+`41,677,154 - 19,973,824 = 21,703,330` first-child changes (11.21% of all
+visited nonterminal nodes) are consistent with the no-LOSS cached-WIN-demotion
+case.
+
+That residual class is not rare. Yet the preregistered endpoint still has
+L == F exactly on all 12 parents. This is what the theorem predicts: moving a
+zero-recursion cached WIN out of the way can change the literal first child
+without changing the first recursively entered unknown child or `visited`.
+
+The older `full-change = 65,256,722` versus `first-change = 41,677,154` gap is
+also no longer a reason to expect a residual visited effect. Reordering later
+cached children can be syntactically common while remaining observationally
+irrelevant once recursive unknown order is unchanged.
+
+## Consequence for follow-up work
+
+Do not spend a new cohort measuring whether cached-WIN demotion explains the
+L/F difference: for `visited`, there is no such mechanism under these solver
+semantics. A small safety harness may still be useful to mechanically verify
+the theorem over synthetic child-class patterns and guard future solver
+changes, but it is not a research experiment.
+
+The mechanistic research question moves one level earlier:
+
+> Why does the memo contain a reusable cached LOSS at the right nodes, and what
+> search-DAG convergence or parent-to-child reuse creates those LOSS hits?
+
+The highest-value new instrumentation is therefore canonical parent→child reuse
+(depth 7/8 or the already identified high-impact depths), recording distinct
+parent counts and later reuse as cached LOSS/WIN. That targets the origin of
+the active signal rather than an ordering component now eliminated
+analytically.
 
 This refinement does not alter any frozen endpoint or success criterion.
