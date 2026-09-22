@@ -38,6 +38,37 @@ inside the prefix is kept identical for as long as possible.  The contrast
 therefore targets the *future value of memo state produced by that prefix*, not
 the immediate cost of traversing the prefix.
 
+## Invalidation implementation constraint
+
+The owner-event sidecar is sufficient for provenance counting, but by itself it
+does not provide an efficient way to enumerate every entry owned by one event
+at outer exit.  Do **not** silently reintroduce an O(table-size) scan at every
+outer exit merely to implement step 3 above.
+
+Prefer lazy logical invalidation.  In BPF mode, after an outer event exits, a
+lookup must behave as though any still-current entry with
+
+```
+origin_outer_event != 0 && origin_outer_event <= last_exited_outer_event
+```
+
+is absent.  A slot whose payload has been cleared/replaced must also have its
+owner metadata cleared/replaced, so a later occupant is never rejected because
+of an old owner id.
+
+The physical-table representation must preserve the production lookup/probing
+semantics.  In particular, if the memo table uses open addressing, a logically
+forgotten occupied slot must not be converted into a true empty slot in a way
+that terminates a probe chain early.  Use the table's existing deletion/tombstone
+semantics if present, or keep the physical occupancy/probe-chain marker while
+suppressing the forgotten payload as a hit.  If the table is direct-mapped or
+otherwise has no probe-chain dependency, ordinary physical clearing is allowed.
+
+This is an implementation constraint, not a change to the intervention: BPF
+must expose exactly the same memo state to subsequent solver logic as eager
+invalidation would, modulo representation-internal tombstones/occupancy needed
+to preserve lookup correctness.
+
 ## Primary causal quantity
 
 For each frozen parent, report
@@ -105,6 +136,11 @@ observational diagnostic.  BPF is a separate causal follow-up.
    replacement entry.
 6. A run containing no cached-LOSS prefix is bit-for-bit/endpoint identical
    between B and BPF.
+7. If lookup uses open addressing, construct a collision chain A -> B where A
+   is prefix-owned and B is not; after A is forgotten, B must remain findable.
+8. Compare lazy invalidation against a small reference memo that eagerly removes
+   forgotten entries over randomized insert/lookup/clear/outer-exit traces; hit
+   and miss results must agree.
 
 ## Priority
 
