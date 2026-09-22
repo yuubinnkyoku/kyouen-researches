@@ -20,6 +20,10 @@ No claim about the R-development effect size is required for success.
 4. Exclude every D4 orbit whose four-stone state/outcome occurs anywhere in git history at freeze base `224f0da`, including result CSV/JSON, certificates, probe/holdout/benchmark artifacts, docs containing explicit labelled states, and outcome caches. Exclusion is by canonical key, not raw spelling.
 5. Selection code may use geometry and `Sigma d`, but MUST NOT read game outcome, solver memo, proof witness, visited count, or any descendant-derived feature.
 
+For rule 4, **git history** is frozen operationally as every commit reachable by parent traversal from the full base SHA `224f0dae89f95bfafa20290e872d96b9567dc6d7`, including blobs that were later modified or deleted. An implementation that scans only the base checkout/tree is non-conforming. The audit must traverse the reachable commit/blob history (for example via `git rev-list --objects 224f0dae89f95bfafa20290e872d96b9567dc6d7`) and record enough provenance to identify the source commit and path for each excluded labelled four-stone canonical key. Commits or blobs that exist only on refs not reachable from the frozen base are outside this holdout's frozen knowledge set and MUST NOT be added later merely because they are visible at solve time.
+
+If a historical artifact cannot be parsed automatically (for example a binary/large certificate), it must be either (a) parsed by a deterministic documented extractor before the manifest is frozen, or (b) conservatively represented by a documented exclusion source derived without inspecting any selected holdout outcome. Silent omission because the blob is absent from the current checkout is not allowed.
+
 The exclusion list and its source-path audit are frozen before solving any selected state.
 
 ## Geometry score
