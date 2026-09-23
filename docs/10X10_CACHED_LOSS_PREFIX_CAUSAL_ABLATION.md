@@ -92,7 +92,16 @@ frozen semantics:
   occupant's owner id;
 - a stale copy of the same key is not a live existing memo entry. Recomputing
   that state may make it live again, and the new value/owner must then be
-  observable normally.
+  observable normally;
+- **do not reuse the production `Memo::u` counter as BPF logical occupancy.**
+  In the current table `u` increases only when a physical empty slot is first
+  occupied. Lazy forgetting leaves that slot physically occupied, so a later
+  tombstone reuse must not increment physical occupancy; conversely, logical
+  live occupancy must decrease when an owner becomes stale even though no slot
+  is touched at that moment. Keep the original physical-use counter semantics
+  unchanged for implementation diagnostics and maintain a separate BPF logical
+  live-entry count (or derive it only in an explicitly labelled audit scan).
+  Any reported B/BPF memo-size comparison must use the logical count, not `u`.
 
 Thus ownership is a property of the insertion that created the currently-live
 entry, not of the most recent `put` call that mentioned its key. This is needed
@@ -207,6 +216,12 @@ observational diagnostic. BPF is a separate causal follow-up.
     that intervention. This guards against owner bookkeeping, BPF-aware probing,
     or instrumentation accidentally perturbing the very prefix whose future
     memo value the experiment is supposed to isolate.
+13. On a tiny table, record both physical `u` and logical live-entry count.
+    After a prefix-owned entry becomes stale, require `u` to remain unchanged
+    while logical live count decreases by one; after reusing that tombstone,
+    require `u` still unchanged while logical live count increases by one.
+    Compare the logical count against the eager-deletion reference. This keeps
+    table-allocation bookkeeping from being mistaken for retained memo state.
 
 ## Priority
 
