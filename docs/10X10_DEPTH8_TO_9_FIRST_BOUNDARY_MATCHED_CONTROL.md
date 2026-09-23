@@ -29,6 +29,30 @@ The two variants must be forked from the identical pre-`t*` physical memo-table 
 
 Thus the treatment dose is exactly matched at the moment of intervention and cannot be altered by treatment-induced trajectory divergence.
 
+## Read-mask topology control
+
+Count matching does not by itself isolate memo value from hash-table topology. `D9LM1` and `D9WM1` necessarily invalidate different keys, so even with equal `k` they may create tombstones in different probe-chain locations. If tombstone placement changes later lookup/insertion/replacement behavior, part of `visited(D9LM1) - visited(D9WM1)` could be caused by physical deletion topology rather than by the unavailable LOSS versus WIN information.
+
+Before cohort execution, add a one-shot read-mask diagnostic using the same `t*`, the same frozen selected key sets, and the same exact pre-`t*` fork state:
+
+- `D9LM1R`: do not physically delete the selected LOSS entries. Mark their current occupant generation unreadable so a lookup of that exact key/generation is forced to behave as a memo miss;
+- `D9WM1R`: identically mask the selected WIN entries;
+- the underlying slot key/value/live state, probe-chain topology, occupancy counters, replacement bookkeeping, and owner metadata remain physically unchanged at `t*`;
+- once a masked key is recomputed and ordinarily written as a new occupant generation, that new generation is readable. The mask must not suppress future independently produced values for the same canonical key;
+- no additional mask is introduced after `t*`.
+
+The read-mask variants are diagnostics, not replacements for the frozen deletion intervention: they estimate the effect of withholding the selected memo information while holding immediate table topology fixed, whereas D9LM1/D9WM1 estimate the effect under actual forgetting semantics.
+
+Report `visited(D9LM1R)-visited(B)`, `visited(D9WM1R)-visited(B)`, and `visited(D9LM1R)-visited(D9WM1R)` beside the deletion results. Also report deletion-minus-mask deltas separately for LOSS and WIN.
+
+Interpretation:
+
+- if both deletion and read-mask contrasts favor LOSS by similar amounts, the LOSS-specific conclusion is robust to tombstone topology;
+- if deletion shows a large LOSS/WIN contrast but read-mask does not, do not attribute the deletion contrast to memo value alone; slot/probe/replacement effects or deletion semantics are implicated;
+- if read-mask shows a LOSS contrast but deletion attenuates or reverses it, physical deletion effects are opposing the informational effect.
+
+Do not require numerical equality between deletion and read-mask variants: they intentionally implement different forgetting semantics after recomputation.
+
 ## Primary measurements
 
 Per parent report:
@@ -61,4 +85,8 @@ Before cohort execution require:
 5. selected key sets obey the frozen slot/order-independent hash rule;
 6. non-target value entries at `t*` are untouched;
 7. all three variants return the same game-theoretic outcome;
-8. disabling the one-shot deletion reproduces B exactly, including visited count and the post-`t*` event trace.
+8. disabling the one-shot deletion reproduces B exactly, including visited count and the post-`t*` event trace;
+9. D9LM1R and D9WM1R use exactly the same selected canonical key sets as their deletion counterparts and have a physical-table digest identical to B immediately after mask installation when mask metadata itself is excluded from the digest;
+10. masked lookup must be observationally identical to an ordinary memo miss from the solver's point of view, except that the physical occupant is retained; a recomputed ordinary write must retire the old-generation mask;
+11. disabling mask enforcement reproduces B exactly, including visited count and post-`t*` event trace;
+12. B, D9LM1R, and D9WM1R must return the same game-theoretic outcome.
