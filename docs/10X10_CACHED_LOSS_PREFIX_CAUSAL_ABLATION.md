@@ -56,13 +56,35 @@ is absent.  A slot whose payload has been cleared/replaced must also have its
 owner metadata cleared/replaced, so a later occupant is never rejected because
 of an old owner id.
 
-The physical-table representation must preserve the production lookup/probing
-semantics.  In particular, if the memo table uses open addressing, a logically
-forgotten occupied slot must not be converted into a true empty slot in a way
-that terminates a probe chain early.  Use the table's existing deletion/tombstone
-semantics if present, or keep the physical occupancy/probe-chain marker while
-suppressing the forgotten payload as a hit.  If the table is direct-mapped or
-otherwise has no probe-chain dependency, ordinary physical clearing is allowed.
+The production `Memo` in `cpp/solvers/kyouen_solver_verify.cpp` is linear
+probing: `get` continues while `v[i] != 0` and stops at the first physically
+empty slot; `put` likewise probes occupied slots and inserts only at a physical
+empty slot.  It has no deletion/tombstone path.  Therefore merely suppressing a
+forgotten slot as a hit while leaving it permanently occupied is **not** an
+exact implementation of eager forgetting: forgotten entries would consume
+capacity forever, lengthen later probe chains, and could change insertion
+behaviour independently of the intended memo-state intervention.
+
+For BPF, treat a logically forgotten slot as a tombstone with the following
+frozen semantics:
+
+- lookup: it is never a hit, but probing continues through it;
+- insertion: remember the first logically forgotten slot encountered, continue
+  probing far enough to preserve ordinary same-key/update semantics, and if no
+  live copy of the key is found before the first true empty slot, insert into
+  the remembered forgotten slot (or the true empty slot if there was none);
+- replacement/reinsertion must write the new owner metadata from the *current*
+  context: current outer event id when inside a prefix, otherwise zero.  It must
+  never inherit the forgotten occupant's owner id;
+- a stale copy of the same key is not a live existing memo entry.  Recomputing
+  that state may make it live again, and the new value/owner must then be
+  observable normally.
+
+This gives forgotten slots the standard open-addressing tombstone role while
+allowing their capacity to be reclaimed.  It is required for the lazy BPF table
+to represent the same logical map as eager deletion without breaking collision
+chains.  A permanently occupied stale-slot implementation is prohibited even
+if its lookup hit/miss answers initially agree with an eager reference.
 
 This is an implementation constraint, not a change to the intervention: BPF
 must expose exactly the same memo state to subsequent solver logic as eager
@@ -136,11 +158,19 @@ observational diagnostic.  BPF is a separate causal follow-up.
    replacement entry.
 6. A run containing no cached-LOSS prefix is bit-for-bit/endpoint identical
    between B and BPF.
-7. If lookup uses open addressing, construct a collision chain A -> B where A
-   is prefix-owned and B is not; after A is forgotten, B must remain findable.
-8. Compare lazy invalidation against a small reference memo that eagerly removes
-   forgotten entries over randomized insert/lookup/clear/outer-exit traces; hit
-   and miss results must agree.
+7. For the production linear-probing table, construct a collision chain A -> B
+   where A is prefix-owned and B is not; after A is forgotten, B must remain
+   findable.
+8. Force insertion after a forgotten A in a collision chain and verify that A's
+   slot is reclaimable rather than permanently consuming capacity, while later
+   colliding live entries remain findable.
+9. Forget key A, recompute A, and insert it once outside a prefix and once inside
+   a new prefix.  Both must become live again with owner zero / the new owner,
+   respectively; the old owner must not survive.
+10. Compare lazy invalidation against a small reference memo that eagerly
+   removes forgotten entries over randomized insert/lookup/clear/outer-exit
+   traces.  Compare not only hit/miss/value answers but also logical live-entry
+   count; periodically force enough insertions to exercise stale-slot reuse.
 
 ## Priority
 
