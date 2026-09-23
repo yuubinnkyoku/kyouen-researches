@@ -101,7 +101,21 @@ frozen semantics:
   is touched at that moment. Keep the original physical-use counter semantics
   unchanged for implementation diagnostics and maintain a separate BPF logical
   live-entry count (or derive it only in an explicitly labelled audit scan).
-  Any reported B/BPF memo-size comparison must use the logical count, not `u`.
+  Any reported B/BPF memo-size comparison must use the logical count, not `u`;
+- **a separate logical-live counter still needs event-local accounting.** Lazy
+  invalidation deliberately avoids enumerating an event's slots at outer exit,
+  so `logical_live` cannot be decremented correctly from the owner sidecar alone
+  without either an O(table-size) scan or an additional count. Maintain
+  `active_owned_live`: reset it to zero on outer `0 -> 1`; increment it only
+  when a new live entry is inserted with the current active owner; decrement it
+  if such a currently-active-owned entry is cleared/replaced before outer exit;
+  do not change it for same-key live updates. On the matching `1 -> 0`, perform
+  `logical_live -= active_owned_live` in O(1), then advance
+  `last_exited_outer_event` and clear `active_owned_live`. Reinserting into an
+  old tombstone after that exit increments `logical_live` normally and, if it
+  occurs inside a later outer event, increments that later event's
+  `active_owned_live`. Assert `0 <= active_owned_live <= logical_live` and that
+  it is zero whenever outer depth is zero.
 
 Thus ownership is a property of the insertion that created the currently-live
 entry, not of the most recent `put` call that mentioned its key. This is needed
@@ -216,12 +230,16 @@ observational diagnostic. BPF is a separate causal follow-up.
     that intervention. This guards against owner bookkeeping, BPF-aware probing,
     or instrumentation accidentally perturbing the very prefix whose future
     memo value the experiment is supposed to isolate.
-13. On a tiny table, record both physical `u` and logical live-entry count.
-    After a prefix-owned entry becomes stale, require `u` to remain unchanged
-    while logical live count decreases by one; after reusing that tombstone,
-    require `u` still unchanged while logical live count increases by one.
-    Compare the logical count against the eager-deletion reference. This keeps
-    table-allocation bookkeeping from being mistaken for retained memo state.
+13. On a tiny table, record physical `u`, logical live-entry count, and
+    `active_owned_live`. Insert multiple current-event entries, perform a
+    same-key live update and remove/reuse one current-owned entry before exit,
+    and require `active_owned_live` to track exactly the surviving current-owner
+    entries. At outer exit require `logical_live` to drop by exactly that count
+    in O(1) while `u` remains unchanged and `active_owned_live` resets to zero.
+    After reusing a stale tombstone, require `u` still unchanged while logical
+    live count increases by one. Compare the logical count against the
+    eager-deletion reference. This checks both occupancy meaning and the
+    no-table-scan accounting needed by lazy invalidation.
 
 ## Priority
 
