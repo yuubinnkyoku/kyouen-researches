@@ -198,6 +198,15 @@ observational diagnostic. BPF is a separate causal follow-up.
     slot after at most one full probe cycle. Repeat with a completely live full
     table and require an explicit full-table failure rather than an infinite
     probe.
+12. On at least one real parent that contains a cached-LOSS prefix, run B and
+    BPF with a temporary deterministic trace digest over solver-visible events
+    (visited state/key, memo hit/miss/value, generated child order, memo writes,
+    and cached-LOSS prefix enter/exit). Require the digests and event counts to
+    be identical through and including the final solver-visible event before
+    the first outer `1 -> 0` invalidation point. Permit divergence only after
+    that intervention. This guards against owner bookkeeping, BPF-aware probing,
+    or instrumentation accidentally perturbing the very prefix whose future
+    memo value the experiment is supposed to isolate.
 
 ## Priority
 
