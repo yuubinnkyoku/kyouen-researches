@@ -53,6 +53,26 @@ Interpretation:
 
 Do not require numerical equality between deletion and read-mask variants: they intentionally implement different forgetting semantics after recomputation.
 
+## Baseline-demand exposure diagnostic
+
+Equalizing the number of selected entries still does not equalize the opportunity for those entries to matter. A selected LOSS key may simply be queried again more often, or sooner, than a selected WIN key. In that case a larger LOSS intervention effect would establish that the selected LOSS memo is more useful in the realized search, but would not by itself show that LOSS has greater value conditional on reuse opportunity.
+
+Freeze an additional diagnostic from the unmodified baseline B trace. For every entry eligible at `t*`, without changing the intervention selection rule, record its post-`t*` baseline demand before that occupant generation is replaced or otherwise ceases to be the same memo fact:
+
+- whether the canonical key is queried at least once;
+- distance in solver lookup events from `t*` to its first query, or `NONE`;
+- number of baseline lookups that would consume that exact memo fact while it remains live;
+- whether its first such lookup would be a cached-LOSS shortcut / cached-WIN consumption under B.
+
+Report these quantities separately for the frozen selected LOSS and WIN sets. In particular report `selected_with_future_demand / k`, median first-query distance among demanded entries, and total exact-generation baseline consumptions.
+
+This is an exposure diagnostic, not a new treatment and not a success criterion. Do not use post-intervention traces to redefine, rematch, or filter the selected sets. Do not discard undemanded selected entries. The baseline trace is fixed before either arm diverges and is used only to distinguish two mechanisms:
+
+- similar baseline demand exposure but a larger LOSS effect supports greater consequence per comparable reuse opportunity;
+- much greater baseline demand exposure for LOSS means the observed LOSS/WIN effect may be driven partly or wholly by where future search demand falls, which is itself a substantive mechanism but is weaker evidence for a value-label-specific effect.
+
+If desired after the frozen experiment is reported, a separately preregistered follow-up may match LOSS/WIN entries on baseline demand strata. It must not replace the frozen hash-selected result.
+
 ## Primary measurements
 
 Per parent report:
@@ -89,4 +109,5 @@ Before cohort execution require:
 9. D9LM1R and D9WM1R use exactly the same selected canonical key sets as their deletion counterparts and have a physical-table digest identical to B immediately after mask installation when mask metadata itself is excluded from the digest;
 10. masked lookup must be observationally identical to an ordinary memo miss from the solver's point of view, except that the physical occupant is retained; a recomputed ordinary write must retire the old-generation mask;
 11. disabling mask enforcement reproduces B exactly, including visited count and post-`t*` event trace;
-12. B, D9LM1R, and D9WM1R must return the same game-theoretic outcome.
+12. B, D9LM1R, and D9WM1R must return the same game-theoretic outcome;
+13. baseline-demand exposure is computed only from unmodified B and never changes `t*`, `k`, selected keys, treatment eligibility, or cohort inclusion; exact-generation accounting must stop when that occupant is replaced or ceases to represent the same memo fact.
