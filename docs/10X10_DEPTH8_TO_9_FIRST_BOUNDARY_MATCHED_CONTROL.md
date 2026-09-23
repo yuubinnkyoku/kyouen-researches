@@ -25,7 +25,9 @@ After `t*`, perform no further experimental invalidation. Ordinary memo replacem
 
 If no boundary with `k > 0` exists, mark the parent `NO_ELIGIBLE_BOUNDARY`; do not substitute a later depth or relax the eligibility rule.
 
-The two variants must be forked from the identical pre-`t*` logical memo state (or independently replayed with a verified identical trace/state digest through `t*`). Thus the treatment dose is exactly matched at the moment of intervention and cannot be altered by treatment-induced trajectory divergence.
+The two variants must be forked from the identical pre-`t*` physical memo-table state, not merely from an equivalent logical key/value map. The fork state includes every slot's key/value, live/tombstone state, owner metadata, and all occupancy/replacement bookkeeping that can affect later lookup or insertion behavior. Preferred implementation is an exact in-memory clone at `t*`. Independent replay is valid only when both logical and physical-state digests, plus the trace through `t*`, are verified identical. Rebuilding a fresh table from the logical map is not a valid fork because slot placement and replacement state may differ.
+
+Thus the treatment dose is exactly matched at the moment of intervention and cannot be altered by treatment-induced trajectory divergence.
 
 ## Primary measurements
 
@@ -52,10 +54,11 @@ This experiment estimates a one-shot boundary-level treatment contrast, not a gl
 
 Before cohort execution require:
 
-1. B, D9LM1, and D9WM1 have identical trace and logical memo-state digest immediately before `t*`;
-2. D9LM1 and D9WM1 delete exactly the same `k > 0` entries by count at `t*`;
-3. no experimental invalidation occurs before or after `t*`;
-4. selected key sets obey the frozen slot/order-independent hash rule;
-5. non-target value entries at `t*` are untouched;
-6. all three variants return the same game-theoretic outcome;
-7. disabling the one-shot deletion reproduces B exactly.
+1. B, D9LM1, and D9WM1 have identical trace, logical memo-state digest, and physical memo-table digest immediately before `t*`. The physical digest must cover each slot's key/value, live/tombstone state, owner metadata, and all occupancy/replacement bookkeeping that can affect future behavior;
+2. no variant may reconstruct its pre-`t*` table by reinserting the logical map into a fresh table; use an exact clone, or an independently replayed state satisfying requirement 1;
+3. D9LM1 and D9WM1 delete exactly the same `k > 0` entries by count at `t*`;
+4. no experimental invalidation occurs before or after `t*`;
+5. selected key sets obey the frozen slot/order-independent hash rule;
+6. non-target value entries at `t*` are untouched;
+7. all three variants return the same game-theoretic outcome;
+8. disabling the one-shot deletion reproduces B exactly, including visited count and the post-`t*` event trace.
