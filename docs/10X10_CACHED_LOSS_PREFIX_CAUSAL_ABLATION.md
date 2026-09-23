@@ -240,6 +240,22 @@ observational diagnostic. BPF is a separate causal follow-up.
     live count increases by one. Compare the logical count against the
     eager-deletion reference. This checks both occupancy meaning and the
     no-table-scan accounting needed by lazy invalidation.
+14. Add a metamorphic zero-intervention test: execute a trace containing one or
+    more genuine outer cached-LOSS prefixes but arrange that every such prefix
+    exits with `active_owned_live == 0` (for example, prefixes that create no
+    new memo entries, plus a synthetic case where every current-owner entry is
+    removed/reused before exit). BPF and B must then remain identical for the
+    complete remaining trace: same live logical map, hit/miss/value answers,
+    insertion success/failure, solver-visible event digest, outcome, and
+    `visited`. This is stronger than the no-prefix test in item 6: it verifies
+    that merely entering/exiting prefixes and advancing owner-event bookkeeping
+    is observationally inert when the intervention removes no surviving state.
+
+The last property follows inductively: before the first zero-owned outer exit,
+B and BPF are identical; that exit invalidates no live entry, so their logical
+maps remain identical; repeating the argument over subsequent zero-owned exits
+preserves equivalence. A failure therefore localizes an implementation leak in
+owner/tombstone/accounting machinery rather than a real causal effect.
 
 ## Priority
 
