@@ -73,12 +73,23 @@ frozen semantics:
   probing far enough to preserve ordinary same-key/update semantics, and if no
   live copy of the key is found before the first true empty slot, insert into
   the remembered forgotten slot (or the true empty slot if there was none);
-- replacement/reinsertion must write the new owner metadata from the *current*
-  context: current outer event id when inside a prefix, otherwise zero.  It must
-  never inherit the forgotten occupant's owner id;
+- **updating an already-live copy of the same key is not a new insertion and
+  must preserve its existing owner metadata.**  In particular, an entry that
+  predates the current prefix must remain owner zero (or its prior still-live
+  owner) when `put` touches it inside the prefix; otherwise BPF would wrongly
+  erase pre-prefix memo state at outer exit;
+- replacement/reinsertion into a true empty or logically forgotten slot must
+  write new owner metadata from the *current* context: current outer event id
+  when inside a prefix, otherwise zero.  It must never inherit the forgotten
+  occupant's owner id;
 - a stale copy of the same key is not a live existing memo entry.  Recomputing
   that state may make it live again, and the new value/owner must then be
   observable normally.
+
+Thus ownership is a property of the insertion that created the currently-live
+entry, not of the most recent `put` call that mentioned its key.  This is needed
+to keep the implementation identical to causal step 2 ("first inserted") and
+step 4 (pre-existing entries survive).
 
 This gives forgotten slots the standard open-addressing tombstone role while
 allowing their capacity to be reclaimed.  It is required for the lazy BPF table
@@ -153,7 +164,9 @@ observational diagnostic.  BPF is a separate causal follow-up.
 2. A synthetic single outer prefix with one inserted entry invalidates that
    entry at outer exit.
 3. A nested prefix does not invalidate at inner exit.
-4. A pre-existing memo entry touched inside the prefix survives outer exit.
+4. A pre-existing memo entry touched inside the prefix survives outer exit;
+   assert explicitly that a same-key `put` inside the prefix leaves its owner
+   unchanged as well as leaving the value live.
 5. A tagged slot cleared/reused before outer exit is not used to invalidate the
    replacement entry.
 6. A run containing no cached-LOSS prefix is bit-for-bit/endpoint identical
