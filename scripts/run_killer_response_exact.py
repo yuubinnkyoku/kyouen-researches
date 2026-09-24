@@ -105,7 +105,7 @@ def main() -> None:
             raise SystemExit(f"timeout after {timeout}s for {state}; no completed manifest written") from e
         except Exception as e:
             raise SystemExit(f"{e}; no completed manifest written") from e
-        print(f"[{i}/{len(unique)}] {state} {outcomes[state]}")
+        print(f"[{i}/{len(unique)}] solved")
 
     completed = []
     for r, state in zip(rows, normalized):
