@@ -33,7 +33,7 @@ def wsl_path(p: Path) -> str:
 
 
 def canonical_text(state: str) -> str:
-    ids = [int(x) for x in state.split(",") if x.strip()]
+    ids = [int(x) for x in state.replace("-", ",").split(",") if x.strip()]
     if len(ids) != 5 or len(set(ids)) != 5:
         raise ValueError(f"expected five distinct ids: {state!r}")
     return ",".join(map(str, sorted(ids)))
