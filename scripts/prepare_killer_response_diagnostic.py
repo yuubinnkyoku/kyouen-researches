@@ -65,7 +65,7 @@ def main() -> None:
         q1 = query(args.query, s1)
         if not q1.get("valid", False):
             raise SystemExit(f"fixed child is invalid: {parent} + {v_fixed}")
-        legal = [int(x) for x in q1["legal"]]
+        legal = [int(x) for x in q1["legal_ids"]]
         before = len(legal)
         tmp = []
         for response in legal:
@@ -73,7 +73,7 @@ def main() -> None:
             q2 = query(args.query, s2)
             if not q2.get("valid", False):
                 raise SystemExit(f"response unexpectedly invalid: {s2}")
-            after = len(q2["legal"])
+            after = len(q2["legal_ids"])
             gain = before - 1 - after
             if gain < 0:
                 raise SystemExit(f"negative unique gain: {s2} gain={gain}")
