@@ -1,6 +1,6 @@
 # Killer-response diagnostic preregistration
 
-Status: pre-data analysis plan. This file fixes the diagnostic before reading true response values for the seven blind-replication LOSS parents.
+Status: pre-data analysis plan. This file fixes the diagnostic before reading true response values for the five still-uninspected confirmatory LOSS parents. The two previously inspected maximum counterexamples remain calibration-only examples.
 
 Provenance:
 
@@ -8,9 +8,12 @@ Provenance:
 - blind-replication baseline: `b5172a4`
 - preregistration parent HEAD: `a367b5764029de0b1838298b3306e7ace253fcab`
 - semantic correction (pre-data): the blind fixed rule is the frozen **probe-score rule**, not immediate unique gain; the response-side gain ordering below is a separate diagnostic ordering
+- sample-count correction (pre-data): seven blind LOSS parents exist, but only five are fresh for this killer hypothesis because the two maximum counterexamples were inspected before preregistration
 - blind LOSS parents: `2,9,33`, `4,9,33`, `9,12,33`, `9,19,33`, `9,23,33`, `0,31,36`, `0,36,44`
+- calibration-only parents: `4,9,33`, `9,19,33`
+- fresh confirmatory parents: `2,9,33`, `9,12,33`, `9,23,33`, `0,31,36`, `0,36,44`
 
-The two previously inspected maximum counterexamples (`4,9,33`, `9,19,33`) are calibration examples only. They must not be counted as fresh confirmation of any hypothesis below.
+The two previously inspected maximum counterexamples (`4,9,33`, `9,19,33`) are calibration examples only. They must not be counted as fresh confirmation of any hypothesis below. Their response rows may be reported descriptively, but all confirmatory counts and the predeclared interpretation use only the five fresh parents.
 
 ## Question
 
@@ -63,11 +66,11 @@ If `killer_count == 0`, the parent/value convention or upstream selected-move re
 
 ## Predeclared interpretation
 
-The "locally weak killer" hypothesis is supported only if killers systematically appear below the top of the response-side local ordering. With only seven fresh parents, do not fit a threshold post hoc. Report the seven raw `best_killer_gain_rank` values and the count with `best_killer_gain_rank > 5`.
+The "locally weak killer" hypothesis is supported only if killers systematically appear below the top of the response-side local ordering. There are only five fresh confirmatory parents, so do not fit a threshold post hoc. Report the five fresh raw `best_killer_gain_rank` values and the count among those five with `best_killer_gain_rank > 5`. Report the two calibration parents separately and never include them in that count.
 
-Strong falsification: all or nearly all fresh parents have a killer in the top gain tier or within gain-rank 1--3. In that case the failure is not hidden in locally weak responses; shallow adversarial checking of the obvious high-gain replies is the better next hypothesis.
+Strong falsification: all five fresh parents have a killer in the top gain tier or within gain-rank 1--3. In that case the failure is not hidden in locally weak responses; shallow adversarial checking of the obvious high-gain replies is the better next hypothesis.
 
-Positive signal: multiple fresh parents have no killer within the top five gain ranks while still having at least one exact killer. Then the immediate-gain response ordering is specifically hiding minimax-critical replies, motivating top-k forceability / adversarial-width experiments.
+Positive signal: at least two of the five fresh parents have no killer within the top five gain ranks while still having at least one exact killer. Then the immediate-gain response ordering is specifically hiding minimax-critical replies, motivating top-k forceability / adversarial-width experiments. This `>=2/5` rule replaces the earlier ambiguous phrase "multiple fresh parents" without inspecting any of the five fresh response-value datasets.
 
 Do not use the two already inspected maximum counterexamples to choose a new cutoff after seeing these results.
 
