@@ -9,6 +9,7 @@ Provenance:
 - preregistration parent HEAD: `a367b5764029de0b1838298b3306e7ace253fcab`
 - semantic correction (pre-data): the blind fixed rule is the frozen **probe-score rule**, not immediate unique gain; the response-side gain ordering below is a separate diagnostic ordering
 - sample-count correction (pre-data): seven blind LOSS parents exist, but only five are fresh for this killer hypothesis because the two maximum counterexamples were inspected before preregistration
+- tie-semantics correction (pre-data): confirmatory thresholds use **distinct gain tiers**, not competition ranks, because a large top-gain tie must not make the second-best gain value look artificially weak
 - blind LOSS parents: `2,9,33`, `4,9,33`, `9,12,33`, `9,19,33`, `9,23,33`, `0,31,36`, `0,36,44`
 - calibration-only parents: `4,9,33`, `9,19,33`
 - fresh confirmatory parents: `2,9,33`, `9,12,33`, `9,23,33`, `0,31,36`, `0,36,44`
@@ -42,11 +43,13 @@ The opponent responses are **not** rerun through the blind probe rule. For every
 
 Primary diagnostic order is `(unique_gain descending, move index ascending)`. This ordering is frozen here solely to ask whether minimax killers are hidden below locally attractive opponent replies; it is not described as production fixed-rule order.
 
-For robustness against arbitrary ordering inside equal-gain ties, also record the gain-only competition rank
+Record three different notions of rank; they answer different questions and must not be substituted for one another:
 
-`gain_rank(r) = 1 + count{q : gain(q) > gain(r)}`.
+- `move_rank(r)`: 1-based position under `(unique_gain descending, move index ascending)`. This is the operational rank for a deterministic top-k move search.
+- `gain_competition_rank(r) = 1 + count{q : gain(q) > gain(r)}`. This is invariant to ordering inside an equal-gain tie, but it can skip integers when a higher tier contains multiple moves.
+- `gain_tier_rank(r) = 1 + count{g : g is a distinct response gain and g > gain(r)}`. This is the ordinal rank of the distinct gain value itself and is the primary rank for the phrase "locally weak".
 
-The primary `best_killer_rank` uses `(gain desc, move asc)`; `best_killer_gain_rank` uses the tie-invariant competition rank.
+Example: if five responses tie at gain 10 and the next response has gain 9, that gain-9 response has `move_rank=6`, `gain_competition_rank=6`, but `gain_tier_rank=2`. It is second-best by the local score, not sixth-best. The earlier preregistration threshold on competition rank would therefore have produced a false positive whenever the top tiers were wide; this correction is made before reading any of the five fresh response-value datasets.
 
 ## Per-parent outputs
 
@@ -55,22 +58,25 @@ Record:
 - `response_count`
 - `killer_count`
 - `killer_fraction = killer_count / response_count`
-- `best_killer_rank = min diagnostic-order rank among killers`
-- `best_killer_gain_rank = min gain_rank among killers`
-- `top1_has_killer`, `top3_has_killer`, `top5_has_killer` under the frozen diagnostic order
+- `best_killer_move_rank = min move_rank among killers`
+- `best_killer_gain_competition_rank = min gain_competition_rank among killers`
+- `best_killer_gain_tier_rank = min gain_tier_rank among killers`
+- `top1_has_killer`, `top3_has_killer`, `top5_has_killer` under deterministic move order
 - `top1_gain_tier_has_killer`, `top3_gain_tiers_has_killer`, `top5_gain_tiers_has_killer`
 - gain distribution for killers and non-killers separately
-- for every response: state, move, gain, diagnostic rank, gain rank, exact outcome
+- for every response: state, move, gain, move rank, competition rank, tier rank, exact outcome
 
 If `killer_count == 0`, the parent/value convention or upstream selected-move reconstruction is inconsistent with the claim that `v_fixed` loses; treat this as a hard audit failure, not as a zero-valued observation.
 
 ## Predeclared interpretation
 
-The "locally weak killer" hypothesis is supported only if killers systematically appear below the top of the response-side local ordering. There are only five fresh confirmatory parents, so do not fit a threshold post hoc. Report the five fresh raw `best_killer_gain_rank` values and the count among those five with `best_killer_gain_rank > 5`. Report the two calibration parents separately and never include them in that count.
+The "locally weak killer" hypothesis is supported only if killers systematically appear below the top **distinct gain tiers**. There are only five fresh confirmatory parents, so do not fit a threshold post hoc. Report all five fresh raw `best_killer_gain_tier_rank` values, plus the move and competition ranks for transparency. Report the two calibration parents separately and never include them in confirmatory counts.
 
-Strong falsification: all five fresh parents have a killer in the top gain tier or within gain-rank 1--3. In that case the failure is not hidden in locally weak responses; shallow adversarial checking of the obvious high-gain replies is the better next hypothesis.
+Strong falsification: all five fresh parents have `best_killer_gain_tier_rank <= 3`. In that case every failure has a killer among the three locally strongest distinct gain levels; the failure is not hidden in locally weak responses, and shallow adversarial checking of obvious high-gain replies is the better next hypothesis.
 
-Positive signal: at least two of the five fresh parents have no killer within the top five gain ranks while still having at least one exact killer. Then the immediate-gain response ordering is specifically hiding minimax-critical replies, motivating top-k forceability / adversarial-width experiments. This `>=2/5` rule replaces the earlier ambiguous phrase "multiple fresh parents" without inspecting any of the five fresh response-value datasets.
+Positive signal: at least two of the five fresh parents have `best_killer_gain_tier_rank > 5` while still having at least one exact killer. Then the immediate-gain score itself is specifically hiding minimax-critical replies, motivating adversarial-width experiments. This `>=2/5` rule is fixed before inspecting any of the five fresh response-value datasets.
+
+Operational top-k cost must be reported separately using `best_killer_move_rank`. A wide high-gain tie can make a locally strong killer expensive for deterministic top-k search without supporting the "locally weak" hypothesis; that is a different mechanism (tie width / strategy width).
 
 Do not use the two already inspected maximum counterexamples to choose a new cutoff after seeing these results.
 
@@ -82,6 +88,7 @@ Before accepting results:
 - verify every enumerated response is legal and the response set has no duplicates;
 - verify exact outcomes are invariant under D4 canonicalization for a deterministic sample plus every killer state used in the summary;
 - rerun at least one killer and one non-killer child per parent through the certified path independently of any shared memo process;
+- verify `gain_tier_rank` is contiguous over distinct observed gain values starting at 1, while `gain_competition_rank` is allowed to skip integers;
 - retain raw per-response rows so summary statistics are reconstructible.
 
 This diagnostic is observational within already selected losing moves. It identifies where minimax-critical responses sit in a deliberately separate local ranking; it does not by itself prove that changing response order improves the full solver or game-playing policy.
