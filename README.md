@@ -401,3 +401,37 @@ Leanによる証明書方式の一般健全性定理
 This repository gives a computer-assisted complete classification of optimal-play outcomes for Kyouen on `n × n` lattice-point boards for `1 ≤ n ≤ 10`.
 
 The first player wins for `n ∈ {1,2,3,5,6,9}`, while the second player wins for `n ∈ {4,7,8,10}`. Boards 1×1 through 9×9 have ranked AND/OR certificates checked by a common independent verifier. The 10×10 outcome is established by an exact classification of all 15 D4 first-move representatives (covering all 100 first moves); its evidence is structurally audited by an independent Rust implementation, and selected 10×10 roots have independently checked KYOENC4 proof DAGs. A single empty-board KYOENC4 certificate for the full 10×10 classification has not yet been produced. A Lean development formalizes the general soundness argument for ranked certificates.
+
+<!-- BEGIN GENERATED SOLUTION STATUS -->
+## 解決状況（K項目から自動生成）
+
+[知識の入口](research/knowledge/README.md)。既存の詳細説明に加え、現在の範囲と検証境界を示す。
+
+| 盤面・条件 | K項目・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |
+|---|---|---|---|---|---|
+| 1×1〜6×6; 標準q=4・完全指摘・通常プレイ | [K0004](research/knowledge/items/K0004.md) · computed | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全安全局面 | exhaustive-enumeration | 空盤は各nのAND/OR証明書あり; 小盤参照実装照合、空盤C++検査; 勝者は各盤の個別項目を参照 |
+| 7×7; 標準q=4・完全指摘・通常プレイ | [K0005](research/knowledge/items/K0005.md) · computed | strong; second-player-win | root, all-safe-win-loss, all-safe-grundy; 179,810,350/179,810,350安全局面 | exhaustive-enumeration, independent-enumeration | 空盤証明書あり。強解決単独証明書は未整理; 全層独立再帰照合; README旧説明に全Grundy結果を補完 |
+| 8×8（全局面報告）; 標準q=4・完全指摘・通常プレイ | [K0006](research/knowledge/items/K0006.md) · needs-review | strong; second-player-win | root, all-safe-win-loss, all-safe-grundy; 6,700,711,937安全局面のDP完了報告 | reported-streaming-dp | 全局面証明書なし。空盤証明書は別項目; 全状態独立検査は未確認; needs-review：READMEとの差異あり、独立監査済みの強解決と区別 |
+| 1×1; 標準q=4・完全指摘・通常プレイ | [K0011](research/knowledge/items/K0011.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 2×2; 標準q=4・完全指摘・通常プレイ | [K0012](research/knowledge/items/K0012.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 3×3; 標準q=4・完全指摘・通常プレイ | [K0013](research/knowledge/items/K0013.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 4×4; 標準q=4・完全指摘・通常プレイ | [K0014](research/knowledge/items/K0014.md) · proved | weak; second-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 5×5; 標準q=4・完全指摘・通常プレイ | [K0015](research/knowledge/items/K0015.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 6×6; 標準q=4・完全指摘・通常プレイ | [K0016](research/knowledge/items/K0016.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 7×7; 標準q=4・完全指摘・通常プレイ | [K0017](research/knowledge/items/K0017.md) · proved | weak; second-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 8×8; 標準q=4・完全指摘・通常プレイ | [K0018](research/knowledge/items/K0018.md) · proved | weak; second-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 9×9; 標準q=4・完全指摘・通常プレイ | [K0019](research/knowledge/items/K0019.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
+| 10×10; 標準q=4・完全指摘・通常プレイ | [K0020](research/knowledge/items/K0020.md) · proved | weak; second-player-win | root; 15 D4代表＝100初手 | exact-search, csv-audit, partial-kyoenc4 | 空盤面の単一KYOENC4証明書は未統合; CSV構造監査＋選択局面Rust証明検査; 勝敗確定。全巨大探索の独立再求解ではない |
+| 9×9（全初手）; 標準q=4・完全指摘・通常プレイ | [K0021](research/knowledge/items/K0021.md) · computed | weak; first-player-win | root, first-moves; 81/81 first moves | exact-search | 中央初手の空盤証明書あり。全81初手は別探索; 14非中央D4クラスの独立探索記録; 全81初手が先手勝ち |
+| 10×10（全初手）; 標準q=4・完全指摘・通常プレイ | [K0022](research/knowledge/items/K0022.md) · computed | weak; second-player-win | root, first-moves; 100/100 first moves; 15 D4 representatives | exact-search, csv-audit, partial-kyoenc4 | 空盤全体の単一KYOENC4なし; CSV監査と選択局面独立Rust検査; 100初手完全分類と空盤証明書未統合を区別 |
+| 11×11; 標準q=4・完全指摘・通常プレイ | [K0023](research/knowledge/items/K0023.md) · computed | unsolved; unknown | safe-layers; 厳密列挙は層0〜5のみ | exhaustive-enumeration | 空盤勝敗証明書なし; 禁止四点独立再計数・小盤回帰; 打切りP/Nは真の勝敗ではない |
+| w×m・q点版; q≥4,w固定,m≥T_{w,q}=min(A,B) | [K0024](research/knowledge/items/K0024.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全安全局面 | mathematical-proof | 一般証明。具体盤の巨大証明書は不要; 67盤の有限検算は支持資料; 先手勝ち iff q偶数かつw奇数 |
+| w×m・q>2w; q≥4,q>2w,m≥1 | [K0025](research/knowledge/items/K0025.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全m≥1・全安全局面 | mathematical-proof | 一般分離証明; 整数幾何と容量の証明; g=(w min(m,q−1)−\|S\|) mod2 |
+| w×m・標準q=4; w固定、m≥T_w=3+2{C(3w−2,3)−(w−1)} | [K0068](research/knowledge/items/K0068.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全安全局面 | mathematical-proof | 全称証明; 有限長方形検算は支持; g=(3w−\|S\|) mod2 |
+| 2×m・q=4; q=4,m≥1 | [K0069](research/knowledge/items/K0069.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全m≥1・全安全局面 | exhaustive-enumeration, mathematical-proof | 短盤全数＋長盤一般証明; 短盤参照mex検算; m≥6は空盤後手勝ち。短盤は個別分類 |
+| 3×m・q=6; q=6,w=3,m≥9 | [K0070](research/knowledge/items/K0070.md) · proved | strong; first-player-win | root, first-moves, all-safe-win-loss, all-safe-grundy; m≥9の全安全局面 | mathematical-proof, exhaustive-enumeration | 解析証明＋有限排除; 下界証人と有限補完検査; M_{3,6}=9、g=(15−\|S\|) mod2 |
+| 3×m・q=5; q=5,w=3,m∈[12,21]またはm≥56 | [K0071](research/knowledge/items/K0071.md) · proved | strong; second-player-win | root, first-moves, all-safe-win-loss, all-safe-grundy; m=12..21 またはm≥56の全安全局面 | mathematical-proof, exhaustive-enumeration | 解析上界＋有限完全排除; 3×11下界証人検算; 22..55は未確定、12≤M≤56 |
+| 高qの標準整数格子; 連続整数行、(q=2w,w≥5)または(q=2w−1,w≥6) | [K0072](research/knowledge/items/K0072.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全m≥1・全安全局面 | mathematical-proof | mod9有限剰余証明; 円条件の独立determinant照合; M=q−1 |
+| line-only w×m; line-only,q≥4,q>w | [K0075](research/knowledge/items/K0075.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全m≥1・全安全局面 | mathematical-proof | 幾何分離証明; 有限検算を一般証明と区別; g=(w min(m,q−1)−\|S\|) mod2 |
+| circle-only w×m; circle-only,q≥4,q>2w | [K0076](research/knowledge/items/K0076.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全m≥1・全局面 | mathematical-proof | 禁止なしの一般証明; 円と直線の交点上界; g=(wm−\|S\|) mod2 |
+<!-- END GENERATED SOLUTION STATUS -->
