@@ -1,0 +1,30 @@
+---
+id: K0045
+title: 証明書最深石数は最大安全サイズを一般に与えない
+kind: proposition
+status: computed
+topics:
+- certificates
+- maximum-safe
+aliases:
+- F-AB
+relations:
+- type: depends_on
+  target: K0029
+  note: ''
+- type: depends_on
+  target: K0007
+  note: ''
+artifacts:
+- path: night-research/CYCLE5_GRUNDY_STRUCTURE.md
+  role: source
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+---
+
+# 証明書最深石数は最大安全サイズを一般に与えない
+
+n=1〜9の証明書最深石数は順に `1, 3, 5, 6, 9, 11, 14, 14, 17`。
+既知の最大安全サイズK_nは同じ順に `1, 3, 5, 7, 9, 11, 14, 15, 18` で、差があるのはn=4,8,9。
+
+旧F-AB表のK_9=17欄を現在の18へ訂正する。証明DAGは必要戦略部分だけであり最深石数は安全サイズ下界を与えるに留まる。results.csvの探索深さも最大性証明と自動同一視しない。

@@ -1,0 +1,29 @@
+---
+id: K0026
+title: 最大安全サイズK_nと最小極大サイズs_nは別の量
+kind: definition
+status: active
+topics:
+- maximum-safe
+- maximal-safe
+aliases: []
+relations:
+- type: depends_on
+  target: K0001
+  note: ''
+artifacts:
+- path: README.md
+  role: source
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/findings.md
+  role: source
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+---
+
+# 最大安全サイズK_nと最小極大サイズs_nは別の量
+
+最大は全安全集合中の石数最大、極大は一石も追加できない包含極大。K_n=max|S|、s_n=min{|S|:Sは極大}。最大集合は極大だが逆は偽。古いK_minはs_nを意味することが多い。
+
+証明書末端の石数はK_nでもs_nでもない。存在証人はK_nの下界やs_nの上界になるが、反対向きの上界・下界にはならない。

@@ -1,0 +1,30 @@
+---
+id: K0079
+title: 600原文の監査状態と弱化版作業ラベルは別の量
+kind: verification
+status: verified
+topics:
+- migration
+- provenance
+aliases: []
+relations: []
+artifacts:
+- path: research/verification/round26-original-scope-index.md
+  role: source
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/verification/round26_original_scope_index.json
+  role: manifest
+  note: 全600原文と採用範囲・根拠ポインタ
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/verification/HANDOFF-2026-10-01-round61.md
+  role: source
+  note: 最終原文状態と残件
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+---
+
+# 600原文の監査状態と弱化版作業ラベルは別の量
+
+最新の原文監査索引は600原文を保持し、採用165件（SUPPORTED89,REFUTED46,PARTIAL25,SCOPE_UNCLEAR5）、NOT_AUDITED435。未監査435は未解決435ではない。旧「600/600決着」には有限・弱化版の昇格が含まれ原文全量化の決着を意味しない。
+
+この移行は原文照合済みの主要知識と重要な未監査・不確実領域を正本化する。古いSUPPORTEDを無界定理へ機械昇格しない。採用範囲・原文・preferred reportをK項目に保存し、未採用の435候補の根拠監査が済んだとは主張しない。

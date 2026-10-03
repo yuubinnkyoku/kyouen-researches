@@ -1,0 +1,33 @@
+---
+id: K0009
+title: Lean形式化の範囲と具体証明書の信頼境界
+kind: verification
+status: verified
+topics:
+- formalization
+- certificates
+aliases: []
+relations:
+- type: verifies
+  target: K0007
+  note: 抽象局所条件から勝敗への一般健全性
+artifacts:
+- path: Kyouen/Rules.lean
+  role: lean
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: Kyouen/CertificateSoundness.lean
+  role: lean
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: docs/PROOF_STATUS.md
+  role: source
+  note: 命題・対象範囲・根拠を記した出典
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+---
+
+# Lean形式化の範囲と具体証明書の信頼境界
+
+Kyouen/Rules.leanは一般n×n盤の整数行列式、相異なる禁止四点、LegalMove、movesを定義する。CertificateSoundness.leanはLocallyValidからWinning/Losingを導く一般健全性をrank帰納で証明する。
+
+具体的な巨大バイナリ証明書の読み込みと局所条件の全件検査はC++またはRust側。具体証明書をLean核のみで検査する実装はない。一般定理の形式化を9×9や10×10の具体的な核検査済み勝敗定理と表現しない。
