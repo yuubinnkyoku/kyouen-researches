@@ -74,7 +74,7 @@ n ∈ {4, 7, 8, 10}
 |---|---|---|---|---|---|
 | 1×1〜6×6; 標準q=4・完全指摘・通常プレイ | [K0004](research/knowledge/items/K0004-n1-n6-all-safe-grundy.md) · computed | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全安全局面 | exhaustive-enumeration | 空盤は各nのAND/OR証明書あり; 小盤参照実装照合、空盤C++検査; 勝者は各盤の個別項目を参照 |
 | 7×7; 標準q=4・完全指摘・通常プレイ | [K0005](research/knowledge/items/K0005-n7-all-safe-grundy-audit.md) · computed | strong; second-player-win | root, all-safe-win-loss, all-safe-grundy; 179,810,350/179,810,350安全局面 | exhaustive-enumeration, independent-enumeration | 空盤証明書あり。強解決単独証明書は未整理; 全層独立再帰照合; README旧説明に全Grundy結果を補完 |
-| 8×8（全局面報告）; 標準q=4・完全指摘・通常プレイ | [K0006](research/knowledge/items/K0006-n8-full-dp-report-needs-review.md) · needs-review | strong（完了報告・要監査）; second-player-win | root, all-safe-win-loss, all-safe-grundy; 6,700,711,937安全局面のDP完了報告 | reported-streaming-dp | 全局面証明書なし。空盤証明書は別項目; 全状態独立検査は未確認; needs-review：READMEとの差異あり、独立監査済みの強解決と区別 |
+| 8×8; 標準q=4・完全指摘・通常プレイ | [K0006](research/knowledge/items/K0006-n8-all-safe-grundy-computed.md) · computed | strong; second-player-win | root, all-safe-win-loss, all-safe-grundy; 6,700,711,937/6,700,711,937安全局面 | reported-streaming-dp | 全局面証明書なし。空盤証明書は別項目; n=6で既知値と全一致、n=7で既知層サイズを照合。8×8全状態の独立再計算は未実施; 全局面Grundy DP完走済み。独立全状態検査・強解決証明書は未整備 |
 | 1×1; 標準q=4・完全指摘・通常プレイ | [K0011](research/knowledge/items/K0011-n1-first-player-win.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
 | 2×2; 標準q=4・完全指摘・通常プレイ | [K0012](research/knowledge/items/K0012-n2-first-player-win.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
 | 3×3; 標準q=4・完全指摘・通常プレイ | [K0013](research/knowledge/items/K0013-n3-first-player-win.md) · proved | weak; first-player-win | root; 空盤面からの勝敗維持戦略 | ranked-and-or-certificate, independent-cpp-check | 空盤面AND/OR証明書あり; 共通C++全件検査; 全局面分類とは別 |
@@ -104,11 +104,11 @@ n ∈ {4, 7, 8, 10}
 空盤の勝敗だけでなく、途中の全合法局面まで見ると現状は次のようになります。
 
 - **1×1〜6×6**：全ての安全局面を列挙し、各局面の **Grundy 数まで計算済み**。
-- **7×7**：全 **179,810,350** 安全集合について P/N（手番側の勝ち/負け）を完全分類済み。
-  計算内容としては任意の合法局面の勝敗を決められるが、1×1〜9×9の空盤証明書とは別に、
-  「7×7 強解決証明書」という単独配布形式へ整理したものではない。
-- **8×8以上の正方形盤**：空盤の勝者は8×8〜10×10まで確定しているが、
-  全安全局面の分類は行っていない。
+- **7×7**：全 **179,810,350** 安全集合の **Grundy 数まで計算済み**で、後続の独立再帰照合も完了。
+  ただし、1×1〜9×9の空盤証明書とは別に「7×7 強解決証明書」という単独配布形式へ整理したものではない。
+- **8×8**：全 **6,700,711,937** 安全集合を列挙し、streaming DPで **Grundy 数まで計算済み**。
+  計算内容としては強解決に相当するが、67億状態を別実装で全再計算した独立監査や全局面証明書は未整備。
+- **9×9以上の正方形盤**：空盤の勝者は9×9・10×10で確定しているが、全安全局面の分類は行っていない。
 
 安全集合の任意の部分集合も安全なので、全安全局面は空盤から安全な順序で到達可能です。
 従って上の「全安全局面」は、通常プレイで考える全到達可能合法局面そのものです。

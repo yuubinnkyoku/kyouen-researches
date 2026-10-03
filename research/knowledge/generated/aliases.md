@@ -230,7 +230,7 @@
 | F-D | [K0082](../items/K0082-n10-three-stone-degree-cost-correlation.md) | 10×10の3石探索コストとΣdの負相関は固定R内限定 |
 | F-E | [K0083](../items/K0083-fixed-r-four-stone-loss-separation.md) | R内4石のΣdとLOSS分離、二石順位の旧記述は訂正済み |
 | F-F | [K0084](../items/K0084-outside-r-loss-trend-full-width-memo.md) | R外4石36局面のΣd→LOSS方向は全幅memo再求解でも維持 |
-| F-K | [K0058](../items/K0058-circle-point-maxima-needs-review.md) | 旧円上最大点数走査は半整数中心に限定され、全有理中心最大は要監査 |
+| F-K | [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) | F-Kの最大円点数表は半整数中心走査としてのみ採用する |
 | F-L | [K0057](../items/K0057-forbidden-quadruple-counts.md) | 禁止四点組の有限総数と共線・共円の排他的分解 |
 | F-M | [K0047](../items/K0047-witness-chain-versus-game-length.md) | 証明書のWIN証人鎖の長さは対局長ではない |
 | F-N | [K0060](../items/K0060-circle-point-floor-formula-refuted.md) | 最大円点数の暫定式4(⌊n/4⌋+1)はn=16で偽 |
@@ -252,5 +252,5 @@
 | H3 | [K0082](../items/K0082-n10-three-stone-degree-cost-correlation.md) | 10×10の3石探索コストとΣdの負相関は固定R内限定 |
 | H4 | [K0021](../items/K0021-n9-all-81-first-moves-win.md) | 9×9では81個すべての初手が先手勝ち |
 | H5 | [K0109](../items/K0109-n7-n9-certificate-loss-ratios.md) | 7〜9×9公開証明書のLOSS比34〜35%は三サイズの観測 |
-| H6 | [K0289](../items/K0289-h6-same-distance-outcomes-needs-review.md) | 同距離二石で勝敗が分かれるH6は旧記録からの採用監査が不足 |
+| H6 | [K0289](../items/K0289-same-distance-two-stone-opposite-outcomes.md) | 10×10では同じ二点間距離でも二石局面の勝敗が異なる |
 | H7 | [K0044](../items/K0044-n9-certificate-terminal-nodes.md) | 公開9×9証明書の末端は16石WIN十個から17石飽和LOSS一個へ閉じる |

@@ -7,7 +7,7 @@
 | [K0003](../items/K0003-solution-and-evidence-levels.md) | 解決段階と計算・証明書・監査の区別 | definition | active | rules, verification |
 | [K0004](../items/K0004-n1-n6-all-safe-grundy.md) | 1×1〜6×6の全安全局面Grundy分類 | computation | computed | grundy, square-outcomes |
 | [K0005](../items/K0005-n7-all-safe-grundy-audit.md) | 7×7の全安全局面Grundy・P/N分類と独立監査 | computation | computed | grundy, square-outcomes, verification |
-| [K0006](../items/K0006-n8-full-dp-report-needs-review.md) | 8×8全安全局面DPの完了報告と監査境界 | computation | needs-review | grundy, square-outcomes, verification |
+| [K0006](../items/K0006-n8-all-safe-grundy-computed.md) | 8×8の全6,700,711,937安全局面をGrundy DPで完全計算 | computation | computed | grundy, square-outcomes, verification |
 | [K0007](../items/K0007-ranked-and-or-certificates.md) | 順位付きAND/OR証明書の局所条件と健全性 | method | active | certificates |
 | [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) | 1×1〜9×9証明書の独立C++全件検査 | verification | verified | certificates, verification |
 | [K0009](../items/K0009-lean-soundness-trust-boundary.md) | Lean形式化の範囲と具体証明書の信頼境界 | verification | verified | formalization, certificates |
@@ -59,7 +59,7 @@
 | [K0055](../items/K0055-sixth-order-quadruple-claim-refuted.md) | 共線・共円ともΘ(n^6)という旧外挿は反証・訂正済み | proposition | refuted | geometry, provenance |
 | [K0056](../items/K0056-cocircular-quadruple-asymptotics.md) | 非共線共円四点組数C_nはΘ(n^5) | proposition | proved | geometry |
 | [K0057](../items/K0057-forbidden-quadruple-counts.md) | 禁止四点組の有限総数と共線・共円の排他的分解 | proposition | computed | geometry |
-| [K0058](../items/K0058-circle-point-maxima-needs-review.md) | 旧円上最大点数走査は半整数中心に限定され、全有理中心最大は要監査 | proposition | needs-review | geometry, provenance |
+| [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) | F-Kの最大円点数表は半整数中心走査としてのみ採用する | verification | verified | geometry, provenance |
 | [K0059](../items/K0059-odd-two-square-representation-formula.md) | 奇二平方和表現数odd_repr(2m)の完全公式 | proposition | proved | geometry |
 | [K0060](../items/K0060-circle-point-floor-formula-refuted.md) | 最大円点数の暫定式4(⌊n/4⌋+1)はn=16で偽 | proposition | refuted | geometry |
 | [K0061](../items/K0061-twelve-point-circle-count-formula.md) | 12点円の個数(n−7)^2はn=11で全円を数えなくなる | proposition | computed | geometry |
@@ -290,7 +290,7 @@
 | [K0286](../items/K0286-native-parent-solver-speedup-gate-failed.md) | 10k root-orderとstaged V3のnative親solver加速は凍結gate失敗 | proposition | observed | search-methods, statistics, verification |
 | [K0287](../items/K0287-cumulative-memo-feature-semantics.md) | multi-state probeの累積memoは候補独立特徴でない | method | active | search-methods, provenance |
 | [K0288](../items/K0288-certified-witness-rank-and-coordinate-join.md) | certified witness順位と真のfirst LOSS順位は別、座標joinにも検査が必要 | method | active | provenance, verification, search-methods |
-| [K0289](../items/K0289-h6-same-distance-outcomes-needs-review.md) | 同距離二石で勝敗が分かれるH6は旧記録からの採用監査が不足 | question | needs-review | first-moves, geometry |
+| [K0289](../items/K0289-same-distance-two-stone-opposite-outcomes.md) | 10×10では同じ二点間距離でも二石局面の勝敗が異なる | proposition | computed | first-moves, geometry |
 | [K0290](../items/K0290-raw-gain-versus-filtered-response-overlap.md) | 9×9 raw gainとfiltered responseのpair重複は異なる量 | proposition | proved | geometry, search-methods |
 | [K0291](../items/K0291-all-maximal-terminal-parity-refuted.md) | 全極大終局の石数偶奇が固定される仮説は4×4で反証 | proposition | refuted | maximal-safe, strategy-length |
 | [K0292](../items/K0292-n5-central-window-first-move-claim-refuted.md) | 5×5の勝ち初手は中央3×3窓ではない | proposition | refuted | first-moves |

@@ -10,23 +10,22 @@ K項目: 296 / alias: 252 / artifactファイル: 343
 | definition | 5 |
 | method | 4 |
 | proposition | 243 |
-| question | 34 |
-| verification | 4 |
+| question | 33 |
+| verification | 5 |
 
 ## status
 
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 77 |
+| computed | 79 |
 | conjectured | 1 |
-| needs-review | 3 |
 | observed | 15 |
 | open | 33 |
 | proved | 87 |
 | refuted | 58 |
 | scope-unclear | 6 |
-| verified | 4 |
+| verified | 5 |
 | withdrawn | 3 |
 
 ## topics
@@ -57,8 +56,6 @@ K項目: 296 / alias: 252 / artifactファイル: 343
 
 数学的未解決と監査不足の件数は合算しない。
 
-- [K0006](../items/K0006-n8-full-dp-report-needs-review.md) [needs-review] 8×8全安全局面DPの完了報告と監査境界
-- [K0058](../items/K0058-circle-point-maxima-needs-review.md) [needs-review] 旧円上最大点数走査は半整数中心に限定され、全有理中心最大は要監査
 - [K0077](../items/K0077-width-four-q8-stabilization-open.md) [open] 4×m・q=8の真の安定化長は未確定
 - [K0078](../items/K0078-width-three-q5-intermediate-range-open.md) [open] 3×m・q=5のm=22..55に不足極大が再出現するかは未確定
 - [K0081](../items/K0081-loss-core-frame-scope-unclear.md) [scope-unclear] R内LOSS部分集合の共通コア仮説は座標frameを明示する必要がある
@@ -99,7 +96,6 @@ K項目: 296 / alias: 252 / artifactファイル: 343
 - [K0276](../items/K0276-h-dense-independent-holdout-open.md) [conjectured] H-denseはn≤10の記述を越える独立確認が未完了
 - [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) [open] 7×7二相選択を制約solverなしの幾何だけで導く証明は未完成
 - [K0282](../items/K0282-n7-g11-global-connectivity-open.md) [open] 11石を許したG11で最大由来八成分が全て接続するか未確定
-- [K0289](../items/K0289-h6-same-distance-outcomes-needs-review.md) [needs-review] 同距離二石で勝敗が分かれるH6は旧記録からの採用監査が不足
 
 ## 警告
 

@@ -28,7 +28,7 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - ← depends_on [K0004](../items/K0004-n1-n6-all-safe-grundy.md)
 - ← depends_on [K0005](../items/K0005-n7-all-safe-grundy-audit.md)
-- ← depends_on [K0006](../items/K0006-n8-full-dp-report-needs-review.md)
+- ← depends_on [K0006](../items/K0006-n8-all-safe-grundy-computed.md)
 - ← depends_on [K0021](../items/K0021-n9-all-81-first-moves-win.md)
 - ← depends_on [K0022](../items/K0022-n10-all-100-first-moves-classified.md)
 - ← depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
@@ -62,7 +62,7 @@
 - ← depends_on [K0050](../items/K0050-fixed-terminal-guarantee-refuted.md)
 - ← depends_on [K0293](../items/K0293-n1-n7-global-grundy-spectra.md)
 
-## [K0006](../items/K0006-n8-full-dp-report-needs-review.md) 8×8全安全局面DPの完了報告と監査境界
+## [K0006](../items/K0006-n8-all-safe-grundy-computed.md) 8×8の全6,700,711,937安全局面をGrundy DPで完全計算
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
 
@@ -431,7 +431,7 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 
-## [K0058](../items/K0058-circle-point-maxima-needs-review.md) 旧円上最大点数走査は半整数中心に限定され、全有理中心最大は要監査
+## [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) F-Kの最大円点数表は半整数中心走査としてのみ採用する
 
 - ← depends_on [K0060](../items/K0060-circle-point-floor-formula-refuted.md)
 
@@ -441,7 +441,7 @@
 
 ## [K0060](../items/K0060-circle-point-floor-formula-refuted.md) 最大円点数の暫定式4(⌊n/4⌋+1)はn=16で偽
 
-- → depends_on [K0058](../items/K0058-circle-point-maxima-needs-review.md)
+- → depends_on [K0058](../items/K0058-fk-circle-maxima-scope-audited.md)
 
 ## [K0063](../items/K0063-n10-circle-catalogue.md) 10×10の非退化円カタログとサイズ欠落
 
@@ -449,7 +449,6 @@
 
 ## [K0065](../items/K0065-n10-two-three-stone-d4-orbits.md) 10×10の二石・三石D4軌道は120・680
 
-- ← depends_on [K0289](../items/K0289-h6-same-distance-outcomes-needs-review.md)
 
 ## [K0066](../items/K0066-n10-three-stone-completions.md) 10×10の三点補完数は最大9で8を欠き、三石mobility=97−補完数
 
@@ -1232,10 +1231,6 @@
 ## [K0288](../items/K0288-certified-witness-rank-and-coordinate-join.md) certified witness順位と真のfirst LOSS順位は別、座標joinにも検査が必要
 
 - → depends_on [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md)
-
-## [K0289](../items/K0289-h6-same-distance-outcomes-needs-review.md) 同距離二石で勝敗が分かれるH6は旧記録からの採用監査が不足
-
-- → depends_on [K0065](../items/K0065-n10-two-three-stone-d4-orbits.md)
 
 ## [K0290](../items/K0290-raw-gain-versus-filtered-response-overlap.md) 9×9 raw gainとfiltered responseのpair重複は異なる量
 
