@@ -282,6 +282,23 @@
 - [K0112](../items/K0112-random-greedy-versus-minimum-maximal.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0272](../items/K0272-n7-union-width-eleven-static-barrier.md) (source): F-BGの整数・分数最適性
 - [K0296](../items/K0296-n5-five-stone-optimal-terminal-exclusion-refuted.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/game-structure-20261003-extra.md](../../../research/game-structure-20261003-extra.md)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (source): 6合法点での最初の例外分類
+## [research/game-structure-20261003-nine.md](../../../research/game-structure-20261003-nine.md)
+
+- [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (source): 正方形盤misère探索のまとめ
+- [K0311](../items/K0311-misere-n9-outcome-open.md) (source): 9×9の128-bit探索とUNKNOWN境界
+## [research/game-structure-20261003.md](../../../research/game-structure-20261003.md)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 5合法点交換則の一般証明
+## [research/geometry-20261003.md](../../../research/geometry-20261003.md)
+
+- [K0307](../items/K0307-square-circle-maxima-through-112.md) (source): 全中心有限盤極値の結果
+## [research/geometry_20261003_extended.md](../../../research/geometry_20261003_extended.md)
+
+- [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (proof): 幅16定理と最小性
+- [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母5・8の点数公式と閾値
 ## [research/hypotheses.md](../../../research/hypotheses.md)
 
 - [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) (source): H1/H2の原仮説と機械集計
@@ -318,7 +335,6 @@
 - [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) (source): B078の原文
 - [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) (source): B079の原文・定義（現在の結論は採用報告を優先）
 - [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) (source): B080の原文・定義（現在の結論は採用報告を優先）
-- [K0141](../items/K0141-n10-20-stone-existence-open.md) (source): B082の原文・定義（現在の結論は採用報告を優先）
 - [K0142](../items/K0142-maximum-configuration-boundary-extension.md) (source): B087の原文・定義（現在の結論は採用報告を優先）
 - [K0143](../items/K0143-asymptotic-two-n-safe-construction-open.md) (source): B088の原文・定義（現在の結論は採用報告を優先）
 - [K0144](../items/K0144-few-algebraic-curves-optimality-refuted.md) (source): B089の原文・定義（現在の結論は採用報告を優先）
@@ -459,11 +475,48 @@
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0073](../items/K0073-q-two-width-circle-criterion.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0077](../items/K0077-width-four-q8-stabilization-open.md) (source): 命題・対象範囲・根拠を記した出典
-## [research/q5-w3-stabilization.md](../../../research/q5-w3-stabilization.md)
+## [research/q34-exact-threshold.md](../../../research/q34-exact-threshold.md)
 
-- [K0071](../items/K0071-width-three-q5-bounds-and-solved-ranges.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0078](../items/K0078-width-three-q5-intermediate-range-open.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{3,4}=24
+- [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=4全長分類
+- [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) (proof): 例外下方閉包と偶奇尾部に使う一般補題
+## [research/q35-exact-threshold.md](../../../research/q35-exact-threshold.md)
+
+- [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (proof): M_{3,5}=12の全証明と全長Grundy分類
+- [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (source): 支持集合グラフによる完全排除
+- [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{3,5}=12
+- [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=5全長分類
+## [research/q36-three-row-classification.md](../../../research/q36-three-row-classification.md)
+
+- [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=6およびq≥7を含む統一分類
+## [research/q48-exact-threshold.md](../../../research/q48-exact-threshold.md)
+
+- [K0077](../items/K0077-width-four-q8-stabilization.md) (proof): M_{4,8}=11の一般上界・有限排除・m=10証人
+- [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,8}=11
+## [research/q48-nearby-q7-threshold.md](../../../research/q48-nearby-q7-threshold.md)
+
+- [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,7}=13
+## [research/q48-odd-q-reflection.md](../../../research/q48-odd-q-reflection.md)
+
+- [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (proof): 鏡映対称応答の一般定理
+## [research/q48-q6-exact-threshold.md](../../../research/q48-q6-exact-threshold.md)
+
+- [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,6}=16
+## [research/saturation-20261003-extra.md](../../../research/saturation-20261003-extra.md)
+
+- [K0141](../items/K0141-n10-20-stone-existence-open.md) (source): 複数19石極大と20石への局所非存在
+- [K0313](../items/K0313-large-safe-constructions-n11-n12.md) (source): 21・22・24石構成と外周被覆
+- [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) (source): 3つの完全局所探索と19石K4族
+## [research/saturation-20261003.md](../../../research/saturation-20261003.md)
+
+- [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): 全固定q≥4への拡張と直線被覆係数の改善
+- [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (source): 10石極大証人と6・7石全域排除
+- [K0314](../items/K0314-line-only-saturation-sharp-constant.md) (proof): 原始方向容量による直線被覆上界
+- [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) (proof): 23点緩和証人と既知上界
+## [research/theory_audit_20261003_extra.md](../../../research/theory_audit_20261003_extra.md)
+
+- [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): 平方完成ノルム上界を2(n-1)^6へ改善
+- [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母6の完全点数公式と最小半径
 ## [research/verification/HANDOFF-2026-10-01-round61.md](../../../research/verification/HANDOFF-2026-10-01-round61.md)
 
 - [K0079](../items/K0079-600-original-claims-audit-boundary.md) (source): 最終原文状態と残件
@@ -487,9 +540,34 @@
 ## [research/verification/data/s8_exact.json](../../../research/verification/data/s8_exact.json)
 
 - [K0032](../items/K0032-n8-minimum-maximal-size.md) (data): 7石完全排除記録
+## [research/verification/game_structure_20261003_complexes.json](../../../research/verification/game_structure_20261003_complexes.json)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (data): 6頂点全族の完全分類
+## [research/verification/game_structure_20261003_eight.json](../../../research/verification/game_structure_20261003_eight.json)
+
+- [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (data): 8×8全初手証明の集計
+## [research/verification/game_structure_20261003_nine_audit.json](../../../research/verification/game_structure_20261003_nine_audit.json)
+
+- [K0311](../items/K0311-misere-n9-outcome-open.md) (data): 9×9実装監査
+## [research/verification/geometry_20261003_extended.json](../../../research/verification/geometry_20261003_extended.json)
+
+- [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (data): 幅1..15の鋭い極値と達成例
+## [research/verification/geometry_20261003_scale.json](../../../research/verification/geometry_20261003_scale.json)
+
+- [K0307](../items/K0307-square-circle-maxima-through-112.md) (data): 全盤走査の集計
 ## [research/verification/q2w_boundary_structure.json](../../../research/verification/q2w_boundary_structure.json)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (data): mod9全剰余とlifted determinant照合
+## [research/verification/q35_exact_threshold.json](../../../research/verification/q35_exact_threshold.json)
+
+- [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (data): m=12..40の完全排除集計
+- [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (data): m=12..40の全候補集計
+## [research/verification/q48_exact_threshold.json](../../../research/verification/q48_exact_threshold.json)
+
+- [K0077](../items/K0077-width-four-q8-stabilization.md) (data): 円型分類とm=11,12完全排除
+## [research/verification/q48_odd_q_reflection.json](../../../research/verification/q48_odd_q_reflection.json)
+
+- [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (data): 有限例の検算
 ## [research/verification/q_point_fixed_width.json](../../../research/verification/q_point_fixed_width.json)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (data): 命題・対象範囲・根拠を記した出典
@@ -728,7 +806,7 @@
 - [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
-- [K0141](../items/K0141-n10-20-stone-existence-open.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+- [K0141](../items/K0141-n10-20-stone-existence-open.md) (manifest): B082の原文監査
 - [K0142](../items/K0142-maximum-configuration-boundary-extension.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0143](../items/K0143-asymptotic-two-n-safe-construction-open.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0144](../items/K0144-few-algebraic-curves-optimality-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
@@ -1269,7 +1347,7 @@
 - [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (source): n=9の限定16配置でもρ=1
 ## [research/verification/round52-general-saturation-exponent-lower-bound.md](../../../research/verification/round52-general-saturation-exponent-lower-bound.md)
 
-- [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): q=4標準版の元の指数下界
 - [K0147](../items/K0147-sublinear-minimum-maximal-open.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/verification/round54-small-board-saturation-jump.md](../../../research/verification/round54-small-board-saturation-jump.md)
@@ -1290,7 +1368,7 @@
 ## [research/verification/round57-nineteen-stone-ten-board-bound.md](../../../research/verification/round57-nineteen-stone-ten-board-bound.md)
 
 - [K0035](../items/K0035-n10-maximum-safe-bounds.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0141](../items/K0141-n10-20-stone-existence-open.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0141](../items/K0141-n10-20-stone-existence-open.md) (source): 19石証人と一般上界23
 ## [research/verification/round57_nineteen_verified.json](../../../research/verification/round57_nineteen_verified.json)
 
 - [K0035](../items/K0035-n10-maximum-safe-bounds.md) (data): 座標安全性と上下界の監査
@@ -1379,9 +1457,33 @@
 
 - [K0214](../items/K0214-n7-maximum-external-radius-two.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0215](../items/K0215-n7-first-external-legal-point-orbits.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/verification/scripts/check_fixed_width_20261003.py](../../../research/verification/scripts/check_fixed_width_20261003.py)
+
+- [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (verifier): 軽量統合再現
+## [research/verification/scripts/check_geometry_20261003.py](../../../research/verification/scripts/check_geometry_20261003.py)
+
+- [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (verifier): 短時間再現
+## [research/verification/scripts/check_saturation_20261003.py](../../../research/verification/scripts/check_saturation_20261003.py)
+
+- [K0314](../items/K0314-line-only-saturation-sharp-constant.md) (verifier): 容量計数の独立検算
+## [research/verification/scripts/game_structure_20261003_eight_check.cpp](../../../research/verification/scripts/game_structure_20261003_eight_check.cpp)
+
+- [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (verifier): 行列式ベースの独立検証器
+## [research/verification/scripts/geometry_20261003_scale.py](../../../research/verification/scripts/geometry_20261003_scale.py)
+
+- [K0307](../items/K0307-square-circle-maxima-through-112.md) (verifier): 全中心・全半径の列挙
 ## [research/verification/scripts/n11_d4.cpp](../../../research/verification/scripts/n11_d4.cpp)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (solver): 命題・対象範囲・根拠を記した出典
+## [research/verification/scripts/q35_independent_audit.cpp](../../../research/verification/scripts/q35_independent_audit.cpp)
+
+- [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (verifier): lifted determinantによる独立円生成監査
+## [research/verification/scripts/q35_support_exclusion.cpp](../../../research/verification/scripts/q35_support_exclusion.cpp)
+
+- [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (solver): 外部4点集合を全列挙する完全排除
+## [research/verification/scripts/q48_exact_threshold.py](../../../research/verification/scripts/q48_exact_threshold.py)
+
+- [K0077](../items/K0077-width-four-q8-stabilization.md) (verifier): 整数演算による再現器
 ## [research/verification/scripts/q_point_fixed_width.py](../../../research/verification/scripts/q_point_fixed_width.py)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
@@ -1573,6 +1675,28 @@
 
 - [K0214](../items/K0214-n7-maximum-external-radius-two.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0215](../items/K0215-n7-first-external-legal-point-orbits.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/verification/scripts/saturation_20261003_exact_results.json](../../../research/verification/scripts/saturation_20261003_exact_results.json)
+
+- [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
+## [research/verification/scripts/saturation_20261003_extra_exact_results.json](../../../research/verification/scripts/saturation_20261003_extra_exact_results.json)
+
+- [K0141](../items/K0141-n10-20-stone-existence-open.md) (data): 約8.42億節点の3完全探索結果
+- [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) (data): 完走節点数と不存在結果
+## [research/verification/scripts/saturation_20261003_extra_union_neighborhood.cpp](../../../research/verification/scripts/saturation_20261003_extra_union_neighborhood.cpp)
+
+- [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) (solver): Uとの共通点を固定した完全探索
+## [research/verification/scripts/saturation_20261003_extra_verified.json](../../../research/verification/scripts/saturation_20261003_extra_verified.json)
+
+- [K0313](../items/K0313-large-safe-constructions-n11-n12.md) (data): 全四点安全性と全空点阻害証人
+## [research/verification/scripts/saturation_20261003_extra_verify.py](../../../research/verification/scripts/saturation_20261003_extra_verify.py)
+
+- [K0313](../items/K0313-large-safe-constructions-n11-n12.md) (verifier): 独立整数行列式検証
+## [research/verification/scripts/saturation_20261003_verified.json](../../../research/verification/scripts/saturation_20261003_verified.json)
+
+- [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) (data): 行列双方の点対和と違反四点の検査
+## [research/verification/scripts/saturation_20261003_verify.py](../../../research/verification/scripts/saturation_20261003_verify.py)
+
+- [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (verifier): 証人と幾何の独立検査
 ## [research/verification/structural-lemmas-2026-10-02/checks/early_stop_passes.json](../../../research/verification/structural-lemmas-2026-10-02/checks/early_stop_passes.json)
 
 - [K0100](../items/K0100-private-passes-immediate-terminal.md) (data): 勝敗・共通権利消去1191391比較
@@ -1605,6 +1729,9 @@
 
 - [K0093](../items/K0093-coordinate-three-ply-information.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0094](../items/K0094-n5-relocation-preserves-two-ply-changes-grundy.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/verification/theory_audit_20261003_extra.json](../../../research/verification/theory_audit_20261003_extra.json)
+
+- [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (data): 大規模整数条件照合
 ## [results/10x10/ab-staged-v3-root/aggregate_summary.json](../../../results/10x10/ab-staged-v3-root/aggregate_summary.json)
 
 - [K0286](../items/K0286-native-parent-solver-speedup-gate-failed.md) (data): V3各主要gate

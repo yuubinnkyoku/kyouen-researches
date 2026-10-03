@@ -191,8 +191,9 @@
 - → generalizes [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): q≥4の一般定理は標準q4定理を含む
 - ← depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md)
 - ← depends_on [K0070](../items/K0070-width-three-q6-stabilization.md)
-- ← depends_on [K0071](../items/K0071-width-three-q5-bounds-and-solved-ranges.md)
-- ← depends_on [K0077](../items/K0077-width-four-q8-stabilization-open.md)
+- ← depends_on [K0071](../items/K0071-width-three-q5-exact-stabilization.md)
+- ← depends_on [K0077](../items/K0077-width-four-q8-stabilization.md)
+- ← depends_on [K0303](../items/K0303-width-three-all-q-all-length-grundy.md)
 
 ## [K0025](../items/K0025-q-above-two-width-all-lengths.md) q>2wでは全長の固定幅盤が分離し強解決
 
@@ -259,6 +260,8 @@
 - ← depends_on [K0221](../items/K0221-interior-relocation-external-gap-open.md)
 - ← depends_on [K0297](../items/K0297-minimum-maximal-private-point-open.md)
 - ← depends_on [K0298](../items/K0298-minimum-maximal-rho-one-open.md)
+- ← depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md)
+- ← depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md)
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -478,16 +481,20 @@
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
+- ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 固定幅の厳密閾値群の一部として位置づける
 
-## [K0071](../items/K0071-width-three-q5-bounds-and-solved-ranges.md) 3×m・q=5は12≤M_{3,5}≤56、m=12..21とm≥56は強解決
+## [K0071](../items/K0071-width-three-q5-exact-stabilization.md) 3×m・q=5の真の満容量安定化長はM_{3,5}=12
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
-- ← depends_on [K0078](../items/K0078-width-three-q5-intermediate-range-open.md)
+- → depends_on [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md): m=12..39の有限排除とm≥40の一般上界で閾値を閉じる
+- ← supports [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md): M_{3,5}=12の有限区間部分を閉じる
+- ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): M_{3,5}=12を含む
 
 ## [K0072](../items/K0072-mod9-integer-row-separation.md) 標準整数行のmod9制約は高q全長分離領域を拡大する
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
-- ← depends_on [K0077](../items/K0077-width-four-q8-stabilization-open.md)
+- ← depends_on [K0077](../items/K0077-width-four-q8-stabilization.md): q=2w境界の整数格子構造を使う
+- ← generalizes [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md): 固定幅で円が消える領域を別方向から拡張する
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -507,14 +514,16 @@
 
 - → depends_on [K0074](../items/K0074-single-forbidden-type-variants.md)
 
-## [K0077](../items/K0077-width-four-q8-stabilization-open.md) 4×m・q=8の真の安定化長は未確定
+## [K0077](../items/K0077-width-four-q8-stabilization.md) 4×m・q=8の真の満容量安定化長はM_{4,8}=11
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
-- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md)
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): q=2w境界の整数格子構造を使う
+- ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): M_{4,8}=11を含む
 
-## [K0078](../items/K0078-width-three-q5-intermediate-range-open.md) 3×m・q=5のm=22..55に不足極大が再出現するかは未確定
+## [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) 3×m・q=5のm=22..39にも不足極大安全集合は存在しない
 
-- → depends_on [K0071](../items/K0071-width-three-q5-bounds-and-solved-ranges.md)
+- → supports [K0071](../items/K0071-width-three-q5-exact-stabilization.md): M_{3,5}=12の有限区間部分を閉じる
+- ← depends_on [K0071](../items/K0071-width-three-q5-exact-stabilization.md): m=12..39の有限排除とm≥40の一般上界で閾値を閉じる
 
 ## [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md) 10×10 subset CSVのstateは入力座標で、D4正規形とは限らない
 
@@ -615,11 +624,12 @@
 - → depends_on [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md)
 - → depends_on [K0028](../items/K0028-n11-truncated-dp-winner-withdrawn.md)
 
-## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 最小極大サイズの漸近指数には一般下界2/3がある
+## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 固定qの最小極大サイズには漸近指数下界2/3がある
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
-- → supports [K0147](../items/K0147-sublinear-minimum-maximal-open.md): 本文の証明・証人が原文に与える帰結
-- → supports [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md): 本文の証明・証人が原文に与える帰結
+- → supports [K0147](../items/K0147-sublinear-minimum-maximal-open.md): 下界側の制約
+- → supports [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md): 指数2/3未満を排除
+- ← supports [K0314](../items/K0314-line-only-saturation-sharp-constant.md): 標準版の指数下界と同じ2/3をより鋭いline-only計数で支える
 
 ## [K0107](../items/K0107-sharp-point-cover-bound.md) 安全k石の一空点被覆はk≥4で二次上限から必ず1減る
 
@@ -799,9 +809,11 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 
-## [K0141](../items/K0141-n10-20-stone-existence-open.md) 10×10では20石まで届く
+## [K0141](../items/K0141-n10-20-stone-existence-open.md) 10×10では20石まで届くか
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- ← depends_on [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md): K_10上界23をこの制約だけでは改善できないことを示す
+- ← supports [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md): 20石存在問題への局所的な否定結果
 
 ## [K0142](../items/K0142-maximum-configuration-boundary-extension.md) 既存最大配置に外周を足すだけでは次の最大へ届かない
 
@@ -828,12 +840,12 @@
 ## [K0147](../items/K0147-sublinear-minimum-maximal-open.md) 最小極大は線形より小さくなる
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
-- ← supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 本文の証明・証人が原文に与える帰結
+- ← supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 下界側の制約
 
 ## [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) 最小極大の指数は2/3
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
-- ← supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 本文の証明・証人が原文に与える帰結
+- ← supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 指数2/3未満を排除
 
 ## [K0149](../items/K0149-minimum-maximal-monotonicity-open.md) s_nは単調増加する
 
@@ -1276,3 +1288,45 @@
 
 - → supersedes [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md): n=1でρが定義できない問題を除外したB361の修正版
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+
+## [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) 固定幅の真の満容量安定化長5件は24,12,16,13,11
+
+- → generalizes [K0070](../items/K0070-width-three-q6-stabilization.md): 固定幅の厳密閾値群の一部として位置づける
+- → generalizes [K0071](../items/K0071-width-three-q5-exact-stabilization.md): M_{3,5}=12を含む
+- → generalizes [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11を含む
+
+## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類
+
+- → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
+
+## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
+
+- → generalizes [K0072](../items/K0072-mod9-integer-row-separation.md): 固定幅で円が消える領域を別方向から拡張する
+
+## [K0310](../items/K0310-misere-square-outcomes-through-eight.md) misère版の6×6は後手勝ち、7×7・8×8は先手勝ち
+
+- ← depends_on [K0311](../items/K0311-misere-n9-outcome-open.md): 8×8までの確定結果の次の盤
+
+## [K0311](../items/K0311-misere-n9-outcome-open.md) misère版9×9の空盤勝敗は未確定
+
+- → depends_on [K0310](../items/K0310-misere-square-outcomes-through-eight.md): 8×8までの確定結果の次の盤
+
+## [K0312](../items/K0312-n11-minimum-maximal-bounds.md) 11×11の最小極大サイズは8≤s_11≤10
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+
+## [K0313](../items/K0313-large-safe-constructions-n11-n12.md) K_11≥21かつK_12≥22の明示安全極大構成がある
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+
+## [K0314](../items/K0314-line-only-saturation-sharp-constant.md) line-only版の最小極大サイズは主係数(3π²/8)^(1/3)でn^(2/3)以上
+
+- → supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 標準版の指数下界と同じ2/3をより鋭いline-only計数で支える
+
+## [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) 10×10で行・列の点対和制約だけを課した緩和問題の最大値は23
+
+- → depends_on [K0141](../items/K0141-n10-20-stone-existence-open.md): K_10上界23をこの制約だけでは改善できないことを示す
+
+## [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) 10×10の既知19石近傍には安全20石が存在しない大きな局所障壁がある
+
+- → supports [K0141](../items/K0141-n10-20-stone-existence-open.md): 20石存在問題への局所的な否定結果

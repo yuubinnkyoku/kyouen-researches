@@ -72,14 +72,14 @@
 | [K0068](../items/K0068-standard-fixed-width-parity-threshold.md) | 標準q=4固定幅盤はm≥3+2{C(3w−2,3)−(w−1)}で全局面偶奇式 | proposition | proved | rectangles, grundy |
 | [K0069](../items/K0069-two-row-all-lengths-strong-solution.md) | 標準二行盤は全mで強解決、m≥6の空盤は後手勝ち | proposition | proved | rectangles, grundy |
 | [K0070](../items/K0070-width-three-q6-stabilization.md) | 3×m・q=6の真の満容量安定化長M_{3,6}=9 | proposition | proved | rectangles, variants, grundy |
-| [K0071](../items/K0071-width-three-q5-bounds-and-solved-ranges.md) | 3×m・q=5は12≤M_{3,5}≤56、m=12..21とm≥56は強解決 | proposition | proved | rectangles, variants, grundy |
+| [K0071](../items/K0071-width-three-q5-exact-stabilization.md) | 3×m・q=5の真の満容量安定化長はM_{3,5}=12 | proposition | proved | rectangles, variants, grundy |
 | [K0072](../items/K0072-mod9-integer-row-separation.md) | 標準整数行のmod9制約は高q全長分離領域を拡大する | proposition | proved | rectangles, geometry, variants |
 | [K0073](../items/K0073-q-two-width-circle-criterion.md) | q=2w共円の一般必要十分条件は行ペア和一致と積の二階差 | proposition | proved | geometry, rectangles |
 | [K0074](../items/K0074-single-forbidden-type-variants.md) | 片禁止q点変種の全長強解決定理 | proposition | proved | variants, rectangles |
 | [K0075](../items/K0075-line-only-all-lengths-solution.md) | line-onlyはq>wで全m強解決 | proposition | proved | variants, rectangles, grundy |
 | [K0076](../items/K0076-circle-only-all-points-legal.md) | circle-onlyはq>2wで全未占有点が合法 | proposition | proved | variants, rectangles, grundy |
-| [K0077](../items/K0077-width-four-q8-stabilization-open.md) | 4×m・q=8の真の安定化長は未確定 | question | open | rectangles, variants |
-| [K0078](../items/K0078-width-three-q5-intermediate-range-open.md) | 3×m・q=5のm=22..55に不足極大が再出現するかは未確定 | question | open | rectangles, variants |
+| [K0077](../items/K0077-width-four-q8-stabilization.md) | 4×m・q=8の真の満容量安定化長はM_{4,8}=11 | proposition | proved | rectangles, variants, grundy |
+| [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) | 3×m・q=5のm=22..39にも不足極大安全集合は存在しない | proposition | computed | rectangles, variants |
 | [K0079](../items/K0079-600-original-claims-audit-boundary.md) | 600原文の監査状態と弱化版作業ラベルは別の量 | verification | verified | migration, provenance |
 | [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md) | 10×10 subset CSVのstateは入力座標で、D4正規形とは限らない | proposition | computed | provenance |
 | [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) | H1/H2のLOSS共通コアをD4不変構造とみなす仮説は偽 | proposition | refuted | residual-games, provenance |
@@ -107,7 +107,7 @@
 | [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) | 10×10空盤面全体の単一KYOENC4証明書は未統合 | question | open | certificates, verification |
 | [K0104](../items/K0104-prior-work-search-scope.md) | 先行研究・初出主張は2026-09-23調査範囲に限定 | proposition | observed | provenance |
 | [K0105](../items/K0105-n11-empty-root-winner-open.md) | 11×11の真の空盤勝敗は現在の主要未解決問題 | question | open | square-outcomes |
-| [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) | 最小極大サイズの漸近指数には一般下界2/3がある | proposition | proved | maximal-safe, geometry |
+| [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) | 固定qの最小極大サイズには漸近指数下界2/3がある | proposition | proved | maximal-safe, geometry, variants |
 | [K0107](../items/K0107-sharp-point-cover-bound.md) | 安全k石の一空点被覆はk≥4で二次上限から必ず1減る | proposition | proved | geometry, maximal-safe |
 | [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md) | 残余禁止hypergraphは継続ゲームを表し、二点グラフだけでは足りない | definition | active | residual-games, grundy |
 | [K0109](../items/K0109-n7-n9-certificate-loss-ratios.md) | 7〜9×9公開証明書のLOSS比34〜35%は三サイズの観測 | proposition | observed | certificates, statistics |
@@ -142,7 +142,7 @@
 | [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) | 全nの最小極大配置に一重被覆点があるというB078はn=1で偽 | proposition | refuted | maximal-safe, geometry |
 | [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) | 六石非存在は三つ組の共起だけで短く説明できる | question | open | maximal-safe, geometry |
 | [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) | 全空点をちょうど一度ずつ禁止する極大配置 | proposition | computed | maximal-safe, geometry |
-| [K0141](../items/K0141-n10-20-stone-existence-open.md) | 10×10では20石まで届く | question | open | maximum-safe, geometry |
+| [K0141](../items/K0141-n10-20-stone-existence-open.md) | 10×10では20石まで届くか | question | open | maximum-safe, geometry |
 | [K0142](../items/K0142-maximum-configuration-boundary-extension.md) | 既存最大配置に外周を足すだけでは次の最大へ届かない | proposition | computed | maximum-safe, geometry |
 | [K0143](../items/K0143-asymptotic-two-n-safe-construction-open.md) | 2n−O(1)石の安全配置を無限族で作れる | question | open | maximum-safe, geometry |
 | [K0144](../items/K0144-few-algebraic-curves-optimality-refuted.md) | 少数の代数曲線の和で漸近最適になる | proposition | refuted | maximum-safe, geometry |
@@ -300,3 +300,18 @@
 | [K0296](../items/K0296-n5-five-stone-optimal-terminal-exclusion-refuted.md) | 5×5の全勝敗維持対局では五石で終わらないという説明は偽 | proposition | refuted | strategy-length, maximal-safe |
 | [K0297](../items/K0297-minimum-maximal-private-point-open.md) | n≥2の全最小極大配置に一重被覆点があるか | question | open | maximal-safe, geometry |
 | [K0298](../items/K0298-minimum-maximal-rho-one-open.md) | n≥2の全最小極大配置で故障耐性ρが1か | question | open | maximal-safe, geometry |
+| [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) | 固定幅の真の満容量安定化長5件は24,12,16,13,11 | proposition | proved | rectangles, variants, grundy |
+| [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) | 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類 | computation | computed | rectangles, variants, grundy |
+| [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) | 奇数qの固定点なし鏡映対称安全局面はP局面 | proposition | proved | rectangles, variants, grundy |
+| [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) | 有限下方閉配置ゲームで全Grundy値が0/1であることと極大集合の同偶奇性は同値 | proposition | proved | grundy, variants |
+| [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) | 幅w≥16の連続整数行に任意の円が持つ格子点は高々w | proposition | proved | geometry, rectangles |
+| [K0307](../items/K0307-square-circle-maxima-through-112.md) | n≤112の正方形盤に載る円上格子点数の最大値を全中心・全半径で完全分類 | computation | computed | geometry |
+| [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) | 中心分母5・6・8の格子円には点数・最小半径の厳密公式がある | proposition | proved | geometry |
+| [K0309](../items/K0309-misere-small-legal-set-exchange.md) | 合法点5個以下では通常値とmisère補助値は0と1だけ交換される | proposition | proved | variants, grundy |
+| [K0310](../items/K0310-misere-square-outcomes-through-eight.md) | misère版の6×6は後手勝ち、7×7・8×8は先手勝ち | computation | computed | variants, square-outcomes, first-moves |
+| [K0311](../items/K0311-misere-n9-outcome-open.md) | misère版9×9の空盤勝敗は未確定 | question | open | variants, square-outcomes, search-methods |
+| [K0312](../items/K0312-n11-minimum-maximal-bounds.md) | 11×11の最小極大サイズは8≤s_11≤10 | proposition | computed | maximal-safe, geometry |
+| [K0313](../items/K0313-large-safe-constructions-n11-n12.md) | K_11≥21かつK_12≥22の明示安全極大構成がある | proposition | computed | maximum-safe, maximal-safe, geometry |
+| [K0314](../items/K0314-line-only-saturation-sharp-constant.md) | line-only版の最小極大サイズは主係数(3π²/8)^(1/3)でn^(2/3)以上 | proposition | proved | maximal-safe, geometry, variants |
+| [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) | 10×10で行・列の点対和制約だけを課した緩和問題の最大値は23 | proposition | proved | maximum-safe, geometry |
+| [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) | 10×10の既知19石近傍には安全20石が存在しない大きな局所障壁がある | computation | computed | maximum-safe, reconfiguration, geometry |

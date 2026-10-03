@@ -33,7 +33,7 @@
 | B079 | [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) | 六石非存在は三つ組の共起だけで短く説明できる |
 | B080 | [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) | 全空点をちょうど一度ずつ禁止する極大配置 |
 | B081 | [K0039](../items/K0039-n9-17-stone-maximum-conjecture-refuted.md) | K_9=17という旧仮説は18石安全証人により反証 |
-| B082 | [K0141](../items/K0141-n10-20-stone-existence-open.md) | 10×10では20石まで届く |
+| B082 | [K0141](../items/K0141-n10-20-stone-existence-open.md) | 10×10では20石まで届くか |
 | B087 | [K0142](../items/K0142-maximum-configuration-boundary-extension.md) | 既存最大配置に外周を足すだけでは次の最大へ届かない |
 | B088 | [K0143](../items/K0143-asymptotic-two-n-safe-construction-open.md) | 2n−O(1)石の安全配置を無限族で作れる |
 | B089 | [K0144](../items/K0144-few-algebraic-curves-optimality-refuted.md) | 少数の代数曲線の和で漸近最適になる |
@@ -223,7 +223,7 @@
 | F-BI | [K0025](../items/K0025-q-above-two-width-all-lengths.md) | q>2wでは全長の固定幅盤が分離し強解決 |
 | F-BJ | [K0070](../items/K0070-width-three-q6-stabilization.md) | 3×m・q=6の真の満容量安定化長M_{3,6}=9 |
 | F-BK | [K0070](../items/K0070-width-three-q6-stabilization.md) | 3×m・q=6の真の満容量安定化長M_{3,6}=9 |
-| F-BL | [K0071](../items/K0071-width-three-q5-bounds-and-solved-ranges.md) | 3×m・q=5は12≤M_{3,5}≤56、m=12..21とm≥56は強解決 |
+| F-BL | [K0071](../items/K0071-width-three-q5-exact-stabilization.md) | 3×m・q=5の真の満容量安定化長はM_{3,5}=12 |
 | F-BM | [K0074](../items/K0074-single-forbidden-type-variants.md) | 片禁止q点変種の全長強解決定理 |
 | F-BN | [K0072](../items/K0072-mod9-integer-row-separation.md) | 標準整数行のmod9制約は高q全長分離領域を拡大する |
 | F-C | [K0109](../items/K0109-n7-n9-certificate-loss-ratios.md) | 7〜9×9公開証明書のLOSS比34〜35%は三サイズの観測 |
