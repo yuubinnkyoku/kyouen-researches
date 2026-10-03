@@ -447,9 +447,6 @@
 
 - ← depends_on [K0066](../items/K0066-n10-three-stone-completions.md)
 
-## [K0065](../items/K0065-n10-two-three-stone-d4-orbits.md) 10×10の二石・三石D4軌道は120・680
-
-
 ## [K0066](../items/K0066-n10-three-stone-completions.md) 10×10の三点補完数は最大9で8を欠き、三石mobility=97−補完数
 
 - → depends_on [K0063](../items/K0063-n10-circle-catalogue.md)
