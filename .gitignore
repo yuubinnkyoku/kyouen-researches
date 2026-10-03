@@ -67,3 +67,9 @@ research/verification/scripts/round5_b142_count
 research/verification/scripts/round5_b522_triples
 scratchpad/
 scripts/round5_b231_*.py
+
+# transient solver state files (frozen binaries/checksums remain versioned)
+tmp-kb/tmp*.txt
+/tmp_probe.py
+/tmp_probe.ps1
+/test_task.txt
