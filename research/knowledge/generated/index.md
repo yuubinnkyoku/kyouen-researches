@@ -300,6 +300,9 @@
 | [K0296](../items/K0296-n5-five-stone-optimal-terminal-exclusion-refuted.md) | 5×5の全勝敗維持対局では五石で終わらないという説明は偽 | proposition | refuted | strategy-length, maximal-safe |
 | [K0297](../items/K0297-minimum-maximal-private-point-open.md) | n≥2の全最小極大配置に一重被覆点があるか | question | open | maximal-safe, geometry |
 | [K0298](../items/K0298-minimum-maximal-rho-one-open.md) | n≥2の全最小極大配置で故障耐性ρが1か | question | open | maximal-safe, geometry |
+| [K0299](../items/K0299-denominator-three-circle-window-spectra.md) | q≥3の完全格子円の窓点数スペクトルは可変0..m・固定0..M_n | proposition | proved | geometry |
+| [K0300](../items/K0300-minimal-effective-tree-triple-star.md) | 効く極小三点辺の最小接続木は三葉上のK1,3 | proposition | proved | residual-games |
+| [K0301](../items/K0301-four-stone-johnson-layer-bridge.md) | 安全四石配置対は三石Johnson交換層を経由して接続できる | proposition | proved | reconfiguration |
 | [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) | 固定幅の真の満容量安定化長5件は24,12,16,13,11 | proposition | proved | rectangles, variants, grundy |
 | [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) | 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類 | computation | computed | rectangles, variants, grundy |
 | [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) | 奇数qの固定点なし鏡映対称安全局面はP局面 | proposition | proved | rectangles, variants, grundy |

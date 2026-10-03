@@ -987,6 +987,7 @@
 ## [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) 木の競合グラフで効く三点制約には最小の接続型がある
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
+- → depends_on [K0300](../items/K0300-minimal-effective-tree-triple-star.md): 最小接続型K1,3は証明済みで、残るのは大きな木の一般分類
 
 ## [K0194](../items/K0194-cross-clique-triple-redundancy.md) 完全グラフ成分をまたぐ三点制約は冗長か値不変
 
@@ -1120,10 +1121,15 @@
 ## [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) 一石少ない中間配置を許すと同一残局族を少数の橋で結べる
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
+- → depends_on [K0301](../items/K0301-four-stone-johnson-layer-bridge.md): 四石配置対の三石Johnson交換橋は一般証明済み
 
 ## [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md) 残余ゲームの抽象同型まで緩めても配置族は分裂する
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
+
+## [K0232](../items/K0232-circle-window-single-point-cuts-open.md) 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み
+
+- → depends_on [K0299](../items/K0299-denominator-three-circle-window-spectra.md): q≥3の穴なしスペクトル定理は証明済み部分として分離
 
 ## [K0251](../items/K0251-random-win-p-bound-two-thirds-refuted.md) 標準盤のP局面のランダム勝率は2/3以下
 
@@ -1306,6 +1312,18 @@
 
 - → supersedes [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md): n=1でρが定義できない問題を除外したB361の修正版
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+
+## [K0299](../items/K0299-denominator-three-circle-window-spectra.md) q≥3の完全格子円の窓点数スペクトルは可変0..m・固定0..M_n
+
+- ← depends_on [K0232](../items/K0232-circle-window-single-point-cuts-open.md): q≥3の穴なしスペクトル定理は証明済み部分として分離
+
+## [K0300](../items/K0300-minimal-effective-tree-triple-star.md) 効く極小三点辺の最小接続木は三葉上のK1,3
+
+- ← depends_on [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md): 最小接続型K1,3は証明済みで、残るのは大きな木の一般分類
+
+## [K0301](../items/K0301-four-stone-johnson-layer-bridge.md) 安全四石配置対は三石Johnson交換層を経由して接続できる
+
+- ← depends_on [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md): 四石配置対の三石Johnson交換橋は一般証明済み
 
 ## [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) 固定幅の真の満容量安定化長5件は24,12,16,13,11
 

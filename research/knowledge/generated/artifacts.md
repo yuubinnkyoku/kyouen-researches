@@ -1224,6 +1224,7 @@
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (proof): 命題・対象範囲・根拠を記した出典
 - [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (source): 窓スペクトルの全分類定理と対称性単調性の反例
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (proof): 命題・対象範囲・根拠を記した出典
+- [K0299](../items/K0299-denominator-three-circle-window-spectra.md) (proof): q≥3の固定窓・可変窓スペクトルの一般証明
 ## [research/verification/round4-collinear-asymptotic.md](../../../research/verification/round4-collinear-asymptotic.md)
 
 - [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1268,6 +1269,7 @@
 - [K0225](../items/K0225-fiber-components-deletion-robustness.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0301](../items/K0301-four-stone-johnson-layer-bridge.md) (proof): 四石配置間の三石Johnson橋の一般証明
 ## [research/verification/round42_families_verified.json](../../../research/verification/round42_families_verified.json)
 
 - [K0124](../items/K0124-same-residual-game-exchange-connectivity-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1277,6 +1279,7 @@
 - [K0225](../items/K0225-fiber-components-deletion-robustness.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0301](../items/K0301-four-stone-johnson-layer-bridge.md) (data): 明示証人と有限照合結果
 ## [research/verification/round43-b350-value-preserving-move-switch.md](../../../research/verification/round43-b350-value-preserving-move-switch.md)
 
 - [K0197](../items/K0197-same-grundy-different-best-moves-after-removal.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1288,11 +1291,13 @@
 - [K0125](../items/K0125-three-stone-p-graph-three-colorability-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0127](../items/K0127-tree-p-graph-higher-constraints-change-outcome.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0300](../items/K0300-minimal-effective-tree-triple-star.md) (proof): 最小接続木K1,3の一般証明と格子実現
 ## [research/verification/round44_tree_clique_verified.json](../../../research/verification/round44_tree_clique_verified.json)
 
 - [K0125](../items/K0125-three-stone-p-graph-three-colorability-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0127](../items/K0127-tree-p-graph-higher-constraints-change-outcome.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0300](../items/K0300-minimal-effective-tree-triple-star.md) (data): 明示証人と有限照合結果
 ## [research/verification/round45-cover-gap-and-sharp-overlap.md](../../../research/verification/round45-cover-gap-and-sharp-overlap.md)
 
 - [K0107](../items/K0107-sharp-point-cover-bound.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1343,6 +1348,7 @@
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (data): 反例円と窓スペクトルの厳密データ
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0299](../items/K0299-denominator-three-circle-window-spectra.md) (data): 明示証人と有限照合結果
 ## [research/verification/round4_collinear_asymptotic.json](../../../research/verification/round4_collinear_asymptotic.json)
 
 - [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (data): 整数・有理数の有限検算
@@ -1644,6 +1650,7 @@
 - [K0225](../items/K0225-fiber-components-deletion-robustness.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0301](../items/K0301-four-stone-johnson-layer-bridge.md) (verifier): 証人の独立検算
 ## [research/verification/scripts/round43_b350_minimum.py](../../../research/verification/scripts/round43_b350_minimum.py)
 
 - [K0197](../items/K0197-same-grundy-different-best-moves-after-removal.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1652,6 +1659,7 @@
 - [K0125](../items/K0125-three-stone-p-graph-three-colorability-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0127](../items/K0127-tree-p-graph-higher-constraints-change-outcome.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0300](../items/K0300-minimal-effective-tree-triple-star.md) (verifier): 証人の独立検算
 ## [research/verification/scripts/round4_circle_windows.py](../../../research/verification/scripts/round4_circle_windows.py)
 
 - [K0232](../items/K0232-circle-window-single-point-cuts-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1663,6 +1671,7 @@
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (verifier): 格子対称群と窓スペクトルの独立計算
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0299](../items/K0299-denominator-three-circle-window-spectra.md) (verifier): 円窓スペクトルと反例の独立検算
 ## [research/verification/scripts/round4_collinear_asymptotic.py](../../../research/verification/scripts/round4_collinear_asymptotic.py)
 
 - [K0152](../items/K0152-primitive-direction-leading-constant.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
