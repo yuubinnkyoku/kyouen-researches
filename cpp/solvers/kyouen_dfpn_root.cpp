@@ -707,6 +707,81 @@ public:
         return out;
     }
 
+    // ---- ADAPTIVE COORDINATOR for one two-stone reply ---------------
+    // The refutation of reply r2 is a set cover over canonical s4
+    // classes: a third move a is refuted as soon as ANY incident class is
+    // proved LOSS, so refuting the whole reply means covering all vertices
+    // with LOSS-proved classes. OPT is 31 (certified by ILP), so at most
+    // 31 class proofs are ever needed and the progress metric
+    // "minimum additional classes" is exact rather than heuristic.
+    //
+    // The coordinator re-solves the optimistic cover after every verdict:
+    //     LOSS class    -> usable, cost 0 (already paid for)
+    //     UNKNOWN class -> usable, cost 1 (still to be proved)
+    //     WIN class     -> FORBIDDEN (can never refute anything)
+    // and hands the UNKNOWN members of that cover to workers. Concentrating
+    // on the current cover means effort goes only to classes that can
+    // still appear in a certificate, rather than to all 3395 remaining.
+    // Greedy largest-coverage-first cover over the usable classes, cost 0
+    // for a decided LOSS class and 1 for an UNKNOWN one. Cheap and
+    // deterministic; the ILP gives the exact optimum offline, and this
+    // is only used to decide what to work on next.
+    //
+    // It reports TWO cover counts. `covered` is the optimistic cover,
+    // which counts UNKNOWN classes as usable and therefore reaches all
+    // 119 immediately. `secured` counts only vertices covered by PROVED
+    // LOSS classes. Victory requires secured == 119; treating the
+    // optimistic count as a refutation would be a soundness bug.
+    struct CovMemo { std::vector<int> verts; };
+    struct CoordStats {
+        std::uint64_t cover_size=0;       // optimistic cover size
+        std::uint64_t covered=0;          // vertices in that cover
+        std::uint64_t secured=0;          // vertices covered by LOSS PROOF
+        std::uint64_t min_additional=0;   // how many still need proving
+        std::uint64_t forbidden=0;        // classes WIN has ruled out
+    };
+
+    CoordStats coordinate(const std::vector<CovMemo>& cov_memo,
+                          const std::vector<EdgeVerdict>& verdicts) const {
+        const int M=(int)cov_memo.size();
+        std::vector<char> covered((std::size_t)V,0);
+        std::vector<char> secured((std::size_t)V,0);
+        std::vector<char> used((std::size_t)M,0);
+        CoordStats st;
+        std::size_t covered_n=0, secured_n=0;
+        for(int round=0; round<M; ++round){
+            int best=-1, best_cost=99;
+            std::size_t best_fresh=0;
+            for(int i=0;i<M;++i){
+                if(used[(std::size_t)i]) continue;
+                if(verdicts[(std::size_t)i]==EdgeVerdict::WIN) continue;
+                int cost=(verdicts[(std::size_t)i]==EdgeVerdict::LOSS)?0:1;
+                std::size_t fresh=0;
+                for(int v:cov_memo[(std::size_t)i].verts)
+                    if(!covered[(std::size_t)v]) ++fresh;
+                if(fresh==0) continue;
+                if(fresh>best_fresh || (fresh==best_fresh && cost<best_cost)){
+                    best=i; best_cost=cost; best_fresh=fresh;
+                }
+            }
+            if(best<0) break;
+            used[(std::size_t)best]=1;
+            for(int v:cov_memo[(std::size_t)best].verts){
+                if(!covered[(std::size_t)v]){ covered[(std::size_t)v]=1; ++covered_n; }
+                if(best_cost==0 && !secured[(std::size_t)v]){
+                    secured[(std::size_t)v]=1; ++secured_n;
+                }
+            }
+            ++st.cover_size;
+            st.min_additional += (std::uint64_t)best_cost;
+        }
+        st.covered=covered_n;
+        st.secured=secured_n;
+        for(int i=0;i<M;++i)
+            if(verdicts[(std::size_t)i]==EdgeVerdict::WIN) ++st.forbidden;
+        return st;
+    }
+
     // Certificate for one winning two-stone reply. Filled only when the
     // quantified search returns WIN:
     //   reply r2, one winning third move r3, and for EVERY legal fourth
@@ -2863,6 +2938,182 @@ static int run_cover(int first,int r2,const std::string& s5_cache,
     return 0;
 }
 
+// ---- adaptive coordinator for one two-stone reply ------------------
+// The refutation of reply r2 is a set cover over canonical s4 classes:
+// a third move a is refuted as soon as ANY incident class is proved
+// LOSS, so refuting the whole reply means covering all 119 vertices with
+// LOSS-proved classes. OPT is 31, certified by ILP, so at most 31 class
+// proofs are ever needed and "minimum additional classes" is exact.
+//
+// After every verdict the optimistic cover is re-solved:
+//     LOSS class    -> usable, cost 0 (already paid for)
+//     UNKNOWN class -> usable, cost 1 (still to be proved)
+//     WIN class     -> FORBIDDEN (can never refute a third move)
+// and only the UNKNOWN members of that cover are worked on, so effort
+// goes to classes that can still appear in a certificate rather than to
+// all 3395 remaining.
+template<int N>
+static int run_coord(int first,int r2,const std::string& s5_cache,
+                    double budget_s,int max_classes,std::ostream& O){
+    DfPn<N> s(24);
+    s.set_deadline(0);
+    s.set_exact_handoff(0,1,1,0);
+    s.oracle_clear();
+    s.set_first_move(first);
+    if(!s5_cache.empty()) s.oracle_load(s5_cache);
+
+    Bits base{}; s.setbit_pub(base,first); s.setbit_pub(base,r2);
+    std::vector<int> verts=s.legal_moves_from(base);
+
+    std::vector<std::pair<int,int>> edges;
+    for(int a:verts){
+        Bits occ=base; s.setbit_pub(occ,a);
+        for(int b:s.legal_moves_from(occ)){
+            if(b==a) continue;
+            edges.push_back({std::min(a,b),std::max(a,b)});
+        }
+    }
+    std::sort(edges.begin(),edges.end());
+    edges.erase(std::unique(edges.begin(),edges.end()),edges.end());
+
+    std::map<std::pair<std::uint64_t,std::uint64_t>,std::vector<std::pair<int,int>>> groups;
+    for(const auto& e:edges){
+        Bits k=s.edge_class_key_pub(r2,e.first,e.second);
+        groups[{k.lo,k.hi}].push_back(e);
+    }
+
+    std::vector<std::size_t> order;
+    std::vector<typename DfPn<N>::CovMemo> cov;
+    std::vector<typename DfPn<N>::EdgeVerdict> verd;
+    std::vector<int> unk_cnt;
+    std::vector<const std::vector<std::pair<int,int>>*> gvec;
+    for(const auto& kv:groups){
+        std::vector<int> vs;
+        for(const auto& e:kv.second){ vs.push_back(e.first); vs.push_back(e.second); }
+        std::sort(vs.begin(),vs.end());
+        vs.erase(std::unique(vs.begin(),vs.end()),vs.end());
+        typename DfPn<N>::CovMemo cm; cm.verts=vs;
+        int unk=0;
+        typename DfPn<N>::EdgeVerdict v=DfPn<N>::EdgeVerdict::UNKNOWN;
+        for(const auto& e:kv.second){
+            auto ei=s.classify_edge_pub(r2,e.first,e.second);
+            if(ei.verdict==DfPn<N>::EdgeVerdict::WIN){ v=DfPn<N>::EdgeVerdict::WIN; break; }
+            if(ei.verdict==DfPn<N>::EdgeVerdict::UNKNOWN) ++unk;
+        }
+        if(v!=DfPn<N>::EdgeVerdict::WIN && unk==0) v=DfPn<N>::EdgeVerdict::LOSS;
+        order.push_back(cov.size());
+        cov.push_back(cm);
+        verd.push_back(v);
+        unk_cnt.push_back(unk);
+        gvec.push_back(&kv.second);
+    }
+
+    O<<"# coordinator: first="<<first<<" r2="<<r2
+     <<" vertices="<<verts.size()<<" classes="<<groups.size()
+     <<" cache_loaded="<<s.oracle_stats().loaded<<"\n";
+    O<<"# class_index,cov_size,unknown_s5,verdict,nodes,wall_ms\n";
+    O.flush();
+
+    double t_start=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    int touched=0;
+
+    for(;;){
+        auto st=s.coordinate(cov,verd);
+        O<<"# COVER optimistic="<<st.cover_size<<" in_cover="<<st.covered
+         <<" secured="<<st.secured<<"/"<<verts.size()
+         <<" min_additional="<<st.min_additional
+         <<" forbidden="<<st.forbidden<<" worked="<<touched<<"\n";
+        O.flush();
+        // Victory requires every vertex SECURED by a proved LOSS class.
+        if(st.covered==(std::uint64_t)verts.size() &&
+           st.secured==(std::uint64_t)verts.size()){
+            O<<"# ALL VERTICES SECURED: reply r2="<<r2<<" REFUTED\n";
+            break;
+        }
+        if(touched>=max_classes){ O<<"# stop: class budget\n"; break; }
+        if(budget_s>0){
+            double el=std::chrono::duration<double>(
+                std::chrono::steady_clock::now().time_since_epoch()).count()-t_start;
+            if(el>=budget_s){ O<<"# stop: wall budget\n"; break; }
+        }
+
+        // Pick from the current cover's UNKNOWN members: widest fresh
+        // coverage first, then fewest unknown s5 so a nearly-decided
+        // class is finished rather than abandoned.
+        // Sized V, not verts.size(): entries are board indices.
+        std::vector<char> reachable((std::size_t)DfPn<N>::V,0);
+        for(int slot=0;slot<(int)order.size();++slot){
+            if(verd[(std::size_t)slot]==DfPn<N>::EdgeVerdict::WIN) continue;
+            for(int v:cov[(std::size_t)slot].verts)
+                reachable[(std::size_t)v]=1;
+        }
+        int pick=-1; std::size_t pfresh=0; int punk=1<<30;
+        for(int slot=0;slot<(int)order.size();++slot){
+            if(verd[(std::size_t)slot]!=DfPn<N>::EdgeVerdict::UNKNOWN) continue;
+            std::size_t fresh=0;
+            for(int v:cov[(std::size_t)slot].verts)
+                if(reachable[(std::size_t)v]) ++fresh;
+            if(fresh==0) continue;
+            int u=unk_cnt[(std::size_t)slot];
+            if(fresh>pfresh || (fresh==pfresh && u<punk)){
+                pick=slot; pfresh=fresh; punk=u;
+            }
+        }
+        if(pick<0){ O<<"# no reachable UNKNOWN class\n"; break; }
+
+        double t0=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        std::uint64_t before=s.exact_total_nodes();
+        int dw=0, dl=0, du=0;
+        for(const auto& e:*gvec[(std::size_t)pick]){
+            typename DfPn<N>::TState s4{};
+            s4=s.add_pub(s4,first); s4=s.add_pub(s4,r2);
+            s4=s.add_pub(s4,e.first); s4=s.add_pub(s4,e.second);
+            Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
+            s.setbit_pub(occ4,e.first); s.setbit_pub(occ4,e.second);
+            for(int z:s.legal_moves_from(occ4)){
+                typename DfPn<N>::TState s5{};
+                s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+                s5=s.add_pub(s5,e.first); s5=s.add_pub(s5,e.second);
+                s5=s.add_pub(s5,z);
+                Bits o5=occ4; s.setbit_pub(o5,z);
+                int r=s.s5_oracle(s5,o5,20000000);
+                if(r==1) ++dw; else if(r==2) ++dl; else ++du;
+            }
+        }
+        double t1=std::chrono::duration<double>(
+            std::chrono::steady_clock::now().time_since_epoch()).count();
+        std::uint64_t used=s.exact_total_nodes()-before;
+
+        typename DfPn<N>::EdgeVerdict nv=DfPn<N>::EdgeVerdict::UNKNOWN;
+        int unk2=0;
+        for(const auto& e:*gvec[(std::size_t)pick]){
+            auto ei=s.classify_edge_pub(r2,e.first,e.second);
+            if(ei.verdict==DfPn<N>::EdgeVerdict::WIN){ nv=DfPn<N>::EdgeVerdict::WIN; break; }
+            if(ei.verdict==DfPn<N>::EdgeVerdict::UNKNOWN) ++unk2;
+        }
+        if(nv!=DfPn<N>::EdgeVerdict::WIN && unk2==0) nv=DfPn<N>::EdgeVerdict::LOSS;
+        verd[(std::size_t)pick]=nv;
+        unk_cnt[(std::size_t)pick]=unk2;
+        ++touched;
+
+        O<<"coord,"<<order[(std::size_t)pick]<<","
+         <<cov[(std::size_t)pick].verts.size()<<","<<punk<<","
+         <<(nv==DfPn<N>::EdgeVerdict::LOSS?"LOSS":
+            (nv==DfPn<N>::EdgeVerdict::WIN?"WIN":"UNKNOWN"))<<","
+         <<used<<","<<(long long)((t1-t0)*1000.0)
+         <<",win="<<dw<<" loss="<<dl<<" unk="<<du<<"\n";
+        O.flush();
+    }
+    double t_end=std::chrono::duration<double>(
+        std::chrono::steady_clock::now().time_since_epoch()).count();
+    O<<"# done classes_worked="<<touched
+     <<" wall_s="<<(long long)(t_end-t_start)<<"\n";
+    O.flush();
+    return 0;
+}
+
 int main(int argc,char**argv){
     try{
         int n=11;
@@ -2883,6 +3134,9 @@ int main(int argc,char**argv){
         std::string s5_cache_out="";   // same file to append decided verdicts
         int cover_first=60, cover_r2=0;  // LOSS-edge cover over one reply
         bool cover_run=false;
+        int coord_r2=0, coord_max=8;       // adaptive coordinator
+        double coord_wall=0;
+        bool coord_run=false;
         unsigned s4_ab_memo=24;
         std::uint64_t s4_ab_budget=20000000;
         int exact_order=0; // 0=count asc, 1=count desc, 2=key asc
@@ -2928,6 +3182,10 @@ int main(int argc,char**argv){
             else if(a.rfind("--cover-first=",0)==0)cover_first=std::stoi(a.substr(14));
             else if(a.rfind("--cover-r2=",0)==0)cover_r2=std::stoi(a.substr(11));
             else if(a=="--cover")cover_run=true;
+            else if(a.rfind("--coord-r2=",0)==0)coord_r2=std::stoi(a.substr(11));
+            else if(a.rfind("--coord-max=",0)==0)coord_max=std::stoi(a.substr(12));
+            else if(a.rfind("--coord-wall=",0)==0)coord_wall=std::stod(a.substr(13));
+            else if(a=="--coord")coord_run=true;
             else if(a=="--exact-order=count")exact_order=0;
             else if(a=="--exact-order=countd")exact_order=1;
             else if(a=="--exact-order=key")exact_order=2;
@@ -2947,7 +3205,7 @@ int main(int argc,char**argv){
         }
         if(!reps && !empty && roots_path.empty() && exact_replay_path.empty()
            && quant_replies.empty() && s4_ab.empty() && s5_cache.empty()
-           && !cover_run){
+           && !cover_run && !coord_run){
             std::cerr<<"nothing to do without --empty/--reps/--roots-csv/--exact-replay/--quant-replies\n";
             return 2;
         }
@@ -3005,12 +3263,16 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
+                if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+
                 if(!s4_ab.empty()) return run_s4_ab<4>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 5:
                 if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
+
+                if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<5>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3019,6 +3281,8 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
+                if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+
                 if(!s4_ab.empty()) return run_s4_ab<6>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
@@ -3026,12 +3290,16 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
+                if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+
                 if(!s4_ab.empty()) return run_s4_ab<7>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 11:
                 if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
+
+                if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<11>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<11>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
