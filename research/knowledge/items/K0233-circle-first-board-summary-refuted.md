@@ -9,6 +9,10 @@ aliases:
 - B458
 relations: []
 artifacts:
+- path: research/verification/round26_original_scope_index.json
+  role: manifest
+  note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
 - path: research/verification/round16-first-appearance.md
   role: source
   note: 同じ要約量で四点初出が異なる反例と無限拡大族

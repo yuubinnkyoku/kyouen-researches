@@ -9,6 +9,10 @@ aliases:
 - B258
 relations: []
 artifacts:
+- path: research/verification/round26_original_scope_index.json
+  role: manifest
+  note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
 - path: research/verification/round23-b256-symmetric-minimum.md
   role: source
   note: n≥4で共通必須D4型が存在しない一般構成

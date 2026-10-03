@@ -13,6 +13,10 @@ relations:
   target: K0026
   note: ''
 artifacts:
+- path: research/verification/round26_original_scope_index.json
+  role: manifest
+  note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+  commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
 - path: research/verification/round47-private-cover-and-global-minima.md
   role: source
   note: n=1の退化端点とn=2..8の全最小極大の完全検査
