@@ -1,11 +1,9 @@
 ---
 id: K0106
-title: 最小極大サイズの漸近指数には一般下界2/3がある
+title: 固定qの最小極大サイズには漸近指数下界2/3がある
 kind: proposition
 status: proved
-topics:
-- maximal-safe
-- geometry
+topics: [maximal-safe, geometry, variants]
 aliases: []
 relations:
 - type: depends_on
@@ -13,19 +11,29 @@ relations:
   note: ''
 - type: supports
   target: K0147
-  note: 本文の証明・証人が原文に与える帰結
+  note: 下界側の制約
 - type: supports
   target: K0148
-  note: 本文の証明・証人が原文に与える帰結
+  note: 指数2/3未満を排除
 artifacts:
 - path: research/verification/round52-general-saturation-exponent-lower-bound.md
-  role: source
-  note: 命題・対象範囲・根拠を記した出典
+  role: proof
+  note: q=4標準版の元の指数下界
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/saturation-20261003.md
+  role: proof
+  note: 全固定q≥4への拡張と直線被覆係数の改善
+  commit: 49891aaf2d402436b9581296ec91b52769e687d6
+- path: research/theory_audit_20261003_extra.md
+  role: proof
+  note: 平方完成ノルム上界を2(n-1)^6へ改善
+  commit: 49891aaf2d402436b9581296ec91b52769e687d6
 ---
 
-# 最小極大サイズの漸近指数には一般下界2/3がある
+# 固定qの最小極大サイズには漸近指数下界2/3がある
 
-任意のε>0に対し十分大きいnでs_n>n^(2/3−ε)、従ってliminf log(s_n)/log(n)≥2/3。安全k石からの直線被覆はO(n k^(3/2))、三格子点が定める真円の全格子点数は一様にn^o(1)。極大性の必要条件n²−k≤n[(2√2/3)k^(3/2)+(4/3)k]+C(k,3)R(n)から従う。
+標準q=4だけでなく、全ての固定q≥4について、最小極大サイズs_{n,q}は任意のε>0に対し十分大きいnでs_{n,q}>n^(2/3-ε)。従ってliminf log(s_{n,q})/log n≥2/3。
 
-真円の整数係数を平方完成してN≤224(n−1)^6、r₂(N)≤4τ(N)を使う。これは全盤の下界で、s_n=o(n)やs_n=n^(2/3+o(1))の対応上界は未証明。
+直線被覆は原始方向殻ごとの容量を使ってO_q(n k^(3/2))に抑え、真円被覆は三格子点円の点数上界R(n)=n^o(1)を使う。平方完成ノルムの有限盤上界は旧224(n-1)^6から2(n-1)^6へ改善された。
+
+円を禁止しないline-only版ではさらに主定数まで評価できるが、その定数を円も禁止する標準版へ移してはいけない。
