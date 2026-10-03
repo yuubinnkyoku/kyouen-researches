@@ -12,6 +12,9 @@ relations:
 - type: depends_on
   target: K0108
   note: ''
+- type: depends_on
+  target: K0300
+  note: 最小接続型K1,3は証明済みで、残るのは大きな木の一般分類
 artifacts:
 - path: research/verification/round44-three-stone-cliques-and-tree-minima.md
   role: source
@@ -43,7 +46,7 @@ evidence: 原文監査 PARTIAL / minimum_connecting_tree_classification
 
 適用文脈: 起点: [個票03・B051〜B058](verification/batch-03.md)、[個票04・B064〜B068](verification/batch-04.md)。孤立点だけによる退化例は除いて考える。
 
-現在の結論: 効く三点辺の最小接続木はK1,3と三葉上の三点辺で格子実現済み。より大きな木の距離偶奇による分類は未完成。
+現在の結論: 効く三点辺の最小接続木はK1,3と三葉上の三点辺で格子実現済みで、この部分はK0300としてprovedに分離した。より大きな木の距離偶奇による分類は未完成。
 
 採用境界: 効く三点辺の最小接続木はK1,3・三葉上の辺、格子実現を検算。大きな木の距離偶奇による一般分類は未証明。
 

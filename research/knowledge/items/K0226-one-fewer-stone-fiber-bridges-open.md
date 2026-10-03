@@ -12,6 +12,9 @@ relations:
 - type: depends_on
   target: K0108
   note: ''
+- type: depends_on
+  target: K0301
+  note: 四石配置対の三石Johnson交換橋は一般証明済み
 artifacts:
 - path: research/verification/round42-exact-residual-family-audit.md
   role: source
@@ -43,7 +46,7 @@ evidence: 原文監査 PARTIAL / general_four_stone_bridge_proof
 
 適用文脈: 起点: [個票03・B057](verification/batch-03.md)。ここでは同じk・同じラベル付きL・同じ極小残余族Rを持つ集合を一つの族とする。Rが空の場合でもLを省略しない。
 
-現在の結論: 安全四石対は、常に安全な三石層のJohnsonグラフを経由して接続できる。k≥5を含む原文全体は未証明。
+現在の結論: 安全四石対は、常に安全な三石層のJohnsonグラフを経由して接続でき、この部分はK0301としてprovedに分離した。k≥5を含む原文全体は未証明。
 
 採用境界: 任意の安全四石配置対は常に安全な三石層のJohnsonグラフを通って結べる。k≥5の原文全体は未証明。
 

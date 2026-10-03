@@ -7,7 +7,10 @@ topics:
 - geometry
 aliases:
 - B457
-relations: []
+relations:
+- type: depends_on
+  target: K0299
+  note: q≥3の穴なしスペクトル定理は証明済み部分として分離
 artifacts:
 - path: research/verification/round4-circle-windows.md
   role: source
@@ -35,7 +38,7 @@ evidence: 原文監査 PARTIAL / partial_general_spectrum_result
 
 # 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み
 
-中心の正確な共通分母q≥3の完全格子円Pについて、任意の固定整数正方形窓サイズnで、実現点数は0から最大点数M_n(P)まで穴がない。これは既存の円窓定理で証明済み。
+中心の正確な共通分母q≥3の完全格子円Pについて、任意の固定整数正方形窓サイズnで、実現点数は0から最大点数M_n(P)まで穴がない。この一般定理はK0299へ独立したproved項目として分離した。
 
 同じ完全点数mの円同士を双方収容できる十分大きい同サイズで比べると、q≥3の種類数はq≤2以上だが、厳密に多いとは限らない。
 
