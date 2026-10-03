@@ -262,6 +262,7 @@
 - ← depends_on [K0298](../items/K0298-minimum-maximal-rho-one-open.md)
 - ← depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md)
 - ← depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md)
+- ← depends_on [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md)
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -489,6 +490,7 @@
 - → depends_on [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md): m=12..39の有限排除とm≥40の一般上界で閾値を閉じる
 - ← supports [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md): M_{3,5}=12の有限区間部分を閉じる
 - ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): M_{3,5}=12を含む
+- ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 3×m・q=5の一般上界を56から40へ改善した
 
 ## [K0072](../items/K0072-mod9-integer-row-separation.md) 標準整数行のmod9制約は高q全長分離領域を拡大する
 
@@ -519,6 +521,7 @@
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): q=2w境界の整数格子構造を使う
 - ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): M_{4,8}=11を含む
+- ← supports [K0317](../items/K0317-four-row-q8-pell-circle-family.md): 4×m・q=8では非局所円が無限に現れても早い安定化と両立する
 
 ## [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) 3×m・q=5のm=22..39にも不足極大安全集合は存在しない
 
@@ -841,6 +844,7 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 - ← supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 下界側の制約
+- ← supports [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md): s_n<nとなる連続した有限範囲の明示例
 
 ## [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) 最小極大の指数は2/3
 
@@ -1294,6 +1298,7 @@
 - → generalizes [K0070](../items/K0070-width-three-q6-stabilization.md): 固定幅の厳密閾値群の一部として位置づける
 - → generalizes [K0071](../items/K0071-width-three-q5-exact-stabilization.md): M_{3,5}=12を含む
 - → generalizes [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11を含む
+- ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 
 ## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類
 
@@ -1302,6 +1307,10 @@
 ## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
 
 - → generalizes [K0072](../items/K0072-mod9-integer-row-separation.md): 固定幅で円が消える領域を別方向から拡張する
+
+## [K0309](../items/K0309-misere-small-legal-set-exchange.md) 合法点5個以下では通常値とmisère補助値は0と1だけ交換される
+
+- ← depends_on [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md): 各部品と全後続局面が0↔1 swap則を満たすことを仮定する
 
 ## [K0310](../items/K0310-misere-square-outcomes-through-eight.md) misère版の6×6は後手勝ち、7×7・8×8は先手勝ち
 
@@ -1330,3 +1339,21 @@
 ## [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) 10×10の既知19石近傍には安全20石が存在しない大きな局所障壁がある
 
 - → supports [K0141](../items/K0141-n10-20-stone-existence-open.md): 20石存在問題への局所的な否定結果
+
+## [K0317](../items/K0317-four-row-q8-pell-circle-family.md) 四連続整数行を2点ずつ通る8点円には無限Pell族がある
+
+- → supports [K0077](../items/K0077-width-four-q8-stabilization.md): 4×m・q=8では非局所円が無限に現れても早い安定化と両立する
+
+## [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) 禁止曲線の三つ組・点対充填から固定幅q点版の一般安定化上界が得られる
+
+- → supports [K0071](../items/K0071-width-three-q5-exact-stabilization.md): 3×m・q=5の一般上界を56から40へ改善した
+- → supports [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
+
+## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
+
+- → depends_on [K0309](../items/K0309-misere-small-legal-set-exchange.md): 各部品と全後続局面が0↔1 swap則を満たすことを仮定する
+
+## [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) n=11..15にはn−1石の安全極大配置が存在する
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- → supports [K0147](../items/K0147-sublinear-minimum-maximal-open.md): s_n<nとなる連続した有限範囲の明示例

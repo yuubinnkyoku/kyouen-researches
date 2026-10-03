@@ -315,3 +315,7 @@
 | [K0314](../items/K0314-line-only-saturation-sharp-constant.md) | line-only版の最小極大サイズは主係数(3π²/8)^(1/3)でn^(2/3)以上 | proposition | proved | maximal-safe, geometry, variants |
 | [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) | 10×10で行・列の点対和制約だけを課した緩和問題の最大値は23 | proposition | proved | maximum-safe, geometry |
 | [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) | 10×10の既知19石近傍には安全20石が存在しない大きな局所障壁がある | computation | computed | maximum-safe, reconfiguration, geometry |
+| [K0317](../items/K0317-four-row-q8-pell-circle-family.md) | 四連続整数行を2点ずつ通る8点円には無限Pell族がある | proposition | proved | geometry, rectangles, variants |
+| [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) | 禁止曲線の三つ組・点対充填から固定幅q点版の一般安定化上界が得られる | proposition | proved | rectangles, geometry, variants, grundy |
+| [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) | swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける | proposition | proved | variants, grundy |
+| [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) | n=11..15にはn−1石の安全極大配置が存在する | proposition | computed | maximal-safe, geometry |

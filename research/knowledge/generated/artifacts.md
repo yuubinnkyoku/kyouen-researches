@@ -228,6 +228,9 @@
 ## [release-assets/SHA256SUMS.txt](../../../release-assets/SHA256SUMS.txt)
 
 - [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) (manifest): 命題・対象範囲・根拠を記した出典
+## [research/curve-packing-fixed-width.md](../../../research/curve-packing-fixed-width.md)
+
+- [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (proof): 三つ組・点対予算による一般定理
 ## [research/experiments.jsonl](../../../research/experiments.jsonl)
 
 - [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) (log): 固定R部分集合の層別LOSS数と共通部分の再集計
@@ -292,6 +295,7 @@
 ## [research/game-structure-20261003.md](../../../research/game-structure-20261003.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 5合法点交換則の一般証明
+- [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) (proof): misère直和の必要十分条件と共円ゲームへの適用
 ## [research/geometry-20261003.md](../../../research/geometry-20261003.md)
 
 - [K0307](../items/K0307-square-circle-maxima-through-112.md) (source): 全中心有限盤極値の結果
@@ -499,6 +503,9 @@
 ## [research/q48-odd-q-reflection.md](../../../research/q48-odd-q-reflection.md)
 
 - [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (proof): 鏡映対称応答の一般定理
+## [research/q48-pell-circle-family.md](../../../research/q48-pell-circle-family.md)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): Pell方程式による無限構成と最初の非局所例の証明
 ## [research/q48-q6-exact-threshold.md](../../../research/q48-q6-exact-threshold.md)
 
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,6}=16
@@ -513,6 +520,7 @@
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (source): 10石極大証人と6・7石全域排除
 - [K0314](../items/K0314-line-only-saturation-sharp-constant.md) (proof): 原始方向容量による直線被覆上界
 - [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) (proof): 23点緩和証人と既知上界
+- [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) (source): 11〜15盤のn−1石極大座標
 ## [research/theory_audit_20261003_extra.md](../../../research/theory_audit_20261003_extra.md)
 
 - [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): 平方完成ノルム上界を2(n-1)^6へ改善
@@ -534,6 +542,9 @@
 ## [research/verification/ROUND4-B141-VERIFICATION.md](../../../research/verification/ROUND4-B141-VERIFICATION.md)
 
 - [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (verifier): 方向別恒等式・定数の独立再計算
+## [research/verification/curve_packing_fixed_width.json](../../../research/verification/curve_packing_fixed_width.json)
+
+- [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (data): 上界表と小盤検査
 ## [research/verification/data/n11_d4_final.json](../../../research/verification/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典
@@ -543,6 +554,7 @@
 ## [research/verification/game_structure_20261003_complexes.json](../../../research/verification/game_structure_20261003_complexes.json)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (data): 6頂点全族の完全分類
+- [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) (data): swap則の有限分類と境界例
 ## [research/verification/game_structure_20261003_eight.json](../../../research/verification/game_structure_20261003_eight.json)
 
 - [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (data): 8×8全初手証明の集計
@@ -568,6 +580,9 @@
 ## [research/verification/q48_odd_q_reflection.json](../../../research/verification/q48_odd_q_reflection.json)
 
 - [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (data): 有限例の検算
+## [research/verification/q48_pell_family.json](../../../research/verification/q48_pell_family.json)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 最初の例と有限検算
 ## [research/verification/q_point_fixed_width.json](../../../research/verification/q_point_fixed_width.json)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (data): 命題・対象範囲・根拠を記した出典
@@ -1466,6 +1481,10 @@
 ## [research/verification/scripts/check_saturation_20261003.py](../../../research/verification/scripts/check_saturation_20261003.py)
 
 - [K0314](../items/K0314-line-only-saturation-sharp-constant.md) (verifier): 容量計数の独立検算
+- [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) (verifier): 明示構成の軽量再現検査
+## [research/verification/scripts/curve_packing_fixed_width.py](../../../research/verification/scripts/curve_packing_fixed_width.py)
+
+- [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (verifier): 整数最適化と全小盤予算不等式の再現
 ## [research/verification/scripts/game_structure_20261003_eight_check.cpp](../../../research/verification/scripts/game_structure_20261003_eight_check.cpp)
 
 - [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (verifier): 行列式ベースの独立検証器
@@ -1484,6 +1503,9 @@
 ## [research/verification/scripts/q48_exact_threshold.py](../../../research/verification/scripts/q48_exact_threshold.py)
 
 - [K0077](../items/K0077-width-four-q8-stabilization.md) (verifier): 整数演算による再現器
+## [research/verification/scripts/q48_pell_family.py](../../../research/verification/scripts/q48_pell_family.py)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): Pell再帰・座標・円方程式・行列式の再現検査
 ## [research/verification/scripts/q_point_fixed_width.py](../../../research/verification/scripts/q_point_fixed_width.py)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
@@ -1694,6 +1716,7 @@
 ## [research/verification/scripts/saturation_20261003_verified.json](../../../research/verification/scripts/saturation_20261003_verified.json)
 
 - [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) (data): 行列双方の点対和と違反四点の検査
+- [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) (data): 安全性と全空点の禁止証人
 ## [research/verification/scripts/saturation_20261003_verify.py](../../../research/verification/scripts/saturation_20261003_verify.py)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (verifier): 証人と幾何の独立検査
