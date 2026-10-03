@@ -2,7 +2,7 @@
 id: K0287
 title: multi-state probeの累積memoは候補独立特徴でない
 kind: method
-status: proved
+status: active
 topics:
 - search-methods
 - provenance

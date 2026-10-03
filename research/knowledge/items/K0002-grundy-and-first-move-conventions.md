@@ -2,7 +2,7 @@
 id: K0002
 title: Grundy数・P/Nと勝ち初手の向き
 kind: definition
-status: proved
+status: active
 topics:
 - rules
 - grundy

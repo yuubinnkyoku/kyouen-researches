@@ -6,21 +6,65 @@ import tempfile
 import unittest
 from pathlib import Path
 
+import yaml
+
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from common import BEGIN, END, ROOT, checked, load_items, update_readme, validate, views
+from common import BEGIN, END, ROOT, checked, link, load_items, solution_table, update_readme, validate, views
 
 
 def item(number=1):
     return dict(id=f"K{number:04}", title="Scope-specific knowledge", kind="proposition",
                 status="proved", topics=["rules"], aliases=[], relations=[],
                 artifacts=[dict(path="README.md", role="source", note="Explicit premise and scope")],
-                _path=f"research/knowledge/items/K{number:04}.md",
+                _path=f"research/knowledge/items/K{number:04}-scope-specific-knowledge.md",
                 _body="A statement with explicit quantification, useful evidence and a clear verification boundary.\n")
 
 
 class IntegrityTests(unittest.TestCase):
     def errors(self, items):
         return "\n".join(validate(items)[0])
+
+    def test_content_slug_and_legacy_filename(self):
+        for filename in ("K0001.md", "K0001-n11-dfpn-search-status.md"):
+            with self.subTest(filename=filename):
+                i=item(); i["_path"]="research/knowledge/items/"+filename
+                self.assertEqual(self.errors([i]), "")
+
+    def test_invalid_slug_or_id_prefix_is_rejected(self):
+        for filename in ("K0002-n11-status.md", "K0001-.md", "K0001-N11-status.md", "K0001-n11--status.md"):
+            with self.subTest(filename=filename):
+                i=item(); i["_path"]="research/knowledge/items/"+filename
+                self.assertIn("filename must be", self.errors([i]))
+
+    def test_same_id_with_different_slugs_is_still_duplicate(self):
+        a,b=item(),item(); b["_path"]="research/knowledge/items/K0001-other-slug.md"
+        self.assertIn("duplicate id", self.errors([a,b]))
+
+    def test_kind_specific_valid_statuses(self):
+        for kind,status in (("definition","active"),("method","active"),("computation","computed"),
+                            ("verification","verified"),("proposition","refuted"),("question","open")):
+            with self.subTest(kind=kind,status=status):
+                i=item();i.update(kind=kind,status=status)
+                self.assertEqual(self.errors([i]), "")
+
+    def test_kind_specific_invalid_statuses(self):
+        for kind,status in (("definition","proved"),("method","computed"),("computation","proved"),
+                            ("verification","proved"),("proposition","active"),("question","refuted")):
+            with self.subTest(kind=kind,status=status):
+                i=item();i.update(kind=kind,status=status)
+                self.assertIn(f"status {status} is not allowed for kind {kind}", self.errors([i]))
+
+    def test_missing_or_malformed_status_policy_fails_closed(self):
+        original=yaml.safe_load((ROOT/"research/knowledge/VOCABULARY.yaml").read_text(encoding="utf-8"))
+        for broken in (None, {}, {**original["status_by_kind"],"definition":None},
+                       {**original["status_by_kind"],"method":["unknown-status"]}):
+            with self.subTest(policy=broken),tempfile.TemporaryDirectory() as temp:
+                root=Path(temp);dest=root/"research/knowledge";dest.mkdir(parents=True)
+                vocab=copy.deepcopy(original);vocab["status_by_kind"]=broken
+                (dest/"VOCABULARY.yaml").write_text(yaml.safe_dump(vocab),encoding="utf-8")
+                (root/"README.md").write_text("source",encoding="utf-8")
+                errors,_=validate([item()],root)
+                self.assertTrue(any("VOCABULARY: status_by_kind" in e for e in errors))
 
     def test_self_reference_for_each_acyclic_relation(self):
         for relation in ("depends_on", "supersedes"):
@@ -97,6 +141,19 @@ class IntegrityTests(unittest.TestCase):
 
 
 class GenerationTests(unittest.TestCase):
+    def test_links_use_actual_path_and_relative_location(self):
+        i=item();i["_path"]="research/knowledge/items/K0001-new-descriptive-slug.md"
+        self.assertEqual(link(i),"[K0001](../items/K0001-new-descriptive-slug.md)")
+        self.assertEqual(link(i,"."),"[K0001](research/knowledge/items/K0001-new-descriptive-slug.md)")
+        for output in views([i],[]).values():
+            self.assertNotIn("(../items/K0001.md)",output)
+
+    def test_stage_column_marks_reported_strong_solution_as_needs_review(self):
+        i=copy.deepcopy(next(i for i in checked()[0] if i["id"]=="K0006"))
+        table=solution_table([i])
+        self.assertIn("strong（完了報告・要監査）; second-player-win",table)
+        self.assertEqual(i["solution"]["level"],"strong")  # display does not alter the reported metadata
+
     def test_human_readme_survives_with_both_newline_styles(self):
         for newline in ("\n","\r\n"):
             with self.subTest(newline=repr(newline)):
@@ -148,6 +205,16 @@ class MigrationBoundaryTests(unittest.TestCase):
 
     def test_canonical_items_validate(self):
         self.assertEqual(self.errors,[])
+
+    def test_migrated_items_all_have_content_slugs(self):
+        self.assertTrue(self.items)
+        self.assertTrue(all(Path(i["_path"]).stem.startswith(i["id"]+"-") for i in self.items))
+
+    def test_readme_table_follows_main_results_before_analysis_and_english(self):
+        text=(ROOT/"README.md").read_text(encoding="utf-8")
+        self.assertLess(text.index("## 主結果"),text.index(BEGIN))
+        self.assertLess(text.index(END),text.index("## 全局面解析・強解決の状況"))
+        self.assertLess(text.index(END),text.index("## English summary"))
 
     def test_all_adopted_originals_have_aliases(self):
         audit=json.loads((ROOT/"research/verification/round26_original_scope_index.json").read_text(encoding="utf-8"))

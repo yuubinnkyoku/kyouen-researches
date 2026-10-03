@@ -2,7 +2,7 @@
 id: K0280
 title: 独立Rust実装の検査は参照探索・CSV監査・証明書局所検査を分ける
 kind: verification
-status: computed
+status: verified
 topics:
 - verification
 - certificates

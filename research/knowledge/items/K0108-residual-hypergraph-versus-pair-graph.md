@@ -2,7 +2,7 @@
 id: K0108
 title: 残余禁止hypergraphは継続ゲームを表し、二点グラフだけでは足りない
 kind: definition
-status: proved
+status: active
 topics:
 - residual-games
 - grundy

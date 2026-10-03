@@ -11,7 +11,7 @@ def main():
     text = raw.decode("utf-8")
     block = "## 解決状況（K項目から自動生成）\n\n"
     block += "[知識の入口](research/knowledge/README.md)。既存の詳細説明に加え、現在の範囲と検証境界を示す。\n\n"
-    block += solution_table(items, "research/knowledge/items/")
+    block += solution_table(items, ".")
     updated = update_readme(text, block)
     generated = ROOT / "research/knowledge/generated"
     generated.mkdir(parents=True, exist_ok=True)

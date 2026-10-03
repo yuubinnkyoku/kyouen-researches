@@ -2,7 +2,7 @@
 id: K0010
 title: KYOENC4による128-bit局面証明とRust独立検査
 kind: method
-status: computed
+status: active
 topics:
 - certificates
 - verification

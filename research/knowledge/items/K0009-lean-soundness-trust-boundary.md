@@ -2,7 +2,7 @@
 id: K0009
 title: Lean形式化の範囲と具体証明書の信頼境界
 kind: verification
-status: proved
+status: verified
 topics:
 - formalization
 - certificates

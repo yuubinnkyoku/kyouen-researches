@@ -2,7 +2,7 @@
 id: K0003
 title: 解決段階と計算・証明書・監査の区別
 kind: definition
-status: proved
+status: active
 topics:
 - rules
 - verification

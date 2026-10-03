@@ -1,6 +1,7 @@
 """Load and validate the canonical knowledge items; no research is inferred here."""
 from __future__ import annotations
 
+import posixpath
 import re
 from collections import Counter, defaultdict
 from pathlib import Path, PurePosixPath
@@ -77,6 +78,14 @@ def graph_cycles(items, relation):
 def validate(items, root=ROOT):
     vocab = yaml.safe_load((root / "research/knowledge/VOCABULARY.yaml").read_text(encoding="utf-8"))
     errors, warnings = [], []
+    status_by_kind = vocab.get("status_by_kind", {})
+    if not isinstance(status_by_kind, dict) or set(status_by_kind) != set(vocab["kinds"]):
+        errors.append("VOCABULARY: status_by_kind must cover exactly all kinds")
+        status_by_kind = {}
+    elif any(not isinstance(values, list) or not values or any(s not in vocab["statuses"] for s in values)
+             for values in status_by_kind.values()):
+        errors.append("VOCABULARY: status_by_kind must contain nonempty lists of known statuses")
+        status_by_kind = {}
     ids, aliases, incoming = set(), {}, Counter()
     allowed = {"id", "title", "kind", "status", "topics", "aliases", "relations", "artifacts",
                "scope", "evidence", "solution", "_path", "_body"}
@@ -93,8 +102,8 @@ def validate(items, root=ROOT):
             error(ident, f"unknown fields: {sorted(item.keys() - allowed)}")
         if not isinstance(ident, str) or not re.fullmatch(r"K[0-9]{4,}", ident):
             error(str(ident), "invalid id")
-        elif Path(item["_path"]).stem != ident:
-            error(ident, "filename must equal id")
+        elif not re.fullmatch(re.escape(ident) + r"(?:-[a-z0-9]+(?:-[a-z0-9]+)*)?", Path(item["_path"]).stem):
+            error(ident, "filename must be <id>.md or <id>-<lowercase-slug>.md")
         if str(ident) in ids:
             error(str(ident), "duplicate id")
         ids.add(str(ident))
@@ -106,6 +115,9 @@ def validate(items, root=ROOT):
         for field, values in (("kind", "kinds"), ("status", "statuses")):
             if item.get(field) not in vocab[values]:
                 error(str(ident), f"invalid {field}: {item.get(field)}")
+        kind = item.get("kind")
+        if isinstance(kind, str) and kind in status_by_kind and item.get("status") not in status_by_kind[kind]:
+            error(str(ident), f"status {item.get('status')} is not allowed for kind {kind}")
         for field in ("topics", "aliases", "relations", "artifacts"):
             if not isinstance(item.get(field), list):
                 error(str(ident), f"{field} must be a list")
@@ -206,21 +218,27 @@ def md(value):
     return str(value).replace("|", "\\|").replace("\n", "<br>")
 
 
-def link(item, prefix="../items/"):
-    return f"[{item['id']}]({prefix}{item['id']}.md)"
+def link(item, from_dir="research/knowledge/generated"):
+    target = posixpath.relpath(item["_path"], from_dir)
+    return f"[{item['id']}]({target})"
 
 
-def solution_table(items, prefix="../items/"):
+def solution_table(items, from_dir="research/knowledge/generated"):
     lines = ["| 盤面・条件 | K項目・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |",
              "|---|---|---|---|---|---|"]
     for item in items:
         s = item.get("solution")
         if not s:
             continue
+        qualifications = {"needs-review": "完了報告・要監査", "scope-unclear": "適用範囲要確認",
+                          "withdrawn": "撤回済み", "refuted": "反証済み", "superseded": "旧項目"}
+        level = s["level"]
+        if item["status"] in qualifications:
+            level += f"（{qualifications[item['status']]}）"
         lines.append("| " + " | ".join([
             md(s["board"] + "; " + s["conditions"]),
-            link(item, prefix) + " · " + item["status"],
-            md(s["level"] + "; " + s["outcome"]),
+            link(item, from_dir) + " · " + item["status"],
+            md(level + "; " + s["outcome"]),
             md(", ".join(s["classification"]) + "; " + s["coverage"]),
             md(", ".join(s["verification"])),
             md(s["certificate"] + "; " + s["independent_check"] + "; " + s["note"]),

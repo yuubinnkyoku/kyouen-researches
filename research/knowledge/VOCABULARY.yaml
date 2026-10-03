@@ -1,5 +1,12 @@
 kinds: [definition, proposition, computation, method, verification, question]
-statuses: [proved, computed, observed, conjectured, open, refuted, withdrawn, needs-review, scope-unclear]
+statuses: [active, superseded, verified, proved, computed, observed, conjectured, open, refuted, withdrawn, needs-review, scope-unclear]
+status_by_kind:
+  definition: [active, superseded, withdrawn]
+  method: [active, needs-review, superseded, withdrawn]
+  computation: [computed, observed, needs-review, superseded, withdrawn]
+  verification: [verified, needs-review, superseded, withdrawn]
+  proposition: [proved, computed, observed, conjectured, open, refuted, needs-review, scope-unclear, superseded, withdrawn]
+  question: [open, needs-review, scope-unclear, superseded, withdrawn]
 topics: [rules, square-outcomes, grundy, first-moves, certificates, verification, formalization, rectangles, variants, geometry, maximum-safe, maximal-safe, reconfiguration, residual-games, strategy-length, statistics, search-methods, provenance, migration]
 relations: [depends_on, supports, proves, refutes, verifies, generalizes, supersedes]
 artifact_roles: [source, proof, solver, verifier, certificate, data, manifest, log, lean]

@@ -2,7 +2,7 @@
 id: K0079
 title: 600原文の監査状態と弱化版作業ラベルは別の量
 kind: verification
-status: computed
+status: verified
 topics:
 - migration
 - provenance

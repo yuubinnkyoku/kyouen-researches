@@ -2,7 +2,7 @@
 id: K0007
 title: 順位付きAND/OR証明書の局所条件と健全性
 kind: method
-status: proved
+status: active
 topics:
 - certificates
 aliases: []

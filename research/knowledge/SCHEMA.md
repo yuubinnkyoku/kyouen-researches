@@ -1,6 +1,10 @@
 # K項目schema v1
 
-UTF-8 Markdownの先頭を `---` で囲むYAML front matterとする。ファイル名はIDと同じ。
+UTF-8 Markdownの先頭を `---` で囲むYAML front matterとする。
+ファイル名は `K0127-n11-dfpn-search-status.md` のような `<id>-<slug>.md` を使う。
+slugは内容を表す英小文字・数字をハイフンで区切る。IDはfront matterと一致させる。
+既存の `<id>.md` も互換のため検査器は許すが、今回の296件と新規項目は内容付きとする。
+slugを変更してもK番号・alias・relationのtargetは変えない。生成リンクは実ファイルパスから作る。
 
 必須: `id`, `title`, `kind`, `status`, `topics`, `aliases`, `relations`, `artifacts`。
 本文には命題・対象範囲・現在の根拠・限界を記す。`scope` と `evidence` は任意の文字列。
@@ -10,6 +14,22 @@ UTF-8 Markdownの先頭を `---` で囲むYAML front matterとする。ファイ
 - `conjectured`/`open` は数学的な未確定、`needs-review` は採用根拠の監査不足。
 - `scope-unclear` は解釈不足、`withdrawn` は証拠無効による撤回。反例による否定は `refuted`。
 - 語彙は `VOCABULARY.yaml`。statusは過去のイベントを表すために増やさない。
+
+kind別の許容statusは `VOCABULARY.yaml` の `status_by_kind` を正本として検査する。
+
+| kind | 許容status |
+|---|---|
+| definition | active, superseded, withdrawn |
+| method | active, needs-review, superseded, withdrawn |
+| computation | computed, observed, needs-review, superseded, withdrawn |
+| verification | verified, needs-review, superseded, withdrawn |
+| proposition | proved, computed, observed, conjectured, open, refuted, needs-review, scope-unclear, superseded, withdrawn |
+| question | open, needs-review, scope-unclear, superseded, withdrawn |
+
+`active` は現行の定義・方式として採用しているという意味で、方式内の全主張が証明済みという意味ではない。
+`verified` は本文に記した対象と範囲を検査済みという意味で、未検査の入力や監査候補に拡張しない。
+命題には有限計算・標本による判定もあるためcomputed/observedを許すが、全称証明provedとは区別する。
+`superseded` は異なる現行知識で置き換えた旧項目。単なる証拠追加で使わない。
 
 `relations` は `{type: ..., target: Knnnn, note: ...}` の配列。逆リンクは生成器に任せる。
 

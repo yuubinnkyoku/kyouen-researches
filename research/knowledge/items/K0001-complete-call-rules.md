@@ -2,7 +2,7 @@
 id: K0001
 title: 完全指摘ルールの共円ゲームと安全局面
 kind: definition
-status: proved
+status: active
 topics:
 - rules
 aliases: []

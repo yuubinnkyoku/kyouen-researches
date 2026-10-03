@@ -2,7 +2,7 @@
 id: K0026
 title: 最大安全サイズK_nと最小極大サイズs_nは別の量
 kind: definition
-status: proved
+status: active
 topics:
 - maximum-safe
 - maximal-safe

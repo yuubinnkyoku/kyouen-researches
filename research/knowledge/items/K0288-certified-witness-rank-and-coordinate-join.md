@@ -2,7 +2,7 @@
 id: K0288
 title: certified witness順位と真のfirst LOSS順位は別、座標joinにも検査が必要
 kind: method
-status: proved
+status: active
 topics:
 - provenance
 - verification
