@@ -85,7 +85,7 @@
 | B321 | [K0183](../items/K0183-saturation-missing-nimber-contiguity-open.md) | 飽和開始層で欠けるnimberは連続しない |
 | B322 | [K0184](../items/K0184-saturation-missing-nimbers-powers-of-two-open.md) | 飽和開始層で欠ける正のnimberは2の冪だけ |
 | B325 | [K0185](../items/K0185-ceiling-with-small-mobility-slack-open.md) | 天井達成局面は合法手数の小さい余裕で作れる |
-| B326 | [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) | g=h≥3の局面には、対称性ではまとめられない勝ち手がある |
+| B326 | [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) | g=h≥3の局面に軌道サイズ1か2の勝ち手が常にあるか |
 | B331 | [K0187](../items/K0187-empty-root-wft-singleton-open.md) | 空盤のWFTは空でなければ単元 |
 | B333 | [K0188](../items/K0188-wft-parity-hole-claim-refuted.md) | WFT(S)の同じ偶奇の穴はない |
 | B334 | [K0189](../items/K0189-three-terminal-sizes-empty-wft.md) | T*(S)が3種類でもWFT(S)は空 |
@@ -131,7 +131,7 @@
 | B454 | [K0229](../items/K0229-power-two-denominator-smaller-board-refuted.md) | 分母が2の冪の円は奇分母の円より最小収容盤が小さい |
 | B455 | [K0230](../items/K0230-many-point-circle-residue-description-refuted.md) | q≥3の多数点円は、整数中心円の剰余類選択として最適に記述できる |
 | B456 | [K0231](../items/K0231-fixed-denominator-radius-monotonicity.md) | 分母qを固定した最良点数は半径の単調増加だけでは達成できない |
-| B457 | [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | q≥3の円は境界に切られても点数を一つずつ変えやすい |
+| B457 | [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み |
 | B458 | [K0233](../items/K0233-circle-first-board-summary-refuted.md) | 完全点数・外接幅・原始二次係数では四点初出を決定できない |
 | B461 | [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) | 半径二乗25/2の12点円は、正方形窓で11点だけを残せない |
 | B462 | [K0235](../items/K0235-n11-first-eleven-point-circle.md) | 11×11は11点を載せる円の最初の正方形盤 |
@@ -230,7 +230,7 @@
 | F-D | [K0082](../items/K0082-n10-three-stone-degree-cost-correlation.md) | 10×10の3石探索コストとΣdの負相関は固定R内限定 |
 | F-E | [K0083](../items/K0083-fixed-r-four-stone-loss-separation.md) | R内4石のΣdとLOSS分離、二石順位の旧記述は訂正済み |
 | F-F | [K0084](../items/K0084-outside-r-loss-trend-full-width-memo.md) | R外4石36局面のΣd→LOSS方向は全幅memo再求解でも維持 |
-| F-K | [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) | F-Kの最大円点数表は半整数中心走査としてのみ採用する |
+| F-K | [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) | F-K旧走査は半整数中心に限定、n≤112の全中心最大値は後続計算で確定 |
 | F-L | [K0057](../items/K0057-forbidden-quadruple-counts.md) | 禁止四点組の有限総数と共線・共円の排他的分解 |
 | F-M | [K0047](../items/K0047-witness-chain-versus-game-length.md) | 証明書のWIN証人鎖の長さは対局長ではない |
 | F-N | [K0060](../items/K0060-circle-point-floor-formula-refuted.md) | 最大円点数の暫定式4(⌊n/4⌋+1)はn=16で偽 |

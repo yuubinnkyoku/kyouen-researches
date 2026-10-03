@@ -59,7 +59,7 @@
 | [K0055](../items/K0055-sixth-order-quadruple-claim-refuted.md) | 共線・共円ともΘ(n^6)という旧外挿は反証・訂正済み | proposition | refuted | geometry, provenance |
 | [K0056](../items/K0056-cocircular-quadruple-asymptotics.md) | 非共線共円四点組数C_nはΘ(n^5) | proposition | proved | geometry |
 | [K0057](../items/K0057-forbidden-quadruple-counts.md) | 禁止四点組の有限総数と共線・共円の排他的分解 | proposition | computed | geometry |
-| [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) | F-Kの最大円点数表は半整数中心走査としてのみ採用する | verification | verified | geometry, provenance |
+| [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) | F-K旧走査は半整数中心に限定、n≤112の全中心最大値は後続計算で確定 | verification | verified | geometry, provenance |
 | [K0059](../items/K0059-odd-two-square-representation-formula.md) | 奇二平方和表現数odd_repr(2m)の完全公式 | proposition | proved | geometry |
 | [K0060](../items/K0060-circle-point-floor-formula-refuted.md) | 最大円点数の暫定式4(⌊n/4⌋+1)はn=16で偽 | proposition | refuted | geometry |
 | [K0061](../items/K0061-twelve-point-circle-count-formula.md) | 12点円の個数(n−7)^2はn=11で全円を数えなくなる | proposition | computed | geometry |
@@ -187,7 +187,7 @@
 | [K0183](../items/K0183-saturation-missing-nimber-contiguity-open.md) | 飽和開始層で欠けるnimberは連続しない | question | open | grundy |
 | [K0184](../items/K0184-saturation-missing-nimbers-powers-of-two-open.md) | 飽和開始層で欠ける正のnimberは2の冪だけ | question | open | grundy |
 | [K0185](../items/K0185-ceiling-with-small-mobility-slack-open.md) | 天井達成局面は合法手数の小さい余裕で作れる | question | open | grundy |
-| [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) | g=h≥3の局面には、対称性ではまとめられない勝ち手がある | question | open | grundy |
+| [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) | g=h≥3の局面に軌道サイズ1か2の勝ち手が常にあるか | question | open | grundy |
 | [K0187](../items/K0187-empty-root-wft-singleton-open.md) | 空盤のWFTは空でなければ単元 | question | open | strategy-length, grundy |
 | [K0188](../items/K0188-wft-parity-hole-claim-refuted.md) | WFT(S)の同じ偶奇の穴はない | proposition | refuted | strategy-length, grundy |
 | [K0189](../items/K0189-three-terminal-sizes-empty-wft.md) | T*(S)が3種類でもWFT(S)は空 | proposition | computed | strategy-length, grundy |
@@ -233,7 +233,7 @@
 | [K0229](../items/K0229-power-two-denominator-smaller-board-refuted.md) | 分母が2の冪の円は奇分母の円より最小収容盤が小さい | proposition | refuted | geometry |
 | [K0230](../items/K0230-many-point-circle-residue-description-refuted.md) | q≥3の多数点円は、整数中心円の剰余類選択として最適に記述できる | proposition | refuted | geometry |
 | [K0231](../items/K0231-fixed-denominator-radius-monotonicity.md) | 分母qを固定した最良点数は半径の単調増加だけでは達成できない | proposition | proved | geometry |
-| [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | q≥3の円は境界に切られても点数を一つずつ変えやすい | question | open | geometry |
+| [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み | question | scope-unclear | geometry |
 | [K0233](../items/K0233-circle-first-board-summary-refuted.md) | 完全点数・外接幅・原始二次係数では四点初出を決定できない | proposition | refuted | geometry |
 | [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) | 半径二乗25/2の12点円は、正方形窓で11点だけを残せない | proposition | proved | geometry |
 | [K0235](../items/K0235-n11-first-eleven-point-circle.md) | 11×11は11点を載せる円の最初の正方形盤 | proposition | proved | geometry |

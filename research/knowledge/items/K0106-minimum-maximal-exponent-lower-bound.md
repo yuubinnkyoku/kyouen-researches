@@ -3,7 +3,10 @@ id: K0106
 title: 固定qの最小極大サイズには漸近指数下界2/3がある
 kind: proposition
 status: proved
-topics: [maximal-safe, geometry, variants]
+topics:
+- maximal-safe
+- geometry
+- variants
 aliases: []
 relations:
 - type: depends_on
@@ -24,9 +27,9 @@ artifacts:
   role: proof
   note: 全固定q≥4への拡張と直線被覆係数の改善
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/theory_audit_20261003_extra.md
+- path: research/geometry-20261003.md
   role: proof
-  note: 平方完成ノルム上界を2(n-1)^6へ改善
+  note: §10で平方完成ノルム上界を2(n-1)^6へ改善
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
 ---
 

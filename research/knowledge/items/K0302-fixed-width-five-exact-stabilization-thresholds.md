@@ -3,12 +3,12 @@ id: K0302
 title: 固定幅の真の満容量安定化長5件は24,12,16,13,11
 kind: proposition
 status: proved
-topics: [rectangles, variants, grundy]
+topics:
+- rectangles
+- variants
+- grundy
 aliases: []
 relations:
-- type: generalizes
-  target: K0070
-  note: 固定幅の厳密閾値群の一部として位置づける
 - type: generalizes
   target: K0071
   note: M_{3,5}=12を含む

@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 317 / alias: 252 / artifactファイル: 389
+K項目: 317 / alias: 252 / artifactファイル: 393
 
 ## kind
 
@@ -21,9 +21,10 @@ K項目: 317 / alias: 252 / artifactファイル: 389
 | computed | 87 |
 | conjectured | 1 |
 | observed | 15 |
-| open | 34 |
+| open | 33 |
 | proved | 99 |
 | refuted | 63 |
+| scope-unclear | 1 |
 | verified | 5 |
 | withdrawn | 4 |
 
@@ -74,7 +75,7 @@ K項目: 317 / alias: 252 / artifactファイル: 389
 - [K0183](../items/K0183-saturation-missing-nimber-contiguity-open.md) [open] 飽和開始層で欠けるnimberは連続しない
 - [K0184](../items/K0184-saturation-missing-nimbers-powers-of-two-open.md) [open] 飽和開始層で欠ける正のnimberは2の冪だけ
 - [K0185](../items/K0185-ceiling-with-small-mobility-slack-open.md) [open] 天井達成局面は合法手数の小さい余裕で作れる
-- [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) [open] g=h≥3の局面には、対称性ではまとめられない勝ち手がある
+- [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) [open] g=h≥3の局面に軌道サイズ1か2の勝ち手が常にあるか
 - [K0187](../items/K0187-empty-root-wft-singleton-open.md) [open] 空盤のWFTは空でなければ単元
 - [K0190](../items/K0190-forced-terminal-median-open.md) [open] 空盤で強制できる終局長はT*の中央値
 - [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) [open] 木の競合グラフで効く三点制約には最小の接続型がある
@@ -83,7 +84,7 @@ K項目: 317 / alias: 252 / artifactファイル: 389
 - [K0217](../items/K0217-minimum-maximal-external-blocking-band-open.md) [open] 盤内では最小極大なのに盤外の広い帯まで塞ぐ
 - [K0221](../items/K0221-interior-relocation-external-gap-open.md) [open] 内側の石を動かすだけで盤外の最初の合法点が遠くへ飛ぶ
 - [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) [open] 一石少ない中間配置を許すと同一残局族を少数の橋で結べる
-- [K0232](../items/K0232-circle-window-single-point-cuts-open.md) [open] q≥3の円は境界に切られても点数を一つずつ変えやすい
+- [K0232](../items/K0232-circle-window-single-point-cuts-open.md) [scope-unclear] 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み
 - [K0276](../items/K0276-h-dense-independent-holdout-open.md) [conjectured] H-denseはn≤10の記述を越える独立確認が未完了
 - [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) [open] 7×7二相選択を制約solverなしの幾何だけで導く証明は未完成
 - [K0282](../items/K0282-n7-g11-global-connectivity-open.md) [open] 11石を許したG11で最大由来八成分が全て接続するか未確定

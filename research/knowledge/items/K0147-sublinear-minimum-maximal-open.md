@@ -12,6 +12,12 @@ relations:
 - type: depends_on
   target: K0026
   note: ''
+- type: depends_on
+  target: K0106
+  note: 固定qの指数下界は対応する上界を与えない
+- type: depends_on
+  target: K0320
+  note: 有限n=11..15の構成はo(n)の上界ではない
 artifacts:
 - path: research/verification/round52-general-saturation-exponent-lower-bound.md
   role: source
@@ -25,16 +31,23 @@ artifacts:
   role: source
   note: B095の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-scope: 本文の原文量化と現在の採用境界
+- path: research/saturation-20261003.md
+  role: proof
+  note: 直線被覆係数の改善と全固定qへの指数下界の拡張
+- path: research/geometry-20261003.md
+  role: proof
+  note: §10の整数平方完成ノルム上界2(n-1)^6
+- path: research/verification/scripts/saturation_20261003_verified.json
+  role: data
+  note: n=11..15のn-1石極大証人の独立検査
+scope: 標準q=4正方形盤でn→∞の全系列についてs_n/n→0となるか。
 evidence: 原文監査 PARTIAL / general_asymptotic_lower_exponent_proof
 ---
 
 # 最小極大は線形より小さくなる
 
-未確定の命題: 最小極大は線形より小さくなる。 `s_n/n→0`。小盤の `s_n≈n` は過渡現象で、三つ組の被覆能力が大盤で勝るかもしれない。
+標準q=4の最小極大サイズについてs_n=o(n)かは未証明。任意のε>0に対する十分大きいnでの下界s_n>n^(2/3−ε)は証明済みだが、必要なのは線形未満の上界構成である。
 
-現在の結論: 下界liminf log(s_n)/log n≥2/3は一般証明済み。s_n=o(n)には上界が必要で、これは未証明。
+最新の独立検査済み構成ではn=11..15にn−1石極大が存在する。s_11≤10<11は確定するが、有限のn−1例をs_n/n→0の証明と解釈しない。
 
-採用境界: 原始方向別に直線被覆O(n k^(3/2))、三点真円の整数係数と約数上界でR(n)=n^o(1)。全ε>0でs_n>n^(2/3−ε)を証明。対応する上界・s_n=o(n)は未証明。
-
-根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+直線被覆係数の改善・円の平方完成ノルム上界2(n−1)^6も下界側の改良であり、本問を閉じない。

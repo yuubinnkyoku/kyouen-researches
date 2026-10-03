@@ -290,14 +290,17 @@
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (source): 6合法点での最初の例外分類
 ## [research/game-structure-20261003-nine.md](../../../research/game-structure-20261003-nine.md)
 
-- [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (source): 正方形盤misère探索のまとめ
 - [K0311](../items/K0311-misere-n9-outcome-open.md) (source): 9×9の128-bit探索とUNKNOWN境界
 ## [research/game-structure-20261003.md](../../../research/game-structure-20261003.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 5合法点交換則の一般証明
+- [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (source): §6のmisère 1..8盤の厳密勝敗と全初手分類
 - [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) (proof): misère直和の必要十分条件と共円ゲームへの適用
 ## [research/geometry-20261003.md](../../../research/geometry-20261003.md)
 
+- [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): §10で平方完成ノルム上界を2(n-1)^6へ改善
+- [K0147](../items/K0147-sublinear-minimum-maximal-open.md) (proof): §10の整数平方完成ノルム上界2(n-1)^6
+- [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) (proof): §10の整数平方完成ノルム上界2(n-1)^6
 - [K0307](../items/K0307-square-circle-maxima-through-112.md) (source): 全中心有限盤極値の結果
 ## [research/geometry_20261003_extended.md](../../../research/geometry_20261003_extended.md)
 
@@ -511,19 +514,26 @@
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,6}=16
 ## [research/saturation-20261003-extra.md](../../../research/saturation-20261003-extra.md)
 
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (source): K_11≥21の独立検査済み安全配置
 - [K0141](../items/K0141-n10-20-stone-existence-open.md) (source): 複数19石極大と20石への局所非存在
 - [K0313](../items/K0313-large-safe-constructions-n11-n12.md) (source): 21・22・24石構成と外周被覆
 - [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) (source): 3つの完全局所探索と19石K4族
 ## [research/saturation-20261003.md](../../../research/saturation-20261003.md)
 
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (source): 8≤s_11≤10の有限完全排除と10石証人
 - [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): 全固定q≥4への拡張と直線被覆係数の改善
+- [K0147](../items/K0147-sublinear-minimum-maximal-open.md) (proof): 直線被覆係数の改善と全固定qへの指数下界の拡張
+- [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) (proof): 直線被覆係数の改善と全固定qへの指数下界の拡張
+- [K0149](../items/K0149-minimum-maximal-monotonicity-open.md) (source): 8≤s_11≤10。n=10から11への非減少性はこの区間では決まらない
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (source): 10石極大証人と6・7石全域排除
 - [K0314](../items/K0314-line-only-saturation-sharp-constant.md) (proof): 原始方向容量による直線被覆上界
 - [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) (proof): 23点緩和証人と既知上界
 - [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) (source): 11〜15盤のn−1石極大座標
+## [research/theory-audit-20261003.md](../../../research/theory-audit-20261003.md)
+
+- [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (source): 後続の全中心n=2..112完全計算は旧走査とは別の根拠
 ## [research/theory_audit_20261003_extra.md](../../../research/theory_audit_20261003_extra.md)
 
-- [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): 平方完成ノルム上界を2(n-1)^6へ改善
 - [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母6の完全点数公式と最小半径
 ## [research/verification/HANDOFF-2026-10-01-round61.md](../../../research/verification/HANDOFF-2026-10-01-round61.md)
 
@@ -539,6 +549,7 @@
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0028](../items/K0028-n11-truncated-dp-winner-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (source): 層0..5の厳密列挙と層6以降の資源下界
 ## [research/verification/ROUND4-B141-VERIFICATION.md](../../../research/verification/ROUND4-B141-VERIFICATION.md)
 
 - [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (verifier): 方向別恒等式・定数の独立再計算
@@ -551,6 +562,9 @@
 ## [research/verification/data/s8_exact.json](../../../research/verification/data/s8_exact.json)
 
 - [K0032](../items/K0032-n8-minimum-maximal-size.md) (data): 7石完全排除記録
+## [research/verification/game_structure_20261003_boards.json](../../../research/verification/game_structure_20261003_boards.json)
+
+- [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (data): 6盤全局面mex対と7盤の独立P/N証明検査集計
 ## [research/verification/game_structure_20261003_complexes.json](../../../research/verification/game_structure_20261003_complexes.json)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (data): 6頂点全族の完全分類
@@ -561,6 +575,12 @@
 ## [research/verification/game_structure_20261003_nine_audit.json](../../../research/verification/game_structure_20261003_nine_audit.json)
 
 - [K0311](../items/K0311-misere-n9-outcome-open.md) (data): 9×9実装監査
+## [research/verification/game_structure_20261003_nine_center.json](../../../research/verification/game_structure_20261003_nine_center.json)
+
+- [K0311](../items/K0311-misere-n9-outcome-open.md) (data): 資源上限でUNKNOWN、証明書なしの実行結果
+## [research/verification/game_structure_20261003_nine_corner.json](../../../research/verification/game_structure_20261003_nine_corner.json)
+
+- [K0311](../items/K0311-misere-n9-outcome-open.md) (data): 資源上限でUNKNOWN、証明書なしの実行結果
 ## [research/verification/geometry_20261003_extended.json](../../../research/verification/geometry_20261003_extended.json)
 
 - [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (data): 幅1..15の鋭い極値と達成例
@@ -1715,6 +1735,7 @@
 - [K0313](../items/K0313-large-safe-constructions-n11-n12.md) (verifier): 独立整数行列式検証
 ## [research/verification/scripts/saturation_20261003_verified.json](../../../research/verification/scripts/saturation_20261003_verified.json)
 
+- [K0147](../items/K0147-sublinear-minimum-maximal-open.md) (data): n=11..15のn-1石極大証人の独立検査
 - [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md) (data): 行列双方の点対和と違反四点の検査
 - [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) (data): 安全性と全空点の禁止証人
 ## [research/verification/scripts/saturation_20261003_verify.py](../../../research/verification/scripts/saturation_20261003_verify.py)

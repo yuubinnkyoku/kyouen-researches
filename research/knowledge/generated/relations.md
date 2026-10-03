@@ -157,6 +157,7 @@
 - → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md)
 - ← verifies [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md): 当該空盤の公開AND/OR証明書の独立検査
 - ← proves [K0021](../items/K0021-n9-all-81-first-moves-win.md): 全初手の分類から空盤の勝敗が従う
+- ← depends_on [K0311](../items/K0311-misere-n9-outcome-open.md): 通常版9×9の先手勝ちはmisère版へ移せない
 
 ## [K0020](../items/K0020-n10-second-player-win.md) 10×10は後手必勝
 
@@ -310,6 +311,7 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 - ← depends_on [K0036](../items/K0036-n10-local-19-stone-exchange-limit.md)
+- ← depends_on [K0141](../items/K0141-n10-20-stone-existence-open.md): 現行の全域上下界19≤K_10≤23
 
 ## [K0036](../items/K0036-n10-local-19-stone-exchange-limit.md) 特定19石証人から九石交換以内では安全20石に届かない
 
@@ -437,8 +439,9 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 
-## [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) F-Kの最大円点数表は半整数中心走査としてのみ採用する
+## [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) F-K旧走査は半整数中心に限定、n≤112の全中心最大値は後続計算で確定
 
+- → depends_on [K0307](../items/K0307-square-circle-maxima-through-112.md): n≤112の全中心最大値は後続完全計算を参照
 - ← depends_on [K0060](../items/K0060-circle-point-floor-formula-refuted.md)
 
 ## [K0059](../items/K0059-odd-two-square-representation-formula.md) 奇二平方和表現数odd_repr(2m)の完全公式
@@ -482,7 +485,6 @@
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
-- ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 固定幅の厳密閾値群の一部として位置づける
 
 ## [K0071](../items/K0071-width-three-q5-exact-stabilization.md) 3×m・q=5の真の満容量安定化長はM_{3,5}=12
 
@@ -626,12 +628,17 @@
 
 - → depends_on [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md)
 - → depends_on [K0028](../items/K0028-n11-truncated-dp-winner-withdrawn.md)
+- → depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md): 最小極大サイズの境界は空盤勝敗と別の確定結果
+- → depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md): 最大安全サイズの存在下界は空盤勝敗を決めない
+- ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
 
 ## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 固定qの最小極大サイズには漸近指数下界2/3がある
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 - → supports [K0147](../items/K0147-sublinear-minimum-maximal-open.md): 下界側の制約
 - → supports [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md): 指数2/3未満を排除
+- ← depends_on [K0147](../items/K0147-sublinear-minimum-maximal-open.md): 固定qの指数下界は対応する上界を与えない
+- ← depends_on [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md): 固定qの指数下界は対応する上界を与えない
 - ← supports [K0314](../items/K0314-line-only-saturation-sharp-constant.md): 標準版の指数下界と同じ2/3をより鋭いline-only計数で支える
 
 ## [K0107](../items/K0107-sharp-point-cover-bound.md) 安全k石の一空点被覆はk≥4で二次上限から必ず1減る
@@ -815,6 +822,8 @@
 ## [K0141](../items/K0141-n10-20-stone-existence-open.md) 10×10では20石まで届くか
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- → depends_on [K0035](../items/K0035-n10-maximum-safe-bounds.md): 現行の全域上下界19≤K_10≤23
+- → depends_on [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md): 完全局所排除は20石存在問題の一部だけを制限する
 - ← depends_on [K0315](../items/K0315-n10-pair-sum-relaxation-optimum.md): K_10上界23をこの制約だけでは改善できないことを示す
 - ← supports [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md): 20石存在問題への局所的な否定結果
 
@@ -843,17 +852,21 @@
 ## [K0147](../items/K0147-sublinear-minimum-maximal-open.md) 最小極大は線形より小さくなる
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- → depends_on [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 固定qの指数下界は対応する上界を与えない
+- → depends_on [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md): 有限n=11..15の構成はo(n)の上界ではない
 - ← supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 下界側の制約
 - ← supports [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md): s_n<nとなる連続した有限範囲の明示例
 
 ## [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) 最小極大の指数は2/3
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- → depends_on [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 固定qの指数下界は対応する上界を与えない
 - ← supports [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md): 指数2/3未満を排除
 
 ## [K0149](../items/K0149-minimum-maximal-monotonicity-open.md) s_nは単調増加する
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- → depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md): 11盤の境界は単調性を証明も反証もしない
 
 ## [K0150](../items/K0150-minimum-maximal-jump-by-two.md) s_nが一段の拡大で2以上増える
 
@@ -943,7 +956,7 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
 
-## [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) g=h≥3の局面には、対称性ではまとめられない勝ち手がある
+## [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) g=h≥3の局面に軌道サイズ1か2の勝ち手が常にあるか
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
 
@@ -1197,6 +1210,7 @@
 
 - → depends_on [K0043](../items/K0043-n5-first-move-pattern-and-nimbers.md)
 - → depends_on [K0021](../items/K0021-n9-all-81-first-moves-win.md)
+- → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
 
 ## [K0277](../items/K0277-maximum-parity-does-not-determine-winner.md) 最大安全石数の奇偶だけで空盤勝者は決まらない
 
@@ -1295,7 +1309,6 @@
 
 ## [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) 固定幅の真の満容量安定化長5件は24,12,16,13,11
 
-- → generalizes [K0070](../items/K0070-width-three-q6-stabilization.md): 固定幅の厳密閾値群の一部として位置づける
 - → generalizes [K0071](../items/K0071-width-three-q5-exact-stabilization.md): M_{3,5}=12を含む
 - → generalizes [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11を含む
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
@@ -1308,6 +1321,10 @@
 
 - → generalizes [K0072](../items/K0072-mod9-integer-row-separation.md): 固定幅で円が消える領域を別方向から拡張する
 
+## [K0307](../items/K0307-square-circle-maxima-through-112.md) n≤112の正方形盤に載る円上格子点数の最大値を全中心・全半径で完全分類
+
+- ← depends_on [K0058](../items/K0058-fk-circle-maxima-scope-audited.md): n≤112の全中心最大値は後続完全計算を参照
+
 ## [K0309](../items/K0309-misere-small-legal-set-exchange.md) 合法点5個以下では通常値とmisère補助値は0と1だけ交換される
 
 - ← depends_on [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md): 各部品と全後続局面が0↔1 swap則を満たすことを仮定する
@@ -1319,14 +1336,18 @@
 ## [K0311](../items/K0311-misere-n9-outcome-open.md) misère版9×9の空盤勝敗は未確定
 
 - → depends_on [K0310](../items/K0310-misere-square-outcomes-through-eight.md): 8×8までの確定結果の次の盤
+- → depends_on [K0019](../items/K0019-n9-first-player-win.md): 通常版9×9の先手勝ちはmisère版へ移せない
 
 ## [K0312](../items/K0312-n11-minimum-maximal-bounds.md) 11×11の最小極大サイズは8≤s_11≤10
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 最小極大サイズの境界は空盤勝敗と別の確定結果
+- ← depends_on [K0149](../items/K0149-minimum-maximal-monotonicity-open.md): 11盤の境界は単調性を証明も反証もしない
 
 ## [K0313](../items/K0313-large-safe-constructions-n11-n12.md) K_11≥21かつK_12≥22の明示安全極大構成がある
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 最大安全サイズの存在下界は空盤勝敗を決めない
 
 ## [K0314](../items/K0314-line-only-saturation-sharp-constant.md) line-only版の最小極大サイズは主係数(3π²/8)^(1/3)でn^(2/3)以上
 
@@ -1339,6 +1360,7 @@
 ## [K0316](../items/K0316-n10-nineteen-stone-local-barriers.md) 10×10の既知19石近傍には安全20石が存在しない大きな局所障壁がある
 
 - → supports [K0141](../items/K0141-n10-20-stone-existence-open.md): 20石存在問題への局所的な否定結果
+- ← depends_on [K0141](../items/K0141-n10-20-stone-existence-open.md): 完全局所排除は20石存在問題の一部だけを制限する
 
 ## [K0317](../items/K0317-four-row-q8-pell-circle-family.md) 四連続整数行を2点ずつ通る8点円には無限Pell族がある
 
@@ -1357,3 +1379,4 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 - → supports [K0147](../items/K0147-sublinear-minimum-maximal-open.md): s_n<nとなる連続した有限範囲の明示例
+- ← depends_on [K0147](../items/K0147-sublinear-minimum-maximal-open.md): 有限n=11..15の構成はo(n)の上界ではない
