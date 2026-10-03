@@ -121,6 +121,20 @@ private:
     }
 };
 
+static bool memo_key_width_self_test(){
+    ReplaceMemo121 memo(4);
+    const std::uint64_t lo=0x0123456789abcdefULL;
+    const std::uint64_t high_hi=(1ULL<<56)|1234567ULL;
+    const std::uint64_t low_hi=1234567ULL;
+    memo.put(lo,high_hi,ReplaceMemo121::Losing);
+    if(memo.get(lo,high_hi)!=ReplaceMemo121::Losing) return false;
+    if(memo.get(lo,low_hi)!=ReplaceMemo121::Unknown) return false;
+    memo.put(lo,low_hi,ReplaceMemo121::Winning);
+    return memo.get(lo,high_hi)==ReplaceMemo121::Losing &&
+           memo.get(lo,low_hi)==ReplaceMemo121::Winning &&
+           memo.used()==2;
+}
+
 class Solver11 {
     static constexpr int N=11,V=121;
     static constexpr std::uint64_t HI_MASK=(1ULL<<57)-1; // points 64..120
@@ -385,6 +399,11 @@ static std::vector<int> first_move_reps(){
 
 int main(int argc,char**argv){
     try{
+        if(argc==2 && std::string(argv[1])=="--memo-self-test"){
+            const bool ok=memo_key_width_self_test();
+            std::cout<<"memo_key_width_self_test="<<(ok?"PASS":"FAIL")<<"\n";
+            return ok?0:1;
+        }
         unsigned pow=27;
         bool reps=false;
         std::string only="";
