@@ -75,6 +75,6 @@ READMEの旧本文を保持し、生成マーカー間だけを更新する。�
 
 ## 構造移行の完了条件
 
-2026-10-04時点で、現行knowledge schema・generated view・CI・README導線はmainへ集約済み。旧構造向けopen PRは0件で、旧refactor/audit branchの固有成果もmainへ回収する。旧研究ファイルを原位置に残すこと、原文435件をNOT_AUDITEDとして保持することは構造移行の未完了を意味しない。後者は独立した内容監査バックログである。
+2026-10-04時点で、現行knowledge schema・generated view・CI・README導線はmainへ集約済み。旧構造向けopen PRは0件。旧 `refactor/research-knowledge-structure` と `codex/open-freshness-audit` の固有成果もmainへ回収済みで、両refはmainと同一commitへ揃えた。旧研究ファイルを原位置に残すこと、原文435件をNOT_AUDITEDとして保持することは構造移行の未完了を意味しない。後者は独立した内容監査バックログである。
 
 ランタイム一時物はcurrent treeから除外し、固定バイナリ・検証JSON・研究ログなど再現性に必要な資産だけを残す。
