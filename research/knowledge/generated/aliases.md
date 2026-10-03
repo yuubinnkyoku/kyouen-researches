@@ -29,7 +29,7 @@
 | B074 | [K0135](../items/K0135-linear-point-cover-bound-refuted.md) | 幾何によりB072より厳しい線形上限がある |
 | B075 | [K0136](../items/K0136-triple-completion-overlap-bound.md) | 二つの三つ組補完集合の重複は小さい |
 | B077 | [K0137](../items/K0137-maximal-all-empty-points-multiply-covered.md) | 極大なのにすべての空点が二重以上に禁止される |
-| B078 | [K0138](../items/K0138-minimum-maximal-single-cover-scope.md) | 最小極大配置には一重被覆点がある |
+| B078 | [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) | 全nの最小極大配置に一重被覆点があるというB078はn=1で偽 |
 | B079 | [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) | 六石非存在は三つ組の共起だけで短く説明できる |
 | B080 | [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) | 全空点をちょうど一度ずつ禁止する極大配置 |
 | B081 | [K0039](../items/K0039-n9-17-stone-maximum-conjecture-refuted.md) | K_9=17という旧仮説は18石安全証人により反証 |
@@ -64,7 +64,7 @@
 | B253 | [K0162](../items/K0162-joint-rule-removal-synergy.md) | 各禁止を単独解除しても不変だが同時解除で反転する |
 | B255 | [K0163](../items/K0163-same-maximum-configurations-different-winner.md) | 最大配置の分類を完全保存しても勝者は変わる |
 | B256 | [K0164](../items/K0164-minimal-winner-preserving-rules-d4-asymmetry-refuted.md) | 勝者を保つ最小禁止族はD4非対称である |
-| B258 | [K0165](../items/K0165-mandatory-rule-types-scope.md) | 最小勝敗保持禁止族に共通する必須四点型がある |
+| B258 | [K0165](../items/K0165-mandatory-rule-types-refuted.md) | n≥4の最小勝敗保持禁止族に共通必須D4型があるというB258は偽 |
 | B261 | [K0166](../items/K0166-two-move-blocking-synergy.md) | 一手ずつは弱いが二手そろうと大量に塞ぐ |
 | B266 | [K0167](../items/K0167-residual-triples-two-move-synergy.md) | 二手相乗作用を少数の残余三点制約で表せる |
 | B301 | [K0168](../items/K0168-j5-detoured-square-structure.md) | J_5は四角形の各辺に長さ4の迂回路を添えたグラフ |
@@ -105,7 +105,7 @@
 | B356 | [K0203](../items/K0203-two-points-quadratic-cover-overlap.md) | 二つの空点で同時に二次的な重複被覆を持つ |
 | B357 | [K0204](../items/K0204-high-cover-points-competition-refuted.md) | 高被覆点は互いに競合する |
 | B360 | [K0205](../items/K0205-local-cover-versus-global-efficiency.md) | 点ごとの被覆上限は大きくても全面被覆は極端に非効率 |
-| B361 | [K0206](../items/K0206-minimum-maximal-one-stone-fragility-scope.md) | 最小極大配置は一石の故障に弱い |
+| B361 | [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) | B361の全n版ρ=1はn=1で定義不全 |
 | B362 | [K0207](../items/K0207-maximal-no-original-empty-point-unblocked.md) | どの一石を抜いても元の空点は合法にならない極大配置 |
 | B367 | [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md) | 被覆重複が大きいのに一石で大量解除できる |
 | B368 | [K0209](../items/K0209-minimum-maximal-stones-essential.md) | 最小極大配置の各石には固有の仕事がある |
@@ -132,14 +132,14 @@
 | B455 | [K0230](../items/K0230-many-point-circle-residue-description-refuted.md) | q≥3の多数点円は、整数中心円の剰余類選択として最適に記述できる |
 | B456 | [K0231](../items/K0231-fixed-denominator-radius-monotonicity.md) | 分母qを固定した最良点数は半径の単調増加だけでは達成できない |
 | B457 | [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | q≥3の円は境界に切られても点数を一つずつ変えやすい |
-| B458 | [K0233](../items/K0233-circle-first-board-denominator-scope.md) | 有理中心の初出は四点の外心分母ではなく原始円方程式の係数で決まる |
+| B458 | [K0233](../items/K0233-circle-first-board-summary-refuted.md) | 完全点数・外接幅・原始二次係数では四点初出を決定できない |
 | B461 | [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) | 半径二乗25/2の12点円は、正方形窓で11点だけを残せない |
 | B462 | [K0235](../items/K0235-n11-first-eleven-point-circle.md) | 11×11は11点を載せる円の最初の正方形盤 |
 | B463 | [K0236](../items/K0236-extreme-point-multiplicity-single-loss.md) | 1点だけ失えるかは上下左右の極値点の重複度で決まる |
 | B464 | [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) | 長方形窓なら実現する点数が正方形窓では実現しない |
 | B465 | [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) | q=2の対称な完全円では最大点数直下の奇数が欠ける |
 | B467 | [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) | 円の窓点数スペクトルは円周上の点の座標順序で決まる |
-| B468 | [K0240](../items/K0240-circle-symmetry-spectrum-holes-scope.md) | 高い対称性を持つ円ほど点数スペクトルの穴が多い |
+| B468 | [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) | 円の対称群が大きいほど窓スペクトルの穴が増える単調性は偽 |
 | B470 | [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) | 三石後の合法手数の欠落は少数の円切断型で説明できる |
 | B471 | [K0242](../items/K0242-collinear-large-slope-uniform-tail.md) | 共線数の大きい傾きの尾部は一様に小さい |
 | B472 | [K0243](../items/K0243-direction-height-cubic-leading-decay.md) | 固定方向の主項係数は方向高さの三乗で減衰する |
@@ -247,8 +247,8 @@
 | F-Y | [K0296](../items/K0296-n5-five-stone-optimal-terminal-exclusion-refuted.md) | 5×5の全勝敗維持対局では五石で終わらないという説明は偽 |
 | F-Z | [K0059](../items/K0059-odd-two-square-representation-formula.md) | 奇二平方和表現数odd_repr(2m)の完全公式 |
 | H-dense | [K0276](../items/K0276-h-dense-independent-holdout-open.md) | H-denseはn≤10の記述を越える独立確認が未完了 |
-| H1 | [K0081](../items/K0081-loss-core-frame-scope-unclear.md) | R内LOSS部分集合の共通コア仮説は座標frameを明示する必要がある |
-| H2 | [K0081](../items/K0081-loss-core-frame-scope-unclear.md) | R内LOSS部分集合の共通コア仮説は座標frameを明示する必要がある |
+| H1 | [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) | H1/H2のLOSS共通コアをD4不変構造とみなす仮説は偽 |
+| H2 | [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) | H1/H2のLOSS共通コアをD4不変構造とみなす仮説は偽 |
 | H3 | [K0082](../items/K0082-n10-three-stone-degree-cost-correlation.md) | 10×10の3石探索コストとΣdの負相関は固定R内限定 |
 | H4 | [K0021](../items/K0021-n9-all-81-first-moves-win.md) | 9×9では81個すべての初手が先手勝ち |
 | H5 | [K0109](../items/K0109-n7-n9-certificate-loss-ratios.md) | 7〜9×9公開証明書のLOSS比34〜35%は三サイズの観測 |

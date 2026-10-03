@@ -220,7 +220,7 @@
 - ← depends_on [K0135](../items/K0135-linear-point-cover-bound-refuted.md)
 - ← depends_on [K0136](../items/K0136-triple-completion-overlap-bound.md)
 - ← depends_on [K0137](../items/K0137-maximal-all-empty-points-multiply-covered.md)
-- ← depends_on [K0138](../items/K0138-minimum-maximal-single-cover-scope.md)
+- ← depends_on [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md)
 - ← depends_on [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md)
 - ← depends_on [K0140](../items/K0140-maximal-single-cover-all-empty-points.md)
 - ← depends_on [K0141](../items/K0141-n10-20-stone-existence-open.md)
@@ -241,7 +241,7 @@
 - ← depends_on [K0203](../items/K0203-two-points-quadratic-cover-overlap.md)
 - ← depends_on [K0204](../items/K0204-high-cover-points-competition-refuted.md)
 - ← depends_on [K0205](../items/K0205-local-cover-versus-global-efficiency.md)
-- ← depends_on [K0206](../items/K0206-minimum-maximal-one-stone-fragility-scope.md)
+- ← depends_on [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md)
 - ← depends_on [K0207](../items/K0207-maximal-no-original-empty-point-unblocked.md)
 - ← depends_on [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md)
 - ← depends_on [K0209](../items/K0209-minimum-maximal-stones-essential.md)
@@ -257,6 +257,8 @@
 - ← depends_on [K0219](../items/K0219-n7-phase-dependent-n8-extension.md)
 - ← depends_on [K0220](../items/K0220-distant-forbidden-points-collinear.md)
 - ← depends_on [K0221](../items/K0221-interior-relocation-external-gap-open.md)
+- ← depends_on [K0297](../items/K0297-minimum-maximal-private-point-open.md)
+- ← depends_on [K0298](../items/K0298-minimum-maximal-rho-one-open.md)
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -516,13 +518,13 @@
 
 ## [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md) 10×10 subset CSVのstateは入力座標で、D4正規形とは限らない
 
-- ← depends_on [K0081](../items/K0081-loss-core-frame-scope-unclear.md)
+- ← depends_on [K0081](../items/K0081-loss-core-d4-invariant-refuted.md): CSVのstate列が入力座標であり、各局面のD4正規形ではないことを前提に解釈する
 - ← depends_on [K0279](../items/K0279-fixed-r-static-pair-core-rank.md)
 - ← depends_on [K0288](../items/K0288-certified-witness-rank-and-coordinate-join.md)
 
-## [K0081](../items/K0081-loss-core-frame-scope-unclear.md) R内LOSS部分集合の共通コア仮説は座標frameを明示する必要がある
+## [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) H1/H2のLOSS共通コアをD4不変構造とみなす仮説は偽
 
-- → depends_on [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md)
+- → depends_on [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md): CSVのstate列が入力座標であり、各局面のD4正規形ではないことを前提に解釈する
 
 ## [K0083](../items/K0083-fixed-r-four-stone-loss-separation.md) R内4石のΣdとLOSS分離、二石順位の旧記述は訂正済み
 
@@ -784,9 +786,10 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 
-## [K0138](../items/K0138-minimum-maximal-single-cover-scope.md) 最小極大配置には一重被覆点がある
+## [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) 全nの最小極大配置に一重被覆点があるというB078はn=1で偽
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- ← supersedes [K0297](../items/K0297-minimum-maximal-private-point-open.md): n=1の退化反例を除外したB078の修正版
 
 ## [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) 六石非存在は三つ組の共起だけで短く説明できる
 
@@ -1004,9 +1007,10 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 
-## [K0206](../items/K0206-minimum-maximal-one-stone-fragility-scope.md) 最小極大配置は一石の故障に弱い
+## [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) B361の全n版ρ=1はn=1で定義不全
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- ← supersedes [K0298](../items/K0298-minimum-maximal-rho-one-open.md): n=1でρが定義できない問題を除外したB361の修正版
 
 ## [K0207](../items/K0207-maximal-no-original-empty-point-unblocked.md) どの一石を抜いても元の空点は合法にならない極大配置
 
@@ -1262,3 +1266,13 @@
 
 - → depends_on [K0295](../items/K0295-n1-n7-full-tstar-and-wft.md)
 - ← refutes [K0295](../items/K0295-n1-n7-full-tstar-and-wft.md): 独立全状態でT*に五石が含まれる
+
+## [K0297](../items/K0297-minimum-maximal-private-point-open.md) n≥2の全最小極大配置に一重被覆点があるか
+
+- → supersedes [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md): n=1の退化反例を除外したB078の修正版
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+
+## [K0298](../items/K0298-minimum-maximal-rho-one-open.md) n≥2の全最小極大配置で故障耐性ρが1か
+
+- → supersedes [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md): n=1でρが定義できない問題を除外したB361の修正版
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)

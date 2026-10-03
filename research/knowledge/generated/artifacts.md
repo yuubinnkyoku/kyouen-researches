@@ -228,6 +228,9 @@
 ## [release-assets/SHA256SUMS.txt](../../../release-assets/SHA256SUMS.txt)
 
 - [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) (manifest): 命題・対象範囲・根拠を記した出典
+## [research/experiments.jsonl](../../../research/experiments.jsonl)
+
+- [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) (log): 固定R部分集合の層別LOSS数と共通部分の再集計
 ## [research/exploration/fact_10x10_12pt_circles.json](../../../research/exploration/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
@@ -270,7 +273,7 @@
 - [K0067](../items/K0067-triple-completion-cover-bound.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0070](../items/K0070-width-three-q6-stabilization.md) (source): M=9の専用完全列挙と3×8証人
 - [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0081](../items/K0081-loss-core-frame-scope-unclear.md) (source): F-Bの座標訂正と固定Rの層別観測
+- [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) (source): F-Bの座標frame訂正
 - [K0082](../items/K0082-n10-three-stone-degree-cost-correlation.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0083](../items/K0083-fixed-r-four-stone-loss-separation.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0109](../items/K0109-n7-n9-certificate-loss-ratios.md) (source): 命題・対象範囲・根拠を記した出典
@@ -281,7 +284,7 @@
 - [K0296](../items/K0296-n5-five-stone-optimal-terminal-exclusion-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/hypotheses.md](../../../research/hypotheses.md)
 
-- [K0081](../items/K0081-loss-core-frame-scope-unclear.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) (source): H1/H2の原仮説と機械集計
 - [K0289](../items/K0289-same-distance-two-stone-opposite-outcomes.md) (source): H6の原仮説と当時未実施だった検証計画
 ## [research/hypothesis-bank-2026-09-27.md](../../../research/hypothesis-bank-2026-09-27.md)
 
@@ -312,7 +315,7 @@
 - [K0135](../items/K0135-linear-point-cover-bound-refuted.md) (source): B074の原文・定義（現在の結論は採用報告を優先）
 - [K0136](../items/K0136-triple-completion-overlap-bound.md) (source): B075の原文・定義（現在の結論は採用報告を優先）
 - [K0137](../items/K0137-maximal-all-empty-points-multiply-covered.md) (source): B077の原文・定義（現在の結論は採用報告を優先）
-- [K0138](../items/K0138-minimum-maximal-single-cover-scope.md) (source): B078の原文・定義（現在の結論は採用報告を優先）
+- [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) (source): B078の原文
 - [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) (source): B079の原文・定義（現在の結論は採用報告を優先）
 - [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) (source): B080の原文・定義（現在の結論は採用報告を優先）
 - [K0141](../items/K0141-n10-20-stone-existence-open.md) (source): B082の原文・定義（現在の結論は採用報告を優先）
@@ -339,7 +342,7 @@
 - [K0162](../items/K0162-joint-rule-removal-synergy.md) (source): B253の原文・定義（現在の結論は採用報告を優先）
 - [K0163](../items/K0163-same-maximum-configurations-different-winner.md) (source): B255の原文・定義（現在の結論は採用報告を優先）
 - [K0164](../items/K0164-minimal-winner-preserving-rules-d4-asymmetry-refuted.md) (source): B256の原文・定義（現在の結論は採用報告を優先）
-- [K0165](../items/K0165-mandatory-rule-types-scope.md) (source): B258の原文・定義（現在の結論は採用報告を優先）
+- [K0165](../items/K0165-mandatory-rule-types-refuted.md) (source): B258の原文
 - [K0166](../items/K0166-two-move-blocking-synergy.md) (source): B261の原文・定義（現在の結論は採用報告を優先）
 - [K0167](../items/K0167-residual-triples-two-move-synergy.md) (source): B266の原文・定義（現在の結論は採用報告を優先）
 ## [research/hypothesis-bank-round2-2026-09-27.md](../../../research/hypothesis-bank-round2-2026-09-27.md)
@@ -382,7 +385,7 @@
 - [K0203](../items/K0203-two-points-quadratic-cover-overlap.md) (source): B356の原文・定義（現在の結論は採用報告を優先）
 - [K0204](../items/K0204-high-cover-points-competition-refuted.md) (source): B357の原文・定義（現在の結論は採用報告を優先）
 - [K0205](../items/K0205-local-cover-versus-global-efficiency.md) (source): B360の原文・定義（現在の結論は採用報告を優先）
-- [K0206](../items/K0206-minimum-maximal-one-stone-fragility-scope.md) (source): B361の原文・定義（現在の結論は採用報告を優先）
+- [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) (source): B361の原文
 - [K0207](../items/K0207-maximal-no-original-empty-point-unblocked.md) (source): B362の原文・定義（現在の結論は採用報告を優先）
 - [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md) (source): B367の原文・定義（現在の結論は採用報告を優先）
 - [K0209](../items/K0209-minimum-maximal-stones-essential.md) (source): B368の原文・定義（現在の結論は採用報告を優先）
@@ -409,14 +412,14 @@
 - [K0230](../items/K0230-many-point-circle-residue-description-refuted.md) (source): B455の原文・定義（現在の結論は採用報告を優先）
 - [K0231](../items/K0231-fixed-denominator-radius-monotonicity.md) (source): B456の原文・定義（現在の結論は採用報告を優先）
 - [K0232](../items/K0232-circle-window-single-point-cuts-open.md) (source): B457の原文・定義（現在の結論は採用報告を優先）
-- [K0233](../items/K0233-circle-first-board-denominator-scope.md) (source): B458の原文・定義（現在の結論は採用報告を優先）
+- [K0233](../items/K0233-circle-first-board-summary-refuted.md) (source): B458の原文
 - [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) (source): B461の原文・定義（現在の結論は採用報告を優先）
 - [K0235](../items/K0235-n11-first-eleven-point-circle.md) (source): B462の原文・定義（現在の結論は採用報告を優先）
 - [K0236](../items/K0236-extreme-point-multiplicity-single-loss.md) (source): B463の原文・定義（現在の結論は採用報告を優先）
 - [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) (source): B464の原文・定義（現在の結論は採用報告を優先）
 - [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) (source): B465の原文・定義（現在の結論は採用報告を優先）
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (source): B467の原文・定義（現在の結論は採用報告を優先）
-- [K0240](../items/K0240-circle-symmetry-spectrum-holes-scope.md) (source): B468の原文・定義（現在の結論は採用報告を優先）
+- [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (source): B468の原文
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (source): B470の原文・定義（現在の結論は採用報告を優先）
 - [K0242](../items/K0242-collinear-large-slope-uniform-tail.md) (source): B471の原文・定義（現在の結論は採用報告を優先）
 - [K0243](../items/K0243-direction-height-cubic-leading-decay.md) (source): B472の原文・定義（現在の結論は採用報告を優先）
@@ -557,13 +560,13 @@
 - [K0221](../items/K0221-interior-relocation-external-gap-open.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/verification/round16-first-appearance.md](../../../research/verification/round16-first-appearance.md)
 
-- [K0233](../items/K0233-circle-first-board-denominator-scope.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0233](../items/K0233-circle-first-board-summary-refuted.md) (source): 同じ要約量で四点初出が異なる反例と無限拡大族
 ## [research/verification/round16_first_appearance.json](../../../research/verification/round16_first_appearance.json)
 
 - [K0216](../items/K0216-uniform-external-saturation-radius-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0217](../items/K0217-minimum-maximal-external-blocking-band-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0221](../items/K0221-interior-relocation-external-gap-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0233](../items/K0233-circle-first-board-denominator-scope.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0233](../items/K0233-circle-first-board-summary-refuted.md) (data): 反例円と初出プロファイルの厳密データ
 ## [research/verification/round17-b089-bounded-degree.md](../../../research/verification/round17-b089-bounded-degree.md)
 
 - [K0144](../items/K0144-few-algebraic-curves-optimality-refuted.md) (source): 命題・対象範囲・根拠を記した出典
@@ -664,11 +667,11 @@
 ## [research/verification/round23-b256-symmetric-minimum.md](../../../research/verification/round23-b256-symmetric-minimum.md)
 
 - [K0164](../items/K0164-minimal-winner-preserving-rules-d4-asymmetry-refuted.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0165](../items/K0165-mandatory-rule-types-scope.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0165](../items/K0165-mandatory-rule-types-refuted.md) (source): n≥4で共通必須D4型が存在しない一般構成
 ## [research/verification/round23_minimum_family_verified.json](../../../research/verification/round23_minimum_family_verified.json)
 
 - [K0164](../items/K0164-minimal-winner-preserving-rules-d4-asymmetry-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0165](../items/K0165-mandatory-rule-types-scope.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0165](../items/K0165-mandatory-rule-types-refuted.md) (data): n=2..20の補助検算
 ## [research/verification/round25-forced-length-holes.md](../../../research/verification/round25-forced-length-holes.md)
 
 - [K0122](../items/K0122-tstar-parity-hole-claim-refuted.md) (source): 命題・対象範囲・根拠を記した出典
@@ -722,7 +725,7 @@
 - [K0135](../items/K0135-linear-point-cover-bound-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0136](../items/K0136-triple-completion-overlap-bound.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0137](../items/K0137-maximal-all-empty-points-multiply-covered.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
-- [K0138](../items/K0138-minimum-maximal-single-cover-scope.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+- [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0141](../items/K0141-n10-20-stone-existence-open.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
@@ -749,7 +752,7 @@
 - [K0162](../items/K0162-joint-rule-removal-synergy.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0163](../items/K0163-same-maximum-configurations-different-winner.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0164](../items/K0164-minimal-winner-preserving-rules-d4-asymmetry-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
-- [K0165](../items/K0165-mandatory-rule-types-scope.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+- [K0165](../items/K0165-mandatory-rule-types-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0166](../items/K0166-two-move-blocking-synergy.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0167](../items/K0167-residual-triples-two-move-synergy.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0168](../items/K0168-j5-detoured-square-structure.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
@@ -790,7 +793,7 @@
 - [K0203](../items/K0203-two-points-quadratic-cover-overlap.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0204](../items/K0204-high-cover-points-competition-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0205](../items/K0205-local-cover-versus-global-efficiency.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
-- [K0206](../items/K0206-minimum-maximal-one-stone-fragility-scope.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+- [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0207](../items/K0207-maximal-no-original-empty-point-unblocked.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0209](../items/K0209-minimum-maximal-stones-essential.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
@@ -817,14 +820,14 @@
 - [K0230](../items/K0230-many-point-circle-residue-description-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0231](../items/K0231-fixed-denominator-radius-monotonicity.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0232](../items/K0232-circle-window-single-point-cuts-open.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
-- [K0233](../items/K0233-circle-first-board-denominator-scope.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+- [K0233](../items/K0233-circle-first-board-summary-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0235](../items/K0235-n11-first-eleven-point-circle.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0236](../items/K0236-extreme-point-multiplicity-single-loss.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
-- [K0240](../items/K0240-circle-symmetry-spectrum-holes-scope.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
+- [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0242](../items/K0242-collinear-large-slope-uniform-tail.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
 - [K0243](../items/K0243-direction-height-cubic-leading-decay.md) (manifest): 原文・量化・採用根拠・旧記録のhashを固定した監査索引
@@ -1106,7 +1109,7 @@
 - [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) (proof): 命題・対象範囲・根拠を記した出典
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (proof): 命題・対象範囲・根拠を記した出典
-- [K0240](../items/K0240-circle-symmetry-spectrum-holes-scope.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (source): 窓スペクトルの全分類定理と対称性単調性の反例
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (proof): 命題・対象範囲・根拠を記した出典
 ## [research/verification/round4-collinear-asymptotic.md](../../../research/verification/round4-collinear-asymptotic.md)
 
@@ -1201,9 +1204,11 @@
 ## [research/verification/round47-private-cover-and-global-minima.md](../../../research/verification/round47-private-cover-and-global-minima.md)
 
 - [K0137](../items/K0137-maximal-all-empty-points-multiply-covered.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0138](../items/K0138-minimum-maximal-single-cover-scope.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) (source): n=1の退化端点とn=2..8の全最小極大の完全検査
 - [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0206](../items/K0206-minimum-maximal-one-stone-fragility-scope.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) (source): ρの定義、n=1端点、n=2..8の全件検査
+- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (source): n=2..8の全最小極大でmin b=1を完全確認
+- [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (source): n=2..8の全最小極大でρ=1を完全確認
 ## [research/verification/round48-six-stone-cover-incidence.md](../../../research/verification/round48-six-stone-cover-incidence.md)
 
 - [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1223,7 +1228,7 @@
 - [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0240](../items/K0240-circle-symmetry-spectrum-holes-scope.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (data): 反例円と窓スペクトルの厳密データ
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/verification/round4_collinear_asymptotic.json](../../../research/verification/round4_collinear_asymptotic.json)
 
@@ -1256,6 +1261,12 @@
 ## [research/verification/round5-row-thresholds.md](../../../research/verification/round5-row-thresholds.md)
 
 - [K0264](../items/K0264-three-stones-per-row-minimum-length-refuted.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/verification/round50-nine-board-private-point-family.md](../../../research/verification/round50-nine-board-private-point-family.md)
+
+- [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) (source): n=9の限定16配置での追加確認
+- [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) (source): n=9限定16配置のρ=1確認
+- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (source): n=9の限定16配置でもmin b=1
+- [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (source): n=9の限定16配置でもρ=1
 ## [research/verification/round52-general-saturation-exponent-lower-bound.md](../../../research/verification/round52-general-saturation-exponent-lower-bound.md)
 
 - [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1403,7 +1414,7 @@
 - [K0216](../items/K0216-uniform-external-saturation-radius-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0217](../items/K0217-minimum-maximal-external-blocking-band-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0221](../items/K0221-interior-relocation-external-gap-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0233](../items/K0233-circle-first-board-denominator-scope.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0233](../items/K0233-circle-first-board-summary-refuted.md) (verifier): 完全点集合と初出サイズの独立検算
 ## [research/verification/scripts/round17_b089_curves.py](../../../research/verification/scripts/round17_b089_curves.py)
 
 - [K0144](../items/K0144-few-algebraic-curves-optimality-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1427,7 +1438,7 @@
 ## [research/verification/scripts/round23_minimum_family.py](../../../research/verification/scripts/round23_minimum_family.py)
 
 - [K0164](../items/K0164-minimal-winner-preserving-rules-d4-asymmetry-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0165](../items/K0165-mandatory-rule-types-scope.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0165](../items/K0165-mandatory-rule-types-refuted.md) (verifier): D4型と商ゲームの検算
 ## [research/verification/scripts/round25_forced_lengths.cpp](../../../research/verification/scripts/round25_forced_lengths.cpp)
 
 - [K0122](../items/K0122-tstar-parity-hole-claim-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1506,7 +1517,7 @@
 - [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0240](../items/K0240-circle-symmetry-spectrum-holes-scope.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (verifier): 格子対称群と窓スペクトルの独立計算
 - [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/verification/scripts/round4_collinear_asymptotic.py](../../../research/verification/scripts/round4_collinear_asymptotic.py)
 

@@ -82,7 +82,7 @@
 | [K0078](../items/K0078-width-three-q5-intermediate-range-open.md) | 3×m・q=5のm=22..55に不足極大が再出現するかは未確定 | question | open | rectangles, variants |
 | [K0079](../items/K0079-600-original-claims-audit-boundary.md) | 600原文の監査状態と弱化版作業ラベルは別の量 | verification | verified | migration, provenance |
 | [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md) | 10×10 subset CSVのstateは入力座標で、D4正規形とは限らない | proposition | computed | provenance |
-| [K0081](../items/K0081-loss-core-frame-scope-unclear.md) | R内LOSS部分集合の共通コア仮説は座標frameを明示する必要がある | proposition | scope-unclear | residual-games, provenance |
+| [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) | H1/H2のLOSS共通コアをD4不変構造とみなす仮説は偽 | proposition | refuted | residual-games, provenance |
 | [K0082](../items/K0082-n10-three-stone-degree-cost-correlation.md) | 10×10の3石探索コストとΣdの負相関は固定R内限定 | proposition | observed | statistics, search-methods |
 | [K0083](../items/K0083-fixed-r-four-stone-loss-separation.md) | R内4石のΣdとLOSS分離、二石順位の旧記述は訂正済み | proposition | observed | statistics |
 | [K0084](../items/K0084-outside-r-loss-trend-full-width-memo.md) | R外4石36局面のΣd→LOSS方向は全幅memo再求解でも維持 | proposition | observed | statistics, verification |
@@ -139,7 +139,7 @@
 | [K0135](../items/K0135-linear-point-cover-bound-refuted.md) | 幾何によりB072より厳しい線形上限がある | proposition | refuted | maximal-safe, geometry |
 | [K0136](../items/K0136-triple-completion-overlap-bound.md) | 二つの三つ組補完集合の重複は小さい | proposition | proved | maximal-safe, geometry |
 | [K0137](../items/K0137-maximal-all-empty-points-multiply-covered.md) | 極大なのにすべての空点が二重以上に禁止される | proposition | computed | maximal-safe, geometry |
-| [K0138](../items/K0138-minimum-maximal-single-cover-scope.md) | 最小極大配置には一重被覆点がある | proposition | scope-unclear | maximal-safe, geometry |
+| [K0138](../items/K0138-minimum-maximal-single-cover-refuted.md) | 全nの最小極大配置に一重被覆点があるというB078はn=1で偽 | proposition | refuted | maximal-safe, geometry |
 | [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) | 六石非存在は三つ組の共起だけで短く説明できる | question | open | maximal-safe, geometry |
 | [K0140](../items/K0140-maximal-single-cover-all-empty-points.md) | 全空点をちょうど一度ずつ禁止する極大配置 | proposition | computed | maximal-safe, geometry |
 | [K0141](../items/K0141-n10-20-stone-existence-open.md) | 10×10では20石まで届く | question | open | maximum-safe, geometry |
@@ -166,7 +166,7 @@
 | [K0162](../items/K0162-joint-rule-removal-synergy.md) | 各禁止を単独解除しても不変だが同時解除で反転する | proposition | computed | variants |
 | [K0163](../items/K0163-same-maximum-configurations-different-winner.md) | 最大配置の分類を完全保存しても勝者は変わる | proposition | computed | variants |
 | [K0164](../items/K0164-minimal-winner-preserving-rules-d4-asymmetry-refuted.md) | 勝者を保つ最小禁止族はD4非対称である | proposition | refuted | variants |
-| [K0165](../items/K0165-mandatory-rule-types-scope.md) | 最小勝敗保持禁止族に共通する必須四点型がある | proposition | scope-unclear | variants |
+| [K0165](../items/K0165-mandatory-rule-types-refuted.md) | n≥4の最小勝敗保持禁止族に共通必須D4型があるというB258は偽 | proposition | refuted | variants |
 | [K0166](../items/K0166-two-move-blocking-synergy.md) | 一手ずつは弱いが二手そろうと大量に塞ぐ | proposition | proved | geometry |
 | [K0167](../items/K0167-residual-triples-two-move-synergy.md) | 二手相乗作用を少数の残余三点制約で表せる | proposition | proved | geometry |
 | [K0168](../items/K0168-j5-detoured-square-structure.md) | J_5は四角形の各辺に長さ4の迂回路を添えたグラフ | proposition | computed | residual-games, first-moves |
@@ -207,7 +207,7 @@
 | [K0203](../items/K0203-two-points-quadratic-cover-overlap.md) | 二つの空点で同時に二次的な重複被覆を持つ | proposition | proved | maximal-safe, geometry |
 | [K0204](../items/K0204-high-cover-points-competition-refuted.md) | 高被覆点は互いに競合する | proposition | refuted | maximal-safe, geometry |
 | [K0205](../items/K0205-local-cover-versus-global-efficiency.md) | 点ごとの被覆上限は大きくても全面被覆は極端に非効率 | proposition | proved | maximal-safe, geometry |
-| [K0206](../items/K0206-minimum-maximal-one-stone-fragility-scope.md) | 最小極大配置は一石の故障に弱い | proposition | scope-unclear | maximal-safe, geometry |
+| [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) | B361の全n版ρ=1はn=1で定義不全 | proposition | withdrawn | maximal-safe, geometry |
 | [K0207](../items/K0207-maximal-no-original-empty-point-unblocked.md) | どの一石を抜いても元の空点は合法にならない極大配置 | proposition | computed | maximal-safe, geometry |
 | [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md) | 被覆重複が大きいのに一石で大量解除できる | proposition | computed | maximal-safe, geometry |
 | [K0209](../items/K0209-minimum-maximal-stones-essential.md) | 最小極大配置の各石には固有の仕事がある | proposition | refuted | maximal-safe, geometry |
@@ -234,14 +234,14 @@
 | [K0230](../items/K0230-many-point-circle-residue-description-refuted.md) | q≥3の多数点円は、整数中心円の剰余類選択として最適に記述できる | proposition | refuted | geometry |
 | [K0231](../items/K0231-fixed-denominator-radius-monotonicity.md) | 分母qを固定した最良点数は半径の単調増加だけでは達成できない | proposition | proved | geometry |
 | [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | q≥3の円は境界に切られても点数を一つずつ変えやすい | question | open | geometry |
-| [K0233](../items/K0233-circle-first-board-denominator-scope.md) | 有理中心の初出は四点の外心分母ではなく原始円方程式の係数で決まる | proposition | scope-unclear | geometry |
+| [K0233](../items/K0233-circle-first-board-summary-refuted.md) | 完全点数・外接幅・原始二次係数では四点初出を決定できない | proposition | refuted | geometry |
 | [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) | 半径二乗25/2の12点円は、正方形窓で11点だけを残せない | proposition | proved | geometry |
 | [K0235](../items/K0235-n11-first-eleven-point-circle.md) | 11×11は11点を載せる円の最初の正方形盤 | proposition | proved | geometry |
 | [K0236](../items/K0236-extreme-point-multiplicity-single-loss.md) | 1点だけ失えるかは上下左右の極値点の重複度で決まる | proposition | proved | geometry |
 | [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) | 長方形窓なら実現する点数が正方形窓では実現しない | proposition | refuted | geometry |
 | [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) | q=2の対称な完全円では最大点数直下の奇数が欠ける | proposition | proved | geometry |
 | [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) | 円の窓点数スペクトルは円周上の点の座標順序で決まる | proposition | proved | geometry |
-| [K0240](../items/K0240-circle-symmetry-spectrum-holes-scope.md) | 高い対称性を持つ円ほど点数スペクトルの穴が多い | proposition | scope-unclear | geometry |
+| [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) | 円の対称群が大きいほど窓スペクトルの穴が増える単調性は偽 | proposition | refuted | geometry |
 | [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) | 三石後の合法手数の欠落は少数の円切断型で説明できる | proposition | proved | geometry |
 | [K0242](../items/K0242-collinear-large-slope-uniform-tail.md) | 共線数の大きい傾きの尾部は一様に小さい | proposition | proved | geometry |
 | [K0243](../items/K0243-direction-height-cubic-leading-decay.md) | 固定方向の主項係数は方向高さの三乗で減衰する | proposition | proved | geometry |
@@ -298,3 +298,5 @@
 | [K0294](../items/K0294-n4-two-stone-grundy-gaps.md) | 4×4二石層はGrundy1と4を持たず、全120局面は四値に分かれる | proposition | computed | grundy, residual-games |
 | [K0295](../items/K0295-n1-n7-full-tstar-and-wft.md) | 1〜7×7空盤の全勝敗維持終局T*と固定長保証WFTは区別される | proposition | computed | strategy-length, grundy |
 | [K0296](../items/K0296-n5-five-stone-optimal-terminal-exclusion-refuted.md) | 5×5の全勝敗維持対局では五石で終わらないという説明は偽 | proposition | refuted | strategy-length, maximal-safe |
+| [K0297](../items/K0297-minimum-maximal-private-point-open.md) | n≥2の全最小極大配置に一重被覆点があるか | question | open | maximal-safe, geometry |
+| [K0298](../items/K0298-minimum-maximal-rho-one-open.md) | n≥2の全最小極大配置で故障耐性ρが1か | question | open | maximal-safe, geometry |
