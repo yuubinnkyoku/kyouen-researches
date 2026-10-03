@@ -148,10 +148,11 @@ class GenerationTests(unittest.TestCase):
         for output in views([i],[]).values():
             self.assertNotIn("(../items/K0001.md)",output)
 
-    def test_stage_column_marks_reported_strong_solution_as_needs_review(self):
+    def test_stage_column_keeps_computed_strong_solution_plain(self):
         i=copy.deepcopy(next(i for i in checked()[0] if i["id"]=="K0006"))
         table=solution_table([i])
-        self.assertIn("strong（完了報告・要監査）; second-player-win",table)
+        self.assertIn("strong; second-player-win",table)
+        self.assertNotIn("要監査",table)
         self.assertEqual(i["solution"]["level"],"strong")  # display does not alter the reported metadata
 
     def test_human_readme_survives_with_both_newline_styles(self):
@@ -228,7 +229,10 @@ class MigrationBoundaryTests(unittest.TestCase):
             self.assertTrue(any(i.get("solution",{}).get("board")==f"{n}×{n}" and i["solution"]["outcome"]==winner for i in self.items),n)
         eleven=self.by_id["K0023"]["solution"]
         self.assertEqual((eleven["level"],eleven["outcome"]),("unsolved","unknown"))
-        self.assertEqual(self.by_id["K0006"]["status"],"needs-review")
+        self.assertEqual(self.by_id["K0006"]["status"],"computed")
+        self.assertEqual(self.by_id["K0058"]["status"],"verified")
+        self.assertEqual(self.by_id["K0289"]["status"],"computed")
+        self.assertFalse(any(i["status"]=="needs-review" for i in self.items))
         self.assertIn("81/81",self.by_id["K0021"]["solution"]["coverage"])
         self.assertIn("100/100",self.by_id["K0022"]["solution"]["coverage"])
         self.assertEqual(self.by_id["K0103"]["status"],"open")

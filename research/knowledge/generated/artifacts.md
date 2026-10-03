@@ -15,7 +15,7 @@
 
 - [K0001](../items/K0001-complete-call-rules.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0003](../items/K0003-solution-and-evidence-levels.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (source): 空盤勝敗と全局面計算の検証境界
 - [K0021](../items/K0021-n9-all-81-first-moves-win.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0026](../items/K0026-maximum-versus-minimum-maximal.md) (source): 命題・対象範囲・根拠を記した出典
@@ -258,7 +258,7 @@
 - [K0048](../items/K0048-n1-n6-fixed-certificate-terminal-sizes.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0052](../items/K0052-n7-a-b-reconfiguration-widths.md) (source): 整数・分数被覆最適の区別
 - [K0057](../items/K0057-forbidden-quadruple-counts.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (source): F-Kの原記述と最大円点数表
 - [K0059](../items/K0059-odd-two-square-representation-formula.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0060](../items/K0060-circle-point-floor-formula-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0061](../items/K0061-twelve-point-circle-count-formula.md) (source): 命題・対象範囲・根拠を記した出典
@@ -282,7 +282,7 @@
 ## [research/hypotheses.md](../../../research/hypotheses.md)
 
 - [K0081](../items/K0081-loss-core-frame-scope-unclear.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0289](../items/K0289-same-distance-two-stone-opposite-outcomes.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0289](../items/K0289-same-distance-two-stone-opposite-outcomes.md) (source): H6の原仮説と当時未実施だった検証計画
 ## [research/hypothesis-bank-2026-09-27.md](../../../research/hypothesis-bank-2026-09-27.md)
 
 - [K0002](../items/K0002-grundy-and-first-move-conventions.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1098,7 +1098,7 @@
 - [K0052](../items/K0052-n7-a-b-reconfiguration-widths.md) (source): 相間経路・孤立成分の追撃監査
 ## [research/verification/round4-circle-windows.md](../../../research/verification/round4-circle-windows.md)
 
-- [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (source): 一般有理中心と円窓の解析
+- [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (source): 一般有理中心を含む後続の円窓解析
 - [K0232](../items/K0232-circle-window-single-point-cuts-open.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) (proof): 命題・対象範囲・根拠を記した出典
 - [K0235](../items/K0235-n11-first-eleven-point-circle.md) (proof): 命題・対象範囲・根拠を記した出典
@@ -1245,7 +1245,7 @@
 - [K0263](../items/K0263-three-row-periodic-winner-nonperiodic-moves-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/verification/round5-batch-n8.md](../../../research/verification/round5-batch-n8.md)
 
-- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (source): 全安全局面列挙・streaming DP完走と集計
 ## [research/verification/round5-cover-union.md](../../../research/verification/round5-cover-union.md)
 
 - [K0205](../items/K0205-local-cover-versus-global-efficiency.md) (proof): 命題・対象範囲・根拠を記した出典
@@ -1295,10 +1295,10 @@
 - [K0205](../items/K0205-local-cover-versus-global-efficiency.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/verification/round5_n8_progress.md](../../../research/verification/round5_n8_progress.md)
 
-- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (log): 命題・対象範囲・根拠を記した出典
+- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (log): 列挙再実行・交差検証・streaming solve完走の記録
 ## [research/verification/round5_prand_n8.json](../../../research/verification/round5_prand_n8.json)
 
-- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (data): 命題・対象範囲・根拠を記した出典
+- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (data): 層別状態数・P/N数・最大安全サイズを保存
 ## [research/verification/round5_quadratic_cover.json](../../../research/verification/round5_quadratic_cover.json)
 
 - [K0135](../items/K0135-linear-point-cover-bound-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1754,7 +1754,7 @@
 - [K0047](../items/K0047-witness-chain-versus-game-length.md) (verifier): witness鎖とAND分岐の区別
 ## [scripts/analysis/explore_circle_formula_and_collinear.py](../../../scripts/analysis/explore_circle_formula_and_collinear.py)
 
-- [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (solver): 中心走査の実際の範囲
+- [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (solver): 倍化中心i2,j2を整数走査する実装で、中心は半整数格子に限られる
 ## [scripts/analysis/explore_game_length_canon.py](../../../scripts/analysis/explore_game_length_canon.py)
 
 - [K0048](../items/K0048-n1-n6-fixed-certificate-terminal-sizes.md) (verifier): 固定witness戦略と正規化済み子の追跡
