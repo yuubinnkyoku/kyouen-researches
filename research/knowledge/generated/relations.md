@@ -189,6 +189,7 @@
 - ← depends_on [K0028](../items/K0028-n11-truncated-dp-winner-withdrawn.md)
 - ← depends_on [K0092](../items/K0092-n11-dfpn-search-status.md)
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md)
+- ← verifies [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): reply r2=0 の s4 class 2個について有限の厳密判定を与える
 
 ## [K0024](../items/K0024-fixed-width-q-point-threshold.md) q点版固定幅盤の十分長さ定理
 
@@ -581,6 +582,7 @@
 ## [K0092](../items/K0092-n11-dfpn-search-status.md) 11×11 DFPN hybridの局所完了と回帰は空盤勝敗を閉じていない
 
 - → depends_on [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md)
+- ← supports [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): DFPNの局所完了と回帰が空盤勝敗を閉じていないことの裏付けを1件増やす
 
 ## [K0093](../items/K0093-coordinate-three-ply-information.md) 同一盤の座標付き三手合法性は全継続ゲームを決める
 
@@ -638,6 +640,7 @@
 - → depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md): 最小極大サイズの境界は空盤勝敗と別の確定結果
 - → depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md): 最大安全サイズの存在下界は空盤勝敗を決めない
 - ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
+- ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
 
 ## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 固定qの最小極大サイズには漸近指数下界2/3がある
 
@@ -1440,3 +1443,9 @@
 ## [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 標準盤の安全極大配置
+
+## [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) 11×11のs5 verdict cacheの回収とcoordinator永続化でLOSS class 2個・WIN 1個・verified certificate 2件を確定した
+
+- → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
+- → supports [K0092](../items/K0092-n11-dfpn-search-status.md): DFPNの局所完了と回帰が空盤勝敗を閉じていないことの裏付けを1件増やす
+- → verifies [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md): reply r2=0 の s4 class 2個について有限の厳密判定を与える

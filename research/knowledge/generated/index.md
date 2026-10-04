@@ -330,3 +330,4 @@
 | [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md) | 故障耐性ρが2以上の極大安全配置には一石交換がない | proposition | proved | maximal-safe, reconfiguration |
 | [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) | 標準正方形盤の安全局面のGrundy値は無界か | question | open | grundy, residual-games |
 | [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) | n≥2の標準盤の全極大配置で故障耐性ρは一様有界か | question | open | maximal-safe, geometry |
+| [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) | 11×11のs5 verdict cacheの回収とcoordinator永続化でLOSS class 2個・WIN 1個・verified certificate 2件を確定した | computation | computed | search-methods, verification |

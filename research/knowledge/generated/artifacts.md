@@ -22,6 +22,7 @@
 ## [cpp/solvers/kyouen_dfpn_root.cpp](../../../cpp/solvers/kyouen_dfpn_root.cpp)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (solver): 128-bit DFPNとexact handoff
+- [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (solver): coordinatorのs5永続化とs4 certificate manifest出力
 ## [cpp/solvers/kyouen_solver_10_kyoenc4.cpp](../../../cpp/solvers/kyouen_solver_10_kyoenc4.cpp)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (solver): 命題・対象範囲・根拠を記した出典
@@ -455,6 +456,9 @@
 ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典
+## [research/experiments/n11-search-methods/reports/N11-DFPN-S5-RECOVERY.md](../../../research/experiments/n11-search-methods/reports/N11-DFPN-S5-RECOVERY.md)
+
+- [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (source): 回収・cold replay検証・manifest実装・回帰の実測記録
 ## [research/experiments/n11-search-methods/reports/N11-DFPN-VALIDATION.md](../../../research/experiments/n11-search-methods/reports/N11-DFPN-VALIDATION.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (verifier): 小盤回帰とUNKNOWN伝播
@@ -463,6 +467,21 @@
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0028](../items/K0028-n11-truncated-dp-winner-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (source): 層0..5の厳密列挙と層6以降の資源下界
+## [research/experiments/n11-search-methods/scripts/dfpn_canonical_xcheck.py](../../../research/experiments/n11-search-methods/scripts/dfpn_canonical_xcheck.py)
+
+- [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (verifier): C++とPythonのcanonical key規約が3396 classで一致することを照合
+## [research/experiments/n11-search-methods/scripts/dfpn_s4_manifest_verify.py](../../../research/experiments/n11-search-methods/scripts/dfpn_s4_manifest_verify.py)
+
+- [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (verifier): s4 certificate manifestを盤面から再計算して独立検査
+## [research/experiments/n11-search-methods/scripts/dfpn_s5_merge.sh](../../../research/experiments/n11-search-methods/scripts/dfpn_s5_merge.sh)
+
+- [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (verifier): canonical key単位のdeterministic merge。conflict 1件で即停止し何も書かない
+## [research/experiments/n11-search-methods/scripts/dfpn_s5_recover.py](../../../research/experiments/n11-search-methods/scripts/dfpn_s5_recover.py)
+
+- [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (verifier): ログから決定済みs5 verdictのみを回収しconflict時は停止
+## [research/experiments/n11-search-methods/scripts/dfpn_s5_replay_check.py](../../../research/experiments/n11-search-methods/scripts/dfpn_s5_replay_check.py)
+
+- [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (verifier): cold replayで261件すべてを独立再証明
 ## [research/experiments/n11-search-methods/scripts/n11_d4.cpp](../../../research/experiments/n11-search-methods/scripts/n11_d4.cpp)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (solver): 命題・対象範囲・根拠を記した出典

@@ -583,17 +583,49 @@ public:
     //   LOSS  every legal s5 child's canonical key (the reader can
     //         re-check that each is LOSS, and that the list is complete)
     //   WIN   the single s5 WIN witness (one child is enough)
-    // Written as:
-    //   s4verdict,r2,key_lo,key_hi,result,n_child,child_lo,child_hi,...
-    // so the upper-level certificate can be checked separately from the
-    // lower-level s5 proofs.
+    //
+    // One entry describes one CANONICAL s4 CLASS: the class is a set of raw
+    // edges naming D4-equivalent four-stone positions, and all its edges
+    // share the same verdict because they share the same key. So the
+    // manifest lists the union of the s5 children of the class's edges,
+    // which is what a verifier must re-check.
+    //
+    // Written as
+    //   s4verdict,first,r2,key_lo,key_hi,result,n_child,cov_size,child_lo,child_hi,...
+    // `first` and `r2` are recorded because the canonical s4 key alone does
+    // not say WHICH edge class this is: the cover is built for a fixed
+    // two-stone root {first,r2}, and a verifier needs the endpoints to
+    // recompute the coverage set and to re-derive every legal fifth move.
+    // `cov_size` is the number of distinct third moves the class refutes,
+    // so the reader can check the coverage it recomputes is the one claimed.
     struct S4Entry {
         std::uint8_t result=0;              // 1 WIN, 2 LOSS
+        int first=-1, r2=-1;                // the two-stone root
+        std::vector<std::pair<int,int>> edges;   // raw edges (a,b) in the class
+        std::size_t cov_size=0;             // distinct third moves refuted
         std::vector<std::pair<std::uint64_t,std::uint64_t>> children;
     };
     std::map<std::pair<std::uint64_t,std::uint64_t>,S4Entry> s4_cache;
 
-    void s4_cache_save(const std::string& path,const std::string& cache5) const {
+    // Record one decided class. `edges` are the raw edges it covers and
+    // `children` the s5 keys a verifier must re-check: EVERY legal fifth
+    // move for a LOSS class, or the single WIN witness for a WIN class.
+    // The caller is responsible for having actually proved those verdicts.
+    void s4_cache_record(const std::pair<std::uint64_t,std::uint64_t>& key,
+                         int first,int r2,std::uint8_t result,
+                         const std::vector<std::pair<int,int>>& edges,
+                         std::size_t cov_size,
+                         const std::vector<std::pair<std::uint64_t,std::uint64_t>>& children){
+        if(result!=1 && result!=2) return;
+        S4Entry e;
+        e.result=result; e.first=first; e.r2=r2;
+        e.edges=edges; e.cov_size=cov_size; e.children=children;
+        s4_cache[key]=e;
+    }
+
+    // Write the manifest. `std::ios::app` plus a header-if-absent matches
+    // the s5 writer: a worker owns its own file, and the coordinator merges.
+    void s4_cache_save(const std::string& path) const {
         if(path.empty()) return;
         bool exists=false;
         { std::ifstream probe(path); exists=probe.good(); }
@@ -605,8 +637,9 @@ public:
         for(const auto& kv:s4_cache){
             const auto& e=kv.second;
             if(e.result!=1 && e.result!=2) continue;
-            out<<"s4verdict,"<<kv.first.first<<","<<kv.first.second<<","
-               <<(int)e.result<<","<<e.children.size();
+            out<<"s4verdict,"<<e.first<<","<<e.r2<<","
+               <<kv.first.first<<","<<kv.first.second<<","
+               <<(int)e.result<<","<<e.children.size()<<","<<e.cov_size;
             for(const auto& c:e.children) out<<","<<c.first<<","<<c.second;
             out<<"\n";
         }
@@ -845,6 +878,7 @@ public:
     const Oracle& oracle_stats() const { return oracle; }
     Bits edge_class_key_pub(int r2,int a,int b) const { return edge_class_key(r2,a,b); }
     EdgeInfo classify_edge_pub(int r2,int a,int b) const { return classify_edge(r2,a,b); }
+    Bits canonical_pub(const TState& s) const { return canonical(s); }
 
     // Board helpers exposed for the s4 A/B driver, which has to rebuild
     // the same 4-stone position the quant solver would have reached.
@@ -2954,7 +2988,10 @@ static int run_cover(int first,int r2,const std::string& s5_cache,
 // all 3395 remaining.
 template<int N>
 static int run_coord(int first,int r2,const std::string& s5_cache,
-                    double budget_s,int max_classes,std::ostream& O){
+                    double budget_s,int max_classes,
+                    const std::string& s5_cache_out,
+                    const std::string& s4_cache_out,
+                    std::ostream& O){
     DfPn<N> s(24);
     s.set_deadline(0);
     s.set_exact_handoff(0,1,1,0);
@@ -3012,6 +3049,31 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
      <<" vertices="<<verts.size()<<" classes="<<groups.size()
      <<" cache_loaded="<<s.oracle_stats().loaded<<"\n";
     O<<"# class_index,cov_size,unknown_s5,verdict,nodes,wall_ms\n";
+    O.flush();
+
+    // Dump the whole class table, not just the decided classes. This costs
+    // nothing (the search is the expensive part) and it is what lets an
+    // independent checker recompute every class key, its coverage and its
+    // legal fifth moves from the board alone. Without it a manifest can only
+    // be checked for the classes this run happened to decide, and the
+    // canonical-key convention cannot be cross-checked at all.
+    O<<"# s4table,"<<first<<","<<r2<<","
+     <<verts.size()<<","<<groups.size()<<"\n";
+    for(int slot=0;slot<(int)order.size();++slot){
+        const auto& vs=cov[(std::size_t)slot].verts;
+        const auto& eg=*gvec[(std::size_t)slot];
+        Bits k=s.edge_class_key_pub(r2,eg.front().first,eg.front().second);
+        O<<"s4table,"<<slot<<","<<k.lo<<","<<k.hi<<","
+         <<vs.size()<<","<<unk_cnt[(std::size_t)slot]<<","
+         <<(verd[(std::size_t)slot]==DfPn<N>::EdgeVerdict::LOSS?"LOSS":
+            (verd[(std::size_t)slot]==DfPn<N>::EdgeVerdict::WIN?"WIN":"UNKNOWN"))
+         <<",";
+        for(std::size_t j=0;j<vs.size();++j) O<<(j?",":"")<<vs[j];
+        O<<",";
+        for(std::size_t j=0;j<eg.size();++j)
+            O<<(j?",":"")<<eg[j].first<<":"<<eg[j].second;
+        O<<"\n";
+    }
     O.flush();
 
     double t_start=std::chrono::duration<double>(
@@ -3098,6 +3160,43 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
         unk_cnt[(std::size_t)pick]=unk2;
         ++touched;
 
+        // Record the certificate manifest for a decided class, so the
+        // label can be re-checked later without trusting this run. The
+        // child list is rebuilt from the class's edges AFTER the verdicts
+        // are known, so every key in it is one the run actually decided
+        // (from cache, or from the exact search above). For a LOSS class
+        // that is every legal fifth move of every edge in the class; for a
+        // WIN class a single witness is enough, but recording all is
+        // harmless and keeps one code path.
+        if(nv!=DfPn<N>::EdgeVerdict::UNKNOWN){
+            std::vector<std::pair<std::uint64_t,std::uint64_t>> man;
+            std::vector<std::pair<int,int>> raw;
+            std::set<std::pair<std::uint64_t,std::uint64_t>> uniq;
+            for(const auto& e:*gvec[(std::size_t)pick]){
+                raw.push_back(e);
+                Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
+                s.setbit_pub(occ4,e.first); s.setbit_pub(occ4,e.second);
+                for(int z:s.legal_moves_from(occ4)){
+                    typename DfPn<N>::TState s5{};
+                    s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+                    s5=s.add_pub(s5,e.first); s5=s.add_pub(s5,e.second);
+                    s5=s.add_pub(s5,z);
+                    Bits k=s.canonical_pub(s5);
+                    if(uniq.insert({k.lo,k.hi}).second)
+                        man.push_back({k.lo,k.hi});
+                }
+            }
+            Bits kk=s.edge_class_key_pub(r2,gvec[(std::size_t)pick]->front().first,
+                                        gvec[(std::size_t)pick]->front().second);
+            s.s4_cache_record({kk.lo,kk.hi},first,r2,(std::uint8_t)nv,raw,
+                              cov[(std::size_t)pick].verts.size(),man);
+            O<<"# s4 certificate: class="<<order[(std::size_t)pick]
+             <<" result="<<(nv==DfPn<N>::EdgeVerdict::LOSS?2:1)
+             <<" n_child="<<man.size()
+             <<" edges="<<(*gvec[(std::size_t)pick]).size()<<"\n";
+            O.flush();
+        }
+
         O<<"coord,"<<order[(std::size_t)pick]<<","
          <<cov[(std::size_t)pick].verts.size()<<","<<punk<<","
          <<(nv==DfPn<N>::EdgeVerdict::LOSS?"LOSS":
@@ -3108,6 +3207,28 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
     }
     double t_end=std::chrono::duration<double>(
         std::chrono::steady_clock::now().time_since_epoch()).count();
+
+    // Persist BEFORE reporting, so a crash or a kill between the two does
+    // not lose proof material. This is the gap that cost the 2026-10-03
+    // pilot its 158 decided verdicts: it printed the verdicts in the log
+    // but had no way to write them out.
+    //
+    // Both writers append only what THIS run decided (the s5 oracle's
+    // `touched` set), so re-running with an unchanged cache writes nothing
+    // and the file does not grow without bound. Each run writes its OWN
+    // file: workers must not append to a shared cache, because the merge
+    // has to be deterministic per canonical key and has to be able to stop
+    // on a WIN/LOSS conflict.
+    s.oracle_save(s5_cache_out);
+    s.s4_cache_save(s4_cache_out);
+    {
+        const auto& oc=s.oracle_stats();
+        O<<"# cache_loaded="<<oc.loaded<<" cache_size="<<s.oracle_cache_size()
+         <<" cache_saved="<<oc.saved<<" cache_rejected="<<oc.rejected
+         <<" cache_hits="<<oc.hits<<" queries="<<oc.queries<<"\n";
+        O<<"# s4_classes_decided="<<s.s4_cache_size()
+         <<" s4_out="<<(s4_cache_out.empty()?"(none)":s4_cache_out)<<"\n";
+    }
     O<<"# done classes_worked="<<touched
      <<" wall_s="<<(long long)(t_end-t_start)<<"\n";
     O.flush();
@@ -3137,6 +3258,7 @@ int main(int argc,char**argv){
         int coord_r2=0, coord_max=8;       // adaptive coordinator
         double coord_wall=0;
         bool coord_run=false;
+        std::string s4_cache_out="";      // s4 certificate manifest to write
         unsigned s4_ab_memo=24;
         std::uint64_t s4_ab_budget=20000000;
         int exact_order=0; // 0=count asc, 1=count desc, 2=key asc
@@ -3185,6 +3307,7 @@ int main(int argc,char**argv){
             else if(a.rfind("--coord-r2=",0)==0)coord_r2=std::stoi(a.substr(11));
             else if(a.rfind("--coord-max=",0)==0)coord_max=std::stoi(a.substr(12));
             else if(a.rfind("--coord-wall=",0)==0)coord_wall=std::stod(a.substr(13));
+            else if(a.rfind("--s4-cache-out=",0)==0)s4_cache_out=a.substr(15);
             else if(a=="--coord")coord_run=true;
             else if(a=="--exact-order=count")exact_order=0;
             else if(a=="--exact-order=countd")exact_order=1;
@@ -3199,7 +3322,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P]\n";
                 return 2;
             }
         }
@@ -3263,7 +3386,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+                if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<4>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3272,7 +3395,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+                if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<5>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3281,7 +3404,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+                if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<6>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3290,7 +3413,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+                if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<7>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3299,7 +3422,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,*cp);
+                if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<11>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<11>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
