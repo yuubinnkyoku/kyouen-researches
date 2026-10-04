@@ -36,6 +36,9 @@ artifacts:
   role: verifier
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/game-structure/reports/symmetry-scope-20261005.md
+  role: proof
+  note: 高対称候補を各nでO(n²)個の二軸配置へ限定する一般分類
 scope: 標準通常版の全n・全安全S。hは最大残り手数、軌道はSのD4安定化群による。
 evidence: 原文監査 PARTIAL / finite_complete_census_and_small_board_crosscheck
 ---
@@ -47,3 +50,5 @@ evidence: 原文監査 PARTIAL / finite_complete_census_and_small_board_crossche
 7×7では条件を満たす58,123,224局面すべての安定化群の位数が1または2なので、勝ち手の軌道もサイズ1または2。4×4にも独立再帰による検算がある。
 
 全盤への一般化は未解決。小軌道であることは軌道内の手が非同値であるという意味ではなく、misèreの補助mex値hとも混同しない。
+
+K0361の全称分類により、安定化群位数4以上の安全集合は奇数nでn²+1個、偶数nでn²/4+n/2+1個に限られる。残り全局面では全着手軌道が自動的にサイズ1か2となるため、これらの高対称候補だけが未解決の障壁である。特に五石の対称十字族には小軌道合法手自体がなく、その族でg=h≥3を排除する必要がある。この排除はまだ証明していない。

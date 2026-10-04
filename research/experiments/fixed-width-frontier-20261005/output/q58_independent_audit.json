@@ -1,0 +1,2812 @@
+{
+  "schema": 1,
+  "independent_max_board": {
+    "m": 185,
+    "circle_count": 2655,
+    "generation": "C++ equal-sum pair products on adjacent rows; exact quadratic roots",
+    "circle_file_sha256": "918a4729b6bdf776fdcddd993599d2bb00ab054cf85144c751907cdbcd141994",
+    "python_circles_match": true
+  },
+  "circle_profiles_through_span_184": [
+    [
+      0,
+      1,
+      3,
+      3,
+      1
+    ],
+    [
+      0,
+      35,
+      51,
+      63,
+      73
+    ],
+    [
+      0,
+      73,
+      63,
+      51,
+      35
+    ],
+    [
+      1,
+      3,
+      3,
+      1,
+      0
+    ],
+    [
+      1,
+      5,
+      0,
+      7,
+      7
+    ],
+    [
+      2,
+      4,
+      0,
+      4,
+      2
+    ],
+    [
+      3,
+      7,
+      9,
+      0,
+      11
+    ],
+    [
+      5,
+      11,
+      0,
+      17,
+      19
+    ],
+    [
+      5,
+      31,
+      0,
+      53,
+      61
+    ],
+    [
+      7,
+      7,
+      0,
+      5,
+      1
+    ],
+    [
+      11,
+      0,
+      9,
+      7,
+      3
+    ],
+    [
+      14,
+      28,
+      0,
+      44,
+      50
+    ],
+    [
+      19,
+      17,
+      0,
+      11,
+      5
+    ],
+    [
+      35,
+      51,
+      63,
+      73,
+      0
+    ],
+    [
+      37,
+      73,
+      0,
+      115,
+      131
+    ],
+    [
+      50,
+      44,
+      0,
+      28,
+      14
+    ],
+    [
+      61,
+      53,
+      0,
+      31,
+      5
+    ],
+    [
+      73,
+      63,
+      51,
+      35,
+      0
+    ],
+    [
+      131,
+      115,
+      0,
+      73,
+      37
+    ]
+  ],
+  "induced_subboards": [
+    {
+      "m": 16,
+      "eight_point_circles": 66,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 17,
+      "eight_point_circles": 73,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 18,
+      "eight_point_circles": 80,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 19,
+      "eight_point_circles": 87,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 20,
+      "eight_point_circles": 96,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 21,
+      "eight_point_circles": 105,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 22,
+      "eight_point_circles": 114,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 23,
+      "eight_point_circles": 123,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 24,
+      "eight_point_circles": 132,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 25,
+      "eight_point_circles": 141,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 26,
+      "eight_point_circles": 150,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 27,
+      "eight_point_circles": 159,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 28,
+      "eight_point_circles": 168,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 29,
+      "eight_point_circles": 177,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 30,
+      "eight_point_circles": 186,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 31,
+      "eight_point_circles": 195,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 32,
+      "eight_point_circles": 204,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 33,
+      "eight_point_circles": 213,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 34,
+      "eight_point_circles": 222,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 35,
+      "eight_point_circles": 231,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 36,
+      "eight_point_circles": 240,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 37,
+      "eight_point_circles": 249,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 38,
+      "eight_point_circles": 258,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 39,
+      "eight_point_circles": 267,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 40,
+      "eight_point_circles": 276,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 41,
+      "eight_point_circles": 285,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 42,
+      "eight_point_circles": 294,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 43,
+      "eight_point_circles": 303,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 44,
+      "eight_point_circles": 312,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 45,
+      "eight_point_circles": 321,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 46,
+      "eight_point_circles": 330,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 47,
+      "eight_point_circles": 339,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 48,
+      "eight_point_circles": 348,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 49,
+      "eight_point_circles": 357,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 50,
+      "eight_point_circles": 366,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 51,
+      "eight_point_circles": 377,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 52,
+      "eight_point_circles": 388,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 53,
+      "eight_point_circles": 399,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 54,
+      "eight_point_circles": 410,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 55,
+      "eight_point_circles": 421,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 56,
+      "eight_point_circles": 432,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 57,
+      "eight_point_circles": 443,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 58,
+      "eight_point_circles": 454,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 59,
+      "eight_point_circles": 465,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 60,
+      "eight_point_circles": 476,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 61,
+      "eight_point_circles": 487,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 62,
+      "eight_point_circles": 500,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 63,
+      "eight_point_circles": 513,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 64,
+      "eight_point_circles": 526,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 65,
+      "eight_point_circles": 539,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 66,
+      "eight_point_circles": 552,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 67,
+      "eight_point_circles": 565,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 68,
+      "eight_point_circles": 578,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 69,
+      "eight_point_circles": 591,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 70,
+      "eight_point_circles": 604,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 71,
+      "eight_point_circles": 617,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 72,
+      "eight_point_circles": 630,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 73,
+      "eight_point_circles": 643,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 74,
+      "eight_point_circles": 660,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 75,
+      "eight_point_circles": 677,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 76,
+      "eight_point_circles": 694,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 77,
+      "eight_point_circles": 711,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 78,
+      "eight_point_circles": 728,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 79,
+      "eight_point_circles": 745,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 80,
+      "eight_point_circles": 762,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 81,
+      "eight_point_circles": 779,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 82,
+      "eight_point_circles": 796,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 83,
+      "eight_point_circles": 813,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 84,
+      "eight_point_circles": 830,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 85,
+      "eight_point_circles": 847,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 86,
+      "eight_point_circles": 864,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 87,
+      "eight_point_circles": 881,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 88,
+      "eight_point_circles": 898,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 89,
+      "eight_point_circles": 915,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 90,
+      "eight_point_circles": 932,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 91,
+      "eight_point_circles": 949,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 92,
+      "eight_point_circles": 966,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 93,
+      "eight_point_circles": 983,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 94,
+      "eight_point_circles": 1000,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 95,
+      "eight_point_circles": 1017,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 96,
+      "eight_point_circles": 1034,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 97,
+      "eight_point_circles": 1051,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 98,
+      "eight_point_circles": 1068,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 99,
+      "eight_point_circles": 1085,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 100,
+      "eight_point_circles": 1102,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 101,
+      "eight_point_circles": 1119,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 102,
+      "eight_point_circles": 1136,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 103,
+      "eight_point_circles": 1153,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 104,
+      "eight_point_circles": 1170,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 105,
+      "eight_point_circles": 1187,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 106,
+      "eight_point_circles": 1204,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 107,
+      "eight_point_circles": 1221,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 108,
+      "eight_point_circles": 1238,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 109,
+      "eight_point_circles": 1255,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 110,
+      "eight_point_circles": 1272,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 111,
+      "eight_point_circles": 1289,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 112,
+      "eight_point_circles": 1306,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 113,
+      "eight_point_circles": 1323,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 114,
+      "eight_point_circles": 1340,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 115,
+      "eight_point_circles": 1357,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 116,
+      "eight_point_circles": 1374,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 117,
+      "eight_point_circles": 1391,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 118,
+      "eight_point_circles": 1408,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 119,
+      "eight_point_circles": 1425,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 120,
+      "eight_point_circles": 1442,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 121,
+      "eight_point_circles": 1459,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 122,
+      "eight_point_circles": 1476,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 123,
+      "eight_point_circles": 1493,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 124,
+      "eight_point_circles": 1510,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 125,
+      "eight_point_circles": 1527,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 126,
+      "eight_point_circles": 1544,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 127,
+      "eight_point_circles": 1561,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 128,
+      "eight_point_circles": 1578,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 129,
+      "eight_point_circles": 1595,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 130,
+      "eight_point_circles": 1612,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 131,
+      "eight_point_circles": 1629,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 132,
+      "eight_point_circles": 1648,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 133,
+      "eight_point_circles": 1667,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 134,
+      "eight_point_circles": 1686,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 135,
+      "eight_point_circles": 1705,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 136,
+      "eight_point_circles": 1724,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 137,
+      "eight_point_circles": 1743,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 138,
+      "eight_point_circles": 1762,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 139,
+      "eight_point_circles": 1781,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 140,
+      "eight_point_circles": 1800,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 141,
+      "eight_point_circles": 1819,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 142,
+      "eight_point_circles": 1838,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 143,
+      "eight_point_circles": 1857,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 144,
+      "eight_point_circles": 1876,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 145,
+      "eight_point_circles": 1895,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 146,
+      "eight_point_circles": 1914,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 147,
+      "eight_point_circles": 1933,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 148,
+      "eight_point_circles": 1952,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 149,
+      "eight_point_circles": 1971,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 150,
+      "eight_point_circles": 1990,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 151,
+      "eight_point_circles": 2009,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 152,
+      "eight_point_circles": 2028,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 153,
+      "eight_point_circles": 2047,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 154,
+      "eight_point_circles": 2066,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 155,
+      "eight_point_circles": 2085,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 156,
+      "eight_point_circles": 2104,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 157,
+      "eight_point_circles": 2123,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 158,
+      "eight_point_circles": 2142,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 159,
+      "eight_point_circles": 2161,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 160,
+      "eight_point_circles": 2180,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 161,
+      "eight_point_circles": 2199,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 162,
+      "eight_point_circles": 2218,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 163,
+      "eight_point_circles": 2237,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 164,
+      "eight_point_circles": 2256,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 165,
+      "eight_point_circles": 2275,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 166,
+      "eight_point_circles": 2294,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 167,
+      "eight_point_circles": 2313,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 168,
+      "eight_point_circles": 2332,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 169,
+      "eight_point_circles": 2351,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 170,
+      "eight_point_circles": 2370,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 171,
+      "eight_point_circles": 2389,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 172,
+      "eight_point_circles": 2408,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 173,
+      "eight_point_circles": 2427,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 174,
+      "eight_point_circles": 2446,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 175,
+      "eight_point_circles": 2465,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 176,
+      "eight_point_circles": 2484,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 177,
+      "eight_point_circles": 2503,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 178,
+      "eight_point_circles": 2522,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 179,
+      "eight_point_circles": 2541,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 180,
+      "eight_point_circles": 2560,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 181,
+      "eight_point_circles": 2579,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 182,
+      "eight_point_circles": 2598,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 183,
+      "eight_point_circles": 2617,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 184,
+      "eight_point_circles": 2636,
+      "complete_circle_sets_match": true
+    },
+    {
+      "m": 185,
+      "eight_point_circles": 2655,
+      "complete_circle_sets_match": true
+    }
+  ],
+  "lower_bound_witness": {
+    "m": 15,
+    "q": 8,
+    "rows": [
+      [
+        1,
+        3,
+        6,
+        7,
+        9,
+        11
+      ],
+      [
+        1,
+        3,
+        4,
+        6,
+        8,
+        11,
+        13
+      ],
+      [
+        1,
+        2,
+        4,
+        8,
+        10,
+        11,
+        13
+      ],
+      [
+        2,
+        3,
+        5,
+        7,
+        9,
+        10,
+        12
+      ],
+      [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "stones": 34,
+    "row_counts": [
+      6,
+      7,
+      7,
+      7,
+      7
+    ],
+    "safe": true,
+    "maximal": true,
+    "independent_method": "all board triples and primitive integer circle/line coefficients",
+    "triple_count": 67525,
+    "distinct_curves": 39117,
+    "eight_point_circles": 59,
+    "horizontal_lines": 5,
+    "blocked_blanks": 41,
+    "blockers": [
+      {
+        "point": [
+          0,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -11,
+          3,
+          0
+        ],
+        "seven_existing_points": [
+          [
+            11,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            7,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          2,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -5,
+          -3,
+          6
+        ],
+        "seven_existing_points": [
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          4,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -15,
+          -1,
+          44
+        ],
+        "seven_existing_points": [
+          [
+            11,
+            0
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          5,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -11,
+          -7,
+          30
+        ],
+        "seven_existing_points": [
+          [
+            6,
+            0
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            9,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          8,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -9,
+          -1,
+          8
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          10,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -19,
+          -3,
+          90
+        ],
+        "seven_existing_points": [
+          [
+            9,
+            0
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          12,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -13,
+          3,
+          12
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            8,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          13,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -19,
+          -1,
+          78
+        ],
+        "seven_existing_points": [
+          [
+            6,
+            0
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            13,
+            1
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          14,
+          0
+        ],
+        "curve_coefficients": [
+          1,
+          -17,
+          3,
+          42
+        ],
+        "seven_existing_points": [
+          [
+            3,
+            0
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            13,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            12,
+            3
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          0,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          2,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          5,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          7,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          9,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          10,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          12,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          14,
+          1
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -1
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            4,
+            1
+          ],
+          [
+            6,
+            1
+          ],
+          [
+            8,
+            1
+          ],
+          [
+            11,
+            1
+          ],
+          [
+            13,
+            1
+          ]
+        ]
+      },
+      {
+        "point": [
+          0,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          3,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          5,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          6,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          7,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          9,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          12,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          14,
+          2
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -2
+        ],
+        "seven_existing_points": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            4,
+            2
+          ],
+          [
+            8,
+            2
+          ],
+          [
+            10,
+            2
+          ],
+          [
+            11,
+            2
+          ],
+          [
+            13,
+            2
+          ]
+        ]
+      },
+      {
+        "point": [
+          0,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          1,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          4,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          6,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          8,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          11,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          13,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          14,
+          3
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -3
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            9,
+            3
+          ],
+          [
+            10,
+            3
+          ],
+          [
+            12,
+            3
+          ]
+        ]
+      },
+      {
+        "point": [
+          0,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          1,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          3,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          6,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          11,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          12,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          13,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      },
+      {
+        "point": [
+          14,
+          4
+        ],
+        "curve_coefficients": [
+          0,
+          0,
+          1,
+          -4
+        ],
+        "seven_existing_points": [
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            10,
+            4
+          ]
+        ]
+      }
+    ]
+  },
+  "universal_tail": {
+    "w": 5,
+    "q": 8,
+    "old_T": 8547,
+    "packing_U": 186,
+    "combined": 186,
+    "Q": 3136,
+    "Y": 144,
+    "d0": 35,
+    "d1": 20,
+    "integer_optimizer": [
+      89,
+      1
+    ]
+  },
+  "mod9_five_row_audit": {
+    "coefficient_residue_cases": 81,
+    "square_residues": [
+      0,
+      1,
+      4,
+      7
+    ],
+    "maximum_occupied_rows": 4
+  }
+}

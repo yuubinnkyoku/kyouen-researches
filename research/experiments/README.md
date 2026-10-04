@@ -21,6 +21,11 @@
 | [structural-lemmas-2026-10-02](structural-lemmas-2026-10-02/README.md) | 3手情報・二次構成・有限パスの独立replication |
 | [9x9-factorial-execution-base](9x9-factorial-execution-base/README.md) | 9盤factorialの固定入力・manifest |
 | [9x9-pair-mobility-confirmatory](9x9-pair-mobility-confirmatory/README.md) | 9盤pair-mobilityのconfirmatory bundle |
+| [fixed-width-frontier-20261005](fixed-width-frontier-20261005/README.md) | 5行q8の厳密安定化長、SAT・DRATと独立円生成 |
+| [n11-cover-duality](n11-cover-duality/README.md) | 中心・隅rootのs4被覆の全称下界とmatching上界 |
+| [n11-residual-twins](n11-residual-twins/README.md) | 全hypergraph linkの独立双子を正の偶奇数へ圧縮する定理 |
+| [frontier-geometry-2026-10-05](frontier-geometry-2026-10-05/README.md) | 剰余多項式曲線の交点定理と放物線等号証人 |
+| [prism-hyperplane-2026-10-05](prism-hyperplane-2026-10-05/README.md) | 三次元平行格子列の極大・Grundy分類 |
 
 共通solver/verifierはcpp・scripts・rustに置きます。[共有研究ライブラリ](../../scripts/research/README.md)は実験間で使用する整数幾何を保持します。
 公開横断集計は[results](../../results/README.md)、発見過程は[log](../log/README.md)、旧索引と計画は[archive](../archive/README.md)です。

@@ -98,7 +98,7 @@
 | [K0094](../items/K0094-n5-relocation-preserves-two-ply-changes-grundy.md) | 二手情報を保つ一石移動で5×5のgが0から3へ変わる | proposition | proved | residual-games, grundy |
 | [K0095](../items/K0095-split-prime-safe-quadratic-construction.md) | p≡1 mod4の全素数に安全p点の有限体二次構成がある | proposition | proved | maximum-safe, geometry |
 | [K0096](../items/K0096-mod-prime-quadratic-certification-bound.md) | 二次パラメータmodp非零認証の最大はp≡3 mod4で(p+13)/4 | proposition | proved | maximum-safe, geometry |
-| [K0097](../items/K0097-integer-residue-parabola-bounds.md) | 整数剰余放物線の安全最大は高々(p+3)/2、29素数では等号 | proposition | proved | maximum-safe, geometry |
+| [K0097](../items/K0097-integer-residue-parabola-bounds.md) | 整数剰余放物線の安全最大は高々(p+3)/2、5..251と509,1009では等号 | proposition | proved | maximum-safe, geometry |
 | [K0098](../items/K0098-p23-half-interval-counterexample.md) | 剰余放物線の前半区間安全説はp=23で反例 | proposition | refuted | maximum-safe, geometry |
 | [K0099](../items/K0099-private-passes-terminal-pass-allowed.md) | 終端パス可の有限私有パス版は残数差と通常gで勝敗・mexを分類 | proposition | proved | variants, grundy |
 | [K0100](../items/K0100-private-passes-immediate-terminal.md) | 通常終端即終了の私有パス版は一手終端可能性も必要 | proposition | proved | variants, grundy |
@@ -331,3 +331,15 @@
 | [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) | 標準正方形盤の安全局面のGrundy値は無界か | question | open | grundy, residual-games |
 | [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) | n≥2の標準盤の全極大配置で故障耐性ρは一様有界か | question | open | maximal-safe, geometry |
 | [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) | 11×11のs5 verdict cacheの回収とcoordinator永続化でLOSS class 2個・WIN 1個・verified certificate 2件を確定した | computation | computed | search-methods, verification |
+| [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md) | 極大配置の故障耐性は三石被覆の平均多重度で上から抑えられる | proposition | proved | maximal-safe, geometry |
+| [K0331](../items/K0331-width-five-q8-exact-stabilization.md) | 5×m・q=8の真の満容量安定化長はM_{5,8}=16 | proposition | proved | rectangles, variants, grundy, certificates |
+| [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) | 5×m・q=7の満容量安定化長は19以上200以下 | proposition | proved | rectangles, variants, maximal-safe |
+| [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) | 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全 | proposition | proved | geometry, variants, maximum-safe, residual-games |
+| [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) | 剰余放物線の等号問題はsigned NAE3/4と原点由来2/3節へ厳密に分解できる | proposition | proved | geometry, maximum-safe, search-methods |
+| [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) | 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4) | proposition | proved | search-methods, certificates, geometry |
+| [K0336](../items/K0336-independent-residual-twins-parity-compression.md) | 同一linkの独立双子点は正の偶奇数へ減らしてもGrundy数が一致する | proposition | proved | residual-games, grundy, search-methods |
+| [K0337](../items/K0337-odd-uniform-involution-scope.md) | 奇数qの鏡映戦略の抽象十分条件と任意禁止族での最小q+1点反例 | proposition | proved | variants, grundy, residual-games |
+| [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) | 標準正方形盤の安定化群位数4以上の安全集合は高々五石で正確にO(n²)個 | proposition | proved | geometry, grundy, search-methods |
+| [K0339](../items/K0339-multiplayer-terminal-modulus.md) | r人巡回配置ゲームで敗者が戦略に依存しない人数は極大サイズ差のgcdで完全に決まる | proposition | proved | variants, strategy-length, maximal-safe |
+| [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) | 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める | proposition | proved | variants, geometry, grundy, maximal-safe |
+| [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) | 奇数列の三次元長盤はq≡2 mod4でだけ先手勝ち、奇数rの全Grundyは閉公式を持つ | proposition | proved | variants, geometry, grundy |

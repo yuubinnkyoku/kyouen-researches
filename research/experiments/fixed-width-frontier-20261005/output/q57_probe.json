@@ -1,0 +1,377 @@
+[
+  {
+    "m": 16,
+    "target": 0,
+    "status": "SAT",
+    "variables": 1123,
+    "clauses": 5648,
+    "curves": 70,
+    "rows": [
+      [
+        2,
+        4,
+        5,
+        8,
+        14
+      ],
+      [
+        6,
+        8,
+        9,
+        11,
+        13,
+        15
+      ],
+      [
+        1,
+        4,
+        6,
+        9,
+        10,
+        13
+      ],
+      [
+        2,
+        7,
+        9,
+        12,
+        13,
+        14
+      ],
+      [
+        4,
+        5,
+        7,
+        9,
+        10,
+        12
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 65,
+      "conflicts": 4106,
+      "decisions": 6850,
+      "propagations": 506408
+    },
+    "wall_seconds": 0.09935958900018704,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 16,
+    "target": 1,
+    "status": "SAT",
+    "variables": 1233,
+    "clauses": 6308,
+    "curves": 70,
+    "rows": [
+      [
+        7,
+        9,
+        10,
+        11,
+        12,
+        14
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        11
+      ],
+      [
+        4,
+        5,
+        8,
+        10,
+        11,
+        13
+      ],
+      [
+        5,
+        8,
+        10,
+        11,
+        12,
+        15
+      ],
+      [
+        3,
+        6,
+        7,
+        8,
+        14,
+        15
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 300,
+      "conflicts": 19257,
+      "decisions": 32874,
+      "propagations": 2621623
+    },
+    "wall_seconds": 0.5415041399999154,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 16,
+    "target": 2,
+    "status": "SAT",
+    "variables": 887,
+    "clauses": 4232,
+    "curves": 70,
+    "rows": [
+      [
+        3,
+        4,
+        5,
+        8,
+        9,
+        14
+      ],
+      [
+        3,
+        6,
+        7,
+        10,
+        13,
+        14
+      ],
+      [
+        0,
+        1,
+        5,
+        12,
+        14
+      ],
+      [
+        4,
+        5,
+        8,
+        9,
+        12,
+        15
+      ],
+      [
+        1,
+        7,
+        10,
+        11,
+        12,
+        14
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 448,
+      "conflicts": 10087,
+      "decisions": 22651,
+      "propagations": 1465959
+    },
+    "wall_seconds": 0.224513571999978,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 18,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 1359,
+    "clauses": 6896,
+    "curves": 84,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 5466,
+      "conflicts": 160010,
+      "decisions": 293985,
+      "propagations": 22202938
+    },
+    "wall_seconds": 5.067034874000001,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 18,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 1469,
+    "clauses": 7556,
+    "curves": 84,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 5524,
+      "conflicts": 160007,
+      "decisions": 302134,
+      "propagations": 22533218
+    },
+    "wall_seconds": 5.50393421900003,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 18,
+    "target": 2,
+    "status": "UNKNOWN",
+    "variables": 1067,
+    "clauses": 5144,
+    "curves": 84,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6460,
+      "conflicts": 180013,
+      "decisions": 302540,
+      "propagations": 21142661
+    },
+    "wall_seconds": 5.317378317000021,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 20,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 1629,
+    "clauses": 8368,
+    "curves": 104,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 5997,
+      "conflicts": 160010,
+      "decisions": 316619,
+      "propagations": 28102213
+    },
+    "wall_seconds": 5.618337114000042,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 20,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 1741,
+    "clauses": 9040,
+    "curves": 104,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 5685,
+      "conflicts": 160006,
+      "decisions": 327170,
+      "propagations": 31313230
+    },
+    "wall_seconds": 5.800992653000094,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 20,
+    "target": 2,
+    "status": "UNKNOWN",
+    "variables": 1247,
+    "clauses": 6076,
+    "curves": 104,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6559,
+      "conflicts": 180004,
+      "decisions": 320796,
+      "propagations": 25228457
+    },
+    "wall_seconds": 5.5830325580000135,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 24,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 2213,
+    "clauses": 11600,
+    "curves": 140,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 3564,
+      "conflicts": 140012,
+      "decisions": 243835,
+      "propagations": 34003972
+    },
+    "wall_seconds": 5.2766620139998395,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 24,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 2325,
+    "clauses": 12272,
+    "curves": 140,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 3228,
+      "conflicts": 140010,
+      "decisions": 260359,
+      "propagations": 36349777
+    },
+    "wall_seconds": 5.360042361999831,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 24,
+    "target": 2,
+    "status": "UNKNOWN",
+    "variables": 1607,
+    "clauses": 7964,
+    "curves": 140,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6681,
+      "conflicts": 160009,
+      "decisions": 283689,
+      "propagations": 29616708
+    },
+    "wall_seconds": 5.594371449999926,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 28,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 2797,
+    "clauses": 14832,
+    "curves": 176,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 4226,
+      "conflicts": 120007,
+      "decisions": 231110,
+      "propagations": 43155939
+    },
+    "wall_seconds": 5.0143920790001175,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 28,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 2909,
+    "clauses": 15504,
+    "curves": 176,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 4320,
+      "conflicts": 120009,
+      "decisions": 276294,
+      "propagations": 44759121
+    },
+    "wall_seconds": 5.3308378490000905,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 28,
+    "target": 2,
+    "status": "UNSAT",
+    "variables": 1967,
+    "clauses": 9852,
+    "curves": 176,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 4930,
+      "conflicts": 132066,
+      "decisions": 239571,
+      "propagations": 29541835
+    },
+    "wall_seconds": 4.196493795000151,
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  }
+]

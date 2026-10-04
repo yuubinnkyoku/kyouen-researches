@@ -1,0 +1,446 @@
+[
+  {
+    "m": 17,
+    "target": 0,
+    "status": "SAT",
+    "variables": 486,
+    "clauses": 5452,
+    "curves": 77,
+    "rows": [
+      [
+        0,
+        2,
+        3,
+        15,
+        16
+      ],
+      [
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        2,
+        3,
+        4,
+        11,
+        12,
+        13
+      ],
+      [
+        3,
+        4,
+        5,
+        8,
+        9,
+        10
+      ],
+      [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 372,
+      "conflicts": 8333,
+      "decisions": 18910,
+      "propagations": 704386
+    },
+    "wall_seconds": 0.15939344000003075,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 17,
+    "target": 1,
+    "status": "SAT",
+    "variables": 486,
+    "clauses": 5452,
+    "curves": 77,
+    "rows": [
+      [
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        9
+      ],
+      [
+        6,
+        7,
+        9,
+        10,
+        13,
+        16
+      ],
+      [
+        8,
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      [
+        3,
+        6,
+        8,
+        10,
+        11,
+        12
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 511,
+      "conflicts": 16973,
+      "decisions": 32279,
+      "propagations": 1105515
+    },
+    "wall_seconds": 0.3165556540000125,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 17,
+    "target": 2,
+    "status": "UNKNOWN",
+    "variables": 486,
+    "clauses": 5452,
+    "curves": 77,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 7668,
+      "conflicts": 180012,
+      "decisions": 295221,
+      "propagations": 9558609
+    },
+    "wall_seconds": 5.133531220999885,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 18,
+    "target": 0,
+    "status": "SAT",
+    "variables": 527,
+    "clauses": 5964,
+    "curves": 84,
+    "rows": [
+      [
+        5,
+        8,
+        12,
+        14,
+        17
+      ],
+      [
+        1,
+        3,
+        6,
+        7,
+        8,
+        10
+      ],
+      [
+        1,
+        3,
+        6,
+        7,
+        10,
+        12
+      ],
+      [
+        2,
+        4,
+        7,
+        9,
+        11,
+        14
+      ],
+      [
+        4,
+        6,
+        7,
+        9,
+        11,
+        12
+      ]
+    ],
+    "solver_statistics": {
+      "restarts": 6785,
+      "conflicts": 158836,
+      "decisions": 302428,
+      "propagations": 8967099
+    },
+    "wall_seconds": 4.441621784000063,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 18,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 527,
+    "clauses": 5964,
+    "curves": 84,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 7349,
+      "conflicts": 180009,
+      "decisions": 336991,
+      "propagations": 10067425
+    },
+    "wall_seconds": 5.444842458000039,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 18,
+    "target": 2,
+    "status": "UNKNOWN",
+    "variables": 527,
+    "clauses": 5964,
+    "curves": 84,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6601,
+      "conflicts": 180004,
+      "decisions": 293762,
+      "propagations": 9865022
+    },
+    "wall_seconds": 5.254115664999972,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 20,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 615,
+    "clauses": 7204,
+    "curves": 104,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6907,
+      "conflicts": 180003,
+      "decisions": 337433,
+      "propagations": 11234538
+    },
+    "wall_seconds": 5.322811607999938,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 20,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 615,
+    "clauses": 7204,
+    "curves": 104,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 7858,
+      "conflicts": 180016,
+      "decisions": 358631,
+      "propagations": 11484374
+    },
+    "wall_seconds": 5.241198391000125,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 20,
+    "target": 2,
+    "status": "UNKNOWN",
+    "variables": 615,
+    "clauses": 7204,
+    "curves": 104,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6542,
+      "conflicts": 180007,
+      "decisions": 297883,
+      "propagations": 10449470
+    },
+    "wall_seconds": 5.264951913000004,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 24,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 787,
+    "clauses": 9764,
+    "curves": 140,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 7061,
+      "conflicts": 160008,
+      "decisions": 324669,
+      "propagations": 12062471
+    },
+    "wall_seconds": 5.0936528679999356,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 24,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 787,
+    "clauses": 9764,
+    "curves": 140,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6619,
+      "conflicts": 180003,
+      "decisions": 344507,
+      "propagations": 13659267
+    },
+    "wall_seconds": 5.590859467999962,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 24,
+    "target": 2,
+    "status": "UNKNOWN",
+    "variables": 787,
+    "clauses": 9764,
+    "curves": 140,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 8045,
+      "conflicts": 200005,
+      "decisions": 315830,
+      "propagations": 12852599
+    },
+    "wall_seconds": 5.703823373999967,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 28,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 959,
+    "clauses": 12324,
+    "curves": 176,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 7623,
+      "conflicts": 180005,
+      "decisions": 348325,
+      "propagations": 15180250
+    },
+    "wall_seconds": 5.492938171000105,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 28,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 959,
+    "clauses": 12324,
+    "curves": 176,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6431,
+      "conflicts": 160013,
+      "decisions": 318729,
+      "propagations": 13950066
+    },
+    "wall_seconds": 5.03765922499997,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 28,
+    "target": 2,
+    "status": "UNSAT",
+    "variables": 959,
+    "clauses": 12324,
+    "curves": 176,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 4645,
+      "conflicts": 130001,
+      "decisions": 198329,
+      "propagations": 9100818
+    },
+    "wall_seconds": 3.164540035999835,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 40,
+    "target": 0,
+    "status": "UNKNOWN",
+    "variables": 1475,
+    "clauses": 20004,
+    "curves": 284,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6457,
+      "conflicts": 160017,
+      "decisions": 305005,
+      "propagations": 16704786
+    },
+    "wall_seconds": 5.07245491599997,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 40,
+    "target": 1,
+    "status": "UNKNOWN",
+    "variables": 1475,
+    "clauses": 20004,
+    "curves": 284,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 6975,
+      "conflicts": 160004,
+      "decisions": 337631,
+      "propagations": 16801657
+    },
+    "wall_seconds": 5.107470559999911,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  },
+  {
+    "m": 40,
+    "target": 2,
+    "status": "UNSAT",
+    "variables": 1475,
+    "clauses": 20004,
+    "curves": 284,
+    "rows": null,
+    "solver_statistics": {
+      "restarts": 3081,
+      "conflicts": 85327,
+      "decisions": 143220,
+      "propagations": 8125939
+    },
+    "wall_seconds": 2.074264668000069,
+    "encoding": "one saturated-circle variable per curve",
+    "proof_kind": "Finite SAT probe, no independently checked proof trace yet"
+  }
+]

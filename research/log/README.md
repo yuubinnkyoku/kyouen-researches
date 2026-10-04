@@ -7,5 +7,6 @@
 - [claim-audit](claim-audit/)：batchの進行、roundの研究日誌・census・判断。
 - [fact-discovery](fact-discovery/)：探索的発見のsessionとreview。
 - [search-order](search-order/)：memo/手順の因果調査メモ。
+- [frontier](frontier/)：最新knowledgeから選んだ研究テーマの証明・検証・残件。
 
 再現コード・raw出力は[experiments](../experiments/README.md)、旧計画・統合索引は[archive](../archive/README.md)から辿れます。

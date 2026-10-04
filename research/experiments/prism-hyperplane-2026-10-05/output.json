@@ -1,0 +1,5744 @@
+{
+  "scope": "3D q-point hyperplane/hypersphere variant, not standard 2D game",
+  "occupancy_audits": [
+    {
+      "w": 3,
+      "q": 7,
+      "m": 6,
+      "safe_occupancy_orbits": 30,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 13,
+        "1": 7,
+        "2": 7,
+        "3": 3
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "explicit_witness": [
+        3,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 7,
+      "safe_occupancy_orbits": 40,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 18,
+        "1": 15,
+        "2": 5,
+        "3": 2
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          5,
+          2,
+          2
+        ],
+        [
+          6,
+          1,
+          1
+        ],
+        [
+          7,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "explicit_witness": [
+        4,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 8,
+      "safe_occupancy_orbits": 55,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 22,
+        "1": 13,
+        "2": 13,
+        "3": 7
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2
+        ],
+        [
+          7,
+          1,
+          1
+        ],
+        [
+          8,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 8,
+      "safe_occupancy_orbits": 105,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 57,
+        "1": 48
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2,
+          2
+        ],
+        [
+          7,
+          1,
+          1,
+          1
+        ],
+        [
+          8,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 9,
+      "safe_occupancy_orbits": 140,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 70,
+        "1": 70
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          4,
+          4,
+          4
+        ],
+        [
+          6,
+          3,
+          3,
+          3
+        ],
+        [
+          7,
+          2,
+          2,
+          2
+        ],
+        [
+          8,
+          1,
+          1,
+          1
+        ],
+        [
+          9,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        9,
+        11,
+        13,
+        15,
+        17
+      ],
+      "explicit_witness": [
+        5,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 10,
+      "safe_occupancy_orbits": 196,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 104,
+        "1": 92
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2
+        ],
+        [
+          9,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 10,
+      "safe_occupancy_orbits": 378,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 136,
+        "1": 116,
+        "2": 70,
+        "3": 56
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          9,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        10,
+        13,
+        16,
+        19,
+        22,
+        25
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 11,
+      "safe_occupancy_orbits": 504,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 214,
+        "1": 204,
+        "2": 48,
+        "3": 38
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          7,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          8,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          9,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          10,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          11,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        11,
+        14,
+        17,
+        20,
+        23,
+        26
+      ],
+      "explicit_witness": [
+        6,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 12,
+      "safe_occupancy_orbits": 714,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 246,
+        "1": 216,
+        "2": 136,
+        "3": 116
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          11,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 12,
+      "safe_occupancy_orbits": 1386,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 708,
+        "1": 678
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          11,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 13,
+      "safe_occupancy_orbits": 1848,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 924,
+        "1": 924
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          9,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          10,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          11,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          12,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          13,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "explicit_witness": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 14,
+      "safe_occupancy_orbits": 2640,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1340,
+        "1": 1300
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          9,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          10,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          11,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          12,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          13,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          14,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        14,
+        18,
+        22,
+        26,
+        30,
+        34,
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    }
+  ],
+  "all_length_boundary_audits": [
+    {
+      "w": 3,
+      "q": 7,
+      "m": 1,
+      "safe_occupancy_orbits": 4,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 2,
+        "1": 2
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        3
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 7,
+      "m": 2,
+      "safe_occupancy_orbits": 10,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 6,
+        "1": 4
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        6
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 7,
+      "m": 3,
+      "safe_occupancy_orbits": 20,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 10,
+        "1": 10
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        9
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 7,
+      "m": 4,
+      "safe_occupancy_orbits": 26,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 13,
+        "1": 10,
+        "2": 2,
+        "3": 1
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        8,
+        9
+      ],
+      "explicit_witness": [
+        3,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 7,
+      "m": 5,
+      "safe_occupancy_orbits": 29,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 12,
+        "1": 10,
+        "2": 4,
+        "3": 3
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          5,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        7,
+        8,
+        9
+      ],
+      "explicit_witness": [
+        3,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 7,
+      "m": 6,
+      "safe_occupancy_orbits": 30,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 13,
+        "1": 7,
+        "2": 7,
+        "3": 3
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3
+        ],
+        [
+          4,
+          2,
+          2
+        ],
+        [
+          5,
+          1,
+          1
+        ],
+        [
+          6,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "explicit_witness": [
+        3,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 1,
+      "safe_occupancy_orbits": 4,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 2,
+        "1": 2
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        3
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 2,
+      "safe_occupancy_orbits": 10,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 6,
+        "1": 4
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        6
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 3,
+      "safe_occupancy_orbits": 20,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 10,
+        "1": 10
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        9
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 4,
+      "safe_occupancy_orbits": 30,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 16,
+        "1": 14
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        10
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 5,
+      "safe_occupancy_orbits": 36,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 16,
+        "1": 14,
+        "2": 4,
+        "3": 2
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          5,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        9,
+        10
+      ],
+      "explicit_witness": [
+        4,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 6,
+      "safe_occupancy_orbits": 39,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 18,
+        "1": 16,
+        "2": 3,
+        "3": 2
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          5,
+          2,
+          2
+        ],
+        [
+          6,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        8,
+        9,
+        10
+      ],
+      "explicit_witness": [
+        4,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 8,
+      "m": 7,
+      "safe_occupancy_orbits": 40,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 18,
+        "1": 15,
+        "2": 5,
+        "3": 2
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          3,
+          3
+        ],
+        [
+          5,
+          2,
+          2
+        ],
+        [
+          6,
+          1,
+          1
+        ],
+        [
+          7,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "explicit_witness": [
+        4,
+        2,
+        2
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 1,
+      "safe_occupancy_orbits": 4,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 2,
+        "1": 2
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        3
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 2,
+      "safe_occupancy_orbits": 10,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 6,
+        "1": 4
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        6
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 3,
+      "safe_occupancy_orbits": 20,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 10,
+        "1": 10
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        9
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 4,
+      "safe_occupancy_orbits": 35,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 19,
+        "1": 16
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        12
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 5,
+      "safe_occupancy_orbits": 45,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 21,
+        "1": 20,
+        "2": 2,
+        "3": 2
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        11,
+        12
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 6,
+      "safe_occupancy_orbits": 51,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 23,
+        "1": 18,
+        "2": 6,
+        "3": 4
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        10,
+        11,
+        12
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 7,
+      "safe_occupancy_orbits": 54,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 21,
+        "1": 17,
+        "2": 9,
+        "3": 7
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2
+        ],
+        [
+          7,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 3,
+      "q": 9,
+      "m": 8,
+      "safe_occupancy_orbits": 55,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 22,
+        "1": 13,
+        "2": 13,
+        "3": 7
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2
+        ],
+        [
+          7,
+          1,
+          1
+        ],
+        [
+          8,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 1,
+      "safe_occupancy_orbits": 5,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 3,
+        "1": 2
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        4
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 2,
+      "safe_occupancy_orbits": 15,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 9,
+        "1": 6
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        8
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 3,
+      "safe_occupancy_orbits": 35,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 19,
+        "1": 16
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        12
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 4,
+      "safe_occupancy_orbits": 70,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 38,
+        "1": 32
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        16
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 5,
+      "safe_occupancy_orbits": 90,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 48,
+        "1": 42
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        14,
+        16
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 6,
+      "safe_occupancy_orbits": 100,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 54,
+        "1": 46
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        12,
+        14,
+        16
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 7,
+      "safe_occupancy_orbits": 104,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 56,
+        "1": 48
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2,
+          2
+        ],
+        [
+          7,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        10,
+        12,
+        14,
+        16
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 9,
+      "m": 8,
+      "safe_occupancy_orbits": 105,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 57,
+        "1": 48
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          5,
+          3,
+          3,
+          3
+        ],
+        [
+          6,
+          2,
+          2,
+          2
+        ],
+        [
+          7,
+          1,
+          1,
+          1
+        ],
+        [
+          8,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "explicit_witness": [
+        4,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 1,
+      "safe_occupancy_orbits": 5,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 3,
+        "1": 2
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        4
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 2,
+      "safe_occupancy_orbits": 15,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 9,
+        "1": 6
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        8
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 3,
+      "safe_occupancy_orbits": 35,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 19,
+        "1": 16
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        12
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 4,
+      "safe_occupancy_orbits": 70,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 38,
+        "1": 32
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        16
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 5,
+      "safe_occupancy_orbits": 105,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 51,
+        "1": 54
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        17
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 6,
+      "safe_occupancy_orbits": 125,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 61,
+        "1": 64
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          4,
+          4,
+          4
+        ],
+        [
+          6,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        15,
+        17
+      ],
+      "explicit_witness": [
+        5,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 7,
+      "safe_occupancy_orbits": 135,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 67,
+        "1": 68
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          4,
+          4,
+          4
+        ],
+        [
+          6,
+          3,
+          3,
+          3
+        ],
+        [
+          7,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        13,
+        15,
+        17
+      ],
+      "explicit_witness": [
+        5,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 8,
+      "safe_occupancy_orbits": 139,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 69,
+        "1": 70
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          4,
+          4,
+          4
+        ],
+        [
+          6,
+          3,
+          3,
+          3
+        ],
+        [
+          7,
+          2,
+          2,
+          2
+        ],
+        [
+          8,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        11,
+        13,
+        15,
+        17
+      ],
+      "explicit_witness": [
+        5,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 10,
+      "m": 9,
+      "safe_occupancy_orbits": 140,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 70,
+        "1": 70
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          4,
+          4,
+          4
+        ],
+        [
+          6,
+          3,
+          3,
+          3
+        ],
+        [
+          7,
+          2,
+          2,
+          2
+        ],
+        [
+          8,
+          1,
+          1,
+          1
+        ],
+        [
+          9,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        9,
+        11,
+        13,
+        15,
+        17
+      ],
+      "explicit_witness": [
+        5,
+        3,
+        3,
+        3
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 1,
+      "safe_occupancy_orbits": 5,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 3,
+        "1": 2
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        4
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 2,
+      "safe_occupancy_orbits": 15,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 9,
+        "1": 6
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        8
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 3,
+      "safe_occupancy_orbits": 35,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 19,
+        "1": 16
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        12
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 4,
+      "safe_occupancy_orbits": 70,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 38,
+        "1": 32
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        16
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 5,
+      "safe_occupancy_orbits": 126,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 66,
+        "1": 60
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        20
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 6,
+      "safe_occupancy_orbits": 161,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 85,
+        "1": 76
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        18,
+        20
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 7,
+      "safe_occupancy_orbits": 181,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 95,
+        "1": 86
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        16,
+        18,
+        20
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 8,
+      "safe_occupancy_orbits": 191,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 101,
+        "1": 90
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        14,
+        16,
+        18,
+        20
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 9,
+      "safe_occupancy_orbits": 195,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 103,
+        "1": 92
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2
+        ],
+        [
+          9,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 4,
+      "q": 11,
+      "m": 10,
+      "safe_occupancy_orbits": 196,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 104,
+        "1": 92
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2
+        ],
+        [
+          9,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 1,
+      "safe_occupancy_orbits": 6,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 3,
+        "1": 3
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        5
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 2,
+      "safe_occupancy_orbits": 21,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 12,
+        "1": 9
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        10
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 3,
+      "safe_occupancy_orbits": 56,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 28,
+        "1": 28
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        15
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 4,
+      "safe_occupancy_orbits": 126,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 66,
+        "1": 60
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        20
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 5,
+      "safe_occupancy_orbits": 252,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 126,
+        "1": 126
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        25
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 6,
+      "safe_occupancy_orbits": 322,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 148,
+        "1": 139,
+        "2": 19,
+        "3": 16
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        22,
+        25
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 7,
+      "safe_occupancy_orbits": 357,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 144,
+        "1": 138,
+        "2": 39,
+        "3": 36
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        19,
+        22,
+        25
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 8,
+      "safe_occupancy_orbits": 372,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 141,
+        "1": 126,
+        "2": 57,
+        "3": 48
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        16,
+        19,
+        22,
+        25
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 9,
+      "safe_occupancy_orbits": 377,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 135,
+        "1": 121,
+        "2": 65,
+        "3": 56
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          9,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        13,
+        16,
+        19,
+        22,
+        25
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 11,
+      "m": 10,
+      "safe_occupancy_orbits": 378,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 136,
+        "1": 116,
+        "2": 70,
+        "3": 56
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          6,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          7,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          8,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          9,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          10,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        10,
+        13,
+        16,
+        19,
+        22,
+        25
+      ],
+      "explicit_witness": [
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 1,
+      "safe_occupancy_orbits": 6,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 3,
+        "1": 3
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        5
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 2,
+      "safe_occupancy_orbits": 21,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 12,
+        "1": 9
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        10
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 3,
+      "safe_occupancy_orbits": 56,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 28,
+        "1": 28
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        15
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 4,
+      "safe_occupancy_orbits": 126,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 66,
+        "1": 60
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        20
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 5,
+      "safe_occupancy_orbits": 252,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 126,
+        "1": 126
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        25
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 6,
+      "safe_occupancy_orbits": 378,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 192,
+        "1": 186
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        26
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 7,
+      "safe_occupancy_orbits": 448,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 192,
+        "1": 186,
+        "2": 38,
+        "3": 32
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          7,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        23,
+        26
+      ],
+      "explicit_witness": [
+        6,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 8,
+      "safe_occupancy_orbits": 483,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 217,
+        "1": 211,
+        "2": 29,
+        "3": 26
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          7,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          8,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        20,
+        23,
+        26
+      ],
+      "explicit_witness": [
+        6,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 9,
+      "safe_occupancy_orbits": 498,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 213,
+        "1": 205,
+        "2": 44,
+        "3": 36
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          7,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          8,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          9,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        17,
+        20,
+        23,
+        26
+      ],
+      "explicit_witness": [
+        6,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 10,
+      "safe_occupancy_orbits": 503,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 214,
+        "1": 206,
+        "2": 45,
+        "3": 38
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          7,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          8,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          9,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          10,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        14,
+        17,
+        20,
+        23,
+        26
+      ],
+      "explicit_witness": [
+        6,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 12,
+      "m": 11,
+      "safe_occupancy_orbits": 504,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 214,
+        "1": 204,
+        "2": 48,
+        "3": 38
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          7,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          8,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          9,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          10,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          11,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        11,
+        14,
+        17,
+        20,
+        23,
+        26
+      ],
+      "explicit_witness": [
+        6,
+        4,
+        4,
+        4,
+        4
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 1,
+      "safe_occupancy_orbits": 6,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 3,
+        "1": 3
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        5
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 2,
+      "safe_occupancy_orbits": 21,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 12,
+        "1": 9
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        10
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 3,
+      "safe_occupancy_orbits": 56,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 28,
+        "1": 28
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        15
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 4,
+      "safe_occupancy_orbits": 126,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 66,
+        "1": 60
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        20
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 5,
+      "safe_occupancy_orbits": 252,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 126,
+        "1": 126
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        25
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 6,
+      "safe_occupancy_orbits": 462,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 236,
+        "1": 226
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "terminal_sizes": [
+        30
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 7,
+      "safe_occupancy_orbits": 588,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 268,
+        "1": 264,
+        "2": 28,
+        "3": 28
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        27,
+        30
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 8,
+      "safe_occupancy_orbits": 658,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 274,
+        "1": 258,
+        "2": 66,
+        "3": 60
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        24,
+        27,
+        30
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 9,
+      "safe_occupancy_orbits": 693,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 260,
+        "1": 247,
+        "2": 96,
+        "3": 90
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        21,
+        24,
+        27,
+        30
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 10,
+      "safe_occupancy_orbits": 708,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 253,
+        "1": 229,
+        "2": 120,
+        "3": 106
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 11,
+      "safe_occupancy_orbits": 713,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 245,
+        "1": 222,
+        "2": 130,
+        "3": 116
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          11,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 5,
+      "q": 13,
+      "m": 12,
+      "safe_occupancy_orbits": 714,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 246,
+        "1": 216,
+        "2": 136,
+        "3": 116
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          11,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 2
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 1,
+      "safe_occupancy_orbits": 7,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 4,
+        "1": 3
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        6
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 2,
+      "safe_occupancy_orbits": 28,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 16,
+        "1": 12
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        12
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 3,
+      "safe_occupancy_orbits": 84,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 44,
+        "1": 40
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        18
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 4,
+      "safe_occupancy_orbits": 210,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 110,
+        "1": 100
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        24
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 5,
+      "safe_occupancy_orbits": 462,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 236,
+        "1": 226
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        30
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 6,
+      "safe_occupancy_orbits": 924,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 472,
+        "1": 452
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "terminal_sizes": [
+        36
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 7,
+      "safe_occupancy_orbits": 1176,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 598,
+        "1": 578
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        32,
+        36
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 8,
+      "safe_occupancy_orbits": 1302,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 664,
+        "1": 638
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        28,
+        32,
+        36
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 9,
+      "safe_occupancy_orbits": 1358,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 692,
+        "1": 666
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        24,
+        28,
+        32,
+        36
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 10,
+      "safe_occupancy_orbits": 1379,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 704,
+        "1": 675
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        20,
+        24,
+        28,
+        32,
+        36
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 11,
+      "safe_occupancy_orbits": 1385,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 707,
+        "1": 678
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          11,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        16,
+        20,
+        24,
+        28,
+        32,
+        36
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 13,
+      "m": 12,
+      "safe_occupancy_orbits": 1386,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 708,
+        "1": 678
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          7,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          8,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          9,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          10,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          11,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        12,
+        16,
+        20,
+        24,
+        28,
+        32,
+        36
+      ],
+      "explicit_witness": [
+        6,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 1,
+      "safe_occupancy_orbits": 7,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 4,
+        "1": 3
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        6
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 2,
+      "safe_occupancy_orbits": 28,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 16,
+        "1": 12
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        12
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 3,
+      "safe_occupancy_orbits": 84,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 44,
+        "1": 40
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        18
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 4,
+      "safe_occupancy_orbits": 210,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 110,
+        "1": 100
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        24
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 5,
+      "safe_occupancy_orbits": 462,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 236,
+        "1": 226
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        30
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 6,
+      "safe_occupancy_orbits": 924,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 472,
+        "1": 452
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "terminal_sizes": [
+        36
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 7,
+      "safe_occupancy_orbits": 1386,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 688,
+        "1": 698
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "terminal_sizes": [
+        37
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 8,
+      "safe_occupancy_orbits": 1638,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 814,
+        "1": 824
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        33,
+        37
+      ],
+      "explicit_witness": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 9,
+      "safe_occupancy_orbits": 1764,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 880,
+        "1": 884
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          9,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        29,
+        33,
+        37
+      ],
+      "explicit_witness": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 10,
+      "safe_occupancy_orbits": 1820,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 908,
+        "1": 912
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          9,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          10,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        25,
+        29,
+        33,
+        37
+      ],
+      "explicit_witness": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 11,
+      "safe_occupancy_orbits": 1841,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 920,
+        "1": 921
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          9,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          10,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          11,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "explicit_witness": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 12,
+      "safe_occupancy_orbits": 1847,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 923,
+        "1": 924
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          9,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          10,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          11,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          12,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "explicit_witness": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 14,
+      "m": 13,
+      "safe_occupancy_orbits": 1848,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 924,
+        "1": 924
+      },
+      "empty_grundy": 1,
+      "terminal_occupancies": [
+        [
+          7,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          8,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          9,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          10,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          11,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          12,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          13,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        13,
+        17,
+        21,
+        25,
+        29,
+        33,
+        37
+      ],
+      "explicit_witness": [
+        7,
+        5,
+        5,
+        5,
+        5,
+        5
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 1,
+      "safe_occupancy_orbits": 7,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 4,
+        "1": 3
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        6
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 2,
+      "safe_occupancy_orbits": 28,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 16,
+        "1": 12
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        12
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 3,
+      "safe_occupancy_orbits": 84,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 44,
+        "1": 40
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        18
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 4,
+      "safe_occupancy_orbits": 210,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 110,
+        "1": 100
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        24
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 5,
+      "safe_occupancy_orbits": 462,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 236,
+        "1": 226
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        30
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 6,
+      "safe_occupancy_orbits": 924,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 472,
+        "1": 452
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          6,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "terminal_sizes": [
+        36
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 7,
+      "safe_occupancy_orbits": 1716,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 868,
+        "1": 848
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ]
+      ],
+      "terminal_sizes": [
+        42
+      ],
+      "explicit_witness": null,
+      "witness_grundy": null
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 8,
+      "safe_occupancy_orbits": 2178,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1104,
+        "1": 1074
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ]
+      ],
+      "terminal_sizes": [
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 9,
+      "safe_occupancy_orbits": 2430,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1230,
+        "1": 1200
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          9,
+          5,
+          5,
+          5,
+          5,
+          5
+        ]
+      ],
+      "terminal_sizes": [
+        34,
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 10,
+      "safe_occupancy_orbits": 2556,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1296,
+        "1": 1260
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          9,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          10,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      ],
+      "terminal_sizes": [
+        30,
+        34,
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 11,
+      "safe_occupancy_orbits": 2612,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1324,
+        "1": 1288
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          9,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          10,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          11,
+          3,
+          3,
+          3,
+          3,
+          3
+        ]
+      ],
+      "terminal_sizes": [
+        26,
+        30,
+        34,
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 12,
+      "safe_occupancy_orbits": 2633,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1336,
+        "1": 1297
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          9,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          10,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          11,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          12,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      ],
+      "terminal_sizes": [
+        22,
+        26,
+        30,
+        34,
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 13,
+      "safe_occupancy_orbits": 2639,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1339,
+        "1": 1300
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          9,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          10,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          11,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          12,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          13,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terminal_sizes": [
+        18,
+        22,
+        26,
+        30,
+        34,
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    },
+    {
+      "w": 6,
+      "q": 15,
+      "m": 14,
+      "safe_occupancy_orbits": 2640,
+      "grundy_histogram_over_occupancy_orbits": {
+        "0": 1340,
+        "1": 1300
+      },
+      "empty_grundy": 0,
+      "terminal_occupancies": [
+        [
+          7,
+          7,
+          7,
+          7,
+          7,
+          7
+        ],
+        [
+          8,
+          6,
+          6,
+          6,
+          6,
+          6
+        ],
+        [
+          9,
+          5,
+          5,
+          5,
+          5,
+          5
+        ],
+        [
+          10,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        [
+          11,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        [
+          12,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        [
+          13,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          14,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terminal_sizes": [
+        14,
+        18,
+        22,
+        26,
+        30,
+        34,
+        38,
+        42
+      ],
+      "explicit_witness": [
+        7,
+        6,
+        6,
+        6,
+        6,
+        6
+      ],
+      "witness_grundy": 1
+    }
+  ],
+  "independent_geometric_subset_audits": [
+    {
+      "base": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "m": 4,
+      "q": 7,
+      "points": 12,
+      "q_subsets_rank_checked": 792,
+      "forbidden_q_subsets": 24,
+      "subsets_safety_checked": 4096,
+      "safe_subsets_grundy_checked": 3738,
+      "safe_by_size": {
+        "0": 1,
+        "1": 12,
+        "2": 66,
+        "3": 220,
+        "4": 495,
+        "5": 792,
+        "6": 924,
+        "7": 768,
+        "8": 396,
+        "9": 64
+      },
+      "grundy_histogram": {
+        "0": 1226,
+        "1": 1360,
+        "2": 576,
+        "3": 576
+      },
+      "empty_grundy": 0,
+      "terminal_sizes": [
+        8,
+        9
+      ]
+    },
+    {
+      "base": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "m": 4,
+      "q": 7,
+      "points": 12,
+      "q_subsets_rank_checked": 792,
+      "forbidden_q_subsets": 24,
+      "subsets_safety_checked": 4096,
+      "safe_subsets_grundy_checked": 3738,
+      "safe_by_size": {
+        "0": 1,
+        "1": 12,
+        "2": 66,
+        "3": 220,
+        "4": 495,
+        "5": 792,
+        "6": 924,
+        "7": 768,
+        "8": 396,
+        "9": 64
+      },
+      "grundy_histogram": {
+        "0": 1226,
+        "1": 1360,
+        "2": 576,
+        "3": 576
+      },
+      "empty_grundy": 0,
+      "terminal_sizes": [
+        8,
+        9
+      ]
+    },
+    {
+      "base": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "m": 3,
+      "q": 9,
+      "points": 12,
+      "q_subsets_rank_checked": 220,
+      "forbidden_q_subsets": 0,
+      "subsets_safety_checked": 4096,
+      "safe_subsets_grundy_checked": 4096,
+      "safe_by_size": {
+        "0": 1,
+        "1": 12,
+        "2": 66,
+        "3": 220,
+        "4": 495,
+        "5": 792,
+        "6": 924,
+        "7": 792,
+        "8": 495,
+        "9": 220,
+        "10": 66,
+        "11": 12,
+        "12": 1
+      },
+      "grundy_histogram": {
+        "0": 2048,
+        "1": 2048
+      },
+      "empty_grundy": 0,
+      "terminal_sizes": [
+        12
+      ]
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "abstract_complete_census": [
+    {
+      "vertices": 0,
+      "all_nonempty_downward_closed_families": 1,
+      "direct_dag_state_modulus_checks": 7
+    },
+    {
+      "vertices": 1,
+      "all_nonempty_downward_closed_families": 2,
+      "direct_dag_state_modulus_checks": 21
+    },
+    {
+      "vertices": 2,
+      "all_nonempty_downward_closed_families": 5,
+      "direct_dag_state_modulus_checks": 84
+    },
+    {
+      "vertices": 3,
+      "all_nonempty_downward_closed_families": 19,
+      "direct_dag_state_modulus_checks": 560
+    },
+    {
+      "vertices": 4,
+      "all_nonempty_downward_closed_families": 167,
+      "direct_dag_state_modulus_checks": 9408
+    }
+  ],
+  "all_ordered_product_checks": 37636,
+  "square_examples": [
+    {
+      "n": 1,
+      "safe_states": 2,
+      "maximal_size_counts": {
+        "1": 1
+      },
+      "terminal_difference_gcd": 0,
+      "root_possible_losers_by_r": {
+        "2": [
+          1
+        ],
+        "3": [
+          1
+        ],
+        "4": [
+          1
+        ],
+        "5": [
+          1
+        ],
+        "6": [
+          1
+        ],
+        "7": [
+          1
+        ],
+        "8": [
+          1
+        ]
+      },
+      "direct_dag_state_modulus_checks": 14
+    },
+    {
+      "n": 2,
+      "safe_states": 15,
+      "maximal_size_counts": {
+        "3": 4
+      },
+      "terminal_difference_gcd": 0,
+      "root_possible_losers_by_r": {
+        "2": [
+          1
+        ],
+        "3": [
+          0
+        ],
+        "4": [
+          3
+        ],
+        "5": [
+          3
+        ],
+        "6": [
+          3
+        ],
+        "7": [
+          3
+        ],
+        "8": [
+          3
+        ]
+      },
+      "direct_dag_state_modulus_checks": 105
+    },
+    {
+      "n": 3,
+      "safe_states": 298,
+      "maximal_size_counts": {
+        "5": 56
+      },
+      "terminal_difference_gcd": 0,
+      "root_possible_losers_by_r": {
+        "2": [
+          1
+        ],
+        "3": [
+          2
+        ],
+        "4": [
+          1
+        ],
+        "5": [
+          0
+        ],
+        "6": [
+          5
+        ],
+        "7": [
+          5
+        ],
+        "8": [
+          5
+        ]
+      },
+      "direct_dag_state_modulus_checks": 2086
+    },
+    {
+      "n": 4,
+      "safe_states": 5811,
+      "maximal_size_counts": {
+        "5": 176,
+        "6": 688,
+        "7": 64
+      },
+      "terminal_difference_gcd": 1,
+      "root_possible_losers_by_r": {
+        "2": [
+          0,
+          1
+        ],
+        "3": [
+          0,
+          1,
+          2
+        ],
+        "4": [
+          1,
+          2,
+          3
+        ],
+        "5": [
+          0,
+          1,
+          2
+        ],
+        "6": [
+          0,
+          1,
+          5
+        ],
+        "7": [
+          0,
+          5,
+          6
+        ],
+        "8": [
+          5,
+          6,
+          7
+        ]
+      },
+      "direct_dag_state_modulus_checks": 40677
+    }
+  ],
+  "limits": "The r-person rule stops at the first player without a legal move. No multiplayer Sprague-Grundy or xor claim."
+}

@@ -26,6 +26,9 @@
 - ← depends_on [K0324](../items/K0324-n4-incomplete-position-invariants.md): 標準4×4・通常プレイ
 - ← depends_on [K0325](../items/K0325-n4-conditional-gain-variance.md): 標準4×4の全安全局面
 - ← depends_on [K0327](../items/K0327-square-position-grundy-unboundedness-open.md): 標準四点禁止・通常プレイ
+- ← depends_on [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md): 円または直線のq点を禁止するルール変種
+- ← depends_on [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md): 標準q=4の安全性と全合法第三手
+- ← depends_on [K0338](../items/K0338-high-stabilizer-safe-state-classification.md): 標準四点共円・共線禁止
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -51,6 +54,7 @@
 - ← depends_on [K0251](../items/K0251-random-win-p-bound-two-thirds-refuted.md)
 - ← depends_on [K0252](../items/K0252-random-win-p-above-three-quarters.md)
 - ← depends_on [K0253](../items/K0253-height-three-p-random-win-half-bound.md)
+- ← depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 通常プレイのmexと分離成分のxor
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -200,10 +204,12 @@
 - ← depends_on [K0071](../items/K0071-width-three-q5-exact-stabilization.md)
 - ← depends_on [K0077](../items/K0077-width-four-q8-stabilization.md)
 - ← depends_on [K0303](../items/K0303-width-three-all-q-all-length-grundy.md)
+- ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 固定幅q点版の全r系にのみ使う既存の満容量定理
 
 ## [K0025](../items/K0025-q-above-two-width-all-lengths.md) q>2wでは全長の固定幅盤が分離し強解決
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
+- ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): q>2wでの全長系にのみ使う
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -271,6 +277,7 @@
 - ← depends_on [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md)
 - ← depends_on [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md): 安全性の遺伝性と極大性
 - ← depends_on [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md): 標準盤の安全極大配置
+- ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): 安全極大配置と空点を対象にする
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -507,6 +514,7 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - ← depends_on [K0077](../items/K0077-width-four-q8-stabilization.md): q=2w境界の整数格子構造を使う
 - ← generalizes [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md): 固定幅で円が消える領域を別方向から拡張する
+- ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -583,6 +591,7 @@
 
 - → depends_on [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md)
 - ← supports [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): DFPNの局所完了と回帰が空盤勝敗を閉じていないことの裏付けを1件増やす
+- ← depends_on [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md): 対象となるs4 class・s5 cache研究の文脈。空盤勝敗の証明には使わない
 
 ## [K0093](../items/K0093-coordinate-three-ply-information.md) 同一盤の座標付き三手合法性は全継続ゲームを決める
 
@@ -602,11 +611,12 @@
 
 - → depends_on [K0095](../items/K0095-split-prime-safe-quadratic-construction.md)
 
-## [K0097](../items/K0097-integer-residue-parabola-bounds.md) 整数剰余放物線の安全最大は高々(p+3)/2、29素数では等号
+## [K0097](../items/K0097-integer-residue-parabola-bounds.md) 整数剰余放物線の安全最大は高々(p+3)/2、5..251と509,1009では等号
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - ← depends_on [K0098](../items/K0098-p23-half-interval-counterexample.md)
 - ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md)
+- ← depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -655,6 +665,7 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - → refutes [K0134](../items/K0134-point-cover-bound-equality-witness.md): 本文の証明・証人が原文に与える帰結
+- ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): k≥4の一空点三石被覆上界は素朴な点対予算より1小さい
 
 ## [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md) 残余禁止hypergraphは継続ゲームを表し、二点グラフだけでは足りない
 
@@ -706,6 +717,7 @@
 - ← depends_on [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md)
 - ← depends_on [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md)
 - ← depends_on [K0322](../items/K0322-equal-nimber-geometric-extension-split.md): 幾何的追加は直和との合成ではない
+- ← depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 全極小残余hypergraphによる継続ゲームの表現。Pグラフだけでは足りない
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1347,6 +1359,15 @@
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
 
+## [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) 奇数qの固定点なし鏡映対称安全局面はP局面
+
+- ← generalizes [K0337](../items/K0337-odd-uniform-involution-scope.md): 円・直線の鏡映定理を保証する抽象ブロック条件を明示する
+
+## [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) 有限下方閉配置ゲームで全Grundy値が0/1であることと極大集合の同偶奇性は同値
+
+- ← generalizes [K0339](../items/K0339-multiplayer-terminal-modulus.md): 全極大サイズの偶奇構造を全rの終端プレイヤー固定へ拡張する
+- ← depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 全極大同偶奇と全Grundy0/1の同値
+
 ## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
 
 - → generalizes [K0072](../items/K0072-mod9-integer-row-separation.md): 固定幅で円が消える領域を別方向から拡張する
@@ -1400,6 +1421,8 @@
 
 - → supports [K0071](../items/K0071-width-three-q5-exact-stabilization.md): 3×m・q=5の一般上界を56から40へ改善した
 - → supports [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
+- ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 無界な末尾m≥186の一般上界を使用
+- ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 一般上界200を使用
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -1443,9 +1466,68 @@
 ## [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 標準盤の安全極大配置
+- ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): K0328の故障耐性ρの定義を用いる
 
 ## [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) 11×11のs5 verdict cacheの回収とcoordinator永続化でLOSS class 2個・WIN 1個・verified certificate 2件を確定した
 
 - → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
 - → supports [K0092](../items/K0092-n11-dfpn-search-status.md): DFPNの局所完了と回帰が空盤勝敗を閉じていないことの裏付けを1件増やす
 - → verifies [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md): reply r2=0 の s4 class 2個について有限の厳密判定を与える
+
+## [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md) 極大配置の故障耐性は三石被覆の平均多重度で上から抑えられる
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 安全極大配置と空点を対象にする
+- → depends_on [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md): K0328の故障耐性ρの定義を用いる
+- → depends_on [K0107](../items/K0107-sharp-point-cover-bound.md): k≥4の一空点三石被覆上界は素朴な点対予算より1小さい
+
+## [K0331](../items/K0331-width-five-q8-exact-stabilization.md) 5×m・q=8の真の満容量安定化長はM_{5,8}=16
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 無界な末尾m≥186の一般上界を使用
+
+## [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) 5×m・q=7の満容量安定化長は19以上200以下
+
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 一般上界200を使用
+
+## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 円または直線のq点を禁止するルール変種
+- ← depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): Q_pの線上限2・円上限4と円方程式の原始係数
+
+## [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) 剰余放物線の等号問題はsigned NAE3/4と原点由来2/3節へ厳密に分解できる
+
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
+- → depends_on [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md): Q_pの線上限2・円上限4と円方程式の原始係数
+
+## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の安全性と全合法第三手
+- → depends_on [K0092](../items/K0092-n11-dfpn-search-status.md): 対象となるs4 class・s5 cache研究の文脈。空盤勝敗の証明には使わない
+
+## [K0336](../items/K0336-independent-residual-twins-parity-compression.md) 同一linkの独立双子点は正の偶奇数へ減らしてもGrundy数が一致する
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全極小残余hypergraphによる継続ゲームの表現。Pグラフだけでは足りない
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのmexと分離成分のxor
+
+## [K0337](../items/K0337-odd-uniform-involution-scope.md) 奇数qの鏡映戦略の抽象十分条件と任意禁止族での最小q+1点反例
+
+- → generalizes [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md): 円・直線の鏡映定理を保証する抽象ブロック条件を明示する
+
+## [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) 標準正方形盤の安定化群位数4以上の安全集合は高々五石で正確にO(n²)個
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準四点共円・共線禁止
+
+## [K0339](../items/K0339-multiplayer-terminal-modulus.md) r人巡回配置ゲームで敗者が戦略に依存しない人数は極大サイズ差のgcdで完全に決まる
+
+- → generalizes [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大サイズの偶奇構造を全rの終端プレイヤー固定へ拡張する
+- → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 固定幅q点版の全r系にのみ使う既存の満容量定理
+- → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2wでの全長系にのみ使う
+
+## [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める
+
+- → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大同偶奇と全Grundy0/1の同値
+- ← depends_on [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する
+
+## [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) 奇数列の三次元長盤はq≡2 mod4でだけ先手勝ち、奇数rの全Grundyは閉公式を持つ
+
+- → depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する

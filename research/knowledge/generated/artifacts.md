@@ -298,6 +298,42 @@
 ## [research/experiments/fact-discovery/output/fact_kmin_n7_safe.json](../../../research/experiments/fact-discovery/output/fact_kmin_n7_safe.json)
 
 - [K0031](../items/K0031-n7-minimum-maximal-size.md) (data): 安全証人と完了探索の記録
+## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
+
+- [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
+## [research/experiments/fixed-width-frontier-20261005/output/q58_finite_certificate_manifest.json](../../../research/experiments/fixed-width-frontier-20261005/output/q58_finite_certificate_manifest.json)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (manifest): m=16..185と対象行0,1,2の全510 UNSAT・DRAT検査記録とhash
+## [research/experiments/fixed-width-frontier-20261005/output/q58_independent_audit.json](../../../research/experiments/fixed-width-frontier-20261005/output/q58_independent_audit.json)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (data): 独立円生成の全集合一致と5×15の34石安全極大証人
+## [research/experiments/fixed-width-frontier-20261005/output/q58_integration_recheck.json](../../../research/experiments/fixed-width-frontier-20261005/output/q58_integration_recheck.json)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (data): 統合時の全510 CNF hash一致と全510 DRAT再検査成功
+## [research/experiments/fixed-width-frontier-20261005/reports/q57-bounds-and-encoding.md](../../../research/experiments/fixed-width-frontier-20261005/reports/q57-bounds-and-encoding.md)
+
+- [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (proof): 下界証人・一般上界・完全円生成・未完probeの区別
+## [research/experiments/fixed-width-frontier-20261005/reports/q58-exact-threshold.md](../../../research/experiments/fixed-width-frontier-20261005/reports/q58-exact-threshold.md)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (proof): 定義・CNF等価性・有限完全排除・無限末尾・下界証人
+## [research/experiments/fixed-width-frontier-20261005/scripts/q57_geometry.cpp](../../../research/experiments/fixed-width-frontier-20261005/scripts/q57_geometry.cpp)
+
+- [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (solver): 片根と接点を含む7/8点円の完全生成
+## [research/experiments/fixed-width-frontier-20261005/scripts/q57_witness_check.py](../../../research/experiments/fixed-width-frontier-20261005/scripts/q57_witness_check.py)
+
+- [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (verifier): 全三点曲線生成による独立安全性・極大性検査
+## [research/experiments/fixed-width-frontier-20261005/scripts/q58_certify.py](../../../research/experiments/fixed-width-frontier-20261005/scripts/q58_certify.py)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (verifier): CaDiCaLトレースを別実装drat-trimで全て再検査する再現器
+## [research/experiments/fixed-width-frontier-20261005/scripts/q58_geometry_audit.cpp](../../../research/experiments/fixed-width-frontier-20261005/scripts/q58_geometry_audit.cpp)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (verifier): 弦差式を使わない同一和二点対の積による独立円生成
+## [research/experiments/fixed-width-frontier-20261005/scripts/q58_independent_check.py](../../../research/experiments/fixed-width-frontier-20261005/scripts/q58_independent_check.py)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (verifier): 全有限長の円集合照合と全三点組による証人検査
+## [research/experiments/fixed-width-frontier-20261005/scripts/q58_sat.py](../../../research/experiments/fixed-width-frontier-20261005/scripts/q58_sat.py)
+
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (solver): 整数弦差による完全円生成と不足極大のCNF化
 ## [research/experiments/fixed-width/output/curve_packing_fixed_width.json](../../../research/experiments/fixed-width/output/curve_packing_fixed_width.json)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (data): 上界表と小盤検査
@@ -389,6 +425,33 @@
 ## [research/experiments/fixed-width/scripts/q_point_fixed_width.py](../../../research/experiments/fixed-width/scripts/q_point_fixed_width.py)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
+## [research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): 証明済み必要合同式と直接整数行列式で全選択四点を検査
+## [research/experiments/frontier-geometry-2026-10-05/density-probe-witnesses.json](../../../research/experiments/frontier-geometry-2026-10-05/density-probe-witnesses.json)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 509,1009の二つの追加有限存在証人
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 509,1009の追加有限等号証人
+## [research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json)
+
+- [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (data): 66多項式グラフ・13素数Q_pカタログ・次数3,4の明示整数証人
+- [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (data): 全13素数p≤43の禁止四点完全検査と分解の比較記録
+## [research/experiments/frontier-geometry-2026-10-05/proof.md](../../../research/experiments/frontier-geometry-2026-10-05/proof.md)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (proof): 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数の充足可能性は未証明
+- [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (proof): 原始整数方程式・有限体根数による全称証明とk=2,3,4の鋭さ証人
+- [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (proof): 完全対補題・四元和・反射によるNAE分解の全称証明
+## [research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizによる全94575425選択四点の独立検算
+## [research/experiments/frontier-geometry-2026-10-05/recovered-witnesses.json](../../../research/experiments/frontier-geometry-2026-10-05/recovered-witnesses.json)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 131..251の23素数の保存済み安全証人
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 131..251拡張の追跡されていなかった証人を回復・保存
+## [research/experiments/frontier-geometry-2026-10-05/verify_polynomial_curves.py](../../../research/experiments/frontier-geometry-2026-10-05/verify_polynomial_curves.py)
+
+- [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (verifier): 原始整数の直線・円カタログと共有幾何coreによる独立有限支持検査
+- [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (verifier): 既存pair-CNFと新しいNAE分解を全double候補で比較する
 ## [research/experiments/game-structure/output/game_structure_20261003_boards.json](../../../research/experiments/game-structure/output/game_structure_20261003_boards.json)
 
 - [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (data): 6盤全局面mex対と7盤の独立P/N証明検査集計
@@ -408,6 +471,13 @@
 ## [research/experiments/game-structure/output/game_structure_20261003_nine_corner.json](../../../research/experiments/game-structure/output/game_structure_20261003_nine_corner.json)
 
 - [K0311](../items/K0311-misere-n9-outcome-open.md) (data): 資源上限でUNKNOWN、証明書なしの実行結果
+## [research/experiments/game-structure/output/multiplayer_modulus_20261005.json](../../../research/experiments/game-structure/output/multiplayer_modulus_20261005.json)
+
+- [K0339](../items/K0339-multiplayer-terminal-modulus.md) (data): 194族・37636直和・標準1..4盤での照合
+## [research/experiments/game-structure/output/symmetry_scope_20261005.json](../../../research/experiments/game-structure/output/symmetry_scope_20261005.json)
+
+- [K0337](../items/K0337-odd-uniform-involution-scope.md) (data): q=3,5,7,9の有限照合
+- [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (data): n=1..11の完全有限照合
 ## [research/experiments/game-structure/reports/game-structure-20261003-extra.md](../../../research/experiments/game-structure/reports/game-structure-20261003-extra.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (source): 6合法点での最初の例外分類
@@ -419,9 +489,25 @@
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 5合法点交換則の一般証明
 - [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (source): §6のmisère 1..8盤の厳密勝敗と全初手分類
 - [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) (proof): misère直和の必要十分条件と共円ゲームへの適用
+## [research/experiments/game-structure/reports/multiplayer-modulus-20261005.md](../../../research/experiments/game-structure/reports/multiplayer-modulus-20261005.md)
+
+- [K0339](../items/K0339-multiplayer-terminal-modulus.md) (proof): 全rの必要十分条件、直和gcd公式、固定幅への系
+## [research/experiments/game-structure/reports/symmetry-scope-20261005.md](../../../research/experiments/game-structure/reports/symmetry-scope-20261005.md)
+
+- [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) (proof): 高対称候補を各nでO(n²)個の二軸配置へ限定する一般分類
+- [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (proof): 円・直線への適用範囲を明示し、任意禁止族への過大な拡張を訂正
+- [K0337](../items/K0337-odd-uniform-involution-scope.md) (proof): 任意奇数qの最小反例と抽象ブロック十分条件の証明
+- [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (proof): D4部分群、禁止軌道、二軸配置の必要十分分類と個数公式
 ## [research/experiments/game-structure/scripts/game_structure_20261003_eight_check.cpp](../../../research/experiments/game-structure/scripts/game_structure_20261003_eight_check.cpp)
 
 - [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (verifier): 行列式ベースの独立検証器
+## [research/experiments/game-structure/scripts/multiplayer_modulus_20261005.py](../../../research/experiments/game-structure/scripts/multiplayer_modulus_20261005.py)
+
+- [K0339](../items/K0339-multiplayer-terminal-modulus.md) (verifier): 全4頂点以下の下方閉族と小盤の直接継続DAGによる独立検算
+## [research/experiments/game-structure/scripts/symmetry_scope_20261005.py](../../../research/experiments/game-structure/scripts/symmetry_scope_20261005.py)
+
+- [K0337](../items/K0337-odd-uniform-involution-scope.md) (verifier): 全安全集合のmex再帰と独立P/N再帰
+- [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (verifier): 部分群軌道の全選択と公式による生成を比較する
 ## [research/experiments/geometry/output/geometry_20261003_extended.json](../../../research/experiments/geometry/output/geometry_20261003_extended.json)
 
 - [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (data): 幅1..15の鋭い極値と達成例
@@ -453,6 +539,39 @@
 ## [research/experiments/geometry/scripts/geometry_20261003_scale.py](../../../research/experiments/geometry/scripts/geometry_20261003_scale.py)
 
 - [K0307](../items/K0307-square-circle-maxima-through-112.md) (verifier): 全中心・全半径の列挙
+## [research/experiments/n11-cover-duality/output/center-corner-cover.json](../../../research/experiments/n11-cover-duality/output/center-corner-cover.json)
+
+- [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (certificate): n3/5/7/9/11/13/15の上界coverと分母2の下界dual
+## [research/experiments/n11-cover-duality/output/verified.json](../../../research/experiments/n11-cover-duality/output/verified.json)
+
+- [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (data): 全class再列挙による上下界一致と四種類の不正証人拒否
+## [research/experiments/n11-cover-duality/reports/center-corner-cover.md](../../../research/experiments/n11-cover-duality/reports/center-corner-cover.md)
+
+- [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (proof): H-orbit dualの全称下界、matchingによるn≥9の全称上界、n5/7の具体証人
+## [research/experiments/n11-cover-duality/scripts/generate_cover.py](../../../research/experiments/n11-cover-duality/scripts/generate_cover.py)
+
+- [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (solver): 共有整数geometryを再利用した具体cover生成。勝敗は判定しない
+## [research/experiments/n11-cover-duality/scripts/verify_cover.py](../../../research/experiments/n11-cover-duality/scripts/verify_cover.py)
+
+- [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (verifier): 別行列式・別D4実装による全safe s4 classと整数dualの独立検査
+## [research/experiments/n11-residual-twins/output/geometry-samples.json](../../../research/experiments/n11-residual-twins/output/geometry-samples.json)
+
+- [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (data): seed20261005、各盤200軌跡のlate snapshot頻度と存在証人。全局面列挙ではない
+## [research/experiments/n11-residual-twins/output/verified.json](../../../research/experiments/n11-residual-twins/output/verified.json)
+
+- [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (data): 7020clutterの全検査、72圧縮例のmex一致、各盤保存証人の独立監査
+## [research/experiments/n11-residual-twins/reports/twin-parity.md](../../../research/experiments/n11-residual-twins/reports/twin-parity.md)
+
+- [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (proof): 外部点数の帰納法による任意有限rankの全称証明と必要条件の反例
+## [research/experiments/n11-residual-twins/scripts/sample_residual_twins.cpp](../../../research/experiments/n11-residual-twins/scripts/sample_residual_twins.cpp)
+
+- [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (solver): 共有128-bit geometryを再利用したn4..11のbounded greedy snapshot生成
+## [research/experiments/n11-residual-twins/scripts/twin_core.py](../../../research/experiments/n11-residual-twins/scripts/twin_core.py)
+
+- [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (solver): 全link判定、正の偶奇圧縮、残余mex、独立な占有subset mex
+## [research/experiments/n11-residual-twins/scripts/verify_twins.py](../../../research/experiments/n11-residual-twins/scripts/verify_twins.py)
+
+- [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (verifier): m≤5の全clutter監査と、保存格子証人の全L・最小R・Grundy再検査
 ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典
@@ -1307,6 +1426,7 @@
 - [K0133](../items/K0133-quadratic-point-cover-bound.md) (proof): 命題・対象範囲・根拠を記した出典
 - [K0134](../items/K0134-point-cover-bound-equality-witness.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0136](../items/K0136-triple-completion-overlap-bound.md) (proof): 命題・対象範囲・根拠を記した出典
+- [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md) (proof): 反転とMelchiorによる局所三石被覆上界、平均評価との合成は本文で証明
 ## [research/experiments/original-claims/reports/round46-small-saturation-and-window-reduction.md](../../../research/experiments/original-claims/reports/round46-small-saturation-and-window-reduction.md)
 
 - [K0032](../items/K0032-n8-minimum-maximal-size.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1617,6 +1737,24 @@
 
 - [K0214](../items/K0214-n7-maximum-external-radius-two.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0215](../items/K0215-n7-first-external-legal-point-orbits.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/prism-hyperplane-2026-10-05/odd-root-output.json](../../../research/experiments/prism-hyperplane-2026-10-05/odd-root-output.json)
+
+- [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (data): 全状態の有限検算。無界主張の根拠はproof artifact
+## [research/experiments/prism-hyperplane-2026-10-05/odd-root-proof.md](../../../research/experiments/prism-hyperplane-2026-10-05/odd-root-proof.md)
+
+- [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (proof): 偶数個のgapゲームのmex公式、奇数r全Grundy、偶数rの応答戦略
+## [research/experiments/prism-hyperplane-2026-10-05/odd_root_verify.py](../../../research/experiments/prism-hyperplane-2026-10-05/odd_root_verify.py)
+
+- [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (verifier): 独立ラベル付き完全mexと共有占有数DP、gap補助ゲームの全検算
+## [research/experiments/prism-hyperplane-2026-10-05/output.json](../../../research/experiments/prism-hyperplane-2026-10-05/output.json)
+
+- [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) (data): 12長盤・120全長境界の占有数全検算と3小盤全subset検算
+## [research/experiments/prism-hyperplane-2026-10-05/proof.md](../../../research/experiments/prism-hyperplane-2026-10-05/proof.md)
+
+- [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) (proof): 超平面分類、全極大分類、全称Grundy式と奇数列のnimber2
+## [research/experiments/prism-hyperplane-2026-10-05/verify.py](../../../research/experiments/prism-hyperplane-2026-10-05/verify.py)
+
+- [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) (verifier): 占有数mexと独立の有理数lifted-rank subset検算
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数

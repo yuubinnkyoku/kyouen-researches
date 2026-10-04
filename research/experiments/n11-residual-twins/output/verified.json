@@ -1,0 +1,368 @@
+{
+  "exhaustive_small_clutters": {
+    "cases": [
+      {
+        "vertices": 1,
+        "all_clutters": 1,
+        "reducible_clutters": 0,
+        "nonisolated_reducible_clutters": 0
+      },
+      {
+        "vertices": 2,
+        "all_clutters": 2,
+        "reducible_clutters": 0,
+        "nonisolated_reducible_clutters": 0
+      },
+      {
+        "vertices": 3,
+        "all_clutters": 9,
+        "reducible_clutters": 1,
+        "nonisolated_reducible_clutters": 0
+      },
+      {
+        "vertices": 4,
+        "all_clutters": 114,
+        "reducible_clutters": 5,
+        "nonisolated_reducible_clutters": 4
+      },
+      {
+        "vertices": 5,
+        "all_clutters": 6894,
+        "reducible_clutters": 66,
+        "nonisolated_reducible_clutters": 55
+      }
+    ],
+    "all_clutters": 7020,
+    "reducible_clutters": 72,
+    "nonisolated_reducible_clutters": 59,
+    "even_class_counterexample": {
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "original_grundy": 2,
+      "one_leaf_grundy": 1,
+      "no_leaf_grundy": 1
+    },
+    "pair_only_counterexample": {
+      "edges": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "original_grundy": 0,
+      "one_vertex_grundy": 1
+    },
+    "status": "VERIFIED"
+  },
+  "geometry_witnesses": [
+    {
+      "n": 4,
+      "occupied": [
+        0,
+        3,
+        6,
+        12
+      ],
+      "legal": [
+        2,
+        4,
+        7,
+        8,
+        11,
+        14
+      ],
+      "twin_classes": [
+        [
+          7,
+          8,
+          14
+        ],
+        [
+          4
+        ],
+        [
+          2
+        ],
+        [
+          11
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 2,
+      "direct_subset_memo_states": 13,
+      "residual_baseline_memo_states": 10,
+      "residual_compressed_memo_states": 4,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 5,
+      "occupied": [
+        0,
+        5,
+        11,
+        19,
+        20,
+        23
+      ],
+      "legal": [
+        2,
+        6,
+        13
+      ],
+      "twin_classes": [
+        [
+          2,
+          6,
+          13
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 1,
+      "direct_subset_memo_states": 8,
+      "residual_baseline_memo_states": 8,
+      "residual_compressed_memo_states": 2,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 6,
+      "occupied": [
+        9,
+        19,
+        23,
+        25,
+        28,
+        31
+      ],
+      "legal": [
+        3,
+        6,
+        30
+      ],
+      "twin_classes": [
+        [
+          3,
+          6,
+          30
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 1,
+      "direct_subset_memo_states": 8,
+      "residual_baseline_memo_states": 8,
+      "residual_compressed_memo_states": 2,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 7,
+      "occupied": [
+        0,
+        4,
+        17,
+        23,
+        26,
+        29,
+        36,
+        40,
+        48
+      ],
+      "legal": [
+        7,
+        9,
+        14,
+        19
+      ],
+      "twin_classes": [
+        [
+          14
+        ],
+        [
+          7,
+          9,
+          19
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 1,
+      "direct_subset_memo_states": 9,
+      "residual_baseline_memo_states": 8,
+      "residual_compressed_memo_states": 2,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 8,
+      "occupied": [
+        2,
+        4,
+        6,
+        12,
+        24,
+        25,
+        43,
+        55,
+        56,
+        59
+      ],
+      "legal": [
+        8,
+        23,
+        35,
+        53
+      ],
+      "twin_classes": [
+        [
+          23,
+          35,
+          53
+        ],
+        [
+          8
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 1,
+      "direct_subset_memo_states": 9,
+      "residual_baseline_memo_states": 8,
+      "residual_compressed_memo_states": 2,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 9,
+      "occupied": [
+        4,
+        22,
+        25,
+        29,
+        32,
+        35,
+        39,
+        53,
+        60,
+        63,
+        68
+      ],
+      "legal": [
+        2,
+        45,
+        77,
+        78,
+        80
+      ],
+      "twin_classes": [
+        [
+          45,
+          78,
+          80
+        ],
+        [
+          2,
+          77
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 2,
+      "direct_subset_memo_states": 11,
+      "residual_baseline_memo_states": 10,
+      "residual_compressed_memo_states": 4,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 10,
+      "occupied": [
+        4,
+        8,
+        24,
+        40,
+        43,
+        50,
+        63,
+        73,
+        75,
+        85,
+        86,
+        89,
+        92
+      ],
+      "legal": [
+        1,
+        38,
+        44,
+        46,
+        71
+      ],
+      "twin_classes": [
+        [
+          71
+        ],
+        [
+          46
+        ],
+        [
+          1,
+          38,
+          44
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 1,
+      "direct_subset_memo_states": 10,
+      "residual_baseline_memo_states": 8,
+      "residual_compressed_memo_states": 2,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 11,
+      "occupied": [
+        14,
+        17,
+        38,
+        39,
+        41,
+        48,
+        56,
+        61,
+        70,
+        97,
+        99,
+        113,
+        117,
+        119
+      ],
+      "legal": [
+        0,
+        2,
+        10,
+        13,
+        100
+      ],
+      "twin_classes": [
+        [
+          13
+        ],
+        [
+          10
+        ],
+        [
+          0,
+          2,
+          100
+        ]
+      ],
+      "removed_vertices": 2,
+      "grundy": 0,
+      "direct_subset_memo_states": 18,
+      "residual_baseline_memo_states": 16,
+      "residual_compressed_memo_states": 4,
+      "status": "VERIFIED"
+    }
+  ],
+  "n11_empty_root_outcome": "UNKNOWN"
+}
