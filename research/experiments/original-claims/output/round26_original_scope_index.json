@@ -1,20 +1,20 @@
 {
   "total_originals": 600,
-  "reviewed_originals": 319,
+  "reviewed_originals": 376,
   "counts_are_audit_states_not_total_unresolved": true,
   "audit_state_counts": {
-    "NOT_AUDITED": 281,
-    "PARTIAL": 85,
-    "SUPPORTED": 127,
-    "REFUTED": 80,
-    "SCOPE_UNCLEAR": 6,
-    "INCONCLUSIVE": 21
+    "PARTIAL": 106,
+    "INCONCLUSIVE": 34,
+    "SUPPORTED": 140,
+    "REFUTED": 87,
+    "SCOPE_UNCLEAR": 9,
+    "NOT_AUDITED": 224
   },
   "original_source_sha256": {
     "hypothesis-bank-2026-09-27.md": "9d71a9d9440c1423fe76cc4c7dd193a1dd00d7d9bf0de61296cb7bb4a6cf1d49",
     "hypothesis-bank-round2-2026-09-27.md": "e473a3b700bd8d0f728f2e5a181168d9fbfecefdc20c9ddbb137f73f5aa4fe8a"
   },
-  "index_source_sha256": "7a25a60e9352cc557677f15c26e50dc1b0a72838ba7f0ddab4f9b93d72beb000",
+  "index_source_sha256": "712f2d2e91e4825e4d5bcf22ebb764839720735d8fd496dd3a1d28d4124e629a",
   "rows": [
     {
       "id": "B001",
@@ -47,10 +47,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=6..10ではW_nが空集合または全体だが、原文はn≥6の全称。n≥11を覆う証明がない。",
       "additional_reports": []
     },
     {
@@ -231,10 +231,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n≤10で部分勝ち初手盤は5×5のみ。原文はn≥11で第二例が存在するという存在命題で、証人未発見。",
       "additional_reports": []
     },
     {
@@ -268,10 +268,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=1..8,10では空盤nimberは0/1だが、n=9は勝敗しか分からずnimber値未確定。全nの証明もない。",
       "additional_reports": []
     },
     {
@@ -305,10 +305,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "既知の奇数先手勝ち盤n=1,3,5,9では中央が勝ち初手。原文は奇数n全体の全称で一般証明はない。",
       "additional_reports": []
     },
     {
@@ -342,10 +342,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=4..10では角が勝ち初手なら全初手勝ちだが、n≥11を含む全称は未証明。",
       "additional_reports": []
     },
     {
@@ -545,10 +545,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5では勝ち初手がmod2型で正確に記述でき中心距離より説明的だが、複数の部分勝ち盤比較という原文前提が未充足。",
       "additional_reports": []
     },
     {
@@ -743,10 +743,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n≤10では先手勝ち・後手勝ちがともに出現するが、双方が無限にあるという漸近命題は有限データでは決まらない。",
       "additional_reports": []
     },
     {
@@ -895,10 +895,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "既知10項は小周期と矛盾するが、最終的非周期という無限列主張と格子円出現による機構は未証明。",
       "additional_reports": []
     },
     {
@@ -1020,10 +1020,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "6×6は全初手勝ちで、初手ごとのT*が異なる点対を完全計算から確認。存在命題の条件を満たす。",
       "additional_reports": []
     },
     {
@@ -1425,10 +1425,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "REFUTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5全比較で危険補完集合の自然な重なり量はPペア側の方が大きく、原文方向と逆。",
       "additional_reports": []
     },
     {
@@ -1499,10 +1499,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "後手勝ち4×4でJ_4の支配数γ=2≪16を完全計算したが、後手勝ち盤一般の統計主張までは未検証。",
       "additional_reports": []
     },
     {
@@ -1719,10 +1719,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SCOPE_UNCLEAR",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5のPペア20本は3種の整数関係で尽くせるがD4辺軌道代表も3種。「より短い」の尺度が未定義。",
       "additional_reports": []
     },
     {
@@ -2362,10 +2362,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "原文は固定命題σ_8=3だが、8×8の必要なGrundy層が未計算で直接証拠がない。",
       "additional_reports": []
     },
     {
@@ -2559,10 +2559,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n≤6の全初手勝ち盤の二石nimberは奇数のみ。原文はn≥9で偶数nimber二石局面が存在するという存在命題で証人未取得。",
       "additional_reports": []
     },
     {
@@ -2596,10 +2596,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "REFUTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4の飽和開始層k=2でnimber 1,4が欠落し、6×6 k=3でも4が欠落。全称を反証。",
       "additional_reports": []
     },
     {
@@ -2633,10 +2633,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4・5×5にg(S)=K(S)−∣S∣かつK(S)<K_nの非終局局面を多数確認。存在命題を満たす。",
       "additional_reports": []
     },
     {
@@ -2670,10 +2670,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=4,5の(k,∣L∣)固定セルでは高nimber群の終局サイズ幅が広い傾向が優勢だが逆向きセルもあり一般統計則は未確定。",
       "additional_reports": []
     },
     {
@@ -2707,10 +2707,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "REFUTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4・5×5に、最大移動度の合法手ではg−1へ行けない反例がある。全称の幾何条件を反証。",
       "additional_reports": []
     },
     {
@@ -2995,10 +2995,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "nimber側と残余成分数の一部統計はあるが、原文の残余成分型多様性と最上位ビットの結合データが未整備。",
       "additional_reports": []
     },
     {
@@ -3032,10 +3032,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "同じ石数・同じ到達終局サイズ集合でもnimberが異なる局面対を4×4・5×5で明示。",
       "additional_reports": []
     },
     {
@@ -3411,10 +3411,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5・6×6および小矩形では最短勝ち初手集合と最長勝ち初手集合が交わる。存在命題の証人は未発見。",
       "additional_reports": []
     },
     {
@@ -3448,10 +3448,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5の中央以外の8勝ち初手も最悪時7石勝ちを強制でき、最短勝ちを実現する。固定盤全称を満たす。",
       "additional_reports": []
     },
     {
@@ -3625,10 +3625,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "REFUTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "勝敗維持T*は空盤勝敗に応じ単一パリティになるため、K_n∉T*(∅)が『パリティ以外』で起こるという原文の合条件は不可能。",
       "additional_reports": []
     },
     {
@@ -3689,10 +3689,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=4,5で勝ち手数とT*幅の関係はセルごとに混在し、原文の統計方向を支持も反証もできない。",
       "additional_reports": []
     },
     {
@@ -3726,10 +3726,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4・5×5に、ある負け手が全勝ち手より最大到達終局を小さくする局面を明示。",
       "additional_reports": []
     },
     {
@@ -3925,10 +3925,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SCOPE_UNCLEAR",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "代理量では分岐圧縮傾向があるが、原文の『強制的区間の縮約』『分岐型』の操作的定義がない。",
       "additional_reports": []
     },
     {
@@ -3962,10 +3962,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "同一N親から異なる勝ち手でP子へ行き、子のT*が互いに素となる明示例を4×4・5×5で確認。",
       "additional_reports": []
     },
     {
@@ -4134,10 +4134,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=4,5全1石交換で近終局層より中盤のP/N反転率が高い方向は確認したが、最大層位置は盤で異なり『中盤』の定義も未固定。",
       "additional_reports": []
     },
     {
@@ -4363,10 +4363,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "Aut(Q_n)=D4をn=3..6で完全列挙しn=5,6を確認したが、原文は全n≥5で一般証明はない。",
       "additional_reports": []
     },
     {
@@ -4427,10 +4427,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "D4安定化群が自明でも残余自己同型が非自明な有限証人は多数あるが、Rが空の退化例が中心で『頻出』・一般性は未確定。",
       "additional_reports": []
     },
     {
@@ -4619,10 +4619,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "180度回転で対称局面の合法手が合法応手へ写る補題はn=7にも成立するが、7×7後手必勝戦略全体と『少数』の動的切替えは未構成。",
       "additional_reports": []
     },
     {
@@ -4656,10 +4656,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4・5×5に、非自明D4対称局面の全必勝手がその対称性を壊す明示局面がある。",
       "additional_reports": []
     },
     {
@@ -4827,10 +4827,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5全極大ではstab≥2が最小側100%、典型0.2%、最大側4%と両端偏りを示すが、4×4では再現せず高対称=stab≥2の定義も弱い。",
       "additional_reports": []
     },
     {
@@ -4864,10 +4864,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4・5×5で全幾何対合が失敗する一方、非幾何的自由対合による固定ペア応答が成立する残局面を計算で確認。",
       "additional_reports": []
     },
     {
@@ -5156,10 +5156,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "REFUTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4・5×5で必勝手比率の説明力は合法手数だけとほぼ同じで、軌道数追加の改善がほぼゼロ。原文方向を反証。",
       "additional_reports": []
     },
     {
@@ -5193,10 +5193,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "同じ∣L∣・制約件数・残余自己同型群の『位数』でP/Nが分かれる対はあるが、原文の群同型そのものは未検証。",
       "additional_reports": []
     },
     {
@@ -5345,10 +5345,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5負け初手16点は3 D4軌道すべてg=3だが、残余制約個数は3通り。共通商ゲームへの縮約写像が未構成。",
       "additional_reports": []
     },
     {
@@ -5382,10 +5382,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "同一盤・同石数でL(S)=L(T)なのに一方P・他方Nとなる局面対を4×4・5×5で明示。",
       "additional_reports": []
     },
     {
@@ -5419,10 +5419,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "5×5でLと二点残余制約P(S)が一致し、高階残余制約差だけでP/Nが分かれる局面対を確認。",
       "additional_reports": []
     },
     {
@@ -5456,10 +5456,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=4,5全局面で包含極小化後の3/4点制約が終盤ほど急減することを確認したが、一般統計則としては有限範囲。",
       "additional_reports": []
     },
     {
@@ -5622,10 +5622,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "残り最大手数4でも非自明分裂する5×5証人はあるが、n増加とともに『無視できない割合』になる部分は未確認で閾値も未定義。",
       "additional_reports": []
     },
     {
@@ -5659,10 +5659,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "格子隣接グラフが非連結なのに残余ゲームR(S)が連結な局面を4×4・5×5で多数確認。",
       "additional_reports": []
     },
     {
@@ -5696,10 +5696,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "格子隣接グラフは連結だがR(S)が非自明に分解する局面を4×4・5×5で明示。",
       "additional_reports": []
     },
     {
@@ -6013,10 +6013,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "高階制約消滅とP率の差は観測されたが、原文の『消滅直後から全安全拡張でP/Nが石数偶奇だけに固定』は未測定。",
       "additional_reports": []
     },
     {
@@ -6177,10 +6177,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "REFUTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "4×4全D4軌道を残余抽象型でまとめても中終盤の圧縮比は1.02〜1.07倍で、原文の『1桁以上減る盤』方向に強く反する。",
       "additional_reports": []
     },
     {
@@ -6363,10 +6363,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SUPPORTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "異なる正方形盤4×4と5×5に、合法点6点以上で同型な残余ゲームを持つ局面対を構成済み。本文の明示条件を満たす。",
       "additional_reports": []
     },
     {
@@ -6400,10 +6400,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "REFUTED",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=4,5の主要層で三角形密度とnimberの相関は負でなく主に正。原文方向を反証。",
       "additional_reports": []
     },
     {
@@ -7139,10 +7139,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "二点近似の誤り局面では残余3点制約数が3〜4.5倍多いが、原文指定の『3点辺どうしの2点共有』は逆相関。測度の核心が未成立。",
       "additional_reports": []
     },
     {
@@ -7563,10 +7563,10 @@
           "weakening_mentioned": true
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "SCOPE_UNCLEAR",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "separatorの小ささは測れるが、『戦略を分割』『小さな勝敗証明』の証明系・サイズ定義がない。",
       "additional_reports": []
     },
     {
@@ -8619,10 +8619,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=2..5全極大で小サイズ側ほど空点平均被覆bが小さい方向を確認したが、一般統計則としては有限範囲。",
       "additional_reports": []
     },
     {
@@ -9784,10 +9784,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "既知K_n/nは2近傍だが、K_n/n→2という漸近極限は有限列では決まらない。",
       "additional_reports": []
     },
     {
@@ -10031,10 +10031,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n≤9では∣K_n−2n∣≤1だが、絶対定数で全nを抑える全称は未証明。",
       "additional_reports": []
     },
     {
@@ -10222,10 +10222,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "INCONCLUSIVE",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "既知範囲ではK_n−2n≤0で上振れなし。任意Mの上振れ盤列という存在命題は証人も反証もない。",
       "additional_reports": []
     },
     {
@@ -10259,10 +10259,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "既知連続盤ではK_{n+1}−K_n≤3だが、全nの上界定理は未証明。",
       "additional_reports": []
     },
     {
@@ -11028,10 +11028,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=6,7,8で最大集合型数と交換障壁を比較したが単調関係が崩れ、サイズとの因果分離も未完。",
       "additional_reports": []
     },
     {
@@ -12569,10 +12569,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=3..6の最小極大標本では直線・円双方の被覆寄与を併用する方向を確認したが、n≥7と統計的一般性は未検証。",
       "additional_reports": []
     },
     {
@@ -12791,10 +12791,10 @@
           "weakening_mentioned": false
         }
       ],
-      "original_status": "NOT_AUDITED",
-      "evidence_kind": "unreviewed",
-      "preferred_report": null,
-      "reason": "旧ラベルの再集計だけでは原文決着を採用しない。",
+      "original_status": "PARTIAL",
+      "evidence_kind": "audited_original_scope",
+      "preferred_report": "round65-b001-b100-original-scope-audit.md",
+      "reason": "n=3..7の完全極大サイズスペクトルは区間だが、標準正方形盤すべてという全称の一般証明はない。",
       "additional_reports": []
     },
     {
@@ -75177,6 +75177,7 @@
     "round9-n7-n8-overlap.md": "f337b0eef39f945f258c4e0a1ae0360de3dfd0e5a9392a3d69ebdf0241d263aa",
     "round9-n7-outer-patterns.md": "70336ebb804f2bd8a356128e9153ba05d602de26bb5ccd260678a82222e852f0",
     "round63-b451-b500-original-scope-audit.md": "de331581441809ef69ff0f9df9f23bd51db62beabf3c8b3397eb24bb49461c43",
-    "round64-b501-b600-original-scope-audit.md": "60d982aec6a7ce4487abe79c5ea00ea99b6f1368e64720515761d2e16117325a"
+    "round64-b501-b600-original-scope-audit.md": "60d982aec6a7ce4487abe79c5ea00ea99b6f1368e64720515761d2e16117325a",
+    "round65-b001-b100-original-scope-audit.md": "c2701d4a7f6015b1480eccb0176345f0b1e9d2777def31b656cda16fd5f4a1af"
   }
 }
