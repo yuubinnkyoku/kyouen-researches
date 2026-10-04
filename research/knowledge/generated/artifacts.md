@@ -1902,8 +1902,6 @@
 - [K0017](../items/K0017-n7-second-player-win.md) (data): 命題・対象範囲・根拠を記した出典
 - [K0018](../items/K0018-n8-second-player-win.md) (data): 命題・対象範囲・根拠を記した出典
 - [K0019](../items/K0019-n9-first-player-win.md) (data): 命題・対象範囲・根拠を記した出典
-## [results/results.csv](../../../results/results.csv)
-
 - [K0110](../items/K0110-certificate-compression-finite-comparison.md) (data): 探索状態数
 ## [rust/independent-verifier/CROSS_CHECK.md](../../../rust/independent-verifier/CROSS_CHECK.md)
 
