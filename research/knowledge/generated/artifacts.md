@@ -508,6 +508,15 @@
 
 - [K0337](../items/K0337-odd-uniform-involution-scope.md) (verifier): 全安全集合のmex再帰と独立P/N再帰
 - [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (verifier): 部分群軌道の全選択と公式による生成を比較する
+## [research/experiments/general-q-local-cover-20261005/output/audit.json](../../../research/experiments/general-q-local-cover-20261005/output/audit.json)
+
+- [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) (data): 4×3全4096部分集合q4..8の監査と13個の整数等号証人
+## [research/experiments/general-q-local-cover-20261005/proof.md](../../../research/experiments/general-q-local-cover-20261005/proof.md)
+
+- [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) (proof): 空点・既存石を分けた全称証明、端点、最小非自明サイズの整数等号証人
+## [research/experiments/general-q-local-cover-20261005/scripts/verify.py](../../../research/experiments/general-q-local-cover-20261005/scripts/verify.py)
+
+- [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) (verifier): 全三点曲線と整数反転直線の独立照合・有限小盤・等号証人検査
 ## [research/experiments/geometry-frontier-followup-20261005/audit.json](../../../research/experiments/geometry-frontier-followup-20261005/audit.json)
 
 - [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) (data): r≤8の整数証人・削除完全検査、r≤6全436848安全局面の完全mex検査
@@ -572,6 +581,45 @@
 ## [research/experiments/n11-cover-duality/scripts/verify_cover.py](../../../research/experiments/n11-cover-duality/scripts/verify_cover.py)
 
 - [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (verifier): 別行列式・別D4実装による全safe s4 classと整数dualの独立検査
+## [research/experiments/n11-reduction-followup-20261005/output/audit.json](../../../research/experiments/n11-reduction-followup-20261005/output/audit.json)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): 全7020小clutter、全5219交換不変族、727実n11残局の通常・misère検査と測定
+## [research/experiments/n11-reduction-followup-20261005/output/independent-count-audit.json](../../../research/experiments/n11-reduction-followup-20261005/output/independent-count-audit.json)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): 全5219族と720広rank標本の別count-subset監査
+## [research/experiments/n11-reduction-followup-20261005/output/n11-snapshots.json](../../../research/experiments/n11-reduction-followup-20261005/output/n11-snapshots.json)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): seed20261005、n11の200 greedy軌跡から全826 late snapshotsを保存
+## [research/experiments/n11-reduction-followup-20261005/output/rank-sharpness-audit.json](../../../research/experiments/n11-reduction-followup-20261005/output/rank-sharpness-audit.json)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): 全rank証明の有限回帰、rank2..64の公式値、45ケースの別subset照合
+## [research/experiments/n11-reduction-followup-20261005/reports/exchangeable-kernel.md](../../../research/experiments/n11-reduction-followup-20261005/reports/exchangeable-kernel.md)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (proof): 内部容量の商DAG、混合深さ付き偶奇の全称帰納、安価な容量1検出の証明
+## [research/experiments/n11-reduction-followup-20261005/reports/independent-kernel-audit.md](../../../research/experiments/n11-reduction-followup-20261005/reports/independent-kernel-audit.md)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (proof): 別担当によるcleanup非依存のcount-subset定式化と通常・misère証明監査
+## [research/experiments/n11-reduction-followup-20261005/reports/misere-kernel.md](../../../research/experiments/n11-reduction-followup-20261005/reports/misere-kernel.md)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (proof): 孤立二点の補助mex周期とmisèreへの全称拡張。成分xorを使わない
+## [research/experiments/n11-reduction-followup-20261005/reports/rank-sharpness.md](../../../research/experiments/n11-reduction-followup-20261005/reports/rank-sharpness.md)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (proof): 全rank≥2の証人族のGrundy閉再帰と誘導点削除上限の最良性
+## [research/experiments/n11-reduction-followup-20261005/scripts/independent_count_audit.py](../../../research/experiments/n11-reduction-followup-20261005/scripts/independent_count_audit.py)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (verifier): 全残余更新を使わないcount-subsetの独立通常・misère補助mex
+## [research/experiments/n11-reduction-followup-20261005/scripts/module_core.py](../../../research/experiments/n11-reduction-followup-20261005/scripts/module_core.py)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (solver): 全置換class検出、容量・深さ偶奇kernel、incidence hashによる安価な部分kernel
+## [research/experiments/n11-reduction-followup-20261005/scripts/sample_n11.cpp](../../../research/experiments/n11-reduction-followup-20261005/scripts/sample_n11.cpp)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (solver): 既存共有geometryと既存全R生成器を再利用したbounded greedy sampler
+## [research/experiments/n11-reduction-followup-20261005/scripts/verify_modules.py](../../../research/experiments/n11-reduction-followup-20261005/scripts/verify_modules.py)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (verifier): 別占有subset mexで全小clutterと全交換不変族を検査し実格子証人を再生成
+## [research/experiments/n11-reduction-followup-20261005/scripts/verify_sharpness.py](../../../research/experiments/n11-reduction-followup-20261005/scripts/verify_sharpness.py)
+
+- [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (verifier): 閉再帰公式をrank2..64で検算し、小rankでは別全占有subsetとも照合
 ## [research/experiments/n11-residual-twins/output/geometry-samples.json](../../../research/experiments/n11-residual-twins/output/geometry-samples.json)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (data): seed20261005、各盤200軌跡のlate snapshot頻度と存在証人。全局面列挙ではない
@@ -1811,6 +1859,15 @@
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (verifier): 整数最適化、同和弦の鎖証明、mod9、実blockerの別生成監査
 - [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (verifier): 外周鎖の構成、重み和、有限座標集合の直接energy検査
+## [research/experiments/q58-chord-tail-20261005/output/reduced-manifest.json](../../../research/experiments/q58-chord-tail-20261005/output/reduced-manifest.json)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (manifest): 既存独立DRAT検査済みm16..100の255件を抽出。SATを新実行した記録ではない
+## [research/experiments/q58-chord-tail-20261005/proof.md](../../../research/experiments/q58-chord-tail-20261005/proof.md)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 任意平行線q=2wの全称上界と標準五行q8の末尾101
+## [research/experiments/q58-chord-tail-20261005/scripts/reduce_manifest.py](../../../research/experiments/q58-chord-tail-20261005/scripts/reduce_manifest.py)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 旧510件の独立検査receiptに照合して255件のCNFを再生成・hash確認
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数

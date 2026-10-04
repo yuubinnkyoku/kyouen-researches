@@ -30,6 +30,7 @@
 | [prism-followup-20261005](prism-followup-20261005/README.md) | 偶数ペア容量の任意長・全Grundy閉公式 |
 | [prism-two-maxima-20261005](prism-two-maxima-20261005/README.md) | 全容量・全長の二最大占有数Grundy縮約 |
 | [geometry-frontier-followup-20261005](geometry-frontier-followup-20261005/README.md) | 任意有限整数点盤の故障耐性無界族と全Grundy |
+| [n11-reduction-followup-20261005](n11-reduction-followup-20261005/README.md) | 全残余交換可能classのrank kernel・通常/misère証明 |
 
 共通solver/verifierはcpp・scripts・rustに置きます。[共有研究ライブラリ](../../scripts/research/README.md)は実験間で使用する整数幾何を保持します。
 公開横断集計は[results](../../results/README.md)、発見過程は[log](../log/README.md)、旧索引と計画は[archive](../archive/README.md)です。

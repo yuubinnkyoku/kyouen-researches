@@ -344,7 +344,10 @@
 | [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) | 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める | proposition | proved | variants, geometry, grundy, maximal-safe |
 | [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) | 奇数列の三次元長盤はq≡2 mod4でだけ先手勝ち、奇数rの全Grundyは閉公式を持つ | proposition | proved | variants, geometry, grundy |
 | [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) | r点の同和弦energyには等差数列で達成される鋭い三次上界がある | proposition | proved | geometry, rectangles |
+| [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) | 交換可能残余classはrank以下へ縮めて通常Grundyとmisère補助mexを保存し、誘導削除上限は全rankで最良 | proposition | proved | residual-games, grundy, search-methods, variants |
 | [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) | 偶数ペア容量・奇数列の三次元盤は任意長で全Grundy閉公式を持つ | proposition | proved | variants, geometry, grundy |
 | [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) | 任意有限整数点盤では三共線なし・唯一最大配置でも故障耐性が無界 | proposition | proved | geometry, maximal-safe, maximum-safe, variants, grundy |
 | [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) | 奇数列の平行列版は全長・全局面のGrundyを二最大占有数の表と偶奇へ縮約できる | proposition | proved | variants, grundy, residual-games, search-methods |
 | [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) | 任意有限整数点盤の一空点円故障耐性はVertex Coverを表現し唯一最大配置でもNP完全 | proposition | proved | geometry, maximal-safe, maximum-safe, variants, search-methods |
+| [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) | 全q点版の空点・既存石の飽和曲線数は反転とMelchiorで抑えられる | proposition | proved | geometry, variants |
+| [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) | 任意のw本の平行線のq=2w版は同和弦energyで満容量安定化する | proposition | proved | rectangles, geometry, variants, grundy |

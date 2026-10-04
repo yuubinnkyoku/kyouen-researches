@@ -55,6 +55,7 @@
 - ← depends_on [K0252](../items/K0252-random-win-p-above-three-quarters.md)
 - ← depends_on [K0253](../items/K0253-height-three-p-random-win-half-bound.md)
 - ← depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 通常プレイのmexと分離成分のxor
+- ← depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 通常プレイのmex。misère補助mexは終端値1で別に定義する
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -500,6 +501,7 @@
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
+- ← generalizes [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): w=3,q=6の十分長さ21を任意の平行線・実数候補座標で保証。真の値9は一般化しない
 
 ## [K0071](../items/K0071-width-three-q5-exact-stabilization.md) 3×m・q=5の真の満容量安定化長はM_{3,5}=12
 
@@ -668,6 +670,7 @@
 - → refutes [K0134](../items/K0134-point-cover-bound-equality-witness.md): 本文の証明・証人が原文に与える帰結
 - ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): k≥4の一空点三石被覆上界は素朴な点対予算より1小さい
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 反転した外部石へMelchiorの一般式を適用
+- ← generalizes [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md): 空点側q=4の局所被覆上界を全q≥4へ拡張
 
 ## [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md) 残余禁止hypergraphは継続ゲームを表し、二点グラフだけでは足りない
 
@@ -720,6 +723,7 @@
 - ← depends_on [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md)
 - ← depends_on [K0322](../items/K0322-equal-nimber-geometric-extension-split.md): 幾何的追加は直和との合成ではない
 - ← depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 全極小残余hypergraphによる継続ゲームの表現。Pグラフだけでは足りない
+- ← depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 継続ゲームは二点グラフではなく全包含極小残余辺で表す
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1487,6 +1491,7 @@
 
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 無界な末尾m≥186の一般上界を使用
+- ← supports [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
 
 ## [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) 5×m・q=7の満容量安定化長は19以上158以下
 
@@ -1515,6 +1520,7 @@
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全極小残余hypergraphによる継続ゲームの表現。Pグラフだけでは足りない
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのmexと分離成分のxor
+- ← generalizes [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 同一全linkの独立双子は混合深さ1の特殊例
 
 ## [K0337](../items/K0337-odd-uniform-involution-scope.md) 奇数qの鏡映戦略の抽象十分条件と任意禁止族での最小q+1点反例
 
@@ -1548,6 +1554,13 @@
 
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石の外部行対ごとの同和弦予算29を与える
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石行の同和弦energyの鋭い上界29
+- ← depends_on [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 外部行対の同和弦予算の鋭い上界E_r
+
+## [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) 交換可能残余classはrank以下へ縮めて通常Grundyとmisère補助mexを保存し、誘導削除上限は全rankで最良
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 継続ゲームは二点グラフではなく全包含極小残余辺で表す
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのmex。misère補助mexは終端値1で別に定義する
+- → generalizes [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 同一全linkの独立双子は混合深さ1の特殊例
 
 ## [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) 偶数ペア容量・奇数列の三次元盤は任意長で全Grundy閉公式を持つ
 
@@ -1570,3 +1583,13 @@
 ## [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) 任意有限整数点盤の一空点円故障耐性はVertex Coverを表現し唯一最大配置でもNP完全
 
 - → depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 整数三次グラフの四点安全性・零和三共線・反転による円blocker実現
+
+## [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) 全q点版の空点・既存石の飽和曲線数は反転とMelchiorで抑えられる
+
+- → generalizes [K0107](../items/K0107-sharp-point-cover-bound.md): 空点側q=4の局所被覆上界を全q≥4へ拡張
+
+## [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) 任意のw本の平行線のq=2w版は同和弦energyで満容量安定化する
+
+- → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 外部行対の同和弦予算の鋭い上界E_r
+- → generalizes [K0070](../items/K0070-width-three-q6-stabilization.md): w=3,q=6の十分長さ21を任意の平行線・実数候補座標で保証。真の値9は一般化しない
+- → supports [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
