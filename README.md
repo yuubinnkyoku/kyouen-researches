@@ -66,11 +66,11 @@ n ∈ {4, 7, 8, 10}
 より詳しい考察は [`docs/RESULTS_AND_IMPLICATIONS.md`](docs/RESULTS_AND_IMPLICATIONS.md) にあります。
 
 <!-- BEGIN GENERATED SOLUTION STATUS -->
-## 解決状況（K項目から自動生成）
+## 解決状況
 
-[知識の入口](research/knowledge/README.md)。既存の詳細説明に加え、現在の範囲と検証境界を示す。
+現在の研究結果と未解決問題は [research/knowledge/](research/knowledge/README.md) に整理しています。各結果には参照用の `K0001` のような番号を付けています。以下は、そのうち盤面の解決状況に関する結果を自動生成した一覧です。
 
-| 盤面・条件 | K項目・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |
+| 盤面・条件 | 参照・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |
 |---|---|---|---|---|---|
 | 1×1〜6×6; 標準q=4・完全指摘・通常プレイ | [K0004](research/knowledge/items/K0004-n1-n6-all-safe-grundy.md) · computed | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全安全局面 | exhaustive-enumeration | 空盤は各nのAND/OR証明書あり; 小盤参照実装照合、空盤C++検査; 勝者は各盤の個別項目を参照 |
 | 7×7; 標準q=4・完全指摘・通常プレイ | [K0005](research/knowledge/items/K0005-n7-all-safe-grundy-audit.md) · computed | strong; second-player-win | root, all-safe-win-loss, all-safe-grundy; 179,810,350/179,810,350安全局面 | exhaustive-enumeration, independent-enumeration | 空盤証明書あり。強解決単独証明書は未整理; 全層独立再帰照合; README旧説明に全Grundy結果を補完 |

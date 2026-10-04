@@ -2,7 +2,7 @@
 
 coverage・条件・検証境界はlevelと独立に読む。
 
-| 盤面・条件 | K項目・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |
+| 盤面・条件 | 参照・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |
 |---|---|---|---|---|---|
 | 1×1〜6×6; 標準q=4・完全指摘・通常プレイ | [K0004](../items/K0004-n1-n6-all-safe-grundy.md) · computed | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全安全局面 | exhaustive-enumeration | 空盤は各nのAND/OR証明書あり; 小盤参照実装照合、空盤C++検査; 勝者は各盤の個別項目を参照 |
 | 7×7; 標準q=4・完全指摘・通常プレイ | [K0005](../items/K0005-n7-all-safe-grundy-audit.md) · computed | strong; second-player-win | root, all-safe-win-loss, all-safe-grundy; 179,810,350/179,810,350安全局面 | exhaustive-enumeration, independent-enumeration | 空盤証明書あり。強解決単独証明書は未整理; 全層独立再帰照合; README旧説明に全Grundy結果を補完 |

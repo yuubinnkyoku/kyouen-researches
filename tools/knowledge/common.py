@@ -224,7 +224,7 @@ def link(item, from_dir="research/knowledge/generated"):
 
 
 def solution_table(items, from_dir="research/knowledge/generated"):
-    lines = ["| 盤面・条件 | K項目・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |",
+    lines = ["| 盤面・条件 | 参照・状態 | 段階・勝敗 | 分類・範囲 | 検証 | 証明書・独立検査・留保 |",
              "|---|---|---|---|---|---|"]
     for item in items:
         s = item.get("solution")

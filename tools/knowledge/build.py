@@ -9,8 +9,8 @@ def main():
     readme = ROOT / "README.md"
     raw = readme.read_bytes()
     text = raw.decode("utf-8")
-    block = "## 解決状況（K項目から自動生成）\n\n"
-    block += "[知識の入口](research/knowledge/README.md)。既存の詳細説明に加え、現在の範囲と検証境界を示す。\n\n"
+    block = "## 解決状況\n\n"
+    block += "現在の研究結果と未解決問題は [research/knowledge/](research/knowledge/README.md) に整理しています。各結果には参照用の `K0001` のような番号を付けています。以下は、そのうち盤面の解決状況に関する結果を自動生成した一覧です。\n\n"
     block += solution_table(items, ".")
     updated = update_readme(text, block)
     generated = ROOT / "research/knowledge/generated"
