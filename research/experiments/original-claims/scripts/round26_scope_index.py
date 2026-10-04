@@ -872,6 +872,108 @@ review('B148', 'PARTIAL', 'audited_original_scope',
 review('B149', 'SUPPORTED', 'audited_original_scope',
        'round66-b101-b150-original-scope-audit.md', '上位10相似型の被覆率はn=4で84.5%、n=5で70.2%、n=6で51.8%。n≤3は総数上10型で半数超を自明に覆えるため、固定m=6が原文存在条件を満たす。')
 
+# 2026-10-04: B151-B200 original-scope audit.
+review('B151', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4..10の既知完全計算では最小点次数が角の値に一致するが、n≥4全体の全称証明はない。')
+review('B152', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '5×5で中心d=116に対し最大d=156は中心からずれた4点で達成。奇数盤で中心最大が破れる存在証人。')
+review('B153', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '平均次数は共線・共円総数からΘ(n^3)だが、p/n→(u,v)ごとの連続形状関数への収束は未証明。同じ巨視的位置内の有限n揺らぎも大きい。')
+review('B154', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '同一境界距離・近接巨視的位置で次数揺らぎはn=4..6で拡大するが、正規化後に異なる極限を持つ二系列の厳密構成は未取得。')
+review('B155', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '距離固定後にgcd・既約傾きで群内spreadは16.1→12.6へ減り説明力はあるが、同一offsetでも位置効果12.6が残る。『距離より敏感』という強い比較は成立していない。')
+review('B156', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '一般にd(p,q)はp,qを含む各直線・円CについてC(∣C∣−2,2)を足したもの。円中心は垂直二等分線上に限られ、四点組全列挙なしのcarrier走査で計算できる。n=5全300対で一致。')
+review('B157', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4,5の全安全2石局面でΣd固定の混在群を比較し、二点次数行列のλ_maxが複数群でP/Nを追加分離。Σd単独より説明力を持つという原文の統計主張を直接確認。')
+review('B158', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4,5にd(p)>d(q)なのに∣L(S+p)∣>∣L(S+q)∣となる非空親Sの証人があり、最大次数点対最小次数点でも逆転する。')
+review('B159', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '外周追加による次数増分はn=5→6,6→7で盤中心まで境界と同程度以上に及ぶが、n→∞でも中心比が正に保たれる漸近部分は未証明。')
+review('B160', 'INCONCLUSIVE', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n≤6では同次数点がD4同値にまとまり、原文条件を満たす候補自体がない。より大盤で同次数D4非同値かつ一石g/勝敗差が出る存在証人は未取得。')
+review('B161', 'REFUTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=6,7の非共線共円四点で(x mod2,y mod2)の35多重集合型と市松偶奇5型がすべて実現。座標偶奇だけで排除できる組合せはない。')
+review('B162', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=5全共円四点で小さい法の剰余パターンと中心分母に100%純粋な分類セルが存在し、後続の固定分母整数論とも整合。『一部判別できる』という存在的な構造主張を満たす。')
+review('B163', 'INCONCLUSIVE', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '5×5 mod2各類では強制使用による容量損失はないが、原文はある領域・合同類の存在命題。mod3/5や大盤での証人可能性は残る。')
+review('B164', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '5×5全100最大配置で盤内クラス点数補正後もmod2占有率が0.42/0.38/0.38/0.16と強く非一様。『法2,3,5の少なくとも一つ』を満たす。')
+review('B165', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '一般構成あり。素数p≥13、r=floor((p−1)/4)、S={(t,t² mod p):0≤t≤r}⊂[0,p−1]²とする。4点t_iのdet[x²+y²,x,y,1] mod pは列操作でdet[t_i^4,t_i,t_i²,1]=±∏_{i<j}(t_j−t_i)·Σt_i。t_iは相異なり、4点和は6以上p未満なので非零。従って全四点det≠0 mod pで安全、∣S∣=r+1=Θ(p)、盤辺長p。')
+review('B166', 'SCOPE_UNCLEAR', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '本文の『指定した範囲』が未指定。p≤11という有限小素数範囲なら5×5最大配置が証人になる一方、全素数という読みは任意の有限安全Sでp>max∣det∣を取れば必ず一素数で証明できるため偽。')
+review('B167', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '任意の有限安全Sでは全四点detは非零整数なので、p>max∣det∣の素数を一つ選べば全detが同時に非零mod p。よって必要素数集合の要素数は常に1で、nに比べて非常に小さい。')
+review('B168', 'INCONCLUSIVE', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n≤6全安全局面で占有点XORや10特徴量XORによるmod2線形不変量は不存在だが、原文は『適切な応答で維持される有限状態のパリティ量』まで許す。より一般の有限状態不変量は未排除。')
+review('B169', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=5でm=2,3,4には同一座標剰余パターン・同石数でP/Nが逆の証人があるが、『任意の固定m』を十分大盤へ延ばす一般構成は未証明。')
+review('B170', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=3..7最大集合数56,64,100,464,16にn=7の谷があり円型増加と同居するが、円族初出が谷を作る因果・漸近傾向は未証明。')
+review('B171', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=2..5の完全f_n(k)はすべて単峰だが、全nで一度だけ増加から減少へ切り替わる全称証明はない。')
+review('B172', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=2..5の完全fベクトルはすべて対数凹だが、全nの不等式は未証明。')
+review('B173', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=2..5の安全確率a_kはすべて対数凹だが、全nの不等式は未証明。')
+review('B174', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'Δ_4でQとF_2,F_3,F_5,F_7のBettiが一致し小素数捩れは見えないが、整数Smith標準形による全捩れ排除も全n証明もない。')
+review('B175', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'Δ_4の自由部分Bettiは211個のS^4と22個のS^5の一端和と一致するが、ホモロジー一致だけではホモトピー同値を与えず、離散Morse等の証明は未実施。')
+review('B176', 'REFUTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4,5でBetti数増大の立ち上がり層とP率が0/1から離れる層を同時計測すると一致せず、原文の対応関係を直接反証。')
+review('B177', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4の13点部分盤に、安全集合数fベクトルが完全一致するのに空盤nimber/P/Nが異なる明示ペアを発見。存在命題を満たす。')
+review('B178', 'INCONCLUSIVE', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '禁止四点組どうしの共有パターン分布は完全計数済みだが、それからΔ_nの最初の非零ホモロジー生成関係を記述する写像・証明は未構成。')
+review('B179', 'SCOPE_UNCLEAR', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'I_n(−1)の値は計算済みだが、『剛性』『関係する』の操作的定義がない。最大集合数やKとの単純相関も弱く、真偽を一意に判定できない。')
+review('B180', 'SCOPE_UNCLEAR', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '放物面持ち上げと共円det=0の同値は正しいが、『選択定理を短くする』『少数の平面配置』の短さ・少数の尺度が未定義で、7×7証明への具体的縮約も未構成。')
+review('B181', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '小盤ではE[X_n]/K_nが減少するが、比が0へ収束する漸近証明はない。')
+review('B182', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=3..5厳密DPでは中央値をn^(2/3)(log n)^(1/3)で割った比はほぼ一定だが、無界漸近の定数倍評価は未証明。')
+review('B183', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4..8でVar(X)/E[X]^2は0.0078→0.0045と減少するが、0への極限は未証明。')
+review('B184', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=3..5の標準化分布は歪度・尖度が0へ近づく兆候を示すが、中心極限定理に必要な一般的混合・依存制御は未証明。')
+review('B185', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '同じ終局サイズの極大集合でもランダム貪欲到達確率に10倍超の差があることを厳密計算・独立標本で確認。サイズだけでは説明できない。')
+review('B186', 'REFUTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '4×4極大集合を同サイズで比較すると、D4安定化群が大きい高対称集合ほどラベル付き1集合当たり到達確率が低い方向で、原文と逆。')
+review('B187', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '初手固定ランダム貪欲でn=5,6とも角初手の平均終局長が内部/中央近傍より大きい。独立二盤で原文方向を再現。')
+review('B188', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=3,4とn=5代表点で初手別平均長差の相対幅は小さいが、最大相対差→0の漸近主張は未証明。')
+review('B189', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=5,6では終局最後手が初期低次数側へ過剰出現する方向を観測するが、n=4は弱く、角・辺に限定した定義と大標本再現が未完。')
+review('B190', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4..6で残余need3等が次手の合法手純減を∣L∣単独より予告するが、原文の『次の数手』の連鎖的急減は未測定。')
+review('B191', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4全5811・n=5全151394局面で(k,∣L∣)別P率に明確な山谷があり、十分大きい母数の層でも非単調性を再現。')
+review('B192', 'REFUTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4,5のN局面で(k,∣L∣)固定後、b_S(p)分散と必勝手比率の相関は負ではなく正寄り。『ばらつき大ほど勝ち手集中』の方向を反証。')
+review('B193', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=5大標本でΣdとP率をneed2比率で層別しても符号は一貫せず、原文の整理則を支持しない。ただし指定した二次元固定法を完全母集団で尽くしてはいない。')
+review('B194', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=4,5の同じ(n,k,∣L∣)セル内でランダム残手偶奇確率がP/Nを追加分離し、分布は重なるため『予測するが決定しない』まで確認。')
+review('B195', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'N局面のランダム勝率最小はn=4で1/31、n=5で1/37まで低下するが、任意εへ近づける無限族は未構成。')
+review('B196', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'P局面のランダム勝率最大はn=5で21/26まで上がるが、1へ近づける無限族は未構成。')
+review('B197', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', '子局面残余特徴の分散は一部標本でP>Nだが、(k,∣L∣)固定のより大きい標本ではP>NとN>Pがほぼ拮抗。原文の一般統計方向は確定しない。')
+review('B198', 'PARTIAL', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=5で局所特徴の交互作用が単独特徴を改善する例はあるが、原文指定の点次数×unique gainまたは順位不一致が支配することは未確認。')
+review('B199', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=3,4,5全安全集合のP率曲線を比較すると、生kよりk/K_nで揃えた方が盤間レンジが小さいことを定量確認。原文の『k/K_nまたは∣L∣/n²』を満たす。')
+review('B200', 'SUPPORTED', 'audited_original_scope',
+       'round67-b151-b200-original-scope-audit.md', 'n=5の3万局面標本でP/N相関とN内nimber相関の特徴順位が明確に不一致（順位Spearmanも負）。『零かどうか』と高nimberが別軸という統計主張を直接確認。')
+
 
 def main():
     originals = {}
