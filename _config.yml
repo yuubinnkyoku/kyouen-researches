@@ -1,0 +1,28 @@
+# GitHub Pages publishes only the static dashboard assets at repository root.
+# Research documents and source trees are intentionally excluded from Jekyll.
+exclude:
+  - AGENTS.md
+  - CMakeLists.txt
+  - Kyouen
+  - LICENSE
+  - Main.lean
+  - README.md
+  - certificates
+  - cpp
+  - docs
+  - lake-manifest.json
+  - lakefile.lean
+  - lean-toolchain
+  - pyproject.toml
+  - release-assets
+  - research
+  - results
+  - rust
+  - scripts
+  - tests
+  - tools
+  - uv.lock
+  - .editorconfig
+  - .gitattributes
+  - .github
+  - .gitignore
