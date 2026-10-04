@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # round55: B081の原文17を18石構成で反証
 
 **B081 REFUTED。** 9×9に安全な18石があるので、原文の`K_9=17`は偽。
@@ -28,11 +30,11 @@ y=8: x=1,3,7
   占有点は各曲線上に正確に三点、全63空点は少なくとも一組で禁止される。
 - この証人のD4像は8個。ただし、全18石配置がこの一軌道に限られるという証明ではない。
 
-結果は`round55_eighteen_verified.json`に座標・各空点の禁止三点証人・入力ハッシュ付きで保存。
+結果は`../output/round55_eighteen_verified.json`に座標・各空点の禁止三点証人・入力ハッシュ付きで保存。
 図を手で読み取っても、保存座標の安全性は画像への信頼に依存せず再実行で検証できる。
 
 これより前に実施した独立SAT探索は300秒でUNKNOWNだった。
-`round55_n9_atleast18.json`と`round55_maximum_sat.py`も記録するが、
+`../output/round55_n9_atleast18.json`と`round55_maximum_sat.py`も記録するが、
 UNKNOWNを不存在や上界の証明に流用しない。今回の反証は公開構成の座標検算に基づく。
 
-再現: `python research/verification/scripts/round55_eighteen_audit.py`
+再現: `python research/experiments/original-claims/scripts/round55_eighteen_audit.py`

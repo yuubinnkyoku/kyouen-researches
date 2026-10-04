@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 clean holdout V2: 10k probe cost preregistration
 
 Base evidence branch: `10x10-clean-holdout-v2` at `451ece8674e167d9a3dec5dbc29c16518b8ab6fb`.

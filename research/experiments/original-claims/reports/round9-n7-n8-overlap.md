@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B386の反証とB387のA/B差: 7×7最大配置から8×8の15石への最小除去数
 
-作成: 2026-09-28。原文: [B386・B387](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-28。原文: [B386・B387](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **B386はREFUTED。** 7×7の14石最大配置から一石だけ除き、二石を追加して8×8の安全15石へ移れる。
 さらに、8×8の安全15石集合を目標とした最小除去数は、埋込みを選べる場合
@@ -25,7 +27,7 @@ Sの全1,001四点組、Tの全1,365四点組を独立な整数4×4行列式で�
 
 ## 2. 大きな盤の最大配置全列挙は不要
 
-入力は既存の `night-research/maxsafe_n7_K14.bin` に保存された7×7の全16最大配置。
+入力は既存の `research/experiments/structural-discovery/output/maxsafe_n7_K14.bin` に保存された7×7の全16最大配置。
 ファイルは128バイト、SHA256は
 
 ```text
@@ -83,7 +85,7 @@ S_B={(0,0),(1,0),(6,0),(4,1),(5,1),(1,2),(3,2),
 - **B386 REFUTED**: 目標は原文通り安全15石であり、一つの明示反例だけでも決着する。
 - **B387 SUPPORTED（既知のK₈=15を使用）**: A型から最大15石へは除去1、B型からは除去2。
   今回の独立な計算が直接証明したのは「安全15石への距離」であり、K₈≤15自体を再証明したわけではない。
-  リポジトリの[先行研究整理](../../docs/RELATED_WORK.md)はK₈=15を既知値として採用している。
+  リポジトリの[先行研究整理](../../../../docs/RELATED_WORK.md)はK₈=15を既知値として採用している。
   一次資料は[けんちょん氏の2018年の記事](https://qiita.com/drken/items/336ef288b451e86c15cb)。
 
 旧 `round2-batch-b381.md` は一つの固定された15石証人への距離だけでB387をREFUTEDとしていた。
@@ -93,10 +95,10 @@ S_B={(0,0),(1,0),(6,0),(4,1),(5,1),(1,2),(3,2),
 ## 6. 再現
 
 ```text
-python research/verification/scripts/round9_n7_n8_overlap.py
-python research/verification/scripts/round9_n7_n8_phase.py
+python research/experiments/original-claims/scripts/round9_n7_n8_overlap.py
+python research/experiments/original-claims/scripts/round9_n7_n8_phase.py
 ```
 
-[零・一石除去コード](scripts/round9_n7_n8_overlap.py)、[全試行データ](round9_n7_n8_overlap.json)。
-[B型二石除去コード](scripts/round9_n7_n8_phase.py)、[証人データ](round9_n7_n8_phase.json)。
-共通補助コードは [round9_geometry.py](scripts/round9_geometry.py)。全処理は正常終了。
+[零・一石除去コード](../scripts/round9_n7_n8_overlap.py)、[全試行データ](../output/round9_n7_n8_overlap.json)。
+[B型二石除去コード](../scripts/round9_n7_n8_phase.py)、[証人データ](../output/round9_n7_n8_phase.json)。
+共通補助コードは [round9_geometry.py](../scripts/round9_geometry.py)。全処理は正常終了。

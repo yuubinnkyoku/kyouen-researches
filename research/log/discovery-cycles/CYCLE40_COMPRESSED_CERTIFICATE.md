@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 40 — compressed occupancy certificate for α(M)=13
 
 Branch `cycle8-n7-structure` (pushed). Evidence COMPLETE unless noted.
@@ -84,6 +86,6 @@ pattern — and only A/B exact occ work.
 
 - `results/cycle40_compressed_inequalities.json`
 - `results/cycle40b_residual_joint_lemmas.json`
-- `night-research/CYCLE40B_RESIDUAL_JOINT_LEMMAS.md`
-- `night-research/CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md`
-- `night-research/CYCLE35_PHASE_LIFT_CONTRAST.md`
+- `research/log/discovery-cycles/CYCLE40B_RESIDUAL_JOINT_LEMMAS.md`
+- `research/log/discovery-cycles/CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md`
+- `research/log/discovery-cycles/CYCLE35_PHASE_LIFT_CONTRAST.md`

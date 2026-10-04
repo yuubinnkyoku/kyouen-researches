@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=7 Selection Theorem — ultra-complete constraint matrix
 
 Evidence: COMPLETE C++ `cycle8_b_maxsafe.exe` counts + complete 16-set census.
@@ -96,5 +98,5 @@ center+(2,3)=12; corners=4 ≤12.
 
 - `FINAL_SELECTION_THEOREM.md`
 - `SELECTION_THEOREM_CHECKLIST.md`
-- `CYCLE15_CAPACITY_DECOMPOSITION.md`
-- `CYCLE27_CORE_EXTENSION.md`
+- `../../log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md`
+- `../../log/discovery-cycles/CYCLE27_CORE_EXTENSION.md`

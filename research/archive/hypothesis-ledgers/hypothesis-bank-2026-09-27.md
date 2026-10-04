@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 共円ゲームの仮説バンク — 2026-09-27
 
 目的は、非自明な事実につながりそうな着想をできるだけ多く残すこと。**全300項目は未検証の候補であり、発見・定理・実験結果ではない。** このメモの作成では探索、勝敗計算、反例探索、証明、文献新規性の確認を行っていない。強い予想、弱い予想、競合する予想を意図的に併記した。既存研究の未解決問題を具体化した項目も含み、「300件すべてが新規」とは主張しない。
@@ -33,7 +35,7 @@
 
 ## 既存資料からの出発点
 
-参照したのは [README](../README.md)、[既存の仮説記録](hypotheses.md)、[発見記録](findings.md)、[小盤の全分類](../night-research/CYCLE4_EXACT_STRUCTURE.md)、[Grundy構造](../night-research/CYCLE5_GRUNDY_STRUCTURE.md)、[7×7選択定理](../night-research/FINAL_SELECTION_THEOREM.md)、[第四の角と連結成分](../night-research/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md)、[探索総括](exploration/DISCOVERY_SUMMARY.md)、[二石probeの訂正](../docs/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md)。これらを再検証したわけではない。
+参照したのは [README](../../../README.md)、[既存の仮説記録](hypotheses.md)、[発見記録](findings.md)、[小盤の全分類](../../log/discovery-cycles/CYCLE4_EXACT_STRUCTURE.md)、[Grundy構造](../../log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md)、[7×7選択定理](../discovery-summaries/FINAL_SELECTION_THEOREM.md)、[第四の角と連結成分](../../log/discovery-cycles/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md)、[探索総括](../../log/fact-discovery/DISCOVERY_SUMMARY.md)、[二石probeの訂正](../../experiments/9x9-factorial/reports/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md)。これらを再検証したわけではない。
 
 既に反例のある「勝敗は盤の奇偶だけ」「距離だけ」「最大安全サイズの偶奇だけ」「全盤でK_n=2n−1」は復活させない。証明書の層別パリティは証明形式の性質なので、新しいゲームの法則として数えない。3石以下の単なる合法手数や、4石目のgainの既知の非重複性も新発見扱いしない。
 

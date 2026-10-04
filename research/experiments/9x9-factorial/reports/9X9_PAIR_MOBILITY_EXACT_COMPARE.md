@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 9×9 pair-sum vs true mobility: exact child-value comparison
 
 最終更新: 2026-09-05
 
-`docs/9X9_PAIR_MOBILITY_SCAN.md` で得た D4 canonical strict-disagreement parents を、ゲーム理論的な子局面値で直接比較するための次段実験。
+`research/experiments/9x9-factorial/reports/9X9_PAIR_MOBILITY_SCAN.md` で得た D4 canonical strict-disagreement parents を、ゲーム理論的な子局面値で直接比較するための次段実験。
 
 ## 実装
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 探索量 vs 勝敗：全確定局面検証
 
 ## 要約・結論
@@ -30,7 +32,7 @@
 | `results/10x10/69-91-expanded-memo.csv` | expanded-memo による再探索 |
 | `results/90-69-heavy-three-stone-results.csv` | 90-69 campaign の parents / seeds |
 | `results/90-69-split-proof.csv` | split 証明 parents + children |
-| `docs/10X10_PROOF_BENCHMARKS.md` | 8-stone / 14-stone benchmark |
+| `research/experiments/solver-benchmarks/reports/10X10_PROOF_BENCHMARKS.md` | 8-stone / 14-stone benchmark |
 
 座標は `id = y*10+x`。勝敗は手番側から見た outcome（WIN/LOSS）。
 

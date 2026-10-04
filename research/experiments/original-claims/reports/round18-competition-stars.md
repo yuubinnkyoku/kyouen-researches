@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B070: 競合グラフの誘導星に鋭い上限がある
 
 作成: 2026-09-29。**B070: SUPPORTED（全n・全安全配置の一般証明）。**
-原文: [仮説バンクB070](../hypothesis-bank-2026-09-27.md)。
+原文: [仮説バンクB070](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)。
 固定石数kについて、三角形の有無だけによらない共通の誘導部分グラフ制約を求める。
 
 **定理。|S|=k、m=binom(k,2)とすると、P(S)に誘導星K_(1,m+1)は現れない。**
@@ -100,8 +102,8 @@ tを有理数、さらに整数に限っても相異なる有理点が無限に�
 三角形の有無や全合法点数によらない、残局の実現コストの必要条件になる。
 十分条件や、任意の指定グラフ全体の残局実現（B232）を証明したものではない。
 
-再現: [scripts/round18_local_geometry.py](scripts/round18_local_geometry.py)、
-[round18_local_geometry.json](round18_local_geometry.json)。
+再現: [scripts/round18_local_geometry.py](../scripts/round18_local_geometry.py)、
+[round18_local_geometry.json](../output/round18_local_geometry.json)。
 小盤全安全集合で(1)を合法手更新から得る辺集合と独立照合し、
 上限達成の有理構成を整数化した座標証人も検査・保存した。
 n=1,…,4の全6,126安全局面、計28,162近傍で一致した。

@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 41 — proof dependency map for the n=7 selection theorem
 
 Target statement:
@@ -78,4 +80,4 @@ the barrier from the same occupancy inequalities as D3–D4.
 - `CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md`
 - `CYCLE35_PHASE_LIFT_CONTRAST.md`
 - `CYCLE39C_WIDEST_PATH_FAST.md`
-- `FINAL_SELECTION_THEOREM.md`
+- `../../archive/discovery-summaries/FINAL_SELECTION_THEOREM.md`

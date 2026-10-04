@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 cache-aware vs cache-blind below-root ordering — result
 
-Prereg: `docs/10X10_CACHE_AWARE_VS_BLIND_BELOW_ROOT_PREREG.md`
+Prereg: `research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_VS_BLIND_BELOW_ROOT_PREREG.md`
 Branch: `preregister-10x10-cache-aware-vs-blind-below-root`
 Start SHA: `21e7bfe` (= stated prereg head; base `80b734b` confirmed).
 End SHA: `54af4a5` (4 commits on top of prereg head; full: `54af4a563fb3b88b3873c16921dd4066a079f69c`).
 
-One binary (`tmp-kb/order_ab_native`, `g++ -O2 -std=c++20`, Ubuntu 13.3.0),
+One binary (`research/experiments/solver-benchmarks/bin/order_ab_native`, `g++ -O2 -std=c++20`, Ubuntu 13.3.0),
 runtime switch `--below-root-order cache-aware|cache-blind` (default
 `cache-aware`). Diff touches only `scripts/probe_parts/`:
 

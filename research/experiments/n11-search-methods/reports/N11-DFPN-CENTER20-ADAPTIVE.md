@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # central 20 replies: adaptive s5 budget での再 sweep
 
 **11x11 の勝敗は UNKNOWN のまま。**
@@ -7,7 +9,7 @@
 （L44/L56, exact-budget=200k, WIN 0 / LOSS 0 / TIMEOUT 20）と
 比べ、**探索の到達点が若干ORDER 改善している**。
 
-- script: `research/verification/scripts/dfpn_center20_adaptive_sweep.sh`
+- script: `research/experiments/n11-search-methods/scripts/dfpn_center20_adaptive_sweep.sh`
 - 機械: WSL / g++ -O3 -march=native、16 cores / 19 GB RAM
 - memo: 2^26 = 67,108,864（shared TT、20 root 連続）
 - budget: 60 s / root、ROUNDS=1、L72、exact-retries=1、publish=root

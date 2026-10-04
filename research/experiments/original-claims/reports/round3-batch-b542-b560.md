@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B542–B560（B542 / B546 / B550 / B555 / B556 / B560 の6件のみ）
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B542, B546, B550, B555, B556, B560。
-前回個票: `research/verification/round2-batch-b531.md`。
-既存データ: `research/verification/round3_chunk8_tworow.json`（2行盤 B542/B546/B550）、
-`research/verification/round3_chunk8_3row.json`（3行盤 B555/B556/B560）。
-先行スクリプト: `scripts/round3_chunk8_c_tworow.py`, `scripts/round3_chunk8_d_3row.py`,
-`scripts/round3_chunk8_lib.py`（本回は再実行していない。読み取りのみ）。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B542, B546, B550, B555, B556, B560。
+前回個票: `research/experiments/original-claims/reports/round2-batch-b531.md`。
+既存データ: `research/experiments/original-claims/output/round3_chunk8_tworow.json`（2行盤 B542/B546/B550）、
+`research/experiments/original-claims/output/round3_chunk8_3row.json`（3行盤 B555/B556/B560）。
+先行スクリプト: `../scripts/round3_chunk8_c_tworow.py`, `../scripts/round3_chunk8_d_3row.py`,
+`../scripts/round3_chunk8_lib.py`（本回は再実行していない。読み取りのみ）。
 
 （本ファイルは逐次追記する。）
 
@@ -18,7 +20,7 @@
   完全な順序型分類は構成していない（第 128–135 行）。
 - 今回の範囲: 2 行盤 m=6..12 の全初手（2m 個、合計 126 初手）に対し、
   **勝ち応答列の集合そのもの**を全数列挙して 4 種の規則を評価。
-  データ: `round3_chunk8_tworow.json` の `b542`（`scripts/round3_chunk8_c_tworow.py` が既に出力済み。本回は再実行せず読み取りのみ）。
+  データ: `../output/round3_chunk8_tworow.json` の `b542`（`../scripts/round3_chunk8_c_tworow.py` が既に出力済み。本回は再実行せず読み取りのみ）。
 - 証拠:
   - m=7..12 では **すべての初手に対して勝ち応答列が全列 {0,…,m−1} に一致**。
     `min_win_count = max_win_count = m`（m=7 で 7/7、m=12 で 12/12）。したがって
@@ -41,7 +43,7 @@
 - 前回の一手: 許される整数ずらし t の連続成分数を数え、解釈 (ii)（整数直線、t 無制限）で
   成分数 ≥3 の配置が m=5: 0/6、m=6: 12/64、m=7: 128/320、m=8: 538/1058（第 165–172 行）。
 - 今回の範囲: 3 対 3 の**全安全配置の完全列挙**（サンプリングではない）、m=5,6,7,8,9。
-  ずらし窓は |t| ≤ 40。データ: `round3_chunk8_tworow.json` の `b546`。
+  ずらし窓は |t| ≤ 40。データ: `../output/round3_chunk8_tworow.json` の `b546`。
 - 証拠（反例）:
   - **m=5: 安全 3 対 3 配置は 6 件すべてで成分数 = 2**（`comps_hist = {"2": 6}`、最大 2）。
     例 A={0,1,2}, B={1,3,4}: Σ₂(A)={1,2,3}, Σ₂(B)={4,5,7} で禁止ずらし {1,2,3}、
@@ -71,7 +73,7 @@
   36,544 / 61,711 / 100,338）について 2 種の平行移動を状態ごとに全数照合。
   (L) 局所平行移動 `(A,B)→(A+1,B+1)`、(S) 左寄せ正規形 `min(A∪B)=0` への平行移動。
   両端マージン別（margin = min(lo, m−1−hi)）の ok/fail を記録。
-  データ: `round3_chunk8_tworow.json` の `b550`（m=13 は今回新規）。
+  データ: `../output/round3_chunk8_tworow.json` の `b550`（m=13 は今回新規）。
 - 証拠:
   - **m≥9（9,10,11,12,13）では両方の判定が全状態で ok、fail は 1 つも無い。**
     margin 0（端に接している状態）すら例外ではない。m=13 で 100,338 状態すべて
@@ -101,7 +103,7 @@
   「部分勝ちのみ」の分離を既存データで行い、予想の前提側が崩れたと判明した）
 - 前回の一手: m=3..10 の W 密度が 1.0, 0.5, 0, 0.667, 0.524, 0, 0.370, 0.867 と振動し 1/3 への収束傾向が無い。
   「密度 0 の m=5,8 は空盤が P（W=∅）。**部分勝ち局面のみでの密度も未分離**。大 m 要」（第 247–252 行）。
-- 今回の範囲: 既存 `round2_b531.json` の `b551_3row.three_row`（m=3..10 の**完全** Grundy、状態数最大 1,122,442）を
+- 今回の範囲: 既存 `../output/round2_b531.json` の `b551_3row.three_row`（m=3..10 の**完全** Grundy、状態数最大 1,122,442）を
   再解析。round3 の `round3_chunk8_3row.json` は出力されていない（`round3_chunk8_d_3row.py` は
   docstring で m=11,12 を計画したが未実行）。したがって**新しい m は得られていない**。
   解析項目: (a) 全盤密度、(b) g0≠0（部分勝ち）のみ、(c) B554 の族 m=3t+1 に限定した密度と帯の重なり。
@@ -134,7 +136,7 @@
 - 前回の一手: W の幾何が確かに非周期的（m=6 内部帯 12 点、m=7 十字 11 点、m=9 端寄り 10 点、
   m=10 ほぼ全面 26 点、同じ g でも W が全く違う）。ただし**前提の「周期が続いても」は偽**
   （B551: g 自体が m=9 で周期を破る）。「g 周期と W 非周期の共存は未確認」（第 254–260 行）。
-- 今回の範囲: 既存 `round2_b531.json` の `three_row`（m=3..10 完全計算）を g 値でクラス分けし、
+- 今回の範囲: 既存 `../output/round2_b531.json` の `three_row`（m=3..10 完全計算）を g 値でクラス分けし、
   **同じ空盤 nimber を持つ m 同士**で W の列パターン（各列の勝ち行集合）を比較。
   新規計算なし（既存 JSON の再解析のみ）。
 - 証拠:
@@ -168,7 +170,7 @@
 - 前回の一手: m=6,7 で円四点組を 2+2 型（行占有 (2,2)）と 2+1+1 型（(2,1,1)）に分離し、
   各型のみ・両型・全型の W を比較。m=6 では相乗（片方のみ W=∅、両型で W=10 点）。
   m=7 では 2+2 単独で既に W=15 点（内部帯）→ 2+2 型単独で見え、併用でむしろ消える（第 288–297 行）。
-- 今回の範囲: 既存 `round2_b531.json` の `b551_3row.b560`（m=6,7 の 4 変種 × 完全 Grundy）を再照合し、
+- 今回の範囲: 既存 `../output/round2_b531.json` の `b551_3row.b560`（m=6,7 の 4 変種 × 完全 Grundy）を再照合し、
   W を**座標集合として**展開して内部帯（x ∈ {1,…,m−2}）の存否を判定。
   標準 W との整合は照合済み（m=6, m=7 とも True）。新規計算なし。
 - 証拠:
@@ -235,8 +237,8 @@ B560（m=8,9,10 の 2+2 / 2+1+1 分割 → 型依存の m 依存性）の 3 件�
 ### 書出しの制約に関する注記
 - 本作業は指示どおり**重い計算を一切行っていない**。既存スクリプトは読み取りのみ
   （`round3_chunk8_c_tworow.py`, `round3_chunk8_d_3row.py`, `round3_chunk8_lib.py`）。
-- 読み取った既存データ: `research/verification/round3_chunk8_tworow.json`（2 行盤 / b542, b546, b550）、
-  `research/verification/round2_b531.json`（3 行盤 / b551_3row.three_row, b560）。
-  **`research/verification/round3_chunk8_3row.json` は存在しない**（先行エージェントが未実行）。
+- 読み取った既存データ: `research/experiments/original-claims/output/round3_chunk8_tworow.json`（2 行盤 / b542, b546, b550）、
+  `research/experiments/original-claims/output/round2_b531.json`（3 行盤 / b551_3row.three_row, b560）。
+  **`research/experiments/original-claims/output/round3_chunk8_3row.json` は存在しない**（先行エージェントが未実行）。
   よって 3 行盤 3 件は round2 データを再解析する形でのみ前進した。
-- 既存ファイル（`hypothesis-bank-*.md`, `PROTOCOL.md`, `SUMMARY.md`, round2 個票）は編集していない。
+- 既存ファイル（`hypothesis-bank-*.md`, `../../../archive/claim-audit-history/PROTOCOL.md`, `../../../archive/claim-audit-history/SUMMARY.md`, round2 個票）は編集していない。

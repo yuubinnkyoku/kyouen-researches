@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B071〜B075: 被覆上限の必須欠損と交差上限の鋭さ
 
 作成: 2026-09-30。**B071・B072・B075 SUPPORTED、B073 REFUTED。**
@@ -93,11 +95,11 @@ Tの円はx²+y²−4x−8y+15=0、Uの円はx²+y²−4x−4y+3=0。
 
 ## 再現
 
-[証明書](round45_cover_verified.json)には両証人の全座標、反転係数、三点族、直線数、円係数、
+[証明書](../output/round45_cover_verified.json)には両証人の全座標、反転係数、三点族、直線数、円係数、
 全検算入力のSHA-256を保存した。巨大盤の全点を列挙する必要はなく、
 原文の安全性・被覆数・空点交差を有限個の整数行列式で直接確認できる。
 
-    python research/verification/scripts/round45_cover_sharpness.py
+    python research/experiments/original-claims/scripts/round45_cover_sharpness.py
 
 δの大kでの線形・超線形下界は別のround6の一般定理を優先する。
 今回の定数3の鋭さは六石での結果であり、B352の固定冪増大を解決したという意味ではない。

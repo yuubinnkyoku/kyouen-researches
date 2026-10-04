@@ -1,3 +1,5 @@
+> **実験一次資料**：当時のpreregistration・分析・判定です。現在知識の唯一の正本は[knowledge](../../../../../../knowledge/README.md)です。
+
 # Frozen reserve validation: C-K10-asc staged search
 
 Status: preregistered before inspecting or generating any exact/probe outcomes for reserve parents ranks 13-24.

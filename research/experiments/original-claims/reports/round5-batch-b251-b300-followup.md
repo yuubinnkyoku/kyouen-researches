@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B251-B300 追撃（followup）
 
-対象: research/verification/round5-batch-b251-b300.md の残余 PARTIAL / INCONCLUSIVE / NOT-CHECKED 29 件。
+対象: research/experiments/original-claims/reports/round5-batch-b251-b300.md の残余 PARTIAL / INCONCLUSIVE / NOT-CHECKED 29 件。
 スクリプト: scripts/round5_b251_n6_orbit.cpp, scripts/round5_b286_coord.cpp, scripts/round5_b288_frac_lp.py
-データ: research/verification/round5_b251_n6_orbit.json ほか
+データ: research/experiments/original-claims/output/round5_b251_n6_orbit.json ほか
 
 優先: (1) B251-B258 の n=6 解除、(2) B273-B274/B276/B278-B279 の弱化、(3) B286-B287/B290 の数論・LP 探索。
 
@@ -264,9 +266,9 @@
 - 混合行列: n=4 5,811 状態、scipy.sparse eigs
 
 ## データ
-- `round5_b251_n6_orbit.json`（scratchpad/r5b251/ にも保存）
-- `round5_b286_coord.json`
-- `round5_b288_frac_lp.json`
-- `round5_b278_mixing.json`
-- `round5_b276_order.json`
-- `round5_b283_split.json`
+- `../output/round5_b251_n6_orbit.json`（scratchpad/r5b251/ にも保存）
+- `../output/round5_b286_coord.json`
+- `../output/round5_b288_frac_lp.json`
+- `../output/round5_b278_mixing.json`
+- `../output/round5_b276_order.json`
+- `../output/round5_b283_split.json`

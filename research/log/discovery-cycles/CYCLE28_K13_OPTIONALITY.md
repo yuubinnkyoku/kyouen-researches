@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 28 — n=7 K=13 layer optionality (SAMPLE/COMPLETE mix)
 
 Solver `cycle8_b_maxsafe.exe first/count 7 13 …`.
@@ -29,4 +31,4 @@ Solver `cycle8_b_maxsafe.exe first/count 7 13 …`.
 - this note
 - `CYCLE12_K13_LAYER.md`, `CYCLE15_CAPACITY_DECOMPOSITION.md`
 - `CYCLE27_CORE_EXTENSION.md`
-- `FINAL_SELECTION_THEOREM.md`
+- `../../archive/discovery-summaries/FINAL_SELECTION_THEOREM.md`

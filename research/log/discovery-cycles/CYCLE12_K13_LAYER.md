@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 12 — n=7 size-13 occupancy (SAMPLE)
 
 Evidence: `cycle8_b_maxsafe.exe occ 7 13 --max-nodes 5e6`
@@ -26,5 +28,5 @@ Seen: 1116 safe 13-sets, **150 distinct occupancy patterns**.
 
 ## Artifacts
 - `results/cycle12_occ_k13.json`
-- `night-research/CYCLE11_ORBIT_NECESSITY.md` (K=13 COMPLETE probes)
-- `night-research/CYCLE10_OCCUPANCY_SELECTION.md`
+- `research/log/discovery-cycles/CYCLE11_ORBIT_NECESSITY.md` (K=13 COMPLETE probes)
+- `research/log/discovery-cycles/CYCLE10_OCCUPANCY_SELECTION.md`

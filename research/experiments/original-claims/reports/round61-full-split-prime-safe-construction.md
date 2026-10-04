@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # round61: p≡1 mod4でKp≥p、全パラメータの安全性を短く証明
 
 **B088 PARTIAL。** 無限族の線形下界を独立に構成したが、原文の2n−O(1)石には届かない。
@@ -53,8 +55,8 @@ B089に用いた素数部分列の差の下界をp/4−o(p)からp−o(p)へ強�
 
 ## 再現
 
-`python research/verification/scripts/round61_split_prime_construction.py`
+`python research/experiments/original-claims/scripts/round61_split_prime_construction.py`
 
 5..101の全1 mod4素数について全三点・全四点の整数行列式とVandermonde合同式を照合する。
-座標・組数・依存ハッシュは`round61_split_prime_verified.json`。
+座標・組数・依存ハッシュは`../output/round61_split_prime_verified.json`。
 無限族の根拠は上の一般証明であり、有限検査の延長を全称証明としていない。

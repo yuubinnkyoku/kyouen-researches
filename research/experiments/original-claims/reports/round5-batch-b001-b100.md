@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B001-B100
 
 対象: research/hypothesis-bank-*.md の B001〜B100（未解決 50 件）。
 スクリプト: scripts/round5_b001_*.py
-データ: research/verification/round5_b001_*.json
+データ: research/experiments/original-claims/output/round5_b001_*.json
 テーマ: 基礎・初手表・nimber・J_n 前史・最大安全サイズ・勝敗分類。
 n≤6 の完全列挙が有効。B002/B007-B010/B016 は n≥7 の初手表（既存データを読む）。
 
@@ -560,16 +562,16 @@ R(S) 分解未移植の群（B029, B054, B058-B059, B066, B070）、
 漸近命題の群（B008-B009, B083, B085, B095-B096）など。
 
 ### 計算スクリプト
-- `scripts/round5_b001_g2.cpp` — 二石 Grundy（n=5 自己検査一致、n=6 完了）
-- `scripts/round5_b001_b032.py` — n=5 T* 全数
-- `scripts/round5_b001_b077.py` — n=4,5 極大集合の b_S(p) 全数
-- `scripts/round5_b001_b079.py` — n=5..10 三つ組補完点数
+- `../scripts/round5_b001_g2.cpp` — 二石 Grundy（n=5 自己検査一致、n=6 完了）
+- `../scripts/round5_b001_b032.py` — n=5 T* 全数
+- `../scripts/round5_b001_b077.py` — n=4,5 極大集合の b_S(p) 全数
+- `../scripts/round5_b001_b079.py` — n=5..10 三つ組補完点数
 
 ### データ
 - `round5_b001_b024.json` — n=6 二石 nimber
-- `round5_b001_b032.json` — n=5 T*
-- `round5_b001_b077.json` — n=4,5 極大集合分析
-- `round5_b001_b079.json` — n=5..10 三つ組補完
+- `../output/round5_b001_b032.json` — n=5 T*
+- `../output/round5_b001_b077.json` — n=4,5 極大集合分析
+- `../output/round5_b001_b079.json` — n=5..10 三つ組補完
 
 ### 最も有望な次の一手
 1. **B022 の M_7(1) 計算** — 49 局面の 1 石 g。σ_7 の下限が決まる

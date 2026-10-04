@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 11x11 exact DFS: move ordering A/B on the fixed s5 benchmark
 
 **11x11 の勝敗は UNKNOWN のまま。**

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # round53/56: 十盤八石を全域除外、9≤s10≤10
 
 **B093 PARTIAL、s10∈[9,10]。** 九石極大の存在・不在が残る。
@@ -50,6 +52,6 @@ D4でこの軸を縦にし、最初の行を左右反転すれば、最小添字
 
 実行コード`round56_resume_run.py`は親ファイル・ソース・開始境界のハッシュを保存。
 `round56_complete_chain_audit.py`は全五連鎖と独立検算の依存関係を照合し、
-`round56_complete_verified.json`を生成する。
+`../output/round56_complete_verified.json`を生成する。
 各打切り・完了のraw JSON、コード、有限検算を全て保存しており、
 UNKNOWNをCOMPLETEへ書き換える操作はしていない。

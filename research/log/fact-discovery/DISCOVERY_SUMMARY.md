@@ -1,6 +1,8 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 未発見事実の探索 — 総括 (branch research/explore-unknown-facts-20260925-0034)
 
-本セッションで新規に発見・検証した非自明な事実。詳細な証拠は `research/findings.md` の F-K 以降。
+本セッションで新規に発見・検証した非自明な事実。詳細な証拠は `research/archive/hypothesis-ledgers/findings.md` の F-K 以降。
 
 ## 新発見サマリ
 
@@ -53,10 +55,10 @@
 ## 実装物
 
 - `scripts/analysis/explore_*.py` — 各探索スクリプト
-- `night-research/maximal_spectrum_enum.cpp` — 極大全数列挙 (n=3..6 完了)
-- `night-research/list_maximal_size.cpp` — 指定サイズ極大一覧
-- `research/exploration/*.json` — 生データ
-- `research/findings.md` — F-K 以降に本発見の正本
+- `research/experiments/structural-discovery/scripts/maximal_spectrum_enum.cpp` — 極大全数列挙 (n=3..6 完了)
+- `research/experiments/structural-discovery/scripts/list_maximal_size.cpp` — 指定サイズ極大一覧
+- `research/experiments/fact-discovery/output/*.json` — 生データ
+- `research/archive/hypothesis-ledgers/findings.md` — F-K 以降に本発見の正本
 
 ## 未解決 (次のサイクル)
 

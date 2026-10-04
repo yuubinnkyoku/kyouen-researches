@@ -1,22 +1,24 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B285-B290, B321-B335, B363-B366
 
-対象: `research/hypothesis-bank-2026-09-27.md` (B285-B290) および
-`research/hypothesis-bank-round2-2026-09-27.md` (B321-B335, B363-B366)。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md` (B285-B290) および
+`research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` (B321-B335, B363-B366)。
 
 書出しのみ（既存のスクリプト / JSON / 前回個票を読むだけで、新しい重い計算はしていない）。
-使用データ: `research/verification/round2_b321.json`, `round2_b351.json`,
-`round3_chunk6_wft.json`, `night-research/cycle5-grundy-n{2..6}.json`, `round3_unresolved.json`。
+使用データ: `research/experiments/original-claims/output/round2_b321.json`, `../output/round2_b351.json`,
+`../output/round3_chunk6_wft.json`, `research/experiments/structural-discovery/output/cycle5-grundy-n{2..6}.json`, `../output/round3_unresolved.json`。
 
 ---
 
 ## B285 [存在] 同じ安全配置を異なる盤に埋めるとnimberが3値以上変わる
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「同一 S を n=5,6,7 の原点近傍に置いたときの g(S) の違いは既存 grundy 実装で直接測れる。3 値以上かは数値で即決するので着手しやすい。」
-- 今回の範囲: 本Round3は書出し専用のため新規計算なし。`night-research/cycle5-grundy-n{2..6}.json` の構造を実際に読んだ。
+- 今回の範囲: 本Round3は書出し専用のため新規計算なし。`research/experiments/structural-discovery/output/cycle5-grundy-n{2..6}.json` の構造を実際に読んだ。
 - 証拠: なし。`cycle5-grundy-n*.json` が持つのは `layer_profiles[k].grundy_hist` という
   **層ごとの個数ヒストグラム**（例: n=4 k=2 は count=120 で hist `{0:84, 2:20, 3:8, 5:8}`）であり、
   個別局面の g を復元できる形では保存されていない。同一 S を n をまたいで並べる対応表を作れない。
-  さらに n=7 は `night-research/cycle6-saturation-n7.json` / `cycle6-saturation-n7-shallow.json` /
+  さらに n=7 は `research/experiments/structural-discovery/output/cycle6-saturation-n7.json` / `cycle6-saturation-n7-shallow.json` /
   `cycle6-saturation-n7-k14.json` の3ファイルが**すべて 0 バイト**で、層データの実体が存在しない。
 - 残った障害: 「3 値以上」という存在主張には同一 S の n=4,5,6,7 の対応表が要るが、
   既存の確定事実（最大 nimber n=2..6 = 1,1,5,6,8）は盤ごとの**最大値**の集計であって対応表ではない。
@@ -28,11 +30,11 @@
 ## B286 [構造] 座標絶対値を圧縮した同型実現がある
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「k 点構成の Q を保つ最小格子辺長を k≤8 で数え、k^{O(1)} の候補多項式に載るかを見る。」
-- 今回の範囲: 既存データのみ。`research/verification/*.json` 全 48 ファイルと
-  `research/verification/scripts/*.py` の docstring を走査し、禁止族の整数実現の
+- 今回の範囲: 既存データのみ。`research/experiments/original-claims/output/*.json` 全 48 ファイルと
+  `research/experiments/original-claims/scripts/*.py` の docstring を走査し、禁止族の整数実現の
   最小格子辺長を測るデータ・コードの有無を確認した。
-- 証拠: なし。`batch-10.md` は本項目を「未着手 (B287 と競合)」。
-  `round2_b351.json` に近い値があるのは（`n8_witness_light.n_empty = 56`、
+- 証拠: なし。`../../../log/claim-audit/batch-10.md` は本項目を「未着手 (B287 と競合)」。
+  `../output/round2_b351.json` に近い値があるのは（`n8_witness_light.n_empty = 56`、
   `n8_15stone` の 15 石の座標最大 61、`n7_k14` の 14 石の座標最大 42）だが、いずれも
   **ある盤 rash 内の点 id** であり、禁止族の同型実現に必要な最小格子辺長とは別の量である
   （盤 rash の拡大と絶対座標の圧縮は混ぜられない）。
@@ -70,17 +72,17 @@
   pure-Python simple-simplex / 分岐限界で解く実装、の双方が必要。
   ROUND3-PROTOCOL.md の「scipy 不在、pulp を使わない、自前 simple-simplex」は B431–B434 向けの指示で、
   B288 の重み系は未実装。なお B288 の主張は「鋭い上限」＝ loose でないことなので、
-  `round2_b351.json` の `n6_k11`（464 件の K=11 証人）だけでは K_6=11 の真值为 anyways 分からず、
+  `../output/round2_b351.json` の `n6_k11`（464 件の K=11 証人）だけでは K_6=11 の真值为 anyways 分からず、
   上界が正しいかの検証もできない。
 
 ## B289 [存在] 容量上限が同じでも整数配置では達成不能になる
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「円・直線ごとの「高々 3 点」分数緩和値と K_n の差を n=2..10 の既知 K で表にすれば最初の観測になる。」
-- 今回の範囲: 既存データのみ。B288 と同じ LP / 被覆データ走査。加えて `round2_b351.json` の
+- 今回の範囲: 既存データのみ。B288 と同じ LP / 被覆データ走査。加えて `../output/round2_b351.json` の
   `boards.*.max_b_by_k`（格子上の最大重複被覆 b の k 別の表）を読み、
   実数側の orchard 上界 t_3(k) = floor(k(k-3)/6) + 1 と突き合わせた（既存の数値の読み取りのみ）。
 - 証拠: 「円・直線ごと高々 3 点」分数緩和値の記録は既存 JSON に存在しない（なし）。
-  ただし関連事実として、`round2_b351.json` の `boards.*.max_b_by_k` は
+  ただし関連事実として、`../output/round2_b351.json` の `boards.*.max_b_by_k` は
   n=6 全盤で k=6..11 の b_max が 3, 5, 7, 9, 11, 10、n=7 K=14 で 10、n=8 の 15 石で 10、
   n=5 全盤で k=5..9 が 2, 4, 5, 6, 6。t_3(k) は
   k=9: 10, k=10: 12, k=11: 15, k=14: 26, k=15: 31 なので、b_max < t_3 は
@@ -89,7 +91,7 @@
   **比較の基準となる分数緩和値そのものが未計算**。B288 の重み付け LP が書けるまでは B289 は先取りされる。
   上記 4 例は「有理点 vs 実数点」の差の一断面であり、本命題が問うのは
   「差が n とともに無限に大きくなる」ことなので、n 依存の列（無限格子上での k→∞）が必要。
-  `round2_b351.json` は k ≤ 15 の正方形盤の有限走査しか持たない
+  `../output/round2_b351.json` は k ≤ 15 の正方形盤の有限走査しか持たない
   （`boards.n6_all` は 5,081,289 集合まで走査しているが k は 11 まで）。
   なお B354（別担当）が同じ「格子 vs 実数」の差を扱っており、結果の共有が可能。
 
@@ -98,7 +100,7 @@
 - 前回の一手: 「n≤10 の既知 K_n を目標に、単円+単直線+小円束の不等式系を数値的に満たすか検証。B288 の続きで実装共有。」
 - 今回の範囲: 既存データのみ。B288 / B289 と同じ既存 LP / 被覆データ走査。
 - 証拠: なし。交差円束の容量不等式を解いた結果の記録が存在しない。
-  近い既存データとして `round2_b351.json` の `n8_claim_witness_only` は
+  近い既存データとして `../output/round2_b351.json` の `n8_claim_witness_only` は
   `B371_has_collinear=true, B372_has_2dirs=true, B373_touch_2sides=true,
   B374_no_corner=false, B378_del_exactly1=false, B376_cov_note="greedy 24 circles, collinear 3"`
   という 8×8 の 15 石証人の幾何記述に過ぎず、上限の証明ではない。
@@ -113,8 +115,8 @@
 ## B321 [全称・大胆] 飽和開始層で欠けるnimberは連続しない
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。ラベルは動かないが検査範囲は広がった）
 - 前回の一手: 「穴を持つ盤は n=4,6 のみで、どちらも連続欠落なし。n≥7 の σ 層 (σ_7 未決定) が本当の試金石。全 n なので PARTIAL。」
-- 今回の範囲: 既存データ `round2_b321.json` → `holes_by_n`（n=2..6 の σ 層）に加え、
-  `night-research/cycle5-grundy-n{2,3,4,5,6}.json` の `layer_profiles[k].grundy_hist` を
+- 今回の範囲: 既存データ `../output/round2_b321.json` → `holes_by_n`（n=2..6 の σ 層）に加え、
+  `research/experiments/structural-discovery/output/cycle5-grundy-n{2,3,4,5,6}.json` の `layer_profiles[k].grundy_hist` を
   **σ 層以外の全層**について読み、穴を列挙（書出しのみ。既存の層ヒストグラムの再読）。
 - 証拠: σ 層は前回と同一（`sigma_computed` と `sigma_given` は n=2..6 で全一致）。
   n=2: K=3, σ=2, 出現{1}, 穴{0} / n=3: K=5, σ=4, 出現{1}, 穴{0} /
@@ -129,7 +131,7 @@
   n=6 k=3 は count=7,140 で hist `{0:5336, 1:16, 2:980, 3:60, 5:716, 6:16, 7:8, 8:8}`（4 欠落）。
   穴を持つ層は n=2 の k=0,2 / n=3 の k=0,2,4 / n=4 の k=1,2 / n=5 の k=0,1 / n=6 の k=0,2,3 の計 11 層。
 - 残った障害: 判定は PARTIAL のままで、理由は前回と同一 —— **σ_7 が未決定**
-  （`night-research/cycle6-saturation-n7*.json` が 3 ファイルとも 0 バイト）なこと。
+  （`research/experiments/structural-discovery/output/cycle6-saturation-n7*.json` が 3 ファイルとも 0 バイト）なこと。
   n=6 は `cycle5-grundy-n6-cap14.json` が `capped_at_stones=14` だが列挙は k=11 で終わっているので
   K_6=11 の層は完全であり、n≥7 だけが障碍。
   ただし今回の全層走査は命題の適用範囲の境界を1つ動かした。n=5 の k=1 層は穴が {1,2} で連続対を持ち、
@@ -141,8 +143,8 @@
 ## B322 [全称・大胆] 飽和開始層で欠ける正のnimberは2の冪だけ
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。ラベルは動かないが全層で支持範囲が広がった）
 - 前回の一手: 「n=6 の穴が {4} 単独、n=4 が {1,4} で 2 が「穴にならない」ことは、mex により 2 が子に必ず出る事実と整合。n≥7 未検証。」
-- 今回の範囲: `round2_b321.json` → `B322` / `holes_by_n`（n=2..6 の σ 層）＋
-  `night-research/cycle5-grundy-n{2..6}.json` の全 40 層の `grundy_hist` の穴。
+- 今回の範囲: `../output/round2_b321.json` → `B322` / `holes_by_n`（n=2..6 の σ 層）＋
+  `research/experiments/structural-discovery/output/cycle5-grundy-n{2..6}.json` の全 40 層の `grundy_hist` の穴。
 - 証拠: σ 層の正の欠落は n=4 で {1, 4} = {2⁰, 2²}、n=6 で {4} = {2²}、n=2,3,5 は正の欠落なし。
   非 2 の冪の欠落は 0 件（`B322.all_missing_positive_are_pow2 = true`）。
   **新規**: σ 層以外の層でも正の欠落はすべて 2 の冪 —
@@ -160,7 +162,7 @@
 ## B325 [存在・大胆] 天井達成局面は合法手数の小さい余裕で作れる（|L| ≤ h + C）
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。判定材料は増えたが方向は変わらない）
 - 前回の一手: 「絶対定数 C 付きの漸近族は小盤では見えない。むしろ min(|L|−h) は h に対して増加する傾向。存在命題なので反例にはならないが、支持材料は「低い h で C が小さい」まで。n≥7 の高 h 層が次のデータ。」
-- 今回の範囲: `round2_b321.json` → `ceiling_followup.{4,5}.B325_by_h`
+- 今回の範囲: `../output/round2_b321.json` → `ceiling_followup.{4,5}.B325_by_h`
   （g=h を満たす局面を h 別に全数集計、n=4 で 4,434 件、n=5 で 112,948 件）の
   `min/p10/median(|L|−h)` と `best_examples` の実値を再読。
 - 証拠: **min(|L|−h) は h とともに単調増加する**。
@@ -179,13 +181,13 @@
   **支持材料にならないばかりか逆向きの兆候**になっている。
   ただし h の増加が層厚の疎化（候補数の減少 16,860 → 72）と混ざっているため、
   傾きの真の符号は n=6,7 の高 h 層で決まる。
-  n=6,7 の g=h 天井層は `round2_b321.json` に無い（`ceiling_stats` は n=4,5 のみ）ため、
+  n=6,7 の g=h 天井層は `../output/round2_b321.json` に無い（`ceiling_stats` は n=4,5 のみ）ため、
   既存データでは SUPPORTED に倒数できない。
 
 ## B327 [存在] 局所天井への不足が一手で大きく減る
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。一手の効果自体は確認済みだが「任意に大きくなる」との間には大きい溝がある）
 - 前回の一手: 「「一手で消える」は明確に確認。不足そのものを任意に大きくできる族は未構成 (n≤5 の最大 h は 6–7 で頭打ち)。」
-- 今回の範囲: `round2_b321.json` → `ceiling_stats.{4,5}.B327`（n=4,5 の全到達局面で
+- 今回の範囲: `../output/round2_b321.json` → `ceiling_stats.{4,5}.B327`（n=4,5 の全到達局面で
   d = h(S) − g(S) ≥ 2 かつ「ある子で不足 0」となる S の全数探索。n=4 は 5,811 局面、n=5 は 151,394 局面）。
 - 証拠: `max_deficit_with_zero_child` は **n=4 で 5**、**n=5 で 7**。
   該当局面の総数は n=4 で **1,340 件**、n=5 で **37,268 件**（前回は最大 d のみを報告していたので個数は新情報）。
@@ -200,12 +202,12 @@
   観測された h=7 が n=5 の局所天井の絶対最大付近である点が重要で
   （`ceiling_stats.5.K_global = 9`、`max_g = 6`、h = K−k ≤ 8）、
   d の無制限化には K_n を大きくする n を増やすしかない。
-  n=6,7 の g=h 天井層は `round2_b321.json` に無い（`ceiling_stats` は n=4,5 のみ）。
+  n=6,7 の g=h 天井層は `../output/round2_b321.json` に無い（`ceiling_stats` は n=4,5 のみ）。
 
 ## B329 [構造] nimberの穴は子の値集合の必須対で説明できる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。前回は列挙を見送っていた全パターン表が読めた）
 - 前回の一手: 「mex 恒等式そのものは自明なので数えない。観測された幾何的制約。n=6 の σ 層 (欠落 {4}) は per-position g が必要で未検査。」
-- 今回の範囲: `round2_b321.json` → `B329`（n=4 の全 120 二石集合で per-position g を計算し、
+- 今回の範囲: `../output/round2_b321.json` → `B329`（n=4 の全 120 二石集合で per-position g を計算し、
   欠落 a=1,4 の「子に 0..a−1 がそろうなら a も必ず子にある」という必須対の違反数を集計）。
   さらに `B329.{4,5}.child_value_patterns_at_sigma` を**全パターン**について読んだ。
 - 証拠: n=4, a=1: 前件（子に 0 が存在）が成り立つ **36** 局面すべてで子に 1 も存在、**違反 0**。
@@ -232,7 +234,7 @@
 ## B330 [存在] 同じ残り最大・最小手数でnimberが任意に離れる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。判定材料は前回と同一で追加情報なし）
 - 前回の一手: 「同一 (h,μ) で g が 5–6 離れる証明対は確定。幅を無限に大きくできる族は未構成。既に小さい盤で n=5 の最大 nimber 6 ちょうどの幅が出ているのは有望。」
-- 今回の範囲: `round2_b321.json` → `independent_checks.B330`（n=4,5 全局面を (h,μ) で束ね、
+- 今回の範囲: `../output/round2_b321.json` → `independent_checks.B330`（n=4,5 全局面を (h,μ) で束ね、
   同一セル内の g の幅を計算）。
 - 証拠: `max_g_spread_same_h_mu` は **n=4 で 5**、**n=5 で 6**。
   n=4: cell [5,3]（h=5, μ=3）で g=0 の occ=32770 と g=5 の occ=32896（両方 k=2）。
@@ -251,18 +253,18 @@
 ## B331 [全称・大胆] 空盤のWFTは空でなければ単元
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。板の形状の検証範囲が広がった）
 - 前回の一手: 「B040 の「非空か」とは独立に一意性も n≤5 で成立。n=6 が試金石 (T*(∅) が {7,9,11} なら WFT が単元か)。」
-- 今回の範囲: `round2_b321.json` → `wft_stats.{2,3,4,5}.B331`（n=2..5 の WFT(∅) を
+- 今回の範囲: `../output/round2_b321.json` → `wft_stats.{2,3,4,5}.B331`（n=2..5 の WFT(∅) を
   P: 子の積集合、N: 勝ち手の和集合の再帰で完全計算）。加えて
-  `round3_chunk6_wft.json` の 2×m 矩形（m=2..10）の WFT(∅) を読んだ（別担当が計算済みの既存データ）。
+  `../output/round3_chunk6_wft.json` の 2×m 矩形（m=2..10）の WFT(∅) を読んだ（別担当が計算済みの既存データ）。
 - 証拠: WFT(∅) は n=2 で {3}、n=3 で {5}、n=4 で {6}、n=5 で {7}。**すべて単元**。
   `B331.abs_WFT_le_1 = true` が n=2,3,4,5 の全 n で確認。
-  **新規**: `round3_chunk6_wft.json` の 2×m 矩形（m=2..10）でも WFT(∅) はすべて単元
+  **新規**: `../output/round3_chunk6_wft.json` の 2×m 矩形（m=2..10）でも WFT(∅) はすべて単元
   （2×2: {3}, 2×3: {4}, 2×4: {5}, 2×5: {5}, 2×6: {6}, 2×7: {6}, 2×8: {6}, 2×9: {6}, 2×10: {6}）。
   状態数も既存データで裏づけられる（2×2: 15, 2×3: 54, 2×4: 169, 2×5: 470, 2×6: 1,167,
   2×7: 2,674, 2×8: 5,635, 2×9: 11,130, 2×10: 20,675）。
   m=6..10 の 5 つの 2×m 盤で WFT(∅) = {6} が一貫して等しい。
 - 残った障害: 判定は PARTIAL のまま。全称命題だが、既存データが覆うのは n≤5 の正方形と
-  2×m (m ≤ 10) の矩形のみ。**n=6 の正方形盤の WFT(∅) は `round2_b321.json` に無い**
+  2×m (m ≤ 10) の矩形のみ。**n=6 の正方形盤の WFT(∅) は `../output/round2_b321.json` に無い**
   （`wft_stats` のキーは n=2,3,4,5 のみ）。前回メモの「n=6 が試金石」に対し、
   n=6 の WFT 計算が既存データに存在しないため判定できない。
   また 2×m で m=6..10 の WFT(∅) = {6} が一致しているのは 2×m 盤の構造的退化
@@ -271,7 +273,7 @@
 ## B333 [全称・大胆] WFT(S)の同じ偶奇の穴はない
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。判定材料なし、前件が空であることが再確認）
 - 前回の一手: 「検査はしたが判定材料がない。幅 3 以上の WFT が n≥6 か、あるいは幅 2 固定が定理なら B333 は前件空で無意味になる。」
-- 今回の範囲: `round2_b321.json` → `independent_checks.B333_gaps`（n=4,5 の全 multi-WFT 局面について
+- 今回の範囲: `../output/round2_b321.json` → `independent_checks.B333_gaps`（n=4,5 の全 multi-WFT 局面について
   ギャップ ≥ 4 の同偶奇対の間の欠落を検査。n=4: 112 局面、n=5: 5,660 局面）。
 - 証拠: `B333_gaps.4` = {n_multi: 112, width_hist: {2: 112}, gap_hist: {2: 112},
   max_gap: 2, antecedent_gap_ge4: 0}。
@@ -284,17 +286,17 @@
   命題は「t と t+4 以上を強制できるなら、その間の同じ偶奇の手数もすべて強制できる」という全称命題なので、
   前件を満たす局面が一つもなければ命題は**空に真**であり、REFUTED も SUPPORTED も言えない。
   幅 2 固定が n≤5 で観測されているに過ぎず、n=6 で幅 3 以上の WFT が出れば前件が埋まる。
-  n=6 の WFT は `round2_b321.json` に無い（`wft_stats` は n≤5 のみ）ため、
+  n=6 の WFT は `../output/round2_b321.json` に無い（`wft_stats` は n≤5 のみ）ため、
   既存データでは B333 の判定は決定できない。B332（multi-WFT 局面数）も n=6 が無い。
 
 ## B334 [存在] T*(S)が3種類でもWFT(S)は空
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。判定材料なし、非発見の追加のみ）
 - 前回の一手: 「存在命題なので非発見は反証にならないが、n=5 の全候補が WFT 空にならないことは消極的証拠。|T*|≥3 かつ |WFT|=0 にはもっと深い分岐が要る可能性。」
-- 今回の範囲: `round2_b321.json` → `wft_stats.{2,3,4,5}.B334`（n=2..5 で |T*| ≥ 3 の局面を数え、
-  それらの WFT を計算）。加えて `round3_chunk6_wft.json` の 2×m 矩形（m=2..10）の T*(∅) を読んだ。
+- 今回の範囲: `../output/round2_b321.json` → `wft_stats.{2,3,4,5}.B334`（n=2..5 で |T*| ≥ 3 の局面を数え、
+  それらの WFT を計算）。加えて `../output/round3_chunk6_wft.json` の 2×m 矩形（m=2..10）の T*(∅) を読んだ。
 - 証拠: n=2, n=3, n=4 は |T*| ≥ 3 が **0 件**。n=5 は **27 件**（B031 と一致）あるが、
   **全 27 件で WFT が非空**（`B334.n_Tstar_ge3_WFT_empty = 0`）。空盤 T*(∅)={5,7,9} も WFT={7}。
-  2×m 矩形（`round3_chunk6_wft.json`）では T*(∅) は全 m で単一値
+  2×m 矩形（`../output/round3_chunk6_wft.json`）では T*(∅) は全 m で単一値
   （2×2: {3}, 2×3: {4}, 2×4: {5}, 2×5: {5}, 2×6..2×10: {6}）であり、
   矩形では |T*| ≥ 3 の状況哮も存在しない。
 - 残った障害: 判定不能。存在命題なので**非発見は反証にならない**。
@@ -308,15 +310,15 @@
 ## B335 [全称・大胆] 空盤で強制できる終局長はT*の中央値
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。板の形状の検証範囲が広がった）
 - 前回の一手: 「n=5 の非自明ケース (T* が 3 値) で中央値がちょうど強制長になるのは構造的示唆に富む。B331 とセットで n=6 を計算する価値が高い。」
-- 今回の範囲: `round2_b321.json` → `wft_stats.{2,3,4,5}.B335`（n=2..5 の WFT(∅) と T*(∅) の中央値の一致）。
-  加えて `round3_chunk6_wft.json` の 2×m 矩形（m=2..10）の T*(∅) と WFT(∅) を読んだ。
+- 今回の範囲: `../output/round2_b321.json` → `wft_stats.{2,3,4,5}.B335`（n=2..5 の WFT(∅) と T*(∅) の中央値の一致）。
+  加えて `../output/round3_chunk6_wft.json` の 2×m 矩形（m=2..10）の T*(∅) と WFT(∅) を読んだ。
 - 証拠: n=2: T*={3}, WFT={3}, 中央 3。n=3: {5}/{5}/5。n=4: {6}/{6}/6。
   n=5: T*={5,7,9}, 中央 **7**, WFT={7}。全 n で一致（`B335.match = true` が全 n で確認）。
   **新規**: 2×m 矩形（m=2..10）でも T*(∅) は全 m で単一値であり、WFT(∅) と一致する
   （2×2: {3}/{3}/3 / 2×3: {4}/{4}/4 / 2×4: {5}/{5}/5 / 2×5: {5}/{5}/5 /
   2×6..2×10: {6}/{6}/6）。
 - 残った障害: 判定は PARTIAL のまま。全称命題だが、既存データが覆うのは n≤5 の正方形と
-  2×m (m ≤ 10) の矩形のみで、**n=6 の正方形盤の T*(∅) / WFT(∅) は `round2_b321.json` に無い**。
+  2×m (m ≤ 10) の矩形のみで、**n=6 の正方形盤の T*(∅) / WFT(∅) は `../output/round2_b321.json` に無い**。
   なお「偶数個の中央二値のいずれか」という条項は n=2..5 でも 2×m (m≤10) でも発生していない
   （T* が単一値か、n=5 のように奇数個 3 値）。2×m では T* が単一値なので退化ケースしか無い。
   中央値の一致は n=5 の 3 値ケース（{5,7,9}→7）で一度「非自明」に成立しているが、
@@ -325,7 +327,7 @@
 ## B363 [存在・大胆] 故障耐性は無限に増やせる
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。判定材料は前回と同一）
 - 前回の一手: 「無限族の存在仮説。有限探索は反証しないが、標準盤では ρ=2 で頭打ちの観測。B364 と競合し、現データは B364 寄り。」
-- 今回の範囲: `round2_b351.json` → `rho`（n≤8 の全既知極大に対する ρ の完全分布。
+- 今回の範囲: `../output/round2_b351.json` → `rho`（n≤8 の全既知極大に対する ρ の完全分布。
   n=2: 4, n=3: 56, n=4: 928, n=5: 16,860, n=6: 349,596, n=7 K=14: 16, n=8: 2 を全数走査、
   合計 367,462 件）。さらに `round3_chunk6_rho.py` の docstring を読んで、
   Round3 で ρ の exact 計算が設計されていることを確認
@@ -346,13 +348,13 @@
   ρ の分布が上にシフトしている点は新しいが、それでも ρ=3 には届かない。
   `round3_chunk6_rho.py` の docstring は「15 石の 8×8 証人とその D4 像を使った一般化被覆構成で
   k を 20 まで持ち上げ、r 増加の ρ≥r を探す」と設計しているが、
-  **その出力 JSON `round3_chunk6_rho.json` は `research/verification/` に不在**。
+  **その出力 JSON `round3_chunk6_rho.json` は `research/experiments/original-claims/output/` に不在**。
   ρ=3 の構成（より広い格子での被覆設計）が未実行のため、B363 の証人は未発見のまま。
 
 ## B364 [全称・大胆] 標準盤の極大配置の故障耐性は高々3
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。判定材料は前回と同一）
 - 前回の一手: 「むしろ ρ≤2 という強い版が小盤で成立。B363 が真なら n 増大で ρ≥3 が現れるはず。」
-- 今回の範囲: `round2_b351.json` → `rho`（n≤8 の全既知極大 367,462 件の ρ の完全分布。前回と同じ）。
+- 今回の範囲: `../output/round2_b351.json` → `rho`（n≤8 の全既知極大 367,462 件の ρ の完全分布。前回と同じ）。
 - 証拠: 実際は **ρ ≤ 2** までしか観測されていない
   （`rho_hist` に ρ=3 のエントリは全 n で不在）。ρ=3 の反例は 0 件。
   「高々3」はこの範囲では偽とならない。n≥7 の極大が未列挙なので全称は未証明。
@@ -371,16 +373,16 @@
 ## B365 [統計] 最大集合でも故障耐性の高い配置は変形しにくい
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「ρ=2 群（n=5 k=9 の 16 件と n=6 k=10/11 の 336 件）で swap 近傍の大きさを測れば可。」
-- 今回の範囲: 既存データのみ。`round2_b351.json` → `rho`（ρ=2 の全 368 件を特定済み）と、
-  既存の 1-swap データ（`round2_b441.json` の `conn_1swap` / `disc_1swap`）の有無を確認。
+- 今回の範囲: 既存データのみ。`../output/round2_b351.json` → `rho`（ρ=2 の全 368 件を特定済み）と、
+  既存の 1-swap データ（`../output/round2_b441.json` の `conn_1swap` / `disc_1swap`）の有無を確認。
 - 証拠: ρ=2 の全 368 件が `rho.*.rho_ge2_witness` で列挙されている
   （n=5 k=9: 16 件, n=6 k=10: 168 件, n=6 k=11: 168 件, n=7 k=14: 16 件）。
-  **同じ (k,b) をそろえた ρ=1 群の swap 近傍の測定は `round2_b351.json` に無い**。
+  **同じ (k,b) をそろえた ρ=1 群の swap 近傍の測定は `../output/round2_b351.json` に無い**。
   `round3_chunk6_rho.py` の docstring は
   「B365: ρ と最大集合族内の 1 石移動の数の相関を、**平均 b をそろえた上で**測る
   （round2 の試行には control がなかった）」と設計しているが、
   **その出力 JSON `round3_chunk6_rho.json` は不在**。
-  `round2_b441.json` の `conn_1swap=39` / `disc_1swap=179` / `max_comps_1swap=7` は
+  `../output/round2_b441.json` の `conn_1swap=39` / `disc_1swap=179` / `max_comps_1swap=7` は
   1-swap 連結性のための別問題（B441 の主題）で、ρ との相関は取られていない。
 - 残った障害: 着手不能。「同じ n, K_n と b の平均をそろえても ρ が高いほど
   一石移動の次数が小さい」という**統計的相関**の命題で、
@@ -396,7 +398,7 @@
 ## B366 [構造] 各空点の故障耐性は線形三つ組族の横断数で説明できる
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「τ の計算自体は行った（`tau_per_empty`）が、「幾何的な族の τ が同じ k,b の任意線形族より小さい」という比較は未実施。線形 3 部分集合ハイパーグラフの τ 上限（定数×ν など）との突き合わせが次。」
-- 今回の範囲: 既存データのみ。`round2_b351.json` → `n8_witness_light`（8 石証人の
+- 今回の範囲: 既存データのみ。`../output/round2_b351.json` → `n8_witness_light`（8 石証人の
   `tau_per_empty`、`covering_triples`、`greedy_circles` など）の値を再読。
   さらに `round3_chunk6_rho.py` の docstring で B366 の設計を確認。
 - 証拠: `n8_witness_light` の `tau_per_empty` は 56 個の空点それぞれについて τ を記録していて、
@@ -459,19 +461,19 @@
 - **B288/B290**: 円・直線容量の分数緩和 LP が未実装（既存の LP は B431/B440 用の別問題）。
 - **B289**: 比較の基準となる分数緩和値そのものが未計算。
 - **B321/B322**: σ_7 が未決定（`cycle6-saturation-n7*.json` が 3 ファイルとも 0 バイト）。
-- **B325/B327**: n=6,7 の g=h 天井層が `round2_b321.json` に無い（`ceiling_stats` は n=4,5 のみ）。
+- **B325/B327**: n=6,7 の g=h 天井層が `../output/round2_b321.json` に無い（`ceiling_stats` は n=4,5 のみ）。
 - **B329**: n=6 の σ 層の per-position g が JSON に無い（層ヒストグラムの集計のみ）。
 - **B330**: 幅が無限に大きくなる族が未構成、n≥7 の層データが 0 バイト。
-- **B331/B335**: n=6 の正方形 WFT / T* データが `round2_b321.json` に無い。
+- **B331/B335**: n=6 の正方形 WFT / T* データが `../output/round2_b321.json` に無い。
 - **B333/B334**: n=6 の WFT データが無く、B333 は前件空、B334 は非発見のまま。
 - **B363/B364**: `round3_chunk6_rho.json` が不在で ρ の厳密再計算が未実行（n≤8 では ρ ≤ 2 のまま）。
 - **B365**: swap 近傍の大きさが b の control 付きで測定されていない。
 - **B366**: 線形 3-uniform ハイパーグラフの τ 上限が未実装。
 
 ### 最も有望な次の一手（1つだけ）
-**`research/verification/scripts/round3_chunk6_rho.py` の実行（出力 JSON `round3_chunk6_rho.json` の生成）**。
+**`research/experiments/original-claims/scripts/round3_chunk6_rho.py` の実行（出力 JSON `round3_chunk6_rho.json` の生成）**。
 このスクリプトの docstring は B363, B364, B365, B366 の 4 件を同時に供給する設計だが、
-出力 JSON が `research/verification/` に不在であり、4 件すべてが「計算は設計されているが未実行」の
+出力 JSON が `research/experiments/original-claims/output/` に不在であり、4 件すべてが「計算は設計されているが未実行」の
 状態に留まっている。特に **B365**（swap 近傍と ρ の相関、b の control 付き）は
 既存データ（ρ の完全分布 + 証人 368 件）が既に揃っていて、
 残るのは 1-swap 近傍の大きさを測るだけという最も近い段階にある。

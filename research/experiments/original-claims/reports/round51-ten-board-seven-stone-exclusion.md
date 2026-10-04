@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # s₁₀≥8: 九盤の最小極大を使う十盤七石の帰着
 
 作成: 2026-10-01。10×10に七石極大はない。
@@ -23,9 +25,9 @@ s₉=9がround46で証明された。
     nodes=591,689,184, seconds=170.050460, depth1_nodes=5
 
 で終了した。幾何は全54,441禁止四点組、217,764三つ組補完関係、最大補完数9。
-結果は`round51_n10_k7_window.json`。
-先行する`round49_n10_k7.json`の600秒・complete=falseを、今回の完了実行とは分ける。
+結果は`../output/round51_n10_k7_window.json`。
+先行する`../output/round49_n10_k7.json`の600秒・complete=falseを、今回の完了実行とは分ける。
 同じ盤で七石がないことを別の未完了探索から主張してはいない。
 
-再現は`python research/verification/scripts/round48_49_audit.py`。
-独立幾何・s₉=9の帰着依存・完了フラグ・初点数を照合し、`round49_s10_verified.json`へ下界8を反映する。
+再現は`python research/experiments/original-claims/scripts/round48_49_audit.py`。
+独立幾何・s₉=9の帰着依存・完了フラグ・初点数を照合し、`../output/round49_s10_verified.json`へ下界8を反映する。

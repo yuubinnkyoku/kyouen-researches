@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 4 — Exact small-board structure toward a non-trivial conclusion
 
 ## Checked
@@ -9,11 +11,11 @@
   - `origin/replicate-8x8-o-stratum` is **one commit behind** local (missing Cycle 3)
   - Open PR #15 `probe-two-stone-subsets` still DRAFT (medium 10×10 LOSS root)
   - Release `v1.0.0` unchanged; no newer classification release
-- Spec: `docs/compose/spec/night-cycle4-exact-structure.md`
-- New exact enumerator: `night-research/exact_structure_cycle4.py`
+- Spec: `research/archive/presentation-specs/night-cycle4-exact-structure.md`
+- New exact enumerator: `research/experiments/structural-discovery/scripts/exact_structure_cycle4.py`
 - Independent cross-check: `rust/independent-verifier` `classify-first` for n=3,4,5
 - `git worktree add` for a fresh linked worktree was blocked by the session
-  shared-registry guard; work proceeded additively under `night-research/`
+  shared-registry guard; work proceeded additively under `research/experiments/structural-discovery/output/`
   on the active research branch (see spec S2 workspace note).
 
 ## Exact new results
@@ -87,11 +89,11 @@ Rust `classify-first --size 5` agrees cell-for-cell with the Python enumerator
 | H-dense | characterizes the exceptional F-board n=5, not S-boards |
 | local/embedding rules (H3-abs, H-embed, H4 static w, local geometry) | already rejected in Cycles 1–3 |
 
-Artifacts: `night-research/cycle4-density-table.json`,
+Artifacts: `research/experiments/structural-discovery/output/cycle4-density-table.json`,
 `cycle4-exact-n{2,3,4,5}.json` (**authoritative per-board evidence**),
-`cycle4-exact-structure.json` (regenerated aggregate n=2..5),
-`cycle4-invariant-audit.json`, `cycle4-n5-orbit-mobility.json`,
-`cycle4-n5-two-stone-loss.json`, `H_DENSE_PREREG.md`.
+`../../experiments/structural-discovery/output/cycle4-exact-structure.json` (regenerated aggregate n=2..5),
+`../../experiments/structural-discovery/output/cycle4-invariant-audit.json`, `../../experiments/structural-discovery/output/cycle4-n5-orbit-mobility.json`,
+`../../experiments/structural-discovery/output/cycle4-n5-two-stone-loss.json`, `../../experiments/structural-discovery/reports/H_DENSE_PREREG.md`.
 
 Note: `winning_reply_ids` in per-board mobility JSON may be capped at 8 ids
 for n=4 (counts in `second_player_winning_reply_count` are complete).
@@ -134,7 +136,7 @@ for n=4 (counts in `second_player_winning_reply_count` are complete).
    `replicate-8x8-o-stratum` but has **not** been pushed to `origin`. Remote
    readers of GitHub still see center-witness wording in older snapshots and
    the factorial-Holm tip on `main`. Conclusions above that cite n=9 all-win
-   rest on local Cycle 3 artifacts (`night-research/first-moves-9x9.csv`).
+   rest on local Cycle 3 artifacts (`research/experiments/structural-discovery/output/first-moves-9x9.csv`).
 
 **One-sentence non-trivial conclusion.**
 
@@ -150,8 +152,8 @@ for n=4 (counts in `second_player_winning_reply_count` are complete).
 
 - `README.md` now mentions all 81 first moves win (line ~80) — good.
 - `docs/RESULTS_AND_IMPLICATIONS.md` §4 already lists 9×9 81/81 — good.
-- `night-research/cycle2-density-table.json` still had n=9 status `partial`
-  until Cycle 4 wrote `cycle4-density-table.json` with status `complete`.
+- `research/experiments/structural-discovery/output/cycle2-density-table.json` still had n=9 status `partial`
+  until Cycle 4 wrote `../../experiments/structural-discovery/output/cycle4-density-table.json` with status `complete`.
 - Push/land of `db50e40` remains an orchestrator/user decision.
 
 ## Next cycle candidates
@@ -168,8 +170,8 @@ for n=4 (counts in `second_player_winning_reply_count` are complete).
 
 ## Deepening — n=5 two-stone LOSS geometry (Cycle 4 night follow-up)
 
-Exact re-enumeration (`deepen_cycle4_geometry.py`, artifact
-`cycle4-n5-two-stone-geometry.json`):
+Exact re-enumeration (`../../experiments/structural-discovery/scripts/deepen_cycle4_geometry.py`, artifact
+`../../experiments/structural-discovery/output/cycle4-n5-two-stone-geometry.json`):
 
 - Safe 2-stone positions: 300 = C(25,2); LOSS for player to move: **20**.
 - The 20 undirected LOSS pairs are **exactly** the 20 directed
@@ -206,7 +208,7 @@ Identity `k1_loss_rate == winning-first-move density` holds on all exact boards.
 ## Journey log (this cycle)
 
 - `git worktree add` blocked → continued on active research branch with
-  additive `night-research/` + compose spec (documented in spec).
+  additive `research/experiments/structural-discovery/output/` + compose spec (documented in spec).
 - First-pass peak metric `argmax loss_rate` was dominated by trivial layers
   (k=0 on S-boards, terminal all-LOSS); fixed reporting to use interior peaks
   and full profiles.
@@ -217,7 +219,7 @@ Identity `k1_loss_rate == winning-first-move density` holds on all exact boards.
   in the new enumerator beyond certificate root labels.
 - Review catch (C1): prose inverted k=1 loss_rate on n=5 — player-to-move
   labeling means LOSS@k=1 = **winning** first moves (9/25), not losing ones.
-- Review catch (N1): first aggregate `cycle4-exact-structure.json` was stale
+- Review catch (N1): first aggregate `../../experiments/structural-discovery/output/cycle4-exact-structure.json` was stale
   (only n=5) because a later single-size run overwrote it; regenerated for
   n=2..5. Prefer per-n JSON when in doubt.
 - Night follow-up: n=5 k=2 LOSS pairs ≡ winning-reply edges from losing first

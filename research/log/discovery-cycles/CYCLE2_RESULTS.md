@@ -1,11 +1,13 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 2 — 2026-09-17 ~01:00 JST
 
 ## Checked
 
 - branch: `replicate-8x8-o-stratum` @ `8a53adf`
-- night-research CYCLE1 artifacts present
+- research/experiments/structural-discovery/output CYCLE1 artifacts present
 - 9×9 first-move job was **stopped** at 8/14 (no live solver at cycle start)
-- Restarted remaining 6 D4 classes (`run_first_moves_9x9.py`, memo=30, PARALLEL=1)
+- Restarted remaining 6 D4 classes (`../../experiments/structural-discovery/scripts/run_first_moves_9x9.py`, memo=30, PARALLEL=1)
 - Duplicate second launch detected and killed (two `kyouen_solver_9.exe 37 30` at ~12 GB each)
 - Single remaining process solves absolute class `(1,4)` first (`first_id=37`)
 
@@ -44,7 +46,7 @@
    40 four-stone parents, 2138 children, 95 LOSS (all from 20 WIN parents).
    K-histogram: `{1:6, 2:5, 3:3, 5:2, 8:1, 9:1, 12:1, 31:1}`.
    One parent has K=31 — strong killer concentration in the sample.
-   Artifact: `night-research/cycle2-a-l-8x8-sample.json`.
+   Artifact: `research/experiments/structural-discovery/output/cycle2-a-l-8x8-sample.json`.
 
 ## Hypotheses
 
@@ -57,14 +59,14 @@
 
 ## Artifacts
 
-- `night-research/cycle2-5x5-vs-9x9-transfer.json` — transfer table + absolute negative control
-- `night-research/analyze_cycle2_transfer.py` — regenerates the above from CSV + 5×5 cargo log
-- `night-research/cycle2-density-table.json` — cross-n winning-first-move density + H-dense status
-- `night-research/analyze_cycle2_density.py` — density table builder
-- `night-research/cycle2-a-l-8x8-sample.json` — sample A_L=629 + K histogram
-- `night-research/analyze_cycle2_a_l_sample.py` — A_L recomputation
-- `night-research/first-moves-9x9-rerun.out.log` — restarted driver
-- `night-research/CYCLE2_RESULTS.md` — this file
+- `research/experiments/structural-discovery/output/cycle2-5x5-vs-9x9-transfer.json` — transfer table + absolute negative control
+- `research/experiments/structural-discovery/scripts/analyze_cycle2_transfer.py` — regenerates the above from CSV + 5×5 cargo log
+- `research/experiments/structural-discovery/output/cycle2-density-table.json` — cross-n winning-first-move density + H-dense status
+- `research/experiments/structural-discovery/scripts/analyze_cycle2_density.py` — density table builder
+- `research/experiments/structural-discovery/output/cycle2-a-l-8x8-sample.json` — sample A_L=629 + K histogram
+- `research/experiments/structural-discovery/scripts/analyze_cycle2_a_l_sample.py` — A_L recomputation
+- `research/experiments/structural-discovery/output/first-moves-9x9-rerun.out.log` — restarted driver
+- `research/log/discovery-cycles/CYCLE2_RESULTS.md` — this file
 
 
 ## Next cycle (highest priority)

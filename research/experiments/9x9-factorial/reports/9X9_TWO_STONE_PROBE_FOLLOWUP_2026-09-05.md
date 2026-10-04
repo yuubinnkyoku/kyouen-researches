@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Two-stone probe follow-up notes — 2026-09-05
 
-この文書は [`9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md`](./9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md) の追補である。既存メモに入っていなかった、その後の解析・訂正・10×10既存分類から得た補助知見を記録する。
+この文書は [`9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md`](9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md) の追補である。既存メモに入っていなかった、その後の解析・訂正・10×10既存分類から得た補助知見を記録する。
 
 ## 1. 3石で fixed rule と solver primary key は独立ではない
 

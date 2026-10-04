@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 14 — capacity neighborhood of the A/B crystal (n=7 K=14)
 
 Evidence: `cycle8_b_maxsafe.exe` COMPLETE counts unless noted.
@@ -33,6 +35,6 @@ Phase B is exactly the no-center / 3-corner / B-orbit branch.
 
 ## Artifacts
 - this note
-- `night-research/CYCLE10_OCCUPANCY_SELECTION.md`
-- `night-research/CYCLE11_ORBIT_NECESSITY.md`
+- `research/log/discovery-cycles/CYCLE10_OCCUPANCY_SELECTION.md`
+- `research/log/discovery-cycles/CYCLE11_ORBIT_NECESSITY.md`
 - `results/cycle10_occupancy_probes.json`

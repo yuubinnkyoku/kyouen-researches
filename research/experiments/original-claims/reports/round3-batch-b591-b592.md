@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B591-B592
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §60 (B591–B592 のみ)
-スクリプト: `scripts/round3_b591_core.py`（共通機構）, `round3_b591_b592_m8.py`（ℳ_8 構築）,
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §60 (B591–B592 のみ)
+スクリプト: `../scripts/round3_b591_core.py`（共通機構）, `round3_b591_b592_m8.py`（ℳ_8 構築）,
 `round3_b591_b592_final.py`（d_max 厳密計算・最終版）
-データ: `research/verification/round3_b591_b592.json`（最終結果）,
-`research/verification/round3_M8_pool.bin`（ℳ_8 の 1,009,679 個）
-前回: `research/verification/round2-batch-b591.md`, `research/verification/round2_b591.json`
+データ: `research/experiments/original-claims/output/round3_b591_b592.json`（最終結果）,
+`research/experiments/original-claims/output/round3_M8_pool.bin`（ℳ_8 の 1,009,679 個）
+前回: `research/experiments/original-claims/reports/round2-batch-b591.md`, `research/experiments/original-claims/output/round2_b591.json`
 
 記号: 安全Sに対し `d_max(S)=min_{M∈ℳ_n}|S\M|`（最大配置へ直す際に捨てる最小石数）。
 B591 = [全称] |S|=K_n−1 ⇒ d_max(S)≤C（絶対定数 C）。
@@ -15,10 +17,10 @@ B592 = [存在] ある c>0 と盤列で |S|=K_n−1 かつ d_max(S)≥c·n。
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、n=8 の層を初めて実測）
 - 前回の一手: 「B591 の有限支持は無い。n≥8 での d_max 延長が必要」（round2 一手 1 は
   B592 の n=8,9 延長）。C は既に C≥8 必要。
-- 今回の範囲: n=2..7 は前回と同一（既存 `round2_b591.json` の読み取りのみ）。
-  **新規は n=8（K_8=15, 一石不足層=14石）**。`scripts/round3_b591_b592_final.py`
+- 今回の範囲: n=2..7 は前回と同一（既存 `../output/round2_b591.json` の読み取りのみ）。
+  **新規は n=8（K_8=15, 一石不足層=14石）**。`../scripts/round3_b591_b592_final.py`
   で ℳ_8 の 1,009,679 個の最大集合を局所探索で構築し（pool バイナリ
-  `research/verification/round3_M8_pool.bin`）、14石安全集合 48 個について
+  `research/experiments/original-claims/output/round3_M8_pool.bin`）、14石安全集合 48 個について
   分岐限界で **d_max を厳密（48/48 完了）** 計算した。
 - 証拠（n=8、14石層、厳密 B&B、48 個）:
   - d_max 分布 = **{1: 18, 2: 27, 3: 3}**。最大重なり 11/12/13（=14−3, 14−2, 14−1）。
@@ -44,7 +46,7 @@ B592 = [存在] ある c>0 と盤列で |S|=K_n−1 かつ d_max(S)≥c·n。
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、n=8 の層を実測）
 - 前回の一手: 「B592 の n=8,9 へ: 一石不足層の d_max 最大値を延長し、d_max/n が
   線形か確認。K_8=15 なので 14 石層が必要」（round2 一手 1）。今回その 14 石層を実測。
-- 今回の範囲: n=2..7 は前回データ（`round2_b591.json`）。新規は n=8 の 14 石層で
+- 今回の範囲: n=2..7 は前回データ（`../output/round2_b591.json`）。新規は n=8 の 14 石層で
   14石安全集合 48 個（n=7 最遠集合からの成長 24 + ランダム層 24）。B&B は 48/48
   完了＝**d_max 値がすべて厳密**。n=9 は 17 石層が必要で 81 点中 17 個の列挙が
   現環境（3 分制限）で不可、本回は未着手。

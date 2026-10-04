@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 holdout audit: pre-known LOSS children in the selected parent pool
 
 Date: 2026-09-07
@@ -7,7 +9,7 @@ Base result branch: `blind-probe-holdout-validation` @ `2bcd387102874ee20ee641eb
 
 The 11-parent fresh-memo holdout result is **not a fully child-outcome-blind holdout**.
 
-All 11 selected parents came from pre-existing proof CSVs that already store at least one exact LOSS child (or a D4-canonical representative of that child) for the parent. Therefore the statement in `docs/10X10_HOLDOUT_CONFIRMATION_RESULT.md` that no holdout child overlapped previously classified repo states (`0/1020`) is too strong and, under raw-state identity, already false for multiple parents.
+All 11 selected parents came from pre-existing proof CSVs that already store at least one exact LOSS child (or a D4-canonical representative of that child) for the parent. Therefore the statement in `research/experiments/solver-benchmarks/reports/10X10_HOLDOUT_CONFIRMATION_RESULT.md` that no holdout child overlapped previously classified repo states (`0/1020`) is too strong and, under raw-state identity, already false for multiple parents.
 
 This does **not automatically invalidate** the memo-ascending ranking comparison on the frozen 11-parent set. The ranking rule was frozen before the new 1M probe outcomes and the parent selection did not explicitly use the new probe `memo_used` values. But the experiment must be interpreted as a prospective ranking test on parents whose WIN status was already certified via at least one known LOSS witness, not as a completely unseen child-level holdout.
 

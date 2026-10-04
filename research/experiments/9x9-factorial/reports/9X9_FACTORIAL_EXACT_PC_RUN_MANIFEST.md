@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Reproducibility manifest — factorial-exact-pc-run
 
 ## Identity
@@ -57,28 +59,28 @@
 
 ```text
 python scripts/select-9x9-factorial-holdout.py \
-  artifacts/9x9-factorial-population.csv \
-  artifacts/9x9-factorial-holdout.csv \
-  --exclude artifacts/exclusion-canonical-parents.csv
+  research/experiments/solver-benchmarks/output/9x9-factorial-population.csv \
+  research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv \
+  --exclude research/experiments/solver-benchmarks/output/exclusion-canonical-parents.csv
 
 python scripts/prepare-9x9-factorial-solver-inputs.py \
-  artifacts/9x9-factorial-holdout.csv \
-  artifacts/solver_inputs
+  research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv \
+  research/experiments/solver-benchmarks/output/solver_inputs
 
 python scripts/run-9x9-factorial-sharded-solve.py \
   --solver build-factorial/Release/kyouen-solver-9-compare.exe \
-  --input-dir artifacts/solver_inputs \
-  --out-dir artifacts/solve \
+  --input-dir research/experiments/solver-benchmarks/output/solver_inputs \
+  --out-dir research/experiments/solver-benchmarks/output/solve \
   --shard-size 12 --max-jobs 6 --memo-power 28 \
-  --progress-json artifacts/solve/progress.json
+  --progress-json research/experiments/solver-benchmarks/output/solve/progress.json
 
 python scripts/analyze-9x9-factorial-outcomes.py \
-  artifacts/9x9-factorial-holdout.csv \
-  artifacts/solve/primary-summary.csv \
-  --E_at_O0 artifacts/solve/merged/E_at_O0.csv \
-  --O_at_E0 artifacts/solve/merged/O_at_E0.csv \
-  --E_at_O1 artifacts/solve/merged/E_at_O1.csv \
-  --O_at_E1 artifacts/solve/merged/O_at_E1.csv
+  research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv \
+  research/experiments/solver-benchmarks/output/solve/primary-summary.csv \
+  --E_at_O0 research/experiments/solver-benchmarks/output/solve/merged/E_at_O0.csv \
+  --O_at_E0 research/experiments/solver-benchmarks/output/solve/merged/O_at_E0.csv \
+  --E_at_O1 research/experiments/solver-benchmarks/output/solve/merged/E_at_O1.csv \
+  --O_at_E1 research/experiments/solver-benchmarks/output/solve/merged/O_at_E1.csv
 ```
 
 ## Constraints honored

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 four-stone subsets and a verified LOSS proof
 
 This experiment continues from the legal eight-stone LOSS root
@@ -31,7 +33,7 @@ Every independent run completed. There were no table-full or timeout results.
 | Peak RSS | 567,948 KiB | 568,236 KiB |
 
 The complete table is
-[`results/10x10/four-stone-subsets-of-medium-loss.csv`](../results/10x10/four-stone-subsets-of-medium-loss.csv).
+[`results/10x10/four-stone-subsets-of-medium-loss.csv`](../../../../results/10x10/four-stone-subsets-of-medium-loss.csv).
 
 ### The twelve LOSS roots
 
@@ -107,7 +109,7 @@ The compressed certificate captured in the first run has SHA-256:
 ```
 
 The machine-readable benchmark record is
-[`results/10x10/four-stone-loss-proof-61-73-66-13.csv`](../results/10x10/four-stone-loss-proof-61-73-66-13.csv).
+[`results/10x10/four-stone-loss-proof-61-73-66-13.csv`](../../../../results/10x10/four-stone-loss-proof-61-73-66-13.csv).
 
 ## Scaling trend
 

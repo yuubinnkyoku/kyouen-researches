@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 標準三行盤の鋭い安定化長24と、全長の勝敗・Grundy分類
 
 2026-10-03。対象は通常の4点共円・共線禁止ルールの
@@ -176,7 +178,7 @@ x(b+c-2a)=2-a(b+c)+b^2+c^2.
 
 ## 5. 有限区間と鋭い境界
 
-`verification/q34_exact_threshold.json` に m=24..68 の各全列挙結果を保存する。
+`../output/q34_exact_threshold.json` に m=24..68 の各全列挙結果を保存する。
 全ケースで、外側行・中央行のどちらにも必要な2点被覆が存在しない。
 
 一般証明が m≥69 を、有限計算が m=24..68 を覆い、m=23 の証人が下界を与える。
@@ -282,15 +284,15 @@ x=17 は8石の短い終局へ移るので子の値は0。
 ## 再現
 
 ```bash
-g++ -O3 -std=c++17 research/verification/scripts/q34_support_exclusion.cpp -o /tmp/q34_support
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q34_support_exclusion.cpp -o /tmp/q34_support
 /tmp/q34_support 24 68
-g++ -O3 -std=c++17 research/verification/scripts/q34_independent_audit.cpp -o /tmp/q34_audit
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q34_independent_audit.cpp -o /tmp/q34_audit
 /tmp/q34_audit
-g++ -O3 -std=c++17 research/verification/scripts/q34_exceptional_grundy.cpp -o /tmp/q34_exception
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q34_exceptional_grundy.cpp -o /tmp/q34_exception
 /tmp/q34_exception 7 23
 /tmp/q34_exception 7 7 /tmp/q34_check
 /tmp/q34_exception 23 23 /tmp/q34_check
-g++ -O3 -std=c++17 research/verification/scripts/q34_exceptional_audit.cpp -o /tmp/q34_exceptional_audit
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp -o /tmp/q34_exceptional_audit
 /tmp/q34_exceptional_audit /tmp/q34_check_7.txt /tmp/q34_check_23.txt
 ```
 

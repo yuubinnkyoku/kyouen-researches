@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # F-E R-external 4-stone holdout result
 
 > **2026-09-29 memo-width revalidation:** the historical FlatMemo81 implementation
@@ -88,4 +90,4 @@ is therefore not solely a property of the medium LOSS root’s subset lattice.
 - `results/10x10/f-e-r-external-holdout/exact_outcomes.csv`
 - `results/10x10/f-e-r-external-holdout/holdout_summary.json`
 - `results/10x10/f-e-r-external-holdout/solver_run_manifest.json`
-- `docs/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md`
+- `research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md`

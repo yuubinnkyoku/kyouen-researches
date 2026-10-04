@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 9x9 pair-component factorial effect heterogeneity (secondary / exploratory)
 
 最終更新: 2026-09-15
@@ -14,16 +16,16 @@ base: `661eae2ec9ae7224963a84682ae717f89e960b34`
 
 参照 primary:
 
-- `docs/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md`
+- `research/experiments/9x9-factorial/reports/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md`
 - `results/9x9/factorial/primary-summary.csv`
 
 ## 1. O overall `+21 → -3` の完全分解
 
 対象:
 
-- `artifacts/9x9-factorial-holdout.csv`
-- `artifacts/solve/merged/O_at_E0.csv` (n=715)
-- `artifacts/solve/merged/O_at_E1.csv` (n=639)
+- `research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv`
+- `research/experiments/solver-benchmarks/output/solve/merged/O_at_E0.csv` (n=715)
+- `research/experiments/solver-benchmarks/output/solve/merged/O_at_E1.csv` (n=639)
 
 事前監査どおりの strata:
 
@@ -101,8 +103,8 @@ overall_O1_net - overall_O0_net
 
 対象:
 
-- `artifacts/solve/merged/E_at_O0.csv` (n=1024)
-- `artifacts/solve/merged/E_at_O1.csv` (n=1024)
+- `research/experiments/solver-benchmarks/output/solve/merged/E_at_O0.csv` (n=1024)
+- `research/experiments/solver-benchmarks/output/solve/merged/E_at_O1.csv` (n=1024)
 
 事前固定交差は 254。
 
@@ -130,8 +132,8 @@ overall_O1_net - overall_O0_net
 
 ## 3. structural feature 比較（outcome-free）
 
-`artifacts/9x9-factorial-population.csv` と holdout の事前計算済み列、および
-`artifacts/9x9-pair-gap-population.csv` の score/gap 列のみを使う。
+`research/experiments/solver-benchmarks/output/9x9-factorial-population.csv` と holdout の事前計算済み列、および
+`research/experiments/solver-benchmarks/output/9x9-pair-gap-population.csv` の score/gap 列のみを使う。
 
 | stratum | n | mean distinct | T=TO | TE=raw | T=TE | TO=raw | mean pair_E | mean pair_O |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -168,8 +170,8 @@ overall_O1_net - overall_O0_net
 - smoke: 既知 parent `"0,1,31,41" move=13` → `LOSS`（merged と一致）
 - failed shards: 0, memo-over: 0, retry: 0
 
-入力: `artifacts/solve/o-missing-unique-children.csv`
-出力: `artifacts/solve/o-missing-unique-children.out.csv`
+入力: `research/experiments/solver-benchmarks/output/solve/o-missing-unique-children.csv`
+出力: `research/experiments/solver-benchmarks/output/solve/o-missing-unique-children.out.csv`
 
 ### 4.2 full census descriptive
 
@@ -285,9 +287,9 @@ full 470 と E 交差 254 の双方で、符号反転に必要な |I|=2 は観�
 - `results/9x9/factorial/effect-heterogeneity/o-full-census-summary.csv`
 - `results/9x9/factorial/effect-heterogeneity/o-full-4outcome.csv`
 - `results/9x9/factorial/effect-heterogeneity/o-full-direction-flips.csv`
-- `artifacts/solve/o-missing-unique-children.csv`
-- `artifacts/solve/o-missing-unique-children.out.csv`
-- `artifacts/solve/o-missing-join-plan.json`
+- `research/experiments/solver-benchmarks/output/solve/o-missing-unique-children.csv`
+- `research/experiments/solver-benchmarks/output/solve/o-missing-unique-children.out.csv`
+- `research/experiments/solver-benchmarks/output/solve/o-missing-join-plan.json`
 
 スクリプト:
 

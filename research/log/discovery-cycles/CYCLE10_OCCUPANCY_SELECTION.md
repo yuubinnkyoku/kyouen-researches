@@ -1,8 +1,10 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 10 — why K=14 occupancy on n=7 is only types A and B
 
 Evidence mix (explicit):
 - **COMPLETE enum**: 16 max sets realize exactly 2 occupancy vectors.
-- **COMPLETE constrained first/count** via `night-research/cycle8_b_maxsafe.exe`
+- **COMPLETE constrained first/count** via `research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe`
   (complete=true ⇒ exhaustive for that constraint at the stated size).
 - Theoretical count of sum=14 vectors within orbit-size caps: **304,752**
   (combinatorial only — not a search).
@@ -90,8 +92,8 @@ with the no-center branch *forcing* the B-side orbits on.
 ## Artifacts
 
 - `results/cycle10_occupancy_probes.json`
-- `night-research/cycle10_occupancy_probes.py`
-- Solver: `night-research/cycle8_b_maxsafe.exe`
+- `research/experiments/structural-discovery/scripts/cycle10_occupancy_probes.py`
+- Solver: `research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe`
 
 ## Geometric side of center exclusivity (COMPLETE local lists)
 

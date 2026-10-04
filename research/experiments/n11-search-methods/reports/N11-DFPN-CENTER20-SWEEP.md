@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 11x11 中央 v=60: shared TT で 20 返信を協調させる（sweep 3 周）
 
 **11x11 の勝敗は UNKNOWN のまま。**
 両 arm とも全 3 周 x 20 返信 = 60 root すべて **TIMEOUT**。
 WIN 0 / LOSS 0。
 
-- script: `research/verification/scripts/dfpn_center20_sweep.sh`
-- parser: `research/verification/scripts/dfpn_sweep_parse.py`
+- script: `research/experiments/n11-search-methods/scripts/dfpn_center20_sweep.sh`
+- parser: `research/experiments/n11-search-methods/scripts/dfpn_sweep_parse.py`
 - commit: `792adeb`
 - 機械: WSL / g++ -O3 -march=native、16 cores / 19 GB RAM
 - memo power: 2^26 = 67,108,864（両 arm 同一）

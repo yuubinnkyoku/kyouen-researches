@@ -1,13 +1,15 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 follow-up: B251–B270 弱化追撃
 
 対象: `round5-batch-b251-b270.md` の未決着 9 件（PARTIAL / INCONCLUSIVE / NOT-CHECKED）。
 方針: n=6 全解除（約 60 時間）は行わず、**標本 + 弱化版**で SUPPORTED / REFUTED に落とす。
 
-スクリプト: `scripts/round5_b251a_weak.cpp`（WSL g++ -O2 -fopenmp）
-データ: `round5_b251a_weak_pairs4.json`, `round5_b251a_weak_singles5.json`,
-`round5_b251a_weak_b261.json`, `round5_b251a_weak_b263.json`, `round5_b251a_weak_b254.json`
-再利用: `round5_b251a_sens4.json`, `round5_b251a_families4.json`,
-`round5_b251a_triples4sample.json`, `round5_b251a_b255_witness.json`,
+スクリプト: `../scripts/round5_b251a_weak.cpp`（WSL g++ -O2 -fopenmp）
+データ: `../output/round5_b251a_weak_pairs4.json`, `../output/round5_b251a_weak_singles5.json`,
+`../output/round5_b251a_weak_b261.json`, `../output/round5_b251a_weak_b263.json`, `../output/round5_b251a_weak_b254.json`
+再利用: `../output/round5_b251a_sens4.json`, `../output/round5_b251a_families4.json`,
+`../output/round5_b251a_triples4sample.json`, `../output/round5_b251a_b255_witness.json`,
 `round5_b251a_singles6sample.log`
 
 禁止の遵守: 既存 `round5-batch-*.md` は未編集。n≥7 の新規列挙・p_rand 全計算なし。
@@ -19,10 +21,10 @@
 - 判定: **PARTIAL**（原命題）
 - 弱化版: 「n≤5 の正方盤では、禁止四点組のどの単一解除でも空盤勝者は反転しない」
 - 弱化版判定: **SUPPORTED**
-- 証拠: n=4 の全 194 単一解除で g0 反転 **0**（`round5_b251a_sens4.json`、g0_std=0）。
+- 証拠: n=4 の全 194 単一解除で g0 反転 **0**（`../output/round5_b251a_sens4.json`、g0_std=0）。
   n=5 の全 826 単一解除を本回再実行し g0 反転 **0** を再確認
-  （`round5_b251a_weak_singles5.json`、g0_std=1、states=151,394）。
-  追加で n=4 の全 **18,721 ペア解除**でも g0 反転 **0**（`round5_b251a_weak_pairs4.json`）。
+  （`../output/round5_b251a_weak_singles5.json`、g0_std=1、states=151,394）。
+  追加で n=4 の全 **18,721 ペア解除**でも g0 反転 **0**（`../output/round5_b251a_weak_pairs4.json`）。
   n=6 は標準で到達 5,081,289 状態・g0=1、標本 8 解除すべて g0=1（`round5_b251a_singles6sample.log`）。
 - 原命題の残り: 存在命題。n=6 の全 2,491 解除は約 60 時間級で未実行（標本 8 で反転 0）。
   n≥6 での反転候補は未発見。弱化版「n≤5 で単一解除反転なし」は完全決着。
@@ -32,7 +34,7 @@
 - 弱化版: 「n=4 では、空盤勝者を反転する禁止解除であって、最大安全サイズ K を保存するものが存在する」
 - 弱化版判定: **SUPPORTED**
 - 証拠: B253 の n=4 トリプル証人（qidx 127, 138, 171）で g0 が 0→1 に反転し、
-  **K は両版とも 7**（`round5_b251a_b255_witness.json`）。
+  **K は両版とも 7**（`../output/round5_b251a_b255_witness.json`）。
   極大安全集合の個数は標準 928 対 解除 900 で不一致（共通 847、標準のみ 81、解除のみ 53）。
   よって「K 保存 + 勝者反転」は成立、「全極大族保存 + 勝者反転」は未発見。
 - 原命題の残り: 「最大配置の分類を完全保存」= 全極大族 fingerprint 一致 + g0 反転は未達。
@@ -44,7 +46,7 @@
 - 弱化版: 「n=4 では、非自明な最小勝敗保持禁止族のサイズは 2 であり、それを達成する族は D4 不変軌道族である（非対称族がそれより小さいことはない）」
 - 弱化版判定: **SUPPORTED**
 - 証拠: n=4 の禁止族 E⊆Q を直接指定するゲームを密配列 2^16 で完全計算
-  （`round5_b251a_families4.json`）。標準 g0_std=0、自由（E=∅）g0_free=0。
+  （`../output/round5_b251a_families4.json`）。標準 g0_std=0、自由（E=∅）g0_free=0。
   **サイズ 1 の禁止族 194 個すべてで g0 が 1 に反転**（標準を保つ singleton は 0 個、
   `B256_singleton_ok: 0`）。**サイズ 2 の D4 軌道 3 本（軌道 17, 29, 33）が g0=0 を保持**。
   よって min 非自明 = min D4 不変 = **2** で、命題が要求する「min 非対称 < min D4」は n=4 で不成立。
@@ -56,7 +58,7 @@
 - 弱化版: 「n=4 の最小勝敗保持禁止族（サイズ 2 の D4 軌道 3 本）に共通して現れる四点組は存在しない」
 - 弱化版判定: **SUPPORTED**
 - 証拠: B256 の完全計算により最小族は**互いに素な D4 軌道 3 本**（軌道 17, 29, 33）。
-  3 族の共通四点組は **0**（`round5_b251a_families4.json` の
+  3 族の共通四点組は **0**（`../output/round5_b251a_families4.json` の
   `B258_common_required_quad_count: 0`）。「すべての最小部分族に現れる必須四点型」は
   n=4 では存在しない。サイズ 1 族はすべて g0 を反転させるため最小族に入らない。
 - 原命題の残り: [構造] の存在主張は n=5,6 で成立しうる。n=4 の共通部分が空であることは
@@ -68,7 +70,7 @@
 - 弱化版判定: **REFUTED**（上位ほど W 点がむしろ少ない）
 - 証拠: n=5 の全 826 単一解除のラベル変化感度を全数計測し、W（必勝初手 9 点:
   ids {2,6,8,10,12,14,16,18,22} = 中心+非角）との重なりを照合
-  （`round5_b251a_weak_singles5.json`）。
+  （`../output/round5_b251a_weak_singles5.json`）。
   - ランダム期待: 1 四点組あたり W 点 **1.44** 個（4×9/25）。全 826 四点組の平均は **1.54**。
   - 感度上位 10 四点組の W 点合計 **8**（0.80 / 組）— 期待の**半分**。
   - 上位 20 で 24（1.20 / 組）、上位 50 で 52（1.04 / 組）— いずれも期待未満。
@@ -86,7 +88,7 @@
   別 conic・共有 0 点の散在ペアの平均ラベル変化を上回る」
 - 弱化版判定: **REFUTED**（平均 122.5 < 180.9。最大値のみ同 conic が上回る）
 - 証拠: n=4 の全 18,721 ペア解除についてラベル変化数（標準 win との食い違い数）を全数計測
-  （`round5_b251a_weak_pairs4.json`）。g0 反転は 0 件。
+  （`../output/round5_b251a_weak_pairs4.json`）。g0 反転は 0 件。
   - 同 conic（同一円/直線上・盤上点数 ≥5）: n=2,835、sum_lc=347,162、avg=**122.5**、max=**584**
   - 散在（別 conic・共有 0 点）: n=5,282、sum_lc=955,628、avg=**180.9**、max=488
   - 共有 1 点・別 conic: n=10,604、avg=182.1、max=466
@@ -102,7 +104,7 @@
 - 弱化版: 「n=4 では、u_S(p)≤1 かつ u_S(q)≤1 なのに joint 新規禁止数 ≥2 の合法手対が
   大量（7,000 件超）存在し、その最大 joint は 10 に達する」
 - 弱化版判定: **SUPPORTED**
-- 証拠: n=4 の到達 5,811 状態・97,544 手対を全数計測（`round5_b251a_weak_b261.json`）。
+- 証拠: n=4 の到達 5,811 状態・97,544 手対を全数計測（`../output/round5_b251a_weak_b261.json`）。
   - u≤1 両手で joint≥2: **7,568 件**（前回値と完全一致）、その最大 joint=**10**
   - グローバル最大 joint=**11**（|S|=3, p=2, q=10）
   - 付随: 上界 |joint|≤u(p)+u(q)+|S| の**違反が 7,132 件**。B266 の「|synergy|≤|S|」は
@@ -118,7 +120,7 @@
   極大安全集合の約 8 割が極大性を失う」
 - 弱化版判定: **REFUTED**（弱化版「少数の禁止型が剛性を担う」の n=5 形）
 - 証拠: n=5 の極大安全集合を全列挙 **88,956 個、K=9**
-  （`round5_b251a_weak_b254.json`）。サイズ分布は 5–7 石が主体（size9 は 100 個）。
+  （`../output/round5_b251a_weak_b254.json`）。サイズ分布は 5–7 石が主体（size9 は 100 個）。
   各単一解除について、既存極大のうち「解除後は延長可能になり極大性を失う」個数は
   **72,128〜72,516（約 81%）**。四点組間の差は 0.5% 未満で、特定の禁止型への集中はない。
   解除後の極大族は 89,052〜89,421 個に増え、K=9 は保存。
@@ -132,7 +134,7 @@
   高い割合は過半数に達せず、強い『下側を持ち上げる』は成立しない」
 - 弱化版判定: **REFUTED**（強主張「過半数の局面で下側が上がる」の否定）
 - 証拠: n=5 の到達 151,394 状態のうち、必勝手・非必勝手の双方が存在する 71,455 局面
-  （前回の cmp と一致）で検定（`round5_b251a_weak_b263.json`）。
+  （前回の cmp と一致）で検定（`../output/round5_b251a_weak_b263.json`）。
   - 子 min u の優位（必勝手側の最小値 > 非必勝手側）: **10,024 / 71,455 = 14.0%**
   - 子 q25 の優位: **11,928 / 71,455 = 16.7%**
   - 平均子 min u: 必勝 0.3135 対 非必勝 0.3036（差 0.01 未満）
@@ -172,10 +174,10 @@ SUPPORTED/REFUTED に上げられないものが多い（プロトコル「小�
 - n=5 の W は ids {2,6,8,10,12,14,16,18,22}（中心+非角）で確定。感度上位四点組とは逆相関。
 
 ### データ
-- `round5_b251a_weak_pairs4.json` — n=4 全ペアのラベル変化・同 conic / 散在
-- `round5_b251a_weak_singles5.json` — n=5 全単一解除の感度・W 重なり
-- `round5_b251a_weak_b261.json` — n=4 joint 分布・上界違反
-- `round5_b251a_weak_b263.json` — n=5 子 min u / q25 層別
-- `round5_b251a_weak_b254.json` — n=5 極大族 88,956・解除影響
+- `../output/round5_b251a_weak_pairs4.json` — n=4 全ペアのラベル変化・同 conic / 散在
+- `../output/round5_b251a_weak_singles5.json` — n=5 全単一解除の感度・W 重なり
+- `../output/round5_b251a_weak_b261.json` — n=4 joint 分布・上界違反
+- `../output/round5_b251a_weak_b263.json` — n=5 子 min u / q25 層別
+- `../output/round5_b251a_weak_b254.json` — n=5 極大族 88,956・解除影響
 - `round5_b251a_weak_b263_n4.py`, `round5_b251a_weak_b263_variants*.py` — B263 指標照合
 

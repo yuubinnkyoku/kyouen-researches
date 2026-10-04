@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B142 検証 + B141 文書訂正指示
 
 対象: B142（非共線共円四点組の次数）の検証、B141 訂正の文書反映指示。
-スクリプト: `scripts/round5_b142_count.cpp`（直接列挙）、`scripts/round5_b142_circles.py`（円束縛法 + 比率解析）
-データ: `research/verification/round5_b142_data.json`
+スクリプト: `../scripts/round5_b142_count.cpp`（直接列挙）、`../scripts/round5_b142_circles.py`（円束縛法 + 比率解析）
+データ: `research/experiments/original-claims/output/round5_b142_data.json`
 
 ---
 
@@ -18,7 +20,7 @@
   - **C_n/n^6 は n=5..14 で 0.045–0.050 に安定**。n^6 が最有力の主項次数。
   - **局所次数** log(C_n/C_{n-1})/log(n/(n-1)) は n=6..14 で 5.65–6.19、平均 ≈ 5.9。
   - **log-log フィット** n=6..12 で次数 ≈ 5.97。
-  - 三手法一致（下記）。`round5_b142_data.json`。
+  - 三手法一致（下記）。`../output/round5_b142_data.json`。
 
 - 三手法一致:
   | n | C++ 直接 det4 | Python 円束縛法 | Python 直接 det4 | KNOWN_F − D_n |
@@ -76,7 +78,7 @@
 HANDOVER §2 の証明（`round4-collinear-asymptotic.md`）により、B141 は SUPPORTED に訂正済み。
 以下の記述が古い判定のままであるため、各文書で訂正が必要。
 
-### 訂正 1: `batch-08.md` の B141
+### 訂正 1: `../../../log/claim-audit/batch-08.md` の B141
 
 **現状**（47–49 行付近）:
 ```
@@ -95,7 +97,7 @@ HANDOVER §2 の証明（`round4-collinear-asymptotic.md`）により、B141 は
 - メモ: 三手法一致（外積全走査 / 有限和 / 最大線分 C(ℓ,4) 和）で n=4..11 の D_n が完全一致。詳細は round4-collinear-asymptotic.md と ROUND4-B141-VERIFICATION.md。
 ```
 
-### 訂正 2: `batch-08.md` の B145
+### 訂正 2: `../../../log/claim-audit/batch-08.md` の B145
 
 **現状**（69–73 行付近）のメモ:
 ```
@@ -121,9 +123,9 @@ HANDOVER §2 の証明（`round4-collinear-asymptotic.md`）により、B141 は
 - 判定は SUPPORTED（有限サイズ補正が負の n^4 log n であることは証明済み）。ただし「境界長と gcd 和への分解」の具体的実装は未完了のまま PARTIAL に留めるか、証明の射程に合わせて SUPPORTED に更新するかは再整理が必要。
 - HANDOVER §2 の表では B473 は **SUPPORTED**（証明済み）として扱われている。
 
-### 訂正 4: `round4-SUMMARY.md` への反映
+### 訂正 4: `../../../archive/claim-audit-history/round4-SUMMARY.md` への反映
 
-HANDOVER §10「次: 証明の訂正を文書に反映」に従い、`round4-SUMMARY.md` に B141 訂正を反映する。
+HANDOVER §10「次: 証明の訂正を文書に反映」に従い、`../../../archive/claim-audit-history/round4-SUMMARY.md` に B141 訂正を反映する。
 同ファイルは他エージェントが触る可能性があるため、直接編集せず本指示に留める。
 
 ---
@@ -132,10 +134,10 @@ HANDOVER §10「次: 証明の訂正を文書に反映」に従い、`round4-SUM
 
 ```bash
 # C++ 直接列挙（WSL）
-wsl -d Ubuntu -- bash -c "cd /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts && g++ -O2 -o round5_b142_count round5_b142_count.cpp && ./round5_b142_count 2 14"
+wsl -d Ubuntu -- bash -c "cd /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts && g++ -O2 -o round5_b142_count round5_b142_count.cpp && ./round5_b142_count 2 14"
 
 # Python 円束縛法 + 比率解析
-python research/verification/scripts/round5_b142_circles.py
+python research/experiments/original-claims/scripts/round5_b142_circles.py
 ```
 
 D_n の閉形式は `round4-collinear-asymptotic.md` 式 (1) に一致。

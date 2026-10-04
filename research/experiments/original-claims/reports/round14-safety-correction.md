@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B480: 閾値尺度の安全確率の第一補正と、Poisson誤差率の鋭さ
 
-作成: 2026-09-29。原文: [B478–B480](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-29。原文: [B478–B480](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 前提となる一般評価: [round13-poisson-limit.md](round13-poisson-limit.md)。
 
 **B480 SUPPORTED（閾値尺度における一様な剰余評価付き）。**
@@ -200,8 +202,8 @@ round13の上界O(n^(−1/4))と合わせて、**Θ(n^(−1/4))**。
 
 ## 7. 再現可能な検算と残る範囲
 
-有限検算は [scripts/round14_safety_correction.py](scripts/round14_safety_correction.py) と
-[round14_safety_correction.json](round14_safety_correction.json) に保存した。
+有限検算は [scripts/round14_safety_correction.py](../scripts/round14_safety_correction.py) と
+[round14_safety_correction.json](../output/round14_safety_correction.json) に保存した。
 二項裾と共分散恒等式はFractionで、盤の幾何は整数行列式で調べた。
 共分散恒等式2,601条件、その一様上界879条件、裾の多項式恒等式171条件、剰余上界61条件が全て一致。
 n=3,4,5の全円・直線（14,69,233個）と全禁止辺（14,194,826本）を独立な行列式で照合。

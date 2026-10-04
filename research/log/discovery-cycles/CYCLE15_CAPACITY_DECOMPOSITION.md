@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 15 — capacity decomposition of K7=14 (COMPLETE)
 
 ## Setup
@@ -182,7 +184,7 @@ orbits cost only 1 when omitted.
   not rigid.
 
 ## Artifacts
-- exe: `night-research/cycle8_b_maxsafe.exe max 7 …` (stdout in session; COMPLETE flags above)
-- `night-research/CYCLE10_OCCUPANCY_SELECTION.md`
-- `night-research/CYCLE14_CAPACITY_NEIGHBORHOOD.md`
-- `night-research/CYCLE8_11_MAIN_RESULT.md`
+- exe: `research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe max 7 …` (stdout in session; COMPLETE flags above)
+- `research/log/discovery-cycles/CYCLE10_OCCUPANCY_SELECTION.md`
+- `research/log/discovery-cycles/CYCLE14_CAPACITY_NEIGHBORHOOD.md`
+- `research/log/discovery-cycles/CYCLE8_11_MAIN_RESULT.md`

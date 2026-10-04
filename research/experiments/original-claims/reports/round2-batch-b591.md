@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch B591–B600: 最大に一石足りない配置は最大に近いか
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §60 (B591–B600)  
-データ: `research/verification/round2_b591.json`  
-スクリプト: `research/verification/scripts/round2_b591_dmax.py`, `round2_b594_phases.py`, `round2_b591_followup.py`, `round2_b591_b600_game.py`
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §60 (B591–B600)  
+データ: `research/experiments/original-claims/output/round2_b591.json`  
+スクリプト: `research/experiments/original-claims/scripts/round2_b591_dmax.py`, `round2_b594_phases.py`, `round2_b591_followup.py`, `round2_b591_b600_game.py`
 
 記号: 安全Sに対し `d_max(S)=min_{M∈ℳ_n}|S\M|`（最大配置へ修正する際に捨てる最小石数）。`h(S)=K(S)−|S|`。n=7 で A相=中心あり最大集合（8個）、B相=中心なし（8個）。
 

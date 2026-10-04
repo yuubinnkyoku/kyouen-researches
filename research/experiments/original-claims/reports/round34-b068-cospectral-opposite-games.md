@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B068: 次数列とスペクトルが同じでも勝敗は異なる
 
 作成: 2026-09-30。**B068原文SUPPORTED。**
@@ -31,25 +33,25 @@ Sの値は3で唯一の勝ち手はID17=(5,2)。Tの値は0で、全合法手の
 
 ## 原文に必要だったスペクトル条件を閉じる
 
-[旧個票](batch-04.md)の5×5の例は次数列だけの一致で、スペクトルの検査は未完了と明記していた。
+[旧個票](../../../log/claim-audit/batch-04.md)の5×5の例は次数列だけの一致で、スペクトルの検査は未完了と明記していた。
 その弱い一致だけでは原文の証明にならない。
 今回の6×6の対は、両方の条件と高階制約なしを全て満たす。
 
-[探索器](scripts/round34_b068_search.cpp)は全残余を合法点に制限して極小化し、二点辺だけの局面を抽出。
+[探索器](../scripts/round34_b068_search.cpp)は全残余を合法点に制限して極小化し、二点辺だけの局面を抽出。
 整数の行列冪のトレースとNewton恒等式から特性多項式を求め、次数列も同じ対を探した。
-[独立検算](scripts/round34_b068_verify.py)は幾何を生成し直し、
+[独立検算](../scripts/round34_b068_verify.py)は幾何を生成し直し、
 xI−Aの多項式行列式をLaplace展開で直接計算して多項式を照合した。
 
 各局面の全256拡張について、グラフの独立集合判定、元の四点組包含判定、円・直線の占有数、
 拡張中の全四点直接行列式が一致した。従って隠れた三点・四点制約は残っていない。
 全部の安全拡張の真のmexを逆順の独立再帰で計算し、探索器のg=3/0を確認した。
-[証明書](round34_b068_verified.json)には隣接行列、辺、全拡張の安全性、全安全拡張のmexを保存した。
+[証明書](../output/round34_b068_verified.json)には隣接行列、辺、全拡張の安全性、全安全拡張のmexを保存した。
 
-    python research/verification/scripts/round34_b068_verify.py
+    python research/experiments/original-claims/scripts/round34_b068_verify.py
 
 探索の再現（bash）:
 
-    g++ -O3 -std=c++20 research/verification/scripts/round34_b068_search.cpp -o /home/yuubi/round28_n7/round34_search
-    /home/yuubi/round28_n7/round34_search 6 research/verification/round34_b068_n6_search.json 10
+    g++ -O3 -std=c++20 research/experiments/original-claims/scripts/round34_b068_search.cpp -o /home/yuubi/round28_n7/round34_search
+    /home/yuubi/round28_n7/round34_search 6 research/experiments/original-claims/output/round34_b068_n6_search.json 10
 
 合法点10個以下を探索した範囲で見つけた証人であり、全6×6の類別の完了とは扱わない。

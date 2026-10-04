@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 cache-aware loss-first-only ablation — endpoint result
 
-Prereg: `docs/10X10_CACHE_AWARE_LOSS_FIRST_ONLY_PREREG.md`
+Prereg: `research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_LOSS_FIRST_ONLY_PREREG.md`
 Branch: `preregister-10x10-loss-first-only`
 Head SHA: `378d86ed9fa0de593f8da9c293eb41b686c38d3a` (`378d86e`)
 Workflow run: `35545436757` (loss-first blinded endpoint, success)

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B078・B361: 九盤最小極大の限定族16配置
 
 作成: 2026-10-01。s₉=9はround46で証明済み。
@@ -16,5 +18,5 @@
 空点pの禁止三つ組族の共通石を計算し、その共通石を除くとpが合法になることを確認した。
 全私有空点と一石解除可能点の石候補を証明書に保存。
 
-再現: `python research/verification/scripts/round50_private_audit.py`。
-証明書`round50_private_verified.json`、元族の結果`round50_n9_private_family.json`。
+再現: `python research/experiments/original-claims/scripts/round50_private_audit.py`。
+証明書`../output/round50_private_verified.json`、元族の結果`../output/round50_n9_private_family.json`。

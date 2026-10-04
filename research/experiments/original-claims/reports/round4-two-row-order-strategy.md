@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B542 — 二行盤の順序型応答戦略の構成
 
 作成: 2026-09-28。担当: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第2仮説バンク](../hypothesis-bank-round2-2026-09-27.md) B542。
+原文: [第2仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md) B542。
 
 > m≥6の二行後手戦略は横位置の順序型で記述できる。
 > 座標値そのものより、既存点・反射点・禁止和から区切られる区間のどこへ置くかで応答を選べる。
@@ -11,9 +13,9 @@
 各長さの表は分ける。区間内のどの格子点でもよいという強い主張ではない。
 短い人間向けの戦略公式や、表の最小性も主張しない。
 
-再現: `python research/verification/scripts/round4_two_row_order_strategy.py`。
-[構成・全対局検査コード](scripts/round4_two_row_order_strategy.py)、
-[応答表1098型](round4_two_row_order_strategy.json)。
+再現: `python research/experiments/original-claims/scripts/round4_two_row_order_strategy.py`。
+[構成・全対局検査コード](../scripts/round4_two_row_order_strategy.py)、
+[応答表1098型](../output/round4_two_row_order_strategy.json)。
 
 ## 1. 全mに対する戦略
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 小さい飽和配置と、原始方向を使う直線被覆上界
 
 2026-10-03。標準の「4点が同一円または同一直線上なら禁止」を扱う。
@@ -50,7 +52,7 @@ S=\{(5,0),(8,0),(1,4),(6,4),(8,4),
 
 ### 11盤の下側を新たな完全探索で制限する
 
-[round56で確定した \(s_{10}\ge9\)](verification/round56-ten-board-eight-stone-exclusion.md) を使い、
+[round56で確定した \(s_{10}\ge9\)](../../original-claims/reports/round56-ten-board-eight-stone-exclusion.md) を使い、
 11盤の6石・7石極大を全域で排除した。従って、現在このノートで保証する範囲は
 \(8\le s_{11}\le10\) である。
 
@@ -82,7 +84,7 @@ S=\{(5,0),(8,0),(1,4),(6,4),(8,4),
 不存在探索も最初から再現する場合は次を実行する（時間制限0は無制限）。
 
 ```bash
-g++ -O3 -std=c++17 research/verification/scripts/saturation_20261003_exact.cpp -o /tmp/kyouen-saturation-exact
+g++ -O3 -std=c++17 research/experiments/saturation/scripts/saturation_20261003_exact.cpp -o /tmp/kyouen-saturation-exact
 /tmp/kyouen-saturation-exact 11 5 0
 /tmp/kyouen-saturation-exact 11 6 0
 /tmp/kyouen-saturation-exact 11 7 0
@@ -152,7 +154,7 @@ t_d=\min(r,c_d),\qquad r\leftarrow r-t_d
 
 ## 3. 漸近定数は \((3\pi^2/8)^{1/3}\) へ改善する
 
-上の整数上界から、[round52の直線被覆評価](verification/round52-general-saturation-exponent-lower-bound.md)
+上の整数上界から、[round52の直線被覆評価](../../original-claims/reports/round52-general-saturation-exponent-lower-bound.md)
 の定数を改善できる。まず \(w_d\le n/d\) を使う。
 容量 \(c_d\) を小さい \(d\) から埋め、累積容量が初めて \(L\) に届く殻を \(D\) とすると、
 
@@ -236,7 +238,7 @@ q点版の正方形盤の最小極大サイズを \(s_{n,q}\)、\(r=q-1\) とす
 安全集合中で既にr石が載る真円の本数は
 \(\lfloor\binom k3/\binom r3\rfloor\) 以下である。
 一本は \(\binom r3\) 個の非共線三つ組を使い、異なる真円は同じ三つ組を共有できないためである。
-[round52の格子円評価](verification/round52-general-saturation-exponent-lower-bound.md)により、
+[round52の格子円評価](../../original-claims/reports/round52-general-saturation-exponent-lower-bound.md)により、
 三格子点を通る真円の盤内格子点数の一様上界 \(R(n)\) は \(n^{o(1)}\) で抑えられる。
 従って極大性の必要条件は
 
@@ -259,7 +261,7 @@ q=4では既知のround52を再現し、q≥5では同じ指数下界を与え�
 
 ## 4. 行と列の点対和を併用しても、10盤の上界23は改善できない
 
-[round57](verification/round57-nineteen-stone-ten-board-bound.md) の \(K_{10}\le23\) は、
+[round57](../../original-claims/reports/round57-nineteen-stone-ten-board-bound.md) の \(K_{10}\le23\) は、
 各行が高々3石で、異なる行の点対のx座標和が重ならないことから得られる。
 列にも同じ制約を課したら上界が下がるか、という自然な強化を調べた。
 
@@ -328,7 +330,7 @@ JSONにはQ以外の80空点に対するB内の禁止三つ組を保存してい
 ## 6. 再現と証明の範囲
 
 ```bash
-python research/verification/scripts/saturation_20261003_verify.py
+python research/experiments/saturation/scripts/saturation_20261003_verify.py
 ```
 
 依存パッケージ不要。この監査は次を実行し、同ディレクトリの
@@ -347,7 +349,7 @@ python research/verification/scripts/saturation_20261003_verify.py
 例:
 
 ```bash
-g++ -O3 -std=c++17 research/verification/scripts/saturation_20261003_search.cpp -o /tmp/kyouen-saturation-search
+g++ -O3 -std=c++17 research/experiments/saturation/scripts/saturation_20261003_search.cpp -o /tmp/kyouen-saturation-search
 /tmp/kyouen-saturation-search 11 10 120 20261003
 ```
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 三行・五点版の鋭い安定化長：M₃,₅ = 12
 
 2026-10-03。対象は標準整数格子
@@ -57,7 +59,7 @@ y=2:\{1,4,7,10\}.
 これは11石の極大安全集合であるため \(M_{3,5}\ge12\)。今回の全数調査ではさらに、
 3×11 の12石未満の極大安全集合が**ちょうど64個**あり、全て11石であると分かった。
 長方形の水平・垂直反転群による軌道は**16個**である。
-代表配置は `verification/q35_boundary_census.json` に全て保存した。
+代表配置は `../output/q35_boundary_census.json` に全て保存した。
 64配置全てで、不足しているのは外側一行だけである。その反対側の外行の4石は
 公差3の等差数列になっている。16軌道は全て大きさ4なので、非自明な長方形の反転・180度回転に
 対して不変な不足終局は存在しない。これらの構造分類は保存した全代表配置の有限検査による。
@@ -164,7 +166,7 @@ U は Z と G の全非孤立頂点を含む。
 
 ## 4. 有限排除の結果
 
-`verification/q35_exact_threshold.json` に各 m の外部4点集合数、支持集合検査を通過した組数、
+`../output/q35_exact_threshold.json` に各 m の外部4点集合数、支持集合検査を通過した組数、
 実際の被覆数を記録した。m=12..40 は全て被覆数0である。
 特に m≥23 の検査範囲では、支持集合による必要条件の時点で全組が棄却された。
 
@@ -241,13 +243,13 @@ Grundy 計算についても、m=4..6 の全 \(2^{3m}\) subset を別に列挙�
 ## 再現
 
 ```bash
-g++ -O3 -std=c++17 research/verification/scripts/q35_support_exclusion.cpp -o /tmp/q35_support
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q35_support_exclusion.cpp -o /tmp/q35_support
 /tmp/q35_support 12 40
-g++ -O3 -std=c++17 research/verification/scripts/q35_independent_audit.cpp -o /tmp/q35_audit
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q35_independent_audit.cpp -o /tmp/q35_audit
 /tmp/q35_audit
-g++ -O3 -std=c++17 research/verification/scripts/q35_boundary_census.cpp -o /tmp/q35_census
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q35_boundary_census.cpp -o /tmp/q35_census
 /tmp/q35_census 7 11
-g++ -O3 -std=c++17 research/verification/scripts/q35_full_grundy.cpp -o /tmp/q35_grundy
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q35_full_grundy.cpp -o /tmp/q35_grundy
 /tmp/q35_grundy 4 11
 ```
 

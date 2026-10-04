@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # round57: K10の下界を19へ、同じ証人の近傍は除去八石まで閉じる
 
 **B082 PARTIAL、独立に19≤K10≤23。** 原文は`K_10=20`という等号であり、
@@ -44,8 +46,8 @@ u²+(a−c)²=v²+(b−c)²から一意に選べる）。安全配置ではこ�
 S自体が極大なのでr=0も不可能。これは20石全体の不在を意味しない。
 新しい20石があるなら、このSから少なくとも九石を入れ替える必要がある。
 
-`round57_n10_neighborhood.json`はC++の全局所探索結果、
-`round57_nineteen_verified.json`はPythonの独立な証人監査と依存ハッシュ。
+`../output/round57_n10_neighborhood.json`はC++の全局所探索結果、
+`../output/round57_nineteen_verified.json`はPythonの独立な証人監査と依存ハッシュ。
 
-再現: `python research/verification/scripts/round57_nineteen_audit.py`。
+再現: `python research/experiments/original-claims/scripts/round57_nineteen_audit.py`。
 局所探索ソースは`round57_n10_nineteen_neighborhood.cpp`。

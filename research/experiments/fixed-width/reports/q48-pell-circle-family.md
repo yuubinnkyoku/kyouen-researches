@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 四連続行を2点ずつ通る円の無限 Pell 族
 
 作成: 2026-10-03。再現:
-[`verification/scripts/q48_pell_family.py`](verification/scripts/q48_pell_family.py)、
-出力: [`verification/q48_pell_family.json`](verification/q48_pell_family.json)。
+[`verification/scripts/q48_pell_family.py`](../scripts/q48_pell_family.py)、
+出力: [`verification/q48_pell_family.json`](../output/q48_pell_family.json)。
 
 ## 要点
 

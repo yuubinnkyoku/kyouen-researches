@@ -1,7 +1,9 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 9 G2 — union corridor facts (n=7)
 
 Evidence: COMPLETE exact-size DFS on the 19 cells of A0∪B0
-(`night-research/cycle8_g2_corridor.py` → `results/cycle8_g2_bottleneck_12.json`).
+(`research/experiments/structural-discovery/scripts/cycle8_g2_corridor.py` → `results/cycle8_g2_bottleneck_12.json`).
 Inputs: complete 16-set list; Cycle 8A explicit path facts.
 
 ## Complete counts on A0∪B0

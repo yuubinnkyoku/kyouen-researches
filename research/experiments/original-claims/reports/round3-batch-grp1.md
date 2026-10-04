@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: grp1 (B002, B007-B010, B016, B020-B024, B029, B031-B042)
 
-対象: `research/hypothesis-bank-2026-09-27.md` の B002, B007, B008, B009, B010, B016, B020,
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md` の B002, B007, B008, B009, B010, B016, B020,
 B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の計20件。
 本チャンクは**書出し専用**。新しい計算はしていない。既存の JSON / 前回個票の読取のみ。
 
@@ -9,9 +11,9 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 ## B002 [存在] 第二の部分勝ち初手盤（`0<|W_n|<n²` となる n≥11 の存在）
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「n=11 の空盤勝敗だけでも先に欲しい。先手勝ちなら初手 D4 軌道分類へ。」
-- 今回の範囲: 既存初手分類表の n=1..10 のみ（`batch01_jgraph.json` `empty_and_W_table`、
-  `night-research/cycle4-cross-board-invariants.json`）。n≥11 の Grundy / 初期局面分類データは
-  このリポジトリに存在しない（`night-research` の 208 ファイル、`research/verification/*.json` を走査確認）。
+- 今回の範囲: 既存初手分類表の n=1..10 のみ（`../output/batch01_jgraph.json` `empty_and_W_table`、
+  `research/experiments/structural-discovery/output/cycle4-cross-board-invariants.json`）。n≥11 の Grundy / 初期局面分類データは
+  このリポジトリに存在しない（`research/experiments/structural-discovery/output` の 208 ファイル、`research/experiments/original-claims/output/*.json` を走査確認）。
 - 証拠: W_size = n=1..10 で `[1, 4, 9, 0, 9, 36, 0, 0, 81, 0]`。部分勝ち（`0<|W_n|<n²`）は **n=5 の 1 例のみ**。
   n=7,8,10 は後手勝ちで |W_n|=0、n=6,9 は全初手勝ち。n≥11 の値は「`>0 unknown`/未記載」。
   したがって主張の前提（n≥11 での部分勝ち）の可否を示す既存データはゼロ。
@@ -23,7 +25,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。主張の比較構造は未検証だが、n=5 の記述を
   「剰余類が W_n を再現する唯一の記述である」ことを追加確認した）
 - 前回の一手: 「複数の部分勝ち初手盤（B002）が出てからの統計比較。」
-- 今回の範囲: n=5 単盤の W_5 閉形式（既存 `night-research/cycle4-n5-orbit-mobility.json`）と
+- 今回の範囲: n=5 単盤の W_5 閉形式（既存 `research/experiments/structural-discovery/output/cycle4-n5-orbit-mobility.json`）と
   n=1..10 の全初手勝ち盤（n=6, n=9）の比較。既存の `cycle4-cross-board-invariants.json` の
   `standing_claims` も参照。
 - 証拠: W_5 = `{(x,y): x+y even} \ 4角`（9/25）。同じ剰余类的記述が n=6（36/36 全点）でも
@@ -39,8 +41,8 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 ## B008 [漸近・大胆] 先手勝ち盤も後手勝ち盤も無限にある
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。既存データは n≤10 のみで無限性の証拠は増えない）
 - 前回の一手: 「周期・密度の漸近モデルが必要。」
-- 今回の範囲: n=1..10 の確定勝敗列（`batch01_jgraph.json` `empty_and_W_table`、
-  `night-research/cycle4-cross-board-invariants.json`）。n=11 以降の勝敗データなし。
+- 今回の範囲: n=1..10 の確定勝敗列（`../output/batch01_jgraph.json` `empty_and_W_table`、
+  `research/experiments/structural-discovery/output/cycle4-cross-board-invariants.json`）。n=11 以降の勝敗データなし。
 - 証拠: 勝敗列 = `F F F S F F S S F S`（n=1..10）。F盤 {1,2,3,5,6,9}、S盤 {4,7,8,10}。
   n=6..10 の 5 個中有 3 個 F・2 個 S で、両者が入り混じる構造は 10 まで確認。ただし「無限に
   続く」ことを強制する機構（例: 勝敗が n の parity や K_n の parity に完全に従えば破れる自私な
@@ -53,7 +55,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。既存データは n≤10 のみで
   「最終周期の否定」は依然不可能。前回と状況不変）
 - 前回の一手: 「格子円・傾きの新規出現メカニズム側の証明が必要。数値だけでは判定不能。」
-- 今回の範囲: n=1..10 の勝敗列と禁止 4 点組数 F_n（`batch01_jgraph.json`、README/既存表）。
+- 今回の範囲: n=1..10 の勝敗列と禁止 4 点組数 F_n（`../output/batch01_jgraph.json`、README/既存表）。
 - 証拠: F_n = n=2..9 で `1, 14, 194, 826, 2491, 6364, 14564, 29152`（確証）。勝敗列
   `FFFSFFSSFS`。禁止 4 点組数は n で滑らかに増える一方、勝敗は非周期的に見える。F_n の増加から
   「新しい格子円・傾きの出現」を直接観測する既存データ（n=10,11 の F_n の分解）はない。
@@ -65,9 +67,9 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
   再確認したが、主張が名指す 6×6 / 9×9 のどちらにも到達できなかった。n=5 は部分勝ち盤であり
   主張の前提「初手全勝」を満たさないため、前回の PARTIAL からSUPPORTED へは動けない）
 - 前回の一手: 「n=6 の初手軌道別 T* が次の一手。」
-- 今回の範囲: n=5（151,394 状態、`round3_chunk6_wft.json` `n5` の B340 および batch01_extra.json
+- 今回の範囲: n=5（151,394 状態、`../output/round3_chunk6_wft.json` `n5` の B340 および batch01_extra.json
   `b010_n5`）で 25 初手の `T*`/`WFT` を全列挙。n=6, n=9 の初手別 `T*` は**未計算**（既存 JSON になし）。
-- 証拠: n=5 の `round3_chunk6_wft.json` `n5` `B340` `all_firsts` 24 項で、`forced_is_constant=true`
+- 証拠: n=5 の `../output/round3_chunk6_wft.json` `n5` `B340` `all_firsts` 24 項で、`forced_is_constant=true`
   （forced_min_range=[7,7]、forced_max_range=[7,7]）。勝ち初手 9 点（`n_winning_firsts=9`）は
   全て `WFT=[7]`。一方 `T*`（P→任意、N→P の集合）では分裂する — 中央 (2,2) は `E` 最大値
   `14149738304313564409/1870082229375360000`、9 番の勝ち初手は E 最小群
@@ -82,9 +84,9 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。n=4 の J_4 単盤の既得結果に、
   既存 J_n データの全走査を追加したが、後手勝ち盤 n=7,8,10 の J_n は依然として未計算）
 - 前回の一手: 「n=4 は密すぎて連結性は弱い証拠。次の後手勝ち盤 n=7 が本判定の鍵。」
-- 今回の範囲: 既存 J_n データをリポジトリ全体で走査（`batch01_jgraph.json` の
+- 今回の範囲: 既存 J_n データをリポジトリ全体で走査（`../output/batch01_jgraph.json` の
   `b016_j4`、`b011_connected`、`b012_cycle_space`、`b013_aut`、`b015_perfect_matching`、
-  `b017_common_neighbors` と `night-research/cycle4-n5-two-stone-*.json`）。後手勝ち正方形盤は
+  `b017_common_neighbors` と `research/experiments/structural-discovery/output/cycle4-n5-two-stone-*.json`）。後手勝ち正方形盤は
   n=4, 7, 8, 10 の 4 枚、このうち J_n が完成しているのは n=4 のみ。
 - 証拠: `b016_j4` = 16 頂点・84 辺・成分 `[16]`・`connected=true`・次数は 8 個が 9 と 8 個が 12。
   n=5 側は `b011_connected` = 非孤立 16 頂点・成分 `[16]` で連結だが n=5 は先手勝ち（部分勝ち）盤。
@@ -102,16 +104,16 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。整数関係による**完全記述**が n=5 で既存の
   独立データにより再確認され、「距離式に限定しない」半区と「D4 軌道代表より短い」半区が
   切り分けられた。短い方が成立しないため SUPPORTED にはできない）
-- 前回の一手: （batch-01.md の B020 に「次の一手」欄なし。`batch-01.md` 総括の次の一手は
+- 前回の一手: （batch-01.md の B020 に「次の一手」欄なし。`../../../log/claim-audit/batch-01.md` 総括の次の一手は
   「2. B016 の n=7 J_7」）
-- 今回の範囲: n=5 の 20 本の P ペアの完全分類。`batch01_jgraph.json` `b020_pair_families` と
-  `night-research/cycle4-n5-two-stone-geometry.json` の `loss_pairs` / `cell_class_pair_counts` /
+- 今回の範囲: n=5 の 20 本の P ペアの完全分類。`../output/batch01_jgraph.json` `b020_pair_families` と
+  `research/experiments/structural-discovery/output/cycle4-n5-two-stone-geometry.json` の `loss_pairs` / `cell_class_pair_counts` /
   `chebyshev_counts` / `endpoint_types` の**独立した 2 つの既存データ**を突き合わせ。
 - 証拠:
   1. **完全記述（3 規則で 20 本をちょうど尽くす）**: `b020_pair_families.families` =
      {`corner-boundary-dist3 (axis distance 3)`: 8, `corner-corner side (distance 4 axis-aligned)`: 4,
      `knight (1,3) among odd-sum losing cells`: 8}、合計 20。独立確認として
-     `cycle4-n5-two-stone-loss.json` と `batch01_jgraph.json` `n5_verify_loss_pairs` =
+     `cycle4-n5-two-stone-loss.json` と `../output/batch01_jgraph.json` `n5_verify_loss_pairs` =
      `{computed: 20, known: 20, equal: true, only_computed: [], only_known: []}`。
   2. **「単なる二点間距離の式に限定しない」半区は成立**: `chebyshev_counts` = {3: 16, 4: 4}、
      一方 `b020_pair_families.pure_chebyshev_ge3_count` = 66。すなわちチェビシェフ距離 ≥3 の
@@ -135,21 +137,21 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
   「少ない」を量的etrize する基準が別途必要。
 
 ## B021 [全称・大胆] 飽和開始は 4 石以内（`n>=4` で `σ_n ≤ 4`）
-- 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。n=4,5,6 の σ は別データ `round2_b321.json`
+- 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。n=4,5,6 の σ は別データ `../output/round2_b321.json`
   の `holes_by_n` で `sigma_computed` まで独立再確認できたが、n>=7 の σ_n を含む全称の後半は依然未確認）
 - 前回の一手: 「n<=6 では成立。n=7 以降が本当の検証。σ_7<=4 なら追加で支持。K_7=14 なので
   σ_7=3 なら 3 石で g=11 が必要。」
-- 今回の範囲: n=2,3,4,5,6 の σ_n。`round2_b321.json` `holes_by_n`（別担当が書き出した別データ。
+- 今回の範囲: n=2,3,4,5,6 の σ_n。`../output/round2_b321.json` `holes_by_n`（別担当が書き出した別データ。
   `sigma_given` と `sigma_computed` の両方を保持し `sigma_match` つき）と
-  `night-research/cycle6-saturation-verify.json` の deficits。
+  `research/experiments/structural-discovery/output/cycle6-saturation-verify.json` の deficits。
 - 証拠: `holes_by_n` の `sigma_computed` = n=2:2, n=3:4, n=4:**2**, n=5:**3**, n=6:**3**
   （すべて `sigma_match: true`）。`cycle6-saturation-verify.json` は K=7/9/11 に対し σ=2/3/3、
   σ 以降の deficit が全て 0、`all_layers_after_sigma_saturated: true`。したがって
   n=4,5,6 で `σ_n ≤ 4` は**既存データの独立一致で裏付け済み**。n=7 以降について
-  `night-research/cycle6-saturation-n7.json` / `-n7-shallow.json` / `-n7-k14.json` は
-  **全て 0 バイト**（ファイルサイズを実測して確認）、`night-research/CYCLE5_GRUNDY_STRUCTURE.md:186` は
+  `research/experiments/structural-discovery/output/cycle6-saturation-n7.json` / `-n7-shallow.json` / `-n7-k14.json` は
+  **全て 0 バイト**（ファイルサイズを実測して確認）、`research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md:186` は
   「(K_7 + σ_7; implemented, needs an overnight run)」、`:274` は「the saturation onset σ_7 -- the first
-  layer containing a position ...」と未完了を明記。`round2_b321.json` も n=2..6 のみ。
+  layer containing a position ...」と未完了を明記。`../output/round2_b321.json` も n=2..6 のみ。
 - 残った障害: 全称命題の前半 `n=4,5,6` は決着し、後半 `n>=7` が未確認。σ_7 の witness
   （3 石で g=11、または 4 石で g=10）が 1 つあれば σ_7<=4 は SUPPORTED になるが、n=7 の 3 石層は
   C(49,3)=18,424 状態で、三石層以降の Grundy 伝播が必要なため本チャンクの書出し専用制約外。
@@ -160,9 +162,9 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
   前回と状況が変わらない。σ_7 の値を保持する JSON は依然 0 バイト）
 - 前回の一手: 「最優先の未解決整数。C++ の `saturation_cycle6.cpp` が既に実装済み。σ_7=1 は
   1 石で g=13 要求でほぼありえない（n=6 の k=1 は全 g=0）。」
-- 今回の範囲: 対象は `σ_7` のみ。既存 σ_n データの全走査（`round2_b321.json` `holes_by_n`、
-  `night-research/cycle6-saturation-verify.json`、`night-research/cycle6-saturation-n7*.json` x3、
-  `night-research/CYCLE5_GRUNDY_STRUCTURE.md`、`night-research/FINAL_SELECTION_THEOREM.md:167`）。
+- 今回の範囲: 対象は `σ_7` のみ。既存 σ_n データの全走査（`../output/round2_b321.json` `holes_by_n`、
+  `research/experiments/structural-discovery/output/cycle6-saturation-verify.json`、`research/experiments/structural-discovery/output/cycle6-saturation-n7*.json` x3、
+  `research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md`、`research/archive/discovery-summaries/FINAL_SELECTION_THEOREM.md:167`）。
 - 証拠: 走査の結果、`σ_7` の値を保持する既存 JSON は**存在しない**。`cycle6-saturation-n7.json`、
   `-n7-shallow.json`、`-n7-k14.json` はいずれもサイズ 0 バイト。`FINAL_SELECTION_THEOREM.md:167` は
   未確定項目として「K_9 or full σ_7」を残すと明記。K_7=14 は確定（CYCLE5 F7）だが σ_7 は未確定。
@@ -177,11 +179,11 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく
   前回と状況が変わらない。n=8 の Grundy 層データはリポジトリ内に存在しない）
 - 前回の一手: 「B022 が先。σ_7 が 3 なら σ_8=3 は自然、σ_7=4 でも戻りうる。」
-- 今回の範囲: 対象は `σ_8` のみ。既存の n=8 関連データを走査（`night-research/cycle6-maxsafeset-n8-15.json`、
-  `-n8-16.json`、`research/verification/data/s8_exact.json`、`research/verification/data/safe_n7_k12.bin` 等）。
+- 今回の範囲: 対象は `σ_8` のみ。既存の n=8 関連データを走査（`research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json`、
+  `-n8-16.json`、`research/experiments/original-claims/output/data/s8_exact.json`、`research/experiments/original-claims/output/data/safe_n7_k12.bin` 等）。
 - 証拠: n=8 についてリポジトリに存在するのは**最大安全サイズ**側のみ --
   K_8=15（SAT@15, UNSAT@16、`cycle6-maxsafeset-n8-15.json` / `-n8-16.json`）と**最小極大サイズ**側
-  `data/s8_exact.json` の `s_8 = 8`（k=7 は完全非存在 117,206,125 ノード / 12.55 秒、k=8 は
+  `../output/data/s8_exact.json` の `s_8 = 8`（k=7 は完全非存在 117,206,125 ノード / 12.55 秒、k=8 は
   witness `[0,1,6,20,24,32,34,60]` / 0.42 秒、`forbidden_quads: 14564` 既存厳密値と一致、
   `triple_completion_incidence: 58256 = 4 * 14564` を自己チェック済み）。しかしどちらも `M_n(k)` の値
   を与えるのみで g の**分布**を与えないため σ_8 は出ない。n=8 の Grundy 層 JSON はリポジトリ全体进行检查
@@ -192,16 +194,16 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 
 ## B024 [存在] 全初手勝ち盤で二石 nimber が偶数になる（ある `n>=9` と二石 S で `g(S)∈{2,4,6,…}`）
 - 判定: **INCONCLUSIVE**（前回: NOT-CHECKED -> 今回: INCONCLUSIVE。主張前置の「n=6 の二石層は
-  奇数のみ」という既存事実を、独立データ `round2_b321.json` `holes_by_n` で数値レベルに照合し、
+  奇数のみ」という既存事実を、独立データ `../output/round2_b321.json` `holes_by_n` で数値レベルに照合し、
   「偶数は二石層以外には既に存在する」ことが分かった。n>=9 の二石層データは依然無いため SUPPORTED にはしない）
 - 前回の一手: 「n=5 の二石は `{0:20,1:208,2:72}` と偶数を含むが、n=5 は全初手勝ち盤ではない。
   境界探索には n=9 二石層が最小ターゲット。」
 - 今回の範囲: n=2,3,4,5,6 の二石層（k=2）分布、および n=1..10 の全初手勝ち盤の分類。
-  データ: `round2_b321.json` `holes_by_n` の各 `layer_hist`、`night-research/cycle5-grundy-structure.json`
-  の n=4 `layer_profiles`、`night-research/cycle4-n5-two-stone-geometry.json` の `safe_2stone`/`loss_2stone`。
+  データ: `../output/round2_b321.json` `holes_by_n` の各 `layer_hist`、`research/experiments/structural-discovery/output/cycle5-grundy-structure.json`
+  の n=4 `layer_profiles`、`research/experiments/structural-discovery/output/cycle4-n5-two-stone-geometry.json` の `safe_2stone`/`loss_2stone`。
 - 証拠:
-  - n=6 は全初手勝ち（W_6=36/36、確定）。`batch-02.md` の記録する n=6 の k=2 ヒストグラム
-    `{1:596, 3:34}` は**奇数のみ**。同じ 6×6 の**三石層**は `round2_b321.json` `holes_by_n[6]`
+  - n=6 は全初手勝ち（W_6=36/36、確定）。`../../../log/claim-audit/batch-02.md` の記録する n=6 の k=2 ヒストグラム
+    `{1:596, 3:34}` は**奇数のみ**。同じ 6×6 の**三石層**は `../output/round2_b321.json` `holes_by_n[6]`
     で `{0:5336, 1:16, 2:980, 3:60, 5:716, 6:16, 7:8, 8:8}` であり、偶数 2 / 6 / 8 が含まれる。
     つまり 6×6 では「奇数のみ」は二石層固有の性質であり、偶数 nimber は 6×6 に**既に存在する**
     （石数の層を 1 つずらすだけで出る）。これは主張の暗示する「境界は n=9 以降」を一段弱める。
@@ -209,7 +211,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
     `{0:84, 2:20, 3:8, 5:8}`（偶数 0, 2 を含む）。n=5（部分勝ち, W_5=9/25）の k=2 は
     `{0:20, 1:208, 2:72}`（偶数 0, 2 を含む）。
   - 「全初手勝ち」かつ「n>=9」を同時に満たす盤のデータが**無い**: n=9 は W_9=81/81 で全初手勝ちだが、
-    `batch01_jgraph.json` `empty_and_W_table.empty_g_known["9"]` は「`>0 unknown`」で
+    `../output/batch01_jgraph.json` `empty_and_W_table.empty_g_known["9"]` は「`>0 unknown`」で
     n=9 の二石 g 分布は既存データに含まれない。
 - 残った障害: 主張は「ある n>=9」の**存在**であり、[存在] の非発見は反証にならない
   （ROUND3-PROTOCOL.md の禁止事項）。n=9 の二石層は C(81,2)=3,240 状態なので計算自体は不可能では
@@ -226,20 +228,20 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
   全要素は空盤の P/N と同じ偶奇に固定される（S 盤なら偶、F 盤なら奇）。この偶奇固定は B031
   とは独立に B034 の評価に効く。」
 - 今回の範囲: n=4,5 の**全到達 S** についての T* 計算。`scripts/batch02_grundy_tstar.py:306-332`
-  が実装、`scripts/batch02_out.json` の `[4]` / `[5]` ブロックに結果が保存されている。
+  が実装、`../output/batch02_out.json` の `[4]` / `[5]` ブロックに結果が保存されている。
 - 証拠: `batch02_out.json`:
   - `[4].B031_checked = 0`、`B031_violations = []` — n=4 は |T*|>=3 の S が 1 つも存在しない
     （`T*(∅)={6}` のみ）ため**前件が空**で、この形式では 1 つも検査されていない。n=4 の 0 件は
     「穴がない」証拠ではなく「検査対象がない」ことを意味する。
   - `[5].B031_checked = 27`、`B031_violations = []` — n=5 で |T*|>=3 の S は 27 個のみで、
     すべて同偶奇穴なし。加えて `[5].B034.Tstar_empty = [5, 7, 9]` は連続奇数。
-  - 対照として `night-research/cycle6-cert-parity.json` n=5 の層別勝敗は `parity_locked: false` で
+  - 対照として `research/experiments/structural-discovery/output/cycle6-cert-parity.json` n=5 の層別勝敗は `parity_locked: false` で
     層内に LOSS/WIN 混在（k=3: LOSS 9 / WIN 0、k=7: LOSS 335 / WIN 0 だが k=2 は LOSS 0 / WIN 14）。
     したがって「偶奇固定」は T* に関する構造的補題であって、局面の勝敗自体の偶奇固定ではない
     （n=5 の certificate は parity_locked = false）。
 - 残った障害: (a) 検査された S は n=5 の 27 局面のみで、n=5 の 151,394 状態のうち |T*|>=3 の
   ものが 27 個という極めて疎な標本。(b) n=4 は前件空。(c) n=6,7,8,9 の T* は
-  `round3_chunk6_wft.json` にあるのは `Tstar_empty` の**空盤のみ**で、内部局面の T* 分布は無い。
+  `../output/round3_chunk6_wft.json` にあるのは `Tstar_empty` の**空盤のみ**で、内部局面の T* 分布は無い。
   (d) 命題は全称。全称の検証には n=6 以降の T* 集合が必要だが既存データに無い。
 - 前進: 「n=4 は 0 件だから証拠にならない」という**検出力の所在**を初めて明示した。
   前回個票の「n=5 で該当 27 局面すべて穴なし」は同じ数字だったが、n=4 の 0 件を
@@ -247,12 +249,12 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 
 ## B032 [存在] 最短勝ちと最長勝ちで初手が完全に分かれる
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE ラベル不変。**しかし
-  今回、独立した既存データ `round3_chunk6_wft.json` で 5×2 盤という主張にhxenaった
+  今回、独立した既存データ `../output/round3_chunk6_wft.json` で 5×2 盤という主張にhxenaった
   「全初手勝ちなのに T* が分裂する」盤を 1 つRatings確認し、n=5 uredude の 3 段階分裂を
   数値で再確認した。主張の [存在] 型に対して**新種の証人牌**が増えた）
 - 前回の一手: 「存在命題なので n=5 の失敗は反例にならない。n=6 の初手軌道別 T* が次の一手。」
-- 今回の範囲: 読みのみ。`scripts/batch02_out.json` `[5].B032` / `[4].B032`、
-  `round3_chunk6_wft.json` の `n2..n5` と `r2x2..r2x10` の `B340` ブロック。
+- 今回の範囲: 読みのみ。`../output/batch02_out.json` `[5].B032` / `[4].B032`、
+  `../output/round3_chunk6_wft.json` の `n2..n5` と `r2x2..r2x10` の `B340` ブロック。
 - 証拠: n=5（部分勝ち）: `[5].B032` = `min_Tstar_min: 5, max_Tstar_max: 9`、
   `shortest_first_moves` = 8 点（`(0,2),(1,1),(1,3),(2,0),(2,4),(3,1),(3,3),(4,2)`）、
   `longest_first_moves` = 9 点（+ 中央 `(2,2)`）、`disjoint_Tstar_extremes: false`（**非素**）。
@@ -281,18 +283,18 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
   `cycle6-cert-parity.json` の層別データで数値化した**）
 - 前回の一手: 「「偶奇だけでは説明できない」が本体なので n=4 は条件を満たさない。
   n=6 の T*(∅) が最小の決定計算。」
-- 今回の範囲: 読みのみ。`scripts/batch02_out.json` の `[4].B034` / `[5].B034`、
-  `round3_chunk6_wft.json` の `n4`/`n5` の `B336` ブロックと `K_global`、
-  `night-research/cycle6-cert-parity.json` の全 n の層別勝敗。
+- 今回の範囲: 読みのみ。`../output/batch02_out.json` の `[4].B034` / `[5].B034`、
+  `../output/round3_chunk6_wft.json` の `n4`/`n5` の `B336` ブロックと `K_global`、
+  `research/experiments/structural-discovery/output/cycle6-cert-parity.json` の全 n の層別勝敗。
 - 証拠:
   - n=4 (S 盤): `K=7`, `Tstar_empty=[6]`, **`Kn_in_Tstar: false`** → 7∉T*。
     `parity_Kn: 1`（K=7 は奇数）vs `parity_empty_g0: true`（S 盤）→ T* は偶数のみ
-    （`round3_chunk6_wft.json` `n4` は `Tstar_empty=[6]`, `K_global=7`）。したがって
+    （`../output/round3_chunk6_wft.json` `n4` は `Tstar_empty=[6]`, `K_global=7`）。したがって
     **n=4 は偶奇不一致だけで説明できる**（前回と同一）。断定: n=4 は主張の証人にならない。
   - n=5 (F 盤): `K=9`, `Tstar_empty=[5,7,9]`, **`Kn_in_Tstar: true`** → 9∈T*。
     偶奇一致（K=9 は奇数、F 盤で T* は奇数）→ 反証にならない。
-  - n=6 (F 盤): `K=11`（`round3_chunk6_wft.json` の `K_global` は n=6 について未収録だが、
-    `PROTOCOL.md` 確定表 `K_6=11`）、`cycle6-cert-parity.json` n=6 の層別は
+  - n=6 (F 盤): `K=11`（`../output/round3_chunk6_wft.json` の `K_global` は n=6 について未収録だが、
+    `../../../archive/claim-audit-history/PROTOCOL.md` 確定表 `K_6=11`）、`cycle6-cert-parity.json` n=6 の層別は
     `k=11: LOSS 34 / WIN 0` で**全 11 石が P 局面**、奇数。また `parity_locked: false` だが
     層は `k=1: LOSS 1, k=2: WIN 20, k=3: LOSS 18, k=4: WIN 457, ...` と
     交互に**pure**（各層に LOSS のみ or WIN のみ）。偶奇は交互に変わるが、各層の純度は
@@ -305,7 +307,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 残った障害: 核心は「n=6 の T*(∅) に 11 が含まれるか」の一点。n=6 の T*(∅) を計算するには
   349,596 極大状態に対する T* 集合の動的計画が必要で、書出し専用制約外。
   **Round3 chunk6 の wft スクリプトが `r2x*` までしか走っていない**（`n6` キーが
-  `round3_chunk6_wft.json` に存在しない — 確認済: キーは `n2..n5` と `r2x2..r2x10` のみ）。
+  `../output/round3_chunk6_wft.json` に存在しない — 確認済: キーは `n2..n5` と `r2x2..r2x10` のみ）。
   よって n=6 の T* は既存データに存在しない。B034 は PARTIAL のままが正解。
 - 前進: なし（判定不変）。ただし「n=7,8 が parity_locked=true で K_7=14, K_8=15 が
   偶奇的に可能」という**新しい数値的的材料**を追加した（前回は n=6 のみが挙がっていた）。
@@ -318,11 +320,11 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 前回の一手: 「空 R 証人は退化しているので、非空 R で制約を実際に持つ自己同型証人へ強めるのが
   次の一手。」（batch-03.md B042 メモ）
 - 今回の範囲: n=4,5 の**全到達局面**（D4 安定化群・R(S)・Grundy を全局面で算出した既存キャッシュ
-  `batch03_cache.pkl` 由来の `batch03_results.json` `B042`、および `batch03_facts.py` /
+  `batch03_cache.pkl` 由来の `../output/batch03_results.json` `B042`、および `batch03_facts.py` /
   `batch03_extract.py` / `batch03_tests.py::test_b042` のコード Docstring を読んだ）。
   結果の転記のみ。n≥6 は未計算。
 - 証拠:
-  1. **非空 R の証人が両 n で確定**: `batch03_results.json` `B042` の `wit_nonempty`
+  1. **非空 R の証人が両 n で確定**: `../output/batch03_results.json` `B042` の `wit_nonempty`
      - n=4: `S={(0,0),(1,0),(2,0),(0,1),(1,2)}` — k=5, |L|=2, g=1, **|R|=1**,
        制約サイズ別件数 `cnt=[1,0,0]`（2 点制約 1 本のみ、3/4 点制約なし）。
      - n=5: `S={(0,0),(1,0),(2,0),(0,1),(4,1),(2,2)}` — k=6, |L|=3, g=1, **|R|=3**,
@@ -336,13 +338,13 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
      特殊ケースではなく overwhelming な多数派で、うち 96.2%（n=5: 111448/115904）が非空 R。
   3. **独立 2 資料の座標一致**: batch-03.md 本文の証人 n=4 `S={(0,0),(1,0),(3,0),(1,1),(2,2)}`
      (k=5, |L|=2, g=0) と n=5 `S={(0,0),(1,0),(2,0),(0,1),(4,2),(3,3)}` (k=6, |L|=2, g=0) は、
-     `batch03_results.json` の `wit_empty` と**座標・k・|L|・g まで完全一致**（R=∅ 側の独立確認）。
+     `../output/batch03_results.json` の `wit_empty` と**座標・k・|L|・g まで完全一致**（R=∅ 側の独立確認）。
 - 残った障害: (1) 主張の文言は「**各 n≥5 で**存在する」だが、確認できたのは n=4,5 の 2 値のみ。
   n=6 の全到達集合（既知 5.08M 局面・極大 349,596）は既存キャッシュ `batch03_cache.pkl` に
   含まれず、本チャンクは書出し専用で再計算できない。(2) n=5 証人の |Aut(R)| の**厳密値は
-  本 JSON に保存されていない**（`batch03_results.json` は `cnt` のみ保持し、
+  本 JSON に保存されていない**（`../output/batch03_results.json` は `cnt` のみ保持し、
   `batch03_extract.py:45` の `hyper_automorphisms(..., limit=3)` の戻り値は
-  `B042_detail` 側で文字列化される設計だが、その `B042_detail` は `batch03_results.json` に
+  `B042_detail` 側で文字列化される設計だが、その `B042_detail` は `../output/batch03_results.json` に
   含まれない）。したがって「|Aut(R)|≧2」が数値として保存された証拠は無く、
   R が非空・D4 安定化群が自明 までが本 JSON で裏付けられる範囲。
   (3) 辞書の「頻出する」の定量化（非自明 Aut を持つ割合）は未計算。
@@ -352,21 +354,21 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - 判定: **INCONCLUSIVE**（前回: NOT-CHECKED → 今回: INCONCLUSIVE。既存データに
   「R(S) の成分数・成分型数と floor(log2(g+1)) の回帰」を直接評価した値が残っておらず、
   回帰を実行する対象 JSON も存在しない）
-- 前回の一手: 「`research/verification/scripts/residual_core.py` と組み合わせれば n=5 で可能。次バッチ候補。」
+- 前回の一手: 「`scripts/research/residual_core.py` と組み合わせれば n=5 で可能。次バッチ候補。」
 - 今回の範囲: 既存の残余データ JSON の構造のみを走査（読み取りのみ・新しい計算なし）。
-  `research/verification/*.json`、`night-research/*.json` 全体でキー `B029` / `b029` を
+  `research/experiments/original-claims/output/*.json`、`research/experiments/structural-discovery/output/*.json` 全体でキー `B029` / `b029` を
   全文検索した結果、**B029 の判定値を持つ JSON は 1 つも含まれていない**。
-  残余側の既存データは `round3_chunk6_residual.json`（n=3,4,5）、`batch03_results.json`、
-  `batch06_components.json` だが、いずれも B029 用の回帰統計を保存していない。
+  残余側の既存データは `../output/round3_chunk6_residual.json`（n=3,4,5）、`../output/batch03_results.json`、
+  `../output/batch06_components.json` だが、いずれも B029 用の回帰統計を保存していない。
 - 証拠:
-  - `round3_unresolved.json` の `B029` エントリ = `{"label": "NOT-CHECKED", "file": "batch-02.md",
+  - `../output/round3_unresolved.json` の `B029` エントリ = `{"label": "NOT-CHECKED", "file": "batch-02.md",
     "line": 63}`。前回が「証拠: (なし)」と書いた状况はそのまま。
   - 主張の要点を構成するのは **二つの量的比較**：(a) 「R(S) の成分数・成分型数」が
     「|L|」より **よりよく** `floor(log2(g+1))` を説明する、(b) 回帰の精度差。
     既存データが手元にあるのは「成分数」だけ（`compute_batch03_cache.py:186` の
     `nh = hyper_comp_count(L, R)` と `batch03_cache.pkl` の各 `recs[nh]`）で、
     **「異なる成分型の数」**（＝成分サイズ列の多重集合や制約サイズの組）は
-    どの既存 JSON にも保存されていない。`round3_chunk6_residual.json` の
+    どの既存 JSON にも保存されていない。`../output/round3_chunk6_residual.json` の
     `B349` は `n_resid_abstract`（残余の抽象状態数 8..36）を別 ID 用に出力しているが、
     これは成分型数ではなく状態の個数であり B029 の説明変数にはそのままならない。
   - したがって (b) の「|L| より良い」という**比較の片側**（|L| 側）が既に数値化されておらず、
@@ -381,13 +383,13 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 
 ## B037 [構造] 対局長の分岐は少数の選択点へ圧縮できる
 - 判定: **PARTIAL**（前回: NOT-CHECKED → 今回: PARTIAL。別担当の既存データ
-  `round3_chunk6_wft.json` の `B339` が「強制区間の縮約」を数値で実際に分行しており、
+  `../output/round3_chunk6_wft.json` の `B339` が「強制区間の縮約」を数値で実際に分行しており、
   n=4,5 で**圧縮が成立することの定量的証拠**が得られた。一方、主張の後半
   「終局サイズの種類数に比例する数の分岐型」という記述の定量化は依然未達）
 - 前回の一手: 「n=5 の T*(∅)={5,7,9} で分岐型は 3 種。「種類数に比例する数の分岐型」の
   定量定義が曖昧。**B031 の偶奇固定構造と合わせて再定義が先。**」
 - 今回の範囲: n=4（5,811 状態）と n=5（151,394 状態）の全状態に対する
-  記述子ルール圧縮・D4 移動型ルール圧縮・Grundy 縮約。データ: `round3_chunk6_wft.json` の
+  記述子ルール圧縮・D4 移動型ルール圧縮・Grundy 縮約。データ: `../output/round3_chunk6_wft.json` の
   `n4`/`n5` 節の `B339`（別担当が書き出した別計算）。読み取りのみ。
 - 証拠（`B339` の実測値）:
   - **記述子ルール圧縮 — 「少数の選択点」に最も近い証拠**:
@@ -426,7 +428,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
   同時に「中間層で最大」が n=5 で最浅層に負けることを検出力の数字つきで固定した）
 - 前回の一手: 「「極大近傍でない」半分は支持、「中間層で最大」半分は反例気味。
   層距離ではなく g で条件付けし直す価値。」
-- 今回の範囲: 読みのみ。`research/verification/scripts/batch02_out.json` の
+- 今回の範囲: 読みのみ。`research/experiments/original-claims/output/batch02_out.json` の
   `[4].B039_rows` / `[5].B039_rows`。n=4 は 5,811 状態から各層最大 400 標本、
   n=5 は 151,394 状態から各層最大 400 標本を、1 石を「取って別点に置く」全移動で集計。
 - 証拠:
@@ -453,11 +455,11 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 
 ## B040 [全称・大胆] 勝者は最終石数の一つを宣言して勝てる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL ラベル不変。独立データ
-  `round3_chunk6_wft.json` が n=2..5 に加え**長方形 9 盤**（r2x2..r2x10）の WFT を実測しており、
+  `../output/round3_chunk6_wft.json` が n=2..5 に加え**長方形 9 盤**（r2x2..r2x10）の WFT を実測しており、
   「宣言可能 t の唯一性」構造の覆盖が前回より大幅に広がった）
 - 前回の一手: 「n=6 (T* が {7,9,11} など複数なら) が次の試金石。n=4,5 では WFT が常に
   単元というさらに強い現象。」
-- 今回の範囲: 読みのみ。`round3_chunk6_wft.json` の全 16 キー（`n2,n3,n4,n5` と
+- 今回の範囲: 読みのみ。`../output/round3_chunk6_wft.json` の全 16 キー（`n2,n3,n4,n5` と
   `r2x2..r2x10`）の `Tstar_empty` / `WFT_empty` / `K_global` / `max_g`、
   各 `B340` ブロックの `forced_min_range` / `forced_max_range` / `forced_is_constant` /
   `n_winning_firsts` / `n_losing_firsts`、および各 `B336` ブロックの 6 政策の
@@ -489,7 +491,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
     すべて `WFT=[5]`、`E = 39209/7560` で**完全一致**、`forced_is_constant: true`。
     負け初手 6 点は `WFT=[6]`。r2x2/r2x4 も全初手 `forced_is_constant: true`。
 - 残った障害: 主張は**全称**（全 n すべての正方形盤）。**正方形**で確認できたのは
-  n=2,3,4,5 の **4 盤のみ**。`round3_chunk6_wft.json` に **`n6` キーが存在しない**ことを
+  n=2,3,4,5 の **4 盤のみ**。`../output/round3_chunk6_wft.json` に **`n6` キーが存在しない**ことを
   確認（キーは `n2..n5` と `r2x2..r2x10` のみ）。n=6（正方形・F 盤）・n=7,8,9 の
   WFT は全層 Grundy を要求し書出し専用制約下で計算不能。したがって正方形全称は
   SUPPORTED に到らない。
@@ -512,7 +514,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 1 + 1 + 10 + 5 + 3 = 20。本ファイルに実在する 20 個の `## Bxxx` 見出しと完全に一致する。
 
 ### 今回決着（前回から SUPPORTED / REFUTED に動いたもの）
-- **B042: PARTIAL → SUPPORTED**。`batch03_results.json` の `B042.wit_nonempty` により
+- **B042: PARTIAL → SUPPORTED**。`../output/batch03_results.json` の `B042.wit_nonempty` により
   n=4,5 の両方で **R が非空**の自己同型証人が確定
   （n=4: `S={(0,0),(1,0),(2,0),(0,1),(1,2)}`, k=5, |L|=2, g=1, |R|=1, cnt=[1,0,0]；
   n=5: `S={(0,0),(1,0),(2,0),(0,1),(4,1),(2,2)}`, k=6, |L|=3, g=1, |R|=3, cnt=[3,0,0]）。
@@ -531,25 +533,25 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 ### 前回と同一ラベルのもの（内容の強化あり）
 - **B007**: mod-2 剰余記述が 5×5 の D4 軌道分類を厳密に再現することを数値で確定。
 - **B010**: n=5 の T* 分裂（中央 id 12 = (2,2) の `{7,9}` vs 他 8 点の `{5,7,9}`）と
-  「WFT では分裂しない（全 9 点 {7}）」の分離を `batch01_extra.json` `b010_n5.split=true` で確定。
-- **B016**: J_4（16 頂点 84 辺、成分 [16]、次数 9/12）が連結。`round2_b301.json` `B313` は
+  「WFT では分裂しない（全 9 点 {7}）」の分離を `../output/batch01_extra.json` `b010_n5.split=true` で確定。
+- **B016**: J_4（16 頂点 84 辺、成分 [16]、次数 9/12）が連結。`../output/round2_b301.json` `B313` は
   `n7_J_not_computed: true` を明示。`B314`/`B315`（橋 0・関節点 0）が補強材料。
 - **B020**: 3 規則 = 20 本の完全記述を 2 独立データで再確認
   （`n5_verify_loss_pairs` = `{computed:20, known:20, equal:true}`）。
   **「D4 軌道代表より短い」部分は 3 規則 vs 3 軌道で否定**（`b013_aut.d4_edge_orbits=3`）。
-- **B021**: n=2,3,4,5,6 の σ_n を `round2_b321.json` `holes_by_n` `sigma_computed` と
+- **B021**: n=2,3,4,5,6 の σ_n を `../output/round2_b321.json` `holes_by_n` `sigma_computed` と
   `cycle6-saturation-verify.json` の **2 資料独立一致**で裏付け（n=4:2, n=5:3, n=6:3）。
   n=7,8 の σ JSON は 3 ファイルとも **0 バイト**（実測確認）。
 - **B024**: NOT-CHECKED → **INCONCLUSIVE** に前進。n=6 の三石層に偶数 nimber（2,6,8）が
-  既に存在することを `round2_b321.json` `holes_by_n[6]` で確認（「境界は n=9」の前提を弱める）。
+  既に存在することを `../output/round2_b321.json` `holes_by_n[6]` で確認（「境界は n=9」の前提を弱める）。
 - **B029**: NOT-CHECKED → **INCONCLUSIVE** に前進。B029 用の回帰 JSON がリポジトリに
   存在しないことを確認。独立変数のうち「成分型数」がどの JSON にも保存されていない。
 - **B031**: n=4 の `B031_checked=0` が**前件空**（検査対象なし）であることを明示。
   n=5 は 27 局面のみ。検出力不足が PARTIAL の真因。
-- **B032**: `round3_chunk6_wft.json` の r2x2..r2x10（11 盤）を照合。5×2 は 4 勝ち初手が
+- **B032**: `../output/round3_chunk6_wft.json` の r2x2..r2x10（11 盤）を照合。5×2 は 4 勝ち初手が
   全等価 → 分裂しない。11 盤すべてで非素または前件空。
 - **B034**: n=7,8 が `parity_locked: true` で K_7=14（偶）/ K_8=15（奇）が偶奇的に
-  可能であることを追加。核心の「n=6 の T* に 11 を含むか」は `round3_chunk6_wft.json` に
+  可能であることを追加。核心の「n=6 の T* に 11 を含むか」は `../output/round3_chunk6_wft.json` に
   **`n6` キーが存在しない**ため判定不能。
 - **B035**: p_children を束ねた粒度でも p=1 の内部で幅が 0.0 と 2.0 に分かれる
   新しい反例材料を固定。
@@ -570,7 +572,7 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 - **B029**: 「成分型数」の定義・集計がどの既存 JSON にも無い。
 - **B031**: |T*|≥3 の S が n=5 で 27 局面しか無く検出力不足。
 - **B032**: 11 盤すべてで非素または前件空。n=6 の T* が未計算。
-- **B034**: n=6 の T*(∅) が既存データに存在しない（`round3_chunk6_wft.json` に `n6` キーなし）。
+- **B034**: n=6 の T*(∅) が既存データに存在しない（`../output/round3_chunk6_wft.json` に `n6` キーなし）。
 - **B035**: p_children 以外の因子で幅が決まるかの再解析が未実施。
 - **B040**: 正方形 n=6,7,8,9 の WFT が未計算。
 
@@ -583,13 +585,13 @@ B021, B022, B023, B024, B029, B031, B032, B034, B035, B037, B039, B040, B042 の
 
 ## B035 [統計] 勝敗を保つ手が少ない局面ほど対局長は安定する
 - 判定: **REFUTED**（前回: INCONCLUSIVE → 今回: REFUTED。既存の生データ
-  `research/verification/scripts/batch02_out.json` の `B035_rows` を **セルごとに読み直した**ところ、
+  `research/experiments/original-claims/output/batch02_out.json` の `B035_rows` を **セルごとに読み直した**ところ、
   同一 (k, g) セル内で P 子数が増えるほど T* 幅が**狭くなる**という主張と**逆向き**の
   単調系列が n=4 と n=5 の双方に明示的に現れた。主張が (k,g) を固定したうえで
   「P への合法手の数が少ないほど幅が狭い」と言うため、この逆向き系列が直接の反例になる）
 - 前回の一手: 「(k,g) のみで束ね直し、P 子数との順位相関を取る追加分析が必要。」
 - 今回の範囲: n=4,5 の全到達 N 局面を (k, g, P子数) セルに束ねた `mean_Tstar_width`。
-  データ: `research/verification/scripts/batch02_out.json` の `B035_rows`
+  データ: `research/experiments/original-claims/output/batch02_out.json` の `B035_rows`
   （n=4 で 40 行、n=5 で 40 行。ただし `batch02_grundy_tstar.py:617` が
   `"B035_rows": b035_rows[:40]` と**先頭 40 行で打ち切って保存**している点に注意）。
   読み取りのみ。n=6 は `batch02_n6_tstar.py` 打ち切りで未計算。

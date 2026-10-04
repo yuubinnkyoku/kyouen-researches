@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 二次的な重複被覆を持つ格子配置の無限族 — B074・B356
 
 作成: 2026-09-28。担当: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第1仮説バンク](../hypothesis-bank-2026-09-27.md) B074、
-[第2仮説バンク](../hypothesis-bank-round2-2026-09-27.md) B356。
+原文: [第1仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md) B074、
+[第2仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md) B356。
 
 | ID | 今回の判定 | 結果 |
 |---|---|---|
@@ -13,8 +15,8 @@
 ここでb_S(p)は、Sの三点組のうちpを加えると共円または共線の四点組となるものの個数。
 安全集合Sとは、既に共円・共線の四点組を含まない集合を指す。
 
-再現: `python research/verification/scripts/round5_quadratic_cover.py`。
-[整数検算コード](scripts/round5_quadratic_cover.py)、[証人座標と検算結果](round5_quadratic_cover.json)。
+再現: `python research/experiments/original-claims/scripts/round5_quadratic_cover.py`。
+[整数検算コード](../scripts/round5_quadratic_cover.py)、[証人座標と検算結果](../output/round5_quadratic_cover.json)。
 
 ## 1. 四点共円・共線を持たない三次曲線上の整数点
 

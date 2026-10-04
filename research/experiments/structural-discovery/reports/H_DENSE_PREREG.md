@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Pre-registration — H-dense independent test (freeze)
 
 Status: **FROZEN for future independent boards only**  
@@ -53,16 +55,16 @@ For each such n:
 
 ## Frozen artifacts backing the exploratory base rate
 
-- `night-research/cycle4-density-table.json`
-- `night-research/cycle4-exact-n5.json`
-- `night-research/first-moves-9x9.csv`
-- `night-research/CYCLE3_RESULTS.md`, `CYCLE4_EXACT_STRUCTURE.md`
+- `research/experiments/structural-discovery/output/cycle4-density-table.json`
+- `research/experiments/structural-discovery/output/cycle4-exact-n5.json`
+- `research/experiments/structural-discovery/output/first-moves-9x9.csv`
+- `research/log/discovery-cycles/CYCLE3_RESULTS.md`, `../../../log/discovery-cycles/CYCLE4_EXACT_STRUCTURE.md`
 
 ## Next independent board protocol
 
 1. Do **not** peek at first-move outcomes on the test board while choosing any
    structural exceptional-label rule.
 2. Run complete first-move classification (D4 orbits) only after freeze.
-3. Record outcome in `night-research/CYCLE*_RESULTS.md` with verdict
+3. Record outcome in `research/experiments/structural-discovery/output/CYCLE*_RESULTS.md` with verdict
    SUPPORTED / REFUTED / UNDECIDED (if board is S-win, H-dense is silent —
    density 0 is definitional).

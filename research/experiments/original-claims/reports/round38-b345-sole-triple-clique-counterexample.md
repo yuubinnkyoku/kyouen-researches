@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B345: クリーク直和でも唯一の三点辺が値を変える
 
 作成: 2026-09-30。**B345原文REFUTED。最小の合法点数は4。**
@@ -42,21 +44,21 @@ eは三成分を一頂点ずつでまたぎ、二点辺を含まないので真�
 
 ## 全継続の検算
 
-[探索器](scripts/round38_b345_search.cpp)は標準盤の整数幾何を作り直し、
+[探索器](../scripts/round38_b345_search.cpp)は標準盤の整数幾何を作り直し、
 Rの三点辺が唯一、四点辺なし、二点グラフの各連結成分がクリーク、という強い候補だけを検査した。
-[検算器](scripts/round38_b345_verify.py)は別の整数行列式から幾何を再生成してLとRを照合した。
+[検算器](../scripts/round38_b345_verify.py)は別の整数行列式から幾何を再生成してLとRを照合した。
 全16拡張の安全性が、残余辺、保持四点組、円・直線占有数、拡張内の全四点直接行列式で一致した。
 両ゲームの全安全拡張のmexを逆順のメモ再帰で求め、C++のg=3/1と一致した。
 
 旧証人S=[0,1,2,7,8]は二つの三点辺を全部外すとg=3→1だが、
 一辺だけ外すとg=3を保っていた。今回の証人はこの単独辺の条件の留保を解消する。
 
-    python research/verification/scripts/round38_b345_verify.py
+    python research/experiments/original-claims/scripts/round38_b345_verify.py
 
 探索の再現（bash）:
 
-    g++ -O3 -std=c++20 research/verification/scripts/round38_b345_search.cpp -o /home/yuubi/round28_n7/round38_search
-    /home/yuubi/round28_n7/round38_search 5 research/verification/round38_b345_n5_search.json 14 1
+    g++ -O3 -std=c++20 research/experiments/original-claims/scripts/round38_b345_search.cpp -o /home/yuubi/round28_n7/round38_search
+    /home/yuubi/round28_n7/round38_search 5 research/experiments/original-claims/output/round38_b345_n5_search.json 14 1
 
-- [5×5の発見記録](round38_b345_n5_search.json)
-- [全16拡張と両版の全mex証明書](round38_b345_verified.json)
+- [5×5の発見記録](../output/round38_b345_n5_search.json)
+- [全16拡張と両版の全mex証明書](../output/round38_b345_verified.json)

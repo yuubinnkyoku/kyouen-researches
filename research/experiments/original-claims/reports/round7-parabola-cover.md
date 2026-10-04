@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B357の反証を二次幅の整数盤で実現する
 
 作成: 2026-09-28。B357は **REFUTED**。
@@ -94,8 +96,8 @@ b≥εk²の空点がΩ_ε(k)個となる。q=O(k)、座標がO(k²)なので、
 
 ## 4. 再現可能な整数検算
 
-実行: `python research/verification/scripts/round7_parabola_cover.py`。
-[スクリプト](scripts/round7_parabola_cover.py)、[全証人座標と計数](round7_parabola_cover.json)。
+実行: `python research/experiments/original-claims/scripts/round7_parabola_cover.py`。
+[スクリプト](../scripts/round7_parabola_cover.py)、[全証人座標と計数](../output/round7_parabola_cover.json)。
 
 m=1,2,3,4,6,8,12で、全ての安全四点組と全指定空点の被覆三点組を整数演算で確認する。
 行列式そのものを式(2)と照合し、被覆個数を閉じた式・三項和直接計数でも照合する。

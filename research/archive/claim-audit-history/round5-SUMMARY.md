@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 統合サマリ（最終版）
 
 > 最終統合担当。最終更新: 2026-09-29。
@@ -123,35 +125,35 @@
 ## 6. ファイル一覧
 
 ### 主要バッチ（41 ファイル）
-`round5-batch-n8.md`, `round5-batch-b001-b100.md`, `round5-batch-b001-b100-followup.md`,
-`round5-batch-b001-b100-push3.md`, `round5-batch-b001-b100-final.md`,
-`round5-batch-b020-b090.md`, `round5-batch-b020-b090-followup.md`,
-`round5-batch-b101-b150.md`, `round5-batch-b101-b200.md`, `round5-batch-b101-b200-followup.md`,
-`round5-batch-b120-b160.md`, `round5-batch-b120-b160-followup.md`,
-`round5-batch-b142-docs.md`, `round5-batch-b151-b200.md`, `round5-batch-b177-b200.md`,
-`round5-batch-b201-b230.md`, `round5-batch-b201-b230-followup.md`,
-`round5-batch-b231-b250.md`, `round5-batch-b231-b250-followup.md`, `round5-batch-b231-b250-push3.md`,
-`round5-batch-b251-b270.md`, `round5-batch-b251-b300.md`, `round5-batch-b251-b300-followup.md`,
-`round5-batch-b271-b290.md`, `round5-batch-b271-b290-followup.md`,
-`round5-batch-b301-b400.md`, `round5-batch-b301-b400-followup.md`,
-`round5-batch-b325-b350.md`, `round5-batch-b351-b400.md`, `round5-batch-b351-b400-followup.md`,
-`round5-batch-b401-b600.md`, `round5-batch-b401-b600-followup.md`,
-`round5-batch-b482-b500.md`, `round5-batch-b482-b500-followup.md`,
-`round5-batch-b551-b600.md`, `round5-batch-b551-b600-followup.md`,
-`round5-batch-geom-stats.md`, `round5-batch-geom-stats-followup.md`,
-`round5-batch-jn.md`, `round5-batch-jn-followup.md`,
-`round5-batch-pgrand.md`, `round5-batch-pgrand-followup.md`
+`../../experiments/original-claims/reports/round5-batch-n8.md`, `../../experiments/original-claims/reports/round5-batch-b001-b100.md`, `../../experiments/original-claims/reports/round5-batch-b001-b100-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b001-b100-push3.md`, `../../experiments/original-claims/reports/round5-batch-b001-b100-final.md`,
+`../../experiments/original-claims/reports/round5-batch-b020-b090.md`, `../../experiments/original-claims/reports/round5-batch-b020-b090-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b101-b150.md`, `../../experiments/original-claims/reports/round5-batch-b101-b200.md`, `../../experiments/original-claims/reports/round5-batch-b101-b200-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b120-b160.md`, `../../experiments/original-claims/reports/round5-batch-b120-b160-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b142-docs.md`, `../../experiments/original-claims/reports/round5-batch-b151-b200.md`, `../../experiments/original-claims/reports/round5-batch-b177-b200.md`,
+`../../experiments/original-claims/reports/round5-batch-b201-b230.md`, `../../experiments/original-claims/reports/round5-batch-b201-b230-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b231-b250.md`, `../../experiments/original-claims/reports/round5-batch-b231-b250-followup.md`, `../../experiments/original-claims/reports/round5-batch-b231-b250-push3.md`,
+`../../experiments/original-claims/reports/round5-batch-b251-b270.md`, `../../experiments/original-claims/reports/round5-batch-b251-b300.md`, `../../experiments/original-claims/reports/round5-batch-b251-b300-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b271-b290.md`, `../../experiments/original-claims/reports/round5-batch-b271-b290-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b301-b400.md`, `../../experiments/original-claims/reports/round5-batch-b301-b400-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b325-b350.md`, `../../experiments/original-claims/reports/round5-batch-b351-b400.md`, `../../experiments/original-claims/reports/round5-batch-b351-b400-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b401-b600.md`, `../../experiments/original-claims/reports/round5-batch-b401-b600-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b482-b500.md`, `../../experiments/original-claims/reports/round5-batch-b482-b500-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-b551-b600.md`, `../../experiments/original-claims/reports/round5-batch-b551-b600-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-geom-stats.md`, `../../experiments/original-claims/reports/round5-batch-geom-stats-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-jn.md`, `../../experiments/original-claims/reports/round5-batch-jn-followup.md`,
+`../../experiments/original-claims/reports/round5-batch-pgrand.md`, `../../experiments/original-claims/reports/round5-batch-pgrand-followup.md`
 
 ### 弱化・決着バッチ（10 ファイル）
-`round5-batch-b001-b200-weak.md`, `round5-batch-b101-b200-weak.md`,
-`round5-batch-b201-b300-weak.md`, `round5-batch-b251-b270-weak.md`,
-`round5-batch-b325-b350-weak.md`, `round5-batch-b501-b600-weak.md`,
-`round5-batch-weak-promote.md`, `round5-batch-final-43.md`,
-`round5-batch-last21.md`, `round5-batch-b201-b500-final.md`
+`../../experiments/original-claims/reports/round5-batch-b001-b200-weak.md`, `../../experiments/original-claims/reports/round5-batch-b101-b200-weak.md`,
+`../../experiments/original-claims/reports/round5-batch-b201-b300-weak.md`, `../../experiments/original-claims/reports/round5-batch-b251-b270-weak.md`,
+`../../experiments/original-claims/reports/round5-batch-b325-b350-weak.md`, `../../experiments/original-claims/reports/round5-batch-b501-b600-weak.md`,
+`../../experiments/original-claims/reports/round5-batch-weak-promote.md`, `../../experiments/original-claims/reports/round5-batch-final-43.md`,
+`../../experiments/original-claims/reports/round5-batch-last21.md`, `../../experiments/original-claims/reports/round5-batch-b201-b500-final.md`
 
 ### 関連ドキュメント
-`round5-FINAL-SUMMARY.md`（最終統合）, `round5-census-log.md`, `ROUND5-PROTOCOL.md`,
-`round5-workplan.md`, `round5_n8_progress.md`, `round5-b141-corrections.md`
+`round5-FINAL-SUMMARY.md`（最終統合）, `../../log/claim-audit/round5-census-log.md`, `ROUND5-PROTOCOL.md`,
+`round5-workplan.md`, `../../log/claim-audit/round5_n8_progress.md`, `../../experiments/original-claims/reports/round5-b141-corrections.md`
 
 ---
 

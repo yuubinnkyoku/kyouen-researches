@@ -1,18 +1,20 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B557の反証: 五行の最小幅は12、等差数列限定では14
 
 作成: 2026-09-28。担当: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第2仮説バンク](../hypothesis-bank-round2-2026-09-27.md) B557・B558。
+原文: [第2仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md) B557・B558。
 
 | ID | 今回の判定 | 結果 |
 |---|---|---|
 | B557 | REFUTED | 五行に各三石を置く最小列数は12。予想の2w+1=11では不可能 |
 | B558 | PARTIAL | 五行で各行を等差数列に限定した最小列数は14。全wでの二次上界は未解決 |
 
-再現: `python research/verification/scripts/round5_row_thresholds.py`。
-[実行・証人検査スクリプト](scripts/round5_row_thresholds.py)、
-[全実行結果](round5_row_thresholds.json)、
-[行三点組方式](scripts/round5_row_triples.cpp)、
-[禁止四点集合方式](scripts/round5_row_hypergraph.cpp)。
+再現: `python research/experiments/original-claims/scripts/round5_row_thresholds.py`。
+[実行・証人検査スクリプト](../scripts/round5_row_thresholds.py)、
+[全実行結果](../output/round5_row_thresholds.json)、
+[行三点組方式](../scripts/round5_row_triples.cpp)、
+[禁止四点集合方式](../scripts/round5_row_hypergraph.cpp)。
 既存のWSL Ubuntuとg++を使用し、パッケージを追加していない。
 
 ## 1. 最小幅の確定

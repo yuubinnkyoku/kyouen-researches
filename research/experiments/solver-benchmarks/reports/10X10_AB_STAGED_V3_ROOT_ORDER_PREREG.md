@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Preregistration: AB staged-V3 root-order solver benchmark
 
 Date: 2026-09-13
@@ -7,13 +9,13 @@ Status: **FROZEN BEFORE ANY AB PROBE OR EXACT ROW IS COLLECTED**
 
 ## 0. Why this experiment exists
 
-V3 (`docs/10X10_STAGED_V3_HOLDOUT_RESULT.md`) established that staged
+V3 (`research/experiments/solver-benchmarks/reports/10X10_STAGED_V3_HOLDOUT_RESULT.md`) established that staged
 10k → top-11 → 1M ranking is a **classification / shortlist-recall**
 success on an independent 12-parent holdout (12/12 top-11 LOSS coverage;
 87.5% probe reduction vs full-1M). That result explicitly does **not**
 claim native parent-solver wall-clock or visited-node speedup.
 
-V2 parent benchmark (`docs/10X10_V2_10K_PARENT_SOLVER_BENCHMARK_REPORT.md`)
+V2 parent benchmark (`research/experiments/solver-benchmarks/reports/10X10_V2_10K_PARENT_SOLVER_BENCHMARK_REPORT.md`)
 showed that naive 10k-memo root ordering **loses** (median work ratio 1.84;
 improved 2/12) even ignoring shared-memo pollution (S1 median 1.79).
 Mechanism: 10k memo order often selects an expensive LOSS sibling; native
@@ -62,8 +64,8 @@ Cohort freeze artifacts (already committed with this phase):
 | shrink / load (exact) | 0 / 90 |
 | exact budget | 0 (unbounded) |
 | fresh process | yes; one solver process per probe child; one per (parent, strategy) exact |
-| probe binary | `tmp-kb/probe_holdout_native` (sha256 `15d805ea…`) |
-| exact binary | `tmp-kb/parent_bench_native` (sha256 `e0de57b3…`, root-order patch) |
+| probe binary | `research/experiments/solver-benchmarks/bin/probe_holdout_native` (sha256 `15d805ea…`) |
+| exact binary | `research/experiments/solver-benchmarks/bin/parent_bench_native` (sha256 `e0de57b3…`, root-order patch) |
 | ranking key | probe LOSS first; unresolved `memo_used` asc; probe WIN last; move asc |
 | K / direction / adaptive rules | frozen from V3; no change |
 | exact repeats | 1 serial run per (parent, strategy); visited is primary |
@@ -176,7 +178,7 @@ Stopping rule: all 16 parents complete every stage. No parent add/drop.
 - `results/10x10/ab-staged-v3-root/protocol.json`
 - `results/10x10/ab-staged-v3-root/parent_summary.csv`
 - `results/10x10/ab-staged-v3-root/aggregate_summary.json`
-- `docs/10X10_AB_STAGED_V3_ROOT_ORDER_RESULT.md`
+- `research/experiments/solver-benchmarks/reports/10X10_AB_STAGED_V3_ROOT_ORDER_RESULT.md`
 
 ## 7. Failure analysis (if gates fail)
 

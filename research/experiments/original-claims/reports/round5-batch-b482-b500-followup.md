@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 追撃: B482–B500 follow-up
 
 対象: `round5-batch-b482-b500.md` の PARTIAL 7 件・INCONCLUSIVE 1 件
@@ -5,9 +7,9 @@
 方針: 弱化形を定式化し SUPPORTED / REFUTED に上げる。到達確率 DP は n≤5 で厳密（Fraction 検算含む）。
 制約: n≥7 の全列挙・p_rand 全計算は行わない。`round5-batch-b482-b500.md` は編集しない。
 
-スクリプト: `research/verification/scripts/round5_b482b500_followup.py` / `_b495wit.py` / `_b490rich.py` / `_verify.py`
-データ: `round5_b482b500_followup.json`, `round5_b482b500_b495wit.json`,
-`round5_b482b500_b490rich.json`, `round5_b482b500_verify.json`、特徴量 `round5_b482b500_feats.pkl`
+スクリプト: `research/experiments/original-claims/scripts/round5_b482b500_followup.py` / `_b495wit.py` / `_b490rich.py` / `_verify.py`
+データ: `../output/round5_b482b500_followup.json`, `../output/round5_b482b500_b495wit.json`,
+`../output/round5_b482b500_b490rich.json`, `../output/round5_b482b500_verify.json`、特徴量 `round5_b482b500_feats.pkl`
 
 ---
 

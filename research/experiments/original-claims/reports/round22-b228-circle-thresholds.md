@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B228成立: 円を点数順に丸ごと追加すると5×5の勝者が二回反転
 
 作成: 2026-09-30。**B228 SUPPORTED（原文の存在主張）。**
-原文 [B228](../hypothesis-bank-2026-09-27.md):
+原文 [B228](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md):
 「盤上点数の多い円から順に禁止を追加すると、空盤勝者が少なくとも2回反転する盤がある」。
 
 5×5で全ての共線四点禁止を保ったまま、円の禁止を盤上点数の降順に追加する。
@@ -41,12 +43,12 @@
 
 ## 2. 独立した全状態計算
 
-[探索コード](scripts/round22_rule_scan.cpp)は保持四点組から三点補完リストを作り、
+[探索コード](../scripts/round22_rule_scan.cpp)は保持四点組から三点補完リストを作り、
 P/Nの再帰で固定ゲームを解いた。これは真のGrundy値ではなく勝敗フラグとして記録する。
 ノード上限超過はUNKNOWN=-1とする。今回の五閾値は全て正常終了した。
 
-[独立検証コード](scripts/round22_b228_verify.py)は、
-[round21の検算部品](scripts/round21_b224_verify.py)で幾何を整数行列式から再生成し、
+[独立検証コード](../scripts/round22_b228_verify.py)は、
+[round21の検算部品](../scripts/round21_b224_verify.py)で幾何を整数行列式から再生成し、
 各曲線の占有数を直接数えて全安全局面を列挙した。
 探索の補完リストや探索コードは使わない。
 全状態DAGを後方mexで評価し、表の真のGrundy値と全初手値を得た。
@@ -65,13 +67,13 @@ round3/round4にはB228 SUPPORTEDというラベルが既にあったが、
 
 ## 4. 再現
 
-    python research/verification/scripts/round22_rule_input.py
-    g++ -O3 -std=c++17 -Wall -Wextra research/verification/scripts/round22_rule_scan.cpp -o research/verification/scripts/round22_rule_scan.exe
-    research/verification/scripts/round22_rule_scan.exe research/verification/round22_rules_input.txt research/verification/round22_rules_scan.json 10000000
-    python research/verification/scripts/round22_b228_verify.py
+    python research/experiments/original-claims/scripts/round22_rule_input.py
+    g++ -O3 -std=c++17 -Wall -Wextra research/experiments/original-claims/scripts/round22_rule_scan.cpp -o research/experiments/original-claims/scripts/round22_rule_scan.exe
+    research/experiments/original-claims/scripts/round22_rule_scan.exe research/experiments/original-claims/output/round22_rules_input.txt research/experiments/original-claims/output/round22_rules_scan.json 10000000
+    python research/experiments/original-claims/scripts/round22_b228_verify.py
 
-- [探索入力の意味](round22_rules_cases.json)、[探索結果](round22_rules_scan.json)
-- [独立検算結果・全初手・全層個数](round22_b228_verified.json)
+- [探索入力の意味](../output/round22_rules_cases.json)、[探索結果](../output/round22_rules_scan.json)
+- [独立検算結果・全初手・全層個数](../output/round22_b228_verified.json)
 
 検算JSONに使用ソース、幾何入力、探索入力結果、依存検算コードのSHA-256を保存した。
 全600件の残件数はこの個票では再集計していない。

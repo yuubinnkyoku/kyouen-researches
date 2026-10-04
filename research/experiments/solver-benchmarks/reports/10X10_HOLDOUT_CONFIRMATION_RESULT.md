@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 fresh-memo probe: holdout confirmation result
 
 Date: 2026-09-07
 Branch: `blind-probe-holdout-validation`
-Preregistration: `docs/10X10_PROBE_HOLDOUT_PREREGISTRATION.md` (base `9d2e4e6`)
+Preregistration: `research/experiments/solver-benchmarks/reports/10X10_PROBE_HOLDOUT_PREREGISTRATION.md` (base `9d2e4e6`)
 Frozen parent set: `results/10x10/holdout-parent-selection-preregistered.csv` (11 parents)
 
 ## What was tested
@@ -26,7 +28,7 @@ direction/budget/parent/endpoint changes after outcomes.
 - 1020/1020 exact outcomes (shrink 0, load 90, unbounded, 0 failures,
   0 timeouts), merged into 55 analyzer-compatible batch files.
 - Input verification passes (1020 tasks / 1020 probe rows).
-- **Interpretation correction (audit `3d87e8b`)**: The 11 parents were unused for the probe-ranking experiment, but each originated from pre-existing proof families (`two-stone-90-61-child-proof.csv` and `two-stone-90-66-child-proof.csv`) that already supplied at least one exact LOSS child (in eight cases a literal direct child; in three cases a D4-equivalent direct child). Therefore this experiment is a prospective ranking replication on previously certified WIN parents, not a fully child-outcome-blind holdout. See `docs/10X10_HOLDOUT_PREKNOWN_LOSS_CHILD_AUDIT.md` and `results/10x10/exhaustive_preknown_loss_audit.json`.
+- **Interpretation correction (audit `3d87e8b`)**: The 11 parents were unused for the probe-ranking experiment, but each originated from pre-existing proof families (`two-stone-90-61-child-proof.csv` and `two-stone-90-66-child-proof.csv`) that already supplied at least one exact LOSS child (in eight cases a literal direct child; in three cases a D4-equivalent direct child). Therefore this experiment is a prospective ranking replication on previously certified WIN parents, not a fully child-outcome-blind holdout. See `research/experiments/solver-benchmarks/reports/10X10_HOLDOUT_PREKNOWN_LOSS_CHILD_AUDIT.md` and `results/10x10/exhaustive_preknown_loss_audit.json`.
 
 ## Primary result: hypothesis CONFIRMED on the holdout
 

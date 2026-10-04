@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B317成立と、J4・J5の有限命題の原文監査
 
-作成: 2026-09-30。原文: [B011〜B018](../hypothesis-bank-2026-09-27.md)、
-[B301〜B317](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-30。原文: [B011〜B018](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)、
+[B301〜B317](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **B317 SUPPORTED。4×4の全112,212完全マッチングは、固定応答を4手目または6手目に破られる。**
 以前の20標本だけの結果を、全マッチングの証明書と独立な網羅性検査へ拡張した。
@@ -44,9 +46,9 @@ n=1,2,3の空盤はNなので、B317の後手勝ち盤として最小盤も4×4�
 
 ## 2. 全マッチングに証明書を付ける
 
-[生成コード](scripts/round27_response_graphs.py)は最小の未マッチ頂点を選び、
+[生成コード](../scripts/round27_response_graphs.py)は最小の未マッチ頂点を選び、
 その全隣接点を相手として再帰する。従って完全マッチングを一度ずつ漏れなく列挙する。
-各葉に前節の失敗局面を付け、[バイナリ証明書](round27_pairing_failures.bin)へ保存した。
+各葉に前節の失敗局面を付け、[バイナリ証明書](../output/round27_pairing_failures.bin)へ保存した。
 
 形式は8バイトの`KYPAIR27`、4バイトのレコード数、続いて112,212個の12バイトレコード。
 各レコードはlittle endianで、
@@ -56,9 +58,9 @@ n=1,2,3の空盤はNなので、B317の後手勝ち盤として最小盤も4×4�
     uint8: 相手の合法着手
     uint8: その固定応答（違法）
 
-を持つ。[主要JSON](round27_response_graphs.json)に件数・例・SHA-256を保存。
+を持つ。[主要JSON](../output/round27_response_graphs.json)に件数・例・SHA-256を保存。
 
-[独立C++検査器](scripts/round27_pairing_verify.cpp)は既存の幾何・ゲーム・グラフコードを含めない。
+[独立C++検査器](../scripts/round27_pairing_verify.cpp)は既存の幾何・ゲーム・グラフコードを含めない。
 元座標の[x²+y²,x,y,1]の4×4行列式を24項で展開し、全194禁止組を再生成する。
 全65,536部分集合を四点包含で判定し、5,811安全集合のgを密配列でmex評価してJ4を再生成した。
 Pythonの全曲線占有による合法手計算と異なる経路である。
@@ -66,8 +68,8 @@ Pythonの全曲線占有による合法手計算と異なる経路である。
 全証明書について、完全マッチング・P辺・prefixのペア閉性・prefixの安全性・相手手の合法性・
 固定応答の違法性・重複なしを検査した。さらに**最大**未マッチ頂点から逆順に全マッチングを列挙し、
 証明書の集合を一つずつ消した。終了時に不足も残余も0で、112,212個全てが一対一に一致した。
-[独立検査結果](round27_pairing_verified.json)も四手目109,704・六手目2,508と一致。
-[照合マニフェスト](round27_pairing_audited.json)に全ソース・証明書・結果のSHA-256を保存した。
+[独立検査結果](../output/round27_pairing_verified.json)も四手目109,704・六手目2,508と一致。
+[照合マニフェスト](../output/round27_pairing_audited.json)に全ソース・証明書・結果のSHA-256を保存した。
 
 ## 3. J5の固定盤命題も原文へ照合
 
@@ -107,8 +109,8 @@ REFUTEDという原文判定は正しいが、理由は原文の長さ上限10�
 
 ## 再現
 
-    python research/verification/scripts/round27_response_graphs.py
-    g++ -O3 -std=c++17 -Wall -Wextra research/verification/scripts/round27_pairing_verify.cpp -o research/verification/scripts/round27_pairing_verify.exe
-    research/verification/scripts/round27_pairing_verify.exe research/verification/round27_pairing_failures.bin research/verification/round27_pairing_verified.json
+    python research/experiments/original-claims/scripts/round27_response_graphs.py
+    g++ -O3 -std=c++17 -Wall -Wextra research/experiments/original-claims/scripts/round27_pairing_verify.cpp -o research/experiments/original-claims/scripts/round27_pairing_verify.exe
+    research/experiments/original-claims/scripts/round27_pairing_verify.exe research/experiments/original-claims/output/round27_pairing_failures.bin research/experiments/original-claims/output/round27_pairing_verified.json
 
 全600件の原文監査は途中。B313/B314/B315/B319などの全盤量化を、この固定二盤の結果で決着させない。

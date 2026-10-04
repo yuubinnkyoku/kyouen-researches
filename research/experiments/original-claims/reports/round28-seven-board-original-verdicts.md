@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 7×7の飽和・固定長勝利・応答グラフの原命題決着
 
 対象はB022、B040、B313、B314、B315の原文。有限範囲への弱化ではなく、
@@ -15,7 +17,7 @@
   第一方式の層ファイルはメモの住所にだけ使用し、全状態を空盤から独立に訪問する。
   生成した安全子が一つでも層にない場合、または記録状態が一つでも訪問されなかった場合は失敗する。
 - 全層のGrundy分布と状態数、0〜3石の全19,650局面のg/T*/WFTが一致。
-  全層のP数と遷移数は以前の`data/n7_stream.json`とも一致する。
+  全層のP数と遷移数は以前の`../output/data/n7_stream.json`とも一致する。
   4×4では別の全曲線Python再帰とも照合した。
 
 WFTの再帰は、NではP子の和集合、Pでは全子の積集合。
@@ -73,12 +75,12 @@ B321/B322の全盤の飽和層の穴は未決着。この7×7では連結、一�
 
 ## 保存と再現
 
-- [原命題監査・グラフ全辺・23辺マッチング・SHA256](round28_n7_audited.json)
-- [第一方式の層分布と0〜3石の全値](round28_n7_layers.json)
-- [独立方式の全層分布・最大値証人・0〜3石の全値](round28_n7_independent.json)
-- [独立行列式の全禁止四点組](round28_n7_quads.txt)
-- [層別DP](scripts/round28_low_layers.cpp)、[独立再帰](scripts/round28_recursive_verify.cpp)、
-  [実行スクリプト](scripts/round28_run.sh)、[照合スクリプト](scripts/round28_audit.py)
+- [原命題監査・グラフ全辺・23辺マッチング・SHA256](../output/round28_n7_audited.json)
+- [第一方式の層分布と0〜3石の全値](../output/round28_n7_layers.json)
+- [独立方式の全層分布・最大値証人・0〜3石の全値](../output/round28_n7_independent.json)
+- [独立行列式の全禁止四点組](../output/round28_n7_quads.txt)
+- [層別DP](../scripts/round28_low_layers.cpp)、[独立再帰](../scripts/round28_recursive_verify.cpp)、
+  [実行スクリプト](../scripts/round28_run.sh)、[照合スクリプト](../scripts/round28_audit.py)
 
 まず`python scripts/round28_audit.py --prepare`で入力を生成。
 WSLで`bash scripts/round28_run.sh 7`を実行する。

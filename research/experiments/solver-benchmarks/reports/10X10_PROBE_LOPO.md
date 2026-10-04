@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 共円ゲーム: stones別プローブ規則の Leave-One-Parent-Out 汎化検証
 
 ## 要約・結論
@@ -26,7 +28,7 @@
 
 ## 1. 目的
 
-先行研究（コミット `2b88131`、報告書 `docs/10X10_PROBE_PREDICTION.md`）では、stones 別にプローブ特徴量を選ぶことで first LOSS 発見位置が random 2.6 から 1.2 へ改善すると報告された。しかしこの「最適ルール」は全データを見てから決めた後付け選択であり、未知の親局面に対する汎化性能は不明だった。
+先行研究（コミット `2b88131`、報告書 `research/experiments/solver-benchmarks/reports/10X10_PROBE_PREDICTION.md`）では、stones 別にプローブ特徴量を選ぶことで first LOSS 発見位置が random 2.6 から 1.2 へ改善すると報告された。しかしこの「最適ルール」は全データを見てから決めた後付け選択であり、未知の親局面に対する汎化性能は不明だった。
 
 本研究では以下を厳密に検証する。
 
@@ -282,4 +284,4 @@
 - `scripts/analyze_probe_lopo.py`: LOPO 評価スクリプト（再実行可能）。
 - `results/10x10/probe-lopo-results.csv`: 各 fold・各親の結果。
 - `results/10x10/probe-lopo-analysis.json`: 集計結果、ルール安定性、4-stone 分析、コスト分析、反例。
-- `docs/10X10_PROBE_LOPO.md`: 本報告書。
+- `research/experiments/solver-benchmarks/reports/10X10_PROBE_LOPO.md`: 本報告書。

@@ -1,25 +1,27 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B370–B404（grp7）
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B370, B371–B380, B382, B384–B386,
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B370, B371–B380, B382, B384–B386,
 B388, B390, B400, B402, B404 の 20 件。
 手法: **書出し専用**。既存のスクリプト / JSON / 前回個票を読むだけで、新しい重い計算はしていない。
-参照した既存データ: `research/verification/data/s8_exact.json`,
-`research/exploration/fact_kmin_n8{,b,c,d}.json`, `research/exploration/fact_kmin_by_board.json`,
-`night-research/cycle6-maxsafeset-n8-15.json`, `night-research/cycle6-maxsafeset-n8-16.json`,
-`results/cycle14h_n8_witnesses.json`, `research/verification/scripts/round3_b371_analysis.py`（docstring のみ）,
-`round2-batch-b351.md`, `round2-batch-b381.md`, `PROTOCOL.md`, `ROUND3-PROTOCOL.md`。
+参照した既存データ: `research/experiments/original-claims/output/data/s8_exact.json`,
+`research/experiments/fact-discovery/output/fact_kmin_n8{,b,c,d}.json`, `research/experiments/fact-discovery/output/fact_kmin_by_board.json`,
+`research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json`, `research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-16.json`,
+`results/cycle14h_n8_witnesses.json`, `research/experiments/original-claims/scripts/round3_b371_analysis.py`（docstring のみ）,
+`round2-batch-b351.md`, `round2-batch-b381.md`, `../../../archive/claim-audit-history/PROTOCOL.md`, `../../../archive/claim-audit-history/ROUND3-PROTOCOL.md`。
 
 ## 先行ワーカーの到達範囲（全 B371–B380 共通の前提）
-`research/verification/scripts/round3_b371_analysis.py` は「8×8 の 8 石極大集合の**完全リスト**」
-`research/verification/data/n8_k8.masks.bin`（`maximal8.go` の出力）を入力に取る設計だが、
-**その入力ファイルはリポジトリ内に存在しない**（`research/verification/data/` にも、`maximal8.go` も
-`results/` にも `night-research/` にも無い）。docstring が要求する Go 列挙器の成果物が未生成。
+`research/experiments/original-claims/scripts/round3_b371_analysis.py` は「8×8 の 8 石極大集合の**完全リスト**」
+`research/experiments/original-claims/output/data/n8_k8.masks.bin`（`maximal8.go` の出力）を入力に取る設計だが、
+**その入力ファイルはリポジトリ内に存在しない**（`research/experiments/original-claims/output/data/` にも、`maximal8.go` も
+`results/` にも `research/experiments/structural-discovery/output/` にも無い）。docstring が要求する Go 列挙器の成果物が未生成。
 ファイルが無いので `main()` は `sys.exit(2)` で即終了し、`round3_b371.json` も生成されていない。
 したがって **8 石極大リストはリポジトリ内に存在せず**、B371–B375, B378, B380 は
 「全列挙 0 件」という事実だけを証拠として扱い、推測で SUPPORTED/REFUTED を書いていない。
 （pure-Python での 8 石極大全列挙は C(64,8) = 4.4e9 候補で実行不能。先行ワーカーは
 `n8_k8.masks.bin` を **Go 列挙器 `maximal8.go` の出力**として要求する設計にしており、
-この環境には C++ コンパイラが無く（`ROUND3-PROTOCOL.md`）、Go も無い。）
+この環境には C++ コンパイラが無く（`../../../archive/claim-audit-history/ROUND3-PROTOCOL.md`）、Go も無い。）
 
 ---
 
@@ -28,10 +30,10 @@ B388, B390, B400, B402, B404 の 20 件。
 分類する統計。既存データにこの分類は一切入っていない。
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「n=5 s_5=5 と n=6 s_6=6 の近傍で 1-out 2-in の総当りが有限で済む。」
-- 今回の範囲: なし（既存データのみ読む）。`round2_b351.json` の `b367_unlock_frac_top` / `b369_inessential_witness`
+- 今回の範囲: なし（既存データのみ読む）。`../output/round2_b351.json` の `b367_unlock_frac_top` / `b369_inessential_witness`
   は ρ と b ベクトルの記述で、縮小候補の失敗理由分類は含まない。
 - 証拠: なし。既存の最小極大証人は n=3 `S=[0,1,2,3,7]`, n=4 `S=[0,1,2,7,10]`,
-  n=5 `S=[2,6,7,8,22]`, n=6 `S=[1,2,18,19,23,31]`（`research/exploration/fact_kmin_by_board.json`）だが、
+  n=5 `S=[2,6,7,8,22]`, n=6 `S=[1,2,18,19,23,31]`（`research/experiments/fact-discovery/output/fact_kmin_by_board.json`）だが、
   これらに対する縮小候補の統計はどのファイルにも記録されていない。
 - 残った障害: 既存データに情報がなく前回と状況が変わらない。1-out 2-in の全当りと
   「未被覆/新禁止4点組」の二値分類を n=5,6 の s_n 極大周辺で走らせる小さなスクリプトが要るが、
@@ -40,11 +42,11 @@ B388, B390, B400, B402, B404 の 20 件。
 ## B371 [全称・大胆] 8×8 の 8石極大集合は三点共線を必ず含む
 - 判定: **NOT-CHECKED**（前回: PARTIAL → 今回: NOT-CHECKED。**後退**した。理由を下記に明記）
 - 前回の一手: 「8 石極大の完全列挙（n=8, k=8）→ B371–B375, B378, B380 が一気に動く。C++ への移植が現実的。」
-- 今回の範囲: 8 石極大の証人 1 件のみ（`data/s8_exact.json` の k=8 witness `[0,1,6,20,24,32,34,60]`）。
+- 今回の範囲: 8 石極大の証人 1 件のみ（`../output/data/s8_exact.json` の k=8 witness `[0,1,6,20,24,32,34,60]`）。
   全列挙は 0 件。
 - 証拠: 既知証人 W は共線三つ組 3 本（方向 (1,0), (0,1), (1,−1)）。ただし全称命題の反例探索に必要な
-  8 石極大リスト `research/verification/data/n8_k8.masks.bin` はリポジトリ内に存在せず、
-  先行スクリプト `scripts/round3_b371_analysis.py` はそのファイルを要求する（`sys.exit(2)` で終了）。
+  8 石極大リスト `research/experiments/original-claims/output/data/n8_k8.masks.bin` はリポジトリ内に存在せず、
+  先行スクリプト `../scripts/round3_b371_analysis.py` はそのファイルを要求する（`sys.exit(2)` で終了）。
   `results/cycle15h_n8_occ.json` は K=15 の 88 件サンプルの占有パターンで k=8 ではない。
 - 残った障害: 8 石極大全列挙が実行不能（pure-Python では C(64,8) ≈ 4.4e9）、かつ既存の 8 石極大リストが
   リポジトリ内に存在しない。証人 1 件での一致は全称の証拠にならず、反例も 1 件も取り出せないため
@@ -57,7 +59,7 @@ B388, B390, B400, B402, B404 の 20 件。
 - 前回の一手: B371 の全列挙。
 - 今回の範囲: 証人 W のみ。全列挙 0 件（`n8_k8.masks.bin` 不存在）。
 - 証拠: W の共線方向は 3 種 (1,0), (0,1), (1,−1)。1 方向のみの 8 石極大は**未発見だが未探索**であり、
-  非発見は全称命題の反証にならない（`ROUND3-PROTOCOL.md` 禁止事項）。
+  非発見は全称命題の反証にならない（`../../../archive/claim-audit-history/ROUND3-PROTOCOL.md` 禁止事項）。
 - 残った障害: B371 と同一。方向数 ≥2 を満たさない 8 石極大が 1 件でもあれば REFUTED になるが、
   全列挙が無いので判定不能。
 
@@ -72,7 +74,7 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **NOT-CHECKED**（前回: INCONCLUSIVE → 今回: NOT-CHECKED）
 - 前回の一手: 「B373 と両立可能。角なし・2 辺接触の 8 石極大が見つかれば両方動く。」
 - 今回の範囲: 角を占有しない 8 石極大の探索は 0 件。全列挙データ不在。
-- 証拠: 既知証人 W は角 (0,0) を占有（`data/s8_exact.json` の k=8 witness）。角なし証人は 0 件だが、
+- 証拠: 既知証人 W は角 (0,0) を占有（`../output/data/s8_exact.json` の k=8 witness）。角なし証人は 0 件だが、
   これは探索未実施による非発見であって存在命題の反証ではない。
 - 残った障害: 先行スクリプト `round3_b371_analysis.py` は
   `b374 = [a for a in analyses if a["n_corners"] == 0]` という判定器を既に実装しているが、
@@ -92,7 +94,7 @@ B388, B390, B400, B402, B404 の 20 件。
 ## B376 [構造] 8 石極大の被覆は二本の三点直線と少数の円へ圧縮できる（12本以下）
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「貪欲 24 に対し最適はそれ以下だが、12 まで落ちるかは不明。」
-- 今回の範囲: 8 石極大 1 件（既知証人 W）の被覆圧縮。`round2_b351.json` の `n8_8stone` ブロック
+- 今回の範囲: 8 石極大 1 件（既知証人 W）の被覆圧縮。`../output/round2_b351.json` の `n8_8stone` ブロック
   （`n_analyzed = 1`, `rho_hist = {1: 1}`, `rho_ge2_witness = null`）と `round2-batch-b351.md` の記録のみ。
 - 証拠: W の 56 空点を覆うのに必要な三つ組の貪欲圧縮は **24 本**（うち共線 3 本）。
   命題の「12 本以下」より多い。正確な被覆数（exact set cover）は**まだ計算されていない**。
@@ -107,16 +109,16 @@ B388, B390, B400, B402, B404 の 20 件。
 ## B377 [全称・大胆] 安全 7 点集合では 8×8 に必ず 2 点以上の合法手が残る
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。**根拠が大幅強化**された）
 - 前回の一手: 「s_8=8 が決まれば B377 の 0 手版は従うが、『≥2 手』はそれより強い。7 石で残り 1 手、の精密検索が次の試金石。」
-- 今回の範囲: 8×8 の安全 7 点集合に対する**完全非存在**（`research/verification/data/s8_exact.json`、
+- 今回の範囲: 8×8 の安全 7 点集合に対する**完全非存在**（`research/experiments/original-claims/output/data/s8_exact.json`、
   `scripts/analysis/fact_kmin_cover_bound.cpp` の k=7 run）。前回個票が参照した乱サンプル
   20,000 通りではなく、**完全探索の結果**。
-- 証拠: `data/s8_exact.json` の `runs[0]` = `{n:8, k:7, complete:true, found:false,
+- 証拠: `../output/data/s8_exact.json` の `runs[0]` = `{n:8, k:7, complete:true, found:false,
   nodes:117206125, seconds:12.554, forbidden_quads:14564, triple_completion_incidence:58256,
   max_completion:9, witness:[]}`。これは **極大 7 石安全集合が存在しない**ことの完全証明であり、
   したがって「7 石の安全集合で合法手が 0 になる」状態は到達不可能。
   `runs[1]` = `{k:8, complete:true, found:true, nodes:2760213, witness:[0,1,6,20,24,32,34,60]}`
-  で **s_8 = 8 が確定**（`research/findings.md` §F-BF、`research/verification/SUMMARY.md` の既知記録）。
-  整合性: forbidden=14,564 / incidence=58,256=4×14,564 は `PROTOCOL.md` の F_8=14,564 と一致。
+  で **s_8 = 8 が確定**（`research/archive/hypothesis-ledgers/findings.md` §F-BF、`research/archive/claim-audit-history/SUMMARY.md` の既知記録）。
+  整合性: forbidden=14,564 / incidence=58,256=4×14,564 は `../../../archive/claim-audit-history/PROTOCOL.md` の F_8=14,564 と一致。
 - 残った障害: 命題は「合法手が **≥2** 点を**必ず**残す」であり、既存データは
   「**0 手は不可能**（7 石極大は存在しない）」までしか与えない。
   「合法手が**ちょうど 1 点**の 7 石安全集合」が存在するかは既存データから判定できない。
@@ -128,7 +130,7 @@ B388, B390, B400, B402, B404 の 20 件。
 - 前回の一手: 「W の削除で生じる合法点数は 15, 11, 16, 10, 24, 12, 13, 15。ちょうど 1 は無し。他証人が未発見のため存在は未判定。」
 - 今回の範囲: 8 石極大 1 件（既知証人 W）の 8 通りの削除のみ。他証人の 8 石極大は 0 件。
 - 証拠: W の削除で新たに合法化する点数は **15, 11, 16, 10, 24, 12, 13, 15**（最小 10）。
-  ちょうど 1 は無い。`round2_b351.json` の `n8_8stone` は `rho_hist = {1: 1}`（ρ=1）だけを示すが、
+  ちょうど 1 は無い。`../output/round2_b351.json` の `n8_8stone` は `rho_hist = {1: 1}`（ρ=1）だけを示すが、
   ρ は「元の空点を 1 つでも合法に戻す最小除去数」であり、
   「除去点以外に**ちょうど 1 点**」という B378 の量とは別物である（ρ=1 でも 10–24 点生む）。
 - 残った障害: 存在命題であり、証人が 1 件しかない状況での非発見は反証にならない。
@@ -140,10 +142,10 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「W を 9×9 に移し、≤2 除去 + 追加で 9 石極大を探す有限探索。次に回す。」
 - 今回の範囲: なし。9×9 の 8/9 石極大の探索は既存データに一切無い。
-- 証拠: 9×9 関連の既存データは `night-research/cycle6-maxsafeset-n9-18.json` =
+- 証拠: 9×9 関連の既存データは `research/experiments/structural-discovery/output/cycle6-maxsafeset-n9-18.json` =
   `{n:9, target:18, found:false, nodes:1, witness:[]}`（**nodes=1** すなわち探索が実質走っていない、
   K_9 の上界探索の空記録）だけで、9 石極大に関する記録は存在しない。
-  `research/findings.md` §F-BF の「今後の検証方法에도 s_9 のブラケット縮小が未実施」とある。
+  `research/archive/hypothesis-ledgers/findings.md` §F-BF の「今後の検証方法에도 s_9 のブラケット縮小が未実施」とある。
   W の 9×9 埋め込み（x,y → y·9+x）も既存ファイルに計算結果が無い。
 - 残った障害: 既存データに情報がなく前回と状況が変わらない。W を 9×9 に埋め、
   高々 2 除去して 9 石極大を探す有限探索（追加候補は元の 8 点 + 81−9=72 点、
@@ -154,7 +156,7 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「B375 の多型発見後に、一重被覆点の辺/内部分布と局所改良盆地の対応を測る。」
 - 今回の範囲: なし。8 石極大は 1 型しか無いので sum_b 群の分割が定義できない。
-- 証拠: 既知証人 W は min b=1（一重被覆点あり）、ρ=1。`round2_b351.json` の `n8_8stone` に
+- 証拠: 既知証人 W は min b=1（一重被覆点あり）、ρ=1。`../output/round2_b351.json` の `n8_8stone` に
   一重被覆点の座標分布は記録されていない。
   先行スクリプト `round3_b371_analysis.py` は `by_sum` による sum_b グループ分けと
   `single_on_edge / n_single_cover` の辺集中率の分布を計算する実装（`B380` ブロック、verdict は
@@ -165,9 +167,9 @@ B388, B390, B400, B402, B404 の 20 件。
 ---
 
 ## B382 [構造] 7×7 最大配置の最初の合法外点は D4 軌道で少数型になる
-- 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。**実測が `round2_b381.json` から再確認できた**）
+- 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。**実測が `../output/round2_b381.json` から再確認できた**）
 - 前回の一手: 「A/B の違いは明確。位置型の完全分類は D4 軌道の正規化が必要。」
-- 今回の範囲: n=7 の K=14 最大配置 **全 16 件**（`research/verification/round2_b381.json` の
+- 今回の範囲: n=7 の K=14 最大配置 **全 16 件**（`research/experiments/original-claims/output/round2_b381.json` の
   `n7` 配列、`summary.n7_r_dist = {2: 16}`、`summary.n7_all_r2 = true`、`summary.n7_bb_uniform = true`）。
 - 証拠: 全 16 配置で r=2（`n7_r_dist = {"2": 16}`、`n7_all_r2 = true`）。
   外接矩形 `bb = [0,6,0,6]` は全 16 で同一（`n7_bb_uniform = true`）。
@@ -187,16 +189,16 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。**n=8 の K=15 証人の r は未計算**）
 - 前回の一手: 「n=6,7 の r を全計算。n≤2 しか確認できない。」
 - 今回の範囲: n=6（K=11, 464 件）と n=7（K=14, 16 件）の r。n=8 の K=15 は
-  `round2_b381.json` の `n6`/`n7` 配列に**含まれない**（n=8 は 1 証人のみ扱われている）。
-- 証拠: `round2_b381.json` の `summary` = `{n7_r_dist: {2: 16}, n6_r_dist: {1: 424, 2: 40},
+  `../output/round2_b381.json` の `n6`/`n7` 配列に**含まれない**（n=8 は 1 証人のみ扱われている）。
+- 証拠: `../output/round2_b381.json` の `summary` = `{n7_r_dist: {2: 16}, n6_r_dist: {1: 424, 2: 40},
   n7_all_r2: true, n7_bb_uniform: true}`。n=6,7 で r ≤ 2。
-  `night-research/cycle6-maxsafeset-n8-16.json` は 16 証人を**非発見**、`cycle6-maxsafeset-n8-15.json` は
+  `research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-16.json` は 16 証人を**非発見**、`cycle6-maxsafeset-n8-15.json` は
   15 証人の 1 件 `[[0,0],[1,0],[2,0],[1,1],[7,1],[3,2],[7,2],[5,3],[0,4],[2,5],[4,5],[5,6],[0,7],[4,7],[5,7]]`
-  だが、この証人の r は**どこにも記録されていない**。`PROTOCOL.md` の確定 K_9 ≥ 17（証明書末端 17石飽和）は
+  だが、この証人の r は**どこにも記録されていない**。`../../../archive/claim-audit-history/PROTOCOL.md` の確定 K_9 ≥ 17（証明書末端 17石飽和）は
   9×9 の**盤内**の値であり、盤外飽和半径 r の話ではない（ラベル混同に注意）。
 - 残った障害: 「絶対定数 C が全 n にある」は漸近主張で、n=6,7 だけでは判定不能。
   確定している弱い版: n=6,7 では C=2 が成立。
-  残るのは n=8 以降の r のデータで、`round2_b381.json` は n=6,7 しか含んでいないため
+  残るのは n=8 以降の r のデータで、`../output/round2_b381.json` は n=6,7 しか含んでいないため
   n=8 の r が未計算。軽い 1 件でも n=8 の r=2 なら「n≤8 で C=2」と書ける。
 
 ## B385 [存在] 盤内では最小極大なのに盤外の広い帯まで塞ぐ（r を任意に大きく）
@@ -205,10 +207,10 @@ B388, B390, B400, B402, B404 の 20 件。
 - 今回の範囲: 8×8 の 8 石極大 W 1 件の r のみ（前回個票の値）。n=7 の s_7=7 達成配置の r は未計算。
 - 証拠: 既知 W = `[0,1,6,20,24,32,34,60]` の **r = 1**。外側 1 層に
   (−1,−1), (−1,5), (−1,6) などの追加可能点が **6 個**ある。
-  `data/s8_exact.json` の k=7 run が `complete:true, found:false` なので
+  `../output/data/s8_exact.json` の k=7 run が `complete:true, found:false` なので
   **n=8 では 7 石の極大配置が存在しない**（s_8=8）。したがって n=8 の「盤内では最小極大」を
   満たす集合は W そのもの以外になく、W の r=1 だけが使える。
-  `research/exploration/fact_kmin_by_board.json` は n=3..6 の s_n 例を与えるが r 情報は無い。
+  `research/experiments/fact-discovery/output/fact_kmin_by_board.json` は n=3..6 の s_n 例を与えるが r 情報は無い。
 - 残った障害: 「r を任意に大きくできる」存在命題に対し、n=8 では証人が原理的に 1 個しか無い。
   n=7 では s_7=7 の極大集合の r が未計算（`data/` に `safe_n7_k12.bin`, `safe_n7_k13.bin` はあるが
   7 石安全集合のリストと r は無い）。n=6 の s_6=6 証人 `S=[1,2,18,19,23,31]` に対する r も未計算。
@@ -218,11 +220,11 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存データが補強された）
 - 前回の一手: 「n=8 の 15石最大集合の全数は未知（witness 1個のみ）のため全称としての確定は不可。」
 - 今回の範囲: n=7 の K=14 全 16 配置 × 4 平行移動 = **64 埋め込み**、
-  および n=8 の K=15 証人。K_7=14 / K_8=15 は `PROTOCOL.md` の確定事実。
+  および n=8 の K=15 証人。K_7=14 / K_8=15 は `../../../archive/claim-audit-history/PROTOCOL.md` の確定事実。
 - 証拠: 共有点数の最大は **6**、分布 `{1:10, 2:16, 3:17, 4:13, 5:5, 6:3}`。
   14 − 6 = **8 個の除去**が必要（`round2-batch-b381.md` B386）。
   さらに n=8 の K=15 証人が 2 件あることが分かった:
-  `night-research/cycle6-maxsafeset-n8-15.json` の 1 件と、`results/cycle14h_n8_witnesses.json` の
+  `research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json` の 1 件と、`results/cycle14h_n8_witnesses.json` の
   `hex = "3120140120888207"`（`corners = 2`, `rho_cap3 = 1`）ほか複数。
   さらに `results/cycle15h_n8_occ.json` は `K=15, total_seen=88, n_patterns=67, complete=false`
   — **88 件の K=15 証人が見つかっており**、前回「witness 1個のみ」と書かれた状況が変わっている。
@@ -237,10 +239,10 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「理論的考察が必要。整数平面上で遠方の4点共円条件の解析は別課題。」
 - 今回の範囲: なし。遠方外点の禁止理由（共円 vs 共線）の内訳を既存データから取る。
-- 証拠: 既存の盤外飽和データ `round2_b381.json` は `r` と `first_pts_sample`（座標）と
+- 証拠: 既存の盤外飽和データ `../output/round2_b381.json` は `r` と `first_pts_sample`（座標）と
   `first_orbits`（相対位置）しか持っておらず、**各点が共円由来か共線由来かのラベルは持っていない**。
   盤外点を 4 点禁止寄与に分解するコードはリポジトリ内に見当たらない。
-  `round2_b351.json` の `b360_most_inefficient` / `argmax_b` は盤**内**の b ベクトルで、
+  `../output/round2_b351.json` の `b360_most_inefficient` / `argmax_b` は盤**内**の b ベクトルで、
   盤外の遠方の分類とは別物。
 - 残った障害: 既存データに情報がなく前回と状況が変わらない。
   着手するなら `kyouen_core.det4` で外点 p について「盤内 3 点の円が p を通るか」を 1 点ずつ検査し、
@@ -252,7 +254,7 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。**変位が 1 方向のみであることが明確になった**）
 - 前回の一手: 「r の変化は確認できるが、『任意に大きくできる族』の証明には不十分。」
 - 今回の範囲: n=6 の r=2 配置 40 件からの一石移動近傍走査（前回実施分）。
-  `round2_b381.json` の `summary.n6_r_dist = {1: 424, 2: 40}` と `n6` 配列の 40 件分の
+  `../output/round2_b381.json` の `summary.n6_r_dist = {1: 424, 2: 40}` と `n6` 配列の 40 件分の
   `r` / `first_pts_sample` が対応する。
 - 証拠: n=6 では r=1 が 424 件、r=2 が 40 件（同じ K_6=11 で r が異なる = B383 の SUPPORTED）。
   r=2 配置の例 `n6[4]` は `r=2, n_first=6`（距離 2 で 6 点）、
@@ -263,14 +265,14 @@ B388, B390, B400, B402, B404 の 20 件。
   観測は Δr ≤ 0 のみ。**既存データは命題と逆方向の兆候しか示していない。**
   ただし Δr = +1 の移動が n=6 の全 424 r=1 配置から r=2 への移動として存在するかも未確認なので
   正式な反証ではない。PARTIAL を維持。次の手は n=7 の 16 配置と n=6 の 464 配置の
-  1-swap グラフ上で Δr の最大値を取ること（`round2_b381.json` に K_7=14 の 1-swap 剛性 ρ=2
+  1-swap グラフ上で Δr の最大値を取ること（`../output/round2_b381.json` に K_7=14 の 1-swap 剛性 ρ=2
   のデータがある）。
 
 ## B400 [統計] 3石行の平行集中は最大性に不利
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。**null model 不足を明示**）
 - 前回の一手: 「集中型が少ない (20/464) 事実はあるが、null model なしでは『不利』とは言えない。」
 - 今回の範囲: n=6 の K=11 全 464 配置の 3 石行の連続/分散と一石移動次数の関係（前回実施分）。
-  `round2_b351.json` の `n6_k11` ブロック（4198 行〜）に 464 配置の行/列次数が記録されている。
+  `../output/round2_b351.json` の `n6_k11` ブロック（4198 行〜）に 464 配置の行/列次数が記録されている。
 - 証拠: 3 石行連続 20 配置の平均交換次数 = **2.2**、分散 400 配置の平均 = **1.34**。
   集中型が少数 (20/464)。命題の後半「連続して集まる配置は離れている配置より**共円違反を起こしやすい**」
   は直接測られていない — 測られたのは交換次数であって共円違反の頻度ではない。
@@ -286,7 +288,7 @@ B388, B390, B400, B402, B404 の 20 件。
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。**裏付けデータが JSON で再確認できた**）
 - 前回の一手: 「B402 の相対位置 D4 正規化で『8 方向』を厳密に検証。」
 - 今回の範囲: n=7 の K=14 全 16 配置の最小特定ペア（前回実施分）。
-  `round2_b381.json` の `n7_profiles` 配列（2990 行〜）が 16 配置の
+  `../output/round2_b381.json` の `n7_profiles` 配列（2990 行〜）が 16 配置の
   行/列占有ベクトルと特定ペア情報を保持。
 - 証拠: **6/16 配置**で、一方の点の D4 軌道情報のみから相（A/B）が一意に決まる。
   相対位置は **8 種類**: (1,0), (2,1), (2,2), (3,0), (3,2), (3,3), (4,1), (4,2)。
@@ -302,18 +304,18 @@ B388, B390, B400, B402, B404 の 20 件。
 - 前回の一手: 「n=7 では A相 (17ペア) と B相 (21ペア) の最近接距離はともに 10。差なし。」
 - 今回の範囲: n=7 全 16 配置、および n=6 サンプル 30 配置の
   最小特定集合の個数と最近接最大配置までの Hamming 距離（前回実施分）。
-  `round2_b381.json` の `n7`（16 件）と `n6` 配列内のサンプルエントリ。
+  `../output/round2_b381.json` の `n7`（16 件）と `n6` 配列内のサンプルエントリ。
 - 証拠: n=7 では A 相 17 ペア / B 相 21 ペアだが最近接距離は**両方 10** で差なし
   （ペア数が 19% 違うのに距離が同一）。n=6 サンプルでは弱い正相関
   （ペア 0 → 距離 2、ペア 3–4 → 距離 4–8）だが不完全。
   ハミング距離 10 は 14 石中の 10 個が別物、つまり 4 個しか共通しない — n=7 の
-  1-swap 剛性 ρ=2（`PROTOCOL.md` の確定事実: K_7=14 は 1-swap で交換可能 0 通り）と
+  1-swap 剛性 ρ=2（`../../../archive/claim-audit-history/PROTOCOL.md` の確定事実: K_7=14 は 1-swap で交換可能 0 通り）と
   「距離 10 ≫ 交換 1 歩」を整合させる。
 - 残った障害: n=7 では**相関が完全に消えている**（ペア数 17 vs 21 で距離同一）。
   16 件全てが n=7 なので n 方向の変種がなく、「同じ n で」の比較という命題の枠組みが
   実質 n=7 一点しかない。PARTIAL を維持。
   次の手は n=6 の 464 件**全量**（random sample 30 ではなく）で
-  特定ペア数と最近接距離を測り直すこと。`round2_b351.json` の `n6_k11` に 464 配置の
+  特定ペア数と最近接距離を測り直すこと。`../output/round2_b351.json` の `n6_k11` に 464 配置の
   行/列次数ベクトルがあるので、計算は既存データのみで構成できる。
 
 ---
@@ -336,17 +338,17 @@ INCONCLUSIVE 4（B384, B385, B388, B400）、NOT-CHECKED 9（B370–B375, B378�
 ### 今回 SUPPORTED / REFUTED に動かなかった理由（全件共通）
 8 石極大（k=8, n=8）の全列挙は pure-Python では C(64,8) ≈ 4.4e9 候補で実行不能であり、
 先行ワーカーの `round3_b371_analysis.py` が要求する入力
-`research/verification/data/n8_k8.masks.bin` はリポジトリ内に存在しない
+`research/experiments/original-claims/output/data/n8_k8.masks.bin` はリポジトリ内に存在しない
 （`maximal8.go` も無い）。**既存の 8 石極大リストはリポジトリ内に存在しない。**
 このため B371–B375, B378, B380 は判定器だけが存在してデータが 0 件という状態で止まり、
-推測で SUPPORTED / REFUTED を書いていない（`ROUND3-WRITEOUT.md` の禁止事項）。
+推測で SUPPORTED / REFUTED を書いていない（`../../../archive/claim-audit-history/ROUND3-WRITEOUT.md` の禁止事項）。
 
 ### 今回中身が動いた 4 件
-- **B377**: 根拠が「乱サンプル 20,000 通り」から `data/s8_exact.json` の**完全非存在**
+- **B377**: 根拠が「乱サンプル 20,000 通り」から `../output/data/s8_exact.json` の**完全非存在**
   （k=7, 117,206,125 nodes, complete=true）に強化。ただし命題の「≥2 手」まで
   既存の完全探索では到達しないため PARTIAL のまま。
 - **B384**: n=8 の K=15 証人の r が**どこにも記録されていない**ことを特定。
-  `PROTOCOL.md` の K_9 ≥ 17 は盤内の値で r ではないという混同も明示した。
+  `../../../archive/claim-audit-history/PROTOCOL.md` の K_9 ≥ 17 は盤内の値で r ではないという混同も明示した。
 - **B386**: n=8 の K=15 証人が**88 件**（`results/cycle15h_n8_occ.json`, `complete=false`）あることが判明。
   前回個票の「witness 1 個のみ」という記述より状況が進んでいる。次の 1,408 対の共通点数計算が具体化した。
 - **B390**: Δr の符号が観測では **−1 のみ**（命題は +方向を要求）で、既存データが逆方向の兆候のみ
@@ -366,6 +368,6 @@ INCONCLUSIVE 4（B384, B385, B388, B400）、NOT-CHECKED 9（B370–B375, B378�
 ### 最も有望な次の一手（1 つだけ）
 **n=7 の K=14 全 16 配置 × n=8 の K=15 証人 88 件 = 1,408 埋め込みの共通点数を数える**
 （B386 / B387 を同時に動かす）。`results/cycle15h_n8_occ.json` に 88 件の hex が既にあり、
-`night-research/maxsafe_n7_K14.bin` に 16 配置がある。純 Python のビット演算で
+`research/experiments/structural-discovery/output/maxsafe_n7_K14.bin` に 16 配置がある。純 Python のビット演算で
 1,408 対 × 14 点の比較は瞬间に済み、書出し専用ロールの次の一手として
 実行可能な数少ない「1 本で複数仮説が動く」計算である。

@@ -1,10 +1,12 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 中心分母5・8の完全点数と、最小半径の逆転定理
 
 2026-10-03。有限盤で切断する前の、円上の**全整数格子点**を扱う。
 中心の正確な共通分母を q とし、少なくとも m 点を持つ円の最小半径を `R_q(m)` と書く。
 「正確な分母」とは中心 `(a/q,b/q)` が `gcd(a,b,q)=1` を満たすことをいう。
 
-既存の[分母3・4の定理](verification/round10-circle-denominator.md)と
+既存の[分母3・4の定理](../../original-claims/reports/round10-circle-denominator.md)と
 [分母6の定理](theory-audit-20261003.md#4-正確な中心分母6の点数公式と最小半径)を拡張する。
 以下の一般公式・比較は証明付きであり、有限計算からの推測ではない。
 
@@ -322,7 +324,7 @@ m=3では最初の三角形下界そのものである。
 | 11–12 | 83,317 | 160,225 |
 
 ```sh
-python research/verification/scripts/theory_audit_20261003_extra.py --output research/verification/theory_audit_20261003_extra.json
+python research/experiments/geometry/scripts/theory_audit_20261003_extra.py --output research/experiments/geometry/output/theory_audit_20261003_extra.json
 ```
 
 検証器は M≤200,000 の全ガウス整数を座標から直接列挙し、
@@ -332,6 +334,6 @@ python research/verification/scripts/theory_audit_20261003_extra.py --output res
 3点以上の最小例20個についても、原始係数 `A=q/gcd(q,2)` と
 全三点部分集合の行列式がAの非零倍になることを整数演算で確認した。
 
-結果: [theory_audit_20261003_extra.json](verification/theory_audit_20261003_extra.json)。
+結果: [theory_audit_20261003_extra.json](../output/theory_audit_20261003_extra.json)。
 一般比較の証明は第2・3節であり、検算範囲外への経験的な予想ではない。
 これらの半径最小化は、有限正方形に入る最多点数や最小収容幅を直接決定するものではない。

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # round58: B087の全埋め込みを原文の存在証人へ採用
 
 **B087 SUPPORTED、証人はn=7。** 全7×7最大安全集合を8×8へ平行移動しても、
@@ -19,7 +21,7 @@ D4像も既に全16配置に含まれる。
 この原文証明には外部既知値のK8≤15を必要としない。
 最小の障害盤が7であることや、全てのnに同じ障害があることは主張しない。
 
-再現: `python research/verification/scripts/round58_maximum_embedding_audit.py`
+再現: `python research/experiments/original-claims/scripts/round58_maximum_embedding_audit.py`
 
 最高層のローカルファイルはround28の完全計算から再生成できる。
-結果`round58_embedding_verified.json`には全64×50禁止証人と依存ハッシュを保存した。
+結果`../output/round58_embedding_verified.json`には全64×50禁止証人と依存ハッシュを保存した。

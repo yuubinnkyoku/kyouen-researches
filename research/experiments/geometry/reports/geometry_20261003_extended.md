@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 帯幅16〜31の条件付き厳密極値と、全中心への長方形移行
 
 2026-10-03。
@@ -256,8 +258,8 @@ P(w)\stackrel{?}=Q(w)
 ## 7. 再現
 
 ```bash
-python research/verification/scripts/geometry_20261003_extended.py \
-  --output research/verification/geometry_20261003_extended.json
+python research/experiments/geometry/scripts/geometry_20261003_extended.py \
+  --output research/experiments/geometry/output/geometry_20261003_extended.json
 ```
 
 Python標準ライブラリのみ。参考環境では約1秒。
@@ -269,6 +271,6 @@ Python標準ライブラリのみ。参考環境では約1秒。
 - 七つの法それぞれの占有行最大数。
 - 強制される素数積と、幅別の面積上限・端点の厳密整数検算。
 
-[出力JSON](verification/geometry_20261003_extended.json)に全数値・全達成座標を保存した。
+[出力JSON](../output/geometry_20261003_extended.json)に全数値・全達成座標を保存した。
 合同条件からの分母強制と凸多角形面積の移行は、別エージェントが独立に通読監査した。
 全称性は第2〜5節の証明によるものであり、半径を打ち切った探索結果には依存しない。

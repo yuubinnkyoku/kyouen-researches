@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 25 — n=5 capacity contrast (COMPLETE)
 
 n=5, K=9=2n−1, 100 max safe sets (census). Solver `cycle8_b_maxsafe.exe`.
@@ -30,4 +32,4 @@ n=5, K=9=2n−1, 100 max safe sets (census). Solver `cycle8_b_maxsafe.exe`.
 ## Artifacts
 - this note
 - `CYCLE24_N6_CAPACITY_CONTRAST.md`
-- `FINAL_SELECTION_THEOREM.md`
+- `../../archive/discovery-summaries/FINAL_SELECTION_THEOREM.md`

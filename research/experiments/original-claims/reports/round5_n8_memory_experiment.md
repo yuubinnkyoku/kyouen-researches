@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=8 メモリ実験 — 実測レポート
 
 作成: 2026-09-28。作業: 共円ゲーム (kyouen) n=8 の p_rand ソルバのメモリ実験。
@@ -108,7 +110,7 @@ C'_v = { S ∪ {v} | S ∈ L_k, v ∈ L(S), S < 2^v }
 
 - **n=4, n=5**: 総当たり（`2^V` 全探索）による grundy / n_P / n_N と完全一致
 - **n=6**: 参照実装 `round5_b501_prand8.cpp` の全層・全項目と完全一致
-- **n=7**: 参照実装 `round4_b501_prand_n7.json` の全層と完全一致
+- **n=7**: 参照実装 `../output/round4_b501_prand_n7.json` の全層と完全一致
 
 （各 n の具体的な数値は §7 に記録。）
 
@@ -170,6 +172,6 @@ Grundy `P/N` 判定も全状態の grundy 値が必要。
 
 ## 9. ファイル
 
-- 実装: `research/verification/scripts/round5_prand_stream.cpp`
-- 本レポート: `research/verification/round5_n8_memory_experiment.md`
-- データ: `research/verification/data/n{6,7,8}_stream_*.json`
+- 実装: `research/experiments/original-claims/scripts/round5_prand_stream.cpp`
+- 本レポート: `research/experiments/original-claims/reports/round5_n8_memory_experiment.md`
+- データ: `research/experiments/original-claims/output/data/n{6,7,8}_stream_*.json`

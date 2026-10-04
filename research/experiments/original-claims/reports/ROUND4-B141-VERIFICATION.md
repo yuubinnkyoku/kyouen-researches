@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B141/B145/B150/B471/B472/B473 の独立検証記録
 
 作成: 2026-09-27。`round4-collinear-asymptotic.md` の主張を**独立に再計算**して
@@ -31,7 +33,7 @@
 **n=8 の D_n = 1,524 は既知の確定値**（PROTOCOL.md の F_8 = 14,564 のうち
 共線分が 1,524）と一致する。三手法一致で有限和 (4) の正しさが確認された。
 
-再現: `python research/verification/scripts/verify_b141_independent.py`
+再現: `python research/experiments/original-claims/scripts/verify_b141_independent.py`
 
 ## 検証2: 主項定数の区間評価（有理数演算）
 
@@ -76,7 +78,7 @@
 
 ## 残課題
 
-- **B141 の訂正は他の記録に波及する。** `batch-08.md` の B141 (REFUTED) と、
+- **B141 の訂正は他の記録に波及する。** `../../../log/claim-audit/batch-08.md` の B141 (REFUTED) と、
   B145 の「主項定数が純粋な n^5 定数としては存在しない（log 因子付き）」は
   いずれも訂正が必要。
 - B142（非共線共円四点組の次数）は本定理では決まらない。別途検証が必要。

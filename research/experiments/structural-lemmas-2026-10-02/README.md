@@ -1,3 +1,27 @@
+# 3手情報・二次構成・有限パスの独立replication
+
+現在の結論の正本は[knowledge](../../knowledge/README.md)です。この単位は当時の実験・証明・検算の一次資料を保存します。
+旧reportのSUPPORTED等は当時の判定であり、現在のstatusとして並行維持しません。
+
+## 再現
+
+repo rootから、Python標準ライブラリとg++（C++17/20）で実行します。
+
+```sh
+python research/experiments/structural-lemmas-2026-10-02/checks/run_all.py
+```
+
+## 資産と範囲
+
+- [checks](checks/)：独立再現コードと保存出力。
+
+共有実装は[cpp](../../../cpp/)、[scripts](../../../scripts/)、[共有研究ライブラリ](../../../scripts/research/)、[Rust verifier](../../../rust/independent-verifier/README.md)を参照します。
+chronologicalな発見・判断は[log](../../log/README.md)、旧統合・計画は[archive](../../archive/README.md)です。
+
+## 当時のbundle説明
+
+> 以下は移行前の実験説明です。現在知識はknowledgeを参照します。
+
 # 共円ゲームの局面識別・二次構成・有限パスの補題
 
 調査基準はコミット6bf2bd80c95059b00e3120e8c037ed6518f5f461。
@@ -26,7 +50,7 @@
 Python 3.10以降の標準ライブラリのみを使う。リポジトリの既存ソルバーや既存の勝敗ラベルは読み込まない。
 
 ~~~sh
-python research/verification/structural-lemmas-2026-10-02/checks/run_all.py
+python research/experiments/structural-lemmas-2026-10-02/checks/run_all.py
 ~~~
 
 --quickでは5×5の全数調査と剰余放物線の探索・全証人再検査を省き、短い独立検査を実行する。
@@ -39,11 +63,11 @@ assertで不整合を検出するため、python -Oでは実行しない。
 
 ## 既存結果・先行研究との境界
 
-- 2手情報で勝敗を区別できない5×5の旧例は[B052](../batch-03.md)で既出。
+- 2手情報で勝敗を区別できない5×5の旧例は[B052](../../log/claim-audit/batch-03.md)で既出。
   ここでは一般の3手十分性、小盤の全継続ゲーム一致、一石移動による5石の新証人を追加した。
-- $p\equiv1\pmod4$で$p$点を認証する構成は[round61](../round61-full-split-prime-safe-construction.md)を使う。
+- $p\equiv1\pmod4$で$p$点を認証する構成は[round61](../original-claims/reports/round61-full-split-prime-safe-construction.md)を使う。
   今回の合同式認証上限と、実際の整数安全集合の上限は別の量である。
-- 同数パスによる勝者保存は[round18](../round18-equal-passes.md)で既出。
+- 同数パスによる勝者保存は[round18](../original-claims/reports/round18-equal-passes.md)で既出。
   不均等な残数、相対状態グラフのmex、終端規約の境界を追加した。
 - 全盤の最大安全石数については、Ghosalほかの
   [2026年7月のプレプリント、定理1.5](https://arxiv.org/abs/2607.05255)

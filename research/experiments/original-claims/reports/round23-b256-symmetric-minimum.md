@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B256反証: 勝者を保つ最小禁止族は全盤サイズでD4対称に達成できる
 
 作成: 2026-09-30。**B256 REFUTED（全nの一般証明）。**
-原文 [B256](../hypothesis-bank-2026-09-27.md):
+原文 [B256](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md):
 「あるnについて、標準版と同じ空盤勝者を与える非自明な最小サイズ禁止族は、
 D4不変な族としては達成できない。元が後手勝ち等、空族との自明な一致を除く」。
 
@@ -92,7 +94,7 @@ n=2の唯一の四点型を存在証人とする読みなら自明に成立す�
 
 ## 5. 補助検算
 
-[検算コード](scripts/round23_minimum_family.py)でn=2,…,20について、
+[検算コード](../scripts/round23_minimum_family.py)でn=2,…,20について、
 四点組の整数行列式、盤内所属、二組の互いに素、D4不変性、
 AとBのD4型の不一致を検査した。
 free点数と各四点組の残り容量を状態とする正確な商ゲームのmexも計算し、
@@ -102,7 +104,7 @@ free点数と各四点組の残り容量を状態とする正確な商ゲーム�
 合法手の行き先が容量のみで決まるため、元のゲームと同じGrundy値を持つ。
 有限検算は一般証明の補助であり、n≤20の結果を全nへ外挿してはいない。
 
-    python research/verification/scripts/round23_minimum_family.py
+    python research/experiments/original-claims/scripts/round23_minimum_family.py
 
-[全構成座標・商計算結果・ソースSHA-256](round23_minimum_family_verified.json)。
+[全構成座標・商計算結果・ソースSHA-256](../output/round23_minimum_family_verified.json)。
 全600件の確定残件数は再集計していない。

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B479の定量化: 稀な違反束の確率と典型形
 
 作成: 2026-09-29。これはB479の非自明な複合Poisson極限を再支持するものではない。
@@ -98,8 +100,8 @@ EとFに1〜3点の交わりを作れる。
 一つの五点束が10対を同時に生むことが、この係数差の理由である。
 安全確率の対数の補正4G_5p^5は、束の発生確率の漸近的な4倍となる。
 
-有限検算は [round14_safety_correction.py](scripts/round14_safety_correction.py) と
-[round14_safety_correction.json](round14_safety_correction.json) に保存した。
+有限検算は [round14_safety_correction.py](../scripts/round14_safety_correction.py) と
+[round14_safety_correction.json](../output/round14_safety_correction.json) に保存した。
 n=3,4,5の五点辺対を交点数で全数計数した。n=4の80本の五点辺の対数は、
 共有0,1,2,3,4点の順に344,832,664,840,480。
 n=3,4の全占有集合から得るYの第一・第二階乗モーメントを、五点辺とその対の計数から

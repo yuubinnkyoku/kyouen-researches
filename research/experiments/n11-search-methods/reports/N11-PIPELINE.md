@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=11 spill パイプライン（層 6 以降の到達を試みる）
 
 作成: 作業ディレクトリ `D:\ghq\github.com\yuubinnkyoku\kyouen-researches-n11`（main は未変更）。

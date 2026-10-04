@@ -1,10 +1,12 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B201-B230 追撃（followup）
 
 対象: `round5-batch-b201-b230.md` の PARTIAL 15 件・INCONCLUSIVE 6 件。
 B201, B202, B203, B205, B206, B207, B208, B209, B210, B213, B216, B218, B219, B220, B222, B223, B224, B225, B226, B227, B229。
 
-スクリプト: `research/verification/scripts/round5_b201_*.py`, `round5_b201_del1.cpp`, および本追撃用追加スクリプト
-データ: `research/verification/round5_b201_*.json`, `research/verification/round5_b201fu_*.json`
+スクリプト: `research/experiments/original-claims/scripts/round5_b201_*.py`, `round5_b201_del1.cpp`, および本追撃用追加スクリプト
+データ: `research/experiments/original-claims/output/round5_b201_*.json`, `research/experiments/original-claims/output/round5_b201fu_*.json`
 
 方針:
 - B201/B202/B207 は n≤6 で頑健。盤外点・変種・既存 n≥7 データへ。
@@ -457,7 +459,7 @@ B201, B202, B203, B205, B206, B207, B208, B209, B210, B213, B216, B218, B219, B2
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。n=4 の層別データを再解釈し「二峰」を確定）
 - 前回の一手: 「n=5 の層別が次の一手。」
 - 今回の範囲: n=5 の層別は状態数 151,394×2 版で重く未実施。
-  既存の n=4 層別データ（`round5_b201_stage_n4.json`）を
+  既存の n=4 層別データ（`../output/round5_b201_stage_n4.json`）を
   「石数の増加とともに高まる範高まる範囲」の観点で再集計。
 - 証拠（n=4 の P/N 不一致率、前回データ）:
   - k=0,1: 0%、**k=2: 53.3%**、k=3: 10%、**k=4: 21.3%**、
@@ -536,7 +538,7 @@ B201, B202, B203, B205, B206, B207, B208, B209, B210, B213, B216, B218, B219, B2
 
 ### スクリプト・データ
 
-- 新規: `scripts/round5_b201fu.py`, `scripts/round5_b201fu_subfam3.py`,
-  `scripts/round5_b201fu_extra.py`
-- データ: `research/verification/round5_b201fu_*.json`（18 ファイル）、
-  `round5_b201_misere_n5.json`, `round5_b201_passwit_n5.json`, `round5_b201_rect3.json`（m≤11 に更新）
+- 新規: `../scripts/round5_b201fu.py`, `../scripts/round5_b201fu_subfam3.py`,
+  `../scripts/round5_b201fu_extra.py`
+- データ: `research/experiments/original-claims/output/round5_b201fu_*.json`（18 ファイル）、
+  `../output/round5_b201_misere_n5.json`, `../output/round5_b201_passwit_n5.json`, `../output/round5_b201_rect3.json`（m≤11 に更新）

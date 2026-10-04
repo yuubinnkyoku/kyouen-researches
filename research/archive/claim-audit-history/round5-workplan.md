@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 作業割り当て
 
 作成: 2026-09-28。未解決 316 件をテーマ別に分割。
@@ -7,17 +9,17 @@
 
 | 担当ファイル | ID 範囲 | 件数目安 | テーマ | 重い計算 |
 |---|---|---:|---|---|
-| `round5-batch-n8.md` | （n=8 p_rand） | — | n=8 全列挙+求解 | **専任・単独** |
-| `round5-batch-b201-b230.md` | B201–B230 未解決 | ~25 | 点削除・盤変種・幅制限 | 軽〜中 |
-| `round5-batch-b231-b250.md` | B231–B250 | ~18 | 実現可能性・粗視化・nimber | 軽（理論） |
-| `round5-batch-b251-b270.md` | B251–B270 未解決 | ~18 | 禁止四点組・分解 | 中 |
+| `../../experiments/original-claims/reports/round5-batch-n8.md` | （n=8 p_rand） | — | n=8 全列挙+求解 | **専任・単独** |
+| `../../experiments/original-claims/reports/round5-batch-b201-b230.md` | B201–B230 未解決 | ~25 | 点削除・盤変種・幅制限 | 軽〜中 |
+| `../../experiments/original-claims/reports/round5-batch-b231-b250.md` | B231–B250 | ~18 | 実現可能性・粗視化・nimber | 軽（理論） |
+| `../../experiments/original-claims/reports/round5-batch-b251-b270.md` | B251–B270 未解決 | ~18 | 禁止四点組・分解 | 中 |
 | `round5-batch-b271-b300.md` | B271–B300 未解決 | ~17 | 被覆・圧縮・残余 | 中 |
-| `round5-batch-b001-b100.md` | B001–B100 未解決 | ~50 | 基礎・nimber・J_n 前史 | 中 |
-| `round5-batch-b101-b200.md` | B101–B200 未解決 | ~55 | 幾何・漸近・相関 | 中 |
-| `round5-batch-b301-b400.md` | B301–B400 未解決 | ~47 | J_n・飽和・WFT | 中 |
+| `../../experiments/original-claims/reports/round5-batch-b001-b100.md` | B001–B100 未解決 | ~50 | 基礎・nimber・J_n 前史 | 中 |
+| `../../experiments/original-claims/reports/round5-batch-b101-b200.md` | B101–B200 未解決 | ~55 | 幾何・漸近・相関 | 中 |
+| `../../experiments/original-claims/reports/round5-batch-b301-b400.md` | B301–B400 未解決 | ~47 | J_n・飽和・WFT | 中 |
 | `round5-batch-b401-b500.md` | B401–B500 未解決 | ~39 | 幾何統計・円センサス残 | 軽〜中 |
 | `round5-batch-b501-b600.md` | B501–B600 未解決 | ~47 | p_rand 残・終盤 | 中 |
-| `round5-batch-b142-docs.md` | B142 + 文書訂正 | ~5 | 非共線共円・B141 反映 | 軽 |
+| `../../experiments/original-claims/reports/round5-batch-b142-docs.md` | B142 + 文書訂正 | ~5 | 非共線共円・B141 反映 | 軽 |
 
 ## 未解決 ID 一覧（HANDOVER.md §0 より）
 

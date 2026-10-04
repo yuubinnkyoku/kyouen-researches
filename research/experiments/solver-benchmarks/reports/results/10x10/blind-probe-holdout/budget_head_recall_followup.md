@@ -1,3 +1,5 @@
+> **実験一次資料**：当時のpreregistration・分析・判定です。現在知識の唯一の正本は[knowledge](../../../../../../knowledge/README.md)です。
+
 # Probe budget head-recall follow-up
 
 This is an exploratory follow-up to the frozen 1M holdout.  The 10k and 100k

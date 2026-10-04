@@ -1,11 +1,13 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 5 — Exact Grundy (nimber) structure on n ≤ 6
 
 ## Checked
 
 - branch: `replicate-8x8-o-stratum` @ `db50e40`
-- New exact enumerator: `night-research/grundy_cycle5.cpp` (C++, iterative DFS + memo)
-- Python reference: `night-research/grundy_cycle5.py` (n ≤ 5 cross-check, mex consistency 0 violations)
-- Deep-dive: `night-research/analyze_cycle5_grundy.py` → `cycle5-grundy-deepdive.json`
+- New exact enumerator: `research/experiments/structural-discovery/scripts/grundy_cycle5.cpp` (C++, iterative DFS + memo)
+- Python reference: `research/experiments/structural-discovery/scripts/grundy_cycle5.py` (n ≤ 5 cross-check, mex consistency 0 violations)
+- Deep-dive: `research/experiments/structural-discovery/scripts/analyze_cycle5_grundy.py` → `../../experiments/structural-discovery/output/cycle5-grundy-deepdive.json`
 - n = 6 evaluated with cap at 14 stones; the enumerated reachable set ends at
   k = 11, so the n = 6 table below is exact for all reachable positions (the
   cap layer never materialized).
@@ -135,8 +137,8 @@ full Grundy distribution: determine $K_n$, then search shallow layers for a
 single position with $g(S)=K_n-|S|$. The first such layer is $\sigma_n$, and
 $M_n(k)=K_n-k$ for all $k\ge\sigma_n$ follows without further computation.
 
-**Verification on existing data** (`verify_saturation.py`,
-`cycle6-saturation-verify.json`): full deficit profiles
+**Verification on existing data** (`../../experiments/structural-discovery/scripts/verify_saturation.py`,
+`../../experiments/structural-discovery/output/cycle6-saturation-verify.json`): full deficit profiles
 
 | n | K | D(0) | D(1) | D(2) | D(3) | D(4..K) | σ |
 |--:|--:|--:|--:|--:|--:|:--:|--:|
@@ -182,21 +184,21 @@ terminology error and is superseded by F-U.
 
 ## Artifacts
 
-- `night-research/grundy_cycle5.cpp` / `.exe` — exact enumerator (C++)
-- `night-research/grundy_cycle5.py` — Python reference + mex verifier
-- `night-research/cycle5-grundy-n{2,3,4,5}.json`, `cycle5-grundy-n6-cap14.json`
-- `night-research/analyze_cycle5_grundy.py`, `cycle5-grundy-deepdive.json`
-- `night-research/verify_saturation.py`, `cycle6-saturation-verify.json` —
+- `research/experiments/structural-discovery/scripts/grundy_cycle5.cpp` / `.exe` — exact enumerator (C++)
+- `research/experiments/structural-discovery/scripts/grundy_cycle5.py` — Python reference + mex verifier
+- `research/experiments/structural-discovery/output/cycle5-grundy-n{2,3,4,5}.json`, `../../experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json`
+- `research/experiments/structural-discovery/scripts/analyze_cycle5_grundy.py`, `../../experiments/structural-discovery/output/cycle5-grundy-deepdive.json`
+- `research/experiments/structural-discovery/scripts/verify_saturation.py`, `../../experiments/structural-discovery/output/cycle6-saturation-verify.json` —
   ceiling/deficit verification on n=4,5,6
-- `night-research/saturation_cycle6.cpp` — n=7 saturation witness search
+- `research/experiments/structural-discovery/scripts/saturation_cycle6.cpp` — n=7 saturation witness search
   (K_7 + σ_7; implemented, needs an overnight run)
-- `night-research/cert_parity_check.py`, `cycle6-cert-parity.json` —
+- `research/experiments/structural-discovery/scripts/cert_parity_check.py`, `../../experiments/structural-discovery/output/cycle6-cert-parity.json` —
   certificate-level K and parity scan for n=1..9
-- `night-research/CYCLE5_GRUNDY_STRUCTURE.md` — this file
+- `research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md` — this file
 
 ## F6 (corrected). Structural parity law of certificates — and a scan bug
 
-The original "parity locked vs mixed" scan (`cert_parity_check.py`) was a
+The original "parity locked vs mixed" scan (`../../experiments/structural-discovery/scripts/cert_parity_check.py`) was a
 **misreading**. The certificate format forces, on *every* board, that each
 certificate edge adds exactly one stone and flips the outcome
 (WIN → single LOSS witness child; LOSS → all WIN children). Hence every
@@ -211,7 +213,7 @@ the S-board pattern.
 
 After fixing the scan bug, the law is verified with **zero violations** on
 all nine certificates (n=1: 2 nodes … n=9: 13,457,134 nodes;
-`verify_parity_law.py`, `cycle6-parity-law-verify.json`). This is therefore
+`../../experiments/structural-discovery/scripts/verify_parity_law.py`, `../../experiments/structural-discovery/output/cycle6-parity-law-verify.json`). This is therefore
 **not a game-theoretic finding** — it is a structural corollary of the
 certificate format, as anticipated in the review.
 
@@ -223,7 +225,7 @@ values rigorously verified **lower bounds** on $K_n$
 
 ## F7. K_7 = 14 exactly — the K_n = 2n−1 conjecture is refuted
 
-`maxsafeset.cpp` (branch-and-bound over the 4-uniform hypergraph of
+`../../experiments/structural-discovery/scripts/maxsafeset.cpp` (branch-and-bound over the 4-uniform hypergraph of
 forbidden quads, incremental conflict counters + candidate bitmask,
 validated against the exact values K_4 = 7 (UNSAT@8), K_5 = 9 (UNSAT@10),
 K_6 = 11 (UNSAT@12)) decides:

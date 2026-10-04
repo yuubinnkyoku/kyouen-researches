@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # round59/60: 終了時の十盤探索、九石SATはUNKNOWN・局所九石交換まで完了
 
 ユーザーの「現在の仕事が終わったら一旦終了」に従い、実行中の二探索を各600秒で終え、
@@ -12,7 +14,7 @@
 
 83663変数・304493節、Glucose4/PySAT 1.9.dev15、600.782秒で**UNKNOWN**。
 conflicts388827、decisions5122780、propagations2865215597。証人は得ていない。
-`round59_n10_atmost9.json`にCNFハッシュ・ソース・ソルバ統計を保存。
+`../output/round59_n10_atmost9.json`にCNFハッシュ・ソース・ソルバ統計を保存。
 これは九石の不在やs10=10の証明ではない。**s10∈[9,10]のまま**。
 
 ## 19石証人から20石への深い交換
@@ -28,9 +30,9 @@ round57の半径1..8と合わせ、このSから九石まで交換しても20石
 20石が全盤に存在しないという結論ではない。K10∈[19,23]は変わらない。
 
 中断の削除集合カウンタは現在の枝を含むので、半径10では最初の22085削除集合が完了。
-22086番目の削除集合を丸ごと再探索する保守的境界を`round60_final_verified.json`に保存した。
+22086番目の削除集合を丸ごと再探索する保守的境界を`../output/round60_final_verified.json`に保存した。
 深い交換用の再開コードはまだ実装していない。既存の八石用再開プログラムとは別物である。
 この再開用メモを使っても、中断した枝自体を飛ばしてはならない。
 
-rawは`round60_n10_deep_neighborhood.json`、ソースは`round60_n10_deep_neighborhood.cpp`。
-`python research/verification/scripts/round60_final_search_audit.py`で両探索・入力ハッシュと完了範囲を確認する。
+rawは`../output/round60_n10_deep_neighborhood.json`、ソースは`round60_n10_deep_neighborhood.cpp`。
+`python research/experiments/original-claims/scripts/round60_final_search_audit.py`で両探索・入力ハッシュと完了範囲を確認する。

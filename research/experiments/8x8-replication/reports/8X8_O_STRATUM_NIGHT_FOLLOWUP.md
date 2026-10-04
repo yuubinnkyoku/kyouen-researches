@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 8×8 O-stratum night research — structural follow-up
 
 Status: descriptive / post-hoc only. Frozen primary definitions are unchanged.
 Branch: `replicate-8x8-o-stratum`
-Follows: `docs/8X8_O_STRATUM_REPLICATION_RESULT.md`
+Follows: `research/experiments/8x8-replication/reports/8X8_O_STRATUM_REPLICATION_RESULT.md`
 
 ## 1. What the frozen 8×8 census already decided
 
@@ -39,7 +41,7 @@ Refined statements:
 
 Local 1-ply geometry (safe-child mobility, collinear triples, blocked completions, span)
 does **not** separate the 63 unique 8×8 LOSS children from the 779 WIN children
-(`artifacts/8x8-five-stone-loss-geometry.json`). LOSS here is a deep game-tree property,
+(`research/experiments/solver-benchmarks/output/8x8-five-stone-loss-geometry.json`). LOSS here is a deep game-tree property,
 not an obvious local cramping signature.
 
 Consequences for the O-stratum experiment:
@@ -110,9 +112,9 @@ Reading:
 - Visit cost collapses as stones increase (branching shrinks); 3–4 stones are
   ~30× more expensive than 5–6 stones at this board size.
 
-Artifacts: `artifacts/8x8-random-depth-profile.json`,
+Artifacts: `research/experiments/solver-benchmarks/output/8x8-random-depth-profile.json`,
 `scripts/sample-k-stone.py`, `scripts/summarize-8x8-depth-profile.py`,
-`artifacts/8x8-random-safe-{3,4,5,6}stone-*.csv`.
+`research/experiments/solver-benchmarks/output/8x8-random-safe-{3,4,5,6}stone-*.csv`.
 
 ### P8 — 4↔5 impartial identity on 8×8 (SUPPORTED)
 
@@ -127,7 +129,7 @@ This is a solver-provenance audit for P7: the 5-stone WIN peak is not an
 artifact of independent sampling; it is exactly the complement of the 4-stone
 LOSS majority under the impartial-game recursion.
 
-Artifacts: `artifacts/8x8-depth-audit-consistency.json`,
+Artifacts: `research/experiments/solver-benchmarks/output/8x8-depth-audit-consistency.json`,
 `scripts/audit-8x8-depth-consistency.py`.
 
 ### P9 — board-dependent shallow LOSS-depth peak (SUPPORTED, cross-board)
@@ -152,8 +154,8 @@ samples a different region of the shallow game tree on each board.
 Falsifier: a board where both 4-stone and 5-stone random LOSS rates sit in the
 same intermediate band (e.g. both in [0.3, 0.5]) under identical sampling.
 
-Artifacts: `artifacts/cross-board-depth-profile.json`,
-`artifacts/9x9-random-safe-{4,5,6}stone-*.csv`,
+Artifacts: `research/experiments/solver-benchmarks/output/cross-board-depth-profile.json`,
+`research/experiments/solver-benchmarks/output/9x9-random-safe-{4,5,6}stone-*.csv`,
 `scripts/summarize-cross-board-depth-profile.py`.
 
 ### P9b — peak depth tracks empty-board winner on 6×6…9×9 (SUPPORTED)
@@ -179,7 +181,7 @@ empty-board winner, with n≥200 at the two candidate depths.
 Provenance: 6×6/7×7 solvers are mechanical N/V ports of `kyouen_solver_8_root.cpp`
 plus a legal-mask fix for V<64. Move ordering / memo / WIN-LOSS semantics unchanged.
 
-Artifacts: `artifacts/cross-board-depth-profile-6789.json`,
+Artifacts: `research/experiments/solver-benchmarks/output/cross-board-depth-profile-6789.json`,
 `cpp/solvers/kyouen_solver_{6,7}_root.cpp`,
 `scripts/summarize-depth-profile-6789.py`.
 
@@ -209,12 +211,12 @@ The cleanest reading of tonight’s data:
 - `scripts/analyze-8x8-five-stone-loss-geometry.py`
 - `scripts/sample-8x8-random-safe-5stone.py`
 - `scripts/compare-8x8-loss-rates.py`
-- `artifacts/8x8-o-posthoc-structure.json`
-- `artifacts/8x8-o-flip-classes.csv`
-- `artifacts/8x8-o-base-rate-audit.json`
-- `artifacts/8x8-five-stone-loss-geometry.json` / `.csv`
-- `artifacts/8x8-random-safe-5stone-sample.csv` / `-out.csv`
-- `artifacts/8x8-loss-rate-comparison.json`
+- `research/experiments/solver-benchmarks/output/8x8-o-posthoc-structure.json`
+- `research/experiments/solver-benchmarks/output/8x8-o-flip-classes.csv`
+- `research/experiments/solver-benchmarks/output/8x8-o-base-rate-audit.json`
+- `research/experiments/solver-benchmarks/output/8x8-five-stone-loss-geometry.json` / `.csv`
+- `research/experiments/solver-benchmarks/output/8x8-random-safe-5stone-sample.csv` / `-out.csv`
+- `research/experiments/solver-benchmarks/output/8x8-loss-rate-comparison.json`
 - this document
 
 ## 7. Next highest-value experiments

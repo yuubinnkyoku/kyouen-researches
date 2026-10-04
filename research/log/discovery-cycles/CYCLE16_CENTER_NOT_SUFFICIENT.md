@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Odd-board center is necessary but not sufficient for A/B phases
 
 ## COMPLETE counts on center cell
@@ -23,5 +25,5 @@ capacity peak at 2n via exclusive extension.
 
 ## Artifacts
 - `results/cycle11_verify.json`
-- `night-research/CYCLE15_CAPACITY_DECOMPOSITION.md`
-- `night-research/CYCLE11_ORBIT_NECESSITY.md`
+- `research/log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md`
+- `research/log/discovery-cycles/CYCLE11_ORBIT_NECESSITY.md`

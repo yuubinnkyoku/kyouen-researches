@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B301-B400 追撃（B301–B400 follow-up）
 
-対象: research/verification/round5-batch-b301-b400.md の PARTIAL 31 件・INCONCLUSIVE 10 件・NOT-CHECKED 2 件の前進。
+対象: research/experiments/original-claims/reports/round5-batch-b301-b400.md の PARTIAL 31 件・INCONCLUSIVE 10 件・NOT-CHECKED 2 件の前進。
 スクリプト: scripts/round5_b301_followup_*.py / *.cpp
-データ: research/verification/round5_b301_followup.json
+データ: research/experiments/original-claims/output/round5_b301_followup.json
 再利用: scripts/round5_b301_j6.cpp, round5_b301_b379.cpp, round4_b371.bin, round5_b301_summary.json
 
 （逐次追記）
@@ -10,7 +12,7 @@
 
 ## B386 [全称] 7×7最大配置を8×8の15石へ変えるには元の石を2個以上捨てる必要がある 追撃
 - 判定: **REFUTED**（前回: PARTIAL → 今回: REFUTED、1 除去・2 追加で 15 石極大が実在）
-- 今回の範囲: n=7 K=14 最大安全集合 **16 全数**（night-research/maxsafe_n7_K14.bin）を 8×8 に offset (0,0)/(0,1)/(1,0)/(1,1) で埋め込んだ **64 埋め込みすべて**について、(a) 0 除去＋1 追加で 15 石安全が作れるか、(b) 1 除去＋2 追加で 15 石安全が作れるかを、四つ組ブロッキングによる完全探索で判定。scripts/round5_b301_followup.py。
+- 今回の範囲: n=7 K=14 最大安全集合 **16 全数**（research/experiments/structural-discovery/output/maxsafe_n7_K14.bin）を 8×8 に offset (0,0)/(0,1)/(1,0)/(1,1) で埋め込んだ **64 埋め込みすべて**について、(a) 0 除去＋1 追加で 15 石安全が作れるか、(b) 1 除去＋2 追加で 15 石安全が作れるかを、四つ組ブロッキングによる完全探索で判定。scripts/round5_b301_followup.py。
 - 証拠: **shared=14（0 除去）は 0/64**（どの埋め込みも 8×8 上で追加 1 石が禁止）。**shared=13（1 除去）が 16/64 で成立**。反例証人（ei=0, offset=(0,0)）:
   - E（7×7 側 14 石）: (0,0),(1,0),(5,0),(1,1),(2,1),(5,2),(6,2),(3,3),(5,3),(0,4),(3,5),(4,5),(6,5),(0,6)
   - T（8×8 の 15 石）: 上記から (6,5) を捨て、(7,2) と (4,7) を加えた15 点。k=15、**safe かつ maximal**（合法手 0）、|T∩E|=13。

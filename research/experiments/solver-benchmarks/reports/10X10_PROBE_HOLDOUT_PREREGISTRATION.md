@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 fresh-memo probe holdout preregistration
 
 Base branch: `audit-blind-probe-and-move-ordering`
@@ -17,7 +19,7 @@ The following parents were used to discover/correct the probe direction and are 
 - `0,31,36`
 - `0,36,44`
 
-Any additional parent explicitly used in `docs/10X10_CORRECTED_PROBE_DIRECTION_EXPLORATORY.md` or `scripts/analyze_corrected_probe_auc.py` is also excluded.
+Any additional parent explicitly used in `research/experiments/solver-benchmarks/reports/10X10_CORRECTED_PROBE_DIRECTION_EXPLORATORY.md` or `scripts/analyze_corrected_probe_auc.py` is also excluded.
 
 ## Holdout-parent selection
 
@@ -91,4 +93,4 @@ Instrumentation such as `visited_by_depth`, `memo_lookup_by_depth`, `memo_hit_by
 
 ## 9x9 scope guard
 
-The old audit-branch statement `O=0` / pair-sum equals true mobility is not part of this experiment and must not be reused. It resulted from the filtered `response_sets` definition documented in `docs/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md`. The intended 9x9 raw-pair analysis is the main-branch decomposition `raw_pair = T + E + O`.
+The old audit-branch statement `O=0` / pair-sum equals true mobility is not part of this experiment and must not be reused. It resulted from the filtered `response_sets` definition documented in `research/experiments/9x9-factorial/reports/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md`. The intended 9x9 raw-pair analysis is the main-branch decomposition `raw_pair = T + E + O`.

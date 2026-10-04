@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 26 — n=4 capacity contrast (COMPLETE)
 
 n=4, K=7=2n−1, 64 max safe sets (census Cycle 1/9). Quads=194.
@@ -31,4 +33,4 @@ n=4, K=7=2n−1, 64 max safe sets (census Cycle 1/9). Quads=194.
 
 ## Artifacts
 - this note; `CYCLE24_N6_CAPACITY_CONTRAST.md`; `CYCLE25_N5_CAPACITY_CONTRAST.md`
-- `FINAL_SELECTION_THEOREM.md`
+- `../../archive/discovery-summaries/FINAL_SELECTION_THEOREM.md`

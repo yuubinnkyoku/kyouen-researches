@@ -1,19 +1,21 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 10: B221-B300
 
 対象: ルール変種・部品・証明圧縮・最小禁止族・手の相乗・重み付き測度・幾何実現・鋭い反例。
 方針: 重い計算は打ち切り、n≤5 で実際に得られた証拠を優先し、未着手は NOT-CHECKED で具体的な次テストを書く。
 
 共通データ (このバッチで新規に計算):
-- `research/verification/scripts/batch10_core.py` (整数 det4 / collinear 分離 / Game / grundy)
-- `research/verification/scripts/batch10_variants.py` → `batch10_variants.json`
-- `research/verification/scripts/batch10_remove_quads.py` (n=4 B251/B253/B259 実行済み、JSON はタイムアウト前に未書き込み。数値は本ファイルに記録)
-- `research/verification/scripts/batch10_extra.py` → `batch10_extra.json` (B223 n=4 層別不一致率, n=5 単一/散在解除, B224 部分族)
-- `research/verification/scripts/batch10_sharp_pairs.py` (B291-B300 用、書いたが未実行)
+- `research/experiments/original-claims/scripts/batch10_core.py` (整数 det4 / collinear 分離 / Game / grundy)
+- `research/experiments/original-claims/scripts/batch10_variants.py` → `../../experiments/original-claims/output/batch10_variants.json`
+- `research/experiments/original-claims/scripts/batch10_remove_quads.py` (n=4 B251/B253/B259 実行済み、JSON はタイムアウト前に未書き込み。数値は本ファイルに記録)
+- `research/experiments/original-claims/scripts/batch10_extra.py` → `../../experiments/original-claims/output/batch10_extra.json` (B223 n=4 層別不一致率, n=5 単一/散在解除, B224 部分族)
+- `research/experiments/original-claims/scripts/batch10_sharp_pairs.py` (B291-B300 用、書いたが未実行)
 
 ## B221 [存在] 共線禁止を外すだけで小盤の勝者が反転する
 - 判定: **INCONCLUSIVE**
 - 範囲: n=2..5 で標準 / 円のみ / 直線のみの空盤 g(0) と勝ち初手 W を厳密計算。
-- 証拠: 空盤勝者は標準=円のみで n=2..5 すべて一致 (First, First, Second, First, First)。g0 も同値 (1,1,0,1)。ただし n=5 では W が崩れる: 標準 W=9 点 `{2,6,8,10,12,14,16,18,22}` (市松-角除く) に対し円のみ W=1 点 `{12}` (中心のみ)。`batch10_variants.json`。
+- 証拠: 空盤勝者は標準=円のみで n=2..5 すべて一致 (First, First, Second, First, First)。g0 も同値 (1,1,0,1)。ただし n=5 では W が崩れる: 標準 W=9 点 `{2,6,8,10,12,14,16,18,22}` (市松-角除く) に対し円のみ W=1 点 `{12}` (中心のみ)。`../../experiments/original-claims/output/batch10_variants.json`。
 - メモ: 「空盤 P/N 反転」は n≤5 では未出現。しかし初手分類は n=5 で完全に変わるため共線制約の戦略的重要性自体は大きい。n=6..9 の円のみ版が次の一手 (n=6 標準 g0=1 に対し円のみ g0 が 0 なら B221 成立)。
 
 ## B222 [存在] 共円禁止を外しても勝者が変わらない非自明盤
@@ -25,13 +27,13 @@
 ## B223 [統計] 共線制約の影響は序盤より終盤で大きい
 - 判定: **PARTIAL**
 - 範囲: n=4 の全安全局面 (標準 5,811 層) を共通母集団に、標準 vs 円のみの P/N 不一致率を石数別に集計。
-- 証拠: 不一致率 (%) k=0:0, 1:0, 2:**53.3**, 3:10.0, 4:21.4, 5:12.2, 6:10.5, 7:0。ピークは序盤の 2 石層で、終盤 (5-7 石) はむしろ低い。ただし k=3→4 のように局所的に上昇する区間は存在する。`batch10_extra.json` の `B223_n4_disagreement`。
+- 証拠: 不一致率 (%) k=0:0, 1:0, 2:**53.3**, 3:10.0, 4:21.4, 5:12.2, 6:10.5, 7:0。ピークは序盤の 2 石層で、終盤 (5-7 石) はむしろ低い。ただし k=3→4 のように局所的に上昇する区間は存在する。`../../experiments/original-claims/output/batch10_extra.json` の `B223_n4_disagreement`。
 - メモ: 「終盤 > 序盤」の強い形は n=4 で反証的数値。「石数の増加とともに高まる範囲がある」の弱い形のみ成立。n=5 の同集計で形状を再確認できる。
 
 ## B224 [存在] 少数の円だけで標準版の初手分類を再現できる
 - 判定: **PARTIAL**
 - 範囲: n=5 で自然な部分禁止族 5 種の W を計算し標準 W と比較。
-- 証拠: 標準 W=`{2,6,8,10,12,14,16,18,22}`。軸平行共線のみ (|Q|=50)・軸平行矩形の円のみ (100)・span≤2 の族 (94) はいずれも W=全 25 点 (制約が弱すぎる)。全共線 (64)・全円 (762) はどちらも W=`{12}`。部分一致すらしない。`batch10_extra.json` の `B224`。
+- 証拠: 標準 W=`{2,6,8,10,12,14,16,18,22}`。軸平行共線のみ (|Q|=50)・軸平行矩形の円のみ (100)・span≤2 の族 (94) はいずれも W=全 25 点 (制約が弱すぎる)。全共線 (64)・全円 (762) はどちらも W=`{12}`。部分一致すらしない。`../../experiments/original-claims/output/batch10_extra.json` の `B224`。
 - メモ: 自然な「小さい族」では再現不能。貪欲に W の誤りを消す四点組を追加する探索 (各評価 ~30s) が次の一手。存在自体は未決着。
 
 ## B225 [構造] q 点共円禁止の小盤には同種の飽和開始現象がある
@@ -43,7 +45,7 @@
 ## B226 [存在] misère 版と通常版で勝者が一致・不一致の両方がある
 - 判定: **PARTIAL**
 - 範囲: n=2..5 の標準版で通常 g(0) と misère 空盤勝者を計算。
-- 証拠: 不一致が n=2,3,4,5 のすべてで発生 (n=2 通常 First/misère Second、n=3 同、n=4 通常 Second/misère First、n=5 通常 First/misère Second)。n≥4 の一致例は n≤5 では未発見。円のみ n=5 も通常 First / misère Second で不一致。`batch10_variants.json` の `misere_winner`。
+- 証拠: 不一致が n=2,3,4,5 のすべてで発生 (n=2 通常 First/misère Second、n=3 同、n=4 通常 Second/misère First、n=5 通常 First/misère Second)。n≥4 の一致例は n≤5 では未発見。円のみ n=5 も通常 First / misère Second で不一致。`../../experiments/original-claims/output/batch10_variants.json` の `misere_winner`。
 - メモ: 「単純な勝者反転ではない境界」の半分 (不一致側) は確定。一致例候補は n=6,7 (通常は First, Second)。misère の連勝構造が通常と鏡になるのは空盤全数決定ゲームに近いときの現象かもしれない。
 
 ## B227 [構造] 一回だけパスできる版は g だけでは分類できない
@@ -67,13 +69,13 @@
 ## B230 [構造] 標準ルールの勝敗を保つ粗視化閾値がある
 - 判定: **PARTIAL**
 - 範囲: n=4 で共線 64 四点組を丸ごと省いた円のみ版と標準版の層別 P/N 一致率 (B223 の副産物)。
-- 証拠: 省略しても k=0,1,7 層では不一致率 0% (P/N 完全保存)。k=2 では 53% 崩れるので層を選ぶ条件は非自明。`batch10_extra.json`。
+- 証拠: 省略しても k=0,1,7 層では不一致率 0% (P/N 完全保存)。k=2 では 53% 崩れるので層を選ぶ条件は非自明。`../../experiments/original-claims/output/batch10_extra.json`。
 - メモ: 「小さい禁止族を省いても特定石数層の P/N が保存される」の存在証拠としては弱いが方向は一致。閾値の定式化 (円の補完数・サイズで切る) は未検証。
 
 ## B231 [存在] 任意に大きい nimber を格子上の残余ゲームで実現できる
 - 判定: **PARTIAL**
 - 範囲: 既知データ照合のみ。
-- 証拠: 最大 nimber n=2..6 = 1,1,5,6,8 と単調増加傾向。n=5 直線のみ版でも max g=10 (標準 6 より大きい) が出て制約緩和で高 nimber が出ることを確認 (`batch10_variants.json`)。
+- 証拠: 最大 nimber n=2..6 = 1,1,5,6,8 と単調増加傾向。n=5 直線のみ版でも max g=10 (標準 6 より大きい) が出て制約緩和で高 nimber が出ることを確認 (`../../experiments/original-claims/output/batch10_variants.json`)。
 - メモ: 「任意の m」の証人は未作成。B234 の直和構成が成立すれば B231 に近い。n=6,7 の max g 既知値の延長が次の数値的証拠。
 
 ## B232 [構造・大胆] 任意の有限グラフの独立集合配置ゲームを実現できる
@@ -193,7 +195,7 @@
 ## B251 [存在] 禁止四点組一つを外すだけで空盤勝者が反転する
 - 判定: **INCONCLUSIVE**
 - 範囲: n=4 で全 194 四点組の単一解除を尽くし、n=5 で標的付き 4 件を試行。
-- 証拠: n=4 では 194/194 すべて g0=0 (Second) のまま、反転 0 件。n=5 では共線 2 件・円 2 件の単一解除すべてで g0=1 (First) 維持。ただし n=5 共線解除では W がわずかに動く (`(0,1,2,3)` 解除で 17 が、`(21,22,23,24)` 解除で 7 が W に加わる)。`batch10_remove_quads.py` 実行ログと `batch10_extra.json`。
+- 証拠: n=4 では 194/194 すべて g0=0 (Second) のまま、反転 0 件。n=5 では共線 2 件・円 2 件の単一解除すべてで g0=1 (First) 維持。ただし n=5 共線解除では W がわずかに動く (`(0,1,2,3)` 解除で 17 が、`(21,22,23,24)` 解除で 7 が W に加わる)。`batch10_remove_quads.py` 実行ログと `../../experiments/original-claims/output/batch10_extra.json`。
 - メモ: 存在命題のため n≤4 の否定は反証にならない。n=5 の全 826 件は各 ~25s で重い。反転の必要条件 (空盤 g が 0/1 境界にある盤) から n=6 以降を狙う方が効率的。
 
 ## B252 [存在] 円一つの禁止解除が、同数のばらばらな解除より強く効く

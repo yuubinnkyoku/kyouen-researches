@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B502 (n=6)
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §51 の **B502** のみ。
-スクリプト: `research/verification/scripts/round3_b502_pgrand_n6.py`
-データ: `research/verification/round3_b502_pgrand_n6.json`
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §51 の **B502** のみ。
+スクリプト: `research/experiments/original-claims/scripts/round3_b502_pgrand_n6.py`
+データ: `research/experiments/original-claims/output/round3_b502_pgrand_n6.json`
 
 ## B502 [存在] P局面でランダム勝率3/4を超えられる
 

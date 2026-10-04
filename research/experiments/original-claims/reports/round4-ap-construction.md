@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 行ごとに公差1の三点を置く一般構成と、既存AP証人の監査
 
 作成: 2026-09-28。担当: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第2仮説バンク](../hypothesis-bank-round2-2026-09-27.md) B557・B558。
+原文: [第2仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md) B557・B558。
 
 | ID | 今回の判定 | 根拠 |
 |---|---|---|
@@ -9,9 +11,9 @@
 | B558 | PARTIAL | 全wについて、公差1の三点を各行に置くO(w³)構成を証明。原文のO(w²)は未解決 |
 
 新しい一般構成は旧APコードを使用していない。
-[構成コード](scripts/round4_ap_greedy.py)、[構成・検算データ](round4_ap_greedy.json)。
-旧証人は読み取り専用で監査した。[監査コード](scripts/round4_ap_witness_audit.py)、
-[監査結果](round4_ap_witness_audit.json)。他担当のコード・記録は上書きしない。
+[構成コード](../scripts/round4_ap_greedy.py)、[構成・検算データ](../output/round4_ap_greedy.json)。
+旧証人は読み取り専用で監査した。[監査コード](../scripts/round4_ap_witness_audit.py)、
+[監査結果](../output/round4_ap_witness_audit.json)。他担当のコード・記録は上書きしない。
 
 ## 1. 全wに対する公差1の構成定理
 
@@ -93,7 +95,7 @@ F_rはr≥0で単調増加なので、全w行を `M_w=F_{w-1}+3` 列内に順に
 
 ## 2. 再現可能な構成と検算
 
-`python research/verification/scripts/round4_ap_greedy.py` を実行した。
+`python research/experiments/original-claims/scripts/round4_ap_greedy.py` を実行した。
 各段階で(1)および旧三点の円・直線方程式の整数根を求め、最小の非負許容開始位置を選ぶ。
 平方根判定はisqrtと完全平方の比較を使用し、丸め誤差はない。
 
@@ -114,8 +116,8 @@ F_rはr≥0で単調増加なので、全w行を `M_w=F_{w-1}+3` 列内に順に
 
 ## 3. 既存AP証拠で見つかった不具合
 
-対象は `round4_b543_rect_v.json` の `ap_construction` と、その生成元
-`scripts/round4_b543_rect.cpp` のsection 5。
+対象は `../output/round4_b543_rect_v.json` の `ap_construction` と、その生成元
+`../scripts/round4_b543_rect.cpp` のsection 5。
 DFSは新しい行の三点 `msk` と、過去の**一行だけ**の三点 `pm` を結合した
 `u2=msk|pm` に対して禁止四点を調べている（コード505〜508行）。
 この方法で分かるのは二行にまたがる条件だけであり、三行・四行にまたがる禁止組を落とす。

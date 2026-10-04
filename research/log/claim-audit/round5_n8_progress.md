@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=8 p_rand 進捗ログ（Round5）
 
 作業開始: 2026-09-28 22:22:18
@@ -7,14 +9,14 @@
 
 ```
 # 1. 交差検証（n=6, n=7）— 済んでいるならスキップ可
-wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/wsl_stream.sh 6 --enum
-wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/wsl_stream.sh 7 --enum
+wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/wsl_stream.sh 6 --enum
+wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/wsl_stream.sh 7 --enum
 
 # 2. n=8 列挙（--resume で途中から再開可）
-wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/wsl_stream.sh 8 --enum
+wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/wsl_stream.sh 8 --enum
 
 # 3. 列挙完了後、求解
-wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/wsl_stream.sh 8 --solve
+wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/wsl_stream.sh 8 --solve
 ```
 
 - ログ: WSL の /tmp/stream.log（再起動で消える）
@@ -131,13 +133,13 @@ OMP_NUM_THREADS=10、ピーク RSS 0.27GB（他エージェントの 10.5GB と�
 wsl -d Ubuntu -- bash -lc "free -h | head -2"
 
 # L9 から列挙再開（.ok マーカー付き L0-L8 を自動採用）
-OMP_NUM_THREADS=12 wsl -d Ubuntu -- bash -lc "nohup bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/launch_n8.sh --enum --resume"
+OMP_NUM_THREADS=12 wsl -d Ubuntu -- bash -lc "nohup bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/launch_n8.sh --enum --resume"
 
 # 進捗確認
 wsl -d Ubuntu -- bash -lc "grep 'level ' /tmp/n8_stream.log | tail -5"
 
 # 列挙完了後、求解
-OMP_NUM_THREADS=12 wsl -d Ubuntu -- bash -lc "nohup bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/launch_n8.sh --solve --resume"
+OMP_NUM_THREADS=12 wsl -d Ubuntu -- bash -lc "nohup bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/launch_n8.sh --solve --resume"
 ```
 
 - spill: /tmp/lk_8/level_*.occ + level_*.ok
@@ -236,10 +238,10 @@ safe subsets = 6,700,711,937 / K=15
 # または /tmp は使わないこと
 
 # 1. 列挙（約 2 時間）
-OMP_NUM_THREADS=12 wsl -d Ubuntu -- bash -lc "nohup bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/launch_n8.sh --enum --spill=/home/yuubi/spill8"
+OMP_NUM_THREADS=12 wsl -d Ubuntu -- bash -lc "nohup bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/launch_n8.sh --enum --spill=/home/yuubi/spill8"
 
 # 2. 求解（ストリーミング DP）
-wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts/wsl_stream_solve.sh 8
+wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts/wsl_stream_solve.sh 8
 `
 
 
@@ -294,8 +296,12 @@ spill: /home/yuubi/spill8/（約 50GB、再起動で消えない）
 
 ### ファイル
 
-- データ: esearch/verification/round5_prand_n8.json
-- 個票: esearch/verification/round5-batch-n8.md
+- データ: 
+esearch/verification/round5_prand_n8.json
+- 個票: 
+esearch/verification/round5-batch-n8.md
 - spill: /home/yuubi/spill8/（50GB、DP ファイル含む）
-- スクリプト: ound5_prand_stream.cpp (enum), ound5_stream_solve.cpp (DP), dp_scan.cpp (集計)
+- スクリプト: 
+ound5_prand_stream.cpp (enum), 
+ound5_stream_solve.cpp (DP), dp_scan.cpp (集計)
 

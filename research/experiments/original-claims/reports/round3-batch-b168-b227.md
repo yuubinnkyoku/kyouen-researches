@@ -1,26 +1,28 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B168-B227（chunk3 分担）
 
-対象: `research/hypothesis-bank-2026-09-27.md` の B168〜B227 のうち下記 45 件。
-書出し専用: 既存スクリプト `research/verification/scripts/round3_chunk3_core.py` の
-docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` / `batch-10.md` から
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md` の B168〜B227 のうち下記 45 件。
+書出し専用: 既存スクリプト `research/experiments/original-claims/scripts/round3_chunk3_core.py` の
+docstring / コメント、および前回個票 `../../../log/claim-audit/batch-08.md` / `../../../log/claim-audit/batch-09.md` / `../../../log/claim-audit/batch-10.md` から
 転記するのみ。新しい計算はしていない。
 
-**重要記録**: `scripts/round3_chunk3_core.py` は B168–B227 を計算する
+**重要記録**: `../scripts/round3_chunk3_core.py` は B168–B227 を計算する
 「ドライバ付きスクリプト」ではない。ファイル末尾（479行）までが
 `homology()` / `torsion_of_cob()` の定義で終わり、`if __name__ == "__main__":`
-ブロックは存在せず、`research/verification/round3_chunk3_*.json` も
+ブロックは存在せず、`research/experiments/original-claims/output/round3_chunk3_*.json` も
 リポジトリ内に存在しない（`round3_*.json` 全 15 個を glob して確認）。
 したがって **chunk3 の数値成果物は 0 件**。本個票の「証拠」欄は
 前回個票 `batch-08/09/10.md` と既存 JSON
-（`batch08_results3.json` / `batch09_*.json` / `batch10_extra.json` /
-`batch10_variants.json`）から転記した値のみであり、
-`round3_unresolved.json`（B168:NOT-CHECKED … B227:NOT-CHECKED、
+（`../output/batch08_results3.json` / `batch09_*.json` / `../output/batch10_extra.json` /
+`../output/batch10_variants.json`）から転記した値のみであり、
+`../output/round3_unresolved.json`（B168:NOT-CHECKED … B227:NOT-CHECKED、
 ファイル・行番号つき）のラベルとも矛盾しない。
 
 ## B168 [全称・大胆] 5×5の初手規則にはmod 2の保存量がある
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「市松色分類が偶然でなく保存量で説明できるかは深い。n=5 の game tree（cycle4-exact）から応答規則を帰納できる可能性。」
-- 今回の範囲: 既存データに情報がなく前回と状況が変わらない。`batch08_results3.json` は
+- 今回の範囲: 既存データに情報がなく前回と状況が変わらない。`../output/batch08_results3.json` は
   キーが `b169` / `b179` / `b171_173` / `b176` のみで B168 の段落は無い。
 - 証拠: なし（保存量の候補はどの既存データにも計算されていない）。
 - 残った障害: chunk3 の位相 homology 実装（`homology()`, `torsion_of_cob()`）は
@@ -30,7 +32,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B169 [存在] 同じ全座標剰余パターンなのに勝敗が違う局面
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「任意の固定法 m の全称は未検証。m 大の厳密証人は別途。」
-- 今回の範囲: `research/verification/batch08_results3.json` → `b169`。
+- 今回の範囲: `research/experiments/original-claims/output/batch08_results3.json` → `b169`。
   n=5 一石局面（25 点 = 勝ち初手 9 点 + 負け初手 16 点）を m で剰余グループ化。
 - 証拠: m=2: グループ 4 中 **1 つが混在**（類 `(0,0)` に LOSS(0,0),LOSS(4,0),LOSS(0,4),LOSS(4,4) と
   WIN(2,0),WIN(0,2),WIN(2,2),WIN(2,4) の同居）。m=3: 9 グループ中 **8 が混在**
@@ -43,12 +45,12 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B170 [漸近・大胆] 円の豊富さの算術的跳びが最大配置数の谷を作る
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「型数の谷は n=7 の 1 点のみ。n=8,9 の最大集合数が既知なら比較できる。」
-- 今回の範囲: 既存データ照合のみ。`batch08_results3.json` の `b179` ブロックに
+- 今回の範囲: 既存データ照合のみ。`../output/batch08_results3.json` の `b179` ブロックに
   n=2..5 の `n_max_sets` として 3:56, 4:64, 5:100 が保存されている（n_max_sets は n=2 で null）。
   n=6 は 464、n=7 は 16、n=8 は JSON に無い。
 - 証拠: 最大集合数系列 3:56 → 4:64 → 5:100 → 6:464 → **7:16**。n=7 で 464→16 と
-  29 倍の急減。`batch08_results3.json` `b179.6` は無いため n=6 の 464 は
-  前回個票（`batch-08.md` / F-U, PROTOCOL 確定事実「K_6=11（極大464）」）からの転記。
+  29 倍の急減。`../output/batch08_results3.json` `b179.6` は無いため n=6 の 464 は
+  前回個票（`../../../log/claim-audit/batch-08.md` / F-U, PROTOCOL 確定事実「K_6=11（極大464）」）からの転記。
   新規円族（傾斜 ±2, 1/2 の共線4点組）の初出が n=7 である（F-L）。
 - 残った障害: 谷は n=7 の 1 点のみで、n=8,9 の最大集合数が既存データに無いため
   「谷」か「noise」かの区別がつかない。PROTOCOL には K_8=15（存在）・K_9≥17 しか無く、
@@ -59,7 +61,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 - 前回の一手: 「n=4 の複体（5811 集合）から可能だが本バッチ範囲外。」
 - 今回の範囲: 既存データに情報がなく前回と状況が変わらない。`homology()` と
   `torsion_of_cob()` は `round3_chunk3_core.py` に実装済みだが**未実行**。
-  `batch08_results3.json` に位相データ（betti / torsion）は存在しない。
+  `../output/batch08_results3.json` に位相データ（betti / torsion）は存在しない。
 - 証拠: なし。ただし実装の構造的障害を指摘できる: `snf_invariants()` は
   XOR 行変形のみで `diag` に 1 を push する実装であり、docstring 自身が
   「d_{k-1}∘d_k = 0 なので非単位 pivot swap が要らない」「対角は 1 か真の torsion」
@@ -82,12 +84,12 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B176 [統計] 位相的複雑さと勝敗混在率は同じ層で立ち上がる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。P率側のみ転記。Betti 側は未実行）
 - 前回の一手: 「『対応する』という主張の片側（P率混在）だけ確認。位相側が本体。」
-- 今回の範囲: `batch08_results3.json` → `b176`（n=4 全 5,811 局面、n=5 は
+- 今回の範囲: `../output/batch08_results3.json` → `b176`（n=4 全 5,811 局面、n=5 は
   loss_rates のみ。層別 P 率と `mixing_onset_k`）。
 - 証拠: n=4 の層別 loss_rate は `[1.0, 0.0, 0.7, 0.0286, 0.3936, 0.1407, 0.6466, 1.0]`
   （k=0..7）で **mixing_onset_k = 2**。n=5 は
   `[0.0, 0.36, 0.0667, 0.2391, 0.1057, 0.1917, 0.2383, 0.3637, 0.8391, 1.0]`
-  で **mixing_onset_k = 1**。Betti 数は `batch08_results3.json` に無い。
+  で **mixing_onset_k = 1**。Betti 数は `../output/batch08_results3.json` に無い。
 - 残った障害: 主張は「Betti 数の増大と P 率離脱期の**対応**」だが、既存データには
   P 率側しか無く `homology()` も未実行のため対応づけができない。
   今回新しい数値は得られていない（P/N 側の転記のみ）。
@@ -95,9 +97,9 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B177 [存在] 同じfベクトルでもゲーム値は異なる格子部分盤
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「部分盤（点を除いた盤）での実現が候補。」
-- 今回の範囲: なし。`batch09_pairs_n4.json` は 4×4 の二点削除 120 組の
+- 今回の範囲: なし。`../output/batch09_pairs_n4.json` は 4×4 の二点削除 120 組の
   P/N と K を持つが、f ベクトル（各サイズの安全集合数）は持たない。
-- 証拠: なし。ただし手掛かりが一つだけある: `batch-08.md` の B201/B202 記録より、
+- 証拠: なし。ただし手掛かりが一つだけある: `../../../log/claim-audit/batch-08.md` の B201/B202 記録より、
   n≤5 の全一点削除 50 盤で **K が一度も下がらず**勝者も不変。
   「一点除いた 4×4」と「3×4 長方形」の f ベクトルは n=4 の完全 f
   `[1,16,120,560,1626,2360,1064,64]` と 3×4 の値が異なるため同一 f ではない。
@@ -118,7 +120,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B179 [統計] I_n(−1)の大きさは剛性の指標になる
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「剛性の操作的定義（変形障壁）が先に必要。」
-- 今回の範囲: `research/verification/batch08_results3.json` → `b179`（n=2..5 の完全列挙）。
+- 今回の範囲: `research/experiments/original-claims/output/batch08_results3.json` → `b179`（n=2..5 の完全列挙）。
 - 証拠: I_n(−1) と |I|/全安全集合数:
   n=2: I=−1, total=15, 0.0667, K=3, n_max_sets=null;
   n=3: I=0, total=298, 0.0, K=5, n_max_sets=56;
@@ -146,7 +148,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B181 [漸近] ランダム対局長は最大安全サイズより小さい次数
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「『比が 0 へ』ではなく『比が定数 c≈0.7–0.8 へ収束』の方が小 n と整合。」
-- 今回の範囲: `research/verification/batch09_random_greedy.json`（n≤5 厳密 DP、n=6..8 は MC）。
+- 今回の範囲: `research/experiments/original-claims/output/batch09_random_greedy.json`（n≤5 厳密 DP、n=6..8 は MC）。
   本バッチでは再実行せず既存値の転記のみ。
 - 証拠: E[X_n] / K_n の表（前回個票 batch-09.md より）:
   n=2: 3.00/3=1.00（厳密）、n=3: 5.00/5=1.00（厳密）、n=4: 6.11/7=0.87（厳密）、
@@ -162,7 +164,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B182 [漸近・大胆] 典型終局は n^(2/3)(log n)^(1/3) 尺度
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記。尺度自体は否定方向）
 - 前回の一手: 「修正条件付き予想は採らない。E[X]=Θ(n) / Θ(n/log n) 系を次候補にする。」
-- 今回の範囲: `batch09_random_greedy.json`（n=4..8、n=4,5 厳密・n=6..8 MC）。
+- 今回の範囲: `../output/batch09_random_greedy.json`（n=4..8、n=4,5 厳密・n=6..8 MC）。
 - 証拠: 比較尺度 n^{2/3}(log n)^{1/3} は n=4..8 で 2.81, 3.43, 4.01, 4.57, 5.11。
   観測 E[X] は 6.11, 7.51, 9.07, 10.53, 11.92。比は **2.17, 2.19, 2.26, 2.31, 2.34 と
   単調増加**（＝定数倍でつり合わない）。増加の速さは n^{1/3} 側に近く
@@ -175,7 +177,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B184 [漸近・大胆] 標準化終局サイズは正規分布へ近づく
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「n≤8 では『正規に見える』以上のことは言えない。」
-- 今回の範囲: 既存データに标准化・検定の記録が無い。`batch09_random_greedy.json` は
+- 今回の範囲: 既存データに标准化・検定の記録が無い。`../output/batch09_random_greedy.json` は
   終局サイズの分布と MC 集計のみを持ち、歪度・尖度・正規性検定の項目を持たない。
 - 証拠: 転記できる形状情報のみ。n=5 は厳密分布が {7: 0.46, 8: 0.47} で**わずかに二峰気味**。
   n=6..8 は 5 本の箱で単峰・ほぼ対称（目視）。標準化歪度の推定値も無い。
@@ -186,7 +188,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B185 [統計] 最小極大を引く確率はサイズ差だけで説明できない
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「制作順の分母 |L| 連鎖が効いていることは事実。桁違いは n≥5 か n≥6 で再検。」
-- 今回の範囲: `batch09_random_greedy.json` 由来の 4×4 極大安全集合 **928 個**すべての
+- 今回の範囲: `../output/batch09_random_greedy.json` 由来の 4×4 極大安全集合 **928 個**すべての
   ランダム貪欲到達確率（厳密 DP）。
 - 証拠: 同サイズ内の max/min 到達確率比は サイズ5: **1.48**、サイズ6: **4.86**、
   サイズ7: **1.55**。サイズ 6 の 4.86 倍が最大。
@@ -199,7 +201,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B188 [漸近] 固定した初手の影響は相対的に消える
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「n≥7 の初手スイープが必要。B187 の有限盤効果と両立は可能。」
-- 今回の範囲: 既存データは n=5,6 の初手ごと E[X] のみ（`batch09_random_greedy.json`）。
+- 今回の範囲: 既存データは n=5,6 の初手ごと E[X] のみ（`../output/batch09_random_greedy.json`）。
   n=7,8 の初手別 E[X] は JSON に無い。
 - 証拠: 初手最大差 / E[X] は n=5 で **0.28 / 7.51 = 0.037**、n=6 で **0.47 / 9.07 = 0.052**。
   縮むどころか n=6 の方が大きい。
@@ -210,7 +212,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B189 [統計] 最後に残る合法点は初期の低次数点に偏る
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「batch09_random_greedy.py に last-point ログを足して再実行 (n≤8, 数分) で判定可。」
-- 今回の範囲: なし。`batch09_random_greedy.json` に「最後の合法点」の記録は無く、
+- 今回の範囲: なし。`../output/batch09_random_greedy.json` に「最後の合法点」の記録は無く、
   `round3_chunk3_core.py` にも MC サンプラは無い（`Game` は厳密求解のみ）。
 - 証拠: なし。
 - 残った障害: 最終手の点の初期次数 d(p) を記録するコードが未実装。
@@ -220,7 +222,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B190 [統計] 残り合法手数の急落は三つ組補完の連鎖で予告できる
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「MC 軌跡の保存と残余制約カウントで次バッチ可能。」
-- 今回の範囲: なし。`batch09_outcome_mining.json` は局面ごとの静的特徴量
+- 今回の範囲: なし。`../output/batch09_outcome_mining.json` は局面ごとの静的特徴量
   （`b_S`, `newly_blocked`, `r2_ratio`, `rand_odd` 等）を持つが、
   **|L| の時系列**と「未完成の 2 点/3 点制約の重なり」の時系列は持たない。
 - 証拠: なし。
@@ -230,7 +232,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B193 [統計] 次数和の符号反転は石数より残余辺サイズで整理できる
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「F-E/F-F の Σd 反転現象自体は再現。r2 以外の残余特徴 (r3, 連結成分) で再層別すべき。」
-- 今回の範囲: `research/verification/batch09_outcome_mining.json`（n=4,5 の局面特徴量、
+- 今回の範囲: `research/experiments/original-claims/output/batch09_outcome_mining.json`（n=4,5 の局面特徴量、
   層は標本 60 個前後）。本バッチでは再層別をしていない。
 - 証拠: 転記できる観測は符号が層間で揃わないことのみ:
   n=5, k=5, lo_r2 層は Σd が大きいほど P 率 **0.03 → 0.32**（正）、
@@ -238,13 +240,13 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
   浅層 (k≤3) と深層 (k≥5) とで Σd→P 率の向きが揃わない層が残る。
 - 残った障害: r2 層別は一部で方向を揃えるが全層一貫にならない。主因は
   (a) 層あたりの標本が 60 前後で小さい、(b) r3・連結成分などの追加残余特徴が
-  `batch09_outcome_mining.json` に保存されていないこと。既存データに情報がなく
+  `../output/batch09_outcome_mining.json` に保存されていないこと。既存データに情報がなく
   前回と状況が変わらない。
 
 ## B195 [存在] ランダム対局ではほぼ必敗でも最適には勝てる局面
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「『任意に小さくできる族』は未構成。0.09 は現時点の最小。盤を大きくすれば下がるかが次の問い。」
-- 今回の範囲: `batch09_outcome_mining.json` の全局面から N 層内で `rand_odd` 最小を探索
+- 今回の範囲: `../output/batch09_outcome_mining.json` の全局面から N 層内で `rand_odd` 最小を探索
   （n=4: 5,811 局面、n=5: 151,394 局面）。
 - 証拠: n=4 の N 層最小 `rand_odd = 0.091`（k=4, |L|=11, g=2, occ=5252）。
   n=5 も同率 `0.091`（k=5, |L|=11, g=2, occ=9963008）。
@@ -258,7 +260,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B196 [存在] ランダム対局ではほぼ勝つのに最適には負ける局面
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「同じく族構成は未。空盤では n=4 の rand_odd=0.302（最適は後手勝ち）が近い現象。」
-- 今回の範囲: `batch09_outcome_mining.json` の P 層で `rand_odd` 最大を探索（n=4,5 全局面）。
+- 今回の範囲: `../output/batch09_outcome_mining.json` の P 層で `rand_odd` 最大を探索（n=4,5 全局面）。
 - 証拠: n=4 の P 層最大 `rand_odd = 0.563`（k=4, |L|=9, occ=4137）。
   n=5 で `0.558`（k=5, |L|=10, occ=18876484）。
   最適負け（g=0 = P）なのにランダム勝率が 56% を超える局面が実在（B195 の逆方向の証人）。
@@ -271,7 +273,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B197 [統計] P局面の近傍は幾何的に多様
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「子 1 手先の特徴量分散を直接測れば判定できる。」
-- 今回の範囲: `batch09_outcome_mining.json` の n=3,4,5 で P 群 vs N 群の
+- 今回の範囲: `../output/batch09_outcome_mining.json` の n=3,4,5 で P 群 vs N 群の
   特徴量分散比較（`b_var`, `newly_max`, `r2`, `e_rem`）。n=3 の層別記録は無い。
 - 証拠: 4 特徴のうち 2 つが主張と整合、2 つが逆:
   - `b_var` と `e_rem`: 3 盤とも **var_P > var_N**（主張と整合）
@@ -284,7 +286,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B198 [統計] 単一の局所特徴より交互作用が支配する
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「ロジスティック寄与や情報量ベースの比較が必要。」
-- 今回の範囲: `batch09_outcome_mining.json` で n=4,5 の Σd0 × newly_max の
+- 今回の範囲: `../output/batch09_outcome_mining.json` で n=4,5 の Σd0 × newly_max の
   2×2 分割（各層中央値）による P 率。
 - 証拠: n=5, k=3 の 2×2 は **dlo_glo=0.12, dhi_glo=0.47, dlo_ghi=0.20, dhi_ghi=0.31**。
   dhi_glo が最大で非加法性の兆候はあるが、k=4,5 では方向が揃わない。
@@ -295,7 +297,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B199 [統計] 盤サイズをまたぐのは生の石数より飽和率
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「n=3,6 を加えた 3 盤比較か、|L| を主軸にした曲線比較が有望。」
-- 今回の範囲: `batch09_outcome_mining.json` の n=4 (K=7) と n=5 (K=9) の 2 盤のみ。
+- 今回の範囲: `../output/batch09_outcome_mining.json` の n=4 (K=7) と n=5 (K=9) の 2 盤のみ。
   3 盤比較（n=3 追加）は行われていない。
 - 証拠: P 率はどちらの盤も k に対して U 字:
   n=4: k=0:1.00 … k=3:0.03 … k=7:1.00、
@@ -303,12 +305,12 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
   k/K で揃えても n=4 の k/K=0.14 (P=0.00) と n=5 の 0.11 (P=0.36) は噛み合わず。
 - 残った障害: サンプル 2 盤のため、生の k と飽和率のどちらが優れるかの
   判別力が無い（両曲線とも U 字という記述のみ共有）。n=3,6 の層別 P 率は
-  `batch09_outcome_mining.json` に無い。既存データに情報がなく前回と状況が変わらない。
+  `../output/batch09_outcome_mining.json` に無い。既存データに情報がなく前回と状況が変わらない。
 
 ## B200 [統計] 大きい盤の局面は「Pになりやすい構造」と「高nimber構造」に分かれる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「『零かどうかだけの解析が第二の軸を落とす』は方向として支持。軸の同定は未。」
-- 今回の範囲: `batch09_outcome_mining.json` の n=5 で
+- 今回の範囲: `../output/batch09_outcome_mining.json` の n=5 で
   (a) P/N を分ける特徴量の平均差、(b) N 内で g を大きくする特徴量の平均差。
 - 証拠:
   - P/N 分離（N 側 − P 側）: **|L| 4.2 → 13.2**（最大）、**Σd0 902 → 568**、
@@ -323,7 +325,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B201 [存在] 最大安全サイズを変えずに勝者を変える一点
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「存在仮説なので n≥6 で再探索。6×6 は全解が重いが、証明書戦略の局所変形で近い。」
-- 今回の範囲: `batch09_pairs_n4.json` と前回個票の一点削除 50 盤記録
+- 今回の範囲: `../output/batch09_pairs_n4.json` と前回個票の一点削除 50 盤記録
   （3×3 の 9 点 + 4×4 の 16 点 + 5×5 の 25 点 = 50 盤、完全 Grundy 解）の転記のみ。
 - 証拠: 全 50 盤で **K 不変かつ勝者不変**。
   4×4 は全 16 点で K=7・後手勝ちのまま、5×5 は全 25 点で K=9・先手勝ちのまま、
@@ -336,7 +338,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B202 [存在] 勝者を変えずに最大安全サイズを下げる一点
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「6×6 以上では最大配置が点を被覆し切れるか自明でない。K の感度は n≥6 の課題。」
-- 今回の範囲: 上記 50 一点削除盤 + `research/verification/batch09_pairs_n4.json`
+- 今回の範囲: 上記 50 一点削除盤 + `research/experiments/original-claims/output/batch09_pairs_n4.json`
   （4×4 の二点削除 C(16,2)=120 組）の K の転記のみ。
 - 証拠: n≤5 の一点削除では K が下がる例が**一度も無い**（常に K 不変）。
   4×4 の二点削除 120 組でも **K は常に 7 のまま**。
@@ -360,7 +362,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B205 [存在] 最大配置から排除される点が勝敗には不可欠
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「n=5 の最大配置 100 個の点被覆を数えるだけで 1 分。次回必ず保存。」
-- 今回の範囲: なし。`batch09_pairs_n4.json` / `batch08_results3.json` に
+- 今回の範囲: なし。`../output/batch09_pairs_n4.json` / `../output/batch08_results3.json` に
   「点ごとの最大配置被覆フラグ」は永続化されていない（前回計算するが JSON 未保存）。
 - 証拠: 間接的観測のみ（前回記録より）: 全一点削除で K 不変 ⇒ 各点を避ける
   最大配置が存在する（各点が**ある**最大配置に**属さない**）。
@@ -375,7 +377,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「二点削除 (B204 の 12 組) を被説明変数にすると n=4 で検定可能。」
 - 今回の範囲: なし。一点削除で g が動かない盤が多く、影響量の回帰が張れない。
-  `batch09_pairs_n4.json` は 120 組の勝者と座標を持つが、「媒介性」の指標
+  `../output/batch09_pairs_n4.json` は 120 組の勝者と座標を持つが、「媒介性」の指標
   （P へ行く手として使われる頻度、変形ゲート高さ）は記録されていない。
 - 証拠: なし。
 - 残った障害: 被説明変数がほぼ全て 0 で、統計検定の前提を満たさない。
@@ -384,7 +386,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B207 [存在] 安全容量には相互作用がない二点にも戦略的相互作用がある
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記。後半のみ成立）
 - 前回の一手: 「『K 損失が非零で加法的』例は n≤5 に無いため、主張の前半は未検証。後半 (g の非加法) は成立。」
-- 今回の範囲: `research/verification/batch09_pairs_n4.json`（4×4 二点削除 120 組）で
+- 今回の範囲: `research/experiments/original-claims/output/batch09_pairs_n4.json`（4×4 二点削除 120 組）で
   K 損失の加法性と g の組合せ効果を照合。
 - 証拠: K 損失は 120 組**すべて加法的**（実際には両側 0 で K が全組不変、自明に加法）。
   一方 g には **12 組**で「単独削除の g とも違う」組合せ効果（g: 0,0 → 2）。
@@ -397,7 +399,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B208 [全称・大胆] 外周一列を残すだけで内側の勝敗は保存されない
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。前回と状況不変）
 - 前回の一手: 「3×3→4×4 の埋め込みや、n×n と (n+2)×(n+2) の関係として翻訳可能かも。」
-- 今回の範囲: なし。`batch09_rectangles.json` は 2×m (m≤10) / 3×m (m≤8) の
+- 今回の範囲: なし。`../output/batch09_rectangles.json` は 2×m (m≤10) / 3×m (m≤8) の
   矩形盤の g・K・W を持つが、「n×n に外点を 1 つ加える位置で勝者が変わる例と
   変わらない例の両方がある」という全称のテストは行われていない。
 - 証拠: なし。
@@ -408,7 +410,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B209 [存在] 対称に穴を開ける方が非対称な穴より強く勝敗を変える
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「12 組の D4 軌道分解と『同じ削除次数和の非対称孔』との対比で判定可。短時間。」
-- 今回の範囲: `batch09_pairs_n4.json` の B204_witnesses 12 組。JSON に座標は有るが、
+- 今回の範囲: `../output/batch09_pairs_n4.json` の B204_witnesses 12 組。JSON に座標は有るが、
   D4 軌道構成は**未分類**（分類コードが書かれずに終わった）。
 - 証拠: 粗い観察（前回記録より）: 対角コーナー対（D4 で大きな軌道）と内部隣接対の
   **両方**が勝者を反転している。したがって「対称のみが反転する」は n=4 では
@@ -435,7 +437,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B213 [存在] 幅3で既に最終周期性が破れる
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。観測は周期3で反証方向）
 - 前回の一手: 「存在仮説なので m>8 で破れる可能性は残るが、優先度は下げてよい。B212 側が有力。」
-- 今回の範囲: `research/verification/batch09_rectangles.json`（3×m, m=1..8 の g と勝敗）の転記のみ。
+- 今回の範囲: `research/experiments/original-claims/output/batch09_rectangles.json`（3×m, m=1..8 の g と勝敗）の転記のみ。
 - 証拠: 周期性が「破れる」どころか m=3..8 で **g = 1,2,0,1,2,0 の厳密な周期 3**。
   勝敗列も **F,F,S,F,F,S** で同周期。破れの証人は未発見。
   なお PROTOCOL の確定事実「空盤勝者 n=1..9 = 先,先,先,後,先,先,後,後,先」と
@@ -448,7 +450,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B216 [構造] 3wを達成するための必要長はwの多項式で足りる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「w=4 に K=12 が m≤9 で出るかを計算 (2×/3× の延長, 4×m は V=4m)。」
-- 今回の範囲: `batch09_rectangles.json`（2×m m≤10, 3×m m≤8 の K）の転記のみ。
+- 今回の範囲: `../output/batch09_rectangles.json`（2×m m≤10, 3×m m≤8 の K）の転記のみ。
 - 証拠: 3w 達成の必要長（最小 m）は **w=2 で m=5、w=3 で m=7**。
   観測値 5, 7 は m=2w+1 と一致し、線形（多項式）で足りる仮説と整合。
 - 残った障害: w=2,3 の **2 点のみ**であり、指数的間隔が必要な反例も未探索。
@@ -459,14 +461,14 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B218 [統計] 細長い盤ほど共線制約が勝敗を支配する
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。静的構造は転記、P/N 変化率は依然未測定）
 - 前回の一手: 「2×m / 3×m の禁止集合から共線を除いて再解すれば 1 行で判定できる。最優先の残タスク。」
-- 今回の範囲: `batch09_rectangles.json` の矩形盤の禁止 4 点組の共線/共円分解。
-  `batch10_variants.json` / `batch10_extra.json` は**正方形** n=4,5 の
+- 今回の範囲: `../output/batch09_rectangles.json` の矩形盤の禁止 4 点組の共線/共円分解。
+  `../output/batch10_variants.json` / `../output/batch10_extra.json` は**正方形** n=4,5 の
   標準版 vs 円のみ版比較であり、面積をそろえた**縦横比**の対比は含まない。
 - 証拠: 共線比率は 2×m で **m=4:20% → 5:38% → 6:51% → 8:66% → 10:74%** と細長さで増加。
   同面積 12 の対比: **2×6（縦横比 3）は共線 51%**、**3×4（比 1.33）は共線 5%**。
   禁止条件の「主成分」が細長い盤で共線に移るのは明確。
 - 残った障害: 仮説の核は「共線四点禁止を外したときの**局面 P/N の変化率**」だが、
-  これは**未計算**。`batch10_variants.json` の円のみ版は n=5 正方形のみで、
+  これは**未計算**。`../output/batch10_variants.json` の円のみ版は n=5 正方形のみで、
   2×6 と 3×4 の円のみ版は解かれていない（`lines_only` ではなく `circles_only` が必要）。
   静的共線比率のみでは「勝敗を支配する」の半分しか支持されない。
   既存データに情報がなく前回と状況が変わらない。
@@ -474,7 +476,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B219 [全称・大胆] 固定幅でも部分勝ち初手盤は無限にある
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。w=2,3 に混在の証人）
 - 前回の一手: 「3×(3t+1) の混在性を m=10 で確認すれば B219 はほぼ立つ。」
-- 今回の範囲: `batch09_rectangles.json` の 2×m (m≤10) / 3×m (m≤8) の勝ち初手集合 W。
+- 今回の範囲: `../output/batch09_rectangles.json` の 2×m (m≤10) / 3×m (m≤8) の勝ち初手集合 W。
 - 証拠: 初手の勝敗が**混在**する盤:
   - **2×5: 勝ち 4/10** — 勝ち初手は両端列（x=0,1 と x=8,9）のみ
   - **3×4: 勝ち 6/12** — 初手勝ちは両端行（y=0,3）の全点
@@ -488,7 +490,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B220 [構造] 長方形の例外初手は端からの距離で分類できる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記）
 - 前回の一手: 「w=3 で m=10,13 を計算すれば分類規則を書ける。」
-- 今回の範囲: `batch09_rectangles.json` の 2×5, 3×4, 3×6, 3×7 の W の幾何。
+- 今回の範囲: `../output/batch09_rectangles.json` の 2×5, 3×4, 3×6, 3×7 の W の幾何。
 - 証拠:
   - **2×5**: 「端からの距離 0 の列」= 両端列がちょうど W で、端距離分類が完全に機能。
   - **3×4**: 両端行が W。
@@ -503,7 +505,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B221 [存在] 共線禁止を外すだけで小盤の勝者が反転する
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。前回と状況不変）
 - 前回の一手: 「n=6..9 の円のみ版が次の一手 (n=6 標準 g0=1 に対し円のみ g0 が 0 なら B221 成立)。」
-- 今回の範囲: `research/verification/batch10_variants.json`（n=5 標準/円のみ/直線のみ
+- 今回の範囲: `research/experiments/original-claims/output/batch10_variants.json`（n=5 標準/円のみ/直線のみ
   の厳密計算）の転記のみ。`round3_chunk3_core.py` の `quads_of(points, rule=...)` は
   `"standard" / "circles_only" / "lines_only"` の 3 規則を受け取る実装で、
   **円のみ版のドライバは未実行**。
@@ -513,13 +515,13 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
   **円のみ W = 1 点 {12}（中心のみ）**。共線 64 / 円 762 / 計 826 四点組。
 - 残った障害: 仮説の核は「**空盤 P/N の反転**」だが n≤5 では未出現。n=6..9 の
   円のみ版（標準 g0 は 1 が確定）の計算が既存データに無い。
-  `batch10_variants.json` には n=5 の 1 エントリしか無く n=2..4 の数値は
+  `../output/batch10_variants.json` には n=5 の 1 エントリしか無く n=2..4 の数値は
   前回個票の転記。既存データに情報がなく前回と状況が変わらない。
 
 ## B222 [存在] 共円禁止を外しても勝者が変わらない非自明盤
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記。n=4 で一致）
 - 前回の一手: 「『W が非空のまま一致する n≥4』は未発見。n=6 の直線のみ版 (標準は 36/36 全初手勝ち) が最有力の確認先。」
-- 今回の範囲: `batch10_variants.json` の `lines_only`（直線のみ版、n=5）vs `standard`。
+- 今回の範囲: `../output/batch10_variants.json` の `lines_only`（直線のみ版、n=5）vs `standard`。
 - 証拠: n=5 で **直線のみ g0=2 / First / max_g=10 / n_positions=4,872,798** に対し
   標準は **g0=1 / First / max_g=6 / n_positions=151,394**。勝者は一致（First）だが
   **W は一致しない**（標準 9 点 vs 直線のみ 1 点 {12}）。
@@ -533,7 +535,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B223 [統計] 共線制約の影響は序盤より終盤で大きい
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記。「終盤 > 序盤」は n=4 で反証的）
 - 前回の一手: 「『終盤 > 序盤』の強い形は n=4 で反証的数値。『石数の増加とともに高まる範囲がある』の弱い形のみ成立。n=5 の同集計で形状を再確認できる。」
-- 今回の範囲: `research/verification/batch10_extra.json` → `B223_n4_disagreement`。
+- 今回の範囲: `research/experiments/original-claims/output/batch10_extra.json` → `B223_n4_disagreement`。
   n=4 の全安全局面 5,811 を共通母集団に、標準 vs 円のみ の P/N 不一致率を石数別に集計。
 - 証拠（不一致率 %, 石数 k = 0..7）:
   k=0: 0.0（母数 1）、k=1: 0.0（16）、**k=2: 53.3%（120, disagree 64）**、
@@ -543,14 +545,14 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
   ただし k=3→4 のように局所的に上昇する区間は存在する。
 - 残った障害: 仮説の「強い形（終盤 > 序盤）」は n=4 で数値的に反証されている。
   仮説文が緩めて認めている弱い形（「増加とともに高まる**範囲がある**」＝非単調の巾）は
-  k=3→4 で成立。n=5 の同集計は `batch10_extra.json` に無い（`n5_base` は
+  k=3→4 で成立。n=5 の同集計は `../output/batch10_extra.json` に無い（`n5_base` は
   標準版の基準値のみで、円のみ版の層別不一致率は未保存）。
   既存データに情報がなく前回と状況が変わらない。
 
 ## B224 [存在] 少数の円だけで標準版の初手分類を再現できる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記。自然な族では再現不能）
 - 前回の一手: 「貪欲に W の誤りを消す四点組を追加する探索 (各評価 ~30s) が次の一手。存在自体は未決着。」
-- 今回の範囲: `batch10_extra.json` → `B224`。n=5 で自然な部分禁止族 5 種の W を計算し
+- 今回の範囲: `../output/batch10_extra.json` → `B224`。n=5 で自然な部分禁止族 5 種の W を計算し
   標準 W と照合。基準 W は `n5_base` = {2,6,8,10,12,14,16,18,22}, g0=1, pos=151,394。
 - 証拠:
   - 軸平行共線のみ（|Q|=50, g0=1, **First**）: W = **全 25 点**（制約が弱すぎる）
@@ -583,7 +585,7 @@ docstring / コメント、および前回個票 `batch-08.md` / `batch-09.md` /
 ## B226 [存在] misère 版と通常版で勝者が一致・不一致の両方がある
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存数据的転記。不一致側は確定）
 - 前回の一手: 「一致例候補は n=6,7 (通常は First, Second)。misère の連勝構造が通常と鏡になるのは空盤全数決定ゲームに近いときの現象かもしれない。」
-- 今回の範囲: `research/verification/batch10_variants.json` の `misere_first_wins` /
+- 今回の範囲: `research/experiments/original-claims/output/batch10_variants.json` の `misere_first_wins` /
   `misere_winner` フィールド（n=5 の 3 規則）。
 - 証拠（n=5, `misere_winner` vs 通常 `winner`）:
   - 標準: 通常 **First** (g0=1) / misère **Second** → **不一致**
@@ -622,12 +624,12 @@ B204, B211–B212, B214–B215, B217, B228 以降は他担当・**未記載**）
 ### 今回決着（SUPPORTED / REFUTED に動いたもの）
 **なし（0 件）。**
 
-理由はコード上の事実: 先行ワーカーの `scripts/round3_chunk3_core.py` は
+理由はコード上の事実: 先行ワーカーの `../scripts/round3_chunk3_core.py` は
 `Game` / `homology` / `torsion_of_cob` 等の**エンジン本体のみ**で、
 `if __name__ == "__main__":` ブロックを持たず、`round3_chunk3_*.json` も
 存在しない。すなわち本バッチに対応する**数値成果物が 1 件も生成されていない**ため、
 既存数値を裏づける新材料が無い。推測で SUPPORTED / REFUTED を書くことは
-`ROUND3-WRITEOUT.md` の禁止事項に当たる。
+`../../../archive/claim-audit-history/ROUND3-WRITEOUT.md` の禁止事項に当たる。
 
 ### ラベル内訳（45 件）
 
@@ -680,7 +682,7 @@ B204, B211–B212, B214–B215, B217, B228 以降は他担当・**未記載**）
   B197, B198, B199, B200, B207, B213, B216, B219, B220, B224（23 件）** —
   既存 JSON に具体値があるものは転記して内容_strengthen済み。いずれも
   全称・漸近主張、または「任意に○○できる族」の存在命題で、n≤8 の範囲では
-  決着しない（`ROUND3-PROTOCOL.md` の禁止事項「小盤の不発見を無界の存在命題の
+  決着しない（`../../../archive/claim-audit-history/ROUND3-PROTOCOL.md` の禁止事項「小盤の不発見を無界の存在命題の
   反証としない」に該当）。
 
 ### 最も有望な次の一手（1 つだけ）

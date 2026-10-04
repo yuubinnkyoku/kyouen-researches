@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 朝の最終報告（2026-09-30）: 11×11 df-pn 自律作業
 
 基準: `8168cbf` → 最新 `14e1f4b`。全て main へ push 済み。
@@ -27,13 +29,13 @@
 - 追い出し試験: memo=2^20 で全一致。2^16 では遅くなるが結果不変。
   root 保護・solved ゼロ追い出しを確認
 
-詳細: `N11-DFPN-VALIDATION.md`。
+詳細: `../../experiments/n11-search-methods/reports/N11-DFPN-VALIDATION.md`。
 
 ## 21初手の結果（各5分・fresh TT・memo=26）
 
 全21軌道が TIMEOUT（未証明）。pn 85,796〜95,332、dn 10,761〜14,672。
 差は最大11〜36%、桁の差なし。中央60が pn 最小・dn 最大。
-詳細: `N11-DFPN-21ORBITS.md`。
+詳細: `../../experiments/n11-search-methods/reports/N11-DFPN-21ORBITS.md`。
 
 ## 長時間走（各1時間）
 
@@ -44,7 +46,7 @@
 | v=12 対角 | 50.2M | 456,651 | 35,734 | 12.78 |
 
 v=60 のみ pn/dn が 5.85→1.83 と単調減少。ただし参考値であり証明ではない。
-詳細: `N11-DFPN-LONGRUN.md`。
+詳細: `../../experiments/n11-search-methods/reports/N11-DFPN-LONGRUN.md`。
 
 ## solvedかunsolvedか
 

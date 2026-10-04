@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 Follow-up: B120–B160 追撃
 
 対象: research/hypothesis-bank-*.md の B120–B160 のうち未決着分。
 前回バッチ: `round5-batch-b120-b160.md`（B136/B149/B158 SUPPORTED, B129 REFUTED 確定）
 スクリプト: scripts/round5_b120_b160.py（再利用）, scripts/round5_b120_b160_followup.py（追加分）
-データ: research/verification/round5_b120_b160.json（再利用）, round5_b120_b160_followup.json（追加分）
+データ: research/experiments/original-claims/output/round5_b120_b160.json（再利用）, round5_b120_b160_followup.json（追加分）
 
 ## 対象（残り）
 
@@ -22,7 +24,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **PARTIAL**（前回: INCONCLUSIVE → 今回: PARTIAL。n=6 で同次数⇔D4同値を完全確認し、弱化形「n≤6 では同次数点の高階特徴は保存」を SUPPORTED）
 - 今回の範囲: n=6 全 36 点の (deg, D4軌道, 子 |L| 多重集合) を完全計算。
-- 証拠: `round5_b120_b160_followup.json` → `b160_n6`。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b160_n6`。
   - 次数分布: {191:4, 263:8, 278:8, 299:8, 307:4, 313:4}。
   - **各次数クラスはちょうど 1 つの D4 軌道に一致**（4点=角/中心型、8点=辺近傍型）。
   - 同次数かつ D4 非同値なペアは **0 個**。したがって高階特徴（子 |L| 多重集合）が異なる同次数ペアも 0 個。
@@ -33,7 +35,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。弱化形 REFUTED / 原命題は n≤5 不在だが [存在] のため反証にならない）
 - 今回の範囲: n=5 の k=3（2,300 安全集合）・k=4（11,824）・k=5（37,272）の 1 点変形グラフを完全構築し、P/N と成分を突合。
-- 証拠: `round5_b120_b160_followup.json` → `b130_n5`。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b130_n5`。
   - k=3: **1 成分**、P/N 混在。
   - k=4: **1 成分**、P/N 混在。
   - k=5: **1 成分**、P/N 混在。
@@ -46,7 +48,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。shared quads（非対角成分）が P/N を分離することを初めて定量化）
 - 今回の範囲: n=5 の安全 2 石局面 300 個（P=20, N=280）の (deg_sum, shared, bias, P/N) を完全計算。
-- 証拠: `round5_b120_b160_followup.json` → `b157_n5`。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b157_n5`。
   - deg_sum 単独では 3 グループが P/N 混在（前回確認と一致）。
   - **shared（共通禁止 4 点組数）はその 3 グループすべてで P/N を完全分離**（separation.shared = 3/3）。
   - bias（|d(p)−d(q)|）は分離しない（0/3）。
@@ -58,7 +60,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。300 ペアで不発見を維持）
 - 今回の範囲: n=6 最大配置 464 個から 30 個をサンプルし、300 ペアの変形を贪欲 3 順序で試行。
-- 証拠: `round5_b120_b160_followup.json` → `b123_125`。300 ペアすべてで A∪B 内の贪欲順序が成功（need_aux = 0）。B123 の証人は未発見。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b123_125`。300 ペアすべてで A∪B 内の贪欲順序が成功（need_aux = 0）。B123 の証人は未発見。
 - 残った障害: [存在] のため不発見は反証にならない。贪欲 3 順序は完全探索ではない。C(464,2)≈107,000 ペアの完全探索か、n=7 の系統的ペア探索が必要。
 
 ## B125 [存在] 共通点を一度外すことが必要な最適変形 追撃
@@ -79,7 +81,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。B141 の方向分解と n=4..6 の角/辺/内部プロファイルで形状関数の径対称性を確認）
 - 今回の範囲: n=4,5,6 の全点次数を角・辺・内部に分類して集計。B141 の D_n 漸近から平均次数 d̄ = Θ(n³) を再確認。
-- 証拠: `round5_b120_b160_followup.json` → `b159`。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b159`。
   - n=6: corner_mean=191, edge_mean=270.5, interior_mean=304.5。
   - **n=5,6 で同一 r² 内の次数差 = 0**（径対称）。形状関数 f(u,v) は実際には f(u²+v²) に依存。
   - 増分: n=4→5 で corner +62, edge +76, interior +104。n=5→6 で corner +91, edge +135, interior +162。
@@ -98,7 +100,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。角/辺/内部の増分を初めて定量化し、内部が常に最大増分であることを確認）
 - 今回の範囲: n=4,5,6 の全点を角・辺・内部に分類し、次数の平均と n→n+1 増分を計算。
-- 証拠: `round5_b120_b160_followup.json` → `b159`。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b159`。
   - n=4: corner=38, edge=59, interior=38（辺が内部より高い異常）。
   - n=5: corner=100, edge=135, interior=142（内部>辺>角）。
   - n=6: corner=191, edge=270, interior=304（内部>辺>角、ギャップ拡大）。
@@ -110,7 +112,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。q 別の初出 n 表と最大点数の階層を完成）
 - 今回の範囲: n=2..8 の完全円センサスから q ごとの初出 n と最大点数を集計。
-- 証拠: `round5_b120_b160_followup.json` → `b133`。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b133`。
   - **q が初めて最大点数を達成する n**: q=2→n=2, q=1→n=3。**q≥3 は n≤8 で一度も最大に届かない**。
   - 初出 n（≥3 点の円）: q=2→2, q=1→3, q=4,6→3, q=3,14,10→4, q=8,22,26→5, …
   - 階層「q=1,2 が高次元（8-12 点）、q≥3 が低次元（3-4 点）」は U 係数 U(1)=U(2)=4, U(q≥3)=1 と整合。
@@ -121,7 +123,7 @@ B120-B125, B127, B130-B133, B138, B153-B154, B157, B159-B160
 
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。n=2..8 の top5 中心を集計し、集中比を定量化）
 - 今回の範囲: n=2..8 の top5 円の中心を列挙し、相異中心数・盤中心近傍数を集計。
-- 証拠: `round5_b120_b160_followup.json` → `b138`。
+- 証拠: `../output/round5_b120_b160_followup.json` → `b138`。
   - n=8 の最大点数 12 点円は 1 個、中心 (7/2,7/2) = 盤中心。集中比 = 1/1。
   - n=5,6,7 の top5 は各 5 相異中心（集中比 = 1.0）で分散。
   - n=3 の top5 は 3 相異中心（集中比 = 1.67）で集中。

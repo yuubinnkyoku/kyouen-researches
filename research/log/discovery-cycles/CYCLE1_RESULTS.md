@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle results — 2026-09-16 night research
 
 ## H1 terminal-parity locking — REJECTED
@@ -15,7 +17,7 @@ Enumerated all maximal kyouen-free sets for n≤5 (n=6 timed out).
 **Minimal counterexample: n=4.** Maximal sets of sizes 5, 6, and 7 all exist.
 Winner sequence is not the parity of a locked terminal length.
 
-Artifact: `night-research/h1-terminal-parity.json`
+Artifact: `research/experiments/structural-discovery/output/h1-terminal-parity.json`
 
 ## H3 central-3×3 first-move window — REJECTED; MODIFIED
 
@@ -51,7 +53,7 @@ D4 orbit description:
 Does **not** generalize as stated to n=3 (all 9 win; even sublattice is only 5 points).
 Status: **MODIFIED hypothesis, 5×5-only**. Independent test = 9×9 first-move job.
 
-Artifacts: `night-research/first-moves-5x5-cargo.log`
+Artifacts: `research/experiments/structural-discovery/output/first-moves-5x5-cargo.log`
 
 ## H4 geometric pair-witness count — PARTIAL SUPPORT / k=5 REJECTED
 
@@ -67,7 +69,7 @@ Artifacts: `night-research/first-moves-5x5-cargo.log`
 Static witness-count is **not** a depth-uniform law. Depth-5 cores prefer a low-w pair.
 Global argmax w = {61,66} (w=165).
 
-Artifacts: `night-research/h4-pair-witness.json`
+Artifacts: `research/experiments/structural-discovery/output/h4-pair-witness.json`
 
 ## O1-only +0.088 — NOT promoted (adversarial kill)
 
@@ -87,7 +89,7 @@ Do not treat I=0 as a game-theoretic finding. Report free-subset only.
 
 ## Background
 
-- 9×9 first-move D4-orbit classification running (`night-research/run_first_moves_9x9.py`, memo=28, 4 parallel)
+- 9×9 first-move D4-orbit classification running (`research/experiments/structural-discovery/scripts/run_first_moves_9x9.py`, memo=28, 4 parallel)
 - Loop job `b7a5158c` every 10m
 
 ## H4 k=5 anomaly — representation, not geometry
@@ -100,7 +102,7 @@ Prior research-properties F-B/H2 already showed these “cores” dissolve under
 So the k=5 “core” is an **input-embedding artifact** of R, not a board-invariant pair law.
 H4’s failure at k=5 is provenance evidence, not a new geometric structure.
 
-Artifacts: `night-research/h4-k5-anomaly.json`
+Artifacts: `research/experiments/structural-discovery/output/h4-k5-anomaly.json`
 
 ## Background still running
 

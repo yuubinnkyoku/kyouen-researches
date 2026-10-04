@@ -26,6 +26,6 @@ jobs:
       - name: Unit tests
         run: cargo test --release
       - name: Reference self-test
-        run: cargo run --release -- self-test
+        run: cargo run --release --bin kyouen-verifier -- self-test
       - name: Audit bundled 10x10 evidence summary
-        run: cargo run --release -- audit-evidence evidence-sample
+        run: cargo run --release --bin kyouen-verifier -- audit-evidence evidence-sample

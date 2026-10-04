@@ -1,7 +1,9 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 01: B001-B020
 
 対象: 空盤の勝敗と初手の例外性 (B001-B010)、二石P局面のグラフ J_n (B011-B020)。
-データ源: README / cycle4-density-table.json / cycle4-n5-two-stone-*.json / cycle5-grundy-n{2,3,4,5}.json / rust/independent-verifier/evidence-sample/10x10-first-move-classification-complete.csv / findings.md F-Q,F-Y / 計算: `research/verification/scripts/batch01_jgraph.py`, `batch01_extra.py` (出力 `batch01_jgraph.json`, `batch01_extra.json`)。
+データ源: README / cycle4-density-table.json / cycle4-n5-two-stone-*.json / cycle5-grundy-n{2,3,4,5}.json / rust/independent-verifier/evidence-sample/10x10-first-move-classification-complete.csv / findings.md F-Q,F-Y / 計算: `research/experiments/original-claims/scripts/batch01_jgraph.py`, `batch01_extra.py` (出力 `../../experiments/original-claims/output/batch01_jgraph.json`, `../../experiments/original-claims/output/batch01_extra.json`)。
 
 既知確定表（再発見ではない。照合用）:
 
@@ -20,7 +22,7 @@
 ## B001 [全称・大胆] 5×5だけが部分勝ち初手盤
 - 判定: **SUPPORTED**
 - 範囲: n=1..10 の初手勝敗は完全（cycle4-density-table.json + 10×10 分類 100/100 LOSS）。部分勝ち初手（0<\\|W_n\\|<n²）は n=5 のみ。n≥6 では W_n は空 (n=7,8,10) か全体 (n=6,9)。
-- 証拠: W_size = [1,4,9,0,9,36,0,0,81,0]。`research/verification/batch01_jgraph.json` の `empty_and_W_table`。10×10 は `rust/independent-verifier/evidence-sample/10x10-all-first-moves-winning-replies.csv` が 100 点すべて LOSS。
+- 証拠: W_size = [1,4,9,0,9,36,0,0,81,0]。`research/experiments/original-claims/output/batch01_jgraph.json` の `empty_and_W_table`。10×10 は `rust/independent-verifier/evidence-sample/10x10-all-first-moves-winning-replies.csv` が 100 点すべて LOSS。
 - メモ: これは H-dense（H_DENSE_PREREG.md）と同義。n≤10 は独立ホールドアウトではない旨が既に凍結されている。無界の主張ではない。B002 と競合。次の独立確認は n>10 の先手勝ち盤。
 
 ## B002 [存在] 第二の部分勝ち初手盤
@@ -50,7 +52,7 @@
 ## B006 [全称・大胆] 負け初手後のnimberは奇数
 - 判定: **SUPPORTED**
 - 範囲: n=2..5 の 1 石局面を厳密計算。非零 g の値は {1,3} のみで、すべて奇数。n=6 は全 1 石 g=0 で空虚。
-- 証拠: cycle5-grundy-n4.json layer1 = {1:16}、n5 layer1 = {0:9, 3:16}。`batch01_jgraph.json` `b006_one_stone_nonzero_all_odd`。
+- 証拠: cycle5-grundy-n4.json layer1 = {1:16}、n5 layer1 = {0:9, 3:16}。`../../experiments/original-claims/output/batch01_jgraph.json` `b006_one_stone_nonzero_all_odd`。
 - メモ: n=5 の「負け初手 g=3」は既知。偶数の非零が現れる最小 n が次の反例候補。
 
 ## B007 [統計] 初手の混在は細かい算術に依存する
@@ -74,61 +76,61 @@
 ## B010 [存在] 初手全勝でも対局長は初手で分かれる
 - 判定: **PARTIAL**
 - 範囲: 主張は 6×6 または 9×9。**n=6 の全局面 outcome は 10 分で完了せず未取得**。代替として n=5 で T* 分裂を確認（主張盤ではない）。n=9 は未着手。
-- 証拠: bank 定義の T*（N は P へ、P は任意）で n=5 の勝ち初手 9 点: 中央 (2,2) は T*={7,9}、他の 8 点は T*={5,7,9}。`batch01_extra.json` `b010_n5`。分裂の証人は中央 vs 任意の非中央勝ち初手。
+- 証拠: bank 定義の T*（N は P へ、P は任意）で n=5 の勝ち初手 9 点: 中央 (2,2) は T*={7,9}、他の 8 点は T*={5,7,9}。`../../experiments/original-claims/output/batch01_extra.json` `b010_n5`。分裂の証人は中央 vs 任意の非中央勝ち初手。
 - メモ: 重要: findings F-Q の T* は証明書 witness 戦略で {7,9}（5 石極大に至らない）。本定義は P 局面で任意手を許すため 5 を含む。定義差に注意。n=6 は C++ / 証明書 DAG 経由が現実的。
 
 ## B011 [全称] 5×5のJ_5の非孤立部分は連結
 - 判定: **SUPPORTED**
 - 範囲: n=5 完全。J_5 は 25 頂点 20 辺。勝ち初手 9 点は孤立（再帰定義）。非孤立 16 点は 1 成分。
-- 証拠: `batch01_jgraph.json` `b011_connected`。辺リストは cycle4-n5-two-stone-geometry.json と完全一致（computed=known=20）。
+- 証拠: `../../experiments/original-claims/output/batch01_jgraph.json` `b011_connected`。辺リストは cycle4-n5-two-stone-geometry.json と完全一致（computed=known=20）。
 - メモ: 20 辺は独立罠ではなく一つの応答網。B012-B015 はこの 16 頂点グラフの精密化。
 
 ## B012 [構造] 5×5のJ_5は短いサイクルだけで生成される
 - 判定: **REFUTED**
 - 範囲: n=5 非孤立 16 頂点 20 辺。サイクル空間次元 = E−V+C = 20−16+1 = 5。長さ ≤4 の単純サイクルは外周 4 サイクル 0-4-24-20-0 の 1 個のみで、GF(2) 生成部分空間は次元 1。
-- 証拠: `batch01_jgraph.json` `b012_cycle_space` = {cycle_space_dim:5, num_simple_cycles_len_le_4:1, span_dim:1, generated:false}。長さ 5 のサイクル例: 1-4-0-3-17-1。
+- 証拠: `../../experiments/original-claims/output/batch01_jgraph.json` `b012_cycle_space` = {cycle_space_dim:5, num_simple_cycles_len_le_4:1, span_dim:1, generated:false}。長さ 5 のサイクル例: 1-4-0-3-17-1。
 - メモ: 「小さな交換則」はサイクル空間の意味では成立しない。長さ 5 以上が本質。
 
 ## B013 [全称] J_5の自己同型にはD4以外のものがある
 - 判定: **REFUTED**
 - 範囲: J_5 非孤立 16 頂点の抽象自己同型を全列挙。位数 8 = |D4|。辺の D4 軌道は 3 個（サイズ 4,8,8）で、これ以上の対称性なし。
-- 証拠: `batch01_jgraph.json` `b013_aut` num_automorphisms_noniso=8, beyond_d4=false。
+- 証拠: `../../experiments/original-claims/output/batch01_jgraph.json` `b013_aut` num_automorphisms_noniso=8, beyond_d4=false。
 - メモ: 幾何対称性がそのまま抽象対称性。B012 の短サイクル欠如と整合（グラフは正方形の飾り付けで剛）。
 
 ## B014 [全称・大胆] J_5の非孤立部分は二部グラフ
 - 判定: **REFUTED**
 - 範囲: n=5 非孤立部分。奇数サイクルが存在。
-- 証拠: 5-サイクル 17→3→0→4→1→17（頂点 id = y*5+x）。辺はすべて J_5 の P ペア。`batch01_jgraph.json` `b014_bipartite`。
+- 証拠: 5-サイクル 17→3→0→4→1→17（頂点 id = y*5+x）。辺はすべて J_5 の P ペア。`../../experiments/original-claims/output/batch01_jgraph.json` `b014_bipartite`。
 - メモ: 市松二分（勝ち初手=偶和 vs 負け初手=奇和+角）は J の頂点二分ではない。負け初手集合内部に奇サイクル。
 
 ## B015 [全称] J_5の非孤立部分に完全マッチングがある
 - 判定: **SUPPORTED**
 - 範囲: n=5 非孤立 16 頂点。完全マッチングを構成。
-- 証拠: 例 {(0,15),(1,4),(3,17),(5,13),(7,21),(9,24),(11,19),(20,23)}（id 座標は y*5+x）。`batch01_jgraph.json` `b015_perfect_matching`。探索で複数個存在。
+- 証拠: 例 {(0,15),(1,4),(3,17),(5,13),(7,21),(9,24),(11,19),(20,23)}（id 座標は y*5+x）。`../../experiments/original-claims/output/batch01_jgraph.json` `b015_perfect_matching`。探索で複数個存在。
 - メモ: 16 個の負け初手セルの固定ペア分けは存在する。ただし B013 により対合の自由度は D4 に閉じる。
 
 ## B016 [全称・大胆] 後手勝ち正方形盤のJ_nは連結
 - 判定: **PARTIAL**
 - 範囲: n=4（後手勝ち）で J_4 は 16 頂点 84 辺、1 成分、次数は 9 または 12。n=7,8,10 の J_n は 2 石 Grundy の完全計算が重く未実施。
-- 証拠: `batch01_jgraph.json` `b016_j4` components=[16], connected=true。
+- 証拠: `../../experiments/original-claims/output/batch01_jgraph.json` `b016_j4` components=[16], connected=true。
 - メモ: n=4 は密すぎて連結性は弱い証拠。次の後手勝ち盤 n=7 が本判定の鍵。全初手負け盤では孤立点が無く、辺の有無が問題。
 
 ## B017 [統計] Pペアは共通近傍の少ない頂点を結ぶ
 - 判定: **REFUTED**
 - 範囲: n=5、負け初手 16 点上の P 対 20 と非 P 対 100 を比較。
-- 証拠: 危険補完の自然な計量（両端を含む禁止4点組の数 coquad）では P 対は mean 18.2 (17-19)、非 P 対は mean 15.16 (4-34) で **P 対の方が重なりが大きい**。補完ペア族の Jaccard は P 0.451 = 非 P 0.451 で差なし。`batch01_extra.json` `b017`。
+- 証拠: 危険補完の自然な計量（両端を含む禁止4点組の数 coquad）では P 対は mean 18.2 (17-19)、非 P 対は mean 15.16 (4-34) で **P 対の方が重なりが大きい**。補完ペア族の Jaccard は P 0.451 = 非 P 0.451 で差なし。`../../experiments/original-claims/output/batch01_extra.json` `b017`。
 - メモ: 格子近傍（王手）共通近傍なら P 対 0.0 vs 非 P 1.1 と「少ない」側になるが、これは危険補完集合ではない。主張の文言「危険補完集合」では逆方向。弱めた命題「P 対は格子近傍を共有しない」は成立。
 
 ## B018 [存在] 二石Pグラフが同じでも高層の勝敗は違う盤
 - 判定: **SUPPORTED**
 - 範囲: 8 点の穴あき盤を完全列挙級で探索（3×3−1点、2×4 など）。J（2石Pグラフ）が同型（どちらも辺なし 8 孤立）で 3 石 P 構造が異なる例を発見。
-- 証拠: 証人 A = 3×3 から角 (0,0) を除去、証人 B = 3×3 から中心 (1,1) を除去。ともに V=8、J は 0 辺、2 石 g はすべて 1（同型）。3 石: A は P 48 / g_hist {0:48,2:8}、B は P 40 / {0:40,2:16}。別証人: 2×4 は P 24。`batch01_extra.json` `b018`。
+- 証拠: 証人 A = 3×3 から角 (0,0) を除去、証人 B = 3×3 から中心 (1,1) を除去。ともに V=8、J は 0 辺、2 石 g はすべて 1（同型）。3 石: A は P 48 / g_hist {0:48,2:8}、B は P 40 / {0:40,2:16}。別証人: 2×4 は P 24。`../../experiments/original-claims/output/batch01_extra.json` `b018`。
 - メモ: J 同型（2 石層）だけでは 3 石以上の残余ゲームは決まらない、の明確な分離。辺付き J で同じ現象があるかは未探索。
 
 ## B019 [統計] J_nの小さい支配集合は少数の応答拠点を与える
 - 判定: **SUPPORTED**
 - 範囲: 後手勝ち盤 n=4。J_4 の支配数 γ=2（n²=16 の 12.5%）。n=5 非孤立部分でも γ=2（参考。n=5 は先手勝ち）。n=7 未計算。
-- 証拠: `batch01_jgraph.json` `b019_dom_n4` domination_number=2。J_4 次数 9/12 なので 1 点では閉近傍 10/13 < 16 に届かず 2 が最小。
+- 証拠: `../../experiments/original-claims/output/batch01_jgraph.json` `b019_dom_n4` domination_number=2。J_4 次数 9/12 なので 1 点では閉近傍 10/13 < 16 に届かず 2 が最小。
 - メモ: 「少数の拠点で多くの初手に応答」は n=4 では定量的に強い。n=7 で γ/49 が小さいかが次の確認。
 
 ## B020 [構造] 5×5のPペアは少数の整数関係で記述できる
@@ -138,7 +140,7 @@
   1. 角—角で同一辺上・距離 4（4 本の外周辺）× 4
   2. 角—境界セルで軸距離 3（各角から辺上 2 方向）× 8
   3. 奇和セル同士のナイト (1,3)/(3,1) × 8
-  対角の角ペア (0,0)-(4,4) などは P ペア**ではない**。距離 4 の odd 対 (1,0)-(1,4) も非 P。単なる距離では不可。`batch01_jgraph.json` `b020_pair_families`。
+  対角の角ペア (0,0)-(4,4) などは P ペア**ではない**。距離 4 の odd 対 (1,0)-(1,4) も非 P。単なる距離では不可。`../../experiments/original-claims/output/batch01_jgraph.json` `b020_pair_families`。
 - メモ: この 3 族は D4 辺軌道 3 個と一致する（B013 で Aut=D4）。「軌道代表の列挙より短い」という主張は、等式条件に書き直せる点では肯定だが、3 対 3 で圧倒的に短いとは言えない。距離のみの式は反例で棄却。
 
 ---

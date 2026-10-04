@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B431, B434, B451–B457（書出しのみ・新規計算ゼロ）
 
 担当 ID: B431, B434, B451, B452, B453, B454, B455, B456, B457（9 件）。
@@ -11,23 +13,23 @@ B418, B419, B420, B421, B422, B423, B425, B426, B428 を含む。**二重書き�
 **B432, B433 は触らない**（`round3-batch-b431-b434.md` が別担当として B432=REFUTED,
 B433=SUPPORTED を記録済み）。
 
-書出し方針: `ROUND3-WRITEOUT.md` に従い、**既存のスクリプト・JSON・前回個票を読むだけ**。
+書出し方針: `../../../archive/claim-audit-history/ROUND3-WRITEOUT.md` に従い、**既存のスクリプト・JSON・前回個票を読むだけ**。
 既存の重い計算（`round3_b451_census.py`, `round3_b431_ilp.py`, `round2_b431_cover.py`）は
-**一切再実行していない**。`round3_b451_census.json`（32MB）は Read ツールで開かず、
+**一切再実行していない**。`../output/round3_b451_census.json`（32MB）は Read ツールで開かず、
 python でキー構造を確認した上で必要なノードだけ取り出した。
 
 参照した既存データ:
-- `research/verification/round3_b451_census.json`（n=4..12 の高速格子円センサス、全検証 pass）
-- `research/verification/round2_b411.json` の `B431_B440` 節（B431/B434 の既存数値）
-- `research/verification/round3_b431_ilp.json`（`build` 段のみ）
-- `research/verification/scripts/round2_b431_cover.py` / `round3_b431_ilp.py` / `round3_b451_census.py` /
+- `research/experiments/original-claims/output/round3_b451_census.json`（n=4..12 の高速格子円センサス、全検証 pass）
+- `research/experiments/original-claims/output/round2_b411.json` の `B431_B440` 節（B431/B434 の既存数値）
+- `research/experiments/original-claims/output/round3_b431_ilp.json`（`build` 段のみ）
+- `research/experiments/original-claims/scripts/round2_b431_cover.py` / `round3_b431_ilp.py` / `round3_b451_census.py` /
   `round3_b451_analysis.py`（docstring のみ）
-- `research/verification/round2-batch-b411.md`（B411–B440 個票） / `round2-batch-b441.md`（B441–B470 個票）
-- `research/verification/PROTOCOL.md`（既知の確定事実。B4xx 系の記述は無し）
+- `research/experiments/original-claims/reports/round2-batch-b411.md`（B411–B440 個票） / `round2-batch-b441.md`（B441–B470 個票）
+- `research/archive/claim-audit-history/PROTOCOL.md`（既知の確定事実。B4xx 系の記述は無し）
 
 **重要な発見（書き出し中に判明）**: `round3_b451_analysis.py` は B451–B457 の全判定を
 コードとして持つ完成品だが、**出力ファイル `round3_b451_analysis.json` は存在しない**
-（`research/verification/round3_*.json` 17 件を列挙して確認）。
+（`research/experiments/original-claims/output/round3_*.json` 17 件を列挙して確認）。
 したがって B451–B457 の判定は census JSON の保存済みフィールドのみから導出する。
 
 ---
@@ -37,8 +39,8 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
 - 原文要約: U 内 59 禁止四点組で 6460 候補（|S|≥13, d(S)∈{2,3}）を被覆する最小個数は正確に 21。
   既知の 21 個の削除不能性だけでなく、別の四点集合への総入れ替えを許しても 20 以下にできない。
 - 前回の一手: 「20 以下の被覆が存在するかを ILP で潰せば確定」（`round2-batch-b411.md` B431 メモ）。
-- 今回の範囲: 新規計算なし。既存 `round2_b411.json` の `B431_B440` 節、
-  `round3_b431_ilp.json` の `build` 段、`round2_b431_cover.py` の該当コード（137–182 行）を読み照合。
+- 今回の範囲: 新規計算なし。既存 `../output/round2_b411.json` の `B431_B440` 節、
+  `../output/round3_b431_ilp.json` の `build` 段、`round2_b431_cover.py` の該当コード（137–182 行）を読み照合。
 - 証拠（**上界 21 は確定**）:
   - `n_u_quads = 59`, `n_candidates = 6460`, サイズ分布 `{13:4175, 14:1675, 15:500, 16:100, 17:10}`
     は静的証明書と完全一致。
@@ -48,13 +50,13 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
   - `n_min_covers_found = 213`, `min_cover_size_hist = {21:2, 22:67, 23:87, 24:40, 25:8, 26:4, 27:5}`。
     乱択貪欲＋縮小 213 本のうち最小は **21**（2 本）。これは上界であって下界ではない。
 - 証拠（**下界 21 は保存済みデータから証明できない。F-BG の「確定」表示と保存数据的間に欠落がある**）:
-  - `round3_b431_ilp.json` は `build` 段のみ。`lp` / `ilp` / `pack` の出力は未保存。
+  - `../output/round3_b431_ilp.json` は `build` 段のみ。`lp` / `ilp` / `pack` の出力は未保存。
     `support_size_hist` の最小が `1: 17`、`n_distinct_supports = 3840`、
     `n_maximal_supports = 10`、`max_quad_multiplicity = 1824`、`min_quad_multiplicity = 256`、
     `uniform_dual_value = 0.0323`（= 1/1824×59 に相当し無意味に小さい）。
-  - **F-BG の主張の出典が本文中に存在しない**: `PROTOCOL.md` の「既知の確定事実」表は
+  - **F-BG の主張の出典が本文中に存在しない**: `../../../archive/claim-audit-history/PROTOCOL.md` の「既知の確定事実」表は
     B001–B300 が対象で B4xx の記載が一切ない。`F-BG settled B116 (min cover = 21)` という
-    文面は `scripts/round3_partition.py` 行 7 と `scripts/round3_diff.py` 行 7 のコメントにのみ現れる。
+    文面は `../scripts/round3_partition.py` 行 7 と `../scripts/round3_diff.py` 行 7 のコメントにのみ現れる。
     つまり「最小被覆 = 21 が確定済みとされる」根拠は**コメント 1 行**であり、
     21 を下界として証明する計算結果・証明書はリポジトリのどのファイルにも保存されていない。
   - **`packing_singles = 21` / `dual_packing_bound = 21` は下界証拠にならない（コードの穴）**:
@@ -85,12 +87,12 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
   つまり「59 個の u_quad それぞれを 21 候補が覆う回数が ≤1」という条件。
 - 前回の一手: 「59 全四点に拡張すると厳密条件は不成立。59 に対する厳密 21 パッキングの貪欲最良は 20」
   （`round2-batch-b411.md` B434 メモ）。
-- 今回の範囲: **新規の重い計算はしていない**。保存済み `round2_b411.json` の 21 本の packing 証人
-  （`packing_witnesses`）と `round3_b431_ilp.json` の 59 四点・6460 候補の定義を読み、
+- 今回の範囲: **新規の重い計算はしていない**。保存済み `../output/round2_b411.json` の 21 本の packing 証人
+  （`packing_witnesses`）と `../output/round3_b431_ilp.json` の 59 四点・6460 候補の定義を読み、
   **既存証人が厳密条件のどこで壊れるかを 1 項目ずつ特定**した（既存データどうしの整合性照合のみ）。
   候補 6460 本の再生成は `round2_b431_cover.py` と同じ短いループで、`n_candidates = 6460` と
   `size_hist = {13:4175, 14:1675, 15:500, 16:100, 17:10}` が保存値と一致し、
-  `support_size_hist` も `round3_b431_ilp.json` と**完全一致**した（データの整合性は担保）。
+  `support_size_hist` も `../output/round3_b431_ilp.json` と**完全一致**した（データの整合性は担保）。
 - 証拠（**命題は有効な証明形式である**）: 1 個の四点 q を 2 個の候補 c_i, c_j が同時に含むことは
   「q を含む候補が 2 個ある」ことに等しい。条件が成立すれば各 q は 21 候補の**高々 1 個しか覆わず**、
   被覆には ≥21 個が要る。論理的骨格は正しい。
@@ -130,7 +132,7 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
 - 原文要約: 第1回 B135 の 4 対 0 のような退化比較ではなく、実際の禁止族どうしで
   同じ半径・異なる中心分母 q・双方 4 点以上・点数が違う円が存在する。
 - 前回の一手: 「r²≤100 で (q, 無限格子点数) の列を作る軽量スクリプトで判定可能」（`round2-batch-b441.md` B451 メモ）。
-- 今回の範囲: 既存 `round3_b451_census.json`（n=4..12 の高速格子円センサス）の保存済みレコードを全部読み、
+- 今回の範囲: 既存 `../output/round3_b451_census.json`（n=4..12 の高速格子円センサス）の保存済みレコードを全部読み、
   **m≥4 の円 53,466 個**（`rows_q_ge3` 21,124 + `rows_m_ge5`、重複除去後）を
   **r² ごとに**仕分けした。整数演算のみ、既存データの読み取りのみ。
 - 証拠（**r² ごとに見たとき q は一意に決まる**）:
@@ -157,7 +159,7 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
      census の M≤66,970 では一度も満たされなかった、という目前为止の事実である。
   3. したがって **INCONCLUSIVE**。前回 NOT-CHECKED から範囲は大幅に進んだ
      （351 個の r² 値の全交差を確認）が、判定は SUPPORTED にも REFUTED にもならない。
-- 参考: 判定器 `scripts/round3_b451_analysis.py` の B451 段（411–447 行）は
+- 参考: 判定器 `../scripts/round3_b451_analysis.py` の B451 段（411–447 行）は
   `M≤6000, q0≤10` の無限格子カタログで同じ条件を走査する。**その出力 JSON は未保存**。
   既存 census は M 最大 66,970 まで見るので、本件では census を優先した。
 
@@ -166,7 +168,7 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
 - 原文要約: 同一直径上限の下で、q≥3 の最良円が q=1 の最良円を超える。q=2 を超える必要はない。
 - 前回の一手: 「q=1 の最大は r₂(N)、q≥3 は表現の剰余制約付き。直径上限ごとの argmax を表にすれば判定」
   （`round2-batch-b441.md` B452 メモ）。
-- 今回の範囲: 既存 `round3_b451_census.json` の m≥4 円 53,466 個を r² の昇順に走査し、
+- 今回の範囲: 既存 `../output/round3_b451_census.json` の m≥4 円 53,466 個を r² の昇順に走査し、
   半径上限ごとの累積最大（q=1 / q=2 / q≥3 の 3 系統）を取る。**新規計算なし・整数演算のみ**。
 - 証拠（**3 系統の累積記録値**）:
   | 系統 | m≥4 円の m の最大 | 最初にその値に到達する r² 上限 | m≥4 円の m の最小 |
@@ -302,7 +304,7 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
      つまり **m=6 以上では奇分母類の円が 1 つも存在しない**ため、命題の比較が原理的に成立しない。
 - 判定の根拠: 全称命題だが**比較可能な m は 2 個しかなく、2/2 一致**。
   全称として確定するには 2 件の全一致では足りず、**PARTIAL** が上限。
-  SUPPORTED にはならなかった（`ROUND3-PROTOCOL.md` の禁止事項「有限列の一致を全称定理として
+  SUPPORTED にはならなかった（`../../../archive/claim-audit-history/ROUND3-PROTOCOL.md` の禁止事項「有限列の一致を全称定理として
   書かない」に該当するため）。
 - 残った障害:
   1. **m=6,7,8,… で比較が成立しない理由が「奇分母 q の円が存在しない」ため**であり、
@@ -436,7 +438,7 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
      これは新規計算の対象であり、書出し専用の本チャンクでは実行しない。
   2. 仮に A(C) があっても、**q≥3 側は m ≤ 6 にしか無い**ため、統計比較の標本は
      m=5（516 vs 1904）と m=6（300 vs 3248）の 2 点しかない。標本 2 点の統計主張は
-     `ROUND3-PROTOCOL.md` の禁止事項「有限列のフィット」に該当する。
+     `../../../archive/claim-audit-history/ROUND3-PROTOCOL.md` の禁止事項「有限列のフィット」に該当する。
   3. なお m=4 は q≥3 が 45,500 個・q≤2 が 0 個で**比較不能**、
      m ≥ 7 は逆に q≥3 が 0 個で**比較不能**。つまりデータ上、命題が比較可能な領域は
      原理的に m ∈ {5, 6} に限られる。これは命題の想定よりずっと狭い。
@@ -456,12 +458,12 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
 
 ### 今回決着（REFUTED に動いたもの）
 
-- **B455 NOT-CHECKED → REFUTED**。既存 `round3_b451_census.json` の m≥4 円 53,466 個を
+- **B455 NOT-CHECKED → REFUTED**。既存 `../output/round3_b451_census.json` の m≥4 円 53,466 個を
   (M, q≥3) ごとに仕分けると、2 剰余類以上を持つ 313 組の**すべてで剰余類間の点数が完全に等しい**
   （スプレッド > 0 は 0 組）。命題が主張する「特定の一剰余類が一貫して多い」は現れず、
   剰余類分割が表現数を等分するという機構がそのまま裏付けられるため REFUTED。
   なお判定は [存在] 命題であり、根拠は「有限範囲 0 例」だけでなく**等分機構**に
-  主頭を置いている（`ROUND3-PROTOCOL.md` の「小盤の不発見を反証としない」に配慮した）。
+  主頭を置いている（`../../../archive/claim-audit-history/ROUND3-PROTOCOL.md` の「小盤の不発見を反証としない」に配慮した）。
 
 ### 残る未解決とその一言理由
 
@@ -489,9 +491,9 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
 
 ### 最重要の障害（全バッチ共通）
 
-**`scripts/round3_b451_analysis.py` は B451–B457 の全 7 件の判定器としては完成しているが、
-出力ファイル `research/verification/round3_b451_analysis.json` が存在しない**
-（`research/verification/round3_*.json` を列挙して確認）。
+**`../scripts/round3_b451_analysis.py` は B451–B457 の全 7 件の判定器としては完成しているが、
+出力ファイル `research/experiments/original-claims/output/round3_b451_analysis.json` が存在しない**
+（`research/experiments/original-claims/output/round3_*.json` を列挙して確認）。
 このスクリプトは M ≤ 6000, q0 ≤ 10 の無限格子カタログと交差検証を 14 反復以内で回し、
 `detail_circles` に窓スペクトル A / holes まで保存する設計になっている。
 **B457 はこのファイル，其它 6 件も部分的にこのファイルに依存する**ため、
@@ -499,10 +501,10 @@ python でキー構造を確認した上で必要なノードだけ取り出し�
 
 ### 最も有望な次の一手（1つだけ）
 
-**`python research/verification/scripts/round3_b451_analysis.py` を 1 回走らせて
+**`python research/experiments/original-claims/scripts/round3_b451_analysis.py` を 1 回走らせて
 `round3_b451_analysis.json` を保存する**（B451, B452, B453, B455, B456, B457 の 6 件に
 直接効く。census を跨过一次検証する `cross_validate_against_census(10)` と
 r₂ 公式の self-test を内包しており、本チャンクが census から独立に再計算した
 B451/B452/B453/B455/B456 の数値とも突き合わせられる）。
 ただし注意: B457 は仮に A(C) が得られても比較可能な m が {5,6} の 2 点しかなく、
-`ROUND3-PROTOCOL.md` の「有限列のフィットを統計主張として書かない」に縛られる。
+`../../../archive/claim-audit-history/ROUND3-PROTOCOL.md` の「有限列のフィットを統計主張として書かない」に縛られる。

@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 2026-10-01 引継ぎメモ（round61まで）
 
 ユーザーの「いま取り組んでいるのが終わったら一旦終了、わかっていることをメモ」に従って保存。
@@ -10,27 +12,27 @@
 
 | 問い | 現在の原文判定・確定範囲 | 根拠 |
 |---|---|---|
-| B224 | SUPPORTED、標準と同じ非空勝ち初手9点を、全233円直線のうち10本だけで保存 | [round21](round21-b224-ten-curves.md) |
-| B091 | SUPPORTED、s8=8 | [round46](round46-small-saturation-and-window-reduction.md) |
-| B092 | SUPPORTED、s9=9 | [round46](round46-small-saturation-and-window-reduction.md) |
-| B093 | PARTIAL、9≤s10≤10。等号10は未決 | [round56](round56-ten-board-eight-stone-exclusion.md) |
-| B094 | REFUTED、原文11に対して十石極大証人 | [round49](round49-ten-stone-maximal-counterexample.md) |
-| B081 | REFUTED、原文K9=17に対して18石安全証人 | [round55](round55-eighteen-stone-original-counterexample.md) |
-| B082 | PARTIAL、19≤K10≤23。原文K10=20は未決 | [round57](round57-nineteen-stone-ten-board-bound.md) |
-| B087 | SUPPORTED、全7×7最大16配置はどの8×8埋め込みでも追加不能 | [round58](round58-original-maximum-extension-obstruction.md) |
-| B088 | PARTIAL、全p≡1 mod4素数にKp≥pの明示族。2n−O(1)は未達 | [round61](round61-full-split-prime-safe-construction.md) |
-| B095/B096 | PARTIAL、全ε>0で十分大きいnにs_n>n^(2/3−ε)。対応する上界は未証明 | [round52](round52-general-saturation-exponent-lower-bound.md) |
-| B097 | PARTIAL、単調性はn1..10まで支持。一般のnは未決 | [round54](round54-small-board-saturation-jump.md)・round56 |
+| B224 | SUPPORTED、標準と同じ非空勝ち初手9点を、全233円直線のうち10本だけで保存 | [round21](../../experiments/original-claims/reports/round21-b224-ten-curves.md) |
+| B091 | SUPPORTED、s8=8 | [round46](../../experiments/original-claims/reports/round46-small-saturation-and-window-reduction.md) |
+| B092 | SUPPORTED、s9=9 | [round46](../../experiments/original-claims/reports/round46-small-saturation-and-window-reduction.md) |
+| B093 | PARTIAL、9≤s10≤10。等号10は未決 | [round56](../../experiments/original-claims/reports/round56-ten-board-eight-stone-exclusion.md) |
+| B094 | REFUTED、原文11に対して十石極大証人 | [round49](../../experiments/original-claims/reports/round49-ten-stone-maximal-counterexample.md) |
+| B081 | REFUTED、原文K9=17に対して18石安全証人 | [round55](../../experiments/original-claims/reports/round55-eighteen-stone-original-counterexample.md) |
+| B082 | PARTIAL、19≤K10≤23。原文K10=20は未決 | [round57](../../experiments/original-claims/reports/round57-nineteen-stone-ten-board-bound.md) |
+| B087 | SUPPORTED、全7×7最大16配置はどの8×8埋め込みでも追加不能 | [round58](../../experiments/original-claims/reports/round58-original-maximum-extension-obstruction.md) |
+| B088 | PARTIAL、全p≡1 mod4素数にKp≥pの明示族。2n−O(1)は未達 | [round61](../../experiments/original-claims/reports/round61-full-split-prime-safe-construction.md) |
+| B095/B096 | PARTIAL、全ε>0で十分大きいnにs_n>n^(2/3−ε)。対応する上界は未証明 | [round52](../../experiments/original-claims/reports/round52-general-saturation-exponent-lower-bound.md) |
+| B097 | PARTIAL、単調性はn1..10まで支持。一般のnは未決 | [round54](../../experiments/original-claims/reports/round54-small-board-saturation-jump.md)・round56 |
 | B098 | SUPPORTED、原文にn≥4条件なし、s3−s2=2 | round54 |
-| B077/B080 | SUPPORTED、二重以上/完全一重被覆の最小石数6/5、最小非退化盤4 | [round47](round47-private-cover-and-global-minima.md) |
-| B078/B361 | SCOPE_UNCLEAR。空点なしのn1端点に問題。非退化の全最小極大はn2..8でmin b1・ρ1 | round47・[round50](round50-nine-board-private-point-family.md) |
-| B079 | PARTIAL、十盤六石の重複被覆総数最大85<94。短い非列挙証明は未達 | [round48](round48-six-stone-cover-incidence.md) |
+| B077/B080 | SUPPORTED、二重以上/完全一重被覆の最小石数6/5、最小非退化盤4 | [round47](../../experiments/original-claims/reports/round47-private-cover-and-global-minima.md) |
+| B078/B361 | SCOPE_UNCLEAR。空点なしのn1端点に問題。非退化の全最小極大はn2..8でmin b1・ρ1 | round47・[round50](../../experiments/original-claims/reports/round50-nine-board-private-point-family.md) |
+| B079 | PARTIAL、十盤六石の重複被覆総数最大85<94。短い非列挙証明は未達 | [round48](../../experiments/original-claims/reports/round48-six-stone-cover-incidence.md) |
 
 ## 600原文の集計で混同しないこと
 
 原文は`hypothesis-bank-2026-09-27.md`と`hypothesis-bank-round2-2026-09-27.md`。
-最新の機械索引は[round26-original-scope-index.md](round26-original-scope-index.md)、
-JSONは`round26_original_scope_index.json`、生成器は`scripts/round26_scope_index.py`。
+最新の機械索引は[round26-original-scope-index.md](../../experiments/original-claims/reports/round26-original-scope-index.md)、
+JSONは`../../experiments/original-claims/output/round26_original_scope_index.json`、生成器は`../../experiments/original-claims/scripts/round26_scope_index.py`。
 
 全600件の原文を取り込んでいるが、強い原文への明示的な照合を採用したのは165件。
 SUPPORTED89、REFUTED46、PARTIAL25、SCOPE_UNCLEAR5、NOT_AUDITED435。
@@ -96,7 +98,7 @@ a²=−1 (mod p)、x=t²+t、y=a(t²−t)、全t∈F_p。
 - B522: 4×4の勝者を変える禁止四点解除は最小3。
   一組194・二組18721、計18915を全域検査。
 - B255: 5×5で19禁止四点を解除し、最大サイズ9・全最大配置100個を完全に保存してg1→0。
-  4×4以下は不可能、最小盤5。[round20](round20-b255-maximum-preserving-flip.md)。
+  4×4以下は不可能、最小盤5。[round20](../../experiments/original-claims/reports/round20-b255-maximum-preserving-flip.md)。
 - 固定幅wの十分長い盤では全対局が3w石で終了、途中Grundyは残り手数の偶奇。
   長さ6..8の有限二行戦略と長さ9以上の一般定理でB542全m≥6を閉じた。
 - 共線四点組数の主項はΘ(n5)、n4 log nは一段下の補正。B141の旧反証を成立に訂正。
@@ -150,8 +152,8 @@ round17のb722a62以後も成果をcommit/push済み。
   全20石の不存在は未証明。半径10の再開用削除集合も保存し、その枝は再探索が必要。
 - round61: 全12素数・572326三点・12086667四点の独立検算が完了。
   B088はPARTIAL、原文2n−O(1)構成は未達。
-- [終了時の十盤探索記録](round59-60-final-ten-board-search.md)と
-  `round60_final_verified.json`に原文状態・完了範囲・ハッシュを保存。
+- [終了時の十盤探索記録](../../experiments/original-claims/reports/round59-60-final-ten-board-search.md)と
+  `../../experiments/original-claims/output/round60_final_verified.json`に原文状態・完了範囲・ハッシュを保存。
 - 監査索引は165件採用、SUPPORTED89/REFUTED46/PARTIAL25/SCOPE_UNCLEAR5/NOT_AUDITED435。
 - このチャットが開始した計算はすべて終了。追加探索・バックグラウンド継続・自動再開は設定していない。
   ここでユーザー指定による一旦終了とする。利用枠を使い切ったという理由の終了ではない。

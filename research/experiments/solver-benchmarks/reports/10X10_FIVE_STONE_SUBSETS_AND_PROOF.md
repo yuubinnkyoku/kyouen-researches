@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 five-stone subsets and a verified LOSS proof
 
 This experiment continues from the legal eight-stone LOSS root
@@ -34,7 +36,7 @@ were solved by the exact C++ searcher.
 - Peak RSS of the independent jobs was approximately 568 MiB.
 
 The complete table is
-[`results/10x10/five-stone-subsets-of-medium-loss.csv`](../results/10x10/five-stone-subsets-of-medium-loss.csv).
+[`results/10x10/five-stone-subsets-of-medium-loss.csv`](../../../../results/10x10/five-stone-subsets-of-medium-loss.csv).
 For shared-memo rows, `visited` is new recursive work charged to that root while
 `memo` and `solver_seconds` are cumulative. For independent rows all metrics are
 per root.
@@ -112,7 +114,7 @@ The compressed certificate captured in the first run has SHA-256:
 ```
 
 The machine-readable benchmark record is
-[`results/10x10/five-stone-loss-proof-61-2-73-13-91.csv`](../results/10x10/five-stone-loss-proof-61-2-73-13-91.csv).
+[`results/10x10/five-stone-loss-proof-61-2-73-13-91.csv`](../../../../results/10x10/five-stone-loss-proof-61-2-73-13-91.csv).
 
 ## Scaling trend
 

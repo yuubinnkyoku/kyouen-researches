@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=8 の p_rand はこの環境では未決 — 記録
 
 作成: 2026-09-27。**n ≤ 7 は完全・厳密に完了済み。n=8 は未決。**
@@ -77,7 +79,7 @@ MAXL を 48 → 20 に削減済み（n=6 で `5162/6615` を完全再現して�
 ## 次の着手者への申し送り
 
 1. **n ≤ 7 は厳密に完了している。** 再計算不要。
-   参照 `round4_b501_prand_n7.json` と `round4-batch-b501-b502.md` 第2節。
+   参照 `../output/round4_b501_prand_n7.json` と `round4-batch-b501-b502.md` 第2節。
 2. **層成長率は 32 倍。** `F_n/F_{n-1}`（2.55 倍）から見積もると 12 倍過小評価する。
 3. **n=8 の最長層は 1.8e9 状態と見積もられ、19 GB では 24 B/状態でも不足。**
    数十 GB 以上のマシンか、8 バイト以下/状態の表現（差分圧縮など）が必要。
@@ -91,6 +93,6 @@ MAXL を 48 → 20 に削減済み（n=6 で `5162/6615` を完全再現して�
 ## 再現
 
 ```bash
-wsl -d Ubuntu -- bash research/verification/scripts/wsl_prand7c.sh   # n=7, 20分
-python research/verification/scripts/prand8_projection.py            # 上記の見積もり
+wsl -d Ubuntu -- bash research/experiments/original-claims/scripts/wsl_prand7c.sh   # n=7, 20分
+python research/experiments/original-claims/scripts/prand8_projection.py            # 上記の見積もり
 ```

@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 36b — empty (2,2): structured SAMPLE + solver COMPLETE
 
 - solver max 7 14 --force 16: max_size=**13**, n_at_best=160, complete=true

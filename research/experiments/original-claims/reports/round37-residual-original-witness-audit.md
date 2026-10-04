@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B342・B346の原文残余辺操作を再検算
 
 作成: 2026-09-30。既存証人の原文監査で、新規二件とは数えない。
@@ -22,12 +24,12 @@ L=[2,5,6,7,8]。極小三点辺a={2,6,8}、b={2,7,8}について
 単独では真のgを保ち、同時に外したときだけP/Nが反転する。
 二点辺も存在するので孤立点だけの退化例ではない。
 
-[独立監査](scripts/round37_residual_witness_audit.py)は整数幾何を生成し直してRを構成した。
+[独立監査](../scripts/round37_residual_witness_audit.py)は整数幾何を生成し直してRを構成した。
 初めのL上の全部分集合に対し、標準版の極小残余判定と円・直線占有数の安全性が一致した。
 全変種の全部分集合DPと、辺を直接判定する逆手順のメモ再帰で全安全拡張のmexが一致した。
 初めの全合法点から拡張し、石のID順に拡張候補を制限していない。
 
-    python research/verification/scripts/round37_residual_witness_audit.py
+    python research/experiments/original-claims/scripts/round37_residual_witness_audit.py
 
-- [幾何残余族、各変種の全局面一致・子mex](round37_residual_witnesses_verified.json)
+- [幾何残余族、各変種の全局面一致・子mex](../output/round37_residual_witnesses_verified.json)
 - 既存個票: [B342・B346](round2-batch-b321.md)

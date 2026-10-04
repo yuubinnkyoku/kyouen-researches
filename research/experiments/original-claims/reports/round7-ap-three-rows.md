@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B558候補: 三行横断の共円四点を一般に排除
 
 作成: 2026-09-28。B558は引き続き **PARTIAL**。
@@ -93,13 +95,13 @@ w=1,2では相異なる三行を選ぶこと自体ができない。
 
 ## 3. 独立整数実装による有限範囲の拡張
 
-[C++実装](scripts/round7_ap_parabola.cpp)、[再現ドライバ](scripts/round7_ap_parabola_driver.py)。
+[C++実装](../scripts/round7_ap_parabola.cpp)、[再現ドライバ](../scripts/round7_ap_parabola_driver.py)。
 既に導入済みのWSL g++を使い、新たなコンパイラ・ライブラリは導入しない。
 
 ```text
-python research/verification/scripts/round7_ap_parabola_driver.py --span 39 --coefficient 2
-python research/verification/scripts/round7_ap_parabola_driver.py --span 128 --coefficient 2
-python research/verification/scripts/round7_ap_parabola_driver.py --span 200 --coefficient 2
+python research/experiments/original-claims/scripts/round7_ap_parabola_driver.py --span 39 --coefficient 2
+python research/experiments/original-claims/scripts/round7_ap_parabola_driver.py --span 128 --coefficient 2
+python research/experiments/original-claims/scripts/round7_ap_parabola_driver.py --span 200 --coefficient 2
 ```
 
 | 最大行間隔 | 全パターン数 | 非負整数シフトの禁止根 |
@@ -115,9 +117,9 @@ python research/verification/scripts/round7_ap_parabola_driver.py --span 200 --c
 従って候補の安全性はw≤201について確定し、任意wでも行間隔200以下の四点組は安全。
 
 証明書:
-[span39](round7_ap_parabola_a2_span39.json)、
-[span128](round7_ap_parabola_a2_span128.json)、
-[span200](round7_ap_parabola_a2_span200.json)。
+[span39](../output/round7_ap_parabola_a2_span39.json)、
+[span128](../output/round7_ap_parabola_a2_span128.json)、
+[span200](../output/round7_ap_parabola_a2_span200.json)。
 
 ### 整数計算の範囲
 

@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B001-B100 第3波（弱化で決着）
 
 対象: research/hypothesis-bank-*.md の B001〜B100 残り 36 件（PARTIAL / INCONCLUSIVE / NOT-CHECKED）。
 方針: 弱化形を定式化して SUPPORTED / REFUTED に上げる。K_10 の証人探索（B082/B084/B085）。
 スクリプト: scripts/round5_b001_push3.py
-データ: research/verification/round5_b001_push3.json
+データ: research/experiments/original-claims/output/round5_b001_push3.json
 
 制約: n=7 以上の全列挙・p_rand 全計算は禁止。既存ファイル (round5-batch-b001-b100*.md) は編集しない。
 
@@ -612,15 +614,15 @@
 - **s_n / K_n**: B082, B092-B098（乱探索の限界）
 
 ### 計算スクリプト（第3波）
-- `scripts/round5_b001_push3.py` — B007/B009/B032/B043/B088/K_s 探索
-- `scripts/round5_b001_push3_wave2.py` — B063/B039/B074/B037
-- `scripts/round5_b001_push3_wave3.py` — B020/B047/R(S)/K10
-- `scripts/round5_b001_push3_wave4.py` — 矩形/J/B070/B089/B090
-- `scripts/round5_b001_push3_wave5.py` — 保存と J_4/B090/K10/s_n
-- `scripts/round5_b001_push3_wave6.py` — K10 乱グリーディ/s_n 構成的
+- `../scripts/round5_b001_push3.py` — B007/B009/B032/B043/B088/K_s 探索
+- `../scripts/round5_b001_push3_wave2.py` — B063/B039/B074/B037
+- `../scripts/round5_b001_push3_wave3.py` — B020/B047/R(S)/K10
+- `../scripts/round5_b001_push3_wave4.py` — 矩形/J/B070/B089/B090
+- `../scripts/round5_b001_push3_wave5.py` — 保存と J_4/B090/K10/s_n
+- `../scripts/round5_b001_push3_wave6.py` — K10 乱グリーディ/s_n 構成的
 
 ### データ
-- `round5_b001_push3.json` — 第3波の全結果
+- `../output/round5_b001_push3.json` — 第3波の全結果
 
 ### 最も有望な次の一手
 1. **K_10 の 20 石証人** — C++ による系統的探索。B082/B084/B085 が同時に動く

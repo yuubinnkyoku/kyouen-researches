@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 検証共通指示書（第5回・残り316件の決着）
 
 作成: 2026-09-28。対象: HANDOVER.md の未解決 316 件（PARTIAL / INCONCLUSIVE / NOT-CHECKED）。
@@ -15,13 +17,13 @@ wsl -d Ubuntu -- bash -c "g++ --version"   # g++ 13.3.0
 `wsl -d Ubuntu -- bash <パス>` で実行すること。
 PowerShell のインラインはクォートで壊れる。
 
-共有 C++ コア: `research/verification/scripts/kc_core.h`
+共有 C++ コア: `scripts/research/kc_core.h`
 - 禁止4点組は整数行列式 `det[x²+y², x, y, 1] == 0`
 - 盤は `uint64_t`（n≤8 で 64 点）
 - 点 id = `y*n + x`（`kyouen_core.py` と一致）
 - **自己検査済み**: n=2..9 の F_n が既知値と完全一致
 
-Python コア: `research/verification/scripts/kyouen_core.py`
+Python コア: `scripts/research/kyouen_core.py`
 （`board_square(n)`, `solve_outcomes()`, `solve_grundy()`, `is_maximal()`, `max_safe_size()` 等）
 
 ## メモリの共有ルール（最重要）
@@ -49,8 +51,8 @@ WSL の 19 GB は**全エージェントで共有**。
 
 ## 検証の手段（優先順）
 
-1. **既存データ照合** — `research/verification/*.json`, `night-research/`,
-   `research/exploration/`, `research/findings.md`, `docs/`
+1. **既存データ照合** — `research/experiments/original-claims/output/*.json`, `research/experiments/structural-discovery/output/`,
+   `research/experiments/fact-discovery/output/`, `research/archive/hypothesis-ledgers/findings.md`, `docs/`
 2. **小盤厳密計算** — Python (`kyouen_core.py`) または WSL C++ (`kc_core.h`)
 3. **反例探索** — [全称] は最小 n から。[存在] は小 n で証人探し。
    [存在] の非発見は反証にならない。
@@ -74,8 +76,8 @@ WSL の 19 GB は**全エージェントで共有**。
 - 整数演算のみ。浮動小数は比較に使わない。
 - n≤4 は完全列挙が軽い。n=5 は 151,394 状態。n=6 は極大 349,132。
 - n≥7 の全探索・p_rand は**専任エージェントの n=8 ジョブを待つか既存結果を読む**。
-- スクリプトは `research/verification/scripts/round5_<name>.py`（または `.cpp`）。
-- 結果 JSON は `research/verification/round5_<name>.json`。
+- スクリプトは `research/experiments/original-claims/scripts/round5_<name>.py`（または `.cpp`）。
+- 結果 JSON は `research/experiments/original-claims/output/round5_<name>.json`。
 - **ASan を使うこと**: `g++ -O1 -g -fsanitize=address,undefined`
 - 新ソルバは n=4,5,6 の既知値と**必ず**突き合わせてから使う。
 
@@ -103,7 +105,7 @@ WSL の 19 GB は**全エージェントで共有**。
 
 対象: research/hypothesis-bank-*.md の Baaa〜Bbbb。
 スクリプト: scripts/round5_<name>.py
-データ: research/verification/round5_<name>.json
+データ: research/experiments/original-claims/output/round5_<name>.json
 ```
 
 **`判定: **LABEL**` の行は census (`full_census.py`) が拾う。省略禁止。**
@@ -131,5 +133,5 @@ WSL の 19 GB は**全エージェントで共有**。
 ## 詳細
 
 - 引き継ぎ: [`HANDOVER.md`](HANDOVER.md)
-- WSL: [`WSL-BUILD.md`](WSL-BUILD.md)
+- WSL: [`WSL-BUILD.md`](../../experiments/original-claims/reports/WSL-BUILD.md)
 - 第4回: [`round4-SUMMARY.md`](round4-SUMMARY.md)

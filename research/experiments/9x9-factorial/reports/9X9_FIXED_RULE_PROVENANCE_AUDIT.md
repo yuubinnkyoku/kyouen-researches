@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 9x9 fixed-rule provenance audit
 
 Date: 2026-09-23
@@ -9,9 +11,9 @@ geometric immediate-gain / candidate-conflict-degree heuristic.
 
 Two different objects are currently adjacent in the research trail:
 
-1. `docs/10X10_PROBE_BLIND_VALIDATION.md` defines the historical 3-stone fixed
+1. `research/experiments/solver-benchmarks/reports/10X10_PROBE_BLIND_VALIDATION.md` defines the historical 3-stone fixed
    rule as **final memo used, descending, after a 1,000,000-visited probe**.
-2. `docs/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md` develops a geometric heuristic
+2. `research/experiments/9x9-factorial/reports/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md` develops a geometric heuristic
    where, for a 3-stone parent, immediate gain equals candidate-conflict degree
    exactly, and analyzes the large historical counterexamples `4,9,33` and
    `9,19,33` through that geometry.
@@ -21,7 +23,7 @@ by themselves explain why the historical *memo-probe* ordering put the first
 LOSS at positions 16 and 13.
 
 There is a second, stronger provenance problem already recorded in
-`docs/BLIND_PROBE_FRESHNESS_AUDIT.md`: the historical probe runner reused one
+`research/experiments/solver-benchmarks/reports/BLIND_PROBE_FRESHNESS_AUDIT.md`: the historical probe runner reused one
 solver across children. Its absolute memo count therefore accumulated roughly
 1M per row, so sorting memo descending mostly reversed input order. That audit
 explicitly says `b5172a4` is not a valid blind validation of an independently
@@ -48,7 +50,7 @@ Keep three labels distinct in every later table:
 
 - `historical_cumulative_memo_order`: the `b5172a4` ordering, audit only;
 - `fresh_memo_order`: one fresh solver process per child, as required by
-  `BLIND_PROBE_FRESHNESS_AUDIT.md`;
+  `../../solver-benchmarks/reports/BLIND_PROBE_FRESHNESS_AUDIT.md`;
 - `geometric_gain_order`: exact 3->4 immediate unique-gain / conflict-degree
   ordering, with its own tie rule fixed before evaluating outcomes.
 

@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B231–B250 第3波（弱化で決着）
 
 対象: `round5-batch-b231-b250.md` / `round5-batch-b231-b250-followup.md` の残り PARTIAL 9 件・INCONCLUSIVE 2 件。
-方針: 弱化形を定式化して SUPPORTED / REFUTED に上げる。n=5 完全 Grundy（`round5_b231_n5_grundy.json`）の残余一括再計算、N=3 中間点ブロック、小盤（n=2,3）の一様応答、平行移動直和証人、proof 乗法リカーション再測定を実施。
+方針: 弱化形を定式化して SUPPORTED / REFUTED に上げる。n=5 完全 Grundy（`../output/round5_b231_n5_grundy.json`）の残余一括再計算、N=3 中間点ブロック、小盤（n=2,3）の一様応答、平行移動直和証人、proof 乗法リカーション再測定を実施。
 
 スクリプト: `scripts/round5_b231_push3.py`, `scripts/round5_b231_push3b.py`, `scripts/round5_b231_push3c.py`, `scripts/round5_b231_push3d.py`, `scripts/round5_b231_push3e.py`
-データ: `research/verification/round5_b231_push3.json`
-再利用: `round5_b231_n5_grundy.json`, `round5_b231_followup.json`, `round5_b231_followup2.json`, `scripts/b242_n6.cpp`, `night-research/CYCLE5_GRUNDY_STRUCTURE.md`, `night-research/CYCLE8_N7_STRUCTURE.md`, `night-research/CYCLE16_CENTER_NOT_SUFFICIENT.md`, `night-research/CYCLE35_PHASE_LIFT_CONTRAST.md`, `night-research/CYCLE41_PROOF_DEPENDENCIES.md`
+データ: `research/experiments/original-claims/output/round5_b231_push3.json`
+再利用: `../output/round5_b231_n5_grundy.json`, `../output/round5_b231_followup.json`, `../output/round5_b231_followup2.json`, `../scripts/b242_n6.cpp`, `research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md`, `research/log/discovery-cycles/CYCLE8_N7_STRUCTURE.md`, `research/log/discovery-cycles/CYCLE16_CENTER_NOT_SUFFICIENT.md`, `research/log/discovery-cycles/CYCLE35_PHASE_LIFT_CONTRAST.md`, `research/log/discovery-cycles/CYCLE41_PROOF_DEPENDENCIES.md`
 
 制約: n=7 以上の全列挙・p_rand 全計算は禁止。既存 `round5-batch-b231-b250*.md` は編集しない。
 
@@ -15,7 +17,7 @@
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、弱化形をスペクトル欠落なし＋線形下界に確定）
 - 弱化版: (1) n=2..6 で nimber スペクトルは {0,1,…,max g(n)} を欠けなく埋める。(2) n≥4 で max g(n) ≥ n。(3) n=5 で g=6 を達成するには 3 石で十分（4 石以上は不要）。
 - 弱化版判定: **SUPPORTED**
-- 証拠: n=5 全 151,394 状態の再計算で max g=6、ヒストグラム 0:40325, 1:46885, 2:31096, 3:25376, 4:6392, 5:1248, 6:72 と欠落なし（`round5_b231_push3.json` の `phaseA_n5`）。n=4 も 0..5 欠落なし。n=6 は既存 Cycle5 の完全 Grundy で max g=8・{0..8} 欠落なし（再発見ではなく既存確定値の照合）。よって **max g(n)≥n は n=4,5,6 で 5≥4, 6≥5, 8≥6**。n=2,3 は parity locking で max=1 のため狭義単調は反例済み。n=5 の max g=6 達成 72 局面はすべて 3 石（前回 followup 確定を再確認）。
+- 証拠: n=5 全 151,394 状態の再計算で max g=6、ヒストグラム 0:40325, 1:46885, 2:31096, 3:25376, 4:6392, 5:1248, 6:72 と欠落なし（`../output/round5_b231_push3.json` の `phaseA_n5`）。n=4 も 0..5 欠落なし。n=6 は既存 Cycle5 の完全 Grundy で max g=8・{0..8} 欠落なし（再発見ではなく既存確定値の照合）。よって **max g(n)≥n は n=4,5,6 で 5≥4, 6≥5, 8≥6**。n=2,3 は parity locking で max=1 のため狭義単調は反例済み。n=5 の max g=6 達成 72 局面はすべて 3 石（前回 followup 確定を再確認）。
 - 証拠（計算範囲）: n=4 全 5,811・n=5 全 151,394 安全集合の Grundy。n=6 は既存値のみ。
 - 残った障害: 「任意の m」の無界量化は理論証明待ち。Node-Kayles の一般グラフでの nimber 無界性と、R(S) がそれを実現できるという実現可能性の接続が未完成。max g(n) の成長率下界を n≥7 へ延ばす計算は n=7 禁止。
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：当時のpreregistration・分析・判定です。現在知識の唯一の正本は[knowledge](../../../../../../knowledge/README.md)です。
+
 # Pre-data amendment: C-K10-asc reserve endpoint
 
 Status: protocol correction before inspecting or generating reserve exact/probe outcomes.

@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B031・B333反証、B334成立: 終局長の穴と、長さを固定できない勝利
 
-作成: 2026-09-30。原文: [B333・B334](../hypothesis-bank-round2-2026-09-27.md)。
-原文索引照合で[B031](../hypothesis-bank-2026-09-27.md)も同じ反例により訂正・反証できると確認。
+作成: 2026-09-30。原文: [B333・B334](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
+原文索引照合で[B031](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)も同じ反例により訂正・反証できると確認。
 
 **B031・B333 REFUTED、B334 SUPPORTED。いずれも最小正方形盤は6×6。**
 全称命題への有限反例・存在命題への有限証人なので、この三つの原命題は以下の局面で決着する。
@@ -44,7 +46,7 @@ Grundy値は全合法子のmexで別に計算した。
 
 全6×6でこの種の穴を持つ局面は8個。上のSのD4像に正確に一致する。
 全て6石、全てg=3、T*=WFT={7,11}である。
-具体的な8局面を[全盤結果JSON](round25_forced_n6.json)に保存した。
+具体的な8局面を[全盤結果JSON](../output/round25_forced_n6.json)に保存した。
 これは全盤・全石数の将来の穴がこの型だけという主張ではない。
 
 ### B031の旧反例を訂正する
@@ -93,7 +95,7 @@ T*={7,9,11}、WFT=∅。この場合の勝者は次手番の相手側である�
 
 ## 4. 最小盤と検算
 
-[C++全状態計算](scripts/round25_forced_lengths.cpp)は三石補完マスクを使って合法点を増分更新し、
+[C++全状態計算](../scripts/round25_forced_lengths.cpp)は三石補完マスクを使って合法点を増分更新し、
 全安全集合のGrundy値・T*・WFT・h・μ・勝つ側の最短化と相手の最長化による終局サイズを同時に求めた。
 
 | n | 全安全局面 | B333の穴 | B334の証人 |
@@ -107,7 +109,7 @@ T*={7,9,11}、WFT=∅。この場合の勝者は次手番の相手側である�
 n=1は自由な一点のみでT*,WFTが常に単元。よって三項目の最小盤は6×6。
 B031についてもn≤5全T*の穴0を独立に確認した。
 
-[Python独立検算](scripts/round25_forced_verify.py)は既存の幾何・探索モジュールをimportしない。
+[Python独立検算](../scripts/round25_forced_verify.py)は既存の幾何・探索モジュールをimportしない。
 整数四点行列式で全2,491禁止組を作り、垂直二等分線の方程式から全644曲線を再生成した。
 曲線上の占有数が3になるとその曲線上の残点を禁止する方式で合法手を決め、
 frozensetによる再帰を逆順の着手で計算する。上の10局面と関連子を含む37,187状態を照合した。
@@ -119,18 +121,18 @@ n=2..5はそれぞれ全状態をこの別方式で解き、二条件の不在�
 勝つ側の手番は子のOR、相手番は子のANDを取る。
 反例Sでは7/9/11が真/偽/真、証人Aでは6/8/10が全て偽となり一致した。
 
-[独立検算JSON](round25_forced_verified.json)には全座標、子局面、各固定長の成否、検査数、
+[独立検算JSON](../output/round25_forced_verified.json)には全座標、子局面、各固定長の成否、検査数、
 ソースと入力のSHA-256を保存した。
 以前のn≤5での「WFTの幅は2まで」「間の穴はない」という有限観測を、全nの定理とは扱わない。
 空盤WFTが単元というB331や、空盤の中央値というB335は、この中盤反例だけでは反証されない。
 
 ## 再現
 
-    g++ -O3 -std=c++17 -Wall -Wextra research/verification/scripts/round25_forced_lengths.cpp -o research/verification/scripts/round25_forced_lengths.exe
-    research/verification/scripts/round25_forced_lengths.exe research/verification/round23_b251_n6_input.txt research/verification/round25_forced_n6.json
-    python research/verification/scripts/round25_forced_verify.py --inputs-only
-    foreach ($n in 2..5) { research/verification/scripts/round25_forced_lengths.exe "research/verification/round25_forced_n${n}_input.txt" "research/verification/round25_forced_n${n}.json" }
-    python research/verification/scripts/round25_forced_verify.py
+    g++ -O3 -std=c++17 -Wall -Wextra research/experiments/original-claims/scripts/round25_forced_lengths.cpp -o research/experiments/original-claims/scripts/round25_forced_lengths.exe
+    research/experiments/original-claims/scripts/round25_forced_lengths.exe research/experiments/original-claims/output/round23_b251_n6_input.txt research/experiments/original-claims/output/round25_forced_n6.json
+    python research/experiments/original-claims/scripts/round25_forced_verify.py --inputs-only
+    foreach ($n in 2..5) { research/experiments/original-claims/scripts/round25_forced_lengths.exe "research/experiments/original-claims/output/round25_forced_n${n}_input.txt" "research/experiments/original-claims/output/round25_forced_n${n}.json" }
+    python research/experiments/original-claims/scripts/round25_forced_verify.py
 
 小盤の再計算は同じ実行ファイルに`round25_forced_nN_input.txt`と`round25_forced_nN.json`（N=2..5）を渡す。
 検算コードが入力を再生成する。上記のループはPowerShell用。

@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 追撃: B101-B200 followup
 
-対象: research/verification/round5-batch-b101-b200.md の PARTIAL / INCONCLUSIVE / NOT-CHECKED 残件。
+対象: research/experiments/original-claims/reports/round5-batch-b101-b200.md の PARTIAL / INCONCLUSIVE / NOT-CHECKED 残件。
 方針: 弱化形の確定を主戦術に SUPPORTED / REFUTED へ引き上げる。
 スクリプト: scripts/round5_b101_followup.py
-データ: research/verification/round5_b101_followup.json
+データ: research/experiments/original-claims/output/round5_b101_followup.json
 再利用: round5_b101_quick.py / round5_b101_n5.py / round5_b101_b138.py、round4-collinear-asymptotic.md（B141）
 
 ---

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 共円ゲーム: 短時間プローブによる最終探索量・LOSS 予測
 
 ## 要約・結論
@@ -322,8 +324,8 @@ LOSS を含む親グループは **8 つ** と少なく、親単位評価の統�
 ### 可視化
 
 * `results/10x10/probe_analysis/memo_vs_final_budget_*.png`
-* `results/10x10/probe_analysis/spearman_by_budget.png`
-* `results/10x10/probe_analysis/loss_concentration_memo.png`
+* `research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/spearman_by_budget.png`
+* `research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/loss_concentration_memo.png`
 * `results/10x10/probe_analysis/memo_vs_final_by_stones_budget_*.png`
 * `results/10x10/probe_analysis/parent_speedup_budget_*.png`
 

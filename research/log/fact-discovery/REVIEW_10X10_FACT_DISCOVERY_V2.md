@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # REVIEW V2: 10×10 fact discovery (post f09bfb2)
 
 Scope: re-review after safety fix f09bfb2. Heavy enumerations not re-run. Witnesses re-checked with independent exact determinants (collinear + 4×4 circle det over ℚ). Point index convention `i → (i mod n, i div n)` confirmed against F-BA coordinates.
@@ -6,8 +8,8 @@ Scope: re-review after safety fix f09bfb2. Heavy enumerations not re-run. Witnes
 
 - T1/T3/T7 PASS (as before).
 - T2 nits remain: `status: in-progress` (acceptance wants `designed`); `commits:` placeholder unfilled.
-- **T4/T5 unmet, checkbox overclaim.** Acceptance requires the minimum size to be *確定* via integer enumeration with a complete flag. 10×10 is only bracketed **6 ≤ K_min ≤ 11**; `fact_10x10_k6.json` is `complete:false` (789M nodes). Both boxes are `[x]`. The gap *is* honestly stated in findings (F-AK: 「6..11 の間で未確定」, F-AZ, DISCOVERY_SUMMARY 未解決 #1) — but not in the spec task list.
-- T6 PASS now. n=9 degrees (`fact_9x9_point_degrees.json`, 81 values) and n=10 degrees (`fact_10x10_two_stone_orbits.json` `point_degrees`, 100 values) are comparable full arrays; circle spectra n=8/9/10 exist. F-BB does the comparison. Shared-edge structure (S2 「など」) still absent; not in T6 acceptance.
+- **T4/T5 unmet, checkbox overclaim.** Acceptance requires the minimum size to be *確定* via integer enumeration with a complete flag. 10×10 is only bracketed **6 ≤ K_min ≤ 11**; `../../experiments/fact-discovery/output/fact_10x10_k6.json` is `complete:false` (789M nodes). Both boxes are `[x]`. The gap *is* honestly stated in findings (F-AK: 「6..11 の間で未確定」, F-AZ, DISCOVERY_SUMMARY 未解決 #1) — but not in the spec task list.
+- T6 PASS now. n=9 degrees (`../../experiments/fact-discovery/output/fact_9x9_point_degrees.json`, 81 values) and n=10 degrees (`../../experiments/fact-discovery/output/fact_10x10_two_stone_orbits.json` `point_degrees`, 100 values) are comparable full arrays; circle spectra n=8/9/10 exist. F-BB does the comparison. Shared-edge structure (S2 「など」) still absent; not in T6 acceptance.
 - T8 checked `[x]` before this review cleared — premature.
 
 ## 2. Correctness
@@ -22,7 +24,7 @@ Independent re-check (all PASS):
 
 K_min(7)=7 is sound: k=4,5,6 non-existence stays valid even under the old unsound enumerator (it searched a *superset* of maximal-safe sets; zero found a fortiori applies). F-BA's independence argument is correct.
 
-F-AE matches `fact_10x10_geometry.json`: corner min 1515, max 2499 at r²=4.5 (not center 2401 @0.5), non-monotone pairs 2409>2401 and 2395>2359, bin 12.5 spread 2301..2325. F-BB matches `fact_9x9_point_degrees.json`: min 978, max 1728 at exact center (idx 40), mean 1439.60, Σd = 4×29152 = 116608.
+F-AE matches `../../experiments/fact-discovery/output/fact_10x10_geometry.json`: corner min 1515, max 2499 at r²=4.5 (not center 2401 @0.5), non-monotone pairs 2409>2401 and 2395>2359, bin 12.5 spread 2301..2325. F-BB matches `../../experiments/fact-discovery/output/fact_9x9_point_degrees.json`: min 978, max 1728 at exact center (idx 40), mean 1439.60, Σd = 4×29152 = 116608.
 
 No positive existence claim is unsafe/false. F-AT size-10, F-AL second size-11, F-AR old n=7 witness, F-AU border bias are retracted by F-AZ + the block at findings.md:913-918.
 
@@ -31,7 +33,7 @@ Nit: `fact_verify_claims.py` 20/20 PASS, but `check("AK size11 still listed", Tr
 ## 3. Consistency
 
 - **Residual:** F-AL/AR/AT/AU bodies still read as live claims (F-AT title 「サイズ 10 の極大安全配置が存在する」, 確信度 高) with no inline pointer to F-AZ. A reader stopping inside those sections can still take an invalid witness as true. Corpus-level truth state is corrected; per-finding text is not.
-- `fact_kmin_n7_safe.json` `complete:true` with `found:true` means "not timed out" (search stops at first hit) — fine for existence, misleading label vs spec's complete-flag contract.
+- `../../experiments/fact-discovery/output/fact_kmin_n7_safe.json` `complete:true` with `found:true` means "not timed out" (search stops at first hit) — fine for existence, misleading label vs spec's complete-flag contract.
 - Empty `fact_10x10_minmaximal.json` (0 bytes) still committed. `experiments.jsonl` still has no entries. DISCOVERY_SUMMARY is now accurate (gap 6..11 stated).
 
 ## Conclusions

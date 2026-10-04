@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 31b — D4 orbit = center circle (all n), local ceiling 3
 
 Board center for D4 is always ((n-1)/2,(n-1)/2). In doubled coords
@@ -60,5 +62,5 @@ Any 4 points on a circle are concyclic ⇒ forbidden kyouen ⇒
 ## Artifacts
 - `results/cycle31b_orbit_circles_all_n.json`
 - `results/cycle31_circle_lemma_occ.json`
-- `night-research/CYCLE31_CIRCLE_ORBIT_LEMMA.md`
-- `night-research/CYCLE30B_ORBIT_CONCYCLICITY.md`
+- `research/log/discovery-cycles/CYCLE31_CIRCLE_ORBIT_LEMMA.md`
+- `research/log/discovery-cycles/CYCLE30B_ORBIT_CONCYCLICITY.md`

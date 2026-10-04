@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 次の境界：四行・六点版で 16≤M₄,₆≤68
 
 **後続研究で厳密値 \(M_{4,6}=16\) が確定した。**
@@ -5,8 +7,8 @@
 本稿は、その証明に用いる大域上界68・弦長分類・長さ15の証人を導いた中間段階の記録として残す。
 
 作成: 2026-10-03。再現:
-[`verification/scripts/q48_nearby_q6_bounds.py`](verification/scripts/q48_nearby_q6_bounds.py)、
-出力: [`verification/q48_nearby_q6_bounds.json`](verification/q48_nearby_q6_bounds.json)。
+[`verification/scripts/q48_nearby_q6_bounds.py`](../scripts/q48_nearby_q6_bounds.py)、
+出力: [`verification/q48_nearby_q6_bounds.json`](../output/q48_nearby_q6_bounds.json)。
 
 四行・七点版と八点版を閉じた後、その隣の六点版について次の厳密な区間を得た。
 
@@ -181,7 +183,7 @@ y=3 &: \{4,5,9,10,11\}.
 ## 再現
 
 ```bash
-python research/verification/scripts/q48_nearby_q6_bounds.py
+python research/experiments/fixed-width/scripts/q48_nearby_q6_bounds.py
 ```
 
 候補探索に用いた乱択最適化は証明の一部ではなく、再現器は明示された証人と上界の

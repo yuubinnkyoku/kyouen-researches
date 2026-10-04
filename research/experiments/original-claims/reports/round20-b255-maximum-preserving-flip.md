@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B255成立: 全最大配置を保存しても5×5の勝者は反転する
 
 作成: 2026-09-30。**B255 SUPPORTED（原命題の具体的な証人）。最小盤は5×5。**
-原文: [B255](../hypothesis-bank-2026-09-27.md)。
+原文: [B255](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)。
 「Q_nを削ったゲームで最大サイズ・全最大配置族が標準版と一致するのに、空盤勝者が反転する」
 という三条件を全て満たす。
 
@@ -116,9 +118,9 @@ T全体が標準でも安全になってK₅=9に矛盾する。
 今回n=5で証人を与えたので、**B255を実現する最小正方形盤は5×5**と確定する。
 元のB255はPARTIALからSUPPORTEDへ更新できる。全600件の残数は再集計していない。
 
-- [探索コード](scripts/round20_b255_n5.py)、[保持必須証人・解除条件・探索結果](round20_b255_n5.json)
-- [独立検証コード](scripts/round20_b255_verify.py)、[全最大配置・全層個数・Grundy結果](round20_b255_verified.json)
+- [探索コード](../scripts/round20_b255_n5.py)、[保持必須証人・解除条件・探索結果](../output/round20_b255_n5.json)
+- [独立検証コード](../scripts/round20_b255_verify.py)、[全最大配置・全層個数・Grundy結果](../output/round20_b255_verified.json)
 
-実行順は `python research/verification/scripts/round20_b255_n5.py`、
-`python research/verification/scripts/round20_b255_verify.py`。
+実行順は `python research/experiments/original-claims/scripts/round20_b255_n5.py`、
+`python research/experiments/original-claims/scripts/round20_b255_verify.py`。
 双方正常終了。ソース・共通幾何コード・検証入力のSHA-256を記録している。

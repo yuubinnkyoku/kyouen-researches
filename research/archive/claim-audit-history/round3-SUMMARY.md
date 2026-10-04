@@ -1,8 +1,10 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 仮説バンク検証総括 — B001〜B600（第3回・未解決の決着）
 
 作成: 2026-09-27 / 手法: `ROUND3-PROTOCOL.md` に従う並列検証。第1回 `SUMMARY.md`（B001–B300）と第2回 `round2-SUMMARY.md`（B301–B600）のうち `PARTIAL` / `INCONCLUSIVE` / `NOT-CHECKED` のまま残っていた項目を並列ワーカーが再検証した。
 
-個票: `round3-batch-*.md`。総括データ: `round3_master.json`。
+個票: `round3-batch-*.md`。総括データ: `../../experiments/original-claims/output/round3_master.json`。
 
 ## 集計
 
@@ -149,33 +151,33 @@ pure-Python で n=4..12 の円センサスを完走（実行 49.6 秒、`all_val
 
 | ファイル | ID 数 | 決着 | 未解決 |
 |---|---:|---:|---:|
-| `round3-batch-b050-b366.md` | 16 | 0 | 16 |
-| `round3-batch-b092-b127.md` | 24 | 0 | 24 |
-| `round3-batch-b168-b227.md` | 45 | 0 | 45 |
-| `round3-batch-b228-b280.md` | 26 | 2 | 24 |
-| `round3-batch-b291-b360.md` | 24 | 0 | 24 |
-| `round3-batch-b371-b380.md` | 7 | 0 | 7 |
-| `round3-batch-b429-b530.md` | 46 | 0 | 46 |
-| `round3-batch-b431-b434-push2.md` | 2 | 2 | 0 |
-| `round3-batch-b431-b434.md` | 2 | 2 | 0 |
-| `round3-batch-b451-b457.md` | 6 | 4 | 2 |
-| `round3-batch-b475-b476-push2.md` | 1 | 0 | 1 |
-| `round3-batch-b501-b502-push2.md` | 1 | 1 | 0 |
-| `round3-batch-b502-n6.md` | 1 | 1 | 0 |
-| `round3-batch-b542-b560.md` | 6 | 1 | 5 |
-| `round3-batch-b591-b592.md` | 2 | 0 | 2 |
-| `round3-batch-chunk8.md` | 27 | 0 | 27 |
-| `round3-batch-grp1.md` | 20 | 2 | 18 |
-| `round3-batch-grp2.md` | 19 | 1 | 18 |
-| `round3-batch-grp3-b.md` | 1 | 1 | 0 |
-| `round3-batch-grp3.md` | 20 | 2 | 18 |
-| `round3-batch-grp4.md` | 20 | 0 | 20 |
-| `round3-batch-grp5.md` | 17 | 0 | 17 |
-| `round3-batch-grp6.md` | 5 | 0 | 5 |
-| `round3-batch-grp7.md` | 13 | 0 | 13 |
-| `round3-batch-grp8.md` | 20 | 11 | 9 |
-| `round3-batch-grp9.md` | 1 | 0 | 1 |
-| `round3-batch-push2.md` | 13 | 8 | 5 |
+| `../../experiments/original-claims/reports/round3-batch-b050-b366.md` | 16 | 0 | 16 |
+| `../../experiments/original-claims/reports/round3-batch-b092-b127.md` | 24 | 0 | 24 |
+| `../../experiments/original-claims/reports/round3-batch-b168-b227.md` | 45 | 0 | 45 |
+| `../../experiments/original-claims/reports/round3-batch-b228-b280.md` | 26 | 2 | 24 |
+| `../../experiments/original-claims/reports/round3-batch-b291-b360.md` | 24 | 0 | 24 |
+| `../../experiments/original-claims/reports/round3-batch-b371-b380.md` | 7 | 0 | 7 |
+| `../../experiments/original-claims/reports/round3-batch-b429-b530.md` | 46 | 0 | 46 |
+| `../../experiments/original-claims/reports/round3-batch-b431-b434-push2.md` | 2 | 2 | 0 |
+| `../../experiments/original-claims/reports/round3-batch-b431-b434.md` | 2 | 2 | 0 |
+| `../../experiments/original-claims/reports/round3-batch-b451-b457.md` | 6 | 4 | 2 |
+| `../../experiments/original-claims/reports/round3-batch-b475-b476-push2.md` | 1 | 0 | 1 |
+| `../../experiments/original-claims/reports/round3-batch-b501-b502-push2.md` | 1 | 1 | 0 |
+| `../../experiments/original-claims/reports/round3-batch-b502-n6.md` | 1 | 1 | 0 |
+| `../../experiments/original-claims/reports/round3-batch-b542-b560.md` | 6 | 1 | 5 |
+| `../../experiments/original-claims/reports/round3-batch-b591-b592.md` | 2 | 0 | 2 |
+| `../../experiments/original-claims/reports/round3-batch-chunk8.md` | 27 | 0 | 27 |
+| `../../experiments/original-claims/reports/round3-batch-grp1.md` | 20 | 2 | 18 |
+| `../../experiments/original-claims/reports/round3-batch-grp2.md` | 19 | 1 | 18 |
+| `../../experiments/original-claims/reports/round3-batch-grp3-b.md` | 1 | 1 | 0 |
+| `../../experiments/original-claims/reports/round3-batch-grp3.md` | 20 | 2 | 18 |
+| `../../experiments/original-claims/reports/round3-batch-grp4.md` | 20 | 0 | 20 |
+| `../../experiments/original-claims/reports/round3-batch-grp5.md` | 17 | 0 | 17 |
+| `../../experiments/original-claims/reports/round3-batch-grp6.md` | 5 | 0 | 5 |
+| `../../experiments/original-claims/reports/round3-batch-grp7.md` | 13 | 0 | 13 |
+| `../../experiments/original-claims/reports/round3-batch-grp8.md` | 20 | 11 | 9 |
+| `../../experiments/original-claims/reports/round3-batch-grp9.md` | 1 | 0 | 1 |
+| `../../experiments/original-claims/reports/round3-batch-push2.md` | 13 | 8 | 5 |
 
 ## 最も有望な次の一手
 

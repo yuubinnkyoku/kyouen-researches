@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=11 (11x11) 勝敗 — **未確定**（訂正済み）
 
 > ## ⚠ 訂正（2026-09-29）
@@ -146,7 +148,7 @@ n=11 でも保たれている。
 
 **「層が丸ごと P か N になる」という構造は、標準盤の parity locking
 の一般化**とみなせる。n=2, 3 では g ∈ {0,1} で偶奇が完全に固定されていた
-（`PROTOCOL.md` の「n=2,3 の parity locking」）。
+（`../../../archive/claim-audit-history/PROTOCOL.md` の「n=2,3 の parity locking」）。
 n=11 でも同じ構造が、より高い層まで延びている。
 
 ---
@@ -156,17 +158,17 @@ n=11 でも同じ構造が、より高い層まで延びている。
 | ファイル | 内容 |
 |---|---|
 | `N11-RESULT.md` | 本文（このファイル） |
-| `N11-WORKLOG.md` | 作業ログと教訓 |
+| `../../../log/claim-audit/N11-WORKLOG.md` | 作業ログと教訓 |
 | `N11-STATE-SPACE.md` | 状態空間の測定 |
 | `N11-VERDICT.md` | 中間時点の結論（層 6 で OOM した記録） |
-| `scripts/n11_d4.cpp` | D4 対称 Grundy ソルバ（n=6, 7 で交差検証合格） |
-| `scripts/kc_core121.h` | 2 ワード（128 bit）コア |
-| `scripts/n11_grundy.cpp` | 2 ワード Grundy ソルバ（n=6, 7 で交差検証合格） |
-| `scripts/n11_lvl2.cpp` | F_n の直接数え直し（6 値で交差検証） |
-| `scripts/n11_verdict.py` | 本結論の導出スクリプト |
-| `data/n11_d4_final.json` | D4 版の実測データ |
+| `../scripts/n11_d4.cpp` | D4 対称 Grundy ソルバ（n=6, 7 で交差検証合格） |
+| `../../../../scripts/research/kc_core121.h` | 2 ワード（128 bit）コア |
+| `../scripts/n11_grundy.cpp` | 2 ワード Grundy ソルバ（n=6, 7 で交差検証合格） |
+| `../scripts/n11_lvl2.cpp` | F_n の直接数え直し（6 値で交差検証） |
+| `../scripts/n11_verdict.py` | 本結論の導出スクリプト |
+| `../output/data/n11_d4_final.json` | D4 版の実測データ |
 
-再現: `wsl -d Ubuntu -- bash research/verification/scripts/n11_d4_run.sh`
+再現: `wsl -d Ubuntu -- bash research/experiments/n11-search-methods/scripts/n11_d4_run.sh`
 
 ---
 

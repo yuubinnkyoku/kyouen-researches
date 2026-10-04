@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B095・B096: 最小極大の指数は少なくとも2/3
 
 作成: 2026-10-01。**B095 PARTIAL、B096 PARTIAL。**
@@ -112,11 +114,11 @@ k/n^(2/3)が非有界なら自明、有界な部分列では(4/3)nk=o(n²)とし
 
 ## 5. 有限検算
 
-`python research/verification/scripts/round52_saturation_bound.py`。
+`python research/experiments/original-claims/scripts/round52_saturation_bound.py`。
 n=2..10の全非共線三つ組307,092個で、係数上界・N≤224(n−1)⁶・三点の平方完成を整数で確認。
 殻d=1..100の原始方向数を独立に数え、4d以下を確認。
 4×4の全928極大配置で三点直線の方向ごとのk/3制限と、D=1..7の被覆上下分割を検算した。
 さらにn=4,8,9,10の最大格子点真円で平方和への単射と表現数上界を確認。
 有限検算から漸近を外挿したのではなく、上の一般証明の係数・計数を照合する検算である。
 
-証明書は`round52_saturation_bound_verified.json`。
+証明書は`../output/round52_saturation_bound_verified.json`。

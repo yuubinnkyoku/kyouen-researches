@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 7×7最大配置の「第四の角」ゲートと8個の連結成分
 
 2026-09-22。基点コミット `8d6681ea473ac9a3aba53645e62f4b6c92520b65`。
@@ -106,7 +108,7 @@ C . . . B . *
 ## 独立検証と依存関係
 
 探索コードは余因子展開による整数行列式で共円・共線を判定する。
-独立検査器 `verify_corridor_discovery.py` は探索コードを一切importせず、
+独立検査器 `../../experiments/structural-discovery/scripts/verify_corridor_discovery.py` は探索コードを一切importせず、
 24置換のLeibniz公式で行列式を計算し直す。
 全盤の危険四つ組6,364個、U内の59個を再生成する。
 
@@ -125,15 +127,15 @@ C . . . B . *
 検査器は証明書のSHA-256も記録する。
 
 ```powershell
-python night-research/discover_corridor_auxiliary.py
-python night-research/build_corridor_certificate.py
-python night-research/discover_full_board_corridor.py
-python night-research/discover_full_board_corridor.py --forbid -1 --exhaust
-python night-research/verify_corridor_discovery.py
+python research/experiments/structural-discovery/scripts/discover_corridor_auxiliary.py
+python research/experiments/structural-discovery/scripts/build_corridor_certificate.py
+python research/experiments/structural-discovery/scripts/discover_full_board_corridor.py
+python research/experiments/structural-discovery/scripts/discover_full_board_corridor.py --forbid -1 --exhaust
+python research/experiments/structural-discovery/scripts/verify_corridor_discovery.py
 ```
 
 標準ライブラリのみ。`python -O`は使わない。
-探索の最初の占有数調査は `discover_static_barrier.py` と
+探索の最初の占有数調査は `../../experiments/structural-discovery/scripts/discover_static_barrier.py` と
 `results/discovery_static_barrier_exploration.json` に残した。
 
 ## 既存結果との違いと残る問い

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 8×8 O-stratum replication — freeze manifest
 
 Status: FROZEN BEFORE ANY 8×8 EXACT CHILD OUTCOME
@@ -78,7 +80,7 @@ Full finite-population census; shared children do not invalidate the descriptive
 
 ## Artifacts frozen
 
-See `artifacts/SHA256SUMS-8x8-freeze.txt`.
+See `research/experiments/solver-benchmarks/output/SHA256SUMS-8x8-freeze.txt`.
 
 ## Prohibited after this freeze
 

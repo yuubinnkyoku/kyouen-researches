@@ -1,10 +1,12 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # D9 one-shot read-mask: access-path invariant
 
 Status: implementation constraint frozen before D9LM1R/D9WM1R cohort execution.
 
 ## Problem
 
-`Solver::win` does not consume memo facts only through the current-state entry lookup. A child-prefetch lookup populates `Child.cached` before sorting, and a populated `Child.cached` is later consumed directly without calling `win` for that child. This is already documented in `notes/depth5-memo-warming-pathway-split.md`.
+`Solver::win` does not consume memo facts only through the current-state entry lookup. A child-prefetch lookup populates `Child.cached` before sorting, and a populated `Child.cached` is later consumed directly without calling `win` for that child. This is already documented in `research/log/search-order/depth5-memo-warming-pathway-split.md`.
 
 Therefore a D9 read-mask implemented only at node-entry lookup is not an intervention that withholds the selected memo fact. A selected generation may be copied into `Child.cached` during prefetch and then bypass the masked entry lookup entirely. Such an implementation can understate the treatment, or produce different LOSS/WIN effects merely because the two labels are encountered through different access paths.
 

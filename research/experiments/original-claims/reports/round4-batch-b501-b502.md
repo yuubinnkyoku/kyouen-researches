@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round4: B501 / B502 — C++ (WSL) による p_rand の n=7 完全 DP
 
-対象: `research/verification/round3-batch-b502-n6.md` の **B501 / B502** のみ。
-スクリプト: `research/verification/scripts/round4_b501_prand.cpp`
-データ: `research/verification/round4_b501_prand.json`
+対象: `research/experiments/original-claims/reports/round3-batch-b502-n6.md` の **B501 / B502** のみ。
+スクリプト: `research/experiments/original-claims/scripts/round4_b501_prand.cpp`
+データ: `research/experiments/original-claims/output/round4_b501_prand.json`
 
 背景: 第3回で pure-Python により p_rand の完全 DP を n=6 まで完走した（129.43 秒）。
 n=7 は 4,900 万状態超で pure-Python では実行不能なため、本回で C++ に移植して n=7 を狙った。
@@ -12,8 +14,8 @@ n=7 は 4,900 万状態超で pure-Python では実行不能なため、本回�
 **結論: 完全一致。n=7 の数字は信用できる。**
 
 n=6 からの cross-check が通らなければ n=7 の数字は信用できないため、n=7 より先に検証した。
-`round3_b502_pgrand_n6.json`（pure-Python, 129.43 秒）と C++ 実装の出力
-`round4_b501_prand.json` の全項目を突き合わせた結果（`n6_crosscheck.all_match = true`）:
+`../output/round3_b502_pgrand_n6.json`（pure-Python, 129.43 秒）と C++ 実装の出力
+`../output/round4_b501_prand.json` の全項目を突き合わせた結果（`n6_crosscheck.all_match = true`）:
 
 | 項目 | Python (第3回) | C++ (本回) | 一致 |
 |---|---:|---:|:--:|
@@ -50,7 +52,7 @@ boost が WSL に無く sudo も使えないため多倍長整数は**自作**�
 2. `dec_str` が商を受け取らず分子をそのまま出力していた（`5162.000...`）。
    → 商バッファ接收に修正。
 
-## 1. C++ 実装（`scripts/round4_b501_prand.cpp`）
+## 1. C++ 実装（`../scripts/round4_b501_prand.cpp`）
 
 - 共有コア `kc_core.h` の `build_square(n)` を使用（書き直していない）。
 - 状態 = 盤の `uint64` マスク（n=7 は 49 点で収まる）。層ごとにソート済み配列。

@@ -1,8 +1,10 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 02: B021-B040
 
 対象: Grundy数の大きさ・欠落・飽和 (B021–B030) / 勝ち方と対局長 (B031–B040)
-データ: `night-research/cycle5-grundy-n{2,3,4,5}.json`, `cycle5-grundy-n6-cap14.json`, `cycle5-grundy-deepdive.json`, `cycle5-grundy-structure.json`, `cycle6-saturation-verify.json`, `CYCLE5_GRUNDY_STRUCTURE.md`, `CYCLE4_EXACT_STRUCTURE.md`
-新規計算: `research/verification/scripts/batch02_grundy_tstar.py` → `batch02_out.json` (n=4,5 完全)。n=6 T*/WFT (`batch02_n6_tstar.py`) は時間超過で打ち切り。
+データ: `research/experiments/structural-discovery/output/cycle5-grundy-n{2,3,4,5}.json`, `cycle5-grundy-n6-cap14.json`, `cycle5-grundy-deepdive.json`, `cycle5-grundy-structure.json`, `cycle6-saturation-verify.json`, `CYCLE5_GRUNDY_STRUCTURE.md`, `CYCLE4_EXACT_STRUCTURE.md`
+新規計算: `research/experiments/original-claims/scripts/batch02_grundy_tstar.py` → `batch02_out.json` (n=4,5 完全)。n=6 T*/WFT (`batch02_n6_tstar.py`) は時間超過で打ち切り。
 
 確定値の再掲: `M_n(k)=max g`, `σ_n=min{k:M_n(k)=K_n−k}`。K_4=7, K_5=9, K_6=11, K_7=14, K_8=15。σ_4=2, σ_5=3, σ_6=3。空盤 g: n=2..6 → 1,1,0,1,1。
 
@@ -64,7 +66,7 @@
 - 判定: **NOT-CHECKED**
 - 範囲: R(S) の成分数・成分型数と floor(log2(g+1)) の回帰。residual 分解は batch06 の `residual_core.py` にあるが、本バッチでは未接続。
 - 証拠: (なし)
-- メモ: `research/verification/scripts/residual_core.py` と組み合わせれば n=5 で可能。次バッチ候補。
+- メモ: `scripts/research/residual_core.py` と組み合わせれば n=5 で可能。次バッチ候補。
 
 ## B030 [存在] 同じ終局サイズ集合なのにnimberが異なる
 - 判定: **SUPPORTED**

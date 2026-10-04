@@ -1,10 +1,12 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round4 個票 — B228–B290（担当: 共円ゲーム検証ワーカー）
 
 対象: 63 件 (B228–B258, B260–B290)。
 除外: B259（他担当）。
 開始: 2026-09-27。WSL g++ 13.3.0 / 16 コア環境で再計算。
 
-データ: `research/verification/round4_b228.json`、スクリプト `research/verification/scripts/round4_b228.cpp`
+データ: `research/experiments/original-claims/output/round4_b228.json`、スクリプト `research/experiments/original-claims/scripts/round4_b228.cpp`
 （共有コア `kc_core.h` を #include。浮動小数なし、比は p/q で出力）。
 
 ## B228 [存在] 円の点数に応じた禁止緩和が非単調な勝敗列を作る
@@ -421,8 +423,8 @@
 
 # 第2稿（round4_b228c）— 理論 attack 専門
 
-作成: 2026-09-27。スクリプト `research/verification/scripts/round4_b228c.cpp`、
-データ `research/verification/round4_b228c.json`。
+作成: 2026-09-27。スクリプト `research/experiments/original-claims/scripts/round4_b228c.cpp`、
+データ `research/experiments/original-claims/output/round4_b228c.json`。
 第1稿で未決だった ID に対し、**弱化による有限検証**を試み、
 証明できないものは**命題の構造的障碍を具体的に記述**した。
 
@@ -446,8 +448,8 @@ B の分類は第1稿と同じ結論だが、障碍の言い方を形式的に�
 
 # 第3稿（round4_b228d）— 命題の弱化による決着
 
-作成: 2026-09-27。スクリプト `research/verification/scripts/round4_b228d.cpp`、
-出力 `research/verification/round4_b228d.txt`。
+作成: 2026-09-27。スクリプト `research/experiments/original-claims/scripts/round4_b228d.cpp`、
+出力 `research/experiments/original-claims/output/round4_b228d.txt`。
 第1稿・第2稿で INCONCLUSIVE / NOT-CHECKED のまま残った ID に対し、
 **命題を弱化して n≤6 の完全列挙で判定できる形に変形**する方針で再攻撃した。
 
@@ -485,15 +487,15 @@ B の分類は第1稿と同じ結論だが、障碍の言い方を形式的に�
 - 前回の一手: 「『任意有限グラフ』＝無限個のグラフに対する全称を有限計算で決めるのは原理的に不可能。」
 - 今回の弱化: 命題を「**任意の有限グラフ G に対し、ある n が存在して、n×n 盤の安全集合 S の残余グラフ R(S) が G から高々 1 頂点削除で得られる**」に弱化すれば、有限 n で検証可能になる。
 - 今回の範囲: n=4,5,6 の全安全集合に対し R(S)（頂点 = L(S)、辺 = 「S の 2 石と p,q が共円/共線」となる対）を構築し、**頂点数 ≤6 の R(S) の同型類を全列挙**し、4-頂点路 P4・星 K1,3・三角形 C3・4-閉路 C4・5-閉路 C5 がすべて到達可能かを判定。
-- 証拠: `B232_census` セクションの出力（`round4_b228d.txt`）。
+- 証拠: `B232_census` セクションの出力（`../output/round4_b228d.txt`）。
 - 残った障害: 弱化しても**「任意の有限グラフ」＝頂点数が無制限の無限族**であり、n=6 の 349,596 状態は頂点数 ≤ |L(S)| ≤ 36 のグラフしか実現しない。弱化形でも**命題の全称は有限計算で閉じていない**。**だが「R(S) に 4 閉路・5 閉路が現れるか」という低次部分は n=6 で閉じた**。
 
 ---
 
 # 第4稿（round4_b228e）— 弱化の決定版
 
-作成: 2026-09-27。スクリプト `research/verification/scripts/round4_b228e.cpp`、
-出力 `research/verification/round4_b228e.txt`（数値は全て整数 / 有理数 p/q）。
+作成: 2026-09-27。スクリプト `research/experiments/original-claims/scripts/round4_b228e.cpp`、
+出力 `research/experiments/original-claims/output/round4_b228e.txt`（数値は全て整数 / 有理数 p/q）。
 
 第1〜3稿の診断を全部引き継ぎ、**命題が強すぎる箇所を弱化して n≤6 の完全列挙で
 判定できる形に変形し、その形で SUPPORTED / REFUTED を出した**。

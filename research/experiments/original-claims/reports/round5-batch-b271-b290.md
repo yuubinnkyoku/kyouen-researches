@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 追加検証: B271–B290
 
 担当: B271–B290 追加担当
@@ -7,7 +9,7 @@
 ---
 
 スクリプト: scripts/round5_b271_s1.py, scripts/round5_b271_b290.py
-データ: research/verification/round5_b271_s1.json, round5_b271_b290.json
+データ: research/experiments/original-claims/output/round5_b271_s1.json, round5_b271_b290.json
 
 ## B271 [存在] 石を多く置きやすくすると二点の相関の符号が変わる
 - 判定: **SUPPORTED**（弱化形 n=4）（前回: PARTIAL → 今回: SUPPORTED）
@@ -55,7 +57,8 @@
 - 判定: **PARTIAL**（分数双対が有限の上界を与えるが K_n に一致しない）（前回: PARTIAL → 今回: PARTIAL）
 - 前回の一手: 「容量制約の線形計画緩和（Fractional LP）自体を解いていない。」
 - 今回の範囲: n=4,5,6 の盤上で**高々 4 点以上を含む円・直線を全列挙**し、「Σ_{p∈c} x_p ≤ 3, 0≤x_p≤1」の分数緩和を厳密有理数（n=4,5）/ 倍精度（n=6）で解いた。K_n は max_safe_size() で再計算し既知値と一致。
-- 証拠: n=4: キャリア 69（直線 22+円 47 相当、詳細は JSON）、**分数最適 15/2 = 7.5**、K_4=7。n=5: キャリア 233、**分数最適 23/2 = 11.5**、K_5=9。n=6: キャリア 644（直線 22、円 622）、**分数最適 15.0**、K_6=11。各キャリアサイズのヒストグラムと x の分数解は JSON (ound5_b271_s2lp.json)。
+- 証拠: n=4: キャリア 69（直線 22+円 47 相当、詳細は JSON）、**分数最適 15/2 = 7.5**、K_4=7。n=5: キャリア 233、**分数最適 23/2 = 11.5**、K_5=9。n=6: キャリア 644（直線 22、円 622）、**分数最適 15.0**、K_6=11。各キャリアサイズのヒストグラムと x の分数解は JSON (
+ound5_b271_s2lp.json)。
 - 残った障害: 分数双対の最適値は K_n に**一致しない**（0.5〜4.0 のギャップ）。「K_n の鋭い上限」を単一キャリア容量の重みだけで得ることは n=4,5,6 で**不可能**だった。B290 の上乗せ制約が要る。
 
 ## B289 [存在] 容量上限が同じでも整数配置では達成不能になる
@@ -185,7 +188,10 @@
 
 ## データ・スクリプト
 
-- scripts/round5_b271_s1.py → ound5_b271_s1.json（相関・熱力学・多変数 Z）
-- scripts/round5_b271_s2lp.py → ound5_b271_s2lp.json（容量 LP）
+- scripts/round5_b271_s1.py → 
+ound5_b271_s1.json（相関・熱力学・多変数 Z）
+- scripts/round5_b271_s2lp.py → 
+ound5_b271_s2lp.json（容量 LP）
 - scripts/round5_b271_n6lp.py → n=6 浮動小数 LP と B285
-- scripts/round5_b271_s2geom.py → ound5_b271_s2geom.json（B281/B283 証人）
+- scripts/round5_b271_s2geom.py → 
+ound5_b271_s2geom.json（B281/B283 証人）

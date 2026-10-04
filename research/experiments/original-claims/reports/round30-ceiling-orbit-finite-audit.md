@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B325/B326：7×7の天井・軌道の有限監査
 
 原文の両命題はPARTIALのまま。B325は絶対定数余裕でh→∞となる族を要求し、
@@ -24,5 +26,5 @@ B325に関係する、g=hの局面の最小`|L|−h`は次のとおり。
 照合し、全層の天井数・最小余裕が一致した。4×4には安定化群位数4以上の天井局面が
 二つあり、双方にサイズ2以下の勝ち手がある。7×7でその前件が消えたことを全盤へ外挿しない。
 
-[集計とSHA256](round30_ceiling_audited.json)、[7×7層別集計](round30_n7_ceiling.json)、
-[DP](scripts/round30_ceiling_orbits.cpp)、[独立小盤検算](scripts/round30_ceiling_verify.py)。
+[集計とSHA256](../output/round30_ceiling_audited.json)、[7×7層別集計](../output/round30_n7_ceiling.json)、
+[DP](../scripts/round30_ceiling_orbits.cpp)、[独立小盤検算](../scripts/round30_ceiling_verify.py)。

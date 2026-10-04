@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 8–14 — consolidated main result (n=7 K=14 structure)
 
 Branch `cycle8-n7-structure`, base `2d3855a`.
@@ -98,14 +100,14 @@ full n=8 classification; K9; full Grundy n=7.
    (`CYCLE9H_K9_128BIT_DESIGN.md`); no long UNSAT from design alone.
 
 ## File index
-- `night-research/CYCLE8_N7_STRUCTURE.md` — cycle 8 narrative
-- `night-research/CYCLE8_11_MAIN_RESULT.md` — this family of summaries
-- `night-research/CYCLE10_OCCUPANCY_SELECTION.md`
-- `night-research/CYCLE11_ORBIT_NECESSITY.md`
-- `night-research/CYCLE12_K13_LAYER.md`, `CYCLE12_OMIT_MANDATORY.md`
-- `night-research/CYCLE14_CAPACITY_NEIGHBORHOOD.md`
-- `night-research/CYCLE14H_N8_CONSTRAINED.md`
-- `night-research/CYCLE15_CAPACITY_DECOMPOSITION.md`
-- `night-research/CYCLE9_G1_NOTES.md`, `CYCLE9_G2_NOTES.md`
-- `night-research/CYCLE9H_K9_128BIT_DESIGN.md`
-- `docs/compose/spec/cycle8-n7-structure-explain.md`
+- `research/log/discovery-cycles/CYCLE8_N7_STRUCTURE.md` — cycle 8 narrative
+- `research/log/discovery-cycles/CYCLE8_11_MAIN_RESULT.md` — this family of summaries
+- `research/log/discovery-cycles/CYCLE10_OCCUPANCY_SELECTION.md`
+- `research/log/discovery-cycles/CYCLE11_ORBIT_NECESSITY.md`
+- `research/log/discovery-cycles/CYCLE12_K13_LAYER.md`, `CYCLE12_OMIT_MANDATORY.md`
+- `research/log/discovery-cycles/CYCLE14_CAPACITY_NEIGHBORHOOD.md`
+- `research/log/discovery-cycles/CYCLE14H_N8_CONSTRAINED.md`
+- `research/log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md`
+- `research/log/discovery-cycles/CYCLE9_G1_NOTES.md`, `CYCLE9_G2_NOTES.md`
+- `research/log/discovery-cycles/CYCLE9H_K9_128BIT_DESIGN.md`
+- `research/archive/presentation-specs/cycle8-n7-structure-explain.md`

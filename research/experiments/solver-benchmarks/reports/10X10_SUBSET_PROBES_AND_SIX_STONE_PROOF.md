@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 subset probes and a verified six-stone LOSS proof
 
 This experiment continues downward from the legal eight-stone LOSS root
@@ -32,7 +34,7 @@ Measured ranges on a GitHub-hosted Ubuntu runner:
 | Peak RSS | 640,368 KiB | 756,208 KiB |
 
 The complete table is
-[`results/10x10/seven-stone-subsets-of-medium-loss.csv`](../results/10x10/seven-stone-subsets-of-medium-loss.csv).
+[`results/10x10/seven-stone-subsets-of-medium-loss.csv`](../../../../results/10x10/seven-stone-subsets-of-medium-loss.csv).
 
 ## Six-stone subsets
 
@@ -64,7 +66,7 @@ Batch measurements:
 | Peak RSS | 961,256 KiB |
 
 The complete per-root table is
-[`results/10x10/six-stone-subsets-of-medium-loss.csv`](../results/10x10/six-stone-subsets-of-medium-loss.csv).
+[`results/10x10/six-stone-subsets-of-medium-loss.csv`](../../../../results/10x10/six-stone-subsets-of-medium-loss.csv).
 
 The `memo` and `solver_seconds` columns in that CSV are cumulative because the
 28 roots were processed by one solver instance. `visited` is the number of new
@@ -118,7 +120,7 @@ full independent validation.
 | Root outcome | LOSS |
 
 The detailed machine-readable record is
-[`results/10x10/six-stone-loss-proof-90-61-2-73-69-66.csv`](../results/10x10/six-stone-loss-proof-90-61-2-73-69-66.csv).
+[`results/10x10/six-stone-loss-proof-90-61-2-73-69-66.csv`](../../../../results/10x10/six-stone-loss-proof-90-61-2-73-69-66.csv).
 
 The first captured compressed certificate has SHA-256:
 

@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 4×m・q=7 も閉じる：真の安定化長は 13
 
 作成: 2026-10-03。再現コード:
-[`verification/scripts/q48_nearby_q7_threshold.py`](verification/scripts/q48_nearby_q7_threshold.py)。
-出力: [`verification/q48_nearby_q7_threshold.json`](verification/q48_nearby_q7_threshold.json)。
+[`verification/scripts/q48_nearby_q7_threshold.py`](../scripts/q48_nearby_q7_threshold.py)。
+出力: [`verification/q48_nearby_q7_threshold.json`](../output/q48_nearby_q7_threshold.json)。
 
 ## 結論
 
@@ -237,8 +239,8 @@ y=3 &: \{5,6,7,8,9,10\}.
 ## 再現
 
 ```bash
-python research/verification/scripts/q48_nearby_q7_threshold.py
+python research/experiments/fixed-width/scripts/q48_nearby_q7_threshold.py
 ```
 
 Python標準ライブラリのみ。全平方判定・幾何判定は整数演算である。
-結果は `research/verification/q48_nearby_q7_threshold.json` に再生成される。
+結果は `research/experiments/fixed-width/output/q48_nearby_q7_threshold.json` に再生成される。

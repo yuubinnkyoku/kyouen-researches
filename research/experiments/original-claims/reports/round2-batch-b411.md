@@ -1,14 +1,16 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch B411–B440: 最大配置データ・最短路
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B411〜B440 のみ。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B411〜B440 のみ。
 手法: 既存データ（`results/discovery_full_board_forbid_-1.json` の 903 成分、
 `discovery_corridor_static_certificate.json` の 21 被覆・6460 候補、
-`night-research/maxsafe_n7_K14.bin` の 16 最大集合、batch06 の孤立 12 石 5 例）を優先し、
+`research/experiments/structural-discovery/output/maxsafe_n7_K14.bin` の 16 最大集合、batch06 の孤立 12 石 5 例）を優先し、
 n≥7 の再全列挙は行わない。整数ビットマスクのみ。
-スクリプト: `scripts/round2_b411_paths.py`, `round2_b411_followup.py`,
+スクリプト: `../scripts/round2_b411_paths.py`, `round2_b411_followup.py`,
 `round2_b421_components.py`, `round2_b431_cover.py`, `round2_b411_followup2.py`,
 `round2_b411_strict.py`, `round2_b421_strict.py`, `round2_b422_cycle.py`。
-数値出力: `round2_b411.json`。
+数値出力: `../output/round2_b411.json`。
 
 用語: A = `[0,1,5,8,9,19,20,24,26,28,38,39,41,42]`（中心 24 を含む）、
 B = `[0,5,6,8,9,17,19,25,27,28,38,39,42,46]`（中心なし）、
@@ -200,7 +202,7 @@ B = `[0,5,6,8,9,17,19,25,27,28,38,39,42,46]`（中心なし）、
 - 範囲: U 内 59 禁止 4 点組、候補 6,460 個（|S|≥13, d∈{2,3}）を既存定義どおり完全再生成。
 - 証拠: 21 個の整数被覆を明示し、さらに分数双対の厳密証明書で下界 `102/5 = 20.4` を得た。
   整数被覆数は整数なので `ceil(20.4)=21`。上界 21 と一致し、**整数最小被覆数は正確に21**。
-  証明書は `round2_b431_lp_exact.json`、純粋整数検証は `scripts/round2_b431_lp_exact.py`。
+  証明書は `../output/round2_b431_lp_exact.json`、純粋整数検証は `../scripts/round2_b431_lp_exact.py`。
 - メモ: ILP の数値結果に依存せず、分母 5/10 の有理 primal/dual 証明書だけで最適性を再検証できる。
 
 ## B432 [存在] 分数被覆緩和だけで下界21が出る

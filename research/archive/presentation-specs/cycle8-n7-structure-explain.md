@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 ---
 feature: cycle8-n7-structure-explain
 status: delivered
@@ -17,7 +19,7 @@ D4-orbit sample. Independent verification (`cycle8_verify_lemmas.py`) passed
 all checks. Package B added COMPLETE constrained counts via
 `cycle8_b_maxsafe.exe`.
 
-Main delivered lemmas (see `night-research/CYCLE8_N7_STRUCTURE.md`):
+Main delivered lemmas (see `research/log/discovery-cycles/CYCLE8_N7_STRUCTURE.md`):
 1. Unique D4 class of 5→5 phase exchange; 9/5/5 split; center XOR {(0,3)+2×(2,3)}.
 2. All 224 thirteen-subsets of the 16 max sets have unique completion →
    single-stone paths between distinct max sets must drop to size ≤12.
@@ -73,15 +75,15 @@ lemma, e.g.
 
 `git worktree add` is blocked by the session shared-registry guard (same as
 Cycle 4). Work proceeds on branch `cycle8-n7-structure` in the active
-checkout, additive under `night-research/` + `results/` + `docs/compose/spec/`.
+checkout, additive under `research/experiments/structural-discovery/output/` + `results/` + `docs/compose/spec/`.
 Do not rebase/merge/cherry-pick other branches. Do not modify the shared
 worktree registry.
 
 ### Inherited facts (do not re-enumerate)
 
 Base commit `2d3855a`. Inputs only:
-- `night-research/maxsafe_n7_K14.bin` — 16 sets, K=14, complete
-- `night-research/maxsafe_n6_K11.bin` — 464 sets, K=11, complete
+- `research/experiments/structural-discovery/output/maxsafe_n7_K14.bin` — 16 sets, K=14, complete
+- `research/experiments/structural-discovery/output/maxsafe_n6_K11.bin` — 464 sets, K=11, complete
 - `results/maxsafe_exchange_n{6,7}.csv` — ρ, τ, D4 keys
 - `results/maxsafe_pair_distance_n7.csv` — all 120 pair distances
 - `results/maxsafe_orbit_profile_n7.csv` — A/B cell-orbit occupancy
@@ -139,9 +141,9 @@ UNSAT.
 
 ### Deliverables
 
-- `night-research/cycle8_*.py` analysis scripts (reproducible)
+- `research/experiments/structural-discovery/output/cycle8_*.py` analysis scripts (reproducible)
 - `results/cycle8_*.json` / csv artifacts
-- `night-research/CYCLE8_N7_STRUCTURE.md` — main report with lemmas
+- `research/log/discovery-cycles/CYCLE8_N7_STRUCTURE.md` — main report with lemmas
 - This spec finalized with Report + task checkboxes
 - Commits on `cycle8-n7-structure` only
 
@@ -162,4 +164,4 @@ UNSAT.
 - [x] T4: C determining sets — acceptance: for each of 16 n=7 sets, min determining |D| with witness D; A/B comparison (covers: S2.C)
 - [x] T5: D n=6 contrast — acceptance: same invariants on 464 n=6 sets; table of universal-n=7 vs n=6 failure counts (covers: S2.D)
 - [x] T6: E/F/G opportunistic — acceptance: only if A–D strong; sample stats or design notes with clear sample-size labels (covers: S2.E). Delivered: n=8 D4-orbit SAMPLE (ρ=1, (2,2) used) labeled sample-only; F/G skipped as instructed after A–D strength.
-- [x] T7: Verify + review + finalize — acceptance: independent scripts pass; reviewer criticals fixed; report+spec committed (covers: S2). Review 2026-09-19: `cycle8_verify_lemmas.py` all PASS; no critical errors; non-critical report fixes in `night-research/cycle8_review_notes.md`
+- [x] T7: Verify + review + finalize — acceptance: independent scripts pass; reviewer criticals fixed; report+spec committed (covers: S2). Review 2026-09-19: `cycle8_verify_lemmas.py` all PASS; no critical errors; non-critical report fixes in `research/log/discovery-cycles/cycle8_review_notes.md`

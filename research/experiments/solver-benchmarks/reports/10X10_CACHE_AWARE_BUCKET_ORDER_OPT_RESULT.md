@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 cache-aware bucket-order optimization — final result
 
 Branch: `preregister-10x10-cache-aware-bucket-order-optimization`
 Base: `e9d0460b55b7f058379da2a843ecea33525b86ea`
-Prereg text: `83e1b6d5f546b8d85a703fc536619f1a46bf32c8` (docs/10X10_CACHE_AWARE_BUCKET_ORDER_OPT_PREREG.md)
+Prereg text: `83e1b6d5f546b8d85a703fc536619f1a46bf32c8` (research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BUCKET_ORDER_OPT_PREREG.md)
 Machine-readable freeze: `e595a404c346b80c0252761113b381c3bda84321` (results/10x10/cache-aware-bucket-order-optimization/prereg.json)
 Status: **COMPLETED — semantic parity PASS, timing primary endpoint FAIL (negative result)**
 

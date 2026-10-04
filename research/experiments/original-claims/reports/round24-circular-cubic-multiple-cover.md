@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B356成立・B357反証: 二次被覆を持つ空点を線形個作る整数格子の無限族
 
 作成: 2026-09-30。
 **B356 SUPPORTED、B357 REFUTED（ともに原文の量化を満たす一般構成）。**
-原文: [B356・B357](../hypothesis-bank-round2-2026-09-27.md)。
+原文: [B356・B357](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 原文索引の照合による追記: B356は既に[round5](round5-quadratic-cover.md)、
 B357は既に[round7](round7-parabola-cover.md)の一般構成で決着していた。
@@ -125,7 +127,7 @@ q_cを中心に反転したSも安全である。
 
 ## 5. 独立な整数・有理検算
 
-[検算コード](scripts/round24_circular_cubic.py)は探索・共通幾何をimportせず、
+[検算コード](../scripts/round24_circular_cubic.py)は探索・共通幾何をimportせず、
 平行移動後の整数3×3行列式で安全性と被覆を直接判定する。
 m=1,2,3で、整数化した全四石組を検査し、全対象q_cに対する全三石組で
 「行列式零⇔指数和c」を完全照合した。m≤2では反転後の全四石組も有理数で直接検査した。
@@ -138,11 +140,11 @@ m=1,2,3で、整数化した全四石組を検査し、全対象q_cに対する�
 
 正負の指数を混ぜた別の12点でも、全495四点組で
 「四点共円・共線⇔指数和0」を直接照合した。
-[検算JSON](round24_circular_cubic_verified.json)に整数盤サイズ、全石座標、全空点座標、
+[検算JSON](../output/round24_circular_cubic_verified.json)に整数盤サイズ、全石座標、全空点座標、
 被覆数、検査数、ソースSHA-256を保存した。
 一般的な成立根拠は第1〜4節の式と構成であり、この有限表の傾向ではない。
 
-    python research/verification/scripts/round24_circular_cubic.py
+    python research/experiments/original-claims/scripts/round24_circular_cubic.py
 
 以前の小盤でのb/k²の減少や、極大集合に限った高被覆点数の測定は、
 盤サイズ無制限の安全集合を扱うB356/B357の量化を覆わない。

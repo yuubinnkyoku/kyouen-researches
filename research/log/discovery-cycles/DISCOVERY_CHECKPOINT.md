@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 自動再開用チェックポイント
 
 専用worktree：`C:/Users/yuubi/.codex/worktrees/nontrivial-discovery/kyouen-1-to-9-classification`
@@ -29,7 +31,7 @@
 
 ## 再検証
 
-`python night-research/verify_corridor_discovery.py`
+`python research/experiments/structural-discovery/scripts/verify_corridor_discovery.py`
 
-証明書は `results/discovery_*.json`、探索と独立検証は `night-research/*corridor*.py`。
+証明書は `results/discovery_*.json`、探索と独立検証は `research/experiments/structural-discovery/output/*corridor*.py`。
 元のユーザー作業ディレクトリは変更していない。

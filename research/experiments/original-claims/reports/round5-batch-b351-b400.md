@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B351-B400（飽和・埋め込み）
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B351〜B400 未解決分。
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B351〜B400 未解決分。
 スクリプト: scripts/round5_b351_*
-データ: research/verification/round5_b351_*.json / 既存 round4_b371.json, round5_cover_union.json, round2_b351.json, round2_b381.json, round3_chunk6_cover.json
+データ: research/experiments/original-claims/output/round5_b351_*.json / 既存 round4_b371.json, round5_cover_union.json, round2_b351.json, round2_b381.json, round3_chunk6_cover.json
 
 対象ID: B351-B356, B358-B360, B363, B365-B366, B370, B376-B377, B379-B380, B382, B384-B386, B388, B390, B400
 
@@ -70,7 +72,8 @@
 ## B365 [統計] 最大集合でも故障耐性の高い配置は変形しにくい
 - 判定: **SUPPORTED**（前回: NOT-CHECKED → 今回: SUPPORTED、n=6 K=11 全 464 で ρ=2 ならば一石移動次数 0）
 - 前回の一手: 「ρ=2 群（n=5 k=9 の 16 件と n=6 k=10/11 の 336 件）で swap 近傍の大きさを測れば可」
-- 今回の範囲: esults/maxsafe_exchange_n6.csv（n=6 K=11 最大集合 **464 全数**）と maxsafe_exchange_n7.csv（n=7 K=14 の 16 全数）の rho / swap_pairs / tau1_empty を再集計。同一盤・同一 K で ρ だけが異なる群を比較。
+- 今回の範囲: 
+esults/maxsafe_exchange_n6.csv（n=6 K=11 最大集合 **464 全数**）と maxsafe_exchange_n7.csv（n=7 K=14 の 16 全数）の rho / swap_pairs / tau1_empty を再集計。同一盤・同一 K で ρ だけが異なる群を比較。
 - 証拠: **n=6 K=11**: ρ=1 が 296 件、一石移動（swap）次数の平均 **2.054**（ヒストグラム {1:136, 2:80, 3:40, 4:16, 5:16, 6:8}）。ρ=2 が 168 件、swap 次数は **全件 0**（平均 0.000）。**n=7 K=14**: ρ=2 が 16 件、swap 次数も全件 0。τ=1 の空点数（tau1_empty）も ρ=1 で平均 1.62、ρ=2 で 0。→ **ρ が高いほど一石移動次数が小さく、ρ=2 では完全に剛性（0 交換）**。「変形しにくい」は n=6,7 の最大集合族で完全に成立。
 - 残った障害: 原文の「b の平均をそろえても」の条件は未統制（K と n は揃っているが、平均 b は ρ 群間で未調整）。効果量が 2.05 vs 0.00 と極端なので、平均 b を揃えても結論が変わるとは考えにくいが厳密な層化解析は未実施。
 
@@ -210,9 +213,11 @@
 - **B351/B352**: k=8 極大 408 の δ_min=10 / δ/k²=0.156 を追加
 
 ### 新規計算
-- scripts/round5_b351_multi.py → ound5_b351_multi.json
+- scripts/round5_b351_multi.py → 
+ound5_b351_multi.json
 - 8 石極大 408 の一重被覆点の辺/内部分類、sum_b 23 グループ、外点 8 型、遠方禁止理由、3-out 2-in 縮小候補 38 万通り、9×9 埋め込み探索
-- esults/maxsafe_exchange_n6.csv / 
+- 
+esults/maxsafe_exchange_n6.csv / 
 7.csv の rho × swap_pairs 再集計
 
 ### 禁止事項の遵守

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 blind probe: batch0 selection-bias audit
 
 最終更新: 2026-09-07
@@ -6,7 +8,7 @@
 
 既存の blind probe 追試で用いられた `solver既定順` との比較には、batch0 の作り方に由来する選択バイアスがある。
 
-`docs/10X10_PROBE_BLIND_VALIDATION.md` では、各3-stone parentについて children を入力順に分割し、まず **先頭20 children (= batch0)** だけを exact solve している。一方、同報告書の `solver既定順` は **children入力ファイル順** と定義されている。
+`research/experiments/solver-benchmarks/reports/10X10_PROBE_BLIND_VALIDATION.md` では、各3-stone parentについて children を入力順に分割し、まず **先頭20 children (= batch0)** だけを exact solve している。一方、同報告書の `solver既定順` は **children入力ファイル順** と定義されている。
 
 したがって主評価7親は、実質的に
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 below-root fixed-parent measurement
 
 This note records the first independent-process run of the fixed four three-stone parents from Actions run `34472681351`, commit `5ea6b0d75a11c54ebf0ca78969f550dfe89d12b6`.

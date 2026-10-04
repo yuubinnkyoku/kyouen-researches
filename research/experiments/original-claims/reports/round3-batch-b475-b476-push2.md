@@ -1,12 +1,14 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B475-B476
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B475 / B476（§48「点数が固定の円が
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B475 / B476（§48「点数が固定の円が
 共円四点数の正の割合を担う」／「四点寄与で重み付けすると円上点数は発散する」）。
 B475/B476 は同ファイル末尾の競合対リストに挙がる対（片方が外れると他方の材料になる）。
 スクリプト: scripts/round3_b475_mn.py（+ scripts/round3_b475_mn_asymptotic.py の docstring のみ参照）
-データ: research/verification/round3_b475_mn.json（task: "B475/B476 circle lattice-size spectrum
+データ: research/experiments/original-claims/output/round3_b475_mn.json（task: "B475/B476 circle lattice-size spectrum
 M(n) for n=3..20"）。**既存計算を再実行せず、JSON を python で読んで判定した。**
-交差検証: research/exploration/fact_circle_spectrum_n6_n7_n11.json / _n8_n9_n10.json
+交差検証: research/experiments/fact-discovery/output/fact_circle_spectrum_n6_n7_n11.json / _n8_n9_n10.json
 （n=6..11 の H ヒストグラム・C_n が round3_b475_mn.json と完全一致。先行ワーカーの数値を
 鵜呑みにせず既存の確定データと突き合わせて確認した。）
 
@@ -17,7 +19,7 @@ M(n) for n=3..20"）。**既存計算を再実行せず、JSON を python で読
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。ただし「分水嶺」を n=7..20 で特定できた）
 - 前回の一手（round2-batch-b471.md「有望な次の一手」2）: 「B475/B476: n=7..10 の円スペクトル
   （M(n) が伸びるか）で競合を決める。」→ **今回は n=20 までスペクトルが揃ったので決着材料は揃った。**
-- 今回の範囲: 既存 JSON `round3_b475_mn.json` の n=3..20 全面（重解は n=3..6、
+- 今回の範囲: 既存 JSON `../output/round3_b475_mn.json` の n=3..20 全面（重解は n=3..6、
   新規は n=7..20）。判定式は
   `f_n(m0) = (Σ_{m≤m0} C(m,4) H_n[m]) / C_n`、`C_n = Σ_m C(m,4) H_n[m]`、
   `H_n[m]` = 盤内にちょうど m 格子点を持つ円の個数。
@@ -71,7 +73,7 @@ M(n) for n=3..20"）。**既存計算を再実行せず、JSON を python で読
   n=20 のデータで外れた）
 - 前回の一手（round2-batch-b471.md B476 メモ）: 「『任意の固定 m 以下が確率 0』には n≥10 級の
   スペクトルが必要。**M(n) が 8 で頭打ちか（n=4..6 では 8）伸びるかが分水嶺。**」→ 判定済み。
-- 今回の範囲: 既存 JSON `round3_b475_mn.json` の n=3..20 全面。
+- 今回の範囲: 既存 JSON `../output/round3_b475_mn.json` の n=3..20 全面。
   `P_le_by_m0` の定義は `1 - f_n(m0)`（= 四点組重みで m > m_0 である確率）、
   `weighted_mean_m_by_n` は `Σ m·C(m,4)·H_n[m] / C_n`。
 - 証拠（`B476.P_le_by_m0` と `weighted_mean_m_by_n` の実数値）:
@@ -116,7 +118,7 @@ M(n) for n=3..20"）。**既存計算を再実行せず、JSON を python で読
   ただし前回と状況が変わったのは一点: **前回は「M(n) が 8 で頭打ちなら B476 優勢」という予想
   だったが、M(n) は 8(n≤7) → 12(n=8..11) → 16(n=12..20) と伸びたにもかかわらず P(m>4) が
   プラトーに入る**という実測が得られた。前回の「分水嶺」は M(n) の伸長では決まらなかった。
-- 残った障害: ① **n≥21 のデータが無い**。`round3_b475_mn.json` の n は 3..20 が上限で、
+- 残った障害: ① **n≥21 のデータが無い**。`../output/round3_b475_mn.json` の n は 3..20 が上限で、
   スクリプト docstring でも n=20 (N=100, C(100,3)=161,700) が実行限界と明記されている。
   ② **m_0=4 のプラトーが真に定数で頭打ちか**、あるいは n=21..40 で再び減少する裂け目が
   残るのかを区別するデータが無い。③ そもそも f_n(4) の理論値（円が 3 格子点ごとに 1 個という

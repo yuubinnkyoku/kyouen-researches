@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3 検証共通指示書（第3回・未解決368件の決着）
 
 作成: 2026-09-27。対象: `PROTOCOL.md` の判定ラベルが `PARTIAL` / `INCONCLUSIVE` /
@@ -6,10 +8,10 @@
 ## あなたの仕事
 
 割り当てられた **特定の ID だけ** について判定を一段前に進め、
-`research/verification/round3-batch-<範囲>.md` に個票を書く。
+`research/experiments/original-claims/output/round3-batch-<範囲>.md` に個票を書く。
 
 他の ID には触らない。他のエージェントが並列で同じファイルを編集している。
-**書き込みは自分の担当ファイルと `research/verification/scripts/round3_<id>*.py` のみ。**
+**書き込みは自分の担当ファイルと `research/experiments/original-claims/scripts/round3_<id>*.py` のみ。**
 
 ## 判定ラベル（必ず1つ）
 
@@ -27,9 +29,9 @@
 
 ## 検証の手段（優先順）
 
-1. **既存データ照合** — `research/verification/*.json`, `night-research/*.json`,
-   `research/exploration/*.json`, `research/findings.md`, `docs/` にある確定結果。
-2. **小盤厳密計算** — Python。コアは `research/verification/scripts/kyouen_core.py`
+1. **既存データ照合** — `research/experiments/original-claims/output/*.json`, `research/experiments/structural-discovery/output/*.json`,
+   `research/experiments/fact-discovery/output/*.json`, `research/archive/hypothesis-ledgers/findings.md`, `docs/` にある確定結果。
+2. **小盤厳密計算** — Python。コアは `scripts/research/kyouen_core.py`
    を import して使う（整数行列式、点 id = `y*n+x`、bitmask 安全集合、
    `board_square(n)`, `board_rect(w,h)`, `board_square_minus(n, deleted)`,
    `solve_outcomes()`, `solve_grundy()`, `is_maximal()`, `max_safe_size()`）。
@@ -49,8 +51,8 @@
   LP/ILP が要る場合（例: 最小被覆 B431–B434）は scipy の `linprog`/`milp`、
   pulp は使わない。simple-simplex / 分岐限界を **pure-Python で自前実装**する。
   参考: B432 の前回メモ「scipy 不在のため LP 未解」— 今回こそこの障害を解消すること。
-- 実行: `python research/verification/scripts/<name>.py`（作業ディレクトリはリポジトリ根）。
-- **スクリプトは `research/verification/round3_<担当ID>.json` に結果を JSON で吐かせる。**
+- 実行: `python research/experiments/original-claims/scripts/<name>.py`（作業ディレクトリはリポジトリ根）。
+- **スクリプトは `research/experiments/original-claims/output/round3_<担当ID>.json` に結果を JSON で吐かせる。**
   md には結論と要点だけ書く。
 
 ## 禁止事項
@@ -70,7 +72,7 @@
 
 対象: research/hypothesis-bank-*.md の Baaa〜Bbbb。
 スクリプト: scripts/round3_<name>.py
-データ: research/verification/round3_<name>.json
+データ: research/experiments/original-claims/output/round3_<name>.json
 
 ## Baaa [種別] 原文の要約
 - 判定: **LABEL**（前回: PARTIAL → 今回: LABEL に変化、等）

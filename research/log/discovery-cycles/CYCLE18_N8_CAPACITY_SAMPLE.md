@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 18 — n=8 capacity SAMPLE (node-capped)
 
 `cycle8_b_maxsafe.exe max 8 … --known-upper 15 --max-nodes 3e6` (**incomplete**):
@@ -18,4 +20,4 @@ corner) reach size 15 in capped runs.
 ## Artifacts
 - session exe logs; prior `results/cycle8_h_n8_sample.json`,
   `results/cycle14h_n8_witnesses.json`, `results/cycle15h_n8_occ.json`
-- `night-research/CYCLE14H_N8_CONSTRAINED.md`
+- `research/log/discovery-cycles/CYCLE14H_N8_CONSTRAINED.md`

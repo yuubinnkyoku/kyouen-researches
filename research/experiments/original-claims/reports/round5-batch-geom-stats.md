@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: 幾何統計・相関（B402–B500 未解決）
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の幾何統計・円センサス残・三角形と nimber。
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の幾何統計・円センサス残・三角形と nimber。
 スクリプト: scripts/round5_geom_stats.py, scripts/round5_geom_stats_diag.py
-データ: research/verification/round5_geom_stats.json, round5_geom_stats_extra.json,
+データ: research/experiments/original-claims/output/round5_geom_stats.json, round5_geom_stats_extra.json,
   既存 round3_b451_census.json / round3_b475_mn.json / round2_b411.json / round2_b471.json /
   round2_b381.json / round3_b451_b457_derived.json
 
@@ -38,7 +40,7 @@ n≥7 の p_rand 全計算・全列挙は行わない。小標本相関を一般
 ## B405 [存在] 特定点を多く示す方が別相を選びやすくなる
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。データ欠のまま）
 - 前回の一手: 「近最大配置の列挙と確率モデルの構築」
-- 今回の範囲: `round2_b381.json` / `round2_b411.json` に B405 キーなしを再確認。
+- 今回の範囲: `../output/round2_b381.json` / `../output/round2_b411.json` に B405 キーなしを再確認。
 - 証拠: なし。13 石 C(49,13)=5.8×10^10 の全列挙は禁止事項（n=7 以上）に触れる。
   K=14 の 16 集合からの 13 石部分集合 224 個の擬似計数では「最尤相」が恣意的になる。
 - 残った障害: 観測点数増加に伴う最尤相の切替を測る事前分布モデルが無い。
@@ -72,7 +74,7 @@ n≥7 の p_rand 全計算・全列挙は行わない。小標本相関を一般
 ## B410 [統計] 最大配置のD4型数より共起行列の有効ランクが変形障壁を説明する
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。型数 22→2 とランク 15 の乖離を再確認）
 - 前回の一手: 「複数 n の比較」
-- 今回の範囲: `batch06_shape_rigidity.json` の n6/n7 occ_classes と B406 ランクの突合。
+- 今回の範囲: `../output/batch06_shape_rigidity.json` の n6/n7 occ_classes と B406 ランクの突合。
 - 証拠: n=6 は型数 **22**（464 集合）、n=7 は型数 **2**（class_sizes [8,8]）。
   共起ランクは n=7 で **15**。型数が 11 分の 1 に急減してもランクは二桁のまま。
   「型数よりランクが障壁を説明」の**方向**は一致するが、n=6 ランクが未計測のため
@@ -165,7 +167,7 @@ n≥7 の p_rand 全計算・全列挙は行わない。小標本相関を一般
 ## B456 [全称・大胆] 分母qを固定した最良点数は半径の単調増加だけでは達成できない
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。M_n の階段構造を n=4..12 で確定）
 - 前回の一手: 「q 固定で n_min_full が決まるかをコンフリクト数で見る」
-- 今回の範囲: `round3_b451_census.json` の n=4..12 の M_n / circles_by_q / quads_by_q を集計。
+- 今回の範囲: `../output/round3_b451_census.json` の n=4..12 の M_n / circles_by_q / quads_by_q を集計。
 - 証拠: M_n は n=4..7 で **8**、n=8..11 で **12**、n=12 で **16**。
   増加は 4 刻みの階段で、半径の連続的拡大ではなく「新しい算術型の出現」と整合。
   n=12 の quads_by_q では q=2 が 86,948（61.6%）、q=1 が 29,736（21.0%）、
@@ -180,7 +182,7 @@ n≥7 の p_rand 全計算・全列挙は行わない。小標本相関を一般
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。comparable m=4,8,12 で成立、
   m=6 で不成立の混合を既存 derived で確定。標本 m=4 種の限界を明示）
 - 前回の一手: 「完全円上点数をそろえて窓点数種類を q≤2 と q≥3 で比較」
-- 今回の範囲: `round3_b451_b457_derived.json` の B457_detail と
+- 今回の範囲: `../output/round3_b451_b457_derived.json` の B457_detail と
   `round5_geom_stats.json["B457_extra"]` を再集計。
 - 証拠: comparable m = [4,6,8,12]、holds = [4,8,12]。
   detail の [q≥3 の側の値, q≤2 の側, 平均, 最大, holds]:
@@ -308,7 +310,7 @@ n≥7 の p_rand 全計算・全列挙は行わない。小標本相関を一般
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。
   **m0=4 で n=13..20 の f_n が 0.215–0.220 に安定**。liminf>0 の有限形は強く支持）
 - 前回の一手: 「n とともに f_n(m0) が 0 へ落ちるかを測る」
-- 今回の範囲: `round3_b475_mn.json` の n=3..20 完全系列と、
+- 今回の範囲: `../output/round3_b475_mn.json` の n=3..20 完全系列と、
   `round5_geom_stats.json["B475_from_census"]`（census m_hist から C(m,4) 重みで再計算）。
 - 証拠: f_n(m0=4) = P(ランダム共円四点の円上盤点数 ≤ 4):
   | n | 3 | 4 | 5 | 8 | 11 | 13 | 15 | 17 | 20 |
@@ -327,7 +329,7 @@ n≥7 の p_rand 全計算・全列挙は行わない。小標本相関を一般
   **「任意の固定 m で P(m≤m)→0」の弱化版は m=4 で REFUTED 相当**。
   平均 m の増加（4.0→8.81）は残る）
 - 前回の一手: 「C_n 四点を一様に選んだときの円上点数分布」
-- 今回の範囲: 同 `round3_b475_mn.json` の P_le / weighted_mean_m 系列。
+- 今回の範囲: 同 `../output/round3_b475_mn.json` の P_le / weighted_mean_m 系列。
   ※ JSON の `P_le_by_m0` は f の補数（tail）であり、真の P(m≤m0) は f_n 側。
 - 証拠:
   - 主張の核「任意の固定 m で P(円上点数 ≤ m) → 0」に対し、**m=4 では 0 へ行かない**。

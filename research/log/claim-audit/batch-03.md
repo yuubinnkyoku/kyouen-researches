@@ -1,12 +1,14 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 03: B041-B060
 
 対象: 対称性・応答対合・見えない対称性 (B041-B050)、残余禁止ハイパーグラフ (B051-B060)。
 計算: n≤5 到達可能安全集合の全列挙 (n=5: 151,394 局面、既存 cycle5 と一致)。R(S)・P(S)・
 D4 安定化群・連結成分・Grundy を全局面で算出。Aut(Q_n) はバックトラックで厳密計算。
-スクリプト: `research/verification/scripts/residual_core.py`,
+スクリプト: `scripts/research/residual_core.py`,
 `compute_batch03_cache.py`, `batch03_tests.py`, `batch03_facts.py`。
-キャッシュ: `research/verification/batch03_cache.pkl`、
-結果抜粋: `research/verification/batch03_results.json`。
+キャッシュ: `research/experiments/original-claims/output/batch03_cache.pkl`、
+結果抜粋: `research/experiments/original-claims/output/batch03_results.json`。
 
 既知事実との照合: n=5 極大サイズ分布 `{5:4, 6:1136, 7:11280, 8:4340, 9:100}` は
 findings F-R と完全一致。禁止4点組数 1/14/194/826、空盤 g は

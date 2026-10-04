@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 Census ログ
 
 > 書出し・統合担当が `full_census.py` のスナップショットを時系列で追記。
@@ -6,7 +8,7 @@
 
 ## Snapshot 1 — 2026-09-29 00:40 (JST)
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ```
 全 600 仮説の状態
@@ -84,7 +86,7 @@ B501-B600: B504-B505, B507-B508, B510, B512-B514, B519-B520, B522-B524,
 
 ## Snapshot 2 — 2026-09-29 01:00 (JST)
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ```
 全 600 仮説の状態
@@ -167,7 +169,7 @@ B501-B600: B504-B505, B507-B508, B510, B512-B514, B519-B520, B522-B524,
 
 ## Snapshot 3 — 2026-09-29 01:15 (JST)
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ```
 全 600 仮説の状態
@@ -233,7 +235,7 @@ B501-B600: 決着  54 / 未解決  46
 
 ## Snapshot 4 — 2026-09-29 03:10 (JST)
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ```
 全 600 仮説の状態
@@ -301,7 +303,7 @@ B501-B600: 決着  53 / 未解決  47
 
 ## Snapshot 5 — 2026-09-29 04:25 (JST)
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ```
 全 600 仮説の状態
@@ -372,7 +374,7 @@ B501-B600: 決着  55 / 未解決  45
 
 ## Snapshot 6 — 2026-09-29 05:45 (JST)
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ```
 全 600 仮説の状態
@@ -444,7 +446,7 @@ B501-B600: 決着  55 / 未解決  45
 
 ## Snapshot 7 — 2026-09-29 10:30 (JST) — 第2波統合
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ``
 全 600 仮説の状態
@@ -507,9 +509,11 @@ B501-B600: 決着  61 / 未解決  39
 
 ### 注意点
 
-1. **B141**: ound5-batch-b142-docs.md に旧 REFUTED 行と訂正 SUPPORTED 行が併存。
+1. **B141**: 
+ound5-batch-b142-docs.md に旧 REFUTED 行と訂正 SUPPORTED 行が併存。
    census est() は同行ファイル内で行番号の小さい方（旧 REFUTED）を採る。
-   実体は ound4-collinear-asymptotic.md による SUPPORTED 訂正。
+   実体は 
+ound4-collinear-asymptotic.md による SUPPORTED 訂正。
 2. **B312**: 前波 SUMMARY は SUPPORTED と記載したが census は PARTIAL（弱化版のみ）。
 3. batch ファイルは他エージェントが執筆中。数値はスナップショット時点の値。
 
@@ -546,7 +550,7 @@ B501-B600: 決着  61 / 未解決  39
 
 ## Snapshot 8 — 2026-09-29 11:20 (JST) — 第2波 再統合
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ``
 全 600 仮説の状態
@@ -621,7 +625,7 @@ B405, B440, B457, B458, B460, B468
 
 ## Snapshot 9 — 2026-09-29 13:20 (JST) — 第3波 統合
 
-実行: `python research/verification/scripts/full_census.py`
+実行: `python research/experiments/original-claims/scripts/full_census.py`
 
 ```
 全 600 仮説の状態
@@ -690,7 +694,7 @@ B501-B600: 決着  61 / 未解決  39
 - B468: 弱化を A/B に割ると両方決着（原命題は PARTIAL）
 - B312: 弱化のみ SUPPORTED、原命題は PARTIAL のまま
 
-### n=8 の状況（`round5_n8_progress.md` / `round5_n8_memory_experiment.md`）
+### n=8 の状況（`round5_n8_progress.md` / `../../experiments/original-claims/reports/round5_n8_memory_experiment.md`）
 
 - **層サイズ確定**: safe subsets = 6,700,711,937、K = 15、ピーク L10 = 2,092,205,428
 - **列挙完了（永続ディスク `/home/yuubi/spill8`、1,291s）**。`/tmp` 消失後の再実行分
@@ -728,8 +732,11 @@ B401–500 残り: B405, B440, B457, B458, B460, B468
 ## Snapshot 10 (FINAL) — 2026-09-29 最終統合
 
 > 最終統合担当による最終スナップショット。
-> 弱化昇格（ound5-batch-weak-promote.md）・ound5-batch-final-43.md・
-> ound5-batch-last21.md により、残り 132 件を決着。
+> 弱化昇格（
+ound5-batch-weak-promote.md）・
+ound5-batch-final-43.md・
+> 
+ound5-batch-last21.md により、残り 132 件を決着。
 
 `
 全 600 仮説の状態
@@ -778,10 +785,13 @@ B501-B600: 決着 100 / 未解決   0
 
 | 手段 | 件数 | 出典 |
 |---|---:|---|
-| 弱化版昇格（SUPPORTED） | 20 | ound5-batch-weak-promote.md |
+| 弱化版昇格（SUPPORTED） | 20 | 
+ound5-batch-weak-promote.md |
 | 弱化版昇格（REFUTED） | 3 | 同上 |
-| final-43 弱化決着 | 43 | ound5-batch-final-43.md |
-| last21 フィニッシャー | 21 | ound5-batch-last21.md |
+| final-43 弱化決着 | 43 | 
+ound5-batch-final-43.md |
+| last21 フィニッシャー | 21 | 
+ound5-batch-last21.md |
 | 弱化バッチ残余 | 45 | b001-b200-weak / b501-b600-weak 等 |
 | **合計** | **132** | |
 
@@ -795,7 +805,8 @@ B501-B600: 決着 100 / 未解決   0
 ### 注意点（最終）
 
 1. **弱化版 SUPPORTED ≠ 原命題 SUPPORTED**。原命題が無界のものは
-   ound5-FINAL-SUMMARY.md §5 の理論課題として整理済み。
+   
+ound5-FINAL-SUMMARY.md §5 の理論課題として整理済み。
 2. B141 は実体 SUPPORTED（D_n は n^5 主項）。B142 は REFUTED（C_n は Θ(n^6)）。
 3. n=8 の p_rand は完走済み。漸近上限は 0.82〜0.85 付近の可能性。
 4. 全 600 件が SUPPORTED 443 / REFUTED 157 で決着。以降の追加検証は

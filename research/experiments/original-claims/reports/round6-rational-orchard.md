@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 有理配置の被覆欠損と実数配置との差 — B351・B353・B354・B355
 
 作成: 2026-09-28。担当チャット: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第2仮説バンク B351〜B355](../hypothesis-bank-round2-2026-09-27.md)。
+原文: [第2仮説バンク B351〜B355](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 | ID | 判定 | 今回確定した内容 |
 |---|---|---|
@@ -237,8 +239,8 @@ Theorem 1.5の第一・第二類型は、先と同じ直線上点数の制約で
 
 ## 7. 再現可能な有限照合
 
-再現: `python research/verification/scripts/round6_rational_orchard.py`。
-[スクリプト](scripts/round6_rational_orchard.py)、[整数証人と照合結果](round6_rational_orchard.json)。
+再現: `python research/experiments/original-claims/scripts/round6_rational_orchard.py`。
+[スクリプト](../scripts/round6_rational_orchard.py)、[整数証人と照合結果](../output/round6_rational_orchard.json)。
 
 - 既存の二次被覆族N=2,3,4,6,8,10,12について、各三つの有理中心で式(1)を独立照合した。
   反転後の全点対から通常直線・三点直線を正規化して数え、元の整数四点判定によるbと一致。

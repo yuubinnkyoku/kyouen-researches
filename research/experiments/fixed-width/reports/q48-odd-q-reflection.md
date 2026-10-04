@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 奇数 q の鏡映戦略：偶数マス長方形は全長で後手勝ち
 
 作成: 2026-10-03。再現:
-[`verification/scripts/q48_odd_q_reflection.py`](verification/scripts/q48_odd_q_reflection.py)、
-出力: [`verification/q48_odd_q_reflection.json`](verification/q48_odd_q_reflection.json)。
+[`verification/scripts/q48_odd_q_reflection.py`](../scripts/q48_odd_q_reflection.py)、
+出力: [`verification/q48_odd_q_reflection.json`](../output/q48_odd_q_reflection.json)。
 
 ## 一般定理
 
@@ -131,7 +133,7 @@ x^2+y^2-24y-25=0
 これらの有限計算は実装の確認であり、一般定理の根拠は上の証明である。
 
 ```bash
-python research/verification/scripts/q48_odd_q_reflection.py
+python research/experiments/fixed-width/scripts/q48_odd_q_reflection.py
 ```
 
 関連語（鏡映、反射、mirror、reflection、奇数q）によるリポジトリ内検索では、

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B343: 一つだけの三点制約で全勝ち手が交換される
 
 作成: 2026-09-30。**B343原文SUPPORTED。**
@@ -33,15 +35,15 @@ eを保持した標準継続ゲームはg=1、eだけを外したゲームはg=3
 
 ## 独立検算
 
-[探索器](scripts/round33_b343_search.cpp)は元座標の4×4整数行列式で標準盤を作り、
+[探索器](../scripts/round33_b343_search.cpp)は元座標の4×4整数行列式で標準盤を作り、
 Rを包含極小化してから圧縮ビットマスクの全部分集合DPを解いた。
-[検算器](scripts/round33_b343_verify.py)は平行移動後の3×3整数行列式から幾何を生成し直し、
+[検算器](../scripts/round33_b343_verify.py)は平行移動後の3×3整数行列式から幾何を生成し直し、
 円・直線占有数からLを求めた。Lの全256部分集合に対して、標準版の安全性を
 四点組包含判定・曲線占有数・部分集合内の全四点直接行列式の三方式で一致確認した。
 
 元版は47安全拡張、解除版は53安全拡張。
 異なる手順のメモ再帰で両版の真のmexと全初手の子mexを求め、C++の値と一致した。
-[証明書](round33_b343_verified.json)に全256部分集合の安全性、両版の全安全局面の値と子一覧、
+[証明書](../output/round33_b343_verified.json)に全256部分集合の安全性、両版の全安全局面の値と子一覧、
 各残余辺の元四点組証人、ソースSHA-256を保存した。
 全安全局面の値について局所mex条件も検査済み。
 
@@ -55,13 +57,13 @@ Rを包含極小化してから圧縮ビットマスクの全部分集合DPを�
 
 ## 再現
 
-    python research/verification/scripts/round33_b343_verify.py
+    python research/experiments/original-claims/scripts/round33_b343_verify.py
 
 探索の再現（bash、リポジトリ直下）:
 
-    g++ -O3 -std=c++20 research/verification/scripts/round33_b343_search.cpp -o /home/yuubi/round28_n7/round33_search
-    /home/yuubi/round28_n7/round33_search 6 research/verification/round33_b343_n6_sole.json 14 1
+    g++ -O3 -std=c++20 research/experiments/original-claims/scripts/round33_b343_search.cpp -o /home/yuubi/round28_n7/round33_search
+    /home/yuubi/round28_n7/round33_search 6 research/experiments/original-claims/output/round33_b343_n6_sole.json 14 1
 
 最後の引数1は、三点辺がちょうど一つの局面だけを候補にする指定である。
-- [6×6の発見記録](round33_b343_n6_sole.json)
-- [独立検算と全証明書](round33_b343_verified.json)
+- [6×6の発見記録](../output/round33_b343_n6_sole.json)
+- [独立検算と全証明書](../output/round33_b343_verified.json)

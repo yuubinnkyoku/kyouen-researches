@@ -1,17 +1,19 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch B561–B590: 生成関数・配置変更・部品構成
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B561〜B590（セクション57〜59）。
-手法: `PROTOCOL.md` に準拠。整数演算のみ。n≤5 完全列挙、n=6 は層サンプル、n=7 は既存 bin のみ。n≥7 の全探索なし。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B561〜B590（セクション57〜59）。
+手法: `../../../archive/claim-audit-history/PROTOCOL.md` に準拠。整数演算のみ。n≤5 完全列挙、n=6 は層サンプル、n=7 は既存 bin のみ。n≥7 の全探索なし。
 
 スクリプト:
-- `research/verification/scripts/round2_b561_fvec.py` — B561–B566（f_S、対数凹）
-- `research/verification/scripts/round2_b561_detail.py` — B564/B565 詳細、D4 軌道
-- `research/verification/scripts/round2_b561_homology.py` — B567/B568/B570（神経複体のホモロジー）
-- `research/verification/scripts/round2_b561_homology_scan.py` — B568 追加走査
-- `research/verification/scripts/round2_b561_exchange.py` — B571–B580（一点交換グラフ）
-- `research/verification/scripts/round2_b561_b575_b579.py` — B575 バグ修正 / B579 条件付き比較
-- `research/verification/scripts/round2_b561_residual.py` — B581–B590（残局部品）
-- 出力: `research/verification/round2_b561.json`
+- `research/experiments/original-claims/scripts/round2_b561_fvec.py` — B561–B566（f_S、対数凹）
+- `research/experiments/original-claims/scripts/round2_b561_detail.py` — B564/B565 詳細、D4 軌道
+- `research/experiments/original-claims/scripts/round2_b561_homology.py` — B567/B568/B570（神経複体のホモロジー）
+- `research/experiments/original-claims/scripts/round2_b561_homology_scan.py` — B568 追加走査
+- `research/experiments/original-claims/scripts/round2_b561_exchange.py` — B571–B580（一点交換グラフ）
+- `research/experiments/original-claims/scripts/round2_b561_b575_b579.py` — B575 バグ修正 / B579 条件付き比較
+- `research/experiments/original-claims/scripts/round2_b561_residual.py` — B581–B590（残局部品）
+- 出力: `research/experiments/original-claims/output/round2_b561.json`
 
 ---
 

@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B357の反証: 二次被覆を持つ空点が線形個ある格子配置
 
 作成: 2026-09-28。担当チャット: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第2仮説バンク B357](../hypothesis-bank-round2-2026-09-27.md)。
+原文: [第2仮説バンク B357](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 追記: [整数放物線による簡単な構成](round7-parabola-cover.md)で、同じ被覆を二次幅の盤へ収められた。
 以下の楕円構成と証明も有効だが、指数的盤幅は反証に必須ではない。
@@ -194,8 +196,8 @@ q/k=α∈[1,2]では一様に
 
 ## 6. 整数検算
 
-再現: `python research/verification/scripts/round7_ellipse_cover.py`。
-[コード](scripts/round7_ellipse_cover.py)、[全証人座標と被覆プロファイル](round7_ellipse_cover.json)。
+再現: `python research/experiments/original-claims/scripts/round7_ellipse_cover.py`。
+[コード](../scripts/round7_ellipse_cover.py)、[全証人座標と被覆プロファイル](../output/round7_ellipse_cover.json)。
 
 m=1,2,3,4,6,8について、以下を整数演算だけで検証する。
 

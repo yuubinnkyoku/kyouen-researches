@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round4 検証指示書 — C++（WSL）による決着
 
 作成: 2026-09-27。第3回（`ROUND3-PROTOCOL.md` / `round3-SUMMARY.md`）の残り
@@ -6,9 +8,9 @@
 ## 壊れた根本障碍は既に解消した
 
 第3回の未解決の多くは「Windows に C++ が無く pure-Python では間に合わない」ためだった。
-**WSL2 Ubuntu に g++ 13.3.0 / 16 コア / 19 GB がある。** 詳細は `WSL-BUILD.md`。
+**WSL2 Ubuntu に g++ 13.3.0 / 16 コア / 19 GB がある。** 詳細は `../../experiments/original-claims/reports/WSL-BUILD.md`。
 
-- 共有コア: `research/verification/scripts/kc_core.h`（**必ず #include して使う**）
+- 共有コア: `scripts/research/kc_core.h`（**必ず #include して使う**）
 - 自己検査済み: n=2..9 の禁止4点組数 F_n が既知の確定値と**完全一致**。
   K_n / 極大集合も既存記録と一致（n=5 の 8石極大 = 16,760、n=6 の 10石 = 349,132）。
   **(core は既に検証済み。書き直すな。)**
@@ -17,7 +19,7 @@
 
 ```bash
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-wsl -d Ubuntu -- bash -c "cd $REPO/research/verification/scripts && \
+wsl -d Ubuntu -- bash -c "cd $REPO/research/experiments/original-claims/scripts && \
   g++ -O2 -march=native -std=c++20 -o /tmp/x your.cpp && /tmp/x"
 ```
 
@@ -59,9 +61,9 @@ wsl -d Ubuntu -- bash -c "cd $REPO/research/verification/scripts && \
 
 ## 成果物
 
-- スクリプト: `research/verification/scripts/round4_<担当>.cpp`（または .py / .sh）
-- データ: `research/verification/round4_<担当>.json`（数値はここに。md は結論だけ）
-- 個票: `research/verification/round4-batch-<範囲>.md`
+- スクリプト: `research/experiments/original-claims/scripts/round4_<担当>.cpp`（または .py / .sh）
+- データ: `research/experiments/original-claims/output/round4_<担当>.json`（数値はここに。md は結論だけ）
+- 個票: `research/experiments/original-claims/output/round4-batch-<範囲>.md`
   書式は `ROUND3-WRITEOUT.md` の「判定の書き方」に従う。
 
 ## 最終回答（400字以内）

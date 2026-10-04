@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B382の完了: 7×7最大配置の最初の合法外点は二つのテンプレート
 
-作成: 2026-09-28。原文: [B382](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-28。原文: [B382](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 **判定: SUPPORTED（既存の全16最大配置を完全検証）。**
 B381のr(S)=2も再確認した。
 
@@ -31,7 +33,7 @@ B型の二点は、同じ向きの配置に対応する組として選ばれる�
 
 ## 完全性と検算
 
-入力は `night-research/maxsafe_n7_K14.bin` の16配置で、[前個票](round9-n7-n8-overlap.md)と同じ
+入力は `research/experiments/structural-discovery/output/maxsafe_n7_K14.bin` の16配置で、[前個票](round9-n7-n8-overlap.md)と同じ
 SHA256を持つ既存の完全リストを使用した。
 その二つのD4軌道との一致、各配置の唯一の変換、最初の二層の全外点を確認した。
 
@@ -41,6 +43,6 @@ SHA256を持つ既存の完全リストを使用した。
 
 これはn=7の有限命題の完了であり、一般のnで同じ三軌道やr=2を主張するものではない。
 
-再現: `python research/verification/scripts/round9_n7_outer_patterns.py`。
-[コード](scripts/round9_n7_outer_patterns.py)、[全16配置・二層の検証データ](round9_n7_outer_patterns.json)。
+再現: `python research/experiments/original-claims/scripts/round9_n7_outer_patterns.py`。
+[コード](../scripts/round9_n7_outer_patterns.py)、[全16配置・二層の検証データ](../output/round9_n7_outer_patterns.json)。
 実行は正常終了、全assert通過。

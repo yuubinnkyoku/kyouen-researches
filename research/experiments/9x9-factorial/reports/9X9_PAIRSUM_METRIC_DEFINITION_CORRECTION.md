@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 9x9 pair-sum metric definition correction
 
 Date: 2026-09-06
 
 This note corrects the interpretation of the 9x9 pair-sum/mobility section in
-`docs/MOVE_ORDERING_AUDIT.md` on branch `audit-blind-probe-and-move-ordering`.
+`research/experiments/solver-benchmarks/reports/MOVE_ORDERING_AUDIT.md` on branch `audit-blind-probe-and-move-ordering`.
 It does **not** change the 10x10 blind-probe audit or its corrected independent
 probe result.
 

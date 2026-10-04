@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 cache-aware below-root ordering — capacity-rescued rerun result
 
 Date: 2026-09-08
@@ -95,7 +97,7 @@ The one-bit enlargement was necessary and sufficient for this cohort.
 
 ## Provenance
 
-- Solver binary `tmp-kb/order_ab_native`
+- Solver binary `research/experiments/solver-benchmarks/bin/order_ab_native`
   SHA256 `a98ca5e41d67dfa988deaf491ff948cb4a82ae8596af8aea83376b9f259ebfd1`
   (built g++ (Ubuntu 13.3.0) -O2 -std=c++20, sources digest
   `3ab6c565bbfdae9e4bda2ca7eb00e20be54d9b4315616221d39389326c8e16a8`).

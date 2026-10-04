@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=11 (11x11) 勝敗探索 — 現状と結論
 
 > ## ⚠ 訂正（2026-09-29）
@@ -171,11 +173,11 @@ v ごとに集めて直接最終位置へ書き込めば、**辺配列が丸ご�
 ## ファイル
 
 - 状態空間測定: `N11-STATE-SPACE.md`
-- 2ワード列挙: `scripts/kc_core121.h`, `scripts/n11_enum121.cpp`
-- 2ワード Grundy: `scripts/n11_grundy.cpp`（n=6,7 で検証済み）
-- 交差検証: `scripts/n11_lvl2.cpp`（F_n の直接数え直し）
-- 1ワード旧版（**廃棄**）: `scripts/n11_probe.cpp`
-- OOM 分析: `scripts/n11_oom_analysis.py`
+- 2ワード列挙: `../../../../scripts/research/kc_core121.h`, `../scripts/n11_enum121.cpp`
+- 2ワード Grundy: `../scripts/n11_grundy.cpp`（n=6,7 で検証済み）
+- 交差検証: `../scripts/n11_lvl2.cpp`（F_n の直接数え直し）
+- 1ワード旧版（**廃棄**）: `../scripts/n11_probe.cpp`
+- OOM 分析: `../scripts/n11_oom_analysis.py`
 - ログ: `/tmp/n11_solve.log`, `/tmp/n11_121.log`（WSL 内、再起動で消失）
 
 ## 教训

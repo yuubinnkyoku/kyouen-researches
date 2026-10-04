@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 32 — cross-shell forbidden quads (COMPLETE local)
 
 A quad is *cross-shell* if its four points lie in ≥2 distinct D4 orbits

@@ -1,6 +1,8 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 共円ゲーム仮説バンク 検証プロトコル
 
-対象: `research/hypothesis-bank-2026-09-27.md` の B001〜B300。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md` の B001〜B300。
 目的: 各仮説について、既存データ・小規模計算・理論的考察で**可能な限り**判定を付ける。
 
 ## ルール（標準）
@@ -47,7 +49,7 @@
 
 ## 検証の優先順位
 
-1. **既存データ照合**: `night-research/*.json`, `cycle*-*.json`, `research/findings.md` にある確定結果と矛盾しないか
+1. **既存データ照合**: `research/experiments/structural-discovery/output/*.json`, `cycle*-*.json`, `research/archive/hypothesis-ledgers/findings.md` にある確定結果と矛盾しないか
 2. **小盤厳密計算**: n≤5 は完全列挙可能。n=6 は Grundy/極大集合の既存データあり。Python で追加計算する
 3. **反例探索**: [全称] は最小の n から反例を探す。[存在] は小 n で証人を探す
 4. **理論的整合**: 競合する仮説の対（B001/B002 など）の両立・排他を整理
@@ -57,10 +59,10 @@
 
 - 整数演算のみ（浮動小数禁止）。`det4` は `exact_structure_cycle4.py` を参照
 - 点 id = `y*n+x`、bitmask で安全集合を表すと速い
-- 既存モジュール: `night-research/exact_structure_cycle4.py`, `grundy_cycle5.py`, `cycle8_lib.py`
+- 既存モジュール: `research/experiments/structural-discovery/scripts/exact_structure_cycle4.py`, `grundy_cycle5.py`, `cycle8_lib.py`
 - 重い計算は n≤6 に限定。n≥7 の全探索は避ける（既存結果を読む）
-- スクリプトは `research/verification/scripts/` に置く
-- 各バッチの結果は `research/verification/batch-XX.md` に書く
+- スクリプトは `research/experiments/original-claims/scripts/` に置く
+- 各バッチの結果は `research/experiments/original-claims/output/batch-XX.md` に書く
 
 ## バッチ結果フォーマット
 
@@ -82,7 +84,7 @@
 
 ## 共有作業ディレクトリ
 
-- 出力: `research/verification/`
-- スクリプト: `research/verification/scripts/`
-- 既存データ: `night-research/`, `research/findings.md`, `docs/`
+- 出力: `research/experiments/original-claims/output/`
+- スクリプト: `research/experiments/original-claims/scripts/`
+- 既存データ: `research/experiments/structural-discovery/output/`, `research/archive/hypothesis-ledgers/findings.md`, `docs/`
 - Python: システムの `python` または `py`。重い計算は C++ を検討

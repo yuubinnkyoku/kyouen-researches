@@ -1,20 +1,22 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B429-B530（記録担当: B429–B530 チャンク）
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B429〜B530（下記担当 50 件）。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B429〜B530（下記担当 50 件）。
 参照スクリプト（先行計算，本次は**実行せず** docstring/出力のみ読む）:
 `round3_chunk7_geom.py`, `round3_chunk7_lp.py`, `round3_chunk7_geocirc.py`,
 `round3_chunk7_stats.py`, `round3_chunk7_greedy.py`, `round3_chunk7_del.py`,
 `round3_chunk8_a_quads.py`, `round3_chunk8_e_quads2.py`, `round3_chunk8_b521.py`.
-参照データ: `round2_b411.json`, `round2_b441.json`, `round2_b471.json`, `round2_b501.json`,
-`round3_b475_mn.json`, `round3_chunk8_tworow.json`, `round3_unresolved.json`.
+参照データ: `../output/round2_b411.json`, `../output/round2_b441.json`, `../output/round2_b471.json`, `../output/round2_b501.json`,
+`../output/round3_b475_mn.json`, `../output/round3_chunk8_tworow.json`, `../output/round3_unresolved.json`.
 
 > **重要な事実（記録）**: 先行計算スクリプト chunk7 の出力 JSON
 > (`round3_chunk7_geom.json` / `_lp` / `_geocirc` / `_stats` / `_greedy` / `_del`) と
 > chunk8 の出力 (`round3_chunk8_quads.json` / `_quads2.json` / `_b521.json`) は
-> **2026-09-27 時点でディスク上に存在しない**（`research/verification/` にあるのは
-> `round3_b451_census.json`, `round3_b475_mn.json`, `round3_b501_pgrand_n5.json`,
+> **2026-09-27 時点でディスク上に存在しない**（`research/experiments/original-claims/output/` にあるのは
+> `../output/round3_b451_census.json`, `../output/round3_b475_mn.json`, `../output/round3_b501_pgrand_n5.json`,
 > `round3_chunk2_*`, `round3_chunk4_*`, `round3_chunk5_*`, `round3_chunk6_*`,
-> `round3_chunk8_tworow.json` のみ）。したがって本チャンクの大半は
+> `../output/round3_chunk8_tworow.json` のみ）。したがって本チャンクの大半は
 > **スクリプトの docstring に書かれた設計意図 + 前回 JSON の確定数値**で判定し、
 > 数値のない部分は数値を探さず NOT-CHECKED / INCONCLUSIVE のまま残す。
 
@@ -26,7 +28,7 @@
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存データに新たな数値が無い）
 - 前回の一手: 「(2,2) 軌道 `{16,18,30,32}` の占有数分布を孤立 12 石と 903 内 12 石で比較」
   （round2-batch-b411.md:180-185）。
-- 今回の範囲: 既存データのみ読み。`round2_b411.json` の `B429` キー、
+- 今回の範囲: 既存データのみ読み。`../output/round2_b411.json` の `B429` キー、
   `known_isolated_12`（5 件）、`nonmax_search`（非最大峰 5 件、層サイズ 14/27/311）。
   chunk7_geom.py の B429 節（200k 試料ランダム 12 探索 + D4 軌道ベクトル比較）は
   **未実行・出力なし**。
@@ -43,7 +45,7 @@
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。標本が 2 個から拡張されていない）
 - 前回の一手: 「見つかった 2 個は 1 本の 1-入替辺で結ばれ連結。ただし標本が 2 個しか
   ない」（round2-batch-b411.md:249-256）。
-- 今回の範囲: `round2_b411.json` の `B435_B437` / `B435_B438` のみ。chunk7_geom.py の
+- 今回の範囲: `../output/round2_b411.json` の `B435_B437` / `B435_B438` のみ。chunk7_geom.py の
   B437 節（6,000 試行の 1-minimal 探索 + 1-swap/2-swap グラフ）は**未実行**。
 - 証拠: `B435_B437 = {"n_size21_covers": 2, "size_hist": {"24":17,"22":47,"23":47,"21":4,
   "25":2,"27":2,"26":1}, "n_common_21": 20, "B437_1swap_edges_21": 1}`。
@@ -124,7 +126,7 @@
 - 残った障害: 判定に必要な「コンフリクト数」が一つも無い。B458 は [構造] で
   「分類軸として十分か」を問うものであり、q だけ・原始係数だけのどちらの
   一意性も得られていないため判定不能。B451 の census（32MB,
-  `round3_b451_census.json`）は別担当領分であり参照のみ。
+  `../output/round3_b451_census.json`）は別担当領分であり参照のみ。
 
 ## B459 [存在] q≥3 の円だけが作る小さい残余ゲームがある
 - 判定: **INCONCLUSIVE**（前回: NOT-CHECKED → 今回: INCONCLUSIVE）
@@ -134,7 +136,7 @@
   `line` / `q1` / `q2` / `q3`… に分類し、q≥3 四点を落とした「q≤2 部分ゲーム」と
   全禁止版を k=1,2,3 の浅層 P/N 数で比較）。**未実行**。
 - 証拠: なし。`q_hist`（n=3,4,5 の分類ヒストグラム）も `by_k` も未生成。
-  参考（別担当領域）: `round3_b451_census.json` が中心分母ごとの円センサスを
+  参考（別担当領域）: `../output/round3_b451_census.json` が中心分母ごとの円センサスを
   持つが、本件担当 Reading のみとしては抽出していない。
 - 残った障害: 「q≥3 だけで現れる R 型」の存在には、q≤2 部分ゲームに無い残余
   同型型を**具体的に 1 例**示す必要がある。浅層 P/N 数の差だけでは R 型の
@@ -240,7 +242,7 @@
   `mean_best_balance_below` 未計算。
 - 残った障害: 判定に必要な M(8) の測定値そのものが無い。
   「一致しない」の反証は top 群と below 群の平均 spread の大小で与えられるが、
-  両者が未計算。なお B475 の既存 census（`round3_b475_mn.json`）は n=3..12 の
+  両者が未計算。なお B475 の既存 census（`../output/round3_b475_mn.json`）は n=3..12 の
   M_n を持つが、本件担当 Reading では未抽出。
 
 ## B470 [構造] 三石後の合法手数の欠落は少数の円切断型で説明できる
@@ -515,7 +517,7 @@
   「一部が消える」＝絶対値の低下と読むなら k=4（0.105→0.080）と
   k=3（0.385→0.340）が該当するが、有意差の検証は無い。
   さらに chunk7 の真同型 dedup は未実行なので、旧 (tri,|L|,g,n_comp,b_var)
-  署名の近似が残る。`PROTOCOL.md` の「次数列の一致とスペクトルの一致を混ぜない」
+  署名の近似が残る。`../../../archive/claim-audit-history/PROTOCOL.md` の「次数列の一致とスペクトルの一致を混ぜない」
   に従い、絶対値低下を「消えた」と書かず INCONCLUSIVE を維持。
 
 ## B489 [統計] 強制手数の不確定性はP率より戦略的錯覚の強さを説明する
@@ -644,7 +646,7 @@
   各初手の局数 151–167 程度。**10 倍には届かない**。
 - 残った障害: MC の標本が初手あたり約 150 局と小さく、P_min ≈ 0.013–0.042 の
   領域では比 3 倍も標本誤差内。chunk7 の厳密初手分解が唯一の解答だが未実行。
-  なお `PROTOCOL.md` は「小盤の不発見を反証としない」を定めており、
+  なお `../../../archive/claim-audit-history/PROTOCOL.md` は「小盤の不発見を反証としない」を定めており、
   ここでも「10 倍未達」は反証にならない。
 
 ## B500 [構造] ランダム到達確率の極値は少数のボトルネック部分集合で説明できる
@@ -706,7 +708,7 @@
   n=4 では該当 0 件。関連値として N 局面 3,986 件の p_rand は
   **min 0.0909**、mean 0.7029。
 - 残った障害: n=4 に証人が無いことは [存在] の反証にならない
-  （`PROTOCOL.md` の禁止事項）。chunk7 は n=4 のみで n=5 を含まないので、
+  （`../../../archive/claim-audit-history/PROTOCOL.md` の禁止事項）。chunk7 は n=4 のみで n=5 を含まないので、
   実行しても n=4 の 0 件を再確認するだけlikely。n=5 の層化標本が
   必須であり、chunk7_del の B505 節には n=5 が含まれていない点が障害。
 
@@ -796,11 +798,11 @@
   交差カウントまで倒されたが K の再計算は未実行）
 - 前回の一手: 「『三つの角で 14 石を失う』は最大配置の記述と整合するが、
   二点削除で 14 石が残る検証が必要」（round2-batch-b501.md:159-167）。
-- 今回の範囲: `round2_b501.json` には B513 の直接データなし。
+- 今回の範囲: `../output/round2_b501.json` には B513 の直接データなし。
   chunk7_del の B513 節の設計を読む。chunk7 は既知の 2 個の 14 石最大集合
   A（中心あり）B（中心なし）の点集合から、和集合の交差・排他部分を数え、
   さらに onlyA/onlyB の先頭 3 点を削除した 7×7 で `max_safe_size` を計算する。**未実行**。
-- 証拠: 既知データ（`PROTOCOL.md` の確定事実より）: 7×7 の K = **14**、
+- 証拠: 既知データ（`../../../archive/claim-audit-history/PROTOCOL.md` の確定事実より）: 7×7 の K = **14**、
   2 軌道 A/B のみ。A = `{0,1,5,8,9,19,20,24,26,28,38,39,41,42}`、
   B = `{0,5,6,8,9,17,19,25,27,28,38,39,42,46}`（chunk7_del に写っている）。
   手計算の交差: A∩B = `{0,5,8,9,19,28,38,39,42}`（**9 点**）、
@@ -854,7 +856,7 @@
 - 残った障害: **サイズ 4 以上の最小反転集合が一件も列挙されていない**
   （chunk7 未実行）。size ≤3 の反転集合が全て直線・円上にあることは
   「サイズ 4 でも避けられない」の**傍証にしかならない**。
-  また `PROTOCOL.md` の「小盤の不発見を全称の反証としない」に従い、
+  また `../../../archive/claim-audit-history/PROTOCOL.md` の「小盤の不発見を全称の反証としない」に従い、
   size ≤3 の全列挙は [全称] の証拠にはならない。INCONCLUSIVE が正しい。
 
 ## B520 [存在] 最大集合をすべて壊しても最適勝者と全初手分類は変わらない
@@ -1069,7 +1071,7 @@ INCONCLUSIVE へ「動いた」。ただしこれは着手區切りの記入の�
    B520 は B512 の δ_K(4) 達成集合の発見に依存。
    B523/B524 は B522 の 3 点反転の有無に依存。
 4. **md と JSON の数値不一致（要確認 2 件）** —
-   B485（前回 md は 0.36/0.15/0.57/0.34、`round2_b471.json` は
+   B485（前回 md は 0.36/0.15/0.57/0.34、`../output/round2_b471.json` は
    0.110/0.039/0.586/**−0.116**）、B487（前回 md は 0.65/0.79/**−1.0**、
    JSON で確認できるのは k=2 の **−0.287** のみ）。
 

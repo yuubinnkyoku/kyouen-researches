@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 24 — reconstructing n=7 K=14 constraints from occupancy (notes)
 
 Goal: start from the two COMPLETE occupancy vectors at K=14 and the
@@ -64,4 +66,4 @@ the maximizing family, not a geometric proof of K_7=2n.
 - `CYCLE10_OCCUPANCY_SELECTION.md`
 - `CYCLE15_CAPACITY_DECOMPOSITION.md`
 - `CYCLE24_N6_CAPACITY_CONTRAST.md`
-- `FINAL_SELECTION_THEOREM.md`
+- `../../archive/discovery-summaries/FINAL_SELECTION_THEOREM.md`

@@ -1,17 +1,19 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 06: B101-B120
 
 対象: 最大配置の形・剛性・必須点 (B101-B110)、7×7の16最大配置からの直接の次候補 (B111-B120)。
-データ: `night-research/maxsafe_n6_K11.bin` (464), `maxsafe_n7_K14.bin` (16)、
+データ: `research/experiments/structural-discovery/output/maxsafe_n6_K11.bin` (464), `maxsafe_n7_K14.bin` (16)、
 `results/discovery_full_board_forbid_-1.json` (903)、`discovery_full_board_forbid_48.json` (250)、
 `discovery_corridor_static_certificate.json`、`discovery_corridor_verification.json`、
 `FINAL_SELECTION_THEOREM.md` / `DISCOVERY_CORNER_GATE_AND_COMPONENTS.md` / `CYCLE6_MAXSAFE_EXCHANGE.md` / `cycle8_g1_result.json`。
-スクリプト: `research/verification/scripts/batch06_shape_rigidity.py`, `batch06_components.py`, `batch06_followups.py`, `batch06_followups2.py`。
-出力JSON: `research/verification/batch06_shape_rigidity.json`, `batch06_components.json`, `batch06_followups.json`, `batch06_followups2.json`。
+スクリプト: `research/experiments/original-claims/scripts/batch06_shape_rigidity.py`, `batch06_components.py`, `batch06_followups.py`, `batch06_followups2.py`。
+出力JSON: `research/experiments/original-claims/output/batch06_shape_rigidity.json`, `../../experiments/original-claims/output/batch06_components.json`, `../../experiments/original-claims/output/batch06_followups.json`, `../../experiments/original-claims/output/batch06_followups2.json`。
 
 ## B101 [全称・大胆] 最大配置は四辺すべてに触れる
 - 判定: **SUPPORTED**
 - 範囲: n=6 の 464 最大集合・n=7 の 16 最大集合すべてについて、上辺 y=0 / 下辺 y=n-1 / 左辺 x=0 / 右辺 x=n-1 との交差を完全検査。
-- 証拠: n=6 464/464、n=7 16/16 が四辺すべてに触れる（`batch06_shape_rigidity.json` → `B101_edges.n_touch_all_four`）。失敗 0 件。n=4,5 は今回未走査だが、既知の最大配置の例と整合。
+- 証拠: n=6 464/464、n=7 16/16 が四辺すべてに触れる（`../../experiments/original-claims/output/batch06_shape_rigidity.json` → `B101_edges.n_touch_all_four`）。失敗 0 件。n=4,5 は今回未走査だが、既知の最大配置の例と整合。
 - メモ: 「平行移動による余地が残らない」の根拠としては n=6,7 で確定。全称 n≥4 は n=4,5 の完全データがあれば SUPPORTED に昇格可能。
 
 ## B102 [全称・大胆] 最大配置はどの行・列も空にしない
@@ -85,7 +87,7 @@
 ## B112 [全称] G_12の最大配置を含まない成分は14石へ登れない別の罠（最高13・13石局面あり）
 - 判定: **REFUTED**
 - 範囲: 最大配置を含まない G_12 成分の探索。8 成分（903 の D4 像、計 7224 状態）の外側にある安全 12 石集合を DFS で発見し、その G_12 成分を BFS。
-- 証拠: 例 **`[13,20,22,26,28,30,39,40,41,42,45,47]`**（id 184169612189696）は安全な 12 石で、**安全な 13 石への追加が 0 通り**。G_12 成分は自分自身のみ（サイズ 1、最高 12 石、13 石局面なし）。同様の孤立 12 石を 5 例確認（`batch06_followups2.json`）。よって「最高 13 で 13 石局面がある」は偽。
+- 証拠: 例 **`[13,20,22,26,28,30,39,40,41,42,45,47]`**（id 184169612189696）は安全な 12 石で、**安全な 13 石への追加が 0 通り**。G_12 成分は自分自身のみ（サイズ 1、最高 12 石、13 石局面なし）。同様の孤立 12 石を 5 例確認（`../../experiments/original-claims/output/batch06_followups2.json`）。よって「最高 13 で 13 石局面がある」は偽。
 - メモ: 最大配置を含まない成分は「13 石罠」だけでなく **12 石で閉じた孤立点**として実在する。B119 の反例でもある。
 
 ## B113 [全称] 第四の角を通るA–B変形の最短長は14操作
@@ -97,7 +99,7 @@
 ## B114 [全称] G_12の最短A–B経路は補助点を角一つしか使わない
 - 判定: **SUPPORTED**
 - 範囲: 903 成分上の全最短経路（8 本）を列挙し、A∪B 外の使用点を検査。
-- 証拠: 8 本すべての補助点集合がちょうど `[48]`（第四の角 (6,6)）のみ。他の 29 点はどの最短経路でも使われない。`batch06_followups.json` → `B114_aux.all_use_only_48 = True`。
+- 証拠: 8 本すべての補助点集合がちょうど `[48]`（第四の角 (6,6)）のみ。他の 29 点はどの最短経路でも使われない。`../../experiments/original-claims/output/batch06_followups.json` → `B114_aux.all_use_only_48 = True`。
 - メモ: 「最短路を延ばさずに他の盤点を利用する抜け道もない」は最短経路 8 本の完全列挙で確認。経路長 15 以上の経路で他点を使うことはある（B118 の証人も角以外に U 内の点を使うが、それらは A∪B の点）。
 
 ## B115 [構造] 角禁止250局面の成分を少数の不等式で記述できる

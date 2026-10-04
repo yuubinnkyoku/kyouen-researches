@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B453: 中心分母の素因数型による一般上界
 
-作成: 2026-09-28。原文: [仮説集 B453](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-28。原文: [仮説集 B453](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **B453 SUPPORTED（一般証明）。** 中心分母と半径から、完全な円上の格子点数を制限する積公式を得る。
 さらに全てのm≥1について、少なくともm点を載せる最小半径は、分母4が分母3の**ちょうど3/4倍**になる。
@@ -191,8 +193,8 @@ d≥2の比はそのどれでもないので矛盾する。
 
 ## 5. 再現可能な補助検算と限界
 
-再現: `python research/verification/scripts/round10_circle_denominator.py`。
-[スクリプト](scripts/round10_circle_denominator.py)、[結果JSON](round10_circle_denominator.json)。
+再現: `python research/experiments/original-claims/scripts/round10_circle_denominator.py`。
+[スクリプト](../scripts/round10_circle_denominator.py)、[結果JSON](../output/round10_circle_denominator.json)。
 
 - 全M=1,…,3000の二平方和表現を整数平方根で漏れなく列挙し、ガウス整数の個数公式と一致。
 - q=1,…,16について、点を持つ原始剰余類73,895条件で上界・惰性素数条件・2進条件を検査。

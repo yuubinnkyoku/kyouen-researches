@@ -1,12 +1,14 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Staged Probe V3 Holdout — result
 
 Branch: `staged-probe-v3-holdout`
-Prereg: `docs/10X10_STAGED_V3_HOLDOUT_PREREG.md` (frozen before probes)
+Prereg: `research/experiments/solver-benchmarks/reports/10X10_STAGED_V3_HOLDOUT_PREREG.md` (frozen before probes)
 Cohort freeze: `91f9e48`
 10k + top-11 freeze: `32257ed`
 1M ranking freeze: `d956fe6`
 Base solver sources: restored to V2 freeze (`451ece8` lineage)
-Solver binary: `tmp-kb/probe_holdout_native` / rebuilt `tmp-kb/probe_v3_native`
+Solver binary: `research/experiments/solver-benchmarks/bin/probe_holdout_native` / rebuilt `research/experiments/solver-benchmarks/bin/probe_v3_native`
   sha256 `15d805ea9b354cc11c5c5ee5329512b723241897e32d135bf5a82094cdccd585`
   sources sha256 `9b6f227ffb9fd802851ae69bad3a5621ce78857af1c65084ae92d09aa67e47b3`
 

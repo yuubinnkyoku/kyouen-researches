@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 31 — D4 orbit circle lemma + occupancy-cap search
 
 ## Lemma (first principles, all odd n)
@@ -87,5 +89,5 @@ Caps are per-orbit maxima. COMPLETE when nodes finished.
 
 ## Artifacts
 - `results/cycle31_circle_lemma_occ.json`
-- `night-research/CYCLE30B_ORBIT_CONCYCLICITY.md`
-- `night-research/CYCLE30C_MULTI_ORBIT_CAPACITY.md`
+- `research/log/discovery-cycles/CYCLE30B_ORBIT_CONCYCLICITY.md`
+- `research/log/discovery-cycles/CYCLE30C_MULTI_ORBIT_CAPACITY.md`

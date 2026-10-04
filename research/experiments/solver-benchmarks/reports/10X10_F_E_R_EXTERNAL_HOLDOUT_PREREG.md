@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Preregistration: F-E R-external 4-stone holdout
 
 Date: 2026-09-22
@@ -76,7 +78,7 @@ Any canonical key appearing in these sources is ineligible:
    on `origin/main` at the baseline commit.
 3. `scratch/kyouen-local-handoff/outcome-cache.json` keys (research-properties
    worktree / main-handoff extract), any stone count.
-4. Four-stone states embedded in git history under `results/`, `artifacts/`,
+4. Four-stone states embedded in git history under `results/`, `research/experiments/solver-benchmarks/output/`,
    `docs/` (comma-separated 4-tuples with ids in 0..99).
 5. Known proof states referenced in `docs/10X10_*`.
 

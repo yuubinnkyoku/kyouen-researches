@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 整数拡大で外部飽和半径を必ず1に戻せる
 
 作成: 2026-09-29。B384/B385/B388/B390の外部半径を補足する一般定理。
@@ -77,5 +79,5 @@ Sは(M+1)×(M+1)盤に平行移動できるので、
 79倍では(475,1)、367倍では(2203,1)が距離1の合法外点になることを、
 各点について全364三つ組との整数行列式で直接確認した。
 元と両拡大配置の安全性も全1001四点組ずつで照合。全assert通過。
-実装・データは [round16_first_appearance.py](scripts/round16_first_appearance.py) と
-[round16_first_appearance.json](round16_first_appearance.json) に保存した。
+実装・データは [round16_first_appearance.py](../scripts/round16_first_appearance.py) と
+[round16_first_appearance.json](../output/round16_first_appearance.json) に保存した。

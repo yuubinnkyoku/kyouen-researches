@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 11x11 中央 v=60: 20 返信を独立 root として解く（各 5 分）
 
 **11x11 の勝敗は UNKNOWN のまま。**
 `CENTER_UNRESOLVED` — WIN 0 / LOSS 0 / TIMEOUT 20。
 
-- script: `research/verification/scripts/dfpn_center20.sh`
+- script: `research/experiments/n11-search-methods/scripts/dfpn_center20.sh`
 - commit: `99569a3`
 - 機械: WSL / g++ -O3 -march=native、16 cores / 19 GB RAM
 - memo power: 2^26 = 67,108,864（各 root 同一）

@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 4×m・q=8 の真の安定化長は 11
 
 作成: 2026-10-03。再現コード:
-[`verification/scripts/q48_exact_threshold.py`](verification/scripts/q48_exact_threshold.py)。
+[`verification/scripts/q48_exact_threshold.py`](../scripts/q48_exact_threshold.py)。
 全検証出力:
-[`verification/q48_exact_threshold.json`](verification/q48_exact_threshold.json)。
+[`verification/q48_exact_threshold.json`](../output/q48_exact_threshold.json)。
 
 ## 結果と証明の範囲
 
@@ -209,9 +211,9 @@ q≥4 の境界 q=2w の安定化長は、既存結果と合わせて全て決�
 ## 再現
 
 ```bash
-python research/verification/scripts/q48_exact_threshold.py
+python research/experiments/fixed-width/scripts/q48_exact_threshold.py
 ```
 
 Python標準ライブラリのみを使う。全計算は整数であり、平方判定は `math.isqrt`、
 曲線は整数係数と整数代入で検証する。保存出力は
-`research/verification/q48_exact_threshold.json` に再生成される。
+`research/experiments/fixed-width/output/q48_exact_threshold.json` に再生成される。

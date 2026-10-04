@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # WSL C++ ビルド環境（第4回の前提）
 
 作成: 2026-09-27。
@@ -33,12 +35,12 @@ wsl -d Ubuntu -- bash -lc "g++ --version"
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
 ```
 
-自己検査: `scripts/wsl_check.sh`（`wsl -d Ubuntu -- bash $REPO/research/verification/scripts/wsl_check.sh`）
+自己検査: `../scripts/wsl_check.sh`（`wsl -d Ubuntu -- bash $REPO/research/experiments/original-claims/scripts/wsl_check.sh`）
 
 ## 使い方
 
 ```bash
-wsl -d Ubuntu -- bash -c "cd $REPO/research/verification/scripts && \
+wsl -d Ubuntu -- bash -c "cd $REPO/research/experiments/original-claims/scripts && \
     g++ -O2 -march=native -std=c++20 -pthread -o /tmp/solver solver.cpp && \
     /tmp/solver"
 ```

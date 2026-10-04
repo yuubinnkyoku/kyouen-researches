@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B141 訂正: 文書反映用テキスト
 
 作成: 2026-09-28。根拠: `round4-collinear-asymptotic.md`（証明）、`ROUND4-B141-VERIFICATION.md`（独立検証）、HANDOVER §2。
@@ -10,14 +12,14 @@ D_n = 7ζ(2)/(60ζ(3)) n^5 − 3/(4ζ(2)) n^4 log n + O(n^4)
 
 ---
 
-## 1. `batch-08.md` B141 置換
+## 1. `../../../log/claim-audit/batch-08.md` B141 置換
 
 ### 置換前（47–49 行付近）
 ```
 ## B141 [漸近] 共線四点組の主項はn^5
 - 判定: **REFUTED**
 - 範囲: D_n を n=2..40 まで閉形式で完全計算。D/n^5、D/(n^5 log n)、D/n^6 を比較。
-- 証拠: D_n/(n^5 ln n) = 0.0323 で n=28..40 に安定。D_n/n^5 は 0.053 (n=9) → 0.119 (n=40) で対数的に上昇し続け、有限極限を持たない。真の主項は **D_n = Θ(n^5 log n)**（係数 ≈ 0.0323）。`batch08_followup.py` / `batch08_results2.json`。
+- 証拠: D_n/(n^5 ln n) = 0.0323 で n=28..40 に安定。D_n/n^5 は 0.053 (n=9) → 0.119 (n=40) で対数的に上昇し続け、有限極限を持たない。真の主項は **D_n = Θ(n^5 log n)**（係数 ≈ 0.0323）。`batch08_followup.py` / `../output/batch08_results2.json`。
 - メモ: 「n^5 か n^6 か」の対立では n^5 側が近く、log 修正のみが不足。F-W の「D_n=Θ(n^6)」も n=11..20 の D/n^6 単調減少 (0.0059→0.0047) で否定される。
 ```
 
@@ -32,7 +34,7 @@ D_n = 7ζ(2)/(60ζ(3)) n^5 − 3/(4ζ(2)) n^4 log n + O(n^4)
 
 ---
 
-## 2. `batch-08.md` B145 置換
+## 2. `../../../log/claim-audit/batch-08.md` B145 置換
 
 ### 置換前（69–73 行付近）
 ```
@@ -79,9 +81,9 @@ D_n = 7ζ(2)/(60ζ(3)) n^5 − 3/(4ζ(2)) n^4 log n + O(n^4)
 
 ---
 
-## 4. `round4-SUMMARY.md` への反映
+## 4. `../../../archive/claim-audit-history/round4-SUMMARY.md` への反映
 
-HANDOVER §10 の指示に従い、`round4-SUMMARY.md` の B141 に関する記述を SUPPORTED に更新する。
+HANDOVER §10 の指示に従い、`../../../archive/claim-audit-history/round4-SUMMARY.md` の B141 に関する記述を SUPPORTED に更新する。
 該当箇所:
 - 322 行付近: 「B142（非共線共円四点組の次数）は本定理では決まらない。別途検証が必要（第1回は REFUTED）。」
   → B142 の REFUTED は維持（正しい）。B141 の訂正に言及する場合は SUPPORTED と明記。
@@ -92,6 +94,6 @@ HANDOVER §10 の指示に従い、`round4-SUMMARY.md` の B141 に関する記�
 
 ## 適用時の注意
 
-- `batch-08.md`, `round2-batch-b471.md`, `round4-SUMMARY.md` は他エージェントが触る可能性がある。
+- `../../../log/claim-audit/batch-08.md`, `round2-batch-b471.md`, `../../../archive/claim-audit-history/round4-SUMMARY.md` は他エージェントが触る可能性がある。
   本ファイルを参照してから適用すること。
 - 変更後は `full_census.py` でラベルが拾えることを確認（`判定: **LABEL**` 行）。

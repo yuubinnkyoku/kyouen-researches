@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B360 — 同じ石数・同程度の高重複被覆でも、禁止点総数比は無限大
 
 作成: 2026-09-28。担当: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第2仮説バンク](../hypothesis-bank-round2-2026-09-27.md) B360。
+原文: [第2仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md) B360。
 
 > 点ごとの被覆上限は大きくても全面被覆は極端に非効率。
 > bの最大値が同程度の二つの安全集合で、禁止点の和集合のサイズの比を任意に大きくできる。
@@ -11,8 +13,8 @@
 禁止空点数の比を任意に大きくできる。kも任意に大きくできる。
 
 前提となる無限族と合併補題: [round5-quadratic-cover.md](round5-quadratic-cover.md)。
-再現: `python research/verification/scripts/round5_cover_union.py`。
-[検算コード](scripts/round5_cover_union.py)、[整数証人と解析的な上下界](round5_cover_union.json)。
+再現: `python research/experiments/original-claims/scripts/round5_cover_union.py`。
+[検算コード](../scripts/round5_cover_union.py)、[整数証人と解析的な上下界](../output/round5_cover_union.json)。
 
 ## 1. 二次被覆を持つが、三点共線を持たない基礎集合
 

@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B405-B428 (grp8)
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の
 B405, B406, B407, B408, B410, B412, B413, B414, B415, B416, B417, B418, B419,
 B420, B421, B422, B423, B425, B426, B428（20 件）。
 書出し専用: 新規の重い計算はゼロ。既存 JSON / 前回個票の**読み取りのみ**。
-参照データ: `research/verification/round2_b411.json`（Round2 B411-B440 の全数値）、
-`round2_b381.json`（B381-B410）、`scripts/round2_b411_*.py`, `round2_b421_*.py`,
+参照データ: `research/experiments/original-claims/output/round2_b411.json`（Round2 B411-B440 の全数値）、
+`../output/round2_b381.json`（B381-B410）、`scripts/round2_b411_*.py`, `round2_b421_*.py`,
 `round2_b422_cycle.py`, `round2_b431_cover.py`。
 除外グループ: B431-B434 / B451-B457 は別担当（未閲覧・未記述）。
 
@@ -13,8 +15,8 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED）
 - 前回の一手: 「近最大配置の列挙と確率モデルの構築」（round2-batch-b381.md:164）
 - 今回の範囲: 既存データに情報がなく前回と状況が変わらない。
-  `round2_b381.json` に B405 のキーは存在せず（`['n7','n6','summary','B391_B400','B391',...,'B406','B409','B410',...]`）、
-  `round2_b411.json` にも B405 は無い。 Round3 既存の他バッチ（`round3-batch-*.md`）にも B405 の記述なし。
+  `../output/round2_b381.json` に B405 のキーは存在せず（`['n7','n6','summary','B391_B400','B391',...,'B406','B409','B410',...]`）、
+  `../output/round2_b411.json` にも B405 は無い。 Round3 既存の他バッチ（`round3-batch-*.md`）にも B405 の記述なし。
 - 証拠: なし。参照した確定データ（n=7 の 16 最大配置、`B404.n7`）は「最小特定点数 min_k=2 が 16/16、
   特定ペア数 17（A相）/21（B相）」までであり、部分観測の逐次ベイズ更新には近最大配置の列挙が要るが未着手。
 - 残った障害: 「観測点数を増やしたときの最尤相の切り替わり」を測るには (i) 近最大配置（12/13 石）の全列挙、
@@ -24,14 +26,14 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B406 [構造] 7×7最大配置の点対共起行列は低ランクで相を分離できる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、内容強化）
 - 前回の一手: 「B406 の PCA で中心以外の点による A/B 分離を確認」（round2-batch-b381.md:219）
-- 今回の範囲: 既存数値の再照合のみ。`round2_b381.json` → `B406 = {cooc_rank_modp: 15, n_sets: 16, N: 49}`。
-  さらに `night-research/CYCLE7_PAIR_DISTANCE.md`（§セル対の共起, line 67-78）の確定表を読み、
+- 今回の範囲: 既存数値の再照合のみ。`../output/round2_b381.json` → `B406 = {cooc_rank_modp: 15, n_sets: 16, N: 49}`。
+  さらに `research/log/discovery-cycles/CYCLE7_PAIR_DISTANCE.md`（§セル対の共起, line 67-78）の確定表を読み、
   「中心占领以外の複数点で A/B を識別できるか」という核心部分に対して**反論材料となる既存の排他表**を確認した。
 - 証拠: 共起ランクは **15**（49  次元、16 集合）で前回と同一（`scripts/round2_b401_identify.py:157-187` で
   GF(10^9+7) 上のランク計算）。一方、既存共起表には軌道レベルの**排他**が明示されている:
   「(2,2) を含む全10組 + (0,3)-(3,3), (2,3)-(3,3) が 0/16 (NEVER)、すなわち **中心と (0,3)/(2,3) は排他的**。
   中心あり8集合は (0,3),(2,3) を使わず、中心なし8集合は中心を使わない」（CYCLE7_PAIR_DISTANCE.md:73-76）。
-  さらに「未使用セルは (2,2) 軌道の4セルのみ」（同:78、`batch06_shape_rigidity.json` の
+  さらに「未使用セルは (2,2) 軌道の4セルのみ」（同:78、`../output/batch06_shape_rigidity.json` の
   `n7.B104_point_freq.never_used = [16,18,30,32]`, `never_used_by_orbit = [[2,2]]` で確認）。
 - 残った障害: 主張は「主成分の一つが中心占有以外**の複数点**を用いて A/B を識別」。既存排他表は
   「中心⇔(0,3)/(2,3)」という**中心そのものを含む**相関しか与えず、中心を除いた複数点の組で
@@ -42,7 +44,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED）
 - 前回の一手: なし（前回は「漸近主張。n=6,7 の VC 次元計算だけでは判定不能」で着手なし、round2-batch-b381.md:174-175）
 - 今回の範囲: 既存データに情報がなく前回と状況が変わらない。
-  `round2_b381.json` / `round2_b411.json` の全キーを走査して B407 の数値が無いことを確認。
+  `../output/round2_b381.json` / `../output/round2_b411.json` の全キーを走査して B407 の数値が無いことを確認。
   既存の最小特定データ（`B403`, `B404`, `B409`）は「配置を**互いに識別する**のに要る点数」であって、
   「任意の**パターン** realize できる点数（VC 次元）」ではない。
 - 証拠: VC 次元そのものは既存データに存在しない。参考として同ファイルにある相关的数値:
@@ -61,7 +63,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED）
 - 前回の一手: 「複数 n の最小特定点数の系統的データ」（round2-batch-b381.md:180）
 - 今回の範囲: 既存データに情報がなく前回と状況が変わらない。ただし**照合して筋が立った部分は記録する**。
-  `round2_b381.json` → `B404.n7`（16 件の min_k）、`B404.n6_sample`（30 件の min_k と min_hamming）を全部集計。
+  `../output/round2_b381.json` → `B404.n7`（16 件の min_k）、`B404.n6_sample`（30 件の min_k と min_hamming）を全部集計。
 - 証拠: n=7 は `min_k` が **全 16 件で 2**（`Counter({2: 16})`）、特定ペア数は A 相 17 本・B 相 21 本で
   n=7 内で**分裂しない**（`[17,21,17,21,21,17,21,21,21,17,17,17,17,21,21,17]`）。
   n=6 サンプル 30 件は `Counter({None: 21, 3: 9})`（None = k≤3 で特定できず、上限 max_k=3 のため、
@@ -78,13 +80,13 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE）
 - 前回の一手: 「複数 n の比較が必要」（round2-batch-b381.md:192）
 - 今回の範囲: 既存データに情報がなく前回と状況が変わらない。ただし n=6 側の比較材料が
-  **前回より多く確定している**（`batch06_shape_rigidity.json`）ので、その点を記録する。
-  `round2_b381.json` → `B410 = {n_orbit_patterns: 2}`（n=7 の軌道占有パターンは A/B の 2 種）。
+  **前回より多く確定している**（`../output/batch06_shape_rigidity.json`）ので、その点を記録する。
+  `../output/round2_b381.json` → `B410 = {n_orbit_patterns: 2}`（n=7 の軌道占有パターンは A/B の 2 種）。
 - 証拠: n=7: 軌道占有パターン **2 種**（`B109_occ_classes.n_classes = 2`, `class_sizes = [8, 8]`、
-  `batch06_shape_rigidity.json` の `n7.B109_occ_classes`）、共起ランク **15**（`B406.cooc_rank_modp`）。
+  `../output/batch06_shape_rigidity.json` の `n7.B109_occ_classes`）、共起ランク **15**（`B406.cooc_rank_modp`）。
   n=6（464 集合）では同じ構造が `n6.B109_occ_classes = {n_classes: 22, class_sizes: [56,16,40,24,8,24,16,24,72,24,24,8,16,8,8,8,16,16,8,24,16,8]}` と
   **22 種**の軌道占有クラスに割れる。
-  一方 n=6 の外部飽和半径 `r` は 424 個が r=1、40 個が r=2（`round2_b381.json` → `summary.n6_r_dist`）で、
+  一方 n=6 の外部飽和半径 `r` は 424 個が r=1、40 個が r=2（`../output/round2_b381.json` → `summary.n6_r_dist`）で、
   n=7 は 16/16 が r=2（同 `n7_all_r2: true`）。
 - 残った障害: 主張は**相関**（「型数が同程度でも、共起が少数のモードに集中した盤ほど別成分に分かれやすい」）。
   判定に必要なのは「n=6 の 464 個を共起ランクの傾向で 2 群に割ったとき、r=1/r=2 の分布が偏るか」という
@@ -99,7 +101,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 - 判定: **SUPPORTED**（前回: SUPPORTED → 今回: SUPPORTED、前回の確定結果を再構成して確認）
 - 前回の一手: 前回に「次の一手」の記載なし（round2-batch-b411.md:42-48）。
   総括-side の「最も有望な次の一手」は B431-B434 側（別担当）に回されていた。
-- 今回の範囲: 既存データ `round2_b411.json` → `B412` を読み、`scripts/round2_b411_paths.py:252-308`
+- 今回の範囲: 既存データ `../output/round2_b411.json` → `B412` を読み、`scripts/round2_b411_paths.py:252-308`
   （半順序の抽出）と `scripts/round2_b411_followup.py:34-69`（線形拡張数の DP, 2^14）の
   実装を読み直して判定ロジックを再確認した。新規計算なし。
 - 証拠: `B412 = {same_event_multiset: true, n_events: 14, n_common_order_pairs: 84,
@@ -118,14 +120,14 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B413 [全称] すべての最短路は共通石をちょうど一つだけ一時除去する
 - 判定: **SUPPORTED**（前回: SUPPORTED → 今回: SUPPORTED）
 - 前回の一手: なし（round2-batch-b411.md:50-55）。
-- 今回の範囲: `round2_b411.json` → `B413_B414`、`scripts/round2_b411_paths.py:143-194` を読むのみ。
+- 今回の範囲: `../output/round2_b411.json` → `B413_B414`、`scripts/round2_b411_paths.py:143-194` を読むのみ。
 - 証拠: `tmp_common_per_path = [[39],[39],[39],[39],[39],[39],[39],[39]]`（8/8）、
   `all_exactly_one_common: true`、`tmp_any_per_path` も 8/8 すべて `[[39]]`。
   A∩B は 9 石 `A_intersect_B = [0,5,8,9,19,28,38,39,42]` で、うち 39 だけが往復している。
   内訳は差集合 5+5（A\B=[1,20,24,26,41], B\A=[6,17,25,27,46]）、角 48 の出し入れ 2、39 の往復 2 = 14 操作。
 - 残った障害: 「全称」は**この 1 本回廊（903 成分内の A→B、距離 14、最短 8 本）に対する全称**であって、
   盤面全体の全最短路ではない。G_12 の他の 902 状態から第 2、第 3 の极大配置へ至る最短路でも
-  一時除去が 1 石だけかは未確認（`round2_b411.json` の `B417`/`B418` はこの回廊内の補助点だけを見ている）。
+  一時除去が 1 石だけかは未確認（`../output/round2_b411.json` の `B417`/`B418` はこの回廊内の補助点だけを見ている）。
   主張の射程を 1 成分に限定して SUPPORTED とした。
 
 ## B414 [全称] 一時除去される共通石も全最短路で同じ
@@ -143,7 +145,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B415 [全称] 第四の角の占有時間は全最短路で同じ
 - 判定: **SUPPORTED**（前回: SUPPORTED → 今回: SUPPORTED）
 - 前回の一手: なし（round2-batch-b411.md:63-68）。
-- 今回の範囲: `round2_b411.json` → `B415`（8 経路の窓情報）、`scripts/round2_b411_paths.py:196-251`。
+- 今回の範囲: `../output/round2_b411.json` → `B415`（8 経路の窓情報）、`scripts/round2_b411_paths.py:196-251`。
 - 証拠: 8 経路すべてで `add_at_set = [8]`、`del_at_set = [11]`、`window_ops_set = [3]`、
   `internal_ops_set = [2]`、`identical_window: true`。
   窓内の操作は `-26, +39` で順序含め全経路一致。サイズ系列 `14,13,12,13,12,13,12,13,12,13,12,13,12,13,14`
@@ -156,7 +158,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B416 [構造] 最短路の21頂点は少数のダイヤ形の連結として記述できる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、前回の不安定要因を本.JSONで特定）
 - 前回の一手: なし（round2-batch-b411.md:70-78 は「ダイヤ 6 個は確認。還元命題のみ弱い」で終了）。
-- 今回の範囲: `round2_b411.json` → `B416`（21 頂点の誘導グラフの統計 + 自由度分解）を読み、
+- 今回の範囲: `../output/round2_b411.json` → `B416`（21 頂点の誘導グラフの統計 + 自由度分解）を読み、
   `scripts/round2_b411_paths.py:310-364` と `round2_b411_followup.py:71-92` を読むのみ。
 - 証拠: `n_vertices_on_shortest = 21`、`n_edges_induced = 24`、`components = [21]`（連結 1 成分）、
   `degree_hist_induced = {2: 15, 3: 6}`、`n_4cycles_as_common2 = 6`（ダイヤ 6 個）、
@@ -174,7 +176,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B417 [存在] 最短路にない点を使う最短の迂回は2操作だけ長い
 - 判定: **REFUTED**（前回: REFUTED → 今回: REFUTED、反例の座標を明示して再確認）
 - 前回の一手: 「G_11 まで下ろした経路は未探索」（round2-batch-b411.md:86）、総括の次の一手 3「B417 の G_11 版」（同:310）。
-- 今回の範囲: `round2_b411.json` → `B417`（903 成分全体を BFS、状態 = (頂点, 補助点使用フラグ)）、
+- 今回の範囲: `../output/round2_b411.json` → `B417`（903 成分全体を BFS、状態 = (頂点, 補助点使用フラグ)）、
   `scripts/round2_b411_paths.py:365-411` を読むのみ。
 - 証拠: `auxiliary_non_corner_exists_at_len = 20`、`excess_vs_14 = 6`、`aux_cells_on_detour = [45, 48]`。
   つまり A∪B∪{48} 外（= 共通部分 9 点 + 第四の角 48 以外）の点を 1 個でも使う最短の A–B 経路は
@@ -182,13 +184,13 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
   なお `aux_cells_on_detour` に 48 も入るため、「最短路にない点」の純な担い手は 45 である。
 - 残った障害: 反証は G_12 内で完結している（「2 操作だけ長い」が偽）が、
   原文の文脈が「最短路にない点」= 盤上の任意点であるなら、**G_11 まで落とした回廊**で 16 操作的
-  経路が存在する可能性は残ってる。`round2_b411.json` に G_11 の迂回データは無く、
+  経路が存在する可能性は残ってる。`../output/round2_b411.json` に G_11 の迂回データは無く、
   書出し専用方針で新規 BFS は禁止。REFUTED の射程は「G_12 の 903 成分内」に限定して報告する。
 
 ## B418 [全称] 角を使う回数を二度以上にすると経路は少なくとも4操作長くなる
 - 判定: **REFUTED**（前回: REFUTED → 今回: REFUTED）
 - 前回の一手: なし（round2-batch-b411.md:88-94 は「+4 以上は偽」で終了）。
-- 今回の範囲: `round2_b411.json` → `B418`（e = 角への進入回数ごとの最短長）、
+- 今回の範囲: `../output/round2_b411.json` → `B418`（e = 角への進入回数ごとの最短長）、
   `scripts/round2_b411_paths.py:413-457`（BFS, 状態 = (頂点, enters, has48), enters ≤ 4）と
   `round2_b411_followup.py:94-149`（即時往復のみの分離）を読むのみ。
 - 証拠: `min_len_by_corner_enters = {"1": 14, "2": 16, "3": 18, "4": 20}`、
@@ -199,7 +201,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
   したがって e=2 の 16 手は**角を 2 手以上抱える非自明な使用**であり、
   「即時往復を除いた単純経路で複数回の使用にも実質的な代価がある」の前半（+4 以上）は実験的に否定できる。
 - 残った障害: 反証は成立（+2 < +4）。残る未確認は「e=2 の 16 手の具体的経路列」が
-  `round2_b411.json` に保存されていない（長さのサマリのみ）ため、
+  `../output/round2_b411.json` に保存されていない（長さのサマリのみ）ため、
   「+4 以上長い」経路が**存在するか否か**は不明。
   つまり「e≥2 の最短長は +2」という事実は確定だが、
   「+4 以上の代価経路」（e=2 で 18 手以上の経路が在るか）は別問題として未答。
@@ -208,7 +210,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B419 [構造] 最短路を妨げる局所障害は一つの禁止四点型へ集約できる
 - 判定: **REFUTED**（前回: REFUTED → 今回: REFUTED、全 9 型を明示して再確認）
 - 前回の一手: なし（round2-batch-b411.md:96-102）。
-- 今回の範囲: `round2_b411.json` → `B419`（8 経路 × 隣接交換の非合法箇所 48 件の全列挙と
+- 今回の範囲: `../output/round2_b411.json` → `B419`（8 経路 × 隣接交換の非合法箇所 48 件の全列挙と
   完成する禁止 4 点組の D4 型分類）、`scripts/round2_b411_paths.py:458-533` を読むのみ。
 - 証拠: `n_illegal_swaps = 48`、`n_distinct_blocking_quads = 9`、`n_d4_types = 8`。
   遮る 4 点組 9 種は
@@ -229,14 +231,14 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B420 [全称] A→BとB→Aでは角使用前の準備の長さが非対称
 - 判定: **SUPPORTED**（前回: SUPPORTED → 今回: SUPPORTED、事前計算の一致を確認）
 - 前回の一手: なし（round2-batch-b411.md:104-108）。
-- 今回の範囲: `round2_b411.json` → `B420`、`scripts/round2_b411_paths.py:534-570` を読むのみ。
+- 今回の範囲: `../output/round2_b411.json` → `B420`、`scripts/round2_b411_paths.py:534-570` を読むのみ。
 - 証拠: `min_ops_before_corner_from_A = 9`、`min_ops_before_corner_from_B = 3`、`asymmetric: true`。
   最短路上でも `min_corner_appear_index_on_shortest_A2B = 9`、`..._B2A = 3`。差は **6 操作**。
   定義の確認: 「角の初使用までに必要な最小操作数」= 角 48 が A（或 B）側に**到達可能になる**までの操作数。
 - 残った障害: SUPPORTED だが、全称の射程は 903 成分内のこの 1 対（A と B）だけ。
   残る未確認: (i) 7×7 で G_12 の 14 石層は `basic.layers = {12:817, 13:84, 14:2}` と
   ちょうど A・B の **2 個**であり、比較する対が 1 組しか無いため非対称性の普遍性は主張できない、
-  (ii) G_12 の 250 状態成分（`batch06_components.json` → `comp250`、角 48 禁止、
+  (ii) G_12 の 250 状態成分（`../output/batch06_components.json` → `comp250`、角 48 禁止、
   layers 12:223/13:26/14:1、`bfs_distance_A_B = null`）は A・B を含まないため、
   別の成分で同じ非対称性が現れるかは未確認。
   このため SUPPORTED は「903 成分内の A/B 1 対」に限定して使う。
@@ -244,7 +246,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B421 [全称・大胆] 最大14石を含まない非孤立G_12成分は木
 - 判定: **REFUTED**（前回: REFUTED → 今回: REFUTED、反例成分の完全統計を保存値から再構成）
 - 前回の一手: なし（round2-batch-b411.md:112-119 は「競合 B422 側が真」で終了）。
-- 今回の範囲: `round2_b411.json` → `B421_B424_strict`（5 成分の完全成長、辺数・循環数・層分布）、
+- 今回の範囲: `../output/round2_b411.json` → `B421_B424_strict`（5 成分の完全成長、辺数・循環数・層分布）、
   `nonmax_search`、`scripts/round2_b421_strict.py:65-196` を読むのみ。
 - 証拠: 反例成分 seed `[0,2,7,11,14,15,25,27,33,38,43,44,48]`（13 石 peak、
   `nonmax_search.n_peaks_13 = 5` の一つ）。成分統計:
@@ -255,15 +257,15 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 - 残った障害: 反証は 1 成分で完結している。残る未確認は
   (i) 5 成分の seed は乱択探索で得たもので、`nonmax_search` は `n_peaks_13 = 5` を
   「安全 13 石で 14 に延長不能な peak」の**探索到達数**であり、全数ではない
-  （`round2_b411.json` の `search_outside_12` も `incomplete: true` で `n_found = 401`）、
+  （`../output/round2_b411.json` の `search_outside_12` も `incomplete: true` で `n_found = 401`）、
   (ii) したがって「木でない成分が存在する」ことと「最大でも 311 頂点に収まる」ことは
   別問題で、後者は列挙的に未検証（B423 参照）。REFUTED の判定自体は反例 1 個で確定している。
 
 ## B422 [存在] 最大14石を含まないG_12成分に長い閉路がある
 - 判定: **SUPPORTED**（前回: SUPPORTED → 今回: SUPPORTED、閉路の頂点列を保存値から復元）
 - 前回の一手: なし（round2-batch-b411.md:121-129）。
-- 今回の範囲: `round2_b411.json` → `B422_cycle`（311 成分の誘導閉路探索、上限 16）、
-  `scripts/round2_b422_cycle.py`（docstring: 開始頂点のclosure を許す誘導 DFS の修正版）を読むのみ。
+- 今回の範囲: `../output/round2_b411.json` → `B422_cycle`（311 成分の誘導閉路探索、上限 16）、
+  `../scripts/round2_b422_cycle.py`（docstring: 開始頂点のclosure を許す誘導 DFS の修正版）を読むのみ。
 - 証拠: `B422_cycle = {n: 311, longest_induced_cycle: 16, girth: 6, cycle_example: 16 個の 12 石状態}`。
   16-cycle の 16 頂点は 12 石集合
   `[0,2,6,7,11,12,14,15,25,33,38,43]` / `[0,2,6,7,11,12,14,15,25,33,38,43,48]` /
@@ -280,7 +282,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B423 [全称・大胆] 最大配置を含まないG_12成分は903頂点より小さい
 - 判定: **SUPPORTED**（前回: SUPPORTED → 今回: SUPPORTED、サンプリングの性格を明確化）
 - 前回の一手: なし（round2-batch-b411.md:131-137 は「全称だが反例なし。完全分類までは未達」で終了）。
-- 今回の範囲: `round2_b411.json` → `B421_B424_strict`（5 成分）、`B421_B424`（25 プローブ）、
+- 今回の範囲: `../output/round2_b411.json` → `B421_B424_strict`（5 成分）、`B421_B424`（25 プローブ）、
   `nonmax_search`、`component_probes` を読むのみ。
 - 証拠: `all_lt_903 = true`、`max_n = 311`。5 成分の頂点数は
   **27 / 14 / 311 / 27 / 14**（`details` の `n_vertices`）で、うち木は 4（27, 14, 27, 14）、
@@ -294,12 +296,12 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
   非孤立成分の独立な seed は 5 個しか無い、(iii) 7×7 の G_12 全体の状態数は
   既存データに無いので「最大配置を含まない成分」を網羅した手上的列挙ができない。
   したがって SUPPORTED は「**発見された 5 非孤立成分 + 5 孤立例**が全て 903 未満」の範囲に限る。
-  なお `scripts/round2_b431_cover.py` は別グループ（B431-B434）の担当で本.Pos では未実行。
+  なお `../scripts/round2_b431_cover.py` は別グループ（B431-B434）の担当で本.Pos では未実行。
 
 ## B425 [構造] 孤立12石は少数の局所凍結型に分けられる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、凍結型の粒度を「型」ではなく「個数」で評価し直した）
 - 前回の一手: 「孤立 12 石の完全列挙」（round2-batch-b381.md の総括、同 b411.md:309）。
-- 今回の範囲: `round2_b411.json` → `B425_freeze`（5 例の 12 個の除去→再追加数）、
+- 今回の範囲: `../output/round2_b411.json` → `B425_freeze`（5 例の 12 個の除去→再追加数）、
   `freeze_analysis`（5 例の全 60 個の子の `legal_adds` と `only_self` フラグ）、
   `scripts/round2_b411_followup2.py:91-177` を読むのみ。
 - 証拠: `B425_freeze = {n: 5, n_distinct_altcount_types: 4, type_hist: {
@@ -315,7 +317,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 - 残った障害: 主張は「D4型をそのまま数えるより**大幅に少ない**型で尽くせる」。
   (i) 標本が 5 例しか無いため「型数 4」は D4 軌道数（孤立 12 石の D4 軌道数は未計算）との比が不明で、
   「大幅減少」が定量化できない、
-  (ii) 5 例は全て `round2_b411.json` の `known_isolated_12` 由来の既知の 5 例で、
+  (ii) 5 例は全て `../output/round2_b411.json` の `known_isolated_12` 由来の既知の 5 例で、
   孤立 12 石全体の列挙は未了、(iii) 「D4型で数える」方の分母（各 12 石集合の D4 軌道数）が
   既存データに無い。
   よって型数 4 の報告は PARTIAL の据え置き。ただし前回 WRITE 強化の具体化として
@@ -324,7 +326,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B426 [存在] 孤立12石の中に一石除去後も元へ戻す手しかないものがある
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE、判定不能の理由を具体化）
 - 前回の一手: 「孤立 12 石の完全列挙か、凍結度最大の例の系統的探索」（round2-batch-b411.md:161）。
-- 今回の範囲: `round2_b411.json` → `B426_B427`（5 例の `children_adds` と `b426_only_self_all`）、
+- 今回の範囲: `../output/round2_b411.json` → `B426_B427`（5 例の `children_adds` と `b426_only_self_all`）、
   `freeze_analysis`（`only_self` フラグつき 60 子の全容）を読むのみ。
 - 証拠: 5 例すべてで `b426_only_self_all = false`（= 全 12 子が「元の石のみ」にはなっていない）。
   逐子の内訳（`freeze_analysis`）:
@@ -345,7 +347,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 ## B428 [統計] 孤立12石と903成分内12石は中心占有率が異なる
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、標本 5 対 817 という非対称を明示）
 - 前回の一手: なし（round2-batch-b411.md:172-178 は「標本 5 では統計的主張として弱い」で終了）。
-- 今回の範囲: `round2_b411.json` → `B428`（孤立 5 例 vs 903 成分内 12 石 817 個の中心 24 占有率、
+- 今回の範囲: `../output/round2_b411.json` → `B428`（孤立 5 例 vs 903 成分内 12 石 817 個の中心 24 占有率、
   さらに角占有数 + 10 軌道占有ベクトルで照合した matched バケット数）、
   `scripts/round2_b421_components.py:439-507` を読むのみ。
 - 証拠: `B428 = {iso_n: 5, iso_center: 1, iso_rate: 0.2, c903_12_n: 817, c903_12_center: 110,
@@ -382,7 +384,7 @@ B420, B421, B422, B423, B425, B426, B428（20 件）。
 
 ### 今回 SUPPORTED/REFUTED に動いた ID
 
-**なし。** Round2 のラベルと全 20 件のラベルが一致した（`round2_b411.json` の `labels` と
+**なし。** Round2 のラベルと全 20 件のラベルが一致した（`../output/round2_b411.json` の `labels` と
 `label_counts` および `round2-batch-b381.md` のバッチ総括と突き合わせ済み）。
 ただし **判定ラベル据え置きのまま内容を前進させた** ID が 15 件ある:
 

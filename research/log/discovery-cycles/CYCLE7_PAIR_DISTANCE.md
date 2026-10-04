@@ -1,8 +1,10 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 7 — n=7 最大安全集合の交換距離構造: d*=5 で初めて接続
 
 dated 2026-09-19. 前提: `99659da` の全列挙 (n=7 K=14: 16集合/2 D4軌道;
 n=6 K=11: 464集合/58軌道) のみを使用。新規探索なし。
-解析スクリプト: `night-research/analyze_pair_distance.py` (D4正準キーは
+解析スクリプト: `research/experiments/structural-discovery/scripts/analyze_pair_distance.py` (D4正準キーは
 `results/maxsafe_exchange_n*.csv` と照合済み)。
 
 ## 停止条件への回答 (最重要)
@@ -85,8 +87,8 @@ d* (異なるD4軌道間) = 1。n=6 は 1-swap で既に軌道間が接続し、
 - results/maxsafe_cell_pair_frequency_n7.csv (171行: D4類別 共起/不共起)
 - results/maxsafe_pair_distance_n6.csv (107416行: n=6 比較用)
 - results/maxsafe_distance_components_n6.csv (n=6 比較用)
-- night-research/analyze_pair_distance.py (再現スクリプト)
-- 本メモ night-research/CYCLE7_PAIR_DISTANCE.md
+- research/experiments/structural-discovery/scripts/analyze_pair_distance.py (再現スクリプト)
+- 本メモ research/log/discovery-cycles/CYCLE7_PAIR_DISTANCE.md
 
 ## 解釈
 

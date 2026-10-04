@@ -1,13 +1,15 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B265-B284
 
-対象: `research/hypothesis-bank-2026-09-27.md` の B265〜B284。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md` の B265〜B284。
 性質: **書出し専用**（既存スクリプト / JSON / 前回個票を読むだけで判定する。新しい重い計算はしていない）。
 
 ---
 ## B265 [存在] 必勝手が unique gain の厳密な中位にある
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED）
 - 前回の一手: 「唯一必勝手 p について min u < u(p) < max u の局面。B264 と同一パスで同時に検出できる。」
-- 今回の範囲: 着手せず。先行スクリプト `research/verification/scripts/round3_chunk4_u.py` の docstring は本仮説を名指しし、`b265` リスト検出コード（L103-108, `below>0 and above>0`）まで**実装済**。ただし出力先の `research/verification/round3_chunk4_u.json` は**存在しない**（`Test-Path` False、verification 配下の 17 個の `round3_*.json` にも無い）。実行が時間切れで終わっていない。
+- 今回の範囲: 着手せず。先行スクリプト `research/experiments/original-claims/scripts/round3_chunk4_u.py` の docstring は本仮説を名指しし、`b265` リスト検出コード（L103-108, `below>0 and above>0`）まで**実装済**。ただし出力先の `research/experiments/original-claims/output/round3_chunk4_u.json` は**存在しない**（`Test-Path` False、verification 配下の 17 個の `round3_*.json` にも無い）。実行が時間切れで終わっていない。
 - 証拠: 数値なし。コードが定義する u は `u(v) = |L(S) \ L(S+v) \ {v}|`（合法手の消滅数、round3_chunk4_u.py L91-92）。
 - 残った障害: 判定に必要な witness 数（`n_witnesses`）が JSON に残っていないため、n=4 で 1 件でも出るかどうか判断できない。B264（u(p)=0 の必勝手のみが存在する局面）と同じ走査パスなので、B264 の探査を走らせれば同時に決着するが、本件は書出し専用のため再実行していない。
 
@@ -51,15 +53,15 @@
 ## B271 [存在] 石を多く置きやすくすると二点の相関の符号が変わる
 - 判定: **INCONCLUSIVE**（前回: NOT-CHECKED → 今回: INCONCLUSIVE）
 - 前回の一手: 「n=4 の全安全集合から Z_4(λ) を多項式として厳密に持ち、Cov_λ(1_p,1_q) の符号変化を λ>0 で解析すれば完全決着するサイズ。最優先の未着手の一つ。」
-- 今回の範囲: 既存 JSON からの読み出しのみ。`round3_chunk4_selfcheck.json` が n=2..5 の**正確な層計数 A_n(k)（= Z(λ) の係数）**を持っている: n=2 `1,4,6,4`、n=3 `1,9,36,84,112,56`、n=4 `1,16,120,560,1626,2360,1064,64`、n=5 `1,25,300,2300,11824,37272,59192,35208,5172,100`。二点のjoint marginal W_{pq}(λ) は**どこにも出力されていない**。
-- 証拠: 符号変化を判定する分子多項式 Cov·Z² = λ²W·Z − (λA_p)(λA_q) の実装は `research/verification/scripts/round3_chunk5_partition.py` L236-266 に**完全に書かれている**（整数 λ=1..4096 で厳密 Fraction 評価して符号を走査し、変化点を記録）。しかし出力先 `research/verification/round3_chunk5_partition.json` は**存在しない**（`Test-Path` False）。したがって符号変化の有無を示す数値は**残っていない**。
+- 今回の範囲: 既存 JSON からの読み出しのみ。`../output/round3_chunk4_selfcheck.json` が n=2..5 の**正確な層計数 A_n(k)（= Z(λ) の係数）**を持っている: n=2 `1,4,6,4`、n=3 `1,9,36,84,112,56`、n=4 `1,16,120,560,1626,2360,1064,64`、n=5 `1,25,300,2300,11824,37272,59192,35208,5172,100`。二点のjoint marginal W_{pq}(λ) は**どこにも出力されていない**。
+- 証拠: 符号変化を判定する分子多項式 Cov·Z² = λ²W·Z − (λA_p)(λA_q) の実装は `research/experiments/original-claims/scripts/round3_chunk5_partition.py` L236-266 に**完全に書かれている**（整数 λ=1..4096 で厳密 Fraction 評価して符号を走査し、変化点を記録）。しかし出力先 `research/experiments/original-claims/output/round3_chunk5_partition.json` は**存在しない**（`Test-Path` False）。したがって符号変化の有無を示す数値は**残っていない**。
 - 残った障害: Z(λ) の係数列は既にあるのに、joint 成分 W_{pq}(λ) の全ペア分の配列が無い。`round3_chunk5_partition.py` の `pairwise_marginal_poly`（L154-176）は n≤4 なら 2^14 の DP で正確に求まる設計のコードだが、実行記録が無いので「符号が実際に変わるか」は判定できない。上流に `from round3_chunk5_sharp import Game` 依存があり、`Game._safe` は `self.quad_masks if hasattr(...) else self.quads` の分岐（L145）で forbidden quads を引くため、`quads` 属性が無く L259 の `shares_forbidden_quad` 計算が落ちる可能性がある。そこで実行が途中でおわった可能性が高い。
 
 ## B272 [存在] 直接同じ禁止四点に入る二点でも正相関になる
 - 判定: **INCONCLUSIVE**（前回: NOT-CHECKED → 今回: INCONCLUSIVE）
 - 前回の一手: 「B271 と同一の Z データで、同一四点組に属する p,q の λ→大 での相関を見る。最大配置の選び方が正相関を作るメカニズムの確認。」
 - 今回の範囲: 既存スクリプトの読みのみ。`round3_chunk5_partition.py` は B272 を**別枠で実装**している: L259 `shares_quad = any((qm & (1<<p)) and (qm & (1<<q)) for qm in game.quads)` で「同一禁止四点に入る組」を判定し、L265-266 でその中に符号変化がある組だけを `b272` に格納し、L271-272 で件数を出す。`round3_chunk5_partition.json` 不在のため件数・実例は不明。
-- 証拠: なし（n=4 の禁止四点組は 194 個 = `round3_chunk4_selfcheck.json` の `n4.n_quads` で確認できるが、p,q 対の相関符号は未計算）。
+- 証拠: なし（n=4 の禁止四点組は 194 個 = `../output/round3_chunk4_selfcheck.json` の `n4.n_quads` で確認できるが、p,q 対の相関符号は未計算）。
 - 残った障害: B271 と同じで joint marginal の数値が無い。さらに B272 の「正相関」は λ→大 の極限で読む必要があるが、実装（L252-258 の走査）は有限 λ∈[1,4096] の離散走査で、`λ→∞` の極限符号は別途最高次係数の比較で出す必要がある。その最高次係数の比較コードは**書かれていない**。よって B271 が解けても B272 は追加実装なしでは決着しない。
 
 ## B273 [構造] 7×7 の A/B 相は有限 λ でも明瞭に分かれる
@@ -74,12 +76,12 @@
 - 前回の一手: 「同数の最大配置型を持つ小盤 (n=4,5) で 1 層下の近傍体積を数えて λ 感度を見る。B271 の多項式係数から直接読める。」
 - 今回の範囲: 着手せず。`round3_chunk5_partition.py` は docstring で「B274 max-set type count vs (K-1)-neighbourhood volume」を名的するが、`main()` に B274 のコードは無い。`round3_chunk5_partition.json` 不在。
 - 証拠: なし。
-- 残った障害: 必要なのは「最大配置の個数」と「その 1 層下の近傍体積」の**両方**だが、`round3_chunk4_selfcheck.json` は最大サイズ（n=4 で 7 層の 64 個）と層計数しか与えず、最大配置同士の分類も近傍体積も与えない。B271 の多項式係数が使えるという前回の一手は「B271 の分子多項式が出る」ことが前提だが、それが未出力。B274 はまず B271 の出力に依存する。
+- 残った障害: 必要なのは「最大配置の個数」と「その 1 層下の近傍体積」の**両方**だが、`../output/round3_chunk4_selfcheck.json` は最大サイズ（n=4 で 7 層の 64 個）と層計数しか与えず、最大配置同士の分類も近傍体積も与えない。B271 の多項式係数が使えるという前回の一手は「B271 の分子多項式が出る」ことが前提だが、それが未出力。B274 はまず B271 の出力に依存する。
 
 ## B275 [統計] 熱的なゆらぎのピークが変形障壁の出現に近い
 - 判定: **INCONCLUSIVE**（前回: NOT-CHECKED → 今回: INCONCLUSIVE）
 - 前回の一手: 「Var_λ(|S|) のピーク位置と、高確率配置間の低石数経由必要性（局所更新での到達）を n=4,5 で比較。MCMC 混合の軽い実験で方向は出る。」
-- 今回の範囲: 既存 JSON の読みのみ + スクリプトの読みのみ。Z(λ) の係数は `round3_chunk4_selfcheck.json` に全部揃っている（n=2..4 の exact A_n(k、上記 B271）。Var_λ(|S|) の厳密有理数計算 `var_poly`（L95-100）と λ=1..128 の走査、`peak_lambda` の抽出は `round3_chunk5_partition.py` L189-203 に**実装済**。しかし出力 JSON が無いので**ピーク値・ピーク λ は残っていない**。
+- 今回の範囲: 既存 JSON の読みのみ + スクリプトの読みのみ。Z(λ) の係数は `../output/round3_chunk4_selfcheck.json` に全部揃っている（n=2..4 の exact A_n(k、上記 B271）。Var_λ(|S|) の厳密有理数計算 `var_poly`（L95-100）と λ=1..128 の走査、`peak_lambda` の抽出は `round3_chunk5_partition.py` L189-203 に**実装済**。しかし出力 JSON が無いので**ピーク値・ピーク λ は残っていない**。
 - 証拠: なし（Var の数値表が未出力）。Z(λ) の係数だけが確定：A_4 = [1,16,120,560,1626,2360,1064,64]（K=7）、A_3 = [1,9,36,84,112,56]（K=5）、A_2 = [1,4,6,4]（K=3）。
 - 残った障害: 仮説の右辺「変形障壁の出現」は**別仮説の 量**（B278/B279 の混合時間）で、本仮説の左辺 Var のピークと同一 λ 軸で突き合わせる必要がある。B275 単独では左辺のピーク位置を出すだけで完結せず、右辺の測定が未着手。かつ 左辺すら未出力。既存データに左辺の数値が無い。
 
@@ -109,7 +111,7 @@
 - 前回の一手: 「正方形 vs 穴あき盤（中心 1 点除去）で λ を平均石数一致に調整し混合時間を比較する設計は n=6,7 で実行可能。7×7 の A/B 相と関連。」
 - 今回の範囲: 着手せず。`round3_chunk5_partition.py` の docstring に「B279 same mean |S|, different mixing: square vs punctured board」とあるが、`main()` に B279 のコードは無く、`round3_chunk5_partition.json` は不在。
 - 証拠: なし。
-- 残った障害: 穴あき盤（16 点から中心 1 点を除いた 15 点）の 1 点更新連鎖の混合時間は既存データに無い。`round3_chunk4_selfcheck.json` は正方形 n=2..5 のみで、穴あき盤の層計数すら無い。既存データに情報がなく前回と状況が変わらない。
+- 残った障害: 穴あき盤（16 点から中心 1 点を除いた 15 点）の 1 点更新連鎖の混合時間は既存データに無い。`../output/round3_chunk4_selfcheck.json` は正方形 n=2..5 のみで、穴あき盤の層計数すら無い。既存データに情報がなく前回と状況が変わらない。
 
 ## B280 [構造] 最大配置の相分類を多項式の係数から予告できる
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED）
@@ -137,7 +139,7 @@
 ## B283 [存在] 禁止族は保てても共線と共円の内訳は変わる
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED）
 - 前回の一手: 「小さい有理配置の対を列挙して collinear/concyclic 分割（F-L の分類器を流用）が違うが Q が同じものを探す。組合せの照合だけで済むので軽い。」
-- 今回の範囲: 着手せず。`round3_*.py` の docstring を走査したが B283 の実装は無い。唯一関連する既存出力は `round3_chunk4_selfcheck.json` の `n_quads`（n=2:1, n=3:14, n=4:194, n=5:826）で、`n_collinear` は全 n で `null`、すなわち**共線四点組の内訳を別出ししていない**。
+- 今回の範囲: 着手せず。`round3_*.py` の docstring を走査したが B283 の実装は無い。唯一関連する既存出力は `../output/round3_chunk4_selfcheck.json` の `n_quads`（n=2:1, n=3:14, n=4:194, n=5:826）で、`n_collinear` は全 n で `null`、すなわち**共線四点組の内訳を別出ししていない**。
 - 証拠: なし。標準ルールが共線/共円を区別しないこと自体は det=0 のみのルール定義から自明であり、判定の証拠には用いない。
 - 残った障害: 「同じ Q だが内訳が違う配置対」の生成手段が既存コードに無い。共線/共円を区別する分類器（F-L 系）も既存データ側に記録が残っていないため流用できない。既存データに情報がなく前回と状況が変わらない。
 
@@ -163,11 +165,11 @@
 - 今回決着（SUPPORTED/REFUTED に動いたもの）: **なし**。既存スクリプトは B265–B270（`round3_chunk4_u.py`）と B271–B275（`round3_chunk5_partition.py`）の**判定ロジックまで書けている**のに、出力 JSON（`round3_chunk4_u.json` / `round3_chunk5_partition.json`）が両方とも**存在しない**ため、引用できる数値が 1 つもありません（`Test-Path` False を確認）。
 - 残る未解決とその一言理由:
   - B265–B270: 検出コードは実装済（u 値・新規禁止集合・交換可能ペア・分散バケット）だが `round3_chunk4_u.json` 未生成で witness 数不明。
-  - B271・B272・B275: Cov 分子多項式と Var ピークの実装は完全だが `round3_chunk5_partition.json` 未生成。Z(λ) の係数（n=2..5 の正確な A_n(k)）だけは `round3_chunk4_selfcheck.json` から確定できた。
+  - B271・B272・B275: Cov 分子多項式と Var ピークの実装は完全だが `round3_chunk5_partition.json` 未生成。Z(λ) の係数（n=2..5 の正確な A_n(k)）だけは `../output/round3_chunk4_selfcheck.json` から確定できた。
   - B273・B274・B276・B277・B280: `round3_chunk5_partition.py` の docstring に計画はあるが `main()` に**コードが 1 行も無い**。
   - B278・B279: 混合時間の測定が未着手（docstring の eigengap 計画のみ）。
   - B281–B284: 関連コード・出力いずれも全くなし。前回個票の記述どおり「先に命題化/有限な述語が必要」な段階。
-- 最も有望な次の一手（1 つだけ）: **`scripts/round3_chunk4_u.py` を n=4 だけで走らせて `round3_chunk4_u.json` を出す**。n=4 は 5,811 状態で、第 1 ループが B265・B267・B268・B270 を、第 2 ループが B266 の joint 分布を、末尾が B269 の P 率表を出すので、n=5 の重い部分を切り捨てれば json 書き出しまで到達する見込みが高い。出れば B271 の `pairwise_marginal_poly`（n≤4 の 2^14 DP）も同じ計算制約でfollowできる。
+- 最も有望な次の一手（1 つだけ）: **`../scripts/round3_chunk4_u.py` を n=4 だけで走らせて `round3_chunk4_u.json` を出す**。n=4 は 5,811 状態で、第 1 ループが B265・B267・B268・B270 を、第 2 ループが B266 の joint 分布を、末尾が B269 の P 率表を出すので、n=5 の重い部分を切り捨てれば json 書き出しまで到達する見込みが高い。出れば B271 の `pairwise_marginal_poly`（n≤4 の 2^14 DP）も同じ計算制約でfollowできる。
 
 
 ---

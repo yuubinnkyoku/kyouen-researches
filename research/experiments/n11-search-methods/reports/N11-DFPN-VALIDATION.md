@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # df-pn 回帰・交差検証・追い出し試験の記録（2026-09-29 夜）
 
 commit: `cabece2`（本ファイルは次 commit で追加）.
@@ -25,7 +27,7 @@ df-pn の outcome は「ライン最初に置いた側が最終的に勝つか�
 k 偶数では一致、k 奇数では反転して一致すべき。
 
 結果: **n=6 は 14 共通根、n=7 は 15 共通根、すべて一致（MISMATCHES=0）**。
-比較器: `research/verification/scripts/dfpn_xcheck_compare.py`
+比較器: `research/experiments/n11-search-methods/scripts/dfpn_xcheck_compare.py`
 （parity 換算を明示）。
 
 含まれるもの: OR/AND parity 両方、終局局面、D4 canonical 経由、

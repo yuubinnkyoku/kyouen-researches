@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 LOSS proof-cost analysis (existing data only)
 
-Companion to `docs/10X10_PARENT_BENCHMARK_MECHANISM_REFINEMENT.md` (S1/S2
-split) and `docs/10X10_V2_SINGLE_ENTRY_ORACLE_AUDIT.md` (S1 oracle table).
+Companion to `research/experiments/solver-benchmarks/reports/10X10_PARENT_BENCHMARK_MECHANISM_REFINEMENT.md` (S1/S2
+split) and `research/experiments/solver-benchmarks/reports/10X10_V2_SINGLE_ENTRY_ORACLE_AUDIT.md` (S1 oracle table).
 S1 medians there (exact-only 1.7911, gmean 1.7505, B/A selected 1.7911)
 are reproduced here from an independent solver-order replication, extended to
 all 12 parents, 18 cheap features, and the entered-prefix decomposition.

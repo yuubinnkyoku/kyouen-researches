@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 境界 q=2w の一般構造と格子上の mod 9 改良
 
 ## 概要
@@ -245,7 +247,7 @@ c,n はそれぞれ9通りしかないので完全に調べられる。結果は
 前節の \(B,C,D,N\in\mathbb Z\) の導出も適用できる。
 
 この有限 mod 9 検査は
-[verification/scripts/q2w_boundary_structure.py](verification/scripts/q2w_boundary_structure.py)
+[verification/scripts/q2w_boundary_structure.py](../scripts/q2w_boundary_structure.py)
 で全81組 \((c,n)\) を再生成している。
 
 ---
@@ -481,7 +483,7 @@ q>U_w なら円も消える。
 再現:
 
 ~~~bash
-python research/verification/scripts/q2w_boundary_structure.py
+python research/experiments/fixed-width/scripts/q2w_boundary_structure.py
 ~~~
 
 検証器は次を独立に確認する。
@@ -495,7 +497,7 @@ python research/verification/scripts/q2w_boundary_structure.py
 3. 二重点行の局所制約に対する DP と閉形式 \(f_w\) が w=1..30 で一致することを確認。
 
 保存出力:
-[verification/q2w_boundary_structure.json](verification/q2w_boundary_structure.json)。
+[verification/q2w_boundary_structure.json](../output/q2w_boundary_structure.json)。
 
 ---
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 follow-up: 幾何統計・相関（B402–B500）追撃・弱化
 
 対象: `round5-batch-geom-stats.md` の全 39 件（PARTIAL 27 / INCONCLUSIVE 10 / NOT-CHECKED 2）。
@@ -5,9 +7,9 @@
 原命題の判定は既存のまま、または最新ラウンド（round11/round13/round4-circle-windows）の
 確定を「最新の判定を優先する」に従って採用する。
 
-スクリプト: `scripts/round5_geom_stats.py`, `scripts/round5_geom_stats_diag.py`
-データ: `round5_geom_stats.json`, `round5_geom_stats_extra.json`
-再利用: `round3_b451_census.json`, `round3_b475_mn.json`, `round2_b411.json`, `round2_b471.json`, `round2_b381.json`
+スクリプト: `../scripts/round5_geom_stats.py`, `../scripts/round5_geom_stats_diag.py`
+データ: `../output/round5_geom_stats.json`, `../output/round5_geom_stats_extra.json`
+再利用: `../output/round3_b451_census.json`, `../output/round3_b475_mn.json`, `../output/round2_b411.json`, `../output/round2_b471.json`, `../output/round2_b381.json`
 参照（最新判定）: `round4-circle-windows.md`, `round13-four-point-circles.md`, `round11-circle-records.md`
 
 禁止の遵守: `round5-batch-geom-stats.md` は未編集。n≥7 の新規全列挙・p_rand 全計算なし。
@@ -43,7 +45,7 @@
 - 弱化版: K=14 の 16 集合とその |S|=13 部分集合 224 個について、観測点数の増加に伴う
   最尤相の切替回数を測る。ただし「最尤」は事前分布の指定なしには定義されない。
 - 弱化版判定: **NOT-CHECKED**
-- 証拠: `round2_b381.json` / `round2_b411.json` に B405 キーなし。13 石の全列挙
+- 証拠: `../output/round2_b381.json` / `../output/round2_b411.json` に B405 キーなし。13 石の全列挙
   C(49,13)=5.8×10^10 は n≥7 全列挙禁止に触れる。224 部分集合の擬似計数では
   最尤相が事前分布に依存して恣意的になる。
 - 原命題の残り: 事前分布モデルが無い限り弱化版すら測定不能。n≥7 列挙禁止とも両立。
@@ -184,7 +186,7 @@
   n=4..7 で 8、n=8..11 で 12、n=12 で 16 という **4 刻みの階段**を描き、
   半径の連続的な単調増加だけでは説明できない不連続を持つ。
 - 弱化版判定: **SUPPORTED**
-- 証拠: `round3_b451_census.json` の M_n / circles_by_q / quads_by_q。
+- 証拠: `../output/round3_b451_census.json` の M_n / circles_by_q / quads_by_q。
   n=12 の quads_by_q: q=2 が 86,948（61.6%）、q=1 が 29,736（21.0%）、
   q≥3 計 25,742（18.2%）。q≥3 の円 21,124 個に対し四点 25,742 で平均 1.22。
   **一般証明（round11）**: ノルム上限 X に対する完全点数最大 F_q は
@@ -199,7 +201,7 @@
   **3 例（m=4,8,12）**で q≥3 側の窓点数種類が多く、m=6 で同数 7 にとどまる。
   「必ず q≥3 の方が種類が多い」は成り立たないが、「多くなりやすい」は 3/4 で成立。
 - 弱化版判定: **PARTIAL**
-- 証拠: `round3_b451_b457_derived.json` の B457_detail と
+- 証拠: `../output/round3_b451_b457_derived.json` の B457_detail と
   `round5_geom_stats.json["B457_extra"]`。
   m=4: [397, 5516, 4.04, 5.0, true]、m=6: [16, 452, 7.0, 7.0, false]、
   m=8: [327, 188, 7.0, 9.0, true]、m=12: [30, 4, 10.5, 13.0, true]。
@@ -325,7 +327,7 @@
   **0.215–0.220 の帯**に収まり、0 へは向かない。したがって
   「m0=4 の寄与 liminf>0」の有限形はこの帯で支持される。
 - 弱化版判定: **SUPPORTED**
-- 証拠: `round3_b475_mn.json` と `round5_geom_stats.json["B475_from_census"]`。
+- 証拠: `../output/round3_b475_mn.json` と `round5_geom_stats.json["B475_from_census"]`。
   f_n(4): n=3 1.000, n=4 0.293, n=5 0.252, n=8 0.242, n=11 0.220,
   n=13 0.217, n=15 **0.21512**, n=17 0.217, n=20 **0.21958**（わずかに上昇）。
   census 再計算（n=8）: m_hist `{4:3155,...}` から f_le(4)=0.24195、C_n=13040 で一致。

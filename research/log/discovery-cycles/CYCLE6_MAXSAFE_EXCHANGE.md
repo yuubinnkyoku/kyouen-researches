@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 6 — Exchange structure of maximal safe sets: n=6 vs n=7
 
 ## Question (pre-registered in the task)
@@ -18,7 +20,7 @@ Decision criteria fixed **before** running:
 
 ## Method
 
-`maxsafe_enum.cpp` (new):
+`../../experiments/structural-discovery/scripts/maxsafe_enum.cpp` (new):
 
 - `count` / `enum`: exhaustive DFS over safe sets with incremental conflict
   counters; every safe K-set is enumerated exactly once (K = maximum size,
@@ -40,7 +42,7 @@ Decision criteria fixed **before** running:
 | n=6, K=10 count | **35,316** — equals the Cycle-5 Grundy layer count for k=10 |
 | n=7, K=14 count | 16 (12,826,299 DFS nodes) |
 | swap destinations resolved | 608/608 on n=6, 0 unresolved (every swap lands in the enumerated list) |
-| independent Python re-derivation (`verify_n7_rigidity.py`) | ρ histogram and τ histograms reproduce the C++ output exactly; 0/7,840 candidate swaps succeed |
+| independent Python re-derivation (`../../experiments/structural-discovery/scripts/verify_n7_rigidity.py`) | ρ histogram and τ histograms reproduce the C++ output exactly; 0/7,840 candidate swaps succeed |
 
 ## Results
 
@@ -139,14 +141,14 @@ Follow-ups (not run here):
 
 ## Artifacts
 
-- `night-research/maxsafe_enum.cpp` / `.exe` — enumerator + analyser
-- `night-research/maxsafe_n6_K11.bin` (464 sets), `maxsafe_n7_K14.bin` (16 sets)
+- `research/experiments/structural-discovery/scripts/maxsafe_enum.cpp` / `.exe` — enumerator + analyser
+- `research/experiments/structural-discovery/output/maxsafe_n6_K11.bin` (464 sets), `../../experiments/structural-discovery/output/maxsafe_n7_K14.bin` (16 sets)
 - `results/maxsafe_exchange_n6.csv`, `results/maxsafe_exchange_n7.csv`
 - `results/maxsafe_swap_edges_n6.csv` (608 edges with canonical keys),
   `results/maxsafe_swap_edges_n7.csv` (header only — no swaps exist)
 - `results/maxsafe_exchange_components_n6.csv`, `..._n7.csv`
 - `results/maxsafe_cell_frequency_n6.csv`, `..._n7.csv`
-- `night-research/verify_n7_rigidity.py` — independent Python re-derivation
-- `night-research/summarize_cell_freq_n7.py` — cell-frequency summary
-- `night-research/enum7_count.json`, `enum7.json` — run logs
+- `research/experiments/structural-discovery/scripts/verify_n7_rigidity.py` — independent Python re-derivation
+- `research/experiments/structural-discovery/scripts/summarize_cell_freq_n7.py` — cell-frequency summary
+- `research/experiments/structural-discovery/output/enum7_count.json`, `../../experiments/structural-discovery/output/enum7.json` — run logs
 

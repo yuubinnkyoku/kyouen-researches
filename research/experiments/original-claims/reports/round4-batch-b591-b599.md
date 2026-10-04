@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round4 個票: B591, B592, B593, B596, B597, B598, B599
 
 担当: 共円ゲーム検証ワーカー。WSL C++ (g++ 13.3.0) による決着。
-スクリプト（第1パス）: `research/verification/scripts/round4_b591_dmax.cpp`
-スクリプト（第2パス・今回）: `research/verification/scripts/round4_b591b.cpp`
-データ: `research/verification/round4_b591_dmax.json`, `round4_b591b.json`
+スクリプト（第1パス）: `research/experiments/original-claims/scripts/round4_b591_dmax.cpp`
+スクリプト（第2パス・今回）: `research/experiments/original-claims/scripts/round4_b591b.cpp`
+データ: `research/experiments/original-claims/output/round4_b591_dmax.json`, `../output/round4_b591b.json`
 
 （本ファイルは逐次追記する）
 
@@ -19,7 +21,7 @@ n ≤ 8 は `kc_core.h` の `kc::build_square` と完全一致、n=9 は README 
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、ただし第3回の n=8 数値は**誤り**で訂正）
 - 前回の一手: 「B591 の有限支持は無い。n≥8 での d_max 延長が必要」。
   第3回は n=8（K_8=15, 14石層）で 48 個を B&B により「厳密」と報告し d_max 最大 3 を出した。
-- 今回の範囲: `scripts/round4_b591_dmax.cpp`（WSL g++ 13.3.0, 128bit 占有）を新規実装。
+- 今回の範囲: `../scripts/round4_b591_dmax.cpp`（WSL g++ 13.3.0, 128bit 占有）を新規実装。
   幾何は `kc_core.h` と**完全一致**（自己検査: F_n n=2..8 が
   1,14,194,826,2491,6364,14564 で kc_core と一致、F_9=29152 も README と一致）。
   d_max は `α(S)=max_{|M|=K, M安全} |S∩M|` の**完全分岐限界**で厳密計算。
@@ -166,8 +168,8 @@ n ≤ 8 は `kc_core.h` の `kc::build_square` と完全一致、n=9 は README 
   **G_11 の経路長も厳密に埋めた**）
 - 前回の一手: 「到達できたものだけの平均は等距離が長い（12.5 > 7.67）、到達率も低い。
   標本が小さく、**G_11 の経路長は未計算**。」（`round2-batch-b591.md`）
-- 今回の範囲: `scripts/round4_b591b.cpp` の新ステージ `bfs`。
-  n=7, K=14, 最大集合 16 本（`night-research/maxsafe_n7_K14.bin`）を BFS 始点とし、
+- 今回の範囲: `../scripts/round4_b591b.cpp` の新ステージ `bfs`。
+  n=7, K=14, 最大集合 16 本（`research/experiments/structural-discovery/output/maxsafe_n7_K14.bin`）を BFS 始点とし、
   石数窓 {floorK, …, 14} 上の「1 石追加 / 1 石削除」グラフで**完全 BFS**。
   追加は `conflicts_a` で安全性を保証するので生成される隣接点は必ず安全集合で、
   窓外に出ない限り **BFS は窓内で厳密かつ完全**（`bfs_complete: true`, 打ち切り 0）。
@@ -232,13 +234,13 @@ n ≤ 8 は `kc_core.h` の `kc::build_square` と完全一致、n=9 は README 
 
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE、ただし前提の曖昧さを指摘）
 - 前回の一手: 「4点では漸近判定不能。競合の B598 と**両立しない**（少なくとも一方が偽）。」
-- 今回の範囲: 既存 `round2_b591.json` → `b597_b598_counts` の読み取りと解析のみ。
+- 今回の範囲: 既存 `../output/round2_b591.json` → `b597_b598_counts` の読み取りと解析のみ。
   n=8 の 14石層は C(64,14) ≈ 2.1×10^11 で列挙不能、n=9 は 81点で更に困難。
   本回の d_max 計算資源はこの層の計数には使えない。
 - **新規の指摘: 命題の分母「最大集合数」の定義が回ごとに揺れている**.
   `b597_b598_counts` の `max_set_count` は n=3..7 で **56, 64, 100, 464, 16**。
-  一方 `PROTOCOL.md` の確定表は「K_6=11（極大 **464**）」「K_7=14（極大 **16**）」で一致、
-  n=5 の 100 は `PROTOCOL.md` に記載が無い値。
+  一方 `../../../archive/claim-audit-history/PROTOCOL.md` の確定表は「K_6=11（極大 **464**）」「K_7=14（極大 **16**）」で一致、
+  n=5 の 100 は `../../../archive/claim-audit-history/PROTOCOL.md` に記載が無い値。
   ここで **n=7 で分母が 464 → 16 に 29 倍落ちる**ため、比 136 / 11110 は
   分子の増加ではなく**分母の構造的急減**で生じている。
   - n=4: 64、n=5: 100、n=6: 464、n=7: **16**。この列は単調でも何でもない。
@@ -281,7 +283,7 @@ n ≤ 8 は `kc_core.h` の `kc::build_square` と完全一致、n=9 は README 
   既存 ratio は **層全体の大きさ / |ℳ_n|** だが、
   「最大配置の近傍」という幾何学的な近傍は
   `N_ext = #{S : |S|=K_n−1, ∃M∈ℳ_n, S ⊂ M}`（= `d_max(S) = 0` の集合数）である。
-  本回厳密に全数計数した（n=2..5 は既存 `round2_b591.json` の d=0 カウント、
+  本回厳密に全数計数した（n=2..5 は既存 `../output/round2_b591.json` の d=0 カウント、
   n=6,7 は C++ `extend` で独立に再計算し**完全一致**）:
 
   | n | K_n | 層全体 | `N_ext`（真の近傍） | `N_ext`/\|ℳ_n\| | 層/近傍 | 重複度 t(S) 分布 |

@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 two-stone root 69,91: child classification and the four TableFull states
 
 This experiment continues the two-stone frontier opened by
-`docs/10X10_THREE_STONE_SUBSETS.md`. Coordinates use `id = y * 10 + x`; outcomes
+`research/experiments/solver-benchmarks/reports/10X10_THREE_STONE_SUBSETS.md`. Coordinates use `id = y * 10 + x`; outcomes
 are from the player to move.
 
 ## Result: the parent 69,91 is a WIN
@@ -22,9 +24,9 @@ proven LOSS unless every child is WIN" caveat is resolved in the opposite
 direction: LOSS children exist, and they decide the parent immediately.
 
 Machine-readable results:
-[`results/10x10/two-stone-69-91-child-proof.csv`](../results/10x10/two-stone-69-91-child-proof.csv).
+[`results/10x10/two-stone-69-91-child-proof.csv`](../../../../results/10x10/two-stone-69-91-child-proof.csv).
 Expanded-memo run details (per-bucket usage):
-[`results/10x10/69-91-expanded-memo.csv`](../results/10x10/69-91-expanded-memo.csv).
+[`results/10x10/69-91-expanded-memo.csv`](../../../../results/10x10/69-91-expanded-memo.csv).
 
 ## The four former TABLE_FULL children, resolved
 

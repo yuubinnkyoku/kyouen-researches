@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 追撃: B001-B100 follow-up
 
 対象: `round5-batch-b001-b100.md` の PARTIAL / INCONCLUSIVE / NOT-CHECKED 件。
 方針: 決着済み（B077 SUPPORTED, B081 REFUTED）は除き、弱化版・既存データ再解釈・n≤6 追加計算で SUPPORTED / REFUTED に上げる。
 制約: n≥7 の全列挙・p_rand 全計算は行わない。既知の確定事実（K_9=18, F_10=54,441 等）の再発見はしない。
 
-スクリプト: `scripts/round5_b001_*.py`, 既存 `round4_tstar*.json`, `round4_b092b.json`
-データ: `round5_b001_*.json`, `round4_tstar_n45.json`, `round4_tstar_n67.json`, `round4_b092b.json`
+スクリプト: `scripts/round5_b001_*.py`, 既存 `round4_tstar*.json`, `../output/round4_b092b.json`
+データ: `round5_b001_*.json`, `../output/round4_tstar_n45.json`, `../output/round4_tstar_n67.json`, `../output/round4_b092b.json`
 
 ---
 
@@ -29,7 +31,7 @@
 
 ## B099 [統計] 追撃
 - 判定: **SUPPORTED**（前回: PARTIAL → 今回: **SUPPORTED**。round4_b092b の帰属分析データを発見）
-- 今回の範囲: 既存データの再解釈。`round4_b092b.json` → `binspec` の `n*_b099` キーに
+- 今回の範囲: 既存データの再解釈。`../output/round4_b092b.json` → `binspec` の `n*_b099` キーに
   B099 帰属分析の実測結果が保存済みであることを確認（round5-batch はこれを参照していなかった）。
   n=3,4,5,6 の最小極大 60 個（サイズ昇順先頭）について共線/非共線三つ組の被覆容量を計測済み。
 - 証拠:
@@ -42,13 +44,13 @@
   - 「長い直線と豊富な円を併用」: n=4,5,6 で共線三つ組が 0 でなく（39/71/125 個）、
     円容量が 87.9〜100% を占める → 「併用」成立。
   - 直線容量の割合が n=3→4→5→6 で 0% → 4.8% → 8.2% → 12.1% と単調増加。
-  - データ出典: `round4_b092b.json` binspec `n3_b099`〜`n6_b099`、実装 `round4_b092b.cpp` attribution()。
+  - データ出典: `../output/round4_b092b.json` binspec `n3_b099`〜`n6_b099`、実装 `round4_b092b.cpp` attribution()。
 - 残った障害: n≥7 の同集計は n=7 全極大列挙に依存（n7spec が未保存）。「豊富」の定義は
   容量比 0.88〜1.00 で固定した。量的主張として n≤6 で SUPPORTED。
 
 ## B100 [全称・大胆] 追撃
 - 判定: **SUPPORTED（弱化版 n≤6）**（前回: PARTIAL → 今回: **SUPPORTED（弱化版）**。原命題は PARTIAL）
-- 今回の範囲: n=3,4,5,6 の完全極大集合サイズ分布を `round4_b092b.json` binspec で再確認。
+- 今回の範囲: n=3,4,5,6 の完全極大集合サイズ分布を `../output/round4_b092b.json` binspec で再確認。
   round5-batch の「n=6 未独立検証」は誤り — round4_b092b が `maximal_n6.bin`（349,596 個）から
   独立に再集計し、既知 F-U と完全一致している。
 - 証拠:
@@ -61,7 +63,7 @@
   全 n≤6 でサイズ集合 = [s_n, K_n] の完全区間。欠落 0。
   弱化版「n≤6 で極大サイズスペクトルは区間 [s_n, K_n] を完全に覆う」→ **SUPPORTED**。
 - 残った障害: 原命題（全 n）は n=7 以降のスペクトル検査が必要。n=7 の全極大列挙
-  （n7spec）は round4 で企画されたが `round4_b092b.json` に結果が未保存。
+  （n7spec）は round4 で企画されたが `../output/round4_b092b.json` に結果が未保存。
   n≥8 は完全列挙が範囲外。原命題は PARTIAL 維持。
 
 ---
@@ -283,11 +285,11 @@
 - **その他**: B020, B039, B050, B063, B074, B082, B088, B089, B090
 
 ### 計算スクリプト（追加分）
-- `scripts/round5_b001_followup.py` — B072 k=5（n=5 完了、n=6 は時間超過）
-- `scripts/round5_b001_b045.py` — B045 n=5 D4 安定化群
+- `../scripts/round5_b001_followup.py` — B072 k=5（n=5 完了、n=6 は時間超過）
+- `../scripts/round5_b001_b045.py` — B045 n=5 D4 安定化群
 
 ### データ（追加分）
-- `round5_b001_b045.json` — n=5 極大集合の stab ヒストグラム
+- `../output/round5_b001_b045.json` — n=5 極大集合の stab ヒストグラム
 - B072 k=5 結果は followup.py の標準出力（n=5: safe=37,272, max_b=2）
 
 ### 最も有望な次の一手

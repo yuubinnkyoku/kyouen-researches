@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B454: 11点で奇分母が2の冪分母に勝つ
 
-作成: 2026-09-29。対象: [B454原文](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-29。対象: [B454原文](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **判定: REFUTED（明示的な完全円と、全候補を尽くす有限整数計算）。**
 
@@ -95,8 +97,8 @@ X<0、X>w、X=0かつY<0、または全Yのスパン>wなら現在の原点の�
 
 ## 4. w=161の全列挙
 
-実装: [round12_circle_bbox.cpp](scripts/round12_circle_bbox.cpp)
-結果: [w=161のJSON](round12_circle_bbox_w161_power2.json)
+実装: [round12_circle_bbox.cpp](../scripts/round12_circle_bbox.cpp)
+結果: [w=161のJSON](../output/round12_circle_bbox_w161_power2.json)
 
 | 項目 | 件数 |
 |---|---:|
@@ -120,7 +122,7 @@ W=161で検証した主張に、この実装上限を超える探索は不要。
 
 ## 5. 最初の反例であること
 
-[w=64、両族の全列挙](round12_circle_bbox_w64.json) により、以下の最小スパンが厳密に決まる。
+[w=64、両族の全列挙](../output/round12_circle_bbox_w64.json) により、以下の最小スパンが厳密に決まる。
 奇分母の7点だけはw≤64で不在であり、分母11、M=138125の完全7点円がw=65を達成する。
 この例も全ノルム解を別途列挙して検査した。
 
@@ -144,24 +146,24 @@ m=3は単位正方形内の非共線3点なら四隅の同一円に乗るので�
 
 ## 6. 検証と再現
 
-[Python検算](scripts/round12_verify_bbox.py) は、2×2〜7×7盤の**全3点組**から
+[Python検算](../scripts/round12_verify_bbox.py) は、2×2〜7×7盤の**全3点組**から
 円を生成する別の列挙とC++の出力を比較する。原点正規化円の件数・点数別件数・最小スパンが
 全6盤で一致し、2の冪だけを早期抽出する経路も通常経路と一致した。
 保存した49件の最小円について、Python多倍長整数とmath.isqrtで完全点集合を再計算した。
 分母11の7点・11点、および分母16の11点・スパン366の上界例は、
 ガウス整数による候補生成とは別に、整数ノルムの全解を直接走査して確認した。
-結果と入力SHA-256は [検算JSON](round12_circle_bbox_verification.json) に保存。
+結果と入力SHA-256は [検算JSON](../output/round12_circle_bbox_verification.json) に保存。
 
 ```powershell
-g++ -O3 -std=c++17 research/verification/scripts/round12_circle_bbox.cpp -o scratchpad/round12_circle_bbox.exe
-./scratchpad/round12_circle_bbox.exe 32 > research/verification/round12_circle_bbox_w32.json
-./scratchpad/round12_circle_bbox.exe 64 > research/verification/round12_circle_bbox_w64.json
-./scratchpad/round12_circle_bbox.exe 161 power2 > research/verification/round12_circle_bbox_w161_power2.json
-python research/verification/scripts/round12_circle_candidates.py --output research/verification/round12_circle_candidates.json
-python research/verification/scripts/round12_verify_bbox.py
+g++ -O3 -std=c++17 research/experiments/original-claims/scripts/round12_circle_bbox.cpp -o scratchpad/round12_circle_bbox.exe
+./scratchpad/round12_circle_bbox.exe 32 > research/experiments/original-claims/output/round12_circle_bbox_w32.json
+./scratchpad/round12_circle_bbox.exe 64 > research/experiments/original-claims/output/round12_circle_bbox_w64.json
+./scratchpad/round12_circle_bbox.exe 161 power2 > research/experiments/original-claims/output/round12_circle_bbox_w161_power2.json
+python research/experiments/original-claims/scripts/round12_circle_candidates.py --output research/experiments/original-claims/output/round12_circle_candidates.json
+python research/experiments/original-claims/scripts/round12_verify_bbox.py
 ```
 
-候補探索用 [Python](scripts/round12_circle_candidates.py) と [JSON](round12_circle_candidates.json)
+候補探索用 [Python](../scripts/round12_circle_candidates.py) と [JSON](../output/round12_circle_candidates.json)
 は限定した素数・ノルム・分母しか探索しておらず、それ単独では下界の根拠にならない。
 不存在の根拠は独立した全座標対のC++列挙である。
 Pythonとの独立比較は小盤であり、w=161の全計算を第二実装で丸ごと繰り返したわけではない。

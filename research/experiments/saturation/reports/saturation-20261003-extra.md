@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 21石・22石の構成と、10盤の局所最適性障壁
 
 標準ルール（同一直線・同一円上の4点を禁止）、盤面
@@ -38,8 +40,8 @@ C = [(3,0),(7,0),(7,1),(9,1),(2,2),(6,2),(3,3),(6,3),(1,4),
 さらに、それぞれ100個・122個の空点すべてに禁止4点組の証人を与える。
 したがって両集合は安全であるだけでなく極大である。
 
-これらを世界記録や最適値とは主張しない。既存の `research/findings.md`、
-`research/exploration/`、`research/verification/` の \(K_{11},K_{12}\)、
+これらを世界記録や最適値とは主張しない。既存の `research/archive/hypothesis-ledgers/findings.md`、
+`research/experiments/fact-discovery/output/`、`research/experiments/saturation/output/` の \(K_{11},K_{12}\)、
 11盤・12盤および21石・22石の記述を再照合した範囲では、同じ有効な下界証人は
 確認できなかった。旧 `N11-STATE-SPACE.md` の \(K_{11}=11\) は撤回対象で、
 `N11-WORKLOG.md` も旧計算を棄却している。旧文書が参照する
@@ -130,7 +132,7 @@ Q=\{25,59,62,83\},\qquad x^2+y^2-11x-11y+48=0
 通常の整数幾何監査はPython標準ライブラリのみで実行できる。
 
 ```bash
-python research/verification/scripts/saturation_20261003_extra_verify.py
+python research/experiments/saturation/scripts/saturation_20261003_extra_verify.py
 ```
 
 明示集合の安全性、極大性、外周被覆、唯一の禁止4点組、探索ログの部分集合数を検証し、
@@ -142,7 +144,7 @@ python research/verification/scripts/saturation_20261003_extra_verify.py
 同じ検証器に次のオプションを付ける（`g++` が必要）。
 
 ```bash
-python research/verification/scripts/saturation_20261003_extra_verify.py --rerun-exact
+python research/experiments/saturation/scripts/saturation_20261003_extra_verify.py --rerun-exact
 ```
 
 計測時の3探索は約198秒・244秒・29秒、合計約8分だった。実時間は環境による。

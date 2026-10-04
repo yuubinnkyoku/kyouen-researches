@@ -1,8 +1,10 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 最終統合サマリ（全 600 仮説 決着）
 
 > 最終統合担当。作成: 2026-09-29。
 > 本ドキュメントは第5回検証の**最終到達点**をまとめる。
-> 個票の根拠は `round5-batch-*.md`、時系列は `round5-census-log.md`、
+> 個票の根拠は `round5-batch-*.md`、時系列は `../../log/claim-audit/round5-census-log.md`、
 > 過程サマリは `round5-SUMMARY.md` を参照。
 
 > [!NOTE]
@@ -52,7 +54,7 @@
   n≤N の有限形・否定形・構成的証人・測定不能性の確認で SUPPORTED / REFUTED を確定した。
 - **弱化版 SUPPORTED ≠ 原命題 SUPPORTED** である点は全編を通じて厳密に分離して記録。
   census の最終カウントでは、弱化版の決着を「原命題の本質を捉えている場合」に
-  昇格（`round5-batch-weak-promote.md`）して 600/600 に到達した。
+  昇格（`../../experiments/original-claims/reports/round5-batch-weak-promote.md`）して 600/600 に到達した。
 - 昇格の基準: 弱化版が n≤N で完全検証され、原文の主張の本質を捉えている場合は
   SUPPORTED / REFUTED。原命題が無界で有限 n では閉じない場合は、
   弱化版の有限決着を以て決着とみなした（理論課題は §5 に列挙）。
@@ -139,14 +141,14 @@ ROUND5-PROTOCOL「無界命題の弱化」に従い、原命題が無界・漸�
 
 | バッチ | 弱化版決着 | 内訳 | 備考 |
 |---|---:|---|---|
-| `round5-batch-b201-b300-weak.md` | **52 / 52** | S 48 + R 4 | 原命題は S 8 / R 3。残りは弱化で決着 |
-| `round5-batch-b325-b350-weak.md` | **13 / 13** | S 9 + R 4 | 全 13 件が弱化で決着 |
-| `round5-batch-geom-stats-followup.md` | **34**（+B468B で 35 判定） | S 25 + R 9 | 幾何統計の弱化 |
-| `round5-batch-b001-b200-weak.md` | 多数 | — | 基礎・幾何の弱化 |
-| `round5-batch-b501-b600-weak.md` | 多数 | — | p_rand 残・nimber 増幅 |
-| `round5-batch-weak-promote.md` | 43 昇格 | S 20 / R 3 / P 20 | 弱化版 → 最終判定の昇格 |
-| `round5-batch-final-43.md` | 43 | — | census 未解決 43 件の弱化決着 |
-| `round5-batch-last21.md` | 21 | — | 残り 21 件フィニッシャー |
+| `../../experiments/original-claims/reports/round5-batch-b201-b300-weak.md` | **52 / 52** | S 48 + R 4 | 原命題は S 8 / R 3。残りは弱化で決着 |
+| `../../experiments/original-claims/reports/round5-batch-b325-b350-weak.md` | **13 / 13** | S 9 + R 4 | 全 13 件が弱化で決着 |
+| `../../experiments/original-claims/reports/round5-batch-geom-stats-followup.md` | **34**（+B468B で 35 判定） | S 25 + R 9 | 幾何統計の弱化 |
+| `../../experiments/original-claims/reports/round5-batch-b001-b200-weak.md` | 多数 | — | 基礎・幾何の弱化 |
+| `../../experiments/original-claims/reports/round5-batch-b501-b600-weak.md` | 多数 | — | p_rand 残・nimber 増幅 |
+| `../../experiments/original-claims/reports/round5-batch-weak-promote.md` | 43 昇格 | S 20 / R 3 / P 20 | 弱化版 → 最終判定の昇格 |
+| `../../experiments/original-claims/reports/round5-batch-final-43.md` | 43 | — | census 未解決 43 件の弱化決着 |
+| `../../experiments/original-claims/reports/round5-batch-last21.md` | 21 | — | 残り 21 件フィニッシャー |
 
 **弱化のパターン（方法論として定着）**:
 
@@ -178,10 +180,10 @@ ROUND5-PROTOCOL「無界命題の弱化」に従い、原命題が無界・漸�
 
 - **D_n = 7ζ(2)/(60ζ(3)) n^5 − 3/(4ζ(2)) n^4 log n + O(n^4)**
 - 主項定数 7ζ(2)/(60ζ(3)) ≈ 0.15965
-- 第1回の REFUTED は誤読。`round4-collinear-asymptotic.md` の証明、
-  `ROUND4-B141-VERIFICATION.md` の独立検証により SUPPORTED 確定
+- 第1回の REFUTED は誤読。`../../experiments/original-claims/reports/round4-collinear-asymptotic.md` の証明、
+  `../../experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md` の独立検証により SUPPORTED 確定
 - F-W の「D_n=Θ(n^6)」は D/n^6 単調減少（n=11..20 で 0.0059→0.0047）で否定
-- 文書訂正指示: `round5-b141-corrections.md`
+- 文書訂正指示: `../../experiments/original-claims/reports/round5-b141-corrections.md`
 
 #### B142（非共線共円四点組の次数）— REFUTED
 
@@ -395,63 +397,63 @@ ROUND5-PROTOCOL「無界命題の弱化」に従い、原命題が無界・漸�
 
 | ファイル | 対象 | サイズ |
 |---|---|---:|
-| `round5-batch-n8.md` | n=8 p_rand 専任 | 4,257 |
-| `round5-batch-b001-b100.md` | B001–100 | 40,669 |
-| `round5-batch-b001-b100-followup.md` | B001–100 追撃 | 20,989 |
-| `round5-batch-b001-b100-push3.md` | B001–100 第3波 | 43,463 |
-| `round5-batch-b001-b100-final.md` | B001–100 最終 | 11,057 |
-| `round5-batch-b020-b090.md` | B020–090 | 42,973 |
-| `round5-batch-b020-b090-followup.md` | B020–090 追撃 | 26,201 |
-| `round5-batch-b101-b150.md` | B101–150 | 33,825 |
-| `round5-batch-b101-b200.md` | B101–200 | 61,099 |
-| `round5-batch-b101-b200-followup.md` | B101–200 追撃 | 37,501 |
-| `round5-batch-b120-b160.md` | B120–160 | 24,450 |
-| `round5-batch-b120-b160-followup.md` | B120–160 追撃 | 17,750 |
-| `round5-batch-b142-docs.md` | B142 + B141 文書訂正 | 8,006 |
-| `round5-batch-b151-b200.md` | B151–200 | 28,658 |
-| `round5-batch-b177-b200.md` | B177–200 | 25,635 |
-| `round5-batch-b201-b230.md` | B201–230 | 34,173 |
-| `round5-batch-b201-b230-followup.md` | B201–230 追撃 | 32,690 |
-| `round5-batch-b231-b250.md` | B231–250 | 30,625 |
-| `round5-batch-b231-b250-followup.md` | B231–250 追撃 | 23,830 |
-| `round5-batch-b231-b250-push3.md` | B231–250 第3波 | 17,756 |
-| `round5-batch-b251-b270.md` | B251–270 | 21,788 |
-| `round5-batch-b251-b300.md` | B251–300 | 33,683 |
-| `round5-batch-b251-b300-followup.md` | B251–300 追撃 | 29,070 |
-| `round5-batch-b271-b290.md` | B271–290 | 23,233 |
-| `round5-batch-b271-b290-followup.md` | B271–290 追撃 | 22,483 |
-| `round5-batch-b301-b400.md` | B301–400 | 48,237 |
-| `round5-batch-b301-b400-followup.md` | B301–400 追撃 | 32,641 |
-| `round5-batch-b325-b350.md` | B325–350 | 22,492 |
-| `round5-batch-b351-b400.md` | B351–400 | 30,491 |
-| `round5-batch-b351-b400-followup.md` | B351–400 追撃 | 20,353 |
-| `round5-batch-b401-b600.md` | B401–600 | 40,021 |
-| `round5-batch-b401-b600-followup.md` | B401–600 追撃 | 39,252 |
-| `round5-batch-b482-b500.md` | B482–500 | 21,259 |
-| `round5-batch-b482-b500-followup.md` | B482–500 追撃 | 15,982 |
-| `round5-batch-b551-b600.md` | B551–600 | 31,378 |
-| `round5-batch-b551-b600-followup.md` | B551–600 追撃 | 19,021 |
-| `round5-batch-geom-stats.md` | 幾何統計 | 38,205 |
-| `round5-batch-geom-stats-followup.md` | 幾何統計 追撃 | 39,901 |
-| `round5-batch-jn.md` | J_n | 14,023 |
-| `round5-batch-jn-followup.md` | J_n 追撃 | 13,559 |
-| `round5-batch-pgrand.md` | p_rand 残余 | 24,145 |
-| `round5-batch-pgrand-followup.md` | p_rand 残余 追撃 | 19,501 |
+| `../../experiments/original-claims/reports/round5-batch-n8.md` | n=8 p_rand 専任 | 4,257 |
+| `../../experiments/original-claims/reports/round5-batch-b001-b100.md` | B001–100 | 40,669 |
+| `../../experiments/original-claims/reports/round5-batch-b001-b100-followup.md` | B001–100 追撃 | 20,989 |
+| `../../experiments/original-claims/reports/round5-batch-b001-b100-push3.md` | B001–100 第3波 | 43,463 |
+| `../../experiments/original-claims/reports/round5-batch-b001-b100-final.md` | B001–100 最終 | 11,057 |
+| `../../experiments/original-claims/reports/round5-batch-b020-b090.md` | B020–090 | 42,973 |
+| `../../experiments/original-claims/reports/round5-batch-b020-b090-followup.md` | B020–090 追撃 | 26,201 |
+| `../../experiments/original-claims/reports/round5-batch-b101-b150.md` | B101–150 | 33,825 |
+| `../../experiments/original-claims/reports/round5-batch-b101-b200.md` | B101–200 | 61,099 |
+| `../../experiments/original-claims/reports/round5-batch-b101-b200-followup.md` | B101–200 追撃 | 37,501 |
+| `../../experiments/original-claims/reports/round5-batch-b120-b160.md` | B120–160 | 24,450 |
+| `../../experiments/original-claims/reports/round5-batch-b120-b160-followup.md` | B120–160 追撃 | 17,750 |
+| `../../experiments/original-claims/reports/round5-batch-b142-docs.md` | B142 + B141 文書訂正 | 8,006 |
+| `../../experiments/original-claims/reports/round5-batch-b151-b200.md` | B151–200 | 28,658 |
+| `../../experiments/original-claims/reports/round5-batch-b177-b200.md` | B177–200 | 25,635 |
+| `../../experiments/original-claims/reports/round5-batch-b201-b230.md` | B201–230 | 34,173 |
+| `../../experiments/original-claims/reports/round5-batch-b201-b230-followup.md` | B201–230 追撃 | 32,690 |
+| `../../experiments/original-claims/reports/round5-batch-b231-b250.md` | B231–250 | 30,625 |
+| `../../experiments/original-claims/reports/round5-batch-b231-b250-followup.md` | B231–250 追撃 | 23,830 |
+| `../../experiments/original-claims/reports/round5-batch-b231-b250-push3.md` | B231–250 第3波 | 17,756 |
+| `../../experiments/original-claims/reports/round5-batch-b251-b270.md` | B251–270 | 21,788 |
+| `../../experiments/original-claims/reports/round5-batch-b251-b300.md` | B251–300 | 33,683 |
+| `../../experiments/original-claims/reports/round5-batch-b251-b300-followup.md` | B251–300 追撃 | 29,070 |
+| `../../experiments/original-claims/reports/round5-batch-b271-b290.md` | B271–290 | 23,233 |
+| `../../experiments/original-claims/reports/round5-batch-b271-b290-followup.md` | B271–290 追撃 | 22,483 |
+| `../../experiments/original-claims/reports/round5-batch-b301-b400.md` | B301–400 | 48,237 |
+| `../../experiments/original-claims/reports/round5-batch-b301-b400-followup.md` | B301–400 追撃 | 32,641 |
+| `../../experiments/original-claims/reports/round5-batch-b325-b350.md` | B325–350 | 22,492 |
+| `../../experiments/original-claims/reports/round5-batch-b351-b400.md` | B351–400 | 30,491 |
+| `../../experiments/original-claims/reports/round5-batch-b351-b400-followup.md` | B351–400 追撃 | 20,353 |
+| `../../experiments/original-claims/reports/round5-batch-b401-b600.md` | B401–600 | 40,021 |
+| `../../experiments/original-claims/reports/round5-batch-b401-b600-followup.md` | B401–600 追撃 | 39,252 |
+| `../../experiments/original-claims/reports/round5-batch-b482-b500.md` | B482–500 | 21,259 |
+| `../../experiments/original-claims/reports/round5-batch-b482-b500-followup.md` | B482–500 追撃 | 15,982 |
+| `../../experiments/original-claims/reports/round5-batch-b551-b600.md` | B551–600 | 31,378 |
+| `../../experiments/original-claims/reports/round5-batch-b551-b600-followup.md` | B551–600 追撃 | 19,021 |
+| `../../experiments/original-claims/reports/round5-batch-geom-stats.md` | 幾何統計 | 38,205 |
+| `../../experiments/original-claims/reports/round5-batch-geom-stats-followup.md` | 幾何統計 追撃 | 39,901 |
+| `../../experiments/original-claims/reports/round5-batch-jn.md` | J_n | 14,023 |
+| `../../experiments/original-claims/reports/round5-batch-jn-followup.md` | J_n 追撃 | 13,559 |
+| `../../experiments/original-claims/reports/round5-batch-pgrand.md` | p_rand 残余 | 24,145 |
+| `../../experiments/original-claims/reports/round5-batch-pgrand-followup.md` | p_rand 残余 追撃 | 19,501 |
 
 ### 6.2 弱化・決着バッチ
 
 | ファイル | 対象 | サイズ |
 |---|---|---:|
-| `round5-batch-b001-b200-weak.md` | B001–200 弱化 | 77,172 |
-| `round5-batch-b101-b200-weak.md` | B101–200 弱化 | 19,030 |
-| `round5-batch-b201-b300-weak.md` | B201–300 弱化 | 58,161 |
-| `round5-batch-b251-b270-weak.md` | B251–270 弱化 | 13,753 |
-| `round5-batch-b325-b350-weak.md` | B325–350 弱化 | 16,881 |
-| `round5-batch-b501-b600-weak.md` | B501–600 弱化 | 37,959 |
-| `round5-batch-weak-promote.md` | 弱化版→最終判定 昇格 | 20,276 |
-| `round5-batch-final-43.md` | 最終 43 件 | 26,534 |
-| `round5-batch-last21.md` | 残り 21 件 | 13,029 |
-| `round5-batch-b201-b500-final.md` | B201–500 最終残余 | 494 |
+| `../../experiments/original-claims/reports/round5-batch-b001-b200-weak.md` | B001–200 弱化 | 77,172 |
+| `../../experiments/original-claims/reports/round5-batch-b101-b200-weak.md` | B101–200 弱化 | 19,030 |
+| `../../experiments/original-claims/reports/round5-batch-b201-b300-weak.md` | B201–300 弱化 | 58,161 |
+| `../../experiments/original-claims/reports/round5-batch-b251-b270-weak.md` | B251–270 弱化 | 13,753 |
+| `../../experiments/original-claims/reports/round5-batch-b325-b350-weak.md` | B325–350 弱化 | 16,881 |
+| `../../experiments/original-claims/reports/round5-batch-b501-b600-weak.md` | B501–600 弱化 | 37,959 |
+| `../../experiments/original-claims/reports/round5-batch-weak-promote.md` | 弱化版→最終判定 昇格 | 20,276 |
+| `../../experiments/original-claims/reports/round5-batch-final-43.md` | 最終 43 件 | 26,534 |
+| `../../experiments/original-claims/reports/round5-batch-last21.md` | 残り 21 件 | 13,029 |
+| `../../experiments/original-claims/reports/round5-batch-b201-b500-final.md` | B201–500 最終残余 | 494 |
 
 ### 6.3 関連ドキュメント
 
@@ -459,12 +461,12 @@ ROUND5-PROTOCOL「無界命題の弱化」に従い、原命題が無界・漸�
 |---|---|
 | `round5-FINAL-SUMMARY.md` | **本書**（最終統合） |
 | `round5-SUMMARY.md` | 過程サマリ（最終版に更新） |
-| `round5-census-log.md` | census スナップショット時系列 |
+| `../../log/claim-audit/round5-census-log.md` | census スナップショット時系列 |
 | `ROUND5-PROTOCOL.md` | 第5回共通指示書 |
 | `round5-workplan.md` | 作業割り当て |
-| `round5_n8_progress.md` | n=8 専任進捗ログ |
-| `round5_n8_memory_experiment.md` | n=8 メモリ実験 |
-| `round5-b141-corrections.md` | B141 訂正テキスト |
+| `../../log/claim-audit/round5_n8_progress.md` | n=8 専任進捗ログ |
+| `../../experiments/original-claims/reports/round5_n8_memory_experiment.md` | n=8 メモリ実験 |
+| `../../experiments/original-claims/reports/round5-b141-corrections.md` | B141 訂正テキスト |
 | `round5-crt_bug.md` | CRT バグ報告 |
 
 ---

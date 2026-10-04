@@ -1,12 +1,14 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: grp9 (B475, B476, B504, B505, B507, B508, B510, B512, B513, B514, B519)
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の上記11件。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の上記11件。
 本ファイルは**書出しのみ**（既存のスクリプト/JSON/前回個票を読むだけで新規計算なし）。
 
 ## スキップしたID（他ファイルに既に個票があるため重複記載しない）
 
 担当25件のうち **23件**は、書出し開始時点で
-`research/verification/round3-batch-b429-b530.md` に個票が書かれていた
+`research/experiments/original-claims/reports/round3-batch-b429-b530.md` に個票が書かれていた
 （並行ワーカーが書いている間に増えた分も確認済み・最終確認は書出し完了時点）。
 したがって本ファイルに残るのは **B475 と B476 の2件のみ**。
 
@@ -18,7 +20,7 @@
 
 B475 / B476 は上記どちらにも書かれておらず（前者は B470 節の脚注で
 「census は n=3..12 まで」という言及のみ）、唯一の情報源が
-`round3_b475_mn.json` であったため本ファイルで担当する。
+`../output/round3_b475_mn.json` であったため本ファイルで担当する。
 
 ## 個票
 
@@ -26,7 +28,7 @@ B475 / B476 は上記どちらにも書かれておらず（前者は B470 節�
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。n=3..20 の厳密計算で m=4 率が
   「1/n^2 へ減衰」ではなく**ほぼ一定 0.21 前後**であることが確定したが、無限 liminf は未証明）
 - 前回の一手: 「B475/B476: n=7..10 の円スペクトル（M(n) が伸びるか）で競合を決める。」（round2-batch-b471.md）
-- 今回の範囲: `research/verification/round3_b475_mn.json`（先行ワーカー計算済み・本担当は再実行せず
+- 今回の範囲: `research/experiments/original-claims/output/round3_b475_mn.json`（先行ワーカー計算済み・本担当は再実行せず
   読み取りのみ）。n=3..20 の円格子点数スペクトル M(n)、全円数 C_n、各円上の盤点数 m の
   4点組寄与 C(m,4) による分解。m ≥ 4 の円のみ保持、非共線3点の原始整数円鍵で重複除去。
 - 証拠:
@@ -52,7 +54,7 @@ B475 / B476 は上記どちらにも書かれておらず（前者は B470 節�
   変化。「M が頭打ちか」という前回メモの障害は解消し、**B476 の核心を反例にする数値が
   n=15 で出現した**ため、PARTIAL ではなく INCONCLUSIVE へ留めた）
 - 前回の一手: 「B475/B476: n=7..10 の円スペクトル（M(n) が伸びるか）で競合を決める。」（round2-batch-b471.md）
-- 今回の範囲: `round3_b475_mn.json` の `B476` セクション（P_le_by_m0 / weighted_mean_m_by_n）。
+- 今回の範囲: `../output/round3_b475_mn.json` の `B476` セクション（P_le_by_m0 / weighted_mean_m_by_n）。
   n=3..20 の 18 個の n について、m0 ∈ {4,5,6,7,8,12,16} ごとの P(m ≤ m0) と加重平均 m。
 - 証拠:
   - **加重平均 m は単調増加している**: 6.174(n=4) → 6.393(6) → 7.103(10) → 8.125(14) →
@@ -99,12 +101,12 @@ B475 / B476 は上記どちらにも書かれておらず（前者は B470 節�
 ---
 
 ### 参照したファイル（すべて読み取りのみ／スクリプトは再実行していない）
-- `research/verification/ROUND3-WRITEOUT.md`, `ROUND3-PROTOCOL.md`（書式・ラベル・禁止事項）
-- `research/verification/PROTOCOL.md`（既存確定事実）
-- `research/hypothesis-bank-round2-2026-09-27.md` B475 / B476 の原文
-- `research/verification/round2-batch-b471.md`（B475 前回個票・B476 前回個票）
-- `research/verification/round3_b475_mn.json`（先行ワーカー計算済みの円スペクトル n=3..20）
-- `research/verification/scripts/round3_b475_mn.py`, `round3_b475_mn_asymptotic.py`（docstring のみ）
-- `research/verification/round2-batch-b501.md`, `round2_b501.json`,
-  `scripts/round3_chunk7_del.py`, `round3_b501_pgrand_n5.json`
+- `research/archive/claim-audit-history/ROUND3-WRITEOUT.md`, `../../../archive/claim-audit-history/ROUND3-PROTOCOL.md`（書式・ラベル・禁止事項）
+- `research/archive/claim-audit-history/PROTOCOL.md`（既存確定事実）
+- `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` B475 / B476 の原文
+- `research/experiments/original-claims/reports/round2-batch-b471.md`（B475 前回個票・B476 前回個票）
+- `research/experiments/original-claims/output/round3_b475_mn.json`（先行ワーカー計算済みの円スペクトル n=3..20）
+- `research/experiments/original-claims/scripts/round3_b475_mn.py`, `round3_b475_mn_asymptotic.py`（docstring のみ）
+- `research/experiments/original-claims/reports/round2-batch-b501.md`, `../output/round2_b501.json`,
+  `../scripts/round3_chunk7_del.py`, `../output/round3_b501_pgrand_n5.json`
   （B504–B519 の重複確認のため参照。`round3_chunk7_del.json` は**未生成**であることを確認）

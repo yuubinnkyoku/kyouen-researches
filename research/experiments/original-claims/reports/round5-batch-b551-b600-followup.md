@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 follow-up: B551–B600 追撃・弱化
 
 対象: `round5-batch-b551-b600.md` の残り 23 件
@@ -5,10 +7,10 @@
 方針: 無界・漸近・統計命題を **n≤6 で測定可能な弱化版**に落とし、弱化版を SUPPORTED / REFUTED する。
 xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 / B589 に反映する。
 
-スクリプト: `scripts/round5_b551_b600_followup.py`
-データ: `round5_b551_b600_followup.json`
-再利用: `scripts/round5_b551_b585_b588.py`, `round5_b551_b600.json`, `round2_b561.json`,
-`round4_b591_dmax.json`, `round4_b591b.json`
+スクリプト: `../scripts/round5_b551_b600_followup.py`
+データ: `../output/round5_b551_b600_followup.json`
+再利用: `../scripts/round5_b551_b585_b588.py`, `../output/round5_b551_b600.json`, `../output/round2_b561.json`,
+`../output/round4_b591_dmax.json`, `../output/round4_b591b.json`
 
 禁止の遵守: `round5-batch-b551-b600.md` は未編集。n≥7 の新規全列挙・p_rand 全計算なし。
 
@@ -58,7 +60,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 - 弱化版: (k,|L|) ビン内で、f_S ピーク位置と終局長の |ρ| 平均は nimber g より大きい
   （n=4: 0.356 > 0.282、n=5: 0.404 > 0.311）。
 - 弱化版判定: **SUPPORTED**
-- 証拠: `round2_b561.json` b565_controlled。n=4 13 ビン・n=5 12 ビンで
+- 証拠: `../output/round2_b561.json` b565_controlled。n=4 13 ビン・n=5 12 ビンで
   mean_abs_peak > mean_abs_g。ただし効果量差は 0.07〜0.09 と中程度。
   無条件相関は両者ほぼ 0（0.090 vs 0.182 / 0.004 vs 0.051）。
 - 残った障害: n=6 以上の完全層。「強く効く」ほどではない。
@@ -88,7 +90,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 - 弱化版判定: **SUPPORTED**
 - 証拠: n=4 全交換対 221,568 個で最大跳躍 5 = 最大 nimber 5（k=2 層）。
   n=5 も最大跳躍 6 = 最大 nimber 6。跳躍の証人は
-  `round5_b551_b600_followup.json` b572.n4.witness。
+  `../output/round5_b551_b600_followup.json` b572.n4.witness。
   「全範囲を跳ぶ」は小盤で既に実現。無界性は n≤5 では検証不能。
 - 残った障害: 無限族の存在証明。n=6 の最大 nimber 8 への跳躍が次手。
 
@@ -97,7 +99,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 - 弱化版: |LΔ|≤5 の層では、P/N 反転辺の被覆三つ組破壊数は非反転辺より多い
   （n=4: 2..5 層すべて flip > nonflip、n=5: 2..5 層すべて flip > nonflip）。
 - 弱化版判定: **SUPPORTED**
-- 証拠: `round2_b561.json` b575_fixed。n=4 |LΔ|=2: 1.42 vs 0.74、=3: 1.82 vs 1.38、
+- 証拠: `../output/round2_b561.json` b575_fixed。n=4 |LΔ|=2: 1.42 vs 0.74、=3: 1.82 vs 1.38、
   =4: 1.71 vs 1.19、=5: 2.46 vs 2.00。n=5 も同方向。
   ただし |LΔ|=7,8,9 で逆転層あり（n=4 の 7: 2.60 vs 2.68）。
   「平均的には真、全層では保証されない」。
@@ -109,7 +111,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
   （n=4: 12/16=75%、n=5: 15/25=60%）。
 - 弱化版判定: **SUPPORTED**
 - 証拠: n=4 全 N 局面の必勝手グループ 16 個で最大対称差 12。
-  n=5 で 15（前回値と一致）。`round5_b551_b600_followup.json` b578.n4.witness。
+  n=5 で 15（前回値と一致）。`../output/round5_b551_b600_followup.json` b578.n4.witness。
   「盤サイズとともに大きくなる」無限族は未検証だが、60〜75% の移動は実在。
 - 残った障害: 無限族の構成。n=6 での比率向上が次手。
 
@@ -118,7 +120,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 - 弱化版: 無条件比較では、WFT 単元局面の方が非単元より必勝手を共有しやすい
   （n=4: |ρ|=0.184 vs 0.082、方向は主張と一致）。
 - 弱化版判定: **SUPPORTED**
-- 証拠: `round2_b561.json` b579_targeted。ただし WFT 単元が 117/120 と極端に多く、
+- 証拠: `../output/round2_b561.json` b579_targeted。ただし WFT 単元が 117/120 と極端に多く、
   (k,g,|L|) 一致ビンはサンプル不足で符号も逆。T* は WFT の上位集合で代用は粗い。
 - 残った障害: WFT の正確な計算。B590 とセットで n=4 完全 WFT が次手。
 
@@ -191,7 +193,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 - 弱化版判定: **SUPPORTED**
 - 証拠: g=1 で T*={5} と T*={6} の局面（g 固定・T* 変化）。
   T*={6} で g∈{0,1,2,3,4} の 5 種類（T* 固定・g 変化）。
-  `round2_b561.json` b590。T* は WFT の上位集合なので代用は粗い。
+  `../output/round2_b561.json` b590。T* は WFT の上位集合なので代用は粗い。
 - 残った障害: WFT の正確な計算。n=4 完全 WFT は実行可能だが未着手。
 
 ## B591 [全称・大胆] 追撃
@@ -201,7 +203,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 - 弱化版判定: **SUPPORTED**
 - 証拠: d_max/n は 1/2, 3/5, 2/3, 8/7, 3/4。C≥8 が必要（n=7 の 13 石証人）。
   n=8 で 6 に落ちるため「n とともに増える」前提は n=8 で初めて反証。
-  `round4_b591_dmax.json` exact_dmax_table。
+  `../output/round4_b591_dmax.json` exact_dmax_table。
 - 残った障害: C の n 非依存性は無限族命題。n=8 の 14 石層は C(64,14)≈2.1×10¹¹ で列挙不能。
 
 ## B592 [存在] 追撃
@@ -228,7 +230,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 - 弱化版: 層全体ベースの比は n³ に収まる（比/n³≈0.26–0.41、n=4..7）。
   真の近傍ベース（d_max=0）の比は n=6,7 で 10.4, 14 と小さく安定。
 - 弱化版判定: **SUPPORTED**
-- 証拠: `round2_b591.json` b597_b598_counts。層全体ベースで n³ を超えない。
+- 証拠: `../output/round2_b591.json` b597_b598_counts。層全体ベースで n³ を超えない。
   分子の解釈（層全体 vs 真の近傍）で結論が変わるため原命題は未決。
 - 残った障害: 漸近命題は有限計算で決着しない。B598 と排他的。
 
@@ -300,7 +302,7 @@ xor 破れ機構（成分跨ぎ高階残余が直和分解を壊す）を B587 /
 
 ### スクリプト・データ
 
-- `scripts/round5_b551_b600_stage1.py` — B587/B589 xor 増幅在庫
-- `scripts/round5_b551_b600_stage2a.py` — B572/B578 n=4
-- `research/verification/round5_b551_b600_followup.json` — 本回計算結果
-- 再利用: `round5_b551_b600.json`, `round2_b561.json`, `round4_b591_dmax.json`
+- `../scripts/round5_b551_b600_stage1.py` — B587/B589 xor 増幅在庫
+- `../scripts/round5_b551_b600_stage2a.py` — B572/B578 n=4
+- `research/experiments/original-claims/output/round5_b551_b600_followup.json` — 本回計算結果
+- 再利用: `../output/round5_b551_b600.json`, `../output/round2_b561.json`, `../output/round4_b591_dmax.json`

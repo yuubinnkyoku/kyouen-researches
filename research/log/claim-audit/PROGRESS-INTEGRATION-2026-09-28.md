@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 2026-09-28 mainへの進捗統合
 
 ユーザーの「全ての進捗をmainに統合してpush」の依頼に対応した保存記録。
@@ -7,10 +9,10 @@
 
 - リモートmainの `982391d` までを取り込み、B431〜B434の厳密被覆証明、s8・K9等の訂正を保持。
 - 未統合だった `origin/research/n6-tstar-wft-exact-20260927` の `13aae65` を履歴ごとマージ。
-  [n=6のT*・WFT結果](N6_TSTAR_WFT_RESULT.md)と対応するJSONを統合した。
+  [n=6のT*・WFT結果](../../experiments/original-claims/reports/N6_TSTAR_WFT_RESULT.md)と対応するJSONを統合した。
 - ローカルに残っていた第3〜10回の個票、総括、検証コード、数値データ、計算ログ、
-  `scratchpad/`の研究補助コード、`scratch_n45.json`と試行コードを保存。
-- 自動再開地点・最新判定は [継続記録](CONTINUATION-kyouen-hypotheses.md) を参照する。
+  `scratchpad/`の研究補助コード、`research/experiments/structural-discovery/output/research/experiments/structural-discovery/output/scratch_n45.json`と試行コードを保存。
+- 自動再開地点・最新判定は [継続記録](../../archive/claim-audit-history/CONTINUATION-kyouen-hypotheses.md) を参照する。
   古い個票の判定と競合する場合は、訂正理由を示した後続個票を優先する。
 
 ## 今回のファイル確認
@@ -18,7 +20,7 @@
 新規候補のPythonは135ファイルで構文解析に成功、2ファイルに既存の構文エラーがある。
 JSONは61ファイルで構文解析に成功、16ファイルは空または不正な出力のままである。
 これらも失敗・未完の記録として保存し、正常な再現用データと同一視しない。
-詳細な対象名とエラーは [統合時のファイル監査](progress-integration-2026-09-28-audit.json) に保存する。
+詳細な対象名とエラーは [統合時のファイル監査](../../archive/audits/progress-integration-2026-09-28-audit.json) に保存する。
 構文解析の成功は、各スクリプトの数学的正しさや実行完了を保証するものではない。
 全探索の一括再実行はしていない。
 取り込んだB431〜B434の整数・有理数証明書は、付属の純Python検証器で再検証し正常終了した。

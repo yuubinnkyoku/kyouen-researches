@@ -1,7 +1,9 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 非自明事実の発見 — 総括 (branch research/kyouen-fact-discovery-20260926)
 
 上流（origin/main @155a143 + gpcc 9×9 center 結果）を取り込んだ上で、
-10×10 について新規に発見・検証した非自明な事実。正本は `research/findings.md` の F-AD 以降。
+10×10 について新規に発見・検証した非自明な事実。正本は `research/archive/hypothesis-ledgers/findings.md` の F-AD 以降。
 
 ## 新発見サマリ（訂正後）
 
@@ -31,9 +33,9 @@
 ## 実装物
 
 - `scripts/analysis/fact_*.py` / `fact_*.cpp` / `fact_verify_claims.py`
-- `research/exploration/fact_*.json`
-- `research/findings.md` — F-AD..F-BB
-- `docs/compose/spec/kyouen-10x10-fact-discovery.md`
+- `research/experiments/fact-discovery/output/fact_*.json`
+- `research/archive/hypothesis-ledgers/findings.md` — F-AD..F-BB
+- `research/archive/presentation-specs/kyouen-10x10-fact-discovery.md`
 
 ## 未解決
 

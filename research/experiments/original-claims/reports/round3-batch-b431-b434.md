@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B431-B434
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B431〜B434。
-スクリプト: research/verification/scripts/round3_b431_ilp.py
-データ: research/verification/round3_b431_ilp.json
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B431〜B434。
+スクリプト: research/experiments/original-claims/scripts/round3_b431_ilp.py
+データ: research/experiments/original-claims/output/round3_b431_ilp.json
 
 ## B432 [存在] 分数被覆緩和だけで下界21が出る
 - 判定: **REFUTED**（前回: INCONCLUSIVE）

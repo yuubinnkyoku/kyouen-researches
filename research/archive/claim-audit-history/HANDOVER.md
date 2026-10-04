@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 引き継ぎ書 — kyouen 仮説検証 第1〜4回
 
 作成: 2026-09-28。対象エージェント: Codex ほか。
@@ -33,7 +35,7 @@
 内訳: SUPPORTED 186 + REFUTED 98 = 284
 未解決の内訳: PARTIAL 165 + INCONCLUSIVE 92 + NOT-CHECKED 59 = 316
 
-再現: `python research/verification/scripts/full_census.py`
+再現: `python research/experiments/original-claims/scripts/full_census.py`
 
 ### 100 個単位の進捗
 
@@ -137,18 +139,18 @@ cmake だけ在る（コンパイラではない）
 
 ```bash
 # ビルドと実行
-wsl -d Ubuntu -- bash -c "cd <repo>/research/verification/scripts && \
+wsl -d Ubuntu -- bash -c "cd <repo>/research/experiments/original-claims/scripts && \
   g++ -O2 -march=native -std=c++20 -pthread -o /tmp/x solver.cpp && /tmp/x"
 ```
 
 **重要**: 長いスクリプトはインラインで書くと PowerShell のクォートで壊れる。
 必ず `.sh` ファイルに書き出して `wsl -d Ubuntu -- bash <パス>` で実行すること。
 
-詳細: [`research/verification/WSL-BUILD.md`](WSL-BUILD.md)
+詳細: [`research/verification/WSL-BUILD.md`](../../experiments/original-claims/reports/WSL-BUILD.md)
 
 ### 共有 C++ コア（検証済み・再利用可能）
 
-`research/verification/scripts/kc_core.h`
+`scripts/research/kc_core.h`
 
 - 禁止4点組は整数行列式 `det[x²+y², x, y, 1] == 0`（共円または共線）
 - 盤は 1 個の `uint64_t`（n ≤ 8 = 64 点でちょうど収まる）
@@ -162,8 +164,8 @@ wsl -d Ubuntu -- bash -c "cd <repo>/research/verification/scripts && \
 
 **B141 の判定訂正**が最大の成果。**前の記録が誤っていた**。
 
-ファイル: [`round4-collinear-asymptotic.md`](round4-collinear-asymptotic.md)
-独立検証: [`ROUND4-B141-VERIFICATION.md`](ROUND4-B141-VERIFICATION.md)
+ファイル: [`round4-collinear-asymptotic.md`](../../experiments/original-claims/reports/round4-collinear-asymptotic.md)
+独立検証: [`ROUND4-B141-VERIFICATION.md`](../../experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md)
 
 ### 証明された定理
 
@@ -213,7 +215,7 @@ n=8 の D_n = 1,524 は既知の確定値（PROTOCOL.md の F_8 = 14,564 のう�
 `0.159650136 < 7ζ(2)/(60ζ(3)) < 0.159650719`。
 原記録の区間 `0.159649781 < c < 0.159650948` を内包し矛盾しない。
 
-再現: `python research/verification/scripts/verify_b141_independent.py`
+再現: `python research/experiments/original-claims/scripts/verify_b141_independent.py`
 
 ### 6 件の判定
 
@@ -226,8 +228,8 @@ n=8 の D_n = 1,524 は既知の確定値（PROTOCOL.md の F_8 = 14,564 のう�
 | B472 | 方向別極限係数 `(5-3r)/(120H³)` | **SUPPORTED** |
 | B473 | 有限サイズ補正は負の n⁴ log n | **SUPPORTED** |
 
-**注意**: `batch-08.md` の B141（REFUTED）と B145 の「主項定数が純粋な n^5
-定数としては存在しない（log 因子付き）」、`round2-batch-b471.md` の B473 の
+**注意**: `../../log/claim-audit/batch-08.md` の B141（REFUTED）と B145 の「主項定数が純粋な n^5
+定数としては存在しない（log 因子付き）」、`../../experiments/original-claims/reports/round2-batch-b471.md` の B473 の
 n^5 log n 前提は**訂正が必要**。まだ書き換えていない。
 
 **B142（非共線共円四点組の次数）は本定理では決まらない**。別途検証が必要。
@@ -257,7 +259,7 @@ n^5 log n 前提は**訂正が必要**。まだ書き換えていない。
 
 **7×7 の空盤は P 局面（g=0）**で、既知の確定事実（7×7 は後手勝ち）と一致 ✓
 
-データ: `round4_b501_prand_n7.json`、記録: `round4-batch-b501-b502.md` 第2節
+データ: `../../experiments/original-claims/output/round4_b501_prand_n7.json`、記録: `../../experiments/original-claims/reports/round4-batch-b501-b502.md` 第2節
 
 ### 最大値の推移から見えること
 
@@ -287,7 +289,7 @@ B374/B375 SUPPORTED）
 | 使う角の個数 | 0:**312**, 1:96 |
 | D4 軌道数 | 309 軌道 / 408 集合（軌道長は全部 8） |
 
-実装: `scripts/round4_b371.cpp`、データ: `round4_b371.json`
+実装: `../../experiments/original-claims/scripts/round4_b371.cpp`、データ: `../../experiments/original-claims/output/round4_b371.json`
 
 ---
 
@@ -319,7 +321,7 @@ B374/B375 SUPPORTED）
 
 ### 重要な訂正（現在の見立て）
 
-`round4-n8-feasibility.md` は「層成長が 32 倍、n=8 は 19 GB で不可能」と書いたが、
+`../../experiments/original-claims/reports/round4-n8-feasibility.md` は「層成長が 32 倍、n=8 は 19 GB で不可能」と書いたが、
 **この見積もりは 12 倍過大評価だった**。実測で判明した正しい理解:
 
 **真の障害は「層成長」ではなく「ソート/重複除去の作業メモリ」**。
@@ -337,7 +339,7 @@ nxt.erase(unique(...), ...);
 
 ### 解法（実装済み・n=6, n=7 で検証済み）
 
-`scripts/round5_prand_stream.cpp` に **v-max 分割**による層生成を実装。
+`../../experiments/original-claims/scripts/round5_prand_stream.cpp` に **v-max 分割**による層生成を実装。
 
 ```cpp
 // 子集合を「追加点 v の列」に分割する。ただし v が子の最大点であることを要求:
@@ -361,7 +363,7 @@ C'_v = { S ∪ {v} | S ∈ L_k, v ∈ L(S), S < 2^v }
 
 n=7 の層サイズ `[1,49,1176,18424,205512,1633048,8796600,29688640,
 56927728,55173324,23478868,3707028,177760,2176,16]` は
-`round4_b501_prand_n7.json` と完全一致。
+`../../experiments/original-claims/output/round4_b501_prand_n7.json` と完全一致。
 
 **従来の 10.5 GB → 0.87 GB（1/12）に削減した。**
 
@@ -369,7 +371,7 @@ n=7 の層サイズ `[1,49,1176,18424,205512,1633048,8796600,29688640,
 
 ```bash
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$REPO/research/verification/scripts
+S=$REPO/research/experiments/original-claims/scripts
 
 # 1. 列挙（spill 先に /tmp。/mnt/d は 11 GB しかないので使わない）
 wsl -d Ubuntu -- bash $S/wsl_stream.sh 8 --enum
@@ -399,7 +401,7 @@ n=8 の最長層は約 4 億〜6 億状態で 8 B × 2 層 = 約 10 GB。
 
 ## 7. CRT 版ソルバの制約（重要）
 
-`scripts/round5_b501_prand8.cpp` は分子を **mod 2^61−1** で持つので
+`../../experiments/original-claims/scripts/round5_b501_prand8.cpp` は分子を **mod 2^61−1** で持つので
 1 状態 8 B（vs 大整数版 97 B）で速い。
 
 - n=6: ピーク 0.34 GB
@@ -414,7 +416,7 @@ n=6 の `P_gt_2_3` は CRT が 244、参照が 180（P 局面の 99% 以上が
 D_bits 152〜607 の不正確な層にいる）。`P_gt_1_2` と `P_gt_3_4` の一致は偶然。
 
 **教訓**: 閾値統計が必要なら多倍長整数に sacrificing に戻すこと。
-`round5_crt_bug.md` に詳細。
+`../../experiments/original-claims/reports/round5_crt_bug.md` に詳細。
 
 ---
 
@@ -423,7 +425,7 @@ D_bits 152〜607 の不正確な層にいる）。`P_gt_1_2` と `P_gt_3_4` の�
 `round4_status.py` で機械的に集計できる。
 
 ```bash
-python research/verification/scripts/round4_status.py
+python research/experiments/original-claims/scripts/round4_status.py
 ```
 
 主なもの:
@@ -444,47 +446,47 @@ python research/verification/scripts/round4_status.py
 ### 指示書・プロトコル
 | ファイル | 内容 |
 |---|---|
-| `research/verification/PROTOCOL.md` | 第1回の検証プロトコル・**既存の確定事実** |
-| `research/verification/ROUND3-PROTOCOL.md` | 第3回（Python） |
-| `research/verification/ROUND4-PROTOCOL.md` | 第4回（WSL C++） |
-| `research/verification/ROUND3-WRITEOUT.md` | 個票の書き方（書出し専用ワーカー用） |
-| `research/verification/WSL-BUILD.md` | **WSL C++ のビルド方法**（必読） |
+| `research/archive/claim-audit-history/PROTOCOL.md` | 第1回の検証プロトコル・**既存の確定事実** |
+| `research/archive/claim-audit-history/ROUND3-PROTOCOL.md` | 第3回（Python） |
+| `research/archive/claim-audit-history/ROUND4-PROTOCOL.md` | 第4回（WSL C++） |
+| `research/archive/claim-audit-history/ROUND3-WRITEOUT.md` | 個票の書き方（書出し専用ワーカー用） |
+| `research/experiments/original-claims/reports/WSL-BUILD.md` | **WSL C++ のビルド方法**（必読） |
 
 ### 総括
 | ファイル | 内容 |
 |---|---|
-| `research/verification/SUMMARY.md` | 第1回 B001–B300 |
-| `research/verification/round2-SUMMARY.md` | 第2回 B301–B600 |
-| `research/verification/round3-SUMMARY.md` | 第3回 |
-| `research/verification/round4-SUMMARY.md` | **第4回（最新、42.9 KB）** |
+| `research/archive/claim-audit-history/SUMMARY.md` | 第1回 B001–B300 |
+| `research/archive/claim-audit-history/round2-SUMMARY.md` | 第2回 B301–B600 |
+| `research/archive/claim-audit-history/round3-SUMMARY.md` | 第3回 |
+| `research/archive/claim-audit-history/round4-SUMMARY.md` | **第4回（最新、42.9 KB）** |
 
 ### 証明
 | ファイル | 内容 |
 |---|---|
-| `research/verification/round4-collinear-asymptotic.md` | **B141/B145/B150/B471/B472/B473 の証明** |
-| `research/verification/ROUND4-B141-VERIFICATION.md` | **その独立検証（三手法一致）** |
-| `research/verification/round5_crt_bug.md` | CRT 版ソルバの結果と制約 |
+| `research/experiments/original-claims/reports/round4-collinear-asymptotic.md` | **B141/B145/B150/B471/B472/B473 の証明** |
+| `research/experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md` | **その独立検証（三手法一致）** |
+| `research/experiments/original-claims/reports/round5_crt_bug.md` | CRT 版ソルバの結果と制約 |
 
 ### 障害の記録
 | ファイル | 内容 |
 |---|---|
-| `research/verification/round4-n8-feasibility.md` | n=8 不可の見積もり（**訂正済み。§6 参照**） |
-| `research/verification/round5_n8_memory_experiment.md` | **訂正版。層成長 7.4 倍、spill が正解** |
+| `research/experiments/original-claims/reports/round4-n8-feasibility.md` | n=8 不可の見積もり（**訂正済み。§6 参照**） |
+| `research/experiments/original-claims/reports/round5_n8_memory_experiment.md` | **訂正版。層成長 7.4 倍、spill が正解** |
 
 ### ソルバ
 | ファイル | 内容 |
 |---|---|
-| `research/verification/scripts/kc_core.h` | **共有 C++ コア（検証済み）** |
-| `research/verification/scripts/round4_b501_prand.cpp` | **n≤7 完走した大整数版（正しい）** |
-| `research/verification/scripts/round5_prand_stream.cpp` | **spill 版（n=6,7 検証済み、n=8 待ち）** |
-| `research/verification/scripts/round5_b501_prand8.cpp` | CRT 版（速い、ただし閾値に制限） |
-| `research/verification/scripts/kc_maximal_par.cpp` | 極大集合の並列列挙（8石 408 個） |
-| `research/verification/scripts/kyouen_core.py` | Python 版コア |
+| `scripts/research/kc_core.h` | **共有 C++ コア（検証済み）** |
+| `research/experiments/original-claims/scripts/round4_b501_prand.cpp` | **n≤7 完走した大整数版（正しい）** |
+| `research/experiments/original-claims/scripts/round5_prand_stream.cpp` | **spill 版（n=6,7 検証済み、n=8 待ち）** |
+| `research/experiments/original-claims/scripts/round5_b501_prand8.cpp` | CRT 版（速い、ただし閾値に制限） |
+| `research/experiments/original-claims/scripts/kc_maximal_par.cpp` | 極大集合の並列列挙（8石 408 個） |
+| `scripts/research/kyouen_core.py` | Python 版コア |
 
 ### データ
-- `research/verification/round4_b501_prand_n7.json` — n=7 の完全な p_rand データ
-- `research/verification/data/kc_maximal_n{5,6}_k*.bin` — 極大集合リスト
-- `research/verification/round3_b502_pgrand_n6.json` — n=6 の参照値
+- `research/experiments/original-claims/output/round4_b501_prand_n7.json` — n=7 の完全な p_rand データ
+- `research/experiments/original-claims/output/data/kc_maximal_n{5,6}_k*.bin` — 極大集合リスト
+- `research/experiments/original-claims/output/round3_b502_pgrand_n6.json` — n=6 の参照値
 
 ---
 
@@ -502,8 +504,8 @@ python research/verification/scripts/round4_status.py
 
 ### 次: 証明の訂正を文書に反映
 
-- `batch-08.md` の B141（REFUTED → SUPPORTED）と B145
-- `round2-batch-b471.md` の B473 の n^5 log n 前提
+- `../../log/claim-audit/batch-08.md` の B141（REFUTED → SUPPORTED）と B145
+- `../../experiments/original-claims/reports/round2-batch-b471.md` の B473 の n^5 log n 前提
 - `round4-SUMMARY.md` に B141 訂正の反映を完了させる
 
 ### 次: B142 の検証

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B065: 二点競合なし・Grundy値5、最小盤8×8
 
 作成: 2026-09-30。**B065原文SUPPORTED。最小盤は8×8。**
@@ -35,14 +37,14 @@
 
 ## 独立検算
 
-[検算スクリプト](scripts/round41_audit.py)は整数四点行列式で幾何を生成し直した。
+[検算スクリプト](../scripts/round41_audit.py)は整数四点行列式で幾何を生成し直した。
 元の空点55個について三石と候補点の直接行列式で合法性を再照合。
 L上の全128拡張について、直接四点行列式、禁止四点組、曲線占有数、極小残余族の
 四方式の安全性が一致した。安全拡張は67個。
 
 全安全拡張の真のmexを、全部分集合DP、曲線占有メモ再帰、逆頂点順の残余辺再帰で検算し、
 全67値が一致。S・L・全辺・全拡張・全mex・入力SHA-256は
-[証明書](round41_b065_verified.json)に保存した。
+[証明書](../output/round41_b065_verified.json)に保存した。
 
 ## 探索範囲と最小盤の根拠
 
@@ -54,9 +56,9 @@ L上の全128拡張について、直接四点行列式、禁止四点組、曲�
 この旧記録のPARTIALは当時の正しい状況で、今回の証人によってSUPPORTEDに更新する。
 最小盤8×8の根拠として旧証明書のSHA-256も今回の証明書に保存した。
 
-    g++ -O3 -std=c++20 research/verification/scripts/round41_empty_pair_bounded.cpp -o /home/yuubi/round28_n7/round41_search
-    /home/yuubi/round28_n7/round41_search 8 research/verification/round41_n8_bounded.json 16 600
-    python research/verification/scripts/round41_audit.py
+    g++ -O3 -std=c++20 research/experiments/original-claims/scripts/round41_empty_pair_bounded.cpp -o /home/yuubi/round28_n7/round41_search
+    /home/yuubi/round28_n7/round41_search 8 research/experiments/original-claims/output/round41_n8_bounded.json 16 600
+    python research/experiments/original-claims/scripts/round41_audit.py
 
 600は壁時計秒の上限、16は厳密mexを計算する合法点数の上限。
 時間上限で止まった場合はsearch_complete=falseを記録し、不発見を全盤の反証に昇格しない。

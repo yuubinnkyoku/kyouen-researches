@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 共線四点組の厳密な主項・次項 — B141/B145/B150/B471/B472/B473
 
 作成: 2026-09-27。担当チャット: `01a0e161-14c5-78f0-95c6-a684535bf209`。
@@ -12,12 +14,12 @@ D_n=\frac{7\zeta(2)}{60\zeta(3)}n^5
 \]
 
 したがってB141の「D_n/n⁵が正の有限極限を持つ」は成立する。
-[第1回個票](batch-08.md)にある `D_n=Θ(n⁵ log n)` と、それに基づくB141のREFUTED判定は訂正が必要である。
+[第1回個票](../../../log/claim-audit/batch-08.md)にある `D_n=Θ(n⁵ log n)` と、それに基づくB141のREFUTED判定は訂正が必要である。
 有限範囲の当てはめではなく、以下に方向別の恒等式から証明する。
 
-原文: [第1回バンク](../hypothesis-bank-2026-09-27.md)、[第2回バンク](../hypothesis-bank-round2-2026-09-27.md)。
-再現コード: [scripts/round4_collinear_asymptotic.py](scripts/round4_collinear_asymptotic.py)。
-整数・有理数データ: [round4_collinear_asymptotic.json](round4_collinear_asymptotic.json)。
+原文: [第1回バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)、[第2回バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
+再現コード: [scripts/round4_collinear_asymptotic.py](../scripts/round4_collinear_asymptotic.py)。
+整数・有理数データ: [round4_collinear_asymptotic.json](../output/round4_collinear_asymptotic.json)。
 他担当者の既存記録は上書きしていない。
 
 ## 1. 判定
@@ -275,7 +277,7 @@ F_n\ge 2n\binom n4=\Omega(n^5).
 実行:
 
 ```powershell
-python research/verification/scripts/round4_collinear_asymptotic.py
+python research/experiments/original-claims/scripts/round4_collinear_asymptotic.py
 ```
 
 検査:
@@ -311,7 +313,7 @@ JSONには区間端点と比率を分子・分母で保存している。
 
 ## 9. 既存記録との相違と引き継ぎ
 
-- [batch-08.md](batch-08.md) B141の「n≤40で比率が増加したから有限極限を持たない」は
+- [batch-08.md](../../../log/claim-audit/batch-08.md) B141の「n≤40で比率が増加したから有限極限を持たない」は
   漸近の反証にならない。今回の証明でB141はSUPPORTEDに訂正する。
 - 同票B145の方向和は、H⁻²ではなくH⁻³の方向係数をO(H)本足すので収束する。
 - [round2-batch-b471.md](round2-batch-b471.md) B473が使ったn⁵log n主項を前提にした残差は、

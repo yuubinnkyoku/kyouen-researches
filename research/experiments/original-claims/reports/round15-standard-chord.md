@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B477: 原始標準弦による重複のない共円四点計数
 
-作成: 2026-09-29。原文: [B477](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-29。原文: [B477](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 **SUPPORTED（一般恒等式、整数算術への変換）。**
 
 各四点組に一意な弦と既約分数を割り当て、C_nを二項係数の和で正確に数える。
@@ -140,8 +142,8 @@ a,b,zの非共線三点を盤内に取ると
 
 ## 6. 検算と適用範囲
 
-[scripts/round15_standard_chord.py](scripts/round15_standard_chord.py) で次を独立照合し、
-[round15_standard_chord.json](round15_standard_chord.json) に保存した。全assert通過。
+[scripts/round15_standard_chord.py](../scripts/round15_standard_chord.py) で次を独立照合し、
+[round15_standard_chord.json](../output/round15_standard_chord.json) に保存した。全assert通過。
 
 - 標準弦の群別計数と、整数四点行列式による共円四点の全列挙。
 - 選ばれた円について、全弦から得る既約分母と原始二次係数の一致。

@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 11x11 df-pn + exact hybrid: 層の全体像と現在の bottleneck
 
 **11x11 の勝敗は UNKNOWN のまま。**
@@ -85,10 +87,10 @@ log に `[done] ... WIN/LOSS` の行は 0 件。
 
 ## 参照
 
-- `N11-DFPN-EXACT-FRONTIER.md` — Phase 1〜2（s5 unique/repeat）
-- `N11-DFPN-S5-BENCH.md` — s5 の budget 別 benchmark
-- `N11-DFPN-L72-ADAPTIVE.md` — L72 adaptive の効果
-- `N11-DFPN-EXACT-ORDER-AB.md` — ordering A/B（baseline 勝ち）
-- `N11-DFPN-FRONTIER-LAYERS.md` — 合法手数上限による構造的限界
-- `N11-DFPN-S7-LAYER.md`、`N11-DFPN-S8-LAYER.md` — 上層
-- `N11-DFPN-CENTER20-LAYERED.md` — 層別 sweep
+- `../../experiments/n11-search-methods/reports/N11-DFPN-EXACT-FRONTIER.md` — Phase 1〜2（s5 unique/repeat）
+- `../../experiments/n11-search-methods/reports/N11-DFPN-S5-BENCH.md` — s5 の budget 別 benchmark
+- `../../experiments/n11-search-methods/reports/N11-DFPN-L72-ADAPTIVE.md` — L72 adaptive の効果
+- `../../experiments/n11-search-methods/reports/N11-DFPN-EXACT-ORDER-AB.md` — ordering A/B（baseline 勝ち）
+- `../../experiments/n11-search-methods/reports/N11-DFPN-FRONTIER-LAYERS.md` — 合法手数上限による構造的限界
+- `../../experiments/n11-search-methods/reports/N11-DFPN-S7-LAYER.md`、`../../experiments/n11-search-methods/reports/N11-DFPN-S8-LAYER.md` — 上層
+- `../../experiments/n11-search-methods/reports/N11-DFPN-CENTER20-LAYERED.md` — 層別 sweep

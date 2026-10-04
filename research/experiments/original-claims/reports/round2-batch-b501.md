@@ -1,10 +1,12 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch B501–B530: 統計の符号 + 削除耐性
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B501–B530 のみ。
-データ: `research/verification/round2_b501.json`
-スクリプト: `scripts/round2_b501_rand.py`, `scripts/round2_b501_del.py`,
-`scripts/round2_b501_quads.py`, `scripts/round2_b501_quads2.py`
-共通コア: `scripts/kyouen_core.py`（整数行列式、点 id=`y*n+x`）
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B501–B530 のみ。
+データ: `research/experiments/original-claims/output/round2_b501.json`
+スクリプト: `../scripts/round2_b501_rand.py`, `../scripts/round2_b501_del.py`,
+`../scripts/round2_b501_quads.py`, `../scripts/round2_b501_quads2.py`
+共通コア: `../../../../scripts/research/kyouen_core.py`（整数行列式、点 id=`y*n+x`）
 
 ## 検証で使った母集団（統計仮説）
 

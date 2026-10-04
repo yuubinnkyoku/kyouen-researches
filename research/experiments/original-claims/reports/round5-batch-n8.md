@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B501-B502 n=8 p_rand 結果
 
 対象: B501 / B502 および p_rand 関連の進展。
 スクリプト: scripts/round5_prand_stream.cpp (enum), scripts/round5_stream_solve.cpp (DP), scripts/dp_scan.cpp
-データ: research/verification/round5_prand_n8.json
+データ: research/experiments/original-claims/output/round5_prand_n8.json
 
 ---
 

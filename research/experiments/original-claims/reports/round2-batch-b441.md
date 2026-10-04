@@ -1,10 +1,12 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch: B441–B470（同一残局族の分裂 / 有理円 / 窓切断）
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` B441–B470 のみ。
-手法: `PROTOCOL.md` 準拠。整数演算のみ。`batch03_cache.pkl`（n=4: 5811 安全集合、n=5: 151,394）を再利用。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` B441–B470 のみ。
+手法: `../../../archive/claim-audit-history/PROTOCOL.md` 準拠。整数演算のみ。`batch03_cache.pkl`（n=4: 5811 安全集合、n=5: 151,394）を再利用。
 族の定義はバンク指定どおり **(k, ラベル付き L, ラベル付き R)**（B057 の (k,R) は参考として併記）。
 スクリプト: `round2_b441_families.py`, `round2_b441_detail.py`, `round2_b441_window.py`
-出力: `round2_b441.json`
+出力: `../output/round2_b441.json`
 
 ---
 
@@ -187,7 +189,7 @@ n=5 で多元 3,112 / 連結 518 / 非連結 2,594（B057 の 3,112/518/2,594 �
 
 ### B462 [存在] 11×11 は 11 点を載せる円の最初の正方形盤
 - 判定: **SUPPORTED**
-- 範囲: 既存データ `research/exploration/fact_circle_spectrum_n6_n7_n11.json` / findings の n=6–11 円スペクトルと照合。10×10 側は B461 の 11 欠落 + F-AO の r²=25/2 族カウントで裏取り。
+- 範囲: 既存データ `research/experiments/fact-discovery/output/fact_circle_spectrum_n6_n7_n11.json` / findings の n=6–11 円スペクトルと照合。10×10 側は B461 の 11 欠落 + F-AO の r²=25/2 族カウントで裏取り。
 - 証拠: findings に「11×11 では k=9 円 4 個・k=11 円 4 個と初めて現れるサイズがある」。10×10 の円上点数は 12 と 10 で構成され（F-AO: 25/2×12 が 9 個 + 25×4、および 10 点側 25/2×9）、**11 点円は 10×10 に存在しない**。B461 により、12 点円（25/2 族）の正方形切断でも 11 は作れない。11×11 で k=11 円 4 個が初出。
 - メモ: 「10×10 での 11 欠落と整数半径円の片側切断の有限閾値」は n=11 で確定。
 

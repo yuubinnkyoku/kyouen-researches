@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10×10 three-stone subsets of the medium LOSS root
 
 This experiment continues from the legal eight-stone LOSS root
@@ -29,7 +31,7 @@ The independently verified three-stone LOSS roots are:
 - `90,73,91`
 
 The complete machine-readable table is
-[`results/10x10/three-stone-subsets-of-medium-loss.csv`](../results/10x10/three-stone-subsets-of-medium-loss.csv).
+[`results/10x10/three-stone-subsets-of-medium-loss.csv`](../../../../results/10x10/three-stone-subsets-of-medium-loss.csv).
 
 ## Independent-search runs
 

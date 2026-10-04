@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B252成立: 同じ70禁止組の解除でも、一円と散在族で勝敗が分かれる
 
 作成: 2026-09-30。**B252 SUPPORTED（原文の存在主張）。**
-原文 [B252](../hypothesis-bank-2026-09-27.md):
+原文 [B252](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md):
 「同じ数の四点禁止を外しても、同一円にまとまった解除でだけ勝者が変わる例がある」。
 
 4×4標準版は後手勝ち（g=0）。中央の8点円に属する全70四点組を解除すると先手勝ち（g=1）になる。
@@ -33,14 +35,14 @@
     125,130,131,133,134,136,137,139,141,142,146,157,158,159,161,162,163,165,168,170,
     173,174,175,176,179,186,189,190,191,192。
 
-番号に依存しない全70組の座標も[検算JSON](round22_b252_verified.json)に保存した。
+番号に依存しない全70組の座標も[検算JSON](../output/round22_b252_verified.json)に保存した。
 この族と1節の一円解除族は**互いに素**。
 散在族の四点組は41本の異なる円・直線に分かれ、同じ曲線上の解除は高々10組。
 一円に70組を集める解除とは区別できる。
 
 ## 3. 独立な全状態検算
 
-[独立検証コード](scripts/round22_b252_verify.py)は探索コード・共通幾何をimportしない。
+[独立検証コード](../scripts/round22_b252_verify.py)は探索コード・共通幾何をimportしない。
 平行移動後の整数3×3行列式で標準194禁止組を再生成し、各保持四点組の直接包含判定で
 全安全局面と合法手を列挙した。曲線の全点集合と全四点部分集合の対応も直接検査する。
 全状態DAGの後方mex計算で、真のGrundy値を得た。
@@ -71,16 +73,16 @@ n=7では8点円11代表と標準版の全12候補を各100万状態まで調べ
 
 ## 5. 再現とデータ
 
-    python research/verification/scripts/round22_b252_n6_input.py --n 4 --min-circle-points 4 --stem round22_b252_n4_all
-    g++ -O3 -std=c++17 -Wall -Wextra research/verification/scripts/round22_rule_scan.cpp -o research/verification/scripts/round22_rule_scan.exe
-    research/verification/scripts/round22_rule_scan.exe research/verification/round22_b252_n4_all_input.txt research/verification/round22_b252_n4_all_scan.json 10000000
-    python research/verification/scripts/round22_b252_scattered_input.py
-    research/verification/scripts/round22_rule_scan.exe research/verification/round22_b252_scattered_input.txt research/verification/round22_b252_scattered_scan.json 10000000
-    python research/verification/scripts/round22_b252_verify.py
+    python research/experiments/original-claims/scripts/round22_b252_n6_input.py --n 4 --min-circle-points 4 --stem round22_b252_n4_all
+    g++ -O3 -std=c++17 -Wall -Wextra research/experiments/original-claims/scripts/round22_rule_scan.cpp -o research/experiments/original-claims/scripts/round22_rule_scan.exe
+    research/experiments/original-claims/scripts/round22_rule_scan.exe research/experiments/original-claims/output/round22_b252_n4_all_input.txt research/experiments/original-claims/output/round22_b252_n4_all_scan.json 10000000
+    python research/experiments/original-claims/scripts/round22_b252_scattered_input.py
+    research/experiments/original-claims/scripts/round22_rule_scan.exe research/experiments/original-claims/output/round22_b252_scattered_input.txt research/experiments/original-claims/output/round22_b252_scattered_scan.json 10000000
+    python research/experiments/original-claims/scripts/round22_b252_verify.py
 
-- [4×4の整数幾何・全曲線](round22_b252_n4_all_geometry.json)、[一円解除の探索結果](round22_b252_n4_all_scan.json)
-- [散在解除の全候補](round22_b252_scattered_cases.json)、[探索結果](round22_b252_scattered_scan.json)
-- [独立検算・全解除座標・各層個数](round22_b252_verified.json)
+- [4×4の整数幾何・全曲線](../output/round22_b252_n4_all_geometry.json)、[一円解除の探索結果](../output/round22_b252_n4_all_scan.json)
+- [散在解除の全候補](../output/round22_b252_scattered_cases.json)、[探索結果](../output/round22_b252_scattered_scan.json)
+- [独立検算・全解除座標・各層個数](../output/round22_b252_verified.json)
 
 検算JSONにソースと使用入力のSHA-256を保存した。
 全600件の残件数はこの個票では再集計していない。

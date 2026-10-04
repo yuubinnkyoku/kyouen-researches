@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 発見記録
 
 十分に検証された発見のみを記載する。各項目: 発見内容・なぜ非自明なのか・証拠・再現方法・試した反証・成立範囲・確信度・今後の検証方法。
@@ -59,9 +61,11 @@
 
 ## F-F: F-E の4石 Σd→LOSS 反転は R 外 holdout でも再現する (R 固有ではない)
 
-- 発見: 8石LOSSルート R の部分集合ではない、安全な4石 canonical 層から Σd 三分位 (q33=8538, q67=8974) で層化した36局面 (各層12) を PREREG 後に exact solve したところ、LOSS 10 / WIN 26 で **Σd が高いほど LOSS に寄る** 方向が再現した。AUC=0.812 (R内 0.759 より強い)、rank-biserial=+0.623、mean(Σd|LOSS)-mean(Σd|WIN)=+620 (R内 +448)。層別 LOSS 率は low=0/12, middle=4/12, high=6/12 (P(LOSS|high)-P(LOSS|low)=+0.50)。事前登録した判定 eversal_supported_outside_R に全条件一致。
+- 発見: 8石LOSSルート R の部分集合ではない、安全な4石 canonical 層から Σd 三分位 (q33=8538, q67=8974) で層化した36局面 (各層12) を PREREG 後に exact solve したところ、LOSS 10 / WIN 26 で **Σd が高いほど LOSS に寄る** 方向が再現した。AUC=0.812 (R内 0.759 より強い)、rank-biserial=+0.623、mean(Σd|LOSS)-mean(Σd|WIN)=+620 (R内 +448)。層別 LOSS 率は low=0/12, middle=4/12, high=6/12 (P(LOSS|high)-P(LOSS|low)=+0.50)。事前登録した判定 
+eversal_supported_outside_R に全条件一致。
 - なぜ非自明なのか: F-E は R (特定の8石LOSSルート) 内の重なり部分集合のみで見た反転だった。R は選択済みで、70個の4石は独立標本ではない。R 外・D4重複排除・既知ラベル除外・Σd層化・固定seed の confirmatory cohort でも同じ方向が出て、反転は「R の subset lattice の産物」ではない。
-- 証拠: esults/10x10/f-e-r-external-holdout/{sampling_manifest,exact_outcomes,holdout_summary}.json|csv と docs/10X10_F_E_R_EXTERNAL_HOLDOUT_{PREREG,RESULT}.md。PREREG commit 4249e73 はラベル未参照。36/36 exact、TABLE_FULL/TIMEOUT なし。
+- 証拠: 
+esults/10x10/f-e-r-external-holdout/{sampling_manifest,exact_outcomes,holdout_summary}.json|csv と docs/10X10_F_E_R_EXTERNAL_HOLDOUT_{PREREG,RESULT}.md。PREREG commit 4249e73 はラベル未参照。36/36 exact、TABLE_FULL/TIMEOUT なし。
 - 再現方法: python scripts/analysis/f_e_r_external_sample.py (要 d(p) 再計算) → python scripts/analysis/f_e_r_external_solve.py (flat memo 28, fresh process) → python scripts/analysis/f_e_r_external_analyze.py
 - 試した反証: (1) R部分集合と既知 outcome-cache/CSV/git 履歴の canonical key を除外 (24,072 keys)。(2) Σd で層化したので「Σd と outcome の無関係」のランダムラベル検定は記述扱い (p=0.00085)。(3) 中間で抽样規則を変更していない。(4) 初回 solve は CSV の state カンマで parse 壊れ → 廃棄して全件再 solve (frozen 36 は不変)。
 - 成立範囲: 10×10、安全な (非終端) R外4石 canonical 36サンプル。2–3石の「低 Σd = LOSS」という序盤傾向自体は R 内のみで未外部検証。
@@ -132,7 +136,7 @@
 - 発見: KYOENC3 証明書で根が WIN な盤 (n=1,2,3,5,6) はすべて、witness を辿った鎖がちょうど 2 ノード (0 石 WIN → 1 石 LOSS) で終わり、その先の証明は「1 石 LOSS の全合法手が WIN」への展開だけで構成される。後手必勝盤 (n=4,7) は根が LOSS で witness 鎖の長さ 1。
 - なぜ非自明なのか: 証明書は最適対局の軌跡を線に保存しているのではなく、「勝ち初手 1 つ + その先の全分岐が勝ち」という AND/OR 構造を持つ。鎖の長さ対局長ではない。また勝ち初手が「相手を即座に losing 局面へ送る」ことは定義に近いが、証明書がその 1 手しか witness を持たず、対局の残りは LOSS ノードの全子展開に埋め込まれているという形式的事実を、全 n≤7 で確認した。
 - 証拠: `scripts/analysis/explore_cert_game_length.py` の witness_chain。
-- 再現方法: 同スクリプト (night-research/kyouen-{n}x{n}.cert が必要)。
+- 再現方法: 同スクリプト (research/experiments/structural-discovery/output/kyouen-{n}x{n}.cert が必要)。
 - 試した反証: n=1..7 全てで鎖長 2 (F) / 1 (S)。例外なし。
 - 成立範囲: 公開 KYOENC3 証明書 n=1..7。n=8,9 は圧縮資産にあり未走査だが、保存規則は同じなので成立予想。
 - 確信度: 高 (形式の帰結だが全数確認)
@@ -160,7 +164,7 @@
 
 - 発見: 5×5 の極大安全配置 (どの 1 点も加えられない安全集合) を全数 DFS で列挙した結果、
   サイズ分布は `{5: 4, 6: 1136, 7: 11280, 8: 4340, 9: 100}`、合計 **16,860**。
-  これは night-research CYCLE1 の「16860 個、サイズ {5,6,7,8,9}」と個数・サイズ集合が一致する。
+  これは research/experiments/structural-discovery/output CYCLE1 の「16860 個、サイズ {5,6,7,8,9}」と個数・サイズ集合が一致する。
   さらに **サイズ 5 の極大配置はわずか 4 個**、最大サイズ 9 は 100 個 (これは最大安全配置数と一致)。
   構成順 id 増加の DFS で各極大集合を一意に数えた完全列挙 (dfs ノード 151,394 = 到達安全集合数と一致)。
 - なぜ非自明なのか: 極大配置は最大配置 (K_5=9) だけではない。サイズ 7 が 7 割を占め、
@@ -220,20 +224,20 @@
 
 ## F-U: 6×6 の極大安全配置は 349,596 個・サイズ 6–11（最大 464 個はごく一部）
 
-- 発見: C++ による完全列挙 (`night-research/maximal_spectrum_enum.cpp`) の結果、
+- 発見: C++ による完全列挙 (`research/experiments/structural-discovery/scripts/maximal_spectrum_enum.cpp`) の結果、
   6×6 の極大安全配置のサイズ分布は
   `{6: 8, 7: 3952, 8: 115496, 9: 199184, 10: 30492, 11: 464}`、合計 **349,596**。
   K_6=11 の最大配置は 464 個 (既知と一致) だが、これは極大全体の **0.13%** にすぎない。
   最頻サイズは 9 (199,184 個) で K より 2 少ない。
-  night-research CYCLE5 の「6×6 の極大安全配置は 11 石で 464 個」は **最大配置のカウント**であり、
+  research/experiments/structural-discovery/output CYCLE5 の「6×6 の極大安全配置は 11 石で 464 個」は **最大配置のカウント**であり、
   極大全体の記述としては誤り (maxsafe_enum.cpp のコメント
   「enumerating safe K-sets enumerates the maximal safe sets」が maximum ⊂ maximal と同一視している)。
 - なぜ非自明なのか: F-P の 9 石極大例を全数へ拡張し、極大スペクトルが 6 連続サイズに広がることを確定。
   ゲーム論では終局しうる石数の集合がこのスペクトルの部分集合であり、勝敗は「どの極大へ誘導できるか」
   で決まる (F-Q)。最大値 K だけでは決まらないことの定量的根拠。
-- 証拠: `night-research/maximal_spectrum_enum.exe 6` の complete=1, nodes=5,081,289。
+- 証拠: `research/experiments/structural-discovery/output/maximal_spectrum_enum.exe 6` の complete=1, nodes=5,081,289。
   n=3,4,5 が Python 完全列挙・CYCLE1 と一致 (n=5: {5:4,6:1136,7:11280,8:4340,9:100}=16860) し、実装交差検証済み。
-- 再現方法: `g++ -O2 night-research/maximal_spectrum_enum.cpp -o maximal_spectrum_enum && ./maximal_spectrum_enum 6`
+- 再現方法: `g++ -O2 research/experiments/structural-discovery/scripts/maximal_spectrum_enum.cpp -o maximal_spectrum_enum && ./maximal_spectrum_enum 6`
 - 試した反証: (1) 初版 Python DFS のバグを n=3,4 の CYCLE1 一致で排除。(2) 464 が size=11 のみで一致。(3) 貪欲サンプルでサイズ 7–11 がすべて現れることと整合。
 - 成立範囲: n=3..6 完全。n=7 は実行中/コスト次第。
 - 確信度: 高
@@ -247,7 +251,7 @@
   「最小極大配置」は高対称で、サイズが増えるほど軌道数が爆発する (n=6 サイズ 8 で 115,496 個)。
 - なぜ非自明なのか: 極大配置の宇宙は大きくても、最小サイズの極大配置は剛直な対称配置に限られる。
   「詰みやすい小さな配置」の分類問題が有限で扱えることを示す。
-- 証拠: `night-research/list_maximal_size.exe 6 6` の 8 行と D4 軌道計算 (8/8 が 1 軌道)。
+- 証拠: `research/experiments/structural-discovery/output/list_maximal_size.exe 6 6` の 8 行と D4 軌道計算 (8/8 が 1 軌道)。
 - 再現方法: 同コマンド。
 - 試した反証: 全 8 集合が代表例の D4 像であることを変換で確認。
 - 成立範囲: 6×6 サイズ 6。サイズ 7 の 3,952 個の軌道数は未計算。
@@ -263,7 +267,7 @@
   **7 石 51 個・9 石 4,437 個** (D4 正規形) が現れ、11 石末端は 34 個のみ。
   つまり 6×6 の極大安全配置のサイズは 11 に一様ではなく、少なくとも {7, 9, 11} に分かれる。
   最大サイズ K_6 = 11 (464 個) 自体は不変。
-- なぜ非自明なのか: night-research CYCLE5 は「6×6 の極大安全配置はちょうど 11 石で 464 個」と記載しており、
+- なぜ非自明なのか: research/experiments/structural-discovery/output CYCLE5 は「6×6 の極大安全配置はちょうど 11 石で 464 個」と記載しており、
   Cycle-1 の n=4,5 で観測された複数サイズの極大スペクトルと食い違う。本発見は CYCLE5 の記述が
   「最大 (maximum)」と「極大 (maximal)」を取り違えた可能性が高いことを示し、6×6 でも極大スペクトルが
   複数サイズであることを独立計算で確定する。ゲーム論的には、後手/先手の選択で終局石数が 7/9/11 と
@@ -297,7 +301,7 @@
   (K が奇数) は証明に不要。
 - なぜ非自明なのか: 「証明書の深さ = K_n」という安易な同一視は n=4,8 で偽。
   一方 results.csv の max_search_depth は真の K_n と一致する (探索器は全探索、証明書は圧縮)。
-- 証拠: night-research/kyouen-{n}x{n}.cert の rank から復元した最深石数 (verify_parity_law 系) と
+- 証拠: research/experiments/structural-discovery/output/kyouen-{n}x{n}.cert の rank から復元した最深石数 (verify_parity_law 系) と
   CYCLE5/6 の K_n。
 - 再現方法: 証明書の max(V-rank) と既知 K_n の比較。
 - 試した反証: n=4 の cert 最深 6 は「6 石極大が存在する」こと (F-R) と整合。n=8 の 14 は
@@ -379,7 +383,7 @@
   全終局石数の奇偶は勝敗と一致 (先手必勝⇔終局石数が奇数)。後手必勝の n=4 は常に偶数 6。
 - なぜ非自明なのか: 「勝敗 = 終局石数の奇偶」という観察は、終局石数が一意なら自明に見える。しかし n=5,6 では終局石数が複数の奇数に振れ、それでも勝敗は先手で安定する。さらに n=4 では極大サイズ 5, 7 が存在するのに、最適対局は偶数 6 にしか行かない。極大サイズの集合ではなく「誘導可能な終局集合」が勝敗を決めている。
 - 証拠: `scripts/analysis/explore_game_length_canon.py` (`min/max_moves_from_empty`, `terminal_stone_hist`)。状態はすべて D4 正規形 (noncanonical_nodes=0)。
-- 再現方法: 同スクリプト (night-research/kyouen-{n}x{n}.cert)。
+- 再現方法: 同スクリプト (research/experiments/structural-discovery/output/kyouen-{n}x{n}.cert)。
 - 試した反証: 正規化なしの素朴なビット追加では子が見つからず偽末端が出ていた。D4 正規化を導入して n=1..6 で missing_win_child=0、n=3,4 の終局石数が一意 (K または既知の偶数極大) になり整合。
 - 成立範囲: 証明書の witness 戦略 × 相手の全選択。先手が witness 以外の勝ち手を選んだ場合の長さは含まない。n=7 は計算コストのため未実施。
 - 確信度: 高 (n≤6、合法手厳密生成)
@@ -459,7 +463,7 @@
 - なぜ非自明なのか: 二石はゲームの最初の非自明層であり、軌道 120 という完全な商集合が初めて確定した。
   「近くの 2 石ほど危険」という素朴な予想は、Chebyshev 距離 1 の軌道が 41 個あり Σd が 3245〜4908 と
   ほぼ全域に散ることで否定される。Σd は相対位置より「各点の局所次数の和」で決まる。
-- 証拠: `research/exploration/fact_10x10_two_stone_orbits.{json,csv}`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_two_stone_orbits.{json,csv}`、
   `scripts/analysis/fact_10x10_two_stone_orbits.py`、`scripts/analysis/fact_10x10_analyze_two_stone.py`。
 - 再現方法: `python scripts/analysis/fact_10x10_two_stone_orbits.py`（forbidden=54,441 を内部再計算）。
 - 試した反証: 成員数の合計が 4,950=C(100,2) と一致。forbidden 54,441 が公開値と一致。
@@ -479,7 +483,7 @@
 - なぜ非自明なのか: 「危険な場所ほど探索が重い」という直感の逆。
   実際には危険 4 点組が密集する中央ほど石を置くと他が締まり、LOSS 判定が軽い。
   F-D の 3 石コストと Σd の負相関の、局所版の説明になっている。
-- 証拠: `research/exploration/fact_10x10_geometry.json` および two_stone_orbits の `point_degrees`。
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_geometry.json` および two_stone_orbits の `point_degrees`。
   C++ `scripts/analysis/fact_10x10_tools.exe geometry`。
 - 再現方法: 同ツール。forbidden 再構築後に度数を数える。
 - 試した反証: 平均 2177.64×100 = 4×54,441 と一致（各四つ組が 4 点に寄与）。
@@ -499,9 +503,9 @@
 - なぜ非自明なのか: 序盤の「低 Σd = LOSS」という F-E の物語の根拠が、
   母集団（R 内 28 ペア）の順位としては成立しない。F-F は 4 石の反転を外部検証したが、
   序盤側の順位主張自体が未検証のまま残っていた。本結果はその訂正。
-- 証拠: `research/exploration/fact_10x10_r_pairs_sigma_d.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_r_pairs_sigma_d.json`、
   `scripts/analysis/fact_10x10_r_pairs_sigma_d.py`。
-  勝敗ラベルは `docs/10X10_THREE_STONE_SUBSETS.md`（`90,91` WIN）と F-E の LOSS 2 個。
+  勝敗ラベルは `research/experiments/solver-benchmarks/reports/10X10_THREE_STONE_SUBSETS.md`（`90,91` WIN）と F-E の LOSS 2 個。
 - 再現方法: `python scripts/analysis/fact_10x10_r_pairs_sigma_d.py`。
 - 試した反証: Σd の値は F-E の引用と 3 件とも一致（3804/4788/4894）。順位だけが食い違う。
   軌道キーの再計算で `{90,91}`→orbit 1、`{90,61}`→orbit 13、`{61,66}`→orbit 3361、`{73,66}`→orbit 5921 と確定。
@@ -521,7 +525,7 @@
 - なぜ非自明なのか: 円上格子点数が増えるほど円が減るという単調な予想は成り立たない。
   さらに「全 C(k,4) が禁止 4 点組として現れる」= 盤上の円は必ず凸包の 4 点組を全部供給する、
   という完全性も同時に確定した（partial_circles=0）。
-- 証拠: `research/exploration/fact_10x10_circle_line_spectrum.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_circle_line_spectrum.json`、
   `scripts/analysis/fact_10x10_circle_line_spectrum.py`。
 - 再現方法: 同スクリプト。3 点から外心を有理座標で復元し、盤上格子点を全点判定。
 - 試した反証: Σ C(k,4)=concyclic_quads を検算。F-W の共円 48,513 と一致。
@@ -539,7 +543,7 @@
 - なぜ非自明なのか: F-N の `4(⌊n/4⌋+1)` と同じ「有限データからの閉形式」の罠が、
   円の個数カウント側でも起きる。3 点連続の完全一致は偶然ではなく、
   低次元の埋め込み可能数が多項式に見える局面があることの証拠だが、次数は 11 で上がる。
-- 証拠: `research/exploration/fact_circle_spectrum_n8_n9_n10.json` および
+- 証拠: `research/experiments/fact-discovery/output/fact_circle_spectrum_n8_n9_n10.json` および
   `fact_circle_spectrum_n6_n7_n11.json`、`scripts/analysis/fact_circle_spectrum_{compare,extend}.py`。
 - 再現方法: 同スクリプト。
 - 試した反証: (n−7)² を n=11 に適用して不一致を確認。n=6,7 では 12 点円は 0（予測とも整合）。
@@ -556,7 +560,7 @@
   F-L は「傾き ±2 は n=7 から」まで記録していたが、±3 と (2,3) 型は n=10 で初めて非ゼロになる。
 - なぜ非自明なのか: 共線 4 点組を作るのに必要な最小盤が方向によってずれ、
   n=10 で新しい 2 族が同時に開く。Θ(n^6) の共線項の内部構造が「方向の追加」でできていることの具体化。
-- 証拠: `research/exploration/fact_10x10_circle_line_spectrum.json` の `collinear_by_dir`。
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_circle_line_spectrum.json` の `collinear_by_dir`。
 - 再現方法: 同スクリプト / `fact_10x10_tools.exe geometry`。
 - 試した反証: F-W の n=10 共線 5,928 と一致。n≤9 では (1,3)/(2,3) 型の 4 点ランが存在しないことを
   同じ列挙で確認。
@@ -576,7 +580,7 @@
   4 点組禁止という局所制約だけでは 5 石での締まりが起きないことが完全に示された。
   17 石飽和の 9×9（F-A）とは対照的に、10×10 の最小終端はまだ 6 以上と未確定だが、
   上限 14・下限 6 のブラケットが確定した。
-- 証拠: `research/exploration/fact_10x10_k{4,5,6}.json`、`fact_10x10_shrink.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_k{4,5,6}.json`、`fact_10x10_shrink.json`、
   `scripts/analysis/fact_10x10_maximal_fast.cpp`。
 - 再現方法: `g++ -O2 -std=c++17 scripts/analysis/fact_10x10_maximal_fast.cpp -o fact && ./fact exact_k 5`。
 - 試した反証: k=4,5 は complete=true。極大判定は全 100 点の合法手 0 を直接検査。
@@ -595,7 +599,7 @@
 - なぜ非自明なのか: 5×5 では K_min=5（F-S の棒状 4 個）に対し、10×10 では少なくとも 11 まで
   「最短の終端」が伸びる。乱贪欲の典型は 14–15 で、真の最小は分布の裾にある。
   F-AJ の k=4,5 完全非存在と合わせ、終端石数のブラケットが 6–11 に確定した。
-- 証拠: `research/exploration/fact_10x10_maximal_{sample,target,shrink12}.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_maximal_{sample,target,shrink12}.json`、
   `scripts/analysis/fact_10x10_maximal_{sample,target,shrink12}.py`。
 - 再現方法: `python scripts/analysis/fact_10x10_maximal_target.py`（seed 固定）。
 - 試した反証: サイズ 12 例からの 1 点削除は全て極大性を壊す。2 点削除でも縮まない。
@@ -616,7 +620,7 @@
 - なぜ非自明なのか: 最小極大が 11 なら「最短終端」は 11 石で、複数の幾何タイプがある。
   10 が存在するかで K_min が 10 か 11 かが決まる。構成的探索でも 10 は出ていない
   （乱贪欲の最小は 12、標的探索で 11）。
-- 証拠: `research/exploration/fact_tc_k{6,10,10b,11}.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_tc_k{6,10,10b,11}.json`、
   `scripts/analysis/fact_10x10_triple_cover.cpp`。
 - 再現方法: `g++ -O2 -std=c++17 scripts/analysis/fact_10x10_triple_cover.cpp -o tc && ./tc 11 60`。
 - 試した反証: k=11 の集合は全 100 点で合法手 0 を確認済み。k=10 で最初にヒットするまでに
@@ -639,7 +643,7 @@
 - なぜ非自明なのか: 「盤が大きいほど最小終端も大きくなる」は n=3..5 では止まっており、
   増加が始まる境界が n=6 に特定された。5×5 の K_min=5 が特殊ではない。
   10×10 で K_min が 11 まで届くなら、サイズに対して線形以上に伸びる可能性がある。
-- 証拠: `research/exploration/fact_kmin_by_board.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_kmin_by_board.json`、
   `scripts/analysis/fact_kmin_by_board.py`。
 - 再現方法: 同スクリプト（n=3..6 は数秒〜数分）。
 - 試した反証: n=5 の例が F-S の 4 個のどれかと D4 同値かは未照合だが、サイズ 5 で一致。
@@ -663,7 +667,7 @@
   「別族の出現」として分解した。有限盤への埋め込み制約（F-K/F-AC）の、
   個数カウント版の実例。N=50 の円（2 平方和 5²+5²）が r²=25/2 に対応し、
   N=65 の円が r²=65/2 に対応する（F-AC の odd_repr と接続）。
-- 証拠: `research/exploration/fact_10x10_12pt_circles.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json`、
   `scripts/analysis/fact_10x10_12pt_circles.py`、および n=11 族の照合スクリプト実行ログ。
 - 再現方法: `python scripts/analysis/fact_10x10_12pt_circles.py`（n=10）。
   n=11 は同じ外心復元で r² ヒストグラムを出す。
@@ -689,7 +693,7 @@
 - なぜ非自明なのか: 「k=10 の円」と「k=12 の円」を別物として数えると族構造が見えない。
   半径族を固定すると、盤の縁で k が変わる連続的な現象として理解できる。
   r²=25 と r²=65/2 は n=10 / n=11 で初めて表に現れる。
-- 証拠: `research/exploration/fact_circle_families_k10_k12.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_circle_families_k10_k12.json`、
   `scripts/analysis/fact_circle_families.py`。
 - 再現方法: 同スクリプト。外心を有理で復元し r² でグループ化。
 - 試した反証: n=10 の size_hist（F-AG）と族の合計が一致（k=10:12+4=16, k=12:9）。
@@ -708,7 +712,7 @@
   最大 9 という上界と、8 の欠落は、円上格子点数（M(10)=12）と直線ラン長の組合せで決まる
   有限の幾何に見える。全てのペアが禁止に関与する（min 6）ことも、
   「孤立した 2 石はない」ことを意味する。
-- 証拠: `research/exploration/fact_10x10_hypergraph.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_hypergraph.json`、
   `scripts/analysis/fact_10x10_hypergraph.py`。
 - 再現方法: 同スクリプト。
 - 試した反証: 補完数ヒストグラムの合計が 54,441×4 と一致するかは未検算だが、
@@ -728,7 +732,7 @@
 - なぜ非自明なのか: F-AP で「最大 9・8 欠落」として観測したものが、
   円スペクトル（F-AG）の欠落サイズ 9,11 と **完全に同じ理由**で説明される。
   ハイパーグラフの局所次数が、盤上幾何のサイズスペクトルに同型。
-- 証拠: `research/exploration/fact_10x10_triple9_geometry.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_triple9_geometry.json`、
   `scripts/analysis/fact_10x10_triple9_geometry.py`。
 - 再現方法: 同スクリプト。線/円を区別して補完を数える。
 - 試した反証: 9 補完トリプル 1,980 個が全て circle。線由来は最大 7（10 点線の |S|−3）。
@@ -751,7 +755,7 @@
 - なぜ非自明なのか: 5×5 の K_min=5（F-S）は「盤サイズと等しい」偶然ではなく、
   n=6,7 でも等しいことが分かった。一方 n=3,4 も 5 で、小さすぎる盤では
   K_min が n より大きい。境界 n=6 以降の法則の候補が得られた。
-- 証拠: `research/exploration/fact_kmin_n7.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_kmin_n7.json`、
   `scripts/analysis/fact_kmin_general.cpp`、`fact_kmin_by_board.json`。
 - 再現方法: `g++ -O2 -std=c++17 scripts/analysis/fact_kmin_general.cpp -o kg && ./kg 7 4 10 300`。
 - 試した反証: k=4,5,6 が complete=true で 0 個。k=7 は最初のヒットで停止（存在証明）。
@@ -790,7 +794,7 @@
 - なぜ非自明なのか: 11 から 10 へ構成的に縮んだ。K_min=10 なら
   n=6,7,10 で K_min=n が揃い、仮説の信頼度が上がる。
   ランダムに 10 以下を作るのは難しく、局所改良（2-swap）が効く。
-- 証拠: 本コミットの実行ログ、`research/exploration/fact_10x10_maximal_target.json` 関連。
+- 証拠: 本コミットの実行ログ、`research/experiments/fact-discovery/output/fact_10x10_maximal_target.json` 関連。
   検算: `python -c "from scripts.analysis.fact_10x10_maximal_sample import Engine, build_forbidden; ..."` で is_maximal=True。
 - 再現方法: `fact_10x10_maximal_sample.py` の Engine で `is_maximal([1,2,3,4,5,8,10,11,20,27])`。
 - 試した反証: この 10 の全ての 9 点部分集合で is_maximal=False。
@@ -810,7 +814,7 @@
   縁を締めないと合法手が残る。
 - なぜ非自明なのか: 極大性を達成する最小構成は、中央に散るのではなく
   「自由度の高い境界を塞ぐ」形になる。最大安全配置（中央寄りになりやすい）と対照的。
-- 証拠: `research/exploration/fact_10x10_size10_geometry.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_10x10_size10_geometry.json`、
   `scripts/analysis/fact_10x10_size10_geometry.py`。
 - 再現方法: 同スクリプト。
 - 試した反証: 複数の 10 点例がいずれも境界点 8/10 以上。全 10 点が内部という例は未観測。
@@ -847,7 +851,7 @@
 - なぜ非自明なのか: F-W が指摘した「部分線分の二重計数」を避ける正しい数え方が
   「最大ランの C(L,4)」であることを実装で固定。n=11 は F-W の範囲外で、
   forbidden(11)=95,670 と合わせ concyclic(11)=85,242 が得られる。
-- 証拠: `research/exploration/fact_collinear_run_formula.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_collinear_run_formula.json`、
   `scripts/analysis/fact_collinear_run_formula.py`。
 - 再現方法: 同スクリプト。
 - 試した反証: n=4..10 で既知値と一致。n=11 は同一アルゴリズムの延長。
@@ -935,7 +939,7 @@
   n=3..7 の系列は 5,5,5,6,7 のまま。n≥6 で K_min=n の仮説は維持。
 - なぜ非自明なのか: F-AZ で壊れた第 1 の証人を、健全な列挙器で置き換えた。
   7×7 の下限 7 と上限 7 が閉じる。
-- 証拠: `research/exploration/fact_kmin_n7_safe.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_kmin_n7_safe.json`、
   `scripts/analysis/fact_kmin_general.cpp`（安全判定込み）。
 - 再現方法: `g++ -O2 -std=c++17 scripts/analysis/fact_kmin_general.cpp -o kg && ./kg 7 7 8 60`。
 - 試した反証: 4 点組を全照合して UNSAFE なし。can_add が空で極大。
@@ -952,7 +956,7 @@
   9×9 でも「周縁ほど自由」は同じ（コーナーが最小）。
 - なぜ非自明なのか: F-AE で訂正した「最大は幾何中心とは限らない」が、
   奇偶で挙動が違う。T6 の n=9,10 比較を満たす。
-- 証拠: `research/exploration/fact_9x9_point_degrees.json`。
+- 証拠: `research/experiments/fact-discovery/output/fact_9x9_point_degrees.json`。
 - 再現方法: 4 点組の det=0 全列挙から度数を数える（本セッションのスニペット）。
 - 試した反証: Σd = 4×29,152 = 116,608 と一致するはず（mean×81）。
 - 成立範囲: 9×9。
@@ -986,7 +990,7 @@
 - なぜ非自明なのか: 二石は全 120 軌道で mobility 98 と定数だったが、
   三石で初めて盤構造が mobility に現れる。680 という完全な商集合が
   以降の exact solve の標本空間になる。
-- 証拠: `research/exploration/fact_3stone_orbits.json`、
+- 証拠: `research/experiments/fact-discovery/output/fact_3stone_orbits.json`、
   `scripts/analysis/fact_10x10_three_stone_orbits.cpp`。
 - 再現方法: `g++ -O2 -std=c++17 scripts/analysis/fact_10x10_three_stone_orbits.cpp -o t3 && ./t3`。
 - 試した反証: 補完数ヒストと F-AP の生トリプル分布の形は一致（8 欠落）。
@@ -1024,7 +1028,7 @@
   789M nodes でも未完だった。個々の三つ組の補完集合の**共起と被覆可能性**まで使うことで、
   rich-locus の「強い三つ組が複数必要」という発想を、完全性を保った一般的な枝刈りに昇格できた。
 - 証拠: `scripts/analysis/fact_kmin_cover_bound.cpp`、
-  `research/exploration/fact_kmin_n10_k6_cover.json`。
+  `research/experiments/fact-discovery/output/fact_kmin_n10_k6_cover.json`。
 - 再現方法:
   `g++ -O3 -std=c++17 scripts/analysis/fact_kmin_cover_bound.cpp -o kmin_cover && ./kmin_cover 10 6`。
   JSON 出力で `complete:true, found:false` を確認する。
@@ -1048,7 +1052,7 @@
 - なぜ非自明なのか: 旧探索では k=7 が 138M nodes でも未完で、300仮説検証時点では
   `s_8∈[7,8]` までしか絞れていなかった。10×10 k=6 を排除した補完集合の将来 coverage 上界を
   8×8 に適用することで、未解決だった下限を完全に閉じた。
-- 証拠: `research/verification/data/s8_exact.json`、
+- 証拠: `research/experiments/original-claims/output/data/s8_exact.json`、
   `scripts/analysis/fact_kmin_cover_bound.cpp`。
 - 再現方法:
   `g++ -O3 -std=c++17 scripts/analysis/fact_kmin_cover_bound.cpp -o kmin_cover`
@@ -1077,9 +1081,9 @@
 - なぜ非自明なのか: 旧検証では 21-cover の 1-minimal性、2削除不可、greedy 最良21、
   packing 最良20までしか分からず、整数最適性と LP gap のどちらも未証明だった。
   今回は数値 ILP/LP の出力に依存せず、有理 primal/dual 証明書そのものを保存している。
-- 証拠: `research/verification/round2_b431_lp_exact.json`、
-  `research/verification/scripts/round2_b431_lp_exact.py`。
-- 再現方法: `python research/verification/scripts/round2_b431_lp_exact.py`。
+- 証拠: `research/experiments/original-claims/output/round2_b431_lp_exact.json`、
+  `research/experiments/original-claims/scripts/round2_b431_lp_exact.py`。
+- 再現方法: `python research/experiments/original-claims/scripts/round2_b431_lp_exact.py`。
   SciPy がある場合は `--solve` で HiGHS の LP/ILP 再求解も同時確認できる。
 - 試した反証: U 内禁止4点組59、候補6,460、サイズ分布
   {13:4175,14:1675,15:500,16:100,17:10} を元定義から再生成。
@@ -1119,9 +1123,9 @@
 - なぜ非自明なのか: q>4 では「q−1点が曲線を一意に決める」という q=4 特有の見方が使えない。
   曲線を決める3点まで数え直すことで、q に依存する無限族を一つの定理で強解決できた。
   正方形 n×n の不規則な勝敗とは対照的に、固定幅では十分長くなるとゲーム構造が完全に偶奇へ崩壊する。
-- 証拠: `research/q-point-fixed-width.md`,
-  `research/verification/scripts/q_point_fixed_width.py`,
-  `research/verification/q_point_fixed_width.json`。
+- 証拠: `research/experiments/fixed-width/reports/q-point-fixed-width.md`,
+  `research/experiments/fixed-width/scripts/q_point_fixed_width.py`,
+  `research/experiments/fixed-width/output/q_point_fixed_width.json`。
 - 成立範囲: 全 q≥4、w≥1、m≥T_{w,q}。T は十分条件であって最小ではない。
 - 確信度: 高（全称証明 + 厳密整数実装 + 独立幾何判定 + 小ケース完全列挙）。
 - 今後の検証方法: 真の安定化長
@@ -1156,9 +1160,9 @@
 - 有限検証: q点完全列挙JSON中の q>2w に該当する39盤について、
   禁止集合数 `w*C(m,q)`、安全集合数、極大サイズ、空盤gが全て定理と一致。
   スクリプトに全安全局面 Grundy 式まで assert を追加した。
-- 証拠: `research/q-point-fixed-width.md` §7、
-  `research/verification/scripts/q_point_fixed_width.py`,
-  `research/verification/q_point_fixed_width.json`。
+- 証拠: `research/experiments/fixed-width/reports/q-point-fixed-width.md` §7、
+  `research/experiments/fixed-width/scripts/q_point_fixed_width.py`,
+  `research/experiments/fixed-width/output/q_point_fixed_width.json`。
 - 確信度: 高（短い全称証明 + 39盤完全列挙による独立整合確認）。
 - 今後の検証方法: 境界 q=2w、とくに 3×m・q=6 の専用DPを上の和・積条件で構成し、
   真の安定化長を求める。
@@ -1191,9 +1195,9 @@
 - 追加構造: 各行の二点を (a_i,b_i) とすると6点共円の必要十分条件は
   `a0+b0=a1+b1=a2+b2` と
   `a0b0-2a1b1+a2b2=2`。
-- 証拠: `research/q-point-fixed-width.md` §7、
-  `research/verification/scripts/q_point_fixed_width.py`,
-  `research/verification/q_point_fixed_width.json`。
+- 証拠: `research/experiments/fixed-width/reports/q-point-fixed-width.md` §7、
+  `research/experiments/fixed-width/scripts/q_point_fixed_width.py`,
+  `research/experiments/fixed-width/output/q_point_fixed_width.json`。
 - 確信度: 高（全称上界証明 + 明示下界証人の厳密検査）。
 - 今後の検証方法: m=9..20 の極大14石以下の存在を専用SAT/DPで完全判定し、
   M_{3,6} を9..21から一点に閉じる。
@@ -1218,11 +1222,11 @@
   m=19,20 は outer 4 / middle 2。一方必要数は5..16。
 - 尾部: m≥21 はF-BJの加法エネルギー証明が全称的に覆う。
 - 証拠:
-  `research/verification/scripts/q6_w3_exact_threshold.cpp`,
-  `research/verification/q6_w3_exact_threshold.json`,
-  `research/q-point-fixed-width.md`。
+  `research/experiments/fixed-width/scripts/q6_w3_exact_threshold.cpp`,
+  `research/experiments/fixed-width/output/q6_w3_exact_threshold.json`,
+  `research/experiments/fixed-width/reports/q-point-fixed-width.md`。
 - 再現:
-  `g++ -O3 -std=c++17 research/verification/scripts/q6_w3_exact_threshold.cpp -o q6w3 && ./q6w3`。
+  `g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q6_w3_exact_threshold.cpp -o q6w3 && ./q6w3`。
   参考実行では全 m=9..20 を約28秒で完走。
 - 確信度: 高（m=8 の厳密陽性証人 + m=9..20 完全列挙 + m≥21 全称証明）。
 - 今後: 同じ「target edge」圧縮を q=2w の一般境界へ拡張するか、
@@ -1250,9 +1254,9 @@
   従ってこの10盤は個別に全極大12石、全局面偶奇式が成立。
 - 現在の厳密ブラケット: **`12≤M_{3,5}≤56`**。
   m=22..55 に不足極大配置が再出現するかは未解決。
-- 証拠: `research/q5-w3-stabilization.md`,
-  `research/verification/scripts/q5_w3_stabilization.cpp`,
-  `research/verification/q5_w3_stabilization.json`。
+- 証拠: `research/experiments/fixed-width/reports/q5-w3-stabilization.md`,
+  `research/experiments/fixed-width/scripts/q5_w3_stabilization.cpp`,
+  `research/experiments/fixed-width/output/q5_w3_stabilization.json`。
 - 確信度: 高（全称上界証明 + 明示下界証人 + m=12..21 完全列挙）。
 
 ## F-BM: line-only / circle-only q点版の高q領域は全mで強解決
@@ -1267,7 +1271,7 @@
 - 標準版との比較: line-only は q>w で完全分離。任意の平行線配置に対する純幾何だけなら
   標準版は q>2w で完全分離する。標準整数格子では後続の F-BN により mod 9 を使って
   q≤2w の一部まで領域が広がる。circle-only は q>2w で制約そのものが消える。
-- 証拠: `research/q-point-rule-variants.md`。
+- 証拠: `research/experiments/fixed-width/reports/q-point-rule-variants.md`。
 - 確信度: 高（直接的な全称幾何証明）。
 
 ## F-BN: q=2w の一般共円条件と mod 9 による高q領域拡大
@@ -1300,9 +1304,9 @@
   q円の0点行数z、1点行数o、2点行数tは
   \(2z+o=2w-q\) を満たす。
 - 証拠:
-  research/q2w-boundary-structure.md,
-  research/verification/scripts/q2w_boundary_structure.py,
-  research/verification/q2w_boundary_structure.json。
+  research/experiments/fixed-width/reports/q2w-boundary-structure.md,
+  research/experiments/fixed-width/scripts/q2w_boundary_structure.py,
+  research/experiments/fixed-width/output/q2w_boundary_structure.json。
 - 交差検証: q=2w 共円条件を lifted determinant と全 pair assignment で比較し、
   w=2,m=6（225件）、w=3,m=6（3,375件）、w=4,m=5（10,000件）で mismatch 0。
 - 確信度: 高（短い全称代数証明 + 有限 mod 9 全列挙 + determinant 交差検証）。

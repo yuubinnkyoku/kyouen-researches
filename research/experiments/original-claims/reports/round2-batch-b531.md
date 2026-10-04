@@ -1,17 +1,19 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch B531–B560: 円・直線の相乗とペア和から長方形盤の具体式
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B531〜B560 のみ。
-手法: `PROTOCOL.md` に準拠。整数演算のみ。5×5 は禁止族を差し替えた完全 Grundy 計算、
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B531〜B560 のみ。
+手法: `../../../archive/claim-audit-history/PROTOCOL.md` に準拠。整数演算のみ。5×5 は禁止族を差し替えた完全 Grundy 計算、
 2 行盤は B214 のペア和同値 `a+b=c+d ⇔ 共円` による有限状態の厳密計算、
 3 行盤は `{0..m-1}×{0,1,2}` の完全計算（m≤10）。
 
 スクリプト / データ:
-- `scripts/round2_b531_lines.py` — 5×5 の D4 軌道別・単一直線別 W
-- `scripts/round2_b538_synergy.py` — 円のみ / 直線のみ / 標準の P/N 相乗証人
-- `scripts/round2_b541_pairsum.py` — 2 行ペア和ゲーム（B541–B550）
-- `scripts/round2_b542_followup.py` — B542 典型応答・B545–B547 の追加計数
-- `scripts/round2_b551_3row.py` — 3 行盤・K 探索・AP 構成・行間隔変更（B551–B560）
-- `round2_b531.json` — 全結果
+- `../scripts/round2_b531_lines.py` — 5×5 の D4 軌道別・単一直線別 W
+- `../scripts/round2_b538_synergy.py` — 円のみ / 直線のみ / 標準の P/N 相乗証人
+- `../scripts/round2_b541_pairsum.py` — 2 行ペア和ゲーム（B541–B550）
+- `../scripts/round2_b542_followup.py` — B542 典型応答・B545–B547 の追加計数
+- `../scripts/round2_b551_3row.py` — 3 行盤・K 探索・AP 構成・行間隔変更（B551–B560）
+- `../output/round2_b531.json` — 全結果
 
 既知の確定事実（再発見しない）: n=5 標準 W=`{2,6,8,10,12,14,16,18,22}`、
 円のみ W=`{12}`、直線のみ W=`{12}`（batch-10）。2 行ペア和 420/420（B214）。
@@ -28,7 +30,7 @@
 - 判定: **SUPPORTED**
 - 範囲: 円のみ 762 組 + 主対角線 10 組の完全 Grundy（172,230 → 約 15 万状態）。
 - 証拠: W が `{12}` から `{6,8,12,16,18}` へ 1 点→5 点。増えた 4 点は内側対角型。
-  g0=1（先手勝ち）は不変。`round2_b531.json` の `orbit_variants.circles+main`。
+  g0=1（先手勝ち）は不変。`../output/round2_b531.json` の `orbit_variants.circles+main`。
 - メモ: 「市松側の一部が救われる」は正確には内側対角 4 点のみ。辺中央 4 点は主対角線だけでは復元されない（B534 参照）。
 
 ### B532 [全称] 5×5の追加8勝ち初手の復元には斜めの直線禁止が必要

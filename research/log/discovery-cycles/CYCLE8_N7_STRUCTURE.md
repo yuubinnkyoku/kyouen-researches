@@ -1,8 +1,10 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 8 — n=7 だけが K=14 を達成する構造的圧縮
 
 dated 2026-09-19. Branch `cycle8-n7-structure`.
 Base: commit `2d3855a` (Cycle 7). Package A commit: `159d779`.
-Spec: `docs/compose/spec/cycle8-n7-structure-explain.md`.
+Spec: `research/archive/presentation-specs/cycle8-n7-structure-explain.md`.
 
 ## エンジン制約
 
@@ -24,8 +26,8 @@ Spec: `docs/compose/spec/cycle8-n7-structure-explain.md`.
 | 5→5 交換の D4 一意性 | 完全列挙の 8 組上 | 8/8 同値 |
 | 13-部分集合の一意完了 | 完全列挙の全 (S,石) | 224/224 |
 
-独立検算: `night-research/cycle8_verify_lemmas.py` → `results/cycle8_verify.json`（全 PASS）。
-Critical review 2026-09-19: `night-research/cycle8_review_notes.md`（critical なし; 非 critical は本報告へ反映）。
+独立検算: `research/experiments/structural-discovery/scripts/cycle8_verify_lemmas.py` → `results/cycle8_verify.json`（全 PASS）。
+Critical review 2026-09-19: `research/log/discovery-cycles/cycle8_review_notes.md`（critical なし; 非 critical は本報告へ反映）。
 
 ## 新しく確定した事実
 
@@ -244,7 +246,7 @@ node-cap 付きで **53 集合・45 種の軌道占有パターン**を観測し
 ### E. n=8 サンプル（SAMPLE、完全列挙ではない）
 
 複数証人収集用の乱択 DFS は n=8 K=15 で高コストだったため打ち切り。
-既知証人（`cycle6-maxsafeset-n8-15.json`）の **D4 軌道 8 集合**のみ解析
+既知証人（`../../experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json`）の **D4 軌道 8 集合**のみ解析
 （`results/cycle8_e_n8_sample.json`）。
 
 | 量 | n=8 サンプル (8 sets, one D4 orbit) | n=7 完全列挙 (16) |
@@ -266,30 +268,30 @@ K8=15=2n-1 であり K7=14=2n とは達成形が異なる可能性を支持す�
 ## 成果物
 
 **コード**
-- `night-research/cycle8_lib.py` — 共有幾何・データ
-- `night-research/cycle8_a_template.py` / `cycle8_a_verify.py`
-- `night-research/cycle8_c_determining.py` / `cycle8_d_contrast.py`
-- `night-research/cycle8_exists_k.py` / `cycle8_bnb_maxsafe.py`
-- `night-research/cycle8_verify_lemmas.py`
-- `night-research/cycle8_b_orbit_constraints.py` / `cycle8_b_maxsafe.cpp`（B パッケージ）
+- `scripts/research/cycle8_lib.py` — 共有幾何・データ
+- `research/experiments/structural-discovery/scripts/cycle8_a_template.py` / `../../experiments/structural-discovery/scripts/cycle8_a_verify.py`
+- `research/experiments/structural-discovery/scripts/cycle8_c_determining.py` / `../../experiments/structural-discovery/scripts/cycle8_d_contrast.py`
+- `research/experiments/structural-discovery/scripts/cycle8_exists_k.py` / `../../experiments/structural-discovery/scripts/cycle8_bnb_maxsafe.py`
+- `research/experiments/structural-discovery/scripts/cycle8_verify_lemmas.py`
+- `research/experiments/structural-discovery/scripts/cycle8_b_orbit_constraints.py` / `../../experiments/structural-discovery/scripts/cycle8_b_maxsafe.cpp`（B パッケージ）
 
 **データ**
-- `results/cycle8_a_template.json`, `night-research/cycle8_a_result.json`
+- `results/cycle8_a_template.json`, `research/experiments/structural-discovery/output/cycle8_a_result.json`
 - `results/cycle8_c_determining_n7.csv`, `..._n6.csv`
 - `results/cycle8_d_contrast.json`
-- `night-research/cycle8_cd_result.json`
+- `research/experiments/structural-discovery/output/cycle8_cd_result.json`
 - `results/cycle8_verify.json`
-- `results/cycle8_e_n8_sample.json`, `night-research/cycle8_e_n8_sample.bin`
-- `night-research/cycle8_e_n8_sample.py`
+- `results/cycle8_e_n8_sample.json`, `research/experiments/structural-discovery/output/cycle8_e_n8_sample.bin`
+- `research/experiments/structural-discovery/scripts/cycle8_e_n8_sample.py`
 
 **スクリプト再現**
 ```powershell
-& $env:MIMO_PYTHON night-research/cycle8_a_template.py
-& $env:MIMO_PYTHON night-research/cycle8_a_verify.py
-& $env:MIMO_PYTHON night-research/cycle8_c_determining.py
-& $env:MIMO_PYTHON night-research/cycle8_d_contrast.py
-& $env:MIMO_PYTHON night-research/cycle8_verify_lemmas.py
-& $env:MIMO_PYTHON night-research/cycle8_exists_k.py  # 条件付き目標探索（時間がかかるケースあり）
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_a_template.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_a_verify.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_c_determining.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_d_contrast.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_verify_lemmas.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_exists_k.py  # 条件付き目標探索（時間がかかるケースあり）
 ```
 
 ## 次に価値の高い未解決問題

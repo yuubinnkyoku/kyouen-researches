@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Move-ordering research: blind-probe audit + pair-sum/mobility (10x10 + 9x9)
 
 Branch: `audit-blind-probe-and-move-ordering` (from `probe-two-stone-subsets`
@@ -142,7 +144,7 @@ correction.
 
 ## 7. Corrections to prior docs
 
-- `docs/10X10_PROBE_BLIND_VALIDATION.md` §4–§6 (median 3.0 vs 6.0,
+- `research/experiments/solver-benchmarks/reports/10X10_PROBE_BLIND_VALIDATION.md` §4–§6 (median 3.0 vs 6.0,
   verdict C, cost-improvement claims): invalid as stated — the ranking was
   reverse file order, not a learned signal. Keep the file; this memo
   supersedes its conclusions.

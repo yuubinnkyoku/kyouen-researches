@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 8×8 O-stratum independent replication — result
 
 Status: COMPLETE (full D4-orbit census)
@@ -10,7 +12,7 @@ Solver validation commit: `a8b5b943f1a826311e4211a8058a718c871404cf`
 
 No 8×8 production child outcome was read before the freeze commit.
 Primary hypothesis, stratum definitions, and the +0.05 gap threshold were frozen in
-`docs/8X8_O_STRATUM_REPLICATION_PREREG.md` / `docs/8X8_O_STRATUM_REPLICATION_FREEZE.md`.
+`research/experiments/8x8-replication/reports/8X8_O_STRATUM_REPLICATION_PREREG.md` / `research/experiments/8x8-replication/reports/8X8_O_STRATUM_REPLICATION_FREEZE.md`.
 
 ## Geometry and population (outcome-free)
 
@@ -176,23 +178,23 @@ on that pattern requires another independent dataset.
 
 ## Artifacts
 
-- `docs/8X8_O_STRATUM_REPLICATION_PREREG.md`
-- `docs/8X8_O_STRATUM_REPLICATION_FREEZE.md`
-- `docs/8X8_SOLVER_VALIDATION.md`
+- `research/experiments/8x8-replication/reports/8X8_O_STRATUM_REPLICATION_PREREG.md`
+- `research/experiments/8x8-replication/reports/8X8_O_STRATUM_REPLICATION_FREEZE.md`
+- `research/experiments/8x8-replication/reports/8X8_SOLVER_VALIDATION.md`
 - `scripts/export-8x8-factorial-population.cpp`
 - `scripts/build-8x8-o-strata-roots.py`
 - `scripts/run-8x8-o-census-solve.py`
 - `scripts/analyze-8x8-o-stratum-replication.py`
 - `cpp/solvers/kyouen_solver_8_root.cpp`
-- `artifacts/8x8-factorial-population.csv`
-- `artifacts/8x8-o-strata.csv`
-- `artifacts/8x8-o-required-roots.csv`
-- `artifacts/8x8-o-shared-child-audit.json`
-- `artifacts/8x8-o-census-outcomes.csv`
-- `artifacts/8x8-o-solve-manifest.json`
-- `artifacts/8x8-o-parent-outcomes.csv`
-- `artifacts/8x8-o-primary-summary.json`
-- `artifacts/8x8-o-9x9-comparison.csv`
-- `artifacts/8x8-o-analysis-summary.json`
-- `artifacts/SHA256SUMS-8x8-freeze.txt`
-- `artifacts/SHA256SUMS-8x8-result.txt` (written at result commit)
+- `research/experiments/solver-benchmarks/output/8x8-factorial-population.csv`
+- `research/experiments/solver-benchmarks/output/8x8-o-strata.csv`
+- `research/experiments/solver-benchmarks/output/8x8-o-required-roots.csv`
+- `research/experiments/solver-benchmarks/output/8x8-o-shared-child-audit.json`
+- `research/experiments/solver-benchmarks/output/8x8-o-census-outcomes.csv`
+- `research/experiments/solver-benchmarks/output/8x8-o-solve-manifest.json`
+- `research/experiments/solver-benchmarks/output/8x8-o-parent-outcomes.csv`
+- `research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json`
+- `research/experiments/solver-benchmarks/output/8x8-o-9x9-comparison.csv`
+- `research/experiments/solver-benchmarks/output/8x8-o-analysis-summary.json`
+- `research/experiments/solver-benchmarks/output/SHA256SUMS-8x8-freeze.txt`
+- `research/experiments/solver-benchmarks/output/SHA256SUMS-8x8-result.txt` (written at result commit)

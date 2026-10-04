@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 9×9 misère の資源制限付き探索
 
 2026-10-03。9×9 空盤の misère 勝敗を追加調査した記録である。
@@ -13,7 +15,7 @@
 「合法点6個以下の完全な安全部分集合族」への縮約を81ビットへ移植した。
 通常ルールの勝敗キャッシュや証明書は流用していない。
 
-実装は [game_structure_20261003_nine.cpp](verification/scripts/game_structure_20261003_nine.cpp)。
+実装は [game_structure_20261003_nine.cpp](../scripts/game_structure_20261003_nine.cpp)。
 盤面と合法手集合に `__uint128_t` を使い、上位47ビットを盤外として扱う。
 各着手後の8個の D4 像を更新し、その最小値を占有集合の代表とする。
 着手で新しく禁止される点は、着手点と既置石2点を含む禁止4点集合から求める。
@@ -56,7 +58,7 @@ R(S)=\sum_{j=0}^{k-1}\binom{81}{j}
 
 ## 独立した部品検査
 
-[Python検査器](verification/scripts/game_structure_20261003_nine_validate.py) は、
+[Python検査器](../scripts/game_structure_20261003_nine_validate.py) は、
 探索器の座標を平行移動した3×3式とは別に、元の4×4行列式を二乗距離の列で余因子展開する。
 全 \(\binom{81}{4}=1,663,740\) 組を列挙し、禁止4点集合29,152個を一致確認した。
 これには4点共線と4点共円の双方が含まれる。
@@ -81,13 +83,13 @@ R(S)=\sum_{j=0}^{k-1}\binom{81}{j}
 監査用の作業コピーだけでスロット数を4,000,037（キー配列約32 MB）に減らしており、
 元の探索ソースは変更しない。
 
-[独立監査ハーネス](verification/scripts/game_structure_20261003_nine_audit.py) と
-[順位・盤外ガード検査](verification/scripts/game_structure_20261003_nine_audit_domains.cpp)、
-[監査結果JSON](verification/game_structure_20261003_nine_audit.json) を保存している。
+[独立監査ハーネス](../scripts/game_structure_20261003_nine_audit.py) と
+[順位・盤外ガード検査](../scripts/game_structure_20261003_nine_audit_domains.cpp)、
+[監査結果JSON](../output/game_structure_20261003_nine_audit.json) を保存している。
 独立した監査全体は次の単独コマンドで再現できる。
 
 ```sh
-python research/verification/scripts/game_structure_20261003_nine_audit.py \
+python research/experiments/game-structure/scripts/game_structure_20261003_nine_audit.py \
   --output /tmp/kyouen-nine-audit.json
 ```
 
@@ -104,8 +106,8 @@ python research/verification/scripts/game_structure_20261003_nine_audit.py \
 
 時間上限はそれぞれ800秒と440秒で、いずれも時間上限より先にメモ上限へ達した。
 2試行の探索時間合計は約649秒、最大 RSS は約1.67 GBだった。
-機械可読結果は [中央優先のJSON](verification/game_structure_20261003_nine_center.json) と
-[角優先のJSON](verification/game_structure_20261003_nine_corner.json) に保存している。
+機械可読結果は [中央優先のJSON](../output/game_structure_20261003_nine_center.json) と
+[角優先のJSON](../output/game_structure_20261003_nine_corner.json) に保存している。
 
 ## 再実行
 
@@ -117,12 +119,12 @@ python research/verification/scripts/game_structure_20261003_nine_audit.py \
 以下の9×9空盤探索を実施しない。
 
 ```sh
-python research/verification/scripts/game_structure_20261003_nine_reproduce.py \
+python research/experiments/game-structure/scripts/game_structure_20261003_nine_reproduce.py \
   --work-dir /tmp/kyouen-nine-center-repeat \
   --output /tmp/kyouen-nine-center-repeat.json \
   --seconds 800 --opening 40
 
-python research/verification/scripts/game_structure_20261003_nine_reproduce.py \
+python research/experiments/game-structure/scripts/game_structure_20261003_nine_reproduce.py \
   --work-dir /tmp/kyouen-nine-corner-repeat \
   --output /tmp/kyouen-nine-corner-repeat.json \
   --seconds 440 --opening 0

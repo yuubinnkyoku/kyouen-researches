@@ -35,7 +35,7 @@ cargo test --release
 ## 自己検査
 
 ```bash
-cargo run --release -- self-test
+cargo run --release --bin kyouen-verifier -- self-test
 ```
 
 次を確認します。
@@ -59,25 +59,25 @@ cargo run --release -- self-test
 空の4×4盤：
 
 ```bash
-cargo run --release -- solve --size 4
+cargo run --release --bin kyouen-verifier -- solve --size 4
 ```
 
 点番号で盤面を指定：
 
 ```bash
-cargo run --release -- solve --size 5 --ids 0,1,5
+cargo run --release --bin kyouen-verifier -- solve --size 5 --ids 0,1,5
 ```
 
 座標で指定：
 
 ```bash
-cargo run --release -- solve --size 5 --coords '0,0;1,0;0,1'
+cargo run --release --bin kyouen-verifier -- solve --size 5 --coords '0,0;1,0;0,1'
 ```
 
 探索量を制限する場合：
 
 ```bash
-cargo run --release -- solve --size 7 --coords '0,0;3,3' --node-limit 1000000
+cargo run --release --bin kyouen-verifier -- solve --size 7 --coords '0,0;3,3' --node-limit 1000000
 ```
 
 出力の `outcome` は、**次に打つ側**から見た勝敗です。
@@ -87,7 +87,7 @@ cargo run --release -- solve --size 7 --coords '0,0;3,3' --node-limit 1000000
 小盤面向けです。
 
 ```bash
-cargo run --release -- classify-first --size 5 > first-moves-5x5.csv
+cargo run --release --bin kyouen-verifier -- classify-first --size 5 > first-moves-5x5.csv
 ```
 
 ## 10×10証拠CSVを監査する
@@ -95,7 +95,7 @@ cargo run --release -- classify-first --size 5 > first-moves-5x5.csv
 証拠一式を展開したディレクトリを渡します。
 
 ```bash
-cargo run --release -- audit-evidence /path/to/evidence
+cargo run --release --bin kyouen-verifier -- audit-evidence /path/to/evidence
 ```
 
 監査内容：

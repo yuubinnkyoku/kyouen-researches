@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 追撃: B351-B400 followup
 
 対象: `round5-batch-b351-b400.md` の PARTIAL / INCONCLUSIVE 18 件
@@ -6,16 +8,16 @@
 制約: n≤6 は Python / WSL C++ 可。n≥7 の全列挙・p_rand 全計算は行わない。
 既知の確定事実（408 個・ρ=1・r_ext=1・F_n・K_n 等）の再発見はしない。
 
-スクリプト: `scripts/round5_b351_followup.py`
-データ: `round5_b351_followup.json`, `round5_b351_b379_witness.json`、
-再利用 `round5_b351_multi.json`, `round4_b371.bin`, `round3_chunk6_cover.json`
+スクリプト: `../scripts/round5_b351_followup.py`
+データ: `../output/round5_b351_followup.json`, `../output/round5_b351_b379_witness.json`、
+再利用 `../output/round5_b351_multi.json`, `../output/round4_b371.bin`, `../output/round3_chunk6_cover.json`
 
 ---
 
 ## B351 [全称・大胆] 追撃
 - 判定: **SUPPORTED（弱化版）**（前回: PARTIAL → 今回: **SUPPORTED（弱化版）**。原命題は INCONCLUSIVE）
 - 今回の範囲: 弱化版「n≤6 の全安全 S と空点 p で k=|S|≥4 なら δ(S,p) ≥ k/2」を
-  `round3_chunk6_cover.json` の min_delta_by_k で全数確認。8 石極大 408 の δ_min=10 も対照。
+  `../output/round3_chunk6_cover.json` の min_delta_by_k で全数確認。8 石極大 408 の δ_min=10 も対照。
 - 証拠:
   | k | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
   |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
@@ -82,7 +84,7 @@
 
 ## B356 [存在] 追撃
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、2 番目 b/k² の減少傾向を再確認）
-- 今回の範囲: `round3_chunk6_cover.json` の max_b_second_by_k を k=2..10 で再集計。
+- 今回の範囲: `../output/round3_chunk6_cover.json` の max_b_second_by_k を k=2..10 で再集計。
 - 証拠: 2 番目 b の最大は k=8:6, k=9:7, k=10:8 と増えるが、b/k² は 0.094 → 0.086 → 0.080 と減少。
   2 点同時の二次被覆（b ≥ c k², c 固定）の無限族は依然 0 件。
   8 石極大 408 では second_b ≤ 5（max_b_hist の隣）で、2 点同時の高被覆は見あたらない。
@@ -113,7 +115,7 @@
 - 判定: **SUPPORTED（弱化版）**（前回: INCONCLUSIVE → 今回: **SUPPORTED（弱化版）**。原命題は INCONCLUSIVE）
 - 今回の範囲: 弱化版「8 石極大では ρ=1 のみ（ρ≥2 は不在）」を 408 の τ 計算で確認。
   15 サンプルで全空点の τ を完全計算し ρ=min τ を確定。
-- 証拠: **15/15 で ρ=1**（ヒストグラム {1: 15}）。既知の `round4_b371.json` auxiliary
+- 証拠: **15/15 で ρ=1**（ヒストグラム {1: 15}）。既知の `../output/round4_b371.json` auxiliary
   `rho_hist={1:408}` と一致。n=6 K=11 の 464 では ρ=2 が 168 件（既知）。
   **8 石極大という族では故障耐性が 1 で頭打ち**。「任意に大きくできる」に使える族ではない。
 - 残った障害: 原命題の無限族（ρ≥3 以上）は n≤8 で 0 件。n≥9 や n=8 の 15 石等は未走査。
@@ -160,7 +162,7 @@
   16/16 が安全かつ極大。原命題「高々 2 個除去して追加」は **0 除去 + 1 追加**で満たす。
   あわせて **s_9 ≤ 9** が確定（B092 の s_9=9 に整合）。
 - 残った障害: なし（存在命題の証人）。r=2（2 除去＋3 追加）は不要。全 16 の D4 軌道分類は未。
-  データ: `round5_b351_b379_witness.json`。
+  データ: `../output/round5_b351_b379_witness.json`。
 
 ## B382 [構造] 追撃
 - 判定: **SUPPORTED（弱化版）**（前回: PARTIAL → 今回: **SUPPORTED（弱化版）**。原命題は PARTIAL）
@@ -244,8 +246,8 @@
 - **B386**: 共通 6 の下限維持、新規 15 石 witness なし
 
 ### 計算スクリプト（追加分）
-- `scripts/round5_b351_followup.py` — 408 の D4 型・τ/ρ・反転 rank・被覆・1-out 2-in・9×9 探索
-- データ: `round5_b351_followup.json`, `round5_b351_b379_witness.json`
+- `../scripts/round5_b351_followup.py` — 408 の D4 型・τ/ρ・反転 rank・被覆・1-out 2-in・9×9 探索
+- データ: `../output/round5_b351_followup.json`, `../output/round5_b351_b379_witness.json`
 
 ### 禁止事項の遵守
 - `round5-batch-b351-b400.md` は編集していない

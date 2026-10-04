@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B227反証: 両者同数のパス権は通常プレイの勝者を変えない
 
 作成: 2026-09-29。**B227 REFUTED（全盤・全局面の一般証明）。**
-原文: [B227](../hypothesis-bank-2026-09-27.md)。
+原文: [B227](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)。
 通常版の局面Sから両プレイヤーが各一回の未使用パス権を持って開始する派生版を扱う。
 これは既存 `round5_b201_core.py` の `job_passwit` が明記した比較条件でもある。
 異なるパス消費履歴を勝手に混ぜた比較とは区別する。
@@ -51,8 +53,8 @@
 新規の再現スクリプトでは相対的な(a,b)を必ず交換する。
 既存ファイルは他担当の履歴として変更せず、この証明はそこで報告された数値に依存しない。
 
-検算: [scripts/round18_local_geometry.py](scripts/round18_local_geometry.py)、
-[round18_local_geometry.json](round18_local_geometry.json)。
+検算: [scripts/round18_local_geometry.py](../scripts/round18_local_geometry.py)、
+[round18_local_geometry.json](../output/round18_local_geometry.json)。
 標準n=1,…,4の全6,126安全局面、両者の権利r=0,1,2、終端パス可/不可の両規約を、
 独立な拡張状態DPで確認した。合計36,756比較が全て通常版のgの零非零と一致した。
 全盤の結論の根拠は第1節の対応戦略であり、有限検算の外挿ではない。

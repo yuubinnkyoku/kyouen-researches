@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 分母11の完全点数: 3剰余類への生成多項式
 
 作成: 2026-09-29。B453の一般上界を具体化し、
@@ -80,12 +82,12 @@ Uを四単数群、g=6+3iとすると
 
 ## 4. 整数検算
 
-[スクリプト](scripts/round12_q11_counts.py) は法11の群と各素数のχを列挙し、
+[スクリプト](../scripts/round12_q11_counts.py) は法11の群と各素数のχを列挙し、
 e=0〜30の31条件について全ガウス整数表現の剰余類を数え、公式と照合する。
 e=0〜4はさらに通常の整数平方根によるノルム解の直接走査とも一致する。
-結果: [round12_q11_counts.json](round12_q11_counts.json)。
+結果: [round12_q11_counts.json](../output/round12_q11_counts.json)。
 
-再現: `python research/verification/scripts/round12_q11_counts.py`
+再現: `python research/experiments/original-claims/scripts/round12_q11_counts.py`
 
 この公式はB455の「一つの剰余類が他の全てを上回る」を復活させない。
 各最大点数は四単数軌道全体、すなわち少なくとも4剰余類で共有される。

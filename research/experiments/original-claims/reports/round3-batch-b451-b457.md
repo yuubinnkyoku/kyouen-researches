@@ -1,15 +1,17 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B451–B457
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §46「有理中心の分母を大きさではなく型で見る」の B451〜B457（7件）。
-スクリプト: `scripts/round3_b451_census.py`（先行ワーカーの実行結果）、`scripts/round3_b451_analysis.py`（**実行失敗**、下記参照）
-データ: `research/verification/round3_b451_census.json`（32 MB、n=4..12 の円センサス）
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §46「有理中心の分母を大きさではなく型で見る」の B451〜B457（7件）。
+スクリプト: `../scripts/round3_b451_census.py`（先行ワーカーの実行結果）、`../scripts/round3_b451_analysis.py`（**実行失敗**、下記参照）
+データ: `research/experiments/original-claims/output/round3_b451_census.json`（32 MB、n=4..12 の円センサス）
 
 ## データ状況の記載（重要）
 
 先行ワーカーは `round3_b451_census.py` を完走させ
-`round3_b451_census.json`（32,769,092 バイト、`all_validations_pass=True`、`failed_validations=[]`、
+`../output/round3_b451_census.json`（32,769,092 バイト、`all_validations_pass=True`、`failed_validations=[]`、
 実行 49.6 秒）を保存した。一方 `round3_b451_analysis.py` は
-`research/verification/round3_b451_analysis_run.log` に残ったとおり
+`research/experiments/original-claims/output/round3_b451_analysis_run.log` に残ったとおり
 
 ```
 AssertionError: ({'M': 8, 'q0': 2, 'alpha': 1, 'beta': 1, 'm': 4, 'r2': Fraction(2, 1), ...}, 0)
@@ -282,7 +284,7 @@ n=12 の q 別円数上位: q=1 3,460 / q=2 9,447 / q=4 3,704 / q=6 3,972 / q=10
 
 ## 補足（再現性・注意）
 
-- 本個票の判定はすべて `research/verification/round3_b451_census.json` の既存データと、
+- 本個票の判定はすべて `research/experiments/original-claims/output/round3_b451_census.json` の既存データと、
   その原始四元組からの整数演算による導出に基づく。**新たな重い計算（n≥13 のセンサス、
   二平方和カタログの拡張）は行っていない。**
 - 復元した完全格子点集合は census.json の盤上点集合を**全 53,466 記録で内包**することを確認し、
@@ -300,8 +302,8 @@ n=12 の q 別円数上位: q=1 3,460 / q=2 9,447 / q=4 3,704 / q=6 3,972 / q=10
 指示「既に書かれた ID は書かない」に従い、**B453〜B457 の個票は二重に書かない**。
 以下は、既存個票と重複しない形で**同じ census.json から独立に再照合した事実の訂正と注記**である。
 
-再照合の方法（`scripts/round3_b451_census.py` は**再実行していない**）:
-`round3_b451_census.json` を python で読み、`rows_q_ge3` ∪ `rows_m_ge5` を
+再照合の方法（`../scripts/round3_b451_census.py` は**再実行していない**）:
+`../output/round3_b451_census.json` を python で読み、`rows_q_ge3` ∪ `rows_m_ge5` を
 `(A,D,E,F,g)` で重複除去して 23,974 個の円を得、`circle_geom`（census 127–149 行、
 **読みのみ**）の定義 `g=gcd(2A,D,E)`, `q=2A/g`, `M=(D²+E²+4AF)/g²` に従って
 `u²+v²=M, u≡−D/g, v≡−E/g (mod q)` の解の個数を 1 円ずつ数え直した。

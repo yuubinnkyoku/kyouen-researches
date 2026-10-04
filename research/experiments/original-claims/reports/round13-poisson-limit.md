@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B478 / B479: 最初の禁止四点数はPoisson極限を持つ
 
-作成: 2026-09-29。原文: [B478〜B480](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-29。原文: [B478〜B480](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **B478: SUPPORTED（一般証明）。B479: REFUTED（同じ尺度で束の確率は0へ）。**
 
@@ -155,7 +157,7 @@ O(n^(−1/4))。固定kモデルでも、s点の包含確率
 
 ## 7. 有限検算と再開点
 
-[round13_asymptotic_checks.py](scripts/round13_asymptotic_checks.py) はn=3,4,5で
+[round13_asymptotic_checks.py](../scripts/round13_asymptotic_checks.py) はn=3,4,5で
 全禁止辺、三種類の共次数、重なり数、G₅を整数列挙し、A₃=10G₅および
 五点安全集合数の厳密恒等式を検査する。
 有限計算は証明の検算であり、Poisson極限の根拠は§2〜§4である。

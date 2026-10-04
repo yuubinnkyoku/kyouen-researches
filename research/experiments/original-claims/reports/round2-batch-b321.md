@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch B321–B350: nimberの穴 / 強制終局長 / 高階残余制約
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §33 (B321–B330), §34 (B331–B340), §35 (B341–B350)
-データ: `night-research/cycle5-grundy-n{2,3,4,5}.json`, `cycle5-grundy-n6-cap14.json`, `research/verification/batch03_cache.pkl`, `batch-02.md`
-新規計算: `scripts/round2_b321_holes.py`, `round2_b324_ceil.py`, `round2_b325_followup.py`, `round2_b331_wft.py`, `round2_b341_res3.py`, `round2_b330_indep.py` → `research/verification/round2_b321.json`
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §33 (B321–B330), §34 (B331–B340), §35 (B341–B350)
+データ: `research/experiments/structural-discovery/output/cycle5-grundy-n{2,3,4,5}.json`, `cycle5-grundy-n6-cap14.json`, `research/experiments/original-claims/output/batch03_cache.pkl`, `../../../log/claim-audit/batch-02.md`
+新規計算: `../scripts/round2_b321_holes.py`, `round2_b324_ceil.py`, `round2_b325_followup.py`, `round2_b331_wft.py`, `round2_b341_res3.py`, `round2_b330_indep.py` → `research/experiments/original-claims/output/round2_b321.json`
 
 確定値の再掲: K_2=3, K_3=5, K_4=7, K_5=9, K_6=11。σ_2=2, σ_3=4, σ_4=2, σ_5=3, σ_6=3（ヒストグラムから再計算し一致）。空盤 g: n=2..6 → 1,1,0,1,1。
 飽和開始層の穴: n=4, k=2 で欠落 {1,4}、n=6, k=3 で欠落 {4}。n=2 (k=2) と n=3 (k=4) では **0 が欠落**（出現は {1} のみ）。
@@ -13,7 +15,7 @@
 
 - 判定: **PARTIAL**
 - 範囲: n=2..6 の飽和開始層 k=σ_n について、欠落値に連続対 (j, j+1) がないかを層ヒストグラムで検査。σ_n の定義 (min{k: M_n(k)=K_n−k}) も再計算し与値と一致。
-- 証拠: 欠落集合は n=2:{0}, n=3:{0}, n=4:{1,4}, n=5:∅, n=6:{4}。連続対は全 n で **0**。n=4 の {1,4} も n=6 の {4} も孤立欠落。`round2_b321.json` → `holes_by_n`。
+- 証拠: 欠落集合は n=2:{0}, n=3:{0}, n=4:{1,4}, n=5:∅, n=6:{4}。連続対は全 n で **0**。n=4 の {1,4} も n=6 の {4} も孤立欠落。`../output/round2_b321.json` → `holes_by_n`。
 - メモ: 穴を持つ盤は n=4,6 のみで、どちらも連続欠落なし。n≥7 の σ 層 (σ_7 未決定) が本当の試金石。全 n なので PARTIAL。
 
 ## B322 [全称・大胆] 飽和開始層で欠ける正のnimberは2の冪だけ
@@ -34,7 +36,7 @@
 
 - 判定: **SUPPORTED**
 - 範囲: n=4,5 の全到達 157,205 局面。K(S)=max 終局サイズ、h=K−|S|、極大拡張サイズの度数分布（点 id 昇順の追加 DP で正確に数え上げ）の Shannon エントロピー。セル (n,k,h,|L|) 内で g=h 群とそれ以外の平均エントロピー比較。
-- 証拠: 両側が非空のセルは n=4 で **25 中 24 が ceil 側が高い** (1 逆)、n=5 で **99 中 93** (6 逆)。代表セル (n=5,k=6,h=2,|L|=7): ceil 平均 0.573 vs other 0.000。(n=4,k=4,h=3,|L|=8): 0.696 vs 0.523。`round2_b321.json` → `ceiling_stats.*.B324`。
+- 証拠: 両側が非空のセルは n=4 で **25 中 24 が ceil 側が高い** (1 逆)、n=5 で **99 中 93** (6 逆)。代表セル (n=5,k=6,h=2,|L|=7): ceil 平均 0.573 vs other 0.000。(n=4,k=4,h=3,|L|=8): 0.696 vs 0.523。`../output/round2_b321.json` → `ceiling_stats.*.B324`。
 - メモ: 統計傾向は強く一貫。逆セルはサンプルの薄い高 h 側に集中。分布の「広さ」だけでなく平坦性まで一致するのは B027 の強化。
 
 ## B325 [存在・大胆] 天井達成局面は |L|≤h+C で作れる
@@ -69,7 +71,7 @@
 
 - 判定: **PARTIAL**
 - 範囲: n=4 の σ 層 (k=2) で欠ける a=1,4 について、「子に 0,…,a−1 がそろうなら a も子に必ずある」を全 120 二石集合で検査。n=5 は欠落なしなので前件が空。
-- 証拠: **a=1**: 前件 (子に 0) が成り立つ 36 局面すべてで子に 1 も存在、違反 0。実際 σ 層の子値パターンに「0 を含むが 1 を含まない」ものは存在しない。**a=4**: 子に 0,1,2,3 がそろう 8 局面すべてで子に 4 も存在、違反 0。`round2_b321.json` → `B329.4`。
+- 証拠: **a=1**: 前件 (子に 0) が成り立つ 36 局面すべてで子に 1 も存在、違反 0。実際 σ 層の子値パターンに「0 を含むが 1 を含まない」ものは存在しない。**a=4**: 子に 0,1,2,3 がそろう 8 局面すべてで子に 4 も存在、違反 0。`../output/round2_b321.json` → `B329.4`。
 - メモ: mex 恒等式そのものは自明なので数えない。ここでの成果は「σ 層では値集合が必ずこの必須対を満たす」という**観測された幾何的制約**。なぜ 0 が子に出る二石は必ず 1 の子も持つのか、という幾何的証明は未作成。n=6 の σ 層 (欠落 {4}) は per-position g が必要で未検査。
 
 ## B330 [存在] 同じ残り最大・最小手数でnimberが任意に離れる
@@ -200,7 +202,7 @@
 - 判定: **NOT-CHECKED**
 - 範囲: (なし)
 - 証拠: (なし)
-- メモ: n=5 の g_2pt≠g_full 局面 (residual_stats で 171+ 件) を、被覆率 (3/4 点残余の和集合 / |L|) と件数で層別すればよい。既存 `batch04_graph.json` の b066 (3 点制約件数は err 側が多く、2 点共有率は低い) と接続可能。
+- メモ: n=5 の g_2pt≠g_full 局面 (residual_stats で 171+ 件) を、被覆率 (3/4 点残余の和集合 / |L|) と件数で層別すればよい。既存 `../output/batch04_graph.json` の b066 (3 点制約件数は err 側が多く、2 点共有率は低い) と接続可能。
 
 ## B348 [統計] 高階制約がつなぐ二点競合成分の数が重要
 
@@ -250,4 +252,4 @@
 - n=4,5 の全到達列挙+grundy+WFT/T* は Python で 2–4 分/盤。n=6 は 5.08M 局面で本バッチ外。
 - 残余ゲーム厳密解は |L|≤14 に制限し 2^{|L|} DP。`batch03_cache.pkl` の R(S) を使用。
 - 極大拡張サイズ分布は点 id 昇順追加 DP で各 S につき一度だけ数え上げ (多重経路なし)。
-- 出力 `round2_b321.json` に holes / ceiling / wft / residual / independent_checks を格納。
+- 出力 `../output/round2_b321.json` に holes / ceiling / wft / residual / independent_checks を格納。

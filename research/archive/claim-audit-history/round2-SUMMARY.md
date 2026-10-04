@@ -1,8 +1,10 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 仮説バンク検証総括 — B301〜B600（第2回）
 
 作成: 2026-09-27 / 手法: `PROTOCOL.md` に従う11バッチ並列検証（小盤厳密計算・既存データ照合・反例/証人探索）
-対象原文: `research/hypothesis-bank-round2-2026-09-27.md`
-個票: `round2-batch-b301.md` 〜 `round2-batch-b591.md`
+対象原文: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md`
+個票: `../../experiments/original-claims/reports/round2-batch-b301.md` 〜 `../../experiments/original-claims/reports/round2-batch-b591.md`
 
 ## 集計
 
@@ -125,5 +127,5 @@
 有理証明書を保存した。よって分数最適値は20.4、整数最適値は
 `ceil(20.4)=21` と上界21の一致から **21**。結果は
 B431 SUPPORTED / B432 REFUTED / B433 SUPPORTED / B434 REFUTED。
-証拠: `round2_b431_lp_exact.json`、検証器
-`scripts/round2_b431_lp_exact.py`。
+証拠: `../../experiments/original-claims/output/round2_b431_lp_exact.json`、検証器
+`../../experiments/original-claims/scripts/round2_b431_lp_exact.py`。

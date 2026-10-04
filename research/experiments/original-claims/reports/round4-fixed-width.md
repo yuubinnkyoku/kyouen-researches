@@ -1,15 +1,17 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 固定幅長方形盤の終局手数固定定理と、14仮説の検証
 
 作成: 2026-09-27。担当チャット: `01a0e161-14c5-78f0-95c6-a684535bf209`。
 
-対象原文: [第1回バンク](../hypothesis-bank-2026-09-27.md)の B211、B212、B213、B215、B216、B219、B220、および[第2回バンク](../hypothesis-bank-round2-2026-09-27.md)の B541、B542、B544、B546、B550、B555、B556。
+対象原文: [第1回バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)の B211、B212、B213、B215、B216、B219、B220、および[第2回バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)の B541、B542、B544、B546、B550、B555、B556。
 
 今回の主結果は、有限計算の外挿ではなく、すべての固定幅を対象とする短い証明である。
 二行盤について既知だった「長さ9以上では全極大配置が6石」を一般の幅へ拡張する。
 既知の二行盤の結果自体を新発見とは数えない。
 
-再現コード: [scripts/round4_fixed_width.py](scripts/round4_fixed_width.py)。
-実行結果: [round4_fixed_width.json](round4_fixed_width.json)。
+再現コード: [scripts/round4_fixed_width.py](../scripts/round4_fixed_width.py)。
+実行結果: [round4_fixed_width.json](../output/round4_fixed_width.json)。
 他の担当者の個票・集計は変更せず、相違点をこの文書に記す。
 
 ## 結論一覧
@@ -140,7 +142,7 @@ r>0では合法手が存在し、どの子も残り手数r−1である。
 ### B211 — 二行盤の空盤nimberの最終周期性
 
 - 判定: **SUPPORTED**。
-- 前回: [batch-09.md](batch-09.md)ではm≤10の観測から周期1を予想。
+- 前回: [batch-09.md](../../../log/claim-audit/batch-09.md)ではm≤10の観測から周期1を予想。
 - 今回: 定理のw=2によりm≥9では空盤g=0。
   後述の独立DPでm=6,7,8もg=0、m=5はg=1。
 - 結論: **全m≥6でg=0**。最終最小周期は1、その定数列の最小開始長は6。
@@ -227,7 +229,7 @@ r>0では合法手が存在し、どの子も残り手数r−1である。
 再現:
 
 ```powershell
-python research/verification/scripts/round4_fixed_width.py
+python research/experiments/original-claims/scripts/round4_fixed_width.py
 ```
 
 ### B541 — 全m≥6で反対行へ勝ち応答できる

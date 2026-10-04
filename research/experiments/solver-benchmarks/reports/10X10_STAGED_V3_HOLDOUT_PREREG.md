@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Preregistration: Staged Probe V3 Holdout (10k → top-11 → 1M)
 
 Date: 2026-09-12
@@ -53,7 +55,7 @@ K will not be re-tuned on the same parents.
 | shrink / load (exact) | 0 / 90 |
 | exact budget | 0 (unbounded) |
 | fresh process | yes, one solver process per child, no memo sharing |
-| solver | `tmp-kb/probe_holdout_native` |
+| solver | `research/experiments/solver-benchmarks/bin/probe_holdout_native` |
 | ranking key | probe LOSS first; unresolved `memo_used` asc; probe WIN last; move asc |
 | tie-break | 4th-move board index ascending (never changed mid-run) |
 

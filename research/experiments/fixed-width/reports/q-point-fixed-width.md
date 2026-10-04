@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # q 点版共円ゲームの固定幅定理
 
 作成: 2026-10-01。再現コードは
-[`verification/scripts/q_point_fixed_width.py`](verification/scripts/q_point_fixed_width.py)、
-全出力は [`verification/q_point_fixed_width.json`](verification/q_point_fixed_width.json) である。
+[`verification/scripts/q_point_fixed_width.py`](../scripts/q_point_fixed_width.py)、
+全出力は [`verification/q_point_fixed_width.json`](../output/q_point_fixed_width.json) である。
 
 ## 0. 結論
 
@@ -528,7 +530,7 @@ m-a\ge m-4
 本の target edge が必要である。
 
 検証器
-[`verification/scripts/q6_w3_exact_threshold.cpp`](verification/scripts/q6_w3_exact_threshold.cpp)
+[`verification/scripts/q6_w3_exact_threshold.cpp`](../scripts/q6_w3_exact_threshold.cpp)
 は各 \(m=9,\ldots,20\) について、全ての ordered な5点集合対 \((B',C')\) を完全列挙する。
 二点和表現数を \(r_B(s),r_C(s)\) とすると実際の target edge 数は
 \[
@@ -554,7 +556,7 @@ m-a\ge m-4
 | 20 | 16 | 40 | 4 | 2 |
 
 完全出力は
-[`verification/q6_w3_exact_threshold.json`](verification/q6_w3_exact_threshold.json)
+[`verification/q6_w3_exact_threshold.json`](../output/q6_w3_exact_threshold.json)
 に保存した。従って \(m=9..20\) に不足行を持つ極大安全集合は存在しない。
 前節の全称証明が \(m\ge21\) を覆い、3×8 の明示的極大14石例が下界を与えるので、
 
@@ -646,7 +648,7 @@ g(S)=(12-|S|)\bmod2
 詳細・証明境界・再現方法は
 [`q5-w3-stabilization.md`](q5-w3-stabilization.md)、
 検証器は
-[`verification/scripts/q5_w3_stabilization.cpp`](verification/scripts/q5_w3_stabilization.cpp)
+[`verification/scripts/q5_w3_stabilization.cpp`](../scripts/q5_w3_stabilization.cpp)
 を参照。
 
 ## 9. 標準格子の算術改良：q=2w 境界は w≥5 で全長強解決
@@ -726,6 +728,6 @@ g(S)=\left(w\min(m,q-1)-|S|\right)\bmod2
 完全な \(U_w\) の定義、mod 9 証明、q と w の三領域分類は
 [q2w-boundary-structure.md](q2w-boundary-structure.md)、
 独立検証は
-[verification/scripts/q2w_boundary_structure.py](verification/scripts/q2w_boundary_structure.py)
+[verification/scripts/q2w_boundary_structure.py](../scripts/q2w_boundary_structure.py)
 を参照。
 

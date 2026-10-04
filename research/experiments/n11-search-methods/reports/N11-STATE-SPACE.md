@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 > **訂正・廃止注記（2026-10-03）**
 > 以下は、121点を1ワード（64 bit）で扱った旧実装に由来する歴史的な測定記録です。
-> **この文書の「K₁₁=11」は誤りです。** [round57の安全19石構成](round57-nineteen-stone-ten-board-bound.md)を
+> **この文書の「K₁₁=11」は誤りです。** [round57の安全19石構成](../../original-claims/reports/round57-nineteen-stone-ten-board-bound.md)を
 > 10×10から11×11へそのまま埋め込めるので、少なくとも **K₁₁≥19** が成立します。
-> さらに[今回の明示21石構成](../saturation-20261003-extra.md)により **K₁₁≥21** を確認しています。
+> さらに[今回の明示21石構成](../../saturation/reports/saturation-20261003-extra.md)により **K₁₁≥21** を確認しています。
 > 後半に残る「K=11は正しい」という記述も撤回します。
 > 安全集合総数204,424,228、各層の大きさ、辺数、メモリ・計算量の外挿と
 > 「完全勝敗探索が現実的」とする結論は、旧1ワード列挙に依存するため採用しません。
@@ -12,7 +14,7 @@
 
 # n=11 (11x11) 状態空間の完全測定
 
-作成: 2026-09-28。`scripts/n11_probe.cpp`（1 ワード版）で実測。
+作成: 2026-09-28。`../scripts/n11_probe.cpp`（1 ワード版）で実測。
 
 ## 結果
 
@@ -33,7 +35,7 @@
 | 項目 | 値 |
 |---|---|
 | 点数 V | 121 |
-| **禁止4点組 F** | **95,670** ← 既知値（`research/exploration/fact_collinear_run_formula.json` の n=11 欄、`fact_kmin_n11_safe.json`）と**一致** |
+| **禁止4点組 F** | **95,670** ← 既知値（`research/experiments/fact-discovery/output/fact_collinear_run_formula.json` の n=11 欄、`fact_kmin_n11_safe.json`）と**一致** |
 | **最大安全サイズ K_11** | **11** |
 | 安全集合の総数 | **204,424,228**（2 億 440 万） |
 | 辺の総数 | 約 1.86 × 10⁹（level 8 の 7.8×10⁷ から概算） |
@@ -125,9 +127,9 @@ k=4→5 の 7.53 倍が最後の「まだ増えうる」成長率で、
 
 ## 参照
 
-- スクリプト: `research/verification/scripts/n11_probe.cpp`
-- 実行スクリプト: `research/verification/scripts/n11_probe.sh`
-- 投影スクリプト: `research/verification/scripts/n11_project.py`
+- スクリプト: `research/experiments/n11-search-methods/scripts/n11_probe.cpp`
+- 実行スクリプト: `research/experiments/n11-search-methods/scripts/n11_probe.sh`
+- 投影スクリプト: `research/experiments/n11-search-methods/scripts/n11_project.py`
 - ログ: `/tmp/n11_probe.log`（WSL 内、再起動で消失）
 - spill: `/tmp/n11/level_*.occ`（**WSL 再起動で消失**）
 

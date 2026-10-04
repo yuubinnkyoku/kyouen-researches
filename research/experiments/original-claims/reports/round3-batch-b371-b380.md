@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B371-B380（担当7件: B371, B372, B373, B374, B375, B378, B380）
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §38「8石極大の形から次の構成へ — B371〜B380」のうち
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §38「8石極大の形から次の構成へ — B371〜B380」のうち
 **B371 / B372 / B373 / B374 / B375 / B378 / B380** の7件（B376, B377, B379 は他担当）。
-スクリプト（読むだけ・**実行していない**）: `research/verification/scripts/round3_b371_analysis.py`
-データ: 本バッチは**新規計算ゼロ**。既存の `research/verification/round2_b351.json`、
-`research/verification/batch05_compute.json`、`research/verification/data/s8_exact.json`、
-`night-research/cycle6-maxsafeset-n8-15.json` / `-16.json` から判定した。
+スクリプト（読むだけ・**実行していない**）: `research/experiments/original-claims/scripts/round3_b371_analysis.py`
+データ: 本バッチは**新規計算ゼロ**。既存の `research/experiments/original-claims/output/round2_b351.json`、
+`research/experiments/original-claims/output/batch05_compute.json`、`research/experiments/original-claims/output/data/s8_exact.json`、
+`research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json` / `-16.json` から判定した。
 
 ## 0. このチャンクの結論が全7件で止まる理由（先に読むこと）
 
@@ -19,9 +21,9 @@
 `print("no mask file found; run round3_b371_enum first"); sys.exit(2)` で**即座に終了**する。
 実際、
 
-- `research/verification/data/` には `maximal_n2..n6.bin` しか無く、**`n8_k8.masks.bin` は存在しない**（`round3_b371_analysis.py` 215–217行が参照するパス）。
+- `research/experiments/original-claims/output/data/` には `maximal_n2..n6.bin` しか無く、**`n8_k8.masks.bin` は存在しない**（`round3_b371_analysis.py` 215–217行が参照するパス）。
 - `maximal8.go` / `round3_b371_enum` はリポジトリ内に**存在しない**（`*.go` ファイルの全走査でヒット0）。
-- `research/verification/round3_b371.json`（出力先）も**存在しない**。
+- `research/experiments/original-claims/output/round3_b371.json`（出力先）も**存在しない**。
 
 つまり**先行ワーカーは列挙段階（`round3_b371_enum`）で止まっており**、
 `round3_b371_analysis.py` は一度も实质的な入力を受け取っていない。
@@ -45,13 +47,13 @@
 
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。ただし「$n$ の境界のtightさ」が1段上がった）
 - 前回の一手: 「円のみで 56 空点を覆う 8 石は構成が難しいという趣旨と整合。**全列挙か、無共線 8 石極大の SAT 化が次**。」（`round2-batch-b351.md:201`）
-- 今回の範囲: 既存の 8×8 8石極大 **1 集合のみ**（`round2_b351.json` の `n8_witness_light`, `S=[0,1,6,20,24,32,34,60]`）。新規列挙・新規計算は**していない**。全称の主張は集合族全体についてのものであるため、**1 証人の確認は全称の反証にも証明にもならない**。
+- 今回の範囲: 既存の 8×8 8石極大 **1 集合のみ**（`../output/round2_b351.json` の `n8_witness_light`, `S=[0,1,6,20,24,32,34,60]`）。新規列挙・新規計算は**していない**。全称の主張は集合族全体についてのものであるため、**1 証人の確認は全称の反証にも証明にもならない**。
 - 証拠:
-  - `round2_b351.json` `n8_witness_light` には `n_collinear_triples: 3`、該当三つ組は `[0,1,6]` / `[0,24,32]` / `[6,20,34]`。3本とも**真に共線**（`round2-batch-b351.md:189` と同値）。
+  - `../output/round2_b351.json` `n8_witness_light` には `n_collinear_triples: 3`、該当三つ組は `[0,1,6]` / `[0,24,32]` / `[6,20,34]`。3本とも**真に共線**（`round2-batch-b351.md:189` と同値）。
   - 新しく読み取った数値: 同ファイルの `n8_8stone` ブロック（4575行〜）が `delta: 16, b: 4, p: 3, n_sets: 1`、`n_delta_zero: 0`、`n_delta_le3_kge6: 0` を記録。さらに `b360_most_inefficient` に `{"k":8, "n_empty":56, "n_forbidden":56, "sum_b":88, "max_b":4}`。
   - 60〜61行の `high_b_mult_max {"0.05":3, "0.1":0, "0.2":0, "0.3":0}` と同じ行4561-4563の `sum_b: 255 / max_b: 10`（n=7 K=14 側）は別ブロックであり混用しない。
 - 判定の根拠: 命題の趣旨は「円のみで 56 空点を覆う 8石構成は存在しない」。**既知の唯一の8石極大は円のみ型ではない**ことが再確認されただけで、无共線8石極大の存在は**依然として未否定**。1証人の確認は前回と実質同一の射程。
-- 残った障害: **8石極大の全列挙が不可能**。(i) 全8点の部分集合は C(64,8) = **4,426,165,368 ≈ 4.43e9** 通りで、pure-Python で `itertools.combinations` を回すだけで日〜週単位。(ii) 枝刈りなしの素朴バックトラックは `round2_b351_n8.py:266-298` の `backtrack_8_maximal` と同じく 64 点深度8の DFS となり、`limit_nodes=3_000_000`（同357行）で**打ち切られ、8石極大 0 件**しか得られなかった（`n8_backtrack_found` は `round2_b351.json` に**キーごと存在しない**＝実行が上書き前に中断した）。(iii) 生存的关键枝刈り `"n8_k8.masks.bin"` はリポジトリ内に存在しない。よって全称命題は閉じられない。
+- 残った障害: **8石極大の全列挙が不可能**。(i) 全8点の部分集合は C(64,8) = **4,426,165,368 ≈ 4.43e9** 通りで、pure-Python で `itertools.combinations` を回すだけで日〜週単位。(ii) 枝刈りなしの素朴バックトラックは `round2_b351_n8.py:266-298` の `backtrack_8_maximal` と同じく 64 点深度8の DFS となり、`limit_nodes=3_000_000`（同357行）で**打ち切られ、8石極大 0 件**しか得られなかった（`n8_backtrack_found` は `../output/round2_b351.json` に**キーごと存在しない**＝実行が上書き前に中断した）。(iii) 生存的关键枝刈り `"n8_k8.masks.bin"` はリポジトリ内に存在しない。よって全称命題は閉じられない。
 
 ---
 
@@ -90,7 +92,7 @@
 - 今回の範囲: 既存の 8石極大 1 集合の `n_corners` を読むのみ。**角なしの証人探索は行っていない**（新規計算ゼロ方針）。
 - 証拠:
   - `n8_witness_light.corners_used: [0]`, `n_corners: 1`（点 0 = 座標 (0,0) を使用）。したがって**既知の唯一の証人は反証証拠にならない**。
-  - `round2_b351.json` の `n8_claim_witness_only` が `B374_no_corner: false` を記録。`round2_b351_n8_light.py:210-217`（`round2_b351_n8.py:383-394` の `claim_summary` は実行されずキーごと欠落）でも単一証人の確認に過ぎない。
+  - `../output/round2_b351.json` の `n8_claim_witness_only` が `B374_no_corner: false` を記録。`round2_b351_n8_light.py:210-217`（`round2_b351_n8.py:383-394` の `claim_summary` は実行されずキーごと欠落）でも単一証人の確認に過ぎない。
   - **今回得られた唯一の新規情報**: 「角を1つも使わない」= 大小4軌道（0,0),(7,0),(0,7),(7,7) 上の点を1つも置かない、という**具体的な必要条件**。8×8 の D4 軌道は10個で、この禁止はそのうち1軌道（大きさ4）の占有を 0 に固定する制約になる。盤面は 2,016 通り（4×6×7×8）の点対 **2016 個**の禁止から逃れる必要がある。
 - 判定の根拠: 存在命題。**証人が1個も見つかっていない**ため反証にも立証にもならない。ラベルは前回と同一で正しかった。
   - 残った障害: 前回と状況が変わらない。「リポジトリ内に8石極大リストが存在しない」ため、角なし8石極大を探す探索の母集合が渡せない。判定コード `round3_b371_analysis.py:249-250` の `b374 = [a for a in analyses if a["n_corners"] == 0]` は**全列挙済み mask リストが渡されることを要求する**。これが無い。

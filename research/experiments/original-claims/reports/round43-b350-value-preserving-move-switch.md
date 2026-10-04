@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B350: 値保存・勝ち手変更の最小合法点数5、最小盤4×4
 
 作成: 2026-09-30。**B350原文SUPPORTED。**
@@ -68,10 +70,10 @@ m≤4のそうした全族を、二点辺を持たない族も含めて完全列
 
 ## 証明書と再現
 
-[検算器](scripts/round43_b350_minimum.py)は整数行列式で新たに幾何を作り、両証人の
+[検算器](../scripts/round43_b350_minimum.py)は整数行列式で新たに幾何を作り、両証人の
 全32/256拡張を極小残余族、四点組、曲線占有数、直接行列式で安全性照合した。
 全安全拡張の完全版mexは、残余再帰と曲線再帰で一致。
 両版の全安全mex、子一覧、勝ち手、抽象全数、小盤全数、SHA-256を
-[証明書](round43_b350_verified.json)に保存した。
+[証明書](../output/round43_b350_verified.json)に保存した。
 
-    python research/verification/scripts/round43_b350_minimum.py
+    python research/experiments/original-claims/scripts/round43_b350_minimum.py

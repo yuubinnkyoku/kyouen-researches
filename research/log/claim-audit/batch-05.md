@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 05: B081-B100
 
 対象: 最大安全サイズの成長と構成（B081-B090）、最小極大サイズと飽和の効率（B091-B100）。
@@ -33,7 +35,7 @@
 | 5 | 5 | [2,6,7,8,22] | 同上 / F-S |
 | 6 | 6 | [1,2,18,19,23,31] | 同上 / F-V |
 | 7 | 7 | [1,9,22,23,27,44,45] | F-BA（k=4,5,6 完全非存在） |
-| 8 | **8** | **8 石: [0,1,6,20,24,32,34,60]** | 後日 k=7 を117,206,125 nodesで完全排除し s_8=8 を確定（research/verification/data/s8_exact.json） |
+| 8 | **8** | **8 石: [0,1,6,20,24,32,34,60]** | 後日 k=7 を117,206,125 nodesで完全排除し s_8=8 を確定（research/experiments/original-claims/output/data/s8_exact.json） |
 | 9 | **(?, 11]** | 乱贪欲 11 石 [1,4,22,29,36,40,56,62,64,70,71] | F-AS。k=9 は 118M nodes 未完・未発見 |
 | 10 | **[7, 11]** | 11 石 [11,20,23,32,43,50,59,63,68,81,98] | F-BE（k=6 完全非存在）+ F-AK。サイズ 10 は F-AZ で無効化後も未再発見（F-BC 12,000 試行で ≤10 は 0） |
 
@@ -54,14 +56,14 @@ F-Y により「最適対局の終局サイズ」は極大スペクトルの真�
 
 ### 本バッチの追加計算
 
-1. `research/verification/scripts/batch05_inventory.py` — 証人 7 例の安全・極大性を独立再検証（すべて safe=true, maximal=true）。三つ組の共線/非共線分解。
+1. `research/experiments/original-claims/scripts/batch05_inventory.py` — 証人 7 例の安全・極大性を独立再検証（すべて safe=true, maximal=true）。三つ組の共線/非共線分解。
 2. `fact_kmin_general.exe 8 8 8 60` — n=8, k=8 で **26,287,374 nodes で 8 石極大を発見** `[0,1,6,20,24,32,34,60]`。
 3. `fact_kmin_general.exe 9 9 9 60` — n=9, k=9 は 117,814,299 nodes / 60s で未発見・未完。
 4. `fact_kmin_general.exe 8 7 8 45` — n=8, k=7 は 18,999,547 nodes / 45s で未完（過去 138M/309M も未完）。
 5. 乱贪欲（seed 1, 4000 試行）で n=8 の最小極大 9 石 `[12,15,16,21,30,32,36,38,53]` を独立に再発見。
-6. `research/verification/scripts/b087_extend.exe` — n=6 最大 464 集合 × 4 平行移動 = 1856 埋め込みを 7×7 へ伸長。16 個は K_7=14 に到達（n=6 は B087 の反例にならない）。
-7. `research/verification/scripts/b087_extend_n7.exe` — n=7 最大 16 集合 × 4 平行移動 = 64 埋め込みを 8×8 へ。**追加可能な点は 0/64 すべて**。n=7 が B087 の証人。
-8. `night-research/maxsafe_enum.exe count 8 15` は 90s で未完（n=8 最大集合の全数カウントは数分〜数十分級）。n=8 K=16 UNSAT は既存ログで確定扱い。
+6. `research/experiments/original-claims/scripts/b087_extend.exe` — n=6 最大 464 集合 × 4 平行移動 = 1856 埋め込みを 7×7 へ伸長。16 個は K_7=14 に到達（n=6 は B087 の反例にならない）。
+7. `research/experiments/original-claims/scripts/b087_extend_n7.exe` — n=7 最大 16 集合 × 4 平行移動 = 64 埋め込みを 8×8 へ。**追加可能な点は 0/64 すべて**。n=7 が B087 の証人。
+8. `research/experiments/structural-discovery/output/maxsafe_enum.exe count 8 15` は 90s で未完（n=8 最大集合の全数カウントは数分〜数十分級）。n=8 K=16 UNSAT は既存ログで確定扱い。
 
 ---
 
@@ -86,7 +88,7 @@ F-Y により「最適対局の終局サイズ」は極大スペクトルの真�
 ## B084 [全称・大胆] 2nからのずれは有界
 - 判定: **INCONCLUSIVE**
 - 範囲: n=1..9 で |K_n-2n| ≤ 1（n=7,9 で 0）。C=1 が現時点で全点を覆う。
-- 証拠: K_n 表の K_n-2n 列。`batch05_inventory.json` の max_observed_abs_K_minus_2n = 1。
+- 証拠: K_n 表の K_n-2n 列。`../../experiments/original-claims/output/batch05_inventory.json` の max_observed_abs_K_minus_2n = 1。
 - メモ: とても強い整合。しかし全称なので n→∞ の証明は不可。B085 と排他的（両立しない）。
 
 ## B085 [存在] 2nを任意に大きく上回る盤がある
@@ -98,13 +100,13 @@ F-Y により「最適対局の終局サイズ」は極大スペクトルの真�
 ## B086 [全称・大胆] 一段拡大による増分は高々3
 - 判定: **SUPPORTED**
 - 範囲: 全既知の連続対 n=1..9。増分は 2,2,2,2,2,3,1,3。最大 3（n=6→7 と n=8→9）。
-- 証拠: K_n 表の Δ 列。`batch05_inventory.json` max_observed_delta = 3。
+- 証拠: K_n 表の Δ 列。`../../experiments/original-claims/output/batch05_inventory.json` max_observed_delta = 3。
 - メモ: 単調性（Δ≥0）は定理だが、Δ≤3 は経験則。n=7→8 の +1 と n=6→7 の +3 が同居するので「常に 2」などより弱い主張として自然。全称なので範囲外は未証明。
 
 ## B087 [存在] 既存最大配置に外周を足すだけでは次の最大へ届かない
 - 判定: **SUPPORTED**
 - 範囲: n=6→7 と n=7→8 の全最大配置 × 全 4 平行移動埋め込みについて、伸長先の最大サイズを計算。
-- 証拠: **n=7 が証人。** `b087_extend_n7.exe` の結果、maxsafe_n7_K14.bin の 16 集合 × 4 移動 = 64 埋め込みすべてで、8×8 上に**加えられる点が 0 個**（add_count_hist {"0": 64}）。つまり 7×7 最大配置は 8×8 の最大 15 石へ 1 石も足せない。対照的に n=6→7 では 1856 埋め込み中 16 が K_7=14 に到達（reach_hist {11:1016, 12:760, 13:64, 14:16}）。出力: `research/verification/batch05_compute.json`、実装: `research/verification/scripts/b087_extend*.cpp`。
+- 証拠: **n=7 が証人。** `b087_extend_n7.exe` の結果、maxsafe_n7_K14.bin の 16 集合 × 4 移動 = 64 埋め込みすべてで、8×8 上に**加えられる点が 0 個**（add_count_hist {"0": 64}）。つまり 7×7 最大配置は 8×8 の最大 15 石へ 1 石も足せない。対照的に n=6→7 では 1856 埋め込み中 16 が K_7=14 に到達（reach_hist {11:1016, 12:760, 13:64, 14:16}）。出力: `research/experiments/original-claims/output/batch05_compute.json`、実装: `research/experiments/original-claims/scripts/b087_extend*.cpp`。
 - メモ: 「外周を足すだけ」では n=7 最大配置は完全に詰む。K_8=15 は n=7 結晶から到達不能で、別構造の 15 石（cycle6-maxsafeset-n8-15.json の witness）を使う必要がある。CYCLE14H の「n=8 では (2,2) も中心ブロックも自由」と整合。
 
 ## B088 [構造] 2n-O(1)石の安全配置を無限族で作れる
@@ -128,7 +130,7 @@ F-Y により「最適対局の終局サイズ」は極大スペクトルの真�
 ## B091 [全称] 8×8には8石の極大安全配置がある
 - 判定: **SUPPORTED**
 - 範囲: 8石極大の存在に加え、後日の完全探索で7石極大の非存在まで確定し、**s_8=8**。
-- 証拠: 8石極大 `[0,1,6,20,24,32,34,60]` を再発見・独立検証。さらに `scripts/analysis/fact_kmin_cover_bound.cpp` により k=7 を **117,206,125 nodesで完全非存在**と確認。生ログは `research/verification/data/s8_exact.json`。
+- 証拠: 8石極大 `[0,1,6,20,24,32,34,60]` を再発見・独立検証。さらに `scripts/analysis/fact_kmin_cover_bound.cpp` により k=7 を **117,206,125 nodesで完全非存在**と確認。生ログは `research/experiments/original-claims/output/data/s8_exact.json`。
 - メモ: 本バッチ初回時点ではk=7探索が未完だったためPARTIALだったが、その後の追補結果でSUPPORTEDへ更新。
 
 ## B092 [全称] 9×9の最小極大は9石
@@ -176,7 +178,7 @@ F-Y により「最適対局の終局サイズ」は極大スペクトルの真�
 ## B099 [統計] 最小極大配置では長い直線と豊富な円を併用する
 - 判定: **PARTIAL**
 - 範囲: 既知の最小極大・近傍証人 7 例について、三つ組の共線/非共線を分解。全例で共線三つ組が 2–5 個、非共線が大多数（例: n7_s7 は 35 三つ組中 3 共線、n10_s11 は 165 中 5）。
-- 証拠: `batch05_inventory.json` の witnesses（collinear_triples / noncollinear_triples）。n5_s5 は 10 中 2、n6_s6 は 20 中 2、n8 の 8 石新証人は 56 中 3。
+- 証拠: `../../experiments/original-claims/output/batch05_inventory.json` の witnesses（collinear_triples / noncollinear_triples）。n5_s5 は 10 中 2、n6_s6 は 20 中 2、n8 の 8 石新証人は 56 中 3。
 - メモ: 「併用」の弱い支持（どちらも 0 ではない）だが、「豊富な円」は未測定（非共線三つ組＝共円三つ組ではない。補完数 0 の三つ組は円に属さない）。共線/共円どちらのブロックで空点を塞いでいるかの帰属分析が次の一手。棒状配置（F-V / F-AU 系）は直線偏重に見える緊張あり。
 
 ## B100 [全称・大胆] 極大サイズのスペクトルは区間

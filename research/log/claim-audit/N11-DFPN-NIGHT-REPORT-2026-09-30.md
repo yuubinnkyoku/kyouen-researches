@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 朝の報告（2026-09-30 夜勤）
 
 ## 11×11: **UNKNOWN**
@@ -68,7 +70,7 @@ resume する価値が高い」）に対する明確な否定的答えである�
 
 ## 4. s5 exact 単独 benchmark
 
-`N11-DFPN-S5-BENCH.md`。23 unique s5 root、各局面 cold、memo 2^22。
+`../../experiments/n11-search-methods/reports/N11-DFPN-S5-BENCH.md`。23 unique s5 root、各局面 cold、memo 2^22。
 
 | budget | WIN | LOSS | UNKNOWN |
 |---:|---:|---:|---:|
@@ -82,7 +84,7 @@ resume する価値が高い」）に対する明確な否定的答えである�
 **10M なら s5 全 23 件が閉じる。** node 数は最小 130,540、
 最大 5,677,449。WIN と LOSS はほぼ半々。
 
-s6 も同じ方法で測定（`N11-DFPN-CENTER20-ADAPTIVE.md` 参照）:
+s6 も同じ方法で測定（`../../experiments/n11-search-methods/reports/N11-DFPN-CENTER20-ADAPTIVE.md` 参照）:
 200k で 36/45、1M で 43/45 が WIN、**LOSS は 0**。
 s6 は s5 より桁違いに安い（最小 2,143 nodes）。
 
@@ -103,7 +105,7 @@ solved を書き込むため、**前の row と重なる局面が僅かな node 
 
 ## 5. adaptive budget の有無と効果
 
-`N11-DFPN-L72-ADAPTIVE.md`。v=60、60 s、memo 2^24、逐次実行。
+`../../experiments/n11-search-methods/reports/N11-DFPN-L72-ADAPTIVE.md`。v=60、60 s、memo 2^24、逐次実行。
 
 | arm | root_pn | root_dn | dfpn exp | exact calls | exact nodes | s5 (c/w/l/a) |
 |---|---:|---:|---:|---:|---:|---|
@@ -151,7 +153,7 @@ L44 での「差がない」という過去の観測は、今回の s5 固有の
 
 ## 8. central 20 replies の変化
 
-`N11-DFPN-CENTER20-ADAPTIVE.md`。60 s/root、memo 2^26 shared TT、L72、
+`../../experiments/n11-search-methods/reports/N11-DFPN-CENTER20-ADAPTIVE.md`。60 s/root、memo 2^26 shared TT、L72、
 s5:5M + s6:200k、20 分。
 
 - **WIN 0 / LOSS 0 / TIMEOUT 20、MISSING 0**

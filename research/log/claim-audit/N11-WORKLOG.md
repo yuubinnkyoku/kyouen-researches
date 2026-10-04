@@ -1,9 +1,11 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=11 (11x11) 勝敗探索 — 作業ログ
 
 > ## ⚠ 訂正（2026-09-29）
 >
 > **勝敗は未確定。** 初版の「先手必勝」は撤回しました。
-> 詳細は [`N11-RESULT.md`](N11-RESULT.md) の訂正節を参照。
+> 詳細は [`N11-RESULT.md`](../../experiments/n11-search-methods/reports/N11-RESULT.md) の訂正節を参照。
 >
 > 撤回理由: 層5で打ち切られた DP の出力を「層1が全部Pだから先手勝ち」と
 > 読み違えました。層5には未計算の合法手が 2,439,393,194 個あり、
@@ -81,8 +83,8 @@
 
 ## 参照
 
-- `N11-STATE-SPACE.md` — 状態空間の測定
-- `N11-VERDICT.md` — 現状と結論
-- `N11-PIPELINE.md` — spill パイプラインの設計
+- `../../experiments/n11-search-methods/reports/N11-STATE-SPACE.md` — 状態空間の測定
+- `../../experiments/n11-search-methods/reports/N11-VERDICT.md` — 現状と結論
+- `../../experiments/n11-search-methods/reports/N11-PIPELINE.md` — spill パイプラインの設計
 - `N11-D4.md` — D4 対称版の進捗（走行中）
 - ログ: `/tmp/n11_solve.log`, `/tmp/n11_121.log`, `/tmp/pipe_x.log`（WSL 内、再起動で消失）

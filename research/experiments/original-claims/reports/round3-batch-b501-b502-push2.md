@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3 (push2): B501–B502 — n=5 の p_rand 完全 DP の独立再計算
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §51 の B501・B502 のみ。
-スクリプト: `research/verification/scripts/round3_b501_pgrand_n5b.py`（本 push で新規）
-データ: `research/verification/round3_b501_pgrand_n5b.json`
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §51 の B501・B502 のみ。
+スクリプト: `research/experiments/original-claims/scripts/round3_b501_pgrand_n5b.py`（本 push で新規）
+データ: `research/experiments/original-claims/output/round3_b501_pgrand_n5b.json`
 
 定義（変更なし）: `p_rand(terminal)=0`、`p_rand(S)=(1/|L|)·Σ_{u∈L}(1−p_rand(S∪{u}))`、
 L は合法手全体的一様。全称は「空盤から到達可能な安全局面すべて」。
@@ -11,7 +13,7 @@ L は合法手全体的一様。全称は「空盤から到達可能な安全局
 ## 0. 作業指示の前提の訂正（重要）
 
 指示書は「先行ワーカーは n=5 の DP を**完走していない**」と述べたが、
-`round3_b501_pgrand_n5.json` の `n5` 節は**すでに完全**だった
+`../output/round3_b501_pgrand_n5.json` の `n5` 節は**すでに完全**だった
 （`level_sizes` は k=0..9 の全 10 層、Σ=151,394、`edge_total`=885,065、
 `P_max`=2383/3360、`P_gt_2_3`=36、`P_gt_3_4`=0）。つまり DP 自体はある環境で完走済みで、
 前回個票 `round3-batch-b501-b502.md` もそれに基づいて書かれている。

@@ -1,9 +1,11 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 3 — 9×9 first-move classification COMPLETE
 
 ## Checked
 
 - branch: `replicate-8x8-o-stratum` @ `8a53adf`
-- `night-research/first-moves-9x9.csv` now has **14/14 D4 orbits**
+- `research/experiments/structural-discovery/output/first-moves-9x9.csv` now has **14/14 D4 orbits**
 - Restarted driver finished all remaining classes overnight (no live solver now)
 - Cron job `4c276f2f` is registered but did not fire while this session sat idle
   (jobs only run when the REPL is idle; long-running turns block them)
@@ -17,7 +19,7 @@
 - **15/15 FIRST_WIN**
 - Cell count: **81/81**
 - Density: **1.000**
-- Artifact: `night-research/first-moves-9x9.csv`, `first-moves-9x9-rerun.out.log`
+- Artifact: `research/experiments/structural-discovery/output/first-moves-9x9.csv`, `../../experiments/structural-discovery/output/first-moves-9x9-rerun.out.log`
 
 Empty-board winner was already F; this strengthens it from “center is a witness”
 to a **complete first-move classification**.
@@ -87,15 +89,15 @@ This is a proof-cost observation, not a game-theoretic law.
 
 - Board-complete 6×6 A_L: **not computable** from existing certs/CSVs
 - 8×8 depth-audit sample: **A_L=629**, K_max=31
-  (`night-research/cycle2-a-l-8x8-sample.json`)
+  (`research/experiments/structural-discovery/output/cycle2-a-l-8x8-sample.json`)
 
 ## Artifacts (this cycle)
 
-- `night-research/first-moves-9x9.csv` — complete 14-orbit table
-- `night-research/first-moves-9x9-rerun.out.log` — harvest of remaining 6
-- `night-research/cycle2-5x5-vs-9x9-transfer.json` — updated transfer (3 MATCH / 3 FLIP)
-- `night-research/cycle2-density-table.json` — density 9×9 = 81/81
-- `night-research/CYCLE3_RESULTS.md` — this file
+- `research/experiments/structural-discovery/output/first-moves-9x9.csv` — complete 14-orbit table
+- `research/experiments/structural-discovery/output/first-moves-9x9-rerun.out.log` — harvest of remaining 6
+- `research/experiments/structural-discovery/output/cycle2-5x5-vs-9x9-transfer.json` — updated transfer (3 MATCH / 3 FLIP)
+- `research/experiments/structural-discovery/output/cycle2-density-table.json` — density 9×9 = 81/81
+- `research/log/discovery-cycles/CYCLE3_RESULTS.md` — this file
 
 ## Official-doc updates needed
 

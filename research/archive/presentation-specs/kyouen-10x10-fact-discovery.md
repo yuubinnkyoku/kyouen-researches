@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 ---
 feature: kyouen-10x10-fact-discovery
 status: delivered
@@ -10,9 +12,9 @@ commits: 155a14363d1fd50640efd17cbf4c12dc94dbfd36..08f917207e1af700eed31fcd3f31b
 
 ## Report
 
-**What was built** — 上流（origin/main 155a143 + gpcc 9×9 center 成果）を取り込んだうえで、10×10 について再現可能な非自明な事実を `research/findings.md` の F-AD..F-BC に記録した。主な内容は (1) 二石 D4 軌道 120 個の完全幾何と Σd、(2) F-E の「二石 LOSS は Σd 最小」順位の訂正、(3) 円サイズ分布 12,170 個の完全分解と 12 点円の半径族分解（(n−7)² 則の n=11 での破綻を「別族の出現」で説明）、(4) 極小極大安全配置の K_min スペクトル（n=3..7 で 5,5,5,6,7）と 10×10 のブラケット 6..11、(5) 禁止ハイパグラフの補完数ヒストグラム（最大 9、8 欠落）と |S|−3 による説明、(6) 共線 C4 のラン長公式と n=11=10,428。
+**What was built** — 上流（origin/main 155a143 + gpcc 9×9 center 成果）を取り込んだうえで、10×10 について再現可能な非自明な事実を `research/archive/hypothesis-ledgers/findings.md` の F-AD..F-BC に記録した。主な内容は (1) 二石 D4 軌道 120 個の完全幾何と Σd、(2) F-E の「二石 LOSS は Σd 最小」順位の訂正、(3) 円サイズ分布 12,170 個の完全分解と 12 点円の半径族分解（(n−7)² 則の n=11 での破綻を「別族の出現」で説明）、(4) 極小極大安全配置の K_min スペクトル（n=3..7 で 5,5,5,6,7）と 10×10 のブラケット 6..11、(5) 禁止ハイパグラフの補完数ヒストグラム（最大 9、8 欠落）と |S|−3 による説明、(6) 共線 C4 のラン長公式と n=11=10,428。
 
-**Verification** — `python scripts/analysis/fact_verify_claims.py` で 21/21 PASS（forbidden=54441、120 軌道、円族、K_min 証人の安全+極大を含む）。独立レビュー 2 回（`research/exploration/REVIEW_10X10_FACT_DISCOVERY{,_V2}.md`）。V2 で主証人 2 件を独立に safe+maximal と確認、critical なし。
+**Verification** — `python scripts/analysis/fact_verify_claims.py` で 21/21 PASS（forbidden=54441、120 軌道、円族、K_min 証人の安全+極大を含む）。独立レビュー 2 回（`research/experiments/fact-discovery/output/REVIEW_10X10_FACT_DISCOVERY{,_V2}.md`）。V2 で主証人 2 件を独立に safe+maximal と確認、critical なし。
 
 **Journey log** —
 (1) `git worktree add` が共有 ref ガードでブロックされたため、カレントチェックアウト上の専用ブランチで作業（Cycle 4/8 と同じ override）。
@@ -23,9 +25,9 @@ commits: 155a14363d1fd50640efd17cbf4c12dc94dbfd36..08f917207e1af700eed31fcd3f31b
 
 ## [S1] Problem
 
-1×1〜9×9 の最適勝敗は証明済みで、`research/findings.md` に F-A〜F-AC の非自明事実が積み上がっている。一方 10×10 は「空盤は後手必勝」「medium LOSS ルート R の部分集合」「プローブ戦略の方法論」が中心で、**盤そのものの幾何・組合せ・ゲーム構造に関する新しい確定事実**が不足している。
+1×1〜9×9 の最適勝敗は証明済みで、`research/archive/hypothesis-ledgers/findings.md` に F-A〜F-AC の非自明事実が積み上がっている。一方 10×10 は「空盤は後手必勝」「medium LOSS ルート R の部分集合」「プローブ戦略の方法論」が中心で、**盤そのものの幾何・組合せ・ゲーム構造に関する新しい確定事実**が不足している。
 
-上流（origin/main）同期後の状態で、10×10 について再現可能な非自明な事実を発見し、`research/findings.md` に正本として記録する。
+上流（origin/main）同期後の状態で、10×10 について再現可能な非自明な事実を発見し、`research/archive/hypothesis-ledgers/findings.md` に正本として記録する。
 
 ## [S2] Design
 
@@ -70,9 +72,9 @@ commits: 155a14363d1fd50640efd17cbf4c12dc94dbfd36..08f917207e1af700eed31fcd3f31b
 
 ### 事実の記録契約
 
-- 各発見は `research/findings.md` に `F-AD` 以降の連番で追加する。
+- 各発見は `research/archive/hypothesis-ledgers/findings.md` に `F-AD` 以降の連番で追加する。
 - 項目形式は既存と同じ: 発見内容 / なぜ非自明なのか / 証拠 / 再現方法 / 試した反証 / 成立範囲 / 確信度 / 今後の検証方法。
-- 生データは `research/exploration/` または `results/10x10/fact-discovery/` に JSON/CSV で置く。
+- 生データは `research/experiments/fact-discovery/output/` または `results/10x10/fact-discovery/` に JSON/CSV で置く。
 - スクリプトは `scripts/analysis/` に置き、`python scripts/analysis/<name>.py` で再現できるようにする。
 
 ### 検証境界
@@ -92,8 +94,8 @@ commits: 155a14363d1fd50640efd17cbf4c12dc94dbfd36..08f917207e1af700eed31fcd3f31b
 
 ## Tasks
 - [x] T1: 上流成果の取り込み — acceptance: gpcc 結果がブランチに commit され、origin/main との差分が発見作業の前提として文書化される (covers: S2)
-- [x] T2: 仕様書作成 — acceptance: この文書が `docs/compose/spec/kyouen-10x10-fact-discovery.md` に存在し status=designed (covers: S2)
-- [x] T3: 二石 D4 軌道完全幾何 — acceptance: 軌道数・代表・Σd を含む JSON/CSV が `research/exploration/` にあり、再現スクリプトが走る (covers: S2)
+- [x] T2: 仕様書作成 — acceptance: この文書が `research/archive/presentation-specs/kyouen-10x10-fact-discovery.md` に存在し status=designed (covers: S2)
+- [x] T3: 二石 D4 軌道完全幾何 — acceptance: 軌道数・代表・Σd を含む JSON/CSV が `research/experiments/fact-discovery/output/` にあり、再現スクリプトが走る (covers: S2)
 - [ ] T4: 極小極大安全配置 — acceptance: 最小サイズと代表配置が整数列挙で確定し、complete フラグ付きで保存される (covers: S2) — **未達**: 10×10 は 6..11 のブラケットのみ（k=4,5 は complete 非存在、k=6..10 は未完全）
 - [ ] T5: 最小飽和配置 — acceptance: 合法手 0 の最小石数と 1 例以上の構造が検証可能な形式で残る (covers: S2) — **未達**: 最小石数は未確定。安全な 11 石例と k≤5 非存在のみ
 - [x] T6: 禁止 4 点組の局所構造 — acceptance: 円サイズ・点次数分布が n=9,10 で比較可能な JSON になる (covers: S2)

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 三行盤の全 q≥4・全長分類：安定化長、空盤値、最大Grundy数
 
 2026-10-03。盤は
@@ -134,11 +136,11 @@ m≥9 の全称結論は、有限実験の外挿ではなく既存の閾値定�
 ## 再現
 
 ```bash
-g++ -O3 -std=c++17 research/verification/scripts/q36_full_grundy.cpp -o /tmp/q36_grundy
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q36_full_grundy.cpp -o /tmp/q36_grundy
 /tmp/q36_grundy 1 9
-g++ -O3 -std=c++17 research/verification/scripts/q36_independent_audit.cpp -o /tmp/q36_audit
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q36_independent_audit.cpp -o /tmp/q36_audit
 /tmp/q36_audit
 ```
 
-保存出力は `verification/q36_full_grundy.json` と `verification/q36_audit.json`。
+保存出力は `../output/q36_full_grundy.json` と `../output/q36_audit.json`。
 この統一分類の q=4,5 部分の計算機補助証明と監査は、それぞれのリンク先に保存している。

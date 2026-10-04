@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B455: 原始剰余類は必ず同点数の四つ組になる
 
-作成: 2026-09-29。原文: [B455](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-29。原文: [B455](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **判定: REFUTED（全q≥3の一般証明）。**
 原文の「特定の一剰余類が、他の全剰余類より一貫して多い」は、単一の円でも成立しない。
@@ -64,7 +66,7 @@ gcd(a,b,q)=1から整数A,B,Cを選んでAa+Bb+Cq=1とできるので、式を�
 
 ## 検算と範囲
 
-[共通スクリプト](scripts/round11_circle_records.py)、[結果JSON](round11_circle_records.json)。
+[共通スクリプト](../scripts/round11_circle_records.py)、[結果JSON](../output/round11_circle_records.json)。
 M≤50000、q=3,4,5,6,7,8,9,10,12,16で、非空原始剰余類646,468個を確認した。
 全161,617回転軌道がサイズ4であり、各軌道の点数一致、点数ヒストグラムの重複度が4の倍数になることを確認。
 M=25,q=6の非一様な完全分布もJSONに保存した。全assert通過。

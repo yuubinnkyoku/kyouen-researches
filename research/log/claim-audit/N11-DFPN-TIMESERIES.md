@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 4代表初手の root pn/dn 時系列（各10分・fresh process・fresh TT・memo=26）
 
 条件: `dfpn --n=11 --reps --memo=26 --only=V --budget=600`、2026-09-29 夜。

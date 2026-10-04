@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B558の一般証明: 素数を公差とする二次幅の三点AP構成
 
 作成: 2026-09-28。担当チャット: `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [B558](../hypothesis-bank-round2-2026-09-27.md)。
+原文: [B558](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **判定: SUPPORTED（全wに対する構成と証明）。**
 任意のw≥2について、幅m≤66(w−1)²+5のw行整数盤に、安全な3w石を配置できる。
@@ -130,8 +132,8 @@ G=s²+st+t²+r(s+t)−r²と書くと
 
 ## 6. 有限検算と従来の候補との関係
 
-実行: `python research/verification/scripts/round8_ap_prime.py`。
-[コード](scripts/round8_ap_prime.py)、[証人と検算記録](round8_ap_prime.json)。
+実行: `python research/experiments/original-claims/scripts/round8_ap_prime.py`。
+[コード](../scripts/round8_ap_prime.py)、[証人と検算記録](../output/round8_ap_prime.json)。
 
 - w=1,…,20の全四点組を整数行列式で検査し、各行のAP条件と幅上界も確認する。
 - 式(4)の整数商の合同式を、係数2,3,5の8,505条件で直接照合する。

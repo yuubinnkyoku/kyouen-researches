@@ -1,6 +1,8 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 24 — n=6 capacity contrast vs n=7 crystal (COMPLETE unless noted)
 
-Solver: `night-research/cycle8_b_maxsafe.exe`. Boards n=6 (K=11=2n−1) vs n=7 (K=14=2n).
+Solver: `research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe`. Boards n=6 (K=11=2n−1) vs n=7 (K=14=2n).
 
 ## n=6 COMPLETE constrained counts / maxima
 
@@ -42,6 +44,6 @@ Solver: `night-research/cycle8_b_maxsafe.exe`. Boards n=6 (K=11=2n−1) vs n=7 (
 
 ## Artifacts
 - session exe logs (stdout in conversation; rerun commands above)
-- `night-research/CYCLE11_ORBIT_NECESSITY.md` (census)
-- `night-research/CYCLE15_CAPACITY_DECOMPOSITION.md` (n=7 skeleton)
-- `night-research/FINAL_SELECTION_THEOREM.md`
+- `research/log/discovery-cycles/CYCLE11_ORBIT_NECESSITY.md` (census)
+- `research/log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md` (n=7 skeleton)
+- `research/archive/discovery-summaries/FINAL_SELECTION_THEOREM.md`

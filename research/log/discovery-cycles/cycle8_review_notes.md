@@ -1,6 +1,8 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 8 critical review notes
 
-Reviewer pass: re-ran `cycle8_verify_lemmas.py` (all PASS), independent `cycle8_lib` recompute of claims 1–6, cross-checked report vs `results/cycle8_*.json` / `night-research/cycle8_cd_result.json` / `night-research/cycle8_a_result.json`.
+Reviewer pass: re-ran `../../experiments/structural-discovery/scripts/cycle8_verify_lemmas.py` (all PASS), independent `cycle8_lib` recompute of claims 1–6, cross-checked report vs `results/cycle8_*.json` / `research/experiments/structural-discovery/output/cycle8_cd_result.json` / `research/experiments/structural-discovery/output/cycle8_a_result.json`.
 Did **not** re-run force_2_2@K=14 UNSAT, n=7/n=6 full enum, or any git worktree/rebase/merge/push.
 
 ## Verdict
@@ -25,7 +27,7 @@ Did **not** re-run force_2_2@K=14 UNSAT, n=7/n=6 full enum, or any git worktree/
 1. Lemma 3 table said「304 本の集合が ρ=1」— **304 is pair/edge count** (`n_pairs_d1`); set count is **296/464**. Fixed in report.
 2. Oriented vs unoriented exchange uniqueness should state center-phase orientation (a_verify asserts EX=1; verify_lemmas allows ≤2).
 3. Lemma 2 “no 13-corridor / full-board width 12” uses **single-stone add/remove** move graph + inherited completeness of the 16 K=14 sets. Unique completion alone does not discuss size-13 1-swaps outside max cones. Clarified in report.
-4. `cycle8_a_verify.py` hardcodes `th_full=12` (existence lives in template JSON explicit path). Acceptable but weak independence.
+4. `../../experiments/structural-discovery/scripts/cycle8_a_verify.py` hardcodes `th_full=12` (existence lives in template JSON explicit path). Acceptable but weak independence.
 5. Verify `k13_witness_with_22` checks only one (2,2) cell; B package claims all four.
 6. Verify n=6 min_det only proves no unique *pair*; full hist is package C.
 7. `cycle8_b_conditional_max.json` field `conditional_max.force_2_2=13` mixes witness lower bound with enum upper bound; search for K=14 not finished.
@@ -33,4 +35,4 @@ Did **not** re-run force_2_2@K=14 UNSAT, n=7/n=6 full enum, or any git worktree/
 
 ## Residual risk
 
-All Cycle 8 lemmas inherit completeness of `maxsafe_n7_K14.bin` (16) and `maxsafe_n6_K11.bin` (464). Not re-verified this cycle (spec forbids).
+All Cycle 8 lemmas inherit completeness of `../../experiments/structural-discovery/output/maxsafe_n7_K14.bin` (16) and `../../experiments/structural-discovery/output/maxsafe_n6_K11.bin` (464). Not re-verified this cycle (spec forbids).

@@ -1,7 +1,9 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=7 K=14 Selection Theorem — final compressed statement
 
 **Branch** `cycle8-n7-structure` · **Base** `2d3855a` · evidence checklist:
-`night-research/SELECTION_THEOREM_CHECKLIST.md`
+`research/archive/discovery-summaries/SELECTION_THEOREM_CHECKLIST.md`
 
 Throughout: **COMPLETE** = exhaustive for the stated finite family/constraint
 (census of all max sets, or C++ target/count finished with `complete=true`).
@@ -76,7 +78,7 @@ Let \(\mathcal{M}_7\) be the family of safe 14-sets on 7×7. Then:
 7. **Corridor (COMPLETE on union / path-witness).**
    On min A–B pair (symdiff 10 = unique 5→5 exchange; union **19** cells):
    restricted widest single-stone path has width **11** COMPLETE
-   (`CYCLE39C_WIDEST_PATH_FAST.md`; 59 quads inside union; bottleneck
+   (`../../log/discovery-cycles/CYCLE39C_WIDEST_PATH_FAST.md`; 59 quads inside union; bottleneck
    states never use (2,2) — not in the union — and use center in only
    ~30% of width-11 bottlenecks). Safe 14-sets on the union itself are
    still {A,B}-type only. Explicit full-board A–B path dips to 12.
@@ -194,7 +196,7 @@ Omit-cost at each board’s own maximum (COMPLETE max probes):
 
 n=6 independent: 296/464 sets have a d=1 partner (304 undirected pairs).
 n=8 SAMPLE: (2,2) usable; center-block usable; 67–45 occ patterns in capped dumps.
-Artifacts: `CYCLE24_N6_CAPACITY_CONTRAST.md`, `CYCLE25_N5_CAPACITY_CONTRAST.md`.
+Artifacts: `../../log/discovery-cycles/CYCLE24_N6_CAPACITY_CONTRAST.md`, `../../log/discovery-cycles/CYCLE25_N5_CAPACITY_CONTRAST.md`.
 
 ---
 
@@ -249,28 +251,28 @@ Also COMPLETE complementary counts @14:
 ## Reproduce (Windows)
 
 ```powershell
-& $env:MIMO_PYTHON night-research/cycle8_verify_lemmas.py
-& $env:MIMO_PYTHON night-research/cycle11_verify.py
-night-research/maxsafe_enum.exe count 7 14
-night-research/maxsafe_enum.exe count 6 11
-night-research/cycle8_b_maxsafe.exe count 7 14 --force 24 --max-nodes 4000000
-night-research/cycle8_b_maxsafe.exe first 7 14 --force 16 --max-nodes 3000000
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_verify_lemmas.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle11_verify.py
+research/experiments/structural-discovery/output/maxsafe_enum.exe count 7 14
+research/experiments/structural-discovery/output/maxsafe_enum.exe count 6 11
+research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe count 7 14 --force 24 --max-nodes 4000000
+research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe first 7 14 --force 16 --max-nodes 3000000
 # capacity decomposition cases — see CYCLE15_CAPACITY_DECOMPOSITION.md
 ```
 
 ## File index
-- `CYCLE8_11_MAIN_RESULT.md` — rolling consolidated notes
-- `CYCLE15_CAPACITY_DECOMPOSITION.md` — capacity table + geometry
-- `CYCLE24_N6_CAPACITY_CONTRAST.md`, `CYCLE25_N5_CAPACITY_CONTRAST.md`, `CYCLE26_N4_CAPACITY_CONTRAST.md`
-- `CYCLE27_CORE_EXTENSION.md` — phase cores + named quads
-- `CYCLE28_K13_OPTIONALITY.md` — K=12/13 layer
-- `CYCLE30B_ORBIT_CONCYCLICITY.md`, `CYCLE30C_MULTI_ORBIT_CAPACITY.md` — skeleton pair/4-orbit capacities
-- `CYCLE31B_ORBIT_CIRCLES_ALL_N.md` — orbit–circle lemma (all n)
-- `CYCLE32_CROSS_SHELL_QUADS.md` — single- vs multi-orbit quads
-- `CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md` — COMPLETE α(M)≤13 from o≤3 + 120-vector decision
+- `../../log/discovery-cycles/CYCLE8_11_MAIN_RESULT.md` — rolling consolidated notes
+- `../../log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md` — capacity table + geometry
+- `../../log/discovery-cycles/CYCLE24_N6_CAPACITY_CONTRAST.md`, `../../log/discovery-cycles/CYCLE25_N5_CAPACITY_CONTRAST.md`, `../../log/discovery-cycles/CYCLE26_N4_CAPACITY_CONTRAST.md`
+- `../../log/discovery-cycles/CYCLE27_CORE_EXTENSION.md` — phase cores + named quads
+- `../../log/discovery-cycles/CYCLE28_K13_OPTIONALITY.md` — K=12/13 layer
+- `../../log/discovery-cycles/CYCLE30B_ORBIT_CONCYCLICITY.md`, `../../log/discovery-cycles/CYCLE30C_MULTI_ORBIT_CAPACITY.md` — skeleton pair/4-orbit capacities
+- `../../log/discovery-cycles/CYCLE31B_ORBIT_CIRCLES_ALL_N.md` — orbit–circle lemma (all n)
+- `../../log/discovery-cycles/CYCLE32_CROSS_SHELL_QUADS.md` — single- vs multi-orbit quads
+- `../../log/discovery-cycles/CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md` — COMPLETE α(M)≤13 from o≤3 + 120-vector decision
 - `SELECTION_THEOREM_CHECKLIST.md` — evidence matrix
-- `CYCLE10_OCCUPANCY_SELECTION.md`, `CYCLE11_ORBIT_NECESSITY.md`
-- `CYCLE12_K13_LAYER.md`, `CYCLE12_OMIT_MANDATORY.md`
-- `CYCLE16_CENTER_NOT_SUFFICIENT.md`
-- `CYCLE9_G1_NOTES.md`, `CYCLE9_G2_NOTES.md`
-- `CYCLE9H_K9_128BIT_DESIGN.md` — K9 design only
+- `../../log/discovery-cycles/CYCLE10_OCCUPANCY_SELECTION.md`, `../../log/discovery-cycles/CYCLE11_ORBIT_NECESSITY.md`
+- `../../log/discovery-cycles/CYCLE12_K13_LAYER.md`, `../../log/discovery-cycles/CYCLE12_OMIT_MANDATORY.md`
+- `../../log/discovery-cycles/CYCLE16_CENTER_NOT_SUFFICIENT.md`
+- `../../log/discovery-cycles/CYCLE9_G1_NOTES.md`, `../../log/discovery-cycles/CYCLE9_G2_NOTES.md`
+- `../../log/discovery-cycles/CYCLE9H_K9_128BIT_DESIGN.md` — K9 design only

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B065: 二点競合なし・g≥4の証人を7×7まで全域除外
 
 作成: 2026-09-30。**B065原文PARTIAL。**
@@ -20,19 +22,19 @@
 
 ## 二方式の完全一致
 
-[第一方式](scripts/round39_empty_pair_search.cpp)は、追加点をID昇順にしたDFSで各安全集合を一度ずつ生成。
+[第一方式](../scripts/round39_empty_pair_search.cpp)は、追加点をID昇順にしたDFSで各安全集合を一度ずつ生成。
 三点補完マスクで合法点を増分更新し、石の各ペアを含む禁止四点組の残り二点がLに含まれるかで
 競合辺の有無を判定した。候補ではLに制限した全残余辺から全部分集合DPの真のmexを求めた。
 
-[第二方式](scripts/round39_curve_census.cpp)は、別に生成・検証した安全集合の全層を読み込んだ。
+[第二方式](../scripts/round39_curve_census.cpp)は、別に生成・検証した安全集合の全層を読み込んだ。
 整数幾何を生成し直し、円・直線Cについて|S∩C|=2かつ|L∩C|≥2なら二点競合がある、という
 曲線占有数の条件で候補を判定した。
 候補のLは曲線占有数で再照合し、値は残余辺を使わず、石追加後の曲線三石飽和で合法点を更新する
 メモ再帰で求めた。候補数、Lの点数分布、g分布の全項目が第一方式と一致した。
 
-[監査](scripts/round39_audit.py)はこの一致に加えて、1・2・3・5×5の全域曲線再帰で0・1石層を再検算。
+[監査](../scripts/round39_audit.py)はこの一致に加えて、1・2・3・5×5の全域曲線再帰で0・1石層を再検算。
 4・6・7×7の既存独立mex表で同じ層を確認し、除外した層にg≥4がないことも閉じた。
-入力幾何、両方式、既存表のSHA-256を[監査記録](round39_empty_pair_audited.json)に保存した。
+入力幾何、両方式、既存表のSHA-256を[監査記録](../output/round39_empty_pair_audited.json)に保存した。
 
 ## 二点競合なしでg=3を達成する7×7の中盤証人
 
@@ -46,12 +48,12 @@
 
 ## 再現（WSL）
 
-    python research/verification/scripts/round39_geometry_inputs.py
-    g++ -O3 -std=c++20 research/verification/scripts/round39_empty_pair_search.cpp -o /home/yuubi/round28_n7/round39_search
-    /home/yuubi/round28_n7/round39_search 7 research/verification/round39_empty_pair_n7_search.json 16
-    g++ -O3 -std=c++20 -fopenmp research/verification/scripts/round39_curve_census.cpp -o /home/yuubi/round28_n7/round39_curves
-    OMP_NUM_THREADS=8 /home/yuubi/round28_n7/round39_curves research/verification/round39_n7_input.txt /home/yuubi/round28_n7 research/verification/round39_empty_pair_n7_curves.json
-    python research/verification/scripts/round39_audit.py
+    python research/experiments/original-claims/scripts/round39_geometry_inputs.py
+    g++ -O3 -std=c++20 research/experiments/original-claims/scripts/round39_empty_pair_search.cpp -o /home/yuubi/round28_n7/round39_search
+    /home/yuubi/round28_n7/round39_search 7 research/experiments/original-claims/output/round39_empty_pair_n7_search.json 16
+    g++ -O3 -std=c++20 -fopenmp research/experiments/original-claims/scripts/round39_curve_census.cpp -o /home/yuubi/round28_n7/round39_curves
+    OMP_NUM_THREADS=8 /home/yuubi/round28_n7/round39_curves research/experiments/original-claims/output/round39_n7_input.txt /home/yuubi/round28_n7 research/experiments/original-claims/output/round39_empty_pair_n7_curves.json
+    python research/experiments/original-claims/scripts/round39_audit.py
 
 第二方式の7×7作業層はround28の保存済み`level_*.occ`を使う。
 5・6×6の作業層は`round5_prand_stream.cpp --enum`で新たに生成した。

@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 12 addendum — omitting mandatory orbit (0,2) on n=7
 
 COMPLETE: max safe size with orbit `(0,2)` forbidden is **12**
@@ -23,5 +25,5 @@ This supports the max-layer sharpness picture:
 ## Artifacts
 - `results/cycle12_omit_02_sample.json` (Python DFS under-sampled; use exe occ)
 - exe dump: see session log / `results/cycle12_occ_k13.json` sibling
-- `night-research/CYCLE12_K13_LAYER.md`
-- `night-research/CYCLE11_ORBIT_NECESSITY.md` (capacity table)
+- `research/log/discovery-cycles/CYCLE12_K13_LAYER.md`
+- `research/log/discovery-cycles/CYCLE11_ORBIT_NECESSITY.md` (capacity table)

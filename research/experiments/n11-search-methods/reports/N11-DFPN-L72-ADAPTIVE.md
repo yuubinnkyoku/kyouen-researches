@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # L72 adaptive budget の再測定
 
 **11x11 の勝敗は UNKNOWN のまま。**
@@ -9,7 +11,7 @@ v=60 中央 1 石局面は **TIMEOUT（未証明）**。20 返信のどれも閉
 - budget: 60 s / run、v=60、exact-legal=72、exact-retries=1、publish=root
 - 3 本は**逐次**実行（並列化せず。各 run が 2^24 の memo を確保し、
   19 GB 環境では無闇な並列を避ける）
-- script: `research/verification/scripts/dfpn_l72_adaptive_probe.sh`
+- script: `research/experiments/n11-search-methods/scripts/dfpn_l72_adaptive_probe.sh`
 
 ## 結果
 

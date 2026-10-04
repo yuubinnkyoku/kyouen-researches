@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B261・B266: 二手相乗作用の無限族と一意な円束分解
 
 作成: 2026-09-29。**B261 SUPPORTED（無限族）、B266 SUPPORTED（一般恒等式・上界）。**
-原文: [仮説バンクB261・B266](../hypothesis-bank-2026-09-27.md)。
+原文: [仮説バンクB261・B266](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)。
 
 ## 1. 「両方を置いて初めて」の集合を区別する
 
@@ -112,8 +114,8 @@ B266は「二手による相乗作用」をTと明記し、(2)の一意分解と
 二手後の全新規禁止Jを扱う場合も、元からある単独効果を(1)で足すため同じ情報で正確に復元できる。
 J全体を一石sの曲線だけに一意割当できるとは主張しない。
 
-再現: [scripts/round18_local_geometry.py](scripts/round18_local_geometry.py)、
-[round18_local_geometry.json](round18_local_geometry.json)。
+再現: [scripts/round18_local_geometry.py](../scripts/round18_local_geometry.py)、
+[round18_local_geometry.json](../output/round18_local_geometry.json)。
 n=1,…,4の全6,126安全S、計53,998共同合法対p,qで(1),(2),(3)の検算を通過した。
 計82,260個の純相乗点について一意な元の石への対応も確認した。
 直線族はn=3,…,30で盤全体を直接走査した。

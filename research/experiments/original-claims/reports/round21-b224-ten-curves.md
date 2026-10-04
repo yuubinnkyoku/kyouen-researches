@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B224成立: 四円・六直線で5×5の勝ち初手を完全に保存
 
 作成: 2026-09-30。**B224 SUPPORTED（原文の存在主張に対する具体的証人）。**
-原文 [B224](../hypothesis-bank-2026-09-27.md):
+原文 [B224](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md):
 「小盤n≥4で、円・直線を一部選んだ禁止族が、全標準禁止族と同じW_nを持つ」。
 
 5×5の盤点を全て残し、以下の**四円と六直線だけ**を禁止条件として使う。
@@ -47,7 +49,7 @@ round20の曲線番号との対応は次の通り（座標式を証人の定義�
 
 ## 2. 全合法局面の独立検証
 
-[独立検証コード](scripts/round21_b224_verify.py)は探索コード、共通幾何コード、
+[独立検証コード](../scripts/round21_b224_verify.py)は探索コード、共通幾何コード、
 三点補完表をimportしない。盤の全三点から整数行列式で全曲線を再生成し、
 盤点四点の平行移動後の3×3行列式でも標準826組を別に再生成した。
 曲線ごとの全四点部分集合と、行列式で得た全禁止組が重複なく一致することも検査する。
@@ -119,21 +121,21 @@ seed=210224、180秒の探索で97→85→77→65→57→55→51→47→39→27�
 
 ## 4. 再現と保存データ
 
-- [10本の探索証人](round21_b224_witness.json)
-- [独立検算結果・全初手nimber・各曲線の全盤点](round21_b224_verified.json)
-- [探索コード](scripts/round21_b224_search.cpp)
-- [初回探索出力](round21_b224_search.json)、[最終コードの探索出力](round21_b224_search_final.json)
+- [10本の探索証人](../output/round21_b224_witness.json)
+- [独立検算結果・全初手nimber・各曲線の全盤点](../output/round21_b224_verified.json)
+- [探索コード](../scripts/round21_b224_search.cpp)
+- [初回探索出力](../output/round21_b224_search.json)、[最終コードの探索出力](../output/round21_b224_search_final.json)
 
 独立検算:
 
-    python research/verification/scripts/round21_b224_verify.py --witness round21_b224_witness.json
+    python research/experiments/original-claims/scripts/round21_b224_verify.py --witness round21_b224_witness.json
 
 探索再現（g++、C++17）:
 
-    g++ -O3 -std=c++17 -Wall -Wextra research/verification/scripts/round21_b224_search.cpp -o research/verification/scripts/round21_b224_search.exe
-    research/verification/scripts/round21_b224_search.exe research/verification/round20_b224_input.txt research/verification/round21_b224_initial_ids.txt research/verification/round21_b224_search.json 180 210224
+    g++ -O3 -std=c++17 -Wall -Wextra research/experiments/original-claims/scripts/round21_b224_search.cpp -o research/experiments/original-claims/scripts/round21_b224_search.exe
+    research/experiments/original-claims/scripts/round21_b224_search.exe research/experiments/original-claims/output/round20_b224_input.txt research/experiments/original-claims/output/round21_b224_initial_ids.txt research/experiments/original-claims/output/round21_b224_search.json 180 210224
 
 制限秒数によって試行数や到達証人は変わり得る。存在証明の再現には固定した証人の独立検算を使う。
-最終コードの短時間再確認は入力を`round21_b224_resume_ids.txt`、時間30、seed=210225へ変えたもの。
+最終コードの短時間再確認は入力を`../output/round21_b224_resume_ids.txt`、時間30、seed=210225へ変えたもの。
 検算JSONに使用したソース・入力のSHA-256と、全Grundy表のSHA-256を保存した。
 全600件の残件数はこの個票では再集計していない。

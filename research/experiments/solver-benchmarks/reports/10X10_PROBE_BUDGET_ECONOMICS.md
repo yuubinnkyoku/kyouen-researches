@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 probe budget economics: 10k should be tested before 100k
 
 Status: **exploratory/post-hoc resource-planning analysis**. This does not alter the completed V1 or V2 confirmatory endpoints.

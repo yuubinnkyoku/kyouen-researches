@@ -1,20 +1,20 @@
-# K項目への移行範囲
+# 知識と物理構造の移行履歴
 
-## 正本と出典
+## 第1段階：論理上の正本と出典（当時の移行）
 
-現在の知識は `knowledge/items/` を正本とする。時系列や失敗を含む旧記録は出典として保持し、今回大量の削除・renameは行っていない。
+現在の知識は `knowledge/items/` を正本とする。時系列や失敗を含む旧記録は出典として保持し、この第1段階では大量の削除・renameを行わなかった。
 移行の起点は最新mainの `9a574ca80380e35ef46fbbc99324218a38c7551e`。
 依頼で指定されたknowledgeのschema・語彙・template・運用文書、researchの入口と本書、tools/knowledge、rootのuv環境はこのcommitには存在しなかったため、要求された構造を最小限新設した。
 
-最初の27項目で盤面・証明書・幾何・一般定理の粒度とsolution metadataを検査した後、代表例だけで止めず、296項目へ展開した。
+最初の27項目で盤面・証明書・幾何・一般定理の粒度とsolution metadataを検査した後、代表例だけで止めず、当時296項目へ展開した。
 同一命題の後続実験は同じ項目の根拠へ統合し、誤った別命題はrefuted、根拠を撤回した主張はwithdrawnとして保持する。
 全件のkind/status/topic、旧alias、artifact、未解決項目は[自動集計](knowledge/generated/summary.md)と[逆引き](knowledge/generated/aliases.md)を参照。
 
 ## 照合した領域
 
 - root READMEの1〜10の勝敗、1〜9のAND/OR証明書、9の全81初手、10の15 D4代表による100初手分類、10の空盤全体の単一KYOENC4証明書の欠如、11の層0〜5と未確定勝敗。
-- research/verificationの原文スコープ監査、全局面Grundy・T*/WFT・残余ゲーム、証明書の独立検査、探索順位・memo・staged実験の監査。
-- research/exploration、night-research、docsの固定幅定理、ルール変種、幾何、最大・極大安全配置、7の結晶・骨格・再配置、整数放物線、passゲーム。
+- research/experiments/original-claims/outputの原文スコープ監査、全局面Grundy・T*/WFT・残余ゲーム、証明書の独立検査、探索順位・memo・staged実験の監査。
+- research/experiments/fact-discovery/output、research/experiments/structural-discovery/output、docsの固定幅定理、ルール変種、幾何、最大・極大安全配置、7の結晶・骨格・再配置、整数放物線、passゲーム。
 - resultsのCSV/JSON、certificatesの公開証明書、cpp/rustのsolverとverifier、KyouenのLean定理。重要な根拠は役割・用途・出典commitを付けて参照し、ローカルの巨大生成物や未追跡ファイルには依存させない。
 
 最新の原文スコープ索引で採用済みの165原文IDはすべてaliasから辿れる。SUPPORTED/REFUTEDという古いラベルだけで決めず、有限計算・一般証明・部分成立・量化範囲を本文で区別した。
@@ -38,7 +38,7 @@ F系列、H系列、旧Cycle内の重要識別子も保持した。Cycleで再�
 これらを解く新しい研究は今回実行していない。各verifierを全入力について再実行したという主張もしない。
 細かな過去のmicrobenchmark・作業指示・進行報告・未採用候補は全てを独立K項目にせず、重要な現行結論の出典として旧文書を保持した。
 
-旧資料の大規模renameは行わない。これは未完了ではなく、既存の再現スクリプト・過去Markdown・hash監査がrepo相対pathを参照しているため、出典互換性を優先して原位置に保持する完成方針である。現在の知識の正本は `research/knowledge/items/` であり、旧配置の文書は正本ではない。
+第1段階では出典互換性のため旧資料を原位置に保持した。2026-10-04の第2段階でこの方針を更新し、参照修正・hash provenanceの区別を伴う物理移行を実施した。現在の正本は引き続き `research/knowledge/items/` だけである。
 
 新規資料を追加するときの分類基準は次のとおり。
 
@@ -52,9 +52,9 @@ F系列、H系列、旧Cycle内の重要識別子も保持した。Cycleで再�
 
 ## 再生成と検査
 
-PRの最終確認で全296件を内容slug付きファイル名に変更し、K番号とaliasは保持した。
+PRの最終確認で当時の全296件を内容slug付きファイル名に変更し、K番号とaliasは保持した。
 定義・方式はactive、検証結果はverifiedに整理し、語彙のstatus_by_kindで組み合わせを検査する。
-READMEの生成領域は「主結果」の説明直後に置く。8×8の全局面DPは後続監査でcomputedへ更新し、独立全状態検査の未整備を検証境界として表示する。
+当時、READMEの生成領域は「主結果」の説明直後に置いた。現在は短い現況導入の直後に置く。8×8の全局面DPは後続監査でcomputedへ更新し、独立全状態検査の未整備を検証境界として表示する。
 入口となる50件（K0001〜K0035、K0041〜K0050、K0068〜K0072）の文章を再確認し、安全集合数・証明書ノード数・層別列挙・極大サイズ分布を対応の分かる表や数値列へ整形した。
 これらは知識の再作成や新規研究ではなく、参照・状態制約・表示・文章品質の修正である。
 
@@ -67,14 +67,39 @@ git diff --exit-code -- README.md research/knowledge/generated
 ```
 
 最後の差分検査は正本と生成物をcommitした状態で行う。CIはlocked環境で構造検査、自己参照・循環、alias衝突、artifact境界、README保護の回帰テスト、再生成差分を検査する。
-READMEの旧本文を保持し、生成マーカー間だけを更新する。孤立・薄い根拠はwarningであり、数学的結論の正しさを構造検査だけで保証するものではない。
+第1段階ではREADMEの旧本文を保持して生成マーカー間だけを更新した。第2段階では手書き部分も現行入口へ更新した。孤立・薄い根拠はwarningであり、数学的結論の正しさを構造検査だけで保証するものではない。
 
 ## 最新mainでの未解決再監査（2026-10-04）
 
-旧PR移植後のmainではK0071・K0077・K0078はすでに閉じている。全open/conjecturedの再照合と関連確定項目の証拠境界は[監査記録](verification/knowledge-open-freshness-main-2026-10-04.md)を参照。旧研究Markdownは出典として保持し、K項目を現在の正本とする。
+旧PR移植後のmainではK0071・K0077・K0078はすでに閉じている。全open/conjecturedの再照合と関連確定項目の証拠境界は[監査記録](experiments/original-claims/reports/knowledge-open-freshness-main-2026-10-04.md)を参照。旧研究Markdownは出典として保持し、K項目を現在の正本とする。
 
-## 構造移行の完了条件
+## 第1段階のmainへの集約
 
-2026-10-04時点で、現行knowledge schema・generated view・CI・README導線はmainへ集約済み。旧構造向けopen PRは0件。旧 `refactor/research-knowledge-structure` と `codex/open-freshness-audit` の固有成果もmainへ回収済みで、両refはmainと同一commitへ揃えた。旧研究ファイルを原位置に残すこと、原文435件をNOT_AUDITEDとして保持することは構造移行の未完了を意味しない。後者は独立した内容監査バックログである。
+2026-10-04時点で、現行knowledge schema・generated view・CI・README導線はmainへ集約済み。旧構造向けopen PRは0件。旧 `refactor/research-knowledge-structure` と `codex/open-freshness-audit` の固有成果もmainへ回収済みで、両refはmainと同一commitへ揃えた。当時の論理移行では旧研究ファイルを原位置に残した。原文435件のNOT_AUDITEDは、物理構造と独立した内容監査バックログである。
 
 ランタイム一時物はcurrent treeから除外し、固定バイナリ・検証JSON・研究ログなど再現性に必要な資産だけを残す。
+
+## 第2段階：物理SSOT移行の完了（2026-10-04）
+
+開始mainは `48fa9f78f0933a9f20485f4f2be16d88a4bce232`。開始時に最新mainを取得し、branch・PRを作成せずmainへ段階的にcommitした。
+**物理SSOT移行も完了**。現在知識の唯一の正本はknowledge/items、再現資料はexperiments、時系列はlog、旧資料はarchive、reader文書はdocs、公開横断machine outputはresultsに分類した。
+旧 `night-research/` と `research/verification/` は空READMEも含めてcurrent filesystemから撤去した。
+旧exploration・root experiments・artifacts・notes・tmp-kbも有用な役割へ移した。rootのround5_b520_n3.jsonとscratch_n45.jsonは実験出力へ移した。
+
+一回限りのdocs prereg/result/auditとresults内のMarkdown・図・legacy certificate logは実験へ移し、旧仮説帳・統合サマリはarchive、discovery cycleはlogへ分類した。
+共有solverを複製せず、共有研究libraryはscripts/researchへ分離した。空dump・debug/editor片・完全一致重複・obsoleteなreport編集generatorは削除した。
+開始時ですでに構文エラーのあった2本は監査出典としてarchive/incomplete-scriptsに保存した。
+
+現在のK0001〜K0320の**320件**を保持した。kind・status・topic・alias・relation・solution metadataは開始時点と一致し、数学的な新規研究やstatusの変更を行っていない。
+当時296件という第1段階の数字は移行履歴であり、現行件数ではない。
+
+knowledge artifacts、Markdownリンク、主要source/runner path、workflow参照を新pathへ更新し、generated viewを再生成した。
+当時のpath + SHA256を保存した監査JSON/manifestはhistorical provenanceとして保持し、[path対応表と説明](archive/physical-ssot-2026-10-04/README.md)から現在の所在を辿れる。
+旧path文字列の禁止ではなく、knowledge checkがcurrent filesystem上のlegacy pathの再登場を拒否する。
+同じ検査でrepo-local Markdownリンク・Python構文・主要source/runner参照・workflow working-directoryも検査する。
+
+root READMEは現行入口へ書き換え、古い12≤M_{3,5}≤56、m=22..55未決、次の対象4行q=8という説明を撤去し、M_{3,5}=12・M_{4,8}=11と正本への導線へ更新した。
+1〜8の全安全局面解析、9/10の弱解決、11の未解決、8盤の独立全状態監査の留保を区別した。
+
+検査はuvのlocked環境、knowledge integrity・unit test・generated差分、既存C++ build/小盤certificate、固定幅・幾何・game-structure・saturation regression、Lean、Rust独立verifierを対象にした。
+物理移行は435原文の内容監査、11盤の勝敗、巨大具体証明書のLean核内検査等を解決したという意味ではない。これらの現在の境界はknowledgeを参照する。

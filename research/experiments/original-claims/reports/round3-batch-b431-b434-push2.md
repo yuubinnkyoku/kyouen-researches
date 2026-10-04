@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3 (push2): B431-B434
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B431〜B434。
-スクリプト: research/verification/scripts/round3_b431_ilp.py
-データ: research/verification/round3_b431_ilp.json
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B431〜B434。
+スクリプト: research/experiments/original-claims/scripts/round3_b431_ilp.py
+データ: research/experiments/original-claims/output/round3_b431_ilp.json
 （書き込み 2026-09-27 以降の push2 回。既存の round3-batch-b431-b434.md とは別ファイル）
 
 ## 状況メモ（着手時）

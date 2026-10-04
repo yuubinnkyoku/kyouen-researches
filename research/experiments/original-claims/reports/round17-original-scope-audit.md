@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 原仮説の量化を保つための集計監査
 
 作成: 2026-09-29 18時台。B001〜B600を原文に即して検証する、このチャットの補助記録。
@@ -5,7 +7,7 @@
 
 ## 1. 「600/600決着」は原仮説600件の証明・反証完了を意味しない
 
-[round5-FINAL-SUMMARY.md](round5-FINAL-SUMMARY.md) §1は全600件を決着と数える一方、
+[round5-FINAL-SUMMARY.md](../../../archive/claim-audit-history/round5-FINAL-SUMMARY.md) §1は全600件を決着と数える一方、
 §1.3は無界な原命題について弱化版の有限決着をもって決着とみなしたと述べ、
 §5に原命題が理論的に閉じていない項目を列挙している。
 これは作業済み件数の指標にはなっても、原文の量化を保った決着件数ではない。
@@ -18,7 +20,7 @@
 [round5-batch-last21.md](round5-batch-last21.md) のB458も原命題PARTIAL。
 個票内の区別を消して集計すると「原仮説全件決着」とはならない。
 
-共通指示書 [ROUND5-PROTOCOL.md](ROUND5-PROTOCOL.md) 自身も、
+共通指示書 [ROUND5-PROTOCOL.md](../../../archive/claim-audit-history/ROUND5-PROTOCOL.md) 自身も、
 弱化した場合に「弱化版 SUPPORTED / 原命題 INCONCLUSIVE」の両方を書く方針である。
 従って有限形の検証を保存することと、原文の決着と数えることを分ける。
 

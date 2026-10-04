@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch: B351–B380（幾何補題と飽和被覆）
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §36–§38（B351–B380 のみ）
-手法: `PROTOCOL.md` 準拠。整数幾何のみ（`kyouen_core.det4`）。浮動小数の共円判定なし。
-データ: `research/verification/round2_b351.json` / スクリプト `round2_b351_*.py`
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §36–§38（B351–B380 のみ）
+手法: `../../../archive/claim-audit-history/PROTOCOL.md` 準拠。整数幾何のみ（`kyouen_core.det4`）。浮動小数の共円判定なし。
+データ: `research/experiments/original-claims/output/round2_b351.json` / スクリプト `round2_b351_*.py`
 主要計算範囲: n=2..6 全安全集合（n=6 は **5,081,289** 件）、n=5 極大 **16,860**、n=6 極大 **349,596**、n=7 K=14 既知 16、n=8 既知 8 石証人 `[0,1,6,20,24,32,34,60]` と 15 石証人。
 
 記号: `b_S(p)` = 空点 p を禁止する S 内 3 点組の個数。`δ(S,p) = C(k,2) − 3 b_S(p)`（k=|S|）。`ρ(S)` = 極大 S の故障耐性（元空点を 1 つでも合法に戻す最小石除去数。除去位置自体は数えない）。
@@ -51,7 +53,7 @@
 - 判定: **NOT-CHECKED**
 - 範囲: —
 - 証拠: 反転写像の実装と曲線フィットが未実施。argmax_b の証人（n=6 k=10 S=`[0,1,4,9,10,13,17,18,21,33]`, b=11）は保存済みで次の入力になる。
-- メモ: `round2_b351.json` の `argmax_b` を反転し、放物的/楕円的三次への適合を測るのが次。
+- メモ: `../output/round2_b351.json` の `argmax_b` を反転し、放物的/楕円的三次への適合を測るのが次。
 
 ### B356 [存在] 二つの空点で同時に二次的な重複被覆を持つ
 
@@ -299,6 +301,6 @@ W の構造（実測）:
 
 ## 成果物
 
-- 本レポート: `research/verification/round2-batch-b351.md`
-- 計算スクリプト: `scripts/round2_b351_enum.py`, `round2_b351_delta.py`, `round2_b351_rho.py`, `round2_b351_n8.py`（重い探索・打ち切り）, `round2_b351_n8_light.py`
-- データ: `round2_b351.json`, `data/safe_n2.bin`…`safe_n6.bin`, `data/maximal_n5.bin`, `maximal_n6.bin`
+- 本レポート: `research/experiments/original-claims/reports/round2-batch-b351.md`
+- 計算スクリプト: `../scripts/round2_b351_enum.py`, `round2_b351_delta.py`, `round2_b351_rho.py`, `round2_b351_n8.py`（重い探索・打ち切り）, `round2_b351_n8_light.py`
+- データ: `../output/round2_b351.json`, `data/safe_n2.bin`…`safe_n6.bin`, `data/maximal_n5.bin`, `maximal_n6.bin`

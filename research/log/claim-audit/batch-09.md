@@ -1,13 +1,15 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 09: B181-B220
 
 対象: ランダム対局と飽和サイズ (B181-B190) / 勝敗と静的構造の統計的接続 (B191-B200) / 穴あき盤・外周・一点の影響 (B201-B210) / 長方形盤・固定幅 (B211-B220)
 
 共通データ:
-- `research/verification/scripts/kyouen_core.py` — 任意点集合上の det4 / 禁止4点組 / 合法手 / Grundy / ランダム貪欲 DP
-- `research/verification/batch09_random_greedy.json` — 終局サイズ厳密分布 (n≤5) と MC (n≤8)
-- `research/verification/batch09_outcome_mining.json` — n≤5 全局面の特徴量 (層別 P 率、b_S、残余 r2 など)
-- `research/verification/batch09_rectangles.json` — 2×m (m≤10) / 3×m (m≤8) の空盤 g・K・勝ち初手
-- `research/verification/batch09_pairs_n4.json` — 4×4 二点削除 120 組
+- `scripts/research/kyouen_core.py` — 任意点集合上の det4 / 禁止4点組 / 合法手 / Grundy / ランダム貪欲 DP
+- `research/experiments/original-claims/output/batch09_random_greedy.json` — 終局サイズ厳密分布 (n≤5) と MC (n≤8)
+- `research/experiments/original-claims/output/batch09_outcome_mining.json` — n≤5 全局面の特徴量 (層別 P 率、b_S、残余 r2 など)
+- `research/experiments/original-claims/output/batch09_rectangles.json` — 2×m (m≤10) / 3×m (m≤8) の空盤 g・K・勝ち初手
+- `research/experiments/original-claims/output/batch09_pairs_n4.json` — 4×4 二点削除 120 組
 - 実験運用定義: `b_S(p)` = 空点 p を禁止する S 内 3 点集合の個数 (>0 なら p は非合法)、
   `newly_blocked(p)` = 手 p の後に非合法化する空点数、`r2_ratio` = 残余禁止集合のうちサイズ 2 の比率、
   `rand_odd` = ランダム貪欲で残り手数が奇数になる確率 (= ランダム対局の手番側勝率)。
@@ -237,7 +239,7 @@
   - 删 (3,0)+(3,3) [id 3,15] — 右右辺コーナー対
   - 删 (1,1)+(2,1) [id 5,6] — 内部隣接対
   - 删 (0,0)+(2,2) [id 0,10] — コーナーと内部
-  データ: `batch09_pairs_n4.json` の `B204_witnesses`。
+  データ: `../../experiments/original-claims/output/batch09_pairs_n4.json` の `B204_witnesses`。
 - メモ: 最小例は 4×4 で確定し得る (3×3 は一点削除すら勝敗が動かず、二点も未だが小さい)。
 
 ## B205 [存在] 最大配置から排除される点が勝敗には不可欠

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 四行・六点版の真の安定化長は16
 
 作成: 2026-10-03。
@@ -81,8 +83,8 @@ Cの座標には負数も許す。水平反射を同一視すると各形状で3
 
 この有限算術補題の完全性証明と再現器は
 [`q46-pair-graph-bound.md`](q46-pair-graph-bound.md) にまとめた。
-[`q46_pair_upper_bound.cpp`](verification/scripts/q46_pair_upper_bound.cpp) が全形状を検査し、
-[`q46_pair_upper_bound.json`](verification/q46_pair_upper_bound.json) に結果を保存している。
+[`q46_pair_upper_bound.cpp`](../scripts/q46_pair_upper_bound.cpp) が全形状を検査し、
+[`q46_pair_upper_bound.json`](../output/q46_pair_upper_bound.json) に結果を保存している。
 対象行に実際に存在するAの制約を使っていないので、上界にはさらに余裕がある。
 
 ## 3. 四行型と組み合わせて長さ36以上を閉じる
@@ -115,9 +117,9 @@ m≤38では全ての盤内の占有対の差は37以下である。
 ## 4. 長さ16..35の全不足行を排除する
 
 検証器:
-[`verification/scripts/q48_q6_exclusion.cpp`](verification/scripts/q48_q6_exclusion.cpp)。
+[`verification/scripts/q48_q6_exclusion.cpp`](../scripts/q48_q6_exclusion.cpp)。
 完了結果:
-[`verification/q48_q6_finite_exclusions.json`](verification/q48_q6_finite_exclusions.json)。
+[`verification/q48_q6_finite_exclusions.json`](../output/q48_q6_finite_exclusions.json)。
 
 対象行は上下反射で0または1にできる。
 各行について既存集合 \(A\subseteq\{0,\ldots,m-1\}\)、\(|A|\le4\) を全て列挙し、
@@ -219,7 +221,7 @@ m≥16では任意の極大安全集合が各行5石、合計20石となる。
 長さの区間は分割して実行してもよい。第3引数はAごとの探索状態上限である。
 
 ```bash
-g++ -O3 -std=c++17 research/verification/scripts/q48_q6_exclusion.cpp -o /tmp/q48_q6_exclusion
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q48_q6_exclusion.cpp -o /tmp/q48_q6_exclusion
 /tmp/q48_q6_exclusion 16 35 1000000 > /tmp/q48_q6_exclusions.jsonl
 ```
 
@@ -228,8 +230,8 @@ g++ -O3 -std=c++17 research/verification/scripts/q48_q6_exclusion.cpp -o /tmp/q4
 保存JSONは分枝順によって変わる訪問状態数・時間を省き、全列挙数と完了状態を保存した。
 
 円生成と差分安全性の独立監査:
-[`verification/scripts/geometry_q6_exclusion_review.cpp`](verification/scripts/geometry_q6_exclusion_review.cpp)、
-[`verification/geometry_q6_exclusion_review.json`](verification/geometry_q6_exclusion_review.json)。
+[`verification/scripts/geometry_q6_exclusion_review.cpp`](../scripts/geometry_q6_exclusion_review.cpp)、
+[`verification/geometry_q6_exclusion_review.json`](../output/geometry_q6_exclusion_review.json)。
 全三点組からの円生成とm=6..20で計2,030円が一致し、15,000個のランダムな追加に対して
 全円の直接検査と差分検査が一致した。うち781個の安全な追加では復元後の全点数も一致した。
 監査コードはアサートを無効にするビルドを拒否する。

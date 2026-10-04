@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 格子円の全中心最大値と、帯幅定理の独立監査
 
 2026-10-03。対象は退化しない円と整数格子点です。
@@ -101,18 +103,18 @@ A·(u²+v²) = B·u + C·v
 ### 再現と独立検算
 
 ```sh
-g++ -O3 -std=c++20 research/verification/scripts/theory_audit_20261003_circles.cpp -o /tmp/circle-audit
-/tmp/circle-audit 112 > research/verification/theory_audit_20261003_circles.json
-python research/verification/scripts/theory_audit_20261003_verify.py --census research/verification/theory_audit_20261003_circles.json --output research/verification/theory_audit_20261003_checks.json
+g++ -O3 -std=c++20 research/experiments/geometry/scripts/theory_audit_20261003_circles.cpp -o /tmp/circle-audit
+/tmp/circle-audit 112 > research/experiments/geometry/output/theory_audit_20261003_circles.json
+python research/experiments/geometry/scripts/theory_audit_20261003_verify.py --census research/experiments/geometry/output/theory_audit_20261003_circles.json --output research/experiments/geometry/output/theory_audit_20261003_checks.json
 ```
 
-[結果JSON](verification/theory_audit_20261003_circles.json)には全111サイズについて、
+[結果JSON](../output/theory_audit_20261003_circles.json)には全111サイズについて、
 両最大値を達成するアンカーと整数円方程式を収録した。
 独立した Python 検算は全 **222個**の達成例に盤内全点を直接代入し、点数と中心型を確認する。
 さらに n=2,…,8 では、左端アンカー削減を使わず**盤内の全三点組**から円を構成する別実装で両最大値を照合した。
 どちらも一致した。
 この独立な小盤照合は、大盤の全列挙をもう一度実行したという意味ではない。
-先に完了した [N=100 の結果](verification/theory_audit_20261003_circles_100.json)も保持した。
+先に完了した [N=100 の結果](../output/theory_audit_20261003_circles_100.json)も保持した。
 N=112 の再実行では列挙対象が拡大するが、重なる全99サイズの両最大値は一致した。
 
 ## 2. 帯幅定理の独立監査と法43
@@ -139,7 +141,7 @@ N=112 の再実行では列挙対象が拡大するが、重なる全99サイズ
 各ブロックの上界を足せば一般定理が得られる。
 中心や半径が非常に大きい円にもこの議論が適用される。
 
-[独立検算スクリプト](verification/scripts/theory_audit_20261003_verify.py)は
+[独立検算スクリプト](../scripts/theory_audit_20261003_verify.py)は
 主論文のスクリプトを import せず、剰余対の直接ループから同じ結論を得る。
 この法43による追加は、円の有限半径探索による不存在判定ではない。
 
@@ -226,7 +228,7 @@ M が奇数なら、一方の座標だけが奇数である。
 
 ### 4.2 全閾値に対する最小半径
 
-[分母3・4の既存定理](verification/round10-circle-denominator.md)と同じく
+[分母3・4の既存定理](../../original-claims/reports/round10-circle-denominator.md)と同じく
 
 ```
 N_m = min { ∏_{p≡1 (mod 4)} p^{e_p} : ∏(e_p+1)≥m }
@@ -280,11 +282,11 @@ m=1 については `M≥1` と、中心 `(1/6,0)`・半径 `1/6` の円で等�
 ### 4.3 独立な整数検算
 
 ```sh
-python research/verification/scripts/theory_audit_20261003_q6.py --output research/verification/theory_audit_20261003_q6.json
+python research/experiments/geometry/scripts/theory_audit_20261003_q6.py --output research/experiments/geometry/output/theory_audit_20261003_q6.json
 ```
 
 ノルム M≤100,000 の全ガウス整数を x,y 座標から直接列挙し、
 24個の原始中心剰余類について**2,400,000条件**を上の公式と比較した。すべて一致した。
 この範囲で達成される全閾値 m=1,…,16 について、最初の M も上の一般式に一致した。
-検算結果は [theory_audit_20261003_q6.json](verification/theory_audit_20261003_q6.json)。
+検算結果は [theory_audit_20261003_q6.json](../output/theory_audit_20261003_q6.json)。
 一般の m への結論は4.2節の証明によるもので、有限走査からの外挿ではない。

@@ -1,13 +1,15 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B504–B530 p_rand 残余 追撃
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B504–B530 残余 12 件
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B504–B530 残余 12 件
 （B504, B505, B507, B508, B510, B514, B520, B522, B523, B524, B528, B530）。
 スクリプト: scripts/round5_pgrand_followup.py
-データ: research/verification/round5_pgrand_followup.json
+データ: research/experiments/original-claims/output/round5_pgrand_followup.json
 
 前提:
 - 先行個票 `round5-batch-pgrand.md` は編集しない（本ファイルは追撃のみ）。
-- `round5_b401_del3.json` は**無効**（board_square_minus に整数 ID を渡したバグ）。再利用禁止。
+- `../output/round5_b401_del3.json` は**無効**（board_square_minus に整数 ID を渡したバグ）。再利用禁止。
 - `board_square_minus` は **(x,y) 座標 API**（`xy(i,n)=(i%n, i//n)` 変換必須）。
 - δ_K(7)=2 を確定事実として反映（B512/B513 より）。
 - n≤6 の計算は可。n=7 以上・p_rand 全計算は禁止。

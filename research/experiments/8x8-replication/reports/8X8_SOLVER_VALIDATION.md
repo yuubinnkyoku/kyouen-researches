@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 8×8 solver validation (pre-production)
 
 Freeze commit already recorded solver source identity.
@@ -10,7 +12,7 @@ No production required-root outcome was read or inspected.
 2. D4 outcome invariance on 8 transforms of one late-12 state: all **WIN**, memo-shared after first solve
 3. Fresh-process reproducibility (same input, two runs): **identical**
 4. `memo_power` ∈ {22, 24, 26} on late set: **identical outcomes**
-5. Geometry of validation roots: safe 5-stone / late safe states only; not drawn from `artifacts/8x8-o-required-roots.csv`
+5. Geometry of validation roots: safe 5-stone / late safe states only; not drawn from `research/experiments/solver-benchmarks/output/8x8-o-required-roots.csv`
 
 ## Non-production cost probe
 
@@ -20,11 +22,11 @@ to finish quickly; sharding still used for robustness and per-shard logs.
 
 ## Artifacts
 
-- `artifacts/8x8-solver-validation-input.csv`
-- `artifacts/8x8-solver-validation-late.csv`
-- `artifacts/val-solver-out-a.csv`
-- `artifacts/val-bruteforce.csv`
-- `artifacts/val-d4-out.csv`
-- `artifacts/val-solver-out-b.csv`
-- `artifacts/val-solver-out-c22.csv`
-- `artifacts/val-solver-out-c26.csv`
+- `research/experiments/solver-benchmarks/output/8x8-solver-validation-input.csv`
+- `research/experiments/solver-benchmarks/output/8x8-solver-validation-late.csv`
+- `research/experiments/solver-benchmarks/output/val-solver-out-a.csv`
+- `research/experiments/solver-benchmarks/output/val-bruteforce.csv`
+- `research/experiments/solver-benchmarks/output/val-d4-out.csv`
+- `research/experiments/solver-benchmarks/output/val-solver-out-b.csv`
+- `research/experiments/solver-benchmarks/output/val-solver-out-c22.csv`
+- `research/experiments/solver-benchmarks/output/val-solver-out-c26.csv`

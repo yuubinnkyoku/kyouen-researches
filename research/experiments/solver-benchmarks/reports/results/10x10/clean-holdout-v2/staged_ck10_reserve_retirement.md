@@ -1,3 +1,5 @@
+> **実験一次資料**：当時のpreregistration・分析・判定です。現在知識の唯一の正本は[knowledge](../../../../../../knowledge/README.md)です。
+
 # C-K10-asc reserve: retired before unblinding
 
 Status: **do not execute the frozen reserve cohort for a confirmatory solver-speedup claim.**
@@ -8,7 +10,7 @@ This decision is made without inspecting or generating reserve outcomes.
 
 The endpoint correction in `staged_ck10_reserve_prereg_amendment.md` fixed a real problem: a solver-speedup claim must be evaluated with the native parent solver and its shared memo, not by summing fresh child solves. That correction remains valid.
 
-However, the already-completed non-reserve mechanism analysis in `docs/10X10_LOSS_PROOF_COST_ANALYSIS.md` changes the expected value of running C-K10-asc itself:
+However, the already-completed non-reserve mechanism analysis in `research/experiments/solver-benchmarks/reports/10X10_LOSS_PROOF_COST_ANALYSIS.md` changes the expected value of running C-K10-asc itself:
 
 - native root ordering already selects a LOSS at median **1.12x** the cheapest-LOSS oracle;
 - native selected-LOSS median cost-rank is **2.0**;

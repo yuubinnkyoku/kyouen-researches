@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 通常版と misère 版の境界：合法点5個までは共通則、6個で初めて破れる
 
 2026-10-03。標準の「4点共円・共線を避けて1点ずつ置く」ゲームを扱う。
@@ -20,7 +22,7 @@
    0始まり座標の **D4{(0,0), (1,0), (2,2)}** に厳密一致する。8×8の証明34,665,160局面を独立検査した。
 
 数学一般での先取権を主張するものではない。既存の
-[B226記録](verification/round5-batch-b201-b230.md) が未確定としていた6×6以降を補い、
+[B226記録](../../original-claims/reports/round5-batch-b201-b230.md) が未確定としていた6×6以降を補い、
 このリポジトリで未整理だった局所構造と和の定理を検証可能にした結果である。
 
 ## 1. 値の定義と信頼境界
@@ -142,7 +144,7 @@ h(S)=\operatorname{mex}\{h(S+p):p\in L(S)\}
 全169型の最小禁止辺は **サイズ2,3,4だけ**であり、サイズ5,6を必要とする例外はない。
 四点辺を持つのは12型で、各型に四点辺はちょうど1本。残り157型は二点・三点辺だけである。
 全型の代表、軌道サイズ、最小禁止辺、子の値は
-[完全分類JSON](verification/game_structure_20261003_complexes.json) にある。
+[完全分類JSON](../output/game_structure_20261003_complexes.json) にある。
 各代表の720通りの頂点置換を Python で独立に展開し、軌道が互いに素で、すべて両 P で、
 合計69,940件になることを検査した。独立列挙で例外総数も69,940なので、この169型で全例外を尽くす。
 
@@ -192,7 +194,7 @@ S=\{(2,0),(0,2),(2,2),(3,2),(0,3)\}.
 すべてこの \(C_6\) 型である。両 P 局面全体は138個。
 6×6では両 P 局面全体が5,236個あり、そのうち合法点6個の424局面は169型のうち9型を実現する。
 内訳には \(C_6\) 型136局面と \(2P_3\) 型96局面が含まれる。
-座標証人と全内訳は [残余分類JSON](verification/game_structure_20261003_residuals.json) に保存した。
+座標証人と全内訳は [残余分類JSON](../output/game_structure_20261003_residuals.json) に保存した。
 
 ## 5. 通常値だけで misère の直和を解ける十分条件
 
@@ -285,7 +287,7 @@ S=\{(2,0),(0,2),(2,2),(3,2),(0,3)\}.
 全初手探索は84,870,165保存局面と496,988種類の小残局で完了した。
 **証明書では小残局の近道を通常の1手ずつの辺へすべて展開**したので、
 独立検査器は小残局キャッシュ、48bit順位、探索順序を信頼せずに結果を検査できる。
-[8×8結果JSON](verification/game_structure_20261003_eight.json) に全64初手ラベルと検証結果がある。
+[8×8結果JSON](../output/game_structure_20261003_eight.json) に全64初手ラベルと検証結果がある。
 
 従って既存の B226「標準正方形の空盤で両ルールの勝者が一致する盤がある」は、
 **8×8までには一致例がない**というところまで延びた。
@@ -298,18 +300,18 @@ S=\{(2,0),(0,2),(2,2),(3,2),(0,3)\}.
 リポジトリの根で次を実行する。C++17対応 g++ と Python 3.10以上を使う。
 
 ```bash
-python research/verification/scripts/game_structure_20261003_reproduce.py \
+python research/experiments/game-structure/scripts/game_structure_20261003_reproduce.py \
   --work-dir /tmp/kyouen-game-structure \
   --output-dir /tmp/kyouen-game-structure-results
 ```
 
-- [盤面探索器](verification/scripts/game_structure_20261003.cpp)：整数幾何、全局面 mex 対、D4圧縮 P/N。
-- [独立証明検査器](verification/scripts/game_structure_20261003_check.cpp)：元の4×4行列式の置換展開から
+- [盤面探索器](../scripts/game_structure_20261003.cpp)：整数幾何、全局面 mex 対、D4圧縮 P/N。
+- [独立証明検査器](../scripts/game_structure_20261003_check.cpp)：元の4×4行列式の置換展開から
   禁止集合を再生成。通常版と補助値の mex、終端値、P の全子、N の証人子を検査する。
-- [反鎖列挙器](verification/scripts/game_structure_20261003_complexes.cpp)：全最小禁止集合族を列挙する。
-- [独立 deletion/link 列挙器](verification/scripts/game_structure_20261003_complexes_check.cpp)：
+- [反鎖列挙器](../scripts/game_structure_20261003_complexes.cpp)：全最小禁止集合族を列挙する。
+- [独立 deletion/link 列挙器](../scripts/game_structure_20261003_complexes_check.cpp)：
   全合法集合族の包含対で別経路から全件数と値を照合する。
-- [再現・Python軌道検査](verification/scripts/game_structure_20261003_reproduce.py)：
+- [再現・Python軌道検査](../scripts/game_structure_20261003_reproduce.py)：
   全169型の互いに素な軌道と69,940例外の被覆、盤上の残余型も検査する。
 
 再帰辺ごとに占有石数が増えるので、証明検査で循環の仮定は不要。
@@ -321,23 +323,23 @@ python research/verification/scripts/game_structure_20261003_reproduce.py \
 ノード上限で停止した実行は UNKNOWN として扱われ、検証済み結果ファイルを生成しない。
 
 ```bash
-python research/verification/scripts/game_structure_20261003_eight_reproduce.py \
+python research/experiments/game-structure/scripts/game_structure_20261003_eight_reproduce.py \
   --work-dir /tmp/kyouen-eight-misere \
   --output /tmp/kyouen-eight-misere-result.json
 ```
 
-- [8×8専用探索器](verification/scripts/game_structure_20261003_eight.cpp)
-- [8×8独立検査器](verification/scripts/game_structure_20261003_eight_check.cpp)
-- [8×8再現runner](verification/scripts/game_structure_20261003_eight_reproduce.py)
+- [8×8専用探索器](../scripts/game_structure_20261003_eight.cpp)
+- [8×8独立検査器](../scripts/game_structure_20261003_eight_check.cpp)
+- [8×8再現runner](../scripts/game_structure_20261003_eight_reproduce.py)
 
 生の証明ファイル（7×7は70,066,089バイト、8×8は311,986,440バイト）はコミットしない。
-[盤面結果JSON](verification/game_structure_20261003_boards.json) にファイルサイズ、SHA-256、
+[盤面結果JSON](../output/game_structure_20261003_boards.json) にファイルサイズ、SHA-256、
 ソースの SHA-256、独立検査結果を保存している。8×8分は専用の
-[8×8結果JSON](verification/game_structure_20261003_eight.json) にあり、上の各コマンドで再生成できる。
+[8×8結果JSON](../output/game_structure_20261003_eight.json) にあり、上の各コマンドで再生成できる。
 
 通常のCIでは、9×9について1,000標本の合法手・対称性・組合せ順位と412小終盤を独立検査する。
 9×9空盤の本探索は実行しない。軽量検査だけを再現する場合は次を使う。
 
 ```bash
-python research/verification/scripts/check_game_structure_20261003.py --nine-only
+python research/experiments/game-structure/scripts/check_game_structure_20261003.py --nine-only
 ```

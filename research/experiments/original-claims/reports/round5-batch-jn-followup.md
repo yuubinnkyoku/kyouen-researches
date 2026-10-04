@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5 J_n 追撃（B312–B322 フォローアップ）
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B312〜B322（B317 除く）。
-前回個票: research/verification/round5-batch-jn.md
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B312〜B322（B317 除く）。
+前回個票: research/experiments/original-claims/reports/round5-batch-jn.md
 スクリプト: scripts/round5_jn_followup.py, scripts/round5_jn_followup2.py
-データ: research/verification/round5_jn_followup.json, round5_jn_followup2.json, round5_b231_n5_grundy.json, round5_jn_summary.json, round2_b321.json
+データ: research/experiments/original-claims/output/round5_jn_followup.json, round5_jn_followup2.json, round5_b231_n5_grundy.json, round5_jn_summary.json, round2_b321.json
 
 テーマ追撃: (1) J_6 空グラフの帰結を各命題へ反映（空真 / 前件外）。
 (2) B321/B322 の飽和開始層 nimber 穴を n≤6 完全 Grundy で再攻め。
@@ -17,7 +19,7 @@
 - 判定: **SUPPORTED**（前回: PARTIAL → 今回: SUPPORTED、n_inter 単一特徴で TD/非 TD 完全分離）
 - 今回の範囲: J_4 の P ペア 84 個を再構築し、TD 40 / 非 TD 44 を全数走査。
   近傍演算 n_inter=|N(a)∩N(b)|, n_union=|N(a)∪N(b)| を新規特徴として完全分類
-  （`scripts/round5_jn_followup2.py` → `round5_jn_followup2.json`）。
+  （`../scripts/round5_jn_followup2.py` → `../output/round5_jn_followup2.json`）。
 - 証拠: **n_inter 単独で完全分離**。TD: {5:16, 8:24}、非 TD: {4:12, 6:16, 7:16}。
   値集合 {5,8} ∩ {4,6,7} = ∅。n_union も完全（TD はすべて 16 = 全頂点被覆、
   非 TD は 14/15）だが、n_union=16 は全域支配の定義そのもの。
@@ -60,7 +62,7 @@
 ## B318 [構造] 追撃
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、因果機構を短定理で解決・補グラフ説は置換）
 - 今回の範囲: n=2..6 で「一石一様 nimber 定理」と「g(p)=0 ⟺ J 孤立」を完全検証
-  （`round5_jn_followup2.json` の one_stone_J）。既存 layer ヒストと整合。
+  （`../output/round5_jn_followup2.json` の one_stone_J）。既存 layer ヒストと整合。
 - 証拠: **定理（証明済）**: 任意の 2 石局面は合法（2 点では禁止 4 点組になり得ない）。
   よって全 2 石 nimber は「ある 1 石の子」として現れる。1 石が一様に g=h なら
   h = mex(子) は全 2 石値に現れない。
@@ -92,7 +94,7 @@
 - 判定: **SUPPORTED**（前回: PARTIAL → 今回: SUPPORTED、混在キー内で has1 規則が完全分離）
 - 今回の範囲: n=5 全 300 ペアの混在キー 2 群を完全走査。三石子ヒストグラム特徴
   （has0/has1, child_set, mex, min, max）の分離能を検査
-  （`round5_jn_followup.json` b320.mixed_detail, `round5_jn_followup2.json`）。
+  （`../output/round5_jn_followup.json` b320.mixed_detail, `../output/round5_jn_followup2.json`）。
 - 証拠: 混在キー（一石 g と距離が同一）は ((3,3),d²=16) の 8 ペア（P 4/非 P 4）と
   ((3,3),d²=10) の 16 ペア（P 8/非 P 8）。**この群内で
   「1 を含む三石子がある ⟺ P」が完全成立**（has1: P は全て true、非 P は全て false、
@@ -106,8 +108,8 @@
 
 ## B321 [全称・大胆] 追撃
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、k≥σ 全層へ強化・弱化 SUPPORTED）
-- 今回の範囲: n=2..5 は完全 Grundy 全層（n=5 は `round5_b231_n5_grundy.json` 151,394
-  状態を再利用、n=2..4 は再計算）。n=6 は `round2_b321.json` の σ 層完全ヒスト
+- 今回の範囲: n=2..5 は完全 Grundy 全層（n=5 は `../output/round5_b231_n5_grundy.json` 151,394
+  状態を再利用、n=2..4 は再計算）。n=6 は `../output/round2_b321.json` の σ 層完全ヒスト
   （layer_k=3, hist {0:5336,1:16,2:980,3:60,5:716,6:16,7:8,8:8}）を採用。
 - 証拠: σ 層欠落集合は n=2:{0}, n=3:{0}, n=4:{1,4}, n=5:∅, n=6:{4}。
   連続対 (j,j+1) は **全 n≤6 で 0 個**。
@@ -123,7 +125,7 @@
 ## B322 [全称・大胆] 追撃
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL、k≥σ 全層へ強化・弱化 SUPPORTED）
 - 今回の範囲: B321 と同じ完全 Grundy 層データで正の欠落の 2 冪性を全層検査。
-  n=6 は `round2_b321.json` の正の欠落 {4} を確認。
+  n=6 は `../output/round2_b321.json` の正の欠落 {4} を確認。
 - 証拠: σ 層の正の欠落は n=4:{1,4}={2⁰,2²}、n=6:{4}={2²}。n=2,3,5 は正の欠落なし。
   非 2 冪の正の欠落 **0 件**。
   **強化**: 飽和域 k≥σ の全層で非 2 冪の正の欠落 0。

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B349: 四点近似誤差の最小局面を完全分類
 
 作成: 2026-09-30。**B349原文SUPPORTED。**
@@ -53,7 +55,7 @@ d=2ならt=0,1の2型、d=3,4ならt=0の各1型となる。
 7×7で全9型を実現できた。これは最小合法点数5の上界も与える。
 「各型の最小盤」を主張してはいない。
 
-点IDはx+ny。[検算記録](round40_classification_verified.json)に各型のS・L・極小残余辺、
+点IDはx+ny。[検算記録](../output/round40_classification_verified.json)に各型のS・L・極小残余辺、
 全32拡張の安全性と完全版・近似版の全mexを保存した。
 幾何は探索と別の整数四点行列式で作り直し、禁止四点組と全曲線の占有数で安全性を照合。
 同型分類とmexにはC++探索の分類処理を流用していない。
@@ -81,8 +83,8 @@ d=2ならt=0,1の2型、d=3,4ならt=0の各1型となる。
 これは原文の近似と逆であり、round5の「最小7点」等は今回の問題の下界・最小値に使えない。
 今回初めて正しい近似、全盤の下界、全最小抽象型、その全型の格子実現を揃えた。
 
-    g++ -O3 -std=c++20 research/verification/scripts/round40_four_edge_types.cpp -o /home/yuubi/round28_n7/round40_search
-    /home/yuubi/round28_n7/round40_search 7 research/verification/round40_n7_four_types.json
-    python research/verification/scripts/round40_classification.py
+    g++ -O3 -std=c++20 research/experiments/original-claims/scripts/round40_four_edge_types.cpp -o /home/yuubi/round28_n7/round40_search
+    /home/yuubi/round28_n7/round40_search 7 research/experiments/original-claims/output/round40_n7_four_types.json
+    python research/experiments/original-claims/scripts/round40_classification.py
 
 同じ探索をn=4,5,6でも実行済み。原文の採用根拠は有限範囲の傾向ではなく、上の完全分類証明と実現証人である。

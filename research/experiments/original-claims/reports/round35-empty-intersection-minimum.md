@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B524: 基数最小の反転解除族でも共通点は空
 
 作成: 2026-09-30。**B524原文SUPPORTED、B523原文REFUTED。**
@@ -33,15 +35,15 @@ B523の共有三点という要求は、基数最小族の共通部分が空な�
 なおround19の別の三組証人でも共通部分は一点だったため、B523の反証は既に得られていた。
 今回の新しい強い成果は、**共通点なしの族を基数3まで縮め、B524の最小性の留保を閉じたこと**である。
 
-[探索器](scripts/round35_empty_intersection_search.cpp)は整数幾何から全194組を生成し、
+[探索器](../scripts/round35_empty_intersection_search.cpp)は整数幾何から全194組を生成し、
 固定seedの標本探索で候補を発見した。これは全三組族の分類ではない。
-存在証明に必要なこの一族については、[検算器](scripts/round35_minimum_family_verify.py)が幾何を
+存在証明に必要なこの一族については、[検算器](../scripts/round35_minimum_family_verify.py)が幾何を
 生成し直して上記全域mex照合を行った。
 
-    python research/verification/scripts/round35_minimum_family_verify.py
+    python research/experiments/original-claims/scripts/round35_minimum_family_verify.py
 
-- [発見記録](round35_empty_intersection_search.json)
-- [全8部分族の値・勝ち手・全局面一致記録](round35_minimum_family_verified.json)
+- [発見記録](../output/round35_empty_intersection_search.json)
+- [全8部分族の値・勝ち手・全局面一致記録](../output/round35_minimum_family_verified.json)
 
 B521の原文「4×4の全二組解除でも後手勝ち」は、同じround19の全域下界そのものなので、
 原文索引ではその報告を根拠にSUPPORTEDとして採用した。新規探索結果とは数えない。

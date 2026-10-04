@@ -1,15 +1,17 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round4: 担当グループ b002-b091（45件）
 
-対象: `research/hypothesis-bank-2026-09-27.md` の
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md` の
 B002, B007, B008, B009, B010, B016, B020, B021, B022, B023, B024, B029, B031, B032,
 B034, B035, B037, B039, B040, B042, B043, B045, B047, B050, B054, B058, B059, B060,
 B063, B065, B066, B067, B069, B070, B074, B079, B081, B082, B083, B084, B085, B088,
 B089, B090, B091 の計 45 件。
 
-方法: WSL2 Ubuntu / g++ 13.3.0。共有コア `research/verification/scripts/kc_core.h` を
+方法: WSL2 Ubuntu / g++ 13.3.0。共有コア `scripts/research/kc_core.h` を
 `#include` して使用。すべての計算は**整数演算のみ**（禁止4点組は整数行列式
-`det[x²+y², x, y, 1] = 0`）。スクリプト: `research/verification/scripts/round4_b002.cpp`。
-データ: `research/verification/round4_b002.json`（生出力 `round4_b002.raw`）。
+`det[x²+y², x, y, 1] = 0`）。スクリプト: `research/experiments/original-claims/scripts/round4_b002.cpp`。
+データ: `research/experiments/original-claims/output/round4_b002.json`（生出力 `../output/round4_b002.raw`）。
 
 （個票は逐次追記する。）
 
@@ -126,7 +128,7 @@ B089, B090, B091 の計 45 件。
   前回と状況が変わらない）
 - 今回の範囲: n=1..6 の**独立完全計算**（既知列の再発見。禁止事項により SUPPORTED にはしない）
   + n=7, 8, 9, 10 の既知確定事実。n=11 以降は不在。
-- 証拠: 勝敗列 n=1..10 = `F F F S F F S S F S`（`PROTOCOL.md` の確定表）。
+- 証拠: 勝敗列 n=1..10 = `F F F S F F S S F S`（`../../../archive/claim-audit-history/PROTOCOL.md` の確定表）。
   本章の完全計算は n=1..6 の **F,F,F,S,F,F** を独立に再現した（一致は自己検証明で、
   新規証拠ではない）。先手勝ち盤 {1,2,3,5,6,9}・後手勝ち盤 {4,7,8,10} の
   10 盤中 6 対 4 の混在は確認される。
@@ -170,7 +172,7 @@ B089, B090, B091 の計 45 件。
   `J_components_all = 1`、`J_component_sizes = [16]`、
   `J_components_nonisolated = 1`、`J_bipartite = false`。
   すなわち **J_4 は 16 頂点 84 辺・1 成分で連結**。これは
-  `batch01_jgraph.json` `b016_j4`（components=[16], connected=true）の
+  `../output/batch01_jgraph.json` `b016_j4`（components=[16], connected=true）の
   **独立再計算による完全一致**であり、自己検証明として確度を上げた。
   同時に `J_bipartite = false` という新数値（16 頂点に奇数サイクルが存在）を得た。
 - 証拠（他盤での統制比較）: n=5 は `J_edges = 20`・非孤立 16 頂点・1 成分だが
@@ -191,7 +193,7 @@ B089, B090, B091 の計 45 件。
 - 証拠: `g2_hist = {0: 20, 1: 208, 2: 72}`（合計 300 = C(25,2)）、
   `J_edges = 20`、`J_degree_hist = {0: 9, 2: 12, 4: 4}`、
   `J_nonisolated = 16`、`J_components_nonisolated = 1`、`J_bipartite = false`。
-  `batch01_jgraph.json` の `n5_verify_loss_pairs = {computed:20, known:20, equal:true}` と
+  `../output/batch01_jgraph.json` の `n5_verify_loss_pairs = {computed:20, known:20, equal:true}` と
   **独立に完全一致**した（自己検証明）。
 - 新規事実: 本計算は `J_bipartite = false` を**独立に**確認した。すなわち J_5 の
   16 頂点非孤立部分は二部グラフではなく**奇数サイクルを持つ**。B014 が主張する
@@ -204,7 +206,7 @@ B089, B090, B091 の計 45 件。
 
 ## B021 [全称・大胆] 飽和開始は 4 石以内（`n≥4` で `σ_n ≤ 4`）
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。ただし n≤6 の σ_n を
-  **完全 Grundy 計算から独立に再導出**し、既存 `round2_b321.json` と一致を確認）
+  **完全 Grundy 計算から独立に再導出**し、既存 `../output/round2_b321.json` と一致を確認）
 - 今回の範囲: n=1..6 の全局面 Grundy 層プロファイル `M_n(k) = max_{|S|=k} g(S)`
   と `σ_n = min{k : M_n(k) = K_n − k}`（`full_n*` の `layers_k_maxg_count` / `sigma_n`）。
 - 証拠（**完全再計算による独立再導出値**）:
@@ -261,7 +263,7 @@ B089, B090, B091 の計 45 件。
   同じく `g(∅) = 0` が確定しており、補題から 64 点すべてで `g({p}) ≠ 0`。
   **D4 軌道による削減も要らない**（軌道数 8 で計算する価値がない。勝敗分類は
   軌道分割とは独立に決まる）。スクリプトは n=8 の D4 点軌道 8 個と軌道サイズを
-  参考出力している（`round4_firstmoves.json` の `n8_measurement`）。
+  参考出力している（`../output/round4_firstmoves.json` の `n8_measurement`）。
 - **n=8 の完全 Grundy は到達不能**（理由も実測した）。n=8 の n² 点は 64 点で uint64 に
   収まるが、状態空間は「全安全部分集合の総数」であり、K_8=15 でも膨大。
   本計算は n=8 の安全集合をサイズ 6 まで全列挙して成長率を実測した
@@ -298,7 +300,7 @@ B089, B090, B091 の計 45 件。
   そのまま維持される（本節の外でこれらを撤回した記載は無い）。
 - 副産物として得られた正の知見: n=7 の安全集合数 ≥ 1.34×10^8 という**実測値**は、
   n=7 / n=8 の完全再帰が不���能であることの定量的な証拠になる
-  （`round4_n7_layers.json` の `estimate_correction`）。
+  （`../output/round4_n7_layers.json` の `estimate_correction`）。
 
 **使えた計算資源**: n=2..6 の完全 Grundy（既存 Part 1 の 5,081,288 状態）と、
 新規の n=4,5 の `T*(S)` / `WFT(S)` 全数計算（`round4_tstar.cpp`、6.9 秒 / 28 MB）。
@@ -332,7 +334,7 @@ B089, B090, B091 の計 45 件。
 
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。障害を定量化した）
 - 今回の範囲: n=8 の安全集合をサイズ 2 まで全列挙し、状態空間の下から 3 層を実測
-  （`round4_n7_layers.json` の `n8_partial`）。`F_8 = 14564` を独立再計算。
+  （`../output/round4_n7_layers.json` の `n8_partial`）。`F_8 = 14564` を独立再計算。
 - 証拠: n=8 は 64 点で `uint64` に**ちょうど収まる**ため盤表現の障害はない。
   実測した k=0,1,2 層は `1 + 64 + (C(64,2) − 禁止する 2 点組)` で、
   k=2 だけで 2016 _minus_ 程度。**問題は盤の表現ではなく状態数**である。
@@ -719,7 +721,7 @@ B089, B090, B091 の計 45 件。
   本章では定義を採らず、**最小型での構成を確認した**うえで
   「より豊かな型でも n をまたいで一致するか」は未確認、とした。
 - 残った障害: **「非自明」の操作的定義**。Connectivity 性与 3/4 点辺の有無で
-  答えが変わる。n=4 と n=5 の具体的な `R` データ（`batch06_components.json` 等）は
+  答えが変わる。n=4 と n=5 の具体的な `R` データ（`../output/batch06_components.json` 等）は
   既存だが、本章では照合していない。
 
 ## B063 [構造] 四石以降で初めて現れる競合グラフの最小型がある
@@ -727,7 +729,7 @@ B089, B090, B091 の計 45 件。
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。
   **命題の「ある固定グラフ H」という存在 quantifiable 条件を整理した**）
 - 今回の範囲: 命題の構造の解析。n≤5 の `P(S)` 型インベントリは既存
-  （`batch04_graph.json`）だが照合のみ、新規計算なし。
+  （`../output/batch04_graph.json`）だが照合のみ、新規計算なし。
 - 証拠（命題の整理）: 命題は「ある固定グラフ H は、どの盤の三石局面にも
   **誘導部分グラフとして**現れず、四石局面には現れる」、すなわち
   ∃H  ∀n  ∀S (|S|=3 ⟹ S ↛ H)  ∧  ∃n ∃S (|S|=4 ∧ S ⊇ H) を主張する。
@@ -739,7 +741,7 @@ B089, B090, B091 の計 45 件。
   **三角形もパスも inducered含まない**ことが必要になる。
 - 判定が INCONCLUSIVE の理由: 上記の整理は命題の**射程を大幅に狭める**（`H` は
   4 頂点以下にしか選べない）は实质的な成果だが、**実際にその `H` が存在するか**を
-  確認していない。既存データ（`batch04_graph.json` の k=3 と k=4 の型集合の差）は
+  確認していない。既存データ（`../output/batch04_graph.json` の k=3 と k=4 の型集合の差）は
   「k=4 で新規な**全体グラフ**が現れる」ことを示すが、命題が要求するのは
   **誘導部分グラフ**であり、前回メモが既に「誘導部分グラフ版は未証明对她的」と
   指摘している通り、この橋渡しが未了。
@@ -770,7 +772,7 @@ B089, B090, B091 の計 45 件。
   観察に過ぎず、本命題の核心は **`P(S)` 空 = 極大 = `g = 0`** の一行にある。
 - 残った障害: なし。ただし**命題の `P(S)` の定義**が「合法手の集合」であることを
   前提にしており、もし `P(S)` が「禁止される手」や「勝敗維持の手」の別の意味なら
-  結論は変わる。既存ドキュメント（`batch04_graph.json` の `b065` 記録）では
+  結論は変わる。既存ドキュメント（`../output/batch04_graph.json` の `b065` 記録）では
   `P(S)` は「残余 2 点制約のグラフ」であり、`P(S) = ∅` は「**2 点制約がない**」を
   意味する。**この定義では命題は「2 点制約なしで g ≥ 4」で、我々の棄却は
   適用されない**。

@@ -1,12 +1,17 @@
-# 研究資料の入口
+# 共円ゲーム研究の入口
 
-現在の結論は [knowledge](knowledge/README.md) を正本とする。
-研究は停止中。今回の移行では新しい数学的探索を行わない。
+現在成立する命題、計算結果、反証、未解決問題、検証境界の唯一の正本は[knowledge/items](knowledge/README.md)です。
+K番号とaliasは正本を指す識別子であり、旧資料のラベルを現在のstatusとして採用しません。
 
-- `knowledge/items/`: 命題、有限結果、方式、反証、未解決の現在形
-- `knowledge/generated/`: 項目から生成する索引・関係・解決状況
-- `verification/`, `exploration/`, `../night-research/`: 根拠・検証・過去の研究作業
-- `../experiments/`: 既存の再現可能な実験資産
-- `log/`: 今後の時系列記録の置き場所（既存ログは今回は移動しない）
+| 目的 | 所在 |
+|---|---|
+| 現在の結論・未解決・検証境界 | [knowledge](knowledge/README.md) |
+| 再現手順・コード・入力・出力・実行条件 | [experiments](experiments/README.md) |
+| 発見順・判断・失敗・引き継ぎ | [log](log/README.md) |
+| 旧計画・supersededなまとめ・当時の監査 | [archive](archive/README.md) |
+| 現在有効な使い方・仕様・解説 | [docs](../docs/README.md) |
+| 公開・横断集計のmachine-readable result | [results](../results/README.md) |
 
-[移行記録](MIGRATION.md)に出典の役割、監査上の差異、残件をまとめる。
+experiment・log・archiveの数学的記述は当時の一次資料です。現在の結論の正本として並行更新しません。
+共有solver/verifierはcpp・scripts・rustに置き、実験ごとに複製しません。
+構造移行の経緯は[MIGRATION](MIGRATION.md)を参照してください。

@@ -1,12 +1,14 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 探索セッション記録 — research/explore-unknown-facts-20260925-0034
 
-非自明な事実の探索ログ。発見の本体は `research/findings.md` の F-K 以降を参照。
+非自明な事実の探索ログ。発見の本体は `research/archive/hypothesis-ledgers/findings.md` の F-K 以降を参照。
 
 ## 実施した探索
 
 | # | 主題 | 成果 |
 |---|---|---|
-| 1 | 既知棚卸し | night-research CYCLE1–9、K_n、勝敗列、最大配置 |
+| 1 | 既知棚卸し | research/experiments/structural-discovery/output CYCLE1–9、K_n、勝敗列、最大配置 |
 | 2 | 禁止4点組の線/円分解 | forbidden = Σ C(\|L\|,4)+Σ C(\|C\|,4) が公開値と一致 (F-L) |
 | 3 | 円上格子点の数論 | 2平方和の奇表現数で説明、n=12–24 で 16 点の高原 (F-K) |
 | 4 | 暫定公式の反例 | 4(⌊n/4⌋+1) は n=16 で偽 (F-N) |
@@ -21,9 +23,9 @@
 ## 実装
 
 - `scripts/analysis/explore_*.py` — 各探索
-- `night-research/maximal_spectrum_enum.cpp` — 極大全数列挙
-- `night-research/list_maximal_size.cpp` — 指定サイズ極大の一覧
-- `research/exploration/exploration_report*.json` — 生データ
+- `research/experiments/structural-discovery/scripts/maximal_spectrum_enum.cpp` — 極大全数列挙
+- `research/experiments/structural-discovery/scripts/list_maximal_size.cpp` — 指定サイズ極大の一覧
+- `research/experiments/fact-discovery/output/exploration_report*.json` — 生データ
 
 ## 未完了・次にやること
 

@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B388の一般証明: 遠方の禁止領域、方向別漸近、円列挙を要しない脱出点
 
-作成: 2026-09-28。原文: [B388](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-28。原文: [B388](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 **判定: SUPPORTED（一般証明）。**
 
 有限の非空な安全集合S⊂Z²を固定する。禁止点はS外で、Sへ追加すると共円・共線四点ができる点。
@@ -131,8 +133,8 @@ Bを上下左右へ整数r≥1だけ拡張した矩形の外周には
 
 ## 5. 再現可能な検算
 
-実行: `python research/verification/scripts/round9_external_rays.py`。
-[コード](scripts/round9_external_rays.py)、[データ](round9_external_rays.json)。
+実行: `python research/experiments/original-claims/scripts/round9_external_rays.py`。
+[コード](../scripts/round9_external_rays.py)、[データ](../output/round9_external_rays.json)。
 
 水平三点、傾き1/2の三点、非共線三点、放物線の六点、7×7最大配置のA/B代表で確認した。
 

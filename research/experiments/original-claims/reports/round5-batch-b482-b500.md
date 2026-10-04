@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B482–B500（統計残余・三角形と nimber・相関）
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B482, B484–B490, B494–B496, B499–B500。
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B482, B484–B490, B494–B496, B499–B500。
 スクリプト: scripts/round5_b482_b500.py（新規。bit 最適化特徴量 + n=3,4,5 全状態 + 到達確率 DP）
-データ: research/verification/round5_b482b500.json
+データ: research/experiments/original-claims/output/round5_b482b500.json
 
 **計算範囲の共通前提**: `batch03_cache.pkl` の n=3（298）, n=4（5,811）, n=5（**151,394**）全状態に
 特徴量を再計算。P(S) 三角形数・連結成分・b 統計・u gain・μ（最小残手）・h（最大残手）・

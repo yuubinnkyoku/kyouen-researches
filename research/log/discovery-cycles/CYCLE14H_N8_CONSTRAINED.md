@@ -1,3 +1,5 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 14H — n=8 K=15 constrained first witnesses (SAMPLE)
 
 Tool: `cycle8_b_maxsafe.exe first 8 15 …` node-capped **incomplete** counts.
@@ -40,4 +42,4 @@ Constrained `first` runs produced 6 distinct K=15 masks
 ## Artifacts
 - this note
 - `results/cycle8_h_n8_sample.json`
-- `night-research/CYCLE8_11_MAIN_RESULT.md`
+- `research/log/discovery-cycles/CYCLE8_11_MAIN_RESULT.md`

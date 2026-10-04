@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B558: 二次幅の放物線AP候補と、行間隔39以下の厳密検証
 
 作成: 2026-09-28。B558の判定は **PARTIALのまま**。
-原文: [第2仮説バンク](../hypothesis-bank-round2-2026-09-27.md)。
+原文: [第2仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 既存の全wに対するO(w³)証明は[round4-ap-construction.md](round4-ap-construction.md)。
 
 今回は、全wに対するO(w²)の候補を明示し、四点共線を一般に排除した。
@@ -136,10 +138,10 @@ gcd(ad−1,a²)=1なのでa²∣dとなり、a≥2、0<|d|≤2に反する。
 再現:
 
 ```text
-python research/verification/scripts/round6_ap_parabola.py --span 39 --coefficient 2
+python research/experiments/original-claims/scripts/round6_ap_parabola.py --span 39 --coefficient 2
 ```
 
-[コード](scripts/round6_ap_parabola.py)、[結果](round6_ap_parabola_a2_span39.json)。
+[コード](../scripts/round6_ap_parabola.py)、[結果](../output/round6_ap_parabola_a2_span39.json)。
 
 1≤ℓ≤39の全行オフセットを列挙し、同じ行ではjを厳密昇順にして重複点を除く。
 共通のj最小値を0へ移しても円・直線性は変わらないので、min j=0の組合せで代表させる。

@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B401-B600（未解決担当）
 
-対象: research/hypothesis-bank-round2-2026-09-27.md の B401〜B600 のうち未解決。
+対象: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md の B401〜B600 のうち未解決。
 スクリプト: scripts/round5_b401_*.py
-データ: research/verification/round5_b401_*.json
+データ: research/experiments/original-claims/output/round5_b401_*.json
 
 担当: B401–B600 未解決約86件。優先順:
 1. B504–B530（p_rand / T* / WFT 残）
@@ -41,8 +43,8 @@
 ## B507 [構造] hを固定したPの最大ランダム勝率には明示的な上限列がある
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。n=4..7 の有限包絡線を確定、閉じた式は未導出）
 - 前回の一手: 「表はあるが閉じた上限列が未導出」
-- 今回の範囲: 既存データ `round3_b501_pgrand_n5b.json`（n=2..5 の P_max_by_maxrem）、
-  `round3_b502_pgrand_n6.json`（n=6）、`round4_b501_prand_n7.json`（n=7 レベル別）を集計。
+- 今回の範囲: 既存データ `../output/round3_b501_pgrand_n5b.json`（n=2..5 の P_max_by_maxrem）、
+  `../output/round3_b502_pgrand_n6.json`（n=6）、`../output/round4_b501_prand_n7.json`（n=7 レベル別）を集計。
   加えて新規 n=5 全列挙で (max_safe−k) による P_max も併記。
 - 証拠: 局所残り最大手数 h による P の p_rand 最大（既存データの max_rem 約定）:
 
@@ -105,7 +107,7 @@
   - 標準族: g(∅)=0（後手勝ち）。**base 確認済み**。
   - **tested = 18,721 = C(194,2)、complete = true、flips = 0**。
   - どの 2 つの禁止四点を同時に解除しても空盤勝者は後手のまま。
-  - 実装: `scripts/round5_b401_quads.py`、データ: `round5_b401_quads.json`。
+  - 実装: `../scripts/round5_b401_quads.py`、データ: `round5_b401_quads.json`。
   - 実測 455 秒（ペア 1 解 ≒ 24 ms）。
 - 残った障害: **なし**（4×4・2 点解除という主張の範囲では完全決着）。
   n≥5 や 3 点解除は別件（B522）。
@@ -139,7 +141,7 @@
   - **B521 完走**: 全 18,721 ペアで反転 0 → **δ_quad(4×4) ≥ 3** が確定。
   - **exact-3 トリプル 3,356 件: flips = 0**（85 秒）。
   - 円束 70 四点解除で反転あり（既知）→ **3 ≤ δ_quad(4×4) ≤ 70**。
-  - データ: `round5_b401_quads3.json`、`n_keys3_tested=3356, n_flips=0`。
+  - データ: `../output/round5_b401_quads3.json`、`n_keys3_tested=3356, n_flips=0`。
 - 残った障害: 全 C(194,3)=1,181,404 トリプルのうち 3,356（**0.28%**）のみ。
   ペアの和集合レベルで合法状態が増えるトリプル（例: bucket1[c]≠∅）は
   未走査のまま。7.9 時間相当の完全走査は今回時間外。
@@ -156,7 +158,7 @@
   - よって **δ_K(4) ≥ 4**（前回の ≥3 から 1 強化）。
   - 副産物: 全 3 点削除でも勝者が動かない → 4×4 の勝者反転には 4 点以上の
     削除か、2 点の特定ペア（既知 12 対）が必要。
-  - データ: `round5_b401_del3.json`（642 秒）。
+  - データ: `../output/round5_b401_del3.json`（642 秒）。
 - 残った障害: n=5 では singles のみ（δ_K(5)≥2）。n=5 の 2 点 300 対・3 点は未走査。
   「n≥4 で δ_K≥3」の全称は n=4 でより強い ≥4 が立ったが、n=5,6 の確認が残る。
   また δ_K(4)=4 か 5 か ∞ か（削除で K が下がる集合が存在するか）は未確定。
@@ -197,7 +199,7 @@
     いずれも対数凹。n=4 は level_sizes と**完全一致**（実装検査済み）。
   - **n=3: 298/298 対数凹、違反 0**。
   - **n=4: 5,811/5,811 対数凹、違反 0**。
-  - データ: `round5_b401_logconc.json`、`scripts/round5_b401_logconc.py`。
+  - データ: `../output/round5_b401_logconc.json`、`../scripts/round5_b401_logconc.py`。
 - 残った障害: n≥5 未検証（n=5 は 151k 状態 × is_safe O(F) で純 Python が時間外）。
   「全安全局面」の全称は n≤4 で完全支持だが、n=5 で反例が出る可能性は残る。
   C++ 版 (`kc_core.h`) での n=5,6 全走査が次の一手。
@@ -286,7 +288,7 @@
   サイズ 2 は禁止四点（4 点）を含めないので、主張（サイズ≥4）は n=4 では**空虚**。
 - 証拠:
   - n=3: 最小反転は 3 点 8 組（行 3・列 3・対角 2）。すべて**共線**。
-  - n=4: 最小反転は 2 点 12 対。サイズ 3 は 560 組すべて非反転（`round5_b401_del3.json`）。
+  - n=4: 最小反転は 2 点 12 対。サイズ 3 は 560 組すべて非反転（`../output/round5_b401_del3.json`）。
   - 「サイズ≤3 の最小反転が全て直線・円上」は n=3 で成立、n=4 はサイズ 2 で四点組を含みようがない。
 - 残った障害: サイズ≥4 の最小反転集合が存在する n が未発見。n=5 で
   δ_out(5)≥3 のときサイズ 3 の最小反転が現れ、その共円性を検査できる。
@@ -354,7 +356,7 @@
 ## B555 [漸近] 部分勝ちとなる三行盤の勝ち初手密度は1/3へ近づく
 - 判定: **PARTIAL**（前回: INCONCLUSIVE → 今回: PARTIAL。1/3 収束の否定的証拠を弱化版に整理）
 - 前回の一手: 「g0≠0 でも m=9/10 で 0.370/0.867 と振動。1/3 予想の前提拒否が妥当」
-- 今回の範囲: 既存 `round2_b531.json` の三行盤 m=3..10 完全 Grundy を再整理し、
+- 今回の範囲: 既存 `../output/round2_b531.json` の三行盤 m=3..10 完全 Grundy を再整理し、
   「部分勝ちのみ」の密度列と B554 帯からの逸脱量を明示。
 - 証拠:
   - 部分勝ち（g0≠0）密度: m=3,4,6,7,9,10 → **1.0, 0.5, 0.667, 0.524, 0.370, 0.867**。
@@ -422,7 +424,7 @@
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。小盤の最大跳び幅を明示）
 - 前回の一手: 「同じ n,k で隣接 S,T の |g(S)−g(T)| を盤列で無限に大きく」
 - 今回の範囲: 既存の交換グラフデータから最大 |Δg| を確認する方針。n≤5 の完全 g は
-  既存（`round3_b501_pgrand_n5b.json` 等）だが、隣接対の Δg 分布は今回未抽出。
+  既存（`../output/round3_b501_pgrand_n5b.json` 等）だが、隣接対の Δg 分布は今回未抽出。
 - 証拠: なし（今回の新規数値なし）。n=4 の最大 g は 5 程度、n=5 で 6 程度と
   小盤では跳び幅自体が小さい。
 - 残った障害: 「任意に大きく」は無界命題。n≤6 の Δg 最大を測っても
@@ -485,12 +487,12 @@
 
 ## 新規計算・データ
 
-- `scripts/round5_b401_prand_stats.py` / `round5_b401_prand_stats.json` — n=4,5 の p_rand・\|W\|・B504/505/508/510
-- `scripts/round5_b401_quads.py` / `round5_b401_quads.json` — 4×4 全ペア禁止解除（B521）
-- `scripts/round5_b401_quads3.py` / `round5_b401_quads3.json` — exact-3 トリプル（B522）
-- `scripts/round5_b401_del3.py` / `round5_b401_del3.json` — 4×4 全 3 点削除（B512）
-- `scripts/round5_b401_logconc.py` / `round5_b401_logconc.json` — f_S 対数凹（B561/B563）
-- `scripts/round5_b401_b482.py` / `round5_b401_b482.json` — 三角形集中度（B482、n=4 のみ完走）
+- `../scripts/round5_b401_prand_stats.py` / `../output/round5_b401_prand_stats.json` — n=4,5 の p_rand・\|W\|・B504/505/508/510
+- `../scripts/round5_b401_quads.py` / `round5_b401_quads.json` — 4×4 全ペア禁止解除（B521）
+- `../scripts/round5_b401_quads3.py` / `../output/round5_b401_quads3.json` — exact-3 トリプル（B522）
+- `../scripts/round5_b401_del3.py` / `../output/round5_b401_del3.json` — 4×4 全 3 点削除（B512）
+- `../scripts/round5_b401_logconc.py` / `../output/round5_b401_logconc.json` — f_S 対数凹（B561/B563）
+- `../scripts/round5_b401_b482.py` / `../output/round5_b401_b482.json` — 三角形集中度（B482、n=4 のみ完走）
 
 ## 最重要の新知見
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 四行・六点版：主上界36と、独立検証による追加上界34
 
 作成: 2026-10-03。
@@ -18,10 +20,10 @@
 その主証明は本稿第1〜5節の上界36と、長さ16〜35の独立した完全排除、長さ15の証人を使用する。
 第7〜9節の追加改善は、主証明の依存関係を増やさない補足として記録する。
 
-- 主検証器: [`verification/scripts/q46_pair_upper_bound.cpp`](verification/scripts/q46_pair_upper_bound.cpp)
-- 決定的出力: [`verification/q46_pair_upper_bound.json`](verification/q46_pair_upper_bound.json)
-- 単純な仮説への反例: [`verification/scripts/q46_pair_counterexamples.py`](verification/scripts/q46_pair_counterexamples.py)、
-  [`verification/q46_pair_counterexamples.json`](verification/q46_pair_counterexamples.json)
+- 主検証器: [`verification/scripts/q46_pair_upper_bound.cpp`](../scripts/q46_pair_upper_bound.cpp)
+- 決定的出力: [`verification/q46_pair_upper_bound.json`](../output/q46_pair_upper_bound.json)
+- 単純な仮説への反例: [`verification/scripts/q46_pair_counterexamples.py`](../scripts/q46_pair_counterexamples.py)、
+  [`verification/q46_pair_counterexamples.json`](../output/q46_pair_counterexamples.json)
 
 ## 1. 三行円を数えればよい理由
 
@@ -182,11 +184,11 @@ $C$ 行の整数点を頂点とし、式(2)の $C$ 対ごとに辺を張る。
 ## 7. 左右反射を使わない独立全検査
 
 独立検証器
-[`q46_pair_independent_bound.cpp`](verification/scripts/q46_pair_independent_bound.cpp) は、
+[`q46_pair_independent_bound.cpp`](../scripts/q46_pair_independent_bound.cpp) は、
 各形状について正規化した $B$ の全766,480集合を調べる。
 左右反射の代表化を使わないため、五つの形状を合わせて **3,832,400集合** の検査となる。
 保存出力は
-[`q46_pair_independent_bound.json`](verification/q46_pair_independent_bound.json) である。
+[`q46_pair_independent_bound.json`](../output/q46_pair_independent_bound.json) である。
 
 弦長候補は式(1)の実装を共有せず、二つの水平対を通る円の整数係数を求め、
 対象行での判別式が整数平方になるかを調べて生成する。
@@ -213,7 +215,7 @@ $C$ 行の整数点を頂点とし、式(2)の $C$ 対ごとに辺を張る。
 
 ### 7円を支える外部集合は14候補だけ
 
-[`q46_pair_independent_star.cpp`](verification/scripts/q46_pair_independent_star.cpp) は、
+[`q46_pair_independent_star.cpp`](../scripts/q46_pair_independent_star.cpp) は、
 両形状でそれぞれ全766,480個の $B$ を調べる。
 候補円の総数が7未満の $B$ は除外できる。残るグラフについて、
 各連結成分内の2,3,4,5頂点部分集合の重みは、それぞれ
@@ -228,7 +230,7 @@ $C$ 行の整数点を頂点とし、式(2)の $C$ 対ごとに辺を張る。
 これらを全列挙すると、前者の形状で4候補、後者で10候補、合計14候補だけが残る。
 
 全候補の $B,C$、対象行の辺、成分数を
-[`q46_pair_independent_star.json`](verification/q46_pair_independent_star.json) に保存した。
+[`q46_pair_independent_star.json`](../output/q46_pair_independent_star.json) に保存した。
 この有限リストの完全性は、前段の全 $B$ 走査と成分別の部分集合列挙による。
 
 ### 7個の遮断空点には、中心が4個以下の星の森が必要
@@ -247,7 +249,7 @@ $B,C$ を5点へ補った場合も、元の配置が7個を塞ぐには元の7�
 ### 有理数幾何と対象集合の独立監査
 
 さらに
-[`q46_pair_star_audit.py`](verification/scripts/q46_pair_star_audit.py) は、
+[`q46_pair_star_audit.py`](../scripts/q46_pair_star_audit.py) は、
 14候補の対象辺を有理数の根積から再生成し、各円の6点に対する全四点行列式、
 合計 **1,470個**が0になることを検査した。
 次に、対象辺の頂点から4点以下を選ぶ **18,020通り**を全列挙し、遮断空点を直接数えた。
@@ -259,7 +261,7 @@ $B,C$ を5点へ補った場合も、元の配置が7個を塞ぐには元の7�
 | (1;0,3) | 10 | 全て4 |
 
 保存結果は
-[`q46_pair_star_audit.json`](verification/q46_pair_star_audit.json) にある。
+[`q46_pair_star_audit.json`](../output/q46_pair_star_audit.json) にある。
 これは完全リストに含まれる各候補の独立監査であり、リストの完全性を担う全支持集合走査とは
 役割を分けている。
 
@@ -305,9 +307,9 @@ $D\le35$ に絞って形状 $(t;v,w)=(0;1,2)$ を再検査すると、弦長候�
 ## 再現
 
 ```bash
-g++ -std=c++17 -O3 research/verification/scripts/q46_pair_upper_bound.cpp -o /tmp/q46_pairs
+g++ -std=c++17 -O3 research/experiments/fixed-width/scripts/q46_pair_upper_bound.cpp -o /tmp/q46_pairs
 /tmp/q46_pairs > /tmp/q46_pair_upper_bound.json
-python research/verification/scripts/q46_pair_counterexamples.py > /tmp/q46_pair_counterexamples.json
+python research/experiments/fixed-width/scripts/q46_pair_counterexamples.py > /tmp/q46_pair_counterexamples.json
 ```
 
 上の二出力は対応する保存JSONと一致する。
@@ -315,17 +317,17 @@ python research/verification/scripts/q46_pair_counterexamples.py > /tmp/q46_pair
 C++の独立検証器は1行ごとにJSONを出力するため、保存JSONの該当配列・項目と比較する。
 
 ```bash
-g++ -std=c++17 -O3 research/verification/scripts/q46_pair_independent_bound.cpp -o /tmp/q46_independent
+g++ -std=c++17 -O3 research/experiments/fixed-width/scripts/q46_pair_independent_bound.cpp -o /tmp/q46_independent
 /tmp/q46_independent 67 > /tmp/q46_independent_67.jsonl
 /tmp/q46_independent 35 0 > /tmp/q46_independent_35.jsonl
-g++ -std=c++17 -O3 research/verification/scripts/q46_pair_independent_star.cpp -o /tmp/q46_star
+g++ -std=c++17 -O3 research/experiments/fixed-width/scripts/q46_pair_independent_star.cpp -o /tmp/q46_star
 /tmp/q46_star 67 > /tmp/q46_star.jsonl
-python research/verification/scripts/q46_pair_star_audit.py > /tmp/q46_star_audit.json
+python research/experiments/fixed-width/scripts/q46_pair_star_audit.py > /tmp/q46_star_audit.json
 python - <<'PY'
 import json
 from pathlib import Path
 
-directory = Path('research/verification')
+directory = Path('research/experiments/fixed-width/output')
 read = lambda path: json.loads(Path(path).read_text())
 read_lines = lambda path: [json.loads(s) for s in Path(path).read_text().splitlines()]
 bound = read(directory / 'q46_pair_independent_bound.json')

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 holdout preflight audit
 
 Date: 2026-09-06
@@ -10,7 +12,7 @@ holdout probe measurements were available while making the checks below.
 
 ## 1. Preregistered protocol remains intact
 
-The primary protocol in `docs/10X10_PROBE_HOLDOUT_PREREGISTRATION.md` is:
+The primary protocol in `research/experiments/solver-benchmarks/reports/10X10_PROBE_HOLDOUT_PREREGISTRATION.md` is:
 
 - fresh solver process for every child;
 - 1,000,000 visited states as the primary budget;
@@ -75,7 +77,7 @@ direction and must be interpreted independently of that old verdict.
 
 No 9x9 `O=0` conclusion is imported here; the 9x9 filtered-response definition
 artifact is documented separately in
-`docs/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md`.
+`research/experiments/9x9-factorial/reports/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md`.
 
 ## Decision
 

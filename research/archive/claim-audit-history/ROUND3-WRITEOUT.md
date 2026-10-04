@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3 書出し専用指示（既存データから md を作る）
 
 あなたは共円ゲーム(kyouen)検証の**記録担当**です。作業ディレクトリ:
@@ -22,18 +24,18 @@
 
 ## 使うもの
 
-- `research/verification/ROUND3-PROTOCOL.md` — 判定ラベルと禁止事項
-- `research/verification/PROTOCOL.md` — 既存の確定事実（再発見を SUPPORTED にするな）
-- `research/verification/round2-batch-*.md` / `batch-*.md` — 前回個票
+- `research/archive/claim-audit-history/ROUND3-PROTOCOL.md` — 判定ラベルと禁止事項
+- `research/archive/claim-audit-history/PROTOCOL.md` — 既存の確定事実（再発見を SUPPORTED にするな）
+- `research/experiments/original-claims/output/round2-batch-*.md` / `batch-*.md` — 前回個票
 - `research/hypothesis-bank-*.md` — 原文（grep で引く）
-- `research/verification/scripts/round3_*.py` — 先行計算スクリプト（docstring を読む）
-- `research/verification/round3_*.json` — 先行計算データ
+- `research/experiments/original-claims/scripts/round3_*.py` — 先行計算スクリプト（docstring を読む）
+- `research/experiments/original-claims/output/round3_*.json` — 先行計算データ
 
 ## 大きな JSON の読み方
 
 32MB の census のようなものは Read ツールで開かない。必ず python で：
 ```
-python -c "import json;d=json.load(open('research/verification/round3_b451_census.json',encoding='utf-8'));print(list(d.keys()))"
+python -c "import json;d=json.load(open('research/experiments/original-claims/output/round3_b451_census.json',encoding='utf-8'));print(list(d.keys()))"
 ```
 `d['B451']` など当該 ID のキーのみ取り出す。キーを知ったら针对性アクセス。
 

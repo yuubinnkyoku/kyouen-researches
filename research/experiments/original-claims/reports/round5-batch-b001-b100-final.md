@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B001-B100 最終残余（弱化決着）
 
 対象: research/hypothesis-bank-*.md の B001〜B100 のうち census 未解決 13 件
@@ -7,9 +9,9 @@
 **n≤6 で検証可能な弱化版**を定式化し SUPPORTED / REFUTED する。
 原命題の判定は既存のまま、または最新データを反映。
 
-再利用: `round5_b001_push3.json`, `round5_b020_b090.json`,
-`round5_b020_b090_resid.json`, `round5_b020b_extra.json`,
-`round5_b020b_construct*.json`, `round5_b001_b079.json`, `batch01_jgraph.json`,
+再利用: `../output/round5_b001_push3.json`, `../output/round5_b020_b090.json`,
+`../output/round5_b020_b090_resid.json`, `../output/round5_b020b_extra.json`,
+`round5_b020b_construct*.json`, `../output/round5_b001_b079.json`, `../output/batch01_jgraph.json`,
 PROTOCOL.md 確定事実表
 
 禁止の遵守: 既存 round5-batch-*.md は未編集。n≥7 の新規列挙・p_rand 全計算なし。

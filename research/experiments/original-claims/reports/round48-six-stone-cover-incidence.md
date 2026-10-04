@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B079: 十盤六石の重複被覆総数は正確に85
 
 作成: 2026-10-01。**B079 PARTIAL。**
@@ -41,9 +43,9 @@ coverage_prunesは全層0。
 最大22がC++の最大化と一致することも確認した。
 10×10の85は完了したC++最大化の上界に依存し、別の全六石最大化まで実施したとは主張しない。
 
-`round48_n10_k6.json`には従来の極大探索の独立した完了結果も保存。
-`round48_n10_k6_max_incidence.json`のwitness_foundは最大化の等号証人があるという意味で、
+`../output/round48_n10_k6.json`には従来の極大探索の独立した完了結果も保存。
+`../output/round48_n10_k6_max_incidence.json`のwitness_foundは最大化の等号証人があるという意味で、
 極大配置が見つかったという意味ではない。
 
-再現: `python research/verification/scripts/round48_49_audit.py`。
-証明書は`round48_incidence_verified.json`。
+再現: `python research/experiments/original-claims/scripts/round48_49_audit.py`。
+証明書は`../output/round48_incidence_verified.json`。

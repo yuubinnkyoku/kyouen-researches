@@ -1,34 +1,36 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B092-B127（書出し専用・担当 24 件）
 
-対象: `research/hypothesis-bank-2026-09-27.md` の B092〜B127 のうち
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md` の B092〜B127 のうち
 B092, B093, B094, B095, B096, B097, B098, B099, B100, B103, B104, B106, B107, B110,
 B111, B115, B118, B120, B121, B122, B123, B124, B125, B127。
 
 スクリプト（先行ワーカーの計算結果を読むだけ・本バッチでは再実行しない）:
-- `scripts/round3_chunk2_saturation.py` / `research/verification/round3_chunk2_saturation.json`
-- `scripts/round3_chunk2_scover.py` / `scripts/round3_chunk2_shape.py`
-- `scripts/round3_chunk2_deform.py` / `scripts/round3_chunk2_geom.py`
+- `../scripts/round3_chunk2_saturation.py` / `research/experiments/original-claims/output/round3_chunk2_saturation.json`
+- `../scripts/round3_chunk2_scover.py` / `../scripts/round3_chunk2_shape.py`
+- `../../../archive/incomplete-scripts/round3_chunk2_deform.py` / `../scripts/round3_chunk2_geom.py`
 
-前回個票: `batch-05.md`（B092–B100）、`batch-06.md`（B103–B120）、`batch-07.md`（B121–B127）。
+前回個票: `../../../log/claim-audit/batch-05.md`（B092–B100）、`../../../log/claim-audit/batch-06.md`（B103–B120）、`../../../log/claim-audit/batch-07.md`（B121–B127）。
 
 ## B092 [全称] 9×9の最小極大は9石
 - 判定: **NOT-CHECKED**（前回: INCONCLUSIVE → 今回: NOT-CHECKED）
 - 前回の一手: 「n=9 で 9 石が存在するかが分水嶺。対称性割り込みか cover-bound の n=9 版が候補。」
 - 今回の範囲: 先行計算 `round3_chunk2_saturation.py` の Stage A は n=5,6,7,8 までしか到達していない。**n=9 の乱ハセ値は JSON に存在しない**（n=9 は 1 試行あたり約 5 分と推定され到達不能）。n=9 の k=9 存在探索は既存の `fact_kmin_general.exe 9 9 9 60`（found=false, complete=false）のみ。
-- 証拠: `round3_chunk2_saturation.json` → `A_census` のキーは `5,6,7,8` のみ。n=8 の乱ハセ最小は 10（`min_witness = [0,13,19,27,31,34,43,49,55,60]`、サイズ分布 `{10:36, 11:322, 12:557, 13:262, 14:22, 15:1}`）。乱ハセ最小は真の s_n より大きくなりうる（n=8 では既知 s_8=8 に対し乱ハセ最小 10）ため、乱ハセ値 10 は s_8 の上界にもならない。
+- 証拠: `../output/round3_chunk2_saturation.json` → `A_census` のキーは `5,6,7,8` のみ。n=8 の乱ハセ最小は 10（`min_witness = [0,13,19,27,31,34,43,49,55,60]`、サイズ分布 `{10:36, 11:322, 12:557, 13:262, 14:22, 15:1}`）。乱ハセ最小は真の s_n より大きくなりうる（n=8 では既知 s_8=8 に対し乱ハセ最小 10）ため、乱ハセ値 10 は s_8 の上界にもならない。
 - 残った障害: n=9 の盤には 81 点・禁止四つ組 29152 個があり、極大性判定つき 9 石の系統的探索は既存スクリプトでは未実行。前回の「未完」状態から前進していない。
 
 ## B093 [全称] 10×10の最小極大は10石
 - 判定: **NOT-CHECKED**（前回: INCONCLUSIVE → 今回: NOT-CHECKED）
 - 前回の一手: 「B094 と排他。10 石証人が 1 つ出れば B093 に傾く。現状は 11 石しか無い。」
-- 今回の範囲: 既存データのみ。`round3_chunk2_saturation.json` の `A_census` は n≤8 まで。n=10 の乱ハセ・系統探索はいずれも Stage A に含まれていない（Stage D の cover bound も未到達）。
+- 今回の範囲: 既存データのみ。`../output/round3_chunk2_saturation.json` の `A_census` は n≤8 まで。n=10 の乱ハセ・系統探索はいずれも Stage A に含まれていない（Stage D の cover bound も未到達）。
 - 証拠: JSON に n=9,10 のキーがないため、今回の既存データから 10 石証人の新しい情報は出ない。既存の 11 石証人 2 例（`[11,20,23,32,43,50,59,63,68,81,98]`, `[3,38,41,42,53,54,59,64,65,93,95]`）は batch-05 で再検証済み、10 石は F-BC の乱 12,000 試行で 0 件。
 - 残った障害: 10 石証人の探索が未完。乱ハセ 12,000 試行での非発見は存在命題の反証にならない。
 
 ## B094 [全称] 10×10の最小極大は11石
 - 判定: **PARTIAL**（前回: INCONCLUSIVE → 今回: PARTIAL）
 - 前回の一手: 「判定には k=10 非存在または 10 石証人が要る。」
-- 今回の範囲: 既存データ照合のみ（`batch-05.md` の 11 石証人 2 例 + `round3_chunk2_saturation.json` の n≤8 分岐情報）。n=10 の k≤10 完全非存在は今回のデータに無い。
+- 今回の範囲: 既存データ照合のみ（`../../../log/claim-audit/batch-05.md` の 11 石証人 2 例 + `../output/round3_chunk2_saturation.json` の n≤8 分岐情報）。n=10 の k≤10 完全非存在は今回のデータに無い。
 - 証拠: 11 石証人 2 例が安全かつ極大であることは batch-05 で確認済み。亂ハセ最小が n=6,7,8 でそれぞれ 8, 8, 10 と n にほぼ比例している（`A_census`：`6.min=8, 7.min=8, 8.min=10`）ことは s_10=11 拍了拍様に矛盾しない。
 - 残った障害: 上半（10 石証人の不在）は乱ハセ 12,000 試行のみDependentで証拠にならない。下半（11 石が最小であること）は k=7..10 の完全列挙が必要で未実施。B093 との排他も未決。
 
@@ -49,7 +51,7 @@ B111, B115, B118, B120, B121, B122, B123, B124, B125, B127。
 ## B097 [全称・大胆] s_nは単調増加する
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。範囲が n≤8 の乱ハセで補強）
 - 前回の一手: 「s_8=7 なら等号のまま、s_8=8 なら +1。s_9 < 7 のような逆転が起きれば REFUTED。」
-- 今回の範囲: n=5,6,7,8 の乱ハセ極大 1,200 試行 × 4 盤（`round3_chunk2_saturation.json` `A_census`）。系統的な s_9, s_10 は未。
+- 今回の範囲: n=5,6,7,8 の乱ハセ極大 1,200 試行 × 4 盤（`../output/round3_chunk2_saturation.json` `A_census`）。系統的な s_9, s_10 は未。
 - 証拠: 乱ハセ最小が n=5:6, n=6:8, n=7:8, n=8:10 と非減少。ただし乱ハセ最小は真の s_n の上界ではなく（実際 n=5 で真 s_5=5 に対し乱ハセ 6、n=6 で真 6 に対し 8）、単調性の証拠にはならない。
 - 残った障害: 乱ハセ最小の非減少は弱い条件（乱ハセ procedure 自体が n について単調でない）。s_9, s_10 の確定が必要なのは前回と同じ。B097 の PARTIAL は前回と同じ。
 
@@ -63,7 +65,7 @@ B111, B115, B118, B120, B121, B122, B123, B124, B125, B127。
 ## B099 [統計] 最小極大配置では長い直線と豊富な円を併用する
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。進行中の新データの記載のみ）
 - 前回の一手: 「共線/共円どちらのブロックで空点を塞いでいるかの帰属分析が次の一手。棒状配置は直線偏重に見える緊張あり。」
-- 今回の範囲: `round3_chunk2_saturation.py` の **Stage C が B099 用の帰属分析**（`C_b099`: 各極大配置の三つ組を共線/非共線に分け、被覆容量 `c(T)` を集計、`line_capacity_share` を計算）。しかし `round3_chunk2_saturation.json` は **Stage A の n=8 で打ち切られ Stage C の出力を持たない**（`round3_chunk2_sat.log` は Stage A n=8 の行で終了）。
+- 今回の範囲: `round3_chunk2_saturation.py` の **Stage C が B099 用の帰属分析**（`C_b099`: 各極大配置の三つ組を共線/非共線に分け、被覆容量 `c(T)` を集計、`line_capacity_share` を計算）。しかし `../output/round3_chunk2_saturation.json` は **Stage A の n=8 で打ち切られ Stage C の出力を持たない**（`../output/round3_chunk2_sat.log` は Stage A n=8 の行で終了）。
 - 証拠: 今回の既存データに B099 の新規数値は無い。Stage C の設計のみ（n=5,6,7,8 で乱ハセ極大 1,500 試行から最小 60 個を採り、`mean_Lcap`/`mean_Ccap`/`line_capacity_share` を出力する）が実行結果は未保存。
 - 残った障害: Stage C が未実行なので、共線容量と円容量の帰属比は未測定。前回の PARTIAL（「どちらも 0 ではない」={'共線三つ組 2–5 個'} の弱い支持）から前進していない。実装済みコードは残るため、再実行 1 分弱で埋まる。
 
@@ -71,21 +73,21 @@ B111, B115, B118, B120, B121, B122, B123, B124, B125, B127。
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。進行中の新データの記載のみ）
 - 前回の一手: 「反例探しは n=7 で最短。s_7=7 から 13 までの各サイズに極大が在るかを潰す。欠落 1 つで REFUTED。」
 - 今回の範囲: `round3_chunk2_saturation.py` の **Stage B が B100 用のスペクトル探索**（n=4,5,6,7,8 で乱ハセ極大 400 個を出发点に `add`/`shrink` でサイズ削減し到達サイズ集合を収集、`missing_inside_range` を出す）。しかし JSON に **`B_spectrum` キーは存在しない**（Stage A の n=9 で 100 ターン切替 Stage B 未到達）。
-- 証拠: `round3_chunk2_saturation.json` のキーは `A_census` のみ。n=4,5,6 の既知の完全スペクトル区間性（batch-05 の F-R `{5:4,…,9:100}`、F-U `{6:8,…,11:464}`）が今回のデータで補強されたわけではない。
+- 証拠: `../output/round3_chunk2_saturation.json` のキーは `A_census` のみ。n=4,5,6 の既知の完全スペクトル区間性（batch-05 の F-R `{5:4,…,9:100}`、F-U `{6:8,…,11:464}`）が今回のデータで補強されたわけではない。
 - 残った障害: Stage B 未実行のため n=4,5,6,7,8 の欠落サイズ検査が未実施。n≥7 の全称は依然として到達不能。
 
 ## B103 [統計] 最大配置の行占有数は2に集中する
 - 判定: **PARTIAL**（前回: PARTIAL → 今回: PARTIAL。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「n=5 の 100 集合と n=4 の 64 集合の行占有があれば傾向の検定が可能。現状 n=2 点のみで『n が大きいほど小さい』は弱い支持。」
-- 今回の範囲: 先行ワーカーの `scripts/round3_chunk2_shape.py` は B103 用に **n=4,5,6,7 の全最大集合の行占有ヒストグラムと `frac013` の単調減少検定**（`b103()` 関数）を実装済み。しかし **出力 `research/verification/round3_chunk2_shape.json` は存在しない**（100 ターン切れで `b103()` まで到達せず）。既存の `batch06_shape_rigidity.json` は n=6, 7 の 2 盤のみ。
-- 証拠: `batch06_shape_rigidity.json` → n6 `row_hist_global = {0:84, 1:856, 2:1284, 3:560}`（総 2784 行、`frac2 = 1284/2784 = 0.4615`、`frac013 = 0.5385`）、n7 `{1:28, 2:56, 3:28}`（112 行、`frac2 = 0.5`、`frac013 = 0.5`）。`fraction_rows_in_013` は n7 で 0.5。**前回個別票の 2 点と全く同一**。
+- 今回の範囲: 先行ワーカーの `../scripts/round3_chunk2_shape.py` は B103 用に **n=4,5,6,7 の全最大集合の行占有ヒストグラムと `frac013` の単調減少検定**（`b103()` 関数）を実装済み。しかし **出力 `research/experiments/original-claims/output/round3_chunk2_shape.json` は存在しない**（100 ターン切れで `b103()` まで到達せず）。既存の `../output/batch06_shape_rigidity.json` は n=6, 7 の 2 盤のみ。
+- 証拠: `../output/batch06_shape_rigidity.json` → n6 `row_hist_global = {0:84, 1:856, 2:1284, 3:560}`（総 2784 行、`frac2 = 1284/2784 = 0.4615`、`frac013 = 0.5385`）、n7 `{1:28, 2:56, 3:28}`（112 行、`frac2 = 0.5`、`frac013 = 0.5`）。`fraction_rows_in_013` は n7 で 0.5。**前回個別票の 2 点と全く同一**。
 - 残った障害: n=4, 5 の行占有ヒストグラムが未計算なので「n が大きいほど小さい」の傾きは 2 点で決定不能。既存データに情報がなく前回と状況が変わらない（n=4,5 ロード済みの `data/maximal_n4.bin` / `maximal_n5.bin` を使うだけなので再実行は軽い）。
 
 ## B104 [存在] 最大配置が一度も使わない点の軌道が無限回現れる
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「次は n=9,11 の (2,2)/(3,3) 近傍軌道の全集合不使用を確認する。」
 - 今回の範囲: `round3_chunk2_shape.py` の `b104()` は n=4,5,6,7 の**全最大集合**について D4 軌道別の全不使用を検査し、`never_used_orbits`・`never_used_points`・`usage_min` を出す設計。しかし **出力 JSON が存在しない**。既存データは n=6, 7 の 2 点のみ。
-- 証拠: 既存の `batch06_shape_rigidity.json` は B104 用の軌道データを持たない。batch-06 の記録は n=6 で `never_used: []`（36 点全使用）、n=7 で (2,2) 軌道 4 点 `(16,18,30,32)` が不使用の 2 点。
+- 証拠: 既存の `../output/batch06_shape_rigidity.json` は B104 用の軌道データを持たない。batch-06 の記録は n=6 で `never_used: []`（36 点全使用）、n=7 で (2,2) 軌道 4 点 `(16,18,30,32)` が不使用の 2 点。
 - 残った障害: 既存データに情報がなく前回と状況が変わらない。n=8,9,11 の最大集合の完全リストが `round3_chunk2_shape.py` の `maxsets()` に実装されていない（n≤7 のみ）ため、「無限回現れる」側の確証は出ない。
 
 ## B106 [全称・大胆] 最大配置はO(log n)点で特定できる
@@ -112,7 +114,7 @@ B111, B115, B118, B120, B121, B122, B123, B124, B125, B127。
 ## B111 [全称] G_11では16最大配置がすべて連結する
 - 判定: **NOT-CHECKED**（前回: NOT-CHECKED → 今回: NOT-CHECKED。既存データに情報がなく前回と状況が変わらない）
 - 前回の一手: 「次の一手は代表的な孤立 12 石 1 点から 11 石を許す BFS を張り、903 成分に届くかを見る。state 数が 11 石層で爆発する可能性あり。」
-- 今回の範囲: 先行ワーカーの `scripts/round3_chunk2_deform.py` は `bfs_G(maxsets[0], 11, ...)` で **G_11 全体（49 点、window 制限なし）の BFS** を `max_visit=4,000,000` の上限つきで実行し、到達サイズヒストグラム `size_hist` と到達した最大集合数 `max_reached` を出す設計。しかし **出力 `research/verification/round3_chunk2_deform.json` は存在しない**。
+- 今回の範囲: 先行ワーカーの `../../../archive/incomplete-scripts/round3_chunk2_deform.py` は `bfs_G(maxsets[0], 11, ...)` で **G_11 全体（49 点、window 制限なし）の BFS** を `max_visit=4,000,000` の上限つきで実行し、到達サイズヒストグラム `size_hist` と到達した最大集合数 `max_reached` を出す設計。しかし **出力 `research/experiments/original-claims/output/round3_chunk2_deform.json` は存在しない**。
 - 証拠: 既存の batch-07 は「n=7 (K=14): G_12 の最大配置接触成分はちょうど 8 個（各 2 最大配置、903 成分と一致）。G_11 BFS は 120 万超ノードで未完了」。`round3_chunk2_deform.json` 不在のため、16 個のうち何個が同一成分に載ったかの数値は無い。
 - 残った障害: 既存データに情報がなく前回と状況が変わらない。11 石層は 7×7 で数十万〜百万状態になり、`max_visit=4e6` でも尽きる設計。903 成分への到達を判定するには「16 個全部載る」ことを完走させる必要がある。
 
@@ -191,9 +193,9 @@ B111, B115, B118, B120, B121, B122, B123, B124, B125, B127。
 
 - 今回決着（SUPPORTED/REFUTED に動いたもの）: **なし**。先行ワーカーの 4 スクリプトはいずれも出力 JSON を残さずに 100 ターンで打ち切られたため、判定を SUPPORTED/REFUTED に動かせる既存数値が 1 件も存在しない。ラベルが動いたのは **B094 の INCONCLUSIVE → PARTIAL のみ**（s_10 ≤ 11 側は 11 石証人 2 例で確定し、乱ハセ最小系列 n=6,7,8 で 8, 8, 10 と非整合でないため。ただし 10 石証人の不在は乱ハセ 12,000 試行という証人にならない証拠しか無く、PARTIAL の下半分に過ぎない）。
 - 残る未解決とその一言理由: **24 件すべて未解決**。9 件（PARTIAL）は実装済みだが未実行の統計の再生待ち、5 件（INCONCLUSIVE）は漸近/無限族の主張で有限個の n データに原理的に決着しない、10 件（NOT-CHECKED）は n=6 の層データまたは n=8,9 の最大集合リストが `round3_chunk2_shape.py` の `maxsets()` に未実装。
-- 最も有望な次の一手（1つだけ）: `scripts/round3_chunk2_shape.py` の `b103()`–`b110()` を実行して `round3_chunk2_shape.json` を残すこと。n=4,5 の最大集合は `data/maximal_n4.bin` / `maximal_n5.bin` から既にロード済みで計算が軽い（n=4 は 64 集合、n=5 は 100 集合）ため、B103/B104/B106/B107/B110 の 5 件が一度に前進し、B100 のスペクトル Stage B と B099 の Stage C は 1 分弱で埋まる。
+- 最も有望な次の一手（1つだけ）: `../scripts/round3_chunk2_shape.py` の `b103()`–`b110()` を実行して `round3_chunk2_shape.json` を残すこと。n=4,5 の最大集合は `data/maximal_n4.bin` / `maximal_n5.bin` から既にロード済みで計算が軽い（n=4 は 64 集合、n=5 は 100 集合）ため、B103/B104/B106/B107/B110 の 5 件が一度に前進し、B100 のスペクトル Stage B と B099 の Stage C は 1 分弱で埋まる。
 
 ### 書出し者注記（事実確認と仮定）
-- 作業ディレクトリ `research/verification/` の実ファイル確認結果: chunk2 関連で存在するのは `round3_chunk2_sat.log`（317 バイト）と `round3_chunk2_saturation.json`（1,176 バイト、`A_census` の n=5,6,7,8 のみ）の 2 つだけ。**`round3_chunk2_shape.json` / `round3_chunk2_scover.json` / `round3_chunk2_deform.json` はいずれも存在しない**。`round3_chunk2_sat.log` は Stage A の n=8 行で終わっており Stage B/C/D は未到達。したがって先行ワーカーの成果は「スクリプト 4 本の設計文書」＋「Stage A の n=5..8 の乱ハセ統計」に限られる。
+- 作業ディレクトリ `research/experiments/original-claims/output/` の実ファイル確認結果: chunk2 関連で存在するのは `../output/round3_chunk2_sat.log`（317 バイト）と `../output/round3_chunk2_saturation.json`（1,176 バイト、`A_census` の n=5,6,7,8 のみ）の 2 つだけ。**`round3_chunk2_shape.json` / `round3_chunk2_scover.json` / `round3_chunk2_deform.json` はいずれも存在しない**。`../output/round3_chunk2_sat.log` は Stage A の n=8 行で終わっており Stage B/C/D は未到達。したがって先行ワーカーの成果は「スクリプト 4 本の設計文書」＋「Stage A の n=5..8 の乱ハセ統計」に限られる。
 - `round3_chunk2_scover.py` は docstring で B092–B098 を名指ししているが、`main()` の実体は「load-bearing triple 数」と「c(T) の固定点」で、docstring が述べる set-cover 証明書の上界とは実装が一致していない。出力 JSON も不在のため本バッチでは使用していない。
 - 推測で SUPPORTED / REFUTED を書いてはいけないという指示に従い **全 24 件で SUPPORTED / REFUTED は 0 件**。B097/B099/B100/B103/B106/B107/B110/B121 は前回と同一ラベルで、理由の逐条記録のみを今回の到達点として記載した。

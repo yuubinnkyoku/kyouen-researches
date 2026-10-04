@@ -1,11 +1,13 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch round2-b381: B381–B410
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B381〜B410。
-データ: `night-research/maxsafe_n7_K14.bin` (16), `maxsafe_n6_K11.bin` (464),
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B381〜B410。
+データ: `research/experiments/structural-discovery/output/maxsafe_n7_K14.bin` (16), `maxsafe_n6_K11.bin` (464),
 `cycle6-maxsafeset-n8-15.json` (witness 1), `cycle6-maxsafeset-n8-16.json` (UNSAT)。
-スクリプト: `scripts/round2_b381_saturation.py`, `round2_b391_rows.py`,
+スクリプト: `../scripts/round2_b381_saturation.py`, `round2_b391_rows.py`,
 `round2_b382_embed.py`, `round2_b401_identify.py`, `round2_b389_extra.py`。
-出力: `round2_b381.json`。
+出力: `../output/round2_b381.json`。
 
 ---
 
@@ -13,7 +15,7 @@
 
 - 判定: **SUPPORTED**
 - 範囲: 全16最大配置について、整数平面上で外接矩形 [0,6]² からの Chebyshev 距離 1〜3 の外点を全走査し、追加可能な最小距離を計算。
-- 証拠: **16/16 で r=2**。距離1の外点は全埋め込み（B087）で追加不能と確認済み。距離2で各配置とも1〜2個の合法外点が存在（例: n7[0] は (8,1) など1個、n7[1] は2個）。`round2_b381.json` → `summary.n7_r_dist = {2: 16}`。
+- 証拠: **16/16 で r=2**。距離1の外点は全埋め込み（B087）で追加不能と確認済み。距離2で各配置とも1〜2個の合法外点が存在（例: n7[0] は (8,1) など1個、n7[1] は2個）。`../output/round2_b381.json` → `summary.n7_r_dist = {2: 16}`。
 - メモ: B087（8×8 へ1石も足せない）の自然な続きとして、整数平面なら2層目で必ず逃げ道がある。
 
 ## B382 [構造] 7×7最大配置の最初の合法外点はD4軌道で少数型
@@ -27,7 +29,7 @@
 
 - 判定: **SUPPORTED**
 - 範囲: n=6 の 464 最大配置の r(S) を全計算。
-- 証拠: n=6 で **r=1 が 424個、r=2 が 40個**。同じ K_6=11 で r が異なる。例: r=2 の配置は外側1層の全点が塞がる。`round2_b381.json` → `summary.n6_r_dist = {1: 424, 2: 40}`。
+- 証拠: n=6 で **r=1 が 424個、r=2 が 40個**。同じ K_6=11 で r が異なる。例: r=2 の配置は外側1層の全点が塞がる。`../output/round2_b381.json` → `summary.n6_r_dist = {1: 424, 2: 40}`。
 
 ## B384 [全称・大胆] 最大配置の外部飽和半径は一様有界
 

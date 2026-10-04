@@ -1,20 +1,22 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 仮説バンク検証総括 — B001〜B600（第4回・WSL C++ による決着 / n=7 完了 / n=8 未決の確定版）
 
 作成: 2026-09-27（初版） / 改訂: 2026-09-28（第2改訂: CRT 版ソルバの結果と決着 29 件を反映した最終書き直し）
 手法: `ROUND4-PROTOCOL.md` に従う並列検証。総括データは
-`python research/verification/scripts/round4_status.py`（出力: `round4_status.json`、本改訂時点）。
+`python research/experiments/original-claims/scripts/round4_status.py`（出力: `../../experiments/original-claims/output/round4_status.json`、本改訂時点）。
 
 第3回 `round3-SUMMARY.md` の未解決のうち、**計算資源（Windows に C++ が無いこと）で
 止まっていた項目を WSL2 Ubuntu の C++ で再做した回**。個票は `round4-batch-*.md`、
-証明文書として `round4-collinear-asymptotic.md`（共線漸近）と `round4-fixed-width.md`
-（固定幅長方形盤）、B141 の独立検証記録として `ROUND4-B141-VERIFICATION.md`、
-n=8 の環境限界の記録として `round4-n8-feasibility.md`、CRT 版ソルバの制約として
-`round5_crt_bug.md`。
+証明文書として `../../experiments/original-claims/reports/round4-collinear-asymptotic.md`（共線漸近）と `../../experiments/original-claims/reports/round4-fixed-width.md`
+（固定幅長方形盤）、B141 の独立検証記録として `../../experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md`、
+n=8 の環境限界の記録として `../../experiments/original-claims/reports/round4-n8-feasibility.md`、CRT 版ソルバの制約として
+`../../experiments/original-claims/reports/round5_crt_bug.md`。
 
 > **本改訂の要点**: 初版は n=7 完了前・B141 訂正の一部反映の状態で書かれていた。
 > 本版は **n=7 の完全走破（1,225.64 秒 = 20 分 26 秒）**、**CRT 版ソルバの到達範囲と
 > 制約**、**B141 訂正の完全反映**、**`round4_status.py` の最新集計（決着 29 件）** を反映する。
-> n=8 の判定は `round4-n8-feasibility.md` のとおり**未決**のままである。
+> n=8 の判定は `../../experiments/original-claims/reports/round4-n8-feasibility.md` のとおり**未決**のままである。
 
 ## 1. 概要 — 第4回は何をした回か
 
@@ -23,7 +25,7 @@ n=8 の環境限界の記録として `round4-n8-feasibility.md`、CRT 版ソル
 pure-Python では 8×8 の 8石極大全列挙 `C(64,8) ≈ 4.4×10⁹` を原理的に実行できなかった。
 
 **WSL2 Ubuntu に g++ 13.3.0 / 16 コア / 19 GB がある**ことで、この障害は解消した
-（詳細は `WSL-BUILD.md`）。全件が整数演算のみで、禁止4点組は整数行列式
+（詳細は `../../experiments/original-claims/reports/WSL-BUILD.md`）。全件が整数演算のみで、禁止4点組は整数行列式
 `det[x²+y², x, y, 1] = 0`、比は有理数 `p/q` で保持した（DP 内に浮動小数は 1 つも無い）。
 
 本回で実際に解放されたもの:
@@ -35,16 +37,16 @@ pure-Python では 8×8 の 8石極大全列挙 `C(64,8) ≈ 4.4×10⁹` を原�
 | **n=7 の p_rand 完全走破**（初版時点では未完走） | **1 億 7981 万状態・1,225.64 秒（20 分 26 秒）で完走**（第 2 節）。B501/B502 の決着に 2 点 |
 | 幾何エンジンの信頼性 | 共有コア `kc_core.h` の F_n（n=2..9）が既知値と完全一致（第 7 節） |
 
-本回の性格は「数値の追加」だけでなく**証明**の追加でもある。`round4-collinear-asymptotic.md`
-と `round4-fixed-width.md` は有限列の外挿ではなく、方向別の恒等式と短い証明で
+本回の性格は「数値の追加」だけでなく**証明**の追加でもある。`../../experiments/original-claims/reports/round4-collinear-asymptotic.md`
+と `../../experiments/original-claims/reports/round4-fixed-width.md` は有限列の外挿ではなく、方向別の恒等式と短い証明で
 20 仮説を処理している。
 
 ## 2. n=7 の完全走破 — 第4回中の最大の成果
 
-**参照: `round4_b501_prand_n7.json`、`round4-batch-b501-b502.md` 第2節。**
+**参照: `../../experiments/original-claims/output/round4_b501_prand_n7.json`、`../../experiments/original-claims/reports/round4-batch-b501-b502.md` 第2節。**
 
 第3回は p_rand の完全 DP を pure-Python で n=6 まで（129.43 秒）完走したのみだった。
-第4回で C++ に移植し（`scripts/round4_b501_prand.cpp`、多倍長整数は自作 base 10^9 リム）、
+第4回で C++ に移植し（`../../experiments/original-claims/scripts/round4_b501_prand.cpp`、多倍長整数は自作 base 10^9 リム）、
 **n=7 を完全走破した**。
 
 ### 2.1 実行結果
@@ -77,7 +79,7 @@ pure-Python では 8×8 の 8石極大全列挙 `C(64,8) ≈ 4.4×10⁹` を原�
 ### 2.2 移植の正当性（n=6 交差検証）
 
 n=7 の数字を信用する前に n=6 で pure-Python（129.43 秒）と全項目照合し、
-`round4_b501_prand.json` の `n6_crosscheck.all_match = true` を確認した
+`../../experiments/original-claims/output/round4_b501_prand.json` の `n6_crosscheck.all_match = true` を確認した
 （安全集合数 5,081,289 / 辺 36,211,148 / K_6 = 11 / P 局面 1,265,112 /
 P_max = 5162/6615 / 層別サイズ / 空盤 p_rand / F = 2,491）。
 自作 bigint の単体検査も `bigint selftest: PASS (0 failures)`。
@@ -85,7 +87,7 @@ P_max = 5162/6615 / 層別サイズ / 空盤 p_rand / F = 2,491）。
 ## 3. p_rand 最大値の推移 — B501 / B502 の決着
 
 n=7 完走により p_rand の最大値の推移が 4 点揃った。**機械集計（`round4_status.py` 出力および
-`round4-batch-b501-b502.md` 第2節、`round4_b501_prand_n7.json`）**:
+`../../experiments/original-claims/reports/round4-batch-b501-b502.md` 第2節、`../../experiments/original-claims/output/round4_b501_prand_n7.json`）**:
 
 | n | P局面数 | p_rand 最大 | 2/3 超 | 3/4 超 |
 |---|---|---|---:|---:|
@@ -94,7 +96,7 @@ n=7 完走により p_rand の最大値の推移が 4 点揃った。**機械集
 | 6 | 1,265,112 | 5162/6615 ≈ 0.78035 | 180 | 4 |
 | 7 | **41,264,615** | **3709/4620 ≈ 0.80281** | **6,036** | **124** |
 
-n=7 の層別内訳（`round4_b501_prand_n7.json` の `levels`）:
+n=7 の層別内訳（`../../experiments/original-claims/output/round4_b501_prand_n7.json` の `levels`）:
 
 | k | P 局面数 | p_rand の最大 | 2/3 超 | 3/4 超 |
 |---:|---:|---|---:|---:|
@@ -119,10 +121,10 @@ n=7 の層別内訳（`round4_b501_prand_n7.json` の `levels`）:
 **最大値は 0.8 付近で飽和しかけている**（0.56296 → 0.70923 → 0.78035 → 0.80281 と単調増加）、
 **上限は未確定**。n=8 が未決であるため、漸近上限は本環境では出せない（第 4 節）。
 
-## 4. n=8 は未決 — `round4-n8-feasibility.md` の要約
+## 4. n=8 は未決 — `../../experiments/original-claims/reports/round4-n8-feasibility.md` の要約
 
 **n ≤ 7 は厳密に完了している。n=8 はこの環境（19 GB）では未決。**
-`round4-n8-feasibility.md` は同じ困難の再発見を避けるための記録であり、要約は次のとおり。
+`../../experiments/original-claims/reports/round4-n8-feasibility.md` は同じ困難の再発見を避けるための記録であり、要約は次のとおり。
 
 ### 4.1 障害の正体 — 層成長率が 32 倍
 
@@ -174,7 +176,7 @@ OOM となるため本質的な限界である。**
 
 **結論: n=8 はこの環境では未決。** ただし n ≤ 7 は厳密に完了している。
 
-## 5. CRT 版ソルバ（`round5_b501_prand8.cpp`）の結果 — 参照 `round5_crt_bug.md`
+## 5. CRT 版ソルバ（`round5_b501_prand8.cpp`）の結果 — 参照 `../../experiments/original-claims/reports/round5_crt_bug.md`
 
 分子を mod 2^61−1 で持つので **1 状態 8 B**（大整数版 97 B に比べ大幅削減）になる実装。
 子インデックスを層ごとに作り層ごとに解放する設計も入れたが、n=7 のピークは 13.43 GB のままである。
@@ -213,7 +215,7 @@ n=7 でも `P_max_level = 8`、`P_gt_3_4 = 124`、`n_safe_subsets = 179,810,350`
 両辺を先に `P1 = 2^61−1` で剰余を取ると**大小関係が壊れる**。精度が保たれる条件は
 `D_k < p`、すなわち `2·(D のビット長) < 61`。
 
-n=6 の層ごとの D のビット長（`round5_crt_bug.md`）:
+n=6 の層ごとの D のビット長（`../../experiments/original-claims/reports/round5_crt_bug.md`）:
 
 | k | n_P | D_bits | 閾値比較は正確? |
 |---:|---:|---:|:--|
@@ -232,7 +234,7 @@ n=6 の層ごとの D のビット長（`round5_crt_bug.md`）:
 偶然である（1/2 と 3/4 は分母が 2 の冪なので、剰余を取ったときの巻き戻りが特定の形に
 しか起こらないため）。**一致したから正しいとは言えない。**
 ソルバ自身は `thresholds_exact` フラグでこれを報告しており、不正確な層を明示している
-（`round5_crt_bug.md`、`scripts/crt_threshold_audit.py`、`verify_crt_n6.py`）。
+（`../../experiments/original-claims/reports/round5_crt_bug.md`、`../../experiments/original-claims/scripts/crt_threshold_audit.py`、`verify_crt_n6.py`）。
 信頼できる「P_max」はその D が 61 bit 未満の層に限られる。n=6 では k=9, k=10 の 243,572 個。
 
 ### 5.4 n=8 について
@@ -244,7 +246,7 @@ n=8 でさらに増えるので閾値カウントは救助されない。最大�
 
 ## 6. B141 の訂正について独立に再検算した節
 
-`ROUND4-B141-VERIFICATION.md`（自作スクリプト `scripts/verify_b141_independent.py` による
+`../../experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md`（自作スクリプト `../../experiments/original-claims/scripts/verify_b141_independent.py` による
 一から再検算）の要約。**第1回が「D_n = Θ(n^5 log n) → B141 REFUTED」としたのは誤読**であり、
 訂正が正しいことを確認した。**本改訂で訂正を完全に反映した。**
 
@@ -309,15 +311,15 @@ n=8 の `D_8 = 1,524` は既知の確定値（`F_8 = 14,564` のうち共線分�
 | B473 | 有限サイズ補正は負の n⁴ log n | **SUPPORTED** | 台形公式誤差 `O(n³/H)` を総和で一様に評価 |
 
 **方向別係数表**（(1,0)→1/24、(1,1)→1/60、(2,1)→7/1920、(5,1)→11/37500、
-(5,4)→13/75000）は第1回個票の候補値と一致（✓）。`round4-batch-b400-b600.md` の B472 が
+(5,4)→13/75000）は第1回個票の候補値と一致（✓）。`../../experiments/original-claims/reports/round4-batch-b400-b600.md` の B472 が
 「H⁻³ より弱い減衰（実測 7.6 倍ずれている）」と書いたのは **n=32 の 1 点の有限データで
 外挿していない**ためであり、証明 `H⁻³` は上式によって確定した。
 
 ### 6.6 訂正の波及（未処理）
 
-- `batch-08.md` の B141（REFUTED）と B145 の「主項定数が純粋な n⁵ 定数としては存在しない
+- `../../log/claim-audit/batch-08.md` の B141（REFUTED）と B145 の「主項定数が純粋な n⁵ 定数としては存在しない
   （log 因子付き）」は訂正が必要。**本総括では既存ファイルを編集していない**。
-- `round2-batch-b471.md` の B473 が使った n⁵ log n 主項を前提にした残差は，本来の漸近補正を
+- `../../experiments/original-claims/reports/round2-batch-b471.md` の B473 が使った n⁵ log n 主項を前提にした残差は，本来の漸近補正を
   測っていない。
 - **B142（非共線共円四点組の次数）は本定理では決まらない**。別途検証が必要（第1回は REFUTED）。
 
@@ -332,8 +334,8 @@ n=8 の `D_8 = 1,524` は既知の確定値（`F_8 = 14,564` のうち共線分�
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | F_n（禁止4点組数） | 1 | 14 | 194 | 826 | 2491 | 6364 | 14564 | 29152 |
 
-`round4-batch-b092-b127.md`: `core selfcheck F_2..F_9: OK`（既知値と完全一致）。
-`round4_b591_dmax.json` は 128bit 実装と `kc_core` を n=2..8 で交差照合し全一致
+`../../experiments/original-claims/reports/round4-batch-b092-b127.md`: `core selfcheck F_2..F_9: OK`（既知値と完全一致）。
+`../../experiments/original-claims/output/round4_b591_dmax.json` は 128bit 実装と `kc_core` を n=2..8 で交差照合し全一致
 （n=9 は `kc_core` が n²≤64 制約のため na）。
 
 ### 7.2 極大集合の列挙との一致
@@ -341,22 +343,22 @@ n=8 の `D_8 = 1,524` は既知の確定値（`F_8 = 14,564` のうち共線分�
 - **n=5 の 8石極大 = 16,760**（`data/kc_maximal_n5_k8.bin` のヘッダ）。これは
   n=5 極大総数 16,860 からサイズ 9 の 100 を除いた値で、ファイルサイズ
   8 + 16760×8 = 134088 と整合する。
-- **n=6 の 10石極大 = 349,132**。`round4-batch-b228-b290.md` で `Z_6(λ)` の最高次係数が
+- **n=6 の 10石極大 = 349,132**。`../../experiments/original-claims/reports/round4-batch-b228-b290.md` で `Z_6(λ)` の最高次係数が
   349,132 = 極大安全集合の個数と一致（n=2..6 の 5 盤で完全一致:
   A₂(3)=4, A₃(5)=56, A₄(7)=64, A₅(9)=100, A₆(11)=349,132）。`PROTOCOL.md` の確定表と一致。
-- `maximal_sets(7,14)` が既存確定データ `night-research/maxsafe_n7_K14.bin`（16 個）と
+- `maximal_sets(7,14)` が既存確定データ `research/experiments/structural-discovery/output/maxsafe_n7_K14.bin`（16 個）と
   **集合として完全一致（IDENTICAL）**。16 個すべてを独立に再検証し
   「安全である」0 違反、「極大である」0 違反。
 
 ### 7.3 8×8 の 8石極大の全列挙 = 408 個
 
 `round4_b371.cpp`（三つ組補完表 CSR + 添字対分割の 16 並列 DFS）で
-**8×8 の 8石極大 408 個を全列挙（103.1 秒・16 スレッド、`round4_b371.json`）**。
+**8×8 の 8石極大 408 個を全列挙（103.1 秒・16 スレッド、`../../experiments/original-claims/output/round4_b371.json`）**。
 既存証人 W=`[0,1,6,20,24,32,34,60]` はこの 408 個の中に含まれる（独立に再発見）。
 B371–B375 / B378 の 6 件が決着（第 8 章）。
 各葉の極大性判定は `kc::legal_mask` と**不一致 0/408**。
 
-主要分布（`round4_b371.json`）:
+主要分布（`../../experiments/original-claims/output/round4_b371.json`）:
 
 | 量 | 分布 |
 |---|---|
@@ -370,7 +372,7 @@ B371–B375 / B378 の 6 件が決着（第 8 章）。
 | min b / ρ / r | 全 408 個が min b=1, ρ=1；全 309 軌道で r=1 |
 
 **8×8 の 6石極大は 0 個**（大きすぎるサイズではないことが分かった）。
-根拠は `research/findings.md` に記録された既存証拠である: 8×8 は乱贪欲で
+根拠は `research/archive/hypothesis-ledgers/findings.md` に記録された既存証拠である: 8×8 は乱贪欲で
 10 石極大を観測しており **k≤6 の 6石極大は完全非存在**（F-AS）、10×10 でも
 **6石極大は 0 個**（F-BE、三つ組補完集合を bitset で追跡する完全探索）。
 すなわち 6石極大は 10×10 のような大盤では存在せず、中盤 n=4..7 では存在する
@@ -396,7 +398,7 @@ B371–B375 / B378 の 6 件が決着（第 8 章）。
 
 ## 8. 決着した項目の一覧表
 
-### 8.1 機械集計（`python research/verification/scripts/round4_status.py` の出力）
+### 8.1 機械集計（`python research/experiments/original-claims/scripts/round4_status.py` の出力）
 
 ```
 round4 files: 10   ids touched: 259
@@ -420,8 +422,8 @@ per-file:
 **現在の決着は 29 件**（`round4_status.py` の
 `decided (r3-unresolved -> SUPPORTED/REFUTED): 29` に対応）。内訳は
 **SUPPORTED 16 件 / REFUTED 13 件**。
-このスクリプトは `round4-batch-*.md` のみを見るため、`round4-collinear-asymptotic.md` と
-`round4-fixed-width.md` の 20 項目（B141/B145/B150/B471/B472/B473 と B211/B212/B213/
+このスクリプトは `round4-batch-*.md` のみを見るため、`../../experiments/original-claims/reports/round4-collinear-asymptotic.md` と
+`../../experiments/original-claims/reports/round4-fixed-width.md` の 20 項目（B141/B145/B150/B471/B472/B473 と B211/B212/B213/
 B215/B216/B219/B220/B541/B542/B544/B546/B550/B555/B556）は数えられていない。
 **両者を含めた全 round4 文書ベースの集計は 8.2 に示す**。
 
@@ -459,8 +461,8 @@ B215/B216/B219/B220/B541/B542/B544/B546/B550/B555/B556）は数えられてい�
 | B483 | INCONCLUSIVE | **REFUTED** | 主変数「三点橋の絶対本数」が全 n で非零の値を取り、誤差率と逆符号で動く（k=3 層で bridge3 が 81.2 → 96.5 と増加する間に err が 0.143 → 0.0 へ）。単調増加の全称が偽 |
 | B596 | PARTIAL | **SUPPORTED** | 標本 12/12/6 を母集団 2,176 件の全数計算に置き換えたうえ、G_11 の経路長も厳密に埋めた。等距離群の平均 12.38 対 8.6–9.0（G_11）、到達率 1/7 対 100%（G_12） |
 
-この 29 件のほかに、`round4-collinear-asymptotic.md` の 6 件（B141/B145/B150/B471/B472/B473）
-と `round4-fixed-width.md` の 14 件（B211/B212/B213/B215/B216/B219/B220/B541/B542/
+この 29 件のほかに、`../../experiments/original-claims/reports/round4-collinear-asymptotic.md` の 6 件（B141/B145/B150/B471/B472/B473）
+と `../../experiments/original-claims/reports/round4-fixed-width.md` の 14 件（B211/B212/B213/B215/B216/B219/B220/B541/B542/
 B544/B546/B550/B555/B556）は有限個票ではなく**証明**で SUPPORTED/REFUTED に
 決着している（計 20 件、うち B473 は上の 29 件と重複）。
 **第3回の未解決 → SUPPORTED/REFUTED に動いた項目は、個票口径 29 件に証明文書の 19 件を
@@ -548,10 +550,10 @@ B002, B022, B023, B043, B059, B077, B079, B082, B088, B089, B190, B203, B206, B2
 B233, B235, B236, B237, B239, B240, B243, B245, B250, B254, B258, B272, B273, B274,
 B276, B278, B279, B282, B284, B286, B287, B289, B290, B405, B407。
 
-### 9.3 共線定理の残課題（`round4-collinear-asymptotic.md` 9 節）
+### 9.3 共線定理の残課題（`../../experiments/original-claims/reports/round4-collinear-asymptotic.md` 9 節）
 
 - **B142**（非共線共円四点組の次数）は本定理では決まらない。別途検証が必要。
-- `batch-08.md` の B141/B145 の記述訂正、`round2-batch-b471.md` の B473 の前提訂正が未処理。
+- `../../log/claim-audit/batch-08.md` の B141/B145 の記述訂正、`../../experiments/original-claims/reports/round2-batch-b471.md` の B473 の前提訂正が未処理。
 - 有限計算だけで判定した他の共円漸近仮説の真偽は、共線定理では決まらない。
 - 三行盤の開始長、**B542 の有限残件**、**B558 の制約付き構成**は引き続き別問題。
 
@@ -572,7 +574,7 @@ CRT 版（`round5_b501_prand8.cpp`）も n=7 で 13.43 GB となり、本質的�
   B597 は「分母の最大集合数」が n=6 の 464 から n=7 の 16 へ 29 倍暴落するため、
   4 連続 n では挙動を決められない。
 - **B104/B106/B107/B108**: n=8 の K=15 極大は
-  `night-research/cycle6-maxsafeset-n8-15.json` = `{"found": false, "nodes": 8509396}`
+  `research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json` = `{"found": false, "nodes": 8509396}`
   で**非発見**。n=8+ の完全列挙が最大集合系の主要系列の壁。
 - **B425**: 孤立 12石の完全列挙は `C(49,12) ≈ 6.9×10⁹` 級で、分岐限界と D4 商が必要。
 - **B040/B331 ほか**: 2⁴⁹ subset DP が必要な二点確率 `W_pq(λ)` は n=4 限定でしか到達しない。
@@ -582,7 +584,7 @@ CRT 版（`round5_b501_prand8.cpp`）も n=7 で 13.43 GB となり、本質的�
 1. **n=8 の p_rand — 数十 GB のマシン、または 1 層保持 + 8 B/状態以下の実装が必要**。
    本環境（19 GB）では CRT + 2層ストリーミング（24 B/状態、82 GiB）でも不足し、
    層成長 32 倍が支配する限り未決。**n ≤ 7 は再計算不要**
-   （`round4_b501_prand_n7.json` と `round4-batch-b501-b502.md` 第2節を参照）。
+   （`../../experiments/original-claims/output/round4_b501_prand_n7.json` と `../../experiments/original-claims/reports/round4-batch-b501-b502.md` 第2節を参照）。
    完了すれば B502 の「最大値の漸近上限が存在するか（1 に近づくか、別の上限があるか）」に
    1 点が加わる。
 2. **8石極大の他サイズ拡大**。`round4_b371.cpp` のスケルトン（三つ組補完表 + 添字対分割の
@@ -604,16 +606,16 @@ CRT 版（`round5_b501_prand8.cpp`）も n=7 で 13.43 GB となり、本質的�
 
 | ファイル | 内容 |
 |---|---|
-| `round4-batch-b002-b091.md` … `round4-batch-b591-b599.md`（10 ファイル） | 個票。B502 のみ `round4-batch-b501-b502.md` |
-| `round4-collinear-asymptotic.md` | 共線四点組の厳密な主項・次項（B141/B145/B150/B471/B472/B473 の証明） |
-| `round4-fixed-width.md` | 固定幅長方形盤の終局手数固定定理と 14 仮説の検証 |
-| `ROUND4-B141-VERIFICATION.md` | B141 訂正の独立再検算記録 |
-| `round4-n8-feasibility.md` | **n=8 がこの環境では未決である記録**（層成長 32 倍、メモリ見積もり、試行の判定） |
-| `round5_crt_bug.md` | CRT 版 p_rand ソルバの到達範囲と閾値カウントの制約 |
-| `round4_status.json` / `scripts/round4_status.py` | 第3回ラベルと第4回ラベルの機械比較（決着 29 件） |
-| `scripts/round4_b002.cpp`, `round4_b092.cpp`, `round4_b168.cpp`(+`_run.sh`), `round4_b228.cpp`, `round4_b228c.cpp`, `round4_b291.cpp`, `round4_b291c.cpp`, `round4_b291e.cpp`, `round4_b371.cpp`(+`_witness.py`), `round4_b400.cpp`, `round4_b501_prand.cpp`, `round4_b543_rect.cpp`(+`_build.sh`/`_run.sh`), `round4_b591_dmax.cpp` | C++ ソルバ（すべて `kc_core.h` を include） |
-| `scripts/round4_collinear_asymptotic.py`, `round4_fixed_width.py`, `round4_circle_windows.py`, `verify_b141_independent.py`, `round4_prand_inspect.py`, `prand8_projection.py` | Python 側スクリプト |
-| `round4_b002.json` / `.raw`, `round4_b092.json`, `round4_b092b.json`, `round4_b291.json`, `round4_b291c.json`, `round4_b291d.json`, `round4_b291e.json`, `round4_b291e2.json`, `round4_b371.json` / `.bin`, `round4_b400.json`, `round4_b474_b477.json`, `round4_b501_prand.json` / `_n7.json`, `round4_b543_rect.json` / `_v.json`, `round4_b591_dmax.json`, `round4_collinear_asymptotic.json`, `round4_fixed_width.json`, `round4_circle_windows.json`, `round4_firstmoves.json`, `round4_tstar_n45.json`, `round4_tstar_n67.json` | 数値データ（浮動小数なし） |
+| `../../experiments/original-claims/reports/round4-batch-b002-b091.md` … `../../experiments/original-claims/reports/round4-batch-b591-b599.md`（10 ファイル） | 個票。B502 のみ `../../experiments/original-claims/reports/round4-batch-b501-b502.md` |
+| `../../experiments/original-claims/reports/round4-collinear-asymptotic.md` | 共線四点組の厳密な主項・次項（B141/B145/B150/B471/B472/B473 の証明） |
+| `../../experiments/original-claims/reports/round4-fixed-width.md` | 固定幅長方形盤の終局手数固定定理と 14 仮説の検証 |
+| `../../experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md` | B141 訂正の独立再検算記録 |
+| `../../experiments/original-claims/reports/round4-n8-feasibility.md` | **n=8 がこの環境では未決である記録**（層成長 32 倍、メモリ見積もり、試行の判定） |
+| `../../experiments/original-claims/reports/round5_crt_bug.md` | CRT 版 p_rand ソルバの到達範囲と閾値カウントの制約 |
+| `../../experiments/original-claims/output/round4_status.json` / `../../experiments/original-claims/scripts/round4_status.py` | 第3回ラベルと第4回ラベルの機械比較（決着 29 件） |
+| `../../experiments/original-claims/scripts/round4_b002.cpp`, `round4_b092.cpp`, `round4_b168.cpp`(+`_run.sh`), `round4_b228.cpp`, `round4_b228c.cpp`, `round4_b291.cpp`, `round4_b291c.cpp`, `round4_b291e.cpp`, `round4_b371.cpp`(+`_witness.py`), `round4_b400.cpp`, `round4_b501_prand.cpp`, `round4_b543_rect.cpp`(+`_build.sh`/`_run.sh`), `round4_b591_dmax.cpp` | C++ ソルバ（すべて `kc_core.h` を include） |
+| `../../experiments/original-claims/scripts/round4_collinear_asymptotic.py`, `round4_fixed_width.py`, `round4_circle_windows.py`, `verify_b141_independent.py`, `round4_prand_inspect.py`, `prand8_projection.py` | Python 側スクリプト |
+| `round4_b002.json` / `.raw`, `../../experiments/original-claims/output/round4_b092.json`, `../../experiments/original-claims/output/round4_b092b.json`, `round4_b291.json`, `../../experiments/original-claims/output/round4_b291c.json`, `../../experiments/original-claims/output/round4_b291d.json`, `../../experiments/original-claims/output/round4_b291e.json`, `../../experiments/original-claims/output/round4_b291e2.json`, `../../experiments/original-claims/output/round4_b371.json` / `.bin`, `round4_b400.json`, `../../experiments/original-claims/output/round4_b474_b477.json`, `../../experiments/original-claims/output/round4_b501_prand.json` / `_n7.json`, `../../experiments/original-claims/output/round4_b543_rect.json` / `_v.json`, `../../experiments/original-claims/output/round4_b591_dmax.json`, `../../experiments/original-claims/output/round4_collinear_asymptotic.json`, `../../experiments/original-claims/output/round4_fixed_width.json`, `../../experiments/original-claims/output/round4_circle_windows.json`, `../../experiments/original-claims/output/round4_firstmoves.json`, `../../experiments/original-claims/output/round4_tstar_n45.json`, `../../experiments/original-claims/output/round4_tstar_n67.json` | 数値データ（浮動小数なし） |
 | **`round4-SUMMARY.md`** | **本ファイル** |
 
 既存の `round3-SUMMARY.md` および第1〜3回の個票・`hypothesis-bank-*.md`・`PROTOCOL.md` は

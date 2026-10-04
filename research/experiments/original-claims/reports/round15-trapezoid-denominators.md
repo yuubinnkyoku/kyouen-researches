@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 中心分母: 典型的な共円四点では一次、最大値は二次
 
 作成: 2026-09-29。B477の[標準弦公式](round15-standard-chord.md)から得る算術的帰結。
@@ -136,8 +138,8 @@ n_tは公差180の列なので、任意の十分大きいnに対してn_t≤n<n_
 
 ## 5. 整数検算
 
-[scripts/round15_standard_chord.py](scripts/round15_standard_chord.py) と
-[round15_standard_chord.json](round15_standard_chord.json) に検算結果を保存した。
+[scripts/round15_standard_chord.py](../scripts/round15_standard_chord.py) と
+[round15_standard_chord.json](../output/round15_standard_chord.json) に検算結果を保存した。
 n=2〜8の全等脚台形9,754個、平行辺の選び方12,084条件で(1)とB|tを確認。
 族(3)はn=3〜1000の998条件を検査し、指定したn≥5の664条件でq=4n−10。
 族(7)はt=10,40,…,3010の101条件で整数行列式・原始係数・中心分母を独立計算し、全て一致した。

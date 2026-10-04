@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 三石でも彩色数は無界、木の高階効果の二つの最小サイズ
 
 作成: 2026-09-30。**B062 REFUTED、B064 SUPPORTED、B344 PARTIAL。**
@@ -79,10 +81,10 @@ K1,3では三葉の三点辺だけが可能だが、完全g=2、二点近似g=1�
 
 ## 検算と再現
 
-[検算器](scripts/round44_tree_and_clique.py)は新しい整数幾何で両木証人の全16/32拡張の安全性を
+[検算器](../scripts/round44_tree_and_clique.py)は新しい整数幾何で両木証人の全16/32拡張の安全性を
 残余族、禁止四点組、曲線占有数、直接行列式で照合し、両版の全安全mexを保存した。
 全m≤4の木残余族でもP/N反転0を確認し、上の小木の一般証明と一致した。
 クリークの全辺、六色彩色、小盤全三石の彩色証明、一般反例族の検算例を
-[証明書](round44_tree_clique_verified.json)に保存した。
+[証明書](../output/round44_tree_clique_verified.json)に保存した。
 
-    python research/verification/scripts/round44_tree_and_clique.py
+    python research/experiments/original-claims/scripts/round44_tree_and_clique.py

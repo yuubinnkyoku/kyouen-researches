@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 四行盤では安定化の直前までGrundy値2が残る
 
 作成: 2026-10-03。
-検証器: [`verification/scripts/q48_boundary_nimbers.py`](verification/scripts/q48_boundary_nimbers.py)。
-全遷移の記録: [`verification/q48_boundary_nimbers.json`](verification/q48_boundary_nimbers.json)。
+検証器: [`verification/scripts/q48_boundary_nimbers.py`](../scripts/q48_boundary_nimbers.py)。
+全遷移の記録: [`verification/q48_boundary_nimbers.json`](../output/q48_boundary_nimbers.json)。
 
 四行・q点版のq=6,7,8では、全局面のGrundy値が0または1へ収まる開始長も、
 各行が満容量になる真の安定化長と一致する。
@@ -137,6 +139,6 @@ y=3 &: \{4,5,9,10,11\}.
 三つの明示局面とその全子孫だけの検証であり、盤全体の全安全局面を列挙したものではない。
 
 ```bash
-python research/verification/scripts/q48_boundary_nimbers.py > /tmp/q48_boundary_nimbers.json
-cmp /tmp/q48_boundary_nimbers.json research/verification/q48_boundary_nimbers.json
+python research/experiments/fixed-width/scripts/q48_boundary_nimbers.py > /tmp/q48_boundary_nimbers.json
+cmp /tmp/q48_boundary_nimbers.json research/experiments/fixed-width/output/q48_boundary_nimbers.json
 ```

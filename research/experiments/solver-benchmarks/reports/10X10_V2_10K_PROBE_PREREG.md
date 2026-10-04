@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Preregistration: V2 fresh 10k probe (cost experiment)
 
 Date: 2026-09-08
@@ -32,7 +34,7 @@ choice below.
 - `probe budget = 10,000 visited / child` (BUDGET = 10000).
 - Fresh solver process per child. Memo table sharing across children
   is forbidden (one `subprocess.run` per task, no in-process carryover).
-- Solver binary: `tmp-kb/probe_holdout_native`
+- Solver binary: `research/experiments/solver-benchmarks/bin/probe_holdout_native`
   - `solver_binary_sha256 = 15d805ea9b354cc11c5c5ee5329512b723241897e32d135bf5a82094cdccd585`
   - identical bytes to the V2 1M run (rebuilt only with the same flags
     if missing; any rebuild must reproduce this digest or the run stops).

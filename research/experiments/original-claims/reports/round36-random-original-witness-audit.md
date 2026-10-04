@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B501・B502・B506の原文証人を有理数で再検算
 
 作成: 2026-09-30。既存の三つの決着を原文索引へ採用する監査。
@@ -13,7 +15,7 @@
 `p(S)=平均_(tが合法な子)(1−p(t))`とする。
 最適勝敗とランダム対局の勝率を混同しない。
 
-[独立監査](scripts/round36_random_witness_audit.py)は整数幾何を生成し直し、
+[独立監査](../scripts/round36_random_witness_audit.py)は整数幾何を生成し直し、
 初めの合法点集合に含まれる全部分集合の安全性を極小残余族と円・直線占有数で一致確認。
 安全な拡張は、拡張内の全四点直接行列式でも確認した。
 それぞれ全32・33・115安全拡張のmex、厳密Fractionのランダム勝率、最大残り手数を再帰計算した。
@@ -34,7 +36,7 @@
 
 で、訂正した座標も証明書に保存した。maskに対する勝率は旧値と一致した。
 
-    python research/verification/scripts/round36_random_witness_audit.py
+    python research/experiments/original-claims/scripts/round36_random_witness_audit.py
 
-- [全継続DAG・子勝率・正しい座標](round36_random_witnesses_verified.json)
-- 既存証拠: [5×5](round3-batch-b501-b502-push2.md)、[6×6データ](round3_b502_pgrand_n6.json)、[B506個票](round2-batch-b501.md)
+- [全継続DAG・子勝率・正しい座標](../output/round36_random_witnesses_verified.json)
+- 既存証拠: [5×5](round3-batch-b501-b502-push2.md)、[6×6データ](../output/round3_b502_pgrand_n6.json)、[B506個票](round2-batch-b501.md)

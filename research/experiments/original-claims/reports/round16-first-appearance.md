@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B458の要約量の限界: 同じ六点・同じ外接幅でも四点初出は決まらない
 
-作成: 2026-09-29。原文: [B458](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-29。原文: [B458](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 **原文の判定はPARTIAL。以下の具体化した決定性はREFUTED。**
 「短く分類できる」の同値関係・初出の意味が原文では固定されていないので、
 それを勝手に補って原文全体の反証とすることはしない。
@@ -111,8 +113,8 @@ p∤qよりp|x,p|y。x=pX,y=pYを代入してp²で割れば、(X,Y)∈P。
 
 ## 5. 検算と残る範囲
 
-再現用スクリプトとデータは [scripts/round16_first_appearance.py](scripts/round16_first_appearance.py)、
-[round16_first_appearance.json](round16_first_appearance.json) に保存した。
+再現用スクリプトとデータは [scripts/round16_first_appearance.py](../scripts/round16_first_appearance.py)、
+[round16_first_appearance.json](../output/round16_first_appearance.json) に保存した。
 完全点集合を二平方和全解と二次方程式の平方判定で独立照合し、全jの初出、
 最小四点窓、e=0〜4の拡大を整数演算で照合。全assert通過。
 初出プロファイル(ν_1,…,ν_6)はCが(1,4,11,12,18,18)、Dが(1,2,15,15,18,18)。

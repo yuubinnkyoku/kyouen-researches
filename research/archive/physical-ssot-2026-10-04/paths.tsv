@@ -674,7 +674,7 @@ research/verification/game_structure_20261003_residuals.json	research/experiment
 research/verification/geometry_20261003_extended.json	research/experiments/geometry/output/geometry_20261003_extended.json	move	experiment output/input/log
 research/verification/geometry_20261003_scale.json	research/experiments/geometry/output/geometry_20261003_scale.json	move	experiment output/input/log
 research/verification/geometry_20261003_strip.json	research/experiments/geometry/output/geometry_20261003_strip.json	move	experiment output/input/log
-research/verification/geometry_q6_exclusion_review.json	research/experiments/geometry/output/geometry_q6_exclusion_review.json	move	experiment output/input/log
+research/verification/geometry_q6_exclusion_review.json	research/experiments/fixed-width/output/geometry_q6_exclusion_review.json	move	independent oracle for fixed-width q6 support exclusions
 research/verification/knowledge-open-freshness-main-2026-10-04.json	research/archive/audits/knowledge-open-freshness-main-2026-10-04.json	move	historical hash audit
 research/verification/knowledge-open-freshness-main-2026-10-04.md	research/experiments/original-claims/reports/knowledge-open-freshness-main-2026-10-04.md	move	dated result/proof primary source
 research/verification/progress-integration-2026-09-28-audit.json	research/archive/audits/progress-integration-2026-09-28-audit.json	move	historical hash audit
@@ -1475,7 +1475,7 @@ research/verification/scripts/game_structure_20261003_reproduce.py	research/expe
 research/verification/scripts/geometry_20261003_extended.py	research/experiments/geometry/scripts/geometry_20261003_extended.py	move	reproduction code or output
 research/verification/scripts/geometry_20261003_scale.py	research/experiments/geometry/scripts/geometry_20261003_scale.py	move	reproduction code or output
 research/verification/scripts/geometry_20261003_strip.py	research/experiments/geometry/scripts/geometry_20261003_strip.py	move	reproduction code or output
-research/verification/scripts/geometry_q6_exclusion_review.cpp	research/experiments/geometry/scripts/geometry_q6_exclusion_review.cpp	move	reproduction code or output
+research/verification/scripts/geometry_q6_exclusion_review.cpp	research/experiments/fixed-width/scripts/geometry_q6_exclusion_review.cpp	move	independent oracle for fixed-width q6 support exclusions
 research/verification/scripts/inspect_bins.sh	research/experiments/original-claims/scripts/inspect_bins.sh	move	reproduction code or output
 research/verification/scripts/kc_core.h	scripts/research/kc_core.h	move	shared implementation
 research/verification/scripts/kc_core121.h	scripts/research/kc_core121.h	move	shared implementation
@@ -1996,21 +1996,16 @@ research/verification/scripts/round5_b551_n5scan.py	research/experiments/origina
 research/verification/scripts/round5_b551_readprev.py	research/experiments/original-claims/scripts/round5_b551_readprev.py	move	reproduction code or output
 research/verification/scripts/round5_b551_readprev2.py	research/experiments/original-claims/scripts/round5_b551_readprev2.py	move	reproduction code or output
 research/verification/scripts/round5_b551_update.py	research/experiments/original-claims/scripts/round5_b551_update.py	move	reproduction code or output
-research/verification/scripts/round5_b551_update2.py	research/experiments/original-claims/scripts/round5_b551_update2.py	move	reproduction code or output
 research/verification/scripts/round5_b551_update3.py	research/experiments/original-claims/scripts/round5_b551_update3.py	move	reproduction code or output
 research/verification/scripts/round5_b551_witness.py	research/experiments/original-claims/scripts/round5_b551_witness.py	move	reproduction code or output
 research/verification/scripts/round5_b551_write1.py	research/experiments/original-claims/scripts/round5_b551_write1.py	move	reproduction code or output
 research/verification/scripts/round5_b551_write2.py	research/experiments/original-claims/scripts/round5_b551_write2.py	move	reproduction code or output
 research/verification/scripts/round5_b551_write3.py	research/experiments/original-claims/scripts/round5_b551_write3.py	move	reproduction code or output
 research/verification/scripts/round5_b551_write4.py	research/experiments/original-claims/scripts/round5_b551_write4.py	move	reproduction code or output
-research/verification/scripts/round5_b551_write5.py	research/experiments/original-claims/scripts/round5_b551_write5.py	move	reproduction code or output
-research/verification/scripts/round5_b551_write6.py	research/experiments/original-claims/scripts/round5_b551_write6.py	move	reproduction code or output
 research/verification/scripts/round5_b551_write7.py	research/experiments/original-claims/scripts/round5_b551_write7.py	move	reproduction code or output
-research/verification/scripts/round5_b551_write8.py	research/experiments/original-claims/scripts/round5_b551_write8.py	move	reproduction code or output
 research/verification/scripts/round5_cover_union.py	research/experiments/original-claims/scripts/round5_cover_union.py	move	reproduction code or output
 research/verification/scripts/round5_geom_stats.py	research/experiments/original-claims/scripts/round5_geom_stats.py	move	reproduction code or output
 research/verification/scripts/round5_geom_stats_diag.py	research/experiments/original-claims/scripts/round5_geom_stats_diag.py	move	reproduction code or output
-research/verification/scripts/round5_jn_append.py	research/experiments/original-claims/scripts/round5_jn_append.py	move	reproduction code or output
 research/verification/scripts/round5_jn_append_summary.py	research/experiments/original-claims/scripts/round5_jn_append_summary.py	move	reproduction code or output
 research/verification/scripts/round5_jn_b317.cpp	research/experiments/original-claims/scripts/round5_jn_b317.cpp	move	reproduction code or output
 research/verification/scripts/round5_jn_b317.sh	research/experiments/original-claims/scripts/round5_jn_b317.sh	move	reproduction code or output
@@ -2022,8 +2017,6 @@ research/verification/scripts/round5_pgrand_followup.py	research/experiments/ori
 research/verification/scripts/round5_pgrand_followup2.py	research/experiments/original-claims/scripts/round5_pgrand_followup2.py	move	reproduction code or output
 research/verification/scripts/round5_pgrand_followup3.py	research/experiments/original-claims/scripts/round5_pgrand_followup3.py	move	reproduction code or output
 research/verification/scripts/round5_pgrand_write1.py	research/experiments/original-claims/scripts/round5_pgrand_write1.py	move	reproduction code or output
-research/verification/scripts/round5_pgrand_write2.py	research/experiments/original-claims/scripts/round5_pgrand_write2.py	move	reproduction code or output
-research/verification/scripts/round5_pgrand_write3.py	research/experiments/original-claims/scripts/round5_pgrand_write3.py	move	reproduction code or output
 research/verification/scripts/round5_prand_stream.cpp	research/experiments/original-claims/scripts/round5_prand_stream.cpp	move	reproduction code or output
 research/verification/scripts/round5_quadratic_cover.py	research/experiments/original-claims/scripts/round5_quadratic_cover.py	move	reproduction code or output
 research/verification/scripts/round5_row_hypergraph.cpp	research/experiments/original-claims/scripts/round5_row_hypergraph.cpp	move	reproduction code or output
@@ -2207,6 +2200,39 @@ research/exploration/fact_tc_k9.err	research/experiments/fact-discovery/output/f
 night-research/cycle9_n8_sample.bin	research/experiments/structural-discovery/output/cycle8_g3_n8_sets.bin	move	byte-identical duplicate of night-research/cycle8_g3_n8_sets.bin
 research/verification/scripts/round5_b301_j5.txt	research/experiments/original-claims/output/round5_b301_j5.txt	move	byte-identical duplicate of research/verification/round5_b301_j5.txt
 research/verification/scripts/round5_b301_j6.txt	research/experiments/original-claims/output/round5_b301_j6.txt	move	byte-identical duplicate of research/verification/round5_b301_j6.txt
+results/10x10/analysis/loss_recall_by_rank.png	research/experiments/solver-benchmarks/output/figures/10x10/analysis/loss_recall_by_rank.png	move	experiment report/figure or historical certificate execution output
+results/10x10/analysis/memo_vs_visited.png	research/experiments/solver-benchmarks/output/figures/10x10/analysis/memo_vs_visited.png	move	experiment report/figure or historical certificate execution output
+results/10x10/analysis/visited_boxplot.png	research/experiments/solver-benchmarks/output/figures/10x10/analysis/visited_boxplot.png	move	experiment report/figure or historical certificate execution output
+results/10x10/analysis/visited_distribution.png	research/experiments/solver-benchmarks/output/figures/10x10/analysis/visited_distribution.png	move	experiment report/figure or historical certificate execution output
+results/10x10/analysis/visited_sorted_scatter.png	research/experiments/solver-benchmarks/output/figures/10x10/analysis/visited_sorted_scatter.png	move	experiment report/figure or historical certificate execution output
+results/10x10/blind-probe-holdout/budget_head_recall_followup.md	research/experiments/solver-benchmarks/reports/results/10x10/blind-probe-holdout/budget_head_recall_followup.md	move	experiment report/figure or historical certificate execution output
+results/10x10/blind-probe-holdout/probe_budget_ablation_prereg.md	research/experiments/solver-benchmarks/reports/results/10x10/blind-probe-holdout/probe_budget_ablation_prereg.md	move	experiment report/figure or historical certificate execution output
+results/10x10/cache-aware-below-root-capacity-rerun/analysis.md	research/experiments/solver-benchmarks/reports/results/10x10/cache-aware-below-root-capacity-rerun/analysis.md	move	experiment report/figure or historical certificate execution output
+results/10x10/cache-aware-bucket-order-optimization/order_equivalence_proof.md	research/experiments/solver-benchmarks/reports/results/10x10/cache-aware-bucket-order-optimization/order_equivalence_proof.md	move	experiment report/figure or historical certificate execution output
+results/10x10/cache-aware-vs-blind/analysis.md	research/experiments/solver-benchmarks/reports/results/10x10/cache-aware-vs-blind/analysis.md	move	experiment report/figure or historical certificate execution output
+results/10x10/clean-holdout-v2/staged_ck10_reserve_prereg.md	research/experiments/solver-benchmarks/reports/results/10x10/clean-holdout-v2/staged_ck10_reserve_prereg.md	move	experiment report/figure or historical certificate execution output
+results/10x10/clean-holdout-v2/staged_ck10_reserve_prereg_amendment.md	research/experiments/solver-benchmarks/reports/results/10x10/clean-holdout-v2/staged_ck10_reserve_prereg_amendment.md	move	experiment report/figure or historical certificate execution output
+results/10x10/clean-holdout-v2/staged_ck10_reserve_retirement.md	research/experiments/solver-benchmarks/reports/results/10x10/clean-holdout-v2/staged_ck10_reserve_retirement.md	move	experiment report/figure or historical certificate execution output
+results/10x10/memo-instrumentation/analysis.md	research/experiments/solver-benchmarks/reports/results/10x10/memo-instrumentation/analysis.md	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/loss_concentration.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/loss_concentration.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/loss_concentration_memo.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/loss_concentration_memo.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/memo_vs_final_budget_10000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/memo_vs_final_budget_10000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/memo_vs_final_budget_100000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/memo_vs_final_budget_100000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/memo_vs_final_budget_1000000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/memo_vs_final_budget_1000000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/memo_vs_final_by_stones_budget_10000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/memo_vs_final_by_stones_budget_10000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/memo_vs_final_by_stones_budget_100000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/memo_vs_final_by_stones_budget_100000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/memo_vs_final_by_stones_budget_1000000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/memo_vs_final_by_stones_budget_1000000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/parent_speedup_budget_10000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/parent_speedup_budget_10000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/parent_speedup_budget_100000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/parent_speedup_budget_100000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/parent_speedup_budget_1000000.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/parent_speedup_budget_1000000.png	move	experiment report/figure or historical certificate execution output
+results/10x10/probe_analysis/spearman_by_budget.png	research/experiments/solver-benchmarks/output/figures/10x10/probe_analysis/spearman_by_budget.png	move	experiment report/figure or historical certificate execution output
+results/legacy/8x8_result.txt	research/experiments/certificate-validation/output/legacy/8x8_result.txt	move	experiment report/figure or historical certificate execution output
+results/legacy/9x9_center.txt	research/experiments/certificate-validation/output/legacy/9x9_center.txt	move	experiment report/figure or historical certificate execution output
+results/legacy/9x9_center_test.txt	research/experiments/certificate-validation/output/legacy/9x9_center_test.txt	move	experiment report/figure or historical certificate execution output
+results/legacy/9x9_result.txt	research/experiments/certificate-validation/output/legacy/9x9_result.txt	move	experiment report/figure or historical certificate execution output
+results/legacy/9x9_sha256.txt	research/experiments/certificate-validation/output/legacy/9x9_sha256.txt	move	experiment report/figure or historical certificate execution output
+results/legacy/9x9_summary.txt	research/experiments/certificate-validation/output/legacy/9x9_summary.txt	move	experiment report/figure or historical certificate execution output
+results/legacy/9x9_verify.txt	research/experiments/certificate-validation/output/legacy/9x9_verify.txt	move	experiment report/figure or historical certificate execution output
 night-research/cycle5-grundy-n6-cap12.json		delete	empty runtime dump
 night-research/cycle6-saturation-n5.json		delete	empty runtime dump
 night-research/cycle6-saturation-n6.json		delete	empty runtime dump
@@ -2245,3 +2271,10 @@ research/verification/scripts/_t.cpp		delete	one-off debugging/editor scratch re
 night-research/cycle9_n8_sample.bin	research/experiments/structural-discovery/output/cycle8_g3_n8_sets.bin	delete	byte-identical duplicate of night-research/cycle8_g3_n8_sets.bin
 research/verification/scripts/round5_b301_j5.txt	research/experiments/original-claims/output/round5_b301_j5.txt	delete	byte-identical duplicate of research/verification/round5_b301_j5.txt
 research/verification/scripts/round5_b301_j6.txt	research/experiments/original-claims/output/round5_b301_j6.txt	delete	byte-identical duplicate of research/verification/round5_b301_j6.txt
+research/verification/scripts/round5_b551_update2.py		delete	obsolete one-off report editing generator; final report retained and Git history preserves generator
+research/verification/scripts/round5_b551_write5.py		delete	obsolete one-off report editing generator; final report retained and Git history preserves generator
+research/verification/scripts/round5_b551_write6.py		delete	obsolete one-off report editing generator; final report retained and Git history preserves generator
+research/verification/scripts/round5_b551_write8.py		delete	obsolete one-off report editing generator; final report retained and Git history preserves generator
+research/verification/scripts/round5_jn_append.py		delete	obsolete one-off report editing generator; final report retained and Git history preserves generator
+research/verification/scripts/round5_pgrand_write2.py		delete	obsolete one-off report editing generator; final report retained and Git history preserves generator
+research/verification/scripts/round5_pgrand_write3.py		delete	obsolete one-off report editing generator; final report retained and Git history preserves generator

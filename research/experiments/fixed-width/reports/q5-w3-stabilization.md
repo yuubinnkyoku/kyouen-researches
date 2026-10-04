@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # q=5・3×m の安定化：184→56、m=11 証人、m=12..21 完全排除
 
 > **2026-10-03 更新**：真の安定化長は **M₃,₅=12** と確定しました。
@@ -269,9 +271,9 @@ Z\cup A\cup N_G(A)
 ## 再現
 
 ```bash
-g++ -O3 -std=c++17 research/verification/scripts/q5_w3_stabilization.cpp -o q5w3
+g++ -O3 -std=c++17 research/experiments/fixed-width/scripts/q5_w3_stabilization.cpp -o q5w3
 ./q5w3
 ```
 
 保存出力:
-`research/verification/q5_w3_stabilization.json`。
+`research/experiments/fixed-width/output/q5_w3_stabilization.json`。

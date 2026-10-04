@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 「どういう調べ方したんですか」への回答（11×11 編）
 
 2026-09-29 版。**訂正済み**。
@@ -130,7 +132,7 @@ hi が30ビットを超えると黙って切り捨てられます。n=9（hi 17�
 ## ファイル
 
 - 結論と訂正: [`research/verification/N11-RESULT.md`](N11-RESULT.md)
-- 作業ログと教訓: [`research/verification/N11-WORKLOG.md`](N11-WORKLOG.md)
+- 作業ログと教訓: [`research/verification/N11-WORKLOG.md`](../../../log/claim-audit/N11-WORKLOG.md)
 - 状態空間測定: [`research/verification/N11-STATE-SPACE.md`](N11-STATE-SPACE.md)
-- 実装: `scripts/kc_core121.h`, `scripts/n11_d4.cpp`, `scripts/n11_grundy.cpp`
-- 再現: `wsl -d Ubuntu -- bash research/verification/scripts/n11_reproduce.sh --with-n11`
+- 実装: `../../../../scripts/research/kc_core121.h`, `../scripts/n11_d4.cpp`, `../scripts/n11_grundy.cpp`
+- 再現: `wsl -d Ubuntu -- bash research/experiments/n11-search-methods/scripts/n11_reproduce.sh --with-n11`

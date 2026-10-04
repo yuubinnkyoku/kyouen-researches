@@ -1,9 +1,11 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 完全格子円の窓点数スペクトル — 全分類と三石後の欠落
 
 作成: 2026-09-28。担当: 継続チャット `01a0e161-14c5-78f0-95c6-a684535bf209`。
-原文: [第2仮説バンク](../hypothesis-bank-round2-2026-09-27.md) B457・B461〜B470。
-再現: `python research/verification/scripts/round4_circle_windows.py`。
-独立検算: [スクリプト](scripts/round4_circle_windows.py)、[整数・有理数データ](round4_circle_windows.json)。
+原文: [第2仮説バンク](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md) B457・B461〜B470。
+再現: `python research/experiments/original-claims/scripts/round4_circle_windows.py`。
+独立検算: [スクリプト](../scripts/round4_circle_windows.py)、[整数・有理数データ](../output/round4_circle_windows.json)。
 
 ## 判定と量化
 

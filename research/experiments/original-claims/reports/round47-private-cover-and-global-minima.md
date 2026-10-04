@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B077・B080の全盤最小石数と最小極大の私有空点
 
 作成: 2026-10-01。**B077・B080 SUPPORTED。**
@@ -63,7 +65,7 @@ n=4は全5,811安全集合を調べ、四石以下の極大は0。
 
 n=2,3は全安全集合。n=4..7は完全な安全層から全極大を抽出し、
 各極大を今回も直接整数幾何で検証。n=8の全408配置はround46で再検算した。
-入力層の状態数とSHA256は`round47_layer_hashes.json`に固定した。
+入力層の状態数とSHA256は`../output/round47_layer_hashes.json`に固定した。
 
 私有空点p、つまりb(p)=1があれば、その唯一の三つ組の任意の石を除くとpが合法になる。
 元の配置は極大なのでρ≥1、従ってρ=1。
@@ -79,8 +81,8 @@ B361のρは元から空だった点を合法に戻す最小除去数なので�
 
 ## 再現
 
-`python research/verification/scripts/round47_cover_audit.py`。
+`python research/experiments/original-claims/scripts/round47_cover_audit.py`。
 全小盤、全五石層の独立列挙、既存層の全極大証人、幾何上界に必要な小盤補完最大を検算し、
-`round47_cover_verified.json`に証明書とSHA256を保存する。
+`../output/round47_cover_verified.json`に証明書とSHA256を保存する。
 `round47_minimal_cover_census.cpp`は保存済みraw uint64安全層を完全に読み、極大性と被覆数を計算する。
 無界全称の成立を、有限のmin b=1という観測だけから主張しない。

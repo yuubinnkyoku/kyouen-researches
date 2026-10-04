@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round2 Batch B471–B500: 有理円・窓切断・数え上げ → 統計の符号 → ランダム貪欲
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` の B471〜B500。
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` の B471〜B500。
 手法: PROTOCOL.md に従う。整数/有理演算。n≤6 の厳密列挙、n≤8 の既存 MC/DP、n≤40 の D_n 閉形式。
-出力: `research/verification/round2_b471.json`、スクリプト `round2_b471_counting.py` / `round2_b471_circles.py` / `round2_b471_poisson.py` / `round2_b471_stats.py` / `round2_b471_greedy.py`。
+出力: `research/experiments/original-claims/output/round2_b471.json`、スクリプト `round2_b471_counting.py` / `round2_b471_circles.py` / `round2_b471_poisson.py` / `round2_b471_stats.py` / `round2_b471_greedy.py`。
 
 ---
 

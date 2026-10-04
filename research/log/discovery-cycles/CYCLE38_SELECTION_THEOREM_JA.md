@@ -1,6 +1,8 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # n=7 K=14 選択定理 — 幾何的根拠つき要約（Cycle 30–37）
 
-分枝 `cycle8-n7-structure` · 証拠行列 `SELECTION_THEOREM_CHECKLIST.md`  
+分枝 `cycle8-n7-structure` · 証拠行列 `../../archive/discovery-summaries/SELECTION_THEOREM_CHECKLIST.md`  
 COMPLETE = 列挙/ソルバーが打ち切りなく完結。SAMPLE = ノード上限付き。
 
 ## 主定理（コンピュータ支援・COMPLETE核）
@@ -107,17 +109,17 @@ g3 サンプラー等で K=15 の証人が得られるが、(2,2) も中心ブ�
 ## 再現（Windows）
 
 ```powershell
-& $env:MIMO_PYTHON night-research/cycle31b_orbit_circles_all_n.py
-& $env:MIMO_PYTHON night-research/cycle34_occupancy_lattice_certificate.py
-& $env:MIMO_PYTHON night-research/cycle35_phase_lift_contrast.py
-night-research/cycle8_b_maxsafe.exe max 7 14 --force 16 --max-nodes 4000000
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle31b_orbit_circles_all_n.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle34_occupancy_lattice_certificate.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle35_phase_lift_contrast.py
+research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe max 7 14 --force 16 --max-nodes 4000000
 ```
 
 ## 主要文書
 
-- `FINAL_SELECTION_THEOREM.md` — 英文の圧縮定理
+- `../../archive/discovery-summaries/FINAL_SELECTION_THEOREM.md` — 英文の圧縮定理
 - `CYCLE31B_ORBIT_CIRCLES_ALL_N.md` — 軌道–円補題
 - `CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md` — α(M)≤13
 - `CYCLE35_PHASE_LIFT_CONTRAST.md` — 位相リフト決定
 - `CYCLE15_CAPACITY_DECOMPOSITION.md`, `CYCLE27_CORE_EXTENSION.md`
-- `SELECTION_THEOREM_CHECKLIST.md`
+- `../../archive/discovery-summaries/SELECTION_THEOREM_CHECKLIST.md`

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # round5-batch-pgrand: B504–B530 p_rand 残余
 
 > 担当: p_rand 残余（n≤7 データで決着できる残余）
@@ -9,8 +11,8 @@
 ## B504 [存在] 誘惑手の数を増幅する幾何部品がある
 - 判定: **PARTIAL**（前回: INCONCLUSIVE → 今回: PARTIAL。n=4→5 で decoys 13→22 を再確認、n=6 未測定・無限族未構成）
 - 前回の一手: 「n=4 で |W|=1 かつ |L| が大きい局面の最大 |L| を調べる」
-- 今回の範囲: 既存 `round5_b401_prand_stats.json`（n=4,5 全 N 局面）と
-  `round4_b501_prand_n7.json`（n=7 集計）を照合。n=5 の証人を座標付きで再同定。
+- 今回の範囲: 既存 `../output/round5_b401_prand_stats.json`（n=4,5 全 N 局面）と
+  `../output/round4_b501_prand_n7.json`（n=7 集計）を照合。n=5 の証人を座標付きで再同定。
 - 証拠:
   - n=4: N_with_W1 = 1,712 / N 3,986、**max_decoys = 13**（occ=5、点 (0,0),(2,0)、|L|=14）。
   - n=5: N_with_W1 = 43,514 / N 111,069、**max_decoys = 22**（occ=32784、点 (4,0),(0,3)、k=2、|L|=23、|W|=1）。
@@ -22,7 +24,7 @@
 ## B505 [存在] 最善手が多いのにランダム勝率が低い
 - 判定: **PARTIAL**（前回: INCONCLUSIVE → 今回: PARTIAL。n≤5 で |W|/|L|≥1/2 ⇒ p_rand≥1/2、反例 0）
 - 前回の一手: 「n=5 の層化標本が必要」
-- 今回の範囲: 既存 `round5_b401_prand_stats.json` の n=4,5 全 N 局面のうち
+- 今回の範囲: 既存 `../output/round5_b401_prand_stats.json` の n=4,5 全 N 局面のうち
   |W|/|L|≥1/2 のもの（n=4: 2,256 件、n=5: 52,044 件）について min p_rand を確認。
 - 証拠:
   - 両 n とも **min p_rand = 1/2**（厳密に張り付き）、p_rand<2/5 のヒット **0**。
@@ -60,7 +62,7 @@
 ## B508 [存在] ランダム勝率が同じ二局面に任意に異なる最善手比率がある
 - 判定: **PARTIAL**（前回: INCONCLUSIVE → 今回: PARTIAL。n=5 で同 p_rand グループ内比率差 2/3）
 - 前回の一手: 「n≤4 で該当ペア 0 件。n=5 へ広げるか新たな構成が必要」
-- 今回の範囲: 既存 `round5_b401_prand_stats.json` の n=5 全局面の p_rand グループ化結果を照合。
+- 今回の範囲: 既存 `../output/round5_b401_prand_stats.json` の n=5 全局面の p_rand グループ化結果を照合。
 - 証拠:
   - n=4: 最大比率差 **2/7 ≈ 0.286**（p_rand=4/7 の 16 局面、比率 2/7 と 4/7）。
   - n=5: 最大比率差 **2/3**（p_rand=**2/3** の同値 **1,064** 局面、比率 **0/6** と **4/6**）。
@@ -74,7 +76,7 @@
 ## B510 [存在] 一手だけ完全に読むことが、数手のランダム試行より悪く見える局面
 - 判定: **INCONCLUSIVE**（前回: INCONCLUSIVE → 今回: INCONCLUSIVE。n≤5 で 0 件を再確認）
 - 前回の一手: 「n=5 の 151,394 状態での探索が必須」
-- 今回の範囲: 既存 `round5_b401_prand_stats.json` で n=4,5 全 N 局面の
+- 今回の範囲: 既存 `../output/round5_b401_prand_stats.json` で n=4,5 全 N 局面の
   「真の必勝手の子 p_rand が全負け手の子 p_rand より厳密に大きい」を探索した結果（0 件）を照合。
 - 証拠:
   - n=4: ヒット **0** / N 3,986。n=5: ヒット **0** / N 111,069（完全走査）。
@@ -93,7 +95,7 @@
   - n=4: 2 点・3 点とも **K_drops = 0**（K=7 不変）。よって n=4 では δ_K(4)≥4。
   - n=3: K_drops 8 件、最小サイズ **3**（3 本の直線トリプル）。
   - **n=7: δ_K(7) = 2**。証人: 角対 (0,48) または (6,42)（(0,0)-(6,6) および (6,0)-(0,6)）。
-    7×7 の 14 石安全集合は K=14 よりちょうど 16 本（`night-research/maxsafe_n7_K14.bin`）で、
+    7×7 の 14 石安全集合は K=14 よりちょうど 16 本（`research/experiments/structural-discovery/output/maxsafe_n7_K14.bin`）で、
     これが**全て**。D が K を下げる ⇔ D が 16 本すべてに当たる。
     - 2 点で 16 本すべてに当たるもの: **2 個**（上記 2 対）。
     - 3 点で当たるもの: 168 個（角 3 点を含む 4 通りもすべて該当）。
@@ -161,10 +163,10 @@
 - 前回の一手: 「全 C(194,2)=18,721 ペアの完全走査が必要」
 - 今回の範囲: 并行バッチ `round5-batch-b401-b600.md` の完全走査結果を採用
   （`round5_b401_quads.json`: tested=18721, complete=true, flips=0）。
-  本バッチでも標準 4×4 の g=0 を独立再計算で確認（`round5_pgrand.json`）。
+  本バッチでも標準 4×4 の g=0 を独立再計算で確認（`../output/round5_pgrand.json`）。
 - 証拠:
   - 標準族 g(∅)=0（後手勝ち）。全 2 禁止解除ペア 18,721 組で勝者反転 **0**。
-  - 実装: `scripts/round5_b401_quads.py`、データ: `round5_b401_quads.json`。
+  - 実装: `../scripts/round5_b401_quads.py`、データ: `round5_b401_quads.json`。
 - 残った障害: **なし**（4×4・2 点解除の範囲で完全決着）。
 
 ## B522 [存在] 4×4の三つの禁止解除で勝者が反転する
@@ -301,21 +303,21 @@
 
 ### 実装バグの記録
 
-`round5_b401_del3.json` は**無効**。
+`../output/round5_b401_del3.json` は**無効**。
 `board_square_minus` は `(x,y)` 座標列を要求するが、当該スクリプトは
 整数 ID（0..15）を渡しており、点が一切削除されていなかった。
 よって `n_K_drops=0, n_winner_flips=0` は「同じ盤の 560 回再計算」であり、
 B518 の pure_triple_flips=12 と矛盾していた。
-本バッチ `scripts/round5_pgrand_fast.py` は座標変換 `xy(i,n)=(i%n, i//n)` を
+本バッチ `../scripts/round5_pgrand_fast.py` は座標変換 `xy(i,n)=(i%n, i//n)` を
 行い、n=4 の 2・3 点を正しく再計算した（K_drops=0 は**正しい**が、
 winner_flips は 2 点で 12、3 点で 140、うち pure3 が 12）。
 
 ### データ
 
-- `round5_pgrand.json` — 本バッチの厳密計算結果
+- `../output/round5_pgrand.json` — 本バッチの厳密計算結果
 - `round5_b501_prand_n7.json`（既存、n=7 p_rand）— B504/B505/B507/B508/B510 の n=7 側
-- `round5_b401_prand_stats.json`（既存）— B504/B505/B508/B510 の n=5 統計
-- `night-research/maxsafe_n7_K14.bin` — B513 の 16 最大集合
+- `../output/round5_b401_prand_stats.json`（既存）— B504/B505/B508/B510 の n=5 統計
+- `research/experiments/structural-discovery/output/maxsafe_n7_K14.bin` — B513 の 16 最大集合
 
 ### 残った障害（次の一手）
 

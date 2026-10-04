@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round5: B201-B230
 
 対象: research/hypothesis-bank-*.md の B201〜B230（未解決: B201-B203, B205-B210, B213, B216, B218-B227, B229）。
 スクリプト: scripts/round5_b201_*.py
-データ: research/verification/round5_b201_*.json
+データ: research/experiments/original-claims/output/round5_b201_*.json
 スクリプト: scripts/round5_b201_core.py, round5_b201_del1.cpp, round5_b201_del2.cpp, round5_b201_rectvar.py
 
 ---

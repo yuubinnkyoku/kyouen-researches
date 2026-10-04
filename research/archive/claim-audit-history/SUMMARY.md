@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 仮説バンク検証総括 — B001〜B300
 
 作成: 2026-09-27 / 手法: `PROTOCOL.md` に従う10バッチ並列検証（小盤厳密計算・既存データ照合・反例/証人探索）
@@ -96,10 +98,10 @@
 
 ### 追補: s_8 の決定
 
-`scripts/analysis/fact_kmin_cover_bound.cpp` の補完集合枝刈りを 8×8 に適用し、k=7 を **117,206,125 nodes で完全非存在**と確認。k=8 では既知証人 `[0,1,6,20,24,32,34,60]` を再発見した。よって **s_8=8**。生ログは `research/verification/data/s8_exact.json`。
+`scripts/analysis/fact_kmin_cover_bound.cpp` の補完集合枝刈りを 8×8 に適用し、k=7 を **117,206,125 nodes で完全非存在**と確認。k=8 では既知証人 `[0,1,6,20,24,32,34,60]` を再発見した。よって **s_8=8**。生ログは `research/experiments/original-claims/output/data/s8_exact.json`。
 
 ## 成果物
 
-- 個別レポート: `research/verification/batch-01.md` … `batch-10.md`
-- 計算スクリプト: `research/verification/scripts/`
-- 補助データ: `research/verification/data/`, 各種 `batchXX_*.json`
+- 個別レポート: `research/log/claim-audit/batch-01.md` … `../../log/claim-audit/batch-10.md`
+- 計算スクリプト: `research/experiments/original-claims/scripts/`
+- 補助データ: `research/experiments/original-claims/output/data/`, 各種 `batchXX_*.json`

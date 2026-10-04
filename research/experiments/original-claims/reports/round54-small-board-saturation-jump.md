@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B098の原文採用とB097の有限範囲
 
 作成: 2026-10-01。**B098 SUPPORTED、B097 PARTIAL。**
@@ -21,5 +23,5 @@ s₁₀∈[8,10]なので、九盤から十盤で下がらないこともまだ�
 旧「s₁₀=11なら初めて差2」という条件付き記述は、小盤端点を除外する追加条件がなければ
 原文のB098の初例を説明するものではなかった。
 
-再現: `python research/verification/scripts/round54_saturation_jump.py`。
-`round54_saturation_jump_verified.json`に全小盤層・全極大証人、有限系列の依存ハッシュを保存。
+再現: `python research/experiments/original-claims/scripts/round54_saturation_jump.py`。
+`../output/round54_saturation_jump_verified.json`に全小盤層・全極大証人、有限系列の依存ハッシュを保存。

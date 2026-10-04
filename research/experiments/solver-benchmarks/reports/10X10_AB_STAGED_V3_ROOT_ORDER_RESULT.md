@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # AB staged-V3 root-order solver benchmark — result
 
 ## Verdict
@@ -33,8 +35,8 @@ Secondary:
 - root orders: `6ccbac5` (orders sha256 `af3ff00f…b6df5`)
 - seed: `kyouen-10x10-ab-staged-v3-root-seed-20260913`
 - 16 fresh parents, 1,529 children (clean universe 14,635; excluded 5,720)
-- probe binary `tmp-kb/probe_holdout_native` sha256 `15d805ea…`
-- exact binary `tmp-kb/parent_bench_native` sha256 `e0de57b3…`
+- probe binary `research/experiments/solver-benchmarks/bin/probe_holdout_native` sha256 `15d805ea…`
+- exact binary `research/experiments/solver-benchmarks/bin/parent_bench_native` sha256 `e0de57b3…`
 - probes: shrink=3 load=80; exact: shrink=0 load=90; K=11 frozen from V3
 - fresh process per probe child and per (parent, strategy) exact
 - AB/BA by SHA256(parent) parity; serial exacts; 1 repeat (visited primary)

@@ -1,7 +1,9 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Cycle 9 G1 — (2,2) geometric obstruction notes
 
 Complete for the local questions. Parent owns `CYCLE8_N7_STRUCTURE.md`.
-Inputs: `maxsafe_n7_K14.bin` (16, not re-enum), `forbidden_quads(7)` (n=6364).
+Inputs: `../../experiments/structural-discovery/output/maxsafe_n7_K14.bin` (16, not re-enum), `forbidden_quads(7)` (n=6364).
 
 ## Board (Q = (2,2) orbit, c = center)
 
@@ -99,7 +101,7 @@ X.....X
 ```
 - +1-cell probes on this witness: **0 legal adds**, of which safe 13-sets: **0** (must be 0; Package B COMPLETE count@13=0).
 - Every other empty cell is blocked by >=1 forbidden triple inside the 12-set
-  (details in `cycle8_g1_result.json` → `center_plus_23.plus1_on_witness.blocked_adds`).
+  (details in `../../experiments/structural-discovery/output/cycle8_g1_result.json` → `center_plus_23.plus1_on_witness.blocked_adds`).
 
 ## Human-checkable bundle statement
 
@@ -118,5 +120,5 @@ Evidence labels:
 
 Reproduce:
 ```powershell
-& $env:MIMO_PYTHON night-research/cycle8_g1_22_geometry.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_g1_22_geometry.py
 ```

@@ -1,10 +1,12 @@
+> **研究履歴**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Batch 07: B121-B140
 
 対象: 一般の配置変形・障壁・触媒 (B121-B130)、格子円の中心・半径・算術 (B131-B140)。
-プロトコル: `research/verification/PROTOCOL.md`。
-スクリプト: `research/verification/scripts/deform_graph_b121.py`, `research/verification/scripts/circle_b131.py`。
-データ: `research/verification/data/safe_n6_k{8,9,10}.bin`, `safe_n7_k{12,13}.bin`, `circle_b131_b138.json`。
-既存データ参照: `night-research/CYCLE6_MAXSAFE_EXCHANGE.md`, `DISCOVERY_CORNER_GATE_AND_COMPONENTS.md`, `research/findings.md` F-K/F-Z/F-AC/F-AG/F-AO。
+プロトコル: `research/archive/claim-audit-history/PROTOCOL.md`。
+スクリプト: `research/experiments/original-claims/scripts/deform_graph_b121.py`, `research/experiments/original-claims/scripts/circle_b131.py`。
+データ: `research/experiments/original-claims/output/data/safe_n6_k{8,9,10}.bin`, `safe_n7_k{12,13}.bin`, `circle_b131_b138.json`。
+既存データ参照: `research/log/discovery-cycles/CYCLE6_MAXSAFE_EXCHANGE.md`, `DISCOVERY_CORNER_GATE_AND_COMPONENTS.md`, `research/archive/hypothesis-ledgers/findings.md` F-K/F-Z/F-AC/F-AG/F-AO。
 
 ## 用語
 

@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # `loss_child` 生成規則監査メモ（holdout-v2 結果参照前の事前固定）
 
 固定日: 2026-09-19
@@ -37,7 +39,7 @@
    - 証明ログは追記専用であり、同名正準WIN位置に複数witnessが現った場合は最初の保存が残り、`conflicts` として数えられる。
 
 すなわち、同じ親でも witness ログ再利用の有無・履歴・メモ状態により
-採用witnessが変わり得る。`docs/10X10_FOUR_STONE_SUBSETS_AND_PROOF.md` も
+採用witnessが変わり得る。`research/experiments/solver-benchmarks/reports/10X10_FOUR_STONE_SUBSETS_AND_PROOF.md` も
 複数witnessの存在と「最初の保存を残す」運用を明記している。
 
 ## CSV上の傍証

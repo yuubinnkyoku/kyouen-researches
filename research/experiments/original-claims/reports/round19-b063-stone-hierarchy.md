@@ -1,7 +1,9 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B063: 3石と4石を分ける最小誘導型は5頂点で実現する
 
 作成: 2026-09-30。**B063 SUPPORTED（全盤での不可能性と整数座標による実現）。**
-原文: [仮説バンクB063](../hypothesis-bank-2026-09-27.md)。
+原文: [仮説バンクB063](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md)。
 「どの盤の三石局面にも誘導部分グラフとして現れず、四石局面には現れる固定グラフH」
 という量化をそのまま扱う。
 
@@ -83,8 +85,8 @@ round18は各k≥2についてK_(1,binom(k,2))の有理構成と整数化も与�
 
 ## 5. 再現と判定範囲
 
-実行: `python research/verification/scripts/round19_b063_hierarchy.py`。
-[検査コード](scripts/round19_b063_hierarchy.py)、[整数証人と全結果](round19_b063_hierarchy.json)。
+実行: `python research/experiments/original-claims/scripts/round19_b063_hierarchy.py`。
+[検査コード](../scripts/round19_b063_hierarchy.py)、[整数証人と全結果](../output/round19_b063_hierarchy.json)。
 実行は正常終了し、K_(1,4)の証人、全11型、3×3の全112安全四石集合の検査が全て通過した。
 JSONにはコードと共通幾何判定コードのSHA-256も保存している。
 

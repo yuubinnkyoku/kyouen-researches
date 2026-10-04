@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B456: 記録円には新しい平方類が無限に必要
 
-作成: 2026-09-29。対象: [B456原文](../hypothesis-bank-round2-2026-09-27.md)。
+作成: 2026-09-29。対象: [B456原文](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md)。
 
 **判定: SUPPORTED（全ての固定分母についての一般証明）。**
 半径上限ごとの最大点数が更新される円を「記録円」と呼ぶ。
@@ -227,8 +229,8 @@ log F_q(X_±)=(1±ε+o(1))log mとなる。
 
 ## 8. 有限の整数検算
 
-[スクリプト](scripts/round11_circle_records.py)、[全証人・記録列](round11_circle_records.json)。
-再現: `python research/verification/scripts/round11_circle_records.py`。
+[スクリプト](../scripts/round11_circle_records.py)、[全証人・記録列](../output/round11_circle_records.json)。
+再現: `python research/experiments/original-claims/scripts/round11_circle_records.py`。
 
 - M=1,…,50000の全二平方和表現を整数平方根による円盤走査で列挙し、表現数公式と照合。
 - q=1,2,3,4,5,6,7,8,9,10,12,16の673,982非空原始剰余類を検査。

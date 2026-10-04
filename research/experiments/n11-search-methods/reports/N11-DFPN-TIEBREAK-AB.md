@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 11x11 中央 v=60 tie-break A/B（asc vs desc, 各 15 分）
 
 **11x11 の勝敗は UNKNOWN のまま。** どちらの arm も 900 秒で
@@ -27,7 +29,7 @@ pn/dn 比較の後に適用していた。これを `tie_better()` に hoist し
 **重要: tie-break は pn/dn が既に等しい子にのみ作用するため、
 証明結果の正しさに影響しない。** n=4,5,6,7 の全 root で
 両 mode の勝敗が完全一致することを確認済み
-（`research/verification/scripts/dfpn_regress_tiebreak.sh`）:
+（`research/experiments/n11-search-methods/scripts/dfpn_regress_tiebreak.sh`）:
 
 | n | asc expansions | desc expansions | 勝敗 |
 |---|---|---|---|

@@ -1,3 +1,5 @@
+> **歴史的資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 ---
 feature: night-cycle4-exact-structure
 status: delivered
@@ -20,7 +22,7 @@ Python enumerator on n=3,4,5.
 counts (1/14/194/826) and certificate winners; mobility densities matched
 published first-move counts (4/4, 9/9, 0/16, 9/25); rust classify-first agreed
 cell-for-cell on n=5 WIN set. Full command evidence in
-`night-research/CYCLE4_EXACT_STRUCTURE.md`.
+`research/log/discovery-cycles/CYCLE4_EXACT_STRUCTURE.md`.
 
 **Journey log** — (1) fresh `git worktree add` blocked by shared-registry
 guard; continued additively on `replicate-8x8-o-stratum` @ `db50e40`.
@@ -67,7 +69,7 @@ Work package:
    (forbidden-quad count, α from Cycle 1 maximal sets when available,
    first-move density, peak LOSS depth, root mobility) separate
    F-boards `{1,2,3,5,6,9}` from S-boards `{4,7,8,10}`.
-5. **Research note** — `night-research/CYCLE4_EXACT_STRUCTURE.md` stating the
+5. **Research note** — `research/log/discovery-cycles/CYCLE4_EXACT_STRUCTURE.md` stating the
    strongest supported non-trivial conclusion and explicit non-claims.
 
 ### Implementation contracts
@@ -77,7 +79,7 @@ Work package:
 - Point id: `id = y * n + x`.
 - Position outcome: safe occupied set only; player to move; no legal move ⇒ LOSS.
 - Exact enumerators must be deterministic; seed only for any residual sampling.
-- New code lives under `night-research/`; outputs JSON + markdown.
+- New code lives under `research/experiments/structural-discovery/output/`; outputs JSON + markdown.
 - Do **not** re-solve 9×9 or 10×10 roots (Cycle 3 priority 3).
 - Heavy multi-hour single solver runs are out of scope; prefer n≤5 exact and
   existing sample artifacts for larger boards.
@@ -86,7 +88,7 @@ Work package:
 
 `git worktree add` for a new linked worktree was **blocked** by the session
 guard (shared `.git` registry). Research proceeds on the active checkout
-branch `replicate-8x8-o-stratum` using additive files under `night-research/`
+branch `replicate-8x8-o-stratum` using additive files under `research/experiments/structural-discovery/output/`
 and `docs/`, matching prior night-cycle practice. Existing lane
 `.slim/worktrees/research-properties` is on an older base and is not used as
 the implementation root.

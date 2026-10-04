@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 二次式の合同式認証限界と整数剰余放物線の最大安全部分集合
 
 ## 二つの最大値を区別する
@@ -37,9 +39,9 @@ $p=4r+3\ge7$で、$P(t)=(t,t^2)$、$T=\{-1,0,\ldots,r+2\}$を取る。
 
 $$M_{\rm quad}(p)=(p+13)/4\qquad(p\equiv3\pmod4,\ p\ge7).$$
 
-p=3では3点。$p\equiv1\pmod4$では[round61](../round61-full-split-prime-safe-construction.md)の
+p=3では3点。$p\equiv1\pmod4$では[round61](../original-claims/reports/round61-full-split-prime-safe-construction.md)の
 $\|u\|^2=0$を使う構成から$M_{\rm quad}(p)=p$。
-[round17](../round17-b089-bounded-degree.md)の区間構成に対し、p≡3の場合は4点増えている。
+[round17](../original-claims/reports/round17-b089-bounded-degree.md)の区間構成に対し、p≡3の場合は4点増えている。
 外部の制限和定理自体を今回の発見と扱わない。
 
 ## 整数として安全な部分集合には別の上限がある

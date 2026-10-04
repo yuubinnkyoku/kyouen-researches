@@ -1,8 +1,10 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # Round3: B501-B502
 
-対象: `research/hypothesis-bank-round2-2026-09-27.md` §51 の B501–B502 のみ。
-スクリプト: `research/verification/scripts/round3_b501_pgrand_n5.py`（先行ワーカー）
-データ: `research/verification/round3_b501_pgrand_n5.json`
+対象: `research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md` §51 の B501–B502 のみ。
+スクリプト: `research/experiments/original-claims/scripts/round3_b501_pgrand_n5.py`（先行ワーカー）
+データ: `research/experiments/original-claims/output/round3_b501_pgrand_n5.json`
 追加の独立検算: 本個票の pp. を `kyouen_core.board_square` + `fractions.Fraction` で
 再計算（有理数のみ、浮動小数なし）。新スクリプトの実行は不要。
 
@@ -61,7 +63,7 @@ prand 0.26）。分母は層ごとに 19〜21 桁まで増え、多倍長整数�
 - 前回の一手: 「n≥5 の P 局面探索」（n≤4 に証人なし、0.563 の壁）
 - 今回の範囲: n=2,3,4,5 の**全到達可能安全局面 152,706 個**（n=5 のみ 151,394、
   n≤4 は 1+15+298+5811 程度）の P 局面を完全 DP で走査。n=6 は未。
-  （n=5 の 151,394 は `round3_b501_pgrand_n5.json` の実測値。n≤4 の母集団数は
+  （n=5 の 151,394 は `../output/round3_b501_pgrand_n5.json` の実測値。n≤4 の母集団数は
   round2-batch-b501.md の記載：n=2:15、n=3:298、n=4:5811。）
 - 証拠:
   - n=5 の P 局面で p_rand > 3/4 となるものは **0 個**（`P_gt_3_4 = 0`）。

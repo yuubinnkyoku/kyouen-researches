@@ -1,6 +1,8 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # 10x10 cache-aware below-root ordering confirmation V2 — result: INCOMPLETE
 
-Prereg: `docs/10X10_CACHE_AWARE_BELOW_ROOT_CONFIRMATION_V2_PREREG.md`
+Prereg: `research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CONFIRMATION_V2_PREREG.md`
 (prereg commits `cd151c3` text + `6a9bbab` machine manifest)
 Branch: `preregister-10x10-cache-aware-below-root-confirmation-v2`
 Base: `d9b9a0f` (C1 end). Freeze commit: `7caa7e9` (tooling + execution manifest).

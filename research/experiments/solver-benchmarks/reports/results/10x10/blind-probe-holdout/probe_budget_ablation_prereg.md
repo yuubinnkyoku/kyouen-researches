@@ -1,3 +1,5 @@
+> **実験一次資料**：当時のpreregistration・分析・判定です。現在知識の唯一の正本は[knowledge](../../../../../../knowledge/README.md)です。
+
 # Probe-budget ablation preregistration
 
 This document freezes the next retrospective budget-ablation experiment on the existing 11-parent / 1020-child independent holdout. It does **not** constitute another independent generalization test because the endpoint `K=6` was selected after inspecting the 1M-probe holdout.

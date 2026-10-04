@@ -1,3 +1,5 @@
+> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
+
 # B251の7×7全単独解除を除外
 
 作成: 2026-09-30。**B251 PARTIALを維持。7×7の全6,364単独解除に勝者反転なし。**
@@ -36,11 +38,11 @@ qを既に完成させた局面にはこの帰着を適用しない。
 179,810,350安全局面の表から引いた。二つの解除ソルバはこの表と読取コードを共有するため、
 表自体についてさらに別の全域検査を行った。
 
-[検証器](scripts/round32_standard_pn_verify.cpp)は整数幾何の円・直線占有数から各局面の合法手を求め、
+[検証器](../scripts/round32_standard_pn_verify.cpp)は整数幾何の円・直線占有数から各局面の合法手を求め、
 全局面について「Pなら全子N、Nなら少なくとも一子P」を確認した。
 全層のP数もround28の真のmex分布と一致した。終局がPであることを含むこの局所条件と
 有限の非循環性により、共有した表の勝敗が確定する。
-[監査記録](round32_b251_n7_audited.json)には層ごとの占有集合・P/N表のSHA-256を保存した。
+[監査記録](../output/round32_b251_n7_audited.json)には層ごとの占有集合・P/N表のSHA-256を保存した。
 巨大な作業用バイナリはGitに入れず、再生成するソースを保存している。
 
 初期の単純な探索順では78代表がUNKNOWNとなった。その未完了記録も残したが、除外の根拠には使わない。
@@ -49,14 +51,14 @@ qを既に完成させた局面にはこの帰着を適用しない。
 ## 再現（WSL、作業表は約1.62 GB）
 
 round28の`level_0.occ`〜`level_14.occ`を再生成する必要がある場合は、
-先に`bash research/verification/scripts/round28_run.sh 7`を実行する。
+先に`bash research/experiments/original-claims/scripts/round28_run.sh 7`を実行する。
 以下はリポジトリ直下のbashで実行する。`D`は作業表のディレクトリ。
 
 ```bash
 set -euo pipefail
 D=/home/yuubi/round28_n7
-S=research/verification/scripts
-V=research/verification
+S=research/experiments/original-claims/scripts
+V=research/experiments/original-claims/output
 python3 "$S/round32_b251_input.py"
 g++ -O3 -march=native -std=c++20 -fopenmp "$S/round32_standard_pn.cpp" -o "$D/pn"
 OMP_NUM_THREADS=8 "$D/pn" 7 "$D"
@@ -69,7 +71,7 @@ g++ -O3 -march=native -std=c++20 "$S/round32_b251_curves.cpp" -o "$D/curve_scan"
 python3 "$S/round32_b251_audit.py" "$D"
 ```
 
-- [全幾何・D4被覆](round32_b251_n7_geometry.json)
-- [第一方式](round32_b251_n7_scan.json)、[第二方式](round32_b251_n7_curves.json)
-- [共有標準表の全局面証明検査](round32_standard_pn_verified.json)
-- [未完了だった初期走査](round32_b251_n7_budget_probe.json)
+- [全幾何・D4被覆](../output/round32_b251_n7_geometry.json)
+- [第一方式](../output/round32_b251_n7_scan.json)、[第二方式](../output/round32_b251_n7_curves.json)
+- [共有標準表の全局面証明検査](../output/round32_standard_pn_verified.json)
+- [未完了だった初期走査](../output/round32_b251_n7_budget_probe.json)
