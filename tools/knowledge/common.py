@@ -208,10 +208,11 @@ def validate(items, root=ROOT):
     return errors, sorted(warnings)
 
 
-def checked(root=ROOT):
+def checked(root=ROOT, *, include_generated=True):
+    from layout import layout_errors
     items, errors = load_items(root)
     validation, warnings = validate(items, root)
-    return items, errors + validation, warnings
+    return items, errors + validation + layout_errors(root, include_generated=include_generated), warnings
 
 
 def md(value):

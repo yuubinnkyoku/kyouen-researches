@@ -213,12 +213,12 @@ class MigrationBoundaryTests(unittest.TestCase):
 
     def test_readme_table_follows_main_results_before_analysis_and_english(self):
         text=(ROOT/"README.md").read_text(encoding="utf-8")
-        self.assertLess(text.index("## 主結果"),text.index(BEGIN))
-        self.assertLess(text.index(END),text.index("## 全局面解析・強解決の状況"))
-        self.assertLess(text.index(END),text.index("## English summary"))
+        self.assertLess(text.index("唯一の正本"),text.index(BEGIN))
+        self.assertLess(text.index(END),text.index("## 読み方"))
+        self.assertLess(text.index(END),text.index("## English"))
 
     def test_all_adopted_originals_have_aliases(self):
-        audit=json.loads((ROOT/"research/verification/round26_original_scope_index.json").read_text(encoding="utf-8"))
+        audit=json.loads((ROOT/"research/experiments/original-claims/output/round26_original_scope_index.json").read_text(encoding="utf-8"))
         rows=[r for r in audit["rows"] if r["original_status"]!="NOT_AUDITED"]
         self.assertEqual(len(rows),165)
         self.assertEqual([r["id"] for r in rows if r["id"] not in self.by_alias],[])

@@ -2,7 +2,9 @@ from common import ROOT, checked, solution_table, update_readme, views
 
 
 def main():
-    items, errors, warnings = checked()
+    # A moved canonical artifact can leave yesterday's generated links stale.
+    # Validate source references first and generated references after rebuilding.
+    items, errors, warnings = checked(include_generated=False)
     if errors:
         raise SystemExit("\n".join(errors))
     # Validate README delimiters before writing any generated file.
@@ -22,6 +24,10 @@ def main():
             path.write_bytes(data)
     if updated.encode("utf-8") != raw:
         readme.write_bytes(updated.encode("utf-8"))
+    from layout import layout_errors
+    errors = layout_errors(ROOT)
+    if errors:
+        raise SystemExit("\n".join(errors))
     print(f"generated 6 views and README solution status from {len(items)} items")
 
 
