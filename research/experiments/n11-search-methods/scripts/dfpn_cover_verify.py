@@ -9,7 +9,7 @@ checks the emitted certificate:
   (c) the union of their coverage is all 119 third-move vertices
   (d) every listed coverage set equals the recomputed coverage for that
       class, so the certificate cannot overstate what a class covers
-  (e) the known-proved LOSS class {1,2,11,22} is present
+  (e) the known-proved LOSS class {60,0,1,2} is present by exact D4 identity
 
 Deliberately does NOT reuse the witness script's own helpers beyond the
 game rules, so a bug in the search does not propagate into the check.
@@ -22,7 +22,7 @@ import sys
 N = 11
 V = N * N
 FIRST, R2 = 60, 0
-KNOWN_LOSS_COVERAGE = frozenset((1, 2, 11, 22))
+KNOWN_LOSS_KEY = (0, 1, 2, 60)
 
 CERT = sys.argv[1] if len(sys.argv) > 1 else \
     '/mnt/d/ghq/build11/logs/coveropt/cert_cover.json'
@@ -153,9 +153,9 @@ print('  %s (c) union covers all %d vertices (missing %d, spurious %d)'
 if missing or extra:
     fail = 1
 
-# (e) known proved class present
-has_known = any(frozenset(c['coverage']) == KNOWN_LOSS_COVERAGE
-                for c in cert['classes'])
+# (e) known proved class present by exact canonical identity.  Coverage is
+# not an identity: (0,1,2,60) and (0,1,22,60) both cover {1,2,11,22}.
+has_known = KNOWN_LOSS_KEY in witness
 print('  %s (e) known-proved LOSS class present'
       % ('OK  ' if has_known else 'FAIL'))
 if not has_known:
