@@ -290,6 +290,130 @@ review('B317', 'SUPPORTED', 'finite_witness_and_exhaustive_certificates',
        'round27-fixed-response-audit.md', '4×4全112212完全マッチングが4/6手目で破れる。全証明書と逆順独立列挙で網羅。')
 
 
+# 2026-10-04: B401-B450 original-scope audit.
+# Legacy report labels are not copied blindly; quantifiers and "exactly" clauses are rechecked.
+review('B401', 'REFUTED', 'finite_complete_counterexample',
+       'round2-batch-b381.md',
+       '7×7全16最大配置の最小特定ペアを全列挙。全16配置に同一D4点軌道からなる最小特定ペアがあり、「必ず異なる軌道」は反証。')
+review('B402', 'PARTIAL', 'finite_structural_evidence',
+       'round2-batch-b381.md',
+       '最小特定ペアの相・方向分離を全16配置で照合したが、一方の点軌道だけで相を定められるのは6/16。完全な二段符号化は未構成。')
+review('B403', 'SUPPORTED', 'finite_complete_witness',
+       'round2-batch-b381.md',
+       '7×7のB相8配置は全て、相をBに固定すれば一点で一意特定できる。原文の「場合がある」を満たす。')
+review('B404', 'PARTIAL', 'finite_statistical_evidence',
+       'round2-batch-b381.md',
+       '7×7全16では特定ペア数17対21でも最近接最大配置距離は双方10。6×6標本では弱い正相関のみで、一般統計主張は未決着。')
+review('B405', 'INCONCLUSIVE', 'audited_no_direct_test',
+       'round2-batch-b381.md',
+       '原文の逐次観測で最尤相が複数回切り替わるという条件を直接検査した証拠がない。既存特定ペア計算だけでは判定不能。')
+review('B406', 'PARTIAL', 'finite_rank_computation',
+       'round2-batch-b381.md',
+       '7×7最大配置の49×49共起行列はrank 15で低ランク。ただし中心占有以外の主成分によるA/B分離と残りのD4方向表現は未検証。')
+review('B407 B408', 'INCONCLUSIVE', 'audited_missing_asymptotic_evidence',
+       'round2-batch-b381.md',
+       '7×7有限配置の識別計算はあるが、VC次元の全n一様上界も、識別難度がlog nを超える盤列も証明・反証する証拠がない。')
+review('B409', 'REFUTED', 'finite_complete_counterexample',
+       'round2-batch-b381.md',
+       '7×7全16最大配置で占有点のみの最小観測数も占有・非占有混合の最小観測数も2。空点情報で2点未満へ短縮できず原文を反証。')
+review('B410', 'INCONCLUSIVE', 'single_board_comparison',
+       'round2-batch-b381.md',
+       '7×7ではD4型2種・共起rank15・最大配置側G12八成分が既知だが、「有効rankが型数より障壁を説明する」には複数盤比較が必要。')
+review('B411', 'REFUTED', 'finite_complete_shortest_path_classification',
+       'round2-batch-b411.md',
+       '代表A-B間の最短14操作経路8本を全列挙。隣接合法交換で結ぶ経路グラフは3次元立方体ではない。')
+review('B412', 'REFUTED', 'finite_complete_poset_obstruction',
+       'round2-batch-b411.md',
+       '8最短路は同じ14事象を使うが、全8路に共通する順序関係の交叉半順序だけで線形拡張が32個ある。8路すべてを線形拡張に含む任意の半順序はこの共通順序の部分関係なので拡張数は32以上となり、「ちょうど8」を満たせない。')
+review('B413 B414 B415', 'SUPPORTED', 'finite_complete_shortest_path_classification',
+       'round2-batch-b411.md',
+       '最短8経路を全列挙。一時除去される共通石は全路で一点39のみ、同一点で一致し、第四角48の占有窓も全路で同じ長さ。')
+review('B416', 'PARTIAL', 'finite_shortest_path_structure',
+       'round2-batch-b411.md',
+       '最短路誘導グラフ21頂点24辺に6個の4-cycleと6分岐を確認。ダイヤ形分岐は実在するが「すべての分岐が操作順のみ」という完全還元は未証明。')
+review('B417', 'REFUTED', 'finite_complete_constrained_bfs',
+       'round2-batch-b411.md',
+       'A∪Bと第四角以外の点を使うG12内A-B経路の最短は20操作で、最短14より+6。「+2で長さ16」は反証。')
+review('B418', 'REFUTED', 'finite_complete_constrained_bfs',
+       'round2-batch-b411.md',
+       '第四角の占有区間を2回にした最短経路は16操作で、1回の14操作から+2に過ぎない。「少なくとも+4」を反証。')
+review('B419', 'REFUTED', 'finite_complete_obstruction_classification',
+       'round2-batch-b411.md',
+       '最短8経路の交換不能箇所を全検査すると原因となる禁止四点組は9種類。単一D4幾何型への集約は成立しない。')
+review('B420', 'SUPPORTED', 'finite_complete_constrained_bfs',
+       'round2-batch-b411.md',
+       '第四角48の初使用までの最短操作数はA側9、B側3で非対称。原文の存在する非対称性を全BFSで確認。')
+review('B421', 'REFUTED', 'finite_counterexample_component',
+       'round2-batch-b411.md',
+       '最大14石を含まないG12の311頂点成分に閉路があり、木ではない。')
+review('B422', 'SUPPORTED', 'finite_witness_component',
+       'round2-batch-b411.md',
+       '最大14石を含まない311頂点G12成分に長さ16の誘導閉路を明示。長さ10以上という存在命題を満たす。')
+review('B423', 'PARTIAL', 'finite_component_search',
+       'round2-batch-b411.md',
+       '発見済み非最大成分5個は最大311<903だが、全非最大成分の完全列挙ではないため全称は未決着。')
+review('B424', 'REFUTED', 'finite_counterexample_component',
+       'round2-batch-b411.md',
+       '最大配置外の311頂点G12成分は13石局面を25個含む。8個以下という全称を反証。')
+review('B425', 'PARTIAL', 'finite_component_typing',
+       'round2-batch-b411.md',
+       '孤立12石5例の一石除去後の再追加数多重集合は4型に圧縮できるが、孤立12石全体の完全分類ではない。')
+review('B426', 'INCONCLUSIVE', 'finite_negative_search',
+       'round2-batch-b411.md',
+       '検査した孤立12石5例では、どの例にも元へ戻す以外の追加手を持つ11石子があり証人なし。存在命題なので有限不発見だけでは反証できない。')
+review('B427', 'PARTIAL', 'finite_complete_bfs_on_known_examples',
+       'round2-batch-b411.md',
+       '既知の孤立12石5例は全てG11で13石へ到達したが、孤立12石全体の完全列挙ではないため「各」を確定しない。')
+review('B428 B429', 'PARTIAL', 'finite_statistical_evidence',
+       'round2-batch-b411.md',
+       '孤立12石5例と903成分内12石を比較し、中心占有率と最大配置未使用軌道占有に差を観測。ただし標本5例かつ条件付き統制未完。')
+review('B430', 'SUPPORTED', 'finite_witness',
+       'round2-batch-b411.md',
+       '同じ10軌道占有ベクトルを持ちながら、孤立12石と903成分内12石に分かれる型を2種確認。存在命題の証人。')
+review('B431', 'SUPPORTED', 'exact_integer_and_fractional_certificates',
+       'round2-batch-b411.md',
+       '59禁止四点×6460候補の被覆で21本の整数解を明示し、分数双対値102/5=20.4>20を厳密検算。整数最適値は正確に21。')
+review('B432', 'REFUTED', 'exact_fractional_optimum',
+       'round2-batch-b411.md',
+       '同じ被覆問題の分数primal/dual最適値は102/5=20.4。総重み21の実行可能双対は存在しない。')
+review('B433', 'SUPPORTED', 'exact_integrality_gap',
+       'round2-batch-b411.md',
+       '整数最適21、分数最適102/5=20.4を厳密証明し、真のintegrality gap 3/5を確認。')
+review('B434', 'REFUTED', 'fractional_upper_bound_impossibility',
+       'round2-batch-b411.md',
+       '各禁止四点が高々一候補を覆う21候補packingは分数双対の特殊場合だが分数最適20.4。21候補の存在は不可能。')
+review('B435', 'PARTIAL', 'finite_minimum_cover_samples',
+       'round2-batch-b411.md',
+       '得られた21本最小被覆2解は20本を共有するが、全最小被覆の完全列挙ではないため「全最小被覆に共通」を確定しない。')
+review('B436', 'PARTIAL', 'finite_minimum_cover_samples',
+       'round2-batch-b411.md',
+       '13石候補だけから得た最小21被覆72個は全て14石以上も覆った。ただし13石候補を覆う全最小被覆の完全分類ではない。')
+review('B437', 'PARTIAL', 'finite_minimum_cover_samples',
+       'round2-batch-b411.md',
+       '見つかった最小21被覆2解は一対一入替で隣接するが、全最小解グラフの連結性は未証明。')
+review('B438', 'SUPPORTED', 'finite_optimal_witness_pair',
+       'round2-batch-b411.md',
+       '整数最適21の被覆を2つ得ており、D4像でも同一円内交換でも一致しない幾何型を持つ。存在命題を満たす。')
+review('B439', 'REFUTED', 'exact_class_weight_optimization',
+       'round2-batch-b411.md',
+       '候補を占有差dと角数だけの7属性クラスにまとめた双対最適化では最良値3.53で、21の下界に届かない。原文の指定属性だけでは不可能。')
+review('B440', 'INCONCLUSIVE', 'audited_no_direct_test',
+       'round2-batch-b411.md',
+       'd=2,3被覆とは別の占有ポテンシャルへ枠を変えた短い静的証明は未探索。存在も不存在も判定できない。')
+review('B442', 'PARTIAL', 'finite_exchange_width_lower_bounds',
+       'round2-batch-b441.md',
+       '4×4同一残局族で2交換非連結92族、3交換でも33族、4交換でも17族が非連結。交換幅が4を超える有限例は支持するが無界性は未証明。')
+review('B445', 'SUPPORTED', 'finite_structural_classification',
+       'round2-batch-b441.md',
+       'n=4主要12残局族で、空点を塞ぐ担当石集合のシグネチャが分裂成分間で全て互いに素。成分ラベルとして実際に機能する具体例を確認。')
+review('B447', 'REFUTED', 'finite_statistical_counterevidence',
+       'round2-batch-b441.md',
+       'n=4同一残局族64族で、分裂族の平均被覆分散0.0082は連結族0.178より小さく、原文予想と逆向き。')
+review('B450', 'PARTIAL', 'finite_component_fixed_core_evidence',
+       'round2-batch-b441.md',
+       '分裂族8族で各成分の共通固定石群を列挙し局所遮蔽部品候補を得たが、別盤への置換・移植則そのものは未検証。')
+
+
 def main():
     originals = {}
     hashes = {}
