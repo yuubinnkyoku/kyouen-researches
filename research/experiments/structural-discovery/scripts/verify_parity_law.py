@@ -16,8 +16,8 @@ import json
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+OUT = ROOT / "research/experiments/structural-discovery/output"
 
 
 def det4(p0, p1, p2, p3):

@@ -9,7 +9,7 @@ Covers
   B258  common 4-point type across all minimum winner-preserving families
 
 n=4 only (5811 states, ~0.6 s per full solve), exhaustive where stated.
-Outputs research/verification/round3_chunk4_relax.json
+Outputs research/experiments/original-claims/output/round3_chunk4_relax.json
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ from round3_chunk4_core import (  # noqa: E402
     Solve, quad_masks, square_points, is_collinear4, apply_perm_mask, d4_perms,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk4_relax.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk4_relax.json"
 N = 4
 V = N * N
 

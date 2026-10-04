@@ -12,7 +12,7 @@ relations:
   target: K0023
   note: ''
 artifacts:
-- path: research/verification/N11-DFPN-NIGHT-REPORT-2026-09-30.md
+- path: research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
@@ -20,7 +20,7 @@ artifacts:
   role: solver
   note: 128-bit DFPNとexact handoff
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/N11-DFPN-VALIDATION.md
+- path: research/experiments/n11-search-methods/reports/N11-DFPN-VALIDATION.md
   role: verifier
   note: 小盤回帰とUNKNOWN伝播
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

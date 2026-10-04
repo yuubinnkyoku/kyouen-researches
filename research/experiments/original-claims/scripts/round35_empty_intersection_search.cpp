@@ -1,5 +1,5 @@
 // Seek a CARDINALITY-minimum (three-edge) flip with no common vertex, B524.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <array>
 #include <fstream>
 #include <random>

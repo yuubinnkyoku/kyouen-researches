@@ -4,6 +4,9 @@
 Uses orbit-by-orbit exact occupancy with early quad pruning.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

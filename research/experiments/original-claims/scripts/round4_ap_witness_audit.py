@@ -1,4 +1,7 @@
 """Read-only audit of the saved AP construction claims; never edits their files."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import ast
 from itertools import combinations
 import json
@@ -19,7 +22,7 @@ def inspect(rows):
 
 
 def main():
-    folder=Path(__file__).resolve().parents[1]
+    folder=(Path(__file__).resolve().parents[1] / "output")
     source=folder/"round4_b543_rect_v.json"
     raw=source.read_text(encoding="utf-8")
     try:

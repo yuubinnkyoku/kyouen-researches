@@ -7,6 +7,9 @@ and decide realizability on M by exact-orbit combination search.
 If none is realizable, α(M) ≤ 13 without invoking the full K=14 census.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

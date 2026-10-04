@@ -1,14 +1,14 @@
 #!/bin/bash
 # round4 b591b driver -- B591,B592,B593,B596,B597,B598,B599 second pass
 set -u
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output
 cd $S/scripts || exit 1
 g++ -O2 -march=native -std=c++20 -o /tmp/b591b round4_b591b.cpp 2>/tmp/cc.log
 if [ $? -ne 0 ]; then echo "COMPILE FAILED"; cat /tmp/cc.log; exit 1; fi
 echo "=== BUILD OK ==="
 mkdir -p /tmp/b591bout
 
-NIGHT=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/night-research
+NIGHT=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/structural-discovery/output
 
 # ---- B596: G_12 and G_11 BFS on n=7, K=14, all 16 maximum sets ----
 echo "### BFS n=7 K=14 floor=12 (G_12)"

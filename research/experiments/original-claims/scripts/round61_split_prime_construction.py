@@ -6,7 +6,7 @@ import hashlib
 import json
 from round25_forced_verify import det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def prime(n):
@@ -35,7 +35,7 @@ def main():
                         'three_point_subsets':comb(p,3),'four_point_subsets':comb(p,4),
                         'coordinates':points})
         print('PASS prime',p,'safe stones',p,flush=True)
-    files=['scripts/round61_split_prime_construction.py','scripts/round25_forced_verify.py']
+    files=['../scripts/round61_split_prime_construction.py','../scripts/round25_forced_verify.py']
     result={'B088_original_verdict':'PARTIAL','proved_family':'K_p >= p for every prime p ==1 mod4',
             'two_n_minus_constant_construction_proved':False,
             'three_point_subsets_checked':sum(r['three_point_subsets'] for r in records),

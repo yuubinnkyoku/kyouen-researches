@@ -1,9 +1,12 @@
 """B325/B327/B329/B330: ceiling stats + child-value required pairs on n=6 (and extra rects for B340).
 Also WFT width on 4x5 / 4x6 if affordable.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
 from collections import defaultdict
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import board_square, board_rect
 
 def ceiling_stats(B, g, name):
@@ -199,7 +202,7 @@ def main():
     print("  B330", out["n6_ceiling"]["B330_max_spread"], out["n6_ceiling"]["B330_cell"], flush=True)
     print("  B329 holes", {k: v["missing"] for k, v in out["n6_B329"]["holes_and_required_pairs"].items()}, flush=True)
 
-    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b325_ceiling.json"
+    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b325_ceiling.json"
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2, default=str)
     print("wrote", path, flush=True)

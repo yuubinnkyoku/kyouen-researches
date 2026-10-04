@@ -1,10 +1,13 @@
 # delta_K(5): find min deletion that drops K(5)=9
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from kyouen_core import board_square, board_square_minus
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b401_fu_delta_k.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b401_fu_delta_k.json"
 
 def main():
     t0 = time.time()

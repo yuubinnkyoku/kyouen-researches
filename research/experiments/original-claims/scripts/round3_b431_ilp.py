@@ -32,7 +32,7 @@ Three exact reductions carry the whole file.
      B&B capped at minVC(H).
 
 Usage (whole run is a few seconds):
-    python research/verification/scripts/round3_b431_ilp.py
+    python research/experiments/original-claims/scripts/round3_b431_ilp.py
 """
 from __future__ import annotations
 
@@ -44,7 +44,7 @@ from itertools import combinations
 from pathlib import Path
 
 ROOT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches")
-OUT_JSON = ROOT / "research/verification/round3_b431_ilp.json"
+OUT_JSON = ROOT / "research/experiments/original-claims/output/round3_b431_ilp.json"
 T0 = time.time()
 TIME_LIMIT = 150.0          # hard wall for every search, seconds
 
@@ -59,7 +59,7 @@ def log(*a):
 def build():
     sc = json.loads((ROOT / "results/discovery_corridor_static_certificate.json").read_text())
     cells = sc["cells"]
-    quads7 = json.loads((ROOT / "research/verification/batch06_quads_cache.json").read_text())["n7"]
+    quads7 = json.loads((ROOT / "research/experiments/original-claims/output/batch06_quads_cache.json").read_text())["n7"]
     U = sorted(cells)
     Uset = frozenset(U)
     quads = [frozenset(q) for q in quads7 if all(p in Uset for p in q)]

@@ -9,23 +9,23 @@ aliases:
 - B258
 relations: []
 artifacts:
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round23-b256-symmetric-minimum.md
+- path: research/experiments/original-claims/reports/round23-b256-symmetric-minimum.md
   role: source
   note: n≥4で共通必須D4型が存在しない一般構成
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round23_minimum_family_verified.json
+- path: research/experiments/original-claims/output/round23_minimum_family_verified.json
   role: data
   note: n=2..20の補助検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round23_minimum_family.py
+- path: research/experiments/original-claims/scripts/round23_minimum_family.py
   role: verifier
   note: D4型と商ゲームの検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md
   role: source
   note: B258の原文
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

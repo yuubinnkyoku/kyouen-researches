@@ -7,7 +7,7 @@ the empirical level-growth ratio n=5 -> n=6 -> n=7.
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 d7 = json.loads((ROOT / "round4_b501_prand_n7.json").read_text(encoding="utf-8"))
 lv7 = d7["level_sizes"]
 print("n=7 levels:")

@@ -15,9 +15,9 @@ import sys
 import tempfile
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-SCRIPTS = ROOT / "research/verification/scripts"
-RESULTS = ROOT / "research/verification"
+ROOT = Path(__file__).resolve().parents[4]
+SCRIPTS = ROOT / "research/experiments/fixed-width/scripts"
+RESULTS = ROOT / "research/experiments/fixed-width/output"
 
 
 def run(*command, expected_returncode=0):

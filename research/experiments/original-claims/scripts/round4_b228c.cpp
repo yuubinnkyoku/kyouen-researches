@@ -11,7 +11,7 @@
 //                -> B229
 //
 // Integer arithmetic only; every rational value is printed as exact "p/q".
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <array>
 #include <chrono>

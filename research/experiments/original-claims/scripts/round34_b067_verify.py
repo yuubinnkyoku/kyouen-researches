@@ -7,7 +7,7 @@ import json
 from round25_forced_verify import geometry, bits, det4
 from round23_b251_audit import det4 as original_det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -50,7 +50,7 @@ def main():
         while g in seen:g+=1
         return g
     max_extensions=[list(bits(t)) for t in sorted(safe_masks) if t.bit_count()==h]
-    files=['scripts/round34_b067_verify.py','scripts/round25_forced_verify.py','scripts/round23_b251_audit.py']
+    files=['../scripts/round34_b067_verify.py','../scripts/round25_forced_verify.py','../scripts/round23_b251_audit.py']
     out={'original_verdict':'REFUTED','n':n,'S_ids':ids,'S_coordinates':[points[p] for p in ids],
          'S_mask':s,'L_ids':list(bits(L)), 'height':h,'K_of_S':len(ids)+h,'g':value(0),
          'induced_cycle':cycle,'pair_edges':[list(bits(e)) for e in pairs],

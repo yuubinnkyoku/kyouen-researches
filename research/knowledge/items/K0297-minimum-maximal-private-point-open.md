@@ -15,11 +15,11 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/verification/round47-private-cover-and-global-minima.md
+- path: research/experiments/original-claims/reports/round47-private-cover-and-global-minima.md
   role: source
   note: n=2..8の全最小極大でmin b=1を完全確認
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round50-nine-board-private-point-family.md
+- path: research/experiments/original-claims/reports/round50-nine-board-private-point-family.md
   role: source
   note: n=9の限定16配置でもmin b=1
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -14,7 +14,7 @@ from itertools import combinations
 from pathlib import Path
 
 ROOT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches")
-OUT = ROOT / "research/verification/round2_b411.json"
+OUT = ROOT / "research/experiments/original-claims/output/round2_b411.json"
 RES = ROOT / "results"
 
 
@@ -58,7 +58,7 @@ def main():
 
     quads7 = [
         tuple(q)
-        for q in json.loads((ROOT / "research/verification/batch06_quads_cache.json").read_text())["n7"]
+        for q in json.loads((ROOT / "research/experiments/original-claims/output/batch06_quads_cache.json").read_text())["n7"]
     ]
     Uset = set(U)
     u_quads = [q for q in quads7 if all(p in Uset for p in q)]

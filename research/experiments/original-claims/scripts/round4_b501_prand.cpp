@@ -45,7 +45,7 @@
 #ifdef _OPENMP
 #include <omp.h>
 #endif
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 using kc::u64;
 

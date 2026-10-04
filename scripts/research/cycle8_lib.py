@@ -2,8 +2,8 @@
 """Cycle 8 shared geometry / data library for kyouen max-safe analysis.
 
 Reads complete enumerations committed at 2d3855a / 99659da:
-  night-research/maxsafe_n7_K14.bin  (16 sets)
-  night-research/maxsafe_n6_K11.bin  (464 sets)
+  research/experiments/structural-discovery/output/maxsafe_n7_K14.bin  (16 sets)
+  research/experiments/structural-discovery/output/maxsafe_n6_K11.bin  (464 sets)
 No new board search is performed here.
 """
 from __future__ import annotations
@@ -13,8 +13,8 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Iterable
 
-ROOT = Path(__file__).resolve().parents[1]
-NR = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[2]
+NR = ROOT / "research/experiments/structural-discovery/output"
 RES = ROOT / "results"
 
 

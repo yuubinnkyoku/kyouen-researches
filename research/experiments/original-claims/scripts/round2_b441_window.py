@@ -7,7 +7,7 @@ from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round2_b441.json")
+OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round2_b441.json")
 
 
 def count_points(cx: Fraction, cy: Fraction, r2: Fraction, bound: int = 30):

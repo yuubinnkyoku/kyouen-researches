@@ -2,16 +2,19 @@
 """Enumerate all safe masks for small boards and cache to disk (uint64 le).
 
 n=2..5 small; n=6 cached once (5,081,289 masks).
-Output: research/verification/data/safe_n{n}.bin
+Output: research/experiments/original-claims/output/data/safe_n{n}.bin
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import struct
 import sys
 import time
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from batch04_geom import all_safe_masks  # noqa: E402
 from kyouen_core import board_square  # noqa: E402

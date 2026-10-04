@@ -1,7 +1,7 @@
 // Self-check for kc_core.h: the forbidden-quad count F_n must reproduce the
 // known values (README / PROTOCOL.md) for n = 2..9, and the K_n maximum safe
 // sizes for n = 2..7.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <map>
 

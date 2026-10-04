@@ -3,6 +3,9 @@
 The input is one uint64 count, followed by that many little-endian masks.
 Do not overwrite the source catalogue or the earlier parallel statistics.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from collections import Counter, defaultdict
 from functools import lru_cache
 from hashlib import sha256
@@ -57,8 +60,8 @@ def exact_cover(coverage,universe,essential):
 
 
 def main():
-    root=Path(__file__).resolve().parents[3]
-    source=root/'research/verification/round4_b371.bin'
+    root=Path(__file__).resolve().parents[4]
+    source=root/'research/experiments/original-claims/output/round4_b371.bin'
     raw=source.read_bytes()
     words=struct.unpack('<'+'Q'*(len(raw)//8),raw)
     masks=words[1:]
@@ -142,7 +145,7 @@ def main():
             assert is_forbidden_quad([*triple,p])
             blockers.append({'empty_point':p,'blocking_triple':triple})
     assert len(blockers)==72
-    seven=json.loads((root/'research/verification/data/s8_exact.json').read_text(encoding='utf-8'))
+    seven=json.loads((root/'research/experiments/original-claims/output/data/s8_exact.json').read_text(encoding='utf-8'))
     seven_run=next(z for z in seven['runs'] if z['n']==8 and z['k']==7)
     assert seven_run['complete'] and not seven_run['found']
     result={'B376':'REFUTED','B377':'SUPPORTED','B379':'SUPPORTED',
@@ -155,12 +158,12 @@ def main():
             'independent_quad_checks':independent_quad_checks,
             'independent_cover_checks_on_representatives':independent_cover_checks,
             'B377_zero_legal_dependency':{'source':'data/s8_exact.json',
-                    'sha256':sha256((root/'research/verification/data/s8_exact.json').read_bytes()).hexdigest(),
+                    'sha256':sha256((root/'research/experiments/original-claims/output/data/s8_exact.json').read_bytes()).hexdigest(),
                     'complete':True,'found_seven_stone_maximal':False},
             'orbits':allrows,
             'B379_witness':{'source_mask':source_mask,'source_points':old,'embedding_translation':[0,1],
                             'removed':[],'added':[added],'target':target,'blockers':blockers}}
-    path=root/'research/verification/round10_small_saturation.json'
+    path=root/'research/experiments/original-claims/output/round10_small_saturation.json'
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('essential',dict(sorted(essential_hist.items())),'minimum cover',dict(sorted(cover_hist.items())),flush=True)
     print(path,flush=True)

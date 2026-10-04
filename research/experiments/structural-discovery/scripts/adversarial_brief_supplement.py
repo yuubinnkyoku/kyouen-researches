@@ -7,7 +7,7 @@ import math
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def fisher_2x2(a: int, b: int, c: int, d: int) -> tuple[float, float]:
@@ -107,7 +107,7 @@ def main() -> None:
         "9x9-factorial-holdout.csv",
         "9x9-confirmatory-1024.csv",
     ]:
-        p = ROOT / "artifacts" / name
+        p = ROOT / "research/experiments/solver-benchmarks/output" / name
         if not p.exists():
             avail[name] = "missing"
             continue
@@ -117,7 +117,7 @@ def main() -> None:
     out["nine_by_nine_artifacts"] = avail
 
     # population-level free I tops
-    with (ROOT / "artifacts/8x8-factorial-population.csv").open(newline="", encoding="utf-8") as f:
+    with (ROOT / "research/experiments/solver-benchmarks/output/8x8-factorial-population.csv").open(newline="", encoding="utf-8") as f:
         pop = list(csv.DictReader(f))
     free_tops = sum(1 for r in pop if r["top_T"] != r["top_TE"] and r["top_TO"] != r["top_raw"])
     t_eq_te_to_eq_raw = sum(1 for r in pop if r["top_T"] == r["top_TE"] and r["top_TO"] == r["top_raw"])
@@ -132,7 +132,7 @@ def main() -> None:
     }
 
     # within O1-only: T==TE subset delta
-    parents = list(csv.DictReader((ROOT / "artifacts/8x8-o-parent-outcomes.csv").open(newline="", encoding="utf-8")))
+    parents = list(csv.DictReader((ROOT / "research/experiments/solver-benchmarks/output/8x8-o-parent-outcomes.csv").open(newline="", encoding="utf-8")))
     o1 = [r for r in parents if r["stratum"] == "O1-only"]
     for label, subset in [
         ("T_eq_TE", [r for r in o1 if r["top_T"] == r["top_TE"]]),

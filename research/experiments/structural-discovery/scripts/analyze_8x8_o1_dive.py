@@ -7,7 +7,7 @@ import json
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = Path(__file__).resolve().parent
 
 
@@ -25,8 +25,8 @@ def coords(i: int, n: int = 8) -> tuple[int, int]:
 
 
 def main() -> None:
-    parents = load(ROOT / "artifacts/8x8-o-parent-outcomes.csv")
-    pop = {r["canonical_parent"]: r for r in load(ROOT / "artifacts/8x8-factorial-population.csv")}
+    parents = load(ROOT / "research/experiments/solver-benchmarks/output/8x8-o-parent-outcomes.csv")
+    pop = {r["canonical_parent"]: r for r in load(ROOT / "research/experiments/solver-benchmarks/output/8x8-factorial-population.csv")}
 
     # 1) Alias identity on O-overlap
     alias_patterns = Counter()

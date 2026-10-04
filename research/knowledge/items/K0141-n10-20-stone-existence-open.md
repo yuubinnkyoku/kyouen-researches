@@ -19,19 +19,19 @@ relations:
   target: K0316
   note: 完全局所排除は20石存在問題の一部だけを制限する
 artifacts:
-- path: research/verification/round57-nineteen-stone-ten-board-bound.md
+- path: research/experiments/original-claims/reports/round57-nineteen-stone-ten-board-bound.md
   role: source
   note: 19石証人と一般上界23
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/saturation-20261003-extra.md
+- path: research/experiments/saturation/reports/saturation-20261003-extra.md
   role: source
   note: 複数19石極大と20石への局所非存在
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/saturation_20261003_extra_exact_results.json
+- path: research/experiments/saturation/output/saturation_20261003_extra_exact_results.json
   role: data
   note: 約8.42億節点の3完全探索結果
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: B082の原文監査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

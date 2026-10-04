@@ -263,7 +263,7 @@ def fixed_pairings():
                                              failure['opponent_move'],failure['illegal_fixed_reply']))
         else: valid.append(matching)
     print('J4 ALL',count,'fourth-move failures',fail_four,'later',len(later_breaks),'valid',len(valid),flush=True)
-    certificate_path=Path(__file__).resolve().parents[1]/'round27_pairing_failures.bin'
+    certificate_path=(Path(__file__).resolve().parents[1] / "output")/'round27_pairing_failures.bin'
     certificate_path.write_bytes(b'KYPAIR27'+struct.pack('<I',len(certificates))+b''.join(certificates))
     return {'n':4,'safe_states':len(values),'g0':0,'J_edges':edges,'total_dominating_pairs':total_pairs,
             'perfect_matching_count':count,'matching_enumeration_sha256':digest.hexdigest(),

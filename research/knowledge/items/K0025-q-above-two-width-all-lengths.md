@@ -14,7 +14,7 @@ relations:
   target: K0002
   note: ''
 artifacts:
-- path: research/q-point-fixed-width.md
+- path: research/experiments/fixed-width/reports/q-point-fixed-width.md
   role: proof
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

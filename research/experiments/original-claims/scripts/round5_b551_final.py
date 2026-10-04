@@ -1,6 +1,6 @@
 from pathlib import Path
 import re
-p = Path('research/verification/round5-batch-b551-b600.md')
+p = Path('research/experiments/original-claims/reports/round5-batch-b551-b600.md')
 text = p.read_text(encoding='utf-8')
 
 # update summary "今回の新証拠" to include n=5

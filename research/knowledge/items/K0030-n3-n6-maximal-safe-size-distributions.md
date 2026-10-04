@@ -17,11 +17,11 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/maximal_spectrum_enum.cpp
+- path: research/experiments/structural-discovery/scripts/maximal_spectrum_enum.cpp
   role: solver
   note: 安全性を維持して包含極大全数を列挙
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -1,5 +1,8 @@
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import board_square
 
 for n in range(2, 6):

@@ -3,6 +3,9 @@
 Faster subset of round2_b501_quads.py.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -15,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, square_points  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round2_b501.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round2_b501.json"
 
 
 class BoardQuads(Board):

@@ -9,23 +9,23 @@ aliases:
 - B468
 relations: []
 artifacts:
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round4-circle-windows.md
+- path: research/experiments/original-claims/reports/round4-circle-windows.md
   role: source
   note: 窓スペクトルの全分類定理と対称性単調性の反例
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round4_circle_windows.json
+- path: research/experiments/original-claims/output/round4_circle_windows.json
   role: data
   note: 反例円と窓スペクトルの厳密データ
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round4_circle_windows.py
+- path: research/experiments/original-claims/scripts/round4_circle_windows.py
   role: verifier
   note: 格子対称群と窓スペクトルの独立計算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-round2-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md
   role: source
   note: B468の原文
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

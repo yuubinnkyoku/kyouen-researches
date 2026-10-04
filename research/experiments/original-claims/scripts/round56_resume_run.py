@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import subprocess
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 BINARY = '/home/yuubi/round28_n7/round56_resume'
 
 
@@ -36,7 +36,7 @@ def main():
     if 'timeout_prefix' in previous:
         prefix=previous['timeout_prefix']
         origin='saved timeout frontier (active branch is repeated)'
-        assert previous['sha256']['scripts/round56_resumable_kmin.cpp']==hashlib.sha256((ROOT/'scripts/round56_resumable_kmin.cpp').read_bytes()).hexdigest()
+        assert previous['sha256']['../scripts/round56_resumable_kmin.cpp']==hashlib.sha256((ROOT/'../scripts/round56_resumable_kmin.cpp').read_bytes()).hexdigest()
     else:
         assert args.parent==f'round53_n10_k8_root{args.root}.json'
         assert previous['nodes_by_depth'][1]==1
@@ -46,8 +46,8 @@ def main():
         origin='round53 completed depth-two prefix; active depth-two branch is repeated'
     print('START',args.root,'step',args.step,'frontier',prefix,flush=True)
     data,exit_code=invoke(10,8,args.root,args.seconds,prefix)
-    files=['scripts/round53_n10_eight_roots.cpp','scripts/round56_resumable_kmin.cpp',
-           'scripts/round56_resume_run.py',args.parent]
+    files=['../scripts/round53_n10_eight_roots.cpp','../scripts/round56_resumable_kmin.cpp',
+           '../scripts/round56_resume_run.py',args.parent]
     data.update({'parent':args.parent,'frontier_origin':origin,'native_exit_code':exit_code,
                  'step':args.step,'requested_seconds':args.seconds,
                  'sha256':{f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files}})

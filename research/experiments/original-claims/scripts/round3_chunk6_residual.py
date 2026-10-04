@@ -23,9 +23,12 @@ Attacks the obstacles left by round2-batch-b321.md:
                     game still misses the true g but removing a 4-residual
                     fixes it, plus abstract hypergraph canonical types.
 
-Output: research/verification/round3_chunk6_residual.json
+Output: research/experiments/original-claims/output/round3_chunk6_residual.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -33,7 +36,7 @@ import time
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import board_square  # noqa: E402
 from residual_core import (P_graph_edges, bits_of, legal_mask,  # noqa: E402

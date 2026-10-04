@@ -18,15 +18,15 @@ relations:
   target: K0272
   note: U内幅11
 artifacts:
-- path: night-research/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
+- path: research/log/discovery-cycles/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round4-batch-b002-b091.md
+- path: research/experiments/original-claims/reports/round4-batch-b002-b091.md
   role: source
   note: 相間経路・孤立成分の追撃監査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: 整数・分数被覆最適の区別
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

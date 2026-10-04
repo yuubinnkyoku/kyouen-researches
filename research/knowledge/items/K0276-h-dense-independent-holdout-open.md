@@ -19,7 +19,7 @@ relations:
   target: K0105
   note: 11盤通常版はUNKNOWNで独立holdoutとして未完了
 artifacts:
-- path: night-research/H_DENSE_PREREG.md
+- path: research/experiments/structural-discovery/reports/H_DENSE_PREREG.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

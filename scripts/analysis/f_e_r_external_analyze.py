@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Preregistered analysis for the F-E R-external 4-stone holdout.
 
-Applies the frozen decision rules in docs/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md.
+Applies the frozen decision rules in research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md.
 Does not re-tune sampling. Compares direction only against the R-internal F-E
 reference numbers from analysis/f-e-exact-label-test.
 """
@@ -159,7 +159,7 @@ def main() -> None:
     direction_note = "same_as_R_internal" if (auc == auc and auc > 0.5) else "opposite_or_null"
 
     summary = {
-        "prereg": "docs/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md",
+        "prereg": "research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md",
         "decision": decision,
         "decision_reasons": reasons,
         "n_total": 36,

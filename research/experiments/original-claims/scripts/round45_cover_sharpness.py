@@ -7,7 +7,7 @@ import hashlib
 import json
 from round25_forced_verify import det4,curve
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def line(a,b):
@@ -52,7 +52,7 @@ def main():
     overlap={'n':7,'S_coordinates':S2,'T_indices':Tids,'U_indices':Uids,
              'curve_T_coefficients':C,'curve_U_coefficients':D,'exact_common_complement_points':common,
              'minimum_stone_count_for_two_empty_common_complements':6}
-    files=['scripts/round45_cover_sharpness.py','scripts/round25_forced_verify.py']
+    files=['../scripts/round45_cover_sharpness.py','../scripts/round25_forced_verify.py']
     out={'B071_original_verdict':'SUPPORTED','B072_original_verdict':'SUPPORTED','B073_original_verdict':'REFUTED',
          'B075_original_verdict':'SUPPORTED','improved_general_bound':'For every safe S with k>=4 and empty p, b<=floor(k*(k-1)/6)-1.',
          'sharp_six_stone_witness':six,'sharp_overlap_witness':overlap,

@@ -5,7 +5,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def case(n,S,deleted_sets):
@@ -68,7 +68,7 @@ def main():
     synergy=case(3,[0,1,4],[[],[[2,6,8]],[[2,7,8]],[[2,6,8],[2,7,8]]])
     assert [r['g0'] for r in synergy['variants']]==[0,0,0,3]
     assert any(len(e)==2 for e in synergy['minimal_residual_edges'])
-    files=['scripts/round37_residual_witness_audit.py','scripts/round25_forced_verify.py']
+    files=['../scripts/round37_residual_witness_audit.py','../scripts/round25_forced_verify.py']
     out={'original_verdicts':{'B342':'REFUTED','B346':'SUPPORTED'},'forest':forest,'synergy':synergy,
          'sha256':{f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files}}
     (ROOT/'round37_residual_witnesses_verified.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

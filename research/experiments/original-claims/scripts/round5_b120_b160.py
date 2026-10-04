@@ -9,6 +9,9 @@ B160: same-degree D4-inequivalent points with different first-move g (n=5,6 samp
 B153/B154/B159: degree profiles already in round5_b101_quick; add n=6 degrees.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -16,10 +19,10 @@ import sys
 from collections import defaultdict
 from itertools import combinations, product
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, det4, square_points  # noqa: E402
 
-OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b120_b160.json"
+OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b120_b160.json"
 
 
 # ---------- helpers ----------

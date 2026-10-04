@@ -1,6 +1,6 @@
 #!/bin/bash
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
-V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
+V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output
 g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/round5_b251a "$S/round5_b251a.cpp" || exit 1
 STAGE="$1"
 echo "=== $STAGE ==="

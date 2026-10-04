@@ -39,9 +39,9 @@
 //   g++ -O2 -std=c++20 -o /tmp/fm round4_firstmoves.cpp
 //   /tmp/fm [maxk_n8]        (default 6; 7 is much slower)
 //
-// OUTPUT: JSON on stdout (redirect to research/verification/round4_firstmoves.json)
+// OUTPUT: JSON on stdout (redirect to research/experiments/original-claims/output/round4_firstmoves.json)
 
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <algorithm>
 #include <cstdio>
@@ -190,7 +190,7 @@ int main(int argc, char** argv) {
     setvbuf(stdout, nullptr, _IOLBF, 1 << 16);
 
     printf("{\n");
-    printf("  \"script\": \"research/verification/scripts/round4_firstmoves.cpp\",\n");
+    printf("  \"script\": \"research/experiments/original-claims/scripts/round4_firstmoves.cpp\",\n");
     printf("  \"arithmetic\": \"exact integers only (det4 == 0 for forbidden 4-sets); no floating point\",\n");
 
     // =====================================================================

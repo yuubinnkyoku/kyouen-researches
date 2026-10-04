@@ -12,10 +12,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTCOMES = ROOT / "artifacts" / "8x8-o-census-outcomes.csv"
-STRATA = ROOT / "artifacts" / "8x8-o-strata.csv"
-PARENTS = ROOT / "artifacts" / "8x8-o-parent-outcomes.csv"
-OUT = ROOT / "artifacts" / "8x8-o-base-rate-audit.json"
+OUTCOMES = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-census-outcomes.csv"
+STRATA = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-strata.csv"
+PARENTS = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-parent-outcomes.csv"
+OUT = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-base-rate-audit.json"
 
 
 def load(path):
@@ -77,7 +77,7 @@ def main():
             "TO": 0.476378,
             "raw": 0.452756,
         },
-        "note": "from docs/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md",
+        "note": "from research/experiments/9x9-factorial/reports/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md",
     }
 
     report = {

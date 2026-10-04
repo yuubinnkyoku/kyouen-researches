@@ -10,11 +10,11 @@ relations:
   target: K0309
   note: 各部品と全後続局面が0↔1 swap則を満たすことを仮定する
 artifacts:
-- path: research/game-structure-20261003.md
+- path: research/experiments/game-structure/reports/game-structure-20261003.md
   role: proof
   note: misère直和の必要十分条件と共円ゲームへの適用
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/game_structure_20261003_complexes.json
+- path: research/experiments/game-structure/output/game_structure_20261003_complexes.json
   role: data
   note: swap則の有限分類と境界例
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

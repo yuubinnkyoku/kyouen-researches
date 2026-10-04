@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Compile the pipeline enumerator and report errors clearly.
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-S=$R/research/verification/scripts
+S=$R/research/experiments/n11-search-methods/scripts
 LOG=/tmp/pipe_build.log
 : > "$LOG"
 mkdir -p /tmp/n11_pipe_bin

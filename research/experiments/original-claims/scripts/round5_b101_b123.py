@@ -9,6 +9,9 @@ A∪B unless aux points are explicitly added.
 - B125: must we temporarily drop a point of A∩B?
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -20,8 +23,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, square_points
 
-DATA = Path(__file__).resolve().parent.parent / "data"
-OUT = Path(__file__).resolve().parent.parent / "round5_b101_followup_b123.json"
+DATA = (Path(__file__).resolve().parent.parent / "output") / "data"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b101_followup_b123.json"
 
 
 def load_u64(path: Path) -> list[int]:

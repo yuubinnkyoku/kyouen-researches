@@ -7,7 +7,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -62,10 +62,10 @@ def main():
     for family in lower['families']:
         assert sum(r['orbit_size'] for r in family['checks'])==family['total_variants']
         assert all(r['empty_outcome']=='P' for r in family['checks'])
-    files=['scripts/round35_minimum_family_verify.py','scripts/round35_empty_intersection_search.cpp',
-           'scripts/round25_forced_verify.py','scripts/kc_core.h',
+    files=['../scripts/round35_minimum_family_verify.py','../scripts/round35_empty_intersection_search.cpp',
+           '../scripts/round25_forced_verify.py','../../../../scripts/research/kc_core.h',
            'round35_empty_intersection_search.json','round19_rule_pair_lower.json',
-           'round19-rule-removal-audit.md','scripts/round19_rule_pair_lower.py']
+           'round19-rule-removal-audit.md','../scripts/round19_rule_pair_lower.py']
     out={'B524_original_verdict':'SUPPORTED','B523_original_verdict':'REFUTED',
          'n':4,'minimum_cardinality':3,'removed_indices':indices,
          'removed_ids':[list(bits(q)) for q in masks],

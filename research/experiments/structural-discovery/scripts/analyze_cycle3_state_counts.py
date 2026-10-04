@@ -6,8 +6,8 @@ import csv
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-CSV_PATH = ROOT / "night-research" / "first-moves-9x9.csv"
+ROOT = Path(__file__).resolve().parents[4]
+CSV_PATH = ROOT / "research/experiments/structural-discovery/output" / "first-moves-9x9.csv"
 
 
 def orbit_of(a: int, b: int) -> tuple[int, int]:

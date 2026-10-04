@@ -13,11 +13,11 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/exploration/fact_kmin_n7_safe.json
+- path: research/experiments/fact-discovery/output/fact_kmin_n7_safe.json
   role: data
   note: 安全証人と完了探索の記録
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

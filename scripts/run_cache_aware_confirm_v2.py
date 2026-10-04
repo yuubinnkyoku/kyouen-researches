@@ -134,7 +134,7 @@ def frozen_protocol() -> dict[str, object]:
                            "tee its output to regression.log before freezing")
     return {
         "experiment": "cache-aware vs cache-blind below-root ordering (independent confirmation V2)",
-        "prereg": ("docs/10X10_CACHE_AWARE_BELOW_ROOT_CONFIRMATION_V2_PREREG.md; "
+        "prereg": ("research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CONFIRMATION_V2_PREREG.md; "
                    "prereg commits cd151c3 (text) + 6a9bbab (machine manifest); "
                    "branch base d9b9a0f (C1 end)"),
         "cohort": {"parents": list(EXPECTED_PARENTS)},
@@ -158,7 +158,7 @@ def frozen_protocol() -> dict[str, object]:
         "include_files_sha256": {q.relative_to(REPO_ROOT).as_posix(): sha256_file(q)
                                  for q in [REPO_ROOT / "scripts" / "probe_cert_solver.cpp"] +
                                  sorted((REPO_ROOT / "scripts" / "probe_parts").glob("*.inc"))},
-        "parent_solve": {"binary": "tmp-kb/order_ab_native",
+        "parent_solve": {"binary": "research/experiments/solver-benchmarks/bin/order_ab_native",
                          "binary_sha256": sha256_file(BIN),
                          "sources_sha256": solver_sources_digest(),
                          "build_cmd": ["g++", "-O2", "-std=c++20"],

@@ -1,5 +1,5 @@
 from pathlib import Path
-p = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round4_b092.json")
+p = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round4_b092.json")
 text = p.read_text()
 idx = text.find("defo")
 print("defo at", idx)

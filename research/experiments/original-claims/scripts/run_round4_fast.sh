@@ -1,7 +1,7 @@
 #!/bin/bash
 # Fast jobs for round4 b092-b127.
 set -u
-V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification
+V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output
 rm -f "$V/round4_b092.json"
 for j in sat shape b110 defo; do
   echo "===== job $j ====="

@@ -11,7 +11,7 @@
     "n_patterns": 45,
     "nodes": 2000001,
     "complete": false,
-    "source": "night-research/cycle8_b_maxsafe.exe occ 8 15 --max-nodes 2000000"
+    "source": "research/experiments/structural-discovery/output/cycle8_b_maxsafe.exe occ 8 15 --max-nodes 2000000"
   },
   "g3_random_sampler": {
     "n_sets": 3,
@@ -28,5 +28,5 @@
     "contrast_n7": "n=7 complete enum has exactly 2 occupancy vectors and (2,2) always 0"
   },
   "n7_contrast_claim": "Among this n=8 SAMPLE, max-safe occupancy is heterogeneous (45 patterns / 53 sets) and (2,2) is often used — opposite of the n=7 two-phase crystal. Sample is incomplete; do not claim a full n=8 classification.",
-  "k9_design": "night-research/CYCLE9H_K9_128BIT_DESIGN.md (design only, no UNSAT run)"
+  "k9_design": "research/log/discovery-cycles/CYCLE9H_K9_128BIT_DESIGN.md (design only, no UNSAT run)"
 }

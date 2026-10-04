@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Quick n=4 pair-deletion scan for B204/B207/B209 (cheap, seconds)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import itertools
 import json
@@ -10,7 +13,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square, board_square_minus  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "batch09_pairs_n4.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "batch09_pairs_n4.json"
 
 
 def summ(b):

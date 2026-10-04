@@ -6,7 +6,7 @@ import json
 from round25_forced_verify import geometry
 from round56_resume_run import invoke
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -55,9 +55,9 @@ def main():
         assert count>1
         legacy.append({'root':root,'fully_processed_second_ids':[root+1,root+count-1],
                        'conservative_resume_prefix':[root,root+count]})
-    files=['scripts/round56_resumable_kmin.cpp','scripts/round53_n10_eight_roots.cpp',
-           'scripts/round56_resume_audit.py','scripts/round56_resume_run.py',
-           'scripts/round25_forced_verify.py']+[f'round53_n10_k8_root{r}.json' for r in range(5)]
+    files=['../scripts/round56_resumable_kmin.cpp','../scripts/round53_n10_eight_roots.cpp',
+           '../scripts/round56_resume_audit.py','../scripts/round56_resume_run.py',
+           '../scripts/round25_forced_verify.py']+[f'round53_n10_k8_root{r}.json' for r in range(5)]
     result={'complete_independent_n4_k5_maximal_count':176,'chunk_validation':runs,
             'legacy_n10_frontiers':legacy,'legacy_total_nodes':sum(json.loads((ROOT/f'round53_n10_k8_root{r}.json').read_text())['nodes'] for r in range(5)),
             'legacy_n10_eight_stone_exclusion_proved':False,

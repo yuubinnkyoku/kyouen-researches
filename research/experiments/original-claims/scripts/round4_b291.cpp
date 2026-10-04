@@ -1,12 +1,12 @@
 // round4_b291.cpp -- round4 verification solver for chunk B291-B360 (WSL g++ 13.3).
-// Exact integers / exact rationals only.  JSON -> research/verification/round4_b291.json
+// Exact integers / exact rationals only.  JSON -> research/experiments/original-claims/output/round4_b291.json
 //
 //   A  J_n response graph  n=2..5  : B312 B313 B314 B315 B317 B318 B319 B320
 //   B  depth-d local move trees n=4 : B300
 //   C  literal maximal-set cover    : B295
 //   D  max-b witness inversion       : B355 B358 B359
 //   E  lattice b_max hill-climb     : B353 B354
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <array>
 #include <chrono>

@@ -2,7 +2,7 @@
 """Fail-closed preparer for the preregistered loss-first-only ablation.
 
 Implements only the frozen delta in
-``docs/10X10_CACHE_AWARE_LOSS_FIRST_ONLY_PREREG.md``. Production and safety
+``research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_LOSS_FIRST_ONLY_PREREG.md``. Production and safety
 harness deliberately call the same ordering primitive.
 """
 from __future__ import annotations

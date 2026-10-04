@@ -25,4 +25,4 @@ jobs:
           EXACT_RETRIES: '2'
           LEVELS: '0 44'
         run: |
-          bash research/verification/scripts/dfpn_hybrid_probe.sh
+          bash research/experiments/n11-search-methods/scripts/dfpn_hybrid_probe.sh

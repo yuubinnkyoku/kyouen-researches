@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the p_rand solver and report its CLI usage / argument handling.
 set -uo pipefail
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
 mkdir -p /tmp/kc_build
 if ! g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/kc_build/prand "$S/round4_b501_prand.cpp"; then
   echo "BUILD FAILED"

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """n=6: lazy T*(empty) and WFT(empty) only (win-preserving paths)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -132,7 +135,7 @@ def main() -> None:
         "wft_visited": len(wft),
         "seconds": round(time.time() - t0, 1),
     }
-    Path("research/verification/scripts/batch02_n6_out.json").write_text(
+    Path("research/experiments/original-claims/scripts/batch02_n6_out.json").write_text(
         json.dumps(out, indent=1, ensure_ascii=False), encoding="utf-8"
     )
     print("wrote n6 out", flush=True)

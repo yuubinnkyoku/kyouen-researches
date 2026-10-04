@@ -12,7 +12,7 @@
 //   sec_nimb   : B231  (max Grundy value per board, exact proof tree depth)
 //
 // Every section flushes so partial output is readable while it runs.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <array>
 #include <cstdarg>

@@ -1,6 +1,6 @@
 // n=6 (or any n<=8) grundy + Klocal ceiling stats for B325/B327/B329/B330
 // Build: g++ -O2 -std=c++20 -o /tmp/ceil6 round5_b325_ceiling.cpp
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <cstdint>
 #include <vector>

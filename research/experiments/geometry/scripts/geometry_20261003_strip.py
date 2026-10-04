@@ -3,7 +3,7 @@
 
 Pure Python / standard library.  No bounded search over circle radii is used.
 The finite congruence checks support the all-radii proof in
-research/geometry-20261003.md.
+research/experiments/geometry/reports/geometry-20261003.md.
 """
 from __future__ import annotations
 

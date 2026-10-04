@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """B121-B126,B128: deformation graph G_t on safe sets (size>=t, 1-point add/remove).
 
-Uses pre-enumerated layers from night-research/maxsafe_enum.exe:
+Uses pre-enumerated layers from research/experiments/structural-discovery/output/maxsafe_enum.exe:
   safe_n6_k8.bin (1459292), safe_n6_k9.bin (438952), safe_n6_k10.bin (35316),
   maxsafe_n6_K11.bin (464), safe_n7_k12.bin (177760), safe_n7_k13.bin (2176),
   maxsafe_n7_K14.bin (16).
@@ -17,9 +17,9 @@ import sys
 from collections import Counter, defaultdict, deque
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
-NIGHT = ROOT / "night-research"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 OUT = ROOT / "research" / "verification" / "data"
 
 

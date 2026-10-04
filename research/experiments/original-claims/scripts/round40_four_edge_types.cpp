@@ -1,6 +1,6 @@
 // B349: geometric realizations of the nine possible nontrivial five-vertex
 // minimal residual families containing a four-edge. Does not weaken R.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <cstdio>
 #include <fstream>

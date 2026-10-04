@@ -3,7 +3,7 @@
 re-derive their features, so the md can quote concrete configurations."""
 import struct, sys, json, itertools
 
-REPO = "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification"
+REPO = "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output"
 N = 8
 
 def det4(pts):

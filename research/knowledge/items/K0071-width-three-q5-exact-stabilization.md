@@ -13,15 +13,15 @@ relations:
   target: K0078
   note: m=12..39の有限排除とm≥40の一般上界で閾値を閉じる
 artifacts:
-- path: research/q35-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q35-exact-threshold.md
   role: proof
   note: M_{3,5}=12の全証明と全長Grundy分類
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/q35_exact_threshold.json
+- path: research/experiments/fixed-width/output/q35_exact_threshold.json
   role: data
   note: m=12..40の完全排除集計
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/q35_independent_audit.cpp
+- path: research/experiments/fixed-width/scripts/q35_independent_audit.cpp
   role: verifier
   note: lifted determinantによる独立円生成監査
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

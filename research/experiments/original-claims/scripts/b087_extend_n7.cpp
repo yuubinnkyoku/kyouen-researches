@@ -45,7 +45,7 @@ static bool can_add(u64 ch, int p) {
 
 int main() {
     build_geometry(7);
-    FILE* f = fopen("night-research/maxsafe_n7_K14.bin","rb");
+    FILE* f = fopen("research/experiments/structural-discovery/output/maxsafe_n7_K14.bin","rb");
     if (!f) { fprintf(stderr,"open bin failed\n"); return 1; }
     vector<u64> sets;
     u64 v;

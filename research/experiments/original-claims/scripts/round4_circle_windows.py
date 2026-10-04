@@ -240,7 +240,7 @@ def main():
             "three_stone_legal_counts":sorted(n*n-size for size in all_sizes),
             "high_circle_witnesses":high,"independent_triple_scan":n<=6})
         print("board",n,"sizes",sorted(all_sizes),flush=True)
-    output=Path(__file__).resolve().parents[1]/"round4_circle_windows.json"
+    output=(Path(__file__).resolve().parents[1] / "output")/"round4_circle_windows.json"
     output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(output,flush=True)
 

@@ -3,9 +3,12 @@
 
 - 各禁止四点組を辺長ベクトル（昇順、gcd 正規化）で相似型に写像
 - 整数拡大・平行移動・D4 像での生成被覆率を測る
-- 出力: research/verification/round5_b101a_b149.json
+- 出力: research/experiments/original-claims/output/round5_b101a_b149.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -14,7 +17,7 @@ from itertools import combinations
 from math import gcd
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, square_points, is_forbidden_quad  # noqa: E402
 

@@ -13,7 +13,7 @@ relations:
   target: K0001
   note: 代表ゲートと閉包検査は全最大センサスの完全性に依存しない
 artifacts:
-- path: night-research/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
+- path: research/log/discovery-cycles/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
@@ -25,7 +25,7 @@ artifacts:
   role: data
   note: 全30補助点と鋭い経路
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/verify_corridor_discovery.py
+- path: research/experiments/structural-discovery/scripts/verify_corridor_discovery.py
   role: verifier
   note: 独立閉包と安全性検査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

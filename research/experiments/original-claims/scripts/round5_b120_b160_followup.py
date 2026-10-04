@@ -12,6 +12,9 @@ Targets (remaining after B136/B149/B158 SUPPORTED, B129 REFUTED):
   B160: n=6 same-degree D4-inequivalent child |L| multiset
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -19,10 +22,10 @@ import sys
 from collections import Counter, defaultdict
 from itertools import combinations
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, det4, square_points  # noqa: E402
 
-OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b120_b160_followup.json"
+OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b120_b160_followup.json"
 
 
 def d4_orbit(p, n):
@@ -40,7 +43,7 @@ def d4_orbit_id(p, n):
 
 def load_maximal_n6():
     """Load n=6 maximal safe sets from binary. Each record is 8 bytes (uint64 bitmask)."""
-    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\data\maximal_n6.bin"
+    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\data\maximal_n6.bin"
     import struct
     with open(path, "rb") as f:
         raw = f.read()
@@ -318,7 +321,7 @@ def b133_a_table():
     # Reconstruct from circle_b131_b138.json by_q_max and b134_by_q
     # Also compute: for each q, what is the min n at which a circle with that q achieves
     # the global max points at that n?
-    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\data\circle_b131_b138.json"
+    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\data\circle_b131_b138.json"
     with open(path) as f:
         data = json.load(f)
     # per_n by_q_max: keys are denominators q, values are max points for that q
@@ -350,7 +353,7 @@ def b133_a_table():
 
 def b138_center_agg():
     """Aggregate centers of top-layer circles across n."""
-    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\data\circle_b131_b138.json"
+    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\data\circle_b131_b138.json"
     with open(path) as f:
         data = json.load(f)
     result = {}

@@ -5,6 +5,9 @@ J_n: vertices = board points, edge {p,q} iff g({p,q}) == 0 (P-position).
 Isolated vertices are winning first moves (recursive definition).
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -12,11 +15,11 @@ from collections import defaultdict, deque
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square  # noqa: E402
 
-OUT = Path(__file__).resolve().parent.parent  # research/verification/
+OUT = (Path(__file__).resolve().parent.parent / "output")  # research/experiments/original-claims/output/
 
 
 # ---------- graph helpers ----------
@@ -376,10 +379,10 @@ def main():
         # verify against known n=5 loss pairs
         if n == 5:
             known = json.loads(
-                (ROOT / "night-research/cycle4-n5-two-stone-loss.json").read_text(encoding="utf-8")
+                (ROOT / "research/experiments/structural-discovery/output/cycle4-n5-two-stone-loss.json").read_text(encoding="utf-8")
             )
             known_ids = set(tuple(sorted(p["ids"])) for p in json.loads(
-                (ROOT / "night-research/cycle4-n5-two-stone-geometry.json").read_text(encoding="utf-8")
+                (ROOT / "research/experiments/structural-discovery/output/cycle4-n5-two-stone-geometry.json").read_text(encoding="utf-8")
             )["loss_pairs"])
             computed = set(tuple(sorted(e)) for e in edges)
             report["n5_verify_loss_pairs"] = {

@@ -11,9 +11,9 @@ import statistics
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-POP = ROOT / "artifacts" / "9x9-factorial-population.csv"
-HOLD = ROOT / "artifacts" / "9x9-factorial-holdout.csv"
-OUT = ROOT / "artifacts" / "9x9-topT-contamination-audit.json"
+POP = ROOT / "research/experiments/solver-benchmarks/output" / "9x9-factorial-population.csv"
+HOLD = ROOT / "research/experiments/solver-benchmarks/output" / "9x9-factorial-holdout.csv"
+OUT = ROOT / "research/experiments/solver-benchmarks/output" / "9x9-topT-contamination-audit.json"
 
 
 def load(path):

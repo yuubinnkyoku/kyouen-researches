@@ -134,7 +134,7 @@ jobs:
           import csv, json, math, statistics
           from pathlib import Path
 
-          files = sorted(Path('artifacts').glob('depth5-ab-p*/ab.csv'))
+          files = sorted(Path('research/experiments/solver-benchmarks/output').glob('depth5-ab-p*/ab.csv'))
           if len(files) != 4:
               raise SystemExit(f'expected 4 A/B files, got {len(files)}: {files}')
           rows = []

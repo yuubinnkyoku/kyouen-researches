@@ -9,7 +9,7 @@ topics:
 aliases: []
 relations: []
 artifacts:
-- path: docs/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md
+- path: research/experiments/9x9-factorial/reports/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
@@ -17,7 +17,7 @@ artifacts:
   role: data
   note: 四本の事前Holm家族と記述量
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: experiments/9x9-factorial-execution-base/holdout.manifest.csv
+- path: research/experiments/9x9-factorial-execution-base/holdout.manifest.csv
   role: manifest
   note: 凍結対象と除外規則
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

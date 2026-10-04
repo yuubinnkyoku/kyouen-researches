@@ -6,7 +6,7 @@ import hashlib
 import json
 from round23_b251_audit import det4
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def digest(path):

@@ -5,7 +5,7 @@ Prereg guard, runs before the 12-parent B cohort and before manifest freeze.
 
 Checks on short exactly-solvable states
   ("13,52,57,76", 4), ("4,24,26,67", 4), ("14,64,74", 3):
-  1. A parity: frozen tmp-kb/parent_bench_native == new binary default
+  1. A parity: frozen research/experiments/solver-benchmarks/bin/parent_bench_native == new binary default
      == new binary explicit --below-root-order cache-aware, on outcome,
      visited, memo_used, maxdepth and root diagnostics
      (bench_root unique/entered/first/witness).

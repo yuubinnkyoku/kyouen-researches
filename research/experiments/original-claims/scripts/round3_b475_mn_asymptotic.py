@@ -34,7 +34,7 @@ import math
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "round3_b475_mn.json"
 
 

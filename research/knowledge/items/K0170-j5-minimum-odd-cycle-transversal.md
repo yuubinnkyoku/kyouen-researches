@@ -13,31 +13,31 @@ relations:
   target: K0108
   note: ''
 artifacts:
-- path: research/verification/round27-fixed-response-audit.md
+- path: research/experiments/original-claims/reports/round27-fixed-response-audit.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-round2-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md
   role: source
   note: B303の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round27_pairing_verified.json
+- path: research/experiments/original-claims/output/round27_pairing_verified.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round27_pairing_audited.json
+- path: research/experiments/original-claims/output/round27_pairing_audited.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round27_response_graphs.json
+- path: research/experiments/original-claims/output/round27_response_graphs.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-scope: '起点: [個票01・B011〜B020](verification/batch-01.md)。既知の連結性・完全マッチング・Aut=D4そのものは再提案しない。'
+scope: '起点: [個票01・B011〜B020](../../log/claim-audit/batch-01.md)。既知の連結性・完全マッチング・Aut=D4そのものは再提案しない。'
 evidence: 原文監査 SUPPORTED / finite_complete_classification_and_witness
 ---
 
@@ -45,7 +45,7 @@ evidence: 原文監査 SUPPORTED / finite_complete_classification_and_witness
 
 対象命題: J_5の最小奇閉路横断集合は2点。 二点を削除すれば非孤立部分が二部になり、一点ではならない。市松模様とは違う「二分への距離」を測る。
 
-適用文脈: 起点: [個票01・B011〜B020](verification/batch-01.md)。既知の連結性・完全マッチング・Aut=D4そのものは再提案しない。
+適用文脈: 起点: [個票01・B011〜B020](../../log/claim-audit/batch-01.md)。既知の連結性・完全マッチング・Aut=D4そのものは再提案しない。
 
 現在の結論: 最小奇閉路横断数2。二つの最小集合は対角の四隅ペア。
 

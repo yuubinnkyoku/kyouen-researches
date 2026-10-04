@@ -6,7 +6,7 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 SCRIPTS = ROOT / "scripts"
 PAT = re.compile(r"\bB(\d{3})\b")
 

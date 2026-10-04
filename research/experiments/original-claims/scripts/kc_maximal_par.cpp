@@ -7,8 +7,8 @@
 // thread that owns its lowest still-undecided point.
 //
 // Usage: kc_maximal_par <n> <k> <threads>
-// Writes: research/verification/data/kc_maximal_n<n>_k<k>.bin
-#include "kc_core.h"
+// Writes: research/experiments/original-claims/output/data/kc_maximal_n<n>_k<k>.bin
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
@@ -103,7 +103,7 @@ int main(int argc, char** argv) {
 
     char path[512];
     std::snprintf(path, sizeof(path),
-        "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/kc_maximal_n%d_k%d.bin", n, K);
+        "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/kc_maximal_n%d_k%d.bin", n, K);
     FILE* f = std::fopen(path, "wb");
     if (!f) { std::perror("fopen"); return 1; }
     u64 c = uniq.size();

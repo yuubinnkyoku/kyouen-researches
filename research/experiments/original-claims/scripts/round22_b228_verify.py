@@ -10,7 +10,7 @@ from round21_b224_verify import regenerate, solve
 def main():
     start = time.perf_counter()
     source = Path(__file__).resolve()
-    root = source.parents[1]
+    root = source.parents[1] / "output"
     points, groups, quads = regenerate(5)
     geometry_bytes = (root / 'round20_b224_geometry.json').read_bytes()
     geometry = json.loads(geometry_bytes)

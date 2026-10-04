@@ -8,15 +8,15 @@ topics:
 relations: []
 aliases: []
 artifacts:
-- path: research/verification/round42-exact-residual-family-audit.md
+- path: research/experiments/original-claims/reports/round42-exact-residual-family-audit.md
   role: proof
   note: 四石配置間の三石Johnson橋の一般証明
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round42_families_verified.json
+- path: research/experiments/original-claims/output/round42_families_verified.json
   role: data
   note: 明示証人と有限照合結果
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round42_families_audit.py
+- path: research/experiments/original-claims/scripts/round42_families_audit.py
   role: verifier
   note: 証人の独立検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 from round25_forced_verify import geometry,bits
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 def main():
     n=7;points,quads,curves=geometry(n);index={q:i for i,q in enumerate(quads)};orbits={}

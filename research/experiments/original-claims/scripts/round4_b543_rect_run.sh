@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-cd "$REPO/research/verification/scripts"
+cd "$REPO/research/experiments/original-claims/scripts"
 exec > >(tee /tmp/r4run2.log) 2>&1
 g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/r4rect round4_b543_rect.cpp
 echo "BUILD_OK"
 export OMP_NUM_THREADS=16
-VER="$REPO/research/verification"
+VER="$REPO/research/experiments/original-claims/output"
 rm -f "$VER/round4_3row_part.json"
 # 2-row: section 1 (Grundy m<=16) and section 2 with a sane m cap
 /tmp/r4rect --out="$VER/round4_b543_rect.json" --sec=12 --m2=16 --m2c=60

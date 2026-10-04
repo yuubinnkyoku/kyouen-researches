@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Follow-up part 2: B514/B520 n=5 delta, B504 decoys, B507, B528/B530 orders."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import itertools
 import json
@@ -12,7 +15,7 @@ from collections import Counter
 from fractions import Fraction
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[3]
+REPO = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square, board_square_minus, is_forbidden_quad  # noqa: E402
 

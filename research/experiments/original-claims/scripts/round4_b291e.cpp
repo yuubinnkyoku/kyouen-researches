@@ -10,7 +10,7 @@
 //          outcome.  The layer key is the canonical signature of the whole
 //          depth-d legal-move tree: every internal node is the sorted
 //          multiset of its children's signatures, every leaf is |L(S)|.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <bits/stdc++.h>
 using namespace std;
 using kc::u64;
@@ -82,7 +82,7 @@ struct TreeSig {
 static void enum_maximal(const kc::Board& b, std::vector<u64>& out, long long cap) {
     // A plain DFS pushes the same maximal set once per legal ordering, so the
     // raw output is full of duplicates.  Deduplicate, and cross-check the
-    // count against the authoritative dump research/verification/data/
+    // count against the authoritative dump research/experiments/original-claims/output/data/
     // maximal_n<k>.bin.
     std::set<u64> uniq;
     std::function<void(u64)> f = [&](u64 s) {
@@ -160,7 +160,7 @@ int main(int argc, char** argv) {
         std::vector<u64> maxs; enum_maximal(b, maxs, 200000);
         {   // cross-check against the authoritative dump
             auto ref = load_bin("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/"
-                                "research/verification/data/maximal_n4.bin");
+                                "research/experiments/original-claims/output/data/maximal_n4.bin");
             std::set<u64> a(maxs.begin(), maxs.end()), r(ref.begin(), ref.end());
             fprintf(stderr, "[B295] enumerated=%zu  reference=%zu  same=%d\n",
                     a.size(), r.size(), (int)(a == r));

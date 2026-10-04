@@ -14,7 +14,7 @@ relations:
   target: K0266
   note: ''
 artifacts:
-- path: night-research/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
+- path: research/log/discovery-cycles/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
@@ -22,11 +22,11 @@ artifacts:
   role: certificate
   note: 6460候補の被覆
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: F-BGの整数・分数最適性
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/verify_corridor_discovery.py
+- path: research/experiments/structural-discovery/scripts/verify_corridor_discovery.py
   role: verifier
   note: 全候補被覆の独立検査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

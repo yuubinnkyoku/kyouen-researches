@@ -3,6 +3,9 @@
 For w>=2 choose prime p>16(w-1)^2+1, and use (2r^2+jp,r), j=0,1,2.
 No four points are collinear or concyclic. Proof: round8-ap-quadratic-prime.md.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations, product
 from math import comb, isqrt, prod
 from pathlib import Path
@@ -84,7 +87,7 @@ def main():
                                    'independent_core_checks': independent_checks, 'points': points})
         print(f'w={w} p={p} width={width} quads={comb(3*w,4)} safe', flush=True)
     result['total_quadruples_checked'] = sum(e['all_quadruples_checked'] for e in result['examples'])
-    target = Path(__file__).resolve().parents[1]/'round8_ap_prime.json'
+    target = (Path(__file__).resolve().parents[1] / "output")/'round8_ap_prime.json'
     target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(target, flush=True)
 

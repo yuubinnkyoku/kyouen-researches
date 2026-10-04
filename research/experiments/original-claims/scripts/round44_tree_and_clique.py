@@ -6,7 +6,7 @@ import json
 from round25_forced_verify import geometry,bits,det4
 from round43_b350_minimum import game,antichains
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def residual(n,sids):
@@ -125,7 +125,7 @@ def main():
         assert all(det4([S[0],S[2],p,q])==0 for p,q in combinations(clique_points,2))
         family.append({'M':M,'n':2*radius+1,'radius':radius,'S_coordinates':S,
                        'induced_clique_size':4*M,'legal_clique_points':clique_points})
-    files=['scripts/round44_tree_and_clique.py','scripts/round43_b350_minimum.py','scripts/round25_forced_verify.py']
+    files=['../scripts/round44_tree_and_clique.py','../scripts/round43_b350_minimum.py','../scripts/round25_forced_verify.py']
     out={'B062_original_verdict':'REFUTED','B062_stronger_statement':'Three occupied stones have unbounded competition chromatic number.',
          'B062_minimum_counterexample_board':4,'B062_exact_chromatic_six':clique_record,
          'small_chromatic_exclusions':small_chromatic,'infinite_clique_family_samples':family,

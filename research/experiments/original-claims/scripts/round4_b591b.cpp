@@ -14,7 +14,7 @@
 // Geometry = kc::det4 from the shared verified core. 128-bit occupancy.
 // Integer only.
 
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <cstdio>
 #include <cstdint>

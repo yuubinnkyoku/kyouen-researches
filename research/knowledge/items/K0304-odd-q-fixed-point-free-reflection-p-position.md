@@ -7,11 +7,11 @@ topics: [rectangles, variants, grundy]
 aliases: []
 relations: []
 artifacts:
-- path: research/q48-odd-q-reflection.md
+- path: research/experiments/fixed-width/reports/q48-odd-q-reflection.md
   role: proof
   note: 鏡映対称応答の一般定理
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/q48_odd_q_reflection.json
+- path: research/experiments/fixed-width/output/q48_odd_q_reflection.json
   role: data
   note: 有限例の検算
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

@@ -18,23 +18,23 @@ relations:
   target: K0296
   note: 独立全状態でT*に五石が含まれる
 artifacts:
-- path: research/verification/round25-forced-length-holes.md
+- path: research/experiments/original-claims/reports/round25-forced-length-holes.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round25_forced_n5.json
+- path: research/experiments/original-claims/output/round25_forced_n5.json
   role: data
   note: 五盤rootのT*/WFT bitset
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round25_forced_n6.json
+- path: research/experiments/original-claims/output/round25_forced_n6.json
   role: data
   note: 六盤rootのT*/WFT
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round25_forced_verified.json
+- path: research/experiments/original-claims/output/round25_forced_verified.json
   role: data
   note: 小盤独立全状態と固定長AND/OR検査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round28_n7_layers.json
+- path: research/experiments/original-claims/output/round28_n7_layers.json
   role: data
   note: 七盤rootのT*/WFT
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

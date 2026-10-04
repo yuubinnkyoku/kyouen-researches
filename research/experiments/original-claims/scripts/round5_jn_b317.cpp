@@ -15,7 +15,7 @@
 #include <chrono>
 #include <unordered_map>
 
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 using u64 = uint64_t;
 using namespace kc;

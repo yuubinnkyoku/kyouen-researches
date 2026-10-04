@@ -9,9 +9,9 @@ import json, struct, sys
 from pathlib import Path
 from itertools import combinations
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
-NIGHT = ROOT / "night-research"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 OUT = ROOT / "research" / "verification" / "round2_b381.json"
 
 

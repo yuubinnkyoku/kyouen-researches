@@ -8,9 +8,9 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-CENSUS = ROOT / "artifacts" / "8x8-o-census-outcomes.csv"
-RANDOM = ROOT / "artifacts" / "8x8-random-safe-5stone-out.csv"
-OUT = ROOT / "artifacts" / "8x8-loss-rate-comparison.json"
+CENSUS = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-census-outcomes.csv"
+RANDOM = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-random-safe-5stone-out.csv"
+OUT = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-loss-rate-comparison.json"
 
 
 def load_outcomes(path: Path) -> list[str]:
@@ -57,7 +57,7 @@ def main() -> None:
             "TE": 0.460630,
             "TO": 0.476378,
             "raw": 0.452756,
-            "note": "docs/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md",
+            "note": "research/experiments/9x9-factorial/reports/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md",
         },
         "enrichment": {
             "ratio_selected_over_random": (ck / cn) / (rk / rn) if rk else None,

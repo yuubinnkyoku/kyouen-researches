@@ -38,7 +38,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from round3_chunk8_lib import Quads, all_forbidden, grid_board, is_collinear  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk8_3row.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk8_3row.json"
 
 
 def solve(q):

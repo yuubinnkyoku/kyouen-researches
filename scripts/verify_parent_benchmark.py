@@ -107,7 +107,7 @@ def main() -> None:
     # 5: same binary/flags (temp state-file paths differ by design; order
     # flag is the only allowed structural difference).
     import re as _re
-    norm = lambda c: _re.sub(r"tmp-kb/tmp[^ ]+\.txt", "tmp-kb/TMPFILE", c)
+    norm = lambda c: _re.sub(r"research/experiments/solver-benchmarks/bin/tmp[^ ]+\.txt", "research/experiments/solver-benchmarks/bin/TMPFILE", c)
     for p in EXPECTED:
         ca, cb = by[(p, "A")]["solver_cmd"], by[(p, "B")]["solver_cmd"]
         assert " --root-order-file " not in ca, p

@@ -12,7 +12,7 @@ import json
 from round25_forced_verify import bits, det4, geometry
 from round46_audit import cover
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def hashes(files):
@@ -68,13 +68,13 @@ def main():
         best = max(best, sum(four_completion[sum(1 << p for p in t)].bit_count() for t in combinations(ids, 3)))
     check = json.loads((ROOT/'round48_n4_k6_max_incidence_check.json').read_text())
     assert check['complete'] and check['maximum_total_completion'] == best == 22 and safe6 == 1064
-    common = ['scripts/round48_49_audit.py', 'scripts/round25_forced_verify.py', 'scripts/round46_audit.py',
-              'scripts/round46_kmin_tight.cpp']
+    common = ['../scripts/round48_49_audit.py', '../scripts/round25_forced_verify.py', '../scripts/round46_audit.py',
+              '../scripts/round46_kmin_tight.cpp']
     out48 = {'B079_original_verdict': 'PARTIAL', 'n': 10, 'k': 6,
              'exact_maximum_sum_b': 85, 'maximality_required_sum_b': 94,
              'extremal_witness': extreme, 'independent_n4_optimizer_check': {'safe_six_sets': safe6, 'maximum': best},
              'proof_limit': 'The 85 upper bound relies on a completed geometric branch-and-bound optimization. An enumeration-free short system of cooccurrence inequalities remains unproved.',
-             'sha256': hashes(common + ['scripts/round48_max_incidence.cpp', 'round48_n10_k6.json',
+             'sha256': hashes(common + ['../scripts/round48_max_incidence.cpp', 'round48_n10_k6.json',
                                        'round48_n10_k6_max_incidence.json', 'round48_n4_k6_max_incidence_check.json'])}
     (ROOT/'round48_incidence_verified.json').write_text(json.dumps(out48, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     embedded = json.loads((ROOT/'round48_n10_embedded_extensions.json').read_text())
@@ -118,7 +118,7 @@ def main():
         assert window['n'] == 10 and window['k'] == 7 and window['forbidden_quads'] == len(quads)
         assert window['complete'] and not window['found'] and window['nodes_by_depth'][1] == 5
         lower = 8
-        extra.extend([window_file.name, 'scripts/round51_n10_window.cpp', 'round46_saturation_verified.json'])
+        extra.extend([window_file.name, '../scripts/round51_n10_window.cpp', 'round46_saturation_verified.json'])
     assert lower <= upper
     out49 = {'B094_original_verdict': 'REFUTED', 'B093_original_verdict': b093,
              's10_bounds': [lower, upper], 'minimum_stone_lower_sizes_closed': list(range(lower)),
@@ -128,7 +128,7 @@ def main():
              'nine_stone_search_limit': 'Only all 3672 translated n8 eight-stone catalogue sets plus one point. This is not a universal n10 nine-stone exclusion.',
              'seven_stone_search': k7,
              'seven_stone_complete_window_search': window, 'smaller_witness': smaller_witness,
-             'sha256': hashes(common + ['scripts/round48_n10_embedded.cpp', 'round4_b371.bin',
+             'sha256': hashes(common + ['../scripts/round48_n10_embedded.cpp', 'round4_b371.bin',
                                        'round48_n10_embedded_extensions.json', 'round49_n10_embedded_nine.json',
                                        'round48_incidence_verified.json'] + extra)}
     (ROOT/'round49_s10_verified.json').write_text(json.dumps(out49, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')

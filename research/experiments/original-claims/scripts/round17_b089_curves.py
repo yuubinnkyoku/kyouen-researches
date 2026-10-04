@@ -89,7 +89,7 @@ def main():
         "records": records,
         "scope": "Finite checks supplement the all-prime algebraic proof; no asymptotic fit."
     }
-    target = Path(__file__).resolve().parents[1] / "round17_b089_curves.json"
+    target = (Path(__file__).resolve().parents[1] / "output") / "round17_b089_curves.json"
     target.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({key: data[key] for key in
                       ["primes_tested", "total_triples_checked", "total_quads_checked",

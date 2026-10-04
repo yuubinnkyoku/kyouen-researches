@@ -7,7 +7,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits,det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 @cache
@@ -122,7 +122,7 @@ def main():
               'all_member_signatures':[{'S_mask':s,'L_ids':list(bits(signature[s][1])),
                'R_ids':[list(bits(e)) for e in signature[s][2]]} for s in members]}
             break
-    files=['scripts/round42_families_audit.py','scripts/round25_forced_verify.py']
+    files=['../scripts/round42_families_audit.py','../scripts/round25_forced_verify.py']
     out={'n':4,'all_65536_subsets_tested':True,'safe_state_count':len(states),'counts':counts,
          'witnesses':witnesses,'sha256':{f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files}}
     (ROOT/'round42_families_verified.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

@@ -6,7 +6,7 @@
 #include <cstdlib>
 #include <vector>
 #include <algorithm>
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 using u64 = uint64_t;
 using namespace kc;

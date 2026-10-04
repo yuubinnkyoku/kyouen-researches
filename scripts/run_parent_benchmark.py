@@ -123,7 +123,7 @@ def frozen_manifest(tasks: list[dict[str, str]]) -> dict[str, object]:
         "format": 1,
         "cohort": {"parents": sorted(EXPECTED_PARENTS), "total_tasks": 1136,
                    "task_set_sha256": task_set_digest(tasks)},
-        "probe": {"binary": "tmp-kb/probe_holdout_native",
+        "probe": {"binary": "research/experiments/solver-benchmarks/bin/probe_holdout_native",
                   "binary_sha256": sha256_file(PROBE_BIN),
                   "sources_sha256": probe_src,
                   "sources_note": "frozen pre-patch lineage; byte-identical binary reused",
@@ -131,7 +131,7 @@ def frozen_manifest(tasks: list[dict[str, str]]) -> dict[str, object]:
                   "fresh_process_per_child": True},
 
 
-        "parent_solve": {"binary": "tmp-kb/parent_bench_native",
+        "parent_solve": {"binary": "research/experiments/solver-benchmarks/bin/parent_bench_native",
                          "binary_sha256": sha256_file(BENCH_BIN),
                          "sources_sha256": src,
                          "build_cmd": ["g++", "-O2", "-std=c++20"],

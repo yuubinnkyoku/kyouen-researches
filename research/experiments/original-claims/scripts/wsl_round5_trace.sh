@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
 B=/tmp/kc_build
 g++ -O2 -march=native -std=c++20 -fopenmp -o $B/crt "$S/round5_b501_prand8.cpp" || exit 1
 export OMP_NUM_THREADS=8

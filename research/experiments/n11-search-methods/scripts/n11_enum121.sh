@@ -8,7 +8,7 @@
 # NOTE: must be run as a script file. Inlining into PowerShell breaks quoting.
 # NOTE: spill dir is /tmp/n11_121 -- /tmp/n11 belongs to the 1-word agent.
 set -uo pipefail
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/experiments/n11-search-methods/scripts
 SPILL=/tmp/n11_121
 LOG=/tmp/n11_121.log
 BIN=/tmp/kc_build/n11enum121

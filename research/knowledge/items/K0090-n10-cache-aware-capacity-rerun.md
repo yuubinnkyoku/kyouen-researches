@@ -9,11 +9,11 @@ topics:
 aliases: []
 relations: []
 artifacts:
-- path: docs/10X10_CACHE_AWARE_BELOW_ROOT_CONFIRMATION_V2_RESULT.md
+- path: research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CONFIRMATION_V2_RESULT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: docs/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_RESULT.md
+- path: research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_RESULT.md
   role: source
   note: 容量上限を修正した凍結24/24実行とprimary判定
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -12,11 +12,11 @@ relations:
   target: K0085
   note: ''
 artifacts:
-- path: docs/MOVE_ORDERING_AUDIT.md
+- path: research/experiments/solver-benchmarks/reports/MOVE_ORDERING_AUDIT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: docs/10X10_HOLDOUT_CONFIRMATION_RESULT.md
+- path: research/experiments/solver-benchmarks/reports/10X10_HOLDOUT_CONFIRMATION_RESULT.md
   role: source
   note: raw/filtered訂正と回帰範囲
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

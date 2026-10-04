@@ -16,6 +16,7 @@ import subprocess
 import tempfile
 
 HERE = Path(__file__).resolve().parent
+DATA = HERE.parent / "output"
 T = [0,7,8,14,16,20,21,31,35,42,47,67,69,70,73,82,89,93,99]
 U = [2,6,16,18,21,25,32,35,40,59,62,67,74,77,78,80,81,83,97,99]
 Q = [25,59,62,83]
@@ -93,7 +94,7 @@ def audit(n, points):
 
 
 def exact_records(rerun):
-    records = json.loads((HERE/'saturation_20261003_extra_exact_results.json').read_text())
+    records = json.loads((DATA / 'saturation_20261003_extra_exact_results.json').read_text())
     for key,seed,nodes in [('T_neighborhood',T,364429603),
                            ('U_minus_25_neighborhood',[p for p in U if p != 25],426848807)]:
         r = records[key]
@@ -135,6 +136,7 @@ def exact_records(rerun):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rerun-exact',action='store_true')
+    parser.add_argument("--output", type=Path, default=DATA / "saturation_20261003_extra_verified.json")
     args = parser.parse_args()
     bad = [list(q) for q in combinations(U,4) if det(coords(10,q)) == 0]
     assert bad == [Q]
@@ -173,9 +175,9 @@ def main():
                'local_optimum_search':exact_records(args.rerun_exact)}
     sources = [Path(__file__),HERE/'saturation_20261003_extra_nineteen_neighborhood.cpp',
                HERE/'saturation_20261003_extra_union_neighborhood.cpp',
-               HERE/'saturation_20261003_extra_exact_results.json']
+               DATA / 'saturation_20261003_extra_exact_results.json']
     results['source_sha256'] = {p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
-    target = HERE/'saturation_20261003_extra_verified.json'
+    target = args.output
     target.write_text(json.dumps(results,ensure_ascii=False,indent=2)+'\n')
     print('Verified explicit maximal sets of sizes 21, 22 and 24 on boards 11, 12 and 16.')
     print('Verified all exterior-shell certificates and local-search record consistency.')

@@ -2,10 +2,10 @@
   "worker": "B591,B592,B593,B596,B597,B598,B599",
   "round": 4,
   "pass": 2,
-  "script": "research/verification/scripts/round4_b591b.cpp",
+  "script": "research/experiments/original-claims/scripts/round4_b591b.cpp",
   "drivers": [
-    "research/verification/scripts/round4_b591b_run.sh",
-    "research/verification/scripts/round4_b591b_run2.sh"
+    "research/experiments/original-claims/scripts/round4_b591b_run.sh",
+    "research/experiments/original-claims/scripts/round4_b591b_run2.sh"
   ],
   "engine": {
     "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",

@@ -3,12 +3,12 @@
 # Usage: wsl_stream_solve.sh [n] [spilldir]
 set -euo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 N="${1:-8}"
 SPILL="${2:-/home/yuubi/spill$N}"
 LOG=/tmp/stream_solve.log
-OUT=$R/research/verification/round5_prand_n${N}.json
-mkdir -p /tmp/kc_build "$R/research/verification/data"
+OUT=$R/research/experiments/original-claims/output/round5_prand_n${N}.json
+mkdir -p /tmp/kc_build "$R/research/experiments/original-claims/output/data"
 : > "$LOG"
 if ! g++ -O3 -march=native -std=c++20 -fopenmp -o /tmp/kc_build/stream_solve \
     "$S/round5_stream_solve.cpp" 2>>"$LOG"; then

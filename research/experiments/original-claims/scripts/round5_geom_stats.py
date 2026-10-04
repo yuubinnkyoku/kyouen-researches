@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Round5 geom-stats: extract B457/B464/B467/B468/B469 evidence from existing census.
 
-Reads research/verification/round3_b451_census.json (rows_m_ge5 has pts/ext/d4_orbit/q).
+Reads research/experiments/original-claims/output/round3_b451_census.json (rows_m_ge5 has pts/ext/d4_orbit/q).
 Computes:
   B464: A_sq vs A_rect window spectra, focused on asymmetric ext circles.
   B467: order-pattern (x-rank, y-rank) groups -> do they determine A(C)?
@@ -15,7 +15,7 @@ import json
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 CENSUS = ROOT / "research" / "verification" / "round3_b451_census.json"
 OUT = ROOT / "research" / "verification" / "round5_geom_stats.json"
 

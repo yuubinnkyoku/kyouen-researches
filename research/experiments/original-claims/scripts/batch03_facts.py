@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Cache-only facts for batch-03 report. No hypergraph aut, no pairing recursion."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import pickle
@@ -11,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from residual_core import bits_of, d4_perms, apply_perm_mask
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 CACHE = ROOT / "research" / "verification" / "batch03_cache.pkl"
 OUT = ROOT / "research" / "verification" / "batch03_results.json"
 

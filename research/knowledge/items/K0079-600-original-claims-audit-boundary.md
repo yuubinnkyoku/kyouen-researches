@@ -9,15 +9,15 @@ topics:
 aliases: []
 relations: []
 artifacts:
-- path: research/verification/round26-original-scope-index.md
+- path: research/experiments/original-claims/reports/round26-original-scope-index.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 全600原文と採用範囲・根拠ポインタ
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/HANDOFF-2026-10-01-round61.md
+- path: research/archive/claim-audit-history/HANDOFF-2026-10-01-round61.md
   role: source
   note: 最終原文状態と残件
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

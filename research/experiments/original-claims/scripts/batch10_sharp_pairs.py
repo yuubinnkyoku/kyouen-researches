@@ -27,7 +27,7 @@ from batch10_core import (  # noqa: E402
     xy,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "batch10_sharp_pairs.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "batch10_sharp_pairs.json"
 
 
 def bits(mask: int):

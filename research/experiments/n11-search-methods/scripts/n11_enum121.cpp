@@ -17,7 +17,7 @@
 // Usage:
 //   n11_enum121 --enum 11 [--spill=/tmp/n11_121] [--maxlevel K]
 //   n11_enum121 --quads 11            # only F_n
-#include "kc_core121.h"
+#include "../../../../scripts/research/kc_core121.h"
 
 #include <algorithm>
 #include <cstdint>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Analyze 8x8 O-stratum outcomes for cheap structural claims.
 
-Read-only over committed artifacts. Writes summary JSON under night-research/.
+Read-only over committed artifacts. Writes summary JSON under research/experiments/structural-discovery/output/.
 """
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import json
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = Path(__file__).resolve().parent
 
 
@@ -27,9 +27,9 @@ def to_int(s: str) -> int | None:
 
 
 def main() -> None:
-    parents = load_csv(ROOT / "artifacts/8x8-o-parent-outcomes.csv")
-    strata = load_csv(ROOT / "artifacts/8x8-o-strata.csv")
-    pop = load_csv(ROOT / "artifacts/8x8-factorial-population.csv")
+    parents = load_csv(ROOT / "research/experiments/solver-benchmarks/output/8x8-o-parent-outcomes.csv")
+    strata = load_csv(ROOT / "research/experiments/solver-benchmarks/output/8x8-o-strata.csv")
+    pop = load_csv(ROOT / "research/experiments/solver-benchmarks/output/8x8-factorial-population.csv")
 
     pop_by_parent = {r["canonical_parent"]: r for r in pop}
     strata_by_parent = {r["canonical_parent"]: r for r in strata}

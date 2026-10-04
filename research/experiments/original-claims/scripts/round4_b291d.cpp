@@ -11,7 +11,7 @@
 //              3-uniform family with the same (k, b).  We therefore compute
 //              max tau over the geometric families and max tau over randomly
 //              sampled arbitrary linear families with the same (k, b).
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <bits/stdc++.h>
 using namespace std;
 using kc::u64;
@@ -104,8 +104,8 @@ int main(int argc, char** argv) {
     std::ostream& o = outp.empty() ? std::cout : *(new std::ofstream(outp));
     o << "{\n";
     const std::string REPO = "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches";
-    const std::string root = REPO + "/research/verification/data/";
-    const std::string night = REPO + "/night-research/";
+    const std::string root = REPO + "/research/experiments/original-claims/output/data/";
+    const std::string night = REPO + "/research/experiments/structural-discovery/output/";
 
     std::vector<int> NS = {3, 4, 5, 6, 7};
     // n=6 has 349,596 maximal sets; only a deterministic prefix is used so the

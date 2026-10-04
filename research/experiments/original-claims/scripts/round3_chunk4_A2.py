@@ -22,7 +22,7 @@ THEOREM (proved and machine-checked here, exact integer arithmetic):
   identical parts) and B235 (coordinate rule for xor) reduce to the purely
   combinatorial question "can r disjoint copies of a graph be produced".
 
-Outputs research/verification/round3_chunk4_A2.json
+Outputs research/experiments/original-claims/output/round3_chunk4_A2.json
 """
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import numpy as np  # noqa: E402
 from round3_chunk4_core import Solve, quad_masks, square_points  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk4_A2.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk4_A2.json"
 T0 = time.time()
 _REP: dict = {}
 

@@ -7,7 +7,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry, bits, det4
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -97,8 +97,8 @@ def main():
             records.append({'extension_mask': t, 'g': g, 'child_masks': children})
         dags.append(records)
     q_witnesses = {str(e): list(bits(next(q for q in quads if q&~s == e))) for e in edges}
-    files = ['scripts/round33_b343_verify.py', 'scripts/round33_b343_search.cpp',
-             'scripts/round25_forced_verify.py', 'scripts/kc_core.h', 'round33_b343_n6_sole.json']
+    files = ['../scripts/round33_b343_verify.py', '../scripts/round33_b343_search.cpp',
+             '../scripts/round25_forced_verify.py', '../../../../scripts/research/kc_core.h', 'round33_b343_n6_sole.json']
     result = {'original_verdict': 'SUPPORTED', 'n': n, 'S_mask': s, 'S_ids': list(bits(s)),
               'S_coordinates': [points[p] for p in bits(s)], 'L_ids': ids,
               'L_coordinates': [points[p] for p in ids],

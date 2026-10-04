@@ -114,7 +114,7 @@ def main():
     args = parser.parse_args()
     start = time.perf_counter()
     source = Path(__file__).resolve()
-    root = source.parents[1]
+    root = source.parents[1] / "output"
     geometry_file = root / 'round20_b224_geometry.json'
     witness_file = root / args.witness
     geometry_bytes = geometry_file.read_bytes()

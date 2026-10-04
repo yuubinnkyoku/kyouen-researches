@@ -9,7 +9,7 @@ only if both required child outcomes are present for the exact two moves.
 import csv
 from pathlib import Path
 
-# Pre-exclusion design counts from docs/9X9_PAIR_COMPONENT_FACTORIAL_HOLDOUT_DESIGN.md
+# Pre-exclusion design counts from research/experiments/9x9-factorial/reports/9X9_PAIR_COMPONENT_FACTORIAL_HOLDOUT_DESIGN.md
 DESIGN_N = {"O_at_E0": 801, "O_at_E1": 702}
 COMP = {
     "O_at_E0": ("diff_O_at_E0", "top_T", "top_TO"),
@@ -43,10 +43,10 @@ def normalize(row):
 
 
 def main():
-    pop = read_csv("artifacts/9x9-factorial-population.csv")
+    pop = read_csv("research/experiments/solver-benchmarks/output/9x9-factorial-population.csv")
     pop_by = {r["canonical_parent"]: r for r in pop}
-    excl = {r["canonical_parent"] for r in read_csv("artifacts/exclusion-canonical-parents.csv")}
-    holdout = read_csv("artifacts/9x9-factorial-holdout.csv")
+    excl = {r["canonical_parent"] for r in read_csv("research/experiments/solver-benchmarks/output/exclusion-canonical-parents.csv")}
+    holdout = read_csv("research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv")
     hold_by = {r["canonical_parent"]: r for r in holdout}
 
     hist = {}
@@ -83,7 +83,7 @@ def main():
         )
         solved = {
             r["canonical_parent"]: normalize(r)
-            for r in read_csv(f"artifacts/solve/merged/{label}.csv")
+            for r in read_csv(f"research/experiments/solver-benchmarks/output/solve/merged/{label}.csv")
         }
         excluded_design = [p for p in design_parents if p in excl]
         missing_states = []
@@ -136,7 +136,7 @@ def main():
             f"missing={len(missing_states)} full_census={len(missing_states)==0}"
         )
 
-    out = Path("artifacts/solve/o-full-census-reconstruction-audit.json")
+    out = Path("research/experiments/solver-benchmarks/output/solve/o-full-census-reconstruction-audit.json")
     import json
 
     out.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")

@@ -12,7 +12,7 @@ from pathlib import Path
 P1 = (1 << 61) - 1
 d = json.loads(Path("/tmp/crt_n6.json").read_text(encoding="utf-8"))
 ref = json.loads(
-    Path("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/"
+    Path("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/"
          "round3_b502_pgrand_n6.json").read_text(encoding="utf-8"))["n6"]
 
 print("field p =", P1)

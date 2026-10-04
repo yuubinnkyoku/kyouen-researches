@@ -13,7 +13,7 @@ relations:
   target: K0307
   note: n≤112の全中心最大値は後続完全計算を参照
 artifacts:
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: F-Kの原記述と最大円点数表
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
@@ -21,11 +21,11 @@ artifacts:
   role: solver
   note: 倍化中心i2,j2を整数走査する実装で、中心は半整数格子に限られる
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round4-circle-windows.md
+- path: research/experiments/original-claims/reports/round4-circle-windows.md
   role: source
   note: 一般有理中心を含む後続の円窓解析
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/theory-audit-20261003.md
+- path: research/experiments/geometry/reports/theory-audit-20261003.md
   role: source
   note: 後続の全中心n=2..112完全計算は旧走査とは別の根拠
 evidence: explore_circle_formula_and_collinear.pyのmax_circle_points_for_boardはcenter_x2,center_y2を整数で走査するため、中心座標は1/2刻みに限定される。

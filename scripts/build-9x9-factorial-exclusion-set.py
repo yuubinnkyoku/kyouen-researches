@@ -5,7 +5,7 @@ from pathlib import Path
 
 sources = {
     "pilot-64-input": Path("results/9x9/pair-vs-true-unique-pilot-64-input.csv"),
-    "confirmatory-1024-regenerated": Path("artifacts/9x9-confirmatory-1024.csv"),
+    "confirmatory-1024-regenerated": Path("research/experiments/solver-benchmarks/output/9x9-confirmatory-1024.csv"),
     "first12": Path("results/9x9/pair-vs-true-unique-first12.csv"),
     "smoke": Path("results/9x9/pair-vs-true-unique-smoke.csv"),
 }
@@ -34,7 +34,7 @@ for name, path in sources.items():
     )
     print(f"{name}: rows={len(vals)} unique={len(set(vals))} sha256={sha}")
 
-out = Path("artifacts/exclusion-canonical-parents.csv")
+out = Path("research/experiments/solver-benchmarks/output/exclusion-canonical-parents.csv")
 with open(out, "w", newline="", encoding="utf-8") as f:
     w = csv.writer(f)
     w.writerow(["canonical_parent"])
@@ -52,7 +52,7 @@ manifest = {
     "exclusion_sha256": out_sha,
     "sources": file_rows,
 }
-Path("artifacts/exclusion-manifest.json").write_text(
+Path("research/experiments/solver-benchmarks/output/exclusion-manifest.json").write_text(
     json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
 )
-print("wrote artifacts/exclusion-manifest.json")
+print("wrote research/experiments/solver-benchmarks/output/exclusion-manifest.json")

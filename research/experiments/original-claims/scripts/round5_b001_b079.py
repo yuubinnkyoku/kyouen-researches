@@ -2,8 +2,11 @@
 """Round5 B079: compute max |compl(T)| on 10x10 for triple completion counts.
 compl(T) = {q not in T : T∪{q} is a forbidden 4-set (concyclic or collinear)}.
 Also compute for n=5..9 for comparison."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, time, json
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points
 from itertools import combinations
 
@@ -49,6 +52,6 @@ for n in [5, 6, 7, 8, 9, 10]:
     print(f"n={n}: V={V} F={len(b.quads)} triples_with_compl={len(triple_compl)} "
           f"multi={count_ge2} max_compl={max_compl} time={time.time()-t0:.1f}s", flush=True)
 
-with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_b079.json", "w") as f:
+with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_b079.json", "w") as f:
     json.dump(results, f, indent=2)
 print("Done.")

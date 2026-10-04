@@ -4,6 +4,9 @@ This verifies finite certificates for the universal proof in
 round5-cover-union.md. No large board is enumerated: the finite-circle upper
 bound and the horizontal-line lower bound certify any requested ratio.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations
 from math import isqrt
 from pathlib import Path
@@ -74,7 +77,7 @@ def main():
             'example_common_board_width':width,'guaranteed_ratio_strictly_greater_than':10,
             'B_horizontal_line_y':horizontal_y})
         print('N',n,'k',k,'T',ta,tb,'b',ba,bb,'bound digits',len(str(upper)),flush=True)
-    path=Path(__file__).resolve().parents[1]/'round5_cover_union.json'
+    path=(Path(__file__).resolve().parents[1] / "output")/'round5_cover_union.json'
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(path,flush=True)
 

@@ -34,7 +34,7 @@ from batch10_core import (  # noqa: E402
     winner_from_grundy,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "round2_b531.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round2_b531.json"
 
 
 def board_pts(m: int, w: int, ycoords=None):

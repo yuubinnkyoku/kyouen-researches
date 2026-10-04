@@ -14,6 +14,9 @@ stone*, which is a different condition from "lies in some forbidden 4-set".
 Resolve it by brute force: build a 2-stone position and test it directly with
 the same predicate the game uses.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys
 from itertools import combinations
 from pathlib import Path

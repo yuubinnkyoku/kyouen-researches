@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Harvest many n=8 K=15 safe sets via multi-solution target DFS (SAMPLE)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -138,8 +141,8 @@ def main():
     seeds = []
     wit = [0x3120140120888207]
     for p in [
-        Path("night-research/cycle8_g3_n8_sets.bin"),
-        Path("night-research/cycle8_g3_n8_sets2.bin"),
+        Path("research/experiments/structural-discovery/output/cycle8_g3_n8_sets.bin"),
+        Path("research/experiments/structural-discovery/output/cycle8_g3_n8_sets2.bin"),
     ]:
         if p.exists():
             data = p.read_bytes()
@@ -200,7 +203,7 @@ def main():
     md = [min_det_sample(s, sample) for s in sample] if len(sample) >= 3 else []
 
     # save
-    out_bin = Path("night-research/cycle8_h_n8_sample.bin")
+    out_bin = Path("research/experiments/structural-discovery/output/cycle8_h_n8_sample.bin")
     out_bin.write_bytes(b"".join(s.to_bytes(8, "little") for s in sample))
     out = {
         "package": "H-n8-harvest",

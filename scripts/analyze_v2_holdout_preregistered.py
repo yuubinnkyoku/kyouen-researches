@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Preregistered analysis for 10x10 Clean Holdout V2.
 
-Identical ranking rule and endpoints as V1 (see docs/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md):
+Identical ranking rule and endpoints as V1 (see research/experiments/solver-benchmarks/reports/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md):
 - ranking = probe LOSS first, unresolved by memo ascending, probe WIN last, move-index tiebreak
 - primary: first LOSS rank vs exact random median per eligible parent; one-sided sign test
 - secondary: rank sum, normalized ranks, AUC, per-parent table

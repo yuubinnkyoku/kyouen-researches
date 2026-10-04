@@ -27,7 +27,7 @@ from batch10_core import (  # noqa: E402
     winner_from_grundy,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "batch10_remove_quads.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "batch10_remove_quads.json"
 
 
 def empty_winner(n: int, quads) -> dict:

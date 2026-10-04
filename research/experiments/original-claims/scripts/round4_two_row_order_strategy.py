@@ -132,7 +132,7 @@ def main():
                     stack.append(response)
             traces[m]={"reachable_even_states":len(seen),"terminal_states":terminals}
         output["all_opponent_play_checks"]=traces
-    path=Path(__file__).resolve().parents[1]/"round4_two_row_order_strategy.json"
+    path=(Path(__file__).resolve().parents[1] / "output")/"round4_two_row_order_strategy.json"
     path.write_text(json.dumps(output,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print({k:v for k,v in output.items() if k not in ("policy","failures")})
     if failed:print("First failure:",failed[0])

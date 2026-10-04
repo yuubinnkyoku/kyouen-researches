@@ -1,5 +1,5 @@
 {
-  "script": "research/verification/scripts/round4_firstmoves.cpp",
+  "script": "research/experiments/original-claims/scripts/round4_firstmoves.cpp",
   "arithmetic": "exact integers only (det4 == 0 for forbidden 4-sets); no floating point",
   "firstmove_question": {
     "statement": "g(empty)=mex{g({p})}. So g(empty)=0 forces g({p})!=0 for every p, i.e. W_n = {} and all n^2 first moves lose.",

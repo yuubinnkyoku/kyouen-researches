@@ -17,9 +17,12 @@ Key advances over round2:
              compare against the "cut-only" bound (drop all paths that leave the
              size layer) to quantify the sharpness.
 
-Outputs: research/verification/round3_chunk7_greedy.json
+Outputs: research/experiments/original-claims/output/round3_chunk7_greedy.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import pickle
@@ -30,7 +33,7 @@ from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 OUT = ROOT / "research" / "verification" / "round3_chunk7_greedy.json"
 

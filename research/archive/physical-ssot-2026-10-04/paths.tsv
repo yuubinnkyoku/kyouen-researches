@@ -1045,7 +1045,7 @@ research/verification/round4_b237/greedy.jsonl	research/experiments/original-cla
 research/verification/round4_b237/insp_pairs.py	research/experiments/original-claims/output/round4_b237/insp_pairs.py	move	experiment output/input/log
 research/verification/round4_b237/mc.jsonl	research/experiments/original-claims/output/round4_b237/mc.jsonl	move	experiment output/input/log
 research/verification/round4_b237/mc_summary.txt	research/experiments/original-claims/output/round4_b237/mc_summary.txt	move	experiment output/input/log
-research/verification/round4_b237/q5.jsonl	research/experiments/fixed-width/output/round4_b237/q5.jsonl	move	experiment output/input/log
+research/verification/round4_b237/q5.jsonl	research/experiments/original-claims/output/round4_b237/q5.jsonl	move	experiment output/input/log
 research/verification/round4_b237/sub.jsonl	research/experiments/original-claims/output/round4_b237/sub.jsonl	move	experiment output/input/log
 research/verification/round4_b237/summarize.py	research/experiments/original-claims/output/round4_b237/summarize.py	move	experiment output/input/log
 research/verification/round4_b291c.json	research/experiments/original-claims/output/round4_b291c.json	move	experiment output/input/log
@@ -1704,7 +1704,7 @@ research/verification/scripts/round3_b591_b592_final.py	research/experiments/ori
 research/verification/scripts/round3_b591_b592_m8.py	research/experiments/original-claims/scripts/round3_b591_b592_m8.py	move	reproduction code or output
 research/verification/scripts/round3_b591_b592_pool.py	research/experiments/original-claims/scripts/round3_b591_b592_pool.py	move	reproduction code or output
 research/verification/scripts/round3_b591_core.py	research/experiments/original-claims/scripts/round3_b591_core.py	move	reproduction code or output
-research/verification/scripts/round3_chunk2_deform.py	research/experiments/original-claims/scripts/round3_chunk2_deform.py	move	reproduction code or output
+research/verification/scripts/round3_chunk2_deform.py	research/archive/incomplete-scripts/round3_chunk2_deform.py	move	incomplete code: syntax error already present at starting main; historical source
 research/verification/scripts/round3_chunk2_extract.py	research/experiments/original-claims/scripts/round3_chunk2_extract.py	move	reproduction code or output
 research/verification/scripts/round3_chunk2_geom.py	research/experiments/original-claims/scripts/round3_chunk2_geom.py	move	reproduction code or output
 research/verification/scripts/round3_chunk2_saturation.py	research/experiments/original-claims/scripts/round3_chunk2_saturation.py	move	reproduction code or output
@@ -1739,7 +1739,7 @@ research/verification/scripts/round3_chunk8_b521.py	research/experiments/origina
 research/verification/scripts/round3_chunk8_c_tworow.py	research/experiments/original-claims/scripts/round3_chunk8_c_tworow.py	move	reproduction code or output
 research/verification/scripts/round3_chunk8_collect.py	research/experiments/original-claims/scripts/round3_chunk8_collect.py	move	reproduction code or output
 research/verification/scripts/round3_chunk8_d_3row.py	research/experiments/original-claims/scripts/round3_chunk8_d_3row.py	move	reproduction code or output
-research/verification/scripts/round3_chunk8_e_quads2.py	research/experiments/original-claims/scripts/round3_chunk8_e_quads2.py	move	reproduction code or output
+research/verification/scripts/round3_chunk8_e_quads2.py	research/archive/incomplete-scripts/round3_chunk8_e_quads2.py	move	incomplete code: syntax error already present at starting main; historical source
 research/verification/scripts/round3_chunk8_lib.py	research/experiments/original-claims/scripts/round3_chunk8_lib.py	move	reproduction code or output
 research/verification/scripts/round3_collect_labels.py	research/experiments/original-claims/scripts/round3_collect_labels.py	move	reproduction code or output
 research/verification/scripts/round3_coverage.py	research/experiments/original-claims/scripts/round3_coverage.py	move	reproduction code or output
@@ -2204,6 +2204,9 @@ research/exploration/fact_tc_k10b.err	research/experiments/fact-discovery/output
 research/exploration/fact_tc_k11.err	research/experiments/fact-discovery/output/fact_tc_k11.err	move	fact-discovery experiment asset
 research/exploration/fact_tc_k6.err	research/experiments/fact-discovery/output/fact_tc_k6.err	move	fact-discovery experiment asset
 research/exploration/fact_tc_k9.err	research/experiments/fact-discovery/output/fact_tc_k9.err	move	fact-discovery experiment asset
+night-research/cycle9_n8_sample.bin	research/experiments/structural-discovery/output/cycle8_g3_n8_sets.bin	move	byte-identical duplicate of night-research/cycle8_g3_n8_sets.bin
+research/verification/scripts/round5_b301_j5.txt	research/experiments/original-claims/output/round5_b301_j5.txt	move	byte-identical duplicate of research/verification/round5_b301_j5.txt
+research/verification/scripts/round5_b301_j6.txt	research/experiments/original-claims/output/round5_b301_j6.txt	move	byte-identical duplicate of research/verification/round5_b301_j6.txt
 night-research/cycle5-grundy-n6-cap12.json		delete	empty runtime dump
 night-research/cycle6-saturation-n5.json		delete	empty runtime dump
 night-research/cycle6-saturation-n6.json		delete	empty runtime dump

@@ -43,7 +43,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from round3_chunk8_lib import pairsum_children, pairsum_game, sigma2  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk8_tworow.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk8_tworow.json"
 
 
 # ---------------------------------------------------------------------------

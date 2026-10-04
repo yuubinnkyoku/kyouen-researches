@@ -13,11 +13,11 @@ relations:
   target: K0295
   note: ''
 artifacts:
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round25_forced_n5.json
+- path: research/experiments/original-claims/output/round25_forced_n5.json
   role: data
   note: Tstar_bits672とWFT_bits128
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -16,7 +16,7 @@ import json
 from itertools import combinations
 from pathlib import Path
 
-OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b286_coord.json")
+OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b286_coord.json")
 
 
 def det4(rows):

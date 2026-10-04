@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Round3 B501/B502: exact random-play win rate p_rand on standard boards.
 
-Same definition as round2 (research/verification/scripts/round2_b501_rand.py):
+Same definition as round2 (research/experiments/original-claims/scripts/round2_b501_rand.py):
 
     p_rand(terminal) = 0
     p_rand(S)        = (1/|L|) * sum_{u in L} (1 - p_rand(S | {u}))
@@ -23,11 +23,14 @@ Method
   * optional n=6 random-play sampling of reachable safe sets
 
 Usage
-    python research/verification/scripts/round3_b501_pgrand_n5.py
-    python research/verification/scripts/round3_b501_pgrand_n5.py --sizes 4,5
-    python research/verification/scripts/round3_b501_pgrand_n5.py --sizes 5 --n6 40
+    python research/experiments/original-claims/scripts/round3_b501_pgrand_n5.py
+    python research/experiments/original-claims/scripts/round3_b501_pgrand_n5.py --sizes 4,5
+    python research/experiments/original-claims/scripts/round3_b501_pgrand_n5.py --sizes 5 --n6 40
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import argparse
 import contextlib
@@ -42,7 +45,7 @@ from pathlib import Path
 
 import numpy as np
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square  # noqa: E402
 

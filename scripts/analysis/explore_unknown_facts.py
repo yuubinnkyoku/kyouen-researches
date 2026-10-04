@@ -261,7 +261,7 @@ def analyze_known_sequences():
 
 def analyze_first_move_orbits_9x9():
     """9×9 の勝ち初手コスト (visited) と D4 軌道構造。"""
-    path = ROOT / "night-research" / "first-moves-9x9.csv"
+    path = ROOT / "research/experiments/structural-discovery/output" / "first-moves-9x9.csv"
     rows = []
     if not path.exists():
         return {"error": "missing first-moves-9x9.csv"}

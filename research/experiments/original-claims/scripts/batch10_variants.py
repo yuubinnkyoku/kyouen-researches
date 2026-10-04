@@ -25,7 +25,7 @@ from batch10_core import (  # noqa: E402
     winner_from_grundy,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "batch10_variants.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "batch10_variants.json"
 
 
 def misère_winner(game: Game, occ: int, memo_pn: dict) -> bool:

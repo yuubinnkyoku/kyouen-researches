@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Quick n=5 scan: same-type 2-component residuals, esp. P_3 x P_3 for B587."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json, sys
 from collections import Counter
 from pathlib import Path
@@ -128,7 +131,7 @@ print('xor ok:', len(ok))
 # save
 out = {'n5_same_type': results, 'n5_mismatch_count': len(mismatch), 'n5_ok_count': len(ok)}
 # append to existing json
-jpath = Path('research/verification/round5_b551_b600.json')
+jpath = Path('research/experiments/original-claims/output/round5_b551_b600.json')
 data = json.loads(jpath.read_text(encoding='utf-8'))
 data['b588_n5_sample'] = out
 jpath.write_text(json.dumps(data, indent=2, default=str, ensure_ascii=False), encoding='utf-8')

@@ -209,9 +209,9 @@ def build_dataset():
 
     # 9. Manual proof-benchmark entries from docs.
     b.add('90,61,2,73,69,66,13,91', 'LOSS', 10471, 24499, 1.6, 17,
-          'docs/10X10_PROOF_BENCHMARKS.md', 'proof-benchmark')
+          'research/experiments/solver-benchmarks/reports/10X10_PROOF_BENCHMARKS.md', 'proof-benchmark')
     b.add('7,16,17,28,30,33,41,48,54,68,69,71,81,92', 'WIN', 2, 1, 0.0, 14,
-          'docs/10X10_PROOF_BENCHMARKS.md', 'proof-benchmark')
+          'research/experiments/solver-benchmarks/reports/10X10_PROOF_BENCHMARKS.md', 'proof-benchmark')
 
     df = pd.DataFrame(list(b.rows.values()))
     df['has_search_cost'] = df['visited'].notna() & (df['visited'] > 0)

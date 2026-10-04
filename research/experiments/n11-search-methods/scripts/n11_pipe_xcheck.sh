@@ -6,7 +6,7 @@
 #         23478868,3707028,177760,2176,16]
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-S=$R/research/verification/scripts
+S=$R/research/experiments/n11-search-methods/scripts
 LOG=/tmp/pipe_x.log
 : > "$LOG"
 mkdir -p /tmp/n11_pipe_bin

@@ -10,7 +10,7 @@
 #include <string>
 #include <algorithm>
 #include <numeric>
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 using kc::u64; using namespace std;
 
 static long long C4(int m){ if(m<4) return 0; long long r=1; for(int i=0;i<4;i++) r=r*(m-i)/(i+1); return r; }
@@ -84,7 +84,7 @@ static double spearman(vector<double> a, vector<double> b){
 }
 
 int main(){
-    FILE* f=fopen("research/verification/round4_b478b500.json","w");
+    FILE* f=fopen("research/experiments/original-claims/output/round4_b478b500.json","w");
     fprintf(f,"{\n");
 
     // ================= B479: 円/直線束分解 =================

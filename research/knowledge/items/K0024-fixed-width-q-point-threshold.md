@@ -17,15 +17,15 @@ relations:
   target: K0068
   note: q≥4の一般定理は標準q4定理を含む
 artifacts:
-- path: research/q-point-fixed-width.md
+- path: research/experiments/fixed-width/reports/q-point-fixed-width.md
   role: proof
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/q_point_fixed_width.py
+- path: research/experiments/fixed-width/scripts/q_point_fixed_width.py
   role: verifier
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/q_point_fixed_width.json
+- path: research/experiments/fixed-width/output/q_point_fixed_width.json
   role: data
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

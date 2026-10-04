@@ -2,7 +2,7 @@
   "definition": "p_rand(terminal)=0; p_rand(S)=(1/|L|)*sum_{u in L}(1-p_rand(S+u)); L = legal moves, uniform (unchanged)",
   "population": "ALL safe subsets reachable from the empty board",
   "arithmetic": "exact rationals (p/q) with one common denominator per level, arbitrary-precision ints, gcd-reduced; zero floating point in the DP (decimals are truncated integer expansions for display only)",
-  "script": "research/verification/scripts/round3_b501_pgrand_n5b.py",
+  "script": "research/experiments/original-claims/scripts/round3_b501_pgrand_n5b.py",
   "python": "3.11.9",
   "numpy": "2.4.6",
   "n2": {

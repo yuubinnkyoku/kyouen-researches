@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$REPO/research/verification/scripts
+S=$REPO/research/experiments/original-claims/scripts
 cd "$S"
 g++ -O2 -std=c++20 -o /tmp/ceil6 round5_b325_ceiling.cpp
 echo "built ok"
@@ -12,5 +12,5 @@ echo "n4 done"
 echo "n5 done"
 /tmp/ceil6 6 > /tmp/ceil_n6.json
 echo "n6 done"
-cp /tmp/ceil_n4.json /tmp/ceil_n5.json /tmp/ceil_n6.json "$REPO/research/verification/"
+cp /tmp/ceil_n4.json /tmp/ceil_n5.json /tmp/ceil_n6.json "$REPO/research/experiments/original-claims/output/"
 echo "copied"

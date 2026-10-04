@@ -25,15 +25,15 @@ def main() -> None:
         "--audit",
         default="results/9x9/factorial/o-full-census-reconstruction-audit.json",
     )
-    ap.add_argument("--holdout", default="artifacts/9x9-factorial-holdout.csv")
-    ap.add_argument("--population", default="artifacts/9x9-factorial-population.csv")
+    ap.add_argument("--holdout", default="research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv")
+    ap.add_argument("--population", default="research/experiments/solver-benchmarks/output/9x9-factorial-population.csv")
     ap.add_argument(
         "--out",
-        default="artifacts/solve/o-missing-unique-children.csv",
+        default="research/experiments/solver-benchmarks/output/solve/o-missing-unique-children.csv",
     )
     ap.add_argument(
         "--join-plan",
-        default="artifacts/solve/o-missing-join-plan.json",
+        default="research/experiments/solver-benchmarks/output/solve/o-missing-join-plan.json",
     )
     args = ap.parse_args()
 

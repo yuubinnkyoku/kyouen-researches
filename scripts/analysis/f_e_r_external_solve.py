@@ -44,7 +44,7 @@ def load_manifest() -> list[dict[str, str]]:
 def write_run_manifest(rows: list[dict[str, str]]) -> None:
     protocol = {
         "format": 1,
-        "prereg": "docs/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md",
+        "prereg": "research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md",
         "sampling_manifest_sha256": sha256_file(MANIFEST),
         "solver_binary": str(SOLVER.relative_to(ROOT)),
         "solver_binary_sha256": sha256_file(SOLVER) if SOLVER.exists() else "",

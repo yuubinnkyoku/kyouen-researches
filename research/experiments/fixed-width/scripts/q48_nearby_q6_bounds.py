@@ -63,7 +63,7 @@ def main() -> None:
                               'total_unavailable_upper_bound':67},
             'lower_bound_witness':witness_check(),
             'scope':'Only the witness is computational search output; upper bound follows the documented counting proof and finite chord classification.'}
-    destination=Path(__file__).resolve().parents[1]/'q48_nearby_q6_bounds.json'
+    destination=(Path(__file__).resolve().parents[1] / "output")/'q48_nearby_q6_bounds.json'
     destination.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False,indent=2))
 

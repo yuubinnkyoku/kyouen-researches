@@ -4,6 +4,9 @@
 Integer-only. Caches grundy to round5_b231_n5_grundy.json for reuse.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import os
@@ -11,11 +14,11 @@ import sys
 from collections import Counter, defaultdict
 from itertools import combinations, permutations
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, board_square  # noqa: E402
 
-OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b231_n5.json"
-GPATH = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b231_n5_grundy.json"
+OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b231_n5.json"
+GPATH = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b231_n5_grundy.json"
 
 
 def residual_graph(board: Board, occ: int):

@@ -5,10 +5,10 @@
 # there are only 16 maximal safe sets, but the enumeration is the long pole.
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-cd "$REPO/research/verification/scripts"
+cd "$REPO/research/experiments/original-claims/scripts"
 g++ -O2 -march=native -std=c++20 -o /tmp/tstar round4_tstar.cpp
 echo "BUILD OK $(date +%T)"
-cd "$REPO/research/verification"
+cd "$REPO/research/experiments/original-claims/output"
 echo "START $(date +%T)"
 /usr/bin/time -v /tmp/tstar "$@" > round4_tstar.json 2> /tmp/tstar_time.txt || echo "RUN FAILED"
 echo "DONE $(date +%T)"

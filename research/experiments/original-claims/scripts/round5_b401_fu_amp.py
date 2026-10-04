@@ -1,12 +1,15 @@
 # B587: nimber2 -> nimber4 amplification search on n=4
 # B591: near-max analysis with delta_K(7)=2
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
 from pathlib import Path
 from itertools import combinations
 sys.path.insert(0, str(Path(__file__).parent))
 from kyouen_core import Board, board_square
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b401_fu_amp.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b401_fu_amp.json"
 
 def solve_grundy_for(board, occ_memo=None):
     import sys as _sys

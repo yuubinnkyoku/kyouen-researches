@@ -9,11 +9,11 @@ topics:
 aliases: []
 relations: []
 artifacts:
-- path: docs/10X10_D9_READ_MASK_REWRITE_SEMANTICS_CORRECTION.md
+- path: research/experiments/solver-benchmarks/reports/10X10_D9_READ_MASK_REWRITE_SEMANTICS_CORRECTION.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: docs/10X10_D9_READ_MASK_ACCESS_PATH_INVARIANT.md
+- path: research/experiments/solver-benchmarks/reports/10X10_D9_READ_MASK_ACCESS_PATH_INVARIANT.md
   role: source
   note: 両read経路でのmask不変条件
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -4,6 +4,9 @@ Enumerate all four-point row-offset/column-label patterns of bounded span.
 For each pattern solve the concyclicity polynomial in the common integer
 parameter shift h exactly. Thus h is unbounded, but row span is bounded.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import argparse
 from collections import Counter
 from itertools import combinations_with_replacement, product
@@ -101,7 +104,7 @@ def main():
                family_counterexamples=family_counterexamples,
                verified_w_max=args.span+1 if not family_counterexamples else None,
                status='PARTIAL; unbounded row span NOT proved',complete=True)
-    target = Path(__file__).resolve().parents[1]/f'round6_ap_parabola_a{a}_span{args.span}.json'
+    target = (Path(__file__).resolve().parents[1] / "output")/f'round6_ap_parabola_a{a}_span{args.span}.json'
     target.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('complete',total,'counterexamples',len(family_counterexamples),target,flush=True)
 

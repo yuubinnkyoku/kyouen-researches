@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """B568 follow-up: scan many maximal 13-sets / 12-sets for homology kills."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -8,9 +11,9 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
-NIGHT = ROOT / "night-research"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 OUT = ROOT / "research" / "verification" / "round2_b561.json"
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))

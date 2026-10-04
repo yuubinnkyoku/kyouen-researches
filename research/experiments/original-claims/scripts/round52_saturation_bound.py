@@ -13,7 +13,7 @@ import hashlib
 import json
 from round25_forced_verify import bits, curve, geometry
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def r2(number):
@@ -119,7 +119,7 @@ def main():
         assert size <= full_representations
         circle_examples.append({'n': n, 'maximum_proper_circle_grid_points': size, 'coefficients': [a, b, c, d],
                                 'point_ids': ids, 'integer_norm_D': norm, 'r2_D': full_representations})
-    files = ['scripts/round52_saturation_bound.py', 'scripts/round25_forced_verify.py',
+    files = ['../scripts/round52_saturation_bound.py', '../scripts/round25_forced_verify.py',
              'round47_cover_verified.json', 'round10-circle-denominator.md']
     out = {'B095_original_verdict': 'PARTIAL', 'B096_original_verdict': 'PARTIAL',
            'general_standard_square_theorem': 'For every epsilon>0, all sufficiently large n have s_n>n^(2/3-epsilon).',

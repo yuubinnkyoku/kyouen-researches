@@ -76,7 +76,7 @@ def decode(mask):
 def main():
     started = time.perf_counter()
     source = Path(__file__).resolve()
-    root = source.parents[1]
+    root = source.parents[1] / "output"
     parser = argparse.ArgumentParser()
     parser.add_argument('--inputs-only', action='store_true')
     args = parser.parse_args()

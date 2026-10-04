@@ -6,7 +6,7 @@ scan, own grundy DP) and checks the P/N claim and the key equality.  Also
 verifies the B300 depth-d tree invariants and the J_n facts (bridges,
 articulation points, perfect matchings) with separate code paths.
 
-Output: research/verification/round3_chunk5_verify.json
+Output: research/experiments/original-claims/output/round3_chunk5_verify.json
 """
 from __future__ import annotations
 
@@ -19,7 +19,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_chunk5_verify.json"
 
 

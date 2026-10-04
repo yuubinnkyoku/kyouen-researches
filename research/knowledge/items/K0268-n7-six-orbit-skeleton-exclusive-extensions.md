@@ -16,11 +16,11 @@ relations:
   target: K0269
   note: 骨格容量の上界認証
 artifacts:
-- path: night-research/CYCLE15_CAPACITY_DECOMPOSITION.md
+- path: research/log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/CYCLE15_VERIFY.md
+- path: research/log/discovery-cycles/CYCLE15_VERIFY.md
   role: verifier
   note: Pythonによる骨格制約の独立再計算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

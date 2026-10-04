@@ -123,7 +123,7 @@ def collinear_quads_formula(n):
 def certificate_game_lengths():
     """証明書バイナリから、witness 鎖に沿う石数の分布を読む。
 
-    KYOENC3 は夜間解析で使われた形式。night-research の cert パーサがあるか確認し、
+    KYOENC3 は夜間解析で使われた形式。research/experiments/structural-discovery/output の cert パーサがあるか確認し、
     なければ results/certificates.csv の losing/winning から比率だけ再集計。
     """
     rows = [

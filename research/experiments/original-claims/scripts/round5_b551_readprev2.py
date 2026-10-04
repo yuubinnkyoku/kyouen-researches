@@ -2,10 +2,10 @@ import os
 
 # Read specific files with focus on target IDs
 files = {
- 'research/verification/round3-batch-b542-b560.md': None,
- 'research/verification/round3-batch-b591-b592.md': None,
- 'research/verification/round5-batch-b401-b600.md': None,
- 'research/verification/round5-workplan.md': None,
+ 'research/experiments/original-claims/reports/round3-batch-b542-b560.md': None,
+ 'research/experiments/original-claims/reports/round3-batch-b591-b592.md': None,
+ 'research/experiments/original-claims/reports/round5-batch-b401-b600.md': None,
+ 'research/archive/claim-audit-history/round5-workplan.md': None,
 }
 
 ids = ['B555','B556','B560','B563','B564','B565','B569','B570','B572','B575',

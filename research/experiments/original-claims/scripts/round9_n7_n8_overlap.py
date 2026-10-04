@@ -3,6 +3,9 @@
 All 16 saved n7 maxima, all four embeddings in n8, and every original stone
 deletion. A 15-set sharing >=13 stones must occur in this finite search.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations, product
 from pathlib import Path
 from collections import Counter
@@ -15,8 +18,8 @@ from round9_geometry import curve, evaluate, determinant
 
 
 def main():
-    root = Path(__file__).resolve().parents[3]
-    source = root/'night-research/maxsafe_n7_K14.bin'
+    root = Path(__file__).resolve().parents[4]
+    source = root/'research/experiments/structural-discovery/output/maxsafe_n7_K14.bin'
     raw = source.read_bytes()
     masks = struct.unpack('<'+'Q'*(len(raw)//8),raw)
     assert len(masks) == len(set(masks)) == 16
@@ -76,7 +79,7 @@ def main():
               'single_candidate_count_histogram':dict(sorted(single_hist.items())),
               'B386':'REFUTED' if witnesses else 'SUPPORTED',
               'fifteen_set_witnesses':witnesses,'records':records}
-    target = root/'research/verification/round9_n7_n8_overlap.json'
+    target = root/'research/experiments/original-claims/output/round9_n7_n8_overlap.json'
     target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print({k:v for k,v in result.items() if k not in ('records','fifteen_set_witnesses')},flush=True)
     print(target,flush=True)

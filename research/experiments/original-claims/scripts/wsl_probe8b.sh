@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # n=8 memory probe, writing to a file we can poll.
 set -uo pipefail
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
 LOG=/tmp/probe8.log
 : > "$LOG"
 mkdir -p /tmp/kc_build

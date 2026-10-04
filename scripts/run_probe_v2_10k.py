@@ -2,7 +2,7 @@
 """Run 10x10 Clean Holdout V2 fresh 10k probes (frozen protocol).
 
 One fresh Solver process per child; no memo sharing across children.
-See docs/10X10_V2_10K_PROBE_PREREG.md (frozen before first row).
+See research/experiments/solver-benchmarks/reports/10X10_V2_10K_PROBE_PREREG.md (frozen before first row).
 
 Usage:
   python scripts/run_probe_v2_10k.py --build

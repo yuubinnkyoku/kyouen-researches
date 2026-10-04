@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Follow-up extras: B216 K on 4xm, B222 line-only W agreement, B218 area-matched."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -11,7 +14,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_rect, is_forbidden_quad  # noqa: E402
 
-OUTDIR = Path(__file__).resolve().parents[1]
+OUTDIR = (Path(__file__).resolve().parents[1] / "output")
 
 
 def save(name, obj):

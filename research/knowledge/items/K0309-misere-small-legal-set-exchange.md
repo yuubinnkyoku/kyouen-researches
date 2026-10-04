@@ -7,15 +7,15 @@ topics: [variants, grundy]
 aliases: []
 relations: []
 artifacts:
-- path: research/game-structure-20261003.md
+- path: research/experiments/game-structure/reports/game-structure-20261003.md
   role: proof
   note: 5合法点交換則の一般証明
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/game-structure-20261003-extra.md
+- path: research/experiments/game-structure/reports/game-structure-20261003-extra.md
   role: source
   note: 6合法点での最初の例外分類
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/game_structure_20261003_complexes.json
+- path: research/experiments/game-structure/output/game_structure_20261003_complexes.json
   role: data
   note: 6頂点全族の完全分類
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

@@ -7,10 +7,10 @@ import math
 import sys
 from collections import Counter, defaultdict
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from batch08_verify import degree_stats, forbidden_quads, is_collinear, parity_pattern
 
-OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\batch08_results3.json"
+OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\batch08_results3.json"
 report = {}
 
 # ---- B155: spreads by (L2, g) vs by L2 alone ----

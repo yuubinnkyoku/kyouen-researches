@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
-V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
+V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output
 g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/round5_b251a "$S/round5_b251a.cpp"
 g++ -O2 -march=native -std=c++20 -o /tmp/round5_families "$S/round5_b251a_families.cpp"
 echo COMPILED

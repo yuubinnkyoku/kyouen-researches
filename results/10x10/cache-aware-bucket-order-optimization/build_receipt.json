@@ -1,5 +1,5 @@
 {
-  "binary": "tmp-kb/order_ab_native",
+  "binary": "research/experiments/solver-benchmarks/bin/order_ab_native",
   "binary_sha256": "3b52e510569861b79c3281a2274d57e38d0bd96b8128f78313ed41c52bde9758",
   "build_seconds": 9.887862,
   "built_at": "2026-09-08T17:54:01.223402+00:00",
@@ -10,7 +10,7 @@
     "-std=c++20",
     "scripts/probe_cert_solver.cpp",
     "-o",
-    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-9x9-confirmatory/tmp-kb/order_ab_native"
+    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-9x9-confirmatory/research/experiments/solver-benchmarks/bin/order_ab_native"
   ],
   "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
   "compiler_full": [

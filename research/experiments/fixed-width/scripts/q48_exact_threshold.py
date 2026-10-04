@@ -177,7 +177,7 @@ def main() -> None:
                         'local_geometry_and_counting': 'm=13..69',
                         'universal_geometry_and_counting': 'all m>=70'},
     }
-    destination = Path(__file__).resolve().parents[1] / 'q48_exact_threshold.json'
+    destination = (Path(__file__).resolve().parents[1] / "output") / 'q48_exact_threshold.json'
     destination.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(result, ensure_ascii=False, indent=2))
 

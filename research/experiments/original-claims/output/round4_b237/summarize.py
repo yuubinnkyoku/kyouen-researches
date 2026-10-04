@@ -1,5 +1,5 @@
 import json, os
-D = r'D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round4_b237'
+D = r'D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round4_b237'
 out = []
 for line in open(os.path.join(D, 'mc.jsonl')):
     line = line.strip().lstrip('﻿')

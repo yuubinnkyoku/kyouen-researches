@@ -16,18 +16,18 @@ relations:
   target: K0019
   note: 通常版9×9の先手勝ちはmisère版へ移せない
 artifacts:
-- path: research/game-structure-20261003-nine.md
+- path: research/experiments/game-structure/reports/game-structure-20261003-nine.md
   role: source
   note: 9×9の128-bit探索とUNKNOWN境界
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/game_structure_20261003_nine_audit.json
+- path: research/experiments/game-structure/output/game_structure_20261003_nine_audit.json
   role: data
   note: 9×9実装監査
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/game_structure_20261003_nine_center.json
+- path: research/experiments/game-structure/output/game_structure_20261003_nine_center.json
   role: data
   note: 資源上限でUNKNOWN、証明書なしの実行結果
-- path: research/verification/game_structure_20261003_nine_corner.json
+- path: research/experiments/game-structure/output/game_structure_20261003_nine_corner.json
   role: data
   note: 資源上限でUNKNOWN、証明書なしの実行結果
 scope: 標準q=4の合法手、最後の合法手を指した側が負けるmisère変種の9×9空盤。

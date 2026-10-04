@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """B285: get a 3rd grundy value via n=6 for one config (T4)."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json, sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -48,6 +51,6 @@ for y0 in range(4):
 print("T4 translations on n=6:", t4_g, flush=True)
 out["T4_translations_n6"] = t4_g
 
-path = Path(__file__).resolve().parents[1] / "round5_b251_b285_n6.json"
+path = (Path(__file__).resolve().parents[1] / "output") / "round5_b251_b285_n6.json"
 path.write_text(json.dumps(out, indent=2))
 print("WROTE", path)

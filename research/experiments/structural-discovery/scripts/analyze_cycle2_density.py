@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Cross-size winning first-move density table (published + night-research)."""
+"""Cross-size winning first-move density table (published + research/experiments/structural-discovery/output)."""
 from __future__ import annotations
 
 import json

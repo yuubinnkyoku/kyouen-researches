@@ -110,16 +110,16 @@ def pattern_bits(h: dict) -> dict:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--holdout", default="artifacts/9x9-factorial-holdout.csv")
-    ap.add_argument("--population", default="artifacts/9x9-factorial-population.csv")
-    ap.add_argument("--gap", default="artifacts/9x9-pair-gap-population.csv")
-    ap.add_argument("--O_at_E0", default="artifacts/solve/merged/O_at_E0.csv")
-    ap.add_argument("--O_at_E1", default="artifacts/solve/merged/O_at_E1.csv")
-    ap.add_argument("--E_at_O0", default="artifacts/solve/merged/E_at_O0.csv")
-    ap.add_argument("--E_at_O1", default="artifacts/solve/merged/E_at_O1.csv")
+    ap.add_argument("--holdout", default="research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv")
+    ap.add_argument("--population", default="research/experiments/solver-benchmarks/output/9x9-factorial-population.csv")
+    ap.add_argument("--gap", default="research/experiments/solver-benchmarks/output/9x9-pair-gap-population.csv")
+    ap.add_argument("--O_at_E0", default="research/experiments/solver-benchmarks/output/solve/merged/O_at_E0.csv")
+    ap.add_argument("--O_at_E1", default="research/experiments/solver-benchmarks/output/solve/merged/O_at_E1.csv")
+    ap.add_argument("--E_at_O0", default="research/experiments/solver-benchmarks/output/solve/merged/E_at_O0.csv")
+    ap.add_argument("--E_at_O1", default="research/experiments/solver-benchmarks/output/solve/merged/E_at_O1.csv")
     ap.add_argument(
         "--missing-children",
-        default="artifacts/solve/o-missing-unique-children.out.csv",
+        default="research/experiments/solver-benchmarks/output/solve/o-missing-unique-children.out.csv",
     )
     ap.add_argument(
         "--outdir", default="results/9x9/factorial/effect-heterogeneity"

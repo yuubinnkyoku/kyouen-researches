@@ -1,6 +1,6 @@
 // Exact standard P/N byte tables for accelerated single-edge removal research.
 // Reads the independently validated round28 safe-set layers.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <cstdio>
 #include <cstdlib>

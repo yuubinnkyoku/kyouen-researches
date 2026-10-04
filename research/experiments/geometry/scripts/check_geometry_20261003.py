@@ -8,7 +8,7 @@ import sys
 import tempfile
 
 SCRIPTS = Path(__file__).resolve().parent
-DATA = SCRIPTS.parent
+DATA = SCRIPTS.parent / "output"
 
 
 def read(path):

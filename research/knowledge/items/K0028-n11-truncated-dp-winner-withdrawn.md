@@ -12,7 +12,7 @@ relations:
   target: K0023
   note: ''
 artifacts:
-- path: research/verification/N11-RESULT.md
+- path: research/experiments/n11-search-methods/reports/N11-RESULT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

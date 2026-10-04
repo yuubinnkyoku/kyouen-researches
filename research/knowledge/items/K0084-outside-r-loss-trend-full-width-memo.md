@@ -13,11 +13,11 @@ relations:
   target: K0083
   note: 固定R外でも4石方向が再現。一般定理ではない
 artifacts:
-- path: docs/10X10_F_E_R_EXTERNAL_HOLDOUT_RESULT.md
+- path: research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_RESULT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: docs/10X10_F_E_R_EXTERNAL_HOLDOUT_MEMO_REVALIDATION.md
+- path: research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_MEMO_REVALIDATION.md
   role: verifier
   note: 全幅キーで36/36ラベルの独立再求解
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -12,7 +12,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 
 def maxsafe_count_sequence():
-    """既知の最大安全配置数と最大サイズ。出典: night-research CYCLE5/6/8。"""
+    """既知の最大安全配置数と最大サイズ。出典: research/experiments/structural-discovery/output CYCLE5/6/8。"""
     return {
         "n": [1, 2, 3, 4, 5, 6, 7, 8],
         "K_n": [1, 3, 5, 7, 9, 11, 14, 15],

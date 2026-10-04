@@ -14,15 +14,15 @@ relations:
   target: K0080
   note: CSVのstate列が入力座標であり、各局面のD4正規形ではないことを前提に解釈する
 artifacts:
-- path: research/hypotheses.md
+- path: research/archive/hypothesis-ledgers/hypotheses.md
   role: source
   note: H1/H2の原仮説と機械集計
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: F-Bの座標frame訂正
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/experiments.jsonl
+- path: research/experiments/original-claims/reports/experiments.jsonl
   role: log
   note: 固定R部分集合の層別LOSS数と共通部分の再集計
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

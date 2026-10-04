@@ -13,15 +13,15 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/verification/round47-private-cover-and-global-minima.md
+- path: research/experiments/original-claims/reports/round47-private-cover-and-global-minima.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md
   role: source
   note: B080の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -49,7 +49,7 @@ if __name__ == "__main__":
 
     results = {}
     for n in range(1, 10):
-        path = f"night-research/kyouen-{n}x{n}.cert"
+        path = f"research/experiments/structural-discovery/output/kyouen-{n}x{n}.cert"
         try:
             r = analyze(path)
         except FileNotFoundError:
@@ -58,6 +58,6 @@ if __name__ == "__main__":
         results[n] = r
         status = "LOCKED" if r["parity_locked"] else f"MIXED at {r['mixed_layers'][:5]}"
         print(f"n={n}: K={r['K']} nodes={r['nodes']} parity={status}")
-    with open("night-research/cycle6-cert-parity.json", "w") as f:
+    with open("research/experiments/structural-discovery/output/cycle6-cert-parity.json", "w") as f:
         json.dump(results, f, indent=2)
-    print("wrote night-research/cycle6-cert-parity.json")
+    print("wrote research/experiments/structural-discovery/output/cycle6-cert-parity.json")

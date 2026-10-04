@@ -8,7 +8,7 @@ import sys
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 SOLVER = ROOT / ".slim" / "worktrees" / "research-properties" / "cpp" / "solvers" / "kyouen_solver_9.exe"
 OUT = Path(__file__).resolve().parent / "first-moves-9x9.csv"
 MEMO_POWER = 30

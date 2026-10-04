@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Derive O structural strata and required unique roots from the 8x8 population.
 
-Outcome-free. Reads artifacts/8x8-factorial-population.csv and writes:
-  - artifacts/8x8-o-strata.csv
-  - artifacts/8x8-o-required-roots.csv
-  - artifacts/8x8-o-stratum-manifest.json
+Outcome-free. Reads research/experiments/solver-benchmarks/output/8x8-factorial-population.csv and writes:
+  - research/experiments/solver-benchmarks/output/8x8-o-strata.csv
+  - research/experiments/solver-benchmarks/output/8x8-o-required-roots.csv
+  - research/experiments/solver-benchmarks/output/8x8-o-stratum-manifest.json
 Also prints shared-child dependence audit stats and writes
-  - artifacts/8x8-o-shared-child-audit.json
+  - research/experiments/solver-benchmarks/output/8x8-o-shared-child-audit.json
 """
 from __future__ import annotations
 
@@ -18,11 +18,11 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-POP = ROOT / "artifacts" / "8x8-factorial-population.csv"
-STRATA = ROOT / "artifacts" / "8x8-o-strata.csv"
-ROOTS = ROOT / "artifacts" / "8x8-o-required-roots.csv"
-MANIFEST = ROOT / "artifacts" / "8x8-o-stratum-manifest.json"
-AUDIT = ROOT / "artifacts" / "8x8-o-shared-child-audit.json"
+POP = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-factorial-population.csv"
+STRATA = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-strata.csv"
+ROOTS = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-required-roots.csv"
+MANIFEST = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-stratum-manifest.json"
+AUDIT = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-shared-child-audit.json"
 
 
 def parse_parent(text: str) -> tuple[int, ...]:

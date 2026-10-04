@@ -2,7 +2,7 @@
 """Round3 chunk-4 A1: rule variants + nimber range (B228, B229, B230, B231).
 
 n=4 is exhaustive (5811 states, ~0.3 s per full solve).  Outputs
-research/verification/round3_chunk4_A1.json
+research/experiments/original-claims/output/round3_chunk4_A1.json
 """
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ from round3_chunk4_core import (  # noqa: E402
     det4, pt,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk4_A1.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk4_A1.json"
 T0 = time.time()
 
 

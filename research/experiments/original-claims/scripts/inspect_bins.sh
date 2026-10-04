@@ -20,11 +20,11 @@ int main(int argc,char**argv){
 }
 EOF
 g++ -O2 -o /tmp/insp /tmp/insp.cpp && /tmp/insp \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/night-research/maxsafe_n6_K11.bin \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/night-research/maxsafe_n7_K14.bin \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/kc_maximal_n5_k8.bin \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/kc_maximal_n6_k10.bin \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/maximal_n4.bin \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/maximal_n5.bin \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/safe_n6_k10.bin \
-  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/safe_n7_k13.bin
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/structural-discovery/output/maxsafe_n6_K11.bin \
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/structural-discovery/output/maxsafe_n7_K14.bin \
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/kc_maximal_n5_k8.bin \
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/kc_maximal_n6_k10.bin \
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/maximal_n4.bin \
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/maximal_n5.bin \
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/safe_n6_k10.bin \
+  /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/safe_n7_k13.bin

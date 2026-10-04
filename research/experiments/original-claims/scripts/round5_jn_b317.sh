@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$REPO/research/verification/scripts
+S=$REPO/research/experiments/original-claims/scripts
 cd "$S"
 echo "=== free ==="
 free -h
@@ -13,7 +13,7 @@ echo "=== run n=4 ==="
 echo "run exit: $?"
 echo "=== copy json ==="
 if [ -f /tmp/jn_b317_out.json ]; then
-  cp /tmp/jn_b317_out.json "$REPO/research/verification/round5_jn_b317.json"
+  cp /tmp/jn_b317_out.json "$REPO/research/experiments/original-claims/output/round5_jn_b317.json"
   echo "copied"
   cat /tmp/jn_b317_out.json
 fi

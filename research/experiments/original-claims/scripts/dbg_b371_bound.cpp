@@ -1,6 +1,6 @@
 // Boundary test: for small k, count maximal sets our DFS accepts and compare
 // with the shared core's kc::is_maximal over ALL C(V,k) subsets.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <vector>
 #include <algorithm>

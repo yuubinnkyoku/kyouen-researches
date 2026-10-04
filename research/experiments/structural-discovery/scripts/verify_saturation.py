@@ -11,9 +11,9 @@ import sys
 
 K = {4: 7, 5: 9, 6: 11}
 FILES = {
-    4: "night-research/cycle5-grundy-n4.json",
-    5: "night-research/cycle5-grundy-n5.json",
-    6: "night-research/cycle5-grundy-n6-cap14.json",
+    4: "research/experiments/structural-discovery/output/cycle5-grundy-n4.json",
+    5: "research/experiments/structural-discovery/output/cycle5-grundy-n5.json",
+    6: "research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json",
 }
 
 out = {}
@@ -44,5 +44,5 @@ for n, path in FILES.items():
     print(f"n={n} K={K[n]} sigma={sigma} deficits={ {k: deficits[k] for k in ks} } "
           f"non_incr={non_incr} post_sigma_zero={post_sigma_zero}")
 
-json.dump(out, open("night-research/cycle6-saturation-verify.json", "w"), indent=2)
-print("wrote night-research/cycle6-saturation-verify.json")
+json.dump(out, open("research/experiments/structural-discovery/output/cycle6-saturation-verify.json", "w"), indent=2)
+print("wrote research/experiments/structural-discovery/output/cycle6-saturation-verify.json")

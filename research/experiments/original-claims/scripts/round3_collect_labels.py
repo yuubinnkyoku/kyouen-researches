@@ -7,7 +7,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 FILES = sorted(ROOT.glob("batch-*.md")) + sorted(ROOT.glob("round2-batch-*.md"))
 
 HEAD = re.compile(r"^#{1,6}\s*(B\d{3})\b")

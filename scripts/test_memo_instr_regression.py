@@ -2,7 +2,7 @@
 """Regression gate for the instrumented solver (prereg guard).
 
 On short exactly-solvable states, compares three modes:
-  frozen tmp-kb/parent_bench_native vs new binary OFF vs new binary ON.
+  frozen research/experiments/solver-benchmarks/bin/parent_bench_native vs new binary OFF vs new binary ON.
 Requires exact agreement on outcome, visited, memo_used, maxdepth, and
 root-ordering diagnostics (bench_root unique/entered/first/witness).
 ON mode additionally passes internal counter invariant checks.

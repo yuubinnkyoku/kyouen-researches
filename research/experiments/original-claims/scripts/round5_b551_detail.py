@@ -1,5 +1,5 @@
 import json
-with open('research/verification/round5_b551_b600.json', encoding='utf-8') as f:
+with open('research/experiments/original-claims/output/round5_b551_b600.json', encoding='utf-8') as f:
     d = json.load(f)
 
 b588 = d['b588']

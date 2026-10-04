@@ -11,11 +11,11 @@ relations:
   target: K0035
   note: ''
 artifacts:
-- path: research/verification/round59-60-final-ten-board-search.md
+- path: research/experiments/original-claims/reports/round59-60-final-ten-board-search.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round60_final_verified.json
+- path: research/experiments/original-claims/output/round60_final_verified.json
   role: data
   note: 完了半径と保守的再開境界
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

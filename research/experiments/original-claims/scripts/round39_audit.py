@@ -5,7 +5,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def game(curves,vertices):
@@ -73,9 +73,9 @@ def main():
         for c in curves:
             if ((s|t)&c).bit_count()==3:child_legal&=~c
         extensions.append({'extension_mask':t,'g':solve(s|t,child_legal)})
-    files=['scripts/round39_audit.py','scripts/round39_geometry_inputs.py',
-           'scripts/round39_empty_pair_search.cpp','scripts/round39_curve_census.cpp',
-           'scripts/round25_forced_verify.py','scripts/kc_core.h',
+    files=['../scripts/round39_audit.py','../scripts/round39_geometry_inputs.py',
+           '../scripts/round39_empty_pair_search.cpp','../scripts/round39_curve_census.cpp',
+           '../scripts/round25_forced_verify.py','../../../../scripts/research/kc_core.h',
            'round28_n4_layers.json','round28_n7_layers.json','round25_forced_n6.json']
     for n in (4,5,6,7):
         files += [f'round39_empty_pair_n{n}_search.json',f'round39_empty_pair_n{n}_curves.json',f'round39_n{n}_input.txt']

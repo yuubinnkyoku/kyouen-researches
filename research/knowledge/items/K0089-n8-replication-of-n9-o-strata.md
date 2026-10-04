@@ -12,15 +12,15 @@ relations:
   target: K0088
   note: O0-only仮説の他盤確認。失敗を明示
 artifacts:
-- path: docs/8X8_O_STRATUM_REPLICATION_RESULT.md
+- path: research/experiments/8x8-replication/reports/8X8_O_STRATUM_REPLICATION_RESULT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: artifacts/8x8-o-primary-summary.json
+- path: research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json
   role: data
   note: 凍結primary endpoint
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: artifacts/8x8-o-solve-manifest.json
+- path: research/experiments/solver-benchmarks/output/8x8-o-solve-manifest.json
   role: manifest
   note: 848rootの完了と失敗0
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

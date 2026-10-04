@@ -1,6 +1,6 @@
 import re, json, sys
 
-base = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification"
+base = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output"
 
 def dump_tstar(fn):
     s = open(base + "\\" + fn, encoding="utf-8").read()

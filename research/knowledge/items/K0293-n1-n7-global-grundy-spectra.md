@@ -15,11 +15,11 @@ relations:
   target: K0005
   note: ''
 artifacts:
-- path: night-research/CYCLE5_GRUNDY_STRUCTURE.md
+- path: research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round28_n7_layers.json
+- path: research/experiments/original-claims/output/round28_n7_layers.json
   role: data
   note: 七盤の全層mex分布
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

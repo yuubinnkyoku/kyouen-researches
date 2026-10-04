@@ -11,7 +11,7 @@
 #   without --with-n11 it runs steps 1-2 on n=6,7 only (a few minutes)
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-S=$R/research/verification/scripts
+S=$R/research/experiments/n11-search-methods/scripts
 LOG=/tmp/n11_repro.log
 : > "$LOG"
 mkdir -p /tmp/kc_build
@@ -41,7 +41,7 @@ if [ "$WANT_N11" = 1 ]; then
   say "step 2b: n=11 (takes about 4 minutes)"
   mkdir -p /tmp/d4_n11
   /tmp/kc_build/d4 --n 11 --spill /tmp/d4_n11 \
-      --out "$R/research/verification/data/n11_d4_final.json" 2>&1 \
+      --out "$R/research/experiments/n11-search-methods/output/data/n11_d4_final.json" 2>&1 \
       | tail -20 | tee -a "$LOG"
   # ---------------------------------------------------------------- step 3
   say "step 3: conclude from level 1 (n11_verdict.py)"

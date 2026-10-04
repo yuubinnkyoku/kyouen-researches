@@ -12,7 +12,7 @@ def main():
     args = parser.parse_args()
     n = args.n
     assert 2 <= n <= 7
-    root = Path(__file__).resolve().parents[1]
+    root = (Path(__file__).resolve().parents[1] / "output")
     points, _, quads = regenerate(n)
     quad_id = {q: qi for qi, q in enumerate(quads)}
     orbits = {}

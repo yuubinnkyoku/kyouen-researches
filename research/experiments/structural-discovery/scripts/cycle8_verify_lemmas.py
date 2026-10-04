@@ -5,6 +5,9 @@ Does not import conclusions from analysis narratives; recomputes from bins
 and re-runs cheap target searches.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -25,7 +28,7 @@ from cycle8_lib import (  # noqa: E402
 )
 from cycle8_exists_k import TargetSearch, build_triples  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def main():

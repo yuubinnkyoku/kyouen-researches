@@ -8,7 +8,7 @@ cd /mnt/d/ghq/build11 || exit 1
 OUT=logs/s5cache
 mkdir -p "$OUT"
 CACHE="$OUT/s5_verdicts.csv"
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/n11-search-methods/scripts
 rm -f "$CACHE"
 
 python3 "$S/dfpn_s5_cache.py"

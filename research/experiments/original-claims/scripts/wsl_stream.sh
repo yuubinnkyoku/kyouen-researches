@@ -4,14 +4,14 @@
 # Extra flags after the first three are passed through (e.g. --resume).
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/stream.log
 N="${1:-8}"
 MODE="${2:---enum}"
 SPILL="${3:-/tmp/lk_$N}"
 shift 3 2>/dev/null || shift $# 2>/dev/null || true
 EXTRA="$*"
-mkdir -p /tmp/kc_build "$SPILL" "$R/research/verification/data"
+mkdir -p /tmp/kc_build "$SPILL" "$R/research/experiments/original-claims/output/data"
 echo "=== wsl_stream.sh n=$N mode=$MODE spill=$SPILL extra='$EXTRA' $(date -Is) ===" >>"$LOG"
 free -m >>"$LOG"
 if ! g++ -O3 -march=native -std=c++20 -fopenmp -o /tmp/kc_build/stream "$S/round5_prand_stream.cpp" 2>>"$LOG"; then
@@ -27,11 +27,11 @@ export OMP_NUM_THREADS=${OMP_NUM_THREADS:-12}
   done ) >>"$LOG" 2>&1 &
 HB=$!
 if [ "$MODE" = "--enum" ]; then
-  OUTJSON="$R/research/verification/data/n${N}_stream_enum.json"
+  OUTJSON="$R/research/experiments/original-claims/output/data/n${N}_stream_enum.json"
   stdbuf -oL -eL /tmp/kc_build/stream --enum "$N" --spill="$SPILL" $EXTRA \
       > "$OUTJSON" 2>>"$LOG"
 else
-  OUTJSON="$R/research/verification/round5_prand_n${N}.json"
+  OUTJSON="$R/research/experiments/original-claims/output/round5_prand_n${N}.json"
   stdbuf -oL -eL /tmp/kc_build/stream --solve "$N" --spill="$SPILL" $EXTRA \
       > "$OUTJSON" 2>>"$LOG"
 fi
@@ -40,7 +40,7 @@ kill $HB 2>/dev/null
 echo "exit=$rc $(date -Is) wrote=$OUTJSON" >>"$LOG"
 # also copy to data/ for solve mode
 if [ "$MODE" != "--enum" ] && [ -f "$OUTJSON" ]; then
-  cp "$OUTJSON" "$R/research/verification/data/n${N}_stream_solve.json" 2>/dev/null
+  cp "$OUTJSON" "$R/research/experiments/original-claims/output/data/n${N}_stream_solve.json" 2>/dev/null
 fi
 echo "=== last 35 log lines ==="
 grep -v avail_MB "$LOG" | grep -v spill_MB | tail -35

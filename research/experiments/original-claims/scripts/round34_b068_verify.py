@@ -6,7 +6,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry, bits, det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def characteristic(A):
@@ -78,8 +78,8 @@ def main():
     assert bool(a['g'])!=bool(b['g'])
     # Spectra count multiplicity, so exact equal characteristic polynomials
     # of real symmetric adjacency matrices establish exact cospectrality.
-    files=['scripts/round34_b068_verify.py','scripts/round34_b068_search.cpp',
-           'scripts/round25_forced_verify.py','scripts/kc_core.h','round34_b068_n6_search.json']
+    files=['../scripts/round34_b068_verify.py','../scripts/round34_b068_search.cpp',
+           '../scripts/round25_forced_verify.py','../../../../scripts/research/kc_core.h','round34_b068_n6_search.json']
     out={'original_verdict':'SUPPORTED','n':n,'pair':records,
          'sha256':{f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in files}}
     (ROOT/'round34_b068_verified.json').write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

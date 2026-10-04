@@ -9,7 +9,7 @@ It also refuses to parse any exact outcome CSV until all seven exact inputs have
 been checked against a pre-reveal Git-blob seal. This prevents a later change to
 an exact-label file from silently changing the revealed evaluation.
 
-Primary comparison (frozen by docs/BLIND_PROBE_FRESHNESS_AUDIT.md):
+Primary comparison (frozen by research/experiments/solver-benchmarks/reports/BLIND_PROBE_FRESHNESS_AUDIT.md):
   first-LOSS position of memo-desc@1M vs solver/input order and random order.
 
 The random first-LOSS baseline is computed exactly from combinations, not from

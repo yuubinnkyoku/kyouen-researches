@@ -17,7 +17,7 @@ from fractions import Fraction
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round2_b471.json"
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from batch08_verify import KNOWN_F, collinear_c4  # noqa: E402

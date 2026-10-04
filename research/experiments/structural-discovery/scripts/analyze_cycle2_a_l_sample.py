@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Independent A_L count on the existing 8x8 depth-audit sample.
 
-Uses artifacts/8x8-depth-audit-children.out.csv only (no new solves).
+Uses research/experiments/solver-benchmarks/output/8x8-depth-audit-children.out.csv only (no new solves).
 A_L = number of unordered pairs of LOSS children that differ by one stone
 (one-swap adjacency). Within a parent, any two LOSS children automatically
 differ by exactly two cells (the two distinct 5th moves).
@@ -15,7 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 REPO = ROOT.parent
-CHILDREN = REPO / "artifacts" / "8x8-depth-audit-children.out.csv"
+CHILDREN = REPO / "research/experiments/solver-benchmarks/output" / "8x8-depth-audit-children.out.csv"
 
 
 def main() -> None:

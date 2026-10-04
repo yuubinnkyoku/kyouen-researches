@@ -1,6 +1,6 @@
 // Research probe of original B326 on every safe state, using the retained
 // round28 layers. Reuses validated file/geometry infrastructure, not results.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <cstdio>
 #include <cstdlib>

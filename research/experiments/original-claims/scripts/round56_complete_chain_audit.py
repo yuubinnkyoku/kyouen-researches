@@ -3,7 +3,7 @@ from pathlib import Path
 import hashlib
 import json
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -12,8 +12,8 @@ def main():
     for f,h in validation['sha256'].items():
         assert hashlib.sha256((ROOT/f).read_bytes()).hexdigest()==h,(f,'changed')
     rows=[]
-    files=['scripts/round56_complete_chain_audit.py','scripts/round56_resumable_kmin.cpp',
-           'scripts/round53_n10_eight_roots.cpp','scripts/round56_resume_run.py',
+    files=['../scripts/round56_complete_chain_audit.py','../scripts/round56_resumable_kmin.cpp',
+           '../scripts/round53_n10_eight_roots.cpp','../scripts/round56_resume_run.py',
            'round56_resume_verified.json','round46_saturation_verified.json',
            'round51_n10_k7_window.json','round49_s10_verified.json']
     for root,expected in enumerate([15,18,13,27,20]):

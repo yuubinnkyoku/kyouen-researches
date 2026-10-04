@@ -2,7 +2,7 @@
 import re
 from pathlib import Path
 
-P = Path(__file__).resolve().parent.parent / "N11-VERDICT.md"
+P = (Path(__file__).resolve().parent.parent / "output") / "N11-VERDICT.md"
 t = P.read_text(encoding="utf-8")
 
 FIX = {

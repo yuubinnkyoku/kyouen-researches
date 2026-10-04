@@ -12,15 +12,15 @@ relations:
   target: K0001
   note: ''
 artifacts:
-- path: research/verification/N11-RESULT.md
+- path: research/experiments/n11-search-methods/reports/N11-RESULT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/data/n11_d4_final.json
+- path: research/experiments/n11-search-methods/output/data/n11_d4_final.json
   role: data
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/n11_d4.cpp
+- path: research/experiments/n11-search-methods/scripts/n11_d4.cpp
   role: solver
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

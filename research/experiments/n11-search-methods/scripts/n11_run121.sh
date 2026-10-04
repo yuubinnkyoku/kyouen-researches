@@ -4,7 +4,7 @@
 # so its n=11 output is trustworthy.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-S=$R/research/verification/scripts
+S=$R/research/experiments/n11-search-methods/scripts
 LOG=/tmp/n11_121.log
 : > "$LOG"
 mkdir -p /tmp/kc_build /tmp/n11_121
@@ -20,7 +20,7 @@ export OMP_NUM_THREADS=16
   done ) >>"$LOG" 2>&1 &
 HB=$!
 stdbuf -oL -eL /tmp/kc_build/e121 --enum 11 --spill=/tmp/n11_121 \
-  --out="$R/research/verification/data/n11_enum121.json" >>"$LOG" 2>&1
+  --out="$R/research/experiments/original-claims/output/data/n11_enum121.json" >>"$LOG" 2>&1
 rc=$?
 kill $HB 2>/dev/null
 echo "exit=$rc" >>"$LOG"

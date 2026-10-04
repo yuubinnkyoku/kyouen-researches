@@ -5,6 +5,9 @@ Known: n=4 base K=7; all 1-point and 2-point deletions keep K=7 (batch-09).
 Test all C(16,3)=560 triples. Also record winner flips for B514/B520 context.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -12,7 +15,7 @@ import time
 from itertools import combinations
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square, board_square_minus  # noqa: E402
 

@@ -7,9 +7,12 @@ with {p,q} to a forbidden 4-set (a size-2 residual).
 2-point-only game = independent-set game on P(S) (never occupy both ends of an edge).
 Actual game forbids all residual sets of size 2-4.
 
-Outputs research/verification/batch04_graph.json
+Outputs research/experiments/original-claims/output/batch04_graph.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -17,7 +20,7 @@ from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 
 from kyouen_core import Board, board_square  # noqa: E402

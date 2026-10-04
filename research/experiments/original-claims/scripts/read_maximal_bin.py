@@ -3,7 +3,7 @@ import struct
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent / "data"
+ROOT = (Path(__file__).resolve().parent.parent / "output") / "data"
 for arg in sys.argv[1:]:
     p = ROOT / arg if not Path(arg).is_absolute() else Path(arg)
     if not p.exists():

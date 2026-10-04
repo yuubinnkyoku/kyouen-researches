@@ -2,7 +2,7 @@
 # Trace exactly which level is emptied and when.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/trace.log
 : > "$LOG"
 mkdir -p /tmp/kc_build

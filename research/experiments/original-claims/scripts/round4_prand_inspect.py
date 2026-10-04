@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-p = Path(__file__).resolve().parent.parent / "round4_b501_prand.json"
+p = (Path(__file__).resolve().parent.parent / "output") / "round4_b501_prand.json"
 d = json.loads(p.read_text(encoding="utf-8"))
 print("top keys:", list(d.keys()))
 for k, v in d.items():

@@ -1,4 +1,7 @@
 """Search the full board at floor 12, optionally forbidding the catalyst corner."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from collections import deque
 from itertools import combinations
 import argparse

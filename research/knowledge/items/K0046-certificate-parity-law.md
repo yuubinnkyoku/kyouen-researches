@@ -12,11 +12,11 @@ relations:
   target: K0007
   note: ''
 artifacts:
-- path: night-research/CYCLE5_GRUNDY_STRUCTURE.md
+- path: research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/cycle6-parity-law-verify.json
+- path: research/experiments/structural-discovery/output/cycle6-parity-law-verify.json
   role: data
   note: 全9証明書のパリティ則照合
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

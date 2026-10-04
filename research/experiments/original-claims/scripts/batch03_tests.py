@@ -2,9 +2,12 @@
 """Batch-03 hypothesis tests B041-B060 on the n<=5 residual cache.
 
 Loads batch03_cache.pkl and runs targeted searches / statistics.
-Writes research/verification/batch03_results.json.
+Writes research/experiments/original-claims/output/batch03_results.json.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import pickle
@@ -32,7 +35,7 @@ from residual_core import (
     P_graph_edges,
 )
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 CACHE = ROOT / "research" / "verification" / "batch03_cache.pkl"
 OUT = ROOT / "research" / "verification" / "batch03_results.json"
 

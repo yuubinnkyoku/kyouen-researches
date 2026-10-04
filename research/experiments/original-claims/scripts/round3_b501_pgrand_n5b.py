@@ -43,11 +43,14 @@ Hardening (vs. push-1)
 
 Usage
 -----
-    python research/verification/scripts/round3_b501_pgrand_n5b.py
-    python research/verification/scripts/round3_b501_pgrand_n5b.py --sizes 4,5
-    python research/verification/scripts/round3_b501_pgrand_n5b.py --recheck 8
+    python research/experiments/original-claims/scripts/round3_b501_pgrand_n5b.py
+    python research/experiments/original-claims/scripts/round3_b501_pgrand_n5b.py --sizes 4,5
+    python research/experiments/original-claims/scripts/round3_b501_pgrand_n5b.py --recheck 8
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import argparse
 import json
@@ -60,7 +63,7 @@ from pathlib import Path
 
 import numpy as np
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square  # noqa: E402
 
@@ -550,7 +553,7 @@ def main():
                       "arbitrary-precision ints, gcd-reduced; zero floating point "
                       "in the DP (decimals are truncated integer expansions for "
                       "display only)",
-        "script": "research/verification/scripts/round3_b501_pgrand_n5b.py",
+        "script": "research/experiments/original-claims/scripts/round3_b501_pgrand_n5b.py",
         "python": platform.python_version(),
         "numpy": np.__version__,
     }

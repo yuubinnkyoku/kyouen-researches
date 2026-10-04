@@ -4,6 +4,9 @@
 Only enumerates safe k-sets for k=12,13,14 on the union via incremental DFS.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -196,7 +199,7 @@ def main():
         "seconds": round(time.time() - t0, 3),
     }
     Path(RES / "cycle8_g2_bottleneck_12.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
-    Path("night-research/cycle8_g2_result.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    Path("research/experiments/structural-discovery/output/cycle8_g2_result.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
     print(json.dumps({k: out[k] for k in out if k not in ("nodes",)}, indent=2)[:2500])
     print("Wrote results/cycle8_g2_bottleneck_12.json")
 

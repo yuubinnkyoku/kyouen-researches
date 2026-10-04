@@ -10,7 +10,7 @@ import hashlib
 import json
 from round25_forced_verify import curve, det4, geometry, bits
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 COORDINATES = [(5,0),(6,0),(8,0),(0,1),(2,1),(0,2),(6,2),(4,3),(8,4),
                (2,5),(5,5),(7,5),(0,6),(1,6),(7,7),(1,8),(3,8),(7,8)]
 
@@ -48,8 +48,8 @@ def main():
                 image.append(x+9*y)
             images.add(tuple(sorted(image)))
     assert len(images) == 8
-    files = ['scripts/round55_eighteen_audit.py','scripts/round25_forced_verify.py',
-             'scripts/round55_maximum_sat.py','round55_n9_atleast18.json']
+    files = ['../scripts/round55_eighteen_audit.py','../scripts/round25_forced_verify.py',
+             '../scripts/round55_maximum_sat.py','round55_n9_atleast18.json']
     unknown = json.loads((ROOT/files[-1]).read_text())
     assert unknown['status'] == 'UNKNOWN' and unknown['safe_set_witness'] is None
     result = {'B081_original_verdict':'REFUTED','proved_lower_bound_K9':18,

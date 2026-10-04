@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Self-check battery for round4_b371.cpp.
 #
-# Authoritative reference = research/verification/data/kc_maximal_n{n}_k{k}.bin,
+# Authoritative reference = research/experiments/original-claims/output/data/kc_maximal_n{n}_k{k}.bin,
 # produced by the already-verified kc_maximal.cpp (see ROUND4-PROTOCOL.md).
 #
 # IMPORTANT: kc_maximal.cpp records a maximal set as soon as the search can no
@@ -14,8 +14,8 @@
 # cumulative count minus the strictly-larger sizes, which we recompute by a
 # second run at K-1 ... instead we simply verify subset + count <= reference.
 set -uo pipefail
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
-D=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
+D=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data
 mkdir -p /tmp/kc_build
 g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/kc_build/r4b371 "$S/round4_b371.cpp" || exit 1
 

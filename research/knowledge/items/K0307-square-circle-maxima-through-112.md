@@ -7,15 +7,15 @@ topics: [geometry]
 aliases: []
 relations: []
 artifacts:
-- path: research/geometry-20261003.md
+- path: research/experiments/geometry/reports/geometry-20261003.md
   role: source
   note: 全中心有限盤極値の結果
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/geometry_20261003_scale.json
+- path: research/experiments/geometry/output/geometry_20261003_scale.json
   role: data
   note: 全盤走査の集計
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/geometry_20261003_scale.py
+- path: research/experiments/geometry/scripts/geometry_20261003_scale.py
   role: verifier
   note: 全中心・全半径の列挙
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

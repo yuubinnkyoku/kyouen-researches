@@ -14,11 +14,11 @@ relations:
   target: K0151
   note: 本文の証明・証人が原文に与える帰結
 artifacts:
-- path: research/verification/round13-four-point-circles.md
+- path: research/experiments/original-claims/reports/round13-four-point-circles.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round17-original-scope-audit.md
+- path: research/experiments/original-claims/reports/round17-original-scope-audit.md
   role: source
   note: 有限fitと公刊一般定理の訂正照合
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

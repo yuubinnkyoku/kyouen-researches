@@ -1,6 +1,6 @@
 {
   "audit_script_sha256": "e227714b14c6341aff1daf69a684abc3430c8beb2ace7d21f1e0827481cffa2e",
-  "binary": "tmp-kb/nohit_fastpath_ab_native",
+  "binary": "research/experiments/solver-benchmarks/bin/nohit_fastpath_ab_native",
   "binary_sha256": "46b1e9c0b0972803964e42d1504fc05427fd2d1148ea3efbbf71879581ea8adb",
   "build_seconds": 3.75888,
   "built_at_utc": "2026-09-09T02:34:22.117617+00:00",
@@ -11,7 +11,7 @@
     "-std=c++20",
     "scripts/probe_cert_solver.cpp",
     "-o",
-    "/home/runner/work/kyouen-1-to-9-classification/kyouen-1-to-9-classification/tmp-kb/nohit_fastpath_ab_native"
+    "/home/runner/work/kyouen-1-to-9-classification/kyouen-1-to-9-classification/research/experiments/solver-benchmarks/bin/nohit_fastpath_ab_native"
   ],
   "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
   "compiler_full": [

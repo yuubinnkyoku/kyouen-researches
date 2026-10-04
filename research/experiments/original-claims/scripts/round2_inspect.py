@@ -1,5 +1,5 @@
 import json
-d=json.load(open(r'D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round2_b381.json'))
+d=json.load(open(r'D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round2_b381.json'))
 print('B401 details:', d.get('B401',{}).get('details',[]))
 print('B404 n7:')
 for e in d.get('B404',{}).get('n7',[]):

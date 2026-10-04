@@ -3,6 +3,9 @@
 First identify quads forced by preservation of all maximum configurations.
 No sampling or use of maximal configurations in place of maximum ones.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from collections import defaultdict
 from functools import lru_cache
 from itertools import combinations
@@ -241,7 +244,7 @@ def main():
             Path(__file__).with_name('kyouen_core.py').read_bytes()).hexdigest(),
         "seconds": time.perf_counter() - started,
     }
-    target = Path(__file__).resolve().parents[1] / 'round20_b255_n5.json'
+    target = (Path(__file__).resolve().parents[1] / "output") / 'round20_b255_n5.json'
     target.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({k: result[k] for k in ['forced_count', 'optional_count', 'extension_search_nodes', 'seconds']}), flush=True)
     states = board.enumerate_rules([int(i) for i in witnesses])

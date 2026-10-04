@@ -6,6 +6,9 @@ Reads existing s1 JSON where possible; recomputes multigraded profiles for n=4.
 Writes round5_b271_fu_thermo.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -17,8 +20,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, is_forbidden_quad, square_points
 
-OUT = Path(__file__).resolve().parents[1] / "round5_b271_fu_thermo.json"
-S1 = Path(__file__).resolve().parents[1] / "round5_b271_s1.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round5_b271_fu_thermo.json"
+S1 = (Path(__file__).resolve().parents[1] / "output") / "round5_b271_s1.json"
 
 
 def d4_orbit_of(n):

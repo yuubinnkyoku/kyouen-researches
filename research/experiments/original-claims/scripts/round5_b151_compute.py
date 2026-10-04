@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Targeted computations for B151-B200 unresolved IDs (round5 additional)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json, sys, random
 from collections import Counter, defaultdict
 from itertools import combinations
@@ -9,7 +12,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, det4, square_points
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b151_compute.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b151_compute.json"
 
 
 def d4_orbit(x, y, n):
@@ -908,7 +911,7 @@ def main():
         break
     # load safe_n5.bin
     import struct
-    raw = Path(__file__).resolve().parent.parent / "data" / "safe_n5.bin"
+    raw = (Path(__file__).resolve().parent.parent / "output") / "data" / "safe_n5.bin"
     data = raw.read_bytes()
     nsets = len(data) // 8
     vals = struct.unpack(f"<{nsets}Q", data)
@@ -1147,7 +1150,7 @@ def main():
     # from data files
     import struct as st
     def load_max(n):
-        raw = (Path(__file__).resolve().parent.parent / "data" / f"maximal_n{n}.bin").read_bytes()
+        raw = ((Path(__file__).resolve().parent.parent / "output") / "data" / f"maximal_n{n}.bin").read_bytes()
         return list(st.unpack(f"<{len(raw)//8}Q", raw))
     max_counts = {}
     for n_ in [2, 3, 4, 5]:

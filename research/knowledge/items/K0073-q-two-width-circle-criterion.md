@@ -12,7 +12,7 @@ relations:
   target: K0001
   note: ''
 artifacts:
-- path: research/q2w-boundary-structure.md
+- path: research/experiments/fixed-width/reports/q2w-boundary-structure.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

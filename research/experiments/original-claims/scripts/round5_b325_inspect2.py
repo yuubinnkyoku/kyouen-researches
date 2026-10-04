@@ -1,5 +1,5 @@
 import re
-base = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification"
+base = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output"
 
 s = open(base + r"\round4_tstar_n45.json", encoding="utf-8").read()
 i = s.find('"n=5"')

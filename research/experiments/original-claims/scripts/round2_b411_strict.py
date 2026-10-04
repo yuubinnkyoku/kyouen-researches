@@ -2,6 +2,9 @@
 """Round2 strict checks: B434 packing condition, B435-B438 min-cover structure,
 B439 dual feasibility, and search for non-isolated non-max G_12 components."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import random
@@ -11,12 +14,12 @@ from itertools import combinations
 from pathlib import Path
 
 ROOT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches")
-sys.path.insert(0, str(ROOT / "research/verification/scripts"))
+sys.path.insert(0, str(ROOT / "research/experiments/original-claims/scripts"))
 from kyouen_core import Board, square_points  # noqa: E402
 
 RES = ROOT / "results"
-OUT = ROOT / "research/verification/round2_b411.json"
-NIGHT = ROOT / "night-research"
+OUT = ROOT / "research/experiments/original-claims/output/round2_b411.json"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 
 
 def bits(x: int) -> list[int]:
@@ -57,7 +60,7 @@ def main():
 
     quads7 = [
         tuple(q)
-        for q in json.loads((ROOT / "research/verification/batch06_quads_cache.json").read_text())["n7"]
+        for q in json.loads((ROOT / "research/experiments/original-claims/output/batch06_quads_cache.json").read_text())["n7"]
     ]
     u_quads = [q for q in quads7 if all(p in Uset for p in q)]
     u_quad_masks = []

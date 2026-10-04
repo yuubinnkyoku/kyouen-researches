@@ -14,7 +14,7 @@
 // Integer / bitmask only.  rho(S) = min over empty p of tau(F_p), where
 // F_p = {T subset S : |T| = 3, T u {p} is a forbidden 4-set}.  The removal
 // positions themselves are never counted (they are the transversal).
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <bits/stdc++.h>
 using namespace std;
 using kc::u64;
@@ -133,8 +133,8 @@ int main(int argc, char** argv) {
     double T0 = now_s();
 
     const std::string REPO = "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches";
-    std::string root = REPO + "/research/verification/data/";
-    std::string night = REPO + "/night-research/";
+    std::string root = REPO + "/research/experiments/original-claims/output/data/";
+    std::string night = REPO + "/research/experiments/structural-discovery/output/";
 
     std::vector<int> NS = {2, 3, 4, 5, 6, 7};
     std::vector<std::vector<u64>> MAXS(NS.size());

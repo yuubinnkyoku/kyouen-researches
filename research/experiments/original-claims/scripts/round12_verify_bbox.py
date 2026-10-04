@@ -14,8 +14,8 @@ import hashlib
 import json
 import subprocess
 
-ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / 'research/verification'
+ROOT = Path(__file__).resolve().parents[4]
+OUT = ROOT / 'research/experiments/original-claims/output'
 
 
 def q_of(a, d, e):
@@ -157,7 +157,7 @@ def main():
         assert a <= b
         comparisons.append({'m':m,'power2_min_span':a,'odd_min_span':b})
     hashes = {name:hashlib.sha256((OUT/name).read_bytes()).hexdigest() for name in files}
-    hashes['scripts/round12_circle_bbox.cpp'] = hashlib.sha256((OUT/'scripts/round12_circle_bbox.cpp').read_bytes()).hexdigest()
+    hashes['../scripts/round12_circle_bbox.cpp'] = hashlib.sha256((OUT/'../scripts/round12_circle_bbox.cpp').read_bytes()).hexdigest()
     result = dict(small_board_independent_checks=checks,minimum_witnesses_checked=records_checked,
                   exact_norm_witnesses=witnesses,odd11_points_on_162_board=shifted,
                   point_counts_4_through_10=comparisons,input_sha256=hashes,

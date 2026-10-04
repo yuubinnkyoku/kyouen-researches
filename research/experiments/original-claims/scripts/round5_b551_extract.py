@@ -1,6 +1,6 @@
 import re, os, sys
 
-path = 'research/hypothesis-bank-round2-2026-09-27.md'
+path = 'research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md'
 with open(path, encoding='utf-8') as f:
     lines = f.readlines()
 
@@ -23,7 +23,7 @@ for i, l in enumerate(lines):
 
 print()
 print('=== PREVIOUS VERDICT FILES ===')
-vdir = 'research/verification'
+vdir = 'research/experiments/original-claims/output'
 for fn in sorted(os.listdir(vdir)):
     if not fn.endswith('.md'):
         continue

@@ -37,10 +37,10 @@ jobs:
           done
       - name: Run imported research regression checks
         run: |
-          python research/verification/scripts/check_fixed_width_20261003.py
-          python research/verification/scripts/check_geometry_20261003.py
-          python research/verification/scripts/check_game_structure_20261003.py
-          python research/verification/scripts/check_saturation_20261003.py
+          python research/experiments/fixed-width/scripts/check_fixed_width_20261003.py
+          python research/experiments/geometry/scripts/check_geometry_20261003.py
+          python research/experiments/game-structure/scripts/check_game_structure_20261003.py
+          python research/experiments/saturation/scripts/check_saturation_20261003.py
 
   lean:
     name: Lean soundness layer

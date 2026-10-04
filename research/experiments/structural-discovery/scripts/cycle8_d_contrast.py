@@ -11,9 +11,12 @@ Mere average differences are not main results.
 
 Outputs:
   results/cycle8_d_contrast.json
-  night-research/cycle8_cd_result.json  (merged C + D)
+  research/experiments/structural-discovery/output/cycle8_cd_result.json  (merged C + D)
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import csv
 import json
@@ -552,7 +555,7 @@ def main() -> None:
     res_path = RES / "cycle8_d_contrast.json"
     res_path.write_text(json.dumps(contrast_payload, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    # merge into night-research/cycle8_cd_result.json
+    # merge into research/experiments/structural-discovery/output/cycle8_cd_result.json
     cd_path = NR / "cycle8_cd_result.json"
     if cd_path.exists():
         cd = json.loads(cd_path.read_text(encoding="utf-8"))

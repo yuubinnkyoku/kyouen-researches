@@ -430,7 +430,7 @@
       "0": 155
     },
     "informative_parents_for_deep_identity": 4,
-    "prior_audit_bug": "night-research/analyze_8x8_structure.py checked te==raw and t==to, which NEVER holds on O-overlap (definitional inequality). Correct force is t==te and to==raw → 151/155 fully forced.",
+    "prior_audit_bug": "research/experiments/structural-discovery/scripts/analyze_8x8_structure.py checked te==raw and t==to, which NEVER holds on O-overlap (definitional inequality). Correct force is t==te and to==raw → 151/155 fully forced.",
     "residual_free_cases": [
       {
         "parent": "3,37,53,54",

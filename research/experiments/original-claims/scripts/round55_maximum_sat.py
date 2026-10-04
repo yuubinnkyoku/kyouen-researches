@@ -14,7 +14,7 @@ import time
 from itertools import combinations
 from round25_forced_verify import bits, curve, det4, geometry
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -77,7 +77,7 @@ def main():
         path.write_text('\n'.join(proof_lines)+'\n', encoding='ascii')
         proof = {'path': str(path), 'clauses': len(proof_lines), 'sha256': hashlib.sha256(path.read_bytes()).hexdigest(),
                  'independently_checked': False}
-    files = ['scripts/round55_maximum_sat.py', 'scripts/round25_forced_verify.py']
+    files = ['../scripts/round55_maximum_sat.py', '../scripts/round25_forced_verify.py']
     out = {'n': args.n, 'minimum_stone_count': args.atleast,
            'status': 'SAT' if result is True else 'UNSAT_UNCHECKED' if result is False else 'UNKNOWN',
            'solver': 'Glucose4', 'python_sat_version': pysat.__version__, 'wall_seconds': elapsed,

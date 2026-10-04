@@ -3,7 +3,7 @@
 # Usage: launch_n8.sh [--enum|--solve] [--spill=DIR] [extra flags]
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 MODE="---enum"
 SPILL="/home/yuubi/spill8"
 EXTRA=""
@@ -16,7 +16,7 @@ while [ $# -gt 0 ]; do
   esac
 done
 LOG=/tmp/n8_stream.log
-mkdir -p /tmp/kc_build "$SPILL" "$R/research/verification/data"
+mkdir -p /tmp/kc_build "$SPILL" "$R/research/experiments/original-claims/output/data"
 
 # Build
 if ! g++ -O3 -march=native -std=c++20 -fopenmp -o /tmp/kc_build/stream_n8 "$S/round5_prand_stream.cpp" 2>"$LOG"; then
@@ -28,11 +28,11 @@ export OMP_NUM_THREADS=${OMP_NUM_THREADS:-12}
 pkill -f stream_n8 2>/dev/null || true; sleep 1
 
 if [ "$MODE" = "--enum" ]; then
-  OUTJSON="$R/research/verification/data/n8_stream_enum.json"
+  OUTJSON="$R/research/experiments/original-claims/output/data/n8_stream_enum.json"
   nohup stdbuf -oL -eL /tmp/kc_build/stream_n8 --enum 8 --spill="$SPILL" $EXTRA \
       > "$OUTJSON" 2>>"$LOG" &
 else
-  OUTJSON="$R/research/verification/round5_prand_n8.json"
+  OUTJSON="$R/research/experiments/original-claims/output/round5_prand_n8.json"
   nohup stdbuf -oL -eL /tmp/kc_build/stream_n8 --solve 8 --spill="$SPILL" $EXTRA \
       > "$OUTJSON" 2>>"$LOG" &
 fi

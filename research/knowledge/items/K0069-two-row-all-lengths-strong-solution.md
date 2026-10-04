@@ -22,11 +22,11 @@ relations:
   target: K0259
   note: 本文の証明・証人が原文に与える帰結
 artifacts:
-- path: research/verification/round4-two-row-order-strategy.md
+- path: research/experiments/original-claims/reports/round4-two-row-order-strategy.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round4-fixed-width.md
+- path: research/experiments/original-claims/reports/round4-fixed-width.md
   role: proof
   note: 長さ9以上と短盤全数の接続
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

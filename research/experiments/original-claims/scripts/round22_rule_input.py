@@ -15,7 +15,7 @@ def write_cases(root, stem, geometry, cases):
 
 def main():
     source = Path(__file__).resolve()
-    root = source.parents[1]
+    root = source.parents[1] / "output"
     geometry = json.loads((root / 'round20_b224_geometry.json').read_text(encoding='utf-8'))
     groups = geometry['groups']
     all_indices = set(range(len(geometry['quad_masks'])))

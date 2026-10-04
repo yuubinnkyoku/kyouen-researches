@@ -15,11 +15,11 @@ relations:
   target: K0143
   note: 本文の証明・証人が原文に与える帰結
 artifacts:
-- path: research/verification/round61-full-split-prime-safe-construction.md
+- path: research/experiments/original-claims/reports/round61-full-split-prime-safe-construction.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round61_split_prime_verified.json
+- path: research/experiments/original-claims/output/round61_split_prime_verified.json
   role: data
   note: 三点・四点合同式と独立整数検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

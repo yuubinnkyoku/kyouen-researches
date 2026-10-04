@@ -3,7 +3,7 @@
 # against the recorded reference, then run n=7.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/prand_verify.log
 : > "$LOG"
 mkdir -p /tmp/kc_build
@@ -16,7 +16,7 @@ stdbuf -oL /tmp/kc_build/prand20 6 /tmp/n6_20.json >>"$LOG" 2>&1
 python3 - <<'PY' >>"$LOG" 2>&1
 import json
 d = json.load(open("/tmp/n6_20.json", encoding="utf-8"))
-r = json.load(open("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/round3_b502_pgrand_n6.json", encoding="utf-8"))["n6"]
+r = json.load(open("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/round3_b502_pgrand_n6.json", encoding="utf-8"))["n6"]
 checks = ["n_safe_subsets", "edge_total", "max_safe_size", "n_P", "n_N", "P_max"]
 for c in checks:
     print(f"  {c:18s} new={d[c]} ref={r[c]} {'OK' if str(d[c])==str(r[c]) else 'MISMATCH'}")

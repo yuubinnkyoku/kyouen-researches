@@ -8,8 +8,8 @@ Temporary small-board builds change only N and the table allocation size.
 Small-board certificates are verified in full from their postorder records.
 
 Example from the repository root:
-  python research/verification/scripts/game_structure_20261003_nine_audit.py \
-      --output research/verification/game_structure_20261003_nine_audit.json
+  python research/experiments/game-structure/scripts/game_structure_20261003_nine_audit.py \
+      --output research/experiments/game-structure/output/game_structure_20261003_nine_audit.json
 """
 
 import argparse

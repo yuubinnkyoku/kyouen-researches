@@ -7,7 +7,7 @@ import json
 from round27_response_graphs import game
 from round25_forced_verify import bits,geometry
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 def main():
     n=4;_,_,values,*_=game(n);_,_,curves=geometry(n);full=(1<<(n*n))-1
@@ -61,8 +61,8 @@ def main():
             'n7_ceiling_g_ge3':count,'n7_ceiling_stabilizer_ge4':0,
             'n7_minimum_legal_minus_h':margin,
             'scope':'n7 height/orbit census uses one new DP on independently validated safe layers. n4 was checked by a separate Python recurrence. Finite support is not a proof of either infinite original.'}
-    files=['scripts/round30_ceiling_orbits.cpp','scripts/round30_ceiling_verify.py',
-           'scripts/kc_core.h','scripts/round27_response_graphs.py','scripts/round25_forced_verify.py',
+    files=['../scripts/round30_ceiling_orbits.cpp','../scripts/round30_ceiling_verify.py',
+           '../../../../scripts/research/kc_core.h','../scripts/round27_response_graphs.py','../scripts/round25_forced_verify.py',
            'round30_n4_ceiling.json','round30_n7_ceiling.json']
     result['sha256']={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files}
     (ROOT/'round30_ceiling_audited.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

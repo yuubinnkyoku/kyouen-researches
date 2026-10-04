@@ -16,7 +16,7 @@ relations:
   target: K0049
   note: ''
 artifacts:
-- path: night-research/CYCLE1_RESULTS.md
+- path: research/log/discovery-cycles/CYCLE1_RESULTS.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

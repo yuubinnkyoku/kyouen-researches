@@ -13,15 +13,15 @@ relations:
   target: K0072
   note: q=2w境界の整数格子構造を使う
 artifacts:
-- path: research/q48-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q48-exact-threshold.md
   role: proof
   note: M_{4,8}=11の一般上界・有限排除・m=10証人
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/q48_exact_threshold.json
+- path: research/experiments/fixed-width/output/q48_exact_threshold.json
   role: data
   note: 円型分類とm=11,12完全排除
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/q48_exact_threshold.py
+- path: research/experiments/fixed-width/scripts/q48_exact_threshold.py
   role: verifier
   note: 整数演算による再現器
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

@@ -7,7 +7,7 @@
 // cache-aware ordering paths on synthetic child arrays, and adds per-call
 // comparison instrumentation. It exists only to prove order equivalence
 // before any exact-solver run, per the frozen order-equivalence gate in
-// docs/10X10_CACHE_AWARE_BUCKET_ORDER_OPT_PREREG.md.
+// research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BUCKET_ORDER_OPT_PREREG.md.
 //
 // Fixture premise (explicit): canonical child keys are unique after the
 // solver's duplicate-elimination stage, so (class, count, key) is a total

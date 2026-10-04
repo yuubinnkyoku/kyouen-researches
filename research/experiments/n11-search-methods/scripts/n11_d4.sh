@@ -11,10 +11,10 @@
 # quoting, and the run is long, so everything is redirected to a log file.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-S=$R/research/verification/scripts
+S=$R/research/experiments/n11-search-methods/scripts
 BIN=/tmp/kc_build/d4
 LOG=/tmp/n11_d4.log
-DATA=$R/research/verification/data
+DATA=$R/research/experiments/original-claims/output/data
 mkdir -p /tmp/kc_build "$DATA"
 
 g++ -O3 -march=native -std=c++20 -fopenmp -o "$BIN" "$S/n11_d4.cpp" \

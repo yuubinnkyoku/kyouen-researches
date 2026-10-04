@@ -4,6 +4,9 @@ Run from the repository root with Python 3.11+. No third-party packages.
 The theorem for unbounded widths/lengths is proved in round4-fixed-width.md;
 finite computation here supplies cross-checks, finite exceptions, and witnesses.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from collections import Counter
 from itertools import combinations
 import json
@@ -172,7 +175,7 @@ def main():
         assert row["max_g"] <= 3
         print(f"m={m}: states={len(g)}, g(empty)={row['empty_g']}, max_g={row['max_g']}", flush=True)
     result["B546"] = shift_witness()
-    output = Path(__file__).resolve().parents[1] / "round4_fixed_width.json"
+    output = (Path(__file__).resolve().parents[1] / "output") / "round4_fixed_width.json"
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Saved {output}", flush=True)
 

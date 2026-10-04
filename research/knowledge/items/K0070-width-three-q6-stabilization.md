@@ -15,15 +15,15 @@ relations:
   target: K0024
   note: ''
 artifacts:
-- path: research/q-point-fixed-width.md
+- path: research/experiments/fixed-width/reports/q-point-fixed-width.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/q_point_fixed_width.json
+- path: research/experiments/fixed-width/output/q_point_fixed_width.json
   role: data
   note: 有限長の検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: M=9の専用完全列挙と3×8証人
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -7,7 +7,7 @@ import json
 from round25_forced_verify import geometry
 from round27_response_graphs import components, perfect_matchings, game
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 def main():
     parser=argparse.ArgumentParser()
@@ -91,9 +91,9 @@ def main():
                              'B314':'REFUTED','B315':'SUPPORTED'},
         'still_partial':['B006','B016','B021','B319','B321','B322','B331','B335'],
     }
-    files=['scripts/round28_low_layers.cpp','scripts/round28_recursive_verify.cpp',
-           'scripts/round28_run.sh','scripts/round28_audit.py','scripts/round25_forced_verify.py',
-           'scripts/round27_response_graphs.py','scripts/round5_prand_stream.cpp','scripts/kc_core.h',
+    files=['../scripts/round28_low_layers.cpp','../scripts/round28_recursive_verify.cpp',
+           '../scripts/round28_run.sh','../scripts/round28_audit.py','../scripts/round25_forced_verify.py',
+           '../scripts/round27_response_graphs.py','../scripts/round5_prand_stream.cpp','../../../../scripts/research/kc_core.h',
            'round28_n7_quads.txt','round28_n7_layers.json','round28_n7_independent.json',
            'round28_n7_enum.json','round28_n4_layers.json','round28_n4_independent.json']
     result['sha256']={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files}

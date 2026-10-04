@@ -161,7 +161,7 @@
   },
   "parent_solve": {
     "below_root_min_depth": 4,
-    "binary": "tmp-kb/order_ab_native",
+    "binary": "research/experiments/solver-benchmarks/bin/order_ab_native",
     "binary_sha256": "a98ca5e41d67dfa988deaf491ff948cb4a82ae8596af8aea83376b9f259ebfd1",
     "budget": 0,
     "build_cmd": [
@@ -178,7 +178,7 @@
     "shrink": 0,
     "sources_sha256": "3ab6c565bbfdae9e4bda2ca7eb00e20be54d9b4315616221d39389326c8e16a8"
   },
-  "prereg": "docs/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md; prereg commits b7a6649 (text) + 45af02f (machine manifest); branch base 5b50158 (C2 INCOMPLETE final receipt)",
+  "prereg": "research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md; prereg commits b7a6649 (text) + 45af02f (machine manifest); branch base 5b50158 (C2 INCOMPLETE final receipt)",
   "prereg_commit_shas": {
     "machine": "45af02f059b6310d82f2a9ece8f220b4addff8bd",
     "text": "b7a6649071464e377a8cad4b48c226e6ccd971dc"

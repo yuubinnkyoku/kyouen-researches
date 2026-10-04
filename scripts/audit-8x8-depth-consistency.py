@@ -16,7 +16,7 @@ from itertools import combinations
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ART = ROOT / "artifacts"
+ART = ROOT / "research/experiments/solver-benchmarks/output"
 PARENTS = ART / "8x8-random-safe-4stone-out.csv"
 SAMPLE = ART / "8x8-random-safe-4stone-sample.csv"
 CHILD_IN = ART / "8x8-depth-audit-children.in.csv"

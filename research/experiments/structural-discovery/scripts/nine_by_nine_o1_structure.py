@@ -6,11 +6,11 @@ import csv
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def main() -> None:
-    with (ROOT / "artifacts/9x9-factorial-population.csv").open(newline="", encoding="utf-8") as f:
+    with (ROOT / "research/experiments/solver-benchmarks/output/9x9-factorial-population.csv").open(newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
     print("9x9 population orbits:", len(rows))
     print("cols:", list(rows[0].keys()))
@@ -46,7 +46,7 @@ def main() -> None:
 
     # compare: 8x8 was 102 orbits / 204 roots / 848 total multi-stratum
     # holdout may already have some outcomes?
-    with (ROOT / "artifacts/9x9-factorial-holdout.csv").open(newline="", encoding="utf-8") as f:
+    with (ROOT / "research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv").open(newline="", encoding="utf-8") as f:
         hold = list(csv.DictReader(f))
     print("holdout rows:", len(hold), "cols:", list(hold[0].keys()))
     # any outcome-like columns?

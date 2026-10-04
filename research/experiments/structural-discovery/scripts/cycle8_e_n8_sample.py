@@ -6,6 +6,9 @@ expensive here; per user priority we cut E after A–D delivered structure.
 Evidence: SAMPLE, n=8 sets from D4(witness), not a population claim.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

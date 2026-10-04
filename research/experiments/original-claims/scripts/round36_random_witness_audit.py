@@ -7,7 +7,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits,det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -58,7 +58,7 @@ def main():
     assert Fraction(records[1]['p_rand'])>Fraction(2,3)
     assert Fraction(records[2]['p_rand'])>Fraction(3,4)
     assert records[0]['height']<=3 and Fraction(records[0]['p_rand'])>Fraction(1,2)
-    files=['scripts/round36_random_witness_audit.py','scripts/round25_forced_verify.py',
+    files=['../scripts/round36_random_witness_audit.py','../scripts/round25_forced_verify.py',
            'round3_b502_pgrand_n6.json','round3_b501_pgrand_n5b.json','round2_b501.json']
     out={'original_verdicts':{'B501':'REFUTED','B502':'SUPPORTED','B506':'REFUTED'},
          'population':'three explicit standard-board witnesses; no full-board extremal census claimed',

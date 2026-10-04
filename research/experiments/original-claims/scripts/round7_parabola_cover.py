@@ -4,6 +4,9 @@ P_t=(t,t*t). The translated circle determinant on four distinct parameters
 is their Vandermonde product times their sum. Positive parameters are safe;
 negative parameters encode three-term sums and have quadratic cover counts.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations
 from math import comb, prod
 from pathlib import Path
@@ -77,7 +80,7 @@ def main():
         })
         print(f'm={m} k={k} n={side} b={min(observed)}..{max(observed)} '
               f'local deletion lower bounds={min(lower_bounds)}..{max(lower_bounds)}', flush=True)
-    target = Path(__file__).resolve().parents[1]/'round7_parabola_cover.json'
+    target = (Path(__file__).resolve().parents[1] / "output")/'round7_parabola_cover.json'
     target.write_text(json.dumps(output, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print(target, flush=True)
 

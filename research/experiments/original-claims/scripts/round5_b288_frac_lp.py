@@ -16,7 +16,7 @@ from itertools import combinations
 import numpy as np
 from scipy.optimize import linprog
 
-OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b288_frac_lp.json")
+OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b288_frac_lp.json")
 
 
 def det4(rows):

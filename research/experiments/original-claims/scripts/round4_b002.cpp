@@ -3,7 +3,7 @@
 // Run:  ./r4b002 <rawfile> <stage> [arg]
 // Stages append  "### SECTION <name>" .. "### END"  blocks to <rawfile>.
 // Shared engine: kc_core.h  (already verified -- do not re-implement).
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <chrono>
 #include <cstdint>

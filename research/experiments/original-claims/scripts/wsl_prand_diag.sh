@@ -8,8 +8,8 @@ echo "=== host memory ==="
 free -m
 echo
 echo "=== n=6 measured level widths (from the json) ==="
-python3 - "$R/research/verification/round4_b501_prand_n6.json" <<'PY' 2>/dev/null || \
-python3 - "$R/research/verification/round4_b501_prand.json" <<'PY2'
+python3 - "$R/research/experiments/original-claims/output/round4_b501_prand_n6.json" <<'PY' 2>/dev/null || \
+python3 - "$R/research/experiments/original-claims/output/round4_b501_prand.json" <<'PY2'
 import json, sys
 d = json.load(open(sys.argv[1], encoding="utf-8"))
 for key in ("n6",):
@@ -44,7 +44,7 @@ ulimit -v 12000000   # 12 GB virtual
 export OMP_NUM_THREADS=8
 mkdir -p /tmp/kc_build
 g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/kc_build/prand \
-  "$R/research/verification/scripts/round4_b501_prand.cpp" || exit 1
+  "$R/research/experiments/original-claims/scripts/round4_b501_prand.cpp" || exit 1
 stdbuf -oL -eL /tmp/kc_build/prand 7 /tmp/n7.json
 echo "exit=$?"
 ls -la /tmp/n7.json 2>/dev/null || echo "no output"

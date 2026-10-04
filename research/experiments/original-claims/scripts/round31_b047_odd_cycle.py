@@ -7,7 +7,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits,det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 def main():
     n=5;points,quads,curves=geometry(n);full=(1<<25)-1
@@ -62,7 +62,7 @@ def main():
             'all_extensions':subsets,'safe_extension_count':11,
             'terminal_extension_count':5,'terminal_total_stones':8,
             'pairing_impossibility':'All five vertices are legal at S. A fixed response involution must map each to a distinct currently legal vertex; it has no fixed points, so its domain must have even size. Legality cannot return after adding stones.'}
-    files=['scripts/round31_b047_odd_cycle.py','scripts/round25_forced_verify.py']
+    files=['../scripts/round31_b047_odd_cycle.py','../scripts/round25_forced_verify.py']
     result['sha256']={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files}
     (ROOT/'round31_b047_odd_cycle.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('B047 REFUTED: exact residual C5; all 32 continuations and transitive rotations verified')

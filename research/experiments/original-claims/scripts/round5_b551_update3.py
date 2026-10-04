@@ -1,5 +1,5 @@
 from pathlib import Path
-p = Path('research/verification/round5-batch-b551-b600.md')
+p = Path('research/experiments/original-claims/reports/round5-batch-b551-b600.md')
 text = p.read_text(encoding='utf-8')
 
 old = '''1. **n=5 で B585/B588 を再現**: 同型 2 成分の削減と xor 破れが n=5 でも続くか確認。

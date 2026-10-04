@@ -6,6 +6,9 @@ n=5 sample) child-value must-pair check for B329.
 Integer arithmetic only.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -15,8 +18,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square
 
-ROOT = Path(__file__).resolve().parents[3]
-NIGHT = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 OUT = ROOT / "research" / "verification" / "round2_b321.json"
 
 K_N = {2: 3, 3: 5, 4: 7, 5: 9, 6: 11}

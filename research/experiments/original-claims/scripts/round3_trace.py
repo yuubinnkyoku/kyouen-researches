@@ -3,7 +3,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 HEAD = re.compile(r"^#{1,6}\s*(B\d{3})\b")
 LABEL = re.compile(r"判定\s*[:：]\s*\*{0,2}([A-Z\-]+)")
 

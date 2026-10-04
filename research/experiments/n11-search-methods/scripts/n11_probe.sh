@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Measure the n=11 state space. Usage: n11_probe.sh [n] [maxlevel]
 set -uo pipefail
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/experiments/n11-search-methods/scripts
 N="${1:-11}"
 MAX="${2:-200}"
 LOG=/tmp/n11_probe.log

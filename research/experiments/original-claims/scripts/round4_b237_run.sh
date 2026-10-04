@@ -3,8 +3,8 @@
 # B197..B203,B205..B210,B223,B224,B225)
 set -u
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-SC=$REPO/research/verification/scripts
-OUT=$REPO/research/verification/round4_b237
+SC=$REPO/research/experiments/original-claims/scripts
+OUT=$REPO/research/experiments/original-claims/output/round4_b237
 mkdir -p "$OUT"
 cd "$SC"
 g++ -O2 -march=native -std=c++20 -o /tmp/r4b237 round4_b168.cpp 2>"$OUT/build.log" \

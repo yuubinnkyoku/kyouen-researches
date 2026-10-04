@@ -16,7 +16,7 @@ relations:
   target: K0266
   note: ''
 artifacts:
-- path: night-research/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
+- path: research/log/discovery-cycles/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
@@ -28,7 +28,7 @@ artifacts:
   role: log
   note: 閉包・全域木・hash検査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/verify_corridor_discovery.py
+- path: research/experiments/structural-discovery/scripts/verify_corridor_discovery.py
   role: verifier
   note: 探索実装をimportしない独立整数検査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

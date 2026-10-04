@@ -4,10 +4,10 @@
 # its exact growth is only needed to justify "n=8 full Grundy is out of reach".
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-cd "$REPO/research/verification/scripts"
+cd "$REPO/research/experiments/original-claims/scripts"
 g++ -O2 -march=native -std=c++20 -o /tmp/fm round4_firstmoves.cpp
 echo "BUILD OK $(date +%T)"
-cd "$REPO/research/verification"
+cd "$REPO/research/experiments/original-claims/output"
 echo "START $(date +%T)"
 /usr/bin/time -v /tmp/fm "${1:-4}" > round4_firstmoves.json 2> /tmp/fm_time.txt || echo "RUN FAILED"
 echo "DONE $(date +%T)"

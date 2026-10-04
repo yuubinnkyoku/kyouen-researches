@@ -7,7 +7,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from round5_geom_stats import best_triple_balance, holes_of, window_spectra  # noqa: E402
 
@@ -15,7 +15,7 @@ CENSUS = ROOT / "research" / "verification" / "round3_b451_census.json"
 
 
 def main():
-    with open(ROOT / "research/verification/round5_geom_stats.json", encoding="utf-8") as f:
+    with open(ROOT / "research/experiments/original-claims/output/round5_geom_stats.json", encoding="utf-8") as f:
         d = json.load(f)
     print("ORBIT vs HOLES (raw):")
     for k, v in sorted(d["B468"]["mean_holes_by_orbit"].items(), key=lambda x: int(x[0])):
@@ -138,7 +138,7 @@ def main():
         b469[n_str] = {"M_n": max_m, "n_top": len(tops), "n_below": len(below), "top": mt, "below": mb}
         print(f"  n={n} M={max_m} top={mt} below={mb}")
 
-    out = ROOT / "research/verification/round5_geom_stats_extra.json"
+    out = ROOT / "research/experiments/original-claims/output/round5_geom_stats_extra.json"
     out.write_text(
         json.dumps({"B468_controlled": {"more_sym_more_holes": lo, "less_sym_more_holes": hi, "ties": tie,
                                         "examples_claim": examples_lo, "examples_against": examples_hi},

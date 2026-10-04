@@ -8,7 +8,7 @@ from round22_rule_input import write_cases
 
 
 def main():
-    root = Path(__file__).resolve().parents[1]
+    root = (Path(__file__).resolve().parents[1] / "output")
     geometry = json.loads((root / 'round22_b252_n4_all_geometry.json').read_text(encoding='utf-8'))
     central = next(g for g in geometry['groups'] if g['coefficients'] == [1, -3, -3, 2])
     assert len(central['point_indices']) == 8 and len(central['quad_indices']) == 70

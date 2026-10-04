@@ -46,7 +46,7 @@ def main():
                 images.append(mask_to_group[transformed])
         record['d4_orbit_representative'] = min(images)
         orbit_representatives.append(min(images))
-    root = Path(__file__).resolve().parents[1]
+    root = (Path(__file__).resolve().parents[1] / "output")
     lines = [f'25 {len(board.quads)} {len(keys)} {target}']
     lines += [f'{q} {qgroup[i]}' for i, q in enumerate(board.quads)]
     lines += [str(gi) for gi in orbit_representatives]

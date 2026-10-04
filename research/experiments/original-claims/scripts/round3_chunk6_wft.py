@@ -12,9 +12,12 @@ B339  the two-label recursion (Force_T) equals "T in WFT"; the *content* of
 B340  first-move order inversion, E(random) vs forced length, on squares
       n=2..5 and the 2xm family m=2..8.
 
-Output: research/verification/round3_chunk6_wft.json
+Output: research/experiments/original-claims/output/round3_chunk6_wft.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -23,7 +26,7 @@ from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import board_rect, board_square  # noqa: E402
 

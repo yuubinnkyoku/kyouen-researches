@@ -5,6 +5,9 @@ built from levels[k] and levels[k+1]; the failure means a child mask was not
 found in levels[k+1] by binary search. Either the child enumeration and the
 sorted-level invariant disagree, or the level was released too early.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys
 from pathlib import Path
 

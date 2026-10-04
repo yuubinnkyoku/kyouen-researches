@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$REPO/research/verification/scripts
+S=$REPO/research/experiments/original-claims/scripts
 cd "$S"
 echo "=== build ==="
 g++ -O2 -std=c++20 -o /tmp/round5_b301_j6 round5_b301_j6.cpp

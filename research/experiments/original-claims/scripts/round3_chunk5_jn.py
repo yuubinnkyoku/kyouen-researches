@@ -19,9 +19,12 @@ B319  one-stone nimber spectrum on all second-player-win square boards
       reduction).
 B320  (n=5 redo + n=6): mixed (one-stone g, squared distance) buckets.
 
-Output: research/verification/round3_chunk5_jn.json
+Output: research/experiments/original-claims/output/round3_chunk5_jn.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -34,7 +37,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square  # noqa: E402
 from round3_chunk5_sharp import Game  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_chunk5_jn.json"
 
 

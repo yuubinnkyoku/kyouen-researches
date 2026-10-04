@@ -12,7 +12,7 @@ relations:
   target: K0086
   note: 累積memo-desc改善主張を独立memo-ascの限定結果で置換
 artifacts:
-- path: docs/10X10_HOLDOUT_CONFIRMATION_RESULT.md
+- path: research/experiments/solver-benchmarks/reports/10X10_HOLDOUT_CONFIRMATION_RESULT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
@@ -28,7 +28,7 @@ artifacts:
   role: data
   note: 別12親V2 endpoint
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: docs/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md
+- path: research/experiments/solver-benchmarks/reports/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md
   role: source
   note: V2原設計とparser再凍結時の開示
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

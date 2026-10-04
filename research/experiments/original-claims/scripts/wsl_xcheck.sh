@@ -3,7 +3,7 @@
 # Usage: wsl_xcheck.sh [6|7|both]
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/xcheck.log
 : > "$LOG"
 WHICH="${1:-both}"

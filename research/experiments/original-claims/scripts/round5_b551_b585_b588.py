@@ -3,9 +3,12 @@
 
 Also: B581/B582 longer path/cycle search on n=6 samples.
 
-Data out: research/verification/round5_b551_b600.json
+Data out: research/experiments/original-claims/output/round5_b551_b600.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -297,7 +300,7 @@ def main():
     out['b585'] = b585
 
     # save
-    outpath = Path('research/verification/round5_b551_b600.json')
+    outpath = Path('research/experiments/original-claims/output/round5_b551_b600.json')
     with open(outpath, 'w', encoding='utf-8') as f:
         json.dump(out, f, indent=2, default=str, ensure_ascii=False)
     print()

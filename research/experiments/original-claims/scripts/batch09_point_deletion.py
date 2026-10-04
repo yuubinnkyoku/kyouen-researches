@@ -5,6 +5,9 @@ For each board size n and each deleted point set D (|D|=1 or 2 on small n),
 solve the game on B_n \\ D and record empty g, winner, and max safe size K.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import itertools
 import json
@@ -15,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square, board_square_minus  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "batch09_point_deletion.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "batch09_point_deletion.json"
 
 
 def solve_summary(b: Board) -> dict:

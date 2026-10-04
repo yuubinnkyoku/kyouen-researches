@@ -13,15 +13,15 @@ relations:
   target: K0002
   note: ''
 artifacts:
-- path: research/verification/round5-batch-n8.md
+- path: research/experiments/original-claims/reports/round5-batch-n8.md
   role: source
   note: 全安全局面列挙・streaming DP完走と集計
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round5_prand_n8.json
+- path: research/experiments/original-claims/output/round5_prand_n8.json
   role: data
   note: 層別状態数・P/N数・最大安全サイズを保存
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round5_n8_progress.md
+- path: research/log/claim-audit/round5_n8_progress.md
   role: log
   note: 列挙再実行・交差検証・streaming solve完走の記録
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

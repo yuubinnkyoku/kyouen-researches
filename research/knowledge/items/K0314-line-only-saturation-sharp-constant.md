@@ -10,11 +10,11 @@ relations:
   target: K0106
   note: 標準版の指数下界と同じ2/3をより鋭いline-only計数で支える
 artifacts:
-- path: research/saturation-20261003.md
+- path: research/experiments/saturation/reports/saturation-20261003.md
   role: proof
   note: 原始方向容量による直線被覆上界
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/check_saturation_20261003.py
+- path: research/experiments/saturation/scripts/check_saturation_20261003.py
   role: verifier
   note: 容量計数の独立検算
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

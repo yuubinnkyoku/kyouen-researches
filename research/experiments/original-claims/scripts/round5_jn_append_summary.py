@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-MD = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5-batch-jn-followup.md")
+MD = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\reports\round5-batch-jn-followup.md")
 
 SUMMARY = """
 ---

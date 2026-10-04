@@ -12,11 +12,11 @@ relations:
   target: K0004
   note: ''
 artifacts:
-- path: night-research/CYCLE4_EXACT_STRUCTURE.md
+- path: research/log/discovery-cycles/CYCLE4_EXACT_STRUCTURE.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/CYCLE5_GRUNDY_STRUCTURE.md
+- path: research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md
   role: source
   note: 一石Grundyの完全分布
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

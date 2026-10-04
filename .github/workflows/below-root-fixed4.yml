@@ -114,7 +114,7 @@ jobs:
           import csv
           from pathlib import Path
 
-          files = sorted(Path('artifacts').glob('below-root-p*/depth5-trace.csv'))
+          files = sorted(Path('research/experiments/solver-benchmarks/output').glob('below-root-p*/depth5-trace.csv'))
           if len(files) != 4:
               raise SystemExit(f'expected 4 trace files, got {len(files)}: {files}')
           header = None

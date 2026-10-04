@@ -22,4 +22,4 @@ echo "g++ works: $(g++ --version | head -1)"
 echo "nproc=$(nproc)"
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
 test -d "$REPO" && echo "repo mount OK: $REPO"
-test -f "$REPO/research/verification/scripts/kyouen_core.py" && echo "kyouen_core reachable"
+test -f "$REPO/scripts/research/kyouen_core.py" && echo "kyouen_core reachable"

@@ -13,31 +13,31 @@ relations:
   target: K0049
   note: ''
 artifacts:
-- path: research/verification/round28-seven-board-original-verdicts.md
+- path: research/experiments/original-claims/reports/round28-seven-board-original-verdicts.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-round2-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md
   role: source
   note: B331の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round28_n7_audited.json
+- path: research/experiments/original-claims/output/round28_n7_audited.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round28_n7_layers.json
+- path: research/experiments/original-claims/output/round28_n7_layers.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round28_n7_independent.json
+- path: research/experiments/original-claims/output/round28_n7_independent.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-scope: '起点: [個票02・T*とWFT](verification/batch-02.md)。勝敗維持の協調的到達可能性と、相手に逆らわれても手数を強制できることを区別する。'
+scope: '起点: [個票02・T*とWFT](../../log/claim-audit/batch-02.md)。勝敗維持の協調的到達可能性と、相手に逆らわれても手数を強制できることを区別する。'
 evidence: 原文監査 PARTIAL / finite_complete_classification
 ---
 
@@ -45,7 +45,7 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
 
 未確定の命題: 空盤のWFTは空でなければ単元。 全nで `|WFT(∅)|≤1`。第1回B040の「非空か」とは独立に、一意性を予想する。
 
-適用文脈: 起点: [個票02・T*とWFT](verification/batch-02.md)。勝敗維持の協調的到達可能性と、相手に逆らわれても手数を強制できることを区別する。
+適用文脈: 起点: [個票02・T*とWFT](../../log/claim-audit/batch-02.md)。勝敗維持の協調的到達可能性と、相手に逆らわれても手数を強制できることを区別する。
 
 現在の結論: n1..6空盤WFTは{1},{3},{5},{6},{7},{9}、n7は空。空でなければ単元という全盤命題は有限七盤を越えて未証明。
 

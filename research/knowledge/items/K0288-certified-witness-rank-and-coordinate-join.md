@@ -13,15 +13,15 @@ relations:
   target: K0080
   note: ''
 artifacts:
-- path: docs/THREE_STONE_PROBE_HOLDOUT_V2_EVAL_AUDIT.md
+- path: research/experiments/solver-benchmarks/reports/THREE_STONE_PROBE_HOLDOUT_V2_EVAL_AUDIT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: docs/THREE_STONE_PROBE_HOLDOUT_V2_LABEL_SEMANTICS_AUDIT.md
+- path: research/experiments/solver-benchmarks/reports/THREE_STONE_PROBE_HOLDOUT_V2_LABEL_SEMANTICS_AUDIT.md
   role: source
   note: 元設計source-label mismatch
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: docs/THREE_STONE_PROBE_HOLDOUT_V2_PRE_RUN_RECEIPT.md
+- path: research/experiments/solver-benchmarks/reports/THREE_STONE_PROBE_HOLDOUT_V2_PRE_RUN_RECEIPT.md
   role: manifest
   note: 1161childの元凍結cohort
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

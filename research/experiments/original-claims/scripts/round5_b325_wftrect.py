@@ -1,8 +1,11 @@
 """B333/B334/B340: multi-WFT width and first-move forced-length variation
 on small rectangle boards (and n=6 sampled midgame if cheap).
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import board_rect, board_square
 
 def analyze_board(B, name, max_states=200000):
@@ -166,7 +169,7 @@ def main():
         B = board_square(n)
         out[f"n{n}"] = analyze_board(B, f"n{n}")
 
-    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b325_wftrect.json"
+    path = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b325_wftrect.json"
     with open(path, "w", encoding="utf-8") as f:
         json.dump(out, f, indent=2)
     print("wrote", path, flush=True)

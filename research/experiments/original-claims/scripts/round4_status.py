@@ -4,7 +4,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 R3 = sorted(ROOT.glob("round3-batch-*.md"))
 R4 = sorted(ROOT.glob("round4-batch-*.md"))
 HEAD = re.compile(r"^#{1,6}\s*(B\d{3})\b")

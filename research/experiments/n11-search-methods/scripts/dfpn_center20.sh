@@ -10,7 +10,7 @@
 # comparable and no sibling can inherit transposition work from another run.
 #
 # Usage:
-#   BUDGET=300 MEMO=26 ./research/verification/scripts/dfpn_center20.sh
+#   BUDGET=300 MEMO=26 ./research/experiments/n11-search-methods/scripts/dfpn_center20.sh
 #
 # Output:
 #   /mnt/d/ghq/build11/logs/center20/r<R>.log

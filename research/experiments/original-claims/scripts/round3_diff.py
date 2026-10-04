@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-p = Path(__file__).resolve().parent.parent / "round3_unresolved.json"
+p = (Path(__file__).resolve().parent.parent / "output") / "round3_unresolved.json"
 data = json.loads(p.read_text(encoding="utf-8"))
 
 # list as stated by the requester (B116 already removed as resolved via F-BG)

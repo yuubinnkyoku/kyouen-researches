@@ -1,11 +1,14 @@
 # B522/B523/B524: minimize the 70-quad flipping family
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time, random
 from pathlib import Path
 from itertools import combinations
 sys.path.insert(0, str(Path(__file__).parent))
 from kyouen_core import Board, board_square, det4, is_forbidden_quad
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b401_fu_bundle.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b401_fu_bundle.json"
 
 EIGHT = [(0,1),(0,2),(1,0),(1,3),(2,0),(2,3),(3,1),(3,2)]
 N = 4

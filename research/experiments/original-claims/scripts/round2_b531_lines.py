@@ -32,7 +32,7 @@ from batch10_core import (  # noqa: E402
     point_row,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "round2_b531.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round2_b531.json"
 
 
 def line_quads_5() -> dict:

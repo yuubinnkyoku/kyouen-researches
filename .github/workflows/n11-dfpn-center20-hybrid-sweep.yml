@@ -28,4 +28,4 @@ jobs:
           EXACT_PUBLISH: 'root'
           ORDER: 'fwd'
         run: |
-          bash research/verification/scripts/dfpn_center20_hybrid_sweep.sh
+          bash research/experiments/n11-search-methods/scripts/dfpn_center20_hybrid_sweep.sh

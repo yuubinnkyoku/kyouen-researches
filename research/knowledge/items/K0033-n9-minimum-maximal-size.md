@@ -12,7 +12,7 @@ relations:
   target: K0032
   note: ''
 artifacts:
-- path: research/verification/round46-small-saturation-and-window-reduction.md
+- path: research/experiments/original-claims/reports/round46-small-saturation-and-window-reduction.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -5,6 +5,9 @@ B365: re-tabulate rho × swap_pairs from results/maxsafe_exchange_n6.csv.
 B400: null-model comparison for 3-stone-row parallel concentration.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import csv
 import json
@@ -24,7 +27,7 @@ from kyouen_core import board_square  # noqa: E402
 
 
 def load_n7_masks():
-    path = os.path.join(ROOT, "night-research", "maxsafe_n7_K14.bin")
+    path = os.path.join(ROOT, "research/experiments/structural-discovery/output", "maxsafe_n7_K14.bin")
     data = open(path, "rb").read()
     n = len(data) // 8
     return [struct.unpack_from("<Q", data, 8 * i)[0] for i in range(n)]

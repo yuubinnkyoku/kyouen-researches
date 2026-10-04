@@ -2,7 +2,7 @@
 """Round3 chunk7 part 1: rational-centre circle census (B458-B474).
 
 Pure Python + fractions. Exact integer/rational arithmetic only for decisions.
-Outputs: research/verification/round3_chunk7_geocirc.json
+Outputs: research/experiments/original-claims/output/round3_chunk7_geocirc.json
 
 Covers:
   B458  primitive circle equation (A,D,E,F) vs circumcentre denominator as
@@ -23,6 +23,9 @@ Covers:
   B477  chord-type decomposition overlap, alternative assignments.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import itertools
 import json
@@ -32,7 +35,7 @@ from collections import Counter, defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 OUT = ROOT / "research" / "verification" / "round3_chunk7_geocirc.json"
 

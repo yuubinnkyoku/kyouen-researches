@@ -22,7 +22,7 @@ Algorithm
 Cost: O(C(n^2,3)) triples + O(#unique_circles * n^2) membership tests.
 n=12: 487,344 triples -> a few seconds.
 
-Outputs research/verification/round3_b451_census.json
+Outputs research/experiments/original-claims/output/round3_b451_census.json
 """
 from __future__ import annotations
 
@@ -34,7 +34,7 @@ from pathlib import Path
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b451_census.json"
 EXPL = ROOT / "research" / "exploration"
 

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """B138: center concentration for top-layer circles (n=4,5,6)."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json, sys
 from collections import Counter, defaultdict
 from itertools import combinations
@@ -9,7 +12,7 @@ from math import gcd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import square_points
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b101_b138.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b101_b138.json"
 
 def circle_census(n):
     pts = square_points(n)

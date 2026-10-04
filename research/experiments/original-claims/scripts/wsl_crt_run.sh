@@ -3,7 +3,7 @@
 # cross-check against the big-integer reference before attempting n=8.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/crt.log
 : > "$LOG"
 free -m >>"$LOG"

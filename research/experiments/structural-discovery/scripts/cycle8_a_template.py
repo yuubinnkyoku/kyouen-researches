@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 """Cycle 8 package A: decompose the unique d=5 phase-transition template (n=7).
 
-Reads only the pre-enumerated max-safe list night-research/maxsafe_n7_K14.bin
+Reads only the pre-enumerated max-safe list research/experiments/structural-discovery/output/maxsafe_n7_K14.bin
 via cycle8_lib (no new board search). Writes structured facts to
-  night-research/cycle8_a_result.json
+  research/experiments/structural-discovery/output/cycle8_a_result.json
   results/cycle8_a_template.json
-and prints a FACTS fingerprint for night-research/cycle8_a_verify.py.
+and prints a FACTS fingerprint for research/experiments/structural-discovery/scripts/cycle8_a_verify.py.
 
-Run:  & $env:MIMO_PYTHON night-research/cycle8_a_template.py
+Run:  & $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_a_template.py
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

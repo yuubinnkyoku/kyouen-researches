@@ -2,8 +2,11 @@
 """Round5 B077/B100: analyze maximal safe sets on n=5,6.
 B077: does any maximal safe set have min b_S(p) >= 2?
 B100: what sizes appear among maximal safe sets (spectrum)?"""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points
 from collections import Counter
 
@@ -146,6 +149,6 @@ for n in [4, 5]:
 # But we can check if there's existing data
 print("\nSkipping n=6 full enumeration (349,596 sets, would take too long in Python)", flush=True)
 
-with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_b077.json", "w") as f:
+with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_b077.json", "w") as f:
     json.dump(results, f, indent=2)
 print("Done.", flush=True)

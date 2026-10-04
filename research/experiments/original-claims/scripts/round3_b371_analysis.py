@@ -5,12 +5,12 @@
 Input:  n8_k8.masks.bin (uint64 LE) produced by maximal8.go (see companion
         round3_b371_enum.md); a --nocover brute-force mode is also supported for
         cross-checking on small boards.
-Output: research/verification/round3_b371.json
+Output: research/experiments/original-claims/output/round3_b371.json
 
 All geometry is recomputed here with kyouen_core.det4 (integer only), so the
 analysis is independent of the Go enumerator's feature vectors.
 
-Hypotheses (research/hypothesis-bank-round2-2026-09-27.md section 38):
+Hypotheses (research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md section 38):
   B371 [all]   every 8-stone maximal set contains a collinear triple
   B372 [all]   every 8-stone maximal set has >= 2 distinct line directions
   B373 [all]   every 8-stone maximal set touches >= 2 sides of the board
@@ -23,6 +23,9 @@ Hypotheses (research/hypothesis-bank-round2-2026-09-27.md section 38):
                singly-covered (b==1) points separates the local-search basins
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -32,7 +35,7 @@ from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import board_square  # noqa: E402
 

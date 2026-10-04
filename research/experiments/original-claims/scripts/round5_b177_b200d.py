@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 """B185 reach-prob MC (n=4,5), B197 children variance sample, B177 3-point removals."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import random
 import sys
 from collections import Counter, defaultdict
 
-sys.path.insert(0, "research/verification/scripts")
+sys.path.insert(0, "research/experiments/original-claims/scripts")
 from kyouen_core import board_square, board_square_minus  # noqa: E402
 
-OUT = "research/verification/round5_b177_b200d.json"
+OUT = "research/experiments/original-claims/output/round5_b177_b200d.json"
 
 
 def f_vector_fast(board):
@@ -82,7 +85,7 @@ def main():
 
     # ---------- B197: children residual-need2 variance, P vs N ----------
     print("=== B197 ===", flush=True)
-    with open("research/verification/round5_b231_n5_grundy.json") as f:
+    with open("research/experiments/original-claims/output/round5_b231_n5_grundy.json") as f:
         gmap = json.load(f)
     b = board_square(5)
     quads = b.quads

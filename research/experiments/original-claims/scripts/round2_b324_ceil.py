@@ -9,6 +9,9 @@ Computes for every reachable safe S:
   and for k=3 the collinear vs non-collinear nimber split.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -20,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square
 from residual_core import apply_perm_mask, d4_perms
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round2_b321.json"
 
 

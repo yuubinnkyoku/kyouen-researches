@@ -12,7 +12,7 @@ from pathlib import Path
 
 N = 8
 V = 64
-OUT = Path(__file__).resolve().parents[1] / "artifacts" / "8x8-random-safe-5stone-sample.csv"
+OUT = Path(__file__).resolve().parents[1] / "research/experiments/solver-benchmarks/output" / "8x8-random-safe-5stone-sample.csv"
 
 
 def xy(p: int) -> tuple[int, int]:

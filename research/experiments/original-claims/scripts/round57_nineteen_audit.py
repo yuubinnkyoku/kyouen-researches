@@ -8,7 +8,7 @@ import json
 from round25_forced_verify import bits,curve,det4,geometry
 from round55_eighteen_audit import COORDINATES
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -39,7 +39,7 @@ def main():
     assert local['seed_ids']==ids and local['found'] is False
     assert local['local_complete'] is True and local['complete_deletion_radius']==8
     assert local['subsets_examined']==sum(comb(19,r) for r in range(1,9))==169765
-    src=ROOT/'scripts/round57_n10_nineteen_neighborhood.cpp'
+    src=ROOT/'../scripts/round57_n10_nineteen_neighborhood.cpp'
     assert local['source_sha256']==hashlib.sha256(src.read_bytes()).hexdigest()
     # Verify the row-pair accounting used for the general 2.5n upper bound.
     rowcounts=Counter(y for x,y in selected)
@@ -50,8 +50,8 @@ def main():
         assert comb(len(xs),2)>=2*len(xs)-3
         sums.extend(a+b for a,b in combinations(xs,2))
     assert len(sums)==len(set(sums)) and all(1<=s<=17 for s in sums)
-    files=['scripts/round57_nineteen_audit.py','scripts/round57_n10_nineteen_neighborhood.cpp',
-           'scripts/round25_forced_verify.py','scripts/round55_eighteen_audit.py',
+    files=['../scripts/round57_nineteen_audit.py','../scripts/round57_n10_nineteen_neighborhood.cpp',
+           '../scripts/round25_forced_verify.py','../scripts/round55_eighteen_audit.py',
            'round55_eighteen_verified.json','round57_n10_neighborhood.json']
     output={'B082_original_verdict':'PARTIAL','K10_bounds':[19,23],
             'nineteen_stone_ids':ids,'nineteen_stone_coordinates':selected,

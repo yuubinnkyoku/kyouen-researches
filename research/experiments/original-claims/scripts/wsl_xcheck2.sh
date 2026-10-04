@@ -4,12 +4,12 @@
 # Usage: wsl_xcheck2.sh <n>
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
-LOG=$R/research/verification/data/xcheck_n${1}.log
-JSON=$R/research/verification/data/xcheck_n${1}.json
+S=$R/research/experiments/original-claims/scripts
+LOG=$R/research/experiments/original-claims/output/data/xcheck_n${1}.log
+JSON=$R/research/experiments/original-claims/output/data/xcheck_n${1}.json
 N="${1:-6}"
 SPILL=/tmp/lk_x$N
-mkdir -p /tmp/kc_build "$SPILL" "$R/research/verification/data"
+mkdir -p /tmp/kc_build "$SPILL" "$R/research/experiments/original-claims/output/data"
 : > "$LOG"
 if ! g++ -O3 -march=native -std=c++20 -fopenmp -o /tmp/kc_build/stream_x "$S/round5_prand_stream.cpp" 2>>"$LOG"; then
   echo BUILD_FAIL >>"$LOG"; cat "$LOG"; exit 1

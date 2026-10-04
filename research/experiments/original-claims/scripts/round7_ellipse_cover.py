@@ -5,6 +5,9 @@ their exponents sum to zero. S has exponents 1..6m; marked empties have
 exponents -q, q=8m+1..9m. All coordinates below are cleared to integers.
 The universal proof is in round7-ellipse-cover.md, not a finite extrapolation.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations
 from math import comb
 from pathlib import Path
@@ -97,7 +100,7 @@ def main():
                  embedding=board_embedding(stones,marked))
         output['examples'].append(row)
         print('m',m,'k',k,'high points',m,'b range',min(observed),max(observed),flush=True)
-    target=Path(__file__).resolve().parents[1]/'round7_ellipse_cover.json'
+    target=(Path(__file__).resolve().parents[1] / "output")/'round7_ellipse_cover.json'
     target.write_text(json.dumps(output,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(target,flush=True)
 

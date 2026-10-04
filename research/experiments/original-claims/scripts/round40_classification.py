@@ -7,7 +7,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def value(edges,m=5):
@@ -117,8 +117,8 @@ def main():
             records.append({'extension':m,'safe':safe,'g_full':fg(m) if safe else None,'g_free':ag(m)})
         tiny.append({'n':n,'S_ids':sids,'L_ids':lids,'sole_edge_rank':rank,
                      'g_full':full,'g_free':free,'all_extensions':records})
-    files=['scripts/round40_classification.py','scripts/round40_four_edge_types.cpp',
-           'scripts/round25_forced_verify.py','scripts/kc_core.h']
+    files=['../scripts/round40_classification.py','../scripts/round40_four_edge_types.cpp',
+           '../scripts/round25_forced_verify.py','../../../../scripts/research/kc_core.h']
     files += [f'round40_n{n}_four_types.json' for n in (4,5,6,7) if (ROOT/f'round40_n{n}_four_types.json').exists()]
     out={'minimum_legal_size_nontrivial_four_effect':5,'abstract_labeled_count':255,
          'abstract_isomorphism_type_count':9,'all_types_change_g':True,

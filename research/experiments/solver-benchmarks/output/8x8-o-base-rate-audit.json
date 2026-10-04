@@ -102,7 +102,7 @@
       "TO": 0.476378,
       "raw": 0.452756
     },
-    "note": "from docs/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md"
+    "note": "from research/experiments/9x9-factorial/reports/9X9_FACTORIAL_EXACT_PC_RUN_RESULT.md"
   },
   "interpretation": "8x8 selected top-move children are WIN at ~92.5%. 9x9 factorial selected children are LOSS at ~45-48%. The O-stratum 8x8 experiment therefore runs in a low-LOSS, low-change-rate regime; heuristic O/E differences rarely flip the exact outcome. This is a board-size structural fact about the experimental regime, not a solver bug."
 }

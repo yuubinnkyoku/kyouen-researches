@@ -9,6 +9,9 @@ Then: which occupancy vectors on M that satisfy local ceilings and
 COMPLETE subset maxima still cannot reach 14?
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -269,8 +272,8 @@ def main() -> None:
         "",
         "## Artifacts",
         "- `results/cycle31_circle_lemma_occ.json`",
-        "- `night-research/CYCLE30B_ORBIT_CONCYCLICITY.md`",
-        "- `night-research/CYCLE30C_MULTI_ORBIT_CAPACITY.md`",
+        "- `research/log/discovery-cycles/CYCLE30B_ORBIT_CONCYCLICITY.md`",
+        "- `research/log/discovery-cycles/CYCLE30C_MULTI_ORBIT_CAPACITY.md`",
     ]
     md = NR / "CYCLE31_CIRCLE_ORBIT_LEMMA.md"
     md.write_text("\n".join(lines) + "\n", encoding="utf-8")

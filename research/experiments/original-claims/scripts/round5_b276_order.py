@@ -17,7 +17,7 @@ from itertools import combinations
 
 import numpy as np
 
-OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b276_order.json")
+OUT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b276_order.json")
 
 
 def det4(rows):
@@ -188,7 +188,7 @@ def main():
     out["n4hole_nstates"] = len(states4h)
 
     # gaps from previous mixing run
-    mix = json.load(open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b278_mixing.json"))
+    mix = json.load(open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b278_mixing.json"))
     n4_gaps = mix["B278_summary"]["n4_gaps"]
     n4h_gaps = mix["B278_summary"]["n4hole_gaps"]
 

@@ -11,11 +11,11 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/verification/round57-nineteen-stone-ten-board-bound.md
+- path: research/experiments/original-claims/reports/round57-nineteen-stone-ten-board-bound.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round57_nineteen_verified.json
+- path: research/experiments/original-claims/output/round57_nineteen_verified.json
   role: data
   note: 座標安全性と上下界の監査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

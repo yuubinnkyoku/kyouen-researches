@@ -6,8 +6,8 @@ import csv
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-NIGHT = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 CSV_PATH = NIGHT / "first-moves-9x9.csv"
 
 # 5x5 center-relative D4 orbits from complete cargo classification.

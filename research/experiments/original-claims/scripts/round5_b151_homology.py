@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """B174/B178: integer homology of Delta_4 (safe-set complex on 4x4)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json, sys
 from collections import defaultdict
 from pathlib import Path
@@ -9,7 +12,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, square_points
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b151_homology.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b151_homology.json"
 
 
 def rank_mod_p(sparse_rows, ncols, p):

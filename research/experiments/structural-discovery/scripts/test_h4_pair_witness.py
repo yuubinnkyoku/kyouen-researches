@@ -13,7 +13,7 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = Path(__file__).resolve().parent
 N = 10
 R = [90, 61, 2, 73, 69, 66, 13, 91]

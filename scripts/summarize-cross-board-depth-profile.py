@@ -8,7 +8,7 @@ import statistics
 from collections import Counter
 from pathlib import Path
 
-ART = Path(__file__).resolve().parents[1] / "artifacts"
+ART = Path(__file__).resolve().parents[1] / "research/experiments/solver-benchmarks/output"
 OUT = ART / "cross-board-depth-profile.json"
 
 

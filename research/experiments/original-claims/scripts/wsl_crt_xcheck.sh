@@ -4,7 +4,7 @@
 # done in that field:  a/b  vs  a * inverse(b) mod P1.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/xcheck.log
 : > "$LOG"
 mkdir -p /tmp/kc_build
@@ -24,8 +24,8 @@ def inv(a, m):
     return pow(a, m - 2, m)
 
 ref = {
-    6: (5162, 6615, R + "/research/verification/round3_b502_pgrand_n6.json"),
-    7: (3709, 4620, R + "/research/verification/round4_b501_prand_n7.json"),
+    6: (5162, 6615, R + "/research/experiments/original-claims/output/round3_b502_pgrand_n6.json"),
+    7: (3709, 4620, R + "/research/experiments/original-claims/output/round4_b501_prand_n7.json"),
 }
 for n, (a, b, _) in ref.items():
     path = f"/tmp/crt_n{n}.json"

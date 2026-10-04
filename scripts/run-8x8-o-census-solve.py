@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Sharded exact solve of frozen 8x8 required roots (full census).
 
-Reads artifacts/8x8-o-required-roots.csv (frozen) and runs
+Reads research/experiments/solver-benchmarks/output/8x8-o-required-roots.csv (frozen) and runs
 cpp/solvers/kyouen_solver_8_root.exe on shards. Writes per-shard logs and a
 merged outcomes CSV. Does not alter strata or success criteria.
 """
@@ -16,10 +16,10 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ROOTS = ROOT / "artifacts" / "8x8-o-required-roots.csv"
-OUT_DIR = ROOT / "artifacts" / "8x8-o-solve"
-MERGED = ROOT / "artifacts" / "8x8-o-census-outcomes.csv"
-MANIFEST = ROOT / "artifacts" / "8x8-o-solve-manifest.json"
+ROOTS = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-required-roots.csv"
+OUT_DIR = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-solve"
+MERGED = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-census-outcomes.csv"
+MANIFEST = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-solve-manifest.json"
 SOLVER = ROOT / "cpp" / "solvers" / "kyouen_solver_8_root.exe"
 if not SOLVER.exists():
     SOLVER = ROOT / "cpp" / "solvers" / "kyouen_solver_8_root"

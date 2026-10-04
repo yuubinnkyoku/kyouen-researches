@@ -8,7 +8,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round5_b482b500_b490rich.json"
 FEAT_CACHE = ROOT / "research" / "verification" / "round5_b482b500_feats.pkl"
 

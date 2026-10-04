@@ -3,7 +3,7 @@ set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
 WORK=$REPO/scratchpad/r5b251
 mkdir -p "$WORK"
-SRC=$REPO/research/verification/scripts/round5_b251_n6_orbit.cpp
+SRC=$REPO/research/experiments/original-claims/scripts/round5_b251_n6_orbit.cpp
 BIN=$WORK/n6_orbit
 echo "COMPILING $(date +%T)"
 g++ -O2 -march=native -std=c++20 -fopenmp -o "$BIN" "$SRC"

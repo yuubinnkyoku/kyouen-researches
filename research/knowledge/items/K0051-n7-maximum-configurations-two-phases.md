@@ -12,11 +12,11 @@ relations:
   target: K0029
   note: ''
 artifacts:
-- path: night-research/FINAL_SELECTION_THEOREM.md
+- path: research/archive/discovery-summaries/FINAL_SELECTION_THEOREM.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/SELECTION_THEOREM_CHECKLIST.md
+- path: research/archive/discovery-summaries/SELECTION_THEOREM_CHECKLIST.md
   role: manifest
   note: COMPLETE/SAMPLE区別と個別証拠
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

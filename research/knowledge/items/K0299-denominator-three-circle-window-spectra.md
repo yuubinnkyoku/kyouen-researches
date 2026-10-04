@@ -8,15 +8,15 @@ topics:
 aliases: []
 relations: []
 artifacts:
-- path: research/verification/round4-circle-windows.md
+- path: research/experiments/original-claims/reports/round4-circle-windows.md
   role: proof
   note: q≥3の固定窓・可変窓スペクトルの一般証明
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round4_circle_windows.json
+- path: research/experiments/original-claims/output/round4_circle_windows.json
   role: data
   note: 明示証人と有限照合結果
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round4_circle_windows.py
+- path: research/experiments/original-claims/scripts/round4_circle_windows.py
   role: verifier
   note: 円窓スペクトルと反例の独立検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

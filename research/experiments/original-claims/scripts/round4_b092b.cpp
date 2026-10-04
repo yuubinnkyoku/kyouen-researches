@@ -5,7 +5,7 @@
 //   g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/r4b round4_b092b.cpp
 //
 // All arithmetic is integer (long long determinants, u128 masks).
-// Output: research/verification/round4_b092b.json
+// Output: research/experiments/original-claims/output/round4_b092b.json
 //
 // Jobs (argv[1], optional argv[2] = time budget in seconds):
 //   binspec          B100 / B099 from data/maximal_n{3,4,5,6}.bin
@@ -20,7 +20,7 @@
 // budget: the zero counts printed before that are still proofs of
 // non-existence, the unfinished k is simply unknown.
 
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <algorithm>
 #include <array>
@@ -49,11 +49,11 @@ using kc::Board;
 using u128 = unsigned __int128;
 
 static const char* VER =
-    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification";
+    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output";
 static const char* DATA =
-    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data";
+    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data";
 static const char* NIGHT =
-    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/night-research";
+    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/structural-discovery/output";
 
 static FILE* g_out = nullptr;
 static std::atomic<bool> g_abort{false};

@@ -8,7 +8,7 @@
 //
 // Usage: kc_maximal <n> <k> [threads]
 // Writes a binary file: u64 count, then count * u64 masks.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
@@ -73,7 +73,7 @@ int main(int argc, char** argv) {
     std::fprintf(stderr, "after dedupe: %zu\n", uniq.size());
 
     char path[512];
-    std::snprintf(path, sizeof(path), "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/kc_maximal_n%d_k%d.bin", n, K);
+    std::snprintf(path, sizeof(path), "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/kc_maximal_n%d_k%d.bin", n, K);
     FILE* f = std::fopen(path, "wb");
     if (!f) { std::perror("fopen"); return 1; }
     u64 c = uniq.size();

@@ -13,8 +13,10 @@ from math import comb, gcd, pi
 from pathlib import Path
 import hashlib
 import json
+import argparse
 
 HERE = Path(__file__).resolve().parent
+DATA = HERE.parent / "output"
 
 
 def determinant(points):
@@ -189,7 +191,7 @@ def audit_directions_and_bound():
 
 
 def audit_exact_searches():
-    raw = json.loads((HERE/'saturation_20261003_exact_results.json').read_text())
+    raw = json.loads((DATA / 'saturation_20261003_exact_results.json').read_text())
     # Independent triple-to-curve census, instead of the searcher's all-quad loop.
     n = 11
     points = list(product(range(n),repeat=2))
@@ -293,6 +295,9 @@ def audit_new_nineteen_family():
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", type=Path, default=DATA / "saturation_20261003_verified.json")
+    args = parser.parse_args()
     witnesses = [
         (11, [5,8,45,50,52,55,58,63,103,115]),
         (12, [6,9,50,55,57,61,64,69,113,126,137]),
@@ -308,9 +313,9 @@ def main():
               'new_nineteen_family_audit':audit_new_nineteen_family(),
               'source_sha256':{name:hashlib.sha256((HERE/name).read_bytes()).hexdigest()
                   for name in ['saturation_20261003_verify.py','saturation_20261003_search.cpp',
-                               'saturation_20261003_exact.cpp','saturation_20261003_exact_results.json',
-                               '../round56_complete_verified.json','../round56-ten-board-eight-stone-exclusion.md']}}
-    out = HERE/'saturation_20261003_verified.json'
+                               'saturation_20261003_exact.cpp','../output/saturation_20261003_exact_results.json',
+                               '../../original-claims/output/round56_complete_verified.json','../../original-claims/reports/round56-ten-board-eight-stone-exclusion.md']}}
+    out = args.output
     out.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps({'witnesses':[(r['n'],r['k']) for r in result['witnesses']],
                       'line_only_safe_sets_checked':result['line_cover_bound_checks']['all_4x4_line_safe_subsets_checked'],

@@ -1,11 +1,14 @@
 # B563: log-concavity with 1 stone fixed, n=5 sample
 # B593/B597/B598: near-max analysis reflecting delta_K(7)=2
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time, random
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from kyouen_core import Board, board_square
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b401_fu_logconc5.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b401_fu_logconc5.json"
 
 def f_vector(board, S_mask, max_r=None):
     """f_S(r) = number of r-point sets that can be legally added to S."""

@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 d = json.loads((ROOT / "round3_b502_pgrand_n6.json").read_text(encoding="utf-8"))
 n6 = d["n6"]
 top = n6["top"][0]

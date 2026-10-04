@@ -10,6 +10,9 @@ Operational definitions (documented in batch-09.md):
 - rand_odd: P(remaining moves odd | S) under uniform random greedy
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -20,7 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "batch09_outcome_mining.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "batch09_outcome_mining.json"
 
 
 def analyze_board(n: int, sample_per_layer: int | None = None) -> dict:

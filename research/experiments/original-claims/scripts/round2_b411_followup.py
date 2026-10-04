@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches")
 RES = ROOT / "results"
-OUT = ROOT / "research/verification/round2_b411.json"
+OUT = ROOT / "research/experiments/original-claims/output/round2_b411.json"
 
 CORNER = 48
 

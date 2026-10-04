@@ -1,7 +1,7 @@
 // Original B345: a sole minimal triple changes a nontrivial clique-union game.
 // All residual constraints are first restricted to initially legal points and
 // inclusion-minimized. Pure isolated-point games are excluded.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <cstdio>
 #include <fstream>

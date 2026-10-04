@@ -13,27 +13,27 @@ relations:
   target: K0108
   note: ''
 artifacts:
-- path: research/verification/round27-fixed-response-audit.md
+- path: research/experiments/original-claims/reports/round27-fixed-response-audit.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md
   role: source
   note: B015の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round27_pairing_verified.json
+- path: research/experiments/original-claims/output/round27_pairing_verified.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round27_pairing_audited.json
+- path: research/experiments/original-claims/output/round27_pairing_audited.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round27_response_graphs.json
+- path: research/experiments/original-claims/output/round27_response_graphs.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

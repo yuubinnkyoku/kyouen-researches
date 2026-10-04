@@ -37,9 +37,12 @@ B450  Transplant experiment: take the component-common stone groups of the
       n=4 split families and actually transplant them into n=5 boards,
       checking (i) safety and (ii) preservation of the residual hypergraph.
 
-Outputs: research/verification/round3_chunk7_geom.json
+Outputs: research/experiments/original-claims/output/round3_chunk7_geom.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import itertools
 import json
@@ -51,7 +54,7 @@ from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 OUT = ROOT / "research" / "verification" / "round3_chunk7_geom.json"
 
@@ -176,7 +179,7 @@ def sec_B429(b7, quad_cache, report, t0):
 
     # ---- (b) 903-component 12-stones: read from the round-2 graph ----------
     import json as _json
-    r2 = _json.loads((ROOT / "research/verification/round2_b411.json").read_text(encoding="utf-8"))
+    r2 = _json.loads((ROOT / "research/experiments/original-claims/output/round2_b411.json").read_text(encoding="utf-8"))
     # the 903 states come from results/discovery_full_board_forbid_-1.json
     disc_path = ROOT / "results/discovery_full_board_forbid_-1.json"
     states903 = []
@@ -264,7 +267,7 @@ def sec_B437_B440(report, t0):
     P, Q = Aset - Bset, Bset - Aset
     U = sorted(Aset | Bset)
     quads7 = [tuple(q) for q in
-              _json.loads((ROOT / "research/verification/batch06_quads_cache.json").read_text())["n7"]]
+              _json.loads((ROOT / "research/experiments/original-claims/output/batch06_quads_cache.json").read_text())["n7"]]
     Uset = set(U)
     u_quads = [q for q in quads7 if all(p in Uset for p in q)]
     u_qm = []
@@ -412,7 +415,7 @@ def sec_B437_B440(report, t0):
 
 # ============================================================== B442 / B450
 def sec_B442_B450(report, t0):
-    cache = pickle.load(open(ROOT / "research/verification/batch03_cache.pkl", "rb"))
+    cache = pickle.load(open(ROOT / "research/experiments/original-claims/output/batch03_cache.pkl", "rb"))
     b4 = board_square(4)
     out = {}
     for n in (3, 4, 5):
@@ -577,9 +580,9 @@ def main():
     t0 = time.time()
     report = {}
     b7 = board_square(7)
-    qc = json.loads((ROOT / "research/verification/batch06_quads_cache.json").read_text()) \
-        if (ROOT / "research/verification/batch06_quads_cache.json").exists() else {"n7": []}
-    r2 = json.loads((ROOT / "research/verification/round2_b411.json").read_text(encoding="utf-8"))
+    qc = json.loads((ROOT / "research/experiments/original-claims/output/batch06_quads_cache.json").read_text()) \
+        if (ROOT / "research/experiments/original-claims/output/batch06_quads_cache.json").exists() else {"n7": []}
+    r2 = json.loads((ROOT / "research/experiments/original-claims/output/round2_b411.json").read_text(encoding="utf-8"))
     quad_cache = {
         "max14": r2["basic"]["A"],
         "iso_known": r2["known_isolated_12"],

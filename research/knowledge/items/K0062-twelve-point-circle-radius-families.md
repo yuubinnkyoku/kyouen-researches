@@ -10,11 +10,11 @@ aliases:
 - F-AO
 relations: []
 artifacts:
-- path: research/findings.md
+- path: research/archive/hypothesis-ledgers/findings.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/exploration/fact_10x10_12pt_circles.json
+- path: research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json
   role: data
   note: 10×10の中心・半径・点集合
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

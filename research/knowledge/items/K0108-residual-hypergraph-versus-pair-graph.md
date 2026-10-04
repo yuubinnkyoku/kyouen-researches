@@ -15,7 +15,7 @@ relations:
   target: K0002
   note: ''
 artifacts:
-- path: research/hypothesis-bank-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

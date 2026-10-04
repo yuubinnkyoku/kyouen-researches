@@ -12,19 +12,19 @@ relations:
   target: K0051
   note: ''
 artifacts:
-- path: night-research/FINAL_SELECTION_THEOREM.md
+- path: research/archive/discovery-summaries/FINAL_SELECTION_THEOREM.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/CYCLE24_N6_CAPACITY_CONTRAST.md
+- path: research/log/discovery-cycles/CYCLE24_N6_CAPACITY_CONTRAST.md
   role: source
   note: 六盤の完全制約最大
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/CYCLE25_N5_CAPACITY_CONTRAST.md
+- path: research/log/discovery-cycles/CYCLE25_N5_CAPACITY_CONTRAST.md
   role: source
   note: 五盤の完全制約最大
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/CYCLE26_N4_CAPACITY_CONTRAST.md
+- path: research/log/discovery-cycles/CYCLE26_N4_CAPACITY_CONTRAST.md
   role: source
   note: 四盤との比較
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

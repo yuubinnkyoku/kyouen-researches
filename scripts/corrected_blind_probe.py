@@ -62,7 +62,7 @@ def safe_parent(p):
 
 def run_solver(states_path, extra_args=()):
     cmd = ["bash", "-c",
-           f"./tmp-kb/probe_native {states_path} {SHRINK} {LOAD} {BUDGET} 0"]
+           f"./research/experiments/solver-benchmarks/bin/probe_native {states_path} {SHRINK} {LOAD} {BUDGET} 0"]
     t0 = time.time()
     proc = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True)
     dt = time.time() - t0
@@ -71,7 +71,7 @@ def run_solver(states_path, extra_args=()):
 
 def build():
     cmd = ["bash", "-c", "mkdir -p ./tmp-kb && g++ -O2 -std=c++20 "
-                          "-o ./tmp-kb/probe_native ./scripts/probe_cert_solver.cpp && ls -la ./tmp-kb/"]
+                          "-o ./research/experiments/solver-benchmarks/bin/probe_native ./scripts/probe_cert_solver.cpp && ls -la ./research/experiments/solver-benchmarks/bin/"]
     proc = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True)
     print(proc.stdout[-2000:])
     print(proc.stderr[-2000:], file=sys.stderr)
@@ -122,7 +122,7 @@ def cmd_independent():
             for i, child in enumerate(need):
                 tmp = REPO_ROOT / "tmp-kb" / "_single.txt"
                 tmp.write_text(child + "\n")
-                proc, dt = run_solver("tmp-kb/_single.txt")
+                proc, dt = run_solver("research/experiments/solver-benchmarks/bin/_single.txt")
                 if proc.returncode != 0:
                     print(f"  FAIL {child} rc={proc.returncode}: {proc.stderr[-300:]}")
                     continue
@@ -154,7 +154,7 @@ def cmd_orderswap():
             continue
         tmp = REPO_ROOT / "tmp-kb" / f"_rev_{safe_parent(parent)}.txt"
         tmp.write_text("\n".join(rev) + "\n")
-        proc, dt = run_solver(f"tmp-kb/_rev_{safe_parent(parent)}.txt")
+        proc, dt = run_solver(f"research/experiments/solver-benchmarks/bin/_rev_{safe_parent(parent)}.txt")
         if proc.returncode != 0:
             print(f"  FAIL {parent} rc={proc.returncode}: {proc.stderr[-300:]}")
             continue

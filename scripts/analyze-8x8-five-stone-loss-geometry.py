@@ -18,10 +18,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 N = 8
 V = 64
-OUTCOMES = ROOT / "artifacts" / "8x8-o-census-outcomes.csv"
-STRATA = ROOT / "artifacts" / "8x8-o-strata.csv"
-OUT_JSON = ROOT / "artifacts" / "8x8-five-stone-loss-geometry.json"
-OUT_CSV = ROOT / "artifacts" / "8x8-five-stone-loss-geometry.csv"
+OUTCOMES = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-census-outcomes.csv"
+STRATA = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-strata.csv"
+OUT_JSON = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-five-stone-loss-geometry.json"
+OUT_CSV = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-five-stone-loss-geometry.csv"
 
 
 def xy(p: int) -> tuple[int, int]:

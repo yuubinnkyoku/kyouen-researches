@@ -12,7 +12,7 @@ import json
 import struct
 from round25_forced_verify import bits, curve, det4, geometry
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def cover(n, stones):
@@ -32,9 +32,9 @@ def cover(n, stones):
 
 
 def main():
-    dependencies = ['scripts/round46_audit.py', 'scripts/round25_forced_verify.py',
-                    'scripts/round46_kmin_tight.cpp', 'scripts/round46_kmin_symmetry.cpp',
-                    '../../scripts/analysis/fact_kmin_cover_bound.cpp', 'scripts/round4_b371.cpp',
+    dependencies = ['../scripts/round46_audit.py', '../scripts/round25_forced_verify.py',
+                    '../scripts/round46_kmin_tight.cpp', '../scripts/round46_kmin_symmetry.cpp',
+                    '../../scripts/analysis/fact_kmin_cover_bound.cpp', '../scripts/round4_b371.cpp',
                     'round4_b371.bin', 'round4_b371.json', 'round10-small-saturation.md',
                     'round10_small_saturation.json', 'round46_n8_to_n9_embeddings_probe.json']
     lower = {}

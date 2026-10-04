@@ -2,7 +2,7 @@
 // For every state S at level k it collects the children g by (a) the merge
 // used in n11_grundy.cpp and (b) an O(V) scan with a linear search in level
 // k+1, then compares the two multisets of child g values.
-#include "kc_core121.h"
+#include "../../../../scripts/research/kc_core121.h"
 #include <algorithm>
 #include <cstdio>
 #include <cstdlib>

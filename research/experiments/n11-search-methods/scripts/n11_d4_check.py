@@ -9,7 +9,7 @@ some stabilisers.
 import json
 from pathlib import Path
 
-d = json.loads((Path(__file__).resolve().parent.parent /
+d = json.loads(((Path(__file__).resolve().parent.parent / "output") /
                 "data" / "n11_d4.json").read_text(encoding="utf-8"))
 
 raw = d["level_sizes_raw"]

@@ -74,7 +74,7 @@
 //   n11_d4 --n 6  --check-legal
 //   n11_d4 --n 7  --spill /tmp/x --out x.json
 //   n11_d4 --n 11 --maxlevel 9 --spill /tmp/n11d4 --out y.json
-#include "kc_core121.h"
+#include "../../../../scripts/research/kc_core121.h"
 
 #include <algorithm>
 #include <cstdarg>

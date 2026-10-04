@@ -6,6 +6,9 @@ Search additional 8-stone maximal sets (backtrack sample + random greedy),
 then test structural claims on the sample.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import random
@@ -15,13 +18,13 @@ from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import board_square  # noqa: E402
 
 DATA = ROOT / "research" / "verification" / "data"
 OUT = ROOT / "research" / "verification" / "round2_b351.json"
-NR = ROOT / "night-research"
+NR = ROOT / "research/experiments/structural-discovery/output"
 
 
 def mask_ids(m: int):

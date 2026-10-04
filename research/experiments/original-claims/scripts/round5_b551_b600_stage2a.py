@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Stage 2a: B572/B578 on n=4 only (fast)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -80,7 +83,7 @@ def main():
                'n_groups': n_groups, 'witness': sd_rec}
     print('n=4:', max_sd, n_groups)
 
-    path = Path(__file__).resolve().parent.parent / 'round5_b551_b600_followup.json'
+    path = (Path(__file__).resolve().parent.parent / "output") / 'round5_b551_b600_followup.json'
     data = {}
     if path.exists():
         with open(path) as f:

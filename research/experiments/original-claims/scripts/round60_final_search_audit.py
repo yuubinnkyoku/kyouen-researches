@@ -5,7 +5,7 @@ from math import comb
 import hashlib
 import json
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -22,15 +22,15 @@ def main():
     assert local['found'] is False and local['local_complete'] is False
     assert local['complete_deletion_radius']==9 and local['active_radius']==10
     assert local['starting_radius']==9 and local['last_radius_requested']==12
-    assert local['source_sha256']==hashlib.sha256((ROOT/'scripts/round60_n10_deep_neighborhood.cpp').read_bytes()).hexdigest()
+    assert local['source_sha256']==hashlib.sha256((ROOT/'../scripts/round60_n10_deep_neighborhood.cpp').read_bytes()).hexdigest()
     assert local['prior_source_sha256']==hashlib.sha256((ROOT/local['prior_completed_radii_source']).read_bytes()).hexdigest()
     # The leaf counter includes the currently interrupted deletion subset.
     # Repeating this last subset is a conservative restart for radius ten.
     entered_at_ten=local['subsets_examined']-comb(19,9)
     assert entered_at_ten==22086
     frontier=list(next(islice(combinations(range(19),10),entered_at_ten-1,None)))
-    files=['scripts/round60_final_search_audit.py','scripts/round59_n10_nine_sat.py',
-           'scripts/round60_n10_deep_neighborhood.cpp','round59_n10_atmost9.json',
+    files=['../scripts/round60_final_search_audit.py','../scripts/round59_n10_nine_sat.py',
+           '../scripts/round60_n10_deep_neighborhood.cpp','round59_n10_atmost9.json',
            'round60_n10_deep_neighborhood.json','round57_n10_neighborhood.json']
     out={'s10_bounds_unchanged':[9,10],'round59_status':'UNKNOWN',
          'K10_bounds_unchanged':[19,23],'complete_local_deletion_radius':9,

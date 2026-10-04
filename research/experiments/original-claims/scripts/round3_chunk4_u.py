@@ -16,7 +16,7 @@ Covers
 All on n=4 (exhaustive, 5811 states) and n=5 (exhaustive, 151394 states,
 with the heavy per-state loops restricted to strata that matter).
 
-Outputs research/verification/round3_chunk4_u.json
+Outputs research/experiments/original-claims/output/round3_chunk4_u.json
 """
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import numpy as np  # noqa: E402
 from round3_chunk4_core import Solve, quad_masks, square_points  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk4_u.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk4_u.json"
 
 
 def bits(mask):

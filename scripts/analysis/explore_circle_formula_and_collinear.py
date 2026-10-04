@@ -172,7 +172,7 @@ def collinear_closed_form(n):
 def parse_cert_stone_histogram(path: Path, board_n: int):
     """KYOENC3 バイナリから石数ヒストグラムと witness 鎖長を抽出。
 
-    形式不明の場合は None。night-research の cert パーサを参考に。
+    形式不明の場合は None。research/experiments/structural-discovery/output の cert パーサを参考に。
     """
     if not path.exists():
         return None
@@ -183,7 +183,7 @@ def parse_cert_stone_histogram(path: Path, board_n: int):
 
 def look_for_cert_parsers():
     hits = []
-    for p in (ROOT / "night-research").glob("*.py"):
+    for p in (ROOT / "research/experiments/structural-discovery/output").glob("*.py"):
         t = p.read_text(encoding="utf-8", errors="replace")
         if "cert" in t.lower() and ("node" in t.lower() or "witness" in t.lower() or "KYOENC" in t):
             hits.append(p.name)
@@ -242,7 +242,7 @@ def main():
 
     # try reading a small cert
     for name in ["kyouen-3x3.cert", "kyouen-4x4.cert", "kyouen-5x5.cert"]:
-        p = ROOT / "night-research" / name
+        p = ROOT / "research/experiments/structural-discovery/output" / name
         if p.exists():
             info = parse_cert_stone_histogram(p, 0)
             print(f"  {name}: {info}")

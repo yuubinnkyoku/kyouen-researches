@@ -12,15 +12,15 @@ relations:
   target: K0002
   note: ''
 artifacts:
-- path: night-research/CYCLE5_GRUNDY_STRUCTURE.md
+- path: research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/grundy_cycle5.cpp
+- path: research/experiments/structural-discovery/scripts/grundy_cycle5.cpp
   role: solver
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/cycle5-grundy-n6-cap14.json
+- path: research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json
   role: data
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

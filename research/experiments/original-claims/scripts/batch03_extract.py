@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Light extraction of remaining batch-03 facts from cache. No heavy search."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import pickle
@@ -15,7 +18,7 @@ from residual_core import (
     hyper_automorphisms, to_abs_edges, pairing_works, p_graph_is_vertex_transitive,
 )
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 CACHE = ROOT / "research" / "verification" / "batch03_cache.pkl"
 OUT = ROOT / "research" / "verification" / "batch03_results.json"
 

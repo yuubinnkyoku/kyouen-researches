@@ -7,13 +7,16 @@ B179: report I_n(-1)=sum (-1)^k f_k and |I|/f_total for full squares and
 selected sub-boards, plus a simple rigidity proxy (count of maximal sets).
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
 from collections import Counter, defaultdict
 from itertools import combinations
 
-sys.path.insert(0, r"research/verification/scripts")
+sys.path.insert(0, r"research/experiments/original-claims/scripts")
 from kyouen_core import Board, board_square, board_square_minus, board_rect  # noqa: E402
 
 
@@ -236,7 +239,7 @@ def main() -> None:
     }
     print("b178 sharing n4:", out["b178_sharing"]["n4"]["pair_intersection_hist"])
 
-    path = "research/verification/round5_b177_b200.json"
+    path = "research/experiments/original-claims/output/round5_b177_b200.json"
     with open(path, "w") as f:
         json.dump(out, f, indent=1)
     print("wrote", path)

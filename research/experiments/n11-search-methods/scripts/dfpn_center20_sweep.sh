@@ -12,7 +12,7 @@
 #   The "knowledge one root gained helps the other 19" question is
 #   then answered by comparing, per round, each root's pn against the
 #   same root's pn when it ran alone with a fresh TT
-#   (research/verification/N11-DFPN-CENTER20.md).
+#   (research/experiments/n11-search-methods/reports/N11-DFPN-CENTER20.md).
 #
 # POLARITY (verified; see N11-DFPN-CENTER20.md)
 #   Move 60 is the original first player's. After it the original

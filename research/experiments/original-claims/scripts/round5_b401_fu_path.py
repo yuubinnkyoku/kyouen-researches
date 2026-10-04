@@ -1,10 +1,13 @@
 # B528/B530: addition-order flip experiments (empty -> standard)
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time, random
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 from kyouen_core import Board, board_square, is_forbidden_quad, det4
 
-OUT = Path(__file__).resolve().parent.parent / "round5_b401_fu_path.json"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b401_fu_path.json"
 N = 4
 
 def get_all_quads(board):

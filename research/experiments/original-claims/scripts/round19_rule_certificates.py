@@ -4,6 +4,9 @@ The robust strategy allows the opponent to choose any move compatible with a
 removal family, while our move must introduce no newly revealed removed quad.
 This proves a whole class of variants at once, without sampling variants.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations
 from functools import lru_cache
 from pathlib import Path
@@ -199,7 +202,7 @@ def main():
                            "coordinates": [[POINTS[p] for p in members(quads[i])] for i in witness],
                            "all_subfamilies": variants},
     }
-    target = Path(__file__).resolve().parents[1] / 'round19_rule_certificates.json'
+    target = (Path(__file__).resolve().parents[1] / "output") / 'round19_rule_certificates.json'
     target.write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({"robust_max": {k: v for k, v in robust_max.items() if k != 'defender_policy'}}))
 

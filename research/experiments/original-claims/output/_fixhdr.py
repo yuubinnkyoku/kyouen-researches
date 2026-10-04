@@ -1,5 +1,5 @@
 import io
-p = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round4-batch-b168-b227.md"
+p = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\reports\round4-batch-b168-b227.md"
 s = open(p, encoding="utf-8").read()
 i = s.index("## ")
 new = """## 途中で見つけた実装上の重要な誤り（自分の実装の記録）

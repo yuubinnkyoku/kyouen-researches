@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from fractions import Fraction
 
-OUT = Path(__file__).resolve().parents[1] / "round5_b251_thermo_lp.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round5_b251_thermo_lp.json"
 
 # level counts from round5_b251_solver.json (n=4,5)
 LEVELS = {

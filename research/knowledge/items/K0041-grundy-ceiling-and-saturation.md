@@ -14,11 +14,11 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: night-research/CYCLE5_GRUNDY_STRUCTURE.md
+- path: research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/verify_saturation.py
+- path: research/experiments/structural-discovery/scripts/verify_saturation.py
   role: verifier
   note: mex上界と全小盤分布の照合
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

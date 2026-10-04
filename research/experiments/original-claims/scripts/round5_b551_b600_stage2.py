@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Stage 2: B572 jump vs max nimber; B578 shared winning move symdiff."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -107,7 +110,7 @@ def main():
         print(f'n={n}: max_symdiff={max_sd} ({max_sd}/{n*n}={max_sd/(n*n):.2f}), groups={n_groups}')
     out['b578'] = b578
 
-    path = Path(__file__).resolve().parent.parent / 'round5_b551_b600_followup.json'
+    path = (Path(__file__).resolve().parent.parent / "output") / 'round5_b551_b600_followup.json'
     data = {}
     if path.exists():
         with open(path) as f:

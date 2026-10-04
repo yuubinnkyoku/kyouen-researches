@@ -1,6 +1,6 @@
 // Original B068 requires BOTH degree sequence and exact adjacency spectrum.
 // Characteristic polynomials are exact via integer traces/Newton identities.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <fstream>
 #include <map>

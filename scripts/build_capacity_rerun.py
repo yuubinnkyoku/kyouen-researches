@@ -31,7 +31,7 @@ AUDIT = ROOT / "scripts/audit_capacity_rerun_source_diff.py"
 REGRESSION = ROOT / "scripts/test_capacity_rerun_regression_frozen.py"
 REGRESSION_IMPL = ROOT / "scripts/test_capacity_rerun_regression.py"
 REGRESSION_EXPECTED = ROOT / "results/10x10/cache-aware-below-root-capacity-rerun/regression_expected.json"
-DEFAULT_BIN = ROOT / "tmp-kb/order_ab_capacity"
+DEFAULT_BIN = ROOT / "research/experiments/solver-benchmarks/bin/order_ab_capacity"
 DEFAULT_RECEIPT = ROOT / "results/10x10/cache-aware-below-root-capacity-rerun/build_receipt.json"
 
 SOURCES = [

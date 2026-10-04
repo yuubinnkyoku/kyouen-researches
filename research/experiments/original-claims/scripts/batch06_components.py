@@ -7,9 +7,12 @@ Uses existing COMPLETE certificates in results/:
   discovery_corridor_static_certificate.json  (21 covering quads, 6460 candidates)
   discovery_corridor_auxiliary.json
 
-Integer arithmetic only. Outputs research/verification/batch06_components.json
+Integer arithmetic only. Outputs research/experiments/original-claims/output/batch06_components.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -17,8 +20,8 @@ from collections import Counter, defaultdict, deque
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(ROOT / "night-research"))
+ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(ROOT / "research/experiments/structural-discovery/output"))
 
 from cycle8_lib import (  # noqa: E402
     apply_perm,

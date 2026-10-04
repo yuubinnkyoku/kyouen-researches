@@ -7,15 +7,15 @@ topics: [geometry]
 aliases: []
 relations: []
 artifacts:
-- path: research/geometry_20261003_extended.md
+- path: research/experiments/geometry/reports/geometry_20261003_extended.md
   role: proof
   note: 分母5・8の点数公式と閾値
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/theory_audit_20261003_extra.md
+- path: research/experiments/geometry/reports/theory_audit_20261003_extra.md
   role: proof
   note: 分母6の完全点数公式と最小半径
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/theory_audit_20261003_extra.json
+- path: research/experiments/geometry/output/theory_audit_20261003_extra.json
   role: data
   note: 大規模整数条件照合
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

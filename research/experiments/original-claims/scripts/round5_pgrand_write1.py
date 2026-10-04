@@ -1,6 +1,6 @@
 from pathlib import Path
 
-p = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5-batch-pgrand.md")
+p = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\reports\round5-batch-pgrand.md")
 text = p.read_text(encoding="utf-8")
 add = r'''
 ## B504 [存在] 誘惑手の数を増幅する幾何部品がある

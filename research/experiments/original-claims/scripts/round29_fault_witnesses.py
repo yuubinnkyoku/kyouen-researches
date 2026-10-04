@@ -6,7 +6,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 def evaluate(n,ids):
     points,quads,curves=geometry(n)
@@ -59,7 +59,7 @@ def main():
             'legacy_B369_invalid_n5_witness':{'ids':wrong,'size':len(wrong),'forbidden_quads':violated},
             'legacy_n6_rho_distribution':{'source':'round2_b351.json rho.n6_k11','rho1':296,'rho2':168,
                                           'note':'Legacy JSON itself contradicts the prose claim of all 464 rho=2; not rerun here.'}}
-    files=['scripts/round29_fault_witnesses.py','scripts/round25_forced_verify.py']
+    files=['../scripts/round29_fault_witnesses.py','../scripts/round25_forced_verify.py']
     result['sha256']={p:hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in files}
     (ROOT/'round29_fault_witnesses.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Finite saturation witness audit passed: B362/B367/B369 supported, B368 refuted')

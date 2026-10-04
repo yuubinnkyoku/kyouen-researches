@@ -18,8 +18,8 @@ import json
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-CERT = ROOT / "research/verification/round2_b431_lp_exact.json"
+ROOT = Path(__file__).resolve().parents[4]
+CERT = ROOT / "research/experiments/original-claims/output/round2_b431_lp_exact.json"
 
 
 def det4(points, n=7):

@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'cpp/solvers/kyouen_dfpn_root.cpp'
-      - 'research/verification/scripts/dfpn_regress_hybrid.sh'
+      - 'research/experiments/n11-search-methods/scripts/dfpn_regress_hybrid.sh'
       - '.github/workflows/n11-dfpn-hybrid-regression.yml'
   workflow_dispatch:
 
@@ -24,4 +24,4 @@ jobs:
           EXACT_BUDGET: '200000'
           EXACT_RETRIES: '2'
         run: |
-          bash research/verification/scripts/dfpn_regress_hybrid.sh
+          bash research/experiments/n11-search-methods/scripts/dfpn_regress_hybrid.sh

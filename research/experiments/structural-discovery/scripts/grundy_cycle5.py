@@ -13,8 +13,8 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+OUT_DIR = ROOT / "research/experiments/structural-discovery/output"
 
 
 def det4(p0, p1, p2, p3) -> int:

@@ -10,7 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "research" / "exploration"
-CERTS = ROOT / "night-research"
+CERTS = ROOT / "research/experiments/structural-discovery/output"
 
 
 def det3(m):

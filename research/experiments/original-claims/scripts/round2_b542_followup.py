@@ -11,7 +11,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from round2_b541_pairsum import pairsum_game, sigma2  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round2_b531.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round2_b531.json"
 
 
 def shift_interval_stats(A, B, window=20):

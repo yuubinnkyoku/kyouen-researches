@@ -10,11 +10,11 @@ relations:
   target: K0141
   note: K_10上界23をこの制約だけでは改善できないことを示す
 artifacts:
-- path: research/saturation-20261003.md
+- path: research/experiments/saturation/reports/saturation-20261003.md
   role: proof
   note: 23点緩和証人と既知上界
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/saturation_20261003_verified.json
+- path: research/experiments/saturation/output/saturation_20261003_verified.json
   role: data
   note: 行列双方の点対和と違反四点の検査
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

@@ -15,6 +15,9 @@ Jobs (selected via argv[1]):
   wchange  n          - W-size change under 1-point deletion (B201 side info)
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -33,7 +36,7 @@ from kyouen_core import (  # noqa: E402
     is_forbidden_quad,
 )
 
-OUTDIR = Path(__file__).resolve().parents[1]
+OUTDIR = (Path(__file__).resolve().parents[1] / "output")
 
 
 def save(name: str, obj) -> None:

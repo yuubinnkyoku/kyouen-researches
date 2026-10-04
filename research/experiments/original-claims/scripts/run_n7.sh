@@ -2,7 +2,7 @@
 # n=7 full p_rand DP.  Long-running; writes progress to /tmp/prand_n7.log
 # and the final JSON to /tmp/prand_n7.json.
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-cd "$REPO/research/verification/scripts"
+cd "$REPO/research/experiments/original-claims/scripts"
 g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/prand round4_b501_prand.cpp || exit 1
 echo "=== build ok, starting n=7 ==="
 date

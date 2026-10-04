@@ -5,8 +5,8 @@ from pathlib import Path
 from collections import Counter, defaultdict
 from itertools import combinations
 
-ROOT = Path(__file__).resolve().parents[3]
-NIGHT = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 OUT = ROOT / "research" / "verification" / "round2_b381.json"
 
 

@@ -59,7 +59,7 @@ def solve(quads):
 
 def main():
     source = Path(__file__).resolve()
-    root = source.parents[1]
+    root = source.parents[1] / "output"
     files = [root / name for name in ('round22_b252_n4_all_geometry.json',
               'round22_b252_n4_all_scan.json', 'round22_b252_scattered_cases.json',
               'round22_b252_scattered_scan.json')]

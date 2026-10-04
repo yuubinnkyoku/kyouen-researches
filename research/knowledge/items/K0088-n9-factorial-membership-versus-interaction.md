@@ -11,7 +11,7 @@ relations:
   target: K0087
   note: ''
 artifacts:
-- path: docs/9X9_FACTORIAL_EFFECT_HETEROGENEITY.md
+- path: research/experiments/9x9-factorial/reports/9X9_FACTORIAL_EFFECT_HETEROGENEITY.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

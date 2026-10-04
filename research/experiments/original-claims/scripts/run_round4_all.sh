@@ -1,8 +1,8 @@
 #!/bin/bash
 # Round4 batch b092-b127: full run.
 set -u
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
-V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
+V=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output
 cd "$S" || exit 1
 g++ -O2 -march=native -std=c++20 -o /tmp/r4 round4_b092.cpp 2> /tmp/r4_build.log || { echo BUILD FAILED; cat /tmp/r4_build.log; exit 1; }
 echo "BUILD OK"

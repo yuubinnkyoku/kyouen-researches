@@ -3,9 +3,12 @@
 
 読み取り専用データ: safe_n7_k12.bin, safe_n7_k13.bin, maxsafe_n7_K14.bin,
                     safe_n6_k*.bin, maximal_n6.bin
-出力: research/verification/round5_b101a_ab.json
+出力: research/experiments/original-claims/output/round5_b101a_ab.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -13,9 +16,9 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
-NIGHT = ROOT / "night-research"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, square_points  # noqa: E402
 

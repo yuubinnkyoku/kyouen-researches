@@ -16,12 +16,15 @@ from Package B, not re-ground):
   3. Conditional max with (2,2)+various forced cells / corner counts.
 
 Outputs:
-  night-research/cycle8_g1_22_geometry.py   (this file)
-  night-research/cycle8_g1_result.json
+  research/experiments/structural-discovery/scripts/cycle8_g1_22_geometry.py   (this file)
+  research/experiments/structural-discovery/output/cycle8_g1_result.json
   results/cycle8_g1_quads_through_22.json
-  night-research/CYCLE9_G1_NOTES.md         (only if a crisp lemma emerges)
+  research/log/discovery-cycles/CYCLE9_G1_NOTES.md         (only if a crisp lemma emerges)
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import subprocess
@@ -905,7 +908,7 @@ def main():
         "n": N,
         "K7": 14,
         "inputs": {
-            "maxsafe_n7_K14": "night-research/maxsafe_n7_K14.bin (16 sets, COMPLETE, not re-enum)",
+            "maxsafe_n7_K14": "research/experiments/structural-discovery/output/maxsafe_n7_K14.bin (16 sets, COMPLETE, not re-enum)",
             "n_quads": len(quads),
             "exe": EXE,
             "package_b": "results/cycle8_b_conditional_max.json",
@@ -1167,7 +1170,7 @@ Evidence labels:
 
 Reproduce:
 ```powershell
-& $env:MIMO_PYTHON night-research/cycle8_g1_22_geometry.py
+& $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_g1_22_geometry.py
 ```
 """
         notes_path.write_text(notes, encoding="utf-8")

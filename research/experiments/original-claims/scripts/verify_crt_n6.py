@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 P1 = (1 << 61) - 1
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 
 
 def inv(a, m):

@@ -1,7 +1,7 @@
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 ORIG = sorted(ROOT.glob("batch-*.md")) + sorted(ROOT.glob("round2-batch-*.md"))
 NEW = sorted(ROOT.glob("round3-batch-*.md"))
 HEAD = re.compile(r"^#{1,6}\s*(B\d{3})\b")

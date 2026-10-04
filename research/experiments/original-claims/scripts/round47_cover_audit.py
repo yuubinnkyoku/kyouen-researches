@@ -12,12 +12,12 @@ import json
 from round25_forced_verify import bits, det4, geometry
 from round46_audit import cover
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
-    dependencies = ['scripts/round47_cover_audit.py', 'scripts/round47_minimal_cover_census.cpp',
-                    'scripts/round25_forced_verify.py', 'scripts/round46_audit.py',
+    dependencies = ['../scripts/round47_cover_audit.py', '../scripts/round47_minimal_cover_census.cpp',
+                    '../scripts/round25_forced_verify.py', '../scripts/round46_audit.py',
                     'round46_saturation_verified.json', 'round45-cover-gap-and-sharp-overlap.md',
                     'round28_n4_layers.json', 'round39_n5_enum.json', 'round39_n6_enum.json',
                     'round28_n7_enum.json', 'round28_n7_layers.json', 'round47_layer_hashes.json']

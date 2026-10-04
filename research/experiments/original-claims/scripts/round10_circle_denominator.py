@@ -132,7 +132,7 @@ def main():
             'observed_maxima_not_universal_bounds':dict(max_observed),
             'first_four_point_examples_within_scan':first_four,
             'exact_q3_q4_threshold_witnesses':explicit,'fixed_center_unbounded_family_checks':families}
-    path=Path(__file__).resolve().parents[1]/'round10_circle_denominator.json'
+    path=(Path(__file__).resolve().parents[1] / "output")/'round10_circle_denominator.json'
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('primitive classes',count,'q1/q2 exact checks',exact_small)
     print('exact threshold witnesses',explicit)

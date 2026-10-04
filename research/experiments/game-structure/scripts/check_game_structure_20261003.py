@@ -9,7 +9,7 @@ import sys
 import tempfile
 
 HERE = Path(__file__).resolve().parent
-DATA = HERE.parent
+DATA = HERE.parent / "output"
 PREFIX = "game_structure_20261003"
 
 

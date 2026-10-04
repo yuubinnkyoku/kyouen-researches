@@ -15,6 +15,9 @@ Jobs:
   b149  - similarity-type coverage extended (top-k for k=1..20)
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -26,8 +29,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, det4, square_points, is_forbidden_quad
 
-DATA = Path(__file__).resolve().parent.parent / "data"
-OUT = Path(__file__).resolve().parent.parent / "round5_b101_multi.json"
+DATA = (Path(__file__).resolve().parent.parent / "output") / "data"
+OUT = (Path(__file__).resolve().parent.parent / "output") / "round5_b101_multi.json"
 
 
 def load_maximal(n: int) -> list[int]:

@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-cd "$REPO/research/verification/scripts"
+cd "$REPO/research/experiments/original-claims/scripts"
 g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/prand round4_b501_prand.cpp
 echo "=== build ok ==="
 /tmp/prand --selftest

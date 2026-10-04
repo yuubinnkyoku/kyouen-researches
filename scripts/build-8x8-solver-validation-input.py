@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Outcome-free / non-production solver validation inputs for 8x8.
 
-Does NOT read artifacts/8x8-o-required-roots.csv or any production outcome.
+Does NOT read research/experiments/solver-benchmarks/output/8x8-o-required-roots.csv or any production outcome.
 Builds synthetic safe 5-stone roots and known terminal/deep states.
 """
 from __future__ import annotations
@@ -11,7 +11,7 @@ import random
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "artifacts" / "8x8-solver-validation-input.csv"
+OUT = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-solver-validation-input.csv"
 
 N = 8
 V = 64

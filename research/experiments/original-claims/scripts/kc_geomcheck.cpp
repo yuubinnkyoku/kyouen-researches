@@ -2,7 +2,7 @@
 // known values for n = 2..9, and the safe-set count / degree distribution must
 // agree with the existing Python core. Kept separate from the K_n search,
 // which is exponential and run separately.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <map>
 

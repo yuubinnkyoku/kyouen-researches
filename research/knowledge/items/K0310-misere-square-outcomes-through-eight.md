@@ -10,19 +10,19 @@ topics:
 aliases: []
 relations: []
 artifacts:
-- path: research/game-structure-20261003.md
+- path: research/experiments/game-structure/reports/game-structure-20261003.md
   role: source
   note: §6のmisère 1..8盤の厳密勝敗と全初手分類
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/game_structure_20261003_eight.json
+- path: research/experiments/game-structure/output/game_structure_20261003_eight.json
   role: data
   note: 8×8全初手証明の集計
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/game_structure_20261003_eight_check.cpp
+- path: research/experiments/game-structure/scripts/game_structure_20261003_eight_check.cpp
   role: verifier
   note: 行列式ベースの独立検証器
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/game_structure_20261003_boards.json
+- path: research/experiments/game-structure/output/game_structure_20261003_boards.json
   role: data
   note: 6盤全局面mex対と7盤の独立P/N証明検査集計
 ---

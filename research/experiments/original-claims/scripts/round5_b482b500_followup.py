@@ -2,9 +2,12 @@
 """Round5 B482-B500 follow-up: settle PARTIAL/INCONCLUSIVE via weakened forms.
 
 Targets: B485 B487 B489 B490 B495 B496 B499 B500
-Outputs research/verification/round5_b482b500_followup.json
+Outputs research/experiments/original-claims/output/round5_b482b500_followup.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -14,7 +17,7 @@ from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round5_b482b500_followup.json"
 CACHE = ROOT / "research" / "verification" / "batch03_cache.pkl"
 FEAT_CACHE = ROOT / "research" / "verification" / "round5_b482b500_feats.pkl"

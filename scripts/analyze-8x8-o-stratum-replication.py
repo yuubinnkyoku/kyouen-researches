@@ -2,10 +2,10 @@
 """Analyze 8x8 O-stratum replication outcomes against the frozen primary criterion.
 
 Reads frozen strata + census outcomes. Writes:
-  - artifacts/8x8-o-parent-outcomes.csv
-  - artifacts/8x8-o-primary-summary.json
-  - artifacts/8x8-o-9x9-comparison.csv
-  - artifacts/8x8-o-analysis-summary.json
+  - research/experiments/solver-benchmarks/output/8x8-o-parent-outcomes.csv
+  - research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json
+  - research/experiments/solver-benchmarks/output/8x8-o-9x9-comparison.csv
+  - research/experiments/solver-benchmarks/output/8x8-o-analysis-summary.json
 """
 from __future__ import annotations
 
@@ -16,12 +16,12 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-STRATA = ROOT / "artifacts" / "8x8-o-strata.csv"
-OUTCOMES = ROOT / "artifacts" / "8x8-o-census-outcomes.csv"
-PARENT_OUT = ROOT / "artifacts" / "8x8-o-parent-outcomes.csv"
-PRIMARY = ROOT / "artifacts" / "8x8-o-primary-summary.json"
-COMPARE = ROOT / "artifacts" / "8x8-o-9x9-comparison.csv"
-SUMMARY = ROOT / "artifacts" / "8x8-o-analysis-summary.json"
+STRATA = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-strata.csv"
+OUTCOMES = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-census-outcomes.csv"
+PARENT_OUT = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-parent-outcomes.csv"
+PRIMARY = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-primary-summary.json"
+COMPARE = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-9x9-comparison.csv"
+SUMMARY = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-analysis-summary.json"
 
 # Frozen 9x9 exploratory reference (holdout-based; not a threshold source).
 NINE = {

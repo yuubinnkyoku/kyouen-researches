@@ -14,7 +14,7 @@ import struct
 from round25_forced_verify import bits, det4, geometry
 from round46_audit import cover
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -79,8 +79,8 @@ def main():
     assert {str(k): v for k, v in release_hist.items()} == result['one_deletion_releasable_point_histogram']
     s9 = json.loads((ROOT/'round46_saturation_verified.json').read_text())
     assert s9['s9_bounds'] == [9, 9]
-    files = ['scripts/round50_private_audit.py', 'scripts/round50_n9_private.cpp',
-             'scripts/round46_kmin_tight.cpp', 'scripts/round25_forced_verify.py', 'scripts/round46_audit.py',
+    files = ['../scripts/round50_private_audit.py', '../scripts/round50_n9_private.cpp',
+             '../scripts/round46_kmin_tight.cpp', '../scripts/round25_forced_verify.py', '../scripts/round46_audit.py',
              'round4_b371.bin', 'round50_n9_private_family.json', 'round46_saturation_verified.json']
     out = {'family': 'all translated n8 maximal-eight catalogue members, dx/dy 0..1, plus one legal point on n9',
            'family_complete': True, 'n': 9, 's9': 9, 'embeddings': 1632, 'extensions': extensions,

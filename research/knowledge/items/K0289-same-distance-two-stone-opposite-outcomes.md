@@ -10,11 +10,11 @@ aliases:
 - H6
 relations: []
 artifacts:
-- path: research/hypotheses.md
+- path: research/archive/hypothesis-ledgers/hypotheses.md
   role: source
   note: H6の原仮説と当時未実施だった検証計画
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-evidence: research/exploration/fact_10x10_r_pairs_sigma_d.jsonで{90,61}=LOSS、{73,66}=WIN。id=y*10+xなので両方とも平方距離10。
+evidence: research/experiments/fact-discovery/output/fact_10x10_r_pairs_sigma_d.jsonで{90,61}=LOSS、{73,66}=WIN。id=y*10+xなので両方とも平方距離10。
 ---
 
 # 10×10では同じ二点間距離でも二石局面の勝敗が異なる
@@ -28,4 +28,4 @@ H6「二石の勝敗は二点間距離だけでは決まらない」は、既存
 
 である。同じ平方距離10にWINとLOSSが共存するため、10×10の二石局面の勝敗は距離だけの関数ではない。
 
-旧H6メモは異なる距離の例しか挙げておらず未確定としていたが、後続の `research/exploration/fact_10x10_r_pairs_sigma_d.json` に上の二局面の確定ラベルが保存されていた。全120個の二石D4軌道を分類する必要はなく、この存在命題にはこの一組の反例対で十分である。
+旧H6メモは異なる距離の例しか挙げておらず未確定としていたが、後続の `research/experiments/fact-discovery/output/fact_10x10_r_pairs_sigma_d.json` に上の二局面の確定ラベルが保存されていた。全120個の二石D4軌道を分類する必要はなく、この存在命題にはこの一組の反例対で十分である。

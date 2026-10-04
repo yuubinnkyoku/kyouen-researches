@@ -10,15 +10,15 @@ relations:
   target: K0071
   note: M_{3,5}=12の有限区間部分を閉じる
 artifacts:
-- path: research/q35-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q35-exact-threshold.md
   role: source
   note: 支持集合グラフによる完全排除
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/q35_exact_threshold.json
+- path: research/experiments/fixed-width/output/q35_exact_threshold.json
   role: data
   note: m=12..40の全候補集計
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/q35_support_exclusion.cpp
+- path: research/experiments/fixed-width/scripts/q35_support_exclusion.cpp
   role: solver
   note: 外部4点集合を全列挙する完全排除
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

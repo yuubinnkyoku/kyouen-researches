@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-SRC=$REPO/research/verification/scripts/round5_b251_b267.cpp
+SRC=$REPO/research/experiments/original-claims/scripts/round5_b251_b267.cpp
 BIN=/tmp/r5b267
 mkdir -p /tmp/r5b251
 echo "COMPILING..."

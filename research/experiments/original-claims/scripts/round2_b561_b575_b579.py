@@ -9,6 +9,9 @@ B579: at fixed (n,k,g,|L|), singleton-WFT positions share winning moves
 with 1-swap neighbours more often.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import random
@@ -27,7 +30,7 @@ from round2_b561_exchange import (  # noqa: E402
     winning_moves,
 )
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round2_b561.json"
 
 

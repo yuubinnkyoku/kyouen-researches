@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Cycle 37 — census occupancy contrast n=6 vs n=7 (COMPLETE from bins)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

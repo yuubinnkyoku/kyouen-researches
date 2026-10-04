@@ -13,15 +13,15 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/verification/round46-small-saturation-and-window-reduction.md
+- path: research/experiments/original-claims/reports/round46-small-saturation-and-window-reduction.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round46_sat_atmost8.json
+- path: research/experiments/original-claims/output/round46_sat_atmost8.json
   role: data
   note: SAT証人の独立検査と有限範囲
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/data/s8_exact.json
+- path: research/experiments/original-claims/output/data/s8_exact.json
   role: data
   note: 7石完全排除記録
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

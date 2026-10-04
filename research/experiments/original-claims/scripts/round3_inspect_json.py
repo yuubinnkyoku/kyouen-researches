@@ -2,7 +2,7 @@
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 SMALL = ["round3_b475_mn.json", "round3_b501_pgrand_n5.json", "round3_chunk8_tworow.json",
          "round3_chunk5_sharp.json", "round3_chunk5_verify.json", "round3_chunk6_wft.json",
          "round3_chunk2_saturation.json"]

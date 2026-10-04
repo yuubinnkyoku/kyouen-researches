@@ -11,7 +11,7 @@ import threading
 import time
 from round25_forced_verify import geometry,bits
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -52,7 +52,7 @@ def main():
             s=sum(1<<p for p in ids);assert len(ids)<=8 and all(s&q!=q for q in quads)
             assert all(any((q&~(1<<p))&s==q&~(1<<p) for q in quads if q>>p&1) for p in range(V) if p not in ids)
             witness=ids
-    files=['scripts/round46_sat.py','scripts/round25_forced_verify.py','../../scripts/analysis/fact_kmin_cover_bound.cpp']
+    files=['../scripts/round46_sat.py','../scripts/round25_forced_verify.py','../../scripts/analysis/fact_kmin_cover_bound.cpp']
     out={'n':9,'stone_count_bound':8,'status':'UNSAT' if result is False else 'SAT' if result is True else 'UNKNOWN',
          'solver':'Glucose4','python_sat_version':pysat.__version__,'wall_seconds':elapsed,
          'variables':card.nv,'clauses':len(clauses),'quad_count':len(quads),

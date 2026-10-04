@@ -20,7 +20,7 @@ Two rigorous quantities, both cheap:
 The U bound is vectorised with numpy popcounts, so tens of thousands of candidates
 can be screened; only the survivors pay for the L computation.
 
-Integer arithmetic only.  Writes research/verification/round3_b591_b592_pool.json.
+Integer arithmetic only.  Writes research/experiments/original-claims/output/round3_b591_b592_pool.json.
 """
 from __future__ import annotations
 
@@ -34,7 +34,7 @@ import numpy as np
 from round3_b591_core import (quads_np, build_qm, max_overlap, coords, popcount,
                               d4_perm, apply_perm)
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b591_b592_pool.json"
 DEADLINE = time.time() + 165.0
 

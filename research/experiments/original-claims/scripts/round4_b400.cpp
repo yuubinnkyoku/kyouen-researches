@@ -1,7 +1,7 @@
 // Round4 b400 worker: C++ (WSL g++ 13.3.0, 16 cores).
 // Integer arithmetic only; every ratio is an exact reduced fraction p/q.
 // Engine shared with all other round4 workers: kc_core.h.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <cmath>
 #include <map>

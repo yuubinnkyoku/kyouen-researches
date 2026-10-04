@@ -4,7 +4,7 @@
 //   g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/r4 round4_b092.cpp
 //
 // All arithmetic is integer. Occupancy is one u64 per board (n*n <= 64).
-// Output: research/verification/round4_b092.json
+// Output: research/experiments/original-claims/output/round4_b092.json
 //
 // Jobs are selected by argv[1] so a long computation can be run piecewise.
 //   sat    : s_n / full maximal-size spectrum / B099 attribution   (B091..B100)
@@ -15,7 +15,7 @@
 //   defo   : n=7 corner component / shortest paths / labels        (B115,B118,B120)
 //   aux    : n=6 width-10 pairs, aux points, common-point removal  (B123,B124,B125,B127)
 
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <algorithm>
 #include <array>
@@ -36,10 +36,10 @@ using kc::u64;
 using kc::Board;
 
 static const char* VER =
-    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification";
-static const char* DATA = "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data";
+    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output";
+static const char* DATA = "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data";
 static const char* NIGHT =
-    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/night-research";
+    "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/structural-discovery/output";
 
 static FILE* g_out = nullptr;
 static double g_t0 = 0;
@@ -998,14 +998,14 @@ int main(int argc, char** argv) {
         jline("{"); jopen("selftest"); jclose(""); jline("}");
         struct Case { int n, K; const char* path; };
         Case cs[] = {
-            {5, 9, "/night-research/maxsafe_n5_K9.bin"},
+            {5, 9, "/research/experiments/structural-discovery/output/maxsafe_n5_K9.bin"},
             {5, 9, ""},   // placeholder replaced below
         };
         (void)cs;
         struct Chk { int n; int K; const char* f; };
         Chk chk[] = {
-            {7, 14, "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/night-research/maxsafe_n7_K14.bin"},
-            {5, 8,  "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/data/kc_maximal_n5_k8.bin"},
+            {7, 14, "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/structural-discovery/output/maxsafe_n7_K14.bin"},
+            {5, 8,  "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/data/kc_maximal_n5_k8.bin"},
         };
         for (auto& c : chk) {
             std::vector<u64> ref = read_bin(c.f);

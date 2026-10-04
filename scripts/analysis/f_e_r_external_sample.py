@@ -26,7 +26,7 @@ SEED = "kyouen-10x10-f-e-r-external-holdout-seed-20260922"
 BASELINE = "224f0dae89f95bfafa20290e872d96b9567dc6d7"
 PER_STRATUM = 12
 OUT_DIR = ROOT / "results" / "10x10" / "f-e-r-external-holdout"
-PREREG_REL = "docs/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md"
+PREREG_REL = "research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_PREREG.md"
 
 
 def d4_point(p: int, k: int) -> int:
@@ -173,7 +173,7 @@ def collect_exclusions() -> set[str]:
         f
         for f in proc.stdout.splitlines()
         if f.endswith((".csv", ".json", ".md", ".txt"))
-        and any(tok in f for tok in ("10x10", "results", "artifacts", "docs"))
+        and any(tok in f for tok in ("10x10", "results", "research/experiments/solver-benchmarks/output", "docs"))
     ]
     for fpath in files:
         show = subprocess.run(

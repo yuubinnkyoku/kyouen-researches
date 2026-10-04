@@ -1,6 +1,6 @@
 import json
 
-with open('research/verification/round2_b561.json', encoding='utf-8') as f:
+with open('research/experiments/original-claims/output/round2_b561.json', encoding='utf-8') as f:
     d = json.load(f)
 
 for key in ['b581','b582','b583','b584','b585','b586','b587','b588','b589','b590']:

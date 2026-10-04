@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Step 1: minimal reproducer + baseline run of the current CRT solver at n=4.
 set -uo pipefail
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
 mkdir -p /tmp/kc_build
 
 echo "===== swap_repro (minimal release-pattern check) ====="

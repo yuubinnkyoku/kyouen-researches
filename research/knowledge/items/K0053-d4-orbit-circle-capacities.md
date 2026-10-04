@@ -12,11 +12,11 @@ relations:
   target: K0001
   note: ''
 artifacts:
-- path: night-research/CYCLE31B_ORBIT_CIRCLES_ALL_N.md
+- path: research/log/discovery-cycles/CYCLE31B_ORBIT_CIRCLES_ALL_N.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md
+- path: research/log/discovery-cycles/CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md
   role: proof
   note: 7×7骨格の有限占有vector排除
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -1,7 +1,7 @@
 // Round5 B201-B202: n x n one-point deletion — K and empty-board g.
 // Usage: ./round5_b201_del1 <n>   (n<=7, but n=7 is heavy)
 // Output: JSON lines to stdout.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <bits/stdc++.h>
 using namespace kc;
 using namespace std;

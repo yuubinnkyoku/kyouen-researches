@@ -5,6 +5,9 @@ Builds two independent engines under unique /tmp names. Data lives beside
 this script's parent directory. Every saved positive witness is checked again
 using Python's full determinant expansion.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations
 import hashlib
 import json
@@ -13,7 +16,7 @@ import subprocess
 
 from kyouen_core import is_forbidden_quad
 
-FOLDER=Path(__file__).resolve().parents[1]
+FOLDER=(Path(__file__).resolve().parents[1] / "output")
 SCRIPTS=FOLDER/"scripts"
 
 

@@ -1,7 +1,7 @@
 #!/bin/bash
 # round4 b591b driver 2 -- n=8 layer max d_max (B591/B592/B593) + B599 certificate
 set -u
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output
 cd $S/scripts || exit 1
 mkdir -p /tmp/b591bout
 

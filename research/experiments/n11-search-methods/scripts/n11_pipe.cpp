@@ -42,7 +42,7 @@
 //     equivalent to the incremental "is the new move legal" test.  After
 //     processing v the entry is set to the child's own mask, so the check
 //     for a later v is a single bit test plus a subset test.
-#include "kc_core121.h"
+#include "../../../../scripts/research/kc_core121.h"
 
 #include <algorithm>
 #include <cerrno>

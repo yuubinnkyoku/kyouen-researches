@@ -15,7 +15,7 @@ def main():
     parser.add_argument('--min-circle-points', type=int, default=5)
     parser.add_argument('--stem', default='round22_b252_n6')
     args = parser.parse_args()
-    root = Path(__file__).resolve().parents[1]
+    root = (Path(__file__).resolve().parents[1] / "output")
     n = args.n
     assert 4 <= n <= 7
     points, groups, quads = regenerate(n)

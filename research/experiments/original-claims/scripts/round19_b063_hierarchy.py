@@ -1,4 +1,7 @@
 """Integer certificates for the original B063, including minimal graph order."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations, permutations
 from pathlib import Path
 import hashlib
@@ -85,7 +88,7 @@ def main():
         "n3_exclusion": {"safe_four_stone_sets_checked": checked,
                          "sets_with_five_legal_vertices": candidates},
     }
-    target = Path(__file__).resolve().parents[1] / 'round19_b063_hierarchy.json'
+    target = (Path(__file__).resolve().parents[1] / "output") / 'round19_b063_hierarchy.json'
     target.write_text(json.dumps(out, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('PASS: K_(1,4), all 11 graph types, and smaller-board exclusion')
     print(json.dumps(out['n3_exclusion']))

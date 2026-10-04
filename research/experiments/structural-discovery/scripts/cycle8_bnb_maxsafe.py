@@ -6,6 +6,9 @@ Geometry: integer 4x4 det of [x^2+y^2,x,y,1].
 Every run reports node count, constraint, and complete/incomplete.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import argparse
 import json

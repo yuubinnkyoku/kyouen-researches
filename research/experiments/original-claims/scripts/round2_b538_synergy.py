@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from batch10_core import Game, classify_quads, grundy_map  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round2_b531.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round2_b531.json"
 
 
 def analyze(n: int) -> dict:

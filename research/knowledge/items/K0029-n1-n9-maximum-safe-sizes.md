@@ -15,11 +15,11 @@ artifacts:
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/CYCLE5_GRUNDY_STRUCTURE.md
+- path: research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md
   role: source
   note: 小盤・7/8の完全最大探索
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round55-eighteen-stone-original-counterexample.md
+- path: research/experiments/original-claims/reports/round55-eighteen-stone-original-counterexample.md
   role: source
   note: 18石証人の独立検算と上界の信頼境界
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

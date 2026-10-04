@@ -4,6 +4,9 @@
 Writes round5_b271_s2lp_n6.json and merges B285 into round5_b271_s2lp.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -16,8 +19,8 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, det4, square_points, rect_points, is_forbidden_quad
 
-OUT_N6 = Path(__file__).resolve().parents[1] / "round5_b271_s2lp_n6.json"
-OUT_MAIN = Path(__file__).resolve().parents[1] / "round5_b271_s2lp.json"
+OUT_N6 = (Path(__file__).resolve().parents[1] / "output") / "round5_b271_s2lp_n6.json"
+OUT_MAIN = (Path(__file__).resolve().parents[1] / "output") / "round5_b271_s2lp.json"
 
 
 def _det_row(pt):

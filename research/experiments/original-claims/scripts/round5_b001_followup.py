@@ -2,9 +2,12 @@
 """Round5 followup B072: max b_S(p) for safe k-sets at k=5 (and k=6 for n<=5).
 Also B045: D4 stabilizer sizes for n=5 maximal sets (already enumerated).
 B054: residual splitting rate for n=5 at remaining-depth >= 4."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
 from collections import Counter
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points
 
 def b072_k5(n, k=5):
@@ -169,6 +172,6 @@ if __name__ == "__main__":
     results["b072_n6_k5"] = b072_k5(6, 5)
     # B045 n=5 symmetry
     results["b045_n5"] = b045_n5()
-    with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_followup.json", "w") as f:
+    with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_followup.json", "w") as f:
         json.dump(results, f, indent=2)
     print("Done.", flush=True)

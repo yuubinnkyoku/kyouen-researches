@@ -6,6 +6,9 @@ Exact rational arithmetic on small boards (n=3,4,5).  No floats for counts;
 Python floats only for reporting ratios (means/variances of exact counts).
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -14,7 +17,7 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round2_b471.json"
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import Board, board_square  # noqa: E402

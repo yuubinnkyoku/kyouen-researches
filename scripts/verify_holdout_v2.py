@@ -18,7 +18,7 @@ EXPECTED_TASKS = 1914
 EXPECTED_DIGEST = "22ec3bf65379b64e8aa8a35dea8b2264a37bd9e9ebd42425d0932c7dfc2a8728"
 OUT_DIR = REPO_ROOT / "results" / "10x10" / "blind-probe-holdout-v2"
 PROTECTED_V1 = [
-    "docs/10X10_PROBE_HOLDOUT_PREREGISTRATION.md",
+    "research/experiments/solver-benchmarks/reports/10X10_PROBE_HOLDOUT_PREREGISTRATION.md",
     "results/10x10/holdout-parent-selection-preregistered.csv",
     "results/10x10/two-stone-90-66-child-proof.csv",
     "results/10x10/two-stone-90-61-child-proof.csv",

@@ -16,13 +16,13 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-POP = ROOT / "artifacts" / "8x8-factorial-population.csv"
-STRATA = ROOT / "artifacts" / "8x8-o-strata.csv"
-PARENTS = ROOT / "artifacts" / "8x8-o-parent-outcomes.csv"
-OUT = ROOT / "artifacts" / "8x8-o-posthoc-structure.json"
-OUT_CSV = ROOT / "artifacts" / "8x8-o-flip-classes.csv"
+POP = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-factorial-population.csv"
+STRATA = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-strata.csv"
+PARENTS = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-parent-outcomes.csv"
+OUT = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-posthoc-structure.json"
+OUT_CSV = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-o-flip-classes.csv"
 
-# 9x9 exploratory reference (from docs/9X9_FACTORIAL_EFFECT_HETEROGENEITY.md)
+# 9x9 exploratory reference (from research/experiments/9x9-factorial/reports/9X9_FACTORIAL_EFFECT_HETEROGENEITY.md)
 NINE = {
     "O0_only": {"n": 296, "delta": 0.091216, "change_rate": 0.435811},
     "O_overlap": {"n": 419, "delta": -0.014320, "change_rate": 0.444391},

@@ -3,7 +3,7 @@
 Infrastructure now in place:
   * round3_M8_pool.bin holds 1,009,679 pairwise distinct safe 15-subsets of B_8
     (K_8 = 15), found by local search seeded from the confirmed witness in
-    night-research/cycle6-maxsafeset-n8-15.json.  A random 15-subset of the 64
+    research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json.  A random 15-subset of the 64
     points carries ~91 forbidden quads on average, so sampling is hopeless and
     local search is the only way to get family members.
 
@@ -19,7 +19,7 @@ Round 2 never touched n=8; it stopped at d_max = 8 (13 stones, n=7) against
 |M_7| = 16.  The ratio |M_n| / C(n^2, K_n - 1) is what controls d_max, and that is
 the structural point recorded in the batch file.
 
-Integer arithmetic only.  Writes research/verification/round3_b591_b592.json.
+Integer arithmetic only.  Writes research/experiments/original-claims/output/round3_b591_b592.json.
 """
 from __future__ import annotations
 
@@ -33,7 +33,7 @@ import numpy as np
 
 from round3_b591_core import quads_np, build_qm, max_overlap, coords, popcount, d4_perm, apply_perm
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b591_b592.json"
 POOLBIN = ROOT / "research" / "verification" / "round3_M8_pool.bin"
 DEADLINE = time.time() + 165.0

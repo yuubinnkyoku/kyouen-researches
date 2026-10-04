@@ -22,8 +22,8 @@ jobs:
       - name: Build single endpoint binary
         run: |
           mkdir -p tmp-kb
-          rm -f tmp-kb/order_ab_native
-          g++ -O2 -std=c++20 scripts/probe_cert_solver.cpp -o tmp-kb/order_ab_native
+          rm -f research/experiments/solver-benchmarks/bin/order_ab_native
+          g++ -O2 -std=c++20 scripts/probe_cert_solver.cpp -o research/experiments/solver-benchmarks/bin/order_ab_native
       - name: Collect complete blinded 12x3 cohort then open endpoint
         run: python3 scripts/run_loss_first_only_endpoint.py
       - name: Preserve complete endpoint

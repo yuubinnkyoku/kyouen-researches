@@ -2,13 +2,16 @@
 """Batch 06 verification: B101-B110 max-config shape / rigidity / mandatory points.
 
 Loads COMPLETE max-safe enumerations:
-  night-research/maxsafe_n6_K11.bin  (464 sets, K=11)
-  night-research/maxsafe_n7_K14.bin  (16 sets,  K=14)
-via night-research/cycle8_lib.py. Integer arithmetic only.
+  research/experiments/structural-discovery/output/maxsafe_n6_K11.bin  (464 sets, K=11)
+  research/experiments/structural-discovery/output/maxsafe_n7_K14.bin  (16 sets,  K=14)
+via scripts/research/cycle8_lib.py. Integer arithmetic only.
 
-Outputs research/verification/batch06_shape_rigidity.json
+Outputs research/experiments/original-claims/output/batch06_shape_rigidity.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -16,8 +19,8 @@ from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(ROOT / "night-research"))
+ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(ROOT / "research/experiments/structural-discovery/output"))
 
 from cycle8_lib import (  # noqa: E402
     apply_perm,

@@ -8,15 +8,15 @@ topics:
 relations: []
 aliases: []
 artifacts:
-- path: research/verification/round44-three-stone-cliques-and-tree-minima.md
+- path: research/experiments/original-claims/reports/round44-three-stone-cliques-and-tree-minima.md
   role: proof
   note: 最小接続木K1,3の一般証明と格子実現
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round44_tree_clique_verified.json
+- path: research/experiments/original-claims/output/round44_tree_clique_verified.json
   role: data
   note: 明示証人と有限照合結果
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round44_tree_and_clique.py
+- path: research/experiments/original-claims/scripts/round44_tree_and_clique.py
   role: verifier
   note: 証人の独立検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -1,5 +1,5 @@
 from pathlib import Path
-p = Path('research/verification/round5-batch-b551-b600.md')
+p = Path('research/experiments/original-claims/reports/round5-batch-b551-b600.md')
 text = p.read_text(encoding='utf-8')
 add = r'''
 ## B572 [存在] 一石交換で nimber が任意に大きく跳ぶ

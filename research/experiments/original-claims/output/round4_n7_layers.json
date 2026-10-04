@@ -1,5 +1,5 @@
 {
-  "script": "research/verification/scripts/round4_n7_layers.cpp",
+  "script": "research/experiments/original-claims/scripts/round4_n7_layers.cpp",
   "estimate_correction": {
     "claim_rejected": "K_7 = 14 with 16 maximal safe sets implies a state space of at most 16 * 2^14 = 262144, so a full n=7 Grundy is cheap.",
     "measurement": "A plain enumerate-all-safe-subsets recursion on n=7 reached 134217731 subsets in about 3 minutes on one core and was still climbing when stopped. That is over 500x the naive bound.",

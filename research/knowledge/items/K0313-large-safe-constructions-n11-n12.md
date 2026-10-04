@@ -10,15 +10,15 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/saturation-20261003-extra.md
+- path: research/experiments/saturation/reports/saturation-20261003-extra.md
   role: source
   note: 21・22・24石構成と外周被覆
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/saturation_20261003_extra_verified.json
+- path: research/experiments/saturation/output/saturation_20261003_extra_verified.json
   role: data
   note: 全四点安全性と全空点阻害証人
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/saturation_20261003_extra_verify.py
+- path: research/experiments/saturation/scripts/saturation_20261003_extra_verify.py
   role: verifier
   note: 独立整数行列式検証
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

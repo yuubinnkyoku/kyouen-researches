@@ -10,8 +10,8 @@ import csv
 from pathlib import Path
 
 def main():
-    holdout_path = Path("experiments/9x9-factorial-execution-base/holdout.csv")
-    solver_inputs_dir = Path("experiments/9x9-factorial-execution-base/solver_inputs")
+    holdout_path = Path("research/experiments/9x9-factorial-execution-base/holdout.csv")
+    solver_inputs_dir = Path("research/experiments/9x9-factorial-execution-base/solver_inputs")
     
     with open(holdout_path, newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
@@ -48,7 +48,7 @@ def main():
     print(f"Parents requiring child evaluations: {len(parent_to_moves)}")
 
     # Save manifest of deduplicated tasks
-    out_manifest = Path("experiments/9x9-factorial-execution-base/dedup_manifest.txt")
+    out_manifest = Path("research/experiments/9x9-factorial-execution-base/dedup_manifest.txt")
     with open(out_manifest, "w", encoding="utf-8") as f:
         f.write(f"Total holdout parents: {len(rows)}\n")
         f.write(f"Total evaluation slots across 4 comparisons: {total_slots}\n")

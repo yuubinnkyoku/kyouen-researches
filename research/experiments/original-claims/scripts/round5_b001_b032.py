@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Round5 B032: compute T*({p}) for each winning first move on n=5.
 Also B100: collect maximal safe set sizes for n=4,5,6 if data available."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points
 
 t0 = time.time()
@@ -154,7 +157,7 @@ result = {
     "K_5": 9,
     "K_5_in_tstar_empty": 9 in ts_empty,
 }
-with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_b032.json", "w") as f:
+with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_b032.json", "w") as f:
     json.dump(result, f, indent=2)
 print(f"\nTime: {time.time()-t0:.1f}s", flush=True)
 print("Done.", flush=True)

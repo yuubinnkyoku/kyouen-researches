@@ -23,10 +23,10 @@ from fractions import Fraction
 from math import gcd
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[1] / "round4_b474_b477.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round4_b474_b477.json"
 
 # Exact F_n = number of forbidden 4-sets (concyclic OR collinear) on the n x n board.
-# Source: research/verification/PROTOCOL.md line 20 (README), n=2..9.
+# Source: research/archive/claim-audit-history/PROTOCOL.md line 20 (README), n=2..9.
 # C_n (non-collinear concyclic 4-sets) is then C_n = F_n - D_n, D_n from
 # collinear_c4() below (itself validated in round4-collinear-asymptotic.md §8).
 KNOWN_F = {

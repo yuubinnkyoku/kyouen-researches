@@ -15,7 +15,7 @@ relations:
   target: K0272
   note: ''
 artifacts:
-- path: night-research/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
+- path: research/log/discovery-cycles/DISCOVERY_CORNER_GATE_AND_COMPONENTS.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

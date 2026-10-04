@@ -1,5 +1,5 @@
 {
-  "script": "research/verification/scripts/round4_tstar.cpp",
+  "script": "research/experiments/original-claims/scripts/round4_tstar.cpp",
   "parity_lemma": {
     "statement": "Along a winner-preserving trajectory the positions alternate P,N,P,N,... starting at S. If S is a P position (loser to move) the loser moves to an N position, an EVEN number of extra moves is used, and the player to move at S_0 is the loser, so the loser makes the last move iff the number of extra moves is odd. If S is an N position the winner must move to a P position, so an ODD number of extra moves is used and the winner (who moved first) makes the last move. In both cases the player to move at S makes the last move, and the terminal size m satisfies m = |S| + (0 if S is P else 1) mod 2.",
     "key_correction": "This is NOT the same as 'T*(empty) is all even when the empty board is a P position'. On a second-player-win board the empty board IS a P position and every one of the n^2 first moves is winner-preserving, so T*(empty) genuinely mixes parities. Measured: n=4 gives {5,6,7} and n=5 gives {5,6,7,8,9}. The first draft of this file asserted the all-even version and it is WRONG.",

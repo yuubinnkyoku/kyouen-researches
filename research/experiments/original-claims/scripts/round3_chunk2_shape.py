@@ -32,7 +32,7 @@ from round3_chunk2_geom import (  # noqa: E402
     square_pts,
 )
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_chunk2_shape.json"
 
 

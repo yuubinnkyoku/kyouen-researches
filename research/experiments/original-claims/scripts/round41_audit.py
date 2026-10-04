@@ -6,7 +6,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits,det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -69,8 +69,8 @@ def main():
     old=json.loads((ROOT/'round39_empty_pair_audited.json').read_bytes())
     assert old['finite_exclusion']=='No B065 witness for n<=7; if it exists, n>=8'
     assert all(r['max_computed_g']<=3 for r in old['large_board_censuses'])
-    files=['scripts/round41_audit.py','scripts/round41_empty_pair_bounded.cpp',
-           'scripts/round25_forced_verify.py','scripts/kc_core.h','round41_n8_bounded.json',
+    files=['../scripts/round41_audit.py','../scripts/round41_empty_pair_bounded.cpp',
+           '../scripts/round25_forced_verify.py','../../../../scripts/research/kc_core.h','round41_n8_bounded.json',
            'round39_empty_pair_audited.json','round39-b065-seven-board-exclusion.md']
     out={'original_verdict':'SUPPORTED','minimum_board_n':8,'n':n,'S_mask':s,
          'S_ids':list(bits(s)),'S_coordinates':[points[p] for p in bits(s)],

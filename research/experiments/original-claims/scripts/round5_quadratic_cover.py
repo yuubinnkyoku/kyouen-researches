@@ -5,6 +5,9 @@ denominators to get integer S_N with b(0)=2*floor((N-1)^2/4).
 Translate a second copy by (T,T^2), avoiding all mixed forbidden four-sets.
 Universal proofs are in round5-quadratic-cover.md, not inferred from tests.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations
 from math import lcm,prod
 from pathlib import Path
@@ -89,7 +92,7 @@ def main():
             "b_values":[b1,b2],"guaranteed_b":old,"four_sets_checked":checked,
             "rejected_translations":attempts,"embedding":board_embedding(union,[(0,0),shift])})
         print('double',n,'k',len(union),'T',t,'b',b1,b2,flush=True)
-    path=Path(__file__).resolve().parents[1]/"round5_quadratic_cover.json"
+    path=(Path(__file__).resolve().parents[1] / "output")/"round5_quadratic_cover.json"
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(path,flush=True)
 

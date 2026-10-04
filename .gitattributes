@@ -6,3 +6,20 @@
 *.md text eol=lf
 *.sh text eol=lf
 *.bin binary
+
+*.py text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ps1 text eol=lf
+*.rs text eol=lf
+*.toml text eol=lf
+research/archive/source-snapshot-2026-09/SOURCE_SHA256SUMS.txt -text
+release-assets/SHA256SUMS.txt -text
+research/archive/audits/knowledge-open-freshness-main-2026-10-04.json -text
+research/archive/audits/progress-integration-2026-09-28-audit.json -text
+research/experiments/original-claims/output/round26_original_scope_index.json -text
+research/experiments/original-claims/output/round4_b501_prand.json -text
+research/experiments/original-claims/output/round9_n7_n8_overlap.json -text
+research/experiments/saturation/output/saturation_20261003_verified.json -text
+results/9x9/factorial/effect-heterogeneity/SHA256SUMS.txt -text

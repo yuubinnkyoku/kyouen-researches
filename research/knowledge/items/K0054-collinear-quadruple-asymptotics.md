@@ -15,15 +15,15 @@ relations:
   target: K0055
   note: 共線Θ(n^6)という旧漸近主張を否定
 artifacts:
-- path: research/verification/round4-collinear-asymptotic.md
+- path: research/experiments/original-claims/reports/round4-collinear-asymptotic.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/ROUND4-B141-VERIFICATION.md
+- path: research/experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md
   role: verifier
   note: 方向別恒等式・定数の独立再計算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round4_collinear_asymptotic.json
+- path: research/experiments/original-claims/output/round4_collinear_asymptotic.json
   role: data
   note: 整数・有理数の有限検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

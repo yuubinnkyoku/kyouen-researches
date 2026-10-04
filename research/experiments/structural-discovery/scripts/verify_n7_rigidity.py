@@ -20,7 +20,7 @@ from pathlib import Path
 
 N = 7
 V = N * N
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def det4(p0, p1, p2, p3):
@@ -52,7 +52,7 @@ for ids in combinations(range(V), 4):
             quads_by_pt[i].append(ids)
 print(f"forbidden quads: {len(quads)}")
 
-data = (ROOT / "night-research" / "maxsafe_n7_K14.bin").read_bytes()
+data = (ROOT / "research/experiments/structural-discovery/output" / "maxsafe_n7_K14.bin").read_bytes()
 sets = [struct.unpack_from("<Q", data, i)[0] for i in range(0, len(data), 8)]
 print(f"maximal sets loaded: {len(sets)}")
 

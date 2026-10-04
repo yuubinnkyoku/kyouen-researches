@@ -12,9 +12,12 @@ B298 more (k+1)-supersets (and no larger local h) but P  -> exists
 B299 blocking one winning move keeps N, a previously non-winning move becomes winning
 B300 depth-d move trees isomorphic but P/N differ (d=1 here; d=2 in B300 script)
 
-Output: research/verification/round3_chunk5_sharp.json
+Output: research/experiments/original-claims/output/round3_chunk5_sharp.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -26,7 +29,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square, det4  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_chunk5_sharp.json"
 
 

@@ -1,6 +1,6 @@
 // B087 probe: can any n=6 maximum safe set (size 11) be extended to a
 // size-14 safe set on 7x7 under the 4 translation embeddings?
-// Usage: b087_extend.exe  (reads night-research/maxsafe_n6_K11.bin)
+// Usage: b087_extend.exe  (reads research/experiments/structural-discovery/output/maxsafe_n6_K11.bin)
 #include <bits/stdc++.h>
 using namespace std;
 using u64 = uint64_t;
@@ -59,7 +59,7 @@ static void dfs_extend(u64 ch, int k, int start, int budget) {
 
 int main() {
     build_geometry(6);
-    FILE* f = fopen("night-research/maxsafe_n6_K11.bin","rb");
+    FILE* f = fopen("research/experiments/structural-discovery/output/maxsafe_n6_K11.bin","rb");
     if (!f) { fprintf(stderr,"open bin failed\n"); return 1; }
     vector<u64> sets;
     u64 v;

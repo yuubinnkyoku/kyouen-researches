@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """B045: D4 stabilizer sizes for n=5 maximal safe sets (quick)."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
 from collections import Counter
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points
 
 def b045_n5():
@@ -83,6 +86,6 @@ def b045_n5():
 
 if __name__ == "__main__":
     r = b045_n5()
-    with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_b045.json", "w") as f:
+    with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_b045.json", "w") as f:
         json.dump({"n5": r}, f, indent=2)
     print("Done.", flush=True)

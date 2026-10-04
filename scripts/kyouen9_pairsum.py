@@ -7,7 +7,7 @@ matches the solver's determinant test: for points (x,y), the 4x4 matrix
 [x^2+y^2, x, y, 1] has determinant 0 for concyclic-or-collinear quads
 (the circle equation degenerates to a line).
 
-Two response-set modes (see docs/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md;
+Two response-set modes (see research/experiments/9x9-factorial/reports/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md;
 P6 requires them to be explicitly separated so the definition error cannot
 recur):
 

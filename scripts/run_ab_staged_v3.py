@@ -187,7 +187,7 @@ def frozen_manifest(tasks: list[dict[str, str]], parents: list[str]) -> dict[str
             "sample_size": len(parents),
         },
         "probe": {
-            "binary": "tmp-kb/probe_holdout_native",
+            "binary": "research/experiments/solver-benchmarks/bin/probe_holdout_native",
             "binary_sha256": sha256_file(PROBE_BIN),
             "sources_sha256": PROBE_STAMP.read_text(encoding="ascii").strip(),
             "budget_10k": PROBE_10K,
@@ -199,7 +199,7 @@ def frozen_manifest(tasks: list[dict[str, str]], parents: list[str]) -> dict[str
             "ranking_key": "probe LOSS first; unresolved memo_used asc; probe WIN last; move asc",
         },
         "parent_solve": {
-            "binary": "tmp-kb/parent_bench_native",
+            "binary": "research/experiments/solver-benchmarks/bin/parent_bench_native",
             "binary_sha256": sha256_file(BENCH_BIN),
             "sources_sha256": BENCH_STAMP.read_text(encoding="ascii").strip(),
             "build_cmd": ["g++", "-O2", "-std=c++20"],

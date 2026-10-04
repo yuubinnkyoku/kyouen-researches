@@ -2,7 +2,7 @@
 # Memory-capped n=7 run. Writes progress to a log file we can tail.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/prand_n7.log
 : > "$LOG"
 mkdir -p /tmp/kc_build

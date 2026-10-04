@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """B285 (cached grundy, n=4,5 only) + B281 (4x4 grid k=6)."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json
 import sys
 from pathlib import Path
@@ -8,7 +11,7 @@ from itertools import combinations
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square, is_forbidden_quad
 
-OUT = Path(__file__).resolve().parents[1] / "round5_b251_embed.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round5_b251_embed.json"
 
 _cache = {}
 

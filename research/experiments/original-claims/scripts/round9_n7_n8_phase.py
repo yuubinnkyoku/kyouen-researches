@@ -3,6 +3,9 @@
 The lower bound comes from the complete round9 zero/one-deletion audit.
 This script only searches for the matching upper bound, not all n8 maxima.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from pathlib import Path
 from itertools import combinations, product
 import json
@@ -12,7 +15,7 @@ from round9_geometry import curve, evaluate, determinant
 
 
 def main():
-    directory = Path(__file__).resolve().parents[1]
+    directory = (Path(__file__).resolve().parents[1] / "output")
     prior = json.loads((directory/'round9_n7_n8_overlap.json').read_text(encoding='utf-8'))
     record = next(r for r in prior['records'] if not (r['mask_n7']>>24&1))
     base = [(i%7,i//7) for i in range(49) if record['mask_n7']>>i&1]

@@ -5,9 +5,12 @@ Corrects the board_square_minus ID/coord bug that invalidated
 round5_b401_del3.json (it passed int ids into a (x,y)-coord API, so no
 points were ever deleted).
 
-Outputs research/verification/round5_pgrand.json
+Outputs research/experiments/original-claims/output/round5_pgrand.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import itertools
 import json
@@ -16,12 +19,12 @@ import sys
 import time
 from pathlib import Path
 
-REPO = Path(__file__).resolve().parents[3]
+REPO = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square, board_square_minus, is_forbidden_quad  # noqa: E402
 
 OUT = REPO / "research" / "verification" / "round5_pgrand.json"
-NIGHT = REPO / "night-research"
+NIGHT = REPO / "research/experiments/structural-discovery/output"
 
 rep: dict = {}
 t0 = time.time()

@@ -2,9 +2,12 @@
 """Round2 B301-B308, B311-B315, B318: graph analysis of J_5 and J_4.
 
 J_n: vertices = board points, edge {p,q} iff g({p,q}) == 0 (2-stone P-position).
-Output: research/verification/round2_b301.json (section "graph").
+Output: research/experiments/original-claims/output/round2_b301.json (section "graph").
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -15,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square  # noqa: E402
 
-OUT_JSON = Path(__file__).resolve().parent.parent / "round2_b301.json"
+OUT_JSON = (Path(__file__).resolve().parent.parent / "output") / "round2_b301.json"
 
 
 # ---------------- graph helpers ----------------

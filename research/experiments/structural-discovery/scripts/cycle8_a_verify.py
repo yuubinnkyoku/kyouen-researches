@@ -4,13 +4,16 @@
 Recomputes the 9/5/5 split, D4 uniqueness of the eight d=5 pairs, path
 min-width facts, and blocker/hitting-set invariants WITHOUT importing any
 conclusions from cycle8_a_template.py. May import cycle8_lib only.
-Compares its own agreement_keys against night-research/cycle8_a_result.json
+Compares its own agreement_keys against research/experiments/structural-discovery/output/cycle8_a_result.json
 if that file exists (soft compare) and always prints VERIFY_FACTS.
 
-Run:  & $env:MIMO_PYTHON night-research/cycle8_a_verify.py
+Run:  & $env:MIMO_PYTHON research/experiments/structural-discovery/scripts/cycle8_a_verify.py
 Exit 0 iff recomputed hard asserts hold; prints DISAGREE if JSON mismatch.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

@@ -11,7 +11,7 @@ d=2 additionally the multiset over children of the sorted child-histograms
 
 We search for pairs (S,T) with equal d-depth tree invariants but opposite P/N.
 
-Output: research/verification/round3_chunk5_b300.json
+Output: research/experiments/original-claims/output/round3_chunk5_b300.json
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from round3_chunk5_sharp import Game, bits, h_all  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_chunk5_b300.json"
 
 

@@ -6,7 +6,7 @@ reported so a human/agent can fix, or the section is auto-marked.
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 NEW = sorted(ROOT.glob("round3-batch-*.md"))
 HEAD = re.compile(r"^#{1,6}\s*(B\d{3})\b")
 

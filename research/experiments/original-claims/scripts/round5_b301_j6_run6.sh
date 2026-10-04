@@ -1,6 +1,6 @@
 #!/bin/bash
 set -x
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
 cd "$S"
 echo "=== run n=2..6 ==="
 /tmp/round5_b301_j6 6 2>&1

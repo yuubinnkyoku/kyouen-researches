@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """round5_b101a_ident_inv — B106/B107（識別点数）と B140（反転変換）と B104（未使用軌道）。
 
-出力: research/verification/round5_b101a_ident_inv.json
+出力: research/experiments/original-claims/output/round5_b101a_ident_inv.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -12,7 +15,7 @@ from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, square_points, is_forbidden_quad  # noqa: E402

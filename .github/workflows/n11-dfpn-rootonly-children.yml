@@ -25,4 +25,4 @@ jobs:
           EXACT_BUDGET: '200000'
           EXACT_RETRIES: '2'
         run: |
-          bash research/verification/scripts/dfpn_rootonly_children_probe.sh
+          bash research/experiments/n11-search-methods/scripts/dfpn_rootonly_children_probe.sh

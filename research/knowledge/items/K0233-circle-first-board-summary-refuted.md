@@ -9,23 +9,23 @@ aliases:
 - B458
 relations: []
 artifacts:
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round16-first-appearance.md
+- path: research/experiments/original-claims/reports/round16-first-appearance.md
   role: source
   note: 同じ要約量で四点初出が異なる反例と無限拡大族
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round16_first_appearance.json
+- path: research/experiments/original-claims/output/round16_first_appearance.json
   role: data
   note: 反例円と初出プロファイルの厳密データ
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round16_first_appearance.py
+- path: research/experiments/original-claims/scripts/round16_first_appearance.py
   role: verifier
   note: 完全点集合と初出サイズの独立検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-round2-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md
   role: source
   note: B458の原文
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

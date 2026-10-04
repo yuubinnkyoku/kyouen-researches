@@ -2,8 +2,8 @@
 """Adversarial re-analysis for overnight Kyouen hypotheses.
 
 Corrects the prior structure-audit I=0 force condition and produces exact
-counts needed to cheaply kill candidate claims. Read-only over artifacts/.
-Writes night-research/adversarial_brief_analysis.json
+counts needed to cheaply kill candidate claims. Read-only over research/experiments/solver-benchmarks/output/.
+Writes research/experiments/structural-discovery/output/adversarial_brief_analysis.json
 """
 from __future__ import annotations
 
@@ -13,7 +13,7 @@ import math
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = Path(__file__).resolve().parent / "adversarial_brief_analysis.json"
 
 
@@ -107,11 +107,11 @@ def canonical_5(p4: tuple[int, ...], move: int, n: int = 8) -> tuple[int, ...]:
 
 
 def main() -> None:
-    parents = load(ROOT / "artifacts/8x8-o-parent-outcomes.csv")
-    strata = load(ROOT / "artifacts/8x8-o-strata.csv")
-    pop = load(ROOT / "artifacts/8x8-factorial-population.csv")
-    outcomes = load(ROOT / "artifacts/8x8-o-census-outcomes.csv")
-    roots = load(ROOT / "artifacts/8x8-o-required-roots.csv")
+    parents = load(ROOT / "research/experiments/solver-benchmarks/output/8x8-o-parent-outcomes.csv")
+    strata = load(ROOT / "research/experiments/solver-benchmarks/output/8x8-o-strata.csv")
+    pop = load(ROOT / "research/experiments/solver-benchmarks/output/8x8-factorial-population.csv")
+    outcomes = load(ROOT / "research/experiments/solver-benchmarks/output/8x8-o-census-outcomes.csv")
+    roots = load(ROOT / "research/experiments/solver-benchmarks/output/8x8-o-required-roots.csv")
 
     pop_by = {r["canonical_parent"]: r for r in pop}
     outcome_keys = {(r["canonical_parent"], int(r["move"])): r["child_outcome"] for r in outcomes}
@@ -423,7 +423,7 @@ def main() -> None:
         "empirical_I_hist": dict(Counter(r["interaction_I"] for r in olap)),
         "informative_parents_for_deep_identity": free + force_partial,
         "prior_audit_bug": (
-            "night-research/analyze_8x8_structure.py checked te==raw and t==to, "
+            "research/experiments/structural-discovery/scripts/analyze_8x8_structure.py checked te==raw and t==to, "
             "which NEVER holds on O-overlap (definitional inequality). "
             "Correct force is t==te and to==raw → 151/155 fully forced."
         ),

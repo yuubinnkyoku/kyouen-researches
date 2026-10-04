@@ -6,7 +6,7 @@
 // also keeps every level resident, so the sum over levels may still dominate.
 //
 // Usage: prand8_probe <n>
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <cstdint>
 #include <cstdio>

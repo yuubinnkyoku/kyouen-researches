@@ -10,19 +10,19 @@ relations:
   target: K0024
   note: ''
 artifacts:
-- path: research/q34-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q34-exact-threshold.md
   role: source
   note: q=4全長分類
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/q35-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q35-exact-threshold.md
   role: source
   note: q=5全長分類
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/q36-three-row-classification.md
+- path: research/experiments/fixed-width/reports/q36-three-row-classification.md
   role: source
   note: q=6およびq≥7を含む統一分類
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/check_fixed_width_20261003.py
+- path: research/experiments/fixed-width/scripts/check_fixed_width_20261003.py
   role: verifier
   note: 軽量統合再現
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

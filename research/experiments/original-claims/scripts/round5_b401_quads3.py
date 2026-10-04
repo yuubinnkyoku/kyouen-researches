@@ -6,6 +6,9 @@ beyond what pairs already showed (pairs: 0 flips). Also test a broader
 structured set: all triples co-occurring in some S with |C(S)|<=3.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -13,7 +16,7 @@ import time
 from itertools import combinations
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square  # noqa: E402
 

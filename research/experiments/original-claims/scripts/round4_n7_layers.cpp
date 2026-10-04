@@ -30,7 +30,7 @@
 //   g({p}) != 0 for every p whenever g(empty) = 0.  That part needs no
 //   enumeration at all, and it is what round4-batch-b002-b091.md Part 1 records.
 
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <algorithm>
 #include <cstdio>
@@ -101,7 +101,7 @@ int main(int argc, char** argv) {
     if (argc > 1) nmax = atoi(argv[1]);
 
     printf("{\n");
-    printf("  \"script\": \"research/verification/scripts/round4_n7_layers.cpp\",\n");
+    printf("  \"script\": \"research/experiments/original-claims/scripts/round4_n7_layers.cpp\",\n");
     printf("  \"estimate_correction\": {\n");
     printf("    \"claim_rejected\": \"K_7 = 14 with 16 maximal safe sets implies a state space of at most 16 * 2^14 = 262144, so a full n=7 Grundy is cheap.\",\n");
     printf("    \"measurement\": \"A plain enumerate-all-safe-subsets recursion on n=7 reached 134217731 subsets in about 3 minutes on one core and was still climbing when stopped. That is over 500x the naive bound.\",\n");

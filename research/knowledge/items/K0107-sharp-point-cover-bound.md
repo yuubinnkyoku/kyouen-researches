@@ -15,11 +15,11 @@ relations:
   target: K0134
   note: 本文の証明・証人が原文に与える帰結
 artifacts:
-- path: research/verification/round45-cover-gap-and-sharp-overlap.md
+- path: research/experiments/original-claims/reports/round45-cover-gap-and-sharp-overlap.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round45_cover_verified.json
+- path: research/experiments/original-claims/output/round45_cover_verified.json
   role: data
   note: 整数反転と全三点・四点の鋭さ証人
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -4,6 +4,9 @@ The cubic bound is proved in round4-ap-construction.md; this is not a proof of
 B558's quadratic bound. All forbidden starts come from 3 old + 1 new or
 2 old + 2 new points. No float operations, search cutoffs, or dependencies.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from itertools import combinations
 from math import comb,isqrt
 from pathlib import Path
@@ -95,7 +98,7 @@ def main():
             "all_quadruples_checked":quads,"root_formula_checks":root_checks,
             "bound":"3 + 6*C(3*w-2,3) - 15*(w-1)",
             "quadratic_bound_proved":False}
-    path=Path(__file__).resolve().parents[1]/"round4_ap_greedy.json"
+    path=(Path(__file__).resolve().parents[1] / "output")/"round4_ap_greedy.json"
     path.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print('row starts',[row['start'] for row in rows])
     print('prefix board lengths',[row['running_board_length'] for row in rows])

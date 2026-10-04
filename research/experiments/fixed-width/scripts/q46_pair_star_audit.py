@@ -24,7 +24,7 @@ def determinant4(points):
 
 
 def main():
-    directory = Path(__file__).resolve().parents[1]
+    directory = (Path(__file__).resolve().parents[1] / "output")
     data = json.loads((directory/'q46_pair_independent_star.json').read_text())
     results = []
     for candidate in data['all_seven_edge_candidates']:

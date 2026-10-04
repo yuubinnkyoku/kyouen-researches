@@ -111,7 +111,7 @@ def main():
         "levels": per_level,
     }
 
-    outpath = sys.argv[1] if len(sys.argv) > 1 else "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/round5_prand_n8.json"
+    outpath = sys.argv[1] if len(sys.argv) > 1 else "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/round5_prand_n8.json"
     with open(outpath, "w") as f:
         json.dump(result, f, indent=2)
     print(f"wrote {outpath}")

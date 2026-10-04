@@ -125,13 +125,13 @@ def frozen_protocol() -> dict[str, object]:
                            "tee its output to regression.log before freezing")
     return {
         "experiment": "cache-aware vs cache-blind below-root ordering",
-        "prereg": ("docs/10X10_CACHE_AWARE_VS_BLIND_BELOW_ROOT_PREREG.md @ "
+        "prereg": ("research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_VS_BLIND_BELOW_ROOT_PREREG.md @ "
                    "21e7bfec13f593dddbd65f81a4f58a1b5c791aa1, base 80b734b"),
         "cohort": {"parents": list(EXPECTED_PARENTS)},
         "conditions": dict(CONDITION_SEMANTICS),
         "condition_order": "counterbalanced per parent index "
                            "(even: aware first; odd: blind first)",
-        "parent_solve": {"binary": "tmp-kb/order_ab_native",
+        "parent_solve": {"binary": "research/experiments/solver-benchmarks/bin/order_ab_native",
                          "binary_sha256": sha256_file(BIN),
                          "sources_sha256": solver_sources_digest(),
                          "build_cmd": ["g++", "-O2", "-std=c++20"],

@@ -10,7 +10,7 @@ import csv, json, math, statistics, subprocess, tempfile, time
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-BIN=ROOT/"tmp-kb/order_ab_native"
+BIN=ROOT/"research/experiments/solver-benchmarks/bin/order_ab_native"
 OUT=ROOT/"results/10x10/cache-aware-loss-first-only"
 PARENTS=["0,11,35","11,38,44","11,78,87","12,24,68","12,32,55","13,52,57","14,64,74","23,44,45","3,47,63","3,53,84","4,24,26","4,42,54"]
 CONDS=("B","L","F")

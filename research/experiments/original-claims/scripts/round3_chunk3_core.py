@@ -15,6 +15,9 @@ max_sets     : enumerate/count maximum safe sets (branch and bound)
 homology     : integral homology of the safe-set complex (SNF over Z)
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import sys
 from collections import defaultdict

@@ -75,7 +75,7 @@ def frozen_protocol() -> dict[str, object]:
     return {
         "cohort": {"parents": list(EXPECTED_PARENTS)},
         "instrumentation": "below-root memo reuse counters (preregistered)",
-        "parent_solve": {"binary": "tmp-kb/memo_instr_native",
+        "parent_solve": {"binary": "research/experiments/solver-benchmarks/bin/memo_instr_native",
                          "binary_sha256": sha256_file(BIN),
                          "sources_sha256": solver_sources_digest(),
                          "build_cmd": ["g++", "-O2", "-std=c++20"],

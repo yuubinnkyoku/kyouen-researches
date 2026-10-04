@@ -5,7 +5,7 @@ sampling cannot build the maximum-set family on B_8: a random 15-subset of the 6
 points contains on average 42394 * C(15,4)/C(64,4) = 91 forbidden quads, so the
 safe rate is far below 1e-4 and the pool came out empty.  Maximum sets must be
 built by LOCAL SEARCH instead, seeded from the confirmed 15-stone witness in
-`night-research/cycle6-maxsafeset-n8-15.json`.
+`research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json`.
 
 That family size is itself the object B591/B592 turn on.  The d_max maxima of round 2
 are 0,0,2,3,4,8 for n=2..7 while |M_n| is 56, 64, 100, 464, 16 for n=3..7; the n=7
@@ -17,7 +17,7 @@ value 8 is large because |M_7| = 16 is tiny.  So:
 gives, for the first time, an upper bound on the n=8 layer maximum, and a lower
 bound on how large |M_8| must be for the n=7 behaviour to continue.
 
-Integer arithmetic only.  Writes research/verification/round3_b591_b592_m8.json.
+Integer arithmetic only.  Writes research/experiments/original-claims/output/round3_b591_b592_m8.json.
 """
 from __future__ import annotations
 
@@ -31,7 +31,7 @@ import numpy as np
 from round3_b591_core import (quads_np, build_qm, max_overlap, coords, popcount,
                               d4_perm, apply_perm)
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b591_b592_m8.json"
 DEADLINE = time.time() + 165.0
 N, K, KS = 8, 15, 14

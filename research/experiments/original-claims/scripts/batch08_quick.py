@@ -7,9 +7,9 @@ import math
 import sys
 from collections import defaultdict
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 
-OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\batch08_results3.json"
+OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\batch08_results3.json"
 report = {}
 
 # B169

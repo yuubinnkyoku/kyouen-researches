@@ -1,7 +1,7 @@
 // Export exact mex and low layers from sorted safe-set level files.
 // Geometry/enumeration: kc_core.h and round5_prand_stream.cpp --enum.
 // This solver uses only Grundy numbers, no probability or modular values.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <array>
 #include <cstdio>

@@ -8,11 +8,14 @@ import sys
 import tempfile
 
 HERE = Path(__file__).resolve().parent
+DATA = HERE.parent / "output"
 
 
 def stable(value):
     if isinstance(value, dict):
-        return {k: stable(v) for k, v in value.items() if k != "seconds"}
+        return {k: (v.split(", ")[0] + ", " + Path(v.split(", ")[1]).name
+                    if k == "inherited_lower_bound" else stable(v))
+                for k, v in value.items() if k not in ("seconds", "source_sha256")}
     if isinstance(value, list):
         return list(map(stable, value))
     return value
@@ -23,18 +26,18 @@ def main():
     parser.add_argument("--full-exclusion", action="store_true",
                         help="Also repeat the 1.5 billion-node seven-stone exclusion")
     args = parser.parse_args()
-    certificate = HERE / "saturation_20261003_verified.json"
-    saved = json.loads(certificate.read_text())
-    subprocess.run([sys.executable, str(HERE / "saturation_20261003_verify.py")], check=True)
-    assert json.loads(certificate.read_text()) == saved
-    extra_certificate = HERE / "saturation_20261003_extra_verified.json"
-    extra_saved = json.loads(extra_certificate.read_text())
-    command = [sys.executable, str(HERE / "saturation_20261003_extra_verify.py")]
-    if args.full_exclusion:
-        command.append("--rerun-exact")
-    subprocess.run(command, check=True)
-    assert json.loads(extra_certificate.read_text()) == extra_saved
-    expected = json.loads((HERE / "saturation_20261003_exact_results.json").read_text())["results"]
+    with tempfile.TemporaryDirectory(prefix="kyouen-saturation-audits-") as audit_tmp:
+        for stem in ("saturation_20261003", "saturation_20261003_extra"):
+            saved = json.loads((DATA / (stem + "_verified.json")).read_text())
+            target = Path(audit_tmp) / (stem + "_verified.json")
+            command = [sys.executable, str(HERE / (stem + "_verify.py")), "--output", str(target)]
+            if stem.endswith("extra") and args.full_exclusion:
+                command.append("--rerun-exact")
+            subprocess.run(command, check=True)
+            # Source hashes describe the historical run. A path migration changes
+            # sources; compare all mathematical data and retain the frozen receipt.
+            assert stable(json.loads(target.read_text())) == stable(saved)
+    expected = json.loads((DATA / "saturation_20261003_exact_results.json").read_text())["results"]
     with tempfile.TemporaryDirectory(prefix="kyouen-saturation-check-") as tmp:
         binary = str(Path(tmp) / "exact")
         subprocess.run(["g++", "-O3", "-std=c++17", str(HERE / "saturation_20261003_exact.cpp"),

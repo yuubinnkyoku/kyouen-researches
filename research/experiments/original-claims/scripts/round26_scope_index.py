@@ -11,9 +11,9 @@ import re
 import tempfile
 
 
-ROOT = Path(__file__).resolve().parents[1]
-BANKS = [ROOT.parent/'hypothesis-bank-2026-09-27.md',
-         ROOT.parent/'hypothesis-bank-round2-2026-09-27.md']
+ROOT = (Path(__file__).resolve().parents[1] / "output")
+BANKS = [ROOT.parents[2]/'archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md',
+         ROOT.parents[2]/'archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md']
 ORIGINAL = re.compile(r'^- \*\*(B\d{3}) \[([^]]+)\] (.*?)\*\* (.+)$')
 ID = re.compile(r'B\d{3}(?!\d)')
 LABEL = re.compile(r'(?<![A-Z-])(SUPPORTED|REFUTED|PARTIAL|INCONCLUSIVE|NOT-CHECKED)(?![A-Z-])')
@@ -292,7 +292,7 @@ def main():
     hashes = {}
     for bank in BANKS:
         lines = bank.read_text(encoding='utf-8-sig').splitlines()
-        hashes[str(bank.relative_to(ROOT.parent))] = hashlib.sha256(bank.read_bytes()).hexdigest()
+        hashes[bank.name] = hashlib.sha256(bank.read_bytes()).hexdigest()
         section_title, section_start = '', 0
         for line_no, line in enumerate(lines, 1):
             if line.startswith('## '):
@@ -366,10 +366,10 @@ def main():
         original = f"[{row['id']}](../{row['bank']}#L{row['original_line']})"
         evidence = f"[{row['preferred_report']}]({row['preferred_report']})" if row['preferred_report'] else f"旧個票参照{len(row['evidence_pointers'])}箇所（JSON）"
         lines.append(f"| {original} | [{row['tag']}] {title} | {row['original_status']} | {evidence} |")
-    lines += ['', '再現: `python research/verification/scripts/round26_scope_index.py`。',
+    lines += ['', '再現: `python research/experiments/original-claims/scripts/round26_scope_index.py`。',
               '[機械可読索引](round26_original_scope_index.json)には各原文行、節の前提、根拠の種類と採用理由を含める。',
               '根拠の更新はスクリプト内の明示的なREVIEWEDへ加える。推測したステータスで空欄を埋めない。','']
-    atomic_text(ROOT/'round26-original-scope-index.md','\n'.join(lines))
+    atomic_text(ROOT / '../reports/round26-original-scope-index.md','\n'.join(lines))
     print('PASS originals=600; reviewed=',reviewed_count,'audit states=',counts,'pointers=',sum(len(r['evidence_pointers']) for r in rows))
 
 

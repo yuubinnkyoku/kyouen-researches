@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """Push3 wave4 (lean): K10 embed+extend, s_n, J-graph, rectangles, B070/B089/B090."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json, sys, random, itertools
 from collections import Counter, defaultdict
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points, board_square, board_rect, is_forbidden_quad
 
-PATH = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_push3.json"
+PATH = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_push3.json"
 OUT = json.load(open(PATH, encoding="utf-8"))
 
 def save():

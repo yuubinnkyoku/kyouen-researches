@@ -1,7 +1,7 @@
 """Round3 chunk-4: engine self-validation against PROTOCOL.md known facts.
 
 Checks the fast numpy engine reproduces the established numbers before any
-hypothesis work is done.  Writes research/verification/round3_chunk4_selfcheck.json
+hypothesis work is done.  Writes research/experiments/original-claims/output/round3_chunk4_selfcheck.json
 """
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ from round3_chunk4_core import (  # noqa: E402
     apply_perm_mask,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk4_selfcheck.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk4_selfcheck.json"
 V = int(sys.argv[1]) if len(sys.argv) > 1 else 5
 
 

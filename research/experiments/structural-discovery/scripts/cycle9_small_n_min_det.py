@@ -6,6 +6,9 @@ then computes min_det distribution — contrast for the n=7 min_det=2 lemma.
 Evidence: complete enumeration when finished; labeled per board.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

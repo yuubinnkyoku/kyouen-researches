@@ -24,7 +24,7 @@ Strategy (integer/rational arithmetic only, no floats in the combinatorics):
   arithmetic after clearing denominators.
 
 We also recompute the previously-known n=3..6 numbers to cross-check against
-research/verification/round2_b471.json and research/exploration/fact_circle_*.json.
+research/experiments/original-claims/output/round2_b471.json and research/experiments/fact-discovery/output/fact_circle_*.json.
 """
 from __future__ import annotations
 
@@ -36,7 +36,7 @@ from fractions import Fraction
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b475_mn.json"
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 
@@ -223,7 +223,7 @@ def main():
     results = {}
     # Exact full enumeration of the circle spectrum for n = 3 .. 20.
     # Validated against the pre-existing exploration data for n = 6..11
-    # (research/exploration/fact_circle_spectrum_*.json): every histogram entry,
+    # (research/experiments/fact-discovery/output/fact_circle_spectrum_*.json): every histogram entry,
     # every C_n and every M(n) agrees exactly.
     ns = list(range(3, 21))
     for n in ns:

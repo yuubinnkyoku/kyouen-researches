@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 """B520 weak: n=3 δ_K achievement sets — does W survive?"""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json
 from itertools import combinations
 sys.path.insert(0, __file__.rsplit("\\", 1)[0] if "\\" in __file__ else ".")
@@ -78,9 +81,9 @@ def main():
            "Kdrop_count": len(all_Kdrop),
            "winner_changes": winner_changes,
            "winner_change_count": len(winner_changes)}
-    with open("round5_b520_n3.json", "w") as f:
+    with open("research/experiments/original-claims/output/round5_b520_n3.json", "w") as f:
         json.dump(out, f, indent=2)
-    print("saved round5_b520_n3.json")
+    print("saved research/experiments/original-claims/output/round5_b520_n3.json")
 
 if __name__ == "__main__":
     main()

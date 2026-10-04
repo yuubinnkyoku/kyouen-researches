@@ -2,7 +2,7 @@
 //
 // WHY: plain DFS + transposition table hits the same wall on all four 11x11
 // first moves (2.5-2.8e8 visited / 15 min, unsolved, exploding at d13-d16;
-// see research/verification/N11-PROBE-4WAY.md). df-pn concentrates resources
+// see research/experiments/n11-search-methods/reports/N11-PROBE-4WAY.md). df-pn concentrates resources
 // on branches that look provable instead of sweeping every layer uniformly.
 // This file is 11x11-first but templated on N; the DFS solver stays as the
 // comparison baseline.
@@ -1259,7 +1259,7 @@ private:
     // moves, so a single --exact-legal that admits s7 (>=114) also
     // admits every shallower layer, and raising it makes the shallower
     // layers fail the gate more often rather than less. See
-    // research/verification/N11-DFPN-FRONTIER-LAYERS.md.
+    // research/experiments/n11-search-methods/reports/N11-DFPN-FRONTIER-LAYERS.md.
     // Lookup is by stone count; anything not listed falls back to
     // exact_legal_.
     std::array<int,64> exact_legal_by_stones_{};

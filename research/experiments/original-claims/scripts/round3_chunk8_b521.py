@@ -18,7 +18,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from round3_chunk8_lib import Quads, all_forbidden, is_collinear, square  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk8_b521.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk8_b521.json"
 
 _PTS = None
 _QUADS = None

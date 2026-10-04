@@ -6,7 +6,7 @@ B596: G_12 / G_11 path length sample (equal vs one-sided).
 B599: circle/line capacity notes on far 13-stone sets.
 
 Loads maxsafe_n7_K14.bin and safe_n7_k{12,13}.bin.
-Writes research/verification/round2_b591.json (merges key "b594_phases").
+Writes research/experiments/original-claims/output/round2_b591.json (merges key "b594_phases").
 """
 from __future__ import annotations
 
@@ -17,9 +17,9 @@ from collections import Counter, deque
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
-NIGHT = ROOT / "night-research"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 OUT = ROOT / "research" / "verification" / "round2_b591.json"
 
 N = 7

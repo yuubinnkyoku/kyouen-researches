@@ -2,7 +2,7 @@
 // Round46 exact minimal-maximal search. New suffix count upper bound.
 // Derived from scripts/analysis/fact_kmin_cover_bound.cpp; shared file unchanged.
 // Usage:
-//   g++ -O3 -std=c++17 research/verification/scripts/saturation_20261003_exact.cpp -o /tmp/kyouen-saturation-exact
+//   g++ -O3 -std=c++17 research/experiments/saturation/scripts/saturation_20261003_exact.cpp -o /tmp/kyouen-saturation-exact
 //   /tmp/kyouen-saturation-exact <n> <k> [time_limit_seconds]
 // Supports n<=11. A time limit of 0 means unlimited.
 // The search is exact when "complete":true.

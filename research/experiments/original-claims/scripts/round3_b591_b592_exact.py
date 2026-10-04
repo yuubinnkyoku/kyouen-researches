@@ -20,7 +20,7 @@ dmax is monotone, so the inner hill-climb never decreases the certified lower bo
 every value it reports is a rigorous d_max, and the running maximum is a
 certified lower bound on max_{|S|=K_n-1} d_max(S) for n=8.
 
-Integer arithmetic only.  Writes research/verification/round3_b591_b592_exact.json.
+Integer arithmetic only.  Writes research/experiments/original-claims/output/round3_b591_b592_exact.json.
 """
 from __future__ import annotations
 
@@ -32,7 +32,7 @@ from pathlib import Path
 from round3_b591_core import (quads_np, build_qm, max_overlap, coords, popcount,
                               d4_perm, apply_perm)
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b591_b592_exact.json"
 
 DEADLINE = time.time() + 170.0

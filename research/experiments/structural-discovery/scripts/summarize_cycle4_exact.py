@@ -7,8 +7,8 @@ import json
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-NR = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+NR = ROOT / "research/experiments/structural-discovery/output"
 
 
 def load_board(n: int) -> dict:

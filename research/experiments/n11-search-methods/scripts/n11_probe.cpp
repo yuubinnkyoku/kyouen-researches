@@ -11,7 +11,7 @@
 // Levels spill to disk so the peak RAM stays proportional to one level.
 //
 // Usage: n11_probe --enum 11 --spill=/tmp/n11 [--maxlevel K]
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <algorithm>
 #include <cstdint>

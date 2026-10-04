@@ -14,8 +14,8 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+OUT_DIR = ROOT / "research/experiments/structural-discovery/output"
 
 
 def det4(p0, p1, p2, p3) -> int:
@@ -291,7 +291,7 @@ def main(argv: list[str]) -> int:
                 "status": "complete",
                 "orbits_done": 15,
                 "orbits_total": 15,
-                "source": "night-research/first-moves-9x9.csv + CYCLE3_RESULTS.md",
+                "source": "research/experiments/structural-discovery/output/first-moves-9x9.csv + CYCLE3_RESULTS.md",
             },
             {"n": 10, "winner": "S", "winning_first_moves": 0, "cells": 100, "density": 0.0, "status": "complete"},
         ],

@@ -2,7 +2,7 @@
 # Build + run the fixed CRT solver at n=4,5,6 and dump the key figures.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 B=/tmp/kc_build
 mkdir -p $B
 g++ -O2 -march=native -std=c++20 -fopenmp -o $B/crt "$S/round5_b501_prand8.cpp" || exit 1

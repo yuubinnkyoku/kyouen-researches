@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Batch 06 follow-ups: B114 auxiliaries, B116 cover shrink, B112/B119 other components."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -8,8 +11,8 @@ from collections import Counter, defaultdict, deque
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
-sys.path.insert(0, str(ROOT / "night-research"))
+ROOT = Path(__file__).resolve().parents[4]
+sys.path.insert(0, str(ROOT / "research/experiments/structural-discovery/output"))
 
 from cycle8_lib import (  # noqa: E402
     apply_perm,

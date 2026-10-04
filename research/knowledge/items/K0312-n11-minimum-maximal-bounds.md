@@ -12,15 +12,15 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/saturation-20261003.md
+- path: research/experiments/saturation/reports/saturation-20261003.md
   role: source
   note: 10石極大証人と6・7石全域排除
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/saturation_20261003_exact_results.json
+- path: research/experiments/saturation/output/saturation_20261003_exact_results.json
   role: data
   note: 11盤7石排除の完了計数
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/saturation_20261003_verify.py
+- path: research/experiments/saturation/scripts/saturation_20261003_verify.py
   role: verifier
   note: 証人と幾何の独立検査
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

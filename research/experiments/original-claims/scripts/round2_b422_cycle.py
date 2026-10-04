@@ -5,6 +5,9 @@ Fixes the induced-cycle DFS: the start vertex is allowed as the closing
 neighbor; intermediate vertices may not touch earlier path vertices.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -12,10 +15,10 @@ from collections import Counter, defaultdict, deque
 from pathlib import Path
 
 ROOT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches")
-sys.path.insert(0, str(ROOT / "research/verification/scripts"))
+sys.path.insert(0, str(ROOT / "research/experiments/original-claims/scripts"))
 from kyouen_core import Board, square_points  # noqa: E402
 
-OUT = ROOT / "research/verification/round2_b411.json"
+OUT = ROOT / "research/experiments/original-claims/output/round2_b411.json"
 
 
 def bits(x: int) -> list[int]:

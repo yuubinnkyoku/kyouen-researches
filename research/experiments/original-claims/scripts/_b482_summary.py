@@ -1,7 +1,7 @@
 import json
 from collections import defaultdict
 
-with open('research/verification/round5_b482b500.json') as f:
+with open('research/experiments/original-claims/output/round5_b482b500.json') as f:
     d = json.load(f)
 
 print('=== B482 ===')

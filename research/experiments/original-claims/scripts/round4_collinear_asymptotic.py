@@ -153,7 +153,7 @@ def main():
         result["direction_coefficients"].append({"direction": [a,b],
             "exact_limit_D_over_n5": rat(coefficient),
             "n1024_D": direction_count(1024,a,b)})
-    output = Path(__file__).resolve().parents[1] / "round4_collinear_asymptotic.json"
+    output = (Path(__file__).resolve().parents[1] / "output") / "round4_collinear_asymptotic.json"
     output.write_text(json.dumps(result, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
     print("All 20 maximal-line / endpoint / totient comparisons passed; direct n<=7 passed.")
     print("Constant interval:", decimal_floor(constant_lo), decimal_floor(constant_hi))

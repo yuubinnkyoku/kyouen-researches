@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """B495 witnesses only (fast)."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round5_b482b500_b495wit.json"
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import board_rect, board_square_minus  # noqa: E402

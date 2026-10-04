@@ -2,7 +2,7 @@
 # AddressSanitizer run of the CRT solver on n=4, logging to a file.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/asan.log
 : > "$LOG"
 mkdir -p /tmp/kc_build

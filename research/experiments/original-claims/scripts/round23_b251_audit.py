@@ -20,7 +20,7 @@ def det4(rows):
 
 def main():
     source = Path(__file__).resolve()
-    root = source.parents[1]
+    root = source.parents[1] / "output"
     files = [root / f'round23_b251_n6_{suffix}'
              for suffix in ('geometry.json', 'scan.json', 'incremental.json', 'input.txt')]
     contents = [file.read_bytes() for file in files]

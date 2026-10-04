@@ -23,7 +23,7 @@ Strategy here: (1) build a pool of safe 15-subsets of B_8 by randomised search,
 exact branch-and-bound on the best candidates for a certified lower bound.
 
 Integer arithmetic only.  Hard wall-clock budget; every partial result is still sound.
-Writes research/verification/round3_b591_b592.json.
+Writes research/experiments/original-claims/output/round3_b591_b592.json.
 """
 from __future__ import annotations
 
@@ -35,7 +35,7 @@ from pathlib import Path
 from round3_b591_core import (quads_np, build_qm, max_overlap, coords, popcount,
                               apply_perm, d4_perm)
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b591_b592.json"
 
 DEADLINE = time.time() + 165.0          # seconds; script must finish inside 3 min
@@ -120,7 +120,7 @@ while len(pool) < 96 and left() > 25:
         if q not in pool:
             pool.append(q)
 report["_meta"]["pool"] = {"size": len(pool), "sec": round(time.time() - t1, 2)}
-# guard: the known n=8 witness from night-research/cycle6-maxsafeset-n8-15.json
+# guard: the known n=8 witness from research/experiments/structural-discovery/output/cycle6-maxsafeset-n8-15.json
 known = [(0, 0), (1, 0), (2, 0), (1, 1), (7, 1), (3, 2), (7, 2), (5, 3),
          (0, 4), (2, 5), (4, 5), (5, 6), (0, 7), (4, 7), (5, 7)]
 km = 0

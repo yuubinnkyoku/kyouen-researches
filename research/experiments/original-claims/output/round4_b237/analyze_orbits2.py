@@ -1,5 +1,5 @@
 import json
-D = r'research\verification\batch09_pairs_n4.json'
+D = r'research\experiments\original-claims\output\batch09_pairs_n4.json'
 d = json.load(open(D, encoding='utf-8'))
 rows = d['rows']
 N = 4

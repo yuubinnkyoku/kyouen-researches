@@ -8,7 +8,7 @@ import json
 import re
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 master = json.loads((ROOT / "round3_master.json").read_text(encoding="utf-8"))
 
 # id -> scripts that already computed it

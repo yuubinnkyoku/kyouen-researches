@@ -13,15 +13,15 @@ relations:
   target: K0147
   note: s_n<nとなる連続した有限範囲の明示例
 artifacts:
-- path: research/saturation-20261003.md
+- path: research/experiments/saturation/reports/saturation-20261003.md
   role: source
   note: 11〜15盤のn−1石極大座標
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/saturation_20261003_verified.json
+- path: research/experiments/saturation/output/saturation_20261003_verified.json
   role: data
   note: 安全性と全空点の禁止証人
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/check_saturation_20261003.py
+- path: research/experiments/saturation/scripts/check_saturation_20261003.py
   role: verifier
   note: 明示構成の軽量再現検査
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

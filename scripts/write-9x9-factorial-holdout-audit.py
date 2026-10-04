@@ -7,12 +7,12 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 SEED = "kyouen-9x9-pair-components-factorial-v1-2026-09-05"
-POPULATION = Path("artifacts/9x9-factorial-population.csv")
-EXCLUSION = Path("artifacts/exclusion-canonical-parents.csv")
-HOLDOUT = Path("artifacts/9x9-factorial-holdout.csv")
-MANIFEST = Path("artifacts/9x9-factorial-holdout.manifest.csv")
-EXCL_MANIFEST = Path("artifacts/exclusion-manifest.json")
-OUT = Path("artifacts/9x9-factorial-holdout-preoutcome-audit.json")
+POPULATION = Path("research/experiments/solver-benchmarks/output/9x9-factorial-population.csv")
+EXCLUSION = Path("research/experiments/solver-benchmarks/output/exclusion-canonical-parents.csv")
+HOLDOUT = Path("research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv")
+MANIFEST = Path("research/experiments/solver-benchmarks/output/9x9-factorial-holdout.manifest.csv")
+EXCL_MANIFEST = Path("research/experiments/solver-benchmarks/output/exclusion-manifest.json")
+OUT = Path("research/experiments/solver-benchmarks/output/9x9-factorial-holdout-preoutcome-audit.json")
 
 
 def sha256(path: Path) -> str:

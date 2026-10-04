@@ -6,7 +6,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits,det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -47,8 +47,8 @@ def main():
     # therefore xor to1; the triple connects three different clique components.
     components=[[19,23],[10],[22]]
     assert all(len(set(bits(triple))&set(c))==1 for c in components)
-    files=['scripts/round38_b345_verify.py','scripts/round38_b345_search.cpp',
-           'scripts/round25_forced_verify.py','scripts/kc_core.h','round38_b345_n5_search.json']
+    files=['../scripts/round38_b345_verify.py','../scripts/round38_b345_search.cpp',
+           '../scripts/round25_forced_verify.py','../../../../scripts/research/kc_core.h','round38_b345_n5_search.json']
     out={'original_verdict':'REFUTED','n':5,'S_mask':s,'S_ids':list(bits(s)),
          'S_coordinates':[points[p] for p in bits(s)],'L_ids':ids,
          'clique_components':components,'minimal_residual_pair':[19,23],

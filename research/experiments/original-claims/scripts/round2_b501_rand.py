@@ -8,9 +8,12 @@ p_rand(occ) = P(player-to-move wins when both pick uniformly among legal moves)
 Population default: all safe sets reachable from empty on n×n, or
 explicitly the set of positions with given (n, k, |L|, status).
 
-Outputs research/verification/round2_b501.json (rand section).
+Outputs research/experiments/original-claims/output/round2_b501.json (rand section).
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -20,7 +23,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round2_b501.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round2_b501.json"
 
 
 def prand_table(board: Board) -> dict[int, float]:

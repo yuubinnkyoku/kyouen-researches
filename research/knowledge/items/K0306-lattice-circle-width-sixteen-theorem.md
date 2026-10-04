@@ -10,15 +10,15 @@ relations:
   target: K0072
   note: 固定幅で円が消える領域を別方向から拡張する
 artifacts:
-- path: research/geometry_20261003_extended.md
+- path: research/experiments/geometry/reports/geometry_20261003_extended.md
   role: proof
   note: 幅16定理と最小性
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/geometry_20261003_extended.json
+- path: research/experiments/geometry/output/geometry_20261003_extended.json
   role: data
   note: 幅1..15の鋭い極値と達成例
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/check_geometry_20261003.py
+- path: research/experiments/geometry/scripts/check_geometry_20261003.py
   role: verifier
   note: 短時間再現
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

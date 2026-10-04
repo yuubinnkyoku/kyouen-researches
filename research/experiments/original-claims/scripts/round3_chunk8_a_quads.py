@@ -59,7 +59,7 @@ from round3_chunk8_lib import (  # noqa: E402
 )
 from batch10_core import det4_rows  # noqa: E402
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk8_quads.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk8_quads.json"
 N = 4
 PTS = square(N)
 V = 16

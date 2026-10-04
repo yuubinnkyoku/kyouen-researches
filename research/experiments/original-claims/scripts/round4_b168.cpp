@@ -19,7 +19,7 @@
 //   betti    <n> <maxdim>            GF(2) Betti numbers of Delta_n
 //   circles  <nmax>                  circle / collinear static statistics n=2..nmax
 //   mc       <n> <runs>              random-greedy Monte Carlo with extra logs
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <algorithm>
 #include <cstdint>

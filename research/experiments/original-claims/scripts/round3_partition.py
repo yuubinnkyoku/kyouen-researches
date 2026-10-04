@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 data = json.loads((ROOT / "round3_unresolved.json").read_text(encoding="utf-8"))
 ids = sorted(int(k[1:]) for k in data)
 ids = [i for i in ids if i != 116]  # F-BG settled B116 (min cover = 21)

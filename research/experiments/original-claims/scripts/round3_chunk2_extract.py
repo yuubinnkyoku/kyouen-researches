@@ -4,7 +4,7 @@ import re
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 BANK = ROOT / "research" / "hypothesis-bank-2026-09-27.md"
 
 IDS = """B092 B093 B094 B095 B096 B097 B098 B099 B100 B103 B104 B106 B107 B110

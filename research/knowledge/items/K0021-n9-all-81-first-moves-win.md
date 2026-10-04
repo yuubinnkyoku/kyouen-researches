@@ -16,7 +16,7 @@ relations:
   target: K0019
   note: 全初手の分類から空盤の勝敗が従う
 artifacts:
-- path: night-research/first-moves-9x9.csv
+- path: research/experiments/structural-discovery/output/first-moves-9x9.csv
   role: data
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

@@ -1,5 +1,5 @@
 // round5_b001_g2.cpp — two-stone Grundy on n=6 for B024
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <cstdlib>
 #include <map>

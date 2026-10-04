@@ -2,8 +2,8 @@
 # Stage runner for round5_b251_solver
 set -e
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-SRC=$REPO/research/verification/scripts/round5_b251_solver.cpp
-OUTDIR=$REPO/research/verification
+SRC=$REPO/research/experiments/original-claims/scripts/round5_b251_solver.cpp
+OUTDIR=$REPO/research/experiments/original-claims/output
 BIN=/tmp/r5b251_solver
 mkdir -p /tmp/r5b251
 
@@ -43,7 +43,7 @@ for name in ["ugains_n4","corr_n4","ugains_n5","corr_n5","singles_n4"]:
             d[name] = {"error": str(e), "raw": p.read_text()[:200]}
     else:
         d[name] = {"error": "missing"}
-out = Path("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/round5_b251_solver.json")
+out = Path("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/round5_b251_solver.json")
 out.write_text(json.dumps(d, indent=2))
 print("WROTE", out, "size", out.stat().st_size)
 # summary

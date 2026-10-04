@@ -1,9 +1,9 @@
 #!/bin/bash
 # Round4 batch B168-B227 driver.
-#   wsl -d Ubuntu -- bash <repo>/research/verification/scripts/round4_b168_run.sh
+#   wsl -d Ubuntu -- bash <repo>/research/experiments/original-claims/scripts/round4_b168_run.sh
 set -u
 BIN=/tmp/r4b168
-D=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts
+D=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts
 cd "$D" || exit 1
 g++ -O2 -march=native -std=c++20 -o "$BIN" round4_b168.cpp || { echo "BUILD FAILED"; exit 1; }
 echo "=== built ==="

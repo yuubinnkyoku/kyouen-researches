@@ -2,7 +2,7 @@
 # CRT solver on n=4 with full diagnostics captured, for the CSR failure hunt.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/csr.log
 : > "$LOG"
 mkdir -p /tmp/kc_build

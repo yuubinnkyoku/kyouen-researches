@@ -21,9 +21,12 @@
   B370  for minimal-maximal s_n sets, 1-out/2-in shrinking attempts: classify
         the failure reason (coverage / new forbidden quad).
 
-Output: research/verification/round3_chunk6_rho.json
+Output: research/experiments/original-claims/output/round3_chunk6_rho.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -33,14 +36,14 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import Board, square_points  # noqa: E402
 
 sys.setrecursionlimit(200000)
 OUT = ROOT / "research" / "verification" / "round3_chunk6_rho.json"
 DATA = ROOT / "research" / "verification" / "data"
-NIGHT = ROOT / "night-research"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 
 
 def load_bin(p: Path) -> list[int]:

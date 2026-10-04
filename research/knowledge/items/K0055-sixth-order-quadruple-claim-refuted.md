@@ -18,7 +18,7 @@ relations:
   target: K0056
   note: ''
 artifacts:
-- path: research/verification/round17-original-scope-audit.md
+- path: research/experiments/original-claims/reports/round17-original-scope-audit.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

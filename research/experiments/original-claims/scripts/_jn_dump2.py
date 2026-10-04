@@ -1,7 +1,7 @@
 import json
 from collections import Counter
 
-p = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_jn_followup.json"
+p = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_jn_followup.json"
 d = json.load(open(p))
 b = d["b312"]
 print("n_union single:", b["singles"]["n_union"])

@@ -43,7 +43,7 @@ Outputs:
   B280  multivariate Z in (orbit occupancy counts) -- highest-degree term vs
         mutual exclusivity of maximal-set phases
 
-Output: research/verification/round3_chunk5_partition.json
+Output: research/experiments/original-claims/output/round3_chunk5_partition.json
 """
 from __future__ import annotations
 
@@ -58,7 +58,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from round3_chunk5_sharp import Game  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_chunk5_partition.json"
 
 

@@ -17,7 +17,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 CACHE = ROOT / "research" / "verification" / "batch03_cache.pkl"
 OUT = ROOT / "research" / "verification" / "round2_b321.json"
 

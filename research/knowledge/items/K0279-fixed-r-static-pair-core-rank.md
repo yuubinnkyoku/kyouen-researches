@@ -13,11 +13,11 @@ relations:
   target: K0080
   note: ''
 artifacts:
-- path: night-research/CYCLE1_RESULTS.md
+- path: research/log/discovery-cycles/CYCLE1_RESULTS.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: night-research/h4-pair-witness.json
+- path: research/experiments/structural-discovery/output/h4-pair-witness.json
   role: data
   note: 固定Rの深さ別pair witness照合
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

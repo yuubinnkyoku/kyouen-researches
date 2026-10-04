@@ -124,8 +124,8 @@ def intersections(lines):
 
 
 def main():
-    root=Path(__file__).resolve().parents[3]
-    masks=struct.unpack('<16Q',(root/'night-research/maxsafe_n7_K14.bin').read_bytes())
+    root=Path(__file__).resolve().parents[4]
+    masks=struct.unpack('<16Q',(root/'research/experiments/structural-discovery/output/maxsafe_n7_K14.bin').read_bytes())
     examples=[('horizontal',[(0,0),(1,0),(2,0)]),
               ('slope_half',[(0,0),(2,1),(4,2)]),
               ('triangle',[(0,0),(2,0),(0,2)]),
@@ -194,7 +194,7 @@ def main():
              'first_safe_shell':first_safe,'sample_counts':{str(n):count(n) for n in grids}}
         result['examples'].append(row)
         print(name,'lines',len(lines),'slope',slope,'period',period,'r',first_safe['radius'],flush=True)
-    target=root/'research/verification/round9_external_rays.json'
+    target=root/'research/experiments/original-claims/output/round9_external_rays.json'
     target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(target,flush=True)
 

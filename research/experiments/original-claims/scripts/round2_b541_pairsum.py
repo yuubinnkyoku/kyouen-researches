@@ -10,7 +10,7 @@ So a state is (A, B) with A,B subsets of {0..m-1}, |A|,|B| <= 3,
 and Sigma2(A) cap Sigma2(B) = empty, where
   Sigma2(S) = {s_i + s_j : i < j}.
 
-Outputs research/verification/round2_b531.json (merged later) or its own
+Outputs research/experiments/original-claims/output/round2_b531.json (merged later) or its own
 section under key "b541".
 """
 from __future__ import annotations
@@ -21,7 +21,7 @@ from functools import lru_cache
 from itertools import combinations
 from pathlib import Path
 
-OUT = Path(__file__).resolve().parents[1] / "round2_b531.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round2_b531.json"
 
 
 def sigma2(t: tuple[int, ...]) -> frozenset[int]:

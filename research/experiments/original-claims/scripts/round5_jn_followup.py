@@ -2,9 +2,12 @@
 """Round5 J_n follow-up: B312 composite classifier, B318 one-stone theorem,
 B320 three-stone rule, B321/B322 all-layer hole analysis (n<=5 complete).
 
-Output: research/verification/round5_jn_followup.json
+Output: research/experiments/original-claims/output/round5_jn_followup.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -15,7 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square  # noqa: E402
 
-VER = Path(__file__).resolve().parents[1]
+VER = (Path(__file__).resolve().parents[1] / "output")
 CACHE = VER / "round5_b231_n5_grundy.json"
 OUT = VER / "round5_jn_followup.json"
 

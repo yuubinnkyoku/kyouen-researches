@@ -7,7 +7,7 @@ topics: [grundy, variants]
 aliases: []
 relations: []
 artifacts:
-- path: research/q34-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q34-exact-threshold.md
   role: proof
   note: 例外下方閉包と偶奇尾部に使う一般補題
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

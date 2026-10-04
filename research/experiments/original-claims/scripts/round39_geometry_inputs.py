@@ -2,7 +2,7 @@
 from pathlib import Path
 from round25_forced_verify import geometry
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():

@@ -1,5 +1,5 @@
 // Fresh geometry + complete existing safe layer: minimal-maximal cover census.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <fstream>
 #include <cstdio>

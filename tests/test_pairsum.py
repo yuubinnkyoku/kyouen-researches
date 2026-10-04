@@ -1,7 +1,7 @@
 """P6 regression: raw/filtered response-set separation + C++ cross-check.
 
 Covers the metric-definition correction
-(docs/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md):
+(research/experiments/9x9-factorial/reports/9X9_PAIRSUM_METRIC_DEFINITION_CORRECTION.md):
 
   - raw_response_sets has NO other-quad filter;
   - filtered_response_sets keeps the old audit filter;

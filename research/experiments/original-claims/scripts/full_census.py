@@ -9,17 +9,18 @@ import re
 from collections import Counter, OrderedDict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = Path(__file__).resolve().parents[1] / "reports"
+LOG = Path(__file__).resolve().parents[3] / "log/claim-audit"
 HEAD = re.compile(r"^#{1,6}\s*(B\d{3})\b")
 LABEL = re.compile(r"判定\s*[:：]\s*\*{0,2}([A-Z\-]+)")
 RANK = {"SUPPORTED": 4, "REFUTED": 4, "PARTIAL": 2, "INCONCLUSIVE": 1, "NOT-CHECKED": 0}
 UNRES = {"PARTIAL", "INCONCLUSIVE", "NOT-CHECKED"}
 
-ORIG = sorted(ROOT.glob("batch-*.md")) + sorted(ROOT.glob("round2-batch-*.md"))
+ORIG = sorted(LOG.glob("batch-*.md")) + sorted(ROOT.glob("round2-batch-*.md"))
 NEW = (sorted(ROOT.glob("round3-batch-*.md"))
        + sorted(ROOT.glob("round4-batch-*.md"))
        + sorted(ROOT.glob("round5-batch-*.md")))
-PROOF = [ROOT / "round4-collinear-asymptotic.md"]
+PROOF = [ROOT / "../reports/round4-collinear-asymptotic.md"]
 
 ALL_IDS = [f"B{i:03d}" for i in range(1, 601)]
 
@@ -139,4 +140,4 @@ print(f"  {rng(ids(touched))}")
 (ROOT / "round4_status.json").write_text(json.dumps(rows, ensure_ascii=False, indent=1),
                                          encoding="utf-8")
 print()
-print("wrote research/verification/round4_status.json")
+print("wrote research/experiments/original-claims/output/round4_status.json")

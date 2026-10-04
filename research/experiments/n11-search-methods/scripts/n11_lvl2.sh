@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Exact level-2 count for n = 6..11, checked against the recorded F_n.
 set -uo pipefail
-S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/verification/scripts
+S=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/experiments/n11-search-methods/scripts
 LOG=/tmp/lvl2c.log
 : > "$LOG"
 mkdir -p /tmp/kc_build

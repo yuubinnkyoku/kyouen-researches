@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Finish B177: 3-point removals on n=4 + random V=10..12 subsets. Write JSON."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import random
@@ -8,10 +11,10 @@ import sys
 from collections import defaultdict
 from itertools import combinations
 
-sys.path.insert(0, "research/verification/scripts")
+sys.path.insert(0, "research/experiments/original-claims/scripts")
 from kyouen_core import Board, board_square_minus  # noqa: E402
 
-OUT = "research/verification/round5_b177_b200e.json"
+OUT = "research/experiments/original-claims/output/round5_b177_b200e.json"
 
 
 def f_vector_fast(board):

@@ -37,11 +37,14 @@ Pipeline
   analyse    exact integer cross-multiplication against 1/2, 2/3, 3/4
 
 Usage
-    python research/verification/scripts/round3_b502_pgrand_n6.py
-    python research/verification/scripts/round3_b502_pgrand_n6.py --sizes 4,5,6
-    python research/verification/scripts/round3_b502_pgrand_n6.py --selfcheck
+    python research/experiments/original-claims/scripts/round3_b502_pgrand_n6.py
+    python research/experiments/original-claims/scripts/round3_b502_pgrand_n6.py --sizes 4,5,6
+    python research/experiments/original-claims/scripts/round3_b502_pgrand_n6.py --selfcheck
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import argparse
 import json
@@ -53,7 +56,7 @@ from pathlib import Path
 
 import numpy as np
 
-REPO_ROOT = Path(__file__).resolve().parents[3]
+REPO_ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import board_square  # noqa: E402
 

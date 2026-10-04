@@ -12,11 +12,11 @@ relations:
   target: K0001
   note: ''
 artifacts:
-- path: research/verification/structural-lemmas-2026-10-02/quadratic-constructions.md
+- path: research/experiments/structural-lemmas-2026-10-02/quadratic-constructions.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/structural-lemmas-2026-10-02/checks/independent_parabola.json
+- path: research/experiments/structural-lemmas-2026-10-02/checks/independent_parabola.json
   role: data
   note: 29素数の証人の独立全四点検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

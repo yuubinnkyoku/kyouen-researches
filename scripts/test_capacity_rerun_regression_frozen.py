@@ -19,7 +19,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 EXPECTED = ROOT / "results/10x10/cache-aware-below-root-capacity-rerun/regression_expected.json"
 C2_SUMMARY = ROOT / "results/10x10/cache-aware-below-root-confirmation-v2/summary_ab.csv"
-DEFAULT_BIN = ROOT / "tmp-kb/order_ab_capacity"
+DEFAULT_BIN = ROOT / "research/experiments/solver-benchmarks/bin/order_ab_capacity"
 
 sys.path.insert(0, str(ROOT / "scripts"))
 import test_capacity_rerun_regression as gate  # noqa: E402

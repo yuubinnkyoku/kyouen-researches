@@ -1,7 +1,7 @@
 // Original B065: search standard geometric residual games with no pair edges.
 // Sorted DFS enumerates each safe set once. Larger legal sets are reported
 // uncomputed; finite non-witnesses are never promoted to a general refutation.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <algorithm>
 #include <cstdio>
 #include <fstream>

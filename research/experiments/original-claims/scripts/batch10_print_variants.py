@@ -1,5 +1,5 @@
 import json
-data = json.load(open("research/verification/batch10_variants.json"))
+data = json.load(open("research/experiments/original-claims/output/batch10_variants.json"))
 for r in data:
     n = r["n"]
     for name, v in r["variants"].items():

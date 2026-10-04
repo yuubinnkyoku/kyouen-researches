@@ -13,19 +13,19 @@ relations:
   target: K0002
   note: ''
 artifacts:
-- path: research/verification/round28-seven-board-original-verdicts.md
+- path: research/experiments/original-claims/reports/round28-seven-board-original-verdicts.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round28_n7_audited.json
+- path: research/experiments/original-claims/output/round28_n7_audited.json
   role: data
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round28_n7_independent.json
+- path: research/experiments/original-claims/output/round28_n7_independent.json
   role: data
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round28_recursive_verify.cpp
+- path: research/experiments/original-claims/scripts/round28_recursive_verify.cpp
   role: verifier
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

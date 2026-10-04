@@ -28,7 +28,7 @@ Swept for M <= MAXM and q0 <= QMAX.
 Board-side data comes from the validated fast census round3_b451_census.py
 (n = 4..12) and is folded in for the board-relative questions (B454, B457).
 
-Output: research/verification/round3_b451_analysis.json
+Output: research/experiments/original-claims/output/round3_b451_analysis.json
 """
 from __future__ import annotations
 
@@ -39,7 +39,7 @@ from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round3_b451_analysis.json"
 
 MAXM = 6000          # upper bound on the cleared radius M = q0^2 r^2

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Stage 1: B587/B589 xor amplification on n=4 full + n=5 |S|<=5."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -198,7 +201,7 @@ def main():
     print('g4:', len(amp['g4_found']), 'g5+:', len(amp['g5_found']))
     print('P3xP3:', amp['p3p3_count'], 'g:', amp['p3p3_g_values'], 'cross:', amp['p3p3_cross_count'])
 
-    path = Path(__file__).resolve().parent.parent / 'round5_b551_b600_followup.json'
+    path = (Path(__file__).resolve().parent.parent / "output") / 'round5_b551_b600_followup.json'
     data = {}
     if path.exists():
         with open(path) as f:

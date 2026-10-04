@@ -234,7 +234,7 @@ def main():
                 'unrestricted_max_at_limit': best[q]} for q in qs},
         'gaussian_product_checks': construction,
     }
-    path = Path(__file__).resolve().parents[1] / 'round11_circle_records.json'
+    path = (Path(__file__).resolve().parents[1] / "output") / 'round11_circle_records.json'
     path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print('norms', limit, 'occupied classes', occupied_checks,
           'product checks', len(construction))

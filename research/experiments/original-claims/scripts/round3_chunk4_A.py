@@ -36,7 +36,7 @@ from round3_chunk4_core import (  # noqa: E402
     det4, pt,
 )
 
-OUT = Path(__file__).resolve().parents[1] / "round3_chunk4_A.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round3_chunk4_A.json"
 T0 = time.time()
 
 

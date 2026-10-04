@@ -1,6 +1,6 @@
 // Round5 B207/B209/B210: n x n two-point deletion — K and empty g.
 // Usage: ./round5_b201_del2 <n>
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <bits/stdc++.h>
 using namespace kc;
 using namespace std;

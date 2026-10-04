@@ -9,7 +9,7 @@ topics:
 aliases: []
 relations: []
 artifacts:
-- path: docs/10X10_CORRECTED_PROBE_VS_SOLVER_ORDER.md
+- path: research/experiments/solver-benchmarks/reports/10X10_CORRECTED_PROBE_VS_SOLVER_ORDER.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

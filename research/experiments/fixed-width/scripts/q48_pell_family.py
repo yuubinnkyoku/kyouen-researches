@@ -48,7 +48,7 @@ def main() -> None:
               'first_nonlocal_8_point_length':74,
               'first_nonlocal_7_point_length':69,
               'verified_instances':records, 'four_point_minors_per_instance':70}
-    destination=Path(__file__).resolve().parents[1]/'q48_pell_family.json'
+    destination=(Path(__file__).resolve().parents[1] / "output")/'q48_pell_family.json'
     destination.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False,indent=2))
 

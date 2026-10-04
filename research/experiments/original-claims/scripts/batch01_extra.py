@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Batch 01 extras: T* game-length split (B010), refined B017 metrics, B018 punctured boards."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -8,11 +11,11 @@ from collections import defaultdict, deque
 from itertools import combinations, permutations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square, board_square_minus  # noqa: E402
 
-OUT = Path(__file__).resolve().parent.parent
+OUT = (Path(__file__).resolve().parent.parent / "output")
 
 
 # ---------------- T* (B010) ----------------
@@ -156,7 +159,7 @@ def b017_refined():
     rc = [rowcol(i) for i in range(V)]
 
     # Load P pairs
-    known = json.loads((ROOT / "night-research/cycle4-n5-two-stone-geometry.json").read_text(encoding="utf-8"))
+    known = json.loads((ROOT / "research/experiments/structural-discovery/output/cycle4-n5-two-stone-geometry.json").read_text(encoding="utf-8"))
     p_pairs = [tuple(p["ids"]) for p in known["loss_pairs"]]
     p_set = set(tuple(sorted(e)) for e in p_pairs)
     losing = sorted(set([a for e in p_pairs for a in e]))

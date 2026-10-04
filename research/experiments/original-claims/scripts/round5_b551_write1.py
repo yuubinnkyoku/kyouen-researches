@@ -1,5 +1,5 @@
 from pathlib import Path
-p = Path('research/verification/round5-batch-b551-b600.md')
+p = Path('research/experiments/original-claims/reports/round5-batch-b551-b600.md')
 text = p.read_text(encoding='utf-8')
 add = r'''
 ## B555 [漸近] 部分勝ちとなる三行盤の勝ち初手密度は1/3へ近づく

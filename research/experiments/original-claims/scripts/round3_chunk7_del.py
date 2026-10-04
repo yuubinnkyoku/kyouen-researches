@@ -33,9 +33,12 @@ B519  minimal inversion deletion sets of size >= 4: complete enumeration for
       non-inverting" minimality test, then test the concyclic/collinear
       content of every minimal set.
 
-Outputs: research/verification/round3_chunk7_del.json
+Outputs: research/experiments/original-claims/output/round3_chunk7_del.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import itertools
 import json
@@ -46,7 +49,7 @@ from collections import defaultdict
 from fractions import Fraction
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 OUT = ROOT / "research" / "verification" / "round3_chunk7_del.json"
 

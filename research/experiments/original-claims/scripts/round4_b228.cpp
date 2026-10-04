@@ -1,12 +1,12 @@
 // round4_b228.cpp -- Round4 solver for hypothesis ids B228..B290.
-// Shared engine: #include "kc_core.h"  (already self-checked; not rewritten).
+// Shared engine: #include "../../../../scripts/research/kc_core.h"  (already self-checked; not rewritten).
 //
 // Exact integers only.  Rationals emitted as p/q.  No float used in a decision.
 //
 //   ./round4_b228 all       run every section
 //   ./round4_b228 n4 n5     run selected sections
 // sections: n4 n5 n6 rel u proof res geom cap emb
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <cstdint>
 #include <cstdio>

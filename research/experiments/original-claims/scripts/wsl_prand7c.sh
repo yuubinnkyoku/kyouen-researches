@@ -2,7 +2,7 @@
 # n=7 p_rand, no artificial cap, logging progress so we can see the levels.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/prand_n7.log
 : > "$LOG"
 free -m >>"$LOG"

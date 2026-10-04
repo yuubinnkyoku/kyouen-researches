@@ -4,14 +4,14 @@
 #   n11_grundy.sh build
 #   n11_grundy.sh n6
 #   n11_grundy.sh n7
-#   n11_grundy.sh n11            # full run, output to research/verification/data
+#   n11_grundy.sh n11            # full run, output to research/experiments/original-claims/output/data
 #
 # NOTE: must be run as a script file. Inlining into PowerShell breaks quoting.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-S=$R/research/verification/scripts
+S=$R/research/experiments/n11-search-methods/scripts
 BIN=/tmp/kc_build/grundy121
-mkdir -p /tmp/kc_build "$R/research/verification/data"
+mkdir -p /tmp/kc_build "$R/research/experiments/original-claims/output/data"
 
 g++ -O3 -march=native -std=c++20 -fopenmp -o "$BIN" "$S/n11_grundy.cpp" 2>/tmp/grundy121_build.err \
   || { echo BUILD_FAIL; tail -30 /tmp/grundy121_build.err; exit 1; }
@@ -59,7 +59,7 @@ PY
     HB=$!
     stdbuf -oL -eL "$BIN" --enum 11 --threads 16 --spill=/tmp/n11_grundy \
       --expect-levels=1,121,7007,228485,3863862,29108488,82177064,72669632,15795232,572800,1536 \
-      --out "$R/research/verification/data/n11_grundy.json" \
+      --out "$R/research/experiments/original-claims/output/data/n11_grundy.json" \
       > /tmp/n11_grundy.json 2>/tmp/n11_grundy.log
     rc=$?
     kill $HB 2>/dev/null

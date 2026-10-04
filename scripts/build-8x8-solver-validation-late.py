@@ -6,7 +6,7 @@ import random
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "artifacts" / "8x8-solver-validation-late.csv"
+OUT = ROOT / "research/experiments/solver-benchmarks/output" / "8x8-solver-validation-late.csv"
 N = 8
 V = 64
 

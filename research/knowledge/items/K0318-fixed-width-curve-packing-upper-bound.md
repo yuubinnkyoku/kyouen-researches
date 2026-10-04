@@ -13,15 +13,15 @@ relations:
   target: K0302
   note: 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 artifacts:
-- path: research/curve-packing-fixed-width.md
+- path: research/experiments/fixed-width/reports/curve-packing-fixed-width.md
   role: proof
   note: 三つ組・点対予算による一般定理
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/curve_packing_fixed_width.json
+- path: research/experiments/fixed-width/output/curve_packing_fixed_width.json
   role: data
   note: 上界表と小盤検査
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/verification/scripts/curve_packing_fixed_width.py
+- path: research/experiments/fixed-width/scripts/curve_packing_fixed_width.py
   role: verifier
   note: 整数最適化と全小盤予算不等式の再現
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

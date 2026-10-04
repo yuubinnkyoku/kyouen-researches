@@ -27,13 +27,13 @@ def normalize(row):
 
 
 def main():
-    holdout = read_csv("artifacts/9x9-factorial-holdout.csv")
+    holdout = read_csv("research/experiments/solver-benchmarks/output/9x9-factorial-holdout.csv")
     by_parent = {r["canonical_parent"]: r for r in holdout}
     rows_out = []
     for label, (member, left_col, right_col) in COMPARISONS.items():
         results = {
             r["canonical_parent"]: normalize(r)
-            for r in read_csv(f"artifacts/solve/merged/{label}.csv")
+            for r in read_csv(f"research/experiments/solver-benchmarks/output/solve/merged/{label}.csv")
         }
         expected = [p for p, r in by_parent.items() if truthy(r[member])]
         n = both_loss = both_win = left_only = right_only = 0
@@ -75,7 +75,7 @@ def main():
                 ),
             }
         )
-    out = Path("artifacts/solve/o-census-finite-population.csv")
+    out = Path("research/experiments/solver-benchmarks/output/solve/o-census-finite-population.csv")
     with open(out, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(rows_out[0].keys()))
         w.writeheader()

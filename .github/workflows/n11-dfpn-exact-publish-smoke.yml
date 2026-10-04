@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'cpp/solvers/kyouen_dfpn_root.cpp'
-      - 'research/verification/scripts/dfpn_exact_publish_probe.sh'
+      - 'research/experiments/n11-search-methods/scripts/dfpn_exact_publish_probe.sh'
       - '.github/workflows/n11-dfpn-exact-publish-smoke.yml'
   workflow_dispatch:
 
@@ -27,4 +27,4 @@ jobs:
           EXACT_BUDGET: '200000'
           EXACT_RETRIES: '2'
         run: |
-          bash research/verification/scripts/dfpn_exact_publish_probe.sh
+          bash research/experiments/n11-search-methods/scripts/dfpn_exact_publish_probe.sh

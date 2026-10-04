@@ -4,16 +4,19 @@
 - B129: 最小極大配置 vs 最大配置 の 1-swap 可動性比較
 - B130: k 点安全集合の 1 点移動グラフ成分と P/N の保存
 - B106/B107: 識別曲線 min_det の精密化
-- 出力: research/verification/round5_b101a_defs.json
+- 出力: research/experiments/original-claims/output/round5_b101a_defs.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, square_points  # noqa: E402

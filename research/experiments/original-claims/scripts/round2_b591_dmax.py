@@ -2,8 +2,8 @@
 
 d_max(S) = min_{M maximum safe} |S \\ M|.
 For n<=5 enumerates safe sets and max sets directly.
-For n=6,7 loads pre-enumerated layers from research/verification/data and night-research.
-Writes research/verification/round2_b591.json.
+For n=6,7 loads pre-enumerated layers from research/experiments/original-claims/output/data and research/experiments/structural-discovery/output.
+Writes research/experiments/original-claims/output/round2_b591.json.
 """
 from __future__ import annotations
 
@@ -15,9 +15,9 @@ from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 DATA = ROOT / "research" / "verification" / "data"
-NIGHT = ROOT / "night-research"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
 OUT = ROOT / "research" / "verification" / "round2_b591.json"
 
 # Known K_n (PROTOCOL / batch-05)

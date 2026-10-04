@@ -13,27 +13,27 @@ relations:
   target: K0108
   note: ''
 artifacts:
-- path: research/verification/round42-exact-residual-family-audit.md
+- path: research/experiments/original-claims/reports/round42-exact-residual-family-audit.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-round2-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md
   role: source
   note: B441の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round42_families_verified.json
+- path: research/experiments/original-claims/output/round42_families_verified.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round42_families_audit.py
+- path: research/experiments/original-claims/scripts/round42_families_audit.py
   role: verifier
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-scope: '起点: [個票03・B057](verification/batch-03.md)。ここでは同じk・同じラベル付きL・同じ極小残余族Rを持つ集合を一つの族とする。Rが空の場合でもLを省略しない。'
+scope: '起点: [個票03・B057](../../log/claim-audit/batch-03.md)。ここでは同じk・同じラベル付きL・同じ極小残余族Rを持つ集合を一つの族とする。Rが空の場合でもLを省略しない。'
 evidence: 原文監査 REFUTED / complete_exact_family_counterexample
 ---
 
@@ -41,7 +41,7 @@ evidence: 原文監査 REFUTED / complete_exact_family_counterexample
 
 否定された命題: 各族は二点交換まで許せば連結する。 一点交換で分裂する族も、占有点を高々2個ずつ入れ替えると同じ族の内部だけで移れる。
 
-適用文脈: 起点: [個票03・B057](verification/batch-03.md)。ここでは同じk・同じラベル付きL・同じ極小残余族Rを持つ集合を一つの族とする。Rが空の場合でもLを省略しない。
+適用文脈: 起点: [個票03・B057](../../log/claim-audit/batch-03.md)。ここでは同じk・同じラベル付きL・同じ極小残余族Rを持つ集合を一つの族とする。Rが空の場合でもLを省略しない。
 
 現在の結論: 4×4四石・同一L/Rの完全族は二集合のみ。三石交換が必要、Rは連結な四点パス。全65536集合から抽出。
 

@@ -9,6 +9,9 @@ documented as a limitation.
 Writes round5_b271_fu_geom.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -19,7 +22,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, is_forbidden_quad, square_points
 
-OUT = Path(__file__).resolve().parents[1] / "round5_b271_fu_geom.json"
+OUT = (Path(__file__).resolve().parents[1] / "output") / "round5_b271_fu_geom.json"
 
 
 def collinear(p, q, r):

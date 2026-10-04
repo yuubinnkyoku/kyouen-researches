@@ -7,9 +7,12 @@ No board re-enumeration. Determining-set search is subset-containment only.
 Outputs:
   results/cycle8_c_determining_n7.csv
   results/cycle8_c_determining_n6.csv
-  night-research/cycle8_cd_result.json   (package C section; D appends later)
+  research/experiments/structural-discovery/output/cycle8_cd_result.json   (package C section; D appends later)
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import csv
 import json

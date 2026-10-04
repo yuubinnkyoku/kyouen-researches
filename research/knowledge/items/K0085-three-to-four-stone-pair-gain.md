@@ -12,7 +12,7 @@ relations:
   target: K0001
   note: ''
 artifacts:
-- path: docs/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md
+- path: research/experiments/9x9-factorial/reports/9X9_TWO_STONE_PROBE_RESEARCH_NOTES.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

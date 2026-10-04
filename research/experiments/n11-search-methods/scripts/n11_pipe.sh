@@ -5,16 +5,16 @@
 # from PowerShell get their quoting mangled.  This script is the only thing
 # that touches wsl/bash.
 #
-#   wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/verification/scripts/n11_pipe.sh build
+#   wsl -d Ubuntu -- bash /mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11/research/experiments/n11-search-methods/scripts/n11_pipe.sh build
 #   wsl -d Ubuntu -- bash .../n11_pipe.sh xcheck            # n = 6,7,8,9
 #   wsl -d Ubuntu -- bash .../n11_pipe.sh run 11 [maxlevel]
 set -uo pipefail
 
 REPO=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-SRC=$REPO/research/verification/scripts
+SRC=$REPO/research/experiments/n11-search-methods/scripts
 BIN=/tmp/n11_pipe_bin/n11_pipe
 LOGDIR=/tmp/n11_pipe_log
-DATA=$REPO/research/verification/data
+DATA=$REPO/research/experiments/original-claims/output/data
 PIPE=/tmp/n11_pipe
 
 mkdir -p /tmp/n11_pipe_bin "$LOGDIR"

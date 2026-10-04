@@ -3,16 +3,19 @@
 
 - 円の完全列挙（≥3点）を n<=6 で実行し、中心分母・点数・欠落を精密集計
 - 既存 circle_b131_b138.json (n<=8) と突き合わせ
-- 出力: research/verification/round5_b101a_circles.json
+- 出力: research/experiments/original-claims/output/round5_b101a_circles.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]  # repo root
+ROOT = Path(__file__).resolve().parents[4]  # repo root
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, det4, square_points  # noqa: E402
 

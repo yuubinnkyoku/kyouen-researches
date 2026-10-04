@@ -9,8 +9,8 @@ from pathlib import Path
 import hashlib
 import json
 
-ROOT=Path(__file__).resolve().parents[3]
-OUT=ROOT/'research/verification'
+ROOT=Path(__file__).resolve().parents[4]
+OUT=ROOT/'research/experiments/original-claims/output'
 
 
 def det4(a):

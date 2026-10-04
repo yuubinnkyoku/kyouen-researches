@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """Round5 B024: check two-stone nimbers on n=6 (all-first-win board) for even values.
 Also collect data for B029, B032, B037, B039."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys, json, time
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points
 from collections import Counter
 
@@ -177,6 +180,6 @@ result = {
     "memo_size": len(grundy_memo),
     "time_sec": round(time.time()-t0, 1),
 }
-with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_b024.json", "w") as f:
+with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_b024.json", "w") as f:
     json.dump(result, f, indent=2)
 print("Done.", flush=True)

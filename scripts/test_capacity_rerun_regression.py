@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Pre-run regression gate for the capacity-rescued cache-aware rerun.
 
-Preregistered in docs/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md
+Preregistered in research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md
 (section 6). Runs BEFORE the execution manifest freeze and before any cohort
 run. One binary, the new enlarged d12-16 capacity build.
 

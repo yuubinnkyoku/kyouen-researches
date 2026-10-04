@@ -15,11 +15,11 @@ relations:
   target: K0146
   note: 本文の証明・証人が原文に与える帰結
 artifacts:
-- path: research/verification/round49-ten-stone-maximal-counterexample.md
+- path: research/experiments/original-claims/reports/round49-ten-stone-maximal-counterexample.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round49_s10_verified.json
+- path: research/experiments/original-claims/output/round49_s10_verified.json
   role: data
   note: 全四点安全性と全外点極大性の独立検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

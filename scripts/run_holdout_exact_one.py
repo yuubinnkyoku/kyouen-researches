@@ -4,7 +4,7 @@
 Usage: run_holdout_exact_one.py <parent> <batch> <pos> <state> <out_csv>
 
 Appends a single WIN/LOSS row to out_csv (with header if new). Uses the same
-tmp-kb/probe_holdout_native binary + shrink/load lineage as the probes
+research/experiments/solver-benchmarks/bin/probe_holdout_native binary + shrink/load lineage as the probes
 (shrink 0 / load 90 for full exactitude, budget 0 = unbounded).
 Refuses to run if the solver sources changed since --build.
 """

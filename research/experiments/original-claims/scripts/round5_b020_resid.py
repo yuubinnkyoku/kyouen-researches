@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """R(S) residual and P(S) competition-graph stats for B054/B058/B059/B063/B066/B070."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import os

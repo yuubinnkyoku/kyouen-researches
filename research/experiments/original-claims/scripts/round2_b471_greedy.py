@@ -6,6 +6,9 @@ reach structure for B493-B500.  Integer arithmetic for combinatorics; floats
 only for reported means/probabilities.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -14,7 +17,7 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "round2_b471.json"
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import Board, board_square  # noqa: E402

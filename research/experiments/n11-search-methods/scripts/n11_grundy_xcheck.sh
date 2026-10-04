@@ -2,11 +2,11 @@
 # Cross-check the n=11 Grundy solver on n=6 and n=7 before running n=11.
 #   n=6: g(empty)=1, P=1,265,112  N=3,816,177
 #   n=7: g(empty)=0, P= 41,264,615 N=138,545,735
-# (from research/verification/round3_b502_pgrand_n6.json and
-#  research/verification/round4_b501_prand_n7.json)
+# (from research/experiments/original-claims/output/round3_b502_pgrand_n6.json and
+#  research/experiments/original-claims/output/round4_b501_prand_n7.json)
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches-n11
-S=$R/research/verification/scripts
+S=$R/research/experiments/n11-search-methods/scripts
 LOG=/tmp/grundy_x.log
 : > "$LOG"
 free -m >>"$LOG"

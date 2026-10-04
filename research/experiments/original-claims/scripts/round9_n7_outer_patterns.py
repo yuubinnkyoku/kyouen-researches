@@ -1,4 +1,7 @@
 """B382: complete first-external-layer templates for all sixteen n7 maxima."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from pathlib import Path
 from itertools import combinations
 from collections import Counter
@@ -17,8 +20,8 @@ def transform(p,rotation,reflection):
 
 
 def main():
-    root=Path(__file__).resolve().parents[3]
-    masks=struct.unpack('<16Q',(root/'night-research/maxsafe_n7_K14.bin').read_bytes())
+    root=Path(__file__).resolve().parents[4]
+    masks=struct.unpack('<16Q',(root/'research/experiments/structural-discovery/output/maxsafe_n7_K14.bin').read_bytes())
     configurations=[frozenset((i%7,i//7) for i in range(49) if m>>i&1) for m in masks]
     templates={'A':(configurations[0],{(7,8)}),'B':(configurations[1],{(8,-2),(8,6)})}
     records=[]
@@ -55,7 +58,7 @@ def main():
             'point_orbit_counts':{str(k):v for k,v in sorted(orbit_counts.items())},
             'total_external_point_tests':sum(z['points_checked'] for r in records for z in r['layers']),
             'records':records}
-    target=root/'research/verification/round9_n7_outer_patterns.json'
+    target=root/'research/experiments/original-claims/output/round9_n7_outer_patterns.json'
     target.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print({k:v for k,v in result.items() if k not in ('records','templates')})
     print(target)

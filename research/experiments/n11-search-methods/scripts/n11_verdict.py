@@ -16,7 +16,7 @@ solver refused to draw, with the reasoning shown rather than asserted.
 import json
 from pathlib import Path
 
-d = json.loads((Path(__file__).resolve().parent.parent /
+d = json.loads(((Path(__file__).resolve().parent.parent / "output") /
                 "data" / "n11_d4_final.json").read_text(encoding="utf-8"))
 
 print("n=11, F =", d["F"], "  (expected 95670)")

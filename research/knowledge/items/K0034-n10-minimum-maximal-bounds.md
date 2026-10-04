@@ -16,15 +16,15 @@ relations:
   target: K0038
   note: ''
 artifacts:
-- path: research/verification/round56-ten-board-eight-stone-exclusion.md
+- path: research/experiments/original-claims/reports/round56-ten-board-eight-stone-exclusion.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round56_complete_verified.json
+- path: research/experiments/original-claims/output/round56_complete_verified.json
   role: data
   note: 接頭部・再開部分・全五分割の接続監査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round59-60-final-ten-board-search.md
+- path: research/experiments/original-claims/reports/round59-60-final-ten-board-search.md
   role: source
   note: 九石UNKNOWNと最終境界
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

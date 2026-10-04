@@ -28,9 +28,12 @@ Circle-key identity (exact, used everywhere):
   b_S(p) = sum over circles C through p of binom(|S n C|, 3)
 so grouping the C(k,2) pairs of S by their circle-through-p key gives b.
 
-Output: research/verification/round3_chunk6_cover.json
+Output: research/experiments/original-claims/output/round3_chunk6_cover.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import math
@@ -43,7 +46,7 @@ from fractions import Fraction
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import Board, square_points  # noqa: E402
 

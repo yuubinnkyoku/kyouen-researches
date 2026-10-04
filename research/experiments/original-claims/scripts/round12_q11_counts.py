@@ -8,7 +8,7 @@ from pathlib import Path
 from collections import Counter
 from math import gcd, isqrt
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def mul(z,w):
@@ -77,7 +77,7 @@ def main():
     result={'modulus':11,'generator':g,'cosets':[sorted(c) for c in cosets],
             'prime_characters':chars,'cases':cases,
             'claim_scope':'general proof in round12-q11-counts.md; these are finite integer cross-checks'}
-    output=ROOT/'research/verification/round12_q11_counts.json'
+    output=ROOT/'research/experiments/original-claims/output/round12_q11_counts.json'
     output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
     print('31 exponent cases; 5 independent direct norm scans; all passed')
 

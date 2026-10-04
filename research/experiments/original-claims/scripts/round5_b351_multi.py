@@ -5,6 +5,9 @@ Uses the 408 maximal 8-stone sets (round4_b371.bin).
 Integer-only geometry via kyouen_core.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -16,7 +19,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square, det4  # noqa: E402
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 BIN = ROOT / "research" / "verification" / "round4_b371.bin"
 OUT = ROOT / "research" / "verification" / "round5_b351_multi.json"
 

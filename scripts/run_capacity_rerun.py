@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Cache-aware below-root ordering — capacity-rescued confirmation rerun.
 
-Preregistered in docs/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md
+Preregistered in research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md
 (commits b7a6649 text + 45af02f machine manifest). Identical protocol to the
 C2 confirmation runner, with two frozen differences:
 
@@ -133,7 +133,7 @@ def frozen_protocol() -> dict[str, object]:
     return {
         "experiment": ("cache-aware vs cache-blind below-root ordering "
                        "(capacity-rescued confirmation rerun)"),
-        "prereg": ("docs/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md; "
+        "prereg": ("research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_BELOW_ROOT_CAPACITY_RERUN_PREREG.md; "
                    "prereg commits b7a6649 (text) + 45af02f (machine "
                    "manifest); branch base 5b50158 (C2 INCOMPLETE final "
                    "receipt)"),
@@ -171,7 +171,7 @@ def frozen_protocol() -> dict[str, object]:
         "include_files_sha256": {q.relative_to(REPO_ROOT).as_posix(): sha256_file(q)
                                  for q in [REPO_ROOT / "scripts" / "probe_cert_solver.cpp"] +
                                  sorted((REPO_ROOT / "scripts" / "probe_parts").glob("*.inc"))},
-        "parent_solve": {"binary": "tmp-kb/order_ab_native",
+        "parent_solve": {"binary": "research/experiments/solver-benchmarks/bin/order_ab_native",
                          "binary_sha256": sha256_file(BIN),
                          "sources_sha256": solver_sources_digest(),
                          "build_cmd": ["g++", "-O2", "-std=c++20"],

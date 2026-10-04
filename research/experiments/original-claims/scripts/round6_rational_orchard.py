@@ -3,6 +3,9 @@
 The universal results use Green--Tao and Mazur, not these finite checks.
 Only Python standard-library rational/integer arithmetic is used here.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from collections import Counter
 from fractions import Fraction as F
 from itertools import combinations
@@ -166,7 +169,7 @@ def main():
         example = torsion_example(*coefficients_,size)
         out['torsion_examples'].append(example)
         print('rational torsion witness',size,'b',example['b'],'delta',example['delta'],flush=True)
-    target = Path(__file__).resolve().parents[1]/'round6_rational_orchard.json'
+    target = (Path(__file__).resolve().parents[1] / "output")/'round6_rational_orchard.json'
     target.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('inversion identities',len(out['inversion_checks']),'affine checks',checks,flush=True)
     print(target,flush=True)

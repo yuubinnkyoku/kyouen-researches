@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact verification for M_{4,7}=13; see research/q48-nearby-q7-threshold.md.
+"""Exact verification for M_{4,7}=13; see research/experiments/fixed-width/reports/q48-nearby-q7-threshold.md.
 
 Standard-library-only.  Reuses the separately written exact triple-to-curve
 geometry routine for independent witness verification, not for the finite
@@ -123,7 +123,7 @@ def main() -> None:
                         'three_profile_counting': 'm=36..140',
                         'universal_counting': 'all m>=141'},
     }
-    destination = Path(__file__).resolve().parents[1] / 'q48_nearby_q7_threshold.json'
+    destination = (Path(__file__).resolve().parents[1] / "output") / 'q48_nearby_q7_threshold.json'
     destination.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(result, ensure_ascii=False, indent=2))
 

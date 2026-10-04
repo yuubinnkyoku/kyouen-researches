@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Cycle 39 — A–B corridor occupancy on n=7 (path witness) + n=8 g3 harvest note."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

@@ -1,4 +1,4 @@
-// Safety gate for docs/10X10_CACHE_AWARE_LOSS_FIRST_ONLY_PREREG.md.
+// Safety gate for research/experiments/solver-benchmarks/reports/10X10_CACHE_AWARE_LOSS_FIRST_ONLY_PREREG.md.
 // Tests the LIVE production ordering primitive exposed by Solver.
 #include <algorithm>
 #include <cstdint>

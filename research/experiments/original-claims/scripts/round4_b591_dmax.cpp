@@ -17,7 +17,7 @@
 //
 // JSON objects are printed to stdout (one per stage).
 
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <cstdio>
 #include <cstdint>

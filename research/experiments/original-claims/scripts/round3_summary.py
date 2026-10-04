@@ -4,7 +4,7 @@ import re
 from collections import Counter
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 master = json.loads((ROOT / "round3_master.json").read_text(encoding="utf-8"))
 
 
@@ -211,6 +211,6 @@ A("3. **残りの 359 件** — 多くは [存在]・[漸近]・[大胆] の無�
 A("   理論的証明か命題の弱化が必要。環境起因の障碍は上記 2 つが主因。")
 A("")
 
-(ROOT / "round3-SUMMARY.md").write_text("\n".join(lines), encoding="utf-8")
+(ROOT / "../../../archive/claim-audit-history/round3-SUMMARY.md").write_text("\n".join(lines), encoding="utf-8")
 print(f"wrote round3-SUMMARY.md ({len(lines)} lines)")
 print(f"decided={len(decided)} still={len(still)}")

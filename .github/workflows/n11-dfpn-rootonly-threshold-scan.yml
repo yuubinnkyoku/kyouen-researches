@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - 'cpp/solvers/kyouen_dfpn_root.cpp'
-      - 'research/verification/scripts/dfpn_hybrid_probe.sh'
+      - 'research/experiments/n11-search-methods/scripts/dfpn_hybrid_probe.sh'
       - '.github/workflows/n11-dfpn-rootonly-threshold-scan.yml'
   workflow_dispatch:
 
@@ -28,4 +28,4 @@ jobs:
           EXACT_PUBLISH: 'root'
           LEVELS: '60 64 68 72'
         run: |
-          bash research/verification/scripts/dfpn_hybrid_probe.sh
+          bash research/experiments/n11-search-methods/scripts/dfpn_hybrid_probe.sh

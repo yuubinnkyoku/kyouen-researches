@@ -18,7 +18,7 @@
 //
 // Integer / exact-rational only.  Build:
 //   g++ -O2 -march=native -std=c++20 -fopenmp -o /tmp/r4e round4_b228e.cpp
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <cstdint>
 #include <cstring>
@@ -1001,7 +1001,7 @@ static void sec_big(){
 int main(int argc,char**argv){
   t0=now();
   std::string which=(argc>1)?argv[1]:"all";
-  OUT=fopen("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/round4_b228e.txt","w");
+  OUT=fopen("/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/output/round4_b228e.txt","w");
   if(!OUT){ fprintf(stderr,"cannot open output\n"); return 1; }
   P("=== round4_b228e : draft 4 (decisive weakening) ===\n\n");
   sec_core();

@@ -71,7 +71,7 @@
 //   n11_grundy --enum 11 --out out.json [--spill=dir] [--threads=16]
 //   n11_grundy --read-spill=/tmp/n11_121 --n=11 --expect-levels=1,121,7007,...
 //   n11_grundy --enum 6 --check-legal        # free-mask vs kc::legal_mask
-#include "kc_core121.h"
+#include "../../../../scripts/research/kc_core121.h"
 
 #include <algorithm>
 #include <atomic>

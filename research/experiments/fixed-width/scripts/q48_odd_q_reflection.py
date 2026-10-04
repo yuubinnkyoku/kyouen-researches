@@ -86,7 +86,7 @@ def main() -> None:
     records.append(board_check('irregular reflection-invariant board',points,mates,5,True))
     result={'theorem':'For odd q, every safe reflection-invariant position on a finite reflection-invariant board with no fixed point is a P position.',
             'checks':records,'outside_scope_counterexamples':failures_outside_scope()}
-    destination=Path(__file__).resolve().parents[1]/'q48_odd_q_reflection.json'
+    destination=(Path(__file__).resolve().parents[1] / "output")/'q48_odd_q_reflection.json'
     destination.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps(result,ensure_ascii=False,indent=2))
 

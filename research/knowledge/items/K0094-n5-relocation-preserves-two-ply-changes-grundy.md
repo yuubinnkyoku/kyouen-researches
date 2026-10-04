@@ -12,15 +12,15 @@ relations:
   target: K0002
   note: ''
 artifacts:
-- path: research/verification/structural-lemmas-2026-10-02/three-ply-equivalence.md
+- path: research/experiments/structural-lemmas-2026-10-02/three-ply-equivalence.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/structural-lemmas-2026-10-02/checks/independent_lookahead.json
+- path: research/experiments/structural-lemmas-2026-10-02/checks/independent_lookahead.json
   role: data
   note: 旧証人と小盤の独立合法性検査
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/structural-lemmas-2026-10-02/checks/relocation_verified.json
+- path: research/experiments/structural-lemmas-2026-10-02/checks/relocation_verified.json
   role: data
   note: 5×5全数と一石移動の検算
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

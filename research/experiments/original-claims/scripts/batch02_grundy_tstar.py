@@ -7,9 +7,12 @@ Computes per reachable safe position S:
   T*(S) = win-preserving terminal sizes (N->P only, P->any),
   WinForceT(S) = terminal sizes the winner can force exactly.
 
-Outputs research/verification/scripts/batch02_out.json
+Outputs research/experiments/original-claims/output/batch02_out.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys

@@ -9,8 +9,8 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-OUT_DIR = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+OUT_DIR = ROOT / "research/experiments/structural-discovery/output"
 
 sys.path.insert(0, str(OUT_DIR))
 from grundy_cycle5 import (

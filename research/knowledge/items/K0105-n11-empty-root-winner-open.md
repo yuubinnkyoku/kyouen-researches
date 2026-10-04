@@ -20,17 +20,17 @@ relations:
   target: K0313
   note: 最大安全サイズの存在下界は空盤勝敗を決めない
 artifacts:
-- path: research/verification/N11-DFPN-NIGHT-REPORT-2026-09-30.md
+- path: research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/N11-RESULT.md
+- path: research/experiments/n11-search-methods/reports/N11-RESULT.md
   role: source
   note: 層0..5の厳密列挙と層6以降の資源下界
-- path: research/saturation-20261003.md
+- path: research/experiments/saturation/reports/saturation-20261003.md
   role: source
   note: 8≤s_11≤10の有限完全排除と10石証人
-- path: research/saturation-20261003-extra.md
+- path: research/experiments/saturation/reports/saturation-20261003-extra.md
   role: source
   note: K_11≥21の独立検査済み安全配置
 scope: 標準q=4・完全指摘・通常プレイの11×11空盤勝敗。層列挙・極大サイズ・misère勝敗とは別。

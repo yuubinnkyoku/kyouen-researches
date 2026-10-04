@@ -1,16 +1,19 @@
 #!/usr/bin/env python3
 """Round5 B001-B100 push3: weakened forms + K_10 / s_n witness search."""
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import json, sys, random, itertools, math
 from collections import Counter, defaultdict
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from kyouen_core import Board, square_points, board_square, is_forbidden_quad, det4
 
 OUT = {}
 
 def save():
-    with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\round5_b001_push3.json", "w", encoding="utf-8") as f:
+    with open(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\round5_b001_push3.json", "w", encoding="utf-8") as f:
         json.dump(OUT, f, ensure_ascii=False, indent=1)
 
 # ---------- B009: period check of win/lose sequence ----------

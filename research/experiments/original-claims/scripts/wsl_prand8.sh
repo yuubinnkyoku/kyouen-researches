@@ -2,7 +2,7 @@
 # n=8 p_rand with MAXL=20. Peaks near 1.4e8 states in the widest level.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 LOG=/tmp/prand_n8.log
 : > "$LOG"
 free -m >>"$LOG"
@@ -16,7 +16,7 @@ export OMP_NUM_THREADS=16
     sleep 60
   done ) >>"$LOG" 2>&1 &
 HB=$!
-stdbuf -oL -eL /tmp/kc_build/prand20 8 "$R/research/verification/round4_b501_prand_n8.json" >>"$LOG" 2>&1
+stdbuf -oL -eL /tmp/kc_build/prand20 8 "$R/research/experiments/original-claims/output/round4_b501_prand_n8.json" >>"$LOG" 2>&1
 rc=$?
 kill $HB 2>/dev/null
 echo "exit=$rc" >>"$LOG"

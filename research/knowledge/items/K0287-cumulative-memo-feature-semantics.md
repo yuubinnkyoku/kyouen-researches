@@ -12,7 +12,7 @@ relations:
   target: K0086
   note: 元改善主張の撤回を要する測定欠陥を監査
 artifacts:
-- path: docs/MOVE_ORDERING_AUDIT.md
+- path: research/experiments/solver-benchmarks/reports/MOVE_ORDERING_AUDIT.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e

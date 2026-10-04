@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """n=4 B263 metric cross-check with the same definition as round5_b251a_weak b263n5."""
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 import sys
-sys.path.insert(0, "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/verification/scripts")
+sys.path.insert(0, "/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/original-claims/scripts")
 from kyouen_core import board_square
 
 def u_gain(board, occ, p):

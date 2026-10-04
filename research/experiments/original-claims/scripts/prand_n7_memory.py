@@ -7,7 +7,7 @@ respected, or whether enumerate_levels keeps every level resident.
 from pathlib import Path
 import json
 
-ROOT = Path(__file__).resolve().parent.parent
+ROOT = (Path(__file__).resolve().parent.parent / "output")
 d = json.loads((ROOT / "round4_b501_prand.json").read_text(encoding="utf-8"))
 
 n6 = d["n6"]

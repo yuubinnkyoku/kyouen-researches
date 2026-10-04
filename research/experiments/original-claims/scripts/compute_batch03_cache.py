@@ -9,6 +9,9 @@ Saves a pickle consumed by the batch-03 hypothesis tests.
 Also enumerates maximal safe sets and Aut(Q_n) witnesses.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import pickle
 import sys
@@ -27,7 +30,7 @@ from residual_core import (
     to_abs_edges,
 )
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 OUT = ROOT / "research" / "verification" / "batch03_cache.pkl"
 
 

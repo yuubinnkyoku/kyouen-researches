@@ -4,5 +4,5 @@ set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
 LOG=/tmp/v6.log
 : > "$LOG"
-python3 "$R/research/verification/scripts/verify_crt_n6.py" >>"$LOG" 2>&1
+python3 "$R/research/experiments/original-claims/scripts/verify_crt_n6.py" >>"$LOG" 2>&1
 cat "$LOG"

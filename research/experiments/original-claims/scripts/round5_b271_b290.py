@@ -6,6 +6,9 @@ Integer-only arithmetic except where explicitly noted for LP simplex internals
 (kept exact via Fraction).
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -17,7 +20,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from kyouen_core import Board, board_square, det4, is_forbidden_quad, square_points
 
-OUT_JSON = Path(__file__).resolve().parents[1] / "round5_b271_b290.json"
+OUT_JSON = (Path(__file__).resolve().parents[1] / "output") / "round5_b271_b290.json"
 
 KNOWN_K = {2: 3, 3: 5, 4: 7, 5: 9, 6: 11, 7: 14}
 KNOWN_MAX = {2: 4, 3: 56, 4: 64, 5: 100, 6: 349132, 7: 16}
@@ -1042,7 +1045,7 @@ def main():
     }
     # n=6 level counts from round4 data if present
     try:
-        prev = json.loads((Path(__file__).resolve().parents[1] / "round5_b251_solver.json").read_text())
+        prev = json.loads(((Path(__file__).resolve().parents[1] / "output") / "round5_b251_solver.json").read_text())
         # try to find level counts
     except Exception:
         prev = {}

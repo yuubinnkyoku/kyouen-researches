@@ -9,7 +9,7 @@ import hashlib
 import json
 from round25_forced_verify import bits, geometry
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -39,7 +39,7 @@ def main():
     sequence = [d['s_n'] for d in small]+[d['s_n'] for d in minimum]+[8, 9]
     assert sequence == [1, 3, 5, 5, 5, 6, 7, 8, 9]
     assert all(a <= b for a, b in zip(sequence, sequence[1:]))
-    files = ['scripts/round54_saturation_jump.py', 'scripts/round25_forced_verify.py',
+    files = ['../scripts/round54_saturation_jump.py', '../scripts/round25_forced_verify.py',
              'round47_cover_verified.json', 'round46_saturation_verified.json',
              'round47-private-cover-and-global-minima.md', 'round28_n7_layers.json']
     output = {'B098_original_verdict': 'SUPPORTED', 'B097_original_verdict': 'PARTIAL',

@@ -6,9 +6,12 @@ Tests linear-hypergraph (B071), quadratic bound (B072), STS equality (B073),
 linear bound ratio (B074), pairwise triple completions (B075),
 maximal-set coverage multiplicity (B076-B078, B080).
 
-Outputs research/verification/batch04_geom.json
+Outputs research/experiments/original-claims/output/batch04_geom.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import sys
@@ -16,7 +19,7 @@ from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 
 from kyouen_core import Board, board_square  # noqa: E402
@@ -262,7 +265,7 @@ def sts_search(board: Board, tbp, safe_masks, min_k=7):
 
 
 def load_n6_maxsafe():
-    data = (ROOT / "night-research" / "maxsafe_n6_K11.bin").read_bytes()
+    data = (ROOT / "research/experiments/structural-discovery/output" / "maxsafe_n6_K11.bin").read_bytes()
     import struct
 
     return [struct.unpack_from("<Q", data, i)[0] for i in range(0, len(data), 8)]

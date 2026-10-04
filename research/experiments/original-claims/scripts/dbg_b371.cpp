@@ -1,6 +1,6 @@
 // Audit the triple-completion table used by round4_b371.cpp and cross-check the
 // DFS against brute force at small depths.
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <cstdio>
 #include <vector>
 #include <algorithm>

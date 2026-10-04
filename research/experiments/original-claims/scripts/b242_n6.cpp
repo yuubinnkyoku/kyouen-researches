@@ -1,6 +1,6 @@
 // n=6 grundy + B242 first-move rule check.
 // Build: g++ -O2 -std=c++17 -o b242_n6 b242_n6.cpp
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 #include <bits/stdc++.h>
 using namespace kc;
 using namespace std;

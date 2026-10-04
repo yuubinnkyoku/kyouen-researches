@@ -6,6 +6,9 @@ tau = min hitting-set size of the triple family (linear by B071).
 Also: per-stone essentialness (B368/B369), min-b>=2 + rho>=2 search (B362/B367).
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -14,13 +17,13 @@ from collections import Counter
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 from kyouen_core import board_square  # noqa: E402
 
 DATA = ROOT / "research" / "verification" / "data"
 OUT = ROOT / "research" / "verification" / "round2_b351.json"
-NR = ROOT / "night-research"
+NR = ROOT / "research/experiments/structural-discovery/output"
 
 
 def load_u64(path: Path):

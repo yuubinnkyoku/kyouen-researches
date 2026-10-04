@@ -3,6 +3,9 @@
 General proofs are in the companion markdown files. This script independently
 checks finite state identities and constructs integer witnesses for sharp stars.
 """
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 from collections import defaultdict
 from fractions import Fraction
 from functools import lru_cache
@@ -299,7 +302,7 @@ def main():
                    "equal_pass_comparisons": sum(c['equal_pass_comparisons']
                                                  for b in boards for c in b['pass_checks'])}
     }
-    target = Path(__file__).resolve().parents[1] / 'round18_local_geometry.json'
+    target = (Path(__file__).resolve().parents[1] / "output") / 'round18_local_geometry.json'
     target.write_text(json.dumps(out, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     print(json.dumps(out['totals']), flush=True)
 

@@ -7,7 +7,7 @@ import math
 import sys
 from collections import defaultdict
 
-sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\scripts")
+sys.path.insert(0, r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\scripts")
 from batch08_verify import (
     KNOWN_F,
     collinear_c4,
@@ -19,7 +19,7 @@ from batch08_verify import (
     rectangle_count,
 )
 
-OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\verification\batch08_results2.json"
+OUT = r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\original-claims\output\batch08_results2.json"
 report = {}
 
 print("=== D_n extended ===", flush=True)

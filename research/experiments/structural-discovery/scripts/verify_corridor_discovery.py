@@ -11,7 +11,7 @@ import hashlib
 import json
 import struct
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[4]
 PERMS = [(p, (-1) ** sum(p[i] > p[j] for i in range(4) for j in range(i+1,4)))
          for p in permutations(range(4))]
 
@@ -131,7 +131,7 @@ def main():
     # the previous swap checks already exhibit a forbidden quad in A+point.
 
     # Generalize the representative to all eight nearest cross-phase pairs.
-    raw = (ROOT/'night-research/maxsafe_n7_K14.bin').read_bytes()
+    raw = (ROOT/'research/experiments/structural-discovery/output/maxsafe_n7_K14.bin').read_bytes()
     census = [x[0] for x in struct.iter_unpack('<Q',raw)]
     assert len(census) == len(set(census)) == 16
     nearest = {(x,y) for x in census if x >> 24 & 1 for y in census

@@ -16,23 +16,23 @@ relations:
   target: K0077
   note: M_{4,8}=11を含む
 artifacts:
-- path: research/q34-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q34-exact-threshold.md
   role: proof
   note: M_{3,4}=24
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/q35-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q35-exact-threshold.md
   role: proof
   note: M_{3,5}=12
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/q48-q6-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q48-q6-exact-threshold.md
   role: proof
   note: M_{4,6}=16
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/q48-nearby-q7-threshold.md
+- path: research/experiments/fixed-width/reports/q48-nearby-q7-threshold.md
   role: proof
   note: M_{4,7}=13
   commit: 49891aaf2d402436b9581296ec91b52769e687d6
-- path: research/q48-exact-threshold.md
+- path: research/experiments/fixed-width/reports/q48-exact-threshold.md
   role: proof
   note: M_{4,8}=11
   commit: 49891aaf2d402436b9581296ec91b52769e687d6

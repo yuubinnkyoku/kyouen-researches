@@ -19,7 +19,7 @@
 // Usage: round4_b371 <n> <k> <outprefix>
 //   writes <outprefix>.bin  (u64 count + masks)   [if count <= 40e6]
 //   writes <outprefix>.json (all statistics)
-#include "kc_core.h"
+#include "../../../../scripts/research/kc_core.h"
 
 #include <cstdio>
 #include <cstdlib>

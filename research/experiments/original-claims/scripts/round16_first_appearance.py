@@ -10,7 +10,7 @@ from pathlib import Path
 import hashlib
 import json
 
-OUT = Path(__file__).resolve().parents[1]
+OUT = (Path(__file__).resolve().parents[1] / "output")
 
 
 def span(points):

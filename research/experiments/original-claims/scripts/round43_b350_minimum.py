@@ -6,7 +6,7 @@ import hashlib
 import json
 from round25_forced_verify import geometry,bits,det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def game(m,edges):
@@ -134,7 +134,7 @@ def main():
     small=small_board_exclusion()
     minimum=geometric(5,[14,15,19,23,24]);assert len(minimum['L_ids'])==5
     smaller_board=geometric(4,[0,1,3,5])
-    files=['scripts/round43_b350_minimum.py','scripts/round25_forced_verify.py','round2_b321.json']
+    files=['../scripts/round43_b350_minimum.py','../scripts/round25_forced_verify.py','round2_b321.json']
     out={'original_verdict':'SUPPORTED','minimum_legal_size':5,'minimum_board_n':4,
          'all_small_abstract_families':census,'small_board_exclusions':small,
          'minimum_legal_size_witness':minimum,'minimum_board_witness':smaller_board,

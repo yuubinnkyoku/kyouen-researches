@@ -7,7 +7,7 @@ import struct
 import subprocess
 from round25_forced_verify import bits,curve,det4
 
-ROOT=Path(__file__).resolve().parents[1]
+ROOT=(Path(__file__).resolve().parents[1] / "output")
 
 
 def main():
@@ -50,7 +50,7 @@ def main():
     assert all(0<=x<8 and 0<=y<8 for x,y in fifteen)
     assert all(det4(q) for q in combinations(fifteen,4))
     assert tests==3200 and len(record)==64
-    files=['scripts/round58_maximum_embedding_audit.py','scripts/round25_forced_verify.py',
+    files=['../scripts/round58_maximum_embedding_audit.py','../scripts/round25_forced_verify.py',
            'round9_n7_outer_patterns.json','round9_n7_n8_overlap.json',
            'round28_n7_layers.json','round28_n7_independent.json','round28_n7_audited.json',
            'round28-seven-board-original-verdicts.md']

@@ -13,27 +13,27 @@ relations:
   target: K0026
   note: ''
 artifacts:
-- path: research/verification/round6-rational-orchard.md
+- path: research/experiments/original-claims/reports/round6-rational-orchard.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round26_original_scope_index.json
+- path: research/experiments/original-claims/output/round26_original_scope_index.json
   role: manifest
   note: 原文・量化・採用根拠・旧記録のhashを固定した監査索引
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/hypothesis-bank-round2-2026-09-27.md
+- path: research/archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md
   role: source
   note: B352の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/round6_rational_orchard.json
+- path: research/experiments/original-claims/output/round6_rational_orchard.json
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-- path: research/verification/scripts/round6_rational_orchard.py
+- path: research/experiments/original-claims/scripts/round6_rational_orchard.py
   role: verifier
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
-scope: '起点: [個票04・B071〜B075](verification/batch-04.md)。p中心の反転後にも「4点共円・共線なし」を要求する。一般の三点直線配置の構成が、そのまま使えるとは仮定しない。`δ(S,p)=C(|S|,2)−3b_S(p)`。'
+scope: '起点: [個票04・B071〜B075](../../log/claim-audit/batch-04.md)。p中心の反転後にも「4点共円・共線なし」を要求する。一般の三点直線配置の構成が、そのまま使えるとは仮定しない。`δ(S,p)=C(|S|,2)−3b_S(p)`。'
 evidence: 原文監査 PARTIAL / partial_general_bound
 ---
 
@@ -41,7 +41,7 @@ evidence: 原文監査 PARTIAL / partial_general_bound
 
 未確定の命題: 共円回避を加えると欠損は超線形。 あるε>0,c>0があり、十分大きい安全Sで `δ(S,p)≥c k^(1+ε)`。普通直線だけの制約より強い損失を予想する。
 
-適用文脈: 起点: [個票04・B071〜B075](verification/batch-04.md)。p中心の反転後にも「4点共円・共線なし」を要求する。一般の三点直線配置の構成が、そのまま使えるとは仮定しない。`δ(S,p)=C(|S|,2)−3b_S(p)`。
+適用文脈: 起点: [個票04・B071〜B075](../../log/claim-audit/batch-04.md)。p中心の反転後にも「4点共円・共線なし」を要求する。一般の三点直線配置の構成が、そのまま使えるとは仮定しない。`δ(S,p)=C(|S|,2)−3b_S(p)`。
 
 現在の結論: δ>k(log log k)^ηは既証だが、原文の固定ε>0でδ≥k^(1+ε)には届かない。
 

@@ -11,7 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "research" / "exploration"
 OUT.mkdir(parents=True, exist_ok=True)
-CERTS = ROOT / "night-research"
+CERTS = ROOT / "research/experiments/structural-discovery/output"
 
 
 def parse_cert(path: Path):

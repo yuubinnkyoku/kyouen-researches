@@ -29,25 +29,25 @@ scratch/
 research/__pycache__/
 
 # runtime scratch logs
-night-research/.EDITOR_PROBE_LIST.txt
-night-research/*_err.txt
-night-research/*_out.txt
-night-research/*.out.txt
-night-research/*_stderr.txt
-night-research/*_stderr2.txt
-night-research/*.err
-night-research/*.err.txt
-artifacts/*-stderr.txt
+research/experiments/structural-discovery/output/.EDITOR_PROBE_LIST.txt
+research/experiments/structural-discovery/output/*_err.txt
+research/experiments/structural-discovery/output/*_out.txt
+research/experiments/structural-discovery/output/*.out.txt
+research/experiments/structural-discovery/output/*_stderr.txt
+research/experiments/structural-discovery/output/*_stderr2.txt
+research/experiments/structural-discovery/output/*.err
+research/experiments/structural-discovery/output/*.err.txt
+research/experiments/solver-benchmarks/output/*-stderr.txt
 
 
 # oversized certificates (GitHub 100MB limit)
-night-research/kyouen-8x8.cert
-night-research/kyouen-9x9.cert
+research/experiments/structural-discovery/output/kyouen-8x8.cert
+research/experiments/structural-discovery/output/kyouen-9x9.cert
 
 # verification caches / regenerable dumps
-research/verification/*.pkl
-research/verification/data/*.bin
-research/verification/scripts/_rel_marker.txt
+research/experiments/original-claims/output/*.pkl
+research/experiments/original-claims/output/data/*.bin
+research/experiments/original-claims/scripts/_rel_marker.txt
 
 # Root-level shell smoke-test output (research logs stay versioned)
 /$null
@@ -61,15 +61,15 @@ research/verification/scripts/_rel_marker.txt
 /scratch_scan.txt
 
 # round5 / verification runtime logs and compiled binaries
-research/verification/*.log
-research/verification/scripts/*.log
-research/verification/scripts/round5_b142_count
-research/verification/scripts/round5_b522_triples
+research/experiments/original-claims/output/*.log
+research/experiments/original-claims/scripts/*.log
+research/experiments/original-claims/scripts/round5_b142_count
+research/experiments/original-claims/scripts/round5_b522_triples
 scratchpad/
 scripts/round5_b231_*.py
 
 # transient solver state files (frozen binaries/checksums remain versioned)
-tmp-kb/tmp*.txt
+research/experiments/solver-benchmarks/bin/tmp*.txt
 /tmp_probe.py
 /tmp_probe.ps1
 /test_task.txt

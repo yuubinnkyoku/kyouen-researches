@@ -6,6 +6,9 @@ Uses existing data first (maxsafe_n7_K14.bin, discovery 903/250, 5 isolated
 local component probes. No full re-enumeration of n>=7.
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import random
@@ -15,12 +18,12 @@ from itertools import combinations
 from pathlib import Path
 
 ROOT = Path(r"D:\ghq\github.com\yuubinnkyoku\kyouen-researches")
-sys.path.insert(0, str(ROOT / "research/verification/scripts"))
+sys.path.insert(0, str(ROOT / "research/experiments/original-claims/scripts"))
 from kyouen_core import Board, square_points  # noqa: E402
 
 RES = ROOT / "results"
-NIGHT = ROOT / "night-research"
-OUT = ROOT / "research/verification/round2_b411.json"
+NIGHT = ROOT / "research/experiments/structural-discovery/output"
+OUT = ROOT / "research/experiments/original-claims/output/round2_b411.json"
 
 
 def popcount(x: int) -> int:

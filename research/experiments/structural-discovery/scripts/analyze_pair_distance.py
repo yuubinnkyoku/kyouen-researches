@@ -2,8 +2,8 @@
 """Cycle 7: pairwise exchange-distance structure of maximal safe sets.
 
 No new search: reads the fully-enumerated set lists from 99659da
-  night-research/maxsafe_n7_K14.bin (16 sets, K=14)
-  night-research/maxsafe_n6_K11.bin (464 sets, K=11)
+  research/experiments/structural-discovery/output/maxsafe_n7_K14.bin (16 sets, K=14)
+  research/experiments/structural-discovery/output/maxsafe_n6_K11.bin (464 sets, K=11)
 D4 canonical keys are cross-checked against results/maxsafe_exchange_n*.csv.
 
 Writes:
@@ -13,7 +13,7 @@ Writes:
   results/maxsafe_cell_pair_frequency_n7.csv
   results/maxsafe_pair_distance_n6.csv
   results/maxsafe_distance_components_n6.csv
-Run: python night-research/analyze_pair_distance.py
+Run: python research/experiments/structural-discovery/scripts/analyze_pair_distance.py
 """
 import csv
 import struct
@@ -21,8 +21,8 @@ from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-NR = ROOT / "night-research"
+ROOT = Path(__file__).resolve().parents[4]
+NR = ROOT / "research/experiments/structural-discovery/output"
 RES = ROOT / "results"
 
 

@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Batch 04 follow-ups: exact B062 coloring, fixed B067 K(S), B078 s_n on n=6.
 
-Outputs research/verification/batch04_followup.json
+Outputs research/experiments/original-claims/output/batch04_followup.json
 """
 from __future__ import annotations
+import sys as _ssot_sys
+from pathlib import Path as _SSOTPath
+_ssot_sys.path.insert(0, str(next(p for p in _SSOTPath(__file__).resolve().parents if (p / "pyproject.toml").is_file()) / "scripts/research"))
 
 import json
 import struct
@@ -12,7 +15,7 @@ from collections import Counter, defaultdict
 from itertools import combinations
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[3]
+ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research" / "verification" / "scripts"))
 
 from kyouen_core import Board, board_square  # noqa: E402

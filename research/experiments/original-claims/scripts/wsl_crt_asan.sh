@@ -2,7 +2,7 @@
 # Isolate the CRT solver on n=4 only: fast, and enough to catch a lifetime bug.
 set -uo pipefail
 R=/mnt/d/ghq/github.com/yuubinnkyoku/kyouen-researches
-S=$R/research/verification/scripts
+S=$R/research/experiments/original-claims/scripts
 mkdir -p /tmp/kc_build
 g++ -O1 -g -fsanitize=address -std=c++20 -fopenmp \
     -o /tmp/kc_build/crt_asan "$S/round5_b501_prand8.cpp" 2>&1 | head -20
