@@ -106,6 +106,20 @@ root READMEは現行入口へ書き換え、古い12≤M_{3,5}≤56、m=22..55�
 
 ### 長時間実験workflowの起動境界
 
-移行後のpushで、旧設定のon: pushにより11盤のprobe/sweep jobが自動起動したため、実行中の5件を停止した。完走済みの短いsmoke/threshold jobも現在知識へ取り込んでいない。
+移行後のpushで、旧設定のon: pushにより11盤のprobe/sweep jobが自動起動したため、実行中の4件を停止した。停止を要求したもう1件は要求前に完走済みだった。これを含め、完走済みのsmoke/threshold jobの結果も現在知識へ取り込んでいない。
 未知盤のprobe/sweepはworkflow_dispatchだけで明示的に実行するようにし、通常pushでは既知盤のregressionとCI・knowledge・Rust検査を実行する。
 これは構造変更による新たな探索の自動起動を防ぐ変更で、solverや数学的statusの変更ではない。
+
+## 物理移行の検証記録
+
+- 移動2,234、削除45、新規26ファイル。分類と歴史的path対応はarchive/physical-ssot-2026-10-04/paths.tsvを参照。
+- K0001〜K0320の320件、alias 252、artifact参照1,184（固有ファイル393）。broken artifact/relation/link/source runner/workflow working-directoryは0。generated warningは0。
+- kind/status/topics/aliases/relations/solution metadataを開始mainと機械比較し、一致を確認した。9個の凍結監査・hash receiptは開始mainのGit blobとbyte単位で一致する。
+- uv sync --locked、knowledge check、全unit test、knowledge build、generated差分検査に成功。最終CIは追加のlayout回帰を含む33 testsを実行する。
+- CMakeの通常build、1〜6証明書の生成と独立検査、10/11 rootとplain solverのmemo self-test、既存の三石root回帰に成功。
+- fixed-width、geometry、game-structure、saturationの既存既定回帰に成功。全長の巨大排除や未解決盤の新たな探索は回帰の範囲に含めていない。
+- Lean buildとdemo、Rustの9 unit tests・2 reference tests・self-test・266行/4ファイルのevidence auditに成功。Rust CI/reader commandsは使用binaryを明示した。
+- [CI（C++・imported regression・Lean）](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37184192703)、[Knowledge integrity](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37184192722)、[Rust verifier](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37184192782)で成功を確認した。同じpushの3/4/5/6石proof、witness log/mmap、既知盤hybrid regressionも成功。
+
+旧path文字列は歴史資料と移行説明の12ファイルに4,657箇所残る。内訳はpath対応表1,852、当時の監査JSON等2,797、旧引き継ぎ・未完了コード・QA・実行log 7、移行説明2。
+現在の実行path・Markdown link・knowledge artifactsにあるlegacy参照は0。historical文字列をcurrent参照と誤認しないように、各experiment/archive入口でprovenanceの扱いを説明した。
