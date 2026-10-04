@@ -13,3 +13,8 @@
 chronologicalな発見・判断は[log](../../log/README.md)、旧統合・計画は[archive](../../archive/README.md)です。
 
 複数roundの対照実験は共有する入力や内部module importを持つため、この単位内でコードを集約しています。各実行の条件・CLI・入力・保存範囲はreportとscriptの引数に従います。古いWSL runnerには当時の外部build/cache条件が残るものがあり、汎用再現runnerとして無条件には実行しません。
+
+## 実行の起動境界
+
+未知11盤のprobe・sweep workflowはworkflow_dispatchからの明示的な起動に限定します。構造整理のpushでは開始しません。
+通常pushに残すhybrid-regressionは既知の小盤を検査します。

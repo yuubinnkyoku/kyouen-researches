@@ -1,9 +1,7 @@
 name: N11 df-pn root-only child diagnostic
 
 on:
-  push:
-    paths:
-      - '.github/workflows/n11-dfpn-rootonly-children.yml'
+  # Historical search experiment: run explicitly, never for a layout-only push.
   workflow_dispatch:
 
 jobs:

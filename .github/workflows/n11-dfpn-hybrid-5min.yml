@@ -1,9 +1,7 @@
 name: N11 df-pn hybrid 5min A/B
 
 on:
-  push:
-    paths:
-      - '.github/workflows/n11-dfpn-hybrid-5min.yml'
+  # Historical search experiment: run explicitly, never for a layout-only push.
   workflow_dispatch:
 
 jobs:

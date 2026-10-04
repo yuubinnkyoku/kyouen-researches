@@ -1,11 +1,8 @@
 name: N11 df-pn hybrid smoke
 
 on:
+  # Historical search experiment: run explicitly, never for a layout-only push.
   workflow_dispatch:
-  push:
-    paths:
-      - '.github/workflows/n11-dfpn-hybrid-smoke.yml'
-
 jobs:
   hybrid-smoke:
     runs-on: ubuntu-latest

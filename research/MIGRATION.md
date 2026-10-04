@@ -103,3 +103,9 @@ root READMEは現行入口へ書き換え、古い12≤M_{3,5}≤56、m=22..55�
 
 検査はuvのlocked環境、knowledge integrity・unit test・generated差分、既存C++ build/小盤certificate、固定幅・幾何・game-structure・saturation regression、Lean、Rust独立verifierを対象にした。
 物理移行は435原文の内容監査、11盤の勝敗、巨大具体証明書のLean核内検査等を解決したという意味ではない。これらの現在の境界はknowledgeを参照する。
+
+### 長時間実験workflowの起動境界
+
+移行後のpushで、旧設定のon: pushにより11盤のprobe/sweep jobが自動起動したため、実行中の5件を停止した。完走済みの短いsmoke/threshold jobも現在知識へ取り込んでいない。
+未知盤のprobe/sweepはworkflow_dispatchだけで明示的に実行するようにし、通常pushでは既知盤のregressionとCI・knowledge・Rust検査を実行する。
+これは構造変更による新たな探索の自動起動を防ぐ変更で、solverや数学的statusの変更ではない。

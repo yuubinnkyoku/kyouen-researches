@@ -1,9 +1,7 @@
 name: N11 df-pn hybrid child diagnostic
 
 on:
-  push:
-    paths:
-      - '.github/workflows/n11-dfpn-hybrid-children.yml'
+  # Historical search experiment: run explicitly, never for a layout-only push.
   workflow_dispatch:
 
 jobs:

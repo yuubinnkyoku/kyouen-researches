@@ -1,9 +1,7 @@
 name: N11 center20 root-only hybrid sweep
 
 on:
-  push:
-    paths:
-      - '.github/workflows/n11-dfpn-center20-hybrid-sweep.yml'
+  # Historical search experiment: run explicitly, never for a layout-only push.
   workflow_dispatch:
 
 jobs:
