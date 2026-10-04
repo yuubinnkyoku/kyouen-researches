@@ -3,7 +3,7 @@
 更新: 2026-10-04。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。
 **未監査は未解決と同義ではない。この表から研究全体の未解決数はまだ確定できない。**
 
-原文照合して採用した記録は209件。残りは旧ラベルを採用せずNOT_AUDITEDとする。
+原文照合して採用した記録は319件。残りは旧ラベルを採用せずNOT_AUDITEDとする。
 旧個票の原命題・弱化版ラベルはJSONのevidence_pointersに行番号・原文ごと保存した。
 最も強いラベルを自動選択したり、弱化版を原命題へ昇格したりしていない。
 SUPPORTEDは原文の量化を満たす記録、REFUTEDはその反証記録。PARTIALは明示した部分結果。
@@ -13,12 +13,12 @@ SCOPE_UNCLEARは原文の解釈・統計母集団が足りず、より強い読�
 
 | 状態 | 件数 |
 |---|---:|
-| INCONCLUSIVE | 6 |
-| NOT_AUDITED | 391 |
-| PARTIAL | 39 |
-| REFUTED | 59 |
-| SCOPE_UNCLEAR | 5 |
-| SUPPORTED | 100 |
+| INCONCLUSIVE | 21 |
+| NOT_AUDITED | 281 |
+| PARTIAL | 85 |
+| REFUTED | 80 |
+| SCOPE_UNCLEAR | 6 |
+| SUPPORTED | 127 |
 
 この内訳は「この索引で照合を済ませた範囲」の件数。194件などの旧暫定残数との単純な減算はしない。
 B356/B357はround5/7の一般構成を優先し、round24の別証明を二件追加とは数えない。
@@ -477,156 +477,156 @@ B356/B357はround5/7の一般構成を優先し、round24の別証明を二件�
 | [B448](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L257) | [構造] 一石少ない中間配置を許すと同一残局族を少数の橋で結べる。 | PARTIAL | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
 | [B449](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L258) | [存在] 残余ゲームの抽象同型まで緩めても配置族は分裂する。 | SUPPORTED | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
 | [B450](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L259) | [構造] 同じ残局の複数実現は安全な遮蔽部品の置換則を与える。 | PARTIAL | [round2-batch-b441.md](round2-batch-b441.md) |
-| [B451](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L265) | [存在] 同半径・異なる中心分母で、ともに4点以上だが点数が違う円がある。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B452](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L266) | [存在] 分母の大きい中心が整数中心を上回る半径範囲がある。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
+| [B451](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L265) | [存在] 同半径・異なる中心分母で、ともに4点以上だが点数が違う円がある。 | SUPPORTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B452](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L266) | [存在] 分母の大きい中心が整数中心を上回る半径範囲がある。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
 | [B453](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L267) | [構造] 中心分母の素因数型で格子点数上限を整理できる。 | SUPPORTED | [round10-circle-denominator.md](round10-circle-denominator.md) |
 | [B454](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L268) | [全称・大胆] 分母が2の冪の円は奇分母の円より最小収容盤が小さい。 | REFUTED | [round12-b454-counterexample.md](round12-b454-counterexample.md) |
 | [B455](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L269) | [存在] q≥3の多数点円は、整数中心円の剰余類選択として最適に記述できる。 | REFUTED | [round11-residue-orbits.md](round11-residue-orbits.md) |
 | [B456](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L270) | [全称・大胆] 分母qを固定した最良点数は半径の単調増加だけでは達成できない。 | SUPPORTED | [round11-circle-records.md](round11-circle-records.md) |
 | [B457](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L271) | [統計] q≥3の円は境界に切られても点数を一つずつ変えやすい。 | PARTIAL | [round4-circle-windows.md](round4-circle-windows.md) |
 | [B458](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L272) | [構造] 有理中心の初出は四点の外心分母ではなく原始円方程式の係数で決まる。 | SCOPE_UNCLEAR | [round16-first-appearance.md](round16-first-appearance.md) |
-| [B459](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L273) | [存在] q≥3の円だけが作る小さい残余ゲームがある。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B460](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L274) | [統計] q≥3由来の四点は禁止数の比率以上に浅層の勝敗へ効く。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
+| [B459](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L273) | [存在] q≥3の円だけが作る小さい残余ゲームがある。 | INCONCLUSIVE | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B460](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L274) | [統計] q≥3由来の四点は禁止数の比率以上に浅層の勝敗へ効く。 | INCONCLUSIVE | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
 | [B461](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L280) | [全称] 半径二乗25/2の12点円は、正方形窓で11点だけを残せない。 | SUPPORTED | [round4-circle-windows.md](round4-circle-windows.md) |
 | [B462](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L281) | [存在] 11×11は11点を載せる円の最初の正方形盤。 | SUPPORTED | [round4-circle-windows.md](round4-circle-windows.md) |
 | [B463](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L282) | [構造] 1点だけ失えるかは上下左右の極値点の重複度で決まる。 | SUPPORTED | [round4-circle-windows.md](round4-circle-windows.md) |
 | [B464](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L283) | [存在] 長方形窓なら実現する点数が正方形窓では実現しない。 | REFUTED | [round4-circle-windows.md](round4-circle-windows.md) |
 | [B465](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L284) | [全称・大胆] q=2の対称な完全円では最大点数直下の奇数が欠ける。 | SUPPORTED | [round4-circle-windows.md](round4-circle-windows.md) |
-| [B466](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L285) | [存在] 最多数点円の交代なしにM(n)が二回続けて増える。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
+| [B466](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L285) | [存在] 最多数点円の交代なしにM(n)が二回続けて増える。 | SUPPORTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
 | [B467](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L286) | [構造] 円の窓点数スペクトルは円周上の点の座標順序で決まる。 | SUPPORTED | [round4-circle-windows.md](round4-circle-windows.md) |
 | [B468](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L287) | [統計] 高い対称性を持つ円ほど点数スペクトルの穴が多い。 | SCOPE_UNCLEAR | [round4-circle-windows.md](round4-circle-windows.md) |
-| [B469](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L288) | [存在] 最多点円の移動族と最強の被覆三つ組族は一致しない。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
+| [B469](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L288) | [存在] 最多点円の移動族と最強の被覆三つ組族は一致しない。 | INCONCLUSIVE | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
 | [B470](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L289) | [構造] 三石後の合法手数の欠落は少数の円切断型で説明できる。 | SUPPORTED | [round4-circle-windows.md](round4-circle-windows.md) |
 | [B471](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L295) | [全称・大胆] 共線数の大きい傾きの尾部は一様に小さい。 | SUPPORTED | [round4-collinear-asymptotic.md](round4-collinear-asymptotic.md) |
 | [B472](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L296) | [構造] 固定方向の主項係数は方向高さの三乗で減衰する。 | SUPPORTED | [round4-collinear-asymptotic.md](round4-collinear-asymptotic.md) |
 | [B473](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L297) | [構造] 共線数の有限サイズ補正を境界長とgcd和へ分けられる。 | SUPPORTED | [round4-collinear-asymptotic.md](round4-collinear-asymptotic.md) |
-| [B474](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L298) | [統計] C_nの有効次数の揺れは最多点円より新規円型の数に結びつく。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
+| [B474](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L298) | [統計] C_nの有効次数の揺れは最多点円より新規円型の数に結びつく。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
 | [B475](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L299) | [漸近・大胆] 点数が固定の円が共円四点数の正の割合を担う。 | SUPPORTED | [round13-four-point-circles.md](round13-four-point-circles.md) |
 | [B476](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L300) | [漸近・大胆] 四点寄与で重み付けすると円上点数は発散する。 | REFUTED | [round13-four-point-circles.md](round13-four-point-circles.md) |
 | [B477](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L301) | [構造] 円を半径でなく弦の原始型で分解すると重複の少ない式が得られる。 | SUPPORTED | [round15-standard-chord.md](round15-standard-chord.md) |
 | [B478](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L302) | [漸近] 無作為k点の最初の禁止数はPoisson型になる。 | SUPPORTED | [round13-poisson-limit.md](round13-poisson-limit.md) |
 | [B479](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L303) | [漸近・大胆] 最初の禁止は単発でなく同じ円・直線の束として現れる。 | REFUTED | [round13-poisson-limit.md](round13-poisson-limit.md) |
 | [B480](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L304) | [構造] 安全確率の最初の補正は三点共有の禁止ペアが決める。 | SUPPORTED | [round14-safety-correction.md](round14-safety-correction.md) |
-| [B481](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L310) | [統計] 三角形とnimberの正の関係はクリーク成分の偶奇で弱まる。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B482](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L311) | [統計] 三角形は数より共有の仕方が重要。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B483](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L312) | [統計] 高階制約の近似誤差は相対密度より絶対的な橋の本数に結びつく。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B484](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L313) | [統計] bの分散と必勝手比率の関係は既禁止点の割合で変わる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B485](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L314) | [統計] 必勝手の多さは高被覆点の数より低被覆点の空間分布に効く。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B486](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L315) | [統計] ランダム勝率は浅い層でも局所指標へ追加情報を持つ。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B487](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L316) | [統計] 高nimberを作るのはgain最大値よりgainの中間層の厚さ。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B488](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L317) | [統計] 同型な残局を重複除去すると小盤での相関の一部が消える。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B489](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L318) | [統計] 強制手数の不確定性はP率より戦略的錯覚の強さを説明する。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B490](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L319) | [構造] 勝敗・nimber・強制長には別々の最小特徴量が必要。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B491](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L325) | [漸近・大胆] 典型終局の主項は3n/2。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B492](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L326) | [漸近・大胆] 平均は線形に見えても分散は線形以下に抑えられる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B493](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L327) | [統計] 同サイズ極大への到達確率は中間層の合法手数で予測できる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B494](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L328) | [統計] 高対称極大の到達しにくさは中間の選択肢の多さで説明できる。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B495](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L329) | [存在] 同じ全部分集合の合法手数ヒストグラムでも到達確率が違う。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B496](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L330) | [存在・大胆] 同サイズ・同D4安定化群でも到達確率比は無限に増やせる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B497](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L331) | [統計] 最大集合へのランダム到達は外周の早い占有を好む。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B498](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L332) | [統計] 最小極大への到達は初期の高補完三つ組を好む。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B499](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L333) | [存在] 初手による平均長差がほぼなくても最小終局の確率は大きく違う。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B500](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L334) | [構造] ランダム到達確率の極値は少数のボトルネック部分集合で説明できる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
+| [B481](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L310) | [統計] 三角形とnimberの正の関係はクリーク成分の偶奇で弱まる。 | REFUTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B482](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L311) | [統計] 三角形は数より共有の仕方が重要。 | REFUTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B483](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L312) | [統計] 高階制約の近似誤差は相対密度より絶対的な橋の本数に結びつく。 | INCONCLUSIVE | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B484](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L313) | [統計] bの分散と必勝手比率の関係は既禁止点の割合で変わる。 | REFUTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B485](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L314) | [統計] 必勝手の多さは高被覆点の数より低被覆点の空間分布に効く。 | REFUTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B486](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L315) | [統計] ランダム勝率は浅い層でも局所指標へ追加情報を持つ。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B487](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L316) | [統計] 高nimberを作るのはgain最大値よりgainの中間層の厚さ。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B488](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L317) | [統計] 同型な残局を重複除去すると小盤での相関の一部が消える。 | REFUTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B489](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L318) | [統計] 強制手数の不確定性はP率より戦略的錯覚の強さを説明する。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B490](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L319) | [構造] 勝敗・nimber・強制長には別々の最小特徴量が必要。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B491](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L325) | [漸近・大胆] 典型終局の主項は3n/2。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B492](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L326) | [漸近・大胆] 平均は線形に見えても分散は線形以下に抑えられる。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B493](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L327) | [統計] 同サイズ極大への到達確率は中間層の合法手数で予測できる。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B494](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L328) | [統計] 高対称極大の到達しにくさは中間の選択肢の多さで説明できる。 | REFUTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B495](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L329) | [存在] 同じ全部分集合の合法手数ヒストグラムでも到達確率が違う。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B496](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L330) | [存在・大胆] 同サイズ・同D4安定化群でも到達確率比は無限に増やせる。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B497](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L331) | [統計] 最大集合へのランダム到達は外周の早い占有を好む。 | REFUTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B498](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L332) | [統計] 最小極大への到達は初期の高補完三つ組を好む。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B499](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L333) | [存在] 初手による平均長差がほぼなくても最小終局の確率は大きく違う。 | SUPPORTED | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
+| [B500](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L334) | [構造] ランダム到達確率の極値は少数のボトルネック部分集合で説明できる。 | PARTIAL | [round63-b451-b500-original-scope-audit.md](round63-b451-b500-original-scope-audit.md) |
 | [B501](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L340) | [全称・大胆] 標準盤のP局面のランダム勝率は2/3以下。 | REFUTED | [round36-random-original-witness-audit.md](round36-random-original-witness-audit.md) |
 | [B502](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L341) | [存在] P局面でランダム勝率3/4を超えられる。 | SUPPORTED | [round36-random-original-witness-audit.md](round36-random-original-witness-audit.md) |
-| [B503](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L342) | [構造] 約1/11のN局面は「一つの救済手と十の誘惑手」で説明できる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B504](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L343) | [存在] 誘惑手の数を増幅する幾何部品がある。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B505](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L344) | [存在] 最善手が多いのにランダム勝率が低い。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
+| [B503](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L342) | [構造] 約1/11のN局面は「一つの救済手と十の誘惑手」で説明できる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B504](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L343) | [存在] 誘惑手の数を増幅する幾何部品がある。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B505](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L344) | [存在] 最善手が多いのにランダム勝率が低い。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 | [B506](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L345) | [全称・大胆] 残り最大手数が3以下ならPのランダム勝率は1/2以下。 | REFUTED | [round36-random-original-witness-audit.md](round36-random-original-witness-audit.md) |
-| [B507](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L346) | [構造] hを固定したPの最大ランダム勝率には明示的な上限列がある。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B508](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L347) | [存在] ランダム勝率が同じ二局面に任意に異なる最善手比率がある。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B509](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L348) | [統計] 誘惑手が強い局面では、負け手の子のランダム勝率が似通う。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B510](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L349) | [存在] 一手だけ完全に読むことが、数手のランダム試行より悪く見える局面。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B511](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L355) | [全称・大胆] 全正方形盤は一点削除に対して勝者を保つ。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B512](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L356) | [全称・大胆] 最大安全サイズを下げるには少なくとも3点の削除が必要。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B513](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L357) | [全称] 7×7のδ_Kは3。 | NOT_AUDITED | 旧個票参照4箇所（JSON） |
-| [B514](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L358) | [存在] 戦略的な削除距離は容量の削除距離を任意に下回る。 | NOT_AUDITED | 旧個票参照9箇所（JSON） |
-| [B515](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L359) | [存在] 二点削除で勝者を変えるペアは、二石Pペアと一致しないだけでなく交わらない。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B516](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L360) | [構造] 4×4の勝者反転12ペアは二つの幾何条件で分類できる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B517](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L361) | [全称] 4×4の反転削除ペアのグラフは二部。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B518](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L362) | [存在] 三点のどの二点を削除しても不変だが、三点全部で反転する。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B519](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L363) | [全称・大胆] 最小反転削除集合は共円・共線になりやすいだけでなく、それを避けられない。 | NOT_AUDITED | 旧個票参照4箇所（JSON） |
-| [B520](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L364) | [存在] 最大集合をすべて壊しても最適勝者と全初手分類は変わらない。 | NOT_AUDITED | 旧個票参照11箇所（JSON） |
+| [B507](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L346) | [構造] hを固定したPの最大ランダム勝率には明示的な上限列がある。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B508](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L347) | [存在] ランダム勝率が同じ二局面に任意に異なる最善手比率がある。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B509](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L348) | [統計] 誘惑手が強い局面では、負け手の子のランダム勝率が似通う。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B510](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L349) | [存在] 一手だけ完全に読むことが、数手のランダム試行より悪く見える局面。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B511](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L355) | [全称・大胆] 全正方形盤は一点削除に対して勝者を保つ。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B512](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L356) | [全称・大胆] 最大安全サイズを下げるには少なくとも3点の削除が必要。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B513](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L357) | [全称] 7×7のδ_Kは3。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B514](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L358) | [存在] 戦略的な削除距離は容量の削除距離を任意に下回る。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B515](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L359) | [存在] 二点削除で勝者を変えるペアは、二石Pペアと一致しないだけでなく交わらない。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B516](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L360) | [構造] 4×4の勝者反転12ペアは二つの幾何条件で分類できる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B517](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L361) | [全称] 4×4の反転削除ペアのグラフは二部。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B518](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L362) | [存在] 三点のどの二点を削除しても不変だが、三点全部で反転する。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B519](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L363) | [全称・大胆] 最小反転削除集合は共円・共線になりやすいだけでなく、それを避けられない。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B520](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L364) | [存在] 最大集合をすべて壊しても最適勝者と全初手分類は変わらない。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 | [B521](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L370) | [全称] 4×4はどの二つの禁止四点を同時解除しても後手勝ち。 | SUPPORTED | [round19-rule-removal-audit.md](round19-rule-removal-audit.md) |
 | [B522](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L371) | [存在] 4×4の三つの禁止解除で勝者が反転する。 | SUPPORTED | [round19-rule-removal-audit.md](round19-rule-removal-audit.md) |
 | [B523](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L372) | [構造] 最小反転解除族は共有する三点を持つ。 | REFUTED | [round35-empty-intersection-minimum.md](round35-empty-intersection-minimum.md) |
 | [B524](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L373) | [存在] 共通点を一つも持たない最小反転解除族がある。 | SUPPORTED | [round35-empty-intersection-minimum.md](round35-empty-intersection-minimum.md) |
 | [B525](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L374) | [全称・大胆] 一つの真円の制約を全部解除しても4×4の空盤勝者は変わらない。 | REFUTED | [round22-b252-one-circle-versus-scattered.md](round22-b252-one-circle-versus-scattered.md) |
-| [B526](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L375) | [存在] 一つの直線の制約を全部解除すると4×4の勝者が変わる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B527](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L376) | [構造] 禁止追加による勝敗反転には局所的な臨界証明がある。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B528](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L377) | [統計] 追加順で頻繁に勝敗を反転させる四点は単独解除感度が低くても重要。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B529](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L378) | [存在] すべての最小勝敗保持禁止族に共通する四点はない。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B530](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L379) | [構造] 空族から標準族まで勝者反転を最小化する追加順は幾何的に特徴づく。 | NOT_AUDITED | 旧個票参照10箇所（JSON） |
-| [B531](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L385) | [全称] 5×5円のみ版に主対角線二本の共線禁止を足せば、勝ち初手が増える。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B532](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L386) | [全称] 5×5の追加8勝ち初手の復元には斜めの直線禁止が必要。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B533](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L387) | [存在] 直線禁止の一つのD4軌道だけで標準Wを復元できる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B534](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L388) | [構造] 辺中央型と内側対角型の勝ち初手は別の直線族で復元する。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B535](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L389) | [存在] 一つの直線を戻すとある初手は勝ちへ、別の初手は負けへ変わる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B536](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L390) | [構造] 直線禁止は相手の特定の二石P応答を消すことで初手を救う。 | NOT_AUDITED | 旧個票参照4箇所（JSON） |
-| [B537](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L391) | [全称・大胆] 中央初手は円・直線のD4不変な混合途中でも勝ち続ける。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B538](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L392) | [存在] 円と直線を別々にすると双方Pだが、合わせるとNになる局面。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B539](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L393) | [存在] 円と直線を別々にすると双方Nだが、合わせるとPになる局面。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B540](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L394) | [構造] 共線禁止の戦略的効果は「危険点を増やす」より「応答の順序を変える」ことにある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
+| [B526](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L375) | [存在] 一つの直線の制約を全部解除すると4×4の勝者が変わる。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B527](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L376) | [構造] 禁止追加による勝敗反転には局所的な臨界証明がある。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B528](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L377) | [統計] 追加順で頻繁に勝敗を反転させる四点は単独解除感度が低くても重要。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B529](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L378) | [存在] すべての最小勝敗保持禁止族に共通する四点はない。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B530](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L379) | [構造] 空族から標準族まで勝者反転を最小化する追加順は幾何的に特徴づく。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B531](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L385) | [全称] 5×5円のみ版に主対角線二本の共線禁止を足せば、勝ち初手が増える。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B532](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L386) | [全称] 5×5の追加8勝ち初手の復元には斜めの直線禁止が必要。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B533](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L387) | [存在] 直線禁止の一つのD4軌道だけで標準Wを復元できる。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B534](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L388) | [構造] 辺中央型と内側対角型の勝ち初手は別の直線族で復元する。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B535](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L389) | [存在] 一つの直線を戻すとある初手は勝ちへ、別の初手は負けへ変わる。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B536](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L390) | [構造] 直線禁止は相手の特定の二石P応答を消すことで初手を救う。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B537](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L391) | [全称・大胆] 中央初手は円・直線のD4不変な混合途中でも勝ち続ける。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B538](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L392) | [存在] 円と直線を別々にすると双方Pだが、合わせるとNになる局面。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B539](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L393) | [存在] 円と直線を別々にすると双方Nだが、合わせるとPになる局面。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B540](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L394) | [構造] 共線禁止の戦略的効果は「危険点を増やす」より「応答の順序を変える」ことにある。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 | [B541](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L400) | [全称] m≥6の後手は最初の応答を反対行に選べる。 | SUPPORTED | [round4-fixed-width.md](round4-fixed-width.md) |
 | [B542](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L401) | [構造] m≥6の二行後手戦略は横位置の順序型で記述できる。 | SUPPORTED | [round4-two-row-order-strategy.md](round4-two-row-order-strategy.md) |
-| [B543](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L402) | [全称・大胆] m≥8で一行3石・他行空なら、残り3手で必ず終わる。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
+| [B543](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L402) | [全称・大胆] m≥8で一行3石・他行空なら、残り3手で必ず終わる。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 | [B544](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L403) | [存在] 二行盤でも中盤nimberは幅から予想するより大きい。 | REFUTED | [round4-fixed-width.md](round4-fixed-width.md) |
-| [B545](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L404) | [構造] 二行5列の3対3安全配置ではペア和集合が完全に分離する。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
+| [B545](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L404) | [構造] 二行5列の3対3安全配置ではペア和集合が完全に分離する。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 | [B546](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L405) | [存在] 3対3の安全配置は一方の行を平行移動しても安全な区間を多数持つ。 | SUPPORTED | [round4-fixed-width.md](round4-fixed-width.md) |
-| [B547](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L406) | [構造] 二行盤の最小極大配置は和の区間被覆として分類できる。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B548](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L407) | [全称・大胆] 十分長い二行盤ではすべての極大配置が6石。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B549](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L408) | [存在] 任意に長い二行盤に5石極大が残る。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
+| [B547](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L406) | [構造] 二行盤の最小極大配置は和の区間被覆として分類できる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B548](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L407) | [全称・大胆] 十分長い二行盤ではすべての極大配置が6石。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B549](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L408) | [存在] 任意に長い二行盤に5石極大が残る。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 | [B550](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L409) | [構造] 二行盤の最終周期性には、端の有限パターンと十分離れた点の同値化が使える。 | SUPPORTED | [round4-fixed-width.md](round4-fixed-width.md) |
-| [B551](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L415) | [全称・大胆] 三行盤の空盤nimberはm≥3で `(m+1) mod 3`。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B552](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L416) | [構造] 三行盤を長さ3だけ伸ばすと同じ値を持つ応答部品が加わる。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B553](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L417) | [全称・大胆] m≥6かつm≡0 mod 3の三行盤では端二列を除く全点が勝ち初手。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B554](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L418) | [全称・大胆] m=3t+1,t≥2の三行盤のWは中央行とx=t,2tの二列。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
+| [B551](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L415) | [全称・大胆] 三行盤の空盤nimberはm≥3で `(m+1) mod 3`。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B552](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L416) | [構造] 三行盤を長さ3だけ伸ばすと同じ値を持つ応答部品が加わる。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B553](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L417) | [全称・大胆] m≥6かつm≡0 mod 3の三行盤では端二列を除く全点が勝ち初手。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B554](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L418) | [全称・大胆] m=3t+1,t≥2の三行盤のWは中央行とx=t,2tの二列。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 | [B555](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L419) | [漸近] 部分勝ちとなる三行盤の勝ち初手密度は1/3へ近づく。 | REFUTED | [round4-fixed-width.md](round4-fixed-width.md) |
 | [B556](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L420) | [存在] 三行盤で周期が続いても勝ち初手集合の幾何は非周期になる。 | REFUTED | [round4-fixed-width.md](round4-fixed-width.md) |
 | [B557](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L421) | [全称・大胆] 各行3石を置ける最小長はw≥2で2w+1。 | REFUTED | [round5-row-thresholds.md](round5-row-thresholds.md) |
 | [B558](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L422) | [構造] 3w石の配置は行ごとに等差数列を置く構成で達成できる。 | SUPPORTED | [round8-ap-quadratic-prime.md](round8-ap-quadratic-prime.md) |
-| [B559](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L423) | [存在] 行間隔を変えると三行盤の周期候補が壊れる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B560](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L424) | [構造] 三行盤の初手相は、2+2型の円と2+1+1型の円の競合で決まる。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B561](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L430) | [全称・大胆] 全安全局面の拡張数列f_Sは対数凹。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B562](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L431) | [全称・大胆] a_Sの対数凹性は高階残余制約がない局面で成り立つ。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B563](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L432) | [存在] 空盤の対数凹性が、石を一つ固定すると壊れる。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B564](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L433) | [構造] 対数凹性の欠損は残余ハイパーグラフの小さい誘導型で説明できる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B565](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L434) | [統計] f_Sのピーク位置はnimberよりランダム終局長を説明する。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B566](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L435) | [存在] 同じf_Sを持つ局面のランダム終局分布は異なる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B567](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L436) | [構造] 7×7の最大集合だけから作る複体は少数の低次元の穴を持つ。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B568](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L437) | [存在] 近最大の極大集合を一つ加えると位相の穴が消える。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B569](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L438) | [統計] 拡張複体の穴の数は最善手の少なさに結びつく。 | NOT_AUDITED | 旧個票参照9箇所（JSON） |
-| [B570](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L439) | [存在] 変形障壁は安全複体のホモロジーだけからは復元できない。 | NOT_AUDITED | 旧個票参照9箇所（JSON） |
-| [B571](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L445) | [存在] E_kの同じ連結成分内でgが1ずつ全範囲を巡る道がある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B572](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L446) | [存在] 一石交換でnimberが任意に大きく跳ぶ。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B573](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L447) | [全称・大胆] すべての非終局P局面は近い非終局P局面を持つ。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B574](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L448) | [存在] 必勝手集合が一点交換に対して完全に不連続。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B575](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L449) | [統計] P/Nが反転する交換は被覆三つ組を多く壊す。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B576](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L450) | [存在] 合法点が全く変わらない一石交換でも唯一の必勝手が入れ替わる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B577](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L451) | [構造] P局面の交換グラフには短い閉路だけでは生成できないサイクルがある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B578](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L452) | [存在] 最善手を保ったまま任意に多数の石を移せる。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B579](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L453) | [統計] 必勝手の安定性はgの大きさよりWFTの一意性と関係する。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B580](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L454) | [構造] 一石交換の戦略的影響は二つの円束の差分で局所記述できる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B581](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L460) | [存在] 任意の長さのパスだけをR(S)として実現できる。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B582](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L461) | [存在] 任意の奇サイクルだけを残局にできる。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B583](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L462) | [構造] パス残局の実現に必要な固定石数は頂点数の定数倍で足りる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B584](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L463) | [存在] 同じ抽象残局でも最小固定石数が盤への埋め方で違う。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B585](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L464) | [構造] 独立な二つの残局を、共有する遮蔽石で安く実現できる。 | NOT_AUDITED | 旧個票参照4箇所（JSON） |
-| [B586](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L465) | [存在] 固定石を一つ動かすだけで直和の結合・分離を切り替えられる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B587](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L466) | [構造] nimber2の部品を幾何的に連結してnimber4へ増幅できる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B588](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L467) | [存在] 同じ部品を二個用いても配置次第でxor以外の値になる。 | NOT_AUDITED | 旧個票参照4箇所（JSON） |
-| [B589](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L468) | [構造] 有限の部品集合から無限に多くの残局値を作れる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B590](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L469) | [存在] ゲーム値の同値と手数強制の同値を別々に組み立てられる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B591](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L475) | [全称・大胆] 一石不足の安全配置は定数個の修正で最大になる。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B592](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L476) | [存在] 最大に一石不足でも最大配置から線形距離に離れられる。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B593](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L477) | [全称・大胆] c石不足の修正コストは不足量に比例する。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B594](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L478) | [構造] 7×7の13石極大集合は最大A/Bからの距離で少数クラスに分かれる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B595](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L479) | [存在] 13石極大の修正先はA相だけ、またはB相だけに偏る。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B596](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L480) | [統計] 近最大の相の境界は修正コストの山になる。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B597](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L481) | [全称・大胆] 最大配置の近傍数は不足量について多項式的。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B598](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L482) | [存在] 近最大集合の数は最大集合数に比べて指数的に多い。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B599](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L483) | [構造] 近最大配置の遠さを円容量のわずかな不足で証明できる。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B600](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L484) | [存在・大胆] 静的には最大に近いが戦略的には最遠の局面がある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
+| [B559](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L423) | [存在] 行間隔を変えると三行盤の周期候補が壊れる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B560](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L424) | [構造] 三行盤の初手相は、2+2型の円と2+1+1型の円の競合で決まる。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B561](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L430) | [全称・大胆] 全安全局面の拡張数列f_Sは対数凹。 | REFUTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B562](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L431) | [全称・大胆] a_Sの対数凹性は高階残余制約がない局面で成り立つ。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B563](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L432) | [存在] 空盤の対数凹性が、石を一つ固定すると壊れる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B564](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L433) | [構造] 対数凹性の欠損は残余ハイパーグラフの小さい誘導型で説明できる。 | SCOPE_UNCLEAR | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B565](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L434) | [統計] f_Sのピーク位置はnimberよりランダム終局長を説明する。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B566](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L435) | [存在] 同じf_Sを持つ局面のランダム終局分布は異なる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B567](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L436) | [構造] 7×7の最大集合だけから作る複体は少数の低次元の穴を持つ。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B568](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L437) | [存在] 近最大の極大集合を一つ加えると位相の穴が消える。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B569](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L438) | [統計] 拡張複体の穴の数は最善手の少なさに結びつく。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B570](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L439) | [存在] 変形障壁は安全複体のホモロジーだけからは復元できない。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B571](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L445) | [存在] E_kの同じ連結成分内でgが1ずつ全範囲を巡る道がある。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B572](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L446) | [存在] 一石交換でnimberが任意に大きく跳ぶ。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B573](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L447) | [全称・大胆] すべての非終局P局面は近い非終局P局面を持つ。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B574](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L448) | [存在] 必勝手集合が一点交換に対して完全に不連続。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B575](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L449) | [統計] P/Nが反転する交換は被覆三つ組を多く壊す。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B576](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L450) | [存在] 合法点が全く変わらない一石交換でも唯一の必勝手が入れ替わる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B577](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L451) | [構造] P局面の交換グラフには短い閉路だけでは生成できないサイクルがある。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B578](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L452) | [存在] 最善手を保ったまま任意に多数の石を移せる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B579](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L453) | [統計] 必勝手の安定性はgの大きさよりWFTの一意性と関係する。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B580](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L454) | [構造] 一石交換の戦略的影響は二つの円束の差分で局所記述できる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B581](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L460) | [存在] 任意の長さのパスだけをR(S)として実現できる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B582](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L461) | [存在] 任意の奇サイクルだけを残局にできる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B583](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L462) | [構造] パス残局の実現に必要な固定石数は頂点数の定数倍で足りる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B584](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L463) | [存在] 同じ抽象残局でも最小固定石数が盤への埋め方で違う。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B585](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L464) | [構造] 独立な二つの残局を、共有する遮蔽石で安く実現できる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B586](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L465) | [存在] 固定石を一つ動かすだけで直和の結合・分離を切り替えられる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B587](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L466) | [構造] nimber2の部品を幾何的に連結してnimber4へ増幅できる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B588](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L467) | [存在] 同じ部品を二個用いても配置次第でxor以外の値になる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B589](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L468) | [構造] 有限の部品集合から無限に多くの残局値を作れる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B590](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L469) | [存在] ゲーム値の同値と手数強制の同値を別々に組み立てられる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B591](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L475) | [全称・大胆] 一石不足の安全配置は定数個の修正で最大になる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B592](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L476) | [存在] 最大に一石不足でも最大配置から線形距離に離れられる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B593](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L477) | [全称・大胆] c石不足の修正コストは不足量に比例する。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B594](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L478) | [構造] 7×7の13石極大集合は最大A/Bからの距離で少数クラスに分かれる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B595](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L479) | [存在] 13石極大の修正先はA相だけ、またはB相だけに偏る。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B596](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L480) | [統計] 近最大の相の境界は修正コストの山になる。 | SUPPORTED | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B597](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L481) | [全称・大胆] 最大配置の近傍数は不足量について多項式的。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B598](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L482) | [存在] 近最大集合の数は最大集合数に比べて指数的に多い。 | INCONCLUSIVE | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B599](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L483) | [構造] 近最大配置の遠さを円容量のわずかな不足で証明できる。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
+| [B600](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L484) | [存在・大胆] 静的には最大に近いが戦略的には最遠の局面がある。 | PARTIAL | [round64-b501-b600-original-scope-audit.md](round64-b501-b600-original-scope-audit.md) |
 
 再現: `python research/experiments/original-claims/scripts/round26_scope_index.py`。
 [機械可読索引](../output/round26_original_scope_index.json)には各原文行、節の前提、根拠の種類と採用理由を含める。
