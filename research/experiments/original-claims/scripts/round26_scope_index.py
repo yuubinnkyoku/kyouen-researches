@@ -414,6 +414,87 @@ review('B450', 'PARTIAL', 'finite_component_fixed_core_evidence',
        '分裂族8族で各成分の共通固定石群を列挙し局所遮蔽部品候補を得たが、別盤への置換・移植則そのものは未検証。')
 
 
+# 2026-10-04: B451-B500 original-scope audit.
+review('B451', 'SUPPORTED', 'exact_finite_witness',
+       'round63-b451-b500-original-scope-audit.md',
+       '同半径r²=221で整数中心16点・分母5中心4点の厳密証人。双方4点以上の存在条件を満たす。')
+review('B452', 'PARTIAL', 'finite_exclusion_only',
+       'round63-b451-b500-original-scope-audit.md',
+       'M≤6000・分母≤12ではq≥3がq=1を一度も上回らないが、無界存在命題なので有限不発見を反証へ昇格しない。')
+review('B459', 'INCONCLUSIVE', 'audited_no_direct_test',
+       'round63-b451-b500-original-scope-audit.md',
+       'q≥3由来制約で初めて現れる残余ゲーム型を直接抽出した記録がない。')
+review('B460', 'INCONCLUSIVE', 'audited_no_direct_test',
+       'round63-b451-b500-original-scope-audit.md',
+       'q≥3とq≤2の禁止を同数解除して浅層P/N影響を比較する原文どおりの実験が未実施。')
+review('B466', 'SUPPORTED', 'finite_witness_reaudited_against_full_center_maxima',
+       'round63-b451-b500-original-scope-audit.md',
+       'N=650既知円族が25盤20点・26盤24点。後続全中心完全走査でも真の最大M25=20,M26=24で、同円族の境界切断改善による連続二増分が有効。')
+review('B469', 'INCONCLUSIVE', 'audited_no_direct_test',
+       'round63-b451-b500-original-scope-audit.md',
+       '最多点円と少し小さい円の三つ組による四辺被覆均衡を直接比較した記録がない。')
+review('B474', 'PARTIAL', 'finite_statistical_evidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=3..6で増分と新規円型数を比較したが、原始円型の定義が暫定で一般傾向は未確定。')
+review('B481', 'REFUTED', 'finite_statistical_counterexample',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=4層別解析でクリーク成分数偶奇を固定しても三角形-nimber正相関が弱まらず、強まる層がある。')
+review('B482', 'REFUTED', 'finite_complete_direction_reversal',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=5全状態の集中型/離散型比較で、離散型の方がnimber種類数が多いセルは0/14。原文方向と逆。')
+review('B483', 'INCONCLUSIVE', 'proxy_only',
+       'round63-b451-b500-original-scope-audit.md',
+       '主変数である二点競合成分をつなぐ三点辺の絶対本数を直接数えた近似誤差解析が未実施。')
+review('B484', 'REFUTED', 'finite_controlled_statistical_counterevidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'b=0込み分散とb>0限定分散の相関はn=5の実分散セルでほぼ同値。前者だけに見かけ相関が出るという主張を反証。')
+review('B485', 'REFUTED', 'finite_controlled_pairwise_counterevidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=4,5で(k,|L|,b_hist)固定の全対比較はspreadと必勝手比率がほぼコイントス。高被覆点数側の説明力が強く原文方向と逆。')
+review('B486', 'PARTIAL', 'finite_controlled_statistical_evidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'μ≥3かつn,k,|L|固定ではランダム勝率がP/Nを分けるが、原文が要求するh固定まで入れた比較は未実施。')
+review('B487', 'PARTIAL', 'mixed_controlled_statistical_evidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'pooledではgain種類数がu_maxよりgと強く相関するが、u_max,u_min固定セルでは正負が混在し原文の単調傾向は未確定。')
+review('B488', 'REFUTED', 'finite_complete_deduplication_test',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=3..5で真の残余同型ハッシュを含む重複除去をしても相関符号反転は0件。効果減衰はあるが原文の符号反転はない。')
+review('B489', 'PARTIAL', 'finite_exact_tstar_wft_evidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=4,5全局面のT*/WFTで原文方向の相関は確認したが、P率より説明力が高いという比較は未実施。')
+review('B490', 'PARTIAL', 'finite_feature_collision_evidence',
+       'round63-b451-b500-original-scope-audit.md',
+       '共有局所特徴ではg・強制長各軸に衝突が残るが、二軸を完全分離し第三軸だけ衝突するという原文の具体構造は未取得。')
+review('B491 B492', 'PARTIAL', 'finite_asymptotic_evidence_only',
+       'round63-b451-b500-original-scope-audit.md',
+       'n≤8の厳密値・標本は3n/2主項とVar=O(n)に整合するが、いずれも漸近命題で有限計算からは確定しない。')
+review('B493', 'PARTIAL', 'finite_exact_correlation',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=4全極大で中間層平均log|L|と到達順位に強い相関があるが、他盤再現と初終盤指標との統制比較が不足。')
+review('B494', 'REFUTED', 'finite_complete_statistical_counterevidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=5全16860極大で安定化群と途中選択肢・到達確率の相関がほぼ0。途中選択肢自体は効くが高対称性による説明は崩れる。')
+review('B495', 'PARTIAL', 'square_board_exhaustion_and_out_of_scope_witness',
+       'round63-b451-b500-original-scope-audit.md',
+       '標準正方形n=4,5では完全ヒストグラム一致なら到達確率も全て一致。3x5等の反例は節の標準正方形スコープ外なので原文決着へ使わない。')
+review('B496', 'PARTIAL', 'finite_growth_evidence',
+       'round63-b451-b500-original-scope-audit.md',
+       '同サイズ同D4安定化群で到達比はn=4の3.55からn=5の9.97まで増えるが、任意Mの無界性は未証明。')
+review('B497', 'REFUTED', 'finite_statistical_counterevidence',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=5,6の初手固定標本で最大終局条件付きの初期外周占有増加が一貫せず、原文の統計方向に反する。')
+review('B498', 'PARTIAL', 'finite_statistical_support',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=5,6では最小終局条件付き三石補完数が高い方向を観測するが、n=6標本が少なく一般傾向は未確定。')
+review('B499', 'SUPPORTED', 'exact_finite_witness',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=5厳密DPで平均長差0.00523の二初手が最小終局確率0対正に分かれ、比∞で10倍条件を満たす。')
+review('B500', 'PARTIAL', 'counterevidence_to_specific_weakening',
+       'round63-b451-b500-original-scope-audit.md',
+       'n=4,5では鋭い単一中間層ボトルネックは無いが、少数の特定部分集合による一般的な上下界までは反証していない。')
+
+
 def main():
     originals = {}
     hashes = {}
