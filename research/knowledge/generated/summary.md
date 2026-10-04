@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 325 / alias: 266 / artifactファイル: 399
+K項目: 328 / alias: 269 / artifactファイル: 403
 
 ## kind
 
@@ -9,8 +9,8 @@ K項目: 325 / alias: 266 / artifactファイル: 399
 | computation | 11 |
 | definition | 5 |
 | method | 4 |
-| proposition | 266 |
-| question | 34 |
+| proposition | 267 |
+| question | 36 |
 | verification | 5 |
 
 ## status
@@ -21,8 +21,8 @@ K項目: 325 / alias: 266 / artifactファイル: 399
 | computed | 91 |
 | conjectured | 1 |
 | observed | 15 |
-| open | 33 |
-| proved | 103 |
+| open | 35 |
+| proved | 104 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | verified | 5 |
@@ -35,15 +35,15 @@ K項目: 325 / alias: 266 / artifactファイル: 399
 | certificates | 16 |
 | first-moves | 33 |
 | formalization | 2 |
-| geometry | 119 |
-| grundy | 47 |
-| maximal-safe | 55 |
+| geometry | 120 |
+| grundy | 48 |
+| maximal-safe | 57 |
 | maximum-safe | 44 |
 | migration | 1 |
 | provenance | 12 |
-| reconfiguration | 33 |
+| reconfiguration | 34 |
 | rectangles | 29 |
-| residual-games | 53 |
+| residual-games | 54 |
 | rules | 3 |
 | search-methods | 19 |
 | square-outcomes | 21 |
@@ -91,6 +91,8 @@ K項目: 325 / alias: 266 / artifactファイル: 399
 - [K0297](../items/K0297-minimum-maximal-private-point-open.md) [open] n≥2の全最小極大配置に一重被覆点があるか
 - [K0298](../items/K0298-minimum-maximal-rho-one-open.md) [open] n≥2の全最小極大配置で故障耐性ρが1か
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
+- [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
+- [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
 
 ## 警告
 

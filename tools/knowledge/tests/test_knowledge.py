@@ -223,7 +223,7 @@ class MigrationBoundaryTests(unittest.TestCase):
         self.assertEqual(audit["total_originals"],600)
         allowed={"SUPPORTED","REFUTED","PARTIAL","INCONCLUSIVE","SCOPE_UNCLEAR","NOT_AUDITED"}
         counts={s:sum(r["original_status"]==s for r in audit["rows"]) for s in allowed}
-        self.assertEqual(audit["audit_state_counts"],{s:c for s,c in counts.items() if c})
+        self.assertEqual(audit["audit_state_counts"],{s:c for s,c in counts.items() if c or s=="NOT_AUDITED"})
         rows=[r for r in audit["rows"] if r["original_status"]!="NOT_AUDITED"]
         self.assertEqual(len(rows),audit["reviewed_originals"])
         reports=ROOT/"research/experiments/original-claims/reports"

@@ -8,11 +8,18 @@ topics:
 - first-moves
 aliases:
 - B311
+- B312
 relations:
 - type: depends_on
   target: K0108
   note: ''
 artifacts:
+- path: research/experiments/original-claims/output/round70_scope_catalogue_check.json
+  role: data
+  note: J4全84Pペア内の40全域支配・15型内8型を再検算
+- path: research/experiments/original-claims/output/round5_jn_followup2.json
+  role: data
+  note: TD/非TDの共通近傍数の全分類
 - path: research/experiments/original-claims/reports/round27-fixed-response-audit.md
   role: source
   note: 命題・対象範囲・根拠を記した出典
@@ -48,5 +55,7 @@ evidence: 原文監査 SUPPORTED / finite_complete_classification_and_witness
 適用文脈: 起点: [個票01](../../log/claim-audit/batch-01.md)。拠点自身への初手にも返せるよう、閉近傍による支配と全域支配を分ける。
 
 現在の結論: J4には全域支配ペアが40個ある。閉近傍による通常の支配ではない。
+
+B312の分類も固定J4で完了。全84二石Pペアは15D4型、全域支配40ペアはそのうち8型であり、全域支配ペアは全てP。Pペア内の共通近傍数はTDで5（16ペア）または8（24ペア）、非TDでは4/6/7で完全分離する。全n版への外挿は含めない。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。

@@ -1223,6 +1223,145 @@ review('B300', 'PARTIAL', 'original_scope_and_exact_witness_audit',
        'round69-b251-b300-original-scope-audit.md', "今回正確な深さdの無ラベル手木（深さ0に合法数を追加しない）でn4のd1,d2に勝敗逆の同型対、d3,d4にはなし。任意dに対して盤nも選べる原文は、固定n4の深い層で不発見でも反証されない。",
        ('round4-batch-b291-b360.md',))
 
+review("B310", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "五つの直線D4軌道を各解除した完全計算で、既存五閉路の生死は全滅と全生存の二種類しかない。閉路の向きを二重計数しても識別情報は増えず、原文の軌道識別を反証。",
+       ("round2-batch-b301.md",))
+review("B312", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回J4を再構築し全84Pペア・40全域支配ペアを検査。TD⊂P、D4は15P型中8TD型、共通近傍数はTDで5/8。他盤への一般化を含まない固定4×4の分類。",
+       ("round5-batch-jn-followup.md",))
+review("B316", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n5の同じ初手軌道サイズ4で次数4の角と次数2の内部を比較しても、全二石P子のT*は{6,8}で種類数1。高次数で多様さが増えるという原文の比較方向は成立しない。",
+       ("round2-batch-b301.md",))
+review("B318", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "一石一様g1と二石g1欠落は全n4で確認し、現在のmex補題で欠落を説明できる。補グラフの少数局所型が一様性を引き起こす原文の幾何機構は未証明で、弱化昇格を戻す。",
+       ("round5-batch-jn-followup.md",))
+review("B320", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n5全300ペア内の同一一石値(3,3)・距離平方16または10の混在群で、三石子にg1があることとPが同値。各群P/非Pが混在し、短い子ヒスト判定則という有限存在を満たす。",
+       ("round5-batch-jn-followup.md",))
+review("B323", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "標準n2の飽和開始k2は全6局面g1、n3の開始k4は全112局面g1。天井1は達成して0がないという原文の存在条件をそのまま満たす。非パリティ盤という追加条件は課さない。",
+       ("round2-batch-b321.md",))
+review("B324", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "正確な極大拡張分布で同n,k,h,合法数の比較を行いn4の24/25、n5の93/99セルが高エントロピー側。有限統計傾向はあるが例外セルもあり、全盤・全セルの一般関係ではない。",
+       ("round2-batch-b321.md",))
+review("B327", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "旧ceil_n6の真の残容量で不足8から一手で0になる有限例がある。原文は差を任意に大きくする族であり、n4..6の5,7,8だけでは無界性を証明しない。",
+       ("round5-batch-b325-b350.md",))
+review("B328", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "三石全層の同合法数比較で五セル中四セルは逆向き。n4合法13では共線4局面g≤1、非共線164中56がg4。上位nimberが共線側で過大という原文方向を反証。",
+       ("round2-batch-b321.md",))
+review("B329", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n4とn6の飽和層で必須子値含意を全数確認したが、欠落値aの不存在からmexで含意が出ることと幾何的説明は別。計算上違反0を全盤の幾何導出へ昇格しない。",
+       ("round5-batch-b325-b350.md",))
+review("B330", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n6の同三石・同h8・同最小終局サイズ7にg0と8が共存。旧μは総終局石数だが同kなので残最短4も一致。有限幅8は支持し、無限幅の族は未構成。",
+       ("round5-batch-b325-b350.md",))
+review("B332", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n4のS={2,4,5,15}はg3でWFT=T*={5,7}。勝つ側が現在から各終局石数を宣言して強制できる二つの戦略という有限存在証人。",
+       ("round2-batch-b321.md",))
+review("B336", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "旧R1のforces=trueは許可手の中に7石強制戦略が存在するというOR計算で、許可する全勝ち手からは5/7/9石へ到達する。十分性を必要性の否定でREFUTEDにした旧論法は不正。局所回避だけによる9石遅延排除は未証明。",
+       ("round4-batch-b291-b360.md",))
+review("B337", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n5でS={0}とmask29360164は共にg3,T*={6,8}だがWFT={8}と{6,8}。原文には同石数条件がなく、正しい和集合/積集合再帰の具体的対で存在を支持。",
+       ("round2-batch-b321.md",))
+review("B338", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n5の67混合セルでT*交わりの有限正の分離傾向はあるが、比較相手g_of_stateは固定gセル内で定数で子の勝敗ではない。only_p引数も旧実装で未使用。原文の相手番・子勝敗への優位は未検証。",
+       ("round5-batch-b325-b350.md",))
+review("B339", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "目標7の二値AND/OR再帰は全nimberなしに定義可能で、旧有限forceとWFTの一致は確認済み。ただし旧force実装はgを使用し349記述子もforceを含む。P/Nより少数の独立局所型・短い説明という比較は未成立。",
+       ("round4-batch-b291-b360.md",))
+review("B340", "INCONCLUSIVE", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "有限盤でランダム平均とWFTが調べられたが原文後半は最短化対最大化の最悪時長の順序。WFT単元不変はその最悪時長が不変という定理でなく、正方形盤の逆転証人も全盤反証もない。",
+       ("round5-batch-b325-b350.md",))
+review("B341", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n4の三点残余一辺を外す厳密証人でg0→5。n5は1200標本で最大差4であり完全最大や非単調定理ではない。原文の盤族で無限に増える主張は未証明。",
+       ("round5-batch-b325-b350.md",))
+review("B347", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "旧wrongはg不一致でP/N誤りではなく件数も未統制。今回rawを正しいP/N・同n,k,合法数,高階件数で再集計しn4で上昇7・下降4比較、n5標本で19・18。有限正の例はあるが原文の説明力・一方向の傾向全体は未確定。",
+       ("round4-batch-b291-b360.md",))
+review("B348", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回同n,k,合法数,高階件数でP/N誤りを再集計。n4(k4,合法7,高階8)で成分をまたぐ辺0の群は16/16誤り、7の群は0/8。原文の同件数で多い方が高誤率という方向の直接反例。旧成分数とnimber誤りの代理比較は使わない。",
+       ("round4-batch-b291-b360.md",))
+review("B358", "SCOPE_UNCLEAR", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "原文の弱い円束・特定・解除されやすさの対象と予測量が未定義。旧三点通常直線数や40例の単射性は追加定義した弱化。δの未使用対を解除予測へ写す原文自体の真偽対象が一意でない。",
+       ("round5-batch-b351-b400-followup.md",))
+review("B359", "INCONCLUSIVE", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "距離と境界を統制した最大配置の交点頻度比較はない。七旧証人や8×8八石極大は最大族を覆わず、bと禁止三つ組由来円数の相関1は同義反復。原文の最大族内の統計効果は未決。",
+       ("round5-batch-b351-b400-followup.md",))
+review("B363", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "現在の独立5×5九石証人は正確にρ2でr≤2という有限弱形は支持する。任意rの盤族はない。n7は最大16だけ、n8は八石408だけで、全極大を計算したという旧文言は採らない。",
+       ("round29-fault-witness-audit.md",))
+review("B364", "SCOPE_UNCLEAR", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "原文は標準盤全体にn下限がなく、n1の唯一の極大では元から空だった点がなくρ未定義（K0206と同じ端点）。n≥2への修正なら有限範囲≤2のPARTIALで全盤≤3は未証明。原文の端点規約を自動追加しない。",
+       ("round47-private-cover-and-global-minima.md",))
+review("B365", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回n6全464最大の平均bを厳密統制し七比較セル全てρ2はswap0、ρ1は平均1..3。ρ≥2なら一石交換不可は定義から一般証明できるが、全nでρ1群が厳密に高い次数を持つ統計関係までは証明しない。",
+       ("round5-batch-b301-b400.md",))
+review("B366", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "空点解除の最小除去数=禁止三つ組族の横断数、族の線形性は一般に説明可能。幾何族のτを同k,bの全抽象線形族の最適上限より厳密に小さくする比較は未完。v≤5とk8の異なる対象を比べない。",
+       ("round5-batch-b351-b400-followup.md",))
+review("B370", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "s8=8の全408最小極大に対する正味縮小2除1追加639744候補、3除2追加35185920候補を旧C++で完全分類し安全違反54.5%/62.1%が未被覆を上回る。原文の範囲があるという存在核を満たす。正味増加の例だけで縮小を証明しない。",
+       ("round5-batch-b301-b400-followup.md",))
+review("B371", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "現在の完全408カタログを再検算し三点共線数0は0配置。固定8×8八石極大という原文全有限族を覆い、円だけという否定候補を排除。",
+       ("round4-batch-b371-b380.md",))
+review("B372", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回再検算のS={3,6,9,15,25,30,48,49}は安全八石極大で共線方向は垂直一種類。正しい全方向分布では一方向24個。旧26個は方向正規化ミスだが原文反例は成立。",
+       ("round4-batch-b371-b380.md",))
+review("B373", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回S={8,12,13,20,25,26,30,41}は安全八石極大で左辺だけに接触。一辺型72個を全カタログで再確認し二辺必須を直接反証。",
+       ("round4-batch-b371-b380.md",))
+review("B374", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回S={10,12,18,22,24,26,31,32}は安全八石極大、角なし、接触二辺。角なし312個で存在を支持し、B373との両立もこの証人が満たす。",
+       ("round4-batch-b371-b380.md",))
+review("B375", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回の角なし証人と旧Wは正しい名前付きD4点軌道占有ベクトルが異なる。全408は正確に51D4軌道、全安定化群は位数1。旧309軌道・安定化群0という値を採らない。",
+       ("round4-batch-b371-b380.md",))
+review("B378", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "全408×8一石削除を再検算し、削除点を除いた元の空点の新生合法数最小は2。要求するちょうど1が全有限族で存在しない。完了カタログによる存在命題の反証。",
+       ("round4-batch-b371-b380.md",))
+review("B380", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回同被覆和100等に辺優位と内部優位の一重被覆分布が共存する七群を確認。旧純粋型不在のREFUTEDは原文より強い条件。配置分布の差は支持するが別々の局所改良盆地は未測定。",
+       ("round5-batch-b351-b400.md",))
+review("B383", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n6全464最大の外接矩形外シェルを今回再検算しr1が424、r2が40。正しい同n,K11の具体的二証人を出力に保存。",
+       ("round2-batch-b381.md",))
+review("B389", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "旧反証は全点対の方向数で三点直線方向数を測っていなかった。今回n6全464を本来の量で再計算しr1群平均1504/424、r2群144/40で微弱ながら原文方向。有限支持であり全盤統計の法則とはしない。",
+       ("round2-batch-b381.md",))
+review("B391", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n6全464とn7全16最大では連続空行・空列なし、現在も一般証明はない。原文の全n≥4を有限n6/7からSUPPORTEDにしない。",
+       ("round2-batch-b381.md",))
+review("B392", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n6全464・n7全16では空行数と空列数の両方≥2はない。全盤の禁止命題は未証明で、有限個の完全最大族だけが支持範囲。",
+       ("round2-batch-b381.md",))
+review("B393", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回n6全464で空行あり84中、空列あり16・なし68を再確認。指定6×6内で二型が存在する原文条件を完全に満たす。",
+       ("round2-batch-b381.md",))
+review("B394", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回n6全最大の空行位置を再計算し行1と4に各12件、中央2と3は各30。原文の中央二本限定を直接反証。",
+       ("round2-batch-b381.md",))
+review("B395", "REFUTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回全464最大内の一石交換次数を再計算。空行または空列あり152配置の次数和144、全使用312の和464で平均0.947対1.487。指定n6の原文統計方向は逆。",
+       ("round2-batch-b381.md",))
+review("B396", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回同一行列ベクトルの二つのn6最大を照合し、全464最大内の最小占有識別数3と4を厳密検算。原文の存在条件を満たし旧報告中の2対3という不正要約は採らない。",
+       ("round2-batch-b381.md",))
+review("B397", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "安全配置が軸平行矩形四隅を避ける必要性は四隅共円から一般に成立する。しかし旧出力は全最大464が避けるという必要条件だけで、同次数の全0–1候補を少数型へ絞る十分な削減率を測っていない。",
+       ("round2-batch-b381.md",))
+review("B398", "PARTIAL", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "n7の全2n=14石配置で全行列使用を確認し、n8はK15<16で前件空。現在のn9安全18石証人も全射影だが一証人にすぎず、任意n・任意2n以上の安全配置の原文は未証明。",
+       ("round2-batch-b381.md",))
+review("B399", "SUPPORTED", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "今回n6の同一行列ベクトルの最大二配置を全カタログで確認しHamming差4の相手なし。指定する矩形対角二石交換では各配置が孤立し、同石数安全族の非連結という有限存在を満たす。より大きい同時交換まで不可とはしない。",
+       ("round2-batch-b381.md",))
+review("B400", "INCONCLUSIVE", 'original_scope_and_catalogue_audit',
+       'round70-b301-b400-original-scope-audit.md', "同じ行列次数列に条件付けた安全/非安全0–1候補の共円違反率は未測定。極大408や最大464の希少性、無条件nullの四倍差は原文比較を決めない。純安全母集団の交換次数も違反頻度の代理にしない。",
+       ("round5-batch-b301-b400-followup.md",))
+
 def main():
     originals = {}
     hashes = {}
@@ -1276,6 +1415,7 @@ def main():
                 assert (REPORTS/report).is_file(), report
     rows = [originals[f'B{i:03}'] for i in range(1,601)]
     counts = dict(Counter(row['original_status'] for row in rows))
+    counts.setdefault('NOT_AUDITED', 0)
     reviewed_count = 600-counts.get('NOT_AUDITED',0)
     payload = {'total_originals': 600, 'reviewed_originals': reviewed_count,
                'counts_are_audit_states_not_total_unresolved': True, 'audit_state_counts': counts,
@@ -1287,10 +1427,13 @@ def main():
     payload['evidence_report_sha256'] = {name: hashlib.sha256((REPORTS/name).read_bytes()).hexdigest()
                                         for name in sorted(report_names)}
     atomic_text(OUTPUT/'round26_original_scope_index.json',json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
-    lines = ['# 全600原命題の証拠索引（原文監査は途中）','',
+    progress = '原文監査完了' if reviewed_count == 600 else '原文監査は途中'
+    coverage = ('全600件の内容監査を完了し、NOT_AUDITEDは0件。数学的な未解決は監査済み状態として保持する。'
+                if reviewed_count == 600 else f'原文照合して採用した記録は{reviewed_count}件。残りは旧ラベルを採用せずNOT_AUDITEDとする。')
+    lines = [f'# 全600原命題の証拠索引（{progress}）','',
              '更新: 2026-10-04。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。',
              '**未監査は未解決と同義ではない。この表から研究全体の未解決数はまだ確定できない。**','',
-             f'原文照合して採用した記録は{reviewed_count}件。残りは旧ラベルを採用せずNOT_AUDITEDとする。',
+             coverage,
              '旧個票の原命題・弱化版ラベルはJSONのevidence_pointersに行番号・原文ごと保存した。',
              '最も強いラベルを自動選択したり、弱化版を原命題へ昇格したりしていない。',
              'SUPPORTEDは原文の量化を満たす記録、REFUTEDはその反証記録。PARTIALは明示した部分結果。',

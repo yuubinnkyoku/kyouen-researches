@@ -985,6 +985,9 @@
 ## [research/experiments/original-claims/output/round5_cover_union.json](../../../research/experiments/original-claims/output/round5_cover_union.json)
 
 - [K0205](../items/K0205-local-cover-versus-global-efficiency.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/output/round5_jn_followup2.json](../../../research/experiments/original-claims/output/round5_jn_followup2.json)
+
+- [K0177](../items/K0177-j4-two-point-dominating-set.md) (data): TD/非TDの共通近傍数の全分類
 ## [research/experiments/original-claims/output/round5_prand_n8.json](../../../research/experiments/original-claims/output/round5_prand_n8.json)
 
 - [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (data): 層別状態数・P/N数・最大安全サイズを保存
@@ -1012,6 +1015,11 @@
 - [K0200](../items/K0200-integer-linear-cover-deficit-family.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0201](../items/K0201-rational-versus-real-cover-optimum.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0202](../items/K0202-high-cover-cubic-localization.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/output/round70_scope_catalogue_check.json](../../../research/experiments/original-claims/output/round70_scope_catalogue_check.json)
+
+- [K0032](../items/K0032-n8-minimum-maximal-size.md) (data): 全408八石極大の安全性・極大性と原文B371–B375/B378の再検算
+- [K0177](../items/K0177-j4-two-point-dominating-set.md) (data): J4全84Pペア内の40全域支配・15型内8型を再検算
+- [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md) (data): n6全最大の同被覆和内でρ2は交換次数0
 ## [research/experiments/original-claims/output/round7_parabola_cover.json](../../../research/experiments/original-claims/output/round7_parabola_cover.json)
 
 - [K0204](../items/K0204-high-cover-points-competition-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1173,6 +1181,7 @@
 - [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0209](../items/K0209-minimum-maximal-stones-essential.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0210](../items/K0210-maximum-configurations-cover-redundant-stones.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) (source): 正確なρ2の5×5証人
 ## [research/experiments/original-claims/reports/round30-ceiling-orbit-finite-audit.md](../../../research/experiments/original-claims/reports/round30-ceiling-orbit-finite-audit.md)
 
 - [K0185](../items/K0185-ceiling-with-small-mobility-slack-open.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1360,6 +1369,7 @@
 
 - [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (source): B204/B207の量化照合、非零損失という追加条件を課さない
 - [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) (source): B240原文の存在量化の監査
+- [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) (source): B231の有限範囲と無界量化の分離
 ## [research/experiments/original-claims/reports/round69-b251-b300-original-scope-audit.md](../../../research/experiments/original-claims/reports/round69-b251-b300-original-scope-audit.md)
 
 - [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md) (proof): 有限λの重み上界による直接証明
@@ -1367,6 +1377,12 @@
 ## [research/experiments/original-claims/reports/round7-parabola-cover.md](../../../research/experiments/original-claims/reports/round7-parabola-cover.md)
 
 - [K0204](../items/K0204-high-cover-points-competition-refuted.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/original-claims/reports/round70-b301-b400-original-scope-audit.md](../../../research/experiments/original-claims/reports/round70-b301-b400-original-scope-audit.md)
+
+- [K0032](../items/K0032-n8-minimum-maximal-size.md) (source): 旧有限族の分類をs8の根拠とともに保持
+- [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md) (proof): ρの原文定義からの直接論証とB365の条件付き有限統計
+- [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) (source): B327/B330/B341の無界差との関係
+- [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) (source): 無界族・上界3候補・n1端点と有限カタログの区別
 ## [research/experiments/original-claims/reports/round8-ap-quadratic-prime.md](../../../research/experiments/original-claims/reports/round8-ap-quadratic-prime.md)
 
 - [K0265](../items/K0265-row-arithmetic-progression-capacity-construction.md) (proof): 命題・対象範囲・根拠を記した出典
@@ -1562,6 +1578,9 @@
 - [K0200](../items/K0200-integer-linear-cover-deficit-family.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0201](../items/K0201-rational-versus-real-cover-optimum.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0202](../items/K0202-high-cover-cubic-localization.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/scripts/round70_scope_catalogue_check.py](../../../research/experiments/original-claims/scripts/round70_scope_catalogue_check.py)
+
+- [K0032](../items/K0032-n8-minimum-maximal-size.md) (verifier): 完全カタログから正しいD4・三点方向・削除後合法点数を再計算
 ## [research/experiments/original-claims/scripts/round7_parabola_cover.py](../../../research/experiments/original-claims/scripts/round7_parabola_cover.py)
 
 - [K0204](../items/K0204-high-cover-points-competition-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産

@@ -25,6 +25,7 @@
 - ← depends_on [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md): 標準禁止ルールを残存盤点に誘導する
 - ← depends_on [K0324](../items/K0324-n4-incomplete-position-invariants.md): 標準4×4・通常プレイ
 - ← depends_on [K0325](../items/K0325-n4-conditional-gain-variance.md): 標準4×4の全安全局面
+- ← depends_on [K0327](../items/K0327-square-position-grundy-unboundedness-open.md): 標準四点禁止・通常プレイ
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -267,6 +268,8 @@
 - ← depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md)
 - ← depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md)
 - ← depends_on [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md)
+- ← depends_on [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md): 安全性の遺伝性と極大性
+- ← depends_on [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md): 標準盤の安全極大配置
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -1425,3 +1428,15 @@
 ## [K0325](../items/K0325-n4-conditional-gain-variance.md) 同じ合法数・利得総和でも利得分散でP率が異なる4×4完全層
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準4×4の全安全局面
+
+## [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md) 故障耐性ρが2以上の極大安全配置には一石交換がない
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 安全性の遺伝性と極大性
+
+## [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) 標準正方形盤の安全局面のGrundy値は無界か
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準四点禁止・通常プレイ
+
+## [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 標準盤の安全極大配置

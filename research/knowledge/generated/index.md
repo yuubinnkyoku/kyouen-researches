@@ -327,3 +327,6 @@
 | [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md) | 7×7のGibbs分布は有限活動度で二つの最大相へ集中できる | proposition | proved | statistics, maximum-safe, reconfiguration |
 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる | proposition | computed | grundy, geometry, residual-games, maximal-safe |
 | [K0325](../items/K0325-n4-conditional-gain-variance.md) | 同じ合法数・利得総和でも利得分散でP率が異なる4×4完全層 | computation | computed | statistics, grundy |
+| [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md) | 故障耐性ρが2以上の極大安全配置には一石交換がない | proposition | proved | maximal-safe, reconfiguration |
+| [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) | 標準正方形盤の安全局面のGrundy値は無界か | question | open | grundy, residual-games |
+| [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) | n≥2の標準盤の全極大配置で故障耐性ρは一様有界か | question | open | maximal-safe, geometry |

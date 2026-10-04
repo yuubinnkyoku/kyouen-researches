@@ -63,6 +63,7 @@
 | B226 | [K0310](../items/K0310-misere-square-outcomes-through-eight.md) | misère版の6×6は後手勝ち、7×7・8×8は先手勝ち |
 | B227 | [K0158](../items/K0158-equal-private-passes-grundy-claim-refuted.md) | 一回だけパスできる版はgだけでは分類できない |
 | B228 | [K0159](../items/K0159-circle-size-rule-relaxation-nonmonotonicity.md) | 円の点数に応じた禁止緩和が非単調な勝敗列を作る |
+| B231 | [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) | 標準正方形盤の安全局面のGrundy値は無界か |
 | B240 | [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) | 同nimberの占有配置は共通の幾何的追加で勝敗が分かれる |
 | B251 | [K0160](../items/K0160-single-rule-removal-winner-flip-open.md) | 禁止四点組一つを外すだけで空盤勝者が反転する |
 | B252 | [K0161](../items/K0161-whole-circle-versus-scattered-removal.md) | 円一つの禁止解除が、同数のばらばらな解除より強く効く |
@@ -91,6 +92,7 @@
 | B308 | [K0175](../items/K0175-j5-response-hubs-not-diagonal-corners.md) | J_5の最小応答拠点は対角の角ペアで表せない |
 | B309 | [K0176](../items/K0176-losing-first-move-response-terminal-lengths.md) | 一つの負け初手への応答選択で、後の強制長が分かれる |
 | B311 | [K0177](../items/K0177-j4-two-point-dominating-set.md) | J_4には二点の全域支配集合がある |
+| B312 | [K0177](../items/K0177-j4-two-point-dominating-set.md) | J_4には二点の全域支配集合がある |
 | B313 | [K0178](../items/K0178-jn-perfect-or-near-perfect-matching.md) | 後手勝ち正方形盤のJ_nには完全マッチングまたは一頂点だけ余すマッチングがある |
 | B314 | [K0179](../items/K0179-jn-nonisolated-no-bridges.md) | J_nの非孤立部分には橋がない |
 | B315 | [K0180](../items/K0180-jn-articulation-point-claim.md) | J_nの非孤立部分に関節点が現れる |
@@ -121,6 +123,7 @@
 | B360 | [K0205](../items/K0205-local-cover-versus-global-efficiency.md) | 点ごとの被覆上限は大きくても全面被覆は極端に非効率 |
 | B361 | [K0206](../items/K0206-minimum-maximal-one-stone-fragility-withdrawn.md) | B361の全n版ρ=1はn=1で定義不全 |
 | B362 | [K0207](../items/K0207-maximal-no-original-empty-point-unblocked.md) | どの一石を抜いても元の空点は合法にならない極大配置 |
+| B363 | [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) | n≥2の標準盤の全極大配置で故障耐性ρは一様有界か |
 | B367 | [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md) | 被覆重複が大きいのに一石で大量解除できる |
 | B368 | [K0209](../items/K0209-minimum-maximal-stones-essential.md) | 最小極大配置の各石には固有の仕事がある |
 | B369 | [K0210](../items/K0210-maximum-configurations-cover-redundant-stones.md) | 最大配置には全面被覆に不要な石がある |
