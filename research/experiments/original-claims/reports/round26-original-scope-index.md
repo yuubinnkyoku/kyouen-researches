@@ -1,11 +1,9 @@
-> **実験一次資料**：本文の判定・数値・計画は記録時点のものです。現在の結論・未解決・検証境界の唯一の正本は[knowledge](../../../knowledge/README.md)です。この資料を現在知識の正本として並行更新しません。
-
 # 全600原命題の証拠索引（原文監査は途中）
 
-更新: 2026-10-01。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。
+更新: 2026-10-04。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。
 **未監査は未解決と同義ではない。この表から研究全体の未解決数はまだ確定できない。**
 
-原文照合して採用した記録は165件。残りは旧ラベルを採用せずNOT_AUDITEDとする。
+原文照合して採用した記録は209件。残りは旧ラベルを採用せずNOT_AUDITEDとする。
 旧個票の原命題・弱化版ラベルはJSONのevidence_pointersに行番号・原文ごと保存した。
 最も強いラベルを自動選択したり、弱化版を原命題へ昇格したりしていない。
 SUPPORTEDは原文の量化を満たす記録、REFUTEDはその反証記録。PARTIALは明示した部分結果。
@@ -15,11 +13,12 @@ SCOPE_UNCLEARは原文の解釈・統計母集団が足りず、より強い読�
 
 | 状態 | 件数 |
 |---|---:|
-| NOT_AUDITED | 435 |
-| PARTIAL | 25 |
-| REFUTED | 46 |
+| INCONCLUSIVE | 6 |
+| NOT_AUDITED | 391 |
+| PARTIAL | 39 |
+| REFUTED | 59 |
 | SCOPE_UNCLEAR | 5 |
-| SUPPORTED | 89 |
+| SUPPORTED | 100 |
 
 この内訳は「この索引で照合を済ませた範囲」の件数。194件などの旧暫定残数との単純な減算はしない。
 B356/B357はround5/7の一般構成を優先し、round24の別証明を二件追加とは数えない。
@@ -428,56 +427,56 @@ B356/B357はround5/7の一般構成を優先し、round24の別証明を二件�
 | [B398](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L182) | [全称・大胆] 2n石以上の安全配置は空行・空列を持てない。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
 | [B399](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L183) | [存在] 行列占有数を固定した安全配置族に隔たりがある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
 | [B400](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L184) | [統計] 3石行の平行集中は最大性に不利。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B401](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L190) | [全称] 7×7最大配置の最小特定ペアは必ず異なるD4点軌道に属する。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B402](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L191) | [構造] 7×7の特定ペアはA/Bの相と向きを別々に符号化する。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B403](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L192) | [全称] 7×7で相を指定すれば一点で最大配置を特定できる場合がある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B404](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L193) | [統計] 特定ペアを多く持つ最大配置ほど局所変形から遠い。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B405](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L194) | [存在] 特定点を多く示す方が別相を選びやすくなる。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B406](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L195) | [構造] 7×7最大配置の点対共起行列は低ランクで相を分離できる。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B407](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L196) | [全称・大胆] 最大集合族のVC次元は一様有界。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B408](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L197) | [存在] 最大集合族は高い識別難度を持つ。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B409](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L198) | [構造] 最大配置の一意復元に空点情報を使うと大幅に短くなる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B410](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L199) | [統計] 最大配置のD4型数より共起行列の有効ランクが変形障壁を説明する。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B411](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L205) | [全称] 8本の最短路は三つの独立な順序交換で生成される。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B412](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L206) | [構造] 最短路上の操作には共通の半順序がある。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B413](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L207) | [全称] すべての最短路は共通石をちょうど一つだけ一時除去する。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B414](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L208) | [全称] 一時除去される共通石も全最短路で同じ。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B415](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L209) | [全称] 第四の角の占有時間は全最短路で同じ。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B416](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L210) | [構造] 最短路の21頂点は少数のダイヤ形の連結として記述できる。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B417](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L211) | [存在] 最短路にない点を使う最短の迂回は2操作だけ長い。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B418](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L212) | [全称] 角を使う回数を二度以上にすると経路は少なくとも4操作長くなる。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B419](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L213) | [構造] 最短路を妨げる局所障害は一つの禁止四点型へ集約できる。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B420](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L214) | [全称] A→BとB→Aでは角使用前の準備の長さが非対称。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B421](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L220) | [全称・大胆] 最大14石を含まない非孤立G_12成分は木。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B422](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L221) | [存在] 最大14石を含まないG_12成分に長い閉路がある。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B423](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L222) | [全称・大胆] 最大配置を含まないG_12成分は903頂点より小さい。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B424](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L223) | [全称・大胆] 最大配置外の非孤立成分は13石局面を8個以下しか含まない。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B425](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L224) | [構造] 孤立12石は少数の局所凍結型に分けられる。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B426](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L225) | [存在] 孤立12石の中に一石除去後も元へ戻す手しかないものがある。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B427](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L226) | [全称・大胆] 各孤立12石はG_11で少なくとも一つの13石へ到達できる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B428](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L227) | [統計] 孤立12石と903成分内12石は中心占有率が異なる。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B429](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L228) | [構造] G_12の非最大成分は禁じられた点の軌道と対応する。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B430](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L229) | [存在] 同じ軌道占有ベクトルの12石集合に、孤立点と903成分内の点が共存する。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B431](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L235) | [全称] 最小被覆数は正確に21。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B432](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L236) | [存在] 分数被覆緩和だけで下界21が出る。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B433](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L237) | [存在] 整数被覆と分数被覆には真の差がある。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B434](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L238) | [存在] 21個の互いに両立しない難しい候補で下界を説明できる。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B435](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L239) | [構造] 全最小被覆に共通の禁止四点がある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B436](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L240) | [全称・大胆] 最小被覆は13石候補だけで決まる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B437](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L241) | [構造] 最小被覆どうしは一対一の入れ替えで連結。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
-| [B438](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L242) | [存在] 最小証明の四点族は複数の本質的な幾何型を持つ。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B439](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L243) | [構造] 候補の重みは占有差と角数だけで選べる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B440](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L244) | [存在] 別の占有ポテンシャルなら21より短い静的証明がある。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
+| [B401](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L190) | [全称] 7×7最大配置の最小特定ペアは必ず異なるD4点軌道に属する。 | REFUTED | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B402](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L191) | [構造] 7×7の特定ペアはA/Bの相と向きを別々に符号化する。 | PARTIAL | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B403](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L192) | [全称] 7×7で相を指定すれば一点で最大配置を特定できる場合がある。 | SUPPORTED | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B404](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L193) | [統計] 特定ペアを多く持つ最大配置ほど局所変形から遠い。 | PARTIAL | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B405](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L194) | [存在] 特定点を多く示す方が別相を選びやすくなる。 | INCONCLUSIVE | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B406](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L195) | [構造] 7×7最大配置の点対共起行列は低ランクで相を分離できる。 | PARTIAL | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B407](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L196) | [全称・大胆] 最大集合族のVC次元は一様有界。 | INCONCLUSIVE | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B408](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L197) | [存在] 最大集合族は高い識別難度を持つ。 | INCONCLUSIVE | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B409](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L198) | [構造] 最大配置の一意復元に空点情報を使うと大幅に短くなる。 | REFUTED | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B410](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L199) | [統計] 最大配置のD4型数より共起行列の有効ランクが変形障壁を説明する。 | INCONCLUSIVE | [round2-batch-b381.md](round2-batch-b381.md) |
+| [B411](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L205) | [全称] 8本の最短路は三つの独立な順序交換で生成される。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B412](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L206) | [構造] 最短路上の操作には共通の半順序がある。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B413](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L207) | [全称] すべての最短路は共通石をちょうど一つだけ一時除去する。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B414](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L208) | [全称] 一時除去される共通石も全最短路で同じ。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B415](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L209) | [全称] 第四の角の占有時間は全最短路で同じ。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B416](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L210) | [構造] 最短路の21頂点は少数のダイヤ形の連結として記述できる。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B417](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L211) | [存在] 最短路にない点を使う最短の迂回は2操作だけ長い。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B418](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L212) | [全称] 角を使う回数を二度以上にすると経路は少なくとも4操作長くなる。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B419](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L213) | [構造] 最短路を妨げる局所障害は一つの禁止四点型へ集約できる。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B420](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L214) | [全称] A→BとB→Aでは角使用前の準備の長さが非対称。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B421](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L220) | [全称・大胆] 最大14石を含まない非孤立G_12成分は木。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B422](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L221) | [存在] 最大14石を含まないG_12成分に長い閉路がある。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B423](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L222) | [全称・大胆] 最大配置を含まないG_12成分は903頂点より小さい。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B424](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L223) | [全称・大胆] 最大配置外の非孤立成分は13石局面を8個以下しか含まない。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B425](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L224) | [構造] 孤立12石は少数の局所凍結型に分けられる。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B426](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L225) | [存在] 孤立12石の中に一石除去後も元へ戻す手しかないものがある。 | INCONCLUSIVE | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B427](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L226) | [全称・大胆] 各孤立12石はG_11で少なくとも一つの13石へ到達できる。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B428](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L227) | [統計] 孤立12石と903成分内12石は中心占有率が異なる。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B429](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L228) | [構造] G_12の非最大成分は禁じられた点の軌道と対応する。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B430](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L229) | [存在] 同じ軌道占有ベクトルの12石集合に、孤立点と903成分内の点が共存する。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B431](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L235) | [全称] 最小被覆数は正確に21。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B432](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L236) | [存在] 分数被覆緩和だけで下界21が出る。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B433](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L237) | [存在] 整数被覆と分数被覆には真の差がある。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B434](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L238) | [存在] 21個の互いに両立しない難しい候補で下界を説明できる。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B435](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L239) | [構造] 全最小被覆に共通の禁止四点がある。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B436](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L240) | [全称・大胆] 最小被覆は13石候補だけで決まる。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B437](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L241) | [構造] 最小被覆どうしは一対一の入れ替えで連結。 | PARTIAL | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B438](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L242) | [存在] 最小証明の四点族は複数の本質的な幾何型を持つ。 | SUPPORTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B439](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L243) | [構造] 候補の重みは占有差と角数だけで選べる。 | REFUTED | [round2-batch-b411.md](round2-batch-b411.md) |
+| [B440](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L244) | [存在] 別の占有ポテンシャルなら21より短い静的証明がある。 | INCONCLUSIVE | [round2-batch-b411.md](round2-batch-b411.md) |
 | [B441](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L250) | [全称・大胆] 各族は二点交換まで許せば連結する。 | REFUTED | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
-| [B442](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L251) | [存在] 同一残局族の交換距離は無限に大きくなる。 | NOT_AUDITED | 旧個票参照5箇所（JSON） |
+| [B442](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L251) | [存在] 同一残局族の交換距離は無限に大きくなる。 | PARTIAL | [round2-batch-b441.md](round2-batch-b441.md) |
 | [B443](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L252) | [全称・大胆] 非連結性はRが空または非連結の族に限られる。 | REFUTED | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
 | [B444](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L253) | [存在] 非空で連結なRを持つ族も分裂する。 | SUPPORTED | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
-| [B445](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L254) | [構造] 分裂成分は占有点の被覆責任の割り当てで区別できる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
+| [B445](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L254) | [構造] 分裂成分は占有点の被覆責任の割り当てで区別できる。 | SUPPORTED | [round2-batch-b441.md](round2-batch-b441.md) |
 | [B446](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L255) | [存在] 同一残局族の異なる成分は石除去への耐性が違う。 | SUPPORTED | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
-| [B447](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L256) | [統計] 同一残局族の成分数は禁止点の重複被覆の多さと増える。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
+| [B447](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L256) | [統計] 同一残局族の成分数は禁止点の重複被覆の多さと増える。 | REFUTED | [round2-batch-b441.md](round2-batch-b441.md) |
 | [B448](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L257) | [構造] 一石少ない中間配置を許すと同一残局族を少数の橋で結べる。 | PARTIAL | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
 | [B449](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L258) | [存在] 残余ゲームの抽象同型まで緩めても配置族は分裂する。 | SUPPORTED | [round42-exact-residual-family-audit.md](round42-exact-residual-family-audit.md) |
-| [B450](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L259) | [構造] 同じ残局の複数実現は安全な遮蔽部品の置換則を与える。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
+| [B450](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L259) | [構造] 同じ残局の複数実現は安全な遮蔽部品の置換則を与える。 | PARTIAL | [round2-batch-b441.md](round2-batch-b441.md) |
 | [B451](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L265) | [存在] 同半径・異なる中心分母で、ともに4点以上だが点数が違う円がある。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
 | [B452](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L266) | [存在] 分母の大きい中心が整数中心を上回る半径範囲がある。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
 | [B453](../../../archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md#L267) | [構造] 中心分母の素因数型で格子点数上限を整理できる。 | SUPPORTED | [round10-circle-denominator.md](round10-circle-denominator.md) |
