@@ -90,8 +90,8 @@ git diff --exit-code -- README.md research/knowledge/generated
 共有solverを複製せず、共有研究libraryはscripts/researchへ分離した。空dump・debug/editor片・完全一致重複・obsoleteなreport編集generatorは削除した。
 開始時ですでに構文エラーのあった2本は監査出典としてarchive/incomplete-scriptsに保存した。
 
-現在のK0001〜K0320の**320件**を保持した。kind・status・topic・alias・relation・solution metadataは開始時点と一致し、数学的な新規研究やstatusの変更を行っていない。
-当時296件という第1段階の数字は移行履歴であり、現行件数ではない。
+物理SSOT移行時点のK0001〜K0320の**320件**を保持した。kind・status・topic・alias・relation・solution metadataは開始時点と一致し、数学的な新規研究やstatusの変更を行っていない。
+第1段階の296件、物理SSOT移行時点の320件はいずれも移行履歴の件数であり、現行件数はknowledgeの生成index・summaryを参照する。
 
 knowledge artifacts、Markdownリンク、主要source/runner path、workflow参照を新pathへ更新し、generated viewを再生成した。
 当時のpath + SHA256を保存した監査JSON/manifestはhistorical provenanceとして保持し、[path対応表と説明](archive/physical-ssot-2026-10-04/README.md)から現在の所在を辿れる。

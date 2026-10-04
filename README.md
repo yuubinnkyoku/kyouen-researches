@@ -46,7 +46,7 @@
 
 ## 読み方
 
-- 現在の研究結果と未解決問題：[knowledgeの入口](research/knowledge/README.md)、[全320件](research/knowledge/generated/index.md)、[検証境界・警告](research/knowledge/generated/summary.md)。
+- 現在の研究結果と未解決問題：[knowledgeの入口](research/knowledge/README.md)、[全K項目](research/knowledge/generated/index.md)、[検証境界・警告](research/knowledge/generated/summary.md)。
 - ルール・使い方・証明方式：[reader向け文書](docs/README.md)。
 - 再現コード・入力・出力・監査：[実験の入口](research/experiments/README.md)。
 - 発見順・判断・失敗：[研究ログ](research/log/README.md)。旧計画・撤回済みまとめ・当時の索引：[archive](research/archive/README.md)。
