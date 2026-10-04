@@ -31,8 +31,8 @@ F系列、H系列、旧Cycle内の重要識別子も保持した。Cycleで再�
 
 ## 残る範囲
 
-原文600件のうち435件は最新監査索引でもNOT_AUDITEDである。これは未監査の候補であり、435件の数学的未解決問題でも成立済み知識でもない。
-この領域をすべて機械変換すると古い未検証主張を正本に昇格させるため、[監査範囲の項目](knowledge/items/K0079-600-original-claims-audit-boundary.md)から出典と境界を辿れる状態にした。個々の候補の事実認定は残る重要な監査領域。
+第1段階の移行時点では、原文600件のうち435件がNOT_AUDITEDだった。これは当時まだ内容監査していない候補の件数であり、435件の数学的未解決問題を意味しなかった。
+その後2026-10-04に全600件の内容監査を完了し、現在はNOT_AUDITED=0である。各原文はSUPPORTED / REFUTED / PARTIAL / INCONCLUSIVE / SCOPE_UNCLEARのいずれかに監査済みで、生きた集計と個別根拠は[監査範囲の項目](knowledge/items/K0079-600-original-claims-audit-boundary.md)および生成索引を参照する。旧仮説を機械的にK項目へ変換したわけではない。
 
 巨大具体証明書のLean内検査、10の全空盤単一証明書、11の真の勝敗、K10/s10の確定、禁止四点組の単独解除による勝者反転、全G11連結などは未完了としてK項目化済みである。
 これらを解く新しい研究は今回実行していない。各verifierを全入力について再実行したという主張もしない。
@@ -75,7 +75,7 @@ git diff --exit-code -- README.md research/knowledge/generated
 
 ## 第1段階のmainへの集約
 
-2026-10-04時点で、現行knowledge schema・generated view・CI・README導線はmainへ集約済み。旧構造向けopen PRは0件。旧 `refactor/research-knowledge-structure` と `codex/open-freshness-audit` の固有成果もmainへ回収済みで、両refはmainと同一commitへ揃えた。当時の論理移行では旧研究ファイルを原位置に残した。原文435件のNOT_AUDITEDは、物理構造と独立した内容監査バックログである。
+2026-10-04時点で、現行knowledge schema・generated view・CI・README導線はmainへ集約済み。旧構造向けopen PRは0件。旧 `refactor/research-knowledge-structure` と `codex/open-freshness-audit` の固有成果もmainへ回収済みで、両refはmainと同一commitへ揃えた。当時の論理移行では旧研究ファイルを原位置に残した。当時残っていた原文435件のNOT_AUDITEDは、物理構造と独立した内容監査バックログだった。2026-10-04の後続監査でこのバックログは全件処理され、現在はNOT_AUDITED=0である。
 
 ランタイム一時物はcurrent treeから除外し、固定バイナリ・検証JSON・研究ログなど再現性に必要な資産だけを残す。
 
@@ -102,7 +102,7 @@ root READMEは現行入口へ書き換え、古い12≤M_{3,5}≤56、m=22..55�
 1〜8の全安全局面解析、9/10の弱解決、11の未解決、8盤の独立全状態監査の留保を区別した。
 
 検査はuvのlocked環境、knowledge integrity・unit test・generated差分、既存C++ build/小盤certificate、固定幅・幾何・game-structure・saturation regression、Lean、Rust独立verifierを対象にした。
-物理移行は435原文の内容監査、11盤の勝敗、巨大具体証明書のLean核内検査等を解決したという意味ではない。これらの現在の境界はknowledgeを参照する。
+物理移行そのものは、当時残っていた435原文の内容監査、11盤の勝敗、巨大具体証明書のLean核内検査等を解決したという意味ではない。その後、435原文を含む残件の内容監査は完了してNOT_AUDITED=0となったが、数学的に未解決の命題まで解決したわけではない。現在の境界はknowledgeを参照する。
 
 ### 長時間実験workflowの起動境界
 
