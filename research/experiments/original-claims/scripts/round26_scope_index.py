@@ -494,6 +494,174 @@ review('B500', 'PARTIAL', 'counterevidence_to_specific_weakening',
        'round63-b451-b500-original-scope-audit.md',
        'n=4,5では鋭い単一中間層ボトルネックは無いが、少数の特定部分集合による一般的な上下界までは反証していない。')
 
+# 2026-10-04: B501-B600 original-scope audit.
+review('B503', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '節の前提から「約1/11」はN局面の割合ではなく p_rand≈1/11 の意味。旧REFUTEDは誤読。n=4でN最小1/11は確認済みだが、その極小例を残余同型で「1救済+10同値誘惑」に縮約する原文の構造分類は未完。')
+review('B504', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4,5で一意必勝手を保つ誘惑手数は13→22まで増えるが、任意個へ増幅する無限構成は未提示。')
+review('B505', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4,5では必勝手比率≥1/2のN局面の p_rand 最小は1/2で証人なし。存在する無限族の不発見だけでは反証しない。')
+review('B507', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'h別のP局面最大ランダム勝率は有限盤で厳密計算済みだが、包含閉性を使った一般の明示上限列は未証明。')
+review('B508', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '同一 p_rand で最善手比率差2/3の有限証人はあるが、差を任意に大きくする族は未構成。')
+review('B509', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4 pooledでは予言方向の相関 r=+0.264、順位一致91.2%。原文が要求する n,k,∣L∣,必勝手数固定の比較は未実施。')
+review('B510', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4,5全走査で真の必勝手が子p_rand評価で厳密最下位になる例は0。存在命題なので有限不発見では反証しない。')
+review('B511', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=3,4,5の全一点削除では勝者不変。ただし原文は全n≥3の正方形盤であり n≥6 は未証明。')
+review('B512', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '7×7最大16集合の点被覆数は2、すなわち δ_K(7)=2<3。全称を反証。')
+review('B513', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '同じ完全被覆計算で δ_K(7)=2。候補値3を反証。')
+review('B514', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4でδ_out=2、δ_K≥4から差≥2を確認するが、差を任意に大きくする盤列は未構成。')
+review('B515', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4では反転削除12辺中8辺が二石P辺で原文の性質を満たさないが、原文は「あるn」の存在命題。n=4の反例だけでは存在を反証しない。')
+review('B516', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4反転12ペアは端点種別とマンハッタン距離の二条件で3群に整理できる。固定盤の構造命題を全12辺で確認。')
+review('B517', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4反転削除ペアグラフ12辺を全構成し二部グラフであることをBFS二彩色で確認。')
+review('B518', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4に、どの二点削除も不変だが三点全部で反転する12組を全数確認。指定盤条件を満たす。')
+review('B519', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4の最小反転削除は2点で、サイズ≥4という前件が生じない。サイズ≥4の最小反転集合を持つ盤が未発見で全称を判定できない。')
+review('B520', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=3のδ_K達成8集合は全て勝者・Wを変えるため証人なし。存在命題なので有限不発見では反証しない。')
+review('B526', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4では一直線上の禁止四点束は各1組だけで、全10直線の単独解除はいずれも勝者不変。固定4×4存在命題を反証。')
+review('B527', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '禁止追加時の局所臨界証明サイズを一般に上から押さえる定理・証明書が未構成。')
+review('B528', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4で完成族からの単独解除感度は全194組0なのに追加経路では12–16回反転する。重要度概念の乖離はあるが頻度順位の定量比較は未完。')
+review('B529', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '最小勝敗保持禁止族の完全列挙がなく、全最小族の共通四点の有無を判定できない。')
+review('B530', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '円束単位の幾何順は4×4で12反転、乱択順は16反転だが、最小性と幾何的特徴づけの一般証明は未完。')
+review('B531', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5円のみW={12}に主対角線二本の禁止を加えるとWが5点へ増加。完全Grundyで確認。')
+review('B532', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5円のみ+水平垂直では標準Wの辺中央4点が欠落し、斜め禁止を含めないと標準Wに一致しない。')
+review('B533', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5の直線禁止D4三軌道を各単独で全検査したがWは最大5点で標準9点を復元できない。')
+review('B534', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '主対角線軌道と軸平行軌道はいずれも同じ内側対角4点を救い、辺中央は二軌道併用で初めて救われる。「別の直線族」の分離を反証。')
+review('B535', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5の単一直線16本を一つずつ戻して全検査。同じ一本で勝ち入りと負け入りが同時に起きる例は0。')
+review('B536', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '内側対角4点は各2本のP応答が一軌道で全消滅するが、辺中央4点は各12本で一軌道では消えきらない。原文の8点一括説明は未成立。')
+review('B537', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5で直線D4三軌道の全2^3中間族を完全計算し、中央初手は全8段階で勝ち初手に残る。')
+review('B538', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4に g_circle=0, g_line=0, g_standard≠0 の局面を96件確認。存在命題を満たす。')
+review('B539', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4に g_circle≠0, g_line≠0, g_standard=0 の局面を320件確認。存在命題を満たす。')
+review('B540', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5復元8点では円のみと標準で浅層合法手集合・手数が完全一致する一方、子P/Nだけが反転。原文の機構を直接確認。')
+review('B543', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '2×8に一行3石・他行2石で終局する8例がある。正しい閾値はm≥9。')
+review('B545', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '2×5の全3対3安全配置6件で二行のペア和集合は完全分離。混在型の初出はm=6。')
+review('B547', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '二行盤の極大性を反射 s−a の和集合被覆で正確に判定する条件を導出し、完全列挙と一致。')
+review('B548', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '一般証明によりm≥9の二行盤では全極大配置が6石。有限走査もm=200まで整合。')
+review('B549', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'B548の一般定理によりm≥9では5石極大は存在しない。「任意に長い」に反する。')
+review('B551', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '三行盤m=9で空盤g=2だが式(m+1) mod 3は1。全称を反証。')
+review('B552', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '三行盤でg(6)=1≠g(9)=2、g(7)=2≠g(10)=1。長さ3伸長で同値部品が加わる主張を反証。')
+review('B553', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'm=9（3の倍数）の勝ち初手集合が端二列除外帯型にならず、全称を反証。')
+review('B554', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'm=7では候補十字と一致するがm=10で不一致。t≥2全称を反証。')
+review('B559', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '行間隔を{0,1,2}から{0,1,3}へ変えるとm=7で空盤g列が3周期候補から外れる。存在命題を満たす。')
+review('B560', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'm=7では2+2型だけですでに15点の内部帯Wが現れ、併用すると1点へ縮む。「両型併用で初めて現れる」を反証。')
+review('B561', 'REFUTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5安全5石に f=[1,10,20,4,1] の反例があり、20? inequality では f3^2=16<20=f2*f4。全称を反証。')
+review('B562', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'R(S)が二点辺のみの局面はn≤5の検査範囲でa_S対数凹に違反なし。ただし全局面・全盤の一般証明はない。')
+review('B563', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n≤5の全一石固定f_pは対数凹で、既知最小破壊は5石固定。より大盤の一石証人の存在は未決着。')
+review('B564', 'SCOPE_UNCLEAR', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '既知B561反例を生む最小誘導部分は∣L∣=10中9点で、局所的とは言い難い。一方3点残余は1軌道型にまとまる。「小さい」「少数」の定量が未指定。')
+review('B565', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4,5の(k,∣L∣)ビンではfピーク位置の終局長相関がgより強いが、原文のh固定・p_randとの対比まで満たしていない。')
+review('B566', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=5に同一f_Sでランダム終局分布が異なる明示局面対があり、n=4にも独立証人。存在命題を満たす。')
+review('B567', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '7×7の16最大集合の単体和を神経補題で計算し、非零簡約ホモロジーは次数3のみ（6個）。次数3以下という原文を満たす。')
+review('B568', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '13石極大400例・12石極大200例で一つ追加して穴が消える例は0だが全1952/152776の完全走査ではない。存在命題を有限不発見で反証しない。')
+review('B569', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '比較可能なBetti数の異なる/同条件複体母集団が足りず、必勝手比率との統計関係を判定できない。')
+review('B570', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '同一Betti列・同一最大サイズで変形障壁だけ異なる格子部分盤対の証人が未構成。')
+review('B571', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4 k=3の同一交換成分内にg=0→1→2→3→4と各交換で1ずつ増える明示経路がある。')
+review('B572', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4の一石交換でnimber跳躍5までは達成したが、跳躍を無界にする盤列は未構成。')
+review('B573', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4,5の条件を満たすP局面149件では全て1/2点交換先Pがあるが、全盤全局面の全称証明はない。')
+review('B574', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=4,5に隣接N局面で必勝手集合が互いに素、かつ共通合法点数が3.25n/4.2nの証人がある。')
+review('B575', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '固定したL対称差層ではP/N反転交換のbヒストグラム変化が大きい傾向をn=4,5で観測するが層依存が残る。')
+review('B576', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '4×4にL(S)=L(T)、両方N、必勝手が各一つで13対14と異なる隣接局面対を確認。')
+review('B577', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5 k=2のP交換グラフでサイクル空間次元17に対し長さ3/4閉路生成ランク12。短閉路で生成できないサイクルが存在。')
+review('B578', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '同一必勝手を共有するN局面対で対称差12まで確認したが、盤サイズとともに無界に増やす族は未構成。')
+review('B579', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'WFT単元と必勝手安定性の有限相関は示唆されるが、WFT分布が偏り、gとの統制比較を含む原文統計は未確定。')
+review('B580', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '一石交換の円束差分が小さい反転例はあるが、その小部分ハイパーグラフだけでP/N反転を十分に証明するクラスは未確立。')
+review('B581', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '残余制約が純粋なパスP_mとなる格子残局をm=3..6で多数確認したが、任意長mの一般構成は未証明。')
+review('B582', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '純粋な奇サイクル残局C3,C5は実現したがC7以降を任意長に構成する証明はない。')
+review('B583', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'm≤6のパス残局では固定石数はO(m)に整合し盤辺長も多項式範囲だが、任意mの構成・上界証明はない。')
+review('B584', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '同じ抽象残局C3を4石と9石で実現する配置を確認し、埋め方による遮蔽コスト差の存在を満たす。')
+review('B585', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '共有遮蔽で有限例のコスト削減は確認されたが、原文が要求する無限族は未構成。')
+review('B586', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'Lを保った一石移動で残余2成分↔1成分を切替える証人はあるが、結合機構は二点辺であり原文の「高階制約が現消する」は未実現。')
+review('B587', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '接続によりg=4へ増幅する例は得たが、nimber2部品二個を指定してnimber4にする原文どおりの構成は未達。')
+review('B588', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '後続全数探索で同じ二部品を用いながら幾何配置によりxor則から外れ、合成gが少なくとも3種類になる明示証人をn=4,5で確認。')
+review('B589', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '有限な部品接続でg=0..4までは実現したが、有限部品集合から無界nimberを生成する閉じた構成族は未証明。')
+review('B590', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'g固定でT*変化、T*固定でg変化の両方向証人はあるが、原文のWFTを使った二方向構成は未完。')
+review('B591', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '一石不足層の厳密d_max最大はn=4..8で2,3,4,8,6。C=8は有限範囲を覆うが絶対定数の全n存在は未証明。')
+review('B592', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n=7にd_max=8≥(8/7)nの有限証人はあるが、c>0を保つ無限盤列は未構成。')
+review('B593', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n≤8ではC=8がd_max≤C(K_n−∣S∣)を覆うが、n非依存定数の一般証明はない。')
+review('B594', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '7×7極大13石1952件を全数集計し(d_A,d_B)は48型、軌道占有ベクトル143型より少ない。')
+review('B595', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '7×7極大13石1952件にA偏り624、B偏り832、等距離496があり、原文の両種類の存在を全数確認。')
+review('B596', 'SUPPORTED', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '7×7全13石2176件をG12/G11で完全BFS。等距離群は一方偏り群より最大への到達率が低く平均最短路も長い。')
+review('B597', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '固定cの層/最大集合比はn≤7で多項式的規模に見えるが、全nの多項式上界は未証明。')
+review('B598', 'INCONCLUSIVE', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', 'n≤7では比が任意固定多項式を超える兆候はないが、超多項式となる盤列の存在命題を有限不発見で反証しない。')
+review('B599', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '7×7最遠13石のd_max下界は円・直線飽和閉包だけで構成的に証明できるが、証明には32 Carrierを要し「少数・わずか」の部分は未達。')
+review('B600', 'PARTIAL', 'audited_original_scope',
+       'round64-b501-b600-original-scope-audit.md', '5×5に条件を満たすN局面2380件があり、全必勝手が最短修正候補外かつ勝敗維持対局が最大配置へ到達しない。ただし盤サイズをまたぐ族の構成は未証明。')
+
 
 def main():
     originals = {}
