@@ -476,7 +476,7 @@ def main():
                                         for name in sorted(report_names)}
     atomic_text(OUTPUT/'round26_original_scope_index.json',json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
     lines = ['# 全600原命題の証拠索引（原文監査は途中）','',
-             '更新: 2026-10-01。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。',
+             '更新: 2026-10-04。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。',
              '**未監査は未解決と同義ではない。この表から研究全体の未解決数はまだ確定できない。**','',
              f'原文照合して採用した記録は{reviewed_count}件。残りは旧ラベルを採用せずNOT_AUDITEDとする。',
              '旧個票の原命題・弱化版ラベルはJSONのevidence_pointersに行番号・原文ごと保存した。',
