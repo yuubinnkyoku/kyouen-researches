@@ -322,3 +322,5 @@
 | [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) | 禁止曲線の三つ組・点対充填から固定幅q点版の一般安定化上界が得られる | proposition | proved | rectangles, geometry, variants, grundy |
 | [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) | swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける | proposition | proved | variants, grundy |
 | [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) | n=11..15にはn−1石の安全極大配置が存在する | proposition | computed | maximal-safe, geometry |
+| [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) | 4×4は容量損失ゼロの二点削除で勝者が反転する | proposition | computed | variants, maximum-safe, grundy |
+| [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) | 同nimberの占有配置は共通の幾何的追加で勝敗が分かれる | proposition | computed | residual-games, grundy |

@@ -217,11 +217,28 @@ class MigrationBoundaryTests(unittest.TestCase):
         self.assertLess(text.index(END),text.index("## 読み方"))
         self.assertLess(text.index(END),text.index("## English"))
 
-    def test_all_adopted_originals_have_aliases(self):
+    def test_original_audit_inventory_and_evidence_boundary(self):
         audit=json.loads((ROOT/"research/experiments/original-claims/output/round26_original_scope_index.json").read_text(encoding="utf-8"))
+        self.assertEqual([r["id"] for r in audit["rows"]], [f"B{i:03}" for i in range(1,601)])
+        self.assertEqual(audit["total_originals"],600)
+        allowed={"SUPPORTED","REFUTED","PARTIAL","INCONCLUSIVE","SCOPE_UNCLEAR","NOT_AUDITED"}
+        counts={s:sum(r["original_status"]==s for r in audit["rows"]) for s in allowed}
+        self.assertEqual(audit["audit_state_counts"],{s:c for s,c in counts.items() if c})
         rows=[r for r in audit["rows"] if r["original_status"]!="NOT_AUDITED"]
-        self.assertEqual(len(rows),165)
-        self.assertEqual([r["id"] for r in rows if r["id"] not in self.by_alias],[])
+        self.assertEqual(len(rows),audit["reviewed_originals"])
+        reports=ROOT/"research/experiments/original-claims/reports"
+        for row in rows:
+            self.assertIn(row["original_status"],allowed)
+            self.assertNotEqual(row["evidence_kind"],"unreviewed")
+            self.assertTrue(row["reason"],row["id"])
+            self.assertTrue(row["preferred_report"],row["id"])
+            for report in [row["preferred_report"]]+row["additional_reports"]:
+                self.assertTrue((reports/report).is_file(),(row["id"],report))
+        # Auditing a legacy note does not require creating independent knowledge.
+        original_ids={r["id"] for r in audit["rows"]}
+        for alias in self.by_alias:
+            if alias.startswith("B") and alias[1:].isdigit():
+                self.assertIn(alias,original_ids)
 
     def test_square_outcomes_and_evidence_boundaries(self):
         winners=["first-player-win"]*3+["second-player-win"]+["first-player-win"]*2+["second-player-win"]*2+["first-player-win","second-player-win"]

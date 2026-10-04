@@ -975,6 +975,127 @@ review('B200', 'SUPPORTED', 'audited_original_scope',
        'round67-b151-b200-original-scope-audit.md', 'n=5の3万局面標本でP/N相関とN内nimber相関の特徴順位が明確に不一致（順位Spearmanも負）。『零かどうか』と高nimberが別軸という統計主張を直接確認。')
 
 
+review('B201', 'INCONCLUSIVE', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "標準盤は原文冒頭でn×nと定義され、K_nも正方形容量。n≤6の一点削除では証人なし。2×6のK=6保存・勝者反転は長方形への弱化であり原文の正方形存在証人にはしない。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B202', 'INCONCLUSIVE', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n≤6の正方形では一点削除後もKが保存され、容量低下の前提を満たす証人がない。有限不発見は一般存在命題の反証ではない。",
+       ('round5-batch-b201-b230.md',))
+review('B203', 'INCONCLUSIVE', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "原文の対象は9×9の全81一点削除盤。確認済みn=5,6の頑健性は別盤の結果で、9×9の削除盤勝敗は未計算。K0021の全初手勝ちとも別の操作。",
+       ('round5-batch-b201-b230.md',))
+review('B204', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "4×4からp=0,q=3を単独削除するとg=0、同時削除するとg=2。batch09_pairs_n4.jsonの全120対と一点削除値を照合し原文の存在を満たす。",
+       ('round5-batch-b201-b230.md',))
+review('B205', 'INCONCLUSIVE', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n=5全100最大配置の各点被覆は正で、排除点がない。長方形での同様の不発見も一般反証ではなく、排除点かつ勝者反転の証人は未取得。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B206', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n=4の勝ち手頻度・gateと次数の相関、矩形で同次数の削除効果差はある。しかし原文の同次数条件下で媒介性とg変化を比較する回帰は未実施。次数で決まらないことだけでは媒介性優位を証明しない。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B207', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "4×4のp=0,q=3でK_full=K_p=K_q=K_pair=7、容量損失0は加法的。一方g_full=g_p=g_q=0、g_pair=2。原文は非零容量損失を要求せず、正方形の証人で決着。",
+       ('round5-batch-b201-b230.md',))
+review('B208', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n=3の外周付加は変化4/不変12、n=4は変化12/不変8。任意の十分大きいnで両型があるという量化を満たす一般構成はない。",
+       ('round5-batch-b201-b230.md',))
+review('B209', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n=4では対称孔の反転率が高いが非対称反転も8組。原文は同サイズ・同削除次数和で対称孔のみ反転する盤の存在であり、次数和を統制した証人は未取得。他群の非対称反転は存在命題全体を反証しない。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B210', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "矩形の端距離・角で盤全体の削除結果を分類した有限例はあるが、終盤R(S)の点削除に適用する一般局所規則は未構成。90%の分類精度はゲーム値の完全保存条件ではない。",
+       ('round5-batch-last21.md',))
+review('B214', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "二行の(a,0),(b,0),(c,1),(d,1)の共円はa+b=c+dと同値。各行高々3石、対和集合の交差を禁止する状態で全継続を表せる。3+1の円はなく同一行4石だけが共線禁止。K0069の全長強解決とも整合。",
+       ('round4-two-row-order-strategy.md',))
+review('B217', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "2×6と3×4は面積12・最大安全6で、空盤gは0対2。長方形を明示した原文の存在条件を満たす。最小性の完全証明は別であり採用しない。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B218', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "面積16の2×8対4×4で空盤反転の差を確認。しかし原文は安全局面母集団のP/N変化率の縦横比依存で、空盤の0/1比較はその統計を測っていない。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B221', 'INCONCLUSIVE', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "対象はn≤9の正方形。n=4,5では標準と円のみの空盤勝者は一致。2×6等の反転は長方形への弱化で、正方形n=6..9に原文証人なし。",
+       ('round5-batch-b201-b230.md',))
+review('B222', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "原文本文はW非空を条件にしない。4×4の標準と直線のみは共に空盤g=0、W=空集合で一致し、禁止制約のあるn≥4盤という条件を満たす。追撃が追加した非空Wの存在は別の未解決問い。円のみ計算との取り違えには依拠しない。",
+       ('round5-batch-b201-b230.md',))
+review('B223', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "原文本文の増加する範囲は、共通の標準安全集合を母集団としたn4のk3→4で56/560=10%から348/1626≈21.4%へ上昇。batch10_extra.jsonを優先し、円のみ集合を分母とした追撃表の21.3%は採らない。全終盤での単調増加までは主張しない。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B225', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "q5・n4でmax g=5に4石で達する有限結果はあるが、h(S)=K(S)−|S|の天井到達を示す資料ではない。q≥5の盤族と少占有での天井達成の一般化は未証明。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B226', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "現在のK0310では8×8のmisère空盤は先手勝ちで、通常版K0006も先手勝ち。一致例n8と不一致例n4（通常後手/misère先手）により、指定n≥4正方形内の両存在を満たす。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B229', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n4で閾値2に最大配置数64→8が容量低下より先に起きるが、D4軌道サイズは全て8のまま。対称性分布の先行変化を証明したわけではなく、高対称配置はこの盤にない。",
+       ('round5-batch-b201-b230-followup.md',))
+review('B230', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n4で点数≤4のcarrierに由来する禁止を省略しても石数0,1層のP/Nを完全保存する有限例がある。原文は特定層と非自明条件の存在であり、全層保存も全n定理も要求しない。",
+       ('round4-batch-b228-b290.md',))
+review('B231', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "K0293の全n1..7スペクトルでg=0..9を実現。任意mの一般実現は未証明。mexによる小さい値の実現は最大nimberの無界性の代わりにはならない。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B232', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "小グラフの二点影P(S)の出現は計算済みだが、scriptsのresidual_graphは三点・四点極小辺を落とす。K0108のR(S)全体が指定グラフのみになることと全有限グラフの実現は未証明。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B233', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "有限の木の次数列をP(S)成分で検出したが、成分の出現は全Rの木実現ではなく高階辺排除も未検査。次数列は一般に完全同型不変量でない。全ての木の量化は未証明。",
+       ('round5-batch-b231-b250-followup.md',))
+review('B234', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n5二石のP(S)にK2九成分という有限観測はあるが、三点・四点辺が成分を結ぶ可能性を落とした旧計算。非自明Hの正確なR直和を任意r構成する一般族は未取得。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B235', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n5で二点影の成分が平行移動対応する20例はあるが、完全Rの遮蔽付き合成を保証する座標十分条件ではない。高階横断辺の排除と一般写像は未証明。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B236', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n4,5の全Grundyに基づく後退解析で連続一意勝ちr=2の証人を確認。任意rの族は未構成。有限でr3不発見は全盤での不可能性ではない。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B237', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n5で一手後の二点影の成分数が3増える観測はあるが、高階辺を含むRの独立分裂は保証しない。任意rの独立領域を作るという主張の一般構成もない。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B238', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n4のS空、q1=0,q2=1,p=2で子gは1,1、p後は5,0。nimber同値から分岐する有限核は確認。ただし同nimberは継続ゲーム同型ではなく、原文の同じ継続型を満たす証人まではない。",
+       ('round5-batch-b231-b250.md',))
+review('B239', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "N2・N3で局所正方形内の中間点を全禁止して四隅を合法に保つ固定石証人はある。より大きい全盤にFを置くため、その盤の残り合法点も含めた元ゲームの正確な実現・一般クラスの証明はない。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B240', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "4×4で占有集合S1={0},S2={1}はg=1で直和同値。共通の占有T={2}を加えるとg=5対0。round5_b231_n4.jsonのembedding_splitに具体値があり、同nimberと幾何置換の違いを示す。",
+       ('round5-batch-b231-b250.md',))
+review('B241', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "5×5の九勝ち初手と三D4軌道は確定。追撃のmin_child_L等は完全Grundyで勝ち手を選別した後の規則で、共通の短い応答証明の抽出を与えない。全勝利の有限事実と幾何的短証明を区別。",
+       ('round5-batch-b231-b250-followup.md',))
+review('B242', 'SCOPE_UNCLEAR', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "戦略モードの表現言語・サイズが未定義。完全Grundyの勝ち手oracleを一モードと数える追撃なら自明になるが、原文の局面幾何による切替10種類との同一性を判断できない。36初手勝ち自体はK0004で確定。",
+       ('round5-batch-b231-b250-followup.md',))
+review('B243', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "K0268/K0269の軌道骨格・容量制約で最大配置の排他相を確認。旧追撃は中心説を修正したが、同じ補題が勝敗証明で大量局面を処理することは未提示。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B244', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "K0295で5×5勝者は終局7石を全応手に対し保証でき、K5=9より小さい。7と9は同じ勝者側の偶奇なので9を避ける保証は偶奇だけから出ない。n4の6<K4=7だけの旧証拠より強い現在の固定長保証を使う。",
+       ('round25-forced-length-holes.md',))
+review('B245', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n4では勝ち手数を固定すると反復群の生proofは大きく、n5追撃の圧縮差平均38.4対1.5は勝ち手数を固定していない。WLと二点影による共有は完全R同型の証明でもない。原文指定の統制下の共有量増加は未確定。",
+       ('round5-batch-b231-b250-followup.md',))
+review('B246', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "完全な残余禁止hypergraphの同型を十分条件とすれば全手・全子・証明を写せる（K0108）。K0227の非D4同値配置の正確なR同型が、D4より粗い分類が実際にある証拠。二点影だけの旧Node-Kayles論証は採用しない。",
+       ('round42-exact-residual-family-audit.md',))
+review('B247', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n5で64件の非交差最小化手を検出する旧proof_mはP節点で1+Σ子proof、N節点で1+min子proofという木サイズ。共有可能なDAG最小化とは異なるため、原文の最小DAGとの食い違いまでは未証明。",
+       ('round5-batch-b231-b250.md',))
+review('B248', 'SUPPORTED', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "n3全安全局面はK0004のg∈{0,1}、全極大5石。石数偶奇という一整数で勝敗を分け、Nから任意合法手がPへ行く共通応答形式を与える。原文は小盤の存在であり、n4,5の不完全な特徴分類を一般証明にしない。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B249', 'PARTIAL', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "g1の有限木proofサイズ急増はn4,5で測定したが、無界盤族の指数下界はない。Pで子サイズを加算する旧DPはDAG共有を最小化せず、深さ別有限比を漸近定理へ昇格しない。",
+       ('round5-batch-b231-b250-push3.md',))
+review('B250', 'SCOPE_UNCLEAR', 'original_scope_and_current_evidence_audit',
+       'round68-b201-b250-original-scope-audit.md', "定数の一様性、円束パラメータの表現・許すクラスが未指定。旧反証は一石効果の加算という追加条件を否定するだけで、原文のあるクラスの存在を否定しない。",
+       ('round5-batch-b231-b250.md',))
+
 def main():
     originals = {}
     hashes = {}
@@ -989,14 +1110,16 @@ def main():
             if match:
                 bid, kind, title, claim = match.groups()
                 assert bid not in originals
-                originals[bid] = {'id': bid, 'bank': '../../' + str(bank.relative_to(RESEARCH)),
+                originals[bid] = {'id': bid, 'bank': '../../' + bank.relative_to(RESEARCH).as_posix(),
                                   'original_line': line_no, 'original_exact_line': line,
                                   'tag': kind, 'title': title, 'claim': claim,
                                   'section_title': section_title, 'section_line': section_start,
                                   'section_setup': '\n'.join(lines[section_start:line_no-1]).split('- **B')[0].strip(),
                                   'evidence_pointers': []}
     assert set(originals) == {f'B{i:03}' for i in range(1, 601)}
-    for path in sorted(REPORTS.glob('*.md')):
+    # The historical batch reports moved to log; retain their evidence pointers.
+    sources = sorted(REPORTS.glob('*.md')) + sorted((RESEARCH/'log/claim-audit').glob('*.md'))
+    for path in sources:
         if path.name.startswith('round26') or path.name in {'CONTINUATION-kyouen-hypotheses.md'}:
             continue
         lines = path.read_text(encoding='utf-8-sig').splitlines()
@@ -1010,7 +1133,8 @@ def main():
             labels = [{'line': j+1, 'labels': LABEL.findall(lines[j]), 'exact_text': lines[j]}
                       for j in range(i+1,end) if LABEL.search(lines[j]) and
                       any(word in lines[j] for word in ('判定','原命題','弱化版','SUPPORTED','REFUTED'))]
-            pointer = {'report': path.name, 'heading_line': i+1, 'heading': line,
+            report_name = path.name if path.parent == REPORTS else '../../../log/claim-audit/' + path.name
+            pointer = {'report': report_name, 'heading_line': i+1, 'heading': line,
                        'joint_heading_ids': heading_ids, 'labels_in_section': labels,
                        'weakening_mentioned': any('弱化' in z for z in lines[i:end])}
             for bid in heading_ids:
@@ -1055,7 +1179,7 @@ def main():
         evidence = f"[{row['preferred_report']}]({row['preferred_report']})" if row['preferred_report'] else f"旧個票参照{len(row['evidence_pointers'])}箇所（JSON）"
         lines.append(f"| {original} | [{row['tag']}] {title} | {row['original_status']} | {evidence} |")
     lines += ['', '再現: `python research/experiments/original-claims/scripts/round26_scope_index.py`。',
-              '[機械可読索引](round26_original_scope_index.json)には各原文行、節の前提、根拠の種類と採用理由を含める。',
+              '[機械可読索引](../output/round26_original_scope_index.json)には各原文行、節の前提、根拠の種類と採用理由を含める。',
               '根拠の更新はスクリプト内の明示的なREVIEWEDへ加える。推測したステータスで空欄を埋めない。','']
     atomic_text(REPORTS/'round26-original-scope-index.md','\n'.join(lines))
     print('PASS originals=600; reviewed=',reviewed_count,'audit states=',counts,'pointers=',sum(len(r['evidence_pointers']) for r in rows))

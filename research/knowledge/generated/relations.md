@@ -22,6 +22,7 @@
 - ← depends_on [K0107](../items/K0107-sharp-point-cover-bound.md)
 - ← depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
 - ← depends_on [K0271](../items/K0271-n7-fourth-corner-global-gate.md): 代表ゲートと閉包検査は全最大センサスの完全性に依存しない
+- ← depends_on [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md): 標準禁止ルールを残存盤点に誘導する
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -695,6 +696,7 @@
 - ← depends_on [K0225](../items/K0225-fiber-components-deletion-robustness.md)
 - ← depends_on [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md)
 - ← depends_on [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md)
+- ← depends_on [K0322](../items/K0322-equal-nimber-geometric-extension-split.md): 幾何的追加は直和との合成ではない
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1398,3 +1400,11 @@
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 - → supports [K0147](../items/K0147-sublinear-minimum-maximal-open.md): s_n<nとなる連続した有限範囲の明示例
 - ← depends_on [K0147](../items/K0147-sublinear-minimum-maximal-open.md): 有限n=11..15の構成はo(n)の上界ではない
+
+## [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) 4×4は容量損失ゼロの二点削除で勝者が反転する
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準禁止ルールを残存盤点に誘導する
+
+## [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) 同nimberの占有配置は共通の幾何的追加で勝敗が分かれる
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 幾何的追加は直和との合成ではない

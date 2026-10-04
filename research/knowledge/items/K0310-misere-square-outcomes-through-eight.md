@@ -7,7 +7,7 @@ topics:
 - variants
 - square-outcomes
 - first-moves
-aliases: []
+aliases: [B226]
 relations: []
 artifacts:
 - path: research/experiments/game-structure/reports/game-structure-20261003.md
@@ -34,3 +34,5 @@ artifacts:
 7×7は49初手すべてが勝ち。8×8は64初手のうち16初手だけが勝ち、D4代表は(0,0),(1,0),(2,2)で、残り48初手は負け。8×8の検査対象は34,665,160局面・175,599,160合法辺で、独立検証済み。
 
 6×6は全安全局面の通常・補助mex値を計算した。7×7・8×8は空盤と全初手を覆うP/N証明の完了であり、全安全局面のmisère値を計算した結果ではない。
+
+B226の原文監査では、通常版も先手勝ちである8×8が一致例、通常後手・misère先手の4×4が不一致例となり、n≥4の正方形内で両型の存在が確定する。

@@ -466,6 +466,9 @@
 ## [research/experiments/n11-search-methods/scripts/n11_d4.cpp](../../../research/experiments/n11-search-methods/scripts/n11_d4.cpp)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (solver): 命題・対象範囲・根拠を記した出典
+## [research/experiments/original-claims/output/batch09_pairs_n4.json](../../../research/experiments/original-claims/output/batch09_pairs_n4.json)
+
+- [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (data): 全120二点削除対と単独削除のg・K
 ## [research/experiments/original-claims/output/data/s8_exact.json](../../../research/experiments/original-claims/output/data/s8_exact.json)
 
 - [K0032](../items/K0032-n8-minimum-maximal-size.md) (data): 7石完全排除記録
@@ -976,6 +979,9 @@
 ## [research/experiments/original-claims/output/round57_nineteen_verified.json](../../../research/experiments/original-claims/output/round57_nineteen_verified.json)
 
 - [K0035](../items/K0035-n10-maximum-safe-bounds.md) (data): 座標安全性と上下界の監査
+## [research/experiments/original-claims/output/round5_b231_n4.json](../../../research/experiments/original-claims/output/round5_b231_n4.json)
+
+- [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) (data): b240.embedding_splitの占有mask1,2と共通追加mask4
 ## [research/experiments/original-claims/output/round5_cover_union.json](../../../research/experiments/original-claims/output/round5_cover_union.json)
 
 - [K0205](../items/K0205-local-cover-versus-global-efficiency.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1346,6 +1352,10 @@
 
 - [K0095](../items/K0095-split-prime-safe-quadratic-construction.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0143](../items/K0143-asymptotic-two-n-safe-construction-open.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/original-claims/reports/round68-b201-b250-original-scope-audit.md](../../../research/experiments/original-claims/reports/round68-b201-b250-original-scope-audit.md)
+
+- [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (source): B204/B207の量化照合、非零損失という追加条件を課さない
+- [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) (source): B240原文の存在量化の監査
 ## [research/experiments/original-claims/reports/round7-parabola-cover.md](../../../research/experiments/original-claims/reports/round7-parabola-cover.md)
 
 - [K0204](../items/K0204-high-cover-points-competition-refuted.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1517,6 +1527,9 @@
 - [K0261](../items/K0261-three-by-three-row-translation-safe-intervals.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0262](../items/K0262-three-row-first-move-density-third-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0263](../items/K0263-three-row-periodic-winner-nonperiodic-moves-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/scripts/round5_b231_n4.py](../../../research/experiments/original-claims/scripts/round5_b231_n4.py)
+
+- [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) (solver): 標準全Grundyから同値配置の追加後値を照合
 ## [research/experiments/original-claims/scripts/round5_cover_union.py](../../../research/experiments/original-claims/scripts/round5_cover_union.py)
 
 - [K0205](../items/K0205-local-cover-versus-global-efficiency.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
