@@ -1,0 +1,503 @@
+{
+  "scope": "finite abstract hereditary placement games, not square-board claims",
+  "rows": [
+    {
+      "n": 1,
+      "mode": 0,
+      "families": 1,
+      "grundy_height_histogram": [
+        {
+          "grundy": 1,
+          "height": 1,
+          "count": 1,
+          "link_safe_mask": "3"
+        }
+      ],
+      "elapsed_seconds": 0.002
+    },
+    {
+      "n": 2,
+      "mode": 0,
+      "families": 2,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 2,
+          "count": 1,
+          "link_safe_mask": "15"
+        },
+        {
+          "grundy": 1,
+          "height": 1,
+          "count": 1,
+          "link_safe_mask": "7"
+        }
+      ],
+      "elapsed_seconds": 0.001
+    },
+    {
+      "n": 3,
+      "mode": 0,
+      "families": 9,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 2,
+          "count": 4,
+          "link_safe_mask": "127"
+        },
+        {
+          "grundy": 1,
+          "height": 1,
+          "count": 1,
+          "link_safe_mask": "23"
+        },
+        {
+          "grundy": 1,
+          "height": 3,
+          "count": 1,
+          "link_safe_mask": "255"
+        },
+        {
+          "grundy": 2,
+          "height": 2,
+          "count": 3,
+          "link_safe_mask": "31"
+        }
+      ],
+      "elapsed_seconds": 0.001
+    },
+    {
+      "n": 4,
+      "mode": 0,
+      "families": 114,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 2,
+          "count": 41,
+          "link_safe_mask": "6015"
+        },
+        {
+          "grundy": 0,
+          "height": 3,
+          "count": 4,
+          "link_safe_mask": "6143"
+        },
+        {
+          "grundy": 0,
+          "height": 4,
+          "count": 1,
+          "link_safe_mask": "65535"
+        },
+        {
+          "grundy": 1,
+          "height": 1,
+          "count": 1,
+          "link_safe_mask": "279"
+        },
+        {
+          "grundy": 1,
+          "height": 3,
+          "count": 21,
+          "link_safe_mask": "32767"
+        },
+        {
+          "grundy": 2,
+          "height": 2,
+          "count": 22,
+          "link_safe_mask": "383"
+        },
+        {
+          "grundy": 3,
+          "height": 3,
+          "count": 24,
+          "link_safe_mask": "2047"
+        }
+      ],
+      "elapsed_seconds": 0.002
+    },
+    {
+      "n": 5,
+      "mode": 0,
+      "families": 6894,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 2,
+          "count": 768,
+          "link_safe_mask": "18290559"
+        },
+        {
+          "grundy": 0,
+          "height": 3,
+          "count": 695,
+          "link_safe_mask": "18317311"
+        },
+        {
+          "grundy": 0,
+          "height": 4,
+          "count": 351,
+          "link_safe_mask": "2147483647"
+        },
+        {
+          "grundy": 1,
+          "height": 1,
+          "count": 1,
+          "link_safe_mask": "65815"
+        },
+        {
+          "grundy": 1,
+          "height": 3,
+          "count": 2643,
+          "link_safe_mask": "394231807"
+        },
+        {
+          "grundy": 1,
+          "height": 4,
+          "count": 205,
+          "link_safe_mask": "394264575"
+        },
+        {
+          "grundy": 1,
+          "height": 5,
+          "count": 1,
+          "link_safe_mask": "4294967295"
+        },
+        {
+          "grundy": 2,
+          "height": 2,
+          "count": 255,
+          "link_safe_mask": "71551"
+        },
+        {
+          "grundy": 2,
+          "height": 3,
+          "count": 10,
+          "link_safe_mask": "16843263"
+        },
+        {
+          "grundy": 2,
+          "height": 4,
+          "count": 125,
+          "link_safe_mask": "402653183"
+        },
+        {
+          "grundy": 3,
+          "height": 3,
+          "count": 1840,
+          "link_safe_mask": "1540095"
+        }
+      ],
+      "elapsed_seconds": 0.002
+    },
+    {
+      "n": 6,
+      "mode": 0,
+      "families": 7785062,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 2,
+          "count": 27449,
+          "link_safe_mask": "282673290876799"
+        },
+        {
+          "grundy": 0,
+          "height": 3,
+          "count": 194078,
+          "link_safe_mask": "282673666818047"
+        },
+        {
+          "grundy": 0,
+          "height": 4,
+          "count": 1090024,
+          "link_safe_mask": "1693212720255467519"
+        },
+        {
+          "grundy": 0,
+          "height": 5,
+          "count": 6159,
+          "link_safe_mask": "1693353459891306495"
+        },
+        {
+          "grundy": 0,
+          "height": 6,
+          "count": 1,
+          "link_safe_mask": "18446744073709551615"
+        },
+        {
+          "grundy": 1,
+          "height": 1,
+          "count": 1,
+          "link_safe_mask": "4295033111"
+        },
+        {
+          "grundy": 1,
+          "height": 3,
+          "count": 2963122,
+          "link_safe_mask": "78557353124790271"
+        },
+        {
+          "grundy": 1,
+          "height": 4,
+          "count": 2110878,
+          "link_safe_mask": "78557354878042111"
+        },
+        {
+          "grundy": 1,
+          "height": 5,
+          "count": 25936,
+          "link_safe_mask": "9223372036854775807"
+        },
+        {
+          "grundy": 2,
+          "height": 2,
+          "count": 5318,
+          "link_safe_mask": "4313257855"
+        },
+        {
+          "grundy": 2,
+          "height": 3,
+          "count": 305,
+          "link_safe_mask": "281479271776255"
+        },
+        {
+          "grundy": 2,
+          "height": 4,
+          "count": 672721,
+          "link_safe_mask": "78672253843144703"
+        },
+        {
+          "grundy": 2,
+          "height": 5,
+          "count": 4770,
+          "link_safe_mask": "1531223873305968639"
+        },
+        {
+          "grundy": 3,
+          "height": 3,
+          "count": 511740,
+          "link_safe_mask": "1198690107391"
+        },
+        {
+          "grundy": 3,
+          "height": 4,
+          "count": 2280,
+          "link_safe_mask": "72341264145580031"
+        },
+        {
+          "grundy": 3,
+          "height": 5,
+          "count": 6420,
+          "link_safe_mask": "540431955284459519"
+        },
+        {
+          "grundy": 4,
+          "height": 4,
+          "count": 163860,
+          "link_safe_mask": "307309741867007"
+        }
+      ],
+      "elapsed_seconds": 1.982
+    },
+    {
+      "n": 1,
+      "mode": 1,
+      "families": 2,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 2,
+          "count": 1,
+          "link_safe_mask": "3"
+        },
+        {
+          "grundy": 1,
+          "height": 1,
+          "count": 1,
+          "link_safe_mask": "1"
+        }
+      ],
+      "elapsed_seconds": 0.002
+    },
+    {
+      "n": 2,
+      "mode": 1,
+      "families": 5,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 2,
+          "count": 3,
+          "link_safe_mask": "7"
+        },
+        {
+          "grundy": 1,
+          "height": 3,
+          "count": 1,
+          "link_safe_mask": "15"
+        },
+        {
+          "grundy": 2,
+          "height": 2,
+          "count": 1,
+          "link_safe_mask": "1"
+        }
+      ],
+      "elapsed_seconds": 0.002
+    },
+    {
+      "n": 3,
+      "mode": 1,
+      "families": 19,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 3,
+          "count": 1,
+          "link_safe_mask": "23"
+        },
+        {
+          "grundy": 0,
+          "height": 4,
+          "count": 1,
+          "link_safe_mask": "255"
+        },
+        {
+          "grundy": 1,
+          "height": 3,
+          "count": 11,
+          "link_safe_mask": "127"
+        },
+        {
+          "grundy": 3,
+          "height": 3,
+          "count": 6,
+          "link_safe_mask": "7"
+        }
+      ],
+      "elapsed_seconds": 0.002
+    },
+    {
+      "n": 4,
+      "mode": 1,
+      "families": 167,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 4,
+          "count": 98,
+          "link_safe_mask": "32767"
+        },
+        {
+          "grundy": 1,
+          "height": 4,
+          "count": 41,
+          "link_safe_mask": "6015"
+        },
+        {
+          "grundy": 1,
+          "height": 5,
+          "count": 1,
+          "link_safe_mask": "65535"
+        },
+        {
+          "grundy": 2,
+          "height": 4,
+          "count": 27,
+          "link_safe_mask": "6143"
+        }
+      ],
+      "elapsed_seconds": 0.001
+    },
+    {
+      "n": 5,
+      "mode": 1,
+      "families": 7580,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 5,
+          "count": 1029,
+          "link_safe_mask": "394264575"
+        },
+        {
+          "grundy": 0,
+          "height": 6,
+          "count": 1,
+          "link_safe_mask": "4294967295"
+        },
+        {
+          "grundy": 1,
+          "height": 5,
+          "count": 4585,
+          "link_safe_mask": "2147483647"
+        },
+        {
+          "grundy": 2,
+          "height": 5,
+          "count": 840,
+          "link_safe_mask": "356515839"
+        },
+        {
+          "grundy": 3,
+          "height": 5,
+          "count": 1125,
+          "link_safe_mask": "125829119"
+        }
+      ],
+      "elapsed_seconds": 0.004
+    },
+    {
+      "n": 6,
+      "mode": 1,
+      "families": 7828353,
+      "grundy_height_histogram": [
+        {
+          "grundy": 0,
+          "height": 6,
+          "count": 6498972,
+          "link_safe_mask": "9223372036854775807"
+        },
+        {
+          "grundy": 1,
+          "height": 6,
+          "count": 243841,
+          "link_safe_mask": "1693212722402951167"
+        },
+        {
+          "grundy": 1,
+          "height": 7,
+          "count": 1,
+          "link_safe_mask": "18446744073709551615"
+        },
+        {
+          "grundy": 2,
+          "height": 6,
+          "count": 842659,
+          "link_safe_mask": "1693353459891306495"
+        },
+        {
+          "grundy": 3,
+          "height": 6,
+          "count": 80100,
+          "link_safe_mask": "1537205216561070079"
+        },
+        {
+          "grundy": 4,
+          "height": 6,
+          "count": 162780,
+          "link_safe_mask": "26810491531689983"
+        }
+      ],
+      "elapsed_seconds": 5.39
+    }
+  ],
+  "generator_source": "research/experiments/game-structure/scripts/game_structure_20261003_complexes.cpp",
+  "sha256": {
+    "research/experiments/grundy-frontier-followup-20261005/scripts/ceiling_census.cpp": "0a9dcd9351c1f18f74da1fd515496aa343629f4d1cc81db0b486ecbd68b377f0",
+    "research/experiments/grundy-frontier-followup-20261005/scripts/check_census.py": "4e45e9d73b82dfeb325d69d4ab7f9d77c7e51ce45bb034f32dafd7b6cb1cc3dd",
+    "research/experiments/game-structure/scripts/game_structure_20261003_complexes.cpp": "2b9640877665281fff01842ffad540bd38d2f7acb1e8f68e26863edc3caaaaac"
+  }
+}

@@ -508,6 +508,24 @@
 
 - [K0337](../items/K0337-odd-uniform-involution-scope.md) (verifier): 全安全集合のmex再帰と独立P/N再帰
 - [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (verifier): 部分群軌道の全選択と公式による生成を比較する
+## [research/experiments/geometry-frontier-followup-20261005/audit.json](../../../research/experiments/geometry-frontier-followup-20261005/audit.json)
+
+- [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) (data): r≤8の整数証人・削除完全検査、r≤6全436848安全局面の完全mex検査
+## [research/experiments/geometry-frontier-followup-20261005/graph-cover-audit.json](../../../research/experiments/geometry-frontier-followup-20261005/graph-cover-audit.json)
+
+- [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) (data): n≤5の全1100graph、101整数盤の全19842四点・10004三点の独立検査
+## [research/experiments/geometry-frontier-followup-20261005/graph_cover_reduction.md](../../../research/experiments/geometry-frontier-followup-20261005/graph_cover_reduction.md)
+
+- [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) (proof): 任意simple graphからの全称幾何構成、ρ=τ(G)、多項式座標長、NP所属の証明
+## [research/experiments/geometry-frontier-followup-20261005/proof.md](../../../research/experiments/geometry-frontier-followup-20261005/proof.md)
+
+- [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) (proof): 整数三次行列式・反転・全rの故障耐性と全Grundyの数学的証明
+## [research/experiments/geometry-frontier-followup-20261005/verify_cubic_fault_family.py](../../../research/experiments/geometry-frontier-followup-20261005/verify_cubic_fault_family.py)
+
+- [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) (verifier): 共有幾何coreとgeneric Leibniz、全削除集合、非圧縮全safe mexで独立検査
+## [research/experiments/geometry-frontier-followup-20261005/verify_graph_reduction.py](../../../research/experiments/geometry-frontier-followup-20261005/verify_graph_reduction.py)
+
+- [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) (verifier): 全小graphの零和辺列挙と別の最小横断・vertex cover完全探索、整数幾何の二重検査
 ## [research/experiments/geometry/output/geometry_20261003_extended.json](../../../research/experiments/geometry/output/geometry_20261003_extended.json)
 
 - [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (data): 幅1..15の鋭い極値と達成例
@@ -1737,6 +1755,15 @@
 
 - [K0214](../items/K0214-n7-maximum-external-radius-two.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0215](../items/K0215-n7-first-external-legal-point-orbits.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/prism-followup-20261005/even-capacity-output.json](../../../research/experiments/prism-followup-20261005/even-capacity-output.json)
+
+- [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (data): 明示パラメータの完全有限検算。全称命題の根拠は証明artifact
+## [research/experiments/prism-followup-20261005/even-capacity-proof.md](../../../research/experiments/prism-followup-20261005/even-capacity-proof.md)
+
+- [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (proof): 候補値への各合法手がxor1/2/3となる全称mex証明
+## [research/experiments/prism-followup-20261005/even_capacity_verify.py](../../../research/experiments/prism-followup-20261005/even_capacity_verify.py)
+
+- [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (verifier): 独立ラベル付き全状態mexと共有占有数DP、適用外反例の監査
 ## [research/experiments/prism-hyperplane-2026-10-05/odd-root-output.json](../../../research/experiments/prism-hyperplane-2026-10-05/odd-root-output.json)
 
 - [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (data): 全状態の有限検算。無界主張の根拠はproof artifact
@@ -1755,6 +1782,35 @@
 ## [research/experiments/prism-hyperplane-2026-10-05/verify.py](../../../research/experiments/prism-hyperplane-2026-10-05/verify.py)
 
 - [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) (verifier): 占有数mexと独立の有理数lifted-rank subset検算
+## [research/experiments/prism-two-maxima-20261005/audit.md](../../../research/experiments/prism-two-maxima-20261005/audit.md)
+
+- [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) (proof): 別担当による全称証明の独立監査
+## [research/experiments/prism-two-maxima-20261005/kernel.py](../../../research/experiments/prism-two-maxima-20261005/kernel.py)
+
+- [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) (solver): 最大・第二最大と残り偶奇によるO(min(m,r)²)初期表
+## [research/experiments/prism-two-maxima-20261005/proof.md](../../../research/experiments/prism-two-maxima-20261005/proof.md)
+
+- [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) (proof): 全称mex帰納、二変数表、有限一括手budgetのgap閉公式
+## [research/experiments/prism-two-maxima-20261005/verified.json](../../../research/experiments/prism-two-maxima-20261005/verified.json)
+
+- [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) (data): 各パラメータで全安全状態の値・閉式の完了数を照合
+## [research/experiments/prism-two-maxima-20261005/verify.py](../../../research/experiments/prism-two-maxima-20261005/verify.py)
+
+- [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) (verifier): 別ラベル付き全座標mexと有限budget gap DP
+## [research/experiments/q57-frontier-followup-20261005/general-energy-proof.md](../../../research/experiments/q57-frontier-followup-20261005/general-energy-proof.md)
+
+- [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (proof): 任意の異なる実数座標に対する鎖分解・重み付け証明と等差数列の等号
+## [research/experiments/q57-frontier-followup-20261005/output/packing-audit.json](../../../research/experiments/q57-frontier-followup-20261005/output/packing-audit.json)
+
+- [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 一般energyと有限監査の完了範囲
+- [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (data): r=1..30等差数列検算と有限座標集合の監査
+## [research/experiments/q57-frontier-followup-20261005/proof.md](../../../research/experiments/q57-frontier-followup-20261005/proof.md)
+
+- [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (proof): 同和弦予算174と五点直線Melchior上界による全称上界158
+## [research/experiments/q57-frontier-followup-20261005/scripts/verify_packing.py](../../../research/experiments/q57-frontier-followup-20261005/scripts/verify_packing.py)
+
+- [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (verifier): 整数最適化、同和弦の鎖証明、mod9、実blockerの別生成監査
+- [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (verifier): 外周鎖の構成、重み和、有限座標集合の直接energy検査
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数

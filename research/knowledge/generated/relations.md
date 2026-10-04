@@ -515,6 +515,7 @@
 - ← depends_on [K0077](../items/K0077-width-four-q8-stabilization.md): q=2w境界の整数格子構造を使う
 - ← generalizes [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md): 固定幅で円が消える領域を別方向から拡張する
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
+- ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 五行すべてに整数点を持つ円を排除するmod9補題
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -666,6 +667,7 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - → refutes [K0134](../items/K0134-point-cover-bound-equality-witness.md): 本文の証明・証人が原文に与える帰結
 - ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): k≥4の一空点三石被覆上界は素朴な点対予算より1小さい
+- ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 反転した外部石へMelchiorの一般式を適用
 
 ## [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md) 残余禁止hypergraphは継続ゲームを表し、二点グラフだけでは足りない
 
@@ -1422,7 +1424,7 @@
 - → supports [K0071](../items/K0071-width-three-q5-exact-stabilization.md): 3×m・q=5の一般上界を56から40へ改善した
 - → supports [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 無界な末尾m≥186の一般上界を使用
-- ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 一般上界200を使用
+- ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 初期一般上界200とcurve packingの文脈
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -1467,6 +1469,7 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 標準盤の安全極大配置
 - ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): K0328の故障耐性ρの定義を用いる
+- ← depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 元から空だった点の最小解除石数という故障耐性の定義を有限点盤へ使う
 
 ## [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) 11×11のs5 verdict cacheの回収とcoordinator永続化でLOSS class 2個・WIN 1個・verified certificate 2件を確定した
 
@@ -1485,9 +1488,13 @@
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 無界な末尾m≥186の一般上界を使用
 
-## [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) 5×m・q=7の満容量安定化長は19以上200以下
+## [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) 5×m・q=7の満容量安定化長は19以上158以下
 
-- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 一般上界200を使用
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 初期一般上界200とcurve packingの文脈
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 五行すべてに整数点を持つ円を排除するmod9補題
+- → depends_on [K0107](../items/K0107-sharp-point-cover-bound.md): 反転した外部石へMelchiorの一般式を適用
+- → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 六石行の同和弦energyの鋭い上界29
+- ← supports [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 六石の外部行対ごとの同和弦予算29を与える
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -1522,12 +1529,44 @@
 - → generalizes [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大サイズの偶奇構造を全rの終端プレイヤー固定へ拡張する
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 固定幅q点版の全r系にのみ使う既存の満容量定理
 - → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2wでの全長系にのみ使う
+- ← depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 終局サイズ差から多人数の策略非依存敗者を判定する帰結
 
 ## [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める
 
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大同偶奇と全Grundy0/1の同値
 - ← depends_on [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する
+- ← depends_on [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する
+- ← depends_on [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md): 三次元格子から全ペア容量ゲームへの正確な縮約
 
 ## [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) 奇数列の三次元長盤はq≡2 mod4でだけ先手勝ち、奇数rの全Grundyは閉公式を持つ
 
 - → depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する
+- ← generalizes [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md): 偶数r長盤の空盤Grundy0を任意長・全安全局面の閉公式へ強化する
+- ← generalizes [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md): 長盤条件を外した有限長全局面の評価方法。長盤閉公式も再現する
+
+## [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) r点の同和弦energyには等差数列で達成される鋭い三次上界がある
+
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石の外部行対ごとの同和弦予算29を与える
+- ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石行の同和弦energyの鋭い上界29
+
+## [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) 偶数ペア容量・奇数列の三次元盤は任意長で全Grundy閉公式を持つ
+
+- → depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する
+- → generalizes [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md): 偶数r長盤の空盤Grundy0を任意長・全安全局面の閉公式へ強化する
+- ← depends_on [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md): 偶数rの空盤閉式と空盤安定化長の系
+
+## [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) 任意有限整数点盤では三共線なし・唯一最大配置でも故障耐性が無界
+
+- → depends_on [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md): 元から空だった点の最小解除石数という故障耐性の定義を有限点盤へ使う
+- → depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 終局サイズ差から多人数の策略非依存敗者を判定する帰結
+- ← depends_on [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md): 整数三次グラフの四点安全性・零和三共線・反転による円blocker実現
+
+## [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) 奇数列の平行列版は全長・全局面のGrundyを二最大占有数の表と偶奇へ縮約できる
+
+- → depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 三次元格子から全ペア容量ゲームへの正確な縮約
+- → generalizes [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md): 長盤条件を外した有限長全局面の評価方法。長盤閉公式も再現する
+- → depends_on [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md): 偶数rの空盤閉式と空盤安定化長の系
+
+## [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) 任意有限整数点盤の一空点円故障耐性はVertex Coverを表現し唯一最大配置でもNP完全
+
+- → depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 整数三次グラフの四点安全性・零和三共線・反転による円blocker実現

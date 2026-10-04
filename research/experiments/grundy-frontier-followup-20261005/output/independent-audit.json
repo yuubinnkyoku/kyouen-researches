@@ -1,0 +1,82 @@
+{
+  "all_histograms_through_five_named_points": [
+    {
+      "n": 1,
+      "mode": 0,
+      "all_families": 1,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 1,
+      "mode": 1,
+      "all_families": 2,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 2,
+      "mode": 0,
+      "all_families": 2,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 2,
+      "mode": 1,
+      "all_families": 5,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 3,
+      "mode": 0,
+      "all_families": 9,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 3,
+      "mode": 1,
+      "all_families": 19,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 4,
+      "mode": 0,
+      "all_families": 114,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 4,
+      "mode": 1,
+      "all_families": 167,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 5,
+      "mode": 0,
+      "all_families": 6894,
+      "status": "VERIFIED"
+    },
+    {
+      "n": 5,
+      "mode": 1,
+      "all_families": 7580,
+      "status": "VERIFIED"
+    }
+  ],
+  "all_saved_witnesses": 66,
+  "six_point_counts_not_independently_reenumerated": true,
+  "failed_sg_deficit_bound": {
+    "vertices": 7,
+    "height": 6,
+    "grundy": 4,
+    "link_facets": [
+      31,
+      39,
+      43,
+      45,
+      51,
+      54
+    ],
+    "claim": "g<=2*(vertices-height)+1",
+    "status": "COUNTEREXAMPLE",
+    "ceiling_question_settled": false
+  }
+}

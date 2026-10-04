@@ -26,6 +26,10 @@
 | [n11-residual-twins](n11-residual-twins/README.md) | 全hypergraph linkの独立双子を正の偶奇数へ圧縮する定理 |
 | [frontier-geometry-2026-10-05](frontier-geometry-2026-10-05/README.md) | 剰余多項式曲線の交点定理と放物線等号証人 |
 | [prism-hyperplane-2026-10-05](prism-hyperplane-2026-10-05/README.md) | 三次元平行格子列の極大・Grundy分類 |
+| [q57-frontier-followup-20261005](q57-frontier-followup-20261005/README.md) | 五行q7の上界158、一般同和弦energy、極大CNF監査 |
+| [prism-followup-20261005](prism-followup-20261005/README.md) | 偶数ペア容量の任意長・全Grundy閉公式 |
+| [prism-two-maxima-20261005](prism-two-maxima-20261005/README.md) | 全容量・全長の二最大占有数Grundy縮約 |
+| [geometry-frontier-followup-20261005](geometry-frontier-followup-20261005/README.md) | 任意有限整数点盤の故障耐性無界族と全Grundy |
 
 共通solver/verifierはcpp・scripts・rustに置きます。[共有研究ライブラリ](../../scripts/research/README.md)は実験間で使用する整数幾何を保持します。
 公開横断集計は[results](../../results/README.md)、発見過程は[log](../log/README.md)、旧索引と計画は[archive](../archive/README.md)です。

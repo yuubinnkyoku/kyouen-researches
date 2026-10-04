@@ -333,7 +333,7 @@
 | [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) | 11×11のs5 verdict cacheの回収とcoordinator永続化でLOSS class 2個・WIN 1個・verified certificate 2件を確定した | computation | computed | search-methods, verification |
 | [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md) | 極大配置の故障耐性は三石被覆の平均多重度で上から抑えられる | proposition | proved | maximal-safe, geometry |
 | [K0331](../items/K0331-width-five-q8-exact-stabilization.md) | 5×m・q=8の真の満容量安定化長はM_{5,8}=16 | proposition | proved | rectangles, variants, grundy, certificates |
-| [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) | 5×m・q=7の満容量安定化長は19以上200以下 | proposition | proved | rectangles, variants, maximal-safe |
+| [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) | 5×m・q=7の満容量安定化長は19以上158以下 | proposition | proved | rectangles, variants, maximal-safe |
 | [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) | 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全 | proposition | proved | geometry, variants, maximum-safe, residual-games |
 | [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) | 剰余放物線の等号問題はsigned NAE3/4と原点由来2/3節へ厳密に分解できる | proposition | proved | geometry, maximum-safe, search-methods |
 | [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) | 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4) | proposition | proved | search-methods, certificates, geometry |
@@ -343,3 +343,8 @@
 | [K0339](../items/K0339-multiplayer-terminal-modulus.md) | r人巡回配置ゲームで敗者が戦略に依存しない人数は極大サイズ差のgcdで完全に決まる | proposition | proved | variants, strategy-length, maximal-safe |
 | [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) | 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める | proposition | proved | variants, geometry, grundy, maximal-safe |
 | [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) | 奇数列の三次元長盤はq≡2 mod4でだけ先手勝ち、奇数rの全Grundyは閉公式を持つ | proposition | proved | variants, geometry, grundy |
+| [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) | r点の同和弦energyには等差数列で達成される鋭い三次上界がある | proposition | proved | geometry, rectangles |
+| [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) | 偶数ペア容量・奇数列の三次元盤は任意長で全Grundy閉公式を持つ | proposition | proved | variants, geometry, grundy |
+| [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) | 任意有限整数点盤では三共線なし・唯一最大配置でも故障耐性が無界 | proposition | proved | geometry, maximal-safe, maximum-safe, variants, grundy |
+| [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) | 奇数列の平行列版は全長・全局面のGrundyを二最大占有数の表と偶奇へ縮約できる | proposition | proved | variants, grundy, residual-games, search-methods |
+| [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) | 任意有限整数点盤の一空点円故障耐性はVertex Coverを表現し唯一最大配置でもNP完全 | proposition | proved | geometry, maximal-safe, maximum-safe, variants, search-methods |
