@@ -1861,12 +1861,15 @@
 - [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (verifier): 外周鎖の構成、重み和、有限座標集合の直接energy検査
 ## [research/experiments/q58-chord-tail-20261005/output/reduced-manifest.json](../../../research/experiments/q58-chord-tail-20261005/output/reduced-manifest.json)
 
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (manifest): m=16..100の255ケース。各DRATは元の全510ケース独立検査receiptでVERIFIED
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (manifest): 既存独立DRAT検査済みm16..100の255件を抽出。SATを新実行した記録ではない
 ## [research/experiments/q58-chord-tail-20261005/proof.md](../../../research/experiments/q58-chord-tail-20261005/proof.md)
 
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (proof): 全称上界101により有限完全排除の必要範囲を16..100へ短縮
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 任意平行線q=2wの全称上界と標準五行q8の末尾101
 ## [research/experiments/q58-chord-tail-20261005/scripts/reduce_manifest.py](../../../research/experiments/q58-chord-tail-20261005/scripts/reduce_manifest.py)
 
+- [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (verifier): 旧検査receiptとCNFを再照合して必要な255ケースを抽出
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 旧510件の独立検査receiptに照合して255件のCNFを再生成・hash確認
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 

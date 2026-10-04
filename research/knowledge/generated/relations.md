@@ -501,7 +501,6 @@
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
-- ← generalizes [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): w=3,q=6の十分長さ21を任意の平行線・実数候補座標で保証。真の値9は一般化しない
 
 ## [K0071](../items/K0071-width-three-q5-exact-stabilization.md) 3×m・q=5の真の満容量安定化長はM_{3,5}=12
 
@@ -1427,7 +1426,7 @@
 
 - → supports [K0071](../items/K0071-width-three-q5-exact-stabilization.md): 3×m・q=5の一般上界を56から40へ改善した
 - → supports [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
-- ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 無界な末尾m≥186の一般上界を使用
+- ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 初期証明の無界末尾と固定幅上界の文脈
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 初期一般上界200とcurve packingの文脈
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
@@ -1490,7 +1489,8 @@
 ## [K0331](../items/K0331-width-five-q8-exact-stabilization.md) 5×m・q=8の真の満容量安定化長はM_{5,8}=16
 
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
-- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 無界な末尾m≥186の一般上界を使用
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 初期証明の無界末尾と固定幅上界の文脈
+- → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): E7=47の鋭い同和弦energyから短い無界末尾を証明
 - ← supports [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
 
 ## [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) 5×m・q=7の満容量安定化長は19以上158以下
@@ -1553,6 +1553,7 @@
 ## [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) r点の同和弦energyには等差数列で達成される鋭い三次上界がある
 
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石の外部行対ごとの同和弦予算29を与える
+- ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): E7=47の鋭い同和弦energyから短い無界末尾を証明
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石行の同和弦energyの鋭い上界29
 - ← depends_on [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 外部行対の同和弦予算の鋭い上界E_r
 
@@ -1591,5 +1592,4 @@
 ## [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) 任意のw本の平行線のq=2w版は同和弦energyで満容量安定化する
 
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 外部行対の同和弦予算の鋭い上界E_r
-- → generalizes [K0070](../items/K0070-width-three-q6-stabilization.md): w=3,q=6の十分長さ21を任意の平行線・実数候補座標で保証。真の値9は一般化しない
 - → supports [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る

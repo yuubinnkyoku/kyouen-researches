@@ -11,7 +11,10 @@ relations:
   note: mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
 - type: depends_on
   target: K0318
-  note: 無界な末尾m≥186の一般上界を使用
+  note: 初期証明の無界末尾と固定幅上界の文脈
+- type: depends_on
+  target: K0342
+  note: E7=47の鋭い同和弦energyから短い無界末尾を証明
 artifacts:
 - path: research/experiments/fixed-width-frontier-20261005/reports/q58-exact-threshold.md
   role: proof
@@ -25,6 +28,15 @@ artifacts:
 - path: research/experiments/fixed-width-frontier-20261005/output/q58_integration_recheck.json
   role: data
   note: 統合時の全510 CNF hash一致と全510 DRAT再検査成功
+- path: research/experiments/q58-chord-tail-20261005/proof.md
+  role: proof
+  note: 全称上界101により有限完全排除の必要範囲を16..100へ短縮
+- path: research/experiments/q58-chord-tail-20261005/scripts/reduce_manifest.py
+  role: verifier
+  note: 旧検査receiptとCNFを再照合して必要な255ケースを抽出
+- path: research/experiments/q58-chord-tail-20261005/output/reduced-manifest.json
+  role: manifest
+  note: m=16..100の255ケース。各DRATは元の全510ケース独立検査receiptでVERIFIED
 - path: research/experiments/fixed-width-frontier-20261005/scripts/q58_sat.py
   role: solver
   note: 整数弦差による完全円生成と不足極大のCNF化
@@ -45,8 +57,8 @@ solution:
   coverage: m≥16の全安全局面
   conditions: 標準整数格子・q=8,w=5,m≥16・通常プレイ
   verification: [mathematical-proof, exact-search, independent-enumeration]
-  certificate: m=16..185の510 CNFを全DRAT検査、m≥186は曲線充填一般証明
-  independent_check: 全有限長の円集合が別C++生成と一致、m=15証人は全三点曲線で検査
+  certificate: 現在必要なm=16..100の255 CNFは過去に全DRAT検査済。全510の独立統合再検査receiptも保存
+  independent_check: 全有限長の円集合が別C++生成と一致、m=15証人は全三点曲線で検査。短縮末尾は弦energy proof
   note: g(S)=(35-|S|) mod2。境界3トレースを保存、他はhashと再生成コードを保存
 ---
 
@@ -55,9 +67,10 @@ solution:
 標準五行整数長方形盤の8点共円・共線禁止版で、全m≥16の極大安全集合は35石。
 従って全安全局面でg(S)=(35−|S|) mod2。空盤は先手勝ちで、全初手が勝ち手となる。
 
-下界は5×15の34石安全極大配置。上界はm=16..185の有限SAT完全排除と、
-既存の全称充填上界m≥186を結んでいる。有限部分の全510 UNSATトレースは
-solverと独立のdrat-trimで検査した。
+下界は5×15の34石安全極大配置。上界はm=16..100の有限SAT完全排除と、
+同和弦energyによる全称末尾m≥101を結んでいる。必要な255件は以前に別実装
+drat-trimで全検査済みで、短縮器が過去の記録とCNF hashを再照合した。
+元の広い証明m=16..185の510件も全てDRAT検査され、統合時に再検査されている。
 
 円生成は別定式化のC++実装と全有限長で一致し、下界証人は全三点曲線生成で
 安全性と全41空点の追加不能を独立確認した。SATトレース検査・円生成は

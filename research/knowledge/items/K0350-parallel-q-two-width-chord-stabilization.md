@@ -9,9 +9,6 @@ relations:
 - type: depends_on
   target: K0342
   note: 外部行対の同和弦予算の鋭い上界E_r
-- type: generalizes
-  target: K0070
-  note: w=3,q=6の十分長さ21を任意の平行線・実数候補座標で保証。真の値9は一般化しない
 - type: supports
   target: K0331
   note: 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
