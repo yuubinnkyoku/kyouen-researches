@@ -11,9 +11,12 @@ import re
 import tempfile
 
 
-ROOT = (Path(__file__).resolve().parents[1] / "output")
-BANKS = [ROOT.parents[2]/'archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md',
-         ROOT.parents[2]/'archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md']
+BASE = Path(__file__).resolve().parents[1]
+OUTPUT = BASE / "output"
+REPORTS = BASE / "reports"
+RESEARCH = BASE.parents[1]
+BANKS = [RESEARCH/'archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md',
+         RESEARCH/'archive/hypothesis-ledgers/hypothesis-bank-round2-2026-09-27.md']
 ORIGINAL = re.compile(r'^- \*\*(B\d{3}) \[([^]]+)\] (.*?)\*\* (.+)$')
 ID = re.compile(r'B\d{3}(?!\d)')
 LABEL = re.compile(r'(?<![A-Z-])(SUPPORTED|REFUTED|PARTIAL|INCONCLUSIVE|NOT-CHECKED)(?![A-Z-])')
@@ -301,14 +304,14 @@ def main():
             if match:
                 bid, kind, title, claim = match.groups()
                 assert bid not in originals
-                originals[bid] = {'id': bid, 'bank': str(bank.relative_to(ROOT.parent)),
+                originals[bid] = {'id': bid, 'bank': '../../' + str(bank.relative_to(RESEARCH)),
                                   'original_line': line_no, 'original_exact_line': line,
                                   'tag': kind, 'title': title, 'claim': claim,
                                   'section_title': section_title, 'section_line': section_start,
                                   'section_setup': '\n'.join(lines[section_start:line_no-1]).split('- **B')[0].strip(),
                                   'evidence_pointers': []}
     assert set(originals) == {f'B{i:03}' for i in range(1, 601)}
-    for path in sorted(ROOT.glob('*.md')):
+    for path in sorted(REPORTS.glob('*.md')):
         if path.name.startswith('round26') or path.name in {'CONTINUATION-kyouen-hypotheses.md'}:
             continue
         lines = path.read_text(encoding='utf-8-sig').splitlines()
@@ -334,7 +337,7 @@ def main():
                                      'additional_reports': []}))
         if row['preferred_report']:
             for report in [row['preferred_report']]+row['additional_reports']:
-                assert (ROOT/report).is_file(), report
+                assert (REPORTS/report).is_file(), report
     rows = [originals[f'B{i:03}'] for i in range(1,601)]
     counts = dict(Counter(row['original_status'] for row in rows))
     reviewed_count = 600-counts.get('NOT_AUDITED',0)
@@ -345,9 +348,9 @@ def main():
     report_names = {p['report'] for row in rows for p in row['evidence_pointers']}
     report_names |= {row['preferred_report'] for row in rows if row['preferred_report']}
     report_names |= {p for row in rows for p in row['additional_reports']}
-    payload['evidence_report_sha256'] = {name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+    payload['evidence_report_sha256'] = {name: hashlib.sha256((REPORTS/name).read_bytes()).hexdigest()
                                         for name in sorted(report_names)}
-    atomic_text(ROOT/'round26_original_scope_index.json',json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
+    atomic_text(OUTPUT/'round26_original_scope_index.json',json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
     lines = ['# 全600原命題の証拠索引（原文監査は途中）','',
              '更新: 2026-10-01。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。',
              '**未監査は未解決と同義ではない。この表から研究全体の未解決数はまだ確定できない。**','',
@@ -369,7 +372,7 @@ def main():
     lines += ['', '再現: `python research/experiments/original-claims/scripts/round26_scope_index.py`。',
               '[機械可読索引](round26_original_scope_index.json)には各原文行、節の前提、根拠の種類と採用理由を含める。',
               '根拠の更新はスクリプト内の明示的なREVIEWEDへ加える。推測したステータスで空欄を埋めない。','']
-    atomic_text(ROOT / '../reports/round26-original-scope-index.md','\n'.join(lines))
+    atomic_text(REPORTS/'round26-original-scope-index.md','\n'.join(lines))
     print('PASS originals=600; reviewed=',reviewed_count,'audit states=',counts,'pointers=',sum(len(r['evidence_pointers']) for r in rows))
 
 
