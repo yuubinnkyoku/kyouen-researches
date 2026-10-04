@@ -3,7 +3,7 @@
 更新: 2026-10-04。原文600件を重複・欠落なく抽出し、原文と証拠への参照を固定した。
 **未監査は未解決と同義ではない。この表から研究全体の未解決数はまだ確定できない。**
 
-原文照合して採用した記録は376件。残りは旧ラベルを採用せずNOT_AUDITEDとする。
+原文照合して採用した記録は422件。残りは旧ラベルを採用せずNOT_AUDITEDとする。
 旧個票の原命題・弱化版ラベルはJSONのevidence_pointersに行番号・原文ごと保存した。
 最も強いラベルを自動選択したり、弱化版を原命題へ昇格したりしていない。
 SUPPORTEDは原文の量化を満たす記録、REFUTEDはその反証記録。PARTIALは明示した部分結果。
@@ -13,12 +13,12 @@ SCOPE_UNCLEARは原文の解釈・統計母集団が足りず、より強い読�
 
 | 状態 | 件数 |
 |---|---:|
-| INCONCLUSIVE | 34 |
-| NOT_AUDITED | 224 |
-| PARTIAL | 106 |
-| REFUTED | 87 |
-| SCOPE_UNCLEAR | 9 |
-| SUPPORTED | 140 |
+| INCONCLUSIVE | 45 |
+| NOT_AUDITED | 178 |
+| PARTIAL | 123 |
+| REFUTED | 96 |
+| SCOPE_UNCLEAR | 10 |
+| SUPPORTED | 148 |
 
 この内訳は「この索引で照合を済ませた範囲」の件数。194件などの旧暫定残数との単純な減算はしない。
 B356/B357はround5/7の一般構成を優先し、round24の別証明を二件追加とは数えない。
@@ -127,55 +127,55 @@ B356/B357はround5/7の一般構成を優先し、round24の別証明を二件�
 | [B098](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L172) | [存在] s_nが一段の拡大で2以上増える。 | SUPPORTED | [round54-small-board-saturation-jump.md](round54-small-board-saturation-jump.md) |
 | [B099](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L173) | [統計] 最小極大配置では長い直線と豊富な円を併用する。 | PARTIAL | [round65-b001-b100-original-scope-audit.md](round65-b001-b100-original-scope-audit.md) |
 | [B100](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L174) | [全称・大胆] 極大サイズのスペクトルは区間。 | PARTIAL | [round65-b001-b100-original-scope-audit.md](round65-b001-b100-original-scope-audit.md) |
-| [B101](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L178) | [全称・大胆] 最大配置は四辺すべてに触れる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B102](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L179) | [全称・大胆] 最大配置はどの行・列も空にしない。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B103](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L180) | [統計] 最大配置の行占有数は2に集中する。 | NOT_AUDITED | 旧個票参照3箇所（JSON） |
-| [B104](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L181) | [存在] 最大配置が一度も使わない点の軌道が無限回現れる。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B105](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L182) | [存在] 点を一つ指定すると最大サイズが2以上下がる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B106](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L183) | [全称・大胆] 最大配置はO(log n)点で特定できる。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B107](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L184) | [統計] 最大集合が少ない盤ほど最小特定点数も小さい。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B108](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L185) | [全称・大胆] 最大集合の共通部分は空。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B109](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L186) | [存在] 同じD4軌道占有ベクトルに異なる交換障壁がある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B110](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L187) | [構造] 最大サイズの上限は少数の円・直線の容量不等式で示せる。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B111](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L193) | [全称] G_11では16最大配置がすべて連結する。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B112](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L194) | [全称] G_12の最大配置を含まない成分は14石へ登れない別の罠。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B113](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L195) | [全称] 第四の角を通るA–B変形の最短長は14操作。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B114](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L196) | [全称] G_12の最短A–B経路は補助点を角一つしか使わない。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B115](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L197) | [構造] 角禁止250局面の成分を少数の不等式で記述できる。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B116](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L198) | [存在] 既知の21禁止四つ組による障壁証明をさらに縮められる。 | NOT_AUDITED | 旧個票参照2箇所（JSON） |
-| [B117](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L199) | [全称] 903局面の成分の自己同型は盤のD4制限より大きい。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B118](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L200) | [構造] 第四の角は一つの小さい残余制約を解除する触媒。 | NOT_AUDITED | 旧個票参照10箇所（JSON） |
-| [B119](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L201) | [全称・大胆] 12石の安全集合はすべて14石集合の成分に属する。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B120](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L202) | [構造] 8成分のラベルは盤上の向きを表す小さな不変量で分かる。 | NOT_AUDITED | 旧個票参照10箇所（JSON） |
-| [B121](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L206) | [全称・大胆] 最大配置間の全接続には3石の余裕で足りる。 | NOT_AUDITED | 旧個票参照9箇所（JSON） |
-| [B122](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L207) | [存在] 必要な石数低下は無限に大きくなる。 | NOT_AUDITED | 旧個票参照11箇所（JSON） |
-| [B123](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L208) | [存在] 和集合外の2点以上を必要とする変形。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B124](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L209) | [存在] どの一点も必須でないのに補助点は必須。 | NOT_AUDITED | 旧個票参照9箇所（JSON） |
-| [B125](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L210) | [存在] 共通点を一度外すことが必要な最適変形。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B126](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L211) | [統計] 最大集合間距離だけでは障壁は読めない。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B127](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L212) | [構造] 障壁を示す最適な重み付き占有差が存在する。 | NOT_AUDITED | 旧個票参照11箇所（JSON） |
-| [B128](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L213) | [存在] 2点移動なら連結だが1点追加削除では深く下がる配置族。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B129](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L214) | [統計] 最小極大配置より最大配置の方が変形で凍りやすい。 | NOT_AUDITED | 旧個票参照7箇所（JSON） |
-| [B130](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L215) | [存在] 勝敗の境界と変形成分の境界が一致する層。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B131](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L219) | [全称・大胆] 最大の円上点数は整数または半整数中心で達成される。 | NOT_AUDITED | 旧個票参照9箇所（JSON） |
-| [B132](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L220) | [存在] 分母3以上の中心が初めて勝つ盤。 | NOT_AUDITED | 旧個票参照9箇所（JSON） |
-| [B133](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L221) | [構造] 円の型数は中心の分母で階層化できる。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B134](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L222) | [全称・大胆] 高い中心分母ほど多数の格子点を載せにくい。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B135](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L223) | [存在] 同じ半径でも中心の分母により格子点数が変わる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B136](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L224) | [構造] 円上点数の欠落は境界切断の可能性で説明できる。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
-| [B137](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L225) | [全称・大胆] 最大円上点数が増える直前に、半径の新しい素因数型が現れる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B138](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L226) | [統計] 点の多い円どうしは盤中心を共有しやすい。 | NOT_AUDITED | 旧個票参照8箇所（JSON） |
-| [B139](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L227) | [存在] 盤内の最多点円より少し小さい円の方が禁止4点を多く支配する。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B140](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L228) | [構造] 反転変換で小さい極大配置を新しいものへ移せる。 | NOT_AUDITED | 旧個票参照10箇所（JSON） |
+| [B101](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L178) | [全称・大胆] 最大配置は四辺すべてに触れる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B102](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L179) | [全称・大胆] 最大配置はどの行・列も空にしない。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B103](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L180) | [統計] 最大配置の行占有数は2に集中する。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B104](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L181) | [存在] 最大配置が一度も使わない点の軌道が無限回現れる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B105](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L182) | [存在] 点を一つ指定すると最大サイズが2以上下がる。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B106](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L183) | [全称・大胆] 最大配置はO(log n)点で特定できる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B107](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L184) | [統計] 最大集合が少ない盤ほど最小特定点数も小さい。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B108](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L185) | [全称・大胆] 最大集合の共通部分は空。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B109](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L186) | [存在] 同じD4軌道占有ベクトルに異なる交換障壁がある。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B110](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L187) | [構造] 最大サイズの上限は少数の円・直線の容量不等式で示せる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B111](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L193) | [全称] G_11では16最大配置がすべて連結する。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B112](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L194) | [全称] G_12の最大配置を含まない成分は14石へ登れない別の罠。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B113](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L195) | [全称] 第四の角を通るA–B変形の最短長は14操作。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B114](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L196) | [全称] G_12の最短A–B経路は補助点を角一つしか使わない。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B115](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L197) | [構造] 角禁止250局面の成分を少数の不等式で記述できる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B116](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L198) | [存在] 既知の21禁止四つ組による障壁証明をさらに縮められる。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B117](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L199) | [全称] 903局面の成分の自己同型は盤のD4制限より大きい。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B118](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L200) | [構造] 第四の角は一つの小さい残余制約を解除する触媒。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B119](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L201) | [全称・大胆] 12石の安全集合はすべて14石集合の成分に属する。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B120](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L202) | [構造] 8成分のラベルは盤上の向きを表す小さな不変量で分かる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B121](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L206) | [全称・大胆] 最大配置間の全接続には3石の余裕で足りる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B122](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L207) | [存在] 必要な石数低下は無限に大きくなる。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B123](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L208) | [存在] 和集合外の2点以上を必要とする変形。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B124](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L209) | [存在] どの一点も必須でないのに補助点は必須。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B125](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L210) | [存在] 共通点を一度外すことが必要な最適変形。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B126](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L211) | [統計] 最大集合間距離だけでは障壁は読めない。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B127](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L212) | [構造] 障壁を示す最適な重み付き占有差が存在する。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B128](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L213) | [存在] 2点移動なら連結だが1点追加削除では深く下がる配置族。 | SCOPE_UNCLEAR | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B129](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L214) | [統計] 最小極大配置より最大配置の方が変形で凍りやすい。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B130](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L215) | [存在] 勝敗の境界と変形成分の境界が一致する層。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B131](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L219) | [全称・大胆] 最大の円上点数は整数または半整数中心で達成される。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B132](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L220) | [存在] 分母3以上の中心が初めて勝つ盤。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B133](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L221) | [構造] 円の型数は中心の分母で階層化できる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B134](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L222) | [全称・大胆] 高い中心分母ほど多数の格子点を載せにくい。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B135](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L223) | [存在] 同じ半径でも中心の分母により格子点数が変わる。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B136](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L224) | [構造] 円上点数の欠落は境界切断の可能性で説明できる。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B137](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L225) | [全称・大胆] 最大円上点数が増える直前に、半径の新しい素因数型が現れる。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B138](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L226) | [統計] 点の多い円どうしは盤中心を共有しやすい。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B139](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L227) | [存在] 盤内の最多点円より少し小さい円の方が禁止4点を多く支配する。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B140](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L228) | [構造] 反転変換で小さい極大配置を新しいものへ移せる。 | INCONCLUSIVE | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
 | [B141](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L234) | [漸近] 共線四点組の主項はn^5。 | SUPPORTED | [round4-collinear-asymptotic.md](round4-collinear-asymptotic.md) |
 | [B142](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L235) | [漸近・大胆] 非共線共円四点組はn^(4+o(1))。 | REFUTED | [round17-original-scope-audit.md](round17-original-scope-audit.md) |
-| [B143](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L236) | [漸近] 共円四点組にはn^5級の非長方形族がある。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B144](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L237) | [漸近・大胆] 十分大きい盤では共線が多数派になる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
+| [B143](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L236) | [漸近] 共円四点組にはn^5級の非長方形族がある。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B144](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L237) | [漸近・大胆] 十分大きい盤では共線が多数派になる。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
 | [B145](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L238) | [構造] 共線数の主項定数を原始方向の収束級数で書ける。 | SUPPORTED | [round4-collinear-asymptotic.md](round4-collinear-asymptotic.md) |
-| [B146](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L239) | [漸近] 回転長方形が共円四点組の正の割合を占める。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B147](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L240) | [漸近・大胆] 回転長方形の割合は0へ落ちる。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B148](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L241) | [構造] 固定した原始円テンプレートの平行移動数は閾値後に二次式。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
-| [B149](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L242) | [存在] 主な禁止四点組を少数の相似型で覆える範囲がある。 | NOT_AUDITED | 旧個票参照6箇所（JSON） |
+| [B146](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L239) | [漸近] 回転長方形が共円四点組の正の割合を占める。 | REFUTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B147](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L240) | [漸近・大胆] 回転長方形の割合は0へ落ちる。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B148](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L241) | [構造] 固定した原始円テンプレートの平行移動数は閾値後に二次式。 | PARTIAL | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
+| [B149](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L242) | [存在] 主な禁止四点組を少数の相似型で覆える範囲がある。 | SUPPORTED | [round66-b101-b150-original-scope-audit.md](round66-b101-b150-original-scope-audit.md) |
 | [B150](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L243) | [漸近] 固定個数の相似型では大盤の大半を覆えない。 | SUPPORTED | [round4-collinear-asymptotic.md](round4-collinear-asymptotic.md) |
 | [B151](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L249) | [全称・大胆] 最小点次数は必ず角で達成される。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
 | [B152](../../../archive/hypothesis-ledgers/hypothesis-bank-2026-09-27.md#L250) | [存在] 奇数盤でも中心が最大次数にならない。 | NOT_AUDITED | 旧個票参照1箇所（JSON） |
