@@ -23,6 +23,8 @@
 - ← depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
 - ← depends_on [K0271](../items/K0271-n7-fourth-corner-global-gate.md): 代表ゲートと閉包検査は全最大センサスの完全性に依存しない
 - ← depends_on [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md): 標準禁止ルールを残存盤点に誘導する
+- ← depends_on [K0324](../items/K0324-n4-incomplete-position-invariants.md): 標準4×4・通常プレイ
+- ← depends_on [K0325](../items/K0325-n4-conditional-gain-variance.md): 標準4×4の全安全局面
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -403,6 +405,7 @@
 - ← depends_on [K0270](../items/K0270-n7-g12-maximum-containing-components.md)
 - ← depends_on [K0273](../items/K0273-n7-orbit-omission-capacity-loss.md)
 - ← depends_on [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md)
+- ← depends_on [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md): 最大14石配置は二相各8個
 
 ## [K0052](../items/K0052-n7-a-b-reconfiguration-widths.md) 代表A–B変形の幅は全盤12、和集合U内11
 
@@ -1170,6 +1173,7 @@
 ## [K0267](../items/K0267-n7-two-stone-determination-and-13-stone-completion.md) 7×7最大配置は全て二石で一意に決まり、十三石部分集合は一意完了
 
 - → depends_on [K0051](../items/K0051-n7-maximum-configurations-two-phases.md)
+- ← depends_on [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md): 異なる最大配置間の一点移動には十二石以下が必要
 
 ## [K0268](../items/K0268-n7-six-orbit-skeleton-exclusive-extensions.md) 7×7必須六軌道骨格の容量13は排他的二拡張だけで14へ上がる
 
@@ -1408,3 +1412,16 @@
 ## [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) 同nimberの占有配置は共通の幾何的追加で勝敗が分かれる
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 幾何的追加は直和との合成ではない
+
+## [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md) 7×7のGibbs分布は有限活動度で二つの最大相へ集中できる
+
+- → depends_on [K0051](../items/K0051-n7-maximum-configurations-two-phases.md): 最大14石配置は二相各8個
+- → depends_on [K0267](../items/K0267-n7-two-stone-determination-and-13-stone-completion.md): 異なる最大配置間の一点移動には十二石以下が必要
+
+## [K0324](../items/K0324-n4-incomplete-position-invariants.md) 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準4×4・通常プレイ
+
+## [K0325](../items/K0325-n4-conditional-gain-variance.md) 同じ合法数・利得総和でも利得分散でP率が異なる4×4完全層
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準4×4の全安全局面

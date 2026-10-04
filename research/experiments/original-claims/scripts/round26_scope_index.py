@@ -1096,6 +1096,133 @@ review('B250', 'SCOPE_UNCLEAR', 'original_scope_and_current_evidence_audit',
        'round68-b201-b250-original-scope-audit.md', "定数の一様性、円束パラメータの表現・許すクラスが未指定。旧反証は一石効果の加算という追加条件を否定するだけで、原文のあるクラスの存在を否定しない。",
        ('round5-batch-b231-b250.md',))
 
+review('B254', 'INCONCLUSIVE', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "原文は7×7のK=14と全16最大集合を同時保存する小さい禁止部分族。K0269の軌道容量骨格は確認済みだが、原文の任意ラベル付き配置まで保存するQ7部分族は未構成。n6の計算は直接証拠でない。",
+       ('round5-batch-b251-b300-followup.md',))
+review('B257', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "指定重要度は全局面のラベル変化数。round5_b251a_sens4.jsonのn4全194解除で、感度順位3..15の13個はcarrier点数4で、4点円・短直線からも上位が現れる。後の空盤g感度ゼロは別指標であり上書きしない。",
+       ('round5-batch-b251-b270.md',))
+review('B259', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "n4で空禁止族は16独立点でg0。四点組一つだけを禁止すればその四点の容量3と他12点で全終局15石、g1。標準Q4はK0004よりg0。空族⊂一辺⊂Q4という入れ子だけで二回反転を証明。",
+       ('../../../log/claim-audit/batch-10.md',))
+review('B260', 'INCONCLUSIVE', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "原文はN局面全体のPへの手頻度を同次数で比較する。追撃は空盤Wやg0感度を使い、交点・他点の条件付き頻度を測っていない。n4のW空はN局面内の検定不能を意味せず、原文の証人も反証もなし。",
+       ('round5-batch-b251-b270.md',))
+review('B262', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4再計算でS={0,1,2},p13,q15、u(p)=8,u(q)=3、p後のq利得0を確認。両手順が安全で原文の強い手同士の消費という存在核を満たす。",
+       ('round5-batch-b251-b270.md',))
+review('B263', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "n4の2202比較中1356、n5の71455比較中37340で勝ち手の子min uが高い。自己uの統制と下位分位点までの判別性能は未検証で、原文の自分のu以外の追加説明力は未確定。",
+       ('round5-batch-b251-b300-followup.md',))
+review('B264', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "round5_b251_solver.jsonのn5全151394局面で112件。全勝ち手のu0、u>0の非勝ち手存在をC++の正確なgain=L\\({p}∪L_child)で検査。有限存在命題を満たす。",
+       ('round5-batch-b251-b270.md',))
+review('B265', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4でS={3,5,7,8}は唯一勝ち手p14、u6。uの小さい手3本・大きい手6本があり、両極値貪欲を外す存在証人。",
+       ('round5-batch-b251-b270.md',))
+review('B267', 'REFUTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のS={1,3,7,8}、真の最大残手h=3、p6とq15の新規禁止集合は共に空だが子g2対0。K_nをK(S)へ代用せず原文条件を直接検査した反例。",
+       ('round5-batch-b251-b270.md',))
+review('B268', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のS={0},T={0,2}はg1対5で共通合法14点。Sの共通勝ち手12本とTの共通勝ち手{10}は互いに素。安全な一石追加で原文の全交換条件を満たす。",
+       ('round5-batch-b251-b270.md',))
+review('B269', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "旧反証は無条件平均で原文の統制を欠く。今回n4のk4,|L|4,Σu6の完全層でu=(1,1,2,2)群のP率24/24、u=(0,2,2,2)群は8/16。同一総和・合法数の中盤で低分散側がPになりやすい層の存在を直接支持。",
+       ('round5-batch-b251-b270.md',))
+review('B270', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のS={0},p1,q2は両順安全で最終g1が共通。中間子gは0対5なのでp→qのみ勝敗維持。最終集合の一致と中間最適性を直接分離。",
+       ('round5-batch-b251-b270.md',))
+review('B271', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4全安全集合の厳密Gibbs和でp0,q2の共分散分子はλ1で−79902、λ64で825747489542252438495428608。正の分母と連続性により有限λ内の符号反転。",
+       ('round5-batch-b271-b290.md',))
+review('B272', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "B271のp0,q2は同じ禁止四点に属し、有限λ64で正相関を直接確認。λ∞だけの観測を有限へ移す仮定を要さず、原文の競合点の正相関存在を満たす。",
+       ('round5-batch-b271-b290.md',))
+review('B273', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "K0051/K0268の全16最大配置はA/B各8。λ=2^49とすれば全低層重み≤2^49 λ13、最大重み16λ14で、A・B各質量≥8/17、両相以外≤1/17。有限λの未条件付けGibbs分布に二相の分離を厳密に実現できる。連続秩序変数での任意の二峰定義には拡張しない。",
+       ('round5-batch-b271-b290.md',))
+review('B274', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "n4で同数24の最大占有型と下層個数の非対称性は計数したが、原文の13石・12石近傍を用いる高密度相の支配は未測定。タイトルの逆転をA>BからA<Bの反転へ勝手に強化せず、最大層同数から有限λ偏りという本文を保つ。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B275', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "ZからVarを有限グリッドで計算し低密度ピークを確認。旧追撃の緩和時間とのずれは原文の幾何的な低石数経由障壁との直接比較ではない。有限グリッド最大を連続λの厳密最大や障壁出現の反証にしない。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B276', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "n4のs=角数−内側数に二山の有限観測があるが、s自体はD4不変でD4が正負を交換するわけではない。旧資料のD4対称だから<s>=0という説明は採らず、無界nの方向選択極限状態は未証明。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B277', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "n4,5でλ<A_(K−1)/A_Kなら下層全体のGibbs質量が最大層を上回る。これは石数層の比較で、最大個数の少ない相対多い相の近傍体積・観測頻度の比較ではない。原文の相ごとの支配は未確定。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B278', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "n4で一点Metropolisのスペクトル緩和時間増大を推定したが、nの超多項式混合時間の盤族は未証明。緩和時間はTV混合時間そのものではなく、旧冪乗推定は一般の非一様定常分布での認証済み固有値境界も持たない。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B279', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "平均石数を合わせたn4と二穴盤で推定緩和時間比最大1.41を報告。原文の混合時間差と変形障壁による原因は未確定で、有限の緩和推定を桁違いの混合差へ昇格しない。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B280', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "多変数Zの最高次から軌道占有プロファイルは読めるが、係数を得る旧コード自体は全列挙。平均プロファイルを成分ごと床に落とす旧相互排除判定は次数Kを保たず、配置の排他構造を証明しない。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B281', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "五点A={(0,0),(1,0),(2,0),(0,1),(1,1)}とB={(0,0),(1,0),(2,0),(0,1),(2,1)}は共にQ一辺。唯一の禁止四点が正方形対2×1長方形で相似にならず、原文の非相似・非反転同型存在を満たす。",
+       ('round5-batch-b271-b290.md',))
+review('B282', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "同じQの離散的な非合同実現と同nimberは確認したが、有理連続実現空間の次元・変形分類と7×7最大配置での柔軟性は未構成。離散的複数実現を連続変形経路の存在とは扱わない。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B283', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "五点A={(0,0),(1,0),(2,0),(3,0),(0,1)}の唯一辺は四点共線。B={(0,0),(1,0),(2,0),(0,1),(1,1)}の唯一辺は正方形の真円。Q一辺の同型で原文の内訳変更を満たす。",
+       ('round5-batch-b271-b290.md',))
+review('B284', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "一般に反転が候補点間の禁止関係を保存し整数化後の全余分点も被覆すれば極大性を保存する。旧追撃は相似埋込みの余分点条件までで、反転中心の例外・安全化・非自明整数盤移植証人と最小極大性の保存は未構成。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B285', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "正方形の追撃でT4={(0,0),(1,0),(2,0),(1,1)}はn4 g0、n5 g2、n6 g1、n6内平行移動でg3。共円・共線関係を保つ平行移動・盤拡大だけで3種類以上を達成。矩形だけの弱化証人には依拠しない。",
+       ('round5-batch-b251-b300-followup.md',))
+review('B286', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "box≤3内のk≤6配置から同じQの小実現を確認しただけで、全整数配置のQを網羅していない。全kで一様なk^{O(1)}座標圧縮は未証明。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B287', 'INCONCLUSIVE', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "小kの最小辺長の跳びは、任意の固定多項式を超える族の証拠ではない。box≤3内で大座標例がないことは存在命題の反証にならず、超多項式の下界族は未取得。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B288', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "carrier重みで各点被覆≥1なら安全Sに|S|≤3Σyが一般に成り立つ。n4の厳密双対値15/2から整数上界floor(15/2)=7=K4。旧資料の実数値不一致だけで鋭さを否定せず、整数化した有限鋭い証人を採用。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B289', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "分数対整数gapはn4,5,6で0.5,2.5,4の有限結果。増加三点は差がnとともに無限になることの証明ではない。",
+       ('round5-batch-b271-b290.md',))
+review('B290', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "n4の真の部分集合幅を全安全集合から計算した60切断でLP7に達するが、円束だけの幾何不等式ではなくn5は11.2>K5=9。n≤10全体の十分な小円束族は未構成。",
+       ('round5-batch-b271-b290-followup.md',))
+review('B291', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "旧B291_bはΣdの代わりに補完数和を使っていた。今回本来のd(p)でn4のP={1,2,4,5},N={1,2,3,4}、k4,min|det|2,|L|5,Σd215が全て一致しg0対2を確認。",
+       ('round4-batch-b291-b360.md',))
+review('B292', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のP={0,1,4,6},N={0,2,4,5}は同四石、距離平方多重集合[1,1,2,2,4,5]、境界距離[0,0,0,1]一致でg0対3。原文の両条件を直接再検算。",
+       ('round4-batch-b291-b360.md',))
+review('B293', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のP={0,2,3,5},N={0,2,3,4}の全三点補完数histは[0,1,1,3]一致、g0対3。同石数を保ち原文の存在条件を満たす。",
+       ('round4-batch-b291-b360.md',))
+review('B294', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のP={2,3,4,5},N={0,1,3,8}はk4,|L|9、全子合法数hist[1,1,3,3,3,4,5,5,5]が一致しg0対3。原文を有限存在として決着。",
+       ('round4-batch-b291-b360.md',))
+review('B295', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "旧round4_b291e2.jsonは座標付き非JSONと重複状態数を含むため採用せず再計算。全928極大を使いP={0,1,5,6},N={0,3,4,5}は六石極大拡張6個・七石2個で全サイズ個数一致、g0対3。",
+       ('round4-batch-b291-b360.md',))
+review('B296', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のP={0,1,2,4},N={0,2,3,4}は同四石、j1..3のP部分集合個数[0,4,0]一致で親g0対3。非零側個数も各jの総数から一致する。",
+       ('round4-batch-b291-b360.md',))
+review('B297', 'INCONCLUSIVE', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "旧証人は動的threat_degreeとgainの中位だけで、初期d(p)と子安定化群の厳密中位を同時検査していない。今回n4は全三条件を満たす証人なしだが、大盤での存在は未排除。",
+       ('round4-batch-b291-b360.md',))
+review('B298', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "旧証人は合法数が違い最大配置数も未計数。今回n4のP={1,3,9},N={0,1,2}はk3,|L|12が一致、最大七石拡張4対0、h4≥3でg0対1。原文そのままの証人を取得。",
+       ('round4-batch-b291-b360.md',))
+review('B299', 'SUPPORTED', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回n4のS={3,4,15}はg1で唯一勝ち手10を最初から使用不能にしてもg1。旧非勝ち手11,13が勝ち手として新生。n5で同例なしという理由で有限存在をPARTIALへ降格しない。",
+       ('round4-batch-b291-b360.md',))
+review('B300', 'PARTIAL', 'original_scope_and_exact_witness_audit',
+       'round69-b251-b300-original-scope-audit.md', "今回正確な深さdの無ラベル手木（深さ0に合法数を追加しない）でn4のd1,d2に勝敗逆の同型対、d3,d4にはなし。任意dに対して盤nも選べる原文は、固定n4の深い層で不発見でも反証されない。",
+       ('round4-batch-b291-b360.md',))
+
 def main():
     originals = {}
     hashes = {}

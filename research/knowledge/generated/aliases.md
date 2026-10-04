@@ -72,6 +72,15 @@
 | B258 | [K0165](../items/K0165-mandatory-rule-types-refuted.md) | n≥4の最小勝敗保持禁止族に共通必須D4型があるというB258は偽 |
 | B261 | [K0166](../items/K0166-two-move-blocking-synergy.md) | 一手ずつは弱いが二手そろうと大量に塞ぐ |
 | B266 | [K0167](../items/K0167-residual-triples-two-move-synergy.md) | 二手相乗作用を少数の残余三点制約で表せる |
+| B269 | [K0325](../items/K0325-n4-conditional-gain-variance.md) | 同じ合法数・利得総和でも利得分散でP率が異なる4×4完全層 |
+| B273 | [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md) | 7×7のGibbs分布は有限活動度で二つの最大相へ集中できる |
+| B291 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる |
+| B292 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる |
+| B293 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる |
+| B294 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる |
+| B295 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる |
+| B296 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる |
+| B298 | [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる |
 | B301 | [K0168](../items/K0168-j5-detoured-square-structure.md) | J_5は四角形の各辺に長さ4の迂回路を添えたグラフ |
 | B302 | [K0169](../items/K0169-j5-cycle-space-basis.md) | 四つの5サイクルと角の4サイクルがサイクル空間の基底になる |
 | B303 | [K0170](../items/K0170-j5-minimum-odd-cycle-transversal.md) | J_5の最小奇閉路横断集合は2点 |

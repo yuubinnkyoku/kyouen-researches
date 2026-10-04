@@ -324,3 +324,6 @@
 | [K0320](../items/K0320-n11-n15-n-minus-one-maximal-constructions.md) | n=11..15にはn−1石の安全極大配置が存在する | proposition | computed | maximal-safe, geometry |
 | [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) | 4×4は容量損失ゼロの二点削除で勝者が反転する | proposition | computed | variants, maximum-safe, grundy |
 | [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) | 同nimberの占有配置は共通の幾何的追加で勝敗が分かれる | proposition | computed | residual-games, grundy |
+| [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md) | 7×7のGibbs分布は有限活動度で二つの最大相へ集中できる | proposition | proved | statistics, maximum-safe, reconfiguration |
+| [K0324](../items/K0324-n4-incomplete-position-invariants.md) | 4×4では幾何・局所手・極大拡張の各集計が一致しても勝敗が異なる | proposition | computed | grundy, geometry, residual-games, maximal-safe |
+| [K0325](../items/K0325-n4-conditional-gain-variance.md) | 同じ合法数・利得総和でも利得分散でP率が異なる4×4完全層 | computation | computed | statistics, grundy |

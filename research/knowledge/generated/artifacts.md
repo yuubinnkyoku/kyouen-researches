@@ -1001,6 +1001,10 @@
 ## [research/experiments/original-claims/output/round61_split_prime_verified.json](../../../research/experiments/original-claims/output/round61_split_prime_verified.json)
 
 - [K0095](../items/K0095-split-prime-safe-quadratic-construction.md) (data): 三点・四点合同式と独立整数検算
+## [research/experiments/original-claims/output/round69_scope_witness_check.json](../../../research/experiments/original-claims/output/round69_scope_witness_check.json)
+
+- [K0324](../items/K0324-n4-incomplete-position-invariants.md) (data): B291–B296とB298の一致特徴と異なるg
+- [K0325](../items/K0325-n4-conditional-gain-variance.md) (data): 固定k4・合法4・利得総和6での条件付きP率
 ## [research/experiments/original-claims/output/round6_rational_orchard.json](../../../research/experiments/original-claims/output/round6_rational_orchard.json)
 
 - [K0198](../items/K0198-point-cover-deficit-linear-lower-bound.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -1356,6 +1360,10 @@
 
 - [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (source): B204/B207の量化照合、非零損失という追加条件を課さない
 - [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) (source): B240原文の存在量化の監査
+## [research/experiments/original-claims/reports/round69-b251-b300-original-scope-audit.md](../../../research/experiments/original-claims/reports/round69-b251-b300-original-scope-audit.md)
+
+- [K0323](../items/K0323-finite-gibbs-two-phase-concentration.md) (proof): 有限λの重み上界による直接証明
+- [K0324](../items/K0324-n4-incomplete-position-invariants.md) (source): 旧コードの代理指標を原文条件に修正
 ## [research/experiments/original-claims/reports/round7-parabola-cover.md](../../../research/experiments/original-claims/reports/round7-parabola-cover.md)
 
 - [K0204](../items/K0204-high-cover-points-competition-refuted.md) (source): 命題・対象範囲・根拠を記した出典
@@ -1543,6 +1551,10 @@
 ## [research/experiments/original-claims/scripts/round5_row_triples.cpp](../../../research/experiments/original-claims/scripts/round5_row_triples.cpp)
 
 - [K0264](../items/K0264-three-stones-per-row-minimum-length-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/scripts/round69_scope_witness_check.py](../../../research/experiments/original-claims/scripts/round69_scope_witness_check.py)
+
+- [K0324](../items/K0324-n4-incomplete-position-invariants.md) (verifier): 全5811安全集合・928極大・64最大から原文の条件を再検算
+- [K0325](../items/K0325-n4-conditional-gain-variance.md) (verifier): 利得を新規使用不能点数として全層集計
 ## [research/experiments/original-claims/scripts/round6_rational_orchard.py](../../../research/experiments/original-claims/scripts/round6_rational_orchard.py)
 
 - [K0198](../items/K0198-point-cover-deficit-linear-lower-bound.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
