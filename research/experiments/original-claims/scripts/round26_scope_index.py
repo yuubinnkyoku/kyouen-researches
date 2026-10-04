@@ -778,6 +778,100 @@ review('B099', 'PARTIAL', 'audited_original_scope',
 review('B100', 'PARTIAL', 'audited_original_scope',
        'round65-b001-b100-original-scope-audit.md', 'n=3..7の完全極大サイズスペクトルは区間だが、標準正方形盤すべてという全称の一般証明はない。')
 
+# 2026-10-04: B101-B150 remaining original-scope audit.
+review('B101', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=6,7全最大配置は四辺すべてに触れるが、原文はn≥4全体の全称。一般証明はない。')
+review('B102', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '6×6最大464集合のうち84集合が空行を1本持つ。行・列射影全域というn≥4全称を反証。')
+review('B103', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=4..7全最大集合で行占有2への集中傾向を完全集計したが、n増加一般の統計則としては有限範囲。')
+review('B104', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '7×7には全最大集合から排除されるD4点軌道がある一方n≤6にはない。現象の有限例はあるが『無限回』は未証明。')
+review('B105', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=6では全点が最大集合に出現し、n=7の最大損失もK−1。K−2以下となる点の存在は未発見だが存在命題なので反証できない。')
+review('B106', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=4..7で最大配置の最小特定点数は2〜6程度でlog∣M∣と同程度だが、O(log n)の全称上界は未証明。')
+review('B107', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '最大集合数と最小特定点数はn=4..7で非単調に動き、単純情報量以上の改善という統計主張は確定しない。')
+review('B108', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=6,7では全最大集合の共通部分は空だが、原文は全n≥4の全称で一般証明はない。')
+review('B109', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '6×6で同一D4軌道占有ベクトル内に1-swap次数0〜6が共存し、最大配置への最小低下幅が異なる例がある。')
+review('B110', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '容量不等式による上界証明の枠組みとn=7の被覆データはあるが、n≤10各盤のK_nを少数の円・直線だけで証明する原文の構成は未完成。')
+review('B111', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '7×7のG_11で最大由来8成分が全接続するかは現行knowledgeでもopen。原文の固定有限命題は未決着。')
+review('B112', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '最大配置を含まない孤立12石G_12成分が存在し、最高13・13石局面ありという全称を反証。')
+review('B113', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '7×7の該当903成分を完全BFSしA–B最短距離14を確定。13操作以下の経路はない。')
+review('B114', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'A–B最短8経路を全列挙し、A∪B外で使う点は全て同じ角48だけ。他点を使う最短抜け道はない。')
+review('B115', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '既存250局面は粗い3変数で39型に分かれ、2〜3局所カウントでの閉包記述は未構成。')
+review('B116', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'U内の占有差2,3かつ13石以上を排除するには20個以下の禁止四点組では足りないことを既存証明書で確認。')
+review('B117', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '903成分のA,Bは2近傍次数ヒストグラムが異なり、グラフ自己同型でA↔Bを交換できない。')
+review('B118', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '14手最短路8本の共通角は分かるが、原文の定数サイズ石移動パターンへの縮約と説明は未構成。')
+review('B119', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '最大配置由来8成分外に孤立12石G_12成分を明示。『最大配置を含まない成分はない』を反証。')
+review('B120', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'A/B相4+4の大分類は既存不変量で捉えるが、8成分を保存する3bit相当の角・辺ラベルは未構成。')
+review('B121', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=6ではK−2層で最大配置が連結だが、n=7のK−3=11石層の全接続がopen。全nの全称は未証明。')
+review('B122', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '必要低下幅はn=6で2、n=7で少なくとも3だが、任意cに対する非連結最大配置という無界存在命題は未証明。')
+review('B123', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=4全最大配置対ではA∪B外の補助点は不要。より大盤で補助点2個以上を必須とする存在証人は未取得。')
+review('B124', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=4では補助点自体が不要。より大盤で補助点必須かつ共通必須点なしとなる存在証人は未取得。')
+review('B125', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=4ではA∩Bを保持した経路が全対象対に存在。より大盤で共通点一時除去が幅改善に必須となる存在証人は未取得。')
+review('B126', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '同じ∣A\\B∣・∣A∩B∣でも必要幅9/10が分かれることは確認したが、原文指定の残余禁止四点交差密度では幅を説明できていない。')
+review('B127', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '既知障壁は無重み占有差で説明でき、±1以外の小整数重みが初めて必要になる具体例・証明書は未発見。')
+review('B128', 'SCOPE_UNCLEAR', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '安全族の下方閉性により2点交換は逐次除去・追加へ直列化できる。『浅く』『より小さい』の比較基準次第で自明にも偽にもなり、原文の障壁量が未定義。')
+review('B129', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=4,5全極大で正規化1-swap可動性を測定し最大側が小さい方向を観測したが、定義差の不一致もあり一般統計則は未確定。')
+review('B130', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n≤5の検査層では成分内P/N一定となる例がないが、原文はあるn,kの存在命題。有限不発見では反証しない。')
+review('B131', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '後続の全中心探索で少なくともn≤112の最大円は半整数中心から選べるが、任意nの全称証明はない。')
+review('B132', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '全中心探索n≤112でも最多点円が半整数中心でない反例は見つかっていない。存在命題は未決着。')
+review('B133', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '中心分母q別には初出・最大点数へ強い制限を確認したが、原始方程式係数aごとの鋭い初出サイズ・可能点数分類という原文完全形は未完成。')
+review('B134', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '同一直径上限でq=3の最大4点に対しq=4で6点の円があり、分母qに対する最大点数の非増加性を反証。')
+review('B135', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '同半径r²=2で整数中心は4格子点、半整数中心は0格子点となる無限格子上の明示例がある。')
+review('B136', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '有限盤円点数の欠落を完全円の窓切断スペクトルとして解析する方法と多数の有限分類はあるが、必要十分な一般分類は未完成。')
+review('B137', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'n=25→26で最大円点数20→24が同じN=650円族の収容改善だけで起こる。新算術型初出が常に必要という全称を反証。')
+review('B138', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '有限盤で上位点数円が少数の有理中心型へ集中する傾向は完全集計で確認したが、n一般の統計則は未確定。')
+review('B139', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '8×8で最多12点円族の禁止四点寄与495より、10点円族840・8点円族5670が大きい。存在命題の証人。')
+review('B140', 'INCONCLUSIVE', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '反転は共円・共線を保つが整数格子点性を保つ条件が厳しく、安全・極大配置を別盤へ写す具体構成は未取得。')
+review('B143', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '現行knowledge K0056が公刊一般定理に基づきC_n=Θ(n^5)を採用しており、liminf C_n/n^5>0は直ちに従う。')
+review('B144', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'K0054でD_n~c_D n^5、K0056でC_n=Θ(n^5)。C_nにも正のn^5下界があるためD_n/(C_n+D_n)は1へ収束できない。')
+review('B146', 'REFUTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '格子長方形は原始方向(p,q)、二辺倍率a,b、基点で数えるとO(n^4 log n)。一方C_n=Ω(n^5)なのでR_n/C_n=O(log n/n)→0。正のliminfを反証。')
+review('B147', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', 'B146と同じ数え上げでR_n=O(n^4 log n)、K0056よりC_n=Ω(n^5)。したがってR_n/C_n→0を一般に証明できる。')
+review('B148', 'PARTIAL', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '固定した一つの円テンプレートの平行移動数は(n−w)(n−h)という二次式だが、全C_n増分を既存族成長＋新族初出の扱いやすい閉式へまとめる部分は未完成。')
+review('B149', 'SUPPORTED', 'audited_original_scope',
+       'round66-b101-b150-original-scope-audit.md', '上位10相似型の被覆率はn=4で84.5%、n=5で70.2%、n=6で51.8%。n≤3は総数上10型で半数超を自明に覆えるため、固定m=6が原文存在条件を満たす。')
+
 
 def main():
     originals = {}
