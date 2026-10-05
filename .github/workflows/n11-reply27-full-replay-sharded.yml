@@ -1,0 +1,134 @@
+name: N11 reply27 full s5 replay sharded proof
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-full-replay-sharded.yml"
+  workflow_dispatch:
+
+jobs:
+  solve:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build exact replay solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+
+      - name: Materialize reply27 shard
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/materialize_reply27_targets.py \
+            --shards 16 --shard ${{ matrix.shard }} \
+            --out /tmp/reply27-${{ matrix.shard }}.csv
+
+      - name: Cold exact replay shard
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/reply27-${{ matrix.shard }}.time \
+            /tmp/dfpn --n=11 --memo=22 \
+              --exact-replay=/tmp/reply27-${{ matrix.shard }}.csv --only=5 \
+              --exact-replay-budget=15000000 \
+              --csv=/tmp/reply27-${{ matrix.shard }}.out
+          cat /tmp/reply27-${{ matrix.shard }}.time
+          ! grep -q '^replay_error,' /tmp/reply27-${{ matrix.shard }}.out
+          grep '^# replay_done' /tmp/reply27-${{ matrix.shard }}.out
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-full-${{ matrix.shard }}
+          path: |
+            /tmp/reply27-${{ matrix.shard }}.csv
+            /tmp/reply27-${{ matrix.shard }}.out
+            /tmp/reply27-${{ matrix.shard }}.time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-full-*
+          path: /tmp/proof
+          merge-multiple: true
+
+      - name: Verify shards and materialize exact s5 cache
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/summarize_reply27_exact_shards.py \
+            '/tmp/proof/reply27-*.out' \
+            --unknown-out /tmp/reply27-unknown.csv | tee /tmp/reply27-shard-summary.txt
+
+          python research/experiments/n11-frontier-selection-20261005/scripts/analyze_reply27_replay.py \
+            /tmp/proof/reply27-*.out \
+            --cache-out /tmp/reply27-full-s5.cache \
+            --summary-out /tmp/reply27-full-summary.json \
+            --unknown-replay-out /tmp/reply27-retry.csv
+
+          python - <<'PY'
+          import csv, json
+          s=json.load(open("/tmp/reply27-full-summary.json"))
+          assert s["completed_s5_verdicts"] == 2229, s
+          assert s["s5_win"] == 42, s
+          assert s["s5_loss"] == 2187, s
+          print("REPLY27_FULL_REPLAY_COUNTS_VERIFIED", s["s5_win"], s["s5_loss"])
+          PY
+
+      - name: Merge hard9 boundary-derived verdicts
+        run: |
+          python - <<'PY'
+          import csv
+          src=[
+            "/tmp/reply27-full-s5.cache",
+            "research/experiments/n11-frontier-selection-20261005/output/reply27-hard9-s5.cache",
+          ]
+          merged={}
+          hist={1:0,2:0}
+          for path in src:
+              with open(path,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0].startswith("#"): continue
+                      assert r[0]=="s5verdict", r
+                      k=(int(r[1]),int(r[2]))
+                      v=int(r[4])
+                      assert v in (1,2)
+                      old=merged.get(k)
+                      if old is not None and old!=v:
+                          raise SystemExit(f"CONFLICT {k}: {old} vs {v}")
+                      merged[k]=v
+          for v in merged.values(): hist[v]+=1
+          assert len(merged)==2238, len(merged)
+          assert hist=={1:43,2:2195}, hist
+          with open("/tmp/reply27-combined-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 full replay + hard9 boundary)\n")
+              for (lo,hi),v in sorted(merged.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          print("REPLY27_COMBINED_CACHE_OK",len(merged),hist)
+          PY
+
+      - name: Optimize cache-aware repair frontier
+        run: |
+          python -m pip install --disable-pip-version-check numpy scipy
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cover.py \
+            --s5-cache /tmp/reply27-combined-s5.cache \
+            --out /tmp/reply27-cache-aware-repair.json | tee /tmp/reply27-cache-aware-repair.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-full-replay-proof
+          path: |
+            /tmp/reply27-shard-summary.txt
+            /tmp/reply27-full-summary.json
+            /tmp/reply27-full-s5.cache
+            /tmp/reply27-combined-s5.cache
+            /tmp/reply27-unknown.csv
+            /tmp/reply27-retry.csv
+            /tmp/reply27-cache-aware-repair.json
+            /tmp/reply27-cache-aware-repair.txt
