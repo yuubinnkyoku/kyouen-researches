@@ -43,7 +43,7 @@ jobs:
         with:
           pattern: reply27-best-class-probe12-*
           path: /tmp/proof
-          merge-multiple: true
+          merge-multiple: false
       - name: Verify and summarize
         run: |
           python - <<'PY'
@@ -51,7 +51,7 @@ jobs:
           seen={}
           hist={0:0,1:0,2:0}
           nodes=0
-          for path in glob.glob("/tmp/proof/*.out"):
+          for path in glob.glob("/tmp/proof/*/probe.out"):
               with open(path,newline="") as f:
                   for r in csv.reader(f):
                       if not r or r[0]!="replay": continue
