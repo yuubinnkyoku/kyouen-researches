@@ -29,6 +29,7 @@ EDGE_DIR = ROOT / "research/experiments/n11-search-methods/scripts"
 sys.path.insert(0, str(EDGE_DIR))
 
 from dfpn_edge_classes import d4_canonical_key, legal_after  # noqa: E402
+import reply27_geometry_cache as geometry_cache  # noqa: E402
 
 FIRST, R2 = 60, 27
 
@@ -52,7 +53,9 @@ def load_cache(path: Path):
     return out
 
 
-def build():
+def build(cache_path=None):
+    if cache_path is not None:
+        return geometry_cache.as_cardinality(geometry_cache.load_cache(cache_path))
     base = {FIRST, R2}
     verts = set(legal_after(base))
     groups = defaultdict(list)
@@ -81,11 +84,13 @@ def build():
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--s5-cache", type=Path, required=True)
+    ap.add_argument("--geometry-cache", type=Path,
+                    help="optional validated reply27 geometry index")
     ap.add_argument("--out", type=Path)
     args = ap.parse_args()
 
     cache = load_cache(args.s5_cache)
-    verts, coverage, children = build()
+    verts, coverage, children = build(args.geometry_cache)
     status = {}
     for key, ss in children.items():
         vals = [cache.get(ch, 0) for ch in ss]

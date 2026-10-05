@@ -36,6 +36,7 @@ EDGE_DIR = ROOT / "research/experiments/n11-search-methods/scripts"
 sys.path.insert(0, str(EDGE_DIR))
 
 from dfpn_edge_classes import d4_canonical_key, forbidden, legal_after  # noqa: E402
+import reply27_geometry_cache as geometry_cache  # noqa: E402
 
 HERE = Path(__file__).resolve().parents[1]
 SELECTED = HERE / "output/reply27-direct-union-cover.json"
@@ -64,7 +65,9 @@ def load_hard9(path: Path):
     return out
 
 
-def build_geometry():
+def build_geometry(cache_path=None):
+    if cache_path is not None:
+        return geometry_cache.as_repair(geometry_cache.load_cache(cache_path))
     base = {FIRST, R2}
     verts = [v for v in range(V) if v not in base]
 
@@ -168,6 +171,8 @@ def main():
     ap.add_argument("--sample-out", type=Path)
     ap.add_argument("--sample-per-class", type=int, default=2)
     ap.add_argument("--extra-s5-cache", type=Path, action="append", default=[])
+    ap.add_argument("--geometry-cache", type=Path,
+                    help="optional validated reply27 geometry index")
     args = ap.parse_args()
 
     selected_doc = json.loads(SELECTED.read_text(encoding="utf-8"))
@@ -183,7 +188,7 @@ def main():
     if counts != Counter({"LOSS": 16, "WIN": 15}):
         raise SystemExit(f"unexpected selected status counts: {counts}")
 
-    verts, groups, coverage, children = build_geometry()
+    verts, groups, coverage, children = build_geometry(args.geometry_cache)
     if not selected <= set(groups):
         raise SystemExit("selected class key missing from regenerated geometry")
 

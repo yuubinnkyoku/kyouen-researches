@@ -1,0 +1,67 @@
+{
+  "schema": "reply27-geometry-cache-ab-v1",
+  "date": "2026-10-06",
+  "timezone": "Asia/Tokyo",
+  "input_cache": {
+    "path": ".local/n11/rebase-held-2822.cache",
+    "bytes": 117265,
+    "sha256": "D2F758A77896D7A79542970F5D548D423799A69EC9321F6D4FD5610E7E2F498B",
+    "entries": 2822,
+    "tracked_preserved_copy": "research/experiments/n11-boundary-recovery-20261006/output/post-next2-s5.cache",
+    "tracked_copy_byte_identical": true,
+    "tracked_copy_sha256": "D2F758A77896D7A79542970F5D548D423799A69EC9321F6D4FD5610E7E2F498B"
+  },
+  "geometry_index": {
+    "path": ".local/n11/reply27-geometry-v1.json.gz",
+    "bytes": 1798405,
+    "sha256": "F35CE99E8EF0C8729D31970FBC2377F293180ACD6D3CF8435C59FC2C6591FBE0",
+    "generation_time_jst": "2026-10-06T02:35:37+09:00",
+    "generator_sha256": "84AD12E6ECADBDAB2E5C79EA11CC6123FC1D2C0D03E83EB45983537DEF8D6FC2",
+    "dfpn_edge_classes_sha256": "6CCA3CFE161FFC9FFC199C56B595E9D0F72B839EE945E8B7E2C4090DAFCF0C0C",
+    "geometry_counts": {"vertices": 119, "raw_edges": 6871, "classes": 3384},
+    "all_edges_equal_representative_children": true
+  },
+  "runs": {
+    "cardinality": {
+      "cold_seconds": 130.47,
+      "warm_seconds": 17.45,
+      "equal": true,
+      "class_status": {"LOSS": 19, "UNKNOWN": 3234, "WIN": 131},
+      "minimum_cover": 12,
+      "dual_optimum": 12,
+      "tight_certificate": true
+    },
+    "repair": {
+      "cold_seconds": 83.28,
+      "warm_seconds": 49.20,
+      "equal": true,
+      "secured_vertices": 76,
+      "uncovered_vertices": 43,
+      "minimum_repair_classes": 12,
+      "additive_unknown_s5_cost": 1147,
+      "exact_15_class_cost": 1188,
+      "target_csv_equal": true
+    },
+    "ranking": {
+      "cold_seconds": 76.95,
+      "warm_seconds": 49.08,
+      "equal_except_output_paths": true,
+      "loss_classes": 19,
+      "win_forbidden_classes": 131,
+      "repair_classes": 12,
+      "best_target_key": [1153202979717779456, 0],
+      "best_target_unknown_s5": 91,
+      "target_csv_equal": true
+    }
+  },
+  "cache_load_validation_seconds": 12.33,
+  "mutation_rejections": [
+    "n",
+    "root",
+    "class count",
+    "data digest mismatch",
+    "stale source SHA",
+    "duplicate class with recomputed data digest"
+  ],
+  "trust_scope": "Validated reuse of geometry produced by the hashed generator; not an independent proof of child boundaries."
+}

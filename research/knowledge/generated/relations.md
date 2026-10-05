@@ -1612,6 +1612,7 @@
 - → depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 多人数版の敗者固定条件に極大サイズ差gcd定理を使う
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全Grundy0/1と全極大同偶奇の同値を使う
 - ← depends_on [K0354](../items/K0354-general-prism-maximal-count.md): 極大占有数の完全分類を使う
+- ← depends_on [K0356](../items/K0356-capacity-boundary-grundy-bound.md): 任意次元平行列盤を上位h=d−1列の容量ゲームへ縮約する
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1626,3 +1627,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
 - → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md): exact勝敗の意味は順位付きAND/OR証明の健全性に従う
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
+
+## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が余剰列数と閾値の小さい方以下
+
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 任意次元平行列盤を上位h=d−1列の容量ゲームへ縮約する

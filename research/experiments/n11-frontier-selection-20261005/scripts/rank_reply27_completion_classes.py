@@ -54,6 +54,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--repair-json", type=Path, required=True)
     ap.add_argument("--extra-s5-cache", type=Path, action="append", default=[])
+    ap.add_argument("--geometry-cache", type=Path,
+                    help="optional validated reply27 geometry index")
     ap.add_argument("--targets-out", type=Path)
     ap.add_argument("--out", type=Path)
     args = ap.parse_args()
@@ -68,7 +70,7 @@ def main():
     if set(status0) != selected0:
         raise SystemExit("selected verdict manifest mismatch")
 
-    verts, groups, coverage, children = R.build_geometry()
+    verts, groups, coverage, children = R.build_geometry(args.geometry_cache)
     derived = {}
     for key, st in status0.items():
         if st == "LOSS":

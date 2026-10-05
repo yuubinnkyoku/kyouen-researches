@@ -1,0 +1,6032 @@
+{
+  "source_scope": "Five saved Actions runs recovered as raw artifact ZIPs and extracted bytes. Exact s6 replay rows were retained from the three runs that emitted 6-stone rows. Tight15/tight-shared artifacts emit s5 rows only, retained but excluded from s6 union. ZIP SHA-256 matches Actions API digests; s6 replay rows were checked for 6 stones, OR=1, safe D4-canonical keys and legal counts. No solver rerun. Saved exact solver outcomes are not independent proofs.",
+  "runs": {
+    "hard2": {
+      "run_id": 37320154141,
+      "s6_rows": 170,
+      "s6_unique_keys": 170,
+      "s6_verdict_counts": {
+        "1": 161,
+        "2": 9
+      },
+      "s6_nodes": 110137392,
+      "s6_normalized_rows": 0,
+      "s6_artifact_ids": [
+        11348569460,
+        11348749523,
+        11349632290,
+        11349786542
+      ],
+      "conclusion": "success",
+      "status": "completed",
+      "url": "https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37320154141",
+      "workflowName": "N11 reply27 hard2 s6 boundary"
+    },
+    "tight15": {
+      "run_id": 37309880974,
+      "s6_rows": 0,
+      "s6_unique_keys": 0,
+      "s6_verdict_counts": {},
+      "s6_nodes": 0,
+      "s6_normalized_rows": 0,
+      "s6_artifact_ids": [],
+      "conclusion": "success",
+      "status": "completed",
+      "url": "https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37309880974",
+      "workflowName": "N11 reply27 tight15 shared probes"
+    },
+    "tight-shared": {
+      "run_id": 37319166001,
+      "s6_rows": 0,
+      "s6_unique_keys": 0,
+      "s6_verdict_counts": {},
+      "s6_nodes": 0,
+      "s6_normalized_rows": 0,
+      "s6_artifact_ids": [],
+      "conclusion": "success",
+      "status": "completed",
+      "url": "https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37319166001",
+      "workflowName": "N11 reply27 tight shared probes"
+    },
+    "shared-round2": {
+      "run_id": 37339357570,
+      "s6_rows": 16,
+      "s6_unique_keys": 16,
+      "s6_verdict_counts": {
+        "1": 9,
+        "2": 7
+      },
+      "s6_nodes": 29705726,
+      "s6_normalized_rows": 0,
+      "s6_artifact_ids": [
+        11357459506,
+        11357954415,
+        11358113745,
+        11358392488
+      ],
+      "conclusion": "success",
+      "status": "completed",
+      "url": "https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37339357570",
+      "workflowName": "N11 reply27 shared s6 round2"
+    },
+    "next32": {
+      "run_id": 37339329716,
+      "s6_rows": 32,
+      "s6_unique_keys": 32,
+      "s6_verdict_counts": {
+        "1": 16,
+        "2": 16
+      },
+      "s6_nodes": 77711802,
+      "s6_normalized_rows": 0,
+      "s6_artifact_ids": [
+        11358297783,
+        11358452816,
+        11358622109,
+        11359076448
+      ],
+      "conclusion": "failure",
+      "status": "completed",
+      "url": "https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/37339329716",
+      "workflowName": "N11 reply27 next32 shared s6 probes"
+    }
+  },
+  "artifact_count": 28,
+  "artifacts": [
+    {
+      "run_id": 37320154141,
+      "artifact_id": 11349806660,
+      "artifact_name": "reply27-hard2-s6-proof",
+      "api_size_bytes": 617,
+      "api_digest": "sha256:770def9ab3e9206b77cfcf90cf760fc171724ccb9f7433db452637db085db309",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/11349806660-reply27-hard2-s6-proof.zip",
+      "zip_actual_sha256": "770def9ab3e9206b77cfcf90cf760fc171724ccb9f7433db452637db085db309",
+      "expired": false,
+      "files": [
+        {
+          "path": "hard2-artifacts/unpacked/11349806660/hard2-result.json",
+          "bytes": 472,
+          "sha256": "6c19e7151fb34fb9241d4e0c92f88f16a42a307a23b20ff13a50217a504fff1d",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11349806660/hard2-s5.cache",
+          "bytes": 169,
+          "sha256": "0921d57a3c45ba4d03d890b17c67e6b3c187424e83a4594b756e61afa8c26b2f",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "artifact_name": "reply27-hard2-s6-0",
+      "api_size_bytes": 1789,
+      "api_digest": "sha256:8bd1e4014ecbf8ded0b055b23916684f472491ae87a8cc6df53a117dcf04cb1a",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/11349786542-reply27-hard2-s6-0.zip",
+      "zip_actual_sha256": "8bd1e4014ecbf8ded0b055b23916684f472491ae87a8cc6df53a117dcf04cb1a",
+      "expired": false,
+      "files": [
+        {
+          "path": "hard2-artifacts/unpacked/11349786542/out.csv",
+          "bytes": 2940,
+          "sha256": "0cc4558d15093abb7aefd14bfe207665356ff090fa0a5ee0967003f593d8f2f1",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11349786542/targets.csv",
+          "bytes": 2673,
+          "sha256": "675bb043add14bb4b773a7a406910fedc9ab36fdd88214bc3da83ebf2d0a943b",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11349786542/time",
+          "bytes": 13,
+          "sha256": "dde4bb8c57db4e8d3ca5f0a3ca744444b2498e8094bb3f886e31a326ba44aaa9",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "artifact_name": "reply27-hard2-s6-3",
+      "api_size_bytes": 1807,
+      "api_digest": "sha256:5bc22a86f1625cf9165ac2729af1fa88d962d4e288291422fde692abf11c0184",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/11349632290-reply27-hard2-s6-3.zip",
+      "zip_actual_sha256": "5bc22a86f1625cf9165ac2729af1fa88d962d4e288291422fde692abf11c0184",
+      "expired": false,
+      "files": [
+        {
+          "path": "hard2-artifacts/unpacked/11349632290/out.csv",
+          "bytes": 2897,
+          "sha256": "e60dfb4cf77b7caf65e907785e06dc6524c657b86c6407f7d3dc38b4cd47e8fd",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11349632290/targets.csv",
+          "bytes": 2622,
+          "sha256": "dfb504ba2967db24923107fb7565cac17245f42f327aacc79926aedc2006aa85",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11349632290/time",
+          "bytes": 13,
+          "sha256": "424099ff98276dcdfe923fffa305ae36b3e3deab174689d76a83911215c73fd0",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37320154141,
+      "artifact_id": 11349444037,
+      "artifact_name": "reply27-hard2-s6-materialized",
+      "api_size_bytes": 3435,
+      "api_digest": "sha256:7d974ecd8cd6ba518799f00048fff0d6a1dafce318a30a331b89465a22e94b1c",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/11349444037-reply27-hard2-s6-materialized.zip",
+      "zip_actual_sha256": "7d974ecd8cd6ba518799f00048fff0d6a1dafce318a30a331b89465a22e94b1c",
+      "expired": false,
+      "files": [
+        {
+          "path": "hard2-artifacts/unpacked/11349444037/hard2-meta.json",
+          "bytes": 9015,
+          "sha256": "b81fc5f9dedbc5bc4b28d2be0e1ffd32a7eabfdd1e74b33219c5578de3747d60",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11349444037/hard2-s6.csv",
+          "bytes": 10610,
+          "sha256": "6f121a3a3cb2b2de341aeef415e814b2c6f5333e3d8365d86d9e1dcdbce0ed33",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "artifact_name": "reply27-hard2-s6-2",
+      "api_size_bytes": 1779,
+      "api_digest": "sha256:7df2ea275cf3a0fe479dd4cf2be37f84b5e858eab2bc358b953c06ac0040455f",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/11348749523-reply27-hard2-s6-2.zip",
+      "zip_actual_sha256": "7df2ea275cf3a0fe479dd4cf2be37f84b5e858eab2bc358b953c06ac0040455f",
+      "expired": false,
+      "files": [
+        {
+          "path": "hard2-artifacts/unpacked/11348749523/out.csv",
+          "bytes": 2895,
+          "sha256": "20957d6dd3b8e3722fa93634067a28033aea68009bec6fd48486392db2978177",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11348749523/targets.csv",
+          "bytes": 2618,
+          "sha256": "292a30ae7751a658d4750f889cf3a02d8d8f5ade0cf0ddbc147d4b6ed1eb9b92",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11348749523/time",
+          "bytes": 13,
+          "sha256": "e1feb863fba3097f2b5b753bb9cb8f25a14c45370b5cfa88729de2fa36d81edf",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "artifact_name": "reply27-hard2-s6-1",
+      "api_size_bytes": 1854,
+      "api_digest": "sha256:8af7c828d6f1799450352d0abecc8ca7869bfa9561226333e6ede895a4d79c3e",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/11348569460-reply27-hard2-s6-1.zip",
+      "zip_actual_sha256": "8af7c828d6f1799450352d0abecc8ca7869bfa9561226333e6ede895a4d79c3e",
+      "expired": false,
+      "files": [
+        {
+          "path": "hard2-artifacts/unpacked/11348569460/out.csv",
+          "bytes": 2974,
+          "sha256": "f3ffb67a77cf58a30524c6d786127004216b701349aa3a578e7c6bde95e6ae0e",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11348569460/targets.csv",
+          "bytes": 2697,
+          "sha256": "ecbe8017a562e9699a9c4b9617662daf77b67aaee81416c53ea4cc2921ec2bfb",
+          "line_endings": "LF"
+        },
+        {
+          "path": "hard2-artifacts/unpacked/11348569460/time",
+          "bytes": 13,
+          "sha256": "8bc57408e101bf3695e40b5ba0496e7ce991e710fc013d0c6f620011657f9852",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37309880974,
+      "artifact_id": 11345675056,
+      "artifact_name": "reply27-tight15-probes-1",
+      "api_size_bytes": 724,
+      "api_digest": "sha256:9600843928cf1c6177704a0b8cfae88f4514646f0d05181acd929b54a6a96f73",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-artifacts/11345675056-reply27-tight15-probes-1.zip",
+      "zip_actual_sha256": "9600843928cf1c6177704a0b8cfae88f4514646f0d05181acd929b54a6a96f73",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight15-artifacts/unpacked/11345675056/out.csv",
+          "bytes": 450,
+          "sha256": "c44d8a5ade79266f4fdb2fc811a7b5326a9aaaaf8ed6f52235d4440a5a055d37",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11345675056/targets.csv",
+          "bytes": 247,
+          "sha256": "2d237c7cf8af420b8b8e96b8a8bccdba92629b2d1ea4d8b007d6b8502fa74297",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11345675056/time",
+          "bytes": 13,
+          "sha256": "4eb9283782254088e7f781be0f3f0ad7fba9820cd1aa50776949c2b91bf4be22",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37309880974,
+      "artifact_id": 11345545076,
+      "artifact_name": "reply27-tight15-probes-2",
+      "api_size_bytes": 735,
+      "api_digest": "sha256:77ce8a588ca169b805c922da0ae3459d10835ddbcda594b15a36556160f92401",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-artifacts/11345545076-reply27-tight15-probes-2.zip",
+      "zip_actual_sha256": "77ce8a588ca169b805c922da0ae3459d10835ddbcda594b15a36556160f92401",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight15-artifacts/unpacked/11345545076/out.csv",
+          "bytes": 449,
+          "sha256": "b527033f644c60acca0e082098d87391bc162487d1aa0a1500bbe803bb7e9e9b",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11345545076/targets.csv",
+          "bytes": 247,
+          "sha256": "e800323fbe0aacc6da7d04d5d0e5ead65732e9b41659798b9388abd789f06577",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11345545076/time",
+          "bytes": 13,
+          "sha256": "5f837a8e35e8a3df95f864827fd467b163efa8959d6328afd955a82e9572129a",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37309880974,
+      "artifact_id": 11345392689,
+      "artifact_name": "reply27-tight15-probes-0",
+      "api_size_bytes": 730,
+      "api_digest": "sha256:0b84d32cadc53eee0885ace9a862ffa60cda64a351d194fe046758f60ac03d92",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-artifacts/11345392689-reply27-tight15-probes-0.zip",
+      "zip_actual_sha256": "0b84d32cadc53eee0885ace9a862ffa60cda64a351d194fe046758f60ac03d92",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight15-artifacts/unpacked/11345392689/out.csv",
+          "bytes": 450,
+          "sha256": "ca5634647f7822127e91e744e224244dab927689b9e3480e31df3e5629d335cb",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11345392689/targets.csv",
+          "bytes": 246,
+          "sha256": "991c968f04781d10c128892d7a141858803cef3c62b47ad0b9b71d13c4e8be08",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11345392689/time",
+          "bytes": 13,
+          "sha256": "86964d73d80db0485bbd6b3ac101248f8b610a582f7963c0c6d9d981c8a84c0b",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37309880974,
+      "artifact_id": 11344918703,
+      "artifact_name": "reply27-tight15-probes-3",
+      "api_size_bytes": 688,
+      "api_digest": "sha256:e48bd20df9375a35f1216b5ae646eca1a4f82fa41603bb3012cba6edee18c751",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-artifacts/11344918703-reply27-tight15-probes-3.zip",
+      "zip_actual_sha256": "e48bd20df9375a35f1216b5ae646eca1a4f82fa41603bb3012cba6edee18c751",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight15-artifacts/unpacked/11344918703/out.csv",
+          "bytes": 395,
+          "sha256": "a40e5dfccd518cbc75ecaafa6391a87bfea35af6bb531367d547337a2445bf33",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11344918703/targets.csv",
+          "bytes": 190,
+          "sha256": "c71f0e317b38fd9b1a144a11bfefb960441fadfca23a25c193ecefd07f6251f1",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight15-artifacts/unpacked/11344918703/time",
+          "bytes": 13,
+          "sha256": "e933d2866fe78c46b7b96583192a1288d2954e6dceaa4bd1f056ff20f05636b4",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37309880974,
+      "artifact_id": 11344874274,
+      "artifact_name": "reply27-tight15-probes-proof",
+      "api_size_bytes": 178,
+      "api_digest": "sha256:a3a9aa368a195dad211a6a590f47a11af77ae141fac2b82e0996271e661fc0af",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-artifacts/11344874274-reply27-tight15-probes-proof.zip",
+      "zip_actual_sha256": "a3a9aa368a195dad211a6a590f47a11af77ae141fac2b82e0996271e661fc0af",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight15-artifacts/unpacked/11344874274/verified.txt",
+          "bytes": 42,
+          "sha256": "8acb898ff7df8b8ff728e896fcca4b10b5b92188fb8db5a61575eb340380fff2",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37319166001,
+      "artifact_id": 11349661073,
+      "artifact_name": "reply27-tight-shared-0",
+      "api_size_bytes": 739,
+      "api_digest": "sha256:d3b05b14677147885bfc18b7fac750ffb7144af8a8076805dcc9de71d2b2b2f0",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-artifacts/11349661073-reply27-tight-shared-0.zip",
+      "zip_actual_sha256": "d3b05b14677147885bfc18b7fac750ffb7144af8a8076805dcc9de71d2b2b2f0",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight-shared-artifacts/unpacked/11349661073/out.csv",
+          "bytes": 463,
+          "sha256": "ab9cc2448c3adb4b9905a37152e80f3adf2863caf3622338fcbd38cec1382cde",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11349661073/targets.csv",
+          "bytes": 251,
+          "sha256": "70b0bdd29b44d5e4a5ae33daa04b8c116fd44c4703392dfa5cdf297e585e5532",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11349661073/time",
+          "bytes": 13,
+          "sha256": "c766de72a14fc4b853bf1564fe2bdbcc7d9e65697aea2082e4cfa5405a95c018",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37319166001,
+      "artifact_id": 11349577372,
+      "artifact_name": "reply27-tight-shared-materialized",
+      "api_size_bytes": 1712,
+      "api_digest": "sha256:b124249ad91ac8d619bf9e004f5f8e77a969ddef688f8a56b7c84e62b0c4f802",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-artifacts/11349577372-reply27-tight-shared-materialized.zip",
+      "zip_actual_sha256": "b124249ad91ac8d619bf9e004f5f8e77a969ddef688f8a56b7c84e62b0c4f802",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight-shared-artifacts/unpacked/11349577372/tight-shared.csv",
+          "bytes": 795,
+          "sha256": "a92865fb6b958574263e3035b524a864bed0d7e752686c02c9cc38e07d5f60d0",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11349577372/tight-shared.json",
+          "bytes": 14894,
+          "sha256": "bbc0b9c6bedd598c06c9f243ca7697b14b24b72a3b4c85477b3d98ee1e7376bb",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37319166001,
+      "artifact_id": 11349348106,
+      "artifact_name": "reply27-tight-shared-2",
+      "api_size_bytes": 694,
+      "api_digest": "sha256:af10f7092c58acb236b8c392bfc0c940c68dd21c0647a6089875af139670c222",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-artifacts/11349348106-reply27-tight-shared-2.zip",
+      "zip_actual_sha256": "af10f7092c58acb236b8c392bfc0c940c68dd21c0647a6089875af139670c222",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight-shared-artifacts/unpacked/11349348106/out.csv",
+          "bytes": 391,
+          "sha256": "d81bca760e84c47eee3d80fd0162a8fa37a956de33692981a89f05ddd9cfa514",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11349348106/targets.csv",
+          "bytes": 181,
+          "sha256": "84abdbe0e6178eb6107bdc934ea4242ee48ae54f169284767209d1474e42d1c5",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11349348106/time",
+          "bytes": 13,
+          "sha256": "901dabbd4b456905a27ea4c208b7f74ecdcf2a8ebbedb6efd9a929dd66fd8c99",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37319166001,
+      "artifact_id": 11349298102,
+      "artifact_name": "reply27-tight-shared-3",
+      "api_size_bytes": 697,
+      "api_digest": "sha256:dfe36f95d2cdd3d2b854b94cd1b991befa2530340149c38a77be3ac80d88350a",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-artifacts/11349298102-reply27-tight-shared-3.zip",
+      "zip_actual_sha256": "dfe36f95d2cdd3d2b854b94cd1b991befa2530340149c38a77be3ac80d88350a",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight-shared-artifacts/unpacked/11349298102/out.csv",
+          "bytes": 393,
+          "sha256": "5baff4f7df965037bdec3f98fe551c6f04adc4cff69997a505b3ab3f88f35e1e",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11349298102/targets.csv",
+          "bytes": 183,
+          "sha256": "ff54f7bc8e9e2c13284680e05346b12eb8701b2d66897484c1b6b8a4e786c95a",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11349298102/time",
+          "bytes": 13,
+          "sha256": "e5f57647a01688c3690e6b3a70ee5e02f657a3dfb841a80ec4c4946523a9090c",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37319166001,
+      "artifact_id": 11348773715,
+      "artifact_name": "reply27-tight-shared-proof",
+      "api_size_bytes": 605,
+      "api_digest": "sha256:9c68ca1583f16a5752b3e994c8f982aa198956ba024f82f5cb049c70473f6f36",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-artifacts/11348773715-reply27-tight-shared-proof.zip",
+      "zip_actual_sha256": "9c68ca1583f16a5752b3e994c8f982aa198956ba024f82f5cb049c70473f6f36",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight-shared-artifacts/unpacked/11348773715/result.json",
+          "bytes": 145,
+          "sha256": "23e52471e0a71f43cc10d53427e065e6e8e095bba9887ecae5b56d2f128406c6",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11348773715/tight-shared.cache",
+          "bytes": 557,
+          "sha256": "9f4d1eed891cc2e67a9effeac300f1992338a66f301cfefc6a4dfa15731549ad",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37319166001,
+      "artifact_id": 11348553626,
+      "artifact_name": "reply27-tight-shared-1",
+      "api_size_bytes": 694,
+      "api_digest": "sha256:11511ea6926bb13ce102c41b44a58b42bed7634caab1184a9067e2654eb364e6",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-artifacts/11348553626-reply27-tight-shared-1.zip",
+      "zip_actual_sha256": "11511ea6926bb13ce102c41b44a58b42bed7634caab1184a9067e2654eb364e6",
+      "expired": false,
+      "files": [
+        {
+          "path": "tight-shared-artifacts/unpacked/11348553626/out.csv",
+          "bytes": 390,
+          "sha256": "b2d559f1acb5fd7e24a60087aa87ff089e2905e351d481569507847dde433619",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11348553626/targets.csv",
+          "bytes": 180,
+          "sha256": "1a90a27889e8c00a8ddafb4cb13ca77c9152d8ae6595dc575c56e5361f08f390",
+          "line_endings": "LF"
+        },
+        {
+          "path": "tight-shared-artifacts/unpacked/11348553626/time",
+          "bytes": 13,
+          "sha256": "653e7e1c7c886a857f675fb52cd21931fe0960a6b466d67cfe3669971fd21aec",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339357570,
+      "artifact_id": 11358935682,
+      "artifact_name": "reply27-shared-s6-round2-targets",
+      "api_size_bytes": 2092,
+      "api_digest": "sha256:3aef162cee89be70c123c4cadc51aa545b6524dcbc454e9955fcb05e49cc0d25",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/11358935682-reply27-shared-s6-round2-targets.zip",
+      "zip_actual_sha256": "3aef162cee89be70c123c4cadc51aa545b6524dcbc454e9955fcb05e49cc0d25",
+      "expired": false,
+      "files": [
+        {
+          "path": "shared-round2-artifacts/unpacked/11358935682/generate.log",
+          "bytes": 154,
+          "sha256": "92970210ada1dfc829182bfbe55d62dfd395a8b4194c87cb3bea5ce5d583bf86",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358935682/meta.json",
+          "bytes": 7577,
+          "sha256": "2398f8ab4480a132731340c13e2558522a85ae4c0ad04d8a738b08100eac10ac",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358935682/targets.csv",
+          "bytes": 972,
+          "sha256": "4e9bbccde4a966bd71b3b6051395254f294459c0d136feb85aa8fd2d72fadad2",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339357570,
+      "artifact_id": 11358611760,
+      "artifact_name": "reply27-shared-s6-round2-proof",
+      "api_size_bytes": 2232,
+      "api_digest": "sha256:41a10a7bce42627495243ddda9b2a4a84a5f91f81457c742fcdb89a600681aa2",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/11358611760-reply27-shared-s6-round2-proof.zip",
+      "zip_actual_sha256": "41a10a7bce42627495243ddda9b2a4a84a5f91f81457c742fcdb89a600681aa2",
+      "expired": false,
+      "files": [
+        {
+          "path": "shared-round2-artifacts/unpacked/11358611760/derive.log",
+          "bytes": 178,
+          "sha256": "e1e0b465e5de9e57c3b6f4b0f5bdd2df7e85e9570fd2963e1f4992448c10eb71",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358611760/generated/meta.json",
+          "bytes": 7577,
+          "sha256": "2398f8ab4480a132731340c13e2558522a85ae4c0ad04d8a738b08100eac10ac",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358611760/round2-s5.cache",
+          "bytes": 1220,
+          "sha256": "5085ef13cce91fe9100526b428debd0ae2b83e5d5af44ac973564047e1958790",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339357570,
+      "artifact_id": 11358392488,
+      "artifact_name": "reply27-shared-s6-round2-2",
+      "api_size_bytes": 741,
+      "api_digest": "sha256:a63be031eb35c203eba004ac32cace3802eac7504f10f73100f605c93abe2940",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/11358392488-reply27-shared-s6-round2-2.zip",
+      "zip_actual_sha256": "a63be031eb35c203eba004ac32cace3802eac7504f10f73100f605c93abe2940",
+      "expired": false,
+      "files": [
+        {
+          "path": "shared-round2-artifacts/unpacked/11358392488/out.csv",
+          "bytes": 463,
+          "sha256": "9489a99cd0652a5a4bbfb365069ac8df5044e5497be1a7f10977d2530cfddc1e",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358392488/targets.csv",
+          "bytes": 245,
+          "sha256": "3ddb46b8badfee419b3ba14b25569136c68121398672a165e56df6874b6692cc",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358392488/time",
+          "bytes": 13,
+          "sha256": "62c319f046aa71fb1275061517ebb6e04e461252eccdb539a0f30b3cf0776c59",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339357570,
+      "artifact_id": 11358113745,
+      "artifact_name": "reply27-shared-s6-round2-0",
+      "api_size_bytes": 736,
+      "api_digest": "sha256:d4c6df39c9b3e5275fa2e8eb4e8c7c1d19e7defe0f08eb2eb7c33473c21db104",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/11358113745-reply27-shared-s6-round2-0.zip",
+      "zip_actual_sha256": "d4c6df39c9b3e5275fa2e8eb4e8c7c1d19e7defe0f08eb2eb7c33473c21db104",
+      "expired": false,
+      "files": [
+        {
+          "path": "shared-round2-artifacts/unpacked/11358113745/out.csv",
+          "bytes": 455,
+          "sha256": "6b19807618013f1a900af5419905ce2113f4cbefdc66560318ebafc2e1b36390",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358113745/targets.csv",
+          "bytes": 238,
+          "sha256": "891109a064d662942c74d778298c74610baee5d2aecbef2b1222b189ec9507b8",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11358113745/time",
+          "bytes": 13,
+          "sha256": "cfed511ece63fd0578cd93cdbfe54488a013ae6a5a3f2d89e0ca8659d5423e1b",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339357570,
+      "artifact_id": 11357954415,
+      "artifact_name": "reply27-shared-s6-round2-1",
+      "api_size_bytes": 729,
+      "api_digest": "sha256:266371c13b5ab5a7adef2ac6d104e52e4b613b36c53b77f54e1dd016fef64a51",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/11357954415-reply27-shared-s6-round2-1.zip",
+      "zip_actual_sha256": "266371c13b5ab5a7adef2ac6d104e52e4b613b36c53b77f54e1dd016fef64a51",
+      "expired": false,
+      "files": [
+        {
+          "path": "shared-round2-artifacts/unpacked/11357954415/out.csv",
+          "bytes": 450,
+          "sha256": "7401bb19b04e3aab3e8169a7d2fd1d050ecf47080386e77f716c9b9a479ef865",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11357954415/targets.csv",
+          "bytes": 235,
+          "sha256": "5bdbe2063cf0ffec333141deaa72db142f4c011d26020946f8e7621164a41ede",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11357954415/time",
+          "bytes": 12,
+          "sha256": "195b8031a28b1c7f30efe930c4604e1d99fd72dfbae38922700bf19d2cc03522",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339357570,
+      "artifact_id": 11357459506,
+      "artifact_name": "reply27-shared-s6-round2-3",
+      "api_size_bytes": 753,
+      "api_digest": "sha256:c88c3d1331232a56b8909268afea02213601e7d115e9bc7d2eb9074f6aa8d977",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/11357459506-reply27-shared-s6-round2-3.zip",
+      "zip_actual_sha256": "c88c3d1331232a56b8909268afea02213601e7d115e9bc7d2eb9074f6aa8d977",
+      "expired": false,
+      "files": [
+        {
+          "path": "shared-round2-artifacts/unpacked/11357459506/out.csv",
+          "bytes": 469,
+          "sha256": "7638acfd54aef2450f7b429250353a7228b34fee5bde4187ab44aee6f68a0b16",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11357459506/targets.csv",
+          "bytes": 254,
+          "sha256": "195af63936824fcec5141cc2bfd5b2c7a887d0da149622f6af376d96473ba723",
+          "line_endings": "LF"
+        },
+        {
+          "path": "shared-round2-artifacts/unpacked/11357459506/time",
+          "bytes": 13,
+          "sha256": "2fe401728802ac21602acdcf20e964951c7e28b4bc16640d4a722e8b19c315ce",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "artifact_name": "reply27-next32-shared-s6-2",
+      "api_size_bytes": 904,
+      "api_digest": "sha256:9069f4fc3daa0500fa1257f49ec48338ed7a04967f642a1ce6869f61d510049b",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/11359076448-reply27-next32-shared-s6-2.zip",
+      "zip_actual_sha256": "9069f4fc3daa0500fa1257f49ec48338ed7a04967f642a1ce6869f61d510049b",
+      "expired": false,
+      "files": [
+        {
+          "path": "next32-artifacts/unpacked/11359076448/out.csv",
+          "bytes": 716,
+          "sha256": "e5ddc68b454d15cc401a47b65de75a31d782a952c9ed017a1091ba3bb16e4aaa",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11359076448/targets.csv",
+          "bytes": 493,
+          "sha256": "604b3129be921724ed4bfedc9818280a3af4553b51e68d2d34519f5987903455",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11359076448/time",
+          "bytes": 13,
+          "sha256": "c9fe3bca1f879bee5963f7c9af3f5612461d394d91e75638c40daffc6a9f1654",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "artifact_name": "reply27-next32-shared-s6-1",
+      "api_size_bytes": 907,
+      "api_digest": "sha256:0af5d6303d766dfb82a6ddf3a02181ee433994a3e64cefee38ef1ebbf2c22b99",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/11358622109-reply27-next32-shared-s6-1.zip",
+      "zip_actual_sha256": "0af5d6303d766dfb82a6ddf3a02181ee433994a3e64cefee38ef1ebbf2c22b99",
+      "expired": false,
+      "files": [
+        {
+          "path": "next32-artifacts/unpacked/11358622109/out.csv",
+          "bytes": 711,
+          "sha256": "054cc27858eb94f904860208a136c8dbc3f41fe9cfd57d769406b43e9eba3bc8",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11358622109/targets.csv",
+          "bytes": 491,
+          "sha256": "92c615924e24891f2a50b7cc571a2954468b2e6b3aa854f5de21788049abdab0",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11358622109/time",
+          "bytes": 13,
+          "sha256": "c56d51efcf589f05fedba44a7429a1cb8b65ea392cc330400f487feeda85b533",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "artifact_name": "reply27-next32-shared-s6-0",
+      "api_size_bytes": 895,
+      "api_digest": "sha256:14a770aeee8bd4c938229fae33187c2ca0a1651e53db572f8d6ebf33013a0704",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/11358452816-reply27-next32-shared-s6-0.zip",
+      "zip_actual_sha256": "14a770aeee8bd4c938229fae33187c2ca0a1651e53db572f8d6ebf33013a0704",
+      "expired": false,
+      "files": [
+        {
+          "path": "next32-artifacts/unpacked/11358452816/out.csv",
+          "bytes": 707,
+          "sha256": "789742065c72ce6021f80f80582bccfc5e29e3e13ac31433d1c9209d7f0ef2ea",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11358452816/targets.csv",
+          "bytes": 486,
+          "sha256": "072257086fdce1bc863a8732a00f852cd487171417db3aed017c94ffc0e75164",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11358452816/time",
+          "bytes": 13,
+          "sha256": "90c56d5708307d594991366f300277b9d5a7b9a2b7f9a99fcc686de36e76a173",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "artifact_name": "reply27-next32-shared-s6-3",
+      "api_size_bytes": 911,
+      "api_digest": "sha256:5cc10d24d0ba616eaef43dacee14b9da5d6b079f228f4ecd1ec9df25edf4ae4c",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/11358297783-reply27-next32-shared-s6-3.zip",
+      "zip_actual_sha256": "5cc10d24d0ba616eaef43dacee14b9da5d6b079f228f4ecd1ec9df25edf4ae4c",
+      "expired": false,
+      "files": [
+        {
+          "path": "next32-artifacts/unpacked/11358297783/out.csv",
+          "bytes": 722,
+          "sha256": "23abdde00d84f22812119a66c37c12a7abe44ed174a48d0c0bec5ed8b2202c73",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11358297783/targets.csv",
+          "bytes": 502,
+          "sha256": "69237c5191e0ee99fdcbbd6b89d3412c0061eae56b170b44bd578361d71e793c",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11358297783/time",
+          "bytes": 13,
+          "sha256": "59e8d85e9535a70a09901570889c3d24cef81a8216d3f1041670ccde27db8fa9",
+          "line_endings": "LF"
+        }
+      ]
+    },
+    {
+      "run_id": 37339329716,
+      "artifact_id": 11358153765,
+      "artifact_name": "reply27-next32-shared-s6-input",
+      "api_size_bytes": 2893,
+      "api_digest": "sha256:76b34d368ab650ed807014d62756d6ceea99bc0546f10ff67f465a7b94d405e4",
+      "zip_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/11358153765-reply27-next32-shared-s6-input.zip",
+      "zip_actual_sha256": "76b34d368ab650ed807014d62756d6ceea99bc0546f10ff67f465a7b94d405e4",
+      "expired": false,
+      "files": [
+        {
+          "path": "next32-artifacts/unpacked/11358153765/next32.csv",
+          "bytes": 1972,
+          "sha256": "30bc0b6ac289b631801be645629b932dc4d08d98e3a47f29375767bbc2ab4911",
+          "line_endings": "LF"
+        },
+        {
+          "path": "next32-artifacts/unpacked/11358153765/next32.json",
+          "bytes": 14715,
+          "sha256": "e1ac4b74ee9730ba2c278054a43fc75a2810f489689230d6fd3eb04f9772e457",
+          "line_endings": "LF"
+        }
+      ]
+    }
+  ],
+  "dedupe_against_existing_audit": {
+    "existing_audit_s6_rows": 1004,
+    "existing_canonical_keys": 1000,
+    "new_s6_rows": 218,
+    "new_canonical_keys": 202,
+    "overlap_canonical_keys": 2,
+    "new_only_canonical_keys": 200,
+    "new_keys_with_existing_key_conflict": 0,
+    "conflicts": []
+  },
+  "hard1_parent_coverage": {
+    "parent": [
+      1297318167659941888,
+      0
+    ],
+    "boundary_rows": 86,
+    "saved_new_WIN_child_rows": 0,
+    "saved_new_LOSS_child_rows": 0,
+    "remaining_without_saved_new_WIN": 86,
+    "new_WIN_child_keys": [],
+    "new_LOSS_child_keys": []
+  },
+  "files": [
+    {
+      "path": "hard2-artifacts/unpacked/11349806660/hard2-result.json",
+      "bytes": 472,
+      "sha256": "6c19e7151fb34fb9241d4e0c92f88f16a42a307a23b20ff13a50217a504fff1d",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349806660/hard2-s5.cache",
+      "bytes": 169,
+      "sha256": "0921d57a3c45ba4d03d890b17c67e6b3c187424e83a4594b756e61afa8c26b2f",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349786542/out.csv",
+      "bytes": 2940,
+      "sha256": "0cc4558d15093abb7aefd14bfe207665356ff090fa0a5ee0967003f593d8f2f1",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349786542/targets.csv",
+      "bytes": 2673,
+      "sha256": "675bb043add14bb4b773a7a406910fedc9ab36fdd88214bc3da83ebf2d0a943b",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349786542/time",
+      "bytes": 13,
+      "sha256": "dde4bb8c57db4e8d3ca5f0a3ca744444b2498e8094bb3f886e31a326ba44aaa9",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349632290/out.csv",
+      "bytes": 2897,
+      "sha256": "e60dfb4cf77b7caf65e907785e06dc6524c657b86c6407f7d3dc38b4cd47e8fd",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349632290/targets.csv",
+      "bytes": 2622,
+      "sha256": "dfb504ba2967db24923107fb7565cac17245f42f327aacc79926aedc2006aa85",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349632290/time",
+      "bytes": 13,
+      "sha256": "424099ff98276dcdfe923fffa305ae36b3e3deab174689d76a83911215c73fd0",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349444037/hard2-meta.json",
+      "bytes": 9015,
+      "sha256": "b81fc5f9dedbc5bc4b28d2be0e1ffd32a7eabfdd1e74b33219c5578de3747d60",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11349444037/hard2-s6.csv",
+      "bytes": 10610,
+      "sha256": "6f121a3a3cb2b2de341aeef415e814b2c6f5333e3d8365d86d9e1dcdbce0ed33",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11348749523/out.csv",
+      "bytes": 2895,
+      "sha256": "20957d6dd3b8e3722fa93634067a28033aea68009bec6fd48486392db2978177",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11348749523/targets.csv",
+      "bytes": 2618,
+      "sha256": "292a30ae7751a658d4750f889cf3a02d8d8f5ade0cf0ddbc147d4b6ed1eb9b92",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11348749523/time",
+      "bytes": 13,
+      "sha256": "e1feb863fba3097f2b5b753bb9cb8f25a14c45370b5cfa88729de2fa36d81edf",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11348569460/out.csv",
+      "bytes": 2974,
+      "sha256": "f3ffb67a77cf58a30524c6d786127004216b701349aa3a578e7c6bde95e6ae0e",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11348569460/targets.csv",
+      "bytes": 2697,
+      "sha256": "ecbe8017a562e9699a9c4b9617662daf77b67aaee81416c53ea4cc2921ec2bfb",
+      "line_endings": "LF"
+    },
+    {
+      "path": "hard2-artifacts/unpacked/11348569460/time",
+      "bytes": 13,
+      "sha256": "8bc57408e101bf3695e40b5ba0496e7ce991e710fc013d0c6f620011657f9852",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345675056/out.csv",
+      "bytes": 450,
+      "sha256": "c44d8a5ade79266f4fdb2fc811a7b5326a9aaaaf8ed6f52235d4440a5a055d37",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345675056/targets.csv",
+      "bytes": 247,
+      "sha256": "2d237c7cf8af420b8b8e96b8a8bccdba92629b2d1ea4d8b007d6b8502fa74297",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345675056/time",
+      "bytes": 13,
+      "sha256": "4eb9283782254088e7f781be0f3f0ad7fba9820cd1aa50776949c2b91bf4be22",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345545076/out.csv",
+      "bytes": 449,
+      "sha256": "b527033f644c60acca0e082098d87391bc162487d1aa0a1500bbe803bb7e9e9b",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345545076/targets.csv",
+      "bytes": 247,
+      "sha256": "e800323fbe0aacc6da7d04d5d0e5ead65732e9b41659798b9388abd789f06577",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345545076/time",
+      "bytes": 13,
+      "sha256": "5f837a8e35e8a3df95f864827fd467b163efa8959d6328afd955a82e9572129a",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345392689/out.csv",
+      "bytes": 450,
+      "sha256": "ca5634647f7822127e91e744e224244dab927689b9e3480e31df3e5629d335cb",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345392689/targets.csv",
+      "bytes": 246,
+      "sha256": "991c968f04781d10c128892d7a141858803cef3c62b47ad0b9b71d13c4e8be08",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11345392689/time",
+      "bytes": 13,
+      "sha256": "86964d73d80db0485bbd6b3ac101248f8b610a582f7963c0c6d9d981c8a84c0b",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11344918703/out.csv",
+      "bytes": 395,
+      "sha256": "a40e5dfccd518cbc75ecaafa6391a87bfea35af6bb531367d547337a2445bf33",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11344918703/targets.csv",
+      "bytes": 190,
+      "sha256": "c71f0e317b38fd9b1a144a11bfefb960441fadfca23a25c193ecefd07f6251f1",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11344918703/time",
+      "bytes": 13,
+      "sha256": "e933d2866fe78c46b7b96583192a1288d2954e6dceaa4bd1f056ff20f05636b4",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight15-artifacts/unpacked/11344874274/verified.txt",
+      "bytes": 42,
+      "sha256": "8acb898ff7df8b8ff728e896fcca4b10b5b92188fb8db5a61575eb340380fff2",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349661073/out.csv",
+      "bytes": 463,
+      "sha256": "ab9cc2448c3adb4b9905a37152e80f3adf2863caf3622338fcbd38cec1382cde",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349661073/targets.csv",
+      "bytes": 251,
+      "sha256": "70b0bdd29b44d5e4a5ae33daa04b8c116fd44c4703392dfa5cdf297e585e5532",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349661073/time",
+      "bytes": 13,
+      "sha256": "c766de72a14fc4b853bf1564fe2bdbcc7d9e65697aea2082e4cfa5405a95c018",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349577372/tight-shared.csv",
+      "bytes": 795,
+      "sha256": "a92865fb6b958574263e3035b524a864bed0d7e752686c02c9cc38e07d5f60d0",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349577372/tight-shared.json",
+      "bytes": 14894,
+      "sha256": "bbc0b9c6bedd598c06c9f243ca7697b14b24b72a3b4c85477b3d98ee1e7376bb",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349348106/out.csv",
+      "bytes": 391,
+      "sha256": "d81bca760e84c47eee3d80fd0162a8fa37a956de33692981a89f05ddd9cfa514",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349348106/targets.csv",
+      "bytes": 181,
+      "sha256": "84abdbe0e6178eb6107bdc934ea4242ee48ae54f169284767209d1474e42d1c5",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349348106/time",
+      "bytes": 13,
+      "sha256": "901dabbd4b456905a27ea4c208b7f74ecdcf2a8ebbedb6efd9a929dd66fd8c99",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349298102/out.csv",
+      "bytes": 393,
+      "sha256": "5baff4f7df965037bdec3f98fe551c6f04adc4cff69997a505b3ab3f88f35e1e",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349298102/targets.csv",
+      "bytes": 183,
+      "sha256": "ff54f7bc8e9e2c13284680e05346b12eb8701b2d66897484c1b6b8a4e786c95a",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11349298102/time",
+      "bytes": 13,
+      "sha256": "e5f57647a01688c3690e6b3a70ee5e02f657a3dfb841a80ec4c4946523a9090c",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11348773715/result.json",
+      "bytes": 145,
+      "sha256": "23e52471e0a71f43cc10d53427e065e6e8e095bba9887ecae5b56d2f128406c6",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11348773715/tight-shared.cache",
+      "bytes": 557,
+      "sha256": "9f4d1eed891cc2e67a9effeac300f1992338a66f301cfefc6a4dfa15731549ad",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11348553626/out.csv",
+      "bytes": 390,
+      "sha256": "b2d559f1acb5fd7e24a60087aa87ff089e2905e351d481569507847dde433619",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11348553626/targets.csv",
+      "bytes": 180,
+      "sha256": "1a90a27889e8c00a8ddafb4cb13ca77c9152d8ae6595dc575c56e5361f08f390",
+      "line_endings": "LF"
+    },
+    {
+      "path": "tight-shared-artifacts/unpacked/11348553626/time",
+      "bytes": 13,
+      "sha256": "653e7e1c7c886a857f675fb52cd21931fe0960a6b466d67cfe3669971fd21aec",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358935682/generate.log",
+      "bytes": 154,
+      "sha256": "92970210ada1dfc829182bfbe55d62dfd395a8b4194c87cb3bea5ce5d583bf86",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358935682/meta.json",
+      "bytes": 7577,
+      "sha256": "2398f8ab4480a132731340c13e2558522a85ae4c0ad04d8a738b08100eac10ac",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358935682/targets.csv",
+      "bytes": 972,
+      "sha256": "4e9bbccde4a966bd71b3b6051395254f294459c0d136feb85aa8fd2d72fadad2",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358611760/derive.log",
+      "bytes": 178,
+      "sha256": "e1e0b465e5de9e57c3b6f4b0f5bdd2df7e85e9570fd2963e1f4992448c10eb71",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358611760/generated/meta.json",
+      "bytes": 7577,
+      "sha256": "2398f8ab4480a132731340c13e2558522a85ae4c0ad04d8a738b08100eac10ac",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358611760/round2-s5.cache",
+      "bytes": 1220,
+      "sha256": "5085ef13cce91fe9100526b428debd0ae2b83e5d5af44ac973564047e1958790",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358392488/out.csv",
+      "bytes": 463,
+      "sha256": "9489a99cd0652a5a4bbfb365069ac8df5044e5497be1a7f10977d2530cfddc1e",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358392488/targets.csv",
+      "bytes": 245,
+      "sha256": "3ddb46b8badfee419b3ba14b25569136c68121398672a165e56df6874b6692cc",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358392488/time",
+      "bytes": 13,
+      "sha256": "62c319f046aa71fb1275061517ebb6e04e461252eccdb539a0f30b3cf0776c59",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358113745/out.csv",
+      "bytes": 455,
+      "sha256": "6b19807618013f1a900af5419905ce2113f4cbefdc66560318ebafc2e1b36390",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358113745/targets.csv",
+      "bytes": 238,
+      "sha256": "891109a064d662942c74d778298c74610baee5d2aecbef2b1222b189ec9507b8",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11358113745/time",
+      "bytes": 13,
+      "sha256": "cfed511ece63fd0578cd93cdbfe54488a013ae6a5a3f2d89e0ca8659d5423e1b",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11357954415/out.csv",
+      "bytes": 450,
+      "sha256": "7401bb19b04e3aab3e8169a7d2fd1d050ecf47080386e77f716c9b9a479ef865",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11357954415/targets.csv",
+      "bytes": 235,
+      "sha256": "5bdbe2063cf0ffec333141deaa72db142f4c011d26020946f8e7621164a41ede",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11357954415/time",
+      "bytes": 12,
+      "sha256": "195b8031a28b1c7f30efe930c4604e1d99fd72dfbae38922700bf19d2cc03522",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11357459506/out.csv",
+      "bytes": 469,
+      "sha256": "7638acfd54aef2450f7b429250353a7228b34fee5bde4187ab44aee6f68a0b16",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11357459506/targets.csv",
+      "bytes": 254,
+      "sha256": "195af63936824fcec5141cc2bfd5b2c7a887d0da149622f6af376d96473ba723",
+      "line_endings": "LF"
+    },
+    {
+      "path": "shared-round2-artifacts/unpacked/11357459506/time",
+      "bytes": 13,
+      "sha256": "2fe401728802ac21602acdcf20e964951c7e28b4bc16640d4a722e8b19c315ce",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11359076448/out.csv",
+      "bytes": 716,
+      "sha256": "e5ddc68b454d15cc401a47b65de75a31d782a952c9ed017a1091ba3bb16e4aaa",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11359076448/targets.csv",
+      "bytes": 493,
+      "sha256": "604b3129be921724ed4bfedc9818280a3af4553b51e68d2d34519f5987903455",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11359076448/time",
+      "bytes": 13,
+      "sha256": "c9fe3bca1f879bee5963f7c9af3f5612461d394d91e75638c40daffc6a9f1654",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358622109/out.csv",
+      "bytes": 711,
+      "sha256": "054cc27858eb94f904860208a136c8dbc3f41fe9cfd57d769406b43e9eba3bc8",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358622109/targets.csv",
+      "bytes": 491,
+      "sha256": "92c615924e24891f2a50b7cc571a2954468b2e6b3aa854f5de21788049abdab0",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358622109/time",
+      "bytes": 13,
+      "sha256": "c56d51efcf589f05fedba44a7429a1cb8b65ea392cc330400f487feeda85b533",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358452816/out.csv",
+      "bytes": 707,
+      "sha256": "789742065c72ce6021f80f80582bccfc5e29e3e13ac31433d1c9209d7f0ef2ea",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358452816/targets.csv",
+      "bytes": 486,
+      "sha256": "072257086fdce1bc863a8732a00f852cd487171417db3aed017c94ffc0e75164",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358452816/time",
+      "bytes": 13,
+      "sha256": "90c56d5708307d594991366f300277b9d5a7b9a2b7f9a99fcc686de36e76a173",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358297783/out.csv",
+      "bytes": 722,
+      "sha256": "23abdde00d84f22812119a66c37c12a7abe44ed174a48d0c0bec5ed8b2202c73",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358297783/targets.csv",
+      "bytes": 502,
+      "sha256": "69237c5191e0ee99fdcbbd6b89d3412c0061eae56b170b44bd578361d71e793c",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358297783/time",
+      "bytes": 13,
+      "sha256": "59e8d85e9535a70a09901570889c3d24cef81a8216d3f1041670ccde27db8fa9",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358153765/next32.csv",
+      "bytes": 1972,
+      "sha256": "30bc0b6ac289b631801be645629b932dc4d08d98e3a47f29375767bbc2ab4911",
+      "line_endings": "LF"
+    },
+    {
+      "path": "next32-artifacts/unpacked/11358153765/next32.json",
+      "bytes": 14715,
+      "sha256": "e1ac4b74ee9730ba2c278054a43fc75a2810f489689230d6fd3eb04f9772e457",
+      "line_endings": "LF"
+    }
+  ],
+  "s5_only_runs": {
+    "tight15": {
+      "s5_rows": 15,
+      "s5_verdict_counts": {
+        "2": 15
+      },
+      "s5_nodes": 45599972,
+      "source_note": "These are exact s5 replays, not s6; retained and excluded from the s6 union."
+    },
+    "tight-shared": {
+      "s5_rows": 13,
+      "s5_verdict_counts": {
+        "0": 1,
+        "2": 12
+      },
+      "s5_nodes": 82564737,
+      "source_note": "These are exact s5 replays, not s6; retained and excluded from the s6 union."
+    }
+  },
+  "saved_s5_cache_checks": {
+    "current_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next3-completion-s5.cache",
+    "current_cache_rows": 3075,
+    "sources": [
+      {
+        "path": "research/experiments/n11-frontier-selection-20261005/output/reply27-hard2-s5.cache",
+        "rows": 2,
+        "unique_keys": 2,
+        "sha256": "ad03c39be8a35068aeb7ca59e0fc0310acd6e1237a51d45a5ca347bd8a1cb3ad",
+        "keys_missing_or_different_in_post_next3_completion_s5_cache": [],
+        "missing_count": 0
+      },
+      {
+        "path": "research/experiments/n11-frontier-selection-20261005/output/reply27-tight15-probes-s5.cache",
+        "rows": 15,
+        "unique_keys": 15,
+        "sha256": "d4e1229afedfc762b4c27a22ab3fd8da5ccd88772543acfb8157510f92c873fa",
+        "keys_missing_or_different_in_post_next3_completion_s5_cache": [],
+        "missing_count": 0
+      },
+      {
+        "path": "research/experiments/n11-frontier-selection-20261005/output/reply27-tight-shared-s5.cache",
+        "rows": 12,
+        "unique_keys": 12,
+        "sha256": "76fd43f7857b1a003dc058178d88756182daa1afbd2cf9f4b4fec059a6570728",
+        "keys_missing_or_different_in_post_next3_completion_s5_cache": [],
+        "missing_count": 0
+      },
+      {
+        "path": "research/experiments/n11-frontier-selection-20261005/output/reply27-shared-s6-s5.cache",
+        "rows": 25,
+        "unique_keys": 25,
+        "sha256": "131fdda81d0916fe20740c6bdb7f58e4e297c667a2f233b85c96f65e07a29b84",
+        "keys_missing_or_different_in_post_next3_completion_s5_cache": [],
+        "missing_count": 0
+      },
+      {
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358611760/round2-s5.cache",
+        "rows": 28,
+        "unique_keys": 28,
+        "sha256": "5085ef13cce91fe9100526b428debd0ae2b83e5d5af44ac973564047e1958790",
+        "keys_missing_or_different_in_post_next3_completion_s5_cache": [
+          [
+            1152921504766296064,
+            0
+          ],
+          [
+            1152921507962290176,
+            67108864
+          ],
+          [
+            1152921522994675712,
+            262144
+          ],
+          [
+            1152921524068417536,
+            262144
+          ],
+          [
+            1152921525142159360,
+            0
+          ],
+          [
+            1153484454694486016,
+            16777217
+          ],
+          [
+            1153484454695534592,
+            16777216
+          ],
+          [
+            1224979102000218112,
+            0
+          ],
+          [
+            1297036692816920864,
+            0
+          ],
+          [
+            1297036696038146048,
+            0
+          ],
+          [
+            1301540292311384064,
+            0
+          ],
+          [
+            1302666192217178112,
+            0
+          ],
+          [
+            1333628439789305856,
+            0
+          ],
+          [
+            1873497444986126592,
+            64
+          ],
+          [
+            1873497444986126624,
+            0
+          ],
+          [
+            1873497445120344320,
+            0
+          ],
+          [
+            5908722711126876160,
+            0
+          ],
+          [
+            12682136550675316740,
+            67108864
+          ]
+        ],
+        "missing_count": 18
+      }
+    ]
+  },
+  "s6_replay_rows": [
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 3,
+      "key": [
+        1154188142003093504,
+        536870920
+      ],
+      "raw_key": [
+        1154188142003093504,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 1028307
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 4,
+      "key": [
+        1154188142003093504,
+        34896609280
+      ],
+      "raw_key": [
+        1154188142003093504,
+        34896609280
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 81,
+      "verdict": 1,
+      "nodes": 1049046
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 5,
+      "key": [
+        1154188142007287808,
+        536870912
+      ],
+      "raw_key": [
+        1154188142007287808,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 1,
+      "nodes": 2188843
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 6,
+      "key": [
+        1154205734189137920,
+        536870912
+      ],
+      "raw_key": [
+        1154205734189137920,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 172789
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 7,
+      "key": [
+        1297036692682706944,
+        536872968
+      ],
+      "raw_key": [
+        1297036692682706944,
+        536872968
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 107243
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 8,
+      "key": [
+        1297036692684804096,
+        536870920
+      ],
+      "raw_key": [
+        1297036692684804096,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 107081
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 9,
+      "key": [
+        1297036692818001920,
+        128
+      ],
+      "raw_key": [
+        1297036692818001920,
+        128
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 64,
+      "verdict": 1,
+      "nodes": 307980
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 10,
+      "key": [
+        1297036692818001920,
+        65536
+      ],
+      "raw_key": [
+        1297036692818001920,
+        65536
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 66,
+      "verdict": 1,
+      "nodes": 219280
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 11,
+      "key": [
+        1297036692818001920,
+        33554432
+      ],
+      "raw_key": [
+        1297036692818001920,
+        33554432
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 229822
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 12,
+      "key": [
+        1297036692818001920,
+        536870912
+      ],
+      "raw_key": [
+        1297036692818001920,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 106593
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 13,
+      "key": [
+        1297036692818001924,
+        0
+      ],
+      "raw_key": [
+        1297036692818001924,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 77,
+      "verdict": 1,
+      "nodes": 887967
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 14,
+      "key": [
+        1297036692818002048,
+        0
+      ],
+      "raw_key": [
+        1297036692818002048,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 59,
+      "verdict": 1,
+      "nodes": 212727
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 15,
+      "key": [
+        1297036692818067456,
+        0
+      ],
+      "raw_key": [
+        1297036692818067456,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 294165
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 16,
+      "key": [
+        1297036692851556352,
+        0
+      ],
+      "raw_key": [
+        1297036692851556352,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 67,
+      "verdict": 1,
+      "nodes": 556676
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 17,
+      "key": [
+        1297036694965485568,
+        0
+      ],
+      "raw_key": [
+        1297036694965485568,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 1300529
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 18,
+      "key": [
+        1297036727177740288,
+        0
+      ],
+      "raw_key": [
+        1297036727177740288,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 1856362
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 19,
+      "key": [
+        1297037242573815808,
+        0
+      ],
+      "raw_key": [
+        1297037242573815808,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 67,
+      "verdict": 1,
+      "nodes": 128139
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 20,
+      "key": [
+        1297045488775729152,
+        536870920
+      ],
+      "raw_key": [
+        1297045488775729152,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 86032
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 21,
+      "key": [
+        1297177430306357248,
+        0
+      ],
+      "raw_key": [
+        1297177430306357248,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 60,
+      "verdict": 1,
+      "nodes": 78221
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 22,
+      "key": [
+        1298162592590594048,
+        17301504
+      ],
+      "raw_key": [
+        1298162592590594048,
+        17301504
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 2,
+      "nodes": 4116281
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 23,
+      "key": [
+        1298162592590594048,
+        34360262656
+      ],
+      "raw_key": [
+        1298162592590594048,
+        34360262656
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 768341
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 24,
+      "key": [
+        1306043891937447936,
+        536870920
+      ],
+      "raw_key": [
+        1306043891937447936,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 410552
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 25,
+      "key": [
+        1585267068969713664,
+        0
+      ],
+      "raw_key": [
+        1585267068969713664,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 183773
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 26,
+      "key": [
+        10376293541462671360,
+        536881152
+      ],
+      "raw_key": [
+        10376293541462671360,
+        536881152
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 1,
+      "nodes": 185220
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 27,
+      "key": [
+        10376293541462671360,
+        34896611328
+      ],
+      "raw_key": [
+        10376293541462671360,
+        34896611328
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 119717
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 28,
+      "key": [
+        10376293541595975680,
+        8192
+      ],
+      "raw_key": [
+        10376293541595975680,
+        8192
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 72,
+      "verdict": 1,
+      "nodes": 786444
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 29,
+      "key": [
+        10376293541595975680,
+        131072
+      ],
+      "raw_key": [
+        10376293541595975680,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 63,
+      "verdict": 1,
+      "nodes": 439827
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 30,
+      "key": [
+        10376293541595975680,
+        134217728
+      ],
+      "raw_key": [
+        10376293541595975680,
+        134217728
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 248658
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 31,
+      "key": [
+        10376575016438337536,
+        131076
+      ],
+      "raw_key": [
+        10376575016438337536,
+        131076
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 1470176
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 32,
+      "key": [
+        10376575016438337536,
+        131584
+      ],
+      "raw_key": [
+        10376575016438337536,
+        131584
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 68,
+      "verdict": 1,
+      "nodes": 108229
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 33,
+      "key": [
+        10376575016438337536,
+        147456
+      ],
+      "raw_key": [
+        10376575016438337536,
+        147456
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 541043
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 34,
+      "key": [
+        10376575016438337536,
+        268566528
+      ],
+      "raw_key": [
+        10376575016438337536,
+        268566528
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 67,
+      "verdict": 1,
+      "nodes": 86423
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 35,
+      "key": [
+        10376575016438337552,
+        131072
+      ],
+      "raw_key": [
+        10376575016438337552,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 56,
+      "verdict": 1,
+      "nodes": 64424
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 36,
+      "key": [
+        10376575016438338560,
+        131072
+      ],
+      "raw_key": [
+        10376575016438338560,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 2,
+      "nodes": 3844240
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 37,
+      "key": [
+        10376575016438468608,
+        131072
+      ],
+      "raw_key": [
+        10376575016438468608,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 64,
+      "verdict": 1,
+      "nodes": 59635
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 38,
+      "key": [
+        10376575016446726144,
+        131072
+      ],
+      "raw_key": [
+        10376575016446726144,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 829352
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 39,
+      "key": [
+        10376575016975208448,
+        131072
+      ],
+      "raw_key": [
+        10376575016975208448,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 1,
+      "nodes": 1691434
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 40,
+      "key": [
+        10376575025028272128,
+        131072
+      ],
+      "raw_key": [
+        10376575025028272128,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 92799
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 41,
+      "key": [
+        10376575566194151424,
+        131072
+      ],
+      "raw_key": [
+        10376575566194151424,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 31013
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 42,
+      "key": [
+        10376583812531359744,
+        131072
+      ],
+      "raw_key": [
+        10376583812531359744,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 508559
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 43,
+      "key": [
+        10377700916345180160,
+        131072
+      ],
+      "raw_key": [
+        10377700916345180160,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 197295
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 44,
+      "key": [
+        10448351135633903616,
+        0
+      ],
+      "raw_key": [
+        10448351135633903616,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 50986
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348569460/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348569460,
+      "row": 45,
+      "key": [
+        14988261034865725440,
+        131072
+      ],
+      "raw_key": [
+        14988261034865725440,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 672675
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 3,
+      "key": [
+        1154188142003093504,
+        536879104
+      ],
+      "raw_key": [
+        1154188142003093504,
+        536879104
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 171836
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 4,
+      "key": [
+        1154188142003093505,
+        536870912
+      ],
+      "raw_key": [
+        1154188142003093505,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 2,
+      "nodes": 3428930
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 5,
+      "key": [
+        1154188142011482112,
+        536870912
+      ],
+      "raw_key": [
+        1154188142011482112,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 162118
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 6,
+      "key": [
+        1154223326375182336,
+        536870912
+      ],
+      "raw_key": [
+        1154223326375182336,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 60,
+      "verdict": 1,
+      "nodes": 38772
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 7,
+      "key": [
+        1297036692682707456,
+        536870920
+      ],
+      "raw_key": [
+        1297036692682707456,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 2,
+      "nodes": 3708906
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 8,
+      "key": [
+        1297036692818001920,
+        4
+      ],
+      "raw_key": [
+        1297036692818001920,
+        4
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 81,
+      "verdict": 1,
+      "nodes": 307825
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 9,
+      "key": [
+        1297036692818001920,
+        8192
+      ],
+      "raw_key": [
+        1297036692818001920,
+        8192
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 1261862
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 10,
+      "key": [
+        1297036692818001920,
+        131072
+      ],
+      "raw_key": [
+        1297036692818001920,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 121886
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 11,
+      "key": [
+        1297036692818001920,
+        67108864
+      ],
+      "raw_key": [
+        1297036692818001920,
+        67108864
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 59140
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 12,
+      "key": [
+        1297036692818001920,
+        34359738368
+      ],
+      "raw_key": [
+        1297036692818001920,
+        34359738368
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 1388581
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 13,
+      "key": [
+        1297036692818001928,
+        0
+      ],
+      "raw_key": [
+        1297036692818001928,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 234903
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 14,
+      "key": [
+        1297036692818002432,
+        0
+      ],
+      "raw_key": [
+        1297036692818002432,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 197903
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 15,
+      "key": [
+        1297036692818264064,
+        0
+      ],
+      "raw_key": [
+        1297036692818264064,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 193631
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 16,
+      "key": [
+        1297036692885110784,
+        0
+      ],
+      "raw_key": [
+        1297036692885110784,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 81723
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 17,
+      "key": [
+        1297036696977674240,
+        536870920
+      ],
+      "raw_key": [
+        1297036696977674240,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 84,
+      "verdict": 1,
+      "nodes": 180138
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 18,
+      "key": [
+        1297036761537478656,
+        0
+      ],
+      "raw_key": [
+        1297036761537478656,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 61,
+      "verdict": 1,
+      "nodes": 463931
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 19,
+      "key": [
+        1297037792329629696,
+        0
+      ],
+      "raw_key": [
+        1297037792329629696,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 46689
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 20,
+      "key": [
+        1297045488911024128,
+        0
+      ],
+      "raw_key": [
+        1297045488911024128,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 1305867
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 21,
+      "key": [
+        1298162592590594048,
+        532480
+      ],
+      "raw_key": [
+        1298162592590594048,
+        532480
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 77,
+      "verdict": 1,
+      "nodes": 76127
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 22,
+      "key": [
+        1298162592590594048,
+        34078720
+      ],
+      "raw_key": [
+        1298162592590594048,
+        34078720
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 2,
+      "nodes": 3440038
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 23,
+      "key": [
+        1298162592724844544,
+        0
+      ],
+      "raw_key": [
+        1298162592724844544,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 194653
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 24,
+      "key": [
+        1315051091192188928,
+        536870920
+      ],
+      "raw_key": [
+        1315051091192188928,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 626104
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 25,
+      "key": [
+        3602879702031695872,
+        0
+      ],
+      "raw_key": [
+        3602879702031695872,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 66,
+      "verdict": 1,
+      "nodes": 289999
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 26,
+      "key": [
+        10376293541462671360,
+        536889344
+      ],
+      "raw_key": [
+        10376293541462671360,
+        536889344
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 83,
+      "verdict": 1,
+      "nodes": 191849
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 27,
+      "key": [
+        10376293541595975680,
+        4
+      ],
+      "raw_key": [
+        10376293541595975680,
+        4
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 1,
+      "nodes": 2948601
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 28,
+      "key": [
+        10376293541595975680,
+        16384
+      ],
+      "raw_key": [
+        10376293541595975680,
+        16384
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 255168
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 29,
+      "key": [
+        10376293541595975680,
+        16777216
+      ],
+      "raw_key": [
+        10376293541595975680,
+        16777216
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 1445224
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 30,
+      "key": [
+        10376293541595975680,
+        268435456
+      ],
+      "raw_key": [
+        10376293541595975680,
+        268435456
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 83,
+      "verdict": 1,
+      "nodes": 216235
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 31,
+      "key": [
+        10376575016438337536,
+        131080
+      ],
+      "raw_key": [
+        10376575016438337536,
+        131080
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 66,
+      "verdict": 1,
+      "nodes": 1177516
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 32,
+      "key": [
+        10376575016438337536,
+        133120
+      ],
+      "raw_key": [
+        10376575016438337536,
+        133120
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 2079439
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 33,
+      "key": [
+        10376575016438337536,
+        163840
+      ],
+      "raw_key": [
+        10376575016438337536,
+        163840
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 169865
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 34,
+      "key": [
+        10376575016438337538,
+        131072
+      ],
+      "raw_key": [
+        10376575016438337538,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 315851
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 35,
+      "key": [
+        10376575016438337600,
+        131072
+      ],
+      "raw_key": [
+        10376575016438337600,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 1,
+      "nodes": 1518818
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 36,
+      "key": [
+        10376575016438339584,
+        131072
+      ],
+      "raw_key": [
+        10376575016438339584,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 214353
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 37,
+      "key": [
+        10376575016438599680,
+        131072
+      ],
+      "raw_key": [
+        10376575016438599680,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 1205551
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 38,
+      "key": [
+        10376575016471891968,
+        131072
+      ],
+      "raw_key": [
+        10376575016471891968,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 259666
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 39,
+      "key": [
+        10376575017512079360,
+        131072
+      ],
+      "raw_key": [
+        10376575017512079360,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 455589
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 40,
+      "key": [
+        10376575033618206720,
+        131072
+      ],
+      "raw_key": [
+        10376575033618206720,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 800654
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 41,
+      "key": [
+        10376576115949965312,
+        131072
+      ],
+      "raw_key": [
+        10376576115949965312,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 61,
+      "verdict": 1,
+      "nodes": 87209
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 42,
+      "key": [
+        10376592608624381952,
+        131072
+      ],
+      "raw_key": [
+        10376592608624381952,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 68,
+      "verdict": 1,
+      "nodes": 199380
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 43,
+      "key": [
+        10378826816252022784,
+        131072
+      ],
+      "raw_key": [
+        10378826816252022784,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 52,
+      "verdict": 1,
+      "nodes": 30420
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11348749523/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11348749523,
+      "row": 44,
+      "key": [
+        10664805392590049280,
+        131072
+      ],
+      "raw_key": [
+        10664805392590049280,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 62,
+      "verdict": 1,
+      "nodes": 204634
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 3,
+      "key": [
+        1154188142003093504,
+        536887296
+      ],
+      "raw_key": [
+        1154188142003093504,
+        536887296
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 280437
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 4,
+      "key": [
+        1154188142003093506,
+        536870912
+      ],
+      "raw_key": [
+        1154188142003093506,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 2,
+      "nodes": 4146579
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 5,
+      "key": [
+        1154188150593028096,
+        536870912
+      ],
+      "raw_key": [
+        1154188150593028096,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 395944
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 6,
+      "key": [
+        1190216939022057472,
+        536870912
+      ],
+      "raw_key": [
+        1190216939022057472,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 1636144
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 7,
+      "key": [
+        1297036692682707968,
+        536870920
+      ],
+      "raw_key": [
+        1297036692682707968,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 81,
+      "verdict": 1,
+      "nodes": 2338118
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 8,
+      "key": [
+        1297036692818001920,
+        16
+      ],
+      "raw_key": [
+        1297036692818001920,
+        16
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 108765
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 9,
+      "key": [
+        1297036692818001920,
+        16384
+      ],
+      "raw_key": [
+        1297036692818001920,
+        16384
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 555111
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 10,
+      "key": [
+        1297036692818001920,
+        262144
+      ],
+      "raw_key": [
+        1297036692818001920,
+        262144
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 167382
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 11,
+      "key": [
+        1297036692818001920,
+        134217728
+      ],
+      "raw_key": [
+        1297036692818001920,
+        134217728
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 165582
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 12,
+      "key": [
+        1297036692818001921,
+        0
+      ],
+      "raw_key": [
+        1297036692818001921,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 97331
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 13,
+      "key": [
+        1297036692818001936,
+        0
+      ],
+      "raw_key": [
+        1297036692818001936,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 927572
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 14,
+      "key": [
+        1297036692818002944,
+        0
+      ],
+      "raw_key": [
+        1297036692818002944,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 77,
+      "verdict": 1,
+      "nodes": 265117
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 15,
+      "key": [
+        1297036692818526208,
+        0
+      ],
+      "raw_key": [
+        1297036692818526208,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 67,
+      "verdict": 1,
+      "nodes": 103397
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 16,
+      "key": [
+        1297036693086437376,
+        0
+      ],
+      "raw_key": [
+        1297036693086437376,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 68,
+      "verdict": 1,
+      "nodes": 499442
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 17,
+      "key": [
+        1297036701407936512,
+        0
+      ],
+      "raw_key": [
+        1297036701407936512,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 489448
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 18,
+      "key": [
+        1297036830256955392,
+        0
+      ],
+      "raw_key": [
+        1297036830256955392,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 100312
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 19,
+      "key": [
+        1297041090729218048,
+        536870920
+      ],
+      "raw_key": [
+        1297041090729218048,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 83,
+      "verdict": 1,
+      "nodes": 157623
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 20,
+      "key": [
+        1297071877189010432,
+        68719476736
+      ],
+      "raw_key": [
+        1297071877189010432,
+        68719476736
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 77,
+      "verdict": 1,
+      "nodes": 626904
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 21,
+      "key": [
+        1298162592590594048,
+        557056
+      ],
+      "raw_key": [
+        1298162592590594048,
+        557056
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 72,
+      "verdict": 1,
+      "nodes": 438921
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 22,
+      "key": [
+        1298162592590594048,
+        134742016
+      ],
+      "raw_key": [
+        1298162592590594048,
+        134742016
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 169247
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 23,
+      "key": [
+        1298303330078949376,
+        536870912
+      ],
+      "raw_key": [
+        1298303330078949376,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 62,
+      "verdict": 1,
+      "nodes": 55170
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 24,
+      "key": [
+        1315051091327483904,
+        0
+      ],
+      "raw_key": [
+        1315051091327483904,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 680384
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 25,
+      "key": [
+        5908722711245389824,
+        0
+      ],
+      "raw_key": [
+        5908722711245389824,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 291757
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 26,
+      "key": [
+        10376293541462671360,
+        553650176
+      ],
+      "raw_key": [
+        10376293541462671360,
+        553650176
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 92118
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 27,
+      "key": [
+        10376293541595975680,
+        16
+      ],
+      "raw_key": [
+        10376293541595975680,
+        16
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 227271
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 28,
+      "key": [
+        10376293541595975680,
+        32768
+      ],
+      "raw_key": [
+        10376293541595975680,
+        32768
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 81,
+      "verdict": 1,
+      "nodes": 107598
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 29,
+      "key": [
+        10376293541595975680,
+        33554432
+      ],
+      "raw_key": [
+        10376293541595975680,
+        33554432
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 412004
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 30,
+      "key": [
+        10376575016438337536,
+        131073
+      ],
+      "raw_key": [
+        10376575016438337536,
+        131073
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 72,
+      "verdict": 1,
+      "nodes": 698837
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 31,
+      "key": [
+        10376575016438337536,
+        131104
+      ],
+      "raw_key": [
+        10376575016438337536,
+        131104
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 129211
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 32,
+      "key": [
+        10376575016438337536,
+        135168
+      ],
+      "raw_key": [
+        10376575016438337536,
+        135168
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 1097574
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 33,
+      "key": [
+        10376575016438337536,
+        16908288
+      ],
+      "raw_key": [
+        10376575016438337536,
+        16908288
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 72,
+      "verdict": 1,
+      "nodes": 401497
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 34,
+      "key": [
+        10376575016438337540,
+        131072
+      ],
+      "raw_key": [
+        10376575016438337540,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 72,
+      "verdict": 1,
+      "nodes": 737909
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 35,
+      "key": [
+        10376575016438337664,
+        131072
+      ],
+      "raw_key": [
+        10376575016438337664,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 1,
+      "nodes": 1125990
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 36,
+      "key": [
+        10376575016438353920,
+        131072
+      ],
+      "raw_key": [
+        10376575016438353920,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 2,
+      "nodes": 3333427
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 37,
+      "key": [
+        10376575016440434688,
+        131072
+      ],
+      "raw_key": [
+        10376575016440434688,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 54890
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 38,
+      "key": [
+        10376575016572555264,
+        131072
+      ],
+      "raw_key": [
+        10376575016572555264,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 65,
+      "verdict": 1,
+      "nodes": 148760
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 39,
+      "key": [
+        10376575018585821184,
+        131072
+      ],
+      "raw_key": [
+        10376575018585821184,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 132773
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 40,
+      "key": [
+        10376575153877291008,
+        131072
+      ],
+      "raw_key": [
+        10376575153877291008,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 58,
+      "verdict": 1,
+      "nodes": 59227
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 41,
+      "key": [
+        10376577215461593088,
+        131072
+      ],
+      "raw_key": [
+        10376577215461593088,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 2,
+      "nodes": 2630231
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 42,
+      "key": [
+        10376610200810426368,
+        131072
+      ],
+      "raw_key": [
+        10376610200810426368,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 1123386
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 43,
+      "key": [
+        10381078616065708032,
+        131072
+      ],
+      "raw_key": [
+        10381078616065708032,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 68,
+      "verdict": 1,
+      "nodes": 862227
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349632290/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349632290,
+      "row": 44,
+      "key": [
+        10953035768741761024,
+        131072
+      ],
+      "raw_key": [
+        10953035768741761024,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 59,
+      "verdict": 1,
+      "nodes": 529485
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 3,
+      "key": [
+        1154188142003093504,
+        536870916
+      ],
+      "raw_key": [
+        1154188142003093504,
+        536870916
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 2,
+      "nodes": 3764651
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 4,
+      "key": [
+        1154188142003093504,
+        553648128
+      ],
+      "raw_key": [
+        1154188142003093504,
+        553648128
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 422161
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 5,
+      "key": [
+        1154188142003097600,
+        536870912
+      ],
+      "raw_key": [
+        1154188142003097600,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 66,
+      "verdict": 1,
+      "nodes": 63093
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 6,
+      "key": [
+        1154188159182962688,
+        536870912
+      ],
+      "raw_key": [
+        1154188159182962688,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 77073
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 7,
+      "key": [
+        1297036692682706944,
+        536870922
+      ],
+      "raw_key": [
+        1297036692682706944,
+        536870922
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 56545
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 8,
+      "key": [
+        1297036692683755520,
+        536870920
+      ],
+      "raw_key": [
+        1297036692683755520,
+        536870920
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 180427
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 9,
+      "key": [
+        1297036692818001920,
+        32
+      ],
+      "raw_key": [
+        1297036692818001920,
+        32
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 133327
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 10,
+      "key": [
+        1297036692818001920,
+        32768
+      ],
+      "raw_key": [
+        1297036692818001920,
+        32768
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 148389
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 11,
+      "key": [
+        1297036692818001920,
+        16777216
+      ],
+      "raw_key": [
+        1297036692818001920,
+        16777216
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 723089
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 12,
+      "key": [
+        1297036692818001920,
+        268435456
+      ],
+      "raw_key": [
+        1297036692818001920,
+        268435456
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 95962
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 13,
+      "key": [
+        1297036692818001922,
+        0
+      ],
+      "raw_key": [
+        1297036692818001922,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 527389
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 14,
+      "key": [
+        1297036692818001984,
+        0
+      ],
+      "raw_key": [
+        1297036692818001984,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 1,
+      "nodes": 194459
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 15,
+      "key": [
+        1297036692818003968,
+        0
+      ],
+      "raw_key": [
+        1297036692818003968,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 72,
+      "verdict": 1,
+      "nodes": 171593
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 16,
+      "key": [
+        1297036692820099072,
+        0
+      ],
+      "raw_key": [
+        1297036692820099072,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 66,
+      "verdict": 1,
+      "nodes": 110580
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 17,
+      "key": [
+        1297036693354872832,
+        0
+      ],
+      "raw_key": [
+        1297036693354872832,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 87145
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 18,
+      "key": [
+        1297036709997871104,
+        0
+      ],
+      "raw_key": [
+        1297036709997871104,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 83,
+      "verdict": 1,
+      "nodes": 866145
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 19,
+      "key": [
+        1297036967695908864,
+        0
+      ],
+      "raw_key": [
+        1297036967695908864,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 317154
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 20,
+      "key": [
+        1297041090864513024,
+        0
+      ],
+      "raw_key": [
+        1297041090864513024,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 103531
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 21,
+      "key": [
+        1297107061562179584,
+        0
+      ],
+      "raw_key": [
+        1297107061562179584,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 509294
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 22,
+      "key": [
+        1298162592590594048,
+        655360
+      ],
+      "raw_key": [
+        1298162592590594048,
+        655360
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 52021
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 23,
+      "key": [
+        1298162592590594048,
+        268959744
+      ],
+      "raw_key": [
+        1298162592590594048,
+        268959744
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 588645
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 24,
+      "key": [
+        1301540292445372416,
+        0
+      ],
+      "raw_key": [
+        1301540292445372416,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 1,
+      "nodes": 165855
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 25,
+      "key": [
+        1369094286855929856,
+        0
+      ],
+      "raw_key": [
+        1369094286855929856,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 1630969
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 26,
+      "key": [
+        10376293541462671360,
+        536872964
+      ],
+      "raw_key": [
+        10376293541462671360,
+        536872964
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 63599
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 27,
+      "key": [
+        10376293541462671360,
+        570427392
+      ],
+      "raw_key": [
+        10376293541462671360,
+        570427392
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 83,
+      "verdict": 1,
+      "nodes": 1317627
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 28,
+      "key": [
+        10376293541595975680,
+        32
+      ],
+      "raw_key": [
+        10376293541595975680,
+        32
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 77,
+      "verdict": 1,
+      "nodes": 411196
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 29,
+      "key": [
+        10376293541595975680,
+        65536
+      ],
+      "raw_key": [
+        10376293541595975680,
+        65536
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 68,
+      "verdict": 1,
+      "nodes": 67785
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 30,
+      "key": [
+        10376293541595975680,
+        67108864
+      ],
+      "raw_key": [
+        10376293541595975680,
+        67108864
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 177214
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 31,
+      "key": [
+        10376575016438337536,
+        131074
+      ],
+      "raw_key": [
+        10376575016438337536,
+        131074
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 1295571
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 32,
+      "key": [
+        10376575016438337536,
+        131136
+      ],
+      "raw_key": [
+        10376575016438337536,
+        131136
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 62,
+      "verdict": 1,
+      "nodes": 544173
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 33,
+      "key": [
+        10376575016438337536,
+        139264
+      ],
+      "raw_key": [
+        10376575016438337536,
+        139264
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 1917919
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 34,
+      "key": [
+        10376575016438337536,
+        134348800
+      ],
+      "raw_key": [
+        10376575016438337536,
+        134348800
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 74216
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 35,
+      "key": [
+        10376575016438337544,
+        131072
+      ],
+      "raw_key": [
+        10376575016438337544,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 68,
+      "verdict": 1,
+      "nodes": 56088
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 36,
+      "key": [
+        10376575016438338048,
+        131072
+      ],
+      "raw_key": [
+        10376575016438338048,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 81,
+      "verdict": 1,
+      "nodes": 808184
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 37,
+      "key": [
+        10376575016438403072,
+        131072
+      ],
+      "raw_key": [
+        10376575016438403072,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 146964
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 38,
+      "key": [
+        10376575016442531840,
+        131072
+      ],
+      "raw_key": [
+        10376575016442531840,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 96938
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 39,
+      "key": [
+        10376575016706772992,
+        131072
+      ],
+      "raw_key": [
+        10376575016706772992,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 1300750
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 40,
+      "key": [
+        10376575020733304832,
+        131072
+      ],
+      "raw_key": [
+        10376575020733304832,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 1,
+      "nodes": 670689
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 41,
+      "key": [
+        10376575291316244480,
+        131072
+      ],
+      "raw_key": [
+        10376575291316244480,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 1,
+      "nodes": 336032
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 42,
+      "key": [
+        10376579414484848640,
+        131072
+      ],
+      "raw_key": [
+        10376579414484848640,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 213032
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 43,
+      "key": [
+        10376645385182515200,
+        131072
+      ],
+      "raw_key": [
+        10376645385182515200,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 68,
+      "verdict": 1,
+      "nodes": 787788
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 44,
+      "key": [
+        10412603813457301504,
+        131072
+      ],
+      "raw_key": [
+        10412603813457301504,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 60,
+      "verdict": 1,
+      "nodes": 30420
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-artifacts/unpacked/11349786542/out.csv",
+      "run_id": 37320154141,
+      "artifact_id": 11349786542,
+      "row": 45,
+      "key": [
+        12682418025652031488,
+        131072
+      ],
+      "raw_key": [
+        12682418025652031488,
+        131072
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 59,
+      "verdict": 1,
+      "nodes": 48126
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357459506/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357459506,
+      "row": 3,
+      "key": [
+        1224979102000218112,
+        67108864
+      ],
+      "raw_key": [
+        1224979102000218112,
+        67108864
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 2,
+      "nodes": 3788344
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357459506/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357459506,
+      "row": 4,
+      "key": [
+        1441160676851646464,
+        553648128
+      ],
+      "raw_key": [
+        1441160676851646464,
+        553648128
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 154657
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357459506/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357459506,
+      "row": 5,
+      "key": [
+        5909285661064052736,
+        0
+      ],
+      "raw_key": [
+        5909285661064052736,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 524601
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357459506/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357459506,
+      "row": 6,
+      "key": [
+        10376293816339529984,
+        536887296
+      ],
+      "raw_key": [
+        10376293816339529984,
+        536887296
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 148097
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357954415/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357954415,
+      "row": 3,
+      "key": [
+        1153203263185620992,
+        0
+      ],
+      "raw_key": [
+        1153203263185620992,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 798078
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357954415/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357954415,
+      "row": 4,
+      "key": [
+        1585267069908221960,
+        0
+      ],
+      "raw_key": [
+        1585267069908221960,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 117437
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357954415/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357954415,
+      "row": 5,
+      "key": [
+        1152921525142159360,
+        262144
+      ],
+      "raw_key": [
+        1152921525142159360,
+        262144
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 2,
+      "nodes": 3715905
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11357954415/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11357954415,
+      "row": 6,
+      "key": [
+        10449477035407441928,
+        0
+      ],
+      "raw_key": [
+        10449477035407441928,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 505027
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358113745/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358113745,
+      "row": 3,
+      "key": [
+        1333074285794754560,
+        536870912
+      ],
+      "raw_key": [
+        1333074285794754560,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 611224
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358113745/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358113745,
+      "row": 4,
+      "key": [
+        1153202982939004928,
+        0
+      ],
+      "raw_key": [
+        1153202982939004928,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 346662
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358113745/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358113745,
+      "row": 5,
+      "key": [
+        1873497445120344352,
+        0
+      ],
+      "raw_key": [
+        1873497445120344352,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 2,
+      "nodes": 4781324
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358113745/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358113745,
+      "row": 6,
+      "key": [
+        10448914085452980232,
+        0
+      ],
+      "raw_key": [
+        10448914085452980232,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 314155
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358392488/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358392488,
+      "row": 3,
+      "key": [
+        1297036696038211584,
+        0
+      ],
+      "raw_key": [
+        1297036696038211584,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 2,
+      "nodes": 2718916
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358392488/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358392488,
+      "row": 4,
+      "key": [
+        1224979102956519424,
+        536871040
+      ],
+      "raw_key": [
+        1224979102956519424,
+        536871040
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 2,
+      "nodes": 3360423
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358392488/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358392488,
+      "row": 5,
+      "key": [
+        1302666192218226688,
+        0
+      ],
+      "raw_key": [
+        1302666192218226688,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 2,
+      "nodes": 3519947
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-artifacts/unpacked/11358392488/out.csv",
+      "run_id": 37339357570,
+      "artifact_id": 11358392488,
+      "row": 6,
+      "key": [
+        1154610354602377216,
+        16777216
+      ],
+      "raw_key": [
+        1154610354602377216,
+        16777216
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 2,
+      "nodes": 4300929
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 3,
+      "key": [
+        1224979102000218112,
+        67108864
+      ],
+      "raw_key": [
+        1224979102000218112,
+        67108864
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 2,
+      "nodes": 3788344
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 4,
+      "key": [
+        1441160676851646464,
+        553648128
+      ],
+      "raw_key": [
+        1441160676851646464,
+        553648128
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 154657
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 5,
+      "key": [
+        5909285661064052736,
+        0
+      ],
+      "raw_key": [
+        5909285661064052736,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 524601
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 6,
+      "key": [
+        10376293816339529984,
+        536887296
+      ],
+      "raw_key": [
+        10376293816339529984,
+        536887296
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 76,
+      "verdict": 1,
+      "nodes": 148097
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 7,
+      "key": [
+        1161928978739625984,
+        536887296
+      ],
+      "raw_key": [
+        1161928978739625984,
+        536887296
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 2,
+      "nodes": 4824794
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 8,
+      "key": [
+        1730508156826550272,
+        536870912
+      ],
+      "raw_key": [
+        1730508156826550272,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 164458
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 9,
+      "key": [
+        1302103242264281088,
+        0
+      ],
+      "raw_key": [
+        1302103242264281088,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 81,
+      "verdict": 1,
+      "nodes": 1728697
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358297783/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358297783,
+      "row": 10,
+      "key": [
+        1310547491565207552,
+        0
+      ],
+      "raw_key": [
+        1310547491565207552,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 84,
+      "verdict": 2,
+      "nodes": 4933134
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 3,
+      "key": [
+        1333074285794754560,
+        536870912
+      ],
+      "raw_key": [
+        1333074285794754560,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 69,
+      "verdict": 1,
+      "nodes": 611224
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 4,
+      "key": [
+        1153202982939004928,
+        0
+      ],
+      "raw_key": [
+        1153202982939004928,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 346662
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 5,
+      "key": [
+        1873497445120344352,
+        0
+      ],
+      "raw_key": [
+        1873497445120344352,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 2,
+      "nodes": 4781324
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 6,
+      "key": [
+        10448914085452980232,
+        0
+      ],
+      "raw_key": [
+        10448914085452980232,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 314155
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 7,
+      "key": [
+        1306043891954360320,
+        0
+      ],
+      "raw_key": [
+        1306043891954360320,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 77,
+      "verdict": 2,
+      "nodes": 4700477
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 8,
+      "key": [
+        1152930300699934720,
+        637534208
+      ],
+      "raw_key": [
+        1152930300699934720,
+        637534208
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 854649
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 9,
+      "key": [
+        1161928703861719040,
+        637534208
+      ],
+      "raw_key": [
+        1161928703861719040,
+        637534208
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 398662
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358452816/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358452816,
+      "row": 10,
+      "key": [
+        1882504644240998656,
+        0
+      ],
+      "raw_key": [
+        1882504644240998656,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 82,
+      "verdict": 2,
+      "nodes": 5522429
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 3,
+      "key": [
+        1153203263185620992,
+        0
+      ],
+      "raw_key": [
+        1153203263185620992,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 70,
+      "verdict": 1,
+      "nodes": 798078
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 4,
+      "key": [
+        1585267069908221960,
+        0
+      ],
+      "raw_key": [
+        1585267069908221960,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 1,
+      "nodes": 117437
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 5,
+      "key": [
+        1152921525142159360,
+        262144
+      ],
+      "raw_key": [
+        1152921525142159360,
+        262144
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 74,
+      "verdict": 2,
+      "nodes": 3715905
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 6,
+      "key": [
+        10449477035407441928,
+        0
+      ],
+      "raw_key": [
+        10449477035407441928,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 1,
+      "nodes": 505027
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 7,
+      "key": [
+        1442277780666449920,
+        553648128
+      ],
+      "raw_key": [
+        1442277780666449920,
+        553648128
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 77,
+      "verdict": 1,
+      "nodes": 307244
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 8,
+      "key": [
+        1586392968742305800,
+        0
+      ],
+      "raw_key": [
+        1586392968742305800,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 1,
+      "nodes": 667369
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 9,
+      "key": [
+        10376856491549270016,
+        16777216
+      ],
+      "raw_key": [
+        10376856491549270016,
+        16777216
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 2,
+      "nodes": 4535257
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11358622109/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11358622109,
+      "row": 10,
+      "key": [
+        1153207377898508288,
+        536870912
+      ],
+      "raw_key": [
+        1153207377898508288,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 83,
+      "verdict": 2,
+      "nodes": 4729227
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 3,
+      "key": [
+        1297036696038211584,
+        0
+      ],
+      "raw_key": [
+        1297036696038211584,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 71,
+      "verdict": 2,
+      "nodes": 2718916
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 4,
+      "key": [
+        1224979102956519424,
+        536871040
+      ],
+      "raw_key": [
+        1224979102956519424,
+        536871040
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 73,
+      "verdict": 2,
+      "nodes": 3360423
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 5,
+      "key": [
+        1302666192218226688,
+        0
+      ],
+      "raw_key": [
+        1302666192218226688,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 2,
+      "nodes": 3519947
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 6,
+      "key": [
+        1154610354602377216,
+        16777216
+      ],
+      "raw_key": [
+        1154610354602377216,
+        16777216
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 75,
+      "verdict": 2,
+      "nodes": 4300929
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 7,
+      "key": [
+        1585830018788360200,
+        0
+      ],
+      "raw_key": [
+        1585830018788360200,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 78,
+      "verdict": 1,
+      "nodes": 280131
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 8,
+      "key": [
+        1594274268089286664,
+        0
+      ],
+      "raw_key": [
+        1594274268089286664,
+        0
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 79,
+      "verdict": 2,
+      "nodes": 3874701
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 9,
+      "key": [
+        1233986297916424192,
+        536870912
+      ],
+      "raw_key": [
+        1233986297916424192,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 80,
+      "verdict": 2,
+      "nodes": 4766200
+    },
+    {
+      "source": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-artifacts/unpacked/11359076448/out.csv",
+      "run_id": 37339329716,
+      "artifact_id": 11359076448,
+      "row": 10,
+      "key": [
+        1738389456173531136,
+        536870912
+      ],
+      "raw_key": [
+        1738389456173531136,
+        536870912
+      ],
+      "normalized": false,
+      "stones": 6,
+      "is_or": 1,
+      "legal": 83,
+      "verdict": 2,
+      "nodes": 5718647
+    }
+  ],
+  "preserved_csv_copies": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard0.csv",
+      "bytes": 2974,
+      "sha256": "f3ffb67a77cf58a30524c6d786127004216b701349aa3a578e7c6bde95e6ae0e",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard1.csv",
+      "bytes": 2895,
+      "sha256": "20957d6dd3b8e3722fa93634067a28033aea68009bec6fd48486392db2978177",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard2.csv",
+      "bytes": 2897,
+      "sha256": "e60dfb4cf77b7caf65e907785e06dc6524c657b86c6407f7d3dc38b4cd47e8fd",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard3.csv",
+      "bytes": 2940,
+      "sha256": "0cc4558d15093abb7aefd14bfe207665356ff090fa0a5ee0967003f593d8f2f1",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard0.csv",
+      "bytes": 722,
+      "sha256": "23abdde00d84f22812119a66c37c12a7abe44ed174a48d0c0bec5ed8b2202c73",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard1.csv",
+      "bytes": 707,
+      "sha256": "789742065c72ce6021f80f80582bccfc5e29e3e13ac31433d1c9209d7f0ef2ea",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard2.csv",
+      "bytes": 711,
+      "sha256": "054cc27858eb94f904860208a136c8dbc3f41fe9cfd57d769406b43e9eba3bc8",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard3.csv",
+      "bytes": 716,
+      "sha256": "e5ddc68b454d15cc401a47b65de75a31d782a952c9ed017a1091ba3bb16e4aaa",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard0.csv",
+      "bytes": 469,
+      "sha256": "7638acfd54aef2450f7b429250353a7228b34fee5bde4187ab44aee6f68a0b16",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard1.csv",
+      "bytes": 450,
+      "sha256": "7401bb19b04e3aab3e8169a7d2fd1d050ecf47080386e77f716c9b9a479ef865",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard2.csv",
+      "bytes": 455,
+      "sha256": "6b19807618013f1a900af5419905ce2113f4cbefdc66560318ebafc2e1b36390",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard3.csv",
+      "bytes": 463,
+      "sha256": "9489a99cd0652a5a4bbfb365069ac8df5044e5497be1a7f10977d2530cfddc1e",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-s5-shard0.csv",
+      "bytes": 390,
+      "sha256": "b2d559f1acb5fd7e24a60087aa87ff089e2905e351d481569507847dde433619",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-s5-shard1.csv",
+      "bytes": 393,
+      "sha256": "5baff4f7df965037bdec3f98fe551c6f04adc4cff69997a505b3ab3f88f35e1e",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-s5-shard2.csv",
+      "bytes": 391,
+      "sha256": "d81bca760e84c47eee3d80fd0162a8fa37a956de33692981a89f05ddd9cfa514",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight-shared-s5-shard3.csv",
+      "bytes": 463,
+      "sha256": "ab9cc2448c3adb4b9905a37152e80f3adf2863caf3622338fcbd38cec1382cde",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-s5-shard0.csv",
+      "bytes": 395,
+      "sha256": "a40e5dfccd518cbc75ecaafa6391a87bfea35af6bb531367d547337a2445bf33",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-s5-shard1.csv",
+      "bytes": 450,
+      "sha256": "ca5634647f7822127e91e744e224244dab927689b9e3480e31df3e5629d335cb",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-s5-shard2.csv",
+      "bytes": 449,
+      "sha256": "b527033f644c60acca0e082098d87391bc162487d1aa0a1500bbe803bb7e9e9b",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/tight15-s5-shard3.csv",
+      "bytes": 450,
+      "sha256": "c44d8a5ade79266f4fdb2fc811a7b5326a9aaaaf8ed6f52235d4440a5a055d37",
+      "line_endings": "LF",
+      "purpose": "convenient byte-identical copy of saved shard out.csv; filename s5/s6 denotes row stone count"
+    }
+  ],
+  "recovery_checks": {
+    "all_artifact_api_digests_match_zip_sha256": true,
+    "unpacked_bytes_recorded": true,
+    "csv_line_endings": "all retained shard out.csv files are LF; no newline conversion was applied",
+    "s6_schema": "11 columns; stones=6; is_or=1; verdict result 0/1/2; legal counts match geometry",
+    "canonicality": "all saved s6 rows are six-stone safe D4 canonical; normalized rows 0",
+    "workflow_failure": "run 37339329716 ended failure; 32 s6 exact rows exist in raw shards but no merged proof artifact/full workflow verification; recorded without upgrading status",
+    "saved_outcomes": "exact solver outputs only, not independent proofs"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "boundary": {
+    "complete_canonical_safe_children": 86,
+    "csv_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\next3-hard1-s6-boundary.csv",
+    "csv_sha256": "67512fbaf256b80f76a27178c94fcc6e274a0b3d3770b98a174cf493410f2dc3",
+    "geometry_meta_csv_exact_set_and_legal_counts_match": true,
+    "materialized_children": 86,
+    "meta_children": 86,
+    "meta_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\next3-hard1-s6-meta.json",
+    "meta_sha256": "4f8afb114cb777da257348696f3239d0e39ccc912fe22ef5999adb2a25a023a2",
+    "parent_child_relations": 86,
+    "runtime_geometry_regenerated": true
+  },
+  "claim_scope": "The s6 LOSS value is trusted as recorded in the saved solver replay. This verifier does not independently re-prove that game outcome; it independently checks replay structure, canonical/safe geometry, legal count, parent incidence, and the complete parent boundary.",
+  "derived_cache": {
+    "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\next3-hard1-derived-s5.cache",
+    "rows": 1,
+    "sha256": "9e43a19fdb792fac87d769c698f0385956c77cb87cb143dbbb587bbc031ddae8",
+    "verdict": "LOSS"
+  },
+  "parent": {
+    "derived_verdict": "LOSS",
+    "is_or": 0,
+    "key_lo_hi": [
+      1297318167659941888,
+      0
+    ],
+    "loss_witness_count": 1,
+    "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\next3-hard1-s5.csv",
+    "sha256": "c0d11276c52e681f3a152018029c42400d79cf2332c9fc848a70942a65b363ab",
+    "stones": 5
+  },
+  "raw_source": {
+    "budget": 15000000,
+    "is_or": 1,
+    "key_lo_hi": [
+      1297320366683197440,
+      0
+    ],
+    "legal": 81,
+    "nodes": 4508377,
+    "path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next3-hard1-hard-s6-15m-out.csv",
+    "rows": 1,
+    "sha256": "8c5f17589611425a9784711168ae207f3b30a9e09ebe47b2f9d31b9348755132",
+    "solver_result": 2,
+    "stones": 6,
+    "verdict": "LOSS",
+    "wall_s": 21.0
+  },
+  "schema": "n11-next3-hard1-loss-witness-independent-geometry-audit-v1",
+  "witness_incidence": {
+    "canonical_key_convention": "(lo,hi); lo contains points 0..63, hi contains points 64..120",
+    "canonical_ordering": "D4 minimization compares (hi,lo) lexicographically, then stores/serializes the result as (lo,hi), matching dfpn_edge_classes.d4_canonical_key",
+    "child_in_complete_boundary": true,
+    "parent_recovered_by_reverse_point_deletion": true
+  }
+}
