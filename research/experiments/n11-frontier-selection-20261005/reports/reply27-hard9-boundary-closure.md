@@ -39,4 +39,14 @@ The derivation script is:
 
 `research/experiments/n11-frontier-selection-20261005/scripts/derive_hard9_s5_cache.py`
 
+
+## Cheap-witness heuristics failed
+
+Before the 816-root boundary solve, the focused workflow `N11 hard s6 witness probe` (run `37268780726`) tested two cheaper policies.
+
+- the six shared s6 roots from the first outcome-blind greedy cover were **WIN 6 / LOSS 0**, all exact;
+- a broader 54-root low-legal probe was **WIN 54 / LOSS 0**, all exact.
+
+So neither maximizing shared parents nor trying the cheapest-looking low-legal s6 first found a LOSS witness for any hard s5. The complete boundary nevertheless contained **81 LOSS s6** and closed eight parents as LOSS. The measured positive relation between legal count and exact-search cost therefore must not be reinterpreted as an outcome predictor.
+
 The proof is a frontier result only. It does not by itself decide reply=27 or the 11×11 empty board.
