@@ -27,8 +27,11 @@ This experiment records saved-result recovery and audit, followed by local finit
 - Merging those 84 LOSS results produces [post-next4-s5.cache](output/post-next4-s5.cache): 3,234 exact entries (65 WIN, 3,169 LOSS, no conflicts). At this cache, cardinality reports 21 LOSS, 131 WIN, and 3,232 UNKNOWN s4 classes; 84/119 root vertices are secured and 35 remain. Minimum additional class cover and rational LP dual are both 10. The 10-class repair schedule has additive/distinct UNKNOWN s5 work 924; exact-15 has 1,054. These are scheduling counts, not proofs of the UNKNOWN classes. See [receipt](output/post-next4-receipt.json), [cardinality](output/post-next4-cardinality.json), [repair](output/post-next4-repair.json), and [repair targets](output/post-next4-repair.csv).
 - The then-next ranked target was class `(1306043891937574912, 0)`: 16 known LOSS and 87 UNKNOWN among 103 canonical children, with new coverage vertices 67, 75, 103, and 105. It was subsequently completed as described below; the [ranking](output/post-next4-ranking.json) and [target list](output/post-next4-best-class.csv) document scheduling only.
 - The 3,234-entry checkpoint is now historical. The next5 model selected eight of the 87 UNKNOWN children of class `(1306043891937574912, 0)`; all eight saved replays are LOSS in 39,499,200 nodes. The remaining 79 are also LOSS in 343,456,905 nodes. Together with the prior 16 known LOSS children, the [direct boundary verifier](output/next5-boundary-verification.log) checks all 103 canonical s5 children as LOSS, with coverage vertices 67, 75, 103, and 105. The [model inputs and provenance](output/next5-model8.json), [eight model targets](output/next5-model8.csv), [remaining targets](output/next5-remaining79.csv), [model summary and replay manifest](output/next5-model8-summary.json) / [sources](output/next5-model8-sources.json), [completion summary and replay manifest](output/next5-completion79-summary.json) / [sources](output/next5-completion79-sources.json), and [raw replay CSVs](output/raw/next5-model8-out.csv) / [remaining replays](output/raw/next5-completion79-out.csv) preserve these exact supplied-target results. The class is LOSS under these saved solver outcomes and independent boundary geometry checks.
-- Merging the 87 new LOSS results yields [post-next5-s5.cache](output/post-next5-s5.cache): 3,321 exact entries (65 WIN, 3,256 LOSS, zero conflicts); the [receipt](output/post-next5-receipt.json) records source hashes and counts. Cardinality reports 22 LOSS, 131 WIN, and 3,231 UNKNOWN classes; 88/119 root vertices are secured and 31 remain. Minimum additional class cover and rational LP dual are both 9. The 9-class repair schedule has additive/unique UNKNOWN s5 work 837; exact-15 has additive 1,049 and distinct union 1,048. These are scheduling counts, not proofs of the UNKNOWN classes. See [cardinality](output/post-next5-cardinality.json), [repair](output/post-next5-repair.json), and [repair targets](output/post-next5-repair.csv).
-- The next heuristic scheduling target under this 3,321-entry cache is class `(1297036967560609796, 0)`: 10 known LOSS and 93 UNKNOWN among 103 canonical children, with new coverage vertices 22, 32, 58, and 62. The [ranking](output/post-next5-ranking.json) and [target list](output/post-next5-best-class.csv) guide scheduling only; no verdict is inferred from them.
+- The 3,321-entry checkpoint is now historical. Merging the 87 new LOSS results yields [post-next5-s5.cache](output/post-next5-s5.cache): 3,321 exact entries (65 WIN, 3,256 LOSS, zero conflicts); the [receipt](output/post-next5-receipt.json) records source hashes and counts. Cardinality reports 22 LOSS, 131 WIN, and 3,231 UNKNOWN classes; 88/119 root vertices are secured and 31 remain. Minimum additional class cover and rational LP dual are both 9. The 9-class repair schedule has additive/unique UNKNOWN s5 work 837; exact-15 has additive 1,049 and distinct union 1,048. These are scheduling counts, not proofs of the UNKNOWN classes. See [cardinality](output/post-next5-cardinality.json), [repair](output/post-next5-repair.json), and [repair targets](output/post-next5-repair.csv).
+- Under the now-historical 3,321-entry cache, the next6 target was class `(1297036967560609796, 0)`: 10 known LOSS and 93 UNKNOWN among 103 canonical children, with new coverage vertices 22, 32, 58, and 62. The [ranking](output/post-next5-ranking.json) and [target list](output/post-next5-best-class.csv) were scheduling only.
+- The next6 finite search completed class `(1297036967560609796, 0)`. Eight model-selected targets were LOSS in 27,919,379 nodes; of the remaining 85, 83 were LOSS in 401,091,716 nodes and two were UNKNOWN. The separate 181-position s6 adaptive batch returned 179 WIN and two UNKNOWN in 61,142,979 nodes; focused retries returned LOSS for both unresolved positions in 4,832,571 and 6,689,407 nodes. The 29-source expanded s6 audit contains 1,467 unique canonical keys (1,346 WIN, 115 LOSS, six UNKNOWN-only, no conflicts); its 602 safe parents include 455 reply27-related parents, of which 449 LOSS results were already known and six were new. The [hard-parent geometry audit](output/next6-hard-boundary-audit.json) checked full 90- and 91-child parent boundaries and propagated the two saved LOSS results. The [direct class verifier](output/next6-boundary-verification.log) confirms all 103 canonical s5 children of class `(1297036967560609796, 0)` are LOSS, with coverage vertices 22, 32, 58, and 62. The [next6 model record and target lists](output/next6-model8.json) / [selected targets](output/next6-model8.csv) / [remaining targets](output/next6-remaining85.csv), replay summaries and source manifests, [expanded s6 audit](output/next6-expanded-s6-audit.json), and [saved raw replay rows](output/raw/next6-model8-out.csv), [completion85](output/raw/next6-completion85-out.csv), [adaptive s6](output/raw/next6-hard-s6-out.csv), and [focused retries](output/raw/next6-focused15m-out.csv) preserve this finite result. The solver verdicts remain exact saved/local outputs; the audit independently checks their geometry and propagation.
+- Merging the six new LOSS parents from the audited expanded s6 results with the partial 3,412-entry cache produces [post-next6-s5.cache](output/post-next6-s5.cache): 3,418 exact entries (65 WIN, 3,353 LOSS, zero conflicts). The [receipt](output/post-next6-receipt.json) records its source hashes. Cardinality reports 23 LOSS, 131 WIN, and 3,230 UNKNOWN classes; 92/119 root vertices are secured and 27 remain. The minimum additional class cover and rational LP dual are both 8. The 8-class repair schedule has additive/unique UNKNOWN s5 work 744; exact-15 has additive 1,052 and distinct union 1,048. These are scheduling counts, and UNKNOWN classes remain unproved. See [cardinality](output/post-next6-cardinality.json) and [repair](output/post-next6-repair.json).
+- The next ranked target under the 3,418-entry cache is class `(1301540292310335488, 0)`: 16 known LOSS and 95 UNKNOWN among 111 canonical children, with new coverage vertices 78, 86, 92, and 94. The [ranking](output/post-next6-ranking.json) and [target list](output/post-next6-best-class.csv) guide scheduling only; no verdict is inferred.
 - Three of six separate cold residual mex cross-checks completed (120, 158, and 192 seconds). They are not adopted into the production cache; the cross-check set is incomplete.
 
 These are finite cache and class results. Under the fixed first-player proposition, if s4 LOSS results cover all 119 third-move choices, then each s3 odd-stone AND node is LOSS and the s2 OR node `{60,27}` is LOSS. This establishes the refutation branch where the second player answers the central first move 60 with 27; it does not show that the empty root is a loss, because other first moves still require analysis. The 11x11 empty root and `{60,27}` outcome remain UNKNOWN in the current record, and no terminal AND/OR proof is complete. The six evidence-recovery regression tests and 33 knowledge tests passed.
@@ -240,7 +243,75 @@ python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply
   --cache research/experiments/n11-boundary-recovery-20261006/output/post-next5-s5.cache
 ```
 
-The latest finite frontier outputs are [post-next5-cardinality.json](output/post-next5-cardinality.json), [post-next5-repair.json](output/post-next5-repair.json), and [post-next5-ranking.json](output/post-next5-ranking.json). The next ranked target is `(1297036967560609796, 0)` with 10 known LOSS and 93 UNKNOWN children; the ranking is scheduling only. UNKNOWN classes remain unproved.
+The 3,321-entry finite frontier outputs are [post-next5-cardinality.json](output/post-next5-cardinality.json), [post-next5-repair.json](output/post-next5-repair.json), and [post-next5-ranking.json](output/post-next5-ranking.json). At that historical checkpoint, the next target was `(1297036967560609796, 0)` with 10 known LOSS and 93 UNKNOWN children; ranking was for scheduling only.
+
+### Reproduce the next6 s6 propagation and frontier
+
+The full class audit confirms that `(1297036967560609796, 0)` is LOSS across all 103 canonical children, with coverage vertices 22, 32, 58, and 62. The merged [post-next6-s5.cache](output/post-next6-s5.cache) has 3,418 entries (65 WIN, 3,353 LOSS, no conflicts). Cardinality reports 23 LOSS, 131 WIN, 3,230 UNKNOWN, 92/119 secured vertices, and a minimum cover of 8 matching its rational dual. Repair cost is 744 additive/unique for eight classes; exact-15 is 1,052 additive and 1,048 unique. The latest ranking selects `(1301540292310335488, 0)` (16 known LOSS, 95 UNKNOWN of 111; coverage 78, 86, 92, 94). These work counts and ranking do not prove the remaining UNKNOWN classes.
+
+The saved 29-source audit enumerates the fixed curated sources plus the explicitly included extras. Recreate its reverse propagation by using only `caller_supplied_extra` entries from the manifest; this keeps the source scope explicit:
+
+```sh
+python - <<'PY'
+import json, subprocess
+from pathlib import Path
+root = "research/experiments/n11-boundary-recovery-20261006/output/"
+manifest = json.loads(Path(root + "next6-expanded-s6-audit.json").read_text(encoding="utf-8"))
+args = ["python", "research/experiments/n11-boundary-recovery-20261006/scripts/derive_all_saved_s6_loss_parents.py",
+        "--current-cache", root + "post-next6-partial-s5.cache",
+        "--out", "/tmp/next6-expanded-loss-s5.cache",
+        "--audit-out", "/tmp/next6-expanded-s6-audit.json"]
+for source in manifest["sources"]:
+    if source["source_kind"] == "caller_supplied_extra" and source["status"] == "included":
+        args += ["--extra-replay", source["path"].replace("\\", "/"), source["provenance"]]
+subprocess.run(args, check=True)
+PY
+
+python research/experiments/n11-frontier-selection-20261005/scripts/merge_exact_s5_evidence.py \
+  --cache research/experiments/n11-boundary-recovery-20261006/output/post-next6-partial-s5.cache \
+  --cache /tmp/next6-expanded-loss-s5.cache \
+  --out /tmp/post-next6-s5.cache \
+  --summary-out /tmp/post-next6-receipt.json
+
+python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
+  --class-lo 1297036967560609796 --class-hi 0 --expected-children 103 --allow-extra \
+  --cache /tmp/post-next6-s5.cache
+```
+
+The separate hard-parent audit can be regenerated from the preserved target CSV and expanded source audit:
+
+```sh
+python research/experiments/n11-boundary-recovery-20261006/scripts/audit_saved_s6_targets.py \
+  --targets research/experiments/n11-boundary-recovery-20261006/output/next6-hard-s5.csv \
+  --saved-audit research/experiments/n11-boundary-recovery-20261006/output/next6-expanded-s6-audit.json \
+  --current-cache research/experiments/n11-boundary-recovery-20261006/output/post-next6-partial-s5.cache \
+  --summary-out /tmp/next6-hard-boundary-audit.json \
+  --cache-out /tmp/next6-hard-derived-s5.cache
+```
+
+Recompute finite class counts and repair estimates under the merged cache with the existing frontier scripts and an isolated SciPy environment. Add `--geometry-cache .local/n11/reply27-geometry-v1.json.gz` when that optional local performance index is available; the direct class verifier above checks geometry independently.
+
+```sh
+uv run --no-project --with scipy --with numpy python \
+  research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py \
+  --s5-cache /tmp/post-next6-s5.cache --out /tmp/post-next6-cardinality.json
+
+uv run --no-project --with scipy --with numpy python \
+  research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+  --extra-s5-cache /tmp/post-next6-s5.cache \
+  --out /tmp/post-next6-repair.json \
+  --targets-out /tmp/post-next6-repair.csv
+```
+
+```sh
+uv run --no-project --with scipy --with numpy python \
+  research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py \
+  --repair-json /tmp/post-next6-repair.json \
+  --extra-s5-cache /tmp/post-next6-s5.cache \
+  --geometry-cache .local/n11/reply27-geometry-v1.json.gz \
+  --targets-out /tmp/post-next6-best-class.csv \
+  --out /tmp/post-next6-ranking.json
+```
 
 ### Optional geometry index
 
