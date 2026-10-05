@@ -1,0 +1,149 @@
+name: N11 reply27 current cache optimization
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-current-cache.yml"
+  workflow_dispatch:
+
+jobs:
+  optimize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+
+      - name: Download independently replayed base cache
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-full-replay-proof
+          path: /tmp/base
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37275321333
+
+      - name: Download 13-root class completion shards
+        uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-class-completion-*
+          path: /tmp/completion
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37308887341
+
+      - name: Merge every persisted exact s5 verdict
+        run: |
+          python - <<'PY'
+          import csv, glob, json
+          sources = [
+              "/tmp/base/reply27-combined-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-tight15-probes-s5.cache",
+          ]
+          verdict = {}
+          origin = {}
+          per = []
+          def put(key, val, src):
+              if val not in (1,2):
+                  return
+              old = verdict.get(key)
+              if old is not None and old != val:
+                  raise SystemExit(f"CONFLICT {key}: {old} from {origin[key]} vs {val} from {src}")
+              verdict[key] = val
+              origin.setdefault(key, src)
+
+          for src in sources:
+              n = 0
+              with open(src, newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0].startswith("#"): continue
+                      assert r[0] == "s5verdict", (src, r)
+                      put((int(r[1]), int(r[2])), int(r[4]), src)
+                      n += 1
+              per.append((src,n))
+
+          completion_rows = 0
+          for src in sorted(glob.glob("/tmp/completion/*.out")):
+              with open(src, newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0] != "replay": continue
+                      put((int(r[9]), int(r[10])), int(r[6]), src)
+                      completion_rows += 1
+
+          hist = {1:0,2:0}
+          for v in verdict.values(): hist[v] += 1
+          with open("/tmp/reply27-current-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (all persisted reply27 exact evidence through current main)\n")
+              for (lo,hi),v in sorted(verdict.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          stats = {
+              "unique_exact_s5": len(verdict),
+              "win": hist[1],
+              "loss": hist[2],
+              "completion_replay_rows": completion_rows,
+              "sources": per,
+              "conflicts": 0,
+          }
+          json.dump(stats, open("/tmp/current-cache-stats.json","w"), indent=2, sort_keys=True)
+          print("CURRENT_CACHE", json.dumps(stats, sort_keys=True))
+          PY
+
+      - name: Certify current global class-count lower and upper bound
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py             --s5-cache /tmp/reply27-current-s5.cache             --out /tmp/current-cardinality.json | tee /tmp/current-cardinality.log
+          grep 'CACHE_AWARE_REPLY27_CARDINALITY_OK' /tmp/current-cardinality.log
+
+      - name: Reoptimize selected31 repair under current cache
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --extra-s5-cache /tmp/reply27-current-s5.cache             --out /tmp/current-repair.json             --targets-out /tmp/current-repair-targets.csv > /tmp/current-repair.log
+          grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/current-repair.log
+
+      - name: Rank one-class completion targets
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py             --repair-json /tmp/current-repair.json             --extra-s5-cache /tmp/reply27-current-s5.cache             --targets-out /tmp/current-best-class.csv             --out /tmp/current-ranking.json | tee /tmp/current-ranking.log
+          grep 'REPLY27_COMPLETION_RANK_OK' /tmp/current-ranking.log
+
+      - name: Report current proof frontier
+        run: |
+          python - <<'PY'
+          import json
+          s=json.load(open("/tmp/current-cache-stats.json"))
+          c=json.load(open("/tmp/current-cardinality.json"))
+          r=json.load(open("/tmp/current-repair.json"))
+          q=json.load(open("/tmp/current-ranking.json"))
+          print("CURRENT_EXACT_S5",s["unique_exact_s5"],"WIN",s["win"],"LOSS",s["loss"])
+          print("CURRENT_CLASSES",c["class_status_counts"])
+          print("CURRENT_SECURED",c["secured_vertices"],"/119")
+          print("CURRENT_MIN_ADDITIONAL",c["minimum_additional_classes"],
+                "dual_tight",c["dual_certificate_matches_integer_optimum"])
+          print("CURRENT_REPAIR",r["additive_optimum"]["repair_classes"],
+                "targets",r["additive_optimum"]["unique_unknown_s5"])
+          if q["ranking"]:
+              b=q["ranking"][0]
+              print("CURRENT_BEST_CLASS",b["key"],
+                    "unknown",b["unknown_s5"],
+                    "known_loss",b["known_loss_s5"],
+                    "gain",b["new_vertex_count"])
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-current-cache-optimization
+          path: |
+            /tmp/reply27-current-s5.cache
+            /tmp/current-cache-stats.json
+            /tmp/current-cardinality.json
+            /tmp/current-cardinality.log
+            /tmp/current-repair.json
+            /tmp/current-repair.log
+            /tmp/current-repair-targets.csv
+            /tmp/current-ranking.json
+            /tmp/current-ranking.log
+            /tmp/current-best-class.csv
