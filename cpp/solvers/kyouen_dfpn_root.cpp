@@ -51,7 +51,8 @@
 #include <stdexcept>
 #include <string>
 #include <unordered_map>
-#include <vector>\n#include "kyouen_residual_micro.hpp"
+#include <vector>
+#include "kyouen_residual_micro.hpp"
 
 // Thrown when the quantified search's wall allowance expires deep inside
 // the exact DFS. Returning UNKNOWN there was wrong: the caller treats
