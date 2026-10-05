@@ -779,7 +779,8 @@ public:
     };
 
     CoordStats coordinate(const std::vector<CovMemo>& cov_memo,
-                          const std::vector<EdgeVerdict>& verdicts) const {
+                          const std::vector<EdgeVerdict>& verdicts,
+                          const std::vector<int>* preferred=nullptr) const {
         const int M=(int)cov_memo.size();
         std::vector<char> covered((std::size_t)V,0);
         CoordStats st;
@@ -803,10 +804,37 @@ public:
         st.secured=secured_n;
         std::size_t covered_n=secured_n;
 
-        // Cover only still-unsecured vertices with UNKNOWN classes. WIN
-        // classes are impossible certificate members. members is exactly the
-        // work skeleton returned by this greedy pass.
+        // If an independently verified frontier is supplied, use its still
+        // viable UNKNOWN members first.  This preserves an offline-optimized
+        // proof skeleton (e.g. the 31-class direct-union frontier) without
+        // making it brittle: any member later proved WIN is skipped and the
+        // ordinary greedy suffix below repairs whatever coverage is missing.
         std::vector<char> used((std::size_t)M,0);
+        if(preferred){
+            for(int i:*preferred){
+                if(i<0 || i>=M) throw std::runtime_error("preferred frontier slot out of range");
+                if(used[(std::size_t)i]) continue;
+                used[(std::size_t)i]=1;
+                if(verdicts[(std::size_t)i]!=EdgeVerdict::UNKNOWN) continue;
+                std::size_t fresh=0;
+                for(int v:cov_memo[(std::size_t)i].verts)
+                    if(!covered[(std::size_t)v]) ++fresh;
+                if(!fresh) continue;
+                for(int v:cov_memo[(std::size_t)i].verts){
+                    if(!covered[(std::size_t)v]){
+                        covered[(std::size_t)v]=1;
+                        ++covered_n;
+                    }
+                }
+                st.members.push_back(i);
+                ++st.cover_size;
+                ++st.min_additional;
+            }
+        }
+
+        // Cover only still-unsecured vertices with UNKNOWN classes. WIN
+        // classes are impossible certificate members. The suffix makes a
+        // preferred frontier adaptive rather than mandatory.
         for(int round=0; round<M && covered_n<(std::size_t)V; ++round){
             int best=-1;
             std::size_t best_fresh=0;
@@ -3225,6 +3253,7 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
                     double budget_s,int max_classes,
                     const std::string& s5_cache_out,
                     const std::string& s4_cache_out,
+                    const std::string& frontier_path,
                     std::ostream& O){
     DfPn<N> s(24);
     s.set_deadline(0);
@@ -3279,9 +3308,35 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
         gvec.push_back(&kv.second);
     }
 
+    std::vector<int> preferred_slots;
+    if(!frontier_path.empty()){
+        std::ifstream ff(frontier_path);
+        if(!ff) throw std::runtime_error("cannot open --coord-frontier");
+        std::map<std::pair<std::uint64_t,std::uint64_t>,int> slot_of;
+        int slot=0;
+        for(const auto& kv:groups) slot_of[kv.first]=slot++;
+        std::string line;
+        std::set<int> seen;
+        while(std::getline(ff,line)){
+            if(line.empty() || line[0]=='#') continue;
+            std::stringstream ls(line);
+            std::string a,b;
+            if(!std::getline(ls,a,',') || !std::getline(ls,b,','))
+                throw std::runtime_error("bad --coord-frontier row");
+            auto key=std::make_pair(std::stoull(a),std::stoull(b));
+            auto it=slot_of.find(key);
+            if(it==slot_of.end())
+                throw std::runtime_error("--coord-frontier key not present in this reply");
+            if(seen.insert(it->second).second) preferred_slots.push_back(it->second);
+        }
+        if(preferred_slots.empty())
+            throw std::runtime_error("--coord-frontier contains no usable class keys");
+    }
+
     O<<"# coordinator: first="<<first<<" r2="<<r2
      <<" vertices="<<verts.size()<<" classes="<<groups.size()
-     <<" cache_loaded="<<s.oracle_stats().loaded<<"\n";
+     <<" cache_loaded="<<s.oracle_stats().loaded
+     <<" frontier_seed="<<preferred_slots.size()<<"\n";
     O<<"# class_index,cov_size,unknown_s5,verdict,nodes,wall_ms\n";
     O.flush();
 
@@ -3315,7 +3370,7 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
     int touched=0;
 
     for(;;){
-        auto st=s.coordinate(cov,verd);
+        auto st=s.coordinate(cov,verd,preferred_slots.empty()?nullptr:&preferred_slots);
         O<<"# COVER optimistic="<<st.cover_size<<" in_cover="<<st.covered
          <<" secured="<<st.secured<<"/"<<verts.size()
          <<" min_additional="<<st.min_additional
@@ -3502,6 +3557,7 @@ int main(int argc,char**argv){
         double coord_wall=0;
         bool coord_run=false;
         std::string s4_cache_out="";      // s4 certificate manifest to write
+        std::string coord_frontier="";     // optional verified s4 class skeleton
         unsigned s4_ab_memo=24;
         std::uint64_t s4_ab_budget=20000000;
         int exact_order=0;
@@ -3555,6 +3611,7 @@ int main(int argc,char**argv){
             else if(a.rfind("--coord-max=",0)==0)coord_max=std::stoi(a.substr(12));
             else if(a.rfind("--coord-wall=",0)==0)coord_wall=std::stod(a.substr(13));
             else if(a.rfind("--s4-cache-out=",0)==0)s4_cache_out=a.substr(15);
+            else if(a.rfind("--coord-frontier=",0)==0)coord_frontier=a.substr(17);
             else if(a=="--coord")coord_run=true;
             else if(a.rfind("--residual-audit-legal=",0)==0)residual_audit_legal=std::stoi(a.substr(23));
             else if(a.rfind("--residual-crosscheck-legal=",0)==0)residual_crosscheck_legal=std::stoi(a.substr(28));
@@ -3575,7 +3632,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }
@@ -3639,7 +3696,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
+                if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<4>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3648,7 +3705,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
+                if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<5>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3657,7 +3714,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
+                if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<6>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3666,7 +3723,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
+                if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<7>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
@@ -3675,7 +3732,7 @@ int main(int argc,char**argv){
                 if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
 
-                if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
+                if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
 
                 if(!s4_ab.empty()) return run_s4_ab<11>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<11>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
