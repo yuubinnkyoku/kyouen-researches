@@ -928,6 +928,10 @@ public:
     }
 
     const Oracle& oracle_stats() const { return oracle; }
+    int oracle_cached_pub(Bits key) const {
+        auto it=oracle.memo.find(key);
+        return it==oracle.memo.end()?0:(int)it->second;
+    }
     Bits edge_class_key_pub(int r2,int a,int b) const { return edge_class_key(r2,a,b); }
     EdgeInfo classify_edge_pub(int r2,int a,int b) const { return classify_edge(r2,a,b); }
     Bits canonical_pub(const TState& s) const { return canonical(s); }
@@ -3424,27 +3428,63 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
         int dw=0, dl=0, du=0;
         bool class_win_witness=false;
         std::pair<std::uint64_t,std::uint64_t> class_win_key{0,0};
-        const auto& rep= gvec[(std::size_t)pick]->front();
+        const auto& rep=gvec[(std::size_t)pick]->front();
         typename DfPn<N>::TState s4{};
         s4=s.add_pub(s4,first); s4=s.add_pub(s4,r2);
         s4=s.add_pub(s4,rep.first); s4=s.add_pub(s4,rep.second);
         Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
         s.setbit_pub(occ4,rep.first); s.setbit_pub(occ4,rep.second);
+
+        struct PendingS5 { int z=0, legal=0; Bits key{}; };
+        std::vector<PendingS5> pending;
         for(int z:s.legal_moves_from(occ4)){
             typename DfPn<N>::TState s5{};
             s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
             s5=s.add_pub(s5,rep.first); s5=s.add_pub(s5,rep.second);
             s5=s.add_pub(s5,z);
-            Bits o5=occ4; s.setbit_pub(o5,z);
-            int r=s.s5_oracle(s5,o5,20000000);
-            if(r==1){
+            Bits k=s.canonical_pub(s5);
+            int cached=s.oracle_cached_pub(k);
+            if(cached==1){
                 ++dw;
-                Bits k=s.canonical_pub(s5);
                 class_win_key={k.lo,k.hi};
                 class_win_witness=true;
-                break;  // existential WIN certificate: one s5 is enough
-            }else if(r==2) ++dl;
-            else ++du;
+                break;
+            }
+            if(cached==2){
+                ++dl;
+                continue; // already proved; no oracle query is needed
+            }
+            Bits o5=occ4; s.setbit_pub(o5,z);
+            PendingS5 p; p.z=z; p.key=k;
+            p.legal=DfPn<N>::popcount_pub(s.legal_for_pub(o5));
+            pending.push_back(p);
+        }
+
+        // Existing cold measurements on 103 s5 children give
+        // corr(legal, log(nodes)) ~= +0.53.  Try lower-legal unknown roots
+        // first, matching the exact solver's decisive-child ordering.
+        std::sort(pending.begin(),pending.end(),[](const PendingS5& a,const PendingS5& b){
+            if(a.legal!=b.legal) return a.legal<b.legal;
+            if(a.key.hi!=b.key.hi) return a.key.hi<b.key.hi;
+            if(a.key.lo!=b.key.lo) return a.key.lo<b.key.lo;
+            return a.z<b.z;
+        });
+        if(!class_win_witness){
+            for(const auto& p:pending){
+                typename DfPn<N>::TState s5{};
+                s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+                s5=s.add_pub(s5,rep.first); s5=s.add_pub(s5,rep.second);
+                s5=s.add_pub(s5,p.z);
+                Bits o5=occ4; s.setbit_pub(o5,p.z);
+                int r=s.s5_oracle(s5,o5,20000000);
+                if(r==1){
+                    ++dw;
+                    class_win_key={p.key.lo,p.key.hi};
+                    class_win_witness=true;
+                    break;  // existential WIN certificate: one s5 is enough
+                }else if(r==2) ++dl;
+                else ++du;
+            }
         }
         double t1=std::chrono::duration<double>(
             std::chrono::steady_clock::now().time_since_epoch()).count();
