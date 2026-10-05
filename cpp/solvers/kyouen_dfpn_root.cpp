@@ -51,8 +51,7 @@
 #include <stdexcept>
 #include <string>
 #include <unordered_map>
-#include <vector>
-#include "kyouen_residual_micro.hpp"
+#include <vector>\n#include "kyouen_residual_micro.hpp"
 
 // Thrown when the quantified search's wall allowance expires deep inside
 // the exact DFS. Returning UNKNOWN there was wrong: the caller treats
@@ -266,9 +265,8 @@ public:
     // Returns: 0 UNKNOWN (budget exhausted), 1 WIN, 2 LOSS.
     // `out_nodes` receives the exact nodes consumed by this call.
     Bits legal_from_occupancy(const Bits& occupied) const { return legal_for(occupied); }
-    Bits canonical_key(const Bits& occupied) const {
-        TState state{};
-        Bits z=occupied;
+    Bits canonical_occupancy(const Bits& occupied) const {
+        TState state{}; Bits z=occupied;
         while(any(z)) state=add(state,take_lsb(z));
         return canonical(state);
     }
@@ -1143,8 +1141,7 @@ public:
 private:
     std::array<std::array<Bits,V>,8> tbit_{};
     PnTT tt_;
-    std::vector<Bits> completion_;
-    std::vector<std::array<int,4>> forbidden_quads_;
+    std::vector<Bits> completion_;\n    std::vector<std::array<int,4>> forbidden_quads_;
     std::uint64_t forbidden_count_=0,visited_=0,expanded_=0;
     std::uint64_t exp_hist_[64]={};
     int max_depth_=0;
@@ -1285,9 +1282,6 @@ private:
     int exact_legal_=0;                    // 0 disables the hybrid
     int residual_audit_legal_=0;            // shadow-only board<->residual audit
     std::uint64_t residual_audit_calls_=0;
-    int residual_crosscheck_legal_=0;
-    std::uint64_t residual_crosscheck_calls_=0, residual_crosscheck_removed_=0,
-                  residual_crosscheck_splits_=0;
     std::uint64_t exact_budget_=100000;    // nodes per handoff attempt
     // Per-stone-count budget overrides. The s5 frontier measured in
     // N11-DFPN-S5-BENCH.md needs 130k..5.7M nodes to close while s6
@@ -1783,11 +1777,6 @@ private:
 
         if(unknown) return ExactResult::UNKNOWN;
         ExactResult r=isor?ExactResult::LOSS:ExactResult::WIN;
-        if(residual_crosscheck_legal_>0 && popcount(legal)<=residual_crosscheck_legal_){
-            int rr=residual_exact(state,stones,legal);
-            int board=(r==ExactResult::WIN)?1:2;
-            if(rr!=board) throw std::runtime_error("residual kernel contradicts board exact DFS");
-        }
         exact_record(key,r);
         return r;
     }
@@ -2296,25 +2285,8 @@ public:
     // Tie-break mode: false = count ASC then key ASC (baseline),
     // true = count DESC then key DESC (the DFS depth-5 winner).
     void set_tiebreak_desc(bool b){ tiebreak_desc_=b; }
-    int residual_exact(const TState& state,int stones,Bits legal){
-        auto r=residual_for(state.t[0],legal,nullptr);
-        std::map<kyouen_residual::Key,int> memo;
-        kyouen_residual::Stats st;
-        int g=kyouen_residual::grundy(std::move(r),memo,&st);
-        ++residual_crosscheck_calls_;
-        residual_crosscheck_removed_+=st.module_removed;
-        residual_crosscheck_splits_+=st.component_splits;
-        int v=kyouen_residual::first_player_verdict_from_grundy(g,stones);
-        return v;
-    }
-    void set_residual_crosscheck_legal(int legal){ residual_crosscheck_legal_=std::max(0,legal); }
     void set_residual_audit_legal(int legal){ residual_audit_legal_=std::max(0,legal); }
     std::uint64_t residual_audit_calls() const { return residual_audit_calls_; }
-    void residual_crosscheck_stats(std::uint64_t& calls,std::uint64_t& removed,
-                                   std::uint64_t& splits) const {
-        calls=residual_crosscheck_calls_; removed=residual_crosscheck_removed_;
-        splits=residual_crosscheck_splits_;
-    }
     void set_exact_handoff(int legal,std::uint64_t budget,int retries,int publish_mode){
         exact_legal_=std::max(0,legal);
         exact_budget_=std::max<std::uint64_t>(1,budget);
@@ -2607,7 +2579,7 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
 template<int N>
     static int run_exact_replay(const std::string& path,std::uint64_t budget,
                             unsigned memo_power,const std::string& only,
-                            int exact_order,int residual_audit_legal,int residual_crosscheck_legal,std::ostream& O){
+                            int exact_order,std::ostream& O){
     std::ifstream in(path);
     if(!in){ std::cerr<<"cannot open --exact-replay\n"; return 1; }
     O<<"# exact replay: order="<<exact_order<<" (0=count-asc 1=count-desc 2=key-asc)"<<std::endl;
@@ -2651,18 +2623,7 @@ template<int N>
             row_solver.set_deadline(0);
             row_solver.set_exact_handoff(0,1,1,0); // publish=ALL
             row_solver.set_exact_order(exact_order);
-            row_solver.set_residual_audit_legal(residual_audit_legal);
-            row_solver.set_residual_crosscheck_legal(residual_crosscheck_legal);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
-            if(residual_audit_legal>0 || residual_crosscheck_legal>0){
-                std::uint64_t cc=0,rm=0,sp=0;
-                row_solver.residual_crosscheck_stats(cc,rm,sp);
-                O<<"# residual row="<<id
-                 <<" audit_calls="<<row_solver.residual_audit_calls()
-                 <<" crosscheck_calls="<<cc
-                 <<" module_removed="<<rm
-                 <<" component_splits="<<sp<<"\n";
-            }
         }catch(const std::exception& e){
             O<<"replay_error,"<<id<<","<<stones<<",0,\""<<e.what()<<"\"\n"; O.flush(); ++id; continue;
         }
@@ -2696,7 +2657,7 @@ static int run_s5_fixture(const std::string& parents,std::ostream& O){
         Bits legal=s.legal_from_occupancy(occ);
         while(any(legal)){
             int v=take_lsb(legal); Bits child=occ; setbit(child,v);
-            keys.insert(s.canonical_key(child));
+            keys.insert(s.canonical_occupancy(child));
         }
     }
     O<<"# deterministic canonical s5 fixture; parents="<<parents<<"\n";
@@ -3377,8 +3338,6 @@ int main(int argc,char**argv){
         bool reps=false, empty=false, children=false, tiebreak_desc=false;
         bool exact_record=false;
         int exact_record_limit=0;
-        int residual_audit_legal=0;
-        int residual_crosscheck_legal=0;
         std::string exact_replay_path="";
         std::string s5_fixture_parents="";
         std::uint64_t exact_replay_budget=1000000;
@@ -3431,8 +3390,6 @@ int main(int argc,char**argv){
             else if(a.rfind("--exact-replay=",0)==0)exact_replay_path=a.substr(15);
             else if(a.rfind("--s5-fixture-parents=",0)==0)s5_fixture_parents=a.substr(21);
             else if(a.rfind("--exact-replay-budget=",0)==0)exact_replay_budget=std::stoull(a.substr(22));
-            else if(a.rfind("--residual-audit-legal=",0)==0)residual_audit_legal=std::stoi(a.substr(23));
-            else if(a.rfind("--residual-crosscheck-legal=",0)==0)residual_crosscheck_legal=std::stoi(a.substr(28));
             else if(a.rfind("--quant-first=",0)==0)quant_first=std::stoi(a.substr(14));
             else if(a.rfind("--quant-replies=",0)==0)quant_replies=a.substr(16);
             else if(a.rfind("--quant-budget=",0)==0)quant_budget=std::stoull(a.substr(15));
@@ -3463,7 +3420,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--s5-fixture-parents=a,b,c,d;...] [--exact-replay-budget=N] [--residual-audit-legal=N] [--residual-crosscheck-legal=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P]\n";
                 return 2;
             }
         }
@@ -3528,7 +3485,7 @@ int main(int argc,char**argv){
         int rc=0;
         switch(n){
             case 4:
-                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3537,7 +3494,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 5:
-                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3546,7 +3503,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 6:
-                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3555,7 +3512,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 7:
-                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3564,7 +3521,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 11:
-                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
