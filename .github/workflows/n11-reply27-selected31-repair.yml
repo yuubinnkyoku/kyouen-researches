@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/n11-reply27-selected31-repair.yml"
+      - "cpp/solvers/kyouen_dfpn_root.cpp"
       - "research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-selected31-verdicts.json"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-hard9-s5.cache"
@@ -13,28 +14,91 @@ on:
 jobs:
   verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
       - name: Install optimizer dependency
         run: python -m pip install --quiet scipy
+      - name: Build exact replay solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers             cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
       - name: Rebuild geometry and optimize repair
         run: |
-          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --out /tmp/reply27-selected31-repair.json | tee /tmp/reply27-selected31-repair.log
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --out /tmp/reply27-selected31-repair.json             --targets-out /tmp/reply27-repair-targets.csv             --sample-out /tmp/reply27-repair-sample.csv             --sample-per-class 2             | tee /tmp/reply27-selected31-repair.log
           grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/reply27-selected31-repair.log
           python - <<'PY'
           import json
           d=json.load(open("/tmp/reply27-selected31-repair.json"))
           print("SECURED",d["secured_vertices"])
-          print("UNcovered",d["uncovered_vertices"])
+          print("UNCOVERED",d["uncovered_vertices"])
           print("MIN_ADDITIONAL",d["minimum_additional_classes"])
           print("ADDITIVE_OPT",d["additive_optimum"]["repair_classes"],
                 d["additive_optimum"]["additive_unknown_s5"],
                 d["additive_optimum"]["unique_unknown_s5"])
           print("FIXED15",d["exact_15_class_repair"]["additive_unknown_s5"],
                 d["exact_15_class_repair"]["unique_unknown_s5"])
+          print("TARGETS",d["materialized_targets"],
+                "SAMPLE",d["sample_targets"])
+          assert sum(1 for _ in open("/tmp/reply27-repair-targets.csv")) == d["materialized_targets"]
+          assert sum(1 for _ in open("/tmp/reply27-repair-sample.csv")) == d["sample_targets"]
+          PY
+      - name: Exact probe two low-legal s5 per repair class
+        run: |
+          /usr/bin/time -f 'sample_wall_s=%e' -o /tmp/sample.time             /tmp/dfpn --n=11 --memo=22               --exact-replay=/tmp/reply27-repair-sample.csv --only=5               --exact-replay-budget=15000000               --csv=/tmp/reply27-repair-sample.out
+          cat /tmp/sample.time
+          grep '^replay,' /tmp/reply27-repair-sample.out
+          ! grep -q '^replay_error,' /tmp/reply27-repair-sample.out
+          python - <<'PY'
+          import csv, json
+          hist={0:0,1:0,2:0}
+          rows=[]
+          cache={}
+          with open("/tmp/reply27-repair-sample.out") as f:
+              for r in csv.reader(f):
+                  if not r or r[0]!="replay":
+                      continue
+                  result=int(r[6]); key=(int(r[9]),int(r[10]))
+                  hist[result]+=1
+                  rows.append((key,result,int(r[7]),int(r[3])))
+                  if result in (1,2):
+                      old=cache.get(key)
+                      assert old in (None,result), (key,old,result)
+                      cache[key]=result
+          with open("/tmp/reply27-repair-sample.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (adaptive repair sample; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(cache.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          print("REPAIR_SAMPLE_COUNTS",hist)
+          print("REPAIR_SAMPLE_PROVED",len(cache))
+          print("REPAIR_SAMPLE_NODES",sum(x[2] for x in rows))
+          PY
+      - name: Reoptimize after sample verdicts
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --extra-s5-cache /tmp/reply27-repair-sample.cache             --out /tmp/reply27-selected31-repair-after-sample.json             --targets-out /tmp/reply27-repair-targets-after-sample.csv             --sample-out /tmp/reply27-repair-sample-next.csv             --sample-per-class 2             | tee /tmp/reply27-after-sample.log
+          grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/reply27-after-sample.log
+          python - <<'PY'
+          import json
+          b=json.load(open("/tmp/reply27-selected31-repair.json"))
+          a=json.load(open("/tmp/reply27-selected31-repair-after-sample.json"))
+          print("AFTER_CLASS_STATUS",a["class_status_from_derived_cache_plus_manifest"])
+          print("AFTER_SECURED",a["secured_vertices"])
+          print("AFTER_ADDITIVE_OPT",a["additive_optimum"]["repair_classes"],
+                a["additive_optimum"]["additive_unknown_s5"],
+                a["additive_optimum"]["unique_unknown_s5"])
+          print("AFTER_TARGETS",a["materialized_targets"],
+                "NEXT_SAMPLE",a["sample_targets"])
+          print("TARGET_REDUCTION",
+                b["materialized_targets"]-a["materialized_targets"])
           PY
       - uses: actions/upload-artifact@v4
         with:
           name: reply27-selected31-repair
-          path: /tmp/reply27-selected31-repair.json
+          path: |
+            /tmp/reply27-selected31-repair.json
+            /tmp/reply27-selected31-repair-after-sample.json
+            /tmp/reply27-repair-targets.csv
+            /tmp/reply27-repair-targets-after-sample.csv
+            /tmp/reply27-repair-sample.csv
+            /tmp/reply27-repair-sample.out
+            /tmp/reply27-repair-sample.cache
+            /tmp/reply27-repair-sample-next.csv
