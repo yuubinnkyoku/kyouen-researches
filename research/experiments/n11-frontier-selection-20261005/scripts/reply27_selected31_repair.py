@@ -23,6 +23,7 @@ import argparse
 import csv
 import json
 import sys
+from functools import lru_cache
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -133,8 +134,13 @@ def decode_key(key):
     return pts
 
 
+@lru_cache(maxsize=None)
+def legal_count_key(key):
+    return legal_count_key(key)
+
+
 def exact_replay_row(tag, seq, key):
-    legal = len(legal_after(decode_key(key)))
+    legal = legal_count_key(key)
     return f"{tag},{seq},5,{key[0]},{key[1]},{legal},0,0,0,0,0\n"
 
 
@@ -330,7 +336,7 @@ def main():
     }
     all_targets = sorted(
         set().union(*repair_unknown.values()),
-        key=lambda key: (len(legal_after(decode_key(key))), key[1], key[0]),
+        key=lambda key: (legal_count_key(key), key[1], key[0]),
     )
     if args.sample_per_class < 1:
         raise SystemExit("--sample-per-class must be >=1")
@@ -339,14 +345,14 @@ def main():
     for key in sorted(add_sel):
         ranked = sorted(
             repair_unknown[key],
-            key=lambda ch: (len(legal_after(decode_key(ch))), ch[1], ch[0]),
+            key=lambda ch: (legal_count_key(ch), ch[1], ch[0]),
         )
         for ch in ranked[:args.sample_per_class]:
             if ch not in sample_seen:
                 sample_seen.add(ch)
                 sample.append(ch)
     sample.sort(
-        key=lambda key: (len(legal_after(decode_key(key))), key[1], key[0])
+        key=lambda key: (legal_count_key(key), key[1], key[0])
     )
     out["materialized_targets"] = len(all_targets)
     out["sample_targets"] = len(sample)
