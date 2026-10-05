@@ -45,3 +45,78 @@ jobs:
           print("HARD_S6_RESULT_COUNTS",hist)
           print("HARD_S6_ROWS",rows)
           PY
+
+      - name: Probe low-legal alternatives for all nine hard s5 roots
+        run: |
+          python - <<'PY'
+          import json,sys
+          sys.path.insert(0,"research/experiments/n11-search-methods/scripts")
+          from dfpn_edge_classes import d4_canonical_key,legal_after
+          hard=[
+            (1152921504742115328,536870912),
+            (3602879701897445376,134217728),
+            (10520408729537478660,67108864),
+            (10520408729538527232,16384),
+            (10520408729541689344,0),
+            (10520408729554255872,32768),
+            (10520408730615414784,0),
+            (10520408730619609088,0),
+            (10520408746717347840,8),
+          ]
+          tested={
+            (10520408730615431168,0),
+            (10520443913910616064,16384),
+            (10520408731701739520,32768),
+            (10520408729537478662,67108864),
+            (3602879701897445377,134217728),
+            (1152921504742115330,536870912),
+          }
+          def decode(k):
+              lo,hi=k
+              s={i for i in range(64) if (lo>>i)&1}
+              s.update(64+i for i in range(64) if (hi>>i)&1)
+              return s
+          parents={}
+          legal={}
+          for i,k in enumerate(hard):
+              occ=decode(k)
+              kids=set()
+              for z in legal_after(occ):
+                  ch=d4_canonical_key(list(occ|{z}))
+                  if ch in tested: continue
+                  kids.add(ch)
+              ranked=sorted(kids,key=lambda x:(len(legal_after(decode(x))),x[1],x[0]))
+              for ch in ranked[:6]:
+                  parents.setdefault(ch,[]).append(i)
+                  legal[ch]=len(legal_after(decode(ch)))
+          chosen=sorted(parents,key=lambda x:(legal[x],x[1],x[0]))
+          with open("/tmp/r27-hard-s6-low.csv","w") as fp:
+              for seq,ch in enumerate(chosen):
+                  fp.write(f"hard-low,{seq},6,{ch[0]},{ch[1]},{legal[ch]},0,1,0,0,0\n")
+          json.dump({"hard":[list(x) for x in hard],
+                     "parents":{f"{a}:{b}":v for (a,b),v in parents.items()}},
+                    open("/tmp/r27-hard-s6-low.meta","w"),sort_keys=True)
+          print("LOW_S6_CANDIDATES",len(chosen))
+          PY
+          /usr/bin/time -f 'low_wall_s=%e' -o /tmp/low.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-hard-s6-low.csv --only=6 \
+              --exact-replay-budget=10000000 --csv=/tmp/r27-hard-s6-low.out
+          cat /tmp/low.time
+          python - <<'PY'
+          import csv,json
+          meta=json.load(open("/tmp/r27-hard-s6-low.meta"))
+          parents={tuple(map(int,k.split(":"))):v for k,v in meta["parents"].items()}
+          solved=set(); hist={0:0,1:0,2:0}; rows=[]
+          with open("/tmp/r27-hard-s6-low.out") as f:
+              for r in csv.reader(f):
+                  if not r or r[0]!="replay": continue
+                  key=(int(r[9]),int(r[10])); result=int(r[6]); nodes=int(r[7])
+                  hist[result]+=1; rows.append((key,result,nodes))
+                  if result==2: solved.update(parents[key])
+          print("LOW_S6_RESULT_COUNTS",hist)
+          print("HARD_S5_WITH_LOSS_WITNESS",sorted(solved))
+          print("HARD_S5_STILL_UNRESOLVED",sorted(set(range(9))-solved))
+          for key,result,nodes in rows:
+              if result==2:
+                  print("LOSS_WITNESS",key,"parents",parents[key],"nodes",nodes)
+          PY
