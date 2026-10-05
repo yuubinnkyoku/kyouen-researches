@@ -3333,6 +3333,8 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
             std::chrono::steady_clock::now().time_since_epoch()).count();
         std::uint64_t before=s.exact_total_nodes();
         int dw=0, dl=0, du=0;
+        bool class_win_witness=false;
+        std::pair<std::uint64_t,std::uint64_t> class_win_key{0,0};
         for(const auto& e:*gvec[(std::size_t)pick]){
             typename DfPn<N>::TState s4{};
             s4=s.add_pub(s4,first); s4=s.add_pub(s4,r2);
@@ -3346,8 +3348,16 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
                 s5=s.add_pub(s5,z);
                 Bits o5=occ4; s.setbit_pub(o5,z);
                 int r=s.s5_oracle(s5,o5,20000000);
-                if(r==1) ++dw; else if(r==2) ++dl; else ++du;
+                if(r==1){
+                    ++dw;
+                    Bits k=s.canonical_pub(s5);
+                    class_win_key={k.lo,k.hi};
+                    class_win_witness=true;
+                    break;  // existential WIN certificate: one s5 is enough
+                }else if(r==2) ++dl;
+                else ++du;
             }
+            if(class_win_witness) break;
         }
         double t1=std::chrono::duration<double>(
             std::chrono::steady_clock::now().time_since_epoch()).count();
@@ -3365,30 +3375,31 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
         unk_cnt[(std::size_t)pick]=unk2;
         ++touched;
 
-        // Record the certificate manifest for a decided class, so the
-        // label can be re-checked later without trusting this run. The
-        // child list is rebuilt from the class's edges AFTER the verdicts
-        // are known, so every key in it is one the run actually decided
-        // (from cache, or from the exact search above). For a LOSS class
-        // that is every legal fifth move of every edge in the class; for a
-        // WIN class a single witness is enough, but recording all is
-        // harmless and keeps one code path.
+        // Record the certificate manifest for a decided class. LOSS is
+        // universal and therefore keeps the COMPLETE canonical s5 child
+        // set. WIN is existential and stores only the single proved WIN
+        // witness that caused the short-circuit above.
         if(nv!=DfPn<N>::EdgeVerdict::UNKNOWN){
             std::vector<std::pair<std::uint64_t,std::uint64_t>> man;
-            std::vector<std::pair<int,int>> raw;
-            std::set<std::pair<std::uint64_t,std::uint64_t>> uniq;
-            for(const auto& e:*gvec[(std::size_t)pick]){
-                raw.push_back(e);
-                Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
-                s.setbit_pub(occ4,e.first); s.setbit_pub(occ4,e.second);
-                for(int z:s.legal_moves_from(occ4)){
-                    typename DfPn<N>::TState s5{};
-                    s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
-                    s5=s.add_pub(s5,e.first); s5=s.add_pub(s5,e.second);
-                    s5=s.add_pub(s5,z);
-                    Bits k=s.canonical_pub(s5);
-                    if(uniq.insert({k.lo,k.hi}).second)
-                        man.push_back({k.lo,k.hi});
+            std::vector<std::pair<int,int>> raw=*gvec[(std::size_t)pick];
+            if(nv==DfPn<N>::EdgeVerdict::WIN){
+                if(!class_win_witness)
+                    throw std::runtime_error("WIN class without captured s5 witness");
+                man.push_back(class_win_key);
+            }else{
+                std::set<std::pair<std::uint64_t,std::uint64_t>> uniq;
+                for(const auto& e:*gvec[(std::size_t)pick]){
+                    Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
+                    s.setbit_pub(occ4,e.first); s.setbit_pub(occ4,e.second);
+                    for(int z:s.legal_moves_from(occ4)){
+                        typename DfPn<N>::TState s5{};
+                        s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+                        s5=s.add_pub(s5,e.first); s5=s.add_pub(s5,e.second);
+                        s5=s.add_pub(s5,z);
+                        Bits k=s.canonical_pub(s5);
+                        if(uniq.insert({k.lo,k.hi}).second)
+                            man.push_back({k.lo,k.hi});
+                    }
                 }
             }
             Bits kk=s.edge_class_key_pub(r2,gvec[(std::size_t)pick]->front().first,
