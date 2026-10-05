@@ -3264,14 +3264,14 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
         std::sort(vs.begin(),vs.end());
         vs.erase(std::unique(vs.begin(),vs.end()),vs.end());
         typename DfPn<N>::CovMemo cm; cm.verts=vs;
-        int unk=0;
-        typename DfPn<N>::EdgeVerdict v=DfPn<N>::EdgeVerdict::UNKNOWN;
-        for(const auto& e:kv.second){
-            auto ei=s.classify_edge_pub(r2,e.first,e.second);
-            if(ei.verdict==DfPn<N>::EdgeVerdict::WIN){ v=DfPn<N>::EdgeVerdict::WIN; break; }
-            if(ei.verdict==DfPn<N>::EdgeVerdict::UNKNOWN) ++unk;
-        }
-        if(v!=DfPn<N>::EdgeVerdict::WIN && unk==0) v=DfPn<N>::EdgeVerdict::LOSS;
+        // All raw edges in one canonical s4 class are D4-equivalent
+        // four-stone positions. Legality is D4 invariant and s5 children
+        // are canonicalized again, hence every raw edge has the SAME set
+        // of canonical s5 child keys. Classify one representative only.
+        const auto& rep=kv.second.front();
+        auto rei=s.classify_edge_pub(r2,rep.first,rep.second);
+        int unk=rei.unknown_children;
+        typename DfPn<N>::EdgeVerdict v=rei.verdict;
         order.push_back(cov.size());
         cov.push_back(cm);
         verd.push_back(v);
@@ -3369,42 +3369,35 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
         int dw=0, dl=0, du=0;
         bool class_win_witness=false;
         std::pair<std::uint64_t,std::uint64_t> class_win_key{0,0};
-        for(const auto& e:*gvec[(std::size_t)pick]){
-            typename DfPn<N>::TState s4{};
-            s4=s.add_pub(s4,first); s4=s.add_pub(s4,r2);
-            s4=s.add_pub(s4,e.first); s4=s.add_pub(s4,e.second);
-            Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
-            s.setbit_pub(occ4,e.first); s.setbit_pub(occ4,e.second);
-            for(int z:s.legal_moves_from(occ4)){
-                typename DfPn<N>::TState s5{};
-                s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
-                s5=s.add_pub(s5,e.first); s5=s.add_pub(s5,e.second);
-                s5=s.add_pub(s5,z);
-                Bits o5=occ4; s.setbit_pub(o5,z);
-                int r=s.s5_oracle(s5,o5,20000000);
-                if(r==1){
-                    ++dw;
-                    Bits k=s.canonical_pub(s5);
-                    class_win_key={k.lo,k.hi};
-                    class_win_witness=true;
-                    break;  // existential WIN certificate: one s5 is enough
-                }else if(r==2) ++dl;
-                else ++du;
-            }
-            if(class_win_witness) break;
+        const auto& rep= gvec[(std::size_t)pick]->front();
+        typename DfPn<N>::TState s4{};
+        s4=s.add_pub(s4,first); s4=s.add_pub(s4,r2);
+        s4=s.add_pub(s4,rep.first); s4=s.add_pub(s4,rep.second);
+        Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
+        s.setbit_pub(occ4,rep.first); s.setbit_pub(occ4,rep.second);
+        for(int z:s.legal_moves_from(occ4)){
+            typename DfPn<N>::TState s5{};
+            s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+            s5=s.add_pub(s5,rep.first); s5=s.add_pub(s5,rep.second);
+            s5=s.add_pub(s5,z);
+            Bits o5=occ4; s.setbit_pub(o5,z);
+            int r=s.s5_oracle(s5,o5,20000000);
+            if(r==1){
+                ++dw;
+                Bits k=s.canonical_pub(s5);
+                class_win_key={k.lo,k.hi};
+                class_win_witness=true;
+                break;  // existential WIN certificate: one s5 is enough
+            }else if(r==2) ++dl;
+            else ++du;
         }
         double t1=std::chrono::duration<double>(
             std::chrono::steady_clock::now().time_since_epoch()).count();
         std::uint64_t used=s.exact_total_nodes()-before;
 
-        typename DfPn<N>::EdgeVerdict nv=DfPn<N>::EdgeVerdict::UNKNOWN;
-        int unk2=0;
-        for(const auto& e:*gvec[(std::size_t)pick]){
-            auto ei=s.classify_edge_pub(r2,e.first,e.second);
-            if(ei.verdict==DfPn<N>::EdgeVerdict::WIN){ nv=DfPn<N>::EdgeVerdict::WIN; break; }
-            if(ei.verdict==DfPn<N>::EdgeVerdict::UNKNOWN) ++unk2;
-        }
-        if(nv!=DfPn<N>::EdgeVerdict::WIN && unk2==0) nv=DfPn<N>::EdgeVerdict::LOSS;
+        auto ei=s.classify_edge_pub(r2,rep.first,rep.second);
+        typename DfPn<N>::EdgeVerdict nv=ei.verdict;
+        int unk2=ei.unknown_children;
         verd[(std::size_t)pick]=nv;
         unk_cnt[(std::size_t)pick]=unk2;
         ++touched;
@@ -3421,20 +3414,18 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
                     throw std::runtime_error("WIN class without captured s5 witness");
                 man.push_back(class_win_key);
             }else{
-                std::set<std::pair<std::uint64_t,std::uint64_t>> uniq;
-                for(const auto& e:*gvec[(std::size_t)pick]){
-                    Bits occ4{}; s.setbit_pub(occ4,first); s.setbit_pub(occ4,r2);
-                    s.setbit_pub(occ4,e.first); s.setbit_pub(occ4,e.second);
-                    for(int z:s.legal_moves_from(occ4)){
-                        typename DfPn<N>::TState s5{};
-                        s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
-                        s5=s.add_pub(s5,e.first); s5=s.add_pub(s5,e.second);
-                        s5=s.add_pub(s5,z);
-                        Bits k=s.canonical_pub(s5);
-                        if(uniq.insert({k.lo,k.hi}).second)
-                            man.push_back({k.lo,k.hi});
-                    }
+                // Representative child set equals the union over the whole
+                // canonical class by D4 equivariance.
+                for(int z:s.legal_moves_from(occ4)){
+                    typename DfPn<N>::TState s5{};
+                    s5=s.add_pub(s5,first); s5=s.add_pub(s5,r2);
+                    s5=s.add_pub(s5,rep.first); s5=s.add_pub(s5,rep.second);
+                    s5=s.add_pub(s5,z);
+                    Bits k=s.canonical_pub(s5);
+                    man.push_back({k.lo,k.hi});
                 }
+                std::sort(man.begin(),man.end());
+                man.erase(std::unique(man.begin(),man.end()),man.end());
             }
             Bits kk=s.edge_class_key_pub(r2,gvec[(std::size_t)pick]->front().first,
                                         gvec[(std::size_t)pick]->front().second);
