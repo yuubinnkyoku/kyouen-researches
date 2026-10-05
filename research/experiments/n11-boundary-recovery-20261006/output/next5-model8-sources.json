@@ -1,0 +1,154 @@
+{
+  "boundary_scope": "supplied targets only",
+  "model_targets": "research/experiments/n11-boundary-recovery-20261006/output/next5-model8.csv",
+  "run_dir": ".local/n11/next5-model8-run",
+  "sources": [
+    {
+      "file": ".local/n11/next5-model8-run/s5-10376328725833744384-64.out.csv",
+      "key": [
+        10376328725833744384,
+        64
+      ],
+      "bytes": 278,
+      "sha256": "12dfec9b9061d3ec30d22fe28c859c8b90daa03e333f1f08a149762ea589589e",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 82,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 3204314
+    },
+    {
+      "file": ".local/n11/next5-model8-run/s5-10412357522852708352-0.out.csv",
+      "key": [
+        10412357522852708352,
+        0
+      ],
+      "bytes": 277,
+      "sha256": "7f2cd623d245fa7e6f56f8e9a7310c61d3df96325b394b16dd90ebc20ea4026b",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 82,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 1909596
+    },
+    {
+      "file": ".local/n11/next5-model8-run/s5-1161963888233709568-536870912.out.csv",
+      "key": [
+        1161963888233709568,
+        536870912
+      ],
+      "bytes": 284,
+      "sha256": "5c05d363fed43642e12dccc39287473be02002714636e753ac7997acb2e15937",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 90,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 7691366
+    },
+    {
+      "file": ".local/n11/next5-model8-run/s5-1306044029376528384-0.out.csv",
+      "key": [
+        1306044029376528384,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "de6d6363c625d5be8372a5dc7c4be9ecc2dcc9db312928912c32c77fbcd466a4",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 86,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 3862469
+    },
+    {
+      "file": ".local/n11/next5-model8-run/s5-1306184629425930240-0.out.csv",
+      "key": [
+        1306184629425930240,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "54fa96b38bb495953dd200a8cb6e4f5f2fc2379f7a7a60a797f0e1554df08187",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 87,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 2563177
+    },
+    {
+      "file": ".local/n11/next5-model8-run/s5-1306325366914285568-0.out.csv",
+      "key": [
+        1306325366914285568,
+        0
+      ],
+      "bytes": 277,
+      "sha256": "3af701311d98f54d7d079ffe2058a672ecff966decea09c4ab41d86eac0adb65",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 86,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 14711165
+    },
+    {
+      "file": ".local/n11/next5-model8-run/s5-1306606841890996224-0.out.csv",
+      "key": [
+        1306606841890996224,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "9af25440dc9b2458092d8933a1fb1d1c2102ae66a6f6a4c14dc6090c2cc72a48",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 89,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 2937539
+    },
+    {
+      "file": ".local/n11/next5-model8-run/s5-3611886901151268864-0.out.csv",
+      "key": [
+        3611886901151268864,
+        0
+      ],
+      "bytes": 276,
+      "sha256": "be0d0b1bb57dd19115a50ede1c4af93783fd42caf711f9c6734fb5f1c390fb25",
+      "line_endings": "CRLF",
+      "stones": 5,
+      "legal": 89,
+      "is_or": 0,
+      "verdict": 2,
+      "nodes": 2619574
+    }
+  ],
+  "combined_output": "research/experiments/n11-boundary-recovery-20261006/output/raw/next5-model8-out.csv",
+  "combined_bytes": 2188,
+  "combined_sha256": "71475c52dcffe05f7340d7c46b426696ef895b1261c2ffd5d46a4be10efa5ea9",
+  "combined_line_endings": "LF; source byte hashes retain originals",
+  "summary_sha256": "00a71bfc6de0768065e494039b302589ab6e03614cadba8c46050a2f65ea9745",
+  "cache_original": ".local/n11/next5-model8-run/cache-out/new-exact-s5.cache",
+  "cache_copy": "research/experiments/n11-boundary-recovery-20261006/output/next5-model8-s5.cache",
+  "cache_original_sha256": "f52e10e6f89f8b5c66cf4d0576d32ee5870ac8803b9c8165d81dd2471706f29e",
+  "cache_copy_sha256": "f52e10e6f89f8b5c66cf4d0576d32ee5870ac8803b9c8165d81dd2471706f29e",
+  "cache_bytes": 442,
+  "validation": {
+    "targets": 8,
+    "completed": 8,
+    "not_dispatched": 0,
+    "LOSS": 8,
+    "WIN": 0,
+    "UNKNOWN": 0,
+    "nodes": 39499200,
+    "all_targets_match": true,
+    "cache_rows_match_verdict_nodes": true,
+    "stones": 5,
+    "legal_counts_match_model_targets": true,
+    "solver_rerun": false
+  },
+  "summary_original": ".local/n11/next5-model8-run/summary.json",
+  "summary_original_sha256": "d7a5cc1f6b8ff8d49e6a98e5a4048a5a4b5cc58f76407db41c3e4b870ce7ff2e",
+  "summary_line_endings": "LF archival copy; original CRLF digest retained"
+}
