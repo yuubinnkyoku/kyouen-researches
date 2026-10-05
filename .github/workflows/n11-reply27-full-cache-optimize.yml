@@ -1,0 +1,116 @@
+name: N11 reply27 full-cache optimization
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-full-cache-optimize.yml"
+  workflow_dispatch:
+
+jobs:
+  optimize:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+
+      - name: Download independently replayed full-cache proof
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-full-replay-proof
+          path: /tmp/proof
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37275321333
+
+      - name: Check cache
+        run: |
+          test -f /tmp/proof/reply27-combined-s5.cache
+          grep -c '^s5verdict,' /tmp/proof/reply27-combined-s5.cache
+          sha256sum /tmp/proof/reply27-combined-s5.cache
+
+      - name: Certify minimum additional class count
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py \
+            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --out /tmp/cardinality.json | tee /tmp/cardinality.log
+          grep 'CACHE_AWARE_REPLY27_CARDINALITY_OK' /tmp/cardinality.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/cardinality.json"))
+          print("CARDINALITY",d["minimum_additional_classes"],
+                "secured",d["secured_vertices"],
+                "uncovered",d["uncovered_vertices"],
+                "dual",d["rational_dual_total"],
+                "tight",d["dual_certificate_matches_integer_optimum"])
+          PY
+
+      - name: Build additive repair
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cover.py \
+            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --out /tmp/additive.json > /tmp/additive.log
+          grep 'CACHE_AWARE_REPLY27_COVER_OK' /tmp/additive.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/additive.json"))
+          print("ADDITIVE",d["repair_classes"],
+                d["repair_additive_unknown_s5"],
+                d["repair_unique_unknown_s5"])
+          PY
+
+      - name: Direct-union one-swap refinement
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/refine_cache_aware_reply27_cover.py \
+            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --initial /tmp/additive.json \
+            --out /tmp/refined.json > /tmp/refined.log
+          grep 'CACHE_AWARE_REPLY27_UNION_REFINE_OK' /tmp/refined.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/refined.json"))
+          print("REFINED",d["repair_classes"],
+                "unique",d["initial_unique_unknown_s5"],"->",d["refined_unique_unknown_s5"],
+                "additive",d["initial_additive_unknown_s5"],"->",d["refined_additive_unknown_s5"],
+                "swaps",d["one_swap_improvements"])
+          PY
+
+      - name: Exact distinct-union MILP
+        id: union
+        continue-on-error: true
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_union_cover.py \
+            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --time-limit 600 \
+            --out /tmp/union.json | tee /tmp/union.log
+
+      - name: Report exact-union status
+        if: always()
+        run: |
+          if [ -f /tmp/union.json ]; then
+            python - <<'PY'
+          import json
+          d=json.load(open("/tmp/union.json"))
+          print("EXACT_UNION",d["repair_classes"],d["repair_unique_unknown_s5"],
+                "gap",d["milp_gap"])
+          PY
+          else
+            echo "EXACT_UNION_NOT_CLOSED"
+            tail -30 /tmp/union.log 2>/dev/null || true
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reply27-full-cache-optimization
+          path: |
+            /tmp/cardinality.json
+            /tmp/cardinality.log
+            /tmp/additive.json
+            /tmp/additive.log
+            /tmp/refined.json
+            /tmp/refined.log
+            /tmp/union.json
+            /tmp/union.log
