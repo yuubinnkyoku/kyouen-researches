@@ -59,3 +59,33 @@ Grundy値別では g=0 が8型22出現、g=1が5型480出現、g=2が6型82出�
 uv run --locked python research/experiments/n11-literature-transfer-20261005/scripts/component_reuse_audit.py \
   --out research/experiments/n11-literature-transfer-20261005/output/component-reuse-audit.json
 ```
+
+## C++実装A/B
+
+その後、上の候補を `cpp/solvers/kyouen_residual_micro.hpp` と
+`cpp/solvers/kyouen_dfpn_root.cpp` に実装した。main TTとは分離し、
+小残余成分だけを任意頂点置換でcanonical化して完成Grundy値を共有する。
+
+健全性は、4頂点以下の全clutter **2,068件**について
+素朴mex / 従来micro-kernel / 共有Grundy版の3者一致で検査した。
+
+11×11の固定s5 replay 3件では、share gate=6で:
+
+| 指標 | 共有なし | 共有あり |
+|---|---:|---:|
+| residual memo states | 3,803,408 | **1,066,012** |
+| shared hits | 0 | **1,064,207** |
+| 最終shared component型 | 0 | **1,805** |
+
+memo state数は約72%減った。一方、最初の完全canonical化実装は6頂点で最大 `6!=720`
+置換を毎回列挙したため、wallは **123s → 145s** と悪化した。
+
+そこで頂点–hyperedge incidenceにisomorphism-invariant color refinementをかけ、
+安定色が同じ頂点だけを置換するよう変更した。完全同型canonical keyの厳密性は保つ。
+この変更後、同じCI A/Bは **123s → 126s** まで改善した。
+
+したがって現在の評価は「構造圧縮は明確に効くが、gate=6ではwallで約2.4%負ける」。
+共有方式そのものを捨てる根拠ではなく、canonical化費をもう少し下げるか、
+より再利用率の高いbatch/worker間共有で償却するのが次の焦点である。
+
+観測run: CI run `37256739394`（head `415b27ed2e4c10830875d0d825e3b9d4e3755789`）。
