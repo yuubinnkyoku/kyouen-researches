@@ -21,6 +21,7 @@ def main() -> int:
     ap.add_argument("--class-hi", type=int, required=True)
     ap.add_argument("--cache", type=Path, required=True)
     ap.add_argument("--expected-children", type=int)
+    ap.add_argument("--allow-extra", action="store_true", help="allow unrelated s5 rows in a merged cache; only the target boundary is required to be LOSS")
     args = ap.parse_args()
     target = (args.class_lo, args.class_hi)
 
@@ -36,7 +37,9 @@ def main() -> int:
             value = int(row[4])
             if stones != 5:
                 raise SystemExit(f"non-s5 cache row: {row}")
-            if value != 2:
+            if value not in (1, 2):
+                raise SystemExit(f"invalid verdict for {key}: {value}")
+            if not args.allow_extra and value != 2:
                 raise SystemExit(f"non-LOSS verdict for {key}: {value}")
             old = verdict.get(key)
             if old is not None and old != value:
@@ -71,9 +74,12 @@ def main() -> int:
     cached = set(verdict)
     missing = children - cached
     extra = cached - children
-    if missing or extra:
+    nonloss_children = sorted(k for k in children if verdict.get(k) != 2)
+    if missing or nonloss_children or (extra and not args.allow_extra):
         raise SystemExit(
-            f"cache boundary mismatch: missing={len(missing)} extra={len(extra)}"
+            "cache boundary mismatch: "
+            f"missing={len(missing)} nonloss={len(nonloss_children)} "
+            f"extra={len(extra)}"
         )
 
     out = {
@@ -82,8 +88,11 @@ def main() -> int:
         "raw_edges": [list(e) for e in sorted(edges)],
         "coverage": sorted(coverage),
         "canonical_s5_children": len(children),
-        "cached_loss_children": len(verdict),
+        "cached_loss_children": len(children),
+        "cache_rows_total": len(verdict),
+        "cache_extra_rows": len(extra),
         "cache_boundary_exact": True,
+        "allow_extra": args.allow_extra,
         "s4_verdict": "LOSS",
         "reason": "all canonical s5 children are exact LOSS",
     }
