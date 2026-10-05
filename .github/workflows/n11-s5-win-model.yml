@@ -1,0 +1,65 @@
+name: N11 s5 chronological WIN model
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-s5-win-model.yml"
+      - "research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp"
+      - "research/experiments/n11-literature-transfer-20261005/scripts/evaluate_s5_win_model.py"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round5-s5.cache"
+  workflow_dispatch:
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download chronological training cache
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-full-replay-proof
+          path: /tmp/base
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37275321333
+
+      - name: Build structural feature extractor
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG             research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp             -o /tmp/extract-s5-features
+
+      - name: Build future-only evidence cache
+        run: |
+          cat             research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round4-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round5-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-tight15-probes-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-probe12-s5.cache             research/experiments/n11-frontier-selection-20261005/output/reply27-class-completion-s5.cache             > /tmp/future.cache
+
+      - name: Extract exact residual features
+        run: |
+          /usr/bin/time -f 'train_feature_wall_s=%e' -o /tmp/train.time             /tmp/extract-s5-features /tmp/base/reply27-combined-s5.cache             > /tmp/train-features.csv
+          /usr/bin/time -f 'test_feature_wall_s=%e' -o /tmp/test.time             /tmp/extract-s5-features /tmp/future.cache             > /tmp/test-features.csv
+          cat /tmp/train.time /tmp/test.time
+          echo "train_rows=$(( $(wc -l < /tmp/train-features.csv) - 1 ))"
+          echo "test_rows=$(( $(wc -l < /tmp/test-features.csv) - 1 ))"
+
+      - name: Fit on original frontier and evaluate later probes
+        run: |
+          python -m pip install --quiet numpy scipy
+          python research/experiments/n11-literature-transfer-20261005/scripts/evaluate_s5_win_model.py             --train /tmp/train-features.csv             --test /tmp/test-features.csv             --out /tmp/s5-win-model.json | tee /tmp/s5-win-model.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/s5-win-model.json"))
+          print("WIN_MODEL_SPLIT",d["chronological_split"])
+          print("WIN_MODEL_LEGAL_AUC",d["baseline"]["low_legal_auc_for_win"])
+          print("WIN_MODEL_HOLDOUT_AUC",d["balanced_logistic"]["holdout_auc"])
+          print("WIN_MODEL_TOP20",d["balanced_logistic"]["holdout_enrichment"]["20"])
+          print("WIN_MODEL_TOP_COEFF",d["balanced_logistic"]["coefficients"][:6])
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-s5-win-model
+          path: |
+            /tmp/train-features.csv
+            /tmp/test-features.csv
+            /tmp/s5-win-model.json
+            /tmp/s5-win-model.log
