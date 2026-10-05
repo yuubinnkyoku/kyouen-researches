@@ -126,6 +126,18 @@ def solve_cover(uncovered, candidates, coverage, costs, exact_count=None):
     return res, chosen
 
 
+def decode_key(key):
+    lo, hi = key
+    pts = {p for p in range(64) if (lo >> p) & 1}
+    pts.update(q + 64 for q in range(64) if (hi >> q) & 1)
+    return pts
+
+
+def exact_replay_row(tag, seq, key):
+    legal = len(legal_after(decode_key(key)))
+    return f"{tag},{seq},5,{key[0]},{key[1]},{legal},0,0,0,0,0\n"
+
+
 def details(keys, coverage, children, derived_cache):
     out = []
     union = set()
@@ -146,6 +158,9 @@ def details(keys, coverage, children, derived_cache):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", type=Path)
+    ap.add_argument("--targets-out", type=Path)
+    ap.add_argument("--sample-out", type=Path)
+    ap.add_argument("--sample-per-class", type=int, default=2)
     args = ap.parse_args()
 
     selected_doc = json.loads(SELECTED.read_text(encoding="utf-8"))
@@ -290,6 +305,45 @@ def main():
     assert len(fixed_sel) == 15
     assert fixed_sum == 1471
     assert fixed_union == 1471
+
+    repair_unknown = {
+        key: sorted(ch for ch in children[key] if ch not in derived_cache)
+        for key in add_sel
+    }
+    all_targets = sorted(
+        set().union(*repair_unknown.values()),
+        key=lambda key: (len(legal_after(decode_key(key))), key[1], key[0]),
+    )
+    if args.sample_per_class < 1:
+        raise SystemExit("--sample-per-class must be >=1")
+    sample_seen = set()
+    sample = []
+    for key in sorted(add_sel):
+        ranked = sorted(
+            repair_unknown[key],
+            key=lambda ch: (len(legal_after(decode_key(ch))), ch[1], ch[0]),
+        )
+        for ch in ranked[:args.sample_per_class]:
+            if ch not in sample_seen:
+                sample_seen.add(ch)
+                sample.append(ch)
+    sample.sort(
+        key=lambda key: (len(legal_after(decode_key(key))), key[1], key[0])
+    )
+    out["materialized_targets"] = len(all_targets)
+    out["sample_targets"] = len(sample)
+    out["sample_per_class"] = args.sample_per_class
+
+    if args.targets_out:
+        args.targets_out.parent.mkdir(parents=True, exist_ok=True)
+        with args.targets_out.open("w", encoding="utf-8") as fp:
+            for seq, key in enumerate(all_targets):
+                fp.write(exact_replay_row("reply27-repair-s5", seq, key))
+    if args.sample_out:
+        args.sample_out.parent.mkdir(parents=True, exist_ok=True)
+        with args.sample_out.open("w", encoding="utf-8") as fp:
+            for seq, key in enumerate(sample):
+                fp.write(exact_replay_row("reply27-repair-sample", seq, key))
 
     text = json.dumps(out, indent=2, sort_keys=True) + "\n"
     print(text, end="")
