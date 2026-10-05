@@ -136,7 +136,7 @@ def decode_key(key):
 
 @lru_cache(maxsize=None)
 def legal_count_key(key):
-    return legal_count_key(key)
+    return len(legal_after(decode_key(key)))
 
 
 def exact_replay_row(tag, seq, key):
