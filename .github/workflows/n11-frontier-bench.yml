@@ -96,4 +96,45 @@ jobs:
           assert len(shared)==3
           print("S6_SHARE_VERDICT_MATCH", shared)
           PY
+      - name: S6 witness-cover cold sample
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_s6_structural_cover.py \
+            --targets-out /tmp/r27-s6-cover.csv > /tmp/r27-s6-cover.meta
+          sort -t, -k6,6n /tmp/r27-s6-cover.csv | \
+            awk 'NR==1 || NR==61 || NR==121 || NR==181 || NR==241 || NR==301 || NR==361 || NR==421 || NR==481 || NR==541 || NR==601 || NR==661 || NR==721 || NR==781 || NR==841' \
+            > /tmp/r27-s6-sample.csv
+          echo "s6_sample_rows=$(wc -l < /tmp/r27-s6-sample.csv)"
+          /usr/bin/time -f 'r27_s6_sample_wall_s=%e' -o /tmp/r27-s6-sample.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-s6-sample.csv --only=6 \
+              --exact-replay-budget=1000000 --csv=/tmp/r27-s6-sample.out
+          cat /tmp/r27-s6-sample.time
+          grep '^replay,' /tmp/r27-s6-sample.out
+          ! grep -q '^replay_error,' /tmp/r27-s6-sample.out
+          python - <<'PY'
+          import csv, math
+          rows=[]
+          with open("/tmp/r27-s6-sample.out") as f:
+              for row in csv.reader(f):
+                  if row and row[0]=="replay":
+                      rows.append({
+                          "legal": int(row[3]),
+                          "result": int(row[6]),
+                          "nodes": int(row[7]),
+                      })
+          assert len(rows)==15, rows
+          hist={0:0,1:0,2:0}
+          for r in rows: hist[r["result"]]+=1
+          xs=[r["legal"] for r in rows]
+          ys=[math.log1p(r["nodes"]) for r in rows]
+          mx=sum(xs)/len(xs); my=sum(ys)/len(ys)
+          num=sum((x-mx)*(y-my) for x,y in zip(xs,ys))
+          den=(sum((x-mx)**2 for x in xs)*sum((y-my)**2 for y in ys))**0.5
+          corr=num/den if den else 0.0
+          print("S6_SAMPLE_RESULT_COUNTS", hist)
+          print("S6_SAMPLE_NODES", min(r["nodes"] for r in rows),
+                sum(r["nodes"] for r in rows)//len(rows),
+                max(r["nodes"] for r in rows))
+          print("S6_LEGAL_LOGNODE_CORR", round(corr,4))
+          PY
+
 # rerun after selected-layer cache fix 2026-10-05
