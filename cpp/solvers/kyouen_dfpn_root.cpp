@@ -1784,8 +1784,9 @@ private:
         if(unknown) return ExactResult::UNKNOWN;
         ExactResult r=isor?ExactResult::LOSS:ExactResult::WIN;
         if(residual_crosscheck_legal_>0 && popcount(legal)<=residual_crosscheck_legal_){
-            ExactResult rr=residual_exact(state,stones,legal);
-            if(rr!=r) throw std::runtime_error("residual kernel contradicts board exact DFS");
+            int rr=residual_exact(state,stones,legal);
+            int board=(r==ExactResult::WIN)?1:2;
+            if(rr!=board) throw std::runtime_error("residual kernel contradicts board exact DFS");
         }
         exact_record(key,r);
         return r;
@@ -2295,7 +2296,7 @@ public:
     // Tie-break mode: false = count ASC then key ASC (baseline),
     // true = count DESC then key DESC (the DFS depth-5 winner).
     void set_tiebreak_desc(bool b){ tiebreak_desc_=b; }
-    ExactResult residual_exact(const TState& state,int stones,Bits legal){
+    int residual_exact(const TState& state,int stones,Bits legal){
         auto r=residual_for(state.t[0],legal,nullptr);
         std::map<kyouen_residual::Key,int> memo;
         kyouen_residual::Stats st;
@@ -2304,7 +2305,7 @@ public:
         residual_crosscheck_removed_+=st.module_removed;
         residual_crosscheck_splits_+=st.component_splits;
         int v=kyouen_residual::first_player_verdict_from_grundy(g,stones);
-        return v==1?ExactResult::WIN:ExactResult::LOSS;
+        return v;
     }
     void set_residual_crosscheck_legal(int legal){ residual_crosscheck_legal_=std::max(0,legal); }
     void set_residual_audit_legal(int legal){ residual_audit_legal_=std::max(0,legal); }
