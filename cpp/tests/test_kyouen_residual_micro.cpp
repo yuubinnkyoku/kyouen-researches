@@ -12,6 +12,13 @@ static int plain(State s,std::map<Key,int>& memo){
     int g=0;for(int q:a){if(q==g)++g;else if(q>g)break;}memo.emplace(k,g);return g;
 }
 int main(){
+    // Target the transition bug first: choosing one endpoint of a forbidden
+    // pair must ban the other endpoint immediately.
+    {
+        State s{0b11,{0b11}};
+        auto t=play(s,0);
+        assert(t.vertices==0);
+    }
     // Exhaust every clutter on <=4 vertices (all nonempty candidate edges of
     // size >=2). Compare the optimized kernel with direct mex recursion.
     std::uint64_t checked=0;
