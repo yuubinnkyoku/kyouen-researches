@@ -1522,23 +1522,6 @@ private:
             Bits board_next=(legal&~bitof(p))&~added_bans(occupied,p);
             board_next.hi&=HI_MASK;
             auto child=kyouen_residual::play(r,(int)j);
-            // In residual semantics, singleton constraints are represented by
-            // vertices that must become illegal after the move.  Normalize
-            // them away before comparing with the board legal mask.
-            bool changed=true;
-            while(changed){
-                changed=false;
-                for(auto e:child.edges) if(kyouen_residual::pc(e)==1){
-                    int u=__builtin_ctzll(e);
-                    if((child.vertices>>u)&1ULL){
-                        child.vertices&=~(1ULL<<u);
-                        std::vector<kyouen_residual::Mask> ne;
-                        for(auto x:child.edges) if(!(x&(1ULL<<u))) ne.push_back(x);
-                        child.edges=kyouen_residual::minimal(std::move(ne));
-                        changed=true; break;
-                    }
-                }
-            }
             Bits residual_next{};
             for(std::size_t k=0;k<labels.size();++k)
                 if((child.vertices>>k)&1ULL) setbit(residual_next,labels[k]);
