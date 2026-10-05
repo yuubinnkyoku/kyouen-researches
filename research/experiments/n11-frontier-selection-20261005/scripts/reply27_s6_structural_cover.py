@@ -162,7 +162,7 @@ def main():
             for seq, j in enumerate(chosen):
                 lo, hi = children[j]
                 legal = len(legal_after(decode((lo, hi))))
-                fp.write(f"reply27-s6-cover,{seq},6,{lo},{hi},{legal},0,1,0,0,0\\n")
+                fp.write(f"reply27-s6-cover,{seq},6,{lo},{hi},{legal},0,1,0,0,0\n")
 
     out = {
         "s5_targets": len(s5),
