@@ -40,7 +40,7 @@ def load_replay(root:Path):
         # Only the 16 original shard target files carry the global frontier
         # sequence.  The proof artifact also contains retry/unknown CSVs whose
         # local sequence numbers must not be mixed into this map.
-        if re.fullmatch(r"reply27-\\d+\\.csv", p.name) is None:
+        if re.fullmatch(r"reply27-\d+\.csv", p.name) is None:
             continue
         try:
             with p.open(newline="",encoding="utf-8") as fp:
