@@ -1687,13 +1687,6 @@ private:
 
     void exact_store(const Bits& key,ExactResult r){
         if(r==ExactResult::UNKNOWN) return;
-        if(exact_share_layer_>0 && stones==exact_share_layer_){
-            auto si=exact_layer_cache_.find(key);
-            if(si!=exact_layer_cache_.end()){
-                ++exact_share_hits_;
-                return checked_return(si->second==1 ? ExactResult::WIN : ExactResult::LOSS);
-            }
-        }
         int s=tt_.find(key.lo,key.hi);
         if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN){
             const bool old_win=tt_.st_[(std::size_t)s]==PnTT::WIN;
@@ -1743,6 +1736,13 @@ private:
             }
             return r;
         };
+        if(exact_share_layer_>0 && stones==exact_share_layer_){
+            auto si=exact_layer_cache_.find(key);
+            if(si!=exact_layer_cache_.end()){
+                ++exact_share_hits_;
+                return checked_return(si->second==1 ? ExactResult::WIN : ExactResult::LOSS);
+            }
+        }
         int s=tt_.find(key.lo,key.hi);
         if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN)
             return checked_return(tt_.st_[(std::size_t)s]==PnTT::WIN ? ExactResult::WIN : ExactResult::LOSS);
@@ -1755,7 +1755,7 @@ private:
             ++residual_exact_calls_;
             ExactResult rr=residual_verdict(state.t[0],legal,stones);
             exact_record(key,rr);
-            return rr;
+            return checked_return(rr);
         }
 
         if(budget==0) return ExactResult::UNKNOWN;
