@@ -1,0 +1,186 @@
+{
+  "actions_parent_cache_matches_independent_propagation": true,
+  "artifact_source": "saved GitHub Actions run 37339663025 files selected from .local artifacts when available, otherwise output/raw persisted copies",
+  "boundary_comparison": {
+    "geometry_module": "research\\experiments\\n11-search-methods\\scripts\\dfpn_edge_classes.py",
+    "geometry_module_sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c",
+    "geometry_regenerated_at_audit_time": true,
+    "independent_boundary_count": 169,
+    "independent_boundary_csv_sha256": "8f8ce5a4de74535b66e2507142ab3941dc2a04954b1934cdddeaa93ad5f67d50",
+    "independent_metadata_sha256": "af1d945d3cf528e4d62c352ef13b92bbcf5f21b5c11b6548a9d525eaec462108",
+    "legal_counts_regenerated_at_audit_time": true,
+    "run_metadata_boundary_count": 169,
+    "run_metadata_sha256": "5a3d8f999db29f65e89c8873efefe618a84fc83faa03b7fa983223b0f5246f39",
+    "same_canonical_keys_and_parent_incidence": true,
+    "same_parent_child_counts": [
+      86,
+      84
+    ]
+  },
+  "derived_cache_sha256": "81c3ca9365e36c63cb2bf5f902e6e760438ea833a9b0aafa76b6dae108e12ecd",
+  "github_actions_run_id": 37339663025,
+  "parents": [
+    {
+      "all_children_win": true,
+      "boundary_children": 86,
+      "derived_label": "WIN",
+      "key": [
+        1154082588886827008,
+        536870912
+      ],
+      "loss_witness_key": null,
+      "verdict_counts": {
+        "1": 86
+      }
+    },
+    {
+      "all_children_win": true,
+      "boundary_children": 84,
+      "derived_label": "WIN",
+      "key": [
+        1874623344894017536,
+        0
+      ],
+      "loss_witness_key": null,
+      "verdict_counts": {
+        "1": 84
+      }
+    }
+  ],
+  "replay": {
+    "duplicate_or_conflicting_keys": 0,
+    "expected_boundary_count": 169,
+    "missing_count": 0,
+    "result_counts": {
+      "1": 169
+    },
+    "row_count": 169,
+    "shards": [
+      {
+        "name": "reply27-model-hard2-s6-0",
+        "out_sha256": "5eb64524527f5e29c1ac8bdda267722d495167c0f78546491d3509c760cfcc35",
+        "results": {
+          "1": 43
+        },
+        "rows": 43,
+        "targets_sha256": "b1fde825d1519a8da9533dd07ccf3df9441f6da0d954c429d990f004f2add2a3",
+        "time_sha256": "03c7fa7fff976ef6f828b8d1b15244d7daa780e1c200bbb5e3961de64dd0d8dd"
+      },
+      {
+        "name": "reply27-model-hard2-s6-1",
+        "out_sha256": "bbdee0b76bd4187210fbb79f934114e4ebc68bef9ca091ce0ec834cd376967fe",
+        "results": {
+          "1": 42
+        },
+        "rows": 42,
+        "targets_sha256": "a2790c7619df94c67204e248251001820b0d54c81d47f42c5b031c38cfe5fc23",
+        "time_sha256": "4eb9283782254088e7f781be0f3f0ad7fba9820cd1aa50776949c2b91bf4be22"
+      },
+      {
+        "name": "reply27-model-hard2-s6-2",
+        "out_sha256": "7bce731267331fbc58e8cd0444e7dd3a400c48ed21d822bf7ad637bd8ef137f0",
+        "results": {
+          "1": 42
+        },
+        "rows": 42,
+        "targets_sha256": "cba317f9fac9b46d7fb1d158cd1a2a43367756ec8b7f93a0ea2421a95479fa57",
+        "time_sha256": "f5d816589557011cfc74b916407431bc8f4db67afd4eddf097ffec5305a8467a"
+      },
+      {
+        "name": "reply27-model-hard2-s6-3",
+        "out_sha256": "14283a08729aabe1deb1bd30d4cd0f16a1708a0d6f2bf5198c1af204b30f9adc",
+        "results": {
+          "1": 42
+        },
+        "rows": 42,
+        "targets_sha256": "4b1e3dd3c49719842cb8c51beb6a345332467b4875b1827ee268ec75c511ea70",
+        "time_sha256": "ac040e51ce259fa846d83565f783a4db276daa0103f3fa1bd173b6cc51fde9b8"
+      }
+    ]
+  },
+  "saved_raw_only": true,
+  "schema": "model-hard2-independent-check-v1",
+  "solver_outcome_trust": "Exact s6 verdict values are accepted from the Actions solver; this audit independently checks geometry, complete-boundary equality, replay coverage, and the specified parent propagation.",
+  "sources": [
+    {
+      "bytes": 9154,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-materialized-hard2-meta.json",
+      "sha256": "5a3d8f999db29f65e89c8873efefe618a84fc83faa03b7fa983223b0f5246f39"
+    },
+    {
+      "bytes": 10714,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-materialized-hard2-s6.csv",
+      "sha256": "34e6663aad099669e92e3bf2df560db78f0204219bf6b987077a778db28d60c0"
+    },
+    {
+      "bytes": 399,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-proof-result.json",
+      "sha256": "be926f20835b5656c76bc7e8758ed410cf535388a42403f40e94a5429aed853b"
+    },
+    {
+      "bytes": 169,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-proof-model-hard2-s5.cache",
+      "sha256": "cb684f85348df557af4706ec5c92f4b9cb3c51b9089596adef7a3f1d4be5f54b"
+    },
+    {
+      "bytes": 2993,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-0-out.csv",
+      "sha256": "5eb64524527f5e29c1ac8bdda267722d495167c0f78546491d3509c760cfcc35"
+    },
+    {
+      "bytes": 2725,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-0-targets.csv",
+      "sha256": "b1fde825d1519a8da9533dd07ccf3df9441f6da0d954c429d990f004f2add2a3"
+    },
+    {
+      "bytes": 13,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-0-time",
+      "sha256": "03c7fa7fff976ef6f828b8d1b15244d7daa780e1c200bbb5e3961de64dd0d8dd"
+    },
+    {
+      "bytes": 2920,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-1-out.csv",
+      "sha256": "bbdee0b76bd4187210fbb79f934114e4ebc68bef9ca091ce0ec834cd376967fe"
+    },
+    {
+      "bytes": 2659,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-1-targets.csv",
+      "sha256": "a2790c7619df94c67204e248251001820b0d54c81d47f42c5b031c38cfe5fc23"
+    },
+    {
+      "bytes": 13,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-1-time",
+      "sha256": "4eb9283782254088e7f781be0f3f0ad7fba9820cd1aa50776949c2b91bf4be22"
+    },
+    {
+      "bytes": 2923,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-2-out.csv",
+      "sha256": "7bce731267331fbc58e8cd0444e7dd3a400c48ed21d822bf7ad637bd8ef137f0"
+    },
+    {
+      "bytes": 2663,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-2-targets.csv",
+      "sha256": "cba317f9fac9b46d7fb1d158cd1a2a43367756ec8b7f93a0ea2421a95479fa57"
+    },
+    {
+      "bytes": 13,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-2-time",
+      "sha256": "f5d816589557011cfc74b916407431bc8f4db67afd4eddf097ffec5305a8467a"
+    },
+    {
+      "bytes": 2932,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-3-out.csv",
+      "sha256": "14283a08729aabe1deb1bd30d4cd0f16a1708a0d6f2bf5198c1af204b30f9adc"
+    },
+    {
+      "bytes": 2667,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-3-targets.csv",
+      "sha256": "4b1e3dd3c49719842cb8c51beb6a345332467b4875b1827ee268ec75c511ea70"
+    },
+    {
+      "bytes": 13,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-3-time",
+      "sha256": "ac040e51ce259fa846d83565f783a4db276daa0103f3fa1bd173b6cc51fde9b8"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "claim": "scheduling only; model scores are not verdicts",
+  "classes": [
+    {
+      "chosen": [
+        {
+          "key": [
+            1297036693756510208,
+            64
+          ],
+          "legal": 80,
+          "score": 0.4367943802793752
+        },
+        {
+          "key": [
+            1297036693890727936,
+            0
+          ],
+          "legal": 84,
+          "score": 0.32472047985669406
+        },
+        {
+          "key": [
+            1297036693773287424,
+            0
+          ],
+          "legal": 85,
+          "score": 0.209373792655837
+        },
+        {
+          "key": [
+            1297036762475986944,
+            0
+          ],
+          "legal": 85,
+          "score": 0.12289844514719284
+        },
+        {
+          "key": [
+            3602879702970204160,
+            0
+          ],
+          "legal": 85,
+          "score": 0.09957599057698485
+        },
+        {
+          "key": [
+            10412322338497429504,
+            0
+          ],
+          "legal": 84,
+          "score": 0.04238459535276329
+        },
+        {
+          "key": [
+            1224979098778992640,
+            67108866
+          ],
+          "legal": 85,
+          "score": -0.10725869245667297
+        },
+        {
+          "key": [
+            1297037793268137984,
+            0
+          ],
+          "legal": 83,
+          "score": -0.19999418232540744
+        }
+      ],
+      "key": [
+        1297036693756510208,
+        0
+      ],
+      "top_legal": 80,
+      "top_score": 0.4367943802793752,
+      "unknown_s5": 90
+    }
+  ],
+  "dedup_probes": 8,
+  "evidence_context": {
+    "class_boundary_audit": {
+      "class_boundary": 100,
+      "known_loss": 10,
+      "known_win": 0,
+      "ranked_target_rows": 90,
+      "ranked_target_set_matches_unknown": true,
+      "unknown": 90
+    },
+    "global_cache": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-model-hard2-s5.cache",
+      "sha256": "e8ebdca9be6d6ea5ece89a4a90e8bf6b0a8d7dff3f27828c4f6556d849eb43a2",
+      "unique_exact": 2732
+    },
+    "independent_checks": {
+      "all_2732_global_cache_rows_read_and_validated": true,
+      "boundary_regenerated_from_geometry": true,
+      "solver_invoked_by_ranking_pipeline": false,
+      "top8_recomputed_and_matched": true
+    },
+    "interpretation": "heuristic scheduling only; model score is not a game verdict",
+    "model_pipeline": {
+      "feature_extractor": "research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp",
+      "features": [
+        "legal",
+        "e2",
+        "e3",
+        "e4",
+        "components",
+        "isolated",
+        "max_component",
+        "max_degree",
+        "max_d2",
+        "max_d3",
+        "max_d4",
+        "sum_degree",
+        "pair_max_degree",
+        "occ_sum_d2",
+        "occ_min_d2",
+        "occ_max_d2",
+        "occ_radius2_sum"
+      ],
+      "ranking": "balanced L-BFGS logistic score descending; tie-break legal ascending, hi ascending, lo ascending",
+      "selector": "research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py"
+    },
+    "probes_csv_sha256": "ce7311177792517fe0a528b2df0fa114203f5f698f97a4b7c3fb6e6b301a33ab",
+    "target_class": [
+      1297036693756510208,
+      0
+    ],
+    "target_list": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-model-hard2-best-class.csv",
+      "sha256": "f95b9ac3402fb45543491aaffd4359c68990c617a1209ad2c4813399340d89b7"
+    },
+    "training_source": {
+      "artifact_name": "reply27-full-replay-proof",
+      "artifact_run_id": 37275321333,
+      "candidate_overlap": 0,
+      "loss": 2195,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next2-model-training-s5.cache",
+      "sha256": "d8a093c0aca8a6fe58def23a527a9bfb1d6a615f83c0341e4c6bb9190df0118b",
+      "unique_rows": 2238,
+      "win": 43
+    }
+  },
+  "per_class": 8,
+  "repair_classes": 1,
+  "train_loss": 2195,
+  "train_unique": 2238,
+  "train_win": 43
+}

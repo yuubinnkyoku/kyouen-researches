@@ -1,0 +1,130 @@
+{
+  "claim": "scheduling only; model scores are not verdicts",
+  "classes": [
+    {
+      "chosen": [
+        {
+          "key": [
+            1153765929671200768,
+            0
+          ],
+          "legal": 78,
+          "score": 0.8040299592432052
+        },
+        {
+          "key": [
+            10449477035407441920,
+            0
+          ],
+          "legal": 79,
+          "score": 0.7843406858548494
+        },
+        {
+          "key": [
+            1299569967473102848,
+            0
+          ],
+          "legal": 79,
+          "score": 0.6338538658006418
+        },
+        {
+          "key": [
+            1153203254595686400,
+            0
+          ],
+          "legal": 78,
+          "score": 0.3849263517350048
+        },
+        {
+          "key": [
+            1153343717206134784,
+            0
+          ],
+          "legal": 80,
+          "score": 0.28286813096865404
+        },
+        {
+          "key": [
+            1153202979718041600,
+            0
+          ],
+          "legal": 80,
+          "score": 0.22929279504279987
+        },
+        {
+          "key": [
+            1297318167793635328,
+            0
+          ],
+          "legal": 84,
+          "score": 0.18249097033101758
+        },
+        {
+          "key": [
+            1153202979717910528,
+            0
+          ],
+          "legal": 81,
+          "score": 0.13261638263455122
+        }
+      ],
+      "key": [
+        1153202979717779456,
+        0
+      ],
+      "top_legal": 78,
+      "top_score": 0.8040299592432052,
+      "unknown_s5": 91
+    }
+  ],
+  "dedup_probes": 8,
+  "evidence_context": {
+    "class_boundary_audit": {
+      "class_boundary": 98,
+      "known_loss": 7,
+      "known_win": 0,
+      "target_keys_unique": true,
+      "target_rows": 91,
+      "target_set_matches_unknown": true,
+      "unknown": 91
+    },
+    "global_cache": {
+      "all_entries_excluded_from_candidate_targets": true,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next2-s5.cache",
+      "sha256": "d2f758a77896d7a79542970f5d548d423799a69ec9321f6d4fd5610e7e2f498b",
+      "unique_exact": 2822
+    },
+    "interpretation": "heuristic scheduling only; model scores are not game verdicts",
+    "model_pipeline": {
+      "balanced_logistic_independent_top8_match": true,
+      "feature_extractor": "research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp",
+      "selector": "research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py",
+      "training_features_reextracted": false,
+      "training_features_reused": true
+    },
+    "probes_csv_sha256": "ea194b91ecc0ad42beebd9e4fa662294c6dc5b7a86b10e0ece82a09ab9309188",
+    "solver_invoked_by_ranking_pipeline": false,
+    "target_class": [
+      1153202979717779456,
+      0
+    ],
+    "target_list": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next2-best-class.csv",
+      "sha256": "03fdbb560f73c37c2b972391ac4bea68202f9f8d45c8b2df1817ee075849ce43"
+    },
+    "training_source": {
+      "artifact_run_id": 37275321333,
+      "candidate_overlap": 0,
+      "loss": 2195,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next2-model-training-s5.cache",
+      "sha256": "d8a093c0aca8a6fe58def23a527a9bfb1d6a615f83c0341e4c6bb9190df0118b",
+      "unique_feature_rows": 2238,
+      "win": 43
+    }
+  },
+  "per_class": 8,
+  "repair_classes": 1,
+  "train_loss": 2195,
+  "train_unique": 2238,
+  "train_win": 43
+}
