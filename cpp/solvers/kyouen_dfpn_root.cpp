@@ -2299,6 +2299,11 @@ public:
     void set_residual_crosscheck_legal(int legal){ residual_crosscheck_legal_=std::max(0,legal); }
     void set_residual_audit_legal(int legal){ residual_audit_legal_=std::max(0,legal); }
     std::uint64_t residual_audit_calls() const { return residual_audit_calls_; }
+    void residual_crosscheck_stats(std::uint64_t& calls,std::uint64_t& removed,
+                                   std::uint64_t& splits) const {
+        calls=residual_crosscheck_calls_; removed=residual_crosscheck_removed_;
+        splits=residual_crosscheck_splits_;
+    }
     void set_exact_handoff(int legal,std::uint64_t budget,int retries,int publish_mode){
         exact_legal_=std::max(0,legal);
         exact_budget_=std::max<std::uint64_t>(1,budget);
@@ -2638,6 +2643,15 @@ template<int N>
             row_solver.set_residual_audit_legal(residual_audit_legal);
             row_solver.set_residual_crosscheck_legal(residual_crosscheck_legal);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
+            if(residual_audit_legal>0 || residual_crosscheck_legal>0){
+                std::uint64_t cc=0,rm=0,sp=0;
+                row_solver.residual_crosscheck_stats(cc,rm,sp);
+                O<<"# residual row="<<id
+                 <<" audit_calls="<<row_solver.residual_audit_calls()
+                 <<" crosscheck_calls="<<cc
+                 <<" module_removed="<<rm
+                 <<" component_splits="<<sp<<"\n";
+            }
         }catch(const std::exception& e){
             O<<"replay_error,"<<id<<","<<stones<<",0,\""<<e.what()<<"\"\n"; O.flush(); ++id; continue;
         }
