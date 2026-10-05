@@ -85,7 +85,8 @@ def main():
 
     s6=set()
     transitions=0
-    multiplicity=Counter()
+    parents_by_s6=defaultdict(set)
+    transition_multiplicity=Counter()
     for p in parents:
         occ=set(p)
         for z in legal_after(occ):
@@ -95,7 +96,8 @@ def main():
                 raise SystemExit("canonical child is not s6")
             transitions+=1
             s6.add(q)
-            multiplicity[q]+=1
+            parents_by_s6[q].add(p)
+            transition_multiplicity[q]+=1
 
     result={
         "n":N,
@@ -106,8 +108,18 @@ def main():
         "transition_dedup_fraction":(
             1.0-len(s6)/transitions if transitions else 0.0
         ),
-        "s6_shared_by_multiple_parents":sum(v>=2 for v in multiplicity.values()),
-        "s6_max_parent_multiplicity":max(multiplicity.values(),default=0),
+        "s6_shared_by_multiple_distinct_parents":sum(
+            len(ps)>=2 for ps in parents_by_s6.values()
+        ),
+        "s6_max_distinct_parent_count":max(
+            (len(ps) for ps in parents_by_s6.values()),default=0
+        ),
+        "s6_reached_by_multiple_raw_transitions":sum(
+            v>=2 for v in transition_multiplicity.values()
+        ),
+        "s6_max_raw_transition_multiplicity":max(
+            transition_multiplicity.values(),default=0
+        ),
         "s6_language":dfa_stats(sorted(s6)),
         "claim":"exact finite-language representation audit; no game verdict",
     }
