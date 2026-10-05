@@ -40,7 +40,7 @@ from dfpn_edge_classes import d4_canonical_key, forbidden, legal_after  # noqa: 
 HERE = Path(__file__).resolve().parents[1]
 SELECTED = HERE / "output/reply27-direct-union-cover.json"
 VERDICTS = HERE / "output/reply27-selected31-verdicts.json"
-HARD9 = HERE / "output/reply27-hard9-s5.cache"
+HARD9 = HERE / "output/reply27-hard9-s5-verdict-cache.csv"
 FIRST, R2 = 60, 27
 V = 121
 
