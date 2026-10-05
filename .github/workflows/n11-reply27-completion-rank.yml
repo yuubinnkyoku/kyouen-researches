@@ -1,0 +1,57 @@
+name: N11 reply27 completion ranking
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-completion-rank.yml"
+      - "research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache"
+  workflow_dispatch:
+
+jobs:
+  rank:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+      - name: Rebuild current repair
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache \
+            --out /tmp/current.json > /tmp/current.log
+          grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/current.log
+      - name: Rank full-completion targets
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py \
+            --repair-json /tmp/current.json \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache \
+            --targets-out /tmp/best-class.csv --out /tmp/ranking.json | tee /tmp/ranking.log
+          grep 'REPLY27_COMPLETION_RANK_OK' /tmp/ranking.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/ranking.json"))
+          print("COMPLETION_STATE", d["loss_classes"], d["win_forbidden_classes"],
+                d["secured_vertices"], d["repair_classes"])
+          for row in d["ranking"][:8]:
+              print("COMPLETION_CANDIDATE", row["rank"], row["key"],
+                    "unknown", row["unknown_s5"],
+                    "known_loss", row["known_loss_s5"],
+                    "gain", row["new_vertex_count"],
+                    "ratio", round(row["unknown_per_new_vertex"],3))
+          print("BEST_TARGET_ROWS", sum(1 for _ in open("/tmp/best-class.csv")))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-completion-ranking
+          path: |
+            /tmp/current.json
+            /tmp/ranking.json
+            /tmp/best-class.csv
