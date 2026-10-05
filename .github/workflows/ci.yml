@@ -35,6 +35,17 @@ jobs:
           grep -q '^VERIFIED clutters=' /tmp/residual-micro.out
       - name: Compile residual n11 integration
         run: c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/kyouen_dfpn_root
+      - name: Audit residual transitions on deterministic n11 exact roots
+        run: |
+          cat > /tmp/n11-residual-audit.csv <<'EOF'
+          fixture,0,5,7,0,116,0,0,0,0,0
+          fixture,1,5,31,0,116,0,0,0,0,0
+          fixture,2,5,1048579,0,116,0,0,0,0,0
+          EOF
+          /tmp/kyouen_dfpn_root --n=11 --memo=18 --exact-replay=/tmp/n11-residual-audit.csv --only=5 \
+            --exact-replay-budget=200000 --residual-audit-legal=6 --csv=/tmp/n11-residual-audit.out
+          ! grep -q '^replay_error,' /tmp/n11-residual-audit.out
+          awk '/^# residual_audit row=/{split($3,a,"="); total+=a[2]} END{exit !(total>0)}' /tmp/n11-residual-audit.out
       - name: Generate and check 1x1 through 6x6
         run: |
           mkdir -p /tmp/kyouen-certs
