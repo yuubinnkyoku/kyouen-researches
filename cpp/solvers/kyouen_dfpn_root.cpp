@@ -1541,7 +1541,31 @@ private:
             for(std::size_t k=0;k<labels.size();++k)
                 if((child.vertices>>k)&1ULL) setbit(residual_next,labels[k]);
             if(!(residual_next==board_next))
-                throw std::runtime_error("residual transition mismatch");
+                throw std::runtime_error("residual transition vertex mismatch");
+
+            Bits occupied_next=occupied|bitof(p);
+            std::vector<int> direct_labels;
+            auto direct=residual_for(occupied_next,board_next,&direct_labels);
+            std::vector<Bits> child_edges,direct_edges;
+            for(auto e:child.edges){
+                Bits q{};
+                for(std::size_t k=0;k<labels.size();++k)
+                    if((e>>k)&1ULL) setbit(q,labels[k]);
+                child_edges.push_back(q);
+            }
+            for(auto e:direct.edges){
+                Bits q{};
+                for(std::size_t k=0;k<direct_labels.size();++k)
+                    if((e>>k)&1ULL) setbit(q,direct_labels[k]);
+                direct_edges.push_back(q);
+            }
+            auto less_bits=[](const Bits& a,const Bits& b){
+                return a.hi!=b.hi ? a.hi<b.hi : a.lo<b.lo;
+            };
+            std::sort(child_edges.begin(),child_edges.end(),less_bits);
+            std::sort(direct_edges.begin(),direct_edges.end(),less_bits);
+            if(child_edges!=direct_edges)
+                throw std::runtime_error("residual transition edge mismatch");
         }
     }
 
