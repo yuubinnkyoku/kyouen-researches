@@ -79,7 +79,7 @@ def main():
     for pk,pts in parents.items():
         occ=set(pts)
         for z in legal_after(occ):
-            ck=d4_canonical_key(list(pts)+(z,))
+            ck=d4_canonical_key(list(pts)+[z])
             parent_map[ck].add(pk)
             raw_transitions+=1
 
