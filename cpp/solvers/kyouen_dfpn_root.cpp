@@ -2574,7 +2574,7 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
 template<int N>
     static int run_exact_replay(const std::string& path,std::uint64_t budget,
                             unsigned memo_power,const std::string& only,
-                            int exact_order,std::ostream& O){
+                            int exact_order,int residual_audit_legal,std::ostream& O){
     std::ifstream in(path);
     if(!in){ std::cerr<<"cannot open --exact-replay\n"; return 1; }
     O<<"# exact replay: order="<<exact_order<<" (0=count-asc 1=count-desc 2=key-asc)"<<std::endl;
@@ -2618,7 +2618,10 @@ template<int N>
             row_solver.set_deadline(0);
             row_solver.set_exact_handoff(0,1,1,0); // publish=ALL
             row_solver.set_exact_order(exact_order);
+            row_solver.set_residual_audit_legal(residual_audit_legal);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
+            if(residual_audit_legal>0)
+                O<<"# residual_audit row="<<id<<" calls="<<row_solver.residual_audit_calls()<<"\n";
         }catch(const std::exception& e){
             O<<"replay_error,"<<id<<","<<stones<<",0,\""<<e.what()<<"\"\n"; O.flush(); ++id; continue;
         }
@@ -3322,7 +3325,8 @@ int main(int argc,char**argv){
         std::string s4_cache_out="";      // s4 certificate manifest to write
         unsigned s4_ab_memo=24;
         std::uint64_t s4_ab_budget=20000000;
-        int exact_order=0; // 0=count asc, 1=count desc, 2=key asc
+        int exact_order=0;
+        int residual_audit_legal=0; // 0=count asc, 1=count desc, 2=key asc
         std::string only="";
         double budget_s=0;
         int exact_legal=0, exact_retries=1;
@@ -3444,7 +3448,7 @@ int main(int argc,char**argv){
         int rc=0;
         switch(n){
             case 4:
-                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3453,7 +3457,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 5:
-                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3462,7 +3466,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 6:
-                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3471,7 +3475,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 7:
-                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3480,7 +3484,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 11:
-                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
