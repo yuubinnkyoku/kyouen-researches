@@ -8,6 +8,9 @@ on:
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-tight15-probes-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-completion-s5.cache"
   workflow_dispatch:
 
 jobs:
@@ -24,6 +27,9 @@ jobs:
             --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache \
             --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache \
             --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-tight15-probes-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-class-completion-s5.cache \
             --out /tmp/current.json > /tmp/current.log
           grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/current.log
       - name: Rank full-completion targets
@@ -33,6 +39,9 @@ jobs:
             --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache \
             --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round2-s5.cache \
             --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-tight15-probes-s5.cache \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-class-completion-s5.cache \
             --targets-out /tmp/best-class.csv --out /tmp/ranking.json | tee /tmp/ranking.log
           grep 'REPLY27_COMPLETION_RANK_OK' /tmp/ranking.log
           python - <<'PY'
