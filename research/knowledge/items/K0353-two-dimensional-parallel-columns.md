@@ -6,9 +6,6 @@ status: proved
 topics: [variants, geometry, grundy, maximal-safe, strategy-length]
 aliases: []
 relations:
-- type: related_to
-  target: K0352
-  note: K0352の容量縮約自体はd=2にも延長できるが、h=d−1=1ではK0352の有限長例外分類はそのまま使えない
 - type: generalizes
   target: K0025
   note: 二次元の平行列配置についてq>2wで局面構造まで完全分類する
