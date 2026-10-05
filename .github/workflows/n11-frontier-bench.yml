@@ -29,6 +29,7 @@ jobs:
           grep -v '^#' /tmp/r27-all.csv | awk 'NR==1 || NR==1131 || NR==2262' > /tmp/r27-sample.csv
           echo "r0_sample_rows=$(wc -l < /tmp/r0-sample.csv)"
           echo "r27_sample_rows=$(wc -l < /tmp/r27-sample.csv)"
+          grep -v '^#' /tmp/r27-all.csv | head -16 > /tmp/r27-head16.csv
 
       - name: Cold exact replay samples
         run: |
@@ -96,6 +97,16 @@ jobs:
           assert len(shared)==3
           print("S6_SHARE_VERDICT_MATCH", shared)
           PY
+
+      - name: S6-sharing contiguous 16-root probe
+        run: |
+          /usr/bin/time -f 'r27_head16_s6share_wall_s=%e' -o /tmp/r27-head16.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-head16.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-share-layer=6 --csv=/tmp/r27-head16.out
+          cat /tmp/r27-head16.time
+          grep '^replay,' /tmp/r27-head16.out
+          grep '^# residual_shadow' /tmp/r27-head16.out | tail -1
+          ! grep -q '^replay_error,' /tmp/r27-head16.out
       - name: S6 witness-cover cold sample
         run: |
           python research/experiments/n11-frontier-selection-20261005/scripts/reply27_s6_structural_cover.py \
