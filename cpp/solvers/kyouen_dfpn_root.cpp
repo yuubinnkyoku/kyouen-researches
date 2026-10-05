@@ -51,7 +51,8 @@
 #include <stdexcept>
 #include <string>
 #include <unordered_map>
-#include <vector>\n#include "kyouen_residual_micro.hpp"
+#include <vector>
+#include "kyouen_residual_micro.hpp"
 
 // Thrown when the quantified search's wall allowance expires deep inside
 // the exact DFS. Returning UNKNOWN there was wrong: the caller treats
@@ -1137,7 +1138,8 @@ public:
 private:
     std::array<std::array<Bits,V>,8> tbit_{};
     PnTT tt_;
-    std::vector<Bits> completion_;\n    std::vector<std::array<int,4>> forbidden_quads_;
+    std::vector<Bits> completion_;
+    std::vector<std::array<int,4>> forbidden_quads_;
     std::uint64_t forbidden_count_=0,visited_=0,expanded_=0;
     std::uint64_t exp_hist_[64]={};
     int max_depth_=0;
