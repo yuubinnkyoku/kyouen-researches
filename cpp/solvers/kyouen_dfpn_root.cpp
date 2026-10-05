@@ -265,13 +265,6 @@ public:
     //
     // Returns: 0 UNKNOWN (budget exhausted), 1 WIN, 2 LOSS.
     // `out_nodes` receives the exact nodes consumed by this call.
-    Bits legal_from_occupancy(const Bits& occupied) const { return legal_for(occupied); }
-    Bits canonical_occupancy(const Bits& occupied) const {
-        TState state{}; Bits z=occupied;
-        while(any(z)) state=add(state,take_lsb(z));
-        return canonical(state);
-    }
-
     int exact_replay(const Bits& occupied,int stones,std::uint64_t budget,
                     std::uint64_t& out_nodes) {
         int verts[V],k=0;
@@ -2644,36 +2637,6 @@ template<int N>
     return 0;
 }
 
-// ---- deterministic s5 fixture export ------------------------------
-template<int N>
-static int run_s5_fixture(const std::string& parents,std::ostream& O){
-    DfPn<N> s(18);
-    std::set<Bits> keys;
-    std::stringstream ps(parents); std::string group;
-    while(std::getline(ps,group,';')){
-        if(group.empty()) continue;
-        std::vector<int> p; std::stringstream gs(group); std::string x;
-        while(std::getline(gs,x,',')) if(!x.empty()) p.push_back(std::stoi(x));
-        if(p.size()!=4){ std::cerr<<"fixture parent must contain exactly 4 points\n"; return 2; }
-        Bits occ{}; for(int v:p){ if(v<0||v>=N*N){std::cerr<<"bad fixture point\n";return 2;} setbit(occ,v); }
-        Bits legal=s.legal_from_occupancy(occ);
-        while(any(legal)){
-            int v=take_lsb(legal); Bits child=occ; setbit(child,v);
-            keys.insert(s.canonical_occupancy(child));
-        }
-    }
-    O<<"# deterministic canonical s5 fixture; parents="<<parents<<"\n";
-    O<<"# tag,seq,stones,key_lo,key_hi,legal,depth,is_or,retries,nodes,result\n";
-    int seq=0;
-    for(const Bits& k:keys){
-        Bits legal=s.legal_from_occupancy(k);
-        O<<"fixture,"<<seq++<<",5,"<<k.lo<<","<<k.hi<<","<<popcount(legal)
-         <<",0,0,0,0,0\n";
-    }
-    O<<"# fixture_done unique="<<seq<<"\n";
-    return 0;
-}
-
 // ---- quantified s5 search driver ----------------------------------
 // For a two-stone root {m2,r2}, decide
 //     exists m3 : forall m4 : exists m5 : s5 WIN
@@ -3341,7 +3304,6 @@ int main(int argc,char**argv){
         bool exact_record=false;
         int exact_record_limit=0;
         std::string exact_replay_path="";
-        std::string s5_fixture_parents="";
         std::uint64_t exact_replay_budget=1000000;
         std::string exact_budget_by_stones_spec="";
         std::string exact_legal_by_stones_spec="";
@@ -3390,7 +3352,6 @@ int main(int argc,char**argv){
             else if(a=="--exact-record")exact_record=true;
             else if(a.rfind("--exact-record-limit=",0)==0)exact_record_limit=std::stoi(a.substr(21));
             else if(a.rfind("--exact-replay=",0)==0)exact_replay_path=a.substr(15);
-            else if(a.rfind("--s5-fixture-parents=",0)==0)s5_fixture_parents=a.substr(21);
             else if(a.rfind("--exact-replay-budget=",0)==0)exact_replay_budget=std::stoull(a.substr(22));
             else if(a.rfind("--quant-first=",0)==0)quant_first=std::stoi(a.substr(14));
             else if(a.rfind("--quant-replies=",0)==0)quant_replies=a.substr(16);
@@ -3425,10 +3386,6 @@ int main(int argc,char**argv){
                 std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P]\n";
                 return 2;
             }
-        }
-        if(!s5_fixture_parents.empty()){
-            if(n!=11){ std::cerr<<"s5 fixture currently intended for n=11\n"; return 2; }
-            return run_s5_fixture<11>(s5_fixture_parents,*cp);
         }
         if(!reps && !empty && roots_path.empty() && exact_replay_path.empty()
            && quant_replies.empty() && s4_ab.empty() && s5_cache.empty()
