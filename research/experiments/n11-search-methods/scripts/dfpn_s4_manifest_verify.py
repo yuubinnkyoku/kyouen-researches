@@ -174,73 +174,93 @@ def main():
             problems.append('%s: claims cov_size=%d, recomputed %d'
                             % (label, cov_size, len(want_cov)))
 
-        if len(want_children) != n_child:
-            problems.append(
-                '%s: claims %d children, recomputed %d from the class edges '
-                '(a truncated manifest would hide an unproved child)'
-                % (label, n_child, len(want_children)))
-
         listed = set(kids)
-        missing = want_children - listed
+        if len(listed) != n_child:
+            problems.append('%s: manifest repeats child key(s): n_child=%d '
+                            'distinct=%d' % (label, n_child, len(listed)))
+
         extra = listed - want_children
-        if missing:
-            problems.append('%s: %d child key(s) absent from the manifest'
-                            % (label, len(missing)))
         if extra:
             problems.append('%s: %d manifest child key(s) are not legal '
                             'children of the class' % (label, len(extra)))
 
-        # (3)/(4) every child must be in the cache, and the per-edge
-        # verdicts implied by the cache must imply the claimed class
-        # verdict.
-        #
-        # A class is LOSS only if EVERY edge is LOSS, and a class is WIN
-        # as soon as ONE edge is WIN. So recompute each edge's verdict from
-        # the cache and combine:
-        #     edge LOSS  <=> all its cached children are LOSS
-        #     edge WIN   <=> some cached child is WIN
-        #     class LOSS <=> every edge is LOSS
-        #     class WIN  <=> some edge is WIN
-        # An edge with an undecided child makes the class undecided, which
-        # contradicts a claimed decided verdict.
+        claimed = 'LOSS' if result == 2 else 'WIN'
         n_ok = 0
-        undecided_edges = 0
         win_edges = []
         loss_edges = 0
-        for (a, b), kids_here in per_edge:
-            verts_e = []
-            for c in kids_here:
+        undecided_edges = 0
+
+        if result == 1:
+            # WIN is existential: one legal cached WIN s5 child is a complete
+            # certificate.  Older manifests may list the full child set; that
+            # remains valid, but completeness is deliberately NOT required.
+            # This asymmetry is the reason the coordinator can stop as soon as
+            # it finds a single WIN witness.
+            if n_child < 1:
+                problems.append('%s: WIN certificate has no child witness'
+                                % label)
+            listed_win = 0
+            for c in listed:
                 got = cache.get(c)
                 if got is None:
-                    problems.append('%s: child %d,%d (edge %d-%d) not in the '
-                                    's5 cache' % (label, c[0], c[1], a, b))
-                elif got == 1:
-                    verts_e.append('WIN')
+                    problems.append('%s: listed WIN-certificate child %d,%d '
+                                    'not in the s5 cache'
+                                    % (label, c[0], c[1]))
                 else:
-                    verts_e.append('LOSS')
-                if got is not None:
                     n_ok += 1
-            if not verts_e:
-                undecided_edges += 1
-            elif 'WIN' in verts_e:
-                win_edges.append((a, b))
-            else:
-                loss_edges += 1
+                    if got == 1:
+                        listed_win += 1
+            if listed_win == 0:
+                problems.append('%s: WIN certificate contains no cached WIN '
+                                'child witness' % label)
+            implied = 'WIN' if listed_win else 'UNDECIDED'
+        else:
+            # LOSS is universal: the manifest must contain EVERY legal s5
+            # child, and every one must be cached LOSS.  A truncated LOSS
+            # manifest is unsound because an omitted WIN child could exist.
+            if len(want_children) != n_child:
+                problems.append(
+                    '%s: LOSS claims %d children, recomputed %d from the '
+                    'class edges (a truncated manifest would hide an '
+                    'unproved child)'
+                    % (label, n_child, len(want_children)))
+            missing = want_children - listed
+            if missing:
+                problems.append('%s: %d child key(s) absent from LOSS '
+                                'manifest' % (label, len(missing)))
 
-        implied = None
-        if undecided_edges:
-            implied = 'UNDECIDED'
-        elif win_edges:
-            implied = 'WIN'
-        elif loss_edges:
-            implied = 'LOSS'
-        claimed = 'LOSS' if result == 2 else 'WIN'
-        if implied != claimed:
-            problems.append('%s: class is claimed %s but the cached children '
-                            'imply %s (win_edges=%d loss_edges=%d '
-                            'undecided_edges=%d)'
-                            % (label, claimed, implied, len(win_edges),
-                               loss_edges, undecided_edges))
+            for (a, b), kids_here in per_edge:
+                edge_unknown = False
+                edge_win = False
+                for c in kids_here:
+                    got = cache.get(c)
+                    if got is None:
+                        edge_unknown = True
+                        problems.append('%s: child %d,%d (edge %d-%d) not in '
+                                        'the s5 cache'
+                                        % (label, c[0], c[1], a, b))
+                    elif got == 1:
+                        edge_win = True
+                    n_ok += int(got is not None)
+                if edge_win:
+                    win_edges.append((a, b))
+                elif edge_unknown:
+                    undecided_edges += 1
+                else:
+                    loss_edges += 1
+
+            if win_edges:
+                implied = 'WIN'
+            elif undecided_edges:
+                implied = 'UNDECIDED'
+            else:
+                implied = 'LOSS'
+            if implied != 'LOSS':
+                problems.append('%s: class is claimed LOSS but cached '
+                                'children imply %s (win_edges=%d '
+                                'loss_edges=%d undecided_edges=%d)'
+                                % (label, implied, len(win_edges),
+                                   loss_edges, undecided_edges))
 
         verdicts[claimed] += 1
         print('  %s result=%s cov=%d children=%d (%d in cache) '
