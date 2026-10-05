@@ -67,6 +67,7 @@ def main():
         return got
 
     multiplicity = Counter()
+    parents = defaultdict(set)
     legal_counts = []
     total = 0
     for key in s5:
@@ -81,12 +82,15 @@ def main():
         for z in legal:
             child = d4_canonical_key(list(occ | {z}))
             multiplicity[child] += 1
+            parents[child].add(key)
 
     unique = len(multiplicity)
     hist = Counter(multiplicity.values())
+    parent_hist = Counter(len(v) for v in parents.values())
     assert total == 206536
     assert unique == 81999
     assert hist == Counter({2: 42021, 3: 37562, 4: 2344, 6: 72})
+    assert parent_hist == Counter({2: 42021, 3: 39891, 4: 15, 5: 72})
     assert min(legal_counts) == 70
     assert max(legal_counts) == 105
 
@@ -100,8 +104,9 @@ def main():
         "s5_legal_min": min(legal_counts),
         "s5_legal_max": max(legal_counts),
         "s5_legal_mean": sum(legal_counts) / len(legal_counts),
-        "s6_parent_multiplicity_histogram": dict(sorted(hist.items())),
-        "s6_with_multiple_target_parents": sum(n for m, n in hist.items() if m > 1),
+        "s6_transition_multiplicity_histogram": dict(sorted(hist.items())),
+        "s6_distinct_parent_histogram": dict(sorted(parent_hist.items())),
+        "s6_with_multiple_target_parents": sum(n for m, n in parent_hist.items() if m > 1),
     }
     print(json.dumps(out, indent=2, sort_keys=True))
     print("REPLY27_S6_OVERLAP_VERIFIED")
