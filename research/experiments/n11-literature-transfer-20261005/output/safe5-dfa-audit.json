@@ -1,0 +1,45 @@
+{
+  "scope": "exact safe 5-stone layers on 5x5, 6x6, 7x7",
+  "n11_empty_root_outcome": "UNKNOWN",
+  "representation": "minimal acyclic DFA of increasing point-id strings; dead sink omitted",
+  "rows": [
+    {
+      "n": 5,
+      "forbidden_four_sets": 826,
+      "safe_five_sets": 37272,
+      "trie_states": 48517,
+      "minimal_acyclic_dfa_states_without_dead_sink": 1806,
+      "dfa_over_safe_sets": 0.04845460399227302,
+      "trie_reduction_ratio": 0.962775934208628,
+      "safe_sets_per_dfa_state": 20.637873754152825,
+      "empirical_power_log_dfa_over_log_safe": 0.7124141559622977
+    },
+    {
+      "n": 6,
+      "forbidden_four_sets": 2491,
+      "safe_five_sets": 301952,
+      "trie_states": 357043,
+      "minimal_acyclic_dfa_states_without_dead_sink": 7019,
+      "dfa_over_safe_sets": 0.02324541649003815,
+      "trie_reduction_ratio": 0.9803413034284386,
+      "safe_sets_per_dfa_state": 43.01923350904687,
+      "empirical_power_log_dfa_over_log_safe": 0.7018829967067609
+    },
+    {
+      "n": 7,
+      "forbidden_four_sets": 6364,
+      "safe_five_sets": 1633048,
+      "trie_states": 1835785,
+      "minimal_acyclic_dfa_states_without_dead_sink": 22166,
+      "dfa_over_safe_sets": 0.013573391596572788,
+      "trie_reduction_ratio": 0.9879256013095216,
+      "safe_sets_per_dfa_state": 73.67355409185238,
+      "empirical_power_log_dfa_over_log_safe": 0.6994508390884238
+    }
+  ],
+  "limitations": [
+    "This measures representation redundancy only; it does not implement compressed forward/reverse move generation.",
+    "Point-id ordering was not optimized. A geometry-aware variable/order choice may improve or worsen compression.",
+    "The observed exponent across only n=5..7 is empirical and must not be extrapolated as a theorem."
+  ]
+}
