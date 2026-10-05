@@ -238,8 +238,10 @@ def main():
     win_keys = {k for k, v in propagated.items() if v == "WIN"} | selected_win
     if loss_keys & win_keys:
         raise SystemExit("class verdict conflict")
-    if len(loss_keys) != 16:
-        raise SystemExit(f"expected 16 derived LOSS classes, got {len(loss_keys)}")
+    if len(loss_keys) < 16:
+        raise SystemExit(
+            f"expected at least 16 derived LOSS classes, got {len(loss_keys)}"
+        )
 
     secured = set()
     for key in loss_keys:

@@ -9,6 +9,7 @@ on:
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round4-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round5-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-best2-probe12-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1152921505009500160-16-s5.cache"
   workflow_dispatch:
 
 jobs:
@@ -20,6 +21,10 @@ jobs:
 
       - name: Install optimizer dependency
         run: python -m pip install --quiet scipy
+
+      - name: Verify newly closed reply27 LOSS class
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py             --class-lo 1152921505009500160 --class-hi 16             --expected-children 97             --cache research/experiments/n11-frontier-selection-20261005/output/reply27-class-1152921505009500160-16-s5.cache
 
       - name: Download independently replayed base cache
         uses: actions/download-artifact@v4
@@ -56,6 +61,7 @@ jobs:
               "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round4-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round5-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-best2-probe12-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1152921505009500160-16-s5.cache",
           ]
           verdict = {}
           origin = {}
