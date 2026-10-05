@@ -172,3 +172,40 @@ The literature comparison therefore changes the n=11 strategy: the main target
 is no longer “make one global df-pn search a little better”.  It is to keep
 shrinking and reusing the exact proof boundary until a fixed second reply is
 closed, then lift that result through the remaining reply/frontier structure.
+
+
+## 7-in-a-row: useful warning from a failed transfer
+
+The 7-in-a-row solver reports large gains from maker-breaker-specific
+dominated-vertex pruning.  Kyouen's residual game is impartial normal play, so
+the same incidence inclusion was audited before implementation.
+
+It is **not sound** for Kyouen.
+
+On the saved 826 n=11 residual snapshots, strict incidence domination appears
+in 191 of 1,011 residual components (330 ordered pairs), so the test is
+non-vacuous.  A concrete geometric counterexample occurs at snapshot 13 /
+trial 3:
+
+```
+occupied = 14,22,29,35,51,56,59,66,75,76,94,97,119
+legal    = 8,43,93,101,109,112
+R        = {8,43}, {43,93}, {43,101}, {43,109}, {93,112}, {101,109}
+```
+
+Vertex 43 strictly dominates 8 by edge incidence (degree 4 versus 1), but
+
+- play 8  -> child Grundy 0;
+- play 43 -> child Grundy 1.
+
+Thus replacing the dominated move by the dominating move can delete the only
+winning move.  The residual edge set was independently regenerated from the
+occupied board geometry.
+
+The 7-in-a-row domination rule is therefore rejected as a Kyouen pruning rule.
+See `residual-domination-refuted.md`.
+
+The broader lesson is useful: hypergraph reductions transferred from
+maker-breaker games must be re-proved under impartial mex semantics.  Existing
+exchangeable-module reductions remain valid because they were proved directly
+for the Kyouen residual game.
