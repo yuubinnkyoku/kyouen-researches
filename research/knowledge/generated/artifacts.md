@@ -690,6 +690,36 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/next3-saved-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next3-saved-s6-summary.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 保存済みs6 replayから作ったreverse parentと各境界statusのsummary。solver verdictを独立証明しない
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-boundary-verification.log](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-boundary-verification.log)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): direct 100-child canonical boundary and coverage check for s4 class (1152921504766230528, 0)
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-completion76-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-completion76-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): exact cache for the 76 remaining LOSS children
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-completion76-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-completion76-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): individual raw replay hashes, target scope, and combined output digest
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-completion76-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-completion76-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 76 remaining supplied targets, all LOSS, 283,661,853 nodes
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-model8-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-model8-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): exact cache for the 8 selected LOSS children
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-model8-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-model8-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): individual raw replay hashes and combined output digest
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-model8-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-model8-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 8 selected replay results, all LOSS, 37,538,116 nodes
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-model8.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-model8.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 8 heuristic scheduling probes selected from the 84 unknown children; scores are not verdicts
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-model8.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-model8.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): model inputs, feature/training provenance, boundary checks, reproduction commands, and output hash
+## [research/experiments/n11-boundary-recovery-20261006/output/next4-remaining76.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/next4-remaining76.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): the 76 rows left after removing the 8 model-selected targets, original order preserved
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-hard9-reverse-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-hard9-reverse-receipt.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): hard9 reverse後の2,993-entry source receipt、conflict 0
@@ -759,6 +789,27 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-next3-hard1-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next3-hard1-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 3,076-entry checkpoint after hard1 parent LOSS; 65 WIN and 3,011 LOSS
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next4-best-class.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next4-best-class.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 87 UNKNOWN children of the next ranked class (1306043891937574912, 0)
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next4-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next4-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 3,234-cache finite class counts, secured vertices, and dual-tight minimum cover 10
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next4-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next4-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): next heuristic target ranking under the 3,234-entry cache
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next4-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next4-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): source hashes, counts, nodes, and zero conflict for the merged 3,234-entry cache
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next4-repair.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next4-repair.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): selected repair targets under the 3,234-entry cache
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next4-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next4-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): repair schedule for the 3,234-entry cache; UNKNOWN positions remain unproved
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next4-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next4-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): latest merged canonical exact s5 cache with 3,234 entries, WIN 65 and LOSS 3,169
 ## [research/experiments/n11-boundary-recovery-20261006/output/pre-hard9-reverse-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/pre-hard9-reverse-receipt.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 2,831-entry pre-hard9 reverse checkpoint source receipt
@@ -900,6 +951,12 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard3.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard3.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): recovered s6 shard 3 from failed Actions run 37339329716
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/next4-completion76-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/next4-completion76-out.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): combined saved raw replays for the remaining 76 children
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/next4-model8-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/next4-model8-out.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): combined saved raw replays for the 8 model-selected children
 ## [research/experiments/n11-boundary-recovery-20261006/output/raw/pre-recovery-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/pre-recovery-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37334644565の保存済み基準cache

@@ -317,7 +317,10 @@ def main():
             "repair scheduling only; UNKNOWN selected repair classes are not "
             "certificates until their remaining s5 children are proved LOSS"
         ),
-        "evidence_note": verdict_doc["sources"]["stage1"]["note"],
+        "evidence_note": (
+            "Historical stage1 manifest note (not a current archive inventory): "
+            + verdict_doc["sources"]["stage1"]["note"]
+        ),
     }
 
     # Stable baseline regression values. Extra measured cache entries are
