@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/n11-reply27-current-cache.yml"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-probe12-s5.cache"
   workflow_dispatch:
 
 jobs:
@@ -46,6 +47,7 @@ jobs:
               "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round3-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-tight15-probes-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-probe12-s5.cache",
           ]
           verdict = {}
           origin = {}
@@ -70,7 +72,7 @@ jobs:
               per.append((src,n))
 
           completion_rows = 0
-          for src in sorted(glob.glob("/tmp/completion/*.out")):
+          for src in sorted(glob.glob("/tmp/completion/**/*.out", recursive=True)):
               with open(src, newline="") as f:
                   for r in csv.reader(f):
                       if not r or r[0] != "replay": continue
