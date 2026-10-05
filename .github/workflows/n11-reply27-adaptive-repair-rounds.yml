@@ -1,0 +1,148 @@
+name: N11 reply27 adaptive repair rounds
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-adaptive-repair-rounds.yml"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache"
+  workflow_dispatch:
+
+jobs:
+  rounds:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+
+      - name: Build exact replay solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+
+      - name: Materialize round2 from persisted round1 cache
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache \
+            --out /tmp/round2-before.json \
+            --sample-out /tmp/round2.csv --sample-per-class 2 \
+            --targets-out /tmp/round2-targets.csv > /tmp/round2-before.log
+          grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/round2-before.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/round2-before.json"))
+          print("ROUND2_BEFORE",d["class_status_from_derived_cache_plus_manifest"],
+                "targets",d["materialized_targets"],"sample",d["sample_targets"])
+          PY
+
+      - name: Exact round2
+        run: |
+          /usr/bin/time -f 'round2_wall_s=%e' -o /tmp/round2.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/round2.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/round2.out
+          cat /tmp/round2.time
+          ! grep -q '^replay_error,' /tmp/round2.out
+          python - <<'PY'
+          import csv
+          cache={}; hist={0:0,1:0,2:0}; nodes=0
+          with open("/tmp/round2.out") as f:
+              for r in csv.reader(f):
+                  if not r or r[0]!="replay": continue
+                  v=int(r[6]); k=(int(r[9]),int(r[10])); n=int(r[7])
+                  hist[v]+=1; nodes+=n
+                  if v in (1,2):
+                      old=cache.get(k)
+                      assert old in (None,v),(k,old,v)
+                      cache[k]=v
+          with open("/tmp/round2.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 adaptive round2; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(cache.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          print("ROUND2_COUNTS",hist,"proved",len(cache),"nodes",nodes)
+          PY
+
+      - name: Materialize round3 after round2
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache \
+            --extra-s5-cache /tmp/round2.cache \
+            --out /tmp/round3-before.json \
+            --sample-out /tmp/round3.csv --sample-per-class 2 \
+            --targets-out /tmp/round3-targets.csv > /tmp/round3-before.log
+          grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/round3-before.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/round3-before.json"))
+          print("ROUND3_BEFORE",d["class_status_from_derived_cache_plus_manifest"],
+                "secured",d["secured_vertices"],
+                "repair",d["additive_optimum"]["repair_classes"],
+                "targets",d["materialized_targets"],"sample",d["sample_targets"])
+          PY
+
+      - name: Exact round3
+        run: |
+          /usr/bin/time -f 'round3_wall_s=%e' -o /tmp/round3.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/round3.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/round3.out
+          cat /tmp/round3.time
+          ! grep -q '^replay_error,' /tmp/round3.out
+          python - <<'PY'
+          import csv
+          cache={}; hist={0:0,1:0,2:0}; nodes=0
+          with open("/tmp/round3.out") as f:
+              for r in csv.reader(f):
+                  if not r or r[0]!="replay": continue
+                  v=int(r[6]); k=(int(r[9]),int(r[10])); n=int(r[7])
+                  hist[v]+=1; nodes+=n
+                  if v in (1,2):
+                      old=cache.get(k)
+                      assert old in (None,v),(k,old,v)
+                      cache[k]=v
+          with open("/tmp/round3.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 adaptive round3; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(cache.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          print("ROUND3_COUNTS",hist,"proved",len(cache),"nodes",nodes)
+          PY
+
+      - name: Final reoptimization after three rounds
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round1-s5.cache \
+            --extra-s5-cache /tmp/round2.cache \
+            --extra-s5-cache /tmp/round3.cache \
+            --out /tmp/final.json \
+            --sample-out /tmp/round4-next.csv --sample-per-class 2 \
+            --targets-out /tmp/final-targets.csv > /tmp/final.log
+          grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/final.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/final.json"))
+          print("ROUND3_AFTER",d["class_status_from_derived_cache_plus_manifest"])
+          print("FINAL_SECURED",d["secured_vertices"])
+          print("FINAL_MIN_ADDITIONAL",d["minimum_additional_classes"])
+          print("FINAL_REPAIR",d["additive_optimum"]["repair_classes"],
+                d["additive_optimum"]["additive_unknown_s5"],
+                d["additive_optimum"]["unique_unknown_s5"])
+          print("FINAL_TARGETS",d["materialized_targets"],
+                "ROUND4_NEXT",d["sample_targets"])
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-adaptive-repair-rounds
+          path: |
+            /tmp/round2-before.json
+            /tmp/round2.csv
+            /tmp/round2.out
+            /tmp/round2.cache
+            /tmp/round2-targets.csv
+            /tmp/round3-before.json
+            /tmp/round3.csv
+            /tmp/round3.out
+            /tmp/round3.cache
+            /tmp/round3-targets.csv
+            /tmp/final.json
+            /tmp/final-targets.csv
+            /tmp/round4-next.csv
