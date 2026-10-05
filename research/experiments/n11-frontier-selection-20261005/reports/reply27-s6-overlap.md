@@ -73,6 +73,48 @@ set coverをかけると、2,262個のs5全てへ少なくとも1本のs6 child�
 Sprouts型のsmall-component Grundy共有はこのさらに深い層の共有を担当でき、
 両者は競合せず組み合わせられる。
 
+## 847候補のexact標本
+
+構造被覆847件が実際にLOSS witnessとして使えるかを見るため、
+候補CSVを合法手数でsortし、先頭・以後60件おきの15点を決定的に抽出して
+fresh solver / cold TT / 1 rootずつ、10M node上限でexact replayした。
+
+| 指標 | 値 |
+|---|---:|
+| 標本 | 15 |
+| first-player **LOSS** | **9** |
+| first-player WIN | 6 |
+| UNKNOWN @10M | **0** |
+| nodes 最小 | 34,500 |
+| nodes 平均 | **3,267,385** |
+| nodes 最大 | 8,121,419 |
+| 15件合計 wall | 84.76 s |
+| legal と log(nodes) の相関 | **0.7369** |
+
+個別結果は合法手55,65,69,...,98へ広く散っており、
+単に低legalだけを取った標本ではない。この15件ではlegalが大きいほど
+exact costが増える傾向がかなり強かった。
+
+重要なのは、**847件すべてLOSSという楽観仮説は反証された**一方、
+LOSSが9/15存在し、全件が10M以内で閉じたこと。
+従って構造被覆を固定して全部解くのではなく、
+
+1. 未被覆s5を多く持つs6を選ぶ
+2. exact判定する
+3. LOSSならその全親s5へwitnessとして適用
+4. WINなら候補を捨て、未被覆集合に対して再選択
+
+という適応的set coverに変えるべきである。
+
+この標本15件から全81,999候補のLOSS率を断定しない。特に選択候補は
+構造greedyで偏っている。しかし「s6候補がほぼ全部WINでwitness方式が使えない」
+という悲観像も、この標本では支持されない。
+
+再現: GitHub Actions
+`N11 frontier target sample benchmark` run `37258946684`
+(head `a014c3b39c2e4945d4649fc05c7ecf42eb8c077e`)。
+
+
 ## 再現
 
 `research/experiments/n11-frontier-selection-20261005/scripts/reply27_s6_overlap.py`
