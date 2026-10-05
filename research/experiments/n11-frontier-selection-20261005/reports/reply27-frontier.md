@@ -131,3 +131,90 @@ reply選択の目的関数はtarget数ではなく、cold replayから推定し�
 観測run:
 `N11 frontier target sample benchmark` run 37253550332
 (head `90a14f98143224fe2c945559f15c631f5c7bfc5e`)。
+
+
+## 2,262-target full replay and selected-frontier closure
+
+The reply=27 lane was subsequently run as a four-shard cold exact replay on the
+Xserver worker, with a 15M-node cap per canonical s5 root.  The completed pass
+reported:
+
+- rows: **2,262 / 2,262**
+- exact WIN: **42**
+- exact LOSS: **2,187**
+- UNKNOWN at 15M: **33**
+- proved-verdict conflicts: **0**
+
+The 31 selected s4 classes then classified as **10 LOSS / 14 WIN / 7 UNKNOWN**.
+Only nine distinct hard s5 roots remained inside those seven still-viable
+selected classes.
+
+Those nine roots were independently closed by the archived full canonical s6
+boundary proof documented in
+`reply27-hard9-boundary-closure.md` (Actions run `37269759034`):
+**8 LOSS / 1 WIN / 0 UNKNOWN** at s5.
+
+Combining the two stages resolves every one of the originally selected 31
+classes:
+
+```
+selected s4 frontier: LOSS 16 / WIN 15 / UNKNOWN 0
+```
+
+This does **not** prove reply=27 LOSS: the 15 WIN classes cannot be members of a
+LOSS certificate and must be replaced.
+
+The compact result-preservation manifest is
+`output/reply27-selected31-verdicts.json`.  Its stage-2 hard9 evidence is
+archived and independently reproducible.  The stage-1 Xserver shard files had
+not yet been archived in-repo when the manifest was written, so that part is
+explicitly marked as a computation-result preservation record rather than a
+self-contained certificate.
+
+## Repair after the 31-class split
+
+Rebuilding all 3,384 canonical s4 classes from geometry and using the 16 proved
+LOSS classes as unconditional certificate material gives:
+
+- secured third-move vertices: **62 / 119**
+- still unsecured: **57**
+- exact minimum additional class count: **15**
+
+The last number is certified by MILP with zero gap and is also consistent with
+the earlier global 31-class lower bound: with 16 LOSS classes already paid for,
+fewer than 15 additional classes could not yield a 31-class certificate.
+
+For scheduling, class count alone is not the best objective.  From the selected
+LOSS classes one can derive 1,340 exact LOSS s5 child keys; the archived hard9
+cache adds one exact WIN key.  On that compact derived cache:
+
+- exact 15-class repair minimizing additive uncached s5 work:
+  **1,471 additive / 1,471 unique targets**
+- unconstrained additive-work optimum:
+  **17 repair classes / 1,393 additive / 1,375 unique targets**
+
+Thus allowing two extra repair classes reduces the immediate unique s5 work by
+96 roots in this cache view.
+
+Reproduction:
+
+- script:
+  `scripts/reply27_selected31_repair.py`
+- workflow:
+  `.github/workflows/n11-reply27-selected31-repair.yml`
+- successful structural verification run:
+  `37275756113`
+
+Observed verifier output:
+
+```
+SECURED 62
+UNCOVERED 57
+MIN_ADDITIONAL 15
+ADDITIVE_OPT 17 1393 1375
+FIXED15 1471 1471
+```
+
+The 17 repair classes remain UNKNOWN and are only a scheduling frontier.
+Proving reply=27 LOSS still requires enough of those replacement classes to
+become exact LOSS.  **11×11 empty-board outcome remains UNKNOWN.**
