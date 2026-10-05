@@ -14,6 +14,7 @@ on:
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-tight-shared-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-hard2-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1297036692816953344-remaining86-s5.cache"
   workflow_dispatch:
 
 jobs:
@@ -70,6 +71,7 @@ jobs:
               "research/experiments/n11-frontier-selection-20261005/output/reply27-tight-shared-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-hard2-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1297036692816953344-remaining86-s5.cache",
           ]
           verdict = {}
           origin = {}
@@ -118,6 +120,13 @@ jobs:
           json.dump(stats, open("/tmp/current-cache-stats.json","w"), indent=2, sort_keys=True)
           print("CURRENT_CACHE", json.dumps(stats, sort_keys=True))
           PY
+
+      - name: Verify newly closed 105-child reply27 LOSS class
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
+            --class-lo 1297036692816953344 --class-hi 0 \
+            --expected-children 105 \
+            --cache /tmp/reply27-current-s5.cache
 
       - name: Certify current global class-count lower and upper bound
         run: |
