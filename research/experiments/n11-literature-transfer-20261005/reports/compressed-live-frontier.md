@@ -46,8 +46,12 @@ The 1,346 s5 roots generate **126,979 raw legal transitions**.  D4
 canonicalization reduces these to **66,630** distinct s6 roots, a **47.53%**
 transition deduplication.
 
-More importantly for bulk solving, **59,627 of the 66,630 s6 roots are reached
-from at least two s5 parents**.  The maximum parent multiplicity is 6.
+More importantly for bulk solving, **59,621 of the 66,630 s6 roots are reached
+from at least two distinct s5 parents**.  The maximum number of distinct s5
+parents is 5.  If symmetric duplicate moves from the same parent are counted as
+separate transitions, the corresponding figures are 59,627 roots and maximum
+raw transition multiplicity 6; those are transition multiplicities, not parent
+multiplicities.
 
 The immediately preceding frontier, before the latest class rejection, gave a
 very similar result:
@@ -55,7 +59,8 @@ very similar result:
 - 1,346 s5 -> DFA 310 states;
 - 127,278 raw transitions -> 66,848 canonical s6;
 - s6 DFA 5,318 states;
-- 59,719 s6 roots shared by multiple parents.
+- 59,713 s6 roots shared by multiple distinct parents (59,719 if repeated
+  transitions from the same parent are counted).
 
 So the compression is not tied to one particular 14-class matching.
 
