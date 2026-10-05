@@ -33,7 +33,7 @@ jobs:
           path: /tmp/current
           github-token: ${{ github.token }}
           repository: ${{ github.repository }}
-          run-id: 37314311197
+          run-id: 37338193154
 
       - name: Materialize current UNKNOWN s5 roots by repair class
         run: |
@@ -81,7 +81,7 @@ jobs:
 
       - name: Select one model-risk probe per repair class
         run: |
-          python research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py             --train /tmp/train-features.csv             --candidates /tmp/candidate-features.csv             --class-map /tmp/class-map.json             --per-class 1             --out /tmp/model-probes.json             --probes-out /tmp/model-probes.csv | tee /tmp/model-probes.log
+          python research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py             --train /tmp/train-features.csv             --candidates /tmp/candidate-features.csv             --class-map /tmp/class-map.json             --per-class 2             --out /tmp/model-probes.json             --probes-out /tmp/model-probes.csv | tee /tmp/model-probes.log
           grep 'REPLY27_MODEL_PROBES_OK' /tmp/model-probes.log
           python - <<'PY'
           import json
