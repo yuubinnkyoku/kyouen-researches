@@ -22,6 +22,8 @@ int main(){
     // Exhaust every clutter on <=4 vertices (all nonempty candidate edges of
     // size >=2). Compare the optimized kernel with direct mex recursion.
     std::uint64_t checked=0;
+    std::map<Key,int> shared;
+    std::uint64_t shared_hits=0;
     for(int n=0;n<=4;++n){
         std::vector<Mask> cand;
         for(Mask e=1;e<(Mask{1}<<n);++e)if(pc(e)>=2)cand.push_back(e);
@@ -30,10 +32,14 @@ int main(){
             State s; s.vertices=(n?((Mask{1}<<n)-1):0);
             for(std::size_t i=0;i<cand.size();++i)if((f>>i)&1)s.edges.push_back(cand[i]);
             s.edges=minimal(std::move(s.edges));
-            std::map<Key,int> a,b;
+            std::map<Key,int> a,b,c;
+            Stats st;
             int ref=plain(s,a),got=grundy(s,b);
-            if(ref!=got){
+            int got_shared=grundy_shared(s,c,shared,4,&st);
+            shared_hits+=st.shared_hits;
+            if(ref!=got || ref!=got_shared){
                 std::cerr<<"MISMATCH n="<<n<<" family="<<f<<" ref="<<ref<<" got="<<got
+                         <<" shared="<<got_shared
                          <<" vertices="<<s.vertices<<" edges=";
                 for(Mask e:s.edges) std::cerr<<e<<":";
                 std::cerr<<"\\n";
@@ -47,5 +53,8 @@ int main(){
             ++checked;
         }
     }
-    std::cout<<"VERIFIED clutters="<<checked<<"\n";
+    assert(shared_hits>0);
+    std::cout<<"VERIFIED clutters="<<checked
+             <<" shared_keys="<<shared.size()
+             <<" shared_hits="<<shared_hits<<"\n";
 }
