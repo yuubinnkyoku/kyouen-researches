@@ -1,0 +1,86 @@
+name: N11 reply27 shared s6 witness probes
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-shared-s6.yml"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.csv"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.json"
+      - "research/experiments/n11-frontier-selection-20261005/scripts/derive_shared_s6_witness_cache.py"
+  workflow_dispatch:
+
+jobs:
+  solve:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exact solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%4)==s {print}' \
+            research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.csv \
+            > /tmp/targets.csv
+          test "$(wc -l < /tmp/targets.csv)" -eq 4
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=6 \
+              --exact-replay-budget=10000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          grep '^replay,' /tmp/out.csv
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-shared-s6-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-shared-s6-*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Verify geometry and derive s5 LOSS witnesses
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/derive_shared_s6_witness_cache.py \
+            --meta research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.json \
+            --replay '/tmp/proof/*/out.csv' \
+            --cache-out /tmp/shared-s6-s5.cache | tee /tmp/derive.log
+          grep 'SHARED_S6_WITNESS_CACHE_OK' /tmp/derive.log
+          echo "DERIVED_CACHE_ROWS=$(grep -c '^s5verdict,' /tmp/shared-s6-s5.cache || true)"
+      - name: Summarize exact s6 work
+        run: |
+          python - <<'PY'
+          import csv,glob
+          hist={0:0,1:0,2:0}; nodes=0
+          for p in glob.glob("/tmp/proof/*/out.csv"):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      hist[int(r[6])]+=1
+                      nodes+=int(r[7])
+          print("SHARED_S6_COUNTS",hist)
+          print("SHARED_S6_TOTAL_NODES",nodes)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-shared-s6-proof
+          path: |
+            /tmp/shared-s6-s5.cache
+            /tmp/derive.log
