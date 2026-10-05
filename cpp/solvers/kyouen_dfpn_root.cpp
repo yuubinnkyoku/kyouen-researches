@@ -266,7 +266,12 @@ public:
     // Returns: 0 UNKNOWN (budget exhausted), 1 WIN, 2 LOSS.
     // `out_nodes` receives the exact nodes consumed by this call.
     Bits legal_from_occupancy(const Bits& occupied) const { return legal_for(occupied); }
-    Bits canonical_key(const Bits& occupied) const { return canonical(occupied); }
+    Bits canonical_key(const Bits& occupied) const {
+        TState state{};
+        Bits z=occupied;
+        while(any(z)) state=add(state,take_lsb(z));
+        return canonical(state);
+    }
 
     int exact_replay(const Bits& occupied,int stones,std::uint64_t budget,
                     std::uint64_t& out_nodes) {
