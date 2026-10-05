@@ -87,9 +87,9 @@ def main():
     if args.unknown_replay_out:
         args.unknown_replay_out.parent.mkdir(parents=True,exist_ok=True)
         with args.unknown_replay_out.open("w",encoding="utf-8") as fp:
-            fp.write("# unresolved reply27 s5 roots rematerialized for exact replay\\n")
+            fp.write("# unresolved reply27 s5 roots rematerialized for exact replay\n")
             for seq,((lo,hi),legal) in enumerate(sorted(unknown_rows.items())):
-                fp.write(f"reply27-retry,{seq},5,{lo},{hi},{legal},0,0,0,0,0\\n")
+                fp.write(f"reply27-retry,{seq},5,{lo},{hi},{legal},0,0,0,0,0\n")
     if args.cache_out:
         args.cache_out.parent.mkdir(parents=True,exist_ok=True)
         with args.cache_out.open("w",encoding="utf-8") as fp:
