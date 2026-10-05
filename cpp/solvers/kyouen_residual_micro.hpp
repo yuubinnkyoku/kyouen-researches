@@ -157,34 +157,114 @@ struct Stats {
 };
 
 // Exact arbitrary-relabeling canonical key for a SMALL residual component.
-// This is intentionally factorial and is only for a tiny configurable gate
-// (the n=11 transfer experiment uses <=6 vertices, hence at most 720
-// permutations).  It is a correctness key, not a hash: isomorphic residual
-// clutters receive the same Key and non-isomorphic states are never merged by
-// a collision.
+//
+// Before enumerating relabelings, run an isomorphism-invariant color refinement
+// on the vertex/edge incidence structure.  Any true isomorphism preserves the
+// stable colors, so it is sufficient to permute vertices *within* each final
+// color cell.  This keeps exactness (no hash collisions, no heuristic merge)
+// while avoiding n! work on the overwhelmingly asymmetric small components.
 inline Key canonical_small(State s){
     s.edges=minimal(std::move(s.edges));
     std::vector<int> live;
     Mask x=s.vertices;
     while(x){ int v=__builtin_ctzll(x); x&=x-1; live.push_back(v); }
     const int n=(int)live.size();
-    std::vector<int> perm((std::size_t)n);
-    std::iota(perm.begin(),perm.end(),0);
-    Key best{}; bool have=false;
-    do{
-        std::vector<Mask> ee;
-        ee.reserve(s.edges.size());
-        for(Mask e:s.edges){
-            Mask q=0;
-            for(int i=0;i<n;++i) if(e&(Mask{1}<<live[(std::size_t)i]))
-                q|=Mask{1}<<perm[(std::size_t)i];
-            ee.push_back(q);
+
+    // Relabel the incidence structure locally as 0..n-1.
+    std::vector<std::vector<int>> ev;
+    ev.reserve(s.edges.size());
+    std::vector<std::vector<int>> incident((std::size_t)n);
+    for(std::size_t ei=0;ei<s.edges.size();++ei){
+        std::vector<int> row;
+        for(int i=0;i<n;++i)
+            if(s.edges[ei]&(Mask{1}<<live[(std::size_t)i])) row.push_back(i);
+        for(int i:row) incident[(std::size_t)i].push_back((int)ei);
+        ev.push_back(std::move(row));
+    }
+
+    auto canonical_ranks=[](const std::vector<std::vector<int>>& sig){
+        std::map<std::vector<int>,int> ranks;
+        for(const auto& q:sig) ranks.emplace(q,0);
+        int r=0; for(auto& kv:ranks) kv.second=r++;
+        std::vector<int> out; out.reserve(sig.size());
+        for(const auto& q:sig) out.push_back(ranks.find(q)->second);
+        return out;
+    };
+
+    // Initial color: incidence counts by edge size.
+    std::vector<std::vector<int>> init((std::size_t)n,
+                                       std::vector<int>((std::size_t)n+1,0));
+    for(const auto& e:ev)
+        for(int v:e) ++init[(std::size_t)v][e.size()];
+    std::vector<int> color=canonical_ranks(init);
+
+    // 1-WL refinement on the bipartite incidence graph, with hyperedge size
+    // included in the edge signature.  Keeping the previous vertex color in
+    // the new signature guarantees monotone refinement.
+    for(;;){
+        std::vector<std::vector<int>> esig(ev.size());
+        for(std::size_t ei=0;ei<ev.size();++ei){
+            auto& q=esig[ei];
+            q.push_back((int)ev[ei].size());
+            std::vector<int> cs;
+            for(int v:ev[ei]) cs.push_back(color[(std::size_t)v]);
+            std::sort(cs.begin(),cs.end());
+            q.insert(q.end(),cs.begin(),cs.end());
         }
-        ee=minimal(std::move(ee));
-        Mask vv=(n==64)?~Mask{0}:((n==0)?Mask{0}:((Mask{1}<<n)-1));
-        Key k{vv,std::move(ee)};
-        if(!have || k<best){ best=std::move(k); have=true; }
-    }while(std::next_permutation(perm.begin(),perm.end()));
+        std::vector<int> ecolor=canonical_ranks(esig);
+
+        std::vector<std::vector<int>> vsig((std::size_t)n);
+        for(int v=0;v<n;++v){
+            auto& q=vsig[(std::size_t)v];
+            q.push_back(color[(std::size_t)v]);
+            std::vector<int> cs;
+            for(int ei:incident[(std::size_t)v])
+                cs.push_back(ecolor[(std::size_t)ei]);
+            std::sort(cs.begin(),cs.end());
+            q.insert(q.end(),cs.begin(),cs.end());
+        }
+        std::vector<int> next=canonical_ranks(vsig);
+        if(next==color) break;
+        color=std::move(next);
+    }
+
+    std::map<int,std::vector<int>> by_color;
+    for(int i=0;i<n;++i) by_color[color[(std::size_t)i]].push_back(i);
+    std::vector<std::vector<int>> cells;
+    for(auto& kv:by_color){
+        std::sort(kv.second.begin(),kv.second.end());
+        cells.push_back(kv.second);
+    }
+
+    const Mask vv=(n==64)?~Mask{0}:((n==0)?Mask{0}:((Mask{1}<<n)-1));
+    std::vector<int> order((std::size_t)n),pos((std::size_t)n);
+    Key best{}; bool have=false;
+
+    // Enumerate the Cartesian product of within-cell permutations.
+    auto rec=[&](auto&& self,std::size_t ci,int off)->void{
+        if(ci==cells.size()){
+            for(int target=0;target<n;++target)
+                pos[(std::size_t)order[(std::size_t)target]]=target;
+            std::vector<Mask> ee;
+            ee.reserve(ev.size());
+            for(const auto& e:ev){
+                Mask q=0;
+                for(int v:e) q|=Mask{1}<<pos[(std::size_t)v];
+                ee.push_back(q);
+            }
+            ee=minimal(std::move(ee));
+            Key k{vv,std::move(ee)};
+            if(!have || k<best){ best=std::move(k); have=true; }
+            return;
+        }
+        auto p=cells[ci];
+        do{
+            for(std::size_t j=0;j<p.size();++j)
+                order[(std::size_t)off+j]=p[j];
+            self(self,ci+1,off+(int)p.size());
+        }while(std::next_permutation(p.begin(),p.end()));
+    };
+    rec(rec,0,0);
     return best;
 }
 
