@@ -59,6 +59,12 @@ jobs:
           paste <(grep '^replay,' /tmp/n11-residual-fast.out | cut -d, -f2,7) \
                 <(grep '^replay,' /tmp/n11-residual-shared.out | cut -d, -f2,7) | \
             awk -F'[,	]' '{if($1!=$3 || $2!=$4) exit 1; n++} END{exit !(n==3)}'
+          echo "--- residual fast summary ---"
+          grep '^# residual_shadow row=' /tmp/n11-residual-fast.out
+          grep '^# replay_done' /tmp/n11-residual-fast.out
+          echo "--- residual shared summary ---"
+          grep '^# residual_shadow row=' /tmp/n11-residual-shared.out
+          grep '^# replay_done' /tmp/n11-residual-shared.out
           awk '/^# residual_shadow row=/{for(i=1;i<=NF;i++){split($i,a,"="); if(a[1]=="shared_hits") hits+=a[2]; if(a[1]=="shared_stores") stores+=a[2]}} END{print "shared_hits=" hits, "shared_stores=" stores; exit !(stores>0)}' /tmp/n11-residual-shared.out
           paste <(grep '^replay,' /tmp/n11-residual-audit.out | cut -d, -f2,7) \
                 <(grep '^replay,' /tmp/n11-residual-fast.out | cut -d, -f2,7) | \
