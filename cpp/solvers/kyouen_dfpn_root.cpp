@@ -3374,6 +3374,7 @@ int main(int argc,char**argv){
             else if(a.rfind("--coord-wall=",0)==0)coord_wall=std::stod(a.substr(13));
             else if(a.rfind("--s4-cache-out=",0)==0)s4_cache_out=a.substr(15);
             else if(a=="--coord")coord_run=true;
+            else if(a.rfind("--residual-audit-legal=",0)==0)residual_audit_legal=std::stoi(a.substr(23));
             else if(a=="--exact-order=count")exact_order=0;
             else if(a=="--exact-order=countd")exact_order=1;
             else if(a=="--exact-order=key")exact_order=2;
