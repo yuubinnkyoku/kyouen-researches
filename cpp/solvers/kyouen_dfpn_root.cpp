@@ -1285,6 +1285,9 @@ private:
     std::uint64_t residual_exact_module_removed_=0;
     std::uint64_t residual_exact_component_splits_=0;
     int residual_share_gate_=0;               // exact relabel cache gate
+    int exact_share_layer_=0;                  // share completed exact verdicts only at this stone count
+    std::uint64_t exact_share_hits_=0,exact_share_stores_=0;
+    inline static std::map<Bits,std::uint8_t> exact_layer_cache_{};
     std::uint64_t residual_shared_hits_=0,residual_shared_stores_=0;
     std::uint64_t residual_shared_canonicalized_=0;
     inline static std::map<kyouen_residual::Key,int> residual_component_cache_{};
@@ -1684,6 +1687,13 @@ private:
 
     void exact_store(const Bits& key,ExactResult r){
         if(r==ExactResult::UNKNOWN) return;
+        if(exact_share_layer_>0 && stones==exact_share_layer_){
+            auto si=exact_layer_cache_.find(key);
+            if(si!=exact_layer_cache_.end()){
+                ++exact_share_hits_;
+                return checked_return(si->second==1 ? ExactResult::WIN : ExactResult::LOSS);
+            }
+        }
         int s=tt_.find(key.lo,key.hi);
         if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN){
             const bool old_win=tt_.st_[(std::size_t)s]==PnTT::WIN;
@@ -1721,6 +1731,12 @@ private:
         const bool do_residual_crosscheck =
             residual_crosscheck_legal_>0 && popcount(legal)<=residual_crosscheck_legal_;
         auto checked_return = [&](ExactResult r){
+            if(r!=ExactResult::UNKNOWN && exact_share_layer_>0 && stones==exact_share_layer_){
+                std::uint8_t v=(r==ExactResult::WIN)?std::uint8_t(1):std::uint8_t(2);
+                auto ins=exact_layer_cache_.emplace(key,v);
+                if(ins.second) ++exact_share_stores_;
+                else if(ins.first->second!=v) throw std::runtime_error("exact shared-layer verdict conflict");
+            }
             if(do_residual_crosscheck && r!=ExactResult::UNKNOWN){
                 ExactResult rr=residual_verdict(state.t[0],legal,stones);
                 if(rr!=r) throw std::runtime_error("residual outcome mismatch");
@@ -2357,6 +2373,11 @@ public:
     void set_residual_exact_legal(int legal){ residual_exact_legal_=std::max(0,legal); }
     std::uint64_t residual_exact_calls() const { return residual_exact_calls_; }
     void set_residual_share_gate(int legal){ residual_share_gate_=std::max(0,legal); }
+    void set_exact_share_layer(int stones){ exact_share_layer_=std::max(0,stones); }
+    static void clear_exact_layer_cache(){ exact_layer_cache_.clear(); }
+    void exact_share_stats(std::uint64_t& hits,std::uint64_t& stores,std::uint64_t& size) const {
+        hits=exact_share_hits_; stores=exact_share_stores_; size=(std::uint64_t)exact_layer_cache_.size();
+    }
     static void clear_residual_component_cache(){ residual_component_cache_.clear(); }
     void residual_share_stats(std::uint64_t& hits,std::uint64_t& stores,
                               std::uint64_t& canonicalized,std::uint64_t& size) const {
@@ -2663,7 +2684,7 @@ template<int N>
     static int run_exact_replay(const std::string& path,std::uint64_t budget,
                             unsigned memo_power,const std::string& only,
                             int exact_order,int residual_audit_legal,int residual_crosscheck_legal,
-                            int residual_exact_legal,int residual_share_gate,bool exact_replay_share_tt,std::ostream& O){
+                            int residual_exact_legal,int residual_share_gate,bool exact_replay_share_tt,int exact_share_layer,std::ostream& O){
     std::ifstream in(path);
     if(!in){ std::cerr<<"cannot open --exact-replay\n"; return 1; }
     O<<"# exact replay: order="<<exact_order<<" (0=count-asc 1=count-desc 2=key-asc)"<<" share_tt="<<(exact_replay_share_tt?1:0)<<std::endl;
@@ -2675,6 +2696,7 @@ template<int N>
     // comfortably holds a single exact search and is reset per row.
     unsigned row_memo = std::min<unsigned>(memo_power,22);
     if(residual_share_gate>0) DfPn<N>::clear_residual_component_cache();
+    if(exact_share_layer>0) DfPn<N>::clear_exact_layer_cache();
     std::unique_ptr<DfPn<N>> shared_solver;
     if(exact_replay_share_tt) shared_solver=std::make_unique<DfPn<N>>(row_memo);
     std::string line; int id=0;
@@ -2716,6 +2738,7 @@ template<int N>
             row_solver.set_residual_crosscheck_legal(residual_crosscheck_legal);
             row_solver.set_residual_exact_legal(residual_exact_legal);
             row_solver.set_residual_share_gate(residual_share_gate);
+            row_solver.set_exact_share_layer(exact_share_layer);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
             if(residual_audit_legal>0 || residual_crosscheck_legal>0 ||
                residual_exact_legal>0 || residual_share_gate>0){
@@ -2723,6 +2746,8 @@ template<int N>
                 std::uint64_t rsh=0, rss=0, rsc=0, rsz=0;
                 row_solver.residual_exact_stats(rms,rrm,rcs);
                 row_solver.residual_share_stats(rsh,rss,rsc,rsz);
+                std::uint64_t esh=0, ess=0, esz=0;
+                row_solver.exact_share_stats(esh,ess,esz);
                 O<<"# residual_shadow row="<<id
                  <<" audit_calls="<<row_solver.residual_audit_calls()
                  <<" crosscheck_calls="<<row_solver.residual_crosscheck_calls()
@@ -2733,7 +2758,10 @@ template<int N>
                  <<" shared_hits="<<rsh
                  <<" shared_stores="<<rss
                  <<" canonicalized="<<rsc
-                 <<" shared_size="<<rsz<<"\n";
+                 <<" shared_size="<<rsz
+                 <<" exact_layer_hits="<<esh
+                 <<" exact_layer_stores="<<ess
+                 <<" exact_layer_size="<<esz<<"\n";
             }
         }catch(const std::exception& e){
             O<<"replay_error,"<<id<<","<<stones<<",0,\""<<e.what()<<"\"\n"; O.flush(); ++id; continue;
@@ -3422,6 +3450,7 @@ int main(int argc,char**argv){
         std::string exact_replay_path="";
         std::uint64_t exact_replay_budget=1000000;
         bool exact_replay_share_tt=false;
+        int exact_share_layer=0;
         std::string exact_budget_by_stones_spec="";
         std::string exact_legal_by_stones_spec="";
         int quant_first=60;
@@ -3496,6 +3525,7 @@ int main(int argc,char**argv){
             else if(a.rfind("--residual-exact-legal=",0)==0)residual_exact_legal=std::stoi(a.substr(23));
             else if(a.rfind("--residual-share-gate=",0)==0)residual_share_gate=std::stoi(a.substr(22));
             else if(a=="--exact-replay-share-tt")exact_replay_share_tt=true;
+            else if(a.rfind("--exact-share-layer=",0)==0)exact_share_layer=std::stoi(a.substr(20));
             else if(a=="--exact-order=count")exact_order=0;
             else if(a=="--exact-order=countd")exact_order=1;
             else if(a=="--exact-order=key")exact_order=2;
@@ -3509,7 +3539,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }
@@ -3570,7 +3600,7 @@ int main(int argc,char**argv){
         int rc=0;
         switch(n){
             case 4:
-                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3579,7 +3609,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 5:
-                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3588,7 +3618,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 6:
-                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3597,7 +3627,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 7:
-                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
@@ -3606,7 +3636,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 11:
-                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,*cp);
