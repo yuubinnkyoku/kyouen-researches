@@ -55,6 +55,31 @@ jobs:
           paste <(grep '^replay,' /tmp/n11-residual-audit.out | cut -d, -f2,7) \
                 <(grep '^replay,' /tmp/n11-residual-fast.out | cut -d, -f2,7) | \
             awk -F'[,	]' '{if($1!=$3 || $2!=$4) exit 1; n++} END{exit !(n==3)}'
+          for gate in 4 5 6; do
+            /tmp/kyouen_dfpn_root --n=11 --memo=18 --exact-replay=/tmp/n11-residual-audit.csv --only=5 \
+              --exact-replay-budget=200000 --residual-exact-legal=$gate --csv=/tmp/n11-residual-gate-$gate.out
+            ! grep -q '^replay_error,' /tmp/n11-residual-gate-$gate.out
+            paste <(grep '^replay,' /tmp/n11-residual-audit.out | cut -d, -f2,7) \
+                  <(grep '^replay,' /tmp/n11-residual-gate-$gate.out | cut -d, -f2,7) | \
+              awk -F'[,	]' '{if($1!=$3 || $2!=$4) exit 1; n++} END{exit !(n==3)}'
+          done
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          for gate in (4,5,6):
+              p=Path(f"/tmp/n11-residual-gate-{gate}.out").read_text()
+              rows=[]
+              for line in p.splitlines():
+                  if line.startswith("# residual_shadow row="):
+                      d=dict(re.findall(r"(\w+)=([0-9]+)",line))
+                      rows.append(d)
+              assert len(rows)==3 and sum(int(x["exact_calls"]) for x in rows)>0
+              print("RESIDUAL_GATE",gate,
+                    "exact_calls",sum(int(x["exact_calls"]) for x in rows),
+                    "memo_states",sum(int(x["residual_memo_states"]) for x in rows),
+                    "module_removed",sum(int(x["module_removed"]) for x in rows),
+                    "component_splits",sum(int(x["component_splits"]) for x in rows))
+          PY
       - name: Generate and check 1x1 through 6x6
         run: |
           mkdir -p /tmp/kyouen-certs
