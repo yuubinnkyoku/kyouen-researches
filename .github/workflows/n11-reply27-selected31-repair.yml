@@ -28,7 +28,7 @@ jobs:
           c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers             cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
       - name: Rebuild geometry and optimize repair
         run: |
-          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --out /tmp/reply27-selected31-repair.json             --targets-out /tmp/reply27-repair-targets.csv             --sample-out /tmp/reply27-repair-sample.csv             --sample-per-class 2             | tee /tmp/reply27-selected31-repair.log
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --out /tmp/reply27-selected31-repair.json             --targets-out /tmp/reply27-repair-targets.csv             --sample-out /tmp/reply27-repair-sample.csv             --sample-per-class 1             | tee /tmp/reply27-selected31-repair.log
           grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/reply27-selected31-repair.log
           python - <<'PY'
           import json
@@ -46,7 +46,7 @@ jobs:
           assert sum(1 for _ in open("/tmp/reply27-repair-targets.csv")) == d["materialized_targets"]
           assert sum(1 for _ in open("/tmp/reply27-repair-sample.csv")) == d["sample_targets"]
           PY
-      - name: Exact probe two low-legal s5 per repair class
+      - name: Exact probe one low-legal s5 per repair class
         run: |
           /usr/bin/time -f 'sample_wall_s=%e' -o /tmp/sample.time             /tmp/dfpn --n=11 --memo=22               --exact-replay=/tmp/reply27-repair-sample.csv --only=5               --exact-replay-budget=15000000               --csv=/tmp/reply27-repair-sample.out
           cat /tmp/sample.time
@@ -78,7 +78,7 @@ jobs:
           PY
       - name: Reoptimize after sample verdicts
         run: |
-          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --extra-s5-cache /tmp/reply27-repair-sample.cache             --out /tmp/reply27-selected31-repair-after-sample.json             --targets-out /tmp/reply27-repair-targets-after-sample.csv             --sample-out /tmp/reply27-repair-sample-next.csv             --sample-per-class 2             | tee /tmp/reply27-after-sample.log
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py             --extra-s5-cache /tmp/reply27-repair-sample.cache             --out /tmp/reply27-selected31-repair-after-sample.json             --targets-out /tmp/reply27-repair-targets-after-sample.csv             --sample-out /tmp/reply27-repair-sample-next.csv             --sample-per-class 1             | tee /tmp/reply27-after-sample.log
           grep 'REPLY27_SELECTED31_REPAIR_OK' /tmp/reply27-after-sample.log
           python - <<'PY'
           import json
