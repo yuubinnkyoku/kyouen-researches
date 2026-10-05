@@ -1,5 +1,9 @@
 name: N11 reply27 selected31 repair
 
+concurrency:
+  group: n11-reply27-selected31-repair
+  cancel-in-progress: true
+
 on:
   push:
     paths:
