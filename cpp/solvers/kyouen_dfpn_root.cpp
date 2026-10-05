@@ -1273,6 +1273,8 @@ private:
     // learned by one root/sweep can help later roots too.
     enum class ExactResult : std::uint8_t { UNKNOWN=0, WIN=1, LOSS=2 };
     int exact_legal_=0;                    // 0 disables the hybrid
+    int residual_audit_legal_=0;            // shadow-only board<->residual audit
+    std::uint64_t residual_audit_calls_=0;
     std::uint64_t exact_budget_=100000;    // nodes per handoff attempt
     // Per-stone-count budget overrides. The s5 frontier measured in
     // N11-DFPN-S5-BENCH.md needs 130k..5.7M nodes to close while s6
@@ -1685,6 +1687,11 @@ private:
         if((exact_nodes_ & 4095ULL)==0 && quant_out_of_time()){
             ++oracle.aborted_by_time;
             throw QuantTimeout();
+        }
+
+        if(residual_audit_legal_>0 && popcount(legal)<=residual_audit_legal_){
+            verify_residual_transition(state.t[0],legal);
+            ++residual_audit_calls_;
         }
 
         if(!any(legal)){
@@ -2271,6 +2278,8 @@ public:
     // Tie-break mode: false = count ASC then key ASC (baseline),
     // true = count DESC then key DESC (the DFS depth-5 winner).
     void set_tiebreak_desc(bool b){ tiebreak_desc_=b; }
+    void set_residual_audit_legal(int legal){ residual_audit_legal_=std::max(0,legal); }
+    std::uint64_t residual_audit_calls() const { return residual_audit_calls_; }
     void set_exact_handoff(int legal,std::uint64_t budget,int retries,int publish_mode){
         exact_legal_=std::max(0,legal);
         exact_budget_=std::max<std::uint64_t>(1,budget);
