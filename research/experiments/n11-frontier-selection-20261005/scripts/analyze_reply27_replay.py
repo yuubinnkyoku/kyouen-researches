@@ -24,6 +24,7 @@ def main():
     ap.add_argument("replay", nargs="+", type=Path)
     ap.add_argument("--cache-out", type=Path)
     ap.add_argument("--summary-out", type=Path)
+    ap.add_argument("--unknown-replay-out", type=Path)
     args=ap.parse_args()
     doc=json.loads(WITNESS.read_text(encoding="utf-8"))
     first,r2=doc["root"]; selected=[tuple(x) for x in doc["classes"]]
@@ -43,17 +44,20 @@ def main():
                 ss.add(d4_canonical_key(list(occ|{z})))
         children[k]=ss
 
-    verdict={}; conflicts=[]
+    verdict={}; conflicts=[]; unknown_rows={}
     for p in args.replay:
         with p.open(newline="",encoding="utf-8") as fp:
             for row in csv.reader(fp):
                 if not row or row[0]!="replay": continue
                 result=int(row[6])
-                if result not in (1,2): continue
                 key=(int(row[9]),int(row[10]))
+                if result not in (1,2):
+                    unknown_rows[key]=int(row[3])
+                    continue
                 old=verdict.get(key)
                 if old is not None and old!=result: conflicts.append((key,old,result))
                 verdict[key]=result
+                unknown_rows.pop(key,None)
     assert not conflicts, conflicts
 
     status={}; unresolved={}
@@ -80,6 +84,12 @@ def main():
     if args.summary_out:
         args.summary_out.parent.mkdir(parents=True,exist_ok=True)
         args.summary_out.write_text(txt,encoding="utf-8")
+    if args.unknown_replay_out:
+        args.unknown_replay_out.parent.mkdir(parents=True,exist_ok=True)
+        with args.unknown_replay_out.open("w",encoding="utf-8") as fp:
+            fp.write("# unresolved reply27 s5 roots rematerialized for exact replay\\n")
+            for seq,((lo,hi),legal) in enumerate(sorted(unknown_rows.items())):
+                fp.write(f"reply27-retry,{seq},5,{lo},{hi},{legal},0,0,0,0,0\\n")
     if args.cache_out:
         args.cache_out.parent.mkdir(parents=True,exist_ok=True)
         with args.cache_out.open("w",encoding="utf-8") as fp:
