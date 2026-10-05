@@ -45,9 +45,9 @@ jobs:
               print(f"fixture,{i},5,{lo},{hi},0,0,0,0,0,0")
           PY
           /tmp/kyouen_dfpn_root --n=11 --memo=18 --exact-replay=/tmp/n11-residual-audit.csv --only=5 \
-            --exact-replay-budget=200000 --residual-audit-legal=6 --csv=/tmp/n11-residual-audit.out
+            --exact-replay-budget=200000 --residual-audit-legal=6 --residual-crosscheck-legal=6 --csv=/tmp/n11-residual-audit.out
           ! grep -q '^replay_error,' /tmp/n11-residual-audit.out
-          awk '/^# residual_audit row=/{split($4,a,"="); total+=a[2]} END{exit !(total>0)}' /tmp/n11-residual-audit.out
+          awk '/^# residual_shadow row=/{split($4,a,"="); audit+=a[2]; split($5,b,"="); cross+=b[2]} END{exit !(audit>0 && cross>0)}' /tmp/n11-residual-audit.out
       - name: Generate and check 1x1 through 6x6
         run: |
           mkdir -p /tmp/kyouen-certs
