@@ -1,0 +1,133 @@
+name: N11 reply27 model-guided probes
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-model-probes.yml"
+      - "research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py"
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install model dependency
+        run: python -m pip install --quiet numpy scipy
+
+      - name: Download original chronological training cache
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-full-replay-proof
+          path: /tmp/base
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37275321333
+
+      - name: Download current cache optimization
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-current-cache-optimization
+          path: /tmp/current
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37314311197
+
+      - name: Materialize current UNKNOWN s5 roots by repair class
+        run: |
+          python - <<'PY'
+          import csv,json,sys
+          from pathlib import Path
+          p=Path("research/experiments/n11-frontier-selection-20261005/scripts")
+          sys.path.insert(0,str(p))
+          import reply27_selected31_repair as R
+
+          verdict={}
+          with open("/tmp/current/reply27-current-s5.cache",newline="") as f:
+              for row in csv.reader(f):
+                  if not row or row[0].startswith("#"): continue
+                  if row[0]!="s5verdict": continue
+                  verdict[(int(row[1]),int(row[2]))]=int(row[4])
+
+          _,_,_,children=R.build_geometry()
+          d=json.load(open("/tmp/current/current-repair.json"))
+          selected=[tuple(x["key"]) for x in d["additive_optimum"]["selected"]]
+          out=[]
+          unknown=set()
+          for k in selected:
+              uu=sorted(ch for ch in children[k] if ch not in verdict)
+              if not uu:
+                  raise SystemExit(f"repair class has no unknown children: {k}")
+              out.append({"key":list(k),"unknown_children":[list(ch) for ch in uu]})
+              unknown.update(uu)
+          json.dump({"classes":out},open("/tmp/class-map.json","w"),indent=2,sort_keys=True)
+          with open("/tmp/candidates.cache","w") as f:
+              f.write("# dummy verdicts for feature extraction only; never proof evidence\n")
+              for lo,hi in sorted(unknown):
+                  f.write(f"s5verdict,{lo},{hi},5,2,0\n")
+          print("MODEL_CANDIDATE_CLASSES",len(out),"UNIQUE_ROOTS",len(unknown))
+          PY
+
+      - name: Build structural feature extractor
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG             research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp             -o /tmp/extract-s5-features
+
+      - name: Extract train and current-candidate features
+        run: |
+          /tmp/extract-s5-features /tmp/base/reply27-combined-s5.cache > /tmp/train-features.csv
+          /tmp/extract-s5-features /tmp/candidates.cache > /tmp/candidate-features.csv
+
+      - name: Select one model-risk probe per repair class
+        run: |
+          python research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py             --train /tmp/train-features.csv             --candidates /tmp/candidate-features.csv             --class-map /tmp/class-map.json             --per-class 1             --out /tmp/model-probes.json             --probes-out /tmp/model-probes.csv | tee /tmp/model-probes.log
+          grep 'REPLY27_MODEL_PROBES_OK' /tmp/model-probes.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/model-probes.json"))
+          print("MODEL_PROBES",d["dedup_probes"],"CLASSES",d["repair_classes"])
+          for r in d["classes"][:8]:
+              print("MODEL_TOP",r["key"],"score",round(r["top_score"],4),
+                    "legal",r["top_legal"],"unknown",r["unknown_s5"])
+          PY
+
+      - name: Build exact solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers             cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+
+      - name: Exact-replay model probes
+        run: |
+          /usr/bin/time -f 'model_probe_wall_s=%e' -o /tmp/model-probes.time             /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/model-probes.csv --only=5               --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/model-probes.out
+          cat /tmp/model-probes.time
+          ! grep -q '^replay_error,' /tmp/model-probes.out
+          python - <<'PY'
+          import csv,json
+          hist={0:0,1:0,2:0}; nodes=0; cache={}
+          with open("/tmp/model-probes.out",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0]!="replay": continue
+                  v=int(r[6]); n=int(r[7]); k=(int(r[9]),int(r[10]))
+                  hist[v]+=1; nodes+=n
+                  if v in (1,2): cache[k]=v
+          print("MODEL_PROBE_COUNTS",hist)
+          print("MODEL_PROBE_TOTAL_NODES",nodes)
+          if hist[0]:
+              raise SystemExit("model probes left UNKNOWN")
+          with open("/tmp/model-probes.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 model-guided probes; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(cache.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          json.dump({"counts":hist,"nodes":nodes},open("/tmp/model-probe-result.json","w"),indent=2)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-model-guided-probes
+          path: |
+            /tmp/model-probes.json
+            /tmp/model-probes.csv
+            /tmp/model-probes.out
+            /tmp/model-probes.cache
+            /tmp/model-probe-result.json
+            /tmp/model-probes.time
