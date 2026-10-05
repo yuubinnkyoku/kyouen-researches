@@ -180,3 +180,37 @@ jobs:
           print("HARD_S6_RESULT_COUNTS", hist)
           print("HARD_S6_ROWS", rows)
           PY
+
+
+      - name: Residual Grundy share-gate sample
+        run: |
+          python - <<'PY' > /tmp/residual-share-one.csv
+          import sys
+          sys.path.insert(0, "research/experiments/n11-search-methods/scripts")
+          from dfpn_edge_classes import d4_canonical_key, legal_after
+          base={0,1,2,60}
+          z=legal_after(base)[0]
+          lo,hi=d4_canonical_key(base|{z})
+          print(f"fixture,0,5,{lo},{hi},0,0,0,0,0,0")
+          PY
+          for gate in 0 4 5 6; do
+            extra=""
+            if [ "$gate" -gt 0 ]; then extra="--residual-share-gate=$gate"; fi
+            /usr/bin/time -f "gate_\${gate}_process_wall_s=%e" -o "/tmp/gate-$gate.time" \
+              /tmp/dfpn --n=11 --memo=18 --exact-replay=/tmp/residual-share-one.csv --only=5 \
+                --exact-replay-budget=200000 --residual-exact-legal=6 $extra \
+                --csv="/tmp/gate-$gate.out"
+            cat "/tmp/gate-$gate.time"
+            grep '^replay,' "/tmp/gate-$gate.out"
+            grep '^# residual_shadow row=' "/tmp/gate-$gate.out"
+          done
+          python - <<'PY'
+          import csv
+          verdicts=[]
+          for gate in (0,4,5,6):
+              with open(f"/tmp/gate-{gate}.out") as f:
+                  row=next(r for r in csv.reader(f) if r and r[0]=="replay")
+              verdicts.append(row[6])
+          assert len(set(verdicts))==1, verdicts
+          print("RESIDUAL_SHARE_GATE_VERDICT_MATCH", verdicts)
+          PY
