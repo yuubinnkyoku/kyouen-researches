@@ -1,4 +1,4 @@
-name: N11 reply27 full-cache optimization
+name: N11 reply27 current distinct-union optimization
 
 on:
   push:
@@ -19,22 +19,22 @@ jobs:
       - name: Download independently replayed full-cache proof
         uses: actions/download-artifact@v4
         with:
-          name: reply27-full-replay-proof
+          name: reply27-current-cache-optimization
           path: /tmp/proof
           github-token: ${{ github.token }}
           repository: ${{ github.repository }}
-          run-id: 37275321333
+          run-id: 37338193154
 
       - name: Check cache
         run: |
-          test -f /tmp/proof/reply27-combined-s5.cache
-          grep -c '^s5verdict,' /tmp/proof/reply27-combined-s5.cache
-          sha256sum /tmp/proof/reply27-combined-s5.cache
+          test -f /tmp/proof/reply27-current-s5.cache
+          grep -c '^s5verdict,' /tmp/proof/reply27-current-s5.cache
+          sha256sum /tmp/proof/reply27-current-s5.cache
 
       - name: Certify minimum additional class count
         run: |
           python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py \
-            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --s5-cache /tmp/proof/reply27-current-s5.cache \
             --out /tmp/cardinality.json | tee /tmp/cardinality.log
           grep 'CACHE_AWARE_REPLY27_CARDINALITY_OK' /tmp/cardinality.log
           python - <<'PY'
@@ -50,7 +50,7 @@ jobs:
       - name: Build additive repair
         run: |
           python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cover.py \
-            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --s5-cache /tmp/proof/reply27-current-s5.cache \
             --out /tmp/additive.json > /tmp/additive.log
           grep 'CACHE_AWARE_REPLY27_COVER_OK' /tmp/additive.log
           python - <<'PY'
@@ -64,7 +64,7 @@ jobs:
       - name: Direct-union one-swap refinement
         run: |
           python research/experiments/n11-frontier-selection-20261005/scripts/refine_cache_aware_reply27_cover.py \
-            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --s5-cache /tmp/proof/reply27-current-s5.cache \
             --initial /tmp/additive.json \
             --out /tmp/refined.json > /tmp/refined.log
           grep 'CACHE_AWARE_REPLY27_UNION_REFINE_OK' /tmp/refined.log
@@ -82,7 +82,7 @@ jobs:
         continue-on-error: true
         run: |
           python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_union_cover.py \
-            --s5-cache /tmp/proof/reply27-combined-s5.cache \
+            --s5-cache /tmp/proof/reply27-current-s5.cache \
             --time-limit 600 \
             --out /tmp/union.json | tee /tmp/union.log
 
@@ -104,7 +104,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: reply27-full-cache-optimization
+          name: reply27-current-union-optimization
           path: |
             /tmp/cardinality.json
             /tmp/cardinality.log
