@@ -1,0 +1,86 @@
+name: N11 reply27 cheap trio extra23
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-cheap-trio-extra23.yml"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-extra23.csv"
+  workflow_dispatch:
+
+jobs:
+  solve:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exact replay solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%4)==s {print}' \
+            research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-extra23.csv \
+            > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=5 \
+              --exact-replay-budget=15000000 --csv=/tmp/out.csv
+          cat /tmp/time
+          grep '^replay,' /tmp/out.csv
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-cheap-trio-extra23-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-cheap-trio-extra23-*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Verify 23 verdicts
+        run: |
+          python - <<'PY'
+          import csv,glob
+          expect={}
+          path="research/experiments/n11-frontier-selection-20261005/output/reply27-cheap-trio-extra23.csv"
+          with open(path) as f:
+              for r in csv.reader(f):
+                  expect[(int(r[3]),int(r[4]))]=int(r[1])
+          got={}; hist={0:0,1:0,2:0}; nodes=0
+          for p in sorted(glob.glob("/tmp/proof/*/out.csv")):
+              with open(p) as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      key=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                      assert key in expect,key
+                      old=got.get(key)
+                      assert old in (None,v),(key,old,v)
+                      got[key]=v; hist[v]+=1; nodes+=n
+          assert set(got)==set(expect),(len(got),len(expect))
+          print("CHEAP_TRIO_EXTRA23_COUNTS",hist)
+          print("CHEAP_TRIO_EXTRA23_TOTAL_NODES",nodes)
+          with open("/tmp/verified.txt","w") as f:
+              f.write(f"counts={hist}\n")
+              f.write(f"nodes={nodes}\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-cheap-trio-extra23-proof
+          path: /tmp/verified.txt
