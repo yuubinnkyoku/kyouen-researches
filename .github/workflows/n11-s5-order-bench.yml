@@ -1,0 +1,60 @@
+name: N11 s5-local exact ordering benchmark
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-s5-order-bench.yml"
+  workflow_dispatch:
+
+jobs:
+  bench:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+
+      - name: Materialize deterministic reply27 sample
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/materialize_reply27_targets.py \
+            --out /tmp/r27-all.csv
+          grep -v '^#' /tmp/r27-all.csv | awk 'NR==1 || NR==1131 || NR==2262' > /tmp/r27-sample.csv
+          test "$(wc -l < /tmp/r27-sample.csv)" -eq 3
+
+      - name: Baseline count order
+        run: |
+          /usr/bin/time -f 'baseline_wall_s=%e' -o /tmp/base.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-sample.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/base.out
+          cat /tmp/base.time
+          grep '^replay,' /tmp/base.out
+
+      - name: S5-only descending order
+        run: |
+          /usr/bin/time -f 's5_countd_wall_s=%e' -o /tmp/s5d.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-sample.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=s5-countd --csv=/tmp/s5d.out
+          cat /tmp/s5d.time
+          grep '^replay,' /tmp/s5d.out
+
+          python - <<'PY'
+          import csv
+          def load(p):
+              out=[]
+              with open(p) as f:
+                  for r in csv.reader(f):
+                      if r and r[0]=="replay":
+                          out.append((int(r[6]),int(r[7])))
+              return out
+          a=load("/tmp/base.out")
+          b=load("/tmp/s5d.out")
+          assert len(a)==len(b)==3
+          assert [x[0] for x in a]==[x[0] for x in b], (a,b)
+          na=sum(x[1] for x in a); nb=sum(x[1] for x in b)
+          print("S5_LOCAL_ORDER_VERDICT_MATCH", [x[0] for x in a])
+          print("S5_LOCAL_ORDER_NODES baseline",na,"s5_countd",nb,
+                "ratio",round(nb/na,6))
+          PY
