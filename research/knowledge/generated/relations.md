@@ -56,6 +56,7 @@
 - ← depends_on [K0253](../items/K0253-height-three-p-random-win-half-bound.md)
 - ← depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 通常プレイのmexと分離成分のxor
 - ← depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 通常プレイのmex。misère補助mexは終端値1で別に定義する
+- ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -95,6 +96,7 @@
 - ← depends_on [K0046](../items/K0046-certificate-parity-law.md)
 - ← depends_on [K0047](../items/K0047-witness-chain-versus-game-length.md)
 - ← depends_on [K0048](../items/K0048-n1-n6-fixed-certificate-terminal-sizes.md)
+- ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): exact勝敗の意味は順位付きAND/OR証明の健全性に従う
 
 ## [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) 1×1〜9×9証明書の独立C++全件検査
 
@@ -653,6 +655,7 @@
 - → depends_on [K0028](../items/K0028-n11-truncated-dp-winner-withdrawn.md)
 - → depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md): 最小極大サイズの境界は空盤勝敗と別の確定結果
 - → depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md): 最大安全サイズの存在下界は空盤勝敗を決めない
+- → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
 - ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
 - ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
 
@@ -1617,3 +1620,9 @@
 ## [K0354](../items/K0354-general-prism-maximal-count.md) 任意次元平行列盤の極大安全集合数は母関数で閉形式に数えられる
 
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 極大占有数の完全分類を使う
+
+## [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) 11×11 reply27の保存済みexact結果から復元したcache frontier
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
+- → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md): exact勝敗の意味は順位付きAND/OR証明の健全性に従う
+- ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定

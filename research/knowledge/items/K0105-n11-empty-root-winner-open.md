@@ -19,6 +19,9 @@ relations:
 - type: depends_on
   target: K0313
   note: 最大安全サイズの存在下界は空盤勝敗を決めない
+- type: depends_on
+  target: K0355
+  note: reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
 artifacts:
 - path: research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md
   role: source
@@ -45,3 +48,5 @@ scope: 標準q=4・完全指摘・通常プレイの11×11空盤勝敗。層列�
 周辺では8≤s_11≤10とK_11≥21が確定している。前者の8・9石極大の有無、後者の真の最大サイズは未確定であり、いずれも空盤勝敗とは別の問題である。
 
 空盤の決着には真の終局まで閉じるAND/OR証明または正しい完了求解が必要。旧one-wordのK_11=11、打切りDP、proof numberを勝敗根拠にしない。
+
+中央初手後のreply27について、保存済みexact境界の回収と現在の検証範囲は[K0355](K0355-n11-reply27-cache-recovery-frontier.md)を参照する。この局所的な進捗から二石rootや空盤の勝敗を推定しない。

@@ -576,6 +576,69 @@
 ## [research/experiments/geometry/scripts/geometry_20261003_scale.py](../../../research/experiments/geometry/scripts/geometry_20261003_scale.py)
 
 - [K0307](../items/K0307-square-circle-maxima-through-112.md) (verifier): 全中心・全半径の列挙
+## [research/experiments/n11-boundary-recovery-20261006/README.md](../../../research/experiments/n11-boundary-recovery-20261006/README.md)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 回収範囲、手順、結論と限界
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-0.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-0.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 0
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-1.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-1.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 1
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-2.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-2.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 2
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-3.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-3.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 3
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-4.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-4.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 4
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-5.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-5.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 5
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-6.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-6.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 6
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-7.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/completion86-7.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37337141197の保存済みcompletion86 replay shard 7
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/pre-recovery-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/pre-recovery-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37334644565の保存済み基準cache
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/pre-recovery-stats.json](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/pre-recovery-stats.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37334644565のcache統計
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-0.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-0.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37336924568の保存済みshared s6 replay shard 0
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-1.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-1.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37336924568の保存済みshared s6 replay shard 1
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-2.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-2.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37336924568の保存済みshared s6 replay shard 2
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-3.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-3.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Actions run 37336924568の保存済みshared s6 replay shard 3
+## [research/experiments/n11-boundary-recovery-20261006/output/recovered-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/recovered-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): cache-aware cardinality、LP dual、整数被覆結果
+## [research/experiments/n11-boundary-recovery-20261006/output/recovered-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/recovered-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 13 class、1,227 UNKNOWN s5位置の修復target計算
+## [research/experiments/n11-boundary-recovery-20261006/output/recovery-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/recovery-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 入力ごとの行数、判定数、node合計、SHA-256、衝突数0
+## [research/experiments/n11-boundary-recovery-20261006/output/reply27-class-1297036692816953344-0-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/reply27-class-1297036692816953344-0-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 対象s4 classの105 canonical s5 LOSS境界
+## [research/experiments/n11-boundary-recovery-20261006/output/reply27-current-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/reply27-current-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 統合したcanonical exact s5 cache 2,648件
+## [research/experiments/n11-boundary-recovery-20261006/output/shared-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/shared-s6-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): s6 16件、親子relation 66件の監査要約
 ## [research/experiments/n11-cover-duality/output/center-corner-cover.json](../../../research/experiments/n11-cover-duality/output/center-corner-cover.json)
 
 - [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (certificate): n3/5/7/9/11/13/15の上界coverと分母2の下界dual
@@ -591,6 +654,27 @@
 ## [research/experiments/n11-cover-duality/scripts/verify_cover.py](../../../research/experiments/n11-cover-duality/scripts/verify_cover.py)
 
 - [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (verifier): 別行列式・別D4実装による全safe s4 classと整数dualの独立検査
+## [research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache](../../../research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 保存済みmodel8 exact cache
+## [research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.json](../../../research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): shared s6 probeと親候補のmetadata
+## [research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py](../../../research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (solver): cache条件下の有限class coverとrational LP dualを計算
+## [research/experiments/n11-frontier-selection-20261005/scripts/derive_shared_s6_witness_cache.py](../../../research/experiments/n11-frontier-selection-20261005/scripts/derive_shared_s6_witness_cache.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): s6 metadataの安全性、D4正規化、親子relationをgeometryから監査しLOSS witnessを派生
+## [research/experiments/n11-frontier-selection-20261005/scripts/merge_exact_s5_evidence.py](../../../research/experiments/n11-frontier-selection-20261005/scripts/merge_exact_s5_evidence.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): canonical key、exact verdict、重複と衝突を監査してcacheを統合
+## [research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py](../../../research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (solver): 追加class修復targetを最適化
+## [research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py](../../../research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 指定s4 classの全canonical s5境界がLOSSであることを検査
 ## [research/experiments/n11-reduction-followup-20261005/output/audit.json](../../../research/experiments/n11-reduction-followup-20261005/output/audit.json)
 
 - [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): 全7020小clutter、全5219交換不変族、727実n11残局の通常・misère検査と測定

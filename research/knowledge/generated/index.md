@@ -355,3 +355,4 @@
 | [K0352](../items/K0352-general-dimensional-parallel-columns.md) | 任意次元平行列盤ではd−1列容量が極大配置・多人版・二値Grundyを完全に決める | proposition | proved | variants, geometry, grundy, maximal-safe, strategy-length |
 | [K0353](../items/K0353-two-dimensional-parallel-columns.md) | 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる | proposition | proved | variants, geometry, grundy, maximal-safe, strategy-length |
 | [K0354](../items/K0354-general-prism-maximal-count.md) | 任意次元平行列盤の極大安全集合数は母関数で閉形式に数えられる | proposition | proved | variants, geometry, maximal-safe, statistics |
+| [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) | 11×11 reply27の保存済みexact結果から復元したcache frontier | computation | computed | square-outcomes, search-methods, verification, provenance |

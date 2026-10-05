@@ -1,22 +1,6 @@
 name: N11 reply27 current cache optimization
 
 on:
-  push:
-    paths:
-      - ".github/workflows/n11-reply27-current-cache.yml"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-probe12-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-completion-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round4-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round5-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-best2-probe12-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1152921505009500160-16-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-model-probes-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-tight-shared-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-hard2-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1297036692816953344-remaining86-s5.cache"
-      - "research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py"
-      - "research/experiments/n11-frontier-selection-20261005/output/reply27-shared-s6-s5.cache"
   workflow_dispatch:
 
 jobs:
