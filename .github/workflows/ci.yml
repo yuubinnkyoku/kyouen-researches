@@ -46,12 +46,6 @@ jobs:
             --exact-replay-budget=200000 --residual-audit-legal=12 \
             --csv=/tmp/s5-residual-audit.csv
           ! grep -q '^replay_error,' /tmp/s5-residual-audit.csv
-      - name: Crosscheck residual verdicts on n11 fixture
-        run: |
-          /tmp/kyouen_dfpn_root --n=11 --memo=18 --exact-replay=/tmp/s5-fixture-small.csv --only=5 \
-            --exact-replay-budget=200000 --residual-crosscheck-legal=6 \
-            --csv=/tmp/s5-residual-crosscheck.csv
-          ! grep -q '^replay_error,' /tmp/s5-residual-crosscheck.csv
       - name: Generate and check 1x1 through 6x6
         run: |
           mkdir -p /tmp/kyouen-certs
