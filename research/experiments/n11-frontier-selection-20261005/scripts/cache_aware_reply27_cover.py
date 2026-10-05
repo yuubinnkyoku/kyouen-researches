@@ -84,10 +84,18 @@ def build():
     return set(verts), coverage, children
 
 
+def occupied_from_key(key):
+    lo, hi = key
+    pts = {p for p in range(64) if (lo >> p) & 1}
+    pts.update(q + 64 for q in range(64) if (hi >> q) & 1)
+    return pts
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--s5-cache", type=Path, required=True)
     ap.add_argument("--out", type=Path)
+    ap.add_argument("--targets-out", type=Path, help="write distinct uncached selected s5 roots as exact-replay CSV")
     args = ap.parse_args()
 
     cache = load_cache(args.s5_cache)
@@ -189,6 +197,17 @@ def main():
             "certificates until their remaining s5 children are proved LOSS"
         ),
     }
+    if args.targets_out:
+        args.targets_out.parent.mkdir(parents=True, exist_ok=True)
+        with args.targets_out.open("w", encoding="utf-8") as fp:
+            fp.write("# cache-aware reply27 repair s5 targets; UNKNOWN only\n")
+            for seq, key in enumerate(sorted(selected_unknown)):
+                legal = len(legal_after(occupied_from_key(key)))
+                fp.write(
+                    f"reply27-repair,{seq},5,{key[0]},{key[1]},"
+                    f"{legal},0,0,0,0,0\n"
+                )
+
     assert repaired_coverage == verts
     text = json.dumps(out, indent=2, sort_keys=True) + "\n"
     print(text, end="")
