@@ -82,6 +82,8 @@ jobs:
           python research/experiments/geometry/scripts/check_geometry_20261003.py
           python research/experiments/game-structure/scripts/check_game_structure_20261003.py
           python research/experiments/saturation/scripts/check_saturation_20261003.py
+          python research/experiments/n11-frontier-selection-20261005/scripts/audit_s4_class_child_invariance.py
+          python research/experiments/n11-frontier-selection-20261005/scripts/audit_coordinator_frontier.py
 
   lean:
     name: Lean soundness layer
