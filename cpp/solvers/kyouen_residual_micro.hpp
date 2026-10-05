@@ -14,6 +14,7 @@
 #include <algorithm>
 #include <cstdint>
 #include <map>
+#include <numeric>
 #include <stdexcept>
 #include <unordered_map>
 #include <utility>
@@ -152,7 +153,40 @@ struct Key {
 
 struct Stats {
     std::uint64_t calls=0,memo_hits=0,module_removed=0,component_splits=0;
+    std::uint64_t shared_hits=0,shared_stores=0,canonicalized=0;
 };
+
+// Exact arbitrary-relabeling canonical key for a SMALL residual component.
+// This is intentionally factorial and is only for a tiny configurable gate
+// (the n=11 transfer experiment uses <=6 vertices, hence at most 720
+// permutations).  It is a correctness key, not a hash: isomorphic residual
+// clutters receive the same Key and non-isomorphic states are never merged by
+// a collision.
+inline Key canonical_small(State s){
+    s.edges=minimal(std::move(s.edges));
+    std::vector<int> live;
+    Mask x=s.vertices;
+    while(x){ int v=__builtin_ctzll(x); x&=x-1; live.push_back(v); }
+    const int n=(int)live.size();
+    std::vector<int> perm((std::size_t)n);
+    std::iota(perm.begin(),perm.end(),0);
+    Key best{}; bool have=false;
+    do{
+        std::vector<Mask> ee;
+        ee.reserve(s.edges.size());
+        for(Mask e:s.edges){
+            Mask q=0;
+            for(int i=0;i<n;++i) if(e&(Mask{1}<<live[(std::size_t)i]))
+                q|=Mask{1}<<perm[(std::size_t)i];
+            ee.push_back(q);
+        }
+        ee=minimal(std::move(ee));
+        Mask vv=(n==64)?~Mask{0}:((n==0)?Mask{0}:((Mask{1}<<n)-1));
+        Key k{vv,std::move(ee)};
+        if(!have || k<best){ best=std::move(k); have=true; }
+    }while(std::next_permutation(perm.begin(),perm.end()));
+    return best;
+}
 
 // Returns Grundy number.  Component xor is exact; K0344 compression preserves
 // Grundy, not merely outcome, so composition is sound.
@@ -175,6 +209,66 @@ inline int grundy(State s,std::map<Key,int>& memo,Stats* st=nullptr){
     std::sort(vals.begin(),vals.end()); vals.erase(std::unique(vals.begin(),vals.end()),vals.end());
     int g=0; for(int xg:vals){ if(xg==g)++g; else if(xg>g)break; }
     memo.emplace(std::move(k),g); return g;
+}
+
+
+/* Shared-component variant for Sprouts-style reuse.
+
+   local memo is per residual solve. shared memo persists across independent
+   roots/calls and is keyed by exact arbitrary-relabeling canonical form only
+   at <=share_gate live vertices.  The shared table stores only completed
+   Grundy values, so a cache miss can cost time but can never affect soundness.
+*/
+inline int grundy_shared(State s,std::map<Key,int>& local,
+                         std::map<Key,int>& shared,int share_gate,
+                         Stats* st=nullptr){
+    if(st) ++st->calls;
+    s.edges=minimal(std::move(s.edges));
+    s=compress(std::move(s),st?&st->module_removed:nullptr);
+    auto parts=components(s);
+    if(parts.size()>1){
+        if(st) ++st->component_splits;
+        int g=0;
+        for(auto& p:parts)
+            g^=grundy_shared(std::move(p),local,shared,share_gate,st);
+        return g;
+    }
+
+    Key raw{s.vertices,s.edges};
+    auto li=local.find(raw);
+    if(li!=local.end()){ if(st) ++st->memo_hits; return li->second; }
+
+    const bool share=share_gate>0 && pc(s.vertices)<=share_gate;
+    Key ck{};
+    if(share){
+        ck=canonical_small(s);
+        if(st) ++st->canonicalized;
+        auto si=shared.find(ck);
+        if(si!=shared.end()){
+            if(st) ++st->shared_hits;
+            local.emplace(std::move(raw),si->second);
+            return si->second;
+        }
+    }
+
+    std::vector<int> vals;
+    Mask x=s.vertices;
+    while(x){
+        int v=__builtin_ctzll(x); x&=x-1;
+        vals.push_back(grundy_shared(play(s,v),local,shared,share_gate,st));
+    }
+    std::sort(vals.begin(),vals.end());
+    vals.erase(std::unique(vals.begin(),vals.end()),vals.end());
+    int g=0;
+    for(int xg:vals){ if(xg==g)++g; else if(xg>g)break; }
+    local.emplace(std::move(raw),g);
+    if(share){
+        auto [it,added]=shared.emplace(std::move(ck),g);
+        if(!added && it->second!=g)
+            throw std::runtime_error("shared residual Grundy contradiction");
+        if(added && st) ++st->shared_stores;
+    }
+    return g;
 }
 
 // Convert residual P/N back to exact_prop's fixed proposition:
