@@ -1,0 +1,82 @@
+name: N11 reply27 best-class probe12
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-best-class-probe12.yml"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-probe12.csv"
+  workflow_dispatch:
+
+jobs:
+  solve:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%4)==s {print}'             research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-probe12.csv             > /tmp/targets.csv
+          cat /tmp/targets.csv
+      - name: Exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time             /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=5               --exact-replay-budget=15000000 --exact-order=count               --csv=/tmp/probe.out
+          cat /tmp/time
+          ! grep -q '^replay_error,' /tmp/probe.out
+          grep '^replay,' /tmp/probe.out
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-best-class-probe12-${{ matrix.shard }}
+          path: /tmp/probe.out
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-best-class-probe12-*
+          path: /tmp/proof
+          merge-multiple: true
+      - name: Verify and summarize
+        run: |
+          python - <<'PY'
+          import csv,glob,json
+          seen={}
+          hist={0:0,1:0,2:0}
+          nodes=0
+          for path in glob.glob("/tmp/proof/*.out"):
+              with open(path,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      k=(int(r[9]),int(r[10]))
+                      v=int(r[6]); n=int(r[7])
+                      old=seen.get(k)
+                      if old is not None and old!=v:
+                          raise SystemExit(f"CONFLICT {k} {old} {v}")
+                      seen[k]=v; hist[v]+=1; nodes+=n
+          assert len(seen)==12, len(seen)
+          print("BEST_CLASS_PROBE12_COUNTS",hist)
+          print("BEST_CLASS_PROBE12_TOTAL_NODES",nodes)
+          if hist[1]:
+              print("BEST_CLASS_PROBE12_DECISION","CLASS_WIN_FORBIDDEN")
+          elif hist[0]:
+              print("BEST_CLASS_PROBE12_DECISION","PROBE_INCONCLUSIVE")
+          else:
+              print("BEST_CLASS_PROBE12_DECISION","CONTINUE_COMPLETION")
+          with open("/tmp/probe12.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 best-class probe12; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(seen.items()):
+                  if v in (1,2):
+                      f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-best-class-probe12-proof
+          path: /tmp/probe12.cache
