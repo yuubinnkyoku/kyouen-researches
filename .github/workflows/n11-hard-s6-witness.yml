@@ -1,0 +1,47 @@
+name: N11 hard s6 witness probe
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-hard-s6-witness.yml"
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Solve six shared s6 witnesses
+        run: |
+          cat > /tmp/r27-hard-s6.csv <<'EOF'
+          reply27-hard-s6,0,6,10520408730615431168,0,92,0,1,0,0,0
+          reply27-hard-s6,1,6,10520443913910616064,16384,84,0,1,0,0,0
+          reply27-hard-s6,2,6,10520408731701739520,32768,58,0,1,0,0,0
+          reply27-hard-s6,3,6,10520408729537478662,67108864,80,0,1,0,0,0
+          reply27-hard-s6,4,6,3602879701897445377,134217728,82,0,1,0,0,0
+          reply27-hard-s6,5,6,1152921504742115330,536870912,76,0,1,0,0,0
+          EOF
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-hard-s6.csv --only=6 \
+              --exact-replay-budget=10000000 --csv=/tmp/r27-hard-s6.out
+          cat /tmp/time
+          grep '^replay,' /tmp/r27-hard-s6.out
+          ! grep -q '^replay_error,' /tmp/r27-hard-s6.out
+          python - <<'PY'
+          import csv
+          hist={0:0,1:0,2:0}
+          rows=[]
+          with open("/tmp/r27-hard-s6.out") as f:
+              for row in csv.reader(f):
+                  if row and row[0]=="replay":
+                      result=int(row[6])
+                      hist[result]+=1
+                      rows.append((int(row[1]),result,int(row[7])))
+          assert len(rows)==6, rows
+          print("HARD_S6_RESULT_COUNTS",hist)
+          print("HARD_S6_ROWS",rows)
+          PY
