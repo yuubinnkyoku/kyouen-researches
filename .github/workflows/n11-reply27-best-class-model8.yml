@@ -1,0 +1,127 @@
+name: N11 reply27 best-class model8 probe
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-best-class-model8.yml"
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install model dependency
+        run: python -m pip install --quiet numpy scipy
+
+      - name: Download chronological training cache
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-full-replay-proof
+          path: /tmp/base
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37275321333
+
+      - name: Download current proof cache
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-current-cache-optimization
+          path: /tmp/current
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37320598190
+
+      - name: Materialize current best-class unknown children
+        run: |
+          python - <<'PY'
+          import csv,json,sys
+          from pathlib import Path
+          p=Path("research/experiments/n11-frontier-selection-20261005/scripts")
+          sys.path.insert(0,str(p))
+          import reply27_selected31_repair as R
+          rank=json.load(open("/tmp/current/current-ranking.json"))
+          best=tuple(rank["ranking"][0]["key"])
+          assert best==(1306043892071661568,0),best
+          verdict={}
+          with open("/tmp/current/reply27-current-s5.cache",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0].startswith("#"): continue
+                  verdict[(int(r[1]),int(r[2]))]=int(r[4])
+          _,_,_,children=R.build_geometry()
+          unknown=sorted(ch for ch in children[best] if ch not in verdict)
+          assert len(unknown)==101,len(unknown)
+          json.dump({"classes":[{"key":list(best),"unknown_children":[list(ch) for ch in unknown]}]},
+                    open("/tmp/class-map.json","w"),indent=2)
+          with open("/tmp/candidates.cache","w") as f:
+              f.write("# feature extraction only; dummy LOSS labels are ignored by selector\n")
+              for lo,hi in unknown:
+                  f.write(f"s5verdict,{lo},{hi},5,2,0\n")
+          print("BEST_MODEL8_CLASS",best,"UNKNOWN",len(unknown))
+          PY
+
+      - name: Build structural feature extractor
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG             research/experiments/n11-literature-transfer-20261005/scripts/extract_s5_features.cpp             -o /tmp/extract-s5-features
+
+      - name: Extract train and candidate features
+        run: |
+          /tmp/extract-s5-features /tmp/base/reply27-combined-s5.cache > /tmp/train-features.csv
+          /tmp/extract-s5-features /tmp/candidates.cache > /tmp/candidate-features.csv
+
+      - name: Choose eight most WIN-like remaining children
+        run: |
+          python research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py             --train /tmp/train-features.csv             --candidates /tmp/candidate-features.csv             --class-map /tmp/class-map.json             --per-class 8             --out /tmp/model8.json             --probes-out /tmp/model8.csv > /tmp/model8.log
+          grep 'REPLY27_MODEL_PROBES_OK' /tmp/model8.log
+          python - <<'PY'
+          import json
+          d=json.load(open("/tmp/model8.json"))
+          assert d["dedup_probes"]==8,d
+          for x in d["classes"][0]["chosen"]:
+              print("BEST_MODEL8_TARGET",x)
+          PY
+
+      - name: Build exact solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers             cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+
+      - name: Exact replay
+        run: |
+          /usr/bin/time -f 'best_model8_wall_s=%e' -o /tmp/time             /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/model8.csv --only=5               --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          ! grep -q '^replay_error,' /tmp/out.csv
+          python - <<'PY'
+          import csv,json
+          hist={0:0,1:0,2:0}; nodes=0; exact={}; unknown=[]
+          with open("/tmp/out.csv",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0]!="replay": continue
+                  k=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                  hist[v]+=1; nodes+=n
+                  if v in (1,2): exact[k]=v
+                  else: unknown.append(k)
+          print("BEST_MODEL8_COUNTS",hist)
+          print("BEST_MODEL8_TOTAL_NODES",nodes)
+          print("BEST_MODEL8_UNKNOWN",unknown)
+          print("BEST_MODEL8_DECISION",
+                "CLASS_WIN_FORBIDDEN" if hist[1] else
+                ("CONTINUE_COMPLETION" if hist[0]==0 else "INCONCLUSIVE"))
+          with open("/tmp/model8.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 current-best model8; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(exact.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          json.dump({"counts":hist,"nodes":nodes,"unknown":[list(k) for k in unknown]},
+                    open("/tmp/result.json","w"),indent=2)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-best-class-model8
+          path: |
+            /tmp/model8.json
+            /tmp/model8.csv
+            /tmp/out.csv
+            /tmp/model8.cache
+            /tmp/result.json
+            /tmp/time
