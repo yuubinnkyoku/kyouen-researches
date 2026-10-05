@@ -8,6 +8,7 @@ on:
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-completion-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round4-s5.cache"
       - "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round5-s5.cache"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-best2-probe12-s5.cache"
   workflow_dispatch:
 
 jobs:
@@ -54,6 +55,7 @@ jobs:
               "research/experiments/n11-frontier-selection-20261005/output/reply27-class-completion-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round4-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-repair-round5-s5.cache",
+              "research/experiments/n11-frontier-selection-20261005/output/reply27-best2-probe12-s5.cache",
           ]
           verdict = {}
           origin = {}
