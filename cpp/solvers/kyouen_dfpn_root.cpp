@@ -745,9 +745,11 @@ public:
     // The refutation of reply r2 is a set cover over canonical s4
     // classes: a third move a is refuted as soon as ANY incident class is
     // proved LOSS, so refuting the whole reply means covering all vertices
-    // with LOSS-proved classes. OPT is 31 (certified by ILP), so at most
-    // 31 class proofs are ever needed and the progress metric
-    // "minimum additional classes" is exact rather than heuristic.
+    // with LOSS-proved classes. The all-available structural instance has
+    // OPT=31 (certified offline by ILP). After individual classes become WIN,
+    // this in-process coordinator uses a deterministic GREEDY cover; its
+    // "min_additional" field is therefore a scheduling estimate, not an
+    // exact optimum.
     //
     // The coordinator re-solves the optimistic cover after every verdict:
     //     LOSS class    -> usable, cost 0 (already paid for)
@@ -768,11 +770,12 @@ public:
     // optimistic count as a refutation would be a soundness bug.
     struct CovMemo { std::vector<int> verts; };
     struct CoordStats {
-        std::uint64_t cover_size=0;       // optimistic cover size
-        std::uint64_t covered=0;          // vertices in that cover
-        std::uint64_t secured=0;          // vertices covered by LOSS PROOF
-        std::uint64_t min_additional=0;   // how many still need proving
+        std::uint64_t cover_size=0;       // greedy optimistic cover size
+        std::uint64_t covered=0;          // vertices in that greedy cover
+        std::uint64_t secured=0;          // vertices covered by selected LOSS
+        std::uint64_t min_additional=0;   // greedy UNKNOWN count, not exact ILP
         std::uint64_t forbidden=0;        // classes WIN has ruled out
+        std::vector<int> members;         // slots selected by the greedy cover
     };
 
     CoordStats coordinate(const std::vector<CovMemo>& cov_memo,
@@ -806,6 +809,7 @@ public:
                     secured[(std::size_t)v]=1; ++secured_n;
                 }
             }
+            st.members.push_back(best);
             ++st.cover_size;
             st.min_additional += (std::uint64_t)best_cost;
         }
@@ -3305,22 +3309,27 @@ static int run_coord(int first,int r2,const std::string& s5_cache,
             if(el>=budget_s){ O<<"# stop: wall budget\n"; break; }
         }
 
-        // Pick from the current cover's UNKNOWN members: widest fresh
-        // coverage first, then fewest unknown s5 so a nearly-decided
-        // class is finished rather than abandoned.
-        // Sized V, not verts.size(): entries are board indices.
-        std::vector<char> reachable((std::size_t)DfPn<N>::V,0);
+        // Work ONLY on UNKNOWN members of the greedy optimistic cover
+        // returned above.  The previous implementation recomputed a
+        // "reachable" mask over every non-WIN class, which is almost the
+        // whole vertex set, and then accidentally picked from ALL UNKNOWN
+        // classes; that defeated the whole frontier-selection idea.
+        //
+        // Within the current skeleton, prefer the class that would secure
+        // the most vertices not already covered by a proved LOSS class,
+        // then the one with fewer unresolved s5 children.
+        std::vector<char> secured_now((std::size_t)DfPn<N>::V,0);
         for(int slot=0;slot<(int)order.size();++slot){
-            if(verd[(std::size_t)slot]==DfPn<N>::EdgeVerdict::WIN) continue;
+            if(verd[(std::size_t)slot]!=DfPn<N>::EdgeVerdict::LOSS) continue;
             for(int v:cov[(std::size_t)slot].verts)
-                reachable[(std::size_t)v]=1;
+                secured_now[(std::size_t)v]=1;
         }
         int pick=-1; std::size_t pfresh=0; int punk=1<<30;
-        for(int slot=0;slot<(int)order.size();++slot){
+        for(int slot:st.members){
             if(verd[(std::size_t)slot]!=DfPn<N>::EdgeVerdict::UNKNOWN) continue;
             std::size_t fresh=0;
             for(int v:cov[(std::size_t)slot].verts)
-                if(reachable[(std::size_t)v]) ++fresh;
+                if(!secured_now[(std::size_t)v]) ++fresh;
             if(fresh==0) continue;
             int u=unk_cnt[(std::size_t)slot];
             if(fresh>pfresh || (fresh==pfresh && u<punk)){
