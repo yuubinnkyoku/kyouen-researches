@@ -770,9 +770,9 @@ public:
     // optimistic count as a refutation would be a soundness bug.
     struct CovMemo { std::vector<int> verts; };
     struct CoordStats {
-        std::uint64_t cover_size=0;       // greedy optimistic cover size
-        std::uint64_t covered=0;          // vertices in that greedy cover
-        std::uint64_t secured=0;          // vertices covered by selected LOSS
+        std::uint64_t cover_size=0;       // UNKNOWN classes in greedy suffix
+        std::uint64_t covered=0;          // secured union + optimistic suffix
+        std::uint64_t secured=0;          // union of ALL proved LOSS classes
         std::uint64_t min_additional=0;   // greedy UNKNOWN count, not exact ILP
         std::uint64_t forbidden=0;        // classes WIN has ruled out
         std::vector<int> members;         // slots selected by the greedy cover
@@ -782,39 +782,58 @@ public:
                           const std::vector<EdgeVerdict>& verdicts) const {
         const int M=(int)cov_memo.size();
         std::vector<char> covered((std::size_t)V,0);
-        std::vector<char> secured((std::size_t)V,0);
-        std::vector<char> used((std::size_t)M,0);
         CoordStats st;
-        std::size_t covered_n=0, secured_n=0;
-        for(int round=0; round<M; ++round){
-            int best=-1, best_cost=99;
+
+        // Every proved LOSS class is unconditional proof material, whether or
+        // not a later greedy skeleton would happen to select it. Seed the
+        // frontier with the UNION of all such classes. This makes secured a
+        // true monotone progress measure and lets a completed certificate
+        // terminate immediately even if scheduling would choose a different
+        // redundant skeleton.
+        std::size_t secured_n=0;
+        for(int i=0;i<M;++i){
+            if(verdicts[(std::size_t)i]!=EdgeVerdict::LOSS) continue;
+            for(int v:cov_memo[(std::size_t)i].verts){
+                if(!covered[(std::size_t)v]){
+                    covered[(std::size_t)v]=1;
+                    ++secured_n;
+                }
+            }
+        }
+        st.secured=secured_n;
+        std::size_t covered_n=secured_n;
+
+        // Cover only still-unsecured vertices with UNKNOWN classes. WIN
+        // classes are impossible certificate members. members is exactly the
+        // work skeleton returned by this greedy pass.
+        std::vector<char> used((std::size_t)M,0);
+        for(int round=0; round<M && covered_n<(std::size_t)V; ++round){
+            int best=-1;
             std::size_t best_fresh=0;
             for(int i=0;i<M;++i){
                 if(used[(std::size_t)i]) continue;
-                if(verdicts[(std::size_t)i]==EdgeVerdict::WIN) continue;
-                int cost=(verdicts[(std::size_t)i]==EdgeVerdict::LOSS)?0:1;
+                if(verdicts[(std::size_t)i]!=EdgeVerdict::UNKNOWN) continue;
                 std::size_t fresh=0;
                 for(int v:cov_memo[(std::size_t)i].verts)
                     if(!covered[(std::size_t)v]) ++fresh;
-                if(fresh==0) continue;
-                if(fresh>best_fresh || (fresh==best_fresh && cost<best_cost)){
-                    best=i; best_cost=cost; best_fresh=fresh;
+                if(fresh>best_fresh){
+                    best=i;
+                    best_fresh=fresh;
                 }
             }
-            if(best<0) break;
+            if(best<0 || best_fresh==0) break;
             used[(std::size_t)best]=1;
             for(int v:cov_memo[(std::size_t)best].verts){
-                if(!covered[(std::size_t)v]){ covered[(std::size_t)v]=1; ++covered_n; }
-                if(best_cost==0 && !secured[(std::size_t)v]){
-                    secured[(std::size_t)v]=1; ++secured_n;
+                if(!covered[(std::size_t)v]){
+                    covered[(std::size_t)v]=1;
+                    ++covered_n;
                 }
             }
             st.members.push_back(best);
             ++st.cover_size;
-            st.min_additional += (std::uint64_t)best_cost;
+            ++st.min_additional;
         }
         st.covered=covered_n;
-        st.secured=secured_n;
         for(int i=0;i<M;++i)
             if(verdicts[(std::size_t)i]==EdgeVerdict::WIN) ++st.forbidden;
         return st;
