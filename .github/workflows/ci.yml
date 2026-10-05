@@ -28,6 +28,12 @@ jobs:
           printf 'canonical_parent,move\n"14,64",74\n' > /tmp/root10-regression.csv
           /tmp/kyouen_solver_10_root /tmp/root10-regression.csv 25 | tee /tmp/root10-regression.out
           grep -q '^"14,64",74,WIN,' /tmp/root10-regression.out
+      - name: Verify residual micro-kernel semantics
+        run: |
+          c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/tests/test_kyouen_residual_micro.cpp -o /tmp/test_kyouen_residual_micro
+          /tmp/test_kyouen_residual_micro | tee /tmp/residual-micro.out
+          grep -q '^VERIFIED clutters=' /tmp/residual-micro.out
+          c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/kyouen_dfpn_root
       - name: Generate and check 1x1 through 6x6
         run: |
           mkdir -p /tmp/kyouen-certs
