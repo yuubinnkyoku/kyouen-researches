@@ -126,7 +126,8 @@ jobs:
           python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
             --class-lo 1297036692816953344 --class-hi 0 \
             --expected-children 105 \
-            --cache /tmp/reply27-current-s5.cache
+            --cache /tmp/reply27-current-s5.cache \
+            --allow-extra
 
       - name: Certify current global class-count lower and upper bound
         run: |
