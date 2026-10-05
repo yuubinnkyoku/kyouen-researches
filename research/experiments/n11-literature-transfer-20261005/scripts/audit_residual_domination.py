@@ -203,8 +203,9 @@ def main():
         "max_exact_memo_states_for_tested_component": max_memo,
         "non_equal_grundy_examples": non_equal_examples,
         "claim": (
-            "finite-sample audit only; no pruning theorem is claimed when "
-            "geometric_counterexample is null"
+            "a non-null geometric_counterexample refutes direct incidence-"
+            "domination pruning for Kyouen; a null witness would only be a "
+            "finite-sample non-refutation"
         ),
     }
     text = json.dumps(result, indent=2, sort_keys=True) + "\n"
