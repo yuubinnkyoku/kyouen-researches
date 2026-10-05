@@ -9,6 +9,7 @@ made here.
 """
 from __future__ import annotations
 
+import argparse
 import heapq
 import itertools
 import json
@@ -35,6 +36,9 @@ def decode(key):
 
 
 def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--targets-out", type=Path, help="write the 847 selected s6 positions as exact-replay CSV")
+    args = ap.parse_args()
     doc = json.loads(WITNESS.read_text(encoding="utf-8"))
     first, r2 = doc["root"]
     selected = {tuple(x) for x in doc["classes"]}
@@ -151,6 +155,14 @@ def main():
         size_hist[len(sets[j])] += 1
     assert len(covered) == len(s5) == 2262
     assert dict(size_hist) == {5: 72, 4: 15, 3: 425, 2: 335}
+
+    if args.targets_out:
+        args.targets_out.parent.mkdir(parents=True, exist_ok=True)
+        with args.targets_out.open("w", encoding="utf-8") as fp:
+            for seq, j in enumerate(chosen):
+                lo, hi = children[j]
+                legal = len(legal_after(decode((lo, hi))))
+                fp.write(f"reply27-s6-cover,{seq},6,{lo},{hi},{legal},0,1,0,0,0\\n")
 
     out = {
         "s5_targets": len(s5),
