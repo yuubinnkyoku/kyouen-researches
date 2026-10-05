@@ -1281,6 +1281,9 @@ private:
     std::uint64_t residual_crosscheck_calls_=0;
     int residual_exact_legal_=0;             // experimental exact handoff
     std::uint64_t residual_exact_calls_=0;
+    std::uint64_t residual_exact_memo_states_=0;
+    std::uint64_t residual_exact_module_removed_=0;
+    std::uint64_t residual_exact_component_splits_=0;
     std::uint64_t exact_budget_=100000;    // nodes per handoff attempt
     // Per-stone-count budget overrides. The s5 frontier measured in
     // N11-DFPN-S5-BENCH.md needs 130k..5.7M nodes to close while s6
@@ -1541,7 +1544,11 @@ private:
     ExactResult residual_verdict(Bits occupied,Bits legal,int stones) {
         auto r=residual_for(occupied,legal,nullptr);
         std::map<kyouen_residual::Key,int> memo;
-        int g=kyouen_residual::grundy(std::move(r),memo,nullptr);
+        kyouen_residual::Stats st;
+        int g=kyouen_residual::grundy(std::move(r),memo,&st);
+        residual_exact_memo_states_ += memo.size();
+        residual_exact_module_removed_ += st.module_removed;
+        residual_exact_component_splits_ += st.component_splits;
         ++residual_crosscheck_calls_;
         return kyouen_residual::first_player_verdict_from_grundy(g,stones)==1
             ? ExactResult::WIN : ExactResult::LOSS;
@@ -2315,6 +2322,12 @@ public:
     std::uint64_t residual_crosscheck_calls() const { return residual_crosscheck_calls_; }
     void set_residual_exact_legal(int legal){ residual_exact_legal_=std::max(0,legal); }
     std::uint64_t residual_exact_calls() const { return residual_exact_calls_; }
+    void residual_exact_stats(std::uint64_t& memo_states,std::uint64_t& removed,
+                              std::uint64_t& splits) const {
+        memo_states=residual_exact_memo_states_;
+        removed=residual_exact_module_removed_;
+        splits=residual_exact_component_splits_;
+    }
     void set_exact_handoff(int legal,std::uint64_t budget,int retries,int publish_mode){
         exact_legal_=std::max(0,legal);
         exact_budget_=std::max<std::uint64_t>(1,budget);
@@ -2655,11 +2668,17 @@ template<int N>
             row_solver.set_residual_crosscheck_legal(residual_crosscheck_legal);
             row_solver.set_residual_exact_legal(residual_exact_legal);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
-            if(residual_audit_legal>0 || residual_crosscheck_legal>0 || residual_exact_legal>0)
+            if(residual_audit_legal>0 || residual_crosscheck_legal>0 || residual_exact_legal>0){
+                std::uint64_t rms=0, rrm=0, rcs=0;
+                row_solver.residual_exact_stats(rms,rrm,rcs);
                 O<<"# residual_shadow row="<<id
                  <<" audit_calls="<<row_solver.residual_audit_calls()
                  <<" crosscheck_calls="<<row_solver.residual_crosscheck_calls()
-                 <<" exact_calls="<<row_solver.residual_exact_calls()<<"\n";
+                 <<" exact_calls="<<row_solver.residual_exact_calls()
+                 <<" residual_memo_states="<<rms
+                 <<" module_removed="<<rrm
+                 <<" component_splits="<<rcs<<"\n";
+            }
         }catch(const std::exception& e){
             O<<"replay_error,"<<id<<","<<stones<<",0,\""<<e.what()<<"\"\n"; O.flush(); ++id; continue;
         }
