@@ -33,6 +33,8 @@ jobs:
           c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/tests/test_kyouen_residual_micro.cpp -o /tmp/test_kyouen_residual_micro
           /tmp/test_kyouen_residual_micro | tee /tmp/residual-micro.out
           grep -q '^VERIFIED clutters=' /tmp/residual-micro.out
+      - name: Verify residual integration on deterministic n11 fixture
+        run: |
           c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/kyouen_dfpn_root
           /tmp/kyouen_dfpn_root --n=11 --s5-fixture-parents='60,0,1,2' --csv=/tmp/s5-fixture.csv
           grep -q '^# fixture_done unique=' /tmp/s5-fixture.csv
