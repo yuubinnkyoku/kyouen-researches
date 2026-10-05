@@ -58,27 +58,37 @@ def main():
         for p in ps:
             child[p].append(key)
 
-    desc_ranks=[]; asc_ranks=[]; details=[]
+    desc_ranks=[]; asc_ranks=[]; target92_ranks=[]; details=[]
+    desc_nodes=[]; asc_nodes=[]; target92_nodes=[]
     for i,kids in enumerate(child):
         desc=sorted(kids,key=lambda k:(-rows[k][1],k))
         asc=sorted(kids,key=lambda k:( rows[k][1],k))
+        target92=sorted(kids,key=lambda k:(abs(rows[k][1]-92),-rows[k][1],k))
         def first_loss(order):
+            cumulative=0
             for rank,key in enumerate(order,1):
                 verdict,legal,nodes=rows[key]
+                cumulative += nodes
                 if verdict==2:
-                    return rank,legal,key,nodes
+                    return rank,legal,key,nodes,cumulative
             return None
-        d=first_loss(desc); a=first_loss(asc)
+        d=first_loss(desc); a=first_loss(asc); t=first_loss(target92)
         if d is not None:
-            desc_ranks.append(d[0]); asc_ranks.append(a[0])
+            desc_ranks.append(d[0]); asc_ranks.append(a[0]); target92_ranks.append(t[0])
+            desc_nodes.append(d[4]); asc_nodes.append(a[4]); target92_nodes.append(t[4])
         details.append({
             "parent_index":i,
             "children":len(kids),
             "status":"LOSS" if d is not None else "WIN",
             "first_loss_desc":None if d is None else {
-                "rank":d[0],"legal":d[1],"key":list(d[2]),"nodes":d[3]},
+                "rank":d[0],"legal":d[1],"key":list(d[2]),"nodes":d[3],
+                "cumulative_cold_nodes":d[4]},
             "first_loss_asc":None if a is None else {
-                "rank":a[0],"legal":a[1],"key":list(a[2]),"nodes":a[3]},
+                "rank":a[0],"legal":a[1],"key":list(a[2]),"nodes":a[3],
+                "cumulative_cold_nodes":a[4]},
+            "first_loss_target92":None if t is None else {
+                "rank":t[0],"legal":t[1],"key":list(t[2]),"nodes":t[3],
+                "cumulative_cold_nodes":t[4]},
         })
 
     hist=Counter(v for v,_,_ in rows.values())
@@ -106,6 +116,12 @@ def main():
         "asc_rank_mean":mean(asc_ranks),
         "asc_rank_median":median(asc_ranks),
         "asc_rank_max":max(asc_ranks),
+        "target92_rank_mean":mean(target92_ranks),
+        "target92_rank_median":median(target92_ranks),
+        "target92_rank_max":max(target92_ranks),
+        "desc_cumulative_cold_nodes":sum(desc_nodes),
+        "asc_cumulative_cold_nodes":sum(asc_nodes),
+        "target92_cumulative_cold_nodes":sum(target92_nodes),
         "top2_desc_covers":sum(r<=2 for r in desc_ranks),
         "top6_desc_covers":sum(r<=6 for r in desc_ranks),
         "top14_desc_covers":sum(r<=14 for r in desc_ranks),
