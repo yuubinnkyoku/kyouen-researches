@@ -1821,13 +1821,19 @@ private:
         const bool by_key=(exact_order_==ExactOrder::KEY);
         std::sort(g.ch.begin(),g.ch.begin()+g.n,[&](const GChild& a,const GChild& b){
             auto pri=[&](const GChild& x){
+                auto st=x.st;
+                if(exact_share_layer_==stones+1){
+                    auto si=exact_layer_cache_.find(x.key);
+                    if(si!=exact_layer_cache_.end())
+                        st=(si->second==1)?PnTT::WIN:PnTT::LOSS;
+                }
                 if(isor){
-                    if(x.st==PnTT::WIN) return 0;
-                    if(x.st==PnTT::OPEN) return 1;
+                    if(st==PnTT::WIN) return 0;
+                    if(st==PnTT::OPEN) return 1;
                     return 2;
                 }else{
-                    if(x.st==PnTT::LOSS) return 0;
-                    if(x.st==PnTT::OPEN) return 1;
+                    if(st==PnTT::LOSS) return 0;
+                    if(st==PnTT::OPEN) return 1;
                     return 2;
                 }
             };
