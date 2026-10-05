@@ -52,7 +52,7 @@ def main():
             if len(pts)!=5:
                 raise SystemExit(f"not an s5 parent: {parent}")
             children={
-                d4_canonical_key(list(pts)+(z,))
+                d4_canonical_key(list(pts)+[z])
                 for z in legal_after(set(pts))
             }
             if s6 not in children:
