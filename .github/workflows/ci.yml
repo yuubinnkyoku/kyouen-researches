@@ -34,6 +34,16 @@ jobs:
           /tmp/test_kyouen_residual_micro | tee /tmp/residual-micro.out
           grep -q '^VERIFIED clutters=' /tmp/residual-micro.out
           c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/kyouen_dfpn_root
+          /tmp/kyouen_dfpn_root --n=11 --s5-fixture-parents='60,0,1,2' --csv=/tmp/s5-fixture.csv
+          grep -q '^# fixture_done unique=' /tmp/s5-fixture.csv
+          # Replay only a tiny deterministic prefix in CI.  It exercises the
+          # real board->residual transition audit and exact-result crosscheck
+          # without turning ordinary pushes into a long 11x11 search.
+          grep -E '^(#|fixture,)' /tmp/s5-fixture.csv | head -n 8 > /tmp/s5-fixture-small.csv
+          /tmp/kyouen_dfpn_root --n=11 --memo=18 --exact-replay=/tmp/s5-fixture-small.csv --only=5 \
+            --exact-replay-budget=200000 --residual-audit-legal=12 \
+            --residual-crosscheck-legal=6 --csv=/tmp/s5-residual-smoke.csv
+          ! grep -q '^replay_error,' /tmp/s5-residual-smoke.csv
       - name: Generate and check 1x1 through 6x6
         run: |
           mkdir -p /tmp/kyouen-certs
