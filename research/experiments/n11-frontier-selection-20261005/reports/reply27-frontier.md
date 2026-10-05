@@ -103,3 +103,31 @@ r2=0 : 2319 new targets (209 known LOSS s5を利用後)
 dual制約、31-class coverage、2,262 s5 union、およびr2=0既知209件とのoverlap 0を再計算する。
 
 **この結果だけではreply 27がLOSSとは言えず、11×11空盤はUNKNOWNのまま。**
+
+
+## cold exact sample による後続A/B
+
+その後、保存したfrontierから決定的に先頭・中央・末尾の3件ずつを取り、
+同じGitHub Actions runner上でfresh exact replayした。各rootは別solverで、
+main TTのroot間共有は無い。
+
+| reply | sample exact nodes | process wall |
+|---|---:|---:|
+| r2=0 | 3,331,065 + 3,995,891 + 3,286,176 = **10,613,132** | **25.80 s** |
+| r2=27 | 4,956,038 + 6,553,161 + 8,992,350 = **20,501,549** | **51.14 s** |
+
+3点だけの決定的標本なので全2,319/2,262件への外挿値を証明扱いしてはいけない。
+ただし1件あたりのnode costはこの標本でr27が約1.93倍であり、target数の
+2.46%減を大きく上回る。既知cache 209件もr0側にしか無い。
+
+したがって、**「s5 target数が少ないためr27をr0より優先する」という判断は撤回する。**
+現時点ではr0を主レーンに保ち、r27は比較用holdout/副レーンとする方が妥当。
+reply選択の目的関数はtarget数ではなく、cold replayから推定した
+`marginal unique s5 exact node cost` にすべきである。
+
+再現workflow:
+`.github/workflows/n11-frontier-bench.yml`
+
+観測run:
+`N11 frontier target sample benchmark` run 37253550332
+(head `90a14f98143224fe2c945559f15c631f5c7bfc5e`)。
