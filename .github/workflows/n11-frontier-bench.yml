@@ -115,9 +115,10 @@ jobs:
             awk 'NR==1 || NR==61 || NR==121 || NR==181 || NR==241 || NR==301 || NR==361 || NR==421 || NR==481 || NR==541 || NR==601 || NR==661 || NR==721 || NR==781 || NR==841' \
             > /tmp/r27-s6-sample.csv
           echo "s6_sample_rows=$(wc -l < /tmp/r27-s6-sample.csv)"
+          test "$(wc -l < /tmp/r27-s6-sample.csv)" -eq 15
           /usr/bin/time -f 'r27_s6_sample_wall_s=%e' -o /tmp/r27-s6-sample.time \
             /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-s6-sample.csv --only=6 \
-              --exact-replay-budget=1000000 --csv=/tmp/r27-s6-sample.out
+              --exact-replay-budget=10000000 --csv=/tmp/r27-s6-sample.out
           cat /tmp/r27-s6-sample.time
           grep '^replay,' /tmp/r27-s6-sample.out
           ! grep -q '^replay_error,' /tmp/r27-s6-sample.out
@@ -148,4 +149,4 @@ jobs:
           print("S6_LEGAL_LOGNODE_CORR", round(corr,4))
           PY
 
-# rerun after selected-layer cache fix 2026-10-05
+# rerun after selected-layer cache fix and s6 CSV newline fix 2026-10-05
