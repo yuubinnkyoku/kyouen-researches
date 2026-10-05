@@ -1,0 +1,170 @@
+name: N11 reply27 best-class completion86
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-best-class-completion86.yml"
+      - "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1297036692816953344-remaining86.csv"
+  workflow_dispatch:
+
+jobs:
+  solve:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exact replay solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%8)==s {print}' \
+            research/experiments/n11-frontier-selection-20261005/output/reply27-class-1297036692816953344-remaining86.csv \
+            > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          grep '^replay,' /tmp/out.csv
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-best-class-completion86-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-best-class-completion86-*
+          path: /tmp/proof
+          merge-multiple: false
+
+      - name: Download pre-completion current exact cache
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-current-cache-optimization
+          path: /tmp/current
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37334644565
+
+      - name: Classify target class from complete known boundary
+        run: |
+          python - <<'PY'
+          import csv,glob,json,sys
+          from pathlib import Path
+          p=Path("research/experiments/n11-frontier-selection-20261005/scripts")
+          sys.path.insert(0,str(p))
+          import reply27_selected31_repair as R
+
+          target=(1297036692816953344,0)
+          verdict={}
+          origin={}
+          def put(k,v,src):
+              if v not in (1,2): return
+              old=verdict.get(k)
+              if old is not None and old!=v:
+                  raise SystemExit(f"CONFLICT {k}: {old} {origin[k]} vs {v} {src}")
+              verdict[k]=v; origin.setdefault(k,src)
+
+          with open("/tmp/current/reply27-current-s5.cache",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0].startswith("#"): continue
+                  put((int(r[1]),int(r[2])),int(r[4]),"current")
+
+          with open("research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0].startswith("#"): continue
+                  put((int(r[1]),int(r[2])),int(r[4]),"model8")
+
+          hist={0:0,1:0,2:0}; replay_nodes=0; replay={}
+          for path in glob.glob("/tmp/proof/*/out.csv"):
+              with open(path,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      k=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                      hist[v]+=1; replay_nodes+=n
+                      old=replay.get(k)
+                      if old is not None and old!=v:
+                          raise SystemExit(f"replay conflict {k}: {old} vs {v}")
+                      replay[k]=v
+                      put(k,v,path)
+
+          if len(replay)!=86:
+              raise SystemExit(f"expected 86 replay roots, got {len(replay)}")
+
+          _,_,coverage,children=R.build_geometry()
+          boundary=children[target]
+          vals={k:verdict.get(k,0) for k in boundary}
+          chist={v:list(vals.values()).count(v) for v in (0,1,2)}
+          if chist[1]:
+              status="WIN"
+          elif chist[0]==0:
+              status="LOSS"
+          else:
+              status="UNKNOWN"
+
+          with open("/tmp/completion86-exact.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 completion86 exact rows; UNKNOWN omitted)\n")
+              for k,v in sorted(replay.items()):
+                  if v in (1,2):
+                      f.write(f"s5verdict,{k[0]},{k[1]},5,{v},0\n")
+
+          if status=="LOSS":
+              with open("/tmp/full-class-loss.cache","w") as f:
+                  f.write("# complete exact LOSS boundary for s4 class 1297036692816953344:0\n")
+                  for k in sorted(boundary):
+                      if vals[k]!=2:
+                          raise SystemExit(f"non-LOSS in purported LOSS boundary: {k} {vals[k]}")
+                      f.write(f"s5verdict,{k[0]},{k[1]},5,2,0\n")
+          else:
+              Path("/tmp/full-class-loss.cache").write_text("")
+
+          unresolved=[list(k) for k,v in vals.items() if v==0]
+          out={
+              "target_class":list(target),
+              "coverage":sorted(coverage[target]),
+              "boundary_s5":len(boundary),
+              "new_replay_counts":hist,
+              "new_replay_nodes":replay_nodes,
+              "full_boundary_counts":chist,
+              "class_status":status,
+              "unresolved":unresolved,
+          }
+          json.dump(out,open("/tmp/summary.json","w"),indent=2,sort_keys=True)
+          print("COMPLETION86",json.dumps(out,sort_keys=True))
+          PY
+
+      - name: Verify complete LOSS boundary if closed
+        run: |
+          status=$(python -c 'import json; print(json.load(open("/tmp/summary.json"))["class_status"])')
+          if [ "$status" = LOSS ]; then
+            python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
+              --class-lo 1297036692816953344 --class-hi 0 \
+              --expected-children 105 \
+              --cache /tmp/full-class-loss.cache
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-best-class-completion86-proof
+          path: |
+            /tmp/summary.json
+            /tmp/completion86-exact.cache
+            /tmp/full-class-loss.cache
