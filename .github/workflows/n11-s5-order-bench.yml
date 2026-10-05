@@ -58,3 +58,30 @@ jobs:
           print("S5_LOCAL_ORDER_NODES baseline",na,"s5_countd",nb,
                 "ratio",round(nb/na,6))
           PY
+
+      - name: S5 cost-aware target92 order
+        run: |
+          /usr/bin/time -f 's5_target92_wall_s=%e' -o /tmp/s5t.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-sample.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=s5-target92 --csv=/tmp/s5t.out
+          cat /tmp/s5t.time
+          grep '^replay,' /tmp/s5t.out
+
+          python - <<'PY'
+          import csv
+          def load(p):
+              out=[]
+              with open(p) as f:
+                  for r in csv.reader(f):
+                      if r and r[0]=="replay":
+                          out.append((int(r[6]),int(r[7])))
+              return out
+          a=load("/tmp/base.out")
+          b=load("/tmp/s5t.out")
+          assert len(a)==len(b)==3
+          assert [x[0] for x in a]==[x[0] for x in b], (a,b)
+          na=sum(x[1] for x in a); nb=sum(x[1] for x in b)
+          print("S5_TARGET92_VERDICT_MATCH", [x[0] for x in a])
+          print("S5_TARGET92_NODES baseline",na,"target92",nb,
+                "ratio",round(nb/na,6))
+          PY
