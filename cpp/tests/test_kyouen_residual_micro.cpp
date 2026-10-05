@@ -32,7 +32,13 @@ int main(){
             s.edges=minimal(std::move(s.edges));
             std::map<Key,int> a,b;
             int ref=plain(s,a),got=grundy(s,b);
-            assert(ref==got);
+            if(ref!=got){
+                std::cerr<<"MISMATCH n="<<n<<" family="<<f<<" ref="<<ref<<" got="<<got
+                         <<" vertices="<<s.vertices<<" edges=";
+                for(Mask e:s.edges) std::cerr<<e<<":";
+                std::cerr<<"\\n";
+                return 1;
+            }
             // Parity conversion: terminal/P positions flip the fixed first
             // player proposition with side to move; N positions do the reverse.
             int even=first_player_verdict_from_grundy(got,0);
