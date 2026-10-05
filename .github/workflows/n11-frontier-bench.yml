@@ -69,3 +69,28 @@ jobs:
           assert len(shared)==3
           print("SHARED_TT_VERDICT_MATCH", shared)
           PY
+
+      - name: S6-only shared exact cache sample
+        run: |
+          /usr/bin/time -f 'r27_s6share_process_wall_s=%e' -o /tmp/r27-s6share.time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/r27-sample.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-share-layer=6 --csv=/tmp/r27-s6share.out
+          cat /tmp/r27-s6share.time
+          grep '^replay,' /tmp/r27-s6share.out
+          grep '^# residual_shadow' /tmp/r27-s6share.out
+          ! grep -q '^replay_error,' /tmp/r27-s6share.out
+          python - <<'PY'
+          import csv
+          def rows(path):
+              out={}
+              with open(path) as f:
+                  for row in csv.reader(f):
+                      if row and row[0]=="replay":
+                          out[row[1]]=row[6]
+              return out
+          cold=rows("/tmp/r27.out")
+          shared=rows("/tmp/r27-s6share.out")
+          assert cold == shared, (cold,shared)
+          assert len(shared)==3
+          print("S6_SHARE_VERDICT_MATCH", shared)
+          PY
