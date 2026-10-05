@@ -1275,6 +1275,9 @@ private:
     int exact_legal_=0;                    // 0 disables the hybrid
     int residual_audit_legal_=0;            // shadow-only board<->residual audit
     std::uint64_t residual_audit_calls_=0;
+    int residual_crosscheck_legal_=0;
+    std::uint64_t residual_crosscheck_calls_=0, residual_crosscheck_removed_=0,
+                  residual_crosscheck_splits_=0;
     std::uint64_t exact_budget_=100000;    // nodes per handoff attempt
     // Per-stone-count budget overrides. The s5 frontier measured in
     // N11-DFPN-S5-BENCH.md needs 130k..5.7M nodes to close while s6
@@ -1770,6 +1773,10 @@ private:
 
         if(unknown) return ExactResult::UNKNOWN;
         ExactResult r=isor?ExactResult::LOSS:ExactResult::WIN;
+        if(residual_crosscheck_legal_>0 && popcount(legal)<=residual_crosscheck_legal_){
+            ExactResult rr=residual_exact(state,stones,legal);
+            if(rr!=r) throw std::runtime_error("residual kernel contradicts board exact DFS");
+        }
         exact_record(key,r);
         return r;
     }
@@ -2278,6 +2285,18 @@ public:
     // Tie-break mode: false = count ASC then key ASC (baseline),
     // true = count DESC then key DESC (the DFS depth-5 winner).
     void set_tiebreak_desc(bool b){ tiebreak_desc_=b; }
+    ExactResult residual_exact(const TState& state,int stones,Bits legal){
+        auto r=residual_for(state.t[0],legal,nullptr);
+        std::map<kyouen_residual::Key,int> memo;
+        kyouen_residual::Stats st;
+        int g=kyouen_residual::grundy(std::move(r),memo,&st);
+        ++residual_crosscheck_calls_;
+        residual_crosscheck_removed_+=st.module_removed;
+        residual_crosscheck_splits_+=st.component_splits;
+        int v=kyouen_residual::first_player_verdict_from_grundy(g,stones);
+        return v==1?ExactResult::WIN:ExactResult::LOSS;
+    }
+    void set_residual_crosscheck_legal(int legal){ residual_crosscheck_legal_=std::max(0,legal); }
     void set_residual_audit_legal(int legal){ residual_audit_legal_=std::max(0,legal); }
     std::uint64_t residual_audit_calls() const { return residual_audit_calls_; }
     void set_exact_handoff(int legal,std::uint64_t budget,int retries,int publish_mode){
