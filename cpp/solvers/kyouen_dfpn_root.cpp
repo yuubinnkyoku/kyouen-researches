@@ -51,7 +51,7 @@
 #include <stdexcept>
 #include <string>
 #include <unordered_map>
-#include <vector>
+#include <vector>\n#include "kyouen_residual_micro.hpp"
 
 // Thrown when the quantified search's wall allowance expires deep inside
 // the exact DFS. Returning UNKNOWN there was wrong: the caller treats
@@ -1134,7 +1134,7 @@ public:
 private:
     std::array<std::array<Bits,V>,8> tbit_{};
     PnTT tt_;
-    std::vector<Bits> completion_;
+    std::vector<Bits> completion_;\n    std::vector<std::array<int,4>> forbidden_quads_;
     std::uint64_t forbidden_count_=0,visited_=0,expanded_=0;
     std::uint64_t exp_hist_[64]={};
     int max_depth_=0;
@@ -1458,7 +1458,8 @@ private:
     }
     void build_forbidden_quadruples(){
         for(int a=0;a<V;++a)for(int b=a+1;b<V;++b)for(int c=b+1;c<V;++c)for(int d=c+1;d<V;++d){
-            if(!forbidden(a,b,c,d))continue;++forbidden_count_;int q[4]={a,b,c,d};
+            if(!forbidden(a,b,c,d))continue;++forbidden_count_;
+            forbidden_quads_.push_back({a,b,c,d}); int q[4]={a,b,c,d};
             for(int omit=0;omit<4;++omit){int t[3],p=0;for(int j=0;j<4;++j)if(j!=omit)t[p++]=q[j];completion_[idx(t[0],t[1],t[2])]=completion_[idx(t[0],t[1],t[2])]|bitof(q[omit]);}
         }
     }
@@ -1480,6 +1481,72 @@ private:
         legal.hi&=HI_MASK;
         return legal;
     }
+    // Build the exact inclusion-minimal residual clutter on the CURRENT
+    // legal vertices.  This is the audited residual() semantics used by the
+    // K0336/K0344 experiments, relabelled densely to <=64 micro vertices.
+    kyouen_residual::State residual_for(Bits occupied,Bits legal,
+                                        std::vector<int>* labels=nullptr) const {
+        std::vector<int> id;
+        Bits z=legal; while(any(z)) id.push_back(take_lsb(z));
+        if(id.size()>64) throw std::runtime_error("residual_for: >64 live vertices");
+        int inv[V]; std::fill(inv,inv+V,-1);
+        for(std::size_t i=0;i<id.size();++i) inv[id[i]]=(int)i;
+        kyouen_residual::State r;
+        r.vertices=id.empty()?0:((id.size()==64)?~0ULL:((1ULL<<id.size())-1ULL));
+        for(const auto& q:forbidden_quads_){
+            std::uint64_t e=0; bool ok=true; int cnt=0;
+            for(int p:q){
+                if(has(occupied,p)) continue;
+                int j=inv[p];
+                if(j<0){ ok=false; break; } // remainder is not wholly legal
+                e|=1ULL<<j; ++cnt;
+            }
+            // cnt==1 would mean that legal point is already illegal, so it
+            // cannot occur for a consistent legal mask.  Residual constraints
+            // begin at rank 2.
+            if(ok && cnt>=2) r.edges.push_back(e);
+        }
+        r.edges=kyouen_residual::minimal(std::move(r.edges));
+        if(labels) *labels=std::move(id);
+        return r;
+    }
+
+    // Strong transition regression for the trust boundary.  For every legal
+    // move, the residual-clutter child must expose exactly the same remaining
+    // legal labels as the board transition legal & ~v & ~added_bans().
+    void verify_residual_transition(Bits occupied,Bits legal) const {
+        std::vector<int> labels;
+        auto r=residual_for(occupied,legal,&labels);
+        for(std::size_t j=0;j<labels.size();++j){
+            int p=labels[j];
+            Bits board_next=(legal&~bitof(p))&~added_bans(occupied,p);
+            board_next.hi&=HI_MASK;
+            auto child=kyouen_residual::play(r,(int)j);
+            // In residual semantics, singleton constraints are represented by
+            // vertices that must become illegal after the move.  Normalize
+            // them away before comparing with the board legal mask.
+            bool changed=true;
+            while(changed){
+                changed=false;
+                for(auto e:child.edges) if(kyouen_residual::pc(e)==1){
+                    int u=__builtin_ctzll(e);
+                    if((child.vertices>>u)&1ULL){
+                        child.vertices&=~(1ULL<<u);
+                        std::vector<kyouen_residual::Mask> ne;
+                        for(auto x:child.edges) if(!(x&(1ULL<<u))) ne.push_back(x);
+                        child.edges=kyouen_residual::minimal(std::move(ne));
+                        changed=true; break;
+                    }
+                }
+            }
+            Bits residual_next{};
+            for(std::size_t k=0;k<labels.size();++k)
+                if((child.vertices>>k)&1ULL) setbit(residual_next,labels[k]);
+            if(!(residual_next==board_next))
+                throw std::runtime_error("residual transition mismatch");
+        }
+    }
+
     void validate_root(const std::vector<int>& stones) const {
         Bits seen{};
         for(int v:stones){
