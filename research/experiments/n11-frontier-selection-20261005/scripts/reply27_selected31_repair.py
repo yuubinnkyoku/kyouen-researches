@@ -161,6 +161,7 @@ def main():
     ap.add_argument("--targets-out", type=Path)
     ap.add_argument("--sample-out", type=Path)
     ap.add_argument("--sample-per-class", type=int, default=2)
+    ap.add_argument("--extra-s5-cache", type=Path, action="append", default=[])
     args = ap.parse_args()
 
     selected_doc = json.loads(SELECTED.read_text(encoding="utf-8"))
@@ -198,6 +199,19 @@ def main():
         if old is not None and old != value:
             raise SystemExit(f"hard9/selected conflict {key}: {old} vs {value}")
         derived_cache[key] = value
+
+    extra_entries = 0
+    for extra_path in args.extra_s5_cache:
+        extra = load_hard9(extra_path)
+        for key, value in extra.items():
+            old = derived_cache.get(key)
+            if old is not None and old != value:
+                raise SystemExit(
+                    f"extra-cache conflict {key}: {old} vs {value}"
+                )
+            if old is None:
+                extra_entries += 1
+            derived_cache[key] = value
 
     # Propagate only verdicts justified by this derived cache.
     propagated = {}
@@ -259,6 +273,7 @@ def main():
         "selected_status_counts": dict(sorted(counts.items())),
         "derived_s5_cache": {
             "entries": len(derived_cache),
+            "extra_entries": extra_entries,
             "LOSS": sum(v == 2 for v in derived_cache.values()),
             "WIN": sum(v == 1 for v in derived_cache.values()),
         },
@@ -292,19 +307,22 @@ def main():
         "evidence_note": verdict_doc["sources"]["stage1"]["note"],
     }
 
-    # Stable regression values from the 2026-10-05 calculation.
-    assert len(derived_cache) == 1341
-    assert sum(v == 2 for v in derived_cache.values()) == 1340
-    assert sum(v == 1 for v in derived_cache.values()) == 1
-    assert len(secured) == 62
-    assert len(uncovered) == 57
-    assert int(round(count_res.fun)) == 15
-    assert len(add_sel) == 17
-    assert add_sum == 1393
-    assert add_union == 1375
-    assert len(fixed_sel) == 15
-    assert fixed_sum == 1471
-    assert fixed_union == 1471
+    # Stable baseline regression values. Extra measured cache entries are
+    # expected to change the scheduling optimum, so only the no-extra arm is
+    # pinned to the original numbers.
+    if not args.extra_s5_cache:
+        assert len(derived_cache) == 1341
+        assert sum(v == 2 for v in derived_cache.values()) == 1340
+        assert sum(v == 1 for v in derived_cache.values()) == 1
+        assert len(secured) == 62
+        assert len(uncovered) == 57
+        assert int(round(count_res.fun)) == 15
+        assert len(add_sel) == 17
+        assert add_sum == 1393
+        assert add_union == 1375
+        assert len(fixed_sel) == 15
+        assert fixed_sum == 1471
+        assert fixed_union == 1471
 
     repair_unknown = {
         key: sorted(ch for ch in children[key] if ch not in derived_cache)
