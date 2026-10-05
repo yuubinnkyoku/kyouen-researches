@@ -1379,7 +1379,7 @@ private:
     // Exact-DFS child ordering, A/B-able. Ordering cannot change a
     // result, only the work needed to reach it, so this is safe to vary
     // and is graded on total nodes over a fixed benchmark set.
-    enum class ExactOrder : std::uint8_t { COUNT=0, COUNTD=1, KEY=2 };
+    enum class ExactOrder : std::uint8_t { COUNT=0, COUNTD=1, KEY=2, S5_COUNTD=3 };
     ExactOrder exact_order_=ExactOrder::COUNT;
     bool exact_order_desc_=false;          // true when exact_order_==COUNTD
     enum class ExactPublishMode : std::uint8_t { ALL=0, ROOT=1, SEPARATE=2 };
@@ -1864,11 +1864,15 @@ private:
         //          preregistered depth-5 DFS experiment, see
         //          cpp/solvers/kyouen_solver_10_depth5_max_first.cpp)
         //   key   : canonical key ascending, count ignored
+        //   s5-countd: more legal moves first only at the five-stone AND
+        //              node; deeper recursion keeps the baseline count order
         //
         // --exact-order selects this; it is recorded in the run header
         // and in every replay row so a benchmark can never be attributed
         // to the wrong rule.
-        const bool asc=!exact_order_desc_;
+        const bool local_desc=(exact_order_==ExactOrder::COUNTD) ||
+                              (exact_order_==ExactOrder::S5_COUNTD && stones==5);
+        const bool asc=!local_desc;
         const bool by_key=(exact_order_==ExactOrder::KEY);
         std::sort(g.ch.begin(),g.ch.begin()+g.n,[&](const GChild& a,const GChild& b){
             auto pri=[&](const GChild& x){
@@ -2474,14 +2478,19 @@ public:
         exact_legal_by_stones_set_[s]=true;
     }
     // Child ordering for the exact DFS. 0=count asc (baseline),
-    // 1=count desc, 2=key asc. Affects speed only, never the result.
+    // 1=count desc globally, 2=key asc, 3=count desc only at s5.
+    // Ordering affects speed only, never the result.
     void set_exact_order(int mode){
         exact_order_=(mode==1)?ExactOrder::COUNTD:
-                     ((mode==2)?ExactOrder::KEY:ExactOrder::COUNT);
+                     ((mode==2)?ExactOrder::KEY:
+                      ((mode==3)?ExactOrder::S5_COUNTD:ExactOrder::COUNT));
         exact_order_desc_=(mode==1);
     }
     int exact_order_name() const {
-        return exact_order_desc_?1:((exact_order_==ExactOrder::KEY)?2:0);
+        if(exact_order_==ExactOrder::COUNTD) return 1;
+        if(exact_order_==ExactOrder::KEY) return 2;
+        if(exact_order_==ExactOrder::S5_COUNTD) return 3;
+        return 0;
     }
     void exact_counters(std::uint64_t& calls,std::uint64_t& nodes,
                         std::uint64_t& aborts,std::uint64_t& wins,
@@ -2748,7 +2757,7 @@ template<int N>
                             int residual_exact_legal,int residual_share_gate,bool exact_replay_share_tt,int exact_share_layer,std::ostream& O){
     std::ifstream in(path);
     if(!in){ std::cerr<<"cannot open --exact-replay\n"; return 1; }
-    O<<"# exact replay: order="<<exact_order<<" (0=count-asc 1=count-desc 2=key-asc)"<<" share_tt="<<(exact_replay_share_tt?1:0)<<std::endl;
+    O<<"# exact replay: order="<<exact_order<<" (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc)"<<" share_tt="<<(exact_replay_share_tt?1:0)<<std::endl;
     O<<"# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi\n";
     O.flush();
     // Memo size for the per-row solver. The main table default is 2^26,
@@ -3662,6 +3671,7 @@ int main(int argc,char**argv){
             else if(a=="--exact-order=count")exact_order=0;
             else if(a=="--exact-order=countd")exact_order=1;
             else if(a=="--exact-order=key")exact_order=2;
+            else if(a=="--exact-order=s5-countd")exact_order=3;
             else if(a.rfind("--exact-budget-by-stones=",0)==0){
                 // Format: 5:5000000,6:500000,7:200000
                 exact_budget_by_stones_spec=a.substr(25);
@@ -3672,7 +3682,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key|s5-countd] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }
