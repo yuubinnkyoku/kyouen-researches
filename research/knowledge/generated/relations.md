@@ -206,11 +206,13 @@
 - ← depends_on [K0077](../items/K0077-width-four-q8-stabilization.md)
 - ← depends_on [K0303](../items/K0303-width-three-all-q-all-length-grundy.md)
 - ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 固定幅q点版の全r系にのみ使う既存の満容量定理
+- ← depends_on [K0351](../items/K0351-width-three-q4-exact-stabilization.md): 固定幅q点版の一般的な満容量安定化枠組み
 
 ## [K0025](../items/K0025-q-above-two-width-all-lengths.md) q>2wでは全長の固定幅盤が分離し強解決
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
 - ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): q>2wでの全長系にのみ使う
+- ← generalizes [K0353](../items/K0353-two-dimensional-parallel-columns.md): 二次元の平行列配置についてq>2wで局面構造まで完全分類する
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -1372,6 +1374,7 @@
 
 - ← generalizes [K0339](../items/K0339-multiplayer-terminal-modulus.md): 全極大サイズの偶奇構造を全rの終端プレイヤー固定へ拡張する
 - ← depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 全極大同偶奇と全Grundy0/1の同値
+- ← depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 全Grundy0/1と全極大同偶奇の同値を使う
 
 ## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
 
@@ -1536,6 +1539,7 @@
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 固定幅q点版の全r系にのみ使う既存の満容量定理
 - → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2wでの全長系にのみ使う
 - ← depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 終局サイズ差から多人数の策略非依存敗者を判定する帰結
+- ← depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 多人数版の敗者固定条件に極大サイズ差gcd定理を使う
 
 ## [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める
 
@@ -1543,6 +1547,7 @@
 - ← depends_on [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する
 - ← depends_on [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md): 三次元平行列の安全性を全ペア容量へ縮約する
 - ← depends_on [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md): 三次元格子から全ペア容量ゲームへの正確な縮約
+- ← generalizes [K0352](../items/K0352-general-dimensional-parallel-columns.md): 三次元の二列容量を任意次元のd−1列容量へ拡張する
 
 ## [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) 奇数列の三次元長盤はq≡2 mod4でだけ先手勝ち、奇数rの全Grundyは閉公式を持つ
 
@@ -1593,3 +1598,22 @@
 
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 外部行対の同和弦予算の鋭い上界E_r
 - → supports [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
+
+## [K0351](../items/K0351-width-three-q4-exact-stabilization.md) 3×m・q=4の真の満容量安定化長はM_{3,4}=24
+
+- → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 固定幅q点版の一般的な満容量安定化枠組み
+
+## [K0352](../items/K0352-general-dimensional-parallel-columns.md) 任意次元平行列盤ではd−1列容量が極大配置・多人版・二値Grundyを完全に決める
+
+- → generalizes [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 三次元の二列容量を任意次元のd−1列容量へ拡張する
+- → depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 多人数版の敗者固定条件に極大サイズ差gcd定理を使う
+- → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全Grundy0/1と全極大同偶奇の同値を使う
+- ← depends_on [K0354](../items/K0354-general-prism-maximal-count.md): 極大占有数の完全分類を使う
+
+## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
+
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 二次元の平行列配置についてq>2wで局面構造まで完全分類する
+
+## [K0354](../items/K0354-general-prism-maximal-count.md) 任意次元平行列盤の極大安全集合数は母関数で閉形式に数えられる
+
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 極大占有数の完全分類を使う

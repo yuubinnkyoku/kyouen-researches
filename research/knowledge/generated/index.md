@@ -351,3 +351,7 @@
 | [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) | 任意有限整数点盤の一空点円故障耐性はVertex Coverを表現し唯一最大配置でもNP完全 | proposition | proved | geometry, maximal-safe, maximum-safe, variants, search-methods |
 | [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) | 全q点版の空点・既存石の飽和曲線数は反転とMelchiorで抑えられる | proposition | proved | geometry, variants |
 | [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) | 任意のw本の平行線のq=2w版は同和弦energyで満容量安定化する | proposition | proved | rectangles, geometry, variants, grundy |
+| [K0351](../items/K0351-width-three-q4-exact-stabilization.md) | 3×m・q=4の真の満容量安定化長はM_{3,4}=24 | proposition | proved | rectangles, variants, grundy |
+| [K0352](../items/K0352-general-dimensional-parallel-columns.md) | 任意次元平行列盤ではd−1列容量が極大配置・多人版・二値Grundyを完全に決める | proposition | proved | variants, geometry, grundy, maximal-safe, strategy-length |
+| [K0353](../items/K0353-two-dimensional-parallel-columns.md) | 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる | proposition | proved | variants, geometry, grundy, maximal-safe, strategy-length |
+| [K0354](../items/K0354-general-prism-maximal-count.md) | 任意次元平行列盤の極大安全集合数は母関数で閉形式に数えられる | proposition | proved | variants, geometry, maximal-safe, statistics |

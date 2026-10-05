@@ -77,6 +77,7 @@ READMEと主要な研究ノートでは、基本的に次の意味で使いま�
 | circle-only w×m; circle-only,q≥4,q>2w | [K0076](research/knowledge/items/K0076-circle-only-all-points-legal.md) · proved | strong; conditional | root, first-moves, all-safe-win-loss, all-safe-grundy; 全m≥1・全局面 | mathematical-proof | 禁止なしの一般証明; 円と直線の交点上界; g=(wm−\|S\|) mod2 |
 | 4×m・q=8; q=8,w=4,m≥11 | [K0077](research/knowledge/items/K0077-width-four-q8-stabilization.md) · proved | strong; second-player-win | root, first-moves, all-safe-win-loss, all-safe-grundy; m≥11の全安全局面 | mathematical-proof, exhaustive-enumeration | m≥13の一般計数＋m=11,12完全排除＋m=10不足極大証人; m=10証人を全三点曲線生成で独立検査; g(S)=(28-\|S\|) mod 2 |
 | 5×m・q=8; 標準整数格子・q=8,w=5,m≥16・通常プレイ | [K0331](research/knowledge/items/K0331-width-five-q8-exact-stabilization.md) · proved | strong; first-player-win | root, first-moves, all-safe-win-loss, all-safe-grundy; m≥16の全安全局面 | mathematical-proof, exact-search, independent-enumeration | 現在必要なm=16..100の255 CNFは過去に全DRAT検査済。全510の独立統合再検査receiptも保存; 全有限長の円集合が別C++生成と一致、m=15証人は全三点曲線で検査。短縮末尾は弦energy proof; g(S)=(35-\|S\|) mod2。境界3トレースを保存、他はhashと再生成コードを保存 |
+| 3×m・q=4; q=4,w=3,m≥24 | [K0351](research/knowledge/items/K0351-width-three-q4-exact-stabilization.md) · proved | strong; first-player-win | root, first-moves, all-safe-win-loss, all-safe-grundy; m≥24の全安全局面 | mathematical-proof, exhaustive-enumeration, independent-enumeration | m≥69の解析上界＋m=24..68有限完全排除＋m=23不足極大証人; lifted determinant監査、m=7全安全局面直接照合、m=7と23の例外遷移監査; g(S)=(9-\|S\|) mod 2 |
 <!-- END GENERATED SOLUTION STATUS -->
 
 ## 読み方

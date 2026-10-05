@@ -340,6 +340,9 @@
 ## [research/experiments/fixed-width/output/q2w_boundary_structure.json](../../../research/experiments/fixed-width/output/q2w_boundary_structure.json)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (data): mod9全剰余とlifted determinant照合
+## [research/experiments/fixed-width/output/q34_exact_threshold.json](../../../research/experiments/fixed-width/output/q34_exact_threshold.json)
+
+- [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (data): m=24..68の不足極大配置完全排除集計
 ## [research/experiments/fixed-width/output/q35_exact_threshold.json](../../../research/experiments/fixed-width/output/q35_exact_threshold.json)
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (data): m=12..40の完全排除集計
@@ -379,6 +382,7 @@
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{3,4}=24
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=4全長分類
 - [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) (proof): 例外下方閉包と偶奇尾部に使う一般補題
+- [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (proof): M_{3,4}=24の全証明、全長の空盤Grundy分類、例外下方閉包補題
 ## [research/experiments/fixed-width/reports/q35-exact-threshold.md](../../../research/experiments/fixed-width/reports/q35-exact-threshold.md)
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (proof): M_{3,5}=12の全証明と全長Grundy分類
@@ -410,6 +414,12 @@
 ## [research/experiments/fixed-width/scripts/curve_packing_fixed_width.py](../../../research/experiments/fixed-width/scripts/curve_packing_fixed_width.py)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (verifier): 整数最適化と全小盤予算不等式の再現
+## [research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp)
+
+- [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): 短い終局・例外下方閉包・mex遷移の独立監査
+## [research/experiments/fixed-width/scripts/q34_independent_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_independent_audit.cpp)
+
+- [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): lifted determinantによる独立円生成監査とm=23証人検査
 ## [research/experiments/fixed-width/scripts/q35_independent_audit.cpp](../../../research/experiments/fixed-width/scripts/q35_independent_audit.cpp)
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (verifier): lifted determinantによる独立円生成監査
