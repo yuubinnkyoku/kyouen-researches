@@ -13,6 +13,7 @@ import argparse
 import csv
 import json
 import math
+import re
 from pathlib import Path
 
 import numpy as np
@@ -36,6 +37,11 @@ def load_features(path:Path):
 def load_replay(root:Path):
     seq={}
     for p in root.rglob("*.csv"):
+        # Only the 16 original shard target files carry the global frontier
+        # sequence.  The proof artifact also contains retry/unknown CSVs whose
+        # local sequence numbers must not be mixed into this map.
+        if re.fullmatch(r"reply27-\\d+\\.csv", p.name) is None:
+            continue
         try:
             with p.open(newline="",encoding="utf-8") as fp:
                 for r in csv.reader(fp):
