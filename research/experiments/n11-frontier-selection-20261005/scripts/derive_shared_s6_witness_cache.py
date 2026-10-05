@@ -45,8 +45,14 @@ def main():
     relation_count=0
     all_parents=set()
     for s6,p in probes.items():
-        if len(points_from_key(s6))!=6:
+        s6_pts=points_from_key(s6)
+        if len(s6_pts)!=6:
             raise SystemExit(f"not an s6 key: {s6}")
+        # The replay target may be a raw representative rather than the D4
+        # canonical key. Exact game value is symmetry invariant, but parent
+        # incidence must be checked against the canonical child identity used
+        # by the frontier maps.
+        s6_canon=d4_canonical_key(list(s6_pts))
         for parent in map(tuple,p["parents"]):
             pts=points_from_key(parent)
             if len(pts)!=5:
@@ -55,8 +61,11 @@ def main():
                 d4_canonical_key(list(pts)+[z])
                 for z in legal_after(set(pts))
             }
-            if s6 not in children:
-                raise SystemExit(f"invalid parent relation {parent} -> {s6}")
+            if s6_canon not in children:
+                raise SystemExit(
+                    f"invalid parent relation {parent} -> raw {s6} "
+                    f"(canonical {s6_canon})"
+                )
             relation_count+=1
             all_parents.add(parent)
 
