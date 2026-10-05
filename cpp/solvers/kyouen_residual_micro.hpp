@@ -3,8 +3,9 @@
 //
 // The kernel solves the normal-play residual game, independent of board
 // geometry.  A state is (live vertices, inclusion-minimal forbidden edges).
-// Playing v deletes v and every edge containing v; then supersets are removed.
-// This matches the residual-clutter semantics used by K0344.
+// Playing v removes v from every edge containing it.  A resulting singleton
+// bans that last vertex immediately; singleton bans are propagated to a fixed
+// point.  This matches the residual-clutter semantics used by K0344.
 //
 // IMPORTANT: this header does not construct the residual clutter from a board.
 // The caller must provide the exact inclusion-minimal clutter.  Keeping the
@@ -45,12 +46,34 @@ struct State {
     std::vector<Mask> edges;
 };
 
+inline State normalize(State t){
+    t.edges=minimal(std::move(t.edges));
+    for(;;){
+        Mask banned=0;
+        for(Mask e:t.edges) if(pc(e)==1) banned|=e;
+        banned&=t.vertices;
+        if(!banned) break;
+        t.vertices&=~banned;
+        std::vector<Mask> ne;
+        for(Mask e:t.edges){
+            // An edge touching an illegal vertex can never be completed by
+            // future legal play, so the whole constraint disappears.
+            if(e&banned) continue;
+            ne.push_back(e);
+        }
+        t.edges=minimal(std::move(ne));
+    }
+    return t;
+}
+
 inline State play(const State& s,int v){
     Mask b=Mask{1}<<v;
     State t; t.vertices=s.vertices&~b;
-    for(Mask e:s.edges) if(!(e&b)) t.edges.push_back(e);
-    t.edges=minimal(std::move(t.edges));
-    return t;
+    for(Mask e:s.edges){
+        if(e&b) e&=~b; // chosen point is now already present
+        t.edges.push_back(e);
+    }
+    return normalize(std::move(t));
 }
 
 inline std::vector<std::vector<int>> exchangeable_classes(const State& s){
