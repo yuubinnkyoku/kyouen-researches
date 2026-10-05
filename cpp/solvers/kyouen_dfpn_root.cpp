@@ -2741,7 +2741,7 @@ template<int N>
             row_solver.set_exact_share_layer(exact_share_layer);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
             if(residual_audit_legal>0 || residual_crosscheck_legal>0 ||
-               residual_exact_legal>0 || residual_share_gate>0){
+               residual_exact_legal>0 || residual_share_gate>0 || exact_share_layer>0){
                 std::uint64_t rms=0, rrm=0, rcs=0;
                 std::uint64_t rsh=0, rss=0, rsc=0, rsz=0;
                 row_solver.residual_exact_stats(rms,rrm,rcs);
