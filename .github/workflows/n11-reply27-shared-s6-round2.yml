@@ -1,0 +1,121 @@
+name: N11 reply27 shared s6 round2
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-shared-s6-round2.yml"
+      - "research/experiments/n11-frontier-selection-20261005/scripts/materialize_shared_s6_probes.py"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-current-cache-optimization
+          path: /tmp/current
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 37338193154
+      - name: Generate second shared-s6 batch
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/materialize_shared_s6_probes.py \
+            --targets /tmp/current/current-repair-targets.csv \
+            --count 16 --min-parents 2 \
+            --exclude-s6 research/experiments/n11-frontier-selection-20261005/output/reply27-current-shared16-s6.csv \
+            --csv-out /tmp/targets.csv --meta-out /tmp/meta.json | tee /tmp/generate.log
+          grep 'SHARED_S6_PROBES_OK' /tmp/generate.log
+          cat /tmp/meta.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-shared-s6-round2-targets
+          path: |
+            /tmp/targets.csv
+            /tmp/meta.json
+            /tmp/generate.log
+
+  solve:
+    needs: generate
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-shared-s6-round2-targets
+          path: /tmp/generated
+      - name: Build exact solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -F, -v s=${{ matrix.shard }} '((NR-1)%4)==s {print}' \
+            /tmp/generated/targets.csv > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=6 \
+              --exact-replay-budget=10000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          grep '^replay,' /tmp/out.csv
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-shared-s6-round2-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-shared-s6-round2-targets
+          path: /tmp/generated
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-shared-s6-round2-[0-9]
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Verify and derive parent s5 LOSS cache
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/derive_shared_s6_witness_cache.py \
+            --meta /tmp/generated/meta.json \
+            --replay '/tmp/proof/*/out.csv' \
+            --cache-out /tmp/round2-s5.cache | tee /tmp/derive.log
+          grep 'SHARED_S6_WITNESS_CACHE_OK' /tmp/derive.log
+          echo "DERIVED_CACHE_ROWS=$(grep -c '^s5verdict,' /tmp/round2-s5.cache || true)"
+      - name: Summarize
+        run: |
+          python - <<'PY'
+          import csv,glob
+          hist={0:0,1:0,2:0}; nodes=0
+          for p in glob.glob("/tmp/proof/*/out.csv"):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      hist[int(r[6])]+=1; nodes+=int(r[7])
+          print("SHARED_S6_ROUND2_COUNTS",hist)
+          print("SHARED_S6_ROUND2_TOTAL_NODES",nodes)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-shared-s6-round2-proof
+          path: |
+            /tmp/round2-s5.cache
+            /tmp/derive.log
+            /tmp/generated/meta.json
