@@ -31,7 +31,7 @@ jobs:
           path: /tmp/current
           github-token: ${{ github.token }}
           repository: ${{ github.repository }}
-          run-id: 37334644565
+          run-id: 37338193154
 
       - name: Materialize current best-class unknown children
         run: |
@@ -43,7 +43,7 @@ jobs:
           import reply27_selected31_repair as R
           rank=json.load(open("/tmp/current/current-ranking.json"))
           best=tuple(rank["ranking"][0]["key"])
-          assert best==(1297036692816953344,0),best
+          assert best==(1298162592590594048,0),best
           verdict={}
           with open("/tmp/current/reply27-current-s5.cache",newline="") as f:
               for r in csv.reader(f):
@@ -51,7 +51,7 @@ jobs:
                   verdict[(int(r[1]),int(r[2]))]=int(r[4])
           _,_,_,children=R.build_geometry()
           unknown=sorted(ch for ch in children[best] if ch not in verdict)
-          assert len(unknown)==94,len(unknown)
+          assert len(unknown)==89,len(unknown)
           json.dump({"classes":[{"key":list(best),"unknown_children":[list(ch) for ch in unknown]}]},
                     open("/tmp/class-map.json","w"),indent=2)
           with open("/tmp/candidates.cache","w") as f:
