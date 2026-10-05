@@ -48,6 +48,13 @@ jobs:
             --exact-replay-budget=200000 --residual-audit-legal=6 --residual-crosscheck-legal=6 --csv=/tmp/n11-residual-audit.out
           ! grep -q '^replay_error,' /tmp/n11-residual-audit.out
           awk '/^# residual_shadow row=/{split($4,a,"="); audit+=a[2]; split($5,b,"="); cross+=b[2]} END{exit !(audit>0 && cross>0)}' /tmp/n11-residual-audit.out
+          /tmp/kyouen_dfpn_root --n=11 --memo=18 --exact-replay=/tmp/n11-residual-audit.csv --only=5 \
+            --exact-replay-budget=200000 --residual-exact-legal=6 --csv=/tmp/n11-residual-fast.out
+          ! grep -q '^replay_error,' /tmp/n11-residual-fast.out
+          awk '/^# residual_shadow row=/{split($6,a,"="); exact+=a[2]} END{exit !(exact>0)}' /tmp/n11-residual-fast.out
+          paste <(grep '^replay,' /tmp/n11-residual-audit.out | cut -d, -f2,7) \
+                <(grep '^replay,' /tmp/n11-residual-fast.out | cut -d, -f2,7) | \
+            awk -F'[,	]' '{if($1!=$3 || $2!=$4) exit 1; n++} END{exit !(n==3)}'
       - name: Generate and check 1x1 through 6x6
         run: |
           mkdir -p /tmp/kyouen-certs
