@@ -489,6 +489,7 @@
 ## [K0068](../items/K0068-standard-fixed-width-parity-threshold.md) 標準q=4固定幅盤はm≥3+2{C(3w−2,3)−(w−1)}で全局面偶奇式
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
+- → supports [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 本項の下界証人M_{3,4}>=24はK0302の確定値24と一致する。一般定理の上界69は十分長であり真の値ではない
 - → refutes [K0154](../items/K0154-width-three-eventual-periodicity.md): 本文の証明・証人が原文に与える帰結
 - → refutes [K0155](../items/K0155-fixed-width-infinitely-partial-first-moves-refuted.md): 本文の証明・証人が原文に与える帰結
 - → refutes [K0262](../items/K0262-three-row-first-move-density-third-refuted.md): 本文の証明・証人が原文に与える帰結
@@ -1363,6 +1364,7 @@
 
 - → generalizes [K0071](../items/K0071-width-three-q5-exact-stabilization.md): M_{3,5}=12を含む
 - → generalizes [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11を含む
+- ← supports [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 本項の下界証人M_{3,4}>=24はK0302の確定値24と一致する。一般定理の上界69は十分長であり真の値ではない
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 
 ## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類

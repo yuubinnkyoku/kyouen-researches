@@ -383,6 +383,9 @@
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=4全長分類
 - [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) (proof): 例外下方閉包と偶奇尾部に使う一般補題
 - [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (proof): M_{3,4}=24の全証明、全長の空盤Grundy分類、例外下方閉包補題
+## [research/experiments/fixed-width/reports/q34-independent-audit-2026-10-04.md](../../../research/experiments/fixed-width/reports/q34-independent-audit-2026-10-04.md)
+
+- [K0068](../items/K0068-standard-fixed-width-parity-threshold.md) (log): 独立監査記録とK0068の記述訂正の根拠
 ## [research/experiments/fixed-width/reports/q35-exact-threshold.md](../../../research/experiments/fixed-width/reports/q35-exact-threshold.md)
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (proof): M_{3,5}=12の全証明と全長Grundy分類
@@ -420,6 +423,9 @@
 ## [research/experiments/fixed-width/scripts/q34_independent_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_independent_audit.cpp)
 
 - [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): lifted determinantによる独立円生成監査とm=23証人検査
+## [research/experiments/fixed-width/scripts/q34_independent_recheck.py](../../../research/experiments/fixed-width/scripts/q34_independent_recheck.py)
+
+- [K0068](../items/K0068-standard-fixed-width-parity-threshold.md) (verifier): 3種の独立判定で証人・T_w・m=6列挙行を独立に再現
 ## [research/experiments/fixed-width/scripts/q35_independent_audit.cpp](../../../research/experiments/fixed-width/scripts/q35_independent_audit.cpp)
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (verifier): lifted determinantによる独立円生成監査

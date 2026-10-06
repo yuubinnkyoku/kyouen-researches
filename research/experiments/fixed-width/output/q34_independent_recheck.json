@@ -1,0 +1,166 @@
+{
+  "board_3x23": {
+    "quadruples_checked": 864501,
+    "binom_69_4": 864501,
+    "independent_predicates": 3,
+    "predicate_mismatches": 0,
+    "forbidden_quadruples": 33819
+  },
+  "witnesses": [
+    {
+      "name": "q34_exact_threshold_outer",
+      "size": 8,
+      "rows": [
+        [
+          1,
+          17
+        ],
+        [
+          7,
+          10,
+          13
+        ],
+        [
+          9,
+          10,
+          12
+        ]
+      ],
+      "safe": true,
+      "forbidden_quadruples": 0,
+      "predicate_disagreements": 0,
+      "maximal": true,
+      "unblocked": []
+    },
+    {
+      "name": "q34_exact_threshold_middle",
+      "size": 8,
+      "rows": [
+        [
+          4,
+          7,
+          18
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          10,
+          13
+        ]
+      ],
+      "safe": true,
+      "forbidden_quadruples": 0,
+      "predicate_disagreements": 0,
+      "maximal": true,
+      "unblocked": []
+    },
+    {
+      "name": "q34_stabilization_lower_bound",
+      "size": 8,
+      "rows": [
+        [
+          4,
+          15,
+          18
+        ],
+        [
+          18,
+          19
+        ],
+        [
+          9,
+          12,
+          18
+        ]
+      ],
+      "safe": true,
+      "forbidden_quadruples": 0,
+      "predicate_disagreements": 0,
+      "maximal": true,
+      "unblocked": []
+    }
+  ],
+  "all_witnesses_8_stone_safe_maximal": true,
+  "consequence": "M_{3,4} >= 24",
+  "capacity_9": {
+    "upper_bound_from_collinearity": 9,
+    "nine_stone_set_safe": true,
+    "note": "at most 3 per row since 4 in a row are collinear"
+  },
+  "T_w4": {
+    "cases": [
+      {
+        "w": 1,
+        "A": 3,
+        "B": 3,
+        "min_AB": 3,
+        "closed_form": 3,
+        "reported": 3,
+        "match": true
+      },
+      {
+        "w": 2,
+        "A": 9,
+        "B": 9,
+        "min_AB": 9,
+        "closed_form": 9,
+        "reported": 9,
+        "match": true
+      },
+      {
+        "w": 3,
+        "A": 69,
+        "B": 69,
+        "min_AB": 69,
+        "closed_form": 69,
+        "reported": 69,
+        "match": true
+      },
+      {
+        "w": 4,
+        "A": 237,
+        "B": 237,
+        "min_AB": 237,
+        "closed_form": 237,
+        "reported": 237,
+        "match": true
+      },
+      {
+        "w": 5,
+        "A": 567,
+        "B": 567,
+        "min_AB": 567,
+        "closed_form": 567,
+        "reported": 567,
+        "match": true
+      },
+      {
+        "w": 6,
+        "A": 1113,
+        "B": 1113,
+        "min_AB": 1113,
+        "closed_form": 1113,
+        "reported": 1113,
+        "match": true
+      }
+    ],
+    "all_match": true
+  },
+  "binomial_implementations_agree": true,
+  "q4_w3_m6": {
+    "m": 6,
+    "max_safe_size": 8,
+    "maximal_size_distribution": {
+      "5": 4,
+      "6": 648,
+      "7": 964,
+      "8": 108
+    },
+    "empty_grundy": 1,
+    "parity_formula_all_safe": false,
+    "matches_published_table_row": true
+  }
+}
