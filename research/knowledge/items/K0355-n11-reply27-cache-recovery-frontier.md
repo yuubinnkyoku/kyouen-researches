@@ -1035,7 +1035,7 @@ artifacts:
     note: exact s5 LOSS parents derived from saved s6 sources
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-s5.cache
     role: data
-    note: current expanded cache with 4,263 exact s5 keys
+    note: historical expanded cache with 4,263 exact s5 keys
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-receipt.json
     role: manifest
     note: final receipt with 92 WIN, 4,171 LOSS, and zero conflicts
@@ -1053,12 +1053,60 @@ artifacts:
     note: independent arithmetic audit of all class statuses, secured coverage, four-class cover and rational dual
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-ranking.json
     role: data
-    note: current ranked class and finite boundary summary
+    note: historical ranked class and finite boundary summary
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next13-best-class.csv
     role: data
     note: ranked 57-child boundary with six known LOSS and 51 UNKNOWN
-scope: Actions runs 37334644565、37336924568、37337141197、37339663025、37269759034、37320154141、37339357570、37339329716、37401759541、37403922028、37404268447、37404669628、37404904661の保存済み11×11 reply27 exact s5/s6結果、local completion、expanded saved-s6 reverse propagation、4,263-entryまでのvalidated finite frontier計算と、next6/next7/next8/next9/next10/repair5-batch/parent-A/parent-B/next12/next13 supplied-result geometry audits
-evidence: 保存済みexact solver verdictを前提として、canonicality・安全性・D4親子geometry・境界coverage・verdict衝突を監査。LOSS s6だけからs5 parent LOSSを派生しUNKNOWNは伝播しない。next4/5/6/7/8/9/10およびrepair5 parent A/Bの保存済みsourceと対象boundaryをgeometryで監査し、class (1873497444986126592, 0) の108子LOSSもdirect verifierで確認した。next12の全91子WIN境界とclass WIN、next13の108-child WIN class境界とsaved exact rowsも独立geometryで監査。4,263-entry expanded cacheでclass countsとdual-tight finite coverを計算。exact solver outcomesはsaved/local resultsとして扱い、他のUNKNOWN classは未証明。geometry cacheは性能用でproofではない
+  - path: research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-independent-audit.json
+    role: manifest
+    note: independent saved-source, geometry, and complete-boundary audit for next14 exact probes
+  - path: research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-summary.json
+    role: data
+    note: seven completed exact probes, five LOSS and two WIN; one scheduled probe not dispatched
+  - path: research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-sources.json
+    role: manifest
+    note: next14 replay provenance and source hashes
+  - path: research/experiments/n11-boundary-recovery-20261006/output/raw/next14-run-model8-out.csv
+    role: source
+    note: seven saved exact next14 replay rows, 44,039,611 nodes
+  - path: research/experiments/n11-boundary-recovery-20261006/output/next14-run-model8-new-exact-s5.cache
+    role: data
+    note: seven exact verdicts from the next14 probe run
+  - path: research/experiments/n11-boundary-recovery-20261006/output/next14-saved-s6-summary.json
+    role: data
+    note: saved s6 source summary and derived s5 parent results
+  - path: research/experiments/n11-boundary-recovery-20261006/output/next14-saved-s6-derived-s5.cache
+    role: data
+    note: exact s5 losses derived from saved s6 evidence
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-s5.cache
+    role: data
+    note: current expanded cache with 4,270 exact s5 entries
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-merge.json
+    role: manifest
+    note: source merge report for the 4,270-entry expanded cache
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-receipt.json
+    role: manifest
+    note: final cache receipt with 94 WIN, 4,176 LOSS, and zero conflicts
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-cardinality.json
+    role: data
+    note: finite class counts and dual-tight minimum cover under current cache
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-repair.json
+    role: data
+    note: finite UNKNOWN-class repair work under current cache
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-repair.csv
+    role: data
+    note: selected finite repair targets
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-finite-independent-audit.json
+    role: manifest
+    note: independent arithmetic audit of all class statuses, secured coverage, four-class cover and rational dual
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-ranking.json
+    role: data
+    note: current ranked scheduling target and finite boundary summary
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-next14-best-class.csv
+    role: data
+    note: ranked boundary with four known LOSS and 104 UNKNOWN children
+scope: Actions runs 37334644565、37336924568、37337141197、37339663025、37269759034、37320154141、37339357570、37339329716、37401759541、37403922028、37404268447、37404669628、37404904661の保存済み11×11 reply27 exact s5/s6結果、local completion、expanded saved-s6 reverse propagation、4,270-entryまでのvalidated finite frontier計算と、next6/next7/next8/next9/next10/repair5-batch/parent-A/parent-B/next12/next13/next14 supplied-result geometry audits
+evidence: 保存済みexact solver verdictを前提として、canonicality・安全性・D4親子geometry・境界coverage・verdict衝突を監査。LOSS s6だけからs5 parent LOSSを派生しUNKNOWNは伝播しない。next4/5/6/7/8/9/10およびrepair5 parent A/Bの保存済みsourceと対象boundaryをgeometryで監査し、class (1873497444986126592, 0) の108子LOSSもdirect verifierで確認した。next12の全91子WIN boundary、next13の108-child WIN class、next14の全57-child WIN classをsaved exact rowsからgeometry監査。4,270-entry expanded cacheの全3,384 class status、secured 109/119 coverage、4-class cover上界とrational dual下界4の一致を独立算術監査。exact solver outcomesはsaved/local resultsとして扱い、他のUNKNOWN classは未証明。geometry cacheは性能用でproofではない
 ---
 
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
@@ -1130,8 +1178,10 @@ Actions repair5 batch run `37404904661` は473 raw replay rowsで、410 LOSS・1
 
 parent A/B focused audits closed two previously unresolved s5 parents. Parent A `(1152921506758524928, 536871040)` has 97 children; its final 33-source saved-s6 audit and focused replay establish LOSS. Parent B `(1152921504612089856, 536871040)` has 98 children; the 34-source audit contains 1,849 unique canonical s6 keys (1,678 WIN, 125 LOSS, 46 UNKNOWN-only, no conflicts), and focused replay plus saved-s6 propagation establishes LOSS. The direct verifier checks all 108 canonical children of `(1873497444986126592, 0)` as LOSS. These are finite exact-result and geometry-audit conclusions, not a proof of the empty-board outcome.
 
-The 4,243-entry post-parent-B cache, next12's 4,257-entry cache, and next12 finite results are historical checkpoints. The next12 probe and adaptive hard-s6 audits established class `(1152921513197830144, 536870912)` as WIN; three of its five target parents remained UNKNOWN and no completion100 run was started. Next13 examined six of eight scheduled probes: three WIN and three LOSS, 57,081,707 nodes; two were not dispatched, and the other 96 class children were not run. Independent source and geometry auditing confirms the complete 108-child class boundary and that the six exact rows change the class `(1298162592589545600, 0)` to WIN.
+The 4,243-entry post-parent-B cache, 4,257-entry next12 cache, and 4,263-entry next13 cache are historical checkpoints. Next14 completed seven of eight scheduled probes (five LOSS, two WIN; 44,039,611 nodes); one scheduled probe was not dispatched, and the 43 remaining class children were not run. Independent audit verifies the saved results and full 57-child boundary, confirming class `(10376293541595840512, 64)` as WIN. No further work was run on that class.
 
-The current cache `post-next13-expanded-s5.cache` contains 4,263 exact entries (92 WIN, 4,171 LOSS), with zero conflicts. Current finite class counts are 28 LOSS, 167 WIN, and 3,189 UNKNOWN; 109/119 root vertices are secured, 10 remain, and minimum cover equals the rational dual at 4. Four-class repair work is 344 additive/unique UNKNOWN s5 entries; exact-15 is 1,361 additive and 1,319 unique. The current ranked target `(10376293541595840512, 64)` has 57 children, 6 known LOSS and 51 UNKNOWN, with coverage `{57,63,70,72}` and new vertices `{70,72}`. These finite results and target rankings are scheduling evidence, not terminal proofs. The empty-board and `{60,27}` outcomes remain UNKNOWN; terminal AND/OR proof is incomplete.
+The current cache `post-next14-expanded-s5.cache` contains 4,270 entries (94 WIN, 4,176 LOSS), with zero conflicts. Current finite counts are 28 LOSS, 170 WIN, and 3,186 UNKNOWN; 109/119 vertices are secured, 10 remain, and minimum cover equals the rational dual at 4. Four-class repair work is 379 additive/unique UNKNOWN s5 entries; exact-15 is 1,403 additive and 1,361 unique. The current ranked target `(1297036692682702984, 0)` has 108 children, 4 known LOSS and 104 UNKNOWN, with coverage `{33,43,77,87}`. These finite counts and repair rankings guide scheduling only; they do not resolve the remaining UNKNOWN classes. The empty-board and `{60,27}` outcomes remain UNKNOWN, and terminal AND/OR proof is incomplete.
+
+The historical cache `post-next13-expanded-s5.cache` contained 4,263 exact entries (92 WIN, 4,171 LOSS), with zero conflicts. Its finite class counts were 28 LOSS, 167 WIN, and 3,189 UNKNOWN; 109/119 root vertices were secured, 10 remained, and minimum cover equaled the rational dual at 4. Four-class repair work was 344 additive/unique UNKNOWN s5 entries; exact-15 was 1,361 additive and 1,319 unique. Its ranked target `(10376293541595840512, 64)` had 57 children, 6 known LOSS and 51 UNKNOWN, with coverage `{57,63,70,72}` and new vertices `{70,72}`. These finite results and target rankings are scheduling evidence, not terminal proofs. The empty-board and `{60,27}` outcomes remain UNKNOWN; terminal AND/OR proof is incomplete.
 
 The historical expanded cache `post-next12-expanded-s5.cache` contained 4,257 entries (89 WIN, 4,168 LOSS), with zero conflicts. Its finite class counts were 28 LOSS, 163 WIN, and 3,193 UNKNOWN; 109/119 root vertices were secured, and minimum cover equaled the rational dual at 3. Three-class repair work was 308 additive/unique UNKNOWN s5 entries; exact-15 was 1,360 additive and 1,341 unique. Its ranked target `(1298162592589545600, 0)` had 108 children, 4 known LOSS and 104 UNKNOWN, with coverage `{70,72,77,87}`. These finite counts and ranked repair targets are scheduling results, not terminal proofs. Empty-board and `{60,27}` remain UNKNOWN; terminal AND/OR proof is incomplete.

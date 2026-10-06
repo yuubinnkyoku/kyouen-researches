@@ -1,0 +1,227 @@
+{
+  "boundary_audit": {
+    "all_children_canonical_safe": true,
+    "coverage_vertices": [
+      33,
+      43,
+      77,
+      87
+    ],
+    "direct_geometry_legal_counts_checked": true,
+    "full_canonical_s5_children": 108,
+    "full_child_keys_digest_encoding": "sorted decimal lo,hi rows with trailing LF",
+    "full_child_keys_sha256": "96ff2095e4357fbcaf5bec3d8a01c906b80201cfca4cbe2e6e70a9b0213038ba",
+    "known_loss": 4,
+    "known_win": 0,
+    "saved_s6_source_audit": {
+      "conflicts": 0,
+      "loss": 128,
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next12-hard5-adaptive15m-expanded-s6-audit.json",
+      "sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14",
+      "sources": 35,
+      "unique_canonical_s6_keys": 2272,
+      "unknown_only": 46,
+      "win": 2098
+    },
+    "saved_s6_target_audit": {
+      "conflicts": 0,
+      "new_exact": 0,
+      "outcomes": {
+        "UNKNOWN": 104
+      },
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next15-saved-s6-summary.json",
+      "sha256": "e64ccc9bbb4e421d5de1cede4b1dcff0940d9928258bfe06ed75d3b418667871",
+      "targets": 104
+    },
+    "schema": "n11-next15-target-preparation-v1",
+    "solver_invoked": false,
+    "stones": 4,
+    "target_keys_equal_full_boundary_minus_exact_cache": true,
+    "unknown": 104
+  },
+  "claim": "Heuristic scheduling input only; model scores are not solver verdicts.",
+  "inputs": {
+    "cache": {
+      "entries": 4270,
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-s5.cache",
+      "sha256": "c9f61027e80a9e71c70536ff4b7c24e55e6bd76b1fa2525ccb7458a82a7f7529"
+    },
+    "candidate_features": {
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next15-model8/candidate-features.csv",
+      "rows": 104,
+      "sha256": "bdd2ad4c20b3568f8ae22d39d9e9f911c19deaa6305b927c11f7c0d9f851fe54"
+    },
+    "candidate_placeholders": {
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next15-model8/candidates.cache",
+      "rows": 104,
+      "semantics": "feature-extraction placeholders only; not solver verdicts",
+      "sha256": "2ebb60925c3943a2208901d1bba682a6fa8537d3b753598a261549c9f31ed1e0"
+    },
+    "cardinality": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-cardinality.json",
+      "sha256": "5a958f1b2521d5443d1feab8b3031d51f0001f00595249d41fc856a153c6f9ba"
+    },
+    "class_map": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next15-model8/class-map.json",
+      "sha256": "4e884c8da874a3785bdf298a668bc16e480d3a5e642939c18b928e1da63d9904"
+    },
+    "extractor": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next4-model8/extract_s5_features.exe",
+      "sha256": "ccb5c8015f3eb106d8cd6380f9e5c7c67abe12b3c904d805d4f9b7c87ea7a3b1"
+    },
+    "ranking": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-ranking.json",
+      "sha256": "7a16662ea285433cefb6727f07ff68b1beb3cb9becec1c8ddfe4a006f46ff200"
+    },
+    "repair": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next14-expanded-repair.json",
+      "sha256": "7df698fd845ff29596041105271cccf77cade156cc264384a05c876b9a3597e0"
+    },
+    "saved_s6_source_audit": {
+      "conflicts": 0,
+      "loss": 128,
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next12-hard5-adaptive15m-expanded-s6-audit.json",
+      "sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14",
+      "sources": 35,
+      "unique_canonical_s6_keys": 2272,
+      "unknown_only": 46,
+      "win": 2098
+    },
+    "saved_s6_target_audit": {
+      "conflicts": 0,
+      "new_exact": 0,
+      "outcomes": {
+        "UNKNOWN": 104
+      },
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next15-saved-s6-summary.json",
+      "sha256": "e64ccc9bbb4e421d5de1cede4b1dcff0940d9928258bfe06ed75d3b418667871",
+      "targets": 104
+    },
+    "target_list": {
+      "line_endings": "LF",
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next14-best-class.csv",
+      "rows": 104,
+      "sha256": "3157f6f7a38fa82b6c176d83785cf6d21e96759668e802a570acb7c123f4f2a4"
+    },
+    "training_cache": {
+      "overlap": 0,
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/raw/next2-model-training-s5.cache",
+      "sha256": "d8a093c0aca8a6fe58def23a527a9bfb1d6a615f83c0341e4c6bb9190df0118b"
+    },
+    "training_features": {
+      "loss": 2195,
+      "overlap": 0,
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/model-training/next2-train-features.csv",
+      "rows": 2238,
+      "sha256": "0c41a369abb717813c4f7e92efe938ad1a670aedebedd6c65d880e15f9a95411",
+      "win": 43
+    }
+  },
+  "model": {
+    "candidate_count": 104,
+    "name": "balanced logistic reply27 WIN model",
+    "per_class": 8,
+    "train_loss": 2195,
+    "train_rows": 2238,
+    "train_win": 43
+  },
+  "output": {
+    "line_endings": "LF",
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next15-model8.csv",
+    "rows": 8,
+    "sha256": "9f67fa78f318bbe894f35ddb1c71b8568dbf77dbeb45557dbeec432b70c19e00"
+  },
+  "probe_order": [
+    {
+      "key": [
+        1152922612842627072,
+        8192
+      ],
+      "legal": 88,
+      "score": -0.2890082177987019
+    },
+    {
+      "key": [
+        1297036692682702988,
+        0
+      ],
+      "legal": 84,
+      "score": -0.7575660579856727
+    },
+    {
+      "key": [
+        5908722711110090888,
+        0
+      ],
+      "legal": 90,
+      "score": -1.0233429657934803
+    },
+    {
+      "key": [
+        1297036692816920712,
+        0
+      ],
+      "legal": 93,
+      "score": -1.213037201437566
+    },
+    {
+      "key": [
+        10376293541461622920,
+        65536
+      ],
+      "legal": 92,
+      "score": -1.247119551480356
+    },
+    {
+      "key": [
+        1297036692682703016,
+        0
+      ],
+      "legal": 89,
+      "score": -1.3764659650514224
+    },
+    {
+      "key": [
+        1297036692682702984,
+        8
+      ],
+      "legal": 90,
+      "score": -1.4000174577536553
+    },
+    {
+      "key": [
+        10448351135499550856,
+        0
+      ],
+      "legal": 95,
+      "score": -1.5408649022417473
+    }
+  ],
+  "reproduction": {
+    "feature_command": ".local/n11/next4-model8/extract_s5_features.exe .local/n11/next15-model8/candidates.cache > .local/n11/next15-model8/candidate-features.csv",
+    "score_command": "uv run --no-project --with numpy --with scipy python research/experiments/n11-literature-transfer-20261005/scripts/score_reply27_model_probes.py --train .local/n11/model-training/next2-train-features.csv --candidates .local/n11/next15-model8/candidate-features.csv --class-map .local/n11/next15-model8/class-map.json --per-class 8 --out .local/n11/next15-model8/scored.json --probes-out research/experiments/n11-boundary-recovery-20261006/output/next15-model8.csv"
+  },
+  "schema": "n11-model8-input-manifest-v1",
+  "score_artifact": {
+    "independent_refit_path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next15-model8/independent-fit.json",
+    "independent_refit_sha256": "ec04d57ae3e64bdd5bb93301fa21a861ecf41eaa004b5bb17c2468898a7cd6d1",
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next15-model8/scored.json",
+    "sha256": "ec04d57ae3e64bdd5bb93301fa21a861ecf41eaa004b5bb17c2468898a7cd6d1",
+    "top8_order_matched": true
+  },
+  "score_summary": {
+    "claim": "scheduling only; model scores are not verdicts",
+    "probes": 8,
+    "training_losses": 2195,
+    "training_rows": 2238,
+    "training_wins": 43,
+    "unknown_candidates": 104
+  },
+  "solver_invoked": false,
+  "target_class": [
+    1297036692682702984,
+    0
+  ]
+}
