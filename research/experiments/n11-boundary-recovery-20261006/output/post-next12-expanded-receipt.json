@@ -1,0 +1,36 @@
+{
+  "schema": "n11-next12-expanded-s5-cache-receipt-v1",
+  "sources": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-run-post-probe-s5.cache",
+      "sha256": "9e9e2e09ea6ecdb24cc67be3e55f0f57e3b82469dde8af0e3ea42dfa76c40c58",
+      "rows": 4246,
+      "new_keys": 4246
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-hard5-adaptive15m-expanded-s5.cache",
+      "sha256": "8f77b5c26e07b994ae4da88342fff1205be06aa13b4197136f8a2f4f5ae2fd48",
+      "rows": 10,
+      "new_keys": 10
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-hard5-adaptive15m-target-derived-s5.cache",
+      "sha256": "4fe939ad1387530c50949772042282ae3b91c74c6fa1bbd914bd87882156a225",
+      "rows": 2,
+      "new_keys": 1
+    }
+  ],
+  "unique_exact_s5": 4257,
+  "win": 89,
+  "loss": 4168,
+  "conflicts": 0,
+  "cache_sha256": "a10c99e04b92da1778dab73767cd512eabc45aaeed9dafc9005aed30dc4f361a",
+  "s6_audit_path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-hard5-adaptive15m-expanded-s6-audit.json",
+  "s6_audit_sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14",
+  "rejected_class_key": [
+    1152921513197830144,
+    536870912
+  ],
+  "class_verdict": "WIN",
+  "full_parent_WIN_children": 91
+}

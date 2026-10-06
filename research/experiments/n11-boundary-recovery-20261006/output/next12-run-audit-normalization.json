@@ -1,0 +1,30 @@
+{
+  "schema": "n11-next12-audit-lf-normalization-v1",
+  "note": "Only the global audit line endings and dependent current SHA bindings changed. JSON geometry/counts, all raw solver bytes and all exact cache bytes are unchanged. Original receipt copies retained in local recovery backup.",
+  "changes": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-hard5-adaptive15m-expanded-s6-audit.json",
+      "original_sha256": "bb943d2676bf7f737cb05f2572b7e60b2f55bfa0c58d93e7ae96d3667c0f28c6",
+      "current_sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14",
+      "original_backup": ".local\\n11\\next12-audit-lf-normalization\\next12-hard5-adaptive15m-expanded-s6-audit.json"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-hard5-adaptive15m-target-audit.json",
+      "original_sha256": "08aa9a65735be21e427956b0cdc79758fc979f4c9ba44923622f08c3a3398406",
+      "current_sha256": "d49309517b95beb3cd13e02fd5690609337b4777bf36c91f7e71c7eb5647290a",
+      "original_backup": ".local\\n11\\next12-audit-lf-normalization\\next12-hard5-adaptive15m-target-audit.json"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-run-hard5-adaptive15m-sources.json",
+      "original_sha256": "3b2141c8fd30703053be325e874d0163aaa62b48ee6690785a48b5f079f37aa3",
+      "current_sha256": "191d3f85fb550c2e620437f9bbedad84bfed70447b667c1692f93ce8f721c7e2",
+      "original_backup": ".local\\n11\\next12-audit-lf-normalization\\next12-run-hard5-adaptive15m-sources.json"
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next12-expanded-receipt.json",
+      "original_sha256": "50b1c76750af2d668143ddbf13716e167ff87dd65b0ce639335b884764423374",
+      "current_sha256": "41669b6fde39755d6250652da0343f6b98a505724941b529baa550d64d25edf1",
+      "original_backup": ".local\\n11\\next12-audit-lf-normalization\\post-next12-expanded-receipt.json"
+    }
+  ]
+}

@@ -1,0 +1,5950 @@
+{
+  "cache_comparison": {
+    "new_exact": 2,
+    "opposite_verdict_conflicts": [],
+    "same_verdict_existing": 0,
+    "unknown_parents": 3
+  },
+  "current_cache": {
+    "conflicts": 0,
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-run-post-probe-s5.cache",
+    "sha256": "9e9e2e09ea6ecdb24cc67be3e55f0f57e3b82469dde8af0e3ea42dfa76c40c58",
+    "unique_keys": 4246
+  },
+  "derived_cache": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-hard5-adaptive15m-target-derived-s5.cache",
+    "rows": 2,
+    "sha256": "4fe939ad1387530c50949772042282ae3b91c74c6fa1bbd914bd87882156a225"
+  },
+  "outcome_provenance": "Saved s6 WIN/LOSS verdicts are trusted solver results; this audit independently regenerates each target s5 parent\u2019s complete geometry boundary and propagates those saved verdicts only.",
+  "schema": "n11-next3-saved-s6-parent-boundary-audit-v1",
+  "source_audit": {
+    "canonical_s6_count": 2272,
+    "exact_conflict_count": 0,
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-hard5-adaptive15m-expanded-s6-audit.json",
+    "previous_geometry_legal_audit_reused_after_hash_match": true,
+    "s6_exact_counts": {
+      "0": 46,
+      "1": 2098,
+      "2": 128
+    },
+    "sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14",
+    "source_file_count": 35,
+    "source_hashes_validated": true,
+    "sources": [
+      {
+        "normalized_noncanonical_rows": 3,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-0.csv",
+        "s6_replay_rows": 4,
+        "sha256": "1af5f001f4af7bce6743f92821fc5c94b53ccd01aa899bf1be7a54c0d97a340b",
+        "verdict_counts": {
+          "1": 2,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 3,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-1.csv",
+        "s6_replay_rows": 4,
+        "sha256": "5882ce939b676fdc502685a0adfd4ef2713cb9b67b6a233fba5c08087253eb20",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 4,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-2.csv",
+        "s6_replay_rows": 4,
+        "sha256": "83e72debfc53dbc0aadba1257fbe049755655c8310baad90329a296ecfe055d3",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 3,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-3.csv",
+        "s6_replay_rows": 4,
+        "sha256": "d4fe318a8023187016128ec1b084ed74168d3d83c7e4971f5f4d311d2a97c16c",
+        "verdict_counts": {
+          "1": 2,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-0-out.csv",
+        "s6_replay_rows": 43,
+        "sha256": "5eb64524527f5e29c1ac8bdda267722d495167c0f78546491d3509c760cfcc35",
+        "verdict_counts": {
+          "1": 43
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-1-out.csv",
+        "s6_replay_rows": 42,
+        "sha256": "bbdee0b76bd4187210fbb79f934114e4ebc68bef9ca091ce0ec834cd376967fe",
+        "verdict_counts": {
+          "1": 42
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-2-out.csv",
+        "s6_replay_rows": 42,
+        "sha256": "7bce731267331fbc58e8cd0444e7dd3a400c48ed21d822bf7ad637bd8ef137f0",
+        "verdict_counts": {
+          "1": 42
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-3-out.csv",
+        "s6_replay_rows": 42,
+        "sha256": "14283a08729aabe1deb1bd30d4cd0f16a1708a0d6f2bf5198c1af204b30f9adc",
+        "verdict_counts": {
+          "1": 42
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/crosscheck-s6-out.csv",
+        "s6_replay_rows": 3,
+        "sha256": "b230c918c0fabf211448b91c584104d03f82421bfec2fd0f25efe660eadb1e3a",
+        "verdict_counts": {
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-0.out",
+        "s6_replay_rows": 204,
+        "sha256": "fb09db4d46e145bccf5fc51c39e673730be5874025ba100db3c8472fabc98276",
+        "verdict_counts": {
+          "0": 2,
+          "1": 184,
+          "2": 18
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-1.out",
+        "s6_replay_rows": 204,
+        "sha256": "3b8baa413a98640308bdb716f22990bf7cc90da2680d65b2fb49c89a604e9466",
+        "verdict_counts": {
+          "0": 3,
+          "1": 179,
+          "2": 22
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-2.out",
+        "s6_replay_rows": 204,
+        "sha256": "e75cbedabfde39cf1334892ebd46c293f6f4a922328e8932246254c74ff534b9",
+        "verdict_counts": {
+          "0": 1,
+          "1": 189,
+          "2": 14
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-3.out",
+        "s6_replay_rows": 204,
+        "sha256": "12ae56568cb84a10a8053437cabeb49d11bf8269380901948043d329a90828b9",
+        "verdict_counts": {
+          "1": 177,
+          "2": 27
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard0.csv",
+        "s6_replay_rows": 43,
+        "sha256": "f3ffb67a77cf58a30524c6d786127004216b701349aa3a578e7c6bde95e6ae0e",
+        "verdict_counts": {
+          "1": 41,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard1.csv",
+        "s6_replay_rows": 42,
+        "sha256": "20957d6dd3b8e3722fa93634067a28033aea68009bec6fd48486392db2978177",
+        "verdict_counts": {
+          "1": 39,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard2.csv",
+        "s6_replay_rows": 42,
+        "sha256": "e60dfb4cf77b7caf65e907785e06dc6524c657b86c6407f7d3dc38b4cd47e8fd",
+        "verdict_counts": {
+          "1": 39,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard3.csv",
+        "s6_replay_rows": 43,
+        "sha256": "0cc4558d15093abb7aefd14bfe207665356ff090fa0a5ee0967003f593d8f2f1",
+        "verdict_counts": {
+          "1": 42,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard0.csv",
+        "s6_replay_rows": 4,
+        "sha256": "7638acfd54aef2450f7b429250353a7228b34fee5bde4187ab44aee6f68a0b16",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard1.csv",
+        "s6_replay_rows": 4,
+        "sha256": "7401bb19b04e3aab3e8169a7d2fd1d050ecf47080386e77f716c9b9a479ef865",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard2.csv",
+        "s6_replay_rows": 4,
+        "sha256": "6b19807618013f1a900af5419905ce2113f4cbefdc66560318ebafc2e1b36390",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard3.csv",
+        "s6_replay_rows": 4,
+        "sha256": "9489a99cd0652a5a4bbfb365069ac8df5044e5497be1a7f10977d2530cfddc1e",
+        "verdict_counts": {
+          "2": 4
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard0.csv",
+        "s6_replay_rows": 8,
+        "sha256": "23abdde00d84f22812119a66c37c12a7abe44ed174a48d0c0bec5ed8b2202c73",
+        "verdict_counts": {
+          "1": 5,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard1.csv",
+        "s6_replay_rows": 8,
+        "sha256": "789742065c72ce6021f80f80582bccfc5e29e3e13ac31433d1c9209d7f0ef2ea",
+        "verdict_counts": {
+          "1": 5,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard2.csv",
+        "s6_replay_rows": 8,
+        "sha256": "054cc27858eb94f904860208a136c8dbc3f41fe9cfd57d769406b43e9eba3bc8",
+        "verdict_counts": {
+          "1": 5,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard3.csv",
+        "s6_replay_rows": 8,
+        "sha256": "e5ddc68b454d15cc401a47b65de75a31d782a952c9ed017a1091ba3bb16e4aaa",
+        "verdict_counts": {
+          "1": 1,
+          "2": 7
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-s6-2m-out.csv",
+        "s6_replay_rows": 86,
+        "sha256": "bfb8ee089f96fdc06a9e32986f6d2ca42721d70f1a606743004e411457057c81",
+        "verdict_counts": {
+          "0": 1,
+          "1": 85
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-hard-s6-15m-out.csv",
+        "s6_replay_rows": 1,
+        "sha256": "8c5f17589611425a9784711168ae207f3b30a9e09ebe47b2f9d31b9348755132",
+        "verdict_counts": {
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next6-hard-s6-out.csv",
+        "s6_replay_rows": 181,
+        "sha256": "48b77073fb416938d5b6886d1c478df8704516dec6721dbffda7d9288f56ce92",
+        "verdict_counts": {
+          "0": 2,
+          "1": 179
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next6-focused15m-out.csv",
+        "s6_replay_rows": 2,
+        "sha256": "533e535ca4cd84c59e2f05ec91090e5687d6d264e9326d3a0c52e42177ea38e3",
+        "verdict_counts": {
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next8-hard-s6-out.csv",
+        "s6_replay_rows": 100,
+        "sha256": "8dc511424ea24ce62302cd11332b313ce68d15ff8d438ec661e371ac7d59e14c",
+        "verdict_counts": {
+          "1": 98,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-out.csv",
+        "s6_replay_rows": 91,
+        "sha256": "59053de7511c6815edd8c84be22224634e8c406ff6a1cd6abc35e5517c84487c",
+        "verdict_counts": {
+          "1": 91
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-hard2-adaptive2m-out.csv",
+        "s6_replay_rows": 193,
+        "sha256": "7f9ea68725d933149eae169d3b65c2b3059cfe09f66779208d534642d6b7dd0b",
+        "verdict_counts": {
+          "0": 56,
+          "1": 137
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-a-focused15m-out.csv",
+        "s6_replay_rows": 9,
+        "sha256": "678a40de6589849b1bbd805688e4b7b497984f528c18aa86654ee5a051b1a3ec",
+        "verdict_counts": {
+          "1": 6,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-b-focused15m-out.csv",
+        "s6_replay_rows": 7,
+        "sha256": "539474c41bb91fdbe4bdc0fa3205c54fe76cdfa5ad8e69f351b483592ea31050",
+        "verdict_counts": {
+          "1": 2,
+          "2": 5
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-hard5-adaptive15m-out.csv",
+        "s6_replay_rows": 423,
+        "sha256": "e9cd414e8ca1925fc925331a841d11ee6ae0e6248d46d5391bc160bc796f88d0",
+        "verdict_counts": {
+          "1": 420,
+          "2": 3
+        }
+      }
+    ],
+    "unknown_s6_count": 46
+  },
+  "targets": {
+    "parent_count": 5,
+    "parents": [
+      {
+        "child_count": 94,
+        "children": [
+          {
+            "key": [
+              1152921505814806529,
+              68727865344
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921505814806530,
+              68727865344
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921505814806532,
+              68727865344
+            ],
+            "legal_count": [
+              90
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921505814806536,
+              68727865344
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921505814810624,
+              68727865344
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921505814814720,
+              68727865344
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603979777
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603979778
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603979784
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603979792
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603979808
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603979904
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603980032
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603981824
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603983872
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603996160
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              604012544
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              604110848
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              604241920
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              604504064
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              606076928
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              608174080
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              612368384
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              620756992
+            ],
+            "legal_count": [
+              66
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              637534208
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              738197504
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              872415232
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              1677721600
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              2751463424
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              4898947072
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              34963718144
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830145,
+              603979776
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830146,
+              603979776
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830148,
+              603979776
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830152,
+              603979776
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830160,
+              603979776
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              603979776
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830208,
+              603979776
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830272,
+              603979776
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830400,
+              603979776
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830656,
+              603979776
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197832192,
+              603979776
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197834240,
+              603979776
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197846528,
+              603979776
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197862912,
+              603979776
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197961216,
+              603979776
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513198092288,
+              603979776
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513198354432,
+              603979776
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513199927296,
+              603979776
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513202024448,
+              603979776
+            ],
+            "legal_count": [
+              90
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513206218752,
+              603979776
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513214607360,
+              603979776
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513231384576,
+              603979776
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513264939008,
+              603979776
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513332047872,
+              603979776
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513466265600,
+              603979776
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921515345313792,
+              603979776
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921517492797440,
+              603979776
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921530377699328,
+              603979776
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921547557568512,
+              603979776
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921650636783616,
+              603979776
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921788075737088,
+              603979776
+            ],
+            "legal_count": [
+              67
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152923712221085696,
+              603979776
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152925911244341248,
+              603979776
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              4848615424
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              4865392640
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              39191576576
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930309290852352,
+              603979776
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152939105383874560,
+              603979776
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152956697569918976,
+              603979776
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152991881942007808,
+              603979776
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153062250686185472,
+              603979776
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202988174540800,
+              603979776
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153484463151251456,
+              603979776
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1155173313011515392,
+              603979776
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1157425112825200640,
+              603979776
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1170935911707312128,
+              603979776
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1188950310216794112,
+              603979776
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1224979107235758080,
+              603979776
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1441151889349541888,
+              603979776
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1729382265501253632,
+              603979776
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              3458764522411524096,
+              603979776
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              5764607531625218048,
+              603979776
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293542535364616,
+              68719476737
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293542535364616,
+              68719476738
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293542535364616,
+              68719478784
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293542535364616,
+              68723671040
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293542537461768,
+              68719476736
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10376293544682848264,
+              68719476736
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293546830331912,
+              68719476736
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293550052605952,
+              603979776
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376297940581875720,
+              68719476736
+            ],
+            "legal_count": [
+              65
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10385300741790105608,
+              68719476736
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10394307941044846600,
+              68719476736
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 5,
+          "WIN": 89
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1152921513197830144,
+          603979776
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 89,
+        "children": [
+          {
+            "key": [
+              1152921513197830176,
+              536870916
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536870920
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536870928
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536870944
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536870976
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536879104
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 2,
+            "source_rows": 1,
+            "status": "LOSS"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536887296
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536903680
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              536936448
+            ],
+            "legal_count": [
+              68
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              537001984
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              553648128
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              570425344
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              603979776
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              805306368
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830176,
+              34896609280
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513197830177,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830178,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830180,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 2,
+            "source_rows": 1,
+            "status": "LOSS"
+          },
+          {
+            "key": [
+              1152921513197830192,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830304,
+              536870912
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830688,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197831200,
+              536870912
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197832224,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197834272,
+              536870912
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197846560,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197961248,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513198092320,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513198354464,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513199927328,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921513206218784,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513214607392,
+              536870912
+            ],
+            "legal_count": [
+              67
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513231384608,
+              536870912
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513264939040,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 2,
+            "source_rows": 1,
+            "status": "LOSS"
+          },
+          {
+            "key": [
+              1152921513466265632,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921514271572000,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921515345313824,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921517492797472,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921530377699360,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921547557568544,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921650636783648,
+              536870912
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457952,
+              536870912
+            ],
+            "legal_count": [
+              66
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152925911244341280,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536870916
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536870920
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536870928
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536870944
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536870976
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536879104
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536903680
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536936448
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              537001984
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              553648128
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              570425344
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              603979776
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              671088640
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              805306368
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              34896609280
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              69256347648
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              70369281048576
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930309289807904,
+              536870912
+            ],
+            "legal_count": [
+              66
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152939105383874592,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152947892885917728,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152956697569919008,
+              536870912
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152991881942007840,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1153000669444050976,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153062250686185504,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153071038188228640,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153211775676583968,
+              536870912
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1188959097718837280,
+              536870912
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1224979107235758112,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1224987894737801248,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702976,
+              17626545782786
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036701273686048,
+              536870912
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1441151889349541920,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1441160676851585056,
+              536870912
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1729382265501253664,
+              536870912
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1729391053003296800,
+              536870912
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10412322338480586760,
+              68719478784
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10412322338480586760,
+              68723671040
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10412322338480586760,
+              68727865344
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10412322338480586760,
+              77309411328
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10412322338480586760,
+              85899345920
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10412322338481635336,
+              68719476736
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10412322338482683912,
+              68719476736
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10412322340628070408,
+              68719476736
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10412322342775554056,
+              68719476736
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10412326736527097864,
+              68719476736
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10421329537735327752,
+              68719476736
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10430336736990068744,
+              68719476736
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "LOSS": 3,
+          "UNSEEN": 23,
+          "WIN": 63
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1152921513197830176,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1152921513197830176,
+            536879104
+          ],
+          [
+            1152921513197830180,
+            536870912
+          ],
+          [
+            1152921513264939040,
+            536870912
+          ]
+        ],
+        "outcome": "LOSS"
+      },
+      {
+        "child_count": 93,
+        "children": [
+          {
+            "key": [
+              1152921504741064705,
+              1168239493120
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921504741064706,
+              1168239493120
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536870920
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536870928
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536870944
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536870976
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536879104
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536887296
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536903680
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              536936448
+            ],
+            "legal_count": [
+              68
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              537001984
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              553648128
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              570425344
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              671088640
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              805306368
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895680,
+              34896609280
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895681,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895682,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895684,
+              536870912
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895688,
+              536870912
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895696,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895744,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895808,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197895936,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197896192,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197896704,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197897728,
+              536870912
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197899776,
+              536870912
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197912064,
+              536870912
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197928448,
+              536870912
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513198026752,
+              536870912
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513198157824,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513198419968,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513199992832,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513202089984,
+              536870912
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513206284288,
+              536870912
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513214672896,
+              536870912
+            ],
+            "legal_count": [
+              68
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513231450112,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513265004544,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513466331136,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921514271637504,
+              536870912
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921515345379328,
+              536870912
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921517492862976,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921530377764864,
+              536870912
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921547557634048,
+              536870912
+            ],
+            "legal_count": [
+              90
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921650636849152,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152923712221151232,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152925911244406784,
+              536870912
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536870916
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536870920
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536870928
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536870976
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536879104
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536887296
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536903680
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536936448
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              537001984
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              553648128
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              603979776
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              671088640
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              805306368
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              34896609280
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              69256347648
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930309289873408,
+              536870912
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152939105383940096,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152947892885983232,
+              536870912
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152956697569984512,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152965485072027648,
+              536870912
+            ],
+            "legal_count": [
+              65
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152991881942073344,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153000669444116480,
+              536870912
+            ],
+            "legal_count": [
+              68
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153071038188294144,
+              536870912
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202988174606336,
+              536870912
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153211775676649472,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1188950310216859648,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1188959097718902784,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1224979107235823616,
+              536870912
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1297036701273751552,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1297045488775794688,
+              536870912
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1441160676851650560,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1729382265501319168,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1729391053003362304,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351135499550728,
+              68719478784
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351135499550728,
+              68723671040
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351135499550728,
+              68727865344
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351135499550728,
+              77309411328
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351135499550728,
+              85899345920
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351135500599304,
+              68719476736
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351135501647880,
+              68719476736
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351137647034376,
+              68719476736
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448351139794518024,
+              68719476736
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10448355533546061832,
+              68719476736
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10457358334754291720,
+              68719476736
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10466365534009032712,
+              68719476736
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 1,
+          "WIN": 92
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1152921513197895680,
+          536870912
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 91,
+        "children": [
+          {
+            "key": [
+              1152921504741064706,
+              68727930880
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921504741064708,
+              68727930880
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921504741068800,
+              68727930880
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921504741072896,
+              68727930880
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              536870920
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              536870928
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              536870944
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              536871040
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              536879104
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              536887296
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              536903680
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              537001984
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              537133056
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              553648128
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              570425344
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              671088640
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              805306368
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457920,
+              34896609280
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457922,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457924,
+              536870912
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457928,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457936,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457952,
+              536870912
+            ],
+            "legal_count": [
+              66
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709457984,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709458176,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709458432,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709459968,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709462016,
+              536870912
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709474304,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709490688,
+              536870912
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709588992,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709720064,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612709982208,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612711555072,
+              536870912
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612713652224,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612717846528,
+              536870912
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612726235136,
+              536870912
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612743012352,
+              536870912
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612776566784,
+              536870912
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612843675648,
+              536870912
+            ],
+            "legal_count": [
+              65
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922612977893376,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922614856941568,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922617004425216,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922629889327104,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922647069196288,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922750148411392,
+              536870912
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152922887587364864,
+              536870912
+            ],
+            "legal_count": [
+              63
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152924811732713472,
+              536870912
+            ],
+            "legal_count": [
+              66
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152927010755969024,
+              536870912
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536870916
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536870920
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536870928
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536870976
+            ],
+            "legal_count": [
+              64
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536879104
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536887296
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536903680
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536936448
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              537001984
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              553648128
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              570425344
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              603979776
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              671088640
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              805306368
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              34896609280
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152940204895502336,
+              536870912
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152947961605394432,
+              536870912
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152957797081546752,
+              536870912
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152965553791438848,
+              536870912
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152992981453635584,
+              536870912
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153000738163527680,
+              536870912
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153071106907705344,
+              536870912
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153485562662879232,
+              536870912
+            ],
+            "legal_count": [
+              68
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1188951409728421888,
+              536870912
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1188959166438313984,
+              536870912
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1224980206747385856,
+              536870912
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1224987963457277952,
+              536870912
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1297045557495205888,
+              536870912
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1441152988861169664,
+              536870912
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1441160745571061760,
+              536870912
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1729383365012881408,
+              536870912
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1729391121722773504,
+              536870912
+            ],
+            "legal_count": [
+              68
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68719542273
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68719542274
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68719544320
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68723736576
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541463719944,
+              68719542272
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293543609106440,
+              68719542272
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293545756590088,
+              68719542272
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376297939508133896,
+              68719542272
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10385300740716363784,
+              68719542272
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10394307939971104776,
+              68719542272
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          }
+        ],
+        "counts": {
+          "WIN": 91
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": true,
+        "key": [
+          1152922612709457920,
+          536870912
+        ],
+        "loss_witness_keys": [],
+        "outcome": "WIN"
+      },
+      {
+        "child_count": 93,
+        "children": [
+          {
+            "key": [
+              1152921513197830144,
+              536871172
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              536871176
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              536871184
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              536871232
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              536879360
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              536887552
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              536903936
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              537002240
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              570425600
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              603980032
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              671088896
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152921513197830144,
+              34896609536
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536870977
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536870978
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536870980
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536870992
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536871008
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536871104
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536879168
+            ],
+            "legal_count": [
+              90
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536887360
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536903744
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              536936512
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              537133120
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              553648192
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              570425408
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              603979840
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              671088704
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              805306432
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873280,
+              34896609344
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873281,
+              536870976
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873282,
+              536870976
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873284,
+              536870976
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873288,
+              536870976
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873296,
+              536870976
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873312,
+              536870976
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873344,
+              536870976
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873408,
+              536870976
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699873536,
+              536870976
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930300699873792,
+              536870976
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699874304,
+              536870976
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699875328,
+              536870976
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699881472,
+              536870976
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699889664,
+              536870976
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300699938816,
+              536870976
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300700004352,
+              536870976
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300700135424,
+              536870976
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300700397568,
+              536870976
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300700921856,
+              536870976
+            ],
+            "legal_count": [
+              69
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300701970432,
+              536870976
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300708261888,
+              536870976
+            ],
+            "legal_count": [
+              87
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300716650496,
+              536870976
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300766982144,
+              536870976
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930300968308736,
+              536870976
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930302847356928,
+              536870976
+            ],
+            "legal_count": [
+              88
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930304994840576,
+              536870976
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930309289807872,
+              536870976
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930317879742464,
+              536870976
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930335059611648,
+              536870976
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930369419350016,
+              536870976
+            ],
+            "legal_count": [
+              64
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152930850455687168,
+              536870976
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152932499723128832,
+              536870976
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152934698746384384,
+              536870976
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152947892885917696,
+              536870976
+            ],
+            "legal_count": [
+              89
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1152965485071962112,
+              536870976
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153000669444050944,
+              536870976
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153071038188228608,
+              536870976
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202979717775361,
+              68727865344
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202979717775362,
+              68727865344
+            ],
+            "legal_count": [
+              84
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202979717775364,
+              68727865344
+            ],
+            "legal_count": [
+              90
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202979717775368,
+              68727865344
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202979717779456,
+              68727865344
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153202979717783552,
+              68727865344
+            ],
+            "legal_count": [
+              90
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153211775676583936,
+              536870976
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1153493250653294592,
+              536870976
+            ],
+            "legal_count": [
+              71
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1154056200606715904,
+              536870976
+            ],
+            "legal_count": [
+              70
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1155182100513558528,
+              536870976
+            ],
+            "legal_count": [
+              77
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1157433900327243776,
+              536870976
+            ],
+            "legal_count": [
+              85
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1161937499954614272,
+              536870976
+            ],
+            "legal_count": [
+              82
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1170944699209355264,
+              536870976
+            ],
+            "legal_count": [
+              76
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1224987894737801216,
+              536870976
+            ],
+            "legal_count": [
+              79
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1297045488775729152,
+              536870976
+            ],
+            "legal_count": [
+              72
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              1441160676851585024,
+              536870976
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              5764616319127261184,
+              536870976
+            ],
+            "legal_count": [
+              83
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68719476993
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68719476994
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68719479040
+            ],
+            "legal_count": [
+              73
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541461622792,
+              68723671296
+            ],
+            "legal_count": [
+              78
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541462671368,
+              68719476992
+            ],
+            "legal_count": [
+              75
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376293541463719944,
+              68719476992
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10376293545756590088,
+              68719476992
+            ],
+            "legal_count": [
+              80
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10376302337554649088,
+              536870976
+            ],
+            "legal_count": [
+              74
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10385300740716363784,
+              68719476992
+            ],
+            "legal_count": [
+              81
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          },
+          {
+            "key": [
+              10394307939971104776,
+              68719476992
+            ],
+            "legal_count": [
+              86
+            ],
+            "saved_verdict": 1,
+            "source_rows": 1,
+            "status": "WIN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 2,
+          "WIN": 91
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1152930300699873280,
+          536870976
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      }
+    ],
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-run-model8-hard-s5.csv",
+    "sha256": "f20ac7ffe758df5ce82fd415966f40997509d18193dbd8d7f5f828fac16ed86c",
+    "status_counts": {
+      "LOSS": 1,
+      "UNKNOWN": 3,
+      "WIN": 1
+    }
+  }
+}
