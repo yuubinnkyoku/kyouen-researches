@@ -1,0 +1,118 @@
+name: N11 reply27 post-next10 fold
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-post-next10-fold.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  fold:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download next9 proof
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-next9-proof
+          path: /tmp/next9
+          github-token: ${{ github.token }}
+          run-id: 37403922028
+      - name: Download next9 hard-s6 proof
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-next9-hard-proof
+          path: /tmp/hard
+          github-token: ${{ github.token }}
+          run-id: 37404268447
+      - name: Merge exact evidence
+        run: |
+          python - <<'PY'
+          import csv,json,hashlib
+          from pathlib import Path
+
+          base=Path("/tmp/next9/post-next9-s5.cache")
+          xcache=Path("research/experiments/n11-boundary-recovery-20261006/output/next10-xserver-s5.cache")
+          hard=json.load(open("/tmp/hard/summary.json"))
+          assert hard["parent"]==[1153202979584610304,536870912],hard
+          assert hard["status"]=="WIN",hard
+          assert hard["counts"]=={"0":0,"1":91,"2":0},hard
+
+          verdict={}; origin={}
+          def put(k,v,src):
+              assert v in (1,2)
+              old=verdict.get(k)
+              if old is not None and old!=v:
+                  raise SystemExit(f"CONFLICT {k}: {old} from {origin[k]} vs {v} from {src}")
+              verdict[k]=v; origin.setdefault(k,src)
+          for path in (base,xcache):
+              with path.open(newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0].startswith("#"): continue
+                      assert r[0]=="s5verdict",r
+                      put((int(r[1]),int(r[2])),int(r[4]),str(path))
+          put((1153202979584610304,536870912),1,"next9-hard-s6-full-boundary")
+
+          out=Path("/tmp/post-next10-s5.cache")
+          with out.open("w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (post-next10 merged exact evidence)\n")
+              for (lo,hi),v in sorted(verdict.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          hist={1:0,2:0}
+          for v in verdict.values(): hist[v]+=1
+          receipt={"entries":len(verdict),"counts":{"WIN":hist[1],"LOSS":hist[2]},
+                   "conflicts":0,"sources":[str(base),str(xcache),"next9 hard s6 full boundary"],
+                   "sha256":hashlib.sha256(out.read_bytes()).hexdigest()}
+          json.dump(receipt,open("/tmp/post-next10-merge.json","w"),indent=2,sort_keys=True)
+          print("POST_NEXT10_MERGE",json.dumps(receipt,sort_keys=True))
+          PY
+      - name: Reverify next10 class
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
+            --class-lo 5908722711110107136 --class-hi 0 --expected-children 100 \
+            --cache /tmp/post-next10-s5.cache --allow-extra
+      - name: Recompute exact frontier
+        run: |
+          python -m pip install --quiet scipy
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py \
+            --s5-cache /tmp/post-next10-s5.cache --out /tmp/post-next10-cardinality.json
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache /tmp/post-next10-s5.cache \
+            --out /tmp/post-next10-repair.json --targets-out /tmp/post-next10-repair.csv
+          python research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py \
+            --repair-json /tmp/post-next10-repair.json --extra-s5-cache /tmp/post-next10-s5.cache \
+            --targets-out /tmp/post-next10-best-class.csv --out /tmp/post-next10-ranking.json
+          python - <<'PY'
+          import json
+          m=json.load(open("/tmp/post-next10-merge.json"))
+          c=json.load(open("/tmp/post-next10-cardinality.json"))
+          r=json.load(open("/tmp/post-next10-repair.json"))
+          q=json.load(open("/tmp/post-next10-ranking.json"))
+          print("POST_NEXT10_CACHE",m["entries"],m["counts"])
+          print("POST_NEXT10_CLASSES",c["class_status_counts"])
+          print("POST_NEXT10_SECURED",c["secured_vertices"],"/119")
+          print("POST_NEXT10_MIN_ADDITIONAL",c["minimum_additional_classes"],
+                "dual_tight",c["dual_certificate_matches_integer_optimum"])
+          print("POST_NEXT10_REPAIR",r["additive_optimum"]["repair_classes"],
+                r["additive_optimum"]["unique_unknown_s5"])
+          if q["ranking"]:
+              b=q["ranking"][0]
+              print("POST_NEXT10_BEST",b["key"],"unknown",b["unknown_s5"],
+                    "known_loss",b["known_loss_s5"],"gain",b["new_vertex_count"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-post-next10-proof
+          path: |
+            /tmp/post-next10-s5.cache
+            /tmp/post-next10-merge.json
+            /tmp/post-next10-cardinality.json
+            /tmp/post-next10-repair.json
+            /tmp/post-next10-repair.csv
+            /tmp/post-next10-ranking.json
+            /tmp/post-next10-best-class.csv
