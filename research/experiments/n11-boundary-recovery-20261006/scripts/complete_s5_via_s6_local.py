@@ -98,6 +98,16 @@ def count_child_verdicts(children: set[tuple[int, int]], verdicts: dict[tuple[in
             for value in (0, 1, 2)}
 
 
+def count_saved_unknown_boundary(boundary: set[tuple[int, int]], saved_exact: dict) -> int:
+    """Count only explicit UNKNOWN rows in saved exact inputs, excluding absent keys."""
+    return sum(key in saved_exact and saved_exact[key].get("verdict") == 0 for key in boundary)
+
+
+def count_unresolved_boundary(boundary: set[tuple[int, int]], verdicts: dict[tuple[int, int], int]) -> int:
+    """Count boundary positions with no final exact WIN/LOSS, whether absent or UNKNOWN."""
+    return sum(verdicts.get(key, 0) not in (1, 2) for key in boundary)
+
+
 def validate_verdict_map(verdicts: dict[tuple[int, int], int]) -> None:
     if any(v not in (0, 1, 2) for v in verdicts.values()):
         raise ValueError("invalid exact/unknown verdict")
@@ -311,7 +321,9 @@ def main() -> int:
         "saved_source_reports": source_reports, "parent_count": len(parents),
         "boundary_canonical_s6_count": len(boundary), "parent_child_relations": sum(map(len, parent_children)),
         "status_counts": {name: outcomes.count(name) for name in ("WIN", "LOSS", "UNKNOWN")},
-        "parents": rows, "saved_unknown_boundary_count": sum(verdicts.get(k, 0) == 0 for k in boundary),
+        "parents": rows,
+        "saved_unknown_boundary_count": count_saved_unknown_boundary(boundary, exact),
+        "unresolved_boundary_count": count_unresolved_boundary(boundary, verdicts),
         "retry_saved_unknown": args.retry_saved_unknown,
         "saved_unknown_rows_eligible_for_retry": len(boundary & retryable_unknown),
         "new_solver_rows": len(new_results), "new_solver_exact": sum(x["verdict"] in (1, 2) for x in new_results.values()),

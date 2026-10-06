@@ -106,6 +106,15 @@ class AdaptiveBoundaryTests(unittest.TestCase):
         self.assertEqual(outcomes, ["LOSS"])
         self.assertEqual(calls, [])
 
+
+    def test_saved_unknown_count_excludes_unseen_unresolved_boundary(self):
+        a, b, c = (1, 0), (2, 0), (3, 0)
+        boundary = {a, b, c}
+        saved = {a: {"verdict": 0}, c: {"verdict": 1}}
+        final_verdicts = {c: 1}
+        self.assertEqual(runner.count_saved_unknown_boundary(boundary, saved), 1)
+        self.assertEqual(runner.count_unresolved_boundary(boundary, final_verdicts), 2)
+
     def test_missing_child_evidence_counts_as_unknown(self):
         self.assertEqual(runner.count_child_verdicts({(1, 0), (2, 0)}, {(1, 0): 1}),
                          {"0": 1, "1": 1, "2": 0})

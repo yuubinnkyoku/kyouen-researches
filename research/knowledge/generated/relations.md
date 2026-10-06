@@ -57,6 +57,7 @@
 - ← depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 通常プレイのmexと分離成分のxor
 - ← depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 通常プレイのmex。misère補助mexは終端値1で別に定義する
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
+- ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 先手視点WIN/LOSSと石数 parity によるAND/OR規約
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -97,6 +98,7 @@
 - ← depends_on [K0047](../items/K0047-witness-chain-versus-game-length.md)
 - ← depends_on [K0048](../items/K0048-n1-n6-fixed-certificate-terminal-sizes.md)
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): exact勝敗の意味は順位付きAND/OR証明の健全性に従う
+- ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): exact勝敗値の順位付きAND/OR解釈
 
 ## [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) 1×1〜9×9証明書の独立C++全件検査
 
@@ -1629,7 +1631,14 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
 - → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md): exact勝敗の意味は順位付きAND/OR証明の健全性に従う
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
+- ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 11×11 reply27保存済みcache frontierと有限検査の範囲
 
 ## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が余剰列数と閾値の小さい方以下
 
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 任意次元平行列盤を上位h=d−1列の容量ゲームへ縮約する
+
+## [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md) 11×11の{60,27}後の第三手104に対する仮想WIN witness cover
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手視点WIN/LOSSと石数 parity によるAND/OR規約
+- → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md): exact勝敗値の順位付きAND/OR解釈
+- → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 11×11 reply27保存済みcache frontierと有限検査の範囲

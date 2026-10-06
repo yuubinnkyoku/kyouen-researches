@@ -1,0 +1,99 @@
+{
+  "class": [
+    1297036692682702984,
+    0
+  ],
+  "current_exact_cache_for_audit": {
+    "conflicts": 0,
+    "entries": 4371,
+    "loss": 4277,
+    "path": ".local/n11/next15-working-exact-s5.cache",
+    "sha256": "d5b9889aa31416bd18216247019a4ce42a1c80873c6d3de880cbcde1a2f88415",
+    "win": 94
+  },
+  "hard_s5_targets": {
+    "keys": [
+      [
+        1298162592589545608,
+        0
+      ],
+      [
+        1152921517625966592,
+        8192
+      ],
+      [
+        1152921513330999296,
+        4202496
+      ]
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard-s5.csv",
+    "rows": 3,
+    "sha256": "8d20460b4d50f30d94ecd47449a0fb5c0fd7f37d2acb6ab668a6339fced85d45"
+  },
+  "s6_boundary": {
+    "line_endings": "LF",
+    "parent_child_relations": 299,
+    "parent_counts": [
+      {
+        "child_count": 99,
+        "key": [
+          1298162592589545608,
+          0
+        ]
+      },
+      {
+        "child_count": 99,
+        "key": [
+          1152921517625966592,
+          8192
+        ]
+      },
+      {
+        "child_count": 101,
+        "key": [
+          1152921513330999296,
+          4202496
+        ]
+      }
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard-s6-boundary.csv",
+    "sha256": "6a0853c7816a5e6fc8cb380d89685cbd9369c4cf6414d47fdfc36e75238febf1",
+    "union_children": 296
+  },
+  "s6_meta": {
+    "generation": "complete: every legal_after(parent) extension was D4-canonicalized and safety-checked",
+    "line_endings": "LF",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard-s6-meta.json",
+    "probe_count": 0,
+    "reverse_incidence_audit": "passed by independently deleting each point from each child and canonicalizing the resulting s5 key",
+    "schema": "n11-s6-complete-boundary-v1",
+    "sha256": "35a8d6503869ee96bf0f84a7f7e7d019e676a18079577e4a1adaecbf55b37cee"
+  },
+  "saved_s6_derived_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard-s6-derived-s5.cache",
+    "rows": 0,
+    "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+  },
+  "saved_s6_source_audit": {
+    "canonical_s6": 2272,
+    "conflicts": 0,
+    "loss": 128,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-hard5-adaptive15m-expanded-s6-audit.json",
+    "sha256": "f10cb5b3f3538c63c0b37a46692676844a28247fdca1c20c6aee3d08ace1bf14",
+    "sources": 35,
+    "unknown_only": 46,
+    "win": 2098
+  },
+  "schema": "n11-hard-s5-saved-s6-audit-receipt-v1",
+  "scope": "Three unresolved supplied s5 children only. The s6 boundary is directly materialized geometry; saved s6 verdicts remain solver outputs. No new s6 run was launched.",
+  "target_saved_s6_audit": {
+    "conflicts": 0,
+    "new_exact": 0,
+    "outcomes": {
+      "UNKNOWN": 3
+    },
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next15-hard-s6-summary.json",
+    "sha256": "583e780dfa58dd456152ec2409fc334b96b60054924d67d5c644c54626e071e7",
+    "source_hashes_validated": true
+  }
+}
