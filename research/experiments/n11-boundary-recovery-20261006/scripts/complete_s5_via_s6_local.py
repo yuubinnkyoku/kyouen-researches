@@ -121,6 +121,19 @@ def merge_verdict(verdicts: dict[tuple[int, int], int], key: tuple[int, int], va
         verdicts[key] = value
 
 
+def seed_saved_verdicts(exact: dict, retry_saved_unknown: bool = False) -> tuple[dict, set]:
+    """Seed exact cache evidence, optionally leaving saved UNKNOWN keys schedulable.
+
+    In retry mode saved UNKNOWN rows are omitted only from the initial dispatch
+    map. A pre-existing local replay is merged afterward and remains resumable.
+    """
+    retryable_unknown = {key for key, record in exact.items()
+                         if retry_saved_unknown and record["verdict"] == 0}
+    verdicts = {key: record["verdict"] for key, record in exact.items()
+                if key not in retryable_unknown}
+    return verdicts, retryable_unknown
+
+
 def parse_replay(path: Path, key: tuple[int, int], expected_legal: int) -> tuple[int, int]:
     found = None
     with path.open(newline="", encoding="utf-8-sig") as stream:
@@ -227,6 +240,8 @@ def main() -> int:
     ap.add_argument("--out-dir", type=Path, required=True)
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--budget", type=int, default=2_000_000)
+    ap.add_argument("--retry-saved-unknown", action="store_true",
+                    help="retry saved UNKNOWN s6 rows once at this run's budget; local replay outputs still resume without retry")
     args = ap.parse_args()
     if args.workers < 1 or args.budget < 1:
         ap.error("--workers and --budget must be positive")
@@ -239,7 +254,7 @@ def main() -> int:
     if not source_audit.get("s6", {}).get("all_s6_exact_rows_geometry_checked"):
         raise ValueError("saved audit does not attest s6 geometry/legal validation")
     exact, source_reports = read_saved_exact_s6(source_audit)
-    verdicts = {key: rec["verdict"] for key, rec in exact.items()}
+    verdicts, retryable_unknown = seed_saved_verdicts(exact, args.retry_saved_unknown)
     parent_children, incidence, legal_counts = generate_boundary(parents)
     boundary = set(incidence)
     for key in boundary & exact.keys():
@@ -291,6 +306,8 @@ def main() -> int:
         "boundary_canonical_s6_count": len(boundary), "parent_child_relations": sum(map(len, parent_children)),
         "status_counts": {name: outcomes.count(name) for name in ("WIN", "LOSS", "UNKNOWN")},
         "parents": rows, "saved_unknown_boundary_count": sum(verdicts.get(k) == 0 for k in boundary),
+        "retry_saved_unknown": args.retry_saved_unknown,
+        "saved_unknown_rows_eligible_for_retry": len(boundary & retryable_unknown),
         "new_solver_rows": len(new_results), "new_solver_exact": sum(x["verdict"] in (1, 2) for x in new_results.values()),
         "new_solver_unknown": sum(x["verdict"] == 0 for x in new_results.values()),
         "new_solver_sources": sources, "workers": args.workers, "budget": args.budget,

@@ -59,7 +59,7 @@ jobs:
               "research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-class-1297036692816953344-remaining86-s5.cache",
               "research/experiments/n11-frontier-selection-20261005/output/reply27-shared-s6-s5.cache",
-              "research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-s5.cache",
+              "research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-s5.cache",
               "research/experiments/n11-boundary-recovery-20261006/output/next7-exact-s5.cache",
           ]
           verdict = {}
@@ -139,6 +139,14 @@ jobs:
           python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
             --class-lo 5908722711110107136 --class-hi 0 \
             --expected-children 100 \
+            --cache /tmp/reply27-current-s5.cache \
+            --allow-extra
+
+      - name: Verify repair5 102-child reply27 LOSS class
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
+            --class-lo 1297036692816920608 --class-hi 0 \
+            --expected-children 102 \
             --cache /tmp/reply27-current-s5.cache \
             --allow-extra
 

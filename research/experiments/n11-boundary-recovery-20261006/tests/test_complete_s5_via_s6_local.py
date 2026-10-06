@@ -52,7 +52,9 @@ class AdaptiveBoundaryTests(unittest.TestCase):
 
         incidence = {key: {0} for key in children}
         legal = {key: 1 for key in children}
-        initial = {a: 0}
+        initial, retryable = runner.seed_saved_verdicts({a: {"verdict": 0}})
+        self.assertEqual(initial, {a: 0})
+        self.assertEqual(retryable, set())
         outcomes, _ = runner.run_adaptive([(10, 0)], [[a, b]], incidence, legal,
                                           initial, solve, 1)
         self.assertEqual(outcomes, ["UNKNOWN"])
@@ -61,6 +63,47 @@ class AdaptiveBoundaryTests(unittest.TestCase):
         outcomes, _ = runner.run_adaptive([(10, 0)], [[a, b]], incidence, legal,
                                           initial, solve, 1)
         self.assertEqual(outcomes, ["UNKNOWN"])
+        self.assertEqual(calls, [])
+
+    def test_retry_saved_unknown_opt_in_dispatches_once(self):
+        a, b = (1, 0), (2, 0)
+        calls = []
+
+        def solve(key, legal):
+            calls.append(key)
+            return 0, 12, 0.0
+
+        incidence = {key: {0} for key in (a, b)}
+        legal = {key: 1 for key in (a, b)}
+        saved = {a: {"verdict": 0}, b: {"verdict": 1}}
+        initial, retryable = runner.seed_saved_verdicts(saved, retry_saved_unknown=True)
+        self.assertEqual(initial, {b: 1})
+        self.assertEqual(retryable, {a})
+        outcomes, new = runner.run_adaptive([(10, 0)], [[a, b]], incidence, legal,
+                                            initial, solve, 1)
+        self.assertEqual(outcomes, ["UNKNOWN"])
+        self.assertEqual(calls, [a])
+        resumed = dict(initial)
+        for key, result in new.items():
+            runner.merge_verdict(resumed, key, result["verdict"])
+        runner.run_adaptive([(10, 0)], [[a, b]], incidence, legal, resumed, solve, 1)
+        self.assertEqual(calls, [a])
+
+    def test_retry_mode_never_dispatches_saved_exact_rows(self):
+        a, b, c = (1, 0), (2, 0), (3, 0)
+        saved = {a: {"verdict": 1}, b: {"verdict": 2}, c: {"verdict": 0}}
+        verdicts, retryable = runner.seed_saved_verdicts(saved, retry_saved_unknown=True)
+        calls = []
+
+        def solve(key, legal):
+            calls.append(key)
+            return 1, 1, 0.0
+
+        children = [a, b, c]
+        outcomes, _ = runner.run_adaptive([(10, 0)], [children], {key: {0} for key in children},
+                                          {key: 1 for key in children}, verdicts, solve, 1)
+        self.assertEqual(retryable, {c})
+        self.assertEqual(outcomes, ["LOSS"])
         self.assertEqual(calls, [])
 
     def test_exact_conflict_fails_closed(self):

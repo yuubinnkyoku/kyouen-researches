@@ -558,19 +558,19 @@ artifacts:
     note: direct geometry verifier for all 103 canonical children and coverage vertices 67, 75, 103, 105
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next5-s5.cache
     role: data
-    note: latest merged canonical exact s5 cache with 3,321 entries, WIN 65 and LOSS 3,256
+    note: historical merged canonical exact s5 cache with 3,321 entries, WIN 65 and LOSS 3,256
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next5-receipt.json
     role: manifest
     note: source counts, node totals, hashes, and zero conflicts for the merged cache
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next5-cardinality.json
     role: data
-    note: latest finite class counts 22 LOSS, 131 WIN, 3,231 UNKNOWN; secured 88/119 and dual-tight cover 9
+    note: "historical 3,321-entry class counts: 22 LOSS, 131 WIN, 3,231 UNKNOWN; secured 88/119 and dual-tight cover 9"
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next5-repair.json
     role: data
     note: repair scheduling only; additive/unique union 837 for nine classes and exact-15 additive 1,049, union 1,048
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next5-repair.csv
     role: source
-    note: nine-class UNKNOWN repair target rows under the latest cache
+    note: nine-class UNKNOWN repair targets under the historical 3,321-entry cache
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next5-ranking.json
     role: data
     note: heuristic ranking under the 3,321-entry cache; scores are scheduling only
@@ -813,27 +813,84 @@ artifacts:
     note: the derived exact s5 WIN parent from the complete hard-s6 boundary
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-s5.cache
     role: data
-    note: expanded merged checkpoint with 3,796 entries, 69 WIN and 3,727 LOSS
+    note: historical expanded checkpoint with 3,796 entries, 69 WIN and 3,727 LOSS
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-receipt.json
     role: manifest
     note: source hashes, row counts, and zero conflicts for the expanded 3,796-entry checkpoint
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-cardinality.json
     role: data
-    note: final 3,796-entry counts and dual-tight minimum cover
+    note: historical 3,796-entry counts and dual-tight minimum cover
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-repair.json
     role: data
-    note: five-class and exact-15 repair estimates at the final checkpoint
+    note: historical five-class and exact-15 repair estimates at the 3,796-entry checkpoint
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-repair.csv
     role: source
-    note: finite repair target list at the final checkpoint
+    note: historical finite repair target list at the 3,796-entry checkpoint
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-ranking.json
     role: data
-    note: heuristic ranking at final checkpoint; scheduling only
+    note: historical heuristic ranking at the 3,796-entry checkpoint; scheduling only
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-best-class.csv
     role: source
     note: 108-child next target with three known LOSS and 105 UNKNOWN
-scope: Actions runs 37334644565、37336924568、37337141197、37339663025、37269759034、37320154141、37339357570、37339329716、37401759541、37403922028、37404268447、37404669628の保存済み11×11 reply27 exact s5/s6結果、local completion、expanded saved-s6 reverse propagation、3,796-entryまでのvalidated finite frontier計算と、next6/next7/next8/next9/next10 supplied-result geometry audits
-evidence: 保存済みexact solver verdictを前提として、canonicality・安全性・D4親子geometry・境界coverage・verdict衝突を監査。LOSS s6だけからs5 parent LOSSを派生しUNKNOWNは伝播しない。hard1 witnessと98-child class境界、next4の100-child境界、next5の103-child境界をruntime geometryで直接検査し、next8/next9/next10の保存済みsourceとs6 parent geometryを独立に監査済み。3,796-entry expanded checkpointでclass countsとdual-tight finite coverを計算。exact solver outcomesはsaved/local resultsとして扱い、他のUNKNOWN classは未証明。geometry cacheは性能用でproofではない
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-sources.json
+    role: manifest
+    note: run 37404904661 replay source hashes and archive integrity details
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-targets.csv
+    role: source
+    note: 473 selected repair5 exact replay targets
+  - path: research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-batch-out.csv
+    role: source
+    note: "combined exact replay rows: 410 LOSS, 19 WIN, and 44 UNKNOWN"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-exact-s5.cache
+    role: data
+    note: exact s5 cache for the 473 Actions repair5 replay targets
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-action-summary.json
+    role: data
+    note: selected class outcomes and full canonical boundary counts after the batch
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-action-merged-s5.cache
+    role: data
+    note: merged Actions checkpoint with 4,221 exact s5 entries
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-action-cardinality.json
+    role: data
+    note: 4,221-entry finite frontier counts and dual-tight minimum cover
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-action-repair.json
+    role: data
+    note: repair estimates for the 4,221-entry Actions checkpoint
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-batch-action-ranking.json
+    role: data
+    note: heuristic ranking for the 4,221-entry Actions checkpoint
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-s5.cache
+    role: data
+    note: expanded merged cache with 4,225 exact entries and zero conflicts
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-receipt.json
+    role: manifest
+    note: final source counts, hashes, and verdict conflict check for the 4,225-entry cache
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-cardinality.json
+    role: data
+    note: final class counts and dual-tight minimum cover at 4,225 entries
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-repair.json
+    role: data
+    note: four-class repair additive/unique 304; exact-15 additive 1,231 and unique 1,221
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-ranking.json
+    role: data
+    note: final heuristic ranking; top target has two UNKNOWN children
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-best-class.csv
+    role: source
+    note: top ranked class (1873497444986126592, 0), 106 known LOSS and two UNKNOWN
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-adaptive2m-summary.json
+    role: data
+    note: "adaptive 2M s6 result: 137 WIN, 56 UNKNOWN, no LOSS across 193 new replays"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-adaptive2m-sources.json
+    role: manifest
+    note: source hashes and provenance for the adaptive 195-child s6 boundary
+  - path: research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-adaptive2m-hard-s6.csv
+    role: source
+    note: 56 remaining UNKNOWN s6 targets for the two unresolved s5 parents
+  - path: research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-hard2-adaptive2m-out.csv
+    role: source
+    note: combined replay rows for the 193 new adaptive s6 results
+scope: Actions runs 37334644565、37336924568、37337141197、37339663025、37269759034、37320154141、37339357570、37339329716、37401759541、37403922028、37404268447、37404669628、37404904661の保存済み11×11 reply27 exact s5/s6結果、local completion、expanded saved-s6 reverse propagation、4,225-entryまでのvalidated finite frontier計算と、next6/next7/next8/next9/next10/repair5-batch supplied-result geometry audits
+evidence: 保存済みexact solver verdictを前提として、canonicality・安全性・D4親子geometry・境界coverage・verdict衝突を監査。LOSS s6だけからs5 parent LOSSを派生しUNKNOWNは伝播しない。hard1 witnessと98-child class境界、next4の100-child境界、next5の103-child境界をruntime geometryで直接検査し、next8/next9/next10/repair5-batchの保存済みsourceとs6 parent geometryを独立に監査済み。4,225-entry expanded checkpointでclass countsとdual-tight finite coverを計算。exact solver outcomesはsaved/local resultsとして扱い、他のUNKNOWN classは未証明。geometry cacheは性能用でproofではない
 ---
 
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
@@ -890,7 +947,11 @@ Xserver exact replayはclass `(5908722711110107136, 0)` の100 canonical s5 chil
 
 next8のexpanded saved-s6 auditは3,610-entry Actions cacheから4つの新しいs5 LOSS parentを派生し、3,614-entry intermediate cacheを作った。next9 run `37403922028` の102 saved replay rowsは94 LOSS・3 WIN・5 UNKNOWN、567,396,507 nodes。source summaryは104-child boundaryを96 LOSS・3 WIN・5 UNKNOWNとし、classはWINと報告する。さらにrun `37404268447` の91-child hard-s6 boundaryは全てWIN（29,531,979 nodes）で、geometry receiptに従って1つのs5 parent WINを導いた。残る4 UNKNOWN childは解決していない。
 
-next10 fold Actions checkpointは3,792 entries（WIN 69、LOSS 3,723、conflict 0）。この時点でs4 classはLOSS 26、WIN 137、UNKNOWN 3,221、secured 103/119、remaining 16。minimum additional class coverとrational dualは5でtight、five-class repair additive/unique UNKNOWN s5 workは473だった。next8から続くreverse auditで4 additional LOSS parentを加えたfinal expanded cacheは3,796 entries（WIN 69、LOSS 3,727、conflict 0）。final cardinalityはLOSS 26、WIN 137、UNKNOWN 3,221、secured 103/119、remaining 16、minimum cover/rational dual 5。five-class repair additive/uniqueは473、exact-15 additive 1,301・unique 1,296。次のheuristic target `(10376293541461622792, 64)` は108子中既知LOSS 3、UNKNOWN 105で、new coverage vertices `{70,72,77,87}`。この順位はscheduling用であり、UNKNOWN outcomeの根拠ではない。
+next10 fold Actions checkpointは3,792 entries（WIN 69、LOSS 3,723、conflict 0）。当時s4 classはLOSS 26、WIN 137、UNKNOWN 3,221、secured 103/119、remaining 16、minimum additional coverとrational dualは5で一致した。next8から続くreverse auditを含む当時のexpanded cacheは3,796 entries（WIN 69、LOSS 3,727、conflict 0）。そのsnapshotのrepair additive/uniqueは473、exact-15 additive 1,301・unique 1,296。target `(10376293541461622792, 64)` は108子中既知LOSS 3・UNKNOWN 105、coverage `{70,72,77,87}`。これらは当時のsnapshot値である。
+
+Actions repair5 batch run `37404904661` は473 raw replay rowsで、410 LOSS・19 WIN・44 UNKNOWN、合計3,136,880,721 nodesを返した。対象class `(1297036692816920608, 0)` の102 canonical childrenは全てLOSS、coverage `{5,55,57,63,65}`。別class `(1873497444986126592, 0)` は108子中106 LOSS・2 UNKNOWNで、class outcomeはUNKNOWN。さらに3つの選択class `(1152921788208906240, 0)`、`(10376293541461622792, 64)`、`(10448351135499554816, 0)` はWINだが、そこに残る42 UNKNOWN childは探索しなかった。Actions mergeは4,221 entries（WIN 88、LOSS 4,133、conflict 0）。expanded final cacheは4,225 entries（WIN 88、LOSS 4,137、conflict 0）。最新cardinalityはLOSS 27、WIN 161、UNKNOWN 3,196、secured 106/119、remaining 13、minimum cover/rational dual 4。4-class repair additive/unique workは304、exact-15 additive 1,231・unique 1,221。current heuristic target `(1873497444986126592, 0)` は108子中106 LOSS・2 UNKNOWN、coverage `{49,88,98}`。これはfinite frontierであり、残るUNKNOWNの証明ではない。
+
+次のadaptive 2M s6 cohortは195-child boundaryから193 replay rowsを新規実行し、137 WIN・56 UNKNOWN・0 LOSS、179,743,467 nodesを記録した。s5 parent `(1152921506758524928, 536871040)` は97子中83 WIN・14 UNKNOWN、parent `(1152921504612089856, 536871040)` は98子中56 WIN・42 UNKNOWNで、どちらもUNKNOWNのまま。LOSS replayがなく、両親の全子WINも揃わないため、このcohortはs5 exact cacheを増やさなかった。探索対象を閉じたとは主張しない。
 
 勝敗規約は、位置の真偽値が「先手固定視点で最終的に先手が勝つ」であり、偶数石OR・奇数石ANDである（[K0002](K0002-grundy-and-first-move-conventions.md)、`cpp/solvers/kyouen_dfpn_root.cpp`）。従って、ある初手の後のs4 LOSSが全119の第三手選択をcoverすれば、各s3 odd AND位置はLOSSとなり、s2 `{60,27}` のOR位置もLOSSとなる。これは後手が中央初手60に27で応じることで中央初手を破る方向の証拠であり、中央初手60の勝ちを示すものではない。空盤の勝敗は他の初手も検査しないと決まらない。
 
