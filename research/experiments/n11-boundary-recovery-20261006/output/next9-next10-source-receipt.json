@@ -1,0 +1,68 @@
+{
+  "hard_s6_combined_bytes": 7748,
+  "hard_s6_combined_rows": 115,
+  "hard_s6_combined_sha256": "59053de7511c6815edd8c84be22224634e8c406ff6a1cd6abc35e5517c84487c",
+  "next9_hard_s6_independent_audit": {
+    "archived_path": "research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-independent-audit.json",
+    "archived_sha256": "c66cf702a94545e8396220dc49a288cf521c3a43c621a82ddd62ef5aca0e66bc",
+    "local_original_path": ".local/n11/root-review-next9/audit.json",
+    "original_sha256": "f3457175bb00ddfa0a4fd1879b6946d3568a7f2cf5f12440226d089f4580b0e8",
+    "scope": "Independently regenerated all 91 canonical legal children; all first-player WIN; source solver values trusted."
+  },
+  "runs": {
+    "next10_fold": "37404669628",
+    "next9": "37403922028",
+    "next9_hard_s6": "37404268447"
+  },
+  "schema": "next9-next10-actions-recovery-v1",
+  "sources": [
+    {
+      "bytes": 4163,
+      "label": "next9-exact-cache",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37403922028\\reply27-next9-proof\\next9-exact-s5.cache",
+      "original_sha256": "0ad52fcddc7d0223314660ac44d414a8440f8408ec54414445463774df3f338f"
+    },
+    {
+      "bytes": 150361,
+      "label": "next9-actions-cache",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37403922028\\reply27-next9-proof\\post-next9-s5.cache",
+      "original_sha256": "9885f90f8ca8be3f45b8b14751938d5362af2522f5a6c4cdf11a0c93df2fee46"
+    },
+    {
+      "bytes": 698,
+      "label": "next9-summary-original",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37403922028\\reply27-next9-proof\\next9-summary.json",
+      "original_sha256": "a5de46037c9bd435c74ecda84bb1a05c5ec3f4280627e5d2a19c05972a45b3e7"
+    },
+    {
+      "bytes": 5041,
+      "label": "next9-hard-boundary",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37404268447\\reply27-next9-hard-input\\boundary.csv",
+      "original_sha256": "87562b93b37e144c645ab9e0383aca6c61ba55fdfe96f07e7a3bd2381d263ac7"
+    },
+    {
+      "bytes": 19971,
+      "label": "next9-hard-meta-original",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37404268447\\reply27-next9-hard-input\\meta.json",
+      "original_sha256": "b0cab44f23ae0a852c237f2ed59aa3508dbb7e0d5a74e817eefb1bc79fdb3fcc"
+    },
+    {
+      "bytes": 269,
+      "label": "next9-hard-summary-original",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37404268447\\reply27-next9-hard-proof\\summary.json",
+      "original_sha256": "2bacfe53dc17dc6d98bd33a24eccc37f746e7de6f73a0f610141dc54700479e8"
+    },
+    {
+      "bytes": 34,
+      "label": "next9-hard-derived-cache",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37404268447\\reply27-next9-hard-proof\\derived-s5.cache",
+      "original_sha256": "c2cb7f232396f21fccc77ea396107caa66c8e4173a104d96ff18984d17ec2770"
+    },
+    {
+      "bytes": 153820,
+      "label": "next10-actions-cache",
+      "original_path": ".local\\n11\\next8-actions-recovery\\run37404669628\\reply27-post-next10-proof\\post-next10-s5.cache",
+      "original_sha256": "368347d11465a7cae2c62190b03160eec7a7b86ac515739f4b52c42069c510a4"
+    }
+  ]
+}

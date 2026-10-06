@@ -1,0 +1,145 @@
+{
+  "action_fold_comparison": {
+    "actions_fold_cache": "actions-post-next10-s5.cache",
+    "actions_fold_entries": 3792,
+    "actions_fold_sha256": "368347d11465a7cae2c62190b03160eec7a7b86ac515739f4b52c42069c510a4",
+    "expanded_only_additional_entries": 4,
+    "note": "Expanded cache additionally includes four verified s5 LOSS parents derived from prior complete saved-s6 LOSS evidence."
+  },
+  "conflicts": 0,
+  "counts": {
+    "LOSS": 3727,
+    "WIN": 69,
+    "conflicts": 0,
+    "unique_exact_s5": 3796
+  },
+  "expanded_sources": [
+    {
+      "path": "post-next8-expanded-s5.cache",
+      "rows": 3614,
+      "sha256": "ba88d8ca1cc15f16566facdf3aae16b29f93bc1de4a15b3cf7b1d7947c5fea7a"
+    },
+    {
+      "path": "next9-exact-s5.cache",
+      "sha256": "0ad52fcddc7d0223314660ac44d414a8440f8408ec54414445463774df3f338f"
+    },
+    {
+      "derivation_receipt": "next9-hard-s6-parent-win-receipt.json",
+      "path": "next9-hard-s6-parent-win.cache",
+      "rows": 1,
+      "sha256": "3b9aba14ee0acc1b9c263999f941a6d914767ea0eec0f3acbe37e949801e5d8f"
+    },
+    {
+      "path": "next10-xserver-s5.cache",
+      "sha256": "ff207d5e0bcf153f80df25a3eaf7f18b2325ce7b02e63985d9b441f08d068b27"
+    }
+  ],
+  "line_ending_normalizations": [
+    {
+      "bytes_after_lf": 7057,
+      "path": "post-next8-expanded-best-class.csv",
+      "sha256_after_lf": "4984ee8380fc0ab7d2917ba69dd9468e87c21705fac969dd1be6b50ac0f6985a",
+      "sha256_before_lf": "332311fe43735c9ad180087fa629791891c03eb966cba4ec2a4ca9cf109f3dc9"
+    },
+    {
+      "bytes_after_lf": 3493,
+      "path": "post-next8-expanded-ranking.json",
+      "sha256_after_lf": "690fa3cb74794e69ef59de5cac8d08bb484eab918e0fa06cb399a6dbcfb20cb4",
+      "sha256_before_lf": "d9c81a962cbe6291ad38fb95ba0b6a660b66ea0d15ad6a928bc8bb4515932210"
+    },
+    {
+      "bytes_after_lf": 672,
+      "path": "post-next8-expanded-receipt.json",
+      "sha256_after_lf": "5ff04238861296617839664b4b5baa2c9ab67efd9ab85b0be9848833547f42b4",
+      "sha256_before_lf": "dadd136396845572e64f223ec1ab98c9aa4a22cde2158d23e3d9a7488be92c7f"
+    },
+    {
+      "bytes_after_lf": 153993,
+      "path": "post-next10-expanded-s5.cache",
+      "sha256_after_lf": "7ad19646764e81cdd63a6fbc401a32f93fd4051cf9893685a2b81548fa26b0e6",
+      "sha256_before_lf": "f0a4d8f360f2f297a0bd3184d056880992303f6f9a176b7fddfc9f597e8a4e2a"
+    },
+    {
+      "bytes_after_lf": 1242,
+      "path": "post-next10-expanded-receipt.json",
+      "sha256_after_lf": "0bd5fa912c56d8e1984726e85f8aba8de85b25da07ac2ecc6511e30e8700dbb2",
+      "sha256_before_lf": "07658bb3e726d3ff880940424b36d94051e9e85b42dbfb96246500d282c1672d"
+    }
+  ],
+  "loss": 3727,
+  "next9_hard_s6_independent_audit": {
+    "children": 91,
+    "counts": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 91
+    },
+    "derived_s5_verdict": "WIN",
+    "parent": [
+      1153202979584610304,
+      536870912
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-independent-audit.json",
+    "sha256": "c66cf702a94545e8396220dc49a288cf521c3a43c621a82ddd62ef5aca0e66bc"
+  },
+  "output_cache": {
+    "bytes": 153993,
+    "line_endings": "LF",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next10-expanded-s5.cache",
+    "sha256": "7ad19646764e81cdd63a6fbc401a32f93fd4051cf9893685a2b81548fa26b0e6"
+  },
+  "saved_s6_reverse_audit": {
+    "conflicts": 0,
+    "loss": 111,
+    "new_s5_loss_parents": 0,
+    "note": "30 previously audited extra sources plus curated inputs and the recovered next9 complete 91-WIN source; no additional s5 losses remained outside final cache.",
+    "path": "post-next10-expanded-s6-audit.json",
+    "sha256": "7d95289cca74204e31b6859fa1d3e0823899489894f38e1451dfcb2b4a30ab92",
+    "source_count": 40,
+    "unique_s6": 1656,
+    "unknown": 6,
+    "win": 1539
+  },
+  "sources": [
+    {
+      "counts": {
+        "1": 65,
+        "2": 3549
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next8-expanded-s5.cache",
+      "rows": 3614,
+      "sha256": "ba88d8ca1cc15f16566facdf3aae16b29f93bc1de4a15b3cf7b1d7947c5fea7a"
+    },
+    {
+      "counts": {
+        "1": 3,
+        "2": 94
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next9-exact-s5.cache",
+      "rows": 97,
+      "sha256": "0ad52fcddc7d0223314660ac44d414a8440f8408ec54414445463774df3f338f"
+    },
+    {
+      "counts": {
+        "1": 1
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-parent-win.cache",
+      "rows": 1,
+      "sha256": "3b9aba14ee0acc1b9c263999f941a6d914767ea0eec0f3acbe37e949801e5d8f"
+    },
+    {
+      "counts": {
+        "2": 100
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next10-xserver-s5.cache",
+      "rows": 100,
+      "sha256": "ff207d5e0bcf153f80df25a3eaf7f18b2325ce7b02e63985d9b441f08d068b27"
+    }
+  ],
+  "unique_exact_s5": 3796,
+  "win": 69
+}

@@ -1,0 +1,69 @@
+{
+  "hard_s6_parent": {
+    "boundary_sha256": "5d5d01871c62d3f6a200a55bb803e26ee250a17badc1811e3f8bb0c7873ff305",
+    "canonical_children": 100,
+    "complete_boundary_path": "research/experiments/n11-boundary-recovery-20261006/output/next8-hard-s6-boundary.csv",
+    "metadata_matches_geometry": true,
+    "metadata_path": "research/experiments/n11-boundary-recovery-20261006/output/next8-hard-s6-meta.json",
+    "parent": [
+      1729382261213626368,
+      536870912
+    ],
+    "proof_geometry_regeneration": "passed",
+    "raw_edges_regenerated_from_legal_after": true,
+    "replay_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next8-hard-s6-out.csv",
+    "replay_rows": 100,
+    "replay_sha256": "8dc511424ea24ce62302cd11332b313ce68d15ff8d438ec661e371ac7d59e14c",
+    "replay_verdict_counts": {
+      "1": 98,
+      "2": 2
+    },
+    "unknown": 0,
+    "witness_is_canonical_legal_s6_loss_child": true,
+    "witness_key": [
+      1729382261213626432,
+      536870912
+    ]
+  },
+  "s5_completion": {
+    "canonical_safe_legal_rows": true,
+    "coverage_vertices": [
+      59,
+      61,
+      89,
+      97
+    ],
+    "full_canonical_boundary": 106,
+    "raw_edges": [
+      [
+        59,
+        89
+      ],
+      [
+        61,
+        97
+      ]
+    ],
+    "replay_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next8-completion-out.csv",
+    "replay_rows": 97,
+    "replay_sha256": "5e1ba24127e3bca6f243f972080325e84dc33e85ceffc0e71a97d7ef1fa9ddc3",
+    "replay_verdict_counts": {
+      "0": 1,
+      "2": 96
+    },
+    "target_class": [
+      1297599642636648448,
+      0
+    ],
+    "target_matches_parent_subset": true,
+    "target_path": "research/experiments/n11-boundary-recovery-20261006/output/next8-input.csv",
+    "target_sha256": "0b97d543c4c775c46c7a7321e9d75445a34b270948f8ec1a64da26f602d0f60f",
+    "targets": 97
+  },
+  "saved_actions_runs": [
+    37401759541,
+    37401751797
+  ],
+  "schema": "n11-next8-recovered-artifact-boundary-audit-v1",
+  "source_outcome_provenance": "Replay verdicts are source solver results; this audit independently checks row shape, parity, legality, safety, canonicalization, complete geometry and witness incidence."
+}

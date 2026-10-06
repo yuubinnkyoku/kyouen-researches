@@ -1,9 +1,6 @@
 name: N11 reply27 next7 completion
 
 on:
-  push:
-    paths:
-      - ".github/workflows/n11-reply27-next7-completion.yml"
   workflow_dispatch:
 
 jobs:

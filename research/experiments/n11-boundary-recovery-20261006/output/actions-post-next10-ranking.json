@@ -1,0 +1,157 @@
+{
+  "best_target": {
+    "key": [
+      10376293541461622792,
+      64
+    ],
+    "new_vertices": [
+      70,
+      72,
+      77,
+      87
+    ],
+    "targets_out": "/tmp/post-next10-best-class.csv",
+    "unknown_s5": 105
+  },
+  "derived_cache_entries": 3792,
+  "loss_classes": 26,
+  "ranking": [
+    {
+      "all_s5": 108,
+      "coverage": [
+        70,
+        72,
+        77,
+        87
+      ],
+      "key": [
+        10376293541461622792,
+        64
+      ],
+      "known_loss_fraction": 0.027777777777777776,
+      "known_loss_s5": 3,
+      "max_unknown_legal": 106,
+      "min_unknown_legal": 85,
+      "new_vertex_count": 4,
+      "new_vertices": [
+        70,
+        72,
+        77,
+        87
+      ],
+      "rank": 1,
+      "unknown_per_new_vertex": 26.25,
+      "unknown_s5": 105
+    },
+    {
+      "all_s5": 102,
+      "coverage": [
+        5,
+        55,
+        57,
+        63,
+        65
+      ],
+      "key": [
+        1297036692816920608,
+        0
+      ],
+      "known_loss_fraction": 0.1568627450980392,
+      "known_loss_s5": 16,
+      "max_unknown_legal": 100,
+      "min_unknown_legal": 79,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        5,
+        55,
+        65
+      ],
+      "rank": 2,
+      "unknown_per_new_vertex": 28.666666666666668,
+      "unknown_s5": 86
+    },
+    {
+      "all_s5": 102,
+      "coverage": [
+        33,
+        38,
+        43
+      ],
+      "key": [
+        1152921788208906240,
+        0
+      ],
+      "known_loss_fraction": 0.11764705882352941,
+      "known_loss_s5": 12,
+      "max_unknown_legal": 101,
+      "min_unknown_legal": 86,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        33,
+        38,
+        43
+      ],
+      "rank": 3,
+      "unknown_per_new_vertex": 30.0,
+      "unknown_s5": 90
+    },
+    {
+      "all_s5": 108,
+      "coverage": [
+        49,
+        88,
+        98
+      ],
+      "key": [
+        1873497444986126592,
+        0
+      ],
+      "known_loss_fraction": 0.12962962962962962,
+      "known_loss_s5": 14,
+      "max_unknown_legal": 107,
+      "min_unknown_legal": 92,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        49,
+        88,
+        98
+      ],
+      "rank": 4,
+      "unknown_per_new_vertex": 31.333333333333332,
+      "unknown_s5": 94
+    },
+    {
+      "all_s5": 102,
+      "coverage": [
+        100,
+        104,
+        108
+      ],
+      "key": [
+        10448351135499554816,
+        0
+      ],
+      "known_loss_fraction": 0.0392156862745098,
+      "known_loss_s5": 4,
+      "max_unknown_legal": 100,
+      "min_unknown_legal": 76,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        100,
+        104,
+        108
+      ],
+      "rank": 5,
+      "unknown_per_new_vertex": 32.666666666666664,
+      "unknown_s5": 98
+    }
+  ],
+  "ranking_rule": "unknown_s5/new_vertices, then unknown_s5, then known-loss fraction",
+  "repair_classes": 5,
+  "root": [
+    60,
+    27
+  ],
+  "secured_vertices": 103,
+  "win_forbidden_classes": 137
+}
