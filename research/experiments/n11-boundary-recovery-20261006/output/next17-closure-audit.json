@@ -1,0 +1,189 @@
+{
+  "baseline_cache": {
+    "entries": 4388,
+    "loss": 4291,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-s5.cache",
+    "sha256": "ddc997e18480ed9ceb669148dcc46166eae1bb6ae9ec08d07e4954d6aa91c081",
+    "win": 97
+  },
+  "class_boundary": {
+    "children": 110,
+    "coverage": [
+      33,
+      43,
+      70,
+      72
+    ],
+    "known_loss_before": 8,
+    "unknown_before": 102
+  },
+  "class_key": [
+    1298162592589545480,
+    0
+  ],
+  "derived_delta": {
+    "entries": 102,
+    "loss": 102,
+    "sha256": "7f54daf159864aa5015ad2633352dcc864b20981c4b14b8418021cdf3d1135b6",
+    "win": 0
+  },
+  "direct_s5": {
+    "loss": 97,
+    "nodes": 711160522,
+    "raw_sha256": "995eb20a2c771021e01a6edfafd32e12a271096f515970b6e9280ca26c955d5e",
+    "targets": 101,
+    "unknown": 4,
+    "win": 0
+  },
+  "finite_frontier": {
+    "class_counts": {
+      "LOSS": 29,
+      "UNKNOWN": 3180,
+      "WIN": 175
+    },
+    "min_additive_unknown_s5_among_min_cardinality": 283,
+    "minimum_additional_classes": 3,
+    "next17_class_status": "LOSS",
+    "secured_vertices": 113,
+    "selected_repair": [
+      {
+        "all_s5": 110,
+        "key": [
+          1297036692683751424,
+          16384
+        ],
+        "known_loss_s5": 18,
+        "remaining_coverage": [
+          100,
+          108
+        ],
+        "unknown_s5": 92
+      },
+      {
+        "all_s5": 104,
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "known_loss_s5": 5,
+        "remaining_coverage": [
+          38,
+          77,
+          87
+        ],
+        "unknown_s5": 99
+      },
+      {
+        "all_s5": 95,
+        "key": [
+          10452854735126921216,
+          0
+        ],
+        "known_loss_s5": 3,
+        "remaining_coverage": [
+          104
+        ],
+        "unknown_s5": 92
+      }
+    ],
+    "uncovered_vertices": [
+      38,
+      77,
+      87,
+      100,
+      104,
+      108
+    ]
+  },
+  "hard5": {
+    "loss_witnesses": [
+      {
+        "loss_s6": [
+          1152921517625966592,
+          16448
+        ],
+        "nodes": 9882965,
+        "parent": [
+          1152921517625966592,
+          64
+        ]
+      },
+      {
+        "loss_s6": [
+          1153202979583558148,
+          536879104
+        ],
+        "nodes": 9109888,
+        "parent": [
+          1153202979583558144,
+          536879104
+        ]
+      },
+      {
+        "loss_s6": [
+          1298444067566256138,
+          0
+        ],
+        "nodes": 8532597,
+        "parent": [
+          1298444067566256136,
+          0
+        ]
+      },
+      {
+        "loss_s6": [
+          1298725542547161096,
+          0
+        ],
+        "nodes": 8504920,
+        "parent": [
+          1298725542542966792,
+          0
+        ]
+      },
+      {
+        "loss_s6": [
+          1586392968741257226,
+          0
+        ],
+        "nodes": 7175565,
+        "parent": [
+          1586392968741257224,
+          0
+        ]
+      }
+    ],
+    "meta_sha256": "8621a67546675165895bb67a69b8852a1626cbb2912ce1d0e32da9c7fa601a21",
+    "parent_child_relations": 503,
+    "parents": 5,
+    "partial_counts": {
+      "0": 14,
+      "1": 44,
+      "2": 13
+    },
+    "partial_replay_rows": 71,
+    "raw_sha256": "12000ad6248f9331b90bd78f29c8a120bb0d6cb07ed7c51bf19383be217448ce",
+    "unique_s6_boundary": 493
+  },
+  "merged_cache": {
+    "entries": 4490,
+    "loss": 4393,
+    "reconstruct": "post-next16-expanded-s5.cache + next17-new-s5.cache, conflict checked",
+    "sha256": "1fc7d5b18b8b9eedf6a9f71e0fd42f8e039b794a7b88ae433153110485da6d15",
+    "win": 97
+  },
+  "metadata_mismatch_note": "next17-model8.json target_class contains 1298162592589545500:0, but post-next16 ranking/best-class target set and all 110-child geometry use 1298162592589545480:0; the former is treated as a metadata typo and not proof identity.",
+  "outcome_scope": "This closes one s4 class and advances the fixed reply=27 two-stone proof frontier only; empty board and {60,27} remain UNKNOWN until remaining repair classes close.",
+  "prior_hard": {
+    "key": [
+      1586392968741257224,
+      0
+    ],
+    "prior_15m_unknown": true
+  },
+  "root": [
+    60,
+    27
+  ],
+  "schema": "n11-reply27-next17-xserver-closure-v1"
+}
