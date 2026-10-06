@@ -1,0 +1,218 @@
+name: N11 reply27 repair5 batch proof
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-repair5-batch.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download post-next10 proof
+        uses: actions/download-artifact@v4
+        with:
+          name: reply27-post-next10-proof
+          path: /tmp/base
+          github-token: ${{ github.token }}
+          run-id: 37404669628
+      - name: Validate repair5 input
+        run: |
+          python - <<'PY'
+          import csv,json
+          d=json.load(open("/tmp/base/post-next10-repair.json"))
+          assert d["secured_vertices"]==103,d["secured_vertices"]
+          assert d["minimum_additional_classes"]==5,d["minimum_additional_classes"]
+          a=d["additive_optimum"]
+          assert a["repair_classes"]==5,a
+          assert a["unique_unknown_s5"]==473,a
+          rows=[r for r in csv.reader(open("/tmp/base/post-next10-repair.csv")) if r]
+          keys={(int(r[3]),int(r[4])) for r in rows}
+          assert len(rows)==473,(len(rows),len(keys))
+          assert len(keys)==473,(len(rows),len(keys))
+          print("REPAIR5_PREP", [x["key"] for x in a["selected"]], len(keys))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-repair5-input
+          path: |
+            /tmp/base/post-next10-s5.cache
+            /tmp/base/post-next10-repair.json
+            /tmp/base/post-next10-repair.csv
+
+  solve:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-repair5-input
+          path: /tmp/input
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -v s=${{ matrix.shard }} '((NR-1)%16)==s {print}' \
+            /tmp/input/post-next10-repair.csv > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 \
+              --exact-replay=/tmp/targets.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count \
+              --csv=/tmp/out.csv
+          cat /tmp/time
+          grep '^replay,' /tmp/out.csv
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-repair5-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-repair5-input
+          path: /tmp/input
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-repair5-*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+      - name: Verify exact rows and classify all five classes
+        run: |
+          python - <<'PY'
+          import csv,glob,json,sys
+          sys.path.insert(0,"research/experiments/n11-frontier-selection-20261005/scripts")
+          import reply27_selected31_repair as R
+
+          repair=json.load(open("/tmp/input/post-next10-repair.json"))
+          selected=[tuple(x["key"]) for x in repair["additive_optimum"]["selected"]]
+          assert len(selected)==5 and len(set(selected))==5,selected
+
+          expected=set()
+          with open("/tmp/input/post-next10-repair.csv",newline="") as f:
+              for r in csv.reader(f):
+                  if r: expected.add((int(r[3]),int(r[4])))
+          assert len(expected)==473,len(expected)
+
+          replay={}; hist={0:0,1:0,2:0}; nodes=0; seen=set()
+          for p in sorted(glob.glob("/tmp/proof/reply27-repair5-[0-9]*/targets.csv")):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if r: seen.add((int(r[3]),int(r[4])))
+          assert seen==expected,(len(seen),len(expected),len(seen^expected))
+
+          for p in sorted(glob.glob("/tmp/proof/reply27-repair5-[0-9]*/out.csv")):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      k=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                      if k not in expected: raise SystemExit(f"unexpected {k}")
+                      old=replay.get(k)
+                      if old is not None and old!=v:
+                          raise SystemExit(f"CONFLICT replay {k}: {old} vs {v}")
+                      replay[k]=v; hist[v]+=1; nodes+=n
+          assert set(replay)==expected,(len(replay),len(expected))
+
+          verdict={}
+          with open("/tmp/input/post-next10-s5.cache",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0].startswith("#"): continue
+                  verdict[(int(r[1]),int(r[2]))]=int(r[4])
+          for k,v in replay.items():
+              if v not in (1,2): continue
+              old=verdict.get(k)
+              if old is not None and old!=v: raise SystemExit(f"cache conflict {k}")
+              verdict[k]=v
+
+          _,verts,coverage,children=R.build_geometry()
+          statuses=[]; detail=[]
+          for key in selected:
+              vals=[verdict.get(ch,0) for ch in children[key]]
+              h={v:vals.count(v) for v in (0,1,2)}
+              status="WIN" if h[1] else ("LOSS" if h[0]==0 else "UNKNOWN")
+              statuses.append(status)
+              detail.append({"key":list(key),"coverage":sorted(coverage[key]),
+                             "children":len(vals),"counts":h,"status":status,
+                             "unresolved":[list(ch) for ch in children[key] if verdict.get(ch,0)==0]})
+              if status=="LOSS":
+                  assert all(verdict.get(ch)==2 for ch in children[key])
+          with open("/tmp/repair5-exact-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 repair5 batch exact replay; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(replay.items()):
+                  if v in (1,2): f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          with open("/tmp/post-repair5-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (post-repair5 merged exact evidence)\n")
+              for (lo,hi),v in sorted(verdict.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          out={"selected_classes":detail,"status_counts":{s:statuses.count(s) for s in ("LOSS","WIN","UNKNOWN")},
+               "new_replay_counts":hist,"new_replay_nodes":nodes,
+               "merged_cache_entries":len(verdict),"conflicts":0}
+          json.dump(out,open("/tmp/repair5-summary.json","w"),indent=2,sort_keys=True)
+          print("REPAIR5_SUMMARY",json.dumps(out,sort_keys=True))
+          PY
+      - name: Recompute global frontier
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py \
+            --s5-cache /tmp/post-repair5-s5.cache --out /tmp/post-repair5-cardinality.json
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache /tmp/post-repair5-s5.cache \
+            --out /tmp/post-repair5-repair.json --targets-out /tmp/post-repair5-repair.csv
+          python research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py \
+            --repair-json /tmp/post-repair5-repair.json --extra-s5-cache /tmp/post-repair5-s5.cache \
+            --targets-out /tmp/post-repair5-best-class.csv --out /tmp/post-repair5-ranking.json
+          python - <<'PY'
+          import json
+          s=json.load(open("/tmp/repair5-summary.json"))
+          c=json.load(open("/tmp/post-repair5-cardinality.json"))
+          r=json.load(open("/tmp/post-repair5-repair.json"))
+          print("REPAIR5_CLASS_COUNTS",s["status_counts"])
+          print("REPAIR5_NEW_S5",s["new_replay_counts"],"nodes",s["new_replay_nodes"])
+          print("REPAIR5_GLOBAL_CLASSES",c["class_status_counts"])
+          print("REPAIR5_SECURED",c["secured_vertices"],"/119")
+          print("REPAIR5_MIN_ADDITIONAL",c["minimum_additional_classes"],
+                "dual_tight",c["dual_certificate_matches_integer_optimum"])
+          print("REPAIR5_NEXT",r["additive_optimum"]["repair_classes"],
+                r["additive_optimum"]["unique_unknown_s5"])
+          if c["secured_vertices"]==119:
+              assert c["minimum_additional_classes"]==0
+              print("REPLY27_S2_LOSS_COVER_COMPLETE")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-repair5-proof
+          path: |
+            /tmp/repair5-summary.json
+            /tmp/repair5-exact-s5.cache
+            /tmp/post-repair5-s5.cache
+            /tmp/post-repair5-cardinality.json
+            /tmp/post-repair5-repair.json
+            /tmp/post-repair5-repair.csv
+            /tmp/post-repair5-ranking.json
+            /tmp/post-repair5-best-class.csv
