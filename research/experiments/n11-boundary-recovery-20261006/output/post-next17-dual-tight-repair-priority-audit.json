@@ -1,0 +1,62 @@
+{
+  "schema": "n11-post-next17-dual-tight-repair-priority-audit-v1",
+  "scope": "Scheduling proof only. No UNKNOWN s4 class is promoted to LOSS and no solver verdict is inferred.",
+  "root": [60, 27],
+  "source_bindings": {
+    "repair_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-repair.json",
+    "repair_blob_sha": "fb22ad123b0d221ea1206bddb761d3942696ed3b",
+    "cardinality_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-cardinality.json",
+    "cardinality_blob_sha": "7a1e7b24ebc14299db5795ac4d865d68930c25d4"
+  },
+  "current": {
+    "secured_vertices": 113,
+    "remaining_vertices": [38, 77, 87, 100, 104, 108],
+    "minimum_additional_classes": 3,
+    "rational_dual": {"77": "1", "100": "1", "104": "1"}
+  },
+  "repair_classes": [
+    {
+      "key": [1585267068834414720, 0],
+      "coverage": [38, 77, 87],
+      "unknown_s5": 99,
+      "positive_dual_vertices_covered": [77],
+      "dual_weight_removed_if_closed_loss": "1"
+    },
+    {
+      "key": [10376293541461626880, 131072],
+      "coverage": [69, 73, 100, 108],
+      "unknown_s5": 92,
+      "positive_dual_vertices_covered": [100],
+      "dual_weight_removed_if_closed_loss": "1"
+    },
+    {
+      "key": [10452854735126921216, 0],
+      "coverage": [26, 28, 104],
+      "unknown_s5": 92,
+      "positive_dual_vertices_covered": [104],
+      "dual_weight_removed_if_closed_loss": "1"
+    }
+  ],
+  "proof": {
+    "statement": "Closing any one of the three repair classes as LOSS forces the exact minimum additional class count from 3 to 2 under the same finite snapshot.",
+    "upper_bound": "The other two repair classes cover every still-unsecured root vertex not covered by the newly closed class, so two additional classes suffice.",
+    "lower_bound": "Removing the newly secured unit-weight dual vertex leaves two unit dual weights. Every usable class has total dual weight at most 1 by the independently audited dual certificate, so at least two additional classes are necessary.",
+    "conclusion": "Each repair class has the same certified one-unit cover decrement on successful LOSS closure."
+  },
+  "priority_consequence": {
+    "old_ranked_target": [1585267068834414720, 0],
+    "old_unknown_s5": 99,
+    "preferred_equal-benefit_targets": [
+      [10376293541461626880, 131072],
+      [10452854735126921216, 0]
+    ],
+    "preferred_unknown_s5": 92,
+    "boundary_reduction": 7,
+    "boundary_reduction_fraction": 0.0707070707070707,
+    "claim": "92 versus 99 is a strict reduction in unresolved canonical s5 boundary count for the same certified 3-to-2 cover decrement. It is not a claim that solver node cost is 7.07% lower."
+  },
+  "status": {
+    "root_60_27": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}
