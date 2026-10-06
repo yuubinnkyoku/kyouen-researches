@@ -1,0 +1,128 @@
+{
+  "best_target": {
+    "key": [
+      1298162592589545480,
+      0
+    ],
+    "new_vertices": [
+      33,
+      43,
+      70,
+      72
+    ],
+    "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next16-best-class.csv",
+    "unknown_s5": 102
+  },
+  "derived_cache_entries": 4388,
+  "loss_classes": 28,
+  "ranking": [
+    {
+      "all_s5": 110,
+      "coverage": [
+        33,
+        43,
+        70,
+        72
+      ],
+      "key": [
+        1298162592589545480,
+        0
+      ],
+      "known_loss_fraction": 0.07272727272727272,
+      "known_loss_s5": 8,
+      "max_unknown_legal": 109,
+      "min_unknown_legal": 83,
+      "new_vertex_count": 4,
+      "new_vertices": [
+        33,
+        43,
+        70,
+        72
+      ],
+      "rank": 1,
+      "unknown_per_new_vertex": 25.5,
+      "unknown_s5": 102
+    },
+    {
+      "all_s5": 104,
+      "coverage": [
+        38,
+        77,
+        87
+      ],
+      "key": [
+        1585267068834414720,
+        0
+      ],
+      "known_loss_fraction": 0.04807692307692308,
+      "known_loss_s5": 5,
+      "max_unknown_legal": 103,
+      "min_unknown_legal": 85,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        38,
+        77,
+        87
+      ],
+      "rank": 2,
+      "unknown_per_new_vertex": 33.0,
+      "unknown_s5": 99
+    },
+    {
+      "all_s5": 103,
+      "coverage": [
+        69,
+        73,
+        100,
+        108
+      ],
+      "key": [
+        10376293541461626880,
+        131072
+      ],
+      "known_loss_fraction": 0.10679611650485436,
+      "known_loss_s5": 11,
+      "max_unknown_legal": 102,
+      "min_unknown_legal": 75,
+      "new_vertex_count": 2,
+      "new_vertices": [
+        100,
+        108
+      ],
+      "rank": 3,
+      "unknown_per_new_vertex": 46.0,
+      "unknown_s5": 92
+    },
+    {
+      "all_s5": 95,
+      "coverage": [
+        26,
+        28,
+        104
+      ],
+      "key": [
+        10452854735126921216,
+        0
+      ],
+      "known_loss_fraction": 0.031578947368421054,
+      "known_loss_s5": 3,
+      "max_unknown_legal": 92,
+      "min_unknown_legal": 74,
+      "new_vertex_count": 1,
+      "new_vertices": [
+        104
+      ],
+      "rank": 4,
+      "unknown_per_new_vertex": 92.0,
+      "unknown_s5": 92
+    }
+  ],
+  "ranking_rule": "unknown_s5/new_vertices, then unknown_s5, then known-loss fraction",
+  "repair_classes": 4,
+  "root": [
+    60,
+    27
+  ],
+  "secured_vertices": 109,
+  "win_forbidden_classes": 175
+}

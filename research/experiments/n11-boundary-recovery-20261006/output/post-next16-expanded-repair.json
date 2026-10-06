@@ -1,0 +1,304 @@
+{
+  "additive_optimum": {
+    "additive_unknown_s5": 385,
+    "mip_gap": 0.0,
+    "repair_classes": 4,
+    "selected": [
+      {
+        "all_s5": 110,
+        "coverage": [
+          33,
+          43,
+          70,
+          72
+        ],
+        "key": [
+          1298162592589545480,
+          0
+        ],
+        "unknown_s5": 102
+      },
+      {
+        "all_s5": 104,
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "unknown_s5": 99
+      },
+      {
+        "all_s5": 103,
+        "coverage": [
+          69,
+          73,
+          100,
+          108
+        ],
+        "key": [
+          10376293541461626880,
+          131072
+        ],
+        "unknown_s5": 92
+      },
+      {
+        "all_s5": 95,
+        "coverage": [
+          26,
+          28,
+          104
+        ],
+        "key": [
+          10452854735126921216,
+          0
+        ],
+        "unknown_s5": 92
+      }
+    ],
+    "unique_unknown_s5": 385
+  },
+  "claim": "repair scheduling only; UNKNOWN selected repair classes are not certificates until their remaining s5 children are proved LOSS",
+  "class_status_from_derived_cache_plus_manifest": {
+    "LOSS": 28,
+    "UNKNOWN": 3181,
+    "WIN_forbidden": 175
+  },
+  "derived_s5_cache": {
+    "LOSS": 4291,
+    "WIN": 97,
+    "entries": 4388,
+    "extra_entries": 3047
+  },
+  "evidence_note": "Historical stage1 manifest note (not a current archive inventory): The raw Xserver shard files had not yet been archived in-repo when this manifest was written; treat this manifest as a scheduling/result preservation record until those raw files are recovered.",
+  "exact_15_class_repair": {
+    "additive_unknown_s5": 1401,
+    "mip_gap": 0.0,
+    "repair_classes": 15,
+    "selected": [
+      {
+        "all_s5": 98,
+        "coverage": [
+          14,
+          18,
+          38
+        ],
+        "key": [
+          1152921779618988032,
+          0
+        ],
+        "unknown_s5": 94
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          15,
+          17,
+          38
+        ],
+        "key": [
+          1152921779619004416,
+          0
+        ],
+        "unknown_s5": 94
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          24,
+          30,
+          38
+        ],
+        "key": [
+          1152921779635748864,
+          0
+        ],
+        "unknown_s5": 93
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          26,
+          28,
+          38
+        ],
+        "key": [
+          1152921779686080512,
+          0
+        ],
+        "unknown_s5": 93
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          36,
+          40,
+          70,
+          72
+        ],
+        "key": [
+          1152922604252692480,
+          64
+        ],
+        "unknown_s5": 93
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          38,
+          48,
+          50
+        ],
+        "key": [
+          1153203254595682304,
+          0
+        ],
+        "unknown_s5": 93
+      },
+      {
+        "all_s5": 100,
+        "coverage": [
+          38,
+          56,
+          64
+        ],
+        "key": [
+          1224979373656899584,
+          0
+        ],
+        "unknown_s5": 94
+      },
+      {
+        "all_s5": 110,
+        "coverage": [
+          14,
+          18,
+          100,
+          108
+        ],
+        "key": [
+          1297036692683751424,
+          16384
+        ],
+        "unknown_s5": 92
+      },
+      {
+        "all_s5": 107,
+        "coverage": [
+          3,
+          7,
+          33,
+          43,
+          57,
+          63
+        ],
+        "key": [
+          1297036692816920584,
+          0
+        ],
+        "unknown_s5": 98
+      },
+      {
+        "all_s5": 105,
+        "coverage": [
+          3,
+          7,
+          57,
+          63,
+          77,
+          87
+        ],
+        "key": [
+          1297036692816920704,
+          0
+        ],
+        "unknown_s5": 92
+      },
+      {
+        "all_s5": 103,
+        "coverage": [
+          69,
+          73,
+          100,
+          108
+        ],
+        "key": [
+          10376293541461626880,
+          131072
+        ],
+        "unknown_s5": 92
+      },
+      {
+        "all_s5": 100,
+        "coverage": [
+          100,
+          108,
+          115
+        ],
+        "key": [
+          10412322338480590848,
+          0
+        ],
+        "unknown_s5": 93
+      },
+      {
+        "all_s5": 96,
+        "coverage": [
+          91,
+          95,
+          104
+        ],
+        "key": [
+          10448351169859289088,
+          0
+        ],
+        "unknown_s5": 94
+      },
+      {
+        "all_s5": 98,
+        "coverage": [
+          47,
+          51,
+          104
+        ],
+        "key": [
+          10448351685255364608,
+          0
+        ],
+        "unknown_s5": 94
+      },
+      {
+        "all_s5": 95,
+        "coverage": [
+          26,
+          28,
+          104
+        ],
+        "key": [
+          10452854735126921216,
+          0
+        ],
+        "unknown_s5": 92
+      }
+    ],
+    "unique_unknown_s5": 1375
+  },
+  "materialized_targets": 385,
+  "minimum_additional_classes": 4,
+  "minimum_additional_classes_mip_gap": 0.0,
+  "root": [
+    60,
+    27
+  ],
+  "sample_per_class": 2,
+  "sample_targets": 8,
+  "secured_vertices": 109,
+  "selected_status_counts": {
+    "LOSS": 16,
+    "WIN": 15
+  },
+  "uncovered_vertices": 10
+}

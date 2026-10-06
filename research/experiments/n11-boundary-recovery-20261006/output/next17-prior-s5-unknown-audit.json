@@ -1,0 +1,34 @@
+{
+  "schema": "n11-next17-prior-s5-unknown-replay-audit-v1",
+  "scope": "Archived replay CSVs directly in recovery/output/raw and frontier-selection/output only; no repository-wide completeness claim. Detect prior UNKNOWN at budget >=15M to avoid same-budget new s5 replay.",
+  "files_examined": 184,
+  "full_targets": 102,
+  "model8_targets": 8,
+  "prior_unknown_matches": [
+    {
+      "key": [
+        1586392968741257224,
+        0
+      ],
+      "budget": 15000000,
+      "nodes": 15000000,
+      "probe8": false,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-batch-out.csv",
+      "sha256": "ab84563413acee5f0214d98599632bd6205bbfdf135922823857af85e9512b11",
+      "row": 336
+    },
+    {
+      "key": [
+        1586392968741257224,
+        0
+      ],
+      "budget": 15000000,
+      "nodes": 15000000,
+      "probe8": false,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-batch-shard11-out.csv",
+      "sha256": "7427a4dae9b862a526ec77f5aea5c8a43b5a7f6e1a8a7dbf4f797573764abd3f",
+      "row": 9
+    }
+  ],
+  "model8_same_budget_retry_keys": []
+}
