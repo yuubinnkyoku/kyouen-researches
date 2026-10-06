@@ -1,0 +1,34 @@
+{
+  "canonical_s5_children": 100,
+  "class_status": "LOSS",
+  "conflicts": 0,
+  "coverage": [
+    34,
+    42,
+    82
+  ],
+  "input_rows": 100,
+  "raw_edges": [
+    [
+      34,
+      82
+    ],
+    [
+      42,
+      82
+    ]
+  ],
+  "result_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 100
+  },
+  "solver": "fully static cpp/solvers/kyouen_dfpn_root.cpp built at main 01c1737 and run with --memo=22 --only=5 --exact-replay-budget=15000000 --exact-order=count",
+  "source": "Xserver 4-shard cold exact replay",
+  "target_class": [
+    5908722711110107136,
+    0
+  ],
+  "total_nodes": 289895608,
+  "workers": 4
+}
