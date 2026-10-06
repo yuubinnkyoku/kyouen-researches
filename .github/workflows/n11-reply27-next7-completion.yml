@@ -1,0 +1,201 @@
+name: N11 reply27 next7 completion
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-next7-completion.yml"
+  workflow_dispatch:
+
+jobs:
+  solve:
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exact replay solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          grep -v '^#' research/experiments/n11-boundary-recovery-20261006/output/post-next6-best-class.csv \
+            | awk -v s=${{ matrix.shard }} '((NR-1)%8)==s {print}' > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          grep '^replay,' /tmp/out.csv
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next7-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-next7-*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+      - name: Verify exact replay and merge cache
+        run: |
+          python - <<'PY'
+          import csv, glob, json, sys
+          from pathlib import Path
+          sys.path.insert(0, "research/experiments/n11-frontier-selection-20261005/scripts")
+          import reply27_selected31_repair as R
+
+          target=(1301540292310335488,0)
+          expected=set()
+          with open("research/experiments/n11-boundary-recovery-20261006/output/post-next6-best-class.csv",newline="") as f:
+              for row in csv.reader(f):
+                  if not row or row[0].startswith("#"): continue
+                  expected.add((int(row[3]),int(row[4])))
+          assert len(expected)==95, len(expected)
+
+          replay={}
+          nodes=0
+          hist={0:0,1:0,2:0}
+          seen_targets=set()
+          for p in sorted(glob.glob("/tmp/proof/*/targets.csv")):
+              with open(p,newline="") as f:
+                  for row in csv.reader(f):
+                      if row:
+                          seen_targets.add((int(row[3]),int(row[4])))
+          assert seen_targets==expected, (len(seen_targets),len(expected),len(seen_targets^expected))
+
+          for p in sorted(glob.glob("/tmp/proof/*/out.csv")):
+              with open(p,newline="") as f:
+                  for row in csv.reader(f):
+                      if not row or row[0]!="replay": continue
+                      k=(int(row[9]),int(row[10])); v=int(row[6]); n=int(row[7])
+                      if k not in expected:
+                          raise SystemExit(f"unexpected replay key {k}")
+                      old=replay.get(k)
+                      if old is not None and old!=v:
+                          raise SystemExit(f"CONFLICT replay {k}: {old} vs {v}")
+                      replay[k]=v; hist[v]+=1; nodes+=n
+          assert set(replay)==expected, (len(replay),len(expected),len(set(replay)^expected))
+
+          verdict={}
+          origin={}
+          def put(k,v,src):
+              if v not in (1,2): return
+              old=verdict.get(k)
+              if old is not None and old!=v:
+                  raise SystemExit(f"CONFLICT {k}: {old} from {origin[k]} vs {v} from {src}")
+              verdict[k]=v; origin.setdefault(k,src)
+
+          base="research/experiments/n11-boundary-recovery-20261006/output/post-next6-s5.cache"
+          with open(base,newline="") as f:
+              for row in csv.reader(f):
+                  if not row or row[0].startswith("#"): continue
+                  put((int(row[1]),int(row[2])),int(row[4]),base)
+          for k,v in replay.items(): put(k,v,"next7")
+
+          _,_,coverage,children=R.build_geometry()
+          boundary=children[target]
+          vals={k:verdict.get(k,0) for k in boundary}
+          bh={v:list(vals.values()).count(v) for v in (0,1,2)}
+          if bh[1]: status="WIN"
+          elif bh[0]==0: status="LOSS"
+          else: status="UNKNOWN"
+
+          with open("/tmp/next7-exact.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 next7 exact replay; UNKNOWN omitted)\n")
+              for k,v in sorted(replay.items()):
+                  if v in (1,2):
+                      f.write(f"s5verdict,{k[0]},{k[1]},5,{v},0\n")
+          with open("/tmp/post-next7-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (post-next7 merged exact evidence)\n")
+              for k,v in sorted(verdict.items()):
+                  f.write(f"s5verdict,{k[0]},{k[1]},5,{v},0\n")
+
+          out={
+              "target_class":list(target),
+              "coverage":sorted(coverage[target]),
+              "expected_new_roots":len(expected),
+              "new_replay_counts":hist,
+              "new_replay_nodes":nodes,
+              "full_boundary_children":len(boundary),
+              "full_boundary_counts":bh,
+              "class_status":status,
+              "merged_cache_entries":len(verdict),
+              "unresolved":[list(k) for k,v in vals.items() if v==0],
+              "conflicts":0,
+          }
+          json.dump(out,open("/tmp/next7-summary.json","w"),indent=2,sort_keys=True)
+          print("NEXT7_SUMMARY",json.dumps(out,sort_keys=True))
+          PY
+
+      - name: Verify complete class boundary if LOSS
+        run: |
+          status=$(python -c 'import json; print(json.load(open("/tmp/next7-summary.json"))["class_status"])')
+          if [ "$status" = LOSS ]; then
+            python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
+              --class-lo 1301540292310335488 --class-hi 0 \
+              --expected-children 111 \
+              --cache /tmp/post-next7-s5.cache --allow-extra
+          fi
+
+      - name: Recompute proof frontier
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py \
+            --s5-cache /tmp/post-next7-s5.cache --out /tmp/post-next7-cardinality.json
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache /tmp/post-next7-s5.cache \
+            --out /tmp/post-next7-repair.json --targets-out /tmp/post-next7-repair.csv
+          python research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py \
+            --repair-json /tmp/post-next7-repair.json \
+            --extra-s5-cache /tmp/post-next7-s5.cache \
+            --targets-out /tmp/post-next7-best-class.csv \
+            --out /tmp/post-next7-ranking.json
+          python - <<'PY'
+          import json
+          s=json.load(open("/tmp/next7-summary.json"))
+          c=json.load(open("/tmp/post-next7-cardinality.json"))
+          r=json.load(open("/tmp/post-next7-repair.json"))
+          q=json.load(open("/tmp/post-next7-ranking.json"))
+          print("NEXT7_CLASS",s["class_status"],s["full_boundary_counts"])
+          print("NEXT7_CLASSES",c["class_status_counts"])
+          print("NEXT7_SECURED",c["secured_vertices"],"/119")
+          print("NEXT7_MIN_ADDITIONAL",c["minimum_additional_classes"],
+                "dual_tight",c["dual_certificate_matches_integer_optimum"])
+          print("NEXT7_REPAIR",r["additive_optimum"]["repair_classes"],
+                r["additive_optimum"]["unique_unknown_s5"])
+          if q["ranking"]:
+              b=q["ranking"][0]
+              print("NEXT7_BEST",b["key"],"unknown",b["unknown_s5"],
+                    "known_loss",b["known_loss_s5"],
+                    "gain",b["new_vertex_count"])
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next7-proof
+          path: |
+            /tmp/next7-summary.json
+            /tmp/next7-exact.cache
+            /tmp/post-next7-s5.cache
+            /tmp/post-next7-cardinality.json
+            /tmp/post-next7-repair.json
+            /tmp/post-next7-repair.csv
+            /tmp/post-next7-ranking.json
+            /tmp/post-next7-best-class.csv
