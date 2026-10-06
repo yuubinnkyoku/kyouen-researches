@@ -1,0 +1,83 @@
+{
+  "schema": "n11-next12-preparation-source-manifest-v1",
+  "solver_invoked": false,
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-boundary.csv",
+      "bytes": 4825,
+      "sha256": "7a8821547061a3be27eeebcd5686a305a5d1f245e7e25baeb1ed4fe4305f2079"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-targets.csv",
+      "bytes": 7248,
+      "sha256": "16b1aa33486295f15a92b6e01455afc223606711d73efd33be4322c3de1f5b90"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-boundary-audit.json",
+      "bytes": 2057,
+      "sha256": "ac698b2a8e9d35678a6c708822b615fb6d82cc28c2535bf6e131dc76e3d6e60e"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-model8.csv",
+      "bytes": 536,
+      "sha256": "f8dbb8076865923914257386613d499fbd2ef57a7db5ccf5b2d410d7d1f4fcfe"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next12-model8.json",
+      "bytes": 7696,
+      "sha256": "fe3f4847d0a4a649091167cea6fe1c16c6c5c4bd98be4a33f82a740ab17b4be8",
+      "note": "Current execution-status record; execution_status and solver_invoked were updated after preparation, while model inputs and scores are unchanged."
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-final34-s6-audit.json",
+      "bytes": 339034,
+      "sha256": "1d0c6104b3de3c5f1c8fa2197ef0b661f066ee865fb68863fe7fca6720e5955e"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-s5.cache",
+      "bytes": 172054,
+      "sha256": "b365d54f08b7305bdfb4e02a6e589ee092a7cb9b0b768e92c0215e135203a6fc"
+    }
+  ],
+  "scratch_sources": [
+    {
+      "path": ".local/n11/next12-prep/candidates.cache",
+      "bytes": 5056,
+      "sha256": "cdb76f386d0d1ac141dfa970cf7506650d521e970a72c7ffed86d4e52a7bfe51"
+    },
+    {
+      "path": ".local/n11/next12-prep/candidate-features.csv",
+      "bytes": 10640,
+      "sha256": "91fd37f348de5b98af4caeaf958514d74c91760de814139868777f59fb70d9cc"
+    },
+    {
+      "path": ".local/n11/next12-prep/class-map.json",
+      "bytes": 7966,
+      "sha256": "2320040e4cef89208f746850ed01ffac15818d64689141002c06236e50dc16ce"
+    },
+    {
+      "path": ".local/n11/next12-prep/scored.json",
+      "bytes": 1852,
+      "sha256": "3b5ae710698af77222cf0f5bcdabd0ae2038d5bdfe2eb47ee6bc2eaa97ec43ff"
+    }
+  ],
+  "latest_cache_refresh": {
+    "entries": 4243,
+    "sha256": "b365d54f08b7305bdfb4e02a6e589ee092a7cb9b0b768e92c0215e135203a6fc",
+    "boundary_status": {
+      "1": 0,
+      "2": 3,
+      "UNKNOWN": 108
+    },
+    "saved_s6_sources": 34,
+    "solver_invoked": false
+  },
+  "historical_preexecution_metadata": {
+    "path_at_preparation": "research/experiments/n11-boundary-recovery-20261006/output/next12-model8.json",
+    "sha256": "023fbb9de8c20c8092cf8ff3d477c7524dd6492c60be0214f4c68a66449e13a6",
+    "bytes": 7618,
+    "snapshot_available": false,
+    "note": "Preparation-time digest and size supplied by the original source manifest. Original pre-execution JSON bytes were not retained; no reconstructed snapshot is claimed."
+  },
+  "solver_invoked_scope": "Preparation manifest only; the linked next12-model8.json is the later execution-status record."
+}

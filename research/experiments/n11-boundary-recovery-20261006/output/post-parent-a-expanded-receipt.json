@@ -1,0 +1,25 @@
+{
+  "schema": "n11-parent-a-expanded-cache-receipt-v1",
+  "sources": [
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-repair5-expanded-s5.cache",
+      "sha256": "00d377a74fefa097fb5d40f21b2abcfa9662630418c63298b8f94ca9e7b9a1f9",
+      "rows": 4225
+    },
+    {
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\repair5-parent-a-final33-derived-s5.cache",
+      "sha256": "0e995bb1bab6bcf7867cb777824b6dd48d031f1614cac015cad16113c6e52d03",
+      "rows": 7
+    }
+  ],
+  "unique_exact_s5": 4232,
+  "verdict_counts": {
+    "2": 4144,
+    "1": 88
+  },
+  "new_loss": 7,
+  "conflicts": 0,
+  "cache_sha256": "1d2000585fb68f9b16052cde245053af48047da248c564ffd638b499d2009649",
+  "audit_source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\repair5-parent-a-final33-s6-audit.json",
+  "audit_sha256": "bf7350eb6a9befbbd3a226fac94dc00ce7f1c443b73ccb87334074a771302609"
+}

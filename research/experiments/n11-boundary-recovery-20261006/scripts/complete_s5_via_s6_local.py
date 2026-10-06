@@ -92,6 +92,12 @@ def classify(children: set[tuple[int, int]], verdicts: dict[tuple[int, int], int
     return "UNKNOWN"
 
 
+def count_child_verdicts(children: set[tuple[int, int]], verdicts: dict[tuple[int, int], int]) -> dict[str, int]:
+    """Count absent child evidence as UNKNOWN alongside explicit verdict 0."""
+    return {str(value): sum(verdicts.get(key, 0) == value for key in children)
+            for value in (0, 1, 2)}
+
+
 def validate_verdict_map(verdicts: dict[tuple[int, int], int]) -> None:
     if any(v not in (0, 1, 2) for v in verdicts.values()):
         raise ValueError("invalid exact/unknown verdict")
@@ -280,7 +286,7 @@ def main() -> int:
     rows = []
     for i, parent in enumerate(parents):
         children = parent_children[i]
-        counts = {str(v): sum(verdicts.get(k) == v for k in children) for v in (0, 1, 2)}
+        counts = count_child_verdicts(set(children), verdicts)
         rows.append({"key": list(parent), "outcome": outcomes[i], "child_count": len(children),
                      "counts": counts, "loss_witnesses": [list(k) for k in children if verdicts.get(k) == 2],
                      "unresolved_children": [list(k) for k in children if verdicts.get(k) not in (1, 2)]})
@@ -305,7 +311,7 @@ def main() -> int:
         "saved_source_reports": source_reports, "parent_count": len(parents),
         "boundary_canonical_s6_count": len(boundary), "parent_child_relations": sum(map(len, parent_children)),
         "status_counts": {name: outcomes.count(name) for name in ("WIN", "LOSS", "UNKNOWN")},
-        "parents": rows, "saved_unknown_boundary_count": sum(verdicts.get(k) == 0 for k in boundary),
+        "parents": rows, "saved_unknown_boundary_count": sum(verdicts.get(k, 0) == 0 for k in boundary),
         "retry_saved_unknown": args.retry_saved_unknown,
         "saved_unknown_rows_eligible_for_retry": len(boundary & retryable_unknown),
         "new_solver_rows": len(new_results), "new_solver_exact": sum(x["verdict"] in (1, 2) for x in new_results.values()),

@@ -621,6 +621,12 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/next10-xserver-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/next10-xserver-targets.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 100-child exact replay targets for class (5908722711110107136, 0)
+## [research/experiments/n11-boundary-recovery-20261006/output/next12-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next12-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): geometry audit for the next12 target as prepared against the 4,243-entry cache before probe execution
+## [research/experiments/n11-boundary-recovery-20261006/output/next12-model8.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next12-model8.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): eight scheduling probes; model scores are not verdicts
 ## [research/experiments/n11-boundary-recovery-20261006/output/next2-boundary-verification.log](../../../research/experiments/n11-boundary-recovery-20261006/output/next2-boundary-verification.log)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (log): class geometryのcanonical 100子とcoverage 56,64,90,96の検査結果
@@ -1089,6 +1095,33 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-next8-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next8-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 3,610-entry Actions checkpoint before expanded reverse propagation
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-a-expanded-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-a-expanded-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): intermediate parent A cache receipt
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-a-expanded-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-a-expanded-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): intermediate canonical s5 cache after parent A propagation
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-best-class.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-best-class.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): final target boundary with 3 known LOSS and 108 UNKNOWN children
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): final finite class counts and dual-tight three-class minimum cover
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): final ranked scheduling target and finite boundary summary
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): final source counts, hashes, and zero-conflict receipt for 4,243 entries
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-repair.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-repair.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): final three-class repair target set
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): final repair work estimates under the 4,243-entry cache
+## [research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): final canonical s5 cache, 4,243 exact entries
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-best-class.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-repair5-expanded-best-class.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): top ranked class (1873497444986126592, 0), 106 known LOSS and two UNKNOWN
@@ -1305,6 +1338,12 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-hard2-adaptive2m-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-hard2-adaptive2m-out.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): combined replay rows for the 193 new adaptive s6 results
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-a-focused15m-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-a-focused15m-out.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): parent A focused saved exact replay rows
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-b-focused15m-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-b-focused15m-out.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): parent B focused saved exact replay rows
 ## [research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard0.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard0.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): recovered s6 shard 0 from Actions run 37339357570
@@ -1395,6 +1434,39 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-adaptive2m-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-adaptive2m-summary.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): adaptive 2M s6 result: 137 WIN, 56 UNKNOWN, no LOSS across 193 new replays
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-final33-s6-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-final33-s6-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): parent A 33-source saved-s6 canonical audit
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-final33-target-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-final33-target-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): parent A target-specific saved-s6 boundary and derived LOSS audit
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-focused15m-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-focused15m-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): parent A focused replay source hashes and provenance
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-focused15m-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-focused15m-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): parent A focused exact replay summary, 9 rows and nodes
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-independent-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-independent-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): independent audit of parent A source and boundary evidence
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-final34-s6-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-final34-s6-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 34-source reverse audit, 1,849 unique s6 keys and no conflicts
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-final34-target-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-final34-target-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): parent B target-specific saved-s6 boundary and derived LOSS audit
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-focused15m-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-focused15m-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): parent B focused replay source hashes and provenance
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-focused15m-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-focused15m-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): parent B focused exact replay summary, 7 rows and nodes
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-full108-verifier.log](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-full108-verifier.log)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (log): direct geometry verifier confirms all 108 children of the LOSS class
+## [research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-independent-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-independent-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): independent audit of parent B source and boundary evidence
 ## [research/experiments/n11-boundary-recovery-20261006/output/reply27-class-1297036692816953344-0-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/reply27-class-1297036692816953344-0-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 対象s4 classの105 canonical s5 LOSS境界

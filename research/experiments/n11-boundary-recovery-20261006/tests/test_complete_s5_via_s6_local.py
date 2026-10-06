@@ -106,6 +106,10 @@ class AdaptiveBoundaryTests(unittest.TestCase):
         self.assertEqual(outcomes, ["LOSS"])
         self.assertEqual(calls, [])
 
+    def test_missing_child_evidence_counts_as_unknown(self):
+        self.assertEqual(runner.count_child_verdicts({(1, 0), (2, 0)}, {(1, 0): 1}),
+                         {"0": 1, "1": 1, "2": 0})
+
     def test_exact_conflict_fails_closed(self):
         verdicts = {(1, 0): 2}
         with self.assertRaisesRegex(ValueError, "conflict"):

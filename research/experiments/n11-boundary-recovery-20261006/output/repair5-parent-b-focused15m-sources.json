@@ -1,0 +1,280 @@
+{
+  "schema": "n11-repair5-parent-b-focused-s6-run-archive-v1",
+  "runner_path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_s5_via_s6_local.py",
+  "command": "uv run --locked python research/experiments/n11-boundary-recovery-20261006/scripts/complete_s5_via_s6_local.py --solver build/n11/dfpn.exe --parents research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-parent-b-s5-target.csv --saved-audit research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-final33-s6-audit.json --out-dir .local/n11/repair5-parent-b-focused15m --workers 6 --budget 15000000 --retry-saved-unknown",
+  "retry_saved_unknown": true,
+  "workers": 6,
+  "budget": 15000000,
+  "parent_path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-parent-b-s5-target.csv",
+  "parent_sha256": "256d3358c6ad4c1456232fae48fb78fa810a144146a2209788abf3d5d2687545",
+  "saved_audit_path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-a-final33-s6-audit.json",
+  "saved_audit_sha256": "bf7350eb6a9befbbd3a226fac94dc00ce7f1c443b73ccb87334074a771302609",
+  "retry_target_path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-hard2-parent-b-hard-s6.csv",
+  "retry_target_sha256": "d064914d7b7f0432fb454c553fc00c67354fc2e4e5ee90d1ae39db5cf4896b1e",
+  "boundary_s6_count": 98,
+  "initial_saved_unknown_eligible": 42,
+  "new_solver_rows": 7,
+  "new_solver_exact": 7,
+  "new_solver_unknown": 0,
+  "nodes_new": 35570659,
+  "nodes_reused": 0,
+  "parent_result": {
+    "child_count": 98,
+    "counts": {
+      "0": 35,
+      "1": 58,
+      "2": 5
+    },
+    "key": [
+      1152921504612089856,
+      536871040
+    ],
+    "loss_witnesses": [
+      [
+        1152921543261556736,
+        536871040
+      ],
+      [
+        1152921577621295104,
+        536871040
+      ],
+      [
+        1188950301631053824,
+        536871040
+      ],
+      [
+        12682136550675316740,
+        68719478784
+      ],
+      [
+        12682136552822800388,
+        68719476736
+      ]
+    ],
+    "outcome": "LOSS",
+    "unresolved_children": [
+      [
+        1152921504612089856,
+        536871044
+      ],
+      [
+        1152921504612089856,
+        536871056
+      ],
+      [
+        1152921504612089856,
+        536871072
+      ],
+      [
+        1152921504612089856,
+        536879232
+      ],
+      [
+        1152921504612089856,
+        536887424
+      ],
+      [
+        1152921504612089856,
+        536903808
+      ],
+      [
+        1152921504612089856,
+        553648256
+      ],
+      [
+        1152921504612089857,
+        536871040
+      ],
+      [
+        1152921504612089864,
+        536871040
+      ],
+      [
+        1152921504612089872,
+        536871040
+      ],
+      [
+        1152921504612090880,
+        536871040
+      ],
+      [
+        1152921504612122624,
+        536871040
+      ],
+      [
+        1152921504612220928,
+        536871040
+      ],
+      [
+        1152921504612352000,
+        536871040
+      ],
+      [
+        1152921504612614144,
+        536871040
+      ],
+      [
+        1152921504679198720,
+        536871040
+      ],
+      [
+        1152921504880525312,
+        536871040
+      ],
+      [
+        1152921508901818368,
+        536871072
+      ],
+      [
+        1152921508901818368,
+        536879232
+      ],
+      [
+        1152921508901818368,
+        536887424
+      ],
+      [
+        1152921508901818368,
+        536903808
+      ],
+      [
+        1152921508901818368,
+        553648256
+      ],
+      [
+        1152921508901818368,
+        671088768
+      ],
+      [
+        1152921508901818368,
+        34896609408
+      ],
+      [
+        1152921517491752960,
+        536871040
+      ],
+      [
+        1152921526081687552,
+        536871040
+      ],
+      [
+        1152921642051043328,
+        536871040
+      ],
+      [
+        1224979098650017792,
+        536871040
+      ],
+      [
+        1441151885053530112,
+        536871040
+      ],
+      [
+        12682136550675316740,
+        68727865344
+      ],
+      [
+        12682136550675316740,
+        77309411328
+      ],
+      [
+        12682136550677413892,
+        68719476736
+      ],
+      [
+        12682136554970284036,
+        68719476736
+      ],
+      [
+        12682145346768338948,
+        68719476736
+      ],
+      [
+        12700150949184798724,
+        68719476736
+      ]
+    ]
+  },
+  "dispatched_rows": 7,
+  "dispatched_output_records": [
+    {
+      "key": [
+        1152921504612089856,
+        805306496
+      ],
+      "verdict": 1,
+      "nodes": 3608492,
+      "local_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\repair5-parent-b-focused15m\\s6-1152921504612089856-805306496.out.csv",
+      "sha256": "c56361a1fc917fbeb95bcf4f1d5cf9e7cbecbe3454a12f62c78331bca0d54dd7"
+    },
+    {
+      "key": [
+        1152921543261556736,
+        536871040
+      ],
+      "verdict": 2,
+      "nodes": 6158864,
+      "local_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\repair5-parent-b-focused15m\\s6-1152921543261556736-536871040.out.csv",
+      "sha256": "8b08b7cbff9acad61603d093f318f31cb391c624e1494a61147ecc35abc67ae7"
+    },
+    {
+      "key": [
+        1152921577621295104,
+        536871040
+      ],
+      "verdict": 2,
+      "nodes": 5554487,
+      "local_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\repair5-parent-b-focused15m\\s6-1152921577621295104-536871040.out.csv",
+      "sha256": "2c170d4357dccb8f2470ed14ab73d14de5e1e84d09a4d3e4d6d3d5c1ba2f662a"
+    },
+    {
+      "key": [
+        1152956688984178688,
+        536871040
+      ],
+      "verdict": 1,
+      "nodes": 2058672,
+      "local_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\repair5-parent-b-focused15m\\s6-1152956688984178688-536871040.out.csv",
+      "sha256": "b72486ded1ea0cdebcaabead5986cfada03abb4cd9ceae4769e845591cd2b389"
+    },
+    {
+      "key": [
+        1188950301631053824,
+        536871040
+      ],
+      "verdict": 2,
+      "nodes": 4835639,
+      "local_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\repair5-parent-b-focused15m\\s6-1188950301631053824-536871040.out.csv",
+      "sha256": "875a110dfca62489f23e1029a6cf96a3209673a2b25185d729f48c9a6bfb8e1c"
+    },
+    {
+      "key": [
+        12682136550675316740,
+        68719478784
+      ],
+      "verdict": 2,
+      "nodes": 6588776,
+      "local_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\repair5-parent-b-focused15m\\s6-12682136550675316740-68719478784.out.csv",
+      "sha256": "a6c6f0bdbb184150ae092152f0e052b81727da6a20075b6e2adbc04af298536c"
+    },
+    {
+      "key": [
+        12682136552822800388,
+        68719476736
+      ],
+      "verdict": 2,
+      "nodes": 6765729,
+      "local_path": "C:\\Users\\yuubi\\.codex\\worktrees\\n11-proof-boundary\\kyouen-researches\\.local\\n11\\repair5-parent-b-focused15m\\s6-12682136552822800388-68719476736.out.csv",
+      "sha256": "4775c49a0942443e79d15bc94bdc87f0c48728fd363b2f84ecbba5806d420a1d"
+    }
+  ],
+  "unsubmitted_residual_path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-focused15m-residual-s6.csv",
+  "unsubmitted_residual_sha256": "8914ac8341585bcd0eeb493e1fa561ceccf1e650a9bb0557b60b909d61e718e2",
+  "raw_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-b-focused15m-out.csv",
+  "raw_sha256": "539474c41bb91fdbe4bdc0fa3205c54fe76cdfa5ad8e69f351b483592ea31050",
+  "summary_path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-focused15m-summary.json",
+  "summary_sha256": "288bf97d6ec33a31043210805a186d42065aa35a1bf7eb54e54e009be07ec008",
+  "summary_original_local_sha256": "288bf97d6ec33a31043210805a186d42065aa35a1bf7eb54e54e009be07ec008",
+  "derived_s5_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-focused15m-derived-s5.cache",
+  "derived_s5_cache_sha256": "8a3a0aca67b41650d2f304495cf478eb5eb9eaa1fc23f8d622b67fc607872908"
+}

@@ -1,0 +1,152 @@
+{
+  "schema": "n11-next12-model8-execution-archive-v1",
+  "command": "uv run --locked python research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver build/n11/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/next12-model8.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-s5.cache --out-dir .local/n11/next12-model8-run --workers 4 --budget 15000000",
+  "solver_path": "build/n11/dfpn.exe",
+  "solver_sha256": "d9a13f26f7ada3b2030e93370b6412588193624348874d463b7d60bad13ca0bf",
+  "targets_path": "research/experiments/n11-boundary-recovery-20261006/output/next12-model8.csv",
+  "targets_sha256": "f8dbb8076865923914257386613d499fbd2ef57a7db5ccf5b2d410d7d1f4fcfe",
+  "baseline_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/post-parent-b-expanded-s5.cache",
+  "baseline_cache_sha256": "b365d54f08b7305bdfb4e02a6e589ee092a7cb9b0b768e92c0215e135203a6fc",
+  "saved_s6_audit_path": "research/experiments/n11-boundary-recovery-20261006/output/repair5-parent-b-final34-s6-audit.json",
+  "saved_s6_audit_sha256": "1d0c6104b3de3c5f1c8fa2197ef0b661f066ee865fb68863fe7fca6720e5955e",
+  "workers": 4,
+  "budget": 15000000,
+  "boundary_scope": "supplied targets only",
+  "class_status": "UNKNOWN",
+  "targets": 8,
+  "scheduled": 8,
+  "not_dispatched": [],
+  "existing_exact": 0,
+  "existing_cache_exact": 0,
+  "new_exact": 3,
+  "new_loss": 3,
+  "new_win": 0,
+  "unknown": 5,
+  "nodes_new": 89665110,
+  "nodes_existing": 0,
+  "nodes_total": 89665110,
+  "unresolved_keys": [
+    [
+      1152921513197830144,
+      603979776
+    ],
+    [
+      1152921513197830176,
+      536870912
+    ],
+    [
+      1152921513197895680,
+      536870912
+    ],
+    [
+      1152922612709457920,
+      536870912
+    ],
+    [
+      1152930300699873280,
+      536870976
+    ]
+  ],
+  "row_records": [
+    {
+      "key": [
+        1152921513197830144,
+        536936448
+      ],
+      "verdict": 2,
+      "nodes": 2118972,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1152921513197830144-536936448.out.csv",
+      "output_sha256": "192923bf80440596f36affc7ab66db2b66e2894244fdd72825ba011b295551ac"
+    },
+    {
+      "key": [
+        1152921513197830144,
+        603979776
+      ],
+      "verdict": 0,
+      "nodes": 15000000,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1152921513197830144-603979776.out.csv",
+      "output_sha256": "8f9da324a94428be3c32e7cba5696864dde38a64ac6ff056677b23c18cc0e20a"
+    },
+    {
+      "key": [
+        1152921513197830176,
+        536870912
+      ],
+      "verdict": 0,
+      "nodes": 15000000,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1152921513197830176-536870912.out.csv",
+      "output_sha256": "9e70bd72ec9bbe652f89b8f2b96025b02d1697a0f7f674f9afedfe38f9a592b8"
+    },
+    {
+      "key": [
+        1152921513197895680,
+        536870912
+      ],
+      "verdict": 0,
+      "nodes": 15000000,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1152921513197895680-536870912.out.csv",
+      "output_sha256": "4bded0fe31736ec831e43710e2eed45c7eb7715c55c3e4aaabce2cece70e92fe"
+    },
+    {
+      "key": [
+        1152921788075737088,
+        536870912
+      ],
+      "verdict": 2,
+      "nodes": 8556980,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1152921788075737088-536870912.out.csv",
+      "output_sha256": "8e57a72542937b55011a09eb580b7dd3f5e37ce153255272b4043f7a1f72b6c2"
+    },
+    {
+      "key": [
+        1152922612709457920,
+        536870912
+      ],
+      "verdict": 0,
+      "nodes": 15000000,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1152922612709457920-536870912.out.csv",
+      "output_sha256": "af43f23bbd4d1e3ceefdfa6e2a49c779765d616a6321f48199f729fba212e7c8"
+    },
+    {
+      "key": [
+        1152930300699873280,
+        536870976
+      ],
+      "verdict": 0,
+      "nodes": 15000000,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1152930300699873280-536870976.out.csv",
+      "output_sha256": "69bb7322a0f62c9bf2fa1bc6929c2daa3c6a248b59e65876af2a985ae967c977"
+    },
+    {
+      "key": [
+        1729391053003296768,
+        536870912
+      ],
+      "verdict": 2,
+      "nodes": 3989158,
+      "local_output_path": ".local\\n11\\next12-model8-run\\s5-1729391053003296768-536870912.out.csv",
+      "output_sha256": "46b07dbdfd5221dcf61b83832e3d4c52a07e4257cd4ebfe9ced1fb0abfab6289"
+    }
+  ],
+  "raw_out_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-model8-out.csv",
+  "raw_out_sha256": "03cc7b1bbac4be90602171b4835f811eea42859aecfbd65a0e02cc6e04092ec8",
+  "summary_path": "research/experiments/n11-boundary-recovery-20261006/output/next12-run-model8-summary.json",
+  "summary_sha256": "8dbe4c02fdca7eef99dfbd0fea1546dcf9d9e307aa2dbf15d82569a39d0f0099",
+  "summary_original_local_sha256": "714f8083c60948dd241dfa646485c7856948e054dbd089b576a42642b2e2df0a",
+  "full_hard_targets_path": "research/experiments/n11-boundary-recovery-20261006/output/next12-run-hard-s5.csv",
+  "full_hard_targets_sha256": "cdc0dec08860dc930eab6a827f73fdf6c80ce928aea5e52d6982a32288c27aa3",
+  "full_hard_target_count": 105,
+  "probe_unknown_targets_path": "research/experiments/n11-boundary-recovery-20261006/output/next12-run-model8-hard-s5.csv",
+  "probe_unknown_targets_sha256": "f20ac7ffe758df5ce82fd415966f40997509d18193dbd8d7f5f828fac16ed86c",
+  "probe_unknown_target_count": 5,
+  "new_exact_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/next12-run-model8-new-exact-s5.cache",
+  "new_exact_cache_sha256": "8c0e4317603b6aa35a5459625fa56085f18c15fb0b422ce2e3f6594f2666fdb4",
+  "model_metadata_path": "research/experiments/n11-boundary-recovery-20261006/output/next12-model8.json",
+  "model_metadata_original_sha256": "023fbb9de8c20c8092cf8ff3d477c7524dd6492c60be0214f4c68a66449e13a6",
+  "model_metadata_updated_sha256": "fe3f4847d0a4a649091167cea6fe1c16c6c5c4bd98be4a33f82a740ab17b4be8",
+  "execution_fields_updated_only": [
+    "execution_status",
+    "solver_invoked"
+  ]
+}
