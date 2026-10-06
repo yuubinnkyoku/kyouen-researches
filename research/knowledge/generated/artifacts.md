@@ -651,6 +651,24 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/next12-run-parent-win-independent-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next12-run-parent-win-independent-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): independent geometry and replay legality audit of the saved 91-child parent WIN; not an independent reproof of solver values
+## [research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-independent-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-independent-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): independent geometry, source, legal-count, AND-polarity and boundary audit for six saved exact probe rows
+## [research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-new-exact-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-new-exact-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): six new exact verdicts for next13 probes
+## [research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): next13 saved-probe source hashes and provenance
+## [research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next13-run-model8-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): six completed exact probes, 3 WIN and 3 LOSS; two scheduled probes were not dispatched
+## [research/experiments/n11-boundary-recovery-20261006/output/next13-saved-s6-derived-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/next13-saved-s6-derived-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): exact s5 LOSS parents derived from saved s6 sources
+## [research/experiments/n11-boundary-recovery-20261006/output/next13-saved-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/next13-saved-s6-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): saved s6 source audit and LOSS-only s5 parent derivation summary
 ## [research/experiments/n11-boundary-recovery-20261006/output/next2-boundary-verification.log](../../../research/experiments/n11-boundary-recovery-20261006/output/next2-boundary-verification.log)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (log): class geometryのcanonical 100子とcoverage 56,64,90,96の検査結果
@@ -987,6 +1005,30 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-next12-expanded-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next12-expanded-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): final expanded cache with 4,257 exact s5 keys
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-best-class.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-best-class.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): ranked 57-child boundary with six known LOSS and 51 UNKNOWN
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): finite class counts and dual-tight minimum cover under current cache
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): current ranked class and finite boundary summary
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): final receipt with 92 WIN, 4,171 LOSS, and zero conflicts
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): finite UNKNOWN-class repair estimates under current cache
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-expanded-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): current expanded cache with 4,263 exact s5 keys
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-finite-independent-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-finite-independent-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): independent arithmetic audit of all class statuses, secured coverage, four-class cover and rational dual
+## [research/experiments/n11-boundary-recovery-20261006/output/post-next13-repair.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next13-repair.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): selected finite repair targets
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-next2-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-next2-cardinality.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 2,822-entry checkpointでのclass数、secured vertices、minimum coverとdual
@@ -1305,6 +1347,9 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-model8-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-model8-out.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): eight saved exact replay rows for next12 model probes
+## [research/experiments/n11-boundary-recovery-20261006/output/raw/next13-run-model8-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/next13-run-model8-out.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): six saved exact next13 replay rows; 57,081,707 nodes
 ## [research/experiments/n11-boundary-recovery-20261006/output/raw/next2-completion82-out.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/raw/next2-completion82-out.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 残る82件の保存済みexact replay CSV
