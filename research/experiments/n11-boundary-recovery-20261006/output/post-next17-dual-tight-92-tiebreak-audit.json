@@ -1,0 +1,53 @@
+{
+  "schema": "n11-post-next17-dual-tight-92-tiebreak-audit-v1",
+  "scope": "Scheduling proof only. No UNKNOWN s4 class is promoted to LOSS and no solver verdict is inferred.",
+  "root": [60, 27],
+  "source_bindings": {
+    "repair_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-repair.json",
+    "repair_blob_sha": "fb22ad123b0d221ea1206bddb761d3942696ed3b",
+    "ranking_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-ranking.json",
+    "ranking_blob_sha": "1a7a56b347ee10a47c43081fe65d4afbc29738d1",
+    "dual_priority_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-repair-priority-audit.json",
+    "dual_priority_blob_sha": "84e9a2be33cacecdfdd54d23100335a73fc6234a"
+  },
+  "equal_certified_cover_benefit": {
+    "minimum_additional_classes_before": 3,
+    "minimum_additional_classes_after_successful_loss_closure": 2,
+    "rationale": "The bound 3->2 for either candidate is already proved by the bound source audit; this file only breaks the 92-vs-92 scheduling tie."
+  },
+  "candidates": [
+    {
+      "key": [10376293541461626880, 131072],
+      "all_s5": 103,
+      "known_loss_s5": 11,
+      "unknown_s5": 92,
+      "min_unknown_legal": 75,
+      "max_unknown_legal": 102,
+      "dual_vertex": 100
+    },
+    {
+      "key": [10452854735126921216, 0],
+      "all_s5": 95,
+      "known_loss_s5": 3,
+      "unknown_s5": 92,
+      "min_unknown_legal": 74,
+      "max_unknown_legal": 92,
+      "dual_vertex": 104
+    }
+  ],
+  "tiebreak": {
+    "primary_metric": "unknown_s5",
+    "primary_tie": true,
+    "secondary_metric": "max_unknown_legal",
+    "preferred_key": [10452854735126921216, 0],
+    "secondary_value_preferred": 92,
+    "secondary_value_other": 102,
+    "reduction": 10,
+    "reduction_fraction": 0.09803921568627451,
+    "claim": "Both candidates have exactly 92 unresolved canonical s5 children and the same certified one-unit cover decrement on successful LOSS closure. The preferred candidate has a strictly smaller maximum legal-move count among those unresolved children (92 versus 102). This is a deterministic structural scheduling tiebreak, not a solver-node or wall-time guarantee."
+  },
+  "status": {
+    "root_60_27": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}
