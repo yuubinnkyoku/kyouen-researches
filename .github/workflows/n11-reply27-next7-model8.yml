@@ -1,0 +1,57 @@
+name: N11 reply27 next7 model8 probe
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-next7-model8.yml"
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build exact solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Exact replay next7 model8
+        run: |
+          test "$(grep -vc '^#' research/experiments/n11-boundary-recovery-20261006/output/next7-model8.csv)" -eq 8
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 \
+              --exact-replay=research/experiments/n11-boundary-recovery-20261006/output/next7-model8.csv \
+              --only=5 --exact-replay-budget=15000000 --exact-order=count \
+              --csv=/tmp/out.csv
+          cat /tmp/time
+          ! grep -q '^replay_error,' /tmp/out.csv
+          python - <<'PY'
+          import csv,json
+          hist={0:0,1:0,2:0}; exact={}; nodes=0
+          with open("/tmp/out.csv",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0]!="replay": continue
+                  k=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                  hist[v]+=1; nodes+=n
+                  if v in (1,2): exact[k]=v
+          assert sum(hist.values())==8,hist
+          print("NEXT7_MODEL8_COUNTS",hist)
+          print("NEXT7_MODEL8_TOTAL_NODES",nodes)
+          print("NEXT7_MODEL8_DECISION",
+                "CLASS_WIN_FORBIDDEN" if hist[1] else
+                ("ALL8_LOSS" if hist[0]==0 else "INCONCLUSIVE"))
+          with open("/tmp/next7-model8.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 next7 model8; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(exact.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          json.dump({"counts":hist,"nodes":nodes},open("/tmp/result.json","w"),indent=2)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next7-model8-proof
+          path: |
+            /tmp/out.csv
+            /tmp/next7-model8.cache
+            /tmp/result.json
+            /tmp/time
