@@ -1,0 +1,61 @@
+{
+  "schema": "n11-next17-independent-geometry-audit-v1",
+  "outcome_provenance": "Saved exact solver values are trusted; source bytes, legal counts, canonical safety, AND polarity, complete class boundary and cache delta independently checked. Not an independent reproof of solver values.",
+  "class_key": [
+    1298162592589545480,
+    0
+  ],
+  "complete_s5_children": 110,
+  "baseline_known_loss": 8,
+  "baseline_unknown": 102,
+  "probes": 8,
+  "completed_exact": 8,
+  "WIN": 0,
+  "LOSS": 8,
+  "UNKNOWN": 0,
+  "nodes": 54975108,
+  "baseline_overlap": 0,
+  "conflicts": 0,
+  "supplied_target_status": "LOSS",
+  "class_status": "UNKNOWN",
+  "witness_keys": [],
+  "not_dispatched": [],
+  "source_receipt": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next17-run-model8-sources.json",
+    "sha256": "f846c9b07acd1fe9225cbf83c556af02150df4d343de7b0a5683a1cbce4f71af"
+  },
+  "checked_sources": [
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-s5.cache",
+      "sha256": "ddc997e18480ed9ceb669148dcc46166eae1bb6ae9ec08d07e4954d6aa91c081"
+    },
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-model8.json",
+      "sha256": "1eb29b77b4cff8f8e36ffbecd6cf2abb21398c8617cfb87f3eae265acb69e600"
+    },
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-run-model8-new-exact-s5.cache",
+      "sha256": "b82c03c945f67b7e862c707596b9043788a7ce37da2cfc68fa531936984429bc"
+    },
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/raw/next17-run-model8-out.csv",
+      "sha256": "c9cc8c66131cece6353eeab1902b50a1bc6b8da81e1b359d1a837e2ee0f0b835"
+    },
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next15-expanded-s6-audit.json",
+      "sha256": "b132b6902678fab8af30986f78407059a1e833665a397afdc63a35d13a886e38"
+    },
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-saved-s6-summary.json",
+      "sha256": "4716029a357c9a88ea8c0c3cb296de0c8e44df4e32aab44e66aa96948516a391"
+    },
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-run-model8-summary.json",
+      "sha256": "b96b0adc5464e030e136ca64cc67a6f9ca823845601d258be241a9a06da5ceac"
+    },
+    {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-model8.csv",
+      "sha256": "a82e5c17d870ec47e0e0cff6f59b7d2ddc5c450be5e2f9edc79ec6df787ceb45"
+    }
+  ]
+}

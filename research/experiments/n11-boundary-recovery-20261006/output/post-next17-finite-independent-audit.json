@@ -1,0 +1,35 @@
+{
+  "schema": "n11-next17-finite-snapshot-independent-check-v1",
+  "scope": "Exact arithmetic verification of supplied finite class statuses, selected cover and rational dual using the previously audited validated geometry index. UNKNOWN selected classes are scheduling targets only.",
+  "cache_path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-expanded-s5.cache",
+  "cache_sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c",
+  "cache_entries": 4515,
+  "delta_exact": 127,
+  "cache_counts": {
+    "WIN": 97,
+    "LOSS": 4418
+  },
+  "class_status_counts": {
+    "UNKNOWN": 3180,
+    "WIN": 175,
+    "LOSS": 29
+  },
+  "secured_vertices": 113,
+  "remaining_vertices": [
+    38,
+    77,
+    87,
+    100,
+    104,
+    108
+  ],
+  "selected_class_count": 3,
+  "rational_dual_total": "3",
+  "all_usable_class_dual_weights_le_one": true,
+  "selected_cover_complete": true,
+  "best_key": [
+    1585267068834414720,
+    0
+  ],
+  "best_unknown": 99
+}

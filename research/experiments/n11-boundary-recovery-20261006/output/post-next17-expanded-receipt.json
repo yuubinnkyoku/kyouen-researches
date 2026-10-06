@@ -1,0 +1,104 @@
+{
+  "adaptive_run": {
+    "nodes": 190725964,
+    "parent_status_counts": {
+      "LOSS": 5,
+      "UNKNOWN": 0,
+      "WIN": 0
+    },
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-adaptive15m-sources.json",
+    "rows": 214,
+    "saved_unknown_rows_eligible_for_retry": 0,
+    "sha256": "c51a10f59e64ec4c13760ebc40d029a0b890336fac881ceba7c7ad5bf0400ba9",
+    "unresolved_boundary_count": 276
+  },
+  "conflicts": 0,
+  "finite_frontier": {
+    "best_class": [
+      1585267068834414720,
+      0
+    ],
+    "best_class_csv": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-best-class.csv",
+      "sha256": "34a6a64e31cf0ecd22b146e20b376194f53778d2866849aa2c1df1c04028b6ec"
+    },
+    "cardinality": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-cardinality.json",
+      "sha256": "be1213dd622557f75c96315b5a0665d23b6ea8eb1a043b67d9859741b35e77ef"
+    },
+    "counts": {
+      "LOSS": 29,
+      "UNKNOWN": 3180,
+      "WIN": 175,
+      "minimum_additional_classes": 3,
+      "secured_vertices": 113
+    },
+    "ranking": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-ranking.json",
+      "sha256": "52c57efeeebbe748b6dcde5f89003060ac6dc16036ff0800f2b1ec42da77f038"
+    },
+    "repair": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-repair.json",
+      "sha256": "97ee628ae41cc51743c09762ecbbc55f2c642bcb061f67a7b33bf5d7677d91fa"
+    },
+    "repair_csv": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-repair.csv",
+      "sha256": "2c91bb74506d30a2670174cafbc9ac36d9f66640032a4cc83e0bf49604440c9a"
+    }
+  },
+  "full_class_verification": {
+    "all_loss": true,
+    "canonical_s5_children": 110,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-full110-class-verification.json",
+    "sha256": "4333c8517a5ab9cc10f7725261978c0201fcc7b7ef3f42bddbaefca4017e35a1"
+  },
+  "loss": 4418,
+  "merged_cache": {
+    "line_endings": "LF",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-s5.cache",
+    "rows": 4515,
+    "sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c"
+  },
+  "s6_reverse_audit": {
+    "new_s5_loss_rows": 30,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-expanded-s6-audit.json",
+    "s6_loss_unique": 147,
+    "s6_unique": 2648,
+    "s6_unknown_only_unique": 46,
+    "s6_win_unique": 2455,
+    "sha256": "77d86d73b76c8abbef388e95ae48c4fe4b1618cae5dc2f71b3d08e9ff62951ae",
+    "sources": 37
+  },
+  "sources": [
+    {
+      "counts": {
+        "1": 97,
+        "2": 4388
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-run-post-completion-s5.cache",
+      "rows": 4485,
+      "sha256": "6f121d3629be67b1c0eee650e6c2467b6e480c6128f2d83fc02f396d0b9812b6"
+    },
+    {
+      "counts": {
+        "2": 30
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-expanded-s6-derived-s5.cache",
+      "rows": 30,
+      "sha256": "03dc128f477045a0430fdf5725f853d0bc58c68c4103f2fee159431ee115483f"
+    },
+    {
+      "counts": {
+        "2": 5
+      },
+      "nodes": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-adaptive15m-derived-s5.cache",
+      "rows": 5,
+      "sha256": "4032c8a1b35509ebaad1aca7ce299e5f199cb1d57d9bd02667d2eb55db989f23"
+    }
+  ],
+  "unique_exact_s5": 4515,
+  "win": 97
+}

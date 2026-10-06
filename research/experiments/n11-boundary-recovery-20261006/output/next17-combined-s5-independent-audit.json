@@ -1,0 +1,80 @@
+{
+  "schema": "n11-next17-combined-s5-independent-audit-v1",
+  "scope": "Archived solver values are inputs; independent source SHA, direct geometry, AND polarity, budget and complete target partition audit. No independent solver reproof.",
+  "class_key": [
+    1298162592589545480,
+    0
+  ],
+  "full_children": 110,
+  "full_counts": {
+    "LOSS": 105,
+    "UNKNOWN": 5,
+    "WIN": 0
+  },
+  "class_status": "UNKNOWN",
+  "raw_rows": 101,
+  "new_exact": 97,
+  "new_counts": {
+    "LOSS": 97,
+    "UNKNOWN": 4,
+    "WIN": 0
+  },
+  "nodes": 711160522,
+  "source_hash_bindings": 321,
+  "segments": [
+    {
+      "prefix": "next17-run-model8",
+      "raw_sha256": "c9cc8c66131cece6353eeab1902b50a1bc6b8da81e1b359d1a837e2ee0f0b835",
+      "rows": 8,
+      "counts": {
+        "2": 8
+      },
+      "nodes": 54975108
+    },
+    {
+      "prefix": "next17-completion93",
+      "raw_sha256": "2d012aa42ff1ad34f8801d82a26cd4380e4bae092cbb352fad485e70e145796c",
+      "rows": 93,
+      "counts": {
+        "2": 89,
+        "0": 4
+      },
+      "nodes": 656185414
+    }
+  ],
+  "prior_hard_never_retried": [
+    [
+      1586392968741257224,
+      0
+    ]
+  ],
+  "hard_keys": [
+    [
+      1152921517625966592,
+      64
+    ],
+    [
+      1153202979583558144,
+      536879104
+    ],
+    [
+      1298444067566256136,
+      0
+    ],
+    [
+      1298725542542966792,
+      0
+    ],
+    [
+      1586392968741257224,
+      0
+    ]
+  ],
+  "partial_cache_entries": 4485,
+  "partial_cache_counts": {
+    "WIN": 97,
+    "LOSS": 4388
+  },
+  "baseline_overlap": 0,
+  "conflicts": 0
+}

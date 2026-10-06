@@ -1,0 +1,121 @@
+{
+  "boundary_receipt": {
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s6-boundary-receipt.json",
+    "sha256": "f43515c5a7e21f54df46115f26dcbd6d95d919cd2276657217e4d87fcc2d37a4"
+  },
+  "counts": {
+    "baseline_known_loss": 8,
+    "combined_loss": 105,
+    "combined_unknown": 5,
+    "combined_win": 0,
+    "fresh93_loss": 89,
+    "fresh93_unknown": 4,
+    "prior_historical_unknown": 1,
+    "probe8_loss": 8
+  },
+  "fresh93_summary": {
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-completion93-summary.json",
+    "sha256": "4bb8e7e2e8759ccf3b95cd03e674ded7ea21e5aaac328ff306a1e667fb9bcf9e",
+    "unknown_keys": [
+      [
+        1152921517625966592,
+        64
+      ],
+      [
+        1153202979583558144,
+        536879104
+      ],
+      [
+        1298444067566256136,
+        0
+      ],
+      [
+        1298725542542966792,
+        0
+      ]
+    ]
+  },
+  "hard_targets": {
+    "all_unknown_in_partial_cache": true,
+    "keys": [
+      [
+        1586392968741257224,
+        0
+      ],
+      [
+        1298725542542966792,
+        0
+      ],
+      [
+        1298444067566256136,
+        0
+      ],
+      [
+        1152921517625966592,
+        64
+      ],
+      [
+        1153202979583558144,
+        536879104
+      ]
+    ],
+    "order_preserves_original102": true,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s5.csv",
+    "rows": 5,
+    "sha256": "f46706f57af3f7579b9c68ac2fd157c7ce3cd9eeb2870025edbfdbad0c664309"
+  },
+  "partial_exact_cache": {
+    "line_endings": "LF",
+    "loss": 4388,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-run-post-completion-s5.cache",
+    "rows": 4485,
+    "sha256": "6f121d3629be67b1c0eee650e6c2467b6e480c6128f2d83fc02f396d0b9812b6",
+    "win": 97
+  },
+  "prior_unknown_audit": {
+    "key": [
+      1586392968741257224,
+      0
+    ],
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-prior-s5-unknown-audit.json",
+    "same_budget": 15000000,
+    "same_budget_retry": false,
+    "sha256": "489ecc91a8ece84784a2e4ef99d23e5c440394f3c776d01f32a75a40caa48fa7"
+  },
+  "s6_boundary": {
+    "meta_path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s6-meta.json",
+    "meta_sha256": "33a8790f8b9ddbabc6430b8c085571870e9601a45c3d823daae0c069118a1f7d",
+    "parent_child_relations": 503,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s6-boundary.csv",
+    "sha256": "58dafb3055d4dcc81b7cd5b2a7964ce591e605919cc36d856071f5b67c735c8d",
+    "status_counts": {
+      "LOSS": 0,
+      "UNKNOWN_only": 0,
+      "UNSEEN": 490,
+      "WIN": 3
+    },
+    "unique_children": 493
+  },
+  "saved_s6_target_audit": {
+    "conflicts": 0,
+    "derived_cache_path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-saved-s6-derived-s5.cache",
+    "derived_cache_sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+    "new_exact": 0,
+    "outcomes": {
+      "UNKNOWN": 5
+    },
+    "parents": 5,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-saved-s6-summary.json",
+    "sha256": "4e6aeee9e07a6a69c2b64f1be95bd0bcda1fd0b6dcb8e711fbc1a4217ca23b6b",
+    "source_audit_path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next15-expanded-s6-audit.json",
+    "source_audit_sha256": "b132b6902678fab8af30986f78407059a1e833665a397afdc63a35d13a886e38",
+    "source_files": 36
+  },
+  "schema": "n11-next17-hard5-preparation-v1",
+  "scope": "Five currently unresolved s5 targets from the frozen next17 class: four fresh15M UNKNOWN and one historical15M UNKNOWN excluded from same-budget s5 retry. This is an s6 boundary handoff input, not a solver run.",
+  "source_class_targets": {
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-best-class.csv",
+    "rows": 102,
+    "sha256": "511dbcd679079f665e5755fca31eeb345fa4a571eb9a18d7d5ae443cc01442ff"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "archived_raw": {
+    "bytes": 486,
+    "line_endings": "LF",
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/raw/next17-run-model8-out.csv",
+    "rows": 8,
+    "sha256": "c9cc8c66131cece6353eeab1902b50a1bc6b8da81e1b359d1a837e2ee0f0b835"
+  },
+  "archived_summary": {
+    "bytes": 806,
+    "line_endings": "LF",
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-run-model8-summary.json",
+    "sha256": "b96b0adc5464e030e136ca64cc67a6f9ca823845601d258be241a9a06da5ceac"
+  },
+  "boundary_scope": "the eight supplied top-ranked targets only; these eight are LOSS, but full class remains unresolved pending fresh93 and prior-hard1.",
+  "class_status": "LOSS",
+  "execution": {
+    "budget": 15000000,
+    "completed_exact": 8,
+    "dispatch_stopped_after_win": false,
+    "existing_exact_reused": 0,
+    "loss": 8,
+    "nodes": 54975108,
+    "not_dispatched": [],
+    "per_root": [
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 60,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1152922612842627072-64.input.csv",
+          "sha256": "fd9ee492416ddaf6ef4f5c111831a7a865d9f3891874da0076d1532bbdf1e36f"
+        },
+        "key": [
+          1152922612842627072,
+          64
+        ],
+        "legal": 83,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1152922612842627072-64.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 8026955,
+        "out": {
+          "bytes": 277,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1152922612842627072-64.out.csv",
+          "sha256": "ed5ede461f642dfc00664706aaa0881659a07594bb665e34f975755733e1f8a7"
+        },
+        "verdict": 2
+      },
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 61,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1152930300834086912-264.input.csv",
+          "sha256": "414ce8a9b6af9a498e2f808abdf1d290e913dcc6a822e3f8bf0c41975ec967fb"
+        },
+        "key": [
+          1152930300834086912,
+          264
+        ],
+        "legal": 90,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1152930300834086912-264.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 5425453,
+        "out": {
+          "bytes": 278,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1152930300834086912-264.out.csv",
+          "sha256": "1e423db24649d2fa85633ec41c258271344e90621b04def7beeb64b395ae4c35"
+        },
+        "verdict": 2
+      },
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 59,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1298303330077900808-0.input.csv",
+          "sha256": "6e1cb20c053acc53d94dff285ca1d93b6955e08600466de7a42e70479a4c923a"
+        },
+        "key": [
+          1298303330077900808,
+          0
+        ],
+        "legal": 91,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1298303330077900808-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 8778445,
+        "out": {
+          "bytes": 276,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1298303330077900808-0.out.csv",
+          "sha256": "7d9fc6c1e4bf873267a042175ef52c1d885008ca18273c1ff9756f51e7af5542"
+        },
+        "verdict": 2
+      },
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 59,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-5909848611016933384-0.input.csv",
+          "sha256": "3081e4b12afc135914537c64388d82bbff43ec9402bddef6da7fdcebdea4c477"
+        },
+        "key": [
+          5909848611016933384,
+          0
+        ],
+        "legal": 93,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-5909848611016933384-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 3582077,
+        "out": {
+          "bytes": 276,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-5909848611016933384-0.out.csv",
+          "sha256": "39c4ac3d5a0c867b92c4aaa58d5c37734aa45f55a3697310beacfae836f42cb7"
+        },
+        "verdict": 2
+      },
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 60,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-10448632610476261504-0.input.csv",
+          "sha256": "dd309f06d7ec905f13cbdc77a8b550567e56feaf602887c94799fa306cd285fa"
+        },
+        "key": [
+          10448632610476261504,
+          0
+        ],
+        "legal": 93,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-10448632610476261504-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 7921552,
+        "out": {
+          "bytes": 277,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-10448632610476261504-0.out.csv",
+          "sha256": "32efdabe9025a9a22c119873aa1d7cc76584ff774fe74eeda73e22a78edc420c"
+        },
+        "verdict": 2
+      },
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 59,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-3604005601803239432-0.input.csv",
+          "sha256": "9ead5efb62c51c37efc6974057246cbad0346af9e094c5eaf013cd15e0d91312"
+        },
+        "key": [
+          3604005601803239432,
+          0
+        ],
+        "legal": 97,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-3604005601803239432-0.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 8303564,
+        "out": {
+          "bytes": 276,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-3604005601803239432-0.out.csv",
+          "sha256": "6c15354f3b8df541d1a4442342b9cabd3ce530ba4e5f1c8515a3400b4f6d5636"
+        },
+        "verdict": 2
+      },
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 60,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1154047413237841920-64.input.csv",
+          "sha256": "ea5e5c54c9accd246a0e473e9d9d3c26da4a4d1ebc24b49678cc22cbcc34c81d"
+        },
+        "key": [
+          1154047413237841920,
+          64
+        ],
+        "legal": 94,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1154047413237841920-64.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 5589466,
+        "out": {
+          "bytes": 277,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-1154047413237841920-64.out.csv",
+          "sha256": "db0f5d46f73b87d9ff980f0c5e8ed42091c10aafd84d6b708477d3967b8cff6b"
+        },
+        "verdict": 2
+      },
+      {
+        "budget": 15000000,
+        "input": {
+          "bytes": 60,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-3458764522544693248-64.input.csv",
+          "sha256": "466c2a871c9b131535cd7e4b23afe6781234bd42768a795be1cd2ed43a7bc7ca"
+        },
+        "key": [
+          3458764522544693248,
+          64
+        ],
+        "legal": 94,
+        "log": {
+          "bytes": 0,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-3458764522544693248-64.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "nodes": 7347596,
+        "out": {
+          "bytes": 277,
+          "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/s5-3458764522544693248-64.out.csv",
+          "sha256": "b070a17cefe8a6ae4bebec9c9970c0d16003e5e8c8c63cee701fa661b396be58"
+        },
+        "verdict": 2
+      }
+    ],
+    "scheduled": 8,
+    "unknown": 0,
+    "unresolved": [],
+    "win": 0,
+    "workers": 4
+  },
+  "inputs": {
+    "cache": {
+      "loss": 4291,
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-s5.cache",
+      "rows": 4388,
+      "sha256": "ddc997e18480ed9ceb669148dcc46166eae1bb6ae9ec08d07e4954d6aa91c081",
+      "win": 97
+    },
+    "manifest": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-model8.json",
+      "sha256": "1eb29b77b4cff8f8e36ffbecd6cf2abb21398c8617cfb87f3eae265acb69e600"
+    },
+    "partition": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-completion-partition.json",
+      "sha256": "98edcb5e7a956429a6b2eecd9ecff07a33f395985bdec202fbe8a331b7473228"
+    },
+    "targets": {
+      "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-model8.csv",
+      "rows": 8,
+      "sha256": "a82e5c17d870ec47e0e0cff6f59b7d2ddc5c450be5e2f9edc79ec6df787ceb45"
+    }
+  },
+  "new_exact_cache": {
+    "bytes": 436,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/research/experiments/n11-boundary-recovery-20261006/output/next17-run-model8-new-exact-s5.cache",
+    "rows": 8,
+    "sha256": "b82c03c945f67b7e862c707596b9043788a7ce37da2cfc68fa531936984429bc",
+    "source_path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/cache-out/new-exact-s5.cache",
+    "source_sha256": "b82c03c945f67b7e862c707596b9043788a7ce37da2cfc68fa531936984429bc"
+  },
+  "original_summary": {
+    "bytes": 837,
+    "path": "C:/Users/yuubi/.codex/worktrees/n11-proof-boundary/kyouen-researches/.local/n11/next17-model8-run/summary.json",
+    "sha256": "ea413338b7f928b1fcd6d247669e56363bac2641e7e46f1be1b07bf051d706f7"
+  },
+  "schema": "n11-next17-model8-run-sources-v1",
+  "solver_command": "uv run --locked python research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver build/n11/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/next17-model8.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-next16-expanded-s5.cache --out-dir .local/n11/next17-model8-run --workers 4 --budget 15000000"
+}
