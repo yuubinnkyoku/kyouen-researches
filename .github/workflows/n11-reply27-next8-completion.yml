@@ -1,0 +1,209 @@
+name: N11 reply27 next8 completion
+
+on:
+  push:
+    paths:
+      - ".github/workflows/n11-reply27-next8-completion.yml"
+  workflow_dispatch:
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Merge next7 exact cache and materialize next8 boundary
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/merge_exact_s5_evidence.py \
+            --cache research/experiments/n11-boundary-recovery-20261006/output/post-next6-s5.cache \
+            --cache research/experiments/n11-boundary-recovery-20261006/output/next7-exact-s5.cache \
+            --out /tmp/post-next7-s5.cache --summary-out /tmp/post-next7-merge.json
+          python - <<'PY'
+          import csv,sys
+          sys.path.insert(0,"research/experiments/n11-frontier-selection-20261005/scripts")
+          import reply27_selected31_repair as R
+          target=(1297599642636648448,0)
+          cache={}
+          with open("/tmp/post-next7-s5.cache",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0].startswith("#"): continue
+                  cache[(int(r[1]),int(r[2]))]=int(r[4])
+          _,_,_,children=R.build_geometry()
+          boundary=children[target]
+          unknown=sorted(k for k in boundary if k not in cache)
+          vals=[cache.get(k,0) for k in boundary]
+          assert len(boundary)==106, len(boundary)
+          assert sum(v==2 for v in vals)==9, {v:vals.count(v) for v in (0,1,2)}
+          assert sum(v==1 for v in vals)==0
+          assert len(unknown)==97, len(unknown)
+          def occ(k):
+              lo,hi=k
+              return {i for i in range(64) if lo>>i&1} | {64+i for i in range(64) if hi>>i&1}
+          with open("/tmp/next8-all.csv","w") as f:
+              for i,(lo,hi) in enumerate(unknown):
+                  legal=len(R.legal_after(occ((lo,hi))))
+                  f.write(f"reply27-next8,{i},5,{lo},{hi},{legal},0,0,0,0,0\n")
+          print("NEXT8_PREP",len(boundary),sum(v==2 for v in vals),len(unknown))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next8-input
+          path: |
+            /tmp/next8-all.csv
+            /tmp/post-next7-s5.cache
+            /tmp/post-next7-merge.json
+
+  solve:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3, 4, 5, 6, 7]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-next8-input
+          path: /tmp/input
+      - name: Build solver
+        run: |
+          c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers \
+            cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/dfpn
+      - name: Materialize shard
+        run: |
+          awk -v s=${{ matrix.shard }} '((NR-1)%8)==s {print}' /tmp/input/next8-all.csv > /tmp/targets.csv
+          test -s /tmp/targets.csv
+      - name: Cold exact replay
+        run: |
+          /usr/bin/time -f 'wall_s=%e' -o /tmp/time \
+            /tmp/dfpn --n=11 --memo=22 --exact-replay=/tmp/targets.csv --only=5 \
+              --exact-replay-budget=15000000 --exact-order=count --csv=/tmp/out.csv
+          cat /tmp/time
+          grep '^replay,' /tmp/out.csv
+          ! grep -q '^replay_error,' /tmp/out.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next8-${{ matrix.shard }}
+          path: |
+            /tmp/targets.csv
+            /tmp/out.csv
+            /tmp/time
+
+  verify:
+    needs: solve
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: reply27-next8-input
+          path: /tmp/input
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: reply27-next8-*
+          path: /tmp/proof
+          merge-multiple: false
+      - name: Install optimizer dependency
+        run: python -m pip install --quiet scipy
+      - name: Verify, merge and classify next8
+        run: |
+          python - <<'PY'
+          import csv,glob,json,sys
+          sys.path.insert(0,"research/experiments/n11-frontier-selection-20261005/scripts")
+          import reply27_selected31_repair as R
+          target=(1297599642636648448,0)
+          expected=set()
+          with open("/tmp/input/next8-all.csv",newline="") as f:
+              for r in csv.reader(f):
+                  if r: expected.add((int(r[3]),int(r[4])))
+          assert len(expected)==97
+          replay={}; hist={0:0,1:0,2:0}; nodes=0
+          for p in sorted(glob.glob("/tmp/proof/reply27-next8-[0-7]/out.csv")):
+              with open(p,newline="") as f:
+                  for r in csv.reader(f):
+                      if not r or r[0]!="replay": continue
+                      k=(int(r[9]),int(r[10])); v=int(r[6]); n=int(r[7])
+                      if k not in expected: raise SystemExit(f"unexpected {k}")
+                      old=replay.get(k)
+                      if old is not None and old!=v: raise SystemExit(f"CONFLICT {k} {old} {v}")
+                      replay[k]=v; hist[v]+=1; nodes+=n
+          assert set(replay)==expected,(len(replay),len(expected))
+          verdict={}
+          with open("/tmp/input/post-next7-s5.cache",newline="") as f:
+              for r in csv.reader(f):
+                  if not r or r[0].startswith("#"): continue
+                  verdict[(int(r[1]),int(r[2]))]=int(r[4])
+          for k,v in replay.items():
+              if v not in (1,2): continue
+              old=verdict.get(k)
+              if old is not None and old!=v: raise SystemExit(f"cache conflict {k}")
+              verdict[k]=v
+          _,_,coverage,children=R.build_geometry()
+          boundary=children[target]
+          vals=[verdict.get(k,0) for k in boundary]
+          bh={v:vals.count(v) for v in (0,1,2)}
+          status="WIN" if bh[1] else ("LOSS" if bh[0]==0 else "UNKNOWN")
+          with open("/tmp/next8-exact-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (reply27 next8 exact replay; UNKNOWN omitted)\n")
+              for (lo,hi),v in sorted(replay.items()):
+                  if v in (1,2): f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          with open("/tmp/post-next8-s5.cache","w") as f:
+              f.write("# s5 verdict cache: n=11 schema=1 (post-next8 merged exact evidence)\n")
+              for (lo,hi),v in sorted(verdict.items()):
+                  f.write(f"s5verdict,{lo},{hi},5,{v},0\n")
+          out={"target_class":list(target),"coverage":sorted(coverage[target]),
+               "new_replay_counts":hist,"new_replay_nodes":nodes,
+               "full_boundary_children":len(boundary),"full_boundary_counts":bh,
+               "class_status":status,"merged_cache_entries":len(verdict),
+               "unresolved":[list(k) for k in boundary if verdict.get(k,0)==0],
+               "conflicts":0}
+          json.dump(out,open("/tmp/next8-summary.json","w"),indent=2,sort_keys=True)
+          print("NEXT8_SUMMARY",json.dumps(out,sort_keys=True))
+          PY
+      - name: Verify complete LOSS boundary when closed
+        run: |
+          status=$(python -c 'import json; print(json.load(open("/tmp/next8-summary.json"))["class_status"])')
+          if [ "$status" = LOSS ]; then
+            python research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py \
+              --class-lo 1297599642636648448 --class-hi 0 --expected-children 106 \
+              --cache /tmp/post-next8-s5.cache --allow-extra
+          fi
+      - name: Recompute frontier
+        run: |
+          python research/experiments/n11-frontier-selection-20261005/scripts/cache_aware_reply27_cardinality.py \
+            --s5-cache /tmp/post-next8-s5.cache --out /tmp/post-next8-cardinality.json
+          python research/experiments/n11-frontier-selection-20261005/scripts/reply27_selected31_repair.py \
+            --extra-s5-cache /tmp/post-next8-s5.cache \
+            --out /tmp/post-next8-repair.json --targets-out /tmp/post-next8-repair.csv
+          python research/experiments/n11-frontier-selection-20261005/scripts/rank_reply27_completion_classes.py \
+            --repair-json /tmp/post-next8-repair.json --extra-s5-cache /tmp/post-next8-s5.cache \
+            --targets-out /tmp/post-next8-best-class.csv --out /tmp/post-next8-ranking.json
+          python - <<'PY'
+          import json
+          s=json.load(open("/tmp/next8-summary.json"))
+          c=json.load(open("/tmp/post-next8-cardinality.json"))
+          r=json.load(open("/tmp/post-next8-repair.json"))
+          q=json.load(open("/tmp/post-next8-ranking.json"))
+          print("NEXT8_CLASS",s["class_status"],s["full_boundary_counts"])
+          print("NEXT8_CLASSES",c["class_status_counts"])
+          print("NEXT8_SECURED",c["secured_vertices"],"/119")
+          print("NEXT8_MIN_ADDITIONAL",c["minimum_additional_classes"],"dual_tight",c["dual_certificate_matches_integer_optimum"])
+          print("NEXT8_REPAIR",r["additive_optimum"]["repair_classes"],r["additive_optimum"]["unique_unknown_s5"])
+          if q["ranking"]:
+              b=q["ranking"][0]
+              print("NEXT8_BEST",b["key"],"unknown",b["unknown_s5"],"known_loss",b["known_loss_s5"],"gain",b["new_vertex_count"])
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: reply27-next8-proof
+          path: |
+            /tmp/next8-summary.json
+            /tmp/next8-exact-s5.cache
+            /tmp/post-next8-s5.cache
+            /tmp/post-next8-cardinality.json
+            /tmp/post-next8-repair.json
+            /tmp/post-next8-repair.csv
+            /tmp/post-next8-ranking.json
+            /tmp/post-next8-best-class.csv
