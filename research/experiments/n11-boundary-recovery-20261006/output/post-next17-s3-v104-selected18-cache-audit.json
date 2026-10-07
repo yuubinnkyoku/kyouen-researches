@@ -1,0 +1,110 @@
+{
+  "schema": "n11-post-next17-v104-selected18-cache-audit-v1",
+  "scope": "Cache-membership audit only. Does not solve any UNKNOWN s5 candidate and does not re-prove the post-next14 set-cover optimum.",
+  "inputs": {
+    "witness_cover_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next14-s3-v104-win-witness-cover.json",
+    "witness_cover_git_blob_sha": "1666bdcd165d62e1cb948d039d193045797c52e8",
+    "current_s5_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-s5.cache",
+    "current_s5_cache_git_blob_sha": "87905924530eecaa269470f5a9b6326e3d6048f7",
+    "current_s5_cache_entries": 4515
+  },
+  "selected_candidate_count": 18,
+  "status_counts": {
+    "WIN": 0,
+    "LOSS": 0,
+    "UNKNOWN": 18
+  },
+  "selected_candidates": [
+    {
+      "lo": "10448351135499551488",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351135499551872",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351135501647904",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351135767986240",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351139794649088",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351144626356224",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351152679428096",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351169859551232",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448351685259558912",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448353334522808320",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448355533546061825",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448359931592572944",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448368727686119424",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448386319871655936",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448421504277282816",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10448491872987906052",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10452854737274404864",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    },
+    {
+      "lo": "10466365534009032706",
+      "hi": "0",
+      "post_next17_verdict": "UNKNOWN"
+    }
+  ],
+  "interpretation": "All 18 candidates selected by the post-next14 hypothetical v=104 WIN witness cover remain absent from the post-next17 exact s5 cache. Therefore later next15-next17 cache growth neither realizes nor refutes that particular 18-candidate conditional witness set. This is a freshness/provenance audit, not a verdict."
+}
