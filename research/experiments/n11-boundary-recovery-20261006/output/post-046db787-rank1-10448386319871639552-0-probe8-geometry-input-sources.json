@@ -1,0 +1,56 @@
+{
+  "claim": "Exact replay subset for independent full-boundary geometry audit; UNKNOWN and not-dispatched targets are excluded.",
+  "class_key": [
+    10448386319871639552,
+    0
+  ],
+  "inputs": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-raw-exact.csv",
+      "sha256": "bae9a53a03241189e69742c5c6278dd40d964b8d682abfba2cf9e7ce86242504"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-new-exact-s5.cache",
+      "sha256": "2978121f545a63e1e2f1491f5a050b76d1e82ca6924ede0b42da561256ccbba8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-exact-targets.csv",
+      "sha256": "339d1b4ec12373dc3fa7263773063a77c1dbf73dcdff1cd33ae1afc1e7b89ef8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8.csv",
+      "sha256": "6db3ee85e85f776b8b2017bb674a04b0fd58e89ea1977b93a0363ce40874fcd8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-run-manifest.json",
+      "sha256": "ff7dfd88679b8ea4f4d9ae953f98f8b562a8b9ce52d832328e9c501a834e2f34"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-raw-all.csv",
+      "sha256": "d07af9e20771b471d4c3b18506e80271d5772ab6dedf57e51c0194e2a10e02c4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-dual-tight-targets.csv",
+      "sha256": "225d23781b0cb2f4eaa60215a28ef76d11ff8ecb314dc49eb2dde32ee0db95aa"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-dual-tight-ranking.json",
+      "sha256": "f193f2defdf2d5dc5d94492f02b859758374c3ed0f842cccb38164b577ca5835"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-raw-history-audit.json",
+      "sha256": "910445fae5c46fb10723e21485834bffda262c23b7c87c4b71f4ad31177da56e"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-saved-s6-38source-summary.json",
+      "sha256": "badf77df64a3832b8af0f411694f7bb22c22071f3f3dbed786d581169bbac56b"
+    }
+  ],
+  "probe_target_sha256": "339d1b4ec12373dc3fa7263773063a77c1dbf73dcdff1cd33ae1afc1e7b89ef8",
+  "run_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-046db787-rank1-10448386319871639552-0-probe8-run-manifest.json",
+    "sha256": "ff7dfd88679b8ea4f4d9ae953f98f8b562a8b9ce52d832328e9c501a834e2f34"
+  },
+  "scheduled_probe_target_sha256": "6db3ee85e85f776b8b2017bb674a04b0fd58e89ea1977b93a0363ce40874fcd8",
+  "schema": "n11-dual-tight-probe-exact-subset-source-manifest-v1"
+}
