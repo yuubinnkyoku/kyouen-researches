@@ -1570,7 +1570,49 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-reconciled-checkpoint-artifact-hashes-20261008.json
     role: manifest
     note: "valid 673-file SHA-256 inventory, including raw replay inputs/outputs/logs and experiment scripts"
-scope: "The finite reply27 frontier through the verified dd9db22af87dbcf65ced44631544e5596c4227e8 checkpoint: exact s5 cache 4,715 entries, all 3,384 s4 classes, saved s5/s6 boundary audits, current repair, and target-specific audit for the next 92 UNKNOWN s5 children."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-audit.json
+    role: verifier
+    note: 99-child complete boundary; exact WIN witness and legal parent incidence for class (10448491872987906048, 0)
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-geometry-audit.json
+    role: verifier
+    note: 98-child complete boundary; exact WIN witness and collateral reply27 parent status audit
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merged-s5.cache
+    role: data
+    note: updated canonical exact s5 cache with 4,762 entries and zero conflicts
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merge-receipt.json
+    role: manifest
+    note: probe8 plus early-stopped completion84 exact replay merge receipt
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-summary.json
+    role: source
+    note: 33 exact LOSS, one exact WIN, one UNKNOWN, and 49 not-dispatched completion targets
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-raw-all.csv
+    role: source
+    note: all started completion84 s5 replay rows, including the budget-limited UNKNOWN
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-cardinality.json
+    role: data
+    note: complete 3,384-class status, secured vertices, integer cover, and rational dual at 4,762 cache entries
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-repair.json
+    role: data
+    note: reoptimized 3-class additive repair with 283 distinct UNKNOWN s5 children
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-after-completion84-next-dual-tight-ranking.json
+    role: data
+    note: current rank-1 scheduling target after exact WIN witnesses removed two repair candidates
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-raw-history-audit.json
+    role: manifest
+    note: 91-target history audit; no exact replay, same-budget UNKNOWN, or cache hit
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-37source-summary.json
+    role: manifest
+    note: 37-source saved-s6 target audit; all 91 parents remain UNKNOWN
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-saved-s6-10source-summary.json
+    role: manifest
+    note: supplemental 10-source saved-s6 target audit; zero new exact s5 results
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-after-completion84-10448351135499550752-0-probe8-manifest.json
+    role: manifest
+    note: audited low-legal-count probe8 schedule for the next dual-tight class; not yet dispatched
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-dual-tight-proof-checkpoint-artifact-hashes-20261008.json
+    role: manifest
+    note: SHA-256 inventory of 77 new raw, exact, cache, geometry, and frontier artifacts
+scope: "Finite reply27 frontier after the verified 2026-10-08 dual-tight WIN checkpoint: exact s5 cache 4,762 entries, all 3,384 s4 class statuses, current three-class repair, and target-specific audits for the next dual-tight repair candidate."
 evidence: "Exact solver verdicts only; canonical geometry and complete s4/s5/s6 boundaries are independently rebuilt. Exact s6 LOSS alone may propagate to safe canonical s5 parents; UNKNOWN/WIN do not. Three processed classes have complete geometry-verified exact WIN witnesses, including one s5 WIN derived from all 85/85 exact WIN s6 children. Cache has 4,715 entries (WIN 102, LOSS 4,613, conflict 0); s4 status is LOSS 29, WIN 187, UNKNOWN 3,168, with 113/119 secured. Minimum additional classes and rational LP dual are both 3; the current repair covers 284 distinct UNKNOWN s5 children. {60,27} and empty-board status remain UNKNOWN."
 ---
 
@@ -1718,3 +1760,19 @@ For class (10448351169859289088,0), the two saved probe batches supplied 16 exac
 Across the three classes, 100 direct exact s5 rows were added (98 LOSS, two WIN), plus one s5 WIN derived from the complete 85-child s6 boundary. The final cache contains 4,715 unique rows (WIN 102, LOSS 4,613, conflict 0). The three new witnesses also update collateral s4 classes; recomputation over all 3,384 classes gives LOSS 29, WIN 187, UNKNOWN 3,168. Secured third moves are 113/119, with six remaining. The integer repair minimum and rational LP dual are both three, with 284 distinct UNKNOWN s5 children in the reoptimized repair.
 
 The current rank-1 target remains (10448491872987906048,0): 99 canonical children, seven known LOSS, and 92 UNKNOWN. Its 1,470-CSV raw-history audit found no prior exact row, same-or-higher-budget UNKNOWN, or conflict; the 38-source saved-s6 audit found no reusable exact verdict and derived no s5 result. The 92 remain UNKNOWN and are eligible for a fresh probe after this checkpoint is pushed. The valid 673-file artifact inventory is post-f8dc62e-dual-tight-reconciled-checkpoint-artifact-hashes-20261008.json, working-tree SHA-256 1a7d6dfda6562b535a711f8dcef798edd7b1bd6d67b477a8269e322d9899942b; Git blob SHA-256 22afe44dabc248e53d3a780103285890194e0afeaae12c1085e488abfa83018f. {60,27} remains UNKNOWN; the 11x11 empty board remains UNKNOWN.
+
+## 2026-10-08 03:36 JST dual-tight WIN checkpoint
+
+At the start of this continuation, HEAD and fetched origin/main were both `ba3b51388b2f943f890f5f61cc2a857fd6ac2c56`; no incoming commits were found. Reused the saved 4,715-entry exact s5 cache and re-ranked the dual-tight repair before any new dispatch.
+
+Class `(10448491872987906048,0)` had 99 canonical s5 children, seven known LOSS, and 92 UNKNOWN. The low-legal-count probe scheduled eight; five were dispatched and all exact: three LOSS and two WIN, totaling 35,507,222 nodes. The full-boundary geometry audit verified both safe canonical WIN witnesses and their legal class incidence. The complete boundary is 10 LOSS, two WIN, and 87 UNKNOWN; this class is WIN, so its other children were not explored. A witness also changes reply27 class `(1299288493570129920,0)` from UNKNOWN to WIN.
+
+Reoptimized repair selected class `(10448351136036421632,0)` next: 98 canonical children, six known LOSS, and 92 UNKNOWN. Before the probe, the exact-cache intersection, a raw-history scan of 1,599 CSVs, and both the 37-source and supplemental 10-source saved-s6 audits found no reusable verdict, same-budget UNKNOWN, or conflict. The two s6 source sets overlap on nine paths, form a 38-path union, and have no path/hash mismatch. The first eight targets all returned exact LOSS (33,683,635 nodes). After merging and re-ranking, the class had 14 known LOSS and 84 UNKNOWN; a fresh 1,621-CSV history audit and both saved-s6 audits again found zero reusable exact results and zero same-budget UNKNOWN rows.
+
+The completion run scheduled those 84 residual UNKNOWN children with four workers and a 15,000,000-node budget per target. It started 35 targets before an exact WIN appeared: 33 exact LOSS, one exact WIN, one UNKNOWN, and 49 not dispatched. Exact rows used 176,500,060 nodes; the UNKNOWN used its 15,000,000-node budget. The exact witness `(1297036692682719232,134217729)` was verified by independently rebuilding the complete 98-child canonical s5 boundary and checking its legal parent incidence. The final boundary has 47 LOSS, one WIN, and 50 UNKNOWN; class `(10448351136036421632,0)` is WIN. The remaining targets were stopped. This run added no exact s6 results and no reverse-propagated s5 LOSS; the budget-limited UNKNOWN was not retried.
+
+Together the two resolved classes added 47 unique exact s5 rows (44 LOSS and three WIN). The final exact cache has 4,762 entries (105 WIN, 4,657 LOSS, conflict 0), SHA-256 `646ade4242704de54011316fd69d357e56236f2fea63b1ad5c8d9b55ccbb632f`. Recomputing all 3,384 classes gives 29 LOSS, 192 WIN, and 3,163 UNKNOWN. Secured third moves remain 113/119, with six remaining. Minimum additional classes remains three and the rational LP dual is three; dual-tight is true. The reoptimized three-class repair has 283 distinct UNKNOWN s5 positions, with selected class unknown counts 99, 93, and 91.
+
+The new rank-1 target is `(10448351135499550752,0)`: 102 canonical children, 11 known LOSS, and 91 UNKNOWN, covering `{55,65,104}` with dual vertex 104. Its target-specific raw-history scan covered 1,697 CSVs and found no exact rows, same-or-higher-budget UNKNOWN, or conflict. The 37-source and supplemental 10-source saved-s6 audits left all 91 UNKNOWN and derived no exact result. An eight-position low-legal-count schedule is saved but has not been dispatched; it is a work order only.
+
+The 77-file inventory [post-ba3b5138 checkpoint hashes](../../experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-dual-tight-proof-checkpoint-artifact-hashes-20261008.json) has working-tree SHA-256 `1cdc9a5305f4509f5c8d826d6007960398e407c50241b8637727d45d481fc2da` and Git-blob SHA-256 `f6d7a58a9d8875f482f2f934efbcebd60077ebaa4830717bce977a0a72d2680b`. `{60,27}` remains UNKNOWN. The 11×11 empty board remains UNKNOWN.

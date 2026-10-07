@@ -1,0 +1,36 @@
+{
+  "claim": "Exact replay subset input for independent complete-boundary geometry verification; UNKNOWN and not-dispatched keys are excluded.",
+  "class_key": [
+    10448351136036421632,
+    0
+  ],
+  "inputs": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-raw-exact.csv",
+      "sha256": "b3b81ed01b77c4c3252c1ea9ece0bef297a7dd9b09295cf01f78bbe4c5d34e83"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-new-exact-s5.cache",
+      "sha256": "11237a29b042f38bb0a74911679ae0427f96e4658cbb05afca1bd426f95bb423"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-exact-targets.csv",
+      "sha256": "4c0ef62b094b51a2ba0b136c8134054bebcfb00e477d7df4366f23ef10ed6e6d"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-after-probe8-completion84.csv",
+      "sha256": "88113ec4994a87f946c326f89d0861fabb466a581eef1675890130df508ebc67"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-run-manifest.json",
+      "sha256": "cb97343df9d3eef3b5e5259e67cc1de01c1aacd002dbbfb1ba05221371edf72a"
+    }
+  ],
+  "probe_target_sha256": "4c0ef62b094b51a2ba0b136c8134054bebcfb00e477d7df4366f23ef10ed6e6d",
+  "run_manifest": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-run-manifest.json",
+    "sha256": "cb97343df9d3eef3b5e5259e67cc1de01c1aacd002dbbfb1ba05221371edf72a"
+  },
+  "scheduled_probe_target_sha256": "88113ec4994a87f946c326f89d0861fabb466a581eef1675890130df508ebc67",
+  "schema": "n11-dual-tight-probe-exact-subset-source-manifest-v1"
+}
