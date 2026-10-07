@@ -1,0 +1,60 @@
+{
+  "boundary_scope": "the nine supplied canonical s5 targets only; not a complete s4 class proof",
+  "budget_per_target": 15000000,
+  "class_status_after_probe": "UNKNOWN",
+  "counts": {
+    "LOSS": 9,
+    "UNKNOWN": 0,
+    "WIN": 0
+  },
+  "nodes": 21927853,
+  "not_dispatched": [],
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-next17-dual-tight-92-probe9-out.csv",
+    "rows": 9,
+    "sha256": "844987871cb03dc040b5dbed6910b92feceb3b4e916bf70e3b39ef17ba5e7631"
+  },
+  "runner_summary": {
+    "boundary_scope": "supplied targets only",
+    "budget": 15000000,
+    "cache_sources": [
+      {
+        "loss": 4418,
+        "nodes": 0,
+        "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-expanded-s5.cache",
+        "rows": 4515,
+        "sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c",
+        "win": 97
+      },
+      {
+        "loss": 0,
+        "nodes": 0,
+        "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-probe9-saved-s6-derived-s5.cache",
+        "rows": 0,
+        "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4",
+        "win": 0
+      }
+    ],
+    "class_status": "LOSS",
+    "existing_cache_exact": 0,
+    "existing_exact": 0,
+    "existing_output_exact": 0,
+    "new_exact": 9,
+    "new_exact_cache": ".local\\n11\\reply27-probe9\\run\\cache-out\\new-exact-s5.cache",
+    "new_loss": 9,
+    "new_win": 0,
+    "nodes_existing": 0,
+    "nodes_new": 21927853,
+    "nodes_total": 21927853,
+    "not_dispatched": [],
+    "scheduled": 9,
+    "targets": 9,
+    "unknown": 0,
+    "unresolved": [],
+    "workers": 4
+  },
+  "scheduled": 9,
+  "schema": "n11-post-next17-dual-tight-92-probe9-run-summary-v1",
+  "target_count": 9,
+  "workers": 4
+}

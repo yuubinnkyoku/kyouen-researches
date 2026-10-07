@@ -1617,6 +1617,7 @@
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全Grundy0/1と全極大同偶奇の同値を使う
 - ← depends_on [K0354](../items/K0354-general-prism-maximal-count.md): 極大占有数の完全分類を使う
 - ← depends_on [K0356](../items/K0356-capacity-boundary-grundy-bound.md): 任意次元平行列盤を上位h=d−1列の容量ゲームへ縮約する
+- ← depends_on [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 非自明容量ゲームでは hm>r を用いる
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1633,12 +1634,18 @@
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
 - ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 11×11 reply27保存済みcache frontierと有限検査の範囲
 
-## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が余剰列数と閾値の小さい方以下
+## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する
 
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 任意次元平行列盤を上位h=d−1列の容量ゲームへ縮約する
+- ← depends_on [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 容量境界の子のGrundy値を残り手数の偶奇で完全決定する
 
 ## [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md) 11×11の{60,27}後の第三手104に対する仮想WIN witness cover
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手視点WIN/LOSSと石数 parity によるAND/OR規約
 - → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md): exact勝敗値の順位付きAND/OR解釈
 - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 11×11 reply27保存済みcache frontierと有限検査の範囲
+
+## [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md) 容量余裕1のGrundy値は常に3以下で境界子の型から完全決定できる
+
+- → depends_on [K0356](../items/K0356-capacity-boundary-grundy-bound.md): 容量境界の子のGrundy値を残り手数の偶奇で完全決定する
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 非自明容量ゲームでは hm>r を用いる

@@ -356,5 +356,6 @@
 | [K0353](../items/K0353-two-dimensional-parallel-columns.md) | 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる | proposition | proved | variants, geometry, grundy, maximal-safe, strategy-length |
 | [K0354](../items/K0354-general-prism-maximal-count.md) | 任意次元平行列盤の極大安全集合数は母関数で閉形式に数えられる | proposition | proved | variants, geometry, maximal-safe, statistics |
 | [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) | 11×11 reply27の保存済みexact結果から復元したcache frontier | computation | computed | square-outcomes, search-methods, verification, provenance |
-| [K0356](../items/K0356-capacity-boundary-grundy-bound.md) | 任意次元平行列容量ゲームの容量境界ではGrundy値が余剰列数と閾値の小さい方以下 | proposition | proved | variants, grundy |
+| [K0356](../items/K0356-capacity-boundary-grundy-bound.md) | 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する | proposition | proved | variants, grundy |
 | [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md) | 11×11の{60,27}後の第三手104に対する仮想WIN witness cover | computation | computed | search-methods, square-outcomes, verification, provenance |
+| [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md) | 容量余裕1のGrundy値は常に3以下で境界子の型から完全決定できる | proposition | proved | variants, grundy |

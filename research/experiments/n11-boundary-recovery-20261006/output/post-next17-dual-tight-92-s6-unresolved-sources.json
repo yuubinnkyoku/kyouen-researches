@@ -1,0 +1,83 @@
+{
+  "class": {
+    "key": [
+      10452854735126921216,
+      0
+    ],
+    "unresolved_other_s5_children": [
+      [
+        1297036692682704896,
+        273
+      ],
+      [
+        1297036692691091456,
+        273
+      ]
+    ],
+    "verdict": "WIN",
+    "winning_s5_boundary": 80,
+    "winning_s5_child": [
+      10452925103871098880,
+      0
+    ],
+    "winning_s6_children": 80
+  },
+  "derived_s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-derived-s5.cache",
+    "rows": 1,
+    "sha256": "203c2378021491585e3aeca32e33ba200ea0edc94a0f025da1c56c2dd4c23ae3"
+  },
+  "inputs": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-parents.csv",
+      "sha256": "a72a91b9fe3ceb336a5d1e4001d3c5169f6e384734555833a71b9a9e7dbe7315"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-boundary.csv",
+      "sha256": "157b94b73d72846febfe4f95255eb9f7163aa2e25bc44ebc2b9edc3ed8054f3c"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-boundary-meta.json",
+      "sha256": "4301f8401a8aca043ef46fa630bf63b2db6a7c2ffd1f1ab265a1d2fb38c41944"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9-saved-s6-sources.json",
+      "sha256": "3d7cce98eb5dff519eaf300a15a8a763da9ebc4d27953392d51d2783fdc9ff5b"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-residual83-merged-s5.cache",
+      "sha256": "ea71ceda332d73a27a1d5c70eb99fb16cd27980867de89e652b831bbdc44a663"
+    }
+  ],
+  "raw_s6_output": {
+    "counts": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 160
+    },
+    "new_exact_loss_reverse_propagation": 0,
+    "nodes": 48281975,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-next17-dual-tight-92-s6-unresolved-out.csv",
+    "rows": 160,
+    "sha256": "231de7380367a30df9851de4bdb848aece8e137799d26318baa5ac8ad96cceb9"
+  },
+  "schema": "n11-post-next17-dual-tight-92-s6-unresolved-source-manifest-v1",
+  "scope": "Saved-s6 intersection plus exact replay of only the unseen s6 boundary children. New exact s6 LOSS count is zero, so reverse-propagated s5 LOSS count is zero.",
+  "solver": {
+    "binary_path": ".local/n11/reply27-probe9/dfpn.exe",
+    "binary_sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7",
+    "budget_per_target": 15000000,
+    "compile_command": "c++ -std=c++20 -O3 -DNDEBUG -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o .local/n11/reply27-probe9/dfpn.exe",
+    "compiler": "c++ (Rev8, Built by MSYS2 project) 15.2.0",
+    "retry_saved_unknown": false,
+    "runner_path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_s5_via_s6_local.py",
+    "runner_sha256": "e579968ee89660893456b7a6d8688e99489f37d73277b5e2087d6e42f7ecd490",
+    "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+    "source_sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063",
+    "workers": 4
+  },
+  "summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-summary.json",
+    "sha256": "de00f1d47fd252851d5f3ddac43663b4f339acd3944d057ef32fd76ca9a2e800"
+  }
+}

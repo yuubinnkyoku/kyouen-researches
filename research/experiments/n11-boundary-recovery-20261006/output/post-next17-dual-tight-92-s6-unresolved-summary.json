@@ -1,0 +1,111 @@
+{
+  "boundary": {
+    "canonical_s6_children": 162,
+    "meta_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-boundary-meta.json",
+    "meta_sha256": "21f32426f8036181fc103810b7b8bbe9f1fc79f82564b2b1c200d5b6848525ad",
+    "parent_child_relations": 162,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-boundary.csv",
+    "sha256": "157b94b73d72846febfe4f95255eb9f7163aa2e25bc44ebc2b9edc3ed8054f3c"
+  },
+  "class_decision": "s4 class is exact WIN because one canonical s5 child has a complete canonical s6 boundary consisting entirely of exact WIN children. Stop the other s5 parent; its two s6 children remain unexecuted.",
+  "derived_s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-derived-s5.cache",
+    "rows": 1,
+    "sha256": "203c2378021491585e3aeca32e33ba200ea0edc94a0f025da1c56c2dd4c23ae3"
+  },
+  "exact_s5_win_witness": {
+    "boundary_size": 80,
+    "key": [
+      10452925103871098880,
+      0
+    ],
+    "s6_loss_children": 0,
+    "s6_unknown_or_unseen": 0,
+    "s6_win_children": 80
+  },
+  "execution": {
+    "budget_per_target": 15000000,
+    "new_nodes": 48281975,
+    "new_s6_exact": 160,
+    "new_s6_rows": 160,
+    "new_s6_unknown": 0,
+    "new_s6_verdicts": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 160
+    },
+    "retry_saved_unknown": false,
+    "unresolved_boundary_children": 2,
+    "unresolved_children": [
+      [
+        1297036692682704896,
+        273
+      ],
+      [
+        1297036692691091456,
+        273
+      ]
+    ],
+    "workers": 4
+  },
+  "parent_outcomes": [
+    {
+      "canonical_s6_children": 80,
+      "counts": {
+        "0": 0,
+        "1": 80,
+        "2": 0
+      },
+      "key": [
+        10452925103871098880,
+        0
+      ],
+      "outcome": "WIN",
+      "unresolved_children": []
+    },
+    {
+      "canonical_s6_children": 82,
+      "counts": {
+        "0": 2,
+        "1": 80,
+        "2": 0
+      },
+      "key": [
+        10453136210103631872,
+        0
+      ],
+      "outcome": "UNKNOWN",
+      "unresolved_children": [
+        [
+          1297036692682704896,
+          273
+        ],
+        [
+          1297036692691091456,
+          273
+        ]
+      ]
+    }
+  ],
+  "parents_path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-s6-unresolved-parents.csv",
+  "parents_sha256": "a72a91b9fe3ceb336a5d1e4001d3c5169f6e384734555833a71b9a9e7dbe7315",
+  "raw_output": {
+    "nodes": 48281975,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-next17-dual-tight-92-s6-unresolved-out.csv",
+    "rows": 160,
+    "sha256": "231de7380367a30df9851de4bdb848aece8e137799d26318baa5ac8ad96cceb9",
+    "verdict_counts": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 160
+    }
+  },
+  "saved_s6_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9-saved-s6-sources.json",
+    "saved_exact_boundary_outcomes": "all 162 children were UNSEEN before this run",
+    "saved_unknown_children_in_boundary": 0,
+    "sha256": "3d7cce98eb5dff519eaf300a15a8a763da9ebc4d27953392d51d2783fdc9ff5b"
+  },
+  "schema": "n11-post-next17-dual-tight-92-s6-unresolved-run-summary-v1",
+  "scope": "Two remaining s5 parents of the same s4 class. Exact s6 values are trusted solver outputs; the full parent boundary and reverse incidence are independently geometry-generated."
+}

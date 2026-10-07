@@ -1,0 +1,7176 @@
+{
+  "cache_comparison": {
+    "new_exact": 0,
+    "opposite_verdict_conflicts": [],
+    "same_verdict_existing": 0,
+    "unknown_parents": 9
+  },
+  "current_cache": {
+    "conflicts": 0,
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-expanded-s5.cache",
+    "sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c",
+    "unique_keys": 4515
+  },
+  "derived_cache": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-probe9-saved-s6-derived-s5.cache",
+    "rows": 0,
+    "sha256": "0d2a80585f98789d79d08495f4b38534ed48dcb5c82f603f7090aabe66aa85b4"
+  },
+  "outcome_provenance": "Saved s6 WIN/LOSS verdicts are trusted solver results; this audit independently regenerates each target s5 parent\u2019s complete geometry boundary and propagates those saved verdicts only.",
+  "schema": "n11-next3-saved-s6-parent-boundary-audit-v1",
+  "source_audit": {
+    "canonical_s6_count": 2648,
+    "exact_conflict_count": 0,
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-probe9-saved-s6-sources.json",
+    "previous_geometry_legal_audit_reused_after_hash_match": true,
+    "s6_exact_counts": {
+      "0": 46,
+      "1": 2455,
+      "2": 147
+    },
+    "sha256": "3d7cce98eb5dff519eaf300a15a8a763da9ebc4d27953392d51d2783fdc9ff5b",
+    "source_file_count": 37,
+    "source_hashes_validated": true,
+    "sources": [
+      {
+        "normalized_noncanonical_rows": 3,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-0.csv",
+        "s6_replay_rows": 4,
+        "sha256": "1af5f001f4af7bce6743f92821fc5c94b53ccd01aa899bf1be7a54c0d97a340b",
+        "verdict_counts": {
+          "1": 2,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 3,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-1.csv",
+        "s6_replay_rows": 4,
+        "sha256": "5882ce939b676fdc502685a0adfd4ef2713cb9b67b6a233fba5c08087253eb20",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 4,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-2.csv",
+        "s6_replay_rows": 4,
+        "sha256": "83e72debfc53dbc0aadba1257fbe049755655c8310baad90329a296ecfe055d3",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 3,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-3.csv",
+        "s6_replay_rows": 4,
+        "sha256": "d4fe318a8023187016128ec1b084ed74168d3d83c7e4971f5f4d311d2a97c16c",
+        "verdict_counts": {
+          "1": 2,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-0-out.csv",
+        "s6_replay_rows": 43,
+        "sha256": "5eb64524527f5e29c1ac8bdda267722d495167c0f78546491d3509c760cfcc35",
+        "verdict_counts": {
+          "1": 43
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-1-out.csv",
+        "s6_replay_rows": 42,
+        "sha256": "bbdee0b76bd4187210fbb79f934114e4ebc68bef9ca091ce0ec834cd376967fe",
+        "verdict_counts": {
+          "1": 42
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-2-out.csv",
+        "s6_replay_rows": 42,
+        "sha256": "7bce731267331fbc58e8cd0444e7dd3a400c48ed21d822bf7ad637bd8ef137f0",
+        "verdict_counts": {
+          "1": 42
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-3-out.csv",
+        "s6_replay_rows": 42,
+        "sha256": "14283a08729aabe1deb1bd30d4cd0f16a1708a0d6f2bf5198c1af204b30f9adc",
+        "verdict_counts": {
+          "1": 42
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/crosscheck-s6-out.csv",
+        "s6_replay_rows": 3,
+        "sha256": "b230c918c0fabf211448b91c584104d03f82421bfec2fd0f25efe660eadb1e3a",
+        "verdict_counts": {
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-0.out",
+        "s6_replay_rows": 204,
+        "sha256": "fb09db4d46e145bccf5fc51c39e673730be5874025ba100db3c8472fabc98276",
+        "verdict_counts": {
+          "0": 2,
+          "1": 184,
+          "2": 18
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-1.out",
+        "s6_replay_rows": 204,
+        "sha256": "3b8baa413a98640308bdb716f22990bf7cc90da2680d65b2fb49c89a604e9466",
+        "verdict_counts": {
+          "0": 3,
+          "1": 179,
+          "2": 22
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-2.out",
+        "s6_replay_rows": 204,
+        "sha256": "e75cbedabfde39cf1334892ebd46c293f6f4a922328e8932246254c74ff534b9",
+        "verdict_counts": {
+          "0": 1,
+          "1": 189,
+          "2": 14
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-3.out",
+        "s6_replay_rows": 204,
+        "sha256": "12ae56568cb84a10a8053437cabeb49d11bf8269380901948043d329a90828b9",
+        "verdict_counts": {
+          "1": 177,
+          "2": 27
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard0.csv",
+        "s6_replay_rows": 43,
+        "sha256": "f3ffb67a77cf58a30524c6d786127004216b701349aa3a578e7c6bde95e6ae0e",
+        "verdict_counts": {
+          "1": 41,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard1.csv",
+        "s6_replay_rows": 42,
+        "sha256": "20957d6dd3b8e3722fa93634067a28033aea68009bec6fd48486392db2978177",
+        "verdict_counts": {
+          "1": 39,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard2.csv",
+        "s6_replay_rows": 42,
+        "sha256": "e60dfb4cf77b7caf65e907785e06dc6524c657b86c6407f7d3dc38b4cd47e8fd",
+        "verdict_counts": {
+          "1": 39,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard3.csv",
+        "s6_replay_rows": 43,
+        "sha256": "0cc4558d15093abb7aefd14bfe207665356ff090fa0a5ee0967003f593d8f2f1",
+        "verdict_counts": {
+          "1": 42,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard0.csv",
+        "s6_replay_rows": 4,
+        "sha256": "7638acfd54aef2450f7b429250353a7228b34fee5bde4187ab44aee6f68a0b16",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard1.csv",
+        "s6_replay_rows": 4,
+        "sha256": "7401bb19b04e3aab3e8169a7d2fd1d050ecf47080386e77f716c9b9a479ef865",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard2.csv",
+        "s6_replay_rows": 4,
+        "sha256": "6b19807618013f1a900af5419905ce2113f4cbefdc66560318ebafc2e1b36390",
+        "verdict_counts": {
+          "1": 3,
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard3.csv",
+        "s6_replay_rows": 4,
+        "sha256": "9489a99cd0652a5a4bbfb365069ac8df5044e5497be1a7f10977d2530cfddc1e",
+        "verdict_counts": {
+          "2": 4
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard0.csv",
+        "s6_replay_rows": 8,
+        "sha256": "23abdde00d84f22812119a66c37c12a7abe44ed174a48d0c0bec5ed8b2202c73",
+        "verdict_counts": {
+          "1": 5,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard1.csv",
+        "s6_replay_rows": 8,
+        "sha256": "789742065c72ce6021f80f80582bccfc5e29e3e13ac31433d1c9209d7f0ef2ea",
+        "verdict_counts": {
+          "1": 5,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard2.csv",
+        "s6_replay_rows": 8,
+        "sha256": "054cc27858eb94f904860208a136c8dbc3f41fe9cfd57d769406b43e9eba3bc8",
+        "verdict_counts": {
+          "1": 5,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard3.csv",
+        "s6_replay_rows": 8,
+        "sha256": "e5ddc68b454d15cc401a47b65de75a31d782a952c9ed017a1091ba3bb16e4aaa",
+        "verdict_counts": {
+          "1": 1,
+          "2": 7
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-s6-2m-out.csv",
+        "s6_replay_rows": 86,
+        "sha256": "bfb8ee089f96fdc06a9e32986f6d2ca42721d70f1a606743004e411457057c81",
+        "verdict_counts": {
+          "0": 1,
+          "1": 85
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-hard-s6-15m-out.csv",
+        "s6_replay_rows": 1,
+        "sha256": "8c5f17589611425a9784711168ae207f3b30a9e09ebe47b2f9d31b9348755132",
+        "verdict_counts": {
+          "2": 1
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next6-hard-s6-out.csv",
+        "s6_replay_rows": 181,
+        "sha256": "48b77073fb416938d5b6886d1c478df8704516dec6721dbffda7d9288f56ce92",
+        "verdict_counts": {
+          "0": 2,
+          "1": 179
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next6-focused15m-out.csv",
+        "s6_replay_rows": 2,
+        "sha256": "533e535ca4cd84c59e2f05ec91090e5687d6d264e9326d3a0c52e42177ea38e3",
+        "verdict_counts": {
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next8-hard-s6-out.csv",
+        "s6_replay_rows": 100,
+        "sha256": "8dc511424ea24ce62302cd11332b313ce68d15ff8d438ec661e371ac7d59e14c",
+        "verdict_counts": {
+          "1": 98,
+          "2": 2
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-out.csv",
+        "s6_replay_rows": 91,
+        "sha256": "59053de7511c6815edd8c84be22224634e8c406ff6a1cd6abc35e5517c84487c",
+        "verdict_counts": {
+          "1": 91
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-hard2-adaptive2m-out.csv",
+        "s6_replay_rows": 193,
+        "sha256": "7f9ea68725d933149eae169d3b65c2b3059cfe09f66779208d534642d6b7dd0b",
+        "verdict_counts": {
+          "0": 56,
+          "1": 137
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-a-focused15m-out.csv",
+        "s6_replay_rows": 9,
+        "sha256": "678a40de6589849b1bbd805688e4b7b497984f528c18aa86654ee5a051b1a3ec",
+        "verdict_counts": {
+          "1": 6,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-b-focused15m-out.csv",
+        "s6_replay_rows": 7,
+        "sha256": "539474c41bb91fdbe4bdc0fa3205c54fe76cdfa5ad8e69f351b483592ea31050",
+        "verdict_counts": {
+          "1": 2,
+          "2": 5
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-hard5-adaptive15m-out.csv",
+        "s6_replay_rows": 423,
+        "sha256": "e9cd414e8ca1925fc925331a841d11ee6ae0e6248d46d5391bc160bc796f88d0",
+        "verdict_counts": {
+          "1": 420,
+          "2": 3
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next15-hard3-adaptive15m-out.csv",
+        "s6_replay_rows": 162,
+        "sha256": "63029381e165ea3ac70c9b2a59e4e930196ae31d8dde97d62735da95969c3ecb",
+        "verdict_counts": {
+          "1": 157,
+          "2": 5
+        }
+      },
+      {
+        "normalized_noncanonical_rows": 0,
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next17-hard5-adaptive15m-out.csv",
+        "s6_replay_rows": 214,
+        "sha256": "03fa913d6cb0ff9e7ef3e35a7e797af1da1f81d79f018dad1b40895d8837b469",
+        "verdict_counts": {
+          "1": 200,
+          "2": 14
+        }
+      }
+    ],
+    "unknown_s6_count": 46
+  },
+  "targets": {
+    "parent_count": 9,
+    "parents": [
+      {
+        "child_count": 37,
+        "children": [
+          {
+            "key": [
+              1297107061426880513,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880514,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880520,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880528,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880544,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880576,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880640,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880768,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426881024,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426881536,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426882560,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426884608,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426896896,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426913280,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061427142656,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061427404800,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061427929088,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061428977664,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061431074816,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061493989376,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061963751424,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107063574364160,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107065721847808,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107070016815104,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107078606749696,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107336304787456,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107611182694400,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297108160938508288,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297111459473391616,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297115857519902720,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297124653612924928,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297142245798969344,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1298232961333723136,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1299358861240565760,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1301610661054251008,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1315121459936362496,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 37
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1297107061426880512,
+          17
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 76,
+        "children": [
+          {
+            "key": [
+              1297036692682702849,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702850,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702856,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702864,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702880,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702912,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702976,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703104,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703360,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703872,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682704896,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682706944,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682719232,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682735616,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682768384,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682964992,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683227136,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683751424,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692684800000,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692716257280,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692749811712,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693219573760,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061443657728,
+              5
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061443657728,
+              9
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061443657728,
+              8193
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061443657728,
+              16385
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061443657728,
+              16777217
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061443657728,
+              33554433
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              4
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              8
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              16
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              32
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              64
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              128
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              8192
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              16384
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              131072
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              16777216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              33554432
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663041,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663042,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663044,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663056,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663072,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663168,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663552,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200664064,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200665088,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200671232,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200679424,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200794112,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736201711616,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736202760192,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736204857344,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736234217472,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736469098496,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854738348146688,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854740495630336,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854744790597632,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854753380532224,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854770560401408,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854804920139776,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854873639616512,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452855011078569984,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452859134247174144,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452863532293685248,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452872328386707456,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452925104944840704,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452995473689018368,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10453980636107505664,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10455106536014348288,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10461861935455404032,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10470869134710145024,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 76
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          10452854736200663040,
+          0
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 76,
+        "children": [
+          {
+            "key": [
+              1152921504606912512,
+              1627389954
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504606912512,
+              1627392000
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504606912512,
+              1627394048
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504606912512,
+              1631584256
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504606912512,
+              1635778560
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504606912512,
+              52344913920
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504606913024,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504606913536,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504607961088,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921504609009664,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921505013695488,
+              1099511627776
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921506754396160,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152921508901879808,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152925902653423616,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1152930300699934720,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1170935903116394496,
+              1627389952
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              21
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              25
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              81
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              273
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              529
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              8209
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              16401
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              262161
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              16777233
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              268435473
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              34359738385
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              68719476753
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702853,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702854,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702860,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702868,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702916,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702980,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703108,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703876,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682704900,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682719236,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682735620,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682964996,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683227140,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692684800004,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692686897156,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692691091460,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692716257284,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692749811716,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693219573764,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444676,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036694830186500,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036696977670148,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036701272637444,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036709862572036,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036830121656324,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609796,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037242438516740,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037792194330628,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297041090729213956,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297045488775725060,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297054284868747268,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297599642636124164,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1299288492496388100,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1301540292310073348,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1306043891937443844,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1315051091192184836,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              1028
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              9216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              17408
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              33792
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              66560
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              132096
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              16778240
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              33555456
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              134218752
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499550976,
+              268436480
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 76
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1297036692682702852,
+          17
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 77,
+        "children": [
+          {
+            "key": [
+              1297036692682702849,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702850,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702856,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702864,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702880,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702912,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702976,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703104,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703360,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703872,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682704896,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682706944,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682711040,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682719232,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682735616,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682964992,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683227136,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683751424,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692684800000,
+              536870929
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              5
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              9
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              8193
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              16385
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              32769
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              16777217
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              33554433
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              268435457
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              4
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              16
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              64
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              128
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              8192
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              16384
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              65536
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              131072
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              16777216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              33554432
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138944,
+              134217728
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138945,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138946,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138948,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138952,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138960,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261138976,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261139008,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261139072,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261139200,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261139456,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261139968,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261140992,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261143040,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261147136,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261270016,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261401088,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735261663232,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735262187520,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735263236096,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735265333248,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735294693376,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737408622592,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854739556106240,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854743851073536,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854752441008128,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854803980615680,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854872700092416,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452855010139045888,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452859133307650048,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452863531354161152,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452872327447183360,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452925104005316608,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10453136210237849600,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10453980635167981568,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10455106535074824192,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10461861934515879936,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10470869133770620928,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 77
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          10452854735261138944,
+          0
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 77,
+        "children": [
+          {
+            "key": [
+              1161928703861653504,
+              805306372
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653504,
+              805306376
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653504,
+              805314560
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653504,
+              805322752
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653504,
+              822083584
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653504,
+              838860800
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653504,
+              35165044736
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653505,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861653506,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861655552,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703861657600,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703865847808,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928703870042112,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1161928721041522688,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1197957500880617472,
+              805306368
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              21
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              25
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              49
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              81
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              273
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              529
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              8209
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              16401
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              32785
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              262161
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              16777233
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              67108881
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              268435473
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              34359738385
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              68719476753
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833921,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833922,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833928,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833936,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833984,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682834048,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682834176,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682834432,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682834944,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682835968,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682842112,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682850304,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682866688,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683882496,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692684931072,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692687028224,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692691222528,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699611136,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692749942784,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693219704832,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036694830317568,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036696977801216,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036701272768512,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036709862703104,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036727042572288,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036830121787392,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560740864,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037242438647808,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037792194461696,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297041090729345024,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297045488775856128,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297054284868878336,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297599642636255232,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1299288492496519168,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1301540292310204416,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1315051091192315904,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              1028
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              1040
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              9216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              17408
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              66560
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              132096
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              16778240
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              33555456
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135499583488,
+              134218752
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126922240,
+              549755813888
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 77
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1297036692682833920,
+          17
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 77,
+        "children": [
+          {
+            "key": [
+              1297036692699480064,
+              21
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              25
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              49
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              273
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              529
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              8209
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              16401
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              262161
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              16777233
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480065,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480066,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480072,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480096,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480128,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480320,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480576,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699481088,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699482112,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699484160,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699496448,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699512832,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699545600,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699611136,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699742208,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692700004352,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692700528640,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692701577216,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692703674368,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692707868672,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692733034496,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693236350976,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693773221888,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036696994447360,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036701289414656,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036830138433536,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037242455293952,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037792211107840,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297045488792502272,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297054284885524480,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297071877071568896,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880513,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880514,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880520,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880528,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880544,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880576,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880640,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426880768,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426881024,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426881536,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426882560,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426884608,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426896896,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061426913280,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061427142656,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061427404800,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061427929088,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061428977664,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061493989376,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061561098240,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061695315968,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061963751424,
+              67108865
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297599642652901376,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1298162592606322688,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1299288492513165312,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1301540292326850560,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1306043891954221056,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1315051091208962048,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              1028
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              1040
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              9216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              17408
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              33792
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              132096
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              16778240
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351136573292544,
+              33555456
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 77
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1297036692699480064,
+          17
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 77,
+        "children": [
+          {
+            "key": [
+              1297036693756444672,
+              25
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              49
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              81
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              529
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              8209
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              16401
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              32785
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              262161
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              16777233
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444673,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444674,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444676,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444680,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444688,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444704,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444736,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444800,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444928,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756445184,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756445696,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756446720,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756448768,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756452864,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756461056,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756477440,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756706816,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756968960,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693757493248,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693758541824,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693760638976,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693764833280,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693773221888,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036694293315584,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036695903928320,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036698051411968,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036702346379264,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036710936313856,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036728116183040,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036831195398144,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037243512258560,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297037793268072448,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297045489849466880,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297054285942489088,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297071878128533504,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297599643709865984,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1298162593663287296,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1299288493570129920,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1301540293383815168,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1315051092265926656,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135516327936,
+              9216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135516327936,
+              17408
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135516327936,
+              66560
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135516327936,
+              132096
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135516327936,
+              16778240
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351135516327936,
+              33555456
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921217,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921218,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921220,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921224,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921232,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921248,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921280,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921344,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921472,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921728,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126922240,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126923264,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126925312,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126937600,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735127183360,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735127445504,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735127969792,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735129018368,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735160475648,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735395356672,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              67108864
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 77
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1297036693756444672,
+          17
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 77,
+        "children": [
+          {
+            "key": [
+              1297036967560609792,
+              21
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609792,
+              25
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609792,
+              49
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609792,
+              8209
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609792,
+              16401
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609792,
+              32785
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609793,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609794,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609796,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609800,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609808,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609824,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609856,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560609920,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560610048,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560610304,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560610816,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560611840,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560613888,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560617984,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560626176,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560642560,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560675328,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560740864,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967560871936,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967561134080,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967561658368,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967562706944,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967564804096,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967568998400,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036967594164224,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036968097480704,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036969708093440,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036971855577088,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036976150544384,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297038067072237568,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297045763653632000,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297054559746654208,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297072151932698624,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107336304787456,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297599917514031104,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1298162867467452416,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1299288767374295040,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1301540567187980288,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1306044166815350784,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1315051366070091776,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351410377457664,
+              1028
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351410377457664,
+              9216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351410377457664,
+              17408
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351410377457664,
+              33792
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351410377457664,
+              66560
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10448351410377457664,
+              132096
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921217,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921218,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921220,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921224,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921232,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921248,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921344,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921472,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126921728,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126922240,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126923264,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126929408,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735126937600,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735127052288,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735127183360,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735127969792,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735129018368,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735131115520,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735135309824,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735160475648,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854735194030080,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854736200663040,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854739421888512,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452855010004828160,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 77
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          1297036967560609792,
+          17
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      },
+      {
+        "child_count": 88,
+        "children": [
+          {
+            "key": [
+              1297036692682702849,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702850,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702852,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702856,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702864,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702880,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702912,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682702976,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703104,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703360,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682703872,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682704896,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682706944,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682711040,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682719232,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682735616,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682768384,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682833920,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692682964992,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683227136,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692683751424,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692684800000,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692699480064,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692716257280,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036692749811712,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693219573760,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297036693756444672,
+              33554449
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              5
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              9
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              17
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              8193
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              32769
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              131073
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              16777217
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              1297107061435269120,
+              33554433
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              4
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              8
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              16
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              32
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              64
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              128
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              8192
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              16384
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              65536
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              131072
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              262144
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              16777216
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404864,
+              33554432
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404865,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404866,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404868,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404872,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404880,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404896,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404928,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274404992,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274405120,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274405376,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274405888,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274406912,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274408960,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274421248,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274535936,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274667008,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737274929152,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737276502016,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737282793472,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737307959296,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737408622592,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854737542840320,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854738348146688,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854741569372160,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854745864339456,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854754454274048,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854771634143232,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854805993881600,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452854874713358336,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452855012152311808,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452856936297660416,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452859135320915968,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452863533367427072,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452872329460449280,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10452925106018582528,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10453136212251115520,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10453980637181247488,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10455106537088090112,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10461861936529145856,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          },
+          {
+            "key": [
+              10470869135783886848,
+              0
+            ],
+            "legal_count": null,
+            "saved_verdict": null,
+            "source_rows": 0,
+            "status": "UNSEEN"
+          }
+        ],
+        "counts": {
+          "UNSEEN": 88
+        },
+        "current_cache_verdicts": [],
+        "full_child_coverage": false,
+        "key": [
+          10452854737274404864,
+          0
+        ],
+        "loss_witness_keys": [],
+        "outcome": "UNKNOWN"
+      }
+    ],
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-probe9.csv",
+    "sha256": "6bee4760b0a924f88238d6bfd17d261f862906c2fa9f8c0a85a8810e20917194",
+    "status_counts": {
+      "UNKNOWN": 9
+    }
+  }
+}

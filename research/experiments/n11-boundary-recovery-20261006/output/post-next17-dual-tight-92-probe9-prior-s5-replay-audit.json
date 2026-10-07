@@ -1,0 +1,61 @@
+{
+  "current_exact_cache": {
+    "entries": 4515,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-expanded-s5.cache",
+    "sha256": "2fa27a15625af7449ca8f3fa21e683ba2e13a5d4deb99f8919d02ea61b59c82c",
+    "target_exact_intersection": 0
+  },
+  "exact_conflicts": [],
+  "files_examined": 359,
+  "files_with_matching_rows": 0,
+  "interpretation": "Exact raw s5 rows are reusable; UNKNOWN rows whose node count reaches the 15,000,000 limit are not replayed at the same budget. Any UNKNOWN with fewer nodes requires source-budget provenance review before dispatch.",
+  "matches": {},
+  "prior_exact": {},
+  "prior_unknown_same_budget_15m": [],
+  "prior_unknown_under_15m_needs_budget_provenance": [],
+  "schema": "n11-post-next17-dual-tight-92-probe9-prior-s5-replay-audit-v1",
+  "scope": "CSV replay outputs under recovery/output and frontier-selection/output, recursively scanned. This is the archived replay scope used by the adjacent next17/next18 audits; it is not a repository-wide completeness claim.",
+  "targets": {
+    "count": 9,
+    "keys": [
+      [
+        1297107061426880512,
+        17
+      ],
+      [
+        10452854736200663040,
+        0
+      ],
+      [
+        1297036692682702852,
+        17
+      ],
+      [
+        10452854735261138944,
+        0
+      ],
+      [
+        1297036692682833920,
+        17
+      ],
+      [
+        1297036692699480064,
+        17
+      ],
+      [
+        1297036693756444672,
+        17
+      ],
+      [
+        1297036967560609792,
+        17
+      ],
+      [
+        10452854737274404864,
+        0
+      ]
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-probe9.csv",
+    "sha256": "6bee4760b0a924f88238d6bfd17d261f862906c2fa9f8c0a85a8810e20917194"
+  }
+}
