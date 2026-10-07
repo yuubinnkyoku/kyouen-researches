@@ -1284,6 +1284,78 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 99-child complete boundary; exact WIN witness and legal parent incidence for class (10448491872987906048, 0)
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Reoptimized dual-tight repair ranking after this exact WIN
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Source hashes for the updated ranking and UNKNOWN s5 target list
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): UNKNOWN s5 boundary for the next ranked dual-tight class
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-dual-tight-probe8-artifact-hashes-20261008.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-dual-tight-probe8-artifact-hashes-20261008.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): SHA-256 inventory for outputs, source inputs, and preserved .local run evidence
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): All-class status, 119-vertex cover minimum, and rational LP dual
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-exact-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-exact-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Exact-completed subset supplied to the complete geometry verifier
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-geometry-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-geometry-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Complete 101-child boundary and two legal WIN witness checks
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-geometry-input-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-geometry-input-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Geometry verifier source hashes, including all raw run files
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-geometry-input-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-geometry-input-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Exact-only inputs and hashes supplied to the full-boundary verifier
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Source-bound schedule with same-budget UNKNOWN excluded
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-merge-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-merge-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Exact cache merge receipt with zero verdict conflicts
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Merged exact s5 cache with 4,786 entries
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-new-exact-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-new-exact-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Two exact WIN and four exact LOSS results
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-raw-all.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-raw-all.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Completed exact outputs; two scheduled keys were not dispatched
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-raw-exact.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-raw-exact.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Six exact solver replay rows
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-repair-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-repair-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Distinct UNKNOWN s5 positions in the reoptimized repair union
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Reoptimized three-class repair with 286 distinct UNKNOWN s5 positions
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-run-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-run-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Per-target inputs, outputs, hashes, and undispatched status
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Probe summary with two WIN, four LOSS, 35,250,655 nodes
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-probe8.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Eight low-legal-count targets; order is scheduling metadata only
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-raw-history-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-raw-history-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 1,753-CSV audit; one same-budget UNKNOWN key excluded from 91 ready children
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-derived-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-derived-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): No exact s5 delta was derived from saved s6 results
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-full.json.gz](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-full.json.gz)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Full saved-s6 parent-child intersection details
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): The 38-source saved-s6 intersection derives no exact s5 verdict for 92 parents
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-geometry-reaudit-20261008.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-geometry-reaudit-20261008.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): complete 110-child geometry re-audit for class (1297036692683751424,16384), exact WIN witness verified
