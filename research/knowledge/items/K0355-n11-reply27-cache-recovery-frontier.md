@@ -1957,8 +1957,83 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-3bafea55-dual-tight-probe8-artifact-hashes-20261008.json
     role: manifest
     note: "SHA-256 inventory for current outputs, sources, and preserved .local raw evidence."
-scope: "Finite reply27 frontier after the 2026-10-08 dual-tight probe8 WIN checkpoint: exact s5 cache 4,793 entries, all 3,384 s4 class statuses, reoptimized three-class repair, and the next dual-tight target."
-evidence: "Exact solver verdicts only; full canonical geometry verifies the latest WIN class `(10412322338480590848,0)`: its 100-child s5 boundary has 13 LOSS, one exact WIN witness `(1297036692683751424,66)`, and 86 UNKNOWN. The witness is safe, canonical, and a legal child; it also proves reachable parent class `(10413448238387433472,0)` WIN. Cache has 4,793 entries (WIN 115, LOSS 4,678, conflict 0), SHA-256 `9c205f31c7a229a305e83ed33de68ec88d765376afb3bfda33d2718170ee92f2`; s4 status is LOSS 29, WIN 204, UNKNOWN 3,151, with 113/119 secured. Minimum additional classes and rational LP dual are both 3; the reoptimized repair covers 287 distinct UNKNOWN s5 children. `(60, 27)` and empty-board status remain UNKNOWN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-after-probe8-dual-tight-ranking.json
+    role: data
+    note: "Reoptimized dual-tight repair ranking after this exact s5 WIN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-after-probe8-dual-tight-sources.json
+    role: manifest
+    note: "Source hashes for the updated ranking and UNKNOWN s5 boundary."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-after-probe8-dual-tight-targets.csv
+    role: data
+    note: "UNKNOWN s5 boundary for the next ranked dual-tight class."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-cardinality.json
+    role: data
+    note: "All 3,384 class statuses, 119-vertex cover minimum, and rational LP dual."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-dual-tight-repair-input.json
+    role: data
+    note: "Schema adapter preserving selected additive repair rows verbatim."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-exact-targets.csv
+    role: source
+    note: "Eight exact completed s5 targets supplied to the geometry verifier."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-geometry-audit.json
+    role: verifier
+    note: "Complete 105-child boundary and one safe canonical legal WIN witness."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-geometry-input-sources.json
+    role: manifest
+    note: "Hashed geometry, cache, audit, solver, and preserved raw inputs."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-geometry-input-summary.json
+    role: data
+    note: "Exact-only counts and hashes normalized from the completion-run collector."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-manifest.json
+    role: manifest
+    note: "Source-bound schedule for eight probes selected from 92 ready children."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-merge-receipt.json
+    role: manifest
+    note: "Exact cache merge receipt with zero verdict conflicts."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-merged-s5.cache
+    role: data
+    note: "Merged exact s5 cache with 4,801 entries."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-new-exact-s5.cache
+    role: data
+    note: "Eight exact new s5 rows: seven LOSS and one WIN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-raw-all.csv
+    role: source
+    note: "All eight exact solver replay rows."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-raw-exact.csv
+    role: source
+    note: "Eight exact solver replay rows."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-repair-targets.csv
+    role: data
+    note: "Distinct UNKNOWN s5 positions in the recomputed repair union."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-repair.json
+    role: data
+    note: "Reoptimized three-class repair after the exact WIN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-run-manifest.json
+    role: manifest
+    note: "Per-target solver inputs, outputs, hashes, and statuses."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-summary.json
+    role: data
+    note: "Probe summary with seven LOSS, one WIN, zero UNKNOWN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8.csv
+    role: source
+    note: "Eight scheduled probes; order is scheduling metadata only."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-raw-history-audit.json
+    role: manifest
+    note: "1,793-CSV audit; all 92 children ready, no prior exact or same-budget UNKNOWN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-saved-s6-derived-s5.cache
+    role: data
+    note: "No exact s5 verdict was derived from saved s6 results."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-saved-s6-full.json.gz
+    role: source
+    note: "Full saved-s6 parent-child intersection details."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-saved-s6-summary.json
+    role: manifest
+    note: "Saved-s6 audit leaves all 92 target parents UNKNOWN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-dual-tight-probe8-artifact-hashes-20261008.json
+    role: manifest
+    note: "SHA-256 inventory for current outputs, sources, and preserved .local raw evidence."
+scope: "Finite reply27 frontier after the 2026-10-08 dual-tight probe8 WIN checkpoint: exact s5 cache 4,801 entries, all 3,384 s4 class statuses, reoptimized three-class repair, and the next dual-tight target."
+evidence: "Exact solver verdicts only; full canonical geometry verifies the latest WIN class `(1297036692816920704,0)`: its 105-child s5 boundary has 20 LOSS, one exact WIN witness `(1297036692816920576,8193)`, and 84 UNKNOWN. The witness is safe, canonical, and a legal child; it also proves reachable parent classes `(1152921504741064704,8193)` and `(10448359931592572928,0)` WIN. Cache has 4,801 entries (WIN 116, LOSS 4,685, conflict 0), SHA-256 `47f3b3520f826592347a89720508aece72fc62281ff644bc6b7a43dfa69699be`; s4 status is LOSS 29, WIN 207, UNKNOWN 3,148, with 113/119 secured. Minimum additional classes and rational LP dual are both 3; the reoptimized repair covers 288 distinct UNKNOWN s5 children. `(60, 27)` and empty-board status remain UNKNOWN."
 ---
 
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
