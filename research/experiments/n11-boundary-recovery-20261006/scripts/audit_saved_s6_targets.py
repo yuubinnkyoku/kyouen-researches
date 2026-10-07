@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import gzip
 import hashlib
 import json
 import sys
@@ -156,6 +157,10 @@ def main() -> None:
     parser.add_argument("--current-cache", type=Path, default=CURRENT_CACHE)
     parser.add_argument("--summary-out", type=Path, default=SUMMARY_OUT)
     parser.add_argument("--cache-out", type=Path, default=CACHE_OUT)
+    parser.add_argument("--compact-json", action="store_true",
+                        help="write the full audit JSON without indentation to reduce storage")
+    parser.add_argument("--full-detail-gzip", type=Path,
+                        help="also preserve the full parent-child audit as a deterministic gzip JSON artifact")
     args = parser.parse_args()
 
     source_audit = json.loads(args.saved_audit.read_text(encoding="utf-8"))
@@ -259,9 +264,30 @@ def main() -> None:
                              "opposite_verdict_conflicts": cache_conflicts, "unknown_parents": parent_outcomes["UNKNOWN"]},
         "derived_cache": {"path": relpath(args.cache_out), "sha256": sha256(args.cache_out), "rows": len(derived)},
     }
+    if args.full_detail_gzip:
+        if not str(args.full_detail_gzip).lower().endswith(".json.gz"):
+            raise SystemExit("--full-detail-gzip output must end in .json.gz")
+        full_payload = (json.dumps(summary, separators=(",", ":"), sort_keys=True) + "\n").encode("utf-8")
+        compressed = gzip.compress(full_payload, mtime=0)
+        args.full_detail_gzip.parent.mkdir(parents=True, exist_ok=True)
+        args.full_detail_gzip.write_bytes(compressed)
+        summary["full_detail"] = {
+            "path": relpath(args.full_detail_gzip),
+            "sha256": sha256(args.full_detail_gzip),
+            "bytes": args.full_detail_gzip.stat().st_size,
+            "content": "full audit JSON with every canonical s6 boundary child",
+        }
+        summary["targets"] = dict(summary["targets"])
+        summary["targets"]["parents"] = [
+            {key: value for key, value in parent.items() if key != "children"}
+            for parent in summary["targets"]["parents"]
+        ]
     args.summary_out.parent.mkdir(parents=True, exist_ok=True)
     with args.summary_out.open("w", encoding="utf-8", newline="\n") as stream:
-        stream.write(json.dumps(summary, indent=2, sort_keys=True) + "\n")
+        if args.compact_json or args.full_detail_gzip:
+            stream.write(json.dumps(summary, separators=(",", ":"), sort_keys=True) + "\n")
+        else:
+            stream.write(json.dumps(summary, indent=2, sort_keys=True) + "\n")
     print(json.dumps({"parents": len(parents), "outcomes": dict(sorted(parent_outcomes.items())),
                       "new_exact": len(derived), "cache_conflicts": len(cache_conflicts)}, sort_keys=True))
 
