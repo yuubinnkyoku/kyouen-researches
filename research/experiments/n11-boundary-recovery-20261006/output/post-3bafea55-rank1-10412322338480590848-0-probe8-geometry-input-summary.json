@@ -1,0 +1,38 @@
+{
+  "claim": "Exact-only subset normalized from the completion-run collector summary for geometry verification; UNKNOWN remains excluded from the exact cache.",
+  "class_key": [
+    10412322338480590848,
+    0
+  ],
+  "completed_rows": 8,
+  "completion_collector": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-3bafea55-rank1-10412322338480590848-0-probe8-summary.json",
+    "sha256": "c868b9bf175710fdf7d546f5d70d1537885f543272e77bc2940821aed2fd71ab"
+  },
+  "exact_replay_counts": {
+    "LOSS": 6,
+    "UNKNOWN": 0,
+    "WIN": 1
+  },
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-3bafea55-rank1-10412322338480590848-0-probe8-new-exact-s5.cache",
+    "rows": 7,
+    "sha256": "b1dbc707a0ba1f30ee7fcb2ef5119dba4dc346b821a61b1a2316d4e05f217291"
+  },
+  "nodes_all_completed_rows": 48924540,
+  "nodes_exact": 33924540,
+  "not_dispatched_keys": [],
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-3bafea55-rank1-10412322338480590848-0-probe8-raw-exact.csv",
+    "rows": 7,
+    "sha256": "061d49605d3697ee751a5932a9bd1aaddf0963ddb09864f0ad54f7722d04c874"
+  },
+  "scheduled": 8,
+  "schema": "n11-dual-tight-probe-exact-subset-summary-v1",
+  "unknown_keys": [
+    [
+      10412322338480590880,
+      0
+    ]
+  ]
+}
