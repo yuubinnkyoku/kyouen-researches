@@ -1,6 +1,8 @@
 """Failure and positive regression tests for n11 missing replay redundancy auditing."""
 from __future__ import annotations
 
+import csv
+import hashlib
 import json
 import sys
 import tempfile
@@ -111,6 +113,31 @@ class MissingReplayTests(unittest.TestCase):
             f.write(f"s5verdict,{LOSS_KEY[0]},{LOSS_KEY[1]},5,1,0\n")
         with self.assertRaisesRegex(ValueError, "conflicting exact cache"):
             read_exact_cache(self.cache)
+
+    def test_archived_receipt_preserves_full_64bit_keys(self):
+        root = Path(__file__).resolve().parents[4]
+        path = root / ("research/experiments/n11-boundary-recovery-20261006/"
+                       "output/post-bd547ab0-vanished-s5-key-evidence-receipt-20261008.json")
+        data = json.loads(path.read_text(encoding="utf-8"))
+        samples = data["uncached_saved_unknown_examples"]
+        self.assertEqual(len(samples), 8)
+        seen = set()
+        for item in samples:
+            key = item["key"]
+            self.assertEqual(len(key), 2)
+            self.assertTrue(all(isinstance(k, str) and k.isdecimal() for k in key))
+            self.assertGreater(int(key[0]), 2**53)
+            seen.add(tuple(key))
+            source = root / item["saved_replay_file"]
+            self.assertEqual(hashlib.sha256(source.read_bytes()).hexdigest(),
+                             item["sha256"])
+            with source.open(encoding="utf-8-sig", newline="") as f:
+                rows = list(csv.reader(f))
+            row = rows[item["line"] - 1]
+            self.assertEqual([row[9], row[10]], key)
+            self.assertEqual(int(row[5]), item["budget"])
+            self.assertEqual(row[6], "0")
+        self.assertEqual(len(seen), 8)
 
     def test_script_does_not_authorize_source_gate_override(self):
         s = (SCRIPTS / "audit_missing_s5_replay_redundancy.py").read_text()
