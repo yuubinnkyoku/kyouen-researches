@@ -1620,6 +1620,7 @@
 - ← depends_on [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 非自明容量ゲームでは hm>r を用いる
 - ← depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 容量ゲームの安全性と偶数余剰列の二値Grundy公式を用いる
 - ← depends_on [K0360](../items/K0360-capacity-slack-three-exact-grundy.md): 容量ゲームの定義・飽和列除去と平行移動のゲーム木同型を用いる
+- ← depends_on [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md): 極大配置の形と途中局面から到達可能な終局閾値の厳密な区間を使う
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1628,6 +1629,7 @@
 ## [K0354](../items/K0354-general-prism-maximal-count.md) 任意次元平行列盤の極大安全集合数は母関数で閉形式に数えられる
 
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 極大占有数の完全分類を使う
+- ← generalizes [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md): 空盤からの極大盤面数を任意の途中盤面からの条件付き極大盤面数に拡張する
 
 ## [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) 11×11 reply27の保存済みexact結果から復元したcache frontier
 
@@ -1663,3 +1665,8 @@
 
 - → depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 余裕2の全称Grundy閉公式から上位着手子の二値署名を求める
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 容量ゲームの定義・飽和列除去と平行移動のゲーム木同型を用いる
+
+## [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) 任意の容量ゲーム途中局面からの極大盤面数と全合法着手順序数を母関数で厳密決定する
+
+- → generalizes [K0354](../items/K0354-general-prism-maximal-count.md): 空盤からの極大盤面数を任意の途中盤面からの条件付き極大盤面数に拡張する
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 極大配置の形と途中局面から到達可能な終局閾値の厳密な区間を使う
