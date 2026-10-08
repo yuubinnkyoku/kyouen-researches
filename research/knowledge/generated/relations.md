@@ -1618,6 +1618,7 @@
 - ← depends_on [K0354](../items/K0354-general-prism-maximal-count.md): 極大占有数の完全分類を使う
 - ← depends_on [K0356](../items/K0356-capacity-boundary-grundy-bound.md): 任意次元平行列盤を上位h=d−1列の容量ゲームへ縮約する
 - ← depends_on [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 非自明容量ゲームでは hm>r を用いる
+- ← depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 容量ゲームの安全性と偶数余剰列の二値Grundy公式を用いる
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1649,3 +1650,9 @@
 
 - → depends_on [K0356](../items/K0356-capacity-boundary-grundy-bound.md): 容量境界の子のGrundy値を残り手数の偶奇で完全決定する
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 非自明容量ゲームでは hm>r を用いる
+- ← depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 余裕1に移る全子のGrundy値を正確に分類する
+
+## [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) 任意次元容量ゲームの余裕2層は全局面二値Grundyで閉公式を持つ
+
+- → depends_on [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 余裕1に移る全子のGrundy値を正確に分類する
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 容量ゲームの安全性と偶数余剰列の二値Grundy公式を用いる
