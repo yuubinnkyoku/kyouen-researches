@@ -242,7 +242,7 @@
 | F-BK | [K0070](../items/K0070-width-three-q6-stabilization.md) | 3×m・q=6の真の満容量安定化長M_{3,6}=9 |
 | F-BL | [K0071](../items/K0071-width-three-q5-exact-stabilization.md) | 3×m・q=5の真の満容量安定化長はM_{3,5}=12 |
 | F-BM | [K0074](../items/K0074-single-forbidden-type-variants.md) | 片禁止q点変種の全長強解決定理 |
-| F-BN | [K0072](../items/K0072-mod9-integer-row-separation.md) | 標準整数行のmod9制約は高q全長分離領域を拡大する |
+| F-BN | [K0072](../items/K0072-mod9-integer-row-separation.md) | 標準整数行の合同条件は高q全長分離領域を拡大する |
 | F-C | [K0109](../items/K0109-n7-n9-certificate-loss-ratios.md) | 7〜9×9公開証明書のLOSS比34〜35%は三サイズの観測 |
 | F-D | [K0082](../items/K0082-n10-three-stone-degree-cost-correlation.md) | 10×10の3石探索コストとΣdの負相関は固定R内限定 |
 | F-E | [K0083](../items/K0083-fixed-r-four-stone-loss-separation.md) | R内4石のΣdとLOSS分離、二石順位の旧記述は訂正済み |
