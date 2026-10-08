@@ -158,6 +158,16 @@ def analyze(reference: dict, raw_root: Path, cache_file: Path, *, base: Path = R
         "historical_missing_one_s5_csv": len(missing_keys),
         "missing_keys_with_saved_raw": len(recovered) - len(unobserved),
         "missing_keys_already_exact_in_cache": len(missing_keys) - len(uncached),
+        "saved_raw_exact_keys": sum(any(z["verdict"] in (1, 2) for z in row["saved_replays"])
+                                    for row in recovered.values()),
+        "saved_raw_unknown_only_keys": sum(all(z["verdict"] == 0 for z in row["saved_replays"])
+                                           and bool(row["saved_replays"])
+                                           for row in recovered.values()),
+        "saved_raw_unknown_only_with_later_cache_exact": sum(
+            bool(row["saved_replays"])
+            and all(z["verdict"] == 0 for z in row["saved_replays"])
+            and row["cache_exact_verdict"] is not None
+            for row in recovered.values()),
         "uncached_keys_with_only_saved_15m_unknown": len(uncached) - len(unresolved),
         "uncached_keys_without_sufficient_saved_raw": len(unresolved),
         "saved_exact_cache_conflicts": conflicts,
