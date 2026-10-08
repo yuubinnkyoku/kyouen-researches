@@ -6,7 +6,7 @@ status: proved
 topics: [variants, statistics, strategy-length]
 aliases: []
 relations:
-- type: strengthens
+- type: depends_on
   target: K0362
   note: 高さ無限の終局分布収束を有限高さの全変動距離上界と一次補正へ定量化する
 - type: depends_on
