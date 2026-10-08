@@ -15,6 +15,7 @@ EDGE = ROOT / "research/experiments/n11-search-methods/scripts"
 sys.path.insert(0, str(SCRIPTS))
 sys.path.insert(0, str(EDGE))
 from audit_probe_preflight import validate_audits  # noqa: E402
+from verify_raw_history_coverage import verify_coverage  # noqa: E402
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after  # noqa: E402
 
 
@@ -70,6 +71,8 @@ def main() -> int:
     parser.add_argument("--schedule-manifest", type=Path, required=True)
     parser.add_argument("--cache", type=Path, required=True)
     parser.add_argument("--raw-audit", type=Path, required=True)
+    parser.add_argument("--historical-raw-audit", type=Path, required=True,
+                        help="immutable earlier full-source inventory for identical targets/cache")
     parser.add_argument("--saved-s6-audit", type=Path, required=True)
     parser.add_argument("--budget", type=int, required=True)
     parser.add_argument("--out", type=Path, required=True)
@@ -87,6 +90,15 @@ def main() -> int:
         raise SystemExit("scheduled targets differ from the immutable probe manifest")
 
     raw = json.loads(args.raw_audit.read_text(encoding="utf-8"))
+    historical = json.loads(args.historical_raw_audit.read_text(encoding="utf-8"))
+    coverage = verify_coverage(historical, raw, ROOT)
+    if coverage["status"] != "PASS":
+        raise SystemExit(
+            "historical replay-source coverage incomplete: "
+            f"{coverage['missing_csv']} missing CSV "
+            f"({coverage['missing_s5_replay_rows']} s5 replay rows), "
+            f"{coverage['altered_csv']} altered CSV; refusing dispatch"
+        )
     # Require the audit's own recorded budget; do not invent an attestation.
     saved = json.loads(args.saved_s6_audit.read_text(encoding="utf-8"))
     ready, blocked = validate_audits(
@@ -96,6 +108,7 @@ def main() -> int:
     saved_script = SCRIPTS / "audit_saved_s6_targets.py"
     validator_script = SCRIPTS / "audit_probe_preflight.py"
     inputs = [args.targets, args.schedule_manifest, args.cache, args.raw_audit,
+              args.historical_raw_audit, SCRIPTS / "verify_raw_history_coverage.py",
               args.saved_s6_audit, raw_script, saved_script, validator_script,
               Path(__file__).resolve(), EDGE / "dfpn_edge_classes.py"]
     report = {
@@ -105,6 +118,15 @@ def main() -> int:
         "target_sha256": target_sha,
         "exact_cache_sha256": cache_sha,
         "budget": args.budget,
+        "historical_source_coverage": {
+            "reference_csv": coverage["reference_csv"],
+            "current_csv": coverage["current_csv"],
+            "new_csv": coverage["new_csv"],
+            "normalized_crlf_to_lf": coverage["normalized_crlf_to_lf"],
+            "missing_csv": coverage["missing_csv"],
+            "altered_csv": coverage["altered_csv"],
+            "status": coverage["status"],
+        },
         "budget_binding": "The saved raw-history audit attests its own requested_budget; this value must match the dispatch budget. Legacy budgetless audits are rejected and must be regenerated.",
         "ready_keys": [list(key) for key in sorted(ready)],
         "blocked_same_or_higher_budget_unknown_keys": [list(key) for key in sorted(blocked)],
