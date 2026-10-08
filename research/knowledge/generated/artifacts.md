@@ -370,6 +370,9 @@
 ## [research/experiments/fixed-width/output/curve_packing_fixed_width.json](../../../research/experiments/fixed-width/output/curve_packing_fixed_width.json)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (data): 上界表と小盤検査
+## [research/experiments/fixed-width/output/prime_avoidance_check.txt](../../../research/experiments/fixed-width/output/prime_avoidance_check.txt)
+
+- [K0370](../items/K0370-quantitative-uniform-circle-density.md) (data): 6個の素数個数・因数回避の有限確認
 ## [research/experiments/fixed-width/output/q2w_boundary_structure.json](../../../research/experiments/fixed-width/output/q2w_boundary_structure.json)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (data): mod9全剰余とlifted determinant照合
@@ -460,6 +463,9 @@
 ## [research/experiments/fixed-width/reports/q48-q6-exact-threshold.md](../../../research/experiments/fixed-width/reports/q48-q6-exact-threshold.md)
 
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,6}=16
+## [research/experiments/fixed-width/reports/quantitative-prime-avoidance-upgrade-20261008.md](../../../research/experiments/fixed-width/reports/quantitative-prime-avoidance-upgrade-20261008.md)
+
+- [K0370](../items/K0370-quantitative-uniform-circle-density.md) (proof): gcdの素因数を避ける素数選択による強化された対数割る二重対数型上界
 ## [research/experiments/fixed-width/reports/quantitative-uniform-circle-density-20261008.md](../../../research/experiments/fixed-width/reports/quantitative-uniform-circle-density-20261008.md)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (proof): 素数定理の算術級数版を用いた全称証明
@@ -508,6 +514,9 @@
 ## [research/experiments/fixed-width/scripts/verify_exact_double_rows_5_43.py](../../../research/experiments/fixed-width/scripts/verify_exact_double_rows_5_43.py)
 
 - [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md) (verifier): 二方式の剰余集合照合と具体的円の整数検算
+## [research/experiments/fixed-width/scripts/verify_prime_avoidance.py](../../../research/experiments/fixed-width/scripts/verify_prime_avoidance.py)
+
+- [K0370](../items/K0370-quantitative-uniform-circle-density.md) (verifier): 素数個数とgcd因数回避の有限例（無界証明ではない）
 ## [research/experiments/fixed-width/scripts/verify_quantitative_density.py](../../../research/experiments/fixed-width/scripts/verify_quantitative_density.py)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (verifier): 局所剰余数と中国剰余定理の独立有限検算
