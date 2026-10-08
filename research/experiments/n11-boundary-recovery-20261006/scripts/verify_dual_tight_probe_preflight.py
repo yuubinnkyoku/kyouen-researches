@@ -87,13 +87,10 @@ def main() -> int:
         raise SystemExit("scheduled targets differ from the immutable probe manifest")
 
     raw = json.loads(args.raw_audit.read_text(encoding="utf-8"))
-    # audit_s5_raw_history.py's current schema omits the requested budget. Bind
-    # the explicit CLI value in-memory; the raw evidence file remains untouched.
-    raw_for_validation = dict(raw)
-    raw_for_validation["requested_budget"] = args.budget
+    # Require the audit's own recorded budget; do not invent an attestation.
     saved = json.loads(args.saved_s6_audit.read_text(encoding="utf-8"))
     ready, blocked = validate_audits(
-        target_keys, target_sha, cache_sha, raw_for_validation, saved, args.budget)
+        target_keys, target_sha, cache_sha, raw, saved, args.budget)
 
     raw_script = SCRIPTS / "audit_s5_raw_history.py"
     saved_script = SCRIPTS / "audit_saved_s6_targets.py"
@@ -108,7 +105,7 @@ def main() -> int:
         "target_sha256": target_sha,
         "exact_cache_sha256": cache_sha,
         "budget": args.budget,
-        "budget_binding": "Explicit --budget passed to the raw-history audit command; copied into the validator input in-memory because the raw audit schema omits requested_budget. The raw audit file was not modified.",
+        "budget_binding": "The saved raw-history audit attests its own requested_budget; this value must match the dispatch budget. Legacy budgetless audits are rejected and must be regenerated.",
         "ready_keys": [list(key) for key in sorted(ready)],
         "blocked_same_or_higher_budget_unknown_keys": [list(key) for key in sorted(blocked)],
         "target_legal_counts": {f"{key[0]},{key[1]}": legal_counts[key]
