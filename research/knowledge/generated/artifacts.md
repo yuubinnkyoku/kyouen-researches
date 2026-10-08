@@ -396,6 +396,9 @@
 ## [research/experiments/fixed-width/reports/curve-packing-fixed-width.md](../../../research/experiments/fixed-width/reports/curve-packing-fixed-width.md)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (proof): 三つ組・点対予算による一般定理
+## [research/experiments/fixed-width/reports/mod7-mod9-mod11-mod19-mod23-half-density-15.md](../../../research/experiments/fixed-width/reports/mod7-mod9-mod11-mod19-mod23-half-density-15.md)
+
+- [K0072](../items/K0072-mod9-integer-row-separation.md) (proof): w=15..18の二重点行半密度境界の合同完全排除とw>=15への接続
 ## [research/experiments/fixed-width/reports/q-point-fixed-width.md](../../../research/experiments/fixed-width/reports/q-point-fixed-width.md)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (proof): 命題・対象範囲・根拠を記した出典
@@ -450,6 +453,9 @@
 ## [research/experiments/fixed-width/scripts/curve_packing_fixed_width.py](../../../research/experiments/fixed-width/scripts/curve_packing_fixed_width.py)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (verifier): 整数最適化と全小盤予算不等式の再現
+## [research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py](../../../research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py)
+
+- [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 2独立方式で79651候補行部分集合を検証し全排除
 ## [research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp)
 
 - [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): 短い終局・例外下方閉包・mex遷移の独立監査
