@@ -18,6 +18,8 @@ jobs:
           fetch-depth: 0
       - uses: astral-sh/setup-uv@v6
       - run: uv sync --locked
+      - name: Audit quantitative circle-density modular checker
+        run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
