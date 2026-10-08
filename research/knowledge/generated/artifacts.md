@@ -455,7 +455,7 @@
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (verifier): 整数最適化と全小盤予算不等式の再現
 ## [research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py](../../../research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py)
 
-- [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 2独立方式で79651候補行部分集合を検証し全排除
+- [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 2独立方式で79651候補k行部分集合を検証し全排除
 ## [research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp)
 
 - [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): 短い終局・例外下方閉包・mex遷移の独立監査
