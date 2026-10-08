@@ -1,0 +1,1108 @@
+{
+  "base_s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-rank1-10448351135499567104-0-probe8-merged-s5.cache",
+    "sha256": "aad74dfceee5e7d8ac8e0ebfe48b5ea81188ccece5f08e08a31f64d905669c2a"
+  },
+  "base_saved_s6_source_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-combined-saved-s6-source-audit.json",
+    "sha256": "65267dabc1ebfccd365b003ea762f9ec51915e3f1449701903988b7a953d8b67"
+  },
+  "boundary_canonical_s6_count": 90,
+  "budget_per_target": 2000000,
+  "claim": "solver outcomes are preserved raw exact-replay outputs; this manifest makes no s5 verdict inference",
+  "command": "uv run --no-project python research/experiments/n11-boundary-recovery-20261006/scripts/complete_s5_via_s6_local.py --parents research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s5-unknown-1152925911243358208-536870912-s6-parent.csv --saved-audit research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-saved-s6-runner-input.json --solver .local/n11/reply27-probe9/dfpn.exe --out-dir .local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84 --workers 1 --budget 2000000",
+  "created_utc": "2026-10-08T18:09:52+00:00",
+  "local_runner_summary": {
+    "path": ".local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/summary.json",
+    "sha256": "71e8719e7e315e82e3440943a3b582076c3a9e7171a97e4d2e3d0ab37533ec4f"
+  },
+  "main_at_dispatch": "5dfabf8465539ce2d58b7df65751ede4a7b236b3",
+  "new_solver_exact": 85,
+  "new_solver_unknown": 3,
+  "nodes_new": 33416984,
+  "parents": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s5-unknown-1152925911243358208-536870912-s6-parent.csv",
+    "sha256": "c2fbffc856fee02d98197b95bf5262c6db421ddabed2416b4cd344a49bef1fe0"
+  },
+  "raw_sources": [
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152921504741065728-1099515830272.out.csv",
+      "key": [
+        1152921504741065728,
+        1099515830272
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152921504741065728-1099515830272.out.csv",
+      "nodes": 747404,
+      "replay_rows": 1,
+      "sha256": "8568d55561150a44d266d607e5a8e42d31d6c3ae48b36252fd1b6aa3e01e315a",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870920.out.csv",
+      "key": [
+        1152925911243358208,
+        536870920
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-536870920.out.csv",
+      "nodes": 872090,
+      "replay_rows": 1,
+      "sha256": "5f13a615964dcd085d6a66ff7d8829abcb27a443d439f84c80f447b79e199fc5",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870928.out.csv",
+      "key": [
+        1152925911243358208,
+        536870928
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-536870928.out.csv",
+      "nodes": 237784,
+      "replay_rows": 1,
+      "sha256": "ec031b106e0a80227bf068c5f7a7e6df7882b2ffc7bd28404afe71799a7fab9b",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870944.out.csv",
+      "key": [
+        1152925911243358208,
+        536870944
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-536870944.out.csv",
+      "nodes": 918969,
+      "replay_rows": 1,
+      "sha256": "011b094147d3d776ab0481e80d4270abdfbd545ab5ecf806547ef599ba8f421d",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870976.out.csv",
+      "key": [
+        1152925911243358208,
+        536870976
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-536870976.out.csv",
+      "nodes": 240363,
+      "replay_rows": 1,
+      "sha256": "38b77455c83bcfa2d7ac1360fb79401abe2520398b95c9a77fd2b5eb2f378a96",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536887296.out.csv",
+      "key": [
+        1152925911243358208,
+        536887296
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-536887296.out.csv",
+      "nodes": 248431,
+      "replay_rows": 1,
+      "sha256": "85bc467d8f003d9a48fb08955cf6fc968ced615d2f11814d0812131af2a038a2",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536903680.out.csv",
+      "key": [
+        1152925911243358208,
+        536903680
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-536903680.out.csv",
+      "nodes": 265639,
+      "replay_rows": 1,
+      "sha256": "039ca08a1c58d0d0ae533a8e568903130af34fea9f5e022e59164877112c4c4e",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536936448.out.csv",
+      "key": [
+        1152925911243358208,
+        536936448
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-536936448.out.csv",
+      "nodes": 304790,
+      "replay_rows": 1,
+      "sha256": "b808cc9c819096d80a9e57b49bb43485ea45729f1e608c64a0853435d1422341",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-537001984.out.csv",
+      "key": [
+        1152925911243358208,
+        537001984
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-537001984.out.csv",
+      "nodes": 77766,
+      "replay_rows": 1,
+      "sha256": "f01aba2d69d2290d33a7ed61ceda94999f0f5414c772d1e856a08a7cc522bb99",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-553648128.out.csv",
+      "key": [
+        1152925911243358208,
+        553648128
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-553648128.out.csv",
+      "nodes": 109679,
+      "replay_rows": 1,
+      "sha256": "f6cb77385bde30c26ead72a0ceb4a89bf075c7b4df198025783c6ab4cd7d903f",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-570425344.out.csv",
+      "key": [
+        1152925911243358208,
+        570425344
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-570425344.out.csv",
+      "nodes": 107520,
+      "replay_rows": 1,
+      "sha256": "7fc57555ae57ccda6f259054570eb28c93b66f281fc3337f7c5575c8a0e76dc2",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-671088640.out.csv",
+      "key": [
+        1152925911243358208,
+        671088640
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-671088640.out.csv",
+      "nodes": 423070,
+      "replay_rows": 1,
+      "sha256": "b26cea4b9cc70f552f2be18a4ec3520a1bd682fd52990998b1862511c4a59c43",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-34896609280.out.csv",
+      "key": [
+        1152925911243358208,
+        34896609280
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-34896609280.out.csv",
+      "nodes": 2000000,
+      "replay_rows": 1,
+      "sha256": "2c36a284e0dc257e3e2e1dcc53882646d59e73ea08ebf262d64d8750f1315121",
+      "verdict": 0
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-69256347648.out.csv",
+      "key": [
+        1152925911243358208,
+        69256347648
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-69256347648.out.csv",
+      "nodes": 241251,
+      "replay_rows": 1,
+      "sha256": "68e0381b6a833866c89b51b4535975175f46a890e9a7906eb59b826dc4b221a6",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-137975824384.out.csv",
+      "key": [
+        1152925911243358208,
+        137975824384
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358208-137975824384.out.csv",
+      "nodes": 97146,
+      "replay_rows": 1,
+      "sha256": "847b99b760d920f98b549129d679b4b6c0c1f79b35a2db476a6706e98e1dba4c",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358209-536870912.out.csv",
+      "key": [
+        1152925911243358209,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358209-536870912.out.csv",
+      "nodes": 415930,
+      "replay_rows": 1,
+      "sha256": "41504329451722699c34e8fc5da04f114056cc75a4784fd0394496a332a2a497",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358210-536870912.out.csv",
+      "key": [
+        1152925911243358210,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358210-536870912.out.csv",
+      "nodes": 105440,
+      "replay_rows": 1,
+      "sha256": "3d9223873c428d73ca4a7b707c03f4c749e17f721df2070be9df13bf8c3d80ef",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358212-536870912.out.csv",
+      "key": [
+        1152925911243358212,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358212-536870912.out.csv",
+      "nodes": 398458,
+      "replay_rows": 1,
+      "sha256": "f3c9da327c5205b87eb7152fc4ec37ba55fb02cce549a48f7e92de0c0cf98e27",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358216-536870912.out.csv",
+      "key": [
+        1152925911243358216,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358216-536870912.out.csv",
+      "nodes": 141802,
+      "replay_rows": 1,
+      "sha256": "74bd45700463779815ad3ddfa4dad123e7922b472729518098632c6598aca0ac",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358224-536870912.out.csv",
+      "key": [
+        1152925911243358224,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358224-536870912.out.csv",
+      "nodes": 251715,
+      "replay_rows": 1,
+      "sha256": "1052257ed3bb1059255115d9c2c586c88008d28e0b60ab18c617091a8e0b8f8a",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358272-536870912.out.csv",
+      "key": [
+        1152925911243358272,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358272-536870912.out.csv",
+      "nodes": 59943,
+      "replay_rows": 1,
+      "sha256": "50bbbdb7aedb03d7ea8e026ea23b1019a2ca02dc2feb98e166a2d2f496f0577b",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358336-536870912.out.csv",
+      "key": [
+        1152925911243358336,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358336-536870912.out.csv",
+      "nodes": 622544,
+      "replay_rows": 1,
+      "sha256": "70f34c66e93ca39b7e6fa4eec4f6f5dfd0760035f2baf829670cab2070078690",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358464-536870912.out.csv",
+      "key": [
+        1152925911243358464,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358464-536870912.out.csv",
+      "nodes": 317241,
+      "replay_rows": 1,
+      "sha256": "97e4a9c6ba0e8ed912546be473b8641ac440a3694a76d1fd55d33d6042fdaff8",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358720-536870912.out.csv",
+      "key": [
+        1152925911243358720,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243358720-536870912.out.csv",
+      "nodes": 95855,
+      "replay_rows": 1,
+      "sha256": "9d134c6be80f41647162bf2e1ed30d8e15236b569501b2ea88e7a40f170d30ea",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243359232-536870912.out.csv",
+      "key": [
+        1152925911243359232,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243359232-536870912.out.csv",
+      "nodes": 238760,
+      "replay_rows": 1,
+      "sha256": "364d7a30809c53dc82301bd7b081d301e7d791d7d5a811c8a21ef9b716f7ad98",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243360256-536870912.out.csv",
+      "key": [
+        1152925911243360256,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243360256-536870912.out.csv",
+      "nodes": 150896,
+      "replay_rows": 1,
+      "sha256": "9e51efcbf49dd5ba2a063947f0d6447f5d367c1a1bb2670daa165f7ea5be82ed",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243362304-536870912.out.csv",
+      "key": [
+        1152925911243362304,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243362304-536870912.out.csv",
+      "nodes": 66097,
+      "replay_rows": 1,
+      "sha256": "d120f8f878ebdaa3f55825283bf74ffbc80b7592e2f641113106774d72f8451d",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243374592-536870912.out.csv",
+      "key": [
+        1152925911243374592,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243374592-536870912.out.csv",
+      "nodes": 1496521,
+      "replay_rows": 1,
+      "sha256": "3ea68affd8ca20661064465569445ed2c2879db538056b966446224e1de0db8a",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243489280-536870912.out.csv",
+      "key": [
+        1152925911243489280,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243489280-536870912.out.csv",
+      "nodes": 352903,
+      "replay_rows": 1,
+      "sha256": "58e0dcf6b5ffa59cce52ff006d897f53f01ec0e707be47e11fa78a5d7522f1c3",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243620352-536870912.out.csv",
+      "key": [
+        1152925911243620352,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911243620352-536870912.out.csv",
+      "nodes": 223647,
+      "replay_rows": 1,
+      "sha256": "6c05336f1e08d9b65a8ddf0c005098a14913331dc9c36be699501ad721950419",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911245455360-536870912.out.csv",
+      "key": [
+        1152925911245455360,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911245455360-536870912.out.csv",
+      "nodes": 254302,
+      "replay_rows": 1,
+      "sha256": "e4ac091f4d1ecd8ed54a0dcc71c7b29a7a677b412ab6dfa8887216c26357ef26",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911247552512-536870912.out.csv",
+      "key": [
+        1152925911247552512,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911247552512-536870912.out.csv",
+      "nodes": 156942,
+      "replay_rows": 1,
+      "sha256": "a6c73c1827fa73d10870b13ffdaa74eda828f29fc534d63526cefed6246d6f71",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911251746816-536870912.out.csv",
+      "key": [
+        1152925911251746816,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911251746816-536870912.out.csv",
+      "nodes": 492128,
+      "replay_rows": 1,
+      "sha256": "017c55b5efe6ac7a7d4021aa8a984b13174bb62d960d2507903c87d1eacdef23",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911260135424-536870912.out.csv",
+      "key": [
+        1152925911260135424,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911260135424-536870912.out.csv",
+      "nodes": 291287,
+      "replay_rows": 1,
+      "sha256": "c3820ac65c46433e3faf2e43312430a0f689f0312ec18ae9e04f52c7f2fbf3ed",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911276912640-536870912.out.csv",
+      "key": [
+        1152925911276912640,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911276912640-536870912.out.csv",
+      "nodes": 70833,
+      "replay_rows": 1,
+      "sha256": "f90d1bf055459a617c9a3b11a9a70b23caacb377d554698e5ddce8a5c3545e3a",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911310467072-536870912.out.csv",
+      "key": [
+        1152925911310467072,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911310467072-536870912.out.csv",
+      "nodes": 263186,
+      "replay_rows": 1,
+      "sha256": "123e221c468b05cc5f6e5031e8a442dc3bdd8725faf273af4836f6a674e4d9c2",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911511793664-536870912.out.csv",
+      "key": [
+        1152925911511793664,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911511793664-536870912.out.csv",
+      "nodes": 38074,
+      "replay_rows": 1,
+      "sha256": "2324bf3f4aaefcf0bb87516bc028645b5c2ceb3274d90c9c580e6418aa51dfd5",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911780229120-536870912.out.csv",
+      "key": [
+        1152925911780229120,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925911780229120-536870912.out.csv",
+      "nodes": 195587,
+      "replay_rows": 1,
+      "sha256": "9a03530ca8abe1177fe5188220f3e83217cbdb4583d986dd776be207aa6a4d9e",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925912317100032-536870912.out.csv",
+      "key": [
+        1152925912317100032,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925912317100032-536870912.out.csv",
+      "nodes": 28837,
+      "replay_rows": 1,
+      "sha256": "e19bf79e696c722af02692a3044df65b4ae5c7b58e81cba7bc61721f76e26017",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925913390841856-536870912.out.csv",
+      "key": [
+        1152925913390841856,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925913390841856-536870912.out.csv",
+      "nodes": 338616,
+      "replay_rows": 1,
+      "sha256": "3ded0a40e41a1d7c21ce0de90bb7055750f3aae7b9657d97f3231f542485bef0",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925915538325504-536870912.out.csv",
+      "key": [
+        1152925915538325504,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925915538325504-536870912.out.csv",
+      "nodes": 603585,
+      "replay_rows": 1,
+      "sha256": "7a64adf73a24484ca04791ad9392faf36e8cf6dbbfcabf9e28e39ff88c5e881b",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925928423227392-536870912.out.csv",
+      "key": [
+        1152925928423227392,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925928423227392-536870912.out.csv",
+      "nodes": 823879,
+      "replay_rows": 1,
+      "sha256": "1986f79905ad5d2438da74a2f3ba6ee5958a14f88f3e5c3aa087204476145606",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925945603096576-536870912.out.csv",
+      "key": [
+        1152925945603096576,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152925945603096576-536870912.out.csv",
+      "nodes": 535660,
+      "replay_rows": 1,
+      "sha256": "11d5a820484211698f83107bfefdf80ee583e5650a746c8ba0fabfe4ad8309ad",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152926460999172096-536870912.out.csv",
+      "key": [
+        1152926460999172096,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152926460999172096-536870912.out.csv",
+      "nodes": 28837,
+      "replay_rows": 1,
+      "sha256": "274b7e52da84215bb569af24ac4bfca85ecdb53d1462af41b1f222e97739f7b6",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152928110266613760-536870912.out.csv",
+      "key": [
+        1152928110266613760,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152928110266613760-536870912.out.csv",
+      "nodes": 108187,
+      "replay_rows": 1,
+      "sha256": "cad5fa105e288b37f6606e1688db73645b58a6c27ab5fabbdd1b500047c70fdd",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536870916.out.csv",
+      "key": [
+        1152930317879803904,
+        536870916
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-536870916.out.csv",
+      "nodes": 309608,
+      "replay_rows": 1,
+      "sha256": "e6f7c04f29534ff7ff61b16f9952070fb08210afb9472b0970b1d58c57f36854",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536870928.out.csv",
+      "key": [
+        1152930317879803904,
+        536870928
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-536870928.out.csv",
+      "nodes": 431710,
+      "replay_rows": 1,
+      "sha256": "3b810143daca1237625438837b683e06e18c3d1ce70fb3c6c77c2619618a3ffc",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536870976.out.csv",
+      "key": [
+        1152930317879803904,
+        536870976
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-536870976.out.csv",
+      "nodes": 197117,
+      "replay_rows": 1,
+      "sha256": "3f2e1aaece090c56d58d129ebef509d2c3005986b66449181d576526133d3c25",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536879104.out.csv",
+      "key": [
+        1152930317879803904,
+        536879104
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-536879104.out.csv",
+      "nodes": 654140,
+      "replay_rows": 1,
+      "sha256": "316e3fde54e96fb00a39cc15cc4366938c4c6e90d7741eeaabd6eed0a6851400",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536887296.out.csv",
+      "key": [
+        1152930317879803904,
+        536887296
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-536887296.out.csv",
+      "nodes": 431152,
+      "replay_rows": 1,
+      "sha256": "b491d42b0c5c2c54048f001abdd641daca54b41e705cfc392ee2ab9cb0cc4acf",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536903680.out.csv",
+      "key": [
+        1152930317879803904,
+        536903680
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-536903680.out.csv",
+      "nodes": 343602,
+      "replay_rows": 1,
+      "sha256": "626567315bef1edada5f5a1d17eae42b29044d40167c57d7ecdacaf20f4c38a8",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536936448.out.csv",
+      "key": [
+        1152930317879803904,
+        536936448
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-536936448.out.csv",
+      "nodes": 1218725,
+      "replay_rows": 1,
+      "sha256": "d4b167a22c32c4e18d4833db791bf9d4f48fee0fcf679a6d5ce2ef2cd94cedfc",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-537001984.out.csv",
+      "key": [
+        1152930317879803904,
+        537001984
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-537001984.out.csv",
+      "nodes": 98273,
+      "replay_rows": 1,
+      "sha256": "658cddeeb6618152215043d7438be57ff198549638b5fc78604a13db887c1ab2",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-553648128.out.csv",
+      "key": [
+        1152930317879803904,
+        553648128
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-553648128.out.csv",
+      "nodes": 51123,
+      "replay_rows": 1,
+      "sha256": "f8a0252fd65b3d16df28f95198247c61e46d9c3d17d82e92c079a5030bb69fb4",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-570425344.out.csv",
+      "key": [
+        1152930317879803904,
+        570425344
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-570425344.out.csv",
+      "nodes": 344437,
+      "replay_rows": 1,
+      "sha256": "67c5ea9659bc8f13f90dec95290a88c80fea4cc14b0195008fc64226ef594b29",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-603979776.out.csv",
+      "key": [
+        1152930317879803904,
+        603979776
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-603979776.out.csv",
+      "nodes": 153478,
+      "replay_rows": 1,
+      "sha256": "2c9ccad59dcf44ce1bc7cbe7eb1c25f9fb8bde1b856d958dd8016883d436b6e2",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-671088640.out.csv",
+      "key": [
+        1152930317879803904,
+        671088640
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-671088640.out.csv",
+      "nodes": 589641,
+      "replay_rows": 1,
+      "sha256": "f87cf3506846a1e79397fc90bb81d9f9be8972c3b05e27a6c8d10427a0f702a8",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-805306368.out.csv",
+      "key": [
+        1152930317879803904,
+        805306368
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-805306368.out.csv",
+      "nodes": 361346,
+      "replay_rows": 1,
+      "sha256": "fbe2544a7fb7f9966a03bd7a870fca6dab3375d43f4d849c61b9af0e4b25f60a",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-34896609280.out.csv",
+      "key": [
+        1152930317879803904,
+        34896609280
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-34896609280.out.csv",
+      "nodes": 2000000,
+      "replay_rows": 1,
+      "sha256": "af3b7d02bce877b97c411fbaafe176ddcefd3de99964b7c369706cf94de721e6",
+      "verdict": 0
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-69256347648.out.csv",
+      "key": [
+        1152930317879803904,
+        69256347648
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-69256347648.out.csv",
+      "nodes": 109382,
+      "replay_rows": 1,
+      "sha256": "1d7275ecc00d654f198089a91bba7a2792229af6dcfa91a677971a3d0af55bd4",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-137975824384.out.csv",
+      "key": [
+        1152930317879803904,
+        137975824384
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930317879803904-137975824384.out.csv",
+      "nodes": 82091,
+      "replay_rows": 1,
+      "sha256": "4a82bcd56b705da03cfb37344894c1692b0868a40082a19ecb3b17a7c0bba809",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930326469738496-536870912.out.csv",
+      "key": [
+        1152930326469738496,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152930326469738496-536870912.out.csv",
+      "nodes": 107638,
+      "replay_rows": 1,
+      "sha256": "5a854d15794c533c47dc4b23625057e68d53d625813b6c2ddd976abb9022fc9b",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152947910065848320-536870912.out.csv",
+      "key": [
+        1152947910065848320,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152947910065848320-536870912.out.csv",
+      "nodes": 146480,
+      "replay_rows": 1,
+      "sha256": "aad04784ae813c1f5b6eb1df5aa50db8bbd079a474ec474d97f3926c7ab1eba1",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152961095615447040-536870912.out.csv",
+      "key": [
+        1152961095615447040,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152961095615447040-536870912.out.csv",
+      "nodes": 63861,
+      "replay_rows": 1,
+      "sha256": "db340663c1f6c6681e8fb8938278ad796571ac843781a712005d8acad6136536",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152996279987535872-536870912.out.csv",
+      "key": [
+        1152996279987535872,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1152996279987535872-536870912.out.csv",
+      "nodes": 98934,
+      "replay_rows": 1,
+      "sha256": "a2fe6c7061f00bc88970b88761dbc6cbdedf7e0e532b6844818788a21ea8f5d2",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153000686623981568-536870912.out.csv",
+      "key": [
+        1153000686623981568,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1153000686623981568-536870912.out.csv",
+      "nodes": 72936,
+      "replay_rows": 1,
+      "sha256": "2b58f99ec64c58a44c86efbf38565ceb8b49e29ca98b97054089819ec9bc8699",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153066648731713536-536870912.out.csv",
+      "key": [
+        1153066648731713536,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1153066648731713536-536870912.out.csv",
+      "nodes": 402800,
+      "replay_rows": 1,
+      "sha256": "200f3a5b3cddc098c2b4c2d966bb58d6a49f0c7eda6a6c9e8f6295a42085d2c0",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153071055368159232-536870912.out.csv",
+      "key": [
+        1153071055368159232,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1153071055368159232-536870912.out.csv",
+      "nodes": 129400,
+      "replay_rows": 1,
+      "sha256": "e6865782c6499a34710e9ee6a816575ba40c1ce6b7f57c8511c7a878579a0cab",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153207386220068864-536870912.out.csv",
+      "key": [
+        1153207386220068864,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1153207386220068864-536870912.out.csv",
+      "nodes": 226083,
+      "replay_rows": 1,
+      "sha256": "7fe53b6ef8e33e658cdfd023927be542091590b853f0d4a029fd69b0c65ac557",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153211792856514560-536870912.out.csv",
+      "key": [
+        1153211792856514560,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1153211792856514560-536870912.out.csv",
+      "nodes": 388957,
+      "replay_rows": 1,
+      "sha256": "aadb5b8f5b21de6c06821cc5d8d0b07bd859c8c710a4790401e2f3bb9e0f669e",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1188954708262322176-536870912.out.csv",
+      "key": [
+        1188954708262322176,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1188954708262322176-536870912.out.csv",
+      "nodes": 837730,
+      "replay_rows": 1,
+      "sha256": "69f4ba10da162b5513319fd653b3e504bb97809e497bbc5475eb0ecadcc76b40",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1188959114898767872-536870912.out.csv",
+      "key": [
+        1188959114898767872,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1188959114898767872-536870912.out.csv",
+      "nodes": 346497,
+      "replay_rows": 1,
+      "sha256": "8470fb7bfafd19027f4d4b0ad69306755123b3e84cb8f7f8badcf4165fdc8939",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1224983505281286144-536870912.out.csv",
+      "key": [
+        1224983505281286144,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1224983505281286144-536870912.out.csv",
+      "nodes": 196054,
+      "replay_rows": 1,
+      "sha256": "cff200e93265d8087bf0d906af8d4904d8691a365afbb93c79cfc27dc1d1e980",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1224987911917731840-536870912.out.csv",
+      "key": [
+        1224987911917731840,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1224987911917731840-536870912.out.csv",
+      "nodes": 72936,
+      "replay_rows": 1,
+      "sha256": "4bd1bf34e5a291dbf5f050eeef0cc483a01440caa321846af3e6328ae2706c90",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1297041099319214080-536870912.out.csv",
+      "key": [
+        1297041099319214080,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1297041099319214080-536870912.out.csv",
+      "nodes": 596173,
+      "replay_rows": 1,
+      "sha256": "f7c3f551472b04f808097e2162beb6753c0cdb2cc9d567626f52a69d85c6c6b0",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1441156287395069952-536870912.out.csv",
+      "key": [
+        1441156287395069952,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1441156287395069952-536870912.out.csv",
+      "nodes": 181163,
+      "replay_rows": 1,
+      "sha256": "33cb866b19f0c464055f3b947f86549a74da310608bc93df959c9576c95b33a6",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1441160694031515648-536870912.out.csv",
+      "key": [
+        1441160694031515648,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1441160694031515648-536870912.out.csv",
+      "nodes": 116183,
+      "replay_rows": 1,
+      "sha256": "50387ef6a588f352fb65f42a99215b76605e2e6b378e1e58ae24ccfb64c28f34",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1729391070183227392-536870912.out.csv",
+      "key": [
+        1729391070183227392,
+        536870912
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-1729391070183227392-536870912.out.csv",
+      "nodes": 68466,
+      "replay_rows": 1,
+      "sha256": "97c36ee48fcd4343a407d4cdb80099271c9b91defac56e56a4fd8f3fa0edee55",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274877908992.out.csv",
+      "key": [
+        10448351135499550728,
+        274877908992
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448351135499550728-274877908992.out.csv",
+      "nodes": 99314,
+      "replay_rows": 1,
+      "sha256": "830f3eb652058d2da799e712cd5ed2c9074f5e92940aa34a5b7161466a90ca05",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274877911040.out.csv",
+      "key": [
+        10448351135499550728,
+        274877911040
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448351135499550728-274877911040.out.csv",
+      "nodes": 2000000,
+      "replay_rows": 1,
+      "sha256": "f61b8cb7d74ffaebb89422bbffabd2178bde8192a038cecea96b63a01310ab9d",
+      "verdict": 0
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274882101248.out.csv",
+      "key": [
+        10448351135499550728,
+        274882101248
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448351135499550728-274882101248.out.csv",
+      "nodes": 206571,
+      "replay_rows": 1,
+      "sha256": "6f19617978e59dc03dc4bf68a1c176c29ad1fc646a0d8c8229ba727b897323d8",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274886295552.out.csv",
+      "key": [
+        10448351135499550728,
+        274886295552
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448351135499550728-274886295552.out.csv",
+      "nodes": 90135,
+      "replay_rows": 1,
+      "sha256": "f56c5ac740da63fee5f1324fbc04dc7124a8cc8bafbe84a432f44e10ad1057c8",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-292057776128.out.csv",
+      "key": [
+        10448351135499550728,
+        292057776128
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448351135499550728-292057776128.out.csv",
+      "nodes": 179671,
+      "replay_rows": 1,
+      "sha256": "7d1278d1b3a56a130a10b2e7aac5da829d24ac7a2a3f878ee7c1c9ac57fad7df",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135501647880-274877906944.out.csv",
+      "key": [
+        10448351135501647880,
+        274877906944
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448351135501647880-274877906944.out.csv",
+      "nodes": 1561191,
+      "replay_rows": 1,
+      "sha256": "0e637f1333e129ff9f58a27c5349260bb16af32dcf3cd7fb47e47daa75f533f6",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351139794518024-274877906944.out.csv",
+      "key": [
+        10448351139794518024,
+        274877906944
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448351139794518024-274877906944.out.csv",
+      "nodes": 165232,
+      "replay_rows": 1,
+      "sha256": "c1562d1f5ba0a41e8888dad38a1e44e27678440d165eb15709de9a349b37053f",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448355533546061832-274877906944.out.csv",
+      "key": [
+        10448355533546061832,
+        274877906944
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10448355533546061832-274877906944.out.csv",
+      "nodes": 202298,
+      "replay_rows": 1,
+      "sha256": "67b9e93e85fc78b686511a982a0b822173047cb49546e20d1ed3c3974f81f9d7",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10457358334754291720-274877906944.out.csv",
+      "key": [
+        10457358334754291720,
+        274877906944
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10457358334754291720-274877906944.out.csv",
+      "nodes": 609660,
+      "replay_rows": 1,
+      "sha256": "b1a854fb116d314307d05bd5765b39840dfd0460ba65ea6614030b7929132e98",
+      "verdict": 1
+    },
+    {
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10466365534009032712-274877906944.out.csv",
+      "key": [
+        10466365534009032712,
+        274877906944
+      ],
+      "local_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/.local/n11/reply27-s6-descent-1152925911243358208-536870912-5dfabf84/s6-10466365534009032712-274877906944.out.csv",
+      "nodes": 815202,
+      "replay_rows": 1,
+      "sha256": "d7e87f859b857eaefc9fe96c8b22141af82d8e78ec5d966e1206ec8e9f5d340a",
+      "verdict": 1
+    }
+  ],
+  "runner": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_s5_via_s6_local.py",
+    "sha256": "e579968ee89660893456b7a6d8688e99489f37d73277b5e2087d6e42f7ecd490"
+  },
+  "saved_s6_runner_input": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-saved-s6-runner-input.json",
+    "sha256": "6458acab33463a9da3ab8c25baaaa8888f05132fbedfe53fff06a03fdcd67cf4"
+  },
+  "schema": "n11-dual-tight-s6-descent-source-manifest-v1",
+  "solver": {
+    "path": ".local/n11/reply27-probe9/dfpn.exe",
+    "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+  },
+  "source_replay_rows": 88,
+  "target_s5_parent": [
+    1152925911243358208,
+    536870912
+  ],
+  "verdict_counts": {
+    "0": 3,
+    "1": 85
+  },
+  "workers": 1
+}

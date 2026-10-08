@@ -1,0 +1,1473 @@
+{
+  "augmentation_provenance": {
+    "geometry_check": "All source rows were re-read; canonical safety and legal counts were checked using exact n=11 integer geometry. Exact solver verdicts remain source evidence.",
+    "new_source": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s6-partial-replay.csv",
+      "s6_replay_rows": 71,
+      "sha256": "12000ad6248f9331b90bd78f29c8a120bb0d6cb07ed7c51bf19383be217448ce"
+    },
+    "previous_source_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-aa90bb5b-augmented-saved-s6-source-audit.json",
+    "previous_source_audit_sha256": "63ef1ba03ea32a35db16ab34e9ff4204fa79ea8a6f7593c67ed1dfa98be3be2f"
+  },
+  "cache_comparison": {
+    "conflicts": [],
+    "current_cache_internal_conflicts": 0,
+    "internal_conflict": 0,
+    "opposite_verdict": 0,
+    "rejected_conflicts": []
+  },
+  "manifested_extension": {
+    "exact_conflicts": 0,
+    "new_replay_rows": 88,
+    "new_source_count": 88,
+    "new_verdict_row_counts": {
+      "0": 3,
+      "1": 85
+    },
+    "overlap_rows_by_verdict": {},
+    "source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+    "source_manifest_sha256": "8683489d530cb455d434260c3745f6556f93d5101d415b82b60c5b844e14bda1",
+    "unknowns_propagated": false
+  },
+  "rejected_conflicts": [],
+  "run_status": "ok",
+  "runner_input_provenance": {
+    "purpose": "compatibility envelope for complete_s5_via_s6_local.py; source list, raw hashes, canonical counts and geometry attestation are copied unchanged",
+    "source_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-combined-saved-s6-source-audit.json",
+    "source_audit_sha256": "65267dabc1ebfccd365b003ea762f9ec51915e3f1449701903988b7a953d8b67"
+  },
+  "s6": {
+    "all_s6_exact_rows_geometry_checked": true,
+    "exact_conflict_count": 0,
+    "unique_canonical_keys": 3131,
+    "unique_loss_keys": 160,
+    "unique_win_keys": 2908,
+    "unknown_only_keys": 63,
+    "verdict_counts_by_unique_key": {
+      "1": 2908,
+      "2": 160
+    }
+  },
+  "schema": "n11-saved-s6-source-audit-with-manifested-run-extension-v1",
+  "source_file_count": 129,
+  "source_hashes_validated": true,
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-0.csv",
+      "s6_replay_rows": 4,
+      "sha256": "1af5f001f4af7bce6743f92821fc5c94b53ccd01aa899bf1be7a54c0d97a340b",
+      "verdict_counts": {
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-1.csv",
+      "s6_replay_rows": 4,
+      "sha256": "5882ce939b676fdc502685a0adfd4ef2713cb9b67b6a233fba5c08087253eb20",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-2.csv",
+      "s6_replay_rows": 4,
+      "sha256": "83e72debfc53dbc0aadba1257fbe049755655c8310baad90329a296ecfe055d3",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-s6-3.csv",
+      "s6_replay_rows": 4,
+      "sha256": "d4fe318a8023187016128ec1b084ed74168d3d83c7e4971f5f4d311d2a97c16c",
+      "verdict_counts": {
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-0-out.csv",
+      "s6_replay_rows": 43,
+      "sha256": "5eb64524527f5e29c1ac8bdda267722d495167c0f78546491d3509c760cfcc35",
+      "verdict_counts": {
+        "1": 43
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-1-out.csv",
+      "s6_replay_rows": 42,
+      "sha256": "bbdee0b76bd4187210fbb79f934114e4ebc68bef9ca091ce0ec834cd376967fe",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-2-out.csv",
+      "s6_replay_rows": 42,
+      "sha256": "7bce731267331fbc58e8cd0444e7dd3a400c48ed21d822bf7ad637bd8ef137f0",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/model-hard2-reply27-model-hard2-s6-3-out.csv",
+      "s6_replay_rows": 42,
+      "sha256": "14283a08729aabe1deb1bd30d4cd0f16a1708a0d6f2bf5198c1af204b30f9adc",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/crosscheck-s6-out.csv",
+      "s6_replay_rows": 3,
+      "sha256": "b230c918c0fabf211448b91c584104d03f82421bfec2fd0f25efe660eadb1e3a",
+      "verdict_counts": {
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-0.out",
+      "s6_replay_rows": 204,
+      "sha256": "fb09db4d46e145bccf5fc51c39e673730be5874025ba100db3c8472fabc98276",
+      "verdict_counts": {
+        "0": 2,
+        "1": 184,
+        "2": 18
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-1.out",
+      "s6_replay_rows": 204,
+      "sha256": "3b8baa413a98640308bdb716f22990bf7cc90da2680d65b2fb49c89a604e9466",
+      "verdict_counts": {
+        "0": 3,
+        "1": 179,
+        "2": 22
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-2.out",
+      "s6_replay_rows": 204,
+      "sha256": "e75cbedabfde39cf1334892ebd46c293f6f4a922328e8932246254c74ff534b9",
+      "verdict_counts": {
+        "0": 1,
+        "1": 189,
+        "2": 14
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-3.out",
+      "s6_replay_rows": 204,
+      "sha256": "12ae56568cb84a10a8053437cabeb49d11bf8269380901948043d329a90828b9",
+      "verdict_counts": {
+        "1": 177,
+        "2": 27
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard0.csv",
+      "s6_replay_rows": 43,
+      "sha256": "f3ffb67a77cf58a30524c6d786127004216b701349aa3a578e7c6bde95e6ae0e",
+      "verdict_counts": {
+        "1": 41,
+        "2": 2
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard1.csv",
+      "s6_replay_rows": 42,
+      "sha256": "20957d6dd3b8e3722fa93634067a28033aea68009bec6fd48486392db2978177",
+      "verdict_counts": {
+        "1": 39,
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard2.csv",
+      "s6_replay_rows": 42,
+      "sha256": "e60dfb4cf77b7caf65e907785e06dc6524c657b86c6407f7d3dc38b4cd47e8fd",
+      "verdict_counts": {
+        "1": 39,
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard3.csv",
+      "s6_replay_rows": 43,
+      "sha256": "0cc4558d15093abb7aefd14bfe207665356ff090fa0a5ee0967003f593d8f2f1",
+      "verdict_counts": {
+        "1": 42,
+        "2": 1
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard0.csv",
+      "s6_replay_rows": 4,
+      "sha256": "7638acfd54aef2450f7b429250353a7228b34fee5bde4187ab44aee6f68a0b16",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard1.csv",
+      "s6_replay_rows": 4,
+      "sha256": "7401bb19b04e3aab3e8169a7d2fd1d050ecf47080386e77f716c9b9a479ef865",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard2.csv",
+      "s6_replay_rows": 4,
+      "sha256": "6b19807618013f1a900af5419905ce2113f4cbefdc66560318ebafc2e1b36390",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard3.csv",
+      "s6_replay_rows": 4,
+      "sha256": "9489a99cd0652a5a4bbfb365069ac8df5044e5497be1a7f10977d2530cfddc1e",
+      "verdict_counts": {
+        "2": 4
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard0.csv",
+      "s6_replay_rows": 8,
+      "sha256": "23abdde00d84f22812119a66c37c12a7abe44ed174a48d0c0bec5ed8b2202c73",
+      "verdict_counts": {
+        "1": 5,
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard1.csv",
+      "s6_replay_rows": 8,
+      "sha256": "789742065c72ce6021f80f80582bccfc5e29e3e13ac31433d1c9209d7f0ef2ea",
+      "verdict_counts": {
+        "1": 5,
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard2.csv",
+      "s6_replay_rows": 8,
+      "sha256": "054cc27858eb94f904860208a136c8dbc3f41fe9cfd57d769406b43e9eba3bc8",
+      "verdict_counts": {
+        "1": 5,
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard3.csv",
+      "s6_replay_rows": 8,
+      "sha256": "e5ddc68b454d15cc401a47b65de75a31d782a952c9ed017a1091ba3bb16e4aaa",
+      "verdict_counts": {
+        "1": 1,
+        "2": 7
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-s6-2m-out.csv",
+      "s6_replay_rows": 86,
+      "sha256": "bfb8ee089f96fdc06a9e32986f6d2ca42721d70f1a606743004e411457057c81",
+      "verdict_counts": {
+        "0": 1,
+        "1": 85
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-hard-s6-15m-out.csv",
+      "s6_replay_rows": 1,
+      "sha256": "8c5f17589611425a9784711168ae207f3b30a9e09ebe47b2f9d31b9348755132",
+      "verdict_counts": {
+        "2": 1
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next6-hard-s6-out.csv",
+      "s6_replay_rows": 181,
+      "sha256": "48b77073fb416938d5b6886d1c478df8704516dec6721dbffda7d9288f56ce92",
+      "verdict_counts": {
+        "0": 2,
+        "1": 179
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next6-focused15m-out.csv",
+      "s6_replay_rows": 2,
+      "sha256": "533e535ca4cd84c59e2f05ec91090e5687d6d264e9326d3a0c52e42177ea38e3",
+      "verdict_counts": {
+        "2": 2
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next8-hard-s6-out.csv",
+      "s6_replay_rows": 100,
+      "sha256": "8dc511424ea24ce62302cd11332b313ce68d15ff8d438ec661e371ac7d59e14c",
+      "verdict_counts": {
+        "1": 98,
+        "2": 2
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-out.csv",
+      "s6_replay_rows": 91,
+      "sha256": "59053de7511c6815edd8c84be22224634e8c406ff6a1cd6abc35e5517c84487c",
+      "verdict_counts": {
+        "1": 91
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-hard2-adaptive2m-out.csv",
+      "s6_replay_rows": 193,
+      "sha256": "7f9ea68725d933149eae169d3b65c2b3059cfe09f66779208d534642d6b7dd0b",
+      "verdict_counts": {
+        "0": 56,
+        "1": 137
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-a-focused15m-out.csv",
+      "s6_replay_rows": 9,
+      "sha256": "678a40de6589849b1bbd805688e4b7b497984f528c18aa86654ee5a051b1a3ec",
+      "verdict_counts": {
+        "1": 6,
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-b-focused15m-out.csv",
+      "s6_replay_rows": 7,
+      "sha256": "539474c41bb91fdbe4bdc0fa3205c54fe76cdfa5ad8e69f351b483592ea31050",
+      "verdict_counts": {
+        "1": 2,
+        "2": 5
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-hard5-adaptive15m-out.csv",
+      "s6_replay_rows": 423,
+      "sha256": "e9cd414e8ca1925fc925331a841d11ee6ae0e6248d46d5391bc160bc796f88d0",
+      "verdict_counts": {
+        "1": 420,
+        "2": 3
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next15-hard3-adaptive15m-out.csv",
+      "s6_replay_rows": 162,
+      "sha256": "63029381e165ea3ac70c9b2a59e4e930196ae31d8dde97d62735da95969c3ecb",
+      "verdict_counts": {
+        "1": 157,
+        "2": 5
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next17-hard5-adaptive15m-out.csv",
+      "s6_replay_rows": 214,
+      "sha256": "03fa913d6cb0ff9e7ef3e35a7e797af1da1f81d79f018dad1b40895d8837b469",
+      "verdict_counts": {
+        "1": 200,
+        "2": 14
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-next17-dual-tight-92-s6-unresolved-out.csv",
+      "s6_replay_rows": 160,
+      "sha256": "231de7380367a30df9851de4bdb848aece8e137799d26318baa5ac8ad96cceb9",
+      "verdict_counts": {
+        "1": 160
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-exact-boundary-raw.csv",
+      "s6_replay_rows": 83,
+      "sha256": "96b03f469241cf05e4e77fa797450bc3bd57635c4be48de9bf751a19b37772e0",
+      "verdict_counts": {
+        "1": 83
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-aa90bb5b-rank1-1297036692682702976-128-s6-descent-raw-all.csv",
+      "s6_replay_rows": 83,
+      "sha256": "7e84345c47c2a4883f3f29f25bf25c9cb1e8356611987566df0cc47e41a0f698",
+      "verdict_counts": {
+        "1": 83
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s6-partial-replay.csv",
+      "s6_replay_rows": 71,
+      "sha256": "12000ad6248f9331b90bd78f29c8a120bb0d6cb07ed7c51bf19383be217448ce",
+      "verdict_counts": {
+        "0": 14,
+        "1": 44,
+        "2": 13
+      }
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152921504741065728-1099515830272.out.csv",
+      "provenance": "S6 replay key (1152921504741065728, 1099515830272); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "8568d55561150a44d266d607e5a8e42d31d6c3ae48b36252fd1b6aa3e01e315a",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870920.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 536870920); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "5f13a615964dcd085d6a66ff7d8829abcb27a443d439f84c80f447b79e199fc5",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870928.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 536870928); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "ec031b106e0a80227bf068c5f7a7e6df7882b2ffc7bd28404afe71799a7fab9b",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870944.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 536870944); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "011b094147d3d776ab0481e80d4270abdfbd545ab5ecf806547ef599ba8f421d",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536870976.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 536870976); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "38b77455c83bcfa2d7ac1360fb79401abe2520398b95c9a77fd2b5eb2f378a96",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536887296.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 536887296); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "85bc467d8f003d9a48fb08955cf6fc968ced615d2f11814d0812131af2a038a2",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536903680.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 536903680); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "039ca08a1c58d0d0ae533a8e568903130af34fea9f5e022e59164877112c4c4e",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-536936448.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 536936448); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "b808cc9c819096d80a9e57b49bb43485ea45729f1e608c64a0853435d1422341",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-537001984.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 537001984); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f01aba2d69d2290d33a7ed61ceda94999f0f5414c772d1e856a08a7cc522bb99",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-553648128.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 553648128); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f6cb77385bde30c26ead72a0ceb4a89bf075c7b4df198025783c6ab4cd7d903f",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-570425344.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 570425344); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "7fc57555ae57ccda6f259054570eb28c93b66f281fc3337f7c5575c8a0e76dc2",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-671088640.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 671088640); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "b26cea4b9cc70f552f2be18a4ec3520a1bd682fd52990998b1862511c4a59c43",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 283,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-34896609280.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 34896609280); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "2c36a284e0dc257e3e2e1dcc53882646d59e73ea08ebf262d64d8750f1315121",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "0": 1
+      }
+    },
+    {
+      "bytes": 282,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-69256347648.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 69256347648); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "68e0381b6a833866c89b51b4535975175f46a890e9a7906eb59b826dc4b221a6",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 282,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358208-137975824384.out.csv",
+      "provenance": "S6 replay key (1152925911243358208, 137975824384); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "847b99b760d920f98b549129d679b4b6c0c1f79b35a2db476a6706e98e1dba4c",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358209-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358209, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "41504329451722699c34e8fc5da04f114056cc75a4784fd0394496a332a2a497",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358210-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358210, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "3d9223873c428d73ca4a7b707c03f4c749e17f721df2070be9df13bf8c3d80ef",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358212-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358212, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f3c9da327c5205b87eb7152fc4ec37ba55fb02cce549a48f7e92de0c0cf98e27",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358216-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358216, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "74bd45700463779815ad3ddfa4dad123e7922b472729518098632c6598aca0ac",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358224-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358224, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "1052257ed3bb1059255115d9c2c586c88008d28e0b60ab18c617091a8e0b8f8a",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358272-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358272, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "50bbbdb7aedb03d7ea8e026ea23b1019a2ca02dc2feb98e166a2d2f496f0577b",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358336-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358336, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "70f34c66e93ca39b7e6fa4eec4f6f5dfd0760035f2baf829670cab2070078690",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358464-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358464, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "97e4a9c6ba0e8ed912546be473b8641ac440a3694a76d1fd55d33d6042fdaff8",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243358720-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243358720, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "9d134c6be80f41647162bf2e1ed30d8e15236b569501b2ea88e7a40f170d30ea",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243359232-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243359232, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "364d7a30809c53dc82301bd7b081d301e7d791d7d5a811c8a21ef9b716f7ad98",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243360256-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243360256, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "9e51efcbf49dd5ba2a063947f0d6447f5d367c1a1bb2670daa165f7ea5be82ed",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243362304-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243362304, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "d120f8f878ebdaa3f55825283bf74ffbc80b7592e2f641113106774d72f8451d",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 281,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243374592-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243374592, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "3ea68affd8ca20661064465569445ed2c2879db538056b966446224e1de0db8a",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243489280-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243489280, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "58e0dcf6b5ffa59cce52ff006d897f53f01ec0e707be47e11fa78a5d7522f1c3",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911243620352-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911243620352, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "6c05336f1e08d9b65a8ddf0c005098a14913331dc9c36be699501ad721950419",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911245455360-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911245455360, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "e4ac091f4d1ecd8ed54a0dcc71c7b29a7a677b412ab6dfa8887216c26357ef26",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911247552512-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911247552512, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "a6c73c1827fa73d10870b13ffdaa74eda828f29fc534d63526cefed6246d6f71",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911251746816-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911251746816, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "017c55b5efe6ac7a7d4021aa8a984b13174bb62d960d2507903c87d1eacdef23",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911260135424-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911260135424, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "c3820ac65c46433e3faf2e43312430a0f689f0312ec18ae9e04f52c7f2fbf3ed",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911276912640-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911276912640, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f90d1bf055459a617c9a3b11a9a70b23caacb377d554698e5ddce8a5c3545e3a",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911310467072-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911310467072, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "123e221c468b05cc5f6e5031e8a442dc3bdd8725faf273af4836f6a674e4d9c2",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911511793664-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911511793664, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "2324bf3f4aaefcf0bb87516bc028645b5c2ceb3274d90c9c580e6418aa51dfd5",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925911780229120-536870912.out.csv",
+      "provenance": "S6 replay key (1152925911780229120, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "9a03530ca8abe1177fe5188220f3e83217cbdb4583d986dd776be207aa6a4d9e",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925912317100032-536870912.out.csv",
+      "provenance": "S6 replay key (1152925912317100032, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "e19bf79e696c722af02692a3044df65b4ae5c7b58e81cba7bc61721f76e26017",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925913390841856-536870912.out.csv",
+      "provenance": "S6 replay key (1152925913390841856, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "3ded0a40e41a1d7c21ce0de90bb7055750f3aae7b9657d97f3231f542485bef0",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925915538325504-536870912.out.csv",
+      "provenance": "S6 replay key (1152925915538325504, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "7a64adf73a24484ca04791ad9392faf36e8cf6dbbfcabf9e28e39ff88c5e881b",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925928423227392-536870912.out.csv",
+      "provenance": "S6 replay key (1152925928423227392, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "1986f79905ad5d2438da74a2f3ba6ee5958a14f88f3e5c3aa087204476145606",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152925945603096576-536870912.out.csv",
+      "provenance": "S6 replay key (1152925945603096576, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "11d5a820484211698f83107bfefdf80ee583e5650a746c8ba0fabfe4ad8309ad",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152926460999172096-536870912.out.csv",
+      "provenance": "S6 replay key (1152926460999172096, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "274b7e52da84215bb569af24ac4bfca85ecdb53d1462af41b1f222e97739f7b6",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152928110266613760-536870912.out.csv",
+      "provenance": "S6 replay key (1152928110266613760, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "cad5fa105e288b37f6606e1688db73645b58a6c27ab5fabbdd1b500047c70fdd",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536870916.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 536870916); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "e6f7c04f29534ff7ff61b16f9952070fb08210afb9472b0970b1d58c57f36854",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536870928.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 536870928); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "3b810143daca1237625438837b683e06e18c3d1ce70fb3c6c77c2619618a3ffc",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536870976.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 536870976); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "3f2e1aaece090c56d58d129ebef509d2c3005986b66449181d576526133d3c25",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536879104.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 536879104); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "316e3fde54e96fb00a39cc15cc4366938c4c6e90d7741eeaabd6eed0a6851400",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536887296.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 536887296); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "b491d42b0c5c2c54048f001abdd641daca54b41e705cfc392ee2ab9cb0cc4acf",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536903680.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 536903680); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "626567315bef1edada5f5a1d17eae42b29044d40167c57d7ecdacaf20f4c38a8",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 281,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-536936448.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 536936448); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "d4b167a22c32c4e18d4833db791bf9d4f48fee0fcf679a6d5ce2ef2cd94cedfc",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-537001984.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 537001984); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "658cddeeb6618152215043d7438be57ff198549638b5fc78604a13db887c1ab2",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-553648128.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 553648128); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f8a0252fd65b3d16df28f95198247c61e46d9c3d17d82e92c079a5030bb69fb4",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-570425344.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 570425344); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "67c5ea9659bc8f13f90dec95290a88c80fea4cc14b0195008fc64226ef594b29",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-603979776.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 603979776); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "2c9ccad59dcf44ce1bc7cbe7eb1c25f9fb8bde1b856d958dd8016883d436b6e2",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-671088640.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 671088640); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f87cf3506846a1e79397fc90bb81d9f9be8972c3b05e27a6c8d10427a0f702a8",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-805306368.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 805306368); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "fbe2544a7fb7f9966a03bd7a870fca6dab3375d43f4d849c61b9af0e4b25f60a",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 283,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-34896609280.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 34896609280); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "af3b7d02bce877b97c411fbaafe176ddcefd3de99964b7c369706cf94de721e6",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "0": 1
+      }
+    },
+    {
+      "bytes": 282,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-69256347648.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 69256347648); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "1d7275ecc00d654f198089a91bba7a2792229af6dcfa91a677971a3d0af55bd4",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 282,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930317879803904-137975824384.out.csv",
+      "provenance": "S6 replay key (1152930317879803904, 137975824384); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "4a82bcd56b705da03cfb37344894c1692b0868a40082a19ecb3b17a7c0bba809",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152930326469738496-536870912.out.csv",
+      "provenance": "S6 replay key (1152930326469738496, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "5a854d15794c533c47dc4b23625057e68d53d625813b6c2ddd976abb9022fc9b",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152947910065848320-536870912.out.csv",
+      "provenance": "S6 replay key (1152947910065848320, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "aad04784ae813c1f5b6eb1df5aa50db8bbd079a474ec474d97f3926c7ab1eba1",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152961095615447040-536870912.out.csv",
+      "provenance": "S6 replay key (1152961095615447040, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "db340663c1f6c6681e8fb8938278ad796571ac843781a712005d8acad6136536",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1152996279987535872-536870912.out.csv",
+      "provenance": "S6 replay key (1152996279987535872, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "a2fe6c7061f00bc88970b88761dbc6cbdedf7e0e532b6844818788a21ea8f5d2",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153000686623981568-536870912.out.csv",
+      "provenance": "S6 replay key (1153000686623981568, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "2b58f99ec64c58a44c86efbf38565ceb8b49e29ca98b97054089819ec9bc8699",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153066648731713536-536870912.out.csv",
+      "provenance": "S6 replay key (1153066648731713536, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "200f3a5b3cddc098c2b4c2d966bb58d6a49f0c7eda6a6c9e8f6295a42085d2c0",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153071055368159232-536870912.out.csv",
+      "provenance": "S6 replay key (1153071055368159232, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "e6865782c6499a34710e9ee6a816575ba40c1ce6b7f57c8511c7a878579a0cab",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153207386220068864-536870912.out.csv",
+      "provenance": "S6 replay key (1153207386220068864, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "7fe53b6ef8e33e658cdfd023927be542091590b853f0d4a029fd69b0c65ac557",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1153211792856514560-536870912.out.csv",
+      "provenance": "S6 replay key (1153211792856514560, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "aadb5b8f5b21de6c06821cc5d8d0b07bd859c8c710a4790401e2f3bb9e0f669e",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1188954708262322176-536870912.out.csv",
+      "provenance": "S6 replay key (1188954708262322176, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "69f4ba10da162b5513319fd653b3e504bb97809e497bbc5475eb0ecadcc76b40",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1188959114898767872-536870912.out.csv",
+      "provenance": "S6 replay key (1188959114898767872, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "8470fb7bfafd19027f4d4b0ad69306755123b3e84cb8f7f8badcf4165fdc8939",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1224983505281286144-536870912.out.csv",
+      "provenance": "S6 replay key (1224983505281286144, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "cff200e93265d8087bf0d906af8d4904d8691a365afbb93c79cfc27dc1d1e980",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1224987911917731840-536870912.out.csv",
+      "provenance": "S6 replay key (1224987911917731840, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "4bd1bf34e5a291dbf5f050eeef0cc483a01440caa321846af3e6328ae2706c90",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1297041099319214080-536870912.out.csv",
+      "provenance": "S6 replay key (1297041099319214080, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f7c3f551472b04f808097e2162beb6753c0cdb2cc9d567626f52a69d85c6c6b0",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1441156287395069952-536870912.out.csv",
+      "provenance": "S6 replay key (1441156287395069952, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "33cb866b19f0c464055f3b947f86549a74da310608bc93df959c9576c95b33a6",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 280,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1441160694031515648-536870912.out.csv",
+      "provenance": "S6 replay key (1441160694031515648, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "50387ef6a588f352fb65f42a99215b76605e2e6b378e1e58ae24ccfb64c28f34",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 279,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-1729391070183227392-536870912.out.csv",
+      "provenance": "S6 replay key (1729391070183227392, 536870912); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "97c36ee48fcd4343a407d4cdb80099271c9b91defac56e56a4fd8f3fa0edee55",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 283,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274877908992.out.csv",
+      "provenance": "S6 replay key (10448351135499550728, 274877908992); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "830f3eb652058d2da799e712cd5ed2c9074f5e92940aa34a5b7161466a90ca05",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 285,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274877911040.out.csv",
+      "provenance": "S6 replay key (10448351135499550728, 274877911040); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f61b8cb7d74ffaebb89422bbffabd2178bde8192a038cecea96b63a01310ab9d",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "0": 1
+      }
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274882101248.out.csv",
+      "provenance": "S6 replay key (10448351135499550728, 274882101248); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "6f19617978e59dc03dc4bf68a1c176c29ad1fc646a0d8c8229ba727b897323d8",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 283,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-274886295552.out.csv",
+      "provenance": "S6 replay key (10448351135499550728, 274886295552); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "f56c5ac740da63fee5f1324fbc04dc7124a8cc8bafbe84a432f44e10ad1057c8",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135499550728-292057776128.out.csv",
+      "provenance": "S6 replay key (10448351135499550728, 292057776128); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "7d1278d1b3a56a130a10b2e7aac5da829d24ac7a2a3f878ee7c1c9ac57fad7df",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 285,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351135501647880-274877906944.out.csv",
+      "provenance": "S6 replay key (10448351135501647880, 274877906944); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "0e637f1333e129ff9f58a27c5349260bb16af32dcf3cd7fb47e47daa75f533f6",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448351139794518024-274877906944.out.csv",
+      "provenance": "S6 replay key (10448351139794518024, 274877906944); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "c1562d1f5ba0a41e8888dad38a1e44e27678440d165eb15709de9a349b37053f",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10448355533546061832-274877906944.out.csv",
+      "provenance": "S6 replay key (10448355533546061832, 274877906944); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "67b9e93e85fc78b686511a982a0b822173047cb49546e20d1ed3c3974f81f9d7",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10457358334754291720-274877906944.out.csv",
+      "provenance": "S6 replay key (10457358334754291720, 274877906944); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "b1a854fb116d314307d05bd5765b39840dfd0460ba65ea6614030b7929132e98",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    },
+    {
+      "bytes": 284,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-5dfabf84-s6-descent/s6-10466365534009032712-274877906944.out.csv",
+      "provenance": "S6 replay key (10466365534009032712, 274877906944); source manifest research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s6-descent-sources.json",
+      "s6_replay_rows": 1,
+      "sha256": "d7e87f859b857eaefc9fe96c8b22141af82d8e78ec5d966e1206ec8e9f5d340a",
+      "source_kind": "manifested_local_exact_s6_descent",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1
+      }
+    }
+  ]
+}
