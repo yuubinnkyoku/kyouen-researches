@@ -1,0 +1,93 @@
+{
+  "budget_per_target": 15000000,
+  "canonical_s5_children": 100,
+  "claim": "Probe order carries no verdict. Prior same-or-higher-budget UNKNOWN keys are excluded, and only exact solver results may update class status.",
+  "class_key": [
+    10412322338480586760,
+    0
+  ],
+  "class_rank": 1,
+  "dispatch_ready_s5": 93,
+  "excluded_same_or_higher_budget_unknown_keys": [],
+  "known_loss_s5": 7,
+  "probe_count": 8,
+  "probe_target_sha256": "e0ace9f37708837225731e39ccedff54b5dd72a04fcb2a1fb03d2973b27955ea",
+  "probe_targets": [
+    [
+      10412322888236400648,
+      0
+    ],
+    [
+      1297036692682702976,
+      131074
+    ],
+    [
+      10412322338480586760,
+      65536
+    ],
+    [
+      10412322338497363976,
+      0
+    ],
+    [
+      1188959097718833184,
+      536870912
+    ],
+    [
+      10414574138294272008,
+      0
+    ],
+    [
+      1152930309289803808,
+      536870912
+    ],
+    [
+      10412322338480586760,
+      128
+    ]
+  ],
+  "same_budget_unknown_observations": [],
+  "schema": "n11-dual-tight-ready-subset-probe-manifest-v1",
+  "selection_rule": "among raw-history dispatch-ready UNKNOWN parents, sort by (legal move count, canonical key), then take the first count",
+  "solver_command": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py --solver .local/n11/reply27-probe9/dfpn.exe --targets research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-probe8.csv --cache research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-merged-s5.cache --out-dir .local/n11/dual-tight-ready-10412322338480586760-0-probe8 --workers 4 --budget 15000000",
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-after-probe8-dual-tight-targets.csv",
+      "sha256": "c843b45e599bcda3c6f447a7e7c1ced561f2eec575eb850f4e9e74036017cd15"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-after-probe8-dual-tight-ranking.json",
+      "sha256": "65013e08e2e987eadd56139b060a795fd3ace949569595b486f7206a429651a8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-fc77fecf-rank1-1297036692816920704-0-probe8-merged-s5.cache",
+      "sha256": "47f3b3520f826592347a89720508aece72fc62281ff644bc6b7a43dfa69699be"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-raw-history-audit.json",
+      "sha256": "ad80381151301bdfd0d00d38c7b6be3d4ec6d2ddc5254ef5f18122630a730d9a"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-saved-s6-summary.json",
+      "sha256": "d088edeaa409942a6e71d20450f1815910d85e05ed8bcc38bf9031d32850003c"
+    },
+    {
+      "path": ".local/n11/reply27-probe9/dfpn.exe",
+      "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+    },
+    {
+      "path": "cpp/solvers/kyouen_dfpn_root.cpp",
+      "sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/complete_class_local.py",
+      "sha256": "04ca107661447f40d9c43034f7adbc20a65512c3cd5839b0536f257f2a64d4f4"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_dual_tight_ready_subset_probe.py",
+      "sha256": "331ea1040a8aa49ed585bed27e77b68d442bf59539ffca4a69eeec10cea3915a"
+    }
+  ],
+  "unknown_s5_before_probe": 93,
+  "workers": 4
+}

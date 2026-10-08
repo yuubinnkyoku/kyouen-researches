@@ -1,0 +1,607 @@
+{
+  "augmentation_provenance": {
+    "base_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-dual-tight-92-final-saved-s6-sources.json",
+      "sha256": "8312a0ede3a8b11397cab9d8f5778e80876f6cd8fbb18c8dd21c1526230de505"
+    },
+    "geometry_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s4-win-geometry-audit.json",
+      "sha256": "c09df84b2bf4e4e427f728219315a9fcff5cbb957e3d8ef42c4cae1cb57f4db3"
+    },
+    "new_exact_s6_raw": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-exact-boundary-raw.csv",
+      "sha256": "96b03f469241cf05e4e77fa797450bc3bd57635c4be48de9bf751a19b37772e0",
+      "unique_rows": 83
+    },
+    "new_source_manifest": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-complete-sources.json",
+      "sha256": "3b5ff38fbe2cb28b85a5f23debf07191a43e1cbd9f17ca7babf3b6d916af9453"
+    },
+    "new_summary": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-complete-summary.json",
+      "sha256": "473778df641366bd9c0e70feb24177dd4d46ee0fe6df2b8ffd6abfebe2a32cce"
+    },
+    "overlap_with_base": 1
+  },
+  "cache_comparison": {
+    "conflicts": [],
+    "current_cache_internal_conflicts": 0,
+    "internal_conflict": 0,
+    "opposite_verdict": 0,
+    "rejected_conflicts": []
+  },
+  "rejected_conflicts": [],
+  "run_status": "ok",
+  "s6": {
+    "all_s6_exact_rows_geometry_checked": true,
+    "exact_conflict_count": 0,
+    "unique_canonical_keys": 2890,
+    "unique_loss_keys": 147,
+    "unique_win_keys": 2697,
+    "unknown_only_keys": 46,
+    "verdict_counts_by_unique_key": {
+      "1": 2697,
+      "2": 147
+    }
+  },
+  "schema": "n11-saved-s6-source-audit-with-exact-win-boundary-v1",
+  "scope": "38-source hash-validated union: 36 earlier exact s6 sources, next17 hard5 raw s6 results, and the 160 exact s6 results from this dual-tight target. Source raw rows are geometry/canonicality/legal-count checked by the corresponding audits; solver outcomes are trusted.",
+  "source_basis": "hash-validated 38-source saved corpus plus the geometry-verified exact 83-child s6 WIN boundary",
+  "source_file_count": 39,
+  "source_hashes_validated": true,
+  "sources": [
+    {
+      "bytes": 483,
+      "node_total": 7193921,
+      "normalized_noncanonical_rows": 3,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-0.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 0",
+      "s6_replay_rows": 4,
+      "sha256": "1af5f001f4af7bce6743f92821fc5c94b53ccd01aa899bf1be7a54c0d97a340b",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "bytes": 476,
+      "node_total": 5120787,
+      "normalized_noncanonical_rows": 3,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-1.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 1",
+      "s6_replay_rows": 4,
+      "sha256": "5882ce939b676fdc502685a0adfd4ef2713cb9b67b6a233fba5c08087253eb20",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 472,
+      "node_total": 3204689,
+      "normalized_noncanonical_rows": 4,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-2.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 2",
+      "s6_replay_rows": 4,
+      "sha256": "83e72debfc53dbc0aadba1257fbe049755655c8310baad90329a296ecfe055d3",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 467,
+      "node_total": 7400227,
+      "normalized_noncanonical_rows": 3,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-3.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 3",
+      "s6_replay_rows": 4,
+      "sha256": "d4fe318a8023187016128ec1b084ed74168d3d83c7e4971f5f4d311d2a97c16c",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "bytes": 2993,
+      "node_total": 13536028,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-0-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 0",
+      "s6_replay_rows": 43,
+      "sha256": "5eb64524527f5e29c1ac8bdda267722d495167c0f78546491d3509c760cfcc35",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 43
+      }
+    },
+    {
+      "bytes": 2920,
+      "node_total": 12034267,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-1-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 1",
+      "s6_replay_rows": 42,
+      "sha256": "bbdee0b76bd4187210fbb79f934114e4ebc68bef9ca091ce0ec834cd376967fe",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "bytes": 2923,
+      "node_total": 12073332,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-2-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 2",
+      "s6_replay_rows": 42,
+      "sha256": "7bce731267331fbc58e8cd0444e7dd3a400c48ed21d822bf7ad637bd8ef137f0",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "bytes": 2932,
+      "node_total": 15902551,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-3-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 3",
+      "s6_replay_rows": 42,
+      "sha256": "14283a08729aabe1deb1bd30d4cd0f16a1708a0d6f2bf5198c1af204b30f9adc",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "bytes": 1200,
+      "node_total": 662767,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\crosscheck-s6-out.csv",
+      "provenance": "n11 saved exact replay from incomplete cold residual cross-check; include solved rows only, not a complete run",
+      "s6_replay_rows": 3,
+      "sha256": "b230c918c0fabf211448b91c584104d03f82421bfec2fd0f25efe660eadb1e3a",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "2": 3
+      }
+    },
+    {
+      "bytes": 13494,
+      "node_total": 215668476,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard9-s6-0.out",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-0.out",
+      "s6_replay_rows": 204,
+      "sha256": "fb09db4d46e145bccf5fc51c39e673730be5874025ba100db3c8472fabc98276",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "0": 2,
+        "1": 184,
+        "2": 18
+      }
+    },
+    {
+      "bytes": 13533,
+      "node_total": 235074831,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard9-s6-1.out",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-1.out",
+      "s6_replay_rows": 204,
+      "sha256": "3b8baa413a98640308bdb716f22990bf7cc90da2680d65b2fb49c89a604e9466",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "0": 3,
+        "1": 179,
+        "2": 22
+      }
+    },
+    {
+      "bytes": 13493,
+      "node_total": 195771236,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard9-s6-2.out",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-2.out",
+      "s6_replay_rows": 204,
+      "sha256": "e75cbedabfde39cf1334892ebd46c293f6f4a922328e8932246254c74ff534b9",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "0": 1,
+        "1": 189,
+        "2": 14
+      }
+    },
+    {
+      "bytes": 13543,
+      "node_total": 255386951,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard9-s6-3.out",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard9-s6-3.out",
+      "s6_replay_rows": 204,
+      "sha256": "12ae56568cb84a10a8053437cabeb49d11bf8269380901948043d329a90828b9",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 177,
+        "2": 27
+      }
+    },
+    {
+      "bytes": 2974,
+      "node_total": 28424898,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard2-shard0.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard0.csv",
+      "s6_replay_rows": 43,
+      "sha256": "f3ffb67a77cf58a30524c6d786127004216b701349aa3a578e7c6bde95e6ae0e",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 41,
+        "2": 2
+      }
+    },
+    {
+      "bytes": 2895,
+      "node_total": 31757584,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard2-shard1.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard1.csv",
+      "s6_replay_rows": 42,
+      "sha256": "20957d6dd3b8e3722fa93634067a28033aea68009bec6fd48486392db2978177",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 39,
+        "2": 3
+      }
+    },
+    {
+      "bytes": 2897,
+      "node_total": 28601102,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard2-shard2.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard2.csv",
+      "s6_replay_rows": 42,
+      "sha256": "e60dfb4cf77b7caf65e907785e06dc6524c657b86c6407f7d3dc38b4cd47e8fd",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 39,
+        "2": 3
+      }
+    },
+    {
+      "bytes": 2940,
+      "node_total": 21353808,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\hard2-shard3.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/hard2-shard3.csv",
+      "s6_replay_rows": 43,
+      "sha256": "0cc4558d15093abb7aefd14bfe207665356ff090fa0a5ee0967003f593d8f2f1",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 42,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 469,
+      "node_total": 4615699,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-round2-shard0.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard0.csv",
+      "s6_replay_rows": 4,
+      "sha256": "7638acfd54aef2450f7b429250353a7228b34fee5bde4187ab44aee6f68a0b16",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 450,
+      "node_total": 5136447,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-round2-shard1.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard1.csv",
+      "s6_replay_rows": 4,
+      "sha256": "7401bb19b04e3aab3e8169a7d2fd1d050ecf47080386e77f716c9b9a479ef865",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 455,
+      "node_total": 6053365,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-round2-shard2.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard2.csv",
+      "s6_replay_rows": 4,
+      "sha256": "6b19807618013f1a900af5419905ce2113f4cbefdc66560318ebafc2e1b36390",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 463,
+      "node_total": 13900215,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-round2-shard3.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/shared-round2-shard3.csv",
+      "s6_replay_rows": 4,
+      "sha256": "9489a99cd0652a5a4bbfb365069ac8df5044e5497be1a7f10977d2530cfddc1e",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "2": 4
+      }
+    },
+    {
+      "bytes": 722,
+      "node_total": 16266782,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next32-shard0.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard0.csv",
+      "s6_replay_rows": 8,
+      "sha256": "23abdde00d84f22812119a66c37c12a7abe44ed174a48d0c0bec5ed8b2202c73",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 5,
+        "2": 3
+      }
+    },
+    {
+      "bytes": 707,
+      "node_total": 17529582,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next32-shard1.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard1.csv",
+      "s6_replay_rows": 8,
+      "sha256": "789742065c72ce6021f80f80582bccfc5e29e3e13ac31433d1c9209d7f0ef2ea",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 5,
+        "2": 3
+      }
+    },
+    {
+      "bytes": 711,
+      "node_total": 15375544,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next32-shard2.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard2.csv",
+      "s6_replay_rows": 8,
+      "sha256": "054cc27858eb94f904860208a136c8dbc3f41fe9cfd57d769406b43e9eba3bc8",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 5,
+        "2": 3
+      }
+    },
+    {
+      "bytes": 716,
+      "node_total": 28539894,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next32-shard3.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next32-shard3.csv",
+      "s6_replay_rows": 8,
+      "sha256": "e5ddc68b454d15cc401a47b65de75a31d782a952c9ed017a1091ba3bb16e4aaa",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1,
+        "2": 7
+      }
+    },
+    {
+      "bytes": 23305,
+      "node_total": 32291732,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next3-hard1-s6-2m-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-s6-2m-out.csv",
+      "s6_replay_rows": 86,
+      "sha256": "bfb8ee089f96fdc06a9e32986f6d2ca42721d70f1a606743004e411457057c81",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "0": 1,
+        "1": 85
+      }
+    },
+    {
+      "bytes": 272,
+      "node_total": 4508377,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next3-hard1-hard-s6-15m-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next3-hard1-hard-s6-15m-out.csv",
+      "s6_replay_rows": 1,
+      "sha256": "8c5f17589611425a9784711168ae207f3b30a9e09ebe47b2f9d31b9348755132",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "2": 1
+      }
+    },
+    {
+      "bytes": 10939,
+      "node_total": 61142979,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next6-hard-s6-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next6-hard-s6-out.csv",
+      "s6_replay_rows": 181,
+      "sha256": "48b77073fb416938d5b6886d1c478df8704516dec6721dbffda7d9288f56ce92",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "0": 2,
+        "1": 179
+      }
+    },
+    {
+      "bytes": 134,
+      "node_total": 11521978,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next6-focused15m-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next6-focused15m-out.csv",
+      "s6_replay_rows": 2,
+      "sha256": "533e535ca4cd84c59e2f05ec91090e5687d6d264e9326d3a0c52e42177ea38e3",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "2": 2
+      }
+    },
+    {
+      "bytes": 8357,
+      "node_total": 75090722,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next8-hard-s6-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next8-hard-s6-out.csv",
+      "s6_replay_rows": 100,
+      "sha256": "8dc511424ea24ce62302cd11332b313ce68d15ff8d438ec661e371ac7d59e14c",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 98,
+        "2": 2
+      }
+    },
+    {
+      "bytes": 7748,
+      "node_total": 29531979,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next9-hard-s6-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/next9-hard-s6-out.csv",
+      "s6_replay_rows": 91,
+      "sha256": "59053de7511c6815edd8c84be22224634e8c406ff6a1cd6abc35e5517c84487c",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 91
+      }
+    },
+    {
+      "bytes": 12851,
+      "node_total": 179743467,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\repair5-hard2-adaptive2m-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-hard2-adaptive2m-out.csv",
+      "s6_replay_rows": 193,
+      "sha256": "7f9ea68725d933149eae169d3b65c2b3059cfe09f66779208d534642d6b7dd0b",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "0": 56,
+        "1": 137
+      }
+    },
+    {
+      "bytes": 791,
+      "node_total": 38956566,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\repair5-parent-a-focused15m-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-a-focused15m-out.csv",
+      "s6_replay_rows": 9,
+      "sha256": "678a40de6589849b1bbd805688e4b7b497984f528c18aa86654ee5a051b1a3ec",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 6,
+        "2": 3
+      }
+    },
+    {
+      "bytes": 662,
+      "node_total": 35570659,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\repair5-parent-b-focused15m-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/repair5-parent-b-focused15m-out.csv",
+      "s6_replay_rows": 7,
+      "sha256": "539474c41bb91fdbe4bdc0fa3205c54fe76cdfa5ad8e69f351b483592ea31050",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 2,
+        "2": 5
+      }
+    },
+    {
+      "bytes": 28217,
+      "node_total": 130849130,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next12-run-hard5-adaptive15m-out.csv",
+      "provenance": "prior 35-source audit caller-supplied replay: research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-hard5-adaptive15m-out.csv",
+      "s6_replay_rows": 423,
+      "sha256": "e9cd414e8ca1925fc925331a841d11ee6ae0e6248d46d5391bc160bc796f88d0",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 420,
+        "2": 3
+      }
+    },
+    {
+      "bytes": 10094,
+      "node_total": 89196422,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next15-hard3-adaptive15m-out.csv",
+      "provenance": "next15 new adaptive run: 162 complete-boundary s6 replay rows",
+      "s6_replay_rows": 162,
+      "sha256": "63029381e165ea3ac70c9b2a59e4e930196ae31d8dde97d62735da95969c3ecb",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 157,
+        "2": 5
+      }
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next17-hard5-adaptive15m-out.csv",
+      "s6_replay_rows": 214,
+      "sha256": "03fa913d6cb0ff9e7ef3e35a7e797af1da1f81d79f018dad1b40895d8837b469"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-next17-dual-tight-92-s6-unresolved-out.csv",
+      "s6_replay_rows": 160,
+      "sha256": "231de7380367a30df9851de4bdb848aece8e137799d26318baa5ac8ad96cceb9"
+    },
+    {
+      "normalized_noncanonical_rows": 0,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-exact-boundary-raw.csv",
+      "s6_replay_rows": 83,
+      "sha256": "96b03f469241cf05e4e77fa797450bc3bd57635c4be48de9bf751a19b37772e0",
+      "verdict_counts": {
+        "1": 83
+      }
+    }
+  ]
+}

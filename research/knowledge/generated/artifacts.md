@@ -1404,6 +1404,45 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-rank1-10448491872987906048-0-probe8-geometry-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 99-child complete boundary; exact WIN witness and legal parent incidence for class (10448491872987906048, 0)
+## [research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Recomputed 3,384-class status, 113 secured vertices, three-class integer cover, and matching rational dual.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-dual-tight-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-dual-tight-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Ranked next target from the updated exact cache; scheduling order only.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-final-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-final-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Exact s5 cache after the 2026-10-08 probe and complete s6 WIN boundary; 4,809 entries, conflict 0.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Reoptimized three-class repair with 288 distinct UNKNOWN s5 positions.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s4-win-geometry-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s4-win-geometry-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Full geometry verification of the 100-child class WIN boundary and the complete 83-child s6 WIN witness.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-build-reply27-artifact-inventory.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-build-reply27-artifact-inventory.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Verifies and inventories the checkpoint artifacts and all source paths recorded by their manifests.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-augment-s6-audit.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-augment-s6-audit.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Builds an augmented hash-attested s6 source audit from the saved corpus and verified exact-WIN boundary.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-augmented-s6-source-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-augmented-s6-source-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Hash-validated union of the 38-source saved s6 corpus and the 83-child exact WIN boundary, with zero conflicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-probe8-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-probe8-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Hashes and dispatch settings for the audited eight-position probe.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-probe8.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-probe8.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Eight low-legal-count targets selected from the 93 audited dispatch-ready s5 positions; schedule only, not yet dispatched.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-raw-history-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-raw-history-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Audit of 2,090 replay CSVs; 94 UNKNOWN s5 targets, zero prior exact, two same-budget UNKNOWN excluded, 93 dispatch-ready.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-saved-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-rank1-10448355533546061824-0-saved-s6-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Regenerated all 94 target s6 boundaries against the augmented saved corpus; all remain UNKNOWN, with no derivations or conflicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-reply27-checkpoint-artifact-hashes-20261008.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d9583782-reply27-checkpoint-artifact-hashes-20261008.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): SHA-256 inventory for the exact class result, audits, prepared probe, and source files.
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-after-probe8-dual-tight-ranking.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Reoptimized dual-tight repair ranking after this exact WIN

@@ -1,0 +1,28 @@
+{
+  "claim": "Contains exact solver verdicts only; derived parent WIN is admitted only from the separately geometry-verified complete all-WIN s6 boundary.",
+  "conflicts": 0,
+  "output": {
+    "LOSS": 7,
+    "WIN": 1,
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-combined-exact-s5-delta.cache",
+    "rows": 8,
+    "sha256": "6250b99bd9582cf6e82b4c422478deb0dfc32c3633f38a409ebe9737d277f48c"
+  },
+  "schema": "n11-reply27-s5-combined-exact-delta-v1",
+  "sources": [
+    {
+      "LOSS": 7,
+      "WIN": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-probe8-new-exact-s5.cache",
+      "rows": 7,
+      "sha256": "c02224d46f8eefd7accaf2e449e3e93de90864521d091ecc1178dd167e067220"
+    },
+    {
+      "LOSS": 0,
+      "WIN": 1,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-s6-derived-s5.cache",
+      "rows": 1,
+      "sha256": "a55118a7b2f5c09ed121246b6532b0313b3855bcb92050a22c71f09431e594a1"
+    }
+  ]
+}

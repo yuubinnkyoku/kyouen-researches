@@ -1,0 +1,55 @@
+{
+  "boundary_s6_canonical_count": 83,
+  "derived_s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-derived-s5.cache",
+    "sha256": "a55118a7b2f5c09ed121246b6532b0313b3855bcb92050a22c71f09431e594a1"
+  },
+  "exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-exact-boundary.cache",
+    "sha256": "cf0ffbc813d0ba2568d928086495e3e120dfe522b946a52e40766b6d1d97ad66"
+  },
+  "exact_child_count": 83,
+  "exact_child_verdicts": {
+    "LOSS": 0,
+    "WIN": 83
+  },
+  "higher_budget": 15000000,
+  "higher_budget_verdict": 1,
+  "new_exact_win_2m": 81,
+  "new_solver_rows_2m": 82,
+  "new_solver_rows_higher_budget": 1,
+  "nodes_2m": 19074956,
+  "nodes_high_budget": 2274916,
+  "parent_key": [
+    10414574138294272008,
+    0
+  ],
+  "parents": [
+    {
+      "child_count": 83,
+      "counts": {
+        "0": 0,
+        "1": 83,
+        "2": 0
+      },
+      "key": [
+        10414574138294272008,
+        0
+      ],
+      "loss_witnesses": [],
+      "outcome": "WIN",
+      "unresolved_children": []
+    }
+  ],
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-bdbdea7c-rank1-10412322338480586760-0-s6-exact-boundary-raw.csv",
+    "sha256": "96b03f469241cf05e4e77fa797450bc3bd57635c4be48de9bf751a19b37772e0"
+  },
+  "schema": "n11-reply27-s6-complete-parent-summary-v1",
+  "unknown_2m_retried_once_at_higher_budget": [
+    [
+      10414574138294272008,
+      16
+    ]
+  ]
+}
