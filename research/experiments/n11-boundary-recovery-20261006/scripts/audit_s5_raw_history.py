@@ -91,6 +91,8 @@ def main() -> int:
     parser.add_argument("--budget", type=int, default=15_000_000)
     parser.add_argument("--out", type=Path, required=True)
     args = parser.parse_args()
+    if args.budget < 1:
+        parser.error("budget must be positive")
 
     targets = read_targets(args.targets)
     cache = read_cache(args.current_cache)
@@ -175,6 +177,7 @@ def main() -> int:
 
     result = {
         "schema": "n11-s5-raw-history-audit-v1",
+        "requested_budget": args.budget,
         "targets": {"path": relative(args.targets), "sha256": digest(args.targets),
                     "count": len(targets),
                     "keys": [list(key) for key in sorted(targets)]},
