@@ -280,6 +280,12 @@
 
 - [K0085](../items/K0085-three-to-four-stone-pair-gain.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0086](../items/K0086-blind-probe-median-improvement-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/capacity-conditional-terminal-count-20261008/README.md](../../../research/experiments/capacity-conditional-terminal-count-20261008/README.md)
+
+- [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) (proof): 二変数母関数と経路数階乗公式の全称組合せ証明
+## [research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py](../../../research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py)
+
+- [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) (verifier): 8774局面・14390終局石数別の独立全合法着手再帰との完全照合
 ## [research/experiments/capacity-slack-three-20261008/README.md](../../../research/experiments/capacity-slack-three-20261008/README.md)
 
 - [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (proof): 境界署名の定義と全称mex帰納・全次元での鋭さ構成
