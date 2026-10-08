@@ -1622,6 +1622,7 @@
 - ← depends_on [K0360](../items/K0360-capacity-slack-three-exact-grundy.md): 容量ゲームの定義・飽和列除去と平行移動のゲーム木同型を用いる
 - ← depends_on [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md): 極大配置の形と途中局面から到達可能な終局閾値の厳密な区間を使う
 - ← depends_on [K0362](../items/K0362-capacity-height-random-terminal-distribution.md): 到達可能な終局閾値の連続区間と終局サイズ差w-hを用いる
+- ← depends_on [K0363](../items/K0363-capacity-finite-height-distribution-error.md): 最大到達終局石数による全対局長の一様上限を使う
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1677,3 +1678,9 @@
 
 - → depends_on [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md): 任意の途中局面からの終局盤面数と完成対局の正確な本数を用いる
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 到達可能な終局閾値の連続区間と終局サイズ差w-hを用いる
+- ← depends_on [K0363](../items/K0363-capacity-finite-height-distribution-error.md): 高さ無限の終局分布収束を有限高さの全変動距離上界と一次補正へ定量化する
+
+## [K0363](../items/K0363-capacity-finite-height-distribution-error.md) 容量ゲームの逐次合法点一様モデルの有限高さ誤差は明示的にO(1/m)で全終局確率の一次係数も計算できる
+
+- → depends_on [K0362](../items/K0362-capacity-height-random-terminal-distribution.md): 高さ無限の終局分布収束を有限高さの全変動距離上界と一次補正へ定量化する
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 最大到達終局石数による全対局長の一様上限を使う
