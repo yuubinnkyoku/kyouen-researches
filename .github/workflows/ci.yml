@@ -84,6 +84,8 @@ jobs:
           python research/experiments/saturation/scripts/check_saturation_20261003.py
           python research/experiments/n11-frontier-selection-20261005/scripts/audit_s4_class_child_invariance.py
           python research/experiments/n11-frontier-selection-20261005/scripts/audit_coordinator_frontier.py
+      - name: Check n11 replay preflight source and budget binding
+        run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_audit_probe_preflight.py
 
   lean:
     name: Lean soundness layer
