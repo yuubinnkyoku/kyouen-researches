@@ -86,6 +86,8 @@ jobs:
           python research/experiments/n11-frontier-selection-20261005/scripts/audit_coordinator_frontier.py
       - name: Check n11 replay preflight source and budget binding
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_audit_probe_preflight.py
+      - name: Check n11 historical raw replay source completeness
+        run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_verify_raw_history_coverage.py
 
   lean:
     name: Lean soundness layer
