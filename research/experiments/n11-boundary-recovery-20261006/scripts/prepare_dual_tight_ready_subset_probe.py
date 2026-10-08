@@ -10,6 +10,7 @@ import sys
 from pathlib import Path
 
 from audit_probe_preflight import validate_audits
+from verify_raw_history_coverage import verify_coverage
 
 
 ROOT = Path(__file__).resolve().parents[4]
@@ -63,6 +64,7 @@ def main() -> int:
     parser.add_argument("--ranking", type=Path, required=True)
     parser.add_argument("--cache", type=Path, required=True)
     parser.add_argument("--raw-audit", type=Path, required=True)
+    parser.add_argument("--historical-raw-audit", type=Path, required=True)
     parser.add_argument("--saved-s6-audit", type=Path, required=True)
     parser.add_argument("--solver", type=Path, required=True)
     parser.add_argument("--solver-source", type=Path, required=True)
@@ -115,6 +117,15 @@ def main() -> int:
         raise SystemExit(f"target unexpectedly exact in cache: {sorted(target_keys & cache.keys())[:3]}")
 
     raw = json.loads(args.raw_audit.read_text(encoding="utf-8"))
+    historical = json.loads(args.historical_raw_audit.read_text(encoding="utf-8"))
+    coverage = verify_coverage(historical, raw, ROOT)
+    if coverage["status"] != "PASS":
+        raise SystemExit(
+            "historical replay sources incomplete: "
+            f"{coverage['missing_csv']} missing, "
+            f"{coverage['missing_s5_replay_rows']} s5 replay rows lost, "
+            f"{coverage['altered_csv']} altered; refusing schedule"
+        )
     saved = json.loads(args.saved_s6_audit.read_text(encoding="utf-8"))
     try:
         ready, same_budget_keys = validate_audits(
@@ -136,6 +147,7 @@ def main() -> int:
         csv.writer(stream, lineterminator="\n").writerows(chosen)
 
     source_paths = [args.targets, args.ranking, args.cache, args.raw_audit,
+                    args.historical_raw_audit, Path(__file__).with_name("verify_raw_history_coverage.py"),
                     args.saved_s6_audit, args.solver, args.solver_source,
                     args.runner, Path(__file__).resolve()]
     manifest = {
