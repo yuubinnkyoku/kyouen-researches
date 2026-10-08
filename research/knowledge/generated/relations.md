@@ -29,6 +29,7 @@
 - ← depends_on [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md): 円または直線のq点を禁止するルール変種
 - ← depends_on [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md): 標準q=4の安全性と全合法第三手
 - ← depends_on [K0338](../items/K0338-high-stabilizer-safe-state-classification.md): 標準四点共円・共線禁止
+- ← depends_on [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md): q点版共円ゲームの規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -524,6 +525,7 @@
 - ← generalizes [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md): 固定幅で円が消える領域を別方向から拡張する
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 五行すべてに整数点を持つ円を排除するmod9補題
+- ← depends_on [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md): q点版の独立行公式
 - ← depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): 標準整数格子の二重点行と独立行公式
 - ← depends_on [K0370](../items/K0370-quantitative-uniform-circle-density.md): 固定幅q点版の独立行帰着
 
@@ -1686,6 +1688,16 @@
 
 - → depends_on [K0362](../items/K0362-capacity-height-random-terminal-distribution.md): 高さ無限の終局分布収束を有限高さの全変動距離上界と一次補正へ定量化する
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 最大到達終局石数による全対局長の一様上限を使う
+
+## [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md) 標準整数格子円の二重点行数は幅に対して一様に劣線形
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): q点版共円ゲームの規則
+- ← depends_on [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md): 有理係数と行番号差gの合同帰着
+
+## [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md) 標準整数格子円の二重点行数の厳密最大値（5〜43行）
+
+- → depends_on [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md): 有理係数と行番号差gの合同帰着
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): q点版の独立行公式
 
 ## [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) 標準整数格子44〜63行で円が二点ずつ通る行数の厳密最大値
 

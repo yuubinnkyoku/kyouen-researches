@@ -408,6 +408,10 @@
 ## [research/experiments/fixed-width/reports/mod9-mod11-mod19-mod23-small-width-bounds.md](../../../research/experiments/fixed-width/reports/mod9-mod11-mod19-mod23-small-width-bounds.md)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (proof): w=9,10,11,13,14の二重点行数の合同上界を改善する全称証明
+## [research/experiments/fixed-width/reports/prime-modular-uniform-sublinear-density.md](../../../research/experiments/fixed-width/reports/prime-modular-uniform-sublinear-density.md)
+
+- [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md) (proof): 分母gの合同条件、3 mod 4素数とCRTによる全称証明
+- [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md) (proof): 有限合同完全排除と達成円、gcd例外の証明
 ## [research/experiments/fixed-width/reports/q-point-fixed-width.md](../../../research/experiments/fixed-width/reports/q-point-fixed-width.md)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (proof): 命題・対象範囲・根拠を記した出典
@@ -462,6 +466,9 @@
 ## [research/experiments/fixed-width/scripts/check_fixed_width_20261003.py](../../../research/experiments/fixed-width/scripts/check_fixed_width_20261003.py)
 
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (verifier): 軽量統合再現
+## [research/experiments/fixed-width/scripts/check_local_prime_double_rows.py](../../../research/experiments/fixed-width/scripts/check_local_prime_double_rows.py)
+
+- [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md) (verifier): 有限体上の局所平方剰余上界の独立確認
 ## [research/experiments/fixed-width/scripts/curve_packing_fixed_width.py](../../../research/experiments/fixed-width/scripts/curve_packing_fixed_width.py)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (verifier): 整数最適化と全小盤予算不等式の再現
@@ -498,6 +505,9 @@
 ## [research/experiments/fixed-width/scripts/verify_double_rows_44_63.py](../../../research/experiments/fixed-width/scripts/verify_double_rows_44_63.py)
 
 - [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) (verifier): 2独立方法の合同排除と20幅の明示的証人
+## [research/experiments/fixed-width/scripts/verify_exact_double_rows_5_43.py](../../../research/experiments/fixed-width/scripts/verify_exact_double_rows_5_43.py)
+
+- [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md) (verifier): 二方式の剰余集合照合と具体的円の整数検算
 ## [research/experiments/fixed-width/scripts/verify_quantitative_density.py](../../../research/experiments/fixed-width/scripts/verify_quantitative_density.py)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (verifier): 局所剰余数と中国剰余定理の独立有限検算
