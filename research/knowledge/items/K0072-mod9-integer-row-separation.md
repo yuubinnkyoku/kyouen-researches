@@ -28,6 +28,12 @@ artifacts:
 - path: research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py
   role: verifier
   note: 2独立方式で79651候補k行部分集合を検証し全排除
+- path: research/experiments/fixed-width/reports/mod9-mod11-mod19-mod23-small-width-bounds.md
+  role: proof
+  note: w=9,10,11,13,14の二重点行数の合同上界を改善する全称証明
+- path: research/experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py
+  role: verifier
+  note: 独立2方式で合計3038のk行部分集合の必要合同条件を全排除
 solution:
   board: 高qの標準整数格子
   level: strong
@@ -107,3 +113,26 @@ M_{w,q}=q-1
 となる。以前の mod9 単独の上界から追加される領域は **w=15: q=24..26、w=16: q=25..28、w=17: q=27..29、w=18: q=28..30**。従来記していた「18行が合同法では未解決」という注記は本節によって解消された。
 
 これは標準整数格子の定理で、任意間隔の平行行や w<=14 への半密度上界までは主張しない。これより低い q で円が必ず存在するという逆向きの主張も含まない。
+
+## 9〜14行での新しい合同改善（2026-10-08）
+
+上の mod9 単独の二重点行数上界を、w=9,10,11,13,14 でさらに改善した。**円の2点行数 t の無界・全称上界**は順に
+
+- **w=9: t≤6**（従来 7）
+- **w=10: t≤6**（従来 8）
+- **w=11: t≤7**（従来 8）
+- **w=13: t≤8**（従来 9）
+- **w=14: t≤8**（従来 10）
+
+証明は K0072 の整数C,NのVieta帰着と、mod9・11・19・23 の平方剰余必要条件の組合せに基づく。二重点行が隣接しない配置は高々ceil(w/2)本で、上の改善を覆す本数では必ず隣接ペアができるので整数性が成立する。排除対象は順に k=7,7,8,9,9 本を選ぶ全 36,120,165,715,2002 通り（合計3038）。**独立2方法で法ごとの許容集合まで全一致を確認し、最後に候補0と証明**した。計算手順・集合数・数学的正当化は [証明記録](../../experiments/fixed-width/reports/mod9-mod11-mod19-mod23-small-width-bounds.md) と [独立検証器](../../experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py) を参照。
+
+これにより **全 m≥1・全安全局面 S** で独立行Grundy公式
+
+```
+g(S)=(w*min(m,q-1)-|S|) mod2
+M_(w,q)=q-1
+```
+
+が新たに成立する q は **w=9,q=16**、**w=10,q=17,18**、**w=11,q=19**、**w=13,q=22**、**w=14,q=23,24** である。最小安定化長 M は q−1 で厳密。以前に証明済みの w≥15 の半密度定理と合わせて適用できる。
+
+なお w=14 の半密度境界 **t≤7 は未解決**。今回の上界 t≤8 は実現可能性を保証せず、追加の合同法にも残るパターンがあるからといって実円があるとは言えない。
