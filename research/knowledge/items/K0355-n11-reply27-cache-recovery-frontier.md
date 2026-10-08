@@ -2227,8 +2227,71 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-c1bf7dc3-reply27-checkpoint-artifact-hashes-20261008.json
     role: manifest
     note: "Current checkpoint inventory with hashes for all proof artifacts and their manifested sources."
-scope: "Finite reply27 frontier after the bounded probe for class (10448351135500075008,0): exact s5 cache has 4,824 entries, all 3,384 s4 statuses were recomputed, and the reoptimized three-class repair has 280 distinct UNKNOWN s5 children. The same class remains the rank-1 next target with 86 UNKNOWN children; one historical same-budget UNKNOWN key is excluded."
-evidence: "Eight scheduled children for class (10448351135500075008,0) returned exact LOSS in 40,659,042 nodes. Geometry rebuilt the complete 103-child canonical boundary: 17 LOSS / 0 WIN / 86 UNKNOWN, so the class remains UNKNOWN. No s6 descent or reverse-propagated LOSS occurred. Cache has 4,824 exact rows (WIN 118, LOSS 4,706, conflict 0); all 3,384 classes are LOSS 29 / WIN 211 / UNKNOWN 3,144. Secured remains 113/119, minimum additional classes 3 equals rational LP dual 3, dual-tight; repair has 280 distinct UNKNOWN s5 children. The current rank-1 class is still (10448351135500075008,0), with 85 of its 86 UNKNOWN children dispatch-ready after excluding one key with two prior same-budget UNKNOWN observations. The 39-source saved-s6 audit leaves all 86 UNKNOWN; no s5 result is derived. A fresh eight-key schedule passes exact-key raw-history/saved-s6 preflight (8 ready, 8 UNKNOWN, zero conflicts). {60,27} and the 11×11 empty board remain UNKNOWN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-raw-all.csv
+    role: source
+    note: Eight scheduled solver rows, including one UNKNOWN retained only as raw evidence.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-summary.json
+    role: manifest
+    note: Probe verdict counts, node totals, UNKNOWN key, and cache binding.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-new-exact-s5.cache
+    role: data
+    note: Seven exact LOSS rows from the bounded probe.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-merged-s5.cache
+    role: data
+    note: Merged exact s5 cache, 4,831 unique rows with zero conflicts.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-merge-receipt.json
+    role: manifest
+    note: Base/delta/cache counts, verdicts, conflicts, and SHA-256.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-sources.json
+    role: manifest
+    note: Solver, runner, scheduled input, and raw-output source hashes.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-class-boundary-audit.json
+    role: verifier
+    note: "Complete 103-child class boundary: 24 LOSS, zero WIN, 79 UNKNOWN."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-dual-tight-cardinality.json
+    role: data
+    note: Recomputed all 3,384 class statuses, secured vertices, integer cover, and rational dual.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-dual-tight-repair.json
+    role: data
+    note: Reoptimized three-class repair with 273 distinct UNKNOWN s5 children.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-dual-tight-ranking.json
+    role: data
+    note: Dual-tight repair class ranking after the exact cache merge.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-dual-tight-ranking-sources.json
+    role: manifest
+    note: Hashes for ranking inputs, helper sources, and generated targets.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-raw-history-audit.json
+    role: manifest
+    note: "History audit of all 79 UNKNOWN children: 77 ready, two blocked keys, five same-budget UNKNOWN rows."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-saved-s6-summary.json
+    role: manifest
+    note: Hash-validated 39-source audit of all 79 parents; all UNKNOWN, no derivations or conflicts.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-saved-s6-full.json.gz
+    role: source
+    note: Full saved-s6 canonical boundary details for all 79 remaining parents.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-probe8-next.csv
+    role: source
+    note: Eight-key low-legal-count schedule from the 77 audit-ready UNKNOWN children.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-probe8-next-manifest.json
+    role: manifest
+    note: Binds scheduled keys and solver/cache/audit source hashes.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-probe8-next-raw-history-audit.json
+    role: manifest
+    note: "Probe-specific raw audit: all eight keys ready with no exact, same-budget UNKNOWN, or conflict."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-probe8-next-saved-s6-summary.json
+    role: manifest
+    note: "Probe-specific saved-s6 audit: all eight parents UNKNOWN with zero derivations or conflicts."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-remaining79-probe8-next-preflight.json
+    role: verifier
+    note: Main fail-closed validator passed for exactly the scheduled eight targets.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-build-reply27-artifact-inventory.py
+    role: source
+    note: Checkpoint inventory builder bound to this dispatch main and artifact prefix.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-reply27-checkpoint-artifact-hashes-20261008.json
+    role: manifest
+    note: 77-artifact and 2,353-source inventory with zero missing paths or hash mismatches.
+scope: "Finite reply27 frontier after the bounded probe for class (10448351135500075008,0): exact s5 cache has 4,831 entries, all 3,384 s4 statuses were recomputed, and the reoptimized three-class repair has 273 distinct UNKNOWN s5 children. The class remains UNKNOWN with 24 LOSS / 0 WIN / 79 UNKNOWN; two same-budget UNKNOWN keys are excluded from direct replay."
+evidence: "Eight scheduled children returned seven exact LOSS and one UNKNOWN using 66,569,568 total nodes; the UNKNOWN remains raw-only and no WIN occurred. Geometry verified the complete 103-child boundary: 24 LOSS / 0 WIN / 79 UNKNOWN. Cache has 4,831 rows (WIN 118, LOSS 4,713, conflict 0). Across all 3,384 classes: LOSS 29 / WIN 211 / UNKNOWN 3,144; secured 113/119, minimum additional classes 3 equals rational dual 3, dual-tight. The reoptimized repair has 273 distinct UNKNOWN s5 children. History audit of the 79 unresolved children scanned 2,180 CSV files, found no exact verdict or conflict, and identified two keys with five same-budget UNKNOWN rows total; 77 are ready. Hash-validated saved-s6 audit covered all 79 parents and derived no result. A fresh eight-key schedule from the 77 ready keys passed exact-key raw-history/saved-s6 preflight (8 ready, 8 UNKNOWN, zero conflicts); it is not yet dispatched. Inventory post-6609f521-reply27-checkpoint-artifact-hashes-20261008.json has SHA-256 afc47e33f785c6c4d63871d412101d7c9e360cc4864c522e8374ce1cee5252d8 with 77 artifacts and 2,353 manifested sources, zero missing/hash mismatches. {60,27} and the 11×11 empty board remain UNKNOWN."
 ---
 
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
@@ -2461,3 +2524,16 @@ Before its next dispatch, a 2,120-CSV raw-history audit found two same-budget UN
 After main advanced to `42375bed` with a fail-closed preflight binding, repeated both audits on the exact eight-key schedule. The 2,121-CSV probe-specific raw audit found zero prior exact rows, same-budget UNKNOWN rows, or conflicts; all eight are ready. The same 39-source saved-s6 audit checked those exact eight parents: all remain UNKNOWN, with zero derivations/conflicts. `verify_dual_tight_probe_preflight.py` passed the main validator against the identical target and cache hashes. The probe remains scheduled but undispatched.
 
 Checkpoint inventory `post-d538a68-reply27-checkpoint-artifact-hashes-20261008.json` has SHA-256 `e034ac96df04fdcbcf26e91295f3d2f20f1c7aba9c3f25713b7df1034459f0df` and covers 176 artifacts plus 2,213 manifested sources, with zero missing paths or hash mismatches. `{60,27}` remains UNKNOWN; the 11×11 empty board remains UNKNOWN.
+
+
+## 2026-10-08 13:59 JST dual-tight probe8 LOSS checkpoint
+
+At the start, `HEAD == origin/main == 6609f5213f141f22753e91ba16676b0a07b08f1d`; `git fetch origin main` succeeded with no incoming commit. No matching solver process was present before dispatch. The saved eight-target schedule for `(10448351135500075008,0)` had passed its hash-bound raw-history/saved-s6 preflight against this main commit.
+
+The bounded probe completed all eight s5 rows: seven exact LOSS and one UNKNOWN, with 66,569,568 total nodes. Exact rows used 51,569,568 nodes; the single UNKNOWN used its 15,000,000-node budget and remains raw-only. There was no exact WIN, s6 solver result, or reverse-propagated LOSS. Geometry rebuilt the full 103-child canonical boundary as 24 LOSS / 0 WIN / 79 UNKNOWN, so the s4 class remains UNKNOWN.
+
+The merged exact cache has 4,831 rows (WIN 118 / LOSS 4,713 / conflict 0), SHA-256 `a61595bf71f857c9d4815a0815c793a9223e8345b4d817ac39907651aede79c0`. Recomputed all 3,384 s4 classes: LOSS 29 / WIN 211 / UNKNOWN 3,144; secured vertices remain 113/119 with six remaining. Minimum additional classes and rational LP dual are both 3 (dual-tight). The reoptimized repair has 273 distinct UNKNOWN s5 children. The current rank-1 class is still `(10448351135500075008,0)`, with 79 UNKNOWN s5 children.
+
+The 79-child raw-history audit scanned 2,180 CSV files and found no exact verdicts or conflicts. Two distinct keys have five same-budget UNKNOWN observations total; those keys remain excluded, leaving 77 dispatch-ready children. A hash-validated 39-source saved-s6 audit covered all 79 complete canonical s6 boundaries and derived no s5 verdict; every parent remains UNKNOWN. An eight-key schedule from the ready set was prepared. Its probe-specific 2,181-CSV audit found no exact result, same-budget UNKNOWN, or conflict; the saved-s6 audit leaves all eight UNKNOWN, and the fail-closed preflight passes with 8 ready / 0 blocked / 0 conflicts. The schedule is not yet dispatched.
+
+Inventory `post-6609f521-reply27-checkpoint-artifact-hashes-20261008.json` records 77 artifacts and 2,353 manifested sources, with zero missing paths or hash mismatches; SHA-256 is `afc47e33f785c6c4d63871d412101d7c9e360cc4864c522e8374ce1cee5252d8`. `{60,27}` and the 11×11 empty board remain UNKNOWN.
