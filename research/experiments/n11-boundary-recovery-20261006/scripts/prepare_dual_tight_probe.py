@@ -8,6 +8,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from audit_probe_preflight import validate_audits
+
 
 ROOT = Path(__file__).resolve().parents[4]
 
@@ -85,21 +87,19 @@ def main() -> int:
         raise SystemExit(f"s5 target unexpectedly exact in cache: {sorted(target_keys & cache.keys())[:3]}")
 
     raw_audit = json.loads(args.raw_audit.read_text(encoding="utf-8"))
-    ready = {tuple(key) for key in raw_audit.get("dispatch_ready_keys", [])}
-    if ready != target_keys or raw_audit.get("exact_verdict_conflicts"):
-        raise SystemExit("raw-history audit does not clear every target for this budget")
-    if raw_audit.get("prior_unknown_same_budget_or_higher"):
-        raise SystemExit("raw-history audit contains a same-or-higher-budget UNKNOWN")
     saved = json.loads(args.saved_s6_audit.read_text(encoding="utf-8"))
-    saved_targets = saved.get("targets", {})
-    cache_comparison = saved.get("cache_comparison", {})
-    if (len(saved_targets.get("parents", [])) != len(target_keys)
-            or saved_targets.get("status_counts") != {"UNKNOWN": len(target_keys)}
-            or cache_comparison.get("new_exact") != 0
-            or cache_comparison.get("opposite_verdict_conflicts")):
-        raise SystemExit("saved-s6 audit does not leave every target UNKNOWN without conflicts")
+    try:
+        ready, blocked = validate_audits(
+            target_keys, sha256(args.targets), sha256(args.cache),
+            raw_audit, saved, args.budget,
+        )
+    except ValueError as exc:
+        raise SystemExit(f"dual-tight probe preflight failed: {exc}") from exc
 
-    chosen = sorted(rows, key=lambda row: (int(row[5]), int(row[3]), int(row[4])))[:args.count]
+    # A previous same-or-higher-budget UNKNOWN is not a verdict and is not
+    # eligible for a repeated direct replay at the same budget.
+    chosen = sorted((keyed[key] for key in ready),
+                    key=lambda row: (int(row[5]), int(row[3]), int(row[4])))[:args.count]
     if not chosen:
         raise SystemExit("probe selection is empty")
     args.probe_out.parent.mkdir(parents=True, exist_ok=True)
@@ -118,6 +118,9 @@ def main() -> int:
         "canonical_s5_children": best.get("canonical_s5_children"),
         "known_loss_s5": best.get("known_loss_s5"),
         "unknown_s5_before_probe": len(rows),
+        "dispatch_ready_count": len(ready),
+        "excluded_same_budget_unknown_count": len(blocked),
+        "excluded_same_budget_unknown_keys": [list(key) for key in sorted(blocked)],
         "probe_count": len(chosen),
         "selection_rule": "sort audited UNKNOWN s5 targets by (legal move count, canonical key), then take the first count; scheduling heuristic only",
         "probe_targets": [[int(row[3]), int(row[4])] for row in chosen],
