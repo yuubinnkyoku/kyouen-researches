@@ -30,10 +30,11 @@ def legal_points(pts):
     pts=tuple(sorted(pts))
     if len(set(pts))!=len(pts) or any(p<0 or p>=121 for p in pts):
         raise ValueError("invalid occupied cells")
-    blocked=sum(1<<p for p in pts)
+    occupied=sum(1<<p for p in pts)
+    blocked=occupied
     for triple in combinations(pts,3):
         mask = circle_triple_mask(*triple)
-        if mask & (blocked & ~sum(1 << p for p in triple)):
+        if mask & (occupied & ~sum(1 << p for p in triple)):
             raise ValueError("unsafe occupied position")
         blocked |= mask
     return [p for p in range(121) if not (blocked>>p)&1]
