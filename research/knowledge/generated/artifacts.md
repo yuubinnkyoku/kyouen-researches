@@ -292,6 +292,12 @@
 ## [research/experiments/capacity-height-bias-20261008/check_height_bias.py](../../../research/experiments/capacity-height-bias-20261008/check_height_bias.py)
 
 - [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) (verifier): 354局面・505終局閾値の独立有限差分と逐次確率再帰の検証
+## [research/experiments/capacity-height-finite-error-20261008/README.md](../../../research/experiments/capacity-height-finite-error-20261008/README.md)
+
+- [K0363](../items/K0363-capacity-finite-height-distribution-error.md) (proof): 1手の全変動距離境界、結合評価、一次補正の全称帰納証明と鋭さ反例
+## [research/experiments/capacity-height-finite-error-20261008/check_finite_height.py](../../../research/experiments/capacity-height-finite-error-20261008/check_finite_height.py)
+
+- [K0363](../items/K0363-capacity-finite-height-distribution-error.md) (verifier): 前向き・後ろ向き厳密有理数再帰による354局面・505閾値・1416有限高さ比較
 ## [research/experiments/capacity-slack-three-20261008/README.md](../../../research/experiments/capacity-slack-three-20261008/README.md)
 
 - [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (proof): 境界署名の定義と全称mex帰納・全次元での鋭さ構成
