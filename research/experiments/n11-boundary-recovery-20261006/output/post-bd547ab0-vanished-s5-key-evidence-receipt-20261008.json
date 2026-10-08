@@ -1,0 +1,122 @@
+{
+  "schema": "n11-missing-s5-key-evidence-receipt-v1",
+  "topic": "11x11 reply27 missing local s5 replay key-level redundancy",
+  "historical_audit_path": "research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-rank1-1297036692682702976-128-probe8-next-raw-history-audit.json",
+  "historical_audit_sha256": "4cd05234625d492d0a08f7330512ac1e9e49d915a30e070a547b7710c9333cc8",
+  "exact_cache_path": "research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache",
+  "exact_cache_sha256": "eee8da7e463efbc7fabfae19bab34c54a8c5d8ef1b0485749f1634c0b5d31c94",
+  "verifier_path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_missing_s5_replay_redundancy.py",
+  "saved_raw_root": "research/experiments",
+  "report_full_sha256": "b34c385b5062a539b0c158e4d108de19658223f5582489a3d2f11c6b537d2be0",
+  "historical_local_files_absent": 1167,
+  "historical_local_s5_singleton_files": 340,
+  "historical_local_zero_s5_files": 827,
+  "unique_safe_canonical_missing_s5_keys": 340,
+  "keys_with_durable_saved_raw": 340,
+  "cached_exact_keys": 332,
+  "saved_raw_exact_keys": 329,
+  "saved_raw_unknown_only_keys": 11,
+  "saved_raw_unknown_only_with_cache_exact": 3,
+  "uncached_only_saved_unknown_keys": 8,
+  "unaccounted_s5_keys": 0,
+  "saved_raw_exact_cache_conflicts": 0,
+  "source_files_examined": 1075,
+  "saved_s5_replay_rows_examined": 3173,
+  "uncached_saved_unknown_examples": [
+    {
+      "key": [
+        "10412322338480590000",
+        "0"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/post-3bafea55-rank1-10412322338480590848-0-probe8-raw-all.csv",
+      "line": 3,
+      "sha256": "c9d08422a2b7dad1cc98dd9877aecf968e70ec022ac1ec166db2efb2e9488c9a",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "key": [
+        "10448351135499550000",
+        "128"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-raw-all.csv",
+      "line": 4,
+      "sha256": "0951d5e9c982ac34cca69ce682855e11b6bec9e9c5cdb24563cd00e5adc775f8",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "key": [
+        "10448351135499550000",
+        "32768"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-final-raw-all.csv",
+      "line": 34,
+      "sha256": "aba4a304c701f373b8896389e5997e439d88c4426c0f675f1f9e20ca1739b509",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "key": [
+        "10448351135500108000",
+        "0"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-raw-all.csv",
+      "line": 6,
+      "sha256": "39950d41e673c22f0fadda7859f53d54bae8d5dc7fde34e2f15a171ddc023719",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "key": [
+        "10453136210103632000",
+        "0"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-next17-dual-tight-92-residual83-out.csv",
+      "line": 23,
+      "sha256": "d7f66f1b6f2d9778bdb82aa2c3d30f671716511367a6de4425bd586c59e7cae0",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "key": [
+        "1152921504742375400",
+        "68719476736"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-raw-all.csv",
+      "line": 3,
+      "sha256": "ef6d07eb3309ca86bd20ff4db91c319f593ae97422cd3a1d29e82b746fa92300",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "key": [
+        "1297036692682702800",
+        "134217729"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-raw-all.csv",
+      "line": 3,
+      "sha256": "75670ba4eb9ed4f5d297538c51bde31351260deebabbb919832ba219a8205f1a",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    {
+      "key": [
+        "1297036692682707000",
+        "16385"
+      ],
+      "saved_replay_file": "research/experiments/n11-boundary-recovery-20261006/output/post-d538a68-rank1-10448355533546061824-0-probe8-raw-all.csv",
+      "line": 6,
+      "sha256": "245248f2630982412f9959549ad221b92b436b00df94dd2bfe26947543b7aef4",
+      "budget": 15000000,
+      "verdict": "UNKNOWN"
+    }
+  ],
+  "limitations": [
+    "Old .local files have not been recovered byte-for-byte.",
+    "Historical missing source count is still 1167: source-completeness preflight remains FAIL.",
+    "The recovered key observations are saved solver rows, not independently proved outcomes.",
+    "This receipt does not authorize a solver dispatch or upgrade UNKNOWN."
+  ],
+  "reproduction": "python research/experiments/n11-boundary-recovery-20261006/scripts/audit_missing_s5_replay_redundancy.py --historical-audit research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-rank1-1297036692682702976-128-probe8-next-raw-history-audit.json --saved-raw-root research/experiments --exact-cache research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache --out /tmp/n11-missing-s5-replay-redundancy.json"
+}
