@@ -1,0 +1,15 @@
+{
+  "schema": "n11-next17-s4-incremental-boundary-v1",
+  "baseline_exact_s5": 4847,
+  "merged_exact_s5": 4898,
+  "new_s5_loss": 51,
+  "new_reply27_s5_loss": 25,
+  "affected_reply27_s4_classes": 42,
+  "unknown_s5_child_incidence_decrease": 75,
+  "new_s4_loss_classes": 0,
+  "secured_before": 113,
+  "secured_after": 113,
+  "root_outcome": "UNKNOWN",
+  "source_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-partial-s6-reverse-audit.json",
+  "method": "For each new s5 containing center 60 and one reply27-orbit point, delete one stone, canonicalize each s4 parent, enumerate all legal s5 children from exact integer geometry, and compare baseline/merged cache verdicts. No global class outcome inferred from incomplete children."
+}
