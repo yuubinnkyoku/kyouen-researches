@@ -73,7 +73,7 @@
 | [K0069](../items/K0069-two-row-all-lengths-strong-solution.md) | 標準二行盤は全mで強解決、m≥6の空盤は後手勝ち | proposition | proved | rectangles, grundy |
 | [K0070](../items/K0070-width-three-q6-stabilization.md) | 3×m・q=6の真の満容量安定化長M_{3,6}=9 | proposition | proved | rectangles, variants, grundy |
 | [K0071](../items/K0071-width-three-q5-exact-stabilization.md) | 3×m・q=5の真の満容量安定化長はM_{3,5}=12 | proposition | proved | rectangles, variants, grundy |
-| [K0072](../items/K0072-mod9-integer-row-separation.md) | 標準整数行のmod9制約は高q全長分離領域を拡大する | proposition | proved | rectangles, geometry, variants |
+| [K0072](../items/K0072-mod9-integer-row-separation.md) | 標準整数行の合同条件は高q全長分離領域を拡大する | proposition | proved | rectangles, geometry, variants |
 | [K0073](../items/K0073-q-two-width-circle-criterion.md) | q=2w共円の一般必要十分条件は行ペア和一致と積の二階差 | proposition | proved | geometry, rectangles |
 | [K0074](../items/K0074-single-forbidden-type-variants.md) | 片禁止q点変種の全長強解決定理 | proposition | proved | variants, rectangles |
 | [K0075](../items/K0075-line-only-all-lengths-solution.md) | line-onlyはq>wで全m強解決 | proposition | proved | variants, rectangles, grundy |
