@@ -139,6 +139,15 @@ class HistoryCoverageTests(unittest.TestCase):
         result = verify_coverage(self.reference, self.current, self.root)
         self.assertEqual((result["new_csv"], result["status"]), (1, "PASS"))
 
+    def test_both_schedule_preparers_require_historical_baseline(self):
+        for name in ("prepare_dual_tight_probe.py",
+                     "prepare_dual_tight_ready_subset_probe.py"):
+            with self.subTest(name=name):
+                script = (SCRIPTS / name).read_text(encoding="utf-8")
+                self.assertIn('"--historical-raw-audit"', script)
+                self.assertIn("verify_coverage(historical,", script)
+                self.assertIn('coverage["status"] != "PASS"', script)
+
     def test_dispatch_validator_requires_historical_baseline(self):
         verifier = (SCRIPTS / "verify_dual_tight_probe_preflight.py").read_text()
         self.assertIn('"--historical-raw-audit"', verifier)
