@@ -399,6 +399,9 @@
 ## [research/experiments/fixed-width/reports/mod7-mod9-mod11-mod19-mod23-half-density-15.md](../../../research/experiments/fixed-width/reports/mod7-mod9-mod11-mod19-mod23-half-density-15.md)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (proof): w=15..18の二重点行半密度境界の合同完全排除とw>=15への接続
+## [research/experiments/fixed-width/reports/mod9-mod11-mod19-mod23-small-width-bounds.md](../../../research/experiments/fixed-width/reports/mod9-mod11-mod19-mod23-small-width-bounds.md)
+
+- [K0072](../items/K0072-mod9-integer-row-separation.md) (proof): w=9,10,11,13,14の二重点行数の合同上界を改善する全称証明
 ## [research/experiments/fixed-width/reports/q-point-fixed-width.md](../../../research/experiments/fixed-width/reports/q-point-fixed-width.md)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (proof): 命題・対象範囲・根拠を記した出典
@@ -456,6 +459,9 @@
 ## [research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py](../../../research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 2独立方式で79651候補k行部分集合を検証し全排除
+## [research/experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py](../../../research/experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py)
+
+- [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 独立2方式で合計3038のk行部分集合の必要合同条件を全排除
 ## [research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp)
 
 - [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): 短い終局・例外下方閉包・mex遷移の独立監査
