@@ -1619,6 +1619,7 @@
 - ← depends_on [K0356](../items/K0356-capacity-boundary-grundy-bound.md): 任意次元平行列盤を上位h=d−1列の容量ゲームへ縮約する
 - ← depends_on [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 非自明容量ゲームでは hm>r を用いる
 - ← depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 容量ゲームの安全性と偶数余剰列の二値Grundy公式を用いる
+- ← depends_on [K0360](../items/K0360-capacity-slack-three-exact-grundy.md): 容量ゲームの定義・飽和列除去と平行移動のゲーム木同型を用いる
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1656,3 +1657,9 @@
 
 - → depends_on [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 余裕1に移る全子のGrundy値を正確に分類する
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 容量ゲームの安全性と偶数余剰列の二値Grundy公式を用いる
+- ← depends_on [K0360](../items/K0360-capacity-slack-three-exact-grundy.md): 余裕2の全称Grundy閉公式から上位着手子の二値署名を求める
+
+## [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) 任意次元の容量余裕3は二値境界署名で全Grundyを決定でき上界3が鋭い
+
+- → depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 余裕2の全称Grundy閉公式から上位着手子の二値署名を求める
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 容量ゲームの定義・飽和列除去と平行移動のゲーム木同型を用いる
