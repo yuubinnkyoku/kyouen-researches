@@ -1282,6 +1282,21 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-10eaf37b-reply27-checkpoint-artifact-hashes-20261008.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-10eaf37b-reply27-checkpoint-artifact-hashes-20261008.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 116-artifact and 2,419-source inventory with zero missing paths and hash mismatches.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-class-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Geometry reconstruction of all 105 canonical s5 children of the current s4 class.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Current exact s5 cache snapshot, 4,954 entries (125 WIN, 4,829 LOSS; conflict 0).
+## [research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-s6-descent-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-s6-descent-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Exact s6 descent for four UNKNOWN s5 parents: 333 WIN, 14 UNKNOWN, no LOSS and no reverse-propagated LOSS.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-probe8-s6-s7-saved-intersection.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-probe8-s6-s7-saved-intersection.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Geometry-checked full 1,090-key s7 boundary for the 14 unresolved s6 children; saved exact intersection empty, so all remain UNKNOWN.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-1173099-reply27-checkpoint-artifact-hashes-20261009.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-1173099-reply27-checkpoint-artifact-hashes-20261009.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Latest post-1173099 reply27 checkpoint inventory; covers the new probe, s6 descent, saved-s7 intersection, raw rows, summaries, and source hashes.
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-augmented-s6-source-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-augmented-s6-source-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): All 87 new s6 results revalidated with the existing hash-attested saved-s6 corpus.

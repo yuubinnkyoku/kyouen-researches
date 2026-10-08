@@ -2848,31 +2848,48 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/scripts/materialize_s6_descent_evidence.py
     role: verifier
     note: "Copies exact s6 raw outputs without replacing local evidence and builds a source hash manifest."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-1173099-reply27-checkpoint-artifact-hashes-20261009.json
+    role: manifest
+    note: Latest post-1173099 reply27 checkpoint inventory; covers the new probe, s6 descent, saved-s7 intersection, raw rows, summaries, and source hashes.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache
+    role: data
+    note: Current exact s5 cache snapshot, 4,954 entries (125 WIN, 4,829 LOSS; conflict 0).
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-class-boundary-audit.json
+    role: verifier
+    note: Geometry reconstruction of all 105 canonical s5 children of the current s4 class.
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-10448351135499552768-0-probe8-s6-descent-summary.json
+    role: data
+    note: "Exact s6 descent for four UNKNOWN s5 parents: 333 WIN, 14 UNKNOWN, no LOSS and no reverse-propagated LOSS."
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-1173099-dual-tight-probe8-s6-s7-saved-intersection.json
+    role: verifier
+    note: Geometry-checked full 1,090-key s7 boundary for the 14 unresolved s6 children; saved exact intersection empty, so all remain UNKNOWN.
 scope: >-
-  Current finite reply27 frontier after the verified s6-to-s5 WIN descent at main 38613e2. The exact s5 cache has
-  4,950 entries (125 WIN, 4,825 LOSS, conflict 0). Across all 3,384 s4 classes, status is 29 LOSS / 226 WIN /
-  3,129 UNKNOWN. Exact LOSS classes secure 113/119 third moves; six remain. The minimum additional class cover
-  and rational LP dual are both 3, dual-tight; the additive-optimal repair has 292 distinct UNKNOWN s5 positions.
-  The next rank-1 class is (10448351135499552768,0): 105 canonical children, 9 LOSS / 0 WIN / 96 UNKNOWN.
-  Its 15M raw-history audit leaves 95 ready; the eight-target probe passes strict preflight and is not dispatched.
-  {60,27} and the 11×11 empty board remain UNKNOWN.
+  Current finite reply27 frontier after the post-1173099 probe and s6 descent. The exact s5 cache has
+  4,954 entries (125 WIN, 4,829 LOSS, conflict 0). Across all 3,384 s4 classes, status is 29 LOSS / 226 WIN /
+  3,129 UNKNOWN. Exact LOSS classes secure 113/119 third moves; six remain. Minimum additional class cover and
+  rational LP dual are both 3, dual-tight; the additive-optimal repair has 288 distinct UNKNOWN s5 positions.
+  Class (10448351135499552768,0) has 105 canonical children: 13 LOSS / 0 WIN / 92 UNKNOWN. The eight-row probe
+  added four exact LOSS and left four UNKNOWN. Its four s5 parents' 348-child s6 union has 333 new exact WIN,
+  14 UNKNOWN, zero LOSS, and no derived s5 rows. The saved-s7 intersection for those 14 unresolved s6 positions
+  covered 1,090 canonical children and found no exact saved rows. The class and root remain UNKNOWN, as does the
+  11×11 empty board.
 evidence: >-
-  Fetched origin/main at 38613e2 and preserved the existing local evidence. A complete 87-child canonical s6
-  boundary for s5 parent (10448351135633768448,16384) was audited against prior saved results and local replay
-  history before dispatch; all 87 were ready. At a 2,000,000-node per-target budget, all 87 returned exact WIN
-  using 28,266,655 nodes total. Geometry rechecked the complete s6 boundary, then derived the s5 parent WIN and
-  verified its legal incidence in class (10448351152679419904,0). The full 103-child s4 boundary is 22 LOSS /
-  1 WIN / 80 UNKNOWN, so the class is WIN; no S6 LOSS occurred and no reverse-propagated LOSS was added.
-  The merged cache has 4,950 exact s5 rows (125 WIN, 4,825 LOSS, conflict 0). Recomputed all 3,384 classes:
-  LOSS 29 / WIN 226 / UNKNOWN 3,129; secured 113/119, six remain; integer cover 3 equals rational dual 3.
-  The repair was reoptimized to three classes and 292 distinct UNKNOWN s5 positions. The new rank-1 target is
-  (10448351135499552768,0), with 96 UNKNOWN s5 children. Raw history scanned 3,235 CSV files and found two
-  same-budget UNKNOWN rows on one excluded key; saved-s6 intersection resolved none of the 96. The selected
-  eight-key schedule passed exact-key raw-history, saved-s6, and strict preflight checks (8 ready, 0 blocked,
-  0 conflicts), but remains undispatched pending checkpoint push and a fresh main fetch. Checkpoint inventory
-  `post-38613e2-reply27-checkpoint-artifact-hashes-v3-20261009.json` covers 399 output artifacts and 3,764 manifested
-  sources, with zero missing paths or hash mismatches (SHA-256 `e870557df7c53a14213d42b4d2c72e3337dcfcea7f6d864921173d96edac1fe0`).
-  The v1 and v2 inventories are preserved and marked superseded. {60,27} and the 11×11 empty board remain UNKNOWN.
+  Fetched origin/main and verified HEAD == origin/main == 1173099dbed01b905a8cb80281beb2696f61bb93 before these
+  exact dispatches. The eight s5 targets for class (10448351135499552768,0) returned four exact LOSS and four
+  UNKNOWN at 15,000,000 nodes per target; total nodes were 91,173,808. Geometry rebuilt the complete 105-child
+  class boundary as 13 LOSS / 0 WIN / 92 UNKNOWN. The four UNKNOWN s5 parents had complete canonical s6 boundaries
+  with 354 parent-child incidences and 348 distinct keys. After reusing one saved exact s6 WIN, 347 new s6 rows
+  returned 333 WIN and 14 UNKNOWN at a 2,000,000-node budget (145,483,366 nodes total); no s6 LOSS was found,
+  no s5 verdict was derived, and reverse-propagated LOSS was zero. The saved-s7 audit regenerated the 1,090-key
+  geometry union for those 14 s6 parents, scanned 4,710 CSV/cache/text files across research and .local, found
+  zero exact s7 intersections or conflicts, and leaves all 14 s6 parents UNKNOWN. Recomputed the merged 4,954-row
+  exact s5 cache and all 3,384 classes: 125 WIN / 4,829 LOSS / conflict 0; s4 status 29 LOSS / 226 WIN / 3,129
+  UNKNOWN; secured 113/119, six remain; minimum cover 3 equals rational dual 3. Reoptimized repair is three classes
+  with 288 distinct UNKNOWN s5 positions. The rank-1 dual-tight class remains (10448351135499552768,0) with
+  92 UNKNOWN s5 children. Inventory `post-1173099-reply27-checkpoint-artifact-hashes-20261009.json` covers 405
+  artifacts and 1,355 manifested sources, with no missing paths or hash mismatches; SHA-256
+  `4321d32a308a3303db8c8556a5787e900d50f0c027be678ebb52dc8f52b468a0`. All raw outputs and .local data were
+  preserved. {60,27} and the 11×11 empty board remain UNKNOWN.
 ---
 
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
@@ -3132,3 +3149,11 @@ The new rank-1 class is `(1297036692683882496,0)`: 100 canonical s5 children, fi
 To preserve the earlier verifier source hash recorded by existing artifacts, the historical v1 verifier was restored and the v2-manifest-compatible checker was added as a separate `verify_dual_tight_s4_win_v2.py`. The v2 geometry audit is the accepted witness report. A first-pass report is retained but explicitly excluded from the verified artifact set.
 
 Inventory `post-10eaf37b-reply27-checkpoint-artifact-hashes-20261008.json` has 116 verified artifacts and 2,419 manifested sources, zero missing paths or hash mismatches; SHA-256 is `b64a942c09148f3c6e28327904aa20be314aa0d924680d3485e3def75608363a`. `{60,27}` and the 11×11 empty board remain UNKNOWN.
+
+## 2026-10-09 05:10 JST dual-tight probe8 LOSS and s6 boundary audit
+
+At the start, `HEAD == origin/main == 1173099dbed01b905a8cb80281beb2696f61bb93`; `git fetch origin main` found no incoming commit. No same-target solver process was present before the next exact dispatches. The rank-1 dual-tight class `(10448351135499552768,0)` had 105 canonical s5 children, 9 exact LOSS and 96 UNKNOWN. Its eight-target 15M probe returned 4 exact LOSS and 4 UNKNOWN, 91,173,808 total nodes. The full geometry audit now verifies 13 LOSS / 0 WIN / 92 UNKNOWN; the class remains UNKNOWN.
+
+The four UNKNOWN s5 probe parents had complete canonical s6 boundaries of 89, 89, 87, and 89 children, with 354 parent-child incidences and 348 unique s6 keys. Saved exact s6 reuse contributed one WIN. The 347 new 2M s6 replays returned 333 WIN and 14 UNKNOWN, using 145,483,366 nodes. There were no exact s6 LOSS rows, no s5 rows derived, and no reverse-propagated LOSS. A geometry-generated union of the 14 unresolved s6 parents had 1,090 canonical s7 children. A scan of 4,710 files under `research/experiments` and `.local/n11` found zero matching exact s7 rows and zero conflicts; all 14 remain UNKNOWN. No s7 solver replay was dispatched.
+
+The merged exact s5 cache is 4,954 entries (125 WIN / 4,829 LOSS / conflict 0). Recomputed all 3,384 s4 classes: 29 LOSS / 226 WIN / 3,129 UNKNOWN; secured third moves 113/119, six remain. Minimum additional class cover is 3 and matches rational dual 3. The additive-optimal repair is three classes and 288 distinct UNKNOWN s5 positions. Re-ranking still selects `(10448351135499552768,0)` with 92 UNKNOWN s5 children. Inventory `post-1173099-reply27-checkpoint-artifact-hashes-20261009.json` covers 405 artifacts and 1,355 manifested sources, with no missing paths or hash mismatches (SHA-256 `4321d32a308a3303db8c8556a5787e900d50f0c027be678ebb52dc8f52b468a0`). `{60,27}` and the 11×11 empty board remain UNKNOWN.

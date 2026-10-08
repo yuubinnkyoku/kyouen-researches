@@ -1,0 +1,48 @@
+{
+  "boundary_scope": "supplied targets only",
+  "budget": 15000000,
+  "cache_sources": [
+    {
+      "loss": 4825,
+      "nodes": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-38613e2-hard-s5-s6-descent-v2-merged-s5.cache",
+      "rows": 4950,
+      "sha256": "93dbd70a0153f466a3cec8ab26f402671213ee8c031b8e4db7d823d78533f1d1",
+      "win": 125
+    }
+  ],
+  "class_status": "UNKNOWN",
+  "existing_cache_exact": 0,
+  "existing_exact": 0,
+  "existing_output_exact": 0,
+  "new_exact": 4,
+  "new_exact_cache": ".local\\n11\\dual-tight-ready-10448351135499552768-0-probe8\\cache-out\\new-exact-s5.cache",
+  "new_loss": 4,
+  "new_win": 0,
+  "nodes_existing": 0,
+  "nodes_new": 91173808,
+  "nodes_total": 91173808,
+  "not_dispatched": [],
+  "scheduled": 8,
+  "targets": 8,
+  "unknown": 4,
+  "unresolved": [
+    [
+      1152956688979001856,
+      536870912
+    ],
+    [
+      10448351135499585536,
+      0
+    ],
+    [
+      10448351135633770496,
+      0
+    ],
+    [
+      10449477035406395392,
+      0
+    ]
+  ],
+  "workers": 4
+}
