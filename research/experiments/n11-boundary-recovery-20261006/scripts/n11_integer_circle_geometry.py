@@ -32,7 +32,10 @@ def legal_points(pts):
         raise ValueError("invalid occupied cells")
     blocked=sum(1<<p for p in pts)
     for triple in combinations(pts,3):
-        blocked |= circle_triple_mask(*triple)
+        mask = circle_triple_mask(*triple)
+        if mask & (blocked & ~sum(1 << p for p in triple)):
+            raise ValueError("unsafe occupied position")
+        blocked |= mask
     return [p for p in range(121) if not (blocked>>p)&1]
 
 def canonical_key(points):
