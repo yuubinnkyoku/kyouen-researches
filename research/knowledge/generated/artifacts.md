@@ -280,6 +280,12 @@
 
 - [K0085](../items/K0085-three-to-four-stone-pair-gain.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0086](../items/K0086-blind-probe-median-improvement-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/capacity-slack-three-20261008/README.md](../../../research/experiments/capacity-slack-three-20261008/README.md)
+
+- [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (proof): 境界署名の定義と全称mex帰納・全次元での鋭さ構成
+## [research/experiments/capacity-slack-three-20261008/check_slack_three.py](../../../research/experiments/capacity-slack-three-20261008/check_slack_three.py)
+
+- [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (verifier): 418819の容量余裕3安全降順局面について独立mexで全件一致
 ## [research/experiments/capacity-slack-two-20261008/README.md](../../../research/experiments/capacity-slack-two-20261008/README.md)
 
 - [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (proof): 余裕2の全称閉公式・7場合の子値分類・mex帰納証明
