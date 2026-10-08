@@ -517,7 +517,7 @@
 - ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): M_{3,5}=12を含む
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 3×m・q=5の一般上界を56から40へ改善した
 
-## [K0072](../items/K0072-mod9-integer-row-separation.md) 標準整数行のmod9制約は高q全長分離領域を拡大する
+## [K0072](../items/K0072-mod9-integer-row-separation.md) 標準整数行の合同条件は高q全長分離領域を拡大する
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - ← depends_on [K0077](../items/K0077-width-four-q8-stabilization.md): q=2w境界の整数格子構造を使う
