@@ -286,6 +286,12 @@
 ## [research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py](../../../research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py)
 
 - [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) (verifier): 8774局面・14390終局石数別の独立全合法着手再帰との完全照合
+## [research/experiments/capacity-height-bias-20261008/README.md](../../../research/experiments/capacity-height-bias-20261008/README.md)
+
+- [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) (proof): 多項式最高次係数・漸近集中・逐次ランダム極限の正値性の全称証明
+## [research/experiments/capacity-height-bias-20261008/check_height_bias.py](../../../research/experiments/capacity-height-bias-20261008/check_height_bias.py)
+
+- [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) (verifier): 354局面・505終局閾値の独立有限差分と逐次確率再帰の検証
 ## [research/experiments/capacity-slack-three-20261008/README.md](../../../research/experiments/capacity-slack-three-20261008/README.md)
 
 - [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (proof): 境界署名の定義と全称mex帰納・全次元での鋭さ構成
