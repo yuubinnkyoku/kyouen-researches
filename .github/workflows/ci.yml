@@ -88,6 +88,8 @@ jobs:
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_audit_probe_preflight.py
       - name: Check n11 historical raw replay source completeness
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_verify_raw_history_coverage.py
+      - name: Check n11 missing raw replay key-evidence redundancy
+        run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_missing_s5_replay_redundancy.py
 
   lean:
     name: Lean soundness layer
