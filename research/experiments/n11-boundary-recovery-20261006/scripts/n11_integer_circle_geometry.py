@@ -34,3 +34,7 @@ def legal_points(pts):
     for triple in combinations(pts,3):
         blocked |= circle_triple_mask(*triple)
     return [p for p in range(121) if not (blocked>>p)&1]
+
+def canonical_key(points):
+    from dfpn_edge_classes import d4_canonical_key
+    return tuple(d4_canonical_key(points))
