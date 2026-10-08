@@ -393,6 +393,9 @@
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (data): 命題・対象範囲・根拠を記した出典
 - [K0070](../items/K0070-width-three-q6-stabilization.md) (data): 有限長の検算
+## [research/experiments/fixed-width/output/quantitative_density_verification.txt](../../../research/experiments/fixed-width/output/quantitative_density_verification.txt)
+
+- [K0370](../items/K0370-quantitative-uniform-circle-density.md) (data): 局所剰余19099条件とCRT4条件の照合ログ
 ## [research/experiments/fixed-width/reports/curve-packing-fixed-width.md](../../../research/experiments/fixed-width/reports/curve-packing-fixed-width.md)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (proof): 三つ組・点対予算による一般定理
@@ -453,6 +456,9 @@
 ## [research/experiments/fixed-width/reports/q48-q6-exact-threshold.md](../../../research/experiments/fixed-width/reports/q48-q6-exact-threshold.md)
 
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,6}=16
+## [research/experiments/fixed-width/reports/quantitative-uniform-circle-density-20261008.md](../../../research/experiments/fixed-width/reports/quantitative-uniform-circle-density-20261008.md)
+
+- [K0370](../items/K0370-quantitative-uniform-circle-density.md) (proof): 素数定理の算術級数版を用いた全称証明
 ## [research/experiments/fixed-width/scripts/check_fixed_width_20261003.py](../../../research/experiments/fixed-width/scripts/check_fixed_width_20261003.py)
 
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (verifier): 軽量統合再現
@@ -492,6 +498,9 @@
 ## [research/experiments/fixed-width/scripts/verify_double_rows_44_63.py](../../../research/experiments/fixed-width/scripts/verify_double_rows_44_63.py)
 
 - [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) (verifier): 2独立方法の合同排除と20幅の明示的証人
+## [research/experiments/fixed-width/scripts/verify_quantitative_density.py](../../../research/experiments/fixed-width/scripts/verify_quantitative_density.py)
+
+- [K0370](../items/K0370-quantitative-uniform-circle-density.md) (verifier): 局所剰余数と中国剰余定理の独立有限検算
 ## [research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): 証明済み必要合同式と直接整数行列式で全選択四点を検査

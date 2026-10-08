@@ -525,6 +525,7 @@
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 五行すべてに整数点を持つ円を排除するmod9補題
 - ← depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): 標準整数格子の二重点行と独立行公式
+- ← depends_on [K0370](../items/K0370-quantitative-uniform-circle-density.md): 固定幅q点版の独立行帰着
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -1689,3 +1690,7 @@
 ## [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) 標準整数格子44〜63行で円が二点ずつ通る行数の厳密最大値
 
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 標準整数格子の二重点行と独立行公式
+
+## [K0370](../items/K0370-quantitative-uniform-circle-density.md) 連続整数行の円の二重点行数に対する定量的一様上界
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 固定幅q点版の独立行帰着
