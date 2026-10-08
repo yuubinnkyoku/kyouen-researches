@@ -1,0 +1,14 @@
+{
+  "schema": "reply27-optimizer-environment-v1",
+  "command_context": "uv run --no-project --with scipy --with numpy python",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "used_for": [
+    "cache_aware_reply27_cardinality.py",
+    "reply27_selected31_repair.py",
+    "rank_dual_tight_repair_classes.py"
+  ],
+  "claim": "Environment metadata for the finite cover, rational-dual, repair, and ranking calculations; it supplies no game verdicts."
+}
