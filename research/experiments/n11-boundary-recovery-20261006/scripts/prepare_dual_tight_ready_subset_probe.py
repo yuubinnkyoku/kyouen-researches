@@ -9,6 +9,8 @@ import json
 import sys
 from pathlib import Path
 
+from audit_probe_preflight import validate_audits
+
 
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research/experiments/n11-search-methods/scripts"))
@@ -113,28 +115,17 @@ def main() -> int:
         raise SystemExit(f"target unexpectedly exact in cache: {sorted(target_keys & cache.keys())[:3]}")
 
     raw = json.loads(args.raw_audit.read_text(encoding="utf-8"))
-    if (raw.get("targets", {}).get("sha256") != sha256(args.targets)
-            or raw.get("current_cache", {}).get("sha256") != sha256(args.cache)
-            or raw.get("current_cache", {}).get("target_exact_intersection") != 0
-            or raw.get("exact_verdict_conflicts")
-            or raw.get("prior_exact")):
-        raise SystemExit("raw-history audit does not bind the current targets/cache cleanly")
-    ready = {tuple(key) for key in raw.get("dispatch_ready_keys", [])}
-    same_budget_rows = raw.get("prior_unknown_same_budget_or_higher", [])
-    same_budget_keys = {tuple(row["key"]) for row in same_budget_rows}
-    if not ready or not ready <= target_keys or ready & same_budget_keys:
-        raise SystemExit("invalid raw-history dispatch-ready set")
-    if target_keys - ready != same_budget_keys:
-        raise SystemExit("every non-ready target must be blocked only by same-or-higher-budget UNKNOWN history")
+    saved = json.loads(args.saved_s6_audit.read_text(encoding="utf-8"))
+    try:
+        ready, same_budget_keys = validate_audits(
+            target_keys, sha256(args.targets), sha256(args.cache),
+            raw, saved, args.budget,
+        )
+    except ValueError as exc:
+        raise SystemExit(f"dual-tight ready-subset preflight failed: {exc}") from exc
     if len(ready) < args.count:
         raise SystemExit(f"only {len(ready)} targets are dispatch-ready; requested {args.count}")
-
-    saved = json.loads(args.saved_s6_audit.read_text(encoding="utf-8"))
-    if (saved.get("targets", {}).get("sha256") != sha256(args.targets)
-            or saved.get("targets", {}).get("status_counts") != {"UNKNOWN": len(target_keys)}
-            or saved.get("cache_comparison", {}).get("new_exact") != 0
-            or saved.get("cache_comparison", {}).get("opposite_verdict_conflicts")):
-        raise SystemExit("saved-s6 audit does not preserve all target parents as UNKNOWN")
+    same_budget_rows = raw.get("prior_unknown_same_budget_or_higher", [])
 
     eligible_rows = [keyed[key] for key in ready]
     chosen = sorted(eligible_rows,
