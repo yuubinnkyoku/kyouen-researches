@@ -396,6 +396,9 @@
 ## [research/experiments/fixed-width/reports/curve-packing-fixed-width.md](../../../research/experiments/fixed-width/reports/curve-packing-fixed-width.md)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (proof): 三つ組・点対予算による一般定理
+## [research/experiments/fixed-width/reports/exact-double-rows-44-63.md](../../../research/experiments/fixed-width/reports/exact-double-rows-44-63.md)
+
+- [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) (proof): 数学的な上界と明示的な下界円
 ## [research/experiments/fixed-width/reports/mod7-mod9-mod11-mod19-mod23-half-density-15.md](../../../research/experiments/fixed-width/reports/mod7-mod9-mod11-mod19-mod23-half-density-15.md)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (proof): w=15..18の二重点行半密度境界の合同完全排除とw>=15への接続
@@ -486,6 +489,9 @@
 ## [research/experiments/fixed-width/scripts/q_point_fixed_width.py](../../../research/experiments/fixed-width/scripts/q_point_fixed_width.py)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
+## [research/experiments/fixed-width/scripts/verify_double_rows_44_63.py](../../../research/experiments/fixed-width/scripts/verify_double_rows_44_63.py)
+
+- [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) (verifier): 2独立方法の合同排除と20幅の明示的証人
 ## [research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): 証明済み必要合同式と直接整数行列式で全選択四点を検査

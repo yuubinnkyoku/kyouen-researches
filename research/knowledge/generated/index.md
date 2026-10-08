@@ -364,3 +364,4 @@
 | [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) | 任意の容量ゲーム途中局面からの極大盤面数と全合法着手順序数を母関数で厳密決定する | proposition | proved | variants, maximal-safe, statistics, strategy-length |
 | [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) | 容量ゲームの高さ無限極限では完成対局一様と逐次合法点一様の終局分布が乖離する | proposition | proved | variants, statistics, strategy-length, maximal-safe |
 | [K0363](../items/K0363-capacity-finite-height-distribution-error.md) | 容量ゲームの逐次合法点一様モデルの有限高さ誤差は明示的にO(1/m)で全終局確率の一次係数も計算できる | proposition | proved | variants, statistics, strategy-length |
+| [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) | 標準整数格子44〜63行で円が二点ずつ通る行数の厳密最大値 | proposition | proved | geometry, rectangles, variants |

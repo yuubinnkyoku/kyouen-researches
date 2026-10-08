@@ -524,6 +524,7 @@
 - ← generalizes [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md): 固定幅で円が消える領域を別方向から拡張する
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): mod9と円係数の分母から五行の8点円を四行の二点対へ限定する
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 五行すべてに整数点を持つ円を排除するmod9補題
+- ← depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): 標準整数格子の二重点行と独立行公式
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -1684,3 +1685,7 @@
 
 - → depends_on [K0362](../items/K0362-capacity-height-random-terminal-distribution.md): 高さ無限の終局分布収束を有限高さの全変動距離上界と一次補正へ定量化する
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 最大到達終局石数による全対局長の一様上限を使う
+
+## [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) 標準整数格子44〜63行で円が二点ずつ通る行数の厳密最大値
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 標準整数格子の二重点行と独立行公式
