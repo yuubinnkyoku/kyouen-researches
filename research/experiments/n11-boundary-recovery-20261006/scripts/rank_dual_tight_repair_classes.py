@@ -21,7 +21,7 @@ sys.path.insert(0, str(FRONTIER_SCRIPTS))
 sys.path.insert(0, str(EDGE_SCRIPTS))
 
 import cache_aware_reply27_cover as cover  # noqa: E402
-from dfpn_edge_classes import legal_after  # noqa: E402
+from n11_integer_circle_geometry import legal_points as legal_after  # noqa: E402
 
 
 def sha256(path: Path) -> str:
@@ -121,6 +121,7 @@ def main() -> int:
         FRONTIER_SCRIPTS / "cache_aware_reply27_cover.py",
         FRONTIER_SCRIPTS / "cache_aware_reply27_cardinality.py",
         EDGE_SCRIPTS / "dfpn_edge_classes.py",
+        HERE / "n11_integer_circle_geometry.py",
     ]]
     source_doc = {
         "schema": "n11-dual-tight-repair-ranking-sources-v1",
