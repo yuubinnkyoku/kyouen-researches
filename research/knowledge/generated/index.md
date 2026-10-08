@@ -362,3 +362,4 @@
 | [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) | 任意次元容量ゲームの余裕2層は全局面二値Grundyで閉公式を持つ | proposition | proved | variants, grundy, strategy-length |
 | [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) | 任意次元の容量余裕3は二値境界署名で全Grundyを決定でき上界3が鋭い | proposition | proved | variants, grundy, strategy-length |
 | [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) | 任意の容量ゲーム途中局面からの極大盤面数と全合法着手順序数を母関数で厳密決定する | proposition | proved | variants, maximal-safe, statistics, strategy-length |
+| [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) | 容量ゲームの高さ無限極限では完成対局一様と逐次合法点一様の終局分布が乖離する | proposition | proved | variants, statistics, strategy-length, maximal-safe |
