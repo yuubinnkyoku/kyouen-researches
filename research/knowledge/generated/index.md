@@ -359,3 +359,4 @@
 | [K0356](../items/K0356-capacity-boundary-grundy-bound.md) | 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する | proposition | proved | variants, grundy |
 | [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md) | 11×11の{60,27}後の第三手104に対する仮想WIN witness cover | computation | computed | search-methods, square-outcomes, verification, provenance |
 | [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md) | 容量余裕1のGrundy値は常に3以下で境界子の型から完全決定できる | proposition | proved | variants, grundy |
+| [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) | 任意次元容量ゲームの余裕2層は全局面二値Grundyで閉公式を持つ | proposition | proved | variants, grundy, strategy-length |
