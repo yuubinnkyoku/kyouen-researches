@@ -280,6 +280,15 @@
 
 - [K0085](../items/K0085-three-to-four-stone-pair-gain.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0086](../items/K0086-blind-probe-median-improvement-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/capacity-slack-two-20261008/README.md](../../../research/experiments/capacity-slack-two-20261008/README.md)
+
+- [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (proof): 余裕2の全称閉公式・7場合の子値分類・mex帰納証明
+## [research/experiments/capacity-slack-two-20261008/check_child_types.py](../../../research/experiments/capacity-slack-two-20261008/check_child_types.py)
+
+- [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (verifier): 余裕1への全子Grundy集合の52787局面独立確認
+## [research/experiments/capacity-slack-two-20261008/check_slack_two.py](../../../research/experiments/capacity-slack-two-20261008/check_slack_two.py)
+
+- [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (verifier): 独立mex再帰による449322局面の全パラメータ有限検査
 ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
