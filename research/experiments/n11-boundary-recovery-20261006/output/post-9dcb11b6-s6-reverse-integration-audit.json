@@ -1,0 +1,49 @@
+{
+  "baseline_cache": {
+    "entries": 4847,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache",
+    "sha256": "eee8da7e463efbc7fabfae19bab34c54a8c5d8ef1b0485749f1634c0b5d31c94"
+  },
+  "cache_union": {
+    "conflicts": 0,
+    "exact_overlap": 0,
+    "new_exact_rows": 51
+  },
+  "derived_delta": {
+    "git_blob_sha": "6a2581f20c549615029ad4d57757ca5d057b810f",
+    "loss": 51,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-partial-s6-derived-s5.cache",
+    "sha256": "ca3cd3c546feb6a85a138750facb006d97837d4cfb554389ff1df5afec3fb6d0"
+  },
+  "local_cache": {
+    "entries": 4871,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-probe8-2-collected-merged-s5.cache",
+    "sha256": "0653c02857e30102c18287bfc2c25e864b6e445238e469747b736c3e4a612516"
+  },
+  "main_commit": "9dcb11b60bc38ec1d56e4ce842375051e8046756",
+  "merged_cache": {
+    "conflict": 0,
+    "entries": 4922,
+    "loss": 4801,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9dcb11b6-current-exact-s5-v2.cache",
+    "sha256": "2c27c72f88b1bd928908b9ebe0f6f77fee09ac5d8075701b4937c7c22485172b",
+    "win": 121
+  },
+  "reverse_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-next17-partial-s6-reverse-audit.json",
+    "sha256": "eecfc94a844d13f0469115bfd1396a05fff3f0c2b723870650b49353323f6e35"
+  },
+  "reverse_geometry": {
+    "derived_s5_loss_parents": 51,
+    "distinct_s6_loss_keys": 13,
+    "exact_s6_loss_rows": 13,
+    "verified_legal_canonical_parent_incidences": 51
+  },
+  "s6_raw": {
+    "git_blob_sha": "93e788de61a33bf0dffbabac7d96aceac71459ac",
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/next17-hard5-s6-partial-replay.csv",
+    "sha256": "12000ad6248f9331b90bd78f29c8a120bb0d6cb07ed7c51bf19383be217448ce"
+  },
+  "schema": "n11-post9dcb-s6-reverse-integration-audit-v1",
+  "verdict_source_limit": "Original s6 LOSS rows are saved exact solver results; this audit verifies source binding and legal geometry, not independent solver certificates."
+}
