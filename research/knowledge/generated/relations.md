@@ -1621,6 +1621,7 @@
 - ← depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 容量ゲームの安全性と偶数余剰列の二値Grundy公式を用いる
 - ← depends_on [K0360](../items/K0360-capacity-slack-three-exact-grundy.md): 容量ゲームの定義・飽和列除去と平行移動のゲーム木同型を用いる
 - ← depends_on [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md): 極大配置の形と途中局面から到達可能な終局閾値の厳密な区間を使う
+- ← depends_on [K0362](../items/K0362-capacity-height-random-terminal-distribution.md): 到達可能な終局閾値の連続区間と終局サイズ差w-hを用いる
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1670,3 +1671,9 @@
 
 - → generalizes [K0354](../items/K0354-general-prism-maximal-count.md): 空盤からの極大盤面数を任意の途中盤面からの条件付き極大盤面数に拡張する
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 極大配置の形と途中局面から到達可能な終局閾値の厳密な区間を使う
+- ← depends_on [K0362](../items/K0362-capacity-height-random-terminal-distribution.md): 任意の途中局面からの終局盤面数と完成対局の正確な本数を用いる
+
+## [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) 容量ゲームの高さ無限極限では完成対局一様と逐次合法点一様の終局分布が乖離する
+
+- → depends_on [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md): 任意の途中局面からの終局盤面数と完成対局の正確な本数を用いる
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 到達可能な終局閾値の連続区間と終局サイズ差w-hを用いる
