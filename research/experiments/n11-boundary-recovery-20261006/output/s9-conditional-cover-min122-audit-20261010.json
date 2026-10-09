@@ -1,0 +1,39 @@
+{
+  "schema": "n11-s9-conditional-cover-min122-v1",
+  "source_sha256": "8bf4707d04a31e9b3b74ce8a155d92783c906e938349b90cbe309a2fb9df9490",
+  "s7_fixed": 4,
+  "s8_parent_group_sizes": [
+    73,
+    68,
+    45,
+    59
+  ],
+  "s8_parent_total": 245,
+  "s9_candidate_total": 6018,
+  "s9_incidence_total": 12040,
+  "s9_multiplicity": {
+    "2": 6016,
+    "4": 2
+  },
+  "four_parent_candidates": [
+    [
+      "10376293542543818752",
+      "105226698754"
+    ],
+    [
+      "10376293817421725696",
+      "68736253954"
+    ]
+  ],
+  "four_parent_coverage_disjoint": true,
+  "two_parent_edges_within_one_s7_group": true,
+  "lower_bounds_by_four_parent_count": [
+    124,
+    123,
+    122
+  ],
+  "witness_count": 122,
+  "s8_covered": 245,
+  "s10_legal_sum": 4423,
+  "status": "CONDITIONAL_ONLY; S9, S7, S6, TWO_STONE_ROOT, EMPTY_BOARD UNKNOWN"
+}
