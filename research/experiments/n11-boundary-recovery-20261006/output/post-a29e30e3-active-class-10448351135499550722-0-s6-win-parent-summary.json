@@ -1,0 +1,47 @@
+{
+  "artifacts": {
+    "inputs": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-win-parent-inputs.csv",
+      "sha256": "75b6919a0f9091f1276eeda41192a4f39898792b66c865f4309c4e3ebe95f58a"
+    },
+    "raw_directory_file_count": 89,
+    "raw_exact": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-win-parent-raw-exact.csv",
+      "sha256": "8d04010d0af2c4633538cc65dd9ac13a1c51b0b7927db4775395e258e92b8fcc"
+    },
+    "runner_summary": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-win-parent-runner-summary.json",
+      "sha256": "63b1373de8388b7b128f37bc4b7b248d660f048ebfe6c1563c9cc34e4148cf0f"
+    },
+    "s6_exact_cache": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-exact-s6-win-parent.cache",
+      "sha256": "64411c370402036809dbf78ec95ff4ce2cd89180676d353ac0c6c585f0406923"
+    },
+    "source_manifest": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-win-parent-sources.json",
+      "sha256": "74ca4cf8c38da55a3a2bca024c31224544cdb7bf026bfbf065fc5d76527ffe29"
+    }
+  },
+  "budget_per_target": 2000000,
+  "class_outcome_not_assigned_here": true,
+  "complete_canonical_s6_boundary": 89,
+  "conflicts": 0,
+  "created_utc": "2026-10-09T02:45:39+00:00",
+  "dispatch_main_commit": "a29e30e300f0050f0f7c1fe1de465e258483bdce",
+  "exact_s6_verdict_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 0,
+    "WIN": 89
+  },
+  "new_s6_rows": 89,
+  "nodes": 36038482,
+  "parent_s5": [
+    10448351135499550786,
+    0
+  ],
+  "s5_outcome_from_complete_s6_boundary": "WIN",
+  "schema": "n11-reply27-s6-descent-evidence-summary-v1",
+  "solver_sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7",
+  "unknowns_propagated": false,
+  "workers": 4
+}

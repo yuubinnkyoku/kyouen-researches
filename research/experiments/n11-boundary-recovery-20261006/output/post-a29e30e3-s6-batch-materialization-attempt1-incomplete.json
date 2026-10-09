@@ -1,0 +1,18 @@
+{
+  "schema": "n11-reply27-incomplete-evidence-materialization-attempt-v1",
+  "status": "incomplete-not-accepted",
+  "attempted_out_prefix": "research/experiments/n11-boundary-recovery-20261006/output/post-a29e30e3-active-class-10448351135499550722-0-s6-batch",
+  "raw_directory": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-a29e30e3-active-class-10448351135499550722-0-s6-batch-raw",
+  "raw_files_copied": 653,
+  "failure": "The materializer reached manifest construction, but its adapted legacy preflight lacked union.dispatch_ready_unique_keys. The schema adapter was corrected and the complete evidence was materialized under the distinct s6-batch-v2 prefix.",
+  "solver_invoked_by_this_attempt": false,
+  "intermediate_files_written": [
+    "post-a29e30e3-active-class-10448351135499550722-0-s6-batch-inputs.csv",
+    "post-a29e30e3-active-class-10448351135499550722-0-s6-batch-raw-all.csv",
+    "post-a29e30e3-active-class-10448351135499550722-0-s6-batch-raw-exact.csv",
+    "post-a29e30e3-active-class-10448351135499550722-0-s6-batch-exact-s6.cache",
+    "post-a29e30e3-active-class-10448351135499550722-0-s6-batch-derived-s5.cache",
+    "post-a29e30e3-active-class-10448351135499550722-0-s6-batch-runner-summary.json"
+  ],
+  "claim": "Preserved intermediate copies are not used as the accepted completion receipt; the distinct v2 evidence set has its own complete raw directory, source manifest, and summary."
+}
