@@ -1,0 +1,160 @@
+{
+  "artifact_inventory": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-reply27-checkpoint-artifact-hashes.json",
+  "checkpoint_base_main": "9681c58886aa1e680d4cba1116187b2715df6107",
+  "claim": "An exact s5 WIN witness proves this s4 class WIN. The checkpoint advances local class evidence only; it does not classify the root {60,27} or the 11x11 empty board.",
+  "created_on": "2026-10-09T08:26:13+00:00",
+  "dual_tight": true,
+  "exact_s5_cache": {
+    "LOSS": 5322,
+    "WIN": 145,
+    "conflict": 0,
+    "entries": 5467,
+    "new_exact_rows_from_main_base": 15,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-merged-s5.cache",
+    "sha256": "538709cdc0bc0edc4224afcf5cd4a22010f9c52285e604e45a036cb4ddf19dd4"
+  },
+  "minimum_additional_classes": 2,
+  "next_target": {
+    "all_s5": 104,
+    "coverage": [
+      38,
+      77,
+      87
+    ],
+    "key": [
+      1585267068834414720,
+      0
+    ],
+    "known_loss_fraction": 0.04807692307692308,
+    "known_loss_s5": 5,
+    "max_unknown_legal": 103,
+    "min_unknown_legal": 85,
+    "new_vertex_count": 3,
+    "new_vertices": [
+      38,
+      77,
+      87
+    ],
+    "rank": 1,
+    "unknown_per_new_vertex": 33.0,
+    "unknown_s5": 99
+  },
+  "processed_class": {
+    "boundary_status_counts": {
+      "LOSS": 45,
+      "UNKNOWN": 56,
+      "WIN": 1
+    },
+    "canonical_s5_children": 102,
+    "coverage_vertices": [
+      0,
+      10,
+      100,
+      108
+    ],
+    "geometry_audit_passed": true,
+    "key": [
+      1152921504741065728,
+      68719476736
+    ],
+    "related_reply27_class_also_proved_win": [
+      [
+        1297036692683751425,
+        0
+      ]
+    ],
+    "s5_win_witness": [
+      10376293541461627904,
+      68719476736
+    ],
+    "status": "WIN",
+    "unexplored_unknown_s5": 56
+  },
+  "proof_status": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_root": "UNKNOWN"
+  },
+  "rational_dual": "2",
+  "remaining_third_moves": 5,
+  "repair": {
+    "classes": 2,
+    "distinct_unknown_s5": 196,
+    "selected": [
+      {
+        "all_s5": 103,
+        "coverage": [
+          23,
+          31,
+          100,
+          108
+        ],
+        "key": [
+          1297036692683759616,
+          0
+        ],
+        "unknown_s5": 97
+      },
+      {
+        "all_s5": 104,
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "unknown_s5": 99
+      }
+    ]
+  },
+  "root": [
+    60,
+    27
+  ],
+  "s4_classes": {
+    "LOSS": 30,
+    "UNKNOWN": 3101,
+    "WIN": 253
+  },
+  "s5_probe": {
+    "budget_per_target": 15000000,
+    "round3_exact_loss": 8,
+    "round3_nodes": 41232972,
+    "round4_all_completed_nodes": 60466997,
+    "round4_exact_loss": 6,
+    "round4_exact_nodes": 45466997,
+    "round4_exact_rows": 7,
+    "round4_exact_win": 1,
+    "round4_unknown_key": [
+      10376293541461623824,
+      68719476736
+    ],
+    "round4_unknown_rows": 1,
+    "scheduled_round3": 8,
+    "scheduled_round4": 8,
+    "summary_paths": [
+      "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-summary.json",
+      "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-collected-summary.json"
+    ],
+    "unknown_not_merged_or_retried": true
+  },
+  "s6_descent": {
+    "conflicts": 0,
+    "derived_s5_parent_loss_rows": 0,
+    "new_exact_s6_rows": 0,
+    "nodes": 0,
+    "round4_saved_s6_parents": 8,
+    "round4_saved_s6_unknown_parents": 8,
+    "unknowns_propagated": false
+  },
+  "s6_reverse_propagation": {
+    "new_exact_s6_loss_witnesses": 0,
+    "reverse_propagated_s5_loss_rows": 0,
+    "verdict_conflicts": 0
+  },
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "secured_third_moves": 114,
+  "source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-reply27-checkpoint-source-manifest.json"
+}

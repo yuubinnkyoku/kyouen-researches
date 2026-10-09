@@ -3751,6 +3751,159 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-select-next8-s5-probes.py
     role: verifier
     note: raw-history ready targetから8件を選ぶschedule builder
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-reply27-checkpoint-report.json
+    role: manifest
+    note: "round-4 exact WIN checkpoint report and recomputed global status"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-reply27-checkpoint-source-manifest.json
+    role: manifest
+    note: "hash-bound parent, raw run, geometry and optimizer sources"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-reply27-checkpoint-artifact-hashes.json
+    role: manifest
+    note: "112-artifact and 9,841-source SHA-256 inventory; zero missing/mismatched"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-preserved-raw-files.json
+    role: manifest
+    note: "byte-for-byte copies of round-3/round-4 solver inputs, outputs and logs"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-build-reply27-checkpoint.py
+    role: source
+    note: "rebuilds and verifies this checkpoint report and hash inventory"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-select-next8-s5-probes.py
+    role: source
+    note: "selects only current raw-history dispatch-ready targets"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-probe8.csv
+    role: source
+    note: "round-3 eight-target input schedule"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-probe8-manifest.json
+    role: manifest
+    note: "round-3 current-main target and source binding"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-raw-all.csv
+    role: source
+    note: "round-3 preserved solver rows"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-raw-exact.csv
+    role: source
+    note: "round-3 exact replay rows"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-exact-s5.cache
+    role: data
+    note: "round-3 eight exact LOSS rows"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-merge-receipt.json
+    role: manifest
+    note: "round-3 cache merge, overlap and conflict receipt"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-merged-s5.cache
+    role: data
+    note: "round-3 merged canonical exact S5 cache"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-summary.json
+    role: data
+    note: "round-3 solver and exact-node summary"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-collected-manifest.json
+    role: manifest
+    note: "round-3 raw-output collection source bindings"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-class-boundary-audit.json
+    role: verifier
+    note: "round-3 complete canonical S5 boundary geometry"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-strict-preflight.json
+    role: manifest
+    note: "round-3 exact-key raw and saved-S6 preflight"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-raw-history-current.json
+    role: data
+    note: "round-3 full raw-history and same-budget audit"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-after-round3-raw-history-full-boundary.json
+    role: data
+    note: "round-3 full class-child raw-history audit"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-saved-s6-full.json.gz
+    role: data
+    note: "round-3 saved exact-S6 intersection evidence"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-saved-s6-summary.json
+    role: data
+    note: "round-3 saved-S6 audit summary"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round3-saved-s6-derived-s5.cache
+    role: data
+    note: "round-3 geometry-derived exact S5 rows; empty delta"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round3-ranking.json
+    role: data
+    note: "pre-round-4 scheduling rank, not a verdict"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-probe8.csv
+    role: source
+    note: "round-4 eight-target input schedule"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-probe8-manifest.json
+    role: manifest
+    note: "round-4 target, raw-history, saved-S6 and main binding"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-raw-all.csv
+    role: source
+    note: "all eight round-4 solver statuses including UNKNOWN"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-raw-exact.csv
+    role: source
+    note: "seven exact round-4 solver rows"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-exact-targets.csv
+    role: source
+    note: "the seven exact targets, excluding the UNKNOWN row"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-exact-s5.cache
+    role: data
+    note: "six exact LOSS and one exact WIN delta"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-merged-s5.cache
+    role: data
+    note: "current 5,467-row exact S5 cache"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-merge-receipt.json
+    role: manifest
+    note: "round-4 cache merge and zero-conflict receipt"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-collected-summary.json
+    role: data
+    note: "round-4 run totals and unresolved key"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-collected-manifest.json
+    role: manifest
+    note: "round-4 raw output and solver-input source bindings"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-runner-summary.json
+    role: data
+    note: "preserved round-4 exact solver summary"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-strict-preflight.json
+    role: manifest
+    note: "round-4 raw-history and saved-S6 dispatch preflight"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-raw-history-current.json
+    role: data
+    note: "round-4 full raw-history and same-budget audit"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-saved-s6-full.json.gz
+    role: data
+    note: "round-4 saved exact-S6 intersection evidence"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-saved-s6-summary.json
+    role: data
+    note: "round-4 saved-S6 audit summary"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-saved-s6-derived-s5.cache
+    role: data
+    note: "round-4 geometry-derived exact S5 rows; empty delta"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-full-unknown-targets.csv
+    role: source
+    note: "complete 63-key UNKNOWN S5 boundary before round 4"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-materialize-full-targets.py
+    role: source
+    note: "rebuilds the complete round-4 UNKNOWN boundary input"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-class-boundary-audit-reverified.json
+    role: verifier
+    note: "independent full 102-child geometry and class-status audit"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-win-witness-geometry-audit.json
+    role: verifier
+    note: "exact S5 WIN witness, canonical legality and reverse-incidence audit"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-adapt-verifier-inputs.py
+    role: source
+    note: "binds the exact subset while leaving the UNKNOWN probe outside the cache"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-verification-summary.json
+    role: manifest
+    note: "cross-checks raw exact counts and hashes for WIN witness verifier"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-verification-input-manifest.json
+    role: manifest
+    note: "WIN witness verifier target-source binding"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-cardinality.json
+    role: data
+    note: "all 3,384 current s4 classes and integer/dual cover"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-repair.json
+    role: data
+    note: "reoptimized two-class repair and unique UNKNOWN union"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-repair-targets.csv
+    role: source
+    note: "two-class repair's unresolved S5 target union"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-ranking.json
+    role: data
+    note: "re-ranked current frontier; scheduling only"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-ranking-targets.csv
+    role: source
+    note: "ranked class target boundaries"
 scope: >-
   Current finite checkpoint is based on fetched main 2f23fcb80ae853c93d31ed5d2e0f8d7d25ce757a. The exact canonical s5 cache has 5,452 rows (144 WIN / 5,308 LOSS / conflict 0).
   All 3,384 s4 classes classify as 30 LOSS / 251 WIN / 3,103 UNKNOWN; 114/119 third moves are secured and five remain. Minimum additional class cover and rational LP dual are both 2 (dual-tight).
@@ -4135,3 +4288,17 @@ Report post-f7cdef17-reply27-checkpoint-report.json, source manifest post-f7cdef
 統合exact s5 cacheは5,419件（WIN 144、LOSS 5,275、conflict 0）、SHA-256 `dbcf47de9b2233cbbe74025a16e67e2b44b261c9e566828bb8a8d15b5618a7e2`。saved-history再監査は9,228 files、717,656 rows、same-budget UNKNOWN 0、conflict 0。全3,384 s4 classを再分類するとLOSS 30、WIN 251、UNKNOWN 3,103。secured third movesは114/119でremaining 5。minimum additional class数は2、rational LP dualも2でdual-tight。再最適化repairは2 classes、distinct UNKNOWN s5 union 197。次rank-1は `(1152921504741065728,68719476736)`、102 children中LOSS 4 / UNKNOWN 98、coverage `{0,10,100,108}`。これはscheduleでありverdictではなく、dispatch前に最新main・全raw・same-budget履歴・saved s6を再監査する。
 
 Checkpoint report、source manifest、SHA-256 inventoryは `post-034a26a4-reply27-checkpoint-report.json`、`post-034a26a4-reply27-checkpoint-source-manifest.json`、`post-034a26a4-reply27-checkpoint-artifact-hashes.json`。inventory SHA-256 `4169f0330248c33820ad8c3a215bd8b8c09b18d9254a5d073ed91f714e887ff8`、87 artifactsと8,886 manifested sources、missing 0 / mismatched 0。今回も `{60,27}` と11×11空盤はUNKNOWNのまま。
+
+## 2026-10-09 17:27 JST dual-tight round-4 exact WIN checkpoint
+
+作業開始時にreply27 solver processはなく、HEAD == origin/main == 9681c58886aa1e680d4cba1116187b2715df6107。git fetch origin main後も一致していた。前回checkpointの最新rank-1 (1152921504741065728,68719476736) は、保存済みcache・raw履歴・same-budget UNKNOWN・saved S6を更新監査してから8件ずつ処理した。
+
+round3の8件は全てexact LOSS、41,232,972 nodes。round4は8件を実行し、6 exact LOSS・1 exact WIN・1 UNKNOWN、全完了行で60,466,997 nodes、うちexact行は45,466,997 nodes。UNKNOWN (10376293541461623824,68719476736) はcacheに入れず、同budget再試行もしていない。WINが出た時点で対象classの未実行55 siblingはdispatchせず、既に同時dispatch済みの7 siblingだけを回収した。
+
+独立したfull geometry verifierは対象 (1152921504741065728,68719476736) の102 canonical S5 childを再生成し、exact WIN witness (10376293541461627904,68719476736) がsafe・canonical・legalな子であることをraw rowとcacheに照合した。全境界はLOSS 45 / WIN 1 / UNKNOWN 56でclass WIN。reverse geometryでは同じwitnessから (1297036692683751425,0) もreply27 reachable classとしてWINになることを確認した。s6 descentとreverse-propagated LOSSはどちらも0。
+
+round3とround4をmain cacheへ順にmergeしたexact S5 cacheは5,467件（WIN 145 / LOSS 5,322 / conflict 0）、main baseからの新exact rowは15件。全3,384 s4 classはLOSS 30 / WIN 253 / UNKNOWN 3,101。secured third movesは114/119、remaining 5。minimum additional class coverは2、rational dualも2でdual-tight。WIN classを修復対象から外してrepairを再計算した結果、最小repairは2 class・distinct UNKNOWN S5 196件。次rank-1 (1585267068834414720,0) は104 child中LOSS 5 / UNKNOWN 99。これはscheduleのみで、dispatch前に最新main、全raw、same-budget履歴、saved S6を再監査する。
+
+checkpoint report post-9681c588-reply27-checkpoint-report.json、source manifest post-9681c588-reply27-checkpoint-source-manifest.json、artifact inventory post-9681c588-reply27-checkpoint-artifact-hashes.json にraw solver入力/出力、cache、merge receipt、geometry監査、cardinality、repair、rankingを結び付けた。inventoryは112 artifacts・9,841 sources、missing 0 / mismatched 0、SHA-256 41e0e517c388bb24890f77f81a551d3cf2c08afaf2699c70375b6a82780fe2e8。 .local内のsolver input/output/log 48件はbyte-for-byteで実験rawへ複製し、原本を残した。
+
+{60,27} と11×11 empty boardはUNKNOWNのまま。
