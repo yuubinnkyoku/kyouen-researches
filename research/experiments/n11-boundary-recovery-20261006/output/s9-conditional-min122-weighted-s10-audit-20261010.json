@@ -1,0 +1,33 @@
+{
+  "schema": "n11-s9-conditional-min122-weighted-s10-v1",
+  "date": "2026-10-10",
+  "source_main": "42892ed5e4a10479446614e19627cb0e88a2c13c",
+  "source_json": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-saved-s7-s6-intersection.json",
+  "source_sha256": "8bf4707d04a31e9b3b74ce8a155d92783c906e938349b90cbe309a2fb9df9490",
+  "s7_conditional_witnesses": 4,
+  "s8_parent_count": 245,
+  "s9_candidate_count": 6018,
+  "s9_incidence_count": 12040,
+  "s9_multiplicity": {
+    "2": 6016,
+    "4": 2
+  },
+  "s9_conditional_minimum": 122,
+  "s9_selected_count": 122,
+  "previous_s10_legal_sum": 4423,
+  "weighted_s10_legal_sum": 3734,
+  "s10_legal_sum_reduction": 689,
+  "s10_legal_sum_reduction_pct": 15.577662219082072,
+  "optimization": "scipy.optimize.milp/HiGHS 1.8.0; binary 6018 candidates, 245 coverage rows, cardinality exactly 122, force both four-parent candidates; objective minimize sum of exact legal S10 counts",
+  "solver_status": "optimal",
+  "solver_primal": 3734,
+  "solver_dual_bound": 3734,
+  "solver_mip_gap": 0,
+  "independent_validation": "Original integer-determinant/D4 geometry verifier reran from pinned source; all 122 canonical S9 positions safe; exact S10 legal count sum 3734; all 245 S8 parents covered; parity lower bound 122 verified. Solver optimum not independently proof-certified.",
+  "selected_csv_sha256": "42bd08366e2c18c64871ee8c1b06c6669f3eb80eff407c05eb915a1ad0fefe07",
+  "generator_sha256": "a7bf4ba3ef1cf2a1144c4033bb90f09dd658b33325e1b044aa8af356d4af16ed",
+  "verifier_sha256": "f2d6a05e3e901d535427f9169a914b5de9da1eaa59e2775ae72b2f3b2c9927e9",
+  "verification_json_sha256": "9b1d7f618e0ce5249ba2fb88db5f45265516fb31ee6b7da6a27fec446828f64a",
+  "status": "CONDITIONAL_SCHEDULE_ONLY; NO_NEW_WIN_LOSS; S9_S7_S6_TWO_STONE_ROOT_EMPTY_BOARD_UNKNOWN",
+  "note": "Reduction counts legal children, not measured runtime; no game verdicts inferred. Original 4423 audit remains historical."
+}
