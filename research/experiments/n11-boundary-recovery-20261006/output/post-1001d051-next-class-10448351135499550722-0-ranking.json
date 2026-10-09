@@ -1,0 +1,100 @@
+{
+  "best_target": {
+    "key": [
+      1585267068834414720,
+      0
+    ],
+    "new_vertices": [
+      38,
+      77,
+      87
+    ],
+    "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-next-class-10448351135499550722-0-ranking-targets.csv",
+    "unknown_s5": 99
+  },
+  "derived_cache_entries": 4972,
+  "loss_classes": 29,
+  "ranking": [
+    {
+      "all_s5": 104,
+      "coverage": [
+        38,
+        77,
+        87
+      ],
+      "key": [
+        1585267068834414720,
+        0
+      ],
+      "known_loss_fraction": 0.04807692307692308,
+      "known_loss_s5": 5,
+      "max_unknown_legal": 103,
+      "min_unknown_legal": 85,
+      "new_vertex_count": 3,
+      "new_vertices": [
+        38,
+        77,
+        87
+      ],
+      "rank": 1,
+      "unknown_per_new_vertex": 33.0,
+      "unknown_s5": 99
+    },
+    {
+      "all_s5": 103,
+      "coverage": [
+        59,
+        61,
+        100,
+        108
+      ],
+      "key": [
+        1297599642637172736,
+        0
+      ],
+      "known_loss_fraction": 0.05825242718446602,
+      "known_loss_s5": 6,
+      "max_unknown_legal": 101,
+      "min_unknown_legal": 79,
+      "new_vertex_count": 2,
+      "new_vertices": [
+        100,
+        108
+      ],
+      "rank": 2,
+      "unknown_per_new_vertex": 48.5,
+      "unknown_s5": 97
+    },
+    {
+      "all_s5": 105,
+      "coverage": [
+        99,
+        104,
+        109
+      ],
+      "key": [
+        10448351135499550722,
+        0
+      ],
+      "known_loss_fraction": 0.1619047619047619,
+      "known_loss_s5": 17,
+      "max_unknown_legal": 102,
+      "min_unknown_legal": 85,
+      "new_vertex_count": 1,
+      "new_vertices": [
+        104
+      ],
+      "rank": 3,
+      "unknown_per_new_vertex": 88.0,
+      "unknown_s5": 88
+    }
+  ],
+  "ranking_rule": "unknown_s5/new_vertices, then unknown_s5, then known-loss fraction",
+  "repair_classes": 3,
+  "root": [
+    60,
+    27
+  ],
+  "secured_vertices": 113,
+  "win_forbidden_classes": 231
+}
