@@ -1,0 +1,81 @@
+{
+  "budget_per_target": 15000000,
+  "class_key": [
+    10448351135499550722,
+    0
+  ],
+  "class_status_from_exact_witness": "UNKNOWN",
+  "completed_targets": 87,
+  "exact_replay_counts": {
+    "LOSS": 77,
+    "UNKNOWN": 10,
+    "WIN": 0
+  },
+  "new_exact": 77,
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0148c177-active-class-10448351135499550722-0-completion87-collection-new-exact-s5.cache",
+    "rows": 77,
+    "sha256": "a14bdfe4d89f2a02369e4f9ed1af7021ecb60263f314b16abf4dc503a5e9560f"
+  },
+  "nodes_all_completed_rows": 643426527,
+  "nodes_exact": 493426527,
+  "raw_all_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0148c177-active-class-10448351135499550722-0-completion87-collection-raw-all.csv",
+    "rows": 87,
+    "sha256": "def824a6afa4836c1033b1ddd8665a0e446d64974150837932f8b8984a9fa8b3"
+  },
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0148c177-active-class-10448351135499550722-0-completion87-collection-raw-exact.csv",
+    "rows": 77,
+    "sha256": "dd267446a63947af526db26b62cf0fea3d547ab899abfa05afc4c065e14bf390"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "scheduled_targets": 87,
+  "schema": "n11-dual-tight-completed-probe-summary-v1",
+  "scope": "the scheduled bounded probe only; a class WIN is concluded only from an exact WIN s5 child and geometry audit",
+  "unknown_keys": [
+    [
+      10448351135499550786,
+      0
+    ],
+    [
+      10448351135499550722,
+      67108864
+    ],
+    [
+      1152921504609009664,
+      536870916
+    ],
+    [
+      10448351135499552770,
+      0
+    ],
+    [
+      10450602935313235970,
+      0
+    ],
+    [
+      1297036692682703360,
+      68719476737
+    ],
+    [
+      10448351135500599298,
+      0
+    ],
+    [
+      1297036692682703360,
+      16777217
+    ],
+    [
+      1297036692682703360,
+      34359738369
+    ],
+    [
+      10448351135499550850,
+      0
+    ]
+  ]
+}

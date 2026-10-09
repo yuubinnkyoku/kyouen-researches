@@ -1,0 +1,24 @@
+{
+  "claim": "Scheduling metadata only; it does not infer any game outcome.",
+  "class_key": [
+    10448351135499550722,
+    0
+  ],
+  "next_target": {
+    "key": [
+      10448351135499550722,
+      0
+    ],
+    "reason": "continue the active class after its exact eight-target LOSS probe, as recorded in the immutable completion schedule"
+  },
+  "rank_at_dispatch": 3,
+  "root": [
+    60,
+    27
+  ],
+  "schema": "n11-active-class-schedule-binding-v1",
+  "source_ranking": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-next-class-10448351135499550722-0-ranking.json",
+    "sha256": "f8736dbae190b018ac43baf236a59142eb42626587d00c1cc77e0837d94cc210"
+  }
+}

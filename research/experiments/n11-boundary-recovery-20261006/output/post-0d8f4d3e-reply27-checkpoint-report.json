@@ -1,0 +1,150 @@
+{
+  "active_class": {
+    "LOSS": 94,
+    "UNKNOWN": 11,
+    "WIN": 0,
+    "canonical_s5_children": 105,
+    "coverage_vertices": [
+      99,
+      104,
+      109
+    ],
+    "key": [
+      10448351135499550722,
+      0
+    ],
+    "status": "UNKNOWN"
+  },
+  "artifact_paths": {
+    "cardinality": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-reply27-cardinality.json",
+    "class_boundary_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-class-boundary-audit.json",
+    "local_s6_history_preflight": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-s6-history-preflight.json",
+    "merge_receipt": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-merge-summary.json",
+    "ranking": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-dual-tight-ranking.json",
+    "repair": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-reply27-repair.json",
+    "reverse210_geometry_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-reverse210-s6-witness-geometry-audit.json",
+    "saved_s6_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-saved-s6-summary.json"
+  },
+  "checkpoint_base_main": "0d8f4d3e82e43c8943c91d382017402c95b5481f",
+  "claim": "Only exact solver s5 WIN/LOSS rows and audited exact S6 LOSS witnesses are propagated. Probe ranking and UNKNOWN remain scheduling state only.",
+  "created_utc": "2026-10-09T02:30:31+00:00",
+  "dual_tight": true,
+  "exact_s5_cache": {
+    "LOSS": 5131,
+    "WIN": 128,
+    "conflict": 0,
+    "entries": 5259,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-merged-s5.cache",
+    "sha256": "6163b0336f4ff45170371e59a36ed6fc13123b454302896c79e09d6b41a0169d"
+  },
+  "incoming_reverse210": {
+    "active_class_hits": 0,
+    "conflicts": 0,
+    "exact_s6_loss_keys": 160,
+    "geometry_witnessed_rows": 210,
+    "s5_rows": 210
+  },
+  "minimum_additional_classes": 3,
+  "next_target": {
+    "canonical_s5_children": 105,
+    "coverage": [
+      99,
+      104,
+      109
+    ],
+    "dual_vertex": 104,
+    "dual_weight": "1",
+    "key": [
+      10448351135499550722,
+      0
+    ],
+    "known_loss_s5": 94,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0d8f4d3e-dual-tight-ranking-targets.csv",
+    "unknown_s5": 11,
+    "unknown_s5_legal_count_max": 102,
+    "unknown_s5_legal_count_min": 85
+  },
+  "proof_status": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_60_27": "UNKNOWN"
+  },
+  "rational_dual": "3",
+  "remaining_third_moves": 6,
+  "repair": {
+    "classes": 3,
+    "distinct_unknown_s5": 207,
+    "selected": [
+      {
+        "coverage": [
+          59,
+          61,
+          100,
+          108
+        ],
+        "key": [
+          1297599642637172736,
+          0
+        ],
+        "uncached_s5": 97
+      },
+      {
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "uncached_s5": 99
+      },
+      {
+        "coverage": [
+          99,
+          104,
+          109
+        ],
+        "key": [
+          10448351135499550722,
+          0
+        ],
+        "uncached_s5": 11
+      }
+    ]
+  },
+  "root": [
+    60,
+    27
+  ],
+  "s4": {
+    "LOSS": 29,
+    "UNKNOWN": 3124,
+    "WIN": 231
+  },
+  "s5_completion_run": {
+    "UNKNOWN": 10,
+    "budget": 15000000,
+    "exact_LOSS": 77,
+    "exact_WIN": 0,
+    "nodes": 643426527,
+    "targets": 87,
+    "undispatched": 0
+  },
+  "s6_preflight": {
+    "conflicts": 0,
+    "local_new_exact_s6": 0,
+    "parent_child_incidences": 1041,
+    "ready_unique_s6": 980,
+    "s5_parents": 11,
+    "s6_boundary_union": 986,
+    "same_or_higher_budget_unknown_s6": 0,
+    "saved_s6_verdict_counts": {
+      "UNSEEN": 980,
+      "WIN": 6
+    }
+  },
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "secured_third_moves": 113
+}
