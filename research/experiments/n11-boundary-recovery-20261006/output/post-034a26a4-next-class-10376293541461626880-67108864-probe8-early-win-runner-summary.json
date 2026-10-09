@@ -1,0 +1,228 @@
+{
+  "budget": 15000000,
+  "class_key": [
+    10376293541461626880,
+    67108864
+  ],
+  "class_status_from_exact_witness": "WIN_WITNESS_PENDING_GEOMETRY_AUDIT",
+  "completed_output_rows": 5,
+  "completed_unknown": 0,
+  "exact_verdict_conflicts": 0,
+  "exact_win_witness_candidates": [
+    [
+      10376293541462675456,
+      67108864
+    ],
+    [
+      1152921504624672768,
+      603979776
+    ],
+    [
+      10952754293765050368,
+      67108864
+    ],
+    [
+      10376293541461626880,
+      67109120
+    ]
+  ],
+  "interrupted": [],
+  "interrupted_partial_count": 0,
+  "new_exact": 5,
+  "new_loss": 1,
+  "new_win": 4,
+  "nodes_all_completed_rows": 44498734,
+  "nodes_exact": 44498734,
+  "not_dispatched": [
+    [
+      10376293541479448576,
+      68719476736
+    ],
+    [
+      10376293541461626880,
+      67109888
+    ],
+    [
+      10376293541461626880,
+      67125248
+    ]
+  ],
+  "not_dispatched_count": 3,
+  "scheduled": 8,
+  "schema": "n11-dual-tight-early-win-runner-summary-v1",
+  "scope": "the eight scheduled s5 probes only; remaining class children were not scheduled",
+  "started": 5,
+  "stop_reason": "An exact s5 WIN row appeared. No further targets were dispatched; the runner drained already active workers and preserved their completed rows.",
+  "target_statuses": [
+    {
+      "input": {
+        "bytes": 75,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10664523917613338624-67108864.input.csv",
+        "sha256": "0501b8c6c7831b646a2e13957661cec1535f2452a7514bfbc5c1ede023257223"
+      },
+      "key": [
+        10664523917613338624,
+        67108864
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10664523917613338624-67108864.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 284,
+        "nodes": 3142337,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10664523917613338624-67108864.out.csv",
+        "sha256": "38ec375ffd51ba0501049af484021f26b38b329e724360f9329df75fe8e302cd",
+        "verdict": 2
+      },
+      "started": true,
+      "status": "exact_LOSS"
+    },
+    {
+      "input": {
+        "bytes": 75,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10376293541462675456-67108864.input.csv",
+        "sha256": "f1c42e6d89514ccd3f99ae60b7bbcf2e74b0e846be0d39afff581ad9d751c209"
+      },
+      "key": [
+        10376293541462675456,
+        67108864
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10376293541462675456-67108864.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 284,
+        "nodes": 5297142,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10376293541462675456-67108864.out.csv",
+        "sha256": "8c77adf5332ef427ebf314fe0040ca8b412bd1457fcc9896622b4dfa20fba972",
+        "verdict": 1
+      },
+      "started": true,
+      "status": "exact_WIN"
+    },
+    {
+      "input": {
+        "bytes": 74,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-1152921504624672768-603979776.input.csv",
+        "sha256": "c6d4dfe6140b9c1302d15c648935340b5562c274f60eddeb420ac4b4a7ee55b3"
+      },
+      "key": [
+        1152921504624672768,
+        603979776
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-1152921504624672768-603979776.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 285,
+        "nodes": 13909156,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-1152921504624672768-603979776.out.csv",
+        "sha256": "6ab37c34a3d87c181667d6011e74025d687b9479578f34296c8368896c9885ce",
+        "verdict": 1
+      },
+      "started": true,
+      "status": "exact_WIN"
+    },
+    {
+      "input": {
+        "bytes": 75,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10952754293765050368-67108864.input.csv",
+        "sha256": "41cdeccb537ee518b062644893c5fec1328f690e0a526291d22d0887fc7003af"
+      },
+      "key": [
+        10952754293765050368,
+        67108864
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10952754293765050368-67108864.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 285,
+        "nodes": 12290273,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10952754293765050368-67108864.out.csv",
+        "sha256": "18a030fb03e50d86d0258b5d69ec1f3d6d388fe3af9185ac2964b7209aaa91f3",
+        "verdict": 1
+      },
+      "started": true,
+      "status": "exact_WIN"
+    },
+    {
+      "input": {
+        "bytes": 75,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10376293541461626880-67109120.input.csv",
+        "sha256": "369246799c3774bfd533a3a7f38bd94f1cf9a9c3ee3f4653ac7eeea427ed2ee9"
+      },
+      "key": [
+        10376293541461626880,
+        67109120
+      ],
+      "log": {
+        "bytes": 0,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10376293541461626880-67109120.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "output": {
+        "bytes": 284,
+        "nodes": 9859826,
+        "path": ".local/n11/dual-tight-ready-10376293541461626880-67108864-probe8/s5-10376293541461626880-67109120.out.csv",
+        "sha256": "cffc893d310053bd97772131de6396619feb47ba11bd7ed35ac53c56cf59b498",
+        "verdict": 1
+      },
+      "started": true,
+      "status": "exact_WIN"
+    },
+    {
+      "input": null,
+      "key": [
+        10376293541479448576,
+        68719476736
+      ],
+      "log": null,
+      "started": false,
+      "status": "not_dispatched"
+    },
+    {
+      "input": null,
+      "key": [
+        10376293541461626880,
+        67109888
+      ],
+      "log": null,
+      "started": false,
+      "status": "not_dispatched"
+    },
+    {
+      "input": null,
+      "key": [
+        10376293541461626880,
+        67125248
+      ],
+      "log": null,
+      "started": false,
+      "status": "not_dispatched"
+    }
+  ],
+  "unresolved_probe_keys": [
+    [
+      10376293541479448576,
+      68719476736
+    ],
+    [
+      10376293541461626880,
+      67109888
+    ],
+    [
+      10376293541461626880,
+      67125248
+    ]
+  ],
+  "workers": 4
+}

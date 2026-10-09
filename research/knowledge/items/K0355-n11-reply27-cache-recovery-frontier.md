@@ -3574,6 +3574,81 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-source-manifest.json
     role: manifest
     note: 'Checkpoint provenance, summary, and hash-bound source record.'
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8.csv
+    role: source
+    note: dual-tight rank-1 classから選んだprobe8 schedule
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-manifest.json
+    role: manifest
+    note: probe8対象とraw history、保存済みs6 preflightのsource manifest
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-strict-preflight.json
+    role: manifest
+    note: 8 target strict preflightのready件数とconflict監査
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-full.json.gz
+    role: source
+    note: 保存済みexact s6集合の対象intersect結果
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-summary.json
+    role: data
+    note: probe8のs6 intersection要約。親8件は全てUNKNOWN
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-derived-s5.cache
+    role: data
+    note: saved s6から今回新たに導出したs5 exact結果なし
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-raw-all.csv
+    role: source
+    note: probe8の停止・drain後に保存した全raw replay行
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-raw-exact.csv
+    role: source
+    note: 5件のexact replay。1 LOSS、4 WIN、44,498,734 nodes
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-runner-summary.json
+    role: manifest
+    note: WIN後にdispatchを止め3件を未実行に残したrunner記録
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-new-exact-s5.cache
+    role: data
+    note: 今回追加した5 exact s5 verdict
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merged-s5.cache
+    role: data
+    note: 5419件のcurrent exact s5 cache。WIN144、LOSS5275、conflict 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merge-receipt.json
+    role: manifest
+    note: raw・delta cache・merged cacheのhash照合とmerge receipt
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-class-boundary-audit.json
+    role: manifest
+    note: geometryから再生成した106 canonical childの完全boundary監査
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-saved-history-audit.json
+    role: manifest
+    note: 9228 filesのsaved raw/cache cross-audit。conflict 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cardinality.json
+    role: data
+    note: 3384 classのstatus、secured vertex、整数coverとrational dual
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cover.json
+    role: data
+    note: 更新cacheで解いたminimum class cover
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cover-targets.csv
+    role: source
+    note: cover solverが選んだ未知class target
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-repair-refined.json
+    role: data
+    note: 再最適化したrepairとdistinct UNKNOWN s5 union
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking.json
+    role: data
+    note: dual-tight repair classのfresh rank
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking-targets.csv
+    role: source
+    note: 次候補98 UNKNOWN s5のtarget list。順序は証明ではない
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking-sources.json
+    role: manifest
+    note: ranking計算のcache・cardinality・geometry source hashes
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-report.json
+    role: data
+    note: 今回のfinite class WIN checkpointと全体frontier要約
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-source-manifest.json
+    role: manifest
+    note: raw、solver、geometry、history、cache sourceのSHA-256一覧
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-artifact-hashes.json
+    role: manifest
+    note: 87 artifactsと8886 sourcesの継承SHA-256 inventory
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-build-class-win-checkpoint.py
+    role: verifier
+    note: checkpoint reportとhash inventoryの再生成・整合性検査
 scope: >-
   Latest finite checkpoint is based on fetched main f7cdef1714ca417a2201b68beb5a18b4b33f8fd9. The exact canonical s5 cache has 5,414 rows (140 WIN / 5,274 LOSS / conflict 0).
   All 3,384 s4 classes classify as 30 LOSS / 248 WIN / 3,106 UNKNOWN; 114/119 third moves are secured and five remain. Minimum additional class cover and rational LP dual are both 2 (dual-tight).
@@ -3943,3 +4018,14 @@ The 15,000,000-node-per-target probe started five of eight scheduled targets. It
 The merged exact S5 cache has 5,414 rows (140 WIN / 5,274 LOSS / conflict 0), SHA-256 6049d2e9a31253896e1a17cff4360e41aea612c7ee5be3a7fee93e8e32d630e1. A saved-history cross-check examined 9,208 cache/CSV files and 712,072 rows, found the ten exact class-child keys across 329 source records, and found zero conflicts. Recomputing all 3,384 classes gives 30 LOSS / 248 WIN / 3,106 UNKNOWN; secured vertices remain 114/119, with five remaining. Minimum additional class cover and rational LP dual are both 2 (dual-tight). The reoptimized repair has two classes and 196 distinct UNKNOWN S5 positions; rank 1 is (10376293541461626880,67108864), with 106 canonical children, 9 known LOSS / 97 UNKNOWN, coverage {90,96,100,108}. Ranking is scheduling only and requires fresh cache/raw/S6 preflight before dispatch.
 
 Report post-f7cdef17-reply27-checkpoint-report.json, source manifest post-f7cdef17-reply27-checkpoint-source-manifest.json, and inventory post-f7cdef17-reply27-checkpoint-artifact-hashes.json bind the checkpoint. The inventory validates 48 output artifacts and 52 manifested sources (53 hashes including the parent inventory) with zero missing or mismatched hashes; inventory SHA-256 is a299ae2c7d9ea1fcf5b897177ec69d1d15a0df1759310bf98f6ae3cc10495ce6. `uv sync --locked`, knowledge check (366 items, zero errors/warnings), unittest (33 tests), and knowledge build (six views and README) passed. The existing `original-claims` Python `SyntaxWarning` appeared during checks but did not fail them. The generated diff contains 49 new K0355 artifact links and updates the artifact count from 1,659 to 1,708. `.local`, prior raw evidence, and test-temp directories remain preserved. `{60,27}` and the 11×11 empty board remain UNKNOWN.
+
+
+## 2026-10-09 15:49 JST dual-tight probe8 exact S5 WIN checkpoint on main 034a26a4
+
+作業開始時に `git fetch origin main` を実行し、HEADとorigin/mainは `034a26a4c4402cd944568c484a723c34be7795d6` で一致した。reply27 solverの同一対象実行はなかった。前回のdual-tight rank-1 class `(10376293541461626880,67108864)` は106 canonical s5 child、既知LOSS 9、UNKNOWN 97。全raw history監査は9,228ファイル・717,656行を調べ、既存exact child 14 keys / 604 evidence records、15M same-budget UNKNOWN 0、verdict conflict 0だった。保存済みs6 intersectionはprobe8の全親をUNKNOWNとし、新しいs5 derivationはなかった。8件のstrict preflightは全件readyでconflict 0。
+
+15,000,000 node/target・4 workerのprobe8は5件を開始して1 exact LOSSと4 exact WINを保存し、44,498,734 nodesで停止・drainした。残り3件はdispatchしていない。raw exact deltaの5キー全てがgeometryから再生成した完全canonical child境界の要素で、verdictも一致する。独立geometry auditは106 canonical s5 childを列挙し、LOSS 10、WIN 4、UNKNOWN 92、coverage `{90,96,100,108}` を確認した。WIN witnessは `(1152921504624672768,603979776)`, `(10376293541461626880,67109120)`, `(10376293541462675456,67108864)`, `(10952754293765050368,67108864)`。従ってこのs4 classはexact WIN。残る92 childは探索せず、s6 descentとreverse-propagated LOSSはいずれも0。
+
+統合exact s5 cacheは5,419件（WIN 144、LOSS 5,275、conflict 0）、SHA-256 `dbcf47de9b2233cbbe74025a16e67e2b44b261c9e566828bb8a8d15b5618a7e2`。saved-history再監査は9,228 files、717,656 rows、same-budget UNKNOWN 0、conflict 0。全3,384 s4 classを再分類するとLOSS 30、WIN 251、UNKNOWN 3,103。secured third movesは114/119でremaining 5。minimum additional class数は2、rational LP dualも2でdual-tight。再最適化repairは2 classes、distinct UNKNOWN s5 union 197。次rank-1は `(1152921504741065728,68719476736)`、102 children中LOSS 4 / UNKNOWN 98、coverage `{0,10,100,108}`。これはscheduleでありverdictではなく、dispatch前に最新main・全raw・same-budget履歴・saved s6を再監査する。
+
+Checkpoint report、source manifest、SHA-256 inventoryは `post-034a26a4-reply27-checkpoint-report.json`、`post-034a26a4-reply27-checkpoint-source-manifest.json`、`post-034a26a4-reply27-checkpoint-artifact-hashes.json`。inventory SHA-256 `4169f0330248c33820ad8c3a215bd8b8c09b18d9254a5d073ed91f714e887ff8`、87 artifactsと8,886 manifested sources、missing 0 / mismatched 0。今回も `{60,27}` と11×11空盤はUNKNOWNのまま。

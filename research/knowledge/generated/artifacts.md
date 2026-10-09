@@ -1132,6 +1132,81 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-0148c177-s6-loss-reverse210-s5-delta.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-0148c177-s6-loss-reverse210-s5-delta.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 210 canonical s5 LOSS deductions imported from exact saved s6 LOSS witnesses on main.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 3384 classのstatus、secured vertex、整数coverとrational dual
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cover-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cover-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): cover solverが選んだ未知class target
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cover.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-cover.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 更新cacheで解いたminimum class cover
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): ranking計算のcache・cardinality・geometry source hashes
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 次候補98 UNKNOWN s5のtarget list。順序は証明ではない
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): dual-tight repair classのfresh rank
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-repair-refined.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-after-class-win-repair-refined.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 再最適化したrepairとdistinct UNKNOWN s5 union
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-build-class-win-checkpoint.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-build-class-win-checkpoint.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): checkpoint reportとhash inventoryの再生成・整合性検査
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-class-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): geometryから再生成した106 canonical childの完全boundary監査
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merge-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merge-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): raw・delta cache・merged cacheのhash照合とmerge receipt
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 5419件のcurrent exact s5 cache。WIN144、LOSS5275、conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-new-exact-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-new-exact-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 今回追加した5 exact s5 verdict
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-raw-all.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-raw-all.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): probe8の停止・drain後に保存した全raw replay行
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-raw-exact.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-raw-exact.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 5件のexact replay。1 LOSS、4 WIN、44,498,734 nodes
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-runner-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-runner-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): WIN後にdispatchを止め3件を未実行に残したrunner記録
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-saved-history-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-saved-history-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 9228 filesのsaved raw/cache cross-audit。conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): probe8対象とraw history、保存済みs6 preflightのsource manifest
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-derived-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-derived-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): saved s6から今回新たに導出したs5 exact結果なし
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-full.json.gz](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-full.json.gz)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 保存済みexact s6集合の対象intersect結果
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-saved-s6-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): probe8のs6 intersection要約。親8件は全てUNKNOWN
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-strict-preflight.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-strict-preflight.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 8 target strict preflightのready件数とconflict監査
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): dual-tight rank-1 classから選んだprobe8 schedule
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-artifact-hashes.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-artifact-hashes.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 87 artifactsと8886 sourcesの継承SHA-256 inventory
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-report.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-report.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 今回のfinite class WIN checkpointと全体frontier要約
+## [research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-source-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-reply27-checkpoint-source-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): raw、solver、geometry、history、cache sourceのSHA-256一覧
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-046db787-after-probe8-dual-tight-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-046db787-after-probe8-dual-tight-ranking.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Re-ranked dual-tight repair classes after the verified WIN

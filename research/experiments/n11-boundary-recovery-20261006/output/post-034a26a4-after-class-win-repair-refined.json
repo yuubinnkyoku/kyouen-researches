@@ -1,0 +1,61 @@
+{
+  "cache_entries": 5419,
+  "claim": "scheduling frontier only; UNKNOWN classes are not certificates",
+  "class_status_counts": {
+    "LOSS": 30,
+    "UNKNOWN": 3103,
+    "WIN": 251
+  },
+  "history": [
+    {
+      "add": [
+        1152921504741065728,
+        68719476736
+      ],
+      "additive_unknown_s5": 197,
+      "remove": [
+        1297036692683759616,
+        0
+      ],
+      "unique_unknown_s5": 197
+    }
+  ],
+  "initial_additive_unknown_s5": 197,
+  "initial_unique_unknown_s5": 197,
+  "one_swap_improvements": 1,
+  "refined_additive_unknown_s5": 197,
+  "refined_unique_unknown_s5": 197,
+  "repair_classes": 2,
+  "repair_selected": [
+    {
+      "coverage": [
+        0,
+        10,
+        100,
+        108
+      ],
+      "key": [
+        1152921504741065728,
+        68719476736
+      ],
+      "uncached_s5": 98
+    },
+    {
+      "coverage": [
+        38,
+        77,
+        87
+      ],
+      "key": [
+        1585267068834414720,
+        0
+      ],
+      "uncached_s5": 99
+    }
+  ],
+  "root": [
+    60,
+    27
+  ],
+  "secured_vertices": 114
+}
