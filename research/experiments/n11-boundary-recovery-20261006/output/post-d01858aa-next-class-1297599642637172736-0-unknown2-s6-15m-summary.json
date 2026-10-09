@@ -1,0 +1,64 @@
+{
+  "budget_per_target": 15000000,
+  "complete_canonical_s6_union": 162,
+  "conflicts": 0,
+  "derived_s5_rows": 2,
+  "dispatch_main_commit": "d01858aa1a1d5ba5843b7a71c3a1539359de5889",
+  "new_exact_s6_loss_for_reverse_propagation": 2,
+  "new_s6_rows": 3,
+  "new_s6_verdict_counts": {
+    "LOSS": 2,
+    "UNKNOWN": 0,
+    "WIN": 1
+  },
+  "nodes": 9648804,
+  "outputs": {
+    "-derived-s5.cache": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-derived-s5.cache",
+    "-exact-s6.cache": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-exact-s6.cache",
+    "-inputs.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-inputs.csv",
+    "-raw-all.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-raw-all.csv",
+    "-raw-exact.csv": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-raw-exact.csv",
+    "-runner-summary.json": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-runner-summary.json",
+    "-sources.json": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-sources.json",
+    "-summary.json": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-summary.json"
+  },
+  "parent_child_incidences": 163,
+  "parent_count": 2,
+  "parent_keys": [
+    [
+      1297599642637180928,
+      0
+    ],
+    [
+      1297881117613883392,
+      0
+    ]
+  ],
+  "raw_directory": {
+    "files": 3,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m"
+  },
+  "reverse_propagated_s5_loss": 0,
+  "root": [
+    60,
+    27
+  ],
+  "s5_parent_outcomes": {
+    "LOSS": 2,
+    "UNKNOWN": 0,
+    "WIN": 0
+  },
+  "saved_s6_boundary_counts": {
+    "UNSEEN": 3,
+    "WIN": 159
+  },
+  "schema": "n11-reply27-s6-batch-descent-evidence-summary-v1",
+  "source_manifest_sha256": "1621e5738d72986349ac18150d8997b454ef0ea61ac3bd236748038e8ca6a134",
+  "total_boundary_verdict_counts": {
+    "LOSS": 2,
+    "UNKNOWN": 0,
+    "WIN": 160
+  },
+  "unknowns_propagated": false,
+  "workers": 3
+}

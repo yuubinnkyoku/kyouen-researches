@@ -1,0 +1,1453 @@
+{
+  "cache_comparison": {
+    "conflicts": [],
+    "current_cache_internal_conflicts": 0,
+    "duplicate_loss": 26,
+    "internal_conflict": 0,
+    "new": 8,
+    "opposite_or_conflict_not_adopted": true,
+    "opposite_verdict": 0
+  },
+  "cache_out": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-reverse-derived-s5.cache",
+    "rows": 8,
+    "sha256": "ff6b2ed9d5743cd8612d8f7e17a35172858e4a88fddb32fbf5ee7bd53251c25c",
+    "written": true
+  },
+  "current_cache": {
+    "conflicting_keys": [],
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-probe8-completed-merged-s5.cache",
+    "rows": 5370,
+    "sha256": "782a71eb818d914002b68f73269b48ddb743d3540d1ec231425cbb5c025a0b7a",
+    "unique_keys": 5370
+  },
+  "outcome_provenance": "Saved exact solver verdicts are trusted as recorded; this script does not independently re-prove their game outcomes.",
+  "reverse_parents": {
+    "all_canonical_safe_parent_count": 48,
+    "all_canonical_safe_parent_witnesses": [
+      {
+        "key": [
+          73183493962596352,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          144115464027570180,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          144678412907708420,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          144682536076845056,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          181269885002711040,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1152921779501596928,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1153484471740665856,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1153484729438183680,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1190076201533702144,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1224979098662600704,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1224979103073959936,
+          67108864
+        ],
+        "loss_witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "key": [
+          1226104998552666112,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1226104998569443328,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297036692816936992,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297036693756510208,
+          262144
+        ],
+        "loss_witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297036693756510212,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297036967560675332,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297036967561134084,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297036968634351620,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297036968634417152,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297041090730270720,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297045488775725056,
+          192
+        ],
+        "loss_witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297599642636648452,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297599642637180928,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297599917514031108,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297599917514555392,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297604040682643456,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297604040683683840,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1297881117613883392,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "key": [
+          1298162592590594048,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1333065489702715392,
+          536870912
+        ],
+        "loss_witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1334191389609558016,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          1441151880893038624,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          1441151881832300544,
+          16777217
+        ],
+        "loss_witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "key": [
+          1729382256910274688,
+          64
+        ],
+        "loss_witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "key": [
+          4683743616894500864,
+          67108864
+        ],
+        "loss_witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "key": [
+          4755801206637477920,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          5764607527463419904,
+          67108864
+        ],
+        "loss_witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "key": [
+          5836665121501347840,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "key": [
+          5908722711110107168,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          5908722711244308512,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          5908722711244324864,
+          0
+        ],
+        "loss_witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "key": [
+          9225060886715043840,
+          8192
+        ],
+        "loss_witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "key": [
+          10376293541478465536,
+          64
+        ],
+        "loss_witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          10376293541595840544,
+          64
+        ],
+        "loss_witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          10376575016438337536,
+          67108864
+        ],
+        "loss_witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "key": [
+          10376856491415048192,
+          8192
+        ],
+        "loss_witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "key": [
+          10377419441368469504,
+          8192
+        ],
+        "loss_witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      }
+    ],
+    "d4_orbit_of_27": [
+      27,
+      57,
+      63,
+      93
+    ],
+    "filtered_non_reply27_parent_count": 14,
+    "reply27_relevant_parent_count": 34,
+    "reply27_relevant_parents": [
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1190076201533702144,
+          536870912
+        ],
+        "witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1224979098662600704,
+          536870912
+        ],
+        "witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1224979103073959936,
+          67108864
+        ],
+        "witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1226104998552666112,
+          536870912
+        ],
+        "witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297036692816936992,
+          0
+        ],
+        "witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297036693756510208,
+          262144
+        ],
+        "witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297036693756510212,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297036967560675332,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297036967561134084,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297036968634351620,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297036968634417152,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297036968634417156,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          1297041090730270720,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          1297045488775725056,
+          192
+        ],
+        "witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297599642636648452,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          1297599642637180928,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297599917514031108,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1297599917514555392,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297599917514555396,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          1297604040682643456,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          1297604040683683840,
+          0
+        ],
+        "witness_keys": [
+          [
+            1297604040683692032,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          1297881117613883392,
+          0
+        ],
+        "witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1298162592590594048,
+          536870912
+        ],
+        "witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1333065489702715392,
+          536870912
+        ],
+        "witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1334191389609558016,
+          0
+        ],
+        "witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          1441151880893038624,
+          0
+        ],
+        "witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          5764607527463419904,
+          67108864
+        ],
+        "witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          5836665121501347840,
+          0
+        ],
+        "witness_keys": [
+          [
+            5836665121501347840,
+            67108864
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          5908722711110107168,
+          0
+        ],
+        "witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          5908722711244308512,
+          0
+        ],
+        "witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          5908722711244324864,
+          0
+        ],
+        "witness_keys": [
+          [
+            5908722711244324896,
+            0
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          10376293541478465536,
+          64
+        ],
+        "witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          10376293541595840544,
+          64
+        ],
+        "witness_keys": [
+          [
+            1334191389609558016,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "duplicate_loss",
+        "existing_verdicts": [
+          2
+        ],
+        "key": [
+          10376575016438337536,
+          67108864
+        ],
+        "witness_keys": [
+          [
+            1226104998569443328,
+            536870912
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          10376856491415048192,
+          8192
+        ],
+        "witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      },
+      {
+        "comparison": "new",
+        "existing_verdicts": [],
+        "key": [
+          10377419441368469504,
+          8192
+        ],
+        "witness_keys": [
+          [
+            10377982391321890816,
+            8192
+          ]
+        ]
+      }
+    ]
+  },
+  "run_status": "ok",
+  "s6": {
+    "all_s6_exact_rows_geometry_checked": true,
+    "conflicting_keys": [],
+    "conflicting_keys_propagated": false,
+    "keys_with_unknown_rows": 0,
+    "same-exact-verdict-duplicate-keys": [
+      {
+        "key": [
+          1154082588886859776,
+          536870912
+        ],
+        "rows": [
+          {
+            "legal": 70,
+            "nodes": 615920,
+            "normalized": true,
+            "raw_key": [
+              1162210178838433792,
+              536870912
+            ],
+            "row": 5,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-3.csv",
+            "verdict": 1
+          },
+          {
+            "legal": 70,
+            "nodes": 615920,
+            "normalized": false,
+            "raw_key": [
+              1154082588886859776,
+              536870912
+            ],
+            "row": 14,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-1-out.csv",
+            "verdict": 1
+          }
+        ],
+        "unknown_rows": 0,
+        "verdict": 1
+      },
+      {
+        "key": [
+          1226104998569443328,
+          536870912
+        ],
+        "rows": [
+          {
+            "legal": 69,
+            "nodes": 2689235,
+            "normalized": true,
+            "raw_key": [
+              1153202980657303552,
+              536870913
+            ],
+            "row": 5,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-2.csv",
+            "verdict": 2
+          },
+          {
+            "legal": 69,
+            "nodes": 190122,
+            "normalized": false,
+            "raw_key": [
+              1226104998569443328,
+              536870912
+            ],
+            "row": 4,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\crosscheck-s6-out.csv",
+            "verdict": 2
+          }
+        ],
+        "unknown_rows": 0,
+        "verdict": 2
+      },
+      {
+        "key": [
+          1297036968634417156,
+          0
+        ],
+        "rows": [
+          {
+            "legal": 68,
+            "nodes": 3438211,
+            "normalized": false,
+            "raw_key": [
+              1297036968634417156,
+              0
+            ],
+            "row": 4,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-1.csv",
+            "verdict": 2
+          },
+          {
+            "legal": 68,
+            "nodes": 247326,
+            "normalized": false,
+            "raw_key": [
+              1297036968634417156,
+              0
+            ],
+            "row": 6,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\crosscheck-s6-out.csv",
+            "verdict": 2
+          }
+        ],
+        "unknown_rows": 0,
+        "verdict": 2
+      },
+      {
+        "key": [
+          1297599917514555396,
+          0
+        ],
+        "rows": [
+          {
+            "legal": 71,
+            "nodes": 3094607,
+            "normalized": false,
+            "raw_key": [
+              1297599917514555396,
+              0
+            ],
+            "row": 6,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-0.csv",
+            "verdict": 2
+          },
+          {
+            "legal": 71,
+            "nodes": 225319,
+            "normalized": false,
+            "raw_key": [
+              1297599917514555396,
+              0
+            ],
+            "row": 8,
+            "source": "research\\experiments\\n11-boundary-recovery-20261006\\output\\crosscheck-s6-out.csv",
+            "verdict": 2
+          }
+        ],
+        "unknown_rows": 0,
+        "verdict": 2
+      }
+    ],
+    "unique_canonical_keys": 187,
+    "unique_loss_keys": 8,
+    "unique_win_keys": 179,
+    "unknown_only_unique_keys": 0,
+    "unknowns_propagated": false,
+    "verdict_counts_by_unique_key": {
+      "1": 179,
+      "2": 8
+    }
+  },
+  "schema": "n11-s6-reverse-loss-parents-v1",
+  "source_scope": {
+    "caller_supplied_extra_files": [
+      "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-raw-all.csv"
+    ],
+    "curated_files": "the fixed nine n11 saved replay CSVs listed in sources",
+    "repository_wide_scan_claim": false
+  },
+  "sources": [
+    {
+      "bytes": 483,
+      "node_total": 7193921,
+      "normalized_noncanonical_rows": 3,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-0.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 0",
+      "s6_replay_rows": 4,
+      "sha256": "1af5f001f4af7bce6743f92821fc5c94b53ccd01aa899bf1be7a54c0d97a340b",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "bytes": 476,
+      "node_total": 5120787,
+      "normalized_noncanonical_rows": 3,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-1.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 1",
+      "s6_replay_rows": 4,
+      "sha256": "5882ce939b676fdc502685a0adfd4ef2713cb9b67b6a233fba5c08087253eb20",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 472,
+      "node_total": 3204689,
+      "normalized_noncanonical_rows": 4,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-2.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 2",
+      "s6_replay_rows": 4,
+      "sha256": "83e72debfc53dbc0aadba1257fbe049755655c8310baad90329a296ecfe055d3",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "bytes": 467,
+      "node_total": 7400227,
+      "normalized_noncanonical_rows": 3,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\shared-s6-3.csv",
+      "provenance": "n11 shared-s6 Actions run 37336924568 shard 3",
+      "s6_replay_rows": 4,
+      "sha256": "d4fe318a8023187016128ec1b084ed74168d3d83c7e4971f5f4d311d2a97c16c",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "bytes": 2993,
+      "node_total": 13536028,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-0-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 0",
+      "s6_replay_rows": 43,
+      "sha256": "5eb64524527f5e29c1ac8bdda267722d495167c0f78546491d3509c760cfcc35",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 43
+      }
+    },
+    {
+      "bytes": 2920,
+      "node_total": 12034267,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-1-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 1",
+      "s6_replay_rows": 42,
+      "sha256": "bbdee0b76bd4187210fbb79f934114e4ebc68bef9ca091ce0ec834cd376967fe",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "bytes": 2923,
+      "node_total": 12073332,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-2-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 2",
+      "s6_replay_rows": 42,
+      "sha256": "7bce731267331fbc58e8cd0444e7dd3a400c48ed21d822bf7ad637bd8ef137f0",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "bytes": 2932,
+      "node_total": 15902551,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\model-hard2-reply27-model-hard2-s6-3-out.csv",
+      "provenance": "n11 model-hard2 Actions run 37339663025 shard 3",
+      "s6_replay_rows": 42,
+      "sha256": "14283a08729aabe1deb1bd30d4cd0f16a1708a0d6f2bf5198c1af204b30f9adc",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "1": 42
+      }
+    },
+    {
+      "bytes": 1200,
+      "node_total": 662767,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\crosscheck-s6-out.csv",
+      "provenance": "n11 saved exact replay from incomplete cold residual cross-check; include solved rows only, not a complete run",
+      "s6_replay_rows": 3,
+      "sha256": "b230c918c0fabf211448b91c584104d03f82421bfec2fd0f25efe660eadb1e3a",
+      "source_kind": "curated_saved_n11_source",
+      "status": "included",
+      "verdict_counts": {
+        "2": 3
+      }
+    },
+    {
+      "bytes": 252,
+      "node_total": 9648804,
+      "normalized_noncanonical_rows": 0,
+      "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-raw-all.csv",
+      "provenance": "new 15M exact replay rows; every row geometry-checked and all safe canonical one-point parents reverse-enumerated",
+      "s6_replay_rows": 3,
+      "sha256": "218b5c93cc709c763536226c5d1739a4790e5019867e2149ef62090e292c15ef",
+      "source_kind": "caller_supplied_extra",
+      "status": "included",
+      "verdict_counts": {
+        "1": 1,
+        "2": 2
+      }
+    }
+  ]
+}
