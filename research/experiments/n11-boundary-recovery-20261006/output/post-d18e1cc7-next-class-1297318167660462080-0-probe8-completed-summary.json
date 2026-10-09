@@ -1,0 +1,40 @@
+{
+  "budget_per_target": 15000000,
+  "class_key": [
+    1297318167660462080,
+    0
+  ],
+  "class_status_from_exact_witness": "WIN",
+  "completed_targets": 8,
+  "exact_replay_counts": {
+    "LOSS": 6,
+    "UNKNOWN": 0,
+    "WIN": 2
+  },
+  "new_exact": 8,
+  "new_exact_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-new-exact-s5.cache",
+    "rows": 8,
+    "sha256": "f37735384c8f29644ce54147f7d8e24856eec67822fad9fe756dc7f2f5846c3c"
+  },
+  "nodes_all_completed_rows": 54042436,
+  "nodes_exact": 54042436,
+  "raw_all_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-raw-all.csv",
+    "rows": 8,
+    "sha256": "9d77c66c7163402cbf72f49811515672915b2fe5957ffb101fb29e1cbac4b30d"
+  },
+  "raw_output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-raw-exact.csv",
+    "rows": 8,
+    "sha256": "a475c4f03f33c7911469bf512821f1da34135527cac261d0146a64b2ecb64b9d"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "scheduled_targets": 8,
+  "schema": "n11-dual-tight-completed-probe-summary-v1",
+  "scope": "the scheduled bounded probe only; a class WIN is concluded only from an exact WIN s5 child and geometry audit",
+  "unknown_keys": []
+}

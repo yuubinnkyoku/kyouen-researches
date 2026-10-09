@@ -1,0 +1,178 @@
+{
+  "checkpoint": "Dual-tight class stopped at exact S5 WIN; current exact cache and minimum repair reoptimized.",
+  "checkpoint_base_main": "d18e1cc73c1669347be690a3d26141da9f704d99",
+  "claim": "The complete canonical S5 boundary of the processed S4 class has exact WIN children. This class is WIN; {60,27} and the 11x11 empty board remain UNKNOWN.",
+  "dual_tight": true,
+  "exact_s5_cache": {
+    "LOSS": 5265,
+    "WIN": 136,
+    "base_cache_entries": 5393,
+    "conflict": 0,
+    "entries": 5401,
+    "new_rows": 8,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-merged-s5.cache",
+    "sha256": "5b36c7b486df5a15238dd7658530aab003e1fd910e5609eaa864dd8a516538b0"
+  },
+  "local_s6_reconciliation": {
+    "local_audit_guard": "The read-only local reconciliation stopped after finding exact S6 LOSS rows and requires reverse incidence before acceptance; both rows match preserved checkpoint raw evidence.",
+    "local_exact_loss_keys": [
+      [
+        1297604040683692032,
+        0
+      ],
+      [
+        10377982391321890816,
+        8192
+      ]
+    ],
+    "new_s6_or_reverse_loss_rows_in_this_checkpoint": 0,
+    "prior_new_s5_loss_rows_already_in_base_cache": 8,
+    "prior_reverse_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-next-class-1297599642637172736-0-unknown2-s6-15m-reverse-audit.json",
+    "prior_reverse_conflicts": 0,
+    "reply27_relevant_parents_checked": 34,
+    "safe_canonical_parents_checked": 48
+  },
+  "minimum_additional_classes": 2,
+  "next_target": {
+    "canonical_s5_children": 102,
+    "claim": "Ranking is scheduling only; UNKNOWN remains UNKNOWN.",
+    "coverage": [
+      36,
+      40,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "key": [
+      1297036761403228160,
+      0
+    ],
+    "known_loss_s5": 6,
+    "unknown_s5": 96
+  },
+  "optimizer_environment": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-optimizer-environment.json",
+  "probe_preflight": {
+    "blocked": 0,
+    "raw_history_coverage": "PASS",
+    "ready": 8,
+    "saved_s6_unknown": 8,
+    "strict_verifier": "PASS",
+    "targets": 8
+  },
+  "processed_class": {
+    "boundary_status_counts": {
+      "LOSS": 15,
+      "UNKNOWN": 87,
+      "WIN": 2
+    },
+    "canonical_s5_children": 104,
+    "coverage_vertices": [
+      48,
+      50,
+      100,
+      108
+    ],
+    "exact_win_witnesses": [
+      [
+        1153202979718823936,
+        68719476736
+      ],
+      [
+        1297318167660462080,
+        64
+      ]
+    ],
+    "geometry_audit_passed": true,
+    "key": [
+      1297318167660462080,
+      0
+    ],
+    "status": "WIN",
+    "unexplored_children_after_probe": 87
+  },
+  "proof_status": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_root": "UNKNOWN"
+  },
+  "rational_dual": "2",
+  "raw_history_preflight": {
+    "conflicts": 0,
+    "csv_files_examined": 8616,
+    "dispatch_ready": 94,
+    "excluded_key": [
+      1152930300699873280,
+      536870976
+    ],
+    "full_class_targets": 95,
+    "prior_exact": 0,
+    "same_budget_unknown_rows": 1
+  },
+  "remaining_third_moves": 5,
+  "repair": {
+    "additive_unknown_s5": 195,
+    "classes": 2,
+    "distinct_unknown_s5": 195,
+    "selected": [
+      {
+        "all_s5": 102,
+        "coverage": [
+          36,
+          40,
+          100,
+          108
+        ],
+        "key": [
+          1297036761403228160,
+          0
+        ],
+        "unknown_s5": 96
+      },
+      {
+        "all_s5": 104,
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "unknown_s5": 99
+      }
+    ]
+  },
+  "s4_classes": {
+    "LOSS": 30,
+    "UNKNOWN": 3110,
+    "WIN": 244
+  },
+  "s5_probe": {
+    "additional_class_siblings_dispatched": 0,
+    "budget_per_target": 15000000,
+    "completed": 8,
+    "first_win_seen_at_key": [
+      1153202979718823936,
+      68719476736
+    ],
+    "nodes_all_rows": 54042436,
+    "nodes_exact": 54042436,
+    "scheduled": 8,
+    "verdicts": {
+      "LOSS": 6,
+      "UNKNOWN": 0,
+      "WIN": 2
+    }
+  },
+  "saved_s6_intersection": {
+    "canonical_s6_keys": 4467,
+    "class_parents_remaining_unknown": 95,
+    "conflicts": 0,
+    "derived_exact_s5": 0,
+    "full_class_parents": 95,
+    "source_files": 1468
+  },
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "secured_third_moves": 114,
+  "source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-reply27-checkpoint-source-manifest.json"
+}
