@@ -16,6 +16,45 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/README.md
     role: source
     note: 回収範囲、手順、結論と限界
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-report.json
+    role: data
+    note: main 916a8677上で再監査した二つのdual-tight class WINと更新後frontier
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-source-manifest.json
+    role: manifest
+    note: solver raw copy、exact cache、geometry/S6監査、最適化出力とsourceのSHA-256一覧
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-artifact-hashes.json
+    role: manifest
+    note: checkpoint artifactの完全性確認用SHA-256 inventory
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-s5.cache
+    role: data
+    note: base exact cacheと二つのprobe deltaから再構成したcanonical exact S5 cache 5,588件
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-merge-receipt.json
+    role: manifest
+    note: 5,580 base rowsと8 exact delta rowsのgeometry-checked merge receipt、conflict 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1585267068835463168-0-boundary-audit.json
+    role: verifier
+    note: classの全106 canonical S5 childを再生成しLOSS 12・WIN 2・UNKNOWN 92を確認
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1297036692683759616-0-boundary-audit.json
+    role: verifier
+    note: classの全103 canonical S5 childを再生成しLOSS 7・WIN 3・UNKNOWN 93を確認
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-cache-corpus-audit.json
+    role: manifest
+    note: 324 saved exact S5 cachesを再照合し、5,588 keys一致・missing/extra/conflict 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-raw-replay-corpus-audit.json
+    role: manifest
+    note: 実験保存物と.localのS5 raw replay geometry・exact verdictを照合、未収載exact/conflict 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-cardinality.json
+    role: data
+    note: 5,588-entry exact cacheで再計算した全3,384 class・secured vertex・整数coverとrational dual
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-ranking.json
+    role: data
+    note: dual-tight minimum repairの次候補schedule。勝敗証明ではない
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-s6.csv
+    role: source
+    note: mainから取得した既存48件S6 schedule。対象classにexact S5 WINが見つかったため未dispatch
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-audit.json
+    role: manifest
+    note: 条件付きcoverの48下界source audit。S6 verdictは全てUNKNOWN扱いで、新しい勝敗証明を含まない
   - path: research/experiments/n11-boundary-recovery-20261006/output/reply27-current-s5.cache
     role: data
     note: 統合したcanonical exact s5 cache 2,648件
@@ -4409,3 +4448,17 @@ Before push, all 8 S5 and 84 S6 target input CSVs and runner logs (184 files) we
 S6 source auditは4,730 source files / 4,953 canonical S6 keysをhash検証し、exact S6 cacheは4,837行（WIN4665 / LOSS172）、unknown-only 116 keysは除外、conflict0。`.local`のinput/log/output 543 filesをexperiment rawへbyte-identical copyし、originalsを保持した。artifact inventoryは657 files・40,078,632 bytesを検証し、missing/mismatch 0、SHA-256 `79874ec242b05c184ad6b777866e60b1b7f1dfc8dfd3a9a892639d6db9dfbd75`。Report、source manifest、audit、cache、merge receipt、geometry verification、cardinality、repair、rankingは上記artifact linksに結び付いている。
 
 `{60,27}` と11×11 empty boardはUNKNOWNのまま。今回確定したのはreply27 lane内のこのs4 classのLOSSのみ。
+
+## 2026-10-09 21:26 JST dual-tight two-class WIN checkpoint on main 916a8677
+
+作業開始時にsolver processはなく、`HEAD == origin/main == d5136a939be1a60b921f0a4eab739596684458da`。fetchでmainの新commit `916a8677a3efe5cb4aa64cb0afcd0f6fffb62460` を取得してfast-forwardした。push前の再fetchで`5bbfa40954cfe3a103258ceb11c926a6f351d322`へ進んでいたため、incomingのaudit JSONも確認してfast-forwardした。main追加分はclass `(1585267068835463168,0)` 用の条件付き48件S6 scheduleと、その下界48のsource auditである。auditはS6 verdictをUNKNOWNと記録し、S6 outcomeを主張しない。保存済みprobeから同classにexact S5 WINが見つかったため、48件はdispatchしなかった。
+
+同classのprobeは4 exact rows（2 WIN / 2 LOSS）と1 UNKNOWN、15,000,000 budget/target、合計42,942,752 nodesだった。exact WIN S5 childは `(1585267068835463168,64)` と `(1585267068835463168,67108864)`。geometry verifierは安全・合法なcanonical child witnessを確認した。全106-child boundaryはLOSS 12 / WIN 2 / UNKNOWN 92となり、classはWIN。WIN発見後の残りscheduled childと他のclass siblingは実行していない。
+
+再最適化後の次候補 `(1297036692683759616,0)` は、開始時103-child boundaryのLOSS 6 / UNKNOWN 97 / WIN 0。全saved exact S5 cache・raw replay・same-budget履歴・S6 intersectionを先に監査し、同budget UNKNOWN 1件をheld-outして9件scheduleのready集合から除いた。probeは4 exact rows（3 WIN / 1 LOSS）、21,889,842 nodesでexact WINを得た。WIN witnessは `(1297036692683759616,67108864)`, `(1152921504607895552,9143582720)`, `(1152921504750501888,68719476736)`。geometry verifierと完全boundary verifierは全103 child中LOSS 7 / WIN 3 / UNKNOWN 93を確認した。WIN発見後の残りchildはdispatchしていない。
+
+base cacheの5,580 rowsとprobe delta 8 rowsをgeometry-checked mergeで再構成したexact S5 cacheは5,588 rows（WIN 150 / LOSS 5,438 / conflict 0）。再構成cacheとprobe mergeは5,588 verdict rows全て一致し、SHA差はcomment headerだけだった。全324保存済みexact S5 cacheのunionも5,588 keysでextra/missing/conflictは0。`research/experiments` と `.local` のraw replay監査は5,284 S5 replay rows、2,436 unique exact keysを検査し、verdict conflictおよびcacheにないexact rowは0。同じか高いbudgetでUNKNOWNだったraw rowは237件あり、いずれもexactへ伝播していない。
+
+全3,384 classはLOSS 31 / WIN 260 / UNKNOWN 3,093。secured third moves 117/119、remaining 2。minimum additional class count 1とrational LP dual 1が一致しdual-tight。最新repairは1 class、distinct UNKNOWN S5 union 98。次rank-1 `(1297036692683751456,0)` は104-child boundaryの既知LOSS 6 / UNKNOWN 98、coverage `{55,65,100,108}`。これはscheduleだけであり、dispatch前に最新main・cache・raw・same-budget UNKNOWN・saved S6 intersectionを再監査する。今回のS6 descentとreverse-propagated S5 LOSSはどちらも0。
+
+Checkpoint report `post-916a8677-reply27-checkpoint-report.json`、source manifest、SHA-256 inventoryに、raw input/output/log copies、solver source、exact cache、merge receipt、raw/cache corpus audit、S6 audit、両classの完全boundary、cardinality、repair、rankingを保存した。計算で確定したのは二つのs4 classがWINであること。`{60,27}` と11×11 empty boardはUNKNOWNのまま。

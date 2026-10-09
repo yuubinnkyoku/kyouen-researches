@@ -2228,6 +2228,39 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-81be8247-selected31-repair-targets-after-probe8-win.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-81be8247-selected31-repair-targets-after-probe8-win.csv)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Exact repair optimization target set; selected classes remain unproved.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 5,588-entry exact cacheで再計算した全3,384 class・secured vertex・整数coverとrational dual
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-merge-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-merge-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 5,580 base rowsと8 exact delta rowsのgeometry-checked merge receipt、conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): dual-tight minimum repairの次候補schedule。勝敗証明ではない
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1297036692683759616-0-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1297036692683759616-0-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): classの全103 canonical S5 childを再生成しLOSS 7・WIN 3・UNKNOWN 93を確認
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1585267068835463168-0-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1585267068835463168-0-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): classの全106 canonical S5 childを再生成しLOSS 12・WIN 2・UNKNOWN 92を確認
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): base exact cacheと二つのprobe deltaから再構成したcanonical exact S5 cache 5,588件
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-artifact-hashes.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-artifact-hashes.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): checkpoint artifactの完全性確認用SHA-256 inventory
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-report.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-report.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): main 916a8677上で再監査した二つのdual-tight class WINと更新後frontier
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-source-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-source-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): solver raw copy、exact cache、geometry/S6監査、最適化出力とsourceのSHA-256一覧
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-cache-corpus-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-cache-corpus-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 324 saved exact S5 cachesを再照合し、5,588 keys一致・missing/extra/conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-raw-replay-corpus-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-raw-replay-corpus-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 実験保存物と.localのS5 raw replay geometry・exact verdictを照合、未収載exact/conflict 0
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-build-reply27-artifact-inventory.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-951a5619-build-reply27-artifact-inventory.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Checkpoint inventory builder for the 951a5619 dispatch checkpoint and all manifest-bound sources.
@@ -3125,6 +3158,12 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-reply27-checkpoint-source-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d18e1cc7-reply27-checkpoint-source-manifest.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Source files and hashes for this checkpoint.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 条件付きcoverの48下界source audit。S6 verdictは全てUNKNOWN扱いで、新しい勝敗証明を含まない
+## [research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-s6.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-s6.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): mainから取得した既存48件S6 schedule。対象classにexact S5 WINが見つかったため未dispatch
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-d538a68-rank1-10448351135500075008-0-probe8-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d538a68-rank1-10448351135500075008-0-probe8-manifest.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Hash-bound schedule excludes the same-budget UNKNOWN key.

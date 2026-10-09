@@ -1,0 +1,178 @@
+{
+  "artifact_hash_inventory": "research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-artifact-hashes.json",
+  "checkpoint_main_before_commit": "5bbfa40954cfe3a103258ceb11c926a6f351d322",
+  "distinct_unknown_s5_union": 98,
+  "dual_tight": true,
+  "empty_11x11_board_status": "UNKNOWN",
+  "exact_s5_cache": {
+    "LOSS": 5438,
+    "WIN": 150,
+    "conflicts": 0,
+    "entries": 5588,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-s5.cache",
+    "reconstruction_comparison": "all 5,588 exact rows match the adaptive-probe merge; only the comment header differs",
+    "sha256": "70f3b36bc5bcdd082a4beb2e23c876152d324656661aba4a8c833abbc49b5535"
+  },
+  "exact_s5_cache_corpus_audit": {
+    "cache_files_scanned": 324,
+    "conflicts": 0,
+    "corpus_unique_rows": 5588,
+    "extra_rows": 0,
+    "missing_rows": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-cache-corpus-audit.json"
+  },
+  "incoming_main_conditional_schedule": {
+    "audit_path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-audit.json",
+    "base_main": "d5136a939be1a60b921f0a4eab739596684458da",
+    "candidate_rows": 48,
+    "conditional_lower_bound": 48,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a9-next96-conditional-min48-s6.csv",
+    "s6_verdict": "UNKNOWN",
+    "status": "schedule and lower-bound audit only; no S6 outcomes asserted; target class (1585267068835463168,0) now has exact S5 WIN witnesses, so the schedule was not dispatched"
+  },
+  "minimum_additional_classes": 1,
+  "next_target": {
+    "canonical_s5_children": 104,
+    "coverage": [
+      55,
+      65,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "dual_weight": "1",
+    "key": [
+      1297036692683751456,
+      0
+    ],
+    "known_loss_s5": 6,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-916a8677-ranking-targets.csv",
+    "unknown_s5": 98,
+    "unknown_s5_legal_count_max": 103,
+    "unknown_s5_legal_count_min": 81
+  },
+  "probe_base_main": "d5136a939be1a60b921f0a4eab739596684458da",
+  "processed_classes": [
+    {
+      "canonical_s5_children": 106,
+      "complete_boundary_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1585267068835463168-0-boundary-audit.json",
+      "exact_new_rows": 4,
+      "exact_new_verdict_counts": {
+        "LOSS": 2,
+        "WIN": 2
+      },
+      "geometry_witness_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-class-1585267068835463168-0-probe9-win-geometry-verifier.json",
+      "probe": {
+        "budget_nodes_per_target": 15000000,
+        "dispatched": 5,
+        "exact_rows": 4,
+        "not_dispatched_after_exact_win": 4,
+        "scheduled": 9,
+        "total_nodes": 42942752,
+        "unknown_rows_excluded_from_cache": 1
+      },
+      "reverse_propagated_s5_loss_rows": 0,
+      "s4_class": [
+        1585267068835463168,
+        0
+      ],
+      "s6_descent_new_exact_rows": 0,
+      "status_after_probe": {
+        "LOSS": 12,
+        "UNKNOWN": 92,
+        "WIN": 2
+      },
+      "status_before_probe": {
+        "LOSS": 10,
+        "UNKNOWN": 96,
+        "WIN": 0
+      }
+    },
+    {
+      "canonical_s5_children": 103,
+      "complete_boundary_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reconstructed-class-1297036692683759616-0-boundary-audit.json",
+      "exact_new_rows": 4,
+      "exact_new_verdict_counts": {
+        "LOSS": 1,
+        "WIN": 3
+      },
+      "geometry_witness_audit": "research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-class-1297036692683759616-0-probe9-win-geometry-audit.json",
+      "probe": {
+        "budget_nodes_per_target": 15000000,
+        "dispatched": 4,
+        "exact_rows": 4,
+        "not_dispatched_after_exact_win": 5,
+        "scheduled": 9,
+        "total_nodes": 21889842,
+        "unknown_rows_excluded_from_cache": 0
+      },
+      "reverse_propagated_s5_loss_rows": 0,
+      "s4_class": [
+        1297036692683759616,
+        0
+      ],
+      "s6_descent_new_exact_rows": 0,
+      "status_after_probe": {
+        "LOSS": 7,
+        "UNKNOWN": 93,
+        "WIN": 3
+      },
+      "status_before_probe": {
+        "LOSS": 6,
+        "UNKNOWN": 97,
+        "WIN": 0
+      }
+    }
+  ],
+  "rational_lp_dual_total": "1",
+  "raw_s5_replay_audit": {
+    "cache_verdict_conflicts": 0,
+    "csv_roots": [
+      {
+        "csv_files_examined": 4686,
+        "exact_s5_replay_rows": 4281,
+        "path": "research/experiments",
+        "s5_replay_rows": 4477
+      },
+      {
+        "csv_files_examined": 5899,
+        "exact_s5_replay_rows": 766,
+        "path": ".local",
+        "s5_replay_rows": 807
+      }
+    ],
+    "exact_replay_rows": 5047,
+    "exact_rows_missing_from_cache": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-s5-raw-replay-corpus-audit.json",
+    "raw_verdict_conflicts": 0,
+    "s5_replay_rows": 5284,
+    "same_or_higher_15m_budget_unknown_rows": 237,
+    "unique_exact_keys": 2436
+  },
+  "remaining_third_moves": 2,
+  "repair_classes": 1,
+  "reverse_propagated_s5_loss_rows": 0,
+  "root": [
+    60,
+    27
+  ],
+  "root_status": "UNKNOWN",
+  "s4_class_status_counts": {
+    "LOSS": 31,
+    "UNKNOWN": 3093,
+    "WIN": 260
+  },
+  "s6_descent_new_exact_rows": 0,
+  "schema": "n11-reply27-checkpoint-report-v1",
+  "secured_third_moves": 117,
+  "source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-916a8677-reply27-checkpoint-source-manifest.json",
+  "validation": {
+    "artifact_hashes": "pass after inventory verification",
+    "generated_diff_review": "pass: artifacts.md has 13 added links; summary artifact count 1845 to 1858; root README unchanged",
+    "knowledge_build": "pass: 6 generated views and README",
+    "knowledge_check": "pass: 366 items; 0 errors; 0 warnings",
+    "knowledge_unittest": "pass: 33 tests",
+    "uv_sync_locked": "pass"
+  }
+}
