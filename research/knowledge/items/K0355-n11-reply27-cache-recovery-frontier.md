@@ -3904,10 +3904,52 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-ranking-targets.csv
     role: source
     note: "ranked class target boundaries"
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-report.json
+    role: manifest
+    note: reply27 rank-1 S5 probe and S6 descent checkpoint summary
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-source-manifest.json
+    role: manifest
+    note: SHA-256-verified S5/S6 source references for the checkpoint
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-artifact-hashes.json
+    role: manifest
+    note: checkpoint artifact inventory with source and parent-inventory hashes
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-merged-s5.cache
+    role: data
+    note: 5,474 exact S5 rows after seven exact LOSS results, conflict 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-post-probe-class-boundary-audit.json
+    role: verifier
+    note: full 104-child S4 class geometry audit, LOSS 12 / UNKNOWN 92 / WIN 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-s6-descent-summary.json
+    role: data
+    note: complete 85-child S6 boundary, WIN 82 / UNKNOWN 3 / LOSS 0
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-s6-descent-exact-s6.cache
+    role: data
+    note: 81 new exact S6 WIN rows; no LOSS propagation
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-after-probe-cardinality.json
+    role: data
+    note: recomputed class status, secured vertices, integer cover and rational dual
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-after-probe-repair.json
+    role: data
+    note: minimum two-class repair with 189 distinct UNKNOWN S5 children
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-after-probe-ranking.json
+    role: data
+    note: next rank is scheduling only; current class still has 92 UNKNOWN S5 children
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-raw-input-preservation-manifest.json
+    role: manifest
+    note: byte-identical archive of all S5/S6 runner input CSVs and logs
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-report-v2.json
+    role: manifest
+    note: checkpoint report including preserved per-target runner inputs and logs
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-source-manifest-v2.json
+    role: manifest
+    note: extended source manifest for archived runner inputs/logs and prior evidence
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-artifact-hashes-v2.json
+    role: manifest
+    note: expanded inventory covering checkpoint outputs and archived raw inputs/logs
 scope: >-
-  Current finite checkpoint is based on fetched main 2f23fcb80ae853c93d31ed5d2e0f8d7d25ce757a. The exact canonical s5 cache has 5,452 rows (144 WIN / 5,308 LOSS / conflict 0).
-  All 3,384 s4 classes classify as 30 LOSS / 251 WIN / 3,103 UNKNOWN; 114/119 third moves are secured and five remain. Minimum additional class cover and rational LP dual are both 2 (dual-tight).
-  The two-class repair has 170 distinct UNKNOWN s5 positions. Class (1152921504741065728,68719476736) remains UNKNOWN after its full 102-child boundary audit: 31 exact LOSS / 71 UNKNOWN / 0 WIN. Rank 1 is that class with 71 UNKNOWN s5 children; ranking is scheduling only.
+  The latest checkpoint was dispatched from fetched main 11452254b02958ad0cc40925805362d60815f20f. Its canonical S5 cache has 5,474 rows (145 WIN / 5,329 LOSS / conflict 0).
+  All 3,384 s4 classes classify as 30 LOSS / 253 WIN / 3,101 UNKNOWN; 114/119 third moves are secured and five remain. Minimum additional class cover and rational LP dual are both 2 (dual-tight).
+  The minimum repair has two classes and 189 distinct UNKNOWN S5 children. Rank 1 (1585267068834414720,0) has 104 canonical children: LOSS 12 / UNKNOWN 92 / WIN 0. Its 15M S5 result and 2M S6 descent leave the class UNKNOWN; ranking is scheduling only.
   {60,27} and the 11x11 empty-board winner remain UNKNOWN.
 evidence: >-
   At checkpoint start, no reply27 solver was running and HEAD == origin/main == 2beb63af85aa1134bc0db6dd742dc1ba7e961419; fetch returned the same main. Class (10448351135499550721,0) has 105 canonical s5 children, with 10 exact LOSS and 95 UNKNOWN. The eight-target 15,000,000-budget probe passed raw-history and saved-S6 preflight (8 ready, 0 blocked, 0 conflict); it returned eight exact LOSS in 37,474,347 nodes. The remaining 87 targets independently passed strict preflight: 7,772 raw CSV sources, zero prior exact, zero same-or-higher-budget UNKNOWN, and 1,306 saved-S6 source files with all 87 parents still UNKNOWN. Completion returned 87 exact LOSS in 417,376,483 nodes. The combined 95 new exact rows used 454,850,830 nodes; no S6 descent or reverse-propagated LOSS occurred.
@@ -4302,3 +4344,15 @@ round3とround4をmain cacheへ順にmergeしたexact S5 cacheは5,467件（WIN 
 checkpoint report post-9681c588-reply27-checkpoint-report.json、source manifest post-9681c588-reply27-checkpoint-source-manifest.json、artifact inventory post-9681c588-reply27-checkpoint-artifact-hashes.json にraw solver入力/出力、cache、merge receipt、geometry監査、cardinality、repair、rankingを結び付けた。inventoryは112 artifacts・9,841 sources、missing 0 / mismatched 0、SHA-256 41e0e517c388bb24890f77f81a551d3cf2c08afaf2699c70375b6a82780fe2e8。 .local内のsolver input/output/log 48件はbyte-for-byteで実験rawへ複製し、原本を残した。
 
 {60,27} と11×11 empty boardはUNKNOWNのまま。
+
+## 2026-10-09 18:45 JST dual-tight rank-1 S5 probe and S6 descent checkpoint on main 11452254
+
+作業開始時にreply27 solverは動作しておらず、`HEAD == origin/main == 11452254b02958ad0cc40925805362d60815f20f`。`git fetch origin main`後も同じcommitだった。main上のfrontierと全保存済みexact/raw evidenceを再監査し、rank-1 class `(1585267068834414720,0)` の完全canonical S5 boundary 104子をgeometryから確認した。処理前はLOSS 5 / UNKNOWN 99 / WIN 0。全raw-history監査は9,039 CSVを調べ、過去exact、同以上budget UNKNOWN、verdict conflictはいずれも0。保存済みS6 intersectionと全165 exact LOSS witnessのsafe canonical reverse incidenceも監査し、既存cacheにないreply27 S5 LOSSは0件だった。
+
+15,000,000 nodes/targetのprobe8は7 exact LOSS・1 UNKNOWN、合計50,710,761 nodes（exact nodes 35,710,761）だった。exact WINはなく未dispatch siblingもない。完全境界監査後のclassはLOSS 12 / UNKNOWN 92 / WIN 0なのでUNKNOWNを維持する。UNKNOWN S5 child `(1585267068834414720,64)` の完全canonical S6 boundary 85子は、保存済みexact WIN 1件を再利用して84件を2,000,000 nodes/targetで処理。新規81 WIN / 3 UNKNOWN / 0 LOSS、全境界WIN 82 / UNKNOWN 3 / LOSS 0、28,800,884 nodesとなった。従って親S5もUNKNOWNのまま。新しいexact S6 LOSSとreverse-propagated S5 LOSSは0件である。
+
+probeの7 LOSSをmain cacheへconflictなしでmergeしたexact S5 cacheは5,474件（WIN 145 / LOSS 5,329 / conflict 0）、SHA-256 `d5ab6c117c8ec7c17b2dcd4f3f11461cace717b87d0b44078239c8895a894220`。全3,384 s4 classの再計算はLOSS 30 / WIN 253 / UNKNOWN 3,101、secured third moves 114/119、remaining 5。minimum additional classes 2とrational LP dual 2は一致しdual-tight。repairは2 classes、distinct UNKNOWN S5 189件で、対象classの92件とclass `(1297036692683759616,0)` の97件。次のschedule対象は依然 `(1585267068834414720,0)` の92 UNKNOWNであり、ranking自体は勝敗証明ではない。
+
+Report `post-11452254-reply27-checkpoint-report.json`、source manifest、builder、SHA-256 inventoryを同prefixに保存した。Inventoryは69 artifactsと403 source referencesを検証し、missing/mismatch 0。inventory SHA-256は `f828692722691d140e0ac55af57603395e8b9ecb672bdd42f509f79b026141ec`。raw、input、cache、merge receipt、geometry/S6境界監査、cardinality、repair、rankingを含み、元の`.local`証拠を保持している。`{60,27}` と11×11 empty boardはUNKNOWNのまま。
+
+Before push, all 8 S5 and 84 S6 target input CSVs and runner logs (184 files) were copied byte-for-byte from `.local` into the corresponding experiment raw directories; every original was preserved. `post-11452254-raw-input-preservation-manifest.json` binds each original and archived hash. The extended source manifest records 589 verified source paths, and the v2 inventory covers 350 checkpoint artifacts with zero missing paths or hash mismatches (SHA-256 `a37d2eb999b74a32a3faaf8ac0ef43a12a2ea022eed88bc46f9553e4efe95c51`). Report, source manifest and inventory v2 supersede the earlier inventory for complete input/log archival.

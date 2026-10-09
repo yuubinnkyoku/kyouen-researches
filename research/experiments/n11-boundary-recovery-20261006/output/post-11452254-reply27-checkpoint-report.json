@@ -1,0 +1,139 @@
+{
+  "schema": "n11-reply27-finite-checkpoint-v1",
+  "checkpoint_base_main": "11452254b02958ad0cc40925805362d60815f20f",
+  "root": [
+    60,
+    27
+  ],
+  "claim": "The processed S4 class remains UNKNOWN; {60,27} and the 11x11 empty board remain UNKNOWN.",
+  "processed_class": {
+    "key": [
+      1585267068834414720,
+      0
+    ],
+    "canonical_s5_children": 104,
+    "coverage_vertices": [
+      38,
+      77,
+      87
+    ],
+    "status": "UNKNOWN",
+    "exact_s5_boundary": {
+      "LOSS": 12,
+      "UNKNOWN": 92,
+      "WIN": 0
+    },
+    "geometry_audit": "n11-reply27-s4-complete-s5-boundary-audit-v1"
+  },
+  "s5_probe": {
+    "scheduled": 8,
+    "completed": 8,
+    "budget_per_target": 15000000,
+    "verdicts": {
+      "LOSS": 7,
+      "UNKNOWN": 1,
+      "WIN": 0
+    },
+    "nodes_all_rows": 50710761,
+    "nodes_exact": 35710761
+  },
+  "s6_descent": {
+    "parent_s5": [
+      1585267068834414720,
+      64
+    ],
+    "canonical_s6_children": 85,
+    "saved_boundary": {
+      "UNSEEN": 84,
+      "WIN": 1
+    },
+    "total_boundary_verdicts": {
+      "LOSS": 0,
+      "UNKNOWN": 3,
+      "WIN": 82
+    },
+    "new_exact_s6": {
+      "LOSS": 0,
+      "UNKNOWN": 3,
+      "WIN": 81
+    },
+    "budget_per_target": 2000000,
+    "nodes": 28800884,
+    "s5_parent_outcome": {
+      "LOSS": 0,
+      "UNKNOWN": 1,
+      "WIN": 0
+    },
+    "reverse_propagated_s5_loss": 0
+  },
+  "exact_s5_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-merged-s5.cache",
+    "entries": 5474,
+    "WIN": 145,
+    "LOSS": 5329,
+    "conflict": 0,
+    "sha256": "d5ab6c117c8ec7c17b2dcd4f3f11461cace717b87d0b44078239c8895a894220"
+  },
+  "s4_classes": {
+    "LOSS": 30,
+    "UNKNOWN": 3101,
+    "WIN": 253
+  },
+  "secured_third_moves": 114,
+  "remaining_third_moves": 5,
+  "minimum_additional_classes": 2,
+  "rational_dual": "2",
+  "dual_tight": true,
+  "repair": {
+    "classes": 2,
+    "distinct_unknown_s5": 189,
+    "selected": [
+      {
+        "all_s5": 103,
+        "coverage": [
+          23,
+          31,
+          100,
+          108
+        ],
+        "key": [
+          1297036692683759616,
+          0
+        ],
+        "unknown_s5": 97
+      },
+      {
+        "all_s5": 104,
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "unknown_s5": 92
+      }
+    ]
+  },
+  "next_target": {
+    "key": [
+      1585267068834414720,
+      0
+    ],
+    "new_vertices": [
+      38,
+      77,
+      87
+    ],
+    "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-11452254-after-probe-ranking-targets.csv",
+    "unknown_s5": 92
+  },
+  "proof_status": {
+    "reply27_root": "UNKNOWN",
+    "empty_11x11": "UNKNOWN"
+  },
+  "source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-source-manifest.json",
+  "artifact_inventory": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-artifact-hashes.json"
+}

@@ -1,0 +1,51 @@
+{
+  "claim": "Scheduling adapter only. The selected rank and probe order carry no game outcome; only exact solver results and geometry-audited boundary propagation can update verdicts.",
+  "current_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-next98-round4-merged-s5.cache",
+    "sha256": "538709cdc0bc0edc4224afcf5cd4a22010f9c52285e604e45a036cb4ddf19dd4"
+  },
+  "geometry_boundary_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-boundary-audit.json",
+    "sha256": "312598a37c8d720858833bd32b20568690dea92a37e3db108eac1e496717fb25"
+  },
+  "next_target": {
+    "canonical_s5_children": 104,
+    "coverage": [
+      38,
+      77,
+      87
+    ],
+    "key": [
+      1585267068834414720,
+      0
+    ],
+    "known_loss_s5": 5,
+    "rank": 1,
+    "unknown_s5": 99
+  },
+  "raw_history_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-raw-history-rechecked.json",
+    "sha256": "12d26129ea1df74c77eeda95b15a7704df70f651da6165b7b53693f36b1e55ed"
+  },
+  "reverse_loss_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-saved-s6-union-v3-reverse-loss-audit.json",
+    "sha256": "2fd80215deaf313305d01c0f08b627c58fcd3592a15edd913d5ba794d057ac2d"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "saved_s6_intersection": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-11452254-next-rank1-1585267068834414720-0-saved-s6-union-v3-summary.json",
+    "sha256": "e9b5f29b1eade31a468b2de1afab00300a9c94f62ffc3fc15acb13e6129919ad"
+  },
+  "schema": "n11-reply27-scheduling-only-ranking-adapter-v1",
+  "source_ranking": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-ranking.json",
+    "sha256": "1177fbb8c130e56e27b29ad9e2c34beac8d5243fe3335991a596a01546e2ac72"
+  },
+  "target_csv": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-9681c588-after-round4-ranking-targets.csv",
+    "sha256": "b81cfca62f3c5ebcdc1af8ef1e1c859ef6f8afef9952e7b40f921d2b63dcb8d8"
+  }
+}
