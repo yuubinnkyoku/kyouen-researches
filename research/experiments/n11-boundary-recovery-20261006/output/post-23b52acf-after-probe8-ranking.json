@@ -1,0 +1,52 @@
+{
+  "claim": "scheduling order only; UNKNOWN remains UNKNOWN until exact proof",
+  "dual_certificate_matches_integer_optimum": true,
+  "minimum_additional_classes": 1,
+  "next_target": {
+    "canonical_s5_children": 106,
+    "coverage": [
+      5,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "dual_weight": "1",
+    "key": [
+      1333065489702715392,
+      0
+    ],
+    "known_loss_s5": 15,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-23b52acf-after-probe8-ranking-targets.csv",
+    "unknown_s5": 91,
+    "unknown_s5_legal_count_max": 105,
+    "unknown_s5_legal_count_min": 91
+  },
+  "ranking": [
+    {
+      "canonical_s5_children": 106,
+      "coverage": [
+        5,
+        100,
+        108
+      ],
+      "dual_vertex": 100,
+      "dual_weight": "1",
+      "key": [
+        1333065489702715392,
+        0
+      ],
+      "known_loss_s5": 15,
+      "rank": 1,
+      "unknown_s5": 91,
+      "unknown_s5_legal_count_max": 105,
+      "unknown_s5_legal_count_min": 91
+    }
+  ],
+  "ranking_rule": "selected additive-optimum classes; dual-tight only; unknown s5 count, then max legal count, then canonical key",
+  "rational_dual_total": "1",
+  "root": [
+    60,
+    27
+  ]
+}

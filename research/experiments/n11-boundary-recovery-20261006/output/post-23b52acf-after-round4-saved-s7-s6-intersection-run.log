@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\n11-boundary-recovery-20261006\scripts\audit_saved_s7_s6_intersection.py", line 182, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\ghq\github.com\yuubinnkyoku\kyouen-researches\research\experiments\n11-boundary-recovery-20261006\scripts\audit_saved_s7_s6_intersection.py", line 99, in main
+    for row_no, row in enumerate(csv.reader(stream), 1):
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_csv.Error: field larger than field limit (131072)

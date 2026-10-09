@@ -1718,6 +1718,42 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-sources.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Hash-bound raw inputs and exact S7 LOSS witness replays copied from preserved local results.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-class-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): class (1333065489702715392,0) の106 canonical S5 childを検査しLOSS 104・UNKNOWN 2を確認
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-completed-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-completed-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): round3/4 exact rowsを統合したS5 cache 5,700件（WIN 151・LOSS 5,549、conflict 0）
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-descent-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-descent-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 残り2 S5 UNKNOWNから145件をS6 descentし、WIN 139・UNKNOWN 6・LOSS 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-artifact-hashes.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-artifact-hashes.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): checkpoint artifactsとsource scriptsの完全性確認用SHA-256 inventory
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 5,700-entry cacheで全3,384 class・secured vertex・integer coverとrational dualを再計算
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): dual-tight repair上のrank-1 schedule。勝敗証明ではない
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 更新cacheで1-class repairを再最適化。残り2 UNKNOWN S5 childは勝敗未確定
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-report.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-report.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): S5 completion・S6 descent・S7 saved intersectionをまとめた停止checkpoint
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-cache-corpus-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-cache-corpus-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 339 saved exact cache sourcesを再照合し、5,700 keys・missing/extra/conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-raw-replay-corpus-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-raw-replay-corpus-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 5,494 raw S5 replay rowsを検査し、未収載exact/conflict 0、15M UNKNOWN observations 242
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-source-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-source-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): checkpoint outputs・source manifests・検証/optimizer scriptsのSHA-256一覧
+## [research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-saved-s7-s6-intersection.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-saved-s7-s6-intersection.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 6 unresolved S6 parentの512 canonical S7 childに保存済みexact verdictがないことを確認
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-dual-tight-ranking-after-completion87-loss.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-dual-tight-ranking-after-completion87-loss.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Updated dual-tight ranking; next target ranking is scheduling order only.

@@ -1,0 +1,23 @@
+{
+  "claim": "schema adapter only; selected classes and optimizer values are copied verbatim; no verdict or optimization is changed",
+  "repair_selected": [
+    {
+      "all_s5": 106,
+      "coverage": [
+        5,
+        100,
+        108
+      ],
+      "key": [
+        1333065489702715392,
+        0
+      ],
+      "unknown_s5": 2
+    }
+  ],
+  "schema": "n11-dual-tight-repair-ranking-input-v1",
+  "source_repair": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-repair.json",
+    "sha256": "bfdf56c89147b48dff054740abbc68c9ec39a9bda88b1c8f0a154f9161e4993d"
+  }
+}

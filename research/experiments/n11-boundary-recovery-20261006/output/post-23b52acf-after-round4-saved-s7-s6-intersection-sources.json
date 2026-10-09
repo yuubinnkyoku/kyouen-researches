@@ -1,0 +1,36 @@
+{
+  "generated": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-saved-s7-s6-intersection.json",
+      "sha256": "8bf4707d04a31e9b3b74ce8a155d92783c906e938349b90cbe309a2fb9df9490"
+    }
+  ],
+  "scan_roots": [
+    "research/experiments",
+    ".local/n11"
+  ],
+  "scanned_file_count": 12204,
+  "schema": "n11-saved-s7-s6-intersection-sources-v1",
+  "sources": [
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-descent-runner-summary.json",
+      "sha256": "74f6e42796022fe62dc09af5d27ef04a7ae7ec672a93c11b1b53771b6f3496f8"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_saved_s7_s6_intersection.py",
+      "sha256": "dbbd483f09069560e26a9cabcf16f9ad6ebd0121c86607bc048b48077f6f9fbc"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_s7_witness_probe.py",
+      "sha256": "19c6a17fbb70919ca26ec15d8881b42f6b4714469ae6384895cce8366612ff2d"
+    },
+    {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_saved_s6_targets.py",
+      "sha256": "96180d212937534f976c45df4ab1d2042a2dff719867158e1a09c0e9437d414d"
+    },
+    {
+      "path": "research/experiments/n11-search-methods/scripts/dfpn_edge_classes.py",
+      "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+    }
+  ]
+}

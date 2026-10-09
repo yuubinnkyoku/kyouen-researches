@@ -1,0 +1,34 @@
+{
+  "boundary_audit": {
+    "canonical_children": 106,
+    "exact_loss": 104,
+    "exact_win": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-class-boundary-audit.json",
+    "sha256": "1c53356f582b633266a67c3c341fb91fad261a1d1ecf7daf377e2081a06e9a5d",
+    "status": "UNKNOWN",
+    "unknown": 2
+  },
+  "claim": "UNKNOWN parents are not assigned a verdict.",
+  "class_key": [
+    1333065489702715392,
+    0
+  ],
+  "exact_cache": {
+    "conflicts": 0,
+    "loss": 5549,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round3-round4-completed-merged-s5.cache",
+    "rows": 5700,
+    "sha256": "634d35b1d84bde95777b60f864199289886faaadbd5f2af31048327222da7592",
+    "win": 151
+  },
+  "output": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-unknown-s5.csv",
+    "rows": 2,
+    "sha256": "e294d284ff3bf3a5fcb76b008b37689364e897932acd6a684be3218e629f1923"
+  },
+  "root": [
+    60,
+    27
+  ],
+  "schema": "n11-reply27-class-unknown-s5-target-manifest-v1"
+}
