@@ -22,6 +22,7 @@ ROOT = Path(__file__).resolve().parents[4]
 FRONTIER_SCRIPTS = ROOT / "research/experiments/n11-frontier-selection-20261005/scripts"
 sys.path.insert(0, str(FRONTIER_SCRIPTS))
 from derive_shared_s6_witness_cache import canonical_safe_key  # noqa: E402
+from s5_evidence_policy import quarantined_cache_keys
 
 
 def fail(message: str) -> None:
@@ -62,6 +63,7 @@ def read_caches(paths: list[Path]) -> tuple[dict[tuple[int, int], int], dict[tup
     nodes_by_key: dict[tuple[int, int], int] = {}
     receipts = []
     origins: dict[tuple[int, int], Path] = {}
+    quarantine = quarantined_cache_keys()
     for path in paths:
         rows = wins = losses = nodes_total = 0
         with path.open(newline="", encoding="utf-8") as stream:
@@ -79,6 +81,8 @@ def read_caches(paths: list[Path]) -> tuple[dict[tuple[int, int], int], dict[tup
                     fail(f"not exact safe s5 cache evidence: {path}:{line_no}: {row}")
                 if canonical_safe_key(key, 5) != key:
                     fail(f"noncanonical s5 cache key: {path}:{line_no}: {key}")
+                if key in quarantine:
+                    continue
                 old = verdicts.get(key)
                 if old is not None and old != value:
                     fail(f"CONFLICT {key}: {old} from {origins[key]} vs {value} from {path}")

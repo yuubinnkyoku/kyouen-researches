@@ -19,6 +19,7 @@ sys.path.insert(0, str(HERE))
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after  # noqa: E402
 from audit_saved_s6_targets import points, safe_canonical, sha256  # noqa: E402
 from prepare_s7_witness_probe import read_s7_cache_line, read_s7_row, scan_files  # noqa: E402
+from fixed_player_outcome import outcome
 
 
 def relpath(path: Path) -> str:
@@ -122,18 +123,13 @@ def main() -> int:
         wins = sum(exact.get(key) == 1 for key in children)
         losses = sum(exact.get(key) == 2 for key in children)
         unknown = len(children) - wins - losses
-        if losses:
-            outcome = "WIN"  # an exact s7 LOSS witnesses this s6 OR-parent WIN
-        elif wins == len(children):
-            outcome = "LOSS"
-        else:
-            outcome = "UNKNOWN"
+        parent_outcome = outcome(6, children, exact)
         parent_results.append({
             "s6_key": list(parent),
             "canonical_s7_children": len(children),
             "saved_exact_s7": {"WIN": wins, "LOSS": losses, "UNSEEN_OR_UNKNOWN": unknown},
-            "saved_exact_loss_witnesses": [list(key) for key in sorted(children) if exact.get(key) == 2],
-            "exact_outcome_from_saved_s7": outcome,
+            "saved_exact_win_witnesses": [list(key) for key in sorted(children) if exact.get(key) == 1],
+            "exact_outcome_from_saved_s7": parent_outcome,
         })
 
     source_entries = [

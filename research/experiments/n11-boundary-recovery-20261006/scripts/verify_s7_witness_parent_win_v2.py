@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify exact s7 LOSS witnesses through complete s6 and s5 boundaries to an s4 WIN."""
+"""Verify exact s7 WIN witnesses through complete s6 and s5 boundaries to an s4 WIN."""
 from __future__ import annotations
 
 import argparse
@@ -220,10 +220,10 @@ def main() -> int:
             raw_key = (int(row[9]), int(row[10]))
             canonical = tuple(d4_canonical_key(points(raw_key)))
             verdict, budget, nodes, legal = int(row[6]), int(row[5]), int(row[7]), int(row[3])
-            if (canonical != key or not safe_canonical(key, 7) or verdict != 2
+            if (canonical != key or not safe_canonical(key, 7) or verdict != 1
                     or budget != source_manifest.get("budget_per_target") or nodes != item.get("nodes")
                     or legal != s7_legal_by_key.get(key)):
-                raise SystemExit(f"s7 LOSS raw row mismatch/geometry failure {path}:{row_no}: {row}")
+                raise SystemExit(f"s7 WIN raw row mismatch/geometry failure {path}:{row_no}: {row}")
             parsed.append(row)
         if len(parsed) != 1 or key not in s7_legal_by_key:
             raise SystemExit(f"s7 raw key is not one legal child row: {path}")
@@ -236,8 +236,8 @@ def main() -> int:
             raise SystemExit(f"s7 parent incidence differs from source manifest for {key}")
         if not affected.issubset(all_parents):
             raise SystemExit(f"s7 witness lacks safe canonical s6 incidence for {key}")
-        s7_exact[key] = 2
-        witness_rows.append({"key": list(key), "verdict": "LOSS", "legal": legal,
+        s7_exact[key] = 1
+        witness_rows.append({"key": list(key), "verdict": "WIN", "legal": legal,
                              "budget": budget, "nodes": nodes,
                              "source": relpath(path), "sha256": sha256(path),
                              "affected_s6_parents": [list(parent) for parent in sorted(affected)],
@@ -252,14 +252,14 @@ def main() -> int:
     s6_propagated = {}
     s6_rows_by_parent = []
     for parent, children in s7_children_by_parent.items():
-        status = "WIN" if any(s7_exact.get(child) == 2 for child in children) else (
-            "LOSS" if children and all(s7_exact.get(child) == 1 for child in children) else "UNKNOWN")
-        witness = sorted(child for child in children if s7_exact.get(child) == 2)
+        status = "WIN" if any(s7_exact.get(child) == 1 for child in children) else (
+            "LOSS" if children and all(s7_exact.get(child) == 2 for child in children) else "UNKNOWN")
+        witness = sorted(child for child in children if s7_exact.get(child) == 1)
         if status != "WIN" or not witness:
             raise SystemExit(f"s7 evidence does not resolve s6 OR parent as WIN: {parent}")
         s6_propagated[parent] = status
         s6_rows_by_parent.append({"s6_parent": list(parent), "complete_canonical_s7_boundary": len(children),
-                                  "saved_exact_s7_loss_witnesses": [list(key) for key in witness],
+                                  "saved_exact_s7_win_witnesses": [list(key) for key in witness],
                                   "derived_s6_outcome": status})
 
     final_s6 = dict(direct_status)
@@ -301,7 +301,7 @@ def main() -> int:
         if coverage:
             reverse_s4[parent] = sorted(coverage)
 
-    delta_text = ("# exact s5 verdicts derived from complete s6 boundaries with exact s7 LOSS witnesses\n"
+    delta_text = ("# exact s5 verdicts derived from complete s6 boundaries with exact s7 WIN witnesses\n"
                   f"s5verdict,{s5_key[0]},{s5_key[1]},5,1,0\n")
     merged_values = dict(cache)
     old = merged_values.get(s5_key)
@@ -326,7 +326,7 @@ def main() -> int:
     audit = {
         "schema": "n11-reply27-s7-witness-to-s5-class-win-geometry-audit-v1",
         "created_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "outcome_provenance": "Exact s7 LOSS results are accepted solver outcomes; geometry independently checks each legal canonical child and derives its s6 OR parent WIN. All 90 canonical s6 children of the s5 AND parent are then checked WIN before deriving s5 WIN and its s4 class WIN.",
+        "outcome_provenance": "Exact s7 WIN results are accepted solver outcomes; geometry independently checks each legal canonical child and derives its s6 OR parent WIN. All 90 canonical s6 children of the s5 AND parent are then checked WIN before deriving s5 WIN and its s4 class WIN.",
         "inputs": {
             "s5_target": {"path": relpath(args.s5_target), "sha256": sha256(args.s5_target)},
             "s5_s6_boundary_full_gzip": {"path": relpath(args.s5_s6_boundary_full_gzip), "sha256": sha256(args.s5_s6_boundary_full_gzip)},

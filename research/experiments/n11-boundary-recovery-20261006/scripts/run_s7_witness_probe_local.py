@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT / "research/experiments/n11-search-methods/scripts")
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after  # noqa: E402
 sys.path.insert(0, str(ROOT / "research/experiments/n11-boundary-recovery-20261006/scripts"))
 from audit_saved_s6_targets import points, safe_canonical  # noqa: E402
+from fixed_player_outcome import outcome
 
 
 def sha256(path: Path) -> str:
@@ -70,11 +71,7 @@ def parse_solver_output(path: Path, target: dict, budget: int) -> tuple[int, int
 
 
 def s6_outcome(children: set[tuple[int, int]], s7_exact: dict[tuple[int, int], int]) -> str:
-    if any(s7_exact.get(child) == 2 for child in children):
-        return "WIN"
-    if children and all(s7_exact.get(child) == 1 for child in children):
-        return "LOSS"
-    return "UNKNOWN"
+    return outcome(6, children, s7_exact)
 
 
 def main() -> int:
@@ -236,7 +233,7 @@ def main() -> int:
         "out_dir": str(args.out_dir.resolve()),
         "new_sources": new_sources,
         "not_dispatched_after_parent_resolved": skipped_targets,
-        "outcome_provenance": "A s7 exact LOSS child proves its safe canonical s6 OR parent WIN; the s5 parent is classified only from all 90 canonical s6 children. UNKNOWN remains UNKNOWN.",
+        "outcome_provenance": "A s7 exact WIN child proves its safe canonical s6 OR parent WIN; S6 LOSS requires every S7 child LOSS. The s5 parent is classified from all 90 canonical s6 children. UNKNOWN remains UNKNOWN.",
         "elapsed_seconds": time.monotonic() - start,
     }
     summary_path = args.out_dir / "summary.json"

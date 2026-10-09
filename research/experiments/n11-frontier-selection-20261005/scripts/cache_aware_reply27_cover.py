@@ -34,12 +34,14 @@ EDGE_DIR = ROOT / "research/experiments/n11-search-methods/scripts"
 sys.path.insert(0, str(EDGE_DIR))
 
 from dfpn_edge_classes import d4_canonical_key, legal_after  # noqa: E402
+from s5_evidence_policy import quarantined_cache_keys
 
 FIRST, R2 = 60, 27
 
 
 def load_cache(path: Path):
     out = {}
+    quarantine = quarantined_cache_keys()
     with path.open(newline="", encoding="utf-8") as fp:
         for row in csv.reader(fp):
             if not row or row[0].startswith("#"):
@@ -50,6 +52,8 @@ def load_cache(path: Path):
             verdict = int(row[4])
             if verdict not in (1, 2):
                 raise SystemExit(f"UNKNOWN/invalid cache verdict {verdict}: {key}")
+            if key in quarantine:
+                continue  # withdrawn cache evidence; keep the source immutable
             old = out.get(key)
             if old is not None and old != verdict:
                 raise SystemExit(f"CONFLICT key={key} old={old} new={verdict}")

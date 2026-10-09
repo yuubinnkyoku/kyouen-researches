@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 366 / alias: 269 / artifactファイル: 1880
+K項目: 367 / alias: 269 / artifactファイル: 1893
 
 ## kind
 
@@ -11,7 +11,7 @@ K項目: 366 / alias: 269 / artifactファイル: 1880
 | method | 4 |
 | proposition | 302 |
 | question | 36 |
-| verification | 5 |
+| verification | 6 |
 
 ## status
 
@@ -25,14 +25,14 @@ K項目: 366 / alias: 269 / artifactファイル: 1880
 | proved | 139 |
 | refuted | 63 |
 | scope-unclear | 1 |
-| verified | 5 |
+| verified | 6 |
 | withdrawn | 4 |
 
 ## topics
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 18 |
+| certificates | 19 |
 | first-moves | 33 |
 | formalization | 2 |
 | geometry | 140 |
@@ -40,17 +40,17 @@ K項目: 366 / alias: 269 / artifactファイル: 1880
 | maximal-safe | 68 |
 | maximum-safe | 48 |
 | migration | 1 |
-| provenance | 14 |
+| provenance | 15 |
 | reconfiguration | 34 |
 | rectangles | 38 |
 | residual-games | 59 |
 | rules | 3 |
 | search-methods | 29 |
-| square-outcomes | 23 |
+| square-outcomes | 24 |
 | statistics | 29 |
 | strategy-length | 19 |
 | variants | 78 |
-| verification | 17 |
+| verification | 18 |
 
 ## 未解決・要監査・範囲不明
 

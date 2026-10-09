@@ -59,6 +59,7 @@
 - ← depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 通常プレイのmex。misère補助mexは終端値1で別に定義する
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
 - ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 先手視点WIN/LOSSと石数 parity によるAND/OR規約
+- ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 勝敗は手番側ではなく元の先手の固定命題
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1641,8 +1642,10 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
 - → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md): exact勝敗の意味は順位付きAND/OR証明の健全性に従う
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
 - ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 11×11 reply27保存済みcache frontierと有限検査の範囲
+- ← verifies [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): S7由来のcache根拠を再監査し、有効な現行frontierを再計算
 
 ## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する
 
@@ -1706,3 +1709,9 @@
 ## [K0370](../items/K0370-quantitative-uniform-circle-density.md) 連続整数行の円の二重点行数に対する定量的一様上界
 
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 固定幅q点版の独立行帰着
+
+## [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) reply27のS7境界での先手固定伝播と旧2件のS5 WIN根拠撤回
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 勝敗は手番側ではなく元の先手の固定命題
+- → verifies [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): S7由来のcache根拠を再監査し、有効な現行frontierを再計算
+- ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回

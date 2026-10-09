@@ -12,7 +12,34 @@ relations:
   - type: depends_on
     target: K0007
     note: exact勝敗の意味は順位付きAND/OR証明の健全性に従う
+  - type: depends_on
+    target: K0371
+    note: 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回
 artifacts:
+  - path: research/experiments/n11-strategy-redesign-20261010/README.md
+    role: source
+    note: A/B同条件pilotと適応実行、旧極性誤りの検出、有限budgetの戦略比較
+  - path: research/experiments/n11-strategy-redesign-20261010/output/current-exact-s5.cache
+    role: data
+    note: 隔離2行を除外して正しい36新exactを追加した現行5,734行
+  - path: research/experiments/n11-strategy-redesign-20261010/output/audit.json
+    role: verifier
+    note: exact-only merge、全3,384 S4の再分類、secured117/119とdual1
+  - path: research/experiments/n11-strategy-redesign-20261010/output/upper-boundary-certificate.json
+    role: certificate
+    note: Aの完全S5/S6境界。exact葉の再帰的minimaxはsolverを信頼する
+  - path: research/experiments/n11-strategy-redesign-20261010/output/portable-verification.json
+    role: verifier
+    note: .localなしで完全上位certificateと全S4/S5 geometry・coverageを独立再構成
+  - path: research/experiments/n11-strategy-redesign-20261010/output/strategy-comparison.json
+    role: data
+    note: 実測node/RSS、予算上限、打切り経験proxyと厳密条件を区別
+  - path: research/experiments/n11-strategy-redesign-20261010/output/next-boundary.json
+    role: data
+    note: 次classの108子境界と99未確定子。未dispatchのschedule
+  - path: research/experiments/n11-strategy-redesign-20261010/output/artifact-manifest.json
+    role: manifest
+    note: input/raw/cache/certificate/geometry/sourceを結ぶSHA-256 inventory
   - path: research/experiments/n11-boundary-recovery-20261006/README.md
     role: source
     note: 回収範囲、手順、結論と限界
@@ -4121,6 +4148,24 @@ evidence: >-
 ---
 
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
+
+## 現行checkpoint: 2026-10-10 戦略再設計と極性監査
+
+旧S7の反転伝播を根拠に追加された二つのS5 WINは、K0371の監査で根拠を撤回した。両局面はUNKNOWNへ戻し、旧cacheは歴史資料として保持する。**過去cacheの単純unionで復活させない。** 現行の正本に対応するexact cacheは `n11-strategy-redesign-20261010/output/current-exact-s5.cache`。下記以前のcheckpointの数値・証明主張よりこの監査と隔離規則を優先する。
+
+開始main `52239697a6a65b11889669725f8599604d53656f` から、AのS7 4件とBのS5 4件を同じ2M / memo22 / count / fresh processで比較した。Aは4 LOSS・290,045 nodes、Bは1 LOSS / 3 UNKNOWN・7,289,601 nodes。残る6 S6の15M増額は5 WIN / 1 LOSS・20,056,308 nodes。完全境界からAの2 S5は1 LOSS / 1 WINとなり、class `(1333065489702715392,0)` は**WIN**（全106子中LOSS105 / WIN1）。S4 LOSSにS7 WINの条件付き4証人coverを使うのは目的の極性が逆だった。
+
+正しい棄却には、S5 `(10376293541461626880,68719476738)` の完全51 S6子のうち既知50 WINと、唯一のUNKNOWN `(10376302337554649088,68719476738)` の2,214,318-node WINで十分だった。別のS6 `(10376293541461628928,33554434)` の5,134,513-node LOSSから、reverse geometryで5新S5 LOSSを追加した。
+
+Bの候補115 classを再構成し、訂正後baselineの44 WINを除外して71 UNKNOWNを比較。最初の代替 `(1297036692700528640,0)` は15M増額の最初の子でWINが見つかり、未実行7件を止めた。共有S5の8件は4 WIN / 4 LOSS。次候補 `(1297036692952186880,0)` は8/8 LOSS pilot後に91子へ拡大したが、12 replayで11 LOSS / 1 WINとなり、残る79子をdispatchせず停止した。このclassもWIN（LOSS26 / WIN1 / UNKNOWN79）。有利なLOSS標本から全classのLOSSは導けない。
+
+合計168,947,139 nodes、direct exact40件（S5: 6 WIN / 24 LOSS、S6: 5 WIN / 1 LOSS、S7: 4 LOSS）、S5 UNKNOWN raw3件。正しい伝播は6新S5（1 WIN / 5 LOSS）。旧5,700行から不正な2 WINを隔離し、36支持済み新行を加えた現行exact S5 cacheは**5,734（WIN156 / LOSS5578 / UNKNOWN excluded / conflict0）**。
+
+全3,384 S4 classは **LOSS31 / WIN268 / UNKNOWN3085**。secured **117/119**、remaining **`{100,108}`**、minimum additional classes **1**、rational dual **1**。追加されたWINで候補を排除したが、新しいS4 LOSSはないためsecuredは増えていない。**`{60,27}=UNKNOWN`、11×11 empty=`UNKNOWN`**。root LOSS certificateは未完成。
+
+独立determinant/D4監査は新rawの安全性・canonicality・合法親子、完全S5/S6境界、全6,871 raw edges・全3,384 S4/S5 child境界とcoverageを再生成した。上位certificateはportable verifierで.local binaryなしに検査できる。exact葉の再帰的minimaxは変更していないsolverを信頼するため、全探索木の独立certificateとは区別する。
+
+次のscheduleは `(1297036692683751424,16)`、108 S5子中LOSS9 / UNKNOWN99、coverage `{26,28,100,108}`。打切り経験加算proxyは約549.79M nodesで、勝敗や完了上界ではない。未dispatch。再開時は最新main、raw履歴、隔離registry、saved S6/S7交差を再監査する。AのLOSS探索は棄却し、正しい極性で必要な親だけを優先するhybridと、早期WIN停止付きの別class探索を採用する。
 
 この項目は、失敗したActions runからのexact結果回収・監査と、その後のlocal finite searchおよびcache条件下のfrontier計算を記録する。初期回収段階では保存済み結果を再計算せずに永続化し、別の作業時点で`origin/main`にも同等のcache回収と正規化修正が到着していた。後続のlocal search結果は個別の保存済みreplayとsummaryに対応する有限計算であり、空盤の終端証明とは区別する。
 

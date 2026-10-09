@@ -1,0 +1,187 @@
+{
+  "a_s5_outcomes": [
+    {
+      "key": [
+        10376293541461626880,
+        33554434
+      ],
+      "verdict": 2
+    },
+    {
+      "key": [
+        10376293541461626880,
+        68719476738
+      ],
+      "verdict": 1
+    }
+  ],
+  "conflicts": 0,
+  "dual": {
+    "max_class_weight": "1",
+    "primal_example": [
+      1152921504606851584,
+      536870912
+    ],
+    "weights": {
+      "100": "1"
+    }
+  },
+  "empty": "UNKNOWN",
+  "exact_s5": {
+    "LOSS": 5578,
+    "UNKNOWN_excluded": true,
+    "WIN": 156,
+    "conflicts": 0,
+    "rows": 5734
+  },
+  "full_class_audits": [
+    {
+      "counts": {
+        "LOSS": 10,
+        "UNKNOWN": 96,
+        "WIN": 1
+      },
+      "coverage": [
+        24,
+        30,
+        100,
+        108
+      ],
+      "key": [
+        1297036692700528640,
+        0
+      ],
+      "verdict": 1
+    },
+    {
+      "counts": {
+        "LOSS": 26,
+        "UNKNOWN": 79,
+        "WIN": 1
+      },
+      "coverage": [
+        68,
+        74,
+        100,
+        108
+      ],
+      "key": [
+        1297036692952186880,
+        0
+      ],
+      "verdict": 1
+    },
+    {
+      "counts": {
+        "LOSS": 105,
+        "WIN": 1
+      },
+      "coverage": [
+        5,
+        100,
+        108
+      ],
+      "key": [
+        1333065489702715392,
+        0
+      ],
+      "verdict": 1
+    }
+  ],
+  "geometry": "independent exact determinant and independent D4; full S4 reconstruction in geometry.json.gz",
+  "minimum_additional_classes": 1,
+  "new_verdict_counts": {
+    "S5_0": 3,
+    "S5_1": 6,
+    "S5_2": 24,
+    "S6_1": 5,
+    "S6_2": 1,
+    "S7_2": 4
+  },
+  "quarantined_s5": [
+    [
+      1152925911243358208,
+      536870912
+    ],
+    [
+      10448351135499552768,
+      128
+    ]
+  ],
+  "rational_dual": "1",
+  "remaining": [
+    100,
+    108
+  ],
+  "root": "UNKNOWN",
+  "s4": {
+    "LOSS": 31,
+    "UNKNOWN": 3085,
+    "WIN": 268
+  },
+  "s6_reverse_propagations": [
+    {
+      "s5": [
+        10376293541461626880,
+        33554434
+      ],
+      "s6": [
+        10376293541461628928,
+        33554434
+      ]
+    },
+    {
+      "s5": [
+        10376293541461624832,
+        33554434
+      ],
+      "s6": [
+        10376293541461628928,
+        33554434
+      ]
+    },
+    {
+      "s5": [
+        9223372036854781952,
+        33554434
+      ],
+      "s6": [
+        10376293541461628928,
+        33554434
+      ]
+    },
+    {
+      "s5": [
+        1152921504606853120,
+        33554434
+      ],
+      "s6": [
+        10376293541461628928,
+        33554434
+      ]
+    },
+    {
+      "s5": [
+        10376293541461628928,
+        33554432
+      ],
+      "s6": [
+        10376293541461628928,
+        33554434
+      ]
+    },
+    {
+      "s5": [
+        1333065489704812544,
+        0
+      ],
+      "s6": [
+        10376293541461628928,
+        33554434
+      ]
+    }
+  ],
+  "secured": 117,
+  "total_new_nodes": 168947139,
+  "trust": "exact leaf outcomes are solver-trusted, not independently minimax-certified"
+}

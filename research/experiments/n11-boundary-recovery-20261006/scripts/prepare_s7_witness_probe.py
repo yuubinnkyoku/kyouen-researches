@@ -221,9 +221,9 @@ def main() -> int:
     parent_outcomes = {}
     unresolved_parents = []
     for parent, children in parent_children.items():
-        if any(exact.get(child) == 2 for child in children):
+        if any(exact.get(child) == 1 for child in children):
             outcome = "WIN"
-        elif children and all(exact.get(child) == 1 for child in children):
+        elif children and all(exact.get(child) == 2 for child in children):
             outcome = "LOSS"
         else:
             outcome = "UNKNOWN"
@@ -249,7 +249,7 @@ def main() -> int:
             raise SystemExit(f"refusing to overwrite existing artifact: {path}")
     with args.targets_out.open("w", newline="", encoding="utf-8") as stream:
         writer = csv.writer(stream, lineterminator="\n")
-        writer.writerow(["# exact s7 LOSS-witness probe; ordering/budget are scheduling only"])
+        writer.writerow(["# exact s7 WIN-witness probe; ordering/budget are scheduling only"])
         writer.writerows(schedule_rows)
 
     parent_reports = []
@@ -304,7 +304,7 @@ def main() -> int:
             "same_or_higher_budget_unknown_key_count": len(same_or_higher_unknown),
             "unknowns_used_as_verdicts": False,
         },
-        "claim": "a scheduled exact s7 LOSS child would prove its s6 OR parent WIN; no scheduled or unknown result is treated as a verdict",
+        "claim": "a scheduled exact s7 WIN child would prove its s6 OR parent WIN; no scheduled or unknown result is treated as a verdict",
     }
     args.audit_out.write_text(json.dumps(audit, indent=2, sort_keys=True) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"s6_parents": len(parent_children), "canonical_s7_keys": len(boundary_s7),

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Preserve and hash-bind completed exact s7 LOSS-witness replay outputs."""
+"""Preserve and hash-bind completed exact s7 WIN-witness replay outputs."""
 from __future__ import annotations
 
 import argparse
@@ -58,10 +58,10 @@ def main() -> int:
             or run.get("solver", {}).get("sha256") != sha256(args.solver)
             or run.get("s5_outcome_from_complete_s6_boundary") != "WIN"
             or run.get("s6_child_outcomes") != {"WIN": 90, "LOSS": 0, "UNKNOWN": 0}
-            or run.get("s7_probe_verdict_counts") != {"2": 2}
+            or run.get("s7_probe_verdict_counts") != {"1": 2}
             or run.get("s7_probe_rows") != 2
             or run.get("budget_per_target") != preflight.get("inputs", {}).get("budget_for_proposed_probe")):
-        raise SystemExit("local runner summary does not bind a two-row exact s7 LOSS witness run")
+        raise SystemExit("local runner summary does not bind a two-row exact s7 WIN witness run")
     if preflight.get("inputs", {}).get("scan_s7_replay_rows_in_target_boundaries") != 0:
         raise SystemExit("preflight does not prove an empty saved s7 boundary intersection")
 
@@ -108,12 +108,12 @@ def main() -> int:
         replay = replay_rows_for_target[0]
         if (len(replay) != 11 or replay[0] != "replay" or int(replay[2]) != 7
                 or int(replay[3]) != int(target_row[5]) or int(replay[4]) != 0
-                or int(replay[5]) != run["budget_per_target"] or int(replay[6]) != 2
+                or int(replay[5]) != run["budget_per_target"] or int(replay[6]) != 1
                 or int(replay[7]) != item.get("nodes")
                 or (int(replay[9]), int(replay[10])) != key
-                or item.get("verdict") != 2 or item.get("legal") != int(target_row[5])
+                or item.get("verdict") != 1 or item.get("legal") != int(target_row[5])
                 or {tuple(p) for p in item.get("affected_s6_parents", [])} != selected[key]):
-            raise SystemExit(f"raw exact S7 LOSS row differs from the preflight target: {key}")
+            raise SystemExit(f"raw exact S7 WIN row differs from the preflight target: {key}")
 
         copied = {}
         for role, source in (("input", input_source), ("raw", raw_source), ("log", log_source)):
@@ -143,17 +143,17 @@ def main() -> int:
         "# Exact canonical s7 solver targets selected by the saved-history preflight.\n"
         + "".join(",".join(row) + "\n" for row in input_rows), encoding="utf-8", newline="\n")
     outputs["-raw.csv"].write_text(
-        "# Exact solver replay rows; both are exact LOSS witnesses for their listed safe s6 parents.\n"
+        "# Exact solver replay rows; both are exact WIN witnesses for their listed safe s6 parents.\n"
         + "".join(",".join(row) + "\n" for row in raw_rows), encoding="utf-8", newline="\n")
     outputs["-exact-s7.cache"].write_text(
-        "# exact s7 verdict cache: n=11 schema=1 (new exact LOSS witness rows only)\n"
-        + "".join(f"s7verdict,{row[9]},{row[10]},7,2,{row[7]}\n" for row in raw_rows),
+        "# exact s7 verdict cache: n=11 schema=1 (new exact WIN witness rows only)\n"
+        + "".join(f"s7verdict,{row[9]},{row[10]},7,1,{row[7]}\n" for row in raw_rows),
         encoding="utf-8", newline="\n")
     shutil.copyfile(args.run_summary, outputs["-runner-summary.json"])
 
     manifest = {
         "schema": "n11-s7-witness-source-manifest-v1",
-        "scope": "exact s7 raw outputs copied byte-for-byte from preserved .local; each exact LOSS is a witness for its affected s6 OR parent",
+        "scope": "exact s7 raw outputs copied byte-for-byte from preserved .local; each exact WIN is a witness for its affected s6 OR parent",
         "dispatch_main_commit": args.dispatch_main_commit,
         "budget_per_target": run["budget_per_target"], "worker_count": 1,
         "solver": {"path": rel(args.solver), "sha256": sha256(args.solver)},

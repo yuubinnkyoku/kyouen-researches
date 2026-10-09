@@ -368,3 +368,4 @@
 | [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md) | 標準整数格子円の二重点行数の厳密最大値（5〜43行） | proposition | proved | geometry, rectangles, variants |
 | [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) | 標準整数格子44〜63行で円が二点ずつ通る行数の厳密最大値 | proposition | proved | geometry, rectangles, variants |
 | [K0370](../items/K0370-quantitative-uniform-circle-density.md) | 連続整数行の円の二重点行数に対する定量的一様上界 | proposition | proved | geometry, rectangles, variants |
+| [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) | reply27のS7境界での先手固定伝播と旧2件のS5 WIN根拠撤回 | verification | verified | square-outcomes, verification, certificates, provenance |

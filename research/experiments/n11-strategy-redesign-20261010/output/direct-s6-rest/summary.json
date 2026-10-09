@@ -1,0 +1,155 @@
+{
+  "command_options": [
+    "--n=11",
+    "--memo=22",
+    "--exact-order=count"
+  ],
+  "hardware": {
+    "machine": "AMD64",
+    "node": "ASUSSSSSSSSSS",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "release": "11",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "plan": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest-plan.json",
+  "plan_sha256": "8bcb8891cb77936d461adab70ce2ce7f0e6426f7d6ede13f0e214a6cd1d5d766",
+  "residual_header_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "results": [
+    {
+      "arm": "C",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541461626880-33816578.input.csv",
+        "--only=6",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541461626880-33816578.out.csv"
+      ],
+      "exit_code": 0,
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541461626880-33816578.input.csv",
+      "input_sha256": "459809957dc3b83bd3d39f8b8beb22f6cf4e993977ba739d573b597d5c029408",
+      "key": [
+        10376293541461626880,
+        33816578
+      ],
+      "legal": 90,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541461626880-33816578.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4993621,
+      "peak_rss_bytes": 173240320,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541461626880-33816578.out.csv",
+      "raw_sha256": "160465a318f214925ac28fcb31175036c39d406986b117205c2d30a8c1440175",
+      "stones": 6,
+      "verdict": 1,
+      "wall_seconds": 13.764999999999418
+    },
+    {
+      "arm": "C",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541461628928-33554434.input.csv",
+        "--only=6",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541461628928-33554434.out.csv"
+      ],
+      "exit_code": 0,
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541461628928-33554434.input.csv",
+      "input_sha256": "57ec70d40f7db9f075d9bf80ebd1befb0d600001aaa1404de6d1bf35b5240be4",
+      "key": [
+        10376293541461628928,
+        33554434
+      ],
+      "legal": 87,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541461628928-33554434.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5134513,
+      "peak_rss_bytes": 172752896,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541461628928-33554434.out.csv",
+      "raw_sha256": "bc5d70e8491e70d7282217bcc893b2b89e7120091d5e07fb812e4f2048831ec8",
+      "stones": 6,
+      "verdict": 2,
+      "wall_seconds": 14.28200000000652
+    },
+    {
+      "arm": "C",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541465821184-33554434.input.csv",
+        "--only=6",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541465821184-33554434.out.csv"
+      ],
+      "exit_code": 0,
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541465821184-33554434.input.csv",
+      "input_sha256": "5137ec4b79f609bb6be4fe49fec97f7b9dee07bd0aab8c65f26f804543daa59c",
+      "key": [
+        10376293541465821184,
+        33554434
+      ],
+      "legal": 85,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541465821184-33554434.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2626133,
+      "peak_rss_bytes": 173264896,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541465821184-33554434.out.csv",
+      "raw_sha256": "a7b4e008925d77ce26a99df3a90233d06d20707cffa116b01c1d802b4da4faba",
+      "stones": 6,
+      "verdict": 1,
+      "wall_seconds": 6.952999999994063
+    },
+    {
+      "arm": "C",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541470076928-68719476738.input.csv",
+        "--only=6",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6-rest\\s6-10376293541470076928-68719476738.out.csv"
+      ],
+      "exit_code": 0,
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541470076928-68719476738.input.csv",
+      "input_sha256": "8ab7b583f327dac003fd7d9b8d9a03235453b75794b1377f63f62ec741dae8dc",
+      "key": [
+        10376293541470076928,
+        68719476738
+      ],
+      "legal": 84,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541470076928-68719476738.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2933032,
+      "peak_rss_bytes": 173281280,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-rest/s6-10376293541470076928-68719476738.out.csv",
+      "raw_sha256": "5334f7cc1ad20b517e7b88ea8d65b7e498d6b51d500c9a17d453299a13f00466",
+      "stones": 6,
+      "verdict": 1,
+      "wall_seconds": 7.734000000011292
+    }
+  ],
+  "solver_path": ".local/n11/strategy-20261010/dfpn.exe",
+  "solver_sha256": "f4eeda404e644687d55077ce5eff5bb1c803cd06cfee0f5d11dbf64929e3ba84",
+  "solver_source_sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063",
+  "total_nodes": 15687299,
+  "verdict_counts": {
+    "1": 3,
+    "2": 1
+  },
+  "watchdog_seconds": 180,
+  "workers": 1
+}

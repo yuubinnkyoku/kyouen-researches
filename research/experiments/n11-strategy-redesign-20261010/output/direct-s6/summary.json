@@ -1,0 +1,92 @@
+{
+  "command_options": [
+    "--n=11",
+    "--memo=22",
+    "--exact-order=count"
+  ],
+  "hardware": {
+    "machine": "AMD64",
+    "node": "ASUSSSSSSSSSS",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "release": "11",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "plan": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6-plan.json",
+  "plan_sha256": "1985f9e6ce02a901fdd3b876f19718da1898bed92ad4c10fa8f9bf6f72cbad18",
+  "residual_header_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "results": [
+    {
+      "arm": "C",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6\\s6-10376293541998497792-33554434.input.csv",
+        "--only=6",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6\\s6-10376293541998497792-33554434.out.csv"
+      ],
+      "exit_code": 0,
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6/s6-10376293541998497792-33554434.input.csv",
+      "input_sha256": "c81027e5ad22c3689be1b322b2f90ca9da69bacb0e3dc7184836c67cc25a33f9",
+      "key": [
+        10376293541998497792,
+        33554434
+      ],
+      "legal": 81,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6/s6-10376293541998497792-33554434.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2154691,
+      "peak_rss_bytes": 173268992,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6/s6-10376293541998497792-33554434.out.csv",
+      "raw_sha256": "6baac2df56f9e4245618b307987c9dc6ede2417ff917ad0aa80ff8f83a8909a9",
+      "stones": 6,
+      "verdict": 1,
+      "wall_seconds": 6.436999999990803
+    },
+    {
+      "arm": "C",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\strategy-20261010\\dfpn.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6\\s6-10376302337554649088-68719476738.input.csv",
+        "--only=6",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-strategy-redesign-20261010\\output\\direct-s6\\s6-10376302337554649088-68719476738.out.csv"
+      ],
+      "exit_code": 0,
+      "input": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6/s6-10376302337554649088-68719476738.input.csv",
+      "input_sha256": "38e2bd80c390ac6ce5dc9b60b445442dd523d0639a642c7a4976854a83b5d98c",
+      "key": [
+        10376302337554649088,
+        68719476738
+      ],
+      "legal": 94,
+      "log": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6/s6-10376302337554649088-68719476738.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2214318,
+      "peak_rss_bytes": 172748800,
+      "raw": "research/experiments/n11-strategy-redesign-20261010/output/direct-s6/s6-10376302337554649088-68719476738.out.csv",
+      "raw_sha256": "818327701611114557fd184ac99f7f2699a388169f7a71148f50e3775cb6edbc",
+      "stones": 6,
+      "verdict": 1,
+      "wall_seconds": 6.437000000005355
+    }
+  ],
+  "solver_path": ".local/n11/strategy-20261010/dfpn.exe",
+  "solver_sha256": "f4eeda404e644687d55077ce5eff5bb1c803cd06cfee0f5d11dbf64929e3ba84",
+  "solver_source_sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063",
+  "total_nodes": 4369009,
+  "verdict_counts": {
+    "1": 2
+  },
+  "watchdog_seconds": 180,
+  "workers": 1
+}

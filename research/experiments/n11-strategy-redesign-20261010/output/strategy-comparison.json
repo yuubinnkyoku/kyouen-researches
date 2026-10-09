@@ -1,0 +1,142 @@
+{
+  "A": {
+    "S7_incidences": 521,
+    "decisive_refutation_s6_nodes": 2214318,
+    "final": "WIN: this S4 cannot supply a LOSS certificate",
+    "initial_s5_unknown": 2,
+    "initial_s6_unknown": 6,
+    "initial_s7_unknown": 512,
+    "minimum_complete_loss_pair_s7": 175,
+    "shared_s7": 9
+  },
+  "B": {
+    "direct_probe_refutation_nodes": 7541821,
+    "estimated_capped_completion_nodes": 534944346.6166041,
+    "final": "first alternative is WIN; all eight escalation siblings stopped after one replay",
+    "final_remaining_candidate_count": 64,
+    "first_alternative": [
+      1297036692700528640,
+      0
+    ],
+    "initial_candidates": 115,
+    "initial_eligible_UNKNOWN": 71,
+    "initial_excluded_WIN": 44,
+    "initial_s5_unknown": 98
+  },
+  "C": {
+    "S6_escalation_nodes": 20056308,
+    "caveat": "no calibrated probabilities; no independent recursive minimax leaf certificate",
+    "choice": "polarity-aware direct S6 escalation, exact LOSS reverse propagation, shared S5 rejection probes",
+    "new_exact_S5_from_direct_replays": 30,
+    "new_exact_S5_from_sound_propagation": 6,
+    "shared_S5_nodes": 44544197
+  },
+  "compiler": {
+    "command": "g++ -O3 -std=c++20 -DNDEBUG cpp/solvers/kyouen_dfpn_root.cpp -o .local/n11/strategy-20261010/dfpn.exe",
+    "solver_source_sha256": "523f56e61550e1f5b93882229baf8b4cd83489be719ca484d13adef8424c3063",
+    "version": "g++ 15.2.0 (MSYS2 Rev8)"
+  },
+  "measurements": {
+    "A": {
+      "nodes": 290045,
+      "peak_rss_bytes": 173277184,
+      "rows": 4,
+      "verdicts": {
+        "2": 4
+      },
+      "wall_seconds": 4.845000000001164
+    },
+    "B": {
+      "nodes": 14831422,
+      "peak_rss_bytes": 173277184,
+      "rows": 5,
+      "verdicts": {
+        "0": 3,
+        "1": 1,
+        "2": 1
+      },
+      "wall_seconds": 62.73500000000058
+    },
+    "B_completion": {
+      "nodes": 62024329,
+      "peak_rss_bytes": 173367296,
+      "rows": 12,
+      "verdicts": {
+        "1": 1,
+        "2": 11
+      },
+      "wall_seconds": 227.03299999998126
+    },
+    "B_next": {
+      "nodes": 27200838,
+      "peak_rss_bytes": 173342720,
+      "rows": 8,
+      "verdicts": {
+        "2": 8
+      },
+      "wall_seconds": 96.00100000000384
+    },
+    "C": {
+      "nodes": 20056308,
+      "peak_rss_bytes": 173281280,
+      "rows": 6,
+      "verdicts": {
+        "1": 5,
+        "2": 1
+      },
+      "wall_seconds": 55.60800000000745
+    },
+    "C_shared": {
+      "nodes": 44544197,
+      "peak_rss_bytes": 173268992,
+      "rows": 8,
+      "verdicts": {
+        "1": 4,
+        "2": 4
+      },
+      "wall_seconds": 172.48500000000058
+    }
+  },
+  "next_class": {
+    "capped_cost_proxy": 549789681.8556254,
+    "children": 108,
+    "coverage": [
+      26,
+      28,
+      100,
+      108
+    ],
+    "full_remaining_coverage": true,
+    "held_same_15m": [],
+    "key": [
+      1297036692683751424,
+      16
+    ],
+    "known_loss": 9,
+    "unknown": 99
+  },
+  "rigorous_bounds": {
+    "finite_node_dispatch_caps": {
+      "B_escalation": 120000000,
+      "direct_S6": 90000000,
+      "next_completion": 1365000000,
+      "next_pilot": 120000000,
+      "pilot": 16000000,
+      "shared": 120000000
+    },
+    "minimum_additional_class": 1,
+    "no_completion_upper_bound": true,
+    "rational_dual": "1"
+  },
+  "same_condition_pilot": {
+    "A_nodes": 290045,
+    "B_nodes": 7289601,
+    "budget": 2000000,
+    "caveat": "four deliberately selected low-branching leaves per arm; not random, no uncensored cost bound",
+    "hardware": "AMD Ryzen 7 5800HS, 8 cores / 16 threads, Windows",
+    "memo": 22,
+    "order": "count",
+    "workers": 1
+  },
+  "total_nodes": 168947139
+}

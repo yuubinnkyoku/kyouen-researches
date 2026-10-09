@@ -1712,6 +1712,9 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-class-boundary-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Verifies the complete 90-child s6 boundary and exact s5 WIN witness in the 105-child reply27 s4 class.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-derived-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-derived-s5.cache)
+
+- [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (source): 同じ誤りによる旧一次資料。現在の証明に使わない
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-merged-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Exact s5 cache after merging one geometry-verified S7-derived WIN row; 4,962 entries, conflict 0.
@@ -2063,6 +2066,9 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-class-boundary-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Complete s5-to-s6-to-s7 geometry audit for an exact s4 WIN witness.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-derived-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-derived-s5.cache)
+
+- [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (source): 不正なS7反転を根拠にWINを追加した旧一次資料。内容を改変していない
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-5dfabf84-s7-witness-merged-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Exact s5 cache after the all-WIN s6 boundary derivation.
@@ -4689,6 +4695,9 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/derive_all_saved_s6_loss_parents.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/derive_all_saved_s6_loss_parents.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 保存済みs6 LOSSの全canonical s5 parentを列挙し、safe geometryとsource consistencyを監査
+## [research/experiments/n11-boundary-recovery-20261006/scripts/fixed_player_outcome.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/fixed_player_outcome.py)
+
+- [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (verifier): 偶数OR・奇数ANDの固定プレイヤー集約
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/materialize_s6_descent_evidence.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/materialize_s6_descent_evidence.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Copies exact s6 raw outputs without replacing local evidence and builds a source hash manifest.
@@ -4851,6 +4860,35 @@
 ## [research/experiments/n11-search-methods/scripts/n11_d4.cpp](../../../research/experiments/n11-search-methods/scripts/n11_d4.cpp)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (solver): 命題・対象範囲・根拠を記した出典
+## [research/experiments/n11-strategy-redesign-20261010/README.md](../../../research/experiments/n11-strategy-redesign-20261010/README.md)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): A/B同条件pilotと適応実行、旧極性誤りの検出、有限budgetの戦略比較
+## [research/experiments/n11-strategy-redesign-20261010/output/artifact-manifest.json](../../../research/experiments/n11-strategy-redesign-20261010/output/artifact-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): input/raw/cache/certificate/geometry/sourceを結ぶSHA-256 inventory
+## [research/experiments/n11-strategy-redesign-20261010/output/audit.json](../../../research/experiments/n11-strategy-redesign-20261010/output/audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): exact-only merge、全3,384 S4の再分類、secured117/119とdual1
+- [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (data): 有効なcacheと全3384 classの再分類
+## [research/experiments/n11-strategy-redesign-20261010/output/current-exact-s5.cache](../../../research/experiments/n11-strategy-redesign-20261010/output/current-exact-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 隔離2行を除外して正しい36新exactを追加した現行5,734行
+## [research/experiments/n11-strategy-redesign-20261010/output/next-boundary.json](../../../research/experiments/n11-strategy-redesign-20261010/output/next-boundary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 次classの108子境界と99未確定子。未dispatchのschedule
+## [research/experiments/n11-strategy-redesign-20261010/output/portable-verification.json](../../../research/experiments/n11-strategy-redesign-20261010/output/portable-verification.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): .localなしで完全上位certificateと全S4/S5 geometry・coverageを独立再構成
+## [research/experiments/n11-strategy-redesign-20261010/output/strategy-comparison.json](../../../research/experiments/n11-strategy-redesign-20261010/output/strategy-comparison.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 実測node/RSS、予算上限、打切り経験proxyと厳密条件を区別
+## [research/experiments/n11-strategy-redesign-20261010/output/upper-boundary-certificate.json](../../../research/experiments/n11-strategy-redesign-20261010/output/upper-boundary-certificate.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (certificate): Aの完全S5/S6境界。exact葉の再帰的minimaxはsolverを信頼する
+- [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (certificate): 完全S5/S6境界。exact葉の再帰的minimaxはsolverを信頼する
+## [research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py](../../../research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py)
+
+- [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (verifier): S4..S10の全二子三値境界をBoolean completionで照合し、cache再流入も検査
 ## [research/experiments/original-claims/output/batch09_pairs_n4.json](../../../research/experiments/original-claims/output/batch09_pairs_n4.json)
 
 - [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (data): 全120二点削除対と単独削除のg・K
@@ -6389,6 +6427,9 @@
 ## [results/maxsafe_exchange_n7.csv](../../../results/maxsafe_exchange_n7.csv)
 
 - [K0266](../items/K0266-n7-maximum-exchange-distance.md) (data): 全16配置の交換検査
+## [results/n11-s5-evidence-quarantine.json](../../../results/n11-s5-evidence-quarantine.json)
+
+- [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (data): 旧cache ancestryから再流入させない2キー。局面自体の勝敗の反証ではない
 ## [results/outcomes.csv](../../../results/outcomes.csv)
 
 - [K0011](../items/K0011-n1-first-player-win.md) (data): 命題・対象範囲・根拠を記した出典

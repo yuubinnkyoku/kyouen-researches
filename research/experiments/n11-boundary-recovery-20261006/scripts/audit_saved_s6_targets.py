@@ -13,7 +13,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "research/experiments/n11-search-methods/scripts"))
+sys.path.insert(0, str(ROOT / "research/experiments/n11-frontier-selection-20261005/scripts"))
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after  # noqa: E402
+from s5_evidence_policy import quarantined_cache_keys
 
 EXP = ROOT / "research/experiments/n11-boundary-recovery-20261006"
 OUT = EXP / "output"
@@ -135,6 +137,7 @@ def read_saved_exact_s6(source_audit: dict) -> tuple[dict, list[dict]]:
 
 def read_current_cache(path: Path) -> dict[tuple[int, int], set[int]]:
     statuses: dict[tuple[int, int], set[int]] = defaultdict(set)
+    quarantine = quarantined_cache_keys()
     for line_num, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         if not line.strip() or line.lstrip().startswith("#"):
             continue
@@ -147,6 +150,8 @@ def read_current_cache(path: Path) -> dict[tuple[int, int], set[int]]:
         verdict = int(fields[4])
         if verdict not in (1, 2):
             raise SystemExit(f"invalid current s5 verdict: {line}")
+        if key in quarantine:
+            continue
         statuses[key].add(verdict)
     conflicts = [k for k, v in statuses.items() if len(v) > 1]
     if conflicts:

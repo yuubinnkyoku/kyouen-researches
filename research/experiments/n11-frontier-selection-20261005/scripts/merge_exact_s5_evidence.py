@@ -14,10 +14,12 @@ import json
 from collections import Counter
 from pathlib import Path
 from derive_shared_s6_witness_cache import canonical_safe_key
+from s5_evidence_policy import quarantined_cache_keys
 
 
 def merge(cache_paths, replay_patterns):
     verdict={}
+    quarantine=quarantined_cache_keys()
     origin={}
     receipt=[]
     def put(key,value,path):
@@ -41,6 +43,7 @@ def merge(cache_paths, replay_patterns):
         replay_paths.extend(found)
     for path,is_replay in [(p,False) for p in cache_paths]+[(Path(p),True) for p in sorted(set(replay_paths))]:
         hist=Counter()
+        excluded=0
         nodes=0
         keys=set()
         with path.open(newline="",encoding="utf-8") as fp:
@@ -55,11 +58,14 @@ def merge(cache_paths, replay_patterns):
                     if row[0]!="s5verdict" or len(row)!=6 or int(row[3])!=5 or int(row[4]) not in (1,2):
                         raise SystemExit(f"not an exact s5 cache row: {path}: {row}")
                     key=(int(row[1]),int(row[2])); value=int(row[4])
+                    if key in quarantine:
+                        excluded+=1
+                        continue
                 put(key,value,path)
                 if key in keys:
                     raise SystemExit(f"duplicate row {key}: {path}")
                 keys.add(key); hist[value]+=1
-        receipt.append({"path":path.as_posix(),"sha256":hashlib.sha256(path.read_bytes()).hexdigest(),"rows":len(keys),"counts":dict(sorted(hist.items())),"nodes":nodes})
+        receipt.append({"path":path.as_posix(),"sha256":hashlib.sha256(path.read_bytes()).hexdigest(),"rows":len(keys),"counts":dict(sorted(hist.items())),"nodes":nodes,"quarantined_cache_rows":excluded})
     hist=Counter(verdict.values())
     return verdict,{"unique_exact_s5":len(verdict),"win":hist[1],"loss":hist[2],"conflicts":0,"sources":receipt}
 
