@@ -1,0 +1,78 @@
+{
+  "claim": "saved exact s7 intersection only; no solver replay; absent and UNKNOWN rows remain UNKNOWN",
+  "conflict_count": 0,
+  "input_s6_runner_summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-18109950-s7-audit-input.json",
+    "sha256": "48479a73222bbd8cc6b9531d1f313c9fff58778a38cc3cf21ae6a8b227ed0cea"
+  },
+  "s6_outcomes": {
+    "LOSS": 0,
+    "UNKNOWN": 2,
+    "WIN": 0
+  },
+  "s6_parents": [
+    {
+      "canonical_s7_children": 76,
+      "exact_outcome_from_saved_s7": "UNKNOWN",
+      "s6_key": [
+        1297318167661510656,
+        33554433
+      ],
+      "saved_exact_loss_witnesses": [],
+      "saved_exact_s7": {
+        "LOSS": 0,
+        "UNSEEN_OR_UNKNOWN": 76,
+        "WIN": 0
+      }
+    },
+    {
+      "canonical_s7_children": 81,
+      "exact_outcome_from_saved_s7": "UNKNOWN",
+      "s6_key": [
+        10449477035406395392,
+        16777216
+      ],
+      "saved_exact_loss_witnesses": [],
+      "saved_exact_s7": {
+        "LOSS": 0,
+        "UNSEEN_OR_UNKNOWN": 81,
+        "WIN": 0
+      }
+    }
+  ],
+  "s6_unknown_count": 2,
+  "saved_exact_s7_key_count": 0,
+  "saved_exact_s7_sources": 0,
+  "schema": "n11-saved-s7-s6-intersection-v1",
+  "source_manifest": {
+    "scan_roots": [
+      "research/experiments",
+      ".local/n11"
+    ],
+    "scanned_file_count": 5124,
+    "schema": "n11-saved-s7-s6-intersection-sources-v1",
+    "sources": [
+      {
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-18109950-s7-audit-input.json",
+        "sha256": "48479a73222bbd8cc6b9531d1f313c9fff58778a38cc3cf21ae6a8b227ed0cea"
+      },
+      {
+        "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_saved_s7_s6_intersection.py",
+        "sha256": "dbbd483f09069560e26a9cabcf16f9ad6ebd0121c86607bc048b48077f6f9fbc"
+      },
+      {
+        "path": "research/experiments/n11-boundary-recovery-20261006/scripts/prepare_s7_witness_probe.py",
+        "sha256": "19c6a17fbb70919ca26ec15d8881b42f6b4714469ae6384895cce8366612ff2d"
+      },
+      {
+        "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_saved_s6_targets.py",
+        "sha256": "38cb0596868c57631ddbcb1927420fcd6f9579b8f7a0e4c443727b3ab01781d9"
+      },
+      {
+        "path": "research/experiments/n11-search-methods/scripts/dfpn_edge_classes.py",
+        "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+      }
+    ]
+  },
+  "unique_canonical_s7_boundary_count": 157
+}

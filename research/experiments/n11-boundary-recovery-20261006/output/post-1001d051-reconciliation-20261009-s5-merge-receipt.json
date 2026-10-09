@@ -1,0 +1,67 @@
+{
+  "base_cache": {
+    "LOSS": 4836,
+    "WIN": 127,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-current-exact-s5.cache",
+    "sha256": "3e840785537f45012dbc29552120a004472f8622ef084d2c4796578a28da1079",
+    "unique_exact_rows": 4963
+  },
+  "boundary_audit": {
+    "canonical_children": 89,
+    "counts": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "UNSEEN": 0,
+      "WIN": 89
+    },
+    "full_detail": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-s6-boundary-audit-full.json.gz",
+    "full_detail_sha256": "38d3a2245587335ffa615c2f1f0b7eb69a16bb3b816a0d01431fb9348dd56961",
+    "geometry_complete": true,
+    "legal_canonical_child_incidence_checked": true,
+    "summary": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-s6-boundary-audit-summary.json",
+    "summary_sha256": "02a74c39c5a4a40f2d730807563c98be08af6655cfb6e031fa6a0af2656dac6a",
+    "target": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s5-10449477035406395392-0-target.csv",
+    "target_sha256": "6ee37f5f918b96f62971a017d80d0fa7056311682bccbdcc2e7de5c2dace3fe8"
+  },
+  "delta": {
+    "keys": [
+      [
+        10449477035406395392,
+        0
+      ]
+    ],
+    "new_exact_rows": 1,
+    "new_verdict_counts": {
+      "LOSS": 0,
+      "WIN": 1
+    },
+    "opposite_verdict_conflicts": 0
+  },
+  "geometry_derived_delta": {
+    "justification": "all 89 canonical legal S6 children independently regenerated and hash-validated as exact WIN",
+    "key": [
+      10449477035406395392,
+      0
+    ],
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-derived-s5.cache",
+    "rows": 1,
+    "sha256": "6e32dbefa016b36466e7ac00a8273d62fb606a7a1dc5e13cbcaae3e31f357148",
+    "verdict": "WIN"
+  },
+  "merged_cache": {
+    "LOSS": 4836,
+    "WIN": 128,
+    "conflicts": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s5.cache",
+    "sha256": "098656495eea24d34f22b85ebd70e704f88aa191249aee9d0c4b43e5a1d9b001",
+    "unique_exact_rows": 4964
+  },
+  "outcome_policy": "S5 WIN is admitted only after all canonical S6 boundary children are exact WIN; prior UNKNOWN remains excluded.",
+  "schema": "n11-reply27-s5-cache-reconciliation-merge-v1",
+  "upstream_cache_crosscheck": {
+    "held_row_now_supported": true,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-87win-derived-s5.cache",
+    "rows": 2,
+    "sha256": "fb0d95dfd2e59b6d71fd441b9775059c1e3202d3b74e7a6dd69477f84ef777b1"
+  }
+}

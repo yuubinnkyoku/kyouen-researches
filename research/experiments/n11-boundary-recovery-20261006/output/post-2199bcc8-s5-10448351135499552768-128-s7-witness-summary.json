@@ -1,0 +1,49 @@
+{
+  "artifacts": {
+    "-exact-s7.cache": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-exact-s7.cache",
+      "sha256": "3b95d9b6182d5d6f670d5a9719131ffd196ab051ad7fcb1c7d0feac34601f0f8"
+    },
+    "-inputs.csv": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-inputs.csv",
+      "sha256": "6b1a64d5d29899f6b1e18f36bdf1ef8f63f4475f70666bdb29c8933e78ba79a1"
+    },
+    "-raw.csv": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-raw.csv",
+      "sha256": "a50ac8353179ebe3802b2de3d652beef108299b776e2cceb7426a9f85e976b38"
+    },
+    "-runner-summary.json": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-runner-summary.json",
+      "sha256": "3e0ad843fc2eba1a61caef3451e3e1cfa2dd1d80069bf47a411e093f7768909e"
+    },
+    "-sources.json": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-sources.json",
+      "sha256": "b33f8480b9b4aef784b3a9e5f70b6a5410db9cd5e2c5cffcb6e0e10e8f5d9920"
+    }
+  },
+  "complete_s6_boundary": 90,
+  "conflicts": 0,
+  "dispatch_main_commit": "2199bcc8faca3dec5b8123d55a9469b9ad9884c3",
+  "nodes": 206436,
+  "raw_directory": {
+    "files": 6,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s7-witness"
+  },
+  "s5_outcome": "WIN",
+  "s5_parent": [
+    10448351135499552768,
+    128
+  ],
+  "s6_status_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 0,
+    "WIN": 90
+  },
+  "s7_targets": 2,
+  "s7_verdict_counts": {
+    "2": 2
+  },
+  "schema": "n11-s7-witness-evidence-summary-v1",
+  "source_manifest_sha256": "b33f8480b9b4aef784b3a9e5f70b6a5410db9cd5e2c5cffcb6e0e10e8f5d9920",
+  "unknowns_propagated": false
+}

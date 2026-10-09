@@ -1,0 +1,58 @@
+{
+  "added_sources": [
+    {
+      "key": [
+        10449477035406395392,
+        16777216
+      ],
+      "nodes": 2607291,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-10449477035406395392-16777216-probe15m-raw.csv",
+      "sha256": "3a37a2a55ce2988c005457af4c9a3edcd4ee591026a2e77547ba0c89dcdeb87d",
+      "source_manifest": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s6-source-manifest.json",
+      "source_manifest_sha256": "321013ab826c9490734e8dec59516fc491148a27703a6740ccee02a2a50f29ed",
+      "verdict": 1
+    }
+  ],
+  "base_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-exact-s6.cache",
+    "sha256": "b0b9c608a9abab455dcbcdca97fa5c1492c10854159d28b8883cac61ce0ebb21",
+    "unique_exact_rows": 3574
+  },
+  "cache": {
+    "LOSS": 160,
+    "WIN": 3415,
+    "bytes": 173255,
+    "conflicts": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s6.cache",
+    "sha256": "571493b5faa8fa757371d2299ff31f7be1fc20a5a2b35cf2592b9e8e40981f31",
+    "unique_exact_rows": 3575
+  },
+  "delta_vs_base": {
+    "conflicts": 0,
+    "keys": [
+      [
+        10449477035406395392,
+        16777216
+      ]
+    ],
+    "new_exact_rows": 1,
+    "new_verdict_counts": {
+      "LOSS": 0,
+      "WIN": 1
+    }
+  },
+  "outcome_policy": "Only exact saved S6 WIN/LOSS rows are materialized; UNKNOWN rows are omitted and not propagated.",
+  "schema": "n11-reply27-exact-s6-cache-merge-receipt-v1",
+  "source_audit": {
+    "canonical_s6_keys": 3652,
+    "exact_verdict_counts": {
+      "LOSS": 160,
+      "WIN": 3415
+    },
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-augmented-s6-source-audit.json",
+    "sha256": "7c0760dc892e6da2513189cde5bf9337eee349dda239e9001be15e39413c375e",
+    "source_conflicts": 0,
+    "source_files": 653,
+    "unknown_only_keys": 77
+  }
+}

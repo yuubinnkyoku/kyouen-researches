@@ -1,0 +1,40 @@
+{
+  "base_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-dual-tight-10448351135499552768-0-probe8-sequential-completed-merged-s5.cache",
+    "rows": 4961,
+    "sha256": "69f73ea1fd265ab6e670d15178149dca691cea4911ec6e154e1aa1e3cbe28c67",
+    "verdict_counts": {
+      "1": 125,
+      "2": 4836
+    }
+  },
+  "boundary_audit": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-class-boundary-audit.json",
+    "sha256": "946bf24685ebace132a12906fa77fcd31fea9e80ba781f8117ea456e80b6854f"
+  },
+  "claim": "a single exact s5 WIN witness proves the s4 class WIN; UNKNOWN rows remain raw-only and are not propagated",
+  "conflicts": 0,
+  "delta_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-derived-s5.cache",
+    "rows": 1,
+    "sha256": "5082bf57200bafdf3ee1aa7ef883c1899d7fb11b8886331d5d912e3d42011242",
+    "verdict_counts": {
+      "WIN": 1
+    }
+  },
+  "duplicate_verdicts": 0,
+  "merged_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-merged-s5.cache",
+    "rows": 4962,
+    "sha256": "46a5b88b03c084758935858b96e5cf07267b880440c61b09ecdc9ca56a439a1d",
+    "verdict_counts": {
+      "1": 126,
+      "2": 4836
+    }
+  },
+  "root": [
+    60,
+    27
+  ],
+  "schema": "n11-reply27-s7-derived-s5-cache-merge-v1"
+}

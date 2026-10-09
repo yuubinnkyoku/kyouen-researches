@@ -1,0 +1,43 @@
+{
+  "base_source_audit": {
+    "base_exact_s6_keys": 3573,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-s6-10448351137781254144-0-augmented-s6-source-audit.json",
+    "sha256": "45c1a2f6aadb6f37769b3bbc034c1f9dcb8a080d77ff7a22d9c40825e8b5c16d"
+  },
+  "cache": {
+    "LOSS": 160,
+    "WIN": 3414,
+    "bytes": 173203,
+    "conflicts": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-exact-s6.cache",
+    "sha256": "b0b9c608a9abab455dcbcdca97fa5c1492c10854159d28b8883cac61ce0ebb21",
+    "unique_exact_rows": 3574
+  },
+  "delta_vs_base": {
+    "conflicts": 0,
+    "keys": [
+      [
+        1297318167661510656,
+        33554433
+      ]
+    ],
+    "new_exact_rows": 1,
+    "new_verdict_counts": {
+      "1": 1
+    }
+  },
+  "outcome_policy": "Only exact saved S6 WIN/LOSS rows are materialized; UNKNOWN rows are omitted and not propagated.",
+  "schema": "n11-reply27-exact-s6-cache-merge-receipt-v1",
+  "source_audit": {
+    "canonical_s6_keys": 3652,
+    "exact_verdict_counts": {
+      "1": 3414,
+      "2": 160
+    },
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-augmented-s6-source-audit.json",
+    "sha256": "f4634411db657b41f11c25c3678165f0729307add7943bead2da44975329ff0b",
+    "source_conflicts": 0,
+    "source_files": 652,
+    "unknown_only_keys": 78
+  }
+}

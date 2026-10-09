@@ -1,0 +1,138 @@
+{
+  "budget_per_target": 1000000,
+  "dispatch_main_commit": "2199bcc8faca3dec5b8123d55a9469b9ad9884c3",
+  "exact_conflicts": 0,
+  "exact_s7_cache": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-exact-s7.cache",
+    "rows": 2,
+    "sha256": "3b95d9b6182d5d6f670d5a9719131ffd196ab051ad7fcb1c7d0feac34601f0f8"
+  },
+  "input_artifact": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-inputs.csv",
+    "rows": 2,
+    "sha256": "6b1a64d5d29899f6b1e18f36bdf1ef8f63f4475f70666bdb29c8933e78ba79a1"
+  },
+  "local_run_dir": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11\\reply27-s5-10448351135499552768-128-s7-run-2199bcc8",
+  "materializer": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/scripts/materialize_s7_witness_evidence.py",
+    "sha256": "b8b6acb6d5e11dbad5b0c58f14e89cef58c921d3ca1304096d718848b2798715"
+  },
+  "nodes": 206436,
+  "preflight": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-preflight.json",
+    "sha256": "aaa47c63c7fa68378cb098a8f94b2ff04cff445f637fce5d35f3393cfb6b5198"
+  },
+  "raw_aggregate": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-raw.csv",
+    "rows": 2,
+    "sha256": "a50ac8353179ebe3802b2de3d652beef108299b776e2cceb7426a9f85e976b38"
+  },
+  "raw_sources": [
+    {
+      "affected_s6_parents": [
+        [
+          10448351135499552768,
+          8320
+        ]
+      ],
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s7-witness/s7-10448351135499552768-8324.raw.csv",
+      "budget": 1000000,
+      "bytes": 275,
+      "input": {
+        "bytes": 50,
+        "local_path": ".local/n11/reply27-s5-10448351135499552768-128-s7-run-2199bcc8/s7-10448351135499552768-8324.input.csv",
+        "local_sha256": "6264070191c684060331713377b7f93ed88496e6fa5810fa6663ae85acc04dd0",
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s7-witness/s7-10448351135499552768-8324.input.csv",
+        "sha256": "6264070191c684060331713377b7f93ed88496e6fa5810fa6663ae85acc04dd0"
+      },
+      "key": [
+        10448351135499552768,
+        8324
+      ],
+      "legal": 46,
+      "log": {
+        "bytes": 0,
+        "local_path": ".local/n11/reply27-s5-10448351135499552768-128-s7-run-2199bcc8/s7-10448351135499552768-8324.log",
+        "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s7-witness/s7-10448351135499552768-8324.log.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 99583,
+      "replay_rows": 1,
+      "sha256": "36ce14b0bafd20786a80729b9b2736d67168824a9b0a5a927e1f2e0404275e3a",
+      "verdict": 2
+    },
+    {
+      "affected_s6_parents": [
+        [
+          10448353334522808320,
+          128
+        ],
+        [
+          10448914085452973056,
+          34359738368
+        ]
+      ],
+      "artifact_path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s7-witness/s7-10448914085452973056-34361835520.raw.csv",
+      "budget": 1000000,
+      "bytes": 283,
+      "input": {
+        "bytes": 57,
+        "local_path": ".local/n11/reply27-s5-10448351135499552768-128-s7-run-2199bcc8/s7-10448914085452973056-34361835520.input.csv",
+        "local_sha256": "9af52bf04ec577d6dc9752c40861138d69951c9caff350b2e0078ffeb3e76ed8",
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s7-witness/s7-10448914085452973056-34361835520.input.csv",
+        "sha256": "9af52bf04ec577d6dc9752c40861138d69951c9caff350b2e0078ffeb3e76ed8"
+      },
+      "key": [
+        10448914085452973056,
+        34361835520
+      ],
+      "legal": 69,
+      "log": {
+        "bytes": 0,
+        "local_path": ".local/n11/reply27-s5-10448351135499552768-128-s7-run-2199bcc8/s7-10448914085452973056-34361835520.log",
+        "local_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/post-2199bcc8-s5-10448351135499552768-128-s7-witness/s7-10448914085452973056-34361835520.log.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "nodes": 106853,
+      "replay_rows": 1,
+      "sha256": "30a2974e2a91e61277d5ff4d9739db939be087681db1b0114509b0a8d5db7de2",
+      "verdict": 2
+    }
+  ],
+  "runner": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\scripts\\run_s7_witness_probe_local.py",
+    "sha256": "6a3b39f2f5879e1a49aced85d9759491ad5bc8aaf62e20f4c1df57b7b39e5be9"
+  },
+  "runner_summary": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-runner-summary.json",
+    "reported_s5_outcome": "WIN",
+    "reported_s6_counts": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 90
+    },
+    "sha256": "3e0ad843fc2eba1a61caef3451e3e1cfa2dd1d80069bf47a411e093f7768909e"
+  },
+  "s5_s6_boundary_full_gzip": {
+    "path": "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-direct-saved-s6-full.json.gz",
+    "sha256": "a2d12b75db0950033a7b83af91ef8dfbde939542d495b05a104f669a14810f1a"
+  },
+  "schema": "n11-s7-witness-source-manifest-v1",
+  "scope": "exact s7 raw outputs copied byte-for-byte from preserved .local; each exact LOSS is a witness for its affected s6 OR parent",
+  "solver": {
+    "path": ".local/n11/reply27-probe9/dfpn.exe",
+    "sha256": "05fa5a45c0749506ead2036174c7fc9047badd94835a06c7588d0c892bfafbd7"
+  },
+  "source_replay_rows": 2,
+  "targets": {
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-targets.csv",
+    "sha256": "095f703d0ecb9668e896fdc3960846e2c7a4ce3422f36f1826643151973fa284"
+  },
+  "unknowns_propagated": false,
+  "verdict_counts": {
+    "2": 2
+  },
+  "worker_count": 1
+}

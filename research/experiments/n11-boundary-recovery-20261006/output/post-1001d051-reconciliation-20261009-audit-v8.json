@@ -1,0 +1,354 @@
+{
+  "accepted_exact_s5_cache": {
+    "LOSS": 4836,
+    "WIN": 128,
+    "conflicts": 0,
+    "entries": 4964,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s5.cache",
+    "sha256": "098656495eea24d34f22b85ebd70e704f88aa191249aee9d0c4b43e5a1d9b001"
+  },
+  "class_status": {
+    "LOSS": 29,
+    "UNKNOWN": 3124,
+    "WIN": 231,
+    "dual_tight": true,
+    "minimum_additional_classes": 3,
+    "rational_dual": 3,
+    "remaining": 6,
+    "s4_classes": 3384,
+    "secured_third_moves": 113,
+    "total_third_moves": 119
+  },
+  "decision": "The previously held S5 WIN row is now supported by a complete, independently regenerated all-WIN S6 boundary. The exact s5 cache was safely merged with zero conflicts. Further target work is only on the next ranked UNKNOWN class; the ranking is scheduling data, not verdict evidence.",
+  "exact_s6_cache": {
+    "LOSS": 160,
+    "WIN": 3415,
+    "conflicts": 0,
+    "entries": 3575,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s6.cache",
+    "sha256": "571493b5faa8fa757371d2299ff31f7be1fc20a5a2b35cf2592b9e8e40981f31"
+  },
+  "main_commit": "1001d051ab23e0c5130c42260bb4249fbd73a15d",
+  "previous_main_commit": "d0ed156ca6a7c6c596d08da518d5c32b911ae8ba",
+  "proof_status": "{60,27} UNKNOWN; 11x11 empty board UNKNOWN",
+  "repair": {
+    "classes": 3,
+    "classes_selected": [
+      {
+        "coverage": [
+          36,
+          40,
+          100,
+          108
+        ],
+        "key": [
+          1297036761403228160,
+          0
+        ],
+        "uncached_s5": 97
+      },
+      {
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "uncached_s5": 99
+      },
+      {
+        "coverage": [
+          99,
+          104,
+          109
+        ],
+        "key": [
+          10448351135499550722,
+          0
+        ],
+        "uncached_s5": 96
+      }
+    ],
+    "distinct_unknown_s5": 292,
+    "next_target": {
+      "canonical_s5_children": 105,
+      "coverage": [
+        99,
+        104,
+        109
+      ],
+      "dual_vertex": 104,
+      "dual_weight": "1",
+      "key": [
+        10448351135499550722,
+        0
+      ],
+      "known_loss_s5": 9,
+      "rank": 1,
+      "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-reconciliation-20261009-repair-ranking-targets.csv",
+      "unknown_s5": 96,
+      "unknown_s5_legal_count_max": 102,
+      "unknown_s5_legal_count_min": 84
+    },
+    "ranking": [
+      {
+        "canonical_s5_children": 105,
+        "coverage": [
+          99,
+          104,
+          109
+        ],
+        "dual_vertex": 104,
+        "dual_weight": "1",
+        "key": [
+          10448351135499550722,
+          0
+        ],
+        "known_loss_s5": 9,
+        "rank": 1,
+        "unknown_s5": 96,
+        "unknown_s5_legal_count_max": 102,
+        "unknown_s5_legal_count_min": 84
+      },
+      {
+        "canonical_s5_children": 102,
+        "coverage": [
+          36,
+          40,
+          100,
+          108
+        ],
+        "dual_vertex": 100,
+        "dual_weight": "1",
+        "key": [
+          1297036761403228160,
+          0
+        ],
+        "known_loss_s5": 5,
+        "rank": 2,
+        "unknown_s5": 97,
+        "unknown_s5_legal_count_max": 101,
+        "unknown_s5_legal_count_min": 74
+      },
+      {
+        "canonical_s5_children": 104,
+        "coverage": [
+          38,
+          77,
+          87
+        ],
+        "dual_vertex": 77,
+        "dual_weight": "1",
+        "key": [
+          1585267068834414720,
+          0
+        ],
+        "known_loss_s5": 5,
+        "rank": 3,
+        "unknown_s5": 99,
+        "unknown_s5_legal_count_max": 103,
+        "unknown_s5_legal_count_min": 85
+      }
+    ]
+  },
+  "resolved_discrepancy": {
+    "complete_canonical_s6_boundary": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 89,
+      "count": 89,
+      "geometry_legal_incidence_checked": true
+    },
+    "conflicts": 0,
+    "previous_hold_resolved_by_s6_key": [
+      10449477035406395392,
+      16777216
+    ],
+    "reply27_s4_parent_classes": [
+      {
+        "canonical_s5_children": 109,
+        "coverage_vertices": [
+          48,
+          50,
+          111,
+          119
+        ],
+        "key": [
+          1297318167661510656,
+          0
+        ],
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-1297318167661510656-0-boundary-audit.json",
+        "sha256": "dd57c505d1f1e0ca5cb7068b1731ddb47cd1bd124a5959a2662b56fd0be728e5",
+        "status": "WIN",
+        "status_counts": {
+          "LOSS": 3,
+          "UNKNOWN": 105,
+          "WIN": 1
+        }
+      },
+      {
+        "canonical_s5_children": 105,
+        "coverage_vertices": [
+          104,
+          111,
+          119
+        ],
+        "key": [
+          10448351135499552768,
+          0
+        ],
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-10448351135499552768-0-boundary-audit.json",
+        "sha256": "667a1d23d1692e5d407c7af6e81c1633f1219b625346058d05b5da66c9dc036c",
+        "status": "WIN",
+        "status_counts": {
+          "LOSS": 20,
+          "UNKNOWN": 82,
+          "WIN": 3
+        }
+      },
+      {
+        "canonical_s5_children": 97,
+        "coverage_vertices": [
+          48,
+          50,
+          104
+        ],
+        "key": [
+          10449477035406393344,
+          0
+        ],
+        "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-10449477035406393344-0-boundary-audit.json",
+        "sha256": "33c38d123aca2e6d7d75bf3a91b26403ed8dcd60242eaefbd58724764ff3ac22",
+        "status": "WIN",
+        "status_counts": {
+          "LOSS": 15,
+          "UNKNOWN": 76,
+          "WIN": 6
+        }
+      }
+    ],
+    "s5_raw_unknown_is_not_an_opposite_exact_verdict": true,
+    "s5_recurrence": "The odd-stone S5 AND position is exact WIN because every canonical legal S6 child is exact WIN.",
+    "s5_to_s4_geometry_audit": {
+      "all_parent_classes_exact_WIN": true,
+      "parent_count": 3,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-s4-parent-incidence-audit.json",
+      "script_path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_reconciled_s5_s4_parent_incidence.py",
+      "script_sha256": "f2e6513cac08f2cb3964a9934e5ee91b8b51e03779fa21ed7f51d6e6867cf3f3",
+      "sha256": "0f9c975cc441b5145e1e265a67f5148ab98a5a6832568592632fdd9f16f9ad4d"
+    },
+    "s6_replay": {
+      "budget_nodes": 15000000,
+      "raw_sha256": "3a37a2a55ce2988c005457af4c9a3edcd4ee591026a2e77547ba0c89dcdeb87d",
+      "reported_nodes": 2607291,
+      "verdict": "WIN"
+    },
+    "upstream_s5_key": [
+      10449477035406395392,
+      0
+    ],
+    "upstream_s5_verdict": "WIN"
+  },
+  "reverse_propagated_s5_loss": 0,
+  "root": [
+    60,
+    27
+  ],
+  "schema": "n11-reply27-upstream-s5-cache-reconciliation-v4",
+  "solver_dispatch_after_reconciliation": false,
+  "source_artifacts": {
+    "accepted_s5": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-e8d965fd-current-exact-s5.cache",
+      "sha256": "3e840785537f45012dbc29552120a004472f8622ef084d2c4796578a28da1079"
+    },
+    "cardinality": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-cardinality.json",
+      "sha256": "6984debab041eb3acd2c8994521224b5e4a7f9a083e5d878317d3f3069f0defa"
+    },
+    "cover": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-cover.json",
+      "sha256": "9982c7fedba768ac84c1e810c53f75e6d373beb70a28505b19fe7a6ab11b14e9"
+    },
+    "derived_s5": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-derived-s5.cache",
+      "sha256": "6e32dbefa016b36466e7ac00a8273d62fb606a7a1dc5e13cbcaae3e31f357148"
+    },
+    "merge_sources": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-merge-source-summary.json",
+      "sha256": "83e6736580bb0c97ba62803564970c88b70b74afc3664c885a07e830949e7b6f"
+    },
+    "merged_s5": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s5.cache",
+      "sha256": "098656495eea24d34f22b85ebd70e704f88aa191249aee9d0c4b43e5a1d9b001"
+    },
+    "ranking": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-repair-ranking.json",
+      "sha256": "c2cb86c2a40983d1de9a705cb93bb23a4090d4db3000463a8559ae6cc7d663b6"
+    },
+    "ranking_sources": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-repair-ranking-sources.json",
+      "sha256": "d71646da1e483299b07b066ef9dcd3b47dc1e56c66853b15c339b786c4e694bd"
+    },
+    "repair": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-repair-refined.json",
+      "sha256": "8a9fc59007777f6c7d29950161f692a8f90c277c1aa4afd6426cce3076c512a6"
+    },
+    "s4_10448351135499552768_0_boundary_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-10448351135499552768-0-boundary-audit.json",
+      "sha256": "667a1d23d1692e5d407c7af6e81c1633f1219b625346058d05b5da66c9dc036c"
+    },
+    "s4_10449477035406393344_0_boundary_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-10449477035406393344-0-boundary-audit.json",
+      "sha256": "33c38d123aca2e6d7d75bf3a91b26403ed8dcd60242eaefbd58724764ff3ac22"
+    },
+    "s4_1297318167661510656_0_boundary_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s4-1297318167661510656-0-boundary-audit.json",
+      "sha256": "dd57c505d1f1e0ca5cb7068b1731ddb47cd1bd124a5959a2662b56fd0be728e5"
+    },
+    "s5_boundary_full": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-s6-boundary-audit-full.json.gz",
+      "sha256": "38d3a2245587335ffa615c2f1f0b7eb69a16bb3b816a0d01431fb9348dd56961"
+    },
+    "s5_boundary_summary": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-10449477035406395392-0-s6-boundary-audit-summary.json",
+      "sha256": "02a74c39c5a4a40f2d730807563c98be08af6655cfb6e031fa6a0af2656dac6a"
+    },
+    "s5_boundary_target": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-s5-10449477035406395392-0-target.csv",
+      "sha256": "6ee37f5f918b96f62971a017d80d0fa7056311682bccbdcc2e7de5c2dace3fe8"
+    },
+    "s5_s4_parent_incidence_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s5-s4-parent-incidence-audit.json",
+      "sha256": "0f9c975cc441b5145e1e265a67f5148ab98a5a6832568592632fdd9f16f9ad4d"
+    },
+    "s5_s4_parent_incidence_verifier": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_reconciled_s5_s4_parent_incidence.py",
+      "sha256": "f2e6513cac08f2cb3964a9934e5ee91b8b51e03779fa21ed7f51d6e6867cf3f3"
+    },
+    "s6_cache": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s6.cache",
+      "sha256": "571493b5faa8fa757371d2299ff31f7be1fc20a5a2b35cf2592b9e8e40981f31"
+    },
+    "s6_cache_receipt": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s6-cache-merge-receipt.json",
+      "sha256": "a1d01748648f141a637cea508ed187cabb855e7fc269dea6c58442929e06ee23"
+    },
+    "s6_source_audit": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-augmented-s6-source-audit.json",
+      "sha256": "7c0760dc892e6da2513189cde5bf9337eee349dda239e9001be15e39413c375e"
+    },
+    "s6_source_manifest": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-s6-source-manifest.json",
+      "sha256": "321013ab826c9490734e8dec59516fc491148a27703a6740ccee02a2a50f29ed"
+    },
+    "upstream_s5": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc-s6-87win-derived-s5.cache",
+      "sha256": "fb0d95dfd2e59b6d71fd441b9775059c1e3202d3b74e7a6dd69477f84ef777b1"
+    }
+  },
+  "status": "reconciled-cache-updated-next-class-audit-required",
+  "supersedes": "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-audit-v7.json"
+}
