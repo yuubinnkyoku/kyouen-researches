@@ -1,0 +1,46 @@
+{
+  "schema": "n11-conditional-s6-cover-audit-v1",
+  "source_main": "b4d9b6a9c618f2e839211aa41b64e38a041fa809",
+  "source_s5_cache": "research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merged-s5.cache",
+  "source_s5_cache_sha256": "dbcf47de9b2233cbbe74025a16e67e2b44b261c9e566828bb8a8d15b5618a7e2",
+  "witnesses_csv": "research/experiments/n11-boundary-recovery-20261006/output/post-b4d9b6a9-next98-conditional-s6-cover.csv",
+  "witnesses_sha256": "224f5d8ecf26fc321933bcb311ffad7db5e856e68606cfdfc7e31a06163df26f",
+  "root": [
+    60,
+    27
+  ],
+  "s4_key": [
+    1152921504741065700,
+    68719476736
+  ],
+  "cache_entries": 5419,
+  "cache_win": 144,
+  "cache_loss": 5275,
+  "s5_children": 102,
+  "known_loss_s5": 4,
+  "unknown_s5": 98,
+  "known_win_s5": 0,
+  "s6_incidence_raw": 9179,
+  "unique_s6": 4712,
+  "s6_parent_multiplicity": {
+    "1": 335,
+    "2": 4334,
+    "3": 43
+  },
+  "three_parent_shared_common_s5": [
+    10376293541595840000,
+    68719476736
+  ],
+  "dual_bound": "weight 0 on common S5 parent and 1/2 on other 97: sum=48.5, each S6 column weight<=1",
+  "integer_lower_bound": 49,
+  "witnesses": 49,
+  "witnesses_cover_unknown_s5": 98,
+  "witness_legal6_sum": 4093,
+  "witness_legal6_min": 66,
+  "witness_legal6_max": 95,
+  "independent_integer_geometry": "4x4 determinant all 49 witnesses; passed",
+  "verdicts_for_s6_witnesses": "UNKNOWN",
+  "two_stone_root": "UNKNOWN",
+  "empty_board": "UNKNOWN",
+  "caveat": "Conditional minimum only: all 49 S6 would need exact LOSS; no S6 verdicts or independent game-value certificates were established."
+}
