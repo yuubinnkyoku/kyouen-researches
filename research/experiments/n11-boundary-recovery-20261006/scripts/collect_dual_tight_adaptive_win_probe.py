@@ -263,7 +263,8 @@ def main() -> int:
                    ROOT / "research/experiments/n11-search-methods/scripts/dfpn_edge_classes.py"]
     source_doc = {
         "schema": "n11-dual-tight-adaptive-win-probe-sources-v1",
-        "claim": "The four dispatched s5 rows are exact solver results. The runner stopped dispatch after an exact WIN; four scheduled targets remain explicitly unstarted and unknown.",
+        "claim": (f"The {len(completed)} dispatched s5 rows are recorded below; the runner stopped after an exact s5 WIN, "
+                  f"and {len(not_dispatched)} scheduled targets are explicitly unstarted with no outcome inferred."),
         "main_at_dispatch": args.main_commit,
         "class_key": list(class_key),
         "inputs": [{"path": common.relative(path), "sha256": common.sha256(path),
