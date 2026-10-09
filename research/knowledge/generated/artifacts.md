@@ -2873,6 +2873,153 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f390d290-rank1-10448351135499550976-0-saved-s6-38source-summary.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): The 38-source saved-s6 intersection derives no exact s5 verdict for 92 parents
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-cover-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-cover-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-cover.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-cover.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-ranking-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-ranking-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-ranking-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-ranking-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-repair-refined.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-after-class-win-repair-refined.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-audit-target-boundary-history.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-audit-target-boundary-history.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible helper or supporting checkpoint artifact.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-build-reply27-checkpoint.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-build-reply27-checkpoint.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible helper or supporting checkpoint artifact.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-collect-early-win-drained.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-collect-early-win-drained.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible helper or supporting checkpoint artifact.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-merge-probe8-exact-cache.py](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-merge-probe8-exact-cache.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible helper or supporting checkpoint artifact.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Geometry-rebuilt complete canonical S5 class boundary and exact witness legality audit.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-class-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Geometry-rebuilt complete canonical S5 class boundary and exact witness legality audit.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-exact-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-exact-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Reproducible helper or supporting checkpoint artifact.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merge-receipt.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merge-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Exact cache merge receipt with source hashes and zero verdict conflicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Exact canonical S5 cache or delta; only exact solver verdicts are included.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Exact canonical S5 cache or delta; only exact solver verdicts are included.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Preserved exact probe replay evidence; UNKNOWN and not-dispatched rows are excluded from exact cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Preserved exact probe replay evidence; UNKNOWN and not-dispatched rows are excluded from exact cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-runner-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-runner-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Runner record of exact results and early stop after the first WIN witness.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-saved-history-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-saved-history-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Cross-check of saved replay and exact cache rows against the full class boundary; zero conflicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-raw-history-baseline.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-raw-history-baseline.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Preserved exact probe replay evidence; UNKNOWN and not-dispatched rows are excluded from exact cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-raw-history-coverage.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-raw-history-coverage.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Preserved exact probe replay evidence; UNKNOWN and not-dispatched rows are excluded from exact cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-raw-history-current.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-raw-history-current.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Preserved exact probe replay evidence; UNKNOWN and not-dispatched rows are excluded from exact cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-saved-s6-derived-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-saved-s6-derived-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Saved S6 boundary intersection; no UNKNOWN or WIN S6 result is propagated as LOSS.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-saved-s6-full.json.gz](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-saved-s6-full.json.gz)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Saved S6 boundary intersection; no UNKNOWN or WIN S6 result is propagated as LOSS.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-saved-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-saved-s6-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Saved S6 boundary intersection; no UNKNOWN or WIN S6 result is propagated as LOSS.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-strict-preflight.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8-strict-preflight.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible helper or supporting checkpoint artifact.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-probe8.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Scheduled probe input; row order is work scheduling only.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-ranking-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-ranking-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-ranking-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-ranking-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-raw-history-baseline.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-raw-history-baseline.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Preserved exact probe replay evidence; UNKNOWN and not-dispatched rows are excluded from exact cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-saved-s6-derived-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-saved-s6-derived-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Saved S6 boundary intersection; no UNKNOWN or WIN S6 result is propagated as LOSS.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-saved-s6-full.json.gz](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-saved-s6-full.json.gz)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Saved S6 boundary intersection; no UNKNOWN or WIN S6 result is propagated as LOSS.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-saved-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-saved-s6-summary.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Saved S6 boundary intersection; no UNKNOWN or WIN S6 result is propagated as LOSS.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-unknown-s5-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-unknown-s5-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-unknown-s5-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-next-class-1297177430172106752-0-unknown-s5-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Reproducible helper or supporting checkpoint artifact.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-optimizer-environment.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-optimizer-environment.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-ranking-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-ranking-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-ranking-targets.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-ranking-targets.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-repair.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-refined-repair.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Recomputed cover or scheduling rank; UNKNOWN targets are not verdicts.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-artifact-hashes.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-artifact-hashes.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-report.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-report.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-source-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f7cdef17-reply27-checkpoint-source-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Checkpoint provenance, summary, and hash-bound source record.
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-geometry-reaudit-20261008.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-geometry-reaudit-20261008.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): complete 110-child geometry re-audit for class (1297036692683751424,16384), exact WIN witness verified

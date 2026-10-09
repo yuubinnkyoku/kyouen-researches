@@ -1,0 +1,2793 @@
+{
+  "schema": "n11-reply27-target-boundary-history-audit-v1",
+  "class_key": [
+    1297177430172106752,
+    0
+  ],
+  "canonical_children": 102,
+  "scanned_files": 9208,
+  "parsed_csv_rows": 712072,
+  "exact_child_keys_with_saved_evidence": 10,
+  "exact_evidence_records": 329,
+  "same_budget_unknown_child_keys": 2,
+  "verdict_conflict_count": 0,
+  "conflicts": [],
+  "exact_children": [
+    {
+      "key": [
+        1297177430172106752,
+        64
+      ],
+      "verdict": 1,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\cache-out\\new-exact-s5.cache",
+          "line": 2,
+          "kind": "cache",
+          "verdict": 1,
+          "nodes": 6515382,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\s5-1297177430172106752-64.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 1,
+          "nodes": 6515382,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 1716,
+          "kind": "cache",
+          "verdict": 1,
+          "nodes": 6515382,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache",
+          "line": 2,
+          "kind": "cache",
+          "verdict": 1,
+          "nodes": 6515382,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv",
+          "line": 2,
+          "kind": "replay",
+          "verdict": 1,
+          "nodes": 6515382,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv",
+          "line": 2,
+          "kind": "replay",
+          "verdict": 1,
+          "nodes": 6515382,
+          "budget": 15000000
+        }
+      ]
+    },
+    {
+      "key": [
+        1297177430172106752,
+        67108864
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\cache-out\\new-exact-s5.cache",
+          "line": 3,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 7093800,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\s5-1297177430172106752-67108864.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 7093800,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 1717,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 7093800,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache",
+          "line": 3,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 7093800,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 7093800,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 7093800,
+          "budget": 15000000
+        }
+      ]
+    },
+    {
+      "key": [
+        1297177430172106880,
+        0
+      ],
+      "verdict": 1,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\cache-out\\new-exact-s5.cache",
+          "line": 4,
+          "kind": "cache",
+          "verdict": 1,
+          "nodes": 11630473,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\s5-1297177430172106880-0.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 1,
+          "nodes": 11630473,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 1718,
+          "kind": "cache",
+          "verdict": 1,
+          "nodes": 11630473,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache",
+          "line": 4,
+          "kind": "cache",
+          "verdict": 1,
+          "nodes": 11630473,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv",
+          "line": 4,
+          "kind": "replay",
+          "verdict": 1,
+          "nodes": 11630473,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv",
+          "line": 4,
+          "kind": "replay",
+          "verdict": 1,
+          "nodes": 11630473,
+          "budget": 15000000
+        }
+      ]
+    },
+    {
+      "key": [
+        1297177430172237824,
+        0
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297036692683882496-0-unknown95-probe8-next\\cache-out\\new-exact-s5.cache",
+          "line": 7,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297036692683882496-0-unknown95-probe8-next\\s5-1297177430172237824-0.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0148c177-active-class-10448351135499550722-0-completion87-collection-merged-s5.cache",
+          "line": 1558,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-049b2284-next-class-10448351144089485312-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 1673,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0d8f4d3e-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 1673,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-next-class-10448351135499550722-0-merged-exact-s5.cache",
+          "line": 1529,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-reconciliation-20261009-exact-s5.cache",
+          "line": 1527,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache",
+          "line": 1524,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-dual-tight-10448351135499552768-0-probe8-sequential-completed-merged-s5.cache",
+          "line": 1527,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-s7-witness-merged-s5.cache",
+          "line": 1527,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-completion87-completed-merged-s5.cache",
+          "line": 1709,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-probe8-completed-merged-s5.cache",
+          "line": 1678,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-38613e2-hard-s5-s6-descent-v2-merged-s5.cache",
+          "line": 1522,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-adaptive-next-probe8-completed-merged-s5.cache",
+          "line": 1521,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-class-88-probe8-completed-merged-s5.cache",
+          "line": 1522,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-rank1-10448351135499567104-0-probe8-merged-s5.cache",
+          "line": 1518,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-merged-s5.cache",
+          "line": 1519,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-next-probe8-adaptive-merged-s5.cache",
+          "line": 1521,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-81be8247-next-class-10448351135499681792-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 1675,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache",
+          "line": 1470,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-new-exact-s5.cache",
+          "line": 7,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-raw\\s5-1297177430172237824-0.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-raw-all.csv",
+          "line": 5,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-raw-exact.csv",
+          "line": 5,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5-v2.cache",
+          "line": 1513,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5.cache",
+          "line": 1511,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-a29e30e3-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 1673,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-probe8-next-collected-merged-s5.cache",
+          "line": 1475,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2412026,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-merged-s5.cache",
+          "line": 1475,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-merged-s5.cache",
+          "line": 1478,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-probe8-2-collected-merged-s5.cache",
+          "line": 1480,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-merged-s5.cache",
+          "line": 1716,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-completion87-current-s5.cache",
+          "line": 1711,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-unknown2-s6-current-s5.cache",
+          "line": 1711,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-probe8-completed-merged-s5.cache",
+          "line": 1709,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-merged-s5.cache",
+          "line": 1712,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-e8d965fd-current-exact-s5.cache",
+          "line": 1527,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 1719,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-partial-s6-merged-s5.cache",
+          "line": 1503,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        }
+      ]
+    },
+    {
+      "key": [
+        1297177430306324480,
+        0
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\cache-out\\new-exact-s5.cache",
+          "line": 5,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 1237263,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\s5-1297177430306324480-0.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 1237263,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 1721,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 1237263,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache",
+          "line": 5,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 1237263,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv",
+          "line": 5,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 1237263,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv",
+          "line": 5,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 1237263,
+          "budget": 15000000
+        }
+      ]
+    },
+    {
+      "key": [
+        1297177498891583488,
+        0
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297036761403228160-0-probe8\\cache-out\\new-exact-s5.cache",
+          "line": 6,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297036761403228160-0-probe8\\s5-1297177498891583488-0.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-merged-s5.cache",
+          "line": 1720,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-new-exact-s5.cache",
+          "line": 6,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-raw\\s5-1297177498891583488-0.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-raw-all.csv",
+          "line": 2,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-raw-exact.csv",
+          "line": 2,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 1724,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 2639953,
+          "budget": null
+        }
+      ]
+    },
+    {
+      "key": [
+        1298303330078949376,
+        0
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\actions-post-next10-s5.cache",
+          "line": 1206,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-run-post-probe-s5.cache",
+          "line": 1384,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next15-run-post-completion-s5.cache",
+          "line": 1472,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next17-run-post-completion-s5.cache",
+          "line": 1558,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0148c177-active-class-10448351135499550722-0-completion87-collection-merged-s5.cache",
+          "line": 1762,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-046db787-rank1-10448386319871639552-0-probe8-merged-s5.cache",
+          "line": 1640,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-049b2284-next-class-10448351144089485312-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 1877,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0d8f4d3e-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 1877,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-next-class-10448351135499550722-0-merged-exact-s5.cache",
+          "line": 1733,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-reconciliation-20261009-exact-s5.cache",
+          "line": 1731,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-10eaf37b-rank1-10448351135500075008-0-probe8-next-collected-merged-s5.cache",
+          "line": 1666,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache",
+          "line": 1728,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-dual-tight-10448351135499552768-0-probe8-sequential-completed-merged-s5.cache",
+          "line": 1731,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-s7-witness-merged-s5.cache",
+          "line": 1731,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-completion87-completed-merged-s5.cache",
+          "line": 1913,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-probe8-completed-merged-s5.cache",
+          "line": 1882,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-38613e2-hard-s5-s6-descent-v2-merged-s5.cache",
+          "line": 1726,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-3bafea55-rank1-10412322338480590848-0-probe8-merged-s5.cache",
+          "line": 1647,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-adaptive-next-probe8-completed-merged-s5.cache",
+          "line": 1725,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-class-88-probe8-completed-merged-s5.cache",
+          "line": 1726,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-rank1-10448351135499567104-0-probe8-merged-s5.cache",
+          "line": 1722,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-merged-s5.cache",
+          "line": 1723,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-next-probe8-adaptive-merged-s5.cache",
+          "line": 1725,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-merged-s5.cache",
+          "line": 1663,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-7e1caa96-rank1-10448351135499550784-0-probe8-merged-s5.cache",
+          "line": 1641,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-81be8247-next-class-10448351135499681792-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 1879,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache",
+          "line": 1672,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5-v2.cache",
+          "line": 1717,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5.cache",
+          "line": 1715,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-a29e30e3-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 1877,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-probe8-next-collected-merged-s5.cache",
+          "line": 1677,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-merged-s5.cache",
+          "line": 1677,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-merged-s5.cache",
+          "line": 1680,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-probe8-2-collected-merged-s5.cache",
+          "line": 1682,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-merged-s5.cache",
+          "line": 1640,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merged-s5.cache",
+          "line": 1640,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-merged-s5.cache",
+          "line": 1631,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-rank1-10448491872987906048-0-probe8-merged-s5.cache",
+          "line": 1629,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-final-merged-s5.cache",
+          "line": 1655,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-probe8-merged-s5.cache",
+          "line": 1655,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-c1bf7dc3-rank1-10448351135500075008-0-probe8-merged-s5.cache",
+          "line": 1661,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-merged-s5.cache",
+          "line": 1948,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-completion87-current-s5.cache",
+          "line": 1937,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-unknown2-s6-current-s5.cache",
+          "line": 1922,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-probe8-completed-merged-s5.cache",
+          "line": 1916,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-merged-s5.cache",
+          "line": 1943,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d538a68-rank1-10448355533546061824-0-probe8-merged-s5.cache",
+          "line": 1658,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-e8d965fd-current-exact-s5.cache",
+          "line": 1731,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-rank1-10448351135499550976-0-probe8-merged-s5.cache",
+          "line": 1645,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 1952,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-merged-s5.cache",
+          "line": 1623,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-final-merged-s5.cache",
+          "line": 1629,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-current-merged-s5.cache",
+          "line": 1624,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-merged-s5.cache",
+          "line": 1624,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-final-merged-s5.cache",
+          "line": 1629,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-interim-merged-s5.cache",
+          "line": 1629,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-probe8-merged-s5.cache",
+          "line": 1623,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-fc77fecf-rank1-1297036692816920704-0-probe8-merged-s5.cache",
+          "line": 1652,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-hard9-reverse-s5.cache",
+          "line": 853,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-local81-s5.cache",
+          "line": 661,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-model-hard2-s5.cache",
+          "line": 662,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next10-expanded-s5.cache",
+          "line": 1209,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next12-expanded-s5.cache",
+          "line": 1390,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next13-expanded-s5.cache",
+          "line": 1393,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next14-expanded-s5.cache",
+          "line": 1393,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next15-expanded-s5.cache",
+          "line": 1485,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next16-expanded-s5.cache",
+          "line": 1486,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-final-merged-s5.cache",
+          "line": 1619,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-probe9-merged-s5.cache",
+          "line": 1581,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-residual83-merged-s5.cache",
+          "line": 1619,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-repair-10376293541461626880-131072-probe8-merged-s5.cache",
+          "line": 1620,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-expanded-s5.cache",
+          "line": 1575,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-partial-s6-merged-s5.cache",
+          "line": 1707,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next2-s5.cache",
+          "line": 733,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next3-completion-s5.cache",
+          "line": 920,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next3-expanded-s5.cache",
+          "line": 952,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next3-hard1-s5.cache",
+          "line": 921,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next4-s5.cache",
+          "line": 1021,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next5-s5.cache",
+          "line": 1038,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next6-partial-s5.cache",
+          "line": 1072,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next6-s5.cache",
+          "line": 1075,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next7-s5.cache",
+          "line": 1096,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next8-expanded-s5.cache",
+          "line": 1151,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next8-reconstructed-s5.cache",
+          "line": 1148,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next8-s5.cache",
+          "line": 1148,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next9-actions-s5.cache",
+          "line": 1179,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-parent-a-expanded-s5.cache",
+          "line": 1377,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-parent-b-expanded-s5.cache",
+          "line": 1382,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-parent-b-focused-s5.cache",
+          "line": 1378,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-repair5-expanded-s5.cache",
+          "line": 1373,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\pre-hard9-reverse-s5.cache",
+          "line": 739,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\pre-recovery-s5.cache",
+          "line": 526,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\repair5-batch-action-baseline-s5.cache",
+          "line": 1206,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\repair5-batch-action-merged-s5.cache",
+          "line": 1370,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\reply27-current-s5.cache",
+          "line": 600,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-frontier-selection-20261005\\output\\reply27-repair-round3-s5.cache",
+          "line": 17,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        }
+      ]
+    },
+    {
+      "key": [
+        10378545341275312128,
+        131072
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-repair-10376293541461626880-131072-probe8\\cache-out\\new-exact-s5.cache",
+          "line": 8,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 1388610,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-repair-10376293541461626880-131072-probe8\\s5-10378545341275312128-131072.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 1388610,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0148c177-active-class-10448351135499550722-0-completion87-collection-merged-s5.cache",
+          "line": 3070,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-046db787-rank1-10448386319871639552-0-probe8-merged-s5.cache",
+          "line": 2926,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-049b2284-next-class-10448351144089485312-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 3278,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0d8f4d3e-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 3278,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-next-class-10448351135499550722-0-merged-exact-s5.cache",
+          "line": 3041,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-reconciliation-20261009-exact-s5.cache",
+          "line": 3039,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-10eaf37b-rank1-10448351135500075008-0-probe8-next-collected-merged-s5.cache",
+          "line": 2954,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache",
+          "line": 3036,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-dual-tight-10448351135499552768-0-probe8-sequential-completed-merged-s5.cache",
+          "line": 3039,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-s7-witness-merged-s5.cache",
+          "line": 3039,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-completion87-completed-merged-s5.cache",
+          "line": 3314,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-probe8-completed-merged-s5.cache",
+          "line": 3283,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-38613e2-hard-s5-s6-descent-v2-merged-s5.cache",
+          "line": 3034,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-3bafea55-rank1-10412322338480590848-0-probe8-merged-s5.cache",
+          "line": 2933,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-adaptive-next-probe8-completed-merged-s5.cache",
+          "line": 3033,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-class-88-probe8-completed-merged-s5.cache",
+          "line": 3034,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-rank1-10448351135499567104-0-probe8-merged-s5.cache",
+          "line": 3030,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-merged-s5.cache",
+          "line": 3031,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-next-probe8-adaptive-merged-s5.cache",
+          "line": 3033,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-merged-s5.cache",
+          "line": 2951,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-7e1caa96-rank1-10448351135499550784-0-probe8-merged-s5.cache",
+          "line": 2927,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-81be8247-next-class-10448351135499681792-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 3280,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache",
+          "line": 2962,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5-v2.cache",
+          "line": 3025,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5.cache",
+          "line": 3023,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-a29e30e3-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 3278,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-probe8-next-collected-merged-s5.cache",
+          "line": 2968,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-merged-s5.cache",
+          "line": 2969,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-merged-s5.cache",
+          "line": 2972,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-probe8-2-collected-merged-s5.cache",
+          "line": 2974,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-merged-s5.cache",
+          "line": 2926,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merged-s5.cache",
+          "line": 2926,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-merged-s5.cache",
+          "line": 2917,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-rank1-10448491872987906048-0-probe8-merged-s5.cache",
+          "line": 2915,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-final-merged-s5.cache",
+          "line": 2943,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-probe8-merged-s5.cache",
+          "line": 2943,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-c1bf7dc3-rank1-10448351135500075008-0-probe8-merged-s5.cache",
+          "line": 2949,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-merged-s5.cache",
+          "line": 3358,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-completion87-current-s5.cache",
+          "line": 3342,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-unknown2-s6-current-s5.cache",
+          "line": 3327,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-probe8-completed-merged-s5.cache",
+          "line": 3319,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-merged-s5.cache",
+          "line": 3350,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d538a68-rank1-10448355533546061824-0-probe8-merged-s5.cache",
+          "line": 2946,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-e8d965fd-current-exact-s5.cache",
+          "line": 3039,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-rank1-10448351135499550976-0-probe8-merged-s5.cache",
+          "line": 2931,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 3362,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-merged-s5.cache",
+          "line": 2909,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-final-merged-s5.cache",
+          "line": 2915,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-current-merged-s5.cache",
+          "line": 2910,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-merged-s5.cache",
+          "line": 2910,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-final-merged-s5.cache",
+          "line": 2915,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-interim-merged-s5.cache",
+          "line": 2915,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-probe8-merged-s5.cache",
+          "line": 2909,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-fc77fecf-rank1-1297036692816920704-0-probe8-merged-s5.cache",
+          "line": 2940,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-repair-10376293541461626880-131072-probe8-merged-s5.cache",
+          "line": 2904,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-repair-10376293541461626880-131072-probe8-new-exact-s5.cache",
+          "line": 8,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 1388610,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-partial-s6-merged-s5.cache",
+          "line": 3013,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\post-next17-dual-tight-repair-10376293541461626880-131072-probe8-out.csv",
+          "line": 1,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 1388610,
+          "budget": 15000000
+        }
+      ]
+    },
+    {
+      "key": [
+        10414574138294276096,
+        0
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\cache-out\\new-exact-s5.cache",
+          "line": 6,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 13324207,
+          "budget": null
+        },
+        {
+          "path": ".local\\n11\\dual-tight-ready-1297177430172106752-0-probe8\\s5-10414574138294276096-0.out.csv",
+          "line": 3,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 13324207,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 3500,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 13324207,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-new-exact-s5.cache",
+          "line": 6,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 13324207,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-all.csv",
+          "line": 6,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 13324207,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-raw-exact.csv",
+          "line": 6,
+          "kind": "replay",
+          "verdict": 2,
+          "nodes": 13324207,
+          "budget": 15000000
+        }
+      ]
+    },
+    {
+      "key": [
+        10520549467026882560,
+        0
+      ],
+      "verdict": 2,
+      "sources": [
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\actions-post-next10-s5.cache",
+          "line": 3609,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next12-run-post-probe-s5.cache",
+          "line": 4041,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next15-run-post-completion-s5.cache",
+          "line": 4164,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\next17-run-post-completion-s5.cache",
+          "line": 4277,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0148c177-active-class-10448351135499550722-0-completion87-collection-merged-s5.cache",
+          "line": 4839,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-046db787-rank1-10448386319871639552-0-probe8-merged-s5.cache",
+          "line": 4565,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-049b2284-next-class-10448351144089485312-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 5053,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-0d8f4d3e-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 5047,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-next-class-10448351135499550722-0-merged-exact-s5.cache",
+          "line": 4762,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1001d051-reconciliation-20261009-exact-s5.cache",
+          "line": 4754,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-10eaf37b-rank1-10448351135500075008-0-probe8-next-collected-merged-s5.cache",
+          "line": 4630,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-1173099-dual-tight-10448351135499552768-0-probe8-merged-s5.cache",
+          "line": 4744,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-dual-tight-10448351135499552768-0-probe8-sequential-completed-merged-s5.cache",
+          "line": 4751,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2199bcc8-s5-10448351135499552768-128-s7-witness-merged-s5.cache",
+          "line": 4752,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-completion87-completed-merged-s5.cache",
+          "line": 5152,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-2beb63af-next-class-10448351135499550721-0-probe8-completed-merged-s5.cache",
+          "line": 5065,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-38613e2-hard-s5-s6-descent-v2-merged-s5.cache",
+          "line": 4740,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-3bafea55-rank1-10412322338480590848-0-probe8-merged-s5.cache",
+          "line": 4584,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-adaptive-next-probe8-completed-merged-s5.cache",
+          "line": 4732,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-class-88-probe8-completed-merged-s5.cache",
+          "line": 4739,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-rank1-10448351135499567104-0-probe8-merged-s5.cache",
+          "line": 4719,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-merged-s5.cache",
+          "line": 4720,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-5dfabf84-s7-witness-next-probe8-adaptive-merged-s5.cache",
+          "line": 4724,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-6609f521-rank1-10448351135500075008-0-probe8-next-collected-merged-s5.cache",
+          "line": 4622,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-7e1caa96-rank1-10448351135499550784-0-probe8-merged-s5.cache",
+          "line": 4571,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-81be8247-next-class-10448351135499681792-0-adaptive-win-probe8-merged-s5.cache",
+          "line": 5057,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-951a5619-rank1-1297036692683882496-0-probe8-next-collected-merged-s5.cache",
+          "line": 4638,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5-v2.cache",
+          "line": 4712,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-9dcb11b6-current-exact-s5.cache",
+          "line": 4704,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-a29e30e3-active-class-10448351135499550722-0-merged-s5.cache",
+          "line": 5048,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-probe8-next-collected-merged-s5.cache",
+          "line": 4644,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-merged-s5.cache",
+          "line": 4645,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-merged-s5.cache",
+          "line": 4653,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-aa90bb5b-rank1-1297036692682702976-128-s6-probe8-collected-probe8-2-collected-merged-s5.cache",
+          "line": 4661,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-b20949a5-next-after-completion84-10448351135499550752-0-probe8-merged-s5.cache",
+          "line": 4560,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-next-dual-tight-10448351136036421632-0-completion84-merged-s5.cache",
+          "line": 4553,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-next-dual-tight-10448351136036421632-0-probe8-merged-s5.cache",
+          "line": 4519,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-ba3b5138-rank1-10448491872987906048-0-probe8-merged-s5.cache",
+          "line": 4511,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-final-merged-s5.cache",
+          "line": 4600,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-bdbdea7c-rank1-10412322338480586760-0-probe8-merged-s5.cache",
+          "line": 4599,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-c1bf7dc3-rank1-10448351135500075008-0-probe8-merged-s5.cache",
+          "line": 4615,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-cddcf64c-next-class-1297036761403228160-0-probe8-completed-merged-s5.cache",
+          "line": 5197,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-completion87-current-s5.cache",
+          "line": 5181,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-after-unknown2-s6-current-s5.cache",
+          "line": 5166,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d01858aa-next-class-1297599642637172736-0-probe8-completed-merged-s5.cache",
+          "line": 5158,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d18e1cc7-next-class-1297318167660462080-0-probe8-completed-merged-s5.cache",
+          "line": 5189,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-d538a68-rank1-10448355533546061824-0-probe8-merged-s5.cache",
+          "line": 4607,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-e8d965fd-current-exact-s5.cache",
+          "line": 4753,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f390d290-rank1-10448351135499550976-0-probe8-merged-s5.cache",
+          "line": 4577,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f7cdef17-next-class-1297177430172106752-0-probe8-early-win-merged-s5.cache",
+          "line": 5202,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-merged-s5.cache",
+          "line": 4410,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-completion76-final-merged-s5.cache",
+          "line": 4505,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-current-merged-s5.cache",
+          "line": 4423,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-merged-s5.cache",
+          "line": 4431,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-final-merged-s5.cache",
+          "line": 4506,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-next-probe8-second-next-s6-unknown2-interim-merged-s5.cache",
+          "line": 4506,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-f8dc62e-dual-tight-1297036692683751424-16384-probe8-nextclass-probe8-merged-s5.cache",
+          "line": 4415,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-fc77fecf-rank1-1297036692816920704-0-probe8-merged-s5.cache",
+          "line": 4592,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-hard9-reverse-s5.cache",
+          "line": 2827,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-local81-s5.cache",
+          "line": 2565,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-model-hard2-s5.cache",
+          "line": 2567,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next10-expanded-s5.cache",
+          "line": 3613,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next12-expanded-s5.cache",
+          "line": 4052,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next13-expanded-s5.cache",
+          "line": 4058,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next14-expanded-s5.cache",
+          "line": 4063,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next15-expanded-s5.cache",
+          "line": 4178,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next16-expanded-s5.cache",
+          "line": 4180,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-final-merged-s5.cache",
+          "line": 4398,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-probe9-merged-s5.cache",
+          "line": 4316,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-92-residual83-merged-s5.cache",
+          "line": 4397,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-dual-tight-repair-10376293541461626880-131072-probe8-merged-s5.cache",
+          "line": 4405,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-expanded-s5.cache",
+          "line": 4307,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next17-partial-s6-merged-s5.cache",
+          "line": 4689,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next2-s5.cache",
+          "line": 2657,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next3-completion-s5.cache",
+          "line": 2909,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next3-expanded-s5.cache",
+          "line": 2982,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next3-hard1-s5.cache",
+          "line": 2910,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next4-s5.cache",
+          "line": 3066,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next5-s5.cache",
+          "line": 3153,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next6-partial-s5.cache",
+          "line": 3244,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next6-s5.cache",
+          "line": 3250,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next7-s5.cache",
+          "line": 3345,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next8-expanded-s5.cache",
+          "line": 3445,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next8-reconstructed-s5.cache",
+          "line": 3441,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next8-s5.cache",
+          "line": 3441,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-next9-actions-s5.cache",
+          "line": 3535,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-parent-a-expanded-s5.cache",
+          "line": 4027,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-parent-b-expanded-s5.cache",
+          "line": 4038,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-parent-b-focused-s5.cache",
+          "line": 4028,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-repair5-expanded-s5.cache",
+          "line": 4020,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\pre-hard9-reverse-s5.cache",
+          "line": 2666,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next2-model-training-s5.cache",
+          "line": 2085,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\pre-recovery-s5.cache",
+          "line": 2364,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\repair5-batch-action-baseline-s5.cache",
+          "line": 3609,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\repair5-batch-action-merged-s5.cache",
+          "line": 4016,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\reply27-current-s5.cache",
+          "line": 2483,
+          "kind": "cache",
+          "verdict": 2,
+          "nodes": 0,
+          "budget": null
+        }
+      ]
+    }
+  ],
+  "unknown_child_records": [
+    {
+      "key": [
+        10378545341275312128,
+        64
+      ],
+      "sources": [
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\next9-shard0-out.csv",
+          "line": 5,
+          "kind": "replay",
+          "verdict": null,
+          "nodes": 15000000,
+          "budget": 15000000
+        }
+      ]
+    },
+    {
+      "key": [
+        10450602935313240064,
+        0
+      ],
+      "sources": [
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\repair5-batch-out.csv",
+          "line": 66,
+          "kind": "replay",
+          "verdict": null,
+          "nodes": 15000000,
+          "budget": 15000000
+        },
+        {
+          "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\raw\\repair5-batch-shard02-out.csv",
+          "line": 7,
+          "kind": "replay",
+          "verdict": null,
+          "nodes": 15000000,
+          "budget": 15000000
+        }
+      ]
+    }
+  ],
+  "status_counts": {
+    "WIN": 2,
+    "LOSS": 8,
+    "UNKNOWN": 92
+  },
+  "roots": [
+    "research\\experiments",
+    ".local",
+    ".test-tmp-reply27-20261008",
+    ".test-tmp-reply27-run-20261008"
+  ],
+  "boundary_sha256": "45a7275e7e3559813009b5203ef50c714280bc81c5458fbe3b183221a1deea7e"
+}
