@@ -1,0 +1,228 @@
+{
+  "artifacts": {
+    "cardinality": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-cardinality.json",
+    "class_boundary_audit": "post-67ecfaa9-class-1585267068834414720-0-class-boundary-audit.json",
+    "independent_loss_class_verifier": "post-67ecfaa9-class-1585267068834414720-0-class-boundary-verifier-output.json",
+    "ranking": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-ranking.json",
+    "raw_bundle": "raw/post-67ecfaa9-class-1585267068834414720-0-s6-descent/",
+    "repair": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-repair.json",
+    "reverse_audit": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-audit.json",
+    "s5_cache": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-merged-s5.cache",
+    "s5_merge_receipt": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-merge-receipt.json",
+    "s6_exact_cache": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact.cache",
+    "s6_exact_cache_receipt": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact-cache-receipt.json",
+    "s6_extended_source_audit": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-extended-source-audit.json",
+    "s6_source_manifest": "post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-source-manifest.json"
+  },
+  "current_exact_s5_cache": {
+    "LOSS": 5435,
+    "WIN": 145,
+    "conflict": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-merged-s5.cache",
+    "rows": 5580,
+    "sha256": "a8002eb4a6dd33de9cae0ae625f04de63881184211380d7efecacca8c5476ac6"
+  },
+  "dual_tight": true,
+  "main_at_dispatch": "67ecfaa918d7490d37ce3e86606eac0531e8fb52",
+  "minimum_additional_classes": 1,
+  "next_target": {
+    "key": [
+      1585267068835463168,
+      0
+    ],
+    "new_vertices": [
+      100,
+      108
+    ],
+    "targets_out": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-ranking-targets.csv",
+    "unknown_s5": 96
+  },
+  "processed_class": {
+    "after_s6_s5_status_counts": {
+      "LOSS": 104,
+      "UNKNOWN": 0,
+      "WIN": 0
+    },
+    "before_s6_s5_status_counts": {
+      "LOSS": 100,
+      "UNKNOWN": 4,
+      "WIN": 0
+    },
+    "canonical_s5_children": 104,
+    "coverage": [
+      38,
+      77,
+      87
+    ],
+    "key": [
+      1585267068834414720,
+      0
+    ],
+    "s4_verdict": "LOSS",
+    "verifier_passed": true
+  },
+  "proof_status": {
+    "empty_11x11": "UNKNOWN",
+    "reply27_root": "UNKNOWN"
+  },
+  "rational_dual": 1.0,
+  "remaining_vertices": 2,
+  "repair": {
+    "additive_unknown_s5": 96,
+    "distinct_unknown_s5_union": 96,
+    "minimum_classes": 1,
+    "selected": [
+      {
+        "all_s5": 106,
+        "coverage": [
+          38,
+          100,
+          108
+        ],
+        "key": [
+          1585267068835463168,
+          0
+        ],
+        "unknown_s5": 96
+      }
+    ]
+  },
+  "root": [
+    60,
+    27
+  ],
+  "s4_statuses": {
+    "LOSS": 31,
+    "UNKNOWN": 3100,
+    "WIN": 253
+  },
+  "s6_descent": {
+    "budget_per_target": 15000000,
+    "new_exact_rows": 181,
+    "new_verdict_counts": {
+      "LOSS": 7,
+      "UNKNOWN": 0,
+      "WIN": 174
+    },
+    "nodes": 126673632,
+    "parent_child_relations": 369,
+    "s5_parent_count": 4,
+    "s5_parent_results": [
+      {
+        "child_count": 95,
+        "counts": {
+          "0": 39,
+          "1": 53,
+          "2": 3
+        },
+        "key": [
+          1152921779618971648,
+          2105344
+        ],
+        "loss_witnesses": [
+          [
+            1152921779618975744,
+            2105344
+          ],
+          [
+            1152921779620020224,
+            2105344
+          ],
+          [
+            1152923712220037632,
+            537133056
+          ]
+        ],
+        "outcome": "LOSS",
+        "unresolved_s6_children_after_witness": 39
+      },
+      {
+        "child_count": 85,
+        "counts": {
+          "0": 0,
+          "1": 84,
+          "2": 1
+        },
+        "key": [
+          1585267068834414720,
+          64
+        ],
+        "loss_witnesses": [
+          [
+            1589770668461785216,
+            64
+          ]
+        ],
+        "outcome": "LOSS",
+        "unresolved_s6_children_after_witness": 0
+      },
+      {
+        "child_count": 96,
+        "counts": {
+          "0": 21,
+          "1": 73,
+          "2": 2
+        },
+        "key": [
+          1585267068835463296,
+          0
+        ],
+        "loss_witnesses": [
+          [
+            1585267068835463296,
+            16777216
+          ],
+          [
+            1585267068839657600,
+            0
+          ]
+        ],
+        "outcome": "LOSS",
+        "unresolved_s6_children_after_witness": 21
+      },
+      {
+        "child_count": 93,
+        "counts": {
+          "0": 41,
+          "1": 51,
+          "2": 1
+        },
+        "key": [
+          1585267069908156544,
+          0
+        ],
+        "loss_witnesses": [
+          [
+            1585267069908157568,
+            0
+          ]
+        ],
+        "outcome": "LOSS",
+        "unresolved_s6_children_after_witness": 41
+      }
+    ],
+    "saved_unknown_rows_retried_at_higher_budget": 3,
+    "unique_canonical_s6_boundary": 364,
+    "workers": 4
+  },
+  "s6_exact_cache": {
+    "LOSS": 172,
+    "UNKNOWN_excluded": 116,
+    "WIN": 4665,
+    "conflicts": 0,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact.cache",
+    "rows": 4837,
+    "sha256": "ccf60490dc5841ae176a5035349a0037f1ebd323f0345f67726570a73da25dbe"
+  },
+  "s6_reverse_propagation": {
+    "duplicate_loss_rows": 37,
+    "new_s5_loss_rows": 14,
+    "new_s6_loss_rows": 7,
+    "reply27_relevant_parents_enumerated": 51,
+    "safe_canonical_s5_parents_enumerated": 75,
+    "unique_s6_loss_keys_audited": 13,
+    "verdict_conflicts": 0
+  },
+  "schema": "n11-reply27-finite-checkpoint-report-v1",
+  "secured_vertices": 117
+}

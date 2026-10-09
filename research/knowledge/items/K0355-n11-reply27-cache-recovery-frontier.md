@@ -3946,6 +3946,45 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-11452254-reply27-checkpoint-artifact-hashes-v2.json
     role: manifest
     note: expanded inventory covering checkpoint outputs and archived raw inputs/logs
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-reply27-checkpoint-report.json
+    role: manifest
+    note: S6 descent後のexact cache、閉じたclass、全class coverと次repair targetのsummary
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-reply27-checkpoint-artifact-hashes.json
+    role: manifest
+    note: 657 checkpoint artifactsと543 raw S6 input/log/output fileのSHA-256 inventory
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-source-manifest.json
+    role: manifest
+    note: 4 S5 parentのS6 descent solver source、raw replay、hashとparameter
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-extended-source-audit.json
+    role: manifest
+    note: 保存済みS6と新規181 replayの全source hash・geometry・conflict監査
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact.cache
+    role: data
+    note: hash検証済みcanonical exact S6 cache、4,837 rows
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact-cache-receipt.json
+    role: manifest
+    note: canonical S6 cacheのrow数・verdict・source audit receipt
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-audit.json
+    role: manifest
+    note: 新規S6 LOSSのsafe canonical S5 reverse incidence監査
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-merged-s5.cache
+    role: data
+    note: 4 witness S5 LOSSとreverse-propagated LOSSを統合したexact S5 cache
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-class-boundary-audit.json
+    role: verifier
+    note: (1585267068834414720,0)の完全canonical 104-child LOSS boundary audit
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-class-boundary-verifier-output.json
+    role: verifier
+    note: 独立full boundary verifierの104/104 exact LOSS結果
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-cardinality.json
+    role: data
+    note: 3,384 s4 classの再分類、secured vertices、整数coverとrational dual
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-repair.json
+    role: data
+    note: 最新cacheに対して最適化した一class repairとdistinct UNKNOWN union
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-reverse-ranking.json
+    role: data
+    note: 未解決vertexへの次class候補。順位は探索順のみ
 scope: >-
   The latest checkpoint was dispatched from fetched main 11452254b02958ad0cc40925805362d60815f20f. Its canonical S5 cache has 5,474 rows (145 WIN / 5,329 LOSS / conflict 0).
   All 3,384 s4 classes classify as 30 LOSS / 253 WIN / 3,101 UNKNOWN; 114/119 third moves are secured and five remain. Minimum additional class cover and rational LP dual are both 2 (dual-tight).
@@ -4356,3 +4395,17 @@ probeの7 LOSSをmain cacheへconflictなしでmergeしたexact S5 cacheは5,474
 Report `post-11452254-reply27-checkpoint-report.json`、source manifest、builder、SHA-256 inventoryを同prefixに保存した。Inventoryは69 artifactsと403 source referencesを検証し、missing/mismatch 0。inventory SHA-256は `f828692722691d140e0ac55af57603395e8b9ecb672bdd42f509f79b026141ec`。raw、input、cache、merge receipt、geometry/S6境界監査、cardinality、repair、rankingを含み、元の`.local`証拠を保持している。`{60,27}` と11×11 empty boardはUNKNOWNのまま。
 
 Before push, all 8 S5 and 84 S6 target input CSVs and runner logs (184 files) were copied byte-for-byte from `.local` into the corresponding experiment raw directories; every original was preserved. `post-11452254-raw-input-preservation-manifest.json` binds each original and archived hash. The extended source manifest records 589 verified source paths, and the v2 inventory covers 350 checkpoint artifacts with zero missing paths or hash mismatches (SHA-256 `a37d2eb999b74a32a3faaf8ac0ef43a12a2ea022eed88bc46f9553e4efe95c51`). Report, source manifest and inventory v2 supersede the earlier inventory for complete input/log archival.
+
+## 2026-10-09 JST dual-tight S6 closure and reverse propagation on main 67ecfaa9
+
+作業開始時に `HEAD == origin/main == 67ecfaa918d7490d37ce3e86606eac0531e8fb52`。solver processはなく、fetch後もmainは同じだった。保存済み・未追跡の過去exact S5 evidenceをcacheと照合し、77行と8行は全件すでに同verdictでcurrent cacheに存在、新規0・conflict 0を確認した。旧targetの完全canonical S5 boundaryは104子、S6後の再開時点でLOSS100 / UNKNOWN4 / WIN0。4つのUNKNOWN S5 parentについて保存済みS6、raw history、同budget UNKNOWN、geometryを再監査し、15M budgetでdispatch可能なS6境界だけを処理した。
+
+15,000,000 nodes/target・4 workersのadaptive S6 runは4 parentの完全canonical境界のunion 364 keys、369 incidencesのうち181件を新規replayし、全てexact（174 WIN / 7 LOSS / 0 UNKNOWN）、合計126,673,632 nodes。4つのS5 parentはそれぞれexact LOSS witnessを得た。LOSS witnessが出たparent専用の残りS6はdispatchしていない。新しい7個のS6 LOSSを含むreverse auditは、safe canonical one-point parent全体を調べ、75 parents / 51 reply27-relevant parentsを確認。既存cacheと衝突なく14件のS5 LOSSを追加し、37件は既知LOSSと重複した。UNKNOWNからの伝播はない。
+
+更新exact S5 cacheは5,580 rows（WIN145 / LOSS5435 / conflict0）、SHA-256 `a8002eb4a6dd33de9cae0ae625f04de63881184211380d7efecacca8c5476ac6`。独立full boundary auditはclass `(1585267068834414720,0)` の全104 canonical S5 childがexact LOSSであることを再生成したgeometryから確認し、coverage `{38,77,87}` を記録した。よってこのs4 classはLOSS。
+
+全3,384 classの再計算はLOSS31 / WIN253 / UNKNOWN3100、secured 117/119、remaining 2。minimum additional class count 1とrational LP dual 1は一致しdual-tight。前回のminimum 2から1への変化は、新たにexact LOSSとなったclassのcoverageが3 verticesを加え、remainingを5から2へ減らしたためで、cardinality/repairを新cacheから再最適化した。最小repairは1 class、distinct UNKNOWN S5 union 96。次のrank-1は `(1585267068835463168,0)`、106 children中既知LOSS10 / UNKNOWN96、残りvertex `{100,108}` を追加で覆う。この順位は探索scheduleであり、verdictではない。
+
+S6 source auditは4,730 source files / 4,953 canonical S6 keysをhash検証し、exact S6 cacheは4,837行（WIN4665 / LOSS172）、unknown-only 116 keysは除外、conflict0。`.local`のinput/log/output 543 filesをexperiment rawへbyte-identical copyし、originalsを保持した。artifact inventoryは657 files・40,078,632 bytesを検証し、missing/mismatch 0、SHA-256 `79874ec242b05c184ad6b777866e60b1b7f1dfc8dfd3a9a892639d6db9dfbd75`。Report、source manifest、audit、cache、merge receipt、geometry verification、cardinality、repair、rankingは上記artifact linksに結び付いている。
+
+`{60,27}` と11×11 empty boardはUNKNOWNのまま。今回確定したのはreply27 lane内のこのs4 classのLOSSのみ。

@@ -87,11 +87,15 @@ def read_saved_exact_s6(source_audit: dict) -> tuple[dict, list[dict]]:
             verdict = int(row[6])
             if verdict not in (0, 1, 2):
                 raise SystemExit(f"invalid saved solver verdict: {src_path_text}:{row_num} {verdict}")
+            budget = int(row[5])
+            if budget <= 0:
+                raise SystemExit(f"invalid saved s6 budget: {src_path_text}:{row_num} {budget}")
             nodes = int(row[7])
             if nodes < 0:
                 raise SystemExit(f"negative nodes: {src_path_text}:{row_num} {nodes}")
             legal = int(row[3])
             raw_results[canonical].append({"verdict": verdict, "nodes": nodes, "legal": legal,
+                                           "budget": budget,
                                            "source": src_path_text, "row": row_num,
                                            "raw_key": list(raw_key), "normalized": raw_key != canonical})
             verdict_counts[str(verdict)] += 1

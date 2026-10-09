@@ -1,0 +1,37 @@
+{
+  "schema": "n11-cardinality-minimum-repair-refinement-input-v1",
+  "claim": "Selected class keys and coverage are copied from the exact-cache cardinality result; the refinement only minimizes the distinct UNKNOWN S5 union by established one-class exchanges.",
+  "root": [
+    60,
+    27
+  ],
+  "minimum_additional_classes": 2,
+  "source_cardinality": {
+    "path": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-67ecfaa9-class-1585267068834414720-0-probe8-completed-cardinality.json",
+    "sha256": "73f29c8f15ca3ee573b93fd2d58d1f97c08ec81e73980a695ccff27636265abc"
+  },
+  "repair_selected": [
+    {
+      "coverage": [
+        38,
+        77,
+        87
+      ],
+      "key": [
+        1585267068834414720,
+        0
+      ]
+    },
+    {
+      "coverage": [
+        38,
+        100,
+        108
+      ],
+      "key": [
+        1585267068835463168,
+        0
+      ]
+    }
+  ]
+}
