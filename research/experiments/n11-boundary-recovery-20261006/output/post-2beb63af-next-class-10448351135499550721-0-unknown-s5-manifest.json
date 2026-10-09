@@ -1,0 +1,42 @@
+{
+  "boundary_children": 105,
+  "boundary_status_counts": {
+    "LOSS": 10,
+    "UNKNOWN": 95,
+    "WIN": 0
+  },
+  "claim": "Geometry rebuilt the full canonical s5 boundary; only children absent from the exact cache are materialized as unresolved targets.",
+  "class_key": [
+    10448351135499550721,
+    0
+  ],
+  "output": {
+    "bytes": 6792,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-unknown-s5-targets.csv",
+    "sha256": "deb5d6fa9e3b1183e4c2d2c7a78948d425766e934c58374ddb54041c02cbedd0"
+  },
+  "schema": "n11-dual-tight-class-unknown-materialization-v1",
+  "sources": [
+    {
+      "bytes": 13905,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-boundary-audit.json",
+      "sha256": "c52166eae74168e3aba96918d1d6a31c93973c1db2388a8151182942c4d4b963"
+    },
+    {
+      "bytes": 213640,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-81be8247-next-class-10448351135499681792-0-adaptive-win-probe8-merged-s5.cache",
+      "sha256": "d6b853d8a3802a89b75dd880672efc160d1c4855a821b8f484a96a79460fb6a6"
+    },
+    {
+      "bytes": 6245,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/materialize_dual_tight_class_unknowns.py",
+      "sha256": "c0373b749f0c3b04214cf0d4e050b1345279ecd81232ff1f52b7c31526430f12"
+    },
+    {
+      "bytes": 6439,
+      "path": "research/experiments/n11-search-methods/scripts/dfpn_edge_classes.py",
+      "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+    }
+  ],
+  "unknown_targets": 95
+}

@@ -1571,6 +1571,36 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2199bcc8-s5-10448351135499552768-128-s7-witness-sources.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Hash-bound raw inputs and exact S7 LOSS witness replays copied from preserved local results.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-dual-tight-ranking-after-completion87-loss.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-dual-tight-ranking-after-completion87-loss.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Updated dual-tight ranking; next target ranking is scheduling order only.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-completion87-completed-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-completion87-completed-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Geometry audit verifies all 105 canonical children are legal and exact LOSS; class coverage vertices are 104, 110, and 120.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-completion87-completed-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-completion87-completed-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Merged exact s5 cache: 5,364 canonical rows, WIN 132 / LOSS 5,232, zero conflict.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-completion87-completed-raw-exact.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-completion87-completed-raw-exact.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 87 exact LOSS completion rows; raw replay preserved separately from the cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-loss-class-cache-verification.log](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-loss-class-cache-verification.log)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Independent cache boundary verifier confirms complete 105-child LOSS boundary and zero conflict.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-probe8-completed-raw-exact.csv](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-next-class-10448351135499550721-0-probe8-completed-raw-exact.csv)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Eight exact LOSS probe rows; raw replay preserved separately from the cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-reply27-cardinality-after-completion87-loss.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-reply27-cardinality-after-completion87-loss.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Recomputed 3,384 class statuses, secured vertices, integer cover, and rational dual from the merged exact cache.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-reply27-checkpoint-artifact-hashes-20261009.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-reply27-checkpoint-artifact-hashes-20261009.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): SHA-256 inventory of 1,848 artifacts and 8,466 manifested sources; zero missing paths or mismatches; digest 65d388cde6e8b845e90afd0779f41d6b6a2624419233bcca3fe808f32a7af8c7.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-reply27-checkpoint-report.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-reply27-checkpoint-report.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): Complete 105-child exact LOSS checkpoint, cache counts, all-class cover, repair, ranking, and proof scope.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-selected31-repair-after-completion87-loss.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-2beb63af-selected31-repair-after-completion87-loss.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Reoptimized two-class repair with 196 distinct UNKNOWN s5 positions.
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-augmented-s6-source-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-38613e2-hard-s5-s6-descent-v2-augmented-s6-source-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): All 87 new s6 results revalidated with the existing hash-attested saved-s6 corpus.
