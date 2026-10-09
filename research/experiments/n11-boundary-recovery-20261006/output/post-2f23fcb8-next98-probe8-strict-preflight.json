@@ -1,0 +1,143 @@
+{
+  "blocked_same_or_higher_budget_unknown_keys": [],
+  "budget": 15000000,
+  "budget_binding": "The saved raw-history audit attests its own requested_budget; this value must match the dispatch budget. Legacy budgetless audits are rejected and must be regenerated.",
+  "claim": "Preflight only; it classifies no game outcomes. Same-budget UNKNOWN remains blocked and every scheduled target remains UNKNOWN until an exact replay or valid s6 witness is found.",
+  "class_key": [
+    1152921504741065728,
+    68719476736
+  ],
+  "exact_cache_sha256": "dbcf47de9b2233cbbe74025a16e67e2b44b261c9e566828bb8a8d15b5618a7e2",
+  "historical_source_coverage": {
+    "altered_csv": 0,
+    "current_csv": 8809,
+    "missing_csv": 0,
+    "new_csv": 2,
+    "normalized_crlf_to_lf": 0,
+    "reference_csv": 8807,
+    "status": "PASS"
+  },
+  "raw_history": {
+    "conflicts": 0,
+    "csv_files_examined": 8809,
+    "prior_exact": 0,
+    "rows_examined": 4723,
+    "same_or_higher_budget_unknown_rows": 0
+  },
+  "ready_keys": [
+    [
+      1152921504741065760,
+      68719476736
+    ],
+    [
+      1152921504741131264,
+      68719476736
+    ],
+    [
+      1152921504749454336,
+      68719476736
+    ],
+    [
+      1152921642180019200,
+      68719476736
+    ],
+    [
+      1153484454694487040,
+      68719476736
+    ],
+    [
+      1188950301760029696,
+      68719476736
+    ],
+    [
+      10376293678900577280,
+      68719476736
+    ],
+    [
+      10952754293765047296,
+      68719476736
+    ]
+  ],
+  "saved_s6": {
+    "conflicts": 0,
+    "new_exact": 0,
+    "parents": 8,
+    "source_files": 653,
+    "unknown_parents": 8
+  },
+  "schema": "n11-dual-tight-probe-preflight-binding-v1",
+  "sources": [
+    {
+      "bytes": 623,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe8.csv",
+      "sha256": "d0a22e5e18081e944320decb7d0f1b65abfec2571f7b69e90f40fdf7567f4ee3"
+    },
+    {
+      "bytes": 4169,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe8-manifest.json",
+      "sha256": "fa87568c1ffa7795fbb83370c394344a9e4c1e3fe47e3fd6723d263aabeffdfc"
+    },
+    {
+      "bytes": 220048,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-next-class-10376293541461626880-67108864-probe8-early-win-merged-s5.cache",
+      "sha256": "dbcf47de9b2233cbbe74025a16e67e2b44b261c9e566828bb8a8d15b5618a7e2"
+    },
+    {
+      "bytes": 2500242,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe8-raw-history-current-against-b4-target.csv.json",
+      "sha256": "b52d6a0e557c87793048b3cbaf5ff9ef9f809bef0687f733e6752be3207d49ae"
+    },
+    {
+      "bytes": 2499725,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b4d9b6a9-next-class-1152921504741065728-68719476736-probe8-raw-history-baseline.json",
+      "sha256": "4f06845979f4faf4f0bddddc676b9f989c4c56423649c6af60e36ffba2478d6b"
+    },
+    {
+      "bytes": 6006,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/verify_raw_history_coverage.py",
+      "sha256": "8c050fe79b37ca280623a5ae1f46c7a6eb487780e33f88904932fbb7247679f0"
+    },
+    {
+      "bytes": 209294,
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-b4d9b6a9-next-class-1152921504741065728-68719476736-probe8-saved-s6-summary.json",
+      "sha256": "88ccfc0773cf463285d7030006a8653c75ff099f4bc71724297e1ba40f91dabe"
+    },
+    {
+      "bytes": 10741,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_s5_raw_history.py",
+      "sha256": "e865565e48ad9742af440e9d8c559df45d7a45d9481a535aa38c64ce497721b6"
+    },
+    {
+      "bytes": 16190,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_saved_s6_targets.py",
+      "sha256": "38cb0596868c57631ddbcb1927420fcd6f9579b8f7a0e4c443727b3ab01781d9"
+    },
+    {
+      "bytes": 4764,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/audit_probe_preflight.py",
+      "sha256": "57d7796861c5a97eeba046b10eb543dec54fd96eee07e90f796b444d2911fe0a"
+    },
+    {
+      "bytes": 8158,
+      "path": "research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_probe_preflight.py",
+      "sha256": "08dc5e5c059f2b6f3d39305c8e02873c2683f05d49bd9cafdb4064bd07c7183d"
+    },
+    {
+      "bytes": 6439,
+      "path": "research/experiments/n11-search-methods/scripts/dfpn_edge_classes.py",
+      "sha256": "6cca3cfe161ffc9ffc199c56b595e9d0f72b839ee945e8b7e2c4090dafcf0c0c"
+    }
+  ],
+  "target_count": 8,
+  "target_legal_counts": {
+    "10376293678900577280,68719476736": 85,
+    "10952754293765047296,68719476736": 86,
+    "1152921504741065760,68719476736": 86,
+    "1152921504741131264,68719476736": 86,
+    "1152921504749454336,68719476736": 87,
+    "1152921642180019200,68719476736": 85,
+    "1153484454694487040,68719476736": 86,
+    "1188950301760029696,68719476736": 87
+  },
+  "target_sha256": "d0a22e5e18081e944320decb7d0f1b65abfec2571f7b69e90f40fdf7567f4ee3"
+}

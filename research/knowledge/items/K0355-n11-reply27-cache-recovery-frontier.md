@@ -3649,10 +3649,112 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-034a26a4-build-class-win-checkpoint.py
     role: verifier
     note: checkpoint reportとhash inventoryの再生成・整合性検査
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-b4d9b6a9-next98-key-precision-correction.md
+    role: source
+    note: 最新mainで保存されたcanonical keyの整数精度修正
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-b4d9b6a9-next98-conditional-s6-cover-audit.json
+    role: verifier
+    note: dual-tight repair候補に対する有限conditional S6 cover audit
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-b4d9b6a9-next98-conditional-s6-cover.csv
+    role: data
+    note: geometryで検査されたconditional S6 coverのwitness一覧
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-reply27-checkpoint-report.json
+    role: data
+    note: exact S5 probe、S6 descent、reverse LOSS伝播後のcheckpoint summary
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-reply27-checkpoint-source-manifest.json
+    role: manifest
+    note: solver raw、input、audit、cacheとsource SHA-256
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-reply27-checkpoint-artifact-hashes.json
+    role: manifest
+    note: parent inventoryを継承した247 artifactsと9736 sourcesのSHA-256 inventory
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-build-reply27-s6-checkpoint.py
+    role: verifier
+    note: S5/S6 merge、class status、cover、dual、source hashを検査するcheckpoint builder
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-all-canonical-s5-targets.csv
+    role: data
+    note: 対象s4 classのcanonical s5 boundary
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-conditional-s6-geometry-audit.json
+    role: verifier
+    note: latest-main finite coverのgeometry監査
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-after-s6-reverse-class-boundary-audit.json
+    role: verifier
+    note: 完全canonical 102-child boundaryとcache verdictのgeometry監査
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-after-s6-reverse-merged-s5.cache
+    role: data
+    note: checkpoint時点のexact canonical s5 cache
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe8-raw-exact.csv
+    role: solver
+    note: 最初の8件の15M exact s5 raw verdict
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-raw-exact.csv
+    role: solver
+    note: 次の8件の15M exact s5 raw verdict
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-round2-raw-all.csv
+    role: solver
+    note: round2のexact LOSSと保持されたUNKNOWN raw結果
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-round2-raw-exact.csv
+    role: solver
+    note: round2の7 exact s5 LOSS
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-probe-next8-round2-raw-history-audit-full-boundary.json
+    role: verifier
+    note: 全class childのsaved raw・same-budget履歴とcache intersection
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-round2-unknown-parent-s6-descent-raw-exact.csv
+    role: solver
+    note: 完全90-child s6 boundary上の56 WIN・3 LOSS exact rows
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-round2-unknown-parent-s6-descent-exact-s6.cache
+    role: data
+    note: s6 descentのexact cache
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-round2-unknown-parent-s6-descent-sources.json
+    role: manifest
+    note: s6 raw outputと90-parent boundaryのsource manifest
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-round2-unknown-parent-s6-descent-summary.json
+    role: data
+    note: s6 descentのboundary coverage、node count、exact verdict summary
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-round2-s6-reverse-audit.json
+    role: verifier
+    note: 9 exact LOSS s6全件からsafe canonical s5 parentへのreverse incidence audit
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-round2-s6-reverse-derived-s5.cache
+    role: data
+    note: reverse auditから得た新規s5 LOSS rows
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-next98-after-s6-reverse-merge-receipt.json
+    role: manifest
+    note: reverse-derived cache mergeとconflict=0のreceipt
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-after-s6-reverse-augmented-s6-source-audit.json
+    role: verifier
+    note: 保存済み・今回追加s6 sourcesを統合したexact source audit
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-after-s6-reverse-cardinality.json
+    role: data
+    note: 全3384 classのstatus、secured vertices、最小coverとdual
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-after-s6-reverse-cover.json
+    role: data
+    note: current exact cacheから再最適化したinteger cover
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-after-s6-reverse-cover-targets.csv
+    role: data
+    note: dual-tight repair setのtarget一覧
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-after-s6-reverse-repair-refined.json
+    role: data
+    note: repair set再最適化とdistinct UNKNOWN union
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-after-s6-reverse-ranking.json
+    role: data
+    note: 次のdual-tight scheduling target。勝敗証明ではない
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-after-s6-reverse-ranking-targets.csv
+    role: data
+    note: ranking入力となったgeometry class frontier
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-merge-next98-probe8-exact-cache.py
+    role: verifier
+    note: 15M probe8 exact rowを既存cacheへ安全にmerge
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-bind-s6-history-preflight.py
+    role: verifier
+    note: parent-specific saved-S6 history preflightをmaterializer schemaへbind
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-merge-s6-reverse-s5-cache.py
+    role: verifier
+    note: geometry-checked S6 reverse LOSS rowsをs5 cacheへmerge
+  - path: research/experiments/n11-boundary-recovery-20261006/output/post-2f23fcb8-select-next8-s5-probes.py
+    role: verifier
+    note: raw-history ready targetから8件を選ぶschedule builder
 scope: >-
-  Latest finite checkpoint is based on fetched main f7cdef1714ca417a2201b68beb5a18b4b33f8fd9. The exact canonical s5 cache has 5,414 rows (140 WIN / 5,274 LOSS / conflict 0).
-  All 3,384 s4 classes classify as 30 LOSS / 248 WIN / 3,106 UNKNOWN; 114/119 third moves are secured and five remain. Minimum additional class cover and rational LP dual are both 2 (dual-tight).
-  The two-class repair has 196 distinct UNKNOWN s5 positions. Class (1297177430172106752,0) is WIN from its full 102-child boundary with two geometry-verified exact WIN children; 92 children remain UNKNOWN. Rank 1 is (10376293541461626880,67108864) with 97 UNKNOWN children; ranking is scheduling only.
+  Current finite checkpoint is based on fetched main 2f23fcb80ae853c93d31ed5d2e0f8d7d25ce757a. The exact canonical s5 cache has 5,452 rows (144 WIN / 5,308 LOSS / conflict 0).
+  All 3,384 s4 classes classify as 30 LOSS / 251 WIN / 3,103 UNKNOWN; 114/119 third moves are secured and five remain. Minimum additional class cover and rational LP dual are both 2 (dual-tight).
+  The two-class repair has 170 distinct UNKNOWN s5 positions. Class (1152921504741065728,68719476736) remains UNKNOWN after its full 102-child boundary audit: 31 exact LOSS / 71 UNKNOWN / 0 WIN. Rank 1 is that class with 71 UNKNOWN s5 children; ranking is scheduling only.
   {60,27} and the 11x11 empty-board winner remain UNKNOWN.
 evidence: >-
   At checkpoint start, no reply27 solver was running and HEAD == origin/main == 2beb63af85aa1134bc0db6dd742dc1ba7e961419; fetch returned the same main. Class (10448351135499550721,0) has 105 canonical s5 children, with 10 exact LOSS and 95 UNKNOWN. The eight-target 15,000,000-budget probe passed raw-history and saved-S6 preflight (8 ready, 0 blocked, 0 conflict); it returned eight exact LOSS in 37,474,347 nodes. The remaining 87 targets independently passed strict preflight: 7,772 raw CSV sources, zero prior exact, zero same-or-higher-budget UNKNOWN, and 1,306 saved-S6 source files with all 87 parents still UNKNOWN. Completion returned 87 exact LOSS in 417,376,483 nodes. The combined 95 new exact rows used 454,850,830 nodes; no S6 descent or reverse-propagated LOSS occurred.
@@ -3669,6 +3771,10 @@ evidence: >-
   The 15M probe scheduled eight rows, started five, and stopped after exact WINs appeared; it preserved 3 exact LOSS, 2 exact WIN, and 39,801,125 nodes. Geometry verified both WIN children as legal canonical class children; the full boundary is 8 LOSS / 2 WIN / 92 UNKNOWN. The class is WIN; no remaining siblings were dispatched.
   The merged cache has 5,414 exact rows (140 WIN / 5,274 LOSS / conflict 0), SHA-256 6049d2e9a31253896e1a17cff4360e41aea612c7ee5be3a7fee93e8e32d630e1. All-class recomputation gives 30 LOSS / 248 WIN / 3,106 UNKNOWN; secured vertices remain 114/119. Integer minimum and rational dual are both 2. The reoptimized repair has two classes and 196 distinct UNKNOWN s5 children; rank 1 is (10376293541461626880,67108864), with 97 UNKNOWN children.
   Report, source manifest, and artifact inventory are post-f7cdef17-reply27-checkpoint-report.json, post-f7cdef17-reply27-checkpoint-source-manifest.json, and post-f7cdef17-reply27-checkpoint-artifact-hashes.json. The inventory checks 48 output artifacts and 52 manifested sources (53 hashes including the parent inventory), with no missing or mismatched files; inventory SHA-256 is a299ae2c7d9ea1fcf5b897177ec69d1d15a0df1759310bf98f6ae3cc10495ce6.
+  Latest-main boundary artifacts on b4d9b6a9 and 2f23fcb8 preserve the conditional 49-S6 cover audit and the exact-integer canonical key correction. On fetched main 2f23fcb80ae853c93d31ed5d2e0f8d7d25ce757a, the selected class (1152921504741065728,68719476736) had 102 canonical s5 children. Direct S5 processing ran three 15M batches: 23 exact LOSS in 106,023,596 exact nodes and one UNKNOWN at 15M, which was not retried. The full class boundary audit after all merges reports 31 LOSS / 71 UNKNOWN / 0 WIN; no s4 class was closed.
+  For the unresolved S5 parent (1152921504741069824,68719476736), its complete canonical s6 boundary had 90 children, all unseen in saved exact s6 evidence and with no same-budget local s6 replay. The 15M descent returned 56 exact WIN / 3 exact LOSS / 0 UNKNOWN in 35,539,141 nodes and derived the parent LOSS from the exact LOSS witness. Reverse incidence then checked 52 safe canonical s5 parents (36 reply27-relevant) against nine unique exact s6 LOSS witnesses; 10 new and 26 duplicate S5 LOSS rows were found, with zero conflict.
+  The resulting merged exact s5 cache is 5,452 rows (144 WIN / 5,308 LOSS / conflict 0), SHA-256 3767048e56783935f7ae5e9dbd163a6cd2ad17dc15f226e4500d9a81227c08fd. Recomputed all 3,384 classes: 30 LOSS / 251 WIN / 3,103 UNKNOWN; secured 114/119, five remain. Minimum additional cover and rational dual are both 2, dual-tight; reoptimized repair has two classes and 170 distinct UNKNOWN s5 positions. Rank 1 remains (1152921504741065728,68719476736) with 71 UNKNOWN; raw-history and saved-s6 preflight must be refreshed before dispatch.
+  Report post-2f23fcb8-reply27-checkpoint-report.json and source manifest post-2f23fcb8-reply27-checkpoint-source-manifest.json bind the direct S5 rows, S6 descent, geometry checks, reverse propagation and global optimization. Inventory post-2f23fcb8-reply27-checkpoint-artifact-hashes.json verifies 247 artifacts and 9,736 manifested sources with zero missing or mismatched hashes (SHA-256 98d4cbef60c35fd96503db0592eff75a97436005ad3725bc0c60e276fa97fdb6). {60,27} and the 11×11 empty board remain UNKNOWN.
 ---
 
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
