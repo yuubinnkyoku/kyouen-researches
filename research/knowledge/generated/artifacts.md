@@ -1354,6 +1354,36 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-049b2284-selected31-repair-after-probe8-win.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-049b2284-selected31-repair-after-probe8-win.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): Reoptimized three-class additive repair with 291 distinct UNKNOWN s5 positions.
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-cardinality.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-cardinality.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 全3,384 class、secured vertex、minimum integer coverとrational dual
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-class-boundary-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): class (1297036692683751456,0) の全104 canonical S5 childを再生成しWIN witnessを検査
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-completed-merged-s5.cache](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-completed-merged-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): exact S5 cache 5,603件、WIN 151・LOSS 5,452、conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-completed-sources.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-completed-sources.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): exact WIN/LOSSと保持したUNKNOWN raw row、sourceとgeometry binding
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-ranking.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-ranking.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): WIN class除外後の次repair target schedule。順位は勝敗証明ではない
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-s5-cache-corpus-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-s5-cache-corpus-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 全保存済みS5 cache 331件を照合し5,603 verdict一致、missing・extra・conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-s5-raw-replay-corpus-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-s5-raw-replay-corpus-audit.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 全保存済みraw S5 replayを照合しcache外exact・verdict conflict 0
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-artifact-hashes.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-artifact-hashes.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): checkpoint artifactとlocal raw evidenceのSHA-256 inventory
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-report.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-report.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): main 07f822e5からの2回のprobeとexact WIN class後の最新cache frontier
+## [research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-source-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-source-manifest.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): probeのraw input/output/log、solver、cache、geometryと再最適化のsource hash
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-class-boundary-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-0d8f4d3e-active-class-10448351135499550722-0-class-boundary-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Full canonical boundary audit of the active class after both exact cache sources.

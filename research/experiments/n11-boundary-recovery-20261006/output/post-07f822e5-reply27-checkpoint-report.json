@@ -1,0 +1,162 @@
+{
+  "artifact_hash_inventory_path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-artifact-hashes.json",
+  "claim": "Finite exact reply27 cache checkpoint only. {60,27} and the 11x11 empty board remain UNKNOWN.",
+  "class_status_counts": {
+    "LOSS": 31,
+    "UNKNOWN": 3091,
+    "WIN": 262
+  },
+  "dual_tight": true,
+  "empty_11x11_board_status": "UNKNOWN",
+  "exact_s5_cache": {
+    "LOSS": 5452,
+    "WIN": 151,
+    "conflicts": 0,
+    "entries": 5603,
+    "path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-after-probe8-probe8-completed-merged-s5.cache",
+    "sha256": "00d4ef09edd3e4bb7141d3e9e56ee668ec8188de7eeb2e95b815af05539b7db1"
+  },
+  "exact_s5_cache_delta": {
+    "LOSS": 14,
+    "WIN": 1,
+    "nodes_by_new_exact_rows": 97570974,
+    "rows": 15
+  },
+  "main_at_dispatch": "07f822e56d3627701a677140d1b5a00c39f26911",
+  "minimum_additional_classes": 1,
+  "next_target": {
+    "canonical_s5_children": 106,
+    "coverage": [
+      5,
+      100,
+      108
+    ],
+    "dual_vertex": 100,
+    "dual_weight": "1",
+    "key": [
+      1333065489702715392,
+      0
+    ],
+    "known_loss_s5": 7,
+    "rank": 1,
+    "targets_csv": "research\\experiments\\n11-boundary-recovery-20261006\\output\\post-07f822e5-after-probe8-probe8-ranking-targets.csv",
+    "unknown_s5": 99,
+    "unknown_s5_legal_count_max": 105,
+    "unknown_s5_legal_count_min": 85
+  },
+  "probe_runs": [
+    {
+      "class_status_after": "UNKNOWN",
+      "completed": 8,
+      "exact_counts": {
+        "LOSS": 8,
+        "UNKNOWN": 0,
+        "WIN": 0
+      },
+      "new_exact": 8,
+      "nodes": 42522525,
+      "scheduled": 8
+    },
+    {
+      "class_status_after": "WIN",
+      "completed": 8,
+      "exact_counts": {
+        "LOSS": 6,
+        "UNKNOWN": 1,
+        "WIN": 1
+      },
+      "new_exact": 7,
+      "nodes": 55048449,
+      "scheduled": 8,
+      "unknown_rows_remain_unknown": [
+        [
+          1188950301761077248,
+          68719476736
+        ]
+      ]
+    }
+  ],
+  "processed_class": {
+    "after_first_probe": {
+      "LOSS": 14,
+      "UNKNOWN": 90,
+      "WIN": 0
+    },
+    "after_second_probe": {
+      "LOSS": 20,
+      "UNKNOWN": 83,
+      "WIN": 1
+    },
+    "before": {
+      "LOSS": 6,
+      "UNKNOWN": 98,
+      "WIN": 0
+    },
+    "canonical_s5_children": 104,
+    "coverage_vertices": [
+      55,
+      65,
+      100,
+      108
+    ],
+    "exact_win_s5_witnesses": [
+      [
+        1297036692683751456,
+        64
+      ]
+    ],
+    "key": [
+      1297036692683751456,
+      0
+    ],
+    "result": "WIN"
+  },
+  "rational_dual_total": "1",
+  "raw_replay_corpus_audit": {
+    "cache_conflicts": 0,
+    "exact_not_in_cache": 0,
+    "exact_rows": 5107,
+    "raw_conflicts": 0,
+    "s5_rows": 5347,
+    "same_budget_unknown_rows": 240,
+    "unique_exact_keys": 2451
+  },
+  "remaining_third_moves": 2,
+  "repair": {
+    "classes": 1,
+    "distinct_unknown_s5": 99,
+    "selected": [
+      {
+        "all_s5": 106,
+        "coverage": [
+          5,
+          100,
+          108
+        ],
+        "key": [
+          1333065489702715392,
+          0
+        ],
+        "unknown_s5": 99
+      }
+    ]
+  },
+  "report_path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-report.json",
+  "reverse_propagated_s5_loss_rows": 0,
+  "root": [
+    60,
+    27
+  ],
+  "root_status": "UNKNOWN",
+  "s6_descent_new_exact_rows": 0,
+  "saved_cache_corpus_audit": {
+    "cache_files": 331,
+    "conflicts": 0,
+    "extra": 0,
+    "missing": 0,
+    "unique_exact_rows": 5603
+  },
+  "schema": "n11-reply27-checkpoint-report-v1",
+  "secured_third_moves": 117,
+  "source_manifest_path": "research/experiments/n11-boundary-recovery-20261006/output/post-07f822e5-reply27-checkpoint-source-manifest.json"
+}
