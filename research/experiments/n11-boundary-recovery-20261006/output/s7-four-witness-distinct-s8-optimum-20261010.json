@@ -1,0 +1,38 @@
+{
+  "schema": "n11-s7-four-witness-distinct-s8-optimum-v1",
+  "source_sha256": "8bf4707d04a31e9b3b74ce8a155d92783c906e938349b90cbe309a2fb9df9490",
+  "s6_parents": 6,
+  "s7_candidates": 512,
+  "s7_parent_incidences": 521,
+  "s7_shared_two": 9,
+  "s8_distinct_across_all_candidates": 18008,
+  "s8_parent_incidences_across_all_candidates": 36683,
+  "max_s8_intersection_per_distinct_s7_pair": 1,
+  "overlapping_s7_pairs": 19351,
+  "four_witness_mask_patterns_under_cost_bound": 2,
+  "four_witness_sets_checked_under_cost_bound": 9,
+  "excluded_four_witness_total_cost_at_least": 252,
+  "certified_lower_bound_distinct_s8": 245,
+  "achieved_distinct_s8": 245,
+  "selected_total_legal_s8": 245,
+  "selected_s7_keys": [
+    [
+      "10376293541465821184",
+      "33816578"
+    ],
+    [
+      "10376293541998499840",
+      "33554434"
+    ],
+    [
+      "10376293542543818752",
+      "68719476738"
+    ],
+    [
+      "10376302337555697664",
+      "68719476738"
+    ]
+  ],
+  "verdict": "UNKNOWN",
+  "claim": "conditional witness scheduling only; no exact game outcomes"
+}
