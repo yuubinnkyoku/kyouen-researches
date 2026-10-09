@@ -1,0 +1,43 @@
+{
+  "schema": "n11-conditional-s6-cover-v1",
+  "base_main": "d5136a939be1a60b921f0a4eab739596684458da",
+  "s4_key": [
+    "1585267068835463168",
+    "0"
+  ],
+  "s4_canonical_s5_children": 106,
+  "s5_cache_git_blob": "e280d883e3dba249c548362f2d75f087aab69580",
+  "s6_cache_git_blob": "877226d497b6d98f51fb2663b70e4fc704d24dce",
+  "unknown_s5_target_git_blob": "bf89b9638afa8be7a3fe059aff4345a017061e38",
+  "known_loss_s5": 10,
+  "unknown_s5": 96,
+  "s6_child_edges": 9235,
+  "unique_canonical_s6": 5022,
+  "s6_incidence_multiplicity": {
+    "1": 854,
+    "2": 4123,
+    "3": 45
+  },
+  "coverage_signatures": 4264,
+  "dual_certificate": {
+    "parent_index_order": "canonical S5 key ascending",
+    "zero_indices": [
+      9
+    ],
+    "other_parent_weight": "1/2",
+    "max_weight_per_s6": "1",
+    "dual_sum": "95/2",
+    "ceil_lower_bound": 48
+  },
+  "explicit_witnesses": 48,
+  "verified_s7_legal_moves_total": 3594,
+  "solver_branching_objective": 3594,
+  "solver_mip_dual_bound": 3594,
+  "solver_mip_gap": 0,
+  "saved_s6_exact_cache_overlap": 0,
+  "outcome_claim": "Conditional cover only. No S6 outcomes asserted.",
+  "s6_verdict": "UNKNOWN",
+  "two_stone_root": "UNKNOWN",
+  "empty_board": "UNKNOWN",
+  "verifier": "verify_post_d5136a9_next96_min48.py (independent verifier packaged externally; GitHub write blocked)"
+}
