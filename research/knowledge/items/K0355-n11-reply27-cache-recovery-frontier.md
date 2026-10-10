@@ -2992,9 +2992,6 @@ artifacts:
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-merge-receipt-v5.json
     role: manifest
     note: Records that no S5 row was derived or merged.
-  - path: research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-artifact-hashes-v5.json
-    role: manifest
-    note: SHA-256 inventory for reconciliation evidence and inputs.
   - path: research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-exact-s6.cache
     role: data
     note: "Hash-validated exact S6 cache: 3,574 unique rows (3,414 WIN, 160 LOSS), conflict 0."

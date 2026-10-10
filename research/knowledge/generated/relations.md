@@ -31,6 +31,7 @@
 - ← depends_on [K0338](../items/K0338-high-stabilizer-safe-state-classification.md): 標準四点共円・共線禁止
 - ← depends_on [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md): q点版共円ゲームの規則
 - ← depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 共円・共線4点禁止、完全指摘、通常プレイ
+- ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 共円・共線の禁止と通常プレイの対称不変性
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -62,6 +63,7 @@
 - ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 先手視点WIN/LOSSと石数 parity によるAND/OR規約
 - ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 勝敗は手番側ではなく元の先手の固定命題
 - ← depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 全層で元の先手に固定した勝敗
+- ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 元先手固定の勝敗
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1650,6 +1652,7 @@
 - ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 11×11 reply27保存済みcache frontierと有限検査の範囲
 - ← verifies [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): S7由来のcache根拠を再監査し、有効な現行frontierを再計算
 - ← verifies [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 全S4境界と第三手被覆を再生成し、solver/cacheを信頼する葉を分離
+- ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 第三手被覆とS4 classの正規化
 
 ## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する
 
@@ -1730,3 +1733,9 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 全層で元の先手に固定した勝敗
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全frontierの独立再生成とsolver/cache葉の信頼境界
 - ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 追加loaderと中間S6・上位S4依存の独立再監査範囲
+
+## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円・共線の禁止と通常プレイの対称不変性
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定の勝敗
+- → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 第三手被覆とS4 classの正規化

@@ -3131,9 +3131,6 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-reply27-checkpoint-source-manifest.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d01858aa-reply27-checkpoint-source-manifest.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): SHA-256 bindings for the solver, source scripts, raw replay evidence, and saved evidence manifests.
-## [research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-artifact-hashes-v5.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-artifact-hashes-v5.json)
-
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): SHA-256 inventory for reconciliation evidence and inputs.
 ## [research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-artifact-hashes-v6.json](../../../research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-artifact-hashes-v6.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): SHA-256 inventory including the exact S6 cache and its merge receipt.
@@ -5024,6 +5021,12 @@
 ## [research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py](../../../research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py)
 
 - [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (verifier): S4..S10の全二子三値境界をBoolean completionで照合し、cache再流入も検査
+## [research/experiments/n11-two-target-design-20261010/README.md](../../../research/experiments/n11-two-target-design-20261010/README.md)
+
+- [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (proof): 頂点100・108の根局面安定化群による同一軌道の証明
+## [research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json](../../../research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json)
+
+- [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (data): 全115対象S4 classの分類と共有局面の有限監査
 ## [research/experiments/original-claims/output/batch09_pairs_n4.json](../../../research/experiments/original-claims/output/batch09_pairs_n4.json)
 
 - [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (data): 全120二点削除対と単独削除のg・K

@@ -1,0 +1,119 @@
+{
+  "caveat": "No inference of S5/S4 verdicts; frozen S6 history lacks subsequent updates and terminal-only certificates.",
+  "classes": [
+    {
+      "class": "1188950301626859520:536870912",
+      "intra_class_s6_reuse": 4025,
+      "s6_incidences": 9367,
+      "unique_s6": 5342,
+      "unknown_s5": 93
+    },
+    {
+      "class": "1297036692683752448:0",
+      "intra_class_s6_reuse": 4553,
+      "s6_incidences": 9676,
+      "unique_s6": 5123,
+      "unknown_s5": 99
+    },
+    {
+      "class": "1297036830122704896:0",
+      "intra_class_s6_reuse": 4582,
+      "s6_incidences": 9770,
+      "unique_s6": 5188,
+      "unknown_s5": 100
+    },
+    {
+      "class": "1297107061427929088:0",
+      "intra_class_s6_reuse": 4633,
+      "s6_incidences": 9878,
+      "unique_s6": 5245,
+      "unknown_s5": 101
+    },
+    {
+      "class": "10376293541461626880:65536",
+      "intra_class_s6_reuse": 4642,
+      "s6_incidences": 9870,
+      "unique_s6": 5228,
+      "unknown_s5": 101
+    }
+  ],
+  "independent_11x11_geometry": "independent.Board with exact integer bisectors and D4",
+  "pairs": [
+    {
+      "class_a": "1188950301626859520:536870912",
+      "class_b": "1297036692683752448:0",
+      "fraction_of_smaller_s6_boundary": 0.01698,
+      "shared_s6": 87,
+      "shared_unknown_s5": 0
+    },
+    {
+      "class_a": "1188950301626859520:536870912",
+      "class_b": "1297036830122704896:0",
+      "fraction_of_smaller_s6_boundary": 0.01658,
+      "shared_s6": 86,
+      "shared_unknown_s5": 0
+    },
+    {
+      "class_a": "1188950301626859520:536870912",
+      "class_b": "1297107061427929088:0",
+      "fraction_of_smaller_s6_boundary": 0.01849,
+      "shared_s6": 97,
+      "shared_unknown_s5": 1
+    },
+    {
+      "class_a": "1188950301626859520:536870912",
+      "class_b": "10376293541461626880:65536",
+      "fraction_of_smaller_s6_boundary": 0.01894,
+      "shared_s6": 99,
+      "shared_unknown_s5": 1
+    },
+    {
+      "class_a": "1297036692683752448:0",
+      "class_b": "1297036830122704896:0",
+      "fraction_of_smaller_s6_boundary": 0.01874,
+      "shared_s6": 96,
+      "shared_unknown_s5": 1
+    },
+    {
+      "class_a": "1297036692683752448:0",
+      "class_b": "1297107061427929088:0",
+      "fraction_of_smaller_s6_boundary": 0.01874,
+      "shared_s6": 96,
+      "shared_unknown_s5": 1
+    },
+    {
+      "class_a": "1297036692683752448:0",
+      "class_b": "10376293541461626880:65536",
+      "fraction_of_smaller_s6_boundary": 0.01874,
+      "shared_s6": 96,
+      "shared_unknown_s5": 1
+    },
+    {
+      "class_a": "1297036830122704896:0",
+      "class_b": "1297107061427929088:0",
+      "fraction_of_smaller_s6_boundary": 0.00039,
+      "shared_s6": 2,
+      "shared_unknown_s5": 0
+    },
+    {
+      "class_a": "1297036830122704896:0",
+      "class_b": "10376293541461626880:65536",
+      "fraction_of_smaller_s6_boundary": 0.01928,
+      "shared_s6": 100,
+      "shared_unknown_s5": 1
+    },
+    {
+      "class_a": "1297107061427929088:0",
+      "class_b": "10376293541461626880:65536",
+      "fraction_of_smaller_s6_boundary": 0.01894,
+      "shared_s6": 99,
+      "shared_unknown_s5": 1
+    }
+  ],
+  "s6_incidence_sum": 48561,
+  "s6_repeated_across_classes": 852,
+  "s6_unique_across_five": 25274,
+  "saved_s6_exact_overlap_frozen_history": 66,
+  "saved_s6_loss_overlap_frozen_history": 0,
+  "scope": "Five cheapest capped-cost live S4 candidates; frozen history S6 only"
+}
