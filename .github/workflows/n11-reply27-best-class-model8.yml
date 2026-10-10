@@ -36,6 +36,10 @@ jobs:
       - name: Materialize current best-class unknown children
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-frontier-selection-20261005/scripts')
+          from s5_evidence_policy import quarantined_cache_keys
+          quarantine = quarantined_cache_keys()
           import csv,json,sys
           from pathlib import Path
           p=Path("research/experiments/n11-frontier-selection-20261005/scripts")
@@ -48,6 +52,8 @@ jobs:
           with open("/tmp/current/reply27-current-s5.cache",newline="") as f:
               for r in csv.reader(f):
                   if not r or r[0].startswith("#"): continue
+                  if (int(r[1]),int(r[2])) in quarantine:
+                      continue
                   verdict[(int(r[1]),int(r[2]))]=int(r[4])
           _,_,_,children=R.build_geometry()
           unknown=sorted(ch for ch in children[best] if ch not in verdict)

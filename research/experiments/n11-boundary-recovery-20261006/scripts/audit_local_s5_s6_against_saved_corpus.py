@@ -24,6 +24,11 @@ from audit_saved_s6_targets import (  # noqa: E402
 )
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def relpath(path: Path) -> str:
     try:
         return path.resolve().relative_to(ROOT.resolve()).as_posix()
@@ -32,6 +37,7 @@ def relpath(path: Path) -> str:
 
 
 def read_s5_cache(path: Path) -> dict[tuple[int, int], int]:
+    _s5_quarantine = quarantined_cache_keys()
     verdicts: dict[tuple[int, int], int] = {}
     for line_no, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
         if not line.strip() or line.lstrip().startswith("#"):
@@ -40,6 +46,8 @@ def read_s5_cache(path: Path) -> dict[tuple[int, int], int]:
         if len(fields) != 6 or fields[0] != "s5verdict" or int(fields[3]) != 5:
             raise ValueError(f"invalid exact s5 cache row {path}:{line_no}: {line}")
         key = (int(fields[1]), int(fields[2]))
+        if key in _s5_quarantine:
+            continue
         verdict = int(fields[4])
         if verdict not in (1, 2) or not safe_canonical(key, 5):
             raise ValueError(f"invalid/noncanonical exact s5 cache row {path}:{line_no}: {line}")

@@ -23,7 +23,13 @@ sys.path.insert(0, str(HERE))
 import reply27_selected31_repair as R  # noqa: E402
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def load_cache(path: Path):
+    _s5_quarantine = quarantined_cache_keys()
     out = {}
     with path.open(newline="", encoding="utf-8") as fp:
         for row in csv.reader(fp):
@@ -32,6 +38,8 @@ def load_cache(path: Path):
             if row[0] != "s5verdict":
                 continue
             key = (int(row[1]), int(row[2]))
+            if key in _s5_quarantine:
+                continue
             val = int(row[4])
             if val not in (1, 2):
                 raise SystemExit(f"invalid verdict {val}: {key}")
@@ -89,7 +97,7 @@ def main():
         vals = [derived.get(ch, 0) for ch in ss]
         if 1 in vals:
             win_classes.add(key)
-        elif vals and all(v == 2 for v in vals):
+        elif all(v == 2 for v in vals):
             loss_classes.add(key)
     if loss_classes & win_classes:
         raise SystemExit("class verdict conflict")

@@ -16,6 +16,11 @@ sys.path.insert(0, str(EDGE))
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after  # noqa: E402
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -39,6 +44,7 @@ def checked_key(key: tuple[int, int], stones: int) -> tuple[int, int]:
 
 
 def read_cache(path: Path) -> dict[tuple[int, int], int]:
+    _s5_quarantine = quarantined_cache_keys()
     result = {}
     for line_no, row in enumerate(csv.reader(path.open(newline="", encoding="utf-8-sig")), 1):
         if not row or row[0].lstrip().startswith("#"):
@@ -46,6 +52,8 @@ def read_cache(path: Path) -> dict[tuple[int, int], int]:
         if len(row) != 6 or row[0] != "s5verdict" or int(row[3]) != 5:
             raise SystemExit(f"invalid s5 cache row {path}:{line_no}: {row}")
         key = checked_key((int(row[1]), int(row[2])), 5)
+        if key in _s5_quarantine:
+            continue
         value = int(row[4])
         if value not in (1, 2):
             raise SystemExit(f"non-exact s5 cache verdict: {path}:{line_no}: {row}")
@@ -94,7 +102,7 @@ def class_status(cache: dict[tuple[int, int], int], children: set[tuple[int, int
     values = [cache.get(key) for key in children]
     if 1 in values:
         return "WIN"
-    if values and all(value == 2 for value in values):
+    if all(value == 2 for value in values):
         return "LOSS"
     return "UNKNOWN"
 

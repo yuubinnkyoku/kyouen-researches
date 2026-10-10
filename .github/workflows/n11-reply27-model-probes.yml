@@ -38,6 +38,10 @@ jobs:
       - name: Materialize current UNKNOWN s5 roots by repair class
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-frontier-selection-20261005/scripts')
+          from s5_evidence_policy import quarantined_cache_keys
+          quarantine = quarantined_cache_keys()
           import csv,json,sys
           from pathlib import Path
           p=Path("research/experiments/n11-frontier-selection-20261005/scripts")
@@ -49,6 +53,8 @@ jobs:
               for row in csv.reader(f):
                   if not row or row[0].startswith("#"): continue
                   if row[0]!="s5verdict": continue
+                  if (int(row[1]),int(row[2])) in quarantine:
+                      continue
                   verdict[(int(row[1]),int(row[2]))]=int(row[4])
 
           _,_,_,children=R.build_geometry()

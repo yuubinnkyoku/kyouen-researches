@@ -46,7 +46,13 @@ FIRST, R2 = 60, 27
 V = 121
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def load_hard9(path: Path):
+    _s5_quarantine = quarantined_cache_keys()
     out = {}
     with path.open(newline="", encoding="utf-8") as fp:
         for row in csv.reader(fp):
@@ -55,6 +61,8 @@ def load_hard9(path: Path):
             if row[0] != "s5verdict":
                 raise SystemExit(f"unexpected hard9 row: {row[:2]}")
             key = (int(row[1]), int(row[2]))
+            if key in _s5_quarantine:
+                continue
             value = int(row[4])
             if value not in (1, 2):
                 raise SystemExit(f"invalid hard9 verdict {value}: {key}")
@@ -231,7 +239,7 @@ def main():
         vals = [derived_cache.get(ch, 0) for ch in ss]
         if 1 in vals:
             propagated[key] = "WIN"
-        elif vals and all(v == 2 for v in vals):
+        elif all(v == 2 for v in vals):
             propagated[key] = "LOSS"
         else:
             propagated[key] = "UNKNOWN"

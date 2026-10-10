@@ -90,6 +90,13 @@ jobs:
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_verify_raw_history_coverage.py
       - name: Check n11 missing raw replay key-evidence redundancy
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_missing_s5_replay_redundancy.py
+      - name: Check independent n11 polarity, geometry and cache policy
+        run: |
+          python -m pip install scipy
+          python -m unittest discover -s research/experiments/n11-strategy-redesign-20261010/tests
+          python -m unittest discover -s research/experiments/n11-independent-exact-audit-20261010/tests
+          c++ -std=c++20 -O2 research/experiments/n11-independent-exact-audit-20261010/tests/test_cache_policy.cpp -o /tmp/n11-cache-policy
+          /tmp/n11-cache-policy /tmp/n11-cache-fixture.cache
 
   lean:
     name: Lean soundness layer

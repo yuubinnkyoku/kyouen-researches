@@ -23,6 +23,11 @@ A = (1333065489702715392, 0)
 SUSPECT = {(10448351135499552768,128), (1152925911243358208,536870912)}
 BASE = OLD / 'post-23b52acf-after-round3-round4-completed-merged-s5.cache'
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
@@ -43,10 +48,13 @@ def dump(path, value):
     Path(path).write_text(json.dumps(value, indent=2, sort_keys=True) + '\n', encoding='utf-8')
 
 def s5cache(path=BASE):
+    _s5_quarantine = quarantined_cache_keys()
     out = {}
     for r in csv.reader(Path(path).open(encoding='utf-8-sig')):
         if r and r[0] == 's5verdict':
             k, v = (int(r[1]), int(r[2])), int(r[4])
+            if k in _s5_quarantine:
+                continue
             assert int(r[3]) == 5 and v in (1, 2)
             assert k not in out or out[k] == v
             out[k] = v

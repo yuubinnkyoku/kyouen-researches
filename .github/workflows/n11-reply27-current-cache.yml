@@ -39,6 +39,10 @@ jobs:
       - name: Merge every persisted exact s5 verdict
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-frontier-selection-20261005/scripts')
+          from s5_evidence_policy import quarantined_cache_keys
+          quarantine = quarantined_cache_keys()
           import csv, glob, json
           sources = [
               "/tmp/base/reply27-combined-s5.cache",
@@ -66,6 +70,8 @@ jobs:
           origin = {}
           per = []
           def put(key, val, src):
+              if key in quarantine:
+                  return
               if val not in (1,2):
                   return
               old = verdict.get(key)

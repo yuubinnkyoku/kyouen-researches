@@ -30,6 +30,7 @@
 - ← depends_on [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md): 標準q=4の安全性と全合法第三手
 - ← depends_on [K0338](../items/K0338-high-stabilizer-safe-state-classification.md): 標準四点共円・共線禁止
 - ← depends_on [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md): q点版共円ゲームの規則
+- ← depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 共円・共線4点禁止、完全指摘、通常プレイ
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -60,6 +61,7 @@
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
 - ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 先手視点WIN/LOSSと石数 parity によるAND/OR規約
 - ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 勝敗は手番側ではなく元の先手の固定命題
+- ← depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 全層で元の先手に固定した勝敗
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1640,12 +1642,14 @@
 
 ## [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) 11×11 reply27の保存済みexact結果から復元したcache frontier
 
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 全frontierの独立再生成とsolver/cache葉の信頼境界
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
 - → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md): exact勝敗の意味は順位付きAND/OR証明の健全性に従う
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
 - ← depends_on [K0357](../items/K0357-n11-v104-hypothetical-win-witness-cover.md): 11×11 reply27保存済みcache frontierと有限検査の範囲
 - ← verifies [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): S7由来のcache根拠を再監査し、有効な現行frontierを再計算
+- ← verifies [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 全S4境界と第三手被覆を再生成し、solver/cacheを信頼する葉を分離
 
 ## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する
 
@@ -1712,6 +1716,17 @@
 
 ## [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) reply27のS7境界での先手固定伝播と旧2件のS5 WIN根拠撤回
 
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 追加loaderと中間S6・上位S4依存の独立再監査範囲
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 勝敗は手番側ではなく元の先手の固定命題
 - → verifies [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): S7由来のcache根拠を再監査し、有効な現行frontierを再計算
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回
+- ← verifies [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 撤回の中間S6・上位S4依存、追加loaderと終局ガードを監査
+
+## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
+
+- → verifies [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 撤回の中間S6・上位S4依存、追加loaderと終局ガードを監査
+- → verifies [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全S4境界と第三手被覆を再生成し、solver/cacheを信頼する葉を分離
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円・共線4点禁止、完全指摘、通常プレイ
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 全層で元の先手に固定した勝敗
+- ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全frontierの独立再生成とsolver/cache葉の信頼境界
+- ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 追加loaderと中間S6・上位S4依存の独立再監査範囲

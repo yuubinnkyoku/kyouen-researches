@@ -75,7 +75,7 @@ def main():
         if 2 in vals:
             verdict = 2
             label = "LOSS"
-        elif vals and all(v == 1 for v in vals):
+        elif all(v == 1 for v in vals):
             verdict = 1
             label = "WIN"
         else:

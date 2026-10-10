@@ -30,6 +30,10 @@ jobs:
       - name: Merge exact evidence
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-frontier-selection-20261005/scripts')
+          from s5_evidence_policy import quarantined_cache_keys
+          quarantine = quarantined_cache_keys()
           import csv,json,hashlib
           from pathlib import Path
 
@@ -42,6 +46,8 @@ jobs:
 
           verdict={}; origin={}
           def put(k,v,src):
+              if k in quarantine:
+                  return
               assert v in (1,2)
               old=verdict.get(k)
               if old is not None and old!=v:

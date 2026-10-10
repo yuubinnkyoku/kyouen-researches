@@ -64,7 +64,7 @@ def main():
     for k in selected:
         vals=[verdict.get(x,0) for x in children[k]]
         if 1 in vals: status[k]="WIN"
-        elif vals and all(v==2 for v in vals): status[k]="LOSS"
+        elif all(v==2 for v in vals): status[k]="LOSS"
         else:
             status[k]="UNKNOWN"
             unresolved[k]=sum(v==0 for v in vals)

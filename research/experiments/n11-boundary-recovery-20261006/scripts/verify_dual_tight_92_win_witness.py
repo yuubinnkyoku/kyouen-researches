@@ -32,6 +32,11 @@ S6_SOURCES = OUT / "post-next17-dual-tight-92-s6-unresolved-sources.json"
 AUDIT_OUT = OUT / "post-next17-dual-tight-92-win-witness-geometry-audit.json"
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -54,6 +59,7 @@ def checked_key(key: tuple[int, int], stones: int) -> tuple[int, int]:
 
 
 def read_cache(path: Path) -> dict[tuple[int, int], int]:
+    _s5_quarantine = quarantined_cache_keys()
     verdicts: dict[tuple[int, int], int] = {}
     with path.open(newline="", encoding="utf-8") as stream:
         for line_no, row in enumerate(csv.reader(stream), 1):
@@ -62,6 +68,8 @@ def read_cache(path: Path) -> dict[tuple[int, int], int]:
             if len(row) != 6 or row[0] != "s5verdict" or int(row[3]) != 5:
                 raise ValueError(f"invalid s5 cache row at {path}:{line_no}: {row}")
             key = checked_key((int(row[1]), int(row[2])), 5)
+            if key in _s5_quarantine:
+                continue
             value = int(row[4])
             if value not in (1, 2):
                 raise ValueError(f"non-exact cache value at {path}:{line_no}: {row}")

@@ -53,6 +53,7 @@
 #include <unordered_map>
 #include <vector>
 #include "kyouen_residual_micro.hpp"
+#include "n11_s5_quarantine.hpp"
 
 // Thrown when the quantified search's wall allowance expires deep inside
 // the exact DFS. Returning UNKNOWN there was wrong: the caller treats
@@ -267,10 +268,14 @@ public:
     // `out_nodes` receives the exact nodes consumed by this call.
     int exact_replay(const Bits& occupied,int stones,std::uint64_t budget,
                     std::uint64_t& out_nodes) {
+        if(occupied.hi & ~HI_MASK) throw std::runtime_error("exact_replay: out of board");
+        if constexpr(V<64)
+            if(occupied.lo >> V) throw std::runtime_error("exact_replay: out of board");
         int verts[V],k=0;
         Bits s=occupied;
         while(any(s)){ if(k>=V) throw std::runtime_error("exact_replay: bad occupancy"); verts[k++]=take_lsb(s); }
         if(k!=stones) throw std::runtime_error("exact_replay: stones mismatch");
+        validate_root(std::vector<int>(verts,verts+k));
         typename DfPn<N>::TState state{};
         for(int i=0;i<k;++i) state=add(state,verts[i]);
         // Re-derive legality from the reconstructed occupancy.
@@ -496,7 +501,7 @@ public:
     void oracle_load(const std::string& path){
         if(path.empty()) return;
         std::ifstream in(path);
-        if(!in){ return; }
+        if(!in) throw std::runtime_error("cannot open s5 cache");
         std::string line;
         bool header_ok=false;
         int conflicts=0, foreign=0;
@@ -518,12 +523,37 @@ public:
             std::stringstream ss(line); std::string t;
             while(std::getline(ss,t,',')) f.push_back(t);
             // s5verdict,key_lo,key_hi,stones,result,nodes
-            if(f.size()<6) continue;
-            if(f[0]!="s5verdict"){ foreign++; continue; }
-            if(std::stoi(f[3])!=5){ foreign++; continue; }
-            int r=std::stoi(f[4]);
-            if(r!=1 && r!=2){ foreign++; continue; }  // never accept UNKNOWN
-            Bits k; k.lo=std::stoull(f[1]); k.hi=std::stoull(f[2]);
+            if(f.size()!=6) throw std::runtime_error("malformed s5 cache row");
+            if(!f[5].empty() && f[5].back()=='\r') f[5].pop_back();
+            auto number=[](const std::string& value){
+                if(value.empty() || !std::all_of(value.begin(),value.end(),
+                        [](char c){return c>='0' && c<='9';}))
+                    throw std::runtime_error("invalid unsigned integer in s5 cache");
+                return std::stoull(value);
+            };
+            if(f[0]!="s5verdict" || number(f[3])!=5)
+                throw std::runtime_error("foreign s5 cache row");
+            auto code=number(f[4]);
+            if(code!=1 && code!=2) throw std::runtime_error("non-exact s5 cache verdict");
+            int r=static_cast<int>(code);
+            number(f[5]);
+            Bits k; k.lo=number(f[1]); k.hi=number(f[2]);
+            if constexpr(N!=11) throw std::runtime_error("n=11 s5 cache on another board");
+            if((k.hi & ~HI_MASK) || popcount(k)!=5)
+                throw std::runtime_error("s5 cache occupancy outside board or wrong stone count");
+            std::vector<int> pts;
+            Bits remaining=k;
+            TState state{};
+            while(any(remaining)){
+                int p=take_lsb(remaining);
+                pts.push_back(p); state=add(state,p);
+            }
+            validate_root(pts);
+            if(!(canonical(state)==k)) throw std::runtime_error("noncanonical s5 cache key");
+            bool quarantined=false;
+            for(const auto& q:n11_s5_quarantined_keys)
+                if(k.lo==q.first && k.hi==q.second) quarantined=true;
+            if(quarantined){ foreign++; continue; }
             auto it=oracle.memo.find(k);
             if(it!=oracle.memo.end()){
                 // Same key with two different verdicts means the cache
@@ -3213,7 +3243,9 @@ static int run_cover(int first,int r2,const std::string& s5_cache,
     O.flush();
 
     // Greedy cover over LOSS classes, biggest coverage first.
-    std::vector<char> covered((std::size_t)V,0);
+    // Coverage is indexed by board point IDs, not by compact vertex slots.
+    // verts omits the two occupied points, but may still contain N*N-1.
+    std::vector<char> covered((std::size_t)DfPn<N>::V,0);
     int covered_n=0;
     std::vector<std::pair<std::uint64_t,std::uint64_t>> used;
     while(true){
@@ -3250,7 +3282,7 @@ static int run_cover(int first,int r2,const std::string& s5_cache,
      <<" classes_used="<<used.size()<<"\n";
     if(covered_n<V){
         O<<"# uncovered vertices:";
-        for(int i=0;i<V;++i) if(!covered[(std::size_t)i]) O<<" "<<verts[(std::size_t)i];
+        for(int v:verts) if(!covered[(std::size_t)v]) O<<" "<<v;
         O<<"\n";
     }else{
         O<<"# ALL VERTICES COVERED by cache-proved LOSS classes\n";

@@ -10,8 +10,6 @@ ROOT=Path(__file__).resolve().parents[4]
 REGISTRY=ROOT/'results/n11-s5-evidence-quarantine.json'
 
 def quarantined_cache_keys():
-    if not REGISTRY.exists():
-        return set()
     doc=json.loads(REGISTRY.read_text(encoding='utf-8'))
     if doc.get('schema')!='n11-s5-evidence-quarantine-v1':
         raise ValueError('invalid S5 quarantine registry')

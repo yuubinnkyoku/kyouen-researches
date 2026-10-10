@@ -27,13 +27,21 @@ from dfpn_edge_classes import d4_canonical_key, legal_after  # noqa: E402
 FIRST,R2=60,27
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def load_cache(path:Path):
+    _s5_quarantine = quarantined_cache_keys()
     out={}
     with path.open(newline="",encoding="utf-8") as fp:
         for row in csv.reader(fp):
             if not row or row[0].startswith("#"): continue
             if row[0]!="s5verdict": continue
             key=(int(row[1]),int(row[2])); value=int(row[4])
+            if key in _s5_quarantine:
+                continue
             if value not in (1,2):
                 raise SystemExit(f"invalid cache verdict {value}: {key}")
             old=out.get(key)

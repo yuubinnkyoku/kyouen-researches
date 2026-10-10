@@ -15,6 +15,11 @@ from verify_raw_history_coverage import verify_coverage
 ROOT = Path(__file__).resolve().parents[4]
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -27,6 +32,7 @@ def rel(path: Path) -> str:
 
 
 def main() -> int:
+    _s5_quarantine = quarantined_cache_keys()
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--class-lo", type=int, required=True)
     ap.add_argument("--class-hi", type=int, required=True)
@@ -81,6 +87,8 @@ def main() -> int:
         if len(row) != 6 or row[0] != "s5verdict" or int(row[3]) != 5:
             raise SystemExit(f"invalid s5 cache row {line_no}: {row}")
         key, verdict = (int(row[1]), int(row[2])), int(row[4])
+        if key in _s5_quarantine:
+            continue
         old = cache.get(key)
         if old is not None and old != verdict:
             raise SystemExit(f"cache verdict conflict: {key}")

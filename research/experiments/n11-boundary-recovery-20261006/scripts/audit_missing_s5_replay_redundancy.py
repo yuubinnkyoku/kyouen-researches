@@ -22,6 +22,11 @@ from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad  # noqa: E402
 S5_FILE = re.compile(r"(?:^|/)s5-(\d+)-(\d+)\.out\.csv$")
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def digest(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as stream:
@@ -67,6 +72,7 @@ def missing_s5_keys(inventory: dict, *, local_prefix: str = ".local/n11/"):
 
 
 def read_exact_cache(path: Path):
+    _s5_quarantine = quarantined_cache_keys()
     results = {}
     with path.open(encoding="utf-8-sig", newline="") as stream:
         for number, row in enumerate(csv.reader(stream), 1):
@@ -75,6 +81,8 @@ def read_exact_cache(path: Path):
             if len(row) != 6 or row[0] != "s5verdict" or row[3] != "5":
                 raise ValueError(f"malformed exact cache at {path}:{number}")
             key, verdict = (int(row[1]), int(row[2])), int(row[4])
+            if key in _s5_quarantine:
+                continue
             if verdict not in (1, 2) or not geometry(key):
                 raise ValueError(f"invalid exact s5 cache entry: {key}")
             if key in results and results[key] != verdict:

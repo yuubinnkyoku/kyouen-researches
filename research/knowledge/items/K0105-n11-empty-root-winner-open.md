@@ -50,3 +50,5 @@ scope: 標準q=4・完全指摘・通常プレイの11×11空盤勝敗。層列�
 空盤の決着には真の終局まで閉じるAND/OR証明または正しい完了求解が必要。旧one-wordのK_11=11、打切りDP、proof numberを勝敗根拠にしない。
 
 中央初手後のreply27について、保存済みexact境界の回収と現在の検証範囲は[K0355](K0355-n11-reply27-cache-recovery-frontier.md)を参照する。この局所的な進捗から二石rootや空盤の勝敗を推定しない。
+
+[K0372の独立監査](K0372-n11-independent-exact-evidence-trust-audit.md)は上位証明の幾何・伝播とsolver/cache葉への信頼を分離した。少数のterminalまで閉じた独立minimax certificateは得られたが、空盤の証明は未完了であり、この問いのstatusはopenを維持する。

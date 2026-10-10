@@ -33,7 +33,13 @@ from dfpn_edge_classes import d4_canonical_key, legal_after  # noqa: E402
 FIRST, R2 = 60, 27
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def load_cache(path: Path):
+    _s5_quarantine = quarantined_cache_keys()
     out = {}
     with path.open(newline="", encoding="utf-8") as fp:
         for row in csv.reader(fp):
@@ -42,6 +48,8 @@ def load_cache(path: Path):
             if row[0] != "s5verdict":
                 continue
             key = (int(row[1]), int(row[2]))
+            if key in _s5_quarantine:
+                continue
             verdict = int(row[4])
             if verdict not in (1, 2):
                 raise SystemExit(f"UNKNOWN/invalid cache verdict {verdict}: {key}")
@@ -95,7 +103,7 @@ def main():
         vals = [cache.get(ch, 0) for ch in ss]
         if 1 in vals:
             status[key] = "WIN"
-        elif vals and all(v == 2 for v in vals):
+        elif all(v == 2 for v in vals):
             status[key] = "LOSS"
         else:
             status[key] = "UNKNOWN"

@@ -16,6 +16,11 @@ sys.path.insert(0, str(ROOT / "research/experiments/n11-search-methods/scripts")
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after  # noqa: E402
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def sha256(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as stream:
@@ -46,6 +51,7 @@ def key_points(key: tuple[int, int]) -> tuple[int, ...]:
 
 
 def read_exact_cache(path: Path) -> dict[tuple[int, int], tuple[int, int]]:
+    _s5_quarantine = quarantined_cache_keys()
     cache = {}
     for line_no, row in enumerate(csv.reader(path.open(newline="", encoding="utf-8-sig")), 1):
         if not row or row[0].lstrip().startswith("#"):
@@ -53,6 +59,8 @@ def read_exact_cache(path: Path) -> dict[tuple[int, int], tuple[int, int]]:
         if len(row) != 6 or row[0] != "s5verdict" or int(row[3]) != 5:
             raise SystemExit(f"invalid s5 cache row {path}:{line_no}: {row}")
         key = (int(row[1]), int(row[2]))
+        if key in _s5_quarantine:
+            continue
         key_points(key)
         value, nodes = int(row[4]), int(row[5])
         if value not in (1, 2) or nodes < 0 or key in cache:

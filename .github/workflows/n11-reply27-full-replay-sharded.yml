@@ -84,6 +84,10 @@ jobs:
       - name: Merge hard9 boundary-derived verdicts
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-frontier-selection-20261005/scripts')
+          from s5_evidence_policy import quarantined_cache_keys
+          quarantine = quarantined_cache_keys()
           import csv
           src=[
             "/tmp/reply27-full-s5.cache",
@@ -97,6 +101,8 @@ jobs:
                       if not r or r[0].startswith("#"): continue
                       assert r[0]=="s5verdict", r
                       k=(int(r[1]),int(r[2]))
+                      if k in quarantine:
+                          continue
                       v=int(r[4])
                       assert v in (1,2)
                       old=merged.get(k)

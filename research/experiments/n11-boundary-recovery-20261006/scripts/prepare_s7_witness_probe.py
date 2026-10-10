@@ -223,7 +223,7 @@ def main() -> int:
     for parent, children in parent_children.items():
         if any(exact.get(child) == 1 for child in children):
             outcome = "WIN"
-        elif children and all(exact.get(child) == 2 for child in children):
+        elif all(exact.get(child) == 2 for child in children):
             outcome = "LOSS"
         else:
             outcome = "UNKNOWN"

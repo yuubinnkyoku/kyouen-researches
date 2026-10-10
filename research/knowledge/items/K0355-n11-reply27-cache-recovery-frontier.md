@@ -7,6 +7,9 @@ topics: [square-outcomes, search-methods, verification, provenance]
 aliases: []
 relations:
   - type: depends_on
+    target: K0372
+    note: 全frontierの独立再生成とsolver/cache葉の信頼境界
+  - type: depends_on
     target: K0002
     note: 先手視点のWIN/LOSSと奇数石AND・偶数石ORの規約
   - type: depends_on
@@ -16,6 +19,9 @@ relations:
     target: K0371
     note: 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回
 artifacts:
+  - path: research/experiments/n11-independent-exact-audit-20261010/output/canonical-current-s5.cache
+    role: data
+    note: 5734行を隔離・geometry・union照合から再構成したcache。raw/cache信頼内訳はK0372
   - path: research/experiments/n11-strategy-redesign-20261010/README.md
     role: source
     note: A/B同条件pilotと適応実行、旧極性誤りの検出、有限budgetの戦略比較
@@ -4150,6 +4156,8 @@ evidence: >-
 # 11×11 reply27の保存済みexact結果から復元したcache frontier
 
 ## 現行checkpoint: 2026-10-10 戦略再設計と極性監査
+
+後続の[K0372独立監査](K0372-n11-independent-exact-evidence-trust-audit.md)は下記frontierを再現した。ただしpositive-budget replayまたは正しいraw-rooted導出で支持できたS5は2,988件で、2,746件は個別出所付きの保存cache一次出力への信頼が残る。31 LOSS classの幾何・全子伝播は全て健全だが、30 classは一部のcache-only葉に依存し、117/119全体の独立minimax証明ではない。旧反転の根拠撤回は2 S5・中間6 S6、上位依存は6 S4（status依存2件）・混入48 historical cacheに及ぶ。歴史的な「証明」表現よりこの信頼範囲を優先する。
 
 旧S7の反転伝播を根拠に追加された二つのS5 WINは、K0371の監査で根拠を撤回した。両局面はUNKNOWNへ戻し、旧cacheは歴史資料として保持する。**過去cacheの単純unionで復活させない。** 現行の正本に対応するexact cacheは `n11-strategy-redesign-20261010/output/current-exact-s5.cache`。下記以前のcheckpointの数値・証明主張よりこの監査と隔離規則を優先する。
 

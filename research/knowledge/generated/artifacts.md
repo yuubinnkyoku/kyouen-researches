@@ -4771,6 +4771,51 @@
 ## [research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py](../../../research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 指定s4 classの全canonical s5境界がLOSSであることを検査
+## [research/experiments/n11-independent-exact-audit-20261010/README.md](../../../research/experiments/n11-independent-exact-audit-20261010/README.md)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (source): 監査範囲、信頼境界、修正、再現手順
+## [research/experiments/n11-independent-exact-audit-20261010/output/audit.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/audit.json)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (data): 現行cacheの全行照合と条件付きfrontier再現
+## [research/experiments/n11-independent-exact-audit-20261010/output/cache-only-claims.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/cache-only-claims.json)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (data): positive-budget replayまで復元できない2746 S5の個別cache出所
+## [research/experiments/n11-independent-exact-audit-20261010/output/canonical-current-s5.cache](../../../research/experiments/n11-independent-exact-audit-20261010/output/canonical-current-s5.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 5734行を隔離・geometry・union照合から再構成したcache。raw/cache信頼内訳はK0372
+## [research/experiments/n11-independent-exact-audit-20261010/output/legacy-intermediate-s6.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/legacy-intermediate-s6.json)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (data): 旧S7 LOSS反転による6 S6 WINの根拠撤回
+## [research/experiments/n11-independent-exact-audit-20261010/output/minimax-s6-win-escalated.json.gz](../../../research/experiments/n11-independent-exact-audit-20261010/output/minimax-s6-win-escalated.json.gz)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (certificate): S6 WIN一局面のterminalまで閉じた10407-node独立minimax DAG
+## [research/experiments/n11-independent-exact-audit-20261010/output/raw-rooted-proof.json.gz](../../../research/experiments/n11-independent-exact-audit-20261010/output/raw-rooted-proof.json.gz)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (certificate): 2988 S5のranked上位証明。solver exact葉への信頼を残す
+## [research/experiments/n11-independent-exact-audit-20261010/output/source-manifest.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/source-manifest.json)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (manifest): 3923 raw sourcesと280 cache sourcesのhash
+## [research/experiments/n11-independent-exact-audit-20261010/output/third-move-certificate.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/third-move-certificate.json)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (certificate): 119第三手の117 LOSS witnessと2 UNKNOWN
+## [research/experiments/n11-independent-exact-audit-20261010/output/verification.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/verification.json)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (data): hash・raw行・上位DAG・全frontier・7つのminimax certificateの可搬検査
+## [research/experiments/n11-independent-exact-audit-20261010/output/withdrawal-dependencies.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/withdrawal-dependencies.json)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (data): 撤回2 S5、混入48 cache、依存6 S4の完全一覧
+## [research/experiments/n11-independent-exact-audit-20261010/scripts/audit.py](../../../research/experiments/n11-independent-exact-audit-20261010/scripts/audit.py)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): 集計JSONを入力にせずtracked raw/cacheから証拠とfrontierを再構成
+## [research/experiments/n11-independent-exact-audit-20261010/scripts/independent.py](../../../research/experiments/n11-independent-exact-audit-20261010/scripts/independent.py)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): 独自整数幾何・D4・AND/OR・ranked証明DAG検査
+## [research/experiments/n11-independent-exact-audit-20261010/tests/test_cache_policy.cpp](../../../research/experiments/n11-independent-exact-audit-20261010/tests/test_cache_policy.cpp)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): C++ cache隔離・幾何・不正入力・矛盾拒否の実行回帰
+## [research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py](../../../research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): S0..S121三値境界、小盤面全安全状態、誤極性mutant、証明書改変、loader隔離
 ## [research/experiments/n11-reduction-followup-20261005/output/audit.json](../../../research/experiments/n11-reduction-followup-20261005/output/audit.json)
 
 - [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): 全7020小clutter、全5219交換不変族、727実n11残局の通常・misère検査と測定

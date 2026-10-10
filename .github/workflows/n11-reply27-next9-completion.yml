@@ -102,6 +102,10 @@ jobs:
       - name: Verify exact replay and merge cache
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-frontier-selection-20261005/scripts')
+          from s5_evidence_policy import quarantined_cache_keys
+          quarantine = quarantined_cache_keys()
           import csv, glob, json, sys
           sys.path.insert(0,"research/experiments/n11-frontier-selection-20261005/scripts")
           import reply27_selected31_repair as R
@@ -137,6 +141,8 @@ jobs:
           with open("/tmp/input/post-next8-s5.cache",newline="") as f:
               for r in csv.reader(f):
                   if not r or r[0].startswith("#"): continue
+                  if (int(r[1]),int(r[2])) in quarantine:
+                      continue
                   verdict[(int(r[1]),int(r[2]))]=int(r[4])
           for k,v in replay.items():
               if v not in (1,2): continue

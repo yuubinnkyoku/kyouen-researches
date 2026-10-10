@@ -192,7 +192,7 @@ def main() -> int:
         children = parent_boundaries[parent]
         values = [verdicts.get(child) for child in children]
         outcome = "LOSS" if 2 in values else (
-            "WIN" if values and all(value == 1 for value in values) else "UNKNOWN")
+            "WIN" if all(value == 1 for value in values) else "UNKNOWN")
         child_counts = Counter("0" if value in (None, 0) else str(value) for value in values)
         child_count_map = {str(code): child_counts[str(code)] for code in (0, 1, 2)}
         if outcome != row.get("outcome") or child_count_map != row.get("counts"):

@@ -35,6 +35,11 @@ CURRENT_CACHE = OUT / "post-next2-s5.cache"
 PARENT_FILTER = {60, 27, 57, 63, 93}
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def board_points(key: tuple[int, int]) -> tuple[int, ...]:
     lo, hi = key
     if not (0 <= lo < 1 << 64 and 0 <= hi < 1 << 57):
@@ -66,6 +71,7 @@ def checked_canonical(key: tuple[int, int], stones: int) -> tuple[int, int]:
 
 
 def load_current_cache(path: Path) -> tuple[dict[tuple[int, int], set[int]], dict]:
+    _s5_quarantine = quarantined_cache_keys()
     statuses: dict[tuple[int, int], set[int]] = defaultdict(set)
     rows = 0
     for line_num, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
@@ -75,6 +81,8 @@ def load_current_cache(path: Path) -> tuple[dict[tuple[int, int], set[int]], dic
         if len(fields) != 6 or fields[0] != "s5verdict" or int(fields[3]) != 5:
             raise SystemExit(f"unexpected row in current s5 cache at {line_num}: {line}")
         key = (int(fields[1]), int(fields[2]))
+        if key in _s5_quarantine:
+            continue
         if checked_canonical(key, 5) != key:
             raise SystemExit(f"noncanonical current s5 cache key: {key}")
         verdict = int(fields[4])

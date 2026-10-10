@@ -20,6 +20,11 @@ from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after 
 from derive_shared_s6_witness_cache import canonical_safe_key, points_from_key  # noqa: E402
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -36,6 +41,7 @@ def git_blob(path: Path) -> str:
 
 
 def read_cache(path: Path) -> dict[tuple[int, int], int]:
+    _s5_quarantine = quarantined_cache_keys()
     result: dict[tuple[int, int], int] = {}
     with path.open(newline="", encoding="utf-8") as stream:
         for row in csv.reader(stream):
@@ -44,6 +50,8 @@ def read_cache(path: Path) -> dict[tuple[int, int], int]:
             if len(row) != 6 or row[0] != "s5verdict" or int(row[3]) != 5:
                 raise ValueError(f"not an s5 cache row: {path}: {row}")
             key = (int(row[1]), int(row[2]))
+            if key in _s5_quarantine:
+                continue
             verdict = int(row[4])
             if verdict not in (1, 2) or key in result:
                 raise ValueError(f"invalid or duplicate exact cache row: {path}: {row}")

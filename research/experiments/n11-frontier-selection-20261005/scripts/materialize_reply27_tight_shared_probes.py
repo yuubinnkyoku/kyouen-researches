@@ -55,7 +55,7 @@ def main():
         vals=[cache.get(ch,0) for ch in ss]
         if 1 in vals:
             status[key]="WIN"
-        elif vals and all(v==2 for v in vals):
+        elif all(v==2 for v in vals):
             status[key]="LOSS"
         else:
             status[key]="UNKNOWN"

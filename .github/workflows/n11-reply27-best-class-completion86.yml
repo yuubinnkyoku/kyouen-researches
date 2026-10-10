@@ -65,6 +65,10 @@ jobs:
       - name: Classify target class from complete known boundary
         run: |
           python - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-frontier-selection-20261005/scripts')
+          from s5_evidence_policy import quarantined_cache_keys
+          quarantine = quarantined_cache_keys()
           import csv,glob,json,sys
           from pathlib import Path
           p=Path("research/experiments/n11-frontier-selection-20261005/scripts")
@@ -75,6 +79,8 @@ jobs:
           verdict={}
           origin={}
           def put(k,v,src):
+              if k in quarantine:
+                  return
               if v not in (1,2): return
               old=verdict.get(k)
               if old is not None and old!=v:

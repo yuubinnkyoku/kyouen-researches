@@ -54,6 +54,10 @@ def merge(cache_paths, replay_patterns):
                     if row[0]!="replay" or len(row)!=11 or int(row[2])!=5 or int(row[4])!=0:
                         raise SystemExit(f"not an s5 AND replay row: {path}: {row}")
                     key=(int(row[9]),int(row[10])); value=int(row[6]); nodes+=int(row[7])
+                    if int(row[5])<=0 or int(row[7])<0:
+                        raise SystemExit(f"cache projection is not positive-budget replay evidence: {path}")
+                    if key in quarantine and value in (1,2):
+                        raise SystemExit(f"active quarantine requires explicit registry rehabilitation: {key}")
                 else:
                     if row[0]!="s5verdict" or len(row)!=6 or int(row[3])!=5 or int(row[4]) not in (1,2):
                         raise SystemExit(f"not an exact s5 cache row: {path}: {row}")

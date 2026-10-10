@@ -7,6 +7,9 @@ topics: [square-outcomes, verification, certificates, provenance]
 aliases: []
 relations:
 - type: depends_on
+  target: K0372
+  note: 追加loaderと中間S6・上位S4依存の独立再監査範囲
+- type: depends_on
   target: K0002
   note: 勝敗は手番側ではなく元の先手の固定命題
 - type: verifies
@@ -58,3 +61,5 @@ solverの `exact_replay` の1/2は、全層で「元の先手のWIN/LOSS」で�
 今回のexact再実行とgeometry監査の結果、別のS4 `(1333065489702715392,0)` は正しいS5 WIN証人を得てWINと判定された。これは旧2局面の再認定ではない。全reply27の現在値はK0355を参照する。
 
 独立determinant/D4監査は安全性、合法親子、canonicality、完全上位境界とcache集約を確認する。exact葉の再帰的勝敗は変更していないC++ solverへの信頼に依存し、全探索木を独立に再検証した証明書とは区別する。
+
+後続の[K0372](K0372-n11-independent-exact-evidence-trust-audit.md)は、旧反転の中間S6 WIN 6件と全上位依存を再構成した。追加のPython reader、C++永続cache reader、手動workflow内mergerには隔離漏れが残っていたため補強した。開始mainでの「主要loaderの訂正」を全経路での再流入防止完了と解釈しない。再認定にはregistryとC++コンパイル済み隔離表の両方を明示更新する。raw/cacheそのものは歴史資料として保存している。

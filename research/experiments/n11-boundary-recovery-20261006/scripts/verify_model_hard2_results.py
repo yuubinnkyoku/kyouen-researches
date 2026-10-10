@@ -20,6 +20,11 @@ RAW = EXP / "output/raw"
 PARENTS = [(1154082588886827008, 536870912), (1874623344894017536, 0)]
 
 
+import sys as _policy_sys
+from pathlib import Path as _PolicyPath
+_policy_sys.path.insert(0, str(_PolicyPath(__file__).resolve().parents[4] / 'research/experiments/n11-frontier-selection-20261005/scripts'))
+from s5_evidence_policy import quarantined_cache_keys
+
 def points(key: tuple[int, int]) -> tuple[int, ...]:
     lo, hi = key
     if not (0 <= lo < 1 << 64 and 0 <= hi < 1 << 57):
@@ -75,6 +80,7 @@ def regenerate_boundary() -> dict[tuple[int, int], dict[str, object]]:
 
 
 def main() -> None:
+    _s5_quarantine = quarantined_cache_keys()
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--saved-raw-only", action="store_true", help="ignore downloaded .local artifacts and use output/raw copies")
     ap.add_argument("--boundary-meta", type=Path, help=argparse.SUPPRESS)
@@ -203,7 +209,7 @@ def main() -> None:
         verdicts = [rows_by_key[k][1] for k in children]
         if any(v == 2 for v in verdicts):
             label, cache_code, witness = "LOSS", 2, min(k for k in children if rows_by_key[k][1] == 2)
-        elif verdicts and all(v == 1 for v in verdicts):
+        elif all(v == 1 for v in verdicts):
             label, cache_code, witness = "WIN", 1, None
         else:
             label, cache_code, witness = "UNKNOWN", None, None
@@ -211,7 +217,7 @@ def main() -> None:
             cache_rows.append((parent[0], parent[1], cache_code))
         parent_results.append({"key": list(parent), "boundary_children": len(children), "verdict_counts": dict(sorted(Counter(verdicts).items())),
                               "derived_label": label, "loss_witness_key": list(witness) if witness else None,
-                              "all_children_win": bool(verdicts) and all(v == 1 for v in verdicts)})
+                              "all_children_win": all(v == 1 for v in verdicts)})
 
     proof_dir = "reply27-model-hard2-s6-proof"
     source_cache_path = source_file(proof_dir, "model-hard2-s5.cache", args.saved_raw_only)
@@ -224,6 +230,8 @@ def main() -> None:
             if int(fields[3]) != 5 or int(fields[4]) not in (1, 2):
                 raise SystemExit(f"invalid source parent cache stone count/verdict: {line}")
             key = (int(fields[1]), int(fields[2]))
+            if key in _s5_quarantine:
+                continue
             pts = points(key)
             if len(pts) != 5 or has_forbidden_quad(pts) or tuple(d4_canonical_key(pts)) != key:
                 raise SystemExit(f"invalid/noncanonical s5 source cache key: {key}")
