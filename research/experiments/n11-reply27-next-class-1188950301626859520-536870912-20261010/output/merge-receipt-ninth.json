@@ -1,0 +1,59 @@
+{
+  "base_cache": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-7.cache",
+    "rows": 5745,
+    "sha256": "278b2381ada91ac02e794a9f407377c02364356f63f77d3e3e6554939a066a1c"
+  },
+  "cache": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-8.cache",
+    "rows": 5746,
+    "sha256": "8a699e8529e0a89e2e48219a8714831b5340d73f4f63078bad4732dcba7b6779",
+    "verdict_counts": {
+      "1": 158,
+      "2": 5588
+    }
+  },
+  "conflicts": 0,
+  "independent_geometry": {
+    "complete_parent_boundary": 109,
+    "legal_count": 92,
+    "legal_s4_parent_edge": true,
+    "safe_canonical_s5": true
+  },
+  "merged_key": [
+    1765411053930283008,
+    536870912
+  ],
+  "merged_verdict": "LOSS",
+  "plan": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-9-plan.json",
+    "sha256": "42599ffb9ae3d2075ca526305b26902fa1a7c37ffbc755d4752f6916733bd5b2"
+  },
+  "quarantine_registry_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+  "raw_history_audit": {
+    "conflicts": 0,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-15m-ninth.json",
+    "sha256": "0360e6c640e97f4945bf01cbba6d7520a2c4929e2a88ecc4f002bcd734fbe38a"
+  },
+  "raw_solver": {
+    "budget": 15000000,
+    "input_path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/input/probe-target-9.csv",
+    "input_sha256": "b5fda0ab32ed81b2b3ec3131f72571178dd06479ed50f90a86ba4c98275ee2af",
+    "nodes": 4785007,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-ninth.csv",
+    "sha256": "82f2c3f060fd64e38129b703ad37c079ed4aa06dbafc02ac79f6b60de1533da3",
+    "verdict": "LOSS"
+  },
+  "schema": "n11-reply27-direct-s5-loss-merge-v1",
+  "solver": {
+    "options": [
+      "--n=11",
+      "--memo=22",
+      "--exact-order=count"
+    ],
+    "path": ".local/n11-independent-audit-solver.exe",
+    "sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+  }
+}

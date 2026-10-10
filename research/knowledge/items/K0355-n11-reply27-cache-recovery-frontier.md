@@ -19,6 +19,45 @@ relations:
     target: K0371
     note: 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回
 artifacts:
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md
+    role: source
+    note: dual-tight候補S4の直近10 S5局面probeと監査結果
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report-continuation.json
+    role: data
+    note: 6 direct S5 LOSS、1件の15M UNKNOWN、cache/frontier/S6-S7監査をまとめた継続report
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9.cache
+    role: data
+    note: 6件のraw追跡可能なdirect S5 LOSSを追加した5,747-row exact cache。quarantine keyなし
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/frontier-after-probe-9.json
+    role: verifier
+    note: 対象S4全109子を再分類しLOSS20 / UNKNOWN89、全体被覆と整数/有理coverを再計算
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-tenth.json
+    role: manifest
+    note: 11,947 CSVをhash照合した109-child raw-history audit。conflict0、15M UNKNOWN1
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json
+    role: manifest
+    note: 継続実験のinput/raw/cache/監査/sourceのbyte数とSHA-256 inventory
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report-after-main-rebase.json
+    role: data
+    note: f3c0c8ecの新main exact cacheへrebase後の最新境界・被覆・raw/S6/S7監査
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9-rebased-main.cache
+    role: data
+    note: main由来2 LOSSと本研究の6 LOSSをconflictなしで加えた5,749-row exact cache
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/frontier-after-main-rebase.json
+    role: verifier
+    note: 最新cacheで対象境界LOSS22 / UNKNOWN87、119第三手coverと整数/有理値を再計算
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/latest-main-cache-rebase.json
+    role: manifest
+    note: f3c0c8ec baselineと8 direct LOSS deltaを結ぶgeometry・raw・conflict audit
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-main-rebase.json
+    role: manifest
+    note: 11,960 CSVをscanした最新mainの109-child raw-history監査
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-main-rebase.json
+    role: verifier
+    note: 5,249 canonical S6 keysとraw/cache S6/S7交差およびS5伝播を再監査
+  - path: research/experiments/n11-two-target-design-20261010/README.md
+    role: source
+    note: 100/108反射対称性と2件の共有S5 LOSS。新K0373の証明と有限計算の信頼境界
   - path: research/experiments/n11-independent-exact-audit-20261010/output/canonical-current-s5.cache
     role: data
     note: 5734行を隔離・geometry・union照合から再構成したcache。raw/cache信頼内訳はK0372
@@ -4712,3 +4751,19 @@ legal 88の `(3494793310840553472,536870912)` とlegal 89の `(11889503016268595
 各LOSSはindependent geometryでsafe・canonical・legal S5 childと検査し、exact-only merge receiptから5738→5741 rows（WIN 158 / LOSS 5580→5583）へ追加した。対象S4はLOSS 14 / WIN 0 / UNKNOWN 95でUNKNOWNのまま。全classはLOSS 31 / WIN 272 / UNKNOWN 3081、coverage117/119、残り`{100,108}`、integer minimum1、rational LP dual1で変化なし。最終saved-layer auditは5366 S6 keysを調べ、raw S6 exact16 / cache S6 exact17、S7 intersection0、S6/S7由来のS5判定0。
 
 次に試す最小legal-count未確定子は`(1152921504606851072,537001986)`、legal90。最新raw historyでready、過去raw observationなし、saved S6/S7 verdictなし。新しい3件は直接raw solver結果とgeometry監査に追跡可能だがterminal-only独立minimax証明ではない。既存cache-only葉を含むfrontier全体も独立証明DAGではない。`{60,27}` rootおよび11×11 empty boardはUNKNOWNを維持する。
+
+## 2026-10-10 JST: 同じS4の追加6 direct S5 LOSS
+
+3-loss checkpoint後にS5 childを7件、各2M nodes先行probeと、必要時のfresh raw/S6/S7監査後15M nodes retryで処理した。6件はdirect exact LOSS（4,519,790、8,361,840、2,569,967、4,808,557、4,785,007、6,730,471 nodes）、1件 `(1188950301626859520,603979776)` は15MでもUNKNOWN。追加14 runs / 60,775,632 nodes、exact判定31,775,632 nodes。UNKNOWNはcacheへ追加していない。
+
+Independent Board geometryとraw-history checksを経たexact-only merge後のcacheは5,747 rows（WIN158 / LOSS5,589）、active quarantine key 0。対象S4の109-child boundaryはLOSS20 / WIN0 / UNKNOWN89なので、S4 statusはUNKNOWNを維持する。全classはLOSS31 / WIN272 / UNKNOWN3,081、secured117/119、残り`{100,108}`、integer minimum1とrational LP dual1は不変。全面的なterminal-only minimax証明DAGではなく、保存済みcache-only evidenceも残る。報告・生raw・監査・inventory・次候補はartifact listの継続experimentに保存した。
+
+終了時に次のready候補 `(1188950301626859520,536870913)`（legal94）を選んだ。過去raw observationとsaved-layer verdictはなく、dispatchは次回へ保留した。`{60,27}` rootと11×11 empty boardの勝者は依然UNKNOWN。
+
+## 2026-10-10 JST 最新main cacheへのrebase
+
+追加調査中にmain `f3c0c8ec265e034a3e69c03e6eee6d5d9a4a8e43` が入り、別experimentの共有S5 `(1152921504606851072,536870946)`（3,651,923 nodes）と `(1188950301626860544,536870912)`（5,040,200 nodes）のdirect LOSSを取り込んだ。両方ともこのS4の合法S5子であることを独立Boardで確認し、本作業6 LOSSと合わせてlatest-main exact cacheへconflictなしでrebaseした。結果は5,749 rows（WIN158 / LOSS5,591、quarantine0）。
+
+最新対象境界はLOSS22 / WIN0 / UNKNOWN87で、対象S4はなおUNKNOWN。全3,384 classはLOSS31 / WIN272 / UNKNOWN3,081、第三手被覆117/119、残り`{100,108}`、integer minimum1・rational LP dual1。別の数学的成果K0373により100と108は反射で同じ勝敗・同一のS4 class群に属するが、残る第三手のroot勝敗は決まらない。
+
+最新raw-historyは11,960 CSV、exact/cache intersection22、prior exact15 keys、同以上budget UNKNOWN1、dispatch-ready86、conflict0。保存layerはS6 boundary5,249、raw/cache exact S6 13/14、S7 intersection0、S6/S7由来S5判定0。次のready childは`(1188950301626859520,536870913)`（legal94）。この有限範囲のsolver exact結果はraw追跡・geometry検査済みだがterminal-only independent proofではない。保存cache-only evidenceも含むので`{60,27}`の証明DAG完成とは扱わない。

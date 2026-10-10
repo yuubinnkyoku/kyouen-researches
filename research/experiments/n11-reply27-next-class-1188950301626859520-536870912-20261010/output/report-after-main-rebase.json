@@ -1,0 +1,124 @@
+{
+  "cache_rebase": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/latest-main-cache-rebase.json",
+    "sha256": "e814b85d543fd8dac33f681f60bbead81928a6fd5065ac98b45983df8a7cdbe6"
+  },
+  "cumulative_experiment": {
+    "details": "Includes the three direct LOSS in the prior checkpoint, six local continuation LOSS, two LOSS imported from f3c0c8ec, and the 15M UNKNOWN retained only in raw evidence.",
+    "direct_s5_loss": 11,
+    "distinct_s5_positions": 12,
+    "exact_verdict_nodes": 49242475,
+    "solver_runs": 24,
+    "total_nodes": 88242475,
+    "unknown_at_15m": 1
+  },
+  "evidence_limit": "All newly merged exact S5 LOSS rows are raw solver-traceable and independently checked for canonicality, safety, legal count, and S4/S5 incidence. Their solver verdicts are not terminal-only independent minimax certificates. The cache and global frontier still include earlier cache-only evidence; this is not a complete independent minimax proof DAG.",
+  "final_exact_s5_cache": {
+    "active_quarantined_keys": 0,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9-rebased-main.cache",
+    "rows": 5749,
+    "sha256": "c4a77facb2269f51ffcb13493c668a5b7656a1b42f8c280647dc8936011db2a2",
+    "verdict_counts": {
+      "LOSS": 5591,
+      "WIN": 158
+    }
+  },
+  "frontier": {
+    "integer_minimum_additional_classes": 1,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/frontier-after-main-rebase.json",
+    "rational_lp_dual": {
+      "feasibility": "each class covers a vertex at most once",
+      "value": "1",
+      "weights": {
+        "100": "1"
+      }
+    },
+    "remaining_third_moves": [
+      100,
+      108
+    ],
+    "s4_class_counts": {
+      "LOSS": 31,
+      "UNKNOWN": 3081,
+      "WIN": 272
+    },
+    "secured_third_moves": 117,
+    "sha256": "3c5dd7220bf9086ec892eda559cfd7c4f61fdd5d77eb5dfb14e6ad0d616b49df",
+    "total_third_moves": 119
+  },
+  "latest_main_probe_audit": {
+    "path": "research/experiments/n11-two-target-design-20261010/output/probe-audit.json",
+    "sha256": "ad341a2eb813606fa376f133af595c6295a38d274339e4728a22465365dad9a9"
+  },
+  "latest_main_solver": {
+    "local_binary_sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "shared_probe_binary_sha256": "98aadf580119ea3fb89be77fa161defded6feb87f5cb2f30b0503e35a4163c01",
+    "source_cpp_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+  },
+  "main_commit_at_rebase": "f3c0c8ec265e034a3e69c03e6eee6d5d9a4a8e43",
+  "next_candidate": {
+    "legal_count": 94,
+    "plan": {
+      "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-11-plan.json",
+      "sha256": "047e2c18f5f1f054df7478d598bf89a3c87b6120f32670e642c5dd00c5811d6d"
+    },
+    "prior_observations": [],
+    "raw_history_ready": true,
+    "s4_key": [
+      1188950301626859520,
+      536870912
+    ],
+    "s5_key": [
+      1188950301626859520,
+      536870913
+    ],
+    "saved_layer_verdict": null
+  },
+  "old_main_checkpoint_report": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report-continuation.json",
+    "sha256": "fd5b12adb577dd1d7ff3643bc2530ac9f6590b6d5399de41c5c0eb07272ccf77"
+  },
+  "post_probe_raw_history": {
+    "cache_exact_intersections": 22,
+    "conflicts": 0,
+    "csv_files_examined": 11960,
+    "dispatch_ready_unknown_children": 86,
+    "lower_budget_unknown_keys": 13,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-main-rebase.json",
+    "prior_exact_keys": 15,
+    "prior_exact_observation_rows": 30,
+    "same_budget_unknown_keys": 1,
+    "sha256": "7183754680eaa7f9c6836e4ca4ddacdba2bf3d071fa285fb61053e03031819be",
+    "target_children": 109
+  },
+  "saved_layers": {
+    "cache_s6_exact": 14,
+    "derived_s5_verdicts": 0,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-main-rebase.json",
+    "raw_s6_exact": 13,
+    "raw_s7_exact": 0,
+    "s6_boundary_keys": 5249,
+    "s7_cache_intersections": 0,
+    "sha256": "80cb1ede0986969d754469e3b16c4e78b224eb1489e36e4bd9eb9cc60c01141d"
+  },
+  "schema": "n11-reply27-next-class-latest-main-report-v1",
+  "target_s4": {
+    "boundary": {
+      "LOSS": 22,
+      "UNKNOWN": 87
+    },
+    "children": 109,
+    "coverage": [
+      55,
+      65,
+      100,
+      108
+    ],
+    "key": [
+      1188950301626859520,
+      536870912
+    ],
+    "status": "UNKNOWN",
+    "unresolved_s5_children": 87
+  }
+}

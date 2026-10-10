@@ -1,0 +1,107 @@
+{
+  "cache_only_budget_zero_projections_ignored": {
+    "6": 172
+  },
+  "interpretation": "Direct positive-budget replay and cache-only rows are separate. Raw S7 propagation uses the fixed original-player AND/OR rule; S7 LOSS alone never implies S6 WIN. The six quarantined false S6 WIN keys are excluded from cache propagation.",
+  "preflight": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/geometric-cache-preflight.json",
+    "sha256": "cf506ecd7c92985af32d881d03a6be216830ab8afc5383fed4c7d463db2fd7cc"
+  },
+  "raw_s6": {
+    "exact_keys": {
+      "1188950310216794112,603979776": 1
+    },
+    "matching_sources": {
+      "research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-hard5-adaptive15m-out.csv": {
+        "matching_rows": 1,
+        "sha256": "e9cd414e8ca1925fc925331a841d11ee6ae0e6248d46d5391bc160bc796f88d0"
+      }
+    },
+    "observations": {
+      "1188950310216794112,603979776": [
+        {
+          "budget": 15000000,
+          "canonical_key": [
+            1188950310216794112,
+            603979776
+          ],
+          "legal_count": 78,
+          "nodes": 354506,
+          "path": "research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-hard5-adaptive15m-out.csv",
+          "raw_key": [
+            1188950310216794112,
+            603979776
+          ],
+          "row": 348,
+          "sha256": "e9cd414e8ca1925fc925331a841d11ee6ae0e6248d46d5391bc160bc796f88d0",
+          "verdict": 1
+        }
+      ]
+    },
+    "same_or_higher_15m_unknown_keys": []
+  },
+  "raw_s7": {
+    "exact_keys": {},
+    "matching_sources": {
+      "research/experiments/n11-boundary-recovery-20261006/output/raw/next12-run-hard5-adaptive15m-out.csv": {
+        "matching_rows": 1,
+        "sha256": "e9cd414e8ca1925fc925331a841d11ee6ae0e6248d46d5391bc160bc796f88d0"
+      }
+    },
+    "observations": {},
+    "target_s6_parent_intersections": {}
+  },
+  "s5_raw_history_audit": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-before-15m-sixth.json",
+    "scanned_csv_files": 11934,
+    "sha256": "6c97950db79df4376da3d44e1f7a1fcc92afe5c45e4ab5f6d0e2dd169badc5b8",
+    "target_s5_children": 1
+  },
+  "s5_results_from_raw_s6_s7_only": {},
+  "s5_results_with_saved_cache_s6_s7": {},
+  "s6_boundary": {
+    "distinct_canonical_keys": 90,
+    "legacy_false_s6_win_keys_in_boundary": [],
+    "s5_to_s6_edges": 90
+  },
+  "s6_derived_from_cache_s7": {},
+  "s6_derived_from_raw_s7": {},
+  "saved_cache_s6": {
+    "cache_only_keys": [],
+    "exact_keys": {
+      "1188950310216794112,603979776": 1
+    },
+    "matching_sources": {
+      "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s6.cache": {
+        "matching_rows": 1,
+        "sha256": "571493b5faa8fa757371d2299ff31f7be1fc20a5a2b35cf2592b9e8e40981f31"
+      },
+      "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact.cache": {
+        "matching_rows": 1,
+        "sha256": "ccf60490dc5841ae176a5035349a0037f1ebd323f0345f67726570a73da25dbe"
+      },
+      "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-exact-s6.cache": {
+        "matching_rows": 1,
+        "sha256": "b0b9c608a9abab455dcbcdca97fa5c1492c10854159d28b8883cac61ce0ebb21"
+      }
+    }
+  },
+  "saved_cache_s7": {
+    "matching_sources": {
+      "research/experiments/n11-boundary-recovery-20261006/output/post-1001d051-reconciliation-20261009-exact-s6.cache": {
+        "matching_rows": 1,
+        "sha256": "571493b5faa8fa757371d2299ff31f7be1fc20a5a2b35cf2592b9e8e40981f31"
+      },
+      "research/experiments/n11-boundary-recovery-20261006/output/post-67ecfaa9-class-1585267068834414720-0-after-ready83-s6-exact.cache": {
+        "matching_rows": 1,
+        "sha256": "ccf60490dc5841ae176a5035349a0037f1ebd323f0345f67726570a73da25dbe"
+      },
+      "research/experiments/n11-boundary-recovery-20261006/output/post-d0ed156-reconciliation-20261009-exact-s6.cache": {
+        "matching_rows": 1,
+        "sha256": "b0b9c608a9abab455dcbcdca97fa5c1492c10854159d28b8883cac61ce0ebb21"
+      }
+    },
+    "target_intersections": {}
+  },
+  "schema": "n11-reply27-target-s6-s7-preflight-v1"
+}

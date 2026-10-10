@@ -1,0 +1,59 @@
+{
+  "base_cache": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-5.cache",
+    "rows": 5743,
+    "sha256": "e0d6a3d7bb67287d43c4784866e4943a903310057754f2eccee43d8393956a9d"
+  },
+  "cache": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-6.cache",
+    "rows": 5744,
+    "sha256": "aa85808974b16579f664018b70249a4057cacbd1f0511c7748124e07b63b1e0a",
+    "verdict_counts": {
+      "1": 158,
+      "2": 5586
+    }
+  },
+  "conflicts": 0,
+  "independent_geometry": {
+    "complete_parent_boundary": 109,
+    "legal_count": 91,
+    "legal_s4_parent_edge": true,
+    "safe_canonical_s5": true
+  },
+  "merged_key": [
+    10412322338481635328,
+    536870912
+  ],
+  "merged_verdict": "LOSS",
+  "plan": {
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-7-plan.json",
+    "sha256": "74204fce54b68e2951898055b12f98df464b7bc43151fc317ae495449eb34d55"
+  },
+  "quarantine_registry_sha256": "81d231604d3a095c115135e05ca393d6be83e1aadde4f614d3b5a9cc67d17fe9",
+  "raw_history_audit": {
+    "conflicts": 0,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-15m-seventh.json",
+    "sha256": "d4ac145af8b19bbbc0784a125b728454c1480d75a7fb2422566db9e6f6e697e9"
+  },
+  "raw_solver": {
+    "budget": 15000000,
+    "input_path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/input/probe-target-7.csv",
+    "input_sha256": "3fd50c399f3a24101f1d9b88cec63e1a8ca7aa8f6318f46cc6edf48f3417983c",
+    "nodes": 2569967,
+    "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-seventh.csv",
+    "sha256": "a685f404557d9aa9cb32e8d90b06be303f52d51f67d2846872839ba140b535a9",
+    "verdict": "LOSS"
+  },
+  "schema": "n11-reply27-direct-s5-loss-merge-v1",
+  "solver": {
+    "options": [
+      "--n=11",
+      "--memo=22",
+      "--exact-order=count"
+    ],
+    "path": ".local/n11-independent-audit-solver.exe",
+    "sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+  }
+}

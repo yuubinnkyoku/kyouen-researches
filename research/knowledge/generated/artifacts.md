@@ -4914,16 +4914,33 @@
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 対象boundaryのS6/S7交差。raw S6 16、cache S6 18、S7交差とS5派生結果は0
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md)
 
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): dual-tight候補S4の直近10 S5局面probeと監査結果
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 次のdual-tight S4 classを段階的に探索した3件のdirect S5 LOSSと現在境界
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json)
 
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 継続実験のinput/raw/cache/監査/sourceのbyte数とSHA-256 inventory
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 実験内64 artifact、24,902,435 bytesのSHA-256 inventory。inventory自身は対象外
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 3 direct S5 LOSSをconflictなく追加した5741行exact cache
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9-rebased-main.cache](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9-rebased-main.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): main由来2 LOSSと本研究の6 LOSSをconflictなしで加えた5,749-row exact cache
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9.cache](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-9.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 6件のraw追跡可能なdirect S5 LOSSを追加した5,747-row exact cache。quarantine keyなし
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/frontier-after-main-rebase.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/frontier-after-main-rebase.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 最新cacheで対象境界LOSS22 / UNKNOWN87、119第三手coverと整数/有理値を再計算
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/frontier-after-probe-9.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/frontier-after-probe-9.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 対象S4全109子を再分類しLOSS20 / UNKNOWN89、全体被覆と整数/有理coverを再計算
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/geometric-preflight-after-three.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/geometric-preflight-after-three.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 最終cacheで109-child完全境界を再生成しLOSS 14 / UNKNOWN 95を確認
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/latest-main-cache-rebase.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/latest-main-cache-rebase.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): f3c0c8ec baselineと8 direct LOSS deltaを結ぶgeometry・raw・conflict audit
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-second.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-second.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 2件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
@@ -4933,12 +4950,27 @@
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 1件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-main-rebase.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-main-rebase.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 11,960 CSVをscanした最新mainの109-child raw-history監査
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-tenth.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-tenth.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 11,947 CSVをhash照合した109-child raw-history audit。conflict0、15M UNKNOWN1
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-third-15m.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-third-15m.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 11925 CSV raw history、conflict 0、15M以上UNKNOWN 0、95 children ready
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report-after-main-rebase.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report-after-main-rebase.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): f3c0c8ecの新main exact cacheへrebase後の最新境界・被覆・raw/S6/S7監査
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report-continuation.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report-continuation.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 6 direct S5 LOSS、1件の15M UNKNOWN、cache/frontier/S6-S7監査をまとめた継続report
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): probe nodes、final S5/S4境界、coverage、raw/S6/S7監査と次候補
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-main-rebase.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-main-rebase.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 5,249 canonical S6 keysとraw/cache S6/S7交差およびS5伝播を再監査
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 5366 canonical S6境界とS7を照合し、S5への派生結果なし
@@ -5023,6 +5055,7 @@
 - [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (verifier): S4..S10の全二子三値境界をBoolean completionで照合し、cache再流入も検査
 ## [research/experiments/n11-two-target-design-20261010/README.md](../../../research/experiments/n11-two-target-design-20261010/README.md)
 
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 100/108反射対称性と2件の共有S5 LOSS。新K0373の証明と有限計算の信頼境界
 - [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (proof): 頂点100・108の根局面安定化群による同一軌道の証明
 ## [research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json](../../../research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json)
 
