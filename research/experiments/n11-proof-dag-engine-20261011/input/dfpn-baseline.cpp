@@ -203,15 +203,8 @@ public:
     struct GChild {
         typename DfPn<N>::TState ts; Bits legal,key; int count=0;
         std::uint32_t pn=1,dn=1; std::uint8_t st=0;
-        std::uint8_t move=255;     // concrete parent move; fits the 0..120 board
         std::uint64_t work=0;      // cumulative expansions under this child
         std::uint32_t last_pn=1,last_dn=1; // for delta tracking
-    };
-    struct ProofEdge { std::uint8_t move=255; Bits child{}; };
-    struct ProofNode {
-        std::uint8_t verdict=0;    // 1=original first player WIN, 2=LOSS
-        bool terminal=false;
-        std::vector<ProofEdge> edges;
     };
     struct Gen { std::array<GChild,V> ch; int n=0; };
     // sizeof(Gen) sanity per N: GChild=176 B (8x16 B TState + 48 B).
@@ -1227,8 +1220,6 @@ public:
 private:
     std::array<std::array<Bits,V>,8> tbit_{};
     PnTT tt_;
-    bool collect_proof_dag_=false;
-    std::map<Bits,ProofNode> proof_nodes_;
     std::vector<Bits> completion_;
     std::vector<std::array<int,4>> forbidden_quads_;
     std::uint64_t forbidden_count_=0,visited_=0,expanded_=0;
@@ -1577,32 +1568,6 @@ private:
     }
     inline TState add(const TState&s,int v)const{TState r=s;for(int k=0;k<8;++k)r.t[k]=r.t[k]|tbit_[k][v];return r;}
     static inline Bits canonical(const TState&s){Bits r=s.t[0];for(int k=1;k<8;++k)if(s.t[k]<r)r=s.t[k];return r;}
-    int canonical_transform(const TState& s,const Bits& key) const {
-        for(int t=0;t<8;++t) if(s.t[t]==key) return t;
-        throw std::runtime_error("canonical transform not found");
-    }
-    int move_to_canonical(int transform,int move) const {
-        if(transform<0||transform>=8||move<0||move>=V)
-            throw std::runtime_error("invalid proof move transform");
-        Bits b=tbit_[(std::size_t)transform][(std::size_t)move];
-        return b.lo ? std::countr_zero(b.lo) : 64+std::countr_zero(b.hi);
-    }
-    bool has_proof(const Bits& key) const { return proof_nodes_.find(key)!=proof_nodes_.end(); }
-    void remember_proof(const Bits& key,ExactResult r,bool terminal,
-                        std::vector<ProofEdge> edges){
-        if(!collect_proof_dag_||r==ExactResult::UNKNOWN) return;
-        ProofNode node;
-        node.verdict=(r==ExactResult::WIN)?1:2;
-        node.terminal=terminal;
-        node.edges=std::move(edges);
-        auto it=proof_nodes_.find(key);
-        if(it!=proof_nodes_.end()){
-            if(it->second.verdict!=node.verdict)
-                throw std::runtime_error("proof DAG verdict conflict");
-            return; // An earlier complete proof for this canonical position remains valid.
-        }
-        proof_nodes_.emplace(key,std::move(node));
-    }
     inline Bits added_bans(Bits state,int v)const{
         int verts[V],k=0;Bits s=state;while(any(s))verts[k++]=take_lsb(s);
         Bits out{};for(int i=0;i<k;++i)for(int j=i+1;j<k;++j){int a=verts[i],b=verts[j],c=v;sort3(a,b,c);out=out|completion_[idx(a,b,c)];}return out;
@@ -1615,7 +1580,6 @@ private:
             danger= danger | completion_[idx(a,b,c)];
         }
         Bits legal{~0ULL,HI_MASK};
-        if constexpr(V<64) legal.lo &= ((1ULL<<V)-1ULL);
         legal=legal & ~occupied & ~danger;
         legal.hi&=HI_MASK;
         return legal;
@@ -1772,7 +1736,6 @@ private:
             if(g.n<0 || g.n>=V) throw std::runtime_error("gen_into: child index out of range");
             GChild& c=g.ch[(std::size_t)g.n];
             c.ts=ns; c.legal=nl; c.key=nk; c.count=popcount(nl);
-            c.move=static_cast<std::uint8_t>(v);
             c.work=0; c.last_pn=1; c.last_dn=1;
             int cs=stones+1;
             int s=tt_.find(nk.lo,nk.hi);
@@ -1846,7 +1809,7 @@ private:
         const bool do_residual_crosscheck =
             residual_crosscheck_legal_>0 && popcount(legal)<=residual_crosscheck_legal_;
         auto checked_return = [&](ExactResult r){
-            if(!collect_proof_dag_ && r!=ExactResult::UNKNOWN && exact_share_layer_>0 && stones==exact_share_layer_){
+            if(r!=ExactResult::UNKNOWN && exact_share_layer_>0 && stones==exact_share_layer_){
                 std::uint8_t v=(r==ExactResult::WIN)?std::uint8_t(1):std::uint8_t(2);
                 auto ins=exact_layer_cache_.emplace(key,v);
                 if(ins.second) ++exact_share_stores_;
@@ -1858,7 +1821,7 @@ private:
             }
             return r;
         };
-        if(!collect_proof_dag_ && exact_share_layer_>0 && stones==exact_share_layer_){
+        if(exact_share_layer_>0 && stones==exact_share_layer_){
             auto si=exact_layer_cache_.find(key);
             if(si!=exact_layer_cache_.end()){
                 ++exact_share_hits_;
@@ -1866,22 +1829,14 @@ private:
             }
         }
         int s=tt_.find(key.lo,key.hi);
-        if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN){
-            ExactResult cached=tt_.st_[(std::size_t)s]==PnTT::WIN ? ExactResult::WIN : ExactResult::LOSS;
-            if(collect_proof_dag_ && !has_proof(key))
-                throw std::runtime_error("solved TT leaf has no proof dependency record");
-            return checked_return(cached);
-        }
+        if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN)
+            return checked_return(tt_.st_[(std::size_t)s]==PnTT::WIN ? ExactResult::WIN : ExactResult::LOSS);
         if(exact_publish_mode_!=ExactPublishMode::ALL){
             std::uint8_t lv=exact_local_.get(key);
-            if(lv){
-                if(collect_proof_dag_ && !has_proof(key))
-                    throw std::runtime_error("exact local-cache leaf has no proof dependency record");
-                return checked_return(lv==1 ? ExactResult::WIN : ExactResult::LOSS);
-            }
+            if(lv) return checked_return(lv==1 ? ExactResult::WIN : ExactResult::LOSS);
         }
 
-        if(residual_exact_legal_>0 && popcount(legal)<=residual_exact_legal_ && !collect_proof_dag_){
+        if(residual_exact_legal_>0 && popcount(legal)<=residual_exact_legal_){
             ++residual_exact_calls_;
             ExactResult rr=residual_verdict(state.t[0],legal,stones);
             exact_record(key,rr);
@@ -1918,7 +1873,6 @@ private:
             // second player is to move (odd number of stones).
             ExactResult r=is_or(stones)?ExactResult::LOSS:ExactResult::WIN;
             exact_record(key,r);
-            remember_proof(key,r,true,{});
             return checked_return(r);
         }
 
@@ -1926,8 +1880,6 @@ private:
         Gen& g=*gb;
         gen_into(state,stones,legal,g,false);
         const bool isor=is_or(stones);
-        const int proof_transform=collect_proof_dag_?canonical_transform(state,key):0;
-        std::vector<ProofEdge> proof_edges;
 
         // DFS ordering only affects speed, never the result, so it is safe to
         // A/B. The decisive-child rule comes first because it is the only
@@ -1998,28 +1950,12 @@ private:
             else if(ch.st==PnTT::LOSS) cr=ExactResult::LOSS;
             else cr=exact_prop(ch.ts,stones+1,ch.legal,budget);
 
-            if(collect_proof_dag_ && cr!=ExactResult::UNKNOWN && !has_proof(ch.key)){
-                if(any(ch.legal))
-                    throw std::runtime_error("solved child TT entry has no proof dependency record");
-                ExactResult terminal=is_or(stones+1)?ExactResult::LOSS:ExactResult::WIN;
-                if(cr!=terminal) throw std::runtime_error("terminal child verdict mismatch");
-                remember_proof(ch.key,terminal,true,{});
-            }
-
             if(isor && cr==ExactResult::WIN){
                 exact_record(key,ExactResult::WIN);
-                if(collect_proof_dag_){
-                    proof_edges.push_back({static_cast<std::uint8_t>(move_to_canonical(proof_transform,ch.move)),ch.key});
-                    remember_proof(key,ExactResult::WIN,false,std::move(proof_edges));
-                }
                 return checked_return(ExactResult::WIN);
             }
             if(!isor && cr==ExactResult::LOSS){
                 exact_record(key,ExactResult::LOSS);
-                if(collect_proof_dag_){
-                    proof_edges.push_back({static_cast<std::uint8_t>(move_to_canonical(proof_transform,ch.move)),ch.key});
-                    remember_proof(key,ExactResult::LOSS,false,std::move(proof_edges));
-                }
                 return checked_return(ExactResult::LOSS);
             }
             if(cr==ExactResult::UNKNOWN) unknown=true;
@@ -2028,37 +1964,6 @@ private:
         if(unknown) return ExactResult::UNKNOWN;
         ExactResult r=isor?ExactResult::LOSS:ExactResult::WIN;
         exact_record(key,r);
-        if(collect_proof_dag_){
-            // Gen deduplicates children by D4 orbit for search. A universal
-            // proof must still list every concrete legal move; each move is
-            // mapped to its canonical child dependency here.
-            Bits moves=legal;
-            if constexpr(V<64) moves.lo &= ((1ULL<<V)-1ULL);
-            else if constexpr(V==64) moves.hi=0;
-            else moves.hi &= HI_MASK;
-            while(any(moves)){
-                int move=take_lsb(moves);
-                TState child_state=add(state,move);
-                Bits child_key=canonical(child_state);
-                if(!has_proof(child_key)){
-                    Bits child_legal=(legal&~bitof(move))&~added_bans(state.t[0],move);
-                    if constexpr(V<64) child_legal.lo &= ((1ULL<<V)-1ULL);
-                    else if constexpr(V==64) child_legal.hi=0;
-                    child_legal.hi&=HI_MASK;
-                    if(any(child_legal))
-                        throw std::runtime_error(
-                            "universal proof is missing a nonterminal child dependency: parent="+
-                            std::to_string(key.lo)+":"+std::to_string(key.hi)+" child="+
-                            std::to_string(child_key.lo)+":"+std::to_string(child_key.hi)+
-                            " move="+std::to_string(move)+" legal="+
-                            std::to_string(popcount(child_legal)));
-                    ExactResult terminal=is_or(stones+1)?ExactResult::LOSS:ExactResult::WIN;
-                    remember_proof(child_key,terminal,true,{});
-                }
-                proof_edges.push_back({static_cast<std::uint8_t>(move_to_canonical(proof_transform,move)),child_key});
-            }
-            remember_proof(key,r,false,std::move(proof_edges));
-        }
         return checked_return(r);
     }
 
@@ -2677,34 +2582,6 @@ public:
         os.flush();
     }
 
-    // Optional proof dependency capture for a cold --exact-replay query.
-    // It records solved exact nodes and their AND/OR dependencies while the
-    // search runs; a separate geometry checker must still validate the trace.
-    void set_proof_dag_collection(bool enabled){
-        collect_proof_dag_=enabled;
-        proof_nodes_.clear();
-    }
-    std::size_t proof_dag_nodes() const { return proof_nodes_.size(); }
-    void dump_proof_trace(std::ostream& os,Bits root,int verdict) const {
-        if(!collect_proof_dag_) throw std::runtime_error("proof collection is disabled");
-        auto it=proof_nodes_.find(root);
-        if(it==proof_nodes_.end() || it->second.verdict!=verdict)
-            throw std::runtime_error("proof trace has no matching solved root");
-        os<<"# kyouen-proof-trace-v1,n="<<N<<",root_lo="<<root.lo
-          <<",root_hi="<<root.hi<<",verdict="<<verdict<<"\n";
-        for(const auto& kv:proof_nodes_){
-            const Bits& key=kv.first;
-            const ProofNode& node=kv.second;
-            os<<"N,"<<key.lo<<","<<key.hi<<","<<(int)node.verdict
-              <<","<<(node.terminal?1:0)<<"\n";
-            for(const ProofEdge& edge:node.edges)
-                os<<"E,"<<key.lo<<","<<key.hi<<","<<(int)edge.move
-                  <<","<<edge.child.lo<<","<<edge.child.hi<<"\n";
-        }
-        os.flush();
-        if(!os) throw std::runtime_error("failed to write proof trace");
-    }
-
 private:
     std::ostream* log_=&std::cerr;
     std::ofstream log_file_;
@@ -2919,38 +2796,9 @@ template<int N>
     static int run_exact_replay(const std::string& path,std::uint64_t budget,
                             unsigned memo_power,const std::string& only,
                             int exact_order,int residual_audit_legal,int residual_crosscheck_legal,
-                            int residual_exact_legal,int residual_share_gate,bool exact_replay_share_tt,int exact_share_layer,
-                            const std::string& proof_dag_path,std::ostream& O){
+                            int residual_exact_legal,int residual_share_gate,bool exact_replay_share_tt,int exact_share_layer,std::ostream& O){
     std::ifstream in(path);
     if(!in){ std::cerr<<"cannot open --exact-replay\n"; return 1; }
-    if(!proof_dag_path.empty()){
-        if(exact_replay_share_tt || residual_exact_legal>0 || residual_share_gate>0 || exact_share_layer>0)
-            throw std::runtime_error("--proof-dag requires cold, unshared exact replay without residual shortcut");
-        std::ifstream existing(proof_dag_path,std::ios::binary);
-        if(existing.good()) throw std::runtime_error("refusing to overwrite proof trace");
-        int selected_rows=0;
-        std::string scan;
-        while(std::getline(in,scan)){
-            if(scan.empty()||scan[0]=='#') continue;
-            std::vector<std::string> f;
-            std::stringstream ss(scan); std::string tok;
-            while(std::getline(ss,tok,',')) f.push_back(tok);
-            if(f.size()<11) continue;
-            int row_stones=std::stoi(f[2]);
-            if(!only.empty()){
-                std::stringstream t(only); std::string w; bool want=false;
-                while(std::getline(t,w,','))
-                    if(!w.empty()&&std::stoi(w)==row_stones){want=true;break;}
-                if(!want) continue;
-            }
-            if(++selected_rows>1)
-                throw std::runtime_error("--proof-dag requires exactly one selected replay row");
-        }
-        if(selected_rows!=1)
-            throw std::runtime_error("--proof-dag requires exactly one selected replay row");
-        in.clear();
-        in.seekg(0);
-    }
     O<<"# exact replay: order="<<exact_order<<" (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92)"<<" share_tt="<<(exact_replay_share_tt?1:0)<<std::endl;
     O<<"# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi\n";
     O.flush();
@@ -3003,13 +2851,7 @@ template<int N>
             row_solver.set_residual_exact_legal(residual_exact_legal);
             row_solver.set_residual_share_gate(residual_share_gate);
             row_solver.set_exact_share_layer(exact_share_layer);
-            if(!proof_dag_path.empty()) row_solver.set_proof_dag_collection(true);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
-            if(!proof_dag_path.empty() && (res==1||res==2)){
-                std::ofstream pf(proof_dag_path,std::ios::out|std::ios::trunc);
-                if(!pf) throw std::runtime_error("cannot open proof trace output");
-                row_solver.dump_proof_trace(pf,occ,res);
-            }
             if(residual_audit_legal>0 || residual_crosscheck_legal>0 ||
                residual_exact_legal>0 || residual_share_gate>0 || exact_share_layer>0){
                 std::uint64_t rms=0, rrm=0, rcs=0;
@@ -3790,7 +3632,6 @@ int main(int argc,char**argv){
         bool exact_record=false;
         int exact_record_limit=0;
         std::string exact_replay_path="";
-        std::string proof_dag_path="";
         std::uint64_t exact_replay_budget=1000000;
         bool exact_replay_share_tt=false;
         int exact_share_layer=0;
@@ -3847,7 +3688,6 @@ int main(int argc,char**argv){
             else if(a.rfind("--exact-record-limit=",0)==0)exact_record_limit=std::stoi(a.substr(21));
             else if(a.rfind("--exact-replay=",0)==0)exact_replay_path=a.substr(15);
             else if(a.rfind("--exact-replay-budget=",0)==0)exact_replay_budget=std::stoull(a.substr(22));
-            else if(a.rfind("--proof-dag=",0)==0)proof_dag_path=a.substr(12);
             else if(a.rfind("--quant-first=",0)==0)quant_first=std::stoi(a.substr(14));
             else if(a.rfind("--quant-replies=",0)==0)quant_replies=a.substr(16);
             else if(a.rfind("--quant-budget=",0)==0)quant_budget=std::stoull(a.substr(15));
@@ -3887,7 +3727,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--proof-dag=PATH] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }
@@ -3895,10 +3735,6 @@ int main(int argc,char**argv){
            && quant_replies.empty() && s4_ab.empty() && s5_cache.empty()
            && !cover_run && !coord_run){
             std::cerr<<"nothing to do without --empty/--reps/--roots-csv/--exact-replay/--quant-replies\n";
-            return 2;
-        }
-        if(!proof_dag_path.empty() && exact_replay_path.empty()){
-            std::cerr<<"--proof-dag requires --exact-replay\n";
             return 2;
         }
         std::ostream* lp=&std::cerr;
@@ -3952,7 +3788,7 @@ int main(int argc,char**argv){
         int rc=0;
         switch(n){
             case 4:
-                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,proof_dag_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -3961,7 +3797,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 5:
-                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,proof_dag_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -3970,7 +3806,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 6:
-                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,proof_dag_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -3979,7 +3815,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 7:
-                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,proof_dag_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -3988,7 +3824,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 11:
-                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,proof_dag_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,exact_replay_share_tt,exact_share_layer,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
