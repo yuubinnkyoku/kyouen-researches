@@ -4183,10 +4183,40 @@ artifacts:
   - path: research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/artifact-sha256.json
     role: manifest
     note: 実験内127 artifactのbyte sizeとSHA-256 inventory。inventory自身は対象外
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md
+    role: source
+    note: 次のdual-tight S4 classを段階的に探索した3件のdirect S5 LOSSと現在境界
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report.json
+    role: data
+    note: probe nodes、final S5/S4境界、coverage、raw/S6/S7監査と次候補
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache
+    role: data
+    note: 3 direct S5 LOSSをconflictなく追加した5741行exact cache
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt.json
+    role: manifest
+    note: 1件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-second.json
+    role: manifest
+    note: 2件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-third.json
+    role: manifest
+    note: 3件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/geometric-preflight-after-three.json
+    role: verifier
+    note: 最終cacheで109-child完全境界を再生成しLOSS 14 / UNKNOWN 95を確認
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-third-15m.json
+    role: verifier
+    note: 11925 CSV raw history、conflict 0、15M以上UNKNOWN 0、95 children ready
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json
+    role: verifier
+    note: 5366 canonical S6境界とS7を照合し、S5への派生結果なし
+  - path: research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json
+    role: manifest
+    note: 実験内64 artifact、24,902,435 bytesのSHA-256 inventory。inventory自身は対象外
 scope: >-
-  Latest verified checkpoint began on fetched main 154f3b7a67b97e13acbaee8b04dc74ddca728d19. The S4 class (1297036692683751424,16) is WIN by direct raw S5 witness (1297036692683751424,67108880); its 108-child boundary is LOSS 9 / WIN 1 / UNKNOWN 98. A follow-up class (1188950301626859520,536870912) remains UNKNOWN at LOSS 11 / UNKNOWN 98.
-  The 14 probes used 67,339,676 nodes and added four direct exact S5 results (two WIN / two LOSS). The cache has 5,738 rows (158 WIN / 5,580 LOSS); all 3,384 classes classify as 31 LOSS / 272 WIN / 3,081 UNKNOWN. Secured third moves remain 117/119, with {100,108} uncovered. Minimum additional class cover and rational LP dual remain 1.
-  Raw S5 history and S6/S7 intersections were rechecked. New S5 WIN geometry is independently checked, but terminal-only minimax stopped at 30,000 states with UNKNOWN; the cache contains cache-only evidence and is not a full independent proof DAG. {60,27} and the 11×11 empty-board winner remain UNKNOWN.
+  Latest follow-up began on fetched main 1739ddf2f9a5ec411ad5aeb0a2d8f9259951597c. The S4 class (1297036692683751424,16) remains WIN by direct raw S5 witness (1297036692683751424,67108880). The next cover candidate (1188950301626859520,536870912) remains UNKNOWN after three new direct S5 LOSS results; its complete 109-child boundary is LOSS 14 / WIN 0 / UNKNOWN 95.
+  The six staged probes used 14,774,720 nodes and added three direct exact S5 LOSS results in 8,774,720 exact nodes. The exact cache has 5,741 rows (158 WIN / 5,583 LOSS). All 3,384 classes remain 31 LOSS / 272 WIN / 3,081 UNKNOWN; secured third moves remain 117/119, {100,108} remain uncovered, and minimum additional class cover / rational LP dual remain 1.
+  New raw results are source-traceable and geometry-checked, but not terminal-only independent minimax certificates. Raw history and saved S6/S7 were rechecked; no S6/S7-derived verdict entered this class. The merged frontier retains prior cache-only evidence and is not a full independent proof DAG. {60,27} and the 11×11 empty-board winner remain UNKNOWN.
 evidence: >-
   At checkpoint start, no reply27 solver was running and HEAD == origin/main == 2beb63af85aa1134bc0db6dd742dc1ba7e961419; fetch returned the same main. Class (10448351135499550721,0) has 105 canonical s5 children, with 10 exact LOSS and 95 UNKNOWN. The eight-target 15,000,000-budget probe passed raw-history and saved-S6 preflight (8 ready, 0 blocked, 0 conflict); it returned eight exact LOSS in 37,474,347 nodes. The remaining 87 targets independently passed strict preflight: 7,772 raw CSV sources, zero prior exact, zero same-or-higher-budget UNKNOWN, and 1,306 saved-S6 source files with all 87 parents still UNKNOWN. Completion returned 87 exact LOSS in 417,376,483 nodes. The combined 95 new exact rows used 454,850,830 nodes; no S6 descent or reverse-propagated LOSS occurred.
   Geometry rebuilt the full canonical boundary and verified all 105 legal s5 children are exact LOSS, with no missing or duplicate child and coverage vertices {104,110,120}. The independent cache verifier reports cache_boundary_exact=true and conflict=0. The merged cache has 5,364 exact s5 rows (132 WIN / 5,232 LOSS), SHA-256 20ed428ca01e226f3f247250b140b797ebd3d299671ca992bccb96d0ac66c61f. Recomputed all 3,384 classes: 30 LOSS / 239 WIN / 3,115 UNKNOWN; secured 114/119, five remain. Integer cover 2 equals rational dual 2; the reoptimized repair has 2 classes and 196 distinct UNKNOWN s5. The next ranked class is (1297599642637172736,0), with 103 children, 6 known LOSS, and 97 UNKNOWN; ranking is scheduling only and fresh preflight is pending.
@@ -4675,3 +4705,13 @@ Checkpoint report `post-916a8677-reply27-checkpoint-report.json`、source manife
 次順位候補 `(1188950301626859520,536870912)` は109 S5 children中LOSS 10 / UNKNOWN 99から開始した。child `(1188950301626859552,536870912)` は2MでUNKNOWN後、raw-history/S6/S7を再監査して15Mへ上げ、direct exact LOSS（6,566,794 nodes）を得た。final class boundaryはLOSS 11 / UNKNOWN 98でなおUNKNOWN。cacheは5,738 rows（WIN 158 / LOSS 5,580）。全class counts・117/119 coverage・integer minimum・LP dualは変わらなかった。次に低legal-countの未確定S5は `(3494793310840553472,536870912)`、legal 88、最新raw-historyでready。S6 boundaryは5,392 keys、raw/cache S6 exactは16/17、S7交差とS6/S7由来S5判定は0。
 
 計14 probe、総67,339,676 nodes（2M予算9回、15M予算5回）。direct raw exactはS5 WIN 2 / LOSS 2で34,339,676 nodes。WIN 2件の独立terminal-only minimaxは各30,000-state上限でUNKNOWN。したがってraw solver verdictはgeometry監査済みのsolver-trusted exactで、独立終局までの証明DAGではない。保存cacheにはcache-only evidenceも残る。report、全raw、merge receipt、最新S5/S6/S7監査、geometry checksとSHA-256 inventoryは `n11-reply27-class-1297036692683751424-16-20261010` に保存した。`{60,27}` rootと11×11 empty boardはいずれもUNKNOWN。
+
+## 2026-10-10 JST: 次のdual-tight classでdirect S5 LOSSを追加
+
+開始main `1739ddf2f9a5ec411ad5aeb0a2d8f9259951597c` のfail-closed quarantine policyとactive registryを再確認した。対象S4 `(1188950301626859520,536870912)` の109 canonical S5 childをindependent Boardで再生成し、5738-entry cacheでLOSS 11 / WIN 0 / UNKNOWN 98を確認した。全11925 CSVのraw-history auditに加えて、対象未知子のS6/S7 boundaryとsaved cacheを照合した。旧2 quarantined S5 keyはeffective cacheに存在しなかった。
+
+legal 88の `(3494793310840553472,536870912)` とlegal 89の `(1188950301626859520,536936448)`, `(1189513251580280832,536870912)` をそれぞれ2M nodesでprobeし、全てUNKNOWN。各targetを単独でraw履歴・S6/S7再監査した後に15Mへ上げ、direct exact LOSSを得た。exact nodesはそれぞれ3,981,449、2,335,333、2,457,938。6 run合計14,774,720 nodesで、そのうち3件のexact判定は8,774,720 nodes。raw input/output、stdout/stderr、各runのbudget/geometryとsource hashをexperiment `n11-reply27-next-class-1188950301626859520-536870912-20261010` に保存した。
+
+各LOSSはindependent geometryでsafe・canonical・legal S5 childと検査し、exact-only merge receiptから5738→5741 rows（WIN 158 / LOSS 5580→5583）へ追加した。対象S4はLOSS 14 / WIN 0 / UNKNOWN 95でUNKNOWNのまま。全classはLOSS 31 / WIN 272 / UNKNOWN 3081、coverage117/119、残り`{100,108}`、integer minimum1、rational LP dual1で変化なし。最終saved-layer auditは5366 S6 keysを調べ、raw S6 exact16 / cache S6 exact17、S7 intersection0、S6/S7由来のS5判定0。
+
+次に試す最小legal-count未確定子は`(1152921504606851072,537001986)`、legal90。最新raw historyでready、過去raw observationなし、saved S6/S7 verdictなし。新しい3件は直接raw solver結果とgeometry監査に追跡可能だがterminal-only独立minimax証明ではない。既存cache-only葉を含むfrontier全体も独立証明DAGではない。`{60,27}` rootおよび11×11 empty boardはUNKNOWNを維持する。

@@ -4915,6 +4915,36 @@
 ## [research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/saved-layer-final-target-after-followup.json](../../../research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/saved-layer-final-target-after-followup.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 対象boundaryのS6/S7交差。raw S6 16、cache S6 18、S7交差とS5派生結果は0
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 次のdual-tight S4 classを段階的に探索した3件のdirect S5 LOSSと現在境界
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 実験内64 artifact、24,902,435 bytesのSHA-256 inventory。inventory自身は対象外
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/current-exact-s5-after-probe-3.cache)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): 3 direct S5 LOSSをconflictなく追加した5741行exact cache
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/geometric-preflight-after-three.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/geometric-preflight-after-three.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 最終cacheで109-child完全境界を再生成しLOSS 14 / UNKNOWN 95を確認
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-second.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-second.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 2件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-third.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt-third.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 3件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/merge-receipt.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 1件目のraw LOSS・input・solver・geometryからcacheへのhash-bound merge
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-third-15m.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/raw-history-after-third-15m.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 11925 CSV raw history、conflict 0、15M以上UNKNOWN 0、95 children ready
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/report.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): probe nodes、final S5/S4境界、coverage、raw/S6/S7監査と次候補
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 5366 canonical S6境界とS7を照合し、S5への派生結果なし
 ## [research/experiments/n11-residual-twins/output/geometry-samples.json](../../../research/experiments/n11-residual-twins/output/geometry-samples.json)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (data): seed20261005、各盤200軌跡のlate snapshot頻度と存在証人。全局面列挙ではない
