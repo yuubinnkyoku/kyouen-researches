@@ -1,0 +1,24 @@
+{
+  "s5": [
+    1188950301626859520,
+    603979776
+  ],
+  "s5_value": "WIN",
+  "s5_legal": 90,
+  "s6_complete_child_count": 90,
+  "s6_accurate_verdicts": {
+    "WIN": 90,
+    "LOSS": 0,
+    "UNKNOWN": 0
+  },
+  "s6_direct_exact_only": true,
+  "s6_raw_runs": {
+    "initial_exact": 85,
+    "initial_unknown": 5,
+    "after_escalation_win": 5
+  },
+  "root_proof_polarity": "S5 AND WIN iff every legal canonical S6 child is WIN",
+  "S4_polarity": "S4 OR WIN iff at least one legal canonical S5 child is WIN",
+  "S6_terminal_only_independently_checked": false,
+  "S6_verdict_trust": "raw positive-budget unmodified solver, each legal canonical child; exact leaves are solver-trusted"
+}

@@ -4992,6 +4992,21 @@
 ## [research/experiments/n11-residual-twins/scripts/verify_twins.py](../../../research/experiments/n11-residual-twins/scripts/verify_twins.py)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (verifier): m≤5の全clutter監査と、保存格子証人の全L・最小R・Grundy再検査
+## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
+
+- [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題
+## [research/experiments/n11-s6-universal-closure-20261011/output/audit.json](../../../research/experiments/n11-s6-universal-closure-20261011/output/audit.json)
+
+- [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (manifest): 生のS6 solver出力、全source hash、証明frontier
+## [research/experiments/n11-s6-universal-closure-20261011/output/s5-universal-witness.json](../../../research/experiments/n11-s6-universal-closure-20261011/output/s5-universal-witness.json)
+
+- [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (data): S5 ANDの全子WIN証拠
+## [research/experiments/n11-s6-universal-closure-20261011/output/s6-win-complete.csv](../../../research/experiments/n11-s6-universal-closure-20261011/output/s6-win-complete.csv)
+
+- [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (data): 全90canonical S6 WIN葉と直接rawへの参照
+## [research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py](../../../research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py)
+
+- [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (verifier): 全90合法S6子・raw exact・cache隔離・S4/S5伝播の独立監査
 ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典

@@ -371,3 +371,4 @@
 | [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) | reply27のS7境界での先手固定伝播と旧2件のS5 WIN根拠撤回 | verification | verified | square-outcomes, verification, certificates, provenance |
 | [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) | 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離 | verification | verified | square-outcomes, verification, certificates, provenance |
 | [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) | 11×11二石局面60・27の第三手100と108は反射対称 | proposition | proved | square-outcomes, search-methods, verification |
+| [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) | 11×11 reply27の難S5局面を全90 S6子WINで確定 | computation | computed | square-outcomes, search-methods, certificates, verification |
