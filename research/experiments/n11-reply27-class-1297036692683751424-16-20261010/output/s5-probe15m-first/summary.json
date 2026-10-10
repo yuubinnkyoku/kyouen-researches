@@ -1,0 +1,63 @@
+{
+  "command_options": [
+    "--n=11",
+    "--memo=22",
+    "--exact-order=count"
+  ],
+  "hardware": {
+    "machine": "AMD64",
+    "node": "ASUSSSSSSSSSS",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "release": "11",
+    "system": "Windows",
+    "version": "10.0.26200"
+  },
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "plan": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/s5-probe15m-first-plan.json",
+  "plan_sha256": "bcb9e63c6320edf076de24aff8ae024543e576a27761ffdb585789d5efe0c78d",
+  "residual_header_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "results": [
+    {
+      "arm": "requested-s4-completion-escalation",
+      "budget": 15000000,
+      "command": [
+        "D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\.local\\n11-independent-audit-solver.exe",
+        "--n=11",
+        "--memo=22",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-reply27-class-1297036692683751424-16-20261010\\output\\s5-probe15m-first\\s5-1297036692683751424-67108880.input.csv",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-reply27-class-1297036692683751424-16-20261010\\output\\s5-probe15m-first\\s5-1297036692683751424-67108880.out.csv"
+      ],
+      "exit_code": 0,
+      "group": "S4-1297036692683751424-16",
+      "input": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe15m-first/s5-1297036692683751424-67108880.input.csv",
+      "input_sha256": "90d5d45a9cee1de7224544eae96b92bf7c61b58eca806f42e81e5a48d65f9aa0",
+      "key": [
+        1297036692683751424,
+        67108880
+      ],
+      "legal": 81,
+      "legal_count": 81,
+      "log": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe15m-first/s5-1297036692683751424-67108880.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 14920591,
+      "peak_rss_bytes": 172814336,
+      "raw": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/s5-probe15m-first/s5-1297036692683751424-67108880.out.csv",
+      "raw_sha256": "95967fb2952df3764bf4cc5a6a19a8c32533b1d85f8191cdcfca3c4d59f05094",
+      "stones": 5,
+      "verdict": 1,
+      "wall_seconds": 46.61000000000058
+    }
+  ],
+  "solver_path": ".local/n11-independent-audit-solver.exe",
+  "solver_sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+  "solver_source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+  "total_nodes": 14920591,
+  "verdict_counts": {
+    "1": 1
+  },
+  "watchdog_seconds": 180,
+  "workers": 1
+}

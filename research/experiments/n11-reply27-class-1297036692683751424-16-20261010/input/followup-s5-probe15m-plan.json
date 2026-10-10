@@ -1,0 +1,39 @@
+{
+  "coverage": [
+    55,
+    65,
+    100,
+    108
+  ],
+  "history_sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e",
+  "low_budget_plan": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/followup-s5-probe2m-plan.json",
+    "sha256": "43d16e65937b7185238ce14e29a6a2dd6ad0ffc7a631847dc56e736e4e628f3b"
+  },
+  "raw_history_audit": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-raw-history-after2m.json",
+    "sha256": "0740ab2271679a97ddd6f90b8fa65f663be1d982139bcb611009cccc565c604c"
+  },
+  "s4_key": [
+    1188950301626859520,
+    536870912
+  ],
+  "saved_layer_audit": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-saved-layer-after2m.json",
+    "sha256": "843f7fb75d91e2a95a12cb944be102569cd4768081259b617e4cc61b1f7ea8cb"
+  },
+  "schema": "n11-reply27-followup-single-s5-escalation-plan-v1",
+  "targets": [
+    {
+      "arm": "next-cover-candidate-escalation-15m",
+      "budget": 15000000,
+      "group": "next-cover-candidate-1188950301626859520-536870912",
+      "key": [
+        1188950301626859552,
+        536870912
+      ],
+      "preflight_legal_count": 87,
+      "stones": 5
+    }
+  ]
+}

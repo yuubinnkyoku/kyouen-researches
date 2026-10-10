@@ -1,0 +1,986 @@
+{
+  "class": {
+    "cache_boundary": {
+      "LOSS": 11,
+      "UNKNOWN": 98,
+      "WIN": 0
+    },
+    "children": 109,
+    "coverage": [
+      55,
+      65,
+      100,
+      108
+    ],
+    "key": [
+      1188950301626859520,
+      536870912
+    ],
+    "status": "UNKNOWN"
+  },
+  "current_s5_cache": {
+    "exact_rows": 5738,
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/current-exact-s5-after-followup-loss.cache",
+    "sha256": "c2a49d1f90873e2560f0ea3a5b0a176469e3e0d2bc06727be36a7fe15c8021fe"
+  },
+  "independent_geometry": {
+    "complete_geometry_path": "research/experiments/n11-strategy-redesign-20261010/output/geometry.json.gz",
+    "complete_geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+    "full_boundary_match": true,
+    "implementation": "n11-independent-exact-audit Board",
+    "source_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f"
+  },
+  "lowest_legal_unknown_s5": [
+    {
+      "key": [
+        3494793310840553472,
+        536870912
+      ],
+      "legal_count": 88
+    },
+    {
+      "key": [
+        1188950301626859520,
+        536936448
+      ],
+      "legal_count": 89
+    },
+    {
+      "key": [
+        1189513251580280832,
+        536870912
+      ],
+      "legal_count": 89
+    },
+    {
+      "key": [
+        1152921504606851072,
+        537001986
+      ],
+      "legal_count": 90
+    },
+    {
+      "key": [
+        1188950301626859520,
+        536870976
+      ],
+      "legal_count": 90
+    },
+    {
+      "key": [
+        1188950301626859520,
+        603979776
+      ],
+      "legal_count": 90
+    },
+    {
+      "key": [
+        10412322338481635328,
+        536870912
+      ],
+      "legal_count": 91
+    },
+    {
+      "key": [
+        1189091039115214848,
+        536870912
+      ],
+      "legal_count": 92
+    },
+    {
+      "key": [
+        1765411053930283008,
+        536870912
+      ],
+      "legal_count": 92
+    },
+    {
+      "key": [
+        1152921504606851072,
+        570425346
+      ],
+      "legal_count": 93
+    }
+  ],
+  "note": "No raw-history/S6/S7 preflight has been run for these children yet; the list is not dispatch approval.",
+  "raw_audit_targets_csv": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/followup-after-loss-s5-all.csv",
+    "rows": 109,
+    "sha256": "43191bf5558d76b3f06da29941d7919e50b40aeff9c60722c8a2cf56767f3ef5"
+  },
+  "s5_children": [
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536870918
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536870922
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536870930
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536870946
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536870978
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536879106
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536887298
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536903682
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        536936450
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        537001986
+      ],
+      "legal_count": 90
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        553648130
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        570425346
+      ],
+      "legal_count": 93
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        603979778
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        671088642
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        805306370
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504606851072,
+        34896609282
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741064705,
+        68719476738
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741064706,
+        68719476738
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741064708,
+        68719476738
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741064712,
+        68719476738
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1152921504741064736,
+        68719476738
+      ],
+      "legal_count": 94
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741068800,
+        68719476738
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741072896,
+        68719476738
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741081088,
+        68719476738
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1152921504741097472,
+        68719476738
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1188950301625815040,
+        536870914
+      ],
+      "legal_count": 89
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536870913
+      ],
+      "legal_count": 94
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536870916
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536870920
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536870928
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536870944
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536870976
+      ],
+      "legal_count": 90
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1188950301626859520,
+        536871040
+      ],
+      "legal_count": 91
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536879104
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536887296
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536903680
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        536936448
+      ],
+      "legal_count": 89
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        537001984
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        537133056
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        570425344
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        603979776
+      ],
+      "legal_count": 90
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        671088640
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        805306368
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859520,
+        34896609280
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859521,
+        536870912
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859522,
+        536870912
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859524,
+        536870912
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859528,
+        536870912
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859536,
+        536870912
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1188950301626859552,
+        536870912
+      ],
+      "legal_count": 87
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859584,
+        536870912
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859648,
+        536870912
+      ],
+      "legal_count": 107
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626859776,
+        536870912
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626860032,
+        536870912
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626860544,
+        536870912
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626861568,
+        536870912
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626863616,
+        536870912
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626867712,
+        536870912
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626875904,
+        536870912
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626892288,
+        536870912
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1188950301626925056,
+        536870912
+      ],
+      "legal_count": 94
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301626990592,
+        536870912
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301627121664,
+        536870912
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301627383808,
+        536870912
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301628956672,
+        536870912
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1188950301631053824,
+        536870912
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301635248128,
+        536870912
+      ],
+      "legal_count": 105
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301643636736,
+        536870912
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301660413952,
+        536870912
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301693968384,
+        536870912
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1188950301761077248,
+        536870912
+      ],
+      "legal_count": 89
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950301895294976,
+        536870912
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950302700601344,
+        536870912
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950303774343168,
+        536870912
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950305921826816,
+        536870912
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950310216794112,
+        536870912
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950318806728704,
+        536870912
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950335986597888,
+        536870912
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950370346336256,
+        536870912
+      ],
+      "legal_count": 97
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950439065812992,
+        536870912
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188950576504766464,
+        536870912
+      ],
+      "legal_count": 94
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188951401138487296,
+        536870912
+      ],
+      "legal_count": 98
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188952500650115072,
+        536870912
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188954699673370624,
+        536870912
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188959097719881728,
+        536870912
+      ],
+      "legal_count": 101
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1188967893812903936,
+        536870912
+      ],
+      "legal_count": 97
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1189020670371037184,
+        536870912
+      ],
+      "legal_count": 102
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1189091039115214848,
+        536870912
+      ],
+      "legal_count": 92
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1189513251580280832,
+        536870912
+      ],
+      "legal_count": 89
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1190076201533702144,
+        536870912
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1191202101440544768,
+        536870912
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1193453901254230016,
+        536870912
+      ],
+      "legal_count": 100
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1197957500881600512,
+        536870912
+      ],
+      "legal_count": 94
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1206964700136341504,
+        536870912
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1261007895664787456,
+        536870912
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        1333065489702715392,
+        536870912
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1477180677778571264,
+        536870912
+      ],
+      "legal_count": 96
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        1765411053930283008,
+        536870912
+      ],
+      "legal_count": 92
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        3494793310840553472,
+        536870912
+      ],
+      "legal_count": 88
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        5800636320054247424,
+        536870912
+      ],
+      "legal_count": 95
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        10376293541461622816,
+        68719476737
+      ],
+      "legal_count": 99
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        10376293541461623840,
+        68719476736
+      ],
+      "legal_count": 90
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        10376293541463719968,
+        68719476736
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        10376293543609106464,
+        68719476736
+      ],
+      "legal_count": 106
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        10376293545756590112,
+        68719476736
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": 2,
+      "key": [
+        10376297939508133920,
+        68719476736
+      ],
+      "legal_count": 103
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        10376302337554645024,
+        68719476736
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        10394307939971104800,
+        68719476736
+      ],
+      "legal_count": 104
+    },
+    {
+      "cache_verdict": 0,
+      "key": [
+        10412322338481635328,
+        536870912
+      ],
+      "legal_count": 91
+    }
+  ],
+  "schema": "n11-reply27-followup-class-preflight-v1"
+}

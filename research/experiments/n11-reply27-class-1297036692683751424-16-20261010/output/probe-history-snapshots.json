@@ -1,0 +1,34 @@
+{
+  "original_path": "research/experiments/n11-strategy-redesign-20261010/output/history.json",
+  "original_workspace_file_preserved_unmodified": true,
+  "schema": "n11-reply27-probe-history-snapshot-manifest-v1",
+  "snapshots": [
+    {
+      "copy": {
+        "bytes": 2957010,
+        "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/probe-history-at-start-main.json",
+        "sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791"
+      },
+      "source": "git:154f3b7a67b97e13acbaee8b04dc74ddca728d19:research/experiments/n11-strategy-redesign-20261010/output/history.json",
+      "used_by": [
+        "s5-probe2m",
+        "s5-probe15m-first"
+      ]
+    },
+    {
+      "copy": {
+        "bytes": 2959147,
+        "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/probe-history-before-candidate-probes.json",
+        "sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e"
+      },
+      "source": "workspace file copied byte-for-byte; the workspace file was not edited by this task",
+      "used_by": [
+        "candidate-s5-probe2m",
+        "candidate-s5-probe15m",
+        "followup-s5-probe2m",
+        "followup-s5-probe15m"
+      ],
+      "workspace_source_sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e"
+    }
+  ]
+}

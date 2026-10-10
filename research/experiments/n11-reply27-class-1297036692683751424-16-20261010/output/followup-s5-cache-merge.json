@@ -1,0 +1,51 @@
+{
+  "base_cache": {
+    "exact_rows": 5737,
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/current-exact-s5-latest.cache",
+    "sha256": "d416f8946f401a1ad1c2e15534f6c77faf6591c9e2ef108bcdad68fdcb13e13e"
+  },
+  "budget": 15000000,
+  "cache": {
+    "exact_rows": 5738,
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/current-exact-s5-after-followup-loss.cache",
+    "sha256": "c2a49d1f90873e2560f0ea3a5b0a176469e3e0d2bc06727be36a7fe15c8021fe",
+    "verdict_counts": {
+      "1": 158,
+      "2": 5580
+    }
+  },
+  "conflicts": 0,
+  "independent_geometry": {
+    "canonical": true,
+    "legal_count": 87,
+    "legal_edge_from_s4": true
+  },
+  "merged_key": [
+    1188950301626859552,
+    536870912
+  ],
+  "merged_verdict": "LOSS",
+  "nodes": 6566794,
+  "schema": "n11-reply27-single-s5-raw-loss-merge-v1",
+  "source_input": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-s5-probe15m/s5-1188950301626859552-536870912.input.csv",
+    "sha256": "efd5ab4e57aed2f911c039bffa113b529578c0639d7a062c06c79347e0368929"
+  },
+  "source_plan": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/followup-s5-probe15m-plan.json",
+    "sha256": "85b4e08ab862775203dce0cbe8a3e8372bed1f054f4fa4c1642627512bd53fe6"
+  },
+  "source_raw": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-s5-probe15m/s5-1188950301626859552-536870912.out.csv",
+    "sha256": "4bc2a593d1329533668869d98aeb5679f513a31850cec7d65855bca84347986c"
+  },
+  "source_solver": {
+    "path": ".local/n11-independent-audit-solver.exe",
+    "sha256": "ac8f4931e4c81bd06ba1622844933962134f663d970885c2990fbb96a167677a",
+    "source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e"
+  },
+  "source_summary": {
+    "path": "research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/followup-s5-probe15m/summary.json",
+    "sha256": "28fd2b31d5ce639d8852e79836f4c3ac059b0a15b52d1bfe626b41b1b6ff3424"
+  }
+}
