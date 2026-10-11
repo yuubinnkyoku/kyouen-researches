@@ -39,6 +39,6 @@ artifacts:
 \boxed{\{103,104,105,106,107,108,109,110,111,112,113,114\}}
 \]
 
-であり、中間に欠番はない。追加の一次資料は [石数スペクトルの証明](../../experiments/geometry/reports/n11-q12-terminal-spectrum-extension-20261012.md) と [座標証人・独立ビット検証器](../../experiments/geometry/scripts/verify_n11_q12_terminal_spectrum_extension_20261012.py)。前者は既存の両端値の証明に依存し、後者は既存の二方式完全円列挙器を再利用する。
+であり、中間に欠番はない。安全性は部分集合について下方閉なので、各極大安全配置の石を任意の順番で置く合法対局が存在する。従って**空盤から到達可能な終局手数の集合**も同じ12整数である。ただし各手数を一方のプレイヤーが強制できるという意味ではない。追加の一次資料は [石数スペクトルの証明](../../experiments/geometry/reports/n11-q12-terminal-spectrum-extension-20261012.md) と [座標証人・独立ビット検証器](../../experiments/geometry/scripts/verify_n11_q12_terminal_spectrum_extension_20261012.py)。前者は既存の両端値の証明に依存し、後者は既存の二方式完全円列挙器を再利用する。
 
 証拠は有限完全列挙・明示的証人と数学的帰着であり、11×11・q=12に限定される。空盤勝敗と全Grundyは依然として未解決。
