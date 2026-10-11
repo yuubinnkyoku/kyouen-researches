@@ -72,6 +72,7 @@
 - ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 元先手固定視点の交互AND/OR規則
 - ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 元の先手固定視点におけるS5 AND・S6 ORの勝敗伝播
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 元先手固定視点の交互AND/OR勝敗伝播
+- ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 固定先手視点の交互AND/OR勝敗伝播に従う
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1745,6 +1746,7 @@
 - ← verifies [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 撤回の中間S6・上位S4依存、追加loaderと終局ガードを監査
 - ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): K0372による固定先手伝播と隔離規則の維持
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 固定先手の層別伝播規則
+- ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 層別伝播規則を維持し、S5 LOSSはS6 LOSS子を持つ条件で評価
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1762,6 +1764,7 @@
 - ← depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): K0372の信頼境界、終局leaf規則、固定先手視点AND/OR極性を維持
 - ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): solver-trusted exact葉とterminal-only独立証明の信頼分離
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): solver exact値とterminal-only独立証明の信頼境界
+- ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): exact solver観測を独立terminal-only証明と区別
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
@@ -1788,6 +1791,7 @@
 - ← depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): SHA拘束された独立検証済みS5三根証明DAG二組を入力として使用
 - ← supports [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根の独立終局閉包と、二つの入力DAG間にcanonical局面重複がないことを検査
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 既知S5 LOSS六根と共有TT比較の元資料
+- ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 既知S5 LOSS六根と歴史rawを選定・照合に使用
 
 ## [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) 11×11 `{60,27}` の現行117手被覆には既知LOSS class 31個が全て必要
 
@@ -1810,6 +1814,7 @@
 - → supports [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 6根の独立終局閉包と、二つの入力DAG間にcanonical局面重複がないことを検査
 - ← supports [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 最新mainの最有力S4境界40/0/66をcacheと独立幾何から再確認
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 六根terminal-only独立証明DAGと監査receipt
+- ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 六根の独立検証済み証明DAGからS6証人を抽出
 
 ## [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) 11×11 S5階層分割の費用比較と証拠対応ルーティング
 
@@ -1828,6 +1833,18 @@
 - → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 既知S5 LOSS六根と共有TT比較の元資料
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 六根terminal-only独立証明DAGと監査receipt
 - → supports [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 小予算のS5/S6分割比較でも探索節点削減が確認されない
+- ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 小予算比較のUNKNOWNを繰り返さず、過去完了費用から6M予算を固定
+- ← supports [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 代表3根でS5直探索の費用を先行S6 WIN確認と決定S6 LOSS証明へ分解
+
+## [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) 11×11既知S5 LOSS標本では決定S6証明が探索費用の主成分
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 固定先手視点の交互AND/OR勝敗伝播に従う
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 層別伝播規則を維持し、S5 LOSSはS6 LOSS子を持つ条件で評価
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): exact solver観測を独立terminal-only証明と区別
+- → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 既知S5 LOSS六根と歴史rawを選定・照合に使用
+- → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 六根の独立検証済み証明DAGからS6証人を抽出
+- → depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 小予算比較のUNKNOWNを繰り返さず、過去完了費用から6M予算を固定
+- → supports [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 代表3根でS5直探索の費用を先行S6 WIN確認と決定S6 LOSS証明へ分解
 
 ## [K0384](../items/K0384-capacity-all-slack-grundy-three.md) 全容量余裕の容量占有ゲームにおけるGrundy値の一様上界
 

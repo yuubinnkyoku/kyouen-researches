@@ -1,0 +1,9 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=0 table_miss=2 table_new=1 evict_open=0 evict_solved=0 table_used=1 table_capacity=262144 table_solved=1 solved_discoveries=1 avg_probe=1
+# exact-profile-rank row=0 s6 calls=1 nodes=1 win=0 loss=1 unknown=0 tt_solved=0 tt_open=0 tt_miss=1
+replay,0,6,0,1,250000,2,1,0,317,0
+# exact-profile row=1 table_hit=0 table_miss=3 table_new=1 evict_open=0 evict_solved=0 table_used=1 table_capacity=262144 table_solved=1 solved_discoveries=1 avg_probe=1
+# exact-profile-rank row=1 s6 calls=1 nodes=1 win=1 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=1
+replay,1,6,1,1,250000,1,1,0,459,0
+# replay_done rows=2 wall_s=0

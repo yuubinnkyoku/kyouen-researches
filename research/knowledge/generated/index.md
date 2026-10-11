@@ -378,6 +378,7 @@
 | [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) | 11×11の独立検証済みS5証明6根を段階統合、群間重複なし | verification | verified | square-outcomes, certificates, verification, provenance |
 | [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) | 11×11 S5階層分割の費用比較と証拠対応ルーティング | computation | computed | square-outcomes, search-methods, verification, provenance |
 | [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) | 11×11既知S5 LOSSの分割証人探索は小予算で節点削減を示さない | computation | observed | square-outcomes, search-methods, provenance |
+| [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) | 11×11既知S5 LOSS標本では決定S6証明が探索費用の主成分 | computation | observed | square-outcomes, search-methods, certificates, provenance |
 | [K0383](../items/K0383-nonprimitive-double-row-min-width-2-32.md) | 非原始二重点行の最小幅 F(k)：2〜32本 | proposition | proved | geometry, rectangles, variants |
 | [K0384](../items/K0384-capacity-all-slack-grundy-three.md) | 全容量余裕の容量占有ゲームにおけるGrundy値の一様上界 | proposition | proved | variants, grundy |
 | [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md) | 400幅以内に25二重点行を持つ円の行差最大公約数は1 | proposition | proved | geometry, rectangles |

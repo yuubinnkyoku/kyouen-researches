@@ -1,0 +1,19 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=3905407 table_miss=30623690 table_new=4185831 evict_open=0 evict_solved=1230506 table_used=4185831 table_capacity=4194304 table_solved=4185831 solved_discoveries=5416337 avg_probe=9.92106
+# exact-profile-rank row=0 s5 calls=1 nodes=1 win=0 loss=1 unknown=0 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s6 calls=6 nodes=6 win=5 loss=1 unknown=0 tt_solved=0 tt_open=0 tt_miss=6
+# exact-profile-rank row=0 s7 calls=123 nodes=123 win=5 loss=118 unknown=0 tt_solved=0 tt_open=0 tt_miss=123
+# exact-profile-rank row=0 s8 calls=864 nodes=864 win=766 loss=98 unknown=0 tt_solved=0 tt_open=0 tt_miss=864
+# exact-profile-rank row=0 s9 calls=7575 nodes=7575 win=571 loss=7004 unknown=0 tt_solved=0 tt_open=0 tt_miss=7575
+# exact-profile-rank row=0 s10 calls=44743 nodes=44743 win=39733 loss=5010 unknown=0 tt_solved=0 tt_open=0 tt_miss=44743
+# exact-profile-rank row=0 s11 calls=201502 nodes=201502 win=26422 loss=175080 unknown=0 tt_solved=0 tt_open=0 tt_miss=201502
+# exact-profile-rank row=0 s12 calls=638163 nodes=638163 win=527778 loss=110385 unknown=0 tt_solved=0 tt_open=0 tt_miss=638163
+# exact-profile-rank row=0 s13 calls=1352385 nodes=1352385 win=301976 loss=1050409 unknown=0 tt_solved=0 tt_open=0 tt_miss=1352385
+# exact-profile-rank row=0 s14 calls=1674698 nodes=1674698 win=1201575 loss=473123 unknown=0 tt_solved=0 tt_open=0 tt_miss=1674698
+# exact-profile-rank row=0 s15 calls=1155636 nodes=1155636 win=218717 loss=936919 unknown=0 tt_solved=0 tt_open=0 tt_miss=1155636
+# exact-profile-rank row=0 s16 calls=314836 nodes=314836 win=288203 loss=26633 unknown=0 tt_solved=0 tt_open=0 tt_miss=314836
+# exact-profile-rank row=0 s17 calls=25314 nodes=25314 win=765 loss=24549 unknown=0 tt_solved=0 tt_open=0 tt_miss=25314
+# exact-profile-rank row=0 s18 calls=491 nodes=491 win=491 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=491
+replay,0,5,84,0,6000000,2,5416337,16,10412322338480590849,0
+# replay_done rows=1 wall_s=16

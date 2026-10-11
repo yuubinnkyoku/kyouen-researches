@@ -1,0 +1,18 @@
+# exact replay: order=2 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=9051252 table_miss=35324428 table_new=4193053 evict_open=0 evict_solved=1806941 table_used=4193053 table_capacity=4194304 table_solved=4193053 solved_discoveries=5999994 avg_probe=10.7071
+# exact-profile-rank row=0 s6 calls=1 nodes=1 win=0 loss=0 unknown=1 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s7 calls=67 nodes=53 win=0 loss=52 unknown=15 tt_solved=0 tt_open=0 tt_miss=67
+# exact-profile-rank row=0 s8 calls=254 nodes=190 win=139 loss=50 unknown=65 tt_solved=0 tt_open=0 tt_miss=254
+# exact-profile-rank row=0 s9 calls=3369 nodes=3344 win=99 loss=3244 unknown=26 tt_solved=0 tt_open=0 tt_miss=3369
+# exact-profile-rank row=0 s10 calls=17745 nodes=17701 win=15385 loss=2315 unknown=45 tt_solved=0 tt_open=0 tt_miss=17745
+# exact-profile-rank row=0 s11 calls=120288 nodes=120275 win=9716 loss=110558 unknown=14 tt_solved=0 tt_open=0 tt_miss=120288
+# exact-profile-rank row=0 s12 calls=430208 nodes=430194 win=365160 loss=65034 unknown=14 tt_solved=0 tt_open=0 tt_miss=430208
+# exact-profile-rank row=0 s13 calls=1256502 nodes=1256502 win=193825 loss=1062677 unknown=0 tt_solved=0 tt_open=0 tt_miss=1256502
+# exact-profile-rank row=0 s14 calls=1997442 nodes=1997442 win=1529428 loss=468014 unknown=0 tt_solved=0 tt_open=0 tt_miss=1997442
+# exact-profile-rank row=0 s15 calls=1626403 nodes=1626403 win=383954 loss=1242449 unknown=0 tt_solved=0 tt_open=0 tt_miss=1626403
+# exact-profile-rank row=0 s16 calls=510873 nodes=510873 win=454341 loss=56532 unknown=0 tt_solved=0 tt_open=0 tt_miss=510873
+# exact-profile-rank row=0 s17 calls=36548 nodes=36548 win=1329 loss=35219 unknown=0 tt_solved=0 tt_open=0 tt_miss=36548
+# exact-profile-rank row=0 s18 calls=474 nodes=474 win=474 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=474
+replay,0,6,67,1,6000000,0,6000000,21,1188950301761077248,536936448
+# replay_done rows=1 wall_s=21

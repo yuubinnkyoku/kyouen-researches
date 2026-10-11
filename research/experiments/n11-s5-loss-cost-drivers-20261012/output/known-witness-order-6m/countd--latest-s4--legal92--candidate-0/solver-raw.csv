@@ -1,0 +1,18 @@
+# exact replay: order=1 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=13017129 table_miss=35334021 table_new=4193239 evict_open=0 evict_solved=1806752 table_used=4193239 table_capacity=4194304 table_solved=4193239 solved_discoveries=5999991 avg_probe=10.1107
+# exact-profile-rank row=0 s6 calls=1 nodes=1 win=0 loss=0 unknown=1 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s7 calls=73 nodes=3 win=0 loss=2 unknown=71 tt_solved=0 tt_open=0 tt_miss=73
+# exact-profile-rank row=0 s8 calls=74 nodes=5 win=2 loss=2 unknown=70 tt_solved=0 tt_open=0 tt_miss=74
+# exact-profile-rank row=0 s9 calls=317 nodes=273 win=2 loss=270 unknown=45 tt_solved=0 tt_open=0 tt_miss=317
+# exact-profile-rank row=0 s10 calls=1680 nodes=1633 win=1411 loss=221 unknown=48 tt_solved=0 tt_open=0 tt_miss=1680
+# exact-profile-rank row=0 s11 calls=23992 nodes=23952 win=1007 loss=22944 unknown=41 tt_solved=0 tt_open=0 tt_miss=23992
+# exact-profile-rank row=0 s12 calls=154815 nodes=154787 win=140199 loss=14587 unknown=29 tt_solved=0 tt_open=0 tt_miss=154815
+# exact-profile-rank row=0 s13 calls=732398 nodes=732390 win=79531 loss=652858 unknown=9 tt_solved=0 tt_open=0 tt_miss=732398
+# exact-profile-rank row=0 s14 calls=2009847 nodes=2009837 win=1690227 loss=319609 unknown=11 tt_solved=0 tt_open=0 tt_miss=2009847
+# exact-profile-rank row=0 s15 calls=2198350 nodes=2198349 win=513923 loss=1684426 unknown=1 tt_solved=0 tt_open=0 tt_miss=2198350
+# exact-profile-rank row=0 s16 calls=814425 nodes=814425 win=704738 loss=109687 unknown=0 tt_solved=0 tt_open=0 tt_miss=814425
+# exact-profile-rank row=0 s17 calls=63508 nodes=63508 win=2437 loss=61071 unknown=0 tt_solved=0 tt_open=0 tt_miss=63508
+# exact-profile-rank row=0 s18 calls=837 nodes=837 win=837 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=837
+replay,0,6,73,1,6000000,0,6000000,25,1297036692750926848,0
+# replay_done rows=1 wall_s=25

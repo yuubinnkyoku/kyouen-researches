@@ -24,6 +24,7 @@
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (solver): 128-bit DFPNとexact handoff
 - [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (solver): coordinatorのs5永続化とs4 certificate manifest出力
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 既定offのexact LOSS行停止flag
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (source): 既定offのexact replay層別・root child費用プロファイラ
 ## [cpp/solvers/kyouen_solver_10_kyoenc4.cpp](../../../cpp/solvers/kyouen_solver_10_kyoenc4.cpp)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (solver): 命題・対象範囲・根拠を記した出典
@@ -5552,6 +5553,42 @@
 ## [research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py)
 
 - [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (verifier): 極性、途中境界、trusted leaf、raw改ざん、同node-cap比較の回帰
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/README.md](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/README.md)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (source): 条件、6根証人台帳、費用内訳、限界、再現手順
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/input/child-profile-build.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/input/child-profile-build.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (manifest): 最終計測binary・sourceのcompiler条件とSHA-256
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/input/comparison-schedule.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/input/comparison-schedule.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (manifest): 予算、候補順、同一条件、current S4境界をsolver再実行前に固定
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/input/known-witness-order-schedule-v2.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/input/known-witness-order-schedule-v2.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (manifest): 同一v2 binary COUNT基準と、検証済み4候補のCOUNTD/KEY順比較schedule
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/input/proof-witness-inventory.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/input/proof-witness-inventory.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (data): 六つの既存独立証明から抽出したS5/S6、証明閉包、共有、歴史raw
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/audit.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/audit.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (verifier): run manifest、同一binary、結果内訳、節点費用分解、既存terminal-only receiptsを横断監査
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/direct-s5-child-profile-6m/summary.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/direct-s5-child-profile-6m/summary.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (data): 直探索の各S6子に費やした増分節点と決定証人
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/final-sha256.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/final-sha256.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (manifest): 実験入出力・sourceのSHA-256一覧
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/known-s6-costs-v2-6m/summary.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/known-s6-costs-v2-6m/summary.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (data): v2 binaryで独立rootとして再計測した保存済みS6 LOSS証人の費用
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/known-witness-order-v2-6m/summary.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/known-witness-order-v2-6m/summary.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (data): 同一v2 binary、各6M上限でのCOUNTD・KEY順比較
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/profile-regression-v4/receipt.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/profile-regression-v4/receipt.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (verifier): 既定off、profile on/off、旧binaryとの4×4完全解析回帰
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/stage1-v2-6m/summary.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/stage1-v2-6m/summary.json)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (data): 同一v2 binaryでのS5直、既知S6、順位付け、共有TT比較
 ## [research/experiments/n11-s5-loss-witness-20261012/README.md](../../../research/experiments/n11-s5-loss-witness-20261012/README.md)
 
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 固定比較条件、結果、制約、次の計測条件

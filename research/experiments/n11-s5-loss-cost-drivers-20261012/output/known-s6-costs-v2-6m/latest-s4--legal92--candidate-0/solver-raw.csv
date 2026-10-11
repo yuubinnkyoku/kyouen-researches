@@ -1,0 +1,91 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=2706670 table_miss=21820763 table_new=3732301 evict_open=0 evict_solved=105240 table_used=3732301 table_capacity=4194304 table_solved=3732301 solved_discoveries=3837541 avg_probe=4.00098
+# exact-profile-rank row=0 s6 calls=1 nodes=1 win=0 loss=1 unknown=0 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s7 calls=73 nodes=73 win=0 loss=73 unknown=0 tt_solved=0 tt_open=0 tt_miss=73
+# exact-profile-rank row=0 s8 calls=321 nodes=321 win=257 loss=64 unknown=0 tt_solved=0 tt_open=0 tt_miss=321
+# exact-profile-rank row=0 s9 calls=4131 nodes=4131 win=191 loss=3940 unknown=0 tt_solved=0 tt_open=0 tt_miss=4131
+# exact-profile-rank row=0 s10 calls=22531 nodes=22531 win=19735 loss=2796 unknown=0 tt_solved=0 tt_open=0 tt_miss=22531
+# exact-profile-rank row=0 s11 calls=117756 nodes=117756 win=13055 loss=104701 unknown=0 tt_solved=0 tt_open=0 tt_miss=117756
+# exact-profile-rank row=0 s12 calls=387746 nodes=387746 win=321136 loss=66610 unknown=0 tt_solved=0 tt_open=0 tt_miss=387746
+# exact-profile-rank row=0 s13 calls=912971 nodes=912971 win=187277 loss=725694 unknown=0 tt_solved=0 tt_open=0 tt_miss=912971
+# exact-profile-rank row=0 s14 calls=1207249 nodes=1207249 win=859738 loss=347511 unknown=0 tt_solved=0 tt_open=0 tt_miss=1207249
+# exact-profile-rank row=0 s15 calls=907453 nodes=907453 win=171065 loss=736388 unknown=0 tt_solved=0 tt_open=0 tt_miss=907453
+# exact-profile-rank row=0 s16 calls=257481 nodes=257481 win=238144 loss=19337 unknown=0 tt_solved=0 tt_open=0 tt_miss=257481
+# exact-profile-rank row=0 s17 calls=19557 nodes=19557 win=385 loss=19172 unknown=0 tt_solved=0 tt_open=0 tt_miss=19557
+# exact-profile-rank row=0 s18 calls=271 nodes=271 win=271 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=271
+# exact-profile-child row=0 lo=1297107061495104512 hi=0 legal=52 nodes=46535 verdict=LOSS
+# exact-profile-child row=0 lo=1297036693019362304 hi=0 legal=53 nodes=44728 verdict=LOSS
+# exact-profile-child row=0 lo=1297599642704348160 hi=0 legal=53 nodes=78755 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692751451136 hi=0 legal=54 nodes=45531 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750959616 hi=0 legal=55 nodes=34503 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692885144576 hi=0 legal=55 nodes=60253 verdict=LOSS
+# exact-profile-child row=0 lo=1585267068902638592 hi=0 legal=55 nodes=27657 verdict=LOSS
+# exact-profile-child row=0 lo=1873497445054350336 hi=0 legal=55 nodes=85645 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=128 legal=55 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750930944 hi=0 legal=56 nodes=78685 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750943232 hi=0 legal=56 nodes=46013 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692767704064 hi=0 legal=56 nodes=66220 verdict=LOSS
+# exact-profile-child row=0 lo=1297036967628833792 hi=0 legal=56 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=10520408729605702656 hi=0 legal=56 nodes=77098 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=536870912 legal=56 nodes=188228 verdict=LOSS
+# exact-profile-child row=0 lo=1224979098644779009 hi=536870929 legal=56 nodes=47372 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750927104 hi=0 legal=57 nodes=48250 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692753024000 hi=0 legal=57 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=1369094286788854784 hi=0 legal=58 nodes=42568 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926849 hi=0 legal=59 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=131072 legal=59 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=16777216 legal=59 nodes=57151 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750928896 hi=0 legal=60 nodes=50032 verdict=LOSS
+# exact-profile-child row=0 lo=1297036694898410496 hi=0 legal=60 nodes=25235 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=268435456 legal=61 nodes=109591 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926852 hi=0 legal=62 nodes=27272 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750927360 hi=0 legal=62 nodes=45972 verdict=LOSS
+# exact-profile-child row=0 lo=1306043892005667840 hi=0 legal=62 nodes=207352 verdict=LOSS
+# exact-profile-child row=0 lo=3602879701964620800 hi=0 legal=62 nodes=38210 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=16 legal=62 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=131072 legal=62 nodes=45387 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=33554432 legal=62 nodes=55597 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=268435456 legal=62 nodes=50075 verdict=LOSS
+# exact-profile-child row=0 lo=1224979098644780033 hi=536870928 legal=62 nodes=58914 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=67108864 legal=63 nodes=121837 verdict=LOSS
+# exact-profile-child row=0 lo=1224979098645827585 hi=536870928 legal=63 nodes=97558 verdict=LOSS
+# exact-profile-child row=0 lo=1297041090797437952 hi=0 legal=64 nodes=35246 verdict=LOSS
+# exact-profile-child row=0 lo=1333065489769890816 hi=0 legal=64 nodes=52577 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=16384 legal=64 nodes=29466 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=65536 legal=64 nodes=25994 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=4 legal=65 nodes=70476 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=8192 legal=65 nodes=56882 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=32768 legal=65 nodes=37774 verdict=LOSS
+# exact-profile-child row=0 lo=1224979098644779521 hi=536870928 legal=65 nodes=35026 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926856 hi=0 legal=66 nodes=30999 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692759315456 hi=0 legal=66 nodes=31784 verdict=LOSS
+# exact-profile-child row=0 lo=1297045488843949056 hi=0 legal=66 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=8 legal=66 nodes=32353 verdict=LOSS
+# exact-profile-child row=0 lo=1224979100792262657 hi=536870928 legal=66 nodes=22948 verdict=LOSS
+# exact-profile-child row=0 lo=1224979102939746305 hi=536870928 legal=66 nodes=173144 verdict=LOSS
+# exact-profile-child row=0 lo=1152921504607896576 hi=553649153 legal=66 nodes=11276 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=32768 legal=67 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=1224983496691290113 hi=536870928 legal=67 nodes=71652 verdict=LOSS
+# exact-profile-child row=0 lo=1152921504607896576 hi=536888321 legal=67 nodes=70121 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=32 legal=68 nodes=52113 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=16777216 legal=68 nodes=36164 verdict=LOSS
+# exact-profile-child row=0 lo=1224979098646876161 hi=536870928 legal=68 nodes=44090 verdict=LOSS
+# exact-profile-child row=0 lo=1242993497154260993 hi=536870928 legal=68 nodes=18875 verdict=LOSS
+# exact-profile-child row=0 lo=1297071877123015680 hi=0 legal=69 nodes=42971 verdict=LOSS
+# exact-profile-child row=0 lo=1315051091260408832 hi=0 legal=69 nodes=56279 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=8 legal=69 nodes=29951 verdict=LOSS
+# exact-profile-child row=0 lo=1224987894737801217 hi=536870928 legal=69 nodes=91657 verdict=LOSS
+# exact-profile-child row=0 lo=1233986297899520001 hi=536870928 legal=69 nodes=1 verdict=LOSS
+# exact-profile-child row=0 lo=1152921504607896576 hi=570426369 legal=69 nodes=58940 verdict=LOSS
+# exact-profile-child row=0 lo=1297036701340861440 hi=0 legal=70 nodes=53558 verdict=LOSS
+# exact-profile-child row=0 lo=1297036727110665216 hi=0 legal=70 nodes=100660 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=8192 legal=70 nodes=77488 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=134217728 legal=70 nodes=136039 verdict=LOSS
+# exact-profile-child row=0 lo=10376293541730127873 hi=134217728 legal=70 nodes=25053 verdict=LOSS
+# exact-profile-child row=0 lo=1152921504607896576 hi=536871941 legal=70 nodes=107244 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692750926848 hi=34359738368 legal=71 nodes=30386 verdict=LOSS
+# exact-profile-child row=0 lo=1152921504607896576 hi=34896610305 legal=71 nodes=68214 verdict=LOSS
+# exact-profile-child row=0 lo=1297036692755121152 hi=0 legal=72 nodes=11907 verdict=LOSS
+replay,0,6,73,1,6000000,2,3837541,13,1297036692750926848,0
+# replay_done rows=1 wall_s=13
