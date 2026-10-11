@@ -375,3 +375,4 @@
 | [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) | 11×11の既知S5六局面で共有TTと終局閉包証明DAGを実測 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) | 11×11 `{60,27}` の現行117手被覆には既知LOSS class 31個が全て必要 | computation | computed | square-outcomes, certificates, verification |
 | [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) | 11×11の三S5共有証明DAGをcompact化し、既知S6証人の共有で縮約 | verification | verified | square-outcomes, certificates, verification, provenance |
+| [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) | 11×11の独立検証済みS5証明6根を段階統合、群間重複なし | verification | verified | square-outcomes, certificates, verification, provenance |

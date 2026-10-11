@@ -4874,6 +4874,27 @@
 ## [research/experiments/n11-proof-dag-engine-followup-20261011/scripts/verify_shared_bundle.py](../../../research/experiments/n11-proof-dag-engine-followup-20261011/scripts/verify_shared_bundle.py)
 
 - [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (verifier): solverやTTを読まず共有証明DAGの幾何・遷移・AND/OR・閉包を検査
+## [research/experiments/n11-proof-dag-incremental-20261011/README.md](../../../research/experiments/n11-proof-dag-incremental-20261011/README.md)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (source): 増分統合、最適化比較、資源測定、限界、再現手順
+## [research/experiments/n11-proof-dag-incremental-20261011/output/integration-audit.json](../../../research/experiments/n11-proof-dag-incremental-20261011/output/integration-audit.json)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (manifest): 6根LOSSの独立検証receipt、certificate SHA、RSS・wall time・scratch監査
+## [research/experiments/n11-proof-dag-incremental-20261011/output/integration-plan.json](../../../research/experiments/n11-proof-dag-incremental-20261011/output/integration-plan.json)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (data): 入力hash、候補union、greedy/local/exact比較、出力節点・辺数
+## [research/experiments/n11-proof-dag-incremental-20261011/scripts/benchmark_integration.py](../../../research/experiments/n11-proof-dag-incremental-20261011/scripts/benchmark_integration.py)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (verifier): 統合のwall time、process-tree peak RSS、出力・一時DB peak容量を測定
+## [research/experiments/n11-proof-dag-incremental-20261011/scripts/build_audit.py](../../../research/experiments/n11-proof-dag-incremental-20261011/scripts/build_audit.py)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (verifier): 計画、certificate SHA、独立検証receipt、境界reportを照合して監査JSONを構築
+## [research/experiments/n11-proof-dag-incremental-20261011/scripts/integrate.py](../../../research/experiments/n11-proof-dag-incremental-20261011/scripts/integrate.py)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (source): K0375の証明DAGだけをinternし、共有後の閉包費用で根証人を選択
+## [research/experiments/n11-proof-dag-incremental-20261011/tests/test_integration.py](../../../research/experiments/n11-proof-dag-incremental-20261011/tests/test_integration.py)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (verifier): 貪欲、局所改善、root-level厳密列挙、列挙上限のfail-closedを検査
 ## [research/experiments/n11-reduction-followup-20261005/output/audit.json](../../../research/experiments/n11-reduction-followup-20261005/output/audit.json)
 
 - [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): 全7020小clutter、全5219交換不変族、727実n11残局の通常・misère検査と測定

@@ -1743,6 +1743,7 @@
 - ← depends_on [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md): 現行frontier、第三手証明書、独立証拠の信頼境界
 - ← supports [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md): 117/119被覆の全31 LOSS classがcoverに必要なことを幾何から再構成
 - ← depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 独立証拠とsolver/cacheの信頼境界、未解決frontierを維持
+- ← depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): K0372の信頼境界、終局leaf規則、固定先手視点AND/OR極性を維持
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
@@ -1765,6 +1766,8 @@
 - → depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): 最新候補S4とその既知LOSS S5子
 - ← depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 元となる最新mainの三S5 shared proof DAGと証明規則
 - ← supports [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): K0375の最新S4配下にある三S5 LOSS proofだけを独立compact検証し、既存閉包共有による局所DAG縮約を確認
+- ← depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): SHA拘束された独立検証済みS5三根証明DAG二組を入力として使用
+- ← supports [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根の独立終局閉包と、二つの入力DAG間にcanonical局面重複がないことを検査
 
 ## [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) 11×11 `{60,27}` の現行117手被覆には既知LOSS class 31個が全て必要
 
@@ -1777,3 +1780,11 @@
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 独立証拠とsolver/cacheの信頼境界、未解決frontierを維持
 - → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 元となる最新mainの三S5 shared proof DAGと証明規則
 - → supports [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): K0375の最新S4配下にある三S5 LOSS proofだけを独立compact検証し、既存閉包共有による局所DAG縮約を確認
+- ← depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 三根のwitness-switch compact variantを増分統合の開始証明として再現
+
+## [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) 11×11の独立検証済みS5証明6根を段階統合、群間重複なし
+
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): K0372の信頼境界、終局leaf規則、固定先手視点AND/OR極性を維持
+- → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): SHA拘束された独立検証済みS5三根証明DAG二組を入力として使用
+- → depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 三根のwitness-switch compact variantを増分統合の開始証明として再現
+- → supports [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 6根の独立終局閉包と、二つの入力DAG間にcanonical局面重複がないことを検査
