@@ -43,7 +43,21 @@ def fixed_first_outcome(
     return WIN if all(value == WIN for value in child_verdicts) else UNKNOWN
 
 
-def _verified_independent_root(proof: Mapping[str, object] | None) -> int | None:
+def _checked_s5_key(value: object, label: str) -> tuple[int, int]:
+    """Require an unambiguous 11x11 five-stone key for proof-root binding."""
+    if (not isinstance(value, (tuple, list)) or len(value) != 2
+            or any(type(part) is not int for part in value)):
+        raise ValueError(f"{label} must be a two-integer S5 key")
+    lo, hi = value
+    if (not (0 <= lo < 2**64 and 0 <= hi < 2**57)
+            or lo.bit_count() + hi.bit_count() != 5):
+        raise ValueError(f"{label} is not a five-stone 11x11 key")
+    return lo, hi
+
+
+def _verified_independent_root(
+    proof: Mapping[str, object] | None, target_s5_key: object
+) -> int | None:
     if proof is None:
         return None
     verified = proof.get("verified")
@@ -51,6 +65,12 @@ def _verified_independent_root(proof: Mapping[str, object] | None) -> int | None
         return None
     if verified is not True:
         raise ValueError("independent proof verified flag must be boolean")
+    # A verified proof for a different root must never close this S5.
+    # Both the target and the independently checked receipt's root are needed.
+    target = _checked_s5_key(target_s5_key, "target_s5_key")
+    proof_root = _checked_s5_key(proof.get("root_key"), "independent proof root_key")
+    if proof_root != target:
+        raise ValueError(f"CONFLICT independent proof root {proof_root} vs target {target}")
     trusted = proof.get("trusted_leaf_count")
     verdict = proof.get("root_verdict")
     if type(trusted) is not int or trusted != 0:
@@ -70,13 +90,15 @@ def choose_strategy(
     s6_cost_hints: Mapping[str, int] | None = None,
     direct_s5_attempted: bool = False,
     independent_proof: Mapping[str, object] | None = None,
+    target_s5_key: tuple[int, int] | None = None,
     paired_profile: Mapping[str, object] | None = None,
 ) -> dict[str, object]:
     """Choose A-E only from exact evidence, proof polarity, and measured costs.
 
     Goals are ``s5_loss`` and ``s5_win``.  Cost hints only order probes; they
     never affect outcome claims.  A/B comparisons are used only when the caller
-    supplies an explicitly same-environment completed profile.
+    supplies an explicitly same-environment completed profile. Verified
+    independent proofs must bind their root_key to target_s5_key.
     """
     if goal not in {"s5_loss", "s5_win"}:
         raise ValueError("goal must be s5_loss or s5_win")
@@ -103,7 +125,7 @@ def choose_strategy(
     # justify a terminal verdict: expected_children is only a caller claim.
     recovered = (fixed_first_outcome(5, list(saved.values()), expected_s6_children)
                  if children is not None else UNKNOWN)
-    proof_verdict = _verified_independent_root(independent_proof)
+    proof_verdict = _verified_independent_root(independent_proof, target_s5_key)
     if (proof_verdict is not None and direct_s5_verdict != UNKNOWN
             and proof_verdict != direct_s5_verdict):
         raise ValueError("CONFLICT independent proof vs direct S5 verdict")
