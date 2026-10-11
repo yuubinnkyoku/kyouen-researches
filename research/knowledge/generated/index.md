@@ -377,3 +377,4 @@
 | [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) | 11×11の三S5共有証明DAGをcompact化し、既知S6証人の共有で縮約 | verification | verified | square-outcomes, certificates, verification, provenance |
 | [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) | 11×11の独立検証済みS5証明6根を段階統合、群間重複なし | verification | verified | square-outcomes, certificates, verification, provenance |
 | [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) | 11×11 S5階層分割の費用比較と証拠対応ルーティング | computation | computed | square-outcomes, search-methods, verification, provenance |
+| [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) | 11×11既知S5 LOSSの分割証人探索は小予算で節点削減を示さない | computation | observed | square-outcomes, search-methods, provenance |

@@ -23,6 +23,7 @@
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (solver): 128-bit DFPNとexact handoff
 - [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (solver): coordinatorのs5永続化とs4 certificate manifest出力
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 既定offのexact LOSS行停止flag
 ## [cpp/solvers/kyouen_solver_10_kyoenc4.cpp](../../../cpp/solvers/kyouen_solver_10_kyoenc4.cpp)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (solver): 命題・対象範囲・根拠を記した出典
@@ -5092,6 +5093,42 @@
 ## [research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py)
 
 - [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (verifier): 極性、途中境界、trusted leaf、raw改ざん、同node-cap比較の回帰
+## [research/experiments/n11-s5-loss-witness-20261012/README.md](../../../research/experiments/n11-s5-loss-witness-20261012/README.md)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 固定比較条件、結果、制約、次の計測条件
+## [research/experiments/n11-s5-loss-witness-20261012/input/build.json](../../../research/experiments/n11-s5-loss-witness-20261012/input/build.json)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (manifest): compiler・flags・solver sourceと未追跡binaryのSHA-256
+## [research/experiments/n11-s5-loss-witness-20261012/input/s6-candidate-schedule.json](../../../research/experiments/n11-s5-loss-witness-20261012/input/s6-candidate-schedule.json)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (data): solver実行前に固定した幾何のみのS6候補と順序
+## [research/experiments/n11-s5-loss-witness-20261012/input/targets.json](../../../research/experiments/n11-s5-loss-witness-20261012/input/targets.json)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (data): K0375の既知S5 LOSS六根、raw provenance、独立証明source SHA
+## [research/experiments/n11-s5-loss-witness-20261012/output/common-budget-v1/summary.json](../../../research/experiments/n11-s5-loss-witness-20261012/output/common-budget-v1/summary.json)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (data): A-E各150万nodeの勝敗・wall・最大RSS・cache測定
+## [research/experiments/n11-s5-loss-witness-20261012/output/final-sha256.json](../../../research/experiments/n11-s5-loss-witness-20261012/output/final-sha256.json)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (manifest): 実験入出力のSHA-256一覧
+## [research/experiments/n11-s5-loss-witness-20261012/output/regression-fixture-development.json](../../../research/experiments/n11-s5-loss-witness-20261012/output/regression-fixture-development.json)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (data): 不適切fixtureを含む試行のnode数・結果・raw SHA記録
+## [research/experiments/n11-s5-loss-witness-20261012/output/stop-on-loss-reproduction-v1/receipt.json](../../../research/experiments/n11-s5-loss-witness-20261012/output/stop-on-loss-reproduction-v1/receipt.json)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (manifest): 早期停止flagの3 assertion成功receipt
+## [research/experiments/n11-s5-loss-witness-20261012/scripts/benchmark_witness_methods.py](../../../research/experiments/n11-s5-loss-witness-20261012/scripts/benchmark_witness_methods.py)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 5方式の同binary・同cache初期状態・同node上限比較
+## [research/experiments/n11-s5-loss-witness-20261012/scripts/check_stop_on_loss.py](../../../research/experiments/n11-s5-loss-witness-20261012/scripts/check_stop_on_loss.py)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (verifier): 4×4でexact LOSS後停止、UNKNOWN継続、既定挙動を回帰検査
+## [research/experiments/n11-s5-loss-witness-20261012/scripts/prepare_candidates.py](../../../research/experiments/n11-s5-loss-witness-20261012/scripts/prepare_candidates.py)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): rawと独立証明receiptをSHA照合しS6候補を列挙
+## [research/experiments/n11-s5-loss-witness-20261012/tests/test_witness_schedule.py](../../../research/experiments/n11-s5-loss-witness-20261012/tests/test_witness_schedule.py)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (verifier): 固定六根、geometry順序、共通node capの単体試験
 ## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題
@@ -6542,6 +6579,9 @@
 
 - [K0093](../items/K0093-coordinate-three-ply-information.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0094](../items/K0094-n5-relocation-preserves-two-ply-changes-grundy.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/log/2026-10-12-n11-s5-loss-witness.md](../../../research/log/2026-10-12-n11-s5-loss-witness.md)
+
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 発見順、失敗、適用判断
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

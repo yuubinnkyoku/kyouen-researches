@@ -1,0 +1,114 @@
+{
+  "schema": "n11-s5-loss-witness-targets-v1",
+  "board_size": 11,
+  "selection_basis": "all six independently terminal-closed S5 LOSS roots in K0375/K0378: the three then-current-S4 roots and the three preceding-S4 roots",
+  "independent_certificate_sources": [
+    {
+      "path": "research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/proof-dag-bundle.json.gz",
+      "sha256": "48edffe570591e7196c2021353342a05ba058d70b141f05128bd17c207d4e922",
+      "receipt_path": "research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/verification.json",
+      "receipt_sha256": "56e334a9a59421661facecb10a53fcb84665e4f7e16863e1412e155317c9e2bc",
+      "roots": 3,
+      "trusted_leaves": 0
+    },
+    {
+      "path": "research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-s5-proof-bundle-reverse-v1/proof-dag-bundle.json.gz",
+      "sha256": "9f55e6997f62ee2bae31d286b98ad2b89b6306e18df5091eac081b05d5d10af6",
+      "receipt_path": "research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-s5-proof-bundle-reverse-v1/verification.json",
+      "receipt_sha256": "2eaca0f3410c489e1e1b5cf06a22ac6308b8edc6a4f5bcc4c6a2fdc4b9106b77",
+      "roots": 3,
+      "trusted_leaves": 0
+    }
+  ],
+  "six_root_integration_receipt": {
+    "path": "research/experiments/n11-proof-dag-incremental-20261011/output/integration-audit.json",
+    "sha256": "ecb0157e76521948601ce1d2ffeb74d34c35f7e1143ee93811a913ab25e0475d",
+    "reported_certificate_sha256": "44bacf049ee693fa4dd11be1db64c2eec066ee444ddf29f1c94118a25a148e22",
+    "roots": 6,
+    "trusted_leaves": 0
+  },
+  "budget_protocol": {
+    "per_s5_total_node_cap": 250000,
+    "s6_child_node_cap": 50000,
+    "max_s6_candidates_per_parent": 5,
+    "direct_root_stones": 5,
+    "witness_child_stones": 6,
+    "direct_order": "count",
+    "s6_internal_order": "count",
+    "stop_s6_schedule_after_exact_loss": true
+  },
+  "positions": [
+    {
+      "id": "latest-s4/legal84",
+      "s4_group": "latest-s4",
+      "lo": 10412322338480590849,
+      "hi": 0,
+      "stones": 5,
+      "legal": 84,
+      "expected_verdict": 2,
+      "prior_nodes": 5416337,
+      "source_csv": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-15m.csv",
+      "source_csv_sha256": "810a8817ea417ec3769f58c507bf290057048633fdbdca000033e45ebfff52d6"
+    },
+    {
+      "id": "latest-s4/legal92",
+      "s4_group": "latest-s4",
+      "lo": 1297036692750861312,
+      "hi": 0,
+      "stones": 5,
+      "legal": 92,
+      "expected_verdict": 2,
+      "prior_nodes": 5026776,
+      "source_csv": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-15m.csv",
+      "source_csv_sha256": "810a8817ea417ec3769f58c507bf290057048633fdbdca000033e45ebfff52d6"
+    },
+    {
+      "id": "latest-s4/legal94",
+      "s4_group": "latest-s4",
+      "lo": 1301540292311122944,
+      "hi": 0,
+      "stones": 5,
+      "legal": 94,
+      "expected_verdict": 2,
+      "prior_nodes": 3454253,
+      "source_csv": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-15m.csv",
+      "source_csv_sha256": "810a8817ea417ec3769f58c507bf290057048633fdbdca000033e45ebfff52d6"
+    },
+    {
+      "id": "previous-s4/first",
+      "s4_group": "previous-s4",
+      "lo": 3494793310840553472,
+      "hi": 536870912,
+      "stones": 5,
+      "legal": 88,
+      "expected_verdict": 2,
+      "prior_nodes": 3981449,
+      "source_csv": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m.csv",
+      "source_csv_sha256": "1c90a0cc7123e4f9cfbf11a6bd77fbafe35d273ce626952b60ebba37e99068a7"
+    },
+    {
+      "id": "previous-s4/second",
+      "s4_group": "previous-s4",
+      "lo": 1188950301626859520,
+      "hi": 536936448,
+      "stones": 5,
+      "legal": 89,
+      "expected_verdict": 2,
+      "prior_nodes": 2335333,
+      "source_csv": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-second.csv",
+      "source_csv_sha256": "41d9122c6a2d368b95680f5b59a98e332310d0c952c56d6ce341a3137062cbea"
+    },
+    {
+      "id": "previous-s4/third",
+      "s4_group": "previous-s4",
+      "lo": 1189513251580280832,
+      "hi": 536870912,
+      "stones": 5,
+      "legal": 89,
+      "expected_verdict": 2,
+      "prior_nodes": 2457938,
+      "source_csv": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-third.csv",
+      "source_csv_sha256": "f79ef6bbf390936ba36ef2daaa2f7d83ecb8349eccd1684ce4eb1d1d59e508f1"
+    }
+  ]
+}

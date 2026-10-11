@@ -1,0 +1,19 @@
+{
+  "schema": "n11-s5-loss-witness-build-v1",
+  "command": [
+    "g++",
+    "-O3",
+    "-std=c++20",
+    "-DNDEBUG",
+    "cpp/solvers/kyouen_dfpn_root.cpp",
+    "-o",
+    ".local/n11-s5-loss-witness-20261012/dfpn.exe"
+  ],
+  "compiler_version": "g++.exe (Rev8, Built by MSYS2 project) 15.2.0",
+  "source_path": "cpp/solvers/kyouen_dfpn_root.cpp",
+  "source_sha256": "b5a020252bd373269392b9c3259a46e9ae51b7e46051dbcf2f20aa6aa46ff243",
+  "binary_path": ".local/n11-s5-loss-witness-20261012/dfpn.exe",
+  "binary_sha256": "57f50e70340c274d9645954a5ca88916da49f17e7e0e1134a7524fa26defaa6d",
+  "binary_bytes": 1491518,
+  "binary_committed": false
+}
