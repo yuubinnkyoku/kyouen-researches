@@ -4776,3 +4776,10 @@ Independent Board geometryとraw-history checksを経たexact-only merge後のca
 solverから独立した整数幾何で10局面すべてのcanonical・合法数・S4親子関係、raw verdictの整合を検査した。対象S4の完全106子境界は **LOSS20 / WIN0 / UNKNOWN86**。最新exact S5 cacheは **5,765件（WIN159 / LOSS5,606、衝突0）**。全3,384 S4は **LOSS31 / WIN274 / UNKNOWN3,079**、第三手被覆117/119、残り `{100,108}`、最小追加LOSS classと有理双対は1のまま。
 
 再現コード、全生CSVとSHA-256 manifest、完全cache、rank表は [11×11 reply27 10LOSS追加実験](../../experiments/n11-reply27-ten-loss-20261011/README.md) に保存。今回の10件は直接solver-trusted exactであり、terminal-only独立DAGは未生成。過去のK0375共有証明DAGにある別の対象と混同しない。
+
+
+## 2026-10-11 JST: S4最有力候補の新規20 S5 LOSSと最小境界66
+
+`main=1c2c010762e2e781ce04ed7d00e8592fc114776e` を開始点として、S4 `(1297036692683752448,0)` の未解決S5 86件から合法手数の少ない単独生存親10件と生存親共有10件を選び、各rootをcold DFPN exact replay（上限15,000,000 nodes）で探索した。**20件すべて直接exact LOSS**、使用合計81,806,285 nodes、今回のWIN0・UNKNOWN0。全子幾何・raw・cache隔離・全3,384 S4の独立監査と改ざんテスト6件により整合を確認。
+
+exact S5 cacheは **5,785件（WIN159 / LOSS5,626、矛盾0）**。対象S4の106 canonical S5全子境界は **LOSS40 / WIN0 / UNKNOWN66** へ進んだ。全3,384 S4は LOSS31 / WIN274 / UNKNOWN3,079で、第三手被覆117/119・残り `{100,108}`・必要追加LOSS class最小1は不変。生データ、選定経緯、SHA-256監査結果、回帰テスト、最新rankは [reply27 20LOSS追加実験](../../experiments/n11-reply27-20more-20261011/README.md) に保存。今回の20件に終局だけを葉とする独立証明DAGは未作成であり、solver-trusted exactと区別する。

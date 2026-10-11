@@ -1,0 +1,588 @@
+{
+  "additional_loss_classes_min": 1,
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "independent_board_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+  "input_sha256": {
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-00.csv": "327b045f549a75e843a8ac4162e37f97f6819710a63c1b923710d705fc6d8367",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-01.csv": "019ef203ba6219e034485ea9ebe42f5577ca3f66dbb3c50e4c1ad4dd61355be4",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-02.csv": "683de0f065fa6de59034a56fec0df8162d6896688c47e26491597a134acfe85f",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-03.csv": "856be824ce69ea1b5d02d3718f7c002a95120e137a3f1d7de3f8bc0e812fb423",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-04.csv": "34ec5ed2e42536650bf96979b04fbd2a201f7e6cff7961f23d15356b380cd273",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-05.csv": "670881557cbd37dc0304a49cacbbd105a47ee7903e6c081aba331b252e1711a2",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-06.csv": "c23205864027e55631f6da1c257f7ebcda9be1f5ffc15b9fb2eac03cb8b0f5f9",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-07.csv": "17017678b091f47f2bfc1e9e6baf16df25d4f50855bd9e1b561573f96b5cdd27",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-08.csv": "e574ec6a4ad7ee6af7b5236edf76f41910c9b6d9a34f0a774d4de8b8bd2e7bdd",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/target-09.csv": "eefe52ef1279ac5fe718bc813bf191b90fbb30b894d69d931e179364b3b6804b"
+  },
+  "new_s5_count": 20,
+  "new_s5_positions": {
+    "10376293541461626881:131072": {
+      "csv": "probe-03.csv",
+      "key": [
+        10376293541461626881,
+        131072
+      ],
+      "legal": 94,
+      "nodes": 3823653,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10376293541461622785,
+          131072
+        ],
+        [
+          10376293541461626880,
+          131072
+        ]
+      ],
+      "reported_seconds": 10,
+      "shared_live_parents": 1
+    },
+    "10376293541461626881:16": {
+      "csv": "probe-03.csv",
+      "key": [
+        10376293541461626881,
+        16
+      ],
+      "legal": 97,
+      "nodes": 3638190,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10376293541461622785,
+          16
+        ],
+        [
+          10376293541461626880,
+          16
+        ]
+      ],
+      "reported_seconds": 10,
+      "shared_live_parents": 2
+    },
+    "10376293541461626881:67108864": {
+      "csv": "probe-08.csv",
+      "key": [
+        10376293541461626881,
+        67108864
+      ],
+      "legal": 95,
+      "nodes": 3964389,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10376293541461622785,
+          67108864
+        ],
+        [
+          10376293541461626880,
+          67108864
+        ]
+      ],
+      "reported_seconds": 11,
+      "shared_live_parents": 1
+    },
+    "1152921504606852097:536870912": {
+      "csv": "probe-04.csv",
+      "key": [
+        1152921504606852097,
+        536870912
+      ],
+      "legal": 97,
+      "nodes": 4292117,
+      "parents": [
+        [
+          1152921504606848001,
+          536870912
+        ],
+        [
+          1152921504606852096,
+          536870912
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reported_seconds": 11,
+      "shared_live_parents": 2
+    },
+    "1297036692683752449:0": {
+      "csv": "probe-04.csv",
+      "key": [
+        1297036692683752449,
+        0
+      ],
+      "legal": 94,
+      "nodes": 3504651,
+      "parents": [
+        [
+          1297036692682703873,
+          0
+        ],
+        [
+          1297036692683751425,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reported_seconds": 9,
+      "shared_live_parents": 1
+    },
+    "1297036692683752450:0": {
+      "csv": "probe-05.csv",
+      "key": [
+        1297036692683752450,
+        0
+      ],
+      "legal": 97,
+      "nodes": 4352577,
+      "parents": [
+        [
+          1297036692682703874,
+          0
+        ],
+        [
+          1297036692683751426,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reported_seconds": 12,
+      "shared_live_parents": 2
+    },
+    "1297036692683752452:0": {
+      "csv": "probe-05.csv",
+      "key": [
+        1297036692683752452,
+        0
+      ],
+      "legal": 94,
+      "nodes": 4597825,
+      "parents": [
+        [
+          1297036692682703876,
+          0
+        ],
+        [
+          1297036692683751428,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reported_seconds": 12,
+      "shared_live_parents": 1
+    },
+    "1297036692683752576:0": {
+      "csv": "probe-09.csv",
+      "key": [
+        1297036692683752576,
+        0
+      ],
+      "legal": 96,
+      "nodes": 2996288,
+      "parents": [
+        [
+          1297036692682704000,
+          0
+        ],
+        [
+          1297036692683751552,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reported_seconds": 8,
+      "shared_live_parents": 1
+    },
+    "1297036692684014592:0": {
+      "csv": "probe-00.csv",
+      "key": [
+        1297036692684014592,
+        0
+      ],
+      "legal": 96,
+      "nodes": 4133815,
+      "parents": [
+        [
+          1297036692682966016,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036692684013568,
+          0
+        ]
+      ],
+      "reported_seconds": 11,
+      "shared_live_parents": 2
+    },
+    "1297036692684276736:0": {
+      "csv": "probe-06.csv",
+      "key": [
+        1297036692684276736,
+        0
+      ],
+      "legal": 97,
+      "nodes": 5975893,
+      "parents": [
+        [
+          1297036692683228160,
+          0
+        ],
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036692684275712,
+          0
+        ]
+      ],
+      "reported_seconds": 16,
+      "shared_live_parents": 2
+    },
+    "1297036692685849600:0": {
+      "csv": "probe-07.csv",
+      "key": [
+        1297036692685849600,
+        0
+      ],
+      "legal": 97,
+      "nodes": 2691082,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036692684801024,
+          0
+        ],
+        [
+          1297036692685848576,
+          0
+        ]
+      ],
+      "reported_seconds": 7,
+      "shared_live_parents": 2
+    },
+    "1297036692700529664:0": {
+      "csv": "probe-06.csv",
+      "key": [
+        1297036692700529664,
+        0
+      ],
+      "legal": 94,
+      "nodes": 3353183,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036692699481088,
+          0
+        ],
+        [
+          1297036692700528640,
+          0
+        ]
+      ],
+      "reported_seconds": 9,
+      "shared_live_parents": 1
+    },
+    "1297036696978719744:0": {
+      "csv": "probe-01.csv",
+      "key": [
+        1297036696978719744,
+        0
+      ],
+      "legal": 96,
+      "nodes": 6137538,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036696977671168,
+          0
+        ],
+        [
+          1297036696978718720,
+          0
+        ]
+      ],
+      "reported_seconds": 17,
+      "shared_live_parents": 2
+    },
+    "1297036709863621632:0": {
+      "csv": "probe-08.csv",
+      "key": [
+        1297036709863621632,
+        0
+      ],
+      "legal": 97,
+      "nodes": 5002748,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036709862573056,
+          0
+        ],
+        [
+          1297036709863620608,
+          0
+        ]
+      ],
+      "reported_seconds": 14,
+      "shared_live_parents": 2
+    },
+    "1297037242439566336:0": {
+      "csv": "probe-02.csv",
+      "key": [
+        1297037242439566336,
+        0
+      ],
+      "legal": 96,
+      "nodes": 2745800,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297037242438517760,
+          0
+        ],
+        [
+          1297037242439565312,
+          0
+        ]
+      ],
+      "reported_seconds": 7,
+      "shared_live_parents": 2
+    },
+    "1297041090730263552:0": {
+      "csv": "probe-09.csv",
+      "key": [
+        1297041090730263552,
+        0
+      ],
+      "legal": 97,
+      "nodes": 4259034,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297041090729214976,
+          0
+        ],
+        [
+          1297041090730262528,
+          0
+        ]
+      ],
+      "reported_seconds": 11,
+      "shared_live_parents": 2
+    },
+    "1297177430172107776:0": {
+      "csv": "probe-00.csv",
+      "key": [
+        1297177430172107776,
+        0
+      ],
+      "legal": 93,
+      "nodes": 5461211,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297177430171059200,
+          0
+        ],
+        [
+          1297177430172106752,
+          0
+        ]
+      ],
+      "reported_seconds": 15,
+      "shared_live_parents": 1
+    },
+    "1297318167660463104:0": {
+      "csv": "probe-01.csv",
+      "key": [
+        1297318167660463104,
+        0
+      ],
+      "legal": 93,
+      "nodes": 3182164,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297318167659414528,
+          0
+        ],
+        [
+          1297318167660462080,
+          0
+        ]
+      ],
+      "reported_seconds": 8,
+      "shared_live_parents": 1
+    },
+    "1297599642637173760:0": {
+      "csv": "probe-02.csv",
+      "key": [
+        1297599642637173760,
+        0
+      ],
+      "legal": 93,
+      "nodes": 2973580,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297599642636125184,
+          0
+        ],
+        [
+          1297599642637172736,
+          0
+        ]
+      ],
+      "reported_seconds": 8,
+      "shared_live_parents": 1
+    },
+    "1873497444987175936:0": {
+      "csv": "probe-07.csv",
+      "key": [
+        1873497444987175936,
+        0
+      ],
+      "legal": 94,
+      "nodes": 4720547,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1873497444986127360,
+          0
+        ],
+        [
+          1873497444987174912,
+          0
+        ]
+      ],
+      "reported_seconds": 13,
+      "shared_live_parents": 1
+    }
+  },
+  "new_s5_shared_other_live_parent": 10,
+  "new_s5_total_nodes": 81806285,
+  "new_s5_total_reported_seconds": 219,
+  "new_s5_verdicts": {
+    "LOSS": 20,
+    "UNKNOWN": 0,
+    "WIN": 0
+  },
+  "old_cache_sha256": "3a1e14c16003525e17833e3da792a0cd93ed16e661484660ca185474025cb19c",
+  "proof_evidence_boundary": "solver-trusted direct exact S5; geometry and boundary independently validated, terminal-only proofs not produced",
+  "raw_sha256": {
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-00.csv": "602dc981b9bff6da5415d7b34b1e311d514e83bbe2a4c42e8b3e679cf21dd4f7",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-01.csv": "6c68f4e48e6ec6885b37fa9afb664bba342c8ba43539e255ee19d33fe5fcb2dd",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-02.csv": "abde3da8d95c6a91228ff59819562858c87d8883f6f76000ffd6c14e97d13942",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-03.csv": "30d03c023d4e6380bb410d57712a05aaae844732eec09c55b882ad8201456c2b",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-04.csv": "8bd5585920e740106c72534019b8de2348d45c78719d0e5c6a64189662653e62",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-05.csv": "5a2d2c047db7a135a454eaf7183f483679ba3848739c71f68b30ac6fda7a1d55",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-06.csv": "23202b8e92adce5f4a1a1755b5cb3cec38364e19b603232190ce43c82b993871",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-07.csv": "c1b00ec53546436c3d84719f66018f9e4d171aa9c4e753d06b0fe30d61ecf6fb",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-08.csv": "75bcc23410c41c21dd9c4803030b3e1fe4d8efded59b060d7eb12da2354d213c",
+    "research/experiments/n11-reply27-20more-20261011/output/raw/probe-09.csv": "2ab5c9265e69b8bc18cb86d167b997d6b56ee412b0771d4bfbd8a56c6107d4bc"
+  },
+  "root_s4_coverage": [
+    100,
+    108,
+    110,
+    120
+  ],
+  "root_s4_key": [
+    1297036692683752448,
+    0
+  ],
+  "s4_after": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "s4_before": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "s4_status_changes": [],
+  "s5_cache_after": 5785,
+  "s5_cache_after_LOSS": 5626,
+  "s5_cache_after_WIN": 159,
+  "s5_cache_before": 5765,
+  "s5_cache_conflicts": 0,
+  "s5_cache_sha256": "2a873e3312f355dbc0cc2472438c9304b1a647fb04396c6645762d70676bd27f",
+  "secured_third_moves": 117,
+  "solver_binary_sha256": "2878dc74ab1228c1bba6b13140dcd8f65f457f9813ae98d801a1709c77497ee5",
+  "solver_flags": "--n=11 --memo=22 --only=5 --exact-order=count --exact-replay-budget=15000000; cold per input row",
+  "solver_source_commit": "f33693cdd8be54738cedea8fc141553209c9a669",
+  "source_main_sha": "1c2c010762e2e781ce04ed7d00e8592fc114776e",
+  "target_s4_after": {
+    "LOSS": 40,
+    "UNKNOWN": 66,
+    "WIN": 0
+  },
+  "target_s4_before": {
+    "LOSS": 20,
+    "UNKNOWN": 86,
+    "WIN": 0
+  },
+  "unresolved_third_moves": [
+    100,
+    108
+  ]
+}
