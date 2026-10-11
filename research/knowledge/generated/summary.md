@@ -1,12 +1,12 @@
 # 移行集計
 
-K項目: 370 / alias: 269 / artifactファイル: 1954
+K項目: 371 / alias: 269 / artifactファイル: 1966
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 15 |
+| computation | 16 |
 | definition | 5 |
 | method | 4 |
 | proposition | 303 |
@@ -18,7 +18,7 @@ K項目: 370 / alias: 269 / artifactファイル: 1954
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 95 |
+| computed | 96 |
 | conjectured | 1 |
 | observed | 15 |
 | open | 35 |
@@ -32,7 +32,7 @@ K項目: 370 / alias: 269 / artifactファイル: 1954
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 21 |
+| certificates | 22 |
 | first-moves | 33 |
 | formalization | 2 |
 | geometry | 140 |
@@ -40,17 +40,17 @@ K項目: 370 / alias: 269 / artifactファイル: 1954
 | maximal-safe | 68 |
 | maximum-safe | 48 |
 | migration | 1 |
-| provenance | 16 |
+| provenance | 17 |
 | reconfiguration | 34 |
 | rectangles | 38 |
 | residual-games | 59 |
 | rules | 3 |
-| search-methods | 31 |
-| square-outcomes | 27 |
+| search-methods | 32 |
+| square-outcomes | 28 |
 | statistics | 29 |
 | strategy-length | 19 |
 | variants | 78 |
-| verification | 21 |
+| verification | 22 |
 
 ## 未解決・要監査・範囲不明
 

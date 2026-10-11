@@ -65,6 +65,7 @@
 - ← depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 全層で元の先手に固定した勝敗
 - ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 元先手固定の勝敗
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): 先手固定視点の奇数ANDと偶数ORの完全境界規則
+- ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 元先手固定視点の交互AND/OR規則
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1655,6 +1656,7 @@
 - ← verifies [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 全S4境界と第三手被覆を再生成し、solver/cacheを信頼する葉を分離
 - ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 第三手被覆とS4 classの正規化
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): reply27の現行S4/S5証明境界
+- ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 対象S4に属する三つの既知S5 direct LOSS局面
 
 ## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する
 
@@ -1736,6 +1738,7 @@
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全frontierの独立再生成とsolver/cache葉の信頼境界
 - ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 追加loaderと中間S6・上位S4依存の独立再監査範囲
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): solver-trusted raw葉と独立な上位境界の証拠区分
+- ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): exact solver値、信頼葉、独立終局閉包を区別する証拠規約
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
@@ -1748,3 +1751,11 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 先手固定視点の奇数ANDと偶数ORの完全境界規則
 - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): reply27の現行S4/S5証明境界
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver-trusted raw葉と独立な上位境界の証拠区分
+- ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 最新候補S4とその既知LOSS S5子
+
+## [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) 11×11の既知S5六局面で共有TTと終局閉包証明DAGを実測
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の交互AND/OR規則
+- → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 対象S4に属する三つの既知S5 direct LOSS局面
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): exact solver値、信頼葉、独立終局閉包を区別する証拠規約
+- → depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): 最新候補S4とその既知LOSS S5子

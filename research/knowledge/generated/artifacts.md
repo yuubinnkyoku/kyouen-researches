@@ -4813,6 +4813,42 @@
 ## [research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py](../../../research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): S0..S121三値境界、小盤面全安全状態、誤極性mutant、証明書改変、loader隔離
+## [research/experiments/n11-proof-dag-engine-followup-20261011/README.md](../../../research/experiments/n11-proof-dag-engine-followup-20261011/README.md)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (source): 実装、比較、性能・容量、限界、再現手順
+## [research/experiments/n11-proof-dag-engine-followup-20261011/input/current-s4-resolved-s5-positions.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/input/current-s4-resolved-s5-positions.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (data): 最新mainに追加されたdirect LOSS三S5のrootとraw source provenance
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/capture-cost-same-binary-v1/summary.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/capture-cost-same-binary-v1/summary.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (data): 同一binary/局面/計算環境での証明capture有無、trace hash一致、時間と最大RSS
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/proof-dag-bundle.json.gz](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/proof-dag-bundle.json.gz)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (certificate): 最新候補S4配下にある既知LOSS三S5を終局まで閉じた共有DAG
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/summary.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/summary.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (data): 最新候補S4のDAG生成・独立検査・容量・時間・RSS測定
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/verification.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/verification.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (manifest): 最新候補S4の三S5 LOSS共有DAGの独立検査receipt
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/final-sha256.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/final-sha256.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (manifest): experiment内の全保存成果物SHA-256目録（目録自身とPython cacheを除く）
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-s5-proof-bundle-reverse-v1/proof-dag-bundle.json.gz](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-s5-proof-bundle-reverse-v1/proof-dag-bundle.json.gz)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (certificate): 三つのS5 LOSSを終局まで閉じた共有証明DAG、trusted leaf 0
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-s5-proof-bundle-reverse-v1/verification.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-s5-proof-bundle-reverse-v1/verification.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (manifest): 3 root LOSS、1,002,511 node、1,517,437 edge、128,528 terminal、trusted 0の検査receipt
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-tt-benchmark-v1/summary.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-tt-benchmark-v1/summary.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (data): 旧候補S4の三既知S5におけるfresh/shared TT順序比較
+## [research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-tt-current-s4-v1/summary.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-tt-current-s4-v1/summary.json)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (data): 最新候補S4の三既知S5で行った共有TT・順序比較。改善は観測されない
+## [research/experiments/n11-proof-dag-engine-followup-20261011/scripts/verify_shared_bundle.py](../../../research/experiments/n11-proof-dag-engine-followup-20261011/scripts/verify_shared_bundle.py)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (verifier): solverやTTを読まず共有証明DAGの幾何・遷移・AND/OR・閉包を検査
 ## [research/experiments/n11-reduction-followup-20261005/output/audit.json](../../../research/experiments/n11-reduction-followup-20261005/output/audit.json)
 
 - [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (data): 全7020小clutter、全5219交換不変族、727実n11残局の通常・misère検査と測定
