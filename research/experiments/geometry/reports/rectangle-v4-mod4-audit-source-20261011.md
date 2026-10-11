@@ -1,3 +1,5 @@
-# V4 modulo-four independent audit
+# 長方形盤法4公式の検証器
 
-Executable source is retained as an appendix in the main report.
+独立検証器のソースは実行成果物として別途保存。GitHubへのコードファイル書き込みは安全検査で拒否されたため、このファイルにコードが含まれるという主張はしない。
+
+詳細は [証明・有限検証報告](rectangle-v4-mod4-20261011.md) を参照。
