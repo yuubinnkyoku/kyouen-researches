@@ -27,7 +27,9 @@ Usage:
     dfpn_s5_recover.py <log>... --out <worker.csv> [--cache <existing.csv>]
 """
 import argparse
+import csv
 import io
+from contextlib import closing
 import re
 import sys
 
@@ -36,8 +38,22 @@ HEADER = ('# s5 verdict cache: n=11 schema=1 '
 
 # [q-done]   q=7 key=1152921504606848001,16777220 result=2 nodes=3580140 ms=...
 Q_DONE = re.compile(r'\[q-done\].*?key=(\d+),(\d+)\s+result=(\d+)\s+nodes=(\d+)')
-# The replay driver prints the same verdicts in a different shape.
-REPLAY = re.compile(r'^replay,(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+),(\d+)')
+# The replay driver uses CSV with a floating-point wall_s column.
+
+
+def record(verdicts, key, result, nodes):
+    """Merge observations without promoting UNKNOWN or hiding a conflict."""
+    if result not in (0, 1, 2) or nodes < 0:
+        raise ValueError(f'invalid replay result/nodes for {key}: {result}/{nodes}')
+    old = verdicts.get(key)
+    if old is not None:
+        if old[0] and result and old[0] != result:
+            raise ValueError(f'CONFLICT key={key}: {old[0]} vs {result}')
+        if old[0] and not result:
+            return
+        if old[0] == result and old[1] <= nodes:
+            return
+    verdicts[key] = (result, nodes)
 
 
 def scan(path):
@@ -49,22 +65,25 @@ def scan(path):
     """
     verdicts = {}
     started = set()
-    for line in io.open(path, encoding='utf-8', errors='replace'):
-        m = Q_DONE.search(line)
-        if m:
-            key = (int(m.group(1)), int(m.group(2)))
-            res = int(m.group(3))
-            verdicts[key] = (res, int(m.group(4)))
-            continue
-        # replay,id,stones,legal,is_or,budget,result,nodes,wall_s,lo,hi
-        m = REPLAY.match(line.strip())
-        if m:
-            key = (int(m.group(10)), int(m.group(11)))
-            verdicts[key] = (int(m.group(7)), int(m.group(8)))
-            continue
-        # Track starts so an unfinished query is visible as such.
-        for m2 in re.finditer(r'\[q-start\]\s+q=\d+\s+key=(\d+),(\d+)', line):
-            started.add((int(m2.group(1)), int(m2.group(2))))
+    with closing(io.open(path, encoding='utf-8', errors='replace')) as lines:
+        for line in lines:
+            m = Q_DONE.search(line)
+            if m:
+                key = (int(m.group(1)), int(m.group(2)))
+                res = int(m.group(3))
+                record(verdicts, key, res, int(m.group(4)))
+                continue
+            # replay,id,stones,legal,is_or,budget,result,nodes,wall_s,lo,hi
+            if line.startswith('replay,'):
+                row = next(csv.reader([line]))
+                if len(row) != 11 or int(row[2]) != 5 or int(row[4]) != 0:
+                    raise ValueError(f'not an S5 AND replay row: {row}')
+                key = (int(row[9]), int(row[10]))
+                record(verdicts, key, int(row[6]), int(row[7]))
+                continue
+            # Track starts so an unfinished query is visible as such.
+            for m2 in re.finditer(r'\[q-start\]\s+q=\d+\s+key=(\d+),(\d+)', line):
+                started.add((int(m2.group(1)), int(m2.group(2))))
     return verdicts, started
 
 
@@ -72,19 +91,23 @@ def load_cache(path):
     cache = {}
     if not path:
         return cache
-    for line in io.open(path, encoding='utf-8', errors='replace'):
-        line = line.strip()
-        if not line or line.startswith('#'):
-            continue
-        f = line.split(',')
-        if len(f) < 6 or f[0] != 's5verdict':
-            continue
-        if int(f[3]) != 5:
-            continue
-        r = int(f[4])
-        if r not in (1, 2):
-            continue
-        cache[(int(f[1]), int(f[2]))] = r
+    with closing(io.open(path, encoding='utf-8', errors='replace')) as lines:
+        for line in lines:
+            line = line.strip()
+            if not line or line.startswith('#'):
+                continue
+            f = line.split(',')
+            if len(f) < 6 or f[0] != 's5verdict':
+                continue
+            if int(f[3]) != 5:
+                continue
+            r = int(f[4])
+            if r not in (1, 2):
+                continue
+            key = (int(f[1]), int(f[2]))
+            if key in cache and cache[key] != r:
+                raise ValueError(f'CONFLICT inside existing cache: {key}: {cache[key]} vs {r}')
+            cache[key] = r
     return cache
 
 
@@ -98,19 +121,17 @@ def main():
     recovered = {}
     started = set()
     interrupted = set()
-    for path in args.logs:
-        v, s = scan(path)
-        for k, val in v.items():
-            if k in recovered and recovered[k][0] != val[0]:
-                print('CONFLICT between logs: key=%s %s vs %s'
-                      % (k, recovered[k][0], val[0]))
-                print('REFUSED: verdicts disagree, refusing to merge')
-                return 1
-            recovered[k] = val
-        started |= s
+    try:
+        for path in args.logs:
+            v, started_in_log = scan(path)
+            for k, (result, nodes) in v.items():
+                record(recovered, k, result, nodes)
+            started |= started_in_log
+        existing = load_cache(args.cache)
+    except (ValueError, IndexError) as exc:
+        print(f'REFUSED: invalid or conflicting evidence: {exc}')
+        return 1
     interrupted = started - set(recovered)
-
-    existing = load_cache(args.cache)
 
     win = sum(1 for r, _ in recovered.values() if r == 1)
     loss = sum(1 for r, _ in recovered.values() if r == 2)
@@ -120,9 +141,11 @@ def main():
     print('interrupted queries : %d  (no verdict line, dropped)'
           % len(interrupted))
 
-    fresh = [k for k in recovered if k not in existing]
-    overlap = [k for k in recovered if k in existing]
-    conflicts = [k for k in overlap if existing[k] != recovered[k][0]]
+    # UNKNOWN is an unfinished search, never an exact cache verdict.
+    decided = {k: v for k, v in recovered.items() if v[0] in (1, 2)}
+    fresh = [k for k in decided if k not in existing]
+    overlap = [k for k in decided if k in existing]
+    conflicts = [k for k in overlap if existing[k] != decided[k][0]]
     print('already in cache    : %d' % len(overlap))
     print('new to the cache    : %d' % len(fresh))
     if conflicts:
@@ -131,7 +154,7 @@ def main():
               % len(conflicts))
         for k in conflicts[:10]:
             print('  key=%s cached=%s recovered=%s'
-                  % (k, existing[k], recovered[k][0]))
+                  % (k, existing[k], decided[k][0]))
         print('REFUSED: not writing; a conflict must be resolved by a human.')
         return 1
     if not fresh:
@@ -140,7 +163,7 @@ def main():
     with io.open(args.out, 'w', encoding='utf-8') as f:
         f.write(HEADER)
         for k in sorted(fresh):
-            r, nodes = recovered[k]
+            r, nodes = decided[k]
             f.write('s5verdict,%d,%d,5,%d,%d\n' % (k[0], k[1], r, nodes))
     print('written             : %s (%d rows)' % (args.out, len(fresh)))
     print('MERGE_OK')

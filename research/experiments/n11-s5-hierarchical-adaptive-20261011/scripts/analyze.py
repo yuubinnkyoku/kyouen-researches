@@ -327,6 +327,7 @@ def build_report(input_dir: Path = DEFAULT_RAW) -> tuple[dict[str, object], dict
         direct_s5_verdict=direct["verdict"],
         direct_s5_attempted=True,
         saved_s6_verdicts={f"{lo}:{hi}": value for (lo, hi), value in final_s6.items()},
+        s6_children=[f"{lo}:{hi}" for (lo, hi) in final_s6],
     )
     current_goal_plan = {
         "mode": "D",

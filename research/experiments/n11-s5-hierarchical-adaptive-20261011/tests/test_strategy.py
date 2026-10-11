@@ -47,6 +47,7 @@ class StrategyRoutingTests(unittest.TestCase):
             expected_s6_children=3,
             direct_s5_verdict=UNKNOWN,
             saved_s6_verdicts={"a": WIN, "b": WIN, "c": WIN},
+            s6_children=["a", "b", "c"],
             direct_s5_attempted=True,
         )
         self.assertEqual((plan["mode"], plan["verdict"]), ("C", WIN))
@@ -56,6 +57,7 @@ class StrategyRoutingTests(unittest.TestCase):
             goal="s5_loss",
             expected_s6_children=4,
             saved_s6_verdicts={"a": WIN, "b": LOSS},
+            s6_children=["a", "b", "c", "d"],
         )
         self.assertEqual((plan["mode"], plan["verdict"]), ("C", LOSS))
 

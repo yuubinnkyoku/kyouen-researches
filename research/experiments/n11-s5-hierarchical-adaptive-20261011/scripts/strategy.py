@@ -79,7 +79,33 @@ def choose_strategy(
     if direct_s5_verdict not in (UNKNOWN, WIN, LOSS):
         raise ValueError("invalid direct S5 verdict")
 
+    # Check all evidence BEFORE selecting E/A/C. A higher-trust source must
+    # not silently mask a contradictory exact verdict from another source.
+    saved = dict(saved_s6_verdicts or {})
+    if any(value not in (UNKNOWN, WIN, LOSS) for value in saved.values()):
+        raise ValueError("invalid saved S6 verdict")
+    children = list(s6_children) if s6_children is not None else None
+    if children is not None:
+        if len(children) != expected_s6_children or len(set(children)) != len(children):
+            raise ValueError("S6 child key list must be complete and unique")
+        if not set(saved).issubset(children):
+            raise ValueError("saved S6 verdict refers to a non-child")
+    elif saved:
+        raise ValueError("saved S6 evidence requires a complete S6 child key list")
+    # Without a validated complete child list, even an empty S6 cache cannot
+    # justify a terminal verdict: expected_children is only a caller claim.
+    recovered = (fixed_first_outcome(5, list(saved.values()), expected_s6_children)
+                 if children is not None else UNKNOWN)
     proof_verdict = _verified_independent_root(independent_proof)
+    if (proof_verdict is not None and direct_s5_verdict != UNKNOWN
+            and proof_verdict != direct_s5_verdict):
+        raise ValueError("CONFLICT independent proof vs direct S5 verdict")
+    if (proof_verdict is not None and recovered != UNKNOWN
+            and proof_verdict != recovered):
+        raise ValueError("CONFLICT independent proof vs saved S6 boundary")
+    if (direct_s5_verdict != UNKNOWN and recovered != UNKNOWN
+            and direct_s5_verdict != recovered):
+        raise ValueError("CONFLICT direct S5 verdict vs saved S6 boundary")
     if proof_verdict is not None:
         return {
             "mode": "E",
@@ -98,16 +124,6 @@ def choose_strategy(
             "next_s6": [],
         }
 
-    saved = dict(saved_s6_verdicts or {})
-    if any(value not in (UNKNOWN, WIN, LOSS) for value in saved.values()):
-        raise ValueError("invalid saved S6 verdict")
-    children = list(s6_children) if s6_children is not None else None
-    if children is not None:
-        if len(children) != expected_s6_children or len(set(children)) != len(children):
-            raise ValueError("S6 child key list must be complete and unique")
-        if not set(saved).issubset(children):
-            raise ValueError("saved S6 verdict refers to a non-child")
-    recovered = fixed_first_outcome(5, list(saved.values()), expected_s6_children)
     if recovered in (WIN, LOSS):
         return {
             "mode": "C",
