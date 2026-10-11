@@ -21,9 +21,12 @@ def fixed_first_outcome(
     Even layers are OR; odd layers are AND.  Existential witnesses are decisive
     with a partial boundary.  Universal claims require the complete child set.
     """
-    if stones < 0 or expected_children < 0 or len(child_verdicts) > expected_children:
+    if (type(stones) is not int or type(expected_children) is not int
+            or stones < 0 or expected_children < 0
+            or len(child_verdicts) > expected_children):
         raise ValueError("invalid layer or child count")
-    if any(value not in (UNKNOWN, WIN, LOSS) for value in child_verdicts):
+    if any(type(value) is not int or value not in (UNKNOWN, WIN, LOSS)
+           for value in child_verdicts):
         raise ValueError("invalid verdict")
 
     if stones % 2 == 0:
@@ -77,15 +80,16 @@ def choose_strategy(
     """
     if goal not in {"s5_loss", "s5_win"}:
         raise ValueError("goal must be s5_loss or s5_win")
-    if expected_s6_children < 0:
+    if type(expected_s6_children) is not int or expected_s6_children < 0:
         raise ValueError("expected child count must be nonnegative")
-    if direct_s5_verdict not in (UNKNOWN, WIN, LOSS):
+    if type(direct_s5_verdict) is not int or direct_s5_verdict not in (UNKNOWN, WIN, LOSS):
         raise ValueError("invalid direct S5 verdict")
 
     # Check all evidence BEFORE selecting E/A/C. A higher-trust source must
     # not silently mask a contradictory exact verdict from another source.
     saved = dict(saved_s6_verdicts or {})
-    if any(value not in (UNKNOWN, WIN, LOSS) for value in saved.values()):
+    if any(type(value) is not int or value not in (UNKNOWN, WIN, LOSS)
+           for value in saved.values()):
         raise ValueError("invalid saved S6 verdict")
     children = list(s6_children) if s6_children is not None else None
     if children is not None:
@@ -137,7 +141,7 @@ def choose_strategy(
         }
 
     costs = dict(s6_cost_hints or {})
-    if any(not isinstance(value, int) or value < 0 for value in costs.values()):
+    if any(type(value) is not int or value < 0 for value in costs.values()):
         raise ValueError("S6 cost hints must be nonnegative node counts")
 
     if goal == "s5_loss":
@@ -172,8 +176,8 @@ def choose_strategy(
         direct_nodes = paired_profile.get("direct_nodes")
         split_nodes = paired_profile.get("split_nodes")
         if (
-            isinstance(direct_nodes, int)
-            and isinstance(split_nodes, int)
+            type(direct_nodes) is int
+            and type(split_nodes) is int
             and direct_nodes > 0
             and split_nodes > 0
             and paired_profile.get("both_complete") is True
