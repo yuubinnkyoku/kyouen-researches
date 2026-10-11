@@ -1,0 +1,1287 @@
+{
+  "active": 61,
+  "active_unknown_s5_degree_distribution": {
+    "1": 2702,
+    "2": 1823
+  },
+  "active_unknown_s5_unique": 4525,
+  "all_candidate_s5_degree_distribution": {
+    "2": 6032,
+    "3": 100,
+    "4": 1
+  },
+  "all_candidate_s5_unique": 6133,
+  "cache_rows": 5765,
+  "cache_verdicts": {
+    "LOSS": 5606,
+    "WIN": 159
+  },
+  "candidate_status": {
+    "UNKNOWN": 61,
+    "WIN": 54
+  },
+  "candidates": 115,
+  "ranking_model": {
+    "completion": "Sum of frozen historical 15M-truncated legal-decile mean nodes over UNKNOWN S5; not an upper bound or an unbiased estimate.",
+    "early_rejection": "ONE exact S5 WIN rejects all containing S4 classes; frozen bin WIN/LOSS/UNKNOWN counts supplied only as biased evidence, NOT a probability.",
+    "joint": "Rank new S5 by number of live parent classes, then capped observed cost; useful for exploration only, no guaranteed gain.",
+    "no_independent_terminal_proof": "S5 outcomes are solver/cache-trusted; geometry is a separately audited frozen input.",
+    "selection_bias": "Prior probed children were selected by earlier rankings, censored at budget, and run on different hardware."
+  },
+  "remaining": [
+    100,
+    108
+  ],
+  "s4_counts": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "secured": 117,
+  "source": {
+    "cache": "research/experiments/n11-reply27-ten-loss-20261011/output/merged-exact-s5.cache",
+    "cache_sha256": "3a1e14c16003525e17833e3da792a0cd93ed16e661484660ca185474025cb19c",
+    "geometry": "research/experiments/n11-strategy-redesign-20261010/output/geometry.json.gz",
+    "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+    "history": "research/experiments/n11-strategy-redesign-20261010/output/history.json",
+    "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+    "profile": "research/experiments/n11-strategy-redesign-20261010/output/historical-cost-profile.json",
+    "profile_sha256": "6b2971e53059ac36af7bf161a61d90d65f85e604e27b93d013e7a2853fdceddc"
+  },
+  "symmetry": {
+    "axis": "vertical reflection (row,column) -> (row,10-column)",
+    "candidate_100_only": 0,
+    "candidate_108_only": 0,
+    "fixes_ordered_root": [
+      60,
+      27
+    ],
+    "implication": "any LOSS S4 class covering 100 also covers 108; 2-class split provides no distinct coverage",
+    "swaps": [
+      100,
+      108
+    ]
+  },
+  "top_completion_proxy": [
+    {
+      "completion_15m_truncated_nodes_proxy": 479485981,
+      "coverage": [
+        100,
+        108,
+        110,
+        120
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683752448:0",
+      "legal_max": 105,
+      "legal_min": 93,
+      "rank": 1,
+      "s5_children": 106,
+      "s5_loss": 20,
+      "s5_unknown": 86,
+      "s5_unknown_active_incidence_sum": 141,
+      "s5_unknown_shared_with_other_live_classes": 55,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 544095182,
+      "coverage": [
+        47,
+        51,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036830122704896:0",
+      "legal_max": 106,
+      "legal_min": 84,
+      "rank": 2,
+      "s5_children": 107,
+      "s5_loss": 8,
+      "s5_unknown": 99,
+      "s5_unknown_active_incidence_sum": 159,
+      "s5_unknown_shared_with_other_live_classes": 60,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 547000988,
+      "coverage": [
+        26,
+        28,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297107061427929088:0",
+      "legal_max": 106,
+      "legal_min": 82,
+      "rank": 3,
+      "s5_children": 108,
+      "s5_loss": 9,
+      "s5_unknown": 99,
+      "s5_unknown_active_incidence_sum": 157,
+      "s5_unknown_shared_with_other_live_classes": 58,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 554637913,
+      "coverage": [
+        80,
+        84,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "10376293541461626880:65536",
+      "legal_max": 106,
+      "legal_min": 81,
+      "rank": 4,
+      "s5_children": 108,
+      "s5_loss": 8,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 156,
+      "s5_unknown_shared_with_other_live_classes": 56,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 560174429,
+      "coverage": [
+        46,
+        52,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 1,
+      "frozen_history_nodes_sum": 15000000,
+      "frozen_history_observations": 1,
+      "key": "1297036692750860288:0",
+      "legal_max": 107,
+      "legal_min": 84,
+      "rank": 5,
+      "s5_children": 108,
+      "s5_loss": 8,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 158,
+      "s5_unknown_shared_with_other_live_classes": 58,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 565678820,
+      "coverage": [
+        35,
+        41,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683751424:134217728",
+      "legal_max": 111,
+      "legal_min": 86,
+      "rank": 6,
+      "s5_children": 112,
+      "s5_loss": 12,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 157,
+      "s5_unknown_shared_with_other_live_classes": 57,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 567726225,
+      "coverage": [
+        92,
+        94,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1301540292311121920:0",
+      "legal_max": 108,
+      "legal_min": 86,
+      "rank": 7,
+      "s5_children": 109,
+      "s5_loss": 9,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 158,
+      "s5_unknown_shared_with_other_live_classes": 58,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 568359432,
+      "coverage": [
+        47,
+        51,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683751424:131072",
+      "legal_max": 107,
+      "legal_min": 84,
+      "rank": 8,
+      "s5_children": 108,
+      "s5_loss": 6,
+      "s5_unknown": 102,
+      "s5_unknown_active_incidence_sum": 163,
+      "s5_unknown_shared_with_other_live_classes": 61,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 568552786,
+      "coverage": [
+        100,
+        103,
+        105,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1306043891938492416:0",
+      "legal_max": 107,
+      "legal_min": 80,
+      "rank": 9,
+      "s5_children": 108,
+      "s5_loss": 6,
+      "s5_unknown": 102,
+      "s5_unknown_active_incidence_sum": 162,
+      "s5_unknown_shared_with_other_live_classes": 60,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 569252266,
+      "coverage": [
+        88,
+        98,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1152921504612089856:536870912",
+      "legal_max": 113,
+      "legal_min": 91,
+      "rank": 10,
+      "s5_children": 114,
+      "s5_loss": 13,
+      "s5_unknown": 101,
+      "s5_unknown_active_incidence_sum": 158,
+      "s5_unknown_shared_with_other_live_classes": 57,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    }
+  ],
+  "top_joint_tasks_ready_2m": [
+    {
+      "bin_loss_count": 682,
+      "bin_sample_size": 765,
+      "bin_unknown_count": 28,
+      "bin_win_count": 55,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1306114260682670080:0",
+      "legal": 88,
+      "live_parent_keys": [
+        "1297107061427929088:0",
+        "1306043891938492416:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019904932,
+      "parent_unknown_min": 99,
+      "truncated_cost_proxy_nodes": 5041585
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504607895552:34896642048",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504607895552:34896609280",
+        "1297036692683751424:134217728"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019174312,
+      "parent_unknown_min": 100,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504607895552:536903684",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504607895552:536870916",
+        "1297036692683751424:134217728"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019259259,
+      "parent_unknown_min": 100,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1297036692683751424:134218752",
+      "legal": 110,
+      "live_parent_keys": [
+        "1297036692683751424:134217728",
+        "10376293541461626880:16"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.01952381,
+      "parent_unknown_min": 100,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1297036692683751424:167772160",
+      "legal": 110,
+      "live_parent_keys": [
+        "1297036692683751424:33554432",
+        "1297036692683751424:134217728"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019615385,
+      "parent_unknown_min": 100,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1297036692687945728:134217728",
+      "legal": 110,
+      "live_parent_keys": [
+        "1297036692683751424:134217728",
+        "1297036692687945728:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.01952381,
+      "parent_unknown_min": 100,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1297045488776773632:134217728",
+      "legal": 110,
+      "live_parent_keys": [
+        "1297036692683751424:134217728",
+        "1297045488776773632:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019259259,
+      "parent_unknown_min": 100,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1297036692683751424:142606336",
+      "legal": 111,
+      "live_parent_keys": [
+        "1297036692683751424:134217728",
+        "10376293541461626880:8192"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019259259,
+      "parent_unknown_min": 100,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "10376293541461622788:68727865344",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297036701273686016:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019516375,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "10376302337554644996:68719476736",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297036692683751424:8192"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019516375,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "10394307939971104772:68719476736",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297036692683751424:4"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019516375,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504612089856:671088640",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297036692683751424:32768"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.0194248,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504612089872:536870912",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "10376293541461626880:4"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019609728,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504612352000:536870912",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297041090730262528:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019516375,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504614187008:536870912",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297036692683751936:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019334952,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504645644288:536870912",
+      "legal": 110,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "10376293541461626880:32768"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.0194248,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504612089860:536870912",
+      "legal": 111,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "10376293541461626880:16777216"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019334952,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504620478464:536870912",
+      "legal": 111,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1152921504616284160:536870912"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019516375,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921504741064708:85899345920",
+      "legal": 111,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297036692687945728:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.0194248,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    },
+    {
+      "bin_loss_count": 8,
+      "bin_sample_size": 8,
+      "bin_unknown_count": 0,
+      "bin_win_count": 0,
+      "historical_nodes": 0,
+      "historical_observations": 0,
+      "history_max_unknown_budget": 0,
+      "if_loss_progress": 2,
+      "if_win_classes_eliminated": 2,
+      "key": "1152921508901818368:34896609280",
+      "legal": 111,
+      "live_parent_keys": [
+        "1152921504612089856:536870912",
+        "1297036692683751426:0"
+      ],
+      "live_parents": 2,
+      "parent_unknown_inverse_sum": 0.019246784,
+      "parent_unknown_min": 101,
+      "truncated_cost_proxy_nodes": 5069670
+    }
+  ],
+  "top_pairs": [
+    {
+      "class_a": "1152921504606851584:536870912",
+      "class_b": "1297036692683751426:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504606851584:536870912",
+      "class_b": "1297036692685848576:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504606852096:536870912",
+      "class_b": "1297036692683752448:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:536870916",
+      "class_b": "1297036692683751424:4",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:536870916",
+      "class_b": "1297036692683751440:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:536879104",
+      "class_b": "1297036692683751424:8192",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:536879104",
+      "class_b": "1297036692683751432:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:536887296",
+      "class_b": "1297036692683767808:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:570425344",
+      "class_b": "1297036692683751424:33554432",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:34896609280",
+      "class_b": "1297036692683751424:34359738368",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607895552:34896609280",
+      "class_b": "1297036692683751426:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607897600:536870912",
+      "class_b": "1297036692683751936:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504607897600:536870912",
+      "class_b": "1297036692683753472:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504612089856:536870912",
+      "class_b": "1297036692687945728:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504616284160:536870912",
+      "class_b": "1297036692684275712:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921504616284160:536870912",
+      "class_b": "1297036692692140032:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921521787764736:536870912",
+      "class_b": "1297036692684013568:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152921521787764736:536870912",
+      "class_b": "1297036709863620608:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1152939096793939968:536870912",
+      "class_b": "1297036692683751488:0",
+      "shared_unknown_s5": 2
+    },
+    {
+      "class_a": "1297036692683751424:8192",
+      "class_b": "1297036701273686016:0",
+      "shared_unknown_s5": 2
+    }
+  ],
+  "top_shared": [
+    {
+      "completion_15m_truncated_nodes_proxy": 582347159,
+      "coverage": [
+        89,
+        97,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 1,
+      "frozen_history_nodes_sum": 15000000,
+      "frozen_history_observations": 1,
+      "key": "1297036692684275712:0",
+      "legal_max": 107,
+      "legal_min": 85,
+      "rank": 1,
+      "s5_children": 109,
+      "s5_loss": 6,
+      "s5_unknown": 103,
+      "s5_unknown_active_incidence_sum": 165,
+      "s5_unknown_shared_with_other_live_classes": 62,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 600638503,
+      "coverage": [
+        13,
+        19,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692692140032:0",
+      "legal_max": 112,
+      "legal_min": 85,
+      "rank": 2,
+      "s5_children": 113,
+      "s5_loss": 7,
+      "s5_unknown": 106,
+      "s5_unknown_active_incidence_sum": 168,
+      "s5_unknown_shared_with_other_live_classes": 62,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 602628941,
+      "coverage": [
+        100,
+        108,
+        111,
+        119
+      ],
+      "frozen_history_15m_unknown_targets": 1,
+      "frozen_history_nodes_sum": 15000000,
+      "frozen_history_observations": 1,
+      "key": "1152921504606851584:536870912",
+      "legal_max": 113,
+      "legal_min": 86,
+      "rank": 3,
+      "s5_children": 114,
+      "s5_loss": 8,
+      "s5_unknown": 106,
+      "s5_unknown_active_incidence_sum": 168,
+      "s5_unknown_shared_with_other_live_classes": 62,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 609354616,
+      "coverage": [
+        100,
+        108,
+        113,
+        117
+      ],
+      "frozen_history_15m_unknown_targets": 1,
+      "frozen_history_nodes_sum": 15000000,
+      "frozen_history_observations": 1,
+      "key": "10376293541461626880:8192",
+      "legal_max": 113,
+      "legal_min": 86,
+      "rank": 4,
+      "s5_children": 114,
+      "s5_loss": 6,
+      "s5_unknown": 108,
+      "s5_unknown_active_incidence_sum": 170,
+      "s5_unknown_shared_with_other_live_classes": 62,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 610451205,
+      "coverage": [
+        79,
+        85,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "10376293541461626880:134217728",
+      "legal_max": 112,
+      "legal_min": 87,
+      "rank": 5,
+      "s5_children": 113,
+      "s5_loss": 6,
+      "s5_unknown": 107,
+      "s5_unknown_active_incidence_sum": 169,
+      "s5_unknown_shared_with_other_live_classes": 62,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 568359432,
+      "coverage": [
+        47,
+        51,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683751424:131072",
+      "legal_max": 107,
+      "legal_min": 84,
+      "rank": 6,
+      "s5_children": 108,
+      "s5_loss": 6,
+      "s5_unknown": 102,
+      "s5_unknown_active_incidence_sum": 163,
+      "s5_unknown_shared_with_other_live_classes": 61,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 569915150,
+      "coverage": [
+        100,
+        108,
+        112,
+        118
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036696978718720:0",
+      "legal_max": 106,
+      "legal_min": 86,
+      "rank": 7,
+      "s5_children": 108,
+      "s5_loss": 5,
+      "s5_unknown": 103,
+      "s5_unknown_active_incidence_sum": 164,
+      "s5_unknown_shared_with_other_live_classes": 61,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 577273591,
+      "coverage": [
+        34,
+        42,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683767808:0",
+      "legal_max": 107,
+      "legal_min": 84,
+      "rank": 8,
+      "s5_children": 109,
+      "s5_loss": 6,
+      "s5_unknown": 103,
+      "s5_unknown_active_incidence_sum": 164,
+      "s5_unknown_shared_with_other_live_classes": 61,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 590483133,
+      "coverage": [
+        100,
+        102,
+        106,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297041090730262528:0",
+      "legal_max": 110,
+      "legal_min": 93,
+      "rank": 9,
+      "s5_children": 111,
+      "s5_loss": 7,
+      "s5_unknown": 104,
+      "s5_unknown_active_incidence_sum": 165,
+      "s5_unknown_shared_with_other_live_classes": 61,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 591188321,
+      "coverage": [
+        89,
+        97,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 1,
+      "frozen_history_nodes_sum": 15000000,
+      "frozen_history_observations": 1,
+      "key": "1152921504616284160:536870912",
+      "legal_max": 111,
+      "legal_min": 82,
+      "rank": 10,
+      "s5_children": 112,
+      "s5_loss": 8,
+      "s5_unknown": 104,
+      "s5_unknown_active_incidence_sum": 165,
+      "s5_unknown_shared_with_other_live_classes": 61,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    }
+  ],
+  "top_unknown": [
+    {
+      "completion_15m_truncated_nodes_proxy": 479485981,
+      "coverage": [
+        100,
+        108,
+        110,
+        120
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683752448:0",
+      "legal_max": 105,
+      "legal_min": 93,
+      "rank": 1,
+      "s5_children": 106,
+      "s5_loss": 20,
+      "s5_unknown": 86,
+      "s5_unknown_active_incidence_sum": 141,
+      "s5_unknown_shared_with_other_live_classes": 55,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 544095182,
+      "coverage": [
+        47,
+        51,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036830122704896:0",
+      "legal_max": 106,
+      "legal_min": 84,
+      "rank": 2,
+      "s5_children": 107,
+      "s5_loss": 8,
+      "s5_unknown": 99,
+      "s5_unknown_active_incidence_sum": 159,
+      "s5_unknown_shared_with_other_live_classes": 60,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 547000988,
+      "coverage": [
+        26,
+        28,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297107061427929088:0",
+      "legal_max": 106,
+      "legal_min": 82,
+      "rank": 3,
+      "s5_children": 108,
+      "s5_loss": 9,
+      "s5_unknown": 99,
+      "s5_unknown_active_incidence_sum": 157,
+      "s5_unknown_shared_with_other_live_classes": 58,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 554637913,
+      "coverage": [
+        80,
+        84,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "10376293541461626880:65536",
+      "legal_max": 106,
+      "legal_min": 81,
+      "rank": 4,
+      "s5_children": 108,
+      "s5_loss": 8,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 156,
+      "s5_unknown_shared_with_other_live_classes": 56,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 565678820,
+      "coverage": [
+        35,
+        41,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683751424:134217728",
+      "legal_max": 111,
+      "legal_min": 86,
+      "rank": 5,
+      "s5_children": 112,
+      "s5_loss": 12,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 157,
+      "s5_unknown_shared_with_other_live_classes": 57,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 560174429,
+      "coverage": [
+        46,
+        52,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 1,
+      "frozen_history_nodes_sum": 15000000,
+      "frozen_history_observations": 1,
+      "key": "1297036692750860288:0",
+      "legal_max": 107,
+      "legal_min": 84,
+      "rank": 6,
+      "s5_children": 108,
+      "s5_loss": 8,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 158,
+      "s5_unknown_shared_with_other_live_classes": 58,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 567726225,
+      "coverage": [
+        92,
+        94,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1301540292311121920:0",
+      "legal_max": 108,
+      "legal_min": 86,
+      "rank": 7,
+      "s5_children": 109,
+      "s5_loss": 9,
+      "s5_unknown": 100,
+      "s5_unknown_active_incidence_sum": 158,
+      "s5_unknown_shared_with_other_live_classes": 58,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 577144204,
+      "coverage": [
+        33,
+        43,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1152921504607895552:536879104",
+      "legal_max": 108,
+      "legal_min": 85,
+      "rank": 8,
+      "s5_children": 109,
+      "s5_loss": 8,
+      "s5_unknown": 101,
+      "s5_unknown_active_incidence_sum": 161,
+      "s5_unknown_shared_with_other_live_classes": 60,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 569252266,
+      "coverage": [
+        88,
+        98,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1152921504612089856:536870912",
+      "legal_max": 113,
+      "legal_min": 91,
+      "rank": 9,
+      "s5_children": 114,
+      "s5_loss": 13,
+      "s5_unknown": 101,
+      "s5_unknown_active_incidence_sum": 158,
+      "s5_unknown_shared_with_other_live_classes": 57,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    },
+    {
+      "completion_15m_truncated_nodes_proxy": 568359432,
+      "coverage": [
+        47,
+        51,
+        100,
+        108
+      ],
+      "frozen_history_15m_unknown_targets": 0,
+      "frozen_history_nodes_sum": 0,
+      "frozen_history_observations": 0,
+      "key": "1297036692683751424:131072",
+      "legal_max": 107,
+      "legal_min": 84,
+      "rank": 10,
+      "s5_children": 108,
+      "s5_loss": 6,
+      "s5_unknown": 102,
+      "s5_unknown_active_incidence_sum": 163,
+      "s5_unknown_shared_with_other_live_classes": 61,
+      "s5_win": 0,
+      "status": "UNKNOWN"
+    }
+  ],
+  "total_legal_third_moves": 119,
+  "unknown_s5_incidence": 6348
+}

@@ -4767,3 +4767,12 @@ Independent Board geometryとraw-history checksを経たexact-only merge後のca
 最新対象境界はLOSS22 / WIN0 / UNKNOWN87で、対象S4はなおUNKNOWN。全3,384 classはLOSS31 / WIN272 / UNKNOWN3,081、第三手被覆117/119、残り`{100,108}`、integer minimum1・rational LP dual1。別の数学的成果K0373により100と108は反射で同じ勝敗・同一のS4 class群に属するが、残る第三手のroot勝敗は決まらない。
 
 最新raw-historyは11,960 CSV、exact/cache intersection22、prior exact15 keys、同以上budget UNKNOWN1、dispatch-ready86、conflict0。保存layerはS6 boundary5,249、raw/cache exact S6 13/14、S7 intersection0、S6/S7由来S5判定0。次のready childは`(1188950301626859520,536870913)`（legal94）。この有限範囲のsolver exact結果はraw追跡・geometry検査済みだがterminal-only independent proofではない。保存cache-only evidenceも含むので`{60,27}`の証明DAG完成とは扱わない。
+
+
+## 2026-10-11 JST: 次のdual-tight classのdirect LOSS追加10件
+
+最新 `main=3db4b36cd647bf895c96f4484e0884d20b29e5d3` に残る第三手 `{100,108}` を覆う最小未解決S5境界のS4 `(1297036692683752448,0)` に対し、前回終了時の `LOSS10 / WIN0 / UNKNOWN96` から未確定S5を10局面探索した。cold replay各局面の2M予備探索は全件UNKNOWN、15Mまでの再探索は**すべて直接exact LOSS**（確定に52,325,136 nodes）。途中の3件一括呼び出しが実行時間制限に達したが、保存済みの完全判定1行のみを受理し、未完了2行は個別再実行してLOSSを確認した。全完了rowの総計は72,325,136 nodesであり、中断後半の未保存仕事量は含まない。
+
+solverから独立した整数幾何で10局面すべてのcanonical・合法数・S4親子関係、raw verdictの整合を検査した。対象S4の完全106子境界は **LOSS20 / WIN0 / UNKNOWN86**。最新exact S5 cacheは **5,765件（WIN159 / LOSS5,606、衝突0）**。全3,384 S4は **LOSS31 / WIN274 / UNKNOWN3,079**、第三手被覆117/119、残り `{100,108}`、最小追加LOSS classと有理双対は1のまま。
+
+再現コード、全生CSVとSHA-256 manifest、完全cache、rank表は [11×11 reply27 10LOSS追加実験](../../experiments/n11-reply27-ten-loss-20261011/README.md) に保存。今回の10件は直接solver-trusted exactであり、terminal-only独立DAGは未生成。過去のK0375共有証明DAGにある別の対象と混同しない。
