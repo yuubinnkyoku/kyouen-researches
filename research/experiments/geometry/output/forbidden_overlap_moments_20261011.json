@@ -1,0 +1,259 @@
+{
+  "base_main": "2e11044d444d122de637dfa79e60351620869837",
+  "method": "integer-determinant exact enumeration + incidence inversion",
+  "square_q4": [
+    {
+      "n": 3,
+      "forbidden": 14,
+      "collinear": 0,
+      "cocircular": 14,
+      "moments": [
+        91,
+        150,
+        64,
+        0
+      ],
+      "intersection_histogram": [
+        5,
+        22,
+        64,
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "forbidden": 194,
+      "collinear": 10,
+      "cocircular": 184,
+      "moments": [
+        18721,
+        19312,
+        6708,
+        800
+      ],
+      "intersection_histogram": [
+        5317,
+        8296,
+        4308,
+        800
+      ]
+    },
+    {
+      "n": 5,
+      "forbidden": 826,
+      "collinear": 64,
+      "cocircular": 762,
+      "moments": [
+        340725,
+        220122,
+        46720,
+        3720
+      ],
+      "intersection_histogram": [
+        163603,
+        137842,
+        35560,
+        3720
+      ]
+    },
+    {
+      "n": 6,
+      "forbidden": 2491,
+      "collinear": 234,
+      "cocircular": 2257,
+      "moments": [
+        3101295,
+        1395832,
+        207822,
+        11680
+      ],
+      "intersection_histogram": [
+        1901605,
+        1015228,
+        172782,
+        11680
+      ]
+    },
+    {
+      "n": 7,
+      "forbidden": 6364,
+      "collinear": 660,
+      "cocircular": 5704,
+      "moments": [
+        20247066,
+        6683776,
+        747776,
+        31360
+      ],
+      "intersection_histogram": [
+        14279706,
+        5282304,
+        653696,
+        31360
+      ]
+    },
+    {
+      "n": 8,
+      "forbidden": 14564,
+      "collinear": 1524,
+      "cocircular": 13040,
+      "moments": [
+        106047766,
+        26811724,
+        2385840,
+        85360
+      ],
+      "intersection_histogram": [
+        81536522,
+        22296124,
+        2129760,
+        85360
+      ]
+    },
+    {
+      "n": 9,
+      "forbidden": 29152,
+      "collinear": 3156,
+      "cocircular": 25996,
+      "moments": [
+        424904976,
+        85057580,
+        6146912,
+        184640
+      ],
+      "intersection_histogram": [
+        345809668,
+        73317676,
+        5592992,
+        184640
+      ]
+    },
+    {
+      "n": 10,
+      "forbidden": 54441,
+      "collinear": 5928,
+      "cocircular": 48513,
+      "moments": [
+        1481884020,
+        239991216,
+        14364406,
+        365440
+      ],
+      "intersection_histogram": [
+        1255891770,
+        212358724,
+        13268086,
+        365440
+      ]
+    },
+    {
+      "n": 11,
+      "forbidden": 95670,
+      "collinear": 10428,
+      "cocircular": 85242,
+      "moments": [
+        4576326615,
+        612091954,
+        31005780,
+        699880
+      ],
+      "intersection_histogram": [
+        3994540561,
+        552180034,
+        28906140,
+        699880
+      ]
+    }
+  ],
+  "independent_direct_pair_tests": [
+    {
+      "n": 3,
+      "q": 4,
+      "forbidden": 14,
+      "moments": [
+        91,
+        150,
+        64,
+        0
+      ],
+      "histogram": [
+        5,
+        22,
+        64,
+        0
+      ]
+    },
+    {
+      "n": 4,
+      "q": 4,
+      "forbidden": 194,
+      "moments": [
+        18721,
+        19312,
+        6708,
+        800
+      ],
+      "histogram": [
+        5317,
+        8296,
+        4308,
+        800
+      ]
+    },
+    {
+      "n": 5,
+      "q": 4,
+      "forbidden": 826,
+      "moments": [
+        340725,
+        220122,
+        46720,
+        3720
+      ],
+      "histogram": [
+        163603,
+        137842,
+        35560,
+        3720
+      ]
+    },
+    {
+      "n": 4,
+      "q": 5,
+      "forbidden": 80,
+      "moments": [
+        3160,
+        6600,
+        6064,
+        2760,
+        480
+      ],
+      "histogram": [
+        344,
+        832,
+        664,
+        840,
+        480
+      ]
+    },
+    {
+      "n": 5,
+      "q": 5,
+      "forbidden": 372,
+      "moments": [
+        69006,
+        74618,
+        37974,
+        13320,
+        2280
+      ],
+      "histogram": [
+        21322,
+        29510,
+        11694,
+        4200,
+        2280
+      ]
+    }
+  ]
+}

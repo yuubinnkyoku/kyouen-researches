@@ -378,3 +378,34 @@
 | [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) | 11×11の独立検証済みS5証明6根を段階統合、群間重複なし | verification | verified | square-outcomes, certificates, verification, provenance |
 | [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) | 11×11 S5階層分割の費用比較と証拠対応ルーティング | computation | computed | square-outcomes, search-methods, verification, provenance |
 | [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) | 11×11既知S5 LOSSの分割証人探索は小予算で節点削減を示さない | computation | observed | square-outcomes, search-methods, provenance |
+| [K0383](../items/K0383-nonprimitive-double-row-min-width-2-32.md) | 非原始二重点行の最小幅 F(k)：2〜32本 | proposition | proved | geometry, rectangles, variants |
+| [K0384](../items/K0384-capacity-all-slack-grundy-three.md) | 全容量余裕の容量占有ゲームにおけるGrundy値の一様上界 | proposition | proved | variants, grundy |
+| [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md) | 400幅以内に25二重点行を持つ円の行差最大公約数は1 | proposition | proved | geometry, rectangles |
+| [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) | 全容量余裕の容量占有ゲームにおける全勝ち手分類 | proposition | proved | variants, grundy, strategy-length |
+| [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md) | 異容量の列制約では偶数余裕でもGrundy値3が生じる | proposition | proved | variants, grundy |
+| [K0388](../items/K0388-central-three-row-two-squares-density.md) | 中央弦型2+1+1共円完成数と弦長集合の密度 | proposition | proved | geometry, statistics |
+| [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) | 長方形盤の共円・共線点組数の鏡映公式（法2・法4） | proposition | proved | geometry, rectangles, statistics |
+| [K0390](../items/K0390-unequal-capacity-grundy-five.md) | 異容量上位列和制約ゲームでGrundy値5が実現する | proposition | proved | variants, grundy |
+| [K0391](../items/K0391-central-three-row-finite-width-counts.md) | 3行盤の中央弦型2+1+1共円四点組の有限幅厳密計数 | proposition | proved | geometry, statistics |
+| [K0392](../items/K0392-cocircular-211-rectangle-parity.md) | 長方形盤の2+1+1型共円四点組数の法4公式 | proposition | proved | geometry, rectangles, statistics |
+| [K0393](../items/K0393-row-two-two-circle-count.md) | 標準整数格子の二行二点型共円四点組数の厳密公式 | proposition | proved | geometry, rectangles, statistics |
+| [K0394](../items/K0394-unequal-six-column-grundy-exclusion.md) | 最大容量7以下の異容量6列ゲームではGrundy値6が生じない | proposition | computed | variants, grundy |
+| [K0395](../items/K0395-quarter-turn-forbidden-quadruples-mod4.md) | 90度回転対称点集合の共円・共線四点組数の法4公式 | proposition | proved | geometry, statistics |
+| [K0396](../items/K0396-d-dimensional-box-collinear-q-formulas.md) | 任意次元整数直方格子の共線q点組数と直線長分布の厳密公式 | proposition | proved | geometry, statistics |
+| [K0397](../items/K0397-collinear-q-overlap-distribution.md) | 共線q点組の交差分布と局所次数は直線長で決まる | proposition | proved | geometry, statistics |
+| [K0398](../items/K0398-forbidden-four-overlap-spectrum.md) | 共円・共線禁止四点組の全交差分布の厳密公式 | proposition | proved | geometry, statistics |
+| [K0399](../items/K0399-quarter-turn-q-point-congruences.md) | 90度回転対称点集合の任意q点共円・共線数の法4公式 | proposition | proved | geometry, statistics |
+| [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md) | 共円・共線q点禁則の全交差分布を点次数から復元する公式 | proposition | proved | geometry, statistics |
+| [K0401](../items/K0401-n11-q12-terminal-extrema.md) | 11×11・q=12の極大安全配置の石数範囲103〜114 | proposition | proved | maximum-safe, maximal-safe, variants, strategy-length |
+| [K0402](../items/K0402-nonprimitive-thirtythree-double-row-width-bounds.md) | 33本の非原始二重点行の初出幅 F(33) は631〜743 | proposition | proved | geometry, rectangles, variants |
+| [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) | 異容量上位h列ゲームの極大配置・終局石数と欠番数 | proposition | proved | variants, maximal-safe, statistics, strategy-length |
+| [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) | 異容量二高列上位2列ゲームの終局石数と完全Grundy公式 | proposition | proved | variants, grundy, maximal-safe, strategy-length |
+| [K0405](../items/K0405-unequal-capacity-extremal-terminal-spectrum.md) | 容量上限Mの全異容量ゲームで均一容量が終局スペクトル3指標を同時最大化 | proposition | proved | variants, maximal-safe, statistics, strategy-length |
+| [K0406](../items/K0406-one-tall-all-h-grundy.md) | 一高列と単位容量短列からなる全上位hゲームのGrundy値 | proposition | proved | variants, grundy, maximal-safe, strategy-length |
+| [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) | 異なる高さの行対の2+2共円数に対する鋭い上界と同時達成 | proposition | proved | geometry, statistics, rectangles |
+| [K0408](../items/K0408-three-row-211-classification-and-counts.md) | 3水平行盤の2+1+1共円四点組の分類と厳密計数 | proposition | proved | geometry, statistics, rectangles |
+| [K0409](../items/K0409-outer-211-chord-length-density-zero.md) | 外側二重点型の共円完成弦長は無限に存在するが自然密度0 | proposition | proved | geometry, statistics, rectangles |
+| [K0410](../items/K0410-scaled-circle-gcd-family.md) | 整数円の拡大族における二重点行数・gcd・短区間構成 | proposition | proved | geometry, rectangles, verification |
+| [K0411](../items/K0411-central-chord-enclosed-length-bound.md) | 三水平行中央弦型の共円完成点が弦内にある場合の鋭い長さ上界 | proposition | proved | geometry, rectangles |
+| [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md) | 標準整数格子64〜336行で円が二点ずつ通る行数の厳密最大値 | proposition | proved | geometry, rectangles, variants |
+| [K0413](../items/K0413-explicit-double-row-constructions-49-384.md) | 整数円の二重点行49〜384本に対する明示的構成下界 | proposition | proved | geometry, rectangles |

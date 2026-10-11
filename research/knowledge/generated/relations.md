@@ -32,6 +32,10 @@
 - ← depends_on [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md): q点版共円ゲームの規則
 - ← depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 共円・共線4点禁止、完全指摘、通常プレイ
 - ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 共円・共線の禁止と通常プレイの対称不変性
+- ← depends_on [K0393](../items/K0393-row-two-two-circle-count.md): 禁止四点組の円と直線の定義を使用
+- ← depends_on [K0398](../items/K0398-forbidden-four-overlap-spectrum.md): 標準禁止四点組の定義
+- ← depends_on [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md): 共円・共線禁則の定義を一般q点へ拡張する
+- ← depends_on [K0401](../items/K0401-n11-q12-terminal-extrema.md): 共円・共線q点禁止版の安全配置を使用
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -470,6 +474,7 @@
 ## [K0057](../items/K0057-forbidden-quadruple-counts.md) 禁止四点組の有限総数と共線・共円の排他的分解
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
+- ← generalizes [K0398](../items/K0398-forbidden-four-overlap-spectrum.md): 禁止四点組の総数を交差分布へ拡張
 
 ## [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) F-K旧走査は半整数中心に限定、n≤112の全中心最大値は後続計算で確定
 
@@ -537,6 +542,7 @@
 - ← depends_on [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md): q点版の独立行公式
 - ← depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): 標準整数格子の二重点行と独立行公式
 - ← depends_on [K0370](../items/K0370-quantitative-uniform-circle-density.md): 固定幅q点版の独立行帰着
+- ← depends_on [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md): 二重点行の整数係数・合同式の必要条件
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -1581,6 +1587,7 @@
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): E7=47の鋭い同和弦energyから短い無界末尾を証明
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石行の同和弦energyの鋭い上界29
 - ← depends_on [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 外部行対の同和弦予算の鋭い上界E_r
+- ← generalizes [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md): 二行鋭い弦エネルギーを多行同時最適へ拡張
 
 ## [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) 交換可能残余classはrank以下へ縮めて通常Grundyとmisère補助mexを保存し、誘導削除上限は全rankで最良
 
@@ -1636,6 +1643,8 @@
 - ← depends_on [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md): 極大配置の形と途中局面から到達可能な終局閾値の厳密な区間を使う
 - ← depends_on [K0362](../items/K0362-capacity-height-random-terminal-distribution.md): 到達可能な終局閾値の連続区間と終局サイズ差w-hを用いる
 - ← depends_on [K0363](../items/K0363-capacity-finite-height-distribution-error.md): 最大到達終局石数による全対局長の一様上限を使う
+- ← depends_on [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md): 等容量の抽象ゲームを列別上限へ変更する際の適用境界を明確化する
+- ← generalizes [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md): 等容量上位h列の終局分類を異容量へ拡張
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -1677,6 +1686,8 @@
 - → depends_on [K0356](../items/K0356-capacity-boundary-grundy-bound.md): 容量境界の子のGrundy値を残り手数の偶奇で完全決定する
 - → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 非自明容量ゲームでは hm>r を用いる
 - ← depends_on [K0359](../items/K0359-capacity-slack-two-exact-grundy.md): 余裕1に移る全子のGrundy値を正確に分類する
+- ← generalizes [K0384](../items/K0384-capacity-all-slack-grundy-three.md): 余裕1のGrundy分類を任意の余裕へ拡張
+- ← generalizes [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md): 余裕1の勝ち手分類を一般化
 
 ## [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) 任意次元容量ゲームの余裕2層は全局面二値Grundyで閉公式を持つ
 
@@ -1719,6 +1730,7 @@
 ## [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) 標準整数格子44〜63行で円が二点ずつ通る行数の厳密最大値
 
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 標準整数格子の二重点行と独立行公式
+- ← depends_on [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md): T(63)=16を帰納基底とする
 
 ## [K0370](../items/K0370-quantitative-uniform-circle-density.md) 連続整数行の円の二重点行数に対する定量的一様上界
 
@@ -1816,3 +1828,73 @@
 - → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 既知S5 LOSS六根と共有TT比較の元資料
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 六根terminal-only独立証明DAGと監査receipt
 - → supports [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 小予算のS5/S6分割比較でも探索節点削減が確認されない
+
+## [K0384](../items/K0384-capacity-all-slack-grundy-three.md) 全容量余裕の容量占有ゲームにおけるGrundy値の一様上界
+
+- → generalizes [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 余裕1のGrundy分類を任意の余裕へ拡張
+- ← depends_on [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md): 容量余裕に応じたGrundy署名を使う
+
+## [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md) 400幅以内に25二重点行を持つ円の行差最大公約数は1
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 二重点行の整数係数・合同式の必要条件
+
+## [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) 全容量余裕の容量占有ゲームにおける全勝ち手分類
+
+- → depends_on [K0384](../items/K0384-capacity-all-slack-grundy-three.md): 容量余裕に応じたGrundy署名を使う
+- → generalizes [K0358](../items/K0358-capacity-slack-one-grundy-child-count-bound.md): 余裕1の勝ち手分類を一般化
+
+## [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md) 異容量の列制約では偶数余裕でもGrundy値3が生じる
+
+- → depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 等容量の抽象ゲームを列別上限へ変更する際の適用境界を明確化する
+
+## [K0393](../items/K0393-row-two-two-circle-count.md) 標準整数格子の二行二点型共円四点組数の厳密公式
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 禁止四点組の円と直線の定義を使用
+
+## [K0398](../items/K0398-forbidden-four-overlap-spectrum.md) 共円・共線禁止四点組の全交差分布の厳密公式
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準禁止四点組の定義
+- → generalizes [K0057](../items/K0057-forbidden-quadruple-counts.md): 禁止四点組の総数を交差分布へ拡張
+
+## [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md) 共円・共線q点禁則の全交差分布を点次数から復元する公式
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円・共線禁則の定義を一般q点へ拡張する
+
+## [K0401](../items/K0401-n11-q12-terminal-extrema.md) 11×11・q=12の極大安全配置の石数範囲103〜114
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円・共線q点禁止版の安全配置を使用
+
+## [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) 異容量上位h列ゲームの極大配置・終局石数と欠番数
+
+- → generalizes [K0352](../items/K0352-general-dimensional-parallel-columns.md): 等容量上位h列の終局分類を異容量へ拡張
+- ← depends_on [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md): 上位2列終局分類を利用
+- ← depends_on [K0405](../items/K0405-unequal-capacity-extremal-terminal-spectrum.md): 一般容量の終局閾値・差分分類を使う
+- ← depends_on [K0406](../items/K0406-one-tall-all-h-grundy.md): 上位h終局分類を共有
+
+## [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) 異容量二高列上位2列ゲームの終局石数と完全Grundy公式
+
+- → depends_on [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md): 上位2列終局分類を利用
+
+## [K0405](../items/K0405-unequal-capacity-extremal-terminal-spectrum.md) 容量上限Mの全異容量ゲームで均一容量が終局スペクトル3指標を同時最大化
+
+- → depends_on [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md): 一般容量の終局閾値・差分分類を使う
+
+## [K0406](../items/K0406-one-tall-all-h-grundy.md) 一高列と単位容量短列からなる全上位hゲームのGrundy値
+
+- → depends_on [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md): 上位h終局分類を共有
+
+## [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) 異なる高さの行対の2+2共円数に対する鋭い上界と同時達成
+
+- → generalizes [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 二行鋭い弦エネルギーを多行同時最適へ拡張
+
+## [K0408](../items/K0408-three-row-211-classification-and-counts.md) 3水平行盤の2+1+1共円四点組の分類と厳密計数
+
+- ← depends_on [K0409](../items/K0409-outer-211-chord-length-density-zero.md): 外側二次形式とPell族を利用
+
+## [K0409](../items/K0409-outer-211-chord-length-density-zero.md) 外側二重点型の共円完成弦長は無限に存在するが自然密度0
+
+- → depends_on [K0408](../items/K0408-three-row-211-classification-and-counts.md): 外側二次形式とPell族を利用
+
+## [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md) 標準整数格子64〜336行で円が二点ずつ通る行数の厳密最大値
+
+- → depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): T(63)=16を帰納基底とする

@@ -1,0 +1,78 @@
+r=2 k= 1 states=    5 terminals=[2] root=0 hist={0: 3, 1: 2}
+r=2 k= 2 states=    9 terminals=[2, 3] root=1 hist={0: 4, 1: 4, 2: 1}
+r=2 k= 3 states=   17 terminals=[2, 4] root=0 hist={0: 9, 1: 8}
+r=2 k= 4 states=   33 terminals=[2, 5] root=1 hist={0: 16, 1: 16, 2: 1}
+r=2 k= 5 states=   65 terminals=[2, 6] root=0 hist={0: 33, 1: 32}
+r=2 k= 6 states=  129 terminals=[2, 7] root=1 hist={0: 64, 1: 64, 2: 1}
+r=2 k= 7 states=  257 terminals=[2, 8] root=0 hist={0: 129, 1: 128}
+r=2 k= 8 states=  513 terminals=[2, 9] root=1 hist={0: 256, 1: 256, 2: 1}
+r=2 k= 9 states= 1025 terminals=[2, 10] root=0 hist={0: 513, 1: 512}
+r=2 k=10 states= 2049 terminals=[2, 11] root=1 hist={0: 1024, 1: 1024, 2: 1}
+r=2 k=11 states= 4097 terminals=[2, 12] root=0 hist={0: 2049, 1: 2048}
+r=3 k= 1 states=    7 terminals=[3] root=1 hist={0: 4, 1: 3}
+r=3 k= 2 states=   13 terminals=[3, 4] root=0 hist={0: 6, 1: 6, 2: 1}
+r=3 k= 3 states=   25 terminals=[3, 5] root=1 hist={0: 13, 1: 12}
+r=3 k= 4 states=   49 terminals=[3, 6] root=0 hist={0: 24, 1: 24, 2: 1}
+r=3 k= 5 states=   97 terminals=[3, 7] root=1 hist={0: 49, 1: 48}
+r=3 k= 6 states=  193 terminals=[3, 8] root=0 hist={0: 96, 1: 96, 2: 1}
+r=3 k= 7 states=  385 terminals=[3, 9] root=1 hist={0: 193, 1: 192}
+r=3 k= 8 states=  769 terminals=[3, 10] root=0 hist={0: 384, 1: 384, 2: 1}
+r=3 k= 9 states= 1537 terminals=[3, 11] root=1 hist={0: 769, 1: 768}
+r=3 k=10 states= 3073 terminals=[3, 12] root=0 hist={0: 1536, 1: 1536, 2: 1}
+r=3 k=11 states= 6145 terminals=[3, 13] root=1 hist={0: 3073, 1: 3072}
+r=4 k= 1 states=    9 terminals=[4] root=0 hist={0: 5, 1: 4}
+r=4 k= 2 states=   17 terminals=[4, 5] root=1 hist={0: 8, 1: 8, 2: 1}
+r=4 k= 3 states=   33 terminals=[4, 6] root=0 hist={0: 17, 1: 16}
+r=4 k= 4 states=   65 terminals=[4, 7] root=1 hist={0: 32, 1: 32, 2: 1}
+r=4 k= 5 states=  129 terminals=[4, 8] root=0 hist={0: 65, 1: 64}
+r=4 k= 6 states=  257 terminals=[4, 9] root=1 hist={0: 128, 1: 128, 2: 1}
+r=4 k= 7 states=  513 terminals=[4, 10] root=0 hist={0: 257, 1: 256}
+r=4 k= 8 states= 1025 terminals=[4, 11] root=1 hist={0: 512, 1: 512, 2: 1}
+r=4 k= 9 states= 2049 terminals=[4, 12] root=0 hist={0: 1025, 1: 1024}
+r=4 k=10 states= 4097 terminals=[4, 13] root=1 hist={0: 2048, 1: 2048, 2: 1}
+r=4 k=11 states= 8193 terminals=[4, 14] root=0 hist={0: 4097, 1: 4096}
+r=5 k= 1 states=   11 terminals=[5] root=1 hist={0: 6, 1: 5}
+r=5 k= 2 states=   21 terminals=[5, 6] root=0 hist={0: 10, 1: 10, 2: 1}
+r=5 k= 3 states=   41 terminals=[5, 7] root=1 hist={0: 21, 1: 20}
+r=5 k= 4 states=   81 terminals=[5, 8] root=0 hist={0: 40, 1: 40, 2: 1}
+r=5 k= 5 states=  161 terminals=[5, 9] root=1 hist={0: 81, 1: 80}
+r=5 k= 6 states=  321 terminals=[5, 10] root=0 hist={0: 160, 1: 160, 2: 1}
+r=5 k= 7 states=  641 terminals=[5, 11] root=1 hist={0: 321, 1: 320}
+r=5 k= 8 states= 1281 terminals=[5, 12] root=0 hist={0: 640, 1: 640, 2: 1}
+r=5 k= 9 states= 2561 terminals=[5, 13] root=1 hist={0: 1281, 1: 1280}
+r=5 k=10 states= 5121 terminals=[5, 14] root=0 hist={0: 2560, 1: 2560, 2: 1}
+r=5 k=11 states=10241 terminals=[5, 15] root=1 hist={0: 5121, 1: 5120}
+r=6 k= 1 states=   13 terminals=[6] root=0 hist={0: 7, 1: 6}
+r=6 k= 2 states=   25 terminals=[6, 7] root=1 hist={0: 12, 1: 12, 2: 1}
+r=6 k= 3 states=   49 terminals=[6, 8] root=0 hist={0: 25, 1: 24}
+r=6 k= 4 states=   97 terminals=[6, 9] root=1 hist={0: 48, 1: 48, 2: 1}
+r=6 k= 5 states=  193 terminals=[6, 10] root=0 hist={0: 97, 1: 96}
+r=6 k= 6 states=  385 terminals=[6, 11] root=1 hist={0: 192, 1: 192, 2: 1}
+r=6 k= 7 states=  769 terminals=[6, 12] root=0 hist={0: 385, 1: 384}
+r=6 k= 8 states= 1537 terminals=[6, 13] root=1 hist={0: 768, 1: 768, 2: 1}
+r=6 k= 9 states= 3073 terminals=[6, 14] root=0 hist={0: 1537, 1: 1536}
+r=6 k=10 states= 6145 terminals=[6, 15] root=1 hist={0: 3072, 1: 3072, 2: 1}
+r=6 k=11 states=12289 terminals=[6, 16] root=0 hist={0: 6145, 1: 6144}
+r=7 k= 1 states=   15 terminals=[7] root=1 hist={0: 8, 1: 7}
+r=7 k= 2 states=   29 terminals=[7, 8] root=0 hist={0: 14, 1: 14, 2: 1}
+r=7 k= 3 states=   57 terminals=[7, 9] root=1 hist={0: 29, 1: 28}
+r=7 k= 4 states=  113 terminals=[7, 10] root=0 hist={0: 56, 1: 56, 2: 1}
+r=7 k= 5 states=  225 terminals=[7, 11] root=1 hist={0: 113, 1: 112}
+r=7 k= 6 states=  449 terminals=[7, 12] root=0 hist={0: 224, 1: 224, 2: 1}
+r=7 k= 7 states=  897 terminals=[7, 13] root=1 hist={0: 449, 1: 448}
+r=7 k= 8 states= 1793 terminals=[7, 14] root=0 hist={0: 896, 1: 896, 2: 1}
+r=7 k= 9 states= 3585 terminals=[7, 15] root=1 hist={0: 1793, 1: 1792}
+r=7 k=10 states= 7169 terminals=[7, 16] root=0 hist={0: 3584, 1: 3584, 2: 1}
+r=7 k=11 states=14337 terminals=[7, 17] root=1 hist={0: 7169, 1: 7168}
+r=8 k= 1 states=   17 terminals=[8] root=0 hist={0: 9, 1: 8}
+r=8 k= 2 states=   33 terminals=[8, 9] root=1 hist={0: 16, 1: 16, 2: 1}
+r=8 k= 3 states=   65 terminals=[8, 10] root=0 hist={0: 33, 1: 32}
+r=8 k= 4 states=  129 terminals=[8, 11] root=1 hist={0: 64, 1: 64, 2: 1}
+r=8 k= 5 states=  257 terminals=[8, 12] root=0 hist={0: 129, 1: 128}
+r=8 k= 6 states=  513 terminals=[8, 13] root=1 hist={0: 256, 1: 256, 2: 1}
+r=8 k= 7 states= 1025 terminals=[8, 14] root=0 hist={0: 513, 1: 512}
+r=8 k= 8 states= 2049 terminals=[8, 15] root=1 hist={0: 1024, 1: 1024, 2: 1}
+r=8 k= 9 states= 4097 terminals=[8, 16] root=0 hist={0: 2049, 1: 2048}
+r=8 k=10 states= 8193 terminals=[8, 17] root=1 hist={0: 4096, 1: 4096, 2: 1}
+r=8 k=11 states=16385 terminals=[8, 18] root=0 hist={0: 8193, 1: 8192}
+PASS: 77 parameter pairs, 143367 safe states; all terminal sizes and all Grundy values agree

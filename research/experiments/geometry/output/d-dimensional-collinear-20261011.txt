@@ -1,0 +1,19 @@
+independent box/q comparisons 153
+(3, 3, 3) q= 2 H= 351
+(3, 3, 3) q= 3 H= 49
+(3, 3, 3) q= 4 H= 0
+(2, 3, 4) q= 2 H= 276
+(2, 3, 4) q= 3 H= 40
+(2, 3, 4) q= 4 H= 6
+(2, 2, 2, 2) q= 2 H= 120
+(2, 2, 2, 2) q= 3 H= 0
+(2, 2, 2, 2) q= 4 H= 0
+(4, 4) q= 2 H= 120
+(4, 4) q= 3 H= 44
+(4, 4) q= 4 H= 10
+Third implementation: direct enumeration of q-tuples and all 2x2 minors of differences
+(3,3,3) q=3: 49, match
+(3,3,3) q=4: 0, match
+(2,3,4) q=3: 40, match
+(2,3,4) q=4: 6, match
+(2,2,2,2) q=3: 0, match
