@@ -1,38 +1,38 @@
 # 移行集計
 
-K項目: 371 / alias: 269 / artifactファイル: 1966
+K項目: 373 / alias: 269 / artifactファイル: 1974
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 16 |
+| computation | 17 |
 | definition | 5 |
 | method | 4 |
 | proposition | 303 |
 | question | 36 |
-| verification | 7 |
+| verification | 8 |
 
 ## status
 
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 96 |
+| computed | 97 |
 | conjectured | 1 |
 | observed | 15 |
 | open | 35 |
 | proved | 140 |
 | refuted | 63 |
 | scope-unclear | 1 |
-| verified | 7 |
+| verified | 8 |
 | withdrawn | 4 |
 
 ## topics
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 22 |
+| certificates | 24 |
 | first-moves | 33 |
 | formalization | 2 |
 | geometry | 140 |
@@ -40,17 +40,17 @@ K項目: 371 / alias: 269 / artifactファイル: 1966
 | maximal-safe | 68 |
 | maximum-safe | 48 |
 | migration | 1 |
-| provenance | 17 |
+| provenance | 18 |
 | reconfiguration | 34 |
 | rectangles | 38 |
 | residual-games | 59 |
 | rules | 3 |
 | search-methods | 32 |
-| square-outcomes | 28 |
+| square-outcomes | 30 |
 | statistics | 29 |
 | strategy-length | 19 |
 | variants | 78 |
-| verification | 22 |
+| verification | 24 |
 
 ## 未解決・要監査・範囲不明
 

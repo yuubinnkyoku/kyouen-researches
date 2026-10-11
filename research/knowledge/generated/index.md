@@ -373,3 +373,5 @@
 | [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) | 11×11二石局面60・27の第三手100と108は反射対称 | proposition | proved | square-outcomes, search-methods, verification |
 | [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) | 11×11 reply27の難S5局面を全90 S6子WINで確定 | computation | computed | square-outcomes, search-methods, certificates, verification |
 | [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) | 11×11の既知S5六局面で共有TTと終局閉包証明DAGを実測 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+| [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) | 11×11 `{60,27}` の現行117手被覆には既知LOSS class 31個が全て必要 | computation | computed | square-outcomes, certificates, verification |
+| [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) | 11×11の三S5共有証明DAGをcompact化し、既知S6証人の共有で縮約 | verification | verified | square-outcomes, certificates, verification, provenance |

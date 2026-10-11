@@ -1,0 +1,113 @@
+{
+  "schema": "n11-proof-compact-audit-v1",
+  "date": "2026-10-11",
+  "source_json": {
+    "path": "research/experiments/n11-proof-dag-engine-followup-20261011/output/current-s4-proof-bundle-reverse-v1/proof-dag-bundle.json.gz",
+    "bytes": 72771052,
+    "sha256": "48edffe570591e7196c2021353342a05ba058d70b141f05128bd17c207d4e922",
+    "board_size": 11,
+    "schema": "kyouen-proof-dag-multi-root-v1",
+    "roots": [
+      {"id": "0", "root": "1301540292311122944", "verdict": 2},
+      {"id": "1", "root": "1297036692750861312", "verdict": 2},
+      {"id": "2", "root": "10412322338480590849", "verdict": 2}
+    ],
+    "nodes": 2337747,
+    "edges": 3484437,
+    "terminal_nodes": 331495,
+    "trusted_leaves": 0
+  },
+  "class_cover": {
+    "frontier_classes_checked": 3384,
+    "known_loss_classes": 31,
+    "minimum_classes_for_frozen_117_of_119_cover": 31,
+    "covered_third_moves": 117,
+    "legal_third_moves": 119,
+    "uncovered_moves": [100, 108],
+    "uniquely_covered_moves": 112,
+    "raw_supported_loss_classes": 1,
+    "does_not_claim": "independent minimax proof for the other 30 class verdicts, minimum proof-DAG nodes, or solution of the {60,27} root"
+  },
+  "previous_independent_verifier_baseline": {
+    "certificate_format": "JSON gzip",
+    "nodes": 2337747,
+    "edges": 3484437,
+    "wall_seconds": 1805.75,
+    "peak_rss_bytes": 4398759936,
+    "peak_scratch_bytes": null
+  },
+  "disk_backed_json_run": {
+    "returncode": 0,
+    "wall_seconds": 1905.109,
+    "peak_rss_bytes": null,
+    "peak_rss_note": "The initial Windows sampler observed the venv launcher rather than its Python worker. Do not use its 10,178,560-byte field; the corrected process-tree sampler was used for both compact runs.",
+    "peak_scratch_bytes": 627754176,
+    "nodes": 2337747,
+    "edges": 3484437,
+    "terminal_nodes": 331495,
+    "trusted_leaves": 0,
+    "source_sha256": "48edffe570591e7196c2021353342a05ba058d70b141f05128bd17c207d4e922"
+  },
+  "base_compact_run": {
+    "format": "KYPRFDG v1",
+    "certificate_bytes": 22089195,
+    "certificate_sha256": "94f78602b754626d2415fd96d5486765ec34a1b569e1465a41f457fad193c8bb",
+    "uncompressed_payload_sha256": "48c9baf67fe3350fb3b5ea303ac15e59f77b729938168f516fa6578c29087896",
+    "round_trip_graph_equal_to_json": true,
+    "nodes": 2337747,
+    "edges": 3484437,
+    "terminal_nodes": 331495,
+    "trusted_leaves": 0,
+    "wall_seconds": 1853.203,
+    "peak_rss_bytes": 197369856,
+    "peak_scratch_bytes": 626414784,
+    "verifier_returncode": 0
+  },
+  "witness_switch": {
+    "root_id": "2",
+    "parent": "10412322338480590849",
+    "selected_move": 11,
+    "selected_child": "10412322338480592897",
+    "selected_child_closure_nodes": 666475,
+    "replacement_move": 46,
+    "replacement_child": "10412392707224768513",
+    "replacement_child_closure_nodes": 792830,
+    "replacement_child_was_already_selected_by_another_root": true,
+    "reachable_nodes_after_switch": 1718259,
+    "reachable_edges_after_switch": 2547576,
+    "removed_nodes": 619488,
+    "removed_edges": 936861,
+    "all_three_roots_retained": true,
+    "solver_or_cache_evidence_imported": false,
+    "global_minimum_claimed": false
+  },
+  "optimized_compact_run": {
+    "format": "KYPRFDG v1",
+    "certificate_bytes": 16080927,
+    "certificate_sha256": "478fc29e51ffd7e18158f74f0032b7e7756446e11c5d0819b000e19e79474fc2",
+    "uncompressed_payload_sha256": "3e1a64acf0f705a82a6a847f11eac6203b6774c5444a3f571c59c30de7d162fa",
+    "round_trip_graph_equal_to_pruned_source_index": true,
+    "nodes": 1718259,
+    "edges": 2547576,
+    "terminal_nodes": 247842,
+    "trusted_leaves": 0,
+    "wall_seconds": 1366.687,
+    "peak_rss_bytes": 193683456,
+    "peak_scratch_bytes": 454351644,
+    "verifier_returncode": 0
+  },
+  "relative_changes_percent": {
+    "base_compact_bytes_vs_json": -69.65,
+    "optimized_compact_bytes_vs_json": -77.9,
+    "optimized_bytes_vs_base_compact": -27.2,
+    "optimized_nodes_vs_base_graph": -26.5,
+    "optimized_edges_vs_base_graph": -26.89,
+    "base_compact_wall_vs_previous_verifier": 2.63,
+    "optimized_wall_vs_previous_verifier": -24.31,
+    "optimized_wall_vs_base_compact": -26.25,
+    "base_compact_rss_vs_previous_verifier": -95.51,
+    "optimized_rss_vs_previous_verifier": -95.6,
+    "optimized_scratch_vs_base_compact": -27.47
+  },
+  "scope_limit": "These proofs verify only three resolved S5 LOSS roots below one S4. They do not prove the containing S4, all 106 S5 children, the current S4 boundary, or the two-stone {60,27} root. K0372 remains unchanged."
+}

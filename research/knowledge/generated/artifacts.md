@@ -4813,6 +4813,31 @@
 ## [research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py](../../../research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): S0..S121三値境界、小盤面全安全状態、誤極性mutant、証明書改変、loader隔離
+## [research/experiments/n11-proof-compact-20261011/README.md](../../../research/experiments/n11-proof-compact-20261011/README.md)
+
+- [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (source): 有限結果、意味の範囲、再現手順
+- [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (source): 被覆、形式、性能測定、適用範囲、再現手順
+## [research/experiments/n11-proof-compact-20261011/output/class-cover-minimization.json](../../../research/experiments/n11-proof-compact-20261011/output/class-cover-minimization.json)
+
+- [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (data): 入力hash、31 class incidence、唯一証人による最小性
+## [research/experiments/n11-proof-compact-20261011/output/proof-compact-audit.json](../../../research/experiments/n11-proof-compact-20261011/output/proof-compact-audit.json)
+
+- [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (manifest): source/compact SHA-256、完全検証receipt集計、被覆と証人差し替え比較
+## [research/experiments/n11-proof-compact-20261011/scripts/analyze_class_cover.py](../../../research/experiments/n11-proof-compact-20261011/scripts/analyze_class_cover.py)
+
+- [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (verifier): D4向きと合法第四手からLOSS classの第三手被覆を再構成
+## [research/experiments/n11-proof-compact-20261011/scripts/benchmark_verifier.py](../../../research/experiments/n11-proof-compact-20261011/scripts/benchmark_verifier.py)
+
+- [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (verifier): Windows process-tree RSS、wall time、peak scratch測定
+## [research/experiments/n11-proof-compact-20261011/scripts/bundle_store.py](../../../research/experiments/n11-proof-compact-20261011/scripts/bundle_store.py)
+
+- [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (verifier): SQLite disk-backed JSON/compact検証、相互変換、SHA拘束付き証人差し替え
+## [research/experiments/n11-proof-compact-20261011/tests/test_bundle_store.py](../../../research/experiments/n11-proof-compact-20261011/tests/test_bundle_store.py)
+
+- [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (verifier): binary改ざん、完全子欠落、誤極性、孤立節点、trusted leaf、source辺復元の拒否・回帰
+## [research/experiments/n11-proof-compact-20261011/tests/test_class_cover.py](../../../research/experiments/n11-proof-compact-20261011/tests/test_class_cover.py)
+
+- [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (verifier): 最新mainの117/119・残り{100,108}・最小31 classを回帰検査
 ## [research/experiments/n11-proof-dag-engine-followup-20261011/README.md](../../../research/experiments/n11-proof-dag-engine-followup-20261011/README.md)
 
 - [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (source): 実装、比較、性能・容量、限界、再現手順

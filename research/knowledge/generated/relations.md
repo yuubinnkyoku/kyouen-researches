@@ -1657,6 +1657,7 @@
 - ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 第三手被覆とS4 classの正規化
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): reply27の現行S4/S5証明境界
 - ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 対象S4に属する三つの既知S5 direct LOSS局面
+- ← depends_on [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md): 3,384 S4 classとexact S5 frontierの正本
 
 ## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する
 
@@ -1739,6 +1740,9 @@
 - ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 追加loaderと中間S6・上位S4依存の独立再監査範囲
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): solver-trusted raw葉と独立な上位境界の証拠区分
 - ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): exact solver値、信頼葉、独立終局閉包を区別する証拠規約
+- ← depends_on [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md): 現行frontier、第三手証明書、独立証拠の信頼境界
+- ← supports [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md): 117/119被覆の全31 LOSS classがcoverに必要なことを幾何から再構成
+- ← depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 独立証拠とsolver/cacheの信頼境界、未解決frontierを維持
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
@@ -1759,3 +1763,17 @@
 - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 対象S4に属する三つの既知S5 direct LOSS局面
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): exact solver値、信頼葉、独立終局閉包を区別する証拠規約
 - → depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): 最新候補S4とその既知LOSS S5子
+- ← depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 元となる最新mainの三S5 shared proof DAGと証明規則
+- ← supports [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): K0375の最新S4配下にある三S5 LOSS proofだけを独立compact検証し、既存閉包共有による局所DAG縮約を確認
+
+## [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) 11×11 `{60,27}` の現行117手被覆には既知LOSS class 31個が全て必要
+
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 現行frontier、第三手証明書、独立証拠の信頼境界
+- → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 3,384 S4 classとexact S5 frontierの正本
+- → supports [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 117/119被覆の全31 LOSS classがcoverに必要なことを幾何から再構成
+
+## [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) 11×11の三S5共有証明DAGをcompact化し、既知S6証人の共有で縮約
+
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 独立証拠とsolver/cacheの信頼境界、未解決frontierを維持
+- → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 元となる最新mainの三S5 shared proof DAGと証明規則
+- → supports [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): K0375の最新S4配下にある三S5 LOSS proofだけを独立compact検証し、既存閉包共有による局所DAG縮約を確認
