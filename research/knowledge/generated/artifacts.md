@@ -5074,6 +5074,24 @@
 ## [research/experiments/n11-residual-twins/scripts/verify_twins.py](../../../research/experiments/n11-residual-twins/scripts/verify_twins.py)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (verifier): m≤5の全clutter監査と、保存格子証人の全L・最小R・Grundy再検査
+## [research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md)
+
+- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (source): 階層分割の費用、適応方式、限界、再現手順
+## [research/experiments/n11-s5-hierarchical-adaptive-20261011/output/source-manifest.json](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/output/source-manifest.json)
+
+- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (manifest): 複写raw、source audit、current cacheのSHA-256照合
+## [research/experiments/n11-s5-hierarchical-adaptive-20261011/output/strategy-audit.json](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/output/strategy-audit.json)
+
+- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (data): 15M直接UNKNOWNと29.79M全S6分割の比較および現行境界
+## [research/experiments/n11-s5-hierarchical-adaptive-20261011/scripts/analyze.py](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/scripts/analyze.py)
+
+- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (verifier): 保存raw hash、90子geometry、予算prefix、最新S4境界の再監査
+## [research/experiments/n11-s5-hierarchical-adaptive-20261011/scripts/strategy.py](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/scripts/strategy.py)
+
+- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (source): exact evidence reuseとA–E方式選択、固定先手AND/OR集約
+## [research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py)
+
+- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (verifier): 極性、途中境界、trusted leaf、raw改ざん、同node-cap比較の回帰
 ## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題

@@ -1,0 +1,280 @@
+{
+  "benchmark_s5": {
+    "key": [
+      1188950301626859520,
+      603979776
+    ],
+    "legal_s6_children": 90
+  },
+  "limits": [
+    "The 15M split prefix is reconstructed from saved row costs and the documented batch order; it is not an additional solver run.",
+    "Raw wall times and peak RSS do not form a controlled same-host comparison.",
+    "The 90 S6 exact outcomes trust the saved solver results; they are not independent terminal-only minimax certificates.",
+    "No UNKNOWN was promoted to exact and no solver-trusted outcome was called independently proven."
+  ],
+  "outcomes": {
+    "derived_s5": "WIN",
+    "direct_15m": {
+      "actual_nodes": 15000000,
+      "budget_nodes": 15000000,
+      "reported_row_wall_seconds": 47,
+      "rss_bytes": null,
+      "verdict": "UNKNOWN"
+    },
+    "s6_escalations": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 5,
+      "children": 5,
+      "nodes": 6860668
+    },
+    "s6_full_split": {
+      "LOSS": 0,
+      "UNKNOWN": 0,
+      "WIN": 90,
+      "total_nodes": 29794287
+    },
+    "s6_initial": {
+      "LOSS": 0,
+      "UNKNOWN": 5,
+      "WIN": 85,
+      "distinct_children": 90,
+      "nodes": 22933619
+    },
+    "solver_trust": "all exact S6 leaves are solver-trusted; no terminal-only S6 proof DAG was supplied"
+  },
+  "provenance": {
+    "copied_raw_files": [
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-lowest3.input.csv.gz",
+        "raw_bytes": 167,
+        "raw_sha256": "16d84c9dc8bce9d804dc2ec586069b390d9dce1e8edbd235b01fde0532e3cc2b",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-lowest3.input.csv",
+        "stored_bytes": 115,
+        "stored_gzip_sha256": "ef59ac02ca480fe9bdde7cbf0f372a4979569b2346e605cbf13e5b2b0019ded3"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-lowest3.out.csv.gz",
+        "raw_bytes": 409,
+        "raw_sha256": "f5d1b26fecc617cc5de1ac2a94a7150334af70842653c15098bc1de39d847ff3",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-lowest3.out.csv",
+        "stored_bytes": 268,
+        "stored_gzip_sha256": "b66516282fa9c57ebaabc623fe84890010f3d7992d295027e4a8a0f84713c121"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-stratified15.input.csv.gz",
+        "raw_bytes": 821,
+        "raw_sha256": "cd9118c912d6b5a36a9c8ff00fe05a01a46f2a26032d574d72e9c6e45586a947",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-stratified15.input.csv",
+        "stored_bytes": 253,
+        "stored_gzip_sha256": "8d8a98e1bcb3fa016af79e540b4fabf478b40ee828d44a4cbec0d717cd67de30"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-stratified15.out.csv.gz",
+        "raw_bytes": 1193,
+        "raw_sha256": "db86b46c945e76cbd4ac480c2c440aa5e03856884a4eed2ba26c8d14d85e772d",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-stratified15.out.csv",
+        "stored_bytes": 481,
+        "stored_gzip_sha256": "aebfed0b14a17135e9c17e21ea382ac4e6c0b77186c80cec0a9c7ad09526a3b8"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch1.input.csv.gz",
+        "raw_bytes": 985,
+        "raw_sha256": "847fbbf337a231f3ca7829277fe38a72e238b934d0e0cdf8f9e5bfb1804f9b97",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch1.input.csv",
+        "stored_bytes": 290,
+        "stored_gzip_sha256": "81010b20e0e3c0f867e9f3e9f8a64035fd190a15d7e28c8bb1bdd721161d463d"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch1.out.csv.gz",
+        "raw_bytes": 1391,
+        "raw_sha256": "c6cccfa0d043c418dc068cd2cde1aeacbd067ed620f6c84c4e97061cf851638c",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch1.out.csv",
+        "stored_bytes": 527,
+        "stored_gzip_sha256": "e31be3dcc685a47f37265f3bc4ad35b628e1e91f260c2bb6df4ff0b8e9c8ce20"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch2.input.csv.gz",
+        "raw_bytes": 986,
+        "raw_sha256": "e1ba9c5b0d76abdaca4e2db5581816be375095181cdb7dae6482143b81a75f4b",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch2.input.csv",
+        "stored_bytes": 244,
+        "stored_gzip_sha256": "355985f4f008249b486a59601cfc8620a07f2ea3588ef74f9e218b440122e229"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch2.out.csv.gz",
+        "raw_bytes": 1393,
+        "raw_sha256": "529249e760ed5a0700be809c600bf6e04a3f3013e9492fd71287b962ba8fec13",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch2.out.csv",
+        "stored_bytes": 484,
+        "stored_gzip_sha256": "814bfbacc85247982b3e80fff9ab56d214165bd92b670917a50a00eb55e7b6f7"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch3.input.csv.gz",
+        "raw_bytes": 993,
+        "raw_sha256": "ef9aa78fd76dbf1c5ab2433bc2901117012aff3256bbdff462c62a1f567204f8",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch3.input.csv",
+        "stored_bytes": 253,
+        "stored_gzip_sha256": "2328f795862e0620b6f78d541244c371730abc0ff1045318f4f8b01974ff8063"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch3.out.csv.gz",
+        "raw_bytes": 1399,
+        "raw_sha256": "27e28ca2a6e9ff9b8ac4d054d372e5b8c2e39f323c7c68e9550690d64d3d15cc",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch3.out.csv",
+        "stored_bytes": 487,
+        "stored_gzip_sha256": "242a90d5ae6cddccb0a182c17bac01ab77e519613ccdb436b41c0accce73ec9c"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch4.input.csv.gz",
+        "raw_bytes": 994,
+        "raw_sha256": "79c381e184818e9b63fea0d15a513ccc1f8cba1840fefe920db5a43e6367936c",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch4.input.csv",
+        "stored_bytes": 253,
+        "stored_gzip_sha256": "2fc086d40e26a3eecef492093fd563fe99b6ac08667a648f79e519c85cf6d0bc"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-batch4.out.csv.gz",
+        "raw_bytes": 1403,
+        "raw_sha256": "96579b00d0ed6412c2220000c86da956508e6afdf3f1dd79606caace8163b222",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-batch4.out.csv",
+        "stored_bytes": 497,
+        "stored_gzip_sha256": "0254bd10c9477cacb7a43d8b3a2faf6399f6713d1ad848dd6e55c184b3af05be"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-escalate-a.input.csv.gz",
+        "raw_bytes": 108,
+        "raw_sha256": "5a7ded77d3e36860f5c79fe5487d41918021439e80098bad33e735c0f8a80a8e",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-escalate-a.input.csv",
+        "stored_bytes": 93,
+        "stored_gzip_sha256": "52bc059583e30daadaff97170c3159d0927829090f76ca90ecfce9e66053f2a4"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-escalate-a.out.csv.gz",
+        "raw_bytes": 345,
+        "raw_sha256": "b7469913c49363f5b2bb05640d4f67330d2937214b67d081b4befb57b4508129",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-escalate-a.out.csv",
+        "stored_bytes": 239,
+        "stored_gzip_sha256": "f399126014e154f5bc452f9a980698c41ce5493455e8c081cbe9c54980443d2c"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-escalate-b.input.csv.gz",
+        "raw_bytes": 162,
+        "raw_sha256": "471c3b7ad9b24747b3a3c516a9d3c49093a06285a725e6cc1c0fe4756861c022",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-escalate-b.input.csv",
+        "stored_bytes": 102,
+        "stored_gzip_sha256": "bc10a9bf0fb243c0cfa680b7eb119a935f123b6393bce7394807c67d6607f2e9"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s6-escalate-b.out.csv.gz",
+        "raw_bytes": 413,
+        "raw_sha256": "d71f58f417cd2329dd462add1b2ad6379c44fb07a8a866db08164ff368543e17",
+        "source_path": "research/experiments/n11-s6-universal-closure-20261011/output/raw/s6-escalate-b.out.csv",
+        "stored_bytes": 254,
+        "stored_gzip_sha256": "2e661f27b866749a16a4847513246c9c3315817e37a32fbe474f5a86ab80f414"
+      },
+      {
+        "copy_path": "research/experiments/n11-s5-hierarchical-adaptive-20261011/input/raw/s5-direct-15m.csv.gz",
+        "raw_bytes": 285,
+        "raw_sha256": "0b2d53a4a88c706e854b0334b6ca0478c35b00eac8fa2bdbe482d2bb1403c99f",
+        "source_path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/probe-15m-sixth.csv",
+        "stored_bytes": 209,
+        "stored_gzip_sha256": "e85847359fd6da5dc04f46bc59a7a74052cb2b86112c584dffbef8d62cc203b1"
+      }
+    ],
+    "direct_solver_binary_sha256_recorded": false,
+    "direct_solver_source_sha256_recorded": false,
+    "historical_direct_runtime_environment_recorded_in_raw": false,
+    "independent_geometry": {
+      "path": "research/experiments/n11-independent-exact-audit-20261010/scripts/independent.py",
+      "sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f"
+    },
+    "s6_solver_binary_sha256": "98aadf580119ea3fb89be77fa161defded6feb87f5cb2f30b0503e35a4163c01",
+    "s6_solver_source_sha256": "9193f5b6065e0fbcad2ef7c65f386187701cafa1f5b718cc35a5cbb0d138f92e",
+    "source_manifests": [
+      {
+        "path": "research/experiments/n11-s6-universal-closure-20261011/output/audit.json",
+        "sha256": "0b926a9fcfd3305525932366f80cfbbba4da2154714ab05bd76859708d6b292f"
+      },
+      {
+        "path": "research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json",
+        "sha256": "84aa77e6bc9d8e025f67037f361656bd2ef3a534a8ce973750ea244c009f55f4"
+      },
+      {
+        "path": "research/experiments/n11-reply27-20more-20261011/output/audit.json",
+        "sha256": "87b155e3b18fa7f9456d8513b7edd5b43ced94872226943ee9c0ec31368c8e5e"
+      }
+    ]
+  },
+  "resource_comparison": {
+    "direct_capped_nodes": 15000000,
+    "direct_reported_wall_seconds": 47,
+    "direct_solver_source_hash_recorded": false,
+    "node_cost_reduction_demonstrated": false,
+    "peak_rss_bytes": null,
+    "peak_rss_comparison": "not recorded by the selected raw sources",
+    "reason_wall_time_not_comparable": "the split README records Debian i5-9400T; the direct raw does not identify its runtime host",
+    "same_binary_hash_verified": false,
+    "split_group_wall_seconds_rounded_sum": 83,
+    "split_to_direct_node_ratio": 1.986286,
+    "split_total_nodes": 29794287,
+    "wall_time_comparable": false
+  },
+  "same_15m_node_cap": {
+    "conclusion": "neither method resolved S5 at the 15M-node cap; the complete split used more nodes",
+    "direct": {
+      "nodes": 15000000,
+      "verdict": "UNKNOWN"
+    },
+    "split_prefix": {
+      "completed_s6_children": 60,
+      "completed_unknown_runs": 2,
+      "derived_s5": "UNKNOWN",
+      "final_row_censored": true,
+      "nodes": 15000000,
+      "reconstruction_only": true,
+      "remaining_s6_children_unobserved_or_unresolved": 30,
+      "started_rows": 63,
+      "status": "UNKNOWN"
+    }
+  },
+  "schema": "n11-s5-hierarchical-adaptive-audit-v1",
+  "strategy_router": {
+    "current_s4": {
+      "cache_path": "research/experiments/n11-reply27-20more-20261011/output/merged-exact-s5.cache",
+      "cache_sha256": "2a873e3312f355dbc0cc2472438c9304b1a647fb04396c6645762d70676bd27f",
+      "complete_s5_children": 106,
+      "current_audit_sha256": "87b155e3b18fa7f9456d8513b7edd5b43ced94872226943ee9c0ec31368c8e5e",
+      "derived_from_exact_cache_and_independent_geometry": true,
+      "key": [
+        1297036692683752448,
+        0
+      ],
+      "outcomes": {
+        "LOSS": 40,
+        "UNKNOWN": 66,
+        "WIN": 0
+      },
+      "solver_dispatch_for_this_experiment": false
+    },
+    "current_s4_dispatch": false,
+    "current_s4_dispatch_reason": "the paired benchmark did not demonstrate lower node cost; no new S5 was selected or run",
+    "current_s4_loss_goal": {
+      "action": "target_specific_s6_probe_after_raw_cache_preflight",
+      "dispatch": false,
+      "mode": "D",
+      "outcome_probability_estimate": null,
+      "reason": "the historical benchmark did not show a node-cost reduction, so no current S5 was selected",
+      "selected_s5_key": null
+    },
+    "historical_s5_is_child_of_current_s4": false,
+    "historical_target": {
+      "action": "reconstruct_from_saved_s6_boundary",
+      "mode": "C",
+      "next_s6": [],
+      "trust": "solver-trusted S6 leaves unless independent proof DAGs are supplied",
+      "verdict": 1
+    },
+    "selected_current_s5_key": null
+  }
+}

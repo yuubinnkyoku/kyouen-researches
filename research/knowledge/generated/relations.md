@@ -66,6 +66,7 @@
 - ← depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 元先手固定の勝敗
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): 先手固定視点の奇数ANDと偶数ORの完全境界規則
 - ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 元先手固定視点の交互AND/OR規則
+- ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 元の先手固定視点におけるS5 AND・S6 ORの勝敗伝播
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1729,6 +1730,7 @@
 - → verifies [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): S7由来のcache根拠を再監査し、有効な現行frontierを再計算
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 先手固定S7伝播の訂正と旧2件のS5 WIN根拠撤回
 - ← verifies [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 撤回の中間S6・上位S4依存、追加loaderと終局ガードを監査
+- ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): K0372による固定先手伝播と隔離規則の維持
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1744,6 +1746,7 @@
 - ← supports [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md): 117/119被覆の全31 LOSS classがcoverに必要なことを幾何から再構成
 - ← depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 独立証拠とsolver/cacheの信頼境界、未解決frontierを維持
 - ← depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): K0372の信頼境界、終局leaf規則、固定先手視点AND/OR極性を維持
+- ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): solver-trusted exact葉とterminal-only独立証明の信頼分離
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
@@ -1757,6 +1760,7 @@
 - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): reply27の現行S4/S5証明境界
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver-trusted raw葉と独立な上位境界の証拠区分
 - ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 最新候補S4とその既知LOSS S5子
+- ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 同じ90子S6全WINの保存rawとS5導出
 
 ## [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) 11×11の既知S5六局面で共有TTと終局閉包証明DAGを実測
 
@@ -1788,3 +1792,12 @@
 - → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): SHA拘束された独立検証済みS5三根証明DAG二組を入力として使用
 - → depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 三根のwitness-switch compact variantを増分統合の開始証明として再現
 - → supports [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 6根の独立終局閉包と、二つの入力DAG間にcanonical局面重複がないことを検査
+- ← supports [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 最新mainの最有力S4境界40/0/66をcacheと独立幾何から再確認
+
+## [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) 11×11 S5階層分割の費用比較と証拠対応ルーティング
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元の先手固定視点におけるS5 AND・S6 ORの勝敗伝播
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): K0372による固定先手伝播と隔離規則の維持
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver-trusted exact葉とterminal-only独立証明の信頼分離
+- → depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): 同じ90子S6全WINの保存rawとS5導出
+- → supports [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 最新mainの最有力S4境界40/0/66をcacheと独立幾何から再確認
