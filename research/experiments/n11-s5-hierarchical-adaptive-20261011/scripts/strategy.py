@@ -43,14 +43,17 @@ def fixed_first_outcome(
 def _verified_independent_root(proof: Mapping[str, object] | None) -> int | None:
     if proof is None:
         return None
-    if not proof.get("verified"):
+    verified = proof.get("verified")
+    if verified is False:
         return None
+    if verified is not True:
+        raise ValueError("independent proof verified flag must be boolean")
     trusted = proof.get("trusted_leaf_count")
     verdict = proof.get("root_verdict")
-    if trusted != 0:
-        raise ValueError("an independent proof DAG must have zero trusted leaves")
-    if verdict not in (WIN, LOSS):
-        raise ValueError("a verified proof DAG needs an exact root verdict")
+    if type(trusted) is not int or trusted != 0:
+        raise ValueError("an independent proof DAG must have zero integer trusted leaves")
+    if type(verdict) is not int or verdict not in (WIN, LOSS):
+        raise ValueError("a verified proof DAG needs an exact integer root verdict")
     return int(verdict)
 
 

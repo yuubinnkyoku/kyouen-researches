@@ -19,10 +19,9 @@
 
 - Merge safety tests: 26 passed under WSL/Linux Bash.
 - Recovery tests: 8 passed.
-- Hierarchical strategy tests: 12 passed.
+- Hierarchical strategy tests: 15 passed.
 - `uv sync --locked`: passed.
 - `uv run --locked python tools/knowledge/check.py`: 408 items, 0 errors, 0 warnings.
 - `uv run --locked python -m unittest discover -s tools/knowledge/tests`: 33 passed.
-- `uv run --locked python tools/knowledge/build.py`: generated six views from a temporary validation snapshot; the snapshot included the current worktree's existing item artifacts. Generated output was not copied back into the worktree.
-- `git diff --exit-code -- README.md research/knowledge/generated`: passed.
+- `uv run --locked python tools/knowledge/build.py`: generated six views from 408 current items in the integrated worktree. `git diff --exit-code -- README.md research/knowledge/generated` passed, so the generated views and README already matched.
 - A HEAD-only archive lacks 29 existing untracked experiment artifacts referenced by already tracked K0396, K0403, K0405, and K0407-K0410. These paths were absent from both supplied bundles and were preserved unstaged. The successful temporary build snapshot overlaid the current workspace items and their artifacts; it did not resolve this pre-existing clean-checkout gap.

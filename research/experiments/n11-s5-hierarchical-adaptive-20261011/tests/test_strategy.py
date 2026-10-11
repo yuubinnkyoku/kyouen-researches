@@ -99,6 +99,60 @@ class StrategyRoutingTests(unittest.TestCase):
             )
 
 
+    def test_conflicting_exact_sources_are_rejected_before_priority_selection(self) -> None:
+        cases = [
+            {
+                "direct_s5_verdict": LOSS,
+                "independent_proof": {"verified": True, "trusted_leaf_count": 0, "root_verdict": WIN},
+            },
+            {
+                "direct_s5_verdict": LOSS,
+                "saved_s6_verdicts": {"a": WIN, "b": WIN},
+            },
+            {
+                "independent_proof": {"verified": True, "trusted_leaf_count": 0, "root_verdict": LOSS},
+                "saved_s6_verdicts": {"a": WIN, "b": WIN},
+            },
+        ]
+        for evidence in cases:
+            with self.subTest(evidence=evidence), self.assertRaisesRegex(ValueError, "CONFLICT"):
+                choose_strategy(
+                    goal="s5_win",
+                    expected_s6_children=2,
+                    s6_children=["a", "b"],
+                    **evidence,
+                )
+
+    def test_saved_s6_evidence_requires_complete_child_keys(self) -> None:
+        with self.assertRaisesRegex(ValueError, "complete S6 child key list"):
+            choose_strategy(
+                goal="s5_win",
+                expected_s6_children=1,
+                saved_s6_verdicts={"a": WIN},
+            )
+        with self.assertRaisesRegex(ValueError, "complete and unique"):
+            choose_strategy(
+                goal="s5_win",
+                expected_s6_children=2,
+                saved_s6_verdicts={"a": LOSS},
+                s6_children=["a"],
+            )
+
+    def test_independent_proof_metadata_requires_exact_types(self) -> None:
+        invalid_proofs = [
+            {"verified": 1, "trusted_leaf_count": 0, "root_verdict": WIN},
+            {"verified": True, "trusted_leaf_count": False, "root_verdict": WIN},
+            {"verified": True, "trusted_leaf_count": 0, "root_verdict": True},
+        ]
+        for proof in invalid_proofs:
+            with self.subTest(proof=proof), self.assertRaises(ValueError):
+                choose_strategy(
+                    goal="s5_loss",
+                    expected_s6_children=1,
+                    independent_proof=proof,
+                )
+
+
 class SavedExperimentAuditTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
