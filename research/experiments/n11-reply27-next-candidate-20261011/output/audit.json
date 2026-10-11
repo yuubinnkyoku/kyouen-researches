@@ -1,0 +1,163 @@
+{
+  "baseline_cache_path": "research/experiments/n11-s6-universal-closure-20261011/output/merged-exact-s5.cache",
+  "baseline_cache_sha256": "2bf63240b6987ce8404c7fbbdc61453c60bd051e2de8a3e1396d1bbb0765413b",
+  "baseline_s5": 5752,
+  "decisive_15m_nodes": 13897366,
+  "evidence_limit": "Direct raw positive budget exact S5 verdicts with independent canonical/legal/parent verification; no terminal-only minimax certificate",
+  "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+  "independent_board_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+  "merged_cache_path": "research/experiments/n11-reply27-next-candidate-20261011/output/merged-exact-s5.cache",
+  "merged_cache_sha256": "7e9711e06ec0328f812058f97b8d64a5cf2463dfc5ac7bd6292581709a3c7ae0",
+  "merged_s5": 5755,
+  "merged_s5_counts": {
+    "LOSS": 5596,
+    "WIN": 159,
+    "verdict_conflicts": 0
+  },
+  "minimal_additional_loss_classes": 1,
+  "new_s5_exact_loss": [
+    {
+      "cold_15m": {
+        "legal": 84,
+        "nodes": 5416337,
+        "verdict": 2
+      },
+      "cold_2m": {
+        "legal": 84,
+        "nodes": 2000000,
+        "verdict": 0
+      },
+      "key": [
+        10412322338480590849,
+        0
+      ],
+      "legal": 84,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10412322338480586753,
+          0
+        ],
+        [
+          10412322338480590848,
+          0
+        ]
+      ]
+    },
+    {
+      "cold_15m": {
+        "legal": 92,
+        "nodes": 5026776,
+        "verdict": 2
+      },
+      "cold_2m": {
+        "legal": 92,
+        "nodes": 2000000,
+        "verdict": 0
+      },
+      "key": [
+        1297036692750861312,
+        0
+      ],
+      "legal": 92,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036692749812736,
+          0
+        ],
+        [
+          1297036692750860288,
+          0
+        ]
+      ]
+    },
+    {
+      "cold_15m": {
+        "legal": 94,
+        "nodes": 3454253,
+        "verdict": 2
+      },
+      "cold_2m": {
+        "legal": 94,
+        "nodes": 2000000,
+        "verdict": 0
+      },
+      "key": [
+        1301540292311122944,
+        0
+      ],
+      "legal": 94,
+      "parents": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1301540292310074368,
+          0
+        ],
+        [
+          1301540292311121920,
+          0
+        ]
+      ]
+    }
+  ],
+  "probe_total_nodes": 19897366,
+  "rational_lp_dual": 1,
+  "raw_artifacts": [
+    {
+      "path": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-15m.csv",
+      "sha256": "810a8817ea417ec3769f58c507bf290057048633fdbdca000033e45ebfff52d6"
+    },
+    {
+      "path": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/probe-2m.csv",
+      "sha256": "64f669027f951509c60d304200df5a329f7c9b155aedcf190ee9c48bee8eaa79"
+    },
+    {
+      "path": "research/experiments/n11-reply27-next-candidate-20261011/output/raw/targets.csv",
+      "sha256": "b1f6a02257c96225f1da37712f5390cd45abeca320c50b0ac9d070e92a963f16"
+    }
+  ],
+  "remaining_third_moves": [
+    100,
+    108
+  ],
+  "s4_class_counts_after": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "s4_class_counts_before": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "s4_coverage": [
+    100,
+    108,
+    110,
+    120
+  ],
+  "s4_promotions": [],
+  "s4_s5_full_children": 106,
+  "s4_target": [
+    1297036692683752448,
+    0
+  ],
+  "secured_third_moves": 117,
+  "source_cpp_sha256": "36d3a56068df3969c5cfec1079a8852d08a86fedce5648d360f2fed2413de224",
+  "source_main_at_start": "f33693cdd8be54738cedea8fc141553209c9a669",
+  "target_s5_counts": {
+    "LOSS": 10,
+    "UNKNOWN": 96,
+    "WIN": 0
+  }
+}
