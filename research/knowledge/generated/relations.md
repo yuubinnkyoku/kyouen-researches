@@ -1752,7 +1752,7 @@
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 固定先手の層別伝播規則
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 層別伝播規則を維持し、S5 LOSSはS6 LOSS子を持つ条件で評価
 - ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 元先手固定の勝敗伝播規則（S1=AND・S4 LOSS=全S5子LOSS）
-- ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 元先手固定のAND/OR伝播（S1・S3=AND、S2・S4=OR）
+- ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1953,7 +1953,7 @@
 - → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 現S4配下3根の共有terminal-only証明
 - → depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 同3根のcompact witness-switch証明
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset
-- ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): S5 LOSSの全sixth手閉包が必要なことと未閉鎖2,992根の前例
+- ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): S5の全子閉包が必要なことと未閉鎖根の前例
 
 ## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5証明計画は上界31,546・下界6,573で個別合計の約半分
 
@@ -1975,8 +1975,8 @@
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 中央応手の個別上界（49:2055・38:2155・16:2084）と共同上界31,546
 
-## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは約1.74k証人・7.5k AND分岐で全65応手軌道が閉鎖可能
+## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは1,945証人・7.5k AND分岐で全65応手軌道が閉鎖可能（極性訂正済み）
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): LOSS側共同frontier 31,546と個別上界（49:2055）の比較基準
-- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR伝播（S1・S3=AND、S2・S4=OR）
-- → depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): S5 LOSSの全sixth手閉包が必要なことと未閉鎖2,992根の前例
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
+- → depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): S5の全子閉包が必要なことと未閉鎖根の前例

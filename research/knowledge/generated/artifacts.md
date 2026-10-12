@@ -5364,15 +5364,18 @@
 ## [research/experiments/n11-proof-cost-comparison-20261012/output/element-dual-certificate.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/element-dual-certificate.json)
 
 - [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (certificate): deg 962,469要素・869群alpha・厳密総和と整数下界
-## [research/experiments/n11-proof-cost-comparison-20261012/output/pilot-candidates.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/pilot-candidates.json)
+## [research/experiments/n11-proof-cost-comparison-20261012/output/overlap-and-pilots.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/overlap-and-pilots.json)
 
-- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): frontier legal手数分布・最安10件・両用16件のマスク
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 極性衝突29件・legal分布・最安10件
+## [research/experiments/n11-proof-cost-comparison-20261012/output/superseded-polarity-bug-20261012/README.md](../../../research/experiments/n11-proof-cost-comparison-20261012/output/superseded-polarity-bug-20261012/README.md)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (manifest): 極性誤りの旧出力3件の履歴化と新旧対応
 ## [research/experiments/n11-proof-cost-comparison-20261012/output/win-side-analysis.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/win-side-analysis.json)
 
-- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 65応手軌道の閉鎖性・証人数・AND幅
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 65応手軌道の閉鎖性・証人数・AND幅（schema v2、極性訂正済み）
 ## [research/experiments/n11-proof-cost-comparison-20261012/output/win-witness-masks.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/win-witness-masks.json)
 
-- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 証人1,739マスクと再計算差分
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (certificate): 検証済み証人1,945マスク（正準・未cache・被覆成立）
 ## [research/experiments/n11-proof-cost-comparison-20261012/scripts/build_alt_roots.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/build_alt_roots.py)
 
 - [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (source): 中央と同一index空間の非中央6 root構築（39.1秒）
@@ -5385,12 +5388,21 @@
 ## [research/experiments/n11-proof-cost-comparison-20261012/scripts/dual_certificate.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/dual_certificate.py)
 
 - [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (source): deg再集計・厳密有理数alpha・証明書発行と--verify再検査
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/measure_overlap.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/measure_overlap.py)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): LOSS共同計画との極性衝突測定とパイロット再生成
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/s4_win_polarity.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/s4_win_polarity.py)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): K0371極性の単一真実源（free/open/dead分類）
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/test_s4_win_polarity.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/test_s4_win_polarity.py)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (verifier): K0414 S4のdead・WIN子free・UNKNOWN・終局・frontier照合の回帰5件
 ## [research/experiments/n11-proof-cost-comparison-20261012/scripts/win_side.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/win_side.py)
 
-- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 応手軌道縮約・S4分類・証人被覆のWIN側依存分析（初手49で約30分）
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 応手軌道縮約・S4分類・証人被覆のWIN側依存分析（初手49で約45分）
 ## [research/experiments/n11-proof-cost-comparison-20261012/scripts/win_witness_masks.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/win_witness_masks.py)
 
-- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 証人S5マスクの限定再計算と重なり測定（約1分）
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (verifier): 証人被覆の幾何再検証（正準・未cache・被覆成立・総数一致）
 ## [research/experiments/n11-proof-dag-engine-followup-20261011/README.md](../../../research/experiments/n11-proof-dag-engine-followup-20261011/README.md)
 
 - [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (source): 実装、比較、性能・容量、限界、再現手順

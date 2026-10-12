@@ -1,49 +1,42 @@
 #!/usr/bin/env python3
-"""Recover board masks for the WIN-side witness S5 sets (cheap targeted pass).
+"""Verify the WIN-side witness covers against recomputed geometry (K0371).
 
-win_side.py stored per-reply witness *indices* into its session-local S5
-array, which was not persisted.  This script re-enumerates only the 65 chosen
-(reply, third) pairs of first 49, rebuilds the same greedy witness covers,
-checks the per-reply witness counts against the stored analysis, and saves
-the witness board masks for overlap measurement against the LOSS-side joint
-plan.  No solver search is involved.
+For every closable reply of the stored WIN-side analysis, this script
+re-enumerates the chosen third's fourths from the independent Board, rebuilds
+each S4's child verdicts from the exact cache, and checks with the shared
+s4_win_polarity module that
+
+* no fourth S4 is dead (otherwise the reply is not closable),
+* every open fourth S4 contains at least one stored witness mask,
+* every stored witness mask is a canonical, cache-unknown S5 key
+  (a proper optimistic WIN witness: cached keys cannot become WIN, and
+  non-canonical keys are unstable aliases),
+* the distinct-witness total matches the analysis header.
+
+It then saves the verified witness mask set for overlap measurement against
+the LOSS-side joint plan.  No solver search is involved.
 """
 from __future__ import annotations
 
 import argparse
-import gzip
 import json
 import sys
 import time
-from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 NEW_EXPERIMENT = ROOT / "research/experiments/n11-proof-cost-comparison-20261012"
-OLD_EXPERIMENT = ROOT / "research/experiments/n11-joint-s5-proof-planning-20261012"
 
+sys.path.insert(0, str(NEW_EXPERIMENT / "scripts"))
 sys.path.insert(0, str(ROOT / "research/experiments/n11-independent-exact-audit-20261010/scripts"))
 sys.path.insert(0, str(ROOT / "research/experiments/n11-central-reply-frontier-20261012/scripts"))
 from independent import Board  # noqa: E402
-from analyze_central_reply_frontier import load_exact_s5_cache  # noqa: E402
+from analyze_central_reply_frontier import load_exact_s5_cache, sha  # noqa: E402
+from s4_win_polarity import classify_s4, verdict_of, FREE, OPEN, DEAD  # noqa: E402
 
 
 def key_of(mask: int) -> tuple[int, int]:
     return mask & ((1 << 64) - 1), mask >> 64
-
-
-def greedy_witness_cover(needs: list[set[int]]) -> set[int]:
-    uncovered = [s for s in needs if s]
-    chosen: set[int] = set()
-    while uncovered:
-        freq: Counter[int] = Counter()
-        for s in uncovered:
-            for e in s:
-                freq[e] += 1
-        best = max(freq, key=lambda e: (freq[e], e))
-        chosen.add(best)
-        uncovered = [s for s in uncovered if best not in s]
-    return chosen
 
 
 def main() -> None:
@@ -56,52 +49,71 @@ def main() -> None:
     started = time.time()
 
     analysis = json.loads(args.analysis.read_text(encoding="utf-8"))
+    assert analysis["schema"] == "n11-win-side-analysis-v2", \
+        "verifier requires the corrected-polarity analysis"
     first_row = next(a for a in analysis["firsts"] if a["first"] == 49)
     board = Board(11)
     cache = load_exact_s5_cache(board)
 
+    failures: list[str] = []
     masks: set[int] = set()
-    mismatches = []
     for rep in first_row["replies"]:
         if not rep["closable"]:
             continue
+        stored = {lo | (hi << 64) for lo, hi in rep["witness_masks"]}
+        for m in stored:
+            if board.canonical(m) != m:
+                failures.append(f"reply {rep['reply']}: stored witness is "
+                                f"non-canonical {key_of(m)}")
+            if key_of(m) in cache:
+                failures.append(f"reply {rep['reply']}: stored witness "
+                                f"{key_of(m)} is already cached")
+        masks |= stored
         pair = (1 << 49) | (1 << rep["reply"])
         s3 = pair | (1 << rep["chosen_third"])
         fourths = board.points(board.legal(s3))
-        assert len(fourths) == rep["chosen_fourths"], "fourth count drift"
-        needs: list[set[int]] = []
+        if len(fourths) != rep["chosen_fourths"]:
+            failures.append(f"reply {rep['reply']}: fourth count drift")
+            continue
         for u in fourths:
             m = board.canonical(s3 | (1 << u))
             children = board.children(m)
-            cached = [cache[key_of(c)]["verdict"] for c in children
-                      if key_of(c) in cache]
-            unknown = {c for c in children if key_of(c) not in cache}
-            if 2 in cached:
-                continue
-            assert unknown, "dead S4 in stored viable third"
-            needs.append(unknown)
-        wit = greedy_witness_cover(needs)
-        if len(wit) != len(rep["witnesses"]):
-            mismatches.append({"reply": rep["reply"], "stored": len(rep["witnesses"]),
-                               "recomputed": len(wit)})
-        masks |= wit
+            verdicts = [verdict_of(cache, key_of(c)) for c in children]
+            kind = classify_s4(verdicts)
+            if kind == DEAD:
+                failures.append(f"reply {rep['reply']}: dead S4 in stored "
+                                f"viable third")
+            elif kind == OPEN:
+                unknown = {c for c, v in zip(children, verdicts) if v == 0}
+                if not (unknown & stored):
+                    failures.append(f"reply {rep['reply']}: open S4 left "
+                                    f"unwitnessed by stored cover")
+            elif kind != FREE:
+                failures.append(f"reply {rep['reply']}: unknown kind {kind}")
+
+    if len(masks) != first_row["optimistic_witness_s5"]:
+        failures.append(f"distinct total {len(masks)} != header "
+                        f"{first_row['optimistic_witness_s5']}")
 
     result = {
-        "schema": "n11-win-witness-masks-v1",
+        "schema": "n11-win-witness-masks-v2",
+        "analysis_sha256": sha(args.analysis),
+        "cache_sha256": sha(ROOT / "research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache"),
+        "polarity_module_sha256": sha(NEW_EXPERIMENT / "scripts" / "s4_win_polarity.py"),
         "first": 49,
-        "recomputed_witness_s5": len(masks),
-        "stored_witness_s5": first_row["optimistic_witness_s5"],
-        "count_mismatches": mismatches,
+        "verified_witness_s5": len(masks),
+        "failures": failures,
+        "passed": not failures,
         "witness_masks": sorted([[m & ((1 << 64) - 1), m >> 64] for m in masks]),
         "seconds": round(time.time() - started, 1),
     }
     with args.output.open("w", encoding="utf-8", newline="\n") as stream:
         stream.write(json.dumps(result, ensure_ascii=False, separators=(",", ":")) + "\n")
-    print(json.dumps({k: result[k] for k in ("recomputed_witness_s5",
-                                            "stored_witness_s5",
-                                            "count_mismatches",
-                                            "seconds")},
+    print(json.dumps({k: result[k] for k in ("verified_witness_s5", "passed",
+                                            "failures", "seconds")},
                      ensure_ascii=False, indent=2))
+    if failures:
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

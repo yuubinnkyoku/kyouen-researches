@@ -416,4 +416,4 @@
 | [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) | 19残存初手の共同S5証明計画は上界31,546・下界6,573で個別合計の約半分 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) | 共同証明計画のelement-only双対は厳密値2024529/308で整数下界6,574を確定する | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) | 初手49・38・16の非中央応手27・93は中央応手に楽観的S5数で約1.5倍劣る | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
-| [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) | 初手49のWIN側frontierは約1.74k証人・7.5k AND分岐で全65応手軌道が閉鎖可能 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+| [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) | 初手49のWIN側frontierは1,945証人・7.5k AND分岐で全65応手軌道が閉鎖可能（極性訂正済み） | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |

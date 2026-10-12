@@ -4,21 +4,23 @@
 For a fixed first move f (first player), a WIN proof needs, for EVERY legal
 reply r (second player): a third move t such that every legal fourth move u
 leaves an S4={f,r,t,u} that is first-player WIN.  In fixed-first-player view
-(K0371): S4 (even) is WIN iff some fifth move reaches an S5 LOSS; S5 (odd) is
-LOSS iff every sixth move reaches an S6 WIN.
+(K0371): S4 (even, OR) is WIN iff at least one S5 child is WIN; S5 (odd, AND)
+is WIN iff every S6 child is WIN.
 
-With only the existing exact-S5 cache, an S4 is classified as:
-  free: has a cached LOSS child (already first-player WIN),
-  dead: all children cached WIN (provably not first-player WIN; this S4 is a
-        LOSS-side asset instead),
-  open: otherwise (optimistically usable iff >= 1 unknown child becomes LOSS).
+With only the existing exact-S5 cache, an S4 is classified by the shared
+s4_win_polarity module as:
+  free: has a cached WIN child (already first-player WIN),
+  dead: every legal child cached LOSS, or no legal child at all (even-layer
+        terminal LOSS; proven first-player LOSS, a LOSS-side asset instead),
+  open: otherwise, i.e. no cached WIN child but >= 1 unknown child
+        (optimistically usable iff one unknown child later becomes WIN,
+        whose own closure needs ALL of its S6 children WIN).
 
 A third move is viable iff none of its fourths is dead.  A reply is closable
 iff it has a viable third.  Per viable third a greedy witness cover picks a
-small set of unknown S5s hitting every non-free fourth S4 (optimistic
-frontier, NOT a proof: each witness still needs its own all-sixths closure).
-Replies are D4-reduced under the stabiliser of f.  S4 classes reuse the K0417
-central index space with appended new classes.
+small set of unknown S5s hitting every open fourth S4 (optimistic frontier,
+NOT a proof).  Replies are D4-reduced under the stabiliser of f.  S4 classes
+reuse the K0417 central index space with appended new classes.
 """
 from __future__ import annotations
 
@@ -35,12 +37,15 @@ NEW_EXPERIMENT = ROOT / "research/experiments/n11-proof-cost-comparison-20261012
 OLD_EXPERIMENT = ROOT / "research/experiments/n11-joint-s5-proof-planning-20261012"
 OLD_SCRIPTS = OLD_EXPERIMENT / "scripts"
 
+sys.path.insert(0, str(NEW_EXPERIMENT / "scripts"))
 sys.path.insert(0, str(OLD_SCRIPTS))
 sys.path.insert(0, str(ROOT / "research/experiments/n11-central-reply-frontier-20261012/scripts"))
 sys.path.insert(0, str(ROOT / "research/experiments/n11-independent-exact-audit-20261010/scripts"))
 from independent import Board  # noqa: E402
-from analyze_central_reply_frontier import load_exact_s5_cache, sha  # noqa: E402
+from analyze_central_reply_frontier import (  # noqa: E402
+    load_exact_s5_cache, sha, CACHE as CACHE_PATH)
 from build_dependency_graph import key_of  # noqa: E402
+from s4_win_polarity import classify_s4, verdict_of, FREE, OPEN, DEAD  # noqa: E402
 
 
 def mask_of(pair: list[int]) -> int:
@@ -91,24 +96,19 @@ def main() -> None:
         if hit is not None:
             return hit
         children = board.children(s4_masks[index])
-        cached = [cache[key_of(c)]["verdict"] for c in children
-                  if key_of(c) in cache]
+        verdicts = [verdict_of(cache, key_of(c)) for c in children]
+        kind = classify_s4(verdicts)
         unknown = []
-        for c in children:
-            if key_of(c) in cache:
-                continue
-            k = s5_index.get(c)
-            if k is None:
-                k = len(s5_masks)
-                s5_index[c] = k
-                s5_masks.append(c)
-            unknown.append(k)
-        if 2 in cached:
-            kind = "free"
-        elif unknown:
-            kind = "open"
-        else:
-            kind = "dead"
+        if kind == OPEN:
+            for c, v in zip(children, verdicts):
+                if v != 0:
+                    continue
+                k = s5_index.get(c)
+                if k is None:
+                    k = len(s5_masks)
+                    s5_index[c] = k
+                    s5_masks.append(c)
+                unknown.append(k)
         s4_kind[index] = kind
         s4_unknown[index] = unknown
         return kind
@@ -130,7 +130,7 @@ def main() -> None:
         reply_rows = []
         witness_union: set[int] = set()
         and_width = 0
-        for r in orbit_reps:
+        for pos, r in enumerate(orbit_reps):
             pair = (1 << first) | (1 << r)
             thirds = board.points(board.legal(pair))
             assert len(thirds) == 119, f"pair {{{first},{r}}}: {len(thirds)} thirds"
@@ -150,10 +150,10 @@ def main() -> None:
                         s4_masks.append(m)
                     s4s.append(i)
                 kinds = [classify(i) for i in s4s]
-                if "dead" in kinds:
+                if DEAD in kinds:
                     continue
                 n_viable += 1
-                needs = [set(s4_unknown[i]) for i, k in zip(s4s, kinds) if k == "open"]
+                needs = [set(s4_unknown[i]) for i, k in zip(s4s, kinds) if k == OPEN]
                 if not needs:
                     n_all_free += 1
                     cand = {"third": t, "fourths": len(fourths), "witnesses": []}
@@ -172,7 +172,14 @@ def main() -> None:
                                     "viable_thirds": n_viable,
                                     "chosen_third": best["third"],
                                     "chosen_fourths": best["fourths"],
-                                    "witnesses": best["witnesses"]})
+                                    "witnesses": best["witnesses"],
+                                    "witness_masks": sorted(
+                                        [s5_masks[e] & ((1 << 64) - 1),
+                                         s5_masks[e] >> 64]
+                                        for e in best["witnesses"])})
+            print(f"  first {first}: reply {pos + 1}/{len(orbit_reps)} "
+                  f"(r={r}) closable={best is not None} "
+                  f"s4_touched={len(s4_kind)}", flush=True)
         n_close = sum(1 for x in reply_rows if x["closable"])
         n_free = sum(1 for x in reply_rows if x.get("all_free"))
         analyses.append({
@@ -196,19 +203,27 @@ def main() -> None:
 
     new_s4 = len(s4_masks) - base_s4
     new_s5 = len(s5_masks) - base_s5
-    dead_count = sum(1 for v in s4_kind.values() if v == "dead")
+    kind_counts = Counter(s4_kind.values())
     result = {
-        "schema": "n11-win-side-analysis-v1",
+        "schema": "n11-win-side-analysis-v2",
+        "polarity": ("K0371 fixed-first-player: S4 WIN iff >= 1 cached S5 WIN "
+                     "child; S4 LOSS (dead) iff all legal children cached LOSS "
+                     "or no legal child; open iff no cached WIN but >= 1 "
+                     "unknown child. Shared module s4_win_polarity."),
         "central_graph_sha256": sha(graph_path),
+        "cache_sha256": sha(CACHE_PATH),
+        "polarity_module_sha256": sha(NEW_EXPERIMENT / "scripts" / "s4_win_polarity.py"),
         "cache_rows": len(cache),
         "s4_classes_touched": len(s4_kind),
-        "s4_dead_loss_side_assets": dead_count,
+        "s4_kind_counts": dict(kind_counts),
+        "s4_dead_loss_side_assets": kind_counts.get(DEAD, 0),
         "new_s4_classes": new_s4,
         "new_s5_masks": new_s5,
         "note": ("witness counts are optimistic frontiers: every witness S5 "
-                 "still needs its own all-sixths LOSS closure, which is NOT "
-                 "costed here. Dead S4s (all children cached WIN) are proven "
-                 "first-player-LOSS positions reusable by the LOSS side."),
+                 "still needs its own all-sixths WIN closure (S5 AND layer), "
+                 "which is NOT costed here. Dead S4s (all children cached "
+                 "LOSS, or terminal) are proven first-player-LOSS positions "
+                 "reusable by the LOSS side."),
         "firsts": analyses,
         "seconds": round(time.time() - started, 1),
     }

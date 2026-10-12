@@ -28,39 +28,54 @@ K0417の19二石root共同証明計画（上界31,546・分数下界6,573.146）
 - joint-swap（18中央＋代替1）は中央共同31,546に対し+3,065〜+3,349悪化し、相異なる群も948→1,007に増える。
 - 判断：非中央応手への拡大は行わない。中央応手が3初手すべてで支配的である。
 
-## 課題3：初手WIN証明計画（初手49）
+## 監査記録（2026-10-12）：WIN側極性誤りの訂正
 
-元先手固定視点で、初手WINには全65応手軌道（初手49の安定化群でD4縮約）それぞれに第三手が必要で、選んだ第三手の全fourth手S4が先手WINでなければならない。既存cacheでのS4分類は free（cache LOSS子あり）／dead（全子cache WIN）／open（未知子あり→楽観的証人1個で使用可）。結果（`output/win-side-analysis.json`）：
+K0420初版の `win_side.py` / `win_witness_masks.py` はS5 LOSS子を持つS4を先手WIN（free）と扱っていたが、K0371（S4=OR：WIN ⟺ WIN子あり）と矛盾する。共有モジュール `scripts/s4_win_polarity.py` を真実源として両実装を修正し、回帰5件（K0414 S4のdead・WIN子free・UNKNOWN・終局・frontier照合500件）を通過させた。旧出力3件は `output/superseded-polarity-bug-20261012/` に履歴化した。
 
-- 65応手軌道すべて閉鎖可能。各応手で119 third手すべて viable（dead S4は到達133,924クラス中に0個）。
-- 無料で閉じる応手5、証人を要する応手60。
-- AND境界：選択thirdのfourth手 合計7,503 S4分岐。
-- 楽観的証人frontier：約1.74k相異なるS5（貪欲被覆のtie-break依存で±1%の幅。再計算1,739、マスク保存 `output/win-witness-masks.json`）。
-- 各証人は単独では証明にならず、全sixth手のLOSS閉包（S5 LOSS ⟺ 全S6先手WIN）が別途要る。ここは未計測。
-- dead S4が0個のため、LOSS側へ転用できる確定資産はなし。
-- WIN証人とLOSS側共同計画の要求集合の重なりは16/1,739、中央S5宇宙内にある証人も235のみ。両frontierはほぼ無共有。
+| 指標 | 旧（誤り） | 新（訂正） |
+|---|---|---|
+| 閉鎖可能応手 | 65/65 | 65/65 |
+| 無料閉鎖応手 | 5 | 0 |
+| 証人要応手 | 60 | 65 |
+| AND境界 | 7,503 S4 | 7,519 S4 |
+| 証人frontier | 約1,739（LOSS側frontier） | 1,945（WIN証人、被覆検証通過） |
+| dead S4 | 0 | 3 |
+| LOSS共同との重なり | 両用16 | 極性衝突29（1.49%） |
+| 証人閉包の意味 | 全sixth手LOSS（誤） | 全S6先手WIN（S5=AND） |
+
+## 課題3：初手WIN証明計画（初手49、極性訂正済み）
+
+元先手固定視点で、初手WINには全65応手軌道（初手49の安定化群でD4縮約）それぞれに第三手が必要で、選んだ第三手の全fourth手S4が先手WINでなければならない。既存cacheでのS4分類は free（cache WIN子あり）／dead（全子cache LOSSまたは終局）／open（未知子あり→楽観的WIN証人1個で使用可）。結果（`output/win-side-analysis.json` schema v2）：
+
+- 65応手軌道すべて閉鎖可能。各応手のviable thirdは109〜119（dead S4は到達133,924クラス中3個のみ）。
+- 無料で閉じる応手0、証人を要する応手65。
+- AND境界：選択thirdのfourth手 合計7,519 S4分岐。
+- 楽観的証人frontier：1,945相異なるS5。`win_witness_masks.py` が正準性・未cache・被覆成立・総数一致を検証済み（`output/win-witness-masks.json` schema v2）。
+- 各証人は単独では証明にならず、全S6先手WINの閉包（S5=AND）が別途要る。ここは未計測。
+- dead S4は3個のみで、LOSS側への転用資産はほぼなし。
+- WIN証人とLOSS側共同計画の要求集合の重なり29件は、両側が逆極性で要求する**衝突点**（どちらか一方しか使えない）であり、共有資産ではない。
 
 ## 課題4：先手WIN・後手WINの比較と主軸判断
 
 | 観点 | 後手WIN側（初手LOSS、19初手共同） | 先手WIN側（初手49の1初手） |
 |---|---|---|
 | 頂点の存在量化 | S1=ANDより初手ごと1応手rootで足りる | S1=ANDより全65応手軌道が必要 |
-| 未確定S5 frontier | 31,546（全S5子を強制取得） | 約1.74k（証人を存在選択・共有） |
-| AND境界規模 | 有料2,139 third＋31,546 S5 | 65応手＋7,503 S4＋証人 |
-| 既知証拠利用 | 32既知LOSS S4で122 third無料 | 5応手が無料、dead 0 |
-| 無効化リスク | 要求S5の1個のWIN化は該当S4を殺す（代替S4で修復可） | 証人S5のWIN化は同S4の別子で修復可（子が約110個あり slack 大） |
+| 未確定S5 frontier | 31,546（全S5子を強制取得） | 1,945（WIN証人を選択・共有） |
+| AND境界規模 | 有料2,139 third＋31,546 S5 | 65応手＋7,519 S4＋証人 |
+| 既知証拠利用 | 32既知LOSS S4で122 third無料 | 無料0、dead 3 |
+| 無効化リスク | 要求S5の1個のWIN化は該当S4を殺す（代替S4で修復可） | 証人S5のWIN化は同S4の別未知子で修復可（slack大）。衝突29件の決定は片側を枝刈りする |
 | 終局 payoff | 19初手全LOSSで空盤後手勝ち確定 | 1初手WINで空盤先手勝ち確定 |
 
-未知局面に確率は置かない。S5数から探索時間も予測しない。両側のfrontier S5は1個あたり同種の∀-閉包（S5 LOSS ⟺ 全S6先手WIN）を要する点で対称であり、差はfrontier規模と量化構造にある。
+未知局面に確率は置かない。S5数から探索時間も予測しない。両側のfrontier S5は1個あたり同種の全子閉包（LOSS側はS6 LOSS∃→全S7 WIN、WIN側は全S6 WIN）を要する点で対称であり、差はfrontier規模と量化構造にある。
 
-判断（測定に基づく方針であり証明ではない）：**主軸は後手WIN側の共同計画を維持し、先手WIN側は初手49の証人パイロット閉包で閉包単価を実測する二段構え**とする。理由は (i) WIN側は65/65閉鎖可能で障害ゼロの一方、証人1.74kの各閉包費が未測定で本丸の費用が未知、(ii) LOSS側は31.5kのfrontierが確定済みで1個のS5 LOSS確定がそのまま計画を前進させる、(iii) 両用16 S5など両戦略に資する閉包から着手すればどちらに転んでも無駄が少ない、の3点である。
+判断（測定に基づく方針であり証明ではない）：**主軸は後手WIN側の共同計画を維持し、先手WIN側は初手49の証人パイロット閉包で閉包単価を実測する二段構え**とする。理由は (i) WIN側は65/65閉鎖可能で障害ゼロの一方、証人1,945の各閉包費が未測定で本丸の費用が未知、(ii) LOSS側は31.5kのfrontierが確定済みで1個のS5 LOSS確定がそのまま計画を前進させる、(iii) 極性衝突29件など両戦略に決定的な閉包から着手すればどちらに転んでも無駄が少ない、の3点である。
 
 ## 課題5：実探索に移る条件
 
-- frontier 31,546のlegal手数は60〜116手に分布し、微小局面はない（`output/pilot-candidates.json`）。最安10件（60〜70手）と両用16件（78〜104手）をマスク付きで抽出済み。
+- frontier 31,546のlegal手数は60〜116手に分布し、微小局面はない（`output/overlap-and-pilots.json`、`output/pilot-candidates.json` 再生成済み）。最安10件（60〜70手）と極性衝突29件（78〜102手）をマスク付きで抽出済み。
 - 既存exact cacheのLOSS 5,692件のうち直接探索node記録があるのは65件のみ（合計388,074,801、最大11,267,484）。frontier全体の費用はここから外挿しない。
-- 大規模探索の開始条件：(1) 最安＋両用パイロット（10件以内）を既存solver手順でnode上限付きで回し単価実測、(2) 閉包成功かつnodeが予算内に収まる、(3) 成功分だけ共同計画の要求集合を縮小して次を選ぶ。(1)なしに大量探索を開始しない。
-- solver-trusted exactとterminal-only独立証明の区別（K0416の2,992未閉鎖根）を維持し、パイロットも由来別に記録する。
+- 大規模探索の開始条件：(1) 極性衝突29件のうち少数と最安パイロット（10件以内）を既存solver手順でnode上限付きで回し、閉包可否と単価を実測、(2) 閉包成功かつnodeが予算内に収まる、(3) 成功分だけ該当計画の要求集合を縮小して次を選ぶ。(1)なしに大量探索を開始しない（監査条件）。
+- solver-trusted exactとterminal-only独立証明の区別（K0416の2,992未閉鎖根）を維持し、パイロットも由来別に記録する。WIN側証人の閉包は「S5 WIN＝全S6先手WIN」の証明であり、LOSS側閉包とは別物として記録する。
 
 ## 再現
 
@@ -70,15 +85,17 @@ uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/s
 uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/scripts/disjoint_pool_packing.py
 uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/scripts/build_alt_roots.py
 uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/scripts/compare_alt_replies.py
+uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/scripts/test_s4_win_polarity.py
 uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/scripts/win_side.py --firsts 49
 uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/scripts/win_witness_masks.py
+uv run --locked python research/experiments/n11-proof-cost-comparison-20261012/scripts/measure_overlap.py
 ```
 
-`win_side.py`（初手49）は約30分を要する。他の全手順は合計10分以内。solver探索は起動しない。
+`win_side.py`（初手49）は約45分を要する。他の全手順は合計10分以内。solver探索は起動しない。
 
 ## 限界
 
 - 上下差（6,574対31,546）は未解決。最適値の厳密確定はしていない。
 - WIN側証人frontierは貪欲被覆のheuristic値で、最適性の主張なし。
-- 各証人S5・各frontier S5の∀-閉包費は未測定であり、frontier規模の比較は証明費用の比較ではない。
+- 各証人S5・各frontier S5の全子閉包費は未測定であり、frontier規模の比較は証明費用の比較ではない。
 - 初手49以外のWIN側分析、非中央応手の3初手以外への拡大は未実施。
