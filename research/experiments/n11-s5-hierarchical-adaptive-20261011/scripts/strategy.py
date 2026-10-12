@@ -7,6 +7,9 @@ exact evidence first, then chooses work from the requested proof polarity.
 from __future__ import annotations
 
 from typing import Mapping, Sequence
+from functools import lru_cache
+from importlib.util import module_from_spec, spec_from_file_location
+from pathlib import Path
 
 UNKNOWN = 0
 WIN = 1
@@ -53,6 +56,28 @@ def _checked_s5_key(value: object, label: str) -> tuple[int, int]:
             or lo.bit_count() + hi.bit_count() != 5):
         raise ValueError(f"{label} is not a five-stone 11x11 key")
     return lo, hi
+
+
+@lru_cache(maxsize=1)
+def _independent_board():
+    """Load the existing independently implemented geometry, not caller claims."""
+    path = (Path(__file__).resolve().parents[2]
+            / "n11-independent-exact-audit-20261010/scripts/independent.py")
+    spec = spec_from_file_location("n11_independent_boundary_geometry", path)
+    if spec is None or spec.loader is None:
+        raise ValueError("independent S6 geometry verifier is unavailable")
+    module = module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.Board(11)
+
+
+@lru_cache(maxsize=256)
+def _exact_s6_boundary(target: tuple[int, int]) -> frozenset[str]:
+    """Enumerate the canonical, legal S6 children of an exact S5 key."""
+    board = _independent_board()
+    mask = target[0] | (target[1] << 64)
+    return frozenset(f"{child & ((1 << 64) - 1)}:{child >> 64}"
+                     for child in board.children(mask))
 
 
 def _verified_independent_root(
@@ -125,6 +150,14 @@ def choose_strategy(
     # justify a terminal verdict: expected_children is only a caller claim.
     recovered = (fixed_first_outcome(5, list(saved.values()), expected_s6_children)
                  if children is not None else UNKNOWN)
+    # The caller's expected count and child list are not a completeness proof.
+    # Only a geometrically enumerated canonical boundary may close S5 via S6.
+    if recovered != UNKNOWN:
+        target = _checked_s5_key(target_s5_key, "target_s5_key")
+        exact_children = _exact_s6_boundary(target)
+        if (expected_s6_children != len(exact_children)
+                or set(children) != exact_children):
+            raise ValueError("CONFLICT S6 boundary differs from independent geometry")
     proof_verdict = _verified_independent_root(independent_proof, target_s5_key)
     if (proof_verdict is not None and direct_s5_verdict != UNKNOWN
             and proof_verdict != direct_s5_verdict):
