@@ -5189,6 +5189,27 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible audit for reverse s6-to-s5 integration and combined saved-s6 source history.
+## [research/experiments/n11-central-reply-frontier-20261012/README.md](../../../research/experiments/n11-central-reply-frontier-20261012/README.md)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 19初手軌道の中央後手応手境界、代替応手順位、次のexact探索候補
+## [research/experiments/n11-central-reply-frontier-20261012/output/cached-second-reply-ranking.json](../../../research/experiments/n11-central-reply-frontier-20261012/output/cached-second-reply-ranking.json)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 485 cache file検査、32 LOSS S4のK0414照合、19初手代表の中央・代替応手候補
+## [research/experiments/n11-central-reply-frontier-20261012/output/central-reply-frontier.json](../../../research/experiments/n11-central-reply-frontier-20261012/output/central-reply-frontier.json)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 19中央応手rootの全第三手表、S4/S5 boundary、未知境界、raw SHA検査、共有量、順位
+## [research/experiments/n11-central-reply-frontier-20261012/output/small-s5-probe-readiness.json](../../../research/experiments/n11-central-reply-frontier-20261012/output/small-s5-probe-readiness.json)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 9,517 S4 classの現状と、少数S5探索で閉じられる候補の有無
+## [research/experiments/n11-central-reply-frontier-20261012/scripts/analyze_central_reply_frontier.py](../../../research/experiments/n11-central-reply-frontier-20261012/scripts/analyze_central_reply_frontier.py)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): 独立整数幾何で19二石rootのS3/S4境界・119手被覆・cache/raw再利用を再構成
+## [research/experiments/n11-central-reply-frontier-20261012/scripts/rank_cached_second_replies.py](../../../research/experiments/n11-central-reply-frontier-20261012/scripts/rank_cached_second_replies.py)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): current exact S5 cacheから全cache-derived LOSS S4を逆引きし第二手を順位付け
+## [research/experiments/n11-central-reply-frontier-20261012/scripts/select_small_s5_probe.py](../../../research/experiments/n11-central-reply-frontier-20261012/scripts/select_small_s5_probe.py)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): 上位中央rootのUNKNOWN S4に必要なS5 exact子数と共有効果を測定
 ## [research/experiments/n11-cover-duality/output/center-corner-cover.json](../../../research/experiments/n11-cover-duality/output/center-corner-cover.json)
 
 - [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (certificate): n3/5/7/9/11/13/15の上界coverと分母2の下界dual

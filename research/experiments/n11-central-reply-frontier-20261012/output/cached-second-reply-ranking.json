@@ -1,0 +1,4203 @@
+{
+  "any_root_proven_loss_from_existing_cache_alone": false,
+  "best_noncentral_reply_orbit_global": {
+    "covered_third_move_ids": [
+      12,
+      56,
+      57,
+      60
+    ],
+    "first_move": 0,
+    "known_loss_s4_classes": 3,
+    "s5_cache_hits_below_known_loss_s4_classes": 314,
+    "second_move_orbit_members_under_first_stabilizer": [
+      63,
+      93
+    ],
+    "second_move_orbit_weight": 2,
+    "second_move_representative": 63,
+    "third_moves_with_known_loss_s4_response": 4,
+    "third_moves_without_known_loss_s4_response": 115,
+    "two_stone_root": [
+      0,
+      63
+    ],
+    "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+  },
+  "current_exact_s5_cache_rows": 5851,
+  "current_exact_s5_cache_sha256": "c469eff06559c57b7f4b679c80c1e576c7bddb6f69ea03da0b8b64d0ef4aa198",
+  "exact_search_launched": false,
+  "global_s4_loss_set_matches_k0414_witness_classes": true,
+  "globally_reconstructed_cache_derived_s4_loss_classes": 32,
+  "independent_geometry_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+  "method": "Enumerate every canonical S4 predecessor of a current exact S5 cache row; retain an S4 only if all independently regenerated legal S5 children are exact LOSS. Each retained four-stone set supplies both possible third/fourth move orders for each of its six two-stone subsets.",
+  "opening_orbit_count": 21,
+  "per_first_move": [
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          88,
+          98
+        ],
+        "first_move": 49,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 108,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          27,
+          49
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          13,
+          19,
+          27,
+          57,
+          63,
+          79,
+          85,
+          88,
+          93,
+          98
+        ],
+        "first_move": 49,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 312,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 10,
+        "third_moves_without_known_loss_s4_response": 109,
+        "two_stone_root": [
+          49,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 49,
+      "initial_orbit": [
+        0,
+        1
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            13,
+            19,
+            27,
+            57,
+            63,
+            79,
+            85,
+            88,
+            93,
+            98
+          ],
+          "first_move": 49,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 312,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 10,
+          "third_moves_without_known_loss_s4_response": 109,
+          "two_stone_root": [
+            49,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            88,
+            98
+          ],
+          "first_move": 49,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 108,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            27,
+            49
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            79,
+            85
+          ],
+          "first_move": 49,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            93
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 93,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            49,
+            93
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 49,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            13,
+            19
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 13,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            13,
+            49
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            19,
+            60
+          ],
+          "first_move": 49,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57,
+            63
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            49,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          77,
+          87
+        ],
+        "first_move": 38,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 104,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          27,
+          38
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          2,
+          8,
+          27,
+          57,
+          63,
+          77,
+          78,
+          86,
+          87,
+          93
+        ],
+        "first_move": 38,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 307,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 10,
+        "third_moves_without_known_loss_s4_response": 109,
+        "two_stone_root": [
+          38,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 38,
+      "initial_orbit": [
+        0,
+        2
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            2,
+            8,
+            27,
+            57,
+            63,
+            77,
+            78,
+            86,
+            87,
+            93
+          ],
+          "first_move": 38,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 307,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 10,
+          "third_moves_without_known_loss_s4_response": 109,
+          "two_stone_root": [
+            38,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            77,
+            87
+          ],
+          "first_move": 38,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 104,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            27,
+            38
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            78,
+            86
+          ],
+          "first_move": 38,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            93
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 93,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            38,
+            93
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 38,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 103,
+          "second_move_orbit_members_under_first_stabilizer": [
+            2,
+            8
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 2,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            2,
+            38
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            2,
+            60
+          ],
+          "first_move": 38,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 103,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57,
+            63
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            38,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          46,
+          52,
+          60
+        ],
+        "first_move": 16,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 100,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          16,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          0,
+          10,
+          24,
+          27,
+          30,
+          46,
+          52,
+          57,
+          63,
+          93
+        ],
+        "first_move": 16,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 305,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 10,
+        "third_moves_without_known_loss_s4_response": 109,
+        "two_stone_root": [
+          16,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 16,
+      "initial_orbit": [
+        0,
+        4
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            0,
+            10,
+            24,
+            27,
+            30,
+            46,
+            52,
+            57,
+            63,
+            93
+          ],
+          "first_move": 16,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 305,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 10,
+          "third_moves_without_known_loss_s4_response": 109,
+          "two_stone_root": [
+            16,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            46,
+            52,
+            60
+          ],
+          "first_move": 16,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            16,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            0,
+            10,
+            60
+          ],
+          "first_move": 16,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            93
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 93,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            16,
+            93
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 16,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            0,
+            10
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 0,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            0,
+            16
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 16,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            24,
+            30
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 24,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            16,
+            24
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          57,
+          60,
+          63
+        ],
+        "first_move": 5,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 102,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          5,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          35,
+          41,
+          57,
+          63,
+          93
+        ],
+        "first_move": 5,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 200,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 6,
+        "third_moves_without_known_loss_s4_response": 113,
+        "two_stone_root": [
+          5,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 5,
+      "initial_orbit": [
+        0,
+        5
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            35,
+            41,
+            57,
+            63,
+            93
+          ],
+          "first_move": 5,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 200,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 6,
+          "third_moves_without_known_loss_s4_response": 113,
+          "two_stone_root": [
+            5,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60,
+            63
+          ],
+          "first_move": 5,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 102,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            5,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            35,
+            41,
+            60
+          ],
+          "first_move": 5,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            93
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 93,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            5,
+            93
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 5,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            35,
+            41
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 35,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            5,
+            35
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            60
+          ],
+          "first_move": 5,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 102,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57,
+            63
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            5,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          27,
+          57,
+          60
+        ],
+        "first_move": 48,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 98,
+        "second_move_orbit_members_under_first_stabilizer": [
+          12
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 12,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          12,
+          48
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          7,
+          12,
+          27,
+          57,
+          63,
+          77,
+          93
+        ],
+        "first_move": 48,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 208,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 7,
+        "third_moves_without_known_loss_s4_response": 112,
+        "two_stone_root": [
+          48,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 48,
+      "initial_orbit": [
+        1,
+        1
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            7,
+            12,
+            27,
+            57,
+            63,
+            77,
+            93
+          ],
+          "first_move": 48,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 208,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 7,
+          "third_moves_without_known_loss_s4_response": 112,
+          "two_stone_root": [
+            48,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            57,
+            60
+          ],
+          "first_move": 48,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            12
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 12,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            12,
+            48
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 48,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 110,
+          "second_move_orbit_members_under_first_stabilizer": [
+            7,
+            77
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 7,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            7,
+            48
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            12,
+            60
+          ],
+          "first_move": 48,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27,
+            57
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            27,
+            48
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            7,
+            60
+          ],
+          "first_move": 48,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 110,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63,
+            93
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            48,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 37,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 96,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          27,
+          37
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          57,
+          63,
+          93
+        ],
+        "first_move": 37,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 189,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 4,
+        "third_moves_without_known_loss_s4_response": 115,
+        "two_stone_root": [
+          37,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 37,
+      "initial_orbit": [
+        1,
+        2
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            57,
+            63,
+            93
+          ],
+          "first_move": 37,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 189,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 4,
+          "third_moves_without_known_loss_s4_response": 115,
+          "two_stone_root": [
+            37,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 37,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 96,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            27,
+            37
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 37,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 96,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            37,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 37,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 96,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            37,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            60
+          ],
+          "first_move": 37,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 96,
+          "second_move_orbit_members_under_first_stabilizer": [
+            93
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 93,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            37,
+            93
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          27,
+          60,
+          63
+        ],
+        "first_move": 26,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 97,
+        "second_move_orbit_members_under_first_stabilizer": [
+          74
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 74,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          26,
+          74
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          34,
+          56,
+          57,
+          63,
+          74,
+          93
+        ],
+        "first_move": 26,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 308,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 7,
+        "third_moves_without_known_loss_s4_response": 112,
+        "two_stone_root": [
+          26,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 26,
+      "initial_orbit": [
+        1,
+        3
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            34,
+            56,
+            57,
+            63,
+            74,
+            93
+          ],
+          "first_move": 26,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 308,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 7,
+          "third_moves_without_known_loss_s4_response": 112,
+          "two_stone_root": [
+            26,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            60,
+            63
+          ],
+          "first_move": 26,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 97,
+          "second_move_orbit_members_under_first_stabilizer": [
+            74
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 74,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            26,
+            74
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            74
+          ],
+          "first_move": 26,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 97,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            26,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 26,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 111,
+          "second_move_orbit_members_under_first_stabilizer": [
+            34
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 34,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            26,
+            34
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 26,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            56
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 56,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            26,
+            56
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          63,
+          93
+        ],
+        "first_move": 15,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 103,
+        "second_move_orbit_members_under_first_stabilizer": [
+          45
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 45,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          15,
+          45
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          45,
+          57,
+          63,
+          93
+        ],
+        "first_move": 15,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 208,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 5,
+        "third_moves_without_known_loss_s4_response": 114,
+        "two_stone_root": [
+          15,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 15,
+      "initial_orbit": [
+        1,
+        4
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            45,
+            57,
+            63,
+            93
+          ],
+          "first_move": 15,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 208,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 5,
+          "third_moves_without_known_loss_s4_response": 114,
+          "two_stone_root": [
+            15,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63,
+            93
+          ],
+          "first_move": 15,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 103,
+          "second_move_orbit_members_under_first_stabilizer": [
+            45
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 45,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            15,
+            45
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 15,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            15,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            60
+          ],
+          "first_move": 15,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            15,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            45,
+            60
+          ],
+          "first_move": 15,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 103,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            15,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 4,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 105,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          4,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          57,
+          63,
+          93
+        ],
+        "first_move": 4,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 207,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 4,
+        "third_moves_without_known_loss_s4_response": 115,
+        "two_stone_root": [
+          4,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 4,
+      "initial_orbit": [
+        1,
+        5
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            57,
+            63,
+            93
+          ],
+          "first_move": 4,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 207,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 4,
+          "third_moves_without_known_loss_s4_response": 115,
+          "two_stone_root": [
+            4,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 4,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            4,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 4,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            4,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 4,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            4,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            60
+          ],
+          "first_move": 4,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            93
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 93,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            4,
+            93
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 36,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 100,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27,
+          57
+        ],
+        "second_move_orbit_weight": 2,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          27,
+          36
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          57,
+          63,
+          93
+        ],
+        "first_move": 36,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 100,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 4,
+        "third_moves_without_known_loss_s4_response": 115,
+        "two_stone_root": [
+          36,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 36,
+      "initial_orbit": [
+        2,
+        2
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            57,
+            63,
+            93
+          ],
+          "first_move": 36,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 4,
+          "third_moves_without_known_loss_s4_response": 115,
+          "two_stone_root": [
+            36,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 36,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27,
+            57
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            27,
+            36
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 36,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63,
+            93
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            36,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [],
+          "first_move": 36,
+          "known_loss_s4_classes": 0,
+          "s5_cache_hits_below_known_loss_s4_classes": 0,
+          "second_move_orbit_members_under_first_stabilizer": [
+            0
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 0,
+          "third_moves_with_known_loss_s4_response": 0,
+          "third_moves_without_known_loss_s4_response": 119,
+          "two_stone_root": [
+            0,
+            36
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [],
+          "first_move": 36,
+          "known_loss_s4_classes": 0,
+          "s5_cache_hits_below_known_loss_s4_classes": 0,
+          "second_move_orbit_members_under_first_stabilizer": [
+            1,
+            11
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 1,
+          "third_moves_with_known_loss_s4_response": 0,
+          "third_moves_without_known_loss_s4_response": 119,
+          "two_stone_root": [
+            1,
+            36
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 25,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 100,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          25,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          55,
+          57,
+          61,
+          63,
+          93
+        ],
+        "first_move": 25,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 296,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 6,
+        "third_moves_without_known_loss_s4_response": 113,
+        "two_stone_root": [
+          25,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 25,
+      "initial_orbit": [
+        2,
+        3
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            55,
+            57,
+            61,
+            63,
+            93
+          ],
+          "first_move": 25,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 296,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 6,
+          "third_moves_without_known_loss_s4_response": 113,
+          "two_stone_root": [
+            25,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 25,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            25,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 25,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            55
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 55,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            25,
+            55
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            61
+          ],
+          "first_move": 25,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            25,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 25,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            61
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 61,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            25,
+            61
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 14,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 105,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          14,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          46,
+          57,
+          62,
+          63,
+          93
+        ],
+        "first_move": 14,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 316,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 6,
+        "third_moves_without_known_loss_s4_response": 113,
+        "two_stone_root": [
+          14,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 14,
+      "initial_orbit": [
+        2,
+        4
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            46,
+            57,
+            62,
+            63,
+            93
+          ],
+          "first_move": 14,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 316,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 6,
+          "third_moves_without_known_loss_s4_response": 113,
+          "two_stone_root": [
+            14,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 14,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            14,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 14,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 111,
+          "second_move_orbit_members_under_first_stabilizer": [
+            46
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 46,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            14,
+            46
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            62
+          ],
+          "first_move": 14,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            14,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 14,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            62
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 62,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            14,
+            62
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 3,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 105,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          3,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          50,
+          57,
+          62,
+          63,
+          93
+        ],
+        "first_move": 3,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 319,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 6,
+        "third_moves_without_known_loss_s4_response": 113,
+        "two_stone_root": [
+          3,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 3,
+      "initial_orbit": [
+        2,
+        5
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            50,
+            57,
+            62,
+            63,
+            93
+          ],
+          "first_move": 3,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 319,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 6,
+          "third_moves_without_known_loss_s4_response": 113,
+          "two_stone_root": [
+            3,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 3,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            3,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 3,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 110,
+          "second_move_orbit_members_under_first_stabilizer": [
+            50
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 50,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            3,
+            50
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            50,
+            60
+          ],
+          "first_move": 3,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 110,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            3,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 3,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 104,
+          "second_move_orbit_members_under_first_stabilizer": [
+            62
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 62,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            3,
+            62
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          57,
+          60
+        ],
+        "first_move": 24,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 100,
+        "second_move_orbit_members_under_first_stabilizer": [
+          13,
+          23
+        ],
+        "second_move_orbit_weight": 2,
+        "second_move_representative": 13,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          13,
+          24
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          13,
+          16,
+          23,
+          27,
+          56,
+          57,
+          63,
+          93
+        ],
+        "first_move": 24,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 200,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 8,
+        "third_moves_without_known_loss_s4_response": 111,
+        "two_stone_root": [
+          24,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 24,
+      "initial_orbit": [
+        3,
+        3
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            13,
+            16,
+            23,
+            27,
+            56,
+            57,
+            63,
+            93
+          ],
+          "first_move": 24,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 200,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 8,
+          "third_moves_without_known_loss_s4_response": 111,
+          "two_stone_root": [
+            24,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 24,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            13,
+            23
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 13,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            13,
+            24
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 24,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            16,
+            56
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 16,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            16,
+            24
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            23,
+            60
+          ],
+          "first_move": 24,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27,
+            57
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            24,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            16,
+            60
+          ],
+          "first_move": 24,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63,
+            93
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            24,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          57,
+          60
+        ],
+        "first_move": 13,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 100,
+        "second_move_orbit_members_under_first_stabilizer": [
+          24
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 24,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          13,
+          24
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          24,
+          27,
+          49,
+          57,
+          63,
+          93
+        ],
+        "first_move": 13,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 313,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 6,
+        "third_moves_without_known_loss_s4_response": 113,
+        "two_stone_root": [
+          13,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 13,
+      "initial_orbit": [
+        3,
+        4
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            24,
+            27,
+            49,
+            57,
+            63,
+            93
+          ],
+          "first_move": 13,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 313,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 6,
+          "third_moves_without_known_loss_s4_response": 113,
+          "two_stone_root": [
+            13,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 13,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            24
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 24,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            13,
+            24
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 13,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 107,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            13,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 13,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            49
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 49,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            13,
+            49
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            24,
+            60
+          ],
+          "first_move": 13,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 100,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            13,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 2,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 107,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          2,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          38,
+          57,
+          61,
+          63,
+          93
+        ],
+        "first_move": 2,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 318,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 6,
+        "third_moves_without_known_loss_s4_response": 113,
+        "two_stone_root": [
+          2,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 2,
+      "initial_orbit": [
+        3,
+        5
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            38,
+            57,
+            61,
+            63,
+            93
+          ],
+          "first_move": 2,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 318,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 6,
+          "third_moves_without_known_loss_s4_response": 113,
+          "two_stone_root": [
+            2,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 2,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 107,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            2,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 2,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 103,
+          "second_move_orbit_members_under_first_stabilizer": [
+            38
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 38,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            2,
+            38
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            38,
+            60
+          ],
+          "first_move": 2,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 103,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            2,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 2,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 108,
+          "second_move_orbit_members_under_first_stabilizer": [
+            61
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 61,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            2,
+            61
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          63,
+          93
+        ],
+        "first_move": 12,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 106,
+        "second_move_orbit_members_under_first_stabilizer": [
+          0
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 0,
+        "third_moves_with_known_loss_s4_response": 3,
+        "third_moves_without_known_loss_s4_response": 116,
+        "two_stone_root": [
+          0,
+          12
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          0,
+          27,
+          48,
+          57,
+          63,
+          93
+        ],
+        "first_move": 12,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 204,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 6,
+        "third_moves_without_known_loss_s4_response": 113,
+        "two_stone_root": [
+          12,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+      },
+      "first_move": 12,
+      "initial_orbit": [
+        4,
+        4
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            0,
+            27,
+            48,
+            57,
+            63,
+            93
+          ],
+          "first_move": 12,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 204,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 6,
+          "third_moves_without_known_loss_s4_response": 113,
+          "two_stone_root": [
+            12,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63,
+            93
+          ],
+          "first_move": 12,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            0
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 0,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            0,
+            12
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            57,
+            60
+          ],
+          "first_move": 12,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            48
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 48,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            12,
+            48
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            48,
+            60
+          ],
+          "first_move": 12,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 98,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27,
+            57
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            12,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            0,
+            60
+          ],
+          "first_move": 12,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63,
+            93
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            12,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          60,
+          93
+        ],
+        "first_move": 1,
+        "known_loss_s4_classes": 1,
+        "s5_cache_hits_below_known_loss_s4_classes": 104,
+        "second_move_orbit_members_under_first_stabilizer": [
+          27
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 27,
+        "third_moves_with_known_loss_s4_response": 2,
+        "third_moves_without_known_loss_s4_response": 117,
+        "two_stone_root": [
+          1,
+          27
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          27,
+          57,
+          63,
+          93
+        ],
+        "first_move": 1,
+        "known_loss_s4_classes": 2,
+        "s5_cache_hits_below_known_loss_s4_classes": 207,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 4,
+        "third_moves_without_known_loss_s4_response": 115,
+        "two_stone_root": [
+          1,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+      },
+      "first_move": 1,
+      "initial_orbit": [
+        4,
+        5
+      ],
+      "initial_orbit_size": 8,
+      "second_move_reply_orbits": 120,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            27,
+            57,
+            63,
+            93
+          ],
+          "first_move": 1,
+          "known_loss_s4_classes": 2,
+          "s5_cache_hits_below_known_loss_s4_classes": 207,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 4,
+          "third_moves_without_known_loss_s4_response": 115,
+          "two_stone_root": [
+            1,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 1,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 104,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            1,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63
+          ],
+          "first_move": 1,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 107,
+          "second_move_orbit_members_under_first_stabilizer": [
+            57
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 57,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            1,
+            57
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            57,
+            60
+          ],
+          "first_move": 1,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 107,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            1,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            27,
+            60
+          ],
+          "first_move": 1,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 104,
+          "second_move_orbit_members_under_first_stabilizer": [
+            93
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 93,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            1,
+            93
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    },
+    {
+      "best_noncentral_reply": {
+        "covered_third_move_ids": [
+          12,
+          56,
+          57,
+          60
+        ],
+        "first_move": 0,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 314,
+        "second_move_orbit_members_under_first_stabilizer": [
+          63,
+          93
+        ],
+        "second_move_orbit_weight": 2,
+        "second_move_representative": 63,
+        "third_moves_with_known_loss_s4_response": 4,
+        "third_moves_without_known_loss_s4_response": 115,
+        "two_stone_root": [
+          0,
+          63
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+      },
+      "central_reply_60": {
+        "covered_third_move_ids": [
+          12,
+          16,
+          27,
+          56,
+          57,
+          63,
+          93
+        ],
+        "first_move": 0,
+        "known_loss_s4_classes": 3,
+        "s5_cache_hits_below_known_loss_s4_classes": 314,
+        "second_move_orbit_members_under_first_stabilizer": [
+          60
+        ],
+        "second_move_orbit_weight": 1,
+        "second_move_representative": 60,
+        "third_moves_with_known_loss_s4_response": 7,
+        "third_moves_without_known_loss_s4_response": 112,
+        "two_stone_root": [
+          0,
+          60
+        ],
+        "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+      },
+      "first_move": 0,
+      "initial_orbit": [
+        5,
+        5
+      ],
+      "initial_orbit_size": 4,
+      "second_move_reply_orbits": 65,
+      "top_five_replies_by_existing_loss_s4_coverage": [
+        {
+          "covered_third_move_ids": [
+            12,
+            16,
+            27,
+            56,
+            57,
+            63,
+            93
+          ],
+          "first_move": 0,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 314,
+          "second_move_orbit_members_under_first_stabilizer": [
+            60
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 60,
+          "third_moves_with_known_loss_s4_response": 7,
+          "third_moves_without_known_loss_s4_response": 112,
+          "two_stone_root": [
+            0,
+            60
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+        },
+        {
+          "covered_third_move_ids": [
+            12,
+            56,
+            57,
+            60
+          ],
+          "first_move": 0,
+          "known_loss_s4_classes": 3,
+          "s5_cache_hits_below_known_loss_s4_classes": 314,
+          "second_move_orbit_members_under_first_stabilizer": [
+            63,
+            93
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 63,
+          "third_moves_with_known_loss_s4_response": 4,
+          "third_moves_without_known_loss_s4_response": 115,
+          "two_stone_root": [
+            0,
+            63
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            63,
+            93
+          ],
+          "first_move": 0,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 106,
+          "second_move_orbit_members_under_first_stabilizer": [
+            12
+          ],
+          "second_move_orbit_weight": 1,
+          "second_move_representative": 12,
+          "third_moves_with_known_loss_s4_response": 3,
+          "third_moves_without_known_loss_s4_response": 116,
+          "two_stone_root": [
+            0,
+            12
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 0,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            16,
+            56
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 16,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            0,
+            16
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        },
+        {
+          "covered_third_move_ids": [
+            60,
+            93
+          ],
+          "first_move": 0,
+          "known_loss_s4_classes": 1,
+          "s5_cache_hits_below_known_loss_s4_classes": 105,
+          "second_move_orbit_members_under_first_stabilizer": [
+            27,
+            57
+          ],
+          "second_move_orbit_weight": 2,
+          "second_move_representative": 27,
+          "third_moves_with_known_loss_s4_response": 2,
+          "third_moves_without_known_loss_s4_response": 117,
+          "two_stone_root": [
+            0,
+            27
+          ],
+          "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+        }
+      ]
+    }
+  ],
+  "ranking_limit": "S4 coverage and cache hit counts are finite-boundary metrics, not solver node/runtime guarantees.",
+  "schema": "n11-cached-second-reply-loss-s4-ranking-v1",
+  "scope_limit": "This reverse index covers cache-derived S4 LOSS only. Terminal S4 positions with no legal fifth move are outside the predecessor index; no candidate is promoted without full pair-boundary validation.",
+  "standalone_s4_exact_cache_files": [],
+  "top_40_second_move_orbits_global": [
+    {
+      "covered_third_move_ids": [
+        13,
+        19,
+        27,
+        57,
+        63,
+        79,
+        85,
+        88,
+        93,
+        98
+      ],
+      "first_move": 49,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 312,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 10,
+      "third_moves_without_known_loss_s4_response": 109,
+      "two_stone_root": [
+        49,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        2,
+        8,
+        27,
+        57,
+        63,
+        77,
+        78,
+        86,
+        87,
+        93
+      ],
+      "first_move": 38,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 307,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 10,
+      "third_moves_without_known_loss_s4_response": 109,
+      "two_stone_root": [
+        38,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        0,
+        10,
+        24,
+        27,
+        30,
+        46,
+        52,
+        57,
+        63,
+        93
+      ],
+      "first_move": 16,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 305,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 10,
+      "third_moves_without_known_loss_s4_response": 109,
+      "two_stone_root": [
+        16,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        13,
+        16,
+        23,
+        27,
+        56,
+        57,
+        63,
+        93
+      ],
+      "first_move": 24,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 200,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 8,
+      "third_moves_without_known_loss_s4_response": 111,
+      "two_stone_root": [
+        24,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        12,
+        16,
+        27,
+        56,
+        57,
+        63,
+        93
+      ],
+      "first_move": 0,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 314,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 7,
+      "third_moves_without_known_loss_s4_response": 112,
+      "two_stone_root": [
+        0,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        34,
+        56,
+        57,
+        63,
+        74,
+        93
+      ],
+      "first_move": 26,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 308,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 7,
+      "third_moves_without_known_loss_s4_response": 112,
+      "two_stone_root": [
+        26,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        7,
+        12,
+        27,
+        57,
+        63,
+        77,
+        93
+      ],
+      "first_move": 48,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 208,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 7,
+      "third_moves_without_known_loss_s4_response": 112,
+      "two_stone_root": [
+        48,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        50,
+        57,
+        62,
+        63,
+        93
+      ],
+      "first_move": 3,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 319,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 6,
+      "third_moves_without_known_loss_s4_response": 113,
+      "two_stone_root": [
+        3,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        38,
+        57,
+        61,
+        63,
+        93
+      ],
+      "first_move": 2,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 318,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 6,
+      "third_moves_without_known_loss_s4_response": 113,
+      "two_stone_root": [
+        2,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        46,
+        57,
+        62,
+        63,
+        93
+      ],
+      "first_move": 14,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 316,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 6,
+      "third_moves_without_known_loss_s4_response": 113,
+      "two_stone_root": [
+        14,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        24,
+        27,
+        49,
+        57,
+        63,
+        93
+      ],
+      "first_move": 13,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 313,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 6,
+      "third_moves_without_known_loss_s4_response": 113,
+      "two_stone_root": [
+        13,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        55,
+        57,
+        61,
+        63,
+        93
+      ],
+      "first_move": 25,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 296,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 6,
+      "third_moves_without_known_loss_s4_response": 113,
+      "two_stone_root": [
+        25,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        0,
+        27,
+        48,
+        57,
+        63,
+        93
+      ],
+      "first_move": 12,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 204,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 6,
+      "third_moves_without_known_loss_s4_response": 113,
+      "two_stone_root": [
+        12,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        35,
+        41,
+        57,
+        63,
+        93
+      ],
+      "first_move": 5,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 200,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 6,
+      "third_moves_without_known_loss_s4_response": 113,
+      "two_stone_root": [
+        5,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        45,
+        57,
+        63,
+        93
+      ],
+      "first_move": 15,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 208,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 5,
+      "third_moves_without_known_loss_s4_response": 114,
+      "two_stone_root": [
+        15,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        12,
+        56,
+        57,
+        60
+      ],
+      "first_move": 0,
+      "known_loss_s4_classes": 3,
+      "s5_cache_hits_below_known_loss_s4_classes": 314,
+      "second_move_orbit_members_under_first_stabilizer": [
+        63,
+        93
+      ],
+      "second_move_orbit_weight": 2,
+      "second_move_representative": 63,
+      "third_moves_with_known_loss_s4_response": 4,
+      "third_moves_without_known_loss_s4_response": 115,
+      "two_stone_root": [
+        0,
+        63
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        57,
+        63,
+        93
+      ],
+      "first_move": 1,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 207,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 4,
+      "third_moves_without_known_loss_s4_response": 115,
+      "two_stone_root": [
+        1,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        57,
+        63,
+        93
+      ],
+      "first_move": 4,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 207,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 4,
+      "third_moves_without_known_loss_s4_response": 115,
+      "two_stone_root": [
+        4,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        57,
+        63,
+        93
+      ],
+      "first_move": 37,
+      "known_loss_s4_classes": 2,
+      "s5_cache_hits_below_known_loss_s4_classes": 189,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 4,
+      "third_moves_without_known_loss_s4_response": 115,
+      "two_stone_root": [
+        37,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        57,
+        63,
+        93
+      ],
+      "first_move": 36,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 100,
+      "second_move_orbit_members_under_first_stabilizer": [
+        60
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 60,
+      "third_moves_with_known_loss_s4_response": 4,
+      "third_moves_without_known_loss_s4_response": 115,
+      "two_stone_root": [
+        36,
+        60
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        63,
+        93
+      ],
+      "first_move": 0,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 106,
+      "second_move_orbit_members_under_first_stabilizer": [
+        12
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 12,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        0,
+        12
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        63,
+        93
+      ],
+      "first_move": 12,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 106,
+      "second_move_orbit_members_under_first_stabilizer": [
+        0
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 0,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        0,
+        12
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        88,
+        98
+      ],
+      "first_move": 49,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 108,
+      "second_move_orbit_members_under_first_stabilizer": [
+        27
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 27,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        27,
+        49
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        0,
+        10,
+        60
+      ],
+      "first_move": 16,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 105,
+      "second_move_orbit_members_under_first_stabilizer": [
+        93
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 93,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        16,
+        93
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        77,
+        87
+      ],
+      "first_move": 38,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 104,
+      "second_move_orbit_members_under_first_stabilizer": [
+        27
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 27,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        27,
+        38
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        63,
+        93
+      ],
+      "first_move": 15,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 103,
+      "second_move_orbit_members_under_first_stabilizer": [
+        45
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 45,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        15,
+        45
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        57,
+        60,
+        63
+      ],
+      "first_move": 5,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 102,
+      "second_move_orbit_members_under_first_stabilizer": [
+        27
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 27,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        5,
+        27
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        46,
+        52,
+        60
+      ],
+      "first_move": 16,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 100,
+      "second_move_orbit_members_under_first_stabilizer": [
+        27
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 27,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        16,
+        27
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        78,
+        86
+      ],
+      "first_move": 38,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 100,
+      "second_move_orbit_members_under_first_stabilizer": [
+        93
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 93,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        38,
+        93
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        35,
+        41,
+        60
+      ],
+      "first_move": 5,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 98,
+      "second_move_orbit_members_under_first_stabilizer": [
+        93
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 93,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        5,
+        93
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        57,
+        60
+      ],
+      "first_move": 12,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 98,
+      "second_move_orbit_members_under_first_stabilizer": [
+        48
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 48,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        12,
+        48
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        57,
+        60
+      ],
+      "first_move": 48,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 98,
+      "second_move_orbit_members_under_first_stabilizer": [
+        12
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 12,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        12,
+        48
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        79,
+        85
+      ],
+      "first_move": 49,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 98,
+      "second_move_orbit_members_under_first_stabilizer": [
+        93
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 93,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        49,
+        93
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        27,
+        60,
+        63
+      ],
+      "first_move": 26,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 97,
+      "second_move_orbit_members_under_first_stabilizer": [
+        74
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 74,
+      "third_moves_with_known_loss_s4_response": 3,
+      "third_moves_without_known_loss_s4_response": 116,
+      "two_stone_root": [
+        26,
+        74
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        0,
+        60
+      ],
+      "first_move": 12,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 106,
+      "second_move_orbit_members_under_first_stabilizer": [
+        63,
+        93
+      ],
+      "second_move_orbit_weight": 2,
+      "second_move_representative": 63,
+      "third_moves_with_known_loss_s4_response": 2,
+      "third_moves_without_known_loss_s4_response": 117,
+      "two_stone_root": [
+        12,
+        63
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 65
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        63
+      ],
+      "first_move": 14,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 111,
+      "second_move_orbit_members_under_first_stabilizer": [
+        46
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 46,
+      "third_moves_with_known_loss_s4_response": 2,
+      "third_moves_without_known_loss_s4_response": 117,
+      "two_stone_root": [
+        14,
+        46
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        46,
+        60
+      ],
+      "first_move": 14,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 111,
+      "second_move_orbit_members_under_first_stabilizer": [
+        63
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 63,
+      "third_moves_with_known_loss_s4_response": 2,
+      "third_moves_without_known_loss_s4_response": 117,
+      "two_stone_root": [
+        14,
+        63
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        60,
+        93
+      ],
+      "first_move": 26,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 111,
+      "second_move_orbit_members_under_first_stabilizer": [
+        34
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 34,
+      "third_moves_with_known_loss_s4_response": 2,
+      "third_moves_without_known_loss_s4_response": 117,
+      "two_stone_root": [
+        26,
+        34
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        34,
+        60
+      ],
+      "first_move": 26,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 111,
+      "second_move_orbit_members_under_first_stabilizer": [
+        93
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 93,
+      "third_moves_with_known_loss_s4_response": 2,
+      "third_moves_without_known_loss_s4_response": 117,
+      "two_stone_root": [
+        26,
+        93
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    },
+    {
+      "covered_third_move_ids": [
+        57,
+        60
+      ],
+      "first_move": 3,
+      "known_loss_s4_classes": 1,
+      "s5_cache_hits_below_known_loss_s4_classes": 110,
+      "second_move_orbit_members_under_first_stabilizer": [
+        50
+      ],
+      "second_move_orbit_weight": 1,
+      "second_move_representative": 50,
+      "third_moves_with_known_loss_s4_response": 2,
+      "third_moves_without_known_loss_s4_response": 117,
+      "two_stone_root": [
+        3,
+        50
+      ],
+      "validated_saved_s5_raw_hits_below_known_loss_s4_classes": 0
+    }
+  ],
+  "tracked_research_cache_files_inspected": 485,
+  "unresolved_opening_orbit_count": 19
+}
