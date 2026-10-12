@@ -1,0 +1,428 @@
+{
+  "baseline_all_s4_counts": {
+    "LOSS": 31,
+    "UNKNOWN": 3079,
+    "WIN": 274
+  },
+  "baseline_cache": {
+    "LOSS": 5626,
+    "WIN": 159,
+    "frozen_copy": "research/experiments/n11-s4-boundary-direct-20261012/input/baseline-exact-s5.cache",
+    "path": "research\\experiments\\n11-reply27-20more-20261011\\output\\merged-exact-s5.cache",
+    "quarantine_rows": 0,
+    "rows": 5785,
+    "sha256": "2a873e3312f355dbc0cc2472438c9304b1a647fb04396c6645762d70676bd27f"
+  },
+  "baseline_remaining_third_moves": [
+    100,
+    108
+  ],
+  "baseline_secured_third_moves": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120
+  ],
+  "baseline_target_counts": {
+    "LOSS": 40,
+    "UNKNOWN": 66,
+    "WIN": 0
+  },
+  "history": {
+    "actual_replay_rows": 18441,
+    "history_index_path": "research\\experiments\\n11-strategy-redesign-20261010\\output\\history.json",
+    "history_index_sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e",
+    "manifest_indexed_rows": 18389,
+    "raw_history_manifest_sha256": "3b9313e6d02e5142ba80d162bac175a07a1d8054730ee5cb2a2cc35cc4b2c2a1",
+    "scanned_files": 11893,
+    "source_manifest_path": "research\\experiments\\n11-strategy-redesign-20261010\\output\\history-sources.json",
+    "target_unknown_s5_15m_unknown_count": 0,
+    "target_unknown_s5_raw_rows": 0,
+    "target_unknown_s5_with_partial_saved_s6_exact": 6,
+    "target_unknown_s5_with_saved_s6_loss": 0,
+    "unindexed_raw_row_delta": 52,
+    "verified_bytes": 2748859,
+    "verified_source_files": 6951
+  },
+  "independent_geometry": {
+    "all_3384_boundaries_regenerated": true,
+    "path": "research\\experiments\\n11-strategy-redesign-20261010\\output\\geometry.json.gz",
+    "sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+    "source": "research\\experiments\\n11-independent-exact-audit-20261010\\scripts\\independent.py",
+    "source_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f"
+  },
+  "live_candidate_class_count": 61,
+  "schema": "n11-s4-direct-s5-first-batch-selection-v1",
+  "selected": [
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-00.csv",
+      "input_sha256": "952fb117f6bc27a7d887e6dd532049beb42bf1eecc0ad4da961c1e15a31fc8f2",
+      "key": [
+        1152921504607899649,
+        536870912
+      ],
+      "legal": 98,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1152921504606852096,
+          536870912
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count low stratum; reuse accounting includes two prior exact S6 WIN children, no S6 LOSS witness",
+      "saved_s6_exact_children": 2,
+      "saved_s6_exact_rows": 6,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 2,
+      "saved_s6_win_rows": 6,
+      "sequence": 0,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-01.csv",
+      "input_sha256": "3854391b8e058e8d480999a80fa0c1fe184218927bfc60820eb7b8d95b100561",
+      "key": [
+        1152921504606851585,
+        536870912
+      ],
+      "legal": 99,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1152921504606851584,
+          536870912
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count low/middle stratum; no prior S5 raw and no exact S6 raw hit",
+      "saved_s6_exact_children": 0,
+      "saved_s6_exact_rows": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 0,
+      "saved_s6_win_rows": 0,
+      "sequence": 1,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-02.csv",
+      "input_sha256": "c5126a1203058640a1ff4b52e444e2a9fd4f73d684ad5c98e0e803ae7f1d5c72",
+      "key": [
+        1152921504607896576,
+        536879104
+      ],
+      "legal": 101,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1152921504607895552,
+          536879104
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count middle stratum; no prior S5 raw and no exact S6 raw hit",
+      "saved_s6_exact_children": 0,
+      "saved_s6_exact_rows": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 0,
+      "saved_s6_win_rows": 0,
+      "sequence": 2,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-03.csv",
+      "input_sha256": "9ababc0a5ade4a418e889e78aedeedf6eca71ba9132d7b75fdaa2c1b7c6f3c84",
+      "key": [
+        1152921504612090880,
+        536870912
+      ],
+      "legal": 105,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1152921504612089856,
+          536870912
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count high stratum (105); no prior S5 raw and no exact S6 raw hit",
+      "saved_s6_exact_children": 0,
+      "saved_s6_exact_rows": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 0,
+      "saved_s6_win_rows": 0,
+      "sequence": 3,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-04.csv",
+      "input_sha256": "30866a9e13274383584481846472beb4193e031427ed0f74814744cffed2fb89",
+      "key": [
+        1297036692683752704,
+        0
+      ],
+      "legal": 96,
+      "live_parent_count": 1,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "single-parent; legal-count low stratum (96); no prior S5 raw and no exact S6 raw hit",
+      "saved_s6_exact_children": 0,
+      "saved_s6_exact_rows": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 0,
+      "saved_s6_win_rows": 0,
+      "sequence": 4,
+      "sharing": "single"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-05.csv",
+      "input_sha256": "9f447bf7fb33ebf8f5f5c4847d843983696e26a4d5ff13081105a38f4a9ee2e9",
+      "key": [
+        1297036692683785216,
+        0
+      ],
+      "legal": 96,
+      "live_parent_count": 1,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "single-parent; legal-count low stratum (96); retain one partial saved S6 WIN case",
+      "saved_s6_exact_children": 1,
+      "saved_s6_exact_rows": 2,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 1,
+      "saved_s6_win_rows": 2,
+      "sequence": 5,
+      "sharing": "single"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-06.csv",
+      "input_sha256": "eaf2048fa9724dec41e06aaf4e5bf0902b3b21d9e88ef93a3ee8b9a09799ebe5",
+      "key": [
+        1297036692683752448,
+        8
+      ],
+      "legal": 100,
+      "live_parent_count": 1,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "single-parent; legal-count middle stratum (100); no prior S5 raw and no exact S6 raw hit",
+      "saved_s6_exact_children": 0,
+      "saved_s6_exact_rows": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 0,
+      "saved_s6_win_rows": 0,
+      "sequence": 6,
+      "sharing": "single"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-07.csv",
+      "input_sha256": "770fa1cd967b76f8134974735d464c5ad7b5c6c390a568168358bed4a15e3761",
+      "key": [
+        1152921513197831168,
+        536870912
+      ],
+      "legal": 103,
+      "live_parent_count": 1,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "single-parent; legal-count high stratum (103); retain a partial saved S6 WIN case",
+      "saved_s6_exact_children": 3,
+      "saved_s6_exact_rows": 3,
+      "saved_s6_loss_children": 0,
+      "saved_s6_loss_rows": 0,
+      "saved_s6_win_children": 3,
+      "saved_s6_win_rows": 3,
+      "sequence": 7,
+      "sharing": "single"
+    }
+  ],
+  "selection_rule": "fixed 4 shared + 4 single; legal-count range 96..105; no S5 raw history or >=15M UNKNOWN; include three cases with partial exact S6 WIN raw; no saved S6 LOSS witness exists",
+  "solver": {
+    "binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+    "build_manifest": "research\\experiments\\n11-s5-loss-cost-drivers-20261012\\input\\child-profile-build.json",
+    "build_manifest_sha256": "8635b3e587665790364f38d61b0f161671808bd7411c2c510a961f76fdb0f693",
+    "flags": [
+      "--n=11",
+      "--memo=22",
+      "--only=5",
+      "--exact-order=count",
+      "--exact-replay-budget=15000000"
+    ],
+    "frozen_build_manifest": "research/experiments/n11-s4-boundary-direct-20261012/input/solver-build.json",
+    "mode": "cold exact replay; one target per fresh process; profile off",
+    "profile_regression": "research/experiments/n11-s5-loss-cost-drivers-20261012/output/profile-regression-v4/receipt.json",
+    "source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446"
+  },
+  "source_main_commit": "1bdd30b71adaf8f476a98922f1b454bdd369feb3",
+  "target_s4": [
+    1297036692683752448,
+    0
+  ],
+  "target_s4_children": 106,
+  "target_unknown_s5_shared": 45,
+  "target_unknown_s5_single": 21
+}

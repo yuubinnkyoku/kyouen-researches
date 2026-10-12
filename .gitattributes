@@ -17,6 +17,8 @@
 
 # Research run outputs carry byte-level SHA-256 manifests; preserve their original bytes.
 research/experiments/n11-boundary-recovery-20261006/output/** -text
+research/experiments/n11-s4-boundary-direct-20261012/input/** -text !eol whitespace=cr-at-eol
+research/experiments/n11-s4-boundary-direct-20261012/output/** -text !eol whitespace=cr-at-eol
 research/experiments/n11-s5-loss-cost-drivers-20261012/** -text whitespace=cr-at-eol
 research/experiments/n11-strategy-redesign-20261010/output/** -text
 research/experiments/n11-proof-dag-engine-followup-20261011/output/** -text whitespace=cr-at-eol

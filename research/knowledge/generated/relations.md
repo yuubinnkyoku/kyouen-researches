@@ -36,6 +36,7 @@
 - ← depends_on [K0398](../items/K0398-forbidden-four-overlap-spectrum.md): 標準禁止四点組の定義
 - ← depends_on [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md): 共円・共線禁則の定義を一般q点へ拡張する
 - ← depends_on [K0401](../items/K0401-n11-q12-terminal-extrema.md): 共円・共線q点禁止版の安全配置を使用
+- ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 標準共円ゲームの合法手・終局規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -73,6 +74,8 @@
 - ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 元の先手固定視点におけるS5 AND・S6 ORの勝敗伝播
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 元先手固定視点の交互AND/OR勝敗伝播
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 固定先手視点の交互AND/OR勝敗伝播に従う
+- ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 元の先手に固定した勝敗と偶数OR・奇数AND
+- ← depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 元先手固定視点の交互AND/OR規則
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1670,6 +1673,7 @@
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): reply27の現行S4/S5証明境界
 - ← depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 対象S4に属する三つの既知S5 direct LOSS局面
 - ← depends_on [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md): 3,384 S4 classとexact S5 frontierの正本
+- ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 保存exact S5 frontierと既存117第三手被覆の系譜
 
 ## [K0356](../items/K0356-capacity-boundary-grundy-bound.md) 任意次元平行列容量ゲームの容量境界ではGrundy値が残り手数の偶奇に一致する
 
@@ -1765,12 +1769,15 @@
 - ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): solver-trusted exact葉とterminal-only独立証明の信頼分離
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): solver exact値とterminal-only独立証明の信頼境界
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): exact solver観測を独立terminal-only証明と区別
+- ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): solver-trusted exact値とterminal-only独立証明の信頼区分
+- ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): terminal-only検査器、cache隔離、trusted leafの区別
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円・共線の禁止と通常プレイの対称不変性
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定の勝敗
 - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 第三手被覆とS4 classの正規化
+- ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 第三手100・108の反射同値性
 
 ## [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) 11×11 reply27の難S5局面を全90 S6子WINで確定
 
@@ -1792,6 +1799,7 @@
 - ← supports [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根の独立終局閉包と、二つの入力DAG間にcanonical局面重複がないことを検査
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 既知S5 LOSS六根と共有TT比較の元資料
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 既知S5 LOSS六根と歴史rawを選定・照合に使用
+- ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): 現S4配下3根の共有terminal-only証明
 
 ## [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) 11×11 `{60,27}` の現行117手被覆には既知LOSS class 31個が全て必要
 
@@ -1805,6 +1813,7 @@
 - → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 元となる最新mainの三S5 shared proof DAGと証明規則
 - → supports [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): K0375の最新S4配下にある三S5 LOSS proofだけを独立compact検証し、既存閉包共有による局所DAG縮約を確認
 - ← depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 三根のwitness-switch compact variantを増分統合の開始証明として再現
+- ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): 同3根のcompact witness-switch証明
 
 ## [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) 11×11の独立検証済みS5証明6根を段階統合、群間重複なし
 
@@ -1815,6 +1824,7 @@
 - ← supports [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): 最新mainの最有力S4境界40/0/66をcacheと独立幾何から再確認
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 六根terminal-only独立証明DAGと監査receipt
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 六根の独立検証済み証明DAGからS6証人を抽出
+- ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): 6根統合DAGから再利用できるterminal-only subset
 
 ## [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) 11×11 S5階層分割の費用比較と証拠対応ルーティング
 
@@ -1915,3 +1925,26 @@
 ## [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md) 標準整数格子64〜336行で円が二点ずつ通る行数の厳密最大値
 
 - → depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): T(63)=16を帰納基底とする
+
+## [K0414](../items/K0414-n11-reply27-root-loss.md) 11×11二石局面{60,27}は元先手固定視点でLOSS
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準共円ゲームの合法手・終局規則
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元の先手に固定した勝敗と偶数OR・奇数AND
+- → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 保存exact S5 frontierと既存117第三手被覆の系譜
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver-trusted exact値とterminal-only独立証明の信頼区分
+- → depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 第三手100・108の反射同値性
+- ← depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 二石root {60,27} の119手solver-trusted LOSS結果
+- ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): 119/119 solver-trusted LOSS proofと32個の使用S4 LOSS class
+
+## [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) 11×11空盤の初手D4分類で2軌道をLOSS、19軌道は未確定
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の交互AND/OR規則
+- → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 二石root {60,27} の119手solver-trusted LOSS結果
+
+## [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) 二石root {60,27} のterminal-only証明には2,992個の未閉鎖S5依存根が残る
+
+- → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 119/119 solver-trusted LOSS proofと32個の使用S4 LOSS class
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): terminal-only検査器、cache隔離、trusted leafの区別
+- → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 現S4配下3根の共有terminal-only証明
+- → depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 同3根のcompact witness-switch証明
+- → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset

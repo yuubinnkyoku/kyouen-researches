@@ -1,0 +1,38 @@
+{
+  "command": [
+    "bash",
+    "research/experiments/n11-search-methods/scripts/dfpn_s5_merge.sh",
+    "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\current-exact-s5.cache",
+    "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\current-exact-s5.cache",
+    "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-fourteenth-derived-s5-worker.cache"
+  ],
+  "derived_audit_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-fourteenth-batch-audit.json",
+  "derived_audit_sha256": "41b630b79871c7894dbb381c0893d5bc229b1779cf75e4f6714af4757f0d08ae",
+  "derived_worker_sha256": "beb97581a1506fe4604969eb034effe918c4e4be396751c9c38473b7f4e3df09",
+  "final_cache_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\current-exact-s5.cache",
+  "final_cache_sha256": "c469eff06559c57b7f4b679c80c1e576c7bddb6f69ea03da0b8b64d0ef4aa198",
+  "final_rows": 5851,
+  "merge_script": "research/experiments/n11-search-methods/scripts/dfpn_s5_merge.sh",
+  "merge_semantics": "existing cache union exact-only audited worker; atomic replacement; quarantine/conflict checks enabled",
+  "merge_stdout": [
+    "merged keys: 5851; UNKNOWN dropped: 0; quarantined keys: 0",
+    "MERGE_OK"
+  ],
+  "new_row": {
+    "evidence_type": "derived by S5 AND from one direct S6 solver-trusted LOSS",
+    "key": [
+      1152921504607899649,
+      536870912
+    ],
+    "nodes_field": 0,
+    "stones": 5,
+    "verdict": "LOSS"
+  },
+  "prior_cache_sha256": "0d877af4a9ed11b44de628a374ef22e059ee8fbbbcabb67ed48a5e3576770491",
+  "quarantine_conflicts": 0,
+  "schema": "n11-s5-atomic-merge-receipt-v1",
+  "verdict_counts": {
+    "LOSS": 5692,
+    "WIN": 159
+  }
+}

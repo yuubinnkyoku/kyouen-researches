@@ -1,0 +1,676 @@
+{
+  "board_size": "11x11",
+  "bounded_response_samples": [
+    {
+      "boundary": {
+        "canonical_s4_response_classes": 3384,
+        "canonical_s5_boundary_edges": 367228,
+        "current_exact_s5_cache_hit_verdicts": {
+          "LOSS": 5454,
+          "WIN": 159
+        },
+        "current_exact_s5_cache_hits": 5613,
+        "current_exact_s5_cache_hits_with_nonzero_solver_nodes": 65,
+        "current_exact_s5_cache_hits_with_zero_nodes": 5548,
+        "fourth_response_edges": 13742,
+        "legal_third_moves": 119,
+        "root_is_canonical": true,
+        "s3_moves_all_have_at_least_one_fourth_reply": true,
+        "s4_classes_per_third_move_max": 118,
+        "s4_classes_per_third_move_min": 30,
+        "two_stone_root": [
+          60,
+          27
+        ],
+        "unique_canonical_s5_children": 121088
+      },
+      "cell_60_legal_as_reply": false,
+      "exact_pair_root_outcome_known_from_current_record": true,
+      "opening_first_move": 60,
+      "opponent_reply": 27,
+      "response_orbits_under_first_move_stabilizer": 20,
+      "role": "proved-loss witness",
+      "second_player_legal_responses": 120
+    },
+    {
+      "boundary": {
+        "canonical_s4_response_classes": 3384,
+        "canonical_s5_boundary_edges": 367228,
+        "current_exact_s5_cache_hit_verdicts": {
+          "LOSS": 5454,
+          "WIN": 159
+        },
+        "current_exact_s5_cache_hits": 5613,
+        "current_exact_s5_cache_hits_with_nonzero_solver_nodes": 65,
+        "current_exact_s5_cache_hits_with_zero_nodes": 5548,
+        "fourth_response_edges": 13742,
+        "legal_third_moves": 119,
+        "root_is_canonical": true,
+        "s3_moves_all_have_at_least_one_fourth_reply": true,
+        "s4_classes_per_third_move_max": 118,
+        "s4_classes_per_third_move_min": 30,
+        "two_stone_root": [
+          27,
+          60
+        ],
+        "unique_canonical_s5_children": 121088
+      },
+      "cell_60_legal_as_reply": true,
+      "exact_pair_root_outcome_known_from_current_record": true,
+      "opening_first_move": 27,
+      "opponent_reply": 60,
+      "response_orbits_under_first_move_stabilizer": 65,
+      "role": "proved-loss witness; central reply",
+      "second_player_legal_responses": 120
+    },
+    {
+      "boundary": {
+        "canonical_s4_response_classes": 3374,
+        "canonical_s5_boundary_edges": 363694,
+        "current_exact_s5_cache_hit_verdicts": {
+          "LOSS": 730,
+          "WIN": 32
+        },
+        "current_exact_s5_cache_hits": 762,
+        "current_exact_s5_cache_hits_with_nonzero_solver_nodes": 1,
+        "current_exact_s5_cache_hits_with_zero_nodes": 761,
+        "fourth_response_edges": 13702,
+        "legal_third_moves": 119,
+        "root_is_canonical": true,
+        "s3_moves_all_have_at_least_one_fourth_reply": true,
+        "s4_classes_per_third_move_max": 118,
+        "s4_classes_per_third_move_min": 30,
+        "two_stone_root": [
+          49,
+          60
+        ],
+        "unique_canonical_s5_children": 119917
+      },
+      "cell_60_legal_as_reply": true,
+      "exact_pair_root_outcome_known_from_current_record": false,
+      "opening_first_move": 49,
+      "opponent_reply": 60,
+      "response_orbits_under_first_move_stabilizer": 65,
+      "role": "unresolved central-reply probe",
+      "second_player_legal_responses": 120
+    },
+    {
+      "boundary": {
+        "canonical_s4_response_classes": 3377,
+        "canonical_s5_boundary_edges": 364551,
+        "current_exact_s5_cache_hit_verdicts": {
+          "LOSS": 918,
+          "WIN": 61
+        },
+        "current_exact_s5_cache_hits": 979,
+        "current_exact_s5_cache_hits_with_nonzero_solver_nodes": 0,
+        "current_exact_s5_cache_hits_with_zero_nodes": 979,
+        "fourth_response_edges": 13716,
+        "legal_third_moves": 119,
+        "root_is_canonical": true,
+        "s3_moves_all_have_at_least_one_fourth_reply": true,
+        "s4_classes_per_third_move_max": 118,
+        "s4_classes_per_third_move_min": 30,
+        "two_stone_root": [
+          48,
+          60
+        ],
+        "unique_canonical_s5_children": 120191
+      },
+      "cell_60_legal_as_reply": true,
+      "exact_pair_root_outcome_known_from_current_record": false,
+      "opening_first_move": 48,
+      "opponent_reply": 60,
+      "response_orbits_under_first_move_stabilizer": 65,
+      "role": "unresolved central-reply probe",
+      "second_player_legal_responses": 120
+    },
+    {
+      "boundary": {
+        "canonical_s4_response_classes": 6585,
+        "canonical_s5_boundary_edges": 737988,
+        "current_exact_s5_cache_hit_verdicts": {
+          "LOSS": 808,
+          "WIN": 3
+        },
+        "current_exact_s5_cache_hits": 811,
+        "current_exact_s5_cache_hits_with_nonzero_solver_nodes": 7,
+        "current_exact_s5_cache_hits_with_zero_nodes": 804,
+        "fourth_response_edges": 13932,
+        "legal_third_moves": 119,
+        "root_is_canonical": true,
+        "s3_moves_all_have_at_least_one_fourth_reply": true,
+        "s4_classes_per_third_move_max": 118,
+        "s4_classes_per_third_move_min": 59,
+        "two_stone_root": [
+          25,
+          60
+        ],
+        "unique_canonical_s5_children": 238948
+      },
+      "cell_60_legal_as_reply": true,
+      "exact_pair_root_outcome_known_from_current_record": false,
+      "opening_first_move": 25,
+      "opponent_reply": 60,
+      "response_orbits_under_first_move_stabilizer": 120,
+      "role": "unresolved central-reply probe",
+      "second_player_legal_responses": 120
+    },
+    {
+      "boundary": {
+        "canonical_s4_response_classes": 3396,
+        "canonical_s5_boundary_edges": 372769,
+        "current_exact_s5_cache_hit_verdicts": {
+          "LOSS": 493,
+          "WIN": 1
+        },
+        "current_exact_s5_cache_hits": 494,
+        "current_exact_s5_cache_hits_with_nonzero_solver_nodes": 65,
+        "current_exact_s5_cache_hits_with_zero_nodes": 429,
+        "fourth_response_edges": 13788,
+        "legal_third_moves": 119,
+        "root_is_canonical": true,
+        "s3_moves_all_have_at_least_one_fourth_reply": true,
+        "s4_classes_per_third_move_max": 118,
+        "s4_classes_per_third_move_min": 30,
+        "two_stone_root": [
+          0,
+          60
+        ],
+        "unique_canonical_s5_children": 122953
+      },
+      "cell_60_legal_as_reply": true,
+      "exact_pair_root_outcome_known_from_current_record": false,
+      "opening_first_move": 0,
+      "opponent_reply": 60,
+      "response_orbits_under_first_move_stabilizer": 65,
+      "role": "unresolved central-reply probe",
+      "second_player_legal_responses": 120
+    }
+  ],
+  "cell_count": 121,
+  "central_reply_facts": {
+    "cell_60_is_legal_after_every_noncentral_first_move": true,
+    "cell_60_legal_reply_count_independent_geometry": 120,
+    "known_losing_opening_orbits_using_reply_60": [
+      [
+        0,
+        3
+      ]
+    ],
+    "unknown_central_reply_is_not_assumed_winning": true
+  },
+  "d4_orbit_count": 21,
+  "indexing": "cell = 11*y+x; center=60",
+  "opening_win_certificate_probe": {
+    "existing_exact_s5_win_rows": 159,
+    "first_moves_are_representatives_of_distinct_d4_orbits": [
+      60,
+      49,
+      48,
+      25,
+      0
+    ],
+    "obligation": "For every second-player reply, a first-player third move must make every legal fourth response reach an S4 with at least one exact S5 WIN child. The probe checks this cached witness condition only; missing coverage is unresolved.",
+    "probes": [
+      {
+        "actual_replies_covered_by_existing_exact_s5_win_cache": 0,
+        "cached_win_coverage_is_only_a_solver_trusted_witness_probe": true,
+        "first_move": 60,
+        "fourth_response_edges_checked_per_reply_orbit": 276868,
+        "minimum_s4_classes_for_a_candidate_third_move_per_reply_orbit_sum": 888,
+        "reply_orbits_covered_by_existing_exact_s5_win_cache": 0,
+        "reply_orbits_under_first_move_stabilizer": 20,
+        "s4_classes_with_at_least_one_existing_exact_s5_win_child": 1068,
+        "second_player_legal_replies": 120,
+        "third_move_candidates_checked_per_reply_orbit": 2380,
+        "unique_canonical_s4_classes_per_reply_orbit_sum": 99714,
+        "witness_examples": []
+      },
+      {
+        "actual_replies_covered_by_existing_exact_s5_win_cache": 0,
+        "cached_win_coverage_is_only_a_solver_trusted_witness_probe": true,
+        "first_move": 49,
+        "fourth_response_edges_checked_per_reply_orbit": 901084,
+        "minimum_s4_classes_for_a_candidate_third_move_per_reply_orbit_sum": 3981,
+        "reply_orbits_covered_by_existing_exact_s5_win_cache": 0,
+        "reply_orbits_under_first_move_stabilizer": 65,
+        "s4_classes_with_at_least_one_existing_exact_s5_win_child": 298,
+        "second_player_legal_replies": 120,
+        "third_move_candidates_checked_per_reply_orbit": 7735,
+        "unique_canonical_s4_classes_per_reply_orbit_sum": 407470,
+        "witness_examples": []
+      },
+      {
+        "actual_replies_covered_by_existing_exact_s5_win_cache": 0,
+        "cached_win_coverage_is_only_a_solver_trusted_witness_probe": true,
+        "first_move": 48,
+        "fourth_response_edges_checked_per_reply_orbit": 900406,
+        "minimum_s4_classes_for_a_candidate_third_move_per_reply_orbit_sum": 3964,
+        "reply_orbits_covered_by_existing_exact_s5_win_cache": 0,
+        "reply_orbits_under_first_move_stabilizer": 65,
+        "s4_classes_with_at_least_one_existing_exact_s5_win_child": 528,
+        "second_player_legal_replies": 120,
+        "third_move_candidates_checked_per_reply_orbit": 7735,
+        "unique_canonical_s4_classes_per_reply_orbit_sum": 407161,
+        "witness_examples": []
+      },
+      {
+        "actual_replies_covered_by_existing_exact_s5_win_cache": 0,
+        "cached_win_coverage_is_only_a_solver_trusted_witness_probe": true,
+        "first_move": 25,
+        "fourth_response_edges_checked_per_reply_orbit": 1664832,
+        "minimum_s4_classes_for_a_candidate_third_move_per_reply_orbit_sum": 11163,
+        "reply_orbits_covered_by_existing_exact_s5_win_cache": 0,
+        "reply_orbits_under_first_move_stabilizer": 120,
+        "s4_classes_with_at_least_one_existing_exact_s5_win_child": 36,
+        "second_player_legal_replies": 120,
+        "third_move_candidates_checked_per_reply_orbit": 14280,
+        "unique_canonical_s4_classes_per_reply_orbit_sum": 812497,
+        "witness_examples": []
+      },
+      {
+        "actual_replies_covered_by_existing_exact_s5_win_cache": 0,
+        "cached_win_coverage_is_only_a_solver_trusted_witness_probe": true,
+        "first_move": 0,
+        "fourth_response_edges_checked_per_reply_orbit": 905122,
+        "minimum_s4_classes_for_a_candidate_third_move_per_reply_orbit_sum": 3998,
+        "reply_orbits_covered_by_existing_exact_s5_win_cache": 0,
+        "reply_orbits_under_first_move_stabilizer": 65,
+        "s4_classes_with_at_least_one_existing_exact_s5_win_child": 12,
+        "second_player_legal_replies": 120,
+        "third_move_candidates_checked_per_reply_orbit": 7735,
+        "unique_canonical_s4_classes_per_reply_orbit_sum": 409295,
+        "witness_examples": []
+      }
+    ],
+    "unique_canonical_s4_positions_with_existing_exact_s5_win_child": 549
+  },
+  "orbits": [
+    {
+      "first_move_loss_derivation": "root {60,27} LOSS plus move-order invariance and D4 symmetry",
+      "members": [
+        60
+      ],
+      "orbit": [
+        0,
+        0
+      ],
+      "representative": 60,
+      "size": 1,
+      "status": "LOSS_PROVEN"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        49,
+        59,
+        61,
+        71
+      ],
+      "orbit": [
+        0,
+        1
+      ],
+      "representative": 49,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        38,
+        58,
+        62,
+        82
+      ],
+      "orbit": [
+        0,
+        2
+      ],
+      "representative": 38,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": "root {60,27} LOSS plus move-order invariance and D4 symmetry",
+      "members": [
+        27,
+        57,
+        63,
+        93
+      ],
+      "orbit": [
+        0,
+        3
+      ],
+      "representative": 27,
+      "size": 4,
+      "status": "LOSS_PROVEN"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        16,
+        56,
+        64,
+        104
+      ],
+      "orbit": [
+        0,
+        4
+      ],
+      "representative": 16,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        5,
+        55,
+        65,
+        115
+      ],
+      "orbit": [
+        0,
+        5
+      ],
+      "representative": 5,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        48,
+        50,
+        70,
+        72
+      ],
+      "orbit": [
+        1,
+        1
+      ],
+      "representative": 48,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        37,
+        39,
+        47,
+        51,
+        69,
+        73,
+        81,
+        83
+      ],
+      "orbit": [
+        1,
+        2
+      ],
+      "representative": 37,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        26,
+        28,
+        46,
+        52,
+        68,
+        74,
+        92,
+        94
+      ],
+      "orbit": [
+        1,
+        3
+      ],
+      "representative": 26,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        15,
+        17,
+        45,
+        53,
+        67,
+        75,
+        103,
+        105
+      ],
+      "orbit": [
+        1,
+        4
+      ],
+      "representative": 15,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        4,
+        6,
+        44,
+        54,
+        66,
+        76,
+        114,
+        116
+      ],
+      "orbit": [
+        1,
+        5
+      ],
+      "representative": 4,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        36,
+        40,
+        80,
+        84
+      ],
+      "orbit": [
+        2,
+        2
+      ],
+      "representative": 36,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        25,
+        29,
+        35,
+        41,
+        79,
+        85,
+        91,
+        95
+      ],
+      "orbit": [
+        2,
+        3
+      ],
+      "representative": 25,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        14,
+        18,
+        34,
+        42,
+        78,
+        86,
+        102,
+        106
+      ],
+      "orbit": [
+        2,
+        4
+      ],
+      "representative": 14,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        3,
+        7,
+        33,
+        43,
+        77,
+        87,
+        113,
+        117
+      ],
+      "orbit": [
+        2,
+        5
+      ],
+      "representative": 3,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        24,
+        30,
+        90,
+        96
+      ],
+      "orbit": [
+        3,
+        3
+      ],
+      "representative": 24,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        13,
+        19,
+        23,
+        31,
+        89,
+        97,
+        101,
+        107
+      ],
+      "orbit": [
+        3,
+        4
+      ],
+      "representative": 13,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        2,
+        8,
+        22,
+        32,
+        88,
+        98,
+        112,
+        118
+      ],
+      "orbit": [
+        3,
+        5
+      ],
+      "representative": 2,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        12,
+        20,
+        100,
+        108
+      ],
+      "orbit": [
+        4,
+        4
+      ],
+      "representative": 12,
+      "size": 4,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        1,
+        9,
+        11,
+        21,
+        99,
+        109,
+        111,
+        119
+      ],
+      "orbit": [
+        4,
+        5
+      ],
+      "representative": 1,
+      "size": 8,
+      "status": "UNRESOLVED"
+    },
+    {
+      "first_move_loss_derivation": null,
+      "members": [
+        0,
+        10,
+        110,
+        120
+      ],
+      "orbit": [
+        5,
+        5
+      ],
+      "representative": 0,
+      "size": 4,
+      "status": "UNRESOLVED"
+    }
+  ],
+  "proven_loss_cell_count": 5,
+  "proven_loss_orbit_count": 2,
+  "root_pair_move_order_invariant": true,
+  "schema": "n11-opening-orbits-and-central-reply-boundaries-v1",
+  "source_hashes": {
+    "current_exact_s5_cache_sha256": "c469eff06559c57b7f4b679c80c1e576c7bddb6f69ea03da0b8b64d0ef4aa198",
+    "independent_geometry_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+    "reply27_root_proof_sha256": "ae225d023da9277230149312c00d111a92c6f55abf775aeb0db286b8effbfb39"
+  },
+  "trust": "D4 partition and response boundaries are finite independent geometry calculations. Only the two named first-move orbits have exact LOSS classification; no new solver search was run.",
+  "unresolved_cell_count": 116,
+  "unresolved_orbit_count": 19
+}

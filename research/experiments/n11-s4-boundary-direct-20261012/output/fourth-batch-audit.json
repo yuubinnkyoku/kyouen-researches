@@ -1,0 +1,156 @@
+{
+  "exact_verdict_counts": {
+    "LOSS": 8,
+    "WIN": 0
+  },
+  "independent_geometry_check": "Board(11) canonicality and legal count; fixed S5 AND polarity verified from raw is_or=0",
+  "results": [
+    {
+      "elapsed_seconds": 6.463115599995945,
+      "key": [
+        1297036693220623360,
+        0
+      ],
+      "legal": 98,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-24.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2225177,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-24.csv",
+      "raw_sha256": "84a8b83cafc6390f34b295ab696eaf2ed4cfca42e0e718138e28e779feb4b65e",
+      "sequence": 24,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 20.99270400000387,
+      "key": [
+        1297036692683752456,
+        0
+      ],
+      "legal": 100,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-25.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 7412429,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-25.csv",
+      "raw_sha256": "299e04ba8f8a498eb8e64eea42b4810c5e260990773bdfca4356e282093bc2d1",
+      "sequence": 25,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 27.94451530000515,
+      "key": [
+        1152921504607896576,
+        536870916
+      ],
+      "legal": 103,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-26.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 10011197,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-26.csv",
+      "raw_sha256": "00cd2d89b28548778e7896465e0200f5da0f6e5404a1d01f5252724547e27f3c",
+      "sequence": 26,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 12.983687799998734,
+      "key": [
+        1297036692692141056,
+        0
+      ],
+      "legal": 104,
+      "live_parent_count": 2,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-27.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4721061,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-27.csv",
+      "raw_sha256": "8403c2154a0093ce0d8f73b0dae818b2fa9856645aceccb2a960c81eab0bb4e8",
+      "sequence": 27,
+      "sharing": "shared",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 7.495639000000665,
+      "key": [
+        1297036692683817984,
+        0
+      ],
+      "legal": 97,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-28.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2765972,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-28.csv",
+      "raw_sha256": "05437f98875fe62bb0336e30dcaacd273175ba306be997aed542fe9733c8523b",
+      "sequence": 28,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 32.98356809999677,
+      "key": [
+        1369094286721680384,
+        0
+      ],
+      "legal": 97,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-29.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 11230988,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-29.csv",
+      "raw_sha256": "c4a50c5d5eb2682470f64b7964f046e7dae19045c209c63d37e61f574a47dadf",
+      "sequence": 29,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 29.71151049999753,
+      "key": [
+        10376293541461626881,
+        268435456
+      ],
+      "legal": 99,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-30.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 10645568,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-30.csv",
+      "raw_sha256": "fb55f322b8cf67216940b422e92a20c1bf7e1d08b875968d80c0befbf46d2026",
+      "sequence": 30,
+      "sharing": "single",
+      "verdict": "LOSS"
+    },
+    {
+      "elapsed_seconds": 17.89708999999857,
+      "key": [
+        1297036692683752448,
+        32
+      ],
+      "legal": 101,
+      "live_parent_count": 1,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-31.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 6441192,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-31.csv",
+      "raw_sha256": "2023754e4ee7cb28e485b56a72c3eabab87bac5e6803a51acc720118b45375dd",
+      "sequence": 31,
+      "sharing": "single",
+      "verdict": "LOSS"
+    }
+  ],
+  "run_manifest_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\fourth-batch-run.json",
+  "run_manifest_sha256": "89df9816f1fb03ac6725a2b952b7b3d57a59df6f355c7ca9cc4d9c12d6869ebc",
+  "schema": "n11-s4-direct-s5-fourth-batch-audit-v1",
+  "selection_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\fourth-batch-selection.json",
+  "selection_sha256": "c344553f88bec9aa3cf65e2d17835d430eb8c7847a8843677469ffb1b1ade329",
+  "total_elapsed_seconds": 156.47183029999724,
+  "total_nodes": 55453584,
+  "trust": "solver-trusted exact outcomes, not terminal-only independent proofs",
+  "unknown_count": 0,
+  "worker_cache_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\fourth-batch-exact-s5.cache",
+  "worker_cache_sha256": "d4021d6b3e3068b891b78293d08cf0a51de73e4467c2bf96f83c78520c428b0a"
+}

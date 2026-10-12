@@ -1,0 +1,266 @@
+{
+  "cold_process_per_root": true,
+  "node_limit": 15000000,
+  "runs": [
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-08.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-08.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-08.log"
+      ],
+      "elapsed_seconds": 7.9964847000010195,
+      "is_or": 0,
+      "key": [
+        1297036692683752960,
+        0
+      ],
+      "legal": 98,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-08.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 2954632,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-08.csv",
+      "raw_sha256": "bd094ff8a63446141885ad74d278b1e2ed798ad639ad5ff3ba29dcc351f782aa",
+      "reported_seconds": 7.0,
+      "sequence": 8,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-09.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-09.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-09.log"
+      ],
+      "elapsed_seconds": 9.592967599994154,
+      "is_or": 0,
+      "key": [
+        1297036692683752464,
+        0
+      ],
+      "legal": 100,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-09.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 3528576,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-09.csv",
+      "raw_sha256": "191944448d167e763802a62bbaca8b829c74d6d03b153eb98b6fbf2dc373f25d",
+      "reported_seconds": 9.0,
+      "sequence": 9,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-10.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-10.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-10.log"
+      ],
+      "elapsed_seconds": 12.572180999995908,
+      "is_or": 0,
+      "key": [
+        1152921504607896576,
+        536870920
+      ],
+      "legal": 103,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-10.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 4581929,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-10.csv",
+      "raw_sha256": "b9f5df541a5cbd7b0e4711158cbabf7f97d1b45f2d91cebd550233a9e22bd1e2",
+      "reported_seconds": 12.0,
+      "sequence": 10,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-11.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-11.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-11.log"
+      ],
+      "elapsed_seconds": 10.879845299998124,
+      "is_or": 0,
+      "key": [
+        10376293541461626881,
+        134217728
+      ],
+      "legal": 104,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-11.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 3972983,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-11.csv",
+      "raw_sha256": "0a5acd0f3540f589cf7224e8bca69dc1174286a19b41331ef4480de036a11d24",
+      "reported_seconds": 10.0,
+      "sequence": 11,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-12.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-12.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-12.log"
+      ],
+      "elapsed_seconds": 14.499155800003791,
+      "is_or": 0,
+      "key": [
+        1297036692683756544,
+        0
+      ],
+      "legal": 96,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-12.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5221923,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-12.csv",
+      "raw_sha256": "f1946d809a8fe024ea11331b2f2096cf47057c08fdef6cb57129d13bafb98487",
+      "reported_seconds": 14.0,
+      "sequence": 12,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-13.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-13.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-13.log"
+      ],
+      "elapsed_seconds": 14.049448999998276,
+      "is_or": 0,
+      "key": [
+        1585267068835464192,
+        0
+      ],
+      "legal": 97,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-13.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 5048845,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-13.csv",
+      "raw_sha256": "795f0e0d44308c209671e5d9b83e8a2f68bb41d2885ff0dd1b992f229f00024a",
+      "reported_seconds": 14.0,
+      "sequence": 13,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-14.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-14.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-14.log"
+      ],
+      "elapsed_seconds": 31.508045700000366,
+      "is_or": 0,
+      "key": [
+        1152921504607896576,
+        553648128
+      ],
+      "legal": 100,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-14.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 11267484,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-14.csv",
+      "raw_sha256": "ef71d2b9565d0f09dadc173e081cfebf21921c17de58d9818ff33392f7b45616",
+      "reported_seconds": 31.0,
+      "sequence": 14,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    },
+    {
+      "budget": 15000000,
+      "command": [
+        "dfpn-profile-child.exe",
+        "--n=11",
+        "--memo=22",
+        "--only=5",
+        "--exact-order=count",
+        "--exact-replay=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-15.csv",
+        "--exact-replay-budget=15000000",
+        "--csv=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-15.csv",
+        "--log=D:\\ghq\\github.com\\yuubinnkyoku\\kyouen-researches\\research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-15.log"
+      ],
+      "elapsed_seconds": 19.604012399999192,
+      "is_or": 0,
+      "key": [
+        1297036692683752448,
+        536870912
+      ],
+      "legal": 102,
+      "log_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\log\\s5-15.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "nodes": 7123492,
+      "raw_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\raw\\s5-15.csv",
+      "raw_sha256": "21cef6b1eab42b0e5885402c2895e23adfb30fef9380efe08b6748da47c665f5",
+      "reported_seconds": 19.0,
+      "sequence": 15,
+      "solver_row_sequence": 0,
+      "stones": 5,
+      "verdict": "LOSS",
+      "verdict_code": 2
+    }
+  ],
+  "schema": "n11-s4-direct-s5-batch-run-v1",
+  "selection_sha256": "d60df84ba172af5edf82388ab248ed678e4ad298a82cf3dd8ae55a268f3859af",
+  "solver_binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+  "stop_reason": "all 8 frozen targets completed without an S5 WIN"
+}

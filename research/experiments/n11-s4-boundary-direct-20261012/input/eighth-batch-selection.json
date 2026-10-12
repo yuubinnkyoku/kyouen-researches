@@ -1,0 +1,311 @@
+{
+  "classification": {
+    "115_candidate_status_counts": {
+      "UNKNOWN": 61,
+      "WIN": 54
+    },
+    "115_candidates": 115,
+    "active_unknown_classes_covering_both_remaining": 61,
+    "all_s4_classes": 3384,
+    "all_s4_status_counts": {
+      "LOSS": 31,
+      "UNKNOWN": 3079,
+      "WIN": 274
+    },
+    "remaining": [
+      100,
+      108
+    ],
+    "secured": 117,
+    "target_s4_children_now": {
+      "LOSS": 95,
+      "UNKNOWN": 11,
+      "WIN": 0
+    },
+    "target_s4_rank_by_15m_censored_completion_proxy": 1,
+    "third_moves": 119
+  },
+  "cost_evaluation_prior_batches": {
+    "batch_count": 7,
+    "cold_direct_cost_note": "Cold process per root; UNKNOWN stayed out of exact cache. This observed aggregate is not a universal budget-cost claim.",
+    "exact_loss": 55,
+    "exact_win": 0,
+    "targets": 56,
+    "total_nodes": 351089299,
+    "total_seconds": 982.5596140999551,
+    "unknown": 1
+  },
+  "schema": "n11-s4-direct-s5-eighth-batch-selection-v1",
+  "selected": [
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-56.csv",
+      "input_sha256": "a68e161c77822211d5650cbb78f81111954736fbab7ab7db9576c694366f8bce",
+      "key": [
+        1152921521787765760,
+        536870912
+      ],
+      "legal": 99,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1152921521787764736,
+          536870912
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 56,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-57.csv",
+      "input_sha256": "ea2abc29bd57f75193b46ecf1dc292744513ab03a098cf8ef831783a821432b4",
+      "key": [
+        10376293541461626881,
+        16777216
+      ],
+      "legal": 99,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10376293541461626880,
+          16777216
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 57,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-58.csv",
+      "input_sha256": "72e43b888f659b12a75a100e5fca0cf24e6a3bce5af3d5e805e6de86bb91081c",
+      "key": [
+        10376293541461626881,
+        8192
+      ],
+      "legal": 100,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          10376293541461626880,
+          8192
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 58,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-59.csv",
+      "input_sha256": "5801a8cd2dfb66efa496a88a606023b6e62ccbd9c2425a6967244c90bf136bad",
+      "key": [
+        1297036692683752448,
+        4
+      ],
+      "legal": 101,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1297036692683751424,
+          4
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 59,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-60.csv",
+      "input_sha256": "79c4647365303c95ae670c456cd32adb63195a62f6301e4d41081874d54a5a98",
+      "key": [
+        1297071877055841280,
+        0
+      ],
+      "legal": 101,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297071877055840256,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 60,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-61.csv",
+      "input_sha256": "026eb07650f838426ca5b639d40cc3ce9c351001213566b439714e8ce97bde47",
+      "key": [
+        1297036727043490816,
+        0
+      ],
+      "legal": 102,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036727043489792,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 61,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-62.csv",
+      "input_sha256": "9f0d7666767f87a36e6d9afa2b9e07d5f24d4455abe8ec0735ee6d961f5b7d38",
+      "key": [
+        1297036701273687040,
+        0
+      ],
+      "legal": 103,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1297036692683752448,
+          0
+        ],
+        [
+          1297036701273686016,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 62,
+      "sharing": "shared"
+    },
+    {
+      "historical_15m_unknown": false,
+      "historical_s5_rows": 0,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s5-63.csv",
+      "input_sha256": "339794143224d0b525297b12275e3c62d17e639a753ff2d032bd163fd9d871dd",
+      "key": [
+        1297036692683752448,
+        33554432
+      ],
+      "legal": 104,
+      "live_parent_count": 2,
+      "live_parent_keys": [
+        [
+          1297036692683751424,
+          33554432
+        ],
+        [
+          1297036692683752448,
+          0
+        ]
+      ],
+      "reason": "shared; legal-count quantile stratum; 2 live parents; 0 saved exact S6 children; no S5 raw or prior 15M UNKNOWN",
+      "saved_s6_exact_children": 0,
+      "saved_s6_loss_children": 0,
+      "saved_s6_win_children": 0,
+      "sequence": 63,
+      "sharing": "shared"
+    }
+  ],
+  "selection_rule": "up to eight target S5s; shared/single count 8/0 based on available parent incidence; legal-count quantiles within each group; include partial exact S6 evidence if available; exclude prior exact roots and all prior >=15M UNKNOWN; no repeated UNKNOWN",
+  "solver": {
+    "binary_path": ".local/n11-s5-loss-cost-drivers-20261012/dfpn-profile-child.exe",
+    "binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+    "build_manifest_sha256": "8635b3e587665790364f38d61b0f161671808bd7411c2c510a961f76fdb0f693",
+    "frozen_build_manifest": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\solver-build.json",
+    "mode": "cold exact replay; one target per fresh process; profile off",
+    "node_limit": 15000000,
+    "source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446"
+  },
+  "source_main_commit": "1bdd30b71adaf8f476a98922f1b454bdd369feb3",
+  "sources": {
+    "exact_cache": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\current-exact-s5.cache",
+    "exact_cache_sha256": "b9bdf0e9122d572fee145a10a4ac769f2f8e2566ff4f21e1b368c11b21b1cff5",
+    "frontier": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\frontier-after-batch.json",
+    "frontier_sha256": "4eaa6be8095cdcfc8226311e42bef337fce51b787b7f7ca89e4211169f1d2c0c",
+    "geometry": "research\\experiments\\n11-strategy-redesign-20261010\\output\\geometry.json.gz",
+    "geometry_sha256": "146be80b5794462c2444e983fc4c4a6e76d3b464bfd5e86fac14509024100b54",
+    "historical_cost_profile": "research\\experiments\\n11-strategy-redesign-20261010\\output\\historical-cost-profile.json",
+    "historical_cost_profile_sha256": "03ab978d078a64f496e948d078da9fe5e6b7106582ca370f8c041467206d0ec7",
+    "history": "research\\experiments\\n11-strategy-redesign-20261010\\output\\history.json",
+    "history_sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e",
+    "prior_run_manifest_sha256s": [
+      "ccb1349df6cbba56be876cbb69d9c4a7a4cfbe63a237ab725dd39aafb35194ac",
+      "000061ced9e74cc17442895fe511a4b19cfde55ddee4cee2c62eaf0e161f3945",
+      "16222c1ecf350fde31bf55516f562578643bbcc15efb29ff93808cfb55370a3c",
+      "89df9816f1fb03ac6725a2b952b7b3d57a59df6f355c7ca9cc4d9c12d6869ebc",
+      "74bdceb4c01803ba8387cc31f1ba1957dec9afc9f17c3977b521ddabf1b8c641",
+      "0d869576aaa067c25ee4510056dc59a40a03399d786fcdc0479adea6a17b6730",
+      "6fc4e696c5bd1f6b6e0cdc4abdab521dfb4c33a45b9c41d8a16af99c8cd80679"
+    ],
+    "prior_selection_sha256s": [
+      "45651fb4a133318c8b66b335b4068c664293a9655b21d2aceffd996fdeb66ffc",
+      "d60df84ba172af5edf82388ab248ed678e4ad298a82cf3dd8ae55a268f3859af",
+      "22e744b417004337ac1b41fa7f11409c038350d170af042678d90ba96343d0eb",
+      "c344553f88bec9aa3cf65e2d17835d430eb8c7847a8843677469ffb1b1ade329",
+      "2d6afccaa66c603725c1c98c62f959d0f1d7573f7ffa509389f6424ce6dab798",
+      "650a01a898a2c50a8e81477af5484671959d2d52151251ae222f2911c0e8fa18",
+      "109f8aa24697f1408d81a916f1ac06ce6a12129908622877a8e1ea5ace9b5bc7"
+    ]
+  },
+  "target_s4": [
+    1297036692683752448,
+    0
+  ],
+  "target_s4_children": 106
+}

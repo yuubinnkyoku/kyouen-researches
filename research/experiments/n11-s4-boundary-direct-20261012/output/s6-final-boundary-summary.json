@@ -1,0 +1,155 @@
+{
+  "combined_boundary": {
+    "LOSS": 1,
+    "UNKNOWN": 7,
+    "WIN": 90,
+    "unresolved_keys": [
+      [
+        1152921504607899649,
+        536870916
+      ],
+      [
+        1152921504607899657,
+        536870912
+      ],
+      [
+        1152921504607900672,
+        536870916
+      ],
+      [
+        1152921504607900672,
+        536870944
+      ],
+      [
+        1152921504607900672,
+        671088640
+      ],
+      [
+        1152921504675008513,
+        536870912
+      ],
+      [
+        1297036692683752448,
+        17626545782784
+      ]
+    ]
+  },
+  "derivation": "one exact S6 LOSS proves the odd-layer S5 AND parent LOSS; other unattempted/UNKNOWN S6 children remain UNKNOWN and are not needed",
+  "derived_parent_s5_outcome": "LOSS",
+  "escalation_15m": {
+    "LOSS": 1,
+    "UNKNOWN": 0,
+    "WIN": 11,
+    "attempts": 12,
+    "elapsed_seconds": 95.63836219999939,
+    "nodes": 33862288,
+    "unique_first_pass_unknowns_attempted": 12
+  },
+  "escalation_audit_receipts": [
+    {
+      "outcome": "UNKNOWN",
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-thirteenth-batch-audit.json",
+      "rows": 8,
+      "sha256": "cbaa153feeb4541ba618148947db591ca658eec8dfb1ae0b92540125cf420913"
+    },
+    {
+      "outcome": "LOSS",
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-fourteenth-batch-audit.json",
+      "rows": 4,
+      "sha256": "e25601cf16943b12f8773530afc738beda1fe51aea0128e1e5772c6d826cce0d"
+    }
+  ],
+  "first_pass_1m": {
+    "LOSS": 0,
+    "UNKNOWN": 19,
+    "WIN": 77,
+    "attempts": 96,
+    "elapsed_seconds": 121.95614249998471,
+    "nodes": 40892814
+  },
+  "first_pass_audit_receipts": [
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-first-batch-audit.json",
+      "sha256": "272d311eaee2fe35309af61641170c6698db703598b8fb319a5ca0955a73ef39"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-second-batch-audit.json",
+      "sha256": "87a78250b0ca73e5c2e13be0b11726dab45ab97bda2187c589e15866859d3b1b"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-third-batch-audit.json",
+      "sha256": "636ffa78c17dd6cb276d6659b17ae71efa4bd84eea6b790d733ac8ced0e83a05"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-fourth-batch-audit.json",
+      "sha256": "9a11e5446c36f68034b8666a4e8c4ab1a96a2e088645e335200043fadf2c55db"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-fifth-batch-audit.json",
+      "sha256": "3e1835c1cf17fa168abe73cfb310882db116241222330c0418fe164c0a9f9ca5"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-sixth-batch-audit.json",
+      "sha256": "58262979f501baaf7e2960a294fb8316ee4882ef0ae9a0f0b1bd0fdcd94324b4"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-seventh-batch-audit.json",
+      "sha256": "ed0105046e1d8294bdddef45521502897067a5e0ae4fde963f8d44aeedd658eb"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-eighth-batch-audit.json",
+      "sha256": "9fde47920a5637afc4057bf3f7ff377f7c78fa56f517aaeed2fac9784bce19df"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-ninth-batch-audit.json",
+      "sha256": "2df8b107e5c5bdf78c6b22a4975b44aa8cfd5832bc646173be4145b22eeef35e"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-tenth-batch-audit.json",
+      "sha256": "6f66103207fb8017e65c1031fab0fd30930b65642e689ec7cd165b0ffc5c03a5"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-eleventh-batch-audit.json",
+      "sha256": "82cee33869b598d0fa7fe3e978b0826ad410cb2fc60e3f0f65bf0fb02c77ec79"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-twelfth-batch-audit.json",
+      "sha256": "fe4273fb4ac9f2dc994621b968ded5aaae572f457c0558fe688b9ec9f723dba7"
+    }
+  ],
+  "first_pass_summary_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-first-pass-summary.json",
+  "first_pass_summary_sha256": "188bf9cb651f432b0ca2a85adfe69ff39cab98797bfa53bdfd53642864076aca",
+  "fresh_solver_nodes": 74755102,
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "independent_s6_boundary_size": 98,
+  "parent_s5": [
+    1152921504607899649,
+    536870912
+  ],
+  "parent_s5_polarity": "AND (is_or=0)",
+  "s6_loss_witnesses": [
+    [
+      1152921504675009536,
+      536870912
+    ]
+  ],
+  "saved_exact_counts": {
+    "LOSS": 0,
+    "WIN": 2
+  },
+  "schema": "n11-s4-final-s5-s6-complete-evidence-summary-v1",
+  "solver_binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+  "trust": "all exact S6 leaves are solver-trusted; independent Board validates canonical/legal S6 boundary and raw polarity; no terminal-only independent minimax DAG"
+}

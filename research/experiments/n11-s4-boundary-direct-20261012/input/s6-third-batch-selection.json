@@ -1,0 +1,177 @@
+{
+  "exact_cache": {
+    "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\current-exact-s5.cache",
+    "rows": 5850,
+    "sha256": "0d877af4a9ed11b44de628a374ef22e059ee8fbbbcabb67ed48a5e3576770491"
+  },
+  "frontier": {
+    "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\frontier-after-ninth-batch.json",
+    "sha256": "8d12d858b501706d1fc5f34a1b0b9b24840107071a8ea57a5e06613cc4f64c39"
+  },
+  "geometry": {
+    "path": "research\\experiments\\n11-independent-exact-audit-20261010\\scripts\\independent.py",
+    "sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f"
+  },
+  "history": {
+    "path": "research\\experiments\\n11-strategy-redesign-20261010\\output\\history.json",
+    "sha256": "212ce320b141ad2a322b13f788a0d60ba31d594860768b5de7d578883bb9bd3e"
+  },
+  "parent_s5": [
+    1152921504607899649,
+    536870912
+  ],
+  "parent_s5_direct_budget": 15000000,
+  "parent_s5_direct_unknown_nodes": 15000000,
+  "prior_run_manifest_sha256s": [
+    "8217e3ff94d78b3ecf5b0f7335dc846ee8c4c095997bffa3962588bf06eaa2f4",
+    "719ffb537f596d91c247eee8e6ba804334f63da52220baec55c8ae5dd2964b5f"
+  ],
+  "prior_s6_raw_observation_count": 2,
+  "prior_s6_unknown_by_budget": {},
+  "s6_child_count": 98,
+  "saved_s6_exact_counts": {
+    "LOSS": 0,
+    "WIN": 2
+  },
+  "saved_s6_exact_keys": [
+    {
+      "key": [
+        1153202979584611328,
+        536870912
+      ],
+      "verdict": 1
+    },
+    {
+      "key": [
+        10376293541461626881,
+        68719476738
+      ],
+      "verdict": 1
+    }
+  ],
+  "schema": "n11-s4-boundary-final-s5-s6-split-selection-v1",
+  "selected": [
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-032.csv",
+      "input_sha256": "4a8735bff30c29e85737f46365500af4c1f2798abbab46cd302bc9e1c7d406ea",
+      "is_or": 1,
+      "key": [
+        1152921504607899681,
+        536870912
+      ],
+      "legal": 73,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 32,
+      "stones": 6
+    },
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-033.csv",
+      "input_sha256": "05164f3fba95ea1064a3f75c1fe4f94c3e305daf1298c0f779d49886472c56e0",
+      "is_or": 1,
+      "key": [
+        1152921504607932417,
+        536870912
+      ],
+      "legal": 80,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 33,
+      "stones": 6
+    },
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-034.csv",
+      "input_sha256": "30aafb7b33ff439f0c2c8755156a515daa23d88130a42acb073b4f5f6d5dcbc2",
+      "is_or": 1,
+      "key": [
+        1152956688979989504,
+        536870912
+      ],
+      "legal": 83,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 34,
+      "stones": 6
+    },
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-035.csv",
+      "input_sha256": "bf8c99c458097812a7e24857544207bee4b5c49b5f1bf408249c52d8c75e2e2e",
+      "is_or": 1,
+      "key": [
+        1152991873352077313,
+        536870912
+      ],
+      "legal": 85,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 35,
+      "stones": 6
+    },
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-036.csv",
+      "input_sha256": "9b217543eb05c5e59fe36649041f685ca06a5777a6d1571cf6e483229e8d38a7",
+      "is_or": 1,
+      "key": [
+        1152921504607900672,
+        536870920
+      ],
+      "legal": 87,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 36,
+      "stones": 6
+    },
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-037.csv",
+      "input_sha256": "59f79a32c8815affd6c2844ff128b74b59e22c17418af4dff38f512556f4b648",
+      "is_or": 1,
+      "key": [
+        1152921504607899665,
+        536870912
+      ],
+      "legal": 89,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 37,
+      "stones": 6
+    },
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-038.csv",
+      "input_sha256": "a5c8d6585aaa82711c45fc37a806ad326ddc4ef6df9118f9742d22ca34b4b7fc",
+      "is_or": 1,
+      "key": [
+        1152921504607900672,
+        536879104
+      ],
+      "legal": 92,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 38,
+      "stones": 6
+    },
+    {
+      "budget": 1000000,
+      "input_path": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\s6-039.csv",
+      "input_sha256": "99484bd09ab029b27bd39c2ec38ad47f62115fe022ea8abae4305a736352eb64",
+      "is_or": 1,
+      "key": [
+        10376302337554649089,
+        68719476736
+      ],
+      "legal": 94,
+      "reason": "stratified legal-count quantile among untried S6 children; S6 OR at fixed-player view; exact LOSS witness closes parent S5 AND as LOSS",
+      "sequence": 39,
+      "stones": 6
+    }
+  ],
+  "selection_rule": "K0374-style direct S6 split: reuse exact saved S6; probe untried S6 at one fixed per-root budget with legal-count coverage; do not repeat same root/budget; stop immediately on one S6 LOSS witness; escalate only unresolved roots to a different documented budget after first-pass yield review",
+  "solver": {
+    "binary_path": ".local/n11-s5-loss-cost-drivers-20261012/dfpn-profile-child.exe",
+    "binary_sha256": "8d0781ce89ad11a7cd8011cf351d627793b5b76351b7639e433875a43f627cb2",
+    "budget": 1000000,
+    "frozen_build_manifest": "research\\experiments\\n11-s4-boundary-direct-20261012\\input\\solver-build.json",
+    "mode": "fresh DFPN process per S6 child; no profile; exact-order=count",
+    "source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446"
+  },
+  "source_main_commit": "1bdd30b71adaf8f476a98922f1b454bdd369feb3"
+}

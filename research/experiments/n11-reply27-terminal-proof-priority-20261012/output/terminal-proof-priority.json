@@ -1,0 +1,180 @@
+{
+  "all_required_s5_cache_verdicts_are_loss": true,
+  "k0375_current_s4_roots": [
+    {
+      "id": "legal84",
+      "in_reply27_dependency_set": true,
+      "key": [
+        10412322338480590849,
+        0
+      ]
+    },
+    {
+      "id": "legal92",
+      "in_reply27_dependency_set": true,
+      "key": [
+        1297036692750861312,
+        0
+      ]
+    },
+    {
+      "id": "legal94",
+      "in_reply27_dependency_set": true,
+      "key": [
+        1301540292311122944,
+        0
+      ]
+    }
+  ],
+  "k0378_six_root_bundle_membership": [
+    {
+      "id": "latest-s4/0",
+      "in_reply27_dependency_set": true,
+      "key": [
+        1301540292311122944,
+        0
+      ]
+    },
+    {
+      "id": "latest-s4/1",
+      "in_reply27_dependency_set": true,
+      "key": [
+        1297036692750861312,
+        0
+      ]
+    },
+    {
+      "id": "latest-s4/2",
+      "in_reply27_dependency_set": true,
+      "key": [
+        10412322338480590849,
+        0
+      ]
+    },
+    {
+      "id": "previous-s4/0",
+      "in_reply27_dependency_set": false,
+      "key": [
+        1189513251580280832,
+        536870912
+      ]
+    },
+    {
+      "id": "previous-s4/1",
+      "in_reply27_dependency_set": false,
+      "key": [
+        1188950301626859520,
+        536936448
+      ]
+    },
+    {
+      "id": "previous-s4/2",
+      "in_reply27_dependency_set": false,
+      "key": [
+        3494793310840553472,
+        536870912
+      ]
+    }
+  ],
+  "limitation": "The 2,995 S5 roots are not terminally closed by this analysis. Existing solver exact/cache verdicts remain trusted for all roots outside the named closed proof-DAG subset.",
+  "priority": [
+    "Keep the existing six verified S5 terminal-only roots as frozen reusable certificates.",
+    "For a bounded next pilot, choose a low-, middle-, and high-recorded-node S5 LOSS root from the dependency set, excluding roots already closed by K0378; measure proof nodes, edges, terminals, RSS, and bytes before scaling.",
+    "Then sample zero-node S5 cache claims by legal-count strata; generate only after the positive-node pilot establishes a practical capture and verification budget.",
+    "Integrate shared terminal closures only after per-root independent verification; do not extrapolate a linear size or runtime from six roots."
+  ],
+  "required_s5_rows_with_nonzero_cache_nodes": 65,
+  "required_s5_rows_with_zero_cache_nodes": 2930,
+  "reusable_assets": {
+    "K0372": "Reuse independent.py Board/verify_dag, cache quarantine rules, and the explicit trusted-leaf distinction; its 10,407-node S6 WIN certificate is a method/validator asset, not one of this root's S5 LOSS roots.",
+    "K0375": "Three current-S4 S5 LOSS roots with trusted-leaf-free proof bundle; membership is listed above.",
+    "K0377": "Compact witness-switch variant for the same three current-S4 roots; use only if the root keys match the dependency set.",
+    "K0378": "Six-root compact proof bundle; root-key overlap is listed above and is the directly reusable terminal-only subset."
+  },
+  "root": [
+    60,
+    27
+  ],
+  "root_outcome": "LOSS (solver-trusted leaves)",
+  "s3_response_table_rows": 119,
+  "s4_loss_witness_classes": 32,
+  "s4_to_s5_dependency_edges": 3297,
+  "schema": "n11-reply27-terminal-proof-gap-v1",
+  "small_cache_only_or_derived_pilot_candidates_by_legal_count": [
+    {
+      "cache_nodes": 0,
+      "key": [
+        1297038891840176128,
+        128
+      ],
+      "legal": 70,
+      "verdict": "LOSS"
+    },
+    {
+      "cache_nodes": 0,
+      "key": [
+        10520408729537609728,
+        33554432
+      ],
+      "legal": 94,
+      "verdict": "LOSS"
+    },
+    {
+      "cache_nodes": 0,
+      "key": [
+        10376363910205816832,
+        33554432
+      ],
+      "legal": 110,
+      "verdict": "LOSS"
+    }
+  ],
+  "small_solver_trusted_pilot_candidates_by_recorded_node_count": [
+    {
+      "cache_nodes": 2225177,
+      "key": [
+        1297036693220623360,
+        0
+      ],
+      "legal": 98,
+      "verdict": "LOSS"
+    },
+    {
+      "cache_nodes": 5645288,
+      "key": [
+        1297036692687946752,
+        0
+      ],
+      "legal": 104,
+      "verdict": "LOSS"
+    },
+    {
+      "cache_nodes": 11267484,
+      "key": [
+        1152921504607896576,
+        553648128
+      ],
+      "legal": 100,
+      "verdict": "LOSS"
+    }
+  ],
+  "solver_search_launched": false,
+  "source_hashes": {
+    "current_s5_cache_sha256": "c469eff06559c57b7f4b679c80c1e576c7bddb6f69ea03da0b8b64d0ef4aa198",
+    "independent_geometry_sha256": "954d3a104c1723ebb15b8c9bae63a4494f07f9eb73446a6d067c4fd6a4ba189f",
+    "k0375_current_root_manifest_sha256": "bc62c3946328959d29548ab47c9ce80d6979e76253214d807be87a1c43f10ec9",
+    "k0378_integration_plan_sha256": "23c4ec1d271c61532a09c5e0bf349bbeade0126b6741aa16c37dd7e3123047a0",
+    "root_move_proof_sha256": "ae225d023da9277230149312c00d111a92c6f55abf775aeb0db286b8effbfb39"
+  },
+  "sum_of_nonzero_s5_cache_nodes": 388074801,
+  "target_s6_loss_witness": {
+    "audit": "research/experiments/n11-s4-boundary-direct-20261012/output/s6-fourteenth-batch-audit.json",
+    "key": [
+      1152921504675009536,
+      536870912
+    ]
+  },
+  "terminal_only_s5_roots_remaining": 2992,
+  "terminal_only_s5_roots_reusable_from_k0378": 3,
+  "unique_s5_loss_roots_required": 2995
+}

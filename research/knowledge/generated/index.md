@@ -410,3 +410,6 @@
 | [K0411](../items/K0411-central-chord-enclosed-length-bound.md) | 三水平行中央弦型の共円完成点が弦内にある場合の鋭い長さ上界 | proposition | proved | geometry, rectangles |
 | [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md) | 標準整数格子64〜336行で円が二点ずつ通る行数の厳密最大値 | proposition | proved | geometry, rectangles, variants |
 | [K0413](../items/K0413-explicit-double-row-constructions-49-384.md) | 整数円の二重点行49〜384本に対する明示的構成下界 | proposition | proved | geometry, rectangles |
+| [K0414](../items/K0414-n11-reply27-root-loss.md) | 11×11二石局面{60,27}は元先手固定視点でLOSS | proposition | computed | square-outcomes, certificates, verification, provenance |
+| [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) | 11×11空盤の初手D4分類で2軌道をLOSS、19軌道は未確定 | proposition | computed | square-outcomes, first-moves, certificates, verification |
+| [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) | 二石root {60,27} のterminal-only証明には2,992個の未閉鎖S5依存根が残る | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |

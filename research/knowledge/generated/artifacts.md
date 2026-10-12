@@ -5274,6 +5274,15 @@
 ## [research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py](../../../research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): S0..S121三値境界、小盤面全安全状態、誤極性mutant、証明書改変、loader隔離
+## [research/experiments/n11-opening-orbits-weak-solve-20261012/README.md](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/README.md)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 軌道分類、応手境界、信頼範囲、再現手順
+## [research/experiments/n11-opening-orbits-weak-solve-20261012/output/opening-analysis.json](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/output/opening-analysis.json)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 121初手全ての21軌道、各マス、status、sample response boundaries
+## [research/experiments/n11-opening-orbits-weak-solve-20261012/scripts/analyze_openings.py](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/scripts/analyze_openings.py)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): 独立BoardによるD4 orbitと限定応手boundaryの列挙
 ## [research/experiments/n11-proof-compact-20261011/README.md](../../../research/experiments/n11-proof-compact-20261011/README.md)
 
 - [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (source): 有限結果、意味の範囲、再現手順
@@ -5341,6 +5350,7 @@
 ## [research/experiments/n11-proof-dag-incremental-20261011/output/integration-audit.json](../../../research/experiments/n11-proof-dag-incremental-20261011/output/integration-audit.json)
 
 - [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (manifest): 6根LOSSの独立検証receipt、certificate SHA、RSS・wall time・scratch監査
+- [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (manifest): K0378 six-root terminal-only proof audit
 ## [research/experiments/n11-proof-dag-incremental-20261011/output/integration-plan.json](../../../research/experiments/n11-proof-dag-incremental-20261011/output/integration-plan.json)
 
 - [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (data): 入力hash、候補union、greedy/local/exact比較、出力節点・辺数
@@ -5517,6 +5527,15 @@
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 5366 canonical S6境界とS7を照合し、S5への派生結果なし
+## [research/experiments/n11-reply27-terminal-proof-priority-20261012/README.md](../../../research/experiments/n11-reply27-terminal-proof-priority-20261012/README.md)
+
+- [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (source): 依存分析、asset再利用、pilot優先順位、限界
+## [research/experiments/n11-reply27-terminal-proof-priority-20261012/output/terminal-proof-priority.json](../../../research/experiments/n11-reply27-terminal-proof-priority-20261012/output/terminal-proof-priority.json)
+
+- [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (data): 2,995必要S5根、K0375/K0378重複、pilot候補とSHA-256
+## [research/experiments/n11-reply27-terminal-proof-priority-20261012/scripts/analyze_proof_gap.py](../../../research/experiments/n11-reply27-terminal-proof-priority-20261012/scripts/analyze_proof_gap.py)
+
+- [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (verifier): S4全S5境界を独立再生成し、cache root・既存DAG重複を数える
 ## [research/experiments/n11-residual-twins/output/geometry-samples.json](../../../research/experiments/n11-residual-twins/output/geometry-samples.json)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (data): seed20261005、各盤200軌跡のlate snapshot頻度と存在証人。全局面列挙ではない
@@ -5535,6 +5554,41 @@
 ## [research/experiments/n11-residual-twins/scripts/verify_twins.py](../../../research/experiments/n11-residual-twins/scripts/verify_twins.py)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (verifier): m≤5の全clutter監査と、保存格子証人の全L・最小R・Grundy再検査
+## [research/experiments/n11-s4-boundary-direct-20261012/README.md](../../../research/experiments/n11-s4-boundary-direct-20261012/README.md)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (source): 探索選定、全結果、費用、信頼範囲、再現手順
+## [research/experiments/n11-s4-boundary-direct-20261012/input/saved-s6-raw-relocations.json](../../../research/experiments/n11-s4-boundary-direct-20261012/input/saved-s6-raw-relocations.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (manifest): 保存S6 raw 2件の履歴由来、移動先、SHA-256を固定
+## [research/experiments/n11-s4-boundary-direct-20261012/output/candidate-ranking-after-s6-parent-loss.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/candidate-ranking-after-s6-parent-loss.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (data): 以前の残余100・108に関わる115 classの再分類・費用proxy順位
+## [research/experiments/n11-s4-boundary-direct-20261012/output/cardinality-after-s6-parent-loss.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/cardinality-after-s6-parent-loss.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (data): 追加必要class数0と有理LP双対0の再計算
+## [research/experiments/n11-s4-boundary-direct-20261012/output/frontier-after-s6-parent-loss.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/frontier-after-s6-parent-loss.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (certificate): 独立整数幾何で再生成した全3,384 S4境界と119/119被覆
+## [research/experiments/n11-s4-boundary-direct-20261012/output/raw-sha256-audit.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/raw-sha256-audit.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (manifest): 202参照・176個のunique raw全件のSHA、key、極性、費用を照合
+## [research/experiments/n11-s4-boundary-direct-20261012/output/raw/s6-211.csv](../../../research/experiments/n11-s4-boundary-direct-20261012/output/raw/s6-211.csv)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (solver): S6 LOSS witnessの完全solver replay raw
+## [research/experiments/n11-s4-boundary-direct-20261012/output/root-60-27-loss-proof.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/root-60-27-loss-proof.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (certificate): 119個の合法root手それぞれにS4 LOSS応手を割り当てたAND/OR監査
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (certificate): `{60,27}` の119/119第三手LOSS応手表
+- [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (certificate): 32 S4 witness classと119 root-move cover
+## [research/experiments/n11-s4-boundary-direct-20261012/output/s5-s6-derived-cache-merge-receipt.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/s5-s6-derived-cache-merge-receipt.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (manifest): S5 LOSSのexact-only safe atomic mergeと最終cache SHA-256
+## [research/experiments/n11-s4-boundary-direct-20261012/output/s6-fourteenth-batch-audit.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/s6-fourteenth-batch-audit.json)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (verifier): 15M S6 LOSS rawを独立幾何・極性・AND伝播で監査したreceipt
+## [research/experiments/n11-s4-boundary-direct-20261012/scripts/audit_raw_inventory.py](../../../research/experiments/n11-s4-boundary-direct-20261012/scripts/audit_raw_inventory.py)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (verifier): 全batch receiptのraw replay rowとSHA-256を再照合
 ## [research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md)
 
 - [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (source): 階層分割の費用、適応方式、限界、再現手順

@@ -1,0 +1,171 @@
+{
+  "audit_receipts": [
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-first-batch-audit.json",
+      "sha256": "272d311eaee2fe35309af61641170c6698db703598b8fb319a5ca0955a73ef39"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-second-batch-audit.json",
+      "sha256": "87a78250b0ca73e5c2e13be0b11726dab45ab97bda2187c589e15866859d3b1b"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-third-batch-audit.json",
+      "sha256": "636ffa78c17dd6cb276d6659b17ae71efa4bd84eea6b790d733ac8ced0e83a05"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-fourth-batch-audit.json",
+      "sha256": "9a11e5446c36f68034b8666a4e8c4ab1a96a2e088645e335200043fadf2c55db"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-fifth-batch-audit.json",
+      "sha256": "3e1835c1cf17fa168abe73cfb310882db116241222330c0418fe164c0a9f9ca5"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-sixth-batch-audit.json",
+      "sha256": "58262979f501baaf7e2960a294fb8316ee4882ef0ae9a0f0b1bd0fdcd94324b4"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-seventh-batch-audit.json",
+      "sha256": "ed0105046e1d8294bdddef45521502897067a5e0ae4fde963f8d44aeedd658eb"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-eighth-batch-audit.json",
+      "sha256": "9fde47920a5637afc4057bf3f7ff377f7c78fa56f517aaeed2fac9784bce19df"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-ninth-batch-audit.json",
+      "sha256": "2df8b107e5c5bdf78c6b22a4975b44aa8cfd5832bc646173be4145b22eeef35e"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-tenth-batch-audit.json",
+      "sha256": "6f66103207fb8017e65c1031fab0fd30930b65642e689ec7cd165b0ffc5c03a5"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-eleventh-batch-audit.json",
+      "sha256": "82cee33869b598d0fa7fe3e978b0826ad410cb2fc60e3f0f65bf0fb02c77ec79"
+    },
+    {
+      "fresh_rows": 8,
+      "path": "research\\experiments\\n11-s4-boundary-direct-20261012\\output\\s6-twelfth-batch-audit.json",
+      "sha256": "fe4273fb4ac9f2dc994621b968ded5aaae572f457c0558fe688b9ec9f723dba7"
+    }
+  ],
+  "budget_per_fresh_root": 1000000,
+  "combined_exact_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 19,
+    "WIN": 79
+  },
+  "combined_unknown_keys": [
+    [
+      1152921504607899649,
+      536870916
+    ],
+    [
+      1152921504607899653,
+      536870912
+    ],
+    [
+      1152921504607899657,
+      536870912
+    ],
+    [
+      1152921504607900672,
+      536870916
+    ],
+    [
+      1152921504607900672,
+      536870944
+    ],
+    [
+      1152921504607900672,
+      536879104
+    ],
+    [
+      1152921504607900672,
+      671088640
+    ],
+    [
+      1152921504607902720,
+      536870912
+    ],
+    [
+      1152921504612093953,
+      536870912
+    ],
+    [
+      1152921504624677888,
+      536870912
+    ],
+    [
+      1152921504675008513,
+      536870912
+    ],
+    [
+      1152921504675009536,
+      536870912
+    ],
+    [
+      1152921538967638017,
+      536870912
+    ],
+    [
+      1152956688979988481,
+      536870912
+    ],
+    [
+      1188950301626863617,
+      536870912
+    ],
+    [
+      1297036692683752448,
+      17626545782784
+    ],
+    [
+      1441151880759612416,
+      536870912
+    ],
+    [
+      10376293541461626881,
+      68727865344
+    ],
+    [
+      10385300740716367873,
+      68719476736
+    ]
+  ],
+  "fresh_1m_attempts": 96,
+  "fresh_1m_verdict_counts": {
+    "LOSS": 0,
+    "UNKNOWN": 19,
+    "WIN": 77
+  },
+  "fresh_elapsed_seconds": 121.95614249998471,
+  "fresh_nodes": 40892814,
+  "history_sha256": "1ed1f0f4d94417ab1b81ec6ddbe81cbeaef0596a0b62db9929a7f3f794d58791",
+  "independent_boundary_children": 98,
+  "independent_checks": "all 98 canonical S6 children regenerated; every fresh raw row rechecked for key/stones/legal/is_or=1/budget/verdict/nodes and raw/log SHA",
+  "parent_s5": [
+    1152921504607899649,
+    536870912
+  ],
+  "parent_s5_polarity": "AND (is_or=0)",
+  "saved_exact_counts": {
+    "LOSS": 0,
+    "WIN": 2
+  },
+  "schema": "n11-s4-final-s5-s6-first-pass-summary-v1",
+  "selection_rule": "twelve 8-child legal-count-stratified batches; one cold profile-off exact solver process per S6 child; saved exact S6 reused",
+  "trust": "S6 exact leaves are solver-trusted; geometry and parent AND propagation are independently checked; not terminal-only minimax proof"
+}
