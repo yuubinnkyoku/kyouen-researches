@@ -143,7 +143,8 @@ def main() -> None:
     }
     output = args.output if args.output.is_absolute() else ROOT / args.output
     output.parent.mkdir(parents=True, exist_ok=True)
-    output.write_text(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    with output.open("w", encoding="utf-8", newline="\n") as stream:
+        stream.write(json.dumps(result, ensure_ascii=False, indent=2, sort_keys=True) + "\n")
     print(json.dumps({
         "output": str(output.relative_to(ROOT)),
         "top_roots": top_roots,
