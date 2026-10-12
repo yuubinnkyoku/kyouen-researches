@@ -1751,6 +1751,7 @@
 - ← depends_on [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md): K0372による固定先手伝播と隔離規則の維持
 - ← depends_on [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md): 固定先手の層別伝播規則
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 層別伝播規則を維持し、S5 LOSSはS6 LOSS子を持つ条件で評価
+- ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 元先手固定の勝敗伝播規則（S1=AND・S4 LOSS=全S5子LOSS）
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1771,6 +1772,7 @@
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): exact solver観測を独立terminal-only証明と区別
 - ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): solver-trusted exact値とterminal-only独立証明の信頼区分
 - ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): terminal-only検査器、cache隔離、trusted leafの区別
+- ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 独立Board・exact cache隔離・trusted leafの区別
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
@@ -1935,11 +1937,13 @@
 - → depends_on [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md): 第三手100・108の反射同値性
 - ← depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 二石root {60,27} の119手solver-trusted LOSS結果
 - ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): 119/119 solver-trusted LOSS proofと32個の使用S4 LOSS class
+- ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 既知LOSS基準rootと32個の無料S4 LOSS class
 
 ## [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) 11×11空盤の初手D4分類で2軌道をLOSS、19軌道は未確定
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の交互AND/OR規則
 - → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 二石root {60,27} の119手solver-trusted LOSS結果
+- ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 19未確定初手軌道と中央応手f=60の候補root
 
 ## [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) 二石root {60,27} のterminal-only証明には2,992個の未閉鎖S5依存根が残る
 
@@ -1948,3 +1952,10 @@
 - → depends_on [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md): 現S4配下3根の共有terminal-only証明
 - → depends_on [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md): 同3根のcompact witness-switch証明
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset
+
+## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5証明計画は上界31,546・下界6,573で個別合計の約半分
+
+- → depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 19未確定初手軌道と中央応手f=60の候補root
+- → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 既知LOSS基準rootと32個の無料S4 LOSS class
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定の勝敗伝播規則（S1=AND・S4 LOSS=全S5子LOSS）
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 独立Board・exact cache隔離・trusted leafの区別

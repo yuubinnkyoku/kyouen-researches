@@ -5295,6 +5295,27 @@
 ## [research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py](../../../research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): S0..S121三値境界、小盤面全安全状態、誤極性mutant、証明書改変、loader隔離
+## [research/experiments/n11-joint-s5-proof-planning-20261012/README.md](../../../research/experiments/n11-joint-s5-proof-planning-20261012/README.md)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (source): 共同最適化の結果・方法・再現・限界
+## [research/experiments/n11-joint-s5-proof-planning-20261012/output/chosen-plans.json](../../../research/experiments/n11-joint-s5-proof-planning-20261012/output/chosen-plans.json)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (data): 個別・共同の選択S4と要求S5集合（楽観的計画）
+## [research/experiments/n11-joint-s5-proof-planning-20261012/output/optimization-results.json](../../../research/experiments/n11-joint-s5-proof-planning-20261012/output/optimization-results.json)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (data): 個別19 rootと共同の上下界・共有削減・寄与統計
+## [research/experiments/n11-joint-s5-proof-planning-20261012/output/plan-verification.json](../../../research/experiments/n11-joint-s5-proof-planning-20261012/output/plan-verification.json)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (certificate): 独立再検証の通過記録（58.6秒、失敗0件）
+## [research/experiments/n11-joint-s5-proof-planning-20261012/scripts/build_dependency_graph.py](../../../research/experiments/n11-joint-s5-proof-planning-20261012/scripts/build_dependency_graph.py)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (source): 20 rootのS3/S4/S5依存グラフ構築（独立Board＋cache照合のみ）
+## [research/experiments/n11-joint-s5-proof-planning-20261012/scripts/optimize_s5_selection.py](../../../research/experiments/n11-joint-s5-proof-planning-20261012/scripts/optimize_s5_selection.py)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (source): 群別1選択肢・和集合最小の上界 heuristic と5種の下界
+## [research/experiments/n11-joint-s5-proof-planning-20261012/scripts/verify_plans.py](../../../research/experiments/n11-joint-s5-proof-planning-20261012/scripts/verify_plans.py)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (verifier): 全2,261 third手・全34,948到達S4の独立再計算（失敗0）
 ## [research/experiments/n11-opening-orbits-weak-solve-20261012/README.md](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 軌道分類、応手境界、信頼範囲、再現手順

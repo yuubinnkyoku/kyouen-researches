@@ -413,3 +413,4 @@
 | [K0414](../items/K0414-n11-reply27-root-loss.md) | 11×11二石局面{60,27}は元先手固定視点でLOSS | proposition | computed | square-outcomes, certificates, verification, provenance |
 | [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) | 11×11空盤の初手D4分類で2軌道をLOSS、19軌道は未確定 | proposition | computed | square-outcomes, first-moves, certificates, verification |
 | [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) | 二石root {60,27} のterminal-only証明には2,992個の未閉鎖S5依存根が残る | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+| [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) | 19残存初手の共同S5証明計画は上界31,546・下界6,573で個別合計の約半分 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
