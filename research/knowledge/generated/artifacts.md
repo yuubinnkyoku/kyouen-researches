@@ -5350,6 +5350,47 @@
 ## [research/experiments/n11-proof-compact-20261011/tests/test_class_cover.py](../../../research/experiments/n11-proof-compact-20261011/tests/test_class_cover.py)
 
 - [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (verifier): 最新mainの117/119・残り{100,108}・最小31 classを回帰検査
+## [research/experiments/n11-proof-cost-comparison-20261012/README.md](../../../research/experiments/n11-proof-cost-comparison-20261012/README.md)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (source): 証明戦略比較の全体記録（課題1〜5）
+- [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (source): 証明戦略比較の全体記録（課題1〜5）
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 証明戦略比較の全体記録（課題1〜5、主軸判断と実探索条件を含む）
+## [research/experiments/n11-proof-cost-comparison-20261012/output/alt-reply-comparison.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/alt-reply-comparison.json)
+
+- [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (data): 個別UB/LB・再利用率・重なり率・joint-swap差分
+## [research/experiments/n11-proof-cost-comparison-20261012/output/alt-roots-summary.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/alt-roots-summary.json)
+
+- [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (data): 6 rootの到達S4・無料third・新規クラス数
+## [research/experiments/n11-proof-cost-comparison-20261012/output/element-dual-certificate.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/element-dual-certificate.json)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (certificate): deg 962,469要素・869群alpha・厳密総和と整数下界
+## [research/experiments/n11-proof-cost-comparison-20261012/output/pilot-candidates.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/pilot-candidates.json)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): frontier legal手数分布・最安10件・両用16件のマスク
+## [research/experiments/n11-proof-cost-comparison-20261012/output/win-side-analysis.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/win-side-analysis.json)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 65応手軌道の閉鎖性・証人数・AND幅
+## [research/experiments/n11-proof-cost-comparison-20261012/output/win-witness-masks.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/win-witness-masks.json)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 証人1,739マスクと再計算差分
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/build_alt_roots.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/build_alt_roots.py)
+
+- [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (source): 中央と同一index空間の非中央6 root構築（39.1秒）
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/compare_alt_replies.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/compare_alt_replies.py)
+
+- [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (source): 個別最適化とjoint-swap共同再最適化
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/disjoint_pool_packing.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/disjoint_pool_packing.py)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (source): pool-disjoint packingによる独立整数下界（346、採用せず）
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/dual_certificate.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/dual_certificate.py)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (source): deg再集計・厳密有理数alpha・証明書発行と--verify再検査
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/win_side.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/win_side.py)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 応手軌道縮約・S4分類・証人被覆のWIN側依存分析（初手49で約30分）
+## [research/experiments/n11-proof-cost-comparison-20261012/scripts/win_witness_masks.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/win_witness_masks.py)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 証人S5マスクの限定再計算と重なり測定（約1分）
 ## [research/experiments/n11-proof-dag-engine-followup-20261011/README.md](../../../research/experiments/n11-proof-dag-engine-followup-20261011/README.md)
 
 - [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (source): 実装、比較、性能・容量、限界、再現手順
