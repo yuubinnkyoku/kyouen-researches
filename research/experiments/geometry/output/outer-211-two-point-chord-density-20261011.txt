@@ -1,0 +1,7 @@
+local_prime_tests 79
+local_count_formula 2*(p-1) residues mod p^2 for p=3 mod 8, p not dividing h
+norm_vs_local_cases 18000 local_obstructions_checked 12495
+pell_d_h1 [(8, 6), (48, 34), (280, 198), (1632, 1154), (9512, 6726)]
+pell_h_values 10 pell_levels 12 integer_determinants_checked 120
+finite_counts_h1 [(100, 24, 0.24), (1000, 191, 0.191), (10000, 1626, 0.1626), (50000, 7407, 0.14814)]
+PASS

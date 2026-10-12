@@ -1,0 +1,16 @@
+Pell witnesses (k,u,v): [(0, 2, 2), (1, 8, 11), (2, 44, 62), (3, 254, 359), (4, 1478, 2090), (5, 8612, 12179)]
+m= 2 2+1+1 bottom/middle/top=[0, 0, 0] total=0 all_forbidden=3
+m= 3 2+1+1 bottom/middle/top=[2, 1, 2] total=5 all_forbidden=14
+m= 4 2+1+1 bottom/middle/top=[10, 10, 10] total=30 all_forbidden=57
+m= 5 2+1+1 bottom/middle/top=[18, 19, 18] total=55 all_forbidden=118
+m= 6 2+1+1 bottom/middle/top=[26, 28, 26] total=80 all_forbidden=212
+m= 7 2+1+1 bottom/middle/top=[36, 37, 36] total=109 all_forbidden=355
+m= 8 2+1+1 bottom/middle/top=[46, 50, 46] total=142 all_forbidden=568
+m= 9 2+1+1 bottom/middle/top=[60, 71, 60] total=191 all_forbidden=881
+m=10 2+1+1 bottom/middle/top=[80, 92, 80] total=252 all_forbidden=1317
+m=11 2+1+1 bottom/middle/top=[100, 113, 100] total=313 all_forbidden=1888
+m=12 2+1+1 bottom/middle/top=[122, 134, 122] total=378 all_forbidden=2631
+m=13 2+1+1 bottom/middle/top=[144, 155, 144] total=443 all_forbidden=3572
+m=14 2+1+1 bottom/middle/top=[168, 184, 168] total=520 all_forbidden=4762
+m=15 2+1+1 bottom/middle/top=[194, 213, 194] total=601 all_forbidden=6229
+PASS: 4 independent counts, m=2..15; all forbidden m=2..12; middle row representation parity h=1..5,d=1..100; 12 Pell witnesses

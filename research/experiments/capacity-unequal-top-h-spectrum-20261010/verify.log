@@ -1,0 +1,5 @@
+PASS cases=9000 safe_states=1450156 maximal_vectors=98970 physical_maximal_sets=6316621 nontrivial_cases=6900
+example c=(5, 4, 3, 2, 1) h=3 r=7: [(7, 7, 46), (9, 10, 849), (10, 3, 360)]; aggregated={7: (7, 46), 9: (10, 849), 10: (3, 360)}
+example c=(5, 4, 3, 2, 1) h=4 r=8: [(8, 36, 750), (9, 19, 2119), (9, 1, 180)]; aggregated={8: (36, 750), 9: (20, 2299)}
+example c=(5, 4, 3, 2, 1) h=2 r=5: [(5, 1, 1), (8, 2, 150), (10, 3, 360)]; aggregated={5: (1, 1), 8: (2, 150), 10: (3, 360)}
+PASS direct_mex_conditions=1344 mixed_parity_nonbinary=85

@@ -1,0 +1,4 @@
+PASS cases=22440 safe_states=11420886 cases_with_holes=2571 total_missing_lengths=4450
+example c=(5, 4, 3, 2, 1) h=2 r=5: lengths=[5, 8, 10] missing=[6, 7, 9]
+example c=(5, 4, 3, 2, 1) h=3 r=7: lengths=[7, 9, 10] missing=[8]
+example c=(5, 4, 3, 2, 1) h=4 r=8: lengths=[8, 9] missing=[]
