@@ -1,0 +1,18 @@
+11x11 q=12; terminal 114 stones; nine-point prefix obstruction census (2026-10-12)
+21 forbidden circles; 52 seven-point deletion sets; 44 active points, 77 inert.
+k=4: all=11 minimal=11 active_h=11
+k=5: all=1399 minimal=120 active_h=552
+k=6: all=87782 minimal=562 active_h=13092
+k=7: all=3623358 minimal=1288 active_h=195472
+k=8: all=110694392 minimal=4628 active_h=2071031
+k=9: all=2670079404 minimal=10588 active_h=16635380
+k=9: 2670068816 nonminimal, 1346 D4 orbits of new minimal blockers
+D4 orbit sizes: 1301 of size 8, 45 of size 4
+total 9-point subsets: 11296854581155
+Verifier A: half-integer center generation + DFS/minimality + binomial-completion count
+Verifier B: triple determinant generation (167539 distinct equations) + exact cover + direct 44-point subset census (932778749 nodes)
+Both verified all k=4..9 counts; all 10588 minimal9 witness sets identical after canonicalization.
+Python witness and D4 audit passed.
+SHA256 sorted canonical minimal9 lines: 137eaca09ca17a1b8f95623e1f6ee95300381d39893e20960bf63acf58593c63
+Counting identity: a_k = sum_{j=0}^{min(k,44)} h_j * binom(77,k-j).
+Finite complete enumeration, not a winner/Grundy claim.
