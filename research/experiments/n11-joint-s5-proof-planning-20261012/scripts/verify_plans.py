@@ -45,6 +45,9 @@ def key_of(mask: int) -> tuple[int, int]:
     return mask & ((1 << 64) - 1), mask >> 64
 
 
+from joint_plan_checks import audit_joint_entries
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--graph", type=Path, default=EXPERIMENT / "output/dependency-graph.json.gz")
@@ -72,6 +75,7 @@ def main() -> None:
         assert board.canonical(mask) == mask, "stored S5 mask is not canonical"
 
     checked_s4: dict[int, tuple[str, frozenset]] = {}
+    verified_paid_options: dict[tuple[int, int, int], set[int]] = {}
     failures: list[str] = []
     stats = {"roots": 0, "thirds": 0, "paid_entries": 0, "free_thirds": 0,
              "distinct_s4_checked": 0}
@@ -103,7 +107,10 @@ def main() -> None:
         if verdict != recorded:
             failures.append(f"s4 {index}: recomputed {verdict} != recorded {recorded}")
         recorded_unknown = {s5_masks[e] for e in s4_cost[index]}
-        if set(unknown) != recorded_unknown:
+        if recorded == "WIN_EXCLUDED":
+            if recorded_unknown:
+                failures.append(f"s4 {index}: excluded WIN must have empty cost")
+        elif set(unknown) != recorded_unknown:
             failures.append(
                 f"s4 {index}: recomputed {len(unknown)} unknown children != "
                 f"recorded {len(recorded_unknown)}")
@@ -150,6 +157,7 @@ def main() -> None:
                     check_s4(witness)
             else:
                 stats["paid_entries"] += 1
+                verified_paid_options[(root["origin_first"], root["origin_reply"], third)] = recomputed
                 chosen = entry["s4_class_index"]
                 if chosen not in recomputed:
                     failures.append(f"root {name} third {third}: chosen s4 {chosen} "
@@ -157,25 +165,26 @@ def main() -> None:
                     continue
                 if s4_masks[chosen] != (entry["s4_mask"][0] | (entry["s4_mask"][1] << 64)):
                     failures.append(f"root {name} third {third}: stored s4 mask mismatch")
+                if (type(entry.get("unknown_s5_children")) is not int or
+                        entry["unknown_s5_children"] != len(s4_cost[chosen])):
+                    failures.append(f"root {name} third {third}: unknown S5 count mismatch")
                 check_s4(chosen)
         _log(f"root {name}: {len(thirds)} thirds ok "
              f"({len(entries)} paid, {len(thirds) - len(entries)} free)")
 
-    joint = plans["_joint_19_roots"]["groups"]
-    union: set[int] = set()
-    joint_thirds: set[tuple] = set()
-    for entry in joint:
-        union |= s4_cost[entry["s4_class_index"]]
-        joint_thirds.add((entry["first"], entry["reply"], entry["third"]))
-    individual_thirds: set[tuple] = set()
+    # Check all S4 status/cost records, including those not selected.
+    for index in range(len(s4_masks)):
+        check_s4(index)
+
+    individual_thirds: set[tuple[int, int, int]] = set()
     for name, plan in plans.items():
         if name == "_joint_19_roots":
             continue
         for entry in plan["groups"]:
             individual_thirds.add((entry["first"], entry["reply"], entry["third"]))
-    if joint_thirds != individual_thirds:
-        failures.append(f"joint plan covers {len(joint_thirds)} thirds != "
-                        f"individual plans {len(individual_thirds)}")
+    joint = plans["_joint_19_roots"]["groups"]
+    union = audit_joint_entries(joint, individual_thirds, verified_paid_options,
+                                s4_masks, s4_cost, check_s4, failures)
     if sorted(union) != plans["_joint_19_roots"]["required_new_s5"]:
         failures.append("joint plan union does not match required_new_s5")
     if len(union) != plans["_joint_19_roots"]["union_size"]:
