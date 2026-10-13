@@ -1,0 +1,16 @@
+{
+  "board": "11x11", "q": 12, "rule": "no 12 collinear or cocircular occupied points",
+  "coordinate": "p=11*y+x; x,y=0..10", "count_type": "exact finite enumeration",
+  "forbidden_circles": 21,
+  "113_safe": 60000,
+  "113_terminal": 54072,
+  "113_extendable": 5928,
+  "113_terminal_orbit_counts": {"2": 6, "4": 129, "8": 6693},
+  "113_extendable_orbit_counts": {"4": 10, "8": 736},
+  "113_all_safe_orbit_counts": {"2": 6, "4": 139, "8": 7429},
+  "d4_actions": "bit0 horizontal x flip, bit1 vertical y flip, bit2 transpose x,y",
+  "113_terminal_fixed_counts_by_action_0_to_7": [54072,248,248,52,0,2,2,0],
+  "113_extendable_fixed_counts_by_action_0_to_7": [5928,20,20,0,0,0,0,0],
+  "113_terminal_stabilizer_masks_counts": {"1":53544,"3":238,"5":238,"9":40,"15":10,"105":2},
+  "quarterturn_invariant_113_terminal_omitted_coordinates": [[1,2],[1,4],[2,9],[4,9],[6,1],[8,1],[9,6],[9,8]]
+}
