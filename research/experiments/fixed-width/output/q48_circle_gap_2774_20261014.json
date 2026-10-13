@@ -1,0 +1,14 @@
+{
+  "scope": "1<=m<=2774; exact finite enumeration",
+  "chord_types": [
+    [1,3,3,1],
+    [35,51,63,73],
+    [73,63,51,35],
+    [1331,1935,2391,2773],
+    [2773,2391,1935,1331]
+  ],
+  "independent_product_checks": "all m=1..74",
+  "circle_counts": {"4":1,"73":70,"74":73,"100":151,"2773":8170,"2774":8175},
+  "forbidden_8set_count": "4*binom(m,8)+C(m)",
+  "first_new_circle_type_after_74": 2774
+}

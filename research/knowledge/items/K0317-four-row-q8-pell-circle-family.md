@@ -33,3 +33,9 @@ Pell方程式
 この族で最初の非局所的な8点円が盤内に全て現れるのは4×74で、8点中7点を含める最小盤は4×69。これらの「最初」は弦長の有限完全分類で確認されている。
 
 従って4行盤では、十分長くしても局所円以外が消えるわけではない。K0077の早い安定化M_{4,8}=11は、円型そのものの消滅ではなく、少数石から塞げる点数の上界によって成立する。
+
+## Additional exact finite circle census (2026-10-14)
+
+The complete integer-chord enumeration through maximum horizontal span 2773 finds exactly five patterns: (1,3,3,1), (35,51,63,73), (73,63,51,35), (1331,1935,2391,2773), and (2773,2391,1935,1331). Consequently, for every 1 <= m <= 2774 the exact number of eight-point circles on four consecutive rows is max(0,m-3)+2*max(0,m-73)+2*[m=2774]. In particular, the second Pell-family circle at width 2774 is the first new type after width 74; no intermediate types occur. The total number of forbidden eight-point subsets is 4*binom(m,8) plus this circle count. This is a finite complete classification, not an unbounded classification of all circles.
+
+Proof and two independent integer enumerators: research/experiments/fixed-width/reports/q48-circle-gap-2774-20261014.md, research/experiments/fixed-width/scripts/q48_circle_gap_2774_20261014.py, and research/experiments/fixed-width/scripts/q48_circle_gap_2774_independent_20261014.cpp. The original infinite Pell-family theorem above is unchanged.
