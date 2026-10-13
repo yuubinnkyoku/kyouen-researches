@@ -247,37 +247,68 @@ def _pack(q: dict[int, float], counts: dict[int, dict[int, int]],
     return c
 
 
-def _lp_relaxation_dual(inst: Instance) -> float:
-    """Dual of  min sum x  s.t.  sum_{e in C(s)} x[e] >= 1  for every paid option.
+def _group_pool_packing(inst: Instance) -> tuple[dict[int, int], int]:
+    """Return exact integer numerators k[t] and a common denominator D.
 
-    That relaxation is implied by any integral union plan (set x = 1_union), so
-    its optimum is a valid lower bound.  Its dual packs (group, option) pairs
-    under a per-element capacity of one; a greedy ascending |C(s)| packing is a
-    feasible dual point.
+    The represented dual weights lambda[t] = k[t]/D satisfy
+    sum_{t: e in pool[t]} k[t] <= D for every element.  Starting with either
+    zero weights or k[t] = 1, greedily fill the remaining integer capacities.
+    All feasibility arithmetic is integral; floating point only orders groups.
     """
-    best = 0.0
+    if not inst.paid:
+        return {}, 1
+    minimum = {i: min(len(inst.cost[s]) for s in inst.groups[i]) for i in inst.paid}
+    degree: Counter[int] = Counter()
+    for i in inst.paid:
+        degree.update(inst.pool[i])
+    denominator = max(degree.values())
     orders = (
-        sorted(((i, s) for i in inst.paid for s in inst.groups[i] if inst.cost[s]),
-               key=lambda t: (len(inst.cost[t[1]]), t[0], t[1])),
-        sorted(((i, s) for i in inst.paid for s in inst.groups[i] if inst.cost[s]),
-               key=lambda t: (len(inst.cost[t[1]]), len(inst.pool[t[0]]), t[0], t[1])),
-        sorted(((i, s) for i in inst.paid for s in inst.groups[i] if inst.cost[s]),
-               key=lambda t: (len(inst.cost[t[1]]), -len(inst.cover[t[1]]), t[0], t[1])),
+        sorted(inst.paid, key=lambda i: (len(inst.pool[i]), -minimum[i], i)),
+        sorted(inst.paid, key=lambda i: (-minimum[i] / len(inst.pool[i]),
+                                         len(inst.pool[i]), i)),
+        sorted(inst.paid, key=lambda i: (-minimum[i], len(inst.pool[i]), i)),
     )
-    for order in orders:
-        slack: dict[int, float] = {}
-        value = 0.0
-        for i, s in order:
-            cs = inst.cost[s]
-            limit = min(slack.get(e, 1.0) for e in cs)
-            if limit <= 1e-12:
-                continue
-            value += limit
-            for e in cs:
-                slack[e] = slack.get(e, 1.0) - limit
-        if value > best:
-            best = value
-    return best
+    best: dict[int, int] = {}
+    best_value = -1
+    for initial in (0, 1):
+        for order in orders:
+            weight = {i: initial for i in inst.paid}
+            slack = {e: denominator - initial * n for e, n in degree.items()}
+            for i in order:
+                extra = denominator
+                for e in inst.pool[i]:
+                    extra = min(extra, slack[e])
+                    if not extra:
+                        break
+                if not extra:
+                    continue
+                weight[i] += extra
+                for e in inst.pool[i]:
+                    slack[e] -= extra
+            value = sum(minimum[i] * weight[i] for i in inst.paid)
+            if value > best_value:
+                best, best_value = weight, value
+    return best, denominator
+
+
+def _lp_relaxation_dual(inst: Instance) -> float:
+    """Feasible dual bound for the group-pool relaxation of minimum union.
+
+    Let P[t] be the union of all option cost sets in group t and let m[t] be
+    their minimum size.  Every feasible union U contains a full chosen option
+    in P[t], hence |U intersect P[t]| >= m[t].  The relaxation is therefore
+    min sum_e x[e] subject to sum_{e in P[t]} x[e] >= m[t], x >= 0.
+    Its dual maximises sum_t m[t]*lambda[t] subject to
+    sum_{t: e in P[t]} lambda[t] <= 1, lambda >= 0.
+
+    The old per-option intersection constraints were invalid: U need not
+    intersect an unchosen option.  Keep this helper name and output field for
+    compatibility, but pack group pools with exact integer capacities instead.
+    """
+    weight, denominator = _group_pool_packing(inst)
+    value = sum(min(len(inst.cost[s]) for s in inst.groups[i]) * weight[i]
+                for i in inst.paid)
+    return value / denominator
 
 
 def lower_bounds(inst: Instance) -> dict:
@@ -620,7 +651,8 @@ def main() -> None:
                              "smallest threshold whose options still cover every group",
                              "element-only fractional dual",
                              "grouped fractional dual by alternating packing",
-                             "dual of the LP relaxation sum_{e in C(s)} x[e] >= 1"],
+                             "group-pool dual: sum_{e in pool[t]} x[e] >= min_s |C(s)|; "
+                             "exact integer-capacity fractional packing"],
             "exactness": "no branch-and-bound optimality proof; upper and lower bounds are "
                          "reported separately and the gap is not closed",
         },

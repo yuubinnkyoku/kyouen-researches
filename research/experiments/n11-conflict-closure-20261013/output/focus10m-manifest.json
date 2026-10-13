@@ -1,0 +1,90 @@
+{
+  "budget": 10000000,
+  "capture": true,
+  "completed_candidates": 4,
+  "counts": {
+    "LOSS": 2,
+    "UNKNOWN": 1,
+    "WIN": 1
+  },
+  "memo_power": 20,
+  "order": "count-asc",
+  "residual_header_sha256": "5976935dcfccb9b5a26fa68f8de20868ce45363dd8c372dcd67d9b841167e7f5",
+  "rows": [
+    {
+      "canonical_children": 40,
+      "input_sha256": "599742c3f4e9b5374553f2bdb14067b88279635a18975f4a3683027cd516b8f8",
+      "legal": 80,
+      "mask": [
+        1153484454560269345,
+        0
+      ],
+      "nodes": 2653928,
+      "output_sha256": "3c4c15e61a268fe2209062161f212a67ed2d0c8ebc7d116819b818d666dfa1c5",
+      "s5_index": 115540,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/focus10m-115540.csv",
+      "trace_sha256": "f13e344ccbddd6f37702e7c7713312a3753296d24f2c02bb6b481960c22755b6",
+      "verdict": 2,
+      "wall_seconds": 16.03
+    },
+    {
+      "canonical_children": 39,
+      "input_sha256": "6ac0295777fa5957a185e4bb21f5a69f8691b4d4e4df0eb9a0a63beeb87a3133",
+      "legal": 78,
+      "mask": [
+        1158058422931816480,
+        0
+      ],
+      "nodes": 2069313,
+      "output_sha256": "e96e727bfce8b05fadbef2881e51365bb9242bed6d4890f60e1ff6b18a692c8c",
+      "s5_index": 144193,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/focus10m-144193.csv",
+      "trace_sha256": "256467ac653455575d14f77cc0fa514dc85ec4de021a581cd64a930e5aa90a03",
+      "verdict": 2,
+      "wall_seconds": 11.641
+    },
+    {
+      "canonical_children": 44,
+      "input_sha256": "dd9989b279cc581d2d59b692d9a794ef71bddd5edfc0b1a3018a08d19193dea9",
+      "legal": 88,
+      "mask": [
+        1154891829443821600,
+        0
+      ],
+      "nodes": 4014680,
+      "output_sha256": "78eeaa0ea9029cac927b8769d158127aa9a4e4caf8759e52df56174496f1b132",
+      "s5_index": 144311,
+      "status": "SOLVED",
+      "trace_path": "build/n11-conflict-native-traces/focus10m-144311.csv",
+      "trace_sha256": "c77cf9737bc68c496d981168fe52ee58eebb383d44832f8f88e3be8eb225a430",
+      "verdict": 1,
+      "wall_seconds": 31.937
+    },
+    {
+      "canonical_children": 49,
+      "input_sha256": "24c14bca43975ee9bd542b9c5af779f5607d1a84b53de7993fa9a432905ded21",
+      "legal": 98,
+      "mask": [
+        1153484454560268320,
+        35218731827200
+      ],
+      "nodes": 10000000,
+      "output_sha256": "2507640e57fca81a8e8a4bc936739f9dafb8e009b3d86033ddb6d0d5d9f328d4",
+      "s5_index": 144692,
+      "status": "NODE_LIMIT",
+      "trace_path": null,
+      "trace_sha256": null,
+      "verdict": 0,
+      "wall_seconds": 64.476
+    }
+  ],
+  "schema": "n11-conflict-probes-v1",
+  "solver_binary_sha256": "5ce15397e5c3e77e70cee19bfb0038e4f050e10cde86e418f915276eaa6867b2",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source": "research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json",
+  "source_sha256": "771df57ea88bcd7311c20752db706c0d6b00cba3391fd1a1b9d53ddce5e88f70",
+  "trust": "completed labels solver-trusted until independent terminal-only verification; UNKNOWN is not evidence",
+  "workers": 2
+}
