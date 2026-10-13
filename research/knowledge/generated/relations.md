@@ -37,6 +37,7 @@
 - ← depends_on [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md): 共円・共線禁則の定義を一般q点へ拡張する
 - ← depends_on [K0401](../items/K0401-n11-q12-terminal-extrema.md): 共円・共線q点禁止版の安全配置を使用
 - ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 標準共円ゲームの合法手・終局規則
+- ← depends_on [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md): 共円四点を含む集合は安全ではない
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -1753,6 +1754,7 @@
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 層別伝播規則を維持し、S5 LOSSはS6 LOSS子を持つ条件で評価
 - ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 元先手固定の勝敗伝播規則（S1=AND・S4 LOSS=全S5子LOSS）
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
+- ← depends_on [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 元先手固定のAND/OR極性と終局payoff
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1955,28 +1957,51 @@
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): S5の全子閉包が必要なことと未閉鎖根の前例
 
-## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5証明計画は上界31,546・下界6,573で個別合計の約半分
+## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は独立終局パイロット後の修復で上界31,636・整数下界6,577
 
 - → depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 19未確定初手軌道と中央応手f=60の候補root
 - → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 既知LOSS基準rootと32個の無料S4 LOSS class
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定の勝敗伝播規則（S1=AND・S4 LOSS=全S5子LOSS）
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): 独立Board・exact cache隔離・trusted leafの区別
-- ← depends_on [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md): 19 root共同の選択問題と分数下界6,573.146・上界31,546
+- ← depends_on [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md): 二つの終局verdictを反映した19-root共同選択問題・現行上界31,636
 - ← verifies [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md): 双対値の厳密再計算と31,546計画の独立再検証（失敗0）
 - ← depends_on [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md): 中央応手の個別上界（49:2055・38:2155・16:2084）と共同上界31,546
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): LOSS側共同frontier 31,546と個別上界（49:2055）の比較基準
+- ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 31,546相異なるS5を要求する既存19-root共同計画
+- ← refutes [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 保存された31,546計画をそのまま全要求LOSSで閉じられる仮定を反証。旧cache限定の組合せ計算自体は否定しない。
 
-## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 共同証明計画のelement-only双対は厳密値2024529/308で整数下界6,574を確定する
+## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 独立終局パイロット後の共同計画の厳密双対91145221/13860は整数下界6,577
 
-- → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 19 root共同の選択問題と分数下界6,573.146・上界31,546
+- → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 二つの終局verdictを反映した19-root共同選択問題・現行上界31,636
 - → verifies [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 双対値の厳密再計算と31,546計画の独立再検証（失敗0）
 
 ## [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) 初手49・38・16の非中央応手27・93は中央応手に楽観的S5数で約1.5倍劣る
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 中央応手の個別上界（49:2055・38:2155・16:2084）と共同上界31,546
 
-## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは1,945証人・7.5k AND分岐で全65応手軌道が閉鎖可能（極性訂正済み）
+## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは1,945証人・7.5k AND分岐、うち1証人を独立終局閉鎖
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): LOSS側共同frontier 31,546と個別上界（49:2055）の比較基準
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
 - → depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): S5の全子閉包が必要なことと未閉鎖根の前例
+- ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 極性訂正済みcheapest10と衝突29件の入力
+- ← supports [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 極性衝突29候補の一つ209644についてWIN側要求を実際に証明
+
+## [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md) 四石以上の安全局面では子のD4同値と親安定化群の着手軌道が一致する（四石条件は鋭い）
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円四点を含む集合は安全ではない
+- ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 親安定化群による軌道数と正準子数の全称的一致
+
+## [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) 11盤共同S5計画の319万合法辺は156万相異なるS6へ縮約し、訂正済み39パイロットは2269子
+
+- → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 31,546相異なるS5を要求する既存19-root共同計画
+- → depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 極性訂正済みcheapest10と衝突29件の入力
+- → depends_on [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md): 親安定化群による軌道数と正準子数の全称的一致
+- ← depends_on [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 索引558600・209644の現行パイロット選択と完全合法境界
+
+## [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) 11盤の対称S5二局面を終局DAGで独立証明し、共同計画の衝突候補209644は先手WIN
+
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR極性と終局payoff
+- → depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 索引558600・209644の現行パイロット選択と完全合法境界
+- → refutes [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 保存された31,546計画をそのまま全要求LOSSで閉じられる仮定を反証。旧cache限定の組合せ計算自体は否定しない。
+- → supports [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 極性衝突29候補の一つ209644についてWIN側要求を実際に証明

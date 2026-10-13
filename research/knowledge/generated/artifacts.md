@@ -5774,6 +5774,70 @@
 ## [research/experiments/n11-s5-loss-witness-20261012/tests/test_witness_schedule.py](../../../research/experiments/n11-s5-loss-witness-20261012/tests/test_witness_schedule.py)
 
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (verifier): 固定六根、geometry順序、共通node capの単体試験
+## [research/experiments/n11-s5-s6-quotient-20261013/output/budget10m-manifest.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/budget10m-manifest.json)
+
+- [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) (manifest): 完了探索node数・元先手極性・solver source/binary/input/outputのhash
+## [research/experiments/n11-s5-s6-quotient-20261013/output/joint-verification.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/joint-verification.json)
+
+- [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (certificate): 全31,546親の独立照合成功receipt、入力・実装SHA256
+## [research/experiments/n11-s5-s6-quotient-20261013/output/joint.json.gz](../../../research/experiments/n11-s5-s6-quotient-20261013/output/joint.json.gz)
+
+- [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (data): 全31,546親の合法数・安定化群・子数・順位と集計
+## [research/experiments/n11-s5-s6-quotient-20261013/output/pilot-209644-terminal-dag.json.gz](../../../research/experiments/n11-s5-s6-quotient-20261013/output/pilot-209644-terminal-dag.json.gz)
+
+- [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) (certificate): 349,157節点・518,252辺・終局50,131・trusted葉0のWIN証明
+## [research/experiments/n11-s5-s6-quotient-20261013/output/pilot-209644-terminal-verification.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/pilot-209644-terminal-verification.json)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (certificate): 保存WIN証人集合の1件が終局DAGで独立閉鎖したreceipt
+- [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) (verifier): 同じ検査器によるWIN証明の独立検査receipt
+## [research/experiments/n11-s5-s6-quotient-20261013/output/pilot-558600-terminal-dag.json.gz](../../../research/experiments/n11-s5-s6-quotient-20261013/output/pilot-558600-terminal-dag.json.gz)
+
+- [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) (certificate): 270,545節点・426,376辺・終局28,813・trusted葉0のLOSS証明
+## [research/experiments/n11-s5-s6-quotient-20261013/output/pilot-558600-terminal-verification.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/pilot-558600-terminal-verification.json)
+
+- [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) (verifier): 全保持節点の幾何・全称境界・存在証人・終局を独立検査したreceipt
+## [research/experiments/n11-s5-s6-quotient-20261013/output/pilots-verification.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/pilots-verification.json)
+
+- [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (certificate): 全39親の独立照合成功receipt
+## [research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json)
+
+- [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (data): 訂正済み39候補の全正準S6子・着手対応
+## [research/experiments/n11-s5-s6-quotient-20261013/output/repaired-joint-plan.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/repaired-joint-plan.json)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (data): 現行19-root全2261手の選択応手・要求31636・独立検証結果
+## [research/experiments/n11-s5-s6-quotient-20261013/output/small-board-audit.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/small-board-audit.json)
+
+- [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md) (data): n1..4全安全集合、n5の0..3石全集合、n11の三石反例
+## [research/experiments/n11-s5-s6-quotient-20261013/output/updated-element-dual.json](../../../research/experiments/n11-s5-s6-quotient-20261013/output/updated-element-dual.json)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (certificate): 現行869群alpha・厳密総和・degree hash・整数下界6577
+## [research/experiments/n11-s5-s6-quotient-20261013/proof.md](../../../research/experiments/n11-s5-s6-quotient-20261013/proof.md)
+
+- [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md) (proof): 位数2と四分回転を分ける全称証明・三石の鋭い反例
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/census.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/census.py)
+
+- [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (source): 独立整数幾何BoardとBurnsideによる全要求S5の合法S6完全列挙
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/convert_probe.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/convert_probe.py)
+
+- [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) (source): native依存トレースを到達部分へ剪定し共有の独立DAG検査器を適用
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/probe_pilots.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/probe_pilots.py)
+
+- [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) (solver): 二つの幾何監査済み入力の独立cold exact probe・node上限・hash保存
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/repair_plan.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/repair_plan.py)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (source): 独立終局二局面の追加後、WIN子S4の排除・選択修復・全選択境界の検算
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/small_board_audit.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/small_board_audit.py)
+
+- [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md) (verifier): 小盤の全安全集合と三石反例を照合
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/updated_dual.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/updated_dual.py)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (verifier): 新インスタンスの全選択肢の厳密有理数最小・degree再計算・証明書検査
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/verify.cpp](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/verify.cpp)
+
+- [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (verifier): 別C++実装・平行移動3x3行列式・直接D4変換による全件独立検算
+## [research/experiments/n11-s5-s6-quotient-20261013/scripts/verify.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/verify.py)
+
+- [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (verifier): 入力hash、親全件と集計照合、改変入力拒否
 ## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題

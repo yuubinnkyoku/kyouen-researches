@@ -1,0 +1,164 @@
+{
+  "boards": [
+    {
+      "coverage": "all safe subsets",
+      "examples": [],
+      "extra_merge_parents_by_size": {},
+      "legal_edges": 1,
+      "n": 1,
+      "safe_by_size": {
+        "0": 1,
+        "1": 1
+      },
+      "safe_parents": 2
+    },
+    {
+      "coverage": "all safe subsets",
+      "examples": [],
+      "extra_merge_parents_by_size": {},
+      "legal_edges": 28,
+      "n": 2,
+      "safe_by_size": {
+        "0": 1,
+        "1": 4,
+        "2": 6,
+        "3": 4
+      },
+      "safe_parents": 15
+    },
+    {
+      "coverage": "all safe subsets",
+      "examples": [],
+      "extra_merge_parents_by_size": {},
+      "legal_edges": 1061,
+      "n": 3,
+      "safe_by_size": {
+        "0": 1,
+        "1": 9,
+        "2": 36,
+        "3": 84,
+        "4": 112,
+        "5": 56
+      },
+      "safe_parents": 298
+    },
+    {
+      "coverage": "all safe subsets",
+      "examples": [
+        {
+          "canonical_children": 14,
+          "extra_merges": 1,
+          "legal": 15,
+          "points": [
+            1
+          ],
+          "stabilizer_orbits": 15,
+          "stabilizer_order": 1
+        },
+        {
+          "canonical_children": 14,
+          "extra_merges": 1,
+          "legal": 15,
+          "points": [
+            2
+          ],
+          "stabilizer_orbits": 15,
+          "stabilizer_order": 1
+        },
+        {
+          "canonical_children": 14,
+          "extra_merges": 1,
+          "legal": 15,
+          "points": [
+            4
+          ],
+          "stabilizer_orbits": 15,
+          "stabilizer_order": 1
+        }
+      ],
+      "extra_merge_parents_by_size": {
+        "1": 8,
+        "2": 8
+      },
+      "legal_edges": 27072,
+      "n": 4,
+      "safe_by_size": {
+        "0": 1,
+        "1": 16,
+        "2": 120,
+        "3": 560,
+        "4": 1626,
+        "5": 2360,
+        "6": 1064,
+        "7": 64
+      },
+      "safe_parents": 5811
+    },
+    {
+      "coverage": "all subsets of size 0..3",
+      "examples": [
+        {
+          "canonical_children": 23,
+          "extra_merges": 1,
+          "legal": 24,
+          "points": [
+            1
+          ],
+          "stabilizer_orbits": 24,
+          "stabilizer_order": 1
+        },
+        {
+          "canonical_children": 23,
+          "extra_merges": 1,
+          "legal": 24,
+          "points": [
+            3
+          ],
+          "stabilizer_orbits": 24,
+          "stabilizer_order": 1
+        },
+        {
+          "canonical_children": 23,
+          "extra_merges": 1,
+          "legal": 24,
+          "points": [
+            5
+          ],
+          "stabilizer_orbits": 24,
+          "stabilizer_order": 1
+        }
+      ],
+      "extra_merge_parents_by_size": {
+        "1": 8,
+        "2": 16,
+        "3": 8
+      },
+      "legal_edges": 54821,
+      "n": 5,
+      "safe_by_size": {
+        "0": 1,
+        "1": 25,
+        "2": 300,
+        "3": 2300
+      },
+      "safe_parents": 2626
+    }
+  ],
+  "schema": "safe-child-orbit-audit-v1",
+  "sharp_counterexample": {
+    "canonical_child": "591450983800565137408",
+    "canonical_children": 112,
+    "extra_merges": 1,
+    "legal": 113,
+    "meaning": "safe three-stone parent; two legal moves in distinct stabilizer orbits have D4-equivalent children",
+    "p": 37,
+    "points": [
+      60,
+      69,
+      83
+    ],
+    "q": 51,
+    "stabilizer_orbits": 113,
+    "stabilizer_order": 1
+  }
+}

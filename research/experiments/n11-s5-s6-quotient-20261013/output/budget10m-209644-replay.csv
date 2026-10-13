@@ -1,0 +1,39 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# exact-profile row=0 table_hit=1179648 table_miss=9471499 table_new=1048567 evict_open=0 evict_solved=636127 table_used=1048567 table_capacity=1048576 table_solved=1048567 solved_discoveries=1684694 avg_probe=13.6178
+# exact-profile-rank row=0 s5 calls=1 nodes=1 win=1 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=1
+# exact-profile-rank row=0 s6 calls=20 nodes=20 win=20 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=20
+# exact-profile-rank row=0 s7 calls=51 nodes=51 win=18 loss=33 unknown=0 tt_solved=0 tt_open=0 tt_miss=51
+# exact-profile-rank row=0 s8 calls=1199 nodes=1199 win=1172 loss=27 unknown=0 tt_solved=0 tt_open=0 tt_miss=1199
+# exact-profile-rank row=0 s9 calls=5865 nodes=5865 win=848 loss=5017 unknown=0 tt_solved=0 tt_open=0 tt_miss=5865
+# exact-profile-rank row=0 s10 calls=37336 nodes=37336 win=33915 loss=3421 unknown=0 tt_solved=0 tt_open=0 tt_miss=37336
+# exact-profile-rank row=0 s11 calls=125132 nodes=125132 win=21821 loss=103311 unknown=0 tt_solved=0 tt_open=0 tt_miss=125132
+# exact-profile-rank row=0 s12 calls=335614 nodes=335614 win=273280 loss=62334 unknown=0 tt_solved=0 tt_open=0 tt_miss=335614
+# exact-profile-rank row=0 s13 calls=500045 nodes=500045 win=142573 loss=357472 unknown=0 tt_solved=0 tt_open=0 tt_miss=500045
+# exact-profile-rank row=0 s14 calls=455742 nodes=455742 win=346504 loss=109238 unknown=0 tt_solved=0 tt_open=0 tt_miss=455742
+# exact-profile-rank row=0 s15 calls=192026 nodes=192026 win=25403 loss=166623 unknown=0 tt_solved=0 tt_open=0 tt_miss=192026
+# exact-profile-rank row=0 s16 calls=30123 nodes=30123 win=28355 loss=1768 unknown=0 tt_solved=0 tt_open=0 tt_miss=30123
+# exact-profile-rank row=0 s17 calls=1534 nodes=1534 win=11 loss=1523 unknown=0 tt_solved=0 tt_open=0 tt_miss=1534
+# exact-profile-rank row=0 s18 calls=6 nodes=6 win=6 loss=0 unknown=0 tt_solved=0 tt_open=0 tt_miss=6
+# exact-profile-child row=0 lo=1189513389018185728 hi=130 legal=61 nodes=51259 verdict=WIN
+# exact-profile-child row=0 lo=1189513251587620864 hi=130 legal=63 nodes=242610 verdict=WIN
+# exact-profile-child row=0 lo=1189513251646341120 hi=130 legal=63 nodes=1 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579240448 hi=130 legal=64 nodes=1 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579265024 hi=130 legal=64 nodes=78487 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579232257 hi=130 legal=66 nodes=44748 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579236352 hi=130 legal=66 nodes=56992 verdict=WIN
+# exact-profile-child row=0 lo=1189548435951321088 hi=130 legal=66 nodes=47707 verdict=WIN
+# exact-profile-child row=0 lo=1189583620323409920 hi=130 legal=67 nodes=60388 verdict=WIN
+# exact-profile-child row=0 lo=1189653989067587584 hi=130 legal=67 nodes=119288 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579234304 hi=130 legal=68 nodes=240497 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579232258 hi=130 legal=70 nodes=48934 verdict=WIN
+# exact-profile-child row=0 lo=1189794726555942912 hi=130 legal=70 nodes=31710 verdict=WIN
+# exact-profile-child row=0 lo=1189513251583426560 hi=130 legal=71 nodes=79868 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579232260 hi=130 legal=73 nodes=107260 verdict=WIN
+# exact-profile-child row=0 lo=1189513268759101440 hi=130 legal=73 nodes=99818 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579232264 hi=130 legal=74 nodes=108196 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579248640 hi=130 legal=74 nodes=36113 verdict=WIN
+# exact-profile-child row=0 lo=1189513260169166848 hi=130 legal=74 nodes=164641 verdict=WIN
+# exact-profile-child row=0 lo=1189513251579232272 hi=130 legal=75 nodes=66175 verdict=WIN
+replay,0,5,80,0,10000000,1,1684694,8,1189513251579232256,130
+# replay_done rows=1 wall_s=8
