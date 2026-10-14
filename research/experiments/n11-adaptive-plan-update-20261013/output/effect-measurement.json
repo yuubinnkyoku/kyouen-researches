@@ -1,0 +1,178 @@
+{
+  "bounds": {
+    "interval_after": [
+      6583,
+      31730
+    ],
+    "interval_before": [
+      6577,
+      31636
+    ],
+    "lower": {
+      "after": 6583,
+      "before": 6577,
+      "delta": 6,
+      "exact_after": [
+        36495203,
+        5544
+      ],
+      "exact_before": [
+        91145221,
+        13860
+      ],
+      "source": "exact element-only fractional dual, ceil by integrality"
+    },
+    "upper": {
+      "after": 31730,
+      "before": 31636,
+      "delta": 94,
+      "source": "union of unknown-S5 children of selected LOSS responses"
+    }
+  },
+  "loss_side": {
+    "changed_choices": 4,
+    "excluded_s4_classes_total": [
+      3942,
+      5408,
+      5687,
+      5690,
+      13938
+    ],
+    "free_thirds_after": 122,
+    "free_thirds_before": 122,
+    "known_loss_removed_from_cost": [
+      126899
+    ],
+    "newly_excluded_s4_classes": [
+      3942,
+      5408,
+      13938
+    ],
+    "required_s5_after": 31730,
+    "required_s5_before": 31636
+  },
+  "new_facts": {
+    "independent_verifications": {
+      "126899": {
+        "certificate_sha256": "2a79c91805db889fc2370699bbc4b8e6002ad2ccbb7169da967227e817a8853c",
+        "probe_search_nodes": 3184967,
+        "pruned_roundtrip_verified": true,
+        "trusted_leaves": 0,
+        "verdict": 2
+      },
+      "144095": {
+        "certificate_sha256": "86175eace8b4e7144ca7846052c5ce8be1da1d7950badda1489f869a687bda97",
+        "probe_search_nodes": 4152553,
+        "pruned_roundtrip_verified": true,
+        "trusted_leaves": 0,
+        "verdict": 1
+      }
+    },
+    "s5_index": {
+      "126899": 2,
+      "144095": 1
+    },
+    "verification_attempts": 2,
+    "verification_successes": 2
+  },
+  "newly_closed": {
+    "note": "replies whose chosen third now needs zero WIN witnesses because a fourth S4 became free via the 144095 WIN child",
+    "replies": [],
+    "reply_orbits": 0,
+    "third_moves": 0
+  },
+  "schema": "n11-adaptive-plan-update-effects-v1",
+  "source_sha256": {
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\repaired-joint-plan-update.json": "39278565487a497057d4515ac4b9e5b7614764262eae56d28bd3c6380142f7c4",
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\updated-element-dual-update.json": "01ee4fb41c38a6b16863f254a58bf02baafb3bc2939a67ee437eec729f243283",
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\win-side-reanalysis.json": "25cb3199a68e0d1dfd3c00e9084c2817a7afac555fc304e7809494f8a0bb2dc2",
+    "research\\experiments\\n11-conflict-ranking-20261013\\output\\ranking.json": "690bd26a4b21dd61cd146da7d37b6e989fcc0227a987754587297f046cf969e3",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\repaired-joint-plan.json": "2a468a5aff518a4be5cada77e58ce49cd5597bf779105e58ed4a662898bf4f5f",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\updated-element-dual.json": "992698c29005f9af38ee87b78f77d291d6034966961cf439db210f8b1d5fe811"
+  },
+  "verdict_census": {
+    "conflict_candidates_total": 28,
+    "empty_board": "UNKNOWN (11x11); no whole-board leap performed",
+    "loss": [
+      126899,
+      558600
+    ],
+    "loss_count": 2,
+    "unknown_candidates": [
+      115540,
+      120370,
+      121263,
+      126017,
+      131631,
+      137043,
+      137694,
+      142283,
+      143240,
+      143718,
+      144019,
+      144193,
+      144311,
+      144692,
+      145001,
+      157861,
+      162106,
+      166171,
+      181624,
+      193768,
+      196002,
+      197665,
+      206386,
+      211133,
+      220231,
+      221294
+    ],
+    "unknown_count_among_candidates": 26,
+    "unknown_unchanged": {
+      "144019": true,
+      "144692": true
+    },
+    "win": [
+      144095,
+      209644
+    ],
+    "win_count": 2
+  },
+  "win_side": {
+    "allowed_pool": 1942,
+    "and_width_after": 7401,
+    "and_width_before": 7519,
+    "delta": -34,
+    "removed_witnesses": [
+      {
+        "mask": [
+          1153484454560268580,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1162526838187098144,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          1189513251579232256,
+          130
+        ],
+        "reason": "resolved-WIN"
+      }
+    ],
+    "replies_affected_before_reopt": 1,
+    "stored_pool": 1945,
+    "unclosable_s4_candidates_after": 1,
+    "uncovered_branches_before_reopt": 1,
+    "uncovered_s4_classes_before_reopt": 1,
+    "unresolved_witnesses_after": 1910,
+    "unresolved_witnesses_before": 1944,
+    "witness_replies_after": 64,
+    "witness_replies_before": 65
+  }
+}

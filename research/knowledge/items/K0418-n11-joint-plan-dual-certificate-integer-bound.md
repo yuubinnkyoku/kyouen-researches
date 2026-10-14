@@ -1,6 +1,6 @@
 ---
 id: K0418
-title: 独立終局パイロット後の共同計画の厳密双対91145221/13860は整数下界6,577
+title: 夜間層別後の共同計画の厳密双対182532671/27720は整数下界6,585
 kind: computation
 status: computed
 topics: [square-outcomes, search-methods, certificates, verification, provenance]
@@ -44,6 +44,12 @@ beta[t,s,e]=1/deg[e]は要素容量を正確に1以下にし、95,225の群・�
 --verifyは保存certificateとの一致だけでなく、元グラフと終局追加から全degree・全重み和・全alphaを再構成する。
 最適値は和集合濃度なのでceilにより6,577。現行の上界31,636との差は未解決。
 旧2024529/308・6,574は旧cacheインスタンスに限る履歴値。現在の上下界と混同しない。
+
+## 夜間バッチ反映（2026-10-14・K0424）
+
+層別13の現行インスタンスでは厳密総和182532671/27720、整数下界6,585が確定する。
+91145221/13860・6,577はK0423時点の履歴値。詳細はK0424と
+`research/experiments/n11-night-plan-update6-20261014/output/updated-element-dual-update6.json` を参照。
 
 ## 旧cacheインスタンスの履歴
 

@@ -1,0 +1,159 @@
+{
+  "excluded": {
+    "193768": "free=3 low information content; at most one free=3 representative allowed",
+    "196002": "free=3 low information content; at most one free=3 representative allowed"
+  },
+  "plan": "research/experiments/n11-night-plan-update3-20261014/output/effect-measurement3.json",
+  "plan_verdict_census": {
+    "conflict_candidates_total": 28,
+    "empty_board": "UNKNOWN (11x11); no whole-board leap performed",
+    "layered_count": 10,
+    "loss": [
+      121263,
+      126899,
+      137694,
+      143240,
+      145001,
+      220231,
+      558600
+    ],
+    "loss_count": 7,
+    "unknown_candidates": [
+      115540,
+      120370,
+      131631,
+      137043,
+      142283,
+      143718,
+      144019,
+      144193,
+      144311,
+      144692,
+      157861,
+      162106,
+      166171,
+      181624,
+      193768,
+      196002,
+      197665,
+      206386,
+      211133,
+      221294
+    ],
+    "unknown_count_among_candidates": 20,
+    "unknown_unchanged": {
+      "144019": true,
+      "144692": true,
+      "197665_at_10m": true
+    },
+    "verified_but_unlayered": [
+      115540,
+      144193,
+      144311
+    ],
+    "win": [
+      126017,
+      144095,
+      209644
+    ],
+    "win_count": 3
+  },
+  "pool": [
+    131631,
+    162106,
+    193768,
+    196002,
+    211133
+  ],
+  "ranking": "research/experiments/n11-conflict-ranking-20261013/output/ranking.tsv",
+  "schema": "n11-night-batch3-task-b-selection-v1",
+  "selected": [
+    131631,
+    162106,
+    211133
+  ],
+  "source": "research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json",
+  "viewpoints": {
+    "131631": {
+      "canonical_s6_children": 99,
+      "geometry_rank": 23,
+      "if_loss_fixed_win_branches_uncovered": 4,
+      "if_win_greedy_delta": 49,
+      "if_win_loss_choices_invalidated": 3,
+      "if_win_new_free_win_branches": 18,
+      "impact_per_child_rank": 23,
+      "legal_moves": 99,
+      "selected": true,
+      "shared_children_with_certified": {
+        "126017": 1,
+        "197665": 2
+      },
+      "stabilizer": [
+        0
+      ]
+    },
+    "162106": {
+      "canonical_s6_children": 99,
+      "geometry_rank": 25,
+      "if_loss_fixed_win_branches_uncovered": 4,
+      "if_win_greedy_delta": 49,
+      "if_win_loss_choices_invalidated": 3,
+      "if_win_new_free_win_branches": 18,
+      "impact_per_child_rank": 25,
+      "legal_moves": 99,
+      "selected": true,
+      "shared_children_with_certified": {
+        "126017": 2,
+        "197665": 2
+      },
+      "stabilizer": [
+        0
+      ]
+    },
+    "193768": {
+      "canonical_s6_children": 102,
+      "geometry_rank": 28,
+      "if_loss_fixed_win_branches_uncovered": 1,
+      "if_win_greedy_delta": 53,
+      "if_win_loss_choices_invalidated": 6,
+      "if_win_new_free_win_branches": 3,
+      "impact_per_child_rank": 26,
+      "legal_moves": 102,
+      "selected": false,
+      "shared_children_with_certified": {},
+      "stabilizer": [
+        0
+      ]
+    },
+    "196002": {
+      "canonical_s6_children": 100,
+      "geometry_rank": 26,
+      "if_loss_fixed_win_branches_uncovered": 1,
+      "if_win_greedy_delta": 88,
+      "if_win_loss_choices_invalidated": 4,
+      "if_win_new_free_win_branches": 3,
+      "impact_per_child_rank": 28,
+      "legal_moves": 100,
+      "selected": false,
+      "shared_children_with_certified": {},
+      "stabilizer": [
+        0
+      ]
+    },
+    "211133": {
+      "canonical_s6_children": 98,
+      "geometry_rank": 22,
+      "if_loss_fixed_win_branches_uncovered": 1,
+      "if_win_greedy_delta": 49,
+      "if_win_loss_choices_invalidated": 5,
+      "if_win_new_free_win_branches": 3,
+      "impact_per_child_rank": 27,
+      "legal_moves": 98,
+      "selected": true,
+      "shared_children_with_certified": {},
+      "stabilizer": [
+        0
+      ]
+    }
+  }
+}

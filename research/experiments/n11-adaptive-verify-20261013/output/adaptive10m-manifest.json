@@ -1,0 +1,63 @@
+{
+  "budget": 10000000,
+  "memo_power": 20,
+  "order": "count",
+  "prior_manifest": "research/experiments/n11-conflict-closure-20261013/output/next10m-manifest.json",
+  "prior_manifest_sha256": "752608515485935abb786d83611ed166381f52ea02d1b3f1e53cf8489c259bca",
+  "rows": [
+    {
+      "canonical_children": 41,
+      "input_sha256": "2648c0249bbad472d8084b555214c9a8489725edbe75b5d27fca8dd9c8c22d1f",
+      "legal": 82,
+      "mask": [
+        1153484454560268580,
+        0
+      ],
+      "nodes": 3184967,
+      "output_sha256": "473be5cb02c9ab0a441a424ef84136e152f252333643942fa961df0f6e7d0915",
+      "peak_rss_kib": 544488,
+      "prior_nodes": 3184967,
+      "prior_trace_sha256": "1597e9c7a8d455e951938e7919114a6375be8964795284c3007fab2259083a40",
+      "prior_verdict": 2,
+      "prior_wall_seconds": 39.387,
+      "s5_index": 126899,
+      "status": "SOLVED",
+      "trace_path": "build/n11-adaptive-native-traces/adaptive10m-126899.csv",
+      "trace_sha256": "1597e9c7a8d455e951938e7919114a6375be8964795284c3007fab2259083a40",
+      "trace_sha256_matches_prior": true,
+      "verdict": 2,
+      "verdict_matches_prior": true,
+      "wall_seconds": 101.169
+    },
+    {
+      "canonical_children": 44,
+      "input_sha256": "78470e356dbad16908b1620ee7355bab4853535cd47ae1fa8ffb5e64112fb092",
+      "legal": 88,
+      "mask": [
+        1162526838187098144,
+        0
+      ],
+      "nodes": 4152553,
+      "output_sha256": "382defc41511db9c45e41618eb8f1b3ab8598a75336727ae3aebfd3b3a5fca42",
+      "peak_rss_kib": 695176,
+      "prior_nodes": 4152553,
+      "prior_trace_sha256": "4f68c5794552084f26d0b0dafcbe09d3666a0a6513b8a81b88a510da6f81374c",
+      "prior_verdict": 1,
+      "prior_wall_seconds": 25.001,
+      "s5_index": 144095,
+      "status": "SOLVED",
+      "trace_path": "build/n11-adaptive-native-traces/adaptive10m-144095.csv",
+      "trace_sha256": "4f68c5794552084f26d0b0dafcbe09d3666a0a6513b8a81b88a510da6f81374c",
+      "trace_sha256_matches_prior": true,
+      "verdict": 1,
+      "verdict_matches_prior": true,
+      "wall_seconds": 118.865
+    }
+  ],
+  "schema": "n11-adaptive-terminal-verify-probes-v1",
+  "solver_binary_sha256": "72f1da293931c590f54d2d70b9f6318ce6d207e04ff4b6dbe6050ea34876de14",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source": "research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json",
+  "source_sha256": "771df57ea88bcd7311c20752db706c0d6b00cba3391fd1a1b9d53ddce5e88f70",
+  "trust": "raw solver completed labels are solver-trusted only; independent evidence requires a terminal-only check_trace receipt with trusted_leaves=0; UNKNOWN is not evidence"
+}

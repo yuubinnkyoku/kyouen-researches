@@ -1,6 +1,6 @@
 ---
 id: K0420
-title: 初手49のWIN側frontierは1,945証人・7.5k AND分岐、うち1証人を独立終局閉鎖
+title: 初手49のWIN側frontierは夜間再被覆で1,933証人・6.8k AND幅・未閉鎖1,746
 kind: computation
 status: computed
 topics: [square-outcomes, search-methods, certificates, verification, provenance]
@@ -65,3 +65,11 @@ K0423で極性衝突候補209644（S={49,55,60,65,71}）の元先手WINをtruste
 保存された1,945証人集合のうち1件が閉鎖され、この固定集合の未閉鎖は1,944件。
 全65応手が実際に閉鎖されたわけではなく、WIN側の被覆を再最適化した数ではない。
 旧LOSS共同との29衝突候補のうち1件がWIN側に決着した。もう一つのパイロット558600 LOSSは旧共同側の要求で、WIN証人集合には含まれない。
+
+## 夜間バッチ反映（2026-10-14・K0424）
+
+夜間適応探索でWIN 6件の確定とLOSS 6件（新規3＋昇格3）の除外を保存poolに反映し、
+再被覆・再検証した現行値は使用可能証人1,933・未閉鎖1,746・AND幅6,812・
+closable 59軌道・unclosable [1,2,4,15,79,101] の6軌道。新規証人の創作はなし。
+上記の1,945／1,944はK0423時点の履歴値。詳細はK0424と
+`research/experiments/n11-night-plan-update6-20261014/output/win-side-reanalysis6.json` を参照。

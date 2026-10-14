@@ -1122,6 +1122,12 @@
 ## [research/experiments/geometry/scripts/verify_three_row_211_20261011.py](../../../research/experiments/geometry/scripts/verify_three_row_211_20261011.py)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (verifier): 3行盤独立検査
+## [research/experiments/n11-adaptive-probe-20261013/output/adaptive10m-manifest.json](../../../research/experiments/n11-adaptive-probe-20261013/output/adaptive10m-manifest.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 121263 LOSS・145001 LOSSの10M探索記録
+## [research/experiments/n11-adaptive-verify-20261013/output/adaptive10m-manifest.json](../../../research/experiments/n11-adaptive-verify-20261013/output/adaptive10m-manifest.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 126899 LOSS・144095 WINの10M探索記録
 ## [research/experiments/n11-boundary-recovery-20261006/README.md](../../../research/experiments/n11-boundary-recovery-20261006/README.md)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 回収範囲、手順、結論と限界
@@ -5316,6 +5322,30 @@
 ## [research/experiments/n11-joint-s5-proof-planning-20261012/scripts/verify_plans.py](../../../research/experiments/n11-joint-s5-proof-planning-20261012/scripts/verify_plans.py)
 
 - [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (verifier): 全2,261 third手・全34,948到達S4の独立再計算（失敗0）
+## [research/experiments/n11-night-batch1-20261014/output/nightb10m-manifest.json](../../../research/experiments/n11-night-batch1-20261014/output/nightb10m-manifest.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 126017 WINの10M探索記録
+## [research/experiments/n11-night-batch2-20261014/output/nighta25m-manifest.json](../../../research/experiments/n11-night-batch2-20261014/output/nighta25m-manifest.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 197665 WINの25M予算拡張探索記録
+## [research/experiments/n11-night-batch3-20261014/output/nighta25m-manifest.json](../../../research/experiments/n11-night-batch3-20261014/output/nighta25m-manifest.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 206386 WINの25M予算拡張探索記録
+## [research/experiments/n11-night-batch4-20261014/output/nighta25m-manifest.json](../../../research/experiments/n11-night-batch4-20261014/output/nighta25m-manifest.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 131631 WINの25M予算拡張探索記録
+## [research/experiments/n11-night-batch5-20261014/output/nighta25m-manifest.json](../../../research/experiments/n11-night-batch5-20261014/output/nighta25m-manifest.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 162106 WINの25M予算拡張探索記録
+## [research/experiments/n11-night-plan-update6-20261014/output/repaired-joint-plan-update6.json](../../../research/experiments/n11-night-plan-update6-20261014/output/repaired-joint-plan-update6.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (data): 層別13反映のLOSS共同計画（上界31,774・完全境界再検算済み）
+## [research/experiments/n11-night-plan-update6-20261014/output/updated-element-dual-update6.json](../../../research/experiments/n11-night-plan-update6-20261014/output/updated-element-dual-update6.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (certificate): 厳密双対の整数下界6,585（--verify通過）
+## [research/experiments/n11-night-plan-update6-20261014/output/win-side-reanalysis6.json](../../../research/experiments/n11-night-plan-update6-20261014/output/win-side-reanalysis6.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (data): WIN側再被覆（pool 1,933・未閉鎖1,746・AND幅6,812）
 ## [research/experiments/n11-opening-orbits-weak-solve-20261012/README.md](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 軌道分類、応手境界、信頼範囲、再現手順

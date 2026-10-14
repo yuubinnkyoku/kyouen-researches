@@ -1,0 +1,85 @@
+{
+  "budget": 25000000,
+  "completed_candidates": 1,
+  "counts": {
+    "LOSS": 0,
+    "UNKNOWN": 0,
+    "WIN": 1
+  },
+  "frozen_10m_manifest": "research/experiments/n11-night-batch2-20261014/output/nightb10m-manifest.json",
+  "frozen_10m_manifest_sha256": "24c68ab1a4a543bb5b5ceb4777efe036b0efb510e1ab4170534a080c840f5243",
+  "kind": "budget-extension-new-run (not a same-condition re-run of the 10M probe)",
+  "memo_power": 20,
+  "order": "count",
+  "prefix": "nighta25m",
+  "profile": true,
+  "ranking": "research/experiments/n11-conflict-ranking-20261013/output/ranking.tsv",
+  "ranking_sha256": "4da6c93bbe29dc6df32b13f45afc0c4b893619b09d59356ad4a187de9c9bb9ad",
+  "rows": [
+    {
+      "budget": 25000000,
+      "canonical_children": 88,
+      "exact_profile": {
+        "avg_probe": "26.3654",
+        "evict_open": "0",
+        "evict_solved": "9975840",
+        "row": "0",
+        "solved_discoveries": "11024416",
+        "table_capacity": "1048576",
+        "table_hit": "7462607",
+        "table_miss": "61561389",
+        "table_new": "1048576",
+        "table_solved": "1048576",
+        "table_used": "1048576"
+      },
+      "frozen_10m_nodes": 10000000,
+      "frozen_10m_root_child_census": {
+        "LOSS": 0,
+        "UNKNOWN": 6,
+        "WIN": 82
+      },
+      "frozen_10m_status": "NODE_LIMIT",
+      "frozen_10m_verdict": 0,
+      "input_sha256": "daeb47d90ca6ceea9a255455127b72ed9c0a027bfeb4882380167fb9b7347265",
+      "legal": 88,
+      "mask": [
+        1732197006677377024,
+        128
+      ],
+      "nodes": 11024416,
+      "output_sha256": "3a162eeb1ff80221b6c2191ad0d41ab17aa8350b654d076d120352d16895a97f",
+      "peak_rss_kib": 1483052,
+      "ranking": {
+        "canonical_s6_children": "88",
+        "geometry_rank": "18",
+        "if_loss_fixed_win_branches_uncovered": "4",
+        "if_win_greedy_delta": "49",
+        "if_win_loss_choices_invalidated": "3",
+        "if_win_new_free_win_branches": "18",
+        "impact_per_child_rank": "20",
+        "stabilizer_order": "1"
+      },
+      "returncode": 0,
+      "root_child_census": {
+        "LOSS": 0,
+        "UNKNOWN": 0,
+        "WIN": 88
+      },
+      "s5_index": 206386,
+      "status": "SOLVED",
+      "trace_bytes": 1413445629,
+      "trace_path": "build/n11-night-batch3-traces/nighta25m-206386-proof.csv",
+      "trace_sha256": "d420f4761325213d3eaca6fc119f8cfa132cdf07008a7c546516a613683a7db8",
+      "trust_class": "solver-trusted pending terminal-only receipt",
+      "verdict": 1,
+      "wall_seconds": 262.241
+    }
+  ],
+  "schema": "n11-night-batch3-task-a-v1",
+  "solver_binary_sha256": "72f1da293931c590f54d2d70b9f6318ce6d207e04ff4b6dbe6050ea34876de14",
+  "solver_source_sha256": "48e51bb56288e090f51996eb4d9a208ca0458d11f73ba61bf5f08dade25db446",
+  "source": "research/experiments/n11-s5-s6-quotient-20261013/output/pilots.json",
+  "source_sha256": "771df57ea88bcd7311c20752db706c0d6b00cba3391fd1a1b9d53ddce5e88f70",
+  "trust": "completed labels solver-trusted until independent terminal-only verification; UNKNOWN is not evidence; NODE_LIMIT rows stay UNKNOWN and are not re-run at this budget",
+  "workers": 1
+}

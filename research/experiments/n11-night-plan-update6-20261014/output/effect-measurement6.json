@@ -1,0 +1,790 @@
+{
+  "batch_vs_staged": {
+    "candidates_equal": true,
+    "choices_identical": {
+      "staged_forward": true
+    },
+    "labels_equal": true,
+    "obligations_equal": true,
+    "resolved_verdicts": {
+      "121263": 2,
+      "126017": 1,
+      "126899": 2,
+      "131631": 1,
+      "137694": 2,
+      "143240": 2,
+      "144095": 1,
+      "145001": 2,
+      "197665": 1,
+      "206386": 1,
+      "209644": 1,
+      "220231": 2,
+      "558600": 2
+    },
+    "rule": "identical resolved labels, identical legal candidate sets and identical element-cost obligations are required; only the greedy upper bound may differ.  This round carries a single verdict, so the staged reflection is degenerate and identical to the batch reflection by construction (re-executed and asserted).",
+    "runs": {
+      "batch": {
+        "candidates_sha": "cabb2f105b17f0ebd55814bc20c3ed65f859661cdcc5da012228e3446d2b9869",
+        "changed_choice_count": 0,
+        "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+        "free_thirds": 122,
+        "known_losses_in_union": [],
+        "known_wins_in_union": [],
+        "labels_sha": "663b05bde03c9197731ddb2f71b97f4c4f469c03134c692841e9fe9c74ab2a8c",
+        "obligations_sha": "c5ca217d2480c81b3bb0aab5756ec1d63ff519d294a26247a253d453e1510bed",
+        "resolved_verdicts": [
+          [
+            121263,
+            2
+          ],
+          [
+            126017,
+            1
+          ],
+          [
+            126899,
+            2
+          ],
+          [
+            131631,
+            1
+          ],
+          [
+            137694,
+            2
+          ],
+          [
+            143240,
+            2
+          ],
+          [
+            144095,
+            1
+          ],
+          [
+            145001,
+            2
+          ],
+          [
+            197665,
+            1
+          ],
+          [
+            206386,
+            1
+          ],
+          [
+            209644,
+            1
+          ],
+          [
+            220231,
+            2
+          ],
+          [
+            558600,
+            2
+          ]
+        ],
+        "union_sha": "8b0de0539ccb745e25e9c24e9c24d4f4c7c2ba859863952b714d2cdf3562eb8c",
+        "union_size": 31774
+      },
+      "staged_forward": {
+        "candidates_sha": "cabb2f105b17f0ebd55814bc20c3ed65f859661cdcc5da012228e3446d2b9869",
+        "changed_choice_count": 0,
+        "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+        "free_thirds": 122,
+        "known_losses_in_union": [],
+        "known_wins_in_union": [],
+        "labels_sha": "663b05bde03c9197731ddb2f71b97f4c4f469c03134c692841e9fe9c74ab2a8c",
+        "obligations_sha": "c5ca217d2480c81b3bb0aab5756ec1d63ff519d294a26247a253d453e1510bed",
+        "resolved_verdicts": [
+          [
+            121263,
+            2
+          ],
+          [
+            126017,
+            1
+          ],
+          [
+            126899,
+            2
+          ],
+          [
+            131631,
+            1
+          ],
+          [
+            137694,
+            2
+          ],
+          [
+            143240,
+            2
+          ],
+          [
+            144095,
+            1
+          ],
+          [
+            145001,
+            2
+          ],
+          [
+            197665,
+            1
+          ],
+          [
+            206386,
+            1
+          ],
+          [
+            209644,
+            1
+          ],
+          [
+            220231,
+            2
+          ],
+          [
+            558600,
+            2
+          ]
+        ],
+        "union_sha": "8b0de0539ccb745e25e9c24e9c24d4f4c7c2ba859863952b714d2cdf3562eb8c",
+        "union_size": 31774
+      }
+    },
+    "union_sizes": {
+      "batch": 31774,
+      "staged_forward": 31774
+    },
+    "upper_bound_differences": {},
+    "verification": {
+      "batch": {
+        "checked_selected_s4": 351,
+        "complete_s5_boundaries": 351,
+        "complete_third_boundaries": 19,
+        "known_loss_in_union": 0,
+        "known_win_selected": 0,
+        "passed": true,
+        "third_moves_checked": 2261
+      }
+    }
+  },
+  "bounds": {
+    "dual_size_from_previous": {
+      "elements": [
+        962457,
+        962456
+      ],
+      "options_scored": [
+        34435,
+        34432
+      ],
+      "paid_groups": [
+        869,
+        869
+      ]
+    },
+    "interval_from_initial": [
+      [
+        6577,
+        31636
+      ],
+      [
+        6585,
+        31774
+      ]
+    ],
+    "interval_from_previous": [
+      [
+        6585,
+        31774
+      ],
+      [
+        6585,
+        31774
+      ]
+    ],
+    "lower": {
+      "from_initial": {
+        "after": 6585,
+        "before": 6577,
+        "delta": 8,
+        "exact_after": [
+          182532671,
+          27720
+        ],
+        "exact_before": [
+          91145221,
+          13860
+        ]
+      },
+      "from_previous": {
+        "after": 6585,
+        "before": 6585,
+        "delta": 0,
+        "exact_after": [
+          182532671,
+          27720
+        ],
+        "exact_before": [
+          5069937,
+          770
+        ]
+      },
+      "source": "exact element-only fractional dual, ceil by integrality"
+    },
+    "upper": {
+      "from_initial": {
+        "after": 31774,
+        "before": 31636,
+        "delta": 138
+      },
+      "from_previous": {
+        "after": 31774,
+        "before": 31774,
+        "delta": 0
+      },
+      "source": "union of unknown-S5 children of selected LOSS responses"
+    }
+  },
+  "loss_side": {
+    "changed_choices": 0,
+    "complete_s5_boundaries_rechecked": 351,
+    "excluded_s4_classes_total": [
+      3569,
+      3570,
+      3678,
+      3679,
+      3942,
+      4050,
+      4564,
+      5266,
+      5267,
+      5408,
+      5563,
+      5570,
+      5687,
+      5690,
+      5830,
+      5834,
+      13938
+    ],
+    "free_thirds_from_initial": [
+      122,
+      122
+    ],
+    "free_thirds_from_previous": [
+      122,
+      122
+    ],
+    "known_loss_removed_from_cost": [],
+    "known_win_requirements_asserted": 0,
+    "newly_excluded_s4_classes": [
+      3678,
+      3679,
+      4564
+    ],
+    "required_s5_from_initial": [
+      31636,
+      31774
+    ],
+    "required_s5_from_previous": [
+      31774,
+      31774
+    ],
+    "roots_rechecked": 19,
+    "third_moves_rechecked": 2261
+  },
+  "new_facts": {
+    "cumulative_tallies": {
+      "cumulative_adaptive_line": {
+        "attempts": 11,
+        "indices": [
+          126899,
+          144095,
+          121263,
+          145001,
+          137694,
+          143240,
+          220231,
+          126017,
+          197665,
+          206386,
+          131631
+        ],
+        "note": "continues the update5 README definition (cumulative 10/10): first update 126899/144095, second update 121263/145001, third update 137694/143240/220231/126017, fourth update 197665, fifth update 206386, this round 131631",
+        "successes": 11
+      },
+      "cumulative_all_independent_receipts": {
+        "attempts": 16,
+        "indices": [
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          145001,
+          197665,
+          206386,
+          209644,
+          220231,
+          558600,
+          115540,
+          144193,
+          144311
+        ],
+        "layered_into_plan": [
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          145001,
+          197665,
+          206386,
+          209644,
+          220231,
+          558600
+        ],
+        "note": "15 independent receipts existed before this round (K0423 2 + native focus 3 + adaptive/night 10) and this round adds 1 (131631 WIN); the three native receipts 115540 LOSS / 144193 LOSS / 144311 WIN stay out of every plan, so plan-layered (13) and all-receipt (16) tallies differ",
+        "successes": 16,
+        "verified_but_unlayered": [
+          115540,
+          144193,
+          144311
+        ]
+      },
+      "cumulative_conflict_closure_certified": {
+        "attempts": 14,
+        "indices": [
+          115540,
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          144193,
+          144311,
+          145001,
+          197665,
+          206386,
+          220231
+        ],
+        "note": "conflict-closure lineage excluding the K0423 pilots: native focus 3 (115540, 144193, 144311) + adaptive line 11 (126899, 144095, 121263, 145001, 137694, 143240, 220231, 126017, 197665, 206386, 131631) = 14",
+        "successes": 14
+      },
+      "cumulative_plan_layered_loss_side": {
+        "attempts": 7,
+        "indices": [
+          121263,
+          126899,
+          137694,
+          143240,
+          145001,
+          220231,
+          558600
+        ],
+        "note": "layered receipts whose verdict is LOSS: 7/7 unchanged (this round adds only a WIN)",
+        "successes": 7
+      },
+      "cumulative_plan_layered_total": {
+        "attempts": 13,
+        "indices": [
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          145001,
+          197665,
+          206386,
+          209644,
+          220231,
+          558600
+        ],
+        "note": "K0423 pilot receipts included; 12/12 through the fifth update",
+        "successes": 13
+      },
+      "cumulative_plan_layered_win_side": {
+        "attempts": 6,
+        "indices": [
+          126017,
+          131631,
+          144095,
+          197665,
+          206386,
+          209644
+        ],
+        "note": "layered receipts whose verdict is WIN",
+        "successes": 6
+      },
+      "this_round": {
+        "attempts": 1,
+        "indices": [
+          131631
+        ],
+        "successes": 1
+      }
+    },
+    "independent_verifications": {
+      "131631": {
+        "certificate": "research\\experiments\\n11-night-batch4-20261014\\output\\nighta25m-131631-terminal-dag.json.gz",
+        "certificate_bytes": 80540433,
+        "certificate_sha256": "bbbc6c9bdac0551086f8a041c7baf73881c2eb113e4c1be4da3c3bca8392b3b9",
+        "checker_source_sha256": "0f890cb49e806880bb56de2147163dc3fcfb0d5eae44835d602160c16008cd96",
+        "evidence_class": "independent-terminal-only-verification",
+        "probe_budget": 25000000,
+        "probe_search_nodes": 22709147,
+        "pruned_roundtrip_verified": true,
+        "python_cross_check": "research\\experiments\\n11-night-batch4-20261014\\output\\nighta25m-131631-python-comparison.json",
+        "receipt": "research\\experiments\\n11-night-batch4-20261014\\output\\nighta25m-131631-receipt.json",
+        "trusted_leaves": 0,
+        "verdict": 1
+      }
+    },
+    "s5_index": {
+      "131631": 1
+    },
+    "tally_note": "several cumulative labels are reported because 'independent proof cumulative' is ambiguous across plan-layered, adaptive-line, conflict-closure and all-receipt readings",
+    "unlayered_receipts_unchanged": [
+      115540,
+      144193,
+      144311
+    ],
+    "verification_attempts": 1,
+    "verification_successes": 1
+  },
+  "newly_closed": {
+    "from_initial": {
+      "replies": [],
+      "reply_orbits": 0,
+      "third_moves": 0
+    },
+    "from_previous": {
+      "replies_all_free": [],
+      "replies_reclosed": [],
+      "reply_orbits": 0,
+      "third_moves": 0
+    },
+    "note": "a reply counts as newly closed when its chosen third needs zero WIN witnesses from the saved pool, and as reclosed when it becomes closable again after having been unclosable; both criteria are reported",
+    "regressed_vs_previous": []
+  },
+  "ranking_cross_check": {
+    "all_match": true,
+    "loss_side": {
+      "131631": {
+        "absorbed_by_baseline_updates": "the ranking counterfactual (geometry_rank 23) invalidates the K0423-baseline selections on S4 class 5830 (3 responses: 49/60/59, 49/60/61, 49/60/71) and removes the four options 3678 / 3679 / 4564 / 5830; the third update already excluded 5830 for 126017 WIN and re-selected those responses, and the fourth update excluded 5563 / 5834, so no selected response sits on any of the four invalidated options on the fifth-update baseline.  The three options 3678 / 3679 / 4564 are excluded in this round, the greedy repair has no work to do (changed_choice_count 0) and the union stays 31,774, while the ranking's +49 remains the K0423-basis counterfactual",
+        "ranking_on_k0423_baseline": {
+          "affected_choices": 3,
+          "affected_s4": [
+            5830
+          ],
+          "greedy_delta": 49,
+          "greedy_union": 31685,
+          "invalidated_options": 4,
+          "invalidated_s4_options": [
+            3678,
+            3679,
+            4564,
+            5830
+          ],
+          "loss_uncovered_branches": 4,
+          "new_free_win_branches": 18
+        },
+        "ranking_tsv_row": {
+          "geometry_rank": 23,
+          "if_loss_fixed_win_branches_uncovered": 4,
+          "if_win_greedy_delta": 49,
+          "if_win_greedy_loss_union": 31685,
+          "if_win_loss_choices_invalidated": 3,
+          "if_win_new_free_win_branches": 18
+        },
+        "this_baseline": {
+          "affected_choices": 0,
+          "affected_s4": [],
+          "invalidated_options_total": 4,
+          "newly_excluded_options": 3
+        },
+        "verdict": 1
+      }
+    },
+    "note": "branch incidences, invalidated-option sets and affected-choice counts are recomputed from independent geometry on the frozen ranking row (ranking.tsv and ranking.json); every value matches n11-conflict-ranking-20261013/output for 131631",
+    "win_side_branches": {
+      "131631": {
+        "effect_now": "branch became FREE (WIN child)",
+        "ranking_if_loss_uncovered_branches": 4,
+        "ranking_if_win_new_free_branches": 18,
+        "ranking_tsv_row": {
+          "geometry_rank": 23,
+          "if_loss_fixed_win_branches_uncovered": 4,
+          "if_win_greedy_delta": 49,
+          "if_win_greedy_loss_union": 31685,
+          "if_win_loss_choices_invalidated": 3,
+          "if_win_new_free_win_branches": 18
+        },
+        "recomputed_new_free_branches": 18,
+        "recomputed_sole_stored_witness_branches": 4,
+        "stored_chosen_third_branches_with_candidate": 18,
+        "stored_chosen_third_replies_with_candidate": [
+          59,
+          60,
+          71
+        ],
+        "verdict": 1
+      }
+    }
+  },
+  "schema": "n11-night-plan-update6-effects-v1",
+  "source_sha256": {
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\repaired-joint-plan-update.json": "39278565487a497057d4515ac4b9e5b7614764262eae56d28bd3c6380142f7c4",
+    "research\\experiments\\n11-adaptive-plan-update2-20261013\\output\\repaired-joint-plan-update2.json": "06072128cc5e41e1f3026a8e7f16cc394eb4620335aebbef24e051646abfd665",
+    "research\\experiments\\n11-conflict-ranking-20261013\\output\\ranking.json": "690bd26a4b21dd61cd146da7d37b6e989fcc0227a987754587297f046cf969e3",
+    "research\\experiments\\n11-native-terminal-checker-20261013\\output\\pilot-115540-receipt.json": "99f48308d1d2e184e7c4f5e131384ffa26645ea35330d37693e5d58875accbe7",
+    "research\\experiments\\n11-native-terminal-checker-20261013\\output\\pilot-144193-receipt.json": "320801e250e986466c92cccc28a810720d6632a42259d701165c070e64e4410c",
+    "research\\experiments\\n11-native-terminal-checker-20261013\\output\\pilot-144311-receipt.json": "cb2ba41ce9eeeadaab4c0d96b2eec8baa51d5a275b17e604ae16dd85b579df37",
+    "research\\experiments\\n11-night-plan-update5-20261014\\output\\repaired-joint-plan-update5.json": "8e0829ad505d7907055c4a3086610a5ca7077151147eed5a31a5d1186183ee93",
+    "research\\experiments\\n11-night-plan-update5-20261014\\output\\updated-element-dual-update5.json": "cb08aff41b18abd60f3d181a039b22a052cc5642981bf5195144c8f7939b5b11",
+    "research\\experiments\\n11-night-plan-update5-20261014\\output\\win-side-reanalysis5.json": "9da28b4aef5a51fae50200e967ac4d579620aa40706da06974db72ea4a92639c",
+    "research\\experiments\\n11-night-plan-update6-20261014\\output\\repaired-joint-plan-update6.json": "7f91667a45a9d13a771359903c21620ba7723b0dd3798af7bd3d32b9e8de8aca",
+    "research\\experiments\\n11-night-plan-update6-20261014\\output\\updated-element-dual-update6.json": "7db2ed4f015223573c6abb3b87d0588ae3b009f5fa6d99304a36c97984bf2f1c",
+    "research\\experiments\\n11-night-plan-update6-20261014\\output\\win-side-reanalysis6.json": "fc7f206605394145eeb357e8cbca8136b01a6026c2fcaa7b168860c82d1a1e8a",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\repaired-joint-plan.json": "2a468a5aff518a4be5cada77e58ce49cd5597bf779105e58ed4a662898bf4f5f",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\updated-element-dual.json": "992698c29005f9af38ee87b78f77d291d6034966961cf439db210f8b1d5fe811"
+  },
+  "verdict_census": {
+    "conflict_candidates_total": 28,
+    "empty_board": "UNKNOWN (11x11); no whole-board leap performed",
+    "layered_count": 13,
+    "loss": [
+      121263,
+      126899,
+      137694,
+      143240,
+      145001,
+      220231,
+      558600
+    ],
+    "loss_count": 7,
+    "unknown_candidates": [
+      115540,
+      120370,
+      137043,
+      142283,
+      143718,
+      144019,
+      144193,
+      144311,
+      144692,
+      157861,
+      162106,
+      166171,
+      181624,
+      193768,
+      196002,
+      211133,
+      221294
+    ],
+    "unknown_count_among_candidates": 17,
+    "unknown_unchanged": {
+      "131631_at_10m_resolved_by_25m_run": false,
+      "144019": true,
+      "144692": true,
+      "206386_at_10m_resolved_by_25m_run": false
+    },
+    "verified_but_unlayered": [
+      115540,
+      144193,
+      144311
+    ],
+    "win": [
+      126017,
+      131631,
+      144095,
+      197665,
+      206386,
+      209644
+    ],
+    "win_count": 6
+  },
+  "win_side": {
+    "allowed_pool": [
+      1934,
+      1933
+    ],
+    "and_width": {
+      "after": 6812,
+      "from_initial": 7519,
+      "from_previous": 6812
+    },
+    "closable_replies": {
+      "after": 59,
+      "from_initial": 65,
+      "from_previous": 59
+    },
+    "covers_changed_vs_previous": [
+      {
+        "after_chosen_fourths": 117,
+        "after_chosen_third": 60,
+        "after_closable": true,
+        "after_viable_thirds": 6,
+        "after_witness_count": 25,
+        "previous_chosen_fourths": 117,
+        "previous_chosen_third": 60,
+        "previous_closable": true,
+        "previous_viable_thirds": 6,
+        "previous_witness_count": 26,
+        "reply": 59
+      }
+    ],
+    "dead_branches_before_reopt": 0,
+    "delta_from_initial": -198,
+    "delta_from_previous": -1,
+    "freed_branches_by_new_win_before_reopt": 18,
+    "freed_branches_by_new_win_only_before_reopt": 12,
+    "new_witnesses_invented": 0,
+    "removed_witnesses": [
+      {
+        "mask": [
+          1153484454560268400,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560268580,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560268834,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560432160,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1162526838187098144,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788216077385730,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788216077385732,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788353516339200,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          1152924012867747840,
+          128
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1732197006677377024,
+          128
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          1189513251579232256,
+          130
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          3458764513828929536,
+          33554434
+        ],
+        "reason": "resolved-LOSS"
+      }
+    ],
+    "replies_affected_before_reopt": [
+      1,
+      2,
+      4,
+      15,
+      79,
+      101
+    ],
+    "s4_classes_touched": 9518,
+    "s4_kind_counts": {
+      "free": 30,
+      "open": 9488
+    },
+    "stored_pool": 1945,
+    "unclosable_reply_orbits": {
+      "after": [
+        1,
+        2,
+        4,
+        15,
+        79,
+        101
+      ],
+      "from_initial": [],
+      "from_previous": [
+        1,
+        2,
+        4,
+        15,
+        79,
+        101
+      ],
+      "newly_unclosable_vs_previous": [],
+      "r2_impossibility": "continues and expands",
+      "reclosed_vs_previous": []
+    },
+    "uncovered_branches_before_reopt": 8,
+    "uncovered_s4_classes_before_reopt": 8,
+    "unresolved_witnesses_from_initial": [
+      1944,
+      1746
+    ],
+    "unresolved_witnesses_from_previous": [
+      1747,
+      1746
+    ]
+  }
+}

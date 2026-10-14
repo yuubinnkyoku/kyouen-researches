@@ -1,0 +1,773 @@
+{
+  "batch_vs_staged": {
+    "candidates_equal": true,
+    "choices_identical": {
+      "staged_forward": true,
+      "staged_reverse": true
+    },
+    "labels_equal": true,
+    "obligations_equal": true,
+    "resolved_verdicts": {
+      "121263": 2,
+      "126017": 1,
+      "126899": 2,
+      "137694": 2,
+      "143240": 2,
+      "144095": 1,
+      "145001": 2,
+      "209644": 1,
+      "220231": 2,
+      "558600": 2
+    },
+    "rule": "identical resolved labels, identical legal candidate sets and identical element-cost obligations are required; only the greedy upper bound may differ",
+    "runs": {
+      "batch": {
+        "candidates_sha": "6b4e7fe13e60c38265eac756b3ee8295c10ee72b5e75fb279d9cb659a6d0bda6",
+        "changed_choice_count": 3,
+        "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+        "free_thirds": 122,
+        "known_losses_in_union": [],
+        "known_wins_in_union": [],
+        "labels_sha": "c11e8f37e77b458f79c466c96a0ced589bd6984b2bad5f9d1a9dc5d16ab65168",
+        "obligations_sha": "ed71bfb113bf6256a150bfddb69a7d4b559200761d4703d11926f6a5a38021a1",
+        "union_sha": "8b0de0539ccb745e25e9c24e9c24d4f4c7c2ba859863952b714d2cdf3562eb8c",
+        "union_size": 31774
+      },
+      "staged_forward": {
+        "candidates_sha": "6b4e7fe13e60c38265eac756b3ee8295c10ee72b5e75fb279d9cb659a6d0bda6",
+        "changed_choice_count": 3,
+        "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+        "free_thirds": 122,
+        "known_losses_in_union": [],
+        "known_wins_in_union": [],
+        "labels_sha": "c11e8f37e77b458f79c466c96a0ced589bd6984b2bad5f9d1a9dc5d16ab65168",
+        "obligations_sha": "ed71bfb113bf6256a150bfddb69a7d4b559200761d4703d11926f6a5a38021a1",
+        "union_sha": "8b0de0539ccb745e25e9c24e9c24d4f4c7c2ba859863952b714d2cdf3562eb8c",
+        "union_size": 31774
+      },
+      "staged_reverse": {
+        "candidates_sha": "6b4e7fe13e60c38265eac756b3ee8295c10ee72b5e75fb279d9cb659a6d0bda6",
+        "changed_choice_count": 3,
+        "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+        "free_thirds": 122,
+        "known_losses_in_union": [],
+        "known_wins_in_union": [],
+        "labels_sha": "c11e8f37e77b458f79c466c96a0ced589bd6984b2bad5f9d1a9dc5d16ab65168",
+        "obligations_sha": "ed71bfb113bf6256a150bfddb69a7d4b559200761d4703d11926f6a5a38021a1",
+        "union_sha": "8b0de0539ccb745e25e9c24e9c24d4f4c7c2ba859863952b714d2cdf3562eb8c",
+        "union_size": 31774
+      }
+    },
+    "union_sizes": {
+      "batch": 31774,
+      "staged_forward": 31774,
+      "staged_reverse": 31774
+    },
+    "upper_bound_differences": {
+      "staged_forward": {
+        "added_vs_batch": [],
+        "changed_choices_vs_batch": 0,
+        "free_thirds": 122,
+        "missing_vs_batch": [],
+        "symmetric_difference_vs_batch": 0,
+        "union_size": 31774
+      },
+      "staged_reverse": {
+        "added_vs_batch": [],
+        "changed_choices_vs_batch": 0,
+        "free_thirds": 122,
+        "missing_vs_batch": [],
+        "symmetric_difference_vs_batch": 0,
+        "union_size": 31774
+      }
+    },
+    "verification": {
+      "batch": {
+        "checked_selected_s4": 351,
+        "complete_s5_boundaries": 351,
+        "complete_third_boundaries": 19,
+        "known_loss_in_union": 0,
+        "known_win_selected": 0,
+        "passed": true,
+        "third_moves_checked": 2261
+      },
+      "staged_forward": {
+        "checked_selected_s4": 351,
+        "complete_s5_boundaries": 351,
+        "complete_third_boundaries": 19,
+        "known_loss_in_union": 0,
+        "known_win_selected": 0,
+        "passed": true,
+        "third_moves_checked": 2261
+      },
+      "staged_reverse": {
+        "checked_selected_s4": 351,
+        "complete_s5_boundaries": 351,
+        "complete_third_boundaries": 19,
+        "known_loss_in_union": 0,
+        "known_win_selected": 0,
+        "passed": true,
+        "third_moves_checked": 2261
+      }
+    }
+  },
+  "bounds": {
+    "interval_from_initial": [
+      [
+        6577,
+        31636
+      ],
+      [
+        6583,
+        31774
+      ]
+    ],
+    "interval_from_previous": [
+      [
+        6582,
+        31728
+      ],
+      [
+        6583,
+        31774
+      ]
+    ],
+    "lower": {
+      "from_initial": {
+        "after": 6583,
+        "before": 6577,
+        "delta": 6,
+        "exact_after": [
+          182461931,
+          27720
+        ],
+        "exact_before": [
+          91145221,
+          13860
+        ]
+      },
+      "from_previous": {
+        "after": 6583,
+        "before": 6582,
+        "delta": 1,
+        "exact_after": [
+          182461931,
+          27720
+        ],
+        "exact_before": [
+          36490451,
+          5544
+        ]
+      },
+      "source": "exact element-only fractional dual, ceil by integrality"
+    },
+    "upper": {
+      "from_initial": {
+        "after": 31774,
+        "before": 31636,
+        "delta": 138
+      },
+      "from_previous": {
+        "after": 31774,
+        "before": 31728,
+        "delta": 46
+      },
+      "source": "union of unknown-S5 children of selected LOSS responses"
+    }
+  },
+  "loss_side": {
+    "changed_choices": 3,
+    "complete_s5_boundaries_rechecked": 351,
+    "excluded_s4_classes_total": [
+      3569,
+      3570,
+      3942,
+      4050,
+      5408,
+      5687,
+      5690,
+      5830,
+      13938
+    ],
+    "free_thirds_from_initial": [
+      122,
+      122
+    ],
+    "free_thirds_from_previous": [
+      122,
+      122
+    ],
+    "known_loss_removed_from_cost": [
+      137694,
+      143240,
+      220231
+    ],
+    "known_win_requirements_asserted": 0,
+    "newly_excluded_s4_classes": [
+      3569,
+      3570,
+      4050,
+      5830
+    ],
+    "required_s5_from_initial": [
+      31636,
+      31774
+    ],
+    "required_s5_from_previous": [
+      31728,
+      31774
+    ],
+    "roots_rechecked": 19,
+    "third_moves_rechecked": 2261
+  },
+  "new_facts": {
+    "cumulative_tallies": {
+      "cumulative_adaptive_line": {
+        "attempts": 8,
+        "indices": [
+          126899,
+          144095,
+          121263,
+          145001,
+          137694,
+          143240,
+          220231,
+          126017
+        ],
+        "note": "continues the update2 README definition (cumulative 4/4): first update 126899/144095, second update 121263/145001, this round 137694/143240/220231/126017",
+        "successes": 8
+      },
+      "cumulative_all_independent_receipts": {
+        "attempts": 13,
+        "indices": [
+          121263,
+          126017,
+          126899,
+          137694,
+          143240,
+          144095,
+          145001,
+          209644,
+          220231,
+          558600,
+          115540,
+          144193,
+          144311
+        ],
+        "layered_into_plan": [
+          121263,
+          126017,
+          126899,
+          137694,
+          143240,
+          144095,
+          145001,
+          209644,
+          220231,
+          558600
+        ],
+        "note": "9 independent receipts existed before this round (K0423 2 + native focus 3 + adaptive 4) and this round adds 4; the three native receipts 115540 LOSS / 144193 LOSS / 144311 WIN stay out of every plan, so plan-layered (10) and all-receipt (13) tallies differ",
+        "successes": 13,
+        "verified_but_unlayered": [
+          115540,
+          144193,
+          144311
+        ]
+      },
+      "cumulative_conflict_closure_certified": {
+        "attempts": 11,
+        "indices": [
+          115540,
+          121263,
+          126017,
+          126899,
+          137694,
+          143240,
+          144095,
+          144193,
+          144311,
+          145001,
+          220231
+        ],
+        "note": "conflict-closure lineage excluding the K0423 pilots: native focus 3 (115540, 144193, 144311) + adaptive line 8 (126899, 144095, 121263, 145001, 137694, 143240, 220231, 126017) = 11. The night README lists \u78ba\u5b9a9\u4ef6 (its list omits 145001) and counts 126017 separately as the next independent WIN evidence, so that spelling reads 10",
+        "successes": 11
+      },
+      "cumulative_plan_layered_loss_side": {
+        "attempts": 7,
+        "indices": [
+          121263,
+          126899,
+          137694,
+          143240,
+          145001,
+          220231,
+          558600
+        ],
+        "note": "layered receipts whose verdict is LOSS: 4/4 through the second update, 7/7 after this round (the 7/7 reading)",
+        "successes": 7
+      },
+      "cumulative_plan_layered_total": {
+        "attempts": 10,
+        "indices": [
+          121263,
+          126017,
+          126899,
+          137694,
+          143240,
+          144095,
+          145001,
+          209644,
+          220231,
+          558600
+        ],
+        "note": "K0423 pilot receipts included; 6/6 through the second update",
+        "successes": 10
+      },
+      "cumulative_plan_layered_win_side": {
+        "attempts": 3,
+        "indices": [
+          126017,
+          144095,
+          209644
+        ],
+        "note": "layered receipts whose verdict is WIN",
+        "successes": 3
+      },
+      "this_round": {
+        "attempts": 4,
+        "indices": [
+          126017,
+          137694,
+          143240,
+          220231
+        ],
+        "successes": 4
+      }
+    },
+    "independent_verifications": {
+      "126017": {
+        "certificate": "research\\experiments\\n11-night-batch1-20261014\\output\\nightb10m-126017-terminal-dag.json.gz",
+        "certificate_bytes": 37783005,
+        "certificate_sha256": "29eb8689474b4c203fb631431ba6f40e6cc4da25f6bf8a2affd8c5c676983492",
+        "checker_source_sha256": "0f890cb49e806880bb56de2147163dc3fcfb0d5eae44835d602160c16008cd96",
+        "evidence_class": "independent-terminal-only-verification",
+        "frozen_trace_sha256_match": null,
+        "probe_search_nodes": 7151480,
+        "pruned_roundtrip_verified": true,
+        "receipt": "research\\experiments\\n11-night-batch1-20261014\\output\\nightb10m-126017-receipt.json",
+        "trusted_leaves": 0,
+        "verdict": 1
+      },
+      "137694": {
+        "certificate": "research\\experiments\\n11-night-batch1-20261014\\output\\night-a-137694-terminal-dag.json.gz",
+        "certificate_bytes": 18937507,
+        "certificate_sha256": "f6c845fb2e62b5e168e184ee95dda182e5166713f55c21d0e5477b08314e7e1a",
+        "checker_source_sha256": "0f890cb49e806880bb56de2147163dc3fcfb0d5eae44835d602160c16008cd96",
+        "evidence_class": "independent-terminal-only-verification",
+        "frozen_trace_sha256_match": true,
+        "probe_search_nodes": 3550700,
+        "pruned_roundtrip_verified": true,
+        "receipt": "research\\experiments\\n11-night-batch1-20261014\\output\\night-a-137694-receipt.json",
+        "trusted_leaves": 0,
+        "verdict": 2
+      },
+      "143240": {
+        "certificate": "research\\experiments\\n11-night-batch1-20261014\\output\\night-a-143240-terminal-dag.json.gz",
+        "certificate_bytes": 22183383,
+        "certificate_sha256": "8acbb2a21dc405b6855a10289452b6e9505dd4c59e2bc733d46a56343e3e574a",
+        "checker_source_sha256": "0f890cb49e806880bb56de2147163dc3fcfb0d5eae44835d602160c16008cd96",
+        "evidence_class": "independent-terminal-only-verification",
+        "frozen_trace_sha256_match": true,
+        "probe_search_nodes": 4774013,
+        "pruned_roundtrip_verified": true,
+        "receipt": "research\\experiments\\n11-night-batch1-20261014\\output\\night-a-143240-receipt.json",
+        "trusted_leaves": 0,
+        "verdict": 2
+      },
+      "220231": {
+        "certificate": "research\\experiments\\n11-night-batch1-20261014\\output\\night-a-220231-terminal-dag.json.gz",
+        "certificate_bytes": 13949253,
+        "certificate_sha256": "f33ec92f3c8915e7d24bd1ff287c0802a291ce549a49ea2d6709f95d577b0e75",
+        "checker_source_sha256": "0f890cb49e806880bb56de2147163dc3fcfb0d5eae44835d602160c16008cd96",
+        "evidence_class": "independent-terminal-only-verification",
+        "frozen_trace_sha256_match": true,
+        "probe_search_nodes": 3570981,
+        "pruned_roundtrip_verified": true,
+        "receipt": "research\\experiments\\n11-night-batch1-20261014\\output\\night-a-220231-receipt.json",
+        "trusted_leaves": 0,
+        "verdict": 2
+      }
+    },
+    "s5_index": {
+      "126017": 1,
+      "137694": 2,
+      "143240": 2,
+      "220231": 2
+    },
+    "tally_note": "several cumulative labels are reported because 'independent proof cumulative' is ambiguous across plan-layered, adaptive-line, conflict-closure and all-receipt readings",
+    "unlayered_receipts_unchanged": [
+      115540,
+      144193,
+      144311
+    ],
+    "verification_attempts": 4,
+    "verification_successes": 4
+  },
+  "newly_closed": {
+    "from_initial": {
+      "replies": [],
+      "reply_orbits": 0,
+      "third_moves": 0
+    },
+    "from_previous": {
+      "replies": [],
+      "reply_orbits": 0,
+      "third_moves": 0
+    },
+    "note": "a reply counts as newly closed when its chosen third needs zero WIN witnesses from the saved pool; both criteria are reported",
+    "regressed_vs_previous": []
+  },
+  "ranking_cross_check": {
+    "all_match": true,
+    "loss_side": {
+      "126017": {
+        "ranking_on_k0423_baseline": {
+          "affected_choices": 3,
+          "affected_s4": [
+            5830
+          ],
+          "greedy_delta": 49,
+          "greedy_union": 31685,
+          "invalidated_options": 4,
+          "loss_uncovered_branches": 4,
+          "new_free_win_branches": 18
+        },
+        "this_baseline": {
+          "affected_choices": 3,
+          "affected_s4": [
+            5830
+          ],
+          "invalidated_options": 4
+        },
+        "verdict": 1
+      },
+      "137694": {
+        "ranking_on_k0423_baseline": {
+          "affected_choices": 4,
+          "affected_s4": [
+            12643
+          ],
+          "greedy_delta": 97,
+          "greedy_union": 31733,
+          "invalidated_options": 3,
+          "loss_uncovered_branches": 2,
+          "new_free_win_branches": 2
+        },
+        "this_baseline": {
+          "affected_choices": 4,
+          "affected_s4": [
+            12643
+          ],
+          "invalidated_options": 0
+        },
+        "verdict": 2
+      },
+      "143240": {
+        "ranking_on_k0423_baseline": {
+          "affected_choices": 4,
+          "affected_s4": [
+            13080
+          ],
+          "greedy_delta": 83,
+          "greedy_union": 31719,
+          "invalidated_options": 3,
+          "loss_uncovered_branches": 2,
+          "new_free_win_branches": 2
+        },
+        "this_baseline": {
+          "affected_choices": 4,
+          "affected_s4": [
+            13080
+          ],
+          "invalidated_options": 0
+        },
+        "verdict": 2
+      },
+      "220231": {
+        "ranking_on_k0423_baseline": {
+          "affected_choices": 4,
+          "affected_s4": [
+            8176
+          ],
+          "greedy_delta": 40,
+          "greedy_union": 31676,
+          "invalidated_options": 3,
+          "loss_uncovered_branches": 1,
+          "new_free_win_branches": 2
+        },
+        "this_baseline": {
+          "affected_choices": 4,
+          "affected_s4": [
+            8176
+          ],
+          "invalidated_options": 0
+        },
+        "verdict": 2
+      }
+    },
+    "note": "branch incidences and affected-choice counts are recomputed from independent geometry on the frozen ranking rows; every value matches n11-conflict-ranking-20261013/output/ranking.json",
+    "win_side_branches": {
+      "126017": {
+        "effect_now": "branch became FREE (WIN child)",
+        "ranking_if_loss_uncovered_branches": 4,
+        "ranking_if_win_new_free_branches": 18,
+        "recomputed_new_free_branches": 18,
+        "recomputed_sole_stored_witness_branches": 4,
+        "stored_chosen_third_branches_with_candidate": 18,
+        "stored_chosen_third_replies_with_candidate": [
+          59,
+          60,
+          71
+        ],
+        "verdict": 1
+      },
+      "137694": {
+        "effect_now": "witness removed from the allowed pool (LOSS)",
+        "ranking_if_loss_uncovered_branches": 2,
+        "ranking_if_win_new_free_branches": 2,
+        "recomputed_new_free_branches": 2,
+        "recomputed_sole_stored_witness_branches": 2,
+        "stored_chosen_third_branches_with_candidate": 2,
+        "stored_chosen_third_replies_with_candidate": [
+          4
+        ],
+        "verdict": 2
+      },
+      "143240": {
+        "effect_now": "witness removed from the allowed pool (LOSS)",
+        "ranking_if_loss_uncovered_branches": 2,
+        "ranking_if_win_new_free_branches": 2,
+        "recomputed_new_free_branches": 2,
+        "recomputed_sole_stored_witness_branches": 2,
+        "stored_chosen_third_branches_with_candidate": 2,
+        "stored_chosen_third_replies_with_candidate": [
+          15
+        ],
+        "verdict": 2
+      },
+      "220231": {
+        "effect_now": "witness removed from the allowed pool (LOSS)",
+        "ranking_if_loss_uncovered_branches": 1,
+        "ranking_if_win_new_free_branches": 2,
+        "recomputed_new_free_branches": 2,
+        "recomputed_sole_stored_witness_branches": 1,
+        "stored_chosen_third_branches_with_candidate": 2,
+        "stored_chosen_third_replies_with_candidate": [
+          79
+        ],
+        "verdict": 2
+      }
+    }
+  },
+  "schema": "n11-night-plan-update3-effects-v1",
+  "source_sha256": {
+    "research\\experiments\\n11-adaptive-plan-update-20261013\\output\\repaired-joint-plan-update.json": "39278565487a497057d4515ac4b9e5b7614764262eae56d28bd3c6380142f7c4",
+    "research\\experiments\\n11-adaptive-plan-update2-20261013\\output\\repaired-joint-plan-update2.json": "06072128cc5e41e1f3026a8e7f16cc394eb4620335aebbef24e051646abfd665",
+    "research\\experiments\\n11-adaptive-plan-update2-20261013\\output\\updated-element-dual-update2.json": "0faba4d88015ff7fc3faa175fcd9980c971b77ac61768be211e6314ab5bfb817",
+    "research\\experiments\\n11-adaptive-plan-update2-20261013\\output\\win-side-reanalysis2.json": "f6db82159d8dd67dcae5d1ac533f307ee69cb13978eb290d59c7d9ee8276ca60",
+    "research\\experiments\\n11-conflict-ranking-20261013\\output\\ranking.json": "690bd26a4b21dd61cd146da7d37b6e989fcc0227a987754587297f046cf969e3",
+    "research\\experiments\\n11-native-terminal-checker-20261013\\output\\pilot-115540-receipt.json": "99f48308d1d2e184e7c4f5e131384ffa26645ea35330d37693e5d58875accbe7",
+    "research\\experiments\\n11-native-terminal-checker-20261013\\output\\pilot-144193-receipt.json": "320801e250e986466c92cccc28a810720d6632a42259d701165c070e64e4410c",
+    "research\\experiments\\n11-native-terminal-checker-20261013\\output\\pilot-144311-receipt.json": "cb2ba41ce9eeeadaab4c0d96b2eec8baa51d5a275b17e604ae16dd85b579df37",
+    "research\\experiments\\n11-night-plan-update3-20261014\\output\\repaired-joint-plan-update3.json": "c5f72fce5aa748c7a39c907e0feccf4f4c85e2c2815bf70adc7eda7abe79a054",
+    "research\\experiments\\n11-night-plan-update3-20261014\\output\\updated-element-dual-update3.json": "5468b1f6b3bf12b45fd1e336d5fd231b9e68d5aac76f03d116d2dcf9029adb8b",
+    "research\\experiments\\n11-night-plan-update3-20261014\\output\\win-side-reanalysis3.json": "3183b3a6a8f6276afb3b22d5aefcc4c0bf8f5fe206a74ab93c5b94b7a21f893b",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\repaired-joint-plan.json": "2a468a5aff518a4be5cada77e58ce49cd5597bf779105e58ed4a662898bf4f5f",
+    "research\\experiments\\n11-s5-s6-quotient-20261013\\output\\updated-element-dual.json": "992698c29005f9af38ee87b78f77d291d6034966961cf439db210f8b1d5fe811"
+  },
+  "verdict_census": {
+    "conflict_candidates_total": 28,
+    "empty_board": "UNKNOWN (11x11); no whole-board leap performed",
+    "layered_count": 10,
+    "loss": [
+      121263,
+      126899,
+      137694,
+      143240,
+      145001,
+      220231,
+      558600
+    ],
+    "loss_count": 7,
+    "unknown_candidates": [
+      115540,
+      120370,
+      131631,
+      137043,
+      142283,
+      143718,
+      144019,
+      144193,
+      144311,
+      144692,
+      157861,
+      162106,
+      166171,
+      181624,
+      193768,
+      196002,
+      197665,
+      206386,
+      211133,
+      221294
+    ],
+    "unknown_count_among_candidates": 20,
+    "unknown_unchanged": {
+      "144019": true,
+      "144692": true,
+      "197665_at_10m": true
+    },
+    "verified_but_unlayered": [
+      115540,
+      144193,
+      144311
+    ],
+    "win": [
+      126017,
+      144095,
+      209644
+    ],
+    "win_count": 3
+  },
+  "win_side": {
+    "allowed_pool": [
+      1940,
+      1936
+    ],
+    "and_width": {
+      "after": 6812,
+      "from_initial": 7519,
+      "from_previous": 7165
+    },
+    "closable_replies": {
+      "after": 59,
+      "from_initial": 65,
+      "from_previous": 62
+    },
+    "dead_branches_before_reopt": 0,
+    "delta_from_initial": -195,
+    "delta_from_previous": -97,
+    "new_witnesses_invented": 0,
+    "removed_witnesses": [
+      {
+        "mask": [
+          1153484454560268400,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560268580,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560268834,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560432160,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1162526838187098144,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788216077385730,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          1152924012867747840,
+          128
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1189513251579232256,
+          130
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          3458764513828929536,
+          33554434
+        ],
+        "reason": "resolved-LOSS"
+      }
+    ],
+    "replies_affected_before_reopt": [
+      1,
+      2,
+      4,
+      15,
+      79,
+      101
+    ],
+    "s4_classes_touched": 9518,
+    "s4_kind_counts": {
+      "free": 21,
+      "open": 9497
+    },
+    "stored_pool": 1945,
+    "unclosable_reply_orbits": {
+      "after": [
+        1,
+        2,
+        4,
+        15,
+        79,
+        101
+      ],
+      "from_initial": [],
+      "from_previous": [
+        1,
+        2,
+        101
+      ],
+      "newly_unclosable_vs_previous": [
+        4,
+        15,
+        79
+      ],
+      "r2_impossibility": "continues and expands"
+    },
+    "uncovered_branches_before_reopt": 8,
+    "uncovered_s4_classes_before_reopt": 8,
+    "unresolved_witnesses_from_initial": [
+      1944,
+      1749
+    ],
+    "unresolved_witnesses_from_previous": [
+      1846,
+      1749
+    ]
+  }
+}

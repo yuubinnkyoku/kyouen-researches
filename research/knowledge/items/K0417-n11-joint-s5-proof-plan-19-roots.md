@@ -1,6 +1,6 @@
 ---
 id: K0417
-title: 19残存初手の共同S5計画は独立終局パイロット後の修復で上界31,636・整数下界6,577
+title: 19残存初手の共同S5計画は夜間層別13の反映で上界31,774・整数下界6,585
 kind: computation
 status: computed
 topics: [square-outcomes, search-methods, certificates, verification, provenance]
@@ -59,6 +59,13 @@ K0423により、旧31,546要求集合の209644は元先手WIN、558600はLOSS�
 
 現行の整数下界はK0418の6,577。旧31,546／6,574は旧cacheインスタンスの履歴値として保持し、現在の上下界には用いない。
 残り31,636が全てLOSSとなることは未証明で、計画は依然楽観的。既存cache葉はsolver-trusted、追加二局面だけはtrusted葉0の終局DAG。
+
+## 夜間バッチ反映（2026-10-14・K0424）
+
+夜間適応探索で9局面の新規厳密判定（LOSS 3・WIN 6）をtrusted葉0の終局DAGで獲得し、
+6段階の計画更新を経た現行値は上界31,774・下界6,585・層別13（6W+7L）・除外S4 17件。
+K0423時点の31,636／6,577は本項目の履歴値として保持し、現在の上下界には用いない。
+詳細はK0424と `research/experiments/n11-night-plan-update6-20261014/` を参照。
 
 ## 旧cacheインスタンスの履歴
 

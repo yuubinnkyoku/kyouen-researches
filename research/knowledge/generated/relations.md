@@ -1755,6 +1755,7 @@
 - ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 元先手固定の勝敗伝播規則（S1=AND・S4 LOSS=全S5子LOSS）
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
 - ← depends_on [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 元先手固定のAND/OR極性と終局payoff
+- ← depends_on [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 元先手固定のAND/OR極性と終局payoff
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1957,7 +1958,7 @@
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): S5の全子閉包が必要なことと未閉鎖根の前例
 
-## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は独立終局パイロット後の修復で上界31,636・整数下界6,577
+## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は夜間層別13の反映で上界31,774・整数下界6,585
 
 - → depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 19未確定初手軌道と中央応手f=60の候補root
 - → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 既知LOSS基準rootと32個の無料S4 LOSS class
@@ -1969,8 +1970,9 @@
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): LOSS側共同frontier 31,546と個別上界（49:2055）の比較基準
 - ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 31,546相異なるS5を要求する既存19-root共同計画
 - ← refutes [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 保存された31,546計画をそのまま全要求LOSSで閉じられる仮定を反証。旧cache限定の組合せ計算自体は否定しない。
+- ← supports [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
 
-## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 独立終局パイロット後の共同計画の厳密双対91145221/13860は整数下界6,577
+## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 夜間層別後の共同計画の厳密双対182532671/27720は整数下界6,585
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 二つの終局verdictを反映した19-root共同選択問題・現行上界31,636
 - → verifies [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 双対値の厳密再計算と31,546計画の独立再検証（失敗0）
@@ -1979,13 +1981,14 @@
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 中央応手の個別上界（49:2055・38:2155・16:2084）と共同上界31,546
 
-## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは1,945証人・7.5k AND分岐、うち1証人を独立終局閉鎖
+## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは夜間再被覆で1,933証人・6.8k AND幅・未閉鎖1,746
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): LOSS側共同frontier 31,546と個別上界（49:2055）の比較基準
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
 - → depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): S5の全子閉包が必要なことと未閉鎖根の前例
 - ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 極性訂正済みcheapest10と衝突29件の入力
 - ← supports [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 極性衝突29候補の一つ209644についてWIN側要求を実際に証明
+- ← supports [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): WIN 6件をWIN証人側の確定に供給、LOSS 3件を証人候補から除外
 
 ## [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md) 四石以上の安全局面では子のD4同値と親安定化群の着手軌道が一致する（四石条件は鋭い）
 
@@ -1998,6 +2001,7 @@
 - → depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 極性訂正済みcheapest10と衝突29件の入力
 - → depends_on [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md): 親安定化群による軌道数と正準子数の全称的一致
 - ← depends_on [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 索引558600・209644の現行パイロット選択と完全合法境界
+- ← depends_on [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 九局面の現行パイロット選択と完全合法境界
 
 ## [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) 11盤の対称S5二局面を終局DAGで独立証明し、共同計画の衝突候補209644は先手WIN
 
@@ -2005,3 +2009,10 @@
 - → depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 索引558600・209644の現行パイロット選択と完全合法境界
 - → refutes [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 保存された31,546計画をそのまま全要求LOSSで閉じられる仮定を反証。旧cache限定の組合せ計算自体は否定しない。
 - → supports [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 極性衝突29候補の一つ209644についてWIN側要求を実際に証明
+
+## [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) 11盤のS5九局面を終局DAGで独立証明し、共同計画を層別13・上界31,774・下界6,585へ更新
+
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR極性と終局payoff
+- → depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 九局面の現行パイロット選択と完全合法境界
+- → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
+- → supports [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): WIN 6件をWIN証人側の確定に供給、LOSS 3件を証人候補から除外
