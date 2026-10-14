@@ -1,7 +1,33 @@
-# 2×m q=4: safe six-stone counts
+# 2×m・q=4：安全5石・6石配置の厳密公式（2026-10-14）
 
-For every m>=0, let e=m mod 2 and d=1 if 3 does not divide m, otherwise d=0. The number of safe six-stone subsets is
+a_k(m) を2行m列盤の安全なk石集合の個数とする。ε=m mod 2、δ=1_{3∤m} とすると、全整数m≥0で
 
- a6(m)=(m^6-12m^5+55m^4-132m^3+199m^2-162m)/36 + e*(m^2-6m+8)/4 + 2*d/3.
+- a5(m)=(m−2)(m⁴−4m³+4m²−4m+3ε)/6
+- **a6(m)=(m⁶−12m⁵+55m⁴−132m³+199m²−162m)/36+ε(m²−6m+8)/4+2δ/3**
 
-This follows by counting disjoint pair-sum sets of two triples, using inclusion-exclusion over the 1, 2, and 3 common sums. The full proof and independent determinant audit are prepared separately; knowledge promotion requires regenerating indices.
+が成立する。a6は最小周期6の次数6準多項式。既存K0069よりm≥9では極大安全配置総数がa6に一致し、主要項はm⁶/36である。
+
+## 全称証明の骨格
+
+二行から2点ずつ選んだ4点の共円条件は横座標和の一致。二行2+2禁止組の個数をH(m)=(2m³−3m²+4m−3ε)/12とおく（既存K0393）。
+
+安全5石は3+2型のみ。3石側の二点和は全て異なるから a5=2C(m,3)C(m,2)−2(m−2)H。
+
+安全6石は3+3型のみ。三点集合Aの二点和集合S(A)を考える。A,Bが安全なのはS(A)∩S(B)=∅の場合。r=|S(A)∩S(B)|として E_j=Σ_{A,B}C(r,j) とすると a6=C(m,3)²−E1+E2−E3。直接、E1=(m−2)²H、E3=C(m,3)（三つの二点和は元の三点を一意に決める）。
+
+二和を共有する異なる三点組は A={x,y,z}、B={x+t,y−t,z−t}（t≠0）と書ける。固定t>0でxの候補はm−t個、y,zの候補もm−t個。y,zからxとx+2tを除く条件を包除すると、その数は
+
+ (m−t)C(m−t,2)−2(m−2t)_+(m−t−1)+(m−3t)_+。
+
+負のtは反転で同数。h=⌊(m−1)/2⌋、k=⌊(m−1)/3⌋、
+U=Σ_{t=1}^h(m−2t)(m−t−1)、V=Σ_{t=1}^k(m−3t) とすると
+
+ E2=7C(m,3)+6C(m,4)−4U+2V,
+
+ a6=C(m,3)²−(m−2)²H+6C(m,3)+6C(m,4)−4U+2V。
+
+等差・平方和の公式でU,Vを評価しm mod 6で整理すれば冒頭の式を得る。m≤2は直接確認。偶奇とmod 3の補正が両方残るため周期6が最小。
+
+## 検証境界
+
+整数行列式によるm≤14の5・6石全候補、別の二点和列挙によるm≤20の6石全候補が一致。m=9,10,11,12のa6は2846,6564,13650,26086。全称性の根拠は上記証明であり有限列挙ではない。検証器・実行記録・正式K項目案は別途保存し、knowledgeの生成索引は未更新。
