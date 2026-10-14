@@ -39,3 +39,13 @@ Pell方程式
 The complete integer-chord enumeration through maximum horizontal span 2773 finds exactly five patterns: (1,3,3,1), (35,51,63,73), (73,63,51,35), (1331,1935,2391,2773), and (2773,2391,1935,1331). Consequently, for every 1 <= m <= 2774 the exact number of eight-point circles on four consecutive rows is max(0,m-3)+2*max(0,m-73)+2*[m=2774]. In particular, the second Pell-family circle at width 2774 is the first new type after width 74; no intermediate types occur. The total number of forbidden eight-point subsets is 4*binom(m,8) plus this circle count. This is a finite complete classification, not an unbounded classification of all circles.
 
 Proof and two independent integer enumerators: research/experiments/fixed-width/reports/q48-circle-gap-2774-20261014.md, research/experiments/fixed-width/scripts/q48_circle_gap_2774_20261014.py, and research/experiments/fixed-width/scripts/q48_circle_gap_2774_independent_20261014.cpp. The original infinite Pell-family theorem above is unchanged.
+
+## 1000001列までの有限完全分類（2026-10-15）
+
+整数弦長の平方数条件を二つの異なる変数対で完全列挙した結果、`1<=m<=1000001` で4行8点円の弦長型は7種類のみである。既存の5型のほかは `(50543,73479,90795,105301)` とその上下反転であり、**105302列の次の新型は1000001列まで出現しない**。
+
+この範囲での円数は、`[x]_+=max(0,x)` として
+`C8(m)=[m-3]_+ + 2[m-73]_+ + 2[m-2773]_+ + 2[m-105301]_+`。
+1000001列で `C8=6783710`。法4032と法2016の平方剰余必要条件でそれぞれ枝刈りした独立C++全探索が、最大弦長1000000まで全7型で一致した。数学的な整数弦長への還元と独立検証の詳細は `research/experiments/fixed-width/reports/q48-circle-gap-1000000-20261015.md`、再現コードは同ディレクトリの `scripts/q48_circle_census_mod4032_20261015.cpp` と `scripts/q48_circle_census_ac_mod2016_20261015.cpp`、結果は `output/q48_circle_census_1000000_20261015.json` を参照。
+
+**有限分類の境界**：1000002列以上について新型の不存在は証明していない。元の無限Pell族定理および固定幅Grundy安定化長とは別の主張である。
