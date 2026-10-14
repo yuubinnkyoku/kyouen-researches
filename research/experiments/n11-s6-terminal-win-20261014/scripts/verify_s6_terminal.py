@@ -13,6 +13,13 @@ from pathlib import Path
 N = 11
 
 
+def check(condition, message="invalid certificate"):
+    """Runtime validation that remains active under python -O."""
+    if not condition:
+        raise ValueError(message)
+
+
+
 def points(m):
     return [i for i in range(121) if m >> i & 1]
 
@@ -61,11 +68,11 @@ def children(m):
 
 
 def next_player_wins_at_s10(m):
-    assert m.bit_count() == 10 and safe(m)
+    check(m.bit_count() == 10 and safe(m))
     base = points(m)
     moves = legal(m)
     n = len(moves)
-    assert n <= 31, f'terminal bitmask width exceeded: {n}'
+    check(n <= 31, f'terminal bitmask width exceeded: {n}')
     bad = set()
     for i, j in combinations(range(n), 2):
         if any(circle(a, b, moves[i], moves[j])
@@ -104,15 +111,15 @@ def next_player_wins_at_s10(m):
 
 def verify(path, limit=None):
     lines = Path(path).read_text(encoding='utf-8').splitlines()
-    assert lines[:2] == ['# n11-S6-WIN-terminal-v1', 'BOARD 11']
-    assert lines[-1] == 'END'
-    assert len(lines) >= 6
+    check(lines[:2] == ['# n11-S6-WIN-terminal-v1', 'BOARD 11'])
+    check(lines[-1] == 'END')
+    check(len(lines) >= 6)
     tag, h = lines[2].split()
-    assert tag == 'S6' and len(h) == 32
+    check(tag == 'S6' and len(h) == 32)
     s6 = int(h, 16)
-    assert s6.bit_count() == 6 and safe(s6) and canonical(s6) == s6
+    check(s6.bit_count() == 6 and safe(s6) and canonical(s6) == s6)
     tag, num = lines[3].split()
-    assert tag == 'S7_WITNESSES' and int(num) >= 1
+    check(tag == 'S7_WITNESSES' and int(num) >= 1)
     n7 = int(num)
     idx = 4
     witnesses = set()
@@ -121,41 +128,42 @@ def verify(path, limit=None):
     for _ in range(n7):
         tag, h, count = lines[idx].split()
         idx += 1
-        assert tag == 'S7' and len(h) == 32
+        check(tag == 'S7' and len(h) == 32)
         s7 = int(h, 16)
-        assert s7.bit_count() == 7 and safe(s7) and canonical(s7) == s7
-        assert s7 in children(s6) and s7 not in witnesses
+        check(s7.bit_count() == 7 and safe(s7) and canonical(s7) == s7)
+        check(s7 in children(s6) and s7 not in witnesses)
         witnesses.add(s7)
         expected = children(s7)
-        assert int(count) == len(expected)
+        check(int(count) == len(expected))
         actual = set()
         for _ in range(int(count)):
             tag, a, b = lines[idx].split()
             idx += 1
-            assert tag == 'WIN8' and len(a) == len(b) == 32
+            check(tag == 'WIN8' and len(a) == len(b) == 32)
             s8, s9 = int(a, 16), int(b, 16)
-            assert s8.bit_count() == 8 and s9.bit_count() == 9
-            assert safe(s8) and safe(s9)
-            assert canonical(s8) == s8 and canonical(s9) == s9
-            assert s8 in expected and s8 not in actual
-            assert s9 in children(s8)
+            check(s8.bit_count() == 8 and s9.bit_count() == 9)
+            check(safe(s8) and safe(s9))
+            check(canonical(s8) == s8 and canonical(s9) == s9)
+            check(s8 in expected and s8 not in actual)
+            check(s9 in children(s8))
             actual.add(s8)
             all_s10.update(children(s9))
             s8_edges += 1
-        assert actual == expected
-    assert idx == len(lines) - 1
+        check(actual == expected)
+    check(idx == len(lines) - 1)
     targets = sorted(all_s10)
     if limit is not None:
-        assert limit >= 0
+        check(limit >= 0)
         targets = targets[:limit]
     states = 0
     for i, s10 in enumerate(targets, 1):
         win, visited = next_player_wins_at_s10(s10)
-        assert win, f'S10 LOSS contradicts WIN witness: {s10:032x}'
+        check(win, f'S10 LOSS contradicts WIN witness: {s10:032x}')
         states += visited
         if i % 200 == 0:
             print(f'checked {i}/{len(all_s10)} S10 terminal roots', flush=True)
-    print(f'PASS S6={s6:032x} WIN, S7={n7}, S8_edges={s8_edges}, '
+    label = 'PASS' if limit is None else 'PARTIAL-NOT-A-PROOF'
+    print(f'{label} S6={s6:032x} WIN, S7={n7}, S8_edges={s8_edges}, '
           f'checked_S10={len(targets)}/{len(all_s10)}, '
           f'terminal_states={states}, empty=UNKNOWN')
 
