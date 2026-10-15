@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 427 / alias: 269 / artifactファイル: 2300
+K項目: 427 / alias: 269 / artifactファイル: 2301
 
 ## kind
 
@@ -20,13 +20,12 @@ K項目: 427 / alias: 269 / artifactファイル: 2300
 | active | 9 |
 | computed | 108 |
 | conjectured | 1 |
-| needs-review | 1 |
 | observed | 17 |
 | open | 35 |
 | proved | 179 |
 | refuted | 63 |
 | scope-unclear | 1 |
-| verified | 9 |
+| verified | 10 |
 | withdrawn | 4 |
 
 ## topics
@@ -94,7 +93,6 @@ K項目: 427 / alias: 269 / artifactファイル: 2300
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) [needs-review] 11盤の終局証明追加は3件のS8 LOSSと一件のS6 LOSSを提示
 
 ## 警告
 

@@ -5983,13 +5983,18 @@
 - [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (verifier): 入力hash、親全件と集計照合、改変入力拒否
 ## [research/experiments/n11-s6-terminal-loss-20261015/audit_joint_plan.py](../../../research/experiments/n11-s6-terminal-loss-20261015/audit_joint_plan.py)
 
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): 六つのS5 LOSS親と固定共同計画の重なりを再計算
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (verifier): 6個のS5親と凍結update6計画の重なり・要求S5和集合31,771の再計算
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): 六つのS5 LOSS親と凍結update6計画の重なり・要求S5和集合31,771の再計算
 ## [research/experiments/n11-s6-terminal-loss-20261015/s6-loss-optimized.cert](../../../research/experiments/n11-s6-terminal-loss-20261015/s6-loss-optimized.cert)
 
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (certificate): S6 LOSS終局証明（29 S8証人・483終局S10葉・1,028,621状態）
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 一つのS6 LOSSを29個のS8 LOSS証人と483個の終局S10葉で証明する証明書
 ## [research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py)
 
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): S6証明境界と全S10葉をキャッシュなしで検査
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): S6証明境界と全S10葉をキャッシュなしで検査（1,028,621状態）
+## [research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): 同一証明書を独立C++で終局再計算する検査器
 ## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題
@@ -6071,10 +6076,10 @@
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (source): 407件のS10追加検査、終局証明、上位への伝播と信頼境界
 ## [research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt](../../../research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt)
 
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (log): 提供パッケージの再現実行記録。今回の統合時には再実行していない
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (log): パッケージ再現の実行記録。2026-10-15に本repoで全手順を再実行しPASS
 ## [research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS](../../../research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS)
 
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (manifest): パッケージ内50ファイルのSHA-256一覧
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (manifest): パッケージ内50ファイルのSHA-256一覧（reproduce.shが照合）
 ## [research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_171_terminal.cert](../../../research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_171_terminal.cert)
 
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 171個のS8 WIN終局証明

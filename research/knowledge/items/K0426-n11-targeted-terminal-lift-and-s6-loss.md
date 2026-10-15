@@ -1,24 +1,27 @@
 ---
 id: K0426
-title: 11盤の終局証明追加は3件のS8 LOSSと一件のS6 LOSSを提示
+title: 11盤のS6 LOSSと3件のS8 LOSSの終局証明を独立検証し、固定計画の要求S5和集合を31,774から31,771へ縮小
 kind: verification
-status: needs-review
+status: verified
 topics: [square-outcomes, certificates, verification, search-methods, provenance]
 aliases: []
 relations:
 - type: depends_on
   target: K0371
   note: 元先手固定視点の通常プレイにおける偶奇層の勝敗伝播
+- type: depends_on
+  target: K0424
+  note: 監査基準とした凍結update6共同計画（選択S4・要求S5和集合31,774）
 - type: supports
   target: K0417
-  note: 固定された共同S5計画の要求数に対する追加LOSS証拠として提示
+  note: 検証済みS6 LOSSの3個のS5親が選択S4クラス16397に一致し、要求S5和集合を31,771へ縮小
 artifacts:
 - path: research/experiments/n11-targeted-terminal-lift-20261015/README.md
   role: source
   note: 407件のS10追加検査、終局証明、上位への伝播と信頼境界
 - path: research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS
   role: manifest
-  note: パッケージ内50ファイルのSHA-256一覧
+  note: パッケージ内50ファイルのSHA-256一覧（reproduce.shが照合）
 - path: research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_loss_three_terminal.cert
   role: certificate
   note: 3個のS8 LOSS、104個のS9義務と63個の終局S10 LOSS葉
@@ -36,22 +39,29 @@ artifacts:
   note: キャッシュなしで終局まで再計算する独立Python検査器
 - path: research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt
   role: log
-  note: 提供パッケージの再現実行記録。今回の統合時には再実行していない
+  note: パッケージ再現の実行記録。2026-10-15に本repoで全手順を再実行しPASS
 - path: research/experiments/n11-s6-terminal-loss-20261015/s6-loss-optimized.cert
   role: certificate
   note: 一つのS6 LOSSを29個のS8 LOSS証人と483個の終局S10葉で証明する証明書
 - path: research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py
   role: verifier
-  note: S6証明境界と全S10葉をキャッシュなしで検査
+  note: S6証明境界と全S10葉をキャッシュなしで検査（1,028,621状態）
+- path: research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp
+  role: verifier
+  note: 同一証明書を独立C++で終局再計算する検査器
 - path: research/experiments/n11-s6-terminal-loss-20261015/audit_joint_plan.py
   role: verifier
-  note: 六つのS5 LOSS親と固定共同計画の重なりを再計算
-scope: 標準11×11・q=4・完全指摘・通常プレイ。勝敗ラベルは元先手固定視点。提供された終局証明と派生するS5親のみに限定し、空盤面や二石rootは対象外。
-evidence: 添付パッケージは3 S8 LOSS（104 S9義務、63終局S10葉、85,676メモ化状態）、171+16 S8 WIN、および一つのS6 LOSS（49 S7子、29 S8証人、1,046 S8→S9義務、483終局S10葉、1,028,621状態）を報告する。SHA256一覧と単独S8証明書のハッシュは入力完全性として照合したが、各ゲーム検査器はこの統合では実行していない。
+  note: 六つのS5 LOSS親と凍結update6計画の重なり・要求S5和集合31,771の再計算
+scope: 標準11×11・q=4・完全指摘・通常プレイ。勝敗ラベルは元先手固定視点。添付終局証明と派生するS5親のみに限定し、空盤面や二石rootは対象外。
+evidence: 添付2パッケージを2026-10-15に本repoのWSL2環境で再実行し全PASS。S6証明書は非圧縮SHA-256 cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6照合のうえ、キャッシュ非依存のPython/C++検査器が29根・1,046 S8→S9義務・483終局S10葉・1,028,621状態で一致。S8 WIN 171+16とS8 LOSS 3の各証明書も両実装で一致し（152,566・5,929・85,676状態）、407件の未知S10もC++/Python一致（WIN 364・LOSS 43・378,648状態、衝突0）。原子mergeは51,164+407=51,571で重複0、差分監査は+187 S8 WIN・+19 S7 LOSS（新規19・重複4・衝突0）・偽近LOSS 120件の除外・高被覆475件の全分類（未知0）、改変拒否の負例対照も通過した。凍結update6計画に対する監査は、6個のS5 LOSS親のうち3個が選択S4クラス16397の8第三手群（初手24に3群・26に2群・48に3群）に現れ、S4選択を固定したまま楽観的要求S5和集合が31,774から31,771へ縮むことを再計算で確認した。
 ---
 
-証明資料の取り込みを記録する項目であり、添付READMEの再現receiptを独立監査済み結果として扱わない。したがって本項目は `needs-review` とする。
+両パッケージの検査器を本repoで実行し、キャッシュ非依存の終局再計算の一致を確認した検証項目。独立実行で確認したのは以下の範囲であり、添付READMEの全主張を再導出したものではない。
 
-提供内容が正しければ、3つのS8 LOSSから19個の新規S7 LOSS親が導かれ、6石局面 `00000000040004001004000004010000` のS6 LOSS証明は6個の異なるS5 LOSS親を与える。後者のうち3個は固定されたK0417共同計画のS4クラス16397に現れ、添付監査はその計画を保った場合の楽観的未確定S5和集合が31,774から31,771へ減ると報告する。この条件付き更新は未監査のため、K0417の確定済み31,774基準値はこの項目だけでは変更しない。
+S6 LOSS `00000000040004001004000004010000` は49個のS7子・29個のS8 LOSS証人・1,046個のS8→S9義務・483個の終局S10 LOSS葉で証明され、六石から各石を除いた6個のS5 LOSS親を与える。この6親は凍結計画の基準cacheと既知終局S5（層別13）のいずれにも現れない新規源である。
+
+うち3個は選択S4クラス16397の8第三手群の要求S5和集合に含まれていたため、S4選択を固定したまま楽観的要求和集合が31,774から31,771へ縮む（K0417へ反映済み）。残る3親はこの固定計画のどの選択S4配下にも現れない。
+
+3つのS8 LOSSからは合法な7石親23件が再生成され、既知2,213件との重複4件を除く19件の新規7石LOSSが導かれる（既知7石WINとの衝突0）。C++のみで計算されたS10 LOSS候補2,229件は今回も統合cacheに含めない。S10統合cache51,571件のうち既存51,164件は以前の監査来歴を保持し、本検証で各項目の終局再計算は行っていない。
 
 両パッケージとも新しい二石rootを閉じていない。標準11×11空盤面の勝者は引き続きUNKNOWN。S10既存51,164件の全独立再検査や、C++のみの2,229候補の昇格も主張しない。

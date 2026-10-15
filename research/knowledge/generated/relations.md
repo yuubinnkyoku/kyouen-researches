@@ -1965,7 +1965,7 @@
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): S5の全子閉包が必要なことと未閉鎖根の前例
 
-## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は夜間層別13の反映で上界31,774・整数下界6,585
+## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は層別13とS6 LOSS終局証明の反映で上界31,771・整数下界6,585
 
 - → depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 19未確定初手軌道と中央応手f=60の候補root
 - → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 既知LOSS基準rootと32個の無料S4 LOSS class
@@ -1978,7 +1978,7 @@
 - ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 31,546相異なるS5を要求する既存19-root共同計画
 - ← refutes [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 保存された31,546計画をそのまま全要求LOSSで閉じられる仮定を反証。旧cache限定の組合せ計算自体は否定しない。
 - ← supports [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
-- ← supports [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 固定された共同S5計画の要求数に対する追加LOSS証拠として提示
+- ← supports [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 検証済みS6 LOSSの3個のS5親が選択S4クラス16397に一致し、要求S5和集合を31,771へ縮小
 
 ## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 夜間層別後の共同計画の厳密双対182532671/27720は整数下界6,585
 
@@ -2024,16 +2024,18 @@
 - → depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 九局面の現行パイロット選択と完全合法境界
 - → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
 - → supports [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): WIN 6件をWIN証人側の確定に供給、LOSS 3件を証人候補から除外
+- ← depends_on [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 監査基準とした凍結update6共同計画（選択S4・要求S5和集合31,774）
 
 ## [K0425](../items/K0425-four-row-eight-point-chord-gap.md) 4行8点円の非局所型は単調で隣接弦長差が10以上
 
 - → depends_on [K0073](../items/K0073-q-two-width-circle-criterion.md): 共通二根和と弦長平方の二階差分を使用
 - → depends_on [K0317](../items/K0317-four-row-q8-pell-circle-family.md): Pell族の初項が下界10と最初の非局所幅73を達成
 
-## [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) 11盤の終局証明追加は3件のS8 LOSSと一件のS6 LOSSを提示
+## [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) 11盤のS6 LOSSと3件のS8 LOSSの終局証明を独立検証し、固定計画の要求S5和集合を31,774から31,771へ縮小
 
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定視点の通常プレイにおける偶奇層の勝敗伝播
-- → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 固定された共同S5計画の要求数に対する追加LOSS証拠として提示
+- → depends_on [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 監査基準とした凍結update6共同計画（選択S4・要求S5和集合31,774）
+- → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 検証済みS6 LOSSの3個のS5親が選択S4クラス16397に一致し、要求S5和集合を31,771へ縮小
 
 ## [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) 4行8点円の弦長平方は法27で四つの型に限られる
 

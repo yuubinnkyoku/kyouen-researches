@@ -413,7 +413,7 @@
 | [K0414](../items/K0414-n11-reply27-root-loss.md) | 11×11二石局面{60,27}は元先手固定視点でLOSS | proposition | computed | square-outcomes, certificates, verification, provenance |
 | [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) | 11×11空盤の初手D4分類で2軌道をLOSS、19軌道は未確定 | proposition | computed | square-outcomes, first-moves, certificates, verification |
 | [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) | 二石root {60,27} のterminal-only証明には2,992個の未閉鎖S5依存根が残る | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
-| [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) | 19残存初手の共同S5計画は夜間層別13の反映で上界31,774・整数下界6,585 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+| [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) | 19残存初手の共同S5計画は層別13とS6 LOSS終局証明の反映で上界31,771・整数下界6,585 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) | 夜間層別後の共同計画の厳密双対182532671/27720は整数下界6,585 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) | 初手49・38・16の非中央応手27・93は中央応手に楽観的S5数で約1.5倍劣る | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) | 初手49のWIN側frontierは夜間再被覆で1,933証人・6.8k AND幅・未閉鎖1,746 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
@@ -422,7 +422,7 @@
 | [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) | 11盤の対称S5二局面を終局DAGで独立証明し、共同計画の衝突候補209644は先手WIN | proposition | proved | square-outcomes, certificates, verification, search-methods, provenance |
 | [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) | 11盤のS5九局面を終局DAGで独立証明し、共同計画を層別13・上界31,774・下界6,585へ更新 | proposition | proved | square-outcomes, certificates, verification, search-methods, provenance |
 | [K0425](../items/K0425-four-row-eight-point-chord-gap.md) | 4行8点円の非局所型は単調で隣接弦長差が10以上 | proposition | proved | geometry, rectangles, variants |
-| [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) | 11盤の終局証明追加は3件のS8 LOSSと一件のS6 LOSSを提示 | verification | needs-review | square-outcomes, certificates, verification, search-methods, provenance |
+| [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) | 11盤のS6 LOSSと3件のS8 LOSSの終局証明を独立検証し、固定計画の要求S5和集合を31,774から31,771へ縮小 | verification | verified | square-outcomes, certificates, verification, search-methods, provenance |
 | [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) | 4行8点円の弦長平方は法27で四つの型に限られる | proposition | proved | geometry, rectangles, variants |
 | [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) | 未出現の法27第四弦長型は全ての有限法で局所可解 | proposition | proved | geometry, rectangles, variants |
 | [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) | 4行8点円数は反射対称性から法2・法4で決まる | proposition | proved | geometry, rectangles, variants |
