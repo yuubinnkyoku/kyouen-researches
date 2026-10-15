@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 419 / alias: 269 / artifactファイル: 2253
+K項目: 427 / alias: 269 / artifactファイル: 2300
 
 ## kind
 
@@ -9,20 +9,21 @@ K項目: 419 / alias: 269 / artifactファイル: 2253
 | computation | 26 |
 | definition | 5 |
 | method | 4 |
-| proposition | 339 |
+| proposition | 346 |
 | question | 36 |
-| verification | 9 |
+| verification | 10 |
 
 ## status
 
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 107 |
+| computed | 108 |
 | conjectured | 1 |
+| needs-review | 1 |
 | observed | 17 |
 | open | 35 |
-| proved | 173 |
+| proved | 179 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | verified | 9 |
@@ -32,25 +33,25 @@ K項目: 419 / alias: 269 / artifactファイル: 2253
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 37 |
+| certificates | 38 |
 | first-moves | 34 |
 | formalization | 2 |
-| geometry | 162 |
+| geometry | 169 |
 | grundy | 73 |
 | maximal-safe | 73 |
 | maximum-safe | 49 |
 | migration | 1 |
-| provenance | 31 |
+| provenance | 32 |
 | reconfiguration | 34 |
-| rectangles | 51 |
+| rectangles | 58 |
 | residual-games | 59 |
 | rules | 3 |
-| search-methods | 44 |
-| square-outcomes | 44 |
+| search-methods | 45 |
+| square-outcomes | 45 |
 | statistics | 45 |
 | strategy-length | 25 |
-| variants | 91 |
-| verification | 38 |
+| variants | 98 |
+| verification | 39 |
 
 ## 未解決・要監査・範囲不明
 
@@ -93,6 +94,7 @@ K項目: 419 / alias: 269 / artifactファイル: 2253
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) [needs-review] 11盤の終局証明追加は3件のS8 LOSSと一件のS6 LOSSを提示
 
 ## 警告
 

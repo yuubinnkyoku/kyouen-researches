@@ -552,6 +552,8 @@
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
+- ← depends_on [K0425](../items/K0425-four-row-eight-point-chord-gap.md): 共通二根和と弦長平方の二階差分を使用
+- ← depends_on [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md): 円の二根和と平方弦長の二階差分条件を用いる
 
 ## [K0074](../items/K0074-single-forbidden-type-variants.md) 片禁止q点変種の全長強解決定理
 
@@ -1455,6 +1457,10 @@
 ## [K0317](../items/K0317-four-row-q8-pell-circle-family.md) 四連続整数行を2点ずつ通る8点円には無限Pell族がある
 
 - → supports [K0077](../items/K0077-width-four-q8-stabilization.md): 4×m・q=8では非局所円が無限に現れても早い安定化と両立する
+- ← depends_on [K0425](../items/K0425-four-row-eight-point-chord-gap.md): Pell族の初項が下界10と最初の非局所幅73を達成
+- ← depends_on [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md): 200万までの有限完全弦長型分類を用いる
+- ← generalizes [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md): 特定のPell族の存在を、任意の非局所円からの無限延長へ強める
+- ← supports [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): Pell正規形から実現可能傾きと固定傾きの円型数を細分する
 
 ## [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) 禁止曲線の三つ組・点対充填から固定幅q点版の一般安定化上界が得られる
 
@@ -1756,6 +1762,7 @@
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
 - ← depends_on [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 元先手固定のAND/OR極性と終局payoff
 - ← depends_on [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 元先手固定のAND/OR極性と終局payoff
+- ← depends_on [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 元先手固定視点の通常プレイにおける偶奇層の勝敗伝播
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1971,6 +1978,7 @@
 - ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 31,546相異なるS5を要求する既存19-root共同計画
 - ← refutes [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 保存された31,546計画をそのまま全要求LOSSで閉じられる仮定を反証。旧cache限定の組合せ計算自体は否定しない。
 - ← supports [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
+- ← supports [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 固定された共同S5計画の要求数に対する追加LOSS証拠として提示
 
 ## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 夜間層別後の共同計画の厳密双対182532671/27720は整数下界6,585
 
@@ -2016,3 +2024,34 @@
 - → depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 九局面の現行パイロット選択と完全合法境界
 - → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
 - → supports [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): WIN 6件をWIN証人側の確定に供給、LOSS 3件を証人候補から除外
+
+## [K0425](../items/K0425-four-row-eight-point-chord-gap.md) 4行8点円の非局所型は単調で隣接弦長差が10以上
+
+- → depends_on [K0073](../items/K0073-q-two-width-circle-criterion.md): 共通二根和と弦長平方の二階差分を使用
+- → depends_on [K0317](../items/K0317-four-row-q8-pell-circle-family.md): Pell族の初項が下界10と最初の非局所幅73を達成
+
+## [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) 11盤の終局証明追加は3件のS8 LOSSと一件のS6 LOSSを提示
+
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定視点の通常プレイにおける偶奇層の勝敗伝播
+- → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 固定された共同S5計画の要求数に対する追加LOSS証拠として提示
+
+## [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) 4行8点円の弦長平方は法27で四つの型に限られる
+
+- → depends_on [K0073](../items/K0073-q-two-width-circle-criterion.md): 円の二根和と平方弦長の二階差分条件を用いる
+- ← depends_on [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md): 法27の四つの必要弦長平方型のうち第四型を対象とする
+
+## [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) 未出現の法27第四弦長型は全ての有限法で局所可解
+
+- → depends_on [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md): 法27の四つの必要弦長平方型のうち第四型を対象とする
+
+## [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) 2000001列まで異なる三つの4行8点円は合併20点以上
+
+- → depends_on [K0317](../items/K0317-four-row-q8-pell-circle-family.md): 200万までの有限完全弦長型分類を用いる
+
+## [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) 四行8点円の全ての非局所型は同じ傾きの無限Pell族へ延長する
+
+- → generalizes [K0317](../items/K0317-four-row-q8-pell-circle-family.md): 特定のPell族の存在を、任意の非局所円からの無限延長へ強める
+
+## [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) 非局所4行8点円の傾きは有限判定でき、各円型は任意法で無限延長する
+
+- → supports [K0317](../items/K0317-four-row-q8-pell-circle-family.md): Pell正規形から実現可能傾きと固定傾きの円型数を細分する

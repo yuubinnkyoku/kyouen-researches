@@ -421,3 +421,11 @@
 | [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) | 11盤共同S5計画の319万合法辺は156万相異なるS6へ縮約し、訂正済み39パイロットは2269子 | computation | computed | search-methods, certificates, verification, square-outcomes, provenance |
 | [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) | 11盤の対称S5二局面を終局DAGで独立証明し、共同計画の衝突候補209644は先手WIN | proposition | proved | square-outcomes, certificates, verification, search-methods, provenance |
 | [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) | 11盤のS5九局面を終局DAGで独立証明し、共同計画を層別13・上界31,774・下界6,585へ更新 | proposition | proved | square-outcomes, certificates, verification, search-methods, provenance |
+| [K0425](../items/K0425-four-row-eight-point-chord-gap.md) | 4行8点円の非局所型は単調で隣接弦長差が10以上 | proposition | proved | geometry, rectangles, variants |
+| [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) | 11盤の終局証明追加は3件のS8 LOSSと一件のS6 LOSSを提示 | verification | needs-review | square-outcomes, certificates, verification, search-methods, provenance |
+| [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) | 4行8点円の弦長平方は法27で四つの型に限られる | proposition | proved | geometry, rectangles, variants |
+| [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) | 未出現の法27第四弦長型は全ての有限法で局所可解 | proposition | proved | geometry, rectangles, variants |
+| [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) | 4行8点円数は反射対称性から法2・法4で決まる | proposition | proved | geometry, rectangles, variants |
+| [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) | 2000001列まで異なる三つの4行8点円は合併20点以上 | proposition | computed | geometry, rectangles, variants |
+| [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) | 四行8点円の全ての非局所型は同じ傾きの無限Pell族へ延長する | proposition | proved | geometry, rectangles, variants |
+| [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) | 非局所4行8点円の傾きは有限判定でき、各円型は任意法で無限延長する | proposition | proved | geometry, rectangles, variants |

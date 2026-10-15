@@ -1,0 +1,31 @@
+3^1: 2 roots; least=1; Hensel=1
+3^2: 2 roots; least=1; Hensel=1
+3^3: 2 roots; least=10; Hensel=10
+3^4: 2 roots; least=37; Hensel=37
+3^5: 2 roots; least=118; Hensel=118
+3^6: 2 roots; least=118; Hensel=118
+3^7: 2 roots; least=847; Hensel=847
+3^8: 2 roots; least=3034; Hensel=3034
+N=1: PASS (modulus=54, chords=(91, 117, 171, 253))
+N=2: PASS (modulus=54, chords=(91, 117, 171, 253))
+N=3: PASS (modulus=54, chords=(91, 117, 171, 253))
+N=4: PASS (modulus=108, chords=(145, 279, 387, 469))
+N=5: PASS (modulus=270, chords=(361, 603, 873, 1171))
+N=7: PASS (modulus=378, chords=(631, 927, 1305, 1765))
+N=9: PASS (modulus=54, chords=(91, 117, 171, 253))
+N=16: PASS (modulus=432, chords=(577, 1251, 1683, 1873))
+N=27: PASS (modulus=54, chords=(91, 117, 171, 253))
+N=54: PASS (modulus=54, chords=(91, 117, 171, 253))
+N=81: PASS (modulus=162, chords=(199, 333, 495, 685))
+N=243: PASS (modulus=486, chords=(847, 981, 1467, 2305))
+N=729: PASS (modulus=1458, chords=(2305, 2925, 4383, 6679))
+N=2187: PASS (modulus=4374, chords=(5221, 8757, 13131, 18343))
+N=6561: PASS (modulus=13122, chords=(22717, 26253, 39375, 62083))
+N=2016: PASS (modulus=6048, chords=(10081, 16803, 22851, 28225))
+N=4032: PASS (modulus=12096, chords=(16129, 34947, 47043, 52417))
+N=12096: PASS (modulus=12096, chords=(16129, 34947, 47043, 52417))
+N=1000000: PASS (modulus=27000000, chords=(36000001, 60000003, 87000003, 117000001))
+N=1000003: PASS (modulus=54000162, chords=(90000271, 150000453, 204000615, 252000757))
+N=59049: PASS (modulus=118098, chords=(153937, 236205, 354303, 508231))
+N=1074954240: PASS (modulus=1074954240, chords=(1089699841, 2475294723, 3550248963, 4314562561))
+ALL 22 modulus tests passed

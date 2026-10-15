@@ -514,15 +514,47 @@
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (data): m=12..40の完全排除集計
 - [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (data): m=12..40の全候補集計
+## [research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt](../../../research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt)
+
+- [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (data): 22法での座標合同監査
+## [research/experiments/fixed-width/output/q48-mod27-results-20261015.json](../../../research/experiments/fixed-width/output/q48-mod27-results-20261015.json)
+
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (data): 有限列挙の型数と実行結果
+## [research/experiments/fixed-width/output/q48-patterns-B3000000-20261015.csv](../../../research/experiments/fixed-width/output/q48-patterns-B3000000-20261015.csv)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 最大弦長300万の有限列挙結果
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (data): 最大弦長300万までの11型
+## [research/experiments/fixed-width/output/q48_all_nonlocal_pell_20261015.txt](../../../research/experiments/fixed-width/output/q48_all_nonlocal_pell_20261015.txt)
+
+- [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) (data): 15円・75個の行列式等の監査結果
+## [research/experiments/fixed-width/output/q48_chord_gap_audit_20261015.txt](../../../research/experiments/fixed-width/output/q48_chord_gap_audit_20261015.txt)
+
+- [K0425](../items/K0425-four-row-eight-point-chord-gap.md) (data): Python検証結果
+## [research/experiments/fixed-width/output/q48_chord_gap_independent_20261015.txt](../../../research/experiments/fixed-width/output/q48_chord_gap_independent_20261015.txt)
+
+- [K0425](../items/K0425-four-row-eight-point-chord-gap.md) (data): C++独立検証結果
+## [research/experiments/fixed-width/output/q48_circle_census_2000000_20261015.csv](../../../research/experiments/fixed-width/output/q48_circle_census_2000000_20261015.csv)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 200万上限の完全列挙で得た弦長型
+- [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (data): 合併計算の入力となる11弦長型
 ## [research/experiments/fixed-width/output/q48_exact_threshold.json](../../../research/experiments/fixed-width/output/q48_exact_threshold.json)
 
 - [K0077](../items/K0077-width-four-q8-stabilization.md) (data): 円型分類とm=11,12完全排除
+## [research/experiments/fixed-width/output/q48_fundamental_unit_audit_20261015.txt](../../../research/experiments/fixed-width/output/q48_fundamental_unit_audit_20261015.txt)
+
+- [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (data): 既知型と488ノルム解の監査結果
 ## [research/experiments/fixed-width/output/q48_odd_q_reflection.json](../../../research/experiments/fixed-width/output/q48_odd_q_reflection.json)
 
 - [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (data): 有限例の検算
 ## [research/experiments/fixed-width/output/q48_pell_family.json](../../../research/experiments/fixed-width/output/q48_pell_family.json)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 最初の例と有限検算
+## [research/experiments/fixed-width/output/q48_reflection_mod4_audit_20261015.txt](../../../research/experiments/fixed-width/output/q48_reflection_mod4_audit_20261015.txt)
+
+- [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) (data): 有限監査の出力
+## [research/experiments/fixed-width/output/q48_slope_reduction_congruence_20261015.txt](../../../research/experiments/fixed-width/output/q48_slope_reduction_congruence_20261015.txt)
+
+- [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (data): 法保存と逆変換の有限監査結果
 ## [research/experiments/fixed-width/output/q_point_fixed_width.json](../../../research/experiments/fixed-width/output/q_point_fixed_width.json)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (data): 命題・対象範囲・根拠を記した出典
@@ -641,10 +673,29 @@
 ## [research/experiments/fixed-width/reports/q36-three-row-classification.md](../../../research/experiments/fixed-width/reports/q36-three-row-classification.md)
 
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=6およびq≥7を含む統一分類
+## [research/experiments/fixed-width/reports/q48-all-nonlocal-pell-20261015.md](../../../research/experiments/fixed-width/reports/q48-all-nonlocal-pell-20261015.md)
+
+- [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) (proof): ノルム8の平方判別式例外排除と無限Pell延長
+## [research/experiments/fixed-width/reports/q48-chord-gap-rigidity-20261015.md](../../../research/experiments/fixed-width/reports/q48-chord-gap-rigidity-20261015.md)
+
+- [K0425](../items/K0425-four-row-eight-point-chord-gap.md) (proof): 無界の間隔定理と74列初出の短い算術証明
+## [research/experiments/fixed-width/reports/q48-circle-gap-2000000-20261015.md](../../../research/experiments/fixed-width/reports/q48-circle-gap-2000000-20261015.md)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): 最大弦長2000000までの11型の有限完全分類
 ## [research/experiments/fixed-width/reports/q48-exact-threshold.md](../../../research/experiments/fixed-width/reports/q48-exact-threshold.md)
 
 - [K0077](../items/K0077-width-four-q8-stabilization.md) (proof): M_{4,8}=11の一般上界・有限排除・m=10証人
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,8}=11
+## [research/experiments/fixed-width/reports/q48-fundamental-unit-parity-reduction-20261015.md](../../../research/experiments/fixed-width/reports/q48-fundamental-unit-parity-reduction-20261015.md)
+
+- [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (proof): Pell基本単元だけで偶奇を保ち有限帰着上界を改善
+## [research/experiments/fixed-width/reports/q48-local-solubility-20261015.md](../../../research/experiments/fixed-width/reports/q48-local-solubility-20261015.md)
+
+- [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (proof): Hensel持ち上げと中国剰余による全称構成
+## [research/experiments/fixed-width/reports/q48-mod27-chord-classification-20261015.md](../../../research/experiments/fixed-width/reports/q48-mod27-chord-classification-20261015.md)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): 法27の全称必要条件と最大弦長300万までの有限完全分類
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (proof): 全称的な法27必要条件と有限完全列挙の範囲を説明
 ## [research/experiments/fixed-width/reports/q48-nearby-q7-threshold.md](../../../research/experiments/fixed-width/reports/q48-nearby-q7-threshold.md)
 
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,7}=13
@@ -654,9 +705,21 @@
 ## [research/experiments/fixed-width/reports/q48-pell-circle-family.md](../../../research/experiments/fixed-width/reports/q48-pell-circle-family.md)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): Pell方程式による無限構成と最初の非局所例の証明
+## [research/experiments/fixed-width/reports/q48-pell-foliation-two-new-families-20261015.md](../../../research/experiments/fixed-width/reports/q48-pell-foliation-two-new-families-20261015.md)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): 既知の二つの新型から異なる傾きのPell無限族を構成
 ## [research/experiments/fixed-width/reports/q48-q6-exact-threshold.md](../../../research/experiments/fixed-width/reports/q48-q6-exact-threshold.md)
 
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,6}=16
+## [research/experiments/fixed-width/reports/q48-reflection-mod4-20261015.md](../../../research/experiments/fixed-width/reports/q48-reflection-mod4-20261015.md)
+
+- [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) (proof): 上下反射作用と円数合同式の全称証明
+## [research/experiments/fixed-width/reports/q48-slope-reduction-congruence-20261015.md](../../../research/experiments/fixed-width/reports/q48-slope-reduction-congruence-20261015.md)
+
+- [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (proof): 厳密傾き下界、有限必要十分判定、合同保存と固定傾き漸近
+## [research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md](../../../research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md)
+
+- [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (proof): 有限型分類と相対水平移動の全列挙による境界証明
 ## [research/experiments/fixed-width/reports/quantitative-prime-avoidance-upgrade-20261008.md](../../../research/experiments/fixed-width/reports/quantitative-prime-avoidance-upgrade-20261008.md)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (proof): gcdの素因数を避ける素数選択による強化された対数割る二重対数型上界
@@ -708,12 +771,62 @@
 ## [research/experiments/fixed-width/scripts/q35_support_exclusion.cpp](../../../research/experiments/fixed-width/scripts/q35_support_exclusion.cpp)
 
 - [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (solver): 外部4点集合を全列挙する完全排除
+## [research/experiments/fixed-width/scripts/q48_all_nonlocal_pell_20261015.py](../../../research/experiments/fixed-width/scripts/q48_all_nonlocal_pell_20261015.py)
+
+- [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) (verifier): 既知5型を正規形へ戻し、Pell世代と整数行列式を監査
+## [research/experiments/fixed-width/scripts/q48_bc_independent_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_bc_independent_20261015.cpp)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): 中央二弦長から行う独立列挙、250万まで照合
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (verifier): 中央二弦長からの独立列挙。250万までを照合
+## [research/experiments/fixed-width/scripts/q48_chord_gap_independent_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_chord_gap_independent_20261015.cpp)
+
+- [K0425](../items/K0425-four-row-eight-point-chord-gap.md) (verifier): 中央二弦長からの別方式の整数完全列挙
+## [research/experiments/fixed-width/scripts/q48_chord_gap_verify_20261015.py](../../../research/experiments/fixed-width/scripts/q48_chord_gap_verify_20261015.py)
+
+- [K0425](../items/K0425-four-row-eight-point-chord-gap.md) (verifier): 小間隔候補・幅73候補の全約数検査、独立平方根列挙
+## [research/experiments/fixed-width/scripts/q48_circle_census_increasing_ab_2000000_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_circle_census_increasing_ab_2000000_20261015.cpp)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): (d0,d1)から行う独立整数全列挙
+## [research/experiments/fixed-width/scripts/q48_circle_census_increasing_ac_2000000_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_circle_census_increasing_ac_2000000_20261015.cpp)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): (d0,d2)から行う独立整数全列挙
 ## [research/experiments/fixed-width/scripts/q48_exact_threshold.py](../../../research/experiments/fixed-width/scripts/q48_exact_threshold.py)
 
 - [K0077](../items/K0077-width-four-q8-stabilization.md) (verifier): 整数演算による再現器
+## [research/experiments/fixed-width/scripts/q48_fundamental_unit_audit_20261015.py](../../../research/experiments/fixed-width/scripts/q48_fundamental_unit_audit_20261015.py)
+
+- [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (verifier): 基本単元の偶奇保存と既知型への適用を監査
+## [research/experiments/fixed-width/scripts/q48_mod27_chord_audit_20261015.py](../../../research/experiments/fixed-width/scripts/q48_mod27_chord_audit_20261015.py)
+
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (verifier): 円係数と弦長の二つの剰余表示を独立に全列挙
+## [research/experiments/fixed-width/scripts/q48_mod27_circle_census_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_mod27_circle_census_20261015.cpp)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): 最大弦長300万までの剰余篩付き完全列挙
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (verifier): 最大弦長300万までの合同篩付き有限完全列挙
 ## [research/experiments/fixed-width/scripts/q48_pell_family.py](../../../research/experiments/fixed-width/scripts/q48_pell_family.py)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): Pell再帰・座標・円方程式・行列式の再現検査
+## [research/experiments/fixed-width/scripts/q48_pell_foliation_20261015.py](../../../research/experiments/fixed-width/scripts/q48_pell_foliation_20261015.py)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): 二族の正規形、Pell反復、円方程式、全四点行列式を整数検査
+## [research/experiments/fixed-width/scripts/q48_reflection_mod4_20261015.py](../../../research/experiments/fixed-width/scripts/q48_reflection_mod4_20261015.py)
+
+- [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) (verifier): 円の二通りの整数構成によるm=1..100の有限照合
+## [research/experiments/fixed-width/scripts/q48_slope_reduction_congruence_20261015.py](../../../research/experiments/fixed-width/scripts/q48_slope_reduction_congruence_20261015.py)
+
+- [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (verifier): 有限逆変換・複数法の合同保存を監査
+## [research/experiments/fixed-width/scripts/q48_slope_scan_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_slope_scan_20261015.cpp)
+
+- [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (verifier): 指定された有限範囲の既約傾きを列挙
+## [research/experiments/fixed-width/scripts/q48_triple_union_2000000_20261015.py](../../../research/experiments/fixed-width/scripts/q48_triple_union_2000000_20261015.py)
+
+- [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (verifier): 交差する相対配置から三円の集合和を直接計数
+## [research/experiments/fixed-width/scripts/q48_triple_union_independent_2000000_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_triple_union_independent_2000000_20261015.cpp)
+
+- [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (verifier): 二点共有円対を起点とする独立有限検査
+## [research/experiments/fixed-width/scripts/q48_verify_local_solubility_20261015.py](../../../research/experiments/fixed-width/scripts/q48_verify_local_solubility_20261015.py)
+
+- [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (verifier): 3冪平方根、CRT構成と円方程式の有限監査
 ## [research/experiments/fixed-width/scripts/q_point_fixed_width.py](../../../research/experiments/fixed-width/scripts/q_point_fixed_width.py)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
@@ -5868,6 +5981,15 @@
 ## [research/experiments/n11-s5-s6-quotient-20261013/scripts/verify.py](../../../research/experiments/n11-s5-s6-quotient-20261013/scripts/verify.py)
 
 - [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) (verifier): 入力hash、親全件と集計照合、改変入力拒否
+## [research/experiments/n11-s6-terminal-loss-20261015/audit_joint_plan.py](../../../research/experiments/n11-s6-terminal-loss-20261015/audit_joint_plan.py)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): 六つのS5 LOSS親と固定共同計画の重なりを再計算
+## [research/experiments/n11-s6-terminal-loss-20261015/s6-loss-optimized.cert](../../../research/experiments/n11-s6-terminal-loss-20261015/s6-loss-optimized.cert)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 一つのS6 LOSSを29個のS8 LOSS証人と483個の終局S10葉で証明する証明書
+## [research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): S6証明境界と全S10葉をキャッシュなしで検査
 ## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題
@@ -5944,6 +6066,30 @@
 ## [research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py](../../../research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py)
 
 - [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (verifier): S4..S10の全二子三値境界をBoolean completionで照合し、cache再流入も検査
+## [research/experiments/n11-targeted-terminal-lift-20261015/README.md](../../../research/experiments/n11-targeted-terminal-lift-20261015/README.md)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (source): 407件のS10追加検査、終局証明、上位への伝播と信頼境界
+## [research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt](../../../research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (log): 提供パッケージの再現実行記録。今回の統合時には再実行していない
+## [research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS](../../../research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (manifest): パッケージ内50ファイルのSHA-256一覧
+## [research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_171_terminal.cert](../../../research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_171_terminal.cert)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 171個のS8 WIN終局証明
+## [research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_loss_three_terminal.cert](../../../research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_loss_three_terminal.cert)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 3個のS8 LOSS、104個のS9義務と63個の終局S10 LOSS葉
+## [research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_win_sixteen_terminal.cert](../../../research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_win_sixteen_terminal.cert)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 追加16個のS8 WIN終局証明
+## [research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_cpp.cpp](../../../research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_cpp.cpp)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): キャッシュなしで終局まで再計算する独立C++検査器
+## [research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_python.py](../../../research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_python.py)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): キャッシュなしで終局まで再計算する独立Python検査器
 ## [research/experiments/n11-two-target-design-20261010/README.md](../../../research/experiments/n11-two-target-design-20261010/README.md)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 100/108反射対称性と2件の共有S5 LOSS。新K0373の証明と有限計算の信頼境界

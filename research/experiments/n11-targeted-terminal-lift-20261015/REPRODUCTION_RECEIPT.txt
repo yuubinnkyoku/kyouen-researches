@@ -1,0 +1,16 @@
+Reproduction on 2026-10-15, Python 3.13 / g++ C++20, exit code 0.
+PASS S8 WIN 171 S9 witnesses 21 S10 WIN 517 states 152566
+PASS S8 WIN 171 S9 witnesses 21 S10 WIN 517 states 152566
+PASS S8 WIN 16 S9 witnesses 2 S10 WIN 38 states 5929
+PASS S8 WIN 16 S9 witnesses 2 S10 WIN 38 states 5929
+PASS S8 LOSS 3 S9 obligations 104 S10 LOSS 63 states 85676
+PASS S8 LOSS 3 S9 obligations 104 S10 LOSS 63 states 85676
+PASS independent Python/C++ 407 WIN 364 LOSS 43 terminal states 378648
+tested=407 LOSS=43 WIN=364 states=378648
+{'old': 51164, 'new': 407, 'overlap': 0, 'total': 51571}
+PASS delta audit: +407 S10, +187 S8 WIN, +3 S8 LOSS, +19 S7 LOSS, 120 false near-LOSS candidates pruned
+PASS S7 LOSS parents 23 new 19 overlap 4 conflicts 0
+S10WIN=38837 S10LOSS=12734 S9candidate=312277 S9WIN=1611 S8WIN=13501 S7candidate=48115 S7WIN=17 conflicts=0
+PASS negative controls 6 cases x 2 independent verifiers
+PASS negative controls 5 cases x 2 independent verifiers
+PASS full clean-room reproduction
