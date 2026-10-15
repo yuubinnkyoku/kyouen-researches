@@ -1,0 +1,312 @@
+{
+  "schema": "n11-night-repaired-joint-plan-update7-v1",
+  "baseline_plan_sha256": "7f91667a45a9d13a771359903c21620ba7723b0dd3798af7bd3d32b9e8de8aca",
+  "baseline_schema": "n11-night-repaired-joint-plan-update6-v1",
+  "baseline_union_size": 31774,
+  "union_size": 31771,
+  "union_delta_vs_baseline": -3,
+  "roots": 19,
+  "third_moves_covered": 2261,
+  "baseline_free_thirds": 122,
+  "free_thirds": 122,
+  "baseline_excluded_s4_classes": [
+    3569,
+    3570,
+    3678,
+    3679,
+    3942,
+    4050,
+    4564,
+    5266,
+    5267,
+    5408,
+    5563,
+    5570,
+    5687,
+    5690,
+    5830,
+    5834,
+    13938
+  ],
+  "excluded_s4_classes": [
+    3569,
+    3570,
+    3678,
+    3679,
+    3942,
+    4050,
+    4327,
+    4328,
+    4564,
+    5056,
+    5266,
+    5267,
+    5408,
+    5563,
+    5570,
+    5687,
+    5690,
+    5830,
+    5834,
+    13938
+  ],
+  "new_excluded_s4_classes": [
+    4327,
+    4328,
+    5056
+  ],
+  "baseline_resolved_s5_verdicts": {
+    "121263": 2,
+    "126017": 1,
+    "126899": 2,
+    "131631": 1,
+    "137694": 2,
+    "143240": 2,
+    "144095": 1,
+    "145001": 2,
+    "197665": 1,
+    "206386": 1,
+    "209644": 1,
+    "220231": 2,
+    "558600": 2
+  },
+  "resolved_s5_verdicts": {
+    "121263": 2,
+    "126017": 1,
+    "126899": 2,
+    "131631": 1,
+    "137694": 2,
+    "143240": 2,
+    "144095": 1,
+    "145001": 2,
+    "162106": 1,
+    "197665": 1,
+    "206386": 1,
+    "209644": 1,
+    "220231": 2,
+    "381840": 2,
+    "402066": 2,
+    "550881": 2,
+    "558600": 2
+  },
+  "known_loss_removed_from_cost": [
+    381840,
+    402066,
+    550881
+  ],
+  "changed_choice_count": 0,
+  "verification": {
+    "passed": true,
+    "checked_selected_s4": 351,
+    "complete_third_boundaries": 19,
+    "complete_s5_boundaries": 351,
+    "third_moves_checked": 2261,
+    "known_win_selected": 0,
+    "known_loss_in_union": 0
+  },
+  "shared_checker_source_sha256": "0f890cb49e806880bb56de2147163dc3fcfb0d5eae44835d602160c16008cd96",
+  "trust": "optimistic plan only: old exact-S5 leaves remain solver-trusted; fourteen candidate receipts (558600 LOSS, 209644 WIN, 126899 LOSS, 144095 WIN, 121263 LOSS, 145001 LOSS, 137694 LOSS, 143240 LOSS, 220231 LOSS, 126017 WIN, 197665 WIN, 206386 WIN, 131631 WIN, 162106 WIN) terminal-verified with trusted leaves 0; three S5 LOSS verdicts (381840 / 402066 / 550881) derived from one cache-free six-stone terminal certificate (1,028,621 states, independent C++/Python agreement); all remaining required S5 verdicts UNKNOWN; not a root proof"
+}
+{
+  "batch": {
+    "resolved_verdicts": [
+      [
+        121263,
+        2
+      ],
+      [
+        126017,
+        1
+      ],
+      [
+        126899,
+        2
+      ],
+      [
+        131631,
+        1
+      ],
+      [
+        137694,
+        2
+      ],
+      [
+        143240,
+        2
+      ],
+      [
+        144095,
+        1
+      ],
+      [
+        145001,
+        2
+      ],
+      [
+        162106,
+        1
+      ],
+      [
+        197665,
+        1
+      ],
+      [
+        206386,
+        1
+      ],
+      [
+        209644,
+        1
+      ],
+      [
+        220231,
+        2
+      ],
+      [
+        381840,
+        2
+      ],
+      [
+        402066,
+        2
+      ],
+      [
+        550881,
+        2
+      ],
+      [
+        558600,
+        2
+      ]
+    ],
+    "labels_sha": "94aefdc86acc5c7b3cb65111e2c561f1005727dd58a216325dfa95d64bad3fa6",
+    "candidates_sha": "6884fa343ed40855408d60889dd8aa751057af2200fba93adc27e6d88eaec071",
+    "obligations_sha": "a7fbdda782dfff43833de456813fb524771c5b640b448e1927be4c68b621de98",
+    "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+    "union_sha": "bee24973e146679114ae487431d9b25815281945a0dc3cbbfe9ae59dc0b92b04",
+    "union_size": 31771,
+    "free_thirds": 122,
+    "changed_choice_count": 0,
+    "known_wins_in_union": [],
+    "known_losses_in_union": []
+  },
+  "staged_forward": {
+    "resolved_verdicts": [
+      [
+        121263,
+        2
+      ],
+      [
+        126017,
+        1
+      ],
+      [
+        126899,
+        2
+      ],
+      [
+        131631,
+        1
+      ],
+      [
+        137694,
+        2
+      ],
+      [
+        143240,
+        2
+      ],
+      [
+        144095,
+        1
+      ],
+      [
+        145001,
+        2
+      ],
+      [
+        162106,
+        1
+      ],
+      [
+        197665,
+        1
+      ],
+      [
+        206386,
+        1
+      ],
+      [
+        209644,
+        1
+      ],
+      [
+        220231,
+        2
+      ],
+      [
+        381840,
+        2
+      ],
+      [
+        402066,
+        2
+      ],
+      [
+        550881,
+        2
+      ],
+      [
+        558600,
+        2
+      ]
+    ],
+    "labels_sha": "94aefdc86acc5c7b3cb65111e2c561f1005727dd58a216325dfa95d64bad3fa6",
+    "candidates_sha": "6884fa343ed40855408d60889dd8aa751057af2200fba93adc27e6d88eaec071",
+    "obligations_sha": "a7fbdda782dfff43833de456813fb524771c5b640b448e1927be4c68b621de98",
+    "choices_sha": "79c8372e1c1d4e91abe6fb9e800bb1ac1d6d35e9954448d25c6745871cf1f68d",
+    "union_sha": "bee24973e146679114ae487431d9b25815281945a0dc3cbbfe9ae59dc0b92b04",
+    "union_size": 31771,
+    "free_thirds": 122,
+    "changed_choice_count": 0,
+    "known_wins_in_union": [],
+    "known_losses_in_union": []
+  }
+}
+{
+  "162106": {
+    "verdict": 1,
+    "ranking_tsv_row": {
+      "geometry_rank": 25,
+      "if_win_loss_choices_invalidated": 3,
+      "if_loss_fixed_win_branches_uncovered": 4,
+      "if_win_new_free_win_branches": 18,
+      "if_win_greedy_loss_union": 31685,
+      "if_win_greedy_delta": 49
+    },
+    "ranking_on_k0423_baseline": {
+      "affected_choices": 3,
+      "affected_s4": [
+        5830
+      ],
+      "invalidated_options": 4,
+      "invalidated_s4_options": [
+        4327,
+        4328,
+        5056,
+        5830
+      ],
+      "greedy_delta": 49,
+      "greedy_union": 31685,
+      "new_free_win_branches": 18,
+      "loss_uncovered_branches": 4
+    },
+    "this_baseline": {
+      "affected_choices": 0,
+      "affected_s4": [],
+      "invalidated_options_total": 4,
+      "newly_excluded_options": 3
+    },
+    "absorbed_by_baseline_updates": "the ranking counterfactual (geometry_rank 25) invalidates the K0423-baseline selections on S4 class 5830 (3 responses: 49/60/59, 49/60/61, 49/60/71) and removes the four options 4327 / 4328 / 5056 / 5830; the third update already excluded 5830 for 126017 WIN and re-selected those responses, so no selected response sits on any of the four invalidated options on the sixth-update baseline.  The three options 4327 / 4328 / 5056 are excluded in this round, the greedy repair has no work to do (changed_choice_count 0) and the ranking's +49 remains the K0423-basis counterfactual"
+  }
+}

@@ -1,0 +1,619 @@
+{
+  "new_facts": {
+    "s5_index": {
+      "162106": 1
+    },
+    "independent_verifications": {
+      "162106": {
+        "certificate": "research\\experiments\\n11-night-batch5-20261014\\output\\nighta25m-162106-terminal-dag.json.gz",
+        "certificate_bytes": 67966581,
+        "certificate_sha256": "d996a6821abfa5e21c7c04fff178a84f6d3a7b5f1dfb27b19fc7fc6d36a633e9",
+        "checker_source_sha256": "0f890cb49e806880bb56de2147163dc3fcfb0d5eae44835d602160c16008cd96",
+        "evidence_class": "independent-terminal-only-verification",
+        "probe_budget": 25000000,
+        "probe_search_nodes": 18141378,
+        "pruned_roundtrip_verified": true,
+        "python_cross_check": "research\\experiments\\n11-night-batch5-20261014\\output\\nighta25m-162106-python-comparison.json",
+        "receipt": "research\\experiments\\n11-night-batch5-20261014\\output\\nighta25m-162106-receipt.json",
+        "trusted_leaves": 0,
+        "verdict": 1
+      }
+    },
+    "verification_attempts": 1,
+    "verification_successes": 1,
+    "certificate_derived_verdicts": {
+      "381840": {
+        "audit": "research\\experiments\\n11-s6-terminal-loss-20261015\\audit_joint_plan.py",
+        "certificate": "research\\experiments\\n11-s6-terminal-loss-20261015\\s6-loss-optimized.cert",
+        "certificate_sha256": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+        "mask": "00000000000000401100400040000000"
+      },
+      "402066": {
+        "audit": "research\\experiments\\n11-s6-terminal-loss-20261015\\audit_joint_plan.py",
+        "certificate": "research\\experiments\\n11-s6-terminal-loss-20261015\\s6-loss-optimized.cert",
+        "certificate_sha256": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+        "mask": "00000000040000011004000004000000"
+      },
+      "550881": {
+        "audit": "research\\experiments\\n11-s6-terminal-loss-20261015\\audit_joint_plan.py",
+        "certificate": "research\\experiments\\n11-s6-terminal-loss-20261015\\s6-loss-optimized.cert",
+        "certificate_sha256": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+        "mask": "00000000040004001004000004000000"
+      }
+    },
+    "cumulative_tallies": {
+      "this_round": {
+        "attempts": 1,
+        "successes": 1,
+        "indices": [
+          162106
+        ]
+      },
+      "cumulative_adaptive_line": {
+        "attempts": 12,
+        "successes": 12,
+        "indices": [
+          126899,
+          144095,
+          121263,
+          145001,
+          137694,
+          143240,
+          220231,
+          126017,
+          197665,
+          206386,
+          131631,
+          162106
+        ],
+        "note": "continues the update6 README definition (cumulative 11/11): first update 126899/144095, second update 121263/145001, third update 137694/143240/220231/126017, fourth update 197665, fifth update 206386, sixth update 131631, this round 162106"
+      },
+      "cumulative_plan_layered_total": {
+        "attempts": 17,
+        "successes": 17,
+        "indices": [
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          145001,
+          162106,
+          197665,
+          206386,
+          209644,
+          220231,
+          381840,
+          402066,
+          550881,
+          558600
+        ],
+        "note": "K0423 pilot receipts included; 14/14 receipt-backed through the sixth update plus three S6-certificate-derived LOSS verdicts this round (no per-index receipts)"
+      },
+      "cumulative_plan_layered_loss_side": {
+        "attempts": 10,
+        "successes": 10,
+        "indices": [
+          121263,
+          126899,
+          137694,
+          143240,
+          145001,
+          220231,
+          381840,
+          402066,
+          550881,
+          558600
+        ],
+        "note": "layered LOSS verdicts: 7/7 receipt-backed through the sixth update plus 3 certificate-derived this round"
+      },
+      "cumulative_plan_layered_win_side": {
+        "attempts": 7,
+        "successes": 7,
+        "indices": [
+          126017,
+          131631,
+          144095,
+          162106,
+          197665,
+          206386,
+          209644
+        ],
+        "note": "layered receipts whose verdict is WIN (7/7, this round adds 162106)"
+      },
+      "cumulative_conflict_closure_certified": {
+        "attempts": 15,
+        "successes": 15,
+        "indices": [
+          115540,
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          144193,
+          144311,
+          145001,
+          162106,
+          197665,
+          206386,
+          220231
+        ],
+        "note": "conflict-closure lineage excluding the K0423 pilots: native focus 3 (115540, 144193, 144311) + adaptive line 12 (126899, 144095, 121263, 145001, 137694, 143240, 220231, 126017, 197665, 206386, 131631, 162106) = 15"
+      },
+      "cumulative_all_independent_receipts": {
+        "attempts": 17,
+        "successes": 17,
+        "indices": [
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          145001,
+          162106,
+          197665,
+          206386,
+          209644,
+          220231,
+          558600,
+          115540,
+          144193,
+          144311
+        ],
+        "layered_into_plan": [
+          121263,
+          126017,
+          126899,
+          131631,
+          137694,
+          143240,
+          144095,
+          145001,
+          162106,
+          197665,
+          206386,
+          209644,
+          220231,
+          558600
+        ],
+        "verified_but_unlayered": [
+          115540,
+          144193,
+          144311
+        ],
+        "note": "16 independent receipts existed before this round (K0423 2 + native focus 3 + adaptive/night 11) and this round adds 1 (162106 WIN); the three native receipts 115540 LOSS / 144193 LOSS / 144311 WIN stay out of every plan, so receipt-backed plan-layered (14) and all-receipt (17) tallies differ"
+      },
+      "certificate_derived_plan_verdicts": {
+        "certificates": 1,
+        "verdicts": 3,
+        "indices": [
+          381840,
+          402066,
+          550881
+        ],
+        "certificate": "research\\experiments\\n11-s6-terminal-loss-20261015\\s6-loss-optimized.cert",
+        "certificate_sha256": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+        "note": "one cache-free six-stone terminal certificate (1,028,621 verified states) proves three S5 LOSS verdicts; counted separately from receipt-backed tallies"
+      }
+    },
+    "unlayered_receipts_unchanged": [
+      115540,
+      144193,
+      144311
+    ],
+    "tally_note": "several cumulative labels are reported because 'independent proof cumulative' is ambiguous across plan-layered, adaptive-line, conflict-closure and all-receipt readings; the three certificate-derived LOSS verdicts have no per-index receipts and are reported separately"
+  },
+  "bounds": {
+    "upper": {
+      "from_previous": {
+        "before": 31774,
+        "after": 31771,
+        "delta": -3
+      },
+      "from_initial": {
+        "before": 31636,
+        "after": 31771,
+        "delta": 135
+      },
+      "source": "union of unknown-S5 children of selected LOSS responses"
+    },
+    "lower": {
+      "from_previous": {
+        "before": 6585,
+        "after": 6585,
+        "delta": 0,
+        "exact_before": [
+          182532671,
+          27720
+        ],
+        "exact_after": [
+          9126455,
+          1386
+        ]
+      },
+      "from_initial": {
+        "before": 6577,
+        "after": 6585,
+        "delta": 8,
+        "exact_before": [
+          91145221,
+          13860
+        ],
+        "exact_after": [
+          9126455,
+          1386
+        ]
+      },
+      "source": "exact element-only fractional dual, ceil by integrality"
+    },
+    "interval_from_previous": [
+      [
+        6585,
+        31774
+      ],
+      [
+        6585,
+        31771
+      ]
+    ],
+    "interval_from_initial": [
+      [
+        6577,
+        31636
+      ],
+      [
+        6585,
+        31771
+      ]
+    ],
+    "dual_size_from_previous": {
+      "options_scored": [
+        34432,
+        34429
+      ],
+      "elements": [
+        962456,
+        962452
+      ],
+      "paid_groups": [
+        869,
+        869
+      ]
+    }
+  },
+  "loss_side": {
+    "changed_choices": 0,
+    "newly_excluded_s4_classes": [
+      4327,
+      4328,
+      5056
+    ],
+    "excluded_s4_classes_total": [
+      3569,
+      3570,
+      3678,
+      3679,
+      3942,
+      4050,
+      4327,
+      4328,
+      4564,
+      5056,
+      5266,
+      5267,
+      5408,
+      5563,
+      5570,
+      5687,
+      5690,
+      5830,
+      5834,
+      13938
+    ],
+    "free_thirds_from_previous": [
+      122,
+      122
+    ],
+    "free_thirds_from_initial": [
+      122,
+      122
+    ],
+    "required_s5_from_previous": [
+      31774,
+      31771
+    ],
+    "required_s5_from_initial": [
+      31636,
+      31771
+    ],
+    "known_loss_removed_from_cost": [
+      381840,
+      402066,
+      550881
+    ],
+    "s6_derived_losses": {
+      "381840": {
+        "audit": "research\\experiments\\n11-s6-terminal-loss-20261015\\audit_joint_plan.py",
+        "certificate": "research\\experiments\\n11-s6-terminal-loss-20261015\\s6-loss-optimized.cert",
+        "certificate_sha256": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+        "mask": "00000000000000401100400040000000"
+      },
+      "402066": {
+        "audit": "research\\experiments\\n11-s6-terminal-loss-20261015\\audit_joint_plan.py",
+        "certificate": "research\\experiments\\n11-s6-terminal-loss-20261015\\s6-loss-optimized.cert",
+        "certificate_sha256": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+        "mask": "00000000040000011004000004000000"
+      },
+      "550881": {
+        "audit": "research\\experiments\\n11-s6-terminal-loss-20261015\\audit_joint_plan.py",
+        "certificate": "research\\experiments\\n11-s6-terminal-loss-20261015\\s6-loss-optimized.cert",
+        "certificate_sha256": "cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6",
+        "mask": "00000000040004001004000004000000"
+      }
+    },
+    "roots_rechecked": 19,
+    "third_moves_rechecked": 2261,
+    "complete_s5_boundaries_rechecked": 351,
+    "known_win_requirements_asserted": 0
+  },
+  "win_side": {
+    "unresolved_witnesses_from_previous": [
+      1746,
+      1745
+    ],
+    "unresolved_witnesses_from_initial": [
+      1944,
+      1745
+    ],
+    "delta_from_previous": -1,
+    "delta_from_initial": -199,
+    "stored_pool": 1945,
+    "allowed_pool": [
+      1933,
+      1932
+    ],
+    "removed_witnesses": [
+      {
+        "mask": [
+          1153484454560268400,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560268580,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560268834,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1153484454560432160,
+          0
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1162526838187098144,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788216077385730,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788216077385732,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788216077402112,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          4035788353516339200,
+          0
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          1152924012867747840,
+          128
+        ],
+        "reason": "resolved-LOSS"
+      },
+      {
+        "mask": [
+          1732197006677377024,
+          128
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          1189513251579232256,
+          130
+        ],
+        "reason": "resolved-WIN"
+      },
+      {
+        "mask": [
+          3458764513828929536,
+          33554434
+        ],
+        "reason": "resolved-LOSS"
+      }
+    ],
+    "covers_changed_vs_previous": [
+      {
+        "reply": 59,
+        "previous_closable": true,
+        "previous_chosen_third": 60,
+        "previous_chosen_fourths": 117,
+        "previous_witness_count": 25,
+        "previous_viable_thirds": 6,
+        "after_closable": true,
+        "after_chosen_third": 60,
+        "after_chosen_fourths": 117,
+        "after_witness_count": 24,
+        "after_viable_thirds": 6
+      }
+    ],
+    "unclosable_reply_orbits": {
+      "from_initial": [],
+      "from_previous": [
+        1,
+        2,
+        4,
+        15,
+        79,
+        101
+      ],
+      "after": [
+        1,
+        2,
+        4,
+        15,
+        79,
+        101
+      ],
+      "newly_unclosable_vs_previous": [],
+      "reclosed_vs_previous": [],
+      "r2_impossibility": "continues and expands"
+    },
+    "uncovered_s4_classes_before_reopt": 8,
+    "uncovered_branches_before_reopt": 8,
+    "replies_affected_before_reopt": [
+      1,
+      2,
+      4,
+      15,
+      79,
+      101
+    ],
+    "dead_branches_before_reopt": 0,
+    "freed_branches_by_new_win_before_reopt": 18,
+    "freed_branches_by_new_win_only_before_reopt": 12,
+    "dead_disqualified_thirds": 0,
+    "and_width": {
+      "from_initial": 7519,
+      "from_previous": 6812,
+      "after": 6812
+    },
+    "closable_replies": {
+      "from_initial": 65,
+      "from_previous": 59,
+      "after": 59
+    },
+    "new_witnesses_invented": 0,
+    "s4_kind_counts": {
+      "free": 33,
+      "open": 9485
+    },
+    "s4_classes_touched": 9518
+  },
+  "newly_closed": {
+    "from_previous": {
+      "third_moves": 0,
+      "reply_orbits": 0,
+      "replies_all_free": [],
+      "replies_reclosed": []
+    },
+    "from_initial": {
+      "third_moves": 0,
+      "reply_orbits": 0,
+      "replies": []
+    },
+    "regressed_vs_previous": [],
+    "note": "a reply counts as newly closed when its chosen third needs zero WIN witnesses from the saved pool, and as reclosed when it becomes closable again after having been unclosable; both criteria are reported"
+  },
+  "verdict_census": {
+    "conflict_candidates_total": 28,
+    "win": [
+      126017,
+      131631,
+      144095,
+      162106,
+      197665,
+      206386,
+      209644
+    ],
+    "loss": [
+      121263,
+      126899,
+      137694,
+      143240,
+      145001,
+      220231,
+      381840,
+      402066,
+      550881,
+      558600
+    ],
+    "win_count": 7,
+    "loss_count": 10,
+    "layered_count": 17,
+    "receipt_backed_count": 14,
+    "certificate_derived_count": 3,
+    "unknown_count_among_candidates": 16,
+    "unknown_candidates": [
+      115540,
+      120370,
+      137043,
+      142283,
+      143718,
+      144019,
+      144193,
+      144311,
+      144692,
+      157861,
+      166171,
+      181624,
+      193768,
+      196002,
+      211133,
+      221294
+    ],
+    "verified_but_unlayered": [
+      115540,
+      144193,
+      144311
+    ],
+    "unknown_unchanged": {
+      "144692": true,
+      "144019": true,
+      "206386_at_10m_resolved_by_25m_run": false,
+      "131631_at_10m_resolved_by_25m_run": false,
+      "162106_conflict_candidate_now_resolved": false
+    },
+    "empty_board": "UNKNOWN (11x11); no whole-board leap performed"
+  }
+}

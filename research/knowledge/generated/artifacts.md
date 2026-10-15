@@ -5459,6 +5459,16 @@
 ## [research/experiments/n11-night-plan-update6-20261014/output/win-side-reanalysis6.json](../../../research/experiments/n11-night-plan-update6-20261014/output/win-side-reanalysis6.json)
 
 - [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (data): WIN側再被覆（pool 1,933・未閉鎖1,746・AND幅6,812）
+## [research/experiments/n11-night-plan-update7-20261015/output/repaired-joint-plan-update7.json](../../../research/experiments/n11-night-plan-update7-20261015/output/repaired-joint-plan-update7.json)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (data): 第7次凍結計画（162106 WIN＋S6 LOSS 3件反映・上界31,771・層別17・除外S4 20件）
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (data): 162106 WINとS6由来LOSS 3件を反映した第7次計画（上界31,771・層別17）
+## [research/experiments/n11-night-plan-update7-20261015/output/updated-element-dual-update7.json](../../../research/experiments/n11-night-plan-update7-20261015/output/updated-element-dual-update7.json)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (certificate): 第7次インスタンスの869群alpha・厳密総和9126455/1386・整数下界6,585（--verify通過）
+## [research/experiments/n11-night-plan-update7-20261015/output/win-side-reanalysis7.json](../../../research/experiments/n11-night-plan-update7-20261015/output/win-side-reanalysis7.json)
+
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 第7次再被覆（pool 1,932・未閉鎖1,745・AND幅6,812・ranking照合込み）
 ## [research/experiments/n11-opening-orbits-weak-solve-20261012/README.md](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 軌道分類、応手境界、信頼範囲、再現手順

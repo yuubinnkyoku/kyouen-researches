@@ -1965,7 +1965,7 @@
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): S5の全子閉包が必要なことと未閉鎖根の前例
 
-## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は層別13とS6 LOSS終局証明の反映で上界31,771・整数下界6,585
+## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は162106 WINとS6 LOSS 3件の反映で上界31,771・整数下界6,585
 
 - → depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 19未確定初手軌道と中央応手f=60の候補root
 - → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 既知LOSS基準rootと32個の無料S4 LOSS class
@@ -1980,7 +1980,7 @@
 - ← supports [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
 - ← supports [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 検証済みS6 LOSSの3個のS5親が選択S4クラス16397に一致し、要求S5和集合を31,771へ縮小
 
-## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 夜間層別後の共同計画の厳密双対182532671/27720は整数下界6,585
+## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 第7次更新後の共同計画の厳密双対9126455/1386は整数下界6,585
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 二つの終局verdictを反映した19-root共同選択問題・現行上界31,636
 - → verifies [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 双対値の厳密再計算と31,546計画の独立再検証（失敗0）
@@ -1989,7 +1989,7 @@
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 中央応手の個別上界（49:2055・38:2155・16:2084）と共同上界31,546
 
-## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは夜間再被覆で1,933証人・6.8k AND幅・未閉鎖1,746
+## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは第7次再被覆で1,932証人・6.8k AND幅・未閉鎖1,745
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): LOSS側共同frontier 31,546と個別上界（49:2055）の比較基準
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）

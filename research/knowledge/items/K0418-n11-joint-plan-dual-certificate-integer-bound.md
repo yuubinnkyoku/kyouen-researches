@@ -1,6 +1,6 @@
 ---
 id: K0418
-title: 夜間層別後の共同計画の厳密双対182532671/27720は整数下界6,585
+title: 第7次更新後の共同計画の厳密双対9126455/1386は整数下界6,585
 kind: computation
 status: computed
 topics: [square-outcomes, search-methods, certificates, verification, provenance]
@@ -31,8 +31,11 @@ artifacts:
 - path: research/experiments/n11-s5-s6-quotient-20261013/output/updated-element-dual.json
   role: certificate
   note: 現行869群alpha・厳密総和・degree hash・整数下界6577
+- path: research/experiments/n11-night-plan-update7-20261015/output/updated-element-dual-update7.json
+  role: certificate
+  note: 第7次インスタンスの869群alpha・厳密総和9126455/1386・整数下界6,585（--verify通過）
 scope: K0417の修復後インスタンス（S5 LOSS558600を費用から削除、WIN209644を含む2 S4を排除）の869有料群・選択肢別未知S5費用の最小和集合問題に対するelement-only分数双対。solver探索なし。
-evidence: 現行インスタンスのdeg 962,467要素と34,447選択肢を再計算、各群の全選択肢について厳密有理数でminを取り、総和91145221/13860=6576.134271…、整数下界6,577。--verifyは869群・95,225選択肢不等式と全degreeを再計算して通過。現行上界31,636。旧cache計算の履歴として依存グラフからdegを再集計し、各群のalphaを厳密有理数で評価して総和2024529/308＝6573.1461…を得た。--verifyがdeg一致・alpha一致・総和一致を確認し、K0417公表値6573.146と整合した。最適値が和集合濃度ゆえ整数のためOPT≥6574を採用する。重み族内ではw＝1/degが単調性より最適で、重み調整の改善余地はない。pool-disjoint packingは有効だが346に留まる。上下差（6,574対31,546）は未解決。
+evidence: 現行インスタンスのdeg 962,467要素と34,447選択肢を再計算、各群の全選択肢について厳密有理数でminを取り、総和91145221/13860=6576.134271…、整数下界6,577。--verifyは869群・95,225選択肢不等式と全degreeを再計算して通過。現行上界31,636。旧cache計算の履歴として依存グラフからdegを再集計し、各群のalphaを厳密有理数で評価して総和2024529/308＝6573.1461…を得た。--verifyがdeg一致・alpha一致・総和一致を確認し、K0417公表値6573.146と整合した。最適値が和集合濃度ゆえ整数のためOPT≥6574を採用する。重み族内ではw＝1/degが単調性より最適で、重み調整の改善余地はない。pool-disjoint packingは有効だが346に留まる。上下差（6,574対31,546）は未解決。夜間層別13（K0424）・S6 LOSS反映（K0426）・第7次更新の現行値は本文末尾の各節を参照（現在は厳密総和9126455/1386・整数下界6,585・上界31,771）。
 ---
 
 ## 現行下界と検証
@@ -50,6 +53,15 @@ beta[t,s,e]=1/deg[e]は要素容量を正確に1以下にし、95,225の群・�
 層別13の現行インスタンスでは厳密総和182532671/27720、整数下界6,585が確定する。
 91145221/13860・6,577はK0423時点の履歴値。詳細はK0424と
 `research/experiments/n11-night-plan-update6-20261014/output/updated-element-dual-update6.json` を参照。
+
+## 第7次更新（2026-10-16・update7）
+
+162106 WINとS6由来LOSS 3件（381840 / 402066 / 550881）を反映した第7次インスタンスでは
+厳密総和 `9126455/1386` ≒ 6,584.7439、整数下界 **6,585**（ceil不変。182532671/27720 ≒ 6,584.8727からexactは−0.1288）。
+869有料群・948群・選択肢34,429・degree対象962,452要素・不等式95,176件を厳密Fractionで再計算し
+`--verify` が保存証明書を全再構成して通過。動いた機構: 162106の3options除去（`4327/4328/5056`）は
+どの群のmin alphaも押し上げず、S6 LOSS 3要素のcost除去が各選択肢の重み和を下げた。
+詳細は `research/experiments/n11-night-plan-update7-20261015/` を参照。
 
 ## 旧cacheインスタンスの履歴
 
