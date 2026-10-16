@@ -6156,6 +6156,21 @@
 ## [research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json](../../../research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json)
 
 - [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (data): 全115対象S4 classの分類と共有局面の有限監査
+## [research/experiments/n9-minimum-maximal-catalogue-20261016/README.md](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/README.md)
+
+- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (source): n=9の全最小極大配置1,179件を完全列挙し全件でmin b=1を確認
+- [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (source): n=9の全最小極大配置1,179件でmin b=1、従ってρ=1
+## [research/experiments/n9-minimum-maximal-catalogue-20261016/output/maximal_sets_n9.json](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/output/maximal_sets_n9.json)
+
+- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (certificate): 列挙した1,179配置（D4第一石代表、全軌道を被覆）
+- [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (certificate): 列挙した1,179配置（D4第一石代表、全軌道を被覆）
+## [research/experiments/n9-minimum-maximal-catalogue-20261016/output/n9_independent_verify.json](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/output/n9_independent_verify.json)
+
+- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (data): 行列式による独立min-b検証・禁止四点29152一致・round50 16/16整合
+- [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (data): 独立min-b検証（{1:1179})。min b=1からρ=1が従う
+## [research/experiments/n9-minimum-maximal-catalogue-20261016/scripts/verify_n9.py](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/scripts/verify_n9.py)
+
+- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (verifier): 曲線正規化を使わない独立検証器
 ## [research/experiments/original-claims/output/batch09_pairs_n4.json](../../../research/experiments/original-claims/output/batch09_pairs_n4.json)
 
 - [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (data): 全120二点削除対と単独削除のg・K

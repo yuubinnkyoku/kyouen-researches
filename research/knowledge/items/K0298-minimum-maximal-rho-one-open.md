@@ -23,12 +23,23 @@ artifacts:
   role: source
   note: n=9の限定16配置でもρ=1
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n9-minimum-maximal-catalogue-20261016/README.md
+  role: source
+  note: n=9の全最小極大配置1,179件でmin b=1、従ってρ=1
+- path: research/experiments/n9-minimum-maximal-catalogue-20261016/output/maximal_sets_n9.json
+  role: certificate
+  note: 列挙した1,179配置（D4第一石代表、全軌道を被覆）
+- path: research/experiments/n9-minimum-maximal-catalogue-20261016/output/n9_independent_verify.json
+  role: data
+  note: 独立min-b検証（{1:1179})。min b=1からρ=1が従う
 ---
 
 # n≥2の全最小極大配置で故障耐性ρが1か
 
 安全極大配置Sに対し、元から空だった点を少なくとも一つ合法に戻すために除く必要がある最小石数をρ(S)とする。n≥2の最小極大配置では常にρ(S)=1かを問う。
 
-n=2..8では全最小極大配置を完全列挙し、全件でρ=1を確認済み。一重被覆点がある場合は、その禁止三つ組の石を一つ除けばその空点が合法になるのでK0297が成立する範囲では本問も成立する。n=9の既知限定16配置でもρ=1だが、全最小極大配置の結果ではない。
+n=2..8では全最小極大配置を完全列挙し、全件でρ=1を確認済み。一重被覆点がある場合は、その禁止三つ組の石を一つ除けばその空点が合法になるのでK0297が成立する範囲では本問も成立する。n=9は research/experiments/n9-minimum-maximal-catalogue-20261016 で全最小極大配置（1,179配置）が min b=1 を満たすことを確認したので ρ=1 も従う。
+
+したがって **n=2..9 で成立**。n≥10を含む一般全称は未証明である。
 
 B361のn=1を含む原文はK0206で撤回し、この非退化版を一般問題として残す。
