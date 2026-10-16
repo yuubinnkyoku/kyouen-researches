@@ -43,6 +43,15 @@ artifacts:
 - path: research/experiments/n11-night-plan-update7-20261015/output/repaired-joint-plan-update7.json
   role: data
   note: 162106 WINとS6由来LOSS 3件を反映した第7次計画（上界31,771・層別17）
+- path: research/experiments/n11-night-plan-update8-20261016/output/repaired-joint-plan-update8.json
+  role: data
+  note: 層別外3件＋S6未反映2件＋新規LOSS 150871を反映した第8次計画（上界31,859・層別18）
+- path: research/experiments/n11-night-plan-update8-20261016/output/update8probe10m-manifest.json
+  role: manifest
+  note: 150871 LOSS（SOLVED verdict 2）・144774 NODE_LIMITの10M探索記録
+- path: research/experiments/n11-night-plan-update8-20261016/output/receipt-150871.json
+  role: certificate
+  note: 150871 LOSSの終局DAG独立検査receipt（trusted葉0・644,490節点/971,480辺/83,851終局）
 - path: research/experiments/n11-night-plan-update6-20261014/output/repaired-joint-plan-update6.json
   role: data
   note: 層別13反映のLOSS共同計画（上界31,774・完全境界再検算済み）
@@ -77,3 +86,13 @@ evidence: 下表の九局面はいずれも全ての葉が幾何終局のDAGを�
 計画への反映は6段階で実施し、一括反映と段階反映の確定ラベル・合法候補・証明義務の一致を検査した（上界差分0）。LOSS側は除外S4 17件を代替選択で修復し上界31,774（K0423修復時の31,636から+138）。双対下界は6,585（+8、毎回厳密有理数で--verify再構成）。WIN側は保存pool 1,933・未閉鎖1,746・AND幅6,812、応手軌道[1,2,4,15,79,101]の6件が保存pool内で不能。新規証人の創作はなし。新規閉鎖の第三手・応手軌道は0。28候補中の内訳はWIN 7・LOSS 8・UNKNOWN 13。144019・144692は10MでNODE_LIMITのまま据え置いた。
 
 11×11空盤勝敗、残り16候補（層別外3件を含む）、他のS5、全S6の求解は未完了。2026-10-15のK0426検証と2026-10-16の第7次計画更新による要求S5和集合31,771と下界6,585はK0417を参照。
+
+## 第8次計画更新（2026-10-16・update8）
+
+適応探索線の検証済みverdictに、focus10m由来の3件（115540 LOSS・144193 LOSS・144311 WIN、いずれも
+共通検査器 `0f890cb4…`・trusted葉0）と、本ラウンドの新規10M探索150871 LOSS（SOLVED verdict 2・
+3,744,513 nodes・終局DAG 644,490節点/971,480辺/83,851終局・trusted葉0、Python独立再導出一致）を加え、
+凍結計画へ反映した。層別 **18（WIN 7＋LOSS 11）**・上界 **31,859**・下界 **6,587**・除外S4 **23件**。
+144774は同一10MでNODE_LIMIT（UNKNOWN）につき証拠にせず、同条件再探索は禁止。詳細は
+`research/experiments/n11-night-plan-update8-20261016/` と `research/log/2026-10-16-n11-plan-update8.md`。
+空盤勝敗・残りの候補・他のS5・全S6の求解は引き続き未完了。

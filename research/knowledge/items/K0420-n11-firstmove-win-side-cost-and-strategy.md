@@ -1,6 +1,6 @@
 ---
 id: K0420
-title: 初手49のWIN側frontierは第7次再被覆で1,932証人・6.8k AND幅・未閉鎖1,745
+title: 初手49のWIN側frontierは第8次再被覆で1,928証人・6.6k AND幅・未閉鎖1,661
 kind: computation
 status: computed
 topics: [square-outcomes, search-methods, certificates, verification, provenance]
@@ -88,3 +88,15 @@ chosen third は全59軌道で同一、cover差分は r=59 のwitness_count 25�
 if_win_newly_free_branches=18と一致）、dead fourthによるthird失格は0。
 第6次の1,933／1,746／AND幅6,812は履歴値。詳細は
 `research/experiments/n11-night-plan-update7-20261015/output/win-side-reanalysis7.json` を参照。
+
+## 第8次計画更新（2026-10-16・update8）
+
+層別外3件（115540 / 144193 LOSS・144311 WIN）・S6未反映2件（381858 / 382619 LOSS）・新規LOSS 150871を
+反映した再被覆の現行値: 使用可能証人 **1,928**（保存1,945から17 maskを除外）・再最適化後
+closable **57/65**・unclosable `[0,1,2,4,15,46,79,101]` の8軌道・AND幅 **6,585**・
+未閉鎖証人（unresolved_witness_s5）**1,661**・verification は57被覆を再計算して通過。
+update7に対する変化: closable 59→57、新たに unclosable 化した軌道は r=0 と r=46 の2件
+（newly_unclosable_replies_vs_previous `[0,46]`）。pre_optimisation の未カバー分岐は **14**、
+replies_affected は `[0,1,2,4,15,46,59,79,101]`（r=59 を含む。150871は元来この応手の枝に関与）。
+第7次の1,932／1,745／AND幅6,812は履歴値。詳細は
+`research/experiments/n11-night-plan-update8-20261016/output/win-side-reanalysis8.json` を参照。

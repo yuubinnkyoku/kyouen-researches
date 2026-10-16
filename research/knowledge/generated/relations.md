@@ -1765,6 +1765,7 @@
 - ← depends_on [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 元先手固定のAND/OR極性と終局payoff
 - ← depends_on [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 元先手固定のAND/OR極性と終局payoff
 - ← depends_on [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 元先手固定視点の通常プレイにおける偶奇層の勝敗伝播
+- ← depends_on [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md): 元先手固定のAND/OR極性（S5 WINは全S6子WIN、単一S6 WINから結論しない）
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -1967,7 +1968,7 @@
 - → depends_on [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md): 6根統合DAGから再利用できるterminal-only subset
 - ← depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): S5の全子閉包が必要なことと未閉鎖根の前例
 
-## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は162106 WINとS6 LOSS 3件の反映で上界31,771・整数下界6,585
+## [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) 19残存初手の共同S5計画は第8次更新（層別外3件＋S6未反映2件＋150871 LOSS）で上界31,859・整数下界6,587
 
 - → depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 19未確定初手軌道と中央応手f=60の候補root
 - → depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 既知LOSS基準rootと32個の無料S4 LOSS class
@@ -1981,8 +1982,9 @@
 - ← refutes [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 保存された31,546計画をそのまま全要求LOSSで閉じられる仮定を反証。旧cache限定の組合せ計算自体は否定しない。
 - ← supports [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 層別13の確定 verdict をLOSS共同計画の修復に供給
 - ← supports [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 検証済みS6 LOSSの3個のS5親が選択S4クラス16397に一致し、要求S5和集合を31,771へ縮小
+- ← supports [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md): 候補効果測定が第8次計画の層別・上界判断に資する
 
-## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 第7次更新後の共同計画の厳密双対9126455/1386は整数下界6,585
+## [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) 第8次更新後の共同計画の厳密双対182572529/27720は整数下界6,587
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 二つの終局verdictを反映した19-root共同選択問題・現行上界31,636
 - → verifies [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 双対値の厳密再計算と31,546計画の独立再検証（失敗0）
@@ -1991,7 +1993,7 @@
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 中央応手の個別上界（49:2055・38:2155・16:2084）と共同上界31,546
 
-## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは第7次再被覆で1,932証人・6.8k AND幅・未閉鎖1,745
+## [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) 初手49のWIN側frontierは第8次再被覆で1,928証人・6.6k AND幅・未閉鎖1,661
 
 - → depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): LOSS側共同frontier 31,546と個別上界（49:2055）の比較基準
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR伝播（S4=OR・S5=AND、終局偶数LOSS）
@@ -1999,6 +2001,7 @@
 - ← depends_on [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md): 極性訂正済みcheapest10と衝突29件の入力
 - ← supports [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md): 極性衝突29候補の一つ209644についてWIN側要求を実際に証明
 - ← supports [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): WIN 6件をWIN証人側の確定に供給、LOSS 3件を証人候補から除外
+- ← depends_on [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md): 初手49 WIN側frontier（pool 1,928・closable 57・unclosable 8軌道）
 
 ## [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md) 四石以上の安全局面では子のD4同値と親安定化群の着手軌道が一致する（四石条件は鋭い）
 
@@ -2038,6 +2041,7 @@
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定視点の通常プレイにおける偶奇層の勝敗伝播
 - → depends_on [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 監査基準とした凍結update6共同計画（選択S4・要求S5和集合31,774）
 - → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 検証済みS6 LOSSの3個のS5親が選択S4クラス16397に一致し、要求S5和集合を31,771へ縮小
+- ← depends_on [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md): S6終局LOSS証明の逆向き全子完成伝播の入力
 
 ## [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) 4行8点円の弦長平方は法27で四つの型に限られる
 
@@ -2059,3 +2063,10 @@
 ## [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) 非局所4行8点円の傾きは有限判定でき、各円型は任意法で無限延長する
 
 - → supports [K0317](../items/K0317-four-row-q8-pell-circle-family.md): Pell正規形から実現可能傾きと固定傾きの円型数を細分する
+
+## [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) 初手49の閉鎖不能8応手は保存pool制約の産物であり、証明書の逆向き再利用は新規S5 WINを与えない
+
+- → depends_on [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md): 初手49 WIN側frontier（pool 1,928・closable 57・unclosable 8軌道）
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR極性（S5 WINは全S6子WIN、単一S6 WINから結論しない）
+- → depends_on [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): S6終局LOSS証明の逆向き全子完成伝播の入力
+- → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 候補効果測定が第8次計画の層別・上界判断に資する

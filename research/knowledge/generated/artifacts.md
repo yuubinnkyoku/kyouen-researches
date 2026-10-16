@@ -5481,6 +5481,38 @@
 ## [research/experiments/n11-night-plan-update7-20261015/output/win-side-reanalysis7.json](../../../research/experiments/n11-night-plan-update7-20261015/output/win-side-reanalysis7.json)
 
 - [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (data): 第7次再被覆（pool 1,932・未閉鎖1,745・AND幅6,812・ranking照合込み）
+## [research/experiments/n11-night-plan-update8-20261016/output/candidate-branch-ranking.json](../../../research/experiments/n11-night-plan-update8-20261016/output/candidate-branch-ranking.json)
+
+- [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) (data): pool未カバー分岐9件を単独解消する候補9件の列挙
+## [research/experiments/n11-night-plan-update8-20261016/output/candidate-effects.json](../../../research/experiments/n11-night-plan-update8-20261016/output/candidate-effects.json)
+
+- [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) (data): 候補別に分岐解消数・WIN/LOSS時の上界差分を測定
+## [research/experiments/n11-night-plan-update8-20261016/output/certificate-reuse8.json](../../../research/experiments/n11-night-plan-update8-20261016/output/certificate-reuse8.json)
+
+- [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) (data): 追加S5 LOSS indexed 2＋index外1、新規S5 WIN 0、計画効果0
+## [research/experiments/n11-night-plan-update8-20261016/output/receipt-150871.json](../../../research/experiments/n11-night-plan-update8-20261016/output/receipt-150871.json)
+
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (certificate): 150871 LOSSの終局DAG独立検査receipt（trusted葉0・644,490節点/971,480辺/83,851終局）
+## [research/experiments/n11-night-plan-update8-20261016/output/repaired-joint-plan-update8.json](../../../research/experiments/n11-night-plan-update8-20261016/output/repaired-joint-plan-update8.json)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (data): 第8次凍結計画（層別外3件＋S6未反映2件＋新規LOSS 150871反映・上界31,859・層別18・除外S4 23件・batch/staged一致）
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (data): 層別外3件＋S6未反映2件＋新規LOSS 150871を反映した第8次計画（上界31,859・層別18）
+## [research/experiments/n11-night-plan-update8-20261016/output/unclosable-reanalysis8.json](../../../research/experiments/n11-night-plan-update8-20261016/output/unclosable-reanalysis8.json)
+
+- [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) (data): 8応手のpool-shortage判定・greedy証人数・pool外候補227
+## [research/experiments/n11-night-plan-update8-20261016/output/update8probe10m-manifest.json](../../../research/experiments/n11-night-plan-update8-20261016/output/update8probe10m-manifest.json)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (manifest): 150871 LOSS（SOLVED verdict 2）と144774 NODE_LIMITの10M探索記録
+- [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 150871 LOSS（SOLVED verdict 2）・144774 NODE_LIMITの10M探索記録
+## [research/experiments/n11-night-plan-update8-20261016/output/updated-element-dual-update8.json](../../../research/experiments/n11-night-plan-update8-20261016/output/updated-element-dual-update8.json)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (certificate): 第8次インスタンスの869群alpha・厳密総和182572529/27720・整数下界6,587（--verify通過）
+## [research/experiments/n11-night-plan-update8-20261016/scripts/analyze_unclosable.py](../../../research/experiments/n11-night-plan-update8-20261016/scripts/analyze_unclosable.py)
+
+- [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) (source): 閉鎖不能応手の制約なし再解析と新規証人候補列挙
+## [research/experiments/n11-night-plan-update8-20261016/scripts/reuse_certificates.py](../../../research/experiments/n11-night-plan-update8-20261016/scripts/reuse_certificates.py)
+
+- [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) (source): S6/S7/S8終局証明の逆向き全子完成伝播と再利用の算定
 ## [research/experiments/n11-opening-orbits-weak-solve-20261012/README.md](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 軌道分類、応手境界、信頼範囲、再現手順

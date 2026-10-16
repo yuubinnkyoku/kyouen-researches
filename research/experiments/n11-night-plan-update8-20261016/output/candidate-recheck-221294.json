@@ -1,0 +1,88 @@
+{
+  "baseline": {
+    "broken_selected_classes": 0,
+    "changed_choice_count": 6,
+    "plan_union": 31859,
+    "plan_union_sha": "9cf970f050cf1ebe28493440415ea5275483ecf7a3370b4e0f2bfec62b8ce465"
+  },
+  "candidate": {
+    "affected_choices": [
+      [
+        16,
+        60,
+        37
+      ],
+      [
+        16,
+        60,
+        39
+      ],
+      [
+        16,
+        60,
+        71
+      ],
+      [
+        37,
+        60,
+        16
+      ],
+      [
+        37,
+        60,
+        71
+      ],
+      [
+        49,
+        60,
+        81
+      ],
+      [
+        49,
+        60,
+        83
+      ],
+      [
+        49,
+        60,
+        104
+      ]
+    ],
+    "affected_selected_choices": 8,
+    "in_cost_classes": 4,
+    "in_plan_union": true,
+    "index": 221294,
+    "invalidated_classes": [
+      6254,
+      6261,
+      6302,
+      10512
+    ],
+    "mask": "00000000000000203100000000000004"
+  },
+  "if_loss": {
+    "broken_stored_branches": 8,
+    "changed_choices": 0,
+    "union_delta": -1,
+    "union_size": 31858
+  },
+  "if_win": {
+    "changed_choices": 8,
+    "freed_branch_classes": [
+      6254
+    ],
+    "freed_stored_branches": 8,
+    "newly_excluded_classes": [
+      6254,
+      6261,
+      6302,
+      10512
+    ],
+    "union_delta": 111,
+    "union_size": 31970
+  },
+  "interpretation": "these are the update8-relative measured effects; the earlier update7 ranking values (8 affected choices, greedy delta +111) are not valid deltas for the joint plan and are not reused",
+  "measured_on": "repaired-joint-plan-update8.json",
+  "schema": "n11-night-candidate-recheck-221294-update8-v1",
+  "seconds": null
+}

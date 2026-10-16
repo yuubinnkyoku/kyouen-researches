@@ -413,10 +413,10 @@
 | [K0414](../items/K0414-n11-reply27-root-loss.md) | 11×11二石局面{60,27}は元先手固定視点でLOSS | proposition | computed | square-outcomes, certificates, verification, provenance |
 | [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) | 11×11空盤の初手D4分類で2軌道をLOSS、19軌道は未確定 | proposition | computed | square-outcomes, first-moves, certificates, verification |
 | [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) | 二石root {60,27} のterminal-only証明には2,992個の未閉鎖S5依存根が残る | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
-| [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) | 19残存初手の共同S5計画は162106 WINとS6 LOSS 3件の反映で上界31,771・整数下界6,585 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
-| [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) | 第7次更新後の共同計画の厳密双対9126455/1386は整数下界6,585 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+| [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) | 19残存初手の共同S5計画は第8次更新（層別外3件＋S6未反映2件＋150871 LOSS）で上界31,859・整数下界6,587 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+| [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) | 第8次更新後の共同計画の厳密双対182572529/27720は整数下界6,587 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) | 初手49・38・16の非中央応手27・93は中央応手に楽観的S5数で約1.5倍劣る | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
-| [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) | 初手49のWIN側frontierは第7次再被覆で1,932証人・6.8k AND幅・未閉鎖1,745 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+| [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) | 初手49のWIN側frontierは第8次再被覆で1,928証人・6.6k AND幅・未閉鎖1,661 | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md) | 四石以上の安全局面では子のD4同値と親安定化群の着手軌道が一致する（四石条件は鋭い） | proposition | proved | geometry, search-methods, certificates, verification |
 | [K0422](../items/K0422-n11-joint-s6-quotient-and-corrected-pilots.md) | 11盤共同S5計画の319万合法辺は156万相異なるS6へ縮約し、訂正済み39パイロットは2269子 | computation | computed | search-methods, certificates, verification, square-outcomes, provenance |
 | [K0423](../items/K0423-n11-symmetric-s5-terminal-loss-and-win-pilots.md) | 11盤の対称S5二局面を終局DAGで独立証明し、共同計画の衝突候補209644は先手WIN | proposition | proved | square-outcomes, certificates, verification, search-methods, provenance |
@@ -429,3 +429,4 @@
 | [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) | 2000001列まで異なる三つの4行8点円は合併20点以上 | proposition | computed | geometry, rectangles, variants |
 | [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) | 四行8点円の全ての非局所型は同じ傾きの無限Pell族へ延長する | proposition | proved | geometry, rectangles, variants |
 | [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) | 非局所4行8点円の傾きは有限判定でき、各円型は任意法で無限延長する | proposition | proved | geometry, rectangles, variants |
+| [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) | 初手49の閉鎖不能8応手は保存pool制約の産物であり、証明書の逆向き再利用は新規S5 WINを与えない | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
