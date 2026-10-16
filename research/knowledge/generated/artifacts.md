@@ -7258,6 +7258,20 @@
 
 - [K0214](../items/K0214-n7-maximum-external-radius-two.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0215](../items/K0215-n7-first-external-legal-point-orbits.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 521..2000への有限拡張。全奇素数の等号は依然未証明
+## [research/experiments/parabola-equality-extension-20261016/output/parabola-equality-audit.txt](../../../research/experiments/parabola-equality-extension-20261016/output/parabola-equality-audit.txt)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibniz独立検証（covered/checked・共円0件）の生出力
+## [research/experiments/parabola-equality-extension-20261016/output/witnesses_521_2000.json](../../../research/experiments/parabola-equality-extension-20261016/output/witnesses_521_2000.json)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 521..1999の全206素数の等号証人（d・parameters・size=h+2）
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 521..1999の全206素数の等号証人
+## [research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py](../../../research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (solver): 実装（edges厳密列挙＋d降順CNF＋cadical）
 ## [research/experiments/prism-followup-20261005/even-capacity-output.json](../../../research/experiments/prism-followup-20261005/even-capacity-output.json)
 
 - [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (data): 明示パラメータの完全有限検算。全称命題の根拠は証明artifact

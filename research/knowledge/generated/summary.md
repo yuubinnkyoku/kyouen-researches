@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 427 / alias: 269 / artifactファイル: 2309
+K項目: 427 / alias: 269 / artifactファイル: 2313
 
 ## kind
 

@@ -647,7 +647,7 @@
 
 - → depends_on [K0095](../items/K0095-split-prime-safe-quadratic-construction.md)
 
-## [K0097](../items/K0097-integer-residue-parabola-bounds.md) 整数剰余放物線の安全最大は高々(p+3)/2、5..251と509,1009では等号
+## [K0097](../items/K0097-integer-residue-parabola-bounds.md) 整数剰余放物線の安全最大は高々(p+3)/2、5..2000では等号
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - ← depends_on [K0098](../items/K0098-p23-half-interval-counterexample.md)

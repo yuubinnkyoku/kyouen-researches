@@ -98,7 +98,7 @@
 | [K0094](../items/K0094-n5-relocation-preserves-two-ply-changes-grundy.md) | 二手情報を保つ一石移動で5×5のgが0から3へ変わる | proposition | proved | residual-games, grundy |
 | [K0095](../items/K0095-split-prime-safe-quadratic-construction.md) | p≡1 mod4の全素数に安全p点の有限体二次構成がある | proposition | proved | maximum-safe, geometry |
 | [K0096](../items/K0096-mod-prime-quadratic-certification-bound.md) | 二次パラメータmodp非零認証の最大はp≡3 mod4で(p+13)/4 | proposition | proved | maximum-safe, geometry |
-| [K0097](../items/K0097-integer-residue-parabola-bounds.md) | 整数剰余放物線の安全最大は高々(p+3)/2、5..251と509,1009では等号 | proposition | proved | maximum-safe, geometry |
+| [K0097](../items/K0097-integer-residue-parabola-bounds.md) | 整数剰余放物線の安全最大は高々(p+3)/2、5..2000では等号 | proposition | proved | maximum-safe, geometry |
 | [K0098](../items/K0098-p23-half-interval-counterexample.md) | 剰余放物線の前半区間安全説はp=23で反例 | proposition | refuted | maximum-safe, geometry |
 | [K0099](../items/K0099-private-passes-terminal-pass-allowed.md) | 終端パス可の有限私有パス版は残数差と通常gで勝敗・mexを分類 | proposition | proved | variants, grundy |
 | [K0100](../items/K0100-private-passes-immediate-terminal.md) | 通常終端即終了の私有パス版は一手終端可能性も必要 | proposition | proved | variants, grundy |
