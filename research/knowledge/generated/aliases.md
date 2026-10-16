@@ -211,8 +211,8 @@
 | F-AG | [K0063](../items/K0063-n10-circle-catalogue.md) | 10×10の非退化円カタログとサイズ欠落 |
 | F-AH | [K0061](../items/K0061-twelve-point-circle-count-formula.md) | 12点円の個数(n−7)^2はn=11で全円を数えなくなる |
 | F-AI | [K0057](../items/K0057-forbidden-quadruple-counts.md) | 禁止四点組の有限総数と共線・共円の排他的分解 |
-| F-AJ | [K0034](../items/K0034-n10-minimum-maximal-bounds.md) | 10×10の最小極大安全サイズは9≤s_10≤10 |
-| F-AK | [K0034](../items/K0034-n10-minimum-maximal-bounds.md) | 10×10の最小極大安全サイズは9≤s_10≤10 |
+| F-AJ | [K0034](../items/K0034-n10-minimum-maximal-bounds.md) | 10×10の最小極大安全サイズはs_10=10 |
+| F-AK | [K0034](../items/K0034-n10-minimum-maximal-bounds.md) | 10×10の最小極大安全サイズはs_10=10 |
 | F-AL | [K0037](../items/K0037-unsafe-maximal-search-witnesses-withdrawn.md) | 安全判定を欠いた極大探索の陽例と境界偏在説は無効 |
 | F-AM | [K0030](../items/K0030-n3-n6-maximal-safe-size-distributions.md) | 3×3〜6×6の極大安全集合サイズ分布 |
 | F-AN | [K0062](../items/K0062-twelve-point-circle-radius-families.md) | 12点円の半径族分解と有限盤窓での切断 |

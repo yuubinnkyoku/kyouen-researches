@@ -342,10 +342,11 @@
 - → depends_on [K0032](../items/K0032-n8-minimum-maximal-size.md)
 - ← depends_on [K0034](../items/K0034-n10-minimum-maximal-bounds.md)
 
-## [K0034](../items/K0034-n10-minimum-maximal-bounds.md) 10×10の最小極大安全サイズは9≤s_10≤10
+## [K0034](../items/K0034-n10-minimum-maximal-bounds.md) 10×10の最小極大安全サイズはs_10=10
 
 - → depends_on [K0033](../items/K0033-n9-minimum-maximal-size.md)
 - → depends_on [K0038](../items/K0038-n10-safe-10-stone-maximal-witness.md)
+- → supersedes [K0145](../items/K0145-n10-minimum-maximal-ten-open.md): 九石の有無という問い（K0145）を本命題で解消
 
 ## [K0035](../items/K0035-n10-maximum-safe-bounds.md) 10×10の最大安全サイズは19≤K_10≤23
 
@@ -905,6 +906,7 @@
 ## [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) 10×10の最小極大は10石
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
+- ← supersedes [K0034](../items/K0034-n10-minimum-maximal-bounds.md): 九石の有無という問い（K0145）を本命題で解消
 
 ## [K0146](../items/K0146-n10-minimum-maximal-eleven-refuted.md) 10×10の最小極大は11石
 

@@ -35,7 +35,7 @@
 | [K0031](../items/K0031-n7-minimum-maximal-size.md) | 7×7の最小極大安全サイズs_7=7 | proposition | proved | maximal-safe |
 | [K0032](../items/K0032-n8-minimum-maximal-size.md) | 8×8の最小極大安全サイズs_8=8 | proposition | proved | maximal-safe |
 | [K0033](../items/K0033-n9-minimum-maximal-size.md) | 9×9の最小極大安全サイズs_9=9 | proposition | proved | maximal-safe |
-| [K0034](../items/K0034-n10-minimum-maximal-bounds.md) | 10×10の最小極大安全サイズは9≤s_10≤10 | proposition | proved | maximal-safe |
+| [K0034](../items/K0034-n10-minimum-maximal-bounds.md) | 10×10の最小極大安全サイズはs_10=10 | proposition | proved | maximal-safe |
 | [K0035](../items/K0035-n10-maximum-safe-bounds.md) | 10×10の最大安全サイズは19≤K_10≤23 | proposition | proved | maximum-safe |
 | [K0036](../items/K0036-n10-local-19-stone-exchange-limit.md) | 特定19石証人から九石交換以内では安全20石に届かない | proposition | computed | maximum-safe |
 | [K0037](../items/K0037-unsafe-maximal-search-witnesses-withdrawn.md) | 安全判定を欠いた極大探索の陽例と境界偏在説は無効 | proposition | withdrawn | maximal-safe, provenance |
@@ -146,7 +146,7 @@
 | [K0142](../items/K0142-maximum-configuration-boundary-extension.md) | 既存最大配置に外周を足すだけでは次の最大へ届かない | proposition | computed | maximum-safe, geometry |
 | [K0143](../items/K0143-asymptotic-two-n-safe-construction-open.md) | 2n−O(1)石の安全配置を無限族で作れる | question | open | maximum-safe, geometry |
 | [K0144](../items/K0144-few-algebraic-curves-optimality-refuted.md) | 少数の代数曲線の和で漸近最適になる | proposition | refuted | maximum-safe, geometry |
-| [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) | 10×10の最小極大は10石 | question | open | maximal-safe, geometry |
+| [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) | 10×10の最小極大は10石 | question | superseded | maximal-safe, geometry |
 | [K0146](../items/K0146-n10-minimum-maximal-eleven-refuted.md) | 10×10の最小極大は11石 | proposition | refuted | maximal-safe, geometry |
 | [K0147](../items/K0147-sublinear-minimum-maximal-open.md) | 最小極大は線形より小さくなる | question | open | maximal-safe, geometry |
 | [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) | 最小極大の指数は2/3 | question | open | maximal-safe, geometry |

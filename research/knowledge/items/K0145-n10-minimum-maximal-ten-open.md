@@ -2,7 +2,7 @@
 id: K0145
 title: 10×10の最小極大は10石
 kind: question
-status: open
+status: superseded
 topics:
 - maximal-safe
 - geometry
@@ -25,16 +25,17 @@ artifacts:
   role: source
   note: B093の原文・定義（現在の結論は採用報告を優先）
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/knowledge/items/K0034-n10-minimum-maximal-bounds.md
+  role: source
+  note: 九石全域排除により本問いを解消した現行命題
 scope: 本文の原文量化と現在の採用境界
-evidence: 原文監査 PARTIAL / complete_eight_stone_prefix_suffix_exclusion_and_ten_stone_witness
+evidence: resolved_by_K0034_nine_stone_exhaustive_exclusion
 ---
 
-# 10×10の最小極大は10石
+# 10×10の最小極大は10石（問いは解消）
 
 未確定の命題: 10×10の最小極大は10石。 `s_10=10`。古い不安全な10石例は証拠に使わず、独立した予想としてのみ残す。
 
-現在の結論: s10の現在範囲は9..10。八石全域を除外し十石証人を検算済みだが、九石の有無は未決。
+**解消（2026-10-16）**: K0034 が九石の有無を全域完全列挙で決着。D4第一石代表15点の全探索で九石の極大安全集合は存在せず、十石証人（round49、および別途再発見された `13 50 56 59 63 68 77 83 85 98`）と合わせて s_10=10。経緯と証拠の詳細は research/experiments/n10-nine-stone-sat-20261016/ を参照。
 
-採用境界: s9=9から十盤八石候補を全幅・初点0..4へ帰着。旧完了接頭部と今回全五再開部分を接続し八石全域除外、s10∈[9,10]。九石の有無が未決。
-
-根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+採用境界: s9=9から十盤八石候補を全幅・初点0..4へ帰着し八石全域除外、九石も D4 代表15点の完全列挙で除外。s10=10。

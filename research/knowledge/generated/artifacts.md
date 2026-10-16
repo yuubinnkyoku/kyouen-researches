@@ -1235,6 +1235,18 @@
 ## [research/experiments/geometry/scripts/verify_three_row_211_20261011.py](../../../research/experiments/geometry/scripts/verify_three_row_211_20261011.py)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (verifier): 3行盤独立検査
+## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
+
+- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）
+## [research/experiments/n10-nine-stone-sat-20261016/output/audit-nine_k9.txt](../../../research/experiments/n10-nine-stone-sat-20261016/output/audit-nine_k9.txt)
+
+- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (data): 全487チャンクの連鎖・完全性・found=false の機械監査
+## [research/experiments/n10-nine-stone-sat-20261016/output/manifest_nine_k9.json](../../../research/experiments/n10-nine-stone-sat-20261016/output/manifest_nine_k9.json)
+
+- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (manifest): 全チャンクのsha256・ノード数・resume/timeout接頭部
+## [research/experiments/n10-nine-stone-sat-20261016/scripts/nine_stone_exact_search.cpp](../../../research/experiments/n10-nine-stone-sat-20261016/scripts/nine_stone_exact_search.cpp)
+
+- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (solver): 厳密探索（D4第一石還元・辞書式再開・round56共通の枝刈り）
 ## [research/experiments/n11-adaptive-probe-20261013/output/adaptive10m-manifest.json](../../../research/experiments/n11-adaptive-probe-20261013/output/adaptive10m-manifest.json)
 
 - [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 121263 LOSS・145001 LOSSの10M探索記録
@@ -6952,6 +6964,7 @@
 - [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/experiments/original-claims/reports/round49-ten-stone-maximal-counterexample.md](../../../research/experiments/original-claims/reports/round49-ten-stone-maximal-counterexample.md)
 
+- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 十石極大証人（s_10<=10）
 - [K0038](../items/K0038-n10-safe-10-stone-maximal-witness.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0146](../items/K0146-n10-minimum-maximal-eleven-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/experiments/original-claims/reports/round5-batch-n8.md](../../../research/experiments/original-claims/reports/round5-batch-n8.md)
@@ -7500,6 +7513,9 @@
 ## [research/experiments/unequal-row-sharp-chord-energy-20261010/verify_short.py](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/verify_short.py)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (verifier): 短範囲直接照合
+## [research/knowledge/items/K0034-n10-minimum-maximal-bounds.md](../../../research/knowledge/items/K0034-n10-minimum-maximal-bounds.md)
+
+- [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) (source): 九石全域排除により本問いを解消した現行命題
 ## [research/log/2026-10-09-scaled-circle-gcd.md](../../../research/log/2026-10-09-scaled-circle-gcd.md)
 
 - [K0410](../items/K0410-scaled-circle-gcd-family.md) (log): 発見・検証経緯

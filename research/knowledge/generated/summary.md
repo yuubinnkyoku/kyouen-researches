@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 427 / alias: 269 / artifactファイル: 2304
+K項目: 427 / alias: 269 / artifactファイル: 2309
 
 ## kind
 
@@ -21,10 +21,11 @@ K項目: 427 / alias: 269 / artifactファイル: 2304
 | computed | 108 |
 | conjectured | 1 |
 | observed | 17 |
-| open | 35 |
+| open | 34 |
 | proved | 179 |
 | refuted | 63 |
 | scope-unclear | 1 |
+| superseded | 1 |
 | verified | 10 |
 | withdrawn | 4 |
 
@@ -66,7 +67,6 @@ K項目: 427 / alias: 269 / artifactファイル: 2304
 - [K0139](../items/K0139-six-stone-exclusion-short-cover-proof-open.md) [open] 六石非存在は三つ組の共起だけで短く説明できる
 - [K0141](../items/K0141-n10-20-stone-existence-open.md) [open] 10×10では20石まで届くか
 - [K0143](../items/K0143-asymptotic-two-n-safe-construction-open.md) [open] 2n−O(1)石の安全配置を無限族で作れる
-- [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) [open] 10×10の最小極大は10石
 - [K0147](../items/K0147-sublinear-minimum-maximal-open.md) [open] 最小極大は線形より小さくなる
 - [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) [open] 最小極大の指数は2/3
 - [K0149](../items/K0149-minimum-maximal-monotonicity-open.md) [open] s_nは単調増加する
