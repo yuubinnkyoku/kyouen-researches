@@ -1,0 +1,24 @@
+name: Lean K0305 maximal parity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Kyouen/MaximalParity.lean'
+      - 'lean-toolchain'
+      - 'lakefile.lean'
+      - '.github/workflows/lean-k0305.yml'
+  workflow_dispatch:
+
+jobs:
+  lean-k0305:
+    name: Check maximal parity theorem
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          build: true
+      - name: Compile K0305
+        run: lake build Kyouen.MaximalParity
