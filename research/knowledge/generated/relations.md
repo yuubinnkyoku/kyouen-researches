@@ -138,6 +138,7 @@
 - → verifies [K0337](../items/K0337-odd-uniform-involution-scope.md): 固定点なし対合とブロック条件による抽象十分条件のみ
 - → verifies [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md): 整数座標の円・直線方程式とForbiddenFourの同値
 - ← depends_on [K0102](../items/K0102-concrete-lean-certificate-checker-open.md)
+- ← depends_on [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md): Lean局所条件とWinning/Losingの健全性を使用
 
 ## [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) KYOENC4による128-bit局面証明とRust独立検査
 
@@ -675,6 +676,7 @@
 ## [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) 具体巨大証明書をLean核のみで検査する実装は未完成
 
 - → depends_on [K0009](../items/K0009-lean-soundness-trust-boundary.md)
+- ← supports [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md): 3×3×3の具体証明書についてLean核検査を完了。一般巨大証明書は未完了
 
 ## [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) 10×10空盤面全体の単一KYOENC4証明書は未統合
 
@@ -2077,3 +2079,8 @@
 ## [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) 整数座標四点の行列式と分母を払った円・直線方程式の同値
 
 - ← verifies [K0009](../items/K0009-lean-soundness-trust-boundary.md): 整数座標の円・直線方程式とForbiddenFourの同値
+
+## [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) 3×3×3・5点禁止ゲームの839局面証明書をLeanで具体検査し空盤後手必勝を証明
+
+- → depends_on [K0009](../items/K0009-lean-soundness-trust-boundary.md): Lean局所条件とWinning/Losingの健全性を使用
+- → supports [K0102](../items/K0102-concrete-lean-certificate-checker-open.md): 3×3×3の具体証明書についてLean核検査を完了。一般巨大証明書は未完了

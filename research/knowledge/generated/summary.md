@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 429 / alias: 269 / artifactファイル: 2331
+K項目: 430 / alias: 269 / artifactファイル: 2336
 
 ## kind
 
@@ -11,7 +11,7 @@ K項目: 429 / alias: 269 / artifactファイル: 2331
 | method | 4 |
 | proposition | 347 |
 | question | 36 |
-| verification | 10 |
+| verification | 11 |
 
 ## status
 
@@ -26,16 +26,16 @@ K項目: 429 / alias: 269 / artifactファイル: 2331
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
-| verified | 10 |
+| verified | 11 |
 | withdrawn | 4 |
 
 ## topics
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 39 |
+| certificates | 40 |
 | first-moves | 34 |
-| formalization | 3 |
+| formalization | 4 |
 | geometry | 170 |
 | grundy | 73 |
 | maximal-safe | 73 |
@@ -50,7 +50,7 @@ K項目: 429 / alias: 269 / artifactファイル: 2331
 | square-outcomes | 46 |
 | statistics | 45 |
 | strategy-length | 25 |
-| variants | 98 |
+| variants | 99 |
 | verification | 40 |
 
 ## 未解決・要監査・範囲不明

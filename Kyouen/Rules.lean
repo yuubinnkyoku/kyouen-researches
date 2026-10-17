@@ -124,3 +124,29 @@ def afterCenter : Position :=
   [center]
 
 end Kyouen.NineByNine
+
+namespace Kyouen.Rules.Basic
+
+theorem empty_length (n : Nat) : (Kyouen.SquareBoard.empty n).length = 0 := rfl
+
+theorem containsForbidden_empty (n : Nat) : Kyouen.SquareBoard.containsForbiddenBool (Kyouen.SquareBoard.empty n) = false := rfl
+
+theorem empty_not_containsForbidden (n : Nat) : ¬ Kyouen.SquareBoard.ContainsForbidden (Kyouen.SquareBoard.empty n) := by
+  simp [Kyouen.SquareBoard.ContainsForbidden, containsForbidden_empty]
+
+theorem LegalMove_empty (n : Nat) (p : Kyouen.SquareBoard.Point n) : Kyouen.SquareBoard.LegalMove (Kyouen.SquareBoard.empty n) p := by
+  unfold Kyouen.SquareBoard.LegalMove
+  constructor
+  · simp [Kyouen.SquareBoard.empty]
+  · have hs : Kyouen.SquareBoard.containsForbiddenBool (p :: Kyouen.SquareBoard.empty n) = false := by
+      simp [Kyouen.SquareBoard.containsForbiddenBool, Kyouen.SquareBoard.empty, Kyouen.SquareBoard.ForbiddenFour]
+    intro h
+    unfold Kyouen.SquareBoard.ContainsForbidden at h
+    rw [hs] at h
+    contradiction
+
+theorem legalMove_not_mem {n : Nat} {s : Kyouen.SquareBoard.Position n} {p : Kyouen.SquareBoard.Point n}
+    (h : Kyouen.SquareBoard.LegalMove s p) : p ∉ s := by
+  exact h.1
+
+end Kyouen.Rules.Basic

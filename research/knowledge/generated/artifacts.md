@@ -4,6 +4,18 @@
 
 - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
 - [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
+## [Kyouen/CubeCertData.lean](../../../Kyouen/CubeCertData.lean)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): certificate.b64から生成した具体データ
+## [Kyouen/CubeCertificate.lean](../../../Kyouen/CubeCertificate.lean)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 839局面証明書の局所条件検査と空盤後手必勝定理
+## [Kyouen/CubeRules.lean](../../../Kyouen/CubeRules.lean)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 3×3×3盤・5点禁止判定・合法手
+## [Kyouen/CubeSymmetry.lean](../../../Kyouen/CubeSymmetry.lean)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 48対称変換と正規化
 ## [Kyouen/FormalizationChecks.lean](../../../Kyouen/FormalizationChecks.lean)
 
 - [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 仮定の境界例、盤面ルールへの接続例、主要定理の公理一覧
@@ -1250,6 +1262,9 @@
 ## [research/experiments/geometry/scripts/verify_three_row_211_20261011.py](../../../research/experiments/geometry/scripts/verify_three_row_211_20261011.py)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (verifier): 3行盤独立検査
+## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
 ## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）

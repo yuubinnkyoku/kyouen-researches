@@ -1,5 +1,8 @@
 import Kyouen.CertificateSoundness
 import Kyouen.Rules
+import Kyouen.SmallCertificates
+import Kyouen.UniformCapacity
+import Kyouen.CubeCertificate
 
 open Kyouen
 

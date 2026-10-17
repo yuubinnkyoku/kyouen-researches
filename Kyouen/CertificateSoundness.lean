@@ -106,4 +106,18 @@ theorem root_losing_of_valid {σ : Type u}
 def WinningFirstMove {σ : Type u} (moves : σ → List σ) (empty after : σ) : Prop :=
   after ∈ moves empty ∧ Losing moves after
 
-end Kyouen
+/- Additional elementary consequences. -/
+
+namespace Kyouen.Extra
+
+theorem losing_of_no_moves {σ : Type u} {moves : σ → List σ} {s : σ}
+    (h : moves s = []) : Kyouen.Losing moves s := by
+  apply Kyouen.Losing.all
+  intro t ht
+  simp [h] at ht
+
+theorem winning_of_exists_losing {σ : Type u} {moves : σ → List σ} {s t : σ}
+    (hmem : t ∈ moves s) (hl : Kyouen.Losing moves t) : Kyouen.Winning moves s :=
+  Kyouen.Winning.move hmem hl
+
+end Kyouen.Extra

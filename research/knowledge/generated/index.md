@@ -431,3 +431,4 @@
 | [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) | 非局所4行8点円の傾きは有限判定でき、各円型は任意法で無限延長する | proposition | proved | geometry, rectangles, variants |
 | [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) | 初手49の閉鎖不能8応手は保存pool制約の産物であり、証明書の逆向き再利用は新規S5 WINを与えない | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
 | [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) | 整数座標四点の行列式と分母を払った円・直線方程式の同値 | proposition | proved | rules, geometry, formalization |
+| [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) | 3×3×3・5点禁止ゲームの839局面証明書をLeanで具体検査し空盤後手必勝を証明 | verification | verified | formalization, certificates, variants |
