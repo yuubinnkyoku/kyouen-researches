@@ -4,6 +4,21 @@
 
 - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
 - [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
+## [Kyouen/FormalizationChecks.lean](../../../Kyouen/FormalizationChecks.lean)
+
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 仮定の境界例、盤面ルールへの接続例、主要定理の公理一覧
+- [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) (lean): 共円・共線・非共円例と主要定理の公理一覧
+## [Kyouen/IntegerGeometry.lean](../../../Kyouen/IntegerGeometry.lean)
+
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 行列式と分母を払った円・直線方程式の同値
+- [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) (lean): 全称同値定理、盤面座標の単射性、ForbiddenFourへの接続。Lean 4.35.0で検査。
+## [Kyouen/MaximalParity.lean](../../../Kyouen/MaximalParity.lean)
+
+- [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) (proof): Lean 4.30.0で検査済みの一般ゲーム論部分。具体的な共円配置・Grundy再帰の構成までは未接続。
+## [Kyouen/OddInvolution.lean](../../../Kyouen/OddInvolution.lean)
+
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 抽象鏡映定理と有限盤上のLosingへの接続
+- [K0337](../items/K0337-odd-uniform-involution-scope.md) (lean): 抽象ブロック十分条件から鏡像応手の合法性とLosingまでをLean 4.35.0で検査。反例族と幾何学的応用は対象外。
 ## [Kyouen/Rules.lean](../../../Kyouen/Rules.lean)
 
 - [K0001](../items/K0001-complete-call-rules.md) (lean): 整数行列式・ForbiddenFour・LegalMove・movesの実行可能定義

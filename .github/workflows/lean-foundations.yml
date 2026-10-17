@@ -1,0 +1,33 @@
+name: Lean mirror strategy and integer geometry
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Kyouen/OddInvolution.lean'
+      - 'Kyouen/IntegerGeometry.lean'
+      - 'Kyouen/FormalizationChecks.lean'
+      - 'Kyouen/Rules.lean'
+      - 'Kyouen/CertificateSoundness.lean'
+      - 'lean-toolchain'
+      - 'lakefile.lean'
+      - '.github/workflows/lean-foundations.yml'
+  pull_request:
+    paths:
+      - 'Kyouen/**'
+      - 'lean-toolchain'
+      - 'lakefile.lean'
+      - '.github/workflows/lean-foundations.yml'
+  workflow_dispatch:
+
+jobs:
+  lean-foundations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: leanprover/lean-action@v1
+        with:
+          auto-config: false
+          build: false
+      - name: Compile theorems and boundary cases
+        run: lake build Kyouen.OddInvolution Kyouen.IntegerGeometry Kyouen.FormalizationChecks

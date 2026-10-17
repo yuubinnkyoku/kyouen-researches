@@ -135,6 +135,8 @@
 ## [K0009](../items/K0009-lean-soundness-trust-boundary.md) Lean形式化の範囲と具体証明書の信頼境界
 
 - → verifies [K0007](../items/K0007-ranked-and-or-certificates.md): 抽象局所条件から勝敗への一般健全性
+- → verifies [K0337](../items/K0337-odd-uniform-involution-scope.md): 固定点なし対合とブロック条件による抽象十分条件のみ
+- → verifies [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md): 整数座標の円・直線方程式とForbiddenFourの同値
 - ← depends_on [K0102](../items/K0102-concrete-lean-certificate-checker-open.md)
 
 ## [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) KYOENC4による128-bit局面証明とRust独立検査
@@ -1567,6 +1569,7 @@
 ## [K0337](../items/K0337-odd-uniform-involution-scope.md) 奇数qの鏡映戦略の抽象十分条件と任意禁止族での最小q+1点反例
 
 - → generalizes [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md): 円・直線の鏡映定理を保証する抽象ブロック条件を明示する
+- ← verifies [K0009](../items/K0009-lean-soundness-trust-boundary.md): 固定点なし対合とブロック条件による抽象十分条件のみ
 
 ## [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) 標準正方形盤の安定化群位数4以上の安全集合は高々五石で正確にO(n²)個
 
@@ -2070,3 +2073,7 @@
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定のAND/OR極性（S5 WINは全S6子WIN、単一S6 WINから結論しない）
 - → depends_on [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): S6終局LOSS証明の逆向き全子完成伝播の入力
 - → supports [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 候補効果測定が第8次計画の層別・上界判断に資する
+
+## [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) 整数座標四点の行列式と分母を払った円・直線方程式の同値
+
+- ← verifies [K0009](../items/K0009-lean-soundness-trust-boundary.md): 整数座標の円・直線方程式とForbiddenFourの同値
