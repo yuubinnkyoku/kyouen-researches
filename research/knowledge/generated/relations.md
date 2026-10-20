@@ -331,6 +331,8 @@
 - ← depends_on [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md): 安全性の遺伝性と極大性
 - ← depends_on [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md): 標準盤の安全極大配置
 - ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): 安全極大配置と空点を対象にする
+- ← depends_on [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
+- ← depends_on [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -717,6 +719,7 @@
 - → depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md): 最小極大サイズの境界は空盤勝敗と別の確定結果
 - → depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md): 最大安全サイズの存在下界は空盤勝敗を決めない
 - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver/cache 葉への依存の信頼境界を参照
 - ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
 - ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
 
@@ -1824,6 +1827,7 @@
 - → verifies [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全S4境界と第三手被覆を再生成し、solver/cacheを信頼する葉を分離
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円・共線4点禁止、完全指摘、通常プレイ
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 全層で元の先手に固定した勝敗
+- ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): solver/cache 葉への依存の信頼境界を参照
 - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全frontierの独立再生成とsolver/cache葉の信頼境界
 - ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 追加loaderと中間S6・上位S4依存の独立再監査範囲
 - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): solver-trusted raw葉と独立な上位境界の証拠区分
@@ -2316,3 +2320,11 @@
 ## [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) 11盤35個のS8 LOSSの385終局葉証明と246個のS7 LOSSへの伝播を独立検証
 
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定の偶奇AND/OR伝播
+
+## [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) 12×12に12石の極大安全集合が存在する（検証済みwitness）
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 極大安全集合の定義（包含極大）
+
+## [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) 13×13に13石の極大安全集合が存在する（検証済みwitness）
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 極大安全集合の定義（包含極大）

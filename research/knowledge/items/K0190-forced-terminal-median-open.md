@@ -52,3 +52,21 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: empty-board K0190 holds for n=1..6 (WFT singleton equals median of T*). n=7 has empty WFT, antecedent false. Generalization to arbitrary positions is false: 8 violations among n=6 5-stone positions with T*={6,8,10}, WFT={6}.
+
+Scope clarification: K0190 is an empty-board-only claim; arbitrary-position median extension refuted.
+
+Next steps: test n>=8 empty boards. Status remains open.
+
+## 2026-10-17 bounded advance (round 4)
+
+New finite evidence: median relation tested on non-empty n=7 positions with k<=3 (19,650 stored positions; 10,799 singleton-WFT). Violations: 0. Breakdown: k=1 49 stored/21 singleton/0 violations; k=2 1,176/14/0; k=3 18,424/10,764/0. Primary and independent layer files identical for k<=3. 857 singleton positions have even |T*|, all satisfy central-value condition. Empty board (k=0) has T*={8,10,12,14}, WFT empty, so antecedent false.
+
+Scope clarification: no violations within tested bound only; positions with >=4 stones not tested at per-state resolution. Does not establish K0190 for all n=7 positions. Broader arbitrary-position extension remains refuted by 8 five-stone 6x6 positions. Empty-board status unaffected (n=7 WFT empty). K0190 remains open.
+
+Next steps: per-state T*/WFT data for higher layers or general proof. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

@@ -51,3 +51,21 @@ evidence: 原文監査 PARTIAL / general_four_stone_bridge_proof
 採用境界: 任意の安全四石配置対は常に安全な三石層のJohnsonグラフを通って結べる。k≥5の原文全体は未証明。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: 4x4 census k=3..6: all split families under one-stone exchange merge through (k-1)-stone layer (k=4:32/32, k=5:146/146, k=6:44/44) with bridge lengths 2-3, 2-5, 2-6 (k-1)-stone vertices. 3x3 k=4: 17 split families all merged via 3-stone layer (2-4 vertices). Lower layer connected on tested boards.
+
+Scope clarification: bridge length grows with k (max observed = k for k>=5), so uniform O(1) bound not established.
+
+Next steps: test 5x5 and larger boards. Status remains open.
+
+## 2026-10-17 bounded advance (round 3)
+
+New finite evidence: 5x5 exact fiber-bridge census for k=4..9. Safe states by size: 1,25,300,2300,11824,37272,59192,35208,5172,100. Lower layer connected for sizes 3..8. Every same-(k,L,R) family split under one-stone exchange merges through (k-1)-stone layer: k=4 2/2 pairs (bridge 2); k=5 237/237 (2..5, mean 2.996); k=6 102,134/102,134 (2..6, mean 3.947); k=7 73,390/73,390 (2..7, mean 4.471); k=8 2,992/2,992 (2..8, mean 4.655); k=9 946/946 (2..9, mean 5.281). C++ exact census with Python cross-check for k=5.
+
+Scope clarification: merging automatic due to lower-layer connectivity on tested board; nontrivial content is path length, not uniformly bounded (max grows with k). K0226 remains open; general statement for k>=5 unproved.
+
+Next steps: test larger boards; compute Steiner total cost; seek uniform bound. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

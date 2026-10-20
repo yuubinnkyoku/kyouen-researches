@@ -43,3 +43,13 @@ n=2..8では全最小極大配置を完全列挙し、全件でρ=1を確認済�
 したがって **n=2..9 で成立**。n≥10を含む一般全称は未証明である。
 
 B361のn=1を含む原文はK0206で撤回し、この非退化版を一般問題として残す。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: exhaustive minimal maximal sets n=2..5 rho=1 (counts 4,56,176,4); full recompute of 1,179 n=9 sets rho=1; five distinct 10-stone 10x10 maximal sets rho=1. Combined with n=6..8 complete enumeration, supported for n=2..10 tested configurations.
+
+Scope clarification: no counterexample found; does not prove general statement for n>=10. Some empty points have b>=2 but rho=1 holds (triples share common stone).
+
+Next steps: larger-n verification. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

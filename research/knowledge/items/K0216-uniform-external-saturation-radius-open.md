@@ -46,3 +46,13 @@ evidence: 原文監査 PARTIAL / finite_evidence_and_partial_general_result
 現在の結論: 拡大後r=1は最大性・最小極大性・一石移動を保存せず、原文は未決着。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: external saturation radius r(S) computed for maximum safe sets n=1..7 (complete enumeration) and n=8 samples: max r=2 in all fully enumerated cases (n=7: all 16 maxima r=2). No r>=3 observed.
+
+Scope clarification: n=8 only sampled (17 sets); n>=9 unenumerated. Finite evidence supports plausibility of uniform bound C=2 but not proof.
+
+Next steps: complete 8x8 enumeration and test n>=9. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

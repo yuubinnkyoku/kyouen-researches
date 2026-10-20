@@ -53,3 +53,27 @@ Kyouen/Rules.leanは一般n×n盤の整数行列式、相異なる禁止四点�
 これらの追加定理はLean 4.35.0でコンパイルし、公理一覧は `propext`, `Classical.choice`, `Quot.sound` のみであることを確認した。
 
 具体的な巨大バイナリ証明書の読み込みと局所条件の全件検査はC++またはRust側。具体証明書をLean核のみで検査する実装はない。一般定理の形式化を9×9や10×10の具体的な核検査済み勝敗定理と表現しない。
+
+## 2026-10-17 bounded advance (round 2)
+
+New finite evidence: Lean formalization progress adding `Kyouen/TwoByTwoGeometry.lean` with theorem `Kyouen.TwoByTwoGeometry.two_by_two_corners_forbidden`: `ForbiddenFour (n := 2) 0 1 2 3`. Proof by kernel-checked `decide` using existing decidable `ForbiddenFour`; no `sorry`, no `native_decide`. Integrated into `Main.lean`; `lake build` succeeded (22 jobs), including module and executable.
+
+Scope clarification: small concrete instance of already-established forbidden-quadruple rule; no research claim changed. K0009 remains verified.
+
+Next steps: add further small concrete geometry instances as needed. Status remains verified.
+
+## 2026-10-17 bounded advance (round 3)
+
+New finite evidence: Lean formalization progress adding `Kyouen/ThreeByThreeGeometry.lean` with theorem `Kyouen.ThreeByThreeGeometry.three_by_three_corners_forbidden`: `ForbiddenFour (n := 3) 0 2 6 8`. Proof by kernel-checked `decide`; no `sorry`, no `native_decide`. Integrated into `Main.lean`; `lake build` succeeded (24 jobs).
+
+Scope clarification: small concrete instance of already-established rule; no research claim changed. K0009 remains verified.
+
+Next steps: continue adding small verified instances or connect to general geometry. Status remains verified.
+
+## 2026-10-17 bounded advance (round 4)
+
+New finite evidence: Lean formalization progress adding `Kyouen/HighDimGeometry.lean` with theorem `Kyouen.HighDimGeometry.five_vertices_of_two_by_two_by_two_cube_forbidden`: `ForbiddenFive 0 1 3 4 9`. Proof by kernel-checked `decide` using existing decidable `ForbiddenFive` from `Kyouen.CubeRules`; no `sorry`, no `native_decide`. Integrated into `Main.lean`; `lake build` succeeded (26 jobs).
+
+Scope clarification: small concrete instance of already-established high-dimensional q=5 forbidden 5-point rule; no research claim changed. K0009 remains verified.
+
+Next steps: further concrete instances or general proof connections. Status remains verified.

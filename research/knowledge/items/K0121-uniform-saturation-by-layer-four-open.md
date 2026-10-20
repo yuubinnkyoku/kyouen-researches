@@ -51,3 +51,13 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: saturation onsets recomputed/verified for n=2..7: sigma_2=2, sigma_3=4, sigma_4=2, sigma_5=3, sigma_6=3, sigma_7=4; uniformity (K0041) verified n=2..7 (deficit non-increasing, post-sigma saturation). No counterexample in range. n=8 attempt (K_8=15, memo 2^25) did not finish; no sigma_8 claim.
+
+Scope clarification: hypothesis sigma_n<=4 for n>=4 holds for all computed n>=4 (n=4..7). n=8+ uncomputed.
+
+Next steps: complete or extend n=8 enumeration; seek general proof. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

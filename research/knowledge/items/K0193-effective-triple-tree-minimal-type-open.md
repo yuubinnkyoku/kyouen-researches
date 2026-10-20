@@ -51,3 +51,13 @@ evidence: 原文監査 PARTIAL / minimum_connecting_tree_classification
 採用境界: 効く三点辺の最小接続木はK1,3・三葉上の辺、格子実現を検算。大きな木の距離偶奇による一般分類は未証明。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: abstract residual-game enumeration up to 7 vertices: K_{1,3} (Y(1,1,1)) confirmed effective (minimal type). Effectiveness depends on more than Steiner distances (e.g. Y(1,1,1) effective in 24080/27440 seven-vertex trees; ineffective when extras distributed one on each leaf). Minimal-type effectiveness shows periodic/number-theoretic dependence on arm lengths.
+
+Scope clarification: no simple parity rule sufficient; effectiveness not determined by parity alone.
+
+Next steps: derive pair-only Grundy values of tripods/paths and identify exact arithmetic condition. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

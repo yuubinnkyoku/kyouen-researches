@@ -4,11 +4,13 @@
 
 - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
 - [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
+- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 一般健全性定理。具体証明書の受理を意味しない
 ## [Kyouen/CubeCertData.lean](../../../Kyouen/CubeCertData.lean)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): certificate.b64から生成した具体データ
 ## [Kyouen/CubeCertificate.lean](../../../Kyouen/CubeCertificate.lean)
 
+- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 3×3×3・5点禁止の有界具体証明書検査。native_decide 依存あり
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 839局面証明書の局所条件検査と空盤後手必勝定理
 ## [Kyouen/CubeRules.lean](../../../Kyouen/CubeRules.lean)
 
@@ -35,6 +37,9 @@
 
 - [K0001](../items/K0001-complete-call-rules.md) (lean): 整数行列式・ForbiddenFour・LegalMove・movesの実行可能定義
 - [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
+## [Kyouen/SmallCertificates.lean](../../../Kyouen/SmallCertificates.lean)
+
+- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 1×1正方盤の具体証明書検査
 ## [README.md](../../../README.md)
 
 - [K0001](../items/K0001-complete-call-rules.md) (source): 命題・対象範囲・根拠を記した出典
@@ -465,6 +470,10 @@
 ## [research/experiments/capacity-winning-moves-20261010/check_winning_moves.py](../../../research/experiments/capacity-winning-moves-20261010/check_winning_moves.py)
 
 - [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) (verifier): 422953局面・2628542合法列着手の直接mex照合
+## [research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md](../../../research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md)
+
+- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
+- [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
 ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
@@ -1777,6 +1786,26 @@
 ## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
+## [research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md](../../../research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md)
+
+- [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (source): 探索条件・witness・比較・限界
+## [research/experiments/local-main-integration-20261020/source/NEW13-r4-report.md](../../../research/experiments/local-main-integration-20261020/source/NEW13-r4-report.md)
+
+- [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) (source): 探索条件・witness・比較・限界
+## [research/experiments/local-main-integration-20261020/source/verify_new12.py](../../../research/experiments/local-main-integration-20261020/source/verify_new12.py)
+
+- [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (verifier): 独立整数行列式検証。forbidden quads 0、未阻害空点 0
+## [research/experiments/local-main-integration-20261020/source/verify_new13.py](../../../research/experiments/local-main-integration-20261020/source/verify_new13.py)
+
+- [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) (verifier): 独立整数行列式検証。forbidden quads 0、未阻害空点 0
+## [research/experiments/local-main-integration-20261020/verify_witnesses.py](../../../research/experiments/local-main-integration-20261020/verify_witnesses.py)
+
+- [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (verifier): 今回の独立した差分3×3整数行列式・全空点阻害検査
+- [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) (verifier): 今回の独立した差分3×3整数行列式・全空点阻害検査
+## [research/experiments/local-main-integration-20261020/witness-validation.json](../../../research/experiments/local-main-integration-20261020/witness-validation.json)
+
+- [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
+- [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
 ## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）
@@ -6587,6 +6616,7 @@
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 一つのS6 LOSSを29個のS8 LOSS証人と483個の終局S10葉で証明する証明書
 ## [research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py)
 
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): 固定先手 S6 LOSS の cache-free 終局証明; 483 S10 LOSS 葉, 1,028,621 状態; 6 S5 LOSS 親; 空盤 winner は未確定
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): S6証明境界と全S10葉をキャッシュなしで検査（1,028,621状態）
 ## [research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp)
 
@@ -6606,6 +6636,9 @@
 ## [research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py](../../../research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (verifier): 全90合法S6子・raw exact・cache隔離・S4/S5伝播の独立監査
+## [research/experiments/n11-s7-fifth-terminal-20261015/fifth_verify_standalone.py](../../../research/experiments/n11-s7-fifth-terminal-20261015/fifth_verify_standalone.py)
+
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S7 WIN の第5独立終局証明; 35 S8, 738 S9-S10 辺, 468 S10 葉, 93,481 状態; 空盤 winner は未確定
 ## [research/experiments/n11-s7-four-win-terminal-20261020/s7_win_four_min_certificate.json](../../../research/experiments/n11-s7-four-win-terminal-20261020/s7_win_four_min_certificate.json)
 
 - [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (certificate): 4根の終局証明
@@ -6621,6 +6654,9 @@
 ## [research/experiments/n11-s8-to-s7-lift238-20261020/verify_and_lift.py](../../../research/experiments/n11-s8-to-s7-lift238-20261020/verify_and_lift.py)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (verifier): 終局葉からの35根の再証明と全7石親列挙
+## [research/experiments/n11-s9-second-target-20261015/verify.py](../../../research/experiments/n11-s9-second-target-20261015/verify.py)
+
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
 ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典
@@ -8394,6 +8430,9 @@
 ## [results/9x9/factorial/primary-summary.csv](../../../results/9x9/factorial/primary-summary.csv)
 
 - [K0087](../items/K0087-n9-factorial-holm-comparisons.md) (data): 四本の事前Holm家族と記述量
+## [results/K0281_residual_witnesses.json](../../../results/K0281_residual_witnesses.json)
+
+- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 本報告の witness 抽出結果 (exact decision + drop-one + witness quad)
 ## [results/all-certificates-check.txt](../../../results/all-certificates-check.txt)
 
 - [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) (log): 命題・対象範囲・根拠を記した出典
@@ -8422,12 +8461,15 @@
 ## [results/cycle34_occupancy_lattice_certificate.json](../../../results/cycle34_occupancy_lattice_certificate.json)
 
 - [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (certificate): 全120候補の不実現と対照
+- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 既存の残差認証
 ## [results/cycle40_compressed_inequalities.json](../../../results/cycle40_compressed_inequalities.json)
 
 - [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (data): 113候補を除外する部分集合容量
+- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 既存の残差認証
 ## [results/cycle40b_residual_joint_lemmas.json](../../../results/cycle40b_residual_joint_lemmas.json)
 
 - [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (data): 七残余候補の完全決定
+- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 既存の残差認証
 ## [results/cycle8_c_determining_n7.csv](../../../results/cycle8_c_determining_n7.csv)
 
 - [K0267](../items/K0267-n7-two-stone-determination-and-13-stone-completion.md) (data): 全16配置の最小識別核
@@ -8482,6 +8524,7 @@
 ## [rust/independent-verifier/KYOENC4_VALIDATION.md](../../../rust/independent-verifier/KYOENC4_VALIDATION.md)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (log): 命題・対象範囲・根拠を記した出典
+- [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (log): Rust checker validated KYOENC4 10x10 nonempty-root DAG (2 nodes) and unit tests; checker toolchain ready
 - [K0280](../items/K0280-independent-rust-verification-boundaries.md) (log): high-word実証と旧版互換
 ## [rust/independent-verifier/README.md](../../../rust/independent-verifier/README.md)
 

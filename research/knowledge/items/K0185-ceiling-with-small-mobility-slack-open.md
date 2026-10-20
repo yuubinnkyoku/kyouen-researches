@@ -47,3 +47,13 @@ evidence: 原文監査 PARTIAL / finite_complete_census_and_small_board_crossche
 7×7の全179,810,350安全局面を用いた有限監査では、g=hにおけるh=0..10の最小余裕|L|−hは0,0,1,1,2,2,4,5,9,17,28。4×4では別実装の再帰で一致した。
 
 有限盤で余裕が増えたことは、固定余裕の無限族の不存在証明ではない。ここでhは終局0・非終局1+max(子h)であり、misèreの終局1から始める補助mex値とは異なる。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: independent enumeration for n=2,3,4 validates procedure (n=4 matches ceil_n4.json: min slack 0,0,1,2,6,9 for h=0..5). n=2: 15 states, K=3; n=3: 298 states, K=5. Larger-case data n=5..7 as previously. Ceiling counts: n=2 10, n=3 168, n=4 4,434.
+
+Scope clarification: fixed finite boards cannot decide K0185 (h->infinity requires unbounded boards).
+
+Next steps: seek unbounded-board arguments or asymptotic constructions. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

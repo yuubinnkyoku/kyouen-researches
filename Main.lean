@@ -1,6 +1,10 @@
 import Kyouen.CertificateSoundness
 import Kyouen.Rules
 import Kyouen.SmallCertificates
+import Kyouen.TwoByTwoGeometry
+import Kyouen.ThreeByThreeGeometry
+import Kyouen.HighDimGeometry
+import Kyouen.FourByFourGeometry
 import Kyouen.UniformCapacity
 import Kyouen.CubeCertificate
 

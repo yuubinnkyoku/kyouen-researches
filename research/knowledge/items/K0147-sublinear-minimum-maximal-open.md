@@ -51,3 +51,13 @@ evidence: 原文監査 PARTIAL / general_asymptotic_lower_exponent_proof
 最新の独立検査済み構成ではn=11..15にn−1石極大が存在する。s_11≤10<11は確定するが、有限のn−1例をs_n/n→0の証明と解釈しない。
 
 直線被覆係数の改善・円の平方完成ノルム上界2(n−1)^6も下界側の改良であり、本問を閉じない。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: independent Python enumeration reconfirms s_1..s_6 = [1,3,5,5,5,6] with witnesses. Series s_1..s_10 = [1,3,5,5,5,6,7,8,9,10]; tail n=7..10 linear (s_n=n); log-log exponent 0.669 driven by early transient, tail exponent 1.0. No positive evidence for sublinearity.
+
+Scope clarification: finite data do not support sublinearity; lower bound n^(2/3) (K0106) retained.
+
+Next steps: construct O(n^(2/3)) maximal safe sets or determine s_11 exactly. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

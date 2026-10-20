@@ -31,6 +31,8 @@ artifacts:
 - path: research/experiments/parabola-equality-extension-20261016/output/witnesses_521_2000.json
   role: certificate
   note: 521..1999の全206素数の等号証人
+scope: 奇素数 p における等号 A(p)=(p+3)/2 の有限検証範囲と d=h 例外の記述。
+evidence: finite computation; d=h sufficient for 5..443 and 2003..2143 except 1087,1091,1367,1523,1847,1861,2027; no counterexample to equality found through 2143; all-prime proof unknown
 ---
 
 # 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
@@ -47,3 +49,13 @@ research/experiments/parabola-equality-extension-20261016 で構成し、同じ�
 K0334は、等号問題をある完全対dについてsigned NAE3/4と原点由来2/3リテラル節の
 同時充足可能性へ正確に帰着した。その全称充足可能性も反例素数も未確定。
 認証方式の上界や全盤K_pの既知下界とは別の問い。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: `d=h` is sufficient for all primes 5..443 and (newly) 2003..2143, except `d=h-1` for 1087, 1091, 1367, 1523, 1847, 2027 and `d=h-66` for 1861; p=2027 independently verified with `verify_witnesses.cpp`. All 302 odd primes up to 2000 already had equality witnesses; new runs add independently checked witnesses for 2003..2053 and 2069..2143. No counterexample prime to equality found.
+
+Scope clarification: K0101 is not resolved by the `d=h` construction alone; `d=h` works for most primes but has exceptions, so a uniform construction remains unknown.
+
+Next steps: characterize the `d=h` exception pattern; extend finite verification beyond 2143; seek an all-prime proof. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

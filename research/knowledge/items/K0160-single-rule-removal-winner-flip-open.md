@@ -48,3 +48,13 @@ evidence: 原文監査 PARTIAL / finite_exhaustion
 採用境界: 7×7全6364単独解除を935軌道・二方式で除外。共有標準表全179810350局面の証明条件も検算。存在証人はn≥8。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: fresh singles-only solver reproduces 0 empty-board flips for n=3 (14 quads), n=4 (194 quads), n=5 (826 quads); n=4 also 0 flips among 18,721 two-quad removals. Combined with cited n=6 (2,491) and n=7 (6,364/935 orbits) results, no single-removal flip through n=7.
+
+Scope clarification: only P/N outcomes, not Grundy; n=6,n=7 rely on cited prior experiments; no n>=8 computation attempted.
+
+Next steps: attempt n>=8 computation or construct proof. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

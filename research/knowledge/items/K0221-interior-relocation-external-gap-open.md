@@ -46,3 +46,13 @@ evidence: 原文監査 PARTIAL / finite_evidence_and_partial_general_result
 現在の結論: 拡大後r=1は最大性・最小極大性・一石移動を保存せず、原文は未決着。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: one-stone relocations on n=6 maximum sets (464 sets): broad 608 safe relocations, max delta-r=+1 (1->2); strict interior box-preserving 16 moves max delta-r=0. n=7 maximum sets: 0 safe relocations. 11x11 10-stone maximal: 104 safe relocations all r'=1. Random small sets: delta-r<=+1. Prior B390: 8-stone maximal 1-swap delta-r in {0,+1}.
+
+Scope clarification: finite evidence does not support unbounded interior jump; consistent with prior weak refutation. Strict interior relocations show delta-r=0 in tested maximal/maximum sets.
+
+Next steps: construct proof of boundedness or growing family. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

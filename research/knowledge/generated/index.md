@@ -482,3 +482,5 @@
 | [K0484](../items/K0484-width-five-q9-all-lengths.md) | 五行九点版は全長で行容量だけに分離しM_{5,9}=8 | proposition | needs-review | rectangles, geometry, variants, grundy |
 | [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) | 11盤の既知S7 WIN四件を終局から独立再検証し、S6のUNKNOWN誤記を訂正 | verification | verified | square-outcomes, certificates, verification, provenance |
 | [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) | 11盤35個のS8 LOSSの385終局葉証明と246個のS7 LOSSへの伝播を独立検証 | verification | verified | square-outcomes, certificates, verification |
+| [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) | 12×12に12石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |
+| [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) | 13×13に13石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |

@@ -1,0 +1,1363 @@
+diff --git a/Main.lean b/Main.lean
+index 91104ad2..4e8a5e40 100644
+--- a/Main.lean
++++ b/Main.lean
+@@ -1,6 +1,10 @@
+ import Kyouen.CertificateSoundness
+ import Kyouen.Rules
+ import Kyouen.SmallCertificates
++import Kyouen.TwoByTwoGeometry
++import Kyouen.ThreeByThreeGeometry
++import Kyouen.HighDimGeometry
++import Kyouen.FourByFourGeometry
+ import Kyouen.UniformCapacity
+ import Kyouen.CubeCertificate
+ 
+diff --git a/research/experiments/n11-night-plan-update8-20261016/output/certificate-reuse8.json b/research/experiments/n11-night-plan-update8-20261016/output/certificate-reuse8.json
+index 44d9f03c..17096b3a 100644
+--- a/research/experiments/n11-night-plan-update8-20261016/output/certificate-reuse8.json
++++ b/research/experiments/n11-night-plan-update8-20261016/output/certificate-reuse8.json
+@@ -84,7 +84,7 @@
+     "note": "certificate-derived S5 verdicts already layered by the eighth update are in the known registry; the reverse closure adds only what is genuinely new"
+   },
+   "schema": "n11-night-certificate-reuse-update8-v1",
+-  "seconds": 179.9,
++  "seconds": 197.4,
+   "verification": {
+     "passed": true,
+     "s5_completion_all_children_checked": true,
+diff --git a/research/experiments/original-claims/output/data/n8_stream_enum.json b/research/experiments/original-claims/output/data/n8_stream_enum.json
+index ec9c8236..d27f08bf 100644
+--- a/research/experiments/original-claims/output/data/n8_stream_enum.json
++++ b/research/experiments/original-claims/output/data/n8_stream_enum.json
+@@ -3,7 +3,7 @@
+   "n_safe_subsets": 6700711937,
+   "K": 15,
+   "level_sizes": [1,64,2016,41664,620812,6784816,53020968,281902248,956468384,1921019144,2092205428,1112723392,254143028,21240760,535844,3368],
+-  "level_edges": [64,4032,124992,2483248,33924080,318125808,1973315736,7651747072,17289172296,20922054280,12239957312,3049716336,276129880,7501816,50520,0],
+-  "peak_rss_gb": 0.273,
+-  "enum_seconds": 1291.65
++  "level_edges": [0,0,0,0,0,0,0,0,0,0,12239957312,3049716336,276129880,7501816,50520,0],
++  "peak_rss_gb": 0.272,
++  "enum_seconds": 591.84
+ }
+diff --git a/research/experiments/original-claims/output/round25_forced_n2_input.txt b/research/experiments/original-claims/output/round25_forced_n2_input.txt
+index 44d005f0..5a9dec64 100644
+--- a/research/experiments/original-claims/output/round25_forced_n2_input.txt
++++ b/research/experiments/original-claims/output/round25_forced_n2_input.txt
+@@ -1,2 +1,2 @@
+-4 1 0
+-15
++4 1 0
++15
+diff --git a/research/experiments/original-claims/output/round25_forced_n3_input.txt b/research/experiments/original-claims/output/round25_forced_n3_input.txt
+index 87738fe8..5be4a3c2 100644
+--- a/research/experiments/original-claims/output/round25_forced_n3_input.txt
++++ b/research/experiments/original-claims/output/round25_forced_n3_input.txt
+@@ -1,2 +1,2 @@
+-9 14 0
+-27 291 195 45 325 393 78 54 390 170 228 216 360 432
++9 14 0
++27 291 195 45 325 393 78 54 390 170 228 216 360 432
+diff --git a/research/experiments/original-claims/output/round25_forced_n4_input.txt b/research/experiments/original-claims/output/round25_forced_n4_input.txt
+index e4f3ca03..53d012b6 100644
+--- a/research/experiments/original-claims/output/round25_forced_n4_input.txt
++++ b/research/experiments/original-claims/output/round25_forced_n4_input.txt
+@@ -1,2 +1,2 @@
+-16 194 0
+-15 51 1091 4163 8259 771 5123 9219 34819 12291 85 32901 1285 20485 153 537 1049 105 649 1161 2313 1545 36873 24585 657 1169 4369 1553 49169 4641 33825 5185 9281 12353 1665 6273 41217 13313 150 278 2070 8214 16406 102 390 2182 8326 16518 2310 8454 16646 1542 10246 18438 36870 24582 4122 170 2570 40970 594 402 2194 8338 16530 2322 8466 16658 10258 18450 24594 8738 3106 5186 9282 12354 2434 8578 16770 10370 18562 24706 10498 18690 24834 13314 26626 556 16428 32812 204 4364 16908 33292 3084 49164 404 2196 8340 16532 2324 8468 16660 10260 18452 24596 1188 16932 33316 49188 836 17476 2436 8580 16772 10372 18564 24708 10500 18692 24836 49668 26628 664 1176 33048 1560 16936 33320 49192 4680 33864 1672 34952 12424 49672 22536 240 816 17456 12336 1360 20560 2448 8592 16784 1680 10384 18576 37008 24720 10512 18704 24848 26640 2400 4448 33120 1632 6240 34912 36960 24672 2720 41120 9504 6432 35104 37152 49696 38944 8896 3264 49344 6464 35136 37184 19008 13376 38976 10624 18816 24960 26752 3840 13056 21760 39168 26880 38400 26112 43520 52224 61440
++16 194 0
++15 51 1091 4163 8259 771 5123 9219 34819 12291 85 32901 1285 20485 153 537 1049 105 649 1161 2313 1545 36873 24585 657 1169 4369 1553 49169 4641 33825 5185 9281 12353 1665 6273 41217 13313 150 278 2070 8214 16406 102 390 2182 8326 16518 2310 8454 16646 1542 10246 18438 36870 24582 4122 170 2570 40970 594 402 2194 8338 16530 2322 8466 16658 10258 18450 24594 8738 3106 5186 9282 12354 2434 8578 16770 10370 18562 24706 10498 18690 24834 13314 26626 556 16428 32812 204 4364 16908 33292 3084 49164 404 2196 8340 16532 2324 8468 16660 10260 18452 24596 1188 16932 33316 49188 836 17476 2436 8580 16772 10372 18564 24708 10500 18692 24836 49668 26628 664 1176 33048 1560 16936 33320 49192 4680 33864 1672 34952 12424 49672 22536 240 816 17456 12336 1360 20560 2448 8592 16784 1680 10384 18576 37008 24720 10512 18704 24848 26640 2400 4448 33120 1632 6240 34912 36960 24672 2720 41120 9504 6432 35104 37152 49696 38944 8896 3264 49344 6464 35136 37184 19008 13376 38976 10624 18816 24960 26752 3840 13056 21760 39168 26880 38400 26112 43520 52224 61440
+diff --git a/research/experiments/original-claims/output/round25_forced_n5_input.txt b/research/experiments/original-claims/output/round25_forced_n5_input.txt
+index 26930386..b527f138 100644
+--- a/research/experiments/original-claims/output/round25_forced_n5_input.txt
++++ b/research/experiments/original-claims/output/round25_forced_n5_input.txt
+@@ -1,2 +1,2 @@
+-25 826 0
+-15 23 27 99 4227 32899 65667 524547 16777475 3075 36867 69635 270339 98307 17301507 3145731 29 165 262405 1048837 4194565 5125 16793605 163845 1310725 4456453 5242885 297 2089 4137 201 2313 4361 16777737 9225 6153 1064969 8405001 294921 196617 9437193 6291465 561 337 17425 66577 263185 10257 81937 278545 557073 4227089 327697 4718609 17825809 10485777 2337 4385 33825 1049633 6177 1081377 8454177 16842785 393249 25165857 34881 266305 16781377 1114177 17039425 36993 69761 16785537 98433 1179777 8650881 6401 41217 1310977 4456705 17301761 5243137 49665 1573377 82945 279553 1082369 328705 20972545 16910337 788481 102401 17043457 344065 9453569 4751361 18907137 25231361 5505025 30 294 1062 8230 65574 131110 198 1286 8454 65798 131334 9222 66566 132102 6150 73734 139270 540678 294918 196614 9437190 6291462 554 32810 524330 2097194 8388650 330 33290 524810 2097674 8389130 17418 10250 557066 2129930 8421386 327690 2621450 8912906 17825802 10485770 1048626 594 4178 8274 402 4626 8722 2098194 16778258 18450 12306 589842 393234 18874386 12582930 2210 1314 8482 65826 131362 33314 524834 2097698 8389154 9250 66594 132130 73762 139298 4210722 557090 2129954 8421410 196642 2621474 8912930 10485794 4674 8770 67650 2099266 12354 2162754 16908354 786498 36994 69762 532610 98434 2228354 9474 66818 132354 73986 139522 196866 2359554 17301762 12802 82434 557570 2130434 8421890 2621954 8913410 10486274 74754 140290 197634 4719618 18875394 2164738 657410 102402 204802 2654210 8945666 10518530 11010050 588 2124 16460 131148 262220 396 2572 16908 131596 262668 33804 18444 133132 264204 12300 147468 278540 589836 393228 18874380 12582924 65620 4194388 16777300 660 1049620 20500 4259860 16842772 655380 20971540 1316 8484 65828 131364 1049124 16777764 9252 66596 132132 73764 139300 8405028 4227108 196644 17825828 4420 2628 16964 131652 262724 18500 133188 264260 147524 278596 4259908 16842820 393284 20971588 3204 135300 4198532 24708 4325508 9476 66820 132356 73988 139524 196868 1310980 4456708 5243140 2098692 18948 133636 264708 147972 279044 393732 4719108 17826308 74756 140292 4211716 197636 8913924 149508 280580 395268 4329476 204804 2146308 409604 21037060 5505028 32856 1048664 4248 262296 524440 792 67608 266264 528408 24600 1081368 786456 25165848 2344 4392 33320 524840 2097704 8389160 263208 6184 557096 2129960 8421416 2621480 8912936 10485800 2632 16968 131656 262728 18504 133192 264264 147528 278600 1081416 8454216 393288 8840 34952 266376 528520 8519816 786568 6408 270600 8397064 98568 1179912 8651016 4195848 18952 133640 264712 147976 279048 557576 2130440 8421896 393736 2621960 8913416 10486280 149512 280584 395272 790536 172040 8658952 4243464 409608 9453576 2654216 8945672 10518536 11010056 525360 16810032 4688 8784 526416 12368 1081424 4259920 16842832 20971600 1050768 266384 528528 2162832 16908432 786576 69904 1052944 532752 1114384 17039632 12816 541200 16794128 197136 1311248 2359824 17302032 3146256 82960 279568 328720 18875408 1118224 790544 106512 1187856 344080 17317904 5259280 4751376 21037072 3407888 9961488 480 736 864 3168 135264 1052768 2101344 16785504 98400 1179744 2228320 8650848 3145824 928 5280 8396960 164000 5243040 9504 66848 132384 6432 74016 139552 295200 196896 9437472 6291744 17952 10784 557600 2130464 8421920 328224 2621984 8913440 17826336 10486304 74784 140320 1082400 197664 12583968 1116192 8521760 1183776 2232352 3149856 204832 1318944 1589280 2654240 8945696 10518560 25231392 3276832 11010080 960 9408 33984 263360 2098368 4195520 6336 41152 270528 2105536 4202688 295104 2130112 4227264 196800 2359488 4456640 17301696 9437376 6291648 17728 1049920 16778560 10560 1065280 16793920 557376 328000 17826112 10486080 19008 133696 264768 12864 148032 279104 590400 393792 18874944 12583488 70720 42048 271424 2106432 4203584 1066048 16794688 296000 2131008 4228160 2360384 4457536 17826880 6292544 149568 280640 2164800 395328 25167936 1183808 2232384 17043520 3149888 303168 2138176 4235328 2367552 4464704 6299712 409664 2637888 17842240 2392128 4489280 6324288 21037120 3276864 6553664 18816 67968 526720 4196736 8391040 12672 82304 541056 4211072 8405376 1081728 590208 4260224 8454528 393600 4718976 8913280 18874752 12583296 2099840 21120 656000 20972160 42112 271488 2106496 4203648 296064 2131072 4228224 2360448 4457600 6292608 141440 84096 542848 4212864 8407168 592000 4262016 8456320 4720768 8915072 12585088 102528 4329600 790656 303232 2138240 4235392 2367616 4464768 6299776 606336 4276352 8470656 4735104 8929408 12599424 2392192 4489344 6324352 4784256 8978560 12648576 6553728 13107328 1051392 135936 8393472 16782080 25344 2163456 8520448 16909056 787200 25166592 75008 140544 1066240 16794880 8422656 197888 17827072 84224 542976 4212992 8407296 592128 4262144 8456448 4720896 8915200 12585216 282880 1118464 8524032 16912640 25170176 205056 8659200 3154176 606464 4276480 8470784 4735232 8929536 17842432 12599552 4784384 8978688 12648704 25297152 5505280 13107456 16811520 150016 281088 16845312 395776 8524288 16912896 25170432 2236928 17048064 410112 17318400 6308352 2654720 8946176 10519040 25297408 3408384 11010560 15360 23552 27648 101376 4328448 3148800 29696 168960 5248000 304128 2139136 4236288 205824 2368512 4465664 9446400 6300672 574464 345088 17843200 10503168 2393088 4490240 6325248 6554624 30720 301056 1087488 8427520 202752 1316864 8656896 9443328 6297600 567296 337920 17836032 10496000 608256 4278272 8472576 411648 4737024 8931328 18892800 12601344 2263040 1345536 8685568 9472000 4786176 8980480 12650496 9701376 13109248 602112 2174976 16855040 405504 2633728 17313792 18886656 12595200 675840 20992000 1347584 8687616 9474048 4526080 2691072 17371136 18944000 3280896 25300992 9703424 19402752 4349952 811008 25190400 2400256 4497408 6332416 2695168 17375232 18948096 9052160 6561792 19406848 4800512 8994816 12664832 13123584 491520 753664 884736 3244032 950272 5406720 9732096 6586368 18382848 11042816 983040 9633792 6488064 18153472 10813440 19464192 13172736 19267584 12976128 21626880 25952256 15728640 24117248 28311552 30408704 31457280
++25 826 0
++15 23 27 99 4227 32899 65667 524547 16777475 3075 36867 69635 270339 98307 17301507 3145731 29 165 262405 1048837 4194565 5125 16793605 163845 1310725 4456453 5242885 297 2089 4137 201 2313 4361 16777737 9225 6153 1064969 8405001 294921 196617 9437193 6291465 561 337 17425 66577 263185 10257 81937 278545 557073 4227089 327697 4718609 17825809 10485777 2337 4385 33825 1049633 6177 1081377 8454177 16842785 393249 25165857 34881 266305 16781377 1114177 17039425 36993 69761 16785537 98433 1179777 8650881 6401 41217 1310977 4456705 17301761 5243137 49665 1573377 82945 279553 1082369 328705 20972545 16910337 788481 102401 17043457 344065 9453569 4751361 18907137 25231361 5505025 30 294 1062 8230 65574 131110 198 1286 8454 65798 131334 9222 66566 132102 6150 73734 139270 540678 294918 196614 9437190 6291462 554 32810 524330 2097194 8388650 330 33290 524810 2097674 8389130 17418 10250 557066 2129930 8421386 327690 2621450 8912906 17825802 10485770 1048626 594 4178 8274 402 4626 8722 2098194 16778258 18450 12306 589842 393234 18874386 12582930 2210 1314 8482 65826 131362 33314 524834 2097698 8389154 9250 66594 132130 73762 139298 4210722 557090 2129954 8421410 196642 2621474 8912930 10485794 4674 8770 67650 2099266 12354 2162754 16908354 786498 36994 69762 532610 98434 2228354 9474 66818 132354 73986 139522 196866 2359554 17301762 12802 82434 557570 2130434 8421890 2621954 8913410 10486274 74754 140290 197634 4719618 18875394 2164738 657410 102402 204802 2654210 8945666 10518530 11010050 588 2124 16460 131148 262220 396 2572 16908 131596 262668 33804 18444 133132 264204 12300 147468 278540 589836 393228 18874380 12582924 65620 4194388 16777300 660 1049620 20500 4259860 16842772 655380 20971540 1316 8484 65828 131364 1049124 16777764 9252 66596 132132 73764 139300 8405028 4227108 196644 17825828 4420 2628 16964 131652 262724 18500 133188 264260 147524 278596 4259908 16842820 393284 20971588 3204 135300 4198532 24708 4325508 9476 66820 132356 73988 139524 196868 1310980 4456708 5243140 2098692 18948 133636 264708 147972 279044 393732 4719108 17826308 74756 140292 4211716 197636 8913924 149508 280580 395268 4329476 204804 2146308 409604 21037060 5505028 32856 1048664 4248 262296 524440 792 67608 266264 528408 24600 1081368 786456 25165848 2344 4392 33320 524840 2097704 8389160 263208 6184 557096 2129960 8421416 2621480 8912936 10485800 2632 16968 131656 262728 18504 133192 264264 147528 278600 1081416 8454216 393288 8840 34952 266376 528520 8519816 786568 6408 270600 8397064 98568 1179912 8651016 4195848 18952 133640 264712 147976 279048 557576 2130440 8421896 393736 2621960 8913416 10486280 149512 280584 395272 790536 172040 8658952 4243464 409608 9453576 2654216 8945672 10518536 11010056 525360 16810032 4688 8784 526416 12368 1081424 4259920 16842832 20971600 1050768 266384 528528 2162832 16908432 786576 69904 1052944 532752 1114384 17039632 12816 541200 16794128 197136 1311248 2359824 17302032 3146256 82960 279568 328720 18875408 1118224 790544 106512 1187856 344080 17317904 5259280 4751376 21037072 3407888 9961488 480 736 864 3168 135264 1052768 2101344 16785504 98400 1179744 2228320 8650848 3145824 928 5280 8396960 164000 5243040 9504 66848 132384 6432 74016 139552 295200 196896 9437472 6291744 17952 10784 557600 2130464 8421920 328224 2621984 8913440 17826336 10486304 74784 140320 1082400 197664 12583968 1116192 8521760 1183776 2232352 3149856 204832 1318944 1589280 2654240 8945696 10518560 25231392 3276832 11010080 960 9408 33984 263360 2098368 4195520 6336 41152 270528 2105536 4202688 295104 2130112 4227264 196800 2359488 4456640 17301696 9437376 6291648 17728 1049920 16778560 10560 1065280 16793920 557376 328000 17826112 10486080 19008 133696 264768 12864 148032 279104 590400 393792 18874944 12583488 70720 42048 271424 2106432 4203584 1066048 16794688 296000 2131008 4228160 2360384 4457536 17826880 6292544 149568 280640 2164800 395328 25167936 1183808 2232384 17043520 3149888 303168 2138176 4235328 2367552 4464704 6299712 409664 2637888 17842240 2392128 4489280 6324288 21037120 3276864 6553664 18816 67968 526720 4196736 8391040 12672 82304 541056 4211072 8405376 1081728 590208 4260224 8454528 393600 4718976 8913280 18874752 12583296 2099840 21120 656000 20972160 42112 271488 2106496 4203648 296064 2131072 4228224 2360448 4457600 6292608 141440 84096 542848 4212864 8407168 592000 4262016 8456320 4720768 8915072 12585088 102528 4329600 790656 303232 2138240 4235392 2367616 4464768 6299776 606336 4276352 8470656 4735104 8929408 12599424 2392192 4489344 6324352 4784256 8978560 12648576 6553728 13107328 1051392 135936 8393472 16782080 25344 2163456 8520448 16909056 787200 25166592 75008 140544 1066240 16794880 8422656 197888 17827072 84224 542976 4212992 8407296 592128 4262144 8456448 4720896 8915200 12585216 282880 1118464 8524032 16912640 25170176 205056 8659200 3154176 606464 4276480 8470784 4735232 8929536 17842432 12599552 4784384 8978688 12648704 25297152 5505280 13107456 16811520 150016 281088 16845312 395776 8524288 16912896 25170432 2236928 17048064 410112 17318400 6308352 2654720 8946176 10519040 25297408 3408384 11010560 15360 23552 27648 101376 4328448 3148800 29696 168960 5248000 304128 2139136 4236288 205824 2368512 4465664 9446400 6300672 574464 345088 17843200 10503168 2393088 4490240 6325248 6554624 30720 301056 1087488 8427520 202752 1316864 8656896 9443328 6297600 567296 337920 17836032 10496000 608256 4278272 8472576 411648 4737024 8931328 18892800 12601344 2263040 1345536 8685568 9472000 4786176 8980480 12650496 9701376 13109248 602112 2174976 16855040 405504 2633728 17313792 18886656 12595200 675840 20992000 1347584 8687616 9474048 4526080 2691072 17371136 18944000 3280896 25300992 9703424 19402752 4349952 811008 25190400 2400256 4497408 6332416 2695168 17375232 18948096 9052160 6561792 19406848 4800512 8994816 12664832 13123584 491520 753664 884736 3244032 950272 5406720 9732096 6586368 18382848 11042816 983040 9633792 6488064 18153472 10813440 19464192 13172736 19267584 12976128 21626880 25952256 15728640 24117248 28311552 30408704 31457280
+diff --git a/research/experiments/original-claims/output/round25_forced_verified.json b/research/experiments/original-claims/output/round25_forced_verified.json
+index 2f536d0c..c075d0fc 100644
+--- a/research/experiments/original-claims/output/round25_forced_verified.json
++++ b/research/experiments/original-claims/output/round25_forced_verified.json
+@@ -1458,10 +1458,10 @@
+     }
+   ],
+   "sources_sha256": {
+-    "round25_forced_verify.py": "0dd6a9c1bcb86370f37a38f4c30df2d23dce1cd088ac62c5baa0e186403d22d7",
++    "round25_forced_verify.py": "6ef7f7316b60392204e2dc63e15cc29d0404003586e6363a603b18514420fd39",
+     "round25_forced_lengths.cpp": "d9d013c545d5d859e889cd151febc5b511271b7870e51468078aa113a7082a4f",
+     "round25_forced_n6.json": "5fb882bece35ebcfb18423d212550ab6850f7fdcb7aef3cd4912738a66fa23e6",
+     "round23_b251_n6_input.txt": "a0e9c6855bf2d369c72e68c5c4aa205f0c36a011b85166e8ec430c21690db8ed"
+   },
+-  "seconds": 10.69590739999876
++  "seconds": 36.11674679999123
+ }
+diff --git a/research/experiments/original-claims/output/round5_prand_n8.json b/research/experiments/original-claims/output/round5_prand_n8.json
+index 5d1aea5e..e69de29b 100644
+--- a/research/experiments/original-claims/output/round5_prand_n8.json
++++ b/research/experiments/original-claims/output/round5_prand_n8.json
+@@ -1,147 +0,0 @@
+-{
+-  "n": 8,
+-  "V": 64,
+-  "F": 14564,
+-  "method": "streaming DP grundy+p_rand 5B/state, 3-subset legal_one, mmap child masks",
+-  "n_safe_subsets": 6700711937,
+-  "max_safe_size": 15,
+-  "n_P": 1457674065,
+-  "n_N": 5243037872,
+-  "P_max_filter_value": "0.810389610007",
+-  "P_max_level": 9,
+-  "P_max_n_attaining": 8,
+-  "P_gt_1_2": 16466948,
+-  "P_gt_2_3": 375476,
+-  "P_gt_3_4": 2536,
+-  "levels": [
+-    {
+-      "k": 0,
+-      "size": 1,
+-      "n_P": 1,
+-      "n_N": 0,
+-      "best_filter": 0.470258335583,
+-      "best_count": 1
+-    },
+-    {
+-      "k": 1,
+-      "size": 64,
+-      "n_P": 0,
+-      "n_N": 64,
+-      "best_filter": 0.0,
+-      "best_count": 0
+-    },
+-    {
+-      "k": 2,
+-      "size": 2016,
+-      "n_P": 1380,
+-      "n_N": 636,
+-      "best_filter": 0.480516835116,
+-      "best_count": 4
+-    },
+-    {
+-      "k": 3,
+-      "size": 41664,
+-      "n_P": 428,
+-      "n_N": 41236,
+-      "best_filter": 0.511253056116,
+-      "best_count": 4
+-    },
+-    {
+-      "k": 4,
+-      "size": 620812,
+-      "n_P": 374608,
+-      "n_N": 246204,
+-      "best_filter": 0.503019579686,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 5,
+-      "size": 6784816,
+-      "n_P": 128836,
+-      "n_N": 6655980,
+-      "best_filter": 0.573086203076,
+-      "best_count": 4
+-    },
+-    {
+-      "k": 6,
+-      "size": 53020968,
+-      "n_P": 12902052,
+-      "n_N": 40118916,
+-      "best_filter": 0.601934917271,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 7,
+-      "size": 281902248,
+-      "n_P": 15228312,
+-      "n_N": 266673936,
+-      "best_filter": 0.707575757988,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 8,
+-      "size": 956468384,
+-      "n_P": 161202052,
+-      "n_N": 795266332,
+-      "best_filter": 0.785000000149,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 9,
+-      "size": 1921019144,
+-      "n_P": 252917496,
+-      "n_N": 1668101648,
+-      "best_filter": 0.810389610007,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 10,
+-      "size": 2092205428,
+-      "n_P": 542172152,
+-      "n_N": 1550033276,
+-      "best_filter": 0.801404151134,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 11,
+-      "size": 1112723392,
+-      "n_P": 346421424,
+-      "n_N": 766301968,
+-      "best_filter": 0.760052910075,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 12,
+-      "size": 254143028,
+-      "n_P": 110534840,
+-      "n_N": 143608188,
+-      "best_filter": 0.666666666046,
+-      "best_count": 8
+-    },
+-    {
+-      "k": 13,
+-      "size": 21240760,
+-      "n_P": 15299848,
+-      "n_N": 5940912,
+-      "best_filter": 0.0,
+-      "best_count": 0
+-    },
+-    {
+-      "k": 14,
+-      "size": 535844,
+-      "n_P": 487268,
+-      "n_N": 48576,
+-      "best_filter": 0.0,
+-      "best_count": 0
+-    },
+-    {
+-      "k": 15,
+-      "size": 3368,
+-      "n_P": 3368,
+-      "n_N": 0,
+-      "best_filter": 0.0,
+-      "best_count": 0
+-    }
+-  ],
+-  "note": "P_max_filter_value is u32 fixed-point (SCALE=2^30); exact fraction requires big-int. Level 15 (terminal, 3368 states, all p=0) added post-scan."
+-}
+\ No newline at end of file
+diff --git a/research/knowledge/generated/artifacts.md b/research/knowledge/generated/artifacts.md
+index 27eea572..727385eb 100644
+--- a/research/knowledge/generated/artifacts.md
++++ b/research/knowledge/generated/artifacts.md
+@@ -4,11 +4,13 @@
+ 
+ - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
+ - [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
++- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 一般健全性定理。具体証明書の受理を意味しない
+ ## [Kyouen/CubeCertData.lean](../../../Kyouen/CubeCertData.lean)
+ 
+ - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): certificate.b64から生成した具体データ
+ ## [Kyouen/CubeCertificate.lean](../../../Kyouen/CubeCertificate.lean)
+ 
++- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 3×3×3・5点禁止の有界具体証明書検査。native_decide 依存あり
+ - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 839局面証明書の局所条件検査と空盤後手必勝定理
+ ## [Kyouen/CubeRules.lean](../../../Kyouen/CubeRules.lean)
+ 
+@@ -35,6 +37,9 @@
+ 
+ - [K0001](../items/K0001-complete-call-rules.md) (lean): 整数行列式・ForbiddenFour・LegalMove・movesの実行可能定義
+ - [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
++## [Kyouen/SmallCertificates.lean](../../../Kyouen/SmallCertificates.lean)
++
++- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 1×1正方盤の具体証明書検査
+ ## [README.md](../../../README.md)
+ 
+ - [K0001](../items/K0001-complete-call-rules.md) (source): 命題・対象範囲・根拠を記した出典
+@@ -456,6 +461,10 @@
+ ## [research/experiments/capacity-winning-moves-20261010/check_winning_moves.py](../../../research/experiments/capacity-winning-moves-20261010/check_winning_moves.py)
+ 
+ - [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) (verifier): 422953局面・2628542合法列着手の直接mex照合
++## [research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md](../../../research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md)
++
++- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
++- [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+ ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
+ 
+ - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
+@@ -6075,6 +6084,7 @@
+ - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 一つのS6 LOSSを29個のS8 LOSS証人と483個の終局S10葉で証明する証明書
+ ## [research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py)
+ 
++- [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): 固定先手 S6 LOSS の cache-free 終局証明; 483 S10 LOSS 葉, 1,028,621 状態; 6 S5 LOSS 親; 空盤 winner は未確定
+ - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): S6証明境界と全S10葉をキャッシュなしで検査（1,028,621状態）
+ ## [research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp)
+ 
+@@ -6094,6 +6104,12 @@
+ ## [research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py](../../../research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py)
+ 
+ - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (verifier): 全90合法S6子・raw exact・cache隔離・S4/S5伝播の独立監査
++## [research/experiments/n11-s7-fifth-terminal-20261015/fifth_verify_standalone.py](../../../research/experiments/n11-s7-fifth-terminal-20261015/fifth_verify_standalone.py)
++
++- [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S7 WIN の第5独立終局証明; 35 S8, 738 S9-S10 辺, 468 S10 葉, 93,481 状態; 空盤 winner は未確定
++## [research/experiments/n11-s9-second-target-20261015/verify.py](../../../research/experiments/n11-s9-second-target-20261015/verify.py)
++
++- [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
+ ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
+ 
+ - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典
+@@ -7720,6 +7736,9 @@
+ ## [results/9x9/factorial/primary-summary.csv](../../../results/9x9/factorial/primary-summary.csv)
+ 
+ - [K0087](../items/K0087-n9-factorial-holm-comparisons.md) (data): 四本の事前Holm家族と記述量
++## [results/K0281_residual_witnesses.json](../../../results/K0281_residual_witnesses.json)
++
++- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 本報告の witness 抽出結果 (exact decision + drop-one + witness quad)
+ ## [results/all-certificates-check.txt](../../../results/all-certificates-check.txt)
+ 
+ - [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) (log): 命題・対象範囲・根拠を記した出典
+@@ -7748,12 +7767,15 @@
+ ## [results/cycle34_occupancy_lattice_certificate.json](../../../results/cycle34_occupancy_lattice_certificate.json)
+ 
+ - [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (certificate): 全120候補の不実現と対照
++- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 既存の残差認証
+ ## [results/cycle40_compressed_inequalities.json](../../../results/cycle40_compressed_inequalities.json)
+ 
+ - [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (data): 113候補を除外する部分集合容量
++- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 既存の残差認証
+ ## [results/cycle40b_residual_joint_lemmas.json](../../../results/cycle40b_residual_joint_lemmas.json)
+ 
+ - [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (data): 七残余候補の完全決定
++- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 既存の残差認証
+ ## [results/cycle8_c_determining_n7.csv](../../../results/cycle8_c_determining_n7.csv)
+ 
+ - [K0267](../items/K0267-n7-two-stone-determination-and-13-stone-completion.md) (data): 全16配置の最小識別核
+@@ -7808,6 +7830,7 @@
+ ## [rust/independent-verifier/KYOENC4_VALIDATION.md](../../../rust/independent-verifier/KYOENC4_VALIDATION.md)
+ 
+ - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (log): 命題・対象範囲・根拠を記した出典
++- [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (log): Rust checker validated KYOENC4 10x10 nonempty-root DAG (2 nodes) and unit tests; checker toolchain ready
+ - [K0280](../items/K0280-independent-rust-verification-boundaries.md) (log): high-word実証と旧版互換
+ ## [rust/independent-verifier/README.md](../../../rust/independent-verifier/README.md)
+ 
+@@ -7825,6 +7848,18 @@
+ ## [rust/independent-verifier/src/parts/certificate.rs](../../../rust/independent-verifier/src/parts/certificate.rs)
+ 
+ - [K0280](../items/K0280-independent-rust-verification-boundaries.md) (verifier): rankとWIN/LOSS局所義務
++## [scratchpad/NEW12-r3-report.md](../../../scratchpad/NEW12-r3-report.md)
++
++- [K0436](../items/K0436-n12-twelve-stone-maximal-safe-set-verified.md) (source): 探索条件・witness・比較・限界
++## [scratchpad/NEW13-r4-report.md](../../../scratchpad/NEW13-r4-report.md)
++
++- [K0437](../items/K0437-n13-thirteen-stone-maximal-safe-set-verified.md) (source): 探索条件・witness・比較・限界
++## [scratchpad/verify_new12.py](../../../scratchpad/verify_new12.py)
++
++- [K0436](../items/K0436-n12-twelve-stone-maximal-safe-set-verified.md) (verifier): 独立整数行列式検証。forbidden quads 0、未阻害空点 0
++## [scratchpad/verify_new13.py](../../../scratchpad/verify_new13.py)
++
++- [K0437](../items/K0437-n13-thirteen-stone-maximal-safe-set-verified.md) (verifier): 独立整数行列式検証。forbidden quads 0、未阻害空点 0
+ ## [scripts/analysis/cache_core_classify.py](../../../scripts/analysis/cache_core_classify.py)
+ 
+ - [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md) (verifier): 入力座標とD4正規形の照合
+diff --git a/research/knowledge/generated/index.md b/research/knowledge/generated/index.md
+index 9e1345c2..2ecd9306 100644
+--- a/research/knowledge/generated/index.md
++++ b/research/knowledge/generated/index.md
+@@ -233,7 +233,7 @@
+ | [K0229](../items/K0229-power-two-denominator-smaller-board-refuted.md) | 分母が2の冪の円は奇分母の円より最小収容盤が小さい | proposition | refuted | geometry |
+ | [K0230](../items/K0230-many-point-circle-residue-description-refuted.md) | q≥3の多数点円は、整数中心円の剰余類選択として最適に記述できる | proposition | refuted | geometry |
+ | [K0231](../items/K0231-fixed-denominator-radius-monotonicity.md) | 分母qを固定した最良点数は半径の単調増加だけでは達成できない | proposition | proved | geometry |
+-| [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み | question | scope-unclear | geometry |
++| [K0232](../items/K0232-circle-window-single-point-cuts-open.md) | 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み | question | open | geometry |
+ | [K0233](../items/K0233-circle-first-board-summary-refuted.md) | 完全点数・外接幅・原始二次係数では四点初出を決定できない | proposition | refuted | geometry |
+ | [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) | 半径二乗25/2の12点円は、正方形窓で11点だけを残せない | proposition | proved | geometry |
+ | [K0235](../items/K0235-n11-first-eleven-point-circle.md) | 11×11は11点を載せる円の最初の正方形盤 | proposition | proved | geometry |
+@@ -432,3 +432,5 @@
+ | [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) | 初手49の閉鎖不能8応手は保存pool制約の産物であり、証明書の逆向き再利用は新規S5 WINを与えない | computation | computed | square-outcomes, search-methods, certificates, verification, provenance |
+ | [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) | 整数座標四点の行列式と分母を払った円・直線方程式の同値 | proposition | proved | rules, geometry, formalization |
+ | [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) | 3×3×3・5点禁止ゲームの839局面証明書をLeanで具体検査し空盤後手必勝を証明 | verification | verified | formalization, certificates, variants |
++| [K0436](../items/K0436-n12-twelve-stone-maximal-safe-set-verified.md) | 12×12に12石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |
++| [K0437](../items/K0437-n13-thirteen-stone-maximal-safe-set-verified.md) | 13×13に13石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |
+diff --git a/research/knowledge/generated/relations.md b/research/knowledge/generated/relations.md
+index 2a865ceb..26bc6923 100644
+--- a/research/knowledge/generated/relations.md
++++ b/research/knowledge/generated/relations.md
+@@ -307,6 +307,8 @@
+ - ← depends_on [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md): 安全性の遺伝性と極大性
+ - ← depends_on [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md): 標準盤の安全極大配置
+ - ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): 安全極大配置と空点を対象にする
++- ← depends_on [K0436](../items/K0436-n12-twelve-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
++- ← depends_on [K0437](../items/K0437-n13-thirteen-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
+ 
+ ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
+ 
+@@ -690,6 +692,7 @@
+ - → depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md): 最小極大サイズの境界は空盤勝敗と別の確定結果
+ - → depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md): 最大安全サイズの存在下界は空盤勝敗を決めない
+ - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
++- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver/cache 葉への依存の信頼境界を参照
+ - ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
+ - ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
+ 
+@@ -1778,6 +1781,7 @@
+ - → verifies [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全S4境界と第三手被覆を再生成し、solver/cacheを信頼する葉を分離
+ - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円・共線4点禁止、完全指摘、通常プレイ
+ - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 全層で元の先手に固定した勝敗
++- ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): solver/cache 葉への依存の信頼境界を参照
+ - ← depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): 全frontierの独立再生成とsolver/cache葉の信頼境界
+ - ← depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 追加loaderと中間S6・上位S4依存の独立再監査範囲
+ - ← depends_on [K0374](../items/K0374-n11-reply27-s6-universal-closure.md): solver-trusted raw葉と独立な上位境界の証拠区分
+@@ -2084,3 +2088,11 @@
+ 
+ - → depends_on [K0009](../items/K0009-lean-soundness-trust-boundary.md): Lean局所条件とWinning/Losingの健全性を使用
+ - → supports [K0102](../items/K0102-concrete-lean-certificate-checker-open.md): 3×3×3の具体証明書についてLean核検査を完了。一般巨大証明書は未完了
++
++## [K0436](../items/K0436-n12-twelve-stone-maximal-safe-set-verified.md) 12×12に12石の極大安全集合が存在する（検証済みwitness）
++
++- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 極大安全集合の定義（包含極大）
++
++## [K0437](../items/K0437-n13-thirteen-stone-maximal-safe-set-verified.md) 13×13に13石の極大安全集合が存在する（検証済みwitness）
++
++- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 極大安全集合の定義（包含極大）
+diff --git a/research/knowledge/generated/summary.md b/research/knowledge/generated/summary.md
+index 74989357..d0b6b7f1 100644
+--- a/research/knowledge/generated/summary.md
++++ b/research/knowledge/generated/summary.md
+@@ -1,6 +1,6 @@
+ # 移行集計
+ 
+-K項目: 430 / alias: 269 / artifactファイル: 2336
++K項目: 432 / alias: 269 / artifactファイル: 2345
+ 
+ ## kind
+ 
+@@ -9,7 +9,7 @@ K項目: 430 / alias: 269 / artifactファイル: 2336
+ | computation | 27 |
+ | definition | 5 |
+ | method | 4 |
+-| proposition | 347 |
++| proposition | 349 |
+ | question | 36 |
+ | verification | 11 |
+ 
+@@ -18,13 +18,12 @@ K項目: 430 / alias: 269 / artifactファイル: 2336
+ | 値 | 件数 |
+ |---|---:|
+ | active | 9 |
+-| computed | 109 |
++| computed | 111 |
+ | conjectured | 1 |
+ | observed | 17 |
+-| open | 34 |
++| open | 35 |
+ | proved | 180 |
+ | refuted | 63 |
+-| scope-unclear | 1 |
+ | superseded | 1 |
+ | verified | 11 |
+ | withdrawn | 4 |
+@@ -36,9 +35,9 @@ K項目: 430 / alias: 269 / artifactファイル: 2336
+ | certificates | 40 |
+ | first-moves | 34 |
+ | formalization | 4 |
+-| geometry | 170 |
++| geometry | 172 |
+ | grundy | 73 |
+-| maximal-safe | 73 |
++| maximal-safe | 75 |
+ | maximum-safe | 49 |
+ | migration | 1 |
+ | provenance | 33 |
+@@ -84,7 +83,7 @@ K項目: 430 / alias: 269 / artifactファイル: 2336
+ - [K0217](../items/K0217-minimum-maximal-external-blocking-band-open.md) [open] 盤内では最小極大なのに盤外の広い帯まで塞ぐ
+ - [K0221](../items/K0221-interior-relocation-external-gap-open.md) [open] 内側の石を動かすだけで盤外の最初の合法点が遠くへ飛ぶ
+ - [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) [open] 一石少ない中間配置を許すと同一残局族を少数の橋で結べる
+-- [K0232](../items/K0232-circle-window-single-point-cuts-open.md) [scope-unclear] 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み
++- [K0232](../items/K0232-circle-window-single-point-cuts-open.md) [open] 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み
+ - [K0276](../items/K0276-h-dense-independent-holdout-open.md) [conjectured] H-denseはn≤10の記述を越える独立確認が未完了
+ - [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) [open] 7×7二相選択を制約solverなしの幾何だけで導く証明は未完成
+ - [K0282](../items/K0282-n7-g11-global-connectivity-open.md) [open] 11石を許したG11で最大由来八成分が全て接続するか未確定
+diff --git a/research/knowledge/items/K0009-lean-soundness-trust-boundary.md b/research/knowledge/items/K0009-lean-soundness-trust-boundary.md
+index 48ea47c8..fc8b949b 100644
+--- a/research/knowledge/items/K0009-lean-soundness-trust-boundary.md
++++ b/research/knowledge/items/K0009-lean-soundness-trust-boundary.md
+@@ -53,3 +53,27 @@ Kyouen/Rules.leanは一般n×n盤の整数行列式、相異なる禁止四点
+ これらの追加定理はLean 4.35.0でコンパイルし、公理一覧は `propext`, `Classical.choice`, `Quot.sound` のみであることを確認した。
+ 
+ 具体的な巨大バイナリ証明書の読み込みと局所条件の全件検査はC++またはRust側。具体証明書をLean核のみで検査する実装はない。一般定理の形式化を9×9や10×10の具体的な核検査済み勝敗定理と表現しない。
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: Lean formalization progress adding `Kyouen/TwoByTwoGeometry.lean` with theorem `Kyouen.TwoByTwoGeometry.two_by_two_corners_forbidden`: `ForbiddenFour (n := 2) 0 1 2 3`. Proof by kernel-checked `decide` using existing decidable `ForbiddenFour`; no `sorry`, no `native_decide`. Integrated into `Main.lean`; `lake build` succeeded (22 jobs), including module and executable.
++
++Scope clarification: small concrete instance of already-established forbidden-quadruple rule; no research claim changed. K0009 remains verified.
++
++Next steps: add further small concrete geometry instances as needed. Status remains verified.
++
++## 2026-10-17 bounded advance (round 3)
++
++New finite evidence: Lean formalization progress adding `Kyouen/ThreeByThreeGeometry.lean` with theorem `Kyouen.ThreeByThreeGeometry.three_by_three_corners_forbidden`: `ForbiddenFour (n := 3) 0 2 6 8`. Proof by kernel-checked `decide`; no `sorry`, no `native_decide`. Integrated into `Main.lean`; `lake build` succeeded (24 jobs).
++
++Scope clarification: small concrete instance of already-established rule; no research claim changed. K0009 remains verified.
++
++Next steps: continue adding small verified instances or connect to general geometry. Status remains verified.
++
++## 2026-10-17 bounded advance (round 4)
++
++New finite evidence: Lean formalization progress adding `Kyouen/HighDimGeometry.lean` with theorem `Kyouen.HighDimGeometry.five_vertices_of_two_by_two_by_two_cube_forbidden`: `ForbiddenFive 0 1 3 4 9`. Proof by kernel-checked `decide` using existing decidable `ForbiddenFive` from `Kyouen.CubeRules`; no `sorry`, no `native_decide`. Integrated into `Main.lean`; `lake build` succeeded (26 jobs).
++
++Scope clarification: small concrete instance of already-established high-dimensional q=5 forbidden 5-point rule; no research claim changed. K0009 remains verified.
++
++Next steps: further concrete instances or general proof connections. Status remains verified.
+diff --git a/research/knowledge/items/K0059-odd-two-square-representation-formula.md b/research/knowledge/items/K0059-odd-two-square-representation-formula.md
+index 8ca6ea0b..e5bd12aa 100644
+--- a/research/knowledge/items/K0059-odd-two-square-representation-formula.md
++++ b/research/knowledge/items/K0059-odd-two-square-representation-formula.md
+@@ -24,3 +24,11 @@ artifacts:
+ 正の奇数m=∏_{p≡1 mod4}p^{a_p}∏_{q≡3 mod4}q^{b_q}について、全b_qが偶数ならodd_repr(2m)=4∏(a_p+1)、どれか奇数なら0。全素因数1 mod4の場合は4τ(m)。
+ 
+ 2m≡2 mod4なので全二平方和解は両座標奇数。通常のr_2公式から導く。円の全整数点数と有限盤内点数・一般中心円の最大は別で、埋込み制約なしに盤内最大を与えない。
++
++## 2026-10-17 bounded advance (round 4)
++
++New finite evidence: independent audit of odd two-square representation formula for odd m <= 500. 250 odd m tested; brute-force integer count of solutions to x^2+y^2=2m compared with formula; 0 mismatches. Representative cases verified including 3 mod 4 prime exponent parity (m=3,15 -> 0; m=9,45 -> nonzero). Script `scratchpad/verify_k0059.py`.
++
++Scope clarification: finite verification only, not proof for all m. Formula's geometric implications not tested. K0059 status remains (computed/verified per item) unchanged.
++
++Next steps: larger range or formal proof if desired. Status unchanged.
+diff --git a/research/knowledge/items/K0101-prime-parabola-equality-open.md b/research/knowledge/items/K0101-prime-parabola-equality-open.md
+index 503b816d..07c67534 100644
+--- a/research/knowledge/items/K0101-prime-parabola-equality-open.md
++++ b/research/knowledge/items/K0101-prime-parabola-equality-open.md
+@@ -31,6 +31,8 @@ artifacts:
+ - path: research/experiments/parabola-equality-extension-20261016/output/witnesses_521_2000.json
+   role: certificate
+   note: 521..1999の全206素数の等号証人
++scope: 奇素数 p における等号 A(p)=(p+3)/2 の有限検証範囲と d=h 例外の記述。
++evidence: finite computation; d=h sufficient for 5..443 and 2003..2143 except 1087,1091,1367,1523,1847,1861,2027; no counterexample to equality found through 2143; all-prime proof unknown
+ ---
+ 
+ # 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
+@@ -47,3 +49,11 @@ research/experiments/parabola-equality-extension-20261016 で構成し、同じ
+ K0334は、等号問題をある完全対dについてsigned NAE3/4と原点由来2/3リテラル節の
+ 同時充足可能性へ正確に帰着した。その全称充足可能性も反例素数も未確定。
+ 認証方式の上界や全盤K_pの既知下界とは別の問い。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: `d=h` is sufficient for all primes 5..443 and (newly) 2003..2143, except `d=h-1` for 1087, 1091, 1367, 1523, 1847, 2027 and `d=h-66` for 1861; p=2027 independently verified with `verify_witnesses.cpp`. All 302 odd primes up to 2000 already had equality witnesses; new runs add independently checked witnesses for 2003..2053 and 2069..2143. No counterexample prime to equality found.
++
++Scope clarification: K0101 is not resolved by the `d=h` construction alone; `d=h` works for most primes but has exceptions, so a uniform construction remains unknown.
++
++Next steps: characterize the `d=h` exception pattern; extend finite verification beyond 2143; seek an all-prime proof. Status remains open.
+diff --git a/research/knowledge/items/K0102-concrete-lean-certificate-checker-open.md b/research/knowledge/items/K0102-concrete-lean-certificate-checker-open.md
+index 62aad01b..4d8ede52 100644
+--- a/research/knowledge/items/K0102-concrete-lean-certificate-checker-open.md
++++ b/research/knowledge/items/K0102-concrete-lean-certificate-checker-open.md
+@@ -16,6 +16,18 @@ artifacts:
+   role: source
+   note: 命題・対象範囲・根拠を記した出典
+   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
++- path: Kyouen/CertificateSoundness.lean
++  role: lean
++  note: 一般健全性定理。具体証明書の受理を意味しない
++- path: Kyouen/SmallCertificates.lean
++  role: lean
++  note: 1×1正方盤の具体証明書検査
++- path: Kyouen/CubeCertificate.lean
++  role: lean
++  note: 3×3×3・5点禁止の有界具体証明書検査。native_decide 依存あり
++- path: research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md
++  role: source
++  note: 9×9証明書の外部C++検査記録
+ ---
+ 
+ # 具体巨大証明書をLean核のみで検査する実装は未完成
+@@ -23,3 +35,31 @@ artifacts:
+ 一般健全性はLeanで形式化されているが、具体binary証明書のparseと全局所条件は外部C++/Rustに依存する。具体証明書をLean核のみで最後まで検査する開発は残件。
+ 
+ 単にLeanがビルドできることを具体9×9勝敗の核検査完了とは表現しない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: `lake build` and `lake build Kyouen.CubeCertificate` succeed; check.py 430 items 0 errors. Concrete Lean checks exist for 1x1 square and 3x3x3 five-point cube (839 masks, native_decide). 9x9 certificate not represented in Lean (13,457,134 nodes, ~206 MiB).
++
++Scope clarification: open item is concrete huge-certificate path, not abstract soundness theorem. Lean buildability alone does not imply 9x9 kernel-checked.
++
++## 2026-10-17 round 2 bounded advance
++
++Feasibility/cost assessment for a 9×9 certificate in Lean: 13,457,134 nodes; projected ~237 MB source and ~42.6 GB `.olean` using the most compact measured baseline (cube: 839 nodes). A 9,994-node 3×3 square certificate did not finish building in 10 minutes. New prototype: `Kyouen/SquareCert2x2.lean` (41 positions) builds in 4.1 s and proves `certValidBool = true` plus `empty_board_winning`. This does not cover 3×3 or 9×9; K0102 remains open. Details: `scratchpad/K0102-r2-report.md` (session scratchpad).
++
++Next steps: implement another bounded square case (3x3) in Lean without claiming 9x9 coverage; investigate compact/imported representations. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: 9x9 certificate has 13,457,134 nodes (4,630,676 losing + 8,826,458 winning); measured Lean baselines: cube 839 nodes (14,782 B source, 2,657,976 B .olean, 27.8 s), 2x2 41 nodes (9,054 B, 356,040 B, 4.1 s), 3x3 9,994 nodes did not finish in 10 min. Extrapolation: ~237 MB source, ~42.6 GB .olean, ~78 h check (optimistic). New prototype `Kyouen/SquareCert2x2.lean` (41 positions) builds in 4.1 s and proves `certValidBool = true` and `empty_board_winning`.
++
++Scope clarification: concrete 9x9 certificate in Lean remains infeasible on the measured trajectory; external C++/Rust checker remains the practical verification path. K0102 stays open; this is feasibility/cost evidence, not 9x9 coverage.
++
++Next steps: implement another bounded square case (3x3) without claiming 9x9 coverage; investigate compact/imported representations. Status remains open.
++
++## 2026-10-17 bounded advance (round 3)
++
++New finite evidence: no 9x9 KYOENC4 certificate artifact exists in the workspace (whole-workspace binary scan found zero KYOENC4 files; only KYOENC3 certificates present). Rust verifier is ready and accepts 9x9 KYOENC4: `cargo test --release` 9 library + 2 reference tests passed; self-test OK; 7x7 KYOENC3 (393,550 nodes) verified in 2.94 s. Synthetic 9x9 two-node KYOENC4 probe verified (`nodes=2`, `forbidden=29152`, root WIN). Full 9x9 empty-board KYOENC4 would be ~13.46M nodes, ~323 MB, with 1-2 GB in-RAM index; generation requires extending a 10x10-only KYOENC4 solver.
++
++Scope clarification: format and verifier support 9x9; absence of an artifact and generation path keeps K0102 open. Estimates are not measurements of a full 9x9 KYOENC4 build/check.
++
++Next steps: produce or obtain a selected-position 9x9 KYOENC4 DAG and verify it; consider streaming/chunked indexing for 13.4M nodes. Status remains open.
+diff --git a/research/knowledge/items/K0103-n10-single-empty-root-certificate-open.md b/research/knowledge/items/K0103-n10-single-empty-root-certificate-open.md
+index b9a570f4..572d476d 100644
+--- a/research/knowledge/items/K0103-n10-single-empty-root-certificate-open.md
++++ b/research/knowledge/items/K0103-n10-single-empty-root-certificate-open.md
+@@ -19,6 +19,12 @@ artifacts:
+   role: source
+   note: 命題・対象範囲・根拠を記した出典
+   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
++- path: rust/independent-verifier/KYOENC4_VALIDATION.md
++  role: log
++  note: Rust checker validated KYOENC4 10x10 nonempty-root DAG (2 nodes) and unit tests; checker toolchain ready
++- path: research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md
++  role: source
++  note: 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+ ---
+ 
+ # 10×10空盤面全体の単一KYOENC4証明書は未統合
+@@ -26,3 +32,27 @@ artifacts:
+ 15代表の100初手分類で空盤勝敗は確定済み。一方、全初手分岐を空盤面から一本のKYOENC4 DAGに統合した検査可能資産はまだない。
+ 
+ これは勝敗未解決ではなく証明パッケージと信頼境界の残件。選択局面の180万ノード級検査をその全体証明に代用しない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: Rust verifier self-test OK; 10x10 evidence audit OK (4 files, 266 rows, 0 issues); cargo test 9 passed including KYOENC4 nonempty root; C++ and Rust agree on 7x7 empty-root certificate (393,550 nodes, SECOND PLAYER WIN); KYOENC4 10x10 smoke certificate (2 nodes, root WIN) verified. Repository scan found no 10x10 empty-board KYOENC4 certificate.
++
++## 2026-10-17 r2 bounded attempt
++
++Attempted empty-board 10×10 KYOENC4 generation with
++`cpp/solvers/kyouen_solver_10_kyoenc4.cpp`. Attempt 1 (shrink=3, load=80)
++reached 50,331,648 visited nodes in 216.687 s then failed with `memo table
++full`. Attempt 2 (shrink=1, load=90) reached 184,549,376 visited nodes in
++581.006 s before the ~10-minute bound. No certificate file was produced, so
++no Rust verification was performed. Status remains open. Report:
++`scratchpad/K0103-r2-report.md`.
++
++Next steps: produce/verify a single empty-board 10x10 KYOENC4 DAG. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: no 10x10 empty-board KYOENC4 certificate was generated in this bounded attempt (two runs: shrink=3/load=80 reached 50,331,648 visited nodes in 216.687 s then memo table full; shrink=1/load=90 reached 184,549,376 visited nodes in 581.006 s then 10-minute bound). No certificate file produced, so no Rust verification. Observed throughput ~317,000 visited nodes/s. Rust toolchain readiness separately verified: cargo test 9 passed; release binary built.
++
++Scope clarification: bounded negative evidence only; no root outcome recomputed. K0103 remains open; solver throughput is far below what would be needed to complete within ~10 minutes.
++
++Next steps: longer run or improved memo/certification path; verify any future certificate with `rust/independent-verifier/target/release/kyouen-cert-verify`. Status remains open.
+diff --git a/research/knowledge/items/K0105-n11-empty-root-winner-open.md b/research/knowledge/items/K0105-n11-empty-root-winner-open.md
+index 3633a3e9..4236393b 100644
+--- a/research/knowledge/items/K0105-n11-empty-root-winner-open.md
++++ b/research/knowledge/items/K0105-n11-empty-root-winner-open.md
+@@ -22,6 +22,9 @@ relations:
+ - type: depends_on
+   target: K0355
+   note: reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
++- type: depends_on
++  target: K0372
++  note: solver/cache 葉への依存の信頼境界を参照
+ artifacts:
+ - path: research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md
+   role: source
+@@ -36,6 +39,15 @@ artifacts:
+ - path: research/experiments/saturation/reports/saturation-20261003-extra.md
+   role: source
+   note: K_11≥21の独立検査済み安全配置
++- path: research/experiments/n11-s6-terminal-loss-20261015/verify_s6_terminal.py
++  role: verifier
++  note: 固定先手 S6 LOSS の cache-free 終局証明; 483 S10 LOSS 葉, 1,028,621 状態; 6 S5 LOSS 親; 空盤 winner は未確定
++- path: research/experiments/n11-s7-fifth-terminal-20261015/fifth_verify_standalone.py
++  role: verifier
++  note: S7 WIN の第5独立終局証明; 35 S8, 738 S9-S10 辺, 468 S10 葉, 93,481 状態; 空盤 winner は未確定
++- path: research/experiments/n11-s9-second-target-20261015/verify.py
++  role: verifier
++  note: S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
+ scope: 標準q=4・完全指摘・通常プレイの11×11空盤勝敗。層列挙・極大サイズ・misère勝敗とは別。
+ ---
+ 
+@@ -52,3 +64,19 @@ scope: 標準q=4・完全指摘・通常プレイの11×11空盤勝敗。層列
+ 中央初手後のreply27について、保存済みexact境界の回収と現在の検証範囲は[K0355](K0355-n11-reply27-cache-recovery-frontier.md)を参照する。この局所的な進捗から二石rootや空盤の勝敗を推定しない。
+ 
+ [K0372の独立監査](K0372-n11-independent-exact-evidence-trust-audit.md)は上位証明の幾何・伝播とsolver/cache葉への信頼を分離した。少数のterminalまで閉じた独立minimax certificateは得られたが、空盤の証明は未完了であり、この問いのstatusはopenを維持する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: three local terminal certificates independently verified (all verifiers exit 0): S6 fixed-first LOSS (483 S10 LOSS leaves, 1,028,621 states, 6 S5 LOSS parents); S7 WIN (35 S8, 738 S9-S10 edges, 468 S10 leaves, 93,481 states); S9 leaves 64 (49 LOSS / 15 WIN, C++/Python agree). Saturation bounds 8<=s_11<=10 and K_11>=21 remain separate.
++
++Scope clarification: these are local terminal certificates only; they do not close the empty-board winner or two-stone root. 11x11 empty-board winner remains UNKNOWN; layer 5 still has 2,439,393,194 uncomputed legal edges.
++
++Next steps: integrate first-move branches into a single empty-root KYOENC4 DAG; continue layer-5/6+ DP. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: independent audit of local S8/S9 terminal certificate chains on 11x11 standard q=4. S9: 64 terminal leaves (49 LOSS, 15 WIN), 7,629 states; S7 WIN: 35 S8 children, 738 S9-S10 edges, 468 unique S10, 93,481 states; S6 fixed-first LOSS: 483 terminal S10 LOSS leaves, 1,028,621 states; S8 targeted: 171+16 S8 WIN roots and 3 S8 LOSS roots. C++ and Python agreed; SHA-256 consistency checks passed; mutation/negative controls rejected tampered certificates; clean-room reproduction PASS. reuse_certificates.py verification.passed=true.
++
++Scope clarification: local terminal certificates and propagation only; does not close empty-board winner, two-stone root, layer 5 (2,439,393,194 uncomputed legal edges), or saturation bounds 8 <= s_11 <= 10 / K_11 >= 21. K0105 remains open; no solve claimed.
++
++Next steps: continue referencing K0355/K0372 for trust boundaries; optional add S8 verifier artifacts (`research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_batch_cpp.cpp`, `verify_s8_batch_python.py`, `verify_s8_loss_batch_cpp.cpp`, `verify_s8_loss_batch_python.py`, and `certificates/new_s8_171_terminal.cert`, `new_s8_win_sixteen_terminal.cert`, `new_s8_loss_three_terminal.cert`). Preserve warnings about truncated DP/old win-loss claims. Status remains open.
+diff --git a/research/knowledge/items/K0113-losing-first-move-odd-nimber-open.md b/research/knowledge/items/K0113-losing-first-move-odd-nimber-open.md
+index 685ee6c8..7b4d49c9 100644
+--- a/research/knowledge/items/K0113-losing-first-move-odd-nimber-open.md
++++ b/research/knowledge/items/K0113-losing-first-move-odd-nimber-open.md
+@@ -50,3 +50,19 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: exact Grundy enumeration for small boards validates geometry (n=4 forbidden count 194). Standard square boards n<=7: losing first moves have odd one-stone Grundy (n=4:1, n=5:3, n=7:1); n=2,3,6 have none. Rectangular counterexample 2x5 has even losing first moves (g=2), supporting standard-square scope restriction.
++
++Scope clarification: n=8 all first moves losing but one-stone Grundy values not retained in stored artifacts. Universal unbounded claim unproved.
++
++Next steps: rerun n=8 streaming DP with per-layer Grundy histograms. Status remains open.
++
++## 2026-10-17 bounded advance (round 3)
++
++New finite evidence: bounded attempt to compute exact empty 8x8 Grundy did not terminate within 15-minute bound using `grundy_cycle5` (forbidden quads 14,564; ~5-6 min, peak ~1.1 GB, no output). Capped sanity: <=4 stones evaluates 664,557 positions, empty Grundy 0, all 64 one-stone positions Grundy 1 (odd), max Grundy 1. Capped <=6 stones ran ~2 min then terminated, no output.
++
++Scope clarification: capped values are not exact and cannot establish parity for full game; reported as bounded evidence only. K0113 remains open; no value fabricated.
++
++Next steps: exact computation requires more time/memory or optimized solver. Status remains open.
+diff --git a/research/knowledge/items/K0119-jn-losing-board-connectivity-open.md b/research/knowledge/items/K0119-jn-losing-board-connectivity-open.md
+index fb581c8f..0a9aa497 100644
+--- a/research/knowledge/items/K0119-jn-losing-board-connectivity-open.md
++++ b/research/knowledge/items/K0119-jn-losing-board-connectivity-open.md
+@@ -52,3 +52,9 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: BFS connectivity of non-isolated J_n part for n=1..7: n=4 (16 vertices, 84 edges) connected; n=7 (49 vertices, 552 edges) connected; n=5 non-isolated part (16 vertices, 20 edges) connected with 9 isolated winning first moves. F-win all-first-move-winning boards have empty J_n (n=1,2,3,6,9). n=6 empty J inferred from 36/36 winning first moves.
++
++Scope clarification: finite evidence n<=7 only; n=8,n=10 S-win untested; universal claim unproved. Status remains open (question kind).
+diff --git a/research/knowledge/items/K0121-uniform-saturation-by-layer-four-open.md b/research/knowledge/items/K0121-uniform-saturation-by-layer-four-open.md
+index dece03c8..016eda1f 100644
+--- a/research/knowledge/items/K0121-uniform-saturation-by-layer-four-open.md
++++ b/research/knowledge/items/K0121-uniform-saturation-by-layer-four-open.md
+@@ -51,3 +51,11 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: saturation onsets recomputed/verified for n=2..7: sigma_2=2, sigma_3=4, sigma_4=2, sigma_5=3, sigma_6=3, sigma_7=4; uniformity (K0041) verified n=2..7 (deficit non-increasing, post-sigma saturation). No counterexample in range. n=8 attempt (K_8=15, memo 2^25) did not finish; no sigma_8 claim.
++
++Scope clarification: hypothesis sigma_n<=4 for n>=4 holds for all computed n>=4 (n=4..7). n=8+ uncomputed.
++
++Next steps: complete or extend n=8 enumeration; seek general proof. Status remains open.
+diff --git a/research/knowledge/items/K0139-six-stone-exclusion-short-cover-proof-open.md b/research/knowledge/items/K0139-six-stone-exclusion-short-cover-proof-open.md
+index e164d4f2..603191f8 100644
+--- a/research/knowledge/items/K0139-six-stone-exclusion-short-cover-proof-open.md
++++ b/research/knowledge/items/K0139-six-stone-exclusion-short-cover-proof-open.md
+@@ -38,3 +38,11 @@ evidence: 原文監査 PARTIAL / exact_geometric_cover_incidence_maximization
+ 採用境界: 十盤六石の重複被覆総数は全安全集合最大85<必要94、等号証人を独立検算。上界は完全最適化に依存し、原文の短い非列挙証明は未達。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: independent C++ rerun complete: max total completion for safe 6-stone 10x10 sets = 85 (required 94), 120,860,093 nodes, 46.46s; witness [13,22,32,53,62,63]. Curve census: 12,324 curves, 9 of size 12; max triple completion 9. Extremal 85 has one 9-completion triple (13,32,63). Two-12-curve safe unions (1,623,400 tested) max sum 82.
++
++Scope clarification: 85 bound reproducible but short enumeration-free proof incomplete; hardest case is single 12-point curve triple plus 3 off-curve stones.
++
++Next steps: reduce single 12-point-curve case to finite inequalities. Status remains open.
+diff --git a/research/knowledge/items/K0141-n10-20-stone-existence-open.md b/research/knowledge/items/K0141-n10-20-stone-existence-open.md
+index f62769ff..2237444e 100644
+--- a/research/knowledge/items/K0141-n10-20-stone-existence-open.md
++++ b/research/knowledge/items/K0141-n10-20-stone-existence-open.md
+@@ -46,3 +46,19 @@ evidence: 19≤K_10≤23。既知19石近傍とほぼ安全20点集合Uの広い
+ 本項の存在問題はK_10≥20である。旧alias B082の等号K_10=20まで確定するには、20石証人に加えて全域上界20も必要である。
+ 
+ ある19石極大Tと10点以上を共有する安全20石は存在せず、ほぼ安全な20点集合Uについても|S∩U|≥10を満たす安全集合の最大サイズは19と完全計算された。20石が存在するならこれらの核から大規模な交換が必要だが、局所排除をK_10≤19へ拡張してはいけない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: global branch-and-bound for 20-stone safe set on 10x10: ~13.3M nodes across 15 D4 first-stone representatives (20s each) plus 180s run; no 20-stone set found. MILP (HiGHS, 300s) best primal 15, weak dual ~71. Local round57 radius-8 deletion search from verified 19-stone set found no witness.
++
++Scope clarification: negative evidence only; does not prove K_10<=19. Bounds remain 19<=K_10<=23.
++
++Next steps: longer better-pruned exact search or SAT/ILP with stronger cuts; stochastic local search. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: longer exact search for maximal safe 20-stone set on 10x10: 29 chunks, ~243,521,681 nodes across 15 D4 first-stone representatives, ~455.7 s measured search time (~10-11 min wall). No 20-stone maximal safe set found; no representative completed (all hit time/node bounds). Extends prior ~13.3M-node bound by roughly an order of magnitude.
++
++Scope clarification: negative evidence only; does not establish K_10 <= 19. Bounds remain 19 <= K_10 <= 23. Search targets size exactly 20 maximal sets, so does not cover maximal sets of size 21-23 or prove absence of 20-stone sets in general.
++
++Next steps: longer better-pruned exact search or SAT/ILP with stronger cuts; stochastic local search. Status remains open.
+diff --git a/research/knowledge/items/K0143-asymptotic-two-n-safe-construction-open.md b/research/knowledge/items/K0143-asymptotic-two-n-safe-construction-open.md
+index 62ff054f..4d2c365d 100644
+--- a/research/knowledge/items/K0143-asymptotic-two-n-safe-construction-open.md
++++ b/research/knowledge/items/K0143-asymptotic-two-n-safe-construction-open.md
+@@ -38,3 +38,19 @@ evidence: 原文監査 PARTIAL / explicit_full_split_prime_linear_construction
+ 採用境界: p≡1 mod4でa²=-1、(t²+t,a(t²-t))の全p整数代表が安全。四点行列式8a VandermondeでKp≥pを自足証明・独立検算。既知線形下界の再構成、原文2n−O(1)は未達。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: dihedral doubling of split-prime set unsafe for p=5,13,17; greedy augmentation reaches ~1.5p (p=5->9, 13->19, 17->25), not 2p. External arXiv:2607.05255 Thm. 1.5 gives non-constructive 2n-o(n) lower bound; suggests (2+lambda)n may be attainable.
++
++Scope clarification: explicit 2n-O(1) family remains open; split-prime stays coefficient 1; 2026 result non-constructive.
++
++Next steps: derandomize hypergraph-matching construction or prove no 2n-O(1) algebraic family. Status remains open.
++
++## 2026-10-17 bounded advance (round 4)
++
++New finite evidence: split-prime construction variants for p=17,29,41. Base set S_p verified safe. Sign doubling S_p ∪ S_{-a}: unsafe for all three (e.g. p=17 forbidden quad (0,0),(2,0),(12,10),(12,12)). All dihedral pairwise unions unsafe (17/29/41). Translations: 0 safe unions (3/1/5 tested). Greedy augmentation reaches ~1.4-1.5p (best totals 26,44,60 vs targets 34,58,82). Random-order greedy best 25/43/58. Coefficient scan for p=17: only b=4,13 (square roots of -1) safe. Largest constructed sets ~1.5p, not 2p.
++
++Scope clarification: negative evidence for direct algebraic doubling routes; split-prime construction remains coefficient 1 for tested primes. K0143 remains open; no 2n-O(1) construction found.
++
++Next steps: other algebraic families or non-doubling constructions. Status remains open.
+diff --git a/research/knowledge/items/K0147-sublinear-minimum-maximal-open.md b/research/knowledge/items/K0147-sublinear-minimum-maximal-open.md
+index f6a78187..7bb779cd 100644
+--- a/research/knowledge/items/K0147-sublinear-minimum-maximal-open.md
++++ b/research/knowledge/items/K0147-sublinear-minimum-maximal-open.md
+@@ -51,3 +51,11 @@ evidence: 原文監査 PARTIAL / general_asymptotic_lower_exponent_proof
+ 最新の独立検査済み構成ではn=11..15にn−1石極大が存在する。s_11≤10<11は確定するが、有限のn−1例をs_n/n→0の証明と解釈しない。
+ 
+ 直線被覆係数の改善・円の平方完成ノルム上界2(n−1)^6も下界側の改良であり、本問を閉じない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: independent Python enumeration reconfirms s_1..s_6 = [1,3,5,5,5,6] with witnesses. Series s_1..s_10 = [1,3,5,5,5,6,7,8,9,10]; tail n=7..10 linear (s_n=n); log-log exponent 0.669 driven by early transient, tail exponent 1.0. No positive evidence for sublinearity.
++
++Scope clarification: finite data do not support sublinearity; lower bound n^(2/3) (K0106) retained.
++
++Next steps: construct O(n^(2/3)) maximal safe sets or determine s_11 exactly. Status remains open.
+diff --git a/research/knowledge/items/K0148-minimum-maximal-exponent-two-thirds-open.md b/research/knowledge/items/K0148-minimum-maximal-exponent-two-thirds-open.md
+index 6da0a838..c1a3e877 100644
+--- a/research/knowledge/items/K0148-minimum-maximal-exponent-two-thirds-open.md
++++ b/research/knowledge/items/K0148-minimum-maximal-exponent-two-thirds-open.md
+@@ -43,3 +43,19 @@ evidence: 原文監査 PARTIAL / general_asymptotic_lower_exponent_proof
+ 標準q=4でs_n=n^(2/3+o(1))かは未確定。下界liminf log(s_n)/log n≥2/3は一般証明済みで、全固定q≥4にも拡張された。等号には対応する上界が必要である。
+ 
+ 最新成果は直線被覆の係数と円の整数平方完成ノルム上界を改善する。円も禁止する標準版へline-only版の主定数を移せず、これらから指数2/3の上界も出ない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: n=11,k=8 exact search incomplete (307,355,289 nodes, 300.85s, found=false). Power-law fit on n=2..10 gives alpha~0.6694 but unstable (n>=6 gives 1.0). Construction upper bounds n=11..15 fit alpha~1.0848. Cumulative exponents fluctuate around 2/3 without convergence.
++
++Scope clarification: small-n data neither support nor refute s_n=n^(2/3+o(1)); s_11 remains 8<=s_11<=10.
++
++Next steps: complete 11x11 k=8/k=9 exclusions or construct O(n^(2/3)) sets for larger n. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: longer exact maximal-safe-set search on 11x11 for k=8 and k=9. k=8: 696,706,588 nodes in 300.405 s, found=false, complete=false. k=9: 489,846,461 nodes in 300.043 s, found=false, complete=false. Extends earlier bounded evidence (~41.0M nodes for k=8, ~16.2M for k=9) by roughly 17x and 30x.
++
++Scope clarification: incomplete runs do not establish nonexistence. s_11 remains in range 8 <= s_11 <= 10; monotonicity from n=10 to n=11 remains undecided. No status change justified.
++
++Next steps: further exact enumeration or proof of nonexistence for 8/9-stone maximals on 11x11. Status remains open.
+diff --git a/research/knowledge/items/K0149-minimum-maximal-monotonicity-open.md b/research/knowledge/items/K0149-minimum-maximal-monotonicity-open.md
+index 0c4b598a..e479e533 100644
+--- a/research/knowledge/items/K0149-minimum-maximal-monotonicity-open.md
++++ b/research/knowledge/items/K0149-minimum-maximal-monotonicity-open.md
+@@ -32,7 +32,7 @@ artifacts:
+   role: source
+   note: 8≤s_11≤10。n=10から11への非減少性はこの区間では決まらない
+ scope: 標準q=4のs_nの全nにわたる非減少性。
+-evidence: 原文監査 PARTIAL / complete_finite_saturation_sequence
++evidence: 原文監査 PARTIAL / complete_finite_saturation_sequence; s_1..s_10=[1,3,5,5,5,6,7,8,9,10]; monotonicity holds n=1..9 and 9->10; 10->11 reduces to excluding 8/9-stone maximal sets on 11x11; bounded exact search 41M nodes (k=8) and 16M nodes (k=9) incomplete
+ ---
+ 
+ # s_nは単調増加する
+@@ -42,3 +42,11 @@ evidence: 原文監査 PARTIAL / complete_finite_saturation_sequence
+ s_1..s_9=[1,3,5,5,5,6,7,8,9]、9≤s_10≤10なのでn=1..10の有限系列は非減少と確認できる。最新の11盤は8≤s_11≤10であり、n=10から11への大小関係は未確定。
+ 
+ 11盤の10石極大やn=11..15のn−1石構成は存在上界であって最小性の証明ではない。盤の包含だけからs_nの単調性を推論しない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: s_1..s_10 = [1,3,5,5,5,6,7,8,9,10]; monotonicity holds for n=1..9 (and 9->10). For 10->11, monotonicity reduces to excluding 8/9-stone maximal sets on 11x11 (5/6/7 already excluded by K0312). Bounded exact search: 41M nodes (k=8) and 16M nodes (k=9) plus 60s heuristic runs found no witness but were incomplete.
++
++Scope clarification: constructions s_12<=11..s_15<=14 are upper bounds only and do not establish monotonicity for larger n.
++
++Next steps: complete chunked/resumable 11x11 eight-stone enumeration over D4 first-stone representatives. Status remains open.
+diff --git a/research/knowledge/items/K0160-single-rule-removal-winner-flip-open.md b/research/knowledge/items/K0160-single-rule-removal-winner-flip-open.md
+index 03887745..ba5b21b0 100644
+--- a/research/knowledge/items/K0160-single-rule-removal-winner-flip-open.md
++++ b/research/knowledge/items/K0160-single-rule-removal-winner-flip-open.md
+@@ -48,3 +48,11 @@ evidence: 原文監査 PARTIAL / finite_exhaustion
+ 採用境界: 7×7全6364単独解除を935軌道・二方式で除外。共有標準表全179810350局面の証明条件も検算。存在証人はn≥8。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: fresh singles-only solver reproduces 0 empty-board flips for n=3 (14 quads), n=4 (194 quads), n=5 (826 quads); n=4 also 0 flips among 18,721 two-quad removals. Combined with cited n=6 (2,491) and n=7 (6,364/935 orbits) results, no single-removal flip through n=7.
++
++Scope clarification: only P/N outcomes, not Grundy; n=6,n=7 rely on cited prior experiments; no n>=8 computation attempted.
++
++Next steps: attempt n>=8 computation or construct proof. Status remains open.
+diff --git a/research/knowledge/items/K0182-all-losing-first-moves-few-nimbers-open.md b/research/knowledge/items/K0182-all-losing-first-moves-few-nimbers-open.md
+index 6c6d44eb..934161b2 100644
+--- a/research/knowledge/items/K0182-all-losing-first-moves-few-nimbers-open.md
++++ b/research/knowledge/items/K0182-all-losing-first-moves-few-nimbers-open.md
+@@ -52,3 +52,11 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: full memoised Grundy enumeration for n=1..7 gives g(empty) and distinct one-stone values: P boards n=4,n=7 each have exactly one distinct one-stone value (1); N boards n=1,2,3,5,6 have {0},{0},{0},{0,3},{0}. Nonzero one-stone values are odd (K0113). n=4 P board also confirmed.
++
++Scope clarification: n=8,n=10 are P boards but one-stone nimber kinds uncomputed (state space too large). Universal unbounded claim unproved.
++
++Next steps: compute one-stone nimber kinds for n=8/n=10 P boards if feasible. Status remains open.
+diff --git a/research/knowledge/items/K0183-saturation-missing-nimber-contiguity-open.md b/research/knowledge/items/K0183-saturation-missing-nimber-contiguity-open.md
+index 6d3473e7..2297a56a 100644
+--- a/research/knowledge/items/K0183-saturation-missing-nimber-contiguity-open.md
++++ b/research/knowledge/items/K0183-saturation-missing-nimber-contiguity-open.md
+@@ -51,3 +51,19 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: saturation-start layer histograms recomputed for n=1..7; no pair of consecutive missing nimbers below K_n-sigma_n. Missing values: {0} for n=1,2,3; {1,4} for n=4; {4} for n=6; none for n=5,7. Matches original B321 audit (all_n_no_consecutive_missing=true for n=2..6).
++
++Scope clarification: n>=8 saturation-start layers unchecked (no complete Grundy profiles). Universal claim unproved.
++
++Next steps: extend complete Grundy data to n>=8. Status remains open.
++
++## 2026-10-17 bounded advance (round 4)
++
++New finite evidence: n=8 data checked. Level sizes from n8_stream_enum.json; partial enumeration counts for k=0..4 match (1,64,2016,41664,620812). Loaded 620,812 four-stone positions; memoized Python Grundy sample of 20 positions with 120 s cap completed none, so no layer-4 nimber values obtained. No stored n=8 Grundy layer profiles exist; no n=8 streaming solver available in environment.
++
++Scope clarification: sigma_8 not determined; saturation-start layer and nimber histogram for n=8 unknown. K0183 finite evidence remains limited to n=1..7. No n=8 counterexample or confirmation claimed; no fabrication.
++
++Next steps: optimized streaming DP over all 6,700,711,937 safe positions recording per-level max Grundy/histogram. Status remains open.
+diff --git a/research/knowledge/items/K0184-saturation-missing-nimbers-powers-of-two-open.md b/research/knowledge/items/K0184-saturation-missing-nimbers-powers-of-two-open.md
+index 6308b29d..4fec327a 100644
+--- a/research/knowledge/items/K0184-saturation-missing-nimbers-powers-of-two-open.md
++++ b/research/knowledge/items/K0184-saturation-missing-nimbers-powers-of-two-open.md
+@@ -51,3 +51,11 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: n=2..7 saturation-start missing positive nimbers all powers of two (n=4->{1,4}, n=6->{4}, others vacuous). Layer histograms recorded. Machine-readable recomputation in scratchpad/K0184_calc.json.
++
++Scope clarification: finite-case evidence only; no n>=8 complete saturation data.
++
++Next steps: obtain n>=8 saturation-start histograms. Status remains open.
+diff --git a/research/knowledge/items/K0185-ceiling-with-small-mobility-slack-open.md b/research/knowledge/items/K0185-ceiling-with-small-mobility-slack-open.md
+index 984678aa..d39af36e 100644
+--- a/research/knowledge/items/K0185-ceiling-with-small-mobility-slack-open.md
++++ b/research/knowledge/items/K0185-ceiling-with-small-mobility-slack-open.md
+@@ -47,3 +47,11 @@ evidence: 原文監査 PARTIAL / finite_complete_census_and_small_board_crossche
+ 7×7の全179,810,350安全局面を用いた有限監査では、g=hにおけるh=0..10の最小余裕|L|−hは0,0,1,1,2,2,4,5,9,17,28。4×4では別実装の再帰で一致した。
+ 
+ 有限盤で余裕が増えたことは、固定余裕の無限族の不存在証明ではない。ここでhは終局0・非終局1+max(子h)であり、misèreの終局1から始める補助mex値とは異なる。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: independent enumeration for n=2,3,4 validates procedure (n=4 matches ceil_n4.json: min slack 0,0,1,2,6,9 for h=0..5). n=2: 15 states, K=3; n=3: 298 states, K=5. Larger-case data n=5..7 as previously. Ceiling counts: n=2 10, n=3 168, n=4 4,434.
++
++Scope clarification: fixed finite boards cannot decide K0185 (h->infinity requires unbounded boards).
++
++Next steps: seek unbounded-board arguments or asymptotic constructions. Status remains open.
+diff --git a/research/knowledge/items/K0186-ceiling-three-distinct-winning-orbits-open.md b/research/knowledge/items/K0186-ceiling-three-distinct-winning-orbits-open.md
+index 60c92161..643b8be5 100644
+--- a/research/knowledge/items/K0186-ceiling-three-distinct-winning-orbits-open.md
++++ b/research/knowledge/items/K0186-ceiling-three-distinct-winning-orbits-open.md
+@@ -52,3 +52,19 @@ evidence: 原文監査 PARTIAL / finite_complete_census_and_small_board_crossche
+ 全盤への一般化は未解決。小軌道であることは軌道内の手が非同値であるという意味ではなく、misèreの補助mex値hとも混同しない。
+ 
+ K0338の全称分類により、安定化群位数4以上の安全集合は奇数nでn²+1個、偶数nでn²/4+n/2+1個に限られる。残り全局面では全着手軌道が自動的にサイズ1か2となるため、これらの高対称候補だけが未解決の障壁である。特に五石の対称十字族には小軌道合法手自体がなく、その族でg=h≥3を排除する必要がある。この排除はまだ証明していない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: high-stabilizer 5-stone family produced no ceiling positions for n=5 (4 seeds) and n=7 (12 seeds). All-seed high-stabilizer scan: n=3 10 seeds/0 ceilings, n=4 7/2 ceilings both with small winning orbit, n=5 26/2 ceilings both with small winning orbit. Combined with n=7 complete census (0 high-stabilizer ceilings among 58,123,224).
++
++Scope clarification: finite evidence only; 5-stone family for n>=9 not fully computed.
++
++Next steps: compute 5-stone family for larger n if feasible. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: n=6 full safe-state census enumerated all 5,081,289 safe subsets and ran retrograde Grundy/height DP plus stabilizer/orbit audit (`scratchpad/K0186-r2-n6-ceiling.json`). Total ceilings (g=h>=3): 1,417,520; high-stabilizer ceilings (stabilizer>=4): 0; counterexamples: 0. n=7 reused verified complete census of 179,810,350 safe states with 58,123,224 ceilings and 0 high-stabilizer ceilings. High-stabilizer candidate counts: n=6 13 seeds (stone counts 0,2,4), n=7 50 seeds (0..5). Smaller boards carried forward: n=3 10 seeds/0 ceilings, n=4 7 seeds/2 ceilings (both have small winning orbit), n=5 26 seeds/2 ceilings (both small), 5-stone cross family n=5 4 seeds/0, n=7 12 seeds/0. n=4 remains the only board with high-stabilizer ceilings (2), both with winning move in orbit size <=2.
++
++Scope clarification: K0186 remains open; finite evidence only, not proof for all square boards. 5-stone high-stabilizer family for n>=9 not fully computed.
++
++Next steps: compute remaining high-stabilizer families for larger n or find a general argument. Status remains open.
+diff --git a/research/knowledge/items/K0187-empty-root-wft-singleton-open.md b/research/knowledge/items/K0187-empty-root-wft-singleton-open.md
+index d3938b6f..725abfe8 100644
+--- a/research/knowledge/items/K0187-empty-root-wft-singleton-open.md
++++ b/research/knowledge/items/K0187-empty-root-wft-singleton-open.md
+@@ -52,3 +52,11 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: empty-root WFT singleton property verified for n=1..7: |WFT(empty)| in {1,3,5,6,7,9,empty}; all <=1. T* can have multiple elements (n=5,6). Independent verifier passed (PASS independent states 37187 for n=2..5 plus selected n=6).
++
++Scope clarification: no test for n>=8; finite cases do not constitute proof.
++
++Next steps: obtain n>=8 empty-root WFT data. Status remains open.
+diff --git a/research/knowledge/items/K0190-forced-terminal-median-open.md b/research/knowledge/items/K0190-forced-terminal-median-open.md
+index 29b38088..112ebeb3 100644
+--- a/research/knowledge/items/K0190-forced-terminal-median-open.md
++++ b/research/knowledge/items/K0190-forced-terminal-median-open.md
+@@ -52,3 +52,19 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
+ 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: empty-board K0190 holds for n=1..6 (WFT singleton equals median of T*). n=7 has empty WFT, antecedent false. Generalization to arbitrary positions is false: 8 violations among n=6 5-stone positions with T*={6,8,10}, WFT={6}.
++
++Scope clarification: K0190 is an empty-board-only claim; arbitrary-position median extension refuted.
++
++Next steps: test n>=8 empty boards. Status remains open.
++
++## 2026-10-17 bounded advance (round 4)
++
++New finite evidence: median relation tested on non-empty n=7 positions with k<=3 (19,650 stored positions; 10,799 singleton-WFT). Violations: 0. Breakdown: k=1 49 stored/21 singleton/0 violations; k=2 1,176/14/0; k=3 18,424/10,764/0. Primary and independent layer files identical for k<=3. 857 singleton positions have even |T*|, all satisfy central-value condition. Empty board (k=0) has T*={8,10,12,14}, WFT empty, so antecedent false.
++
++Scope clarification: no violations within tested bound only; positions with >=4 stones not tested at per-state resolution. Does not establish K0190 for all n=7 positions. Broader arbitrary-position extension remains refuted by 8 five-stone 6x6 positions. Empty-board status unaffected (n=7 WFT empty). K0190 remains open.
++
++Next steps: per-state T*/WFT data for higher layers or general proof. Status remains open.
+diff --git a/research/knowledge/items/K0193-effective-triple-tree-minimal-type-open.md b/research/knowledge/items/K0193-effective-triple-tree-minimal-type-open.md
+index 4be92f1f..1058efb5 100644
+--- a/research/knowledge/items/K0193-effective-triple-tree-minimal-type-open.md
++++ b/research/knowledge/items/K0193-effective-triple-tree-minimal-type-open.md
+@@ -51,3 +51,11 @@ evidence: 原文監査 PARTIAL / minimum_connecting_tree_classification
+ 採用境界: 効く三点辺の最小接続木はK1,3・三葉上の辺、格子実現を検算。大きな木の距離偶奇による一般分類は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: abstract residual-game enumeration up to 7 vertices: K_{1,3} (Y(1,1,1)) confirmed effective (minimal type). Effectiveness depends on more than Steiner distances (e.g. Y(1,1,1) effective in 24080/27440 seven-vertex trees; ineffective when extras distributed one on each leaf). Minimal-type effectiveness shows periodic/number-theoretic dependence on arm lengths.
++
++Scope clarification: no simple parity rule sufficient; effectiveness not determined by parity alone.
++
++Next steps: derive pair-only Grundy values of tripods/paths and identify exact arithmetic condition. Status remains open.
+diff --git a/research/knowledge/items/K0199-cocircular-avoidance-superlinear-deficit-open.md b/research/knowledge/items/K0199-cocircular-avoidance-superlinear-deficit-open.md
+index 72e6277b..b0493ae2 100644
+--- a/research/knowledge/items/K0199-cocircular-avoidance-superlinear-deficit-open.md
++++ b/research/knowledge/items/K0199-cocircular-avoidance-superlinear-deficit-open.md
+@@ -48,3 +48,19 @@ evidence: 原文監査 PARTIAL / partial_general_bound
+ 採用境界: δ>k(log log k)^ηは固定冪k^(1+ε)の下界ではない。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: exact min-delta tables for combined safe sets on 3x3 (k<=5), 4x4 (k<=7), 5x5 (k<=9): delta/k stays 0..2; no fixed-power superlinear trend at small scales. 4x4 collinear-only comparison: combined safety does not raise min deficit relative to collinear-only (k=7: 6 vs 15).
++
++Scope clarification: board sizes at most 5x5; asymptotic exponents not estimable. Consistent with established linear lower bound.
++
++Next steps: larger boards / rationality constraints investigation. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: exact bounded enumeration of combined-safe k-subsets on 6x6 and 7x7 for k up to 2n-1. 6x6: delta_min/k rises from ~0.43 at k=7 to 2.27 at k=11. 7x7: ~0.43 at k=7 to 3.00 at k=13. Values remain O(1) (coefficients <=3) over enumerated range; no evidence of fixed-power superlinear trend delta >= c k^(1+epsilon). Cross-check reproduced prior 3x3/4x4/5x5 values.
++
++Scope clarification: p restricted to board points; k <= 2n-1 only; asymptotic exponents not estimable from n<=7. K0199 remains open.
++
++Next steps: larger boards or off-board points; determine whether linear coefficient grows without bound. Status remains open.
+diff --git a/research/knowledge/items/K0216-uniform-external-saturation-radius-open.md b/research/knowledge/items/K0216-uniform-external-saturation-radius-open.md
+index 25092479..a0210cb7 100644
+--- a/research/knowledge/items/K0216-uniform-external-saturation-radius-open.md
++++ b/research/knowledge/items/K0216-uniform-external-saturation-radius-open.md
+@@ -46,3 +46,11 @@ evidence: 原文監査 PARTIAL / finite_evidence_and_partial_general_result
+ 現在の結論: 拡大後r=1は最大性・最小極大性・一石移動を保存せず、原文は未決着。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: external saturation radius r(S) computed for maximum safe sets n=1..7 (complete enumeration) and n=8 samples: max r=2 in all fully enumerated cases (n=7: all 16 maxima r=2). No r>=3 observed.
++
++Scope clarification: n=8 only sampled (17 sets); n>=9 unenumerated. Finite evidence supports plausibility of uniform bound C=2 but not proof.
++
++Next steps: complete 8x8 enumeration and test n>=9. Status remains open.
+diff --git a/research/knowledge/items/K0217-minimum-maximal-external-blocking-band-open.md b/research/knowledge/items/K0217-minimum-maximal-external-blocking-band-open.md
+index a3ea253e..313b1f25 100644
+--- a/research/knowledge/items/K0217-minimum-maximal-external-blocking-band-open.md
++++ b/research/knowledge/items/K0217-minimum-maximal-external-blocking-band-open.md
+@@ -46,3 +46,11 @@ evidence: 原文監査 PARTIAL / finite_evidence_and_partial_general_result
+ 現在の結論: 拡大後r=1は最大性・最小極大性・一石移動を保存せず、原文は未決着。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: complete n=9 enumeration (1,179 minimum maximal 9-stone sets) gives r=1:1143, r=2:36, r>=3:0. Targeted central search (2,042,975 combos) r>=3:0. n=10 witness r=1. Saturation witnesses n=11..15 r=1. 12x12 22-stone and 10x10 19-stone sets have r=2 (non-minimum). No minimum maximal set with r>2.
++
++Scope clarification: minimum cardinality may conflict with wide external blocking band; finite only.
++
++Next steps: full 10x10 enumeration and r-distribution; analyze 36 r=2 sets. Status remains open.
+diff --git a/research/knowledge/items/K0221-interior-relocation-external-gap-open.md b/research/knowledge/items/K0221-interior-relocation-external-gap-open.md
+index fbb8d178..dd7bbc06 100644
+--- a/research/knowledge/items/K0221-interior-relocation-external-gap-open.md
++++ b/research/knowledge/items/K0221-interior-relocation-external-gap-open.md
+@@ -46,3 +46,11 @@ evidence: 原文監査 PARTIAL / finite_evidence_and_partial_general_result
+ 現在の結論: 拡大後r=1は最大性・最小極大性・一石移動を保存せず、原文は未決着。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: one-stone relocations on n=6 maximum sets (464 sets): broad 608 safe relocations, max delta-r=+1 (1->2); strict interior box-preserving 16 moves max delta-r=0. n=7 maximum sets: 0 safe relocations. 11x11 10-stone maximal: 104 safe relocations all r'=1. Random small sets: delta-r<=+1. Prior B390: 8-stone maximal 1-swap delta-r in {0,+1}.
++
++Scope clarification: finite evidence does not support unbounded interior jump; consistent with prior weak refutation. Strict interior relocations show delta-r=0 in tested maximal/maximum sets.
++
++Next steps: construct proof of boundedness or growing family. Status remains open.
+diff --git a/research/knowledge/items/K0226-one-fewer-stone-fiber-bridges-open.md b/research/knowledge/items/K0226-one-fewer-stone-fiber-bridges-open.md
+index d12d1cdb..6aacd997 100644
+--- a/research/knowledge/items/K0226-one-fewer-stone-fiber-bridges-open.md
++++ b/research/knowledge/items/K0226-one-fewer-stone-fiber-bridges-open.md
+@@ -51,3 +51,19 @@ evidence: 原文監査 PARTIAL / general_four_stone_bridge_proof
+ 採用境界: 任意の安全四石配置対は常に安全な三石層のJohnsonグラフを通って結べる。k≥5の原文全体は未証明。
+ 
+ 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: 4x4 census k=3..6: all split families under one-stone exchange merge through (k-1)-stone layer (k=4:32/32, k=5:146/146, k=6:44/44) with bridge lengths 2-3, 2-5, 2-6 (k-1)-stone vertices. 3x3 k=4: 17 split families all merged via 3-stone layer (2-4 vertices). Lower layer connected on tested boards.
++
++Scope clarification: bridge length grows with k (max observed = k for k>=5), so uniform O(1) bound not established.
++
++Next steps: test 5x5 and larger boards. Status remains open.
++
++## 2026-10-17 bounded advance (round 3)
++
++New finite evidence: 5x5 exact fiber-bridge census for k=4..9. Safe states by size: 1,25,300,2300,11824,37272,59192,35208,5172,100. Lower layer connected for sizes 3..8. Every same-(k,L,R) family split under one-stone exchange merges through (k-1)-stone layer: k=4 2/2 pairs (bridge 2); k=5 237/237 (2..5, mean 2.996); k=6 102,134/102,134 (2..6, mean 3.947); k=7 73,390/73,390 (2..7, mean 4.471); k=8 2,992/2,992 (2..8, mean 4.655); k=9 946/946 (2..9, mean 5.281). C++ exact census with Python cross-check for k=5.
++
++Scope clarification: merging automatic due to lower-layer connectivity on tested board; nontrivial content is path length, not uniformly bounded (max grows with k). K0226 remains open; general statement for k>=5 unproved.
++
++Next steps: test larger boards; compute Steiner total cost; seek uniform bound. Status remains open.
+diff --git a/research/knowledge/items/K0232-circle-window-single-point-cuts-open.md b/research/knowledge/items/K0232-circle-window-single-point-cuts-open.md
+index 00a40d5b..19e93427 100644
+--- a/research/knowledge/items/K0232-circle-window-single-point-cuts-open.md
++++ b/research/knowledge/items/K0232-circle-window-single-point-cuts-open.md
+@@ -2,7 +2,7 @@
+ id: K0232
+ title: 円窓B457の種類数比較は量化が未指定、q≥3の穴なしは証明済み
+ kind: question
+-status: scope-unclear
++status: open
+ topics:
+ - geometry
+ aliases:
+@@ -45,3 +45,9 @@ evidence: 原文監査 PARTIAL / partial_general_spectrum_result
+ 原文B457の「変えやすい・種類が多い」という比較には、小さい固定窓でのM_n(P)の比較と、統計的傾向をいうなら円の母集団・窓サイズ・集計量の指定が残る。未指定の量化を勝手に全称命題へ直さずscope-unclearとする。
+ 
+ 新しい分母5・6・8の完全点数・最小半径の定理や全中心n≤112の最大点数計算は、この同点数での窓スペクトル比較を決着するものではない。
++
++## 2026-10-17 bounded advance
++
++Scope clarification: B457 decomposed into four layers. Layer 0 (q>=3 no-holes) proved (K0299). Layer 1 (sufficiently large windows) q>=3 count >= q<=2 count, equality possible (m=6 example). Layer 2 (small fixed windows) has counterexample candidate (m=6,n=5: q>=3 has 3 kinds vs q<=2 has 5). Layer 3 (statistical tendency) has unspecified population/quantifiers.
++
++Next steps: aggregate round4 fixed-side data to confirm minimal Layer 2 counterexample; separate Layer 2 as explicit open question; specify population or withdraw statistical tendency. Status changed from scope-unclear to open.
+diff --git a/research/knowledge/items/K0276-h-dense-independent-holdout-open.md b/research/knowledge/items/K0276-h-dense-independent-holdout-open.md
+index 6b26fe26..1e7edc83 100644
+--- a/research/knowledge/items/K0276-h-dense-independent-holdout-open.md
++++ b/research/knowledge/items/K0276-h-dense-independent-holdout-open.md
+@@ -33,3 +33,11 @@ scope: 標準q=4・完全指摘・通常プレイ。独立確認は空盤先手
+ n9完了前に部分データを見て着想したため独立holdoutではない。n10密度0は後手勝ちの定義的帰結で追認にならない。新盤の初手outcomeを見てから例外条件を定めないという凍結条件も根拠に残す。
+ 
+ 対象は標準通常版である。misère 8×8の16/64という混在初手は別ゲームの結果で、本予想の反例ではない。標準通常版11×11はUNKNOWNなので、新しい独立確認にはならない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: no certified F-win board with n>10 found; K0023/K0105 state 11x11 UNKNOWN. 11x11 partial D4 classification: 2 orbits (5 cells) proven LOSS, 19 orbits (116 cells) unclassified, root unknown. n<=10 certified outcomes/densities table unchanged. Misere excluded.
++
++Scope clarification: 11x11 partial losses are exploratory; cannot support/refute H-dense under pre-registration (no pre-frozen structural label). H-dense remains conjectured, not proved/refuted.
++
++Next steps: certify an F-win board n>10 and complete first-move classification with pre-frozen exceptional criteria. Status remains conjectured.
+diff --git a/research/knowledge/items/K0281-n7-geometric-two-phase-proof-open.md b/research/knowledge/items/K0281-n7-geometric-two-phase-proof-open.md
+index 0fe282a8..2f8d5f17 100644
+--- a/research/knowledge/items/K0281-n7-geometric-two-phase-proof-open.md
++++ b/research/knowledge/items/K0281-n7-geometric-two-phase-proof-open.md
+@@ -19,6 +19,18 @@ artifacts:
+   role: source
+   note: 命題・対象範囲・根拠を記した出典
+   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
++- path: results/K0281_residual_witnesses.json
++  role: certificate
++  note: 本報告の witness 抽出結果 (exact decision + drop-one + witness quad)
++- path: results/cycle34_occupancy_lattice_certificate.json
++  role: certificate
++  note: 既存の残差認証
++- path: results/cycle40_compressed_inequalities.json
++  role: certificate
++  note: 既存の残差認証
++- path: results/cycle40b_residual_joint_lemmas.json
++  role: certificate
++  note: 既存の残差認証
+ ---
+ 
+ # 7×7二相選択を制約solverなしの幾何だけで導く証明は未完成
+@@ -26,3 +38,19 @@ artifacts:
+ 軌道共円性の局所上限と有限認証済み骨格容量・相拡張はあるが、全てのcross-shell容量・七残余例外・相liftを短い一般幾何から導いたわけではない。
+ 
+ 全K_nの2n現象の理論説明や他盤への相構造一般化は現在のCOMPLETE有限核を越える。計算機援用定理の正当性と、solver依存を外す問いを区別する。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: residual witness extraction re-run; 7 residual vectors with first-fail orbit (0,2) or (1,2) and binding coordinates recorded. Named phase-exclusivity quads listed (B-core+center, A-core+B-bundle elements, center+B-bundle 360 quads). Capacity decomposition M only=13, M+center=14, M+B-bundle=14 recorded.
++
++Scope clarification: exact decision is COMPLETE but short geometric proof (named-quad cover) not yet achieved; proper-subset capacities and phase lift still solver-dependent.
++
++Next steps: convert residual witnesses to named-quad family covers; derive proper-subset capacities geometrically. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence/analysis: classified existing cycle logs into universal vs n=7-specific components. Universal: forbidden 4-set definition (D0) and orbit-circle lemma (D1/G1, all n odd/even) with o_i <= 3. n=7-specific: empty orbit (2,2) at max (D2), six-skeleton M with alpha(M)=13 (D3), phase lift/exclusivity (D4), 16 configurations/2 occupancy vectors (D5), K_7=14=2n. Other boards: n=4 K=2n-1, n=5 9 vectors, n=6 22 vectors, n=8 flexible; K_n=2n only for n=7 in known range. Enumeration counts: mandatory orbits n=4 3, n=5 4, n=6 4, n=7 6; occupancy vectors at max n=4 4, n=5 9, n=6 22, n=7 2.
++
++Scope clarification: K0281 remains open; generalization requires re-deriving M, empty-orbit property, capacity tables, occupancy lattice, phase lift, census, and K_n for each n. No new theorem or numeric proof added.
++
++Next steps: follow roadmap (universal reuse, generalized M, empty-orbit verification, capacity decomposition, occupancy lattice, phase lift, census, K_n determination). Status remains open.
+diff --git a/research/knowledge/items/K0282-n7-g11-global-connectivity-open.md b/research/knowledge/items/K0282-n7-g11-global-connectivity-open.md
+index 0c128831..85549237 100644
+--- a/research/knowledge/items/K0282-n7-g11-global-connectivity-open.md
++++ b/research/knowledge/items/K0282-n7-g11-global-connectivity-open.md
+@@ -26,3 +26,11 @@ artifacts:
+ G12の最大配置を含む八成分と各903局面は証明済み。他ペアの間の移動には少なくとも一度十一石以下が必要。十一石まで下げれば全八成分をつなげるか、最大を含まない成分も含めた全体分類は出典の残件。
+ 
+ 代表U内の幅11経路一つが存在することは、全盤全ペアのG11接続証明ではない。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: full enumeration of safe subsets size>=11 on 7x7 (3,886,980 vertices): 14-stone maxima (16) all in a single connected component of G_11; 13-stone all in main component; 12-stone 5,816 outside. G_11 overall has 2,136,309 components. Thus the 8 G_12 maximum-derived components merge in G_11.
++
++Scope clarification: result limited to maximum-derived components; G_11 overall not connected. n<=10 not tested for this question.
++
++Next steps: test G_10 and below; investigate small components. Status remains open (question kind does not allow proved/computed).
+diff --git a/research/knowledge/items/K0297-minimum-maximal-private-point-open.md b/research/knowledge/items/K0297-minimum-maximal-private-point-open.md
+index 1395b75b..62cbd7d1 100644
+--- a/research/knowledge/items/K0297-minimum-maximal-private-point-open.md
++++ b/research/knowledge/items/K0297-minimum-maximal-private-point-open.md
+@@ -44,3 +44,11 @@ artifacts:
+ n=2..8では全最小極大配置を完全列挙し、全件で `min_{p∉S} b_S(p)=1` を確認済み。n=9も research/experiments/n9-minimum-maximal-catalogue-20261016 でサイズ9極大安全集合を完全列挙（15 D4代表・13,532,044,253節点・相異なる1,179配置）し、全件で `min_p b_S(p)=1`（非極大0・不安全0）。曲線正規化を使わない独立行列式verifierでも `{1:1179}` と一致し、禁止四点総数29,152も一致、round50の既知16配置も全て列挙集合内にD4像を持つ。
+ 
+ したがって **n=2..9 で成立**。n≥10を含む一般全称は未証明である。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: n=9 full catalogue (1,179 sets) min b=1 independently verified. n=10 three tested 10-stone maximal sets min b=1 (private points 23,27,34). n=2..8 cited complete enumeration min b=1. Exact enumerator supports full n=10 run but not completed.
++
++Scope clarification: n=10 partial support only; n>=11 not testable (s_n not finalized).
++
++Next steps: complete 10x10 enumeration; finalize s_11. Status remains open.
+diff --git a/research/knowledge/items/K0298-minimum-maximal-rho-one-open.md b/research/knowledge/items/K0298-minimum-maximal-rho-one-open.md
+index 6e4f5164..730918c7 100644
+--- a/research/knowledge/items/K0298-minimum-maximal-rho-one-open.md
++++ b/research/knowledge/items/K0298-minimum-maximal-rho-one-open.md
+@@ -43,3 +43,11 @@ n=2..8では全最小極大配置を完全列挙し、全件でρ=1を確認済
+ したがって **n=2..9 で成立**。n≥10を含む一般全称は未証明である。
+ 
+ B361のn=1を含む原文はK0206で撤回し、この非退化版を一般問題として残す。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: exhaustive minimal maximal sets n=2..5 rho=1 (counts 4,56,176,4); full recompute of 1,179 n=9 sets rho=1; five distinct 10-stone 10x10 maximal sets rho=1. Combined with n=6..8 complete enumeration, supported for n=2..10 tested configurations.
++
++Scope clarification: no counterexample found; does not prove general statement for n>=10. Some empty points have b>=2 but rho=1 holds (triples share common stone).
++
++Next steps: larger-n verification. Status remains open.
+diff --git a/research/knowledge/items/K0311-misere-n9-outcome-open.md b/research/knowledge/items/K0311-misere-n9-outcome-open.md
+index 7bd38bb1..b0a08b20 100644
+--- a/research/knowledge/items/K0311-misere-n9-outcome-open.md
++++ b/research/knowledge/items/K0311-misere-n9-outcome-open.md
+@@ -40,3 +40,11 @@ misère版9×9の空盤勝敗はUNKNOWN。中央優先・角優先の二つの12
+ 全29,152禁止四点集合、組合せ順位、UNKNOWN伝播、小盤回帰は監査済みだが、実装の監査は勝敗の証明ではない。通常版9×9の空盤先手勝ち・81初手全勝ちとは別の問題である。
+ 
+ 直前の確定範囲はmisère 6×6後手勝ち、7×7先手勝ち・49初手全勝ち、8×8先手勝ち・勝ち初手16/負け初手48。7・8盤の全初手分類を全安全局面分類へ拡張しない。
++
++## 2026-10-17 bounded advance (round 3)
++
++New finite evidence: bounded misere recomputation for nearest solved square boards. 7x7: first player win, all 49 first moves winning; 7,785,121 memo records; 792,507 terminal; 44,262,805 legal edges checked; 6,364 forbidden 4-sets; independent checker passed (verified:true). 8x8: first player win; winning first moves 16 in D4 orbits {(0,0),(1,0),(2,2)}; losing 48; 84,870,165 memo records; 496,988 tiny endgame; 34,665,160 proof records; 5,582,508 terminal; 175,599,160 legal edges checked; 14,564 forbidden 4-sets; checker passed (verified:true, all_first_moves_classified:true).
++
++Scope clarification: reproduces K0310 values and provides verified baseline only; does not determine 9x9 misere outcome. K0311 remains open.
++
++Next steps: 9x9 misere remains unsolved/uncomputed. Status remains open.
+diff --git a/research/knowledge/items/K0327-square-position-grundy-unboundedness-open.md b/research/knowledge/items/K0327-square-position-grundy-unboundedness-open.md
+index 671c1a14..9c32a44d 100644
+--- a/research/knowledge/items/K0327-square-position-grundy-unboundedness-open.md
++++ b/research/knowledge/items/K0327-square-position-grundy-unboundedness-open.md
+@@ -26,3 +26,11 @@ n≤7の完了計算では有限値0..9が確認され、n4/5/6の最大値は5/
+ 
+ B330の同(h,μ)で無界差、B341の一つの三点残余除去による無界差は別の強い問題であり、Grundy無界性だけから自動的には従わない。B327のh−gの無界性もgの無界性とは異なる。
+ 
++
++## 2026-10-17 bounded advance (round 4)
++
++New finite evidence: capped Grundy maxima on 8x8. Forbidden 4-point subsets: 14,564. Safe subsets: k=0 1, k=1 64, k=2 2,016, k=3 41,664, k=4 620,812. Cap=4: empty Grundy 0, capped max Grundy 1, layer maxima 0,1,0,1. Cap=5: empty Grundy 1, capped max Grundy 1, layer maxima 1,0,1,0,1. Recurrence validated on n=3 (exact max 1, empty 1) and n=4 (exact max 5, empty 0). Runtime: enumeration 114.0 s; cap-4 28.2 s; cap-5 423.4 s; total 568.4 s.
++
++Scope clarification: capped, not exact; high stone counts unresolved; only 8x8 and caps 4/5. No Grundy value above 1 below cap. Consistent with larger nimbers requiring more stones, but does not imply boundedness or unboundedness. K0327 remains open.
++
++Next steps: higher caps/exact computation or construction. Status remains open.
+diff --git a/research/knowledge/items/K0328-maximal-fault-tolerance-bound-open.md b/research/knowledge/items/K0328-maximal-fault-tolerance-bound-open.md
+index 92688f80..301ff37e 100644
+--- a/research/knowledge/items/K0328-maximal-fault-tolerance-bound-open.md
++++ b/research/knowledge/items/K0328-maximal-fault-tolerance-bound-open.md
+@@ -25,3 +25,19 @@ artifacts:
+ n1は元の空点がなくρ未定義なので対象から明示的に除外する。n≥2では全盤占有は安全でなく、安全極大には空点がある。全石除去で空点を合法に戻せるのでρは定義される。
+ 
+ 現在の正確な5×5証人はρ2。小盤の全極大、n7の最大16、n8の八石極大408でρ≥3の証人はない。n7/n8のこれら有限族は全極大族ではない。上界3候補B364に一般証明はなく、一様上界も無界構成も未解決。全最小極大だけのρ1問題K0298とは別問題である。
++
++## 2026-10-17 bounded advance
++
++New finite evidence: exact fault-tolerance rho computed for all maximal sets n=2..6 (4,56,928,16860,349596 sets), 16 maximum 14-stone sets n=7, 408 eight-stone maximal sets n=8, and selected saturation witnesses (11x11 10-stone rho=1, 10x10 19-stone T rho=2, U\{25} rho=1). No rho>=3 in any tested family; max observed rho=2.
++
++Scope clarification: 7x7 covers only maximum-size maximals; 8x8 covers only 8-stone family; 9x9+ not exhaustively enumerated. Arbitrary integer boards can have unbounded rho (K0346/K0348) but use selected point sets, not full grids.
++
++Next steps: exhaustive enumeration for 7x7+ all maximals and 9x9+; prove or refute uniform bound on square boards. Status remains open.
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: rho (minimum removals to make an originally empty point legal) computed for 155,167 maximal safe sets. 7x7: 16 max 14-stone (all rho=2), 1,952 13-stone (1,384 rho=1, 568 rho=2), 152,776 12-stone (149,008 rho=1, 3,768 rho=2); total 154,744, rho>=3: 0. 8x8: 408 complete 8-stone minimum maximals (all rho=1), 15 15-stone witnesses (10 rho=1, 5 rho=2); total 423, rho>=3: 0. Combined: rho=1 150,810, rho=2 4,357, rho>=3 0; max observed rho=2.
++
++Scope clarification: evidence consistent with C=2 on tested families only. Coverage gaps: 7x7 maximals of sizes 7-11 not enumerated; 8x8 maximals of sizes 9-14 not enumerated. Arbitrary integer boards can have unbounded rho (K0346/K0348); full square boards only.
++
++Next steps: enumerate missing maximal sizes or find general proof. Status remains open.
+diff --git a/research/knowledge/items/K0435-three-cube-five-point-lean-certificate-check.md b/research/knowledge/items/K0435-three-cube-five-point-lean-certificate-check.md
+index 44b61105..87690f1a 100644
+--- a/research/knowledge/items/K0435-three-cube-five-point-lean-certificate-check.md
++++ b/research/knowledge/items/K0435-three-cube-five-point-lean-certificate-check.md
+@@ -37,4 +37,20 @@ artifacts:
+ 
+ 3×3×3の27点を `Fin 27` で表し、5点の禁止を整数座標の5×5行列式（差分4×4行列式）で定義した。48個の立方体対称変換で正規化した839局面のAND/OR証明書をLeanの具体データに変換し、`LocallyValid` を検査した。P局面では全合法子がN、N局面では少なくとも一つの合法子がPであることを、局面ごとの合法手判定とともに確認した。1石4軌道（2石20軌道）の勝ちを経て空盤が後手必勝であることを `empty_board_losing` として証明した。
+ 
+-限界: 一部の有限検査（839局面の局所条件、単石軌道の合法手存在、対称性の全単射性・禁止集合不変性）は `native_decide` によるコンパイル時評価に依存する。証明された `empty_board_losing` は 48 対称性で正規化した圧縮ゲーム上の定理であり、元の `CubeRules.moves` への接続 (`empty_board_losing_raw`) は未完成である。任意辺長の奇数辺立方格子への一般化も未解決。
+\ No newline at end of file
++限界: 一部の有限検査（839局面の局所条件、単石軌道の合法手存在、対称性の全単射性・禁止集合不変性）は `native_decide` によるコンパイル時評価に依存する。証明された `empty_board_losing` は 48 対称性で正規化した圧縮ゲーム上の定理であり、元の `CubeRules.moves` への接続 (`empty_board_losing_raw`) は未完成である。任意辺長の奇数辺立方格子への一般化も未解決。
++
++## 2026-10-17 bounded advance (round 2)
++
++New finite evidence: 3D q=5 cube variant highdim extension. Exact solver + independent Python verifier agree on 2x2x5: forbidden 5-sets 3,464; safe states 32,028; terminal 7,405; root Grundy 0; two-stone g=0 190/190; max Grundy 5. Comparison 2x3x4: forbidden 8,480; safe 107,543; terminal 25,226; root 0; two-stone 160/276; max 4. Recorded 3x3x3: forbidden 16,026; safe 205,506; terminal 57,296; root 0; two-stone 351/351 in 20 orbits; certificate 839 canonical positions, 1,130 edges. Hypotheses: H1 2x2xn all two-stone P for n>=4 (observed n=4,5,6? here n=4,5) with exception n=3 (18/66); H2 nim-values beyond 4 (value 5 occurs). Mirror theorem explains losing empty board for grids with an even side but not two-stone status.
++
++Scope clarification: computational, not proof; enumeration limited to <=27 points; H1 remains hypothesis. Supports K0435 3x3x3 certificate result but does not change its verified status.
++
++Next steps: test 2x2x7 (requires raising limit) or find symmetry/strategy proof; ensure certificate style allows nim-values up to at least 5. Status of K0435 remains verified.
++
++## 2026-10-17 bounded advance (round 3)
++
++New finite evidence: 2x2x6 fully enumerated: forbidden 5-sets 8,696; safe states 111,423; terminal 25,236; root Grundy 0; two-stone g=0 276/276; max Grundy 5. C++ Bareiss and Python independent verifier agree (hash 70f99cad9a01fa754a2616a253d7d0a78607f23760f333b052ccbe7aad59b457). H1 now supported for n=4,5,6; exception n=3 (18/66) remains.
++
++Scope clarification: finite confirmation only; does not prove H1 for all n. Enumeration bounded to 24 points; 2x2x7 not tested. No source files modified.
++
++Next steps: raise state-space limit/mask width or find symmetry/strategy proof; test larger n. K0435 status remains verified.

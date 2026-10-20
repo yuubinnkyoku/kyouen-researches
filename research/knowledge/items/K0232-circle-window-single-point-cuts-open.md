@@ -45,3 +45,11 @@ evidence: 原文監査 PARTIAL / partial_general_spectrum_result
 原文B457の「変えやすい・種類が多い」という比較には、小さい固定窓でのM_n(P)の比較と、統計的傾向をいうなら円の母集団・窓サイズ・集計量の指定が残る。未指定の量化を勝手に全称命題へ直さずscope-unclearとする。
 
 新しい分母5・6・8の完全点数・最小半径の定理や全中心n≤112の最大点数計算は、この同点数での窓スペクトル比較を決着するものではない。
+
+## 2026-10-17 bounded advance
+
+Scope clarification: B457 decomposed into four layers. Layer 0 (q>=3 no-holes) proved (K0299). Layer 1 (sufficiently large windows) q>=3 count >= q<=2 count, equality possible (m=6 example). Layer 2 (small fixed windows) has counterexample candidate (m=6,n=5: q>=3 has 3 kinds vs q<=2 has 5). Layer 3 (statistical tendency) has unspecified population/quantifiers.
+
+Next steps: aggregate round4 fixed-side data to confirm minimal Layer 2 counterexample; separate Layer 2 as explicit open question; specify population or withdraw statistical tendency. The local draft proposed open, but the unspecified statistical quantifiers keep the current status scope-unclear.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

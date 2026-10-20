@@ -46,3 +46,13 @@ evidence: 原文監査 PARTIAL / finite_evidence_and_partial_general_result
 現在の結論: 拡大後r=1は最大性・最小極大性・一石移動を保存せず、原文は未決着。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: complete n=9 enumeration (1,179 minimum maximal 9-stone sets) gives r=1:1143, r=2:36, r>=3:0. Targeted central search (2,042,975 combos) r>=3:0. n=10 witness r=1. Saturation witnesses n=11..15 r=1. 12x12 22-stone and 10x10 19-stone sets have r=2 (non-minimum). No minimum maximal set with r>2.
+
+Scope clarification: minimum cardinality may conflict with wide external blocking band; finite only.
+
+Next steps: full 10x10 enumeration and r-distribution; analyze 36 r=2 sets. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

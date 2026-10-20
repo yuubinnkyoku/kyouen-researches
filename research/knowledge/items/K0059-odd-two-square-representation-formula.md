@@ -24,3 +24,11 @@ artifacts:
 正の奇数m=∏_{p≡1 mod4}p^{a_p}∏_{q≡3 mod4}q^{b_q}について、全b_qが偶数ならodd_repr(2m)=4∏(a_p+1)、どれか奇数なら0。全素因数1 mod4の場合は4τ(m)。
 
 2m≡2 mod4なので全二平方和解は両座標奇数。通常のr_2公式から導く。円の全整数点数と有限盤内点数・一般中心円の最大は別で、埋込み制約なしに盤内最大を与えない。
+
+## 2026-10-17 bounded advance (round 4)
+
+New finite evidence: independent audit of odd two-square representation formula for odd m <= 500. 250 odd m tested; brute-force integer count of solutions to x^2+y^2=2m compared with formula; 0 mismatches. Representative cases verified including 3 mod 4 prime exponent parity (m=3,15 -> 0; m=9,45 -> nonzero). Script `research/experiments/local-main-integration-20261020/source/verify_k0059.py`.
+
+Scope clarification: finite verification only, not proof for all m. Formula's geometric implications not tested. K0059 status remains (computed/verified per item) unchanged.
+
+Next steps: larger range or formal proof if desired. Status unchanged.

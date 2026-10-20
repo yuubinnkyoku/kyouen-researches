@@ -46,3 +46,21 @@ evidence: 19≤K_10≤23。既知19石近傍とほぼ安全20点集合Uの広い
 本項の存在問題はK_10≥20である。旧alias B082の等号K_10=20まで確定するには、20石証人に加えて全域上界20も必要である。
 
 ある19石極大Tと10点以上を共有する安全20石は存在せず、ほぼ安全な20点集合Uについても|S∩U|≥10を満たす安全集合の最大サイズは19と完全計算された。20石が存在するならこれらの核から大規模な交換が必要だが、局所排除をK_10≤19へ拡張してはいけない。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: global branch-and-bound for 20-stone safe set on 10x10: ~13.3M nodes across 15 D4 first-stone representatives (20s each) plus 180s run; no 20-stone set found. MILP (HiGHS, 300s) best primal 15, weak dual ~71. Local round57 radius-8 deletion search from verified 19-stone set found no witness.
+
+Scope clarification: negative evidence only; does not prove K_10<=19. Bounds remain 19<=K_10<=23.
+
+Next steps: longer better-pruned exact search or SAT/ILP with stronger cuts; stochastic local search. Status remains open.
+
+## 2026-10-17 bounded advance (round 2)
+
+New finite evidence: longer exact search for maximal safe 20-stone set on 10x10: 29 chunks, ~243,521,681 nodes across 15 D4 first-stone representatives, ~455.7 s measured search time (~10-11 min wall). No 20-stone maximal safe set found; no representative completed (all hit time/node bounds). Extends prior ~13.3M-node bound by roughly an order of magnitude.
+
+Scope clarification: negative evidence only; does not establish K_10 <= 19. Bounds remain 19 <= K_10 <= 23. Search targets size exactly 20 maximal sets, so does not cover maximal sets of size 21-23 or prove absence of 20-stone sets in general.
+
+Next steps: longer better-pruned exact search or SAT/ILP with stronger cuts; stochastic local search. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

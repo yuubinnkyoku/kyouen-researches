@@ -52,3 +52,13 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
 採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: empty-root WFT singleton property verified for n=1..7: |WFT(empty)| in {1,3,5,6,7,9,empty}; all <=1. T* can have multiple elements (n=5,6). Independent verifier passed (PASS independent states 37187 for n=2..5 plus selected n=6).
+
+Scope clarification: no test for n>=8; finite cases do not constitute proof.
+
+Next steps: obtain n>=8 empty-root WFT data. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

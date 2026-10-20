@@ -26,3 +26,13 @@ n≤7の完了計算では有限値0..9が確認され、n4/5/6の最大値は5/
 
 B330の同(h,μ)で無界差、B341の一つの三点残余除去による無界差は別の強い問題であり、Grundy無界性だけから自動的には従わない。B327のh−gの無界性もgの無界性とは異なる。
 
+
+## 2026-10-17 bounded advance (round 4)
+
+New finite evidence: capped Grundy maxima on 8x8. Forbidden 4-point subsets: 14,564. Safe subsets: k=0 1, k=1 64, k=2 2,016, k=3 41,664, k=4 620,812. Cap=4: empty Grundy 0, capped max Grundy 1, layer maxima 0,1,0,1. Cap=5: empty Grundy 1, capped max Grundy 1, layer maxima 1,0,1,0,1. Recurrence validated on n=3 (exact max 1, empty 1) and n=4 (exact max 5, empty 0). Runtime: enumeration 114.0 s; cap-4 28.2 s; cap-5 423.4 s; total 568.4 s.
+
+Scope clarification: capped, not exact; high stone counts unresolved; only 8x8 and caps 4/5. No Grundy value above 1 below cap. Consistent with larger nimbers requiring more stones, but does not imply boundedness or unboundedness. K0327 remains open.
+
+Next steps: higher caps/exact computation or construction. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

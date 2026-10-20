@@ -26,3 +26,13 @@ artifacts:
 G12の最大配置を含む八成分と各903局面は証明済み。他ペアの間の移動には少なくとも一度十一石以下が必要。十一石まで下げれば全八成分をつなげるか、最大を含まない成分も含めた全体分類は出典の残件。
 
 代表U内の幅11経路一つが存在することは、全盤全ペアのG11接続証明ではない。
+
+## 2026-10-17 bounded advance
+
+New finite evidence: full enumeration of safe subsets size>=11 on 7x7 (3,886,980 vertices): 14-stone maxima (16) all in a single connected component of G_11; 13-stone all in main component; 12-stone 5,816 outside. G_11 overall has 2,136,309 components. Thus the 8 G_12 maximum-derived components merge in G_11.
+
+Scope clarification: result limited to maximum-derived components; G_11 overall not connected. n<=10 not tested for this question.
+
+Next steps: test G_10 and below; investigate small components. Status remains open (question kind does not allow proved/computed).
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。

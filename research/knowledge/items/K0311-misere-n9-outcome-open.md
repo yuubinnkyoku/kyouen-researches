@@ -40,3 +40,13 @@ misère版9×9の空盤勝敗はUNKNOWN。中央優先・角優先の二つの12
 全29,152禁止四点集合、組合せ順位、UNKNOWN伝播、小盤回帰は監査済みだが、実装の監査は勝敗の証明ではない。通常版9×9の空盤先手勝ち・81初手全勝ちとは別の問題である。
 
 直前の確定範囲はmisère 6×6後手勝ち、7×7先手勝ち・49初手全勝ち、8×8先手勝ち・勝ち初手16/負け初手48。7・8盤の全初手分類を全安全局面分類へ拡張しない。
+
+## 2026-10-17 bounded advance (round 3)
+
+New finite evidence: bounded misere recomputation for nearest solved square boards. 7x7: first player win, all 49 first moves winning; 7,785,121 memo records; 792,507 terminal; 44,262,805 legal edges checked; 6,364 forbidden 4-sets; independent checker passed (verified:true). 8x8: first player win; winning first moves 16 in D4 orbits {(0,0),(1,0),(2,2)}; losing 48; 84,870,165 memo records; 496,988 tiny endgame; 34,665,160 proof records; 5,582,508 terminal; 175,599,160 legal edges checked; 14,564 forbidden 4-sets; checker passed (verified:true, all_first_moves_classified:true).
+
+Scope clarification: reproduces K0310 values and provides verified baseline only; does not determine 9x9 misere outcome. K0311 remains open.
+
+Next steps: 9x9 misere remains unsolved/uncomputed. Status remains open.
+
+統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
