@@ -619,6 +619,9 @@
 ## [research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv](../../../research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv)
 
 - [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (data): 独立検証用13有理数代表と期待値
+## [research/experiments/fixed-width/output/q36_three_row_onset_audit_20261020.csv](../../../research/experiments/fixed-width/output/q36_three_row_onset_audit_20261020.csv)
+
+- [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) (data): h=1..60、m=2h+1と2h+2の120盤の独立一致結果
 ## [research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt](../../../research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt)
 
 - [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (data): 22法での座標合同監査
@@ -859,6 +862,9 @@
 ## [research/experiments/fixed-width/reports/q36-three-row-classification.md](../../../research/experiments/fixed-width/reports/q36-three-row-classification.md)
 
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=6およびq≥7を含む統一分類
+## [research/experiments/fixed-width/reports/q36-three-row-onset-two-squares-20261020.md](../../../research/experiments/fixed-width/reports/q36-three-row-onset-two-squares-20261020.md)
+
+- [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) (proof): 三行の弦長二階差による全称証明と二平方和への4対1対応
 ## [research/experiments/fixed-width/reports/q48-all-nonlocal-pell-20261015.md](../../../research/experiments/fixed-width/reports/q48-all-nonlocal-pell-20261015.md)
 
 - [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) (proof): ノルム8の平方判別式例外排除と無限Pell延長
@@ -1033,6 +1039,12 @@
 ## [research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp](../../../research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp)
 
 - [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (verifier): 全6点組の4×4整数行列式を使う独立円検査とmex再帰
+## [research/experiments/fixed-width/scripts/q36_three_row_onset_arithmetic_20261020.py](../../../research/experiments/fixed-width/scripts/q36_three_row_onset_arithmetic_20261020.py)
+
+- [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) (verifier): 弦長整数方程式を用いた別方式の完全計数
+## [research/experiments/fixed-width/scripts/q36_three_row_onset_independent_20261020.cpp](../../../research/experiments/fixed-width/scripts/q36_three_row_onset_independent_20261020.cpp)
+
+- [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) (verifier): 三行の三点から直接円を作る独立整数幾何完全列挙
 ## [research/experiments/fixed-width/scripts/q48_accumulation_loglog_20261016.py](../../../research/experiments/fixed-width/scripts/q48_accumulation_loglog_20261016.py)
 
 - [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) (verifier): 4×3世代、840件の4点共円行列式と区間分離の整数監査

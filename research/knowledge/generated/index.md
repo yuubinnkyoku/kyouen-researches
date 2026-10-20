@@ -484,3 +484,4 @@
 | [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) | 11盤35個のS8 LOSSの385終局葉証明と246個のS7 LOSSへの伝播を独立検証 | verification | verified | square-outcomes, certificates, verification |
 | [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) | 12×12に12石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |
 | [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) | 13×13に13石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |
+| [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) | 等間隔三行の6点円の最初の可能幅と二平方和による円数公式 | proposition | proved | geometry, rectangles, variants |

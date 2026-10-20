@@ -48,6 +48,7 @@
 - ← depends_on [K0474](../items/K0474-three-column-four-row-generic-q4.md): 四点共円・共線を禁止する完全指摘の安全手版
 - ← depends_on [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md): q点版の安全配置と禁止集合の定義を使用
 - ← depends_on [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md): 6点版の円成立条件と盤面規則
+- ← depends_on [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md): 6点共円・共線禁止の対象定義
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -2328,3 +2329,7 @@
 ## [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) 13×13に13石の極大安全集合が存在する（検証済みwitness）
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 極大安全集合の定義（包含極大）
+
+## [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) 等間隔三行の6点円の最初の可能幅と二平方和による円数公式
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 6点共円・共線禁止の対象定義
