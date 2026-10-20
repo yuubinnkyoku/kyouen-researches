@@ -1,0 +1,55 @@
+{
+  "generic": [
+    {
+      "family": 0,
+      "symbolic_candidates": 544,
+      "E_ge_13": [
+        {
+          "E": 14,
+          "H": 14,
+          "C_equals_B": true
+        }
+      ]
+    },
+    {
+      "family": 1,
+      "symbolic_candidates": 544,
+      "E_ge_13": [
+        {
+          "E": 14,
+          "H": 14,
+          "C_equals_B": true
+        }
+      ]
+    },
+    {
+      "family": 2,
+      "symbolic_candidates": 544,
+      "E_ge_13": [
+        {
+          "E": 14,
+          "H": 14,
+          "C_equals_B": true
+        }
+      ]
+    }
+  ],
+  "rational": {
+    "rational_candidates_after_safe_pruning": 6173662,
+    "matching_labeled_cases": 60,
+    "unique_normalized_cases": 1,
+    "family_hit_counts": [
+      0,
+      0,
+      60
+    ],
+    "compatible_four_circle_sets": 0
+  },
+  "ap": {
+    "ap_partner_candidates": 5005,
+    "energy13_partner_shapes": 8,
+    "H12_H16_energy13_cases": 0,
+    "compatible_four_circle_sets": 0
+  },
+  "status": "all exact assertions passed"
+}

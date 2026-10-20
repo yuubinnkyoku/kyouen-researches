@@ -25,9 +25,16 @@ def repository_files(root):
     return sorted(p for p in root.rglob("*") if p.is_file())
 
 
-def markdown_errors(path, root):
+def markdown_errors(path, root, *, skip_solution_block=False):
     errors = []
     text = path.read_text(encoding="utf-8-sig")
+    if skip_solution_block:
+        # The builder replaces this derived block, then validates the result.
+        # Human-authored README links must still be checked before generation.
+        text = re.sub(
+            r"(?s)<!-- BEGIN GENERATED SOLUTION STATUS -->.*?<!-- END GENERATED SOLUTION STATUS -->",
+            "", text,
+        )
     # Example snippets are not live hyperlinks.
     text = re.sub(r"(?ms)^(`{3,}|~{3,}).*?^\1[^\n]*$", "", text)
     for match in LINK.finditer(text):
@@ -52,7 +59,9 @@ def layout_errors(root, *, include_generated=True):
         if not include_generated and relative.startswith("research/knowledge/generated/"):
             continue
         if path.suffix == ".md":
-            errors.extend(markdown_errors(path, root))
+            errors.extend(markdown_errors(
+                path, root, skip_solution_block=not include_generated and relative == "README.md"
+            ))
         # Historical scripts/receipts are sources, not current executable paths.
         if relative.startswith("research/archive/"):
             continue

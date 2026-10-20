@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-19",
+  "scope": "finite one-vertex placement game with exactly two incomparable minimal forbidden hyperedges",
+  "claim": "g=2+((max(a,b)-c+f)%2) if c=min(a,b)>0; else g=(n-1)%2 if c>min(a,b); else g=(n-2)%2",
+  "proof": "complete induction on a+b+c after splitting off free vertices by xor parity",
+  "subset_mex": {
+    "max_vertices": 14,
+    "cases": 1105,
+    "values_0_1_2_3": [472,489,72,72]
+  },
+  "count_state_mex": {
+    "max_edge_vertices": 60,
+    "free_vertices": [0,1,2,3],
+    "cases": 143960,
+    "values_0_1_2_3": [69660,69660,2320,2320],
+    "memo_states": 157880
+  },
+  "general_theorem": true,
+  "geometry_speedup_claimed": false
+}

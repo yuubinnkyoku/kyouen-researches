@@ -44,7 +44,14 @@ class LayoutTests(unittest.TestCase):
             generated = root / "research/knowledge/generated"
             generated.mkdir(parents=True)
             (generated / "artifacts.md").write_text("[previous location](../../gone.md)\n", encoding="utf-8")
+            readme = root / "README.md"
+            readme.write_text(
+                "<!-- BEGIN GENERATED SOLUTION STATUS -->\n"
+                "[previous item](gone-item.md)\n"
+                "<!-- END GENERATED SOLUTION STATUS -->\n", encoding="utf-8"
+            )
             self.assertTrue(any("broken local link" in e for e in layout_errors(root)))
+            self.assertTrue(any("README.md" in e for e in layout_errors(root)))
             self.assertEqual(layout_errors(root, include_generated=False), [])
-            (root / "README.md").write_text("[missing canonical source](gone.md)\n", encoding="utf-8")
+            readme.write_text(readme.read_text(encoding="utf-8") + "[missing canonical source](gone.md)\n", encoding="utf-8")
             self.assertTrue(any("broken local link" in e for e in layout_errors(root, include_generated=False)))

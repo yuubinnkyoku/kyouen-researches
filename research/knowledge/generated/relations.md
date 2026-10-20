@@ -38,6 +38,16 @@
 - ← depends_on [K0401](../items/K0401-n11-q12-terminal-extrema.md): 共円・共線q点禁止版の安全配置を使用
 - ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 標準共円ゲームの合法手・終局規則
 - ← depends_on [K0421](../items/K0421-safe-child-d4-equivalence-stabilizer-orbits.md): 共円四点を含む集合は安全ではない
+- ← depends_on [K0436](../items/K0436-anisotropic-mod9-all-widths.md): q点完全指摘ルール
+- ← depends_on [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md): 完全指摘・通常プレイのルール
+- ← depends_on [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md): 標準4点共円・共線禁止規則
+- ← depends_on [K0453](../items/K0453-geometric-four-q4-grundy-five.md): 整数行列式による共円・共線四点禁則
+- ← depends_on [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md): q点禁止と安全局面の定義
+- ← depends_on [K0464](../items/K0464-spaced-five-row-q9-mod9.md): 9点共円・共線禁止と完全指摘のルール定義
+- ← depends_on [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md): 6点共円・共線禁止の通常プレイ
+- ← depends_on [K0474](../items/K0474-three-column-four-row-generic-q4.md): 四点共円・共線を禁止する完全指摘の安全手版
+- ← depends_on [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md): q点版の安全配置と禁止集合の定義を使用
+- ← depends_on [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md): 6点版の円成立条件と盤面規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -77,6 +87,19 @@
 - ← depends_on [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md): 固定先手視点の交互AND/OR勝敗伝播に従う
 - ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): 元の先手に固定した勝敗と偶数OR・奇数AND
 - ← depends_on [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md): 元先手固定視点の交互AND/OR規則
+- ← depends_on [K0436](../items/K0436-anisotropic-mod9-all-widths.md): Grundy値と通常プレイの定義
+- ← depends_on [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md): 通常プレイのmexと独立成分のxor
+- ← depends_on [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md): Grundy値と勝敗の定義
+- ← depends_on [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md): mexと孤立点のxor
+- ← depends_on [K0453](../items/K0453-geometric-four-q4-grundy-five.md): mexによるGrundy値と通常プレイ
+- ← depends_on [K0460](../items/K0460-path-cycle-grundy-periodicity.md): Grundyのmexと非干渉成分のxorを用いる
+- ← depends_on [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md): 通常プレイのGrundy再帰と直和定理
+- ← depends_on [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md): 通常プレイのGrundy定義
+- ← depends_on [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md): 通常プレイのGrundy定義
+- ← depends_on [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md): Grundy数の定義
+- ← depends_on [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md): 完全指摘・通常プレイのGrundy定義
+- ← depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): mex再帰と独立ゲームのxor
+- ← depends_on [K0484](../items/K0484-width-five-q9-all-lengths.md): 通常プレイGrundy値の定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -239,6 +262,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
 - ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): q>2wでの全長系にのみ使う
 - ← generalizes [K0353](../items/K0353-two-dimensional-parallel-columns.md): 二次元の平行列配置についてq>2wで局面構造まで完全分類する
+- ← depends_on [K0455](../items/K0455-independent-row-capacity-state-counts.md): 独立行容量への幾何的帰着が成立する盤に適用
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -552,12 +576,15 @@
 - ← depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): 標準整数格子の二重点行と独立行公式
 - ← depends_on [K0370](../items/K0370-quantitative-uniform-circle-density.md): 固定幅q点版の独立行帰着
 - ← depends_on [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md): 二重点行の整数係数・合同式の必要条件
+- ← depends_on [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md): 連続整数行における二重点行数の全称上界を利用
+- ← depends_on [K0484](../items/K0484-width-five-q9-all-lengths.md): 法9平方剰余による連続行の障害と比較
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - ← depends_on [K0425](../items/K0425-four-row-eight-point-chord-gap.md): 共通二根和と弦長平方の二階差分を使用
 - ← depends_on [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md): 円の二根和と平方弦長の二階差分条件を用いる
+- ← depends_on [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md): 四行円の水平弦長平方の二階差分条件を使用
 
 ## [K0074](../items/K0074-single-forbidden-type-variants.md) 片禁止q点変種の全長強解決定理
 
@@ -762,6 +789,13 @@
 - ← depends_on [K0322](../items/K0322-equal-nimber-geometric-extension-split.md): 幾何的追加は直和との合成ではない
 - ← depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 全極小残余hypergraphによる継続ゲームの表現。Pグラフだけでは足りない
 - ← depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 継続ゲームは二点グラフではなく全包含極小残余辺で表す
+- ← depends_on [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md): 極小残余禁止辺による継続ゲームの表現
+- ← depends_on [K0438](../items/K0438-finite-point-kayles-pspace-complete.md): 残余禁止集合の継続ゲームへの対応
+- ← depends_on [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md): 極小残余辺による継続ゲームの表現
+- ← depends_on [K0460](../items/K0460-path-cycle-grundy-periodicity.md): 二点禁止残局をグラフゲームとして扱う
+- ← depends_on [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md): 標準盤への適用には包含極小の残余禁止集合を正確に構成する
+- ← depends_on [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md): 実格子残局では二点残余禁止集合だけの場合に限って木モデルを使用できる
+- ← depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 残余の包含極小禁止集合によるゲーム表現
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1414,6 +1448,7 @@
 - ← generalizes [K0339](../items/K0339-multiplayer-terminal-modulus.md): 全極大サイズの偶奇構造を全rの終端プレイヤー固定へ拡張する
 - ← depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 全極大同偶奇と全Grundy0/1の同値
 - ← depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 全Grundy0/1と全極大同偶奇の同値を使う
+- ← depends_on [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md): 奇数本の場合の極大集合同偶奇性から全局面の二値性を得る
 
 ## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
 
@@ -1467,6 +1502,8 @@
 - ← depends_on [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md): 200万までの有限完全弦長型分類を用いる
 - ← generalizes [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md): 特定のPell族の存在を、任意の非局所円からの無限延長へ強める
 - ← supports [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): Pell正規形から実現可能傾きと固定傾きの円型数を細分する
+- ← depends_on [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md): 既知のu²−10v²=1無限円族と水平移動数を利用
+- ← supports [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md): 既存Pell族の第四世代と新しい別傾きを有限範囲で確認
 
 ## [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) 禁止曲線の三つ組・点対充填から固定幅q点版の一般安定化上界が得られる
 
@@ -1606,6 +1643,8 @@
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 六石行の同和弦energyの鋭い上界29
 - ← depends_on [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 外部行対の同和弦予算の鋭い上界E_r
 - ← generalizes [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md): 二行鋭い弦エネルギーを多行同時最適へ拡張
+- ← depends_on [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md): 同和弦energyの幾何的利用との接続（復元定理の証明自体は独立）
+- ← depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 二点和energyの鋭い上界と同和弦による円計数
 
 ## [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) 交換可能残余classはrank以下へ縮めて通常Grundyとmisère補助mexを保存し、誘導削除上限は全rankで最良
 
@@ -1634,6 +1673,8 @@
 ## [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) 任意有限整数点盤の一空点円故障耐性はVertex Coverを表現し唯一最大配置でもNP完全
 
 - → depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 整数三次グラフの四点安全性・零和三共線・反転による円blocker実現
+- ← depends_on [K0438](../items/K0438-finite-point-kayles-pspace-complete.md): 任意グラフの円による整数点符号化と多項式ビット長
+- ← depends_on [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md): 任意グラフを三共線なしの整数円禁止4点組に多項式長で符号化する構成
 
 ## [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) 全q点版の空点・既存石の飽和曲線数は反転とMelchiorで抑えられる
 
@@ -1643,6 +1684,7 @@
 
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 外部行対の同和弦予算の鋭い上界E_r
 - → supports [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
+- ← depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 任意平行線上の満容量問題の定義と21候補上界
 
 ## [K0351](../items/K0351-width-three-q4-exact-stabilization.md) 3×m・q=4の真の満容量安定化長はM_{3,4}=24
 
@@ -1745,11 +1787,13 @@
 
 - → depends_on [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md): 有理係数と行番号差gの合同帰着
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): q点版の独立行公式
+- ← depends_on [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md): 幅5〜43の二重点行数の厳密最大値と達成円
 
 ## [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md) 標準整数格子44〜63行で円が二点ずつ通る行数の厳密最大値
 
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 標準整数格子の二重点行と独立行公式
 - ← depends_on [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md): T(63)=16を帰納基底とする
+- ← depends_on [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md): 幅44〜63の二重点行数の厳密最大値と達成円
 
 ## [K0370](../items/K0370-quantitative-uniform-circle-density.md) 連続整数行の円の二重点行数に対する定量的一様上界
 
@@ -1771,6 +1815,8 @@
 - ← depends_on [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md): 元先手固定のAND/OR極性と終局payoff
 - ← depends_on [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md): 元先手固定視点の通常プレイにおける偶奇層の勝敗伝播
 - ← depends_on [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md): 元先手固定のAND/OR極性（S5 WINは全S6子WIN、単一S6 WINから結論しない）
+- ← depends_on [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md): 勝敗は元先手固定視点。S6はOR節点。
+- ← depends_on [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md): 元先手固定の偶奇AND/OR伝播
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -2064,10 +2110,19 @@
 ## [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) 四行8点円の全ての非局所型は同じ傾きの無限Pell族へ延長する
 
 - → generalizes [K0317](../items/K0317-four-row-q8-pell-circle-family.md): 特定のPell族の存在を、任意の非局所円からの無限延長へ強める
+- ← depends_on [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md): 全非局所円のPell正規形
+- ← depends_on [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md): 任意の非局所8点円のPell無限延長定理
 
 ## [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) 非局所4行8点円の傾きは有限判定でき、各円型は任意法で無限延長する
 
 - → supports [K0317](../items/K0317-four-row-q8-pell-circle-family.md): Pell正規形から実現可能傾きと固定傾きの円型数を細分する
+- ← depends_on [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md): 固定傾きの円型数の対数増大を、特定族の配置数へ精密化
+- ← depends_on [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md): 既約傾きと正規形の定義を使用
+- ← depends_on [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md): 傾きの定義と整数弦長からの円の復元を用いる
+- ← depends_on [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md): 既約傾きの定義
+- ← depends_on [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md): 傾き正規形と固定傾きPell延長を使用
+- ← depends_on [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md): Pell正規形を用いる
+- ← depends_on [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md): 既約傾きとPell正規形の定義を使用
 
 ## [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) 初手49の閉鎖不能8応手は保存pool制約の産物であり、証明書の逆向き再利用は新規S5 WINを与えない
 
@@ -2079,8 +2134,185 @@
 ## [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) 整数座標四点の行列式と分母を払った円・直線方程式の同値
 
 - ← verifies [K0009](../items/K0009-lean-soundness-trust-boundary.md): 整数座標の円・直線方程式とForbiddenFourの同値
+- ← depends_on [K0474](../items/K0474-three-column-four-row-generic-q4.md): 整数行列式による禁止四点判定の正当性
 
 ## [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) 3×3×3・5点禁止ゲームの839局面証明書をLeanで具体検査し空盤後手必勝を証明
 
 - → depends_on [K0009](../items/K0009-lean-soundness-trust-boundary.md): Lean局所条件とWinning/Losingの健全性を使用
 - → supports [K0102](../items/K0102-concrete-lean-certificate-checker-open.md): 3×3×3の具体証明書についてLean核検査を完了。一般巨大証明書は未完了
+
+## [K0436](../items/K0436-anisotropic-mod9-all-widths.md) 異方整数格子の全幅で3進付値条件下の円点数は2ceil(2w/3)以下
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): q点完全指摘ルール
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): Grundy値と通常プレイの定義
+
+## [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) 残余禁止辺h本の一点追加ゲームはGrundy値が最大2^h−1（h≥1）
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのmexと独立成分のxor
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 極小残余禁止辺による継続ゲームの表現
+
+## [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全
+
+- → depends_on [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md): 任意グラフの円による整数点符号化と多項式ビット長
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余禁止集合の継続ゲームへの対応
+
+## [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイのルール
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): Grundy値と勝敗の定義
+
+## [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準4点共円・共線禁止規則
+
+## [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 極小残余辺による継続ゲームの表現
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): mexと孤立点のxor
+
+## [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する
+
+- → depends_on [K0317](../items/K0317-four-row-q8-pell-circle-family.md): 既知のu²−10v²=1無限円族と水平移動数を利用
+- → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): 固定傾きの円型数の対数増大を、特定族の配置数へ精密化
+
+## [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) 四行8点円の総数は O(m² log m) 以下
+
+- → depends_on [K0073](../items/K0073-q-two-width-circle-criterion.md): 四行円の水平弦長平方の二階差分条件を使用
+
+## [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) 四行8点円の最大弦長1億までの有限完全分類
+
+- → supports [K0317](../items/K0317-four-row-q8-pell-circle-family.md): 既存Pell族の第四世代と新しい別傾きを有限範囲で確認
+
+## [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) 四行8点円の実現傾きは無限個の集積点を持ち種類数は対数×二重対数以上
+
+- → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): 既約傾きと正規形の定義を使用
+
+## [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) 4行8点円には相異なる実現可能な既約傾きが無限種類ある
+
+- → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): 傾きの定義と整数弦長からの円の復元を用いる
+
+## [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) 4行8点円の奇数分母傾きは法64で4合同類に限られる
+
+- → depends_on [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md): 全非局所円のPell正規形
+- → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): 既約傾きの定義
+
+## [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) 四行8点円の実現傾きは非空な完全閉包を持ち集積点が非可算個存在する
+
+- → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): 傾き正規形と固定傾きPell延長を使用
+
+## [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ
+
+- → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): Pell正規形を用いる
+
+## [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) 四行8点円の実現傾きには少なくとも三つの集積点があり種類数は対数以上
+
+- → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): 既約傾きとPell正規形の定義を使用
+
+## [K0453](../items/K0453-geometric-four-q4-grundy-five.md) 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 整数行列式による共円・共線四点禁則
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): mexによるGrundy値と通常プレイ
+
+## [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) 5〜63連続整数行で水平中心が半整数の円の最大格子点数は二重点行数の2倍
+
+- → depends_on [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md): 幅5〜43の二重点行数の厳密最大値と達成円
+- → depends_on [K0369](../items/K0369-exact-double-rows-fortyfour-to-sixtythree.md): 幅44〜63の二重点行数の厳密最大値と達成円
+
+## [K0455](../items/K0455-independent-row-capacity-state-counts.md) 独立行容量ゲームの勝敗局面数と非終局負け局面の漸近密度
+
+- → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): 独立行容量への幾何的帰着が成立する盤に適用
+
+## [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) 四行8点円には新しい既約傾き181273/40152の無限Pell族がある
+
+- → depends_on [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md): 任意の非局所8点円のPell無限延長定理
+
+## [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) 無順序二点和からのn点復元はnが2の冪のときに限り非単射
+
+- → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 同和弦energyの幾何的利用との接続（復元定理の証明自体は独立）
+
+## [K0460](../items/K0460-path-cycle-grundy-periodicity.md) 二点禁止の道Grundyは52以降最小周期34、最大次数2の鋭い上界は15
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): Grundyのmexと非干渉成分のxorを用いる
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 二点禁止残局をグラフゲームとして扱う
+
+## [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) 異方格子の水平間隔に余分な奇素因子があれば円は幅以下の点しか持たない
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): q点禁止と安全局面の定義
+
+## [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) 残余禁止集合が3個以下かつ各4点以下ならGrundy値は3以下
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのGrundy再帰と直和定理
+
+## [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界
+
+- → depends_on [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md): 任意グラフを三共線なしの整数円禁止4点組に多項式長で符号化する構成
+
+## [K0464](../items/K0464-spaced-five-row-q9-mod9.md) 5本の等間隔整数行で間隔が3の倍数でなければ9点円は存在せず全長強解決
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 9点共円・共線禁止と完全指摘のルール定義
+
+## [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) ヒマワリ型残余禁止集合の全Grundy値は閉形式で高々3
+
+- → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 奇数本の場合の極大集合同偶奇性から全局面の二値性を得る
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 標準盤への適用には包含極小の残余禁止集合を正確に構成する
+
+## [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのGrundy定義
+
+## [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) 接線行の法16制約による固定幅円点数の上界と5〜16行の厳密値
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 連続整数行における二重点行数の全称上界を利用
+
+## [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのGrundy定義
+
+## [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 6点共円・共線禁止の通常プレイ
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): Grundy数の定義
+
+## [K0474](../items/K0474-three-column-four-row-generic-q4.md) 不等間隔三列四行q4の一般位置は後手勝ちで全初手Grundy値4
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 四点共円・共線を禁止する完全指摘の安全手版
+- → depends_on [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md): 整数行列式による禁止四点判定の正当性
+
+## [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) 3本の平行直線・各4候補点で6点円は最大3本、達成可能
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): q点版の安全配置と禁止集合の定義を使用
+
+## [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) 任意三平行線の6点禁止ゲームで18候補不足極大は同和弦energy14の剛性型に限る
+
+- → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 二点和energyの鋭い上界と同和弦による円計数
+- → depends_on [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 任意平行線上の満容量問題の定義と21候補上界
+
+## [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 6点版の円成立条件と盤面規則
+
+## [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 完全指摘・通常プレイのGrundy定義
+
+## [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) 二点禁止残局の木でGrundy値0〜8を実現する最小頂点数
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 実格子残局では二点残余禁止集合だけの場合に限って木モデルを使用できる
+
+## [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) 禁止集合が高々二つの有限配置ゲームは全安全局面のGrundy値に閉公式を持ち3以下
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): mex再帰と独立ゲームのxor
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余の包含極小禁止集合によるゲーム表現
+
+## [K0484](../items/K0484-width-five-q9-all-lengths.md) 五行九点版は全長で行容量だけに分離しM_{5,9}=8
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 法9平方剰余による連続行の障害と比較
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイGrundy値の定義
+
+## [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) 11盤の既知S7 WIN四件を終局から独立再検証し、S6のUNKNOWN誤記を訂正
+
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 勝敗は元先手固定視点。S6はOR節点。
+
+## [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) 11盤35個のS8 LOSSの385終局葉証明と246個のS7 LOSSへの伝播を独立検証
+
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 元先手固定の偶奇AND/OR伝播

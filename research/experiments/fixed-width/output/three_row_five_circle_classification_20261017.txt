@@ -1,0 +1,12 @@
+Exact determinant enumeration: 4096 boards (a,b,d in 1..16)
+Five-point circle counts: {0: 4048, 1: 24, 2: 24}
+All circle coefficients and their complete supports agree with the formula.
+No six-point circle exists on any audited three-row board.
+(a,b,d)=(1,3,2): 1 five-point circles
+(a,b,d)=(3,1,2): 1 five-point circles
+(a,b,d)=(1,2,1): 2 five-point circles
+(a,b,d)=(1,8,3): 1 five-point circles
+Game (a,b,d)=(2,3,1), forbidden=0, safe=512, root=1, nimbers=[0, 1], histogram={0: 256, 1: 256}, terminal={9: 1}
+Game (a,b,d)=(1,3,2), forbidden=1, safe=496, root=0, nimbers=[0, 1], histogram={0: 248, 1: 248}, terminal={8: 5}
+Game (a,b,d)=(1,2,1), forbidden=2, safe=482, root=1, nimbers=[0, 1, 2, 3], histogram={0: 160, 1: 160, 2: 81, 3: 81}, terminal={7: 9, 8: 2}
+All safe subsets match the independent reduced recursion / parity theorem.

@@ -1,0 +1,80 @@
+{
+  "points": [
+    [
+      3,
+      4
+    ],
+    [
+      -5,
+      0
+    ],
+    [
+      -4,
+      -3
+    ],
+    [
+      -4,
+      3
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      -3
+    ],
+    [
+      6,
+      -5
+    ]
+  ],
+  "forbidden_4sets": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      0,
+      4,
+      5,
+      6
+    ]
+  ],
+  "safe_states": 113,
+  "grundy_histogram": {
+    "0": 38,
+    "1": 42,
+    "2": 15,
+    "3": 18
+  },
+  "empty_grundy": 1,
+  "nimber3_witness_mask": 50,
+  "nimber3_witness_points": [
+    [
+      -5,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      -3
+    ]
+  ],
+  "witness_child_grundy": {
+    "0": 1,
+    "2": 2,
+    "3": 2,
+    "6": 0
+  },
+  "small_hypergraph_audit": {
+    "vertices": 6,
+    "distinct_incomparable_edge_pairs": 1180,
+    "max_grundy": 3
+  }
+}

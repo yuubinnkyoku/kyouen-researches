@@ -1,0 +1,62 @@
+{
+  "bound": 16,
+  "audited": 4096,
+  "types": {
+    "two_overlapping_sixes": 16,
+    "none": 4044,
+    "one_six": 36
+  },
+  "profiles": {
+    "none": {
+      "edges": 0,
+      "safe": 4096,
+      "root": 0,
+      "first_values": {
+        "1": 12
+      },
+      "histogram": {
+        "0": 2048,
+        "1": 2048
+      },
+      "maximal": {
+        "12": 1
+      },
+      "max_grundy": 1
+    },
+    "one_six": {
+      "edges": 1,
+      "safe": 4032,
+      "root": 1,
+      "first_values": {
+        "0": 12
+      },
+      "histogram": {
+        "0": 2016,
+        "1": 2016
+      },
+      "maximal": {
+        "11": 6
+      },
+      "max_grundy": 1
+    },
+    "two_overlapping_sixes": {
+      "edges": 2,
+      "safe": 3972,
+      "root": 0,
+      "first_values": {
+        "1": 12
+      },
+      "histogram": {
+        "0": 1378,
+        "1": 1378,
+        "2": 608,
+        "3": 608
+      },
+      "maximal": {
+        "10": 16,
+        "11": 2
+      },
+      "max_grundy": 3
+    }
+  }
+}

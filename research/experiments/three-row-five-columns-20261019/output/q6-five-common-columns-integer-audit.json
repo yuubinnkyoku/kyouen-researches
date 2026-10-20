@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-19",
+  "base_main": "9abcfcb2115bb189b87d36c529920e5939e879aa",
+  "x_candidates": "5-subsets of {0,...,10}",
+  "x_subset_count": 462,
+  "row_gap_a": "1,...,7",
+  "row_gap_b": "1,...,7",
+  "configuration_count": 22638,
+  "circles_histogram": {"0": 20439, "1": 1848, "2": 321, "3": 20, "4": 10},
+  "max_circle_count": 4,
+  "four_circle_cases_satisfy_exact_equality_conditions": true,
+  "independent_verifiers": [
+    "scripts/verify_three_rows_five_columns.py: pair-sum/product-gap formula",
+    "scripts/verify_three_rows_five_columns.cpp: integer circle equation and six-point testing"
+  ],
+  "status": "finite-complete-enumeration-on-specified-range; separate universal proof in reports/"
+}

@@ -1,0 +1,156 @@
+{
+  "rule": "normal play; legal moves do not complete any forbidden 4-set",
+  "edge_count": 5,
+  "uniformity": 4,
+  "fixed_edge": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "enumeration": "every choice of four other distinct 4-subsets in lexicographic bitmask order",
+  "spanning": "union of all five edges equals n vertices",
+  "triple_free": "any two edges share at most two vertices",
+  "records": [
+    {
+      "n": 5,
+      "total_fixed_first": 1,
+      "spanning_fixed_first": 1,
+      "triple_free_spanning_fixed_first": 0,
+      "maximum_grundy_spanning": 1,
+      "distribution_spanning": {
+        "1": 1
+      },
+      "distribution_triple_free_spanning": {},
+      "witness_bitmasks": [
+        15,
+        23,
+        27,
+        29,
+        30
+      ],
+      "triple_free_witness_bitmasks": null
+    },
+    {
+      "n": 6,
+      "total_fixed_first": 1001,
+      "spanning_fixed_first": 999,
+      "triple_free_spanning_fixed_first": 0,
+      "maximum_grundy_spanning": 2,
+      "distribution_spanning": {
+        "0": 669,
+        "1": 30,
+        "2": 300
+      },
+      "distribution_triple_free_spanning": {},
+      "witness_bitmasks": [
+        15,
+        23,
+        39,
+        27,
+        29
+      ],
+      "triple_free_witness_bitmasks": null
+    },
+    {
+      "n": 7,
+      "total_fixed_first": 46376,
+      "spanning_fixed_first": 43376,
+      "triple_free_spanning_fixed_first": 150,
+      "maximum_grundy_spanning": 3,
+      "distribution_spanning": {
+        "0": 3876,
+        "1": 30620,
+        "2": 8700,
+        "3": 180
+      },
+      "distribution_triple_free_spanning": {
+        "1": 150
+      },
+      "witness_bitmasks": [
+        15,
+        23,
+        43,
+        51,
+        101
+      ],
+      "triple_free_witness_bitmasks": [
+        15,
+        51,
+        85,
+        105,
+        102
+      ]
+    },
+    {
+      "n": 8,
+      "total_fixed_first": 864501,
+      "spanning_fixed_first": 684999,
+      "triple_free_spanning_fixed_first": 41505,
+      "maximum_grundy_spanning": 4,
+      "distribution_spanning": {
+        "0": 446400,
+        "1": 102924,
+        "2": 78075,
+        "3": 49680,
+        "4": 7920
+      },
+      "distribution_triple_free_spanning": {
+        "0": 17040,
+        "1": 10050,
+        "2": 12975,
+        "4": 1440
+      },
+      "witness_bitmasks": [
+        15,
+        23,
+        43,
+        209,
+        60
+      ],
+      "triple_free_witness_bitmasks": [
+        15,
+        51,
+        85,
+        102,
+        184
+      ]
+    },
+    {
+      "n": 9,
+      "total_fixed_first": 9691375,
+      "spanning_fixed_first": 5822625,
+      "triple_free_spanning_fixed_first": 1256400,
+      "maximum_grundy_spanning": 5,
+      "distribution_spanning": {
+        "0": 1594875,
+        "1": 2081600,
+        "2": 167850,
+        "3": 1963900,
+        "4": 3600,
+        "5": 10800
+      },
+      "distribution_triple_free_spanning": {
+        "0": 496200,
+        "1": 282600,
+        "2": 7200,
+        "3": 466800,
+        "5": 3600
+      },
+      "witness_bitmasks": [
+        15,
+        23,
+        99,
+        153,
+        312
+      ],
+      "triple_free_witness_bitmasks": [
+        15,
+        51,
+        85,
+        102,
+        432
+      ]
+    }
+  ]
+}

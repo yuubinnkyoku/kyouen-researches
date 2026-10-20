@@ -1,0 +1,8 @@
+2026-10-17 independent audit
+command: python research/experiments/fixed-width/scripts/verify_three_column_divisibility_20261017.py
+cross-check: 216 grids, 220 six-point circles, exact set equality
+explicit existence: all divisible pairs h,d<=12 verified via independent chord equation
+the theorem for unbounded h,d,m is mathematical; this finite audit is auxiliary
+command: python research/experiments/fixed-width/scripts/verify_three_column_q6_game_20261017.py
+h=1,d=2,m=6,q=6: exactly 3 forbidden six-sets, all vertical
+full safe-state mex audit: 250047 safe states, all match g=(15-|S|) mod 2

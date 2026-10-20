@@ -1,0 +1,100 @@
+{
+  "scope": "all minimal forbidden-set families with 1<=k<=3 and edge size<=4, up to vertex relabeling",
+  "per_k": {
+    "1": {
+      "labeled_incidence_types": 4,
+      "unlabeled_edge_types": 4,
+      "root_nimber_counts": {
+        "0": 2,
+        "1": 2
+      },
+      "max_nimber_counts": {
+        "0": 1,
+        "1": 3
+      },
+      "types_by_union_size": {
+        "1": 1,
+        "2": 1,
+        "3": 1,
+        "4": 1
+      },
+      "max_nimber": 1,
+      "examples_for_maximum": [
+        2
+      ]
+    },
+    "2": {
+      "labeled_incidence_types": 30,
+      "unlabeled_edge_types": 20,
+      "root_nimber_counts": {
+        "0": 13,
+        "1": 11,
+        "2": 4,
+        "3": 2
+      },
+      "max_nimber_counts": {
+        "0": 1,
+        "1": 15,
+        "2": 3,
+        "3": 11
+      },
+      "types_by_union_size": {
+        "2": 1,
+        "3": 3,
+        "4": 6,
+        "5": 10,
+        "6": 6,
+        "7": 3,
+        "8": 1
+      },
+      "max_nimber": 3,
+      "examples_for_maximum": [
+        1,
+        2,
+        1
+      ]
+    },
+    "3": {
+      "labeled_incidence_types": 641,
+      "unlabeled_edge_types": 167,
+      "root_nimber_counts": {
+        "0": 262,
+        "1": 258,
+        "2": 61,
+        "3": 60
+      },
+      "max_nimber_counts": {
+        "0": 1,
+        "1": 263,
+        "2": 24,
+        "3": 353
+      },
+      "types_by_union_size": {
+        "3": 2,
+        "4": 17,
+        "5": 71,
+        "6": 163,
+        "7": 173,
+        "8": 124,
+        "9": 62,
+        "10": 22,
+        "11": 6,
+        "12": 1
+      },
+      "max_nimber": 3,
+      "examples_for_maximum": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "exactly_four_per_edge": {
+        "labeled_incidence_types": 68,
+        "unlabeled_edge_types": 25
+      }
+    }
+  }
+}

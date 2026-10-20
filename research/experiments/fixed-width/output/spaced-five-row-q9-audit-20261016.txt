@@ -1,0 +1,35 @@
+PASS modular: d units 1,2,4,5,7,8; 3|d zero-propagation
+d=1 m=4 circles=500 max=8
+d=1 m=6 circles=1884 max=8
+d=1 m=8 circles=4920 max=8
+d=2 m=4 circles=708 max=4
+d=2 m=6 circles=2380 max=6
+d=2 m=8 circles=5785 max=8
+d=3 m=4 circles=708 max=4
+d=3 m=6 circles=2584 max=4
+d=3 m=8 circles=6134 max=6
+d=4 m=4 circles=708 max=4
+d=4 m=6 circles=2680 max=4
+d=4 m=8 circles=6556 max=5
+d=5 m=4 circles=708 max=4
+d=5 m=6 circles=2680 max=4
+d=5 m=8 circles=6688 max=4
+d=6 m=4 circles=708 max=4
+d=6 m=6 circles=2680 max=4
+d=6 m=8 circles=6652 max=4
+d=7 m=4 circles=708 max=4
+d=7 m=6 circles=2680 max=4
+d=7 m=8 circles=6688 max=4
+d=8 m=4 circles=708 max=4
+d=8 m=6 circles=2680 max=4
+d=8 m=8 circles=6688 max=4
+d=9 m=4 circles=708 max=4
+d=9 m=6 circles=2680 max=4
+d=9 m=8 circles=6688 max=4
+d=12 m=4 circles=708 max=4
+d=12 m=6 circles=2680 max=4
+d=12 m=8 circles=6688 max=4
+d=2 m=8 t=1 circles=5785 max=8
+d=2 m=8 t=7 circles=5785 max=8
+d=2 m=8 t=-5 circles=5785 max=8
+PASS: finite exact determinant census; universal claim uses modular proof

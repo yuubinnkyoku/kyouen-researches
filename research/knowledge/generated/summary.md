@@ -1,17 +1,17 @@
 # 移行集計
 
-K項目: 430 / alias: 269 / artifactファイル: 2336
+K項目: 480 / alias: 269 / artifactファイル: 2560
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 27 |
+| computation | 28 |
 | definition | 5 |
 | method | 4 |
-| proposition | 347 |
+| proposition | 394 |
 | question | 36 |
-| verification | 11 |
+| verification | 13 |
 
 ## status
 
@@ -20,38 +20,39 @@ K項目: 430 / alias: 269 / artifactファイル: 2336
 | active | 9 |
 | computed | 109 |
 | conjectured | 1 |
+| needs-review | 48 |
 | observed | 17 |
 | open | 34 |
 | proved | 180 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
-| verified | 11 |
+| verified | 13 |
 | withdrawn | 4 |
 
 ## topics
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 40 |
-| first-moves | 34 |
+| certificates | 42 |
+| first-moves | 35 |
 | formalization | 4 |
-| geometry | 170 |
-| grundy | 73 |
-| maximal-safe | 73 |
-| maximum-safe | 49 |
+| geometry | 209 |
+| grundy | 99 |
+| maximal-safe | 78 |
+| maximum-safe | 50 |
 | migration | 1 |
-| provenance | 33 |
+| provenance | 34 |
 | reconfiguration | 34 |
-| rectangles | 58 |
-| residual-games | 59 |
+| rectangles | 90 |
+| residual-games | 71 |
 | rules | 4 |
-| search-methods | 46 |
-| square-outcomes | 46 |
-| statistics | 45 |
-| strategy-length | 25 |
-| variants | 99 |
-| verification | 40 |
+| search-methods | 53 |
+| square-outcomes | 48 |
+| statistics | 51 |
+| strategy-length | 26 |
+| variants | 141 |
+| verification | 42 |
 
 ## 未解決・要監査・範囲不明
 
@@ -93,6 +94,54 @@ K項目: 430 / alias: 269 / artifactファイル: 2336
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
+- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) [needs-review] 異方整数格子の全幅で3進付値条件下の円点数は2ceil(2w/3)以下
+- [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) [needs-review] 残余禁止辺h本の一点追加ゲームはGrundy値が最大2^h−1（h≥1）
+- [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) [needs-review] 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全
+- [K0439](../items/K0439-five-edge-grundy-seven.md) [needs-review] 5個の残余禁止集合でGrundy値7を達成する抽象回避ゲーム
+- [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) [needs-review] 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する
+- [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) [needs-review] 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない
+- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) [needs-review] 4点の無順序二点和復元では中心反射が唯一の曖昧性
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) [needs-review] 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類
+- [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) [needs-review] 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する
+- [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) [needs-review] 四行8点円の総数は O(m² log m) 以下
+- [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) [needs-review] 四行8点円の最大弦長1億までの有限完全分類
+- [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) [needs-review] 四行8点円の実現傾きは無限個の集積点を持ち種類数は対数×二重対数以上
+- [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) [needs-review] 4行8点円には相異なる実現可能な既約傾きが無限種類ある
+- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) [needs-review] 4行8点円の奇数分母傾きは法64で4合同類に限られる
+- [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) [needs-review] 四行8点円の実現傾きは非空な完全閉包を持ち集積点が非可算個存在する
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) [needs-review] 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ
+- [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) [needs-review] 四行8点円の実現傾きには少なくとも三つの集積点があり種類数は対数以上
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) [needs-review] 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小
+- [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) [needs-review] 5〜63連続整数行で水平中心が半整数の円の最大格子点数は二重点行数の2倍
+- [K0455](../items/K0455-independent-row-capacity-state-counts.md) [needs-review] 独立行容量ゲームの勝敗局面数と非終局負け局面の漸近密度
+- [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) [needs-review] 独立行容量ゲームの勝敗別合法手数分布と条件付き平均の厳密公式
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) [needs-review] 3本の平行直線に各4整数点で6点円3本を実現できる
+- [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) [needs-review] 四行8点円には新しい既約傾き181273/40152の無限Pell族がある
+- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) [needs-review] 無順序二点和からのn点復元はnが2の冪のときに限り非単射
+- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) [needs-review] 二点禁止の道Grundyは52以降最小周期34、最大次数2の鋭い上界は15
+- [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) [needs-review] 異方格子の水平間隔に余分な奇素因子があれば円は幅以下の点しか持たない
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) [needs-review] 残余禁止集合が3個以下かつ各4点以下ならGrundy値は3以下
+- [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) [needs-review] 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界
+- [K0464](../items/K0464-spaced-five-row-q9-mod9.md) [needs-review] 5本の等間隔整数行で間隔が3の倍数でなければ9点円は存在せず全長強解決
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) [needs-review] ヒマワリ型残余禁止集合の全Grundy値は閉形式で高々3
+- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) [needs-review] 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
+- [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) [needs-review] 接線行の法16制約による固定幅円点数の上界と5〜16行の厳密値
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) [needs-review] 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) [needs-review] 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる
+- [K0470](../items/K0470-three-column-arbitrary-integer-spacing.md) [needs-review] 任意の整数間隔の三列格子における最大共円点数の完全分類
+- [K0471](../items/K0471-three-column-constant-five-unbounded-six-onset.md) [needs-review] 三列異方格子では5点円初出を3行に固定して6点円初出を無界にできる
+- [K0472](../items/K0472-three-column-five-implies-six.md) [needs-review] 任意の整数間隔の三列格子で5点円があれば6点円が無限に存在する
+- [K0473](../items/K0473-three-column-five-six-height-gap.md) [needs-review] 三列異方格子の5点円と6点円の初出行数差は無界で初出円は2本と1本
+- [K0474](../items/K0474-three-column-four-row-generic-q4.md) [needs-review] 不等間隔三列四行q4の一般位置は後手勝ちで全初手Grundy値4
+- [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) [needs-review] 3本の平行直線・各4候補点で6点円は最大3本、達成可能
+- [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) [needs-review] 3整数水平行・各4点の6点円3本を実現する最小包囲格子は7×4
+- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) [needs-review] 任意三平行線の6点禁止ゲームで18候補不足極大は同和弦energy14の剛性型に限る
+- [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) [needs-review] 不等間隔三列・三行の5点円本数とq=5全安全局面Grundyを完全分類
+- [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) [needs-review] 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
+- [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) [needs-review] 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) [needs-review] 二点禁止残局の木でGrundy値0〜8を実現する最小頂点数
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) [needs-review] 禁止集合が高々二つの有限配置ゲームは全安全局面のGrundy値に閉公式を持ち3以下
+- [K0484](../items/K0484-width-five-q9-all-lengths.md) [needs-review] 五行九点版は全長で行容量だけに分離しM_{5,9}=8
 
 ## 警告
 

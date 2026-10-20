@@ -1,0 +1,6 @@
+PASS: 88 finite path equalities, induction threshold n=174
+PASS: C_n mex(P_(n-3)) and independent state DP for 3<=n<=17
+PASS: cycle preperiod 38, least eventual period 34
+PASS: C_n=1 for n>=38 iff n mod 34 in {7,11,23,27,31}
+PASS: preperiod winning n= [3, 7, 11, 17, 23, 27, 31, 37]
+PASS C++: independent recurrence, n<=18 full state DP, 34-periodic cycles from 38, winning residues 7,11,23,27,31

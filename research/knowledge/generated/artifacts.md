@@ -309,6 +309,15 @@
 
 - [K0085](../items/K0085-three-to-four-stone-pair-gain.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0086](../items/K0086-blind-probe-median-improvement-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
+
+- [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
+## [research/experiments/bundle-integration-20261020/n11-four-win-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-four-win-validation.txt)
+
+- [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (log): 今回のC++再生成・バイト比較・Python独立検証の実行記録
+## [research/experiments/bundle-integration-20261020/n11-lift-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-lift-validation.txt)
+
+- [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回のterminal-only実行、旧cache比較を省略
 ## [research/experiments/capacity-all-slack-20261010/README.md](../../../research/experiments/capacity-all-slack-20261010/README.md)
 
 - [K0384](../items/K0384-capacity-all-slack-grundy-three.md) (proof): 全称の二重帰納、可換菱形補題、有限検証範囲
@@ -474,6 +483,45 @@
 ## [research/experiments/fact-discovery/output/fact_kmin_n7_safe.json](../../../research/experiments/fact-discovery/output/fact_kmin_n7_safe.json)
 
 - [K0031](../items/K0031-n7-minimum-maximal-size.md) (data): 安全証人と完了探索の記録
+## [research/experiments/fastlane-five-edge-nimber-seven-20261019/README.md](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/README.md)
+
+- [K0439](../items/K0439-five-edge-grundy-seven.md) (proof): 5辺の値7、4点一様5辺の値6、任意hへの直和拡張と限界
+## [research/experiments/fastlane-five-edge-nimber-seven-20261019/crosscheck.py](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/crosscheck.py)
+
+- [K0439](../items/K0439-five-edge-grundy-seven.md) (verifier): 全4864部分集合についてPythonと独立C++の状態表を完全照合
+## [research/experiments/fastlane-five-edge-nimber-seven-20261019/independent.cpp](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/independent.cpp)
+
+- [K0439](../items/K0439-five-edge-grundy-seven.md) (verifier): 未占有集合を用いた独立C++再帰検算
+## [research/experiments/fastlane-five-edge-nimber-seven-20261019/result.json](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/result.json)
+
+- [K0439](../items/K0439-five-edge-grundy-seven.md) (data): 全局面のハッシュとGrundy分布
+## [research/experiments/fastlane-five-edge-nimber-seven-20261019/verify.py](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/verify.py)
+
+- [K0439](../items/K0439-five-edge-grundy-seven.md) (verifier): 全占有ビット集合による完全mex計算
+## [research/experiments/fastlane-four-edge-20261019/output/results.json](../../../research/experiments/fastlane-four-edge-20261019/output/results.json)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (data): 全分布・達成例・軌道数
+## [research/experiments/fastlane-four-edge-20261019/reports/four-edge-rank-four.md](../../../research/experiments/fastlane-four-edge-20261019/reports/four-edge-rank-four.md)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (proof): 92,550候補の完全性と37,592種類の有限完全列挙、適用範囲
+## [research/experiments/fastlane-four-edge-20261019/scripts/enumerate.py](../../../research/experiments/fastlane-four-edge-20261019/scripts/enumerate.py)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): 所属個数mexと辺改名軌道の全列挙
+## [research/experiments/fastlane-four-edge-20261019/scripts/independent.cpp](../../../research/experiments/fastlane-four-edge-20261019/scripts/independent.cpp)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): 独立した全占有集合mexによる全37,592種類の照合
+## [research/experiments/fastlane-four-edge-geometry-20261019/README.md](../../../research/experiments/fastlane-four-edge-geometry-20261019/README.md)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (proof): 11点の明示的整数座標、4本の円方程式、有限完全列挙の説明
+## [research/experiments/fastlane-four-edge-geometry-20261019/independent.cpp](../../../research/experiments/fastlane-four-edge-geometry-20261019/independent.cpp)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 独立の直線・円生成と全局面mex検査
+## [research/experiments/fastlane-four-edge-geometry-20261019/output.json](../../../research/experiments/fastlane-four-edge-geometry-20261019/output.json)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (data): 4禁止組、1635安全局面、Grundy値分布と全初手
+## [research/experiments/fastlane-four-edge-geometry-20261019/verify.py](../../../research/experiments/fastlane-four-edge-geometry-20261019/verify.py)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 全330組の整数行列式と全2048集合のmex検査
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -510,9 +558,18 @@
 ## [research/experiments/fixed-width-frontier-20261005/scripts/q58_sat.py](../../../research/experiments/fixed-width-frontier-20261005/scripts/q58_sat.py)
 
 - [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (solver): 整数弦差による完全円生成と不足極大のCNF化
+## [research/experiments/fixed-width/output/anisotropic_circle_independent_20261016.txt](../../../research/experiments/fixed-width/output/anisotropic_circle_independent_20261016.txt)
+
+- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (data): 17種類の有限盤の全円列挙結果
 ## [research/experiments/fixed-width/output/bounds_49_96.csv](../../../research/experiments/fixed-width/output/bounds_49_96.csv)
 
 - [K0413](../items/K0413-explicit-double-row-constructions-49-384.md) (data): 48個のk・w・ノルム・区間端点
+## [research/experiments/fixed-width/output/capacity_parity_counts_audit_20261016.txt](../../../research/experiments/fixed-width/output/capacity_parity_counts_audit_20261016.txt)
+
+- [K0455](../items/K0455-independent-row-capacity-state-counts.md) (data): 有限監査と五行九点版の具体値
+## [research/experiments/fixed-width/output/constant_five_unbounded_six_20261017.txt](../../../research/experiments/fixed-width/output/constant_five_unbounded_six_20261017.txt)
+
+- [K0471](../items/K0471-three-column-constant-five-unbounded-six-onset.md) (data): t=2..50の弦長検査とt=2..9の独立全円列挙
 ## [research/experiments/fixed-width/output/curve_packing_fixed_width.json](../../../research/experiments/fixed-width/output/curve_packing_fixed_width.json)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (data): 上界表と小盤検査
@@ -522,6 +579,12 @@
 ## [research/experiments/fixed-width/output/double_rows_97_256.csv](../../../research/experiments/fixed-width/output/double_rows_97_256.csv)
 
 - [K0413](../items/K0413-explicit-double-row-constructions-49-384.md) (data): k=97〜256の160構成証人
+## [research/experiments/fixed-width/output/five_row_anisotropic_mod3_audit_20261016.txt](../../../research/experiments/fixed-width/output/five_row_anisotropic_mod3_audit_20261016.txt)
+
+- [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) (data): 有限盤監査の再現出力
+## [research/experiments/fixed-width/output/mod9_anisotropic_rows_20261016.txt](../../../research/experiments/fixed-width/output/mod9_anisotropic_rows_20261016.txt)
+
+- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (data): 81剰余組の全分類と周期帰納の基底値
 ## [research/experiments/fixed-width/output/nonprimitive_33_rows_560_audit.log](../../../research/experiments/fixed-width/output/nonprimitive_33_rows_560_audit.log)
 
 - [K0402](../items/K0402-nonprimitive-thirtythree-double-row-width-bounds.md) (data): 560幅監査記録
@@ -541,6 +604,12 @@
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (data): m=12..40の完全排除集計
 - [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (data): m=12..40の全候補集計
+## [research/experiments/fixed-width/output/q36_real_row_gap_m5.json](../../../research/experiments/fixed-width/output/q36_real_row_gap_m5.json)
+
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (data): 13場合の円・Grundy・極大配置の完全結果
+## [research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv](../../../research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv)
+
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (data): 独立検証用13有理数代表と期待値
 ## [research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt](../../../research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt)
 
 - [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (data): 22法での座標合同監査
@@ -551,6 +620,9 @@
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 最大弦長300万の有限列挙結果
 - [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (data): 最大弦長300万までの11型
+## [research/experiments/fixed-width/output/q48_accumulation_loglog_20261016.txt](../../../research/experiments/fixed-width/output/q48_accumulation_loglog_20261016.txt)
+
+- [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) (data): 独立検算の出力
 ## [research/experiments/fixed-width/output/q48_all_nonlocal_pell_20261015.txt](../../../research/experiments/fixed-width/output/q48_all_nonlocal_pell_20261015.txt)
 
 - [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) (data): 15円・75個の行列式等の監査結果
@@ -564,24 +636,57 @@
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 200万上限の完全列挙で得た弦長型
 - [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (data): 合併計算の入力となる11弦長型
+## [research/experiments/fixed-width/output/q48_circle_upper_log_audit_20261015.txt](../../../research/experiments/fixed-width/output/q48_circle_upper_log_audit_20261015.txt)
+
+- [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) (data): 監査結果
+## [research/experiments/fixed-width/output/q48_dual_pell_three_limits_20261016.txt](../../../research/experiments/fixed-width/output/q48_dual_pell_three_limits_20261016.txt)
+
+- [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) (data): 独立検算の実行記録
 ## [research/experiments/fixed-width/output/q48_exact_threshold.json](../../../research/experiments/fixed-width/output/q48_exact_threshold.json)
 
 - [K0077](../items/K0077-width-four-q8-stabilization.md) (data): 円型分類とm=11,12完全排除
 ## [research/experiments/fixed-width/output/q48_fundamental_unit_audit_20261015.txt](../../../research/experiments/fixed-width/output/q48_fundamental_unit_audit_20261015.txt)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (data): 既知型と488ノルム解の監査結果
+## [research/experiments/fixed-width/output/q48_gaussian_census_B100000000_20261015.csv](../../../research/experiments/fixed-width/output/q48_gaussian_census_B100000000_20261015.csv)
+
+- [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) (data): 最大弦長1億以下の全15弦長型
+## [research/experiments/fixed-width/output/q48_infinite_distinct_slopes_audit_20261016.txt](../../../research/experiments/fixed-width/output/q48_infinite_distinct_slopes_audit_20261016.txt)
+
+- [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) (data): 独立検証器の実行結果
+## [research/experiments/fixed-width/output/q48_mod64_odd_denominator_audit_20261015.txt](../../../research/experiments/fixed-width/output/q48_mod64_odd_denominator_audit_20261015.txt)
+
+- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) (data): 有限監査の実行結果
+## [research/experiments/fixed-width/output/q48_mod64_residue_class_independent_20261015.txt](../../../research/experiments/fixed-width/output/q48_mod64_residue_class_independent_20261015.txt)
+
+- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) (data): 既知5型と有限候補735組の検査結果
 ## [research/experiments/fixed-width/output/q48_odd_q_reflection.json](../../../research/experiments/fixed-width/output/q48_odd_q_reflection.json)
 
 - [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (data): 有限例の検算
 ## [research/experiments/fixed-width/output/q48_pell_family.json](../../../research/experiments/fixed-width/output/q48_pell_family.json)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 最初の例と有限検算
+## [research/experiments/fixed-width/output/q48_pell_orbit_oscillation_20261015.json](../../../research/experiments/fixed-width/output/q48_pell_orbit_oscillation_20261015.json)
+
+- [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) (data): 閉公式・閾値差分の監査と振動数値
+## [research/experiments/fixed-width/output/q48_perfect_slope_closure_audit_20261016.txt](../../../research/experiments/fixed-width/output/q48_perfect_slope_closure_audit_20261016.txt)
+
+- [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) (data): 有限整数監査の実行結果
 ## [research/experiments/fixed-width/output/q48_reflection_mod4_audit_20261015.txt](../../../research/experiments/fixed-width/output/q48_reflection_mod4_audit_20261015.txt)
 
 - [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) (data): 有限監査の出力
+## [research/experiments/fixed-width/output/q48_sieve_dimension2_20261015.json](../../../research/experiments/fixed-width/output/q48_sieve_dimension2_20261015.json)
+
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) (data): H=80,160,320,640の有限監査結果
+## [research/experiments/fixed-width/output/q48_sieve_explicit_constant_20261016.json](../../../research/experiments/fixed-width/output/q48_sieve_explicit_constant_20261016.json)
+
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) (data): 実行出力
 ## [research/experiments/fixed-width/output/q48_slope_reduction_congruence_20261015.txt](../../../research/experiments/fixed-width/output/q48_slope_reduction_congruence_20261015.txt)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (data): 法保存と逆変換の有限監査結果
+## [research/experiments/fixed-width/output/q59_no_nine_circle_audit_20261016.txt](../../../research/experiments/fixed-width/output/q59_no_nine_circle_audit_20261016.txt)
+
+- [K0484](../items/K0484-width-five-q9-all-lengths.md) (data): 六種類の盤長で全円の点数を直接確認した有限結果
 ## [research/experiments/fixed-width/output/q_point_fixed_width.json](../../../research/experiments/fixed-width/output/q_point_fixed_width.json)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (data): 命題・対象範囲・根拠を記した出典
@@ -595,6 +700,39 @@
 ## [research/experiments/fixed-width/output/scaled_circle_gcd_verification_cpp.txt](../../../research/experiments/fixed-width/output/scaled_circle_gcd_verification_cpp.txt)
 
 - [K0410](../items/K0410-scaled-circle-gcd-family.md) (data): C++検査
+## [research/experiments/fixed-width/output/spaced-five-row-q9-audit-20261016.txt](../../../research/experiments/fixed-width/output/spaced-five-row-q9-audit-20261016.txt)
+
+- [K0464](../items/K0464-spaced-five-row-q9-mod9.md) (data): 剰余検査と有限盤完全列挙の出力
+## [research/experiments/fixed-width/output/symmetric_five_columns_q6_audit.txt](../../../research/experiments/fixed-width/output/symmetric_five_columns_q6_audit.txt)
+
+- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) (data): Pythonと独立C++による5代表の検証結果
+## [research/experiments/fixed-width/output/tangent_mod16_separation_20261016.txt](../../../research/experiments/fixed-width/output/tangent_mod16_separation_20261016.txt)
+
+- [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) (data): 監査結果
+## [research/experiments/fixed-width/output/three_column_four_row_generic_q4_20261017.txt](../../../research/experiments/fixed-width/output/three_column_four_row_generic_q4_20261017.txt)
+
+- [K0474](../items/K0474-three-column-four-row-generic-q4.md) (data): 4096パラメータと1655安全局面の検査結果
+## [research/experiments/fixed-width/output/three_column_four_row_generic_q4_independent_20261017.txt](../../../research/experiments/fixed-width/output/three_column_four_row_generic_q4_independent_20261017.txt)
+
+- [K0474](../items/K0474-three-column-four-row-generic-q4.md) (data): C++17独立監査の実行出力
+## [research/experiments/fixed-width/output/three_column_height_gap_20261017.txt](../../../research/experiments/fixed-width/output/three_column_height_gap_20261017.txt)
+
+- [K0473](../items/K0473-three-column-five-six-height-gap.md) (data): 17組の有限完全照合記録
+## [research/experiments/fixed-width/output/three_column_height_multiplicity_20261017.txt](../../../research/experiments/fixed-width/output/three_column_height_multiplicity_20261017.txt)
+
+- [K0473](../items/K0473-three-column-five-six-height-gap.md) (data): 初出円の本数に関する17組の独立完全照合
+## [research/experiments/fixed-width/output/three_row_five_circle_classification_20261017.txt](../../../research/experiments/fixed-width/output/three_row_five_circle_classification_20261017.txt)
+
+- [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) (data): 4096盤と代表3盤の独立照合結果
+## [research/experiments/fixed-width/output/three_row_q4_all_spacing_20261017.txt](../../../research/experiments/fixed-width/output/three_row_q4_all_spacing_20261017.txt)
+
+- [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) (data): 8分類の全安全局面と4096盤の独立照合
+## [research/experiments/fixed-width/reports/anisotropic-mod9-all-widths-20261016.md](../../../research/experiments/fixed-width/reports/anisotropic-mod9-all-widths-20261016.md)
+
+- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (proof): 3進二階差商と法9の81組分類を用いた無界の全称証明
+## [research/experiments/fixed-width/reports/capacity-parity-state-count-20261016.md](../../../research/experiments/fixed-width/reports/capacity-parity-state-count-20261016.md)
+
+- [K0455](../items/K0455-independent-row-capacity-state-counts.md) (proof): 二項恒等式と偶奇射影による全称証明
 ## [research/experiments/fixed-width/reports/curve-packing-fixed-width.md](../../../research/experiments/fixed-width/reports/curve-packing-fixed-width.md)
 
 - [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md) (proof): 三つ組・点対予算による一般定理
@@ -628,6 +766,9 @@
 ## [research/experiments/fixed-width/reports/exact-double-rows-64-256-20261009.md](../../../research/experiments/fixed-width/reports/exact-double-rows-64-256-20261009.md)
 
 - [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md) (proof): 212〜256行の接続証明
+## [research/experiments/fixed-width/reports/five-row-anisotropic-mod3-20261016.md](../../../research/experiments/fixed-width/reports/five-row-anisotropic-mod3-20261016.md)
+
+- [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) (proof): 3進付値に基づく無界の全称証明
 ## [research/experiments/fixed-width/reports/gcd-one-360-proof.md](../../../research/experiments/fixed-width/reports/gcd-one-360-proof.md)
 
 - [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md) (proof): 360行の基底補題と合同完全排除
@@ -668,6 +809,9 @@
 
 - [K0367](../items/K0367-uniform-sublinear-circle-double-rows.md) (proof): 分母gの合同条件、3 mod 4素数とCRTによる全称証明
 - [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md) (proof): 有限合同完全排除と達成円、gcd例外の証明
+## [research/experiments/fixed-width/reports/prime-spacing-row-sparsity-20261016.md](../../../research/experiments/fixed-width/reports/prime-spacing-row-sparsity-20261016.md)
+
+- [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) (proof): 奇素数の二段階剰余制限による全称証明
 ## [research/experiments/fixed-width/reports/q-point-fixed-width.md](../../../research/experiments/fixed-width/reports/q-point-fixed-width.md)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (proof): 命題・対象範囲・根拠を記した出典
@@ -697,6 +841,12 @@
 - [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (source): 支持集合グラフによる完全排除
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{3,5}=12
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=5全長分類
+## [research/experiments/fixed-width/reports/q36-real-row-gap-m5.md](../../../research/experiments/fixed-width/reports/q36-real-row-gap-m5.md)
+
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (proof): 全正実数間隔への代数的分類、13場合への帰着と有限局面分類
+## [research/experiments/fixed-width/reports/q36-symmetric-five-columns.md](../../../research/experiments/fixed-width/reports/q36-symmetric-five-columns.md)
+
+- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) (proof): 左右対称な任意の5列・正実数行間隔での全称円分類、3型への帰着
 ## [research/experiments/fixed-width/reports/q36-three-row-classification.md](../../../research/experiments/fixed-width/reports/q36-three-row-classification.md)
 
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (source): q=6およびq≥7を含む統一分類
@@ -706,9 +856,15 @@
 ## [research/experiments/fixed-width/reports/q48-chord-gap-rigidity-20261015.md](../../../research/experiments/fixed-width/reports/q48-chord-gap-rigidity-20261015.md)
 
 - [K0425](../items/K0425-four-row-eight-point-chord-gap.md) (proof): 無界の間隔定理と74列初出の短い算術証明
+## [research/experiments/fixed-width/reports/q48-circle-count-upper-log-20261015.md](../../../research/experiments/fixed-width/reports/q48-circle-count-upper-log-20261015.md)
+
+- [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) (proof): 二平方和表示数の積とガウス整数の最大公約数による全称上界
 ## [research/experiments/fixed-width/reports/q48-circle-gap-2000000-20261015.md](../../../research/experiments/fixed-width/reports/q48-circle-gap-2000000-20261015.md)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): 最大弦長2000000までの11型の有限完全分類
+## [research/experiments/fixed-width/reports/q48-dual-pell-three-accumulation-points-20261016.md](../../../research/experiments/fixed-width/reports/q48-dual-pell-three-accumulation-points-20261016.md)
+
+- [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) (proof): 固定弦長係数・可変傾きの双対Pell構成、三集積点、定量的対数下界
 ## [research/experiments/fixed-width/reports/q48-exact-threshold.md](../../../research/experiments/fixed-width/reports/q48-exact-threshold.md)
 
 - [K0077](../items/K0077-width-four-q8-stabilization.md) (proof): M_{4,8}=11の一般上界・有限排除・m=10証人
@@ -716,6 +872,16 @@
 ## [research/experiments/fixed-width/reports/q48-fundamental-unit-parity-reduction-20261015.md](../../../research/experiments/fixed-width/reports/q48-fundamental-unit-parity-reduction-20261015.md)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (proof): Pell基本単元だけで偶奇を保ち有限帰着上界を改善
+## [research/experiments/fixed-width/reports/q48-gaussian-circle-census-100m-20261015.md](../../../research/experiments/fixed-width/reports/q48-gaussian-circle-census-100m-20261015.md)
+
+- [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) (proof): ガウス整数列挙の完全性証明と有限実行結果
+- [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) (proof): 明示的な8格子点円・Pell正規形・整数恒等式
+## [research/experiments/fixed-width/reports/q48-infinite-accumulation-loglog-lower-20261016.md](../../../research/experiments/fixed-width/reports/q48-infinite-accumulation-loglog-lower-20261016.md)
+
+- [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) (proof): 固定傾きPellと双対Pellの二重族、開区間分離、定量下界の全称証明
+## [research/experiments/fixed-width/reports/q48-infinite-distinct-slopes-20261016.md](../../../research/experiments/fixed-width/reports/q48-infinite-distinct-slopes-20261016.md)
+
+- [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) (proof): Pell型二次形式の自己同型による相異なる傾きの無限構成と任意法の合同保存
 ## [research/experiments/fixed-width/reports/q48-local-solubility-20261015.md](../../../research/experiments/fixed-width/reports/q48-local-solubility-20261015.md)
 
 - [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (proof): Hensel持ち上げと中国剰余による全称構成
@@ -723,6 +889,12 @@
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): 法27の全称必要条件と最大弦長300万までの有限完全分類
 - [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (proof): 全称的な法27必要条件と有限完全列挙の範囲を説明
+## [research/experiments/fixed-width/reports/q48-mod64-odd-denominator-obstruction-20261015.md](../../../research/experiments/fixed-width/reports/q48-mod64-odd-denominator-obstruction-20261015.md)
+
+- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) (proof): 2進局所分類と3(mod4)素因数障害を組み合わせた全称証明
+## [research/experiments/fixed-width/reports/q48-mod64-residue-class-20261015.md](../../../research/experiments/fixed-width/reports/q48-mod64-residue-class-20261015.md)
+
+- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) (proof): 3(mod4)素因数障害と法64合同類の全称証明
 ## [research/experiments/fixed-width/reports/q48-nearby-q7-threshold.md](../../../research/experiments/fixed-width/reports/q48-nearby-q7-threshold.md)
 
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,7}=13
@@ -735,18 +907,33 @@
 ## [research/experiments/fixed-width/reports/q48-pell-foliation-two-new-families-20261015.md](../../../research/experiments/fixed-width/reports/q48-pell-foliation-two-new-families-20261015.md)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (proof): 既知の二つの新型から異なる傾きのPell無限族を構成
+## [research/experiments/fixed-width/reports/q48-pell-orbit-count-oscillation-20261015.md](../../../research/experiments/fixed-width/reports/q48-pell-orbit-count-oscillation-20261015.md)
+
+- [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) (proof): 全mの閉公式、二階差分、誤差の上下極限の証明
+## [research/experiments/fixed-width/reports/q48-perfect-slope-closure-20261016.md](../../../research/experiments/fixed-width/reports/q48-perfect-slope-closure-20261016.md)
+
+- [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) (proof): 任意の奇数分子・偶数分母・3と互いに素な実現傾きへの双対Pell構成と完全閉包の全称証明
 ## [research/experiments/fixed-width/reports/q48-q6-exact-threshold.md](../../../research/experiments/fixed-width/reports/q48-q6-exact-threshold.md)
 
 - [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md) (proof): M_{4,6}=16
 ## [research/experiments/fixed-width/reports/q48-reflection-mod4-20261015.md](../../../research/experiments/fixed-width/reports/q48-reflection-mod4-20261015.md)
 
 - [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) (proof): 上下反射作用と円数合同式の全称証明
+## [research/experiments/fixed-width/reports/q48-slope-dimension-two-sieve-20261015.md](../../../research/experiments/fixed-width/reports/q48-slope-dimension-two-sieve-20261015.md)
+
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) (proof): 四剰余類障害と一変数大篩による全称上界
+## [research/experiments/fixed-width/reports/q48-slope-dimension-two-sieve-20261016.md](../../../research/experiments/fixed-width/reports/q48-slope-dimension-two-sieve-20261016.md)
+
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) (proof): 大篩とTauber定理による全称証明・明示的主係数
 ## [research/experiments/fixed-width/reports/q48-slope-reduction-congruence-20261015.md](../../../research/experiments/fixed-width/reports/q48-slope-reduction-congruence-20261015.md)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (proof): 厳密傾き下界、有限必要十分判定、合同保存と固定傾き漸近
 ## [research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md](../../../research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md)
 
 - [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (proof): 有限型分類と相対水平移動の全列挙による境界証明
+## [research/experiments/fixed-width/reports/q59-five-row-nine-point-exact-20261016.md](../../../research/experiments/fixed-width/reports/q59-five-row-nine-point-exact-20261016.md)
+
+- [K0484](../items/K0484-width-five-q9-all-lengths.md) (proof): 五連続行の法9障害と全長のGrundy・真の閾値の証明
 ## [research/experiments/fixed-width/reports/quantitative-prime-avoidance-upgrade-20261008.md](../../../research/experiments/fixed-width/reports/quantitative-prime-avoidance-upgrade-20261008.md)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (proof): gcdの素因数を避ける素数選択による強化された対数割る二重対数型上界
@@ -756,6 +943,36 @@
 ## [research/experiments/fixed-width/reports/scaled-circle-gcd-short-window-and-gcd-20261009.md](../../../research/experiments/fixed-width/reports/scaled-circle-gcd-short-window-and-gcd-20261009.md)
 
 - [K0410](../items/K0410-scaled-circle-gcd-family.md) (proof): 拡大円族の構成と適用境界
+## [research/experiments/fixed-width/reports/spaced-five-row-q9-mod9-20261016.md](../../../research/experiments/fixed-width/reports/spaced-five-row-q9-mod9-20261016.md)
+
+- [K0464](../items/K0464-spaced-five-row-q9-mod9.md) (proof): 法9による無界全称証明と3倍数間隔の必要条件
+## [research/experiments/fixed-width/reports/tangent-mod16-circle-capacity-20261016.md](../../../research/experiments/fixed-width/reports/tangent-mod16-circle-capacity-20261016.md)
+
+- [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) (proof): 無界証明・法16有限補題・最大点数の証人
+## [research/experiments/fixed-width/reports/three-column-arbitrary-d-complete-classification-20261017.md](../../../research/experiments/fixed-width/reports/three-column-arbitrary-d-complete-classification-20261017.md)
+
+- [K0470](../items/K0470-three-column-arbitrary-integer-spacing.md) (proof): 任意の正整数a,b,dについての全称証明と6点円の明示構成
+## [research/experiments/fixed-width/reports/three-column-constant-five-unbounded-six-20261017.md](../../../research/experiments/fixed-width/reports/three-column-constant-five-unbounded-six-20261017.md)
+
+- [K0471](../items/K0471-three-column-constant-five-unbounded-six-onset.md) (proof): 任意のt>=2に対する構成・合同式による下界・初出6点円の一意性
+## [research/experiments/fixed-width/reports/three-column-five-to-six-universal-20261017.md](../../../research/experiments/fixed-width/reports/three-column-five-to-six-universal-20261017.md)
+
+- [K0472](../items/K0472-three-column-five-implies-six.md) (proof): 任意の正整数a,b,dに対する全称証明、明示構成、量化範囲
+## [research/experiments/fixed-width/reports/three-column-four-row-generic-q4-20261017.md](../../../research/experiments/fixed-width/reports/three-column-four-row-generic-q4-20261017.md)
+
+- [K0474](../items/K0474-three-column-four-row-generic-q4.md) (proof): 三列円の整数等式、積の鋭い上界、有限ゲームの全称還元
+## [research/experiments/fixed-width/reports/three-column-unbounded-five-six-height-gap-20261017.md](../../../research/experiments/fixed-width/reports/three-column-unbounded-five-six-height-gap-20261017.md)
+
+- [K0473](../items/K0473-three-column-five-six-height-gap.md) (proof): 任意の積条件 ab=d²k(k+1) に対する初出行数の全称証明
+## [research/experiments/fixed-width/reports/three-row-five-circle-and-q5-grundy-20261017.md](../../../research/experiments/fixed-width/reports/three-row-five-circle-and-q5-grundy-20261017.md)
+
+- [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) (proof): 任意の正整数間隔の全称分類と有限mex表
+## [research/experiments/fixed-width/reports/three-row-q4-all-spacing-20261017.md](../../../research/experiments/fixed-width/reports/three-row-q4-all-spacing-20261017.md)
+
+- [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) (proof): 126個の共円4点組の整数多項式分類と8有限ゲームへの全称帰着
+## [research/experiments/fixed-width/scripts/anisotropic_circle_independent_20261016.cpp](../../../research/experiments/fixed-width/scripts/anisotropic_circle_independent_20261016.cpp)
+
+- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (verifier): 非共線三点から整数円を構成する独立有限盤検証
 ## [research/experiments/fixed-width/scripts/check_fixed_width_20261003.py](../../../research/experiments/fixed-width/scripts/check_fixed_width_20261003.py)
 
 - [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) (verifier): 軽量統合再現
@@ -783,6 +1000,9 @@
 ## [research/experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py](../../../research/experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 独立2方式で合計3038のk行部分集合の必要合同条件を全排除
+## [research/experiments/fixed-width/scripts/mod9_anisotropic_rows_20261016.py](../../../research/experiments/fixed-width/scripts/mod9_anisotropic_rows_20261016.py)
+
+- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (verifier): 81組の完全剰余検査と二通りの計算式の照合
 ## [research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp)
 
 - [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): 短い終局・例外下方閉包・mex遷移の独立監査
@@ -798,6 +1018,15 @@
 ## [research/experiments/fixed-width/scripts/q35_support_exclusion.cpp](../../../research/experiments/fixed-width/scripts/q35_support_exclusion.cpp)
 
 - [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (solver): 外部4点集合を全列挙する完全排除
+## [research/experiments/fixed-width/scripts/q36_real_row_gap_m5.py](../../../research/experiments/fixed-width/scripts/q36_real_row_gap_m5.py)
+
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (verifier): 弦和・積に基づく場合生成と15点全局面のmex再帰
+## [research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp](../../../research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp)
+
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (verifier): 全6点組の4×4整数行列式を使う独立円検査とmex再帰
+## [research/experiments/fixed-width/scripts/q48_accumulation_loglog_20261016.py](../../../research/experiments/fixed-width/scripts/q48_accumulation_loglog_20261016.py)
+
+- [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) (verifier): 4×3世代、840件の4点共円行列式と区間分離の整数監査
 ## [research/experiments/fixed-width/scripts/q48_all_nonlocal_pell_20261015.py](../../../research/experiments/fixed-width/scripts/q48_all_nonlocal_pell_20261015.py)
 
 - [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) (verifier): 既知5型を正規形へ戻し、Pell世代と整数行列式を監査
@@ -817,12 +1046,28 @@
 ## [research/experiments/fixed-width/scripts/q48_circle_census_increasing_ac_2000000_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_circle_census_increasing_ac_2000000_20261015.cpp)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): (d0,d2)から行う独立整数全列挙
+## [research/experiments/fixed-width/scripts/q48_circle_upper_log_audit_20261015.py](../../../research/experiments/fixed-width/scripts/q48_circle_upper_log_audit_20261015.py)
+
+- [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) (verifier): 格子点直接列挙・約数公式・弦長列挙の有限独立監査
+## [research/experiments/fixed-width/scripts/q48_dual_pell_three_limits_20261016.py](../../../research/experiments/fixed-width/scripts/q48_dual_pell_three_limits_20261016.py)
+
+- [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) (verifier): 三族各5世代の整数監査と1050件の4点行列式検査
 ## [research/experiments/fixed-width/scripts/q48_exact_threshold.py](../../../research/experiments/fixed-width/scripts/q48_exact_threshold.py)
 
 - [K0077](../items/K0077-width-four-q8-stabilization.md) (verifier): 整数演算による再現器
 ## [research/experiments/fixed-width/scripts/q48_fundamental_unit_audit_20261015.py](../../../research/experiments/fixed-width/scripts/q48_fundamental_unit_audit_20261015.py)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (verifier): 基本単元の偶奇保存と既知型への適用を監査
+## [research/experiments/fixed-width/scripts/q48_gaussian_census_independent_audit_20261015.py](../../../research/experiments/fixed-width/scripts/q48_gaussian_census_independent_audit_20261015.py)
+
+- [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) (verifier): 全15型の整数円行列式監査。全1億の独立列挙ではない
+- [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) (verifier): 4点円行列式1050件と新傾きの整数監査
+## [research/experiments/fixed-width/scripts/q48_gaussian_circle_census_20261015.cpp](../../../research/experiments/fixed-width/scripts/q48_gaussian_circle_census_20261015.cpp)
+
+- [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) (verifier): 1億までの完全因数分解列挙器
+## [research/experiments/fixed-width/scripts/q48_infinite_distinct_slopes_20261016.py](../../../research/experiments/fixed-width/scripts/q48_infinite_distinct_slopes_20261016.py)
+
+- [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) (verifier): 5世代の整数検算、350個の独立4点行列式、8種類の法の帰還周期
 ## [research/experiments/fixed-width/scripts/q48_mod27_chord_audit_20261015.py](../../../research/experiments/fixed-width/scripts/q48_mod27_chord_audit_20261015.py)
 
 - [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (verifier): 円係数と弦長の二つの剰余表示を独立に全列挙
@@ -830,15 +1075,36 @@
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): 最大弦長300万までの剰余篩付き完全列挙
 - [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (verifier): 最大弦長300万までの合同篩付き有限完全列挙
+## [research/experiments/fixed-width/scripts/q48_mod64_odd_denominator_audit_20261015.py](../../../research/experiments/fixed-width/scripts/q48_mod64_odd_denominator_audit_20261015.py)
+
+- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) (verifier): 法64平方剰余による独立有限監査
+## [research/experiments/fixed-width/scripts/q48_mod64_residue_class_independent_20261015.py](../../../research/experiments/fixed-width/scripts/q48_mod64_residue_class_independent_20261015.py)
+
+- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) (verifier): 平方剰余集合を使う独立有限監査
 ## [research/experiments/fixed-width/scripts/q48_pell_family.py](../../../research/experiments/fixed-width/scripts/q48_pell_family.py)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): Pell再帰・座標・円方程式・行列式の再現検査
 ## [research/experiments/fixed-width/scripts/q48_pell_foliation_20261015.py](../../../research/experiments/fixed-width/scripts/q48_pell_foliation_20261015.py)
 
 - [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (verifier): 二族の正規形、Pell反復、円方程式、全四点行列式を整数検査
+## [research/experiments/fixed-width/scripts/q48_pell_orbit_oscillation_20261015.py](../../../research/experiments/fixed-width/scripts/q48_pell_orbit_oscillation_20261015.py)
+
+- [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) (verifier): Pell構成と弦長漸化式の独立照合、144個の盤長の整数検証
+## [research/experiments/fixed-width/scripts/q48_perfect_slope_closure_verify_20261016.py](../../../research/experiments/fixed-width/scripts/q48_perfect_slope_closure_verify_20261016.py)
+
+- [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) (verifier): 2種類の種・4世代の法6保存、560件の独立共円行列式検算
 ## [research/experiments/fixed-width/scripts/q48_reflection_mod4_20261015.py](../../../research/experiments/fixed-width/scripts/q48_reflection_mod4_20261015.py)
 
 - [K0429](../items/K0429-four-row-q8-circle-count-reflection-congruence.md) (verifier): 円の二通りの整数構成によるm=1..100の有限照合
+## [research/experiments/fixed-width/scripts/q48_sieve_constant_independent_20261016.py](../../../research/experiments/fixed-width/scripts/q48_sieve_constant_independent_20261016.py)
+
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) (verifier): 有理数による独立有限監査
+## [research/experiments/fixed-width/scripts/q48_sieve_dimension2_20261015.py](../../../research/experiments/fixed-width/scripts/q48_sieve_dimension2_20261015.py)
+
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) (verifier): 有限剰余篩監査
+## [research/experiments/fixed-width/scripts/q48_sieve_interval_audit_20261016.py](../../../research/experiments/fixed-width/scripts/q48_sieve_interval_audit_20261016.py)
+
+- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) (verifier): 傾き下界で短縮した区間の大篩を独立検査
 ## [research/experiments/fixed-width/scripts/q48_slope_reduction_congruence_20261015.py](../../../research/experiments/fixed-width/scripts/q48_slope_reduction_congruence_20261015.py)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (verifier): 有限逆変換・複数法の合同保存を監査
@@ -854,12 +1120,48 @@
 ## [research/experiments/fixed-width/scripts/q48_verify_local_solubility_20261015.py](../../../research/experiments/fixed-width/scripts/q48_verify_local_solubility_20261015.py)
 
 - [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (verifier): 3冪平方根、CRT構成と円方程式の有限監査
+## [research/experiments/fixed-width/scripts/q59_no_nine_circle_verify_20261016.py](../../../research/experiments/fixed-width/scripts/q59_no_nine_circle_verify_20261016.py)
+
+- [K0484](../items/K0484-width-five-q9-all-lengths.md) (verifier): 法9全16初期剰余と独立整数行列式円生成の監査
 ## [research/experiments/fixed-width/scripts/q_point_fixed_width.py](../../../research/experiments/fixed-width/scripts/q_point_fixed_width.py)
 
 - [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
 ## [research/experiments/fixed-width/scripts/run_nonprimitive_rows_2_32.py](../../../research/experiments/fixed-width/scripts/run_nonprimitive_rows_2_32.py)
 
 - [K0383](../items/K0383-nonprimitive-double-row-min-width-2-32.md) (verifier): 二方式のC++合同マスク照合
+## [research/experiments/fixed-width/scripts/symmetric_five_columns_q6.py](../../../research/experiments/fixed-width/scripts/symmetric_five_columns_q6.py)
+
+- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) (verifier): 二点和の式と全15点部分集合のGrundy後退計算
+## [research/experiments/fixed-width/scripts/symmetric_five_columns_q6_independent.cpp](../../../research/experiments/fixed-width/scripts/symmetric_five_columns_q6_independent.cpp)
+
+- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) (verifier): 整数持ち上げ行列式による全5005六点組の独立検査と全局面計算
+## [research/experiments/fixed-width/scripts/tangent_mod16_separation_20261016.py](../../../research/experiments/fixed-width/scripts/tangent_mod16_separation_20261016.py)
+
+- [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) (verifier): 法16の独立2実装と有限格子の三点円直接列挙
+## [research/experiments/fixed-width/scripts/three_column_arbitrary_d_construct_20261017.py](../../../research/experiments/fixed-width/scripts/three_column_arbitrary_d_construct_20261017.py)
+
+- [K0470](../items/K0470-three-column-arbitrary-integer-spacing.md) (verifier): 75000組の構成監査と252盤の独立行列式完全列挙
+## [research/experiments/fixed-width/scripts/three_column_five_to_six_verify.py](../../../research/experiments/fixed-width/scripts/three_column_five_to_six_verify.py)
+
+- [K0472](../items/K0472-three-column-five-implies-six.md) (verifier): 二次形式不変性と独立円決定による有限検算
+## [research/experiments/fixed-width/scripts/three_column_four_row_generic_q4_20261017.py](../../../research/experiments/fixed-width/scripts/three_column_four_row_generic_q4_20261017.py)
+
+- [K0474](../items/K0474-three-column-four-row-generic-q4.md) (verifier): 算術判定と整数行列式の独立照合、全局面Grundy値の二重計算
+## [research/experiments/fixed-width/scripts/three_column_four_row_generic_q4_independent_20261017.cpp](../../../research/experiments/fixed-width/scripts/three_column_four_row_generic_q4_independent_20261017.cpp)
+
+- [K0474](../items/K0474-three-column-four-row-generic-q4.md) (verifier): C++17の4×4置換行列式と再帰mexによる独立監査
+## [research/experiments/fixed-width/scripts/three_row_five_circle_classification_20261017.py](../../../research/experiments/fixed-width/scripts/three_row_five_circle_classification_20261017.py)
+
+- [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) (verifier): 4096盤の独立整数行列式列挙と全安全局面9-bit再帰
+## [research/experiments/fixed-width/scripts/three_row_q4_all_spacing_20261017.py](../../../research/experiments/fixed-width/scripts/three_row_q4_all_spacing_20261017.py)
+
+- [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) (verifier): 純Python有理多項式証明検査・9-bit完全再帰・独立行列式検証
+## [research/experiments/fixed-width/scripts/verify_capacity_parity_counts_20261016.py](../../../research/experiments/fixed-width/scripts/verify_capacity_parity_counts_20261016.py)
+
+- [K0455](../items/K0455-independent-row-capacity-state-counts.md) (verifier): 75組の全ビット集合直接列挙
+## [research/experiments/fixed-width/scripts/verify_constant_five_unbounded_six_20261017.py](../../../research/experiments/fixed-width/scripts/verify_constant_five_unbounded_six_20261017.py)
+
+- [K0471](../items/K0471-three-column-constant-five-unbounded-six-onset.md) (verifier): 弦長整数方程式と独立三点行列式による完全列挙
 ## [research/experiments/fixed-width/scripts/verify_double_rows_257_320.cpp](../../../research/experiments/fixed-width/scripts/verify_double_rows_257_320.cpp)
 
 - [K0412](../items/K0412-exact-double-rows-sixtyfour-to-threehundredthirtysix.md) (verifier): 257〜320行の合同マスク検査
@@ -890,6 +1192,9 @@
 ## [research/experiments/fixed-width/scripts/verify_exact_double_rows_5_43.py](../../../research/experiments/fixed-width/scripts/verify_exact_double_rows_5_43.py)
 
 - [K0368](../items/K0368-exact-double-hit-rows-width-five-to-forty-three.md) (verifier): 二方式の剰余集合照合と具体的円の整数検算
+## [research/experiments/fixed-width/scripts/verify_five_row_anisotropic_mod3_20261016.py](../../../research/experiments/fixed-width/scripts/verify_five_row_anisotropic_mod3_20261016.py)
+
+- [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) (verifier): 法9の16初期組と14有限盤の整数幾何による独立検査
 ## [research/experiments/fixed-width/scripts/verify_gcd_one_361_400_direct.cpp](../../../research/experiments/fixed-width/scripts/verify_gcd_one_361_400_direct.cpp)
 
 - [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md) (verifier): 4語マスクを使った直接平方剰余列挙
@@ -905,6 +1210,9 @@
 ## [research/experiments/fixed-width/scripts/verify_prime_avoidance.py](../../../research/experiments/fixed-width/scripts/verify_prime_avoidance.py)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (verifier): 素数個数とgcd因数回避の有限例（無界証明ではない）
+## [research/experiments/fixed-width/scripts/verify_prime_spacing_20261016.py](../../../research/experiments/fixed-width/scripts/verify_prime_spacing_20261016.py)
+
+- [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) (verifier): 56有限盤の独立整数円生成と行剰余監査
 ## [research/experiments/fixed-width/scripts/verify_quantitative_density.py](../../../research/experiments/fixed-width/scripts/verify_quantitative_density.py)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (verifier): 局所剰余数と中国剰余定理の独立有限検算
@@ -914,6 +1222,27 @@
 ## [research/experiments/fixed-width/scripts/verify_scaled_circle_staircase.py](../../../research/experiments/fixed-width/scripts/verify_scaled_circle_staircase.py)
 
 - [K0410](../items/K0410-scaled-circle-gcd-family.md) (verifier): 尺度ごとの列挙・gcd検査
+## [research/experiments/fixed-width/scripts/verify_spaced_five_rows.py](../../../research/experiments/fixed-width/scripts/verify_spaced_five_rows.py)
+
+- [K0464](../items/K0464-spaced-five-row-q9-mod9.md) (verifier): 独立した剰余検査と三点行列式による有限盤完全列挙
+## [research/experiments/fixed-width/scripts/verify_three_column_height_gap_20261017.py](../../../research/experiments/fixed-width/scripts/verify_three_column_height_gap_20261017.py)
+
+- [K0473](../items/K0473-three-column-five-six-height-gap.md) (verifier): 行列式列挙と弦長方程式列挙の独立照合
+## [research/experiments/fixed-width/scripts/verify_three_column_height_multiplicity_20261017.py](../../../research/experiments/fixed-width/scripts/verify_three_column_height_multiplicity_20261017.py)
+
+- [K0473](../items/K0473-three-column-five-six-height-gap.md) (verifier): 二点と第三点から円係数を構成する独立完全列挙
+## [research/experiments/four-q4-residual-grundy-20261018/independent.cpp](../../../research/experiments/four-q4-residual-grundy-20261018/independent.cpp)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): C++の未占有所属型数による独立再帰
+## [research/experiments/four-q4-residual-grundy-20261018/proof.md](../../../research/experiments/four-q4-residual-grundy-20261018/proof.md)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (proof): 15所属型への全称帰着、4,079型の完全列挙、最小点数と具体証人
+## [research/experiments/four-q4-residual-grundy-20261018/results.json](../../../research/experiments/four-q4-residual-grundy-20261018/results.json)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (data): 全4,079型のGrundy値分布と証人
+## [research/experiments/four-q4-residual-grundy-20261018/verify.py](../../../research/experiments/four-q4-residual-grundy-20261018/verify.py)
+
+- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): Pythonの点集合ビットマスクによる完全再帰
 ## [research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/density-probe-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): 証明済み必要合同式と直接整数行列式で全選択四点を検査
@@ -960,13 +1289,46 @@
 ## [research/experiments/game-structure/output/game_structure_20261003_nine_corner.json](../../../research/experiments/game-structure/output/game_structure_20261003_nine_corner.json)
 
 - [K0311](../items/K0311-misere-n9-outcome-open.md) (data): 資源上限でUNKNOWN、証明書なしの実行結果
+## [research/experiments/game-structure/output/mobility-audit-20261016.txt](../../../research/experiments/game-structure/output/mobility-audit-20261016.txt)
+
+- [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) (data): 95条件・317253局面の完全有限検算結果
 ## [research/experiments/game-structure/output/multiplayer_modulus_20261005.json](../../../research/experiments/game-structure/output/multiplayer_modulus_20261005.json)
 
 - [K0339](../items/K0339-multiplayer-terminal-modulus.md) (data): 194族・37636直和・標準1..4盤での照合
+## [research/experiments/game-structure/output/node_kayles_pspace_20261019.json](../../../research/experiments/game-structure/output/node_kayles_pspace_20261019.json)
+
+- [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) (data): 88グラフ・全9614四点組・749安全残余局面の照合結果
+## [research/experiments/game-structure/output/residual_three_edges_q4_20261018.json](../../../research/experiments/game-structure/output/residual_three_edges_q4_20261018.json)
+
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) (data): 全分類の機械可読結果
+## [research/experiments/game-structure/output/residual_three_edges_q4_independent.txt](../../../research/experiments/game-structure/output/residual_three_edges_q4_independent.txt)
+
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) (data): C++独立照合結果と反例
+## [research/experiments/game-structure/output/safe_extensions_20261019.json](../../../research/experiments/game-structure/output/safe_extensions_20261019.json)
+
+- [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) (data): 全95盤、15590四点組、2284候補集合の監査集計
+## [research/experiments/game-structure/output/sunflower_grundy_20261018.json](../../../research/experiments/game-structure/output/sunflower_grundy_20261018.json)
+
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (data): 12点以下1470盤・2580974安全局面の完全検証結果
 ## [research/experiments/game-structure/output/symmetry_scope_20261005.json](../../../research/experiments/game-structure/output/symmetry_scope_20261005.json)
 
 - [K0337](../items/K0337-odd-uniform-involution-scope.md) (data): q=3,5,7,9の有限照合
 - [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (data): n=1..11の完全有限照合
+## [research/experiments/game-structure/output/two-edge-exact-grundy-20261019.json](../../../research/experiments/game-structure/output/two-edge-exact-grundy-20261019.json)
+
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (data): 両検査の件数と範囲
+## [research/experiments/game-structure/path-periodicity-20261019/path_period_results.json](../../../research/experiments/game-structure/path-periodicity-20261019/path_period_results.json)
+
+- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (data): 再生成可能な周期基底とGrundy値・最小頂点数
+## [research/experiments/game-structure/path-periodicity-20261019/proof.md](../../../research/experiments/game-structure/path-periodicity-20261019/proof.md)
+
+- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (proof): 無限周期延長補題と最大次数2の鋭い上界・最小達成頂点数
+## [research/experiments/game-structure/path-periodicity-20261019/verify_path_period.py](../../../research/experiments/game-structure/path-periodicity-20261019/verify_path_period.py)
+
+- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (verifier): 周期延長補題の88個の有限基底、全マスク再帰、最短路
+## [research/experiments/game-structure/path-periodicity-20261019/verify_path_period_independent.cpp](../../../research/experiments/game-structure/path-periodicity-20261019/verify_path_period_independent.cpp)
+
+- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (verifier): 別方式の道・閉路再帰とBellman–Ford型最短路
 ## [research/experiments/game-structure/reports/game-structure-20261003-extra.md](../../../research/experiments/game-structure/reports/game-structure-20261003-extra.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (source): 6合法点での最初の例外分類
@@ -978,25 +1340,97 @@
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 5合法点交換則の一般証明
 - [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (source): §6のmisère 1..8盤の厳密勝敗と全初手分類
 - [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) (proof): misère直和の必要十分条件と共円ゲームへの適用
+## [research/experiments/game-structure/reports/independent-row-mobility-distribution-20261016.md](../../../research/experiments/game-structure/reports/independent-row-mobility-distribution-20261016.md)
+
+- [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) (proof): 二変数母関数・勝敗別平均・漸近式の全称証明
 ## [research/experiments/game-structure/reports/multiplayer-modulus-20261005.md](../../../research/experiments/game-structure/reports/multiplayer-modulus-20261005.md)
 
 - [K0339](../items/K0339-multiplayer-terminal-modulus.md) (proof): 全rの必要十分条件、直和gcd公式、固定幅への系
+## [research/experiments/game-structure/reports/node-kayles-pspace-20261019.md](../../../research/experiments/game-structure/reports/node-kayles-pspace-20261019.md)
+
+- [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) (proof): Node Kaylesとの全状態同型・PSPACE完全性・独立幾何構成の数学的証明
+## [research/experiments/game-structure/reports/residual_three_edges_q4_20261018.md](../../../research/experiments/game-structure/reports/residual_three_edges_q4_20261018.md)
+
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) (proof): 有限型への数学的帰着、全称命題の計算機支援証明、反例、適用限界
+## [research/experiments/game-structure/reports/safe-extension-complexity-20261019.md](../../../research/experiments/game-structure/reports/safe-extension-complexity-20261019.md)
+
+- [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) (proof): 独立集合多項式への全単射、終局数の#P完全性、星による極大長差の無界証明
+## [research/experiments/game-structure/reports/sunflower_grundy_20261018.md](../../../research/experiments/game-structure/reports/sunflower_grundy_20261018.md)
+
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (proof): 任意個のsunflower禁止集合の全称証明、極大数と安全局面数
 ## [research/experiments/game-structure/reports/symmetry-scope-20261005.md](../../../research/experiments/game-structure/reports/symmetry-scope-20261005.md)
 
 - [K0186](../items/K0186-ceiling-three-distinct-winning-orbits-open.md) (proof): 高対称候補を各nでO(n²)個の二軸配置へ限定する一般分類
 - [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) (proof): 円・直線への適用範囲を明示し、任意禁止族への過大な拡張を訂正
 - [K0337](../items/K0337-odd-uniform-involution-scope.md) (proof): 任意奇数qの最小反例と抽象ブロック十分条件の証明
 - [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (proof): D4部分群、禁止軌道、二軸配置の必要十分分類と個数公式
+## [research/experiments/game-structure/reports/two-edge-exact-grundy-20261019.md](../../../research/experiments/game-structure/reports/two-edge-exact-grundy-20261019.md)
+
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (proof): 全称定理と帰納法による証明
 ## [research/experiments/game-structure/scripts/game_structure_20261003_eight_check.cpp](../../../research/experiments/game-structure/scripts/game_structure_20261003_eight_check.cpp)
 
 - [K0310](../items/K0310-misere-square-outcomes-through-eight.md) (verifier): 行列式ベースの独立検証器
+## [research/experiments/game-structure/scripts/independent_p3_audit_20261019.cpp](../../../research/experiments/game-structure/scripts/independent_p3_audit_20261019.cpp)
+
+- [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) (verifier): 7点P3別構成の独立C++検算
+## [research/experiments/game-structure/scripts/independent_safe_extensions_20261019.cpp](../../../research/experiments/game-structure/scripts/independent_safe_extensions_20261019.cpp)
+
+- [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) (verifier): 独立C++円方程式判定と全延長の照合
 ## [research/experiments/game-structure/scripts/multiplayer_modulus_20261005.py](../../../research/experiments/game-structure/scripts/multiplayer_modulus_20261005.py)
 
 - [K0339](../items/K0339-multiplayer-terminal-modulus.md) (verifier): 全4頂点以下の下方閉族と小盤の直接継続DAGによる独立検算
+## [research/experiments/game-structure/scripts/residual_three_edges_q4_20261018.py](../../../research/experiments/game-structure/scripts/residual_three_edges_q4_20261018.py)
+
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) (verifier): 残点数ベクトルによる全型・全安全状態の再帰
+## [research/experiments/game-structure/scripts/residual_three_edges_q4_independent.cpp](../../../research/experiments/game-structure/scripts/residual_three_edges_q4_independent.cpp)
+
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) (verifier): 独立したビット集合による全安全部分集合mex検証
+## [research/experiments/game-structure/scripts/residual_three_foursets_minimum_20261018.py](../../../research/experiments/game-structure/scripts/residual_three_foursets_minimum_20261018.py)
+
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) (verifier): 全て4点の禁止集合で空盤値3の最小点数と度数を独立確認
+## [research/experiments/game-structure/scripts/sunflower_grundy_20261018.py](../../../research/experiments/game-structure/scripts/sunflower_grundy_20261018.py)
+
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (verifier): 実際のビット集合を使った全安全局面の独立mex再帰
 ## [research/experiments/game-structure/scripts/symmetry_scope_20261005.py](../../../research/experiments/game-structure/scripts/symmetry_scope_20261005.py)
 
 - [K0337](../items/K0337-odd-uniform-involution-scope.md) (verifier): 全安全集合のmex再帰と独立P/N再帰
 - [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) (verifier): 部分群軌道の全選択と公式による生成を比較する
+## [research/experiments/game-structure/scripts/verify_graph_realization_20261019.py](../../../research/experiments/game-structure/scripts/verify_graph_realization_20261019.py)
+
+- [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) (verifier): 有理円逐次構成による別証明の有限監査
+## [research/experiments/game-structure/scripts/verify_mobility_20261016.py](../../../research/experiments/game-structure/scripts/verify_mobility_20261016.py)
+
+- [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) (verifier): 物理的ビット集合の直接列挙と多項式畳み込みの独立比較
+## [research/experiments/game-structure/scripts/verify_node_kayles_reduction_20261019.py](../../../research/experiments/game-structure/scripts/verify_node_kayles_reduction_20261019.py)
+
+- [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) (verifier): 既存幾何構成の独立整数行列式監査と全残余状態Grundy照合
+## [research/experiments/game-structure/scripts/verify_safe_extensions_20261019.py](../../../research/experiments/game-structure/scripts/verify_safe_extensions_20261019.py)
+
+- [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) (verifier): 汎用整数4×4行列式と全延長の照合
+## [research/experiments/game-structure/scripts/verify_two_edges.cpp](../../../research/experiments/game-structure/scripts/verify_two_edges.cpp)
+
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): 4領域の残数による独立した有限mex検査
+## [research/experiments/game-structure/scripts/verify_two_edges.py](../../../research/experiments/game-structure/scripts/verify_two_edges.py)
+
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): 占有subsetによる独立した有限完全mex検査
+## [research/experiments/game-structure/tree-grundy-minima-20261020/README.md](../../../research/experiments/game-structure/tree-grundy-minima-20261020/README.md)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (proof): 全非同型木列挙の完全性論証と計算結果・適用限界
+## [research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_independent.json](../../../research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_independent.json)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (data): 全木Grundy分布と達成例
+## [research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_networkx.json](../../../research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_networkx.json)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (data): 独立列挙・独立再帰の全分布
+## [research/experiments/game-structure/tree-grundy-minima-20261020/tree_occupied_mex.cpp](../../../research/experiments/game-structure/tree-grundy-minima-20261020/tree_occupied_mex.cpp)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (verifier): C++占有点集合mex再帰
+## [research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima.py](../../../research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima.py)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (verifier): 葉付加とAHU正規形による列挙器
+## [research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima_networkx.py](../../../research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima_networkx.py)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (verifier): 独立NetworkX木列挙とPython残存誘導グラフmex
 ## [research/experiments/general-q-local-cover-20261005/output/audit.json](../../../research/experiments/general-q-local-cover-20261005/output/audit.json)
 
 - [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) (data): 4×3全4096部分集合q4..8の監査と13個の整数等号証人
@@ -1006,6 +1440,18 @@
 ## [research/experiments/general-q-local-cover-20261005/scripts/verify.py](../../../research/experiments/general-q-local-cover-20261005/scripts/verify.py)
 
 - [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) (verifier): 全三点曲線と整数反転直線の独立照合・有限小盤・等号証人検査
+## [research/experiments/geometric-four-q4-grundy-five-20261018/proof.md](../../../research/experiments/geometric-four-q4-grundy-five-20261018/proof.md)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (proof): 具体証人、量化範囲、有限型分類と5×5完全列挙の証明
+## [research/experiments/geometric-four-q4-grundy-five-20261018/verify_abstract.py](../../../research/experiments/geometric-four-q4-grundy-five-20261018/verify_abstract.py)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 4禁則4079所属型の完全列挙と11点未満の排除
+## [research/experiments/geometric-four-q4-grundy-five-20261018/verify_geometry.py](../../../research/experiments/geometric-four-q4-grundy-five-20261018/verify_geometry.py)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 円係数と共線判定、mex、5×5の独立枝刈り列挙
+## [research/experiments/geometric-four-q4-grundy-five-20261018/verify_independent.cpp](../../../research/experiments/geometric-four-q4-grundy-five-20261018/verify_independent.cpp)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 行列式と密配列mex、5×5の全4457400組の枝刈りなし検証
 ## [research/experiments/geometry-frontier-followup-20261005/audit.json](../../../research/experiments/geometry-frontier-followup-20261005/audit.json)
 
 - [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) (data): r≤8の整数証人・削除完全検査、r≤6全436848安全局面の完全mex検査
@@ -1042,6 +1488,12 @@
 ## [research/experiments/geometry/output/central_211_two_squares_audit_20261011.json](../../../research/experiments/geometry/output/central_211_two_squares_audit_20261011.json)
 
 - [K0388](../items/K0388-central-three-row-two-squares-density.md) (data): 有限監査の実行記録
+## [research/experiments/geometry/output/circle_band_max_5_63_20261016.json](../../../research/experiments/geometry/output/circle_band_max_5_63_20261016.json)
+
+- [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) (data): 13右端・3分母の剰余上界と59幅の達成円
+## [research/experiments/geometry/output/circle_band_max_5_63_independent_20261016.txt](../../../research/experiments/geometry/output/circle_band_max_5_63_independent_20261016.txt)
+
+- [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) (data): 独立C++検算結果
 ## [research/experiments/geometry/output/cocircular_211_counts_20261011.csv](../../../research/experiments/geometry/output/cocircular_211_counts_20261011.csv)
 
 - [K0392](../items/K0392-cocircular-211-rectangle-parity.md) (data): 1..11×1..11の全計数と偶奇
@@ -1069,6 +1521,12 @@
 ## [research/experiments/geometry/output/high_q_box_521_cases.txt](../../../research/experiments/geometry/output/high_q_box_521_cases.txt)
 
 - [K0396](../items/K0396-d-dimensional-box-collinear-q-formulas.md) (data): 521条件の結果
+## [research/experiments/geometry/output/lattice_three_circles_q6.json](../../../research/experiments/geometry/output/lattice_three_circles_q6.json)
+
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (data): Pythonの有限完全列挙結果
+## [research/experiments/geometry/output/lattice_three_circles_q6_independent.txt](../../../research/experiments/geometry/output/lattice_three_circles_q6_independent.txt)
+
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (data): C++の独立検算結果
 ## [research/experiments/geometry/output/n11-q12-terminal-extremes-20261012.txt](../../../research/experiments/geometry/output/n11-q12-terminal-extremes-20261012.txt)
 
 - [K0401](../items/K0401-n11-q12-terminal-extrema.md) (data): 検証器の実行結果
@@ -1099,6 +1557,15 @@
 ## [research/experiments/geometry/output/three_line_211_audit_20261011.txt](../../../research/experiments/geometry/output/three_line_211_audit_20261011.txt)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (data): 任意三行監査
+## [research/experiments/geometry/output/three_parallel_four_q6_audit.json](../../../research/experiments/geometry/output/three_parallel_four_q6_audit.json)
+
+- [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) (data): Python監査結果
+## [research/experiments/geometry/output/three_parallel_four_q6_independent.txt](../../../research/experiments/geometry/output/three_parallel_four_q6_independent.txt)
+
+- [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) (data): C++監査結果
+## [research/experiments/geometry/output/three_parallel_four_q6_minbox_counts.txt](../../../research/experiments/geometry/output/three_parallel_four_q6_minbox_counts.txt)
+
+- [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) (data): 二方式で一致した全5長方形の完全集計と全達成配置
 ## [research/experiments/geometry/output/three_row_211_audit_20261011.txt](../../../research/experiments/geometry/output/three_row_211_audit_20261011.txt)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (data): 3行盤監査
@@ -1114,6 +1581,9 @@
 ## [research/experiments/geometry/reports/central-211-two-squares-density-20261011.md](../../../research/experiments/geometry/reports/central-211-two-squares-density-20261011.md)
 
 - [K0388](../items/K0388-central-three-row-two-squares-density.md) (proof): 全単射・素因数判定・Pell無限族・CRT篩による密度0の証明
+## [research/experiments/geometry/reports/circle-band-halfcenter-5-63-20261016.md](../../../research/experiments/geometry/reports/circle-band-halfcenter-5-63-20261016.md)
+
+- [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) (proof): 水平接線の分母帰着、法5040の完全排除、達成円
 ## [research/experiments/geometry/reports/collinear-hyperedge-overlap-20261011.md](../../../research/experiments/geometry/reports/collinear-hyperedge-overlap-20261011.md)
 
 - [K0397](../items/K0397-collinear-q-overlap-distribution.md) (proof): 任意有限実点集合の2点以上の共線禁則重複と局所次数の全称証明
@@ -1136,6 +1606,9 @@
 
 - [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (proof): 幅16定理と最小性
 - [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母5・8の点数公式と閾値
+## [research/experiments/geometry/reports/lattice-three-circles-q6-20261018.md](../../../research/experiments/geometry/reports/lattice-three-circles-q6-20261018.md)
+
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (proof): 8通りの水平弦の完全分類による存在・排他証明
 ## [research/experiments/geometry/reports/n11-q12-terminal-extremes-20261012.md](../../../research/experiments/geometry/reports/n11-q12-terminal-extremes-20261012.md)
 
 - [K0401](../items/K0401-n11-q12-terminal-extrema.md) (proof): 半整数中心による完全列挙と横断集合の両端値の証明
@@ -1181,6 +1654,12 @@
 ## [research/experiments/geometry/reports/three-line-enclosed-chord-bound-20261011.md](../../../research/experiments/geometry/reports/three-line-enclosed-chord-bound-20261011.md)
 
 - [K0411](../items/K0411-central-chord-enclosed-length-bound.md) (proof): 閉・開区間の鋭い中央弦上界
+## [research/experiments/geometry/reports/three-parallel-four-points-q6-sharp-20261018.md](../../../research/experiments/geometry/reports/three-parallel-four-points-q6-sharp-20261018.md)
+
+- [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) (proof): 全称上界・4本排除・実数座標達成例の証明
+## [research/experiments/geometry/reports/three-parallel-four-q6-minimum-integer-box-20261018.md](../../../research/experiments/geometry/reports/three-parallel-four-q6-minimum-integer-box-20261018.md)
+
+- [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) (proof): 有限帰着・全列挙の監査範囲・7×4の明示構成と円の完全性
 ## [research/experiments/geometry/reports/three-row-211-pell-20261011.md](../../../research/experiments/geometry/reports/three-row-211-pell-20261011.md)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (proof): 3行分類・Pell族・3×m総数
@@ -1202,6 +1681,12 @@
 ## [research/experiments/geometry/scripts/geometry_20261003_scale.py](../../../research/experiments/geometry/scripts/geometry_20261003_scale.py)
 
 - [K0307](../items/K0307-square-circle-maxima-through-112.md) (verifier): 全中心・全半径の列挙
+## [research/experiments/geometry/scripts/lattice_three_circles_q6.py](../../../research/experiments/geometry/scripts/lattice_three_circles_q6.py)
+
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (verifier): 有理数円係数による全候補検査と有限Grundy計算
+## [research/experiments/geometry/scripts/lattice_three_circles_q6_independent.cpp](../../../research/experiments/geometry/scripts/lattice_three_circles_q6_independent.cpp)
+
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (verifier): 独立した整数行列式検査とGrundy計算
 ## [research/experiments/geometry/scripts/quarter_turn_mod4_verify.cpp](../../../research/experiments/geometry/scripts/quarter_turn_mod4_verify.cpp)
 
 - [K0395](../items/K0395-quarter-turn-forbidden-quadruples-mod4.md) (verifier): n<=11と回転対称部分集合の独立整数行列式検査
@@ -1211,6 +1696,18 @@
 ## [research/experiments/geometry/scripts/rectangle_v4_mod4_audit_20261011.py](../../../research/experiments/geometry/scripts/rectangle_v4_mod4_audit_20261011.py)
 
 - [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) (verifier): 整数行列式の有限盤監査
+## [research/experiments/geometry/scripts/three_parallel_four_q6_audit.py](../../../research/experiments/geometry/scripts/three_parallel_four_q6_audit.py)
+
+- [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) (verifier): 行構造21種類の記号的排除と有限Grundy全局面計算
+## [research/experiments/geometry/scripts/three_parallel_four_q6_independent.cpp](../../../research/experiments/geometry/scripts/three_parallel_four_q6_independent.cpp)
+
+- [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) (verifier): 独立C++による達成例とGrundy計算
+## [research/experiments/geometry/scripts/three_parallel_four_q6_minbox_independent.cpp](../../../research/experiments/geometry/scripts/three_parallel_four_q6_minbox_independent.cpp)
+
+- [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) (verifier): 独立した整数行列式による有限完全列挙
+## [research/experiments/geometry/scripts/three_parallel_four_q6_minbox_primary.cpp](../../../research/experiments/geometry/scripts/three_parallel_four_q6_minbox_primary.cpp)
+
+- [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) (verifier): 二点和・二点積による有限完全列挙
 ## [research/experiments/geometry/scripts/verify_211_determinant_20261011.cpp](../../../research/experiments/geometry/scripts/verify_211_determinant_20261011.cpp)
 
 - [K0392](../items/K0392-cocircular-211-rectangle-parity.md) (verifier): 独立した整数行列式による全数計数
@@ -1223,6 +1720,12 @@
 ## [research/experiments/geometry/scripts/verify_central_211_two_squares.py](../../../research/experiments/geometry/scripts/verify_central_211_two_squares.py)
 
 - [K0388](../items/K0388-central-three-row-two-squares-density.md) (verifier): 独立4×4整数行列式・二平方和表現・素因数公式の有限照合
+## [research/experiments/geometry/scripts/verify_circle_band_max_5_63_20261016.py](../../../research/experiments/geometry/scripts/verify_circle_band_max_5_63_20261016.py)
+
+- [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) (verifier): 法16・9・5・7の独立マスクとCRT、59幅の達成検算
+## [research/experiments/geometry/scripts/verify_circle_band_max_5_63_independent_20261016.cpp](../../../research/experiments/geometry/scripts/verify_circle_band_max_5_63_independent_20261016.cpp)
+
+- [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) (verifier): 法5040の直接走査による独立上界検査
 ## [research/experiments/geometry/scripts/verify_collinear_overlaps_20261011.py](../../../research/experiments/geometry/scripts/verify_collinear_overlaps_20261011.py)
 
 - [K0397](../items/K0397-collinear-q-overlap-distribution.md) (verifier): 22条件の点対完全列挙と5条件の小行列式による独立照合
@@ -1262,6 +1765,15 @@
 ## [research/experiments/geometry/scripts/verify_three_row_211_20261011.py](../../../research/experiments/geometry/scripts/verify_three_row_211_20261011.py)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (verifier): 3行盤独立検査
+## [research/experiments/grundy-five-residual-obstruction-20261018/independent_verify.cpp](../../../research/experiments/grundy-five-residual-obstruction-20261018/independent_verify.cpp)
+
+- [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) (verifier): 独立の円方程式・ビット集合再帰
+## [research/experiments/grundy-five-residual-obstruction-20261018/proof.md](../../../research/experiments/grundy-five-residual-obstruction-20261018/proof.md)
+
+- [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) (proof): 必要条件への一般帰着と6〜13盤の有限完全列挙
+## [research/experiments/grundy-five-residual-obstruction-20261018/verify.py](../../../research/experiments/grundy-five-residual-obstruction-20261018/verify.py)
+
+- [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) (verifier): 整数行列式・全緩和候補列挙
 ## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
@@ -6094,6 +6606,21 @@
 ## [research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py](../../../research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (verifier): 全90合法S6子・raw exact・cache隔離・S4/S5伝播の独立監査
+## [research/experiments/n11-s7-four-win-terminal-20261020/s7_win_four_min_certificate.json](../../../research/experiments/n11-s7-four-win-terminal-20261020/s7_win_four_min_certificate.json)
+
+- [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (certificate): 4根の終局証明
+## [research/experiments/n11-s7-four-win-terminal-20261020/verify_s7_certificate.py](../../../research/experiments/n11-s7-four-win-terminal-20261020/verify_s7_certificate.py)
+
+- [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (verifier): 別幾何・全合法子・終局再帰と負例検査
+## [research/experiments/n11-s8-compact385-pruned1946-20261020/selected385.txt](../../../research/experiments/n11-s8-compact385-pruned1946-20261020/selected385.txt)
+
+- [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (certificate): 385個のS10 LOSS葉
+## [research/experiments/n11-s8-compact385-pruned1946-20261020/verify_compact385.py](../../../research/experiments/n11-s8-compact385-pruned1946-20261020/verify_compact385.py)
+
+- [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (verifier): 全合法応手・双対下界・整数gapの独立検査
+## [research/experiments/n11-s8-to-s7-lift238-20261020/verify_and_lift.py](../../../research/experiments/n11-s8-to-s7-lift238-20261020/verify_and_lift.py)
+
+- [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (verifier): 終局葉からの35根の再証明と全7石親列挙
 ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典
@@ -7335,6 +7862,27 @@
 
 - [K0214](../items/K0214-n7-maximum-external-radius-two.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0215](../items/K0215-n7-first-external-legal-point-orbits.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/pairsum-fourpoint-reflection-20261018/proof.md](../../../research/experiments/pairsum-fourpoint-reflection-20261018/proof.md)
+
+- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (proof): 重複を許す4実数の二点和復元に関する全称証明
+## [research/experiments/pairsum-fourpoint-reflection-20261018/verify.py](../../../research/experiments/pairsum-fourpoint-reflection-20261018/verify.py)
+
+- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (verifier): 有理数復元による有限監査
+## [research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp](../../../research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp)
+
+- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (verifier): 独立の全組合せ同値類監査
+## [research/experiments/pairsum-reconstruction-20261018/audit.json](../../../research/experiments/pairsum-reconstruction-20261018/audit.json)
+
+- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (data): Python実行結果
+## [research/experiments/pairsum-reconstruction-20261018/audit_independent.cpp](../../../research/experiments/pairsum-reconstruction-20261018/audit_independent.cpp)
+
+- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): 別初期値からのC++独立検査
+## [research/experiments/pairsum-reconstruction-20261018/proof.md](../../../research/experiments/pairsum-reconstruction-20261018/proof.md)
+
+- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (proof): Newton恒等式による全称一意性と2の冪の整数反例の再帰構成
+## [research/experiments/pairsum-reconstruction-20261018/verify.py](../../../research/experiments/pairsum-reconstruction-20261018/verify.py)
+
+- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): Python整数演算による構成・恒等式・有限小例の検査
 ## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
@@ -7417,6 +7965,24 @@
 
 - [K0331](../items/K0331-width-five-q8-exact-stabilization.md) (verifier): 旧検査receiptとCNFを再照合して必要な255ケースを抽出
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 旧510件の独立検査receiptに照合して255件のCNFを再生成・hash確認
+## [research/experiments/q6-18-rigidity-20261018/audit_independent.cpp](../../../research/experiments/q6-18-rigidity-20261018/audit_independent.cpp)
+
+- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (verifier): 別実装で63504組を照合
+## [research/experiments/q6-18-rigidity-20261018/proof.md](../../../research/experiments/q6-18-rigidity-20261018/proof.md)
+
+- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (proof): 二点和復元・energy14剛性と18候補の必要条件の全称証明
+## [research/experiments/q6-18-rigidity-20261018/supporting-q6-19-audit.cpp](../../../research/experiments/q6-18-rigidity-20261018/supporting-q6-19-audit.cpp)
+
+- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (verifier): 例外E16の1820型の独立C++検査
+## [research/experiments/q6-18-rigidity-20261018/supporting-q6-19-proof.md](../../../research/experiments/q6-18-rigidity-20261018/supporting-q6-19-proof.md)
+
+- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (proof): 19候補十分定理と例外E16の1820記号型検査への帰着
+## [research/experiments/q6-18-rigidity-20261018/supporting-q6-19-verify.py](../../../research/experiments/q6-18-rigidity-20261018/supporting-q6-19-verify.py)
+
+- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (verifier): 例外E16の1820型を有理数演算で完全検査
+## [research/experiments/q6-18-rigidity-20261018/verify.py](../../../research/experiments/q6-18-rigidity-20261018/verify.py)
+
+- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (verifier): 5点集合の63504組のenergy分類と二点和復元の独立有限監査
 ## [research/experiments/rectangle-reflection-parity-20261011/audit.json](../../../research/experiments/rectangle-reflection-parity-20261011/audit.json)
 
 - [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) (data): 49盤245条件の偶奇照合と25盤の四点完全列挙
@@ -7531,6 +8097,18 @@
 ## [research/experiments/solver-benchmarks/reports/THREE_STONE_PROBE_HOLDOUT_V2_PRE_RUN_RECEIPT.md](../../../research/experiments/solver-benchmarks/reports/THREE_STONE_PROBE_HOLDOUT_V2_PRE_RUN_RECEIPT.md)
 
 - [K0288](../items/K0288-certified-witness-rank-and-coordinate-join.md) (manifest): 1161childの元凍結cohort
+## [research/experiments/sparse-hyperedge-nimber-20261019/output/verification.json](../../../research/experiments/sparse-hyperedge-nimber-20261019/output/verification.json)
+
+- [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (data): 7点整数座標例と6頂点全2辺監査の再現結果
+## [research/experiments/sparse-hyperedge-nimber-20261019/reports/sparse-hyperedge-nimber.md](../../../research/experiments/sparse-hyperedge-nimber-20261019/reports/sparse-hyperedge-nimber.md)
+
+- [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (proof): 署名類・mexによる全称証明と2辺での鋭い整数格子例
+## [research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_sparse_hyperedge.py](../../../research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_sparse_hyperedge.py)
+
+- [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (verifier): 2種類の独立再帰と小超グラフの有限全数監査
+## [research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_two_circle.cpp](../../../research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_two_circle.cpp)
+
+- [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (verifier): 独立C++行列式・部分集合Grundy検証
 ## [research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json](../../../research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json)
 
 - [K0004](../items/K0004-n1-n6-all-safe-grundy.md) (data): 命題・対象範囲・根拠を記した出典
@@ -7592,6 +8170,99 @@
 
 - [K0093](../items/K0093-coordinate-three-ply-information.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0094](../items/K0094-n5-relocation-preserves-two-ply-changes-grundy.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/sunflower-grundy-20261019/README.md](../../../research/experiments/sunflower-grundy-20261019/README.md)
+
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (proof): 任意本数のヒマワリ型禁止集合に対する全称帰納証明と適用範囲
+## [research/experiments/sunflower-grundy-20261019/audit.json](../../../research/experiments/sunflower-grundy-20261019/audit.json)
+
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (data): 334構造・579915安全局面の照合結果
+## [research/experiments/sunflower-grundy-20261019/verify.py](../../../research/experiments/sunflower-grundy-20261019/verify.py)
+
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (verifier): 残数再帰と独立した全占有部分集合mexの照合
+## [research/experiments/three-by-four-q6-row-spacings-20261018/audit-cpp.txt](../../../research/experiments/three-by-four-q6-row-spacings-20261018/audit-cpp.txt)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (data): 独立C++実行記録
+## [research/experiments/three-by-four-q6-row-spacings-20261018/audit-python.json](../../../research/experiments/three-by-four-q6-row-spacings-20261018/audit-python.json)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (data): 5代表間隔の検算と群占有数の照合
+## [research/experiments/three-by-four-q6-row-spacings-20261018/proof.md](../../../research/experiments/three-by-four-q6-row-spacings-20261018/proof.md)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (proof): 全正実数行間隔の代数的分類と75型mex表
+## [research/experiments/three-by-four-q6-row-spacings-20261018/verify.py](../../../research/experiments/three-by-four-q6-row-spacings-20261018/verify.py)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 有理数行列式と4096局面の再帰mex
+## [research/experiments/three-by-four-q6-row-spacings-20261018/verify_independent.cpp](../../../research/experiments/three-by-four-q6-row-spacings-20261018/verify_independent.cpp)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 整数行列式と反復mexによる独立照合
+## [research/experiments/three-column-four-row-q6-20261018/independent_recurrence.py](../../../research/experiments/three-column-four-row-q6-20261018/independent_recurrence.py)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 198安全状態の縮約再帰による独立検算
+## [research/experiments/three-column-four-row-q6-20261018/proof.md](../../../research/experiments/three-column-four-row-q6-20261018/proof.md)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (proof): 正実数間隔の全称幾何分類と有限型の完全再帰
+## [research/experiments/three-column-four-row-q6-20261018/results.json](../../../research/experiments/three-column-four-row-q6-20261018/results.json)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (data): 4096整数盤の検算結果と3類型の全局面度数
+## [research/experiments/three-column-four-row-q6-20261018/verify.py](../../../research/experiments/three-column-four-row-q6-20261018/verify.py)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 整数行列式の独立幾何判定と4096盤の監査
+## [research/experiments/three-parallel-lines-q6-20261018/proof.md](../../../research/experiments/three-parallel-lines-q6-20261018/proof.md)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 二点和衝突の16上界と任意配置の21候補点定理の全称証明
+## [research/experiments/three-parallel-lines-q6-20261018/results.json](../../../research/experiments/three-parallel-lines-q6-20261018/results.json)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (data): 252集合・63504組・36盤・324局面の有限監査結果
+## [research/experiments/three-parallel-lines-q6-20261018/verify.py](../../../research/experiments/three-parallel-lines-q6-20261018/verify.py)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 整数行列式による独立幾何監査と二点和上界検算
+## [research/experiments/three-parallel-q6-17-20261018/audit_e13_independent.cpp](../../../research/experiments/three-parallel-q6-17-20261018/audit_e13_independent.cpp)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): E13の独立C++完全検査
+## [research/experiments/three-parallel-q6-17-20261018/audit_independent.cpp](../../../research/experiments/three-parallel-q6-17-20261018/audit_independent.cpp)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 独立C++整数完全列挙
+## [research/experiments/three-parallel-q6-17-20261018/proof.md](../../../research/experiments/three-parallel-q6-17-20261018/proof.md)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 三平行線q6の任意実数候補で17点十分。四円同時通過の組合せ必要条件と有限正規形検査
+## [research/experiments/three-parallel-q6-17-20261018/verify.py](../../../research/experiments/three-parallel-q6-17-20261018/verify.py)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 混合型182候補と例外四円組のPython整数完全列挙
+## [research/experiments/three-parallel-q6-17-20261018/verify_e13.py](../../../research/experiments/three-parallel-q6-17-20261018/verify_e13.py)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): E13の5005個の等差正規形、3族の記号候補、有理数候補のPython完全検査
+## [research/experiments/three-parallel-q6-19-20261018/audit.json](../../../research/experiments/three-parallel-q6-19-20261018/audit.json)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (data): Python検証器の実行結果
+## [research/experiments/three-parallel-q6-19-20261018/audit_independent.cpp](../../../research/experiments/three-parallel-q6-19-20261018/audit_independent.cpp)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 1820四組の独立した整数演算による全検査
+## [research/experiments/three-parallel-q6-19-20261018/proof.md](../../../research/experiments/three-parallel-q6-19-20261018/proof.md)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 任意三平行線q6の21から19への改善、有限記号帰着による全称証明
+## [research/experiments/three-parallel-q6-19-20261018/verify.py](../../../research/experiments/three-parallel-q6-19-20261018/verify.py)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 16円の1820四組を有理数で全検査、弦energyの有限標本監査
+## [research/experiments/three-row-five-columns-20261019/output/q6-five-common-columns-integer-audit.json](../../../research/experiments/three-row-five-columns-20261019/output/q6-five-common-columns-integer-audit.json)
+
+- [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (data): 22638配置の完全列挙集計
+## [research/experiments/three-row-five-columns-20261019/reports/q6-five-common-columns-real-upper-bound.md](../../../research/experiments/three-row-five-columns-20261019/reports/q6-five-common-columns-real-upper-bound.md)
+
+- [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (proof): 任意の実数横座標・行間隔に対する完全計数式と鋭い上界の証明
+## [research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.cpp](../../../research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.cpp)
+
+- [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (verifier): 円方程式への直接代入による独立検証
+## [research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py](../../../research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py)
+
+- [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (verifier): 二点和による有限検証
+## [research/experiments/two-forbidden-hyperedges-20261018/proof.md](../../../research/experiments/two-forbidden-hyperedges-20261018/proof.md)
+
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (proof): 任意有限点集合の二つの禁止集合に対する全称mex帰納証明
+## [research/experiments/two-forbidden-hyperedges-20261018/results.json](../../../research/experiments/two-forbidden-hyperedges-20261018/results.json)
+
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (data): 13795組・5260248安全局面の照合集計
+## [research/experiments/two-forbidden-hyperedges-20261018/verify.py](../../../research/experiments/two-forbidden-hyperedges-20261018/verify.py)
+
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): n<=7全組とn<=12固定乱数3000組のラベル付き全局面独立検査
 ## [research/experiments/unequal-row-sharp-chord-energy-20261010/README.md](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/README.md)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (proof): 二行の鋭いエネルギー上界と構成
@@ -7616,6 +8287,9 @@
 ## [research/log/2026-10-12-n11-s5-loss-witness.md](../../../research/log/2026-10-12-n11-s5-loss-witness.md)
 
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 発見順、失敗、適用判断
+## [research/log/2026-10-20-n11-s6-win-four-s7-correction.md](../../../research/log/2026-10-20-n11-s6-win-four-s7-correction.md)
+
+- [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (log): 旧logの誤分類訂正
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

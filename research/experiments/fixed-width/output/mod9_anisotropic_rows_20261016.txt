@@ -1,0 +1,6 @@
+QR9: [0, 1, 4, 7]
+81 pairs / 9-row count histogram: [(0, 18), (3, 9), (5, 27), (6, 27)]
+5..13 exact maxima: {5: 4, 6: 4, 7: 5, 8: 6, 9: 6, 10: 7, 11: 8, 12: 8, 13: 9}
+For all w>=5: max QR rows <= ceil(2w/3), by period-9 induction.
+Independent recurrence and polynomial formulas agree for 81 pairs x 90 terms.
+PASS

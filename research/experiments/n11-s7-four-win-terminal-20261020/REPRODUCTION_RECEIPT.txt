@@ -1,0 +1,29 @@
+README.md: OK
+solve_s7_min.cpp: OK
+terminal_geometry.py: OK
+verify_s7_certificate.py: OK
+s7_win_four_min_certificate.json: OK
+missing_s7.txt: OK
+min_s7.s10.tsv: OK
+min_s7.s8.tsv: OK
+min_s7.s9.tsv: OK
+min_s7.results.tsv: OK
+build_certificate.py: OK
+reproduce.sh: OK
+s7_win_17_snapshot.txt: OK
+00000000041000001000401080100000 WIN s8checked=42 s10=1803
+00000000041000001000501000100000 WIN s8checked=39 s10=2717
+00000000041000021000401000100000 WIN s8checked=41 s10=4401
+00000000041002001000401000100000 WIN s8checked=43 s10=6270
+DONE S8=159 S9=830 S10=6270 direct calls=6270
+roots 4 s8 159 s9 129 s10 2670 states 569993
+STRUCTURE PASS S8,S9,S10: (159, 129, 2670)
+NEGATIVE STRUCTURE TESTS: 4
+verified 500 / 2670
+verified 1000 / 2670
+verified 1500 / 2670
+verified 2000 / 2670
+verified 2500 / 2670
+TERMINAL PASS: 2670 WIN leaves, states= 569993
+CONCLUSION: 4 S7 WIN; S6 WIN; empty board UNKNOWN
+exit_code=0
