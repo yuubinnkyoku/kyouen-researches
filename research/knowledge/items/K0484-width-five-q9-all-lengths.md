@@ -2,7 +2,7 @@
 id: K0484
 title: 五行九点版は全長で行容量だけに分離しM_{5,9}=8
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - geometry
@@ -26,8 +26,11 @@ artifacts:
 - path: research/experiments/fixed-width/output/q59_no_nine_circle_audit_20261016.txt
   role: data
   note: 六種類の盤長で全円の点数を直接確認した有限結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準整数格子の連続5水平行、q=9、全m≥1、全安全局面。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。五行の法9障害と容量8・閾値8を確認。16初期組と6有限盤を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 solution:
   board: 5×m・q=9
   level: strong
@@ -46,9 +49,6 @@ solution:
   independent_check: m=4,5,7,9,12,14の全非共線三点から整数行列式で円を再生成
   note: g=(5min(m,8)−|S|) mod2。m≥8は後手勝ち。M_{5,9}=8
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 標準整数格子の五連続行にある円は、9点の格子点を含めない。したがってq=9の禁止集合は水平直線上の9点のみであり、任意のmと任意の安全局面Sについて

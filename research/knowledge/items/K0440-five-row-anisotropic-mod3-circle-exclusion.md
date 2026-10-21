@@ -2,7 +2,7 @@
 id: K0440
 title: 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - geometry
@@ -26,6 +26,9 @@ artifacts:
 - path: research/experiments/fixed-width/output/five_row_anisotropic_mod3_audit_20261016.txt
   role: data
   note: 有限盤監査の再現出力
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 solution:
   board: 五本の異方整数格子水平行・q点版
   level: strong
@@ -43,11 +46,8 @@ solution:
   certificate: 3進降下法と法9の16剰余組の全称証明
   independent_check: 14種類の有限盤で全非共線三点から円を生成・整数係数で照合
   note: M=q−1、g(S)=(5min(m,q−1)−|S|) mod2
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。二根差平方の差分、法9の16組、接点を持つ場合の3進降下を確認。14有限盤を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 異方格子五行の9点円の不在と全長強解決

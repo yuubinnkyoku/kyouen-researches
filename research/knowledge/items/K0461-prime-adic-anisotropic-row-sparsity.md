@@ -2,7 +2,7 @@
 id: K0461
 title: 異方格子の水平間隔に余分な奇素因子があれば円は幅以下の点しか持たない
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -20,6 +20,9 @@ artifacts:
 - path: research/experiments/fixed-width/scripts/verify_prime_spacing_20261016.py
   role: verifier
   note: 56有限盤の独立整数円生成と行剰余監査
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 solution:
   board: 異方格子のw×m・q点版
   level: strong
@@ -37,11 +40,8 @@ solution:
   certificate: 二点行の中心整数性と法p²への単根持上げによる全称証明
   independent_check: 非共線三点から円を整数係数で独立生成した56有限盤
   note: g(S)=(w min(m,q-1)-|S|) mod2、M=q-1
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。法pの二単根から法p²への一意持上げと全幅の行数不等式を確認。56有限盤を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 異方格子の奇素数間隔による全長強解決

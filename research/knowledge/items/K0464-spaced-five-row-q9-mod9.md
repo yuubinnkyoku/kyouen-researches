@@ -2,7 +2,7 @@
 id: K0464
 title: 5本の等間隔整数行で間隔が3の倍数でなければ9点円は存在せず全長強解決
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - geometry
@@ -23,12 +23,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/spaced-five-row-q9-audit-20261016.txt
   role: data
   note: 剰余検査と有限盤完全列挙の出力
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 5本の等間隔整数水平行 y=t+id, i=0..4, d>=1, 3∤d, m>=1、9点共線・共円禁止通常プレイの全安全局面
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。法9正規化と接点の3進降下、10点仮定の必要付値条件を確認。付属合同・有限盤監査を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 5本の等間隔整数行のq9全長強解決

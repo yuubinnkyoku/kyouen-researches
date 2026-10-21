@@ -20,10 +20,10 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 | active | 9 |
 | computed | 111 |
 | conjectured | 1 |
-| needs-review | 38 |
+| needs-review | 31 |
 | observed | 17 |
 | open | 34 |
-| proved | 191 |
+| proved | 198 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
@@ -94,9 +94,7 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
-- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) [needs-review] 異方整数格子の全幅で3進付値条件下の円点数は2ceil(2w/3)以下
 - [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) [needs-review] 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全
-- [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) [needs-review] 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する
 - [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) [needs-review] 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない
 - [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) [needs-review] 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類
 - [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) [needs-review] 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する
@@ -109,14 +107,10 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 - [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) [needs-review] 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ
 - [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) [needs-review] 四行8点円の実現傾きには少なくとも三つの集積点があり種類数は対数以上
 - [K0453](../items/K0453-geometric-four-q4-grundy-five.md) [needs-review] 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小
-- [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) [needs-review] 5〜63連続整数行で水平中心が半整数の円の最大格子点数は二重点行数の2倍
 - [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) [needs-review] 3本の平行直線に各4整数点で6点円3本を実現できる
 - [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) [needs-review] 四行8点円には新しい既約傾き181273/40152の無限Pell族がある
-- [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) [needs-review] 異方格子の水平間隔に余分な奇素因子があれば円は幅以下の点しか持たない
 - [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) [needs-review] 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界
-- [K0464](../items/K0464-spaced-five-row-q9-mod9.md) [needs-review] 5本の等間隔整数行で間隔が3の倍数でなければ9点円は存在せず全長強解決
 - [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) [needs-review] 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
-- [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) [needs-review] 接線行の法16制約による固定幅円点数の上界と5〜16行の厳密値
 - [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) [needs-review] 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0
 - [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) [needs-review] 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる
 - [K0470](../items/K0470-three-column-arbitrary-integer-spacing.md) [needs-review] 任意の整数間隔の三列格子における最大共円点数の完全分類
@@ -131,7 +125,6 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 - [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) [needs-review] 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
 - [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) [needs-review] 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち
 - [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) [needs-review] 二点禁止残局の木でGrundy値0〜8を実現する最小頂点数
-- [K0484](../items/K0484-width-five-q9-all-lengths.md) [needs-review] 五行九点版は全長で行容量だけに分離しM_{5,9}=8
 
 ## 警告
 

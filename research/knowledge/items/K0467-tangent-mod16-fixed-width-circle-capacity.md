@@ -2,7 +2,7 @@
 id: K0467
 title: 接線行の法16制約による固定幅円点数の上界と5〜16行の厳密値
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -23,6 +23,9 @@ artifacts:
 - path: research/experiments/fixed-width/output/tangent_mod16_separation_20261016.txt
   role: data
   note: 監査結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 solution:
   board: 標準整数格子 w×m・q点版
   level: strong
@@ -40,11 +43,8 @@ solution:
   certificate: K0072の二重点行数定理と接線行のmod16全剰余証明
   independent_check: 有限6盤の三点円列挙、法16の独立2方式
   note: g(S)=(w min(m,q−1)−|S|) mod2、M=q−1
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。二重点行上界達成時に限る縦係数整数性とmod16周期補題・容量帰着を確認。付属検査を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 接線行の法16制約による固定幅円点数の上界と5〜16行の厳密値

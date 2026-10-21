@@ -2,7 +2,7 @@
 id: K0436
 title: 異方整数格子の全幅で3進付値条件下の円点数は2ceil(2w/3)以下
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -32,6 +32,9 @@ artifacts:
 - path: research/experiments/fixed-width/output/anisotropic_circle_independent_20261016.txt
   role: data
   note: 17種類の有限盤の全円列挙結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 solution:
   board: 異方格子w×m・q点版
   level: strong
@@ -49,11 +52,8 @@ solution:
   certificate: 3進二階差商・法9剰余の81組完全分類と9周期帰納
   independent_check: 17種類の有限盤の全非共線三点から整数円を独立列挙
   note: M=q−1、g(S)=(w min(m,q−1)−|S|) mod2
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。3進補間・法9の81組・9周期の全幅帰納を確認。Python合同検査と17有限盤の独立C++を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 異方格子全幅の共円点数上界と全長強解決

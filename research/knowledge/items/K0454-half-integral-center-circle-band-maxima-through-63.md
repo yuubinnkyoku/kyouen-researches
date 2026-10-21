@@ -2,7 +2,7 @@
 id: K0454
 title: 5〜63連続整数行で水平中心が半整数の円の最大格子点数は二重点行数の2倍
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -31,12 +31,12 @@ artifacts:
 - path: research/experiments/geometry/output/circle_band_max_5_63_independent_20261016.txt
   role: data
   note: 独立C++検算結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準整数格子の5〜63本の連続水平行。中心のx座標が半整数の円に限る。横幅・半径は無制限。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。接線から分母g≤3への帰着、全mod5040と13右端の完全性、達成円を確認。PythonとC++を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 半整数水平中心の円の帯内最大点数
