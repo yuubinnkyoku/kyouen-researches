@@ -13,6 +13,7 @@
 // the kernel can influence df-pn verdicts.
 #include <algorithm>
 #include <array>
+#include <chrono>
 #include <cstdint>
 #include <map>
 #include <numeric>
@@ -157,7 +158,18 @@ struct Stats {
     std::uint64_t calls=0,memo_hits=0,module_removed=0,component_splits=0;
     std::uint64_t shared_hits=0,shared_stores=0,canonicalized=0;
     std::uint64_t closed_free=0,closed_two_edges=0,closed_sunflower=0,closed_paths=0;
+    bool profile=false;
+    std::uint64_t structure_ns=0;
 };
+
+using ProfileClock=std::chrono::steady_clock;
+inline ProfileClock::time_point structure_start(Stats* st){
+    return st && st->profile ? ProfileClock::now() : ProfileClock::time_point{};
+}
+inline void structure_stop(Stats* st,ProfileClock::time_point start){
+    if(st && st->profile) st->structure_ns+=static_cast<std::uint64_t>(
+        std::chrono::duration_cast<std::chrono::nanoseconds>(ProfileClock::now()-start).count());
+}
 
 // Audited K0483, K0465 and K0460. Input must be normalized: edges are
 // inclusion-minimal subsets of the live vertices, with no singleton bans.
@@ -357,10 +369,12 @@ inline Key canonical_small(State s){
 inline int grundy(State s,std::map<Key,int>& memo,Stats* st=nullptr,
                   bool use_closed_forms=true){
     if(st) ++st->calls;
+    auto phase=structure_start(st);
     s.edges=minimal(std::move(s.edges));
-    if(use_closed_forms){ int g=closed_grundy(s,st); if(g>=0) return g; }
+    if(use_closed_forms){ int g=closed_grundy(s,st); if(g>=0){ structure_stop(st,phase); return g; } }
     s=compress(std::move(s),st?&st->module_removed:nullptr);
     auto parts=components(s);
+    structure_stop(st,phase);
     if(parts.size()>1){
         if(st) ++st->component_splits;
         int g=0; for(auto& p:parts) g^=grundy(std::move(p),memo,st,use_closed_forms);
@@ -389,10 +403,12 @@ inline int grundy_shared(State s,std::map<Key,int>& local,
                          std::map<Key,int>& shared,int share_gate,
                          Stats* st=nullptr,bool use_closed_forms=true){
     if(st) ++st->calls;
+    auto phase=structure_start(st);
     s.edges=minimal(std::move(s.edges));
-    if(use_closed_forms){ int g=closed_grundy(s,st); if(g>=0) return g; }
+    if(use_closed_forms){ int g=closed_grundy(s,st); if(g>=0){ structure_stop(st,phase); return g; } }
     s=compress(std::move(s),st?&st->module_removed:nullptr);
     auto parts=components(s);
+    structure_stop(st,phase);
     if(parts.size()>1){
         if(st) ++st->component_splits;
         int g=0;
@@ -408,7 +424,9 @@ inline int grundy_shared(State s,std::map<Key,int>& local,
     const bool share=share_gate>0 && pc(s.vertices)<=share_gate;
     Key ck{};
     if(share){
+        phase=structure_start(st);
         ck=canonical_small(s);
+        structure_stop(st,phase);
         if(st) ++st->canonicalized;
         auto si=shared.find(ck);
         if(si!=shared.end()){

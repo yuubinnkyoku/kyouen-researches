@@ -142,6 +142,16 @@ int main(){
     // A non-sunflower triple and a degree-three graph must fall back.
     assert(closed_grundy(State{15,{3,5,14}})==-1);
     assert(closed_grundy(State{31,{3,5,9,18}})==-1);
+    // Profiling preserves both ordinary and shared-cache evaluations.
+    State profiled{31,{3,5,9,18}};
+    Stats profiled_stats; profiled_stats.profile=true;
+    std::map<Key,int> profiled_memo;
+    int profiled_g=grundy(profiled,profiled_memo,&profiled_stats);
+    assert(profiled_stats.structure_ns>0);
+    Stats shared_profile; shared_profile.profile=true;
+    std::map<Key,int> shared_profile_memo;
+    assert(grundy_shared(profiled,shared_profile_memo,shared,8,&shared_profile)==profiled_g);
+    assert(shared_profile.structure_ns>0);
     std::cout<<"VERIFIED occupied_oracle_states="<<subsets<<"\n";
     std::cout<<"VERIFIED clutters="<<checked
              <<" shared_keys="<<shared.size()
