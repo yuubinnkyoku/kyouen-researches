@@ -62,6 +62,7 @@
 - [K0495](../items/K0495-residual-completion-index-profile.md) (solver): completion索引によるrank 2/3/4列挙、従来scan、仕事量見積もりによる切替と排他的profile
 - [K0496](../items/K0496-bounded-residual-outcome-search.md) (solver): 根全体で共有するP/N quotaと枯渇時の通常探索への復帰
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (solver): 通常df-pnの直接残余handoff、root quota reset、共有work node上限とroot計数
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (solver): residual-profile指定時だけの未解決stage-0合法手数分布とroot差分出力
 ## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
@@ -78,6 +79,7 @@
 ## [cpp/tests/test_kyouen_residual_dfpn.cpp](../../../cpp/tests/test_kyouen_residual_dfpn.cpp)
 
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (verifier): 両手番、直接handoff、quota reset/切れ、cache安全性、0上限、exact handoffとの合計上限
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (verifier): 既知両手番、解決済みTT除外、profile OFF、予算と例外後の回帰
 ## [cpp/tests/test_kyouen_residual_micro.cpp](../../../cpp/tests/test_kyouen_residual_micro.cpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): 独立占有部分集合DP・通常/共有/構造別評価OFFとの全局面照合
@@ -8187,6 +8189,36 @@
 ## [research/experiments/residual-gate-calibration-20261021/verify_outputs.py](../../../research/experiments/residual-gate-calibration-20261021/verify_outputs.py)
 
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): 入力hash・独立期待値・rawからの全再集計を検索再実行なしで検査
+## [research/experiments/residual-gate-frontier-20261022/cli_profile.py](../../../research/experiments/residual-gate-frontier-20261022/cli_profile.py)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (verifier): 同根を連続処理してprofileが次rootへ漏れないことを確認
+## [research/experiments/residual-gate-frontier-20261022/comparison.md](../../../research/experiments/residual-gate-frontier-20261022/comparison.md)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (data): 固定比較全表、時間と探索量、適用限界
+## [research/experiments/residual-gate-frontier-20261022/confirmation.json](../../../research/experiments/residual-gate-frontier-20261022/confirmation.json)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (data): 新規6局面、3設定、2上限、各3反復の全108評価と選択commit
+## [research/experiments/residual-gate-frontier-20261022/diagnostic.json](../../../research/experiments/residual-gate-frontier-20261022/diagnostic.json)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (data): 旧3局面の10万work時の合法手数分布
+## [research/experiments/residual-gate-frontier-20261022/late.json](../../../research/experiments/residual-gate-frontier-20261022/late.json)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (data): 既知終盤26局面と3設定の全78正しさ検査
+## [research/experiments/residual-gate-frontier-20261022/protocol.json](../../../research/experiments/residual-gate-frontier-20261022/protocol.json)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (manifest): 閾値候補、事前固定6局面、入力とsource/binary hash、選択規則
+## [research/experiments/residual-gate-frontier-20261022/selection.json](../../../research/experiments/residual-gate-frontier-20261022/selection.json)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (manifest): 確認前にcommitした閾値18の選択とtraining hash
+## [research/experiments/residual-gate-frontier-20261022/study.py](../../../research/experiments/residual-gate-frontier-20261022/study.py)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (verifier): 入力固定、選択順序、raw行、全組合せ、予算、独立幾何と再集計の検査
+## [research/experiments/residual-gate-frontier-20261022/test_study.py](../../../research/experiments/residual-gate-frontier-20261022/test_study.py)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (verifier): 局面違い、新規勝敗、ヒストグラム範囲・重複・過大計数、時計混入、quota変更の拒否
+## [research/experiments/residual-gate-frontier-20261022/training.json](../../../research/experiments/residual-gate-frontier-20261022/training.json)
+
+- [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (data): 旧3局面、8設定、各3反復の全72評価
 ## [research/experiments/residual-outcome-search-20261021/README.md](../../../research/experiments/residual-outcome-search-20261021/README.md)
 
 - [K0496](../items/K0496-bounded-residual-outcome-search.md) (log): 事前プロトコル、正しさと予算の境界、再現手順、適用範囲

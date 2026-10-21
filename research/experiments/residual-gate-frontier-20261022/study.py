@@ -89,6 +89,7 @@ def validate(raw, f, gate, limit, profile=False):
     rows = parse(raw)
     assert len(rows) == 1
     r = rows[0]
+    assert r['seq'] == 1
     assert r['stones'] == len(f['occupied'])
     assert r['occupied_lo'] == sum(1 << v for v in f['occupied'] if v < 64)
     assert r['occupied_hi'] == sum(1 << (v - 64) for v in f['occupied'] if v >= 64)
@@ -161,7 +162,11 @@ def main():
         freeze(args.solver)
         return
     protocol, data = read('protocol.json'), read('fixtures.json')
+    assert protocol['gates'] == list(GATES) and protocol['quota'] == 128 and protocol['repeats'] == 3
+    assert protocol['train_limit'] == 20000 and protocol['confirmation_limits'] == [20000, 100000]
+    assert protocol['seed'] == 20261022
     assert sha(HERE / 'fixtures.json') == protocol['fixtures_sha256']
+    assert set(protocol['roots_sha256']) == {f'{f["id"]}.csv' for group in data.values() for f in group}
     for name, value in protocol['roots_sha256'].items():
         assert sha(HERE / 'roots' / name) == value
     if args.phase in ('train', 'confirm'):
