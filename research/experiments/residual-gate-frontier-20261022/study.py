@@ -180,15 +180,25 @@ def main():
         selected = read('selection.json')['gate']
         gates = [0, 6, selected]
         rows = run(args.solver, 'confirm', data['confirm'], gates, protocol['confirmation_limits'], 3)
-        write('confirmation.json', dict(records=rows, totals=aggregate(rows, gates)))
+        write('confirmation.json', dict(records=rows, totals=aggregate(rows, gates),
+            selection_sha256=sha(HERE / 'selection.json'),
+            selection_commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()))
         write('late.json', run(args.solver, 'late', data['late'], gates, [20000], 1))
     else:
+        for name, expected in protocol['source_hashes'].items():
+            recorded = subprocess.run(['git', 'show', f'{protocol["source_commit"]}:{name}'], cwd=ROOT, capture_output=True)
+            if recorded.returncode == 0: # shallow CI need not have the old object
+                assert hashlib.sha256(recorded.stdout).hexdigest() == expected
         count = 0
         for name, fixtures, profile in [('diagnostic.json', data['train'], True), ('training.json', data['train'], False),
                 ('confirmation.json', data['confirm'], False), ('late.json', data['late'], False)]:
             saved = read(name)
             rows = saved['records'] if isinstance(saved, dict) else saved
             lookup = {f['id']: f for f in fixtures}
+            gates = list(GATES) if name == 'training.json' else [0] if profile else [0, 6, read('selection.json')['gate']]
+            limits = protocol['confirmation_limits'] if name == 'confirmation.json' else [100000] if profile else [20000]
+            repeats = 1 if profile or name == 'late.json' else 3
+            expected_keys = set(itertools.product(lookup, gates, limits, range(repeats)))
             keys = set()
             for r in rows:
                 key = (r['id'], r['gate'], r['limit'], r['repeat'])
@@ -197,6 +207,7 @@ def main():
                 actual = validate((HERE / r['raw']).read_text(), lookup[r['id']], r['gate'], r['limit'], profile)
                 assert json.loads(json.dumps(actual)) == {k: v for k, v in r.items() if k in actual}
                 count += 1
+            assert keys == expected_keys
             if isinstance(saved, dict):
                 assert aggregate(rows, sorted({r['gate'] for r in rows})) == saved['totals']
         assert len(read('diagnostic.json')) == 3 and len(read('training.json')['records']) == 72
@@ -205,8 +216,16 @@ def main():
         selected = min(GATES[2:], key=lambda g: (train[f'n20000-g{g}']['unknown'], train[f'n20000-g{g}']['solve_us'], g))
         assert read('selection.json')['gate'] == selected
         assert read('selection.json')['training_sha256'] == sha(HERE / 'training.json')
+        assert read('confirmation.json')['selection_sha256'] == sha(HERE / 'selection.json')
+        selection_at_commit = subprocess.run(['git', 'show', f'{read("confirmation.json")["selection_commit"]}:{(HERE / "selection.json").relative_to(ROOT)}'], cwd=ROOT, capture_output=True)
+        if selection_at_commit.returncode == 0:
+            assert selection_at_commit.stdout == (HERE / 'selection.json').read_bytes()
+        seen = {d4_canonical_key(f['occupied']) for f in data['train']}
         for f in data['confirm']:
             occ = f['occupied']
+            key = d4_canonical_key(occ)
+            assert key not in seen
+            seen.add(key)
             assert not any(forbidden(*q) for q in itertools.combinations(occ, 4))
             legal = [v for v in range(121) if v not in occ and not any(forbidden(*t, v) for t in itertools.combinations(occ, 3))]
             assert len(legal) == f['legal']

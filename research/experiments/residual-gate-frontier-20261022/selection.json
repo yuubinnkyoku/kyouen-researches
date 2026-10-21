@@ -1,0 +1,5 @@
+{
+  "gate": 18,
+  "training_sha256": "cc003464068e130614e0bd0aa2b087ec686c46e4c09f4604b4d22002ed026e54",
+  "rule": "among gates >=12: minimize unknown roots, sum of per-root median solve_us, then gate; use training only"
+}
