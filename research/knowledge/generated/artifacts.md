@@ -57,12 +57,19 @@
 - [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md) (solver): coordinatorのs5永続化とs4 certificate manifest出力
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 既定offのexact LOSS行停止flag
 - [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (source): 既定offのexact replay層別・root child費用プロファイラ
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 既存残余ゲートへの統合と適用回数の記録
+## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
 ## [cpp/solvers/kyouen_solver_10_kyoenc4.cpp](../../../cpp/solvers/kyouen_solver_10_kyoenc4.cpp)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (solver): 命題・対象範囲・根拠を記した出典
 ## [cpp/solvers/kyouen_solver_9_root.cpp](../../../cpp/solvers/kyouen_solver_9_root.cpp)
 
 - [K0021](../items/K0021-n9-all-81-first-moves-win.md) (solver): 命題・対象範囲・根拠を記した出典
+## [cpp/tests/test_kyouen_residual_micro.cpp](../../../cpp/tests/test_kyouen_residual_micro.cpp)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): 独立占有部分集合DP・通常/共有/構造別評価OFFとの全局面照合
 ## [docs/10X10_KYOENC4_EXPORT.md](../../../docs/10X10_KYOENC4_EXPORT.md)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (source): 命題・対象範囲・根拠を記した出典
@@ -8090,6 +8097,27 @@
 ## [research/experiments/rectangle-reflection-parity-20261011/verify.py](../../../research/experiments/rectangle-reflection-parity-20261011/verify.py)
 
 - [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) (verifier): 整数円方程式と独立四点行列式による有限監査
+## [research/experiments/residual-closed-forms-20261021/README.md](../../../research/experiments/residual-closed-forms-20261021/README.md)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (log): 再現手順・比較条件・信頼境界
+## [research/experiments/residual-closed-forms-20261021/bench.cpp](../../../research/experiments/residual-closed-forms-20261021/bench.cpp)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): rootごとにmemoを空にするOFF/ONの7回交互測定
+## [research/experiments/residual-closed-forms-20261021/benchmark.csv](../../../research/experiments/residual-closed-forms-20261021/benchmark.csv)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (data): 全826局面の一致値・呼出数・memo数・時間中央値
+## [research/experiments/residual-closed-forms-20261021/integration-summary.json](../../../research/experiments/residual-closed-forms-20261021/integration-summary.json)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (data): 旧版・新版・共有版・照合版の全確定勝敗と証明収集ガード
+## [research/experiments/residual-closed-forms-20261021/integration.py](../../../research/experiments/residual-closed-forms-20261021/integration.py)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): 16保存局面の独立Python mexとdf-pn4モードの勝敗照合
+## [research/experiments/residual-closed-forms-20261021/run.py](../../../research/experiments/residual-closed-forms-20261021/run.py)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (source): 保存済み826残余状態の再ラベルと全件測定
+## [research/experiments/residual-closed-forms-20261021/summary.json](../../../research/experiments/residual-closed-forms-20261021/summary.json)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (data): 測定集計と入力SHA-256
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数

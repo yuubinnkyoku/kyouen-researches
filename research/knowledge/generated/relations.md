@@ -1655,6 +1655,7 @@
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 継続ゲームは二点グラフではなく全包含極小残余辺で表す
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのmex。misère補助mexは終端値1で別に定義する
 - → generalizes [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 同一全linkの独立双子は混合深さ1の特殊例
+- ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 既存の残余ゲーム圧縮との併用
 
 ## [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) 偶数ペア容量・奇数列の三次元盤は任意長で全Grundy閉公式を持つ
 
@@ -2239,6 +2240,7 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): Grundyのmexと非干渉成分のxorを用いる
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 二点禁止残局をグラフゲームとして扱う
+- ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 道・閉路のGrundy再帰と成分xor
 
 ## [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) 異方格子の水平間隔に余分な奇素因子があれば円は幅以下の点しか持たない
 
@@ -2260,6 +2262,7 @@
 
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 奇数本の場合の極大集合同偶奇性から全局面の二値性を得る
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 標準盤への適用には包含極小の残余禁止集合を正確に構成する
+- ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): ヒマワリ型禁止集合のGrundy閉公式
 
 ## [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
 
@@ -2308,6 +2311,7 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): mex再帰と独立ゲームのxor
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余の包含極小禁止集合によるゲーム表現
+- ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 二禁止集合の全安全局面Grundy閉公式
 
 ## [K0484](../items/K0484-width-five-q9-all-lengths.md) 五行九点版は全長で行容量だけに分離しM_{5,9}=8
 
@@ -2333,3 +2337,10 @@
 ## [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) 等間隔三行の6点円の最初の可能幅と二平方和による円数公式
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 6点共円・共線禁止の対象定義
+
+## [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) 監査済み残余ゲームの構造別評価は保存済み11×11由来826局面で再帰呼出数を約21%削減
+
+- → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二禁止集合の全安全局面Grundy閉公式
+- → depends_on [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md): ヒマワリ型禁止集合のGrundy閉公式
+- → depends_on [K0460](../items/K0460-path-cycle-grundy-periodicity.md): 道・閉路のGrundy再帰と成分xor
+- → depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 既存の残余ゲーム圧縮との併用

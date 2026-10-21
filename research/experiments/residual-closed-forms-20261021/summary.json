@@ -1,0 +1,24 @@
+{
+  "source": "research/experiments/n11-reduction-followup-20261005/output/n11-snapshots.json",
+  "source_sha256": "7518ff3847f003140440be964ed28557a31373d58a58642dd1d056d9af9f8e3a",
+  "snapshots": 826,
+  "repeats": 7,
+  "timing": "sum of per-root medians in microseconds; fresh memo; alternating run order",
+  "totals": {
+    "baseline_calls": 122720.0,
+    "fast_calls": 96570.0,
+    "baseline_memo": 23646.0,
+    "fast_memo": 14410.0,
+    "free_hits": 26787.0,
+    "two_hits": 28450.0,
+    "sunflower_hits": 1037.0,
+    "path_hits": 8712.0,
+    "baseline_us": 175857.24,
+    "fast_us": 149844.06
+  },
+  "call_reduction": 0.2130867014341591,
+  "memo_reduction": 0.3905946037384759,
+  "time_ratio_fast_over_baseline": 0.8520778558790073,
+  "roots_with_fewer_calls": 730,
+  "n11_empty_root_outcome": "UNKNOWN"
+}

@@ -485,3 +485,4 @@
 | [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) | 12×12に12石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |
 | [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) | 13×13に13石の極大安全集合が存在する（検証済みwitness） | proposition | computed | maximal-safe, geometry |
 | [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) | 等間隔三行の6点円の最初の可能幅と二平方和による円数公式 | proposition | proved | geometry, rectangles, variants |
+| [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) | 監査済み残余ゲームの構造別評価は保存済み11×11由来826局面で再帰呼出数を約21%削減 | computation | observed | residual-games, grundy, search-methods, verification, statistics |

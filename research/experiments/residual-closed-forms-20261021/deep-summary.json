@@ -1,0 +1,126 @@
+{
+  "baseline": {
+    "rows": 3,
+    "results": [
+      0,
+      0,
+      0
+    ],
+    "nodes": [
+      200000,
+      200000,
+      200000
+    ],
+    "counters": {
+      "audit_calls": 0,
+      "crosscheck_calls": 908478,
+      "exact_calls": 908478,
+      "residual_memo_states": 3803408,
+      "module_removed": 3005662,
+      "component_splits": 173424,
+      "shared_hits": 0,
+      "shared_stores": 0,
+      "canonicalized": 0,
+      "shared_size": 0,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0
+    }
+  },
+  "fast": {
+    "rows": 3,
+    "results": [
+      0,
+      0,
+      0
+    ],
+    "nodes": [
+      200000,
+      200000,
+      200000
+    ],
+    "counters": {
+      "audit_calls": 0,
+      "crosscheck_calls": 908478,
+      "exact_calls": 908478,
+      "residual_memo_states": 388814,
+      "module_removed": 276029,
+      "component_splits": 58100,
+      "shared_hits": 0,
+      "shared_stores": 0,
+      "canonicalized": 0,
+      "shared_size": 0,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0,
+      "closed_free": 1004202,
+      "closed_two_edges": 986310,
+      "closed_sunflower": 26568,
+      "closed_paths": 269193
+    }
+  },
+  "shared": {
+    "rows": 3,
+    "results": [
+      0,
+      0,
+      0
+    ],
+    "nodes": [
+      200000,
+      200000,
+      200000
+    ],
+    "counters": {
+      "audit_calls": 0,
+      "crosscheck_calls": 908478,
+      "exact_calls": 908478,
+      "residual_memo_states": 288090,
+      "module_removed": 198393,
+      "component_splits": 57649,
+      "shared_hits": 286292,
+      "shared_stores": 1798,
+      "canonicalized": 288090,
+      "shared_size": 4619,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0,
+      "closed_free": 200049,
+      "closed_two_edges": 340128,
+      "closed_sunflower": 17013,
+      "closed_paths": 131408
+    }
+  },
+  "shadow": {
+    "rows": 3,
+    "results": [
+      0,
+      0,
+      0
+    ],
+    "nodes": [
+      200000,
+      200000,
+      200000
+    ],
+    "counters": {
+      "audit_calls": 479097,
+      "crosscheck_calls": 479097,
+      "exact_calls": 0,
+      "residual_memo_states": 83340,
+      "module_removed": 59349,
+      "component_splits": 12081,
+      "shared_hits": 0,
+      "shared_stores": 0,
+      "canonicalized": 0,
+      "shared_size": 0,
+      "exact_layer_hits": 0,
+      "exact_layer_stores": 0,
+      "exact_layer_size": 0,
+      "closed_free": 402919,
+      "closed_two_edges": 292524,
+      "closed_sunflower": 7338,
+      "closed_paths": 68876
+    }
+  }
+}
