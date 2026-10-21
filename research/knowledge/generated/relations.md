@@ -2368,6 +2368,7 @@
 - ← depends_on [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md): 根全体で有限quotaを共有するP/N評価と枯渇時の通常探索復帰
 - ← depends_on [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md): 有限P/N評価、確定結果だけのmemo、quota切れUNKNOWN時の通常探索復帰
 - ← depends_on [K0499](../items/K0499-residual-dfpn-gate-frontier.md): quota内の確定P/Nだけを採用し、UNKNOWNは通常探索へ戻す
+- ← depends_on [K0500](../items/K0500-residual-attempt-budget-allocation.md): bounded P/Nの確定結果だけを採用し、UNKNOWNは通常探索へ戻す
 
 ## [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) 事前選択した残余quota128・閾値6は新規26局面でOFFより20.8%速く、固定深い3局面でも数値採用条件を満たした
 
@@ -2386,3 +2387,9 @@
 
 - → depends_on [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md): 通常df-pnの残余handoffと共有work上限、以前の深い3局面
 - → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): quota内の確定P/Nだけを採用し、UNKNOWNは通常探索へ戻す
+- ← depends_on [K0500](../items/K0500-residual-attempt-budget-allocation.md): 閾値18と、初回の難しい残余局面でroot quotaを使い切る観測
+
+## [K0500](../items/K0500-residual-attempt-budget-allocation.md) 根の残余予算128を1回32へ分配しても新規6局面の深い勝敗確定や実用的な探索量削減は確認できない
+
+- → depends_on [K0499](../items/K0499-residual-dfpn-gate-frontier.md): 閾値18と、初回の難しい残余局面でroot quotaを使い切る観測
+- → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): bounded P/Nの確定結果だけを採用し、UNKNOWNは通常探索へ戻す

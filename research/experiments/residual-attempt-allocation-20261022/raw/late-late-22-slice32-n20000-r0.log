@@ -1,0 +1,7 @@
+n=11 built forbidden=95670 tiebreak=asc exact_legal=0 exact_order=0 exact_budget=100000 exact_retries=1 residual_gate=18 residual_outcome=1 residual_quota=128 node_limited=1 node_budget=20000 exact_publish=all
+[hb] t=0s visited=0 expanded=0 exprate=0/s root_pn=1000000000 root_dn=1000000000 pndn=-1 memo=0/262144 open=0 solved=0 solved_disc=0 evict_open=0 evict_solved=0 maxdepth=0 tthit=0 ttmiss=0 avgprobe=0
+[children] t=0s n=0
+[children] n=0
+[exact-depth] none (call/win/loss/abort)
+[done] [roots{14,19,24,33,49,51,75,87,88,89,92,110}] LOSS expansions=27 root_pn=1000000000 root_dn=0 memo=43/262144 evict_open=0 evict_solved=0 exact_calls=0 exact_nodes=0 exact_abort=0 exact_win=0 exact_loss=0 exact_stores=16 exact_local=0 seq=1 wall_s=0
+# done=1 timeout=0

@@ -63,6 +63,7 @@
 - [K0496](../items/K0496-bounded-residual-outcome-search.md) (solver): 根全体で共有するP/N quotaと枯渇時の通常探索への復帰
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (solver): 通常df-pnの直接残余handoff、root quota reset、共有work node上限とroot計数
 - [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (solver): residual-profile指定時だけの未解決stage-0合法手数分布とroot差分出力
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (solver): 明示的な1回上限、root残量の実使用精算、canonical board再試行抑制、rootごとのreset
 ## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
@@ -73,6 +74,9 @@
 ## [cpp/solvers/kyouen_solver_9_root.cpp](../../../cpp/solvers/kyouen_solver_9_root.cpp)
 
 - [K0021](../items/K0021-n9-all-81-first-moves-win.md) (solver): 命題・対象範囲・根拠を記した出典
+## [cpp/tests/test_kyouen_residual_attempt.cpp](../../../cpp/tests/test_kyouen_residual_attempt.cpp)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (verifier): 予算・再試行・cache安全性と、独立幾何・部分集合DPによる全安全4×4局面照合
 ## [cpp/tests/test_kyouen_residual_builders.cpp](../../../cpp/tests/test_kyouen_residual_builders.cpp)
 
 - [K0495](../items/K0495-residual-completion-index-profile.md) (verifier): 全安全4×4占有、64ビット境界、全826保存局面で辺族と子遷移を比較
@@ -8114,6 +8118,33 @@
 ## [research/experiments/rectangle-reflection-parity-20261011/verify.py](../../../research/experiments/rectangle-reflection-parity-20261011/verify.py)
 
 - [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) (verifier): 整数円方程式と独立四点行列式による有限監査
+## [research/experiments/residual-attempt-allocation-20261022/cli_test.py](../../../research/experiments/residual-attempt-allocation-20261022/cli_test.py)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (verifier): 上限1/8/32/1000、quota0、同根再利用、既定互換性、不正modeの拒否
+## [research/experiments/residual-attempt-allocation-20261022/comparison.md](../../../research/experiments/residual-attempt-allocation-20261022/comparison.md)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (data): 固定比較全表、P/N使用数、通常探索量、時間と限界
+## [research/experiments/residual-attempt-allocation-20261022/confirmation.json](../../../research/experiments/residual-attempt-allocation-20261022/confirmation.json)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (data): 新規6局面、3設定、2上限、各3反復の全108評価
+## [research/experiments/residual-attempt-allocation-20261022/late.json](../../../research/experiments/residual-attempt-allocation-20261022/late.json)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (data): 既知終盤26局面と3設定の全78正しさ検査
+## [research/experiments/residual-attempt-allocation-20261022/protocol.json](../../../research/experiments/residual-attempt-allocation-20261022/protocol.json)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (manifest): 事前固定の配分候補、新規6局面、入力とsource/binary hash、選択規則
+## [research/experiments/residual-attempt-allocation-20261022/selection.json](../../../research/experiments/residual-attempt-allocation-20261022/selection.json)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (manifest): 確認前にcommitした1回32ノードの選択とtraining hash
+## [research/experiments/residual-attempt-allocation-20261022/study.py](../../../research/experiments/residual-attempt-allocation-20261022/study.py)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (verifier): 独立幾何、入力、全組合せ、raw行、root/attempt予算、選択順序と再集計
+## [research/experiments/residual-attempt-allocation-20261022/test_study.py](../../../research/experiments/residual-attempt-allocation-20261022/test_study.py)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (verifier): 誤局面、予算・試行計数・上限違反、時計混入、新規勝敗、選択順序の11テスト
+## [research/experiments/residual-attempt-allocation-20261022/training.json](../../../research/experiments/residual-attempt-allocation-20261022/training.json)
+
+- [K0500](../items/K0500-residual-attempt-budget-allocation.md) (data): 既存9局面、4設定、各3反復の全108評価
 ## [research/experiments/residual-closed-forms-20261021/README.md](../../../research/experiments/residual-closed-forms-20261021/README.md)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (log): 再現手順・比較条件・信頼境界

@@ -10,6 +10,10 @@ K0499では広い閾値でも最初の難しい残余局面でquotaを使い切�
 UNKNOWNを勝敗cacheへ書かない。確定P/Nの採用と元の手番への変換は従来通り。
 SG shadow crosscheckはこの試行抑制やP/N quotaを使わない。
 
+root出力の`residual_calls`が実呼出し数、`pn_attempt_max`が1回の実使用数の最大値。
+`pn_attempted`はcap指定時の試行済みcanonical board集合の要素数で、省略時は0。
+`pn_attempt_skips`はその集合によって再試行を抑制した回数である。
+
 ## 固定プロトコル
 
 - 根全体quota128、合法手数の閾値18を固定する。
@@ -40,3 +44,11 @@ python -m unittest discover -s research/experiments/residual-attempt-allocation-
 
 記録を上書きしない。新しい比較には新しいexperimentを作る。
 CIで行うのは小盤回帰と記録の再検査だけで、この探索をpushで再実行しない。
+
+`cpp/tests/test_kyouen_residual_attempt.cpp`は、独立の整数行列式と占有部分集合DPで
+4×4盤の安全な全5,811局面を求め、fresh solver/TTのcap1・cap32を計11,622回照合する。
+同じC++検査は通常・UBSanで通過した。予算reset、UNKNOWN後の通常証明、native exactと
+共有するcanonical board再試行抑制も含む。
+
+固定比較の全表は`comparison.md`、現在の結論と採用範囲は
+[K0500](../../knowledge/items/K0500-residual-attempt-budget-allocation.md)を参照。

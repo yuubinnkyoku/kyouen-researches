@@ -19,12 +19,13 @@ def main():
             r = run(f'empty-{cap}', ['--empty', '--node-budget=20000', *options, f'--residual-attempt-budget={cap}'])[0]
             assert r['result'] == 2 and r['pn_attempt_budget'] == cap
             assert r['pn_nodes'] <= r['pn_attempted'] * cap and r['pn_attempted'] == r['residual_calls']
+            assert 0 < r['pn_attempt_max'] <= min(cap, 128)
             assert r['pn_aborts'] <= r['pn_attempted'] <= r['pn_nodes'] <= 128
         source = tmp / 'roots.csv'; roots_csv(source, [[0, 1, 2, 4, 9]] * 2)
         rows = run('repeat', [f'--roots-csv={source}', '--node-budget=1', *options, '--residual-attempt-budget=1'])
         assert len(rows) == 2 and rows[0]['result'] == rows[1]['result'] != 0
         assert rows[0]['pn_attempted'] == rows[0]['pn_nodes'] == 1
-        assert rows[1]['pn_attempted'] == rows[1]['pn_nodes'] == rows[1]['pn_attempt_skips'] == 0
+        assert rows[1]['pn_attempted'] == rows[1]['pn_nodes'] == rows[1]['pn_attempt_skips'] == rows[1]['pn_attempt_max'] == 0
         zero = run('zero', ['--empty', '--node-budget=1', *options, '--residual-attempt-budget=8', '--residual-outcome-budget=0'])[0]
         assert zero['pn_nodes'] == zero['pn_attempted'] == zero['residual_calls'] == 0
         baseline = run('whole', ['--empty', '--node-budget=20000', *options])[0]

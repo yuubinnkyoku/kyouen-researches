@@ -57,6 +57,13 @@ jobs:
           python research/experiments/residual-gate-frontier-20261022/cli_profile.py --solver /tmp/kyouen_dfpn_root
           python -m unittest discover -s research/experiments/residual-gate-frontier-20261022 -p 'test_*.py'
           python research/experiments/residual-gate-frontier-20261022/study.py verify
+      - name: Verify capped residual attempts and allocation archives
+        run: |
+          c++ -std=c++20 -O2 -Icpp/solvers cpp/tests/test_kyouen_residual_attempt.cpp -o /tmp/test_residual_attempt
+          /tmp/test_residual_attempt
+          python research/experiments/residual-attempt-allocation-20261022/cli_test.py --solver /tmp/kyouen_dfpn_root
+          python -m unittest discover -s research/experiments/residual-attempt-allocation-20261022 -p 'test_*.py'
+          python research/experiments/residual-attempt-allocation-20261022/study.py verify
       - name: Verify bounded residual outcome fallback and archives
         run: |
           c++ -std=c++20 -O2 -Icpp/solvers cpp/tests/test_kyouen_residual_outcome.cpp -o /tmp/test_residual_outcome
