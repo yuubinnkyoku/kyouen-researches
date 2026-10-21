@@ -3159,7 +3159,7 @@ template<int N>
         int legal=std::stoi(f[5]);
         double t0=std::chrono::duration<double>(
             std::chrono::steady_clock::now().time_since_epoch()).count();
-        std::uint64_t nodes=0; int res=-1;
+        std::uint64_t nodes=0,setup_us=0,solve_us=0; int res=-1;
         try{
             // A FRESH solver per row. Reusing one instance leaks state
             // between positions: exact_prop consults the main PnTT first,
@@ -3186,7 +3186,13 @@ template<int N>
             row_solver.set_exact_share_layer(exact_share_layer);
             if(!proof_dag_path.empty() || !proof_dag_dir.empty())
                 row_solver.set_proof_dag_collection(true);
+            const double solve_start=std::chrono::duration<double>(
+                std::chrono::steady_clock::now().time_since_epoch()).count();
+            setup_us=static_cast<std::uint64_t>((solve_start-t0)*1000000.0);
             res=row_solver.exact_replay(occ,stones,budget,nodes);
+            solve_us=static_cast<std::uint64_t>(std::chrono::duration<double>(
+                std::chrono::steady_clock::now().time_since_epoch()).count()*1000000.0
+                -solve_start*1000000.0);
             if(exact_replay_profile){
                 row_solver.exact_replay_profile(profile_after);
                 O<<"# exact-profile row="<<id
@@ -3266,6 +3272,12 @@ template<int N>
         }
         double t1=std::chrono::duration<double>(
             std::chrono::steady_clock::now().time_since_epoch()).count();
+        // Keep the replay CSV columns stable. Add precise timings as a
+        // comment so setup/table construction cannot hide handoff costs.
+        O<<"# replay_timing row="<<id
+         <<" setup_us="<<setup_us<<" solve_us="<<solve_us
+         <<" total_us="<<static_cast<std::uint64_t>((t1-t0)*1000000.0)
+         <<" residual_gate="<<residual_exact_legal<<"\n";
         O<<"replay,"<<id<<","<<stones<<","<<legal<<","
          <<(stones%2==0?1:0)<<","<<budget<<","<<res<<","
          <<nodes<<","<<(long long)(t1-t0)<<","<<occ.lo<<","<<occ.hi<<"\n";

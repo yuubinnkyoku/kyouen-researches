@@ -1,0 +1,8 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# residual_shadow row=0 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=4 module_removed=1 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=10 closed_two_edges=5 closed_sunflower=0 closed_paths=1
+# replay_timing row=0 setup_us=532505 solve_us=229 total_us=533900 residual_gate=8
+replay,0,14,6,1,5000,1,0,0,146402253867106305,140737521910288
+# residual_shadow row=1 audit_calls=0 crosscheck_calls=1 exact_calls=1 residual_memo_states=1 module_removed=1 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=2 closed_two_edges=3 closed_sunflower=0 closed_paths=0
+# replay_timing row=1 setup_us=539563 solve_us=163 total_us=539742 residual_gate=8
+replay,1,13,6,0,5000,2,0,0,650770181055856640,36028806682646532
