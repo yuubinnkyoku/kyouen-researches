@@ -2,7 +2,7 @@
 id: K0444
 title: 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -26,12 +26,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/q48_pell_orbit_oscillation_20261015.json
   role: data
   note: 閉公式・閾値差分の監査と振動数値
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準4行盤の傾き9/1の明示的Pell軌道と上下反転から得られる円のみ。全円数C8(m)の精密漸近は主張しない。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。望遠和の閉公式・密度零の非零差分・位相関数の上下極限を確認。付属整数・数値監査を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 既知Pell族の8点円数の閉公式と対数周期振動

@@ -2,7 +2,7 @@
 id: K0445
 title: 四行8点円の総数は O(m² log m) 以下
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -22,12 +22,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/q48_circle_upper_log_audit_20261015.txt
   role: data
   note: 監査結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準整数格子の四連続行に各行二点ずつを持つ8点円。m列盤内の8点集合の総数。任意の整数m≥1。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。二平方表示の積公式、Cauchy–Schwarz、ガウスgcdとノルム殻による上界定数を確認。有限監査を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 標準の4行m列盤内に各行2点ずつを持つ円の8点集合の個数を `C8(m)` とすると、

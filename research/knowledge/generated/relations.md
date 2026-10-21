@@ -2205,7 +2205,7 @@
 
 - → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): 傾き正規形と固定傾きPell延長を使用
 
-## [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ
+## [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) 4行8点円の実現可能な既約傾き数R(H)はO(H²/(log H)²)以下
 
 - → depends_on [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md): Pell正規形を用いる
 

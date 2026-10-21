@@ -440,21 +440,21 @@
 | [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) | 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない | proposition | needs-review | grundy, residual-games, geometry |
 | [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) | 4点の無順序二点和復元では中心反射が唯一の曖昧性 | proposition | proved | geometry, variants |
 | [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) | 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類 | proposition | needs-review | residual-games, grundy, search-methods |
-| [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) | 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する | proposition | needs-review | geometry, rectangles, variants, statistics |
-| [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) | 四行8点円の総数は O(m² log m) 以下 | proposition | needs-review | geometry, rectangles, variants |
-| [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) | 四行8点円の最大弦長1億までの有限完全分類 | computation | needs-review | geometry, rectangles, statistics |
-| [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) | 四行8点円の実現傾きは無限個の集積点を持ち種類数は対数×二重対数以上 | proposition | needs-review | geometry, rectangles, variants |
-| [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) | 4行8点円には相異なる実現可能な既約傾きが無限種類ある | proposition | needs-review | geometry, rectangles, variants |
-| [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) | 4行8点円の奇数分母傾きは法64で4合同類に限られる | proposition | needs-review | geometry, rectangles, variants |
-| [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) | 四行8点円の実現傾きは非空な完全閉包を持ち集積点が非可算個存在する | proposition | needs-review | geometry, rectangles, variants |
-| [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) | 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ | proposition | needs-review | geometry, rectangles, variants, statistics |
-| [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) | 四行8点円の実現傾きには少なくとも三つの集積点があり種類数は対数以上 | proposition | needs-review | geometry, rectangles, variants |
+| [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) | 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する | proposition | proved | geometry, rectangles, variants, statistics |
+| [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) | 四行8点円の総数は O(m² log m) 以下 | proposition | proved | geometry, rectangles, variants |
+| [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) | 四行8点円の最大弦長1億までの有限完全分類 | computation | computed | geometry, rectangles, statistics |
+| [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) | 四行8点円の実現傾きは無限個の集積点を持ち種類数は対数×二重対数以上 | proposition | proved | geometry, rectangles, variants |
+| [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) | 4行8点円には相異なる実現可能な既約傾きが無限種類ある | proposition | proved | geometry, rectangles, variants |
+| [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) | 4行8点円の奇数分母傾きは法64で4合同類に限られる | proposition | proved | geometry, rectangles, variants |
+| [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) | 四行8点円の実現傾きは非空な完全閉包を持ち集積点が非可算個存在する | proposition | proved | geometry, rectangles, variants |
+| [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) | 4行8点円の実現可能な既約傾き数R(H)はO(H²/(log H)²)以下 | proposition | proved | geometry, rectangles, variants, statistics |
+| [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) | 四行8点円の実現傾きには少なくとも三つの集積点があり種類数は対数以上 | proposition | proved | geometry, rectangles, variants |
 | [K0453](../items/K0453-geometric-four-q4-grundy-five.md) | 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小 | proposition | needs-review | geometry, grundy, residual-games, variants |
 | [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) | 5〜63連続整数行で水平中心が半整数の円の最大格子点数は二重点行数の2倍 | proposition | proved | geometry, rectangles, variants |
 | [K0455](../items/K0455-independent-row-capacity-state-counts.md) | 独立行容量ゲームの勝敗局面数と非終局負け局面の漸近密度 | proposition | proved | rectangles, variants, grundy, statistics |
 | [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) | 独立行容量ゲームの勝敗別合法手数分布と条件付き平均の厳密公式 | proposition | proved | variants, grundy, statistics |
 | [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) | 3本の平行直線に各4整数点で6点円3本を実現できる | proposition | needs-review | geometry, variants, rectangles |
-| [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) | 四行8点円には新しい既約傾き181273/40152の無限Pell族がある | proposition | needs-review | geometry, rectangles, variants |
+| [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) | 四行8点円には新しい既約傾き181273/40152の無限Pell族がある | proposition | proved | geometry, rectangles, variants |
 | [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) | 無順序二点和からのn点復元はnが2の冪のときに限り非単射 | proposition | proved | geometry, rectangles, variants |
 | [K0460](../items/K0460-path-cycle-grundy-periodicity.md) | 二点禁止の道Grundyは52以降最小周期34、最大次数2の鋭い上界は15 | proposition | proved | grundy, residual-games, search-methods, strategy-length |
 | [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) | 異方格子の水平間隔に余分な奇素因子があれば円は幅以下の点しか持たない | proposition | proved | geometry, rectangles, variants, grundy |

@@ -2,7 +2,7 @@
 id: K0450
 title: 四行8点円の実現傾きは非空な完全閉包を持ち集積点が非可算個存在する
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -22,12 +22,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/q48_perfect_slope_closure_audit_20261016.txt
   role: data
   note: 有限整数監査の実行結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準4行q=8非局所円の実現既約正傾き集合。A奇数、B偶数、3∤Aの部分集合とその実数閉包。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。任意の種からの双対Pell近似と合同保存、孤立点のない集合の閉包の完全性を確認。560行列式を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 実現可能な既約正傾きのうち `A` 奇数、`B` 偶数、`3∤A` を満たす集合 `S0` は、各点の直下に同じ集合の相異なる傾きが無限に存在して収束する。したがって `S0` は孤立点を持たず、その実数閉包は非空な完全集合。実現傾き全体の集積点は非可算無限個である。

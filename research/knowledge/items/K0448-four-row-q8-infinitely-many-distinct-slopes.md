@@ -2,7 +2,7 @@
 id: K0448
 title: 4行8点円には相異なる実現可能な既約傾きが無限種類ある
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -22,12 +22,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/q48_infinite_distinct_slopes_audit_20261016.txt
   role: data
   note: 独立検証器の実行結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準4連続整数行の非局所8点円。異なる既約傾きの無限性および任意固定法での無限同余部分列。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。ノルム・既約性保存、傾きの単調性、任意法の有限群による部分列を確認。350行列式を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 標準4連続整数行に各2点を持つ非局所8点円の既約傾きは無限種類ある。明示的な傾き列は9から厳密に減少し、3√(325/37)に収束する。各傾きは実際の整数8点円を持つ。さらに任意の法Nで分子9・分母1と合同な実現傾きが無限種類存在し、対応する円の全8点の正規化座標も最初の円と法Nで一致する。

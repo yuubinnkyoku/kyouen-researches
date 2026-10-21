@@ -2,7 +2,7 @@
 id: K0446
 title: 四行8点円の最大弦長1億までの有限完全分類
 kind: computation
-status: needs-review
+status: computed
 topics:
 - geometry
 - rectangles
@@ -25,12 +25,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/q48_gaussian_census_B100000000_20261015.csv
   role: data
   note: 最大弦長1億以下の全15弦長型
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準4連続整数行・各行2点の円、最大弦長100000000以下
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。ガウス列挙の完全性と実装範囲を確認。最大弦長1億の再走査は全15型が保存CSVと完全一致。別算法の全走査照合は100万まで。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 最大弦長1億以下の8点円弦長列は、局所型 `(1,3,3,1)` と増加7型および上下反転7型の計15型に限る。増加型の最大弦長は `73,2773,105301,1067653,1893727,3998665,75476575`。任意の `1<=m<=100000001` に対し `C8(m)=[m-3]_+ +2Σ_D[m-D]_+` が有限範囲で厳密。`C8(100000001)=1334910478`。

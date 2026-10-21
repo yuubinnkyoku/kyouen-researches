@@ -18,12 +18,12 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 111 |
+| computed | 112 |
 | conjectured | 1 |
-| needs-review | 31 |
+| needs-review | 21 |
 | observed | 17 |
 | open | 34 |
-| proved | 198 |
+| proved | 207 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
@@ -97,18 +97,8 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 - [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) [needs-review] 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全
 - [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) [needs-review] 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない
 - [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) [needs-review] 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類
-- [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) [needs-review] 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する
-- [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) [needs-review] 四行8点円の総数は O(m² log m) 以下
-- [K0446](../items/K0446-four-row-q8-gaussian-census-100m.md) [needs-review] 四行8点円の最大弦長1億までの有限完全分類
-- [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) [needs-review] 四行8点円の実現傾きは無限個の集積点を持ち種類数は対数×二重対数以上
-- [K0448](../items/K0448-four-row-q8-infinitely-many-distinct-slopes.md) [needs-review] 4行8点円には相異なる実現可能な既約傾きが無限種類ある
-- [K0449](../items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md) [needs-review] 4行8点円の奇数分母傾きは法64で4合同類に限られる
-- [K0450](../items/K0450-four-row-q8-perfect-slope-closure.md) [needs-review] 四行8点円の実現傾きは非空な完全閉包を持ち集積点が非可算個存在する
-- [K0451](../items/K0451-four-row-q8-slope-dimension-two-sieve.md) [needs-review] 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ
-- [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) [needs-review] 四行8点円の実現傾きには少なくとも三つの集積点があり種類数は対数以上
 - [K0453](../items/K0453-geometric-four-q4-grundy-five.md) [needs-review] 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小
 - [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) [needs-review] 3本の平行直線に各4整数点で6点円3本を実現できる
-- [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) [needs-review] 四行8点円には新しい既約傾き181273/40152の無限Pell族がある
 - [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) [needs-review] 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界
 - [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) [needs-review] 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
 - [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) [needs-review] 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0

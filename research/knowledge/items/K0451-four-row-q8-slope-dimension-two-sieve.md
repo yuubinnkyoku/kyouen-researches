@@ -1,8 +1,8 @@
 ---
 id: K0451
-title: 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ
+title: 4行8点円の実現可能な既約傾き数R(H)はO(H²/(log H)²)以下
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -35,11 +35,11 @@ artifacts:
 - path: research/experiments/fixed-width/output/q48_sieve_dimension2_20261015.json
   role: data
   note: H=80,160,320,640の有限監査結果
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。大篩の除外剰余・平均補正・Karamata・Euler積定数・短縮区間のAbel和を確認。付属3監査を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 4行8点円の実現可能な既約傾き数は対数二乗の上界を持つ
