@@ -2,7 +2,7 @@
 id: K0482
 title: 二点禁止残局の木でGrundy値0〜8を実現する最小頂点数
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - grundy
 - residual-games
@@ -30,12 +30,12 @@ artifacts:
 - path: research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_networkx.json
   role: data
   note: 独立列挙・独立再帰の全分布
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 任意の非空の有限単純木の独立集合を一点ずつ増やす通常プレイゲーム。Grundy値0〜8の最小頂点数。共円ゲームの実際の格子残局としての実現性は含まない。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。葉追加とAHU正規形の完全性を確認。全15頂点以下の木をC++占有mexとNetworkX+Python残存mexで再検査し全分布一致。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 木の二点禁止残局のGrundy最小頂点数

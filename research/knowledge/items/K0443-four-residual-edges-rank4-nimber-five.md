@@ -2,7 +2,7 @@
 id: K0443
 title: 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - residual-games
 - grundy
@@ -40,12 +40,12 @@ artifacts:
 - path: research/experiments/four-q4-residual-grundy-20261018/results.json
   role: data
   note: 全4,079型のGrundy値分布と証人
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 通常プレイの任意有限禁止集合ゲーム。現在合法な点上の包含極小残余禁止辺が4本以下、各辺サイズ2〜4。孤立点を許す。達成型の一意性は孤立点を除いた核に限り、幾何実現性は主張しない。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。所属型の完全性・辺極小性と2軌道分類、自由点xorを確認。PythonとC++の37592族を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 4本以下の残余禁止辺・rank4のGrundy上界5

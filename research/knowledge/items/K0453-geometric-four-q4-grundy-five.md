@@ -2,7 +2,7 @@
 id: K0453
 title: 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - grundy
@@ -41,12 +41,12 @@ artifacts:
 - path: research/experiments/fastlane-four-edge-geometry-20261019/output.json
   role: data
   note: 4禁止組、1635安全局面、Grundy値分布と全初手
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 任意有限整数点集合の4点共円・共線禁止通常ゲーム。禁止四点組が高々4個でg(empty)=5なら点数11以上。11点かつ禁則4個以下なら包含軸平行整数正方形の一辺は6以上。標準6×6全点盤は対象外。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。11点証人・4079抽象型・5×5全4457400部分集合による最小性を確認。Pythonと独立C++を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 6×6内の11点・4禁則で空盤Grundy値5

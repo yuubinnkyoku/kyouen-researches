@@ -2,7 +2,7 @@
 id: K0441
 title: 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない
 kind: proposition
-status: needs-review
+status: computed
 topics:
 - grundy
 - residual-games
@@ -22,11 +22,11 @@ artifacts:
 - path: research/experiments/grundy-five-residual-obstruction-20261018/independent_verify.cpp
   role: verifier
   note: 独立の円方程式・ビット集合再帰
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。正確な残余実現の必要条件への緩和帰着を確認。独立C++で固定W・n=6..13の全候補と被覆上界を再列挙し報告値と一致。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 固定11点Grundy5証人の残余実現障害

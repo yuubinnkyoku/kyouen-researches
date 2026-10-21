@@ -2,7 +2,7 @@
 id: K0438
 title: 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - grundy
@@ -33,12 +33,12 @@ artifacts:
 - path: research/experiments/game-structure/output/node_kayles_pspace_20261019.json
   role: data
   note: 88グラフ・全9614四点組・749安全残余局面の照合結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 標準q=4・完全指摘・通常プレイ。二進整数座標で明示された任意有限点盤と指定安全占有集合を入力する勝敗判定。全正方形格子盤および空盤だけの勝敗判定を含まない。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。K0348の多項式ビット長符号化、Node Kayles全状態同型とPSPACE所属を確認。88グラフ・749安全残余局面を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 指定安全局面の共円ゲーム勝敗判定はPSPACE完全

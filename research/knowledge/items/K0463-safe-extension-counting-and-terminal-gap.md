@@ -2,7 +2,7 @@
 id: K0463
 title: 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - variants
@@ -28,12 +28,12 @@ artifacts:
 - path: research/experiments/game-structure/output/safe_extensions_20261019.json
   role: data
   note: 全95盤、15590四点組、2284候補集合の監査集計
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 二進整数座標で与える任意有限点盤と指定安全局面。全禁止4点組が同一の点を通る円で、三共線がなくても成立。標準正方形全格子盤は対象外。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。独立集合・安全延長、冠グラフの極大集合の個数保存対応と計算量の所属・困難性を確認。95盤のPython・任意精度C++を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 指定安全局面からの全延長と独立集合の全単射

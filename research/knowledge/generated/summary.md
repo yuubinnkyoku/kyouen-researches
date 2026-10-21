@@ -18,12 +18,12 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 112 |
+| computed | 113 |
 | conjectured | 1 |
-| needs-review | 21 |
+| needs-review | 14 |
 | observed | 17 |
 | open | 34 |
-| proved | 207 |
+| proved | 213 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
@@ -94,12 +94,6 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
-- [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) [needs-review] 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全
-- [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) [needs-review] 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない
-- [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) [needs-review] 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類
-- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) [needs-review] 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小
-- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) [needs-review] 3本の平行直線に各4整数点で6点円3本を実現できる
-- [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) [needs-review] 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界
 - [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) [needs-review] 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
 - [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) [needs-review] 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0
 - [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) [needs-review] 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる
@@ -114,7 +108,6 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 - [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) [needs-review] 不等間隔三列・三行の5点円本数とq=5全安全局面Grundyを完全分類
 - [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) [needs-review] 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
 - [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) [needs-review] 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち
-- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) [needs-review] 二点禁止残局の木でGrundy値0〜8を実現する最小頂点数
 
 ## 警告
 

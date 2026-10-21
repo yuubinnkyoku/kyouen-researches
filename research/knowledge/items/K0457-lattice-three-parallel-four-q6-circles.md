@@ -2,7 +2,7 @@
 id: K0457
 title: 3本の平行直線に各4整数点で6点円3本を実現できる
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - variants
@@ -25,11 +25,11 @@ artifacts:
 - path: research/experiments/geometry/output/lattice_three_circles_q6_independent.txt
   role: data
   note: C++の独立検算結果
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。共通和1の8通りの整合式から3円を尽くす手計算を確認。Python・C++の幾何と全局面を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 3本の平行直線に各4整数点で6点円3本を実現できる
