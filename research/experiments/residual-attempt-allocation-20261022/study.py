@@ -69,6 +69,8 @@ def validate(raw, f, setting, limit):
     assert r['node_limited'] == 1 and r['node_budget'] == limit and r['exact_nodes'] == 0
     assert r['residual_gate'] == (0 if setting == 'off' else 18) and r['pn_enabled'] == int(setting != 'off')
     assert r['pn_budget'] == 128 and r['pn_attempt_budget'] == cap
+    assert 0 <= r['pn_attempt_max'] <= r['pn_nodes']
+    assert r['pn_attempt_skips'] >= 0
     assert r['result'] == f['expected'], 'new deep root verdict needs independent verification'
     assert r['build_ns'] == r['structure_ns'] == r['grundy_ns'] == 0
     if cap:
