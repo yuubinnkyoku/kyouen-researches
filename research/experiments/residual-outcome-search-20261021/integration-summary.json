@@ -1,0 +1,102 @@
+{
+  "native": {
+    "result": 2,
+    "nodes": 154,
+    "outcome": []
+  },
+  "grundy": {
+    "result": 2,
+    "nodes": 0,
+    "outcome": []
+  },
+  "pn-0": {
+    "result": 2,
+    "nodes": 154,
+    "outcome": [
+      {
+        "row": "0",
+        "nodes": "0",
+        "cutoffs": "0",
+        "aborts": "0",
+        "remaining": "0"
+      }
+    ]
+  },
+  "pn-1": {
+    "result": 2,
+    "nodes": 154,
+    "outcome": [
+      {
+        "row": "0",
+        "nodes": "1",
+        "cutoffs": "0",
+        "aborts": "1",
+        "remaining": "0"
+      }
+    ]
+  },
+  "pn-2": {
+    "result": 2,
+    "nodes": 154,
+    "outcome": [
+      {
+        "row": "0",
+        "nodes": "2",
+        "cutoffs": "0",
+        "aborts": "1",
+        "remaining": "0"
+      }
+    ]
+  },
+  "pn-10": {
+    "result": 2,
+    "nodes": 154,
+    "outcome": [
+      {
+        "row": "0",
+        "nodes": "10",
+        "cutoffs": "2",
+        "aborts": "1",
+        "remaining": "0"
+      }
+    ]
+  },
+  "pn-100000": {
+    "result": 2,
+    "nodes": 0,
+    "outcome": [
+      {
+        "row": "0",
+        "nodes": "2383",
+        "cutoffs": "518",
+        "aborts": "0",
+        "remaining": "97617"
+      }
+    ]
+  },
+  "shadow": {
+    "result": 2,
+    "nodes": 0,
+    "outcome": [
+      {
+        "row": "0",
+        "nodes": "2383",
+        "cutoffs": "518",
+        "aborts": "0",
+        "remaining": "97617"
+      }
+    ]
+  },
+  "proof": {
+    "result": 2,
+    "nodes": 154,
+    "outcome": [],
+    "certificate_receipt": {
+      "verdict": 2,
+      "nodes": 166,
+      "edges": 230,
+      "terminal_nodes": 46,
+      "trusted_leaves": 0
+    }
+  }
+}

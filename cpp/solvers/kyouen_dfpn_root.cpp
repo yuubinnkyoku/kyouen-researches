@@ -306,6 +306,8 @@ public:
         for(int i=0;i<k;++i) state=add(state,verts[i]);
         // Re-derive legality from the reconstructed occupancy.
         Bits legal=legal_for(occupied);
+        residual_outcome_remaining_=residual_outcome_limit_;
+        residual_outcome_nodes_=residual_outcome_cutoffs_=residual_outcome_aborts_=0;
         // Reset the exact-local memo before every replayed position. The
         // replay driver reuses ONE solver for all rows, and exact_prop
         // consults exact_local_ when the publish mode is not ALL, so
@@ -1417,6 +1419,9 @@ private:
     std::uint64_t residual_shared_canonicalized_=0;
     kyouen_residual::Stats residual_closed_stats_{};
     int residual_builder_=2; // 0 scan, 1 indexed, 2 estimated-work selection
+    bool residual_outcome_=false;
+    std::uint64_t residual_outcome_limit_=100000,residual_outcome_remaining_=100000;
+    std::uint64_t residual_outcome_nodes_=0,residual_outcome_cutoffs_=0,residual_outcome_aborts_=0;
     bool residual_profile_=false;
     std::uint64_t residual_build_ns_=0,residual_structure_ns_=0,residual_grundy_ns_=0;
     inline static std::map<kyouen_residual::Key,int> residual_component_cache_{};
@@ -1800,17 +1805,25 @@ private:
         }
     }
 
-    ExactResult residual_verdict(Bits occupied,Bits legal,int stones) {
+    ExactResult residual_verdict(Bits occupied,Bits legal,int stones,bool outcome_only=false) {
         auto begin=residual_profile_?Clock::now():Clock::time_point{};
         auto r=residual_for(occupied,legal,nullptr);
         auto built=residual_profile_?Clock::now():Clock::time_point{};
         std::map<kyouen_residual::Key,int> memo;
         kyouen_residual::Stats st;
         st.profile=residual_profile_;
-        int g=(residual_share_gate_>0)
-            ? kyouen_residual::grundy_shared(
-                  std::move(r),memo,residual_component_cache_,residual_share_gate_,&st)
-            : kyouen_residual::grundy(std::move(r),memo,&st);
+        int g;
+        if(outcome_only){
+            g=kyouen_residual::outcome(std::move(r),memo,residual_outcome_remaining_,&st);
+            residual_outcome_nodes_+=st.calls;
+            residual_outcome_cutoffs_+=st.outcome_cutoffs;
+            if(g<0) ++residual_outcome_aborts_;
+        }else{
+            g=(residual_share_gate_>0)
+                ? kyouen_residual::grundy_shared(
+                      std::move(r),memo,residual_component_cache_,residual_share_gate_,&st)
+                : kyouen_residual::grundy(std::move(r),memo,&st);
+        }
         if(residual_profile_){
             auto elapsed=static_cast<std::uint64_t>(std::chrono::duration_cast<
                 std::chrono::nanoseconds>(Clock::now()-built).count());
@@ -1831,6 +1844,7 @@ private:
         residual_closed_stats_.closed_sunflower += st.closed_sunflower;
         residual_closed_stats_.closed_paths += st.closed_paths;
         ++residual_crosscheck_calls_;
+        if(g<0) return ExactResult::UNKNOWN;
         return kyouen_residual::first_player_verdict_from_grundy(g,stones)==1
             ? ExactResult::WIN : ExactResult::LOSS;
     }
@@ -2027,11 +2041,16 @@ private:
             }
         }
 
-        if(residual_exact_legal_>0 && popcount(legal)<=residual_exact_legal_ && !collect_proof_dag_){
+        if(residual_exact_legal_>0 && popcount(legal)<=residual_exact_legal_ && !collect_proof_dag_
+           && (!residual_outcome_ || residual_outcome_remaining_>0)){
             ++residual_exact_calls_;
-            ExactResult rr=residual_verdict(state.t[0],legal,stones);
-            exact_record(key,rr);
-            return checked_return(rr);
+            ExactResult rr=residual_verdict(state.t[0],legal,stones,residual_outcome_);
+            if(rr!=ExactResult::UNKNOWN){
+                exact_record(key,rr);
+                return checked_return(rr);
+            }
+            // Only completed P/N outcomes are publishable. Exhaustion uses
+            // the native board search below and the original board budget.
         }
 
         if(budget==0) return profile_return(ExactResult::UNKNOWN);
@@ -2729,6 +2748,17 @@ public:
         if(mode<0 || mode>2) throw std::runtime_error("invalid residual builder");
         residual_builder_=mode;
     }
+    void set_residual_outcome(bool enabled,std::uint64_t quota){
+        if(enabled && residual_share_gate_>0)
+            throw std::runtime_error("outcome evaluator cannot share SG component cache");
+        residual_outcome_=enabled;
+        residual_outcome_limit_=residual_outcome_remaining_=quota;
+    }
+    void residual_outcome_stats(std::uint64_t& nodes,std::uint64_t& cutoffs,
+                                std::uint64_t& aborts,std::uint64_t& remaining) const {
+        nodes=residual_outcome_nodes_; cutoffs=residual_outcome_cutoffs_;
+        aborts=residual_outcome_aborts_; remaining=residual_outcome_remaining_;
+    }
     void set_residual_profile(bool enabled){ residual_profile_=enabled; }
     void residual_profile_stats(std::uint64_t& build,std::uint64_t& structure,std::uint64_t& grundy) const {
         build=residual_build_ns_; structure=residual_structure_ns_; grundy=residual_grundy_ns_;
@@ -3177,7 +3207,7 @@ template<int N>
     static int run_exact_replay(const std::string& path,std::uint64_t budget,
                             unsigned memo_power,const std::string& only,
                             int exact_order,int residual_audit_legal,int residual_crosscheck_legal,
-                            int residual_exact_legal,int residual_share_gate,bool residual_profile,int residual_builder,bool exact_replay_share_tt,int exact_share_layer,
+                            int residual_exact_legal,int residual_share_gate,bool residual_profile,int residual_builder,bool residual_outcome,std::uint64_t residual_outcome_budget,bool exact_replay_share_tt,int exact_share_layer,
                             bool exact_replay_stop_on_loss,bool exact_replay_profile,
                             const std::string& proof_dag_path,const std::string& proof_dag_dir,
                             std::ostream& O){
@@ -3281,6 +3311,7 @@ template<int N>
             row_solver.set_residual_share_gate(residual_share_gate);
             row_solver.set_residual_profile(residual_profile);
             row_solver.set_residual_builder(residual_builder);
+            row_solver.set_residual_outcome(residual_outcome,residual_outcome_budget);
             row_solver.set_exact_share_layer(exact_share_layer);
             if(!proof_dag_path.empty() || !proof_dag_dir.empty())
                 row_solver.set_proof_dag_collection(true);
@@ -3346,6 +3377,12 @@ template<int N>
                 std::uint64_t esh=0, ess=0, esz=0;
                 row_solver.exact_share_stats(esh,ess,esz);
                 auto closed=row_solver.residual_closed_stats();
+                if(residual_outcome){
+                    std::uint64_t nodes=0,cutoffs=0,aborts=0,remaining=0;
+                    row_solver.residual_outcome_stats(nodes,cutoffs,aborts,remaining);
+                    O<<"# residual_outcome row="<<id<<" nodes="<<nodes<<" cutoffs="<<cutoffs
+                     <<" aborts="<<aborts<<" remaining="<<remaining<<"\n";
+                }
                 if(residual_profile){
                     std::uint64_t build=0,structure=0,grundy=0;
                     row_solver.residual_profile_stats(build,structure,grundy);
@@ -4176,6 +4213,8 @@ int main(int argc,char**argv){
         int residual_share_gate=0;       // Sprouts-style exact component sharing
         bool residual_profile=false;
         int residual_builder=2;
+        bool residual_outcome=false;
+        std::uint64_t residual_outcome_budget=100000;
         std::string only="";
         double budget_s=0;
         int exact_legal=0, exact_retries=1;
@@ -4231,6 +4270,18 @@ int main(int argc,char**argv){
             else if(a.rfind("--residual-exact-legal=",0)==0)residual_exact_legal=std::stoi(a.substr(23));
             else if(a.rfind("--residual-share-gate=",0)==0)residual_share_gate=std::stoi(a.substr(22));
             else if(a=="--residual-profile")residual_profile=true;
+            else if(a.rfind("--residual-evaluator=",0)==0){
+                const auto mode=a.substr(21);
+                if(mode=="outcome") residual_outcome=true;
+                else if(mode=="grundy") residual_outcome=false;
+                else throw std::runtime_error("invalid --residual-evaluator");
+            }
+            else if(a.rfind("--residual-outcome-budget=",0)==0){
+                const auto value=a.substr(26);
+                if(value.empty() || value.find_first_not_of("0123456789")!=std::string::npos)
+                    throw std::runtime_error("invalid --residual-outcome-budget");
+                residual_outcome_budget=std::stoull(value);
+            }
             else if(a.rfind("--residual-builder=",0)==0){
                 const auto mode=a.substr(19);
                 if(mode=="scan") residual_builder=0;
@@ -4257,7 +4308,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }
@@ -4319,10 +4370,12 @@ int main(int argc,char**argv){
             }
         }
         std::uint64_t total_exp=0;
+        if(residual_outcome && residual_share_gate>0)
+            throw std::runtime_error("outcome evaluator cannot share SG component cache");
         int rc=0;
         switch(n){
             case 4:
-                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<4>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<4>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<4>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -4331,7 +4384,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 5:
-                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<5>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -4340,7 +4393,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 6:
-                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<6>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -4349,7 +4402,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 7:
-                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<7>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
@@ -4358,7 +4411,7 @@ int main(int argc,char**argv){
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
                 rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,*lp,*cp,&total_exp,roots_path); break;
             case 11:
-                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
+                if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
 
                 if(coord_run) return run_coord<11>(cover_first,coord_r2,s5_cache,coord_wall,coord_max,s5_cache_out,s4_cache_out,coord_frontier,*cp);
