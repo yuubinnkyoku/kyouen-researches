@@ -1,0 +1,71 @@
+{
+  "label": "indexed-timing",
+  "profile": false,
+  "builder": "indexed",
+  "repeats": 3,
+  "gates": [
+    0,
+    6,
+    12
+  ],
+  "budget": 5000,
+  "inputs": {
+    "input.csv": "ce1f2d696976f4e8897fa2aa45895c49a50419d70b9ae2a16d132c84fe2026a0",
+    "stress-input.csv": "4214e2165c23f5246742dbe8824dd8db48f82dc67dcc0b2f703f5ee7921b6b02",
+    "fixtures.json": "e9b1fe88ceb0c609bad5df32cb611b100efde7a7b07d316284a5a8b63ed0bd79"
+  },
+  "totals": {
+    "saved": {
+      "0": {
+        "nodes": 1097,
+        "solve_us": 7094,
+        "setup_us": 28032369,
+        "build_ns": 0,
+        "structure_ns": 0,
+        "grundy_ns": 0
+      },
+      "6": {
+        "nodes": 153,
+        "solve_us": 6308,
+        "setup_us": 28316444,
+        "build_ns": 0,
+        "structure_ns": 0,
+        "grundy_ns": 0
+      },
+      "12": {
+        "nodes": 26,
+        "solve_us": 9532,
+        "setup_us": 27903341,
+        "build_ns": 0,
+        "structure_ns": 0,
+        "grundy_ns": 0
+      }
+    },
+    "stress": {
+      "0": {
+        "nodes": 15000,
+        "solve_us": 26354,
+        "setup_us": 1652665,
+        "build_ns": 0,
+        "structure_ns": 0,
+        "grundy_ns": 0
+      },
+      "6": {
+        "nodes": 15000,
+        "solve_us": 95320,
+        "setup_us": 1647072,
+        "build_ns": 0,
+        "structure_ns": 0,
+        "grundy_ns": 0
+      },
+      "12": {
+        "nodes": 15000,
+        "solve_us": 3301431,
+        "setup_us": 1713991,
+        "build_ns": 0,
+        "structure_ns": 0,
+        "grundy_ns": 0
+      }
+    }
+  }
+}

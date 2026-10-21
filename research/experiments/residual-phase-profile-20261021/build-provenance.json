@@ -1,0 +1,17 @@
+{
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "flags": [
+    "-std=c++20",
+    "-O2",
+    "-Icpp/solvers"
+  ],
+  "scan_source_commit": "671af44485c98750fab67b2adcb5f8647e4e1212",
+  "indexed_source_commit": "808b3759a3a68591ce03f6dc8291f78e5193083a",
+  "note": "Indexed measurements use the executable built before the audit-only selected-builder comparison and KYOUEN_DFPN_NO_MAIN guard were added; search and builder code are identical to 808b3759.",
+  "executables": {
+    "scan": "342a2183a41a82f139ab5711af88d68e04fb178b77061b5199da5ec65d39437a",
+    "indexed": "2bbb4290b3628face9ba7b0a674ab52bf71fa114aec0685c98352992f38258da"
+  },
+  "order": "scan-profile, indexed-profile, indexed-timing x3, scan-timing x3; each repetition rotates gates; configurations are not interleaved between builders",
+  "limitations": "one host; cold constructor dominates wall time; timing noise is observable in gate=0; fixed-corpus results only"
+}
