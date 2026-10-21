@@ -29,6 +29,8 @@ def parse(raw,corpus,config,repeat):
         assert int(t['total_us'])+2>=int(t['solve_us'])+int(t['setup_us'])
         if expected:assert int(row[2])==len(expected[i]['occupied']) and int(row[3])==len(expected[i]['legal'])
         if p:
+            assert 0<=int(p['nodes'])<=QUOTA and 0<=int(p['remaining'])<=QUOTA
+            assert 0<=int(p['cutoffs'])<=int(p['nodes'])
             assert int(p['nodes'])+int(p['remaining'])==QUOTA
             assert 0<=int(p['aborts'])<=1
             if int(p['aborts']):assert int(p['remaining'])==0

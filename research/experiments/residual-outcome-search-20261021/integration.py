@@ -8,7 +8,8 @@ def fields(lines,prefix):
     return [dict(x.split('=') for x in s.split()[2:]) for s in lines if s.startswith(prefix)]
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--solver',required=True);args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--solver',required=True);p.add_argument('--output',type=pathlib.Path,default=HERE);args=p.parse_args()
+    (args.output/'raw').mkdir(parents=True,exist_ok=True)
     summaries={}
     with tempfile.TemporaryDirectory() as tmp:
         tmp=pathlib.Path(tmp);source=tmp/'input.csv';source.write_text('fixture,0,0,0,0,16,0,0,0,0,0\n')
@@ -16,7 +17,7 @@ def main():
             *[(f'pn-{q}',q,16,['--residual-evaluator=outcome']) for q in (0,1,2,10,100000)],
             ('shadow',100000,16,['--residual-evaluator=outcome','--residual-crosscheck-legal=16']),
             ('proof',100000,0,['--residual-evaluator=outcome',f'--proof-dag={tmp/"proof.csv"}'])]:
-            output=HERE/'raw'/f'integration-{name}.csv'
+            output=args.output/'raw'/f'integration-{name}.csv'
             output.unlink(missing_ok=True)
             subprocess.run([args.solver,'--n=4','--memo=16',f'--exact-replay={source}',
                 '--exact-replay-budget=5000',f'--residual-exact-legal={gate}',
@@ -48,6 +49,6 @@ def main():
                       ['--residual-evaluator=outcome','--residual-exact-legal=16',f'--proof-dag={tmp/"forbidden.csv"}']):
             r=subprocess.run([args.solver,'--n=4',f'--exact-replay={source}',*extra],capture_output=True,text=True,timeout=5)
             assert r.returncode!=0 and 'error:' in r.stderr
-    (HERE/'integration-summary.json').write_text(json.dumps(summaries,indent=2)+'\n')
+    (args.output/'integration-summary.json').write_text(json.dumps(summaries,indent=2)+'\n')
     print('VERIFIED n4 native/SG/PN, quotas 0/1/2/10/100000, independent proof DAG, UNKNOWN and invalid flags')
 if __name__=='__main__':main()

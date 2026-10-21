@@ -23,3 +23,40 @@ P/N予算は各根100000呼出し、SGの値が独立の期待値を持つ52局�
 既知52局面は独立期待値との一致（UNKNOWNなら記録）、深い3局面はUNKNOWNの維持を要求する。
 新しい確定値が出たら測定を停止し独立検証する。固定コーパスの有限比較であり、
 新しい未知盤の長時間探索を自動workflowへ追加しない。
+
+## 正しさと予算の境界
+
+正常な残余clutterを入力とする。再帰ではplay後の頂点数が必ず減る。
+閉形式は既存の完全SG値を0か非0へ変換し、圧縮は既存のSG保存規則を使う。
+それ以外では、Pの子が一つ見つかればN、全ての子がNならP、子を判定できなければUNKNOWN。
+この帰納法で判定できた値だけを専用memoに置く。成分分解してP/Nだけをxorする操作はしない。
+元の先手に関する勝敗への変換には圧縮前のstone数を使う。
+
+盤面のTTへ書き戻すのは確定値のみ。P/N予算が尽きたrootは通常探索へ戻り、そのroot内では
+P/Nを再度試さない。次のreplay rootではquotaとP/N計数をリセットする。UNKNOWNを出した同じ
+solverで同じrootを再実行し、通常探索と同じ154 board nodesを必要とすることも確認する。
+一度本当に解けたrootのTT再利用も別に確認し、予算切れを誤って確定と扱っていないことを検査する。
+
+`--residual-evaluator=outcome --residual-outcome-budget=100000` をexplicitに指定して使う。
+既定evaluatorは従来のGrundy、既定handoffはOFF。SG成分共有cacheとの併用は拒否する。
+shadow勝敗照合は従来SGを使うのでP/Nと独立だが、この追加SG処理はP/N quotaには含まない。
+証明書captureと残余shortcutの併用禁止は維持する。shortcutを無効にした証明書経路は
+別実装のtrace変換・DAG検査器で確認する。
+
+予算はwall時間の上限ではない。盤面node上限とkernel呼出しquotaの両方を明記し、
+memo/閉形式hitを含むkernel計数を別に保存する。構築・圧縮等の1呼出しあたりの費用も残る。
+
+## 再現
+
+```sh
+c++ -std=c++20 -O2 -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/outcome-solver
+python research/experiments/residual-outcome-search-20261021/kernel.py
+python research/experiments/residual-outcome-search-20261021/oracle.py
+python research/experiments/residual-outcome-search-20261021/integration.py --solver /tmp/outcome-solver --output /tmp/outcome-integration
+python research/experiments/residual-outcome-search-20261021/run.py --solver /tmp/outcome-solver
+python -m unittest discover -s research/experiments/residual-outcome-search-20261021 -p test_protocol.py
+python research/experiments/residual-outcome-search-20261021/verify_outputs.py
+```
+
+CIでは通常buildの全小clutter/oracle検査、quota/fallback/proof回帰、保存測定の再検査だけを実行する。
+時間比較・深い3局面の再探索は自動起動しない。
