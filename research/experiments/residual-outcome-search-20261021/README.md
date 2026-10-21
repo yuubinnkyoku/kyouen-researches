@@ -60,3 +60,27 @@ python research/experiments/residual-outcome-search-20261021/verify_outputs.py
 
 CIでは通常buildの全小clutter/oracle検査、quota/fallback/proof回帰、保存測定の再検査だけを実行する。
 時間比較・深い3局面の再探索は自動起動しない。
+
+## 追加の有限予算検査
+
+`budget_audit.cpp` / `budget_audit.py` は同じ826局面で0/1/2/8/32/128/512/2048/100000呼出しの
+9通りを検査する。確定した値は別実装のoracleと一致し、予算上限を守ることを確認する。
+さらに部分memoを順に引き継いだ再試行も検査し、全826局面が正しい値に到達する。
+512呼出しで全826残余局面が確定したが、複数handoffが発生する盤面root全体で512が
+十分という主張ではない。この結果から閾値や既定値を後付け選択しない。
+
+```sh
+python research/experiments/residual-outcome-search-20261021/budget_audit.py --output /tmp/budget-audit.json
+python research/experiments/residual-outcome-search-20261021/report.py
+```
+
+## 完了記録
+
+kernelは呼出し96570→15210（84.2%削減）、memo14410→4764、時間152.022→25.121 ms
+（83.5%削減）。全826局面を独立oracle 70347状態で照合し、533局面で時間が短縮した。
+
+5設定×55局面×3反復の825根評価は全て整合した。52局面のPN12はSG12より23.4%短縮し、
+PN6とSG6はほぼ同程度。深い3局面のPN6はSG6より10.3%短いがOFFの約3.3倍かかり、
+UNKNOWN数は変わらなかった。PN12は各深い根でquotaを使い切って復帰し、SG12より85.0%短いが、
+quotaによる仕事の打ち切りも含む差である。完全な値は `comparison.md` を参照する。
+既定handoffはOFF、既定evaluatorは従来Grundyを維持する。

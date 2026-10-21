@@ -21,6 +21,16 @@ def main():
         assert 1<=int(r['pn_calls'])<=run.QUOTA
     assert summary['totals']=={k:sum(float(r[k]) for r in kernel) for k in summary['totals']}
     assert summary['roots_faster']==sum(float(r['pn_us'])<float(r['sg_us']) for r in kernel)
+    bounded=json.loads((HERE/'budget-audit.json').read_text())
+    assert bounded['source_sha256']==expected['sha256']
+    assert bounded['roots']==bounded['resumed_correct']==826
+    assert [r['budget'] for r in bounded['caps']]==[0,1,2,8,32,128,512,2048,100000]
+    previous=0
+    for r in bounded['caps']:
+        assert previous<=r['known']<=826 and r['unknown']==826-r['known']
+        assert 0<=r['calls']<=r['budget']*826
+        previous=r['known']
+    assert bounded['caps'][0]['known']==0 and bounded['caps'][-1]['known']==826
     records=[]
     if (HERE/'summary.json').exists():
         p=json.loads((HERE/'protocol.json').read_text());stored=json.loads((HERE/'summary.json').read_text())

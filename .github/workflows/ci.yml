@@ -52,6 +52,8 @@ jobs:
           python research/experiments/residual-outcome-search-20261021/integration.py --solver /tmp/kyouen_dfpn_root --output /tmp/residual-outcome-integration
           python -m unittest discover -s research/experiments/residual-outcome-search-20261021 -p test_protocol.py
           python research/experiments/residual-outcome-search-20261021/verify_outputs.py
+          python research/experiments/residual-outcome-search-20261021/budget_audit.py --output /tmp/residual-budget-audit.json
+          cmp /tmp/residual-budget-audit.json research/experiments/residual-outcome-search-20261021/budget-audit.json
       - name: Audit residual transitions on deterministic n11 exact roots
         run: |
           PYTHONPATH=research/experiments/n11-search-methods/scripts python - <<'PY' > /tmp/n11-residual-audit.csv

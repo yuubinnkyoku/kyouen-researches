@@ -1,0 +1,42 @@
+{
+  "configs": [
+    [
+      "off",
+      0,
+      "grundy"
+    ],
+    [
+      "sg6",
+      6,
+      "grundy"
+    ],
+    [
+      "sg12",
+      12,
+      "grundy"
+    ],
+    [
+      "pn6",
+      6,
+      "outcome"
+    ],
+    [
+      "pn12",
+      12,
+      "outcome"
+    ]
+  ],
+  "repeats": 3,
+  "budget": 5000,
+  "outcome_quota": 100000,
+  "inputs": {
+    "input.csv": "ce1f2d696976f4e8897fa2aa45895c49a50419d70b9ae2a16d132c84fe2026a0",
+    "stress-input.csv": "4214e2165c23f5246742dbe8824dd8db48f82dc67dcc0b2f703f5ee7921b6b02",
+    "fixtures.json": "e9b1fe88ceb0c609bad5df32cb611b100efde7a7b07d316284a5a8b63ed0bd79"
+  },
+  "solver_sha256": "993c561944fd6dd43662bf81b70525172a038664087b2c3943cfeb8bc18f7cc0",
+  "source_commit": "f90b628935e1b89de6c293e2c8fc438f54ed3aae",
+  "order": "rotate configurations by repeat; saved then stress for each configuration; fresh solver per row; no shared caches",
+  "default_policy": "handoff remains OFF; evaluator remains Grundy; no threshold selection from holdout",
+  "new_verdict_policy": "stop if deep roots newly decided; independently validate before adopting"
+}

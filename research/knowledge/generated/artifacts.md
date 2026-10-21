@@ -60,9 +60,11 @@
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 既存残余ゲートへの統合と適用回数の記録
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (solver): 初期化と探索を分離するマイクロ秒計測、既存CSV列は維持
 - [K0495](../items/K0495-residual-completion-index-profile.md) (solver): completion索引によるrank 2/3/4列挙、従来scan、仕事量見積もりによる切替と排他的profile
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (solver): 根全体で共有するP/N quotaと枯渇時の通常探索への復帰
 ## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (solver): 完全な局面上の短絡P/N再帰、有限quota、専用memoとUNKNOWN
 ## [cpp/solvers/kyouen_solver_10_kyoenc4.cpp](../../../cpp/solvers/kyouen_solver_10_kyoenc4.cpp)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (solver): 命題・対象範囲・根拠を記した出典
@@ -75,6 +77,10 @@
 ## [cpp/tests/test_kyouen_residual_micro.cpp](../../../cpp/tests/test_kyouen_residual_micro.cpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): 独立占有部分集合DP・通常/共有/構造別評価OFFとの全局面照合
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (verifier): 独立subset oracle 107427状態、2068小clutter、低予算と部分memo再利用
+## [cpp/tests/test_kyouen_residual_outcome.cpp](../../../cpp/tests/test_kyouen_residual_outcome.cpp)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (verifier): UNKNOWNの盤面cache汚染防止、quota reset、native fallbackと確定TT再利用
 ## [docs/10X10_KYOENC4_EXPORT.md](../../../docs/10X10_KYOENC4_EXPORT.md)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (source): 命題・対象範囲・根拠を記した出典
@@ -8156,6 +8162,27 @@
 ## [research/experiments/residual-gate-calibration-20261021/verify_outputs.py](../../../research/experiments/residual-gate-calibration-20261021/verify_outputs.py)
 
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): 入力hash・独立期待値・rawからの全再集計を検索再実行なしで検査
+## [research/experiments/residual-outcome-search-20261021/README.md](../../../research/experiments/residual-outcome-search-20261021/README.md)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (log): 事前プロトコル、正しさと予算の境界、再現手順、適用範囲
+## [research/experiments/residual-outcome-search-20261021/budget-audit.json](../../../research/experiments/residual-outcome-search-20261021/budget-audit.json)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (certificate): 9種類の有限予算と部分memo再利用で確定値の一致を検査
+## [research/experiments/residual-outcome-search-20261021/comparison.md](../../../research/experiments/residual-outcome-search-20261021/comparison.md)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (data): kernelの7反復、盤面5設定の3反復、初期化を除く中央値合計
+## [research/experiments/residual-outcome-search-20261021/integration.py](../../../research/experiments/residual-outcome-search-20261021/integration.py)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (verifier): 低quota復帰、独立proof DAG検査、UNKNOWNと不正併用の拒否
+## [research/experiments/residual-outcome-search-20261021/oracle.json](../../../research/experiments/residual-outcome-search-20261021/oracle.json)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (certificate): 保存826局面を別実装subset-mexの70347状態で検査した期待値
+## [research/experiments/residual-outcome-search-20261021/protocol.json](../../../research/experiments/residual-outcome-search-20261021/protocol.json)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (manifest): 入力とsolverのSHA-256、実装commit、設定・quota・反復・順序
+## [research/experiments/residual-outcome-search-20261021/verify_outputs.py](../../../research/experiments/residual-outcome-search-20261021/verify_outputs.py)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (verifier): 独立oracle再計算、各保存行の勝敗・予算・quota検査と再集計
 ## [research/experiments/residual-phase-profile-20261021/README.md](../../../research/experiments/residual-phase-profile-20261021/README.md)
 
 - [K0495](../items/K0495-residual-completion-index-profile.md) (log): 同値性の理由、固定プロトコル、費用の定義、再現手順と限界

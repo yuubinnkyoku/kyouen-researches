@@ -2346,6 +2346,7 @@
 - → depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 既存の残余ゲーム圧縮との併用
 - ← depends_on [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md): 監査済み構造別残余評価器を用いた探索全体での閾値比較
 - ← depends_on [K0495](../items/K0495-residual-completion-index-profile.md): 監査済み残余評価kernelはそのまま用い、入力構築だけを比較
+- ← depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): 閉形式とSG保存圧縮を再利用し、通常手番のP/Nを求める
 
 ## [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) 固定52局面の残余切替閾値比較ではOFFが最速で、深い3局面のUNKNOWN数も改善しなかった
 
@@ -2356,3 +2357,9 @@
 
 - → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 監査済み残余評価kernelはそのまま用い、入力構築だけを比較
 - → depends_on [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md): 同じ固定52局面と深い3局面で構築費用を分解して再測定
+- ← depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): completion索引を使う同じ残余構築と固定52+3局面で比較
+
+## [K0496](../items/K0496-bounded-residual-outcome-search.md) 予算付きP/N残余探索は固定826局面で独立oracleと一致しkernel呼出しを84%削減した
+
+- → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 閉形式とSG保存圧縮を再利用し、通常手番のP/Nを求める
+- → depends_on [K0495](../items/K0495-residual-completion-index-profile.md): completion索引を使う同じ残余構築と固定52+3局面で比較
