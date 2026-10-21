@@ -1,0 +1,15 @@
+# exact replay: order=0 (0=count-asc 1=count-desc 2=key-asc 3=s5-count-desc 4=s5-target92) share_tt=0
+# exact replay: id,stones,legal,is_or,budget,result,nodes,wall_s,key_lo,key_hi
+# residual_outcome row=0 nodes=128 cutoffs=22 aborts=0 remaining=0
+# residual_shadow row=0 audit_calls=0 crosscheck_calls=69 exact_calls=69 residual_memo_states=24 module_removed=11 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=29 closed_two_edges=58 closed_sunflower=0 closed_paths=17
+# replay_timing row=0 setup_us=569273 solve_us=11388 total_us=582317 residual_gate=6
+replay,0,5,93,0,5000,0,5000,0,1152921504606849031,0
+# residual_outcome row=1 nodes=128 cutoffs=21 aborts=1 remaining=0
+# residual_shadow row=1 audit_calls=0 crosscheck_calls=68 exact_calls=68 residual_memo_states=25 module_removed=8 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=24 closed_two_edges=50 closed_sunflower=1 closed_paths=27
+# replay_timing row=1 setup_us=586902 solve_us=9780 total_us=596701 residual_gate=6
+replay,1,5,86,0,5000,0,5000,0,1152921504606851079,0
+# residual_outcome row=2 nodes=128 cutoffs=19 aborts=0 remaining=0
+# residual_shadow row=2 audit_calls=0 crosscheck_calls=75 exact_calls=75 residual_memo_states=23 module_removed=22 component_splits=0 shared_hits=0 shared_stores=0 canonicalized=0 shared_size=0 exact_layer_hits=0 exact_layer_stores=0 exact_layer_size=0 closed_free=43 closed_two_edges=48 closed_sunflower=1 closed_paths=13
+# replay_timing row=2 setup_us=639987 solve_us=13726 total_us=653732 residual_gate=6
+replay,2,5,95,0,5000,0,5000,0,1152921504606855175,0
+# replay_done rows=3 wall_s=1

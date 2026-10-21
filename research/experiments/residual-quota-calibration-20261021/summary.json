@@ -1,0 +1,48 @@
+{
+  "candidate": {
+    "name": "q128-g6",
+    "gate": 6,
+    "quota": 128
+  },
+  "totals": {
+    "new": {
+      "off": {
+        "unknown": 0,
+        "nodes": 955,
+        "solve_us": 4748,
+        "setup_us": 14206028,
+        "pn_nodes": 0,
+        "pn_aborts": 0
+      },
+      "q128-g6": {
+        "unknown": 0,
+        "nodes": 165,
+        "solve_us": 3761,
+        "setup_us": 14199894,
+        "pn_nodes": 462,
+        "pn_aborts": 0
+      }
+    },
+    "stress": {
+      "off": {
+        "unknown": 3,
+        "nodes": 15000,
+        "solve_us": 30432,
+        "setup_us": 1754593,
+        "pn_nodes": 0,
+        "pn_aborts": 0
+      },
+      "q128-g6": {
+        "unknown": 3,
+        "nodes": 15000,
+        "solve_us": 29900,
+        "setup_us": 1749703,
+        "pn_nodes": 384,
+        "pn_aborts": 1
+      }
+    }
+  },
+  "passed": true,
+  "selection_sha256": "edfb891b4a2395b8cfe88e58ee6fa09b9796ba38ec3a546089c7b7073e9bfae2",
+  "selection_commit": "ac421eddcae38667fb7fd7975b5a224f41ff68d8"
+}

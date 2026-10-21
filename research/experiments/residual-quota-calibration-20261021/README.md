@@ -48,3 +48,22 @@ verify_outputs.pyはD4非重複、層とtrialの選択、入力hash、独立subs
 各replay行の局面・勝敗・予算・quota、局面ごとの中央値、調整データだけによる選択と採用条件を検査する。
 `--geometry`ではさらに合法点と極小残余辺族を別実装の行列式から再計算する。
 CIはこの固定資料の監査と9単体テストのみを実行し、時間測定や深い3局面の再探索は起動しない。
+
+## 完了結果と採用範囲
+
+調整ではquota128・gate6を選び、ac421eddでselectionと全調整結果をcommitした後に確認を開始した。
+調整用26局面の探索時間はOFF 3.781 ms、候補2.932 ms。閾値6の3予算は全て同じ259 kernel callsで
+枯渇ゼロだったため、この予算間の小さい時間差には測定揺らぎも含まれる。
+
+新規26局面ではOFF 4.748 ms、候補3.761 ms（20.8%短縮）。両方UNKNOWNゼロ・全勝敗一致。
+深い3局面ではOFF 30.432 ms、候補29.900 msでUNKNOWNは両方3。差は0.532 ms（1.7%）と小さく、
+統計的な優位性を主張しない。候補のPN呼出しは各深いrootで128、合計384。うち1 rootが
+handoff内でUNKNOWNを返し、残り2 rootもquotaがゼロになった後は通常探索へ戻った。
+
+事前に定めた数値採用条件を全て満たしたので、このbounded exact replayの明示指定として
+`--residual-exact-legal=6 --residual-evaluator=outcome --residual-outcome-budget=128`を採用する。
+通常探索の既定handoff OFFと既定Grundyは変更しない。今回の確認は外側5000 nodesの固定根であり、
+他のboard budget、全ての初期局面、通常df-pn探索全体の性能を検証したものではない。
+
+調整546根評価、新規確認156根評価、深い局面18根評価、計720。完全な表はcomparison.md。
+既知の全局面は全設定・反復で正答し、新たな深い勝敗確定は出なかった。

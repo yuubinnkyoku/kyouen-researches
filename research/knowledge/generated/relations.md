@@ -2352,14 +2352,23 @@
 
 - → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 監査済み構造別残余評価器を用いた探索全体での閾値比較
 - ← depends_on [K0495](../items/K0495-residual-completion-index-profile.md): 同じ固定52局面と深い3局面で構築費用を分解して再測定
+- ← depends_on [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md): 既存train26局面を再利用し、新規確認用26局面とは分離
 
 ## [K0495](../items/K0495-residual-completion-index-profile.md) completion索引による残余構築は固定局面で従来scanと一致し、構築費用を削減した
 
 - → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 監査済み残余評価kernelはそのまま用い、入力構築だけを比較
 - → depends_on [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md): 同じ固定52局面と深い3局面で構築費用を分解して再測定
 - ← depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): completion索引を使う同じ残余構築と固定52+3局面で比較
+- ← depends_on [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md): 同じcompletion索引による残余構築を利用
 
 ## [K0496](../items/K0496-bounded-residual-outcome-search.md) 予算付きP/N残余探索は固定826局面で独立oracleと一致しkernel呼出しを84%削減した
 
 - → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 閉形式とSG保存圧縮を再利用し、通常手番のP/Nを求める
 - → depends_on [K0495](../items/K0495-residual-completion-index-profile.md): completion索引を使う同じ残余構築と固定52+3局面で比較
+- ← depends_on [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md): 根全体で有限quotaを共有するP/N評価と枯渇時の通常探索復帰
+
+## [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) 事前選択した残余quota128・閾値6は新規26局面でOFFより20.8%速く、固定深い3局面でも数値採用条件を満たした
+
+- → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): 根全体で有限quotaを共有するP/N評価と枯渇時の通常探索復帰
+- → depends_on [K0495](../items/K0495-residual-completion-index-profile.md): 同じcompletion索引による残余構築を利用
+- → depends_on [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md): 既存train26局面を再利用し、新規確認用26局面とは分離

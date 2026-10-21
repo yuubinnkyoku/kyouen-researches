@@ -8198,6 +8198,36 @@
 ## [research/experiments/residual-phase-profile-20261021/verify_outputs.py](../../../research/experiments/residual-phase-profile-20261021/verify_outputs.py)
 
 - [K0495](../items/K0495-residual-completion-index-profile.md) (verifier): 入力hash・各行勝敗・予算・計測内訳・全保存結果の再集計
+## [research/experiments/residual-quota-calibration-20261021/README.md](../../../research/experiments/residual-quota-calibration-20261021/README.md)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (log): 事前プロトコル、再現手順、適用範囲と採用判断
+## [research/experiments/residual-quota-calibration-20261021/calibrate.py](../../../research/experiments/residual-quota-calibration-20261021/calibrate.py)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (verifier): 予算・quota・勝敗の検査、調整だけの選択とcommit前の確認起動拒否
+## [research/experiments/residual-quota-calibration-20261021/comparison.md](../../../research/experiments/residual-quota-calibration-20261021/comparison.md)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (data): 局面ごとの3反復中央値を合計した全比較表
+## [research/experiments/residual-quota-calibration-20261021/fixtures.json](../../../research/experiments/residual-quota-calibration-20261021/fixtures.json)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (data): 既存調整26局面とD4非重複の新規26局面、独立期待値
+## [research/experiments/residual-quota-calibration-20261021/prepare.py](../../../research/experiments/residual-quota-calibration-20261021/prepare.py)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (verifier): 新規局面の選択、独立幾何とsubset-mex、旧826局面とのD4非重複
+## [research/experiments/residual-quota-calibration-20261021/protocol.json](../../../research/experiments/residual-quota-calibration-20261021/protocol.json)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (manifest): 測定前の固定seed・入力hash・binary hash・設定・予算・選択/確認規則
+## [research/experiments/residual-quota-calibration-20261021/selection.json](../../../research/experiments/residual-quota-calibration-20261021/selection.json)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (manifest): 調整用データだけで選び、確認測定前にcommitした候補
+## [research/experiments/residual-quota-calibration-20261021/summary.json](../../../research/experiments/residual-quota-calibration-20261021/summary.json)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (data): 固定候補の新規確認と深い局面の結果、採用条件判定と選択commit
+## [research/experiments/residual-quota-calibration-20261021/test_protocol.py](../../../research/experiments/residual-quota-calibration-20261021/test_protocol.py)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (verifier): 確認データ混入拒否、UNKNOWN優先、中央値、採用条件など9テスト
+## [research/experiments/residual-quota-calibration-20261021/verify_outputs.py](../../../research/experiments/residual-quota-calibration-20261021/verify_outputs.py)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (verifier): 入力・独立期待値・全720根評価・候補選択・採用条件の再集計
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
