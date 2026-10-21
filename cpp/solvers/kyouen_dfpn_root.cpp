@@ -1441,6 +1441,8 @@ private:
     std::uint64_t residual_outcome_limit_=100000,residual_outcome_remaining_=100000;
     std::uint64_t residual_outcome_nodes_=0,residual_outcome_cutoffs_=0,residual_outcome_aborts_=0;
     bool residual_profile_=false;
+    // Cumulative visits to unresolved stage-0 frames, including revisits.
+    std::array<std::uint64_t,V+1> residual_gate_frames_{};
     std::uint64_t residual_build_ns_=0,residual_structure_ns_=0,residual_grundy_ns_=0;
     inline static std::map<kyouen_residual::Key,int> residual_component_cache_{};
     std::uint64_t exact_budget_=100000;    // nodes per handoff attempt
@@ -2418,6 +2420,7 @@ private:
                 Bits fk=st.back().key;
                 int s=tt_.find(fk.lo,fk.hi);
                 if(s>=0 && tt_.st_[(std::size_t)s]>=PnTT::WIN){ st.pop_back(); continue; }
+                if(residual_profile_) ++residual_gate_frames_[popcount(st.back().legal)];
                 // Direct residual handoff: independent of --exact-legal.
                 // One quota is shared across all df-pn frames in this root.
                 if(residual_exact_legal_>0 && !collect_proof_dag_
@@ -2735,6 +2738,7 @@ public:
     void set_search_node_budget(std::uint64_t limit){ search_node_budget_set_=true; search_node_budget_=limit; }
     void clear_search_node_budget(){ search_node_budget_set_=false; }
     std::uint64_t search_nodes_used() const { return search_nodes_used_; }
+    const auto& residual_gate_frames() const { return residual_gate_frames_; }
     void configure_residual(const ResidualOptions& options){
         set_residual_audit_legal(options.audit_legal);
         set_residual_crosscheck_legal(options.crosscheck_legal);
@@ -3145,6 +3149,7 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
         for(int point:stones) if(point>=0 && point<N*N) input_occupied=input_occupied|bitof(point);
         const auto before_exact=solver.exact_total_nodes();
         const auto before_residual=solver.residual_exact_calls();
+        const auto gate_before=solver.residual_gate_frames();
         std::uint64_t phase_before[3]{};
         solver.residual_profile_stats(phase_before[0],phase_before[1],phase_before[2]);
         std::uint64_t root_solve_us=0;
@@ -3168,6 +3173,13 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
              <<" build_ns="<<(phase[0]-phase_before[0])
              <<" structure_ns="<<(phase[1]-phase_before[1])
              <<" grundy_ns="<<(phase[2]-phase_before[2])<<"\n";
+            if(residual_options.profile){
+                const auto& frames=solver.residual_gate_frames();
+                for(int legal=0;legal<=N*N;++legal){
+                    const auto count=frames[legal]-gate_before[legal];
+                    if(count) C<<"# residual_gate_profile seq="<<seq<<" legal="<<legal<<" frames="<<count<<"\n";
+                }
+            }
             C.flush();
         };
         typename DfPn<N>::Result r;

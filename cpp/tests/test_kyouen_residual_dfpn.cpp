@@ -10,7 +10,7 @@ static void exhaust(DfPn<4>& solver,const std::vector<int>& root){
 int main(){
     std::ostringstream sink;
     ResidualOptions options;options.exact_legal=6;options.outcome=true;options.outcome_budget=128;
-    options.audit_legal=options.crosscheck_legal=6;
+    options.audit_legal=options.crosscheck_legal=6;options.profile=true;
     // Both original turn parities. Only two legal points remain.
     for(auto root:{std::vector<int>{0,1,2,4,9},std::vector<int>{0,1,3,5,8,14}}){
         Bits occupied{};for(int v:root)setbit(occupied,v);
@@ -26,10 +26,12 @@ int main(){
         normal.residual_outcome_stats(nodes,cutoffs,aborts,remaining);
         assert(nodes==1 && remaining==127 && aborts==0);
         assert(normal.residual_audit_calls()>0);
+        assert(normal.residual_gate_frames()[2]==1);
         result=normal.solve_root(root); // solved TT reuse, quota resets per root
         assert(result.outcome==(expected==1?1:-1) && normal.search_nodes_used()==1);
         normal.residual_outcome_stats(nodes,cutoffs,aborts,remaining);
         assert(nodes==0 && remaining==128);
+        assert(normal.residual_gate_frames()[2]==1); // solved TT frames excluded
         DfPn<4> disabled(16);silence(disabled,sink);
         auto zero=options;zero.outcome_budget=0;
         disabled.configure_residual(zero);disabled.set_search_node_budget(20000);
@@ -55,6 +57,7 @@ int main(){
     std::uint64_t exact_used=0;
     assert(zero.exact_replay(Bits{},0,5000,exact_used)==2 && exact_used>0);
     assert(zero.search_nodes_used()==0);
+    for(auto count:zero.residual_gate_frames()) assert(count==0); // profiling OFF
     // Existing exact handoffs consume the SAME normal-search work budget.
     DfPn<4> hybrid(16);silence(hybrid,sink);
     hybrid.set_exact_handoff(16,100000,1,0);hybrid.set_search_node_budget(7);
