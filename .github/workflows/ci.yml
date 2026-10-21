@@ -33,6 +33,10 @@ jobs:
           c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/tests/test_kyouen_residual_micro.cpp -o /tmp/test_kyouen_residual_micro
           /tmp/test_kyouen_residual_micro | tee /tmp/residual-micro.out
           grep -q '^VERIFIED clutters=' /tmp/residual-micro.out
+      - name: Verify residual gate protocol and archived measurements
+        run: |
+          python -m unittest discover -s research/experiments/residual-gate-calibration-20261021 -p test_protocol.py
+          python research/experiments/residual-gate-calibration-20261021/verify_outputs.py
       - name: Compile residual n11 integration
         run: c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/kyouen_dfpn_root
       - name: Audit residual transitions on deterministic n11 exact roots

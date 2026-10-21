@@ -1,0 +1,175 @@
+{
+  "source": "research/experiments/n11-reduction-followup-20261005/output/n11-snapshots.json",
+  "source_sha256": "7518ff3847f003140440be964ed28557a31373d58a58642dd1d056d9af9f8e3a",
+  "gates": [
+    0,
+    6,
+    8,
+    10,
+    12
+  ],
+  "budget_per_root": 5000,
+  "repeats": 3,
+  "protocol": "fresh solver/memo per row; no shared caches; rotated gate order; sum of root timing medians",
+  "selection_rule": "minimum UNKNOWN count, then solve_us on training only",
+  "training_winner": 0,
+  "totals": {
+    "train": {
+      "0": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 515,
+        "setup_us": 13724720,
+        "solve_us": 3403,
+        "total_us": 13730135,
+        "residual_calls": 0,
+        "residual_memo": 0
+      },
+      "6": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 65,
+        "setup_us": 13569526,
+        "solve_us": 18245,
+        "total_us": 13590654,
+        "residual_calls": 148,
+        "residual_memo": 49
+      },
+      "8": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 35,
+        "setup_us": 13640634,
+        "solve_us": 13887,
+        "total_us": 13656254,
+        "residual_calls": 106,
+        "residual_memo": 147
+      },
+      "10": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 16,
+        "setup_us": 13897998,
+        "solve_us": 10143,
+        "total_us": 13910018,
+        "residual_calls": 61,
+        "residual_memo": 251
+      },
+      "12": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 12,
+        "setup_us": 13887993,
+        "solve_us": 10210,
+        "total_us": 13900857,
+        "residual_calls": 59,
+        "residual_memo": 298
+      }
+    },
+    "holdout": {
+      "0": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 582,
+        "setup_us": 13827171,
+        "solve_us": 3483,
+        "total_us": 13831233,
+        "residual_calls": 0,
+        "residual_memo": 0
+      },
+      "6": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 88,
+        "setup_us": 13607562,
+        "solve_us": 19990,
+        "total_us": 13627829,
+        "residual_calls": 171,
+        "residual_memo": 55
+      },
+      "8": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 47,
+        "setup_us": 13782535,
+        "solve_us": 20088,
+        "total_us": 13803021,
+        "residual_calls": 156,
+        "residual_memo": 174
+      },
+      "10": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 22,
+        "setup_us": 13497093,
+        "solve_us": 15354,
+        "total_us": 13513740,
+        "residual_calls": 107,
+        "residual_memo": 331
+      },
+      "12": {
+        "roots": 26,
+        "unknown": 0,
+        "nodes": 14,
+        "setup_us": 13643873,
+        "solve_us": 14658,
+        "total_us": 13660584,
+        "residual_calls": 94,
+        "residual_memo": 417
+      }
+    },
+    "all": {
+      "0": {
+        "roots": 52,
+        "unknown": 0,
+        "nodes": 1097,
+        "setup_us": 27551891,
+        "solve_us": 6886,
+        "total_us": 27561368,
+        "residual_calls": 0,
+        "residual_memo": 0
+      },
+      "6": {
+        "roots": 52,
+        "unknown": 0,
+        "nodes": 153,
+        "setup_us": 27177088,
+        "solve_us": 38235,
+        "total_us": 27218483,
+        "residual_calls": 319,
+        "residual_memo": 104
+      },
+      "8": {
+        "roots": 52,
+        "unknown": 0,
+        "nodes": 82,
+        "setup_us": 27423169,
+        "solve_us": 33975,
+        "total_us": 27459275,
+        "residual_calls": 262,
+        "residual_memo": 321
+      },
+      "10": {
+        "roots": 52,
+        "unknown": 0,
+        "nodes": 38,
+        "setup_us": 27395091,
+        "solve_us": 25497,
+        "total_us": 27423758,
+        "residual_calls": 168,
+        "residual_memo": 582
+      },
+      "12": {
+        "roots": 52,
+        "unknown": 0,
+        "nodes": 26,
+        "setup_us": 27531866,
+        "solve_us": 24868,
+        "total_us": 27561441,
+        "residual_calls": 153,
+        "residual_memo": 715
+      }
+    }
+  },
+  "n11_empty_root_outcome": "UNKNOWN"
+}

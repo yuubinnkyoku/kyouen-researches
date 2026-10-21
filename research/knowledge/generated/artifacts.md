@@ -58,6 +58,7 @@
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 既定offのexact LOSS行停止flag
 - [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (source): 既定offのexact replay層別・root child費用プロファイラ
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 既存残余ゲートへの統合と適用回数の記録
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (solver): 初期化と探索を分離するマイクロ秒計測、既存CSV列は維持
 ## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
@@ -8118,6 +8119,39 @@
 ## [research/experiments/residual-closed-forms-20261021/summary.json](../../../research/experiments/residual-closed-forms-20261021/summary.json)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (data): 測定集計と入力SHA-256
+## [research/experiments/residual-gate-calibration-20261021/README.md](../../../research/experiments/residual-gate-calibration-20261021/README.md)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (log): 事前選択規則・結果・既定値維持の判断と適用限界
+## [research/experiments/residual-gate-calibration-20261021/environment.json](../../../research/experiments/residual-gate-calibration-20261021/environment.json)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (manifest): コンパイラ・実装revision・バイナリとsourceのhash
+## [research/experiments/residual-gate-calibration-20261021/fixtures.json](../../../research/experiments/residual-gate-calibration-20261021/fixtures.json)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (data): 調整用26と確認用26局面、独立subset-mexの期待値
+## [research/experiments/residual-gate-calibration-20261021/measurements.csv](../../../research/experiments/residual-gate-calibration-20261021/measurements.csv)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (data): 全780測定の勝敗・ノード数・初期化/探索時間・残余計数
+## [research/experiments/residual-gate-calibration-20261021/protocol.json](../../../research/experiments/residual-gate-calibration-20261021/protocol.json)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (manifest): 入力SHA-256・閾値・予算・反復数・選択規則
+## [research/experiments/residual-gate-calibration-20261021/run.py](../../../research/experiments/residual-gate-calibration-20261021/run.py)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): OFF/6/8/10/12の固定予算・3回反復比較と整合性検査
+## [research/experiments/residual-gate-calibration-20261021/stress-summary.json](../../../research/experiments/residual-gate-calibration-20261021/stress-summary.json)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (data): 5閾値・3局面の予算内結果と探索時間、各1回
+## [research/experiments/residual-gate-calibration-20261021/stress.py](../../../research/experiments/residual-gate-calibration-20261021/stress.py)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): 既存の深いS5三局面を各5000ノードで補助比較
+## [research/experiments/residual-gate-calibration-20261021/summary.json](../../../research/experiments/residual-gate-calibration-20261021/summary.json)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (data): 調整用・確認用の時間中央値の和とUNKNOWN数
+## [research/experiments/residual-gate-calibration-20261021/test_protocol.py](../../../research/experiments/residual-gate-calibration-20261021/test_protocol.py)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): 確認用からの情報混入と矛盾した測定の棄却に対する6回帰
+## [research/experiments/residual-gate-calibration-20261021/verify_outputs.py](../../../research/experiments/residual-gate-calibration-20261021/verify_outputs.py)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): 入力hash・独立期待値・rawからの全再集計を検索再実行なしで検査
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
