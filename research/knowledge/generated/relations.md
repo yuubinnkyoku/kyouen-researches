@@ -2366,9 +2366,16 @@
 - → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 閉形式とSG保存圧縮を再利用し、通常手番のP/Nを求める
 - → depends_on [K0495](../items/K0495-residual-completion-index-profile.md): completion索引を使う同じ残余構築と固定52+3局面で比較
 - ← depends_on [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md): 根全体で有限quotaを共有するP/N評価と枯渇時の通常探索復帰
+- ← depends_on [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md): 有限P/N評価、確定結果だけのmemo、quota切れUNKNOWN時の通常探索復帰
 
 ## [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) 事前選択した残余quota128・閾値6は新規26局面でOFFより20.8%速く、固定深い3局面でも数値採用条件を満たした
 
 - → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): 根全体で有限quotaを共有するP/N評価と枯渇時の通常探索復帰
 - → depends_on [K0495](../items/K0495-residual-completion-index-profile.md): 同じcompletion索引による残余構築を利用
 - → depends_on [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md): 既存train26局面を再利用し、新規確認用26局面とは分離
+- ← depends_on [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md): 事前選択したquota128・閾値6と固定した26+3局面を再調整せず使用
+
+## [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) 通常df-pnの固定終盤26局面で残余quota128・閾値6は約51–52%短縮し、深い3局面では未発火だった
+
+- → depends_on [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md): 事前選択したquota128・閾値6と固定した26+3局面を再調整せず使用
+- → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): 有限P/N評価、確定結果だけのmemo、quota切れUNKNOWN時の通常探索復帰

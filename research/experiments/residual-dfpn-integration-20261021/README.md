@@ -43,3 +43,30 @@ cpp/tests/test_kyouen_residual_dfpn.cpp は両手番の直接handoff、quotaのr
 exact handoffとの合計node上限、例外後の独立exact replayを通常/UBSanで検査する。
 integration.py は通常CLIを実行し、既定OFF、元の4×4空盤の後手勝ち、同じrootのTT再利用、
 不正node budget/modeを確認する。CIでは小さい回帰と固定資料の再検査だけを実行する。
+
+## 完了結果
+
+29局面 × 2設定 × 2上限 × 3反復の348根評価を完了した。全既知26局面は全設定・上限・反復で
+期待値と一致し、深い3局面は全てUNKNOWN。watchdogでの打ち切りはゼロで、全UNKNOWNは
+指定node上限まで処理した。根ごとのwork nodes = df-pn反復 + exact board nodesを全行で確認。
+今回の比較はexact handoffを無効にしているため、exact board nodesは全て0だった。
+
+終盤26局面の探索時間中央値合計は、2万上限で14.171→6.925 ms（51.1%短縮）、
+10万上限で14.038→6.718 ms（52.1%短縮）。work nodesは両上限とも4458→1262、
+expansionsは1805→243。PN呼出しは合計462、handoff内のUNKNOWN返却はゼロ。
+
+深い3局面では2万上限664.375→687.183 ms（+3.4%）、10万上限2929.270→3095.168 ms（+5.7%）。
+両上限とも残余呼出しは0で、候補のquota128は未使用だった。通常df-pnがこの予算内で選んだ
+フレームに残余切替は発火していない。訪問数・expansion数もOFF/ONで一致し、UNKNOWN数は改善しない。
+この差をkernel計算の費用とは呼ばず、切替条件の確認費用や測定揺らぎを含む観測として扱う。
+統計的な優劣は主張しない。
+
+したがって、予算128・閾値6は通常df-pnでも明示指定でき、今回の終盤コーパスでは有効だったが、
+深いrootの改善は確認できなかった。通常探索の既定gateはOFFを維持する。
+完全な表はcomparison.md、設定・binary/source hashはprotocol.jsonを参照する。
+
+再現にはbench.pyの`--freeze --solver /path/to/solver`でsourceと入力をcommit前提で固定し、
+固定ファイルをcommit後、同じbinaryで`--solver /path/to/solver`を実行する。
+保存済みsummaryがある場合の再実行は拒否するため、新しい測定は別experimentへ保存する。
+verify_outputs.pyは旧測定時のsource commitが利用可能ならそのblob hashを検査し、
+将来の正当な実装更新を理由に歴史的測定を無効にしない。

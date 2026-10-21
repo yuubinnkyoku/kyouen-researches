@@ -490,3 +490,4 @@
 | [K0495](../items/K0495-residual-completion-index-profile.md) | completion索引による残余構築は固定局面で従来scanと一致し、構築費用を削減した | computation | observed | residual-games, search-methods, verification, statistics |
 | [K0496](../items/K0496-bounded-residual-outcome-search.md) | 予算付きP/N残余探索は固定826局面で独立oracleと一致しkernel呼出しを84%削減した | computation | observed | residual-games, search-methods, verification, statistics |
 | [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) | 事前選択した残余quota128・閾値6は新規26局面でOFFより20.8%速く、固定深い3局面でも数値採用条件を満たした | computation | observed | residual-games, search-methods, verification, statistics |
+| [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) | 通常df-pnの固定終盤26局面で残余quota128・閾値6は約51–52%短縮し、深い3局面では未発火だった | computation | observed | residual-games, search-methods, verification, statistics |

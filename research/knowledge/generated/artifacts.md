@@ -61,6 +61,7 @@
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (solver): 初期化と探索を分離するマイクロ秒計測、既存CSV列は維持
 - [K0495](../items/K0495-residual-completion-index-profile.md) (solver): completion索引によるrank 2/3/4列挙、従来scan、仕事量見積もりによる切替と排他的profile
 - [K0496](../items/K0496-bounded-residual-outcome-search.md) (solver): 根全体で共有するP/N quotaと枯渇時の通常探索への復帰
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (solver): 通常df-pnの直接残余handoff、root quota reset、共有work node上限とroot計数
 ## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
@@ -74,6 +75,9 @@
 ## [cpp/tests/test_kyouen_residual_builders.cpp](../../../cpp/tests/test_kyouen_residual_builders.cpp)
 
 - [K0495](../items/K0495-residual-completion-index-profile.md) (verifier): 全安全4×4占有、64ビット境界、全826保存局面で辺族と子遷移を比較
+## [cpp/tests/test_kyouen_residual_dfpn.cpp](../../../cpp/tests/test_kyouen_residual_dfpn.cpp)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (verifier): 両手番、直接handoff、quota reset/切れ、cache安全性、0上限、exact handoffとの合計上限
 ## [cpp/tests/test_kyouen_residual_micro.cpp](../../../cpp/tests/test_kyouen_residual_micro.cpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): 独立占有部分集合DP・通常/共有/構造別評価OFFとの全局面照合
@@ -8129,6 +8133,27 @@
 ## [research/experiments/residual-closed-forms-20261021/summary.json](../../../research/experiments/residual-closed-forms-20261021/summary.json)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (data): 測定集計と入力SHA-256
+## [research/experiments/residual-dfpn-integration-20261021/README.md](../../../research/experiments/residual-dfpn-integration-20261021/README.md)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (log): node定義、事前プロトコル、CLI、回帰、結果と適用限界
+## [research/experiments/residual-dfpn-integration-20261021/comparison.md](../../../research/experiments/residual-dfpn-integration-20261021/comparison.md)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (data): 3反復の局面ごとの中央値合計と全比較表
+## [research/experiments/residual-dfpn-integration-20261021/integration.py](../../../research/experiments/residual-dfpn-integration-20261021/integration.py)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (verifier): 通常CLI、独立4×4幾何と終盤期待値、既定OFF、TT再利用、不正budget/mode拒否
+## [research/experiments/residual-dfpn-integration-20261021/protocol.json](../../../research/experiments/residual-dfpn-integration-20261021/protocol.json)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (manifest): 固定入力・source/binary hash、2万/10万上限、設定、反復、watchdog規則
+## [research/experiments/residual-dfpn-integration-20261021/records.json](../../../research/experiments/residual-dfpn-integration-20261021/records.json)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (data): 全348根評価の入力ID、結果、node計数、残余使用数、探索/process時間
+## [research/experiments/residual-dfpn-integration-20261021/test_protocol.py](../../../research/experiments/residual-dfpn-integration-20261021/test_protocol.py)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (verifier): 局面違い、誤答、重複、予算超過、quota変更、時計混入、新規深い勝敗を拒否する8テスト
+## [research/experiments/residual-dfpn-integration-20261021/verify_outputs.py](../../../research/experiments/residual-dfpn-integration-20261021/verify_outputs.py)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (verifier): 固定入力・source provenance、全raw行の占有mask・勝敗・node/quotaと再集計
 ## [research/experiments/residual-gate-calibration-20261021/README.md](../../../research/experiments/residual-gate-calibration-20261021/README.md)
 
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (log): 事前選択規則・結果・既定値維持の判断と適用限界
