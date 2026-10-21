@@ -38,6 +38,18 @@ static std::uint64_t check_subsets(int n,std::vector<Mask> edges){
             assert(grundy(s,memo)==value);
             assert(grundy(s,baseline,nullptr,false)==value);
             assert(grundy_shared(s,local,shared,4)==value);
+            std::map<Key,int> pn;
+            std::uint64_t quota=100000;
+            assert(outcome(s,pn,quota)==(value!=0));
+            for(std::uint64_t cap: {0ULL,1ULL,2ULL}){
+                std::map<Key,int> limited;
+                Stats st;
+                auto left=cap;
+                int result=outcome(s,limited,left,&st);
+                assert(result<0 || result==(value!=0));
+                assert(st.calls==cap-left);
+                for(const auto& entry:limited) assert(entry.second==0 || entry.second==1);
+            }
             ++checked;
         }
         if(!occupied) break;
@@ -69,6 +81,10 @@ int main(){
             Stats st;
             int ref=plain(s,a),got=grundy(s,b);
             int got_shared=grundy_shared(s,c,shared,4,&st);
+            std::map<Key,int> pn,pn_plain;
+            std::uint64_t quota=100000,plain_quota=100000;
+            assert(outcome(s,pn,quota)==(ref!=0));
+            assert(outcome(s,pn_plain,plain_quota,nullptr,false)==(ref!=0));
             shared_hits+=st.shared_hits;
             if(ref!=got || ref!=got_shared){
                 std::cerr<<"MISMATCH n="<<n<<" family="<<f<<" ref="<<ref<<" got="<<got
@@ -152,6 +168,27 @@ int main(){
     std::map<Key,int> shared_profile_memo;
     assert(grundy_shared(profiled,shared_profile_memo,shared,8,&shared_profile)==profiled_g);
     assert(shared_profile.structure_ns>0);
+    // Exhaustion may retain completed descendants, never an unresolved
+    // result. Reusing that partial memo with more credit must stay sound.
+    std::map<Key,int> partial;
+    for(std::uint64_t cap=0;cap<=32;++cap){
+        auto left=cap;
+        Stats st;
+        int result=outcome(profiled,partial,left,&st,false);
+        assert(result<0 || result==(profiled_g!=0));
+        assert(st.calls==cap-left);
+        for(const auto& [key,value]:partial){
+            std::map<Key,int> reference;
+            assert(value==(plain(State{key.v,key.e},reference)!=0));
+        }
+    }
+    std::uint64_t one=1;
+    std::map<Key,int> boundary_pn;
+    assert(outcome(long_path,boundary_pn,one)==1 && one==0);
+    // Components with SG 2 and SG 1 have nonzero xor despite both being N.
+    std::map<Key,int> sum_pn;
+    std::uint64_t sum_budget=100;
+    assert(outcome(State{15,{3,5}},sum_pn,sum_budget)==1);
     std::cout<<"VERIFIED occupied_oracle_states="<<subsets<<"\n";
     std::cout<<"VERIFIED clutters="<<checked
              <<" shared_keys="<<shared.size()

@@ -1,0 +1,18 @@
+{
+  "source": "research/experiments/n11-reduction-followup-20261005/output/n11-snapshots.json",
+  "sha256": "7518ff3847f003140440be964ed28557a31373d58a58642dd1d056d9af9f8e3a",
+  "snapshots": 826,
+  "repeats": 7,
+  "quota": 100000,
+  "totals": {
+    "sg_calls": 96570.0,
+    "pn_calls": 15210.0,
+    "sg_memo": 14410.0,
+    "pn_memo": 4764.0,
+    "cutoffs": 4075.0,
+    "sg_us": 152021.821,
+    "pn_us": 25120.853
+  },
+  "timing": "sum of per-root medians, alternating method order, fresh memo, single host",
+  "roots_faster": 533
+}

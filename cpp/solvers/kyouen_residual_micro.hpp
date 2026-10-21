@@ -160,6 +160,7 @@ struct Stats {
     std::uint64_t closed_free=0,closed_two_edges=0,closed_sunflower=0,closed_paths=0;
     bool profile=false;
     std::uint64_t structure_ns=0;
+    std::uint64_t outcome_cutoffs=0;
 };
 
 using ProfileClock=std::chrono::steady_clock;
@@ -454,6 +455,42 @@ inline int grundy_shared(State s,std::map<Key,int>& local,
         if(added && st) ++st->shared_stores;
     }
     return g;
+}
+
+// Bounded whole-position P/N search: 1=N, 0=P, -1=UNKNOWN. Never xor
+// boolean component outcomes: N+N can be either P or N. Compression and
+// closed Grundy formulas preserve the full SG value, hence also its zero
+// test. Only completed outcomes enter this separate P/N memo.
+// Every admitted call (including memo/formula hits) consumes one unit.
+inline int outcome(State s,std::map<Key,int>& memo,std::uint64_t& budget,
+                   Stats* st=nullptr,bool use_closed_forms=true){
+    if(budget==0) return -1;
+    --budget;
+    if(st) ++st->calls;
+    auto phase=structure_start(st);
+    s.edges=minimal(std::move(s.edges));
+    if(use_closed_forms){
+        int g=closed_grundy(s,st);
+        if(g>=0){ structure_stop(st,phase); return g!=0; }
+    }
+    s=compress(std::move(s),st?&st->module_removed:nullptr);
+    structure_stop(st,phase);
+    Key k{s.vertices,s.edges};
+    auto hit=memo.find(k);
+    if(hit!=memo.end()){ if(st) ++st->memo_hits; return hit->second; }
+    Mask moves=s.vertices;
+    while(moves){
+        const int v=__builtin_ctzll(moves); moves&=moves-1;
+        int child=outcome(play(s,v),memo,budget,st,use_closed_forms);
+        if(child<0) return -1; // exhausted shared quota; no unresolved memo
+        if(child==0){
+            if(st) ++st->outcome_cutoffs;
+            memo.emplace(std::move(k),1);
+            return 1;
+        }
+    }
+    memo.emplace(std::move(k),0);
+    return 0;
 }
 
 // Convert residual P/N back to exact_prop's fixed proposition:
