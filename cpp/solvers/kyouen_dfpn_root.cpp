@@ -79,6 +79,7 @@ struct ResidualOptions {
     int audit_legal=0,crosscheck_legal=0,exact_legal=0,share_gate=0,builder=2;
     bool profile=false,outcome=false;
     std::uint64_t outcome_budget=100000;
+    std::uint64_t attempt_budget=0; // 0 preserves the whole-root-quota handoff
 };
 static inline bool operator==(Bits a, Bits b){ return a.lo==b.lo && a.hi==b.hi; }
 static inline bool operator<(Bits a, Bits b){ return a.hi<b.hi || (a.hi==b.hi && a.lo<b.lo); }
@@ -1282,6 +1283,17 @@ private:
     void reset_residual_outcome_budget(){
         residual_outcome_remaining_=residual_outcome_limit_;
         residual_outcome_nodes_=residual_outcome_cutoffs_=residual_outcome_aborts_=0;
+        residual_attempted_.clear();
+        residual_attempt_skips_=0;
+        residual_attempt_max_nodes_=0;
+    }
+    bool admit_residual_attempt(Bits key){
+        if(!residual_outcome_ || residual_attempt_budget_==0) return true;
+        // An UNKNOWN attempt changes no game fact. Suppress only repeated
+        // work on this canonical board during this root, never publish it.
+        if(residual_attempted_.insert(key).second) return true;
+        ++residual_attempt_skips_;
+        return false;
     }
     std::uint64_t exp_hist_[64]={};
     int max_depth_=0;
@@ -1440,6 +1452,8 @@ private:
     bool residual_outcome_=false;
     std::uint64_t residual_outcome_limit_=100000,residual_outcome_remaining_=100000;
     std::uint64_t residual_outcome_nodes_=0,residual_outcome_cutoffs_=0,residual_outcome_aborts_=0;
+    std::uint64_t residual_attempt_budget_=0,residual_attempt_skips_=0,residual_attempt_max_nodes_=0;
+    std::set<Bits> residual_attempted_;
     bool residual_profile_=false;
     // Cumulative visits to unresolved stage-0 frames, including revisits.
     std::array<std::uint64_t,V+1> residual_gate_frames_{};
@@ -1834,7 +1848,13 @@ private:
         st.profile=residual_profile_;
         int g;
         if(outcome_only){
-            g=kyouen_residual::outcome(std::move(r),memo,residual_outcome_remaining_,&st);
+            auto available=residual_attempt_budget_>0
+                ? std::min(residual_attempt_budget_,residual_outcome_remaining_)
+                : residual_outcome_remaining_;
+            const auto before=available;
+            g=kyouen_residual::outcome(std::move(r),memo,available,&st);
+            residual_outcome_remaining_-=before-available;
+            residual_attempt_max_nodes_=std::max(residual_attempt_max_nodes_,before-available);
             residual_outcome_nodes_+=st.calls;
             residual_outcome_cutoffs_+=st.outcome_cutoffs;
             if(g<0) ++residual_outcome_aborts_;
@@ -2062,7 +2082,7 @@ private:
         }
 
         if(residual_exact_legal_>0 && popcount(legal)<=residual_exact_legal_ && !collect_proof_dag_
-           && (!residual_outcome_ || residual_outcome_remaining_>0)){
+           && (!residual_outcome_ || residual_outcome_remaining_>0) && admit_residual_attempt(key)){
             ++residual_exact_calls_;
             ExactResult rr=residual_verdict(state.t[0],legal,stones,residual_outcome_);
             if(rr!=ExactResult::UNKNOWN){
@@ -2425,7 +2445,8 @@ private:
                 // One quota is shared across all df-pn frames in this root.
                 if(residual_exact_legal_>0 && !collect_proof_dag_
                    && (!residual_outcome_ || residual_outcome_remaining_>0)
-                   && popcount(st.back().legal)<=residual_exact_legal_){
+                   && popcount(st.back().legal)<=residual_exact_legal_
+                   && admit_residual_attempt(fk)){
                     if(residual_audit_legal_>0 && popcount(st.back().legal)<=residual_audit_legal_){
                         verify_residual_transition(st.back().state.t[0],st.back().legal);
                         ++residual_audit_calls_;
@@ -2747,6 +2768,7 @@ public:
         set_residual_builder(options.builder);
         set_residual_profile(options.profile);
         set_residual_outcome(options.outcome,options.outcome_budget);
+        set_residual_attempt_budget(options.attempt_budget);
     }
     void set_deadline(double s){
         deadline_s_=s;
@@ -2829,6 +2851,10 @@ public:
         aborts=residual_outcome_aborts_; remaining=residual_outcome_remaining_;
     }
     void set_residual_profile(bool enabled){ residual_profile_=enabled; }
+    void set_residual_attempt_budget(std::uint64_t quota){ residual_attempt_budget_=quota; }
+    std::uint64_t residual_attempt_skips() const { return residual_attempt_skips_; }
+    std::uint64_t residual_attempted() const { return residual_attempted_.size(); }
+    std::uint64_t residual_attempt_max_nodes() const { return residual_attempt_max_nodes_; }
     void residual_profile_stats(std::uint64_t& build,std::uint64_t& structure,std::uint64_t& grundy) const {
         build=residual_build_ns_; structure=residual_structure_ns_; grundy=residual_grundy_ns_;
     }
@@ -3169,6 +3195,10 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
              <<" residual_calls="<<(solver.residual_exact_calls()-before_residual)
              <<" pn_enabled="<<residual_options.outcome<<" pn_budget="<<residual_options.outcome_budget
              <<" pn_nodes="<<nodes<<" pn_aborts="<<aborts<<" pn_remaining="<<remaining
+             <<" pn_attempt_budget="<<residual_options.attempt_budget
+             <<" pn_attempted="<<solver.residual_attempted()
+             <<" pn_attempt_max="<<solver.residual_attempt_max_nodes()
+             <<" pn_attempt_skips="<<solver.residual_attempt_skips()
              <<" solve_us="<<root_solve_us
              <<" build_ns="<<(phase[0]-phase_before[0])
              <<" structure_ns="<<(phase[1]-phase_before[1])
@@ -4339,6 +4369,7 @@ int main(int argc,char**argv){
         int residual_builder=2;
         bool residual_outcome=false;
         std::uint64_t residual_outcome_budget=100000;
+        std::uint64_t residual_attempt_budget=0;
         std::string only="";
         double budget_s=0;
         std::optional<std::uint64_t> search_node_budget;
@@ -4413,6 +4444,13 @@ int main(int argc,char**argv){
                     throw std::runtime_error("invalid --residual-outcome-budget");
                 residual_outcome_budget=std::stoull(value);
             }
+            else if(a.rfind("--residual-attempt-budget=",0)==0){
+                const auto value=a.substr(std::string("--residual-attempt-budget=").size());
+                if(value.empty() || value.find_first_not_of("0123456789")!=std::string::npos)
+                    throw std::runtime_error("invalid --residual-attempt-budget");
+                residual_attempt_budget=std::stoull(value);
+                if(residual_attempt_budget==0) throw std::runtime_error("--residual-attempt-budget must be positive");
+            }
             else if(a.rfind("--residual-builder=",0)==0){
                 const auto mode=a.substr(19);
                 if(mode=="scan") residual_builder=0;
@@ -4439,7 +4477,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--node-budget=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--node-budget=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-attempt-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }
@@ -4503,9 +4541,13 @@ int main(int argc,char**argv){
         if(search_node_budget && (!exact_replay_path.empty() || !quant_replies.empty()
             || !s4_ab.empty() || !s5_cache.empty() || cover_run || coord_run))
             throw std::runtime_error("--node-budget requires normal df-pn search");
+        if(residual_attempt_budget>0 && (!residual_outcome || residual_exact_legal<=0
+            || !exact_replay_path.empty() || !quant_replies.empty() || !s4_ab.empty()
+            || !s5_cache.empty() || cover_run || coord_run))
+            throw std::runtime_error("--residual-attempt-budget requires normal df-pn with outcome evaluator and positive residual gate");
         ResidualOptions residual_options{residual_audit_legal,residual_crosscheck_legal,
             residual_exact_legal,residual_share_gate,residual_builder,residual_profile,
-            residual_outcome,residual_outcome_budget};
+            residual_outcome,residual_outcome_budget,residual_attempt_budget};
         std::uint64_t total_exp=0;
         if(residual_outcome && residual_share_gate>0)
             throw std::runtime_error("outcome evaluator cannot share SG component cache");
