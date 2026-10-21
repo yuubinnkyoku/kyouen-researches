@@ -1,0 +1,61 @@
+{
+  "limits": [
+    20000,
+    100000
+  ],
+  "settings": [
+    "off",
+    "pn128-g6"
+  ],
+  "repeats": 3,
+  "memo_power": 18,
+  "wall_guard_seconds": 30,
+  "node_definition": "df-pn frame iterations + admitted exact board nodes; P/N quota separate",
+  "quota": 128,
+  "gate": 6,
+  "late_sha256": "54c9d95d4297b908c0659b898397c6fde852d019ee9fc2720ba8a52555011069",
+  "deep_sha256": "4214e2165c23f5246742dbe8824dd8db48f82dc67dcc0b2f703f5ee7921b6b02",
+  "fixtures_sha256": "19b6c458f2270b53d162dbb467fc054b980a608a886b91a7819b4ac80e7cfbfc",
+  "roots_sha256": {
+    "00.csv": "677accad6a9b5198da4338c7208c1fba3d701c20a7e47a2558a12fcb3b9dda7d",
+    "01.csv": "04adcd986055fee48d4ba76c1d1e591a6346cdbbacbda629e99e63f8b2220178",
+    "02.csv": "22674262b4c31229b35ad1f2486b9ecefb7ba5c50f34774e5ef9399ea9f145e0",
+    "03.csv": "7cc658dbce0073c09ec9b48ebfc54e10ac661c1a255153d185723dda795524eb",
+    "04.csv": "2045e39379abad4a1a8e0d3e3ba6d9acd5aadfbbd4d2fc9031ea1d5739ba7412",
+    "05.csv": "8021c6465e55140e915c7b9b04ca19d67a4a48e80e02058579bf6892b53ef3b8",
+    "06.csv": "af57f583af3e12bbdac7d36b4352902c7c5a1cde1c2b9f032b39cab77edaa562",
+    "07.csv": "ce33b86b2af98b26c265c616a64bbf2a49d24fc703c60739afbbbfc00ff42218",
+    "08.csv": "6fa5fd40b98b7a1a4f1bc899993674fd403903f335b3c1069c0a16937c101411",
+    "09.csv": "71d545a8f48adb09fe79d077a2bbb2cc9df958a0fd8b7349112f5e09336034a0",
+    "10.csv": "8e15bc48e34733e7c7bad2fe40163b3a06bf9bcefcfce6b3fcedee0caa60121a",
+    "11.csv": "d4abfe9932e3025b16762926ca97e1381ddad452033e2020145183b471906f54",
+    "12.csv": "5dd39637a8311ff1ccfda6b5b24ef3dbf34e6e280ac8fd0e75706b7476747304",
+    "13.csv": "2efe8c01c14533162084a7af7ca6c48ce4564ed42f6e9f60446a3760076a8b3c",
+    "14.csv": "98e725fb13cbb756bb57ef2239581da8d0d2b63bc91f3749e60495e52a3a55d5",
+    "15.csv": "88223f2ab6fcac2b302cbef30b2a29d8c0d31e27497c6b2a21f4421a78498b25",
+    "16.csv": "6d19cd6f313c3ffbd279eefbc8e2cfd303bb4b5920e2df4b2ac06361fd3c51a1",
+    "17.csv": "eb74f4efcb82241643b945fe26b0dfd078c7957a43ac6fe6ef205136a0176e9a",
+    "18.csv": "a9402acd969485ac342c1da8871721caad61498643fad7e6ea0df7a763e31664",
+    "19.csv": "25283a98e310b4244a4ab5a6f596c6c99b30b9fcd09501f7d9e5023ae274beef",
+    "20.csv": "0c998c0952cbdbf810566631e5f29d675c569326124a546e3aa8f58a6bb51dae",
+    "21.csv": "142c122aa1a1e13249add094645d071dd501abc2ddaa6921c9d6735a7f3c3648",
+    "22.csv": "6b1eab8e10eaa0e2b5a3b76d2082f893eb56aef6045a8447ec26f6cb61c005ff",
+    "23.csv": "aa54f193d4ab9cfb50e18f36cb6d3722859005268553a3cd2336eec679cd58a9",
+    "24.csv": "101e3af88f27fecb6678716487af324ec0381ea7a6d9286eb2b70e0a0005e8b9",
+    "25.csv": "95a9ba342bab21b1ee68b54c84d8daacccf9605b099a2659a1cc914fc849ca87",
+    "26.csv": "ea1c86286c84370a3c8dba8643499e6b7f8ff7bf41abcd7445fc57c385789019",
+    "27.csv": "385a8e89e5ad510589e26a05d5dea5e4fd099c40fc81dfafdfa9ea5c1ab88458",
+    "28.csv": "90f8e18ee3e777d7f034b2e2c1b2f8d6a5a6e886c113540c605ec1577f785667"
+  },
+  "solver_sha256": "dbb8af21c987f30c4ba64d6f6a9a976d2ac1e0c06a9ceaef7f73ce0b6a85e6bb",
+  "source_commit": "066707d5f103476095ab4066d97d76700cf242b6",
+  "source_hashes": {
+    "cpp/solvers/kyouen_dfpn_root.cpp": "506cce4389dcbcb9e790bd950349a66ee2a039fdbd7f38ca5904e49ab5b2e42a",
+    "cpp/solvers/kyouen_residual_micro.hpp": "bfccab8ef7fa7dccab63bfbca223770d92e9b6e14527cf26228e06cda0677576"
+  },
+  "compiler": "g++ (Debian 14.2.0-19) 14.2.0",
+  "order": "rotate settings by repeat and budget index; root order fixed; fresh process per root; exact-legal=0",
+  "newly_decided_policy": "stop on a new deep verdict and independently validate before adopting",
+  "watchdog_policy": "retain every watchdog row and report counts; require deterministic node counts only without watchdog",
+  "default_policy": "residual gate remains OFF; no parameter tuning from this comparison"
+}
