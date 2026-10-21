@@ -1798,6 +1798,11 @@
 ## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
+## [research/experiments/knowledge-audit-20261021/README.md](../../../research/experiments/knowledge-audit-20261021/README.md)
+
+- [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0439](../items/K0439-five-edge-grundy-seven.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (log): 証明の論理監査・再実行範囲・判定
 ## [research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md](../../../research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md)
 
 - [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (source): 探索条件・witness・比較・限界

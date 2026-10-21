@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 483 / alias: 269 / artifactファイル: 2575
+K項目: 483 / alias: 269 / artifactファイル: 2576
 
 ## kind
 
@@ -20,10 +20,10 @@ K項目: 483 / alias: 269 / artifactファイル: 2575
 | active | 9 |
 | computed | 111 |
 | conjectured | 1 |
-| needs-review | 48 |
+| needs-review | 45 |
 | observed | 17 |
 | open | 34 |
-| proved | 181 |
+| proved | 184 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
@@ -95,12 +95,9 @@ K項目: 483 / alias: 269 / artifactファイル: 2575
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
 - [K0436](../items/K0436-anisotropic-mod9-all-widths.md) [needs-review] 異方整数格子の全幅で3進付値条件下の円点数は2ceil(2w/3)以下
-- [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) [needs-review] 残余禁止辺h本の一点追加ゲームはGrundy値が最大2^h−1（h≥1）
 - [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) [needs-review] 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全
-- [K0439](../items/K0439-five-edge-grundy-seven.md) [needs-review] 5個の残余禁止集合でGrundy値7を達成する抽象回避ゲーム
 - [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) [needs-review] 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する
 - [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) [needs-review] 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない
-- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) [needs-review] 4点の無順序二点和復元では中心反射が唯一の曖昧性
 - [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) [needs-review] 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類
 - [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) [needs-review] 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する
 - [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) [needs-review] 四行8点円の総数は O(m² log m) 以下

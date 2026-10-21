@@ -433,12 +433,12 @@
 | [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) | 整数座標四点の行列式と分母を払った円・直線方程式の同値 | proposition | proved | rules, geometry, formalization |
 | [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) | 3×3×3・5点禁止ゲームの839局面証明書をLeanで具体検査し空盤後手必勝を証明 | verification | verified | formalization, certificates, variants |
 | [K0436](../items/K0436-anisotropic-mod9-all-widths.md) | 異方整数格子の全幅で3進付値条件下の円点数は2ceil(2w/3)以下 | proposition | needs-review | geometry, rectangles, variants, grundy |
-| [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) | 残余禁止辺h本の一点追加ゲームはGrundy値が最大2^h−1（h≥1） | proposition | needs-review | grundy, residual-games, variants, geometry |
+| [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) | 残余禁止辺h本の一点追加ゲームはGrundy値が最大2^h−1（h≥1） | proposition | proved | grundy, residual-games, variants, geometry |
 | [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) | 任意有限整数点盤の指定安全局面の共円ゲーム勝敗判定はPSPACE完全 | proposition | needs-review | geometry, grundy, residual-games, variants, search-methods |
-| [K0439](../items/K0439-five-edge-grundy-seven.md) | 5個の残余禁止集合でGrundy値7を達成する抽象回避ゲーム | proposition | needs-review | grundy, residual-games, variants |
+| [K0439](../items/K0439-five-edge-grundy-seven.md) | 5個の残余禁止集合でGrundy値7を達成する抽象回避ゲーム | proposition | proved | grundy, residual-games, variants |
 | [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) | 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する | proposition | needs-review | rectangles, geometry, variants, grundy |
 | [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) | 固定11点Grundy5証人は13×13以下の標準盤で正確な残余ゲームにならない | proposition | needs-review | grundy, residual-games, geometry |
-| [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) | 4点の無順序二点和復元では中心反射が唯一の曖昧性 | proposition | needs-review | geometry, variants |
+| [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) | 4点の無順序二点和復元では中心反射が唯一の曖昧性 | proposition | proved | geometry, variants |
 | [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) | 残余禁止辺4本以下・rank4の通常Grundy値は5以下で、孤立点なしの達成型は2種類 | proposition | needs-review | residual-games, grundy, search-methods |
 | [K0444](../items/K0444-four-row-pell-orbit-count-oscillation.md) | 4行8点円の既知Pell族の円数は厳密閉公式を持ち対数周期振動する | proposition | needs-review | geometry, rectangles, variants, statistics |
 | [K0445](../items/K0445-four-row-q8-circle-count-log-upper.md) | 四行8点円の総数は O(m² log m) 以下 | proposition | needs-review | geometry, rectangles, variants |

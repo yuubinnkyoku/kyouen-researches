@@ -2,7 +2,7 @@
 id: K0437
 title: 残余禁止辺h本の一点追加ゲームはGrundy値が最大2^h−1（h≥1）
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - grundy
 - residual-games
@@ -29,12 +29,12 @@ artifacts:
 - path: research/experiments/sparse-hyperedge-nimber-20261019/output/verification.json
   role: data
   note: 7点整数座標例と6頂点全2辺監査の再現結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 任意有限禁止集合超グラフの一点追加通常プレイ。現在の安全局面の極小残余禁止辺数h。h=0ではg≤1、h≥1ではg≤2^h−1。misèreや他人の専有石を含む多人数ゲームには直接適用しない。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。署名交換による子局面同型、空署名のxor分離、上界2^h−1のxor閉性を確認。Python全1180二辺型とC++113安全局面を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 少数残余禁止辺からGrundy値を一様に抑える

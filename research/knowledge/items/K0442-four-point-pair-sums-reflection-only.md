@@ -2,7 +2,7 @@
 id: K0442
 title: 4点の無順序二点和復元では中心反射が唯一の曖昧性
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - variants
@@ -18,12 +18,12 @@ artifacts:
 - path: research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp
   role: verifier
   note: 独立の全組合せ同値類監査
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 4実数多重集合の6個の無順序二点和。整数の場合の偶奇分類を含む。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。中心化二点和の±3組と偶奇符号反転による全逆像分類を確認。重複・零を含む4200集合の有理復元と別方式C++分類を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 4点の無順序二点和復元では中心反射が唯一の曖昧性
