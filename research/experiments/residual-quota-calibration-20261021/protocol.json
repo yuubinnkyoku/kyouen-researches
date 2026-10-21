@@ -1,0 +1,34 @@
+{
+  "seed": 2026102107,
+  "trials": 512,
+  "quotas": [
+    128,
+    512,
+    2048
+  ],
+  "gates": [
+    6,
+    12
+  ],
+  "repeats": 3,
+  "board_budget": 5000,
+  "training_roots": 26,
+  "new_roots": 26,
+  "stress_roots": 3,
+  "source_commit": "f90b628935e1b89de6c293e2c8fc438f54ed3aae",
+  "solver_sha256": "993c561944fd6dd43662bf81b70525172a038664087b2c3943cfeb8bc18f7cc0",
+  "hashes": {
+    "candidate-pool.json": "a0055729fc88f9fe58e36769a38ca75dc448c1384a425c59de01aa136fe14045",
+    "fixtures.json": "54c9d95d4297b908c0659b898397c6fde852d019ee9fc2720ba8a52555011069",
+    "train-input.csv": "ff01e52b5c8b479d3aee317a3db992ba7d7405813700ca8365bf97589fecb230",
+    "new-input.csv": "ad539ac03f65982dffb8a32e9c50b70ec8f5d3bae4e4108ec1b0dcec3d8d7c2d"
+  },
+  "source_sha256": "7518ff3847f003140440be964ed28557a31373d58a58642dd1d056d9af9f8e3a",
+  "old_fixtures_sha256": "e9b1fe88ceb0c609bad5df32cb611b100efde7a7b07d316284a5a8b63ed0bd79",
+  "stress_sha256": "4214e2165c23f5246742dbe8824dd8db48f82dc67dcc0b2f703f5ee7921b6b02",
+  "fixture_selection": "trial order then chronological first unused stratum; one root per trial; exclude all 826 old roots modulo D4",
+  "candidate_selection": "minimum training UNKNOWN count, sum of per-root solve_us medians, quota, gate; PN candidates only",
+  "confirmation": "OFF versus committed selection on new 26 and stress 3; no reselection",
+  "adoption": "no wrong verdicts, no more UNKNOWN, new solve_us < OFF, stress solve_us <= OFF and no more UNKNOWN",
+  "default_if_failed": "handoff OFF and Grundy evaluator unchanged"
+}
