@@ -1403,6 +1403,7 @@ private:
     inline static std::map<Bits,std::uint8_t> exact_layer_cache_{};
     std::uint64_t residual_shared_hits_=0,residual_shared_stores_=0;
     std::uint64_t residual_shared_canonicalized_=0;
+    kyouen_residual::Stats residual_closed_stats_{};
     inline static std::map<kyouen_residual::Key,int> residual_component_cache_{};
     std::uint64_t exact_budget_=100000;    // nodes per handoff attempt
     // Per-stone-count budget overrides. The s5 frontier measured in
@@ -1737,6 +1738,10 @@ private:
         residual_shared_hits_ += st.shared_hits;
         residual_shared_stores_ += st.shared_stores;
         residual_shared_canonicalized_ += st.canonicalized;
+        residual_closed_stats_.closed_free += st.closed_free;
+        residual_closed_stats_.closed_two_edges += st.closed_two_edges;
+        residual_closed_stats_.closed_sunflower += st.closed_sunflower;
+        residual_closed_stats_.closed_paths += st.closed_paths;
         ++residual_crosscheck_calls_;
         return kyouen_residual::first_player_verdict_from_grundy(g,stones)==1
             ? ExactResult::WIN : ExactResult::LOSS;
@@ -2632,6 +2637,7 @@ public:
     void set_residual_exact_legal(int legal){ residual_exact_legal_=std::max(0,legal); }
     std::uint64_t residual_exact_calls() const { return residual_exact_calls_; }
     void set_residual_share_gate(int legal){ residual_share_gate_=std::max(0,legal); }
+    kyouen_residual::Stats residual_closed_stats() const { return residual_closed_stats_; }
     void set_exact_share_layer(int stones){ exact_share_layer_=std::max(0,stones); }
     static void clear_exact_layer_cache(){ exact_layer_cache_.clear(); }
     void exact_share_stats(std::uint64_t& hits,std::uint64_t& stores,std::uint64_t& size) const {
@@ -3235,6 +3241,7 @@ template<int N>
                 row_solver.residual_share_stats(rsh,rss,rsc,rsz);
                 std::uint64_t esh=0, ess=0, esz=0;
                 row_solver.exact_share_stats(esh,ess,esz);
+                auto closed=row_solver.residual_closed_stats();
                 O<<"# residual_shadow row="<<id
                  <<" audit_calls="<<row_solver.residual_audit_calls()
                  <<" crosscheck_calls="<<row_solver.residual_crosscheck_calls()
@@ -3248,7 +3255,11 @@ template<int N>
                  <<" shared_size="<<rsz
                  <<" exact_layer_hits="<<esh
                  <<" exact_layer_stores="<<ess
-                 <<" exact_layer_size="<<esz<<"\n";
+                 <<" exact_layer_size="<<esz
+                 <<" closed_free="<<closed.closed_free
+                 <<" closed_two_edges="<<closed.closed_two_edges
+                 <<" closed_sunflower="<<closed.closed_sunflower
+                 <<" closed_paths="<<closed.closed_paths<<"\n";
             }
         }catch(const std::exception& e){
             O<<"replay_error,"<<id<<","<<stones<<",0,\""<<e.what()<<"\"\n"; O.flush(); ++id; continue;

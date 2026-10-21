@@ -12,6 +12,7 @@
 // builder separate makes it possible to regression-test board->clutter before
 // the kernel can influence df-pn verdicts.
 #include <algorithm>
+#include <array>
 #include <cstdint>
 #include <map>
 #include <numeric>
@@ -147,14 +148,97 @@ inline std::vector<State> components(const State& s){
 struct Key {
     Mask v; std::vector<Mask> e;
     bool operator<(Key const& o) const {
-        if(v!=o.v) return v<o.v; return e<o.e;
+        if(v!=o.v) return v<o.v;
+        return e<o.e;
     }
 };
 
 struct Stats {
     std::uint64_t calls=0,memo_hits=0,module_removed=0,component_splits=0;
     std::uint64_t shared_hits=0,shared_stores=0,canonicalized=0;
+    std::uint64_t closed_free=0,closed_two_edges=0,closed_sunflower=0,closed_paths=0;
 };
+
+// Audited K0483, K0465 and K0460. Input must be normalized: edges are
+// inclusion-minimal subsets of the live vertices, with no singleton bans.
+// Return -1 when no theorem applies; no heuristic verdicts are used.
+inline int closed_grundy(const State& s,Stats* st=nullptr){
+    if(s.edges.empty()){
+        if(st) ++st->closed_free;
+        return pc(s.vertices)&1;
+    }
+    Mask used=0;
+    for(Mask e:s.edges) used|=e;
+    const int free_parity=pc(s.vertices&~used)&1;
+    if(s.edges.size()<=2){
+        if(st) ++st->closed_two_edges;
+        if(s.edges.size()==1) return ((pc(used)-1)&1)^free_parity;
+        const Mask e=s.edges[0],f=s.edges[1];
+        const int c=pc(e&f),u=pc(e&~f),v=pc(f&~e);
+        const int lo=std::min(u,v),hi=std::max(u,v);
+        const int g=c==0 ? ((u+v)&1)
+            : lo<c ? ((c-1+u+v)&1)
+            : lo==c ? 2+((hi-c)&1) : ((c+u+v)&1);
+        return g^free_parity;
+    }
+    Mask core=used,petals=0;
+    for(Mask e:s.edges) core&=e;
+    int shortest=65;
+    bool sunflower=true;
+    for(Mask e:s.edges){
+        Mask p=e&~core;
+        if(!p || (p&petals)){ sunflower=false; break; }
+        petals|=p;
+        shortest=std::min(shortest,pc(p));
+    }
+    if(sunflower){
+        if(st) ++st->closed_sunflower;
+        const int c=pc(core),p=pc(petals),n=c+p;
+        const int g=(s.edges.size()&1) ? ((n-1)&1)
+            : c<shortest ? (n&1)
+            : c>shortest ? ((n-1)&1) : 2+(p&1);
+        return g^free_parity;
+    }
+    // Degree <=2 graphs are disjoint paths/cycles, including isolated points.
+    std::array<Mask,64> adj{};
+    for(Mask e:s.edges){
+        if(pc(e)!=2) return -1;
+        int a=__builtin_ctzll(e),b=__builtin_ctzll(e&(e-1));
+        adj[a]|=Mask{1}<<b; adj[b]|=Mask{1}<<a;
+        if(pc(adj[a])>2 || pc(adj[b])>2) return -1;
+    }
+    // Only 64 live points fit in State. Exact finite recurrence suffices;
+    // the infinite period theorem is not needed to extrapolate a table.
+    static const auto path=[]{
+        std::array<int,65> a{};
+        a[1]=a[2]=1;
+        for(int n=3;n<=64;++n){
+            std::array<bool,128> seen{};
+            seen[a[n-2]]=true;
+            for(int i=0;i<=n-3;++i) seen[a[i]^a[n-3-i]]=true;
+            while(seen[a[n]]) ++a[n];
+        }
+        return a;
+    }();
+    int g=0;
+    Mask unseen=s.vertices;
+    while(unseen){
+        Mask todo=unseen&-unseen,comp=0;
+        bool cycle=true;
+        while(todo){
+            int v=__builtin_ctzll(todo); todo&=todo-1;
+            Mask bit=Mask{1}<<v;
+            if(comp&bit) continue;
+            comp|=bit; todo|=adj[v]&~comp;
+            if(pc(adj[v])!=2) cycle=false;
+        }
+        int n=pc(comp);
+        g^=cycle ? (path[n-3]==0 ? 1 : 0) : path[n];
+        unseen&=~comp;
+    }
+    if(st) ++st->closed_paths;
+    return g;
+}
 
 // Exact arbitrary-relabeling canonical key for a SMALL residual component.
 //
@@ -270,14 +354,16 @@ inline Key canonical_small(State s){
 
 // Returns Grundy number.  Component xor is exact; K0344 compression preserves
 // Grundy, not merely outcome, so composition is sound.
-inline int grundy(State s,std::map<Key,int>& memo,Stats* st=nullptr){
+inline int grundy(State s,std::map<Key,int>& memo,Stats* st=nullptr,
+                  bool use_closed_forms=true){
     if(st) ++st->calls;
     s.edges=minimal(std::move(s.edges));
+    if(use_closed_forms){ int g=closed_grundy(s,st); if(g>=0) return g; }
     s=compress(std::move(s),st?&st->module_removed:nullptr);
     auto parts=components(s);
     if(parts.size()>1){
         if(st) ++st->component_splits;
-        int g=0; for(auto& p:parts) g^=grundy(std::move(p),memo,st);
+        int g=0; for(auto& p:parts) g^=grundy(std::move(p),memo,st,use_closed_forms);
         return g;
     }
     Key k{s.vertices,s.edges};
@@ -285,7 +371,7 @@ inline int grundy(State s,std::map<Key,int>& memo,Stats* st=nullptr){
     if(it!=memo.end()){ if(st)++st->memo_hits; return it->second; }
     std::vector<int> vals;
     Mask x=s.vertices;
-    while(x){ int v=__builtin_ctzll(x);x&=x-1; vals.push_back(grundy(play(s,v),memo,st)); }
+    while(x){ int v=__builtin_ctzll(x);x&=x-1; vals.push_back(grundy(play(s,v),memo,st,use_closed_forms)); }
     std::sort(vals.begin(),vals.end()); vals.erase(std::unique(vals.begin(),vals.end()),vals.end());
     int g=0; for(int xg:vals){ if(xg==g)++g; else if(xg>g)break; }
     memo.emplace(std::move(k),g); return g;
@@ -301,16 +387,17 @@ inline int grundy(State s,std::map<Key,int>& memo,Stats* st=nullptr){
 */
 inline int grundy_shared(State s,std::map<Key,int>& local,
                          std::map<Key,int>& shared,int share_gate,
-                         Stats* st=nullptr){
+                         Stats* st=nullptr,bool use_closed_forms=true){
     if(st) ++st->calls;
     s.edges=minimal(std::move(s.edges));
+    if(use_closed_forms){ int g=closed_grundy(s,st); if(g>=0) return g; }
     s=compress(std::move(s),st?&st->module_removed:nullptr);
     auto parts=components(s);
     if(parts.size()>1){
         if(st) ++st->component_splits;
         int g=0;
         for(auto& p:parts)
-            g^=grundy_shared(std::move(p),local,shared,share_gate,st);
+            g^=grundy_shared(std::move(p),local,shared,share_gate,st,use_closed_forms);
         return g;
     }
 
@@ -335,7 +422,7 @@ inline int grundy_shared(State s,std::map<Key,int>& local,
     Mask x=s.vertices;
     while(x){
         int v=__builtin_ctzll(x); x&=x-1;
-        vals.push_back(grundy_shared(play(s,v),local,shared,share_gate,st));
+        vals.push_back(grundy_shared(play(s,v),local,shared,share_gate,st,use_closed_forms));
     }
     std::sort(vals.begin(),vals.end());
     vals.erase(std::unique(vals.begin(),vals.end()),vals.end());
