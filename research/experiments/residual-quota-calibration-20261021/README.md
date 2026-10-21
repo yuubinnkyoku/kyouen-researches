@@ -26,3 +26,25 @@ legal=6..18 × occupied parity=0/1の26層。trial順、同trial内は対局の�
 この実験は有限の固定局面比較。新たな未知盤の長時間探索を自動workflowに追加しない。
 quotaとboard nodesは別の仕事量で、quotaはwall時間上限ではない。約0.5秒/根の初期化を
 探索時間から分ける。性能の全入力への一般化や11×11空盤の解決は主張しない。
+
+## 再現と検査
+
+```sh
+c++ -std=c++20 -O2 -Icpp/solvers research/experiments/residual-quota-calibration-20261021/sample.cpp -o /tmp/quota-sample
+/tmp/quota-sample > /tmp/quota-candidates.json
+python research/experiments/residual-quota-calibration-20261021/verify_outputs.py --geometry
+python -m unittest discover -s research/experiments/residual-quota-calibration-20261021 -p test_protocol.py
+```
+
+candidate-pool.jsonは/tmp/quota-candidates.jsonとbyte単位で一致する固定seedの出力。
+prepare.pyはこのpoolからfixtures、入力CSV、protocolを生成し、全新規局面を独立幾何とsubset-mexで確認する。
+測定を新しく実行する場合は別のexperimentへ出力し、当時の保存結果を上書きしない。
+初回は固定ファイルをcommitした後にcalibrate.pyの`--phase train`を実行し、
+training-records.jsonとselection.jsonをcommitしてから`--phase confirm`を実行する。
+両段階に`--solver /path/to/frozen-binary`が必要で、binaryのhashを検査する。
+selection作成後の再調整、確認済み出力の再実行を拒否する。
+
+verify_outputs.pyはD4非重複、層とtrialの選択、入力hash、独立subset-mex、
+各replay行の局面・勝敗・予算・quota、局面ごとの中央値、調整データだけによる選択と採用条件を検査する。
+`--geometry`ではさらに合法点と極小残余辺族を別実装の行列式から再計算する。
+CIはこの固定資料の監査と9単体テストのみを実行し、時間測定や深い3局面の再探索は起動しない。

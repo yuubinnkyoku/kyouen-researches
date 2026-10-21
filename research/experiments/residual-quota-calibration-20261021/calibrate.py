@@ -77,6 +77,7 @@ def assert_committed(path):
     assert subprocess.check_output(['git','show',f'HEAD:{rel}'],cwd=ROOT)==path.read_bytes(),f'commit frozen file first: {rel}'
 
 def run_phase(solver,phase,fixtures,configs):
+    (HERE/'raw').mkdir(exist_ok=True)
     records=[]
     for repeat in range(REPEATS):
         shift=repeat%len(configs);order=configs[shift:]+configs[:shift]
@@ -107,6 +108,7 @@ def main():
         selection.update(protocol_sha256=digest(HERE/'protocol.json'),training_sha256=digest(HERE/'training-records.json'))
         dump(HERE/'selection.json',selection);print(json.dumps(selection,indent=2))
     else:
+        assert not (HERE/'summary.json').exists(),'confirmation already archived; use a new experiment for another comparison'
         assert_committed(HERE/'selection.json');assert_committed(HERE/'training-records.json')
         selection=json.loads((HERE/'selection.json').read_text())
         assert selection['protocol_sha256']==digest(HERE/'protocol.json')
@@ -114,10 +116,11 @@ def main():
         actual=select(json.loads((HERE/'training-records.json').read_text()))
         assert all(selection[k]==v for k,v in actual.items())
         configs=[CONFIGS[0],selection['candidate']]
+        selection_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
         records=run_phase(args.solver,'confirm',fixtures,configs)
         dump(HERE/'confirmation-records.json',records)
         totals={s:aggregate(records,configs,s) for s in ('new','stress')}
         dump(HERE/'summary.json',dict(candidate=selection['candidate'],totals=totals,passed=adoption(totals,selection['candidate']),
-            selection_sha256=digest(HERE/'selection.json')))
+            selection_sha256=digest(HERE/'selection.json'),selection_commit=selection_commit))
         print(json.dumps(json.loads((HERE/'summary.json').read_text()),indent=2))
 if __name__=='__main__':main()
