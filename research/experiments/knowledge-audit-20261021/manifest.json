@@ -1,0 +1,1389 @@
+{
+  "baseline_commit": "db54f2b4802f4b045fd5fd5ef5917dd3cd06210e",
+  "items": [
+    {
+      "id": "K0436",
+      "item": "research/knowledge/items/K0436-anisotropic-mod9-all-widths.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/anisotropic-mod9-all-widths-20261016.md",
+          "sha256": "2342e21b14db8b0d6a29634a291110310ff903a6ef1645d339a865ee8d292cb8"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/mod9_anisotropic_rows_20261016.py",
+          "sha256": "0a796c66c41331098c410d3260cb86ce9ed25de5573573d50abe239a6dd837cc"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/anisotropic_circle_independent_20261016.cpp",
+          "sha256": "7467ce629167b547a1618813d04845d56c9f5dac38f16f81dd9f8e20bb6d9797"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0436-cpp.txt",
+          "sha256": "972cc85d01466f3b665763bc1231b2db2acd891331be70cae977bef4a87b52b7"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0436-mod9.txt",
+          "sha256": "7f35043f6153bb24b1de538a71c81a05f742d763d9912ca2324867152f437935"
+        }
+      ]
+    },
+    {
+      "id": "K0437",
+      "item": "research/knowledge/items/K0437-few-residual-hyperedges-grundy-ceiling.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/sparse-hyperedge-nimber-20261019/reports/sparse-hyperedge-nimber.md",
+          "sha256": "20320c63b5da3decb99783d09c7e6987c2c0121970ceb1a7b9592248a2dbee2d"
+        },
+        {
+          "path": "research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_sparse_hyperedge.py",
+          "sha256": "d6a82da0d5a4889bcc04334b65a5b38c3b2ab17323972656b99f9c44521ae4e7"
+        },
+        {
+          "path": "research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_two_circle.cpp",
+          "sha256": "7b9132a288ea24f2e7601ab036bdf3f98a96bb9edb72e8bce43e05806dc4807d"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0437-cpp.txt",
+          "sha256": "fa16cc9a76aae8eea131b90b1997901687c536c142913fc08f46c3985f31e14c"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0437-python.txt",
+          "sha256": "e56e624ebb5a026d267015542feff11cb67c34bf822662f1f47f55877a9a1eb7"
+        }
+      ]
+    },
+    {
+      "id": "K0438",
+      "item": "research/knowledge/items/K0438-finite-point-kayles-pspace-complete.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/game-structure/reports/node-kayles-pspace-20261019.md",
+          "sha256": "d9ddffc7743dcde96eae07436873900ad3a0b3a3ddcc2e5a11a640261b8b975b"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/verify_node_kayles_reduction_20261019.py",
+          "sha256": "f415294c01127f33a6e7711f24f8e95d05f722cf498b72d4b65d2c51cb6bd470"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/verify_graph_realization_20261019.py",
+          "sha256": "79625097aaa08e1b48d3be27e1aab26b8bbfa00281afc7dda96c067da23873ab"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/independent_p3_audit_20261019.cpp",
+          "sha256": "8216b7ad7e596575284e824ddc3d0b9af2bd6175e5f1d14ed68443701701c111"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0438-python.txt",
+          "sha256": "01bafd0af9ed0f616cecb8b6458e6378b104306bd113440a4813c9d866e7d9df"
+        }
+      ]
+    },
+    {
+      "id": "K0439",
+      "item": "research/knowledge/items/K0439-five-edge-grundy-seven.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fastlane-five-edge-nimber-seven-20261019/README.md",
+          "sha256": "8aa59a6270218d6fd0bda904233295f015a69b6940b3459f8b41cc7e342fd233"
+        },
+        {
+          "path": "research/experiments/fastlane-five-edge-nimber-seven-20261019/verify.py",
+          "sha256": "4fd8f1b5d30736cf5dab4cd3e181ab76e3159adad8874c007f63193bc78f4d86"
+        },
+        {
+          "path": "research/experiments/fastlane-five-edge-nimber-seven-20261019/independent.cpp",
+          "sha256": "2d9b17be1ea922395554c440e6a7d638932b26c646f184a95603298663b77778"
+        },
+        {
+          "path": "research/experiments/fastlane-five-edge-nimber-seven-20261019/crosscheck.py",
+          "sha256": "eba44253f24a4506f6134a5f9b9efc74e3f09172551168870a1dd18e539669a5"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0439-crosscheck.txt",
+          "sha256": "5e765d58b38dbf2b6a2cde89c66b56bd99b1af2b39af704a21c6483ebef07704"
+        }
+      ]
+    },
+    {
+      "id": "K0440",
+      "item": "research/knowledge/items/K0440-five-row-anisotropic-mod3-circle-exclusion.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/five-row-anisotropic-mod3-20261016.md",
+          "sha256": "1e824fbe6a6723e30663abcf97ec62e8662097e38dcb20097139ee97064e0baa"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/verify_five_row_anisotropic_mod3_20261016.py",
+          "sha256": "92daef69d9cd902a4dc616c626bbdfb22359c4c7e360b8015452e7bcb13da706"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0440-python.txt",
+          "sha256": "cafa190f0c4ca9cb7a6e5db00639c408402309581beacbb76432eafbd9e1ad35"
+        }
+      ]
+    },
+    {
+      "id": "K0441",
+      "item": "research/knowledge/items/K0441-fixed-grundy-five-witness-residual-exclusion.md",
+      "status_after": "computed",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/grundy-five-residual-obstruction-20261018/proof.md",
+          "sha256": "536396f4e0058f3acd8e40338a26419866113d391ad19d52cb8f1507d0e0cf85"
+        },
+        {
+          "path": "research/experiments/grundy-five-residual-obstruction-20261018/verify.py",
+          "sha256": "ac82cc2024a54c90bc8acf505cc81d32bc219cc90f112ebc330f90ec42679639"
+        },
+        {
+          "path": "research/experiments/grundy-five-residual-obstruction-20261018/independent_verify.cpp",
+          "sha256": "be30fb6bbd2d8101486f4c89034816ca8b07e68f57e4d5822289a34ad35259ec"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0441-cpp.txt",
+          "sha256": "38353b9834391ca1d496b7e33fd12bd9ce0a6486f75e00a03042d55a6f85f8a5"
+        }
+      ]
+    },
+    {
+      "id": "K0442",
+      "item": "research/knowledge/items/K0442-four-point-pair-sums-reflection-only.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/pairsum-fourpoint-reflection-20261018/proof.md",
+          "sha256": "7de6aaf65742fe7c94cb6267174939a1bfdc29a55f44d997770775c69264d079"
+        },
+        {
+          "path": "research/experiments/pairsum-fourpoint-reflection-20261018/verify.py",
+          "sha256": "74ce91a1f16d7cbae40804c534d960a05535bf09958a8e1e0af5971442f0e61d"
+        },
+        {
+          "path": "research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp",
+          "sha256": "86a17d76056646322bb8754beeb8fa9f5334f96eab00908c9f2b6f7b14dc9e6f"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0442-cpp.txt",
+          "sha256": "3d0ac0235af5e67d60db602dc470ac8b81c23a720f39a50ca387598ea1530f97"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0442-python.txt",
+          "sha256": "e322b625d3c595f7fbccbced959fb6c373fc1aa238389f16ed0e4139a2d1a37e"
+        }
+      ]
+    },
+    {
+      "id": "K0443",
+      "item": "research/knowledge/items/K0443-four-residual-edges-rank4-nimber-five.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fastlane-four-edge-20261019/reports/four-edge-rank-four.md",
+          "sha256": "87d01efe5aa910dc07bff3ad49b98674aa26037c5e718190ce3065896f192c92"
+        },
+        {
+          "path": "research/experiments/fastlane-four-edge-20261019/scripts/enumerate.py",
+          "sha256": "63a093929557a07072aa897e1da3e9405611c69b353e5a3c4628f51f8b9b022b"
+        },
+        {
+          "path": "research/experiments/fastlane-four-edge-20261019/scripts/independent.cpp",
+          "sha256": "d0cb9396c4178e6187f78402f712ed5633d3040ddd998270bd6d4a8670489025"
+        },
+        {
+          "path": "research/experiments/four-q4-residual-grundy-20261018/proof.md",
+          "sha256": "89a2f5d7ecdeae23e7db0202526d296cf3ed6126e43277a9bf5c954d10c5eead"
+        },
+        {
+          "path": "research/experiments/four-q4-residual-grundy-20261018/verify.py",
+          "sha256": "ab14c56907441c8ea7ff2be8a6e0a9586a530fe94a0f76d7815b49f17cd5dbea"
+        },
+        {
+          "path": "research/experiments/four-q4-residual-grundy-20261018/independent.cpp",
+          "sha256": "6ab11b55377f36582ef851c52f775d36bd028d13e330ca13295507fd0a131d8a"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0443-cpp.txt",
+          "sha256": "2430927254e20025045b5d6e23137476951a98fe44208b6ff91388dddb93c593"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0443-python.txt",
+          "sha256": "17703ed5fcf39652155d746260d9cf7c5d17ba694b73674c41853b9fea06e89c"
+        }
+      ]
+    },
+    {
+      "id": "K0444",
+      "item": "research/knowledge/items/K0444-four-row-pell-orbit-count-oscillation.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-pell-orbit-count-oscillation-20261015.md",
+          "sha256": "8f8a31b026ad342503095a91b1ee090f8c6b5987e055aea92eaca12282eac686"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_pell_orbit_oscillation_20261015.py",
+          "sha256": "0803625529fd1e70b50c59195d8caedcdbdb43b762bb56adb0c2d47408540dc0"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0444-python.txt",
+          "sha256": "70ed43d2fa34f84e26b9547455b04551fed7e3a05fc730a8ccca2ffa693685a4"
+        }
+      ]
+    },
+    {
+      "id": "K0445",
+      "item": "research/knowledge/items/K0445-four-row-q8-circle-count-log-upper.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-circle-count-upper-log-20261015.md",
+          "sha256": "e43f69eea945484d322134e0977d14fa0fb04f4c04aa38b3b30d1e9135cec6f5"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_circle_upper_log_audit_20261015.py",
+          "sha256": "a09dcebaf3a58cae7d3524e26d52bf0e283e63b4be262b1376d3f243cee9de38"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0445-python.txt",
+          "sha256": "3720f58798a7cee03712d4c9bbba2d0b36dc012b9142ca137a6cb48f52e8e957"
+        }
+      ]
+    },
+    {
+      "id": "K0446",
+      "item": "research/knowledge/items/K0446-four-row-q8-gaussian-census-100m.md",
+      "status_after": "computed",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-gaussian-circle-census-100m-20261015.md",
+          "sha256": "44e112ebb148221c53852bffd4a80ca586983c44608c13924747f2ed76f5887e"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_gaussian_circle_census_20261015.cpp",
+          "sha256": "ded5d64bfe8a0231847cbdf68b797d376673bb81cd4f87f5fb0251618bc2f90f"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_gaussian_census_independent_audit_20261015.py",
+          "sha256": "4e02a0e49563018e69ed8f558eb141ab641d45d4292c84376f2443dbc1d75a86"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0446-patterns.csv",
+          "sha256": "45de54b00395116f795f8fefb09c68193f0aacde40c384c0a84b1bbf844b6aa6"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0446-stderr.txt",
+          "sha256": "4304a7675ac2513b2d5c77cca5af0234ac43a1510ca2fa86c08dd018da6a6f0a"
+        }
+      ]
+    },
+    {
+      "id": "K0447",
+      "item": "research/knowledge/items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-infinite-accumulation-loglog-lower-20261016.md",
+          "sha256": "914ccd9d9d13dc1bcbcc3f99c4ac72baa1046f21194e3c2da8a47076ae9cffb3"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_accumulation_loglog_20261016.py",
+          "sha256": "7bd35eb56834a8df5e7f873f73e5290cc2a1eae8f72fd9a59650d9c0c590f801"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0447-python.txt",
+          "sha256": "57e0e421266e6ec15ebaa7108a5c9e8646c796d5f18ebf40bdf5ed60f73f7d5e"
+        }
+      ]
+    },
+    {
+      "id": "K0448",
+      "item": "research/knowledge/items/K0448-four-row-q8-infinitely-many-distinct-slopes.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-infinite-distinct-slopes-20261016.md",
+          "sha256": "d51d63856a4c10c3d2f55c066f55c8cf59a02c798dd52f1d87d0bcb0f3a9787b"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_infinite_distinct_slopes_20261016.py",
+          "sha256": "8dc6f2ecdc5367fa09a2af67365a794a0333919af2adbca97ccc53dacd9057be"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0448-python.txt",
+          "sha256": "a997dba16787b798c1f72e4a2bfb8e0e14a5d07247753284b096a926c06f38d1"
+        }
+      ]
+    },
+    {
+      "id": "K0449",
+      "item": "research/knowledge/items/K0449-four-row-q8-mod64-odd-denominator-obstruction.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-mod64-residue-class-20261015.md",
+          "sha256": "90686c4a480f0ad9daa569aa48101259e9a556616fce1831cedae6f8d72d3585"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_mod64_residue_class_independent_20261015.py",
+          "sha256": "92876631c5567460e8ea726e704e679d23b9d21a599fe0c64580a5596f285e84"
+        },
+        {
+          "path": "research/experiments/fixed-width/reports/q48-mod64-odd-denominator-obstruction-20261015.md",
+          "sha256": "100dca98f9ee8e2ed6942e3f278da3dc2c27f938e6af82906095b97f09cf381b"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_mod64_odd_denominator_audit_20261015.py",
+          "sha256": "b5c0c7307ba49cf0732affd92ffc0415a57888a941518a68e28c21d88d59bc5d"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0449-python.txt",
+          "sha256": "4fd3e6cec05349c7d0335680e7b07299abce939c2c062b59ff7849b177c5036e"
+        }
+      ]
+    },
+    {
+      "id": "K0450",
+      "item": "research/knowledge/items/K0450-four-row-q8-perfect-slope-closure.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-perfect-slope-closure-20261016.md",
+          "sha256": "9b92b0eb6c2e25a10fba7dbeb4ec123fdb19cced1f439e7279c839a2f0233489"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_perfect_slope_closure_verify_20261016.py",
+          "sha256": "30fb357be2bd34024a556f60175d5b15fa38b161976a993df18dc786cd04126a"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0450-python.txt",
+          "sha256": "5956e3a20701ac6211302f71588d903ba7b224bc513bb64b1507e6d5ad639602"
+        }
+      ]
+    },
+    {
+      "id": "K0451",
+      "item": "research/knowledge/items/K0451-four-row-q8-slope-dimension-two-sieve.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-slope-dimension-two-sieve-20261016.md",
+          "sha256": "e14f4d705d3cc1f18d68b46466472c5d0ef9a2f497d4a3b1924f08956d85cc24"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_sieve_dimension2_20261015.py",
+          "sha256": "782b11397518ac45ec5923c3547dd76858fd1c2e3fae514f64f8181b47fcb8d6"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_sieve_constant_independent_20261016.py",
+          "sha256": "152453b3e33dc8bd9edaa7889457189f5c904d838a9da81592cdc4a85375a97c"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_sieve_interval_audit_20261016.py",
+          "sha256": "1cd0f64b1dc26e46d9c69a26bf74b6aea8de69007cdd05111d6815d84c6c75f2"
+        },
+        {
+          "path": "research/experiments/fixed-width/reports/q48-slope-dimension-two-sieve-20261015.md",
+          "sha256": "0859a1979c42ca420d06eb7751b93b3383f90f8679f939e7c81379cda00066e5"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0451-constant-python.txt",
+          "sha256": "034d95902e5030586848566ef4774fa076c222f72a0be1fee599e9d7b53f6edd"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0451-interval-python.txt",
+          "sha256": "adde8ec7b48e8a4841ff311f02659d24894c23416219663899fac6f23afba60b"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0451-python.txt",
+          "sha256": "94fa92b0f6511c4e9a505be2f97bd3f8ab4b08d39448b01dc56947259d1996cd"
+        }
+      ]
+    },
+    {
+      "id": "K0452",
+      "item": "research/knowledge/items/K0452-four-row-q8-three-dual-pell-slope-limits.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-dual-pell-three-accumulation-points-20261016.md",
+          "sha256": "f7668d85bb9a75d06846a5650245535d66f326d4f4fc50bec18eba5a01eef81d"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_dual_pell_three_limits_20261016.py",
+          "sha256": "d1ac48253624e2c560ff44da431dc02f774cde4af6f267c89c5bf058837e0fe1"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0452-python.txt",
+          "sha256": "6785852a48d7a630ed679825c7ae54bf55886daa48b97e8e1acd2c0d3a08da33"
+        }
+      ]
+    },
+    {
+      "id": "K0453",
+      "item": "research/knowledge/items/K0453-geometric-four-q4-grundy-five.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/geometric-four-q4-grundy-five-20261018/proof.md",
+          "sha256": "36745176c65dfdedd536d9e772aaeb034989714f3bf6b03b155e86eaeb2bc823"
+        },
+        {
+          "path": "research/experiments/geometric-four-q4-grundy-five-20261018/verify_geometry.py",
+          "sha256": "1c535f9a0492efe008321d5342de887226758a7d175ea92fe941b80b4911fb8e"
+        },
+        {
+          "path": "research/experiments/geometric-four-q4-grundy-five-20261018/verify_independent.cpp",
+          "sha256": "9468b369b7a362ae3daa5e947855f9fa5b3f9ef3409a6db97afa580961e36204"
+        },
+        {
+          "path": "research/experiments/geometric-four-q4-grundy-five-20261018/verify_abstract.py",
+          "sha256": "ab14c56907441c8ea7ff2be8a6e0a9586a530fe94a0f76d7815b49f17cd5dbea"
+        },
+        {
+          "path": "research/experiments/fastlane-four-edge-geometry-20261019/README.md",
+          "sha256": "f035ec522001aecbf8838228958c167132235e2247a768f8504e09b808b0c1dd"
+        },
+        {
+          "path": "research/experiments/fastlane-four-edge-geometry-20261019/verify.py",
+          "sha256": "d1c8f20f79d122ee972dd9f50a4513662e1c76415497a8ec859124c9f0abdc69"
+        },
+        {
+          "path": "research/experiments/fastlane-four-edge-geometry-20261019/independent.cpp",
+          "sha256": "f03fdaf61734e5e8c62659e70f69cb041c7557cd8387b9c7d3edaf1b56849e3f"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0453-abstract-cpp.txt",
+          "sha256": "ab96e2463dc174c4fedbb43f721072c71b3e7c3d2749f317b37bf805550ca238"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0453-abstract-python.txt",
+          "sha256": "c59192c22f1af0c5c907859a497462a67221ae7bb5cace3bddfbf5cc37547844"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0453-cpp.txt",
+          "sha256": "0365301d8a71343f3749975a99bf41033723d2f0b5c7ddafb21fd96bae027886"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0453-python.txt",
+          "sha256": "8b8d42201b269b89d1830fc1e634b10db4c26fe22cae5c2d21df44021d550dd7"
+        }
+      ]
+    },
+    {
+      "id": "K0454",
+      "item": "research/knowledge/items/K0454-half-integral-center-circle-band-maxima-through-63.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/geometry/reports/circle-band-halfcenter-5-63-20261016.md",
+          "sha256": "b42ef574df722860eafca2bd399c8e47120367ea069257599933855b6423e701"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/verify_circle_band_max_5_63_20261016.py",
+          "sha256": "0fe2722428d2c3ad88ce1167ed57c072cb18341df372a0e80e4bd2b01de06af4"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/verify_circle_band_max_5_63_independent_20261016.cpp",
+          "sha256": "cf14162ce576a706417c3ee2e2d3bb8f69fd699b58973fd26bf94db38e6a2d49"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0454-cpp.txt",
+          "sha256": "a5be9260bb9dde997f3c4ba660c472fd6d9dabdefeb2d3aa5cd8c11a68bdb0f8"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0454-python.txt",
+          "sha256": "4cb98fe447f0eaea826faa37da3a914ac92e1261e16835636ab5e3c2d4156783"
+        }
+      ]
+    },
+    {
+      "id": "K0455",
+      "item": "research/knowledge/items/K0455-independent-row-capacity-state-counts.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/capacity-parity-state-count-20261016.md",
+          "sha256": "e884db94ed2bb7953453abbf21f99aebd5ec0fb2f653aff067e6006c8428128a"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/verify_capacity_parity_counts_20261016.py",
+          "sha256": "c3ebf1f7322e3cfe54d64eb6cb10012efb140a2f9d332e022149564df4a4f2fa"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0455-python.txt",
+          "sha256": "977a7192eb4927c5b8b4f7f23661e617cc04c86380a0ee603c3269a875f7f6c2"
+        }
+      ]
+    },
+    {
+      "id": "K0456",
+      "item": "research/knowledge/items/K0456-independent-row-win-loss-mobility-distribution.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/game-structure/reports/independent-row-mobility-distribution-20261016.md",
+          "sha256": "a9ffdfb0ef72b25cb1b435bbd5e2bec8537555fc9d1b50b90c5ba463990cc426"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/verify_mobility_20261016.py",
+          "sha256": "702cba000f251e27a9a2382ca5630f352d96c6f8e9121534b8783cf02998da02"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0456-python.txt",
+          "sha256": "ecc346ba852839a16696b55e5090f081c7021b12c383be3533d4bcc72d59c40f"
+        }
+      ]
+    },
+    {
+      "id": "K0457",
+      "item": "research/knowledge/items/K0457-lattice-three-parallel-four-q6-circles.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/geometry/reports/lattice-three-circles-q6-20261018.md",
+          "sha256": "062a8701b4c538da0bf4d7738d86bc4a72af76a7eb6e21661aac0d2c663b3dd8"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/lattice_three_circles_q6.py",
+          "sha256": "4a1ac7701663ee903b960577ccb9ff36768a991e1a635bfdbe76b1918648799e"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/lattice_three_circles_q6_independent.cpp",
+          "sha256": "1fb60e5299fa5eb49be6d247705869d10df3384f957f5a6814f877db344ffb72"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0457-cpp.txt",
+          "sha256": "c471977f602a07e9faeea3356e456f3f1c7bed10d07bd90acc7f1d6e61f27995"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0457-python.txt",
+          "sha256": "1adca7f63ce3aad1364eba2480ad93073eee9995928183b538c427a6d4b10ee3"
+        }
+      ]
+    },
+    {
+      "id": "K0458",
+      "item": "research/knowledge/items/K0458-new-four-row-q8-slope-181273-over-40152.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q48-gaussian-circle-census-100m-20261015.md",
+          "sha256": "44e112ebb148221c53852bffd4a80ca586983c44608c13924747f2ed76f5887e"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q48_gaussian_census_independent_audit_20261015.py",
+          "sha256": "4e02a0e49563018e69ed8f558eb141ab641d45d4292c84376f2443dbc1d75a86"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0458-python.txt",
+          "sha256": "95db0cfbb8c509428f85b35b0466bdb61441a38782fec235c3499e6698fe8a1d"
+        }
+      ]
+    },
+    {
+      "id": "K0459",
+      "item": "research/knowledge/items/K0459-pairsum-reconstruction-power-of-two.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/pairsum-reconstruction-20261018/proof.md",
+          "sha256": "1456264249032ac2794036337c6785ac856d6164132316dfc5076e7d2f6e597d"
+        },
+        {
+          "path": "research/experiments/pairsum-reconstruction-20261018/verify.py",
+          "sha256": "419eca0b1da6b66d005d8e7989007622d7048067369cc26580e66dfe2f28d54a"
+        },
+        {
+          "path": "research/experiments/pairsum-reconstruction-20261018/audit_independent.cpp",
+          "sha256": "9514f68c75daf2b57b99937a98c14540fd60dd524001603a9f49553f743e2fc5"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0459-cpp.txt",
+          "sha256": "501857d4496463d605e987c38b64f60c410323f4b1e3d8658739a6db4562ddb1"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0459-python.txt",
+          "sha256": "aaceb46674046fb2f877ee398a6b88715db53fc99d35732d572dd1e6f008e1e4"
+        }
+      ]
+    },
+    {
+      "id": "K0460",
+      "item": "research/knowledge/items/K0460-path-cycle-grundy-periodicity.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/game-structure/path-periodicity-20261019/proof.md",
+          "sha256": "00e74a8f4f510480da35110a493ef1e08b562ccb707f96c1c02873826ba3d773"
+        },
+        {
+          "path": "research/experiments/game-structure/path-periodicity-20261019/verify_path_period.py",
+          "sha256": "6f23340eb9aa9a7a981f25fac18f1f2948f21793aa55ac0e113fc9ee544ce70f"
+        },
+        {
+          "path": "research/experiments/game-structure/path-periodicity-20261019/verify_path_period_independent.cpp",
+          "sha256": "e1cac32b5c90e2672c883c40b2a096031516883d2c3cc2972ec0314fc57e8d20"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0460-cpp.txt",
+          "sha256": "f9883d3c6a0ace82620cf66703afc5c4fe509dc7304e321c64ec433fce06b066"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0460-python.txt",
+          "sha256": "1bbaf5cc2557c2a94173b70fb171b20dbc0b98082b68bba5c210073957dd0b61"
+        }
+      ]
+    },
+    {
+      "id": "K0461",
+      "item": "research/knowledge/items/K0461-prime-adic-anisotropic-row-sparsity.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/prime-spacing-row-sparsity-20261016.md",
+          "sha256": "c0e7581ed2da0b803c12d27ea3d20e4432b8e22abfb9deb96243cd68c260c0a8"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/verify_prime_spacing_20261016.py",
+          "sha256": "c2283244009690f9500512eba4163690869c7d8228f93b5c9436cfe3e48dca16"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0461-python.txt",
+          "sha256": "07e65731108021e9e8b69056fb78876c4a749d90170fd1f4fcbc09ac171bb7c9"
+        }
+      ]
+    },
+    {
+      "id": "K0462",
+      "item": "research/knowledge/items/K0462-residual-three-small-edges-grundy-bound.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/game-structure/reports/residual_three_edges_q4_20261018.md",
+          "sha256": "1666e4e2e781666f5a7ca3c31ac0c19a7c323a46eefe1e5a2b629ae60d4a15b6"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/residual_three_edges_q4_20261018.py",
+          "sha256": "049e140a44fd2754a1d3ca0efb32e447ff196e95dac7ef41e2bd5f25579471b9"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/residual_three_edges_q4_independent.cpp",
+          "sha256": "5a0616df50e0d2f02985efcb00820249f0d4d63fe2d2814836e4da8fc3f756c3"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/residual_three_foursets_minimum_20261018.py",
+          "sha256": "6c56ae722b033415670c0dde2e62cac8c21b2eeb995d03ffa567c64088a9494d"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0462-cpp.txt",
+          "sha256": "69ae62d3aba34ed1baf0e5ce4df91bf59296c75c09a4bdb5d0b14548f7df6f67"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0462-python.txt",
+          "sha256": "4544cdf6acbc109fa4c4050db2fdfbd81b424582f3c84af50720d92be9d90f32"
+        }
+      ]
+    },
+    {
+      "id": "K0463",
+      "item": "research/knowledge/items/K0463-safe-extension-counting-and-terminal-gap.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/game-structure/reports/safe-extension-complexity-20261019.md",
+          "sha256": "9e3b45691f9fe794eb99dbb5e262289f5015609494fe0c78a2660253c629c218"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/verify_safe_extensions_20261019.py",
+          "sha256": "0957315d1b7937107bf283044a95206b67ed76118daa3e01378dc0a7f94cc843"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/independent_safe_extensions_20261019.cpp",
+          "sha256": "91ec039650d59f624fc46484c840389baf415ff1c09c05bd2d1382fb384cabae"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0463-cpp.txt",
+          "sha256": "3f4dba196e3130537893366e9392640f6fa2f0ddd09300038ae5857b4107829d"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0463-python.txt",
+          "sha256": "2aadabebfd420130d5bcf3a0c70357b4fca0866068071bae8fc6455ef240b25f"
+        }
+      ]
+    },
+    {
+      "id": "K0464",
+      "item": "research/knowledge/items/K0464-spaced-five-row-q9-mod9.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/spaced-five-row-q9-mod9-20261016.md",
+          "sha256": "23ddb5d3c9e0e2b19fd69b5edd742b10680dc47f5f872153eae55995cfc81301"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/verify_spaced_five_rows.py",
+          "sha256": "1cd5493a12729b964d45d42742d11ddb17a406a5c5d18fa56015c3863358a492"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0464-python.txt",
+          "sha256": "d9e7f447191834a3d31d94b37109f487a7d7b19a9e5e162d60e38e82e26ba2bb"
+        }
+      ]
+    },
+    {
+      "id": "K0465",
+      "item": "research/knowledge/items/K0465-sunflower-residual-grundy-closed-form.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/sunflower-grundy-20261019/README.md",
+          "sha256": "94be265b9401326afc93cfaa937bd1c028c15441236489dcdbcd669f5364c8bf"
+        },
+        {
+          "path": "research/experiments/sunflower-grundy-20261019/verify.py",
+          "sha256": "6829de5b74d43d0a5a51caa0d77d916c817bf59e3095122649c2ce81c2a03a22"
+        },
+        {
+          "path": "research/experiments/game-structure/reports/sunflower_grundy_20261018.md",
+          "sha256": "44587a6b986bf6c74e850413e04748bb8ffa23cc8413b1c3903ff8bebc8b88a9"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/sunflower_grundy_20261018.py",
+          "sha256": "d1e3b2517b575de9a75a421124841c8dcdf2b3c4766b4339696ed80850345307"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0465-python.txt",
+          "sha256": "acd81899e0dab619a846d3558af308f5b64383b9adae7f892da07988aabcddf8"
+        }
+      ]
+    },
+    {
+      "id": "K0466",
+      "item": "research/knowledge/items/K0466-symmetric-five-column-q6-rigidity.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q36-symmetric-five-columns.md",
+          "sha256": "66a3b2cb3f8b6a5e035afc871b69c8b893186fba2b27d6b993b2e705928b892b"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/symmetric_five_columns_q6.py",
+          "sha256": "e234873043293ae1aea0df0256336ad2f21402f86791a89fd42d5dab738acf1c"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/symmetric_five_columns_q6_independent.cpp",
+          "sha256": "9abe37ef307c172fb459a74ae51a321ef6f0b3ba3043d2bef13dcb812c403e53"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0466-cpp.txt",
+          "sha256": "c5dcb46ef381913ea6478177c8b85b9c72f690101a4ce803313bed6d5f33a084"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0466-python.txt",
+          "sha256": "2fd9e2ca17d7ce82f9dae019c5ead1f154d4c06260090b1d590a35a5007ac852"
+        }
+      ]
+    },
+    {
+      "id": "K0467",
+      "item": "research/knowledge/items/K0467-tangent-mod16-fixed-width-circle-capacity.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/tangent-mod16-circle-capacity-20261016.md",
+          "sha256": "6a01084dd1c21de3d9952bbb71e243e0654a4f5368ded77cf86ec3bc842f3b60"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/tangent_mod16_separation_20261016.py",
+          "sha256": "bec632f9f5e58df60e8c8bcfc09b2939423dd9e642e3c7596e24eddd2ac5429b"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0467-python.txt",
+          "sha256": "0ec7d3508f55906c315bc49b7e508c11ee2b51caa64e80c068b191ef25827398"
+        }
+      ]
+    },
+    {
+      "id": "K0468",
+      "item": "research/knowledge/items/K0468-three-by-five-q6-real-row-gap-classification.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q36-real-row-gap-m5.md",
+          "sha256": "27c5cae368427c98ab59f7a4ca77143e1913cac6a512e6d243aacb368cc159d3"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q36_real_row_gap_m5.py",
+          "sha256": "d2fd056d5ff7af946c6a341c174ea9a28c90a0af5653af3885988f96be451379"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp",
+          "sha256": "da48837ef8bc2200038306530c726985fbb3fca18fa9d641541c93084fa4ef5c"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0468-cpp.txt",
+          "sha256": "45d1995d2d70b8c6d6a49711096648a8cb815135a4b0757a2ce7e799a0248d70"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0468-python.txt",
+          "sha256": "8b3ee4e705dc10c21c5fe36db7cf23e73fb90bf255a2fe81c57216e68d765ee2"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0468-regenerated.json",
+          "sha256": "6d49f599dda08e6fc93796f7c79933887910cfd94e6af1d7b66fff49dd30a7ae"
+        }
+      ]
+    },
+    {
+      "id": "K0469",
+      "item": "research/knowledge/items/K0469-three-by-four-q6-row-spacing-classification.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/three-by-four-q6-row-spacings-20261018/proof.md",
+          "sha256": "76faedd53c4d607044fc4ba87a7c3461b15a33b5851725eb7c6342ece24d911a"
+        },
+        {
+          "path": "research/experiments/three-by-four-q6-row-spacings-20261018/verify.py",
+          "sha256": "16c939a93e9ac1d6ab35a444d194b1bc068c744098407ba45de057202096b266"
+        },
+        {
+          "path": "research/experiments/three-by-four-q6-row-spacings-20261018/verify_independent.cpp",
+          "sha256": "e0483f1da69b8f7daa6c3d4a4016179cc7cbbf0efc5a1decc1abc79f4ded7e73"
+        },
+        {
+          "path": "research/experiments/three-column-four-row-q6-20261018/proof.md",
+          "sha256": "826a020c65214b36eb345c22e6aa7aac2259e633027ba63096b3d7c0064ecf32"
+        },
+        {
+          "path": "research/experiments/three-column-four-row-q6-20261018/verify.py",
+          "sha256": "5385b940e6adb51a00350525a9b2b67321eb91926025eb768dccd3555194f059"
+        },
+        {
+          "path": "research/experiments/three-column-four-row-q6-20261018/independent_recurrence.py",
+          "sha256": "9c02ef49648028a3cfd7baa883dc09d39c26db3d82a8954c0ed551baff353080"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0469-cpp.txt",
+          "sha256": "f1c19e32aba9f7e0cf6cdb851030a554c4b136442df236196b39bece4db87615"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0469-python.txt",
+          "sha256": "5cc4d5c73328c149b572c5b770d9959b98b14bc6d54e42a8ff54f2f507c22fbe"
+        }
+      ]
+    },
+    {
+      "id": "K0470",
+      "item": "research/knowledge/items/K0470-three-column-arbitrary-integer-spacing.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/three-column-arbitrary-d-complete-classification-20261017.md",
+          "sha256": "4fdbe1ce99a4a125b9e8d309d1f1b72d7dc0a89288015c569afa316e243f14aa"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/three_column_arbitrary_d_construct_20261017.py",
+          "sha256": "1a6a4515779e12cc7670e2e160889870023fa09a55a6f25c55844a45ca26076e"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0470-python.txt",
+          "sha256": "9a20a8d847f7fe72ebbc1a03e0cc73de1163ca0181017697690e5e2438bf222a"
+        }
+      ]
+    },
+    {
+      "id": "K0471",
+      "item": "research/knowledge/items/K0471-three-column-constant-five-unbounded-six-onset.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/three-column-constant-five-unbounded-six-20261017.md",
+          "sha256": "610022eff81ce31b8560de48ef3cb7b5ee70200732987f8f2461d5f0a81537ff"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/verify_constant_five_unbounded_six_20261017.py",
+          "sha256": "bc050021a104391527167f4d27263e7dfe888df8c27925d5fd1089f29a9eedf0"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0471-python.txt",
+          "sha256": "ff00545325c6a630044c53f0cd9022c7b1014ed4a7327dff2a665ee83a4edd94"
+        }
+      ]
+    },
+    {
+      "id": "K0472",
+      "item": "research/knowledge/items/K0472-three-column-five-implies-six.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/three-column-five-to-six-universal-20261017.md",
+          "sha256": "3365899c5b83181935c1a338b8a540bf85e544248b30dd6a61aafd8e80b15c46"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/three_column_five_to_six_verify.py",
+          "sha256": "72d50e73888044d0c828e2a98d6cdcb795a603b1523c6d3e445c086aaa38b3ac"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0472-python.txt",
+          "sha256": "7d369f08d1e660f2bfe69264c668374803e706e3003737230e0115b0b092b1d9"
+        }
+      ]
+    },
+    {
+      "id": "K0473",
+      "item": "research/knowledge/items/K0473-three-column-five-six-height-gap.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/three-column-unbounded-five-six-height-gap-20261017.md",
+          "sha256": "784d1a1e39ee0dbf1d6ba7237f032d76d89fc8843cab68718bd28d316ccd8b84"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/verify_three_column_height_gap_20261017.py",
+          "sha256": "a8cae7e4831b388453540b80cec0e49b6f78e073678090f5da366cc3457b75d3"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/verify_three_column_height_multiplicity_20261017.py",
+          "sha256": "a21f69639372570a9ee5ddf4afb034d73000b5708f2449e49707129161eb24f7"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0473-multiplicity-python.txt",
+          "sha256": "adfed9b45c548e4652ed5c6d935ceddaf4c6b10b5df4b47dd8a6412978371d14"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0473-python.txt",
+          "sha256": "bb4bfacf3cacb85dca70ee341684fa5289e3a958c4e2141385e7dfb93d7cfd64"
+        }
+      ]
+    },
+    {
+      "id": "K0474",
+      "item": "research/knowledge/items/K0474-three-column-four-row-generic-q4.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/three-column-four-row-generic-q4-20261017.md",
+          "sha256": "aa08e1fe2fce7f98cf624a200ca1f10db4646c0c20a69b29193e8aac8a8701ad"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/three_column_four_row_generic_q4_20261017.py",
+          "sha256": "65f919f3cb17e6066bce5f9581464ef4ac2fb8d347c9b9e3bff3a7ab3c585dd0"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/three_column_four_row_generic_q4_independent_20261017.cpp",
+          "sha256": "c07b88408329ad2833ac03008afec73bac35a6cdb3b66771e707ce9d8fdf53a2"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0474-cpp.txt",
+          "sha256": "f3e5676d5b6d3a8528d956844244275d70230333526fad4eb1ed9e807283f62b"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0474-python.txt",
+          "sha256": "08c36fa1b0d8d934fe63bff2c06cadf0bdfe3103a68eebf021c1639323c5879b"
+        }
+      ]
+    },
+    {
+      "id": "K0476",
+      "item": "research/knowledge/items/K0476-three-parallel-four-point-q6-circle-count.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/geometry/reports/three-parallel-four-points-q6-sharp-20261018.md",
+          "sha256": "c41591a3be5270995673a1fc050ecb50812a437ec865d2841c9b4982c30d5392"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/three_parallel_four_q6_audit.py",
+          "sha256": "ddd36518bb8ad95a19c821004d01aeb0de170cc694fd814ccda969119019ec5d"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/three_parallel_four_q6_independent.cpp",
+          "sha256": "1cc8d9cdbfef55398a558ecee51ecfb64537d857aa6a7fc36307a295ce7ae8a8"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0476-cpp.txt",
+          "sha256": "550568b4ee6a5336f282bffbfcf20fdf2b2f16cf4eb40b804b3798755ee23e79"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0476-python.txt",
+          "sha256": "7b0cbf406058aa77a0cc8fb6f67aa960ed5cdb91efe55458c1d3e09a0aa12cbc"
+        }
+      ]
+    },
+    {
+      "id": "K0477",
+      "item": "research/knowledge/items/K0477-three-parallel-four-q6-minimum-integer-box.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/geometry/reports/three-parallel-four-q6-minimum-integer-box-20261018.md",
+          "sha256": "e66d567f8ea05a6b4c68187fd92b780ad7496fb2c5a6ac37add3f1eb2ad92385"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/three_parallel_four_q6_minbox_primary.cpp",
+          "sha256": "879a5ed103b1ef3644ec167c52770527ba706cf536ae4a77bea55172411f6056"
+        },
+        {
+          "path": "research/experiments/geometry/scripts/three_parallel_four_q6_minbox_independent.cpp",
+          "sha256": "364da2e17e9d294d9afd13c1e876aa8264a8444605f145af7c6ddb4961a4924c"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0477-independent-cpp.txt",
+          "sha256": "c7cbd368a09340ad8610a50786c774f17ee802ba48a1f062be3fe74881a85ae6"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0477-primary-cpp.txt",
+          "sha256": "c7cbd368a09340ad8610a50786c774f17ee802ba48a1f062be3fe74881a85ae6"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0477-witness-python.txt",
+          "sha256": "6e27a1578f55e15bfeac05e4dbba2342bad0e6c9e514c85a0a3b6a45764e489e"
+        }
+      ]
+    },
+    {
+      "id": "K0478",
+      "item": "research/knowledge/items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/q6-18-rigidity-20261018/proof.md",
+          "sha256": "c5e254d51a223e6acc3ae6d98d3ba4b8ed8b9c02e3afd30dc73037d160e0f50b"
+        },
+        {
+          "path": "research/experiments/q6-18-rigidity-20261018/verify.py",
+          "sha256": "ee554fb19814786dad1dd068a0f2778ad852cac8b378d877b092520262f0190f"
+        },
+        {
+          "path": "research/experiments/q6-18-rigidity-20261018/audit_independent.cpp",
+          "sha256": "c8bd3f7d9d4300ae6746438bb54cc9389fe497537d5e50d5c2fb26b1a50b7840"
+        },
+        {
+          "path": "research/experiments/q6-18-rigidity-20261018/supporting-q6-19-proof.md",
+          "sha256": "1974a4159abc03aa35689aab40c08c52c790954d628c8e5e416176c5d3b4ac66"
+        },
+        {
+          "path": "research/experiments/q6-18-rigidity-20261018/supporting-q6-19-verify.py",
+          "sha256": "0edf2202c28af6f9e7bfaa5b89128be4efcd8feddccb5da606d2e9893db33e77"
+        },
+        {
+          "path": "research/experiments/q6-18-rigidity-20261018/supporting-q6-19-audit.cpp",
+          "sha256": "4f0cc53d1600c7828e1e0b759508710381756f0412010d1954709aee88a3f442"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0478-cpp.txt",
+          "sha256": "e3800545a0e8c36d3eb983929730f598948575175c8e73942976897691613d43"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0478-python.txt",
+          "sha256": "4a6885c245e24ca65469235b2a80d1519c4f06417cc19ff54dbb27a7524fadde"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0478-supporting-cpp.txt",
+          "sha256": "5b888ef8067b5e2e5b4a56b887c4bcbcf2ecfd8683b16b6448a703a68a7dc3c3"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0478-supporting-python.txt",
+          "sha256": "1617621a0df8608ce6228deceb11d9a93ff60fed98e4166bac913bc07f4c3078"
+        }
+      ]
+    },
+    {
+      "id": "K0479",
+      "item": "research/knowledge/items/K0479-three-row-five-circle-and-q5-grundy.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/three-row-five-circle-and-q5-grundy-20261017.md",
+          "sha256": "976f7ad77c077ae338d0b49acded3ebd6941db57dc345833e67c2a9c04b94b57"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/three_row_five_circle_classification_20261017.py",
+          "sha256": "d5ed5f3aa874f7c3c0c81d138327ac316eb3c69fa6da57b331e6493640572d88"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0479-python.txt",
+          "sha256": "131489945ac4fda9d2de4d8bbd9dcffd63f395963e8e8ec27a88fc8392f508f5"
+        }
+      ]
+    },
+    {
+      "id": "K0480",
+      "item": "research/knowledge/items/K0480-three-row-five-common-columns-six-point-circles.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/three-row-five-columns-20261019/reports/q6-five-common-columns-real-upper-bound.md",
+          "sha256": "349854ac2ebdb3b7178ab357b40db94c331467fbca02e80ceaeb26f1c01abfe0"
+        },
+        {
+          "path": "research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py",
+          "sha256": "4446e8bd1ade09ec823a530e5de780a9aa180ea8379e463c8582bb1f89bbe4dc"
+        },
+        {
+          "path": "research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.cpp",
+          "sha256": "d7d813150acbba74f85ef812be70cd9f1b39f1dd6f5cd8f275c5df78f7f1b4c7"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0480-cpp.txt",
+          "sha256": "dc795ee49a9116ff2294b91b97dcba94051f7e750add8d684863c0048b8c76cb"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0480-python.txt",
+          "sha256": "1cc9745c3cb37cbc9f24a7dce4060cf813c74219993d93aff03234ec620e4411"
+        }
+      ]
+    },
+    {
+      "id": "K0481",
+      "item": "research/knowledge/items/K0481-three-row-q4-all-spacing-first-moves.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/three-row-q4-all-spacing-20261017.md",
+          "sha256": "0614915dec3caebcdbf383d3a1b70a3d321e4f6afba4d15e782682b7a77b7a7a"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/three_row_q4_all_spacing_20261017.py",
+          "sha256": "db9ada368286cd68669a19832719b61216223daa60c8c1a34c0c351fa6a2e882"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0481-python.txt",
+          "sha256": "4bb1c8107a1586a26d29dc2d2782b6b88856f1cf84fff4cb7a0faa2a3db0209b"
+        }
+      ]
+    },
+    {
+      "id": "K0482",
+      "item": "research/knowledge/items/K0482-tree-grundy-minimum-orders-through-eight.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/game-structure/tree-grundy-minima-20261020/README.md",
+          "sha256": "4f5a1c65458319bd40e14c0b57063f13fb44228274c3426070879ce1d50066b2"
+        },
+        {
+          "path": "research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima.py",
+          "sha256": "018fa1d0335fa47530bf01b1800b68608353d84ff07884f3791ade8e53323bc2"
+        },
+        {
+          "path": "research/experiments/game-structure/tree-grundy-minima-20261020/tree_occupied_mex.cpp",
+          "sha256": "0455ad074660da48f8d3e4c90a84d9197e1bf9740db27f72c833ef8efa0e87c5"
+        },
+        {
+          "path": "research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima_networkx.py",
+          "sha256": "5954fa39313b0f9bf50b6c1eb9bed7e2137bfce8441b924e750e0a630108ae12"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0482-networkx.txt",
+          "sha256": "16a08a5088e4932363f81b8a6f59825b5e5867f652e3f0ac75ac218f17b604c1"
+        },
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0482-python-cpp.txt",
+          "sha256": "60c00c12245bd60abc33d709c6df7f642c3598765094132ec53589b1f757546d"
+        }
+      ]
+    },
+    {
+      "id": "K0483",
+      "item": "research/knowledge/items/K0483-two-forbidden-hyperedges-closed-grundy.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/two-forbidden-hyperedges-20261018/proof.md",
+          "sha256": "3ec1b53b005c6e61d07b3cde25b314fbec71c2977d36bf39cf49be0d4081e479"
+        },
+        {
+          "path": "research/experiments/two-forbidden-hyperedges-20261018/verify.py",
+          "sha256": "6e36838a222df1fee444bc13c3f2e5b5c8bccf774e436e6a1076d59eb421da83"
+        },
+        {
+          "path": "research/experiments/game-structure/reports/two-edge-exact-grundy-20261019.md",
+          "sha256": "e4053c2441ebfc91f45155574fafa62d5e2aa4c78a3b9497d01f0fba86ff1acc"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/verify_two_edges.py",
+          "sha256": "e3b5534f38ac1429cf398721c930f3600400ab364ae0d93b079660eec196c756"
+        },
+        {
+          "path": "research/experiments/game-structure/scripts/verify_two_edges.cpp",
+          "sha256": "989ab0fe240a3c62ae47e39132464ead2050eb19c05f599211a4aedf2fd18e17"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0483-python.txt",
+          "sha256": "5b919f70033524b59a4ed0570e668e5aa29bddcd8ef7c53515ebf74d3cf4e1b3"
+        }
+      ]
+    },
+    {
+      "id": "K0484",
+      "item": "research/knowledge/items/K0484-width-five-q9-all-lengths.md",
+      "status_after": "proved",
+      "status_before": "needs-review",
+      "sources": [
+        {
+          "path": "research/experiments/fixed-width/reports/q59-five-row-nine-point-exact-20261016.md",
+          "sha256": "293d7a4f7f2aa19bfbe3e2fa0924468692041566afd2e82a57025793671ca73c"
+        },
+        {
+          "path": "research/experiments/fixed-width/scripts/q59_no_nine_circle_verify_20261016.py",
+          "sha256": "47f3f2a489a0a18cae273a4149651e156d4f64bed1bdf230ad7cbcdafc59d08e"
+        }
+      ],
+      "outputs": [
+        {
+          "path": "research/experiments/knowledge-audit-20261021/K0484-python.txt",
+          "sha256": "7932f5882c3801df208ddf91eb2e20bb966e41f34bb82332d6c4fd3d548ca905"
+        }
+      ]
+    }
+  ]
+}

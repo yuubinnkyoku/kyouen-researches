@@ -1,0 +1,82 @@
+{
+  "classification": "exact symbolic finite reduction (1820 4-tuples)",
+  "circle_candidates": 16,
+  "four_circle_subsets": 1820,
+  "concurrency_categories": {
+    "inconsistent": 1318,
+    "inconsistent_parallel": 210,
+    "rank_one_only_u_zero_or_one": 5,
+    "rank_two_d_squared_negative": 37,
+    "rank_two_d_squared_zero": 24,
+    "rank_two_u_zero_or_one": 226
+  },
+  "rank_one_cases": [
+    {
+      "ids": [
+        0,
+        1,
+        3,
+        7
+      ],
+      "a": 0
+    },
+    {
+      "ids": [
+        0,
+        4,
+        8,
+        11
+      ],
+      "a": 1
+    },
+    {
+      "ids": [
+        1,
+        4,
+        12,
+        14
+      ],
+      "a": 2
+    },
+    {
+      "ids": [
+        3,
+        8,
+        12,
+        15
+      ],
+      "a": 3
+    },
+    {
+      "ids": [
+        7,
+        11,
+        14,
+        15
+      ],
+      "a": 4
+    }
+  ],
+  "finite_energy_pairs": 63504,
+  "finite_energy_histogram": {
+    "0": 72,
+    "1": 234,
+    "2": 462,
+    "3": 1106,
+    "4": 2582,
+    "5": 5942,
+    "6": 10974,
+    "7": 14974,
+    "8": 13178,
+    "9": 8484,
+    "10": 3578,
+    "11": 1300,
+    "12": 468,
+    "13": 48,
+    "14": 94,
+    "16": 8
+  },
+  "finite_energy_e15": 0,
+  "finite_energy_e16": 8,
+  "assertions_passed": true
+}

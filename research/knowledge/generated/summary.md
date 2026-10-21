@@ -20,10 +20,9 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 | active | 9 |
 | computed | 113 |
 | conjectured | 1 |
-| needs-review | 14 |
 | observed | 17 |
 | open | 34 |
-| proved | 213 |
+| proved | 227 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
@@ -94,20 +93,6 @@ K項目: 483 / alias: 269 / artifactファイル: 2576
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
-- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) [needs-review] 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
-- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) [needs-review] 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0
-- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) [needs-review] 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる
-- [K0470](../items/K0470-three-column-arbitrary-integer-spacing.md) [needs-review] 任意の整数間隔の三列格子における最大共円点数の完全分類
-- [K0471](../items/K0471-three-column-constant-five-unbounded-six-onset.md) [needs-review] 三列異方格子では5点円初出を3行に固定して6点円初出を無界にできる
-- [K0472](../items/K0472-three-column-five-implies-six.md) [needs-review] 任意の整数間隔の三列格子で5点円があれば6点円が無限に存在する
-- [K0473](../items/K0473-three-column-five-six-height-gap.md) [needs-review] 三列異方格子の5点円と6点円の初出行数差は無界で初出円は2本と1本
-- [K0474](../items/K0474-three-column-four-row-generic-q4.md) [needs-review] 不等間隔三列四行q4の一般位置は後手勝ちで全初手Grundy値4
-- [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) [needs-review] 3本の平行直線・各4候補点で6点円は最大3本、達成可能
-- [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) [needs-review] 3整数水平行・各4点の6点円3本を実現する最小包囲格子は7×4
-- [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) [needs-review] 任意三平行線の6点禁止ゲームで18候補不足極大は同和弦energy14の剛性型に限る
-- [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) [needs-review] 不等間隔三列・三行の5点円本数とq=5全安全局面Grundyを完全分類
-- [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) [needs-review] 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
-- [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) [needs-review] 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち
 
 ## 警告
 

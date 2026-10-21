@@ -462,21 +462,21 @@
 | [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) | 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界 | proposition | proved | geometry, variants, maximal-safe, maximum-safe, residual-games, search-methods |
 | [K0464](../items/K0464-spaced-five-row-q9-mod9.md) | 5本の等間隔整数行で間隔が3の倍数でなければ9点円は存在せず全長強解決 | proposition | proved | rectangles, geometry, variants, grundy |
 | [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) | ヒマワリ型残余禁止集合の全Grundy値は閉形式で高々3 | proposition | proved | grundy, residual-games, search-methods |
-| [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) | 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本 | proposition | needs-review | rectangles, variants, geometry, grundy, maximal-safe |
+| [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) | 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本 | proposition | proved | rectangles, variants, geometry, grundy, maximal-safe |
 | [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) | 接線行の法16制約による固定幅円点数の上界と5〜16行の厳密値 | proposition | proved | geometry, rectangles, variants, grundy |
-| [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) | 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0 | proposition | needs-review | rectangles, variants, geometry, grundy, maximal-safe, statistics |
-| [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) | 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる | proposition | needs-review | rectangles, variants, geometry, grundy |
-| [K0470](../items/K0470-three-column-arbitrary-integer-spacing.md) | 任意の整数間隔の三列格子における最大共円点数の完全分類 | proposition | needs-review | geometry, rectangles, variants |
-| [K0471](../items/K0471-three-column-constant-five-unbounded-six-onset.md) | 三列異方格子では5点円初出を3行に固定して6点円初出を無界にできる | proposition | needs-review | geometry, rectangles, variants |
-| [K0472](../items/K0472-three-column-five-implies-six.md) | 任意の整数間隔の三列格子で5点円があれば6点円が無限に存在する | proposition | needs-review | geometry, rectangles, variants |
-| [K0473](../items/K0473-three-column-five-six-height-gap.md) | 三列異方格子の5点円と6点円の初出行数差は無界で初出円は2本と1本 | proposition | needs-review | geometry, rectangles, variants |
-| [K0474](../items/K0474-three-column-four-row-generic-q4.md) | 不等間隔三列四行q4の一般位置は後手勝ちで全初手Grundy値4 | proposition | needs-review | rectangles, variants, geometry, grundy, first-moves, maximal-safe |
-| [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) | 3本の平行直線・各4候補点で6点円は最大3本、達成可能 | proposition | needs-review | geometry, variants, grundy |
-| [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) | 3整数水平行・各4点の6点円3本を実現する最小包囲格子は7×4 | proposition | needs-review | geometry, variants |
-| [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) | 任意三平行線の6点禁止ゲームで18候補不足極大は同和弦energy14の剛性型に限る | proposition | needs-review | rectangles, geometry, variants, maximal-safe |
-| [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) | 不等間隔三列・三行の5点円本数とq=5全安全局面Grundyを完全分類 | proposition | needs-review | geometry, rectangles, variants, grundy |
-| [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) | 3行・共通5列の6点円は最大4本で等号は正方格子型に限る | proposition | needs-review | geometry, rectangles, variants |
-| [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) | 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち | proposition | needs-review | geometry, rectangles, variants, grundy |
+| [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) | 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0 | proposition | proved | rectangles, variants, geometry, grundy, maximal-safe, statistics |
+| [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) | 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる | proposition | proved | rectangles, variants, geometry, grundy |
+| [K0470](../items/K0470-three-column-arbitrary-integer-spacing.md) | 任意の整数間隔の三列格子における最大共円点数の完全分類 | proposition | proved | geometry, rectangles, variants |
+| [K0471](../items/K0471-three-column-constant-five-unbounded-six-onset.md) | 三列異方格子では5点円初出を3行に固定して6点円初出を無界にできる | proposition | proved | geometry, rectangles, variants |
+| [K0472](../items/K0472-three-column-five-implies-six.md) | 任意の整数間隔の三列格子で5点円があれば6点円が無限に存在する | proposition | proved | geometry, rectangles, variants |
+| [K0473](../items/K0473-three-column-five-six-height-gap.md) | 三列異方格子の5点円と6点円の初出行数差は無界で初出円は2本と1本 | proposition | proved | geometry, rectangles, variants |
+| [K0474](../items/K0474-three-column-four-row-generic-q4.md) | 不等間隔三列四行q4の一般位置は後手勝ちで全初手Grundy値4 | proposition | proved | rectangles, variants, geometry, grundy, first-moves, maximal-safe |
+| [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md) | 3本の平行直線・各4候補点で6点円は最大3本、達成可能 | proposition | proved | geometry, variants, grundy |
+| [K0477](../items/K0477-three-parallel-four-q6-minimum-integer-box.md) | 3整数水平行・各4点の6点円3本を実現する最小包囲格子は7×4 | proposition | proved | geometry, variants |
+| [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) | 任意三平行線の6点禁止ゲームで18候補不足極大は同和弦energy14の剛性型に限る | proposition | proved | rectangles, geometry, variants, maximal-safe |
+| [K0479](../items/K0479-three-row-five-circle-and-q5-grundy.md) | 不等間隔三列・三行の5点円本数とq=5全安全局面Grundyを完全分類 | proposition | proved | geometry, rectangles, variants, grundy |
+| [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) | 3行・共通5列の6点円は最大4本で等号は正方格子型に限る | proposition | proved | geometry, rectangles, variants |
+| [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) | 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち | proposition | proved | geometry, rectangles, variants, grundy |
 | [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) | 二点禁止残局の木でGrundy値0〜8を実現する最小頂点数 | proposition | proved | grundy, residual-games |
 | [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) | 禁止集合が高々二つの有限配置ゲームは全安全局面のGrundy値に閉公式を持ち3以下 | proposition | proved | grundy, residual-games, search-methods, variants |
 | [K0484](../items/K0484-width-five-q9-all-lengths.md) | 五行九点版は全長で行容量だけに分離しM_{5,9}=8 | proposition | proved | rectangles, geometry, variants, grundy |

@@ -2,7 +2,7 @@
 id: K0479
 title: 不等間隔三列・三行の5点円本数とq=5全安全局面Grundyを完全分類
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -20,12 +20,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/three_row_five_circle_classification_20261017.txt
   role: data
   note: 4096盤と代表3盤の独立照合結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 三列x=0,a,a+b・三行y=0,d,2d、正整数a,b,d、q=5完全指摘通常プレイ
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。根和一致と第三列整合式から全円分類を確認。4096盤・代表全512局面と重み付き分布を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 三列三行の盤上5点円の本数は

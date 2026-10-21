@@ -2,7 +2,7 @@
 id: K0466
 title: 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - variants
@@ -27,6 +27,9 @@ artifacts:
 - path: research/experiments/fixed-width/output/symmetric_five_columns_q6_audit.txt
   role: data
   note: Pythonと独立C++による5代表の検証結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 solution:
   board: 3×5・q=6・左右対称な実数5列
   level: strong
@@ -46,11 +49,8 @@ solution:
   independent_check: 5整数代表について全5005六点組を独立行列式検査し全局面結果を照合
   note: u≠2vでは最大2円、空盤gは円本数0,1,2に対して1,0,1。u=2vでは最大4円。
 scope: 左右対称な5列を各行で共通使用する全正実数u>v>0、a,b>0。6点禁止・通常プレイ。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。左右対称5列の二点和重複・積差による全称分類を確認。Pythonと独立C++の幾何・全局面を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 3×5・q=6の左右対称列での円本数と勝敗の剛性

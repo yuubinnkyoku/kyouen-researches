@@ -2,7 +2,7 @@
 id: K0478
 title: 任意三平行線の6点禁止ゲームで18候補不足極大は同和弦energy14の剛性型に限る
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - geometry
@@ -35,12 +35,12 @@ artifacts:
 - path: research/experiments/q6-18-rigidity-20261018/supporting-q6-19-audit.cpp
   role: verifier
   note: 例外E16の1820型の独立C++検査
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 任意の実数座標上の3本の平行直線、各線18点以上の有限候補、q=6、完全指摘・通常プレイ。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。energy14の剛性分類・被覆の等号条件を確認。四円の全1820有理連立式をPython・独立C++で再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 18候補の不足極大が存在する場合の剛性

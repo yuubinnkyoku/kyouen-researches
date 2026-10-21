@@ -2,7 +2,7 @@
 id: K0471
 title: 三列異方格子では5点円初出を3行に固定して6点円初出を無界にできる
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -19,12 +19,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/constant_five_unbounded_six_20261017.txt
   role: data
   note: t=2..50の弦長検査とt=2..9の独立全円列挙
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 三列x=0,1,t²、縦間隔t、t>=2、円のみの初出行数
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。弦差の同偶奇・範囲から初出高さと一意性を導く証明を確認。弦列挙と独立三点円列挙を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 正整数t>=2の三列異方格子 x=0,1,t²、y=tj (0<=j<m) で、少なくともq点を通る円の最小行数をH_q(t)とする。このとき H_5(t)=3、H_6(t)=2t+1。初出m=2t+1の6点円はちょうど1本。従ってH5を固定してもH6-H5およびH6/H5は無界。

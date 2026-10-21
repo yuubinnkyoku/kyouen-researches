@@ -2,7 +2,7 @@
 id: K0469
 title: 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - variants
@@ -44,13 +44,13 @@ artifacts:
 - path: research/experiments/three-column-four-row-q6-20261018/results.json
   role: data
   note: 4096整数盤の検算結果と3類型の全局面度数
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: V={(x,y):x=0,1,2,3; y=0,a,a+b}, a,b>0。q=6、円または直線、通常プレイ。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。共通和の二対と8弦選択から3等式へ帰着する証明を確認。群再帰と全局面Python・C++を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
 
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 3×4・6点版は行間隔の3等式で禁止円数と空盤Grundyが完全に決まる

@@ -2,7 +2,7 @@
 id: K0477
 title: 3整数水平行・各4点の6点円3本を実現する最小包囲格子は7×4
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - variants
@@ -21,12 +21,12 @@ artifacts:
 - path: research/experiments/geometry/output/three_parallel_four_q6_minbox_counts.txt
   role: data
   note: 二方式で一致した全5長方形の完全集計と全達成配置
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 相異なる3本の整数水平行に各4個の相異なる整数格子点を置く12点集合。非退化実円の6点共円を数える。包囲格子の面積WHを最小化。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。面積28以下の候補長方形の完全被覆を確認。独立2方式の全2186661配置を再走査し文字単位で一致。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 最小包囲格子面積は28

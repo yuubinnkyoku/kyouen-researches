@@ -2,7 +2,7 @@
 id: K0480
 title: 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -25,11 +25,11 @@ artifacts:
 - path: research/experiments/three-row-five-columns-20261019/output/q6-five-common-columns-integer-audit.json
   role: data
   note: 22638配置の完全列挙集計
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。5列の全重複和条件と積差による円数上界・等号分類を確認。独立2方式の22638配置が一致。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 3行・共通5列の6点円は最大4本

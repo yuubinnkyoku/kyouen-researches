@@ -2,7 +2,7 @@
 id: K0472
 title: 任意の整数間隔の三列格子で5点円があれば6点円が無限に存在する
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - rectangles
@@ -16,11 +16,11 @@ artifacts:
 - path: research/experiments/fixed-width/scripts/three_column_five_to_six_verify.py
   role: verifier
   note: 二次形式不変性と独立円決定による有限検算
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。二次形式を保存する整数変換と零点数上界、半弦長発散を確認。1260不変式・94構成を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 ## 命題・範囲

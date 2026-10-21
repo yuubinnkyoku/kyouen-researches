@@ -2,7 +2,7 @@
 id: K0476
 title: 3本の平行直線・各4候補点で6点円は最大3本、達成可能
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - geometry
 - variants
@@ -28,11 +28,11 @@ artifacts:
 - path: research/experiments/geometry/output/three_parallel_four_q6_independent.txt
   role: data
   note: C++監査結果
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。次数二乗和の等号条件と横中心係数の5分割による4円排除を確認。Pythonと独立C++を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 3本の平行直線・各4候補点で6点円は最大3本、達成可能

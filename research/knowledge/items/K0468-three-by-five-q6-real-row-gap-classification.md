@@ -2,7 +2,7 @@
 id: K0468
 title: 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - variants
@@ -31,6 +31,9 @@ artifacts:
 - path: research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv
   role: data
   note: 独立検証用13有理数代表と期待値
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 solution:
   board: 3×5・q=6・実数行間隔
   level: strong
@@ -50,11 +53,8 @@ solution:
   independent_check: 全13代表の5005個の6点組を4×4整数行列式で独立生成し全局面結果と照合
   note: 空盤g=0 iff 円1本、それ以外は1。最大円4本はa=b=1のみ
 scope: 横座標{0,1,2,3,4}、行座標{0,a,a+b}、a,b>0の全実数、q=6・円と直線禁止・通常プレイ。全安全局面は各幾何型の有限完全列挙。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。6直線・6交点・13場合への全称帰着を確認。全13代表の独立C++六点組・mexが一致。JSON形式差は監査出力に分離して全共有値を照合。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 3×5・q=6の任意実数行間隔の完全分類

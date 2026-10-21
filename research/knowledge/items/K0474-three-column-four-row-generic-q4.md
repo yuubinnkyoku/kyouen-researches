@@ -2,7 +2,7 @@
 id: K0474
 title: 不等間隔三列四行q4の一般位置は後手勝ちで全初手Grundy値4
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - variants
@@ -34,6 +34,9 @@ artifacts:
 - path: research/experiments/fixed-width/output/three_column_four_row_generic_q4_independent_20261017.txt
   role: data
   note: C++17独立監査の実行出力
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 solution:
   board: 不等間隔3列×4行・q=4
   level: strong
@@ -52,11 +55,8 @@ solution:
   certificate: 円の完全算術判定と27禁止組への還元、12ビット1655安全局面の完全mex計算
   independent_check: Pythonの整数3×3行列式とC++の整数4×4置換行列式、別方式の再帰が一致
   note: 空盤g=0、全12初手g=4、極大石数5/6/7
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。288必要十分等式・積上界と27固定禁則への帰着を確認。4096盤Pythonと独立C++全局面を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 不等間隔三列四行q4の一般位置

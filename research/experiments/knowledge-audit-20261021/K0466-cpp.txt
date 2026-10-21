@@ -1,0 +1,6 @@
+PASS generic_off circles=0 safe=32768 root=1 maxg=1
+PASS generic_one circles=1 safe=32256 root=0 maxg=1
+PASS generic_two circles=2 safe=31776 root=1 maxg=3
+PASS exceptional_four circles=4 safe=30866 root=1 maxg=5
+PASS generic_ratio_3_2 circles=1 safe=32256 root=0 maxg=1
+PASS all 5 independent determinant/game cases

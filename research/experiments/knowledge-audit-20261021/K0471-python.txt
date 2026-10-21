@@ -1,0 +1,20 @@
+exact chord audit: t=2..50
+  t= 2 H5=3 H6=  5 six-chord-solutions=1
+  t= 3 H5=3 H6=  7 six-chord-solutions=1
+  t= 4 H5=3 H6=  9 six-chord-solutions=1
+  t= 5 H5=3 H6= 11 six-chord-solutions=1
+  t=10 H5=3 H6= 21 six-chord-solutions=1
+  t=20 H5=3 H6= 41 six-chord-solutions=1
+  t=30 H5=3 H6= 61 six-chord-solutions=1
+  t=40 H5=3 H6= 81 six-chord-solutions=1
+  t=50 H5=3 H6=101 six-chord-solutions=1
+independent determinant/triple audit: t=2..9
+  t= 2 H5=3 H6= 5 distinct-circles=240 six-circles=1
+  t= 3 H5=3 H6= 7 distinct-circles=743 six-circles=1
+  t= 4 H5=3 H6= 9 distinct-circles=1658 six-circles=1
+  t= 5 H5=3 H6=11 distinct-circles=3089 six-circles=1
+  t= 6 H5=3 H6=13 distinct-circles=5210 six-circles=1
+  t= 7 H5=3 H6=15 distinct-circles=8027 six-circles=1
+  t= 8 H5=3 H6=17 distinct-circles=11858 six-circles=1
+  t= 9 H5=3 H6=19 distinct-circles=16625 six-circles=1
+PASS: all exact assertions
