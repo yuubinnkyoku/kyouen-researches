@@ -32,3 +32,17 @@ python3 research/experiments/residual-gate-calibration-20261021/run.py
 C++20 / -O2で現行solverを一度コンパイルし、固定した15バッチを順次実行する。`--solver PATH` で事前コンパイルした同じ実装を指定できる。各バッチのraw CSV、全測定行、集計を本ディレクトリへ保存する。チェックは確定勝敗の一致、行数・予算・閾値、時間の整合性、繰返し間の結果・ノード数・残余計数の一致を含む。
 
 この保存局面標本から、全11×11局面に共通する最適閾値や空盤勝敗を主張しない。実測が出るまでは既定値を変更しない。
+
+## 深い既存rootの補助検査
+
+小さい保存局面の時間測定と別に、前実験・既存CIで使ったS5の3rootを各5000ノードで再実行する。比較閾値は同じOFF/6/8/10/12、各1回。これは新しいrootの探索ではなく、既存rootの予算を小さくした固定回帰である。調整用52局面の選択規則は変更しない。
+
+`stress-protocol.json` と `stress-input.csv` は実行前に固定する。元CSVで0だったlegalメタデータは既存幾何実装から再計数する。判定・実ノード数・探索時間を `stress-summary.json` へ保存する。1回の時間測定から厳密な速度比を主張しない。UNKNOWNから確定したrootがあれば、新しい証拠として採用する前に別途独立検証する。
+
+```sh
+python3 research/experiments/residual-gate-calibration-20261021/stress.py \
+  --solver /tmp/kyouen-gate-calibration
+python3 -m unittest discover -s research/experiments/residual-gate-calibration-20261021 -p test_protocol.py
+```
+
+プロトコルの6テストは、確認用の値が設定選択へ混入しないこと、UNKNOWN数の優先、反復計数の不一致、勝敗矛盾、予算の不一致、不可能な時間の棄却を検査する。計測バッチは順次実行し、主実験と補助実験を並行して時間比較しない。

@@ -1,0 +1,15 @@
+{
+  "source": "research/experiments/residual-closed-forms-20261021/replay-input.csv",
+  "source_sha256": "a935e6ff0ba6f5c083047bc3bc79456cf1d5af0b1e54931fa99019803f062526",
+  "gates": [
+    0,
+    6,
+    8,
+    10,
+    12
+  ],
+  "budget_per_root": 5000,
+  "repeats": 1,
+  "purpose": "bounded UNKNOWN regression; supplemental only, not used for training selection",
+  "newly_decided_policy": "record and independently validate before adopting any new verdict"
+}
