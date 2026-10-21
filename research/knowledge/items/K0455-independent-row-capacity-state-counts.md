@@ -2,7 +2,7 @@
 id: K0455
 title: 独立行容量ゲームの勝敗局面数と非終局負け局面の漸近密度
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - rectangles
 - variants
@@ -23,12 +23,12 @@ artifacts:
 - path: research/experiments/fixed-width/output/capacity_parity_counts_audit_20261016.txt
   role: data
   note: 有限監査と五行九点版の具体値
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 幅w・長さm・各行容量rの独立行石置き通常プレイ、w,m,r>=1。標準共円ゲームへの適用には独立行帰着の別証明が必要。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。偶奇射影・交代二項和・固定不足層の漸近式を確認し75条件を直接列挙。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 `a=min(m,r)`, `S=sum_{j=0}^a binom(m,j)` とおく。独立行容量ゲームの全安全局面数は `S^w`、勝ち局面数は `(S^w−binom(m−1,a)^w)/2`、負け局面数は `(S^w+binom(m−1,a)^w)/2`、極大局面数は `binom(m,a)^w` である。

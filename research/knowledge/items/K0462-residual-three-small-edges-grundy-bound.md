@@ -2,7 +2,7 @@
 id: K0462
 title: 残余禁止集合が3個以下かつ各4点以下ならGrundy値は3以下
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - grundy
 - residual-games
@@ -32,11 +32,11 @@ artifacts:
 - path: research/experiments/game-structure/scripts/residual_three_foursets_minimum_20261018.py
   role: verifier
   note: 全て4点の禁止集合で空盤値3の最小点数と度数を独立確認
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。7所属型への全称帰着と4/30/641型の完全性を確認。型再帰Pythonとビット再帰C++の全分布を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 3個以下・各4点以下の残余禁止集合のGrundy値上界

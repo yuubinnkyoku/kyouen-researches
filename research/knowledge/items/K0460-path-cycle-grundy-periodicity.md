@@ -2,7 +2,7 @@
 id: K0460
 title: 二点禁止の道Grundyは52以降最小周期34、最大次数2の鋭い上界は15
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - grundy
 - residual-games
@@ -29,11 +29,11 @@ artifacts:
 - path: research/experiments/game-structure/path-periodicity-20261019/path_period_results.json
   role: data
   note: 再生成可能な周期基底とGrundy値・最小頂点数
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
+evidence: '2026-10-21監査。無限周期延長補題・88基底等式・周期最小性・16状態最短路を確認。Pythonと独立C++を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 道・閉路の二点禁止残局Grundyと次数2上界

@@ -2,7 +2,7 @@
 id: K0456
 title: 独立行容量ゲームの勝敗別合法手数分布と条件付き平均の厳密公式
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - variants
 - grundy
@@ -19,12 +19,12 @@ artifacts:
 - path: research/experiments/game-structure/output/mobility-audit-20261016.txt
   role: data
   note: 95条件・317253局面の完全有限検算結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 各行の占有上限以外に禁止集合がないw行m点の容量ゲーム、w,m,r>=1
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。二変数母関数・平均差の正値性・境界を確認し95条件317253局面を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 勝敗別の合法手数の完全分布
@@ -47,5 +47,4 @@ m<=r,wm>=2では勝敗別平均はともにwm/2。
 全称証明と厳密閉公式は上記report。有限検算は95条件・317253局面。
 **共円ゲームへの適用は行間の禁止集合がないと証明された領域に限定する。**
 
-K0440は未統合の仮番号。mainへの書き込みが安全検査で拒否され、
-knowledgeチェック・生成索引再構築・リポジトリ全体の回帰は未実施。
+取込時の未統合状態は解消済み。現行項目の検査・生成索引再構築は2026-10-21監査で実施。

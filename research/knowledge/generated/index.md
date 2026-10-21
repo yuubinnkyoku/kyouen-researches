@@ -451,17 +451,17 @@
 | [K0452](../items/K0452-four-row-q8-three-dual-pell-slope-limits.md) | 四行8点円の実現傾きには少なくとも三つの集積点があり種類数は対数以上 | proposition | needs-review | geometry, rectangles, variants |
 | [K0453](../items/K0453-geometric-four-q4-grundy-five.md) | 整数6×6内の11点と4共円禁則でGrundy値5が実現し、点数・包含正方形が最小 | proposition | needs-review | geometry, grundy, residual-games, variants |
 | [K0454](../items/K0454-half-integral-center-circle-band-maxima-through-63.md) | 5〜63連続整数行で水平中心が半整数の円の最大格子点数は二重点行数の2倍 | proposition | needs-review | geometry, rectangles, variants |
-| [K0455](../items/K0455-independent-row-capacity-state-counts.md) | 独立行容量ゲームの勝敗局面数と非終局負け局面の漸近密度 | proposition | needs-review | rectangles, variants, grundy, statistics |
-| [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) | 独立行容量ゲームの勝敗別合法手数分布と条件付き平均の厳密公式 | proposition | needs-review | variants, grundy, statistics |
+| [K0455](../items/K0455-independent-row-capacity-state-counts.md) | 独立行容量ゲームの勝敗局面数と非終局負け局面の漸近密度 | proposition | proved | rectangles, variants, grundy, statistics |
+| [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) | 独立行容量ゲームの勝敗別合法手数分布と条件付き平均の厳密公式 | proposition | proved | variants, grundy, statistics |
 | [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) | 3本の平行直線に各4整数点で6点円3本を実現できる | proposition | needs-review | geometry, variants, rectangles |
 | [K0458](../items/K0458-new-four-row-q8-slope-181273-over-40152.md) | 四行8点円には新しい既約傾き181273/40152の無限Pell族がある | proposition | needs-review | geometry, rectangles, variants |
-| [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) | 無順序二点和からのn点復元はnが2の冪のときに限り非単射 | proposition | needs-review | geometry, rectangles, variants |
-| [K0460](../items/K0460-path-cycle-grundy-periodicity.md) | 二点禁止の道Grundyは52以降最小周期34、最大次数2の鋭い上界は15 | proposition | needs-review | grundy, residual-games, search-methods, strategy-length |
+| [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) | 無順序二点和からのn点復元はnが2の冪のときに限り非単射 | proposition | proved | geometry, rectangles, variants |
+| [K0460](../items/K0460-path-cycle-grundy-periodicity.md) | 二点禁止の道Grundyは52以降最小周期34、最大次数2の鋭い上界は15 | proposition | proved | grundy, residual-games, search-methods, strategy-length |
 | [K0461](../items/K0461-prime-adic-anisotropic-row-sparsity.md) | 異方格子の水平間隔に余分な奇素因子があれば円は幅以下の点しか持たない | proposition | needs-review | geometry, rectangles, variants, grundy |
-| [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) | 残余禁止集合が3個以下かつ各4点以下ならGrundy値は3以下 | proposition | needs-review | grundy, residual-games, search-methods, variants |
+| [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) | 残余禁止集合が3個以下かつ各4点以下ならGrundy値は3以下 | proposition | proved | grundy, residual-games, search-methods, variants |
 | [K0463](../items/K0463-safe-extension-counting-and-terminal-gap.md) | 任意有限整数点盤の安全延長・終局計数は#P完全で極大長差は無界 | proposition | needs-review | geometry, variants, maximal-safe, maximum-safe, residual-games, search-methods |
 | [K0464](../items/K0464-spaced-five-row-q9-mod9.md) | 5本の等間隔整数行で間隔が3の倍数でなければ9点円は存在せず全長強解決 | proposition | needs-review | rectangles, geometry, variants, grundy |
-| [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) | ヒマワリ型残余禁止集合の全Grundy値は閉形式で高々3 | proposition | needs-review | grundy, residual-games, search-methods |
+| [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) | ヒマワリ型残余禁止集合の全Grundy値は閉形式で高々3 | proposition | proved | grundy, residual-games, search-methods |
 | [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) | 3×5・q=6の左右対称列では非等差なら6点円は最大2本、等差なら最大4本 | proposition | needs-review | rectangles, variants, geometry, grundy, maximal-safe |
 | [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) | 接線行の法16制約による固定幅円点数の上界と5〜16行の厳密値 | proposition | needs-review | geometry, rectangles, variants, grundy |
 | [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) | 3×5・q=6は任意の正実数行間隔で6点円が最大4本、空盤Grundyは円1本の場合のみ0 | proposition | needs-review | rectangles, variants, geometry, grundy, maximal-safe, statistics |
@@ -478,7 +478,7 @@
 | [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) | 3行・共通5列の6点円は最大4本で等号は正方格子型に限る | proposition | needs-review | geometry, rectangles, variants |
 | [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md) | 不等間隔三列三行q=4は全正整数間隔で全9初手が勝ち | proposition | needs-review | geometry, rectangles, variants, grundy |
 | [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) | 二点禁止残局の木でGrundy値0〜8を実現する最小頂点数 | proposition | needs-review | grundy, residual-games |
-| [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) | 禁止集合が高々二つの有限配置ゲームは全安全局面のGrundy値に閉公式を持ち3以下 | proposition | needs-review | grundy, residual-games, search-methods, variants |
+| [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) | 禁止集合が高々二つの有限配置ゲームは全安全局面のGrundy値に閉公式を持ち3以下 | proposition | proved | grundy, residual-games, search-methods, variants |
 | [K0484](../items/K0484-width-five-q9-all-lengths.md) | 五行九点版は全長で行容量だけに分離しM_{5,9}=8 | proposition | needs-review | rectangles, geometry, variants, grundy |
 | [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) | 11盤の既知S7 WIN四件を終局から独立再検証し、S6のUNKNOWN誤記を訂正 | verification | verified | square-outcomes, certificates, verification, provenance |
 | [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) | 11盤35個のS8 LOSSの385終局葉証明と246個のS7 LOSSへの伝播を独立検証 | verification | verified | square-outcomes, certificates, verification |

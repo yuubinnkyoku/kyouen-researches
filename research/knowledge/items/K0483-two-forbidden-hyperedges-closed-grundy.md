@@ -2,7 +2,7 @@
 id: K0483
 title: 禁止集合が高々二つの有限配置ゲームは全安全局面のGrundy値に閉公式を持ち3以下
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - grundy
 - residual-games
@@ -38,12 +38,12 @@ artifacts:
 - path: research/experiments/game-structure/output/two-edge-exact-grundy-20261019.json
   role: data
   note: 両検査の件数と範囲
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 任意有限点集合、包含極小禁止集合が0〜2個、完全指摘・二人通常プレイ、全安全局面
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。共通部・固有部の全境界を含むmex帰納法を確認。13795組5260248安全局面を再検査。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # 二禁止集合のGrundy閉公式

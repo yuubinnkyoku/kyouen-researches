@@ -1803,6 +1803,13 @@
 - [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (log): 証明の論理監査・再実行範囲・判定
 - [K0439](../items/K0439-five-edge-grundy-seven.md) (log): 証明の論理監査・再実行範囲・判定
 - [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0455](../items/K0455-independent-row-capacity-state-counts.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0462](../items/K0462-residual-three-small-edges-grundy-bound.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (log): 証明の論理監査・再実行範囲・判定
+- [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (log): 証明の論理監査・再実行範囲・判定
 ## [research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md](../../../research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md)
 
 - [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (source): 探索条件・witness・比較・限界

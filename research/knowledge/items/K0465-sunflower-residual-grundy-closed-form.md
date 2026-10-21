@@ -2,7 +2,7 @@
 id: K0465
 title: ヒマワリ型残余禁止集合の全Grundy値は閉形式で高々3
 kind: proposition
-status: needs-review
+status: proved
 topics:
 - grundy
 - residual-games
@@ -34,12 +34,12 @@ artifacts:
 - path: research/experiments/game-structure/output/sunflower_grundy_20261018.json
   role: data
   note: 12点以下1470盤・2580974安全局面の完全検証結果
+- path: research/experiments/knowledge-audit-20261021/README.md
+  role: log
+  note: 証明の論理監査・再実行範囲・判定
 scope: 任意有限ヒマワリ型禁止集合族 E_i=C∪P_i、各P_i非空で互いに素、Cは空でもよい。通常プレイの一点追加、自由点を許す。
-evidence: 2026-10-20添付統合。元資料では proved または computed と報告（個別の元statusは保存ZIPを参照）。本項目の全量化範囲に対する証明・計算の再監査は未完了。有限検証の実行範囲は統合実験のVALIDATION.mdを参照。
+evidence: '2026-10-21監査。花芯・最短花弁の大小別mex帰納と任意安全局面への帰着を確認。334構造579915安全局面の独立照合を再実行。 監査記録: research/experiments/knowledge-audit-20261021/README.md。'
 ---
-
-
-> 統合監査: 以下は取込元の主張・報告。全称証明・完全列挙の監査が未完了のため、現在の採用状態は needs-review。本文中の「証明」「一致」は元資料での報告を表す。
 
 
 # ヒマワリ型残余ゲームの閉形式
