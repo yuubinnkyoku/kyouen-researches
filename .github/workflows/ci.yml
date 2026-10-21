@@ -45,6 +45,12 @@ jobs:
           python research/experiments/residual-phase-profile-20261021/verify_outputs.py
       - name: Compile residual n11 integration
         run: c++ -std=c++20 -O2 -Wall -Wextra -Wpedantic -Icpp/solvers cpp/solvers/kyouen_dfpn_root.cpp -o /tmp/kyouen_dfpn_root
+      - name: Verify normal df-pn residual handoff and work limits
+        run: |
+          c++ -std=c++20 -O2 -Icpp/solvers cpp/tests/test_kyouen_residual_dfpn.cpp -o /tmp/test_residual_dfpn
+          /tmp/test_residual_dfpn
+          python research/experiments/residual-dfpn-integration-20261021/integration.py --solver /tmp/kyouen_dfpn_root --output /tmp/residual-dfpn-integration
+          python -m unittest discover -s research/experiments/residual-dfpn-integration-20261021 -p test_protocol.py
       - name: Verify bounded residual outcome fallback and archives
         run: |
           c++ -std=c++20 -O2 -Icpp/solvers cpp/tests/test_kyouen_residual_outcome.cpp -o /tmp/test_residual_outcome
