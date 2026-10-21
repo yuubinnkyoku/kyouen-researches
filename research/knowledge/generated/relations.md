@@ -2345,7 +2345,14 @@
 - → depends_on [K0460](../items/K0460-path-cycle-grundy-periodicity.md): 道・閉路のGrundy再帰と成分xor
 - → depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 既存の残余ゲーム圧縮との併用
 - ← depends_on [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md): 監査済み構造別残余評価器を用いた探索全体での閾値比較
+- ← depends_on [K0495](../items/K0495-residual-completion-index-profile.md): 監査済み残余評価kernelはそのまま用い、入力構築だけを比較
 
 ## [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) 固定52局面の残余切替閾値比較ではOFFが最速で、深い3局面のUNKNOWN数も改善しなかった
 
 - → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 監査済み構造別残余評価器を用いた探索全体での閾値比較
+- ← depends_on [K0495](../items/K0495-residual-completion-index-profile.md): 同じ固定52局面と深い3局面で構築費用を分解して再測定
+
+## [K0495](../items/K0495-residual-completion-index-profile.md) completion索引による残余構築は固定局面で従来scanと一致し、構築費用を削減した
+
+- → depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 監査済み残余評価kernelはそのまま用い、入力構築だけを比較
+- → depends_on [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md): 同じ固定52局面と深い3局面で構築費用を分解して再測定

@@ -8,8 +8,9 @@
 前回同様UNKNOWNを要求する。新しい確定値が出た場合は停止して別途検証する。
 
 `--residual-profile` は構築、構造処理、残りのGrundy評価を排他的に計測する。
-構造処理にはminimal化、閉形式の認識と適用、圧縮、成分分割、共有時の正準化を含む。
-Grundy側はmemo、子生成、再帰管理、mex等を含む。map破棄や勝敗変換は内訳に含めない。
+構造処理には各Grundy呼出しの入口でのminimal化、閉形式の認識と適用、圧縮、成分分割、
+共有時の正準化を含む。Grundy側はmemo、子生成（play/normalize内のminimal化も含む）、
+再帰管理、mex等を含む。map破棄や勝敗変換は内訳に含めない。
 子再帰の構造処理を親の構造時間に重ねない。profileは既定OFF。
 
 profileの閾値は6/12、1回。時計呼出しの影響があるため、性能比較は別のprofile OFF実行で
@@ -65,3 +66,21 @@ python research/experiments/residual-phase-profile-20261021/run.py \
 python research/experiments/residual-phase-profile-20261021/run.py \
   --solver /tmp/solver --label scan-timing --builder scan --repeats 3
 ```
+
+## 完了記録
+
+`comparison.md` は `report.py` で保存summaryから生成する。全1210根評価の再集計を
+`verify_outputs.py` で検査済み。内訳profileは各builder 110行、時計OFFの比較は
+各builder 495行（52+3局面 × 3閾値 × 3反復）。52局面は全勝敗一致、深い3局面は
+全てUNKNOWN、探索ノード数も両builderで一致した。
+
+閾値6/12で、時計OFFの探索時間は52局面で83.3%/62.9%、深い3局面で96.4%/61.9%削減。
+それでも深い3局面の閾値6はOFFの約3.6倍、閾値12は約126倍かかった。
+既定handoffはOFFを維持する。計算量の粗い比較によるbuilderのauto選択は採用する。
+
+測定は単一hostでindexedの3反復の後にscanの3反復を行った。各反復内では閾値を回転。
+OFFはbuilderを呼ばず、別時間帯でのばらつきの参考になる。
+compiler、binary hash、実装commitとauditのみの差は `build-provenance.json` に記録した。
+通常/UBSanの両builder比較とmicro-kernel検査（107427 oracle states / 2068 clutters）を完了。
+最終solverの4×4空盤は通常探索と残余handoffの両方で既知の後手勝ちを再現し、
+shadow設定では119局面の遷移監査と勝敗照合を完了した。

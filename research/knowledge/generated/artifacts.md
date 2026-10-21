@@ -59,6 +59,7 @@
 - [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (source): 既定offのexact replay層別・root child費用プロファイラ
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 既存残余ゲートへの統合と適用回数の記録
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (solver): 初期化と探索を分離するマイクロ秒計測、既存CSV列は維持
+- [K0495](../items/K0495-residual-completion-index-profile.md) (solver): completion索引によるrank 2/3/4列挙、従来scan、仕事量見積もりによる切替と排他的profile
 ## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
@@ -68,6 +69,9 @@
 ## [cpp/solvers/kyouen_solver_9_root.cpp](../../../cpp/solvers/kyouen_solver_9_root.cpp)
 
 - [K0021](../items/K0021-n9-all-81-first-moves-win.md) (solver): 命題・対象範囲・根拠を記した出典
+## [cpp/tests/test_kyouen_residual_builders.cpp](../../../cpp/tests/test_kyouen_residual_builders.cpp)
+
+- [K0495](../items/K0495-residual-completion-index-profile.md) (verifier): 全安全4×4占有、64ビット境界、全826保存局面で辺族と子遷移を比較
 ## [cpp/tests/test_kyouen_residual_micro.cpp](../../../cpp/tests/test_kyouen_residual_micro.cpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): 独立占有部分集合DP・通常/共有/構造別評価OFFとの全局面照合
@@ -8152,6 +8156,21 @@
 ## [research/experiments/residual-gate-calibration-20261021/verify_outputs.py](../../../research/experiments/residual-gate-calibration-20261021/verify_outputs.py)
 
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): 入力hash・独立期待値・rawからの全再集計を検索再実行なしで検査
+## [research/experiments/residual-phase-profile-20261021/README.md](../../../research/experiments/residual-phase-profile-20261021/README.md)
+
+- [K0495](../items/K0495-residual-completion-index-profile.md) (log): 同値性の理由、固定プロトコル、費用の定義、再現手順と限界
+## [research/experiments/residual-phase-profile-20261021/build-provenance.json](../../../research/experiments/residual-phase-profile-20261021/build-provenance.json)
+
+- [K0495](../items/K0495-residual-completion-index-profile.md) (manifest): compiler、binary hash、実装commit、測定順と実行条件
+## [research/experiments/residual-phase-profile-20261021/builder-audit.json](../../../research/experiments/residual-phase-profile-20261021/builder-audit.json)
+
+- [K0495](../items/K0495-residual-completion-index-profile.md) (certificate): 入力hashと有限比較の完了出力
+## [research/experiments/residual-phase-profile-20261021/comparison.md](../../../research/experiments/residual-phase-profile-20261021/comparison.md)
+
+- [K0495](../items/K0495-residual-completion-index-profile.md) (data): 保存測定から生成したphase内訳とprofile OFFの3回比較
+## [research/experiments/residual-phase-profile-20261021/verify_outputs.py](../../../research/experiments/residual-phase-profile-20261021/verify_outputs.py)
+
+- [K0495](../items/K0495-residual-completion-index-profile.md) (verifier): 入力hash・各行勝敗・予算・計測内訳・全保存結果の再集計
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
