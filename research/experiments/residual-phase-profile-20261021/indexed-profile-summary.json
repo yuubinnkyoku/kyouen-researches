@@ -1,0 +1,54 @@
+{
+  "label": "indexed-profile",
+  "profile": true,
+  "builder": "indexed",
+  "repeats": 1,
+  "gates": [
+    6,
+    12
+  ],
+  "budget": 5000,
+  "inputs": {
+    "input.csv": "ce1f2d696976f4e8897fa2aa45895c49a50419d70b9ae2a16d132c84fe2026a0",
+    "stress-input.csv": "4214e2165c23f5246742dbe8824dd8db48f82dc67dcc0b2f703f5ee7921b6b02",
+    "fixtures.json": "e9b1fe88ceb0c609bad5df32cb611b100efde7a7b07d316284a5a8b63ed0bd79"
+  },
+  "totals": {
+    "saved": {
+      "6": {
+        "nodes": 153,
+        "solve_us": 9442,
+        "setup_us": 33281375,
+        "build_ns": 664232,
+        "structure_ns": 438362,
+        "grundy_ns": 456376
+      },
+      "12": {
+        "nodes": 26,
+        "solve_us": 10677,
+        "setup_us": 29041789,
+        "build_ns": 1459228,
+        "structure_ns": 1991463,
+        "grundy_ns": 3477338
+      }
+    },
+    "stress": {
+      "6": {
+        "nodes": 15000,
+        "solve_us": 120165,
+        "setup_us": 1862030,
+        "build_ns": 21404914,
+        "structure_ns": 20545707,
+        "grundy_ns": 16505110
+      },
+      "12": {
+        "nodes": 15000,
+        "solve_us": 3707179,
+        "setup_us": 1879032,
+        "build_ns": 199819029,
+        "structure_ns": 1410371021,
+        "grundy_ns": 1913772279
+      }
+    }
+  }
+}

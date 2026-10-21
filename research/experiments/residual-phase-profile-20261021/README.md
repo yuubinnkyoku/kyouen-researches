@@ -24,3 +24,44 @@ python research/experiments/residual-phase-profile-20261021/run.py \
 
 結論の範囲はこの固定コーパスに限る。外側node予算は残余kernel内部の仕事を数えない。
 既定handoffを変更するには独立した性能上の根拠が必要。
+
+## 索引方式と同値性
+
+盤面が安全でlegal maskが正しい場合、残余辺の大きさは2/3/4のいずれか。
+`completion[a,b,c]` はソート済み3点と禁止四点組を成す4点目の集合である。
+
+- legalの各2点組について、occupiedの点xを足した3点のcompletionとoccupiedが交わればrank 2。
+- legalの各3点組のcompletionとoccupiedが交わればrank 3。
+- legalの各4点組の最後の点が先頭3点のcompletionにあればrank 4。
+
+各場合で得た4点は相異なり、残りはすべてoccupiedなので従来scanが得る辺である。
+逆にscanが得る四点組をlegalに残る点の数で場合分けすると上の列挙に必ず現れる。
+rank 0は安全性、rank 1はlegalの定義から除かれる。小さいrankから処理し、既存辺を
+含む候補を捨てることで、後から除去される辺はなく、同じ極小族になる。
+最後に数値順へsortしてlabelled表現も一致させる。occupied/合法点は変更しない。
+
+`--residual-builder=scan|indexed|auto` はexact replayでの比較用。既定autoは
+`C(L,2)*O+C(L,3)+C(L,4) < 禁止四点組数` の場合だけ索引方式を選ぶ。
+これは粗い仕事量の見積もりであり、全入力で最速であるとは主張しない。
+従来scanは残している。残余handoff自体の既定値は引き続きOFF。
+
+## 検査
+
+`cpp/tests/test_kyouen_residual_builders.cpp` は同じGrundy値だけでなく、密なlabelでの
+頂点maskと極小辺族そのものを比較する。4×4の全65,536占有maskのうち安全な5,811局面、
+8×8の空盤と1点占有（64ビット境界）、保存済み11×11全826局面が対象。
+安全な4×4全局面と8×8の1点占有と11×11全826局面では各合法手の遷移後も比較し、
+残余playの頂点/辺族と盤面から直接作り直した子の一致も検査する。
+通常buildとUBSanで同じ検査を行う。CIはこれらの有限比較、protocolの6テスト、
+保存出力の再集計のみ。時間比較や深い探索はCIから起動しない。
+
+```sh
+c++ -std=c++20 -O2 -Icpp/solvers cpp/tests/test_kyouen_residual_builders.cpp -o /tmp/builders
+python research/experiments/residual-phase-profile-20261021/audit.py --test /tmp/builders
+python -m unittest discover -s research/experiments/residual-phase-profile-20261021 -p test_protocol.py
+python research/experiments/residual-phase-profile-20261021/verify_outputs.py
+python research/experiments/residual-phase-profile-20261021/run.py \
+  --solver /tmp/solver --label indexed-timing --builder indexed --repeats 3
+python research/experiments/residual-phase-profile-20261021/run.py \
+  --solver /tmp/solver --label scan-timing --builder scan --repeats 3
+```

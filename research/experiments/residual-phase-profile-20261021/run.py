@@ -32,6 +32,20 @@ def parse(raw,corpus,gate,profile):
         out.append(d)
     return out
 
+def aggregate(records,gates,repeats):
+    totals={}
+    for corpus in ('saved','stress'):
+        totals[corpus]={}
+        for gate in gates:
+            selected=[r for r in records if r['corpus']==corpus and r['gate']==gate]
+            med=[]
+            for i in sorted({r['id'] for r in selected}):
+                roots=[r for r in selected if r['id']==i]
+                assert len(roots)==repeats and len({(r['result'],r['nodes']) for r in roots})==1
+                med.append({k:statistics.median(r[k] for r in roots) for k in ('nodes','solve_us','setup_us','build_ns','structure_ns','grundy_ns')})
+            totals[corpus][str(gate)]={k:sum(r[k] for r in med) for k in med[0]}
+    return totals
+
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--solver',required=True);ap.add_argument('--label',required=True)
     ap.add_argument('--profile',action='store_true');ap.add_argument('--builder',choices=('scan','indexed','auto'))
@@ -53,17 +67,7 @@ def main():
                 for r in parse(path.read_text(),corpus,gate,args.profile):
                     records.append(dict(corpus=corpus,gate=gate,repeat=rep,**r))
                 print(f'{args.label} {corpus} gate={gate} repeat={rep} validated',flush=True)
-    totals={}
-    for corpus in ('saved','stress'):
-        totals[corpus]={}
-        for gate in gates:
-            selected=[r for r in records if r['corpus']==corpus and r['gate']==gate]
-            med=[]
-            for i in sorted({r['id'] for r in selected}):
-                roots=[r for r in selected if r['id']==i]
-                assert len(roots)==args.repeats and len({(r['result'],r['nodes']) for r in roots})==1
-                med.append({k:statistics.median(r[k] for r in roots) for k in ('nodes','solve_us','setup_us','build_ns','structure_ns','grundy_ns')})
-            totals[corpus][str(gate)]={k:sum(r[k] for r in med) for k in med[0]}
+    totals=aggregate(records,gates,args.repeats)
     summary=dict(label=args.label,profile=args.profile,builder=args.builder,repeats=args.repeats,gates=gates,
         budget=5000,inputs={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in (BASE/'input.csv',BASE/'stress-input.csv',BASE/'fixtures.json')},totals=totals)
     (HERE/f'{args.label}-records.json').write_text(json.dumps(records,indent=2)+'\n')
