@@ -64,6 +64,13 @@ jobs:
           python research/experiments/residual-attempt-allocation-20261022/cli_test.py --solver /tmp/kyouen_dfpn_root
           python -m unittest discover -s research/experiments/residual-attempt-allocation-20261022 -p 'test_*.py'
           python research/experiments/residual-attempt-allocation-20261022/study.py verify
+      - name: Verify immutable frame children and archived A/B work equivalence
+        run: |
+          c++ -std=c++20 -O2 -Icpp/solvers cpp/tests/test_kyouen_frame_children.cpp -o /tmp/test_frame_children
+          /tmp/test_frame_children
+          python research/experiments/dfpn-frame-children-20261022/cli_test.py --solver /tmp/kyouen_dfpn_root
+          python -m unittest discover -s research/experiments/dfpn-frame-children-20261022 -p 'test_*.py'
+          python research/experiments/dfpn-frame-children-20261022/study.py verify
       - name: Verify bounded residual outcome fallback and archives
         run: |
           c++ -std=c++20 -O2 -Icpp/solvers cpp/tests/test_kyouen_residual_outcome.cpp -o /tmp/test_residual_outcome

@@ -2382,6 +2382,7 @@
 - → depends_on [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md): 事前選択したquota128・閾値6と固定した26+3局面を再調整せず使用
 - → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): 有限P/N評価、確定結果だけのmemo、quota切れUNKNOWN時の通常探索復帰
 - ← depends_on [K0499](../items/K0499-residual-dfpn-gate-frontier.md): 通常df-pnの残余handoffと共有work上限、以前の深い3局面
+- ← depends_on [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md): 通常df-pnのroot計数と共有work上限を用いた同一仕事量の比較
 
 ## [K0499](../items/K0499-residual-dfpn-gate-frontier.md) 深いdf-pnの閾値6未発火は合法手数17以上で説明され、閾値18の独立確認でも根の新規確定はなかった
 
@@ -2393,3 +2394,7 @@
 
 - → depends_on [K0499](../items/K0499-residual-dfpn-gate-frontier.md): 閾値18と、初回の難しい残余局面でroot quotaを使い切る観測
 - → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): bounded P/Nの確定結果だけを採用し、UNKNOWNは通常探索へ戻す
+
+## [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) df-pnのフレーム内子局面を再利用すると固定した新規6局面で探索量を変えず約29–35%短縮した
+
+- → depends_on [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md): 通常df-pnのroot計数と共有work上限を用いた同一仕事量の比較

@@ -41,3 +41,6 @@ python -m unittest discover -s research/experiments/dfpn-frame-children-20261022
 ```
 
 記録を上書きしない。CIでは小盤回帰と記録の再検査だけを行い、この探索はpushで再実行しない。
+
+固定比較の全表は`comparison.md`、現行の採用範囲は
+[K0501](../../knowledge/items/K0501-dfpn-frame-child-geometry-reuse.md)を参照。

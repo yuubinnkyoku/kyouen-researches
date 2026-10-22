@@ -64,6 +64,7 @@
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (solver): 通常df-pnの直接残余handoff、root quota reset、共有work node上限とroot計数
 - [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (solver): residual-profile指定時だけの未解決stage-0合法手数分布とroot差分出力
 - [K0500](../items/K0500-residual-attempt-budget-allocation.md) (solver): 明示的な1回上限、root残量の実使用精算、canonical board再試行抑制、rootごとのreset
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (solver): フレーム所有の不変子局面、TT bounds再読出し、fresh-list監査、root計数
 ## [cpp/solvers/kyouen_residual_micro.hpp](../../../cpp/solvers/kyouen_residual_micro.hpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (solver): 構造認識・厳密評価と適用外の完全再帰
@@ -74,6 +75,9 @@
 ## [cpp/solvers/kyouen_solver_9_root.cpp](../../../cpp/solvers/kyouen_solver_9_root.cpp)
 
 - [K0021](../items/K0021-n9-all-81-first-moves-win.md) (solver): 命題・対象範囲・根拠を記した出典
+## [cpp/tests/test_kyouen_frame_children.cpp](../../../cpp/tests/test_kyouen_frame_children.cpp)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 独立幾何と直接部分集合DP、全安全4×4局面、TT追い出し、両tie順序、hybrid exactと診断の一致
 ## [cpp/tests/test_kyouen_residual_attempt.cpp](../../../cpp/tests/test_kyouen_residual_attempt.cpp)
 
 - [K0500](../items/K0500-residual-attempt-budget-allocation.md) (verifier): 予算・再試行・cache安全性と、独立幾何・部分集合DPによる全安全4×4局面照合
@@ -502,6 +506,30 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/dfpn-frame-children-20261022/audits.json](../../../research/experiments/dfpn-frame-children-20261022/audits.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): 時間比較とは別の3根・計2995リストのfresh-list監査
+## [research/experiments/dfpn-frame-children-20261022/cli_test.py](../../../research/experiments/dfpn-frame-children-20261022/cli_test.py)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): CLI、既定OFF、監査、root reset、0 work上限、不正modeの拒否
+## [research/experiments/dfpn-frame-children-20261022/comparison.md](../../../research/experiments/dfpn-frame-children-20261022/comparison.md)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): 局面ごとの中央値合計による全比較表
+## [research/experiments/dfpn-frame-children-20261022/fixtures.json](../../../research/experiments/dfpn-frame-children-20261022/fixtures.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): 再利用の深い9局面、新規6局面、既知終盤26局面
+## [research/experiments/dfpn-frame-children-20261022/protocol.json](../../../research/experiments/dfpn-frame-children-20261022/protocol.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (manifest): 事前固定入力・source/binary hash、予算、3反復、同一仕事量規則
+## [research/experiments/dfpn-frame-children-20261022/records.json](../../../research/experiments/dfpn-frame-children-20261022/records.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): 全336根評価の結果・仕事量・生成数・再利用数・時間とraw参照
+## [research/experiments/dfpn-frame-children-20261022/study.py](../../../research/experiments/dfpn-frame-children-20261022/study.py)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 独立幾何による入力再生成、全raw行、全組合せ、A/B仕事量と生成数の厳密照合、再集計
+## [research/experiments/dfpn-frame-children-20261022/test_study.py](../../../research/experiments/dfpn-frame-children-20261022/test_study.py)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 誤局面、新規勝敗、監査の時間比較混入、仕事量・生成数のずれ等を拒否する9テスト
 ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
