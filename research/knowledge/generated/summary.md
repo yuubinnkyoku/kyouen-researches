@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 494 / alias: 269 / artifactファイル: 2681
+K項目: 495 / alias: 269 / artifactファイル: 2681
 
 ## kind
 
@@ -10,7 +10,7 @@ K項目: 494 / alias: 269 / artifactファイル: 2681
 | definition | 5 |
 | method | 4 |
 | proposition | 399 |
-| question | 36 |
+| question | 37 |
 | verification | 13 |
 
 ## status
@@ -21,7 +21,7 @@ K項目: 494 / alias: 269 / artifactファイル: 2681
 | computed | 114 |
 | conjectured | 1 |
 | observed | 26 |
-| open | 34 |
+| open | 35 |
 | proved | 228 |
 | refuted | 63 |
 | scope-unclear | 1 |
@@ -36,7 +36,7 @@ K項目: 494 / alias: 269 / artifactファイル: 2681
 | certificates | 43 |
 | first-moves | 37 |
 | formalization | 4 |
-| geometry | 212 |
+| geometry | 213 |
 | grundy | 101 |
 | maximal-safe | 80 |
 | maximum-safe | 50 |
@@ -45,12 +45,12 @@ K項目: 494 / alias: 269 / artifactファイル: 2681
 | reconfiguration | 34 |
 | rectangles | 91 |
 | residual-games | 79 |
-| rules | 4 |
+| rules | 5 |
 | search-methods | 62 |
 | square-outcomes | 48 |
 | statistics | 60 |
 | strategy-length | 26 |
-| variants | 144 |
+| variants | 145 |
 | verification | 52 |
 
 ## 未解決・要監査・範囲不明
@@ -93,6 +93,7 @@ K項目: 494 / alias: 269 / artifactファイル: 2681
 - [K0311](../items/K0311-misere-n9-outcome-open.md) [open] misère版9×9の空盤勝敗は未確定
 - [K0327](../items/K0327-square-position-grundy-unboundedness-open.md) [open] 標準正方形盤の安全局面のGrundy値は無界か
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
+- [K0504](../items/K0504-geometric-rule-variant-comparison.md) [open] 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究
 
 ## 警告
 
