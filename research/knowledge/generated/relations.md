@@ -336,6 +336,7 @@
 - ← depends_on [K0330](../items/K0330-maximal-fault-tolerance-average-cover-bound.md): 安全極大配置と空点を対象にする
 - ← depends_on [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
 - ← depends_on [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
+- ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 最大安全石数の定義
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -2417,6 +2418,7 @@
 ## [K0504](../items/K0504-geometric-rule-variant-comparison.md) 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする完全指摘ルールの定義
+- ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 軸平行長方形だけを禁止する規則の区別
 
 ## [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 
@@ -2425,3 +2427,8 @@
 ## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認
 
 - → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 7立方の有限部分証明と再開可能な探索境界を提供。空盤の勝敗証明ではない
+
+## [K0515](../items/K0515-axis-rectangle-seven-maximum.md) 軸平行長方形4点禁止版7×mの最大安全石数と三角形分解一般則
+
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 最大安全石数の定義
+- → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 軸平行長方形だけを禁止する規則の区別

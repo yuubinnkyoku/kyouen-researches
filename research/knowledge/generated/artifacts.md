@@ -346,6 +346,15 @@
 
 - [K0085](../items/K0085-three-to-four-stone-pair-gain.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0086](../items/K0086-blind-probe-median-improvement-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/axis-rectangle-seven-20261023/report.md](../../../research/experiments/axis-rectangle-seven-20261023/report.md)
+
+- [K0515](../items/K0515-axis-rectangle-seven-maximum.md) (proof): 7行の全長公式と三角形分解条件付き一般定理の全称証明
+## [research/experiments/axis-rectangle-seven-20261023/results.json](../../../research/experiments/axis-rectangle-seven-20261023/results.json)
+
+- [K0515](../items/K0515-axis-rectangle-seven-maximum.md) (data): 独立計算結果
+## [research/experiments/axis-rectangle-seven-20261023/verify.py](../../../research/experiments/axis-rectangle-seven-20261023/verify.py)
+
+- [K0515](../items/K0515-axis-rectangle-seven-maximum.md) (verifier): m<=6の独立完全動的計画とm<=40の構成検査
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録

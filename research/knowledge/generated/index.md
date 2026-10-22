@@ -499,3 +499,4 @@
 | [K0504](../items/K0504-geometric-rule-variant-comparison.md) | 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究 | question | open | variants, geometry, rules |
 | [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) | 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か | question | open | variants, first-moves, search-methods |
 | [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) | 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認 | verification | verified | variants, certificates, verification, maximal-safe, maximum-safe |
+| [K0515](../items/K0515-axis-rectangle-seven-maximum.md) | 軸平行長方形4点禁止版7×mの最大安全石数と三角形分解一般則 | proposition | proved | variants, rectangles, maximum-safe, geometry |
