@@ -1446,6 +1446,7 @@
 ## [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md) 奇数qの固定点なし鏡映対称安全局面はP局面
 
 - ← generalizes [K0337](../items/K0337-odd-uniform-involution-scope.md): 円・直線の鏡映定理を保証する抽象ブロック条件を明示する
+- ← generalizes [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md): 円・直線の鏡映証明を3次元の平面・球面へ適用
 
 ## [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) 有限下方閉配置ゲームで全Grundy値が0/1であることと極大集合の同偶奇性は同値
 
@@ -1613,6 +1614,7 @@
 
 - → generalizes [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md): 円・直線の鏡映定理を保証する抽象ブロック条件を明示する
 - ← verifies [K0009](../items/K0009-lean-soundness-trust-boundary.md): 固定点なし対合とブロック条件による抽象十分条件のみ
+- ← depends_on [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md): 鏡像二点を含む禁止ブロックの鏡映不変性という十分条件
 
 ## [K0338](../items/K0338-high-stabilizer-safe-state-classification.md) 標準正方形盤の安定化群位数4以上の安全集合は高々五石で正確にO(n²)個
 
@@ -2398,3 +2400,8 @@
 ## [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) df-pnの子局面再利用と初回リスト移譲は固定局面で探索量を変えず実行時間を短縮した
 
 - → depends_on [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md): 通常df-pnのroot計数と共有work上限を用いた同一仕事量の比較
+
+## [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) 3次元5点禁止版の全偶数辺立方盤は鏡映応手で後手必勝
+
+- → generalizes [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md): 円・直線の鏡映証明を3次元の平面・球面へ適用
+- → depends_on [K0337](../items/K0337-odd-uniform-involution-scope.md): 鏡像二点を含む禁止ブロックの鏡映不変性という十分条件

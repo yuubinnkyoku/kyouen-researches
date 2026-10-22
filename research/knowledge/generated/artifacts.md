@@ -506,6 +506,24 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/cube-q5-weak-20261022/README.md](../../../research/experiments/cube-q5-weak-20261022/README.md)
+
+- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (proof): 全偶数辺長と偶数辺を持つ直方格子の構成的鏡映証明
+## [research/experiments/cube-q5-weak-20261022/audit_reflection.cpp](../../../research/experiments/cube-q5-weak-20261022/audit_reflection.cpp)
+
+- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (verifier): 64点までの全対称安全局面と全合法鏡映応手の整数検査
+## [research/experiments/cube-q5-weak-20261022/reflection-4-independent.json](../../../research/experiments/cube-q5-weak-20261022/reflection-4-independent.json)
+
+- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (data): 独立Python行列式検査による全局面・応手・終端頻度の一致
+## [research/experiments/cube-q5-weak-20261022/reflection-4.json](../../../research/experiments/cube-q5-weak-20261022/reflection-4.json)
+
+- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (data): 4×4×4の529対称安全局面・2048合法応手・496終端
+## [research/experiments/cube-q5-weak-20261022/reflection.py](../../../research/experiments/cube-q5-weak-20261022/reflection.py)
+
+- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (source): 任意の正の辺長に対応する鏡映応手関数
+## [research/experiments/cube-q5-weak-20261022/verify_reflection.py](../../../research/experiments/cube-q5-weak-20261022/verify_reflection.py)
+
+- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (verifier): 別方式の直接4×4行列式による独立対称局面・応手検査
 ## [research/experiments/dfpn-combined-options-20261022/doc-smoke.json](../../../research/experiments/dfpn-combined-options-20261022/doc-smoke.json)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): ガイドの小盤・既知11×11 P/N・native exact separate併用の3実行例
