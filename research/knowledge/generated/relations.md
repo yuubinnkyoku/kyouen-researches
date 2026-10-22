@@ -101,6 +101,7 @@
 - ← depends_on [K0481](../items/K0481-three-row-q4-all-spacing-first-moves.md): 完全指摘・通常プレイのGrundy定義
 - ← depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): mex再帰と独立ゲームのxor
 - ← depends_on [K0484](../items/K0484-width-five-q9-all-lengths.md): 通常プレイGrundy値の定義
+- ← depends_on [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md): 通常プレイのP/N再帰と有限局面のAND/OR帰納法
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2148,6 +2149,7 @@
 
 - → depends_on [K0009](../items/K0009-lean-soundness-trust-boundary.md): Lean局所条件とWinning/Losingの健全性を使用
 - → supports [K0102](../items/K0102-concrete-lean-certificate-checker-open.md): 3×3×3の具体証明書についてLean核検査を完了。一般巨大証明書は未完了
+- ← generalizes [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md): 同じ共平面・共球面5点禁止版の有限弱解決を5×5×5へ拡張。Lean形式検査ではない
 
 ## [K0436](../items/K0436-anisotropic-mod9-all-widths.md) 異方整数格子の全幅で3進付値条件下の円点数は2ceil(2w/3)以下
 
@@ -2405,3 +2407,8 @@
 
 - → generalizes [K0304](../items/K0304-odd-q-fixed-point-free-reflection-p-position.md): 円・直線の鏡映証明を3次元の平面・球面へ適用
 - → depends_on [K0337](../items/K0337-odd-uniform-involution-scope.md): 鏡像二点を含む禁止ブロックの鏡映不変性という十分条件
+
+## [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) 5×5×5の3次元5点禁止版は全125初手を覆う独立検査済み証明書で後手必勝
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのP/N再帰と有限局面のAND/OR帰納法
+- → generalizes [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md): 同じ共平面・共球面5点禁止版の有限弱解決を5×5×5へ拡張。Lean形式検査ではない

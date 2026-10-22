@@ -495,3 +495,4 @@
 | [K0500](../items/K0500-residual-attempt-budget-allocation.md) | 根の残余予算128を1回32へ分配しても新規6局面の深い勝敗確定や実用的な探索量削減は確認できない | computation | observed | residual-games, search-methods, verification, statistics |
 | [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) | df-pnの子局面再利用と初回リスト移譲は固定局面で探索量を変えず実行時間を短縮した | computation | observed | search-methods, verification, statistics |
 | [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) | 3次元5点禁止版の全偶数辺立方盤は鏡映応手で後手必勝 | proposition | proved | variants, grundy, first-moves |
+| [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) | 5×5×5の3次元5点禁止版は全125初手を覆う独立検査済み証明書で後手必勝 | proposition | computed | variants, first-moves, certificates, verification |

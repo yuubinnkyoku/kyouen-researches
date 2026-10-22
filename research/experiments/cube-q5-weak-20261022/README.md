@@ -60,3 +60,83 @@ python3 research/experiments/cube-q5-weak-20261022/verify_reflection.py research
 円なら、任意の追加点はその円と同じ平面上にあるか、その円を含む球面上にある。
 直線なら、任意の追加点とその直線を含む平面がある。いずれも5石目は違法。
 よってこの3次元q=5戦略は全偶数n≥2で必ず4手終局になる。
+
+## 5×5×5の弱解決
+
+5×5×5も後手必勝。現在の結論の正本はK0503。座標番号は `(x*5+y)*5+z`。
+`four_move_census.cpp` は持ち上げ4点のアフィン階数≤2を四つの3×3小行列式で
+判定し、4石終局組を全列挙する。5×5×5には39,539組あり、各初手10軌道で
+最良の後手応手でも終局4石を返せない第三手が12〜24個ある。したがって偶数盤の
+ような4手以内の必勝戦略は存在せず、より深い探索が必要だった。
+
+`solve.cpp` のexact P/N探索は次の6個の2石根をすべてPと判定した。
+
+| 2石根 | 直接覆う初手軌道の代表 | 新規展開数（前の根の確定memoを再利用） |
+|---|---|---:|
+| {0,3} | 0,1 | 3,840,271 |
+| {2,17} | 2,7 | 1,033,015 |
+| {6,7} | 6,7 | 4,310,239 |
+| {31,32} | 31,32 | 3,261,976 |
+| {62,37} | 62,37 | 803,569 |
+| {12,112} | 12 | 76,156 |
+
+合計13,325,226展開・19,777,673確定memo。探索器は全9,691,375四点組の禁止
+追加点を128bitで前計算し、48個の座標置換・反転で局面を正規化する。
+昇順の子の合法手数、次に正規化maskで着手順を決める。P/Nは次手番側視点。
+展開予算は再帰cache missを数え、即時終端の子の登録は別である。
+予算切れはUNKNOWNとなり、その祖先の未確定ラベルをmemoへ入れない。
+
+各P局面では全合法子、各N局面ではPの子一つを抽出した。6根の証明書を
+ラベル衝突なく統合し、全初手後の10個のNと空盤Pを加え、到達不能記録を除去した。
+`empty-5.cert.gz` は1,368,687局面、1,655,414関係、443,783終局からなる。
+石数の上限12はこの戦略の範囲であり、盤全体の最大安全石数ではない。
+
+`verify_certificate.cpp` は探索コードを呼ばず、5×5 Bareiss整数行列式から合法手を
+再生成する。Pの全合法子がN、Nの証人が合法なP子であること、根の安全性、
+正規化、重複なし、全記録が根から合法辺で到達することを検査する。
+48変換はユークリッド等長写像で平面・球面を保つため、その正規化で勝敗は変わらない。
+着手で石数が厳密増加するので循環はなく、後ろ向き帰納法で空盤Pが確定する。
+
+独立検査は607,922,271回の5×5行列式評価で完了した。`verified-5.json` と
+圧縮前後のSHA-256を記した `manifest-5.json` を参照。
+
+### 証明書形式と再検査
+
+ヘッダは `Q5CUBE1 side root_lo root_hi`。
+以後は `mask_lo mask_hi label witness_lo witness_hi` の十進整数行。
+maskは `lo + 2^64 hi`、labelはP=0・N=1。
+Pのwitnessは0、Nは正規化したP子のmaskを持つ。
+収録は安全局面のみで、検査器は外部の既知葉を仮定しない。
+
+```sh
+g++ -O3 -std=c++17 -Wall -Wextra -Werror research/experiments/cube-q5-weak-20261022/verify_certificate.cpp -o /tmp/verify-q5
+python3 research/experiments/cube-q5-weak-20261022/check_artifacts.py
+gzip -dc research/experiments/cube-q5-weak-20261022/empty-5.cert.gz > /tmp/empty-5.cert
+/tmp/verify-q5 /tmp/empty-5.cert
+```
+
+### 探索からの再現
+
+```sh
+g++ -O3 -std=c++17 -Wall -Wextra -Werror research/experiments/cube-q5-weak-20261022/solve.cpp -o /tmp/solve-q5
+/tmp/solve-q5 5 10000000 /tmp/q5-pair --batch research/experiments/cube-q5-weak-20261022/pairs-5.txt
+/tmp/solve-q5 --merge 5 /tmp/empty-5.cert /tmp/q5-pair-0-3.cert /tmp/q5-pair-2-17.cert /tmp/q5-pair-6-7.cert /tmp/q5-pair-31-32.cert /tmp/q5-pair-62-37.cert /tmp/q5-pair-12-112.cert
+python3 research/experiments/cube-q5-weak-20261022/regression.py /tmp/solve-q5 /tmp/verify-q5
+```
+
+探索batchでは初期build後に `--merge` モードだけを追加した。検索部分は同一で、
+実際の探索・統合・独立検査に使用した各binaryのSHA-256もmanifestへ記録する。
+回帰は既知3×3×3の全20二石軌道Pと空盤P、6種類の不正証明書拒否、予算0の
+UNKNOWNを確認する。
+
+### 実際の後手の応手
+
+```sh
+python3 research/experiments/cube-q5-weak-20261022/play.py research/experiments/cube-q5-weak-20261022/empty-5.cert.gz 0
+```
+
+初手0（座標(0,0,0)）への応手3（座標(0,0,3)）を返す。以降も占有点の番号を
+全て並べて渡す。収録戦略に従って到達した手番側N局面なら、実盤上のPへの着手を
+返す。任意の安全局面の強解決ツールではない。
+
+5×5×5の証明は有限盤のものであり、7×7×7以上の奇数辺長には拡張しない。

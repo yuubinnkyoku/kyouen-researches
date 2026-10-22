@@ -509,9 +509,19 @@
 ## [research/experiments/cube-q5-weak-20261022/README.md](../../../research/experiments/cube-q5-weak-20261022/README.md)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (proof): 全偶数辺長と偶数辺を持つ直方格子の構成的鏡映証明
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (proof): 5×5×5のルール・座標・証明書形式・全初手被覆・再現手順
 ## [research/experiments/cube-q5-weak-20261022/audit_reflection.cpp](../../../research/experiments/cube-q5-weak-20261022/audit_reflection.cpp)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (verifier): 64点までの全対称安全局面と全合法鏡映応手の整数検査
+## [research/experiments/cube-q5-weak-20261022/empty-5.cert.gz](../../../research/experiments/cube-q5-weak-20261022/empty-5.cert.gz)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (certificate): 空盤Pの1368687局面証明書。gzip展開後に独立検査する
+## [research/experiments/cube-q5-weak-20261022/manifest-5.json](../../../research/experiments/cube-q5-weak-20261022/manifest-5.json)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (manifest): ソース・実行結果・圧縮証明書・展開後証明書のSHA-256
+## [research/experiments/cube-q5-weak-20261022/play.py](../../../research/experiments/cube-q5-weak-20261022/play.py)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (source): 圧縮証明書に収録された局面から実盤上の必勝応手を取り出す
 ## [research/experiments/cube-q5-weak-20261022/reflection-4-independent.json](../../../research/experiments/cube-q5-weak-20261022/reflection-4-independent.json)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (data): 独立Python行列式検査による全局面・応手・終端頻度の一致
@@ -521,6 +531,21 @@
 ## [research/experiments/cube-q5-weak-20261022/reflection.py](../../../research/experiments/cube-q5-weak-20261022/reflection.py)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (source): 任意の正の辺長に対応する鏡映応手関数
+## [research/experiments/cube-q5-weak-20261022/regression.json](../../../research/experiments/cube-q5-weak-20261022/regression.json)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (data): 既知3×3×3の全20二石軌道・空盤・偽証明書拒否・予算0のUNKNOWNを検査
+## [research/experiments/cube-q5-weak-20261022/search-5.jsonl](../../../research/experiments/cube-q5-weak-20261022/search-5.jsonl)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (data): 6個の2石P根・合計13325226展開・19777673確定memo
+## [research/experiments/cube-q5-weak-20261022/solve.cpp](../../../research/experiments/cube-q5-weak-20261022/solve.cpp)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (solver): 128bit・48対称性・exact P/N探索と証明書抽出・空盤への統合
+## [research/experiments/cube-q5-weak-20261022/verified-5.json](../../../research/experiments/cube-q5-weak-20261022/verified-5.json)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (data): 空盤P・1655414辺・443783終端・全局面到達性の独立検査結果
+## [research/experiments/cube-q5-weak-20261022/verify_certificate.cpp](../../../research/experiments/cube-q5-weak-20261022/verify_certificate.cpp)
+
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (verifier): 探索器を呼ばずBareiss 5×5整数行列式で証明書の全AND/OR境界を独立検査
 ## [research/experiments/cube-q5-weak-20261022/verify_reflection.py](../../../research/experiments/cube-q5-weak-20261022/verify_reflection.py)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (verifier): 別方式の直接4×4行列式による独立対称局面・応手検査
