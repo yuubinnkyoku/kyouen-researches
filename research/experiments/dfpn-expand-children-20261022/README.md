@@ -34,3 +34,6 @@ python research/experiments/dfpn-expand-children-20261022/cli_test.py --solver /
 ```
 
 記録を上書きせず、CIで実行するのは小盤回帰と記録の再検査だけとする。
+
+固定結果は`comparison.md`、現行の採用範囲は
+[K0501の追加検証](../../knowledge/items/K0501-dfpn-frame-child-geometry-reuse.md#初回展開リストの所有権移譲による追加検証)を参照。

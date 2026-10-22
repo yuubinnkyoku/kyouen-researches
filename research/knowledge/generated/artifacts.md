@@ -506,6 +506,24 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/dfpn-expand-children-20261022/cli_test.py](../../../research/experiments/dfpn-expand-children-20261022/cli_test.py)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 初回移譲CLI、監査、root reset、不正mode拒否
+## [research/experiments/dfpn-expand-children-20261022/comparison.md](../../../research/experiments/dfpn-expand-children-20261022/comparison.md)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): 従来・前回cache・初回移譲の別の固定比較全表
+## [research/experiments/dfpn-expand-children-20261022/protocol.json](../../../research/experiments/dfpn-expand-children-20261022/protocol.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (manifest): 初回移譲の3方式比較、事前固定入力、source/binaryと既存helperのhash
+## [research/experiments/dfpn-expand-children-20261022/records.json](../../../research/experiments/dfpn-expand-children-20261022/records.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): 旧3根・新規6根・終盤26根の全396評価
+## [research/experiments/dfpn-expand-children-20261022/study.py](../../../research/experiments/dfpn-expand-children-20261022/study.py)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 全3方式の探索量と初回移譲数・生成数の厳密な対応、既存verifier再利用
+## [research/experiments/dfpn-expand-children-20261022/test_study.py](../../../research/experiments/dfpn-expand-children-20261022/test_study.py)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 3方式比較での仕事量・初回利用数・再読出し数・幾何計算数の5テスト
 ## [research/experiments/dfpn-frame-children-20261022/audits.json](../../../research/experiments/dfpn-frame-children-20261022/audits.json)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): 時間比較とは別の3根・計2995リストのfresh-list監査

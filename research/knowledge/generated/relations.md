@@ -2395,6 +2395,6 @@
 - → depends_on [K0499](../items/K0499-residual-dfpn-gate-frontier.md): 閾値18と、初回の難しい残余局面でroot quotaを使い切る観測
 - → depends_on [K0496](../items/K0496-bounded-residual-outcome-search.md): bounded P/Nの確定結果だけを採用し、UNKNOWNは通常探索へ戻す
 
-## [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) df-pnのフレーム内子局面を再利用すると固定した新規6局面で探索量を変えず約29–35%短縮した
+## [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) df-pnの子局面再利用と初回リスト移譲は固定局面で探索量を変えず実行時間を短縮した
 
 - → depends_on [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md): 通常df-pnのroot計数と共有work上限を用いた同一仕事量の比較
