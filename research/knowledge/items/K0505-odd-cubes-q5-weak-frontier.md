@@ -37,6 +37,12 @@ artifacts:
 - path: research/experiments/cube-q5-seven-frontier-20261022/manifest.json
   role: manifest
   note: 追加成果とprivate checkpointの所在・hash・独立検査範囲
+- path: research/experiments/cube-q5-seven-incremental-20261022/README.md
+  role: log
+  note: 合法手の差分更新・候補点直接判定・一括checkpoint IOの検証と速度測定
+- path: research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json
+  role: data
+  note: 既知3立方のdf-pn・DFS両方式の独立証明、差分更新照合、旧checkpoint互換性
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
 evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
@@ -88,3 +94,9 @@ checkpointから抽出した6石N・7石Pと17石極大安全局面は、別のB
 `{0,5,26,49,69}` を同snapshotから各100万追加展開したが、3件ともUNKNOWN。
 最終のprivate確定候補memoは11,568,207局面。次回再開用の同ファイルを保存したが、
 この全ラベルの独立検査ではなく、三石根・二石根・空盤の未解決性を維持する。
+
+再開探索のため、合法手の差分更新と現在の候補点だけの整数幾何判定を実装した。
+既知3立方の全20二石軌道についてdf-pn・mobility DFSの各証明を独立検査し、
+標本履歴で従来の全再計算との一致とcheckpointの双方向互換性を確認した。
+同じprivate seedからの五石根 `{0,2,5,26,69}` の2万展開では、各方式が同じ
+11,588,199候補行でUNKNOWNとなった。速度改善は空盤の勝敗を意味しない。

@@ -538,6 +538,12 @@
 ## [research/experiments/cube-q5-seven-frontier-20261022/verify.cpp](../../../research/experiments/cube-q5-seven-frontier-20261022/verify.cpp)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (verifier): 6ワードQ5CUBE2・Bareiss整数幾何・全AND/OR条件の独立検査器
+## [research/experiments/cube-q5-seven-incremental-20261022/README.md](../../../research/experiments/cube-q5-seven-incremental-20261022/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 合法手の差分更新・候補点直接判定・一括checkpoint IOの検証と速度測定
+## [research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json](../../../research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 既知3立方のdf-pn・DFS両方式の独立証明、差分更新照合、旧checkpoint互換性
 ## [research/experiments/cube-q5-seven-probe-20261022/README.md](../../../research/experiments/cube-q5-seven-probe-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 7立方の2石根・35第三手境界・増加予算probe・未検証範囲
