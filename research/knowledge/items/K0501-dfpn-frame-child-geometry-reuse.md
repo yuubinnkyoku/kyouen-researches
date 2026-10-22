@@ -58,6 +58,18 @@ artifacts:
 - path: research/experiments/dfpn-expand-children-20261022/test_study.py
   role: verifier
   note: 3方式比較での仕事量・初回利用数・再読出し数・幾何計算数の5テスト
+- path: research/experiments/dfpn-combined-options-20261022/protocol.json
+  role: manifest
+  note: Release CLIの併用条件とbinary/source hash、C++併用回帰の範囲
+- path: research/experiments/dfpn-combined-options-20261022/records.json
+  role: data
+  note: exact publish・SG/P/N・再利用・予算・複数根・時間切れの330根評価とCSV全文
+- path: research/experiments/dfpn-combined-options-20261022/study.py
+  role: verifier
+  note: 併用設定と実ヘッダ、全組合せ、129対の仕事量・予算・生成数と文書実行例の再検査
+- path: research/experiments/dfpn-combined-options-20261022/doc-smoke.json
+  role: data
+  note: ガイドの小盤・既知11×11 P/N・native exact separate併用の3実行例
 ---
 
 ## 方式と不変条件
@@ -174,3 +186,24 @@ fresh process/TT、memo18、wall guard30秒、native exact・残余評価OFF、p
 
 この追加方式も明示オプションとして保持する。探索必要量や深い勝敗確定の改善ではなく、
 同じ探索を速く処理する効果の観測である。単一hostの固定標本という限界は前節と同じ。
+
+## exact publish・残余評価との併用確認
+
+C++回帰に、4×4の4根、memo5/12、tie asc/desc、exact publish all/root/separate、
+残余なし/SG6/PN6/PN16 cap8の192条件を追加した。
+各条件で従来方式と初回移譲+auditを比較し、7 workの後に同じsolverを2,000 workへ上げて192回再開した。
+勝敗・pn/dn・探索量・追い出し・root-child診断に加え、P/N使用数、残量、cutoff、
+UNKNOWN返却、試行済み集合と重複抑制の各計数も一致した。
+確定した勝敗は同じ独立部分集合DPと照合した。通常・ASan+UBSanで通過した。
+
+別途、Release binary（`-O2 -DNDEBUG`）の258 process・330根評価を保存した。
+3 publish方式、4残余方式、0/7/2000 work、4×4の両石数parityを含む3根、OFF/初回移譲の216評価に、
+同根TT再利用96評価、TIME_BUDGETの2評価、既知11×11終盤2根の16評価を加えた。
+全129 process対で勝敗・停止理由・通常/native exact仕事量・P/N使用数と残量・試行抑制が一致した。
+子リスト生成数の置換も一致し、同根の2回目は幾何・P/N・native exactを再実行せず、root計数とquotaはresetした。
+native exact、SG、P/N、cap8の複数UNKNOWN返却、初回移譲が実際に発火したことも検査した。
+
+既知根の機能回帰であり、併用時の速度改善率や深い根の勝敗確定を示す比較ではない。
+7件の拒否・整合性テストと保存記録の再検査をCIへ追加し、CLI matrix自体はpushで再実行しない。
+通常利用の指定・予算・出力・証明書取得の境界は[使い方](../../../docs/NORMAL_DFPN.md)へ整理した。
+文書の3例（4×4通常、既知11×11 P/N、同native exact separate併用）もRelease binaryで実行し、既知勝敗と一致した。

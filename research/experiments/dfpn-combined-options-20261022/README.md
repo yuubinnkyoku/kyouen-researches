@@ -37,3 +37,7 @@ python -m unittest discover -s research/experiments/dfpn-combined-options-202610
 ```
 
 記録を上書きしない。CIは記録の再検査とC++小盤回帰だけを行い、このRelease CLI matrix全体は再実行しない。
+
+通常利用のガイドは[docs/NORMAL_DFPN.md](../../../docs/NORMAL_DFPN.md)、現在の検証範囲は
+[K0501](../../knowledge/items/K0501-dfpn-frame-child-geometry-reuse.md)を参照する。
+ガイドの3実行例もRelease binaryで確認し、`doc-smoke.json`へ保存した。

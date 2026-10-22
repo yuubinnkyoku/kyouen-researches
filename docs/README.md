@@ -3,6 +3,7 @@
 現在知識の正本は[knowledge](../research/knowledge/README.md)です。ここでは仕様・使い方・読み方を説明します。
 
 - [ルールと再現手順](REPRODUCIBILITY.md)
+- [通常df-pnの有限探索・高速化・予算](NORMAL_DFPN.md)
 - [順位付きAND/OR証明書の形式](CERTIFICATE_FORMAT.md)、[KYOENC4形式](KYOENC4.md)、[10×10証明書export](10X10_KYOENC4_EXPORT.md)
 - [証明方式・形式化の信頼境界](PROOF_STATUS.md)
 - [結果の読み方](RESULTS_AND_IMPLICATIONS.md)

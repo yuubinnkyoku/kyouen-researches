@@ -84,6 +84,20 @@ def verify_records(records):
     assert any(case['residual']=='slice8' and row['pn_aborts']>1 for case,row in flat)
     assert any(case['fast'] and row['frame_expand_uses']>0 for case,row in flat)
     return dict(processes=258,root_evaluations=330,pairs=129,matrix=216,repeated_roots=96,deadline_roots=2,n11_known_roots=16)
+def verify_examples(protocol):
+    smoke=read('doc-smoke.json');assert smoke['solver_sha256']==protocol['solver_sha256']
+    rows=smoke['records'];assert [r['id'] for r in rows]==[0,1,2]
+    fixture=next(f for f in N11_ROWS if f['id']=='late-0')
+    for r in rows:
+        actual=parse(r['raw_csv']);assert actual==r['rows'] and len(actual)==1
+        row=actual[0];points=[] if r['id']==0 else fixture['occupied']
+        assert r['expected']==(2 if r['id']==0 else fixture['expected']) and row['result']==r['expected']
+        assert row['stones']==len(points)
+        assert row['occupied_lo']==sum(1<<v for v in points if v<64)
+        assert row['occupied_hi']==sum(1<<(v-64) for v in points if v>=64)
+        assert row['frame_expand_reuse']==1 and '--frame-children-expand-reuse' in r['args']
+        assert row['node_budget']==(20000 if r['id']==0 else 100000)
+    assert '--exact-publish=separate' in rows[2]['args']
 def freeze(solver):
     for name in CORE:assert subprocess.check_output(['git','show',f'HEAD:{name}'],cwd=ROOT)==(ROOT/name).read_bytes()
     write('protocol.json',dict(cases=cases(),roots=ROOTS,expected={k:expected(k) for k in ROOTS},
@@ -130,5 +144,6 @@ def main():
         for name,value in protocol['source_hashes'].items():
             blob=subprocess.run(['git','show',f'{protocol["source_commit"]}:{name}'],cwd=ROOT,capture_output=True)
             if blob.returncode==0:assert hashlib.sha256(blob.stdout).hexdigest()==value
+        verify_examples(protocol)
         print('VERIFIED archived compatibility matrix',totals)
 if __name__=='__main__':main()

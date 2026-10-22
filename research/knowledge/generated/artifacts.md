@@ -506,6 +506,18 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/dfpn-combined-options-20261022/doc-smoke.json](../../../research/experiments/dfpn-combined-options-20261022/doc-smoke.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): ガイドの小盤・既知11×11 P/N・native exact separate併用の3実行例
+## [research/experiments/dfpn-combined-options-20261022/protocol.json](../../../research/experiments/dfpn-combined-options-20261022/protocol.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (manifest): Release CLIの併用条件とbinary/source hash、C++併用回帰の範囲
+## [research/experiments/dfpn-combined-options-20261022/records.json](../../../research/experiments/dfpn-combined-options-20261022/records.json)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): exact publish・SG/P/N・再利用・予算・複数根・時間切れの330根評価とCSV全文
+## [research/experiments/dfpn-combined-options-20261022/study.py](../../../research/experiments/dfpn-combined-options-20261022/study.py)
+
+- [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 併用設定と実ヘッダ、全組合せ、129対の仕事量・予算・生成数と文書実行例の再検査
 ## [research/experiments/dfpn-expand-children-20261022/cli_test.py](../../../research/experiments/dfpn-expand-children-20261022/cli_test.py)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 初回移譲CLI、監査、root reset、不正mode拒否

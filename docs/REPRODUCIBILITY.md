@@ -22,6 +22,9 @@ cmake --build build --parallel 2
 [check-all-certificates.sh](../scripts/check-all-certificates.sh)を参照してください。
 CMakeのBUILD_RESEARCH_SOLVERSをONにすると追加solverをビルドできます。
 
+共有df-pn solverの有限探索、子局面再利用、P/N・native exactとの併用と予算の読み方は
+[通常df-pnの使い方](NORMAL_DFPN.md)を参照してください。
+
 ## 研究回帰
 
 各[experiment](../research/experiments/README.md)のREADMEは保存された入力・出力、共有コード、検算コマンドと範囲を示します。
