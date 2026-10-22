@@ -54,6 +54,7 @@ g++ -O3 -std=c++17 -Wall -Wextra -Werror research/experiments/cube-q5-seven-fron
 /tmp/q7-dfs --batch 7 100000 30000000 /tmp/q7-a research/experiments/cube-q5-seven-frontier-20261022/roots.txt /tmp/q7.memo
 /tmp/q7-dfs --batch 7 20000 12000000 /tmp/q7-b research/experiments/cube-q5-seven-frontier-20261022/fourth-roots-34.txt /tmp/q7.memo
 /tmp/q7-dfpn --batch 7 250000 6000000 /tmp/q7-c research/experiments/cube-q5-seven-frontier-20261022/roots.txt /tmp/q7.memo
+/tmp/q7-dfpn --batch 7 1000000 6000000 /tmp/q7-d research/experiments/cube-q5-seven-frontier-20261022/descent-roots.txt /tmp/q7.memo
 ```
 
 この時点で19三石軌道はすべて未解決であり、二石根も空盤もUNKNOWN。
