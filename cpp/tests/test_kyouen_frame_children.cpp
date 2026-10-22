@@ -11,8 +11,9 @@ static bool forbidden4(int a,int b,int c,int d){
 struct Capture {
     int outcome=0;std::uint32_t pn=0,dn=0;
     std::uint64_t nodes=0,exp=0,exact=0,open_ev=0,solved_ev=0,builds=0,moves=0,refresh=0,audits=0,expand_uses=0;
+    std::array<std::uint64_t,6> residual{};
     std::string children;
-    auto logical()const{return std::tuple{outcome,pn,dn,nodes,exp,exact,open_ev,solved_ev,children};}
+    auto logical()const{return std::tuple{outcome,pn,dn,nodes,exp,exact,open_ev,solved_ev,residual,children};}
 };
 static Capture solve(DfPn<4>& s,const std::vector<int>& root,std::uint64_t limit){
     std::ostringstream sink;s.attach_log(sink);s.attach_csv(sink);s.set_search_node_budget(limit);
@@ -24,6 +25,8 @@ static Capture solve(DfPn<4>& s,const std::vector<int>& root,std::uint64_t limit
     }
     a.nodes=s.search_nodes_used();a.exp=s.expansions();a.exact=s.exact_total_nodes();
     s.memo_evictions(a.open_ev,a.solved_ev);
+    s.residual_outcome_stats(a.residual[0],a.residual[1],a.residual[2],a.residual[3]);
+    a.residual[4]=s.residual_attempted();a.residual[5]=s.residual_attempt_skips();
     s.frame_children_stats(a.builds,a.moves,a.refresh,a.audits);a.expand_uses=s.frame_expand_uses();
     std::istringstream input(sink.str());std::string line;
     while(std::getline(input,line)) if(line.starts_with("  move=")) a.children+=line+'\n';
@@ -71,6 +74,37 @@ int main(){
         assert(again.outcome==1 || again.outcome==-1);
     }
     assert(evictions>0);
+    std::uint64_t combinations=0,resumes=0;
+    const std::vector<std::vector<int>> roots={{},{0},{0,1,2,4,9},{0,1,3,5,8,14}};
+    for(unsigned memo:{5u,12u})for(bool desc:{false,true})for(int publish:{0,1,2})
+    for(int residual_mode:{0,1,2,3})for(const auto& root:roots){
+        unsigned mask=0;for(int v:root)mask|=1u<<v;
+        assert(dp[mask]>=0);
+        const int expected=((dp[mask]!=0)==(root.size()%2==0))?1:-1;
+        DfPn<4> off(memo),expanded(memo);
+        for(auto solver:{&off,&expanded}){
+            solver->set_tiebreak_desc(desc);solver->set_track_children(true);
+            solver->set_exact_handoff(8,8,2,publish);
+            ResidualOptions options;
+            options.exact_legal=residual_mode==3?16:(residual_mode?6:0);
+            options.outcome=residual_mode>=2;options.outcome_budget=residual_mode==3?23:128;
+            options.attempt_budget=residual_mode==3?8:0;
+            solver->configure_residual(options);
+        }
+        expanded.set_frame_children_cache(true,true,true);
+        auto a=solve(off,root,7),b=solve(expanded,root,7);
+        assert(a.logical()==b.logical());
+        assert(a.outcome==0 || a.outcome==expected);
+        assert(b.refresh==b.audits);
+        // Both local exact caches and root P/N quotas survive/reset according
+        // to their own contracts after a partial normal solve.
+        a=solve(off,root,2000);b=solve(expanded,root,2000);
+        assert(a.logical()==b.logical());
+        assert(a.outcome==0 || a.outcome==expected);
+        assert(b.refresh==b.audits);
+        ++combinations;++resumes;
+    }
+    assert(combinations==192 && resumes==192);
     std::cout<<"VERIFIED independent_n4="<<checked<<" refreshed_lists="<<audited
-             <<" expanded_audits="<<expanded_audited<<" eviction_events="<<evictions<<"; identical bounds, work, diagnostics, both tie orders and hybrid exact\n";
+             <<" expanded_audits="<<expanded_audited<<" eviction_events="<<evictions<<" combinations="<<combinations<<" resumes="<<resumes<<"; identical bounds, work, diagnostics, both tie orders and hybrid exact\n";
 }
