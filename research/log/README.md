@@ -8,5 +8,6 @@
 - [fact-discovery](fact-discovery/)：探索的発見のsessionとreview。
 - [search-order](search-order/)：memo/手順の因果調査メモ。
 - [frontier](frontier/)：最新knowledgeから選んだ研究テーマの証明・検証・残件。
+- [幾何学的ルール変種の着想（2026-10-22）](2026-10-22-geometric-rule-variants-ideas.md)：共球・共面・共円柱・二次曲線・長方形などの拡張候補と未検証事項。
 
 再現コード・raw出力は[experiments](../experiments/README.md)、旧計画・統合索引は[archive](../archive/README.md)から辿れます。
