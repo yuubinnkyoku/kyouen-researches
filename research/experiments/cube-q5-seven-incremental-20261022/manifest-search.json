@@ -1,0 +1,63 @@
+{
+  "artifacts": {
+    "results-search.md": "e644b708dc6c136da96a68b1261b93ad4bfa3f2d7469ad518ab875f7eafe1f16",
+    "descent-5m.jsonl": "36d08e3bc6539d4f078a23e85fdf18c7f99265b9c5013b45e9038196c94f0c34",
+    "descent-5m.log": "db691ae161f0e98f998b4b51138d25b1907c37952cd1d034bda1ba95a052a985",
+    "descent-direct-10m.jsonl": "df855fa742a0d891d07ca1d49a254295e23d0aa8b67b30be72896a262b8773a0",
+    "descent-direct-10m.log": "45573120e82cfa348943ce9ecefa530fbe1152953a94e389ec4535ceb5e716d5",
+    "mobility-direct-500k.jsonl": "d20d16048c85b757b570478c792575ec19fde37c86cea82c2f0cd30553461606",
+    "mobility-direct-500k.log": "2bc078c87e9ad5569ccdbb6c716cfbd3dd784289b3d83c6240b14ff2bd825669",
+    "checkpoint-profile-dfpn.json": "39e39d13075138d290f52425c18a514d5ef9aa04882c07c2bb1acf3a3d82790b",
+    "checkpoint-profile-direct.json": "4c3ac84d18cdcb39ccceedd838ecfa78b987a376c5a60f8b840a7fbd853f3798"
+  },
+  "local_private_checkpoints": {
+    "benchmark-new.memo": {
+      "workspace_path": "scratch/cube-q5-seven-incremental-20261022/benchmark-new.memo",
+      "sha256": "3269cc584091a6fdea59e5064381bbe62f2ab6137c46ee95241b9c84a27faaf0",
+      "bytes": 1205172728,
+      "side": 7,
+      "cumulative_lineage_expansions": 10590000,
+      "candidate_rows": 11588199,
+      "independently_verified_all_rows": false
+    },
+    "descent-5m.memo": {
+      "workspace_path": "scratch/cube-q5-seven-incremental-20261022/descent-5m.memo",
+      "sha256": "eeb3de34cd26b7b8cc9f38dd14d8ee6a6e55bac49f8653a734f6bc0e49bcf42c",
+      "bytes": 1725171792,
+      "side": 7,
+      "cumulative_lineage_expansions": 15590000,
+      "candidate_rows": 16588190,
+      "independently_verified_all_rows": false
+    },
+    "descent-direct-10m.memo": {
+      "workspace_path": "scratch/cube-q5-seven-incremental-20261022/descent-direct-10m.memo",
+      "sha256": "fd08cff392a8bd45a8ec2d58634870df7b717699c30d82228ba801aa014df5f3",
+      "bytes": 2765171064,
+      "side": 7,
+      "cumulative_lineage_expansions": 25590000,
+      "candidate_rows": 26588183,
+      "independently_verified_all_rows": false
+    },
+    "mobility-dfs.memo": {
+      "workspace_path": "scratch/cube-q5-seven-incremental-20261022/mobility-dfs.memo",
+      "sha256": "383a078393999aeba584b507e8f2f937e7e427559a152970eb6768b527c5495b",
+      "bytes": 1345559104,
+      "side": 7,
+      "cumulative_lineage_expansions": 11590000,
+      "candidate_rows": 12938068,
+      "independently_verified_all_rows": false
+    },
+    "mobility-direct-500k.memo": {
+      "workspace_path": "scratch/cube-q5-seven-incremental-20261022/mobility-direct-500k.memo",
+      "sha256": "cfa7cd5d40c68aa587a36de3affd013cc53a285489c1b0d07bad6c27472f865d",
+      "bytes": 2835528312,
+      "side": 7,
+      "cumulative_lineage_expansions": 26090000,
+      "candidate_rows": 27264695,
+      "independently_verified_all_rows": false
+    }
+  },
+  "outcome": "all five-stone searches UNKNOWN; no new shallow root proof",
+  "lineage": "seed -> incremental 20k -> incremental dfpn 5m -> direct dfpn 10m -> direct mobility dfs 500k; 1m mobility branch separate",
+  "all_processes_completed": true
+}

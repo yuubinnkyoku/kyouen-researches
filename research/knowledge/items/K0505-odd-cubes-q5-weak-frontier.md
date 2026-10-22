@@ -43,6 +43,12 @@ artifacts:
 - path: research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json
   role: data
   note: 既知3立方のdf-pn・DFS両方式の独立証明、差分更新照合、旧checkpoint互換性
+- path: research/experiments/cube-q5-seven-incremental-20261022/results-search.md
+  role: log
+  note: 五石根に追加1550万展開、UNKNOWN。最終27264695候補行からの再開方法
+- path: research/experiments/cube-q5-seven-incremental-20261022/manifest-search.json
+  role: manifest
+  note: 終了した各探索結果とprivate checkpointの所在・hash・信頼範囲
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
 evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
@@ -54,7 +60,7 @@ solution:
   conditions: 5点共平面または共球面禁止・完全指摘・通常プレイ
   verification: [exact-search]
   certificate: 根はUNKNOWNで勝敗証明書なし。K0506の有限部分証明は別に独立検査済み
-  independent_check: K0506の6石N・7石P・17石終端を独立検査。標本幾何・既知3立方の回帰も確認。空盤証明ではない
+  independent_check: K0506の6石N・7石P・17石および18石終端を独立検査。標本幾何・既知3立方の回帰も確認。空盤証明ではない
   note: 5立方のK0503および全偶数辺長のK0502から奇数n≥7の勝敗は従わない
 ---
 
@@ -100,3 +106,8 @@ checkpointから抽出した6石N・7石Pと17石極大安全局面は、別のB
 標本履歴で従来の全再計算との一致とcheckpointの双方向互換性を確認した。
 同じprivate seedからの五石根 `{0,2,5,26,69}` の2万展開では、各方式が同じ
 11,588,199候補行でUNKNOWNとなった。速度改善は空盤の勝敗を意味しない。
+
+続いて同五石根へ500万df-pn、1000万の候補点直接判定df-pn、50万のmobility DFSを
+順に加えたが、全てUNKNOWN。最終のprivate候補memoは27,264,695行で、この全体は
+独立未検査。別の100万mobility DFS分岐で得た18石終端だけは独立検査し、
+最大安全石数の下界を18へ更新した（K0506）。上位根の弱解決は未達である。

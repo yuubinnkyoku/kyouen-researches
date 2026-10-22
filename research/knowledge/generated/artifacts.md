@@ -541,9 +541,15 @@
 ## [research/experiments/cube-q5-seven-incremental-20261022/README.md](../../../research/experiments/cube-q5-seven-incremental-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 合法手の差分更新・候補点直接判定・一括checkpoint IOの検証と速度測定
+## [research/experiments/cube-q5-seven-incremental-20261022/manifest-search.json](../../../research/experiments/cube-q5-seven-incremental-20261022/manifest-search.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 終了した各探索結果とprivate checkpointの所在・hash・信頼範囲
 ## [research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json](../../../research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 既知3立方のdf-pn・DFS両方式の独立証明、差分更新照合、旧checkpoint互換性
+## [research/experiments/cube-q5-seven-incremental-20261022/results-search.md](../../../research/experiments/cube-q5-seven-incremental-20261022/results-search.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 五石根に追加1550万展開、UNKNOWN。最終27264695候補行からの再開方法
 ## [research/experiments/cube-q5-seven-incremental-20261022/terminal18-verified.json](../../../research/experiments/cube-q5-seven-incremental-20261022/terminal18-verified.json)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): 1037340回のBareiss整数行列式評価による検査結果
