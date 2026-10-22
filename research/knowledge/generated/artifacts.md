@@ -506,6 +506,27 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/cube-q5-seven-probe-20261022/README.md](../../../research/experiments/cube-q5-seven-probe-20261022/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 7立方の2石根・35第三手境界・増加予算probe・未検証範囲
+## [research/experiments/cube-q5-seven-probe-20261022/coverage-7.json](../../../research/experiments/cube-q5-seven-probe-20261022/coverage-7.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 341第三手のうち306手に4石終局応手。残る35手は全てz=6
+## [research/experiments/cube-q5-seven-probe-20261022/manifest.json](../../../research/experiments/cube-q5-seven-probe-20261022/manifest.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): solver・幾何境界・回帰・実行結果のSHA-256
+## [research/experiments/cube-q5-seven-probe-20261022/probe-7-20m.json](../../../research/experiments/cube-q5-seven-probe-20261022/probe-7-20m.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): {0,5}は100万展開・18881241四点cacheでもUNKNOWN
+## [research/experiments/cube-q5-seven-probe-20261022/probe-7.json](../../../research/experiments/cube-q5-seven-probe-20261022/probe-7.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): {0,5}は76189展開・400万四点cacheでUNKNOWN
+## [research/experiments/cube-q5-seven-probe-20261022/probe.cpp](../../../research/experiments/cube-q5-seven-probe-20261022/probe.cpp)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (solver): 343点・6ワードmask・48対称性・遅延四点幾何のbounded exact solver
+## [research/experiments/cube-q5-seven-probe-20261022/regression.json](../../../research/experiments/cube-q5-seven-probe-20261022/regression.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 7立方上の104四点配置・35672追加候補の独立幾何比較と3立方全20二石軌道
 ## [research/experiments/cube-q5-weak-20261022/README.md](../../../research/experiments/cube-q5-weak-20261022/README.md)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (proof): 全偶数辺長と偶数辺を持つ直方格子の構成的鏡映証明

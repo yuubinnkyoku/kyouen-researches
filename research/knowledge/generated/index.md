@@ -497,3 +497,4 @@
 | [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) | 3次元5点禁止版の全偶数辺立方盤は鏡映応手で後手必勝 | proposition | proved | variants, grundy, first-moves |
 | [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) | 5×5×5の3次元5点禁止版は全125初手を覆う独立検査済み証明書で後手必勝 | proposition | computed | variants, first-moves, certificates, verification |
 | [K0504](../items/K0504-geometric-rule-variant-comparison.md) | 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究 | question | open | variants, geometry, rules |
+| [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) | 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か | question | open | variants, first-moves, search-methods |
