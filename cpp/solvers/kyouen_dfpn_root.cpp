@@ -81,7 +81,7 @@ struct ResidualOptions {
     std::uint64_t outcome_budget=100000;
     std::uint64_t attempt_budget=0; // 0 preserves the whole-root-quota handoff
 };
-struct FrameChildrenOptions { bool cache=false,audit=false; };
+struct FrameChildrenOptions { bool cache=false,audit=false,expand_reuse=false; };
 static inline bool operator==(Bits a, Bits b){ return a.lo==b.lo && a.hi==b.hi; }
 static inline bool operator<(Bits a, Bits b){ return a.hi<b.hi || (a.hi==b.hi && a.lo<b.lo); }
 static inline Bits operator|(Bits a, Bits b){ return {a.lo|b.lo,a.hi|b.hi}; }
@@ -1274,7 +1274,8 @@ private:
     std::vector<std::array<int,4>> forbidden_quads_;
     std::uint64_t forbidden_count_=0,visited_=0,expanded_=0;
     bool solving_dfpn_=false,search_node_budget_set_=false;
-    bool frame_children_cache_=false,frame_children_audit_=false;
+    bool frame_children_cache_=false,frame_children_audit_=false,frame_expand_reuse_=false;
+    std::uint64_t frame_expand_uses_=0;
     std::uint64_t child_geometry_builds_=0,child_geometry_moves_=0,child_bound_refreshes_=0,frame_children_audits_=0;
     std::uint64_t search_node_budget_=0,search_nodes_used_=0;
     void consume_search_node(){
@@ -2303,7 +2304,7 @@ private:
         return checked_return(r);
     }
 
-    void expand(const Bits& key,const TState& state,int stones,Bits legal,int depth){
+    std::unique_ptr<Gen> expand(const Bits& key,const TState& state,int stones,Bits legal,int depth){
         auto gb=std::make_unique<Gen>();
         Gen& g=*gb;
         gen_into(state,stones,legal,g);
@@ -2319,6 +2320,7 @@ private:
         ++expanded_;
         ++exp_hist_[depth<64?depth:63];
         if(depth>max_depth_)max_depth_=depth;
+        return gb; // exclusive ownership; caller may retain this geometry
     }
 
     void heartbeat(){
@@ -2396,8 +2398,8 @@ private:
     // the buffer address is stable. But gen() must NEVER be called twice on
     // the same frame expecting a fresh buffer... it isn't: gen_into resets
     // g.n=0 each call, and the frame's buffer is only read while the frame
-    // is live. The ACTUAL invariant: expand() uses a THROWAWAY Gen, never
-    // the frame's buffer, so a child's expand cannot clobber the parent's
+    // is live. expand() allocates its OWN Gen; optional exclusive transfer
+    // is only to that same frame, so a child's expand cannot clobber the parent's
     // in-progress child list. (The roots-csv crash: expand() wrote into the
     // frame buffer via a shared path; fixed by keeping expand heap-local.)
     struct Frame {
@@ -2406,7 +2408,7 @@ private:
         std::uint32_t tp=INF, td=INF;
         int slot=-1;
         int stage=0;
-        bool children_ready=false;
+        bool children_ready=false,expanded_children_pending=false;
         std::unique_ptr<Gen> gb;
         Gen& gen(){
             if(!gb) gb=std::make_unique<Gen>();
@@ -2502,7 +2504,14 @@ private:
                         double el=std::chrono::duration<double>(Clock::now()-t0_).count();
                         if(el>=deadline_s_) throw std::runtime_error("TIME_BUDGET");
                     }
-                    expand(st.back().key,st.back().state,st.back().stones,st.back().legal,st.back().depth);
+                    auto expanded=expand(st.back().key,st.back().state,st.back().stones,st.back().legal,st.back().depth);
+                    if(frame_expand_reuse_){
+                        // Move only this expansion's private buffer into its own
+                        // frame. No parent/child alias or shared scratch pool.
+                        st.back().gb=std::move(expanded);
+                        st.back().children_ready=true;
+                        st.back().expanded_children_pending=true;
+                    }
                     // DO NOT POP: the frame must now descend into its best
                     // child (stage 1 below). Popping here was the
                     // "expansions=1" bug: mid() returned after expanding the
@@ -2575,6 +2584,12 @@ private:
             bool is_root=(frs==root_stones_);
             Gen& g=st.back().gen();
             if(frame_children_cache_ && st.back().children_ready){
+                if(st.back().expanded_children_pending){
+                    ++frame_expand_uses_;
+                    st.back().expanded_children_pending=false;
+                }
+                // expand() may have evicted a child TT entry, or a native
+                // exact attempt may have changed it. Refresh even on first use.
                 refresh_child_bounds(frs,g,is_root);
                 if(frame_children_audit_) audit_frame_children(st.back().state,frs,st.back().legal,g);
             }else{
@@ -2700,7 +2715,8 @@ private:
 
     // DEAD CODE (kept for the comment): scratch Gens keyed by stack slot
     // aliased parent/child buffers and caused the n=4 crash at gen_into+305.
-    // Frames now own their Gen buffers; expand() uses a heap-local throwaway.
+    // Frames own their Gen buffers; expand() creates a distinct heap-local
+    // buffer which can be moved exclusively into that expansion's frame.
     // gen_scratch is no longer called; left in place so the history is clear.
     Gen& gen_scratch(int slot,std::vector<std::unique_ptr<Gen>>& scratch){
         if((int)scratch.size()<=slot) scratch.resize((std::size_t)slot+1);
@@ -2717,6 +2733,7 @@ private:
         } scope(solving_dfpn_);
         search_nodes_used_=0;
         child_geometry_builds_=child_geometry_moves_=child_bound_refreshes_=frame_children_audits_=0;
+        frame_expand_uses_=0;
         reset_residual_outcome_budget();
         Bits key=canonical(state);
         root_key_=key; root_stones_=stones;
@@ -2793,9 +2810,11 @@ private:
     }
 
 public:
-    void set_frame_children_cache(bool enabled,bool audit=false){
-        frame_children_cache_=enabled || audit;frame_children_audit_=audit;
+    void set_frame_children_cache(bool enabled,bool audit=false,bool expand_reuse=false){
+        frame_children_cache_=enabled || audit || expand_reuse;frame_children_audit_=audit;
+        frame_expand_reuse_=expand_reuse;
     }
+    std::uint64_t frame_expand_uses() const { return frame_expand_uses_; }
     void frame_children_stats(std::uint64_t& builds,std::uint64_t& moves,std::uint64_t& refreshes,std::uint64_t& audits) const {
         builds=child_geometry_builds_; moves=child_geometry_moves_;
         refreshes=child_bound_refreshes_; audits=frame_children_audits_;
@@ -3188,7 +3207,7 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
         solver.set_exact_legal_for_stones(kv.first,kv.second);
     solver.set_exact_order(exact_order);
     solver.configure_residual(residual_options);
-    solver.set_frame_children_cache(frame_options.cache,frame_options.audit);
+    solver.set_frame_children_cache(frame_options.cache,frame_options.audit,frame_options.expand_reuse);
     if(search_node_budget) solver.set_search_node_budget(*search_node_budget);
     if(residual_options.share_gate>0) DfPn<N>::clear_residual_component_cache();
     L<<"n="<<N<<" built forbidden="<<solver.forbidden_count()
@@ -3248,6 +3267,7 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
              <<" pn_attempt_max="<<solver.residual_attempt_max_nodes()
              <<" pn_attempt_skips="<<solver.residual_attempt_skips()
              <<" frame_cache="<<frame_options.cache<<" frame_audit="<<frame_options.audit
+             <<" frame_expand_reuse="<<frame_options.expand_reuse<<" frame_expand_uses="<<solver.frame_expand_uses()
              <<" geometry_builds="<<builds<<" geometry_moves="<<moves
              <<" child_refreshes="<<refreshes<<" child_audits="<<audits
              <<" solve_us="<<root_solve_us
@@ -4434,6 +4454,7 @@ int main(int argc,char**argv){
             if(a=="--reps")reps=true;
             else if(a=="--empty")empty=true;
             else if(a=="--frame-children-cache") frame_options.cache=true;
+            else if(a=="--frame-children-expand-reuse") frame_options.cache=frame_options.expand_reuse=true;
             else if(a=="--frame-children-audit") frame_options.cache=frame_options.audit=true;
             else if(a.rfind("--n=",0)==0)n=std::stoi(a.substr(4));
             else if(a.rfind("--node-budget=",0)==0){
@@ -4531,7 +4552,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--node-budget=N] [--frame-children-cache] [--frame-children-audit] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-attempt-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--node-budget=N] [--frame-children-cache] [--frame-children-expand-reuse] [--frame-children-audit] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-attempt-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }

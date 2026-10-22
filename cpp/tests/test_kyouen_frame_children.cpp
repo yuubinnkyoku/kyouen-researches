@@ -10,7 +10,7 @@ static bool forbidden4(int a,int b,int c,int d){
 }
 struct Capture {
     int outcome=0;std::uint32_t pn=0,dn=0;
-    std::uint64_t nodes=0,exp=0,exact=0,open_ev=0,solved_ev=0,builds=0,moves=0,refresh=0,audits=0;
+    std::uint64_t nodes=0,exp=0,exact=0,open_ev=0,solved_ev=0,builds=0,moves=0,refresh=0,audits=0,expand_uses=0;
     std::string children;
     auto logical()const{return std::tuple{outcome,pn,dn,nodes,exp,exact,open_ev,solved_ev,children};}
 };
@@ -24,7 +24,7 @@ static Capture solve(DfPn<4>& s,const std::vector<int>& root,std::uint64_t limit
     }
     a.nodes=s.search_nodes_used();a.exp=s.expansions();a.exact=s.exact_total_nodes();
     s.memo_evictions(a.open_ev,a.solved_ev);
-    s.frame_children_stats(a.builds,a.moves,a.refresh,a.audits);
+    s.frame_children_stats(a.builds,a.moves,a.refresh,a.audits);a.expand_uses=s.frame_expand_uses();
     std::istringstream input(sink.str());std::string line;
     while(std::getline(input,line)) if(line.starts_with("  move=")) a.children+=line+'\n';
     return a;
@@ -39,24 +39,30 @@ int main(){
         dp[mask]=0;
         for(int v=0;v<16;++v)if(!(mask&(1<<v)) && dp[mask|(1<<v)]==0)dp[mask]=1;
     }
-    std::uint64_t checked=0,audited=0;
+    std::uint64_t checked=0,audited=0,expanded_audited=0;
     for(int mask=0;mask<(1<<16);++mask){
         if(dp[mask]<0)continue;
         std::vector<int> root;for(int v=0;v<16;++v)if(mask&(1<<v))root.push_back(v);
-        DfPn<4> off(12),cached(12);cached.set_frame_children_cache(true,true);
-        auto a=solve(off,root,20000),b=solve(cached,root,20000);
-        assert(a.logical()==b.logical());
+        DfPn<4> off(12),cached(12),expanded(12);cached.set_frame_children_cache(true,true);
+        expanded.set_frame_children_cache(true,true,true);
+        auto a=solve(off,root,20000),b=solve(cached,root,20000),c=solve(expanded,root,20000);
+        assert(a.logical()==b.logical() && a.logical()==c.logical());
+        assert(c.refresh==c.audits);expanded_audited+=c.audits;
         assert(a.outcome==(((dp[mask]!=0)==(root.size()%2==0))?1:-1));
         assert(b.refresh==b.audits);audited+=b.audits;++checked;
     }
     assert(checked==5811 && audited>0);
     std::uint64_t evictions=0;
     for(unsigned memo:{5u,12u})for(bool desc:{false,true})for(bool hybrid:{false,true}){
-        DfPn<4> off(memo),cached(memo);cached.set_frame_children_cache(true);
-        off.set_tiebreak_desc(desc);cached.set_tiebreak_desc(desc);
-        off.set_track_children(true);cached.set_track_children(true);
-        if(hybrid){off.set_exact_handoff(8,8,1,0);cached.set_exact_handoff(8,8,1,0);}
-        auto a=solve(off,{},2000),b=solve(cached,{},2000);
+        DfPn<4> off(memo),cached(memo),expanded(memo);cached.set_frame_children_cache(true);
+        expanded.set_frame_children_cache(true,false,true);
+        off.set_tiebreak_desc(desc);cached.set_tiebreak_desc(desc);expanded.set_tiebreak_desc(desc);
+        off.set_track_children(true);cached.set_track_children(true);expanded.set_track_children(true);
+        if(hybrid){off.set_exact_handoff(8,8,1,0);cached.set_exact_handoff(8,8,1,0);expanded.set_exact_handoff(8,8,1,0);}
+        auto a=solve(off,{},2000),b=solve(cached,{},2000),c=solve(expanded,{},2000);
+        assert(a.logical()==c.logical());
+        assert(c.expand_uses>0 && b.builds==c.builds+c.expand_uses);
+        assert(c.refresh==b.refresh+c.expand_uses);
         assert(a.logical()==b.logical());assert(b.refresh>0 && b.audits==0);
         assert(b.builds<a.builds && b.moves<a.moves);
         evictions+=b.open_ev+b.solved_ev;
@@ -66,5 +72,5 @@ int main(){
     }
     assert(evictions>0);
     std::cout<<"VERIFIED independent_n4="<<checked<<" refreshed_lists="<<audited
-             <<" eviction_events="<<evictions<<"; identical bounds, work, diagnostics, both tie orders and hybrid exact\n";
+             <<" expanded_audits="<<expanded_audited<<" eviction_events="<<evictions<<"; identical bounds, work, diagnostics, both tie orders and hybrid exact\n";
 }
