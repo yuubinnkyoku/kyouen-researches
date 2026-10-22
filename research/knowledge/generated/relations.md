@@ -2422,6 +2422,6 @@
 
 - ← supports [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md): 7立方の有限部分証明と再開可能な探索境界を提供。空盤の勝敗証明ではない
 
-## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17石極大安全局面を独立証明書で確認
+## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認
 
 - → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 7立方の有限部分証明と再開可能な探索境界を提供。空盤の勝敗証明ではない

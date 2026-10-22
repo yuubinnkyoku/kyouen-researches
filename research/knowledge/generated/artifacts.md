@@ -544,6 +544,15 @@
 ## [research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json](../../../research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 既知3立方のdf-pn・DFS両方式の独立証明、差分更新照合、旧checkpoint互換性
+## [research/experiments/cube-q5-seven-incremental-20261022/terminal18-verified.json](../../../research/experiments/cube-q5-seven-incremental-20261022/terminal18-verified.json)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): 1037340回のBareiss整数行列式評価による検査結果
+## [research/experiments/cube-q5-seven-incremental-20261022/terminal18.cert.gz](../../../research/experiments/cube-q5-seven-incremental-20261022/terminal18.cert.gz)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (certificate): 18石P終端の1局面・0辺証明書
+## [research/experiments/cube-q5-seven-incremental-20261022/terminal18.md](../../../research/experiments/cube-q5-seven-incremental-20261022/terminal18.md)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 18石極大安全構成と最大安全石数≥18の独立検査
 ## [research/experiments/cube-q5-seven-probe-20261022/README.md](../../../research/experiments/cube-q5-seven-probe-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 7立方の2石根・35第三手境界・増加予算probe・未検証範囲
