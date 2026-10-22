@@ -506,6 +506,38 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/cube-q5-seven-frontier-20261022/README.md](../../../research/experiments/cube-q5-seven-frontier-20261022/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 座標、有限部分証明の意味、独立検査、17石構成、探索の信頼境界
+## [research/experiments/cube-q5-seven-frontier-20261022/dfpn-weighted-250k.jsonl](../../../research/experiments/cube-q5-seven-frontier-20261022/dfpn-weighted-250k.jsonl)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): DFS確定候補を引き継ぎ19三石軌道を各25万展開、全てUNKNOWN
+## [research/experiments/cube-q5-seven-frontier-20261022/manifest.json](../../../research/experiments/cube-q5-seven-frontier-20261022/manifest.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 追加成果とprivate checkpointの所在・hash・独立検査範囲
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (manifest): ソース・結果・圧縮前後の証明書・private checkpointのhashと保存範囲
+## [research/experiments/cube-q5-seven-frontier-20261022/seven-p-verified.json](../../../research/experiments/cube-q5-seven-frontier-20261022/seven-p-verified.json)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): 7石Pの独立検査結果
+## [research/experiments/cube-q5-seven-frontier-20261022/seven-p.cert.gz](../../../research/experiments/cube-q5-seven-frontier-20261022/seven-p.cert.gz)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (certificate): 7石P局面の8313局面・10704辺証明書
+## [research/experiments/cube-q5-seven-frontier-20261022/six-n-verified.json](../../../research/experiments/cube-q5-seven-frontier-20261022/six-n-verified.json)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): 6石Nの独立検査結果
+## [research/experiments/cube-q5-seven-frontier-20261022/six-n.cert.gz](../../../research/experiments/cube-q5-seven-frontier-20261022/six-n.cert.gz)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (certificate): 6石N局面の8314局面・10705辺証明書
+## [research/experiments/cube-q5-seven-frontier-20261022/terminal17-verified.json](../../../research/experiments/cube-q5-seven-frontier-20261022/terminal17-verified.json)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): 17石極大安全集合の独立検査結果
+## [research/experiments/cube-q5-seven-frontier-20261022/terminal17.cert.gz](../../../research/experiments/cube-q5-seven-frontier-20261022/terminal17.cert.gz)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (certificate): 安全かつ合法追加点0の17石局面1件
+## [research/experiments/cube-q5-seven-frontier-20261022/verify.cpp](../../../research/experiments/cube-q5-seven-frontier-20261022/verify.cpp)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (verifier): 6ワードQ5CUBE2・Bareiss整数幾何・全AND/OR条件の独立検査器
 ## [research/experiments/cube-q5-seven-probe-20261022/README.md](../../../research/experiments/cube-q5-seven-probe-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 7立方の2石根・35第三手境界・増加予算probe・未検証範囲

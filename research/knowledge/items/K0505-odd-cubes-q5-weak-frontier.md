@@ -28,18 +28,27 @@ artifacts:
 - path: research/experiments/cube-q5-seven-probe-20261022/manifest.json
   role: manifest
   note: solver・幾何境界・回帰・実行結果のSHA-256
+- path: research/experiments/cube-q5-seven-frontier-20261022/README.md
+  role: log
+  note: 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明
+- path: research/experiments/cube-q5-seven-frontier-20261022/dfpn-weighted-250k.jsonl
+  role: data
+  note: DFS確定候補を引き継ぎ19三石軌道を各25万展開、全てUNKNOWN
+- path: research/experiments/cube-q5-seven-frontier-20261022/manifest.json
+  role: manifest
+  note: 追加成果とprivate checkpointの所在・hash・独立検査範囲
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
-evidence: 7×7×7の2石根{0,5}を増加幾何予算でprobeしたが未確定
+evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
   board: n×n×n・3次元q=5・奇数n≥7
   level: unsolved
   outcome: unknown
   classification: [root]
-  coverage: 7×7×7の{0,5}を100万展開までprobe。空盤の勝敗は未確定
+  coverage: 7立方{0,5}の残り35第三手を19軌道化。各25万df-pn展開でも全てUNKNOWN
   conditions: 5点共平面または共球面禁止・完全指摘・通常プレイ
   verification: [exact-search]
-  certificate: 根はUNKNOWNであり勝敗証明書なし
-  independent_check: 7立方の標本幾何と既知3立方全20二石軌道を確認。7立方の根の独立証明ではない
+  certificate: 根はUNKNOWNで勝敗証明書なし。K0506の有限部分証明は別に独立検査済み
+  independent_check: K0506の6石N・7石P・17石終端を独立検査。標本幾何・既知3立方の回帰も確認。空盤証明ではない
   note: 5立方のK0503および全偶数辺長のK0502から奇数n≥7の勝敗は従わない
 ---
 
@@ -60,3 +69,22 @@ node上限に達してUNKNOWNだった。探索中の部分確定memoは、根�
 既知3立方の全20二石軌道の独立証明書で回帰確認した。これは7立方の全幾何の
 網羅検査でも空盤証明でもない。根のUNKNOWNから先手・後手どちらの勝ちも
 推定しない。奇数n≥9は今回探索していない。
+
+## 19軌道化と再開可能な境界（2026-10-22追跡）
+
+35第三手を48立方体等長変換で19三石軌道にまとめた。各10万DFS展開と、
+第三手34の平面内46第四手への各2万展開ではいずれも根を閉じられなかった。
+確定候補3,818,433局面をprivate checkpointとして保存し、そのsnapshotから
+19軌道へ各25万の深さ重み付きdf-pn展開を追加した。最終確定候補memoは
+8,568,236局面。全19軌道は依然UNKNOWNであり、確定候補の全体は独立未検査。
+再開時は確定P/Nだけを再利用し、UNKNOWNは確定cacheへ入れない。
+
+checkpointから抽出した6石N・7石Pと17石極大安全局面は、別のBareiss幾何検査器で
+独立検査できた（K0506）。6石Nは三石根69の下の部分木に属するが、三石根69や
+二石根・空盤を閉じる証明ではない。17石構成から最大安全石数≥17は従うが、
+空盤の勝敗や最大値17は従わない。詳細な再現・失敗prior・検査の範囲は追加artifactを参照。
+
+さらに第三手69の下の五石根 `{0,2,5,26,69}`、`{0,2,5,49,69}`、
+`{0,5,26,49,69}` を同snapshotから各100万追加展開したが、3件ともUNKNOWN。
+最終のprivate確定候補memoは11,568,207局面。次回再開用の同ファイルを保存したが、
+この全ラベルの独立検査ではなく、三石根・二石根・空盤の未解決性を維持する。

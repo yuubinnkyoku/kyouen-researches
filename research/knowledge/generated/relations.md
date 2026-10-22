@@ -2417,3 +2417,11 @@
 ## [K0504](../items/K0504-geometric-rule-variant-comparison.md) 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする完全指摘ルールの定義
+
+## [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
+
+- ← supports [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md): 7立方の有限部分証明と再開可能な探索境界を提供。空盤の勝敗証明ではない
+
+## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17石極大安全局面を独立証明書で確認
+
+- → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 7立方の有限部分証明と再開可能な探索境界を提供。空盤の勝敗証明ではない
