@@ -81,6 +81,7 @@ struct ResidualOptions {
     std::uint64_t outcome_budget=100000;
     std::uint64_t attempt_budget=0; // 0 preserves the whole-root-quota handoff
 };
+struct FrameChildrenOptions { bool cache=false,audit=false; };
 static inline bool operator==(Bits a, Bits b){ return a.lo==b.lo && a.hi==b.hi; }
 static inline bool operator<(Bits a, Bits b){ return a.hi<b.hi || (a.hi==b.hi && a.lo<b.lo); }
 static inline Bits operator|(Bits a, Bits b){ return {a.lo|b.lo,a.hi|b.hi}; }
@@ -1273,6 +1274,8 @@ private:
     std::vector<std::array<int,4>> forbidden_quads_;
     std::uint64_t forbidden_count_=0,visited_=0,expanded_=0;
     bool solving_dfpn_=false,search_node_budget_set_=false;
+    bool frame_children_cache_=false,frame_children_audit_=false;
+    std::uint64_t child_geometry_builds_=0,child_geometry_moves_=0,child_bound_refreshes_=0,frame_children_audits_=0;
     std::uint64_t search_node_budget_=0,search_nodes_used_=0;
     void consume_search_node(){
         if(!solving_dfpn_) return; // standalone exact replay keeps its own budget
@@ -1919,7 +1922,17 @@ private:
     // indexed by depth then threw bad_alloc because resize() default-builds
     // every Gen up to that depth including ~18 KB each. unique_ptr<Gen>
     // allocates exactly one buffer per frame, lazily, on the heap.
+    void read_child_bounds(GChild& c,int child_stones){
+        int s=tt_.find(c.key.lo,c.key.hi);
+        if(s>=0){
+            c.pn=tt_.pn_[(std::size_t)s]; c.dn=tt_.dn_[(std::size_t)s]; c.st=tt_.st_[(std::size_t)s];
+        }else if(!any(c.legal)){
+            if(is_or(child_stones)){ c.pn=INF; c.dn=0; c.st=PnTT::LOSS; }
+            else{ c.pn=0; c.dn=INF; c.st=PnTT::WIN; }
+        }else{ c.pn=1; c.dn=1; c.st=PnTT::OPEN; }
+    }
     void gen_into(const TState& state,int stones,Bits legal,Gen& g,bool is_root=false){
+        ++child_geometry_builds_;
         g.n=0;
         Bits moves=legal;
         // Mask hygiene: legal must never carry bits >= V. take_lsb on a
@@ -1932,6 +1945,7 @@ private:
         else { moves.hi &= HI_MASK; }
         while(any(moves)){
             int v=take_lsb(moves);
+            ++child_geometry_moves_;
             if(v<0||v>=V) throw std::runtime_error("gen_into: move index out of range");
             Bits bit=bitof(v);
             typename DfPn<N>::TState ns=add(state,v);
@@ -1951,19 +1965,34 @@ private:
             c.ts=ns; c.legal=nl; c.key=nk; c.count=popcount(nl);
             c.move=static_cast<std::uint8_t>(v);
             c.work=0; c.last_pn=1; c.last_dn=1;
-            int cs=stones+1;
-            int s=tt_.find(nk.lo,nk.hi);
-            if(s>=0){
-                c.pn=tt_.pn_[(std::size_t)s]; c.dn=tt_.dn_[(std::size_t)s]; c.st=tt_.st_[(std::size_t)s];
-            }else{
-                if(!any(nl)){
-                    if(is_or(cs)){ c.pn=INF; c.dn=0; c.st=PnTT::LOSS; }
-                    else{ c.pn=0; c.dn=INF; c.st=PnTT::WIN; }
-                }else{ c.pn=1; c.dn=1; c.st=PnTT::OPEN; }
-            }
+            read_child_bounds(c,stones+1);
             if(track_children_ && is_root) note_child(nk,v,c.count,c.pn,c.dn,c.st);
             ++g.n;
         }
+    }
+    void refresh_child_bounds(int stones,Gen& g,bool is_root){
+        ++child_bound_refreshes_;
+        for(int i=0;i<g.n;++i){
+            auto& c=g.ch[(std::size_t)i];
+            // Geometry is immutable for this frame; bounds may change or
+            // disappear through TT eviction. Never retain a TT slot index.
+            c.work=0; c.last_pn=c.last_dn=1;
+            read_child_bounds(c,stones+1);
+            if(track_children_ && is_root) note_child(c.key,c.move,c.count,c.pn,c.dn,c.st);
+        }
+    }
+    void audit_frame_children(const TState& state,int stones,Bits legal,const Gen& cached){
+        auto fresh=std::make_unique<Gen>();
+        gen_into(state,stones,legal,*fresh,false);
+        if(cached.n!=fresh->n) throw std::runtime_error("frame child count mismatch");
+        for(int i=0;i<cached.n;++i){
+            const auto& a=cached.ch[(std::size_t)i];const auto& b=fresh->ch[(std::size_t)i];
+            if(a.ts.t!=b.ts.t || !(a.legal==b.legal) || !(a.key==b.key)
+               || a.count!=b.count || a.move!=b.move || a.pn!=b.pn || a.dn!=b.dn || a.st!=b.st
+               || a.work!=b.work || a.last_pn!=b.last_pn || a.last_dn!=b.last_dn)
+                throw std::runtime_error("frame child geometry/bounds mismatch");
+        }
+        ++frame_children_audits_;
     }
 
     void aggregate(int stones,const Gen& g,std::uint32_t* pnp,std::uint32_t* dnp){
@@ -2377,6 +2406,7 @@ private:
         std::uint32_t tp=INF, td=INF;
         int slot=-1;
         int stage=0;
+        bool children_ready=false;
         std::unique_ptr<Gen> gb;
         Gen& gen(){
             if(!gb) gb=std::make_unique<Gen>();
@@ -2544,7 +2574,13 @@ private:
             // every deeper frame pass false.
             bool is_root=(frs==root_stones_);
             Gen& g=st.back().gen();
-            gen_into(st.back().state,frs,st.back().legal,g,is_root);
+            if(frame_children_cache_ && st.back().children_ready){
+                refresh_child_bounds(frs,g,is_root);
+                if(frame_children_audit_) audit_frame_children(st.back().state,frs,st.back().legal,g);
+            }else{
+                gen_into(st.back().state,frs,st.back().legal,g,is_root);
+                st.back().children_ready=true;
+            }
             std::uint32_t pn,dn;
             aggregate(frs,g,&pn,&dn);
             int s=st.back().slot;
@@ -2680,6 +2716,7 @@ private:
             ~SearchScope(){ active=false; }
         } scope(solving_dfpn_);
         search_nodes_used_=0;
+        child_geometry_builds_=child_geometry_moves_=child_bound_refreshes_=frame_children_audits_=0;
         reset_residual_outcome_budget();
         Bits key=canonical(state);
         root_key_=key; root_stones_=stones;
@@ -2756,6 +2793,13 @@ private:
     }
 
 public:
+    void set_frame_children_cache(bool enabled,bool audit=false){
+        frame_children_cache_=enabled || audit;frame_children_audit_=audit;
+    }
+    void frame_children_stats(std::uint64_t& builds,std::uint64_t& moves,std::uint64_t& refreshes,std::uint64_t& audits) const {
+        builds=child_geometry_builds_; moves=child_geometry_moves_;
+        refreshes=child_bound_refreshes_; audits=frame_children_audits_;
+    }
     void set_search_node_budget(std::uint64_t limit){ search_node_budget_set_=true; search_node_budget_=limit; }
     void clear_search_node_budget(){ search_node_budget_set_=false; }
     std::uint64_t search_nodes_used() const { return search_nodes_used_; }
@@ -3120,6 +3164,7 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
                const std::vector<std::pair<int,std::uint64_t>>& budget_by_stones,
                const std::vector<std::pair<int,int>>& legal_by_stones,
                int exact_order,const ResidualOptions& residual_options,
+               const FrameChildrenOptions& frame_options,
                std::optional<std::uint64_t> search_node_budget,
                std::ostream& L,std::ostream& C,
                std::uint64_t* total_exp,
@@ -3143,6 +3188,7 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
         solver.set_exact_legal_for_stones(kv.first,kv.second);
     solver.set_exact_order(exact_order);
     solver.configure_residual(residual_options);
+    solver.set_frame_children_cache(frame_options.cache,frame_options.audit);
     if(search_node_budget) solver.set_search_node_budget(*search_node_budget);
     if(residual_options.share_gate>0) DfPn<N>::clear_residual_component_cache();
     L<<"n="<<N<<" built forbidden="<<solver.forbidden_count()
@@ -3184,6 +3230,8 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
             solver.residual_outcome_stats(nodes,cutoffs,aborts,remaining);
             std::uint64_t phase[3]{};
             solver.residual_profile_stats(phase[0],phase[1],phase[2]);
+            std::uint64_t builds,moves,refreshes,audits;
+            solver.frame_children_stats(builds,moves,refreshes,audits);
             C<<"# dfpn_root seq="<<seq<<" result="<<result<<" reason="<<reason
              <<" stones="<<stones.size()<<" occupied_lo="<<input_occupied.lo<<" occupied_hi="<<input_occupied.hi
              <<" expansions="<<(solver.expansions()-before_exp)
@@ -3199,6 +3247,9 @@ static int run(const std::string& only,double budget_s,unsigned memo_power,
              <<" pn_attempted="<<solver.residual_attempted()
              <<" pn_attempt_max="<<solver.residual_attempt_max_nodes()
              <<" pn_attempt_skips="<<solver.residual_attempt_skips()
+             <<" frame_cache="<<frame_options.cache<<" frame_audit="<<frame_options.audit
+             <<" geometry_builds="<<builds<<" geometry_moves="<<moves
+             <<" child_refreshes="<<refreshes<<" child_audits="<<audits
              <<" solve_us="<<root_solve_us
              <<" build_ns="<<(phase[0]-phase_before[0])
              <<" structure_ns="<<(phase[1]-phase_before[1])
@@ -4372,6 +4423,7 @@ int main(int argc,char**argv){
         std::uint64_t residual_attempt_budget=0;
         std::string only="";
         double budget_s=0;
+        FrameChildrenOptions frame_options;
         std::optional<std::uint64_t> search_node_budget;
         int exact_legal=0, exact_retries=1;
         std::uint64_t exact_budget=100000;
@@ -4381,6 +4433,8 @@ int main(int argc,char**argv){
             std::string a=argv[i];
             if(a=="--reps")reps=true;
             else if(a=="--empty")empty=true;
+            else if(a=="--frame-children-cache") frame_options.cache=true;
+            else if(a=="--frame-children-audit") frame_options.cache=frame_options.audit=true;
             else if(a.rfind("--n=",0)==0)n=std::stoi(a.substr(4));
             else if(a.rfind("--node-budget=",0)==0){
                 const auto value=a.substr(14);
@@ -4477,7 +4531,7 @@ int main(int argc,char**argv){
                 exact_legal_by_stones_spec=a.substr(24);
             }
             else{
-                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--node-budget=N] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-attempt-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
+                std::cerr<<"usage: "<<argv[0]<<" [--n=N] [--node-budget=N] [--frame-children-cache] [--frame-children-audit] [--empty] [--reps] [--memo=P] [--only=v,..] [--budget=S] [--log=P] [--csv=P] [--roots-csv=P] [--children] [--tiebreak=asc|desc] [--exact-legal=N] [--exact-budget=N] [--exact-retries=N] [--exact-publish=all|root|separate] [--exact-record] [--exact-record-limit=N] [--exact-replay=P] [--exact-replay-budget=N] [--exact-replay-stop-on-loss] [--exact-replay-profile] [--proof-dag=PATH] [--proof-dag-dir=DIR] [--exact-order=count|countd|key|s5-countd|s5-target92] [--exact-budget-by-stones=5:N,6:N] [--exact-legal-by-stones=5:N,6:N] [--coord-r2=N] [--coord-max=N] [--coord-wall=S] [--coord-frontier=P] [--s4-cache-out=P] [--s5-cache=P] [--s5-cache-out=P] [--residual-exact-legal=N] [--residual-share-gate=N] [--residual-profile] [--residual-evaluator=grundy|outcome] [--residual-outcome-budget=N] [--residual-attempt-budget=N] [--residual-builder=scan|indexed|auto] [--exact-replay-share-tt] [--exact-share-layer=N]\n";
                 return 2;
             }
         }
@@ -4545,6 +4599,9 @@ int main(int argc,char**argv){
             || !exact_replay_path.empty() || !quant_replies.empty() || !s4_ab.empty()
             || !s5_cache.empty() || cover_run || coord_run))
             throw std::runtime_error("--residual-attempt-budget requires normal df-pn with outcome evaluator and positive residual gate");
+        if(frame_options.cache && (!exact_replay_path.empty() || !quant_replies.empty()
+            || !s4_ab.empty() || !s5_cache.empty() || cover_run || coord_run))
+            throw std::runtime_error("frame children cache requires normal df-pn search");
         ResidualOptions residual_options{residual_audit_legal,residual_crosscheck_legal,
             residual_exact_legal,residual_share_gate,residual_builder,residual_profile,
             residual_outcome,residual_outcome_budget,residual_attempt_budget};
@@ -4561,7 +4618,7 @@ int main(int argc,char**argv){
 
                 if(!s4_ab.empty()) return run_s4_ab<4>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<4>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
-                rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+                rc=run<4>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
             case 5:
                 if(!exact_replay_path.empty()) return run_exact_replay<5>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<5>(cover_first,cover_r2,s5_cache,*cp);
@@ -4570,7 +4627,7 @@ int main(int argc,char**argv){
 
                 if(!s4_ab.empty()) return run_s4_ab<5>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<5>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
-                rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+                rc=run<5>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
             case 6:
                 if(!exact_replay_path.empty()) return run_exact_replay<6>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<6>(cover_first,cover_r2,s5_cache,*cp);
@@ -4579,7 +4636,7 @@ int main(int argc,char**argv){
 
                 if(!s4_ab.empty()) return run_s4_ab<6>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<6>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
-                rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+                rc=run<6>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
             case 7:
                 if(!exact_replay_path.empty()) return run_exact_replay<7>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<7>(cover_first,cover_r2,s5_cache,*cp);
@@ -4588,7 +4645,7 @@ int main(int argc,char**argv){
 
                 if(!s4_ab.empty()) return run_s4_ab<7>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<7>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
-                rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+                rc=run<7>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
             case 11:
                 if(!exact_replay_path.empty()) return run_exact_replay<11>(exact_replay_path,exact_replay_budget,pow,only,exact_order,residual_audit_legal,residual_crosscheck_legal,residual_exact_legal,residual_share_gate,residual_profile,residual_builder,residual_outcome,residual_outcome_budget,exact_replay_share_tt,exact_share_layer,exact_replay_stop_on_loss,exact_replay_profile,proof_dag_path,proof_dag_dir_path,*cp);
                 if(cover_run) return run_cover<11>(cover_first,cover_r2,s5_cache,*cp);
@@ -4597,7 +4654,7 @@ int main(int argc,char**argv){
 
                 if(!s4_ab.empty()) return run_s4_ab<11>(s4_ab,quant_first,s4_ab_budget,s4_ab_memo,*cp);
                 if(!quant_replies.empty()) return run_quant<11>(quant_first,quant_replies,quant_budget,quant_timeout,pow,s5_cache,s5_cache_out,*cp);
-                rc=run<11>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
+                rc=run<11>(only,budget_s,pow,empty,reps,children,tiebreak_desc,exact_legal,exact_budget,exact_retries,exact_publish_mode,exact_record,exact_record_limit,budget_by_stones,legal_by_stones,exact_order,residual_options,frame_options,search_node_budget,*lp,*cp,&total_exp,roots_path); break;
             default: std::cerr<<"unsupported n\n"; return 2;
         }
         return rc;
