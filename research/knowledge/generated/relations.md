@@ -49,6 +49,7 @@
 - ← depends_on [K0476](../items/K0476-three-parallel-four-point-q6-circle-count.md): q点版の安全配置と禁止集合の定義を使用
 - ← depends_on [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md): 6点版の円成立条件と盤面規則
 - ← depends_on [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md): 6点共円・共線禁止の対象定義
+- ← depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 安全な追加だけを合法手とする完全指摘ルールの定義
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -2412,3 +2413,7 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのP/N再帰と有限局面のAND/OR帰納法
 - → generalizes [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md): 同じ共平面・共球面5点禁止版の有限弱解決を5×5×5へ拡張。Lean形式検査ではない
+
+## [K0504](../items/K0504-geometric-rule-variant-comparison.md) 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする完全指摘ルールの定義
