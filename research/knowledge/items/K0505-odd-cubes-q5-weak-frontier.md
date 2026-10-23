@@ -64,6 +64,12 @@ artifacts:
 - path: research/experiments/cube-q5-seven-hybrid-20261023/regression.json
   role: data
   note: 中断再開と連続探索の一致、基礎表20根の独立証明、tree置換、不正checkpoint拒否
+- path: research/experiments/cube-q5-seven-hybrid-20261023/storage.md
+  role: log
+  note: 確定候補の層分け・未確定tree引継ぎ・手動継続・旧cacheの可逆圧縮
+- path: research/experiments/cube-q5-seven-hybrid-20261023/private-archives.json
+  role: manifest
+  note: 旧private checkpoint9件のrawとgzipのhash・所在・復元検査
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
 evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
@@ -140,3 +146,13 @@ checkpointから抽出した6石N・7石Pと17石極大安全局面は、別のB
 Q5HYB1 checkpointへ分離保存する方式を実装した。未確定の作業量推定を確定ラベルへ
 変換しない。既知3立方で再開と連続探索の展開数・証明書一致およびtree置換後の
 独立証明を確認した。大きな4石根の勝敗は依然未確定である。
+
+共存グラフが三角形を持たない終盤を高々2手として正確に閉じる補題を導入した
+（K0520）。通常のP/N証明書へ展開し、既知3立方と7立方24終盤で従来探索との一致・
+独立Bareiss検査を通した。4石根の勝敗はこの補題だけでは決まらない。
+
+全1516二石軌道の4手終局応手を調べ、独立な約1.44億Bareiss行列式計算で全行一致を
+確認した（K0521）。残る三石軌道数の最小値は5で、中心軸上の `{169,173}` 等が達成する。
+この組の未被覆第三手は32手。4手終局だけで全第三手を処理できる組は存在しない。
+従来の `{0,5}` は35手・19軌道である。探索対象を新しい組の下の対称な4石局面へ
+移したが、当該三石根・二石根・空盤の勝敗はまだ未確定である。

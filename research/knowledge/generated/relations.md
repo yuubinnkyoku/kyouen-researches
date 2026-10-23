@@ -2428,6 +2428,8 @@
 
 - ← supports [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md): 7立方の有限部分証明と再開可能な探索境界を提供。空盤の勝敗証明ではない
 - ← supports [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md): 未処理第三手69の下の五石Nを閉じた部分証明。上位根の勝敗証明ではない
+- ← supports [K0520](../items/K0520-triangle-free-compatibility-endgame.md): 7立方5点禁止版の終盤を正確に短縮する。空盤の勝敗証明ではない
+- ← supports [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md): 残る三石根を19軌道から5軌道へ減らせる中心軸上の二石組を特定
 
 ## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認
 
@@ -2451,3 +2453,11 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 安全な追加のmex再帰と勝ち初手の規約
 - → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 退化を含む二次形式パラメータ版の定義
+
+## [K0520](../items/K0520-triangle-free-compatibility-endgame.md) 共存グラフに三角形がない遺伝的配置ゲームは高々2手で終局し孤立点の有無でP/Nが決まる
+
+- → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 7立方5点禁止版の終盤を正確に短縮する。空盤の勝敗証明ではない
+
+## [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) 7立方の全1516二石軌道で4手終局未被覆三石軌道の最小値は5
+
+- → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 残る三石根を19軌道から5軌道へ減らせる中心軸上の二石組を特定

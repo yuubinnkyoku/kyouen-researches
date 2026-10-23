@@ -590,9 +590,42 @@
 ## [research/experiments/cube-q5-seven-hybrid-20261023/README.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): ディスク基礎表・追加確定候補・未確定df-pn推定値を分離した再開方式
+## [research/experiments/cube-q5-seven-hybrid-20261023/endgames-current-verified.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/endgames-current-verified.json)
+
+- [K0520](../items/K0520-triangle-free-compatibility-endgame.md) (data): 7立方24終盤の従来探索との一致と全証明書の独立Bareiss検査
+## [research/experiments/cube-q5-seven-hybrid-20261023/graph.cpp](../../../research/experiments/cube-q5-seven-hybrid-20261023/graph.cpp)
+
+- [K0520](../items/K0520-triangle-free-compatibility-endgame.md) (solver): 候補数8以下で共存グラフを作り通常の全AND/OR証明書へ展開する探索器
+## [research/experiments/cube-q5-seven-hybrid-20261023/graph.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/graph.md)
+
+- [K0520](../items/K0520-triangle-free-compatibility-endgame.md) (proof): 全称補題の証明・実装・独立検査の範囲
+## [research/experiments/cube-q5-seven-hybrid-20261023/pair-ranking-verified.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/pair-ranking-verified.json)
+
+- [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (data): 約1.44億行列式の独立再計算と全行一致
+## [research/experiments/cube-q5-seven-hybrid-20261023/pair-ranking.jsonl](../../../research/experiments/cube-q5-seven-hybrid-20261023/pair-ranking.jsonl)
+
+- [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (data): 全1516二石軌道の未被覆第三手集合と三石軌道代表
+## [research/experiments/cube-q5-seven-hybrid-20261023/pairs.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/pairs.md)
+
+- [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (proof): 有限計算の対象・基底5点による終端判定の根拠・再現方法
+## [research/experiments/cube-q5-seven-hybrid-20261023/private-archives.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/private-archives.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 旧private checkpoint9件のrawとgzipのhash・所在・復元検査
+## [research/experiments/cube-q5-seven-hybrid-20261023/rank_pairs.cpp](../../../research/experiments/cube-q5-seven-hybrid-20261023/rank_pairs.cpp)
+
+- [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (solver): 48対称性の全二石軌道と整数階数による第四手調査
+## [research/experiments/cube-q5-seven-hybrid-20261023/regression-graph.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/regression-graph.json)
+
+- [K0520](../items/K0520-triangle-free-compatibility-endgame.md) (data): 既知3立方20根、tree置換、中断再開、不正checkpoint拒否の回帰
 ## [research/experiments/cube-q5-seven-hybrid-20261023/regression.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/regression.json)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 中断再開と連続探索の一致、基礎表20根の独立証明、tree置換、不正checkpoint拒否
+## [research/experiments/cube-q5-seven-hybrid-20261023/storage.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/storage.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 確定候補の層分け・未確定tree引継ぎ・手動継続・旧cacheの可逆圧縮
+## [research/experiments/cube-q5-seven-hybrid-20261023/verify_pairs.cpp](../../../research/experiments/cube-q5-seven-hybrid-20261023/verify_pairs.cpp)
+
+- [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (verifier): 独立対称性生成と5×5 Bareiss行列式による全1516軌道の再計算
 ## [research/experiments/cube-q5-seven-incremental-20261022/README.md](../../../research/experiments/cube-q5-seven-incremental-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 合法手の差分更新・候補点直接判定・一括checkpoint IOの検証と速度測定
