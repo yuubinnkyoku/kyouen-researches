@@ -8953,6 +8953,18 @@
 ## [research/experiments/two-forbidden-hyperedges-20261018/verify.py](../../../research/experiments/two-forbidden-hyperedges-20261018/verify.py)
 
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): n<=7全組とn<=12固定乱数3000組のラベル付き全局面独立検査
+## [research/experiments/two-row-misere-swap-threshold-20261024/README.md](../../../research/experiments/two-row-misere-swap-threshold-20261024/README.md)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 二行盤の真の交換開始長7の証明と有限完全列挙
+## [research/experiments/two-row-misere-swap-threshold-20261024/independent-results.txt](../../../research/experiments/two-row-misere-swap-threshold-20261024/independent-results.txt)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (data): 独立検算の実測結果
+## [research/experiments/two-row-misere-swap-threshold-20261024/independent.cpp](../../../research/experiments/two-row-misere-swap-threshold-20261024/independent.cpp)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (verifier): 整数行列式による独立完全列挙
+## [research/experiments/two-row-misere-swap-threshold-20261024/verify.py](../../../research/experiments/two-row-misere-swap-threshold-20261024/verify.py)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (verifier): 二点和と合法手再帰による完全列挙
 ## [research/experiments/unequal-row-sharp-chord-energy-20261010/README.md](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/README.md)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (proof): 二行の鋭いエネルギー上界と構成
