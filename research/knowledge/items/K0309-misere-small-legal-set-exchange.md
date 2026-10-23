@@ -7,6 +7,18 @@ topics: [variants, grundy]
 aliases: []
 relations: []
 artifacts:
+- path: research/experiments/two-row-misere-swap-threshold-20261024/README.md
+  role: proof
+  note: 二行盤の真の交換開始長7の証明と有限完全列挙
+- path: research/experiments/two-row-misere-swap-threshold-20261024/verify.py
+  role: verifier
+  note: 二点和と合法手再帰による完全列挙
+- path: research/experiments/two-row-misere-swap-threshold-20261024/independent.cpp
+  role: verifier
+  note: 整数行列式による独立完全列挙
+- path: research/experiments/two-row-misere-swap-threshold-20261024/independent-results.txt
+  role: data
+  note: 独立検算の実測結果
 - path: research/experiments/game-structure/reports/game-structure-20261003.md
   role: proof
   note: 5合法点交換則の一般証明
@@ -40,3 +52,9 @@ artifacts:
 **数学的証明**：標準q点版はK0024により全終局の石数が一定なので、終局までの手数の偶奇で両mexが定まる。二次形式版はK0518の全幅長盤定理により終局が三石（等方直線）または3w石に限られ、四石以上は満容量へ延長される。三石から降順にmex帰納すると、奇数幅では全三石の `(g,h)=(0,1)`、偶数幅では階数3の三石が `(1,0)`、階数2が `(0,1)`。偶数幅の二石は階数3の三石へ必ず延長でき、等方三石への延長の有無に応じ `(2,2)` または `(0,1)`。一石・空盤も交換則を満たす。例外局面数はK0518の二石nimber2閉公式に等しい。
 
 [詳細な全称証明・独立完全列挙・再現手順](../../experiments/quadratic-pencil-misere-phase-20261024/README.md)。有限検算は閾値内の54,088安全局面で不一致0、閾値未満の3盤で反例を確認した。これは短盤への無条件の拡張を意味しない。
+
+## 2026-10-24：二行盤の真の交換開始長は7
+
+標準2×m・q=4および二次形式版（全実数λ）では、**全安全局面の通常／misère Grundy値の0↔1交換則がすべてのm≥7で成立し、m=6で不成立**。従って真の開始長は7であり、満容量安定化長9より短い。
+
+二行ではy²=yでλが消え、標準版と禁止集合が一致する。既存K0069のm≥9全極大6石定理から長盤の交換則が従う。m=7,8の全安全局面（2,674・5,635局面）を完全列挙して不一致0。m=6の一石局面S={(0,0)}は(g,h)=(3,0)で反例。二点和に基づく再帰と独立整数行列式C++でm=1..9の全結果が一致した。詳細は[証明・検証器](../../experiments/two-row-misere-swap-threshold-20261024/README.md)。有限結果の無界外挿ではない。
