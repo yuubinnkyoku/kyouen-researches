@@ -112,7 +112,13 @@ def audit() -> dict:
     loss7 = read_keys(BASE / "all_s7_loss_2232.txt", 2232)
     if old8 & loss8 or win7 & loss7:
         raise ValueError("frozen WIN/LOSS conflict")
-    lifted8 = {canonical(m ^ BIT[p]) for m in s9 for p in points(m)}
+    # Every S8 witness is a specific, terminal-certified S9 root.
+    # A frozen-cache label is never used to establish this witness.
+    witness_by_s8 = {}
+    for m in sorted(s9):
+        for p in points(m):
+            witness_by_s8.setdefault(canonical(m ^ BIT[p]), m)
+    lifted8 = set(witness_by_s8)
     if any(not is_safe(m) for m in lifted8):
         raise ValueError("derived unsafe S8 parent")
     if lifted8 & loss8:
@@ -122,11 +128,17 @@ def audit() -> dict:
     rows = []
     total_gain = 0
     improved = 0
+    terminal_edges = 0
+    terminal_closed = 0
     closed = []
     for m in sorted(candidates7):
         child8 = {canonical(m | BIT[p]) for p in legal_points(m)}
         old_covered = len(child8 & old8)
         covered = len(child8 & secured8)
+        terminal_s8 = sorted(child8 & lifted8)
+        terminal_covered = len(terminal_s8)
+        terminal_edges += terminal_covered
+        terminal_closed += (terminal_covered == len(child8))
         missing = sorted(child8 - secured8)
         gain = covered - old_covered
         total_gain += gain
@@ -140,6 +152,9 @@ def audit() -> dict:
         rows.append({
             "s7": f"{m:032x}", "label": label, "children": len(child8),
             "old_secured": old_covered, "secured": covered,
+            "terminal_secured": terminal_covered,
+            "terminal_uncovered": len(child8) - terminal_covered,
+            "terminal_s8": [f"{v:032x}" for v in terminal_s8],
             "gain": gain, "uncovered": len(missing),
             "missing_s8": [f"{v:032x}" for v in missing],
         })
@@ -163,6 +178,14 @@ def audit() -> dict:
         "s7_closed_already_known": len(closed),
         "improved_s7_candidates": improved,
         "additional_secured_s7_edges": total_gain,
+        # This count does not depend on the frozen S8 cache: each edge
+        # has a named S9 terminal-certificate witness below.
+        "terminal_only_secured_s7_edges": terminal_edges,
+        "terminal_only_closed_s7": terminal_closed,
+        "terminal_s8_witnesses": {
+            f"{m:032x}": f"{root:032x}"
+            for m, root in sorted(witness_by_s8.items())
+        },
         "top_unclassified": target[:10],
     }
     expected = (538, 505, 14006, 1850, 1833, 2, 1773, 4040)
@@ -175,6 +198,13 @@ def audit() -> dict:
         raise ValueError("frozen coverage metrics changed")
     if target[0]["s7"] != "00000000100000021081000020000020" or target[0]["uncovered"] != 26:
         raise ValueError("top target changed")
+    # Unlike the combined-cache gap, the best candidate's 10 secured
+    # children have terminal-certificate witnesses; no frozen S8 labels
+    # are needed for the 10/36 bound.
+    if (terminal_edges, terminal_closed, len(lifted8 & old8)) != (4304, 0, 33):
+        raise ValueError("terminal-only coverage metrics changed")
+    if (target[0]["terminal_secured"], target[0]["terminal_uncovered"]) != (10, 26):
+        raise ValueError("best target's terminal-only coverage changed")
     return summary
 
 
