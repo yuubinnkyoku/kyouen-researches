@@ -19,9 +19,10 @@ int main(int argc,char**argv){try{
  {ifstream f(argv[3]);string h;array<long long,4> w;while(f>>h>>w[0]>>w[1]>>w[2]>>w[3])b.push_back({parse(h),w,false});}
  need(b.size()==52,"52 keys");{ifstream f(argv[4]);need(f.good(),"52 key file missing");vector<U> selected;string h;while(f>>h)selected.push_back(parse(h));need(selected.size()==52,"selected52 size");reverse(selected.begin(),selected.end());for(int i=0;i<52;i++)need(selected[i]==b[i].key,"52 schedule mismatch");}
  set<U> distinct;for(auto&i:a)need(points(i.key).size()==10&&safe(i.key)&&canon(i.key)==i.key&&distinct.insert(i.key).second,"invalid S10 WIN leaf");for(auto&i:b)need(points(i.key).size()==10&&safe(i.key)&&canon(i.key)==i.key&&distinct.insert(i.key).second,"invalid or conflicting S10 LOSS leaf");
- Solver sol;sol.mode=1;sol.memo.reserve(100000);
- auto work=[&](const vector<Item>&xs){uint64_t oldhits=sol.hits,oldlooks=sol.lookups;size_t old=sol.memo.size();for(auto&i:xs){for(int j=0;j<4;j++)W[j]=i.w[j];Root r=prepare(i.key,10);need(sol.dfs(r,0,i.key)==i.expected,"conflict");}cout<<"block leaves="<<xs.size()<<" added="<<sol.memo.size()-old<<" hits="<<sol.hits-oldhits<<" lookups="<<sol.lookups-oldlooks<<"\n";};
- int mode=stoi(argv[5]);need(mode==0||mode==1,"bad mode");if(mode==0){work(b);work(a);}else{work(a); }
+ Solver sol;sol.mode=1;sol.memo.reserve(100000);size_t checked=0;
+ auto work=[&](const vector<Item>&xs){uint64_t oldhits=sol.hits,oldlooks=sol.lookups;size_t old=sol.memo.size();for(auto&i:xs){for(int j=0;j<4;j++)W[j]=i.w[j];Root r=prepare(i.key,10);need(sol.dfs(r,0,i.key)==i.expected,"conflict");checked++;}cout<<"block leaves="<<xs.size()<<" added="<<sol.memo.size()-old<<" hits="<<sol.hits-oldhits<<" lookups="<<sol.lookups-oldlooks<<"\n";};
+ int mode=stoi(argv[5]);need(mode==0||mode==1,"bad mode");if(mode==0){work(b);work(a);}else{work(a);work(b);}
+ need(checked==786,"both verdict blocks must be checked");
  cout<<"PASS total="<<sol.memo.size()<<" lookups="<<sol.lookups<<" hits="<<sol.hits<<" edges="<<sol.children<<"\n";
  if(mode==0)need(sol.memo.size()==55289&&sol.lookups==92730&&sol.hits==37441&&sol.children==91944,"metrics mismatch");
  else need(sol.memo.size()==55289&&sol.lookups==92728&&sol.hits==37439&&sol.children==91942,"metrics mismatch");
