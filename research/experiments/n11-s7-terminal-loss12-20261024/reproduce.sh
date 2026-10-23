@@ -30,4 +30,5 @@ if python3 "$D/verify.py" --certificate "$T/tampered.json" --emit-s10 "$T/tamper
     echo 'FAIL: tampered certificate accepted' >&2
     exit 1
 fi
+python3 "$D/verify_three_root_minimality.py"
 echo 'PASS tampered C++ verdict and certificate rejected; empty=UNKNOWN'
