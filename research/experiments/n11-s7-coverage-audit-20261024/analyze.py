@@ -161,7 +161,7 @@ def audit() -> dict:
     rows.sort(key=lambda r: (r["uncovered"], -r["secured"], r["s7"]))
     target = [r for r in rows if r["label"] == "not-in-frozen-S7"]
     summary = {
-        "schema": "n11-s7-certificate-gap-audit-v1",
+        "schema": "n11-s7-certificate-gap-audit-v2",
         "outcome": "UNKNOWN",
         "trust": "frozen S8 WIN is cache-derived; lifted S8 WIN depends on the four S9 terminal certificates; S7 gaps are coverage only",
         "inputs_sha256": {str(p.relative_to(EXP)): hexdigest(p)
