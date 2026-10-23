@@ -562,6 +562,12 @@
 ## [research/experiments/cube-q5-seven-central-line-20261023/stage-3-verified.json](../../../research/experiments/cube-q5-seven-central-line-20261023/stage-3-verified.json)
 
 - [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (data): 1590127局面の全証明を約10.87億Bareiss行列式で独立検査
+## [research/experiments/cube-q5-seven-focused-cache-20261023/README.md](../../../research/experiments/cube-q5-seven-focused-cache-20261023/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 対称根包含による候補表の制限と全証明書一致、独立した2根の継続探索
+## [research/experiments/cube-q5-seven-focused-cache-20261023/global-archives.json](../../../research/experiments/cube-q5-seven-focused-cache-20261023/global-archives.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 旧全体cache13件の現在のgzip所在、rawとgzipのSHA-256、全展開一致
 ## [research/experiments/cube-q5-seven-frontier-20261022/README.md](../../../research/experiments/cube-q5-seven-frontier-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明

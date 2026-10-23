@@ -85,6 +85,12 @@ artifacts:
 - path: research/experiments/cube-q5-seven-central-line-20261023/README.md
   role: proof
   note: 未被覆第三手24に中心を第四手として加えた候補はNであり、その手では三石Nを証明できない
+- path: research/experiments/cube-q5-seven-focused-cache-20261023/README.md
+  role: log
+  note: 対称根包含による候補表の制限と全証明書一致、独立した2根の継続探索
+- path: research/experiments/cube-q5-seven-focused-cache-20261023/global-archives.json
+  role: manifest
+  note: 旧全体cache13件の現在のgzip所在、rawとgzipのSHA-256、全展開一致
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
 evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
@@ -187,3 +193,10 @@ Q5HYB1 checkpointへ分離保存する方式を実装した。未確定の作業
 また、第三手24へ第四手171を選んだ `{24,169,171,173}` もNで、157着手後はP。
 いずれも全証明を独立検査した（K0524）。非終端四石を一律Pと推定せず、当該三石Nを
 証明するための別の第四手を探索する必要がある。7立方空盤の未確定性を維持する。
+
+継続先を対称四石 `{24,169,173,318}` と内側正三角形 `{114,130,214}` に選んだ。
+入力約1.39億候補行のうち、それぞれの対称像を含む192,829行・641,828行だけを
+新しい基礎表にした。証明の全合法子がこの包含条件を保つことを利用する。
+既知3立方20根と7立方337,060局面の全証明書が制限前後で一致することを確認した。
+以前の全体cacheは全データの復元SHAを確認してgzip保存し、現在の所在は新inventoryを
+正本とする。取り出した全候補表のラベル自体の独立検査ではなく、上位根は未確定。
