@@ -63,3 +63,9 @@ solverの `exact_replay` の1/2は、全層で「元の先手のWIN/LOSS」で�
 独立determinant/D4監査は安全性、合法親子、canonicality、完全上位境界とcache集約を確認する。exact葉の再帰的勝敗は変更していないC++ solverへの信頼に依存し、全探索木を独立に再検証した証明書とは区別する。
 
 後続の[K0372](K0372-n11-independent-exact-evidence-trust-audit.md)は、旧反転の中間S6 WIN 6件と全上位依存を再構成した。追加のPython reader、C++永続cache reader、手動workflow内mergerには隔離漏れが残っていたため補強した。開始mainでの「主要loaderの訂正」を全経路での再流入防止完了と解釈しない。再認定にはregistryとC++コンパイル済み隔離表の両方を明示更新する。raw/cacheそのものは歴史資料として保存している。
+
+## 2026-10-23: 第9回実験で同じ誤伝播が再発
+
+第9回の一次資料（`research/experiments/n11-s8-round9-global78-20261020/verify_s7_s6.py`）は、6個のS8 LOSSから44個のS7 LOSSを正しく導出した後、44件を一手戻した139個のS6親をWINと表示した。しかし偶数石ORであるS6のWINにはS7 WIN子が必要であり、S7 LOSS子の存在だけではWINは導けない。旧ファイル `round9_s6_win_parents.txt` は139個の正準S6親の列挙としてのみ扱い、勝敗cacheへ取り込まない。
+
+`research/experiments/n11-round9-s6-polarity-audit-20261023/audit.py` は6→44→139の幾何学的逆向き列挙と、三値OR/ANDの負例を検査する。旧S7 LOSS 2,232件・S7 WIN 17件との限定的照合では、139件のどれにも既知S7 WIN子がなく、全S7 LOSS子も揃わないため、この証拠集合によるS6勝敗は139件ともUNKNOWNである。別の独立したS6証拠まで撤回するものではない。過去の第9回実験とREADMEは一次資料として改変せず、訂正経緯を`research/log/2026-10-23-n11-round9-s6-polarity-retraction.md`に保存した。標準11×11空盤はUNKNOWN。
