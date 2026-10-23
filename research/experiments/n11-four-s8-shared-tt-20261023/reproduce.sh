@@ -13,3 +13,9 @@ python3 "$P/verify_global.py" --skip-terminal
 "$BIN" "$P/selected52.keys" 6 reverse
 python3 "$D/verify_shared52.py" "$P/selected52.keys" reverse separate
 python3 "$D/verify_shared52.py" "$P/selected52.keys" reverse
+
+# Experimentally tuned fixed ordering: all 52 LOSS leaves, independently checked.
+WEIGHTED=$($BIN "$P/selected52.keys" 10 reverse)
+printf '%s\n' "$WEIGHTED"
+printf '%s\n' "$WEIGHTED" | grep -q 'PASS roots=52 states=7636 lookups=12684 hits=5048 children=12632'
+python3 "$D/verify_shared52.py" "$P/selected52.keys" reverse weighted
