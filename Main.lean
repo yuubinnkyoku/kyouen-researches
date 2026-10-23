@@ -7,6 +7,7 @@ import Kyouen.HighDimGeometry
 import Kyouen.FourByFourGeometry
 import Kyouen.UniformCapacity
 import Kyouen.CubeCertificate
+import Kyouen.StructuralConsequences
 
 open Kyouen
 

@@ -503,3 +503,4 @@
 | [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) | 11×11の9石WINを13個の終局WIN葉で証明し8石WIN親9件へ伝播 | verification | verified | square-outcomes, certificates, verification |
 | [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) | 7立方5点禁止版の五石局面{0,2,5,26,69}はN、54着手後はP | verification | verified | variants, certificates, verification, search-methods |
 | [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) | 二次形式4点禁止版の2〜4正方形全実数係数分類と3正方形二係数完全分類 | proposition | proved | variants, geometry, grundy, first-moves, verification |
+| [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) | 共円ルールと一様終端ゲームの一般帰結47補題をLean形式検証 | verification | verified | rules, formalization, grundy, strategy-length |

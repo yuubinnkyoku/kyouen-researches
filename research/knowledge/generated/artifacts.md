@@ -1,5 +1,8 @@
 # artifact → K項目
 
+## [.github/workflows/lean-foundations.yml](../../../.github/workflows/lean-foundations.yml)
+
+- [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) (verifier): repository指定のLean toolchainで新規moduleも検査するCI
 ## [Kyouen/CertificateSoundness.lean](../../../Kyouen/CertificateSoundness.lean)
 
 - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
@@ -40,6 +43,9 @@
 ## [Kyouen/SmallCertificates.lean](../../../Kyouen/SmallCertificates.lean)
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 1×1正方盤の具体証明書検査
+## [Kyouen/StructuralConsequences.lean](../../../Kyouen/StructuralConsequences.lean)
+
+- [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) (lean): 47個の一般補題。有限盤面の全数探索や追加公理に依存しない
 ## [README.md](../../../README.md)
 
 - [K0001](../items/K0001-complete-call-rules.md) (source): 命題・対象範囲・根拠を記した出典

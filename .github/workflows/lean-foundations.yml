@@ -9,6 +9,8 @@ on:
       - 'Kyouen/FormalizationChecks.lean'
       - 'Kyouen/Rules.lean'
       - 'Kyouen/CertificateSoundness.lean'
+      - 'Kyouen/StructuralConsequences.lean'
+      - 'Kyouen/UniformCapacity.lean'
       - 'lean-toolchain'
       - 'lakefile.lean'
       - '.github/workflows/lean-foundations.yml'
@@ -30,4 +32,4 @@ jobs:
           auto-config: false
           build: false
       - name: Compile theorems and boundary cases
-        run: lake build Kyouen.OddInvolution Kyouen.IntegerGeometry Kyouen.FormalizationChecks
+        run: lake build Kyouen.OddInvolution Kyouen.IntegerGeometry Kyouen.FormalizationChecks Kyouen.StructuralConsequences

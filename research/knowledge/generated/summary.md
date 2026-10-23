@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 501 / alias: 269 / artifactファイル: 2732
+K項目: 502 / alias: 269 / artifactファイル: 2734
 
 ## kind
 
@@ -11,7 +11,7 @@ K項目: 501 / alias: 269 / artifactファイル: 2732
 | method | 4 |
 | proposition | 401 |
 | question | 38 |
-| verification | 16 |
+| verification | 17 |
 
 ## status
 
@@ -26,7 +26,7 @@ K項目: 501 / alias: 269 / artifactファイル: 2732
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
-| verified | 16 |
+| verified | 17 |
 | withdrawn | 4 |
 
 ## topics
@@ -35,9 +35,9 @@ K項目: 501 / alias: 269 / artifactファイル: 2732
 |---|---:|
 | certificates | 46 |
 | first-moves | 39 |
-| formalization | 4 |
+| formalization | 5 |
 | geometry | 215 |
-| grundy | 102 |
+| grundy | 103 |
 | maximal-safe | 81 |
 | maximum-safe | 52 |
 | migration | 1 |
@@ -45,11 +45,11 @@ K項目: 501 / alias: 269 / artifactファイル: 2732
 | reconfiguration | 34 |
 | rectangles | 92 |
 | residual-games | 79 |
-| rules | 5 |
+| rules | 6 |
 | search-methods | 64 |
 | square-outcomes | 49 |
 | statistics | 60 |
-| strategy-length | 26 |
+| strategy-length | 27 |
 | variants | 150 |
 | verification | 56 |
 
