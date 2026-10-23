@@ -684,6 +684,19 @@
 ## [research/experiments/cube-q5-seven-probe-20261022/regression.json](../../../research/experiments/cube-q5-seven-probe-20261022/regression.json)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 7立方上の104四点配置・35672追加候補の独立幾何比較と3立方全20二石軌道
+## [research/experiments/cube-q5-seven-tetra-20261023/README.md](../../../research/experiments/cube-q5-seven-tetra-20261023/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): 非終端正四面体4石Pと4手終局で閉じない正三角形3石Nの独立全証明
+- [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (proof): 根・勝ち手・全証明書・独立検査の範囲と再現
+## [research/experiments/cube-q5-seven-tetra-20261023/manifest.json](../../../research/experiments/cube-q5-seven-tetra-20261023/manifest.json)
+
+- [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (manifest): 四石全証明書・三石証明の再生成・private snapshotのSHA-256
+## [research/experiments/cube-q5-seven-tetra-20261023/parent-three-verified.json](../../../research/experiments/cube-q5-seven-tetra-20261023/parent-three-verified.json)
+
+- [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (data): 正三角形3石Nの337061局面を独立検査
+## [research/experiments/cube-q5-seven-tetra-20261023/stage-2-verified.json](../../../research/experiments/cube-q5-seven-tetra-20261023/stage-2-verified.json)
+
+- [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (data): 正四面体4石Pの337060局面・全28五石応手軌道を独立検査
 ## [research/experiments/cube-q5-weak-20261022/README.md](../../../research/experiments/cube-q5-weak-20261022/README.md)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (proof): 全偶数辺長と偶数辺を持つ直方格子の構成的鏡映証明
