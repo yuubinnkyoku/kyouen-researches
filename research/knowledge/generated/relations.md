@@ -109,6 +109,7 @@
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 元先手固定の偶数OR・奇数AND極性
 - ← depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 通常Grundy値と終局の定義
 - ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 通常Grundy値と終局の定義
+- ← depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): 元先手固定視点の奇数AND・偶数OR伝播
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1834,6 +1835,7 @@
 - ← depends_on [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md): 勝敗は元先手固定視点。S6はOR節点。
 - ← depends_on [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md): 元先手固定の偶奇AND/OR伝播
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 誤ったS7 LOSSからS6 WINへの伝播を排除した固定極性
+- ← depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): LOSSからの誤った上位WIN伝播を排除
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -2453,6 +2455,7 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数ORの伝播
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): terminal-only独立証明とsolver-trusted cacheの信頼境界
+- ← depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): 既存68個の9石WIN根の終局証明
 
 ## [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) 7立方5点禁止版の五石局面{0,2,5,26,69}はN、54着手後はP
 
@@ -2503,3 +2506,9 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値と終局の定義
 - → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): m=2の境界結果。m=2では偶奇則は不成立
+
+## [K0528](../items/K0528-n11-s7-terminal-loss12.md) 標準11×11の未分類7石局面を12個の終局LOSS葉で独立証明
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): LOSSからの誤った上位WIN伝播を排除
+- → depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 既存68個の9石WIN根の終局証明

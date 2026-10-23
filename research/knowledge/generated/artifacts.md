@@ -7113,6 +7113,18 @@
 ## [research/experiments/n11-s7-four-win-terminal-20261020/verify_s7_certificate.py](../../../research/experiments/n11-s7-four-win-terminal-20261020/verify_s7_certificate.py)
 
 - [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (verifier): 別幾何・全合法子・終局再帰と負例検査
+## [research/experiments/n11-s7-terminal-loss12-20261024/README.md](../../../research/experiments/n11-s7-terminal-loss12-20261024/README.md)
+
+- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (source): 再現手順と信頼境界
+## [research/experiments/n11-s7-terminal-loss12-20261024/certificate.json](../../../research/experiments/n11-s7-terminal-loss12-20261024/certificate.json)
+
+- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (certificate): 18新規9石WIN・3個の8石LOSS・39葉被覆・12葉最小被覆・双対重み
+## [research/experiments/n11-s7-terminal-loss12-20261024/verify.py](../../../research/experiments/n11-s7-terminal-loss12-20261024/verify.py)
+
+- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (verifier): 全合法境界、固定先手極性、双対下界、C++/Python照合
+## [research/experiments/n11-s7-terminal-loss12-20261024/verify_s10_cpp.cpp](../../../research/experiments/n11-s7-terminal-loss12-20261024/verify_s10_cpp.cpp)
+
+- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (verifier): 独立4×4整数行列式による終局minimax
 ## [research/experiments/n11-s8-compact385-pruned1946-20261020/selected385.txt](../../../research/experiments/n11-s8-compact385-pruned1946-20261020/selected385.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (certificate): 385個のS10 LOSS葉

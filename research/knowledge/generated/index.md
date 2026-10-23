@@ -512,4 +512,5 @@
 | [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) | 標準11×11の4個の8石LOSSは終局52葉で同時証明でき、同じ証明形式で葉数最小 | verification | verified | square-outcomes, certificates, verification, provenance |
 | [K0526](../items/K0526-cube-coplanar-four-all-safe.md) | 2×2×2立方体の4点共面禁止版は全159安全局面を強解決し両ルール後手必勝 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe |
 | [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) | 2×2×mの4点共面禁止版はm≥3で全局面Grundy偶奇則、極大石数3・5 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
+| [K0528](../items/K0528-n11-s7-terminal-loss12.md) | 標準11×11の未分類7石局面を12個の終局LOSS葉で独立証明 | verification | verified | square-outcomes, certificates, verification |
 | [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md) | 3×3×m・4点共面禁止版の最大石数は3,6,8,8,9で、3立方は全局面強解決 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
