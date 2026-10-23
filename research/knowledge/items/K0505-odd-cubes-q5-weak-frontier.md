@@ -58,6 +58,12 @@ artifacts:
 - path: research/experiments/cube-q5-seven-balanced-20261023/manifest-frontier.json
   role: manifest
   note: 最終private checkpointのhash・header・信頼範囲と追加探索結果
+- path: research/experiments/cube-q5-seven-hybrid-20261023/README.md
+  role: log
+  note: ディスク基礎表・追加確定候補・未確定df-pn推定値を分離した再開方式
+- path: research/experiments/cube-q5-seven-hybrid-20261023/regression.json
+  role: data
+  note: 中断再開と連続探索の一致、基礎表20根の独立証明、tree置換、不正checkpoint拒否
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
 evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
@@ -129,3 +135,8 @@ checkpointから抽出した6石N・7石Pと17石極大安全局面は、別のB
 次に4石根 `{0,2,5,69}`、`{0,5,26,69}` を各200万展開し、前者へさらに
 4,890,897展開を加えたがUNKNOWNだった。最後は未確定tree100万件の上限。
 最終private候補memo35,412,458行は再開用に保存したが、その全体は独立未検査。
+
+継続のため、基礎表をディスク索引で参照し、追加P/N候補と未確定treeを単一の
+Q5HYB1 checkpointへ分離保存する方式を実装した。未確定の作業量推定を確定ラベルへ
+変換しない。既知3立方で再開と連続探索の展開数・証明書一致およびtree置換後の
+独立証明を確認した。大きな4石根の勝敗は依然未確定である。

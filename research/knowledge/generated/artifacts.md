@@ -581,6 +581,12 @@
 ## [research/experiments/cube-q5-seven-frontier-20261022/verify.cpp](../../../research/experiments/cube-q5-seven-frontier-20261022/verify.cpp)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (verifier): 6ワードQ5CUBE2・Bareiss整数幾何・全AND/OR条件の独立検査器
+## [research/experiments/cube-q5-seven-hybrid-20261023/README.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): ディスク基礎表・追加確定候補・未確定df-pn推定値を分離した再開方式
+## [research/experiments/cube-q5-seven-hybrid-20261023/regression.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/regression.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 中断再開と連続探索の一致、基礎表20根の独立証明、tree置換、不正checkpoint拒否
 ## [research/experiments/cube-q5-seven-incremental-20261022/README.md](../../../research/experiments/cube-q5-seven-incremental-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 合法手の差分更新・候補点直接判定・一括checkpoint IOの検証と速度測定
