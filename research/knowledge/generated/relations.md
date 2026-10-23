@@ -108,6 +108,7 @@
 - ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 安全な追加のmex再帰と勝ち初手の規約
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 元先手固定の偶数OR・奇数AND極性
 - ← depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 通常Grundy値と終局の定義
+- ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 通常Grundy値と終局の定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2496,3 +2497,9 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値と終局の定義
 - → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 共面のみ4点禁止という別変種の定義
+- ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): m=2の境界結果。m=2では偶奇則は不成立
+
+## [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) 2×2×mの4点共面禁止版はm≥3で全局面Grundy偶奇則、極大石数3・5
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値と終局の定義
+- → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): m=2の境界結果。m=2では偶奇則は不成立

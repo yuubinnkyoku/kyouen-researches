@@ -521,6 +521,18 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/coplanar-prism-2x2xm-20261024/independent.cpp](../../../research/experiments/coplanar-prism-2x2xm-20261024/independent.cpp)
+
+- [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) (verifier): 独立した4×4行列式展開と全局面再帰
+## [research/experiments/coplanar-prism-2x2xm-20261024/proof.md](../../../research/experiments/coplanar-prism-2x2xm-20261024/proof.md)
+
+- [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) (proof): 任意のm≥3についての全称幾何学的証明と境界盤
+## [research/experiments/coplanar-prism-2x2xm-20261024/results.txt](../../../research/experiments/coplanar-prism-2x2xm-20261024/results.txt)
+
+- [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) (data): m=1〜12の二方式一致結果
+## [research/experiments/coplanar-prism-2x2xm-20261024/verify.py](../../../research/experiments/coplanar-prism-2x2xm-20261024/verify.py)
+
+- [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) (verifier): 整数外積による禁則生成と全安全局面mex
 ## [research/experiments/cube-coplanar-q4-20261024/independent-results.txt](../../../research/experiments/cube-coplanar-q4-20261024/independent-results.txt)
 
 - [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (data): C++独立完全列挙の出力
