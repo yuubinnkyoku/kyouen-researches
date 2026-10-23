@@ -6323,6 +6323,27 @@
 ## [research/experiments/n11-cover-duality/scripts/verify_cover.py](../../../research/experiments/n11-cover-duality/scripts/verify_cover.py)
 
 - [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (verifier): 別行列式・別D4実装による全safe s4 classと整数dualの独立検査
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/README.md](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/README.md)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (proof): 四根の完全境界、52葉と下界の定義、再現手順
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/dual-weights.tsv](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/dual-weights.tsv)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (certificate): 25個の重み1と54個の重み1/2で合計52となる有理数双対下界
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/s10-all1017.tsv](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/s10-all1017.tsv)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (data): 全1017合法10石候補の独立終局WIN780・LOSS237と再帰状態数
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/selected52.keys](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/selected52.keys)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (certificate): 全103個の9石義務を覆う52個の10石LOSS葉
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/terminal_geometry.py](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/terminal_geometry.py)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (verifier): 3×3整数行列式による独立10石終局探索
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/verify_global.py](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/verify_global.py)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (verifier): 全合法境界・被覆・双対不等式・旧cache矛盾を再検査
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/verify_s10_direct.cpp](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/verify_s10_direct.cpp)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (verifier): 4×4整数行列式による10石終局探索
 ## [research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache](../../../research/experiments/n11-frontier-selection-20261005/output/reply27-best-class-model8-s5.cache)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 保存済みmodel8 exact cache
@@ -8953,6 +8974,9 @@
 ## [research/log/2026-10-20-n11-s6-win-four-s7-correction.md](../../../research/log/2026-10-20-n11-s6-win-four-s7-correction.md)
 
 - [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (log): 旧logの誤分類訂正
+## [research/log/2026-10-23-n11-four-s8-joint-terminal52.md](../../../research/log/2026-10-23-n11-four-s8-joint-terminal52.md)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (log): 旧53葉との比較、証明範囲、信頼境界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

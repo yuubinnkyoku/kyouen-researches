@@ -50,6 +50,7 @@
 - ← depends_on [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md): 6点版の円成立条件と盤面規則
 - ← depends_on [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md): 6点共円・共線禁止の対象定義
 - ← depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 安全な追加だけを合法手とする完全指摘ルールの定義
+- ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 共円4点禁止・合法手と終局規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -105,6 +106,7 @@
 - ← depends_on [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md): 通常プレイのP/N再帰と有限局面のAND/OR帰納法
 - ← depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 元先手固定視点の奇数AND・偶数ORの伝播
 - ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 安全な追加のmex再帰と勝ち初手の規約
+- ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 元先手固定の偶数OR・奇数AND極性
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1829,6 +1831,7 @@
 - ← depends_on [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md): 元先手固定のAND/OR極性（S5 WINは全S6子WIN、単一S6 WINから結論しない）
 - ← depends_on [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md): 勝敗は元先手固定視点。S6はOR節点。
 - ← depends_on [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md): 元先手固定の偶奇AND/OR伝播
+- ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 誤ったS7 LOSSからS6 WINへの伝播を排除した固定極性
 
 ## [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) 11×11 exact境界の独立監査とraw・cache・minimaxの信頼分離
 
@@ -2480,3 +2483,9 @@
 ## [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) 7立方の内側正四面体・中心軸四石Nと五石Pの独立証明
 
 - → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 三石Nを証明する第四手の候補選択に必要なN四石の有限証明。上位根は未確定
+
+## [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) 標準11×11の4個の8石LOSSは終局52葉で同時証明でき、同じ証明形式で葉数最小
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円4点禁止・合法手と終局規則
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定の偶数OR・奇数AND極性
+- → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 誤ったS7 LOSSからS6 WINへの伝播を排除した固定極性
