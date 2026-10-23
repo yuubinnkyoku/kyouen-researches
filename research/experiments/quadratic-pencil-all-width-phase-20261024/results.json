@@ -3,21 +3,108 @@
   "triples_checked": 101720,
   "all_match": true,
   "sample": [
-    {"w": 3, "m": 6, "lambda": "-4", "maximal_triples": 4},
-    {"w": 3, "m": 6, "lambda": "-1", "maximal_triples": 8},
-    {"w": 3, "m": 6, "lambda": "-1/4", "maximal_triples": 0},
-    {"w": 3, "m": 6, "lambda": "-2", "maximal_triples": 0},
-    {"w": 3, "m": 6, "lambda": "0", "maximal_triples": 6},
-    {"w": 3, "m": 6, "lambda": "1/2", "maximal_triples": 0},
-    {"w": 3, "m": 6, "lambda": "1", "maximal_triples": 0},
-    {"w": 3, "m": 6, "lambda": "3/2", "maximal_triples": 0},
-    {"w": 5, "m": 6, "lambda": "-4", "maximal_triples": 12},
-    {"w": 5, "m": 6, "lambda": "-1", "maximal_triples": 60},
-    {"w": 5, "m": 6, "lambda": "-1/4", "maximal_triples": 8},
-    {"w": 5, "m": 6, "lambda": "-2", "maximal_triples": 0},
-    {"w": 5, "m": 6, "lambda": "0", "maximal_triples": 60},
-    {"w": 5, "m": 6, "lambda": "1/2", "maximal_triples": 0},
-    {"w": 5, "m": 6, "lambda": "1", "maximal_triples": 0},
-    {"w": 5, "m": 6, "lambda": "3/2", "maximal_triples": 0}
-  ]
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "-4",
+      "maximal_triples": 4
+    },
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "-1",
+      "maximal_triples": 8
+    },
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "-1/4",
+      "maximal_triples": 0
+    },
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "-2",
+      "maximal_triples": 0
+    },
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "0",
+      "maximal_triples": 6
+    },
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "1/2",
+      "maximal_triples": 0
+    },
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "1",
+      "maximal_triples": 0
+    },
+    {
+      "w": 3,
+      "m": 6,
+      "lambda": "3/2",
+      "maximal_triples": 0
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "-4",
+      "maximal_triples": 12
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "-1",
+      "maximal_triples": 60
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "-1/4",
+      "maximal_triples": 8
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "-2",
+      "maximal_triples": 0
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "0",
+      "maximal_triples": 60
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "1/2",
+      "maximal_triples": 0
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "1",
+      "maximal_triples": 0
+    },
+    {
+      "w": 5,
+      "m": 6,
+      "lambda": "3/2",
+      "maximal_triples": 0
+    }
+  ],
+  "two_by_nine": {
+    "board": "2x9",
+    "forbidden_quadruples": 356,
+    "safe_states": 11130,
+    "empty_grundy": 0,
+    "all_safe_parity": true
+  }
 }
