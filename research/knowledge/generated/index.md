@@ -506,3 +506,4 @@
 | [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) | 共円ルールと一様終端ゲームの一般帰結47補題をLean形式検証 | verification | verified | rules, formalization, grundy, strategy-length |
 | [K0520](../items/K0520-triangle-free-compatibility-endgame.md) | 共存グラフに三角形がない遺伝的配置ゲームは高々2手で終局し孤立点の有無でP/Nが決まる | proposition | proved | search-methods, verification, variants |
 | [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) | 7立方の全1516二石軌道で4手終局未被覆三石軌道の最小値は5 | computation | computed | variants, first-moves, search-methods, verification |
+| [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) | 7立方の中心軸二石根の下で五石N・六石Pを独立検証 | verification | verified | variants, certificates, verification, first-moves |

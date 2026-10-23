@@ -70,6 +70,12 @@ artifacts:
 - path: research/experiments/cube-q5-seven-hybrid-20261023/private-archives.json
   role: manifest
   note: 旧private checkpoint9件のrawとgzipのhash・所在・復元検査
+- path: research/experiments/cube-q5-seven-hybrid-20261023/central-results.md
+  role: proof
+  note: 中心軸四石根の48子のうち4五石Nと3六石Pの独立部分証明
+- path: research/experiments/cube-q5-seven-hybrid-20261023/lazy.md
+  role: log
+  note: tree再集計の遅延・到達不能な未知作業の可逆分離・制限付き対称応手の失敗範囲
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
 evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
@@ -156,3 +162,8 @@ Q5HYB1 checkpointへ分離保存する方式を実装した。未確定の作業
 この組の未被覆第三手は32手。4手終局だけで全第三手を処理できる組は存在しない。
 従来の `{0,5}` は35手・19軌道である。探索対象を新しい組の下の対称な4石局面へ
 移したが、当該三石根・二石根・空盤の勝敗はまだ未確定である。
+
+中心側四石 `{3,169,173,339}` の第五手48軌道のうち4軌道をNと独立検証した
+（K0522）。五石全証明書の局面数は242,870〜486,303、検査は合計約13.03億行列式。
+内部の3六石P証人からは、その全五石親10軌道も1手の論証でNとなる。
+これは四石根の全48子を処理した証明ではなく、上位根の未確定性を維持する。

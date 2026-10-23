@@ -2430,6 +2430,7 @@
 - ← supports [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md): 未処理第三手69の下の五石Nを閉じた部分証明。上位根の勝敗証明ではない
 - ← supports [K0520](../items/K0520-triangle-free-compatibility-endgame.md): 7立方5点禁止版の終盤を正確に短縮する。空盤の勝敗証明ではない
 - ← supports [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md): 残る三石根を19軌道から5軌道へ減らせる中心軸上の二石組を特定
+- ← supports [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md): 中心側四石根の48子のうち4五石Nと3六石Pを独立検証。四石根以上は未確定
 
 ## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認
 
@@ -2461,3 +2462,9 @@
 ## [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) 7立方の全1516二石軌道で4手終局未被覆三石軌道の最小値は5
 
 - → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 残る三石根を19軌道から5軌道へ減らせる中心軸上の二石組を特定
+- ← supports [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md): 未被覆三石境界の一つの下にある有限部分証明
+
+## [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) 7立方の中心軸二石根の下で五石N・六石Pを独立検証
+
+- → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 中心側四石根の48子のうち4五石Nと3六石Pを独立検証。四石根以上は未確定
+- → supports [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md): 未被覆三石境界の一つの下にある有限部分証明

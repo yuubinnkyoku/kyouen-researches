@@ -590,6 +590,16 @@
 ## [research/experiments/cube-q5-seven-hybrid-20261023/README.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): ディスク基礎表・追加確定候補・未確定df-pn推定値を分離した再開方式
+## [research/experiments/cube-q5-seven-hybrid-20261023/central-five-parents.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/central-five-parents.json)
+
+- [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) (data): 3六石Pの全五石親を正規化した10軌道への1手の帰結
+## [research/experiments/cube-q5-seven-hybrid-20261023/central-five-witnesses.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/central-five-witnesses.json)
+
+- [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) (data): 正規化根と元の座標での第五手・勝ち手・P六石証人
+## [research/experiments/cube-q5-seven-hybrid-20261023/central-results.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/central-results.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): 中心軸四石根の48子のうち4五石Nと3六石Pの独立部分証明
+- [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) (proof): 四石根・第五手・勝ち手・独立検査範囲・再現方法
 ## [research/experiments/cube-q5-seven-hybrid-20261023/endgames-current-verified.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/endgames-current-verified.json)
 
 - [K0520](../items/K0520-triangle-free-compatibility-endgame.md) (data): 7立方24終盤の従来探索との一致と全証明書の独立Bareiss検査
@@ -599,6 +609,12 @@
 ## [research/experiments/cube-q5-seven-hybrid-20261023/graph.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/graph.md)
 
 - [K0520](../items/K0520-triangle-free-compatibility-endgame.md) (proof): 全称補題の証明・実装・独立検査の範囲
+## [research/experiments/cube-q5-seven-hybrid-20261023/lazy.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/lazy.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): tree再集計の遅延・到達不能な未知作業の可逆分離・制限付き対称応手の失敗範囲
+## [research/experiments/cube-q5-seven-hybrid-20261023/manifest-central.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/manifest-central.json)
+
+- [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) (manifest): 四つの圧縮全証明書と独立検査結果のSHA-256
 ## [research/experiments/cube-q5-seven-hybrid-20261023/pair-ranking-verified.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/pair-ranking-verified.json)
 
 - [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (data): 約1.44億行列式の独立再計算と全行一致

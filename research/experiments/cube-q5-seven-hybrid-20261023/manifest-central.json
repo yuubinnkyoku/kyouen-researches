@@ -1,0 +1,177 @@
+{
+  "artifacts": {
+    "central-results.md": "b624d7807b3015e47358b1d841fa8e883b6bcbb1472c9216b8fa06e9039f4761",
+    "central_witnesses.py": "46c0e562217c29142ae4f66d6d8720b4c23ae9ee9e321c3f4eaa2768395127a8",
+    "central-known-five.txt": "3e09a595965ccdbe2c0dd4b37fb8920f60b9b2cb15da125d958e1071bf48d590",
+    "central-five-witnesses.json": "f8b415ba4517548d0b30572a77ab201502a3929703fb1e846e8a9a11fb8ec7b8",
+    "central-five-parents.json": "85adc654ffd31387ec89ac6a48d24d4c667c7ee8ba3029d93013b3a62024c180",
+    "central-extraction-command.json": "549a0c6302e90388a8c7c3da0f1b4a1ed2866662052a2a0215b03c39a9777978",
+    "central-extraction.jsonl": "b3e8cf97373c69e52f57de34cfc211edd0716f6a25dc2cf01da606682742ec2f",
+    "central-boundary-stage3.json": "3fe5d530b14cc0cc79de770ac9bba62a13f7776ca0ae093c51f00e75c791ac37",
+    "central-boundary-focused-stage4.json": "4a5de013ad36058b01644e65643476d3289c1fc4aab24ba8d010a3c9015b34c7",
+    "central-five-147.cert.gz": "49d6a06b55164d3a22f67d622f10af9c130dc330cf4a0bf65be61080eacc14e6",
+    "central-five-147-verified.json": "d2c874b5c7537181de561e923cdecf820e935a2a795a3f5a3d884c4c37992891",
+    "central-five-152.cert.gz": "87d56fe21d55c993ae740fbc4ff08ac2acac400ca113a3fe766948e8f8ab5750",
+    "central-five-152-verified.json": "fab88f9311e9f6d2005e67b1924f752424aa4b31a3aec177d3bc1f88762d26fc",
+    "central-five-155.cert.gz": "bb3aafa5a46240f53ebf94889929ca52347beef982b0cdad729cc9faabe2687e",
+    "central-five-155-verified.json": "3407c47ca49e0035e083a6757e2fe113078fabe71e0fbd99aa663e0892a5a14c",
+    "central-five-163.cert.gz": "6045eea3e6f19a63771842b74690221c4b5fb51a908ca0011f6ff22ec2e7991a",
+    "central-five-163-verified.json": "e3d908de2f45bb22a3917b06c19793f1fb07814b3c1af81ff4c615e187eb2898"
+  },
+  "certificates": [
+    {
+      "id": 147,
+      "certificate": "central-five-147.cert.gz",
+      "raw_sha256": "d43d65800346508f83d45a444c01b26bd72529348d106e9dc71c7d76a16d9bd3",
+      "raw_bytes": 28778499,
+      "verification": {
+        "verified": true,
+        "side": 7,
+        "root_words": [
+          0,
+          512,
+          2305843009247772672,
+          0,
+          8192,
+          0
+        ],
+        "outcome": "N",
+        "states": 242870,
+        "edges": 317073,
+        "terminals": 67945,
+        "determinant_checks": 222953540,
+        "layers": {
+          "5": 1,
+          "6": 1,
+          "7": 39,
+          "8": 34,
+          "9": 2079,
+          "10": 1553,
+          "11": 37434,
+          "12": 25922,
+          "13": 106981,
+          "14": 66721,
+          "15": 1538,
+          "16": 567
+        }
+      }
+    },
+    {
+      "id": 152,
+      "certificate": "central-five-152.cert.gz",
+      "raw_sha256": "4f4ad2666c99032b8eff58e3c9f3cbebf24817e7d10ac949fa74f66e2ca11f08",
+      "raw_bytes": 57761793,
+      "verification": {
+        "verified": true,
+        "side": 7,
+        "root_words": [
+          0,
+          512,
+          2305843009264025600,
+          0,
+          8192,
+          0
+        ],
+        "outcome": "N",
+        "states": 486303,
+        "edges": 616594,
+        "terminals": 146830,
+        "determinant_checks": 478373398,
+        "layers": {
+          "5": 1,
+          "6": 1,
+          "7": 45,
+          "8": 41,
+          "9": 2618,
+          "10": 2094,
+          "11": 62190,
+          "12": 43762,
+          "13": 222032,
+          "14": 146461,
+          "15": 5070,
+          "16": 1988
+        }
+      }
+    },
+    {
+      "id": 155,
+      "certificate": "central-five-155.cert.gz",
+      "raw_sha256": "ce56f920e2845d907d95959172d3d676f29fe504b824c948a6ceb4c82f6d3702",
+      "raw_bytes": 28778499,
+      "verification": {
+        "verified": true,
+        "side": 7,
+        "root_words": [
+          0,
+          512,
+          2305843009381466112,
+          0,
+          8192,
+          0
+        ],
+        "outcome": "N",
+        "states": 242870,
+        "edges": 317073,
+        "terminals": 67945,
+        "determinant_checks": 222953730,
+        "layers": {
+          "5": 1,
+          "6": 1,
+          "7": 39,
+          "8": 34,
+          "9": 2079,
+          "10": 1553,
+          "11": 37434,
+          "12": 25922,
+          "13": 106981,
+          "14": 66721,
+          "15": 1538,
+          "16": 567
+        }
+      }
+    },
+    {
+      "id": 163,
+      "certificate": "central-five-163.cert.gz",
+      "raw_sha256": "acad0f7a5244aa4ad58bd83ef0798617dcd8cf82f06ec7e0deefc7617b9e798c",
+      "raw_bytes": 47152868,
+      "verification": {
+        "verified": true,
+        "side": 7,
+        "root_words": [
+          0,
+          512,
+          2305843043606986752,
+          0,
+          8192,
+          0
+        ],
+        "outcome": "N",
+        "states": 394120,
+        "edges": 509182,
+        "terminals": 113572,
+        "determinant_checks": 378864096,
+        "layers": {
+          "5": 1,
+          "6": 1,
+          "7": 47,
+          "8": 45,
+          "9": 2780,
+          "10": 2088,
+          "11": 54878,
+          "12": 38194,
+          "13": 175891,
+          "14": 113104,
+          "15": 5156,
+          "16": 1923,
+          "17": 10,
+          "18": 2
+        }
+      }
+    }
+  ],
+  "independently_checked_n5_roots": 4,
+  "p6_witness_orbits": 3,
+  "n5_parent_orbits_by_one_move_argument": 10,
+  "four_stone_root_outcome": "UNKNOWN"
+}
