@@ -515,15 +515,34 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/cube-q5-seven-balanced-20261023/five-n-incremental-verified.json](../../../research/experiments/cube-q5-seven-balanced-20261023/five-n-incremental-verified.json)
+
+- [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (data): 五石Nの全証明書を325137492回の整数行列式評価で独立検査
+## [research/experiments/cube-q5-seven-balanced-20261023/five-n.cert.gz](../../../research/experiments/cube-q5-seven-balanced-20261023/five-n.cert.gz)
+
+- [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (certificate): 五石Nの431195局面・580676辺証明書
+## [research/experiments/cube-q5-seven-balanced-20261023/five-results.md](../../../research/experiments/cube-q5-seven-balanced-20261023/five-results.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): priorの底4への変更により五石Nと六石Pを閉じ、全証明書を独立Bareiss検査
+- [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (proof): 五石Nと六石Pの意味・勝ち手・独立検査・再現方法と限界
 ## [research/experiments/cube-q5-seven-balanced-20261023/lifted-six-verified.json](../../../research/experiments/cube-q5-seven-balanced-20261023/lifted-six-verified.json)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): P子を共有する7件の6石N根をそれぞれ既存Bareiss検査器で確認
 ## [research/experiments/cube-q5-seven-balanced-20261023/seven-p.cert.gz](../../../research/experiments/cube-q5-seven-balanced-20261023/seven-p.cert.gz)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (certificate): 新たな7石P局面の12403局面・16436辺証明書
+## [research/experiments/cube-q5-seven-balanced-20261023/six-p-incremental-verified.json](../../../research/experiments/cube-q5-seven-balanced-20261023/six-p-incremental-verified.json)
+
+- [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (data): 六石Pの全証明書の独立検査結果
+## [research/experiments/cube-q5-seven-balanced-20261023/six-p.cert.gz](../../../research/experiments/cube-q5-seven-balanced-20261023/six-p.cert.gz)
+
+- [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (certificate): 六石Pの431194局面・580675辺証明書
 ## [research/experiments/cube-q5-seven-balanced-20261023/six-results.md](../../../research/experiments/cube-q5-seven-balanced-20261023/six-results.md)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 新たな6石N・7石PとP子からの7件の6石N親の独立検査
+## [research/experiments/cube-q5-seven-balanced-20261023/verify_incremental.cpp](../../../research/experiments/cube-q5-seven-balanced-20261023/verify_incremental.cpp)
+
+- [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (verifier): 探索器とは別実装のBareiss5×5行列式・差分合法子検査器
 ## [research/experiments/cube-q5-seven-frontier-20261022/README.md](../../../research/experiments/cube-q5-seven-frontier-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明

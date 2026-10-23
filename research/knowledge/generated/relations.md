@@ -2425,6 +2425,7 @@
 ## [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 
 - ← supports [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md): 7立方の有限部分証明と再開可能な探索境界を提供。空盤の勝敗証明ではない
+- ← supports [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md): 未処理第三手69の下の五石Nを閉じた部分証明。上位根の勝敗証明ではない
 
 ## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認
 
@@ -2439,3 +2440,7 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数ORの伝播
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): terminal-only独立証明とsolver-trusted cacheの信頼境界
+
+## [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) 7立方5点禁止版の五石局面{0,2,5,26,69}はN、54着手後はP
+
+- → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 未処理第三手69の下の五石Nを閉じた部分証明。上位根の勝敗証明ではない

@@ -501,3 +501,4 @@
 | [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) | 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認 | verification | verified | variants, certificates, verification, maximal-safe, maximum-safe |
 | [K0515](../items/K0515-axis-rectangle-seven-maximum.md) | 軸平行長方形4点禁止版7×mの最大安全石数と三角形分解一般則 | proposition | proved | variants, rectangles, maximum-safe, geometry |
 | [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) | 11×11の9石WINを13個の終局WIN葉で証明し8石WIN親9件へ伝播 | verification | verified | square-outcomes, certificates, verification |
+| [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) | 7立方5点禁止版の五石局面{0,2,5,26,69}はN、54着手後はP | verification | verified | variants, certificates, verification, search-methods |
