@@ -521,6 +521,21 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/cube-coplanar-q4-20261024/independent-results.txt](../../../research/experiments/cube-coplanar-q4-20261024/independent-results.txt)
+
+- [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (data): C++独立完全列挙の出力
+## [research/experiments/cube-coplanar-q4-20261024/independent.cpp](../../../research/experiments/cube-coplanar-q4-20261024/independent.cpp)
+
+- [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (verifier): 独立整数行列式生成と別実装の全局面再帰
+## [research/experiments/cube-coplanar-q4-20261024/proof.md](../../../research/experiments/cube-coplanar-q4-20261024/proof.md)
+
+- [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (proof): 有限完全分類と監査境界
+## [research/experiments/cube-coplanar-q4-20261024/results.json](../../../research/experiments/cube-coplanar-q4-20261024/results.json)
+
+- [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (data): Python完全列挙の層別Grundy・misère分布
+## [research/experiments/cube-coplanar-q4-20261024/verify.py](../../../research/experiments/cube-coplanar-q4-20261024/verify.py)
+
+- [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (verifier): 排他的論理和と整数行列式の一致、および256状態全列挙
 ## [research/experiments/cube-q5-seven-balanced-20261023/five-n-incremental-verified.json](../../../research/experiments/cube-q5-seven-balanced-20261023/five-n-incremental-verified.json)
 
 - [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (data): 五石Nの全証明書を325137492回の整数行列式評価で独立検査

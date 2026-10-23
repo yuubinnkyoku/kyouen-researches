@@ -510,3 +510,4 @@
 | [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) | 7立方の非終端正四面体4石Pと正三角形3石Nを独立検証 | verification | verified | variants, certificates, verification, first-moves |
 | [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) | 7立方の内側正四面体・中心軸四石Nと五石Pの独立証明 | verification | verified | variants, certificates, verification, first-moves |
 | [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) | 標準11×11の4個の8石LOSSは終局52葉で同時証明でき、同じ証明形式で葉数最小 | verification | verified | square-outcomes, certificates, verification, provenance |
+| [K0526](../items/K0526-cube-coplanar-four-all-safe.md) | 2×2×2立方体の4点共面禁止版は全159安全局面を強解決し両ルール後手必勝 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe |

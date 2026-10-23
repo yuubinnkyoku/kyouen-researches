@@ -107,6 +107,7 @@
 - ← depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 元先手固定視点の奇数AND・偶数ORの伝播
 - ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 安全な追加のmex再帰と勝ち初手の規約
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 元先手固定の偶数OR・奇数AND極性
+- ← depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 通常Grundy値と終局の定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2426,6 +2427,7 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする完全指摘ルールの定義
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 軸平行長方形だけを禁止する規則の区別
 - ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 退化を含む二次形式パラメータ版の定義
+- ← depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 共面のみ4点禁止という別変種の定義
 
 ## [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 
@@ -2489,3 +2491,8 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円4点禁止・合法手と終局規則
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定の偶数OR・奇数AND極性
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): 誤ったS7 LOSSからS6 WINへの伝播を排除した固定極性
+
+## [K0526](../items/K0526-cube-coplanar-four-all-safe.md) 2×2×2立方体の4点共面禁止版は全159安全局面を強解決し両ルール後手必勝
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値と終局の定義
+- → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 共面のみ4点禁止という別変種の定義
