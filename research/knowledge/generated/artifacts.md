@@ -8345,6 +8345,27 @@
 ## [research/experiments/q6-18-rigidity-20261018/verify.py](../../../research/experiments/q6-18-rigidity-20261018/verify.py)
 
 - [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (verifier): 5点集合の63504組のenergy分類と二点和復元の独立有限監査
+## [research/experiments/quadratic-pencil-20261023/README.md](../../../research/experiments/quadratic-pencil-20261023/README.md)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (proof): 全実数から有限禁止族への全称帰着、完全計算の範囲と信頼境界
+## [research/experiments/quadratic-pencil-20261023/audit.json](../../../research/experiments/quadratic-pencil-20261023/audit.json)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (data): 一係数版419950安全局面比較のreceipt
+## [research/experiments/quadratic-pencil-20261023/classify.py](../../../research/experiments/quadratic-pencil-20261023/classify.py)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (solver): 3×3整数行列式と全subset mex
+## [research/experiments/quadratic-pencil-20261023/independent.py](../../../research/experiments/quadratic-pencil-20261023/independent.py)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 4×4置換行列式と独立合法手再帰、全安全局面照合
+## [research/experiments/quadratic-pencil-20261023/results.json](../../../research/experiments/quadratic-pencil-20261023/results.json)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (data): 一係数版2・3・4正方形の全51禁止族型
+## [research/experiments/quadratic-pencil-20261023/two-parameter.json](../../../research/experiments/quadratic-pencil-20261023/two-parameter.json)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (data): 31直線175交点207型、81185安全局面比較
+## [research/experiments/quadratic-pencil-20261023/two_parameter.py](../../../research/experiments/quadratic-pencil-20261023/two_parameter.py)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 二係数版の全直線・交点帰着、直接代入と全安全局面照合
 ## [research/experiments/rectangle-reflection-parity-20261011/audit.json](../../../research/experiments/rectangle-reflection-parity-20261011/audit.json)
 
 - [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) (data): 49盤245条件の偶奇照合と25盤の四点完全列挙

@@ -104,6 +104,7 @@
 - ← depends_on [K0484](../items/K0484-width-five-q9-all-lengths.md): 通常プレイGrundy値の定義
 - ← depends_on [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md): 通常プレイのP/N再帰と有限局面のAND/OR帰納法
 - ← depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 元先手固定視点の奇数AND・偶数ORの伝播
+- ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 安全な追加のmex再帰と勝ち初手の規約
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2421,6 +2422,7 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする完全指摘ルールの定義
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 軸平行長方形だけを禁止する規則の区別
+- ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 退化を含む二次形式パラメータ版の定義
 
 ## [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 
@@ -2444,3 +2446,8 @@
 ## [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) 7立方5点禁止版の五石局面{0,2,5,26,69}はN、54着手後はP
 
 - → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 未処理第三手69の下の五石Nを閉じた部分証明。上位根の勝敗証明ではない
+
+## [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) 二次形式4点禁止版の2〜4正方形全実数係数分類と3正方形二係数完全分類
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 安全な追加のmex再帰と勝ち初手の規約
+- → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 退化を含む二次形式パラメータ版の定義
