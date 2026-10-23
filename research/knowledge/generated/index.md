@@ -508,3 +508,4 @@
 | [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) | 7立方の全1516二石軌道で4手終局未被覆三石軌道の最小値は5 | computation | computed | variants, first-moves, search-methods, verification |
 | [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) | 7立方の中心軸二石根の下で五石N・六石Pを独立検証 | verification | verified | variants, certificates, verification, first-moves |
 | [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) | 7立方の非終端正四面体4石Pと正三角形3石Nを独立検証 | verification | verified | variants, certificates, verification, first-moves |
+| [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) | 7立方の内側正四面体・中心軸四石Nと五石Pの独立証明 | verification | verified | variants, certificates, verification, first-moves |

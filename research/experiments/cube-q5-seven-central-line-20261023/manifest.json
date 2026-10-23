@@ -1,0 +1,64 @@
+{
+  "artifacts": {
+    "README.md": "7da89f4e7a19c9a9d435d74bd2d677e229f58584b4ffae5452edfcfb756ae3b3",
+    "roots.txt": "2baf10a795cb69672f22ad4f9e3a46a9a15e7eead9dbba481c1fc3914cdaa142",
+    "root-axis.txt": "b118055af093f2ad6daaa6e8ad358d95e020c30d2b1e12fd5726af240b198688",
+    "probe-command.json": "c5c7c2bc6a9dceb74b056647f6652f5b2517bb84fcea5eb220e34efc9f873472",
+    "probe.jsonl": "3f3e282e40d22220d7ffd06fad39116cbb5a35f3049ccd76eb153ee245b2428f",
+    "focus-axis.json": "557ddf7ae501ba0c7fbdc28d0e81630868efc0a447b5a50ef7db63c5372fab23",
+    "axis-boundary-stage3.json": "e2539b219eff7e9bf530c105517ae77bd120db85419fe5e13b1a75a719f6feb8",
+    "stage-2.jsonl": "bb88a3e482342cd4e97db0f2cef5c935187495037aa5af0907af0a25323eefca",
+    "stage-3.jsonl": "dd138a2271898e7e94b5062d128b128a607dbfe116e0edc3c7ca51f2f4cf2dda",
+    "stage-3-verified.json": "5bb4f2544671918fabfc03706b1a8a49d9e7bf5e74e73bed7e4db3dbff3a0192",
+    "stage-3.cert.gz": "34a889f591f2e008599e3813f513bb2513d200d9eb1b8fa3c7d415185f6a71dd"
+  },
+  "root_four": [
+    24,
+    169,
+    171,
+    173
+  ],
+  "outcome": "N",
+  "winning_fifth": 157,
+  "canonical_p_five": [
+    73,
+    150,
+    169,
+    171,
+    173
+  ],
+  "independent_verification": {
+    "verified": true,
+    "side": 7,
+    "root_words": [
+      16777216,
+      0,
+      46179488366592,
+      0,
+      0,
+      0
+    ],
+    "outcome": "N",
+    "states": 1590127,
+    "edges": 2021853,
+    "terminals": 454101,
+    "determinant_checks": 1087416615,
+    "layers": {
+      "4": 1,
+      "5": 1,
+      "6": 134,
+      "7": 111,
+      "8": 10773,
+      "9": 8250,
+      "10": 228183,
+      "11": 157073,
+      "12": 713883,
+      "13": 454110,
+      "14": 13188,
+      "15": 4420
+    }
+  },
+  "private_global_cache_counter": 113049053,
+  "private_candidate_rows": 130345978,
+  "candidate_table_not_independently_verified_as_a_whole": true
+}

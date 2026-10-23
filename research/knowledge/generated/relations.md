@@ -2432,6 +2432,7 @@
 - ← supports [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md): 残る三石根を19軌道から5軌道へ減らせる中心軸上の二石組を特定
 - ← supports [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md): 中心側四石根の48子のうち4五石Nと3六石Pを独立検証。四石根以上は未確定
 - ← supports [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md): 4手終局だけでは閉じない三石軌道を一つNと確定。二石根と空盤は未確定
+- ← supports [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md): 三石Nを証明する第四手の候補選択に必要なN四石の有限証明。上位根は未確定
 
 ## [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) 7立方5点禁止版の6石N・7石Pと17・18石極大安全局面を独立証明書で確認
 
@@ -2475,3 +2476,7 @@
 
 - → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 4手終局だけでは閉じない三石軌道を一つNと確定。二石根と空盤は未確定
 - → supports [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md): 二石組{61,85}の未被覆23三石軌道の一つを処理
+
+## [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) 7立方の内側正四面体・中心軸四石Nと五石Pの独立証明
+
+- → supports [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md): 三石Nを証明する第四手の候補選択に必要なN四石の有限証明。上位根は未確定

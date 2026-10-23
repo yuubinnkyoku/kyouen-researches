@@ -555,6 +555,13 @@
 ## [research/experiments/cube-q5-seven-balanced-20261023/verify_incremental.cpp](../../../research/experiments/cube-q5-seven-balanced-20261023/verify_incremental.cpp)
 
 - [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (verifier): 探索器とは別実装のBareiss5×5行列式・差分合法子検査器
+## [research/experiments/cube-q5-seven-central-line-20261023/README.md](../../../research/experiments/cube-q5-seven-central-line-20261023/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): 未被覆第三手24に中心を第四手として加えた候補はNであり、その手では三石Nを証明できない
+- [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (proof): 中心軸四石Nと157着手後の五石P
+## [research/experiments/cube-q5-seven-central-line-20261023/stage-3-verified.json](../../../research/experiments/cube-q5-seven-central-line-20261023/stage-3-verified.json)
+
+- [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (data): 1590127局面の全証明を約10.87億Bareiss行列式で独立検査
 ## [research/experiments/cube-q5-seven-frontier-20261022/README.md](../../../research/experiments/cube-q5-seven-frontier-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明
@@ -663,6 +670,13 @@
 ## [research/experiments/cube-q5-seven-incremental-20261022/terminal18.md](../../../research/experiments/cube-q5-seven-incremental-20261022/terminal18.md)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 18石極大安全構成と最大安全石数≥18の独立検査
+## [research/experiments/cube-q5-seven-inner-tetra-20261023/README.md](../../../research/experiments/cube-q5-seven-inner-tetra-20261023/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): 内側正四面体は4石N・中心追加後は5石P。四石を一律Pとは扱えない
+- [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (proof): 内側正四面体4石Nと中心追加後の5石P、再生成手順、検査範囲
+## [research/experiments/cube-q5-seven-inner-tetra-20261023/manifest.json](../../../research/experiments/cube-q5-seven-inner-tetra-20261023/manifest.json)
+
+- [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (manifest): 圧縮全証明・独立検査結果・四石証明再生成のSHA-256
 ## [research/experiments/cube-q5-seven-probe-20261022/README.md](../../../research/experiments/cube-q5-seven-probe-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 7立方の2石根・35第三手境界・増加予算probe・未検証範囲
