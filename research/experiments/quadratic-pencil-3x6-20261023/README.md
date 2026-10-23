@@ -15,8 +15,8 @@
 ## 結果
 
 `results.tsv` は54型すべての空盤Grundy値、全安全局面数、
-禁止四点組数、勝ち初手（点番号 `3x+y`）、極大石数別個数、
-安全局面の石数別個数を保存する。
+禁止四点組数、勝ち初手（点番号 `3x+y`）を保存する。
+極大石数別個数・安全局面の石数別個数は検証器の完全出力から再生成できる。
 
 空盤 `g=0`（後手必勝）になるのは、一般型（53個の例外値以外の**全実数**）と
 `λ∈{−20,−15,−13,−12,−13/2,−1/2,5/2,7,31/2}` のみ。
@@ -29,7 +29,9 @@
 
 ```sh
 g++ -O2 -std=c++17 quadratic_3x6.cpp -o /tmp/q36
-/tmp/q36 6 > results.tsv
+/tmp/q36 6 > /tmp/q36-full.tsv
+{ head -n1 /tmp/q36-full.tsv; tail -n+2 /tmp/q36-full.tsv | cut -f1-5; } > /tmp/q36-compact.tsv
+cmp results.tsv /tmp/q36-compact.tsv
 python audit_3x6.py results.tsv
 /tmp/q36 5 > /tmp/q35.tsv  # 既存3×5結果の回帰
 ```
@@ -41,6 +43,6 @@ Python監査も独立に4×4行列式と再帰を実装し、全型の
 両者一致。3×5の既存32型も再現した。
 
 `results.tsv` のSHA-256：
-`e35c9a7d4c00fb96155240ff900dbde6f0c97747c643eeeb042505b73ad18922`。
+`d36d2cdf2381915c9046590b7f06eff90e81574cb505e7a0c51ff8631c81567b`。
 
 有限盤3×6についての分類であり、任意の長さへの外挿ではない。
