@@ -62,6 +62,7 @@ Root prepare(U b,int mode){need(points(b).size()==10&&safe(b),"bad root");Root r
       case 7:return 100000LL*influence[i]+1000LL*triple[i]-dist[i];
       case 8:return 100000LL*all[i]-100LL*dist[i];
       case 9:return 100000LL*triple[i]+1000LL*quad[i];
+      case 10:return 24LL*influence[i]+8LL*triple[i]-31LL*quad[i]+9LL*dist[i];
       }return 0LL;
     };
     if(score(a)!=score(c))return score(a)>score(c);
@@ -88,7 +89,7 @@ struct Solver{
  }
 };
 int main(int argc,char**argv){try{
- need(argc>=3,"usage: shared52 selected52.keys MODE(0=plain 1=D4 2..9=D4+heuristics) [reverse] [separate]");init_d4();int mode=stoi(argv[2]);need(mode>=0&&mode<=9,"bad mode");vector<U> roots;ifstream f(argv[1]);string s;while(f>>s){U b=parse(s);need(canon(b)==b,"noncanonical root");roots.push_back(b);}need(roots.size()==52,"52 roots expected");need(set<U>(roots.begin(),roots.end()).size()==52,"duplicate roots");bool reverse_order=false,separate=false;for(int i=3;i<argc;i++){if(string(argv[i])=="reverse")reverse_order=true;else if(string(argv[i])=="separate")separate=true;else throw runtime_error("unknown option");}if(reverse_order)reverse(roots.begin(),roots.end());
+ need(argc>=3,"usage: shared52 selected52.keys MODE(0=plain 1=D4 2..10=D4+heuristics) [reverse] [separate]");init_d4();int mode=stoi(argv[2]);need(mode>=0&&mode<=10,"bad mode");vector<U> roots;ifstream f(argv[1]);string s;while(f>>s){U b=parse(s);need(canon(b)==b,"noncanonical root");roots.push_back(b);}need(roots.size()==52,"52 roots expected");need(set<U>(roots.begin(),roots.end()).size()==52,"duplicate roots");bool reverse_order=false,separate=false;for(int i=3;i<argc;i++){if(string(argv[i])=="reverse")reverse_order=true;else if(string(argv[i])=="separate")separate=true;else throw runtime_error("unknown option");}if(reverse_order)reverse(roots.begin(),roots.end());
  Solver sol;sol.mode=mode;sol.memo.reserve(25000);size_t root_n=0,sum_separate=0;
  auto start=chrono::steady_clock::now();for(U b:roots){Root r=prepare(b,mode);bool w=sol.dfs(r,0,b);need(!w,"selected leaf is not LOSS "+hx(b));root_n++;if(separate){sum_separate+=sol.memo.size();sol.memo.clear();}}
  auto elapsed=chrono::duration<double>(chrono::steady_clock::now()-start).count();cout<<"PASS roots="<<root_n<<" states="<<(separate?sum_separate:sol.memo.size())<<" lookups="<<sol.lookups<<" hits="<<sol.hits<<" hit_rate="<<double(sol.hits)/sol.lookups<<" children="<<sol.children<<" seconds="<<elapsed<<" mode="<<mode<<"\n";
