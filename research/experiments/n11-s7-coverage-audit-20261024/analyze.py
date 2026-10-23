@@ -70,6 +70,15 @@ def forbidden_by_triple(a: int, b: int, c: int) -> int:
                if A*x + B*y + C*(x*x+y*y) + D == 0)
 
 
+def is_safe(board: int) -> bool:
+    ps = points(board)
+    for triple in combinations(ps, 3):
+        own_triple = sum(BIT[p] for p in triple)
+        if forbidden_by_triple(*triple) & (board ^ own_triple):
+            return False
+    return True
+
+
 def legal_points(board: int) -> list[int]:
     blocked = board
     for triple in combinations(points(board), 3):
@@ -95,7 +104,7 @@ def hexdigest(path: Path) -> str:
 
 def audit() -> dict:
     s9 = set().union(*(read_keys(p, n) for p, n in zip(S9_FILES, (29, 27, 2, 10))))
-    if len(s9) != 68 or any(m.bit_count() != 9 for m in s9):
+    if len(s9) != 68 or any(m.bit_count() != 9 or not is_safe(m) for m in s9):
         raise ValueError("68 S9 roots changed")
     old8 = read_keys(BASE / "lifted_s8_win_51571.txt", 13501)
     loss8 = read_keys(BASE / "all_s8_loss_294.txt", 294)
@@ -104,6 +113,8 @@ def audit() -> dict:
     if old8 & loss8 or win7 & loss7:
         raise ValueError("frozen WIN/LOSS conflict")
     lifted8 = {canonical(m ^ BIT[p]) for m in s9 for p in points(m)}
+    if any(not is_safe(m) for m in lifted8):
+        raise ValueError("derived unsafe S8 parent")
     if lifted8 & loss8:
         raise ValueError("new S8 WIN / known S8 LOSS conflict")
     secured8 = old8 | lifted8
