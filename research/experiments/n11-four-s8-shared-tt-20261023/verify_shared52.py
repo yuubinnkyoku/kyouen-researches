@@ -7,7 +7,7 @@ sys.path.insert(0,str(Path(__file__).resolve().parent.parent/'n11-four-s8-joint-
 from terminal_geometry import circle, points, legal, safe
 from fastgeom import canonical
 
-def prep(m):
+def prep(m,weighted=False):
     if not (m.bit_count()==10 and safe(m) and canonical(m)==m):raise ValueError("invalid S10 key")
     base=points(m)
     moves=legal(m)
@@ -31,7 +31,11 @@ def prep(m):
     pair=[sum(sub.bit_count()==1 for sub in ban_by[i]) for i in range(n)]
     triple=[sum(sub.bit_count()==2 for sub in ban_by[i]) for i in range(n)]
     quad=[sum(sub.bit_count()==3 for sub in ban_by[i]) for i in range(n)]
-    order=sorted(range(n),key=lambda i:(-(100000*pair[i]+1000*triple[i]+quad[i]),moves[i]))
+    dist=[abs(moves[i]%11-5)+abs(moves[i]//11-5) for i in range(n)]
+    if weighted:
+        order=sorted(range(n),key=lambda i:(-(24*pair[i]+8*triple[i]-31*quad[i]+9*dist[i]),moves[i]))
+    else:
+        order=sorted(range(n),key=lambda i:(-(100000*pair[i]+1000*triple[i]+quad[i]),moves[i]))
     return moves,ban_by,order
 
 def run(path):
@@ -40,8 +44,9 @@ def run(path):
     if len(sys.argv)>2 and sys.argv[2]=="reverse":keys.reverse()
     memo={};lookups=0;hits=0;edges=0;total_separate=0
     separate="separate" in sys.argv[2:]
+    weighted="weighted" in sys.argv[2:]
     for m in keys:
-        moves,ban_by,order=prep(m)
+        moves,ban_by,order=prep(m,weighted)
         def solve(state,board):
             nonlocal lookups,hits,edges
             key=canonical(board)
@@ -62,5 +67,7 @@ def run(path):
         if separate:
             total_separate+=len(memo)
             memo.clear()
-    print(dict(result='PASS',roots=len(keys),states=(total_separate if separate else len(memo)),lookups=lookups,hits=hits,edges=edges))
+    print(dict(result='PASS',roots=len(keys),states=(total_separate if separate else len(memo)),lookups=lookups,hits=hits,edges=edges,weighted=weighted))
+    if weighted and not separate and 'reverse' in sys.argv[2:]:
+        assert (len(memo),lookups,hits,edges)==(7636,12684,5048,12632), 'weighted shared-TT regression'
 if __name__=='__main__':run(sys.argv[1])
