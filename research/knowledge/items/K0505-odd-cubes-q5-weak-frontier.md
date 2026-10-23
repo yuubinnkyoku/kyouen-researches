@@ -52,6 +52,12 @@ artifacts:
 - path: research/experiments/cube-q5-seven-balanced-20261023/five-results.md
   role: proof
   note: priorの底4への変更により五石Nと六石Pを閉じ、全証明書を独立Bareiss検査
+- path: research/experiments/cube-q5-seven-balanced-20261023/frontier-results.md
+  role: log
+  note: 4石根2件はUNKNOWN、最終35412458候補行からの再開方法と保存範囲
+- path: research/experiments/cube-q5-seven-balanced-20261023/manifest-frontier.json
+  role: manifest
+  note: 最終private checkpointのhash・header・信頼範囲と追加探索結果
 scope: 共平面または共球面5点禁止・通常プレイ、奇数n≥7のn×n×n整数格子
 evidence: 7立方の残り35第三手を19軌道化し、再開可能な探索と独立部分証明を作成したが根は未確定
 solution:
@@ -119,3 +125,7 @@ checkpointから抽出した6石N・7石Pと17石極大安全局面は、別のB
 追加307,229展開で五石根 `{0,2,5,26,69}` をNと確定。54着手後の六石局面はP。
 431,195局面の全証明書を独立Bareiss検査した（K0517）。前日の同五石根UNKNOWNを
 更新する結果であるが、三石根69・二石根・空盤は依然未確定。
+
+次に4石根 `{0,2,5,69}`、`{0,5,26,69}` を各200万展開し、前者へさらに
+4,890,897展開を加えたがUNKNOWNだった。最後は未確定tree100万件の上限。
+最終private候補memo35,412,458行は再開用に保存したが、その全体は独立未検査。

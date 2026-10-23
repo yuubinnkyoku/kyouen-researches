@@ -525,9 +525,15 @@
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): priorの底4への変更により五石Nと六石Pを閉じ、全証明書を独立Bareiss検査
 - [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) (proof): 五石Nと六石Pの意味・勝ち手・独立検査・再現方法と限界
+## [research/experiments/cube-q5-seven-balanced-20261023/frontier-results.md](../../../research/experiments/cube-q5-seven-balanced-20261023/frontier-results.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 4石根2件はUNKNOWN、最終35412458候補行からの再開方法と保存範囲
 ## [research/experiments/cube-q5-seven-balanced-20261023/lifted-six-verified.json](../../../research/experiments/cube-q5-seven-balanced-20261023/lifted-six-verified.json)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): P子を共有する7件の6石N根をそれぞれ既存Bareiss検査器で確認
+## [research/experiments/cube-q5-seven-balanced-20261023/manifest-frontier.json](../../../research/experiments/cube-q5-seven-balanced-20261023/manifest-frontier.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 最終private checkpointのhash・header・信頼範囲と追加探索結果
 ## [research/experiments/cube-q5-seven-balanced-20261023/seven-p.cert.gz](../../../research/experiments/cube-q5-seven-balanced-20261023/seven-p.cert.gz)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (certificate): 新たな7石P局面の12403局面・16436辺証明書
