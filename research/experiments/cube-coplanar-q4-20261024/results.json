@@ -1,0 +1,95 @@
+{
+  "board": "2x2x2",
+  "rule": "forbid four coplanar vertices, including degeneracies",
+  "forbidden4": 12,
+  "safe_states": 159,
+  "maximal_sizes": {
+    "4": 24,
+    "5": 8
+  },
+  "maximum_safe_size": 5,
+  "minimum_maximal_size": 4,
+  "normal_empty_grundy": 0,
+  "misere_empty_aux": 0,
+  "one_stone_grundy": [
+    2
+  ],
+  "layers": {
+    "0": {
+      "safe": 1,
+      "normal": {
+        "0": 1
+      },
+      "misere_aux": {
+        "0": 1
+      },
+      "maximal": 0
+    },
+    "1": {
+      "safe": 8,
+      "normal": {
+        "2": 8
+      },
+      "misere_aux": {
+        "1": 8
+      },
+      "maximal": 0
+    },
+    "2": {
+      "safe": 28,
+      "normal": {
+        "0": 16,
+        "1": 12
+      },
+      "misere_aux": {
+        "0": 28
+      },
+      "maximal": 0
+    },
+    "3": {
+      "safe": 56,
+      "normal": {
+        "0": 8,
+        "2": 48
+      },
+      "misere_aux": {
+        "1": 8,
+        "2": 48
+      },
+      "maximal": 0
+    },
+    "4": {
+      "safe": 58,
+      "normal": {
+        "0": 24,
+        "1": 34
+      },
+      "misere_aux": {
+        "0": 34,
+        "1": 24
+      },
+      "maximal": 24
+    },
+    "5": {
+      "safe": 8,
+      "normal": {
+        "0": 8
+      },
+      "misere_aux": {
+        "1": 8
+      },
+      "maximal": 8
+    }
+  },
+  "swap_mismatches": 25,
+  "five_stone_masks": [
+    151,
+    158,
+    181,
+    186,
+    213,
+    218,
+    225,
+    232
+  ]
+}
