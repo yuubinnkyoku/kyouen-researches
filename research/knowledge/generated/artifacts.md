@@ -515,6 +515,15 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/cube-q5-seven-balanced-20261023/lifted-six-verified.json](../../../research/experiments/cube-q5-seven-balanced-20261023/lifted-six-verified.json)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): P子を共有する7件の6石N根をそれぞれ既存Bareiss検査器で確認
+## [research/experiments/cube-q5-seven-balanced-20261023/seven-p.cert.gz](../../../research/experiments/cube-q5-seven-balanced-20261023/seven-p.cert.gz)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (certificate): 新たな7石P局面の12403局面・16436辺証明書
+## [research/experiments/cube-q5-seven-balanced-20261023/six-results.md](../../../research/experiments/cube-q5-seven-balanced-20261023/six-results.md)
+
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 新たな6石N・7石PとP子からの7件の6石N親の独立検査
 ## [research/experiments/cube-q5-seven-frontier-20261022/README.md](../../../research/experiments/cube-q5-seven-frontier-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明
@@ -6931,6 +6940,18 @@
 ## [research/experiments/n11-s9-second-target-20261015/verify.py](../../../research/experiments/n11-s9-second-target-20261015/verify.py)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
+## [research/experiments/n11-s9-win13-lift-20261023/README.md](../../../research/experiments/n11-s9-win13-lift-20261023/README.md)
+
+- [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (source): 再現手順と信頼境界
+## [research/experiments/n11-s9-win13-lift-20261023/certificate.json](../../../research/experiments/n11-s9-win13-lift-20261023/certificate.json)
+
+- [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (certificate): 9石根・13個の10石WIN子・9個の8石WIN親の完全一覧
+## [research/experiments/n11-s9-win13-lift-20261023/s10-cpp.tsv](../../../research/experiments/n11-s9-win13-lift-20261023/s10-cpp.tsv)
+
+- [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (data): C++の独立4×4整数行列式による13子の勝敗・状態数
+## [research/experiments/n11-s9-win13-lift-20261023/verify.py](../../../research/experiments/n11-s9-win13-lift-20261023/verify.py)
+
+- [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (verifier): 独立整数幾何による全子・終局minimax・伝播検査
 ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典

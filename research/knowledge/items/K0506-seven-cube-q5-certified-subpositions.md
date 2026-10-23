@@ -46,11 +46,20 @@ artifacts:
 - path: research/experiments/cube-q5-seven-incremental-20261022/terminal18-verified.json
   role: data
   note: 1037340回のBareiss整数行列式評価による検査結果
-scope: 7×7×7整数格子、共平面または共球面5点禁止・通常プレイ、明示した4占有集合
+- path: research/experiments/cube-q5-seven-balanced-20261023/six-results.md
+  role: proof
+  note: 新たな6石N・7石PとP子からの7件の6石N親の独立検査
+- path: research/experiments/cube-q5-seven-balanced-20261023/seven-p.cert.gz
+  role: certificate
+  note: 新たな7石P局面の12403局面・16436辺証明書
+- path: research/experiments/cube-q5-seven-balanced-20261023/lifted-six-verified.json
+  role: data
+  note: P子を共有する7件の6石N根をそれぞれ既存Bareiss検査器で確認
+scope: 7×7×7整数格子、共平面または共球面5点禁止・通常プレイ、明示した占有集合
 evidence: 探索器と別実装の5×5 Bareiss整数行列式による全局所条件と到達性の検査
 ---
 
-点 `(x,y,z)` の番号を `(x*7+y)*7+z` とする。次の有限4件を独立検査した。
+点 `(x,y,z)` の番号を `(x*7+y)*7+z` とする。次の局面を独立検査した。
 
 * `{1,4,6,22,55,63}` はN（手番側勝ち）。着手57で次のP局面に移れる。
 * `{1,4,6,22,55,57,63}` はP（手番側負け）。証明書8,313局面・10,704関係。
@@ -58,6 +67,11 @@ evidence: 探索器と別実装の5×5 Bareiss整数行列式による全局所�
   17石の極大安全局面であり、P終端である。
 * `{1,7,8,42,58,62,68,130,139,184,218,243,245,263,264,289,294,300}` は
   18石の極大安全局面であり、P終端である。
+* `{7,10,28,42,49,51}` はN。対応するP子の証明に根1件を加えた12,404局面。
+* `{7,9,49,52,196,244,294}` はP。証明書12,403局面・16,436関係。
+
+最後の7石Pから1石ずつ取り除いた7つの6石N親も、全子孫を含む通常の証明書へ
+変換してそれぞれ独立検査した。各根の正規化済み番号と検査結果は追加artifactに記録。
 
 最初の6石Nの証明は7石Pの証明に根1局面・証人辺1本を加えた8,314局面。
 両証明の最大石数は15。最初の6石根は立方体対称性で

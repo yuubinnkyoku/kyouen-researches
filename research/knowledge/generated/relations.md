@@ -103,6 +103,7 @@
 - ← depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): mex再帰と独立ゲームのxor
 - ← depends_on [K0484](../items/K0484-width-five-q9-all-lengths.md): 通常プレイGrundy値の定義
 - ← depends_on [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md): 通常プレイのP/N再帰と有限局面のAND/OR帰納法
+- ← depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 元先手固定視点の奇数AND・偶数ORの伝播
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -1849,6 +1850,7 @@
 - ← depends_on [K0414](../items/K0414-n11-reply27-root-loss.md): solver-trusted exact値とterminal-only独立証明の信頼区分
 - ← depends_on [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md): terminal-only検査器、cache隔離、trusted leafの区別
 - ← depends_on [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md): 独立Board・exact cache隔離・trusted leafの区別
+- ← depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): terminal-only独立証明とsolver-trusted cacheの信頼境界
 
 ## [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) 11×11二石局面60・27の第三手100と108は反射対称
 
@@ -2432,3 +2434,8 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 最大安全石数の定義
 - → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 軸平行長方形だけを禁止する規則の区別
+
+## [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) 11×11の9石WINを13個の終局WIN葉で証明し8石WIN親9件へ伝播
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数ORの伝播
+- → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): terminal-only独立証明とsolver-trusted cacheの信頼境界
