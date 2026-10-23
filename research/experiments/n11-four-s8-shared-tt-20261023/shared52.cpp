@@ -18,7 +18,7 @@ void need(bool b,const string&s){if(!b)throw runtime_error(s);}
 U parse(const string&s){need(s.size()==32,"hex size");U b=0;for(char c:s){b<<=4; if(c>='0'&&c<='9')b+=c-'0';else if(c>='a'&&c<='f')b+=c-'a'+10;else throw runtime_error("hex char");}need((b>>121)==0,"bounds");return b;}
 string hx(U b){string s(32,'0');for(int i=31;i>=0;i--){s[i]="0123456789abcdef"[int(b&15)];b>>=4;}return s;}
 vector<int> points(U b){vector<int>p;for(int i=0;i<121;i++)if((b>>i)&1)p.push_back(i);return p;}
-long long det3(const array<array<long long,3>,3>&a){return a[0][0]*(a[1][1]*a[2][2]-a[1][2]*a[2][1])-a[0][1]*(a[1][0]*a[2][2]-a[1][1]*a[2][0])+a[0][2]*(a[0][1]*a[1][2]-a[0][2]*a[1][1]);}
+long long det3(const array<array<long long,3>,3>&a){return a[0][0]*(a[1][1]*a[2][2]-a[1][2]*a[2][1])-a[0][1]*(a[1][0]*a[2][2]-a[1][1]*a[2][0])+a[0][2]*(a[1][0]*a[2][1]-a[1][1]*a[2][0]);}
 bool bad(int a,int b,int c,int d){int p[4]={a,b,c,d};array<array<long long,3>,4>m;for(int i=0;i<4;i++){long long x=p[i]%11,y=p[i]/11;m[i]={x,y,x*x+y*y};}long long sum=0;for(int omit=0;omit<4;omit++){array<array<long long,3>,3>sub;int k=0;for(int j=0;j<4;j++)if(j!=omit)sub[k++]=m[j];sum+=(omit%2?-1:1)*det3(sub);}return sum==0;}
 bool safe_add(const vector<int>&p,int x){for(int i=0;i<(int)p.size();i++)for(int j=i+1;j<(int)p.size();j++)for(int k=j+1;k<(int)p.size();k++)if(bad(p[i],p[j],p[k],x))return false;return true;}
 bool safe(U b){vector<int>p=points(b);for(int i=0;i<(int)p.size();i++){vector<int>q=p;q.erase(q.begin()+i);if(!safe_add(q,p[i]))return false;}return true;}
