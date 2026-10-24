@@ -221,3 +221,16 @@ $$
 $d=5,6,7,8$ の5点切片数は $480,20160,510720,10160640$。5点組のアフィン階数を、二値4次元の有理部分空間116個の包含格子により全 $d$ の指数多項式として計数し、既知の6点・8点切片数を引く**全称証明**。独立した素数101上の直接全5点組列挙で $d=4,5,6$ を照合した。有限検算を全次元証明に読み替えていない。
 
 [証明（定理13）](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)、[有理数格子検証器](../../experiments/binary-cube-affine-sections-20261024/verify_five_sections_formula.py)、[独立C++直接検証器](../../experiments/binary-cube-affine-sections-20261024/verify_five_sections_direct.cpp)。
+
+
+## 実3平坦の4点切片の全次元公式（定理14）
+
+$d\ge3$ で、二値超立方体と**ちょうど4点で交わる実3次元アフィン平坦**の個数も確定した：
+
+$$
+\boxed{H^{(3)}_{d,4}=\frac{16^d-12\cdot12^d+30\cdot10^d-35\cdot8^d+24\cdot6^d-10\cdot4^d+2\cdot2^d}{24}.}
+$$
+
+$d=3,4,5,6,7,8$ の値は $0,80,3840,118720,2983680,66151680$。既存の5・6・8点切片公式と合わせ、**実3平坦の4点以上の二値交点数分布を全次元で決定**した。鍵は、アフィン独立4点組が各4・5・6・8点切片からそれぞれ $1,4,12,58$ 組生じるという全称補題である。特に5点切片はちょうど1個の平行四辺形を含む。
+
+これは全称数学的証明であり、[証明（定理14）](../../experiments/binary-cube-affine-sections-20261024/proof.md)と[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)に保存した。[整数Cramer則の独立検証器](../../experiments/binary-cube-affine-sections-20261024/verify_four_sections.py)で $d=3,4,5$ の全4点組を直接列挙し、既存の有理数RREF平坦列挙とも一致した。$d\ge6$ の数値は公式による計算であって直接全列挙ではない。
