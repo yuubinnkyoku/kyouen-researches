@@ -79,7 +79,12 @@ void check(int d) {
 void audit_strong(int d);
 void audit_minimal(int d);
 void audit_intermediate_direct();
+void audit_intermediate_large();
 int main(int argc, char** argv) {
+    if (argc > 1 && string(argv[1]) == "--intermediate-large") {
+        audit_intermediate_large();
+        return 0;
+    }
     if (argc > 1 && string(argv[1]) == "--intermediate") {
         audit_intermediate_direct();
         return 0;
@@ -294,5 +299,69 @@ void audit_intermediate_direct() {
                  << " checked=" << checked << " terminal=" << terminal
                  << " PASS\n";
         }
+    }
+}
+
+
+// Larger normalized-code audits: two different enumeration orders.
+// Both use the proved private-face criterion, not 128-vertex subsets.
+void audit_intermediate_large() {
+    const vector<tuple<int, int, uint64_t>> cases = {
+        {7, 7, 315424}, {8, 6, 1927665}
+    };
+    for (auto [d, t, expected] : cases) {
+        const int n = 1 << (t - 1);
+        unsigned char direction[128]{};
+        for (int k = 0; k < t - 1; ++k)
+            direction[1 << k] = 1 << k;
+        direction[n - 1] = 1 << (t - 1);
+        const int full = (1 << t) - 1;
+        int chosen[32]{};
+        uint64_t recursive_count = 0, recursive_seen = 0;
+        auto dfs = [&](auto&& self, int next, int depth,
+                       int colors) -> void {
+            if (depth == d) {
+                ++recursive_seen;
+                recursive_count += (colors == full);
+                return;
+            }
+            for (int x = next; x <= n - (d - depth); ++x) {
+                int next_colors = colors | direction[x];
+                for (int i = 0; i < depth; ++i)
+                    next_colors |= direction[x ^ chosen[i]];
+                chosen[depth] = x;
+                self(self, x + 1, depth + 1, next_colors);
+            }
+        };
+        dfs(dfs, 1, 0, 0);
+        uint64_t gosper_count = 0, gosper_seen = 0;
+        uint64_t bits = (1ULL << d) - 1;
+        const uint64_t limit = 1ULL << (n - 1);
+        while (bits < limit) {
+            int x[32]{}, length = 0;
+            uint64_t tmp = bits;
+            while (tmp) {
+                int bit = __builtin_ctzll(tmp);
+                x[length++] = bit + 1;
+                tmp &= tmp - 1;
+            }
+            assert(length == d);
+            int colors = 0;
+            for (int i = 0; i < d; ++i) {
+                colors |= direction[x[i]];
+                for (int j = i + 1; j < d; ++j)
+                    colors |= direction[x[i] ^ x[j]];
+            }
+            gosper_count += (colors == full);
+            ++gosper_seen;
+            const uint64_t lowest = bits & -bits;
+            const uint64_t next = bits + lowest;
+            bits = (((next ^ bits) >> 2) / lowest) | next;
+        }
+        assert(recursive_count == expected && gosper_count == expected);
+        assert(recursive_seen == gosper_seen);
+        cout << "large-intermediate d=" << d << " t=" << t
+             << " candidates=" << recursive_seen
+             << " normalized=" << expected << " PASS\n";
     }
 }
