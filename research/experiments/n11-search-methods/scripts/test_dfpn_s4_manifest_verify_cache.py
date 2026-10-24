@@ -110,6 +110,22 @@ class S4ManifestStructureTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, 'unexpected S4'):
                     self.parse(data)
 
+    def test_duplicate_root_class_claims_fail_closed(self):
+        # A repeated certificate must not inflate the number of verified
+        # classes, even when its verdict and children agree byte for byte.
+        for data in (self.valid + self.valid,
+                     self.valid + self.valid.replace(',2,2,2,', ',1,2,2,')):
+            with self.subTest(data=data):
+                with self.assertRaisesRegex(ValueError, 'duplicate S4'):
+                    self.parse(data)
+
+    def test_same_board_key_for_distinct_roots_is_not_a_duplicate(self):
+        # The same four-stone board can occur under two ordered openings;
+        # each root has its own edge coverage obligation.
+        reversed_root = self.valid.replace('s4verdict,60,0,',
+                                           's4verdict,0,60,')
+        self.assertEqual(len(self.parse(self.valid + reversed_root)), 2)
+
     def test_child_count_and_header_truncation(self):
         for data in ('s4verdict,60,0,1,0,2,1\n',
                      self.valid.replace(',2,2,2,', ',2,-1,2,'),
