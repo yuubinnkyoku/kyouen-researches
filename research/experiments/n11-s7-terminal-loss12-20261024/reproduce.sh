@@ -31,4 +31,23 @@ if python3 "$D/verify.py" --certificate "$T/tampered.json" --emit-s10 "$T/tamper
     exit 1
 fi
 python3 "$D/verify_three_root_minimality.py"
-echo 'PASS tampered C++ verdict and certificate rejected; empty=UNKNOWN'
+
+# Independent S8 LOSS -> S7 LOSS reverse-edge geometry and S6 coverage audit.
+python3 "$D/verify_s7_reverse_closure.py" \
+    --certificate "$D/certificate.json" \
+    --frozen-s7-loss research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_loss_2232.txt \
+    --frozen-s7-win research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt \
+    --previous-s8-loss-roots research/experiments/n11-s8-to-s7-lift238-20261020/roots35.txt
+python3 - "$D/certificate.json" "$T/tampered-s8.json" <<'PY'
+import json
+from pathlib import Path
+import sys
+cert = json.loads(Path(sys.argv[1]).read_text())
+cert['s8_loss'][0] = '0' * 32
+Path(sys.argv[2]).write_text(json.dumps(cert))
+PY
+if python3 "$D/verify_s7_reverse_closure.py" --certificate "$T/tampered-s8.json" >/dev/null 2>&1; then
+    echo 'FAIL: tampered S8 LOSS root accepted by reverse-closure verifier' >&2
+    exit 1
+fi
+echo 'PASS tampered C++ verdict and certificate rejected; S7 reverse closure audited; empty=UNKNOWN'
