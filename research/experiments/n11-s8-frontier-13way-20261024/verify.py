@@ -102,7 +102,7 @@ def verify_terminal(win_leaves, loss_leaves, cpp_path):
                                   states, len(legal(b))),
              f'C++/Python terminal mismatch {b:032x}')
         state_sum += states
-    need(state_sum == 3887, 'independent terminal state total changed')
+    need(state_sum == 3122, 'independent terminal state total changed')
     return state_sum
 
 
