@@ -84,3 +84,12 @@ solution:
 [全称証明と有限境界の検証](../../experiments/coplanar-two-layer-exact-five-stone-frontier-20261024/proof.md)・[Python検証器](../../experiments/coplanar-two-layer-exact-five-stone-frontier-20261024/verify.py)・[独立C++検証器](../../experiments/coplanar-two-layer-exact-five-stone-frontier-20261024/independent.cpp)・[全数表と証人](../../experiments/coplanar-two-layer-exact-five-stone-frontier-20261024/results.md)。
 
 ※前節の「`min(k,m)≥5` が最良」という記述は **短辺だけを条件にする一様閾値** についてのものであり、ここで得た `k+m` による必要十分条件と矛盾しない。
+
+
+## 通常／misère交換則単独の真の境界（2026-10-24）
+
+上の全局面具体表の必要十分条件 \(k+m\ge10\) よりも早く、**通常／misèreのGrundy値交換則単独は \(k+m\ge8\) で成立する**。厳密には任意の \(k,m\ge3\) に対し、全安全局面で \(h(S)=1-g(S)\)（\(g(S)=0,1\)）かつ \(h(S)=g(S)\)（\(g(S)\ge2\)）が成立することと \(k+m\ge8\) は同値。
+
+無界部分 \(k+m\ge10\) は本項の既存全称定理による。残る境界 \(3\times5,4\times4,3\times6,4\times5\) はPythonの方向集合とC++の整数行列式という独立二方式で全安全局面を完全列挙し、交換則不一致がいずれも0件。\(3\times3\) と \(3\times4\) には不一致が51件と20件あり、具体的な三石局面 \(g=h=0\) の反例も保存した。従って8が真の閾値。なお \(3\times5,3\times6,4\times4,4\times5\) には五石極大局面が残るため、交換則と全局面具体表は異なる性質である。
+
+[証明と検証方法](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/proof.md)・[独立検証器](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/independent.cpp)・[結果表](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/results.md)。
