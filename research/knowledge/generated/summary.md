@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 533 / alias: 269 / artifactファイル: 2869
+K項目: 534 / alias: 269 / artifactファイル: 2872
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 533 / alias: 269 / artifactファイル: 2869
 | computation | 39 |
 | definition | 5 |
 | method | 4 |
-| proposition | 424 |
+| proposition | 425 |
 | question | 38 |
 | verification | 23 |
 
@@ -22,7 +22,7 @@ K項目: 533 / alias: 269 / artifactファイル: 2869
 | conjectured | 1 |
 | observed | 26 |
 | open | 36 |
-| proved | 253 |
+| proved | 254 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
@@ -36,7 +36,7 @@ K項目: 533 / alias: 269 / artifactファイル: 2869
 | certificates | 57 |
 | first-moves | 56 |
 | formalization | 5 |
-| geometry | 237 |
+| geometry | 238 |
 | grundy | 122 |
 | maximal-safe | 98 |
 | maximum-safe | 58 |
@@ -48,9 +48,9 @@ K項目: 533 / alias: 269 / artifactファイル: 2869
 | rules | 8 |
 | search-methods | 66 |
 | square-outcomes | 53 |
-| statistics | 63 |
+| statistics | 64 |
 | strategy-length | 29 |
-| variants | 178 |
+| variants | 179 |
 | verification | 67 |
 
 ## 未解決・要監査・範囲不明
