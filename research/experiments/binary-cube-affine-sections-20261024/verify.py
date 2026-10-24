@@ -1,6 +1,7 @@
 """Independent exact rational-rowspace audit of maximal Boolean cube sections."""
 from fractions import Fraction
-from itertools import combinations
+from itertools import combinations, product
+import sys
 from collections import Counter
 from math import comb
 
@@ -99,6 +100,43 @@ def verify(d, k):
         assert terminal_five == 22240
         print(f'  independent_five_stone_terminal_count={terminal_five}', flush=True)
 
+
+def verify_six_coordinate_functions(d):
+    """Enumerate all affine coordinate-function tuples, independently of flat RREF."""
+    assert 4 <= d <= 6
+    cube = list(product((0, 1), repeat=3))
+    classes = (0, 0, 1, 1, 2, 2, 3, 3, 4, 4)
+    expected = six_section_formula(d)
+    for kind, target in (("prism", expected[0]), ("octahedron", expected[1])):
+        if kind == "prism":
+            points = [v for v in cube if v[:2] != (1, 1)]
+            extra = lambda v: v[0] + v[1]
+        else:
+            points = [v for v in cube if v not in ((0, 0, 0), (1, 1, 1))]
+            extra = lambda v: v[0] + v[1] + v[2] - 1
+        funcs = [lambda v: 0, lambda v: 1]
+        for i in range(3):
+            funcs += [(lambda v, i=i: v[i]), (lambda v, i=i: 1 - v[i])]
+        funcs += [extra, lambda v: 1 - extra(v)]
+        values = [tuple(f(v) for v in points) for f in funcs]
+        assert all(set(row) <= {0, 1} for row in values)
+        seen = set()
+        for choice in product(range(10), repeat=d):
+            if not {1, 2, 3, 4}.issubset(classes[i] for i in choice):
+                continue
+            image = tuple(sorted(sum(values[i][v] << j
+                                     for j, i in enumerate(choice))
+                                 for v in range(6)))
+            assert len(set(image)) == 6
+            seen.add(image)
+        assert len(seen) == target, (d, kind, len(seen), target)
+        print(f'd={d} six_point_{kind}={len(seen)}', flush=True)
+
+
 if __name__ == '__main__':
+    if len(sys.argv) > 1 and sys.argv[1] == '--six-sections':
+        for d in (4, 5, 6):
+            verify_six_coordinate_functions(d)
+        sys.exit(0)
     for d,k in [(2,1),(3,1),(3,2),(4,1),(4,2),(4,3),(5,1),(5,2),(5,3),(5,4)]:
         verify(d,k)
