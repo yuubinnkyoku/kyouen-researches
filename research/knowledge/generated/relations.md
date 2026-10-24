@@ -115,6 +115,7 @@
 - ← depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 同じ合法遷移から全Grundy値と勝ち手の一致を得る
 - ← depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 終局までの固定手数偶奇とmex帰納
 - ← depends_on [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md): 通常プレイの最後の合法手と勝ち初手の規約
+- ← depends_on [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 全終局の同一石数から全安全局面のmexを帰納計算
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2316,6 +2317,7 @@
 
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 二点和energyの鋭い上界と同和弦による円計数
 - → depends_on [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 任意平行線上の満容量問題の定義と21候補上界
+- ← depends_on [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 18候補不足極大のE14剛性分類と被覆等号条件を独立代数監査で排除
 
 ## [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
 
@@ -2571,3 +2573,8 @@
 ## [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md) 多項式行列式版は同列三点の吸収性から次数3以上の勝敗と初手を構成できる
 
 - → depends_on [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md): 同列三点が吸収集合となることから完成戦略を適用
+
+## [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) 任意三平行線の6点共円共線禁止は各線18候補で全終局15石となる
+
+- → depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 18候補不足極大のE14剛性分類と被覆等号条件を独立代数監査で排除
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 全終局の同一石数から全安全局面のmexを帰納計算

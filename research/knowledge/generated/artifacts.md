@@ -8557,6 +8557,24 @@
 ## [research/experiments/q6-18-rigidity-20261018/verify.py](../../../research/experiments/q6-18-rigidity-20261018/verify.py)
 
 - [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (verifier): 5点集合の63504組のenergy分類と二点和復元の独立有限監査
+## [research/experiments/q6-eighteen-sufficiency-20261024/audit.json](../../../research/experiments/q6-eighteen-sufficiency-20261024/audit.json)
+
+- [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (data): 連続156条件と固定4823条件の完全一致receipt
+## [research/experiments/q6-eighteen-sufficiency-20261024/check_symbolic.py](../../../research/experiments/q6-eighteen-sufficiency-20261024/check_symbolic.py)
+
+- [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (verifier): 標準ライブラリ有理多項式による独立全恒等式・完全性・符号域検査
+## [research/experiments/q6-eighteen-sufficiency-20261024/fixed_independent.cpp](../../../research/experiments/q6-eighteen-sufficiency-20261024/fixed_independent.cpp)
+
+- [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (verifier): 固定四円4823組と混合候補11628個の独立整数監査
+## [research/experiments/q6-eighteen-sufficiency-20261024/proof.md](../../../research/experiments/q6-eighteen-sufficiency-20261024/proof.md)
+
+- [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (proof): 全実数の3族と固定正規形への完全帰着および被覆不可能性
+## [research/experiments/q6-eighteen-sufficiency-20261024/run.py](../../../research/experiments/q6-eighteen-sufficiency-20261024/run.py)
+
+- [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (verifier): Python・C++の全分類件数一致と証明書改変拒否を再現
+## [research/experiments/q6-eighteen-sufficiency-20261024/symbolic-certificate.json](../../../research/experiments/q6-eighteen-sufficiency-20261024/symbolic-certificate.json)
+
+- [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (certificate): 連続3族156条件の有理式・因数分解・符号排除証拠
 ## [research/experiments/quadratic-lambda-20261024/proof.md](../../../research/experiments/quadratic-lambda-20261024/proof.md)
 
 - [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (proof): 有限例外・転置・縮尺・二水平行不変性の全称証明
