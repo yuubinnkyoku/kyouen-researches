@@ -21,6 +21,15 @@ ROOTS = (
     '00008000100000021081000020000020',
 )
 S7_ROOT = '00000000100000021081000020000020'
+# Four S7 WIN roots from the 2026-10-20 terminal certificate and one
+# from the 2026-10-15 fifth-S7 terminal certificate (comparison only).
+TERMINAL_S7_WIN5 = (
+    '00000000041000001000401080100000',
+    '00000000041000001000501000100000',
+    '00000000041000021000401000100000',
+    '00000000041002001000401000100000',
+    '00000000000400001000401108400000',
+)
 
 
 def coords(board: int):
@@ -132,6 +141,8 @@ def main():
             need(r in legal_children(p), 'invalid legal reverse edge')
             witness[p].append(r)
     need(len(witness) == 22, 'S7 reverse closure changed')
+    need(not set(witness) & {int(h, 16) for h in TERMINAL_S7_WIN5},
+         'S7 LOSS conflicts with terminal-certified S7 WIN')
     need(all(len(v) >= 1 for v in witness.values()), 'missing S8 witness')
     s6_edges = {(q, p) for p in witness for q in reverse_parents(p)}
     s6 = {q for q, _ in s6_edges}
@@ -158,6 +169,7 @@ def main():
                                             for q in s6),
         's7_witnesses': {f'{p:032x}': [f'{r:032x}' for r in rs]
                          for p, rs in sorted(witness.items())},
+        's7_conflicts_terminal_win5': 0,
         'empty_outcome': 'UNKNOWN',
     }
     if args.frozen_s7_loss:
