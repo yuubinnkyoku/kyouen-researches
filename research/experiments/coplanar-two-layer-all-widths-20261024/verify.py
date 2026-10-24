@@ -104,7 +104,7 @@ def direction_safe_large(points):
         return a[0] * b[1] - a[1] * b[0]
 
     for layer in layers:
-        if len(layer) == 3:
+        if len(layer) == 3 and len(points) >= 4:
             a, b, c = layer
             if cross((b[0] - a[0], b[1] - a[1]),
                      (c[0] - a[0], c[1] - a[1])) == 0:
