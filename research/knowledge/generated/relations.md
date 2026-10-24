@@ -2628,6 +2628,7 @@
 ## [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) 二値超立方体のk次元平坦の最大交点数とStirling数による全個数
 
 - → generalizes [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): K0545の共面四点数の全称公式を任意のアフィン次元kに拡張（同項目の四次元ゲーム強解決は対象外）
+- ← depends_on [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md): 最大超平面切片の分類・個数とd=4の6点切片の既知結果に整合
 
 ## [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) 六〜十次元二値超立方体の共超平面禁止版にd+3石の安全配置
 
@@ -2638,3 +2639,7 @@
 
 - → generalizes [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md): d=6..10のd+3下界をd=6..24に拡大し9次元以上で強める
 - → verifies [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md): 既知のd=6..10証人を二方式で独立再検証し統計も一致
+
+## [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) 二値超立方体の第2位の超平面切片は3座標型・4座標型だけで全次元8C(d+1,4)個
+
+- → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 最大超平面切片の分類・個数とd=4の6点切片の既知結果に整合

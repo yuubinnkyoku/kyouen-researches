@@ -437,6 +437,15 @@
 ## [research/experiments/binary-cube-hyperplane-large-d-20261025/witnesses.txt](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/witnesses.txt)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 全成功記録。mod検証器が全記録を検査
+## [research/experiments/binary-cube-hyperplane-second-sections-20261025/proof.md](../../../research/experiments/binary-cube-hyperplane-second-sections-20261025/proof.md)
+
+- [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) (proof): Spernerの反鎖評価と等号分類による全次元証明
+## [research/experiments/binary-cube-hyperplane-second-sections-20261025/results.md](../../../research/experiments/binary-cube-hyperplane-second-sections-20261025/results.md)
+
+- [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) (data): d=3..8の公式値とd=5の独立有限完全列挙結果
+## [research/experiments/binary-cube-hyperplane-second-sections-20261025/verify_d5.cpp](../../../research/experiments/binary-cube-hyperplane-second-sections-20261025/verify_d5.cpp)
+
+- [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) (verifier): 五次元の全201376個の5点組から整数行列式で独立に超平面を列挙
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
