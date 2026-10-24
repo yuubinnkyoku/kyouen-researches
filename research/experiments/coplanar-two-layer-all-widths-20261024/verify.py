@@ -91,6 +91,78 @@ def check_witness():
     print("witness_2x3x3", witness, "all_15_quadruples_non_coplanar=True")
 
 
+
+# Large-board sampling audit. This does not replace the all-k,m proof.
+def direction_safe_large(points):
+    layers = [[], []]
+    for x, y, z in points:
+        layers[x].append((y, z))
+    if any(len(layer) > 3 for layer in layers):
+        return False
+
+    def cross(a, b):
+        return a[0] * b[1] - a[1] * b[0]
+
+    for layer in layers:
+        if len(layer) == 3:
+            a, b, c = layer
+            if cross((b[0] - a[0], b[1] - a[1]),
+                     (c[0] - a[0], c[1] - a[1])) == 0:
+                return False
+    directions = [[(b[0] - a[0], b[1] - a[1])
+                   for a, b in combinations(layer, 2)] for layer in layers]
+    return all(cross(a, b) != 0 for a in directions[0] for b in directions[1])
+
+
+def audit_large_samples(k, m, seed=271828, draws=60):
+    from random import Random
+    rng = Random(seed + 1000 * k + m)
+    grid = [(x, y, z) for x in range(2)
+            for y in range(k) for z in range(m)]
+    total = 0
+    legal_counts = {}
+    for n in (2, 3, 4, 5, 6):
+        tested, legal_total = 0, 0
+        for _ in range(draws * 80):
+            if tested == draws:
+                break
+            counts = {2: [1, 1], 3: [2, 1], 4: [2, 2],
+                      5: [3, 2], 6: [3, 3]}[n]
+            rng.shuffle(counts)
+            points = tuple(sorted(sum((rng.sample(
+                [p for p in grid if p[0] == x], counts[x])
+                for x in range(2)), [])))
+            if not direction_safe_large(points):
+                continue
+            assert all(not coplanar(*quad)
+                       for quad in combinations(points, 4))
+            tested += 1
+            legal = 0
+            for p in grid:
+                if p in points:
+                    continue
+                child = points + (p,)
+                by_direction = direction_safe_large(child)
+                by_determinant = all(not coplanar(*quad)
+                                     for quad in combinations(child, 4))
+                assert by_direction == by_determinant, (points, p)
+                total += 1
+                legal += by_direction
+            if n in (4, 5):
+                assert legal > 0, (k, m, points)
+            if n == 6:
+                assert legal == 0
+            legal_total += legal
+        assert tested == draws, (k, m, n, tested)
+        legal_counts[n] = legal_total
+    print("large_sample", (k, m), "comparisons", total,
+          "legal_by_size", legal_counts)
+
+
+def audit_all_large_samples():
+    for k, m in ((7, 7), (7, 8), (8, 7)):
+        audit_large_samples(k, m)
+
 if __name__ == "__main__":
     check_witness()
     for k, m in [(2, 2), (2, 3), (3, 2), (3, 3)]:
@@ -100,3 +172,7 @@ if __name__ == "__main__":
             print(name, result[name])
         print("nimber_hist", result["nimber_hist"])
         print()
+
+    import sys
+    if "--large-sample" in sys.argv:
+        audit_all_large_samples()
