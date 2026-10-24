@@ -58,3 +58,20 @@ $$
 五次元立方体の3平坦の交点数分布を有理数と有限体の独立完全列挙で確認すると、4点:3840、5点:480、6点:1200、8点:260。この分布から5石極大配置数を $480+1200\cdot6+260\cdot56=\boxed{22240}$ と再計数でき、K0546の全安全局面列挙と一致する。空白・禁止組公式は全称数学的証明、平坦分布と22240の照合は有限完全列挙である。
 
 [証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[有理数検証器](../../experiments/binary-cube-affine-sections-20261024/verify.py)、[有限体独立検証器](../../experiments/binary-cube-affine-sections-20261024/affine_gap_independent.cpp)、[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)。
+
+
+## 最大交点数を禁止する共超平面版の最大安全石数（全称定理）
+
+任意の \(d\ge1\) で、二値超立方体 \(\{0,1\}^d\) 上の**相異なる \(q=2^{d-1}\) 点が同じ実 \((d-1)\) 次元超平面に載ることを禁止する版**を考える。この版の最大安全石数は
+
+$$
+\boxed{K_d^{\mathrm{flat}}=2^d-1-\lceil\log_2(d+1)\rceil.}
+$$
+
+これは、K0546・K0552の \(d+1\) 点共超平面禁止版の \(K_d\) と**別の量**である。例えば \(d=3,4,5,6,7,8\) で \(K_d^{\mathrm{flat}}=5,12,28,60,124,251\)。
+
+証明は最大交点平坦の分類から始まる。禁止集合は \(x_i=0,1\) と \(x_i=x_j,1-x_j\) の \(d(d+1)\) 個に限る。安全配置の補集合 \(T\) がすべての禁止集合を横切るには、\(T\) を行とする二値行列の \(d\) 列が、非定数かつ互いに等しくも補数でもない必要十分がある。\(t=|T|\) ならそのような列は最大 \(2^{t-1}-1\) 本なので \(t\ge1+\lceil\log_2(d+1)\rceil\)。逆に、第一行を全0とし、残る \(t-1\) 行で各列に相異なる非零二進表現を与えれば等号を達成する。
+
+**根拠の区別**：上の最大安全石数は任意の \(d\ge1\) についての数学的証明。\(d\le7\) の全ての \(t-1\) 点削除候補の完全列挙と、\(d=3,4\) の全 \(q\) 点組の独立アフィン階数検査は照合にすぎない。勝敗・Grundy値・最小極大石数は未決定。
+
+[詳細な全称証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[検算結果](../../experiments/binary-cube-affine-sections-20261024/results.md)、[横断集合の完全列挙器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_transversal.py)、[独立アフィン階数検査器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_rank.cpp)。
