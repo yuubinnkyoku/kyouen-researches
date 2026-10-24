@@ -41,3 +41,35 @@ $d=4,k=3,q=7$ の禁止組数は $20\cdot8=160$、$d=5,k=3,q=7$ は $260\cdot8=2
 $d=5,k=3$ の分布とK0544の階数判定から、K0546の5石極大配置数を $480+1200\cdot6+260\cdot56=22240$ と独立再計数した。
 
 再現：python3 research/experiments/binary-cube-affine-sections-20261024/verify.py、および g++ -std=c++17 -O2 research/experiments/binary-cube-affine-sections-20261024/affine_gap_independent.cpp -o /tmp/affine_gap && /tmp/affine_gap。定理4・系5は全称証明、表は有限完全列挙。
+
+
+## 最大超平面（q=2^(d−1)）禁止版の最大安全石数（2026-10-24）
+
+全称証明は [proof.md の定理6](proof.md) に記載。\(d\) 次元二値超立方体で \(2^{d-1}\) 点が共超平面となることを禁止した場合、
+
+$$
+K_d^{\mathrm{flat}}=2^d-1-\lceil\log_2(d+1)\rceil.
+$$
+
+この \(K_d^{\mathrm{flat}}\) は、K0546・K0552の \(d+1\) 点禁止版の \(K_d\) とは**異なる**。
+
+| d | 禁止集合数 | 最小削除点数 | 最大安全石数 | 全ての1石少ない削除集合の列挙数 | 明示的な最小削除集合 |
+|---:|---:|---:|---:|---:|---|
+| 1 | 2 | 2 | 0 | 2 | 0,1 |
+| 2 | 6 | 3 | 1 | 6 | 0,1,2 |
+| 3 | 12 | 3 | 5 | 28 | 0,5,6 |
+| 4 | 20 | 4 | 12 | 560 | 0,5,6,8 |
+| 5 | 30 | 4 | 28 | 4960 | 0,21,6,24 |
+| 6 | 42 | 4 | 60 | 41664 | 0,21,38,56 |
+| 7 | 56 | 4 | 124 | 341376 | 0,85,102,120 |
+| 8 | 72 | 5 | 251 | 未列挙 | 0,85,102,120,128 |
+
+各頂点番号は下位 \(d\) ビットを座標とする。表の「全ての1石少ない削除集合」は、最小削除点数 \(t\) より一つ小さい \(t-1\) 点の全候補であり、どれも全禁止集合を横切れないことを完全列挙した。これで \(d\le7\) の最適性を独立に検算した。\(d=8,\ldots,12\) は明示構成の横断性だけを有限検査した。
+
+別のC++実装で、\(d=3\) の全 \(\binom84=70\) 組、\(d=4\) の全 \(\binom{16}8=12870\) 組のアフィン階数を素数101で独立判定した。共超平面の組数はそれぞれ12、20で、座標・対角面の全列挙と完全一致した。
+
+再現：
+- python3 research/experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_transversal.py
+- g++ -std=c++17 -O2 -Wall -Wextra -Werror research/experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_rank.cpp -o /tmp/hyperplane-rank && /tmp/hyperplane-rank
+
+全次元の等式は数学的証明による。有限列挙を無限次元へ外挿していない。
