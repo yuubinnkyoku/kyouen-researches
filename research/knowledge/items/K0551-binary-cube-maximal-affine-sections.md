@@ -133,3 +133,16 @@ $$
 $d=3,4,5,6,7,8$ の順に $A_d=8,560,3360,13440,26880,553512960$。証明は包含極小横断集合の鎖状構成と、正規化した二値座標列の単射計数による。**全次元での数学的証明**であり、$d\le5$ の全極小横断集合の完全列挙および $d\le12$ の各石数での明示構成・私有禁止面の検査は独立照合に限る。$d\ge5$ のGrundy値は未解決。
 
 [証明（定理8）](../../experiments/binary-cube-affine-sections-20261024/proof.md)・[結果](../../experiments/binary-cube-affine-sections-20261024/results.md)・[検証器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_transversal.py)。
+
+
+## 五次元高密度版の交換則に対する最初の反例（有限完全列挙）
+
+$d=5,q=16$ の高密度共超平面禁止版では、四次元版で成立した通常・misèreのGrundy値の0↔1交換則は**全局面では成立しない**。25石の安全局面
+$$
+S=\{0,1\}^5\setminus\{0,1,2,7,13,24,28\}
+$$
+で、通常値とmisère補助値はともに $\boxed{(g,h)=(0,0)}$。未占有点への6合法手はいずれも子の値が $(2,2)$、残る1手は違法である（頂点番号は二進座標）。
+
+一方、**全安全局面のうち未占有点が6点以下なら交換則が成立**する。これは最小横断集合サイズ4からの短い全称帰納証明による。よって25石が最初の反例層。未占有7点の全 $\binom{32}{7}$ 候補を有限完全列挙すると、安全局面3,025,376個のうち不一致は**34,560個**、すべて $(0,0)$。五次元立方体の座標反転・置換で13軌道（1920点軌道8個、3840点軌道5個）に分かれる。
+
+禁止面の直接生成と、五頂点組の整数アフィン階数から禁止超平面を独立復元する方式が、全件数と証人の合法手で一致した。**五次元全局面の強解決や六次元以上の交換則は未確定**。詳細は[命題9の証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[有限結果](../../experiments/binary-cube-affine-sections-20261024/results.md)、[直接方式](../../experiments/binary-cube-affine-sections-20261024/verify_d5_dense_swap_faces.cpp)、[独立整数階数方式](../../experiments/binary-cube-affine-sections-20261024/verify_d5_dense_swap_rank.cpp)。
