@@ -551,6 +551,18 @@
 ## [research/experiments/coplanar-prism-2x2xm-20261024/verify.py](../../../research/experiments/coplanar-prism-2x2xm-20261024/verify.py)
 
 - [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) (verifier): 整数外積による禁則生成と全安全局面mex
+## [research/experiments/coplanar-two-layer-all-widths-20261024/independent.cpp](../../../research/experiments/coplanar-two-layer-all-widths-20261024/independent.cpp)
+
+- [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (verifier): 独立4×4行列式と全局面再帰
+## [research/experiments/coplanar-two-layer-all-widths-20261024/proof.md](../../../research/experiments/coplanar-two-layer-all-widths-20261024/proof.md)
+
+- [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (proof): 全k,mの容量・三石極大数の数学的証明と2×3×3の完全列挙境界
+## [research/experiments/coplanar-two-layer-all-widths-20261024/results.md](../../../research/experiments/coplanar-two-layer-all-widths-20261024/results.md)
+
+- [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (data): 4盤の独立一致結果と境界盤の局面分布
+## [research/experiments/coplanar-two-layer-all-widths-20261024/verify.py](../../../research/experiments/coplanar-two-layer-all-widths-20261024/verify.py)
+
+- [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (verifier): 3×3整数行列式と全安全局面mex
 ## [research/experiments/cube-coplanar-q4-20261024/independent-results.txt](../../../research/experiments/cube-coplanar-q4-20261024/independent-results.txt)
 
 - [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (data): C++独立完全列挙の出力

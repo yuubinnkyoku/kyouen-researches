@@ -514,3 +514,4 @@
 | [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) | 2×2×mの4点共面禁止版はm≥3で全局面Grundy偶奇則、極大石数3・5 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0528](../items/K0528-n11-s7-terminal-loss12.md) | 標準11×11の未分類7石局面を12個の終局LOSS葉で独立証明 | verification | verified | square-outcomes, certificates, verification |
 | [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md) | 3×3×m・4点共面禁止版の最大石数は3,6,8,8,9で、3立方は全局面強解決 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
+| [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) | 2×k×m・4点共面禁止版の全長容量・三石極大数と2×3×3の全局面 | proposition | proved | variants, geometry, maximum-safe, maximal-safe, grundy, first-moves |

@@ -110,6 +110,7 @@
 - ← depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 通常Grundy値と終局の定義
 - ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 通常Grundy値と終局の定義
 - ← depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): 元先手固定視点の奇数AND・偶数OR伝播
+- ← depends_on [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 通常・misèreのGrundy定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2501,14 +2502,22 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値と終局の定義
 - → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 共面のみ4点禁止という別変種の定義
 - ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): m=2の境界結果。m=2では偶奇則は不成立
+- ← generalizes [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×2×2の容量と最小極大石数を含む
 
 ## [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) 2×2×mの4点共面禁止版はm≥3で全局面Grundy偶奇則、極大石数3・5
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値と終局の定義
 - → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): m=2の境界結果。m=2では偶奇則は不成立
+- ← generalizes [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×2×mのK・sを含むが、全局面Grundy偶奇則は一般化しない
 
 ## [K0528](../items/K0528-n11-s7-terminal-loss12.md) 標準11×11の未分類7石局面を12個の終局LOSS葉で独立証明
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): LOSSからの誤った上位WIN伝播を排除
 - → depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 既存68個の9石WIN根の終局証明
+
+## [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) 2×k×m・4点共面禁止版の全長容量・三石極大数と2×3×3の全局面
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misèreのGrundy定義
+- → generalizes [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 2×2×mのK・sを含むが、全局面Grundy偶奇則は一般化しない
+- → generalizes [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の容量と最小極大石数を含む
