@@ -4,9 +4,12 @@
 Run from the repository root:
   python3 -m unittest discover -s research/experiments/n11-search-methods/scripts -p 'test_dfpn_s4_manifest_verify_cache.py'
 """
+import contextlib
+import io
 import json
 import tempfile
 import unittest
+from unittest import mock
 from pathlib import Path
 
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after
@@ -174,6 +177,53 @@ class S4RootEdgeIndexTests(unittest.TestCase):
         other = build_s4_edge_index(60, 27)
         self.assertEqual(len(other), 3384)
         self.assertEqual(sum(map(len, other.values())), 6871)
+
+class S4ManifestExecutionTests(unittest.TestCase):
+    """Exercise main() itself, not just its input parser and edge index.
+
+    This is a synthetic single-edge certificate over real legal 11x11
+    fifth moves. It checks the verifier's control flow, not a new verdict.
+    """
+
+    def test_loss_win_and_truncated_loss_end_to_end(self):
+        from dfpn_s4_manifest_verify import main as verify_main
+
+        root = (60, 0)
+        edge = (1, 2)
+        four = (*root, *edge)
+        self.assertFalse(has_forbidden_quad(four))
+        key = d4_canonical_key(four)
+        children = sorted({d4_canonical_key((*four, z))
+                           for z in legal_after(set(four))})
+        self.assertGreater(len(children), 1)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest = Path(tmp) / 'manifest.csv'
+            cache_path = Path(tmp) / 'unused-cache.csv'
+            for verdict, listed, cache, expected in (
+                (2, children, {child: 2 for child in children}, 0),
+                (1, children[:1], {children[0]: 1}, 0),
+                (2, children[:-1], {child: 2 for child in children}, 1),
+            ):
+                with self.subTest(verdict=verdict, expected=expected):
+                    fields = ['s4verdict', *map(str, root),
+                              *map(str, key), str(verdict),
+                              str(len(listed)), '2']
+                    for lo, hi in listed:
+                        fields.extend((str(lo), str(hi)))
+                    manifest.write_text(','.join(fields) + '\\n',
+                                        encoding='utf-8')
+                    with (mock.patch('dfpn_s4_manifest_verify.load_s5_cache',
+                                     return_value=cache),
+                          mock.patch('dfpn_s4_manifest_verify.build_s4_edge_index',
+                                     return_value={key: [edge]}),
+                          mock.patch('sys.argv', ['verify', str(manifest),
+                                                  '--cache', str(cache_path)]),
+                          contextlib.redirect_stdout(io.StringIO()) as output):
+                        self.assertEqual(verify_main(), expected)
+                    self.assertIn('MANIFEST_VERIFIED' if expected == 0
+                                  else 'MANIFEST_INVALID', output.getvalue())
+
 
 if __name__ == '__main__':
     unittest.main()
