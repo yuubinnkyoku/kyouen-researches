@@ -45,6 +45,17 @@ def polynomial_for_rank(n, wanted):
             if len(basis) == rank:
                 spaces[basis] = rank
     ordered = sorted(spaces, key=lambda s: spaces[s])
+    if n == 4 and wanted == 3:
+        upper = [s for s in ordered if spaces[s] == 3]
+        incidence = Counter()
+        for basis in ordered:
+            if spaces[basis] == 2:
+                size = 1 + sum(len(rref((*basis, v), n)) == 2 for v in nonzero)
+                superspaces = sum(len(rref((*basis, *u), n)) == 3 for u in upper)
+                incidence[(size, superspaces)] += 1
+        assert incidence == {(3, 5): 30, (4, 4): 15, (4, 3): 10}
+        print('rank-2 subspace incidences (binary points, rank-3 superspaces):',
+              sorted(incidence.items()))
     exact = {}
     histogram = Counter()
     for basis in ordered:
