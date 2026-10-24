@@ -386,6 +386,18 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-hyperplane-d-plus-three-20261024/proof.md](../../../research/experiments/binary-cube-hyperplane-d-plus-three-20261024/proof.md)
+
+- [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) (proof): 6次元の双対核証明、一般の余核判定補題、6〜10次元の有限証明書
+## [research/experiments/binary-cube-hyperplane-d-plus-three-20261024/results.md](../../../research/experiments/binary-cube-hyperplane-d-plus-three-20261024/results.md)
+
+- [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) (data): 6〜10次元の明示配置、検査対象数、整数行列式の範囲
+## [research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_exact.py](../../../research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_exact.py)
+
+- [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) (verifier): Python整数Bareiss行列式による全最大小行列式の厳密検査
+## [research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_mod.cpp](../../../research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_mod.cpp)
+
+- [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) (verifier): 独立した素数1009上の掃き出し法で全小行列式の非零性を確認
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
