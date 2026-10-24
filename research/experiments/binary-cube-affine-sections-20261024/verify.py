@@ -35,6 +35,20 @@ def stirling(n, k):
     return a[k]
 
 
+def six_section_formula(d):
+    b = sum((-1)**j * comb(4, j) * (10 - 2*j)**d for j in range(5))
+    assert b % 48 == 0
+    return b // 12, b // 48
+
+
+def six_section_type(section, d):
+    sums = Counter(tuple(((a >> j) & 1) + ((b >> j) & 1)
+                         for j in range(d)) for a, b in combinations(section, 2))
+    multiplicity = max(sums.values())
+    assert multiplicity in (2, 3)
+    return "octahedron" if multiplicity == 3 else "prism"
+
+
 def verify(d, k):
     seen = set()
     for pts in combinations(range(1 << d), k + 1):
@@ -43,8 +57,10 @@ def verify(d, k):
             seen.add(rows)
     sat = 0
     sizes = Counter()
+    six_types = Counter()
     for rows in seen:
         num = 0
+        section = []
         for v in range(1 << d):
             b = [Fraction(1)] + [Fraction((v >> j)&1) for j in range(d)]
             # membership by exact RREF row reduction: reduce against leading 1s
@@ -53,8 +69,12 @@ def verify(d, k):
                 q = b[pivot]
                 if q:
                     b = [x-q*y for x,y in zip(b,row)]
-            if not any(b):num+=1
+            if not any(b):
+                num += 1
+                section.append(v)
         sizes[num] += 1
+        if k == 3 and num == 6:
+            six_types[six_section_type(section, d)] += 1
         if num == (1 << k):sat+=1
         elif num > (1 << k):raise AssertionError('affine section too large')
     expect = (1 << (d-k)) * stirling(d+1,k+1)
@@ -69,6 +89,10 @@ def verify(d, k):
             counted = sum(number * comb(t, q) for t, number in sizes.items() if t >= q)
             assert counted == expect * comb(1 << k, q)
         print(f'  intersection_sizes={dict(sorted(sizes.items()))}', flush=True)
+    if k == 3 and d in (4, 5):
+        prism, octahedron = six_section_formula(d)
+        assert six_types == {'prism': prism, 'octahedron': octahedron}
+        print(f'  six_point_sections=prism:{prism},octahedron:{octahedron}', flush=True)
     if (d, k) == (5, 3):
         assert sizes == {4: 3840, 5: 480, 6: 1200, 8: 260}
         terminal_five = sum(number * comb(t, 5) for t, number in sizes.items() if t >= 5)

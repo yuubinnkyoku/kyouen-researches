@@ -39,13 +39,30 @@ int main(){
     for(auto [d,k]:vector<pair<int,int>>{{3,2},{4,2},{4,3},{5,2},{5,3},{5,4}}){
         int n=1<<d;vector<Row> pts(n);
         for(int v=0;v<n;v++){pts[v][0]=1;for(int j=0;j<d;j++)pts[v][j+1]=(v>>j)&1;}
-        unordered_set<string> seen;map<int,long long> counts;vector<int> comb(k+1);
+        unordered_set<string> seen;map<int,long long> counts;map<string,long long> six_types;vector<int> comb(k+1);
         function<void(int,int)> dfs=[&](int pos,int start){
             if(pos==k+1){
                 Basis b(d);for(int v:comb)b.add(pts[v]);
                 if(b.rank!=k+1)return;
                 if(!seen.insert(b.key()).second)return;
-                int c=0;for(int v=0;v<n;v++)c+=b.contains(pts[v]);
+                vector<int> section;
+                for(int v=0;v<n;v++)if(b.contains(pts[v]))section.push_back(v);
+                int c=(int)section.size();
+                if(k==3&&c==6){
+                    map<int,int> mids;
+                    for(int i=0;i<6;i++)for(int j=i+1;j<6;j++){
+                        int code=0,scale=1;
+                        for(int z=0;z<d;z++){
+                            code+=(((section[i]>>z)&1)+((section[j]>>z)&1))*scale;
+                            scale*=3;
+                        }
+                        mids[code]++;
+                    }
+                    int multiplicity=0;
+                    for(auto [code,m]:mids)if(m>multiplicity)multiplicity=m;
+                    assert(multiplicity==2||multiplicity==3);
+                    six_types[multiplicity==3?"octahedron":"prism"]++;
+                }
                 counts[c]++;return;
             }
             for(int v=start;v<=n-(k+1-pos);v++){comb[pos]=v;dfs(pos+1,v+1);}
@@ -55,6 +72,11 @@ int main(){
         for(auto [t,count]:counts){assert(t==(1<<k)||t<=3*(1<<(k-2)));total+=count;}
         assert(total==(long long)seen.size());
         assert(counts[3*(1<<(k-2))]>0);
+        if(k==3&&(d==4||d==5)){
+            long long prism=d==4?32:960,octahedron=d==4?8:240;
+            assert(six_types["prism"]==prism&&six_types["octahedron"]==octahedron);
+            cout<<"six_point_sections d="<<d<<" prism="<<prism<<" octahedron="<<octahedron<<"\n";
+        }
         if(d==5&&k==3){
             assert(counts[4]==3840&&counts[5]==480&&counts[6]==1200&&counts[8]==260);
             assert(counts[5]+6*counts[6]+56*counts[8]==22240);

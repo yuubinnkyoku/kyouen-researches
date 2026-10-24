@@ -184,3 +184,20 @@ $$
 証拠の区別：一般の差分判定・係数式は全称証明。$d=6,t=5,6$ は64頂点からの全候補（それぞれ7,624,512組・74,974,368組）を直接超平面・私有面で調べる**独立有限完全列挙**と一致。$d=7,t=6$ は正規化符号列の完全列挙であり、128頂点の直接全候補列挙は行っていない。七次元121石は正規化符号列の全553,270,671候補を二つの異なる列挙手順で検算したが、128頂点の直接列挙ではない。五次元以上の空盤勝敗・全局面Grundy値には何も追加で主張しない。
 
 [定理11の証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)、[符号列・包除検証器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_transversal.py)、[直接幾何検証器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_rank.cpp)。
+
+
+## 実3平坦の6点切片と禁止6点組の全称計数（定理12）
+
+$d\ge3$ の二値超立方体で、実3平坦との交点が**ちょうど6点**となる平坦の総数は
+
+$$
+\boxed{H_{d,6}^{(3)}=\frac5{48}(10^d-4\cdot8^d+6\cdot6^d-4\cdot4^d+2^d).}
+$$
+
+三角柱型と八面体型に完全分類でき、それぞれ括弧内の $1/12$、$1/48$ 倍。したがって**同一実3平坦に載る6点組の全個数**も
+
+$$
+\boxed{F_{d,3,6}=28\cdot2^{d-3}\left\{\begin{matrix}d+1\\4\end{matrix}\right\}+H_{d,6}^{(3)}}
+$$
+
+と全次元で確定した。$d=4,5,6,7$ の値は $600,8480,100800,1098048$。証明は3座標射影・二値アフィン関数の全分類・包除原理と自己同型群の計数による。[定理12の全称証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)と[検算表](../../experiments/binary-cube-affine-sections-20261024/results.md)を参照。$d=4,5$ の有理数・有限体の全平坦列挙と $d=6$ の関数列挙は独立有限照合であり、無界次元の証明とは区別する。
