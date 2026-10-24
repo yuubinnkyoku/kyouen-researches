@@ -161,3 +161,52 @@ if __name__ == "__main__":
         audit_minimal_transversals(dimension)
     for dimension in (3, 4):
         audit_strong_game(dimension)
+
+# All-dimensional terminal spectrum and maximum-terminal count (Theorem 8).
+def maximum_terminal_count(d):
+    """Count minimum-cardinality transversals via injective normalized columns."""
+    t = 1 + d.bit_length()
+    possibilities = (1 << (t - 1)) - 1
+    numerator = 1 << d
+    for j in range(d):
+        numerator *= possibilities - j
+    assert numerator % factorial(t) == 0
+    return numerator // factorial(t)
+
+
+def spectrum_witness(d, t):
+    """Construct a minimal transversal of exactly t distinct cube vertices."""
+    assert 1 + d.bit_length() <= t <= d + 1
+    limit = (1 << (t - 1)) - 1
+    # First t-1 columns form the chain 00...0, 10...0, 110...0, ...
+    columns = [limit ^ ((1 << j) - 1) for j in range(t - 1)]
+    columns += [v for v in range(1, limit + 1) if v not in columns][:d - t + 1]
+    assert len(columns) == len(set(columns)) == d
+    rows = [0] * t
+    for j, col in enumerate(columns):
+        for i in range(1, t):
+            if col & (1 << (i - 1)):
+                rows[i] |= 1 << j
+    assert len(set(rows)) == t
+    return rows
+
+
+def audit_terminal_spectrum(d):
+    family = flats(d)
+    t0 = 1 + d.bit_length()
+    for t in range(t0, d + 2):
+        rows = spectrum_witness(d, t)
+        mask = sum(1 << x for x in rows)
+        assert all(mask & f for f in family)
+        for x in rows:
+            assert any((mask & f) == (1 << x) for f in family)
+    known = {1: 1, 2: 4, 3: 8, 4: 560, 5: 3360}
+    if d in known:
+        assert maximum_terminal_count(d) == known[d]
+    print(f"spectrum d={d} terminal_sizes={list(range((1<<d)-d-1, (1<<d)-t0+1))} "
+          f"max_terminal_count={maximum_terminal_count(d)} PASS")
+
+
+if __name__ == "__main__":
+    for dimension in range(1, 13):
+        audit_terminal_spectrum(dimension)

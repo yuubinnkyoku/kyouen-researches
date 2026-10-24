@@ -114,3 +114,22 @@ Pythonの座標・対角面方式と、C++の全8点組アフィン階数方式�
 **証拠の境界**：\(s_d^{\mathrm{flat}}\) と最小極大配置の分類・個数は全称数学的証明。\(d=4\) のGrundy値は有限完全列挙であり、\(d\ge5\) の勝敗や交換則は未決定。
 
 [全称証明と有限強解決の説明](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[検算結果](../../experiments/binary-cube-affine-sections-20261024/results.md)。
+
+## 高密度版の全終局石数と最大終局配置数（全称定理）
+
+$d\ge1$, $t_d=1+\lceil\log_2(d+1)\rceil$ とする。$q=2^{d-1}$ 点共超平面禁止版で、極大安全配置の石数は**穴なく**
+
+$$
+\boxed{2^d-d-1,\;2^d-d,\;\ldots,\;2^d-t_d}
+$$
+
+の全整数に一致する。さらに最大安全石数 $K_d^{\mathrm{flat}}=2^d-t_d$ を達成する配置数は
+
+$$
+\boxed{A_d=\frac{2^d}{t_d!}\prod_{j=0}^{d-1}(2^{t_d-1}-1-j)
+=\frac{2^d d!}{t_d!}\binom{2^{t_d-1}-1}{d}.}
+$$
+
+$d=3,4,5,6,7,8$ の順に $A_d=8,560,3360,13440,26880,553512960$。証明は包含極小横断集合の鎖状構成と、正規化した二値座標列の単射計数による。**全次元での数学的証明**であり、$d\le5$ の全極小横断集合の完全列挙および $d\le12$ の各石数での明示構成・私有禁止面の検査は独立照合に限る。$d\ge5$ のGrundy値は未解決。
+
+[証明（定理8）](../../experiments/binary-cube-affine-sections-20261024/proof.md)・[結果](../../experiments/binary-cube-affine-sections-20261024/results.md)・[検証器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_transversal.py)。
