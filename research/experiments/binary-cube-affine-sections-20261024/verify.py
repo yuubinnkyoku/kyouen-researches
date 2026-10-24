@@ -1,6 +1,8 @@
 """Independent exact rational-rowspace audit of maximal Boolean cube sections."""
 from fractions import Fraction
 from itertools import combinations
+from collections import Counter
+from math import comb
 
 
 def canonical(points, d):
@@ -40,6 +42,7 @@ def verify(d, k):
         if len(rows) == k+1:
             seen.add(rows)
     sat = 0
+    sizes = Counter()
     for rows in seen:
         num = 0
         for v in range(1 << d):
@@ -51,11 +54,26 @@ def verify(d, k):
                 if q:
                     b = [x-q*y for x,y in zip(b,row)]
             if not any(b):num+=1
+        sizes[num] += 1
         if num == (1 << k):sat+=1
         elif num > (1 << k):raise AssertionError('affine section too large')
     expect = (1 << (d-k)) * stirling(d+1,k+1)
     print(f'd={d} k={k} distinct_flats={len(seen)} saturated={sat} formula={expect}', flush=True)
     assert sat == expect
+    if k >= 2:
+        gap = 3 * (1 << (k - 2))
+        assert all(t == (1 << k) or t <= gap for t in sizes)
+        if d > k:
+            assert sizes[gap] > 0
+        for q in range(gap + 1, (1 << k) + 1):
+            counted = sum(number * comb(t, q) for t, number in sizes.items() if t >= q)
+            assert counted == expect * comb(1 << k, q)
+        print(f'  intersection_sizes={dict(sorted(sizes.items()))}', flush=True)
+    if (d, k) == (5, 3):
+        assert sizes == {4: 3840, 5: 480, 6: 1200, 8: 260}
+        terminal_five = sum(number * comb(t, 5) for t, number in sizes.items() if t >= 5)
+        assert terminal_five == 22240
+        print(f'  independent_five_stone_terminal_count={terminal_five}', flush=True)
 
 if __name__ == '__main__':
     for d,k in [(2,1),(3,1),(3,2),(4,1),(4,2),(4,3),(5,1),(5,2),(5,3),(5,4)]:
