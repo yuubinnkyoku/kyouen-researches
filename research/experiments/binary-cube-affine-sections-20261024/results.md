@@ -286,3 +286,19 @@ python3 research/experiments/binary-cube-affine-sections-20261024/verify_five_se
 g++ -std=c++17 -O3 -Wall -Wextra -Werror research/experiments/binary-cube-affine-sections-20261024/verify_five_sections_direct.cpp -o /tmp/verify-five-sections
 for d in 4 5 6; do /tmp/verify-five-sections "$d"; done
 ~~~
+
+
+## 定理14：実3平坦の4点切片（2026-10-25）
+
+$d\ge3$ で $H^{(3)}_{d,4}=(16^d-12\cdot12^d+30\cdot10^d-35\cdot8^d+24\cdot6^d-10\cdot4^d+2\cdot2^d)/24$（全称証明）。
+
+| $d$ | 4点切片 | 5点切片 | 6点切片 | 8点切片 | アフィン従属4点組 |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 0 | 0 | 0 | 1 | 12 |
+| 4 | 80 | 0 | 40 | 20 | 100 |
+| 5 | 3,840 | 480 | 1,200 | 260 | 720 |
+| 6 | 118,720 | 20,160 | 22,400 | 2,800 | 4,816 |
+| 7 | 2,983,680 | 510,720 | 336,000 | 27,216 | 30,912 |
+| 8 | 66,151,680 | 10,160,640 | 4,448,640 | 248,640 | 193,600 |
+
+4点切片は独立4点組の重複度 $(1,4,12,58)$ と平行四辺形数 $P_{d,4}=(6^d-2\cdot4^d+2^d)/8$ から導出した。整数Cramer則の検証器 verify_four_sections.py は $d=3,4,5$ の全4点組を調べ、表の値と一致する。$d\ge6$ は公式値であり、直接全列挙の主張ではない。
