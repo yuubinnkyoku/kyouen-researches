@@ -6,6 +6,7 @@
 // C++ and Python terminal verifiers, not recomputed by this script.
 const fs = require('node:fs');
 const path = require('node:path');
+const crypto = require('node:crypto');
 const g = require('../n11-gap6-terminal-20261019/verify_js.js');
 const {ROOTS: BATCH8} = require('../n11-terminal-s7-batch8-union-20261024/audit.js');
 const {ROOTS: LEGACY3} = require('../n11-terminal-s7-three-legacy-s9-union-20261024/audit.js');
@@ -19,7 +20,13 @@ const gapPath = 'n11-gap6-terminal-20261019/gap6-terminal-cert.json';
 const oldCert = () => JSON.parse(read(oldCertPath));
 const gapCert = () => JSON.parse(read(gapPath));
 function extractCertificate() {
-  const lines = read('n11-s6-terminal-loss-20261015/s6-loss-optimized.cert').split(/\r?\n/);
+  const raw = read('n11-s6-terminal-loss-20261015/s6-loss-optimized.cert');
+  need(crypto.createHash('sha256').update(raw).digest('hex') ===
+    'cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6',
+    'terminal certificate differs from the independently verified K0426 SHA-256');
+  const lines = raw.split(/\r?\n/);
+  need(lines.filter(x => x === 'END').length === 1 && lines.filter(Boolean).at(-1) === 'END',
+    'certificate END marker missing or duplicated');
   need(lines[0] === '# n11-S8-LOSS-global-terminal-v1' && lines[1] === 'BOARD 11',
     'unexpected source certificate format');
   const roots = [], leaves = [];
