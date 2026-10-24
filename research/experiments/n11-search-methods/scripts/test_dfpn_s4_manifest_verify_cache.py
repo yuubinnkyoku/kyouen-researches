@@ -4,6 +4,7 @@
 Run from the repository root:
   python3 -m unittest discover -s research/experiments/n11-search-methods/scripts -p 'test_dfpn_s4_manifest_verify_cache.py'
 """
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -69,8 +70,10 @@ class S5ManifestInputTests(unittest.TestCase):
             self.read(row(d4_canonical_key(pts), 2))
 
     def test_quarantined_verdict_is_not_a_witness(self):
-        from s5_evidence_policy import quarantined_cache_keys
-        active = quarantined_cache_keys()
+        registry = (Path(__file__).resolve().parents[4]
+                    / 'results/n11-s5-evidence-quarantine.json')
+        doc = json.loads(registry.read_text(encoding='utf-8'))
+        active = {tuple(row['key']) for row in doc['entries'] if row['active']}
         if not active:
             self.skipTest('no active quarantined keys')
         key = sorted(active)[0]
