@@ -111,6 +111,9 @@
 - ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 通常Grundy値と終局の定義
 - ← depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): 元先手固定視点の奇数AND・偶数OR伝播
 - ← depends_on [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 通常・misèreのGrundy定義
+- ← depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 元先手固定視点の奇数AND・偶数OR伝播
+- ← depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 同じ合法遷移から全Grundy値と勝ち手の一致を得る
+- ← depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 終局までの固定手数偶奇とmex帰納
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -566,6 +569,7 @@
 - → depends_on [K0068](../items/K0068-standard-fixed-width-parity-threshold.md)
 - → refutes [K0260](../items/K0260-two-row-large-midgame-nimber.md): 本文の証明・証人が原文に与える帰結
 - → proves [K0259](../items/K0259-two-row-opposite-row-first-response.md): 本文の証明・証人が原文に与える帰結
+- ← depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 二水平行の不変性を用いた数値的帰結には既存強解決を使用
 
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
@@ -2457,6 +2461,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数ORの伝播
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): terminal-only独立証明とsolver-trusted cacheの信頼境界
 - ← depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): 既存68個の9石WIN根の終局証明
+- ← depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 既存86個の9石WIN根との比較
 
 ## [K0517](../items/K0517-seven-cube-q5-five-n-six-p.md) 7立方5点禁止版の五石局面{0,2,5,26,69}はN、54着手後はP
 
@@ -2466,6 +2471,7 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 安全な追加のmex再帰と勝ち初手の規約
 - → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 退化を含む二次形式パラメータ版の定義
+- ← verifies [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md): 別C++幾何・増分再帰で既存51分類の禁止辺・全分布・全初手値を再現
 
 ## [K0520](../items/K0520-triangle-free-compatibility-endgame.md) 共存グラフに三角形がない遺伝的配置ゲームは高々2手で終局し孤立点の有無でP/Nが決まる
 
@@ -2515,9 +2521,38 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
 - → depends_on [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md): LOSSからの誤った上位WIN伝播を排除
 - → depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 既存68個の9石WIN根の終局証明
+- ← depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 既存10石LOSS葉からの不足境界探索
 
 ## [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) 2×k×m・4点共面禁止版の全長容量・三石極大数と2×3×3の全局面
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misèreのGrundy定義
 - → generalizes [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 2×2×mのK・sを含むが、全局面Grundy偶奇則は一般化しない
 - → generalizes [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の容量と最小極大石数を含む
+
+## [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) 11×11の7個の9石WINを89個の終局WIN葉で独立検証し63個の8石WINを導出
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
+- → depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 既存86個の9石WIN根との比較
+- → depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): 既存10石LOSS葉からの不足境界探索
+
+## [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) 二次形式λ版は有理点盤で有限例外以外同一となり、任意二水平行では全λで同一
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 同じ合法遷移から全Grundy値と勝ち手の一致を得る
+- → depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md): 二水平行の不変性を用いた数値的帰結には既存強解決を使用
+- ← depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 二次形式行列式規則とλ=0の退化の扱い
+- ← depends_on [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md): 有限有理例外と共通禁止族への帰着で全実数パラメータを被覆
+
+## [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) λ=0の任意w列盤は最良一様候補数閾値で全Grundy値が高々2の閉公式を持つ
+
+- → depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 二次形式行列式規則とλ=0の退化の扱い
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 終局までの固定手数偶奇とmex帰納
+- ← depends_on [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md): 任意候補集合の一般閾値8により全高さm≥8を保証
+
+## [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) 二次形式λ版5×5を全実数で強分類し後手必勝は13個のλに限られる
+
+- → depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 有限有理例外と共通禁止族への帰着で全実数パラメータを被覆
+- → verifies [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 別C++幾何・増分再帰で既存51分類の禁止辺・全分布・全初手値を再現
+
+## [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) λ=0標準五列盤の全Grundy公式は高さ6で厳密に安定する
+
+- → depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 任意候補集合の一般閾値8により全高さm≥8を保証

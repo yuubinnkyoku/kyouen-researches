@@ -78,7 +78,11 @@ evidence: 2026-10-22の研究提案記録。個々の変種の勝敗・一般定
 この係数版の現在の確定結果は [K0518](K0518-quadratic-form-small-board-parameter-classification.md) を参照。
 2×2〜4×4の全実数λ、および交差項μxyを加えた3×3の全実数(λ,μ)を、有限禁止族への帰着と全安全局面mexで完全分類した。
 特に4×4では全実数λのうちλ=1だけ後手勝ち。過去の会話の勝敗表自体を証拠として採用したのではなく、保存コードと別方式の行列式・ゲーム再帰で新たに照合した。
-5×5以上や他の図形変種についての本項の研究課題は引き続き未解決。
+5×5の全実数λ分類は[K0534](K0534-quadratic-parameter-five-square-all-real-classification.md)で確定し、後手必勝のλは13個。
+任意有理点盤の有限例外分類と任意二水平行不変性は[K0532](K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md)。
+λ=0の鉛直列盤の最良一様閾値と全Grundy公式は[K0533](K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md)、
+標準鉛直五列盤の真の公式安定化高さ6は[K0535](K0535-degenerate-quadratic-five-column-exact-stabilization.md)。
+6×6以上や他の図形変種についての本項の研究課題は引き続き未解決。
 
 ## 優先順位と必要な証拠
 

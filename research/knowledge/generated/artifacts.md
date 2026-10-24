@@ -7161,6 +7161,24 @@
 ## [research/experiments/n11-s9-win13-lift-20261023/verify.py](../../../research/experiments/n11-s9-win13-lift-20261023/verify.py)
 
 - [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (verifier): 独立整数幾何による全子・終局minimax・伝播検査
+## [research/experiments/n11-s9-win7-expansion-20261024/audit_coverage.py](../../../research/experiments/n11-s9-win7-expansion-20261024/audit_coverage.py)
+
+- [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) (verifier): 63親の新規性・504辺の監査
+## [research/experiments/n11-s9-win7-expansion-20261024/frontier_audit.py](../../../research/experiments/n11-s9-win7-expansion-20261024/frontier_audit.py)
+
+- [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) (verifier): 427個の既存LOSS葉の逆向き構造と最小不足8件の監査
+## [research/experiments/n11-s9-win7-expansion-20261024/s10-win89.keys](../../../research/experiments/n11-s9-win7-expansion-20261024/s10-win89.keys)
+
+- [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) (certificate): 全合法10石WIN子89件
+## [research/experiments/n11-s9-win7-expansion-20261024/s8-win63.keys](../../../research/experiments/n11-s9-win7-expansion-20261024/s8-win63.keys)
+
+- [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) (certificate): 導出した8石WIN親63件
+## [research/experiments/n11-s9-win7-expansion-20261024/s9-win7.keys](../../../research/experiments/n11-s9-win7-expansion-20261024/s9-win7.keys)
+
+- [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) (certificate): 9石WIN根7件
+## [research/experiments/n11-s9-win7-expansion-20261024/verify.py](../../../research/experiments/n11-s9-win7-expansion-20261024/verify.py)
+
+- [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) (verifier): 全子・親・独立終局勝敗の検証
 ## [research/experiments/n11-search-methods/output/data/n11_d4_final.json](../../../research/experiments/n11-search-methods/output/data/n11_d4_final.json)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (data): 命題・対象範囲・根拠を記した出典
@@ -8523,6 +8541,57 @@
 ## [research/experiments/q6-18-rigidity-20261018/verify.py](../../../research/experiments/q6-18-rigidity-20261018/verify.py)
 
 - [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md) (verifier): 5点集合の63504組のenergy分類と二点和復元の独立有限監査
+## [research/experiments/quadratic-lambda-20261024/proof.md](../../../research/experiments/quadratic-lambda-20261024/proof.md)
+
+- [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (proof): 有限例外・転置・縮尺・二水平行不変性の全称証明
+## [research/experiments/quadratic-lambda-20261024/results.json](../../../research/experiments/quadratic-lambda-20261024/results.json)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (data): 追加独立監査の全51型と全初手Grundy・安全層・終局分布
+- [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (data): 有限監査結果。全称性はproof.mdの代数的証明による
+## [research/experiments/quadratic-lambda-20261024/verify.py](../../../research/experiments/quadratic-lambda-20261024/verify.py)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 2026-10-24の別実装による全51型419950安全局面の個別Grundy照合
+- [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (verifier): 整数係数二方式・二行条件・転置対応の有限監査
+## [research/experiments/quadratic-lambda-five-20261024/README.md](../../../research/experiments/quadratic-lambda-five-20261024/README.md)
+
+- [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (log): 全実数分類・検算手法・証拠範囲と再現手順
+## [research/experiments/quadratic-lambda-five-20261024/audit.cpp](../../../research/experiments/quadratic-lambda-five-20261024/audit.cpp)
+
+- [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (verifier): 原禁止辺による全subset安全性DPと逆順Grundy DP
+## [research/experiments/quadratic-lambda-five-20261024/census.cpp](../../../research/experiments/quadratic-lambda-five-20261024/census.cpp)
+
+- [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (solver): 独立整数行列式・三点補完増分伝播による全安全局面mex
+## [research/experiments/quadratic-lambda-five-20261024/results.json](../../../research/experiments/quadratic-lambda-five-20261024/results.json)
+
+- [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (data): 全168分類・延べ89789920安全局面・全初手Grundy・再構成可能な禁止辺
+## [research/experiments/quadratic-lambda-five-20261024/run.py](../../../research/experiments/quadratic-lambda-five-20261024/run.py)
+
+- [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (verifier): 二方式コンパイルと全局面値配列のバイト単位一致検査
+## [research/experiments/quadratic-lambda-zero-strips-20261024/audit.cpp](../../../research/experiments/quadratic-lambda-zero-strips-20261024/audit.cpp)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 三点補完を増分伝播する全到達局面の再帰mex
+## [research/experiments/quadratic-lambda-zero-strips-20261024/column_audit.cpp](../../../research/experiments/quadratic-lambda-zero-strips-20261024/column_audit.cpp)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 列パターン列挙と安全局面集合への所属による独立DP
+## [research/experiments/quadratic-lambda-zero-strips-20261024/proof.md](../../../research/experiments/quadratic-lambda-zero-strips-20261024/proof.md)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (proof): 三点補間による上界、全Grundy分類、整数点反例による閾値の全幅最良性
+- [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (proof): 一般定理・高さ6,7の有限基底・高さ5の明示反例を接続
+## [research/experiments/quadratic-lambda-zero-strips-20261024/results.json](../../../research/experiments/quadratic-lambda-zero-strips-20261024/results.json)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (data): 延べ3972161局面。一般候補数条件内3384859局面で公式不一致0
+- [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (data): 5×6の157122局面と5×7の373938局面で両方式の公式不一致0
+## [research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.json](../../../research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.json)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (data): w=4..10の整数反例と標準5×5の明示終局
+- [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (certificate): 5×5の五石安全終局と全20空点への禁止三点組
+## [research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.py](../../../research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.py)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 最良性構成を整数座標化し安全性と極大性を独立行列式で検査
+## [research/experiments/quadratic-lambda-zero-strips-20261024/verify.py](../../../research/experiments/quadratic-lambda-zero-strips-20261024/verify.py)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 18盤の二方式mex検査と小盤Python照合の実行器
+- [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (verifier): 高さ6,7の全安全局面で二つの独立mexと閉公式を照合
 ## [research/experiments/quadratic-pencil-20261023/README.md](../../../research/experiments/quadratic-pencil-20261023/README.md)
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (proof): 全実数から有限禁止族への全称帰着、完全計算の範囲と信頼境界

@@ -515,3 +515,8 @@
 | [K0528](../items/K0528-n11-s7-terminal-loss12.md) | 標準11×11の未分類7石局面を12個の終局LOSS葉で独立証明 | verification | verified | square-outcomes, certificates, verification |
 | [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md) | 3×3×m・4点共面禁止版の最大石数は3,6,8,8,9で、3立方は全局面強解決 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) | 2×k×m・4点共面禁止版の全長容量・三石極大数と2×3×3の全局面 | proposition | proved | variants, geometry, maximum-safe, maximal-safe, grundy, first-moves |
+| [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) | 11×11の7個の9石WINを89個の終局WIN葉で独立検証し63個の8石WINを導出 | verification | verified | square-outcomes, certificates, verification |
+| [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) | 二次形式λ版は有理点盤で有限例外以外同一となり、任意二水平行では全λで同一 | proposition | proved | variants, geometry, grundy, rectangles |
+| [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) | λ=0の任意w列盤は最良一様候補数閾値で全Grundy値が高々2の閉公式を持つ | proposition | proved | variants, geometry, grundy, rectangles, maximal-safe, first-moves |
+| [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) | 二次形式λ版5×5を全実数で強分類し後手必勝は13個のλに限られる | computation | computed | variants, geometry, grundy, square-outcomes, first-moves, verification |
+| [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) | λ=0標準五列盤の全Grundy公式は高さ6で厳密に安定する | proposition | proved | variants, rectangles, grundy, geometry, maximal-safe |

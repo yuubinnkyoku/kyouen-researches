@@ -1,57 +1,57 @@
 # 移行集計
 
-K項目: 513 / alias: 269 / artifactファイル: 2795
+K項目: 518 / alias: 269 / artifactファイル: 2816
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 38 |
+| computation | 39 |
 | definition | 5 |
 | method | 4 |
-| proposition | 406 |
+| proposition | 409 |
 | question | 38 |
-| verification | 22 |
+| verification | 23 |
 
 ## status
 
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 115 |
+| computed | 116 |
 | conjectured | 1 |
 | observed | 26 |
 | open | 36 |
-| proved | 235 |
+| proved | 238 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
-| verified | 22 |
+| verified | 23 |
 | withdrawn | 4 |
 
 ## topics
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 51 |
-| first-moves | 44 |
+| certificates | 52 |
+| first-moves | 46 |
 | formalization | 5 |
-| geometry | 219 |
-| grundy | 107 |
-| maximal-safe | 85 |
+| geometry | 223 |
+| grundy | 111 |
+| maximal-safe | 87 |
 | maximum-safe | 56 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
-| rectangles | 92 |
+| rectangles | 95 |
 | residual-games | 79 |
 | rules | 6 |
 | search-methods | 66 |
-| square-outcomes | 51 |
+| square-outcomes | 53 |
 | statistics | 60 |
 | strategy-length | 29 |
-| variants | 159 |
-| verification | 63 |
+| variants | 163 |
+| verification | 65 |
 
 ## 未解決・要監査・範囲不明
 
