@@ -3,6 +3,57 @@
 ## [.github/workflows/lean-foundations.yml](../../../.github/workflows/lean-foundations.yml)
 
 - [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) (verifier): repository指定のLean toolchainで新規moduleも検査するCI
+## [Kyouen/CertificateSoundness.lean](../../../Kyouen/CertificateSoundness.lean)
+
+- [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
+- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 一般健全性定理。具体証明書の受理を意味しない
+## [Kyouen/CubeCertData.lean](../../../Kyouen/CubeCertData.lean)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): certificate.b64から生成した具体データ
+## [Kyouen/CubeCertificate.lean](../../../Kyouen/CubeCertificate.lean)
+
+- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 3×3×3・5点禁止の有界具体証明書検査。native_decide 依存あり
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 839局面証明書の局所条件検査と空盤後手必勝定理
+## [Kyouen/CubeRules.lean](../../../Kyouen/CubeRules.lean)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 3×3×3盤・5点禁止判定・合法手
+## [Kyouen/CubeSymmetry.lean](../../../Kyouen/CubeSymmetry.lean)
+
+- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 48対称変換と正規化
+## [Kyouen/FormalizationChecks.lean](../../../Kyouen/FormalizationChecks.lean)
+
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 仮定の境界例、盤面ルールへの接続例、主要定理の公理一覧
+- [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) (lean): 共円・共線・非共円例と主要定理の公理一覧
+## [Kyouen/IntegerGeometry.lean](../../../Kyouen/IntegerGeometry.lean)
+
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 行列式と分母を払った円・直線方程式の同値
+- [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) (lean): 全称同値定理、盤面座標の単射性、ForbiddenFourへの接続。Lean 4.35.0で検査。
+## [Kyouen/MaximalParity.lean](../../../Kyouen/MaximalParity.lean)
+
+- [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) (proof): Lean 4.30.0で検査済みの一般ゲーム論部分。具体的な共円配置・Grundy再帰の構成までは未接続。
+## [Kyouen/OddInvolution.lean](../../../Kyouen/OddInvolution.lean)
+
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 抽象鏡映定理と有限盤上のLosingへの接続
+- [K0337](../items/K0337-odd-uniform-involution-scope.md) (lean): 抽象ブロック十分条件から鏡像応手の合法性とLosingまでをLean 4.35.0で検査。反例族と幾何学的応用は対象外。
+## [Kyouen/Rules.lean](../../../Kyouen/Rules.lean)
+
+- [K0001](../items/K0001-complete-call-rules.md) (lean): 整数行列式・ForbiddenFour・LegalMove・movesの実行可能定義
+- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
+## [Kyouen/SmallCertificates.lean](../../../Kyouen/SmallCertificates.lean)
+
+- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 1×1正方盤の具体証明書検査
+## [Kyouen/StructuralConsequences.lean](../../../Kyouen/StructuralConsequences.lean)
+
+- [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) (lean): 47個の一般補題。有限盤面の全数探索や追加公理に依存しない
+## [README.md](../../../README.md)
+
+- [K0001](../items/K0001-complete-call-rules.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0003](../items/K0003-solution-and-evidence-levels.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (source): 空盤勝敗と全局面計算の検証境界
+- [K0021](../items/K0021-n9-all-81-first-moves-win.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0026](../items/K0026-maximum-versus-minimum-maximal.md) (source): 命題・対象範囲・根拠を記した出典
 ## [cpp/certificate/kyouen_certcheck.cpp](../../../cpp/certificate/kyouen_certcheck.cpp)
 
 - [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) (verifier): 命題・対象範囲・根拠を記した出典
@@ -72,57 +123,6 @@
 - [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0029](../items/K0029-n1-n9-maximum-safe-sizes.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0104](../items/K0104-prior-work-search-scope.md) (source): 命題・対象範囲・根拠を記した出典
-## [Kyouen/CertificateSoundness.lean](../../../Kyouen/CertificateSoundness.lean)
-
-- [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
-- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
-- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 一般健全性定理。具体証明書の受理を意味しない
-## [Kyouen/CubeCertData.lean](../../../Kyouen/CubeCertData.lean)
-
-- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): certificate.b64から生成した具体データ
-## [Kyouen/CubeCertificate.lean](../../../Kyouen/CubeCertificate.lean)
-
-- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 3×3×3・5点禁止の有界具体証明書検査。native_decide 依存あり
-- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 839局面証明書の局所条件検査と空盤後手必勝定理
-## [Kyouen/CubeRules.lean](../../../Kyouen/CubeRules.lean)
-
-- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 3×3×3盤・5点禁止判定・合法手
-## [Kyouen/CubeSymmetry.lean](../../../Kyouen/CubeSymmetry.lean)
-
-- [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (lean): 48対称変換と正規化
-## [Kyouen/FormalizationChecks.lean](../../../Kyouen/FormalizationChecks.lean)
-
-- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 仮定の境界例、盤面ルールへの接続例、主要定理の公理一覧
-- [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) (lean): 共円・共線・非共円例と主要定理の公理一覧
-## [Kyouen/IntegerGeometry.lean](../../../Kyouen/IntegerGeometry.lean)
-
-- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 行列式と分母を払った円・直線方程式の同値
-- [K0434](../items/K0434-integer-determinant-circle-line-equivalence.md) (lean): 全称同値定理、盤面座標の単射性、ForbiddenFourへの接続。Lean 4.35.0で検査。
-## [Kyouen/MaximalParity.lean](../../../Kyouen/MaximalParity.lean)
-
-- [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md) (proof): Lean 4.30.0で検査済みの一般ゲーム論部分。具体的な共円配置・Grundy再帰の構成までは未接続。
-## [Kyouen/OddInvolution.lean](../../../Kyouen/OddInvolution.lean)
-
-- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 抽象鏡映定理と有限盤上のLosingへの接続
-- [K0337](../items/K0337-odd-uniform-involution-scope.md) (lean): 抽象ブロック十分条件から鏡像応手の合法性とLosingまでをLean 4.35.0で検査。反例族と幾何学的応用は対象外。
-## [Kyouen/Rules.lean](../../../Kyouen/Rules.lean)
-
-- [K0001](../items/K0001-complete-call-rules.md) (lean): 整数行列式・ForbiddenFour・LegalMove・movesの実行可能定義
-- [K0009](../items/K0009-lean-soundness-trust-boundary.md) (lean): 命題・対象範囲・根拠を記した出典
-## [Kyouen/SmallCertificates.lean](../../../Kyouen/SmallCertificates.lean)
-
-- [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (lean): 1×1正方盤の具体証明書検査
-## [Kyouen/StructuralConsequences.lean](../../../Kyouen/StructuralConsequences.lean)
-
-- [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) (lean): 47個の一般補題。有限盤面の全数探索や追加公理に依存しない
-## [README.md](../../../README.md)
-
-- [K0001](../items/K0001-complete-call-rules.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0003](../items/K0003-solution-and-evidence-levels.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (source): 空盤勝敗と全局面計算の検証境界
-- [K0021](../items/K0021-n9-all-81-first-moves-win.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0026](../items/K0026-maximum-versus-minimum-maximal.md) (source): 命題・対象範囲・根拠を記した出典
 ## [release-assets/SHA256SUMS.txt](../../../release-assets/SHA256SUMS.txt)
 
 - [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) (manifest): 命題・対象範囲・根拠を記した出典
@@ -395,69 +395,69 @@
 ## [research/experiments/bundle-integration-20261020/n11-lift-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-lift-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回のterminal-only実行、旧cache比較を省略
-## [research/experiments/capacity-all-slack-20261010/check_kernel.py](../../../research/experiments/capacity-all-slack-20261010/check_kernel.py)
-
-- [K0384](../items/K0384-capacity-all-slack-grundy-three.md) (verifier): 別の上位核で337625形の偶奇余裕上界を照合
 ## [research/experiments/capacity-all-slack-20261010/README.md](../../../research/experiments/capacity-all-slack-20261010/README.md)
 
 - [K0384](../items/K0384-capacity-all-slack-grundy-three.md) (proof): 全称の二重帰納、可換菱形補題、有限検証範囲
+## [research/experiments/capacity-all-slack-20261010/check_kernel.py](../../../research/experiments/capacity-all-slack-20261010/check_kernel.py)
+
+- [K0384](../items/K0384-capacity-all-slack-grundy-three.md) (verifier): 別の上位核で337625形の偶奇余裕上界を照合
 ## [research/experiments/capacity-all-slack-20261010/verify.py](../../../research/experiments/capacity-all-slack-20261010/verify.py)
 
 - [K0384](../items/K0384-capacity-all-slack-grundy-three.md) (verifier): 署名再帰と独立全列mexの422953局面照合
-## [research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py](../../../research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py)
-
-- [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) (verifier): 8774局面・14390終局石数別の独立全合法着手再帰との完全照合
 ## [research/experiments/capacity-conditional-terminal-count-20261008/README.md](../../../research/experiments/capacity-conditional-terminal-count-20261008/README.md)
 
 - [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) (proof): 二変数母関数と経路数階乗公式の全称組合せ証明
-## [research/experiments/capacity-height-bias-20261008/check_height_bias.py](../../../research/experiments/capacity-height-bias-20261008/check_height_bias.py)
+## [research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py](../../../research/experiments/capacity-conditional-terminal-count-20261008/check_terminal_paths.py)
 
-- [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) (verifier): 354局面・505終局閾値の独立有限差分と逐次確率再帰の検証
+- [K0361](../items/K0361-capacity-conditional-maximal-counts-and-play-paths.md) (verifier): 8774局面・14390終局石数別の独立全合法着手再帰との完全照合
 ## [research/experiments/capacity-height-bias-20261008/README.md](../../../research/experiments/capacity-height-bias-20261008/README.md)
 
 - [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) (proof): 多項式最高次係数・漸近集中・逐次ランダム極限の正値性の全称証明
-## [research/experiments/capacity-height-finite-error-20261008/check_finite_height.py](../../../research/experiments/capacity-height-finite-error-20261008/check_finite_height.py)
+## [research/experiments/capacity-height-bias-20261008/check_height_bias.py](../../../research/experiments/capacity-height-bias-20261008/check_height_bias.py)
 
-- [K0363](../items/K0363-capacity-finite-height-distribution-error.md) (verifier): 前向き・後ろ向き厳密有理数再帰による354局面・505閾値・1416有限高さ比較
+- [K0362](../items/K0362-capacity-height-random-terminal-distribution.md) (verifier): 354局面・505終局閾値の独立有限差分と逐次確率再帰の検証
 ## [research/experiments/capacity-height-finite-error-20261008/README.md](../../../research/experiments/capacity-height-finite-error-20261008/README.md)
 
 - [K0363](../items/K0363-capacity-finite-height-distribution-error.md) (proof): 1手の全変動距離境界、結合評価、一次補正の全称帰納証明と鋭さ反例
-## [research/experiments/capacity-slack-three-20261008/check_slack_three.py](../../../research/experiments/capacity-slack-three-20261008/check_slack_three.py)
+## [research/experiments/capacity-height-finite-error-20261008/check_finite_height.py](../../../research/experiments/capacity-height-finite-error-20261008/check_finite_height.py)
 
-- [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (verifier): 418819の容量余裕3安全降順局面について独立mexで全件一致
+- [K0363](../items/K0363-capacity-finite-height-distribution-error.md) (verifier): 前向き・後ろ向き厳密有理数再帰による354局面・505閾値・1416有限高さ比較
 ## [research/experiments/capacity-slack-three-20261008/README.md](../../../research/experiments/capacity-slack-three-20261008/README.md)
 
 - [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (proof): 境界署名の定義と全称mex帰納・全次元での鋭さ構成
+## [research/experiments/capacity-slack-three-20261008/check_slack_three.py](../../../research/experiments/capacity-slack-three-20261008/check_slack_three.py)
+
+- [K0360](../items/K0360-capacity-slack-three-exact-grundy.md) (verifier): 418819の容量余裕3安全降順局面について独立mexで全件一致
+## [research/experiments/capacity-slack-two-20261008/README.md](../../../research/experiments/capacity-slack-two-20261008/README.md)
+
+- [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (proof): 余裕2の全称閉公式・7場合の子値分類・mex帰納証明
 ## [research/experiments/capacity-slack-two-20261008/check_child_types.py](../../../research/experiments/capacity-slack-two-20261008/check_child_types.py)
 
 - [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (verifier): 余裕1への全子Grundy集合の52787局面独立確認
 ## [research/experiments/capacity-slack-two-20261008/check_slack_two.py](../../../research/experiments/capacity-slack-two-20261008/check_slack_two.py)
 
 - [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (verifier): 独立mex再帰による449322局面の全パラメータ有限検査
-## [research/experiments/capacity-slack-two-20261008/README.md](../../../research/experiments/capacity-slack-two-20261008/README.md)
+## [research/experiments/capacity-two-tall-20261010/README.md](../../../research/experiments/capacity-two-tall-20261010/README.md)
 
-- [K0359](../items/K0359-capacity-slack-two-exact-grundy.md) (proof): 余裕2の全称閉公式・7場合の子値分類・mex帰納証明
+- [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) (proof): 終局分類・Grundy公式の全称証明
 ## [research/experiments/capacity-two-tall-20261010/labelled-output.txt](../../../research/experiments/capacity-two-tall-20261010/labelled-output.txt)
 
 - [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) (data): ラベル付き監査
 ## [research/experiments/capacity-two-tall-20261010/quotient-output.txt](../../../research/experiments/capacity-two-tall-20261010/quotient-output.txt)
 
 - [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) (data): 圧縮監査
-## [research/experiments/capacity-two-tall-20261010/README.md](../../../research/experiments/capacity-two-tall-20261010/README.md)
-
-- [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) (proof): 終局分類・Grundy公式の全称証明
 ## [research/experiments/capacity-two-tall-20261010/verify_labelled.py](../../../research/experiments/capacity-two-tall-20261010/verify_labelled.py)
 
 - [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) (verifier): ラベル付き状態の再帰mex
 ## [research/experiments/capacity-two-tall-20261010/verify_quotient.py](../../../research/experiments/capacity-two-tall-20261010/verify_quotient.py)
 
 - [K0404](../items/K0404-two-tall-unequal-capacity-grundy.md) (verifier): 圧縮状態の独立逆順mex
-## [research/experiments/capacity-unequal-caps-20261010/certificates.json](../../../research/experiments/capacity-unequal-caps-20261010/certificates.json)
-
-- [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md) (data): 22局面と44局面の全後続局面証明書
 ## [research/experiments/capacity-unequal-caps-20261010/README.md](../../../research/experiments/capacity-unequal-caps-20261010/README.md)
 
 - [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md) (proof): 具体的な2つの証人と全合法子のmex
+## [research/experiments/capacity-unequal-caps-20261010/certificates.json](../../../research/experiments/capacity-unequal-caps-20261010/certificates.json)
+
+- [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md) (data): 22局面と44局面の全後続局面証明書
 ## [research/experiments/capacity-unequal-caps-20261010/verify_certificates.py](../../../research/experiments/capacity-unequal-caps-20261010/verify_certificates.py)
 
 - [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md) (verifier): 証明書の閉包とmex等式の独立検証
@@ -473,12 +473,12 @@
 ## [research/experiments/capacity-unequal-extremal-spectrum-20261010/verify.py](../../../research/experiments/capacity-unequal-extremal-spectrum-20261010/verify.py)
 
 - [K0405](../items/K0405-unequal-capacity-extremal-terminal-spectrum.md) (verifier): 独立極大配置列挙
-## [research/experiments/capacity-unequal-grundy-five-20261010/certificates.json](../../../research/experiments/capacity-unequal-grundy-five-20261010/certificates.json)
-
-- [K0390](../items/K0390-unequal-capacity-grundy-five.md) (certificate): 4列331局面・5列662局面の完全mex証明書
 ## [research/experiments/capacity-unequal-grundy-five-20261010/README.md](../../../research/experiments/capacity-unequal-grundy-five-20261010/README.md)
 
 - [K0390](../items/K0390-unequal-capacity-grundy-five.md) (source): 定義・具体例・再現手順・計算境界
+## [research/experiments/capacity-unequal-grundy-five-20261010/certificates.json](../../../research/experiments/capacity-unequal-grundy-five-20261010/certificates.json)
+
+- [K0390](../items/K0390-unequal-capacity-grundy-five.md) (certificate): 4列331局面・5列662局面の完全mex証明書
 ## [research/experiments/capacity-unequal-grundy-five-20261010/verify.py](../../../research/experiments/capacity-unequal-grundy-five-20261010/verify.py)
 
 - [K0390](../items/K0390-unequal-capacity-grundy-five.md) (verifier): 証明書全辺検査と容量直積全安全局面の独立mex計算
@@ -491,57 +491,57 @@
 ## [research/experiments/capacity-unequal-h2-spectrum-20261010/verify.py](../../../research/experiments/capacity-unequal-h2-spectrum-20261010/verify.py)
 
 - [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (verifier): h=2直接列挙
-## [research/experiments/capacity-unequal-one-tall-all-h-20261010/audit.json](../../../research/experiments/capacity-unequal-one-tall-all-h-20261010/audit.json)
-
-- [K0406](../items/K0406-one-tall-all-h-grundy.md) (data): 有限監査digest
 ## [research/experiments/capacity-unequal-one-tall-all-h-20261010/README.md](../../../research/experiments/capacity-unequal-one-tall-all-h-20261010/README.md)
 
 - [K0406](../items/K0406-one-tall-all-h-grundy.md) (proof): 任意hの全Grundy値の証明
+## [research/experiments/capacity-unequal-one-tall-all-h-20261010/audit.json](../../../research/experiments/capacity-unequal-one-tall-all-h-20261010/audit.json)
+
+- [K0406](../items/K0406-one-tall-all-h-grundy.md) (data): 有限監査digest
 ## [research/experiments/capacity-unequal-one-tall-all-h-20261010/verify_one_tall_full.py](../../../research/experiments/capacity-unequal-one-tall-all-h-20261010/verify_one_tall_full.py)
 
 - [K0406](../items/K0406-one-tall-all-h-grundy.md) (verifier): ラベル付き・商状態の独立mex
-## [research/experiments/capacity-unequal-six-columns-20261010/scan_six_7.log](../../../research/experiments/capacity-unequal-six-columns-20261010/scan_six_7.log)
-
-- [K0394](../items/K0394-unequal-six-column-grundy-exclusion.md) (log): 最大容量7の全走査結果
 ## [research/experiments/capacity-unequal-six-columns-20261010/scan_six.cpp](../../../research/experiments/capacity-unequal-six-columns-20261010/scan_six.cpp)
 
 - [K0394](../items/K0394-unequal-six-column-grundy-exclusion.md) (solver): 対称性同値類の有限完全mex列挙
+## [research/experiments/capacity-unequal-six-columns-20261010/scan_six_7.log](../../../research/experiments/capacity-unequal-six-columns-20261010/scan_six_7.log)
+
+- [K0394](../items/K0394-unequal-six-column-grundy-exclusion.md) (log): 最大容量7の全走査結果
 ## [research/experiments/capacity-unequal-six-columns-20261010/verify_labeled.py](../../../research/experiments/capacity-unequal-six-columns-20261010/verify_labeled.py)
 
 - [K0394](../items/K0394-unequal-six-column-grundy-exclusion.md) (verifier): 最大列容量4以下のラベル付き全局面独立再計算
 ## [research/experiments/capacity-unequal-terminal-gap-20261010/README.md](../../../research/experiments/capacity-unequal-terminal-gap-20261010/README.md)
 
 - [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (proof): 一高列の終局gap族
-## [research/experiments/capacity-unequal-terminal-gap-20261010/verify_gap_family.py](../../../research/experiments/capacity-unequal-terminal-gap-20261010/verify_gap_family.py)
-
-- [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (verifier): 一高列族の直接mex監査
 ## [research/experiments/capacity-unequal-terminal-gap-20261010/verify.log](../../../research/experiments/capacity-unequal-terminal-gap-20261010/verify.log)
 
 - [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (data): 一高列族の監査
+## [research/experiments/capacity-unequal-terminal-gap-20261010/verify_gap_family.py](../../../research/experiments/capacity-unequal-terminal-gap-20261010/verify_gap_family.py)
+
+- [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (verifier): 一高列族の直接mex監査
+## [research/experiments/capacity-unequal-top-h-spectrum-20261010/README.md](../../../research/experiments/capacity-unequal-top-h-spectrum-20261010/README.md)
+
+- [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (proof): 任意hの極大配置・終局スペクトル・欠番数
 ## [research/experiments/capacity-unequal-top-h-spectrum-20261010/hole_audit.log](../../../research/experiments/capacity-unequal-top-h-spectrum-20261010/hole_audit.log)
 
 - [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (data): 欠番監査
 ## [research/experiments/capacity-unequal-top-h-spectrum-20261010/hole_audit.py](../../../research/experiments/capacity-unequal-top-h-spectrum-20261010/hole_audit.py)
 
 - [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (verifier): 欠番数の直接列挙
-## [research/experiments/capacity-unequal-top-h-spectrum-20261010/README.md](../../../research/experiments/capacity-unequal-top-h-spectrum-20261010/README.md)
-
-- [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (proof): 任意hの極大配置・終局スペクトル・欠番数
 ## [research/experiments/capacity-unequal-top-h-spectrum-20261010/verify.log](../../../research/experiments/capacity-unequal-top-h-spectrum-20261010/verify.log)
 
 - [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (data): 全h有限監査
 ## [research/experiments/capacity-unequal-top-h-spectrum-20261010/verify.py](../../../research/experiments/capacity-unequal-top-h-spectrum-20261010/verify.py)
 
 - [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md) (verifier): 全局面監査
+## [research/experiments/capacity-winning-moves-20261010/README.md](../../../research/experiments/capacity-winning-moves-20261010/README.md)
+
+- [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) (proof): 下位着手と上位着手の全称分類、物理列・盤上点数の厳密式
 ## [research/experiments/capacity-winning-moves-20261010/check_lower_ordered.py](../../../research/experiments/capacity-winning-moves-20261010/check_lower_ordered.py)
 
 - [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) (verifier): 388006非整列局面・420945下位着手の署名非依存mex照合
 ## [research/experiments/capacity-winning-moves-20261010/check_winning_moves.py](../../../research/experiments/capacity-winning-moves-20261010/check_winning_moves.py)
 
 - [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) (verifier): 422953局面・2628542合法列着手の直接mex照合
-## [research/experiments/capacity-winning-moves-20261010/README.md](../../../research/experiments/capacity-winning-moves-20261010/README.md)
-
-- [K0386](../items/K0386-capacity-all-slack-winning-move-classification.md) (proof): 下位着手と上位着手の全称分類、物理列・盤上点数の厳密式
 ## [research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md](../../../research/experiments/certificate-validation/reports/VERIFICATION_REPORT.md)
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
@@ -692,12 +692,16 @@
 ## [research/experiments/cube-q5-seven-central-line-20261023/stage-3-verified.json](../../../research/experiments/cube-q5-seven-central-line-20261023/stage-3-verified.json)
 
 - [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (data): 1590127局面の全証明を約10.87億Bareiss行列式で独立検査
-## [research/experiments/cube-q5-seven-focused-cache-20261023/global-archives.json](../../../research/experiments/cube-q5-seven-focused-cache-20261023/global-archives.json)
-
-- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 旧全体cache13件の現在のgzip所在、rawとgzipのSHA-256、全展開一致
 ## [research/experiments/cube-q5-seven-focused-cache-20261023/README.md](../../../research/experiments/cube-q5-seven-focused-cache-20261023/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 対称根包含による候補表の制限と全証明書一致、独立した2根の継続探索
+## [research/experiments/cube-q5-seven-focused-cache-20261023/global-archives.json](../../../research/experiments/cube-q5-seven-focused-cache-20261023/global-archives.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 旧全体cache13件の現在のgzip所在、rawとgzipのSHA-256、全展開一致
+## [research/experiments/cube-q5-seven-frontier-20261022/README.md](../../../research/experiments/cube-q5-seven-frontier-20261022/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明
+- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 座標、有限部分証明の意味、独立検査、17石構成、探索の信頼境界
 ## [research/experiments/cube-q5-seven-frontier-20261022/dfpn-weighted-250k.jsonl](../../../research/experiments/cube-q5-seven-frontier-20261022/dfpn-weighted-250k.jsonl)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): DFS確定候補を引き継ぎ19三石軌道を各25万展開、全てUNKNOWN
@@ -705,10 +709,6 @@
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 追加成果とprivate checkpointの所在・hash・独立検査範囲
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (manifest): ソース・結果・圧縮前後の証明書・private checkpointのhashと保存範囲
-## [research/experiments/cube-q5-seven-frontier-20261022/README.md](../../../research/experiments/cube-q5-seven-frontier-20261022/README.md)
-
-- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 19軌道化・再開可能な確定memo・df-pn比較・独立部分証明
-- [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 座標、有限部分証明の意味、独立検査、17石構成、探索の信頼境界
 ## [research/experiments/cube-q5-seven-frontier-20261022/seven-p-verified.json](../../../research/experiments/cube-q5-seven-frontier-20261022/seven-p-verified.json)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (data): 7石Pの独立検査結果
@@ -730,6 +730,9 @@
 ## [research/experiments/cube-q5-seven-frontier-20261022/verify.cpp](../../../research/experiments/cube-q5-seven-frontier-20261022/verify.cpp)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (verifier): 6ワードQ5CUBE2・Bareiss整数幾何・全AND/OR条件の独立検査器
+## [research/experiments/cube-q5-seven-hybrid-20261023/README.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): ディスク基礎表・追加確定候補・未確定df-pn推定値を分離した再開方式
 ## [research/experiments/cube-q5-seven-hybrid-20261023/central-five-parents.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/central-five-parents.json)
 
 - [K0522](../items/K0522-seven-cube-central-boundary-partial-certificates.md) (data): 3六石Pの全五石親を正規化した10軌道への1手の帰結
@@ -770,9 +773,6 @@
 ## [research/experiments/cube-q5-seven-hybrid-20261023/rank_pairs.cpp](../../../research/experiments/cube-q5-seven-hybrid-20261023/rank_pairs.cpp)
 
 - [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (solver): 48対称性の全二石軌道と整数階数による第四手調査
-## [research/experiments/cube-q5-seven-hybrid-20261023/README.md](../../../research/experiments/cube-q5-seven-hybrid-20261023/README.md)
-
-- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): ディスク基礎表・追加確定候補・未確定df-pn推定値を分離した再開方式
 ## [research/experiments/cube-q5-seven-hybrid-20261023/regression-graph.json](../../../research/experiments/cube-q5-seven-hybrid-20261023/regression-graph.json)
 
 - [K0520](../items/K0520-triangle-free-compatibility-endgame.md) (data): 既知3立方20根、tree置換、中断再開、不正checkpoint拒否の回帰
@@ -785,12 +785,12 @@
 ## [research/experiments/cube-q5-seven-hybrid-20261023/verify_pairs.cpp](../../../research/experiments/cube-q5-seven-hybrid-20261023/verify_pairs.cpp)
 
 - [K0521](../items/K0521-seven-cube-terminal-four-pair-survey.md) (verifier): 独立対称性生成と5×5 Bareiss行列式による全1516軌道の再計算
-## [research/experiments/cube-q5-seven-incremental-20261022/manifest-search.json](../../../research/experiments/cube-q5-seven-incremental-20261022/manifest-search.json)
-
-- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 終了した各探索結果とprivate checkpointの所在・hash・信頼範囲
 ## [research/experiments/cube-q5-seven-incremental-20261022/README.md](../../../research/experiments/cube-q5-seven-incremental-20261022/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 合法手の差分更新・候補点直接判定・一括checkpoint IOの検証と速度測定
+## [research/experiments/cube-q5-seven-incremental-20261022/manifest-search.json](../../../research/experiments/cube-q5-seven-incremental-20261022/manifest-search.json)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (manifest): 終了した各探索結果とprivate checkpointの所在・hash・信頼範囲
 ## [research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json](../../../research/experiments/cube-q5-seven-incremental-20261022/regression-direct.json)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 既知3立方のdf-pn・DFS両方式の独立証明、差分更新照合、旧checkpoint互換性
@@ -806,13 +806,16 @@
 ## [research/experiments/cube-q5-seven-incremental-20261022/terminal18.md](../../../research/experiments/cube-q5-seven-incremental-20261022/terminal18.md)
 
 - [K0506](../items/K0506-seven-cube-q5-certified-subpositions.md) (proof): 18石極大安全構成と最大安全石数≥18の独立検査
-## [research/experiments/cube-q5-seven-inner-tetra-20261023/manifest.json](../../../research/experiments/cube-q5-seven-inner-tetra-20261023/manifest.json)
-
-- [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (manifest): 圧縮全証明・独立検査結果・四石証明再生成のSHA-256
 ## [research/experiments/cube-q5-seven-inner-tetra-20261023/README.md](../../../research/experiments/cube-q5-seven-inner-tetra-20261023/README.md)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): 内側正四面体は4石N・中心追加後は5石P。四石を一律Pとは扱えない
 - [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (proof): 内側正四面体4石Nと中心追加後の5石P、再生成手順、検査範囲
+## [research/experiments/cube-q5-seven-inner-tetra-20261023/manifest.json](../../../research/experiments/cube-q5-seven-inner-tetra-20261023/manifest.json)
+
+- [K0524](../items/K0524-seven-cube-four-n-five-p-certificates.md) (manifest): 圧縮全証明・独立検査結果・四石証明再生成のSHA-256
+## [research/experiments/cube-q5-seven-probe-20261022/README.md](../../../research/experiments/cube-q5-seven-probe-20261022/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 7立方の2石根・35第三手境界・増加予算probe・未検証範囲
 ## [research/experiments/cube-q5-seven-probe-20261022/coverage-7.json](../../../research/experiments/cube-q5-seven-probe-20261022/coverage-7.json)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 341第三手のうち306手に4石終局応手。残る35手は全てz=6
@@ -828,25 +831,26 @@
 ## [research/experiments/cube-q5-seven-probe-20261022/probe.cpp](../../../research/experiments/cube-q5-seven-probe-20261022/probe.cpp)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (solver): 343点・6ワードmask・48対称性・遅延四点幾何のbounded exact solver
-## [research/experiments/cube-q5-seven-probe-20261022/README.md](../../../research/experiments/cube-q5-seven-probe-20261022/README.md)
-
-- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (log): 7立方の2石根・35第三手境界・増加予算probe・未検証範囲
 ## [research/experiments/cube-q5-seven-probe-20261022/regression.json](../../../research/experiments/cube-q5-seven-probe-20261022/regression.json)
 
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (data): 7立方上の104四点配置・35672追加候補の独立幾何比較と3立方全20二石軌道
+## [research/experiments/cube-q5-seven-tetra-20261023/README.md](../../../research/experiments/cube-q5-seven-tetra-20261023/README.md)
+
+- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): 非終端正四面体4石Pと4手終局で閉じない正三角形3石Nの独立全証明
+- [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (proof): 根・勝ち手・全証明書・独立検査の範囲と再現
 ## [research/experiments/cube-q5-seven-tetra-20261023/manifest.json](../../../research/experiments/cube-q5-seven-tetra-20261023/manifest.json)
 
 - [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (manifest): 四石全証明書・三石証明の再生成・private snapshotのSHA-256
 ## [research/experiments/cube-q5-seven-tetra-20261023/parent-three-verified.json](../../../research/experiments/cube-q5-seven-tetra-20261023/parent-three-verified.json)
 
 - [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (data): 正三角形3石Nの337061局面を独立検査
-## [research/experiments/cube-q5-seven-tetra-20261023/README.md](../../../research/experiments/cube-q5-seven-tetra-20261023/README.md)
-
-- [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) (proof): 非終端正四面体4石Pと4手終局で閉じない正三角形3石Nの独立全証明
-- [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (proof): 根・勝ち手・全証明書・独立検査の範囲と再現
 ## [research/experiments/cube-q5-seven-tetra-20261023/stage-2-verified.json](../../../research/experiments/cube-q5-seven-tetra-20261023/stage-2-verified.json)
 
 - [K0523](../items/K0523-seven-cube-tetrahedron-p-and-triangle-n.md) (data): 正四面体4石Pの337060局面・全28五石応手軌道を独立検査
+## [research/experiments/cube-q5-weak-20261022/README.md](../../../research/experiments/cube-q5-weak-20261022/README.md)
+
+- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (proof): 全偶数辺長と偶数辺を持つ直方格子の構成的鏡映証明
+- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (proof): 5×5×5のルール・座標・証明書形式・全初手被覆・再現手順
 ## [research/experiments/cube-q5-weak-20261022/audit_reflection.cpp](../../../research/experiments/cube-q5-weak-20261022/audit_reflection.cpp)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (verifier): 64点までの全対称安全局面と全合法鏡映応手の整数検査
@@ -859,10 +863,6 @@
 ## [research/experiments/cube-q5-weak-20261022/play.py](../../../research/experiments/cube-q5-weak-20261022/play.py)
 
 - [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (source): 圧縮証明書に収録された局面から実盤上の必勝応手を取り出す
-## [research/experiments/cube-q5-weak-20261022/README.md](../../../research/experiments/cube-q5-weak-20261022/README.md)
-
-- [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (proof): 全偶数辺長と偶数辺を持つ直方格子の構成的鏡映証明
-- [K0503](../items/K0503-five-cube-q5-certified-weak-solution.md) (proof): 5×5×5のルール・座標・証明書形式・全初手被覆・再現手順
 ## [research/experiments/cube-q5-weak-20261022/reflection-4-independent.json](../../../research/experiments/cube-q5-weak-20261022/reflection-4-independent.json)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (data): 独立Python行列式検査による全局面・応手・終端頻度の一致
@@ -962,15 +962,15 @@
 ## [research/experiments/fact-discovery/output/fact_kmin_n7_safe.json](../../../research/experiments/fact-discovery/output/fact_kmin_n7_safe.json)
 
 - [K0031](../items/K0031-n7-minimum-maximal-size.md) (data): 安全証人と完了探索の記録
+## [research/experiments/fastlane-five-edge-nimber-seven-20261019/README.md](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/README.md)
+
+- [K0439](../items/K0439-five-edge-grundy-seven.md) (proof): 5辺の値7、4点一様5辺の値6、任意hへの直和拡張と限界
 ## [research/experiments/fastlane-five-edge-nimber-seven-20261019/crosscheck.py](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/crosscheck.py)
 
 - [K0439](../items/K0439-five-edge-grundy-seven.md) (verifier): 全4864部分集合についてPythonと独立C++の状態表を完全照合
 ## [research/experiments/fastlane-five-edge-nimber-seven-20261019/independent.cpp](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/independent.cpp)
 
 - [K0439](../items/K0439-five-edge-grundy-seven.md) (verifier): 未占有集合を用いた独立C++再帰検算
-## [research/experiments/fastlane-five-edge-nimber-seven-20261019/README.md](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/README.md)
-
-- [K0439](../items/K0439-five-edge-grundy-seven.md) (proof): 5辺の値7、4点一様5辺の値6、任意hへの直和拡張と限界
 ## [research/experiments/fastlane-five-edge-nimber-seven-20261019/result.json](../../../research/experiments/fastlane-five-edge-nimber-seven-20261019/result.json)
 
 - [K0439](../items/K0439-five-edge-grundy-seven.md) (data): 全局面のハッシュとGrundy分布
@@ -989,15 +989,15 @@
 ## [research/experiments/fastlane-four-edge-20261019/scripts/independent.cpp](../../../research/experiments/fastlane-four-edge-20261019/scripts/independent.cpp)
 
 - [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): 独立した全占有集合mexによる全37,592種類の照合
+## [research/experiments/fastlane-four-edge-geometry-20261019/README.md](../../../research/experiments/fastlane-four-edge-geometry-20261019/README.md)
+
+- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (proof): 11点の明示的整数座標、4本の円方程式、有限完全列挙の説明
 ## [research/experiments/fastlane-four-edge-geometry-20261019/independent.cpp](../../../research/experiments/fastlane-four-edge-geometry-20261019/independent.cpp)
 
 - [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 独立の直線・円生成と全局面mex検査
 ## [research/experiments/fastlane-four-edge-geometry-20261019/output.json](../../../research/experiments/fastlane-four-edge-geometry-20261019/output.json)
 
 - [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (data): 4禁止組、1635安全局面、Grundy値分布と全初手
-## [research/experiments/fastlane-four-edge-geometry-20261019/README.md](../../../research/experiments/fastlane-four-edge-geometry-20261019/README.md)
-
-- [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (proof): 11点の明示的整数座標、4本の円方程式、有限完全列挙の説明
 ## [research/experiments/fastlane-four-edge-geometry-20261019/verify.py](../../../research/experiments/fastlane-four-edge-geometry-20261019/verify.py)
 
 - [K0453](../items/K0453-geometric-four-q4-grundy-five.md) (verifier): 全330組の整数行列式と全2048集合のmex検査
@@ -1073,10 +1073,6 @@
 ## [research/experiments/fixed-width/output/prime_avoidance_check.txt](../../../research/experiments/fixed-width/output/prime_avoidance_check.txt)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (data): 6個の素数個数・因数回避の有限確認
-## [research/experiments/fixed-width/output/q_point_fixed_width.json](../../../research/experiments/fixed-width/output/q_point_fixed_width.json)
-
-- [K0024](../items/K0024-fixed-width-q-point-threshold.md) (data): 命題・対象範囲・根拠を記した出典
-- [K0070](../items/K0070-width-three-q6-stabilization.md) (data): 有限長の検算
 ## [research/experiments/fixed-width/output/q2w_boundary_structure.json](../../../research/experiments/fixed-width/output/q2w_boundary_structure.json)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (data): mod9全剰余とlifted determinant照合
@@ -1087,15 +1083,25 @@
 
 - [K0071](../items/K0071-width-three-q5-exact-stabilization.md) (data): m=12..40の完全排除集計
 - [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (data): m=12..40の全候補集計
-## [research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv](../../../research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv)
-
-- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (data): 独立検証用13有理数代表と期待値
 ## [research/experiments/fixed-width/output/q36_real_row_gap_m5.json](../../../research/experiments/fixed-width/output/q36_real_row_gap_m5.json)
 
 - [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (data): 13場合の円・Grundy・極大配置の完全結果
+## [research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv](../../../research/experiments/fixed-width/output/q36_real_row_gap_m5_cases.tsv)
+
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (data): 独立検証用13有理数代表と期待値
 ## [research/experiments/fixed-width/output/q36_three_row_onset_audit_20261020.csv](../../../research/experiments/fixed-width/output/q36_three_row_onset_audit_20261020.csv)
 
 - [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) (data): h=1..60、m=2h+1と2h+2の120盤の独立一致結果
+## [research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt](../../../research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt)
+
+- [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (data): 22法での座標合同監査
+## [research/experiments/fixed-width/output/q48-mod27-results-20261015.json](../../../research/experiments/fixed-width/output/q48-mod27-results-20261015.json)
+
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (data): 有限列挙の型数と実行結果
+## [research/experiments/fixed-width/output/q48-patterns-B3000000-20261015.csv](../../../research/experiments/fixed-width/output/q48-patterns-B3000000-20261015.csv)
+
+- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 最大弦長300万の有限列挙結果
+- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (data): 最大弦長300万までの11型
 ## [research/experiments/fixed-width/output/q48_accumulation_loglog_20261016.txt](../../../research/experiments/fixed-width/output/q48_accumulation_loglog_20261016.txt)
 
 - [K0447](../items/K0447-four-row-q8-infinite-slope-accumulation-loglog.md) (data): 独立検算の出力
@@ -1160,28 +1166,22 @@
 ## [research/experiments/fixed-width/output/q48_slope_reduction_congruence_20261015.txt](../../../research/experiments/fixed-width/output/q48_slope_reduction_congruence_20261015.txt)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (data): 法保存と逆変換の有限監査結果
-## [research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt](../../../research/experiments/fixed-width/output/q48-local-solubility-audit-20261015.txt)
-
-- [K0428](../items/K0428-four-row-q8-mod27-type-locally-soluble.md) (data): 22法での座標合同監査
-## [research/experiments/fixed-width/output/q48-mod27-results-20261015.json](../../../research/experiments/fixed-width/output/q48-mod27-results-20261015.json)
-
-- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (data): 有限列挙の型数と実行結果
-## [research/experiments/fixed-width/output/q48-patterns-B3000000-20261015.csv](../../../research/experiments/fixed-width/output/q48-patterns-B3000000-20261015.csv)
-
-- [K0317](../items/K0317-four-row-q8-pell-circle-family.md) (data): 最大弦長300万の有限列挙結果
-- [K0427](../items/K0427-four-row-q8-mod27-chord-classes.md) (data): 最大弦長300万までの11型
 ## [research/experiments/fixed-width/output/q59_no_nine_circle_audit_20261016.txt](../../../research/experiments/fixed-width/output/q59_no_nine_circle_audit_20261016.txt)
 
 - [K0484](../items/K0484-width-five-q9-all-lengths.md) (data): 六種類の盤長で全円の点数を直接確認した有限結果
+## [research/experiments/fixed-width/output/q_point_fixed_width.json](../../../research/experiments/fixed-width/output/q_point_fixed_width.json)
+
+- [K0024](../items/K0024-fixed-width-q-point-threshold.md) (data): 命題・対象範囲・根拠を記した出典
+- [K0070](../items/K0070-width-three-q6-stabilization.md) (data): 有限長の検算
 ## [research/experiments/fixed-width/output/quantitative_density_verification.txt](../../../research/experiments/fixed-width/output/quantitative_density_verification.txt)
 
 - [K0370](../items/K0370-quantitative-uniform-circle-density.md) (data): 局所剰余19099条件とCRT4条件の照合ログ
-## [research/experiments/fixed-width/output/scaled_circle_gcd_verification_cpp.txt](../../../research/experiments/fixed-width/output/scaled_circle_gcd_verification_cpp.txt)
-
-- [K0410](../items/K0410-scaled-circle-gcd-family.md) (data): C++検査
 ## [research/experiments/fixed-width/output/scaled_circle_gcd_verification.json](../../../research/experiments/fixed-width/output/scaled_circle_gcd_verification.json)
 
 - [K0410](../items/K0410-scaled-circle-gcd-family.md) (data): Python検査
+## [research/experiments/fixed-width/output/scaled_circle_gcd_verification_cpp.txt](../../../research/experiments/fixed-width/output/scaled_circle_gcd_verification_cpp.txt)
+
+- [K0410](../items/K0410-scaled-circle-gcd-family.md) (data): C++検査
 ## [research/experiments/fixed-width/output/spaced-five-row-q9-audit-20261016.txt](../../../research/experiments/fixed-width/output/spaced-five-row-q9-audit-20261016.txt)
 
 - [K0464](../items/K0464-spaced-five-row-q9-mod9.md) (data): 剰余検査と有限盤完全列挙の出力
@@ -1335,9 +1335,6 @@
 ## [research/experiments/fixed-width/reports/q36-three-row-onset-two-squares-20261020.md](../../../research/experiments/fixed-width/reports/q36-three-row-onset-two-squares-20261020.md)
 
 - [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) (proof): 三行の弦長二階差による全称証明と二平方和への4対1対応
-## [research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md](../../../research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md)
-
-- [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (proof): 有限型分類と相対水平移動の全列挙による境界証明
 ## [research/experiments/fixed-width/reports/q48-all-nonlocal-pell-20261015.md](../../../research/experiments/fixed-width/reports/q48-all-nonlocal-pell-20261015.md)
 
 - [K0431](../items/K0431-four-row-q8-every-nonlocal-circle-pell-extension.md) (proof): ノルム8の平方判別式例外排除と無限Pell延長
@@ -1416,6 +1413,9 @@
 ## [research/experiments/fixed-width/reports/q48-slope-reduction-congruence-20261015.md](../../../research/experiments/fixed-width/reports/q48-slope-reduction-congruence-20261015.md)
 
 - [K0432](../items/K0432-four-row-q8-slope-finite-criterion-and-congruence.md) (proof): 厳密傾き下界、有限必要十分判定、合同保存と固定傾き漸近
+## [research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md](../../../research/experiments/fixed-width/reports/q48_triple_union_2000000_20261015.md)
+
+- [K0430](../items/K0430-four-row-q8-three-circle-union-finite-bound.md) (proof): 有限型分類と相対水平移動の全列挙による境界証明
 ## [research/experiments/fixed-width/reports/q59-five-row-nine-point-exact-20261016.md](../../../research/experiments/fixed-width/reports/q59-five-row-nine-point-exact-20261016.md)
 
 - [K0484](../items/K0484-width-five-q9-all-lengths.md) (proof): 五連続行の法9障害と全長のGrundy・真の閾値の証明
@@ -1482,15 +1482,12 @@
 ## [research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py](../../../research/experiments/fixed-width/scripts/mod7-mod9-mod11-mod19-mod23-half-density.py)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 2独立方式で79651候補k行部分集合を検証し全排除
-## [research/experiments/fixed-width/scripts/mod9_anisotropic_rows_20261016.py](../../../research/experiments/fixed-width/scripts/mod9_anisotropic_rows_20261016.py)
-
-- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (verifier): 81組の完全剰余検査と二通りの計算式の照合
 ## [research/experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py](../../../research/experiments/fixed-width/scripts/mod9-mod11-mod19-mod23-small-width-bounds.py)
 
 - [K0072](../items/K0072-mod9-integer-row-separation.md) (verifier): 独立2方式で合計3038のk行部分集合の必要合同条件を全排除
-## [research/experiments/fixed-width/scripts/q_point_fixed_width.py](../../../research/experiments/fixed-width/scripts/q_point_fixed_width.py)
+## [research/experiments/fixed-width/scripts/mod9_anisotropic_rows_20261016.py](../../../research/experiments/fixed-width/scripts/mod9_anisotropic_rows_20261016.py)
 
-- [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
+- [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (verifier): 81組の完全剰余検査と二通りの計算式の照合
 ## [research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp](../../../research/experiments/fixed-width/scripts/q34_exceptional_audit.cpp)
 
 - [K0351](../items/K0351-width-three-q4-exact-stabilization.md) (verifier): 短い終局・例外下方閉包・mex遷移の独立監査
@@ -1506,12 +1503,12 @@
 ## [research/experiments/fixed-width/scripts/q35_support_exclusion.cpp](../../../research/experiments/fixed-width/scripts/q35_support_exclusion.cpp)
 
 - [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) (solver): 外部4点集合を全列挙する完全排除
-## [research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp](../../../research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp)
-
-- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (verifier): 全6点組の4×4整数行列式を使う独立円検査とmex再帰
 ## [research/experiments/fixed-width/scripts/q36_real_row_gap_m5.py](../../../research/experiments/fixed-width/scripts/q36_real_row_gap_m5.py)
 
 - [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (verifier): 弦和・積に基づく場合生成と15点全局面のmex再帰
+## [research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp](../../../research/experiments/fixed-width/scripts/q36_real_row_gap_m5_independent.cpp)
+
+- [K0468](../items/K0468-three-by-five-q6-real-row-gap-classification.md) (verifier): 全6点組の4×4整数行列式を使う独立円検査とmex再帰
 ## [research/experiments/fixed-width/scripts/q36_three_row_onset_arithmetic_20261020.py](../../../research/experiments/fixed-width/scripts/q36_three_row_onset_arithmetic_20261020.py)
 
 - [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md) (verifier): 弦長整数方程式を用いた別方式の完全計数
@@ -1617,15 +1614,18 @@
 ## [research/experiments/fixed-width/scripts/q59_no_nine_circle_verify_20261016.py](../../../research/experiments/fixed-width/scripts/q59_no_nine_circle_verify_20261016.py)
 
 - [K0484](../items/K0484-width-five-q9-all-lengths.md) (verifier): 法9全16初期剰余と独立整数行列式円生成の監査
+## [research/experiments/fixed-width/scripts/q_point_fixed_width.py](../../../research/experiments/fixed-width/scripts/q_point_fixed_width.py)
+
+- [K0024](../items/K0024-fixed-width-q-point-threshold.md) (verifier): 命題・対象範囲・根拠を記した出典
 ## [research/experiments/fixed-width/scripts/run_nonprimitive_rows_2_32.py](../../../research/experiments/fixed-width/scripts/run_nonprimitive_rows_2_32.py)
 
 - [K0383](../items/K0383-nonprimitive-double-row-min-width-2-32.md) (verifier): 二方式のC++合同マスク照合
-## [research/experiments/fixed-width/scripts/symmetric_five_columns_q6_independent.cpp](../../../research/experiments/fixed-width/scripts/symmetric_five_columns_q6_independent.cpp)
-
-- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) (verifier): 整数持ち上げ行列式による全5005六点組の独立検査と全局面計算
 ## [research/experiments/fixed-width/scripts/symmetric_five_columns_q6.py](../../../research/experiments/fixed-width/scripts/symmetric_five_columns_q6.py)
 
 - [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) (verifier): 二点和の式と全15点部分集合のGrundy後退計算
+## [research/experiments/fixed-width/scripts/symmetric_five_columns_q6_independent.cpp](../../../research/experiments/fixed-width/scripts/symmetric_five_columns_q6_independent.cpp)
+
+- [K0466](../items/K0466-symmetric-five-column-q6-rigidity.md) (verifier): 整数持ち上げ行列式による全5005六点組の独立検査と全局面計算
 ## [research/experiments/fixed-width/scripts/tangent_mod16_separation_20261016.py](../../../research/experiments/fixed-width/scripts/tangent_mod16_separation_20261016.py)
 
 - [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md) (verifier): 法16の独立2実装と有限格子の三点円直接列挙
@@ -1814,12 +1814,12 @@
 ## [research/experiments/game-structure/path-periodicity-20261019/proof.md](../../../research/experiments/game-structure/path-periodicity-20261019/proof.md)
 
 - [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (proof): 無限周期延長補題と最大次数2の鋭い上界・最小達成頂点数
-## [research/experiments/game-structure/path-periodicity-20261019/verify_path_period_independent.cpp](../../../research/experiments/game-structure/path-periodicity-20261019/verify_path_period_independent.cpp)
-
-- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (verifier): 別方式の道・閉路再帰とBellman–Ford型最短路
 ## [research/experiments/game-structure/path-periodicity-20261019/verify_path_period.py](../../../research/experiments/game-structure/path-periodicity-20261019/verify_path_period.py)
 
 - [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (verifier): 周期延長補題の88個の有限基底、全マスク再帰、最短路
+## [research/experiments/game-structure/path-periodicity-20261019/verify_path_period_independent.cpp](../../../research/experiments/game-structure/path-periodicity-20261019/verify_path_period_independent.cpp)
+
+- [K0460](../items/K0460-path-cycle-grundy-periodicity.md) (verifier): 別方式の道・閉路再帰とBellman–Ford型最短路
 ## [research/experiments/game-structure/reports/game-structure-20261003-extra.md](../../../research/experiments/game-structure/reports/game-structure-20261003-extra.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (source): 6合法点での最初の例外分類
@@ -1904,24 +1904,24 @@
 ## [research/experiments/game-structure/scripts/verify_two_edges.py](../../../research/experiments/game-structure/scripts/verify_two_edges.py)
 
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): 占有subsetによる独立した有限完全mex検査
+## [research/experiments/game-structure/tree-grundy-minima-20261020/README.md](../../../research/experiments/game-structure/tree-grundy-minima-20261020/README.md)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (proof): 全非同型木列挙の完全性論証と計算結果・適用限界
 ## [research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_independent.json](../../../research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_independent.json)
 
 - [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (data): 全木Grundy分布と達成例
 ## [research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_networkx.json](../../../research/experiments/game-structure/tree-grundy-minima-20261020/output/tree_minima_networkx.json)
 
 - [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (data): 独立列挙・独立再帰の全分布
-## [research/experiments/game-structure/tree-grundy-minima-20261020/README.md](../../../research/experiments/game-structure/tree-grundy-minima-20261020/README.md)
-
-- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (proof): 全非同型木列挙の完全性論証と計算結果・適用限界
 ## [research/experiments/game-structure/tree-grundy-minima-20261020/tree_occupied_mex.cpp](../../../research/experiments/game-structure/tree-grundy-minima-20261020/tree_occupied_mex.cpp)
 
 - [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (verifier): C++占有点集合mex再帰
-## [research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima_networkx.py](../../../research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima_networkx.py)
-
-- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (verifier): 独立NetworkX木列挙とPython残存誘導グラフmex
 ## [research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima.py](../../../research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima.py)
 
 - [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (verifier): 葉付加とAHU正規形による列挙器
+## [research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima_networkx.py](../../../research/experiments/game-structure/tree-grundy-minima-20261020/verify_tree_minima_networkx.py)
+
+- [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (verifier): 独立NetworkX木列挙とPython残存誘導グラフmex
 ## [research/experiments/general-q-local-cover-20261005/output/audit.json](../../../research/experiments/general-q-local-cover-20261005/output/audit.json)
 
 - [K0349](../items/K0349-q-point-local-saturated-curve-bounds.md) (data): 4×3全4096部分集合q4..8の監査と13個の整数等号証人
@@ -1946,12 +1946,12 @@
 ## [research/experiments/geometry-frontier-followup-20261005/audit.json](../../../research/experiments/geometry-frontier-followup-20261005/audit.json)
 
 - [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) (data): r≤8の整数証人・削除完全検査、r≤6全436848安全局面の完全mex検査
-## [research/experiments/geometry-frontier-followup-20261005/graph_cover_reduction.md](../../../research/experiments/geometry-frontier-followup-20261005/graph_cover_reduction.md)
-
-- [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) (proof): 任意simple graphからの全称幾何構成、ρ=τ(G)、多項式座標長、NP所属の証明
 ## [research/experiments/geometry-frontier-followup-20261005/graph-cover-audit.json](../../../research/experiments/geometry-frontier-followup-20261005/graph-cover-audit.json)
 
 - [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) (data): n≤5の全1100graph、101整数盤の全19842四点・10004三点の独立検査
+## [research/experiments/geometry-frontier-followup-20261005/graph_cover_reduction.md](../../../research/experiments/geometry-frontier-followup-20261005/graph_cover_reduction.md)
+
+- [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) (proof): 任意simple graphからの全称幾何構成、ρ=τ(G)、多項式座標長、NP所属の証明
 ## [research/experiments/geometry-frontier-followup-20261005/proof.md](../../../research/experiments/geometry-frontier-followup-20261005/proof.md)
 
 - [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md) (proof): 整数三次行列式・反転・全rの故障耐性と全Grundyの数学的証明
@@ -1961,12 +1961,12 @@
 ## [research/experiments/geometry-frontier-followup-20261005/verify_graph_reduction.py](../../../research/experiments/geometry-frontier-followup-20261005/verify_graph_reduction.py)
 
 - [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md) (verifier): 全小graphの零和辺列挙と別の最小横断・vertex cover完全探索、整数幾何の二重検査
-## [research/experiments/geometry/multiline-chord-20261010/audit.log](../../../research/experiments/geometry/multiline-chord-20261010/audit.log)
-
-- [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (data): 有限検査
 ## [research/experiments/geometry/multiline-chord-20261010/README.md](../../../research/experiments/geometry/multiline-chord-20261010/README.md)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (proof): 任意行数の同時達成証明
+## [research/experiments/geometry/multiline-chord-20261010/audit.log](../../../research/experiments/geometry/multiline-chord-20261010/audit.log)
+
+- [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (data): 有限検査
 ## [research/experiments/geometry/multiline-chord-20261010/verify.py](../../../research/experiments/geometry/multiline-chord-20261010/verify.py)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (verifier): 複数行構成監査
@@ -1997,12 +1997,12 @@
 ## [research/experiments/geometry/output/enclosed_chord_bound_audit_20261011.txt](../../../research/experiments/geometry/output/enclosed_chord_bound_audit_20261011.txt)
 
 - [K0411](../items/K0411-central-chord-enclosed-length-bound.md) (data): 有限候補監査
-## [research/experiments/geometry/output/forbidden_overlap_moments_20261011.json](../../../research/experiments/geometry/output/forbidden_overlap_moments_20261011.json)
-
-- [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md) (data): 実行済み数値
 ## [research/experiments/geometry/output/forbidden-four-overlap-census-20261011.json](../../../research/experiments/geometry/output/forbidden-four-overlap-census-20261011.json)
 
 - [K0398](../items/K0398-forbidden-four-overlap-spectrum.md) (data): 2×2〜11×11の全交差分布と曲線束スペクトル
+## [research/experiments/geometry/output/forbidden_overlap_moments_20261011.json](../../../research/experiments/geometry/output/forbidden_overlap_moments_20261011.json)
+
+- [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md) (data): 実行済み数値
 ## [research/experiments/geometry/output/geometry_20261003_extended.json](../../../research/experiments/geometry/output/geometry_20261003_extended.json)
 
 - [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (data): 幅1..15の鋭い極値と達成例
@@ -2012,21 +2012,21 @@
 ## [research/experiments/geometry/output/high_q_box_521_cases.txt](../../../research/experiments/geometry/output/high_q_box_521_cases.txt)
 
 - [K0396](../items/K0396-d-dimensional-box-collinear-q-formulas.md) (data): 521条件の結果
-## [research/experiments/geometry/output/lattice_three_circles_q6_independent.txt](../../../research/experiments/geometry/output/lattice_three_circles_q6_independent.txt)
-
-- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (data): C++の独立検算結果
 ## [research/experiments/geometry/output/lattice_three_circles_q6.json](../../../research/experiments/geometry/output/lattice_three_circles_q6.json)
 
 - [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (data): Pythonの有限完全列挙結果
+## [research/experiments/geometry/output/lattice_three_circles_q6_independent.txt](../../../research/experiments/geometry/output/lattice_three_circles_q6_independent.txt)
+
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (data): C++の独立検算結果
 ## [research/experiments/geometry/output/n11-q12-terminal-extremes-20261012.txt](../../../research/experiments/geometry/output/n11-q12-terminal-extremes-20261012.txt)
 
 - [K0401](../items/K0401-n11-q12-terminal-extrema.md) (data): 検証器の実行結果
-## [research/experiments/geometry/output/outer_211_norm_audit_20261011.txt](../../../research/experiments/geometry/output/outer_211_norm_audit_20261011.txt)
-
-- [K0409](../items/K0409-outer-211-chord-length-density-zero.md) (data): 3000条件の監査
 ## [research/experiments/geometry/output/outer-211-two-point-chord-density-20261011.txt](../../../research/experiments/geometry/output/outer-211-two-point-chord-density-20261011.txt)
 
 - [K0409](../items/K0409-outer-211-chord-length-density-zero.md) (data): 監査記録
+## [research/experiments/geometry/output/outer_211_norm_audit_20261011.txt](../../../research/experiments/geometry/output/outer_211_norm_audit_20261011.txt)
+
+- [K0409](../items/K0409-outer-211-chord-length-density-zero.md) (data): 3000条件の監査
 ## [research/experiments/geometry/output/primitive-line-length-histogram-20261011.txt](../../../research/experiments/geometry/output/primitive-line-length-histogram-20261011.txt)
 
 - [K0396](../items/K0396-d-dimensional-box-collinear-q-formulas.md) (data): 監査出力
@@ -2087,16 +2087,16 @@
 ## [research/experiments/geometry/reports/forbidden-q-incidence-moments-20261011.md](../../../research/experiments/geometry/reports/forbidden-q-incidence-moments-20261011.md)
 
 - [K0400](../items/K0400-forbidden-q-overlap-incidence-inversion.md) (proof): 二項反転と支持曲線の一意性に基づく全称証明
-## [research/experiments/geometry/reports/geometry_20261003_extended.md](../../../research/experiments/geometry/reports/geometry_20261003_extended.md)
-
-- [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (proof): 幅16定理と最小性
-- [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母5・8の点数公式と閾値
 ## [research/experiments/geometry/reports/geometry-20261003.md](../../../research/experiments/geometry/reports/geometry-20261003.md)
 
 - [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) (proof): §10で平方完成ノルム上界を2(n-1)^6へ改善
 - [K0147](../items/K0147-sublinear-minimum-maximal-open.md) (proof): §10の整数平方完成ノルム上界2(n-1)^6
 - [K0148](../items/K0148-minimum-maximal-exponent-two-thirds-open.md) (proof): §10の整数平方完成ノルム上界2(n-1)^6
 - [K0307](../items/K0307-square-circle-maxima-through-112.md) (source): 全中心有限盤極値の結果
+## [research/experiments/geometry/reports/geometry_20261003_extended.md](../../../research/experiments/geometry/reports/geometry_20261003_extended.md)
+
+- [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) (proof): 幅16定理と最小性
+- [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母5・8の点数公式と閾値
 ## [research/experiments/geometry/reports/lattice-three-circles-q6-20261018.md](../../../research/experiments/geometry/reports/lattice-three-circles-q6-20261018.md)
 
 - [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (proof): 8通りの水平弦の完全分類による存在・排他証明
@@ -2133,12 +2133,12 @@
 ## [research/experiments/geometry/reports/row22-exact-count-20261011.md](../../../research/experiments/geometry/reports/row22-exact-count-20261011.md)
 
 - [K0393](../items/K0393-row-two-two-circle-count.md) (proof): 任意の行点集合への全称証明と11×11の行型別有限完全列挙
-## [research/experiments/geometry/reports/theory_audit_20261003_extra.md](../../../research/experiments/geometry/reports/theory_audit_20261003_extra.md)
-
-- [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母6の完全点数公式と最小半径
 ## [research/experiments/geometry/reports/theory-audit-20261003.md](../../../research/experiments/geometry/reports/theory-audit-20261003.md)
 
 - [K0058](../items/K0058-fk-circle-maxima-scope-audited.md) (source): 後続の全中心n=2..112完全計算は旧走査とは別の根拠
+## [research/experiments/geometry/reports/theory_audit_20261003_extra.md](../../../research/experiments/geometry/reports/theory_audit_20261003_extra.md)
+
+- [K0308](../items/K0308-circle-denominator-5-6-8-formulas.md) (proof): 分母6の完全点数公式と最小半径
 ## [research/experiments/geometry/reports/three-line-211-binary-forms-20261011.md](../../../research/experiments/geometry/reports/three-line-211-binary-forms-20261011.md)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (proof): 任意三行間隔の二次形式分類
@@ -2172,12 +2172,12 @@
 ## [research/experiments/geometry/scripts/geometry_20261003_scale.py](../../../research/experiments/geometry/scripts/geometry_20261003_scale.py)
 
 - [K0307](../items/K0307-square-circle-maxima-through-112.md) (verifier): 全中心・全半径の列挙
-## [research/experiments/geometry/scripts/lattice_three_circles_q6_independent.cpp](../../../research/experiments/geometry/scripts/lattice_three_circles_q6_independent.cpp)
-
-- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (verifier): 独立した整数行列式検査とGrundy計算
 ## [research/experiments/geometry/scripts/lattice_three_circles_q6.py](../../../research/experiments/geometry/scripts/lattice_three_circles_q6.py)
 
 - [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (verifier): 有理数円係数による全候補検査と有限Grundy計算
+## [research/experiments/geometry/scripts/lattice_three_circles_q6_independent.cpp](../../../research/experiments/geometry/scripts/lattice_three_circles_q6_independent.cpp)
+
+- [K0457](../items/K0457-lattice-three-parallel-four-q6-circles.md) (verifier): 独立した整数行列式検査とGrundy計算
 ## [research/experiments/geometry/scripts/quarter_turn_mod4_verify.cpp](../../../research/experiments/geometry/scripts/quarter_turn_mod4_verify.cpp)
 
 - [K0395](../items/K0395-quarter-turn-forbidden-quadruples-mod4.md) (verifier): n<=11と回転対称部分集合の独立整数行列式検査
@@ -2366,15 +2366,15 @@
 
 - [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
 - [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
+## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
+
+- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）
 ## [research/experiments/n10-nine-stone-sat-20261016/output/audit-nine_k9.txt](../../../research/experiments/n10-nine-stone-sat-20261016/output/audit-nine_k9.txt)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (data): 全487チャンクの連鎖・完全性・found=false の機械監査
 ## [research/experiments/n10-nine-stone-sat-20261016/output/manifest_nine_k9.json](../../../research/experiments/n10-nine-stone-sat-20261016/output/manifest_nine_k9.json)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (manifest): 全チャンクのsha256・ノード数・resume/timeout接頭部
-## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
-
-- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）
 ## [research/experiments/n10-nine-stone-sat-20261016/scripts/nine_stone_exact_search.cpp](../../../research/experiments/n10-nine-stone-sat-20261016/scripts/nine_stone_exact_search.cpp)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (solver): 厳密探索（D4第一石還元・辞書式再開・round56共通の枝刈り）
@@ -2384,6 +2384,9 @@
 ## [research/experiments/n11-adaptive-verify-20261013/output/adaptive10m-manifest.json](../../../research/experiments/n11-adaptive-verify-20261013/output/adaptive10m-manifest.json)
 
 - [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 126899 LOSS・144095 WINの10M探索記録
+## [research/experiments/n11-boundary-recovery-20261006/README.md](../../../research/experiments/n11-boundary-recovery-20261006/README.md)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 回収範囲、手順、結論と限界
 ## [research/experiments/n11-boundary-recovery-20261006/output/all-saved-s6-expanded-audit.json](../../../research/experiments/n11-boundary-recovery-20261006/output/all-saved-s6-expanded-audit.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): expanded 27-source audit with exact geometry checks and source scope
@@ -6379,9 +6382,6 @@
 ## [research/experiments/n11-boundary-recovery-20261006/output/shared-s6-summary.json](../../../research/experiments/n11-boundary-recovery-20261006/output/shared-s6-summary.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (data): s6 16件、親子relation 66件の監査要約
-## [research/experiments/n11-boundary-recovery-20261006/README.md](../../../research/experiments/n11-boundary-recovery-20261006/README.md)
-
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 回収範囲、手順、結論と限界
 ## [research/experiments/n11-boundary-recovery-20261006/reports/reply27-geometry-cache.md](../../../research/experiments/n11-boundary-recovery-20261006/reports/reply27-geometry-cache.md)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): optional geometry cache A/B timings, equality checks, and trust boundary
@@ -6400,12 +6400,12 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/audit_s5_raw_history.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/audit_s5_raw_history.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): checks exact replay history and same-budget UNKNOWN rows over fixed CSV search roots
-## [research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completed_probe_v2.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completed_probe_v2.py)
-
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Corrects subset-only all-LOSS collection and records the actual dispatch main commit.
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completed_probe.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completed_probe.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): Original collector retained unchanged to preserve hashes in previously committed source manifests.
+## [research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completed_probe_v2.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_completed_probe_v2.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Corrects subset-only all-LOSS collection and records the actual dispatch main commit.
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_probe.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/collect_dual_tight_probe.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): validates and collects per-root exact probe outputs into durable CSV and cache artifacts
@@ -6433,15 +6433,15 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_probe_preflight.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_probe_preflight.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Runs main's fail-closed audit binding against the exact scheduled target file.
+## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win.py)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): rebuilds the complete canonical s5 boundary and checks exact WIN witness parent incidence
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win_from_s6.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win_from_s6.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): independently rebuilds s4, s5, and s6 boundaries for an s6-derived exact s5 WIN
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win_v2.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win_v2.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Backward-compatible geometry audit for both collector source-manifest layouts.
-## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_dual_tight_s4_win.py)
-
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): rebuilds the complete canonical s5 boundary and checks exact WIN witness parent incidence
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_model_hard2_results.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_model_hard2_results.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 保存rawだけからcanonical boundary・parent incidence・replay legalityと親伝播を検査
@@ -6451,6 +6451,9 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible audit for reverse s6-to-s5 integration and combined saved-s6 source history.
+## [research/experiments/n11-central-reply-frontier-20261012/README.md](../../../research/experiments/n11-central-reply-frontier-20261012/README.md)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 19初手軌道の中央後手応手境界、代替応手順位、次のexact探索候補
 ## [research/experiments/n11-central-reply-frontier-20261012/output/cached-second-reply-ranking.json](../../../research/experiments/n11-central-reply-frontier-20261012/output/cached-second-reply-ranking.json)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 485 cache file検査、32 LOSS S4のK0414照合、19初手代表の中央・代替応手候補
@@ -6460,9 +6463,6 @@
 ## [research/experiments/n11-central-reply-frontier-20261012/output/small-s5-probe-readiness.json](../../../research/experiments/n11-central-reply-frontier-20261012/output/small-s5-probe-readiness.json)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 9,517 S4 classの現状と、少数S5探索で閉じられる候補の有無
-## [research/experiments/n11-central-reply-frontier-20261012/README.md](../../../research/experiments/n11-central-reply-frontier-20261012/README.md)
-
-- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 19初手軌道の中央後手応手境界、代替応手順位、次のexact探索候補
 ## [research/experiments/n11-central-reply-frontier-20261012/scripts/analyze_central_reply_frontier.py](../../../research/experiments/n11-central-reply-frontier-20261012/scripts/analyze_central_reply_frontier.py)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): 独立整数幾何で19二石rootのS3/S4境界・119手被覆・cache/raw再利用を再構成
@@ -6487,12 +6487,12 @@
 ## [research/experiments/n11-cover-duality/scripts/verify_cover.py](../../../research/experiments/n11-cover-duality/scripts/verify_cover.py)
 
 - [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (verifier): 別行列式・別D4実装による全safe s4 classと整数dualの独立検査
-## [research/experiments/n11-four-s8-joint-terminal52-20261023/dual-weights.tsv](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/dual-weights.tsv)
-
-- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (certificate): 25個の重み1と54個の重み1/2で合計52となる有理数双対下界
 ## [research/experiments/n11-four-s8-joint-terminal52-20261023/README.md](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/README.md)
 
 - [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (proof): 四根の完全境界、52葉と下界の定義、再現手順
+## [research/experiments/n11-four-s8-joint-terminal52-20261023/dual-weights.tsv](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/dual-weights.tsv)
+
+- [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (certificate): 25個の重み1と54個の重み1/2で合計52となる有理数双対下界
 ## [research/experiments/n11-four-s8-joint-terminal52-20261023/s10-all1017.tsv](../../../research/experiments/n11-four-s8-joint-terminal52-20261023/s10-all1017.tsv)
 
 - [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (data): 全1017合法10石候補の独立終局WIN780・LOSS237と再帰状態数
@@ -6533,6 +6533,9 @@
 ## [research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py](../../../research/experiments/n11-frontier-selection-20261005/scripts/verify_reply27_loss_class_cache.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 指定s4 classの全canonical s5境界がLOSSであることを検査
+## [research/experiments/n11-independent-exact-audit-20261010/README.md](../../../research/experiments/n11-independent-exact-audit-20261010/README.md)
+
+- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (source): 監査範囲、信頼境界、修正、再現手順
 ## [research/experiments/n11-independent-exact-audit-20261010/output/audit.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/audit.json)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (data): 現行cacheの全行照合と条件付きfrontier再現
@@ -6563,9 +6566,6 @@
 ## [research/experiments/n11-independent-exact-audit-20261010/output/withdrawal-dependencies.json](../../../research/experiments/n11-independent-exact-audit-20261010/output/withdrawal-dependencies.json)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (data): 撤回2 S5、混入48 cache、依存6 S4の完全一覧
-## [research/experiments/n11-independent-exact-audit-20261010/README.md](../../../research/experiments/n11-independent-exact-audit-20261010/README.md)
-
-- [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (source): 監査範囲、信頼境界、修正、再現手順
 ## [research/experiments/n11-independent-exact-audit-20261010/scripts/audit.py](../../../research/experiments/n11-independent-exact-audit-20261010/scripts/audit.py)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): 集計JSONを入力にせずtracked raw/cacheから証拠とfrontierを再構成
@@ -6578,6 +6578,9 @@
 ## [research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py](../../../research/experiments/n11-independent-exact-audit-20261010/tests/test_independent.py)
 
 - [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md) (verifier): S0..S121三値境界、小盤面全安全状態、誤極性mutant、証明書改変、loader隔離
+## [research/experiments/n11-joint-s5-proof-planning-20261012/README.md](../../../research/experiments/n11-joint-s5-proof-planning-20261012/README.md)
+
+- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (source): 共同最適化の結果・方法・再現・限界
 ## [research/experiments/n11-joint-s5-proof-planning-20261012/output/chosen-plans.json](../../../research/experiments/n11-joint-s5-proof-planning-20261012/output/chosen-plans.json)
 
 - [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (data): 個別・共同の選択S4と要求S5集合（楽観的計画）
@@ -6587,9 +6590,6 @@
 ## [research/experiments/n11-joint-s5-proof-planning-20261012/output/plan-verification.json](../../../research/experiments/n11-joint-s5-proof-planning-20261012/output/plan-verification.json)
 
 - [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (certificate): 独立再検証の通過記録（58.6秒、失敗0件）
-## [research/experiments/n11-joint-s5-proof-planning-20261012/README.md](../../../research/experiments/n11-joint-s5-proof-planning-20261012/README.md)
-
-- [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (source): 共同最適化の結果・方法・再現・限界
 ## [research/experiments/n11-joint-s5-proof-planning-20261012/scripts/build_dependency_graph.py](../../../research/experiments/n11-joint-s5-proof-planning-20261012/scripts/build_dependency_graph.py)
 
 - [K0417](../items/K0417-n11-joint-s5-proof-plan-19-roots.md) (source): 20 rootのS3/S4/S5依存グラフ構築（独立Board＋cache照合のみ）
@@ -6665,25 +6665,25 @@
 ## [research/experiments/n11-night-plan-update8-20261016/scripts/reuse_certificates.py](../../../research/experiments/n11-night-plan-update8-20261016/scripts/reuse_certificates.py)
 
 - [K0433](../items/K0433-n11-unclosable-replies-pool-shortage-and-certificate-reuse.md) (source): S6/S7/S8終局証明の逆向き全子完成伝播と再利用の算定
-## [research/experiments/n11-opening-orbits-weak-solve-20261012/output/opening-analysis.json](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/output/opening-analysis.json)
-
-- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 121初手全ての21軌道、各マス、status、sample response boundaries
 ## [research/experiments/n11-opening-orbits-weak-solve-20261012/README.md](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 軌道分類、応手境界、信頼範囲、再現手順
+## [research/experiments/n11-opening-orbits-weak-solve-20261012/output/opening-analysis.json](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/output/opening-analysis.json)
+
+- [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (data): 121初手全ての21軌道、各マス、status、sample response boundaries
 ## [research/experiments/n11-opening-orbits-weak-solve-20261012/scripts/analyze_openings.py](../../../research/experiments/n11-opening-orbits-weak-solve-20261012/scripts/analyze_openings.py)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): 独立BoardによるD4 orbitと限定応手boundaryの列挙
+## [research/experiments/n11-proof-compact-20261011/README.md](../../../research/experiments/n11-proof-compact-20261011/README.md)
+
+- [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (source): 有限結果、意味の範囲、再現手順
+- [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (source): 被覆、形式、性能測定、適用範囲、再現手順
 ## [research/experiments/n11-proof-compact-20261011/output/class-cover-minimization.json](../../../research/experiments/n11-proof-compact-20261011/output/class-cover-minimization.json)
 
 - [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (data): 入力hash、31 class incidence、唯一証人による最小性
 ## [research/experiments/n11-proof-compact-20261011/output/proof-compact-audit.json](../../../research/experiments/n11-proof-compact-20261011/output/proof-compact-audit.json)
 
 - [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (manifest): source/compact SHA-256、完全検証receipt集計、被覆と証人差し替え比較
-## [research/experiments/n11-proof-compact-20261011/README.md](../../../research/experiments/n11-proof-compact-20261011/README.md)
-
-- [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (source): 有限結果、意味の範囲、再現手順
-- [K0377](../items/K0377-n11-compact-witness-switch-proof-verification.md) (source): 被覆、形式、性能測定、適用範囲、再現手順
 ## [research/experiments/n11-proof-compact-20261011/scripts/analyze_class_cover.py](../../../research/experiments/n11-proof-compact-20261011/scripts/analyze_class_cover.py)
 
 - [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (verifier): D4向きと合法第四手からLOSS classの第三手被覆を再構成
@@ -6699,6 +6699,11 @@
 ## [research/experiments/n11-proof-compact-20261011/tests/test_class_cover.py](../../../research/experiments/n11-proof-compact-20261011/tests/test_class_cover.py)
 
 - [K0376](../items/K0376-n11-third-move-loss-class-cover-minimum.md) (verifier): 最新mainの117/119・残り{100,108}・最小31 classを回帰検査
+## [research/experiments/n11-proof-cost-comparison-20261012/README.md](../../../research/experiments/n11-proof-cost-comparison-20261012/README.md)
+
+- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (source): 証明戦略比較の全体記録（課題1〜5）
+- [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (source): 証明戦略比較の全体記録（課題1〜5）
+- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 証明戦略比較の全体記録（課題1〜5、主軸判断と実探索条件を含む）
 ## [research/experiments/n11-proof-cost-comparison-20261012/output/alt-reply-comparison.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/alt-reply-comparison.json)
 
 - [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (data): 個別UB/LB・再利用率・重なり率・joint-swap差分
@@ -6720,11 +6725,6 @@
 ## [research/experiments/n11-proof-cost-comparison-20261012/output/win-witness-masks.json](../../../research/experiments/n11-proof-cost-comparison-20261012/output/win-witness-masks.json)
 
 - [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (certificate): 検証済み証人1,945マスク（正準・未cache・被覆成立）
-## [research/experiments/n11-proof-cost-comparison-20261012/README.md](../../../research/experiments/n11-proof-cost-comparison-20261012/README.md)
-
-- [K0418](../items/K0418-n11-joint-plan-dual-certificate-integer-bound.md) (source): 証明戦略比較の全体記録（課題1〜5）
-- [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (source): 証明戦略比較の全体記録（課題1〜5）
-- [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (source): 証明戦略比較の全体記録（課題1〜5、主軸判断と実探索条件を含む）
 ## [research/experiments/n11-proof-cost-comparison-20261012/scripts/build_alt_roots.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/build_alt_roots.py)
 
 - [K0419](../items/K0419-n11-noncentral-replies-lose-to-central.md) (source): 中央と同一index空間の非中央6 root構築（39.1秒）
@@ -6752,6 +6752,9 @@
 ## [research/experiments/n11-proof-cost-comparison-20261012/scripts/win_witness_masks.py](../../../research/experiments/n11-proof-cost-comparison-20261012/scripts/win_witness_masks.py)
 
 - [K0420](../items/K0420-n11-firstmove-win-side-cost-and-strategy.md) (verifier): 証人被覆の幾何再検証（正準・未cache・被覆成立・総数一致）
+## [research/experiments/n11-proof-dag-engine-followup-20261011/README.md](../../../research/experiments/n11-proof-dag-engine-followup-20261011/README.md)
+
+- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (source): 実装、比較、性能・容量、限界、再現手順
 ## [research/experiments/n11-proof-dag-engine-followup-20261011/input/current-s4-resolved-s5-positions.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/input/current-s4-resolved-s5-positions.json)
 
 - [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (data): 最新mainに追加されたdirect LOSS三S5のrootとraw source provenance
@@ -6782,12 +6785,12 @@
 ## [research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-tt-current-s4-v1/summary.json](../../../research/experiments/n11-proof-dag-engine-followup-20261011/output/shared-tt-current-s4-v1/summary.json)
 
 - [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (data): 最新候補S4の三既知S5で行った共有TT・順序比較。改善は観測されない
-## [research/experiments/n11-proof-dag-engine-followup-20261011/README.md](../../../research/experiments/n11-proof-dag-engine-followup-20261011/README.md)
-
-- [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (source): 実装、比較、性能・容量、限界、再現手順
 ## [research/experiments/n11-proof-dag-engine-followup-20261011/scripts/verify_shared_bundle.py](../../../research/experiments/n11-proof-dag-engine-followup-20261011/scripts/verify_shared_bundle.py)
 
 - [K0375](../items/K0375-n11-shared-proof-dag-and-tt-order.md) (verifier): solverやTTを読まず共有証明DAGの幾何・遷移・AND/OR・閉包を検査
+## [research/experiments/n11-proof-dag-incremental-20261011/README.md](../../../research/experiments/n11-proof-dag-incremental-20261011/README.md)
+
+- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (source): 増分統合、最適化比較、資源測定、限界、再現手順
 ## [research/experiments/n11-proof-dag-incremental-20261011/output/integration-audit.json](../../../research/experiments/n11-proof-dag-incremental-20261011/output/integration-audit.json)
 
 - [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (manifest): 6根LOSSの独立検証receipt、certificate SHA、RSS・wall time・scratch監査
@@ -6795,9 +6798,6 @@
 ## [research/experiments/n11-proof-dag-incremental-20261011/output/integration-plan.json](../../../research/experiments/n11-proof-dag-incremental-20261011/output/integration-plan.json)
 
 - [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (data): 入力hash、候補union、greedy/local/exact比較、出力節点・辺数
-## [research/experiments/n11-proof-dag-incremental-20261011/README.md](../../../research/experiments/n11-proof-dag-incremental-20261011/README.md)
-
-- [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (source): 増分統合、最適化比較、資源測定、限界、再現手順
 ## [research/experiments/n11-proof-dag-incremental-20261011/scripts/benchmark_integration.py](../../../research/experiments/n11-proof-dag-incremental-20261011/scripts/benchmark_integration.py)
 
 - [K0378](../items/K0378-n11-six-root-incremental-shared-proof-verification.md) (verifier): 統合のwall time、process-tree peak RSS、出力・一時DB peak容量を測定
@@ -6849,6 +6849,9 @@
 ## [research/experiments/n11-reduction-followup-20261005/scripts/verify_sharpness.py](../../../research/experiments/n11-reduction-followup-20261005/scripts/verify_sharpness.py)
 
 - [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) (verifier): 閉再帰公式をrank2..64で検算し、小rankでは別全占有subsetとも照合
+## [research/experiments/n11-reply27-class-1297036692683751424-16-20261010/README.md](../../../research/experiments/n11-reply27-class-1297036692683751424-16-20261010/README.md)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 対象classとfollow-up S5 probeの実行手順・結果・信頼限界
 ## [research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/probe-history-at-start-main.json](../../../research/experiments/n11-reply27-class-1297036692683751424-16-20261010/input/probe-history-at-start-main.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 開始main commitから取得したprobe前半の2M/15M run履歴source
@@ -6906,9 +6909,10 @@
 ## [research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/saved-layer-final-target-after-followup.json](../../../research/experiments/n11-reply27-class-1297036692683751424-16-20261010/output/saved-layer-final-target-after-followup.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 対象boundaryのS6/S7交差。raw S6 16、cache S6 18、S7交差とS5派生結果は0
-## [research/experiments/n11-reply27-class-1297036692683751424-16-20261010/README.md](../../../research/experiments/n11-reply27-class-1297036692683751424-16-20261010/README.md)
+## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md)
 
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 対象classとfollow-up S5 probeの実行手順・結果・信頼限界
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): dual-tight候補S4の直近10 S5局面probeと監査結果
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 次のdual-tight S4 classを段階的に探索した3件のdirect S5 LOSSと現在境界
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/artifact-sha256.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): 継続実験のinput/raw/cache/監査/sourceのbyte数とSHA-256 inventory
@@ -6967,16 +6971,12 @@
 ## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/output/saved-layer-after-third-15m.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): 5366 canonical S6境界とS7を照合し、S5への派生結果なし
-## [research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md](../../../research/experiments/n11-reply27-next-class-1188950301626859520-536870912-20261010/README.md)
-
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): dual-tight候補S4の直近10 S5局面probeと監査結果
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 次のdual-tight S4 classを段階的に探索した3件のdirect S5 LOSSと現在境界
-## [research/experiments/n11-reply27-terminal-proof-priority-20261012/output/terminal-proof-priority.json](../../../research/experiments/n11-reply27-terminal-proof-priority-20261012/output/terminal-proof-priority.json)
-
-- [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (data): 2,995必要S5根、K0375/K0378重複、pilot候補とSHA-256
 ## [research/experiments/n11-reply27-terminal-proof-priority-20261012/README.md](../../../research/experiments/n11-reply27-terminal-proof-priority-20261012/README.md)
 
 - [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (source): 依存分析、asset再利用、pilot優先順位、限界
+## [research/experiments/n11-reply27-terminal-proof-priority-20261012/output/terminal-proof-priority.json](../../../research/experiments/n11-reply27-terminal-proof-priority-20261012/output/terminal-proof-priority.json)
+
+- [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (data): 2,995必要S5根、K0375/K0378重複、pilot候補とSHA-256
 ## [research/experiments/n11-reply27-terminal-proof-priority-20261012/scripts/analyze_proof_gap.py](../../../research/experiments/n11-reply27-terminal-proof-priority-20261012/scripts/analyze_proof_gap.py)
 
 - [K0416](../items/K0416-n11-reply27-terminal-proof-dependency-gap.md) (verifier): S4全S5境界を独立再生成し、cache root・既存DAG重複を数える
@@ -6998,6 +6998,9 @@
 ## [research/experiments/n11-residual-twins/scripts/verify_twins.py](../../../research/experiments/n11-residual-twins/scripts/verify_twins.py)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (verifier): m≤5の全clutter監査と、保存格子証人の全L・最小R・Grundy再検査
+## [research/experiments/n11-s4-boundary-direct-20261012/README.md](../../../research/experiments/n11-s4-boundary-direct-20261012/README.md)
+
+- [K0414](../items/K0414-n11-reply27-root-loss.md) (source): 探索選定、全結果、費用、信頼範囲、再現手順
 ## [research/experiments/n11-s4-boundary-direct-20261012/input/saved-s6-raw-relocations.json](../../../research/experiments/n11-s4-boundary-direct-20261012/input/saved-s6-raw-relocations.json)
 
 - [K0414](../items/K0414-n11-reply27-root-loss.md) (manifest): 保存S6 raw 2件の履歴由来、移動先、SHA-256を固定
@@ -7027,21 +7030,18 @@
 ## [research/experiments/n11-s4-boundary-direct-20261012/output/s6-fourteenth-batch-audit.json](../../../research/experiments/n11-s4-boundary-direct-20261012/output/s6-fourteenth-batch-audit.json)
 
 - [K0414](../items/K0414-n11-reply27-root-loss.md) (verifier): 15M S6 LOSS rawを独立幾何・極性・AND伝播で監査したreceipt
-## [research/experiments/n11-s4-boundary-direct-20261012/README.md](../../../research/experiments/n11-s4-boundary-direct-20261012/README.md)
-
-- [K0414](../items/K0414-n11-reply27-root-loss.md) (source): 探索選定、全結果、費用、信頼範囲、再現手順
 ## [research/experiments/n11-s4-boundary-direct-20261012/scripts/audit_raw_inventory.py](../../../research/experiments/n11-s4-boundary-direct-20261012/scripts/audit_raw_inventory.py)
 
 - [K0414](../items/K0414-n11-reply27-root-loss.md) (verifier): 全batch receiptのraw replay rowとSHA-256を再照合
+## [research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md)
+
+- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (source): 階層分割の費用、適応方式、限界、再現手順
 ## [research/experiments/n11-s5-hierarchical-adaptive-20261011/output/source-manifest.json](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/output/source-manifest.json)
 
 - [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (manifest): 複写raw、source audit、current cacheのSHA-256照合
 ## [research/experiments/n11-s5-hierarchical-adaptive-20261011/output/strategy-audit.json](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/output/strategy-audit.json)
 
 - [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (data): 15M直接UNKNOWNと29.79M全S6分割の比較および現行境界
-## [research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/README.md)
-
-- [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (source): 階層分割の費用、適応方式、限界、再現手順
 ## [research/experiments/n11-s5-hierarchical-adaptive-20261011/scripts/analyze.py](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/scripts/analyze.py)
 
 - [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (verifier): 保存raw hash、90子geometry、予算prefix、最新S4境界の再監査
@@ -7051,6 +7051,9 @@
 ## [research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py](../../../research/experiments/n11-s5-hierarchical-adaptive-20261011/tests/test_strategy.py)
 
 - [K0379](../items/K0379-n11-s5-hierarchical-adaptive-cost-audit.md) (verifier): 極性、途中境界、trusted leaf、raw改ざん、同node-cap比較の回帰
+## [research/experiments/n11-s5-loss-cost-drivers-20261012/README.md](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/README.md)
+
+- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (source): 条件、6根証人台帳、費用内訳、限界、再現手順
 ## [research/experiments/n11-s5-loss-cost-drivers-20261012/input/child-profile-build.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/input/child-profile-build.json)
 
 - [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (manifest): 最終計測binary・sourceのcompiler条件とSHA-256
@@ -7084,9 +7087,9 @@
 ## [research/experiments/n11-s5-loss-cost-drivers-20261012/output/stage1-v2-6m/summary.json](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/output/stage1-v2-6m/summary.json)
 
 - [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (data): 同一v2 binaryでのS5直、既知S6、順位付け、共有TT比較
-## [research/experiments/n11-s5-loss-cost-drivers-20261012/README.md](../../../research/experiments/n11-s5-loss-cost-drivers-20261012/README.md)
+## [research/experiments/n11-s5-loss-witness-20261012/README.md](../../../research/experiments/n11-s5-loss-witness-20261012/README.md)
 
-- [K0382](../items/K0382-n11-s5-loss-proof-cost-decomposition.md) (source): 条件、6根証人台帳、費用内訳、限界、再現手順
+- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 固定比較条件、結果、制約、次の計測条件
 ## [research/experiments/n11-s5-loss-witness-20261012/input/build.json](../../../research/experiments/n11-s5-loss-witness-20261012/input/build.json)
 
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (manifest): compiler・flags・solver sourceと未追跡binaryのSHA-256
@@ -7108,9 +7111,6 @@
 ## [research/experiments/n11-s5-loss-witness-20261012/output/stop-on-loss-reproduction-v1/receipt.json](../../../research/experiments/n11-s5-loss-witness-20261012/output/stop-on-loss-reproduction-v1/receipt.json)
 
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (manifest): 早期停止flagの3 assertion成功receipt
-## [research/experiments/n11-s5-loss-witness-20261012/README.md](../../../research/experiments/n11-s5-loss-witness-20261012/README.md)
-
-- [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 固定比較条件、結果、制約、次の計測条件
 ## [research/experiments/n11-s5-loss-witness-20261012/scripts/benchmark_witness_methods.py](../../../research/experiments/n11-s5-loss-witness-20261012/scripts/benchmark_witness_methods.py)
 
 - [K0380](../items/K0380-n11-s5-loss-witness-budgeted-benchmark.md) (source): 5方式の同binary・同cache初期状態・同node上限比較
@@ -7202,6 +7202,9 @@
 ## [research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp](../../../research/experiments/n11-s6-terminal-loss-20261015/verify_s8_loss_cpp.cpp)
 
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): 同一証明書を独立C++で終局再計算する検査器
+## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
+
+- [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題
 ## [research/experiments/n11-s6-universal-closure-20261011/output/audit.json](../../../research/experiments/n11-s6-universal-closure-20261011/output/audit.json)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (manifest): 生のS6 solver出力、全source hash、証明frontier
@@ -7211,9 +7214,6 @@
 ## [research/experiments/n11-s6-universal-closure-20261011/output/s6-win-complete.csv](../../../research/experiments/n11-s6-universal-closure-20261011/output/s6-win-complete.csv)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (data): 全90canonical S6 WIN葉と直接rawへの参照
-## [research/experiments/n11-s6-universal-closure-20261011/README.md](../../../research/experiments/n11-s6-universal-closure-20261011/README.md)
-
-- [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (source): 対象S5、S6全子探索、計算量、正しい極性、残課題
 ## [research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py](../../../research/experiments/n11-s6-universal-closure-20261011/scripts/audit.py)
 
 - [K0374](../items/K0374-n11-reply27-s6-universal-closure.md) (verifier): 全90合法S6子・raw exact・cache隔離・S4/S5伝播の独立監査
@@ -7226,18 +7226,18 @@
 ## [research/experiments/n11-s7-four-win-terminal-20261020/verify_s7_certificate.py](../../../research/experiments/n11-s7-four-win-terminal-20261020/verify_s7_certificate.py)
 
 - [K0485](../items/K0485-n11-four-s7-win-and-s6-correction-verified.md) (verifier): 別幾何・全合法子・終局再帰と負例検査
-## [research/experiments/n11-s7-terminal-loss12-20261024/certificate.json](../../../research/experiments/n11-s7-terminal-loss12-20261024/certificate.json)
-
-- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (certificate): 18新規9石WIN・3個の8石LOSS・39葉被覆・12葉最小被覆・双対重み
 ## [research/experiments/n11-s7-terminal-loss12-20261024/README.md](../../../research/experiments/n11-s7-terminal-loss12-20261024/README.md)
 
 - [K0528](../items/K0528-n11-s7-terminal-loss12.md) (source): 再現手順と信頼境界
-## [research/experiments/n11-s7-terminal-loss12-20261024/verify_s10_cpp.cpp](../../../research/experiments/n11-s7-terminal-loss12-20261024/verify_s10_cpp.cpp)
+## [research/experiments/n11-s7-terminal-loss12-20261024/certificate.json](../../../research/experiments/n11-s7-terminal-loss12-20261024/certificate.json)
 
-- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (verifier): 独立4×4整数行列式による終局minimax
+- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (certificate): 18新規9石WIN・3個の8石LOSS・39葉被覆・12葉最小被覆・双対重み
 ## [research/experiments/n11-s7-terminal-loss12-20261024/verify.py](../../../research/experiments/n11-s7-terminal-loss12-20261024/verify.py)
 
 - [K0528](../items/K0528-n11-s7-terminal-loss12.md) (verifier): 全合法境界、固定先手極性、双対下界、C++/Python照合
+## [research/experiments/n11-s7-terminal-loss12-20261024/verify_s10_cpp.cpp](../../../research/experiments/n11-s7-terminal-loss12-20261024/verify_s10_cpp.cpp)
+
+- [K0528](../items/K0528-n11-s7-terminal-loss12.md) (verifier): 独立4×4整数行列式による終局minimax
 ## [research/experiments/n11-s8-compact385-pruned1946-20261020/selected385.txt](../../../research/experiments/n11-s8-compact385-pruned1946-20261020/selected385.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (certificate): 385個のS10 LOSS葉
@@ -7250,12 +7250,12 @@
 ## [research/experiments/n11-s9-second-target-20261015/verify.py](../../../research/experiments/n11-s9-second-target-20261015/verify.py)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
-## [research/experiments/n11-s9-win13-lift-20261023/certificate.json](../../../research/experiments/n11-s9-win13-lift-20261023/certificate.json)
-
-- [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (certificate): 9石根・13個の10石WIN子・9個の8石WIN親の完全一覧
 ## [research/experiments/n11-s9-win13-lift-20261023/README.md](../../../research/experiments/n11-s9-win13-lift-20261023/README.md)
 
 - [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (source): 再現手順と信頼境界
+## [research/experiments/n11-s9-win13-lift-20261023/certificate.json](../../../research/experiments/n11-s9-win13-lift-20261023/certificate.json)
+
+- [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (certificate): 9石根・13個の10石WIN子・9個の8石WIN親の完全一覧
 ## [research/experiments/n11-s9-win13-lift-20261023/s10-cpp.tsv](../../../research/experiments/n11-s9-win13-lift-20261023/s10-cpp.tsv)
 
 - [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (data): C++の独立4×4整数行列式による13子の勝敗・状態数
@@ -7312,6 +7312,9 @@
 ## [research/experiments/n11-search-methods/scripts/n11_d4.cpp](../../../research/experiments/n11-search-methods/scripts/n11_d4.cpp)
 
 - [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md) (solver): 命題・対象範囲・根拠を記した出典
+## [research/experiments/n11-strategy-redesign-20261010/README.md](../../../research/experiments/n11-strategy-redesign-20261010/README.md)
+
+- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): A/B同条件pilotと適応実行、旧極性誤りの検出、有限budgetの戦略比較
 ## [research/experiments/n11-strategy-redesign-20261010/output/artifact-manifest.json](../../../research/experiments/n11-strategy-redesign-20261010/output/artifact-manifest.json)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (manifest): input/raw/cache/certificate/geometry/sourceを結ぶSHA-256 inventory
@@ -7335,12 +7338,18 @@
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (certificate): Aの完全S5/S6境界。exact葉の再帰的minimaxはsolverを信頼する
 - [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (certificate): 完全S5/S6境界。exact葉の再帰的minimaxはsolverを信頼する
-## [research/experiments/n11-strategy-redesign-20261010/README.md](../../../research/experiments/n11-strategy-redesign-20261010/README.md)
-
-- [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): A/B同条件pilotと適応実行、旧極性誤りの検出、有限budgetの戦略比較
 ## [research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py](../../../research/experiments/n11-strategy-redesign-20261010/tests/test_polarity.py)
 
 - [K0371](../items/K0371-fixed-player-s7-propagation-and-cache-quarantine.md) (verifier): S4..S10の全二子三値境界をBoolean completionで照合し、cache再流入も検査
+## [research/experiments/n11-targeted-terminal-lift-20261015/README.md](../../../research/experiments/n11-targeted-terminal-lift-20261015/README.md)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (source): 407件のS10追加検査、終局証明、上位への伝播と信頼境界
+## [research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt](../../../research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (log): パッケージ再現の実行記録。2026-10-15に本repoで全手順を再実行しPASS
+## [research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS](../../../research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS)
+
+- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (manifest): パッケージ内50ファイルのSHA-256一覧（reproduce.shが照合）
 ## [research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_171_terminal.cert](../../../research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_171_terminal.cert)
 
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 171個のS8 WIN終局証明
@@ -7350,28 +7359,23 @@
 ## [research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_win_sixteen_terminal.cert](../../../research/experiments/n11-targeted-terminal-lift-20261015/certificates/new_s8_win_sixteen_terminal.cert)
 
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (certificate): 追加16個のS8 WIN終局証明
-## [research/experiments/n11-targeted-terminal-lift-20261015/README.md](../../../research/experiments/n11-targeted-terminal-lift-20261015/README.md)
-
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (source): 407件のS10追加検査、終局証明、上位への伝播と信頼境界
-## [research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt](../../../research/experiments/n11-targeted-terminal-lift-20261015/REPRODUCTION_RECEIPT.txt)
-
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (log): パッケージ再現の実行記録。2026-10-15に本repoで全手順を再実行しPASS
 ## [research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_cpp.cpp](../../../research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_cpp.cpp)
 
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): キャッシュなしで終局まで再計算する独立C++検査器
 ## [research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_python.py](../../../research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_loss_batch_python.py)
 
 - [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (verifier): キャッシュなしで終局まで再計算する独立Python検査器
-## [research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS](../../../research/experiments/n11-targeted-terminal-lift-20261015/SHA256SUMS)
-
-- [K0426](../items/K0426-n11-targeted-terminal-lift-and-s6-loss.md) (manifest): パッケージ内50ファイルのSHA-256一覧（reproduce.shが照合）
-## [research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json](../../../research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json)
-
-- [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (data): 全115対象S4 classの分類と共有局面の有限監査
 ## [research/experiments/n11-two-target-design-20261010/README.md](../../../research/experiments/n11-two-target-design-20261010/README.md)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 100/108反射対称性と2件の共有S5 LOSS。新K0373の証明と有限計算の信頼境界
 - [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (proof): 頂点100・108の根局面安定化群による同一軌道の証明
+## [research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json](../../../research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json)
+
+- [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (data): 全115対象S4 classの分類と共有局面の有限監査
+## [research/experiments/n9-minimum-maximal-catalogue-20261016/README.md](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/README.md)
+
+- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (source): n=9の全最小極大配置1,179件を完全列挙し全件でmin b=1を確認
+- [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (source): n=9の全最小極大配置1,179件でmin b=1、従ってρ=1
 ## [research/experiments/n9-minimum-maximal-catalogue-20261016/output/maximal_sets_n9.json](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/output/maximal_sets_n9.json)
 
 - [K0297](../items/K0297-minimum-maximal-private-point-open.md) (certificate): 列挙した1,179配置（D4第一石代表、全軌道を被覆）
@@ -7380,10 +7384,6 @@
 
 - [K0297](../items/K0297-minimum-maximal-private-point-open.md) (data): 行列式による独立min-b検証・禁止四点29152一致・round50 16/16整合
 - [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (data): 独立min-b検証（{1:1179})。min b=1からρ=1が従う
-## [research/experiments/n9-minimum-maximal-catalogue-20261016/README.md](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/README.md)
-
-- [K0297](../items/K0297-minimum-maximal-private-point-open.md) (source): n=9の全最小極大配置1,179件を完全列挙し全件でmin b=1を確認
-- [K0298](../items/K0298-minimum-maximal-rho-one-open.md) (source): n=9の全最小極大配置1,179件でmin b=1、従ってρ=1
 ## [research/experiments/n9-minimum-maximal-catalogue-20261016/scripts/verify_n9.py](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/scripts/verify_n9.py)
 
 - [K0297](../items/K0297-minimum-maximal-private-point-open.md) (verifier): 曲線正規化を使わない独立検証器
@@ -7766,11 +7766,6 @@
 - [K0208](../items/K0208-overlapping-cover-many-points-unblocked.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0209](../items/K0209-minimum-maximal-stones-essential.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0210](../items/K0210-maximum-configurations-cover-redundant-stones.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/output/round3_b502_pgrand_n6.json](../../../research/experiments/original-claims/output/round3_b502_pgrand_n6.json)
-
-- [K0251](../items/K0251-random-win-p-bound-two-thirds-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0252](../items/K0252-random-win-p-above-three-quarters.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0253](../items/K0253-height-three-p-random-win-half-bound.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/experiments/original-claims/output/round30_ceiling_audited.json](../../../research/experiments/original-claims/output/round30_ceiling_audited.json)
 
 - [K0185](../items/K0185-ceiling-with-small-mobility-slack-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -7826,36 +7821,11 @@
 ## [research/experiments/original-claims/output/round38_b345_verified.json](../../../research/experiments/original-claims/output/round38_b345_verified.json)
 
 - [K0194](../items/K0194-cross-clique-triple-redundancy.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/output/round4_circle_windows.json](../../../research/experiments/original-claims/output/round4_circle_windows.json)
+## [research/experiments/original-claims/output/round3_b502_pgrand_n6.json](../../../research/experiments/original-claims/output/round3_b502_pgrand_n6.json)
 
-- [K0232](../items/K0232-circle-window-single-point-cuts-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0235](../items/K0235-n11-first-eleven-point-circle.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0236](../items/K0236-extreme-point-multiplicity-single-loss.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (data): 反例円と窓スペクトルの厳密データ
-- [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0299](../items/K0299-denominator-three-circle-window-spectra.md) (data): 明示証人と有限照合結果
-## [research/experiments/original-claims/output/round4_collinear_asymptotic.json](../../../research/experiments/original-claims/output/round4_collinear_asymptotic.json)
-
-- [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (data): 整数・有理数の有限検算
-- [K0152](../items/K0152-primitive-direction-leading-constant.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0153](../items/K0153-fixed-similarity-types-negligible.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0242](../items/K0242-collinear-large-slope-uniform-tail.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0243](../items/K0243-direction-height-cubic-leading-decay.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0244](../items/K0244-collinear-boundary-gcd-corrections.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/output/round4_fixed_width.json](../../../research/experiments/original-claims/output/round4_fixed_width.json)
-
-- [K0154](../items/K0154-width-three-eventual-periodicity.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0155](../items/K0155-fixed-width-infinitely-partial-first-moves-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0156](../items/K0156-rectangle-boundary-first-move-classification.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0259](../items/K0259-two-row-opposite-row-first-response.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0260](../items/K0260-two-row-large-midgame-nimber.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0261](../items/K0261-three-by-three-row-translation-safe-intervals.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0262](../items/K0262-three-row-first-move-density-third-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0263](../items/K0263-three-row-periodic-winner-nonperiodic-moves-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0251](../items/K0251-random-win-p-bound-two-thirds-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0252](../items/K0252-random-win-p-above-three-quarters.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0253](../items/K0253-height-three-p-random-win-half-bound.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/experiments/original-claims/output/round40_classification_verified.json](../../../research/experiments/original-claims/output/round40_classification_verified.json)
 
 - [K0196](../items/K0196-effective-residual-quadruple-minimum.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -7894,6 +7864,42 @@
 ## [research/experiments/original-claims/output/round49_s10_verified.json](../../../research/experiments/original-claims/output/round49_s10_verified.json)
 
 - [K0038](../items/K0038-n10-safe-10-stone-maximal-witness.md) (data): 全四点安全性と全外点極大性の独立検算
+## [research/experiments/original-claims/output/round4_circle_windows.json](../../../research/experiments/original-claims/output/round4_circle_windows.json)
+
+- [K0232](../items/K0232-circle-window-single-point-cuts-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0234](../items/K0234-radius-25-over-2-no-eleven-point-square-window.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0235](../items/K0235-n11-first-eleven-point-circle.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0236](../items/K0236-extreme-point-multiplicity-single-loss.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0237](../items/K0237-rectangle-versus-square-circle-spectra.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0238](../items/K0238-half-center-symmetric-circle-near-max-odd-gap.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0239](../items/K0239-circle-window-spectrum-coordinate-orders.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0240](../items/K0240-circle-symmetry-hole-monotonicity-refuted.md) (data): 反例円と窓スペクトルの厳密データ
+- [K0241](../items/K0241-three-stone-mobility-gaps-circle-cuts.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0299](../items/K0299-denominator-three-circle-window-spectra.md) (data): 明示証人と有限照合結果
+## [research/experiments/original-claims/output/round4_collinear_asymptotic.json](../../../research/experiments/original-claims/output/round4_collinear_asymptotic.json)
+
+- [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (data): 整数・有理数の有限検算
+- [K0152](../items/K0152-primitive-direction-leading-constant.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0153](../items/K0153-fixed-similarity-types-negligible.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0242](../items/K0242-collinear-large-slope-uniform-tail.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0243](../items/K0243-direction-height-cubic-leading-decay.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0244](../items/K0244-collinear-boundary-gcd-corrections.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/output/round4_fixed_width.json](../../../research/experiments/original-claims/output/round4_fixed_width.json)
+
+- [K0154](../items/K0154-width-three-eventual-periodicity.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0155](../items/K0155-fixed-width-infinitely-partial-first-moves-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0156](../items/K0156-rectangle-boundary-first-move-classification.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0259](../items/K0259-two-row-opposite-row-first-response.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0260](../items/K0260-two-row-large-midgame-nimber.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0261](../items/K0261-three-by-three-row-translation-safe-intervals.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0262](../items/K0262-three-row-first-move-density-third-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0263](../items/K0263-three-row-periodic-winner-nonperiodic-moves-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/output/round56_complete_verified.json](../../../research/experiments/original-claims/output/round56_complete_verified.json)
+
+- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (data): 接頭部・再開部分・全五分割の接続監査
+## [research/experiments/original-claims/output/round57_nineteen_verified.json](../../../research/experiments/original-claims/output/round57_nineteen_verified.json)
+
+- [K0035](../items/K0035-n10-maximum-safe-bounds.md) (data): 座標安全性と上下界の監査
 ## [research/experiments/original-claims/output/round5_b231_n4.json](../../../research/experiments/original-claims/output/round5_b231_n4.json)
 
 - [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) (data): b240.embedding_splitの占有mask1,2と共通追加mask4
@@ -7913,19 +7919,6 @@
 ## [research/experiments/original-claims/output/round5_row_thresholds.json](../../../research/experiments/original-claims/output/round5_row_thresholds.json)
 
 - [K0264](../items/K0264-three-stones-per-row-minimum-length-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/output/round56_complete_verified.json](../../../research/experiments/original-claims/output/round56_complete_verified.json)
-
-- [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (data): 接頭部・再開部分・全五分割の接続監査
-## [research/experiments/original-claims/output/round57_nineteen_verified.json](../../../research/experiments/original-claims/output/round57_nineteen_verified.json)
-
-- [K0035](../items/K0035-n10-maximum-safe-bounds.md) (data): 座標安全性と上下界の監査
-## [research/experiments/original-claims/output/round6_rational_orchard.json](../../../research/experiments/original-claims/output/round6_rational_orchard.json)
-
-- [K0198](../items/K0198-point-cover-deficit-linear-lower-bound.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0199](../items/K0199-cocircular-avoidance-superlinear-deficit-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0200](../items/K0200-integer-linear-cover-deficit-family.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0201](../items/K0201-rational-versus-real-cover-optimum.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0202](../items/K0202-high-cover-cubic-localization.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/experiments/original-claims/output/round60_final_verified.json](../../../research/experiments/original-claims/output/round60_final_verified.json)
 
 - [K0036](../items/K0036-n10-local-19-stone-exchange-limit.md) (data): 完了半径と保守的再開境界
@@ -7936,14 +7929,21 @@
 
 - [K0324](../items/K0324-n4-incomplete-position-invariants.md) (data): B291–B296とB298の一致特徴と異なるg
 - [K0325](../items/K0325-n4-conditional-gain-variance.md) (data): 固定k4・合法4・利得総和6での条件付きP率
-## [research/experiments/original-claims/output/round7_parabola_cover.json](../../../research/experiments/original-claims/output/round7_parabola_cover.json)
+## [research/experiments/original-claims/output/round6_rational_orchard.json](../../../research/experiments/original-claims/output/round6_rational_orchard.json)
 
-- [K0204](../items/K0204-high-cover-points-competition-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0198](../items/K0198-point-cover-deficit-linear-lower-bound.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0199](../items/K0199-cocircular-avoidance-superlinear-deficit-open.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0200](../items/K0200-integer-linear-cover-deficit-family.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0201](../items/K0201-rational-versus-real-cover-optimum.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0202](../items/K0202-high-cover-cubic-localization.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/experiments/original-claims/output/round70_scope_catalogue_check.json](../../../research/experiments/original-claims/output/round70_scope_catalogue_check.json)
 
 - [K0032](../items/K0032-n8-minimum-maximal-size.md) (data): 全408八石極大の安全性・極大性と原文B371–B375/B378の再検算
 - [K0177](../items/K0177-j4-two-point-dominating-set.md) (data): J4全84Pペア内の40全域支配・15型内8型を再検算
 - [K0326](../items/K0326-fault-tolerance-precludes-single-swap.md) (data): n6全最大の同被覆和内でρ2は交換次数0
+## [research/experiments/original-claims/output/round7_parabola_cover.json](../../../research/experiments/original-claims/output/round7_parabola_cover.json)
+
+- [K0204](../items/K0204-high-cover-points-competition-refuted.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/experiments/original-claims/output/round8_ap_prime.json](../../../research/experiments/original-claims/output/round8_ap_prime.json)
 
 - [K0265](../items/K0265-row-arithmetic-progression-capacity-construction.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -7962,6 +7962,9 @@
 
 - [K0214](../items/K0214-n7-maximum-external-radius-two.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0215](../items/K0215-n7-first-external-legal-point-orbits.md) (data): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md](../../../research/experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md)
+
+- [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (verifier): 方向別恒等式・定数の独立再計算
 ## [research/experiments/original-claims/reports/experiments.jsonl](../../../research/experiments/original-claims/reports/experiments.jsonl)
 
 - [K0081](../items/K0081-loss-core-d4-invariant-refuted.md) (log): 固定R部分集合の層別LOSS数と共通部分の再集計
@@ -8135,9 +8138,6 @@
 ## [research/experiments/original-claims/reports/round38-b345-sole-triple-clique-counterexample.md](../../../research/experiments/original-claims/reports/round38-b345-sole-triple-clique-counterexample.md)
 
 - [K0194](../items/K0194-cross-clique-triple-redundancy.md) (source): 命題・対象範囲・根拠を記した出典
-## [research/experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md](../../../research/experiments/original-claims/reports/ROUND4-B141-VERIFICATION.md)
-
-- [K0054](../items/K0054-collinear-quadruple-asymptotics.md) (verifier): 方向別恒等式・定数の独立再計算
 ## [research/experiments/original-claims/reports/round4-batch-b002-b091.md](../../../research/experiments/original-claims/reports/round4-batch-b002-b091.md)
 
 - [K0052](../items/K0052-n7-a-b-reconfiguration-widths.md) (source): 相間経路・孤立成分の追撃監査
@@ -8423,6 +8423,28 @@
 ## [research/experiments/original-claims/scripts/round38_b345_search.cpp](../../../research/experiments/original-claims/scripts/round38_b345_search.cpp)
 
 - [K0194](../items/K0194-cross-clique-triple-redundancy.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/scripts/round41_audit.py](../../../research/experiments/original-claims/scripts/round41_audit.py)
+
+- [K0128](../items/K0128-empty-p-graph-high-nimber.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/scripts/round42_families_audit.py](../../../research/experiments/original-claims/scripts/round42_families_audit.py)
+
+- [K0124](../items/K0124-same-residual-game-exchange-connectivity-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0222](../items/K0222-same-residual-family-two-exchange-connectivity-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0223](../items/K0223-only-disconnected-residual-families-split-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0224](../items/K0224-connected-residual-game-split-fibers.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0225](../items/K0225-fiber-components-deletion-robustness.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0301](../items/K0301-four-stone-johnson-layer-bridge.md) (verifier): 証人の独立検算
+## [research/experiments/original-claims/scripts/round43_b350_minimum.py](../../../research/experiments/original-claims/scripts/round43_b350_minimum.py)
+
+- [K0197](../items/K0197-same-grundy-different-best-moves-after-removal.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/scripts/round44_tree_and_clique.py](../../../research/experiments/original-claims/scripts/round44_tree_and_clique.py)
+
+- [K0125](../items/K0125-three-stone-p-graph-three-colorability-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0127](../items/K0127-tree-p-graph-higher-constraints-change-outcome.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+- [K0300](../items/K0300-minimal-effective-tree-triple-star.md) (verifier): 証人の独立検算
 ## [research/experiments/original-claims/scripts/round4_circle_windows.py](../../../research/experiments/original-claims/scripts/round4_circle_windows.py)
 
 - [K0232](../items/K0232-circle-window-single-point-cuts-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -8452,28 +8474,6 @@
 - [K0261](../items/K0261-three-by-three-row-translation-safe-intervals.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0262](../items/K0262-three-row-first-move-density-third-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0263](../items/K0263-three-row-periodic-winner-nonperiodic-moves-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/scripts/round41_audit.py](../../../research/experiments/original-claims/scripts/round41_audit.py)
-
-- [K0128](../items/K0128-empty-p-graph-high-nimber.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/scripts/round42_families_audit.py](../../../research/experiments/original-claims/scripts/round42_families_audit.py)
-
-- [K0124](../items/K0124-same-residual-game-exchange-connectivity-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0222](../items/K0222-same-residual-family-two-exchange-connectivity-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0223](../items/K0223-only-disconnected-residual-families-split-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0224](../items/K0224-connected-residual-game-split-fibers.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0225](../items/K0225-fiber-components-deletion-robustness.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0226](../items/K0226-one-fewer-stone-fiber-bridges-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0227](../items/K0227-abstract-residual-isomorphism-split-fibers.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0301](../items/K0301-four-stone-johnson-layer-bridge.md) (verifier): 証人の独立検算
-## [research/experiments/original-claims/scripts/round43_b350_minimum.py](../../../research/experiments/original-claims/scripts/round43_b350_minimum.py)
-
-- [K0197](../items/K0197-same-grundy-different-best-moves-after-removal.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/scripts/round44_tree_and_clique.py](../../../research/experiments/original-claims/scripts/round44_tree_and_clique.py)
-
-- [K0125](../items/K0125-three-stone-p-graph-three-colorability-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0127](../items/K0127-tree-p-graph-higher-constraints-change-outcome.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-- [K0300](../items/K0300-minimal-effective-tree-triple-star.md) (verifier): 証人の独立検算
 ## [research/experiments/original-claims/scripts/round5_b231_n4.py](../../../research/experiments/original-claims/scripts/round5_b231_n4.py)
 
 - [K0322](../items/K0322-equal-nimber-geometric-extension-split.md) (solver): 標準全Grundyから同値配置の追加後値を照合
@@ -8490,6 +8490,10 @@
 ## [research/experiments/original-claims/scripts/round5_row_triples.cpp](../../../research/experiments/original-claims/scripts/round5_row_triples.cpp)
 
 - [K0264](../items/K0264-three-stones-per-row-minimum-length-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
+## [research/experiments/original-claims/scripts/round69_scope_witness_check.py](../../../research/experiments/original-claims/scripts/round69_scope_witness_check.py)
+
+- [K0324](../items/K0324-n4-incomplete-position-invariants.md) (verifier): 全5811安全集合・928極大・64最大から原文の条件を再検算
+- [K0325](../items/K0325-n4-conditional-gain-variance.md) (verifier): 利得を新規使用不能点数として全層集計
 ## [research/experiments/original-claims/scripts/round6_rational_orchard.py](../../../research/experiments/original-claims/scripts/round6_rational_orchard.py)
 
 - [K0198](../items/K0198-point-cover-deficit-linear-lower-bound.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -8497,16 +8501,12 @@
 - [K0200](../items/K0200-integer-linear-cover-deficit-family.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0201](../items/K0201-rational-versus-real-cover-optimum.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 - [K0202](../items/K0202-high-cover-cubic-localization.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
-## [research/experiments/original-claims/scripts/round69_scope_witness_check.py](../../../research/experiments/original-claims/scripts/round69_scope_witness_check.py)
-
-- [K0324](../items/K0324-n4-incomplete-position-invariants.md) (verifier): 全5811安全集合・928極大・64最大から原文の条件を再検算
-- [K0325](../items/K0325-n4-conditional-gain-variance.md) (verifier): 利得を新規使用不能点数として全層集計
-## [research/experiments/original-claims/scripts/round7_parabola_cover.py](../../../research/experiments/original-claims/scripts/round7_parabola_cover.py)
-
-- [K0204](../items/K0204-high-cover-points-competition-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/experiments/original-claims/scripts/round70_scope_catalogue_check.py](../../../research/experiments/original-claims/scripts/round70_scope_catalogue_check.py)
 
 - [K0032](../items/K0032-n8-minimum-maximal-size.md) (verifier): 完全カタログから正しいD4・三点方向・削除後合法点数を再計算
+## [research/experiments/original-claims/scripts/round7_parabola_cover.py](../../../research/experiments/original-claims/scripts/round7_parabola_cover.py)
+
+- [K0204](../items/K0204-high-cover-points-competition-refuted.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
 ## [research/experiments/original-claims/scripts/round8_ap_prime.py](../../../research/experiments/original-claims/scripts/round8_ap_prime.py)
 
 - [K0265](../items/K0265-row-arithmetic-progression-capacity-construction.md) (verifier): 採用報告の証人・完了範囲・検算を再確認する資産
@@ -8524,24 +8524,28 @@
 ## [research/experiments/pairsum-fourpoint-reflection-20261018/proof.md](../../../research/experiments/pairsum-fourpoint-reflection-20261018/proof.md)
 
 - [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (proof): 重複を許す4実数の二点和復元に関する全称証明
-## [research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp](../../../research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp)
-
-- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (verifier): 独立の全組合せ同値類監査
 ## [research/experiments/pairsum-fourpoint-reflection-20261018/verify.py](../../../research/experiments/pairsum-fourpoint-reflection-20261018/verify.py)
 
 - [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (verifier): 有理数復元による有限監査
-## [research/experiments/pairsum-reconstruction-20261018/audit_independent.cpp](../../../research/experiments/pairsum-reconstruction-20261018/audit_independent.cpp)
+## [research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp](../../../research/experiments/pairsum-fourpoint-reflection-20261018/verify_independent.cpp)
 
-- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): 別初期値からのC++独立検査
+- [K0442](../items/K0442-four-point-pair-sums-reflection-only.md) (verifier): 独立の全組合せ同値類監査
 ## [research/experiments/pairsum-reconstruction-20261018/audit.json](../../../research/experiments/pairsum-reconstruction-20261018/audit.json)
 
 - [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (data): Python実行結果
+## [research/experiments/pairsum-reconstruction-20261018/audit_independent.cpp](../../../research/experiments/pairsum-reconstruction-20261018/audit_independent.cpp)
+
+- [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): 別初期値からのC++独立検査
 ## [research/experiments/pairsum-reconstruction-20261018/proof.md](../../../research/experiments/pairsum-reconstruction-20261018/proof.md)
 
 - [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (proof): Newton恒等式による全称一意性と2の冪の整数反例の再帰構成
 ## [research/experiments/pairsum-reconstruction-20261018/verify.py](../../../research/experiments/pairsum-reconstruction-20261018/verify.py)
 
 - [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): Python整数演算による構成・恒等式・有限小例の検査
+## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 521..2000への有限拡張。全奇素数の等号は依然未証明
 ## [research/experiments/parabola-equality-extension-20261016/output/parabola-equality-audit.txt](../../../research/experiments/parabola-equality-extension-20261016/output/parabola-equality-audit.txt)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibniz独立検証（covered/checked・共円0件）の生出力
@@ -8549,31 +8553,27 @@
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 521..1999の全206素数の等号証人（d・parameters・size=h+2）
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 521..1999の全206素数の等号証人
-## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
-
-- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
-- [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 521..2000への有限拡張。全奇素数の等号は依然未証明
 ## [research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py](../../../research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (solver): 実装（edges厳密列挙＋d降順CNF＋cadical）
-## [research/experiments/prism-followup-20261005/even_capacity_verify.py](../../../research/experiments/prism-followup-20261005/even_capacity_verify.py)
-
-- [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (verifier): 独立ラベル付き全状態mexと共有占有数DP、適用外反例の監査
 ## [research/experiments/prism-followup-20261005/even-capacity-output.json](../../../research/experiments/prism-followup-20261005/even-capacity-output.json)
 
 - [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (data): 明示パラメータの完全有限検算。全称命題の根拠は証明artifact
 ## [research/experiments/prism-followup-20261005/even-capacity-proof.md](../../../research/experiments/prism-followup-20261005/even-capacity-proof.md)
 
 - [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (proof): 候補値への各合法手がxor1/2/3となる全称mex証明
-## [research/experiments/prism-hyperplane-2026-10-05/odd_root_verify.py](../../../research/experiments/prism-hyperplane-2026-10-05/odd_root_verify.py)
+## [research/experiments/prism-followup-20261005/even_capacity_verify.py](../../../research/experiments/prism-followup-20261005/even_capacity_verify.py)
 
-- [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (verifier): 独立ラベル付き完全mexと共有占有数DP、gap補助ゲームの全検算
+- [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (verifier): 独立ラベル付き全状態mexと共有占有数DP、適用外反例の監査
 ## [research/experiments/prism-hyperplane-2026-10-05/odd-root-output.json](../../../research/experiments/prism-hyperplane-2026-10-05/odd-root-output.json)
 
 - [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (data): 全状態の有限検算。無界主張の根拠はproof artifact
 ## [research/experiments/prism-hyperplane-2026-10-05/odd-root-proof.md](../../../research/experiments/prism-hyperplane-2026-10-05/odd-root-proof.md)
 
 - [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (proof): 偶数個のgapゲームのmex公式、奇数r全Grundy、偶数rの応答戦略
+## [research/experiments/prism-hyperplane-2026-10-05/odd_root_verify.py](../../../research/experiments/prism-hyperplane-2026-10-05/odd_root_verify.py)
+
+- [K0341](../items/K0341-odd-column-prism-root-mod4-and-odd-r-grundy.md) (verifier): 独立ラベル付き完全mexと共有占有数DP、gap補助ゲームの全検算
 ## [research/experiments/prism-hyperplane-2026-10-05/output.json](../../../research/experiments/prism-hyperplane-2026-10-05/output.json)
 
 - [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) (data): 12長盤・120全長境界の占有数全検算と3小盤全subset検算
@@ -8695,15 +8695,15 @@
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 2026-10-24の別実装による全51型419950安全局面の個別Grundy照合
 - [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (verifier): 整数係数二方式・二行条件・転置対応の有限監査
+## [research/experiments/quadratic-lambda-five-20261024/README.md](../../../research/experiments/quadratic-lambda-five-20261024/README.md)
+
+- [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (log): 全実数分類・検算手法・証拠範囲と再現手順
 ## [research/experiments/quadratic-lambda-five-20261024/audit.cpp](../../../research/experiments/quadratic-lambda-five-20261024/audit.cpp)
 
 - [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (verifier): 原禁止辺による全subset安全性DPと逆順Grundy DP
 ## [research/experiments/quadratic-lambda-five-20261024/census.cpp](../../../research/experiments/quadratic-lambda-five-20261024/census.cpp)
 
 - [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (solver): 独立整数行列式・三点補完増分伝播による全安全局面mex
-## [research/experiments/quadratic-lambda-five-20261024/README.md](../../../research/experiments/quadratic-lambda-five-20261024/README.md)
-
-- [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (log): 全実数分類・検算手法・証拠範囲と再現手順
 ## [research/experiments/quadratic-lambda-five-20261024/results.json](../../../research/experiments/quadratic-lambda-five-20261024/results.json)
 
 - [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) (data): 全168分類・延べ89789920安全局面・全初手Grundy・再構成可能な禁止辺
@@ -8744,6 +8744,9 @@
 
 - [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 19盤の二方式mex・個別値の完全一致と小盤Python照合の実行器
 - [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (verifier): 高さ6,7の全安全局面で二つの独立mexと閉公式を照合
+## [research/experiments/quadratic-pencil-20261023/README.md](../../../research/experiments/quadratic-pencil-20261023/README.md)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (proof): 全実数から有限禁止族への全称帰着、完全計算の範囲と信頼境界
 ## [research/experiments/quadratic-pencil-20261023/audit.json](../../../research/experiments/quadratic-pencil-20261023/audit.json)
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (data): 一係数版419950安全局面比較のreceipt
@@ -8753,18 +8756,15 @@
 ## [research/experiments/quadratic-pencil-20261023/independent.py](../../../research/experiments/quadratic-pencil-20261023/independent.py)
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 4×4置換行列式と独立合法手再帰、全安全局面照合
-## [research/experiments/quadratic-pencil-20261023/README.md](../../../research/experiments/quadratic-pencil-20261023/README.md)
-
-- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (proof): 全実数から有限禁止族への全称帰着、完全計算の範囲と信頼境界
 ## [research/experiments/quadratic-pencil-20261023/results.json](../../../research/experiments/quadratic-pencil-20261023/results.json)
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (data): 一係数版2・3・4正方形の全51禁止族型
-## [research/experiments/quadratic-pencil-20261023/two_parameter.py](../../../research/experiments/quadratic-pencil-20261023/two_parameter.py)
-
-- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 二係数版の全直線・交点帰着、直接代入と全安全局面照合
 ## [research/experiments/quadratic-pencil-20261023/two-parameter.json](../../../research/experiments/quadratic-pencil-20261023/two-parameter.json)
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (data): 31直線175交点207型、81185安全局面比較
+## [research/experiments/quadratic-pencil-20261023/two_parameter.py](../../../research/experiments/quadratic-pencil-20261023/two_parameter.py)
+
+- [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 二係数版の全直線・交点帰着、直接代入と全安全局面照合
 ## [research/experiments/quadratic-zero-terminal-spectrum-20261024/construct.py](../../../research/experiments/quadratic-zero-terminal-spectrum-20261024/construct.py)
 
 - [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) (verifier): 明示整数構成の全安全四点と全空候補への禁止証人を独立行列式で検査
@@ -8810,6 +8810,9 @@
 ## [research/experiments/residual-attempt-allocation-20261022/training.json](../../../research/experiments/residual-attempt-allocation-20261022/training.json)
 
 - [K0500](../items/K0500-residual-attempt-budget-allocation.md) (data): 既存9局面、4設定、各3反復の全108評価
+## [research/experiments/residual-closed-forms-20261021/README.md](../../../research/experiments/residual-closed-forms-20261021/README.md)
+
+- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (log): 再現手順・比較条件・信頼境界
 ## [research/experiments/residual-closed-forms-20261021/bench.cpp](../../../research/experiments/residual-closed-forms-20261021/bench.cpp)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): rootごとにmemoを空にするOFF/ONの7回交互測定
@@ -8822,15 +8825,15 @@
 ## [research/experiments/residual-closed-forms-20261021/integration.py](../../../research/experiments/residual-closed-forms-20261021/integration.py)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (verifier): 16保存局面の独立Python mexとdf-pn4モードの勝敗照合
-## [research/experiments/residual-closed-forms-20261021/README.md](../../../research/experiments/residual-closed-forms-20261021/README.md)
-
-- [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (log): 再現手順・比較条件・信頼境界
 ## [research/experiments/residual-closed-forms-20261021/run.py](../../../research/experiments/residual-closed-forms-20261021/run.py)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (source): 保存済み826残余状態の再ラベルと全件測定
 ## [research/experiments/residual-closed-forms-20261021/summary.json](../../../research/experiments/residual-closed-forms-20261021/summary.json)
 
 - [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md) (data): 測定集計と入力SHA-256
+## [research/experiments/residual-dfpn-integration-20261021/README.md](../../../research/experiments/residual-dfpn-integration-20261021/README.md)
+
+- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (log): node定義、事前プロトコル、CLI、回帰、結果と適用限界
 ## [research/experiments/residual-dfpn-integration-20261021/comparison.md](../../../research/experiments/residual-dfpn-integration-20261021/comparison.md)
 
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (data): 3反復の局面ごとの中央値合計と全比較表
@@ -8840,9 +8843,6 @@
 ## [research/experiments/residual-dfpn-integration-20261021/protocol.json](../../../research/experiments/residual-dfpn-integration-20261021/protocol.json)
 
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (manifest): 固定入力・source/binary hash、2万/10万上限、設定、反復、watchdog規則
-## [research/experiments/residual-dfpn-integration-20261021/README.md](../../../research/experiments/residual-dfpn-integration-20261021/README.md)
-
-- [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (log): node定義、事前プロトコル、CLI、回帰、結果と適用限界
 ## [research/experiments/residual-dfpn-integration-20261021/records.json](../../../research/experiments/residual-dfpn-integration-20261021/records.json)
 
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (data): 全348根評価の入力ID、結果、node計数、残余使用数、探索/process時間
@@ -8852,6 +8852,9 @@
 ## [research/experiments/residual-dfpn-integration-20261021/verify_outputs.py](../../../research/experiments/residual-dfpn-integration-20261021/verify_outputs.py)
 
 - [K0498](../items/K0498-normal-dfpn-bounded-residual-handoff.md) (verifier): 固定入力・source provenance、全raw行の占有mask・勝敗・node/quotaと再集計
+## [research/experiments/residual-gate-calibration-20261021/README.md](../../../research/experiments/residual-gate-calibration-20261021/README.md)
+
+- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (log): 事前選択規則・結果・既定値維持の判断と適用限界
 ## [research/experiments/residual-gate-calibration-20261021/environment.json](../../../research/experiments/residual-gate-calibration-20261021/environment.json)
 
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (manifest): コンパイラ・実装revision・バイナリとsourceのhash
@@ -8864,9 +8867,6 @@
 ## [research/experiments/residual-gate-calibration-20261021/protocol.json](../../../research/experiments/residual-gate-calibration-20261021/protocol.json)
 
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (manifest): 入力SHA-256・閾値・予算・反復数・選択規則
-## [research/experiments/residual-gate-calibration-20261021/README.md](../../../research/experiments/residual-gate-calibration-20261021/README.md)
-
-- [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (log): 事前選択規則・結果・既定値維持の判断と適用限界
 ## [research/experiments/residual-gate-calibration-20261021/run.py](../../../research/experiments/residual-gate-calibration-20261021/run.py)
 
 - [K0494](../items/K0494-residual-handoff-gate-fixed-corpus-calibration.md) (verifier): OFF/6/8/10/12の固定予算・3回反復比較と整合性検査
@@ -8915,6 +8915,9 @@
 ## [research/experiments/residual-gate-frontier-20261022/training.json](../../../research/experiments/residual-gate-frontier-20261022/training.json)
 
 - [K0499](../items/K0499-residual-dfpn-gate-frontier.md) (data): 旧3局面、8設定、各3反復の全72評価
+## [research/experiments/residual-outcome-search-20261021/README.md](../../../research/experiments/residual-outcome-search-20261021/README.md)
+
+- [K0496](../items/K0496-bounded-residual-outcome-search.md) (log): 事前プロトコル、正しさと予算の境界、再現手順、適用範囲
 ## [research/experiments/residual-outcome-search-20261021/budget-audit.json](../../../research/experiments/residual-outcome-search-20261021/budget-audit.json)
 
 - [K0496](../items/K0496-bounded-residual-outcome-search.md) (certificate): 9種類の有限予算と部分memo再利用で確定値の一致を検査
@@ -8930,12 +8933,12 @@
 ## [research/experiments/residual-outcome-search-20261021/protocol.json](../../../research/experiments/residual-outcome-search-20261021/protocol.json)
 
 - [K0496](../items/K0496-bounded-residual-outcome-search.md) (manifest): 入力とsolverのSHA-256、実装commit、設定・quota・反復・順序
-## [research/experiments/residual-outcome-search-20261021/README.md](../../../research/experiments/residual-outcome-search-20261021/README.md)
-
-- [K0496](../items/K0496-bounded-residual-outcome-search.md) (log): 事前プロトコル、正しさと予算の境界、再現手順、適用範囲
 ## [research/experiments/residual-outcome-search-20261021/verify_outputs.py](../../../research/experiments/residual-outcome-search-20261021/verify_outputs.py)
 
 - [K0496](../items/K0496-bounded-residual-outcome-search.md) (verifier): 独立oracle再計算、各保存行の勝敗・予算・quota検査と再集計
+## [research/experiments/residual-phase-profile-20261021/README.md](../../../research/experiments/residual-phase-profile-20261021/README.md)
+
+- [K0495](../items/K0495-residual-completion-index-profile.md) (log): 同値性の理由、固定プロトコル、費用の定義、再現手順と限界
 ## [research/experiments/residual-phase-profile-20261021/build-provenance.json](../../../research/experiments/residual-phase-profile-20261021/build-provenance.json)
 
 - [K0495](../items/K0495-residual-completion-index-profile.md) (manifest): compiler、binary hash、実装commit、測定順と実行条件
@@ -8945,12 +8948,12 @@
 ## [research/experiments/residual-phase-profile-20261021/comparison.md](../../../research/experiments/residual-phase-profile-20261021/comparison.md)
 
 - [K0495](../items/K0495-residual-completion-index-profile.md) (data): 保存測定から生成したphase内訳とprofile OFFの3回比較
-## [research/experiments/residual-phase-profile-20261021/README.md](../../../research/experiments/residual-phase-profile-20261021/README.md)
-
-- [K0495](../items/K0495-residual-completion-index-profile.md) (log): 同値性の理由、固定プロトコル、費用の定義、再現手順と限界
 ## [research/experiments/residual-phase-profile-20261021/verify_outputs.py](../../../research/experiments/residual-phase-profile-20261021/verify_outputs.py)
 
 - [K0495](../items/K0495-residual-completion-index-profile.md) (verifier): 入力hash・各行勝敗・予算・計測内訳・全保存結果の再集計
+## [research/experiments/residual-quota-calibration-20261021/README.md](../../../research/experiments/residual-quota-calibration-20261021/README.md)
+
+- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (log): 事前プロトコル、再現手順、適用範囲と採用判断
 ## [research/experiments/residual-quota-calibration-20261021/calibrate.py](../../../research/experiments/residual-quota-calibration-20261021/calibrate.py)
 
 - [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (verifier): 予算・quota・勝敗の検査、調整だけの選択とcommit前の確認起動拒否
@@ -8966,9 +8969,6 @@
 ## [research/experiments/residual-quota-calibration-20261021/protocol.json](../../../research/experiments/residual-quota-calibration-20261021/protocol.json)
 
 - [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (manifest): 測定前の固定seed・入力hash・binary hash・設定・予算・選択/確認規則
-## [research/experiments/residual-quota-calibration-20261021/README.md](../../../research/experiments/residual-quota-calibration-20261021/README.md)
-
-- [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (log): 事前プロトコル、再現手順、適用範囲と採用判断
 ## [research/experiments/residual-quota-calibration-20261021/selection.json](../../../research/experiments/residual-quota-calibration-20261021/selection.json)
 
 - [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (manifest): 調整用データだけで選び、確認測定前にcommitした候補
@@ -9050,15 +9050,15 @@
 ## [research/experiments/solver-benchmarks/reports/10X10_D9_READ_MASK_REWRITE_SEMANTICS_CORRECTION.md](../../../research/experiments/solver-benchmarks/reports/10X10_D9_READ_MASK_REWRITE_SEMANTICS_CORRECTION.md)
 
 - [K0091](../items/K0091-d9-memo-read-mask-logical-epoch.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/solver-benchmarks/reports/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md](../../../research/experiments/solver-benchmarks/reports/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md)
+
+- [K0284](../items/K0284-independent-memo-ascending-rank-replication.md) (source): V2原設計とparser再凍結時の開示
 ## [research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_MEMO_REVALIDATION.md](../../../research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_MEMO_REVALIDATION.md)
 
 - [K0084](../items/K0084-outside-r-loss-trend-full-width-memo.md) (verifier): 全幅キーで36/36ラベルの独立再求解
 ## [research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_RESULT.md](../../../research/experiments/solver-benchmarks/reports/10X10_F_E_R_EXTERNAL_HOLDOUT_RESULT.md)
 
 - [K0084](../items/K0084-outside-r-loss-trend-full-width-memo.md) (source): 命題・対象範囲・根拠を記した出典
-## [research/experiments/solver-benchmarks/reports/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md](../../../research/experiments/solver-benchmarks/reports/10X10_FRESH_PARENT_HOLDOUT_V2_PREREG.md)
-
-- [K0284](../items/K0284-independent-memo-ascending-rank-replication.md) (source): V2原設計とparser再凍結時の開示
 ## [research/experiments/solver-benchmarks/reports/10X10_HOLDOUT_CONFIRMATION_RESULT.md](../../../research/experiments/solver-benchmarks/reports/10X10_HOLDOUT_CONFIRMATION_RESULT.md)
 
 - [K0284](../items/K0284-independent-memo-ascending-rank-replication.md) (source): 命題・対象範囲・根拠を記した出典
@@ -9159,12 +9159,12 @@
 
 - [K0093](../items/K0093-coordinate-three-ply-information.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0094](../items/K0094-n5-relocation-preserves-two-ply-changes-grundy.md) (source): 命題・対象範囲・根拠を記した出典
-## [research/experiments/sunflower-grundy-20261019/audit.json](../../../research/experiments/sunflower-grundy-20261019/audit.json)
-
-- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (data): 334構造・579915安全局面の照合結果
 ## [research/experiments/sunflower-grundy-20261019/README.md](../../../research/experiments/sunflower-grundy-20261019/README.md)
 
 - [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (proof): 任意本数のヒマワリ型禁止集合に対する全称帰納証明と適用範囲
+## [research/experiments/sunflower-grundy-20261019/audit.json](../../../research/experiments/sunflower-grundy-20261019/audit.json)
+
+- [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (data): 334構造・579915安全局面の照合結果
 ## [research/experiments/sunflower-grundy-20261019/verify.py](../../../research/experiments/sunflower-grundy-20261019/verify.py)
 
 - [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (verifier): 残数再帰と独立した全占有部分集合mexの照合
@@ -9177,12 +9177,12 @@
 ## [research/experiments/three-by-four-q6-row-spacings-20261018/proof.md](../../../research/experiments/three-by-four-q6-row-spacings-20261018/proof.md)
 
 - [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (proof): 全正実数行間隔の代数的分類と75型mex表
-## [research/experiments/three-by-four-q6-row-spacings-20261018/verify_independent.cpp](../../../research/experiments/three-by-four-q6-row-spacings-20261018/verify_independent.cpp)
-
-- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 整数行列式と反復mexによる独立照合
 ## [research/experiments/three-by-four-q6-row-spacings-20261018/verify.py](../../../research/experiments/three-by-four-q6-row-spacings-20261018/verify.py)
 
 - [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 有理数行列式と4096局面の再帰mex
+## [research/experiments/three-by-four-q6-row-spacings-20261018/verify_independent.cpp](../../../research/experiments/three-by-four-q6-row-spacings-20261018/verify_independent.cpp)
+
+- [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 整数行列式と反復mexによる独立照合
 ## [research/experiments/three-column-four-row-q6-20261018/independent_recurrence.py](../../../research/experiments/three-column-four-row-q6-20261018/independent_recurrence.py)
 
 - [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 198安全状態の縮約再帰による独立検算
@@ -9214,18 +9214,18 @@
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 三平行線q6の任意実数候補で17点十分。四円同時通過の組合せ必要条件と有限正規形検査
 - [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (proof): 四円共有点補題・E13分類・17候補十分性の旧証明案
-## [research/experiments/three-parallel-q6-17-20261018/verify_e13.py](../../../research/experiments/three-parallel-q6-17-20261018/verify_e13.py)
-
-- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): E13の5005個の等差正規形、3族の記号候補、有理数候補のPython完全検査
 ## [research/experiments/three-parallel-q6-17-20261018/verify.py](../../../research/experiments/three-parallel-q6-17-20261018/verify.py)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 混合型182候補と例外四円組のPython整数完全列挙
-## [research/experiments/three-parallel-q6-19-20261018/audit_independent.cpp](../../../research/experiments/three-parallel-q6-19-20261018/audit_independent.cpp)
+## [research/experiments/three-parallel-q6-17-20261018/verify_e13.py](../../../research/experiments/three-parallel-q6-17-20261018/verify_e13.py)
 
-- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 1820四組の独立した整数演算による全検査
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): E13の5005個の等差正規形、3族の記号候補、有理数候補のPython完全検査
 ## [research/experiments/three-parallel-q6-19-20261018/audit.json](../../../research/experiments/three-parallel-q6-19-20261018/audit.json)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (data): Python検証器の実行結果
+## [research/experiments/three-parallel-q6-19-20261018/audit_independent.cpp](../../../research/experiments/three-parallel-q6-19-20261018/audit_independent.cpp)
+
+- [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 1820四組の独立した整数演算による全検査
 ## [research/experiments/three-parallel-q6-19-20261018/proof.md](../../../research/experiments/three-parallel-q6-19-20261018/proof.md)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 任意三平行線q6の21から19への改善、有限記号帰着による全称証明
@@ -9265,24 +9265,24 @@
 ## [research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp](../../../research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp)
 
 - [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (verifier): 全点整数の鋭さの例を含む2例を独立整数演算し候補9円・6円のうち4円ずつが通ることを確認
+## [research/experiments/two-row-misere-swap-threshold-20261024/README.md](../../../research/experiments/two-row-misere-swap-threshold-20261024/README.md)
+
+- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 二行盤の真の交換開始長7の証明と有限完全列挙
 ## [research/experiments/two-row-misere-swap-threshold-20261024/independent-results.txt](../../../research/experiments/two-row-misere-swap-threshold-20261024/independent-results.txt)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (data): 独立検算の実測結果
 ## [research/experiments/two-row-misere-swap-threshold-20261024/independent.cpp](../../../research/experiments/two-row-misere-swap-threshold-20261024/independent.cpp)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (verifier): 整数行列式による独立完全列挙
-## [research/experiments/two-row-misere-swap-threshold-20261024/README.md](../../../research/experiments/two-row-misere-swap-threshold-20261024/README.md)
-
-- [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 二行盤の真の交換開始長7の証明と有限完全列挙
 ## [research/experiments/two-row-misere-swap-threshold-20261024/verify.py](../../../research/experiments/two-row-misere-swap-threshold-20261024/verify.py)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (verifier): 二点和と合法手再帰による完全列挙
-## [research/experiments/unequal-row-sharp-chord-energy-20261010/audit.json](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/audit.json)
-
-- [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (data): 整数行列式・構成監査
 ## [research/experiments/unequal-row-sharp-chord-energy-20261010/README.md](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/README.md)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (proof): 二行の鋭いエネルギー上界と構成
+## [research/experiments/unequal-row-sharp-chord-energy-20261010/audit.json](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/audit.json)
+
+- [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (data): 整数行列式・構成監査
 ## [research/experiments/unequal-row-sharp-chord-energy-20261010/verify_cross_energy.py](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/verify_cross_energy.py)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (verifier): 二行全列挙と構成検査
@@ -9314,18 +9314,18 @@
 ## [research/log/claim-audit/round5_n8_progress.md](../../../research/log/claim-audit/round5_n8_progress.md)
 
 - [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (log): 列挙再実行・交差検証・streaming solve完走の記録
-## [research/log/discovery-cycles/CYCLE1_RESULTS.md](../../../research/log/discovery-cycles/CYCLE1_RESULTS.md)
-
-- [K0277](../items/K0277-maximum-parity-does-not-determine-winner.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0279](../items/K0279-fixed-r-static-pair-core-rank.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0291](../items/K0291-all-maximal-terminal-parity-refuted.md) (source): 命題・対象範囲・根拠を記した出典
-- [K0292](../items/K0292-n5-central-window-first-move-claim-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md](../../../research/log/discovery-cycles/CYCLE15_CAPACITY_DECOMPOSITION.md)
 
 - [K0268](../items/K0268-n7-six-orbit-skeleton-exclusive-extensions.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/log/discovery-cycles/CYCLE15_VERIFY.md](../../../research/log/discovery-cycles/CYCLE15_VERIFY.md)
 
 - [K0268](../items/K0268-n7-six-orbit-skeleton-exclusive-extensions.md) (verifier): Pythonによる骨格制約の独立再計算
+## [research/log/discovery-cycles/CYCLE1_RESULTS.md](../../../research/log/discovery-cycles/CYCLE1_RESULTS.md)
+
+- [K0277](../items/K0277-maximum-parity-does-not-determine-winner.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0279](../items/K0279-fixed-r-static-pair-core-rank.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0291](../items/K0291-all-maximal-terminal-parity-refuted.md) (source): 命題・対象範囲・根拠を記した出典
+- [K0292](../items/K0292-n5-central-window-first-move-claim-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/log/discovery-cycles/CYCLE24_N6_CAPACITY_CONTRAST.md](../../../research/log/discovery-cycles/CYCLE24_N6_CAPACITY_CONTRAST.md)
 
 - [K0273](../items/K0273-n7-orbit-omission-capacity-loss.md) (source): 六盤の完全制約最大
@@ -9338,22 +9338,22 @@
 ## [research/log/discovery-cycles/CYCLE28_K13_OPTIONALITY.md](../../../research/log/discovery-cycles/CYCLE28_K13_OPTIONALITY.md)
 
 - [K0275](../items/K0275-n7-13-stone-layer-versus-maxima.md) (source): 完全制約と標本の境界
-## [research/log/discovery-cycles/CYCLE3_RESULTS.md](../../../research/log/discovery-cycles/CYCLE3_RESULTS.md)
-
-- [K0278](../items/K0278-n5-first-move-pattern-transfer-refuted.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/log/discovery-cycles/CYCLE31B_ORBIT_CIRCLES_ALL_N.md](../../../research/log/discovery-cycles/CYCLE31B_ORBIT_CIRCLES_ALL_N.md)
 
 - [K0053](../items/K0053-d4-orbit-circle-capacities.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/log/discovery-cycles/CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md](../../../research/log/discovery-cycles/CYCLE34_OCCUPANCY_LATTICE_CERTIFICATE.md)
 
 - [K0053](../items/K0053-d4-orbit-circle-capacities.md) (proof): 7×7骨格の有限占有vector排除
+## [research/log/discovery-cycles/CYCLE3_RESULTS.md](../../../research/log/discovery-cycles/CYCLE3_RESULTS.md)
+
+- [K0278](../items/K0278-n5-first-move-pattern-transfer-refuted.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/log/discovery-cycles/CYCLE40_COMPRESSED_CERTIFICATE.md](../../../research/log/discovery-cycles/CYCLE40_COMPRESSED_CERTIFICATE.md)
+
+- [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/log/discovery-cycles/CYCLE4_EXACT_STRUCTURE.md](../../../research/log/discovery-cycles/CYCLE4_EXACT_STRUCTURE.md)
 
 - [K0002](../items/K0002-grundy-and-first-move-conventions.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0043](../items/K0043-n5-first-move-pattern-and-nimbers.md) (source): 命題・対象範囲・根拠を記した出典
-## [research/log/discovery-cycles/CYCLE40_COMPRESSED_CERTIFICATE.md](../../../research/log/discovery-cycles/CYCLE40_COMPRESSED_CERTIFICATE.md)
-
-- [K0269](../items/K0269-n7-skeleton-capacity-certificate.md) (source): 命題・対象範囲・根拠を記した出典
 ## [research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md](../../../research/log/discovery-cycles/CYCLE5_GRUNDY_STRUCTURE.md)
 
 - [K0004](../items/K0004-n1-n6-all-safe-grundy.md) (source): 命題・対象範囲・根拠を記した出典
@@ -9411,6 +9411,9 @@
 ## [results/9x9/factorial/primary-summary.csv](../../../results/9x9/factorial/primary-summary.csv)
 
 - [K0087](../items/K0087-n9-factorial-holm-comparisons.md) (data): 四本の事前Holm家族と記述量
+## [results/K0281_residual_witnesses.json](../../../results/K0281_residual_witnesses.json)
+
+- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 本報告の witness 抽出結果 (exact decision + drop-one + witness quad)
 ## [results/all-certificates-check.txt](../../../results/all-certificates-check.txt)
 
 - [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md) (log): 命題・対象範囲・根拠を記した出典
@@ -9475,9 +9478,6 @@
 ## [results/discovery_full_board_forbid_48.json](../../../results/discovery_full_board_forbid_48.json)
 
 - [K0271](../items/K0271-n7-fourth-corner-global-gate.md) (certificate): 角禁止の250局面成分
-## [results/K0281_residual_witnesses.json](../../../results/K0281_residual_witnesses.json)
-
-- [K0281](../items/K0281-n7-geometric-two-phase-proof-open.md) (certificate): 本報告の witness 抽出結果 (exact decision + drop-one + witness quad)
 ## [results/maxsafe_exchange_components_n6.csv](../../../results/maxsafe_exchange_components_n6.csv)
 
 - [K0266](../items/K0266-n7-maximum-exchange-distance.md) (data): n6最大層の成分
@@ -9502,10 +9502,6 @@
 ## [rust/independent-verifier/CROSS_CHECK.md](../../../rust/independent-verifier/CROSS_CHECK.md)
 
 - [K0280](../items/K0280-independent-rust-verification-boundaries.md) (source): 小盤cross check範囲
-## [rust/independent-verifier/evidence-sample/10x10-first-move-classification-complete.csv](../../../rust/independent-verifier/evidence-sample/10x10-first-move-classification-complete.csv)
-
-- [K0020](../items/K0020-n10-second-player-win.md) (data): 命題・対象範囲・根拠を記した出典
-- [K0022](../items/K0022-n10-all-100-first-moves-classified.md) (data): 命題・対象範囲・根拠を記した出典
 ## [rust/independent-verifier/KYOENC4_VALIDATION.md](../../../rust/independent-verifier/KYOENC4_VALIDATION.md)
 
 - [K0010](../items/K0010-kyoenc4-selected-position-certificates.md) (log): 命題・対象範囲・根拠を記した出典
@@ -9514,15 +9510,19 @@
 ## [rust/independent-verifier/README.md](../../../rust/independent-verifier/README.md)
 
 - [K0022](../items/K0022-n10-all-100-first-moves-classified.md) (verifier): 命題・対象範囲・根拠を記した出典
+## [rust/independent-verifier/VALIDATION.md](../../../rust/independent-verifier/VALIDATION.md)
+
+- [K0280](../items/K0280-independent-rust-verification-boundaries.md) (source): 命題・対象範囲・根拠を記した出典
+## [rust/independent-verifier/evidence-sample/10x10-first-move-classification-complete.csv](../../../rust/independent-verifier/evidence-sample/10x10-first-move-classification-complete.csv)
+
+- [K0020](../items/K0020-n10-second-player-win.md) (data): 命題・対象範囲・根拠を記した出典
+- [K0022](../items/K0022-n10-all-100-first-moves-classified.md) (data): 命題・対象範囲・根拠を記した出典
 ## [rust/independent-verifier/src/parts/board.rs](../../../rust/independent-verifier/src/parts/board.rs)
 
 - [K0280](../items/K0280-independent-rust-verification-boundaries.md) (verifier): 独立幾何・合法手
 ## [rust/independent-verifier/src/parts/certificate.rs](../../../rust/independent-verifier/src/parts/certificate.rs)
 
 - [K0280](../items/K0280-independent-rust-verification-boundaries.md) (verifier): rankとWIN/LOSS局所義務
-## [rust/independent-verifier/VALIDATION.md](../../../rust/independent-verifier/VALIDATION.md)
-
-- [K0280](../items/K0280-independent-rust-verification-boundaries.md) (source): 命題・対象範囲・根拠を記した出典
 ## [scripts/analysis/cache_core_classify.py](../../../scripts/analysis/cache_core_classify.py)
 
 - [K0080](../items/K0080-n10-subset-csv-coordinate-frame.md) (verifier): 入力座標とD4正規形の照合
