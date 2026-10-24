@@ -555,6 +555,21 @@
 ## [research/experiments/coplanar-3x3xm-q4-20261024/verify.py](../../../research/experiments/coplanar-3x3xm-q4-20261024/verify.py)
 
 - [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md) (verifier): 4×4行列式の24項展開によるm≤3全安全局面の完全生成とmex
+## [research/experiments/coplanar-4cube-q5-20261024/independent.cpp](../../../research/experiments/coplanar-4cube-q5-20261024/independent.cpp)
+
+- [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) (verifier): Gram行列式による独立完全列挙
+## [research/experiments/coplanar-4cube-q5-20261024/proof.md](../../../research/experiments/coplanar-4cube-q5-20261024/proof.md)
+
+- [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) (proof): 任意次元の共面四点数の全称証明と有限完全列挙の根拠
+## [research/experiments/coplanar-4cube-q5-20261024/rectangle_formula.py](../../../research/experiments/coplanar-4cube-q5-20261024/rectangle_formula.py)
+
+- [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) (verifier): d=2..6の3×3小行列式による独立検算
+## [research/experiments/coplanar-4cube-q5-20261024/results.md](../../../research/experiments/coplanar-4cube-q5-20261024/results.md)
+
+- [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) (data): 全局面・極大配置・Grundyの計数結果
+## [research/experiments/coplanar-4cube-q5-20261024/verify.py](../../../research/experiments/coplanar-4cube-q5-20261024/verify.py)
+
+- [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) (verifier): 直接整数行列式と全局面mex
 ## [research/experiments/coplanar-hyperplane-minmax-20261024/proof.md](../../../research/experiments/coplanar-hyperplane-minmax-20261024/proof.md)
 
 - [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) (proof): 一般有限点集合のアフィン階数判定・全直方体のs・三石極大数の全称証明

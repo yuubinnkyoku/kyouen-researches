@@ -529,3 +529,4 @@
 | [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) | 二平行線の各2〜5指定点を二点ずつ通る線外一点共通円の最大数を鋭く分類できる | proposition | proved | geometry, variants, certificates |
 | [K0543](../items/K0543-nine-height-prototypes-real-third-line-four-stone-blocker-bound.md) | 九段から選ぶ二線五石の全8001型で第三線の安全四石が塞ぐ空点は高々8個 | proposition | proved | geometry, variants, maximal-safe, certificates, verification |
 | [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) | 共超平面禁止の最小極大判定と全三次元直方体のs・三石極大数 | proposition | proved | variants, geometry, maximal-safe, statistics |
+| [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) | 四次元二値立方体の5点共超平面禁止版の強解決と二値超立方体の共面四点数 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, statistics |

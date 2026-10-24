@@ -1471,6 +1471,7 @@
 - ← depends_on [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md): 全極大同偶奇と全Grundy0/1の同値
 - ← depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 全Grundy0/1と全極大同偶奇の同値を使う
 - ← depends_on [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md): 奇数本の場合の極大集合同偶奇性から全局面の二値性を得る
+- ← depends_on [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): 全極大同偶奇のGrundy帰結
 
 ## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
 
@@ -2603,3 +2604,9 @@
 
 - → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の既存全局面列挙と例外の整合性
 - → depends_on [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×k×mの三石極大数の既存特殊公式との照合
+- ← depends_on [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): d石極大のアフィン階数判定
+
+## [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) 四次元二値立方体の5点共超平面禁止版の強解決と二値超立方体の共面四点数
+
+- → depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): d石極大のアフィン階数判定
+- → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大同偶奇のGrundy帰結
