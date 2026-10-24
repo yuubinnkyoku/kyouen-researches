@@ -146,3 +146,22 @@ $$
 一方、**全安全局面のうち未占有点が6点以下なら交換則が成立**する。これは最小横断集合サイズ4からの短い全称帰納証明による。よって25石が最初の反例層。未占有7点の全 $\binom{32}{7}$ 候補を有限完全列挙すると、安全局面3,025,376個のうち不一致は**34,560個**、すべて $(0,0)$。五次元立方体の座標反転・置換で13軌道（1920点軌道8個、3840点軌道5個）に分かれる。
 
 禁止面の直接生成と、五頂点組の整数アフィン階数から禁止超平面を独立復元する方式が、全件数と証人の合法手で一致した。**五次元全局面の強解決や六次元以上の交換則は未確定**。詳細は[命題9の証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[有限結果](../../experiments/binary-cube-affine-sections-20261024/results.md)、[直接方式](../../experiments/binary-cube-affine-sections-20261024/verify_d5_dense_swap_faces.cpp)、[独立整数階数方式](../../experiments/binary-cube-affine-sections-20261024/verify_d5_dense_swap_rank.cpp)。
+
+
+## 高密度版の交換則は全ての d≥5 で破れる（全称定理）
+
+五次元の反例を任意の高次元へ持ち上げられる。任意の整数 $d\ge5$ に対し、$q=2^{d-1}$ 点共超平面禁止版には **通常Grundy値とmisère補助値がともに0** の安全局面が存在する：
+
+$$
+\boxed{g(S_d)=h(S_d)=0,\qquad |S_d|=2^d-d-2.}
+$$
+
+具体的に、$A=\{1,2,6,7,9,11,16\}\subset\{0,1\}^5$、$n=d-5$ として、未占有点を
+
+$$
+T_d=\{(x,0^n):x\in A\}\cup\{(3,e_j):1\le j\le n\}
+$$
+
+と取ればよい。$d=5$ は既存の反例軌道の一つ。$d\ge6$ では追加点がすべて合法手で除去不能となり、残る7点のうち合法な部分集合が**全次元で同じ25局面**になることを全称証明した。根の6合法手の値は $(3,3)$ が4手、$(2,2)$ が2手なので、両者のmexは0。
+
+これは四次元の全局面交換則を五次元以上へ一般化できないという**全次元の反証**であり、五次元以上の空盤勝敗・全安全局面の強解決ではない。証明・25局面の表は[定理10](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)。[Python検証器](../../experiments/binary-cube-affine-sections-20261024/verify_dense_swap_all_dimensions.py)と[独立C++検証器](../../experiments/binary-cube-affine-sections-20261024/verify_dense_swap_direct.cpp)で $d=5,6,7,8,9,10,12,15,25$ を照合した。
