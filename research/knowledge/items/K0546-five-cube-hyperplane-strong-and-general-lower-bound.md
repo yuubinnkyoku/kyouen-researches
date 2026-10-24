@@ -56,6 +56,6 @@ $$
 \{0,e_1,\ldots,e_d,\mathbf{1}\}
 $$
 
-が存在する。したがって最大安全石数 $K_d\ge d+2$。五次元ではこれが最適であるが、$d\ge6$ で最適かは未解決。
+が存在する。したがって最大安全石数 $K_d\ge d+2$。五次元ではこれが最適である。一方、六〜十次元ではK0552が $d+3$ 石の明示配置を与えるため、この下界は鋭くない。十一次元以上で同じ改善が続くかは未解決。
 
 [証明と検証範囲](../../experiments/coplanar-5cube-q6-20261024/proof.md)、[整数検証器](../../experiments/coplanar-5cube-q6-20261024/solve.cpp)、[独立検証器](../../experiments/coplanar-5cube-q6-20261024/independent.cpp)、[結果表](../../experiments/coplanar-5cube-q6-20261024/results.md)。無界次元のGrundy値や勝敗は主張しない。
