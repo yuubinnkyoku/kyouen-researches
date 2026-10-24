@@ -25,7 +25,7 @@ m=6,7の有限完全検査とm≥8の全称定理、および5×5の明示五石
 
 ## 有限監査
 
-18盤、延べ3,972,161安全局面を厳密検査。
+19盤、延べ5,021,494安全局面を厳密検査。
 全称定理の候補数条件内は延べ3,384,859局面で、全局面の公式との不一致は0。
 標準・不等間隔・列ごとに異なる候補集合を含む。
 
@@ -37,12 +37,21 @@ m=6,7の有限完全検査とm≥8の全称定理、および5×5の明示五石
 
 両方が各安全局面を閉公式と照合する。候補数条件内と標準5×6・5×7では両方とも不一致0。
 全盤について安全層数・Grundy分布・終局サイズ分布・公式不一致数が一致。
+全安全局面の(mask,Grundy)対をソートした一時ファイルもバイト単位で完全比較した。
 20点以下の盤は既存Python全subset DPでも集計を再検査した。
 四点の係数は置換展開とアフィン余因子の二方式の整数演算で照合。
 
 条件外では、三列二点に公式不一致3、四列二点に40、5×5に216を検出した。
 これらを全称定理の反例とは数えない。標準5×6・5×7は一般の十分点数8未満でも
 公式が成立することを、それぞれ157,122・373,938局面で完全確認した。
+標準6×6は1,049,333安全局面で二方式の個別値が完全一致し、空盤値1、最大値3。
+`[(0,2),(1,3),(2,4),(4,0)]` はg=3で、Python残余再帰でも394局面の部分ゲームを独立検算した。
+したがって一般候補数条件を外して全局面g≤2へ広げてはいけない。
+[n6-grundy-three-certificate.json](n6-grundy-three-certificate.json)は、このg3局面の全合法子を含む
+394局面・952辺・216終局葉の証明書。
+[certificate.py](certificate.py)は禁止辺catalogやsolverを読まず、
+四点行列式から全合法手を再構築して各mexを確認する。
+値の改竄と局面の削除を拒否する二つの負例検査も通過した。
 
 [sharpness.py](sharpness.py)は一般閾値の最良性構成をw=4,...,10で具体化し、
 すべての選択四点の安全性と全空候補への禁止証人を独立行列式で検査。
@@ -57,6 +66,7 @@ Python標準ライブラリとC++17コンパイラg++を使用。CXXでコンパ
 ```sh
 uv run --locked python research/experiments/quadratic-lambda-zero-strips-20261024/verify.py
 uv run --locked python research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.py
+uv run --locked python research/experiments/quadratic-lambda-zero-strips-20261024/certificate.py
 ```
 
 [results.json](results.json)は有限監査結果、[sharpness.json](sharpness.json)は整数反例と候補集合。

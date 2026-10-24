@@ -520,3 +520,6 @@
 | [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) | λ=0の任意w列盤は最良一様候補数閾値で全Grundy値が高々2の閉公式を持つ | proposition | proved | variants, geometry, grundy, rectangles, maximal-safe, first-moves |
 | [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) | 二次形式λ版5×5を全実数で強分類し後手必勝は13個のλに限られる | computation | computed | variants, geometry, grundy, square-outcomes, first-moves, verification |
 | [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) | λ=0標準五列盤の全Grundy公式は高さ6で厳密に安定する | proposition | proved | variants, rectangles, grundy, geometry, maximal-safe |
+| [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) | λ=0・各列m候補の任意w列盤で実現可能な終局石数の集合を完全分類 | proposition | proved | variants, geometry, maximal-safe, rectangles, grundy |
+| [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md) | q点禁止ゲームは小さい吸収集合から勝敗を構成でき、集合サイズ条件は鋭い | proposition | proved | variants, rules, grundy, first-moves |
+| [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md) | 多項式行列式版は同列三点の吸収性から次数3以上の勝敗と初手を構成できる | proposition | proved | variants, geometry, rules, first-moves, rectangles |

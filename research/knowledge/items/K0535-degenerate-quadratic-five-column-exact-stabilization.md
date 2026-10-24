@@ -22,6 +22,17 @@ artifacts:
 - path: research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.json
   role: certificate
   note: 5×5の五石安全終局と全20空点への禁止三点組
+solution:
+  board: λ=0・標準鉛直5列×m候補・m≥6
+  level: strong
+  outcome: second-player-win
+  classification: [root, first-moves, all-safe-win-loss, all-safe-grundy]
+  coverage: 全m≥6・全安全局面
+  conditions: det[x²,x,y,1]=0の四点禁止、x=0..4、y=0..m−1
+  verification: [mathematical-proof, exhaustive-enumeration]
+  certificate: m≥8の一般証明とm=6,7の有限完全基底。m=5は明示反例
+  independent_check: 高さ6,7の計531060局面で二方式mexと閉公式が個別一致
+  note: 全局面g≤2、真の公式安定化高さ6。全初手が負け手
 scope: B_m={0,...,4}×{0,...,m−1}、四点のdet[x²,x,y,1]=0を禁止する通常プレイの全安全局面。公式が全m≥Mで成立する最小M。
 evidence: m≥8の全称定理にm=6,7の全数mex二方式検査を接続する計算機支援証明。m=5の明示安全終局が最良性を証明。
 ---

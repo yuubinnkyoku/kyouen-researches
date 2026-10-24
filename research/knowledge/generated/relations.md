@@ -114,6 +114,7 @@
 - ← depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 元先手固定視点の奇数AND・偶数OR伝播
 - ← depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 同じ合法遷移から全Grundy値と勝ち手の一致を得る
 - ← depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 終局までの固定手数偶奇とmex帰納
+- ← depends_on [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md): 通常プレイの最後の合法手と勝ち初手の規約
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2547,6 +2548,7 @@
 - → depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 二次形式行列式規則とλ=0の退化の扱い
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 終局までの固定手数偶奇とmex帰納
 - ← depends_on [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md): 任意候補集合の一般閾値8により全高さm≥8を保証
+- ← depends_on [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md): 四点の列分布と三点補間の禁止高さ数評価を全終局サイズへ拡張
 
 ## [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md) 二次形式λ版5×5を全実数で強分類し後手必勝は13個のλに限られる
 
@@ -2556,3 +2558,16 @@
 ## [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) λ=0標準五列盤の全Grundy公式は高さ6で厳密に安定する
 
 - → depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 任意候補集合の一般閾値8により全高さm≥8を保証
+
+## [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) λ=0・各列m候補の任意w列盤で実現可能な終局石数の集合を完全分類
+
+- → depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 四点の列分布と三点補間の禁止高さ数評価を全終局サイズへ拡張
+
+## [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md) q点禁止ゲームは小さい吸収集合から勝敗を構成でき、集合サイズ条件は鋭い
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイの最後の合法手と勝ち初手の規約
+- ← depends_on [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md): 同列三点が吸収集合となることから完成戦略を適用
+
+## [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md) 多項式行列式版は同列三点の吸収性から次数3以上の勝敗と初手を構成できる
+
+- → depends_on [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md): 同列三点が吸収集合となることから完成戦略を適用

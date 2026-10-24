@@ -352,6 +352,22 @@
 
 - [K0085](../items/K0085-three-to-four-stone-pair-gain.md) (source): 命題・対象範囲・根拠を記した出典
 - [K0086](../items/K0086-blind-probe-median-improvement-withdrawn.md) (source): 命題・対象範囲・根拠を記した出典
+## [research/experiments/absorbing-subsets-20261024/polynomial.json](../../../research/experiments/absorbing-subsets-20261024/polynomial.json)
+
+- [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md) (data): 9盤・9187個のq点組・14089安全局面の独立照合
+## [research/experiments/absorbing-subsets-20261024/polynomial.py](../../../research/experiments/absorbing-subsets-20261024/polynomial.py)
+
+- [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md) (verifier): 整数Bareiss・有理数消去の全行列式と二方式の全安全局面mex
+## [research/experiments/absorbing-subsets-20261024/proof.md](../../../research/experiments/absorbing-subsets-20261024/proof.md)
+
+- [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md) (proof): 吸収集合完成の手数戦略と、偶数・奇数両方の全称的な鋭さ反例
+- [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md) (proof): 同列三行の階数2から吸収性と次数偶奇の勝敗を証明
+## [research/experiments/absorbing-subsets-20261024/results.json](../../../research/experiments/absorbing-subsets-20261024/results.json)
+
+- [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md) (data): q=2..12の22族・32637安全局面の個別値照合
+## [research/experiments/absorbing-subsets-20261024/verify.py](../../../research/experiments/absorbing-subsets-20261024/verify.py)
+
+- [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md) (verifier): 吸収条件の全上位集合検査と二方式の全安全局面mex
 ## [research/experiments/axis-rectangle-seven-20261023/report.md](../../../research/experiments/axis-rectangle-seven-20261023/report.md)
 
 - [K0515](../items/K0515-axis-rectangle-seven-maximum.md) (proof): 7行の全長公式と三角形分解条件付き一般定理の全称証明
@@ -8570,16 +8586,25 @@
 ## [research/experiments/quadratic-lambda-zero-strips-20261024/audit.cpp](../../../research/experiments/quadratic-lambda-zero-strips-20261024/audit.cpp)
 
 - [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 三点補完を増分伝播する全到達局面の再帰mex
+## [research/experiments/quadratic-lambda-zero-strips-20261024/certificate.py](../../../research/experiments/quadratic-lambda-zero-strips-20261024/certificate.py)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 元の禁止辺catalogやsolverを使わず全合法手とmexを4×4行列式で独立検査
 ## [research/experiments/quadratic-lambda-zero-strips-20261024/column_audit.cpp](../../../research/experiments/quadratic-lambda-zero-strips-20261024/column_audit.cpp)
 
 - [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 列パターン列挙と安全局面集合への所属による独立DP
+## [research/experiments/quadratic-lambda-zero-strips-20261024/n6-certificate-verification.json](../../../research/experiments/quadratic-lambda-zero-strips-20261024/n6-certificate-verification.json)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (data): 394局面・952合法辺・216終局葉と二つの改竄負例の拒否
+## [research/experiments/quadratic-lambda-zero-strips-20261024/n6-grundy-three-certificate.json](../../../research/experiments/quadratic-lambda-zero-strips-20261024/n6-grundy-three-certificate.json)
+
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (certificate): 条件外の6×6・g3局面を394局面の全合法子閉包で証明
 ## [research/experiments/quadratic-lambda-zero-strips-20261024/proof.md](../../../research/experiments/quadratic-lambda-zero-strips-20261024/proof.md)
 
 - [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (proof): 三点補間による上界、全Grundy分類、整数点反例による閾値の全幅最良性
 - [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (proof): 一般定理・高さ6,7の有限基底・高さ5の明示反例を接続
 ## [research/experiments/quadratic-lambda-zero-strips-20261024/results.json](../../../research/experiments/quadratic-lambda-zero-strips-20261024/results.json)
 
-- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (data): 延べ3972161局面。一般候補数条件内3384859局面で公式不一致0
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (data): 延べ5021494局面。一般候補数条件内3384859局面で公式不一致0。標準6×6の条件外局面にはg3が存在
 - [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (data): 5×6の157122局面と5×7の373938局面で両方式の公式不一致0
 ## [research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.json](../../../research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.json)
 
@@ -8590,7 +8615,7 @@
 - [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 最良性構成を整数座標化し安全性と極大性を独立行列式で検査
 ## [research/experiments/quadratic-lambda-zero-strips-20261024/verify.py](../../../research/experiments/quadratic-lambda-zero-strips-20261024/verify.py)
 
-- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 18盤の二方式mex検査と小盤Python照合の実行器
+- [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md) (verifier): 19盤の二方式mex・個別値の完全一致と小盤Python照合の実行器
 - [K0535](../items/K0535-degenerate-quadratic-five-column-exact-stabilization.md) (verifier): 高さ6,7の全安全局面で二つの独立mexと閉公式を照合
 ## [research/experiments/quadratic-pencil-20261023/README.md](../../../research/experiments/quadratic-pencil-20261023/README.md)
 
@@ -8613,6 +8638,15 @@
 ## [research/experiments/quadratic-pencil-20261023/two_parameter.py](../../../research/experiments/quadratic-pencil-20261023/two_parameter.py)
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 二係数版の全直線・交点帰着、直接代入と全安全局面照合
+## [research/experiments/quadratic-zero-terminal-spectrum-20261024/construct.py](../../../research/experiments/quadratic-zero-terminal-spectrum-20261024/construct.py)
+
+- [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) (verifier): 明示整数構成の全安全四点と全空候補への禁止証人を独立行列式で検査
+## [research/experiments/quadratic-zero-terminal-spectrum-20261024/proof.md](../../../research/experiments/quadratic-zero-terminal-spectrum-20261024/proof.md)
+
+- [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) (proof): 任意w,mの必要十分条件、整数点での明示構成、最小非三石終局の公式
+## [research/experiments/quadratic-zero-terminal-spectrum-20261024/results.json](../../../research/experiments/quadratic-zero-terminal-spectrum-20261024/results.json)
+
+- [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) (data): 幅3〜9の147構成と既存全局面検査の終局サイズ必要条件監査
 ## [research/experiments/rectangle-reflection-parity-20261011/audit.json](../../../research/experiments/rectangle-reflection-parity-20261011/audit.json)
 
 - [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) (data): 49盤245条件の偶奇照合と25盤の四点完全列挙

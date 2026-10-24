@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <array>
 #include <cstdint>
+#include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <unordered_map>
 #include <vector>
@@ -13,6 +15,7 @@ struct Audit {
     std::array<uint64_t,64> layers{},hist{},terminals{};
     uint64_t mismatch=0,terminal_outside=0;Mask witness=0;
     int witness_size=100,witness_actual=-1,witness_expected=-1;
+    Mask g3_witness=0;int g3_stones=-1;
     Audit(int width,int points):w(width),n(points),col(n),cmask(w),completion(n*n*n) {memo.reserve(1000000);}
     size_t index(int a,int b,int c)const{
         std::array<int,3> v{a,b,c};std::sort(v.begin(),v.end());return (v[0]*n+v[1])*n+v[2];
@@ -38,15 +41,23 @@ struct Audit {
             options|=Mask(1)<<value;
         }
         uint8_t g=0;while(options&(Mask(1)<<g))++g;++hist[g];
+        if(g==3&&(k>g3_stones||(k==g3_stones&&s<g3_witness))){g3_witness=s;g3_stones=k;}
         int predicted=w%2==0 ? 1-(k%2) : (active==1&&k==2 ? 2 : active==1&&k==3 ? 0 : k%2);
         if(g!=predicted){++mismatch;if(k<witness_size){witness=s;witness_size=k;witness_actual=g;witness_expected=predicted;}}
         memo.emplace(s,g);return g;
     }
     void output(unsigned root){
+        if(const char* path=std::getenv("KYOUEN_ZERO_GRUNDY_DUMP")){
+            std::vector<std::pair<Mask,uint8_t>> sorted(memo.begin(),memo.end());std::sort(sorted.begin(),sorted.end());
+            std::ofstream out(path,std::ios::binary);
+            for(auto [mask,value]:sorted){out.write(reinterpret_cast<const char*>(&mask),sizeof(mask));out.write(reinterpret_cast<const char*>(&value),sizeof(value));}
+            if(!out)std::exit(3);
+        }
         auto array=[](const auto&a){std::cout<<'[';bool first=true;for(auto x:a){if(!first)std::cout<<',';first=false;std::cout<<uint64_t(x);}std::cout<<']';};
         std::cout<<"{\"empty_grundy\":"<<root<<",\"safe_count\":"<<memo.size()<<",\"formula_mismatches\":"<<mismatch
           <<",\"terminal_outside\":"<<terminal_outside<<",\"witness\":"<<witness<<",\"witness_actual\":"<<witness_actual
-          <<",\"witness_expected\":"<<witness_expected<<",\"safe_layers\":";array(layers);
+          <<",\"witness_expected\":"<<witness_expected<<",\"grundy_three_witness\":"<<g3_witness
+          <<",\"grundy_three_stones\":"<<g3_stones<<",\"safe_layers\":";array(layers);
         std::cout<<",\"grundy_histogram\":";array(hist);std::cout<<",\"terminal_sizes\":";array(terminals);std::cout<<"}\n";
     }
 };

@@ -18,7 +18,7 @@ artifacts:
   note: 三点補間による上界、全Grundy分類、整数点反例による閾値の全幅最良性
 - path: research/experiments/quadratic-lambda-zero-strips-20261024/verify.py
   role: verifier
-  note: 18盤の二方式mex検査と小盤Python照合の実行器
+  note: 19盤の二方式mex・個別値の完全一致と小盤Python照合の実行器
 - path: research/experiments/quadratic-lambda-zero-strips-20261024/audit.cpp
   role: verifier
   note: 三点補完を増分伝播する全到達局面の再帰mex
@@ -27,13 +27,33 @@ artifacts:
   note: 列パターン列挙と安全局面集合への所属による独立DP
 - path: research/experiments/quadratic-lambda-zero-strips-20261024/results.json
   role: data
-  note: 延べ3972161局面。一般候補数条件内3384859局面で公式不一致0
+  note: 延べ5021494局面。一般候補数条件内3384859局面で公式不一致0。標準6×6の条件外局面にはg3が存在
 - path: research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.py
   role: verifier
   note: 最良性構成を整数座標化し安全性と極大性を独立行列式で検査
 - path: research/experiments/quadratic-lambda-zero-strips-20261024/sharpness.json
   role: data
   note: w=4..10の整数反例と標準5×5の明示終局
+- path: research/experiments/quadratic-lambda-zero-strips-20261024/n6-grundy-three-certificate.json
+  role: certificate
+  note: 条件外の6×6・g3局面を394局面の全合法子閉包で証明
+- path: research/experiments/quadratic-lambda-zero-strips-20261024/certificate.py
+  role: verifier
+  note: 元の禁止辺catalogやsolverを使わず全合法手とmexを4×4行列式で独立検査
+- path: research/experiments/quadratic-lambda-zero-strips-20261024/n6-certificate-verification.json
+  role: data
+  note: 394局面・952合法辺・216終局葉と二つの改竄負例の拒否
+solution:
+  board: λ=0・鉛直w列・各列M_w候補以上
+  level: strong
+  outcome: conditional
+  classification: [root, first-moves, all-safe-win-loss, all-safe-grundy]
+  coverage: 全w≥3・全安全局面
+  conditions: det[x²,x,y,1]=0の四点禁止、各列M_w点以上、M_w=max(3,1+(w−2)(w−3)(w+2)/6)
+  verification: [mathematical-proof]
+  certificate: 補間数による終局分類と全局面mex閉公式。閾値下界は任意幅の整数構成
+  independent_check: 条件内3384859局面の二方式個別SG照合、条件外例も別に保存
+  note: 偶数wは空盤先手勝ち、奇数wは後手勝ち。全局面g≤2
 scope: w≥3本の相異なる実数x座標上の任意有限実数候補点集合、各列M_w点以上。四点のdet[x²,x,y,1]=0を禁止する通常プレイの全安全局面。
 evidence: 補間・列占有数による全称証明。任意wの有限多項式回避構成で一様閾値の最良性を証明。有限監査は証明とは区別する。
 ---
@@ -59,3 +79,7 @@ M₃=M₄=3、M₅=8、M₆=17、M₇=31。
 標準五列盤の真の公式安定化高さ6はK0535。
 二列のλ=0ゲームは全四点禁止なので、各列二点以上なら全局面で `(1−|S|) mod2`。
 標準λ=1の盤の一般勝敗を主張する結果ではない。
+
+候補数が少ない場合に、盤の選び方も含めて何石の終局を実現できるかは
+[K0536](K0536-degenerate-quadratic-column-terminal-size-spectrum.md)の必要十分条件を参照。
+条件外の標準6×6・λ=0にはg=3の安全局面があり、候補数条件を外してg≤2とはいえない。

@@ -1,7 +1,10 @@
 // Independent column-pattern enumeration and bottom-up safe-state membership DP.
 // Input format is identical to audit.cpp; no triple-completion propagation.
+#include <algorithm>
 #include <array>
 #include <cstdint>
+#include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
@@ -12,6 +15,7 @@ struct ColumnAudit{
     std::unordered_set<Mask> forbidden;std::unordered_map<Mask,uint8_t> values;
     std::vector<std::vector<Mask>> layers;
     std::array<uint64_t,64> layer_counts{},hist{},terminals{};uint64_t mismatch=0;
+    Mask g3_witness=0;int g3_stones=-1;
     ColumnAudit(int width,int count):w(width),n(count),columns(w),column_masks(w),layers(64){values.reserve(1000000);}
     void leaf(Mask mask,const std::vector<int>& chosen){
         int k=chosen.size();
@@ -43,6 +47,7 @@ struct ColumnAudit{
             while(bits){Mask bit=bits&-bits;bits^=bit;auto it=values.find(s|bit);
                 if(it!=values.end()){has_move=true;options|=Mask(1)<<it->second;}}
             uint8_t g=0;while(options&(Mask(1)<<g))++g;values[s]=g;
+            if(g==3&&(k>g3_stones||(k==g3_stones&&s<g3_witness))){g3_witness=s;g3_stones=k;}
             ++layer_counts[k];++hist[g];if(!has_move)++terminals[k];
             int active=0;for(Mask cm:column_masks)active+=bool(s&cm);
             int predicted;
@@ -54,8 +59,15 @@ struct ColumnAudit{
         }
     }
     void output(){
+        if(const char* path=std::getenv("KYOUEN_ZERO_GRUNDY_DUMP")){
+            std::vector<std::pair<Mask,uint8_t>> sorted(values.begin(),values.end());std::sort(sorted.begin(),sorted.end());
+            std::ofstream out(path,std::ios::binary);
+            for(auto [mask,value]:sorted){out.write(reinterpret_cast<const char*>(&mask),sizeof(mask));out.write(reinterpret_cast<const char*>(&value),sizeof(value));}
+            if(!out)std::exit(3);
+        }
         auto array=[](const auto&a){std::cout<<'[';bool first=true;for(auto x:a){if(!first)std::cout<<',';first=false;std::cout<<uint64_t(x);}std::cout<<']';};
-        std::cout<<"{\"empty_grundy\":"<<unsigned(values[0])<<",\"safe_count\":"<<values.size()<<",\"formula_mismatches\":"<<mismatch<<",\"safe_layers\":";
+        std::cout<<"{\"empty_grundy\":"<<unsigned(values[0])<<",\"safe_count\":"<<values.size()<<",\"formula_mismatches\":"<<mismatch
+                 <<",\"grundy_three_witness\":"<<g3_witness<<",\"grundy_three_stones\":"<<g3_stones<<",\"safe_layers\":";
         array(layer_counts);std::cout<<",\"grundy_histogram\":";array(hist);std::cout<<",\"terminal_sizes\":";array(terminals);std::cout<<"}\n";
     }
 };
