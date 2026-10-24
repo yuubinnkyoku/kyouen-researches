@@ -2615,3 +2615,11 @@
 ## [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) 五次元二値立方体の6点共超平面禁止版の強解決と全次元の構成下界
 
 - → depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): 五石極大のアフィン階数条件との照合
+
+## [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) α²−α−4=0の三線整数高さq6帯は全長強解決でき満容量安定化値は5
+
+- ← generalizes [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md): c=4の二次無理数帯をc=1・素数p≥5・素数平方p²の無限族へ拡張
+
+## [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) 素数と素数平方から作る二次無理数三線q6帯の無限族を全長強解決できる
+
+- → generalizes [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md): c=4の二次無理数帯をc=1・素数p≥5・素数平方p²の無限族へ拡張

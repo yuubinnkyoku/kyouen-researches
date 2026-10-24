@@ -2259,6 +2259,34 @@
 ## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
+## [research/experiments/irrational-three-lines-q6-20261024/audit-c3.json](../../../research/experiments/irrational-three-lines-q6-20261024/audit-c3.json)
+
+- [K0547](../items/K0547-sqrt13-three-line-q6-sharp-stabilization-seven.md) (data): m6の243324安全局面、全18初手、SG最大3、終局14石48局面と15石96局面
+## [research/experiments/irrational-three-lines-q6-20261024/audit.json](../../../research/experiments/irrational-three-lines-q6-20261024/audit.json)
+
+- [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) (data): m1..10の1103223六点組とm1..7の1977032安全局面の完全一致receipt
+## [research/experiments/irrational-three-lines-q6-20261024/exception.py](../../../research/experiments/irrational-three-lines-q6-20261024/exception.py)
+
+- [K0547](../items/K0547-sqrt13-three-line-q6-sharp-stabilization-seven.md) (verifier): c3の厳密二次体・二方式全局面照合を再現
+## [research/experiments/irrational-three-lines-q6-20261024/family-audit.json](../../../research/experiments/irrational-three-lines-q6-20261024/family-audit.json)
+
+- [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) (data): 6例・6619338六点組・12036931安全局面の完全一致receipt
+## [research/experiments/irrational-three-lines-q6-20261024/family.py](../../../research/experiments/irrational-three-lines-q6-20261024/family.py)
+
+- [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) (verifier): 六つのc値で二次体行列式と二方式の全局面mexを再現
+## [research/experiments/irrational-three-lines-q6-20261024/proof.md](../../../research/experiments/irrational-three-lines-q6-20261024/proof.md)
+
+- [K0547](../items/K0547-sqrt13-three-line-q6-sharp-stabilization-seven.md) (proof): 幅4対幅2の円分類、m≥7の全称満容量とm6の14石終局による鋭さ
+- [K0548](../items/K0548-irrational-spacing-rational-heights-q6-thirteen-sites.md) (proof): 無理数係数の分離と非零同積弦のmatchingから一点二円上界・13候補十分性を証明
+- [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) (proof): 六点円を幅5対幅3の平行弦に完全分類し全長の終局石数を証明
+- [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) (proof): (lB−lA)(lB+lA)=4cの因子対分類と円数上界により全素数・全長を証明
+## [research/experiments/irrational-three-lines-q6-20261024/run.py](../../../research/experiments/irrational-three-lines-q6-20261024/run.py)
+
+- [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) (verifier): 一時バイナリで厳密二次体・二方式mex監査を再現
+## [research/experiments/irrational-three-lines-q6-20261024/verify.cpp](../../../research/experiments/irrational-three-lines-q6-20261024/verify.cpp)
+
+- [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) (verifier): Q(α)の4×4行列式で全六点組と公式を比較し二方式の全安全局面mexを点ごとに照合
+- [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) (verifier): Q(α)を厳密整数対で表し、六点組の直接判定と因子対禁止集合を照合
 ## [research/experiments/knowledge-audit-20261021/README.md](../../../research/experiments/knowledge-audit-20261021/README.md)
 
 - [K0436](../items/K0436-anisotropic-mod9-all-widths.md) (log): 証明の論理監査・再実行範囲・判定

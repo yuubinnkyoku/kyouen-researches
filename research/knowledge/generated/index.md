@@ -531,3 +531,7 @@
 | [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) | 共超平面禁止の最小極大判定と全三次元直方体のs・三石極大数 | proposition | proved | variants, geometry, maximal-safe, statistics |
 | [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) | 四次元二値立方体の5点共超平面禁止版の強解決と二値超立方体の共面四点数 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, statistics |
 | [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) | 五次元二値立方体の6点共超平面禁止版の強解決と全次元の構成下界 | proposition | proved | variants, geometry, grundy, first-moves, maximum-safe, maximal-safe, statistics |
+| [K0547](../items/K0547-sqrt13-three-line-q6-sharp-stabilization-seven.md) | α²−α−3=0の三線整数高さq6帯は満容量安定化値7でP長は2・4・5だけ | proposition | proved | geometry, variants, rectangles, maximal-safe, grundy, first-moves, certificates |
+| [K0548](../items/K0548-irrational-spacing-rational-heights-q6-thirteen-sites.md) | 無理数間隔比と有理数高さの三平行線q6は各線13候補で全終局15石となる | proposition | proved | geometry, variants, rectangles, maximal-safe, grundy, first-moves |
+| [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) | α²−α−4=0の三線整数高さq6帯は全長強解決でき満容量安定化値は5 | proposition | proved | geometry, variants, rectangles, maximal-safe, grundy, first-moves, certificates |
+| [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) | 素数と素数平方から作る二次無理数三線q6帯の無限族を全長強解決できる | proposition | proved | geometry, variants, rectangles, maximal-safe, grundy, first-moves, certificates |
