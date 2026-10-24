@@ -555,6 +555,15 @@
 ## [research/experiments/coplanar-3x3xm-q4-20261024/verify.py](../../../research/experiments/coplanar-3x3xm-q4-20261024/verify.py)
 
 - [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md) (verifier): 4×4行列式の24項展開によるm≤3全安全局面の完全生成とmex
+## [research/experiments/coplanar-hyperplane-minmax-20261024/proof.md](../../../research/experiments/coplanar-hyperplane-minmax-20261024/proof.md)
+
+- [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) (proof): 一般有限点集合のアフィン階数判定・全直方体のs・三石極大数の全称証明
+## [research/experiments/coplanar-hyperplane-minmax-20261024/results.md](../../../research/experiments/coplanar-hyperplane-minmax-20261024/results.md)
+
+- [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) (data): 四盤の全安全局面と七盤の共線三点数の独立一致表
+## [research/experiments/coplanar-hyperplane-minmax-20261024/verify.py](../../../research/experiments/coplanar-hyperplane-minmax-20261024/verify.py)
+
+- [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) (verifier): 外積直接計数・原始方向公式・全安全局面列挙・有理数階数の照合
 ## [research/experiments/coplanar-prism-2x2xm-20261024/independent.cpp](../../../research/experiments/coplanar-prism-2x2xm-20261024/independent.cpp)
 
 - [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) (verifier): 独立した4×4行列式展開と全局面再帰

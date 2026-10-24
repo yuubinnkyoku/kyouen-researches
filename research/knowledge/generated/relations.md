@@ -2515,6 +2515,7 @@
 - ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): m=2の境界結果。m=2では偶奇則は不成立
 - ← generalizes [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×2×2の容量と最小極大石数を含む
 - ← depends_on [K0540](../items/K0540-coplanar-two-layer-all-openings.md): 2×2×2の例外と独立有限完全列挙
+- ← depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): 2×2×2の既存全局面列挙と例外の整合性
 
 ## [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) 2×2×mの4点共面禁止版はm≥3で全局面Grundy偶奇則、極大石数3・5
 
@@ -2536,6 +2537,7 @@
 - → generalizes [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 2×2×mのK・sを含むが、全局面Grundy偶奇則は一般化しない
 - → generalizes [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の容量と最小極大石数を含む
 - ← depends_on [K0540](../items/K0540-coplanar-two-layer-all-openings.md): k,m≥3かつk+m≥10の無界全局面Grundy定理
+- ← depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): 2×k×mの三石極大数の既存特殊公式との照合
 
 ## [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) 11×11の7個の9石WINを89個の終局WIN葉で独立検証し63個の8石WINを導出
 
@@ -2596,3 +2598,8 @@
 - → depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 二点和energy14の剛性分類と5点二点和復元
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 4点・5点の同和弦energy上界
 - → generalizes [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 各線18候補の十分条件を17候補へ緩める。18候補の独立代数証明は別途有効
+
+## [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) 共超平面禁止の最小極大判定と全三次元直方体のs・三石極大数
+
+- → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の既存全局面列挙と例外の整合性
+- → depends_on [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×k×mの三石極大数の既存特殊公式との照合
