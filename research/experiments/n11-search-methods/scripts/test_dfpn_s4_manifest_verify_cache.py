@@ -89,32 +89,32 @@ class S4ManifestStructureTests(unittest.TestCase):
         self.manifest = Path(self.tmp.name) / 's4.csv'
         lo, hi = d4_canonical_key([60, 0, 1, 2])
         self.valid = (f's4verdict,60,0,{lo},{hi},2,2,2,'
-                      f'{A[0]},{A[1]},{B[0]},{B[1]}\\n')
+                      f'{A[0]},{A[1]},{B[0]},{B[1]}\n')
 
     def parse(self, text):
         self.manifest.write_text(text, encoding='utf-8')
         return load_manifest(self.manifest)
 
     def test_valid_shape_and_comments(self):
-        self.assertEqual(len(self.parse('# header\\n' + self.valid)), 1)
+        self.assertEqual(len(self.parse('# header\n' + self.valid)), 1)
 
     def test_empty_or_comment_only_is_not_verified(self):
-        for data in ('', '# header\\n', '\\n'):
+        for data in ('', '# header\n', '\n'):
             with self.subTest(data=data):
                 with self.assertRaisesRegex(ValueError, 'empty S4 manifest'):
                     self.parse(data)
 
     def test_unknown_rows_cannot_disappear_silently(self):
-        for data in ('unexpected,1,2\\n', self.valid + 'bad,0\\n'):
+        for data in ('unexpected,1,2\n', self.valid + 'bad,0\n'):
             with self.subTest(data=data):
                 with self.assertRaisesRegex(ValueError, 'unexpected S4'):
                     self.parse(data)
 
     def test_child_count_and_header_truncation(self):
-        for data in ('s4verdict,60,0,1,0,2,1\\n',
+        for data in ('s4verdict,60,0,1,0,2,1\n',
                      self.valid.replace(',2,2,2,', ',2,-1,2,'),
                      self.valid.replace(',2,2,2,', ',2,3,2,'),
-                     self.valid + 's4verdict,60,0,1\\n'):
+                     self.valid + 's4verdict,60,0,1\n'):
             with self.subTest(data=data):
                 with self.assertRaises(ValueError):
                     self.parse(data)
