@@ -32,7 +32,7 @@ import io
 import sys
 
 from dfpn_edge_classes import (d4_canonical_key, legal_after,  # noqa: E402
-                               forbidden, V)
+                               forbidden, has_forbidden_quad, V)
 
 
 def popcount2(lo, hi):
@@ -40,21 +40,58 @@ def popcount2(lo, hi):
 
 
 def load_s5_cache(path):
-    cache = {}
+    """Accept only exact, safe canonical S5 verdicts from unquarantined keys.
+
+    An opposite-verdict duplicate is a proof conflict, never last-writer-wins.
+    Historical UNKNOWN rows are ignored and cannot certify a child.
+    """
     if not path:
-        return cache
-    for line in io.open(path, encoding='utf-8', errors='replace'):
+        raise ValueError('S5 cache path is required')
+    from pathlib import Path
+    policy_dir = (Path(__file__).resolve().parents[2]
+                  / 'n11-frontier-selection-20261005/scripts')
+    if str(policy_dir) not in sys.path:
+        sys.path.insert(0, str(policy_dir))
+    from s5_evidence_policy import quarantined_cache_keys
+    quarantine = quarantined_cache_keys()
+
+    cache = {}
+    for lineno, line in enumerate(io.open(path, encoding='utf-8'), 1):
         line = line.strip()
         if not line or line.startswith('#'):
             continue
         f = line.split(',')
-        if len(f) < 6 or f[0] != 's5verdict' or int(f[3]) != 5:
+        if len(f) != 6 or f[0] != 's5verdict':
+            raise ValueError('malformed S5 cache row at %s:%d' % (path, lineno))
+        try:
+            lo, hi, stones, result, nodes = map(int, f[1:])
+        except ValueError as exc:
+            raise ValueError('noninteger S5 cache row at %s:%d'
+                             % (path, lineno)) from exc
+        if (stones != 5 or result not in (0, 1, 2) or nodes < 0
+                or not (0 <= lo < 2**64 and 0 <= hi < 2**57)
+                or lo.bit_count() + hi.bit_count() != 5):
+            raise ValueError('invalid S5 cache evidence at %s:%d'
+                             % (path, lineno))
+        pts = [p for p in range(V)
+               if ((lo if p < 64 else hi) >> (p % 64)) & 1]
+        if d4_canonical_key(pts) != (lo, hi) or has_forbidden_quad(pts):
+            raise ValueError('unsafe or noncanonical S5 key at %s:%d'
+                             % (path, lineno))
+        if result == 0:
             continue
-        r = int(f[4])
-        if r in (1, 2):
-            cache[(int(f[1]), int(f[2]))] = r
-    return cache
+        key = (lo, hi)
+        previous = cache.get(key)
+        if previous is not None and previous != result:
+            raise ValueError('CONFLICT S5 key=%s at %s:%d'
+                             % (key, path, lineno))
+        cache[key] = result
 
+    # Remove withdrawn cache ancestry even if a legacy input still contains it.
+    # A certificate depending on such a child must fail as unproved.
+    for key in quarantine:
+        cache.pop(key, None)
+    return cache
 
 def load_manifest(path):
     rows = []
