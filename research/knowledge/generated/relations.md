@@ -2512,12 +2512,14 @@
 - → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 共面のみ4点禁止という別変種の定義
 - ← depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): m=2の境界結果。m=2では偶奇則は不成立
 - ← generalizes [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×2×2の容量と最小極大石数を含む
+- ← depends_on [K0540](../items/K0540-coplanar-two-layer-all-openings.md): 2×2×2の例外と独立有限完全列挙
 
 ## [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) 2×2×mの4点共面禁止版はm≥3で全局面Grundy偶奇則、極大石数3・5
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値と終局の定義
 - → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): m=2の境界結果。m=2では偶奇則は不成立
 - ← generalizes [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×2×mのK・sを含むが、全局面Grundy偶奇則は一般化しない
+- ← depends_on [K0540](../items/K0540-coplanar-two-layer-all-openings.md): 2×2×m（m≥3）の無界全局面偶奇則
 
 ## [K0528](../items/K0528-n11-s7-terminal-loss12.md) 標準11×11の未分類7石局面を12個の終局LOSS葉で独立証明
 
@@ -2531,6 +2533,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misèreのGrundy定義
 - → generalizes [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 2×2×mのK・sを含むが、全局面Grundy偶奇則は一般化しない
 - → generalizes [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の容量と最小極大石数を含む
+- ← depends_on [K0540](../items/K0540-coplanar-two-layer-all-openings.md): k,m≥3かつk+m≥10の無界全局面Grundy定理
 
 ## [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md) 11×11の7個の9石WINを89個の終局WIN葉で独立検証し63個の8石WINを導出
 
@@ -2578,3 +2581,9 @@
 
 - → depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 18候補不足極大のE14剛性分類と被覆等号条件を独立代数監査で排除
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 全終局の同一石数から全安全局面のmexを帰納計算
+
+## [K0540](../items/K0540-coplanar-two-layer-all-openings.md) 2×k×m・4点共面禁止版の空盤勝敗と全初手Grundy値の完全分類
+
+- → depends_on [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): k,m≥3かつk+m≥10の無界全局面Grundy定理
+- → depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 2×2×m（m≥3）の無界全局面偶奇則
+- → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の例外と独立有限完全列挙

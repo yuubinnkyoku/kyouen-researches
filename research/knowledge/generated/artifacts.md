@@ -567,6 +567,18 @@
 ## [research/experiments/coplanar-prism-2x2xm-20261024/verify.py](../../../research/experiments/coplanar-prism-2x2xm-20261024/verify.py)
 
 - [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md) (verifier): 整数外積による禁則生成と全安全局面mex
+## [research/experiments/coplanar-two-layer-all-openings-20261024/determinant_audit.cpp](../../../research/experiments/coplanar-two-layer-all-openings-20261024/determinant_audit.cpp)
+
+- [K0540](../items/K0540-coplanar-two-layer-all-openings.md) (verifier): 整数行列式による独立した全安全局面列挙とmex
+## [research/experiments/coplanar-two-layer-all-openings-20261024/direction_audit.cpp](../../../research/experiments/coplanar-two-layer-all-openings-20261024/direction_audit.cpp)
+
+- [K0540](../items/K0540-coplanar-two-layer-all-openings.md) (verifier): 二層の原始方向集合による全安全局面列挙とmex
+## [research/experiments/coplanar-two-layer-all-openings-20261024/proof.md](../../../research/experiments/coplanar-two-layer-all-openings-20261024/proof.md)
+
+- [K0540](../items/K0540-coplanar-two-layer-all-openings.md) (proof): 無界既存定理と有限境界の合成による全正整数の証明
+## [research/experiments/coplanar-two-layer-all-openings-20261024/results.md](../../../research/experiments/coplanar-two-layer-all-openings-20261024/results.md)
+
+- [K0540](../items/K0540-coplanar-two-layer-all-openings.md) (data): 11盤の空盤・初手値分布と二方式一致範囲
 ## [research/experiments/coplanar-two-layer-all-widths-20261024/independent.cpp](../../../research/experiments/coplanar-two-layer-all-widths-20261024/independent.cpp)
 
 - [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (verifier): 独立4×4行列式と全局面再帰
