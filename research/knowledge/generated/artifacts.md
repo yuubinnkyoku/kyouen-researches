@@ -413,6 +413,12 @@
 ## [research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt](../../../research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 25〜30次元の全明示頂点一覧
+## [research/experiments/binary-cube-hyperplane-five-eighths-20261025/proof.md](../../../research/experiments/binary-cube-hyperplane-five-eighths-20261025/proof.md)
+
+- [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) (proof): Sperner・LYM等号条件と4座標5点不可能性による全次元分類・計数
+## [research/experiments/binary-cube-hyperplane-five-eighths-20261025/results.md](../../../research/experiments/binary-cube-hyperplane-five-eighths-20261025/results.md)
+
+- [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) (data): d=4..8の厳密公式値と五次元独立全数検査
 ## [research/experiments/binary-cube-hyperplane-large-d-20261025/README.md](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/README.md)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (log): 手法・制御・小素数の教訓・再現手順
@@ -446,6 +452,7 @@
 ## [research/experiments/binary-cube-hyperplane-second-sections-20261025/verify_d5.cpp](../../../research/experiments/binary-cube-hyperplane-second-sections-20261025/verify_d5.cpp)
 
 - [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) (verifier): 五次元の全201376個の5点組から整数行列式で独立に超平面を列挙
+- [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) (verifier): 全201376個の五次元5点組を整数行列式で独立完全列挙（10点切片も検査）
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録

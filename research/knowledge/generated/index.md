@@ -539,3 +539,4 @@
 | [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) | 六〜十次元二値超立方体の共超平面禁止版にd+3石の安全配置 | proposition | proved | variants, geometry, maximum-safe |
 | [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) | 共超平面禁止二値立方体の安全石数下界の超過分は次元とともにd+3からd+7へ増える | proposition | proved | variants, geometry, maximum-safe, statistics |
 | [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) | 二値超立方体の第2位の超平面切片は3座標型・4座標型だけで全次元8C(d+1,4)個 | proposition | proved | geometry, variants, statistics |
+| [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) | 二値超立方体の最大超平面切片5/8密度は5座標型・6座標型だけで全次元32C(d+1,6)個 | proposition | proved | geometry, variants, statistics |

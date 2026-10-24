@@ -2629,6 +2629,7 @@
 
 - → generalizes [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): K0545の共面四点数の全称公式を任意のアフィン次元kに拡張（同項目の四次元ゲーム強解決は対象外）
 - ← depends_on [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md): 最大超平面切片の分類・個数とd=4の6点切片の既知結果に整合
+- ← depends_on [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md): 最大1/2密度切片の分類・個数および平坦交点上界を利用
 
 ## [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) 六〜十次元二値超立方体の共超平面禁止版にd+3石の安全配置
 
@@ -2643,3 +2644,9 @@
 ## [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) 二値超立方体の第2位の超平面切片は3座標型・4座標型だけで全次元8C(d+1,4)個
 
 - → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 最大超平面切片の分類・個数とd=4の6点切片の既知結果に整合
+- ← depends_on [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md): 3/4密度切片の分類・個数を禁止q点組の総数に利用
+
+## [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) 二値超立方体の最大超平面切片5/8密度は5座標型・6座標型だけで全次元32C(d+1,6)個
+
+- → depends_on [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md): 3/4密度切片の分類・個数を禁止q点組の総数に利用
+- → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 最大1/2密度切片の分類・個数および平坦交点上界を利用
