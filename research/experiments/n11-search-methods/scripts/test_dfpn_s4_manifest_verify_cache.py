@@ -211,7 +211,7 @@ class S4ManifestExecutionTests(unittest.TestCase):
                               str(len(listed)), '2']
                     for lo, hi in listed:
                         fields.extend((str(lo), str(hi)))
-                    manifest.write_text(','.join(fields) + '\\n',
+                    manifest.write_text(','.join(fields) + '\n',
                                         encoding='utf-8')
                     with (mock.patch('dfpn_s4_manifest_verify.load_s5_cache',
                                      return_value=cache),
