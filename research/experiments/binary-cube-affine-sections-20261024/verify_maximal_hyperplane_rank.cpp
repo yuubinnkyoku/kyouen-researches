@@ -4,6 +4,8 @@
 // at most 5 have absolute value <= 5^(5/2) < 101 (Hadamard).
 #include <algorithm>
 #include <map>
+#include <tuple>
+#include <string>
 #include <cassert>
 #include <cstdint>
 #include <iostream>
