@@ -2628,3 +2628,13 @@
 ## [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) 二値超立方体のk次元平坦の最大交点数とStirling数による全個数
 
 - → generalizes [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): K0545の共面四点数の全称公式を任意のアフィン次元kに拡張（同項目の四次元ゲーム強解決は対象外）
+
+## [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) 六〜十次元二値超立方体の共超平面禁止版にd+3石の安全配置
+
+- ← generalizes [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): d=6..10のd+3下界をd=6..24に拡大し9次元以上で強める
+- ← verifies [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): 既知のd=6..10証人を二方式で独立再検証し統計も一致
+
+## [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) 共超平面禁止二値立方体の安全石数下界の超過分は次元とともにd+3からd+7へ増える
+
+- → generalizes [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md): d=6..10のd+3下界をd=6..24に拡大し9次元以上で強める
+- → verifies [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md): 既知のd=6..10証人を二方式で独立再検証し統計も一致

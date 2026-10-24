@@ -398,6 +398,30 @@
 ## [research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_mod.cpp](../../../research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_mod.cpp)
 
 - [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) (verifier): 独立した素数1009上の掃き出し法で全小行列式の非零性を確認
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/README.md](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/README.md)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (log): 手法・制御・小素数の教訓・再現手順
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/frontier.txt](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/frontier.txt)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 各次元の最大m証人。二検証器が完全検査
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/results.json](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/results.json)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 機械可読な最前線と検証状況
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/results.md](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/results.md)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 最前線表・一様下界・大予算失敗の一覧・計算量の壁
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/search.cpp](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/search.cpp)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (solver): 無作為順貪欲探索器。mod 2^61-1の超平面法線と厳密同値性
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/verify_exact.py](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/verify_exact.py)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (verifier): 全小行列式の整数Bareiss検査と双対零空間小行列式検査
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/verify_mod.cpp](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/verify_mod.cpp)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (verifier): 全部分集合のmod 2^61-1掃き出し。Hadamard限界により整数非特異と同値
+## [research/experiments/binary-cube-hyperplane-large-d-20261025/witnesses.txt](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/witnesses.txt)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 全成功記録。mod検証器が全記録を検査
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
