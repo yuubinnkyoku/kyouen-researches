@@ -7,6 +7,7 @@
 #include <iostream>
 #include <map>
 #include <vector>
+#include <string>
 using namespace std;
 using Point = array<int,3>;
 
@@ -99,7 +100,56 @@ void audit(int k,int m) {
         cout<<" ("<<p[i][0]<<","<<p[i][1]<<","<<p[i][2]<<")";
     cout<<"\n";
 }
-int main() {
+
+struct P2 { int y, z; };
+int cross2(P2 a, P2 b) { return a.y*b.z-a.z*b.y; }
+P2 subtract2(P2 a, P2 b) { return {a.y-b.y,a.z-b.z}; }
+
+// Enumerate all oriented 3+2 safe sets, and all terminal 5-stone sets.
+// Fixing the 3-stone layer at x=0 avoids duplicate enumeration.
+void audit_large_square_terminal5(int k) {
+    const int n=k*k;
+    vector<P2> p;
+    for(int y=0;y<k;y++) for(int z=0;z<k;z++) p.push_back({y,z});
+    long long safe=0,terminal=0;
+    for(int a=0;a<n;a++) for(int b=a+1;b<n;b++)
+    for(int c=b+1;c<n;c++) {
+        P2 ab=subtract2(p[b],p[a]),ac=subtract2(p[c],p[a]);
+        P2 bc=subtract2(p[c],p[b]);
+        if(cross2(ab,ac)==0) continue;
+        P2 directions[3]={ab,ac,bc};
+        for(int d=0;d<n;d++) for(int e=d+1;e<n;e++) {
+            P2 de=subtract2(p[e],p[d]);
+            if(cross2(de,ab)==0||cross2(de,ac)==0||
+               cross2(de,bc)==0) continue;
+            safe++;
+            bool extend=false;
+            for(int f=0;f<n;f++) {
+                if(f==d||f==e) continue;
+                P2 df=subtract2(p[f],p[d]),ef=subtract2(p[f],p[e]);
+                if(cross2(de,df)==0) continue;
+                bool good=true;
+                for(auto direction:directions)
+                    if(cross2(direction,df)==0||
+                       cross2(direction,ef)==0) {good=false;break;}
+                if(good) {extend=true;break;}
+            }
+            if(!extend) terminal++;
+        }
+    }
+    cout<<"large_square "<<k<<" safe_oriented_3plus2 "<<safe
+        <<" terminal_oriented_3plus2 "<<terminal<<"\\n";
+    const long long expected_safe[]={0,0,0,1332,40368,475400,3408680,17308328};
+    const long long expected_terminal[]={0,0,0,532,304,0,0,0};
+    assert(k>=3&&k<=7);
+    assert(safe==expected_safe[k]&&terminal==expected_terminal[k]);
+}
+
+int main(int argc,char** argv) {
+    if(argc>1 && string(argv[1])=="--large-square") {
+        for(int k=3;k<=7;k++) audit_large_square_terminal5(k);
+        return 0;
+    }
     audit(2,2);
     audit(2,3);
     audit(3,2);
