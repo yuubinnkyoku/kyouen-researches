@@ -93,3 +93,12 @@ solution:
 無界部分 \(k+m\ge10\) は本項の既存全称定理による。残る境界 \(3\times5,4\times4,3\times6,4\times5\) はPythonの方向集合とC++の整数行列式という独立二方式で全安全局面を完全列挙し、交換則不一致がいずれも0件。\(3\times3\) と \(3\times4\) には不一致が51件と20件あり、具体的な三石局面 \(g=h=0\) の反例も保存した。従って8が真の閾値。なお \(3\times5,3\times6,4\times4,4\times5\) には五石極大局面が残るため、交換則と全局面具体表は異なる性質である。
 
 [証明と検証方法](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/proof.md)・[独立検証器](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/independent.cpp)・[結果表](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/results.md)。
+
+
+## 全正整数の断面における交換則の完全分類（2026-10-24）
+
+**任意の正整数 \(k,m\) について、2×k×m・4点共面禁止版の全安全局面で通常／misèreの0↔1交換則が成立する必要十分条件は、\((k,m)\notin\{(2,2),(3,3),(3,4),(4,3)\}\)。** これにより直前の \(k,m\ge3\) 限定を取り除いた。
+
+\(\min(k,m)=1\) なら盤全体が同一平面上にあり、安全集合は石数 \(\min(3,2km)\) 以下の全ての部分集合なので、全局面で \(g=(\min(3,2km)-|S|)\bmod2\)、\(h=1-g\)。\(\min(k,m)=2\) は軸交換で2×2×tへ帰着し、\(t\ge3\) はK0527の全称偶奇則、\(t=2\) はK0526の反例 \(g(\varnothing)=h(\varnothing)=0\)。\(k,m\ge3\) は前節の必要十分条件 \(k+m\ge8\)。この場合分けは無界の全称証明であり、有限盤からの外挿ではない。
+
+[統合証明](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/proof.md)・[薄盤の二方式独立検算と数表](../../experiments/coplanar-two-layer-misere-swap-frontier-20261024/results.md)。既存の二検証器を13盤へ拡張した。なお、この交換則の分類は**全局面Grundy値の具体表の成立条件**（\(k,m\ge3\) で \(k+m\ge10\)）とは異なる。
