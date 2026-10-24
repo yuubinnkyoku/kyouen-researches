@@ -201,3 +201,23 @@ $$
 $$
 
 と全次元で確定した。$d=4,5,6,7$ の値は $600,8480,100800,1098048$。証明は3座標射影・二値アフィン関数の全分類・包除原理と自己同型群の計数による。[定理12の全称証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)と[検算表](../../experiments/binary-cube-affine-sections-20261024/results.md)を参照。$d=4,5$ の有理数・有限体の全平坦列挙と $d=6$ の関数列挙は独立有限照合であり、無界次元の証明とは区別する。
+
+
+## 実3平坦の5点切片も全次元で計数（定理13）
+
+$d\ge3$ で、実3次元アフィン平坦と二値超立方体の交点がちょうど5点の平坦数は
+
+$$
+\boxed{H^{(3)}_{d,5}=15\cdot2^d\left\{\begin{matrix}d+1\\6\end{matrix}\right\}.}
+$$
+
+また、同じ実3平坦に載る相異なる5点組の総数は
+
+$$
+\boxed{F_{d,3,5}=\frac{2^d}{24}
+(3\cdot6^d-2\cdot4^d-24\cdot3^d+39\cdot2^d-16).}
+$$
+
+$d=5,6,7,8$ の5点切片数は $480,20160,510720,10160640$。5点組のアフィン階数を、二値4次元の有理部分空間116個の包含格子により全 $d$ の指数多項式として計数し、既知の6点・8点切片数を引く**全称証明**。独立した素数101上の直接全5点組列挙で $d=4,5,6$ を照合した。有限検算を全次元証明に読み替えていない。
+
+[証明（定理13）](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)、[有理数格子検証器](../../experiments/binary-cube-affine-sections-20261024/verify_five_sections_formula.py)、[独立C++直接検証器](../../experiments/binary-cube-affine-sections-20261024/verify_five_sections_direct.cpp)。

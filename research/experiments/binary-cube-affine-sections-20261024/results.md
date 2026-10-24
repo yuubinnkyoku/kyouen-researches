@@ -262,3 +262,27 @@ g++ -std=c++17 -O3 -Wall -Wextra -Werror research/experiments/binary-cube-affine
 $d=4,5$ は有理数RREFと独立の素数1009上RREFで全3平坦を列挙し、6点の15点対の中点重複度で型を判定。別途、10種類の座標関数を全4組出現するように列挙し、$d=4,5,6$ で $(32,8),(960,240),(17920,4480)$ を照合した。$d\ge7$ は全称公式の評価であって全平坦の直接列挙ではない。
 
 再現：`python3 research/experiments/binary-cube-affine-sections-20261024/verify.py --six-sections`（4〜6次元のアフィン関数列挙）。通常実行は有理数RREF監査、`affine_gap_independent.cpp` は独立有限体監査。
+
+
+## 5点切片の全次元計数（定理13、2026-10-25）
+
+実3平坦と二値超立方体の交点がちょうど5点の平坦数は、全整数 $d\ge3$ で $H^{(3)}_{d,5}=15\cdot2^d\left\{\begin{matrix}d+1\\6\end{matrix}\right\}$。同一実3平坦に載る相異なる5点組の総数は $F_{d,3,5}=2^d(3\cdot6^d-2\cdot4^d-24\cdot3^d+39\cdot2^d-16)/24$。
+
+| $d$ | 5点切片 | 6点切片 | 8点切片 | 共3平坦5点組 |
+|---:|---:|---:|---:|---:|
+| 3 | 0 | 0 | 1 | 56 |
+| 4 | 0 | 40 | 20 | 1,360 |
+| 5 | 480 | 1,200 | 260 | 22,240 |
+| 6 | 20,160 | 22,400 | 2,800 | 311,360 |
+| 7 | 510,720 | 336,000 | 27,216 | 4,050,816 |
+| 8 | 10,160,640 | 4,448,640 | 248,640 | 50,776,320 |
+
+有理数RREFの有限部分空間格子（$n=4$ の階数3以下116空間）から、任意の $d$ に通用する指数多項式の係数を正確に求めた。独立のC++17実装は $d=4,5,6$ の全5点組を有限体101上で直接列挙し、交点数5、6、8の各平坦を数えた。$d\ge7$ は全称式の評価であり直接列挙ではない。
+
+再現：
+
+~~~sh
+python3 research/experiments/binary-cube-affine-sections-20261024/verify_five_sections_formula.py
+g++ -std=c++17 -O3 -Wall -Wextra -Werror research/experiments/binary-cube-affine-sections-20261024/verify_five_sections_direct.cpp -o /tmp/verify-five-sections
+for d in 4 5 6; do /tmp/verify-five-sections "$d"; done
+~~~
