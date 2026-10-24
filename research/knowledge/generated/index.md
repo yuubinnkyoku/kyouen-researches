@@ -535,3 +535,4 @@
 | [K0548](../items/K0548-irrational-spacing-rational-heights-q6-thirteen-sites.md) | 無理数間隔比と有理数高さの三平行線q6は各線13候補で全終局15石となる | proposition | proved | geometry, variants, rectangles, maximal-safe, grundy, first-moves |
 | [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) | α²−α−4=0の三線整数高さq6帯は全長強解決でき満容量安定化値は5 | proposition | proved | geometry, variants, rectangles, maximal-safe, grundy, first-moves, certificates |
 | [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) | 素数と素数平方から作る二次無理数三線q6帯の無限族を全長強解決できる | proposition | proved | geometry, variants, rectangles, maximal-safe, grundy, first-moves, certificates |
+| [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) | 二値超立方体のk次元平坦の最大交点数とStirling数による全個数 | proposition | proved | geometry, variants, statistics |
