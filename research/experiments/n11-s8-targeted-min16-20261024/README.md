@@ -27,7 +27,7 @@
   31義務、378候補、各候補の被覆数2、16葉の完全被覆、16葉すべてLOSSを検査。
 - `verify_min16.js`：別実装の3×3整数行列式と終局再帰で同じ内容を再検査。
 - **16葉の個別状態数合計は両実装とも11,495、勝敗・合法手数の不一致0。**
-- `--negative`：葉の欠落・重複・境界外葉・根の混入の4種を拒否。
+- `verify_cross.py`：378候補それぞれについて、両実装の勝敗・合法手数・個別状態数を突き合わせる。\n- `--negative`：葉の欠落・重複・境界外葉・根の混入の4種を拒否。
 - JavaScriptの `--full` は378候補をすべて終局まで分類し、
   **LOSS 81 / WIN 297、個別状態数合計175,066** を再現する。
   同じ378件をPythonの4×4整数行列式でも全件終局再計算し、
@@ -38,7 +38,7 @@
 
 ```sh
 python3 research/experiments/n11-s8-targeted-min16-20261024/verify_min16.py --negative --full
-node research/experiments/n11-s8-targeted-min16-20261024/verify_min16.js --negative --full
+node research/experiments/n11-s8-targeted-min16-20261024/verify_min16.js --negative --full\npython3 research/experiments/n11-s8-targeted-min16-20261024/verify_cross.py
 ```
 
 ## 信頼境界と進展
