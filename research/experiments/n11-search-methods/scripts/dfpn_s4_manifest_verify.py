@@ -101,6 +101,7 @@ def load_manifest(path):
     The full legal-child and verdict checks remain in main().
     """
     rows = []
+    seen_claims = set()
     for lineno, line in enumerate(io.open(path, encoding='utf-8'), 1):
         line = line.strip()
         if not line or line.startswith('#'):
@@ -125,6 +126,14 @@ def load_manifest(path):
         if result not in (1, 2) or n_child < 0 or cov_size < 1:
             raise ValueError('invalid S4 verdict or counts at %s'
                              % location)
+        # A certificate row is one claim for one two-stone root and class.
+        # Repeating it (even with the same verdict) can inflate reported
+        # certificate counts and silently hide contradictory child lists.
+        # Different roots may legitimately refer to the same D4 board key.
+        claim = (first, r2, klo, khi)
+        if claim in seen_claims:
+            raise ValueError('duplicate S4 root/class claim at %s' % location)
+        seen_claims.add(claim)
         if len(f) != 8 + 2 * n_child:
             raise ValueError('S4 child count/field count mismatch at %s'
                              % location)
