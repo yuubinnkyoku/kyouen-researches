@@ -1,4 +1,4 @@
-// Independent exhaustive audit for 12-point hyperplane sections of {0,1}^5.
+// Independent exhaustive audit for 10-point and 12-point hyperplane sections of {0,1}^5.
 // Enumerates all 5-point subsets and uses exact 4x4 determinants;
 // no Sperner bound or theoretical normal-form classification is assumed.
 #include <array>
@@ -75,7 +75,7 @@ int main() {
             for(int c=0;c<5;c++) sum+=h[c]*v[c];
             if(sum==h[5]) hit++;
         }
-        if(hit>=12) {
+        if(hit>=10) {
             int supp=0;
             for(int c=0;c<5;c++) supp+=(h[c]!=0);
             types[{hit,supp}]++;
@@ -88,8 +88,8 @@ int main() {
         cout<<"intersection="<<key.first
             <<" support="<<key.second<<" count="<<n<<"\n";
     if(subsets!=201376 || rank4!=179136 || planes.size()!=3254
-       || types[{12,3}]!=80 || types[{12,4}]!=40
+       || types[{10,5}]!=32 || types[{12,3}]!=80 || types[{12,4}]!=40
        || types[{16,1}]!=10 || types[{16,2}]!=20
-       || types.size()!=4) return 1;
+       || types.size()!=5) return 1;
     return 0;
 }
