@@ -27,17 +27,32 @@ jobs:
       - run: uv run --locked python tools/knowledge/build.py
       - name: Commit generated views if stale
         run: |
-          if git diff --quiet -- README.md research/knowledge/generated; then
-            echo "KNOWLEDGE_GENERATED_ALREADY_CURRENT"
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md research/knowledge/generated
-          git commit -m "docs: refresh generated knowledge views"
-          git push origin HEAD:main
+          # Other research lanes may advance main while this job is running.
+          # Discard only locally generated views, rebuild from the latest main,
+          # and retry a non-fast-forward push without overwriting others.
+          for attempt in 1 2 3 4 5 6 7 8; do
+            git fetch origin main
+            git reset --hard origin/main
+            uv run --locked python tools/knowledge/check.py
+            uv run --locked python -m unittest discover -s tools/knowledge/tests
+            uv run --locked python tools/knowledge/build.py
+            if git diff --quiet -- README.md research/knowledge/generated; then
+              echo "KNOWLEDGE_GENERATED_ALREADY_CURRENT"
+              exit 0
+            fi
+            git add README.md research/knowledge/generated
+            git commit -m "docs: refresh generated knowledge views"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Concurrent main update; retrying generated view refresh"
+          done
+          exit 1
 
 # Refresh trigger for K0525 terminal-certificate knowledge integration (2026-10-23).
 # Refresh trigger for K0526 cube-coplanar-q4 finite strong solution (2026-10-24).
 # Refresh after K0526 result-mask correction and K0504 cross-reference (2026-10-24).
 # Refresh trigger for K0530 two-layer coplanar capacity and 2x3x3 strong solution (2026-10-24).
+# Retry-on-concurrent-push fix for K0530 generated-view refresh (2026-10-24).
