@@ -5,7 +5,7 @@ const fs=require('node:fs'),path=require('node:path');
 const g=require('../n11-gap6-terminal-20261019/verify_js.js');
 const ROOT='00000000000040001000044400830000';
 function need(x,msg){if(!x)throw Error(msg);}
-function verify(keys,{terminal=true,full=false}={}){
+function verify(keys,{terminal=true,full=false,dump=false}={}){
   need(keys.length===16&&new Set(keys).size===16,'wrong/duplicate leaf count');
   const root=g.board(ROOT,8);
   const obligations=g.children(root);need(obligations.size===31,'wrong S9 boundary');
@@ -30,19 +30,24 @@ function verify(keys,{terminal=true,full=false}={}){
   const out={s9Obligations:31,s10Boundary:378,maxCoveragePerLeaf:2,
     minimumLeaves:16,selectedLeaves:16,terminalVerified:terminal?16:0,
     terminalStates:terminal?states:null,emptyBoard:'UNKNOWN'};
-  if(full){let loss=0,win=0,allStates=0;
+  if(full||dump){let loss=0,win=0,allStates=0,rows=[];
     for(const h of boundary.keys()){
       const v=g.solve10(h);if(v.win)win++;else loss++;allStates+=v.states;
+      if(dump)rows.push([h,v.win?'WIN':'LOSS',v.states,v.legal].join('\t'));
     }
     need(loss===81&&win===297&&allStates===175066,'full boundary regression');
     out.fullBoundary={loss,win,states:allStates};
+    if(dump)out.rows=rows.sort();
   }
   return out;
 }
 module.exports={verify};
 if(require.main===module){
   const keys=fs.readFileSync(path.join(__dirname,'leaves16.keys'),'utf8').trim().split(/\s+/);
-  console.log(JSON.stringify(verify(keys,{full:process.argv.includes('--full')}),null,2));
+  const dump=process.argv.includes('--dump');
+  const result=verify(keys,{full:process.argv.includes('--full'),dump});
+  if(dump)process.stdout.write(result.rows.join('\n')+'\n');
+  else console.log(JSON.stringify(result,null,2));
   if(process.argv.includes('--negative')){
     const bad=[keys.slice(0,-1),[...keys.slice(0,-1),keys[0]],
       [...keys.slice(0,-1),'0'.repeat(32)],[...keys.slice(0,-1),ROOT]];
