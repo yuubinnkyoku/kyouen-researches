@@ -398,6 +398,21 @@
 ## [research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_mod.cpp](../../../research/experiments/binary-cube-hyperplane-d-plus-three-20261024/verify_mod.cpp)
 
 - [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) (verifier): 独立した素数1009上の掃き出し法で全小行列式の非零性を確認
+## [research/experiments/binary-cube-hyperplane-d25-d30-20261025/proof.md](../../../research/experiments/binary-cube-hyperplane-d25-d30-20261025/proof.md)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (proof): d=25..30のd+7石証人と有限体Gale双対判定の数学的証明
+## [research/experiments/binary-cube-hyperplane-d25-d30-20261025/results.md](../../../research/experiments/binary-cube-hyperplane-d25-d30-20261025/results.md)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 全件検査の件数と証拠の境界
+## [research/experiments/binary-cube-hyperplane-d25-d30-20261025/verify_direct_spot.py](../../../research/experiments/binary-cube-hyperplane-d25-d30-20261025/verify_direct_spot.py)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (verifier): 600件の元の整数行列式の独立抜取照合
+## [research/experiments/binary-cube-hyperplane-d25-d30-20261025/verify_gale_mod.cpp](../../../research/experiments/binary-cube-hyperplane-d25-d30-20261025/verify_gale_mod.cpp)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (verifier): 二素数それぞれで全Gale6行小行列式を完全検査
+## [research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt](../../../research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt)
+
+- [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 25〜30次元の全明示頂点一覧
 ## [research/experiments/binary-cube-hyperplane-large-d-20261025/README.md](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/README.md)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (log): 手法・制御・小素数の教訓・再現手順
