@@ -49,7 +49,7 @@ K0426の `n11-s6-terminal-loss-20261015/s6-loss-optimized.cert` は、既に
 node research/experiments/n11-s6-legacy29-union-20261025/audit.js --negative
 ```
 
-標準Node.jsのみで、29根・483葉の正準性と安全性、
+標準Node.jsのみで、K0426の検証済み証明書SHA-256\n`cb2e73c277c6fd526689db64b1d8c07ebd1ca1bd8c2a966e0757d22c4471ebf6`\nへの一致を必須とし、29根・483葉の正準性と安全性、
 全九石義務の被覆、八石・七石の極性衝突、223/709件の固定鍵一覧、
 全1,653六石親の合法子と3,738辺を再計算する。
 葉・根の欠落、根の重複、十石葉への八石根の混入を含む
