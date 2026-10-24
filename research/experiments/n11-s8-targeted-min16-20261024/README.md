@@ -30,13 +30,14 @@
 - `--negative`：葉の欠落・重複・境界外葉・根の混入の4種を拒否。
 - JavaScriptの `--full` は378候補をすべて終局まで分類し、
   **LOSS 81 / WIN 297、個別状態数合計175,066** を再現する。
-  この378件全体の勝敗は今回Pythonで独立再計算していない。
-  最適性の下界は378件の勝敗判定には依存しない。
+  同じ378件をPythonの4×4整数行列式でも全件終局再計算し、
+  **勝敗・個別状態数が全件一致**した。
+  最適性の下界自体は378件の勝敗判定には依存しない。
 
 リポジトリ直下から：
 
 ```sh
-python3 research/experiments/n11-s8-targeted-min16-20261024/verify_min16.py --negative
+python3 research/experiments/n11-s8-targeted-min16-20261024/verify_min16.py --negative --full
 node research/experiments/n11-s8-targeted-min16-20261024/verify_min16.js --negative --full
 ```
 
@@ -47,6 +48,6 @@ node research/experiments/n11-s8-targeted-min16-20261024/verify_min16.js --negat
 一般の任意深さの最短証明を示したわけではなく、指定した10石葉被覆形式の最適性である。
 古いcache・df-pn値・凍結勝敗表は証明に使用していない。
 
-ローカルNode.jsとPythonで両検証器、4種の改変拒否、JavaScript全378候補の
+ローカルNode.jsとPythonで両検証器、4種の改変拒否、Python・JavaScript両方の全378候補の
 終局再計算を実行済み。全リポジトリのknowledge checkとCIは未確認。
 **標準11×11空盤の勝敗はUNKNOWN。**
