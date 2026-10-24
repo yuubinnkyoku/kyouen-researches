@@ -49,3 +49,8 @@ Pythonによる**無作為抽出の有限照合**（種は固定）。各盤で�
 | 2×8×7 | 32,400 | 5,459 | 2,269 | 0 |
 
 検証コマンド：`python3 verify.py --large-sample` と `g++ -std=c++17 -O3 independent.cpp -o /tmp/coplanar-audit && /tmp/coplanar-audit --large-square`。この有限照合を全称証明の代わりにはしない。
+
+
+Pythonの方向正規化と三方向集合のビットマスクによる**独立した有限完全列挙**でも、正方盤 `k=m=3,4,5,6` の向き付き安全5石数・極大5石数がC++と完全一致した。実行：`python3 verify.py --square-slope-audit`。
+
+これにより **正方断面 `2×n×n` の全局面Grundy表の真の開始長は `n=5`** と確定。n=4では五石極大が `2×304=608` 個あり、n=5,6は独立した二方式の完全列挙、n≥7は数学的証明で接続した。長方断面 `2×k×m` の最小閾値は未確定。
