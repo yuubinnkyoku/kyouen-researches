@@ -165,3 +165,22 @@ $$
 と取ればよい。$d=5$ は既存の反例軌道の一つ。$d\ge6$ では追加点がすべて合法手で除去不能となり、残る7点のうち合法な部分集合が**全次元で同じ25局面**になることを全称証明した。根の6合法手の値は $(3,3)$ が4手、$(2,2)$ が2手なので、両者のmexは0。
 
 これは四次元の全局面交換則を五次元以上へ一般化できないという**全次元の反証**であり、五次元以上の空盤勝敗・全安全局面の強解決ではない。証明・25局面の表は[定理10](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)。[Python検証器](../../experiments/binary-cube-affine-sections-20261024/verify_dense_swap_all_dimensions.py)と[独立C++検証器](../../experiments/binary-cube-affine-sections-20261024/verify_dense_swap_direct.cpp)で $d=5,6,7,8,9,10,12,15,25$ を照合した。
+
+
+## 高密度版の中間終局配置数も全次元で厳密計数可能（全称定理）
+
+同じ $d$ 次元二値立方体の $q=2^{d-1}$ 点共超平面禁止版について、$d\ge3$、$t_0=1+\lceil\log_2(d+1)\rceil\le t\le d+1$ とする。終局石数 $2^d-t$ の配置数を $A_{d,t}$ と書く。
+
+$D_t=\{e_1,\ldots,e_{t-1},\mathbf1\}\subset\mathbb F_2^{t-1}$ とし、$b_{d,t}$ を、相異なる非零ベクトル $d$ 本の集合 $B$ で、$B\cup\{0\}$ の二点の排他的論理和として $D_t$ の全方向が現れるものの個数とする。このとき
+
+$$
+\boxed{A_{d,t}=\frac{2^d d!}{t!}\,b_{d,t}.}
+$$
+
+**これは全次元・全終局石数に対する数学的に証明された厳密計数式**である。各削除点が必要である条件を、正規化した座標列の二点差が指定方向を実現する条件へ移した。さらに、超立方体と折り畳み超立方体の独立集合多項式を使った包除の**係数公式**も証明した。単純な初等閉形式が全 $d,t$ に得られたとは主張しない。
+
+特に未確定だった中間配置数として、六次元では **59石が1,236,480配置、58石が1,048,768配置**。七次元では **123石が31,503,360配置、122石が223,892,480配置** と確定した。$t=5$ は $4\le d\le15$ の全てについて明示的な16次多項式で係数を与えられる。
+
+証拠の区別：一般の差分判定・係数式は全称証明。$d=6,t=5,6$ は64頂点からの全候補（それぞれ7,624,512組・74,974,368組）を直接超平面・私有面で調べる**独立有限完全列挙**と一致。$d=7,t=6$ は正規化符号列の完全列挙であり、128頂点の直接全候補列挙は行っていない。五次元以上の空盤勝敗・全局面Grundy値には何も追加で主張しない。
+
+[定理11の証明](../../experiments/binary-cube-affine-sections-20261024/proof.md)、[結果表](../../experiments/binary-cube-affine-sections-20261024/results.md)、[符号列・包除検証器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_transversal.py)、[直接幾何検証器](../../experiments/binary-cube-affine-sections-20261024/verify_maximal_hyperplane_rank.cpp)。
