@@ -15,16 +15,16 @@
 
 ## 完全検証と独立照合
 
-\`verify_gale_mod.cpp\` は、各次元の頂点一覧から直接増補行列を作り、法 \(1000000007\) と \(1000000009\) でそれぞれ掃き出し法によって核基底を構成し、\(\binom{d+7}{6}\) 個の6行組を**全件**検査する。両素数で零小行列式は0個。各素数での検査が単独で厳密な有限証明書となる。
+`verify_gale_mod.cpp` は、各次元の頂点一覧から直接増補行列を作り、法 \(1000000007\) と \(1000000009\) でそれぞれ掃き出し法によって核基底を構成し、\(\binom{d+7}{6}\) 個の6行組を**全件**検査する。両素数で零小行列式は0個。各素数での検査が単独で厳密な有限証明書となる。
 
-\`verify_direct_spot.py\` は核基底を使わず、各次元100個の補集合を固定乱数で選び、元の \((d+1)\) 次整数行列式をBareiss消去で計算する。計600件が全て非零。これは独立実装による**部分照合**であり、全件検査と取り違えない。
+`verify_direct_spot.py` は核基底を使わず、各次元100個の補集合を固定乱数で選び、元の \((d+1)\) 次整数行列式をBareiss消去で計算する。計600件が全て非零。これは独立実装による**部分照合**であり、全件検査と取り違えない。
 
 再現（リポジトリ直下で実行）：
 
-\`\`\`sh
+```sh
 g++ -std=c++17 -O3 -Wall -Wextra -Werror research/experiments/binary-cube-hyperplane-d25-d30-20261025/verify_gale_mod.cpp -o /tmp/verify-gale
 /tmp/verify-gale research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt
 python3 research/experiments/binary-cube-hyperplane-d25-d30-20261025/verify_direct_spot.py research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt
-\`\`\`
+```
 
 これは \(d=25,\ldots,30\) の6個の**固定次元の下界**である。\(d\ge31\) への全称主張や、最大安全石数の上界、Grundy値、勝敗は導かない。K0553の \(d=24\) までの証人とは独立に作った。
