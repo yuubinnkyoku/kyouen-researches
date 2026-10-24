@@ -27,3 +27,39 @@ python3 research/experiments/n11-s7-terminal-loss12-20261024/verify_three_root_m
 ```
 
 この追加検証器は三根の全9石/10石候補境界と最大被覆数を再生成し、最初の181候補だけは終局まで再分類して双対制約を検査する。元の `reproduce.sh` は7石の36合法子の勝敗分類を別途完全検査する。任意形式の証明の最小性や空盤勝敗を意味しない。
+
+## 三つの8石LOSS根から7石LOSS 22局面への逆向き伝播
+
+三つの独立終局証明済み8石LOSS根は、いずれも8個の正準7石親を持つ。
+親を重複除去すると **22局面**、7石→8石の証人辺は延べ **24本**。
+元先手固定の奇数7石ANDでは、合法な8石LOSS子が1件あれば7石もLOSSなので、
+この22局面は追加の終局探索なしでLOSSと確定する。従来の対象7石根も22件に含む。
+
+凍結7石LOSS 2,232件との重複は1件、差分は21件（従来の対象7石根を除けば**20件**）。
+既存35個の独立終局証明済み8石LOSS根から導いた7石親246件との重複は0、
+凍結7石WIN 17件および別途終局証明済みの7石WIN 5件との照合でも矛盾0。
+ここでの新規件数は**指定した比較集合に対してのみ**であり、研究全体の全cacheとの差分ではない。
+
+22件の7石LOSSを一手戻すと、正準6石親は70件、6石→7石の証人辺は154本。
+凍結7石LOSS 2,232件と既存35個の8石LOSS根由来246件を基準にすると、
+**70件の6石候補で147本の被覆辺が増加**する。基準に含む凍結7石LOSSは
+cache由来であり、147という差分はその比較集合に条件付けられる。
+同じ比較集合の下で70候補の未被覆7石子の最小数は51、全子被覆は0。
+**新しい6石LOSS、二石root閉鎖、空盤勝敗は導出しない。**
+
+独立検証器はD4正準化・全合法一手境界・整数行列式・共線退化の場合の分岐を
+前回のPython実装とは別に実装する。`certificate.json` の三根と固定キーを照合し、
+全24辺と154辺の合法性、旧集合との重複、WIN/LOSS矛盾、70候補の不足数を再計算する。
+既存の `verify.py` による三つの8石LOSSの終局証明を**前提**とする構造検証であり、
+単独では10石終局勝敗を再証明しない。`reproduce.sh` に組み込み済みで、
+8石根を改変した入力の拒否も確認する。
+
+```sh
+python3 research/experiments/n11-s7-terminal-loss12-20261024/verify_s7_reverse_closure.py \
+  --certificate research/experiments/n11-s7-terminal-loss12-20261024/certificate.json \
+  --frozen-s7-loss research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_loss_2232.txt \
+  --frozen-s7-win research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt \
+  --previous-s8-loss-roots research/experiments/n11-s8-to-s7-lift238-20261020/roots35.txt
+```
+
+標準11×11空盤の勝敗は **UNKNOWN**。
