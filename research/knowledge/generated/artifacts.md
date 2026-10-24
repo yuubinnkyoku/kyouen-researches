@@ -8587,6 +8587,15 @@
 ## [research/experiments/q6-eighteen-sufficiency-20261024/symbolic-certificate.json](../../../research/experiments/q6-eighteen-sufficiency-20261024/symbolic-certificate.json)
 
 - [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (certificate): 連続3族156条件の有理式・因数分解・符号排除証拠
+## [research/experiments/q6-seventeen-audit-20261024/audit.json](../../../research/experiments/q6-seventeen-audit-20261024/audit.json)
+
+- [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (data): 参照旧ソースSHA256と3族各544記号候補・6173662有理候補・AP5005候補の再実行receipt
+## [research/experiments/q6-seventeen-audit-20261024/audit.md](../../../research/experiments/q6-seventeen-audit-20261024/audit.md)
+
+- [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (proof): 旧案の全実数帰着と枝刈り・特殊有理数範囲の論理監査、条件外の四円反例
+## [research/experiments/q6-seventeen-audit-20261024/run.py](../../../research/experiments/q6-seventeen-audit-20261024/run.py)
+
+- [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (verifier): 旧Pythonと独立C++の全有限部分を再実行し件数・結論を照合
 ## [research/experiments/quadratic-lambda-20261024/proof.md](../../../research/experiments/quadratic-lambda-20261024/proof.md)
 
 - [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (proof): 有限例外・転置・縮尺・二水平行不変性の全称証明
@@ -9116,6 +9125,7 @@
 ## [research/experiments/three-parallel-q6-17-20261018/proof.md](../../../research/experiments/three-parallel-q6-17-20261018/proof.md)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 三平行線q6の任意実数候補で17点十分。四円同時通過の組合せ必要条件と有限正規形検査
+- [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (proof): 四円共有点補題・E13分類・17候補十分性の旧証明案
 ## [research/experiments/three-parallel-q6-17-20261018/verify.py](../../../research/experiments/three-parallel-q6-17-20261018/verify.py)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 混合型182候補と例外四円組のPython整数完全列挙
@@ -9155,6 +9165,18 @@
 ## [research/experiments/two-forbidden-hyperedges-20261018/verify.py](../../../research/experiments/two-forbidden-hyperedges-20261018/verify.py)
 
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): n<=7全組とn<=12固定乱数3000組のラベル付き全局面独立検査
+## [research/experiments/two-parallel-five-point-concurrency-20261024/audit.json](../../../research/experiments/two-parallel-five-point-concurrency-20261024/audit.json)
+
+- [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (data): 恒等式・改変拒否・相異なる四円の係数組と全16サイズの達成例の検査receipt
+## [research/experiments/two-parallel-five-point-concurrency-20261024/proof.md](../../../research/experiments/two-parallel-five-point-concurrency-20261024/proof.md)
+
+- [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (proof): 五円のC5共有構造から黄金比型へ帰着し負の線間距離二乗で全称排除、四円明示例
+## [research/experiments/two-parallel-five-point-concurrency-20261024/verify.py](../../../research/experiments/two-parallel-five-point-concurrency-20261024/verify.py)
+
+- [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (verifier): 標準ライブラリの有理係数多項式による16恒等式の独立展開と改変拒否
+## [research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp](../../../research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp)
+
+- [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (verifier): 全点整数の鋭さの例を含む2例を独立整数演算し候補9円・6円のうち4円ずつが通ることを確認
 ## [research/experiments/two-row-misere-swap-threshold-20261024/README.md](../../../research/experiments/two-row-misere-swap-threshold-20261024/README.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 二行盤の真の交換開始長7の証明と有限完全列挙

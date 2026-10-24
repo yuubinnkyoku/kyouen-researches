@@ -1668,6 +1668,7 @@
 - ← generalizes [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md): 二行鋭い弦エネルギーを多行同時最適へ拡張
 - ← depends_on [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md): 同和弦energyの幾何的利用との接続（復元定理の証明自体は独立）
 - ← depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 二点和energyの鋭い上界と同和弦による円計数
+- ← depends_on [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md): 4点・5点の同和弦energy上界
 
 ## [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md) 交換可能残余classはrank以下へ縮めて通常Grundyとmisère補助mexを保存し、誘導削除上限は全rankで最良
 
@@ -2318,6 +2319,7 @@
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 二点和energyの鋭い上界と同和弦による円計数
 - → depends_on [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 任意平行線上の満容量問題の定義と21候補上界
 - ← depends_on [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 18候補不足極大のE14剛性分類と被覆等号条件を独立代数監査で排除
+- ← depends_on [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md): 二点和energy14の剛性分類と5点二点和復元
 
 ## [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) 3行・共通5列の6点円は最大4本で等号は正方格子型に限る
 
@@ -2581,9 +2583,16 @@
 
 - → depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 18候補不足極大のE14剛性分類と被覆等号条件を独立代数監査で排除
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 全終局の同一石数から全安全局面のmexを帰納計算
+- ← generalizes [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md): 各線18候補の十分条件を17候補へ緩める。18候補の独立代数証明は別途有効
 
 ## [K0540](../items/K0540-coplanar-two-layer-all-openings.md) 2×k×m・4点共面禁止版の空盤勝敗と全初手Grundy値の完全分類
 
 - → depends_on [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): k,m≥3かつk+m≥10の無界全局面Grundy定理
 - → depends_on [K0527](../items/K0527-coplanar-prism-all-length-strong-solution.md): 2×2×m（m≥3）の無界全局面偶奇則
 - → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の例外と独立有限完全列挙
+
+## [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) 任意三平行線の6点共円共線禁止は各線17候補で全安全局面を偶奇強解決できる
+
+- → depends_on [K0478](../items/K0478-three-parallel-q6-eighteen-candidate-obstruction-rigidity.md): 二点和energy14の剛性分類と5点二点和復元
+- → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 4点・5点の同和弦energy上界
+- → generalizes [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 各線18候補の十分条件を17候補へ緩める。18候補の独立代数証明は別途有効

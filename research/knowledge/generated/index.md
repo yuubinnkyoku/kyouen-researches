@@ -525,3 +525,5 @@
 | [K0538](../items/K0538-polynomial-lift-degree-parity-constructive-outcomes.md) | 多項式行列式版は同列三点の吸収性から次数3以上の勝敗と初手を構成できる | proposition | proved | variants, geometry, rules, first-moves, rectangles |
 | [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) | 任意三平行線の6点共円共線禁止は各線18候補で全終局15石となる | proposition | proved | rectangles, geometry, variants, maximal-safe, grundy, first-moves |
 | [K0540](../items/K0540-coplanar-two-layer-all-openings.md) | 2×k×m・4点共面禁止版の空盤勝敗と全初手Grundy値の完全分類 | proposition | proved | variants, geometry, grundy, first-moves |
+| [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) | 任意三平行線の6点共円共線禁止は各線17候補で全安全局面を偶奇強解決できる | proposition | proved | rectangles, geometry, variants, maximal-safe, grundy, first-moves, verification |
+| [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) | 二平行線の各2〜5指定点を二点ずつ通る線外一点共通円の最大数を鋭く分類できる | proposition | proved | geometry, variants, certificates |
