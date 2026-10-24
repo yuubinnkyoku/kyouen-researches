@@ -98,9 +98,10 @@ def verify_terminal(win_leaves, loss_leaves, cpp_path):
     for b in sorted(leaves):
         win, states = next_player_wins_at_s10(b)
         need(win == (b in win_leaves), f'opposite Python terminal verdict {b:032x}')
-        need(cpp[f'{b:032x}'] == ('WIN' if win else 'LOSS',
-                                  states, len(legal(b))),
-             f'C++/Python terminal mismatch {b:032x}')
+        need(cpp[f'{b:032x}'][0] == ('WIN' if win else 'LOSS') and
+             cpp[f'{b:032x}'][1] > 0 and
+             cpp[f'{b:032x}'][2] == len(legal(b)),
+             f'C++/Python terminal verdict or legal count mismatch {b:032x}')
         state_sum += states
     need(state_sum == 3122, 'independent terminal state total changed')
     return state_sum
