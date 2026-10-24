@@ -10,7 +10,7 @@ import unittest
 from pathlib import Path
 
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad
-from dfpn_s4_manifest_verify import load_s5_cache
+from dfpn_s4_manifest_verify import load_s5_cache, load_manifest
 
 # Independently saved, canonical, safe S5 keys.  The tests never assume
 # these labels are a proof of their game-theoretic verdicts.
@@ -78,6 +78,59 @@ class S5ManifestInputTests(unittest.TestCase):
             self.skipTest('no active quarantined keys')
         key = sorted(active)[0]
         self.assertEqual(self.read(row(key, 1) + row(A, 2)), {A: 2})
+
+
+class S4ManifestStructureTests(unittest.TestCase):
+    """Structural rejection must happen before expensive board enumeration."""
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.manifest = Path(self.tmp.name) / 's4.csv'
+        lo, hi = d4_canonical_key([60, 0, 1, 2])
+        self.valid = (f's4verdict,60,0,{lo},{hi},2,2,2,'
+                      f'{A[0]},{A[1]},{B[0]},{B[1]}\\n')
+
+    def parse(self, text):
+        self.manifest.write_text(text, encoding='utf-8')
+        return load_manifest(self.manifest)
+
+    def test_valid_shape_and_comments(self):
+        self.assertEqual(len(self.parse('# header\\n' + self.valid)), 1)
+
+    def test_empty_or_comment_only_is_not_verified(self):
+        for data in ('', '# header\\n', '\\n'):
+            with self.subTest(data=data):
+                with self.assertRaisesRegex(ValueError, 'empty S4 manifest'):
+                    self.parse(data)
+
+    def test_unknown_rows_cannot_disappear_silently(self):
+        for data in ('unexpected,1,2\\n', self.valid + 'bad,0\\n'):
+            with self.subTest(data=data):
+                with self.assertRaisesRegex(ValueError, 'unexpected S4'):
+                    self.parse(data)
+
+    def test_child_count_and_header_truncation(self):
+        for data in ('s4verdict,60,0,1,0,2,1\\n',
+                     self.valid.replace(',2,2,2,', ',2,-1,2,'),
+                     self.valid.replace(',2,2,2,', ',2,3,2,'),
+                     self.valid + 's4verdict,60,0,1\\n'):
+            with self.subTest(data=data):
+                with self.assertRaises(ValueError):
+                    self.parse(data)
+
+    def test_out_of_range_roots_and_masks(self):
+        lo, hi = d4_canonical_key([60, 0, 1, 2])
+        for data in (
+            self.valid.replace('s4verdict,60,0,', 's4verdict,121,0,'),
+            self.valid.replace('s4verdict,60,0,', 's4verdict,60,60,'),
+            self.valid.replace(f',{lo},{hi},2,', ',0,0,2,'),
+            self.valid.replace(f',{A[0]},{A[1]},', ',-1,0,'),
+            self.valid.replace(',2,2,2,', ',0,2,2,'),
+        ):
+            with self.subTest(data=data):
+                with self.assertRaises(ValueError):
+                    self.parse(data)
 
 
 if __name__ == '__main__':

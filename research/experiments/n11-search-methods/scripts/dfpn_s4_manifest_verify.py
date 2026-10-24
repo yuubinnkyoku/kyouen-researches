@@ -94,18 +94,52 @@ def load_s5_cache(path):
     return cache
 
 def load_manifest(path):
+    """Fail closed on missing, truncated, or contaminated S4 manifests.
+
+    A zero-row file is not evidence of a verified certificate. Validate the
+    row shape before using n_child as an index or performing board searches.
+    The full legal-child and verdict checks remain in main().
+    """
     rows = []
-    for line in io.open(path, encoding='utf-8', errors='replace'):
+    for lineno, line in enumerate(io.open(path, encoding='utf-8'), 1):
         line = line.strip()
         if not line or line.startswith('#'):
             continue
         f = line.split(',')
+        location = '%s:%d' % (path, lineno)
         if f[0] != 's4verdict':
-            continue
-        if len(f) < 7:
-            raise ValueError('s4verdict row has only %d fields: %r'
-                             % (len(f), line))
+            raise ValueError('unexpected S4 manifest row at %s' % location)
+        if len(f) < 8:
+            raise ValueError('truncated S4 manifest row at %s' % location)
+        try:
+            first, r2, klo, khi, result, n_child, cov_size = map(int, f[1:8])
+        except ValueError as exc:
+            raise ValueError('noninteger S4 manifest header at %s'
+                             % location) from exc
+        if not (0 <= first < V and 0 <= r2 < V and first != r2):
+            raise ValueError('invalid S4 root at %s' % location)
+        if not (0 <= klo < 2**64 and 0 <= khi < 2**57
+                and popcount2(klo, khi) == 4):
+            raise ValueError('invalid S4 canonical-key shape at %s'
+                             % location)
+        if result not in (1, 2) or n_child < 0 or cov_size < 1:
+            raise ValueError('invalid S4 verdict or counts at %s'
+                             % location)
+        if len(f) != 8 + 2 * n_child:
+            raise ValueError('S4 child count/field count mismatch at %s'
+                             % location)
+        try:
+            child_words = list(map(int, f[8:]))
+        except ValueError as exc:
+            raise ValueError('noninteger S4 child at %s' % location) from exc
+        for lo, hi in zip(child_words[::2], child_words[1::2]):
+            if (not (0 <= lo < 2**64 and 0 <= hi < 2**57)
+                    or popcount2(lo, hi) != 5):
+                raise ValueError('invalid S4 child key shape at %s'
+                                 % location)
         rows.append(f)
+    if not rows:
+        raise ValueError('empty S4 manifest: no certificate was supplied')
     return rows
 
 
