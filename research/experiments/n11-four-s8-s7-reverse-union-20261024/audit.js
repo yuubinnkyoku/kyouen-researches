@@ -115,6 +115,24 @@ function audit({terminal = true} = {}) {
       addedPairs.add(parent + ':' + h);
     }
   }
+  const new6Fresh = new Set([...new6].filter(h => !old6.has(h)));
+  const fixed7 = keys(read('n11-four-s8-s7-reverse-union-20261024/s7-loss29.keys'));
+  const fixed6 = keys(read('n11-four-s8-s7-reverse-union-20261024/s6-parents90.keys'));
+  need([...fresh7].sort().join(',') === fixed7.join(',') &&
+    [...new6Fresh].sort().join(',') === fixed6.join(','),
+    'stored S7/S6 key manifest differs from exact reverse closure');
+  let total6Edges = 0, secured6Edges = 0, closed6 = 0, min6Gap = Infinity;
+  for (const h of all6) {
+    const children = g.children(g.board(h, 6));
+    const covered = [...children].filter(c => all7.has(c)).length;
+    total6Edges += children.size;
+    secured6Edges += covered;
+    const gapCount = children.size - covered;
+    if (gapCount === 0) closed6++;
+    min6Gap = Math.min(min6Gap, gapCount);
+  }
+  need(total6Edges === 70796 && secured6Edges === 2177 &&
+    closed6 === 0 && min6Gap === 37, 'S6 complete-child coverage changed');
   const frozenLossOverlap = [...fresh7].filter(h => frozenLoss7.has(h)).length;
   need(old7.size === 282 && new7.size === 30 && fresh7.size === 29 &&
     all7.size === 311 && old6.size === 854 && new6.size === 97 &&
@@ -127,9 +145,11 @@ function audit({terminal = true} = {}) {
     addedS7AbsentFromFrozenLoss: fresh7.size - frozenLossOverlap,
     priorS6Parents: old6.size, newS6ParentsFromFour: new6.size,
     addedS6Parents: all6.size - old6.size, allS6Parents: all6.size,
-    addedS6S7ClassEdges: addedPairs.size, certifiedS8Win: win8.size,
+    addedS6S7ClassEdges: addedPairs.size, securedS6S7ClassEdges: secured6Edges,
+    totalS6S7ClassEdges: total6Edges, minUncoveredS7Classes: min6Gap,
+    certifiedS8Win: win8.size,
     certifiedS9Win: s9.size, polarityConflicts: 0,
-    newS6Closure: 0, newTwoStoneClosure: 0, emptyBoard: 'UNKNOWN'};
+    newS6Closure: closed6, newTwoStoneClosure: 0, emptyBoard: 'UNKNOWN'};
 }
 if (require.main === module) {
   console.log(JSON.stringify(audit(), null, 2));
