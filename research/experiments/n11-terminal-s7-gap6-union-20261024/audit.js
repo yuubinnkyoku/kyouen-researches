@@ -79,7 +79,7 @@ function audit(d,{terminal=true}={}){
     closedS7:prior.closedS7,newlyClosedS7:0,
     minimumUnknownClassGap:18,winLossConflicts:0,
     s10TerminalReverified:gap.terminalVerified,s10TerminalStates:gap.terminalStates,
-    terminalBoundaryWins:537,terminalBoundaryLosses:43,
+    terminalVerifiedWins:537,terminalVerifiedLosses:43,
     emptyBoard:'UNKNOWN'};
 }
 module.exports={audit};
