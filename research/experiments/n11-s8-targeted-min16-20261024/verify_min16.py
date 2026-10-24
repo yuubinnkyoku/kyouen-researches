@@ -14,7 +14,7 @@ import verify_terminal_independent as g
 
 ROOT = '00000000000040001000044400830000'
 
-def verify(keys, *, terminal=True):
+def verify(keys, *, terminal=True, full=False):
     assert len(keys) == len(set(keys)) == 16, 'wrong/duplicate leaf count'
     assert all(len(h) == 32 and all(c in '0123456789abcdef' for c in h)
                for h in keys), 'invalid leaf key'
@@ -46,10 +46,22 @@ def verify(keys, *, terminal=True):
             assert not win, f'false LOSS leaf {h}'
             states += visited
         assert states == 11495, f'terminal state regression: {states}'
+    if full:
+        win_count = loss_count = all_states = 0
+        for m in boundary:
+            is_win, visited, _ = g.solve10(m)
+            all_states += visited
+            if is_win:
+                win_count += 1
+            else:
+                loss_count += 1
+        assert (win_count, loss_count, all_states) == (297, 81, 175066), (
+            win_count, loss_count, all_states)
     return {'root': ROOT, 's9_obligations': 31, 's10_boundary': 378,
             'max_s9_covered_per_leaf': 2, 'minimum_leaves': 16,
             'selected_leaves': 16, 'terminal_verified': 16 if terminal else 0,
             'terminal_states': states if terminal else None,
+            'full_boundary': {'win': 297, 'loss': 81, 'states': 175066} if full else None,
             'empty_board': 'UNKNOWN'}
 
 def negative(keys):
@@ -64,7 +76,7 @@ def negative(keys):
 
 if __name__ == '__main__':
     keys = (HERE / 'leaves16.keys').read_text(encoding='ascii').split()
-    print(verify(keys))
+    print(verify(keys, full=('--full' in sys.argv)))
     if '--negative' in sys.argv:
         negative(keys)
         print('PASS four malformed certificates rejected')
