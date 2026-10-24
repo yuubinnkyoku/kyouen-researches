@@ -9,6 +9,11 @@ import itertools
 from pathlib import Path
 
 ROOT = '00000100110002001042100000000010'
+
+
+def require(ok: bool, why: str) -> None:
+    if not ok:
+        raise ValueError(why)
 N = 121
 XY = [(i % 11, i // 11) for i in range(N)]
 TRANSFORMS = [
@@ -46,7 +51,7 @@ def det4(p: tuple[int, int, int, int]) -> int:
         for i in range(k+1, 4):
             for j in range(k+1, 4):
                 z = a[i][j]*v - a[i][k]*a[k][j]
-                assert z % prev == 0
+                require(z % prev == 0, 'non-exact Bareiss division')
                 a[i][j] = z // prev
         for i in range(k+1, 4):
             a[i][k] = 0
@@ -71,7 +76,7 @@ def children(b: int) -> set[str]:
 
 def terminal_win(h: str) -> tuple[bool, int, int]:
     b = int(h, 16)
-    assert len(points(b)) == 10 and canonical(b) == b and safe(b)
+    require(len(points(b)) == 10 and canonical(b) == b and safe(b), 'bad S10 board')
     base = points(b)
     moves = legal(b)
     n = len(moves)
@@ -116,23 +121,23 @@ def terminal_win(h: str) -> tuple[bool, int, int]:
 
 def verify(text: str, terminal: bool = True) -> dict:
     lines = text.strip().splitlines()
-    assert len(lines) == 21
-    assert lines[:4] == ['# n11-S9-WIN-terminal-v1', 'BOARD 11',
-                         'S9 '+ROOT, 'S10_WIN_LEAVES 16']
-    assert lines[-1] == 'END'
-    assert all(line.startswith('LEAF ') and len(line) == 37 for line in lines[4:-1])
+    require(len(lines) == 21, 'certificate line count')
+    require(lines[:4] == ['# n11-S9-WIN-terminal-v1', 'BOARD 11',
+                         'S9 '+ROOT, 'S10_WIN_LEAVES 16'], 'certificate header')
+    require(lines[-1] == 'END', 'certificate END')
+    require(all(line.startswith('LEAF ') and len(line) == 37 for line in lines[4:-1]), 'leaf record format')
     leaves = [line[5:] for line in lines[4:-1]]
-    assert len(leaves) == len(set(leaves)) == 16
+    require(len(leaves) == len(set(leaves)) == 16, 'duplicate/missing leaf')
     b = int(ROOT, 16)
-    assert len(points(b)) == 9 and canonical(b) == b and safe(b)
-    assert set(leaves) == children(b)
+    require(len(points(b)) == 9 and canonical(b) == b and safe(b), 'bad S9 board')
+    require(set(leaves) == children(b), 'incomplete S9 AND boundary')
     states = 0
     if terminal:
         for h in leaves:
             result, visited, _ = terminal_win(h)
-            assert result, f'false S10 WIN: {h}'
+            require(result, f'false S10 WIN: {h}')
             states += visited
-        assert states == 185, states
+        require(states == 185, f'unexpected state count: {states}')
     return {'s9_win_roots': 1, 's10_win_leaves': len(leaves),
             'terminal_states': states if terminal else None, 'empty_board': 'UNKNOWN'}
 
