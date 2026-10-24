@@ -152,6 +152,22 @@ def load_manifest(path):
     return rows
 
 
+def build_s4_edge_index(first, r2):
+    """Index each legal unordered third/fourth-move edge once per root.
+
+    Four-stone legality is independent of move order; a < b retains every
+    legal edge exactly once. Child boundaries are computed only for classes
+    actually requested by the manifest.
+    """
+    base = {first, r2}
+    classes = collections.defaultdict(list)
+    for a in legal_after(base):
+        for b in legal_after(base | {a}):
+            if a < b:
+                classes[d4_canonical_key([first, r2, a, b])].append((a, b))
+    return classes
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('manifest')
@@ -165,6 +181,7 @@ def main():
     print('s5 cache entries : %d' % len(cache))
 
     seen_keys = {}
+    root_edge_indexes = {}  # Reuse the raw-edge/D4 index across S4 rows.
     problems = []
     checked_children = 0
     verdicts = collections.Counter()
@@ -206,14 +223,10 @@ def main():
         # legal third moves with b a legal reply to a. The manifest does not
         # list the raw edges, so they are re-derived here and the coverage
         # and child set are compared against the claim.
-        base = {first, r2}
-        verts = legal_after(base)
-        edge_set = set()
-        for a in verts:
-            for b in legal_after(base | {a}):
-                if b == a:
-                    continue
-                edge_set.add((min(a, b), max(a, b)))
+        root = tuple(sorted((first, r2)))
+        if root not in root_edge_indexes:
+            root_edge_indexes[root] = build_s4_edge_index(first, r2)
+        class_edges = root_edge_indexes[root].get((klo, khi), ())
 
         # Edges of THIS class only, and the children each edge contributes.
         #
@@ -227,7 +240,7 @@ def main():
         want_cov = set()
         want_children = set()
         per_edge = []
-        for (a, b) in sorted(edge_set):
+        for (a, b) in class_edges:
             # Compare BOTH halves of the key. Matching on `lo` alone lumps
             # together unrelated classes that happen to agree in the low
             # word, which made a correct 4-edge class look like it had 77

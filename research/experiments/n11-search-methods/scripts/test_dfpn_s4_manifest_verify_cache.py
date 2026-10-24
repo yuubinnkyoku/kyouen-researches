@@ -9,8 +9,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad
-from dfpn_s4_manifest_verify import load_s5_cache, load_manifest
+from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after
+from dfpn_s4_manifest_verify import (load_s5_cache, load_manifest,
+                                     build_s4_edge_index)
 
 # Independently saved, canonical, safe S5 keys.  The tests never assume
 # these labels are a proof of their game-theoretic verdicts.
@@ -148,6 +149,31 @@ class S4ManifestStructureTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     self.parse(data)
 
+
+
+class S4RootEdgeIndexTests(unittest.TestCase):
+    """An independent full-four enumeration must agree with the new index."""
+
+    def test_center_corner_complete_partition(self):
+        got = build_s4_edge_index(60, 0)
+        self.assertEqual(len(got), 3396)
+        self.assertEqual(sum(map(len, got.values())), 6894)
+        expected = {}
+        vertices = legal_after({60, 0})
+        for a in vertices:
+            for b in vertices:
+                if a >= b or has_forbidden_quad([60, 0, a, b]):
+                    continue
+                key = d4_canonical_key([60, 0, a, b])
+                expected.setdefault(key, []).append((a, b))
+        self.assertEqual(dict(got), expected)
+
+    def test_reversed_root_and_reply27(self):
+        self.assertEqual(build_s4_edge_index(60, 0),
+                         build_s4_edge_index(0, 60))
+        other = build_s4_edge_index(60, 27)
+        self.assertEqual(len(other), 3384)
+        self.assertEqual(sum(map(len, other.values())), 6871)
 
 if __name__ == '__main__':
     unittest.main()
