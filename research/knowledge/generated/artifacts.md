@@ -8587,6 +8587,21 @@
 ## [research/experiments/q6-eighteen-sufficiency-20261024/symbolic-certificate.json](../../../research/experiments/q6-eighteen-sufficiency-20261024/symbolic-certificate.json)
 
 - [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md) (certificate): 連続3族156条件の有理式・因数分解・符号排除証拠
+## [research/experiments/q6-rational-third-line-blockers-20261024/audit.json](../../../research/experiments/q6-rational-third-line-blockers-20261024/audit.json)
+
+- [K0543](../items/K0543-nine-height-prototypes-real-third-line-four-stone-blocker-bound.md) (data): 全分類と原型欠落・パラメータ欠落・虚偽上界の拒否receipt
+## [research/experiments/q6-rational-third-line-blockers-20261024/certificate.json](../../../research/experiments/q6-rational-third-line-blockers-20261024/certificate.json)
+
+- [K0543](../items/K0543-nine-height-prototypes-real-third-line-four-stone-blocker-bound.md) (certificate): 有限原型の全パラメータと次数和または独立集合による上界
+## [research/experiments/q6-rational-third-line-blockers-20261024/check.py](../../../research/experiments/q6-rational-third-line-blockers-20261024/check.py)
+
+- [K0543](../items/K0543-nine-height-prototypes-real-third-line-four-stone-blocker-bound.md) (verifier): Gaussian消去・根軸で全558238三円組と全11624パラメータの被覆上界を独立確認
+## [research/experiments/q6-rational-third-line-blockers-20261024/generate.py](../../../research/experiments/q6-rational-third-line-blockers-20261024/generate.py)
+
+- [K0543](../items/K0543-nine-height-prototypes-real-third-line-four-stone-blocker-bound.md) (solver): Cramer・判別式・有理根グラフで全8001型の証明書を生成
+## [research/experiments/q6-rational-third-line-blockers-20261024/proof.md](../../../research/experiments/q6-rational-third-line-blockers-20261024/proof.md)
+
+- [K0543](../items/K0543-nine-height-prototypes-real-third-line-four-stone-blocker-bound.md) (proof): 全実数第三線の三円パラメータへの有限帰着、特異組排除、無理数成分の次数1上界
 ## [research/experiments/q6-seventeen-audit-20261024/audit.json](../../../research/experiments/q6-seventeen-audit-20261024/audit.json)
 
 - [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (data): 参照旧ソースSHA256と3族各544記号候補・6173662有理候補・AP5005候補の再実行receipt
