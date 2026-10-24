@@ -210,3 +210,113 @@ def audit_terminal_spectrum(d):
 if __name__ == "__main__":
     for dimension in range(1, 13):
         audit_terminal_spectrum(dimension)
+
+
+# Theorem 11: exact counts for intermediate terminal sizes.
+# This section uses normalized columns, not geometric face masks.
+def intermediate_column_count(d, t):
+    """Count minimal transversals via t colored difference directions."""
+    assert d >= 3 and 1 + d.bit_length() <= t <= d + 1
+    size = 1 << (t - 1)
+    directions = {1 << j: 1 << j for j in range(t - 1)}
+    directions[size - 1] = 1 << (t - 1)
+    all_colors = (1 << t) - 1
+    count = 0
+    for chosen in combinations(range(1, size), d):
+        words = (0,) + chosen
+        covered = 0
+        for i, x in enumerate(words):
+            for y in words[i + 1:]:
+                covered |= directions.get(x ^ y, 0)
+        count += (covered == all_colors)
+    numerator = (1 << d) * factorial(d) * count
+    assert numerator % factorial(t) == 0
+    return count, numerator // factorial(t)
+
+
+def _independence_polynomial(j, folded=False):
+    """Independence polynomial of Q_j or folded Q_j; j<=4 here."""
+    n = 1 << j
+    assert n <= 16
+    dirs = [1 << k for k in range(j)]
+    if folded:
+        dirs.append(n - 1)
+    neighbors = [sum(1 << (x ^ v) for v in dirs) for x in range(n)]
+    coefficients = [0] * (n + 1)
+    for mask in range(1 << n):
+        remaining = mask
+        while remaining:
+            bit = remaining & -remaining
+            remaining -= bit
+            if mask & neighbors[bit.bit_length() - 1]:
+                break
+        else:
+            coefficients[mask.bit_count()] += 1
+    return coefficients
+
+
+def _poly_multiply(a, b, limit=16):
+    out = [0] * min(len(a) + len(b) - 1, limit + 1)
+    for i, x in enumerate(a):
+        for j, y in enumerate(b[:len(out) - i]):
+            out[i + j] += x * y
+    return out
+
+
+def _poly_power(a, k):
+    out = [1]
+    for _ in range(k):
+        out = _poly_multiply(out, a)
+    return out
+
+
+def _rooted_independent(a, vertices):
+    # By vertex transitivity, k*I[k]/vertices is an integer.
+    assert all(k * a[k] % vertices == 0 for k in range(1, len(a)))
+    return [0] + [k * a[k] // vertices for k in range(1, len(a))]
+
+
+def t5_inclusion_exclusion():
+    """Independently compute the full 16-vertex coefficient polynomial."""
+    from math import comb
+    t, n = 5, 16
+    coefficients = [0] * 17
+    for j in range(t):
+        p = _independence_polynomial(j)
+        term = _poly_multiply(
+            _rooted_independent(p, 1 << j),
+            _poly_power(p, (n >> j) - 1))
+        for k, value in enumerate(term):
+            coefficients[k] += (-1) ** j * comb(t, j) * value
+    folded = _independence_polynomial(t - 1, folded=True)
+    term = _rooted_independent(folded, n)
+    for k, value in enumerate(term):
+        coefficients[k] += (-1) ** t * value
+    return coefficients
+
+
+def audit_intermediate_columns():
+    expected = {
+        (5, 4): (21, 3360),
+        (5, 5): (828, 26496),
+        (5, 6): (360, 1920),
+        (6, 4): (7, 13440),
+        (6, 5): (3220, 1236480),
+        (6, 6): (16387, 1048768),
+        (7, 4): (1, 26880),
+        (7, 5): (5860, 31503360),
+        (7, 6): (249880, 223892480),
+    }
+    for (d, t), answer in expected.items():
+        result = intermediate_column_count(d, t)
+        assert result == answer, (d, t, result, answer)
+        print(f"columns d={d} t={t} b={result[0]} terminal={result[1]} PASS")
+    expected_t5 = [0] * 5 + [
+        60, 828, 3220, 5860, 6435, 5005, 3003, 1365,
+        455, 105, 15, 1]
+    assert t5_inclusion_exclusion() == expected_t5
+    print("t=5 inclusion-exclusion independent-set polynomial PASS")
+
+
+if __name__ == "__main__" and "--intermediate" in __import__("sys").argv:
+    audit_intermediate_columns()
