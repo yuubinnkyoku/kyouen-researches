@@ -107,6 +107,7 @@ if(require.main===module){
     ].map(read),
     oldCert:read('n11-s7-terminal-loss12-20261024/certificate.json'),
     loss35:read('n11-s8-compact385-pruned1946-20261020/loss_roots35.txt'),
+    direct38:read('n11-s7-38-terminal-20261019/s8_38_children.txt'),
     proof38:read('n11-s7-38-terminal-20261019/s8_38_win_proof.tsv'),
     proof24:read('n11-s8-neighbor24-round8-20261020/proof24_optimized.tsv'),
     proof22:read('n11-s8-round9-global78-20261020/round9_proof_optimized.tsv'),
