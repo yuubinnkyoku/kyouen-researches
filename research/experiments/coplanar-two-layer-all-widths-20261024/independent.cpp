@@ -138,7 +138,7 @@ void audit_large_square_terminal5(int k) {
         }
     }
     cout<<"large_square "<<k<<" safe_oriented_3plus2 "<<safe
-        <<" terminal_oriented_3plus2 "<<terminal<<"\\n";
+        <<" terminal_oriented_3plus2 "<<terminal<<"\n";
     const long long expected_safe[]={0,0,0,1332,40368,475400,3408680,17308328};
     const long long expected_terminal[]={0,0,0,532,304,0,0,0};
     assert(k>=3&&k<=7);
