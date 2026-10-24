@@ -7,6 +7,13 @@ from itertools import combinations
 from math import gcd
 
 EXPECTED = {
+    (1, 1): ([1, 2, 1, 0, 0, 0, 0], [0]*7, (0, 1)),
+    (1, 2): ([1, 4, 6, 4, 0, 0, 0], [0]*7, (1, 0)),
+    (1, 3): ([1, 6, 15, 20, 0, 0, 0], [0]*7, (1, 0)),
+    (1, 4): ([1, 8, 28, 56, 0, 0, 0], [0]*7, (1, 0)),
+    (2, 2): ([1, 8, 28, 56, 58, 8, 0], [1, 8, 16, 0, 0, 0, 0], (0, 0)),
+    (2, 3): ([1, 12, 66, 220, 386, 172, 0], [0]*7, (1, 0)),
+    (2, 4): ([1, 16, 120, 560, 1364, 1008, 0], [0]*7, (1, 0)),
     (3, 3): ([1, 18, 153, 816, 2436, 2664, 368], [0, 10, 25, 16, 0, 0, 0], (1, 0)),
     (3, 4): ([1, 24, 276, 2024, 8500, 15056, 5648], [0, 0, 8, 12, 0, 0, 0], (0, 1)),
     (3, 5): ([1, 30, 435, 4060, 21840, 52680, 31800], [0]*7, (0, 1)),
@@ -80,7 +87,7 @@ def main():
         print(f'{board}: safe={counts} failures={failures} root={root} terminal={terminal}')
         if witnesses:
             print('  witnesses:', witnesses)
-    print('All six finite boards agree with the independent determinant census.')
+    print('All thirteen finite boards agree with the independent determinant census.')
 
 if __name__ == '__main__':
     main()
