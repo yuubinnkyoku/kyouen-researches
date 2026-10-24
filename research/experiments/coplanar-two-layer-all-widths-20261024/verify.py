@@ -163,6 +163,58 @@ def audit_all_large_samples():
     for k, m in ((7, 7), (7, 8), (8, 7)):
         audit_large_samples(k, m)
 
+
+# Exact independent square-board audit: slope masks, not the C++ pair-vector loops.
+def audit_square_terminal5_slope_masks(n):
+    from math import gcd
+    def slope(a, b):
+        y, z = b[0] - a[0], b[1] - a[1]
+        d = gcd(abs(y), abs(z))
+        y //= d
+        z //= d
+        if y < 0 or (y == 0 and z < 0):
+            y, z = -y, -z
+        return (y, z)
+    pts = [(y, z) for y in range(n) for z in range(n)]
+    directions = sorted({slope(a, b) for a, b in combinations(pts, 2)})
+    ids = {direction: i for i, direction in enumerate(directions)}
+    def bit(a, b):
+        return 1 << ids[slope(a, b)]
+    triangles = Counter()
+    for a, b, c in combinations(pts, 3):
+        ab, ac, bc = bit(a, b), bit(a, c), bit(b, c)
+        if ab == ac:
+            continue
+        triangles[ab | ac | bc] += 1
+    safe = terminal = 0
+    for d, e in combinations(pts, 2):
+        pairbit = bit(d, e)
+        options = []
+        for f in pts:
+            if f == d or f == e:
+                continue
+            df, ef = bit(d, f), bit(e, f)
+            if df == pairbit:
+                continue
+            options.append(df | ef)
+        for mask, frequency in triangles.items():
+            if mask & pairbit:
+                continue
+            safe += frequency
+            if all(mask & option for option in options):
+                terminal += frequency
+    return safe, terminal
+
+
+def audit_all_square_slope_masks():
+    expected = {3: (1332, 532), 4: (40368, 304),
+                5: (475400, 0), 6: (3408680, 0)}
+    for n, values in expected.items():
+        got = audit_square_terminal5_slope_masks(n)
+        assert got == values, (n, got, values)
+        print("square_slope_masks", n, "safe_oriented", got[0],
+              "terminal_oriented", got[1])
+
 if __name__ == "__main__":
     check_witness()
     for k, m in [(2, 2), (2, 3), (3, 2), (3, 3)]:
@@ -176,3 +228,5 @@ if __name__ == "__main__":
     import sys
     if "--large-sample" in sys.argv:
         audit_all_large_samples()
+    if "--square-slope-audit" in sys.argv:
+        audit_all_square_slope_masks()
