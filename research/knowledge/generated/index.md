@@ -530,3 +530,4 @@
 | [K0543](../items/K0543-nine-height-prototypes-real-third-line-four-stone-blocker-bound.md) | 九段から選ぶ二線五石の全8001型で第三線の安全四石が塞ぐ空点は高々8個 | proposition | proved | geometry, variants, maximal-safe, certificates, verification |
 | [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) | 共超平面禁止の最小極大判定と全三次元直方体のs・三石極大数 | proposition | proved | variants, geometry, maximal-safe, statistics |
 | [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) | 四次元二値立方体の5点共超平面禁止版の強解決と二値超立方体の共面四点数 | proposition | proved | variants, geometry, grundy, maximal-safe, maximum-safe, statistics |
+| [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) | 五次元二値立方体の6点共超平面禁止版の強解決と全次元の構成下界 | proposition | proved | variants, geometry, grundy, first-moves, maximum-safe, maximal-safe, statistics |

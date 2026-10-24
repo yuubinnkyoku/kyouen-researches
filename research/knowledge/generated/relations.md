@@ -2605,8 +2605,13 @@
 - → depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 2×2×2の既存全局面列挙と例外の整合性
 - → depends_on [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md): 2×k×mの三石極大数の既存特殊公式との照合
 - ← depends_on [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): d石極大のアフィン階数判定
+- ← depends_on [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md): 五石極大のアフィン階数条件との照合
 
 ## [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) 四次元二値立方体の5点共超平面禁止版の強解決と二値超立方体の共面四点数
 
 - → depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): d石極大のアフィン階数判定
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大同偶奇のGrundy帰結
+
+## [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) 五次元二値立方体の6点共超平面禁止版の強解決と全次元の構成下界
+
+- → depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): 五石極大のアフィン階数条件との照合

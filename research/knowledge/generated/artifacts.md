@@ -570,6 +570,18 @@
 ## [research/experiments/coplanar-4cube-q5-20261024/verify.py](../../../research/experiments/coplanar-4cube-q5-20261024/verify.py)
 
 - [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) (verifier): 直接整数行列式と全局面mex
+## [research/experiments/coplanar-5cube-q6-20261024/independent.cpp](../../../research/experiments/coplanar-5cube-q6-20261024/independent.cpp)
+
+- [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) (verifier): 素数1009上の6×6増補行列階数と全組合せ直接列挙
+## [research/experiments/coplanar-5cube-q6-20261024/proof.md](../../../research/experiments/coplanar-5cube-q6-20261024/proof.md)
+
+- [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) (proof): 任意次元の構成下界と五次元盤の完全列挙の正当化
+## [research/experiments/coplanar-5cube-q6-20261024/results.md](../../../research/experiments/coplanar-5cube-q6-20261024/results.md)
+
+- [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) (data): 両独立検証器で一致した安全局面・極大配置・Grundy分布
+## [research/experiments/coplanar-5cube-q6-20261024/solve.cpp](../../../research/experiments/coplanar-5cube-q6-20261024/solve.cpp)
+
+- [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) (verifier): 5×5整数Bareiss行列式と増分安全集合列挙およびGrundy再帰
 ## [research/experiments/coplanar-hyperplane-minmax-20261024/proof.md](../../../research/experiments/coplanar-hyperplane-minmax-20261024/proof.md)
 
 - [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md) (proof): 一般有限点集合のアフィン階数判定・全直方体のs・三石極大数の全称証明
