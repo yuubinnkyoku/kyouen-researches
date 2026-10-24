@@ -224,6 +224,7 @@ def main():
         # list the raw edges, so they are re-derived here and the coverage
         # and child set are compared against the claim.
         root = tuple(sorted((first, r2)))
+        base = {first, r2}
         if root not in root_edge_indexes:
             root_edge_indexes[root] = build_s4_edge_index(first, r2)
         class_edges = root_edge_indexes[root].get((klo, khi), ())
