@@ -173,4 +173,4 @@ if (require.main === module) {
     console.error('PASS four malformed-certificate rejections');
   }
 }
-module.exports = {audit, boundary, extractCertificate};
+module.exports = {audit, boundary, extractCertificate, certifiedWin8};
