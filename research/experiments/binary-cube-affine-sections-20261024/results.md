@@ -260,3 +260,5 @@ g++ -std=c++17 -O3 -Wall -Wextra -Werror research/experiments/binary-cube-affine
 | 8 | 3,558,912 | 889,728 | 4,448,640 | 248,640 | 11,410,560 |
 
 $d=4,5$ は有理数RREFと独立の素数1009上RREFで全3平坦を列挙し、6点の15点対の中点重複度で型を判定。別途、10種類の座標関数を全4組出現するように列挙し、$d=4,5,6$ で $(32,8),(960,240),(17920,4480)$ を照合した。$d\ge7$ は全称公式の評価であって全平坦の直接列挙ではない。
+
+再現：`python3 research/experiments/binary-cube-affine-sections-20261024/verify.py --six-sections`（4〜6次元のアフィン関数列挙）。通常実行は有理数RREF監査、`affine_gap_independent.cpp` は独立有限体監査。
