@@ -2611,6 +2611,7 @@
 
 - → depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): d石極大のアフィン階数判定
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大同偶奇のGrundy帰結
+- ← generalizes [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): K0545の共面四点数の全称公式を任意のアフィン次元kに拡張（同項目の四次元ゲーム強解決は対象外）
 
 ## [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) 五次元二値立方体の6点共超平面禁止版の強解決と全次元の構成下界
 
@@ -2623,3 +2624,7 @@
 ## [K0550](../items/K0550-prime-quadratic-irrational-q6-strips-all-length-family.md) 素数と素数平方から作る二次無理数三線q6帯の無限族を全長強解決できる
 
 - → generalizes [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md): c=4の二次無理数帯をc=1・素数p≥5・素数平方p²の無限族へ拡張
+
+## [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) 二値超立方体のk次元平坦の最大交点数とStirling数による全個数
+
+- → generalizes [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): K0545の共面四点数の全称公式を任意のアフィン次元kに拡張（同項目の四次元ゲーム強解決は対象外）
