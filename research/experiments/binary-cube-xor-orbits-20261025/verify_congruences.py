@@ -104,6 +104,68 @@ def verify_six_point_sharpness_period():
             assert (pow(base, d + 4, 16) - pow(base, d, 16)) % 16 == 0
 
 
+
+
+def verify_six_point_mod32():
+    """Prove-checkable q=6 mod-32 pattern, with two independent arithmetic routes.
+
+    Full generality follows from 10! divisible by 256 and
+    (j**4-1)**2 divisible by 256 for odd j, not from the d<=512 loop.
+    """
+    from math import comb, factorial
+
+    support = {4: 75, 5: 75, 6: 2877, 7: 44437,
+               8: 480895, 9: 3220820}
+    exact_known = {6: 206528, 7: 47884928,
+                   8: 9324142464, 9: 1405033324800}
+
+    def via_stirling(d):
+        values = [1] + [0] * 9
+        for _ in range(d):
+            following = [0] * 10
+            for k in range(1, 10):
+                following[k] = (values[k - 1] + k * values[k]) % 256
+            values = following
+        return sum(h * factorial(k) * values[k]
+                   for k, h in support.items()) % 256
+
+    def via_inclusion_exclusion(d):
+        return sum(h * sum((-1) ** (k - j) * comb(k, j)
+                           * pow(j, d, 256) for j in range(k + 1))
+                   for k, h in support.items()) % 256
+
+    # Even bases vanish for d>=8. Odd bases have square-zero 4th-power
+    # increments mod 256, yielding exact affine dependence on floor(d/4).
+    assert factorial(10) % 256 == 0
+    for j in range(10):
+        if j % 2:
+            assert (pow(j, 4, 256) - 1) % 16 == 0
+        else:
+            assert pow(j, 8, 256) == 0
+
+    for d in range(6, 513):
+        a = via_stirling(d)
+        assert a == via_inclusion_exclusion(d), d
+        if d in exact_known:
+            assert a == (720 * exact_known[d] // (1 << d)) % 256, d
+        if d < 8:
+            continue
+        n, r = divmod(d, 4)
+        expected_a = [144 * n + 120, 112 * n - 120,
+                      16 * (n - 2), -16 * (n - 2)][r] % 256
+        assert a == expected_a, d
+        assert a % 8 == 0
+        b = (5 * (a // 8)) % 32  # inverse of 45 modulo 32
+        expected_b = [26 * n + 11, 6 * n + 21,
+                      10 * (n - 2), -10 * (n - 2)][r] % 32
+        assert b == expected_b, d
+        if r in (2, 3):
+            if (n - 2) % 16:
+                assert v2(b) == 1 + v2(abs(n - 2)), d
+            else:
+                assert b == 0, d
+
+
 def main():
     for d in range(3, 65):
         value = exact(C3, 6, d)
@@ -126,6 +188,7 @@ def main():
     for d, q, count in [(4, 6, 40), (5, 6, 1200), (4, 8, 20)]:
         assert count % (1 << max(0, d - v2(q))) == 0
     verify_six_point_sharpness_period()
+    verify_six_point_mod32()
     print("K0567: exact checks and q=6 parity-period bases passed (d<=64)")
 
 
