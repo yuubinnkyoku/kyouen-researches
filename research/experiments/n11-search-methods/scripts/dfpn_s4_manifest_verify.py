@@ -283,7 +283,9 @@ def main():
                 d4_canonical_key([first, r2, a, b, z])
                 for z in legal_after(occ4)
             }
-            per_edge = [(edge, want_children) for edge in valid_edges]
+            # All these edges have the same canonical child set.  Check
+            # the shared set once below, not once per raw edge.
+            per_edge = valid_edges
 
         if not want_cov:
             problems.append('%s: no raw edge maps to this canonical key, so '
@@ -354,25 +356,30 @@ def main():
                 problems.append('%s: %d child key(s) absent from LOSS '
                                 'manifest' % (label, len(missing)))
 
-            for (a, b), kids_here in per_edge:
-                edge_unknown = False
-                edge_win = False
-                for c in kids_here:
-                    got = cache.get(c)
-                    if got is None:
-                        edge_unknown = True
-                        problems.append('%s: child %d,%d (edge %d-%d) not in '
-                                        'the s5 cache'
-                                        % (label, c[0], c[1], a, b))
-                    elif got == 1:
-                        edge_win = True
-                    n_ok += int(got is not None)
-                if edge_win:
-                    win_edges.append((a, b))
-                elif edge_unknown:
-                    undecided_edges += 1
-                else:
-                    loss_edges += 1
+            # D4-equivalent raw edges have identical canonical children,
+            # hence identical cache-verdict patterns.  Inspect each distinct
+            # child once; then apply the result to every edge in the class.
+            # This preserves the universal LOSS obligation, including when
+            # the cache is incomplete or contains a WIN contradiction.
+            missing_cache = []
+            has_win_child = False
+            for c in want_children:
+                got = cache.get(c)
+                if got is None:
+                    missing_cache.append(c)
+                elif got == 1:
+                    has_win_child = True
+            for c in missing_cache:
+                problems.append('%s: child %d,%d absent from s5 cache '
+                                '(affects all %d D4-equivalent edges)'
+                                % (label, c[0], c[1], len(per_edge)))
+            n_ok = (len(want_children) - len(missing_cache)) * len(per_edge)
+            if has_win_child:
+                win_edges = list(per_edge)
+            elif missing_cache:
+                undecided_edges = len(per_edge)
+            else:
+                loss_edges = len(per_edge)
 
             if win_edges:
                 implied = 'WIN'
