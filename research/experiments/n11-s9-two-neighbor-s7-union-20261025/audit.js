@@ -101,17 +101,18 @@ function audit({terminal=true}={}){
  let addedMoves=0,addedClasses=0,minGap=Infinity;
  const newlyClosed=[];
  for(const h of affected7){
-   const b=g.board(h,7),legalClasses=new Set(),secured=new Set(),fresh=new Set();
+   const b=g.board(h,7),legalClasses=new Set(),secured=new Set(),fresh=new Set(),oldSecured=new Set();
    for(const p of g.legal(b)){
      const c=g.key(g.canonical(b|(1n<<BigInt(p))));
      legalClasses.add(c);
      if(allWin8.has(c))secured.add(c);
+     if(oldWin8.has(c))oldSecured.add(c);
      if(fresh8.has(c)){fresh.add(c);addedMoves++;}
    }
    addedClasses+=fresh.size;
    const gap=legalClasses.size-secured.size;
    minGap=Math.min(minGap,gap);
-   if(gap===0)newlyClosed.push(h);
+   if(gap===0&&oldSecured.size<legalClasses.size)newlyClosed.push(h);
  }
  const provenLoss7=g.reverse(provenLoss8);
  need(newlyClosed.every(h=>!provenLoss7.has(h)),
