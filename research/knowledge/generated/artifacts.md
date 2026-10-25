@@ -2508,6 +2508,24 @@
 ## [research/experiments/n11-adaptive-verify-20261013/output/adaptive10m-manifest.json](../../../research/experiments/n11-adaptive-verify-20261013/output/adaptive10m-manifest.json)
 
 - [K0424](../items/K0424-n11-nine-s5-terminal-verdicts-and-stratified-plan.md) (manifest): 126899 LOSS・144095 WINの10M探索記録
+## [research/experiments/n11-batch-s9-terminal-20261025/reproduce.sh](../../../research/experiments/n11-batch-s9-terminal-20261025/reproduce.sh)
+
+- [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) (verifier): 既存C++4×4整数幾何との106葉照合手順
+## [research/experiments/n11-batch-s9-terminal-20261025/s10-win.keys](../../../research/experiments/n11-batch-s9-terminal-20261025/s10-win.keys)
+
+- [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) (certificate): 6根の全合法10石子106件のD4正準形
+## [research/experiments/n11-batch-s9-terminal-20261025/s8-win.keys](../../../research/experiments/n11-batch-s9-terminal-20261025/s8-win.keys)
+
+- [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) (certificate): 逆向きに得た8石WIN親54類
+## [research/experiments/n11-batch-s9-terminal-20261025/s9-roots.keys](../../../research/experiments/n11-batch-s9-terminal-20261025/s9-roots.keys)
+
+- [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) (certificate): 9石AND根6件のD4正準形
+## [research/experiments/n11-batch-s9-terminal-20261025/verify.py](../../../research/experiments/n11-batch-s9-terminal-20261025/verify.py)
+
+- [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) (verifier): 独立4×4整数行列式Bareiss法と終局再帰
+## [research/experiments/n11-batch-s9-terminal-20261025/verify_3x3.py](../../../research/experiments/n11-batch-s9-terminal-20261025/verify_3x3.py)
+
+- [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) (verifier): 別実装3×3差分行列式との照合
 ## [research/experiments/n11-boundary-recovery-20261006/README.md](../../../research/experiments/n11-boundary-recovery-20261006/README.md)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (source): 回収範囲、手順、結論と限界

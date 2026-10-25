@@ -118,6 +118,7 @@
 - ← depends_on [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 全終局の同一石数から全安全局面のmexを帰納計算
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 元先手固定視点の奇数AND・偶数ORの勝敗伝播
 - ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 元先手固定視点の奇数AND・偶数OR伝播
+- ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 元先手固定視点の奇数AND・偶数OR伝播
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -744,6 +745,7 @@
 - ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 局所証明は空盤の未解決性を変えない
 - ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 局所終局証明は空盤勝敗を確定しない
+- ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 局所終局証明は空盤勝敗を確定しない
 
 ## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 固定qの最小極大サイズには漸近指数下界2/3がある
 
@@ -2686,6 +2688,7 @@
 - → depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 既存9石WINの一石交換近傍を探索した背景
 - → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 局所証明は空盤の未解決性を変えない
 - ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 既存9石WINの一石交換近傍と独立検証の比較
+- ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 一石交換近傍を作った先行9石WIN根
 
 ## [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) 二値超立方体の疎なq点切片の座標型閾値・第二指数項と5点切片の有限値
 
@@ -2696,7 +2699,15 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
 - → depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 既存9石WINの一石交換近傍と独立検証の比較
 - → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 局所終局証明は空盤勝敗を確定しない
+- ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 一石交換近傍を作った第二の9石WIN根
 
 ## [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) 3×3二係数二次形式版207禁止族型のハイパーグラフ同型類は46
 
 - → depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 3×3二係数版の31直線・175交点・207禁止族型の完全分類
+
+## [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) 11×11の9石近傍6根を106個の終局10石子で独立検証
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
+- → depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 一石交換近傍を作った先行9石WIN根
+- → depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 一石交換近傍を作った第二の9石WIN根
+- → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 局所終局証明は空盤勝敗を確定しない

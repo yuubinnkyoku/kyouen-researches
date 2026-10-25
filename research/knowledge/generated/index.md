@@ -548,3 +548,4 @@
 | [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) | 二値超立方体の疎なq点切片の座標型閾値・第二指数項と5点切片の有限値 | proposition | proved | geometry, variants, statistics |
 | [K0562](../items/K0562-n11-s9-second-neighbor-win.md) | 11×11の別の9石WIN局面を17個の終局10石子で独立検証 | verification | verified | square-outcomes, certificates, verification |
 | [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) | 3×3二係数二次形式版207禁止族型のハイパーグラフ同型類は46 | proposition | computed | variants, geometry, grundy, verification |
+| [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) | 11×11の9石近傍6根を106個の終局10石子で独立検証 | verification | verified | square-outcomes, certificates, verification |
