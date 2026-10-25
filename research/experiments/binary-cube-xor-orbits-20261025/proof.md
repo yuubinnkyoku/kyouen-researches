@@ -76,3 +76,20 @@ A_d ≡ 7*9^d + 13*7^d + 12*5^d + 3^d + 15 (mod 16)
 `verify_rooted.cpp` は、`d=5,6` の原点を含む全5点集合（それぞれ `C(31,4)=31465`、`C(63,4)=595665` 組）を走査し、各集合のアフィン包に追加二値頂点が存在するかを有限体101で直接判定する。判定に使う行列は高々5行で0/1成分、非零の任意の小行列式の絶対値はHadamard上界 `5^(5/2)<101` 以下。従って法101の階数と有理数階数は一致する。K0561のアフィン包から超平面へ延長する補題により、原点を含む良い集合数は `405,20055`。定理2から `E_{5,5}=2592`、`E_{6,5}=256704` を得て既存K0561と一致する。
 
 **根拠の境界：** 定理1・2は全称数学的証明、定理3・4は既存の全次元厳密公式に依存した全称証明。有限体による列挙は `d=5,6` の独立検算であって、全次元の計算完了を意味しない。
+
+## 再現コマンドと実測出力
+
+```sh
+g++ -std=c++17 -O3 -Wall -Wextra -Werror research/experiments/binary-cube-xor-orbits-20261025/verify_rooted.cpp -o /tmp/verify_rooted
+/tmp/verify_rooted
+python3 research/experiments/binary-cube-xor-orbits-20261025/verify_congruences.py
+```
+
+原点固定の完全列挙出力：
+
+```text
+d=5 candidates=31465 rooted=405 E_d5=2592
+d=6 candidates=595665 rooted=20055 E_d5=256704
+```
+
+合同則検算出力：`K0567: all exact arithmetic checks passed (d<=64)`。C++の実行は最適化付きで約3秒（今回の実行環境）。有限計算の完了範囲は上記に限定する。
