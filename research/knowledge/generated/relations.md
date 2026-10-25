@@ -2681,6 +2681,7 @@
 
 - → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 3点の別証明、および4点切片を2・3平坦に分けた全称計数
 - ← depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): アフィン包に追加頂点がない集合を超平面切片へ拡張する補題、および3・4点公式との独立照合
+- ← depends_on [K0567](../items/K0567-binary-cube-section-xor-divisibility.md): 3点切片の全次元指数公式から正確な2進付値を導出
 
 ## [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md) 11×11の9石WIN一局面を18個の終局10石WIN子で独立検証
 
@@ -2695,6 +2696,7 @@
 - → depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): アフィン包に追加頂点がない集合を超平面切片へ拡張する補題、および3・4点公式との独立照合
 - ← depends_on [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md): 座標型計数とアフィン包による切片判定を利用
 - ← depends_on [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md): 疎なq点切片・座標型係数の定義とアフィン包による判定を利用
+- ← depends_on [K0567](../items/K0567-binary-cube-section-xor-divisibility.md): 5点切片の全次元指数公式とアフィン包の切片延長補題を使用
 
 ## [K0562](../items/K0562-n11-s9-second-neighbor-win.md) 11×11の別の9石WIN局面を17個の終局10石子で独立検証
 
@@ -2721,3 +2723,8 @@
 ## [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) 二値超立方体の任意q点切片における第三指数項の全称公式
 
 - → depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): 疎なq点切片・座標型係数の定義とアフィン包による判定を利用
+
+## [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) 二値超立方体の座標反転軌道による切片数の2進可除性と3・5点切片の厳密合同則
+
+- → depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): 3点切片の全次元指数公式から正確な2進付値を導出
+- → depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): 5点切片の全次元指数公式とアフィン包の切片延長補題を使用
