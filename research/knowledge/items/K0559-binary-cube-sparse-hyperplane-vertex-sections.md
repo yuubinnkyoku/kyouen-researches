@@ -64,21 +64,21 @@ $$
 
 さらに、$d\ge3$ について
 
-$
+$$
 \boxed{
 E_{d,4}=\frac{16^d-12\cdot12^d+30\cdot10^d-35\cdot8^d
 +27\cdot6^d-16\cdot4^d+5\cdot2^d}{24}.
 }
-$
+$$
 
 $d=1,2$ では $E_{d,4}=0$。$d=3,4,5,6,7,8$ の順に **12, 180, 4560, 123536, 3014592, 66345280** である。
 
 任意の4点切片のアフィン包は次元2または3で、交点はちょうどその4頂点となる。逆に、頂点4個で張られ、交点がちょうど4点となる真のアフィン平坦は、頂点を追加せず実超平面に拡張できる。K0551で全次元計数済みの4点2平坦と4点3平坦を足せば
 
-$
+$$
 E_{d,4}=2^{d-2}\left\{\begin{matrix}d+1\\3\end{matrix}\right\}
 +H^{(3)}_{d,4}
-$
+$$
 
 となり、表示した指数公式が従う。これは**全称数学的証明**である。独立した整数Cramer則による全4点組の直接完全列挙で $d=3..6$ を照合した。詳細は[証明（定理2）](../../experiments/binary-cube-sparse-hyperplane-sections-20261025/proof.md)、[C++検証器](../../experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_four_sections.cpp)、[結果](../../experiments/binary-cube-sparse-hyperplane-sections-20261025/results.md)。
 
