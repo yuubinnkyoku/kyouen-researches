@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Aggregate exhaustive support counts into E(d,q) with exact integers.
 
-Usage: python aggregate.py q3.txt q4.txt q5.txt
+Usage: python aggregate.py q3.txt q4.txt q5.txt\n       python aggregate.py --q5-tail
 """
 import math
 import re
@@ -37,7 +37,67 @@ def count_sections(d: int, q: int, counts: dict[int, int]) -> int:
     return numerator // math.factorial(q)
 
 
+
+def verify_q5_tail() -> None:
+    """Exact 40-container intersection audit for five binary-cube rows."""
+    from collections import Counter
+    from itertools import combinations
+
+    def allowed_mask(weights):
+        return sum(1 << v for v in range(32)
+                   if sum(weights[i] * ((v >> i) & 1)
+                          for i in range(5)) in (0, 1))
+
+    large = []
+    for plus in combinations(range(5), 2):
+        for minus in range(5):
+            if minus in plus:
+                continue
+            w = [0] * 5
+            w[plus[0]] = w[plus[1]] = 1
+            w[minus] = -1
+            large.append(allowed_mask(w))
+    medium = []
+    for minus in combinations(range(5), 2):
+        w = [1] * 5
+        for i in minus:
+            w[i] = -1
+        medium.append(allowed_mask(w))
+
+    assert len(large) == len(set(large)) == 30
+    assert len(medium) == len(set(medium)) == 10
+    assert not set(large) & set(medium)
+    assert {s.bit_count() for s in large} == {24}
+    assert {s.bit_count() for s in medium} == {20}
+    ll = Counter((a & b).bit_count() for a, b in combinations(large, 2))
+    lm = Counter((a & b).bit_count() for a in large for b in medium)
+    mm = Counter((a & b).bit_count() for a, b in combinations(medium, 2))
+    assert ll == {20: 150, 18: 135, 16: 150}, ll
+    assert lm == {18: 90, 14: 210}, lm
+    assert mm == {12: 45}, mm
+    containers = large + medium
+    triples = Counter((a & b & c).bit_count()
+                      for a, b, c in combinations(containers, 3)
+                      if (a & b & c).bit_count() >= 17)
+    assert triples == {18: 90}, triples
+    assert not any((a & b & c & d).bit_count() >= 17
+                   for a, b, c, d in combinations(containers, 4))
+    print("pairs large/large:", dict(sorted(ll.items())))
+    print("pairs large/medium:", dict(sorted(lm.items())))
+    print("pairs medium/medium:", dict(sorted(mm.items())))
+    print("triples with intersection >=17:", dict(triples))
+    for k in range(17, 33):
+        choose = lambda n: math.comb(n, k) if k <= n else 0
+        good = (choose(32) - 30 * choose(24)
+                + 140 * choose(20) + 135 * choose(18))
+        assert 0 <= good <= choose(32)
+        print(f"q=5 k={k} good_supports={good}")
+
+
 def main() -> None:
+    if sys.argv[1:] == ['--q5-tail']:
+        verify_q5_tail()
+        return
     for path in sys.argv[1:]:
         q, counts = read_counts(path)
         print(f"q={q} support counts: {counts}")
