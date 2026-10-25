@@ -168,6 +168,24 @@ def build_s4_edge_index(first, r2):
     return classes
 
 
+def is_s5_child_of_s4(child, parent):
+    """Exact existential edge test, without enumerating all fifth moves.
+
+    For a safe canonical five-stone child, some four-stone subset must be
+    D4-equivalent to the parent.  A D4 map taking that subset to a raw edge
+    also takes its remaining stone to a legal fifth move.  This is valid
+    only because load_s5_cache independently checks child safety and D4
+    canonicality; an untrusted child without a cache verdict is rejected.
+    """
+    lo, hi = child
+    pts = [p for p in range(V)
+           if ((lo if p < 64 else hi) >> (p % 64)) & 1]
+    if len(pts) != 5:
+        return False
+    return any(d4_canonical_key(pts[:i] + pts[i + 1:]) == parent
+               for i in range(5))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('manifest')
@@ -250,6 +268,11 @@ def main():
             if (lo, hi) != (klo, khi):
                 continue
             want_cov.update((a, b))
+            if result == 1:
+                # A WIN claim needs only one safe, legal cached child.
+                # Test its four-subsets below; do not enumerate all ~100
+                # fifth moves for every edge of a WIN class.
+                continue
             occ4 = base | {a, b}
             kids_here = set()
             for z in legal_after(occ4):
@@ -273,7 +296,11 @@ def main():
             problems.append('%s: manifest repeats child key(s): n_child=%d '
                             'distinct=%d' % (label, n_child, len(listed)))
 
-        extra = listed - want_children
+        if result == 1:
+            extra = {c for c in listed
+                     if not is_s5_child_of_s4(c, (klo, khi))}
+        else:
+            extra = listed - want_children
         if extra:
             problems.append('%s: %d manifest child key(s) are not legal '
                             'children of the class' % (label, len(extra)))
@@ -360,7 +387,7 @@ def main():
         print('  %s result=%s cov=%d children=%d (%d in cache) '
               'edges=%d win_edges=%d loss_edges=%d'
               % (label, claimed, len(want_cov), n_child, n_ok,
-                 len(per_edge), len(win_edges), loss_edges))
+                 len(class_edges), len(win_edges), loss_edges))
 
     print()
     print('classes verified  : LOSS=%d WIN=%d'
