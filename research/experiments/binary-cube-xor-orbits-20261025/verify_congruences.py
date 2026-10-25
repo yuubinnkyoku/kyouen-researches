@@ -308,6 +308,171 @@ def verify_six_point_odd_prime_periods():
                 assert section_residue(d) == exact_known[d] % residue_modulus
 
 
+
+def verify_six_point_mod81_sylow3():
+    """Exact q=6 Sylow-3 fixed-set census and 3-adic classes through 3^4."""
+    from fractions import Fraction
+    from math import comb, factorial
+
+    def row_action(x, permutation):
+        bits = [0] + [(x >> i) & 1 for i in range(5)]
+        return sum((bits[permutation[i]] ^ bits[permutation[0]]) << (i - 1)
+                   for i in range(1, 6))
+
+    identity = tuple(range(32))
+    cycle_a = tuple(row_action(x, (1, 2, 0, 3, 4, 5)) for x in range(32))
+    cycle_b = tuple(row_action(x, (0, 1, 2, 4, 5, 3)) for x in range(32))
+
+    def compose(a, b):
+        return tuple(a[b[x]] for x in range(32))
+
+    def power(g, n):
+        value = identity
+        for _ in range(n):
+            value = compose(value, g)
+        return value
+
+    group = {compose(power(cycle_a, i), power(cycle_b, j))
+             for i in range(3) for j in range(3)}
+    assert len(group) == 9
+    subgroup_generators = (cycle_a, cycle_b,
+                           compose(cycle_a, cycle_b),
+                           compose(cycle_a, power(cycle_b, 2)))
+    subgroups = [{identity, g, compose(g, g)} for g in subgroup_generators]
+    assert all(len(h) == 3 for h in subgroups)
+    assert len({frozenset(h) for h in subgroups}) == 4
+
+    def orbits(h):
+        seen, answer = set(), []
+        for x in range(32):
+            if x not in seen:
+                orbit = tuple(sorted({g[x] for g in h}))
+                seen.update(orbit)
+                answer.append(orbit)
+        return answer
+
+    def admissible(columns, rational=False):
+        k = len(columns)
+        a = [[Fraction((col >> i) & 1) if rational else (col >> i) & 1
+              for col in columns] for i in range(5)]
+        row_masks = [sum(((col >> i) & 1) << j
+                         for j, col in enumerate(columns)) for i in range(5)]
+        if 0 in row_masks or len(set(row_masks)) != 5:
+            return False
+        rank = 0
+        for j in range(k):
+            if rank == 5:
+                break
+            pivot = next((i for i in range(rank, 5) if a[i][j]), None)
+            if pivot is None:
+                continue
+            a[rank], a[pivot] = a[pivot], a[rank]
+            scale = (1 / a[rank][j] if rational else pow(a[rank][j], -1, 1009))
+            a[rank] = [v * scale if rational else v * scale % 1009
+                       for v in a[rank]]
+            for i in range(5):
+                if i != rank and a[i][j]:
+                    f = a[i][j]
+                    a[i] = [a[i][z] - f * a[rank][z] if rational else
+                            (a[i][z] - f * a[rank][z]) % 1009
+                            for z in range(k)]
+            rank += 1
+        found = 0
+        for mask in range(1 << rank):
+            if all((sum(a[i][j] for i in range(rank) if mask >> i & 1)
+                    if rational else
+                    sum(a[i][j] for i in range(rank) if mask >> i & 1) % 1009)
+                   in (0, 1) for j in range(k)):
+                found += 1
+                if found > 6:
+                    return False
+        return found == 6
+
+    fixed = []
+    checked = []
+    for subgroup in subgroups + [group]:
+        orbit_list = orbits(subgroup)
+        totals, valid = [0] * 15, [0] * 15
+
+        def visit(i, columns):
+            k = len(columns)
+            if k > 14:
+                return
+            if i == len(orbit_list):
+                if 4 <= k <= 14:
+                    totals[k] += 1
+                    is_valid = admissible(columns)
+                    if 10 <= k <= 14:
+                        assert is_valid == admissible(columns, rational=True)
+                    valid[k] += is_valid
+                return
+            visit(i + 1, columns)
+            visit(i + 1, columns + orbit_list[i])
+
+        visit(0, ())
+        fixed.append(valid)
+        checked.append(totals)
+    assert [checked[i][10] for i in range(5)] == [2472, 2472, 240, 240, 12]
+    assert [checked[i][11] for i in range(5)] == [3144, 3144, 120, 120, 6]
+    assert [fixed[i][10:15] for i in range(5)] == [
+        [1059, 1615, 2357, 3188, 3849],
+        [1059, 1615, 2357, 3188, 3849],
+        [147, 82, 185, 383, 198],
+        [147, 82, 185, 383, 198],
+        [9, 4, 5, 14, 9],
+    ]
+
+    h_known = {4: 75, 5: 75, 6: 2877, 7: 44437,
+               8: 480895, 9: 3220820}
+    h = {k: (sum(fixed[i][k] for i in range(4)) - 3 * fixed[4][k]) % 9
+         for k in range(4, 15)}
+    assert all(h[k] == h_known[k] % 9 for k in h_known)
+    assert [h[k] for k in range(10, 15)] == [0, 7, 2, 8, 3]
+    h.update(h_known)
+
+    def via_inclusion(d, modulus):
+        return sum(h[k] * sum((-1) ** (k - j) * comb(k, j) *
+                              pow(j, d, modulus) for j in range(k + 1))
+                   for k in h if factorial(k) % modulus) % modulus
+
+    def via_stirling(d, modulus):
+        row = [1] + [0] * 14
+        for _ in range(d):
+            row = [0] + [(row[k - 1] + k * row[k]) % modulus
+                         for k in range(1, 15)]
+        return sum(h[k] * factorial(k) * row[k] for k in h) % modulus
+
+    def section_residue(d, modulus):
+        a = via_inclusion(d, 9 * modulus)
+        assert a == via_stirling(d, 9 * modulus)
+        assert a % 9 == 0
+        return (pow(2, d, modulus) * (a // 9) *
+                pow(80, -1, modulus)) % modulus
+
+    # 3^6 divides 15!, so the unknown h[k>=15] disappear modulo 729.
+    # Euler's theorem proves a period 486 for E mod81 for all d>=6.
+    vals = {m: [section_residue(d, m) for d in range(6, 6 + 2 * 486)]
+            for m in (27, 81)}
+    exact = {6: 206528, 7: 47884928, 8: 9324142464,
+             9: 1405033324800}
+    for m in (27, 81):
+        assert all(vals[m][d - 6] == v % m for d, v in exact.items())
+        period = 54 if m == 27 else 162
+        assert all(vals[m][i] == vals[m][i + period] for i in range(486))
+        # All proper divisors of 54 divide 18 or 27;
+        # all proper divisors of 162 divide 54 or 81.
+        forbidden = (18, 27) if m == 27 else (54, 81)
+        assert all(vals[m][0] != vals[m][j] for j in forbidden)
+        roots = sorted(d % period for d in range(6, 6 + period)
+                       if vals[m][d - 6] == 0)
+        assert roots == ([35, 38, 39] if m == 27 else [93, 143, 146])
+    assert (vals[27][4], vals[27][5]) == (16, 6)
+    assert (vals[81][4], vals[81][5]) == (43, 6)
+    print('q=6 Sylow-3: h[10..14] mod9 = (0,7,2,8,3)')
+    print('q=6: least periods mod27=54, mod81=162')
+    print('q=6: v3(E)>=4 iff d mod162 in {93,143,146}, d>=6')
+
+
 def main():
     for d in range(3, 65):
         value = exact(C3, 6, d)
@@ -333,6 +498,7 @@ def main():
     verify_six_point_sharpness_period()
     verify_six_point_mod32()
     verify_six_point_odd_prime_periods()
+    verify_six_point_mod81_sylow3()
     print("K0567: exact checks and q=6 parity-period bases passed (d<=64)")
 
 
