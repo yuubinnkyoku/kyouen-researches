@@ -204,4 +204,4 @@ $$
 
 **証拠の境界：** 2群の軌道計数とStirling公式は数学的全称証明。係数の法16の具体値は部分群固定集合の有限完全列挙に依存する。**10・11次元の切片総数、11次元の正確な2進付値は未解決**。全次元の6点切片閉形式も主張しない。
 
-[全称補題・有限完全計数の証明](../../experiments/binary-cube-six-sylow-20261026/proof.md)、[35部分群の検証器](../../experiments/binary-cube-six-sylow-20261026/q6_sylow_mod16.cpp)、[独立整数照合](../../experiments/binary-cube-six-sylow-20261026/q6_d8_independent.py)。
+[全称補題・有限完全計数の証明](../../experiments/binary-cube-six-sylow-20261026/proof.md)、[35部分群の検証器](../../experiments/binary-cube-six-sylow-20261026/q6_sylow_mod16.cpp)、[独立整数照合](../../experiments/binary-cube-six-sylow-20261026/q6_d8_independent.py)、[Stirling漸化式と包除原理の独立合同検算](../../experiments/binary-cube-six-sylow-20261026/q6_valuation_check.py)。
