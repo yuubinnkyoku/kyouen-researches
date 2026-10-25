@@ -541,3 +541,4 @@
 | [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) | 二値超立方体の第2位の超平面切片は3座標型・4座標型だけで全次元8C(d+1,4)個 | proposition | proved | geometry, variants, statistics |
 | [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) | 二値超立方体の最大超平面切片5/8密度は5座標型・6座標型だけで全次元32C(d+1,6)個 | proposition | proved | geometry, variants, statistics |
 | [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) | 二値超立方体の1/4超超平面切片は等絶対値係数のみ・密度は4種類・35/128の個数は128C(d+1,8) | proposition | proved | geometry, variants, statistics |
+| [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) | 二値超立方体の密度1/4超平面切片は高々5座標型・異なる頂点切片は4C(d,2)+16C(d,3)+92C(d,4)+80C(d,5)個 | proposition | proved | geometry, variants, statistics |

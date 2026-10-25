@@ -453,6 +453,18 @@
 
 - [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) (verifier): 五次元の全201376個の5点組から整数行列式で独立に超平面を列挙
 - [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) (verifier): 全201376個の五次元5点組を整数行列式で独立完全列挙（10点切片も検査）
+## [research/experiments/binary-cube-quarter-sections-20261025/proof.md](../../../research/experiments/binary-cube-quarter-sections-20261025/proof.md)
+
+- [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) (proof): 任意実係数の支持数制限・完全分類・頂点切片の重複を除いた全称計数証明
+## [research/experiments/binary-cube-quarter-sections-20261025/results.md](../../../research/experiments/binary-cube-quarter-sections-20261025/results.md)
+
+- [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) (data): 二方式の検証範囲・実測結果・全称公式の数値
+## [research/experiments/binary-cube-quarter-sections-20261025/verify_integer_weights.py](../../../research/experiments/binary-cube-quarter-sections-20261025/verify_integer_weights.py)
+
+- [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) (verifier): 正整数重み1..8、支持2..9の全24301重み多重集合と全切片を独立DP照合
+## [research/experiments/binary-cube-quarter-sections-20261025/verify_vertex_sections.cpp](../../../research/experiments/binary-cube-quarter-sections-20261025/verify_vertex_sections.cpp)
+
+- [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) (verifier): 符号付き整数法線±1..±4、支持2..5の直接頂点列挙による切片集合数検証
 ## [research/experiments/binary-cube-superquarter-sections-20261025/proof.md](../../../research/experiments/binary-cube-superquarter-sections-20261025/proof.md)
 
 - [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (proof): 非等絶対値係数の1/4上界・全密度分類・一般q点組計数の全称数学的証明
