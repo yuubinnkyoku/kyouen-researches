@@ -114,9 +114,9 @@ python research/experiments/binary-cube-sparse-patterns-20261025/aggregate.py --
 
 **全次元の漸近展開**は proof.md の定理5：
 
-$
+$$
 E_{d,5}=\binom{2^d}{5}-\frac14 24^d+\frac76 20^d+\frac98 18^d+O(16^d).
-$
+$$
 
 $g_{5,9},\ldots,g_{5,16}$ は依然未確定であり、上式は全次元の厳密な有限項等式ではない。
 
