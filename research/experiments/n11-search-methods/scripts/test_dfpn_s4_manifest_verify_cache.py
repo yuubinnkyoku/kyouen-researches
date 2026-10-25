@@ -171,6 +171,28 @@ class S4RootEdgeIndexTests(unittest.TestCase):
                 expected.setdefault(key, []).append((a, b))
         self.assertEqual(dict(got), expected)
 
+    def test_loss_child_set_identical_across_d4_equivalent_edges(self):
+        # The LOSS verifier enumerates fifth moves for only one raw edge.
+        # Check the exact invariant against independently enumerated
+        # children of every other edge in 12 deterministic classes per root.
+        for root in ((60, 0), (60, 27)):
+            index = build_s4_edge_index(*root)
+            selected = [(key, edges) for key, edges in index.items()
+                        if len(edges) > 1][:12]
+            self.assertEqual(len(selected), 12)
+            for key, edges in selected:
+                with self.subTest(root=root, key=key, n_edges=len(edges)):
+                    child_sets = []
+                    for a, b in edges:
+                        children = {
+                            d4_canonical_key((*root, a, b, z))
+                            for z in legal_after(set(root) | {a, b})
+                        }
+                        child_sets.append(children)
+                    self.assertTrue(child_sets[0])
+                    for children in child_sets[1:]:
+                        self.assertEqual(children, child_sets[0])
+
     def test_win_subset_membership_matches_full_legal_children(self):
         # Independent, exhaustive child enumeration is the oracle.  The
         # optimized WIN check must accept exactly the same D4 child keys.
