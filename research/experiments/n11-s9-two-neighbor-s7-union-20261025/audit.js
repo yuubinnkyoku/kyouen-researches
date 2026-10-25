@@ -40,8 +40,11 @@ function keys(p,{hash=null}={}){
 function checkManifest(roots,leaves,parents,{terminal=true}={}){
  need(roots.length===2&&leaves.length===58&&parents.length===17,
    'incorrect source manifest sizes');
- for(const [a,n] of [[roots,9],[leaves,10],[parents,8]])
+ for(const [a,n] of [[roots,9],[leaves,10],[parents,8]]){
+   for(let i=1;i<a.length;i++)
+     need(a[i-1]<a[i],'non-unique or unsorted certificate keys');
    for(const h of a)g.board(h,n);
+ }
  const actualLeaves=new Set();let incidences=0;
  for(const h of roots){
    const children=g.children(g.board(h,9));
