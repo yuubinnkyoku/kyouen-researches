@@ -166,6 +166,65 @@ def verify_six_point_mod32():
                 assert b == 0, d
 
 
+
+def verify_five_point_lifting():
+    """Modular recurrence and independent power checks for the all-t q=5 lemma.
+
+    The infinite theorem is proved by LTE, not by this finite audit.
+    """
+    coefficients = {base // 2: coefficient for base, coefficient in C5.items()}
+    expected_roots = {
+        1: (0, 3), 2: (3, 4), 3: (3, 12), 4: (12, 19),
+        5: (19, 44), 6: (19, 108), 7: (147, 236),
+        8: (147, 492), 9: (492, 659), 10: (492, 1683),
+    }
+
+    def via_powers(d, t):
+        modulus = 1 << (t + 3)
+        numerator = sum(c * pow(b, d, modulus)
+                        for b, c in coefficients.items()) % modulus
+        assert numerator % 8 == 0
+        return (numerator // 8 * pow(15, -1, 1 << t)) % (1 << t)
+
+    for t, expected in expected_roots.items():
+        period = 1 << (t + 1)
+        start = max(5, t + 4)
+        modulus = 1 << (t + 3)
+        inv15 = pow(15, -1, 1 << t)
+        powers = {base: 1 for base in coefficients}
+        residues = []
+        for d in range(start + 2 * period):
+            numerator = sum(c * powers[b] for b, c in coefficients.items()) % modulus
+            residues.append((numerator // 8 * inv15) % (1 << t)
+                            if d >= 5 else None)
+            if d >= 5:
+                assert numerator % 8 == 0
+            for b in powers:
+                powers[b] = powers[b] * b % modulus
+        for d in range(start, start + 2 * period):
+            assert residues[d] == via_powers(d, t)
+        assert all(residues[d] == residues[d + period]
+                   for d in range(start, start + period))
+        assert residues[start] != residues[start + period // 2]
+        roots = sorted(d % period for d in range(start, start + period)
+                       if residues[d] == 0)
+        assert roots == list(expected), (t, roots)
+
+    for k in range(2, 12):
+        t = k + 3
+        for d in list(range(k + 3, k + 20)) + [100, 1000]:
+            if d < k + 3:
+                continue
+            diff = (via_powers(d + (1 << k), t) - via_powers(d, t)) % (1 << t)
+            assert diff and v2(diff) == k - 1, (k, d)
+
+    for d in range(5, 81):
+        value = exact(C5, 120, d)
+        assert value % (1 << d) == 0
+        for t in range(1, 11):
+            assert (value >> d) % (1 << t) == via_powers(d, t)
+
+
 def main():
     for d in range(3, 65):
         value = exact(C3, 6, d)
@@ -187,6 +246,7 @@ def main():
     # Existing exact finite counts, illustrating the even-q orbit bound.
     for d, q, count in [(4, 6, 40), (5, 6, 1200), (4, 8, 20)]:
         assert count % (1 << max(0, d - v2(q))) == 0
+    verify_five_point_lifting()
     verify_six_point_sharpness_period()
     verify_six_point_mod32()
     print("K0567: exact checks and q=6 parity-period bases passed (d<=64)")
