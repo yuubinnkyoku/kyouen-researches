@@ -103,10 +103,12 @@ def verify(cpp_tsv=None, negative=False):
     actual_parents = {canonical(ROOT ^ (1 << p)) for p in points(ROOT)}
     need(actual_parents == parents, 'S8 parent list incomplete')
     for p in parents:
-        need(canonical(ROOT) in {
-            canonical(p | (1 << v)) for v in points(ROOT)
-            if not (p >> v & 1) and (legal(p) >> v & 1)
-        }, 'invalid S8-to-S9 witness')
+        # A canonical S8 parent may be a rotated/reflected version of the
+        # actual subset of ROOT.  Enumerate all legal moves of that parent,
+        # not merely the coordinates occupied by the untransformed ROOT.
+        allowed = legal(p)
+        need(any(canonical(p | (1 << v)) == ROOT for v in range(121)
+                 if allowed >> v & 1), 'invalid S8-to-S9 witness')
     move_counts = {}
     states = 0
     for s in sorted(leaves):
