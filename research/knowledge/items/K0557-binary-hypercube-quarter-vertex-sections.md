@@ -5,10 +5,7 @@ kind: proposition
 status: proved
 topics: [geometry, variants, statistics]
 aliases: []
-relations:
-- type: depends_on
-  target: K0556
-  note: 1/4を超える切片と非等絶対値係数の上界との境界を精密化する
+relations: []
 artifacts:
 - path: research/experiments/binary-cube-quarter-sections-20261025/proof.md
   role: proof
