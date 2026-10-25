@@ -386,6 +386,12 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
+
+- [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
+## [research/experiments/binary-cube-dense-section-polynomial-20261025/verify_affine_hulls.py](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/verify_affine_hulls.py)
+
+- [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (verifier): 法線に依存しないアフィン包の全頂点部分集合列挙で密度1/4以上の支持1..4の係数を独立照合
 ## [research/experiments/binary-cube-hyperplane-d-plus-three-20261024/proof.md](../../../research/experiments/binary-cube-hyperplane-d-plus-three-20261024/proof.md)
 
 - [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) (proof): 6次元の双対核証明、一般の余核判定補題、6〜10次元の有限証明書
@@ -465,6 +471,15 @@
 ## [research/experiments/binary-cube-quarter-sections-20261025/verify_vertex_sections.cpp](../../../research/experiments/binary-cube-quarter-sections-20261025/verify_vertex_sections.cpp)
 
 - [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) (verifier): 符号付き整数法線±1..±4、支持2..5の直接頂点列挙による切片集合数検証
+## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/proof.md](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/proof.md)
+
+- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (proof): 任意次元の1・2・3点切片公式、三点の座標型分類、二つの独立な全称導出
+## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/results.md](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/results.md)
+
+- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (data): 全三点組の平坦交点数分布と公式値の比較
+## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_affine_planes.py](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_affine_planes.py)
+
+- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (verifier): d=2..6の全三点組を整数Cramer則で検査する独立有限完全列挙
 ## [research/experiments/binary-cube-superquarter-sections-20261025/proof.md](../../../research/experiments/binary-cube-superquarter-sections-20261025/proof.md)
 
 - [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (proof): 非等絶対値係数の1/4上界・全密度分類・一般q点組計数の全称数学的証明
