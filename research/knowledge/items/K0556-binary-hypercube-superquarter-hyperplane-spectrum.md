@@ -75,4 +75,4 @@ $q>2^{d-2}$ 点組は超平面を一意に決めるので重複計数はない�
 は任意実係数・任意次元を扱う。
 [直接整数法線検査](../../experiments/binary-cube-superquarter-sections-20261025/verify_direct_normals.cpp)と
 [別方式の正係数検査](../../experiments/binary-cube-superquarter-sections-20261025/verify_weight_patterns.py)
-は有界係数の有限照合に限る。ゲームのGrundy値・勝敗や1/4以下の切片は未分類。
+は有界係数の有限照合に限る。ゲームのGrundy値・勝敗や1/4未満の切片は未分類。密度ちょうど1/4の頂点切片は[K0557](K0557-binary-hypercube-quarter-vertex-sections.md)で全次元分類済み（超平面自体の個数ではない）。
