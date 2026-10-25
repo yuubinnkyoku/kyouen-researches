@@ -90,7 +90,8 @@ def verify_six_point_sharpness_period():
     for d in range(6, 10):
         a = sum(h * factorial(k) * stirling[d][k]
                 for k, h in support.items() if k <= d)
-        assert a % 720 == 0
+        assert a % 360 == 0
+        assert ((1 << d) * a) % 720 == 0
         e = (1 << d) * a // 720
         assert e == expected[d]
         assert a % 16 == (8 if d % 4 in (0, 1) else 0)
