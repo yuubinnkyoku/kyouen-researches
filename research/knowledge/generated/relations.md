@@ -2694,6 +2694,7 @@
 
 - → depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): アフィン包に追加頂点がない集合を超平面切片へ拡張する補題、および3・4点公式との独立照合
 - ← depends_on [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md): 座標型計数とアフィン包による切片判定を利用
+- ← depends_on [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md): 疎なq点切片・座標型係数の定義とアフィン包による判定を利用
 
 ## [K0562](../items/K0562-n11-s9-second-neighbor-win.md) 11×11の別の9石WIN局面を17個の終局10石子で独立検証
 
@@ -2716,3 +2717,7 @@
 ## [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) 二値超立方体の六点切片の高次座標型係数と四項指数補正
 
 - → depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): 座標型計数とアフィン包による切片判定を利用
+
+## [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) 二値超立方体の任意q点切片における第三指数項の全称公式
+
+- → depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): 疎なq点切片・座標型係数の定義とアフィン包による判定を利用

@@ -519,6 +519,15 @@
 ## [research/experiments/binary-cube-superquarter-sections-20261025/verify_weight_patterns.py](../../../research/experiments/binary-cube-superquarter-sections-20261025/verify_weight_patterns.py)
 
 - [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (verifier): 支持1..8・正整数重み1..10の43757組を別方式で有限完全検査
+## [research/experiments/binary-cube-universal-third-term-20261025/independent_check.py](../../../research/experiments/binary-cube-universal-third-term-20261025/independent_check.py)
+
+- [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) (verifier): q=4,5,6の第三係数をビット集合とは独立の集合列挙で照合
+## [research/experiments/binary-cube-universal-third-term-20261025/proof.md](../../../research/experiments/binary-cube-universal-third-term-20261025/proof.md)
+
+- [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) (proof): 全qの障害支持数分類、包除原理、高々10座標への有限帰着
+## [research/experiments/binary-cube-universal-third-term-20261025/verify.py](../../../research/experiments/binary-cube-universal-third-term-20261025/verify.py)
+
+- [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) (verifier): 全A3三重交差・A3/B5交差・B5二重交差と四座標の一意性を完全列挙
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
