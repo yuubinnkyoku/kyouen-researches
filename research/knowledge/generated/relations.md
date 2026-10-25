@@ -2645,8 +2645,15 @@
 
 - → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 最大超平面切片の分類・個数とd=4の6点切片の既知結果に整合
 - ← depends_on [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md): 3/4密度切片の分類・個数を禁止q点組の総数に利用
+- ← generalizes [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md): 3/8密度の超平面切片分類と個数を含み、1/4超の全密度を決定
 
 ## [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) 二値超立方体の最大超平面切片5/8密度は5座標型・6座標型だけで全次元32C(d+1,6)個
 
 - → depends_on [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md): 3/4密度切片の分類・個数を禁止q点組の総数に利用
 - → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 最大1/2密度切片の分類・個数および平坦交点上界を利用
+- ← generalizes [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md): 5/16密度の超平面切片分類と個数を含み、非等絶対値係数の一様上界を与える
+
+## [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) 二値超立方体の1/4超超平面切片は等絶対値係数のみ・密度は4種類・35/128の個数は128C(d+1,8)
+
+- → generalizes [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md): 3/8密度の超平面切片分類と個数を含み、1/4超の全密度を決定
+- → generalizes [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md): 5/16密度の超平面切片分類と個数を含み、非等絶対値係数の一様上界を与える

@@ -453,6 +453,18 @@
 
 - [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) (verifier): 五次元の全201376個の5点組から整数行列式で独立に超平面を列挙
 - [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) (verifier): 全201376個の五次元5点組を整数行列式で独立完全列挙（10点切片も検査）
+## [research/experiments/binary-cube-superquarter-sections-20261025/proof.md](../../../research/experiments/binary-cube-superquarter-sections-20261025/proof.md)
+
+- [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (proof): 非等絶対値係数の1/4上界・全密度分類・一般q点組計数の全称数学的証明
+## [research/experiments/binary-cube-superquarter-sections-20261025/results.md](../../../research/experiments/binary-cube-superquarter-sections-20261025/results.md)
+
+- [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (data): 有界係数独立検査の結果とd=7..10の厳密公式値
+## [research/experiments/binary-cube-superquarter-sections-20261025/verify_direct_normals.cpp](../../../research/experiments/binary-cube-superquarter-sections-20261025/verify_direct_normals.cpp)
+
+- [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (verifier): d=7,8の係数-2..2の全原始法線と切片を整数DPで直接列挙
+## [research/experiments/binary-cube-superquarter-sections-20261025/verify_weight_patterns.py](../../../research/experiments/binary-cube-superquarter-sections-20261025/verify_weight_patterns.py)
+
+- [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (verifier): 支持1..8・正整数重み1..10の43757組を別方式で有限完全検査
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
