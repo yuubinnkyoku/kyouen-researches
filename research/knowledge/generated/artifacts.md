@@ -528,6 +528,15 @@
 ## [research/experiments/binary-cube-universal-third-term-20261025/verify.py](../../../research/experiments/binary-cube-universal-third-term-20261025/verify.py)
 
 - [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) (verifier): 全A3三重交差・A3/B5交差・B5二重交差と四座標の一意性を完全列挙
+## [research/experiments/binary-cube-xor-orbits-20261025/proof.md](../../../research/experiments/binary-cube-xor-orbits-20261025/proof.md)
+
+- [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) (proof): 全qの軌道可除性、原点固定計数、3・5点切片の2進合同則の全称証明
+## [research/experiments/binary-cube-xor-orbits-20261025/verify_congruences.py](../../../research/experiments/binary-cube-xor-orbits-20261025/verify_congruences.py)
+
+- [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) (verifier): 既存指数公式によるd<=64の厳密整数検算と偶数qの有限値回帰
+## [research/experiments/binary-cube-xor-orbits-20261025/verify_rooted.cpp](../../../research/experiments/binary-cube-xor-orbits-20261025/verify_rooted.cpp)
+
+- [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) (verifier): d=5,6の原点を含む全5点組の独立有限体完全列挙
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
