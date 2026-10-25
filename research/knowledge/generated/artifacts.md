@@ -471,6 +471,15 @@
 ## [research/experiments/binary-cube-quarter-sections-20261025/verify_vertex_sections.cpp](../../../research/experiments/binary-cube-quarter-sections-20261025/verify_vertex_sections.cpp)
 
 - [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) (verifier): 符号付き整数法線±1..±4、支持2..5の直接頂点列挙による切片集合数検証
+## [research/experiments/binary-cube-six-high-patterns-20261025/direct_check.py](../../../research/experiments/binary-cube-six-high-patterns-20261025/direct_check.py)
+
+- [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) (verifier): 有理数行列消去による58例の独立標本検算
+## [research/experiments/binary-cube-six-high-patterns-20261025/proof.md](../../../research/experiments/binary-cube-six-high-patterns-20261025/proof.md)
+
+- [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) (proof): 33型以上の障害完全分類・包除原理・漸近式の証明
+## [research/experiments/binary-cube-six-high-patterns-20261025/verify.py](../../../research/experiments/binary-cube-six-high-patterns-20261025/verify.py)
+
+- [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) (verifier): 120障害集合の完全包除と独立メビウス反転による全係数照合
 ## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/proof.md](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/proof.md)
 
 - [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (proof): 任意次元の1・2・3・4点切片公式、三点の座標型分類、4点のアフィン包による分割

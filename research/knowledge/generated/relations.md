@@ -2693,6 +2693,7 @@
 ## [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) 二値超立方体の疎なq点切片の座標型閾値・第二指数項と5点切片の有限値
 
 - → depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): アフィン包に追加頂点がない集合を超平面切片へ拡張する補題、および3・4点公式との独立照合
+- ← depends_on [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md): 座標型計数とアフィン包による切片判定を利用
 
 ## [K0562](../items/K0562-n11-s9-second-neighbor-win.md) 11×11の別の9石WIN局面を17個の終局10石子で独立検証
 
@@ -2711,3 +2712,7 @@
 - → depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 一石交換近傍を作った先行9石WIN根
 - → depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 一石交換近傍を作った第二の9石WIN根
 - → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 局所終局証明は空盤勝敗を確定しない
+
+## [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) 二値超立方体の六点切片の高次座標型係数と四項指数補正
+
+- → depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): 座標型計数とアフィン包による切片判定を利用

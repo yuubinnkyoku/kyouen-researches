@@ -549,3 +549,4 @@
 | [K0562](../items/K0562-n11-s9-second-neighbor-win.md) | 11×11の別の9石WIN局面を17個の終局10石子で独立検証 | verification | verified | square-outcomes, certificates, verification |
 | [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) | 3×3二係数二次形式版207禁止族型のハイパーグラフ同型類は46 | proposition | computed | variants, geometry, grundy, verification |
 | [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) | 11×11の9石近傍6根を106個の終局10石子で独立検証 | verification | verified | square-outcomes, certificates, verification |
+| [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) | 二値超立方体の六点切片の高次座標型係数と四項指数補正 | proposition | proved | geometry, variants, statistics |
