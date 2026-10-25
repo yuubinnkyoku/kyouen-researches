@@ -158,6 +158,8 @@ jobs:
         run: node research/experiments/n11-batch-s9-s7-union-20261025/audit.js --negative
       - name: Verify n11 two S9 neighbor terminal certificates with independent geometry
         run: python3 research/experiments/n11-s9-two-neighbor-20261025/verify.py --negative
+      - name: Verify n11 twelve S9 terminal roots with two integer geometries
+        run: python3 research/experiments/n11-s9-batch12-terminal-20261026/verify.py --negative
       - name: Audit n11 new S9 neighbor proof-only S7 coverage
         run: node research/experiments/n11-s9-neighbor-s7-union-20261025/audit.js --negative
       - name: Audit n11 two S9 neighbors against proof-only S7 coverage
