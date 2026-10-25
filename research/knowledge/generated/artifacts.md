@@ -7371,6 +7371,18 @@
 ## [research/experiments/n11-s8-to-s7-lift238-20261020/verify_and_lift.py](../../../research/experiments/n11-s8-to-s7-lift238-20261020/verify_and_lift.py)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (verifier): 終局葉からの35根の再証明と全7石親列挙
+## [research/experiments/n11-s9-second-neighbor-20261025/reproduce.sh](../../../research/experiments/n11-s9-second-neighbor-20261025/reproduce.sh)
+
+- [K0562](../items/K0562-n11-s9-second-neighbor-win.md) (verifier): 4×4整数行列式C++と3×3 Pythonの17葉判定・合法着手数照合
+## [research/experiments/n11-s9-second-neighbor-20261025/s10-win17.keys](../../../research/experiments/n11-s9-second-neighbor-20261025/s10-win17.keys)
+
+- [K0562](../items/K0562-n11-s9-second-neighbor-win.md) (certificate): 9石局面の全17合法10石WIN子
+## [research/experiments/n11-s9-second-neighbor-20261025/s8-win9.keys](../../../research/experiments/n11-s9-second-neighbor-20261025/s8-win9.keys)
+
+- [K0562](../items/K0562-n11-s9-second-neighbor-win.md) (certificate): 9個の合法8石WIN親
+## [research/experiments/n11-s9-second-neighbor-20261025/verify.py](../../../research/experiments/n11-s9-second-neighbor-20261025/verify.py)
+
+- [K0562](../items/K0562-n11-s9-second-neighbor-win.md) (verifier): 独立Python整数幾何と終局までの再帰・親子照合
 ## [research/experiments/n11-s9-second-target-20261015/verify.py](../../../research/experiments/n11-s9-second-target-20261015/verify.py)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
@@ -8901,6 +8913,15 @@
 ## [research/experiments/quadratic-pencil-20261023/two_parameter.py](../../../research/experiments/quadratic-pencil-20261023/two_parameter.py)
 
 - [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md) (verifier): 二係数版の全直線・交点帰着、直接代入と全安全局面照合
+## [research/experiments/quadratic-pencil-isomorphism-20261023/README.md](../../../research/experiments/quadratic-pencil-isomorphism-20261023/README.md)
+
+- [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) (proof): 同型の定義、2方式の分類方法、結果と限界
+## [research/experiments/quadratic-pencil-isomorphism-20261023/isomorphism-results.json](../../../research/experiments/quadratic-pencil-isomorphism-20261023/isomorphism-results.json)
+
+- [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) (data): 全46類の代表・所属型・証人置換・自己同型位数・代表プロファイル
+## [research/experiments/quadratic-pencil-isomorphism-20261023/isomorphism.py](../../../research/experiments/quadratic-pencil-isomorphism-20261023/isomorphism.py)
+
+- [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) (solver): 禁止族の再生成、不変量bucket＋全探索同型判定、canonical form、自己同型計数
 ## [research/experiments/quadratic-zero-terminal-spectrum-20261024/construct.py](../../../research/experiments/quadratic-zero-terminal-spectrum-20261024/construct.py)
 
 - [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) (verifier): 明示整数構成の全安全四点と全空候補への禁止証人を独立行列式で検査
@@ -9443,6 +9464,9 @@
 ## [research/log/2026-10-23-n11-four-s8-joint-terminal52.md](../../../research/log/2026-10-23-n11-four-s8-joint-terminal52.md)
 
 - [K0525](../items/K0525-n11-four-s8-joint-terminal52.md) (log): 旧53葉との比較、証明範囲、信頼境界
+## [research/log/2026-10-23-quadratic-pencil-isomorphism.md](../../../research/log/2026-10-23-quadratic-pencil-isomorphism.md)
+
+- [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) (log): 候補03の実行記録と残課題
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

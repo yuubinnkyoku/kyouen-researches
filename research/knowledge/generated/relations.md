@@ -117,6 +117,7 @@
 - ← depends_on [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md): 通常プレイの最後の合法手と勝ち初手の規約
 - ← depends_on [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 全終局の同一石数から全安全局面のmexを帰納計算
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 元先手固定視点の奇数AND・偶数ORの勝敗伝播
+- ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 元先手固定視点の奇数AND・偶数OR伝播
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -742,6 +743,7 @@
 - ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
 - ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 局所証明は空盤の未解決性を変えない
+- ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 局所終局証明は空盤勝敗を確定しない
 
 ## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 固定qの最小極大サイズには漸近指数下界2/3がある
 
@@ -2480,6 +2482,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 安全な追加のmex再帰と勝ち初手の規約
 - → depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 退化を含む二次形式パラメータ版の定義
 - ← verifies [K0534](../items/K0534-quadratic-parameter-five-square-all-real-classification.md): 別C++幾何・増分再帰で既存51分類の禁止辺・全分布・全初手値を再現
+- ← depends_on [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md): 3×3二係数版の31直線・175交点・207禁止族型の完全分類
 
 ## [K0520](../items/K0520-triangle-free-compatibility-endgame.md) 共存グラフに三角形がない遺伝的配置ゲームは高々2手で終局し孤立点の有無でP/Nが決まる
 
@@ -2682,7 +2685,18 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数ORの勝敗伝播
 - → depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 既存9石WINの一石交換近傍を探索した背景
 - → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 局所証明は空盤の未解決性を変えない
+- ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 既存9石WINの一石交換近傍と独立検証の比較
 
 ## [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) 二値超立方体の疎なq点切片の座標型閾値・第二指数項と5点切片の有限値
 
 - → depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): アフィン包に追加頂点がない集合を超平面切片へ拡張する補題、および3・4点公式との独立照合
+
+## [K0562](../items/K0562-n11-s9-second-neighbor-win.md) 11×11の別の9石WIN局面を17個の終局10石子で独立検証
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
+- → depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 既存9石WINの一石交換近傍と独立検証の比較
+- → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 局所終局証明は空盤勝敗を確定しない
+
+## [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) 3×3二係数二次形式版207禁止族型のハイパーグラフ同型類は46
+
+- → depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 3×3二係数版の31直線・175交点・207禁止族型の完全分類
