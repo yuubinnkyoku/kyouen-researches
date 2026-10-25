@@ -225,5 +225,60 @@ class S4ManifestExecutionTests(unittest.TestCase):
                                   else 'MANIFEST_INVALID', output.getvalue())
 
 
+    def test_real_edge_index_and_real_s5_cache_end_to_end(self):
+        """No mocked index or cache: two D4 classes share one real root.
+
+        The root {0,60} has a two-element stabilizer (diagonal reflection).
+        Each listed pair below is the complete raw-edge orbit of its class.
+        Synthetic verdict labels exercise only certificate plumbing.
+        """
+        from dfpn_s4_manifest_verify import main as verify_main
+
+        root = (60, 0)
+        classes = (
+            (((1, 2), (11, 22)), 2),  # universal LOSS certificate
+            (((3, 4), (33, 44)), 1),  # existential WIN witness
+        )
+        manifest_rows = []
+        cache_rows = {}
+        for edges, verdict in classes:
+            key = d4_canonical_key((*root, *edges[0]))
+            self.assertEqual({d4_canonical_key((*root, *edge))
+                              for edge in edges}, {key})
+            children = sorted({
+                d4_canonical_key((*root, *edge, z))
+                for edge in edges
+                for z in legal_after(set(root) | set(edge))
+            })
+            self.assertTrue(children)
+            listed = children if verdict == 2 else children[:1]
+            for child in listed:
+                self.assertNotIn(child, cache_rows)
+                cache_rows[child] = verdict
+            fields = ['s4verdict', *map(str, root), *map(str, key),
+                      str(verdict), str(len(listed)),
+                      str(len({p for edge in edges for p in edge}))]
+            for lo, hi in listed:
+                fields.extend((str(lo), str(hi)))
+            manifest_rows.append(','.join(fields))
+
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest = Path(tmp) / 'manifest.csv'
+            cache_path = Path(tmp) / 's5.csv'
+            manifest.write_text('\n'.join(manifest_rows) + '\n',
+                                encoding='utf-8')
+            cache_path.write_text(
+                ''.join(row(key, verdict)
+                        for key, verdict in sorted(cache_rows.items())),
+                encoding='utf-8')
+            with (mock.patch('sys.argv', ['verify', str(manifest),
+                                          '--cache', str(cache_path)]),
+                  contextlib.redirect_stdout(io.StringIO()) as output):
+                self.assertEqual(verify_main(), 0, output.getvalue())
+            self.assertIn('classes verified  : LOSS=1 WIN=1',
+                          output.getvalue())
+            self.assertIn('MANIFEST_VERIFIED', output.getvalue())
+
+
 if __name__ == '__main__':
     unittest.main()
