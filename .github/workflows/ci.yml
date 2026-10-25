@@ -152,6 +152,8 @@ jobs:
         run: bash research/experiments/n11-s9-second-neighbor-20261025/reproduce.sh
       - name: Verify n11 six S9 terminal neighbors with independent geometry
         run: bash research/experiments/n11-batch-s9-terminal-20261025/reproduce.sh
+      - name: Audit n11 S9 batch proof-only S7 coverage
+        run: node research/experiments/n11-batch-s9-s7-union-20261025/audit.js --negative
       - name: Check n11 replay preflight source and budget binding
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_audit_probe_preflight.py
       - name: Check n11 historical raw replay source completeness
