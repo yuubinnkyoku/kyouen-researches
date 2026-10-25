@@ -69,6 +69,40 @@ def count_four_sections_direct(d):
     return count
 
 
+
+def verify_six_point_sharpness_period():
+    """Independent Stirling reconstruction from K0565's exact support counts.
+
+    The finite test is *not* the proof of the infinite periodicity:
+    that follows from the integer exponential representation modulo 16.
+    """
+    from math import factorial
+
+    support = {4: 75, 5: 75, 6: 2877, 7: 44437,
+               8: 480895, 9: 3220820}
+    expected = {6: 206528, 7: 47884928,
+                8: 9324142464, 9: 1405033324800}
+    stirling = [[0] * 10 for _ in range(10)]
+    stirling[0][0] = 1
+    for d in range(1, 10):
+        for k in range(1, d + 1):
+            stirling[d][k] = stirling[d - 1][k - 1] + k * stirling[d - 1][k]
+    for d in range(6, 10):
+        a = sum(h * factorial(k) * stirling[d][k]
+                for k, h in support.items() if k <= d)
+        assert a % 720 == 0
+        e = (1 << d) * a // 720
+        assert e == expected[d]
+        assert a % 16 == (8 if d % 4 in (0, 1) else 0)
+        assert (e // (1 << (d - 1))) % 2 == (d % 4 in (0, 1))
+
+    # Every possible exponential base in the q=6 rooted formula:
+    # a congruence on four residues, not an extrapolation from d<=64.
+    for base in range(33):
+        for d in range(4, 8):
+            assert (pow(base, d + 4, 16) - pow(base, d, 16)) % 16 == 0
+
+
 def main():
     for d in range(3, 65):
         value = exact(C3, 6, d)
@@ -90,7 +124,8 @@ def main():
     # Existing exact finite counts, illustrating the even-q orbit bound.
     for d, q, count in [(4, 6, 40), (5, 6, 1200), (4, 8, 20)]:
         assert count % (1 << max(0, d - v2(q))) == 0
-    print("K0567: all exact arithmetic checks passed (d<=64)")
+    verify_six_point_sharpness_period()
+    print("K0567: exact checks and q=6 parity-period bases passed (d<=64)")
 
 
 if __name__ == "__main__":
