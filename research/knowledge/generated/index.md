@@ -543,4 +543,4 @@
 | [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) | 二値超立方体の1/4超超平面切片は等絶対値係数のみ・密度は4種類・35/128の個数は128C(d+1,8) | proposition | proved | geometry, variants, statistics |
 | [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) | 二値超立方体の密度1/4超平面切片は高々5座標型・異なる頂点切片は4C(d,2)+16C(d,3)+92C(d,4)+80C(d,5)個 | proposition | proved | geometry, variants, statistics |
 | [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) | 二値超立方体の固定正密度超平面頂点切片数は次元の整数値多項式・密度1/4以上の明示式 | proposition | proved | geometry, variants, statistics |
-| [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) | 二値超立方体の1・2・3点超平面頂点切片数の全次元公式 | proposition | proved | geometry, variants, statistics |
+| [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) | 二値超立方体の1・2・3・4点超平面頂点切片数の全次元公式 | proposition | proved | geometry, variants, statistics |

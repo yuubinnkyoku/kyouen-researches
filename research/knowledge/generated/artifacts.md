@@ -473,13 +473,16 @@
 - [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) (verifier): 符号付き整数法線±1..±4、支持2..5の直接頂点列挙による切片集合数検証
 ## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/proof.md](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/proof.md)
 
-- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (proof): 任意次元の1・2・3点切片公式、三点の座標型分類、二つの独立な全称導出
+- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (proof): 任意次元の1・2・3・4点切片公式、三点の座標型分類、4点のアフィン包による分割
 ## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/results.md](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/results.md)
 
-- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (data): 全三点組の平坦交点数分布と公式値の比較
+- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (data): 全三点組・全四点組のアフィン包交点数分布と公式値の比較
 ## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_affine_planes.py](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_affine_planes.py)
 
 - [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (verifier): d=2..6の全三点組を整数Cramer則で検査する独立有限完全列挙
+## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_four_sections.cpp](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_four_sections.cpp)
+
+- [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (verifier): d=3..6の全4点組を整数行列式で調べる独立有限完全列挙
 ## [research/experiments/binary-cube-superquarter-sections-20261025/proof.md](../../../research/experiments/binary-cube-superquarter-sections-20261025/proof.md)
 
 - [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (proof): 非等絶対値係数の1/4上界・全密度分類・一般q点組計数の全称数学的証明

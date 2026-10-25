@@ -2630,7 +2630,7 @@
 - → generalizes [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): K0545の共面四点数の全称公式を任意のアフィン次元kに拡張（同項目の四次元ゲーム強解決は対象外）
 - ← depends_on [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md): 最大超平面切片の分類・個数とd=4の6点切片の既知結果に整合
 - ← depends_on [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md): 最大1/2密度切片の分類・個数および平坦交点上界を利用
-- ← depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): 3点が張る2平坦の最大4点性と4点2平坦の全称計数による別証明
+- ← depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): 3点の別証明、および4点切片を2・3平坦に分けた全称計数
 
 ## [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md) 六〜十次元二値超立方体の共超平面禁止版にd+3石の安全配置
 
@@ -2669,6 +2669,6 @@
 - → depends_on [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md): 密度1/4超の具体係数を利用
 - → depends_on [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md): 密度ちょうど1/4の具体係数を利用
 
-## [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) 二値超立方体の1・2・3点超平面頂点切片数の全次元公式
+## [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) 二値超立方体の1・2・3・4点超平面頂点切片数の全次元公式
 
-- → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 3点が張る2平坦の最大4点性と4点2平坦の全称計数による別証明
+- → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 3点の別証明、および4点切片を2・3平坦に分けた全称計数
