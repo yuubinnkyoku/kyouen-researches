@@ -32,6 +32,9 @@ function keys(p){
 function validateSources(roots,leaves,parents){
  need(roots.length===6&&leaves.length===106&&parents.length===54,
   'incorrect proof manifest sizes');
+ need(new Set(roots).size===roots.length&&
+  new Set(leaves).size===leaves.length&&
+  new Set(parents).size===parents.length,'duplicate proof manifest entry');
  for(const h of roots)g.board(h,9);
  for(const h of leaves)g.board(h,10);
  for(const h of parents)g.board(h,8);
