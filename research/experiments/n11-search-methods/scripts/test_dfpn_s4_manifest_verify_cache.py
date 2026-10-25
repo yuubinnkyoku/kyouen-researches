@@ -329,5 +329,64 @@ class S4ManifestExecutionTests(unittest.TestCase):
             self.assertIn('MANIFEST_VERIFIED', output.getvalue())
 
 
+    def test_loss_shared_child_cache_audit_is_linear_in_distinct_children(self):
+        """Every D4-equivalent edge shares one cache verdict check per child.
+
+        A synthetic complete cache, one missing child, and one contradictory
+        WIN child must respectively pass, fail UNKNOWN, and fail WIN.
+        Use the actual 11x11 edge index; only cache labels are synthetic.
+        """
+        from dfpn_s4_manifest_verify import main as verify_main
+
+        class CountingCache(dict):
+            def __init__(self, entries):
+                super().__init__(entries)
+                self.lookups = 0
+
+            def get(self, key, default=None):
+                self.lookups += 1
+                return super().get(key, default)
+
+        root = (60, 0)
+        edges = ((1, 2), (11, 22))
+        key = d4_canonical_key((*root, *edges[0]))
+        self.assertEqual({d4_canonical_key((*root, *e)) for e in edges},
+                         {key})
+        children = sorted({
+            d4_canonical_key((*root, *edges[0], z))
+            for z in legal_after(set(root) | set(edges[0]))
+        })
+        self.assertGreater(len(children), 1)
+        fields = ['s4verdict', *map(str, root), *map(str, key),
+                  '2', str(len(children)), '4']
+        for lo, hi in children:
+            fields.extend((str(lo), str(hi)))
+
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest = Path(tmp) / 'manifest.csv'
+            manifest.write_text(','.join(fields) + '\n', encoding='utf-8')
+            for variant, expected, diagnostic in (
+                ('complete', 0, 'MANIFEST_VERIFIED'),
+                ('missing', 1, 'UNDECIDED'),
+                ('win', 1, 'imply WIN'),
+            ):
+                with self.subTest(variant=variant):
+                    entries = {c: 2 for c in children}
+                    if variant == 'missing':
+                        del entries[children[0]]
+                    elif variant == 'win':
+                        entries[children[0]] = 1
+                    cache = CountingCache(entries)
+                    with (mock.patch('dfpn_s4_manifest_verify.load_s5_cache',
+                                     return_value=cache),
+                          mock.patch('sys.argv', ['verify', str(manifest),
+                                                  '--cache', str(Path(tmp) / 'unused.csv')]),
+                          contextlib.redirect_stdout(io.StringIO()) as output):
+                        self.assertEqual(verify_main(), expected,
+                                         output.getvalue())
+                    self.assertEqual(cache.lookups, len(children))
+                    self.assertIn(diagnostic, output.getvalue())
+
+
 if __name__ == '__main__':
     unittest.main()
