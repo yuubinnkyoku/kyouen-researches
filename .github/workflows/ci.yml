@@ -172,6 +172,8 @@ jobs:
         run: node research/experiments/n11-s9-batch12-s7-union-20261026/audit.js --negative
       - name: Audit n11 eighteen S9 terminal roots against proof-only S7 coverage
         run: node research/experiments/n11-s9-neighbor18-s7-union-20261026/audit.js --negative
+      - name: Audit n11 nineteen S9 terminal roots against proof-only S7 coverage
+        run: node research/experiments/n11-s9-neighbor19-s7-union-20261026/audit.js --negative
       - name: Check n11 replay preflight source and budget binding
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_audit_probe_preflight.py
       - name: Check n11 historical raw replay source completeness
