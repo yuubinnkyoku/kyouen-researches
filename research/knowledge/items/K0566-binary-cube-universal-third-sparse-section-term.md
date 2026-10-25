@@ -16,6 +16,9 @@ artifacts:
 - path: research/experiments/binary-cube-universal-third-term-20261025/verify.py
   role: verifier
   note: 全A3三重交差・A3/B5交差・B5二重交差と四座標の一意性を完全列挙
+- path: research/experiments/binary-cube-universal-third-term-20261025/independent_check.py
+  role: verifier
+  note: q=4,5,6の第三係数をビット集合とは独立の集合列挙で照合
 scope: 固定整数q>=4、全d>=qの二値超立方体のちょうどq頂点の実超平面切片。全qの高次型係数と第三指数項。
 evidence: 障害の全称支持数分類と最大10座標の有限完全列挙を組み合わせた数学的証明。q=4,5,6の既存独立公式と照合。
 ---
