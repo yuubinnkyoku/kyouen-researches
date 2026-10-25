@@ -259,6 +259,7 @@ def main():
         want_cov = set()
         want_children = set()
         per_edge = []
+        valid_edges = []
         for (a, b) in class_edges:
             # Compare BOTH halves of the key. Matching on `lo` alone lumps
             # together unrelated classes that happen to agree in the low
@@ -267,19 +268,22 @@ def main():
             lo, hi = d4_canonical_key([first, r2, a, b])
             if (lo, hi) != (klo, khi):
                 continue
+            valid_edges.append((a, b))
             want_cov.update((a, b))
-            if result == 1:
-                # A WIN claim needs only one safe, legal cached child.
-                # Test its four-subsets below; do not enumerate all ~100
-                # fifth moves for every edge of a WIN class.
-                continue
+
+        if result == 2 and valid_edges:
+            # All raw edges in a canonical S4 class are D4-equivalent.
+            # The D4 action bijects their legal fifth moves, so their
+            # *canonical* S5 child sets are identical. Enumerate one edge
+            # instead of repeating ~100 legal-child checks per raw edge.
+            # Retain every edge in per_edge for the universal LOSS audit.
+            a, b = valid_edges[0]
             occ4 = base | {a, b}
-            kids_here = set()
-            for z in legal_after(occ4):
-                ck = d4_canonical_key([first, r2, a, b, z])
-                kids_here.add(ck)
-                want_children.add(ck)
-            per_edge.append(((a, b), kids_here))
+            want_children = {
+                d4_canonical_key([first, r2, a, b, z])
+                for z in legal_after(occ4)
+            }
+            per_edge = [(edge, want_children) for edge in valid_edges]
 
         if not want_cov:
             problems.append('%s: no raw edge maps to this canonical key, so '
