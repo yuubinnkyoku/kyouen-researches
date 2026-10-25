@@ -551,3 +551,4 @@
 | [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md) | 11×11の9石近傍6根を106個の終局10石子で独立検証 | verification | verified | square-outcomes, certificates, verification |
 | [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) | 二値超立方体の六点切片の高次座標型係数と四項指数補正 | proposition | proved | geometry, variants, statistics |
 | [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) | 二値超立方体の任意q点切片における第三指数項の全称公式 | proposition | proved | geometry, variants, statistics |
+| [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) | 二値超立方体の座標反転軌道による切片数の2進可除性と3・5点切片の厳密合同則 | proposition | proved | geometry, variants, statistics |
