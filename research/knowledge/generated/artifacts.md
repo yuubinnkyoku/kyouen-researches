@@ -483,6 +483,21 @@
 ## [research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_four_sections.cpp](../../../research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_four_sections.cpp)
 
 - [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) (verifier): d=3..6の全4点組を整数行列式で調べる独立有限完全列挙
+## [research/experiments/binary-cube-sparse-patterns-20261025/aggregate.py](../../../research/experiments/binary-cube-sparse-patterns-20261025/aggregate.py)
+
+- [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) (verifier): 型集合数からのStirling数集計と既存q3・q4公式の回帰
+## [research/experiments/binary-cube-sparse-patterns-20261025/direct_integer_check.cpp](../../../research/experiments/binary-cube-sparse-patterns-20261025/direct_integer_check.cpp)
+
+- [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) (verifier): q5・d5/6の全5点組を整数の分数なし消去で独立に直接検査
+## [research/experiments/binary-cube-sparse-patterns-20261025/proof.md](../../../research/experiments/binary-cube-sparse-patterns-20261025/proof.md)
+
+- [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) (proof): 任意固定qの鋭い座標型障害上界、最大障害型数、有限係数公式、第二指数項の全称証明
+## [research/experiments/binary-cube-sparse-patterns-20261025/results.md](../../../research/experiments/binary-cube-sparse-patterns-20261025/results.md)
+
+- [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) (data): q5・d5..8の厳密有限値、独立整数検算、二素数による型集合全件照合
+## [research/experiments/binary-cube-sparse-patterns-20261025/support_enumerator.cpp](../../../research/experiments/binary-cube-sparse-patterns-20261025/support_enumerator.cpp)
+
+- [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) (verifier): q3・4の全型集合、q5の型集合サイズ8以下を完全列挙する有限体上の厳密階数検査
 ## [research/experiments/binary-cube-superquarter-sections-20261025/proof.md](../../../research/experiments/binary-cube-superquarter-sections-20261025/proof.md)
 
 - [K0556](../items/K0556-binary-hypercube-superquarter-hyperplane-spectrum.md) (proof): 非等絶対値係数の1/4上界・全密度分類・一般q点組計数の全称数学的証明
@@ -7359,6 +7374,18 @@
 ## [research/experiments/n11-s9-second-target-20261015/verify.py](../../../research/experiments/n11-s9-second-target-20261015/verify.py)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
+## [research/experiments/n11-s9-terminal-neighbor-20261025/reproduce.sh](../../../research/experiments/n11-s9-terminal-neighbor-20261025/reproduce.sh)
+
+- [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md) (verifier): 既存4×4整数幾何C++との18葉の勝敗・合法手数照合
+## [research/experiments/n11-s9-terminal-neighbor-20261025/s10-win18.keys](../../../research/experiments/n11-s9-terminal-neighbor-20261025/s10-win18.keys)
+
+- [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md) (certificate): 全18合法10石WIN子の固定一覧
+## [research/experiments/n11-s9-terminal-neighbor-20261025/s8-win9.keys](../../../research/experiments/n11-s9-terminal-neighbor-20261025/s8-win9.keys)
+
+- [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md) (certificate): 9個の合法8石WIN親
+## [research/experiments/n11-s9-terminal-neighbor-20261025/verify.py](../../../research/experiments/n11-s9-terminal-neighbor-20261025/verify.py)
+
+- [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md) (verifier): 3×3整数幾何と終局までの独立再帰
 ## [research/experiments/n11-s9-win13-lift-20261023/README.md](../../../research/experiments/n11-s9-win13-lift-20261023/README.md)
 
 - [K0516](../items/K0516-n11-s9-win13-terminal-lift.md) (source): 再現手順と信頼境界

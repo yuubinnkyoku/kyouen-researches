@@ -544,3 +544,5 @@
 | [K0557](../items/K0557-binary-hypercube-quarter-vertex-sections.md) | 二値超立方体の密度1/4超平面切片は高々5座標型・異なる頂点切片は4C(d,2)+16C(d,3)+92C(d,4)+80C(d,5)個 | proposition | proved | geometry, variants, statistics |
 | [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) | 二値超立方体の固定正密度超平面頂点切片数は次元の整数値多項式・密度1/4以上の明示式 | proposition | proved | geometry, variants, statistics |
 | [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) | 二値超立方体の1・2・3・4点超平面頂点切片数の全次元公式 | proposition | proved | geometry, variants, statistics |
+| [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md) | 11×11の9石WIN一局面を18個の終局10石WIN子で独立検証 | verification | verified | square-outcomes, certificates, verification |
+| [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) | 二値超立方体の疎なq点切片の座標型閾値・第二指数項と5点切片の有限値 | proposition | proved | geometry, variants, statistics |

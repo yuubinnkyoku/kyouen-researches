@@ -116,6 +116,7 @@
 - ← depends_on [K0533](../items/K0533-degenerate-quadratic-strips-sharp-uniform-grundy-threshold.md): 終局までの固定手数偶奇とmex帰納
 - ← depends_on [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md): 通常プレイの最後の合法手と勝ち初手の規約
 - ← depends_on [K0539](../items/K0539-three-arbitrary-parallel-lines-q6-eighteen-sites.md): 全終局の同一石数から全安全局面のmexを帰納計算
+- ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 元先手固定視点の奇数AND・偶数ORの勝敗伝播
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -740,6 +741,7 @@
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver/cache 葉への依存の信頼境界を参照
 - ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
 - ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
+- ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 局所証明は空盤の未解決性を変えない
 
 ## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 固定qの最小極大サイズには漸近指数下界2/3がある
 
@@ -2545,6 +2547,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数OR伝播
 - → depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 既存86個の9石WIN根との比較
 - → depends_on [K0528](../items/K0528-n11-s7-terminal-loss12.md): 既存10石LOSS葉からの不足境界探索
+- ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 既存9石WINの一石交換近傍を探索した背景
 
 ## [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) 二次形式λ版は有理点盤で有限例外以外同一となり、任意二水平行では全λで同一
 
@@ -2672,3 +2675,14 @@
 ## [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md) 二値超立方体の1・2・3・4点超平面頂点切片数の全次元公式
 
 - → depends_on [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): 3点の別証明、および4点切片を2・3平坦に分けた全称計数
+- ← depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): アフィン包に追加頂点がない集合を超平面切片へ拡張する補題、および3・4点公式との独立照合
+
+## [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md) 11×11の9石WIN一局面を18個の終局10石WIN子で独立検証
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 元先手固定視点の奇数AND・偶数ORの勝敗伝播
+- → depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 既存9石WINの一石交換近傍を探索した背景
+- → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 局所証明は空盤の未解決性を変えない
+
+## [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md) 二値超立方体の疎なq点切片の座標型閾値・第二指数項と5点切片の有限値
+
+- → depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): アフィン包に追加頂点がない集合を超平面切片へ拡張する補題、および3・4点公式との独立照合
