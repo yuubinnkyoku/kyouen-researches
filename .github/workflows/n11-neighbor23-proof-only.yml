@@ -1,0 +1,28 @@
+name: N11 neighbor23 proof-only audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-neighbor23-proof-only.yml'
+      - 'research/experiments/n11-s9-neighbor23-terminal-20261026/**'
+      - 'research/experiments/n11-s9-neighbor23-s7-union-20261026/**'
+      - 'research/experiments/n11-gap6-terminal-20261019/verify_js.js'
+      - 'research/experiments/n11-s6-legacy29-union-20261025/**'
+      - 'research/experiments/n11-terminal-s7-s8-legacy187-union-20261025/**'
+      - 'research/experiments/n11-s6-legacy3-loss-union-20261025/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently verify terminal leaves
+        run: python3 research/experiments/n11-s9-neighbor23-terminal-20261026/verify.py --negative
+      - name: Audit proof-only S8/S7 union and reject mutations
+        run: node research/experiments/n11-s9-neighbor23-s7-union-20261026/audit.js --negative
