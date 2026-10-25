@@ -101,6 +101,25 @@ def main():
     assert len(masks)==len(set(masks))==510
     assert Counter(m.bit_count() for m in masks)=={10:280,14:105,16:85,20:10,24:30}
     independent_weight_audit(masks)
+    # Audit the 15 exceptional rank-deficient containers and their overlaps.
+    exceptional=[]
+    for four in combinations(range(5),4):
+        for plus in combinations(four,2):
+            minus=tuple(i for i in four if i not in plus)
+            if plus>minus:continue
+            b=sum(1<<v for v in range(32)
+                  if sum((v>>i)&1 for i in plus)==
+                     sum((v>>i)&1 for i in minus))
+            exceptional.append(b)
+    assert len(set(exceptional))==15
+    assert Counter((a&b).bit_count() for a,b in combinations(exceptional,2))=={
+        4:60,6:30,8:15}
+    for b in exceptional:
+        assert any((b&~a)==0 for a in masks if a.bit_count()==24)
+    for i,j in combinations(range(5),2):
+        eq=sum(1<<v for v in range(32) if ((v>>i)&1)==((v>>j)&1))
+        assert any((eq&~a)==0 for a in masks if a.bit_count()==24)
+    print("rank-deficiency audit: 15 disjoint-at-k>=9 containers, all covered")
     g={k:0 for k in range(5)}
     g.update({5:2592,6:36304,7:329552,8:2038600})
     print("k full-rank-good deficient-good g(5,k) DP-states")
