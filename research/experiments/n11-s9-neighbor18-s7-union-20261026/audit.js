@@ -65,6 +65,19 @@ function verifyBoundary(roots,leaves,parents){
    s8WitnessParents:151,sourceTerminalVerification:
    'n11-s9-neighbor18-terminal-20261026/verify.py'};
 }
+// Independent reverse-edge census: each certified S8 WIN witnesses an S7->S8
+// move class. Count canonical (S7,S8) pairs without the forward legal generator.
+function reverseEdgeClasses(win8){
+ const edges=new Set();
+ for(const h of win8){
+  const b=g.board(h,8);
+  for(const p of g.pts(b)){
+   const parent=g.key(g.canonical(b^(1n<<BigInt(p))));
+   edges.add(parent+':'+h);
+  }
+ }
+ return edges;
+}
 function audit(){
  const roots=keys(SOURCE,{hash:ROOT_HASH});
  const leaves=new Set(),parents=g.reverse(roots);
@@ -92,12 +105,18 @@ function audit(){
    ...latestLoss.source().cert.roots]);
  need(frozenLoss8.size===294&&provenLoss8.size===76,
    'S8 LOSS comparison baseline changed');
- need([...parents].every(h=>!frozenLoss8.has(h)&&!provenLoss8.has(h)),
-   'S8 WIN/LOSS conflict');
+ need([...oldWin8,...parents].every(h=>!frozenLoss8.has(h)&&!provenLoss8.has(h)),
+   'S8 WIN/LOSS conflict (including prior certified WIN roots)');
  const fresh8=new Set([...parents].filter(h=>!oldWin8.has(h)));
  const allWin8=new Set([...oldWin8,...fresh8]);
  need(parents.size===151&&fresh8.size===140&&allWin8.size===1824,
    'S8 proof-only overlap or union regression');
+ const oldEdges=reverseEdgeClasses(oldWin8);
+ const allEdges=reverseEdgeClasses(allWin8);
+ need(oldEdges.size===13472&&allEdges.size===14592&&
+   [...oldEdges].every(e=>allEdges.has(e))&&
+   allEdges.size-oldEdges.size===1120,
+   'independent reverse S7->S8 edge-class census regression');
  const old7=g.reverse(oldWin8),affected7=g.reverse(fresh8);
  const all7=new Set([...old7,...affected7]);
  need(old7.size===6799&&affected7.size===557&&all7.size===7270,
@@ -117,7 +136,8 @@ function audit(){
   minGap=Math.min(minGap,gap);
   if(gap===0)newlyClosed.push(h);
  }
- need(addedMoves===1120&&addedClasses===1120&&minGap===28&&
+ need(addedMoves===1120&&addedClasses===1120&&
+   addedClasses===allEdges.size-oldEdges.size&&minGap===28&&
    newlyClosed.length===0,'S7 secured-edge or uncovered-gap regression');
  const provenLoss7=g.reverse(provenLoss8);
  need(newlyClosed.every(h=>!provenLoss7.has(h)),
