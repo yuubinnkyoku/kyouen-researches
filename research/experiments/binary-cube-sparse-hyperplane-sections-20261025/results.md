@@ -17,3 +17,26 @@ $d\ge3$ の「2平坦の交点3点」はそのまま「3点超平面頂点切片
 再現：python research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_affine_planes.py
 
 実数全次元の結論は proof.md の二つの全称証明に依存し、この有限検算だけでは主張しない。
+
+
+## 4点超平面頂点切片の独立完全列挙
+
+`verify_four_sections.cpp` を C++17 の最適化付きで実行。各4点組のアフィン包への所属を整数行列式・Cramer則で直接判定した。階数が周囲の空間次元に達する場合は超平面切片ではないので除外した。
+
+| d | 全4点組 | 2平坦由来 | 3平坦由来 | 交点が5点以上 | 全空間を張る | E(d,4) | 判定 |
+|---:|---:|---:|---:|---:|---:|---:|---|
+| 3 | 70 | 12 | 0 | 0 | 58 | **12** | PASS |
+| 4 | 1,820 | 100 | 80 | 1,640 | 0 | **180** | PASS |
+| 5 | 35,960 | 720 | 3,840 | 31,400 | 0 | **4,560** | PASS |
+| 6 | 635,376 | 4,816 | 118,720 | 511,840 | 0 | **123,536** | PASS |
+
+全ての行で「2平坦由来 + 3平坦由来」が新しい全称式と一致した。$d=7,8$ の **3,014,592 / 66,345,280** は公式値であり、直接列挙ではない。
+
+再現：
+
+```sh
+g++ -std=c++17 -O3 -Wall -Wextra -pedantic research/experiments/binary-cube-sparse-hyperplane-sections-20261025/verify_four_sections.cpp -o /tmp/verify_four_sections
+/tmp/verify_four_sections
+```
+
+この有限完全列挙は既存の3平坦分類を使わない独立検査であり、無界次元の証明ではない。全称証明は proof.md の定理2による。
