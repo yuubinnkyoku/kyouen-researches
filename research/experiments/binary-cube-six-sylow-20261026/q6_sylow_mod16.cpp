@@ -172,7 +172,8 @@ int main() {
         inverse_mod[i]=PRIME-(PRIME/i)*inverse_mod[PRIME%i]%PRIME;
     auto group=sylow_group();
     auto H=subgroups(group);
-    for(int k:{10,11}) {
+    const int expected[]={10,6,0,9,4,3};
+    for(int k:{10,11,12,13,14,15}) {
         vector<int64_t> fixed(H.size()),exact(H.size());
         map<vector<vector<int>>,Count> cache;
         uint64_t checked=0;
@@ -195,7 +196,7 @@ int main() {
         }
         int64_t nonfree=accumulate(exact.begin(),exact.end(),int64_t{0});
         int residue=nonfree%16;
-        assert(residue==(k==10?10:6));
+        assert(residue==expected[k-10]);
         cout<<"k="<<k<<" h_mod16="<<residue
             <<" checked="<<checked<<" distinct_orbit_partitions="<<cache.size()
             <<" nontrivial_stabilizer_points="<<nonfree<<"\n";
