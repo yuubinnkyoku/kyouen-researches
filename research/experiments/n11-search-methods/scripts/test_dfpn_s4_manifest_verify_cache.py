@@ -227,6 +227,27 @@ class S4RootEdgeIndexTests(unittest.TestCase):
         self.assertEqual(len(other), 3384)
         self.assertEqual(sum(map(len, other.values())), 6871)
 
+    def test_direct_four_point_filter_matches_full_legacy_enumeration(self):
+        # The optimized index must agree with the original, independently
+        # recomputed two-step legal_after() walk for noncentral roots too.
+        for root in ((60, 27), (17, 83)):
+            with self.subTest(root=root):
+                base = set(root)
+                expected = {}
+                for a in legal_after(base):
+                    for b in legal_after(base | {a}):
+                        if a < b:
+                            key = d4_canonical_key((*root, a, b))
+                            expected.setdefault(key, []).append((a, b))
+                self.assertEqual(dict(build_s4_edge_index(*root)), expected)
+
+    def test_direct_four_point_filter_rejects_invalid_roots(self):
+        for root in ((60, 60), (-1, 0), (0, 121)):
+            with self.subTest(root=root):
+                with self.assertRaisesRegex(ValueError, 'two-stone root'):
+                    build_s4_edge_index(*root)
+
+
 class S4ManifestExecutionTests(unittest.TestCase):
     """Exercise main() itself, not just its input parser and edge index.
 

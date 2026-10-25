@@ -159,11 +159,19 @@ def build_s4_edge_index(first, r2):
     legal edge exactly once. Child boundaries are computed only for classes
     actually requested by the manifest.
     """
+    # With a two-stone root, every third move is legal: the only
+    # forbidden pattern contains four distinct stones.  A fourth move b
+    # is legal exactly when {first, r2, a, b} is not a forbidden four.
+    # Test each unordered pair once instead of regenerating the entire
+    # 121-point legal-move list for every a (and testing both orders).
+    if not (0 <= first < V and 0 <= r2 < V and first != r2):
+        raise ValueError('invalid two-stone root')
     base = {first, r2}
+    vertices = [p for p in range(V) if p not in base]
     classes = collections.defaultdict(list)
-    for a in legal_after(base):
-        for b in legal_after(base | {a}):
-            if a < b:
+    for i, a in enumerate(vertices):
+        for b in vertices[i + 1:]:
+            if not forbidden(first, r2, a, b):
                 classes[d4_canonical_key([first, r2, a, b])].append((a, b))
     return classes
 
