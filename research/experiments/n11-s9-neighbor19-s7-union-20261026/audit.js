@@ -111,18 +111,17 @@ function audit(){
    'S8 WIN/LOSS conflict (including prior certified WIN roots)');
  const fresh8=new Set([...parents].filter(h=>!oldWin8.has(h)));
  const allWin8=new Set([...oldWin8,...fresh8]);
- need(parents.size===164&&fresh8.size>0&&
-   allWin8.size===oldWin8.size+fresh8.size,
+ need(parents.size===164&&fresh8.size===148&&allWin8.size===1972,
    'S8 proof-only overlap or union regression');
  const oldEdges=reverseEdgeClasses(oldWin8);
  const allEdges=reverseEdgeClasses(allWin8);
- need(oldEdges.size===14592&&
+ need(oldEdges.size===14592&&allEdges.size===15776&&
    [...oldEdges].every(e=>allEdges.has(e))&&
-   allEdges.size>oldEdges.size,
+   allEdges.size-oldEdges.size===1184,
    'independent reverse S7->S8 edge-class census regression');
  const old7=g.reverse(oldWin8),affected7=g.reverse(fresh8);
  const all7=new Set([...old7,...affected7]);
- need(old7.size===7270&&affected7.size>0&&all7.size>=old7.size,
+ need(old7.size===7270&&affected7.size===618&&all7.size===7764,
    'S7 parent coverage regression');
  let addedMoves=0,addedClasses=0,minGap=Infinity;
  const newlyClosed=[];
@@ -139,8 +138,9 @@ function audit(){
   minGap=Math.min(minGap,gap);
   if(gap===0)newlyClosed.push(h);
  }
- need(addedMoves>=addedClasses&&addedClasses>0&&
-   addedClasses===allEdges.size-oldEdges.size&&minGap>=0,'S7 secured-edge or uncovered-gap regression');
+ need(addedMoves===1184&&addedClasses===1184&&
+   addedClasses===allEdges.size-oldEdges.size&&minGap===24&&
+   newlyClosed.length===0,'S7 secured-edge or uncovered-gap regression');
  const provenLoss7=g.reverse(provenLoss8);
  need(newlyClosed.every(h=>!provenLoss7.has(h)),
    'S7 WIN/LOSS conflict');
