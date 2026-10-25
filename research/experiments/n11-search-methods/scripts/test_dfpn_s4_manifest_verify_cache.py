@@ -14,7 +14,7 @@ from pathlib import Path
 
 from dfpn_edge_classes import d4_canonical_key, has_forbidden_quad, legal_after
 from dfpn_s4_manifest_verify import (load_s5_cache, load_manifest,
-                                     build_s4_edge_index)
+                                     build_s4_edge_index, is_s5_child_of_s4)
 
 # Independently saved, canonical, safe S5 keys.  The tests never assume
 # these labels are a proof of their game-theoretic verdicts.
@@ -170,6 +170,33 @@ class S4RootEdgeIndexTests(unittest.TestCase):
                 key = d4_canonical_key([60, 0, a, b])
                 expected.setdefault(key, []).append((a, b))
         self.assertEqual(dict(got), expected)
+
+    def test_win_subset_membership_matches_full_legal_children(self):
+        # Independent, exhaustive child enumeration is the oracle.  The
+        # optimized WIN check must accept exactly the same D4 child keys.
+        root = (60, 0)
+        index = build_s4_edge_index(*root)
+        targets = [key for key, edges in index.items() if len(edges) == 2][:3]
+        self.assertEqual(len(targets), 3)
+        candidates = set()
+        for other, edges in list(index.items())[:12]:
+            a, b = edges[0]
+            for z in legal_after(set(root) | {a, b})[:5]:
+                candidates.add(d4_canonical_key((*root, a, b, z)))
+        positive = negative = 0
+        for key in targets:
+            expected = set()
+            for a, b in index[key]:
+                for z in legal_after(set(root) | {a, b}):
+                    expected.add(d4_canonical_key((*root, a, b, z)))
+            for child in expected | candidates:
+                observed = is_s5_child_of_s4(child, key)
+                self.assertEqual(observed, child in expected,
+                                 (key, child))
+                positive += int(observed)
+                negative += int(not observed)
+        self.assertGreater(positive, 0)
+        self.assertGreater(negative, 0)
 
     def test_reversed_root_and_reply27(self):
         self.assertEqual(build_s4_edge_index(60, 0),
