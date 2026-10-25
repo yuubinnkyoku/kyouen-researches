@@ -94,9 +94,12 @@ function audit(){
    'S8 WIN/LOSS conflict');
  const fresh8=new Set([...parents].filter(h=>!oldWin8.has(h)));
  const allWin8=new Set([...oldWin8,...fresh8]);
+ need(parents.size===101&&fresh8.size===94&&allWin8.size===1684,
+   'S8 proof-only overlap or union regression');
  const old7=g.reverse(oldWin8),affected7=g.reverse(fresh8);
  const all7=new Set([...old7,...affected7]);
- need(old7.size===6480,'previous certified S7 parent coverage changed');
+ need(old7.size===6480&&affected7.size===366&&all7.size===6799,
+   'S7 parent coverage regression');
  let addedMoves=0,addedClasses=0,minGap=Infinity;
  const newlyClosed=[];
  for(const h of affected7){
@@ -112,6 +115,8 @@ function audit(){
   minGap=Math.min(minGap,gap);
   if(gap===0)newlyClosed.push(h);
  }
+ need(addedMoves===752&&addedClasses===752&&minGap===33&&
+   newlyClosed.length===0,'S7 secured-edge or uncovered-gap regression');
  const provenLoss7=g.reverse(provenLoss8);
  need(newlyClosed.every(h=>!provenLoss7.has(h)),
    'S7 WIN/LOSS conflict');
