@@ -110,14 +110,21 @@ def verify(cpp_tsv=None, negative=False):
         need(any(canonical(p | (1 << v)) == ROOT for v in range(121)
                  if allowed >> v & 1), 'invalid S8-to-S9 witness')
     move_counts = {}
-    states = 0
+    # Sorted S10 leaves: a per-leaf fingerprint is stronger than a sum alone.
+    # These are implementation-dependent search counts, NOT proof distances.
+    expected_leaf_states = (56, 56, 99, 64, 76, 141, 62, 46, 23,
+                            49, 76, 23, 71, 71, 23, 37, 81, 28)
+    leaf_states = []
     for s in sorted(leaves):
         verdict, n = solve(s)
         need(verdict, 'S10 not WIN to move: %032x' % s)
         move_counts['%032x' % s] = legal(s).bit_count()
-        states += n
+        leaf_states.append(n)
+    need(tuple(leaf_states) == expected_leaf_states,
+         'terminal per-leaf search-state fingerprint changed')
+    states = sum(leaf_states)
+    need(states == 1082, 'terminal search-state total changed')
     need(not solve(ROOT)[0], 'S9 not LOSS to move')
-    need(states == 1192, 'terminal search-state count changed')
     if cpp_tsv is not None:
         rows = {}
         for line in cpp_tsv.read_text(encoding='utf-8').splitlines():
@@ -138,7 +145,7 @@ def verify(cpp_tsv=None, negative=False):
             corrupt[first] += 1
             need(not matches(corrupt), 'tampered C++ move count accepted')
     print('VERIFIED S9 FIRST_WIN, 18/18 terminal S10 WIN, 9 S8 WIN parents, '
-          '1192 independent Python leaf states; empty=UNKNOWN')
+          '%d independent Python leaf states; empty=UNKNOWN' % states)
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
