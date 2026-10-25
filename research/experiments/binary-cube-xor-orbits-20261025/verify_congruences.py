@@ -592,6 +592,94 @@ def verify_six_point_mod25_sylow5():
     print('q=6: least period mod25=100; 13 zero classes; E10=21,E11=11 mod25')
 
 
+
+def verify_five_point_three_adic():
+    """Exact checks of theorem 11; proof for all t is in proof.md.
+
+    Compare modular pow with a sequential recurrence and the original
+    unnormalized exact formula. The two modular algorithms share only
+    K0561's independently established coefficients.
+    """
+    half = {a // 2: c for a, c in C5.items()}
+    roots_known = {
+        2: (2, 3, 4, 5),
+        3: (2, 3, 4, 5),
+        4: (2, 4, 5, 39),
+        5: (4, 93, 110, 113),
+        6: (113, 328, 417, 434),
+    }
+
+    def normalized_mod(d, modulus):
+        assert d >= 5
+        m = 120 * modulus
+        numerator = sum(c * pow(a, d, m) for a, c in half.items()) % m
+        assert numerator % 120 == 0
+        return numerator // 120
+
+    def via_recurrence(modulus, limit):
+        m = 120 * modulus
+        powers = {a: 1 for a in half}
+        values = []
+        for d in range(limit):
+            numerator = sum(c * powers[a] for a, c in half.items()) % m
+            if d >= 5:
+                assert numerator % 120 == 0
+                values.append(numerator // 120)
+            else:
+                values.append(None)
+            for a in powers:
+                powers[a] = powers[a] * a % m
+        return values
+
+    known = {5: 2592, 6: 256704, 7: 18778368,
+             8: 1133185536, 9: 58832008704, 10: 2724496524288}
+    for d in range(5, 26):
+        e = exact(C5, 120, d)
+        assert e % (1 << d) == 0
+        assert e // (1 << d) == sum(c * a**d for a, c in half.items()) // 120
+        if d in known:
+            assert e == known[d]
+
+    lambdas = {a: ((a**6 - 1) // 9) % 9 for a in half if a % 3}
+    assert lambdas == {16: 1, 10: 6, 8: 3, 7: 4,
+                       5: 8, 4: 5, 2: 7, 1: 0}
+    slope_numerators = tuple(
+        sum(c * pow(a, r, 9) * lambdas[a]
+            for a, c in half.items() if a % 3) % 9 for r in range(6))
+    assert slope_numerators == (0, 0, 6, 6, 3, 3)
+    assert all(normalized_mod(d, 3) == 0 for d in range(5, 30))
+
+    for t in range(2, 8):
+        modulus, period = 3**t, 2 * 3**(t - 1)
+        start = max(5, t + 2)
+        values = via_recurrence(3**(t + 1), start + 3 * period + 5)
+        for d in range(start, start + 2 * period):
+            assert values[d] == normalized_mod(d, 3**(t + 1))
+            assert (values[d + period] - values[d]) % modulus == 0
+            eps = (0, 0, 2, 2, 1, 1)[d % 6]
+            assert (values[d + period] - values[d]) % (3**(t + 1)) == (
+                3**t * eps) % (3**(t + 1))
+        roots = tuple(sorted(d % period for d in range(start, start + period)
+                             if values[d] % modulus == 0))
+        assert len(roots) == 4
+        if t in roots_known:
+            assert roots == roots_known[t], (t, roots)
+            for d in range(5, start):
+                assert (normalized_mod(d, modulus) == 0) == (d % period in roots)
+        # Maximal proper divisors cannot be periods.
+        d0 = next(d for d in range(start, start + 6) if d % 6 == 0)
+        assert normalized_mod(d0, modulus) != normalized_mod(
+            d0 + period // 2, modulus)
+        if t == 2:
+            assert normalized_mod(d0, modulus) != normalized_mod(
+                d0 + period // 3, modulus)
+        else:
+            d2 = next(d for d in range(start, start + 6) if d % 6 == 2)
+            assert normalized_mod(d2, modulus) != normalized_mod(
+                d2 + period // 3, modulus)
+    print('q=5: exact 3-adic periods and four lifting branches verified to t=7')
+
+
 def main():
     for d in range(3, 65):
         value = exact(C3, 6, d)
@@ -614,6 +702,7 @@ def main():
     for d, q, count in [(4, 6, 40), (5, 6, 1200), (4, 8, 20)]:
         assert count % (1 << max(0, d - v2(q))) == 0
     verify_five_point_lifting()
+    verify_five_point_three_adic()
     verify_six_point_sharpness_period()
     verify_six_point_mod32()
     verify_six_point_odd_prime_periods()
