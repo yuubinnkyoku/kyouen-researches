@@ -148,6 +148,8 @@ jobs:
           bash research/experiments/n11-search-methods/scripts/dfpn_s5_merge_test.sh
       - name: Verify n11 S9 terminal neighbor certificate with independent geometry
         run: bash research/experiments/n11-s9-terminal-neighbor-20261025/reproduce.sh
+      - name: Verify n11 second S9 terminal neighbor with independent geometry
+        run: bash research/experiments/n11-s9-second-neighbor-20261025/reproduce.sh
       - name: Check n11 replay preflight source and budget binding
         run: python -m unittest discover -s research/experiments/n11-boundary-recovery-20261006/tests -p test_audit_probe_preflight.py
       - name: Check n11 historical raw replay source completeness
