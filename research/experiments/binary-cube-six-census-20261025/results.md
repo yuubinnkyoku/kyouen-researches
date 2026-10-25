@@ -97,3 +97,5 @@ g++ -O3 -std=c++17 -Wall -Wextra -o /tmp/q6p q6_rooted_support_prime.cpp
 ```
 
 新しい検証器：[整数](q6_rooted_support_integer.cpp)・[素数](q6_rooted_support_prime.cpp)。詳細：[全称証明と独立監査](rooted-support-proof.md)。
+
+[Stirling数による厳密集計と既知公式の回帰](q6_rooted_aggregate.py)：`python q6_rooted_aggregate.py`。
