@@ -473,6 +473,125 @@ def verify_six_point_mod81_sylow3():
     print('q=6: v3(E)>=4 iff d mod162 in {93,143,146}, d>=6')
 
 
+
+def verify_six_point_mod25_sylow5():
+    """C5 fixed-set census for q=6 mod25, with rational/modular checks."""
+    from fractions import Fraction
+    from itertools import combinations
+    from math import comb, factorial
+
+    permutation = (1, 2, 3, 4, 0, 5)
+
+    def action(x):
+        bits = [0] + [(x >> i) & 1 for i in range(5)]
+        return sum((bits[permutation[i]] ^ bits[permutation[0]]) << (i - 1)
+                   for i in range(1, 6))
+
+    orbits, seen = [], set()
+    for x in range(32):
+        if x in seen:
+            continue
+        orbit, y = [], x
+        while y not in orbit:
+            orbit.append(y)
+            y = action(y)
+        assert y == x
+        orbits.append(tuple(orbit))
+        seen.update(orbit)
+    assert sorted(map(len, orbits)) == [1, 1, 5, 5, 5, 5, 5, 5]
+
+    def valid(columns, prime=None):
+        k = len(columns)
+        rows = [[Fraction((col >> i) & 1) if prime is None
+                 else (col >> i) & 1 for col in columns] for i in range(5)]
+        rank = 0
+        for j in range(k):
+            pivot = next((i for i in range(rank, 5) if rows[i][j]), None)
+            if pivot is None:
+                continue
+            rows[rank], rows[pivot] = rows[pivot], rows[rank]
+            inv = 1 / rows[rank][j] if prime is None else pow(rows[rank][j], -1, prime)
+            rows[rank] = [v * inv if prime is None else v * inv % prime
+                          for v in rows[rank]]
+            for i in range(5):
+                if i != rank and rows[i][j]:
+                    factor = rows[i][j]
+                    rows[i] = [rows[i][z] - factor * rows[rank][z]
+                               if prime is None else
+                               (rows[i][z] - factor * rows[rank][z]) % prime
+                               for z in range(k)]
+            rank += 1
+            if rank == 5:
+                break
+        if rank != 5:
+            return False
+        return sum(all((sum(rows[i][j] for i in range(5) if mask >> i & 1)
+                        if prime is None else
+                        sum(rows[i][j] for i in range(5) if mask >> i & 1) % prime)
+                       in (0, 1) for j in range(k)) for mask in range(32)) == 6
+
+    fixed = {k: 0 for k in range(4, 15)}
+    checked = {k: 0 for k in range(4, 15)}
+    for n in range(len(orbits) + 1):
+        for chosen in combinations(orbits, n):
+            columns = tuple(x for orbit in chosen for x in orbit)
+            k = len(columns)
+            if k not in fixed:
+                continue
+            checked[k] += 1
+            exact = valid(columns)
+            assert exact == valid(columns, prime=1009)
+            fixed[k] += exact
+    assert {k: v for k, v in checked.items() if v} == {
+        5: 6, 6: 12, 7: 6, 10: 15, 11: 30, 12: 15}
+    assert {k: v for k, v in fixed.items() if v} == {
+        6: 2, 7: 2, 10: 7, 11: 20, 12: 13}
+
+    known = {4: 75, 5: 75, 6: 2877, 7: 44437,
+             8: 480895, 9: 3220820}
+    assert all(fixed[k] % 5 == v % 5 for k, v in known.items())
+    h = dict(known)
+    h.update({k: fixed[k] % 5 for k in range(10, 15)})
+
+    def via_stirling(d):
+        row = [1] + [0] * 14
+        for _ in range(d):
+            row = [0] + [(row[k - 1] + k * row[k]) % 125
+                         for k in range(1, 15)]
+        return sum(v * factorial(k) * row[k] for k, v in h.items()) % 125
+
+    def via_inclusion(d):
+        return sum(v * sum((-1) ** (k - j) * comb(k, j) * pow(j, d, 125)
+                           for j in range(k + 1)) for k, v in h.items()) % 125
+
+    def residue(d):
+        a = via_stirling(d)
+        assert a == via_inclusion(d)
+        assert a % 5 == 0
+        return pow(2, d, 25) * (a // 5) * pow(144, -1, 25) % 25
+
+    # 5^3 divides 15!: all unknown h[k>=15] vanish modulo 125.
+    # Euler's theorem proves period 100 for E mod25 at all d>=6.
+    assert factorial(15) % 125 == 0
+    for j in range(15):
+        if j % 5:
+            assert pow(j, 100, 125) == 1
+        else:
+            assert pow(j, 6, 125) == 0
+    values = [residue(d) for d in range(6, 206)]
+    assert all(values[i] == values[i + 100] for i in range(100))
+    # Every proper divisor of 100 divides 50 or 20.
+    assert values[0] != residue(56) and values[0] != residue(26)
+    roots = sorted(d % 100 for d in range(6, 106) if residue(d) == 0)
+    assert roots == [2, 3, 5, 9, 25, 29, 45, 49, 64, 65, 69, 85, 89]
+    for d, exact in {6: 206528, 7: 47884928, 8: 9324142464,
+                     9: 1405033324800}.items():
+        assert residue(d) == exact % 25
+    assert (residue(10), residue(11)) == (21, 11)
+    print('q=6 Sylow-5: fixed[10..14] = (7,20,13,0,0)')
+    print('q=6: least period mod25=100; 13 zero classes; E10=21,E11=11 mod25')
+
+
 def main():
     for d in range(3, 65):
         value = exact(C3, 6, d)
@@ -499,6 +618,7 @@ def main():
     verify_six_point_mod32()
     verify_six_point_odd_prime_periods()
     verify_six_point_mod81_sylow3()
+    verify_six_point_mod25_sylow5()
     print("K0567: exact checks and q=6 parity-period bases passed (d<=64)")
 
 
