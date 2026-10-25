@@ -2649,6 +2649,8 @@
 
 - → generalizes [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md): d=6..10のd+3下界をd=6..24に拡大し9次元以上で強める
 - → verifies [K0552](../items/K0552-binary-hypercube-d-plus-three-witnesses.md): 既知のd=6..10証人を二方式で独立再検証し統計も一致
+- ← depends_on [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md): d=6のd+3下界（9点証人）を前提とし、本項目で上界を追加する
+- ← verifies [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md): d=6の9点証人を前提としてK_6=9を確定する方向の上界
 
 ## [K0554](../items/K0554-binary-hypercube-second-largest-hyperplane-sections.md) 二値超立方体の第2位の超平面切片は3座標型・4座標型だけで全次元8C(d+1,4)個
 
@@ -2728,3 +2730,8 @@
 
 - → depends_on [K0559](../items/K0559-binary-cube-sparse-hyperplane-vertex-sections.md): 3点切片の全次元指数公式から正確な2進付値を導出
 - → depends_on [K0561](../items/K0561-binary-cube-sparse-pattern-diversity-and-five-sections.md): 5点切片の全次元指数公式とアフィン包の切片延長補題を使用
+
+## [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
+
+- → depends_on [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): d=6のd+3下界（9点証人）を前提とし、本項目で上界を追加する
+- → verifies [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): d=6の9点証人を前提としてK_6=9を確定する方向の上界

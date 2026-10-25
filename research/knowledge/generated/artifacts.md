@@ -425,6 +425,21 @@
 ## [research/experiments/binary-cube-hyperplane-five-eighths-20261025/results.md](../../../research/experiments/binary-cube-hyperplane-five-eighths-20261025/results.md)
 
 - [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) (data): d=4..8の厳密公式値と五次元独立全数検査
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/README.md](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/README.md)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (log): 手法・再現手順・証拠の意味と限界
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/audit_frontier9.py](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/audit_frontier9.py)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (verifier): 9点証人の極大性（64頂点すべて禁止）の独立監査
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): 包含極小依存集合（circuit）の列挙とCNF生成器。fix0対称性削減つき
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_cnf.cpp](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_cnf.cpp)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): C(64,7)個の7点部分集合の依存判定とCNF生成器（二算法照合つき）
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/results.json](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/results.json)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (data): 機械可読な主張・CNF統計・検証計画
 ## [research/experiments/binary-cube-hyperplane-large-d-20261025/README.md](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/README.md)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (log): 手法・制御・小素数の教訓・再現手順

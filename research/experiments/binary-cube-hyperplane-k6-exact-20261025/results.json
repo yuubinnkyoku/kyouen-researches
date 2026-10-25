@@ -1,0 +1,32 @@
+{
+  "game": "binary 6-cube V_6={0,1}^6, forbidding 7 points on a common real affine hyperplane (degenerate cases included)",
+  "date": "2026-10-25",
+  "claim": "K_6 = 9: the maximum number of vertices of the binary 6-cube with every 7-subset in general position is exactly 9",
+  "lower_bound": {
+    "witness_d6_m9": "frontier.txt of binary-cube-hyperplane-large-d-20261025 (both verifiers)",
+    "value": 9
+  },
+  "upper_bound": {
+    "method": "exhaustive enumeration of all C(64,7)=621216192 seven-subsets and UNSAT of the 'exactly 10 chosen' CNF",
+    "cnf": {
+      "file": "/tmp/k6_k10.cnf.gz (compressed from 6.9 GB)",
+      "variables": 4160,
+      "clauses": 255045246,
+      "dependent_7_subsets_banned": 255036992,
+      "counter_clauses": 8254,
+      "encoding": "one clause (-x_a ... -x_g) per dependent 7-subset; Sinz sequential counters for exactly-10 (at-most-10 over x, at-most-54 over -x)"
+    },
+    "dependent_subset_counts": {
+      "size_4": 4816,
+      "size_5": 311360,
+      "size_6": 10663520,
+      "size_7": 255036992,
+      "cross_check": "every predicate call evaluated modulo 2^61-1 and modulo 1000000007 with independent eliminations; all 621216192 seven-subsets agree"
+    }
+  },
+  "verification_plan": [
+    "cadical UNSAT on the exactly-10 CNF with DRAT proof",
+    "DRAT proof checked by drat-trim against the original CNF",
+    "SAT sanity run on the exactly-9 CNF, witness re-proved by exact integer determinants"
+  ]
+}
