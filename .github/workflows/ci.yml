@@ -164,6 +164,8 @@ jobs:
         run: python3 research/experiments/n11-s9-neighbor18-terminal-20261026/verify.py --negative
       - name: Verify n11 nineteen additional S9 terminal roots with independent geometries
         run: python3 research/experiments/n11-s9-neighbor19-terminal-20261026/verify.py --negative
+      - name: Verify n11 twenty-three additional S9 terminal roots with independent geometries
+        run: python3 research/experiments/n11-s9-neighbor23-terminal-20261026/verify.py --negative
       - name: Audit n11 new S9 neighbor proof-only S7 coverage
         run: node research/experiments/n11-s9-neighbor-s7-union-20261025/audit.js --negative
       - name: Audit n11 two S9 neighbors against proof-only S7 coverage
