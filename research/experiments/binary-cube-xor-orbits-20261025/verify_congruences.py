@@ -225,6 +225,89 @@ def verify_five_point_lifting():
             assert (value >> d) % (1 << t) == via_powers(d, t)
 
 
+
+def verify_six_point_odd_prime_periods():
+    """All-d odd-prime congruences for six-point cube sections.
+
+    The all-d argument uses Euler periods modulo p^(t+v_p(720))
+    and the factorial cutoff; the finite residue check only shortens
+    the proven periods. Stirling and inclusion-exclusion are independent
+    arithmetic reconstructions from the same certified h_{6,k}.
+    """
+    from math import comb, factorial
+
+    support = {4: 75, 5: 75, 6: 2877, 7: 44437,
+               8: 480895, 9: 3220820}
+    exact_known = {6: 206528, 7: 47884928,
+                   8: 9324142464, 9: 1405033324800}
+
+    def via_stirling(d, modulus):
+        row = [1] + [0] * 9
+        for _ in range(d):
+            row = [0] + [(row[k - 1] + k * row[k]) % modulus
+                         for k in range(1, 10)]
+        return sum(h * factorial(k) * row[k]
+                   for k, h in support.items()
+                   if factorial(k) % modulus) % modulus
+
+    def via_inclusion(d, modulus):
+        return sum(
+            h * sum((-1) ** (k - j) * comb(k, j)
+                    * pow(j, d, modulus) for j in range(k + 1))
+            for k, h in support.items()
+            if factorial(k) % modulus
+        ) % modulus
+
+    # (p, exponent, claimed least period, Euler period, residues d=6,...)
+    cases = [
+        (3, 1, 6, 18, [2, 2, 0, 0, 1, 0]),
+        (3, 2, 18, 54,
+         [5, 5, 3, 6, 7, 6, 8, 5, 6, 3, 1, 0,
+          2, 5, 0, 0, 4, 3]),
+        (5, 1, 20, 20,
+         [3, 3, 4, 0, 1, 1, 3, 0, 4, 4, 2, 0,
+          2, 2, 1, 0, 0, 0, 0, 0]),
+    ]
+    for p, t, period, euler_period, expected in cases:
+        v = 2 if p == 3 else 1  # v_p(6!)
+        modulus = p ** (v + t)
+        residue_modulus = p ** t
+        cutoff = 8 if p == 3 else 9
+        assert factorial(cutoff + 1) % modulus == 0
+        assert period <= euler_period and euler_period % period == 0
+
+        # Establish the all-d Euler period for A_d modulo p^(v+t).
+        for base in range(cutoff + 1):
+            if base % p:
+                assert pow(base, euler_period, modulus) == 1
+            else:
+                assert pow(base, 6, modulus) == 0
+
+        def section_residue(d):
+            a = via_inclusion(d, modulus)
+            assert a % (p ** v) == 0
+            return (pow(2, d, residue_modulus) *
+                    (a // (p ** v)) *
+                    pow(720 // (p ** v), -1, residue_modulus)
+                    ) % residue_modulus
+
+        # One full Euler period is enough to prove the shorter period.
+        for d in range(6, 6 + euler_period):
+            assert section_residue(d + period) == section_residue(d)
+        residues = [section_residue(d) for d in range(6, 6 + period)]
+        assert residues == expected, (p, t, residues)
+        for candidate in range(1, period):
+            if period % candidate == 0:
+                assert any(residues[i] != residues[(i + candidate) % period]
+                           for i in range(period))
+
+        for d in range(6, 201):
+            assert via_stirling(d, modulus) == via_inclusion(d, modulus)
+            assert section_residue(d + period) == section_residue(d)
+            if d in exact_known:
+                assert section_residue(d) == exact_known[d] % residue_modulus
+
+
 def main():
     for d in range(3, 65):
         value = exact(C3, 6, d)
@@ -249,6 +332,7 @@ def main():
     verify_five_point_lifting()
     verify_six_point_sharpness_period()
     verify_six_point_mod32()
+    verify_six_point_odd_prime_periods()
     print("K0567: exact checks and q=6 parity-period bases passed (d<=64)")
 
 
