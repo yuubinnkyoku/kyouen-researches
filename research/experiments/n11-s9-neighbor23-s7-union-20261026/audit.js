@@ -158,6 +158,12 @@ function audit(){
  const nextS8Targets=[...frequency].sort((a,b)=>b[1]-a[1]||
    a[0].localeCompare(b[0])).slice(0,15).map(([s8,nearS7Parents])=>
      ({s8,nearS7Parents}));
+ need(frontier.length===702&&near.length===5&&
+   frontier[0].s7==='00000000000100001000000042401008'&&
+   frontier[0].uncovered===21&&frontier[0].secured===13&&
+   nextS8Targets[0].s8==='000000100010a0011000000001004000'&&
+   nextS8Targets[0].nearS7Parents===2,
+   'proof-only near-closure worklist regression');
  const provenLoss7=g.reverse(provenLoss8);
  need(newlyClosed.every(h=>!provenLoss7.has(h)),
    'S7 WIN/LOSS conflict');
