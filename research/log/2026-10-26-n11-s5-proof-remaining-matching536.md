@@ -29,3 +29,5 @@ python3 research/experiments/n11-s5-pair-cover-20261026/verify_remaining_matchin
 ```
 
 **この最適化で新しい8石・7石・5石WINを証明したわけではない。** 14個の7石根はすべて未証明であり、5石の全子証明も未完了。実測探索時間の削減ではなく、既存の独立証明を再利用した**未証明義務の厳密な削減**である。二石root新規閉鎖0件。**標準11×11空盤UNKNOWN**。
+
+専用CI [40330024399](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40330024399) は **success**（最終の4×4独立幾何・最小重み完全対応・負の試験を含む）。通常CIとknowledge integrityの最終結果はこの記録時点で未確認。
