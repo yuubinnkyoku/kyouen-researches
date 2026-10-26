@@ -3,7 +3,7 @@
 
 All WIN/LOSS labels are from the original first player's perspective.
 The S10 terminal solver starts from an EMPTY memo table for each geometry.
-The 13 proposed S7 roots have no verdict assigned by this verifier.
+The 14 proposed S7 roots have no verdict assigned by this verifier.
 """
 import argparse
 import hashlib
@@ -133,34 +133,34 @@ def lift_and_replan():
     results = []
     for geom in (THREE, FOUR):
         loss7 = reverse(geom, {ROOT})
-        win6 = reverse(geom, loss7)
-        need(len(loss7) == 8 and len(win6) == 28,
-             'new S7 LOSS / S6 WIN reverse boundaries changed')
+        affected6 = reverse(geom, loss7)
+        need(len(loss7) == 8 and len(affected6) == 28,
+             'new S7 LOSS / affected S6 parent geometry changed')
         for s7 in loss7:
             need(ROOT in SOURCE.children(geom, s7),
                  'S7 LOSS lacks legal S8 LOSS witness')
-        for s6 in win6:
+        for s6 in affected6:
             need(SOURCE.children(geom, s6) & loss7,
-                 'S6 WIN lacks legal S7 LOSS witness')
+                 'affected S6 parent lacks legal S7 LOSS child')
+        # CRITICAL POLARITY: a LOSS S7 child is a BAD move for the first
+        # player at S6. It does NOT prove S6 WIN or any S5 WIN coverage.
         old6 = reverse(geom, old7)
         legal6 = SOURCE.children(geom, S5)
         known = legal6 & old6
-        extra = (legal6 & win6) - known
+        missing = legal6 - old6
         need(len(old6) == 110 and len(legal6) == 32 and
-             len(known) == 5 and len(extra) == 2,
-             'S5 baseline or new WIN witness coverage changed')
-        missing = legal6 - old6 - win6
-        need(len(missing) == 25, 'S5 remaining uncovered count changed')
-        plan = (HERE / 's7-plan13.keys').read_text('ascii').splitlines()
-        need(len(plan) == 13 and plan == sorted(set(plan)) and
+             len(known) == 5 and len(missing) == 27,
+             'S5 baseline changed; LOSS7 cannot lift to WIN6')
+        plan = (HERE / 's7-plan14.keys').read_text('ascii').splitlines()
+        need(len(plan) == 14 and plan == sorted(set(plan)) and
              all(len(h) == 32 for h in plan), 'invalid S7 plan')
         proposed = {int(h, 16) for h in plan}
         need(all(p.bit_count() == 7 and geom.safe(p) and
-                 geom.canonical(p) == p for p in proposed),
-             'invalid candidate S7 root')
+                 geom.canonical(p) == p and p not in loss7
+                 for p in proposed), 'invalid/refuted candidate S7 root')
         incidence = {s6: SOURCE.children(geom, s6) & proposed
                      for s6 in missing}
-        need(all(incidence.values()), 'uncovered S6 in proposed 13-root plan')
+        need(all(incidence.values()), 'uncovered S6 in proposed 14-root plan')
         need(all(sum(p in SOURCE.children(geom, s6) for s6 in missing) <= 2
                  for p in proposed), 'unexpected >2-way witness')
         all8 = [SOURCE.children(geom, p) for p in proposed]
@@ -171,18 +171,18 @@ def lift_and_replan():
         need(len(frozen_loss8) == 294 and
              all(not (children & frozen_loss8) for children in all8),
              'proposed S7 WIN has frozen S8 LOSS child')
-        need(sum(map(len, all8)) == 558 and
-             len(set().union(*all8)) == 558,
+        need(sum(map(len, all8)) == 542 and
+             len(set().union(*all8)) == 541,
              'S7->S8 conditional plan boundary changed')
-        need(all(ROOT not in c for c in all8),
-             'already proven LOSS S8 contradicts proposed S7 WIN')
-        results.append((sorted(missing), sorted(proposed)))
+        need(all(ROOT not in children for children in all8),
+             'proven LOSS S8 contradicts proposed S7 WIN')
+        results.append((sorted(missing), sorted(proposed), sorted(loss7)))
     need(results[0] == results[1], 'independent S5/plan geometries disagree')
-    return {'new_s7_loss_parents': 8, 'new_s6_win_witness_parents': 28,
-            'newly_secured_s5_children_against_18_s7_win': 2,
-            's5_secured_children': 7, 's5_uncovered_children': 25,
-            'conditional_s7_plan_roots': 13, 'conditional_s7_to_s8_edges': 558,
-            'conditional_distinct_s8_children': 558,
+    return {'new_s7_loss_parents': 8, 's6_parents_with_a_known_loss_move': 28,
+            'new_s6_win_verdicts_from_this_loss': 0,
+            's5_secured_children': 5, 's5_uncovered_children': 27,
+            'conditional_s7_plan_roots': 14, 'conditional_s7_to_s8_edges': 542,
+            'conditional_distinct_s8_children': 541,
             's5_outcome': 'UNPROVEN', 'empty_board': 'UNKNOWN'}
 
 
