@@ -21,7 +21,7 @@ const MORE_LOSS=[
 const need=(x,m)=>{if(!x)throw Error(m);};
 const read=p=>fs.readFileSync(path.join(EXP,p),'utf8');
 const keys=p=>read(p).trim().split(/\s+/);
-const children=h=>g.children(g.board(h));
+const children=h=>g.children(BigInt('0x'+h));
 const reverse=a=>g.reverse(a);
 const same=(a,b)=>a.size===b.size&&[...a].every(x=>b.has(x));
 function inventory(){
