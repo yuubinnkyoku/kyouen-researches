@@ -7,6 +7,7 @@ Run verify.py --negative before treating the new S7 root as terminal-proved.
 """
 import argparse
 from collections import Counter
+import hashlib
 import json
 from pathlib import Path
 
@@ -42,6 +43,24 @@ K0423_PILOTS = (
 )
 
 
+# The later 2026-10-12 reply27 S5 exact cache is a *solver-trusted*
+# scheduling exclusion, not an independently terminal-verified certificate.
+# Pin the audited atomic-merge receipt's SHA and inventory to avoid silently
+# accepting another historical snapshot or an UNKNOWN row as a verdict.
+S5_EXACT_CACHE = (Path(__file__).resolve().parent.parent /
+                  'n11-s4-boundary-direct-20261012' / 'output' /
+                  'current-exact-s5.cache')
+S5_EXACT_SHA256 = 'c469eff06559c57b7f4b679c80c1e576c7bddb6f69ea03da0b8b64d0ef4aa198'
+S5_EXACT_ROWS = 5851
+S5_EXACT_COUNTS = {'WIN': 159, 'LOSS': 5692}
+EXPECTED_EXACT_OVERLAP = {
+    '00000000000000001204001000100000',
+    '00000000000100009000010000001000',
+    '00000000000100009001000000001000',
+    '00000000100000009001000000001000',
+}
+
+
 def certified_s5_from_k0423(geometry, *, tamper=False):
     base = (Path(__file__).resolve().parent.parent /
             'n11-s5-s6-quotient-20261013' / 'output')
@@ -72,6 +91,36 @@ def certified_s5_from_k0423(geometry, *, tamper=False):
 def need(ok, message):
     if not ok:
         raise ValueError(message)
+
+
+def solver_trusted_s5_cache(geometry, *, tamper=False):
+    raw = S5_EXACT_CACHE.read_bytes()
+    if tamper:
+        raw += b'\\n# unauthorized edit'
+    need(hashlib.sha256(raw).hexdigest() == S5_EXACT_SHA256,
+         'S5 solver-trusted exact cache SHA-256 mismatch')
+    known = {}
+    for line in raw.decode('ascii').splitlines():
+        if not line or line.startswith('#'):
+            continue
+        fields = line.split(',')
+        need(len(fields) == 6 and fields[0] == 's5verdict' and
+             fields[3] == '5' and fields[4] in ('1', '2'),
+             'malformed, UNKNOWN, or non-S5 cache row')
+        lo, hi, nodes = (int(fields[i]) for i in (1, 2, 5))
+        need(0 <= lo < (1 << 64) and 0 <= hi < (1 << 64) and nodes >= 0,
+             'invalid S5 exact cache numeric fields')
+        board = lo | (hi << 64)
+        need(board.bit_count() == 5 and geometry.safe(board) and
+             geometry.canonical(board) == board,
+             'S5 cache key is not a canonical safe five-stone board')
+        key = f'{board:032x}'
+        need(key not in known, 'duplicate S5 exact cache key')
+        known[key] = 'WIN' if fields[4] == '1' else 'LOSS'
+    counts = Counter(known.values())
+    need(len(known) == S5_EXACT_ROWS and dict(counts) == S5_EXACT_COUNTS,
+         'S5 exact cache inventory changed')
+    return known
 
 
 def enumerate_frontier(geometry, old_roots, *, tamper=False):
@@ -110,24 +159,48 @@ def enumerate_frontier(geometry, old_roots, *, tamper=False):
     need(all(row[0] > 0 for row in records),
          'S5 all-child proof must not be inferred from partial coverage')
 
-    # The original 14-gap "best" root is already independently proved
-    # original-first LOSS in K0423. Exclude it BEFORE scheduling work.
+    # First exclude independent terminal-only K0423 verdicts, then the
+    # separately labelled solver-trusted exact S5 cache. Neither a gap nor a
+    # cache row alone constitutes a new independent terminal certificate.
     certified = certified_s5_from_k0423(geometry)
     excluded = [(gap, key, certified[key]) for
                 gap, _, key, _, _ in records if key in certified]
     need(excluded == [(14, EXPECTED_TOP, 'LOSS')],
          'K0423 certified verdict collision / excluded frontier changed')
-    remaining = [row for row in records if row[2] not in certified]
+    k0423_remaining = [row for row in records if row[2] not in certified]
+    k0423_missing_frequency = Counter(
+        int(key, 16) for row in k0423_remaining for key in row[4])
+    k0423_legal = sum(row[3] for row in k0423_remaining)
+    k0423_missing = sum(row[0] for row in k0423_remaining)
+    k0423_secured = k0423_legal - k0423_missing
+    need(len(k0423_remaining) == 297 and k0423_remaining[0][0] == 27 and
+         k0423_legal == 26451 and k0423_secured == 651 and
+         k0423_missing == 25800 and
+         len(k0423_missing_frequency) == 25307,
+         'K0423-filtered frontier regression')
+
+    cached = solver_trusted_s5_cache(geometry)
+    for key in certified.keys() & cached.keys():
+        need(certified[key] == cached[key],
+             'terminal-only vs solver-trusted S5 WIN/LOSS conflict')
+    cache_overlap = {row[2] for row in k0423_remaining
+                     if row[2] in cached}
+    need(cache_overlap == EXPECTED_EXACT_OVERLAP and
+         all(cached[key] == 'LOSS' for key in cache_overlap),
+         'S5 exact-cache scheduling exclusion changed')
+    remaining = [row for row in k0423_remaining if row[2] not in cached]
     filtered_missing_frequency = Counter(
         int(key, 16) for row in remaining for key in row[4])
     filtered_legal = sum(row[3] for row in remaining)
     filtered_missing = sum(row[0] for row in remaining)
     filtered_secured = filtered_legal - filtered_missing
-    need(len(remaining) == 297 and remaining[0][0] == 27 and
-         filtered_legal == 26451 and filtered_secured == 651 and
-         filtered_missing == 25800 and
-         len(filtered_missing_frequency) == 25307,
-         'K0423-filtered frontier regression')
+    need(len(remaining) == 293 and remaining[0][0] == 27 and
+         filtered_legal == 26109 and filtered_secured == 643 and
+         filtered_missing == 25466 and
+         len(filtered_missing_frequency) == 24981,
+         'terminal-plus-exact-cache-filtered frontier regression')
+    need(all(row[0] > 0 for row in remaining),
+         'S5 all-child proof must not be inferred from partial coverage')
     return {
         'parent_classes': len(records),
         'legal_s5_to_s6_class_edges': total_legal,
@@ -150,15 +223,26 @@ def enumerate_frontier(geometry, old_roots, *, tamper=False):
             'prior_gap_children_unique_within_298': True,
         },
         'k0423_certified_s5_exclusions': len(excluded),
-        'after_k0423_filter_parent_classes': len(remaining),
-        'after_k0423_filter_legal_edges': filtered_legal,
-        'after_k0423_filter_secured_edges': filtered_secured,
-        'after_k0423_filter_uncovered_edges': filtered_missing,
+        'after_k0423_filter_parent_classes': len(k0423_remaining),
+        'after_k0423_filter_legal_edges': k0423_legal,
+        'after_k0423_filter_secured_edges': k0423_secured,
+        'after_k0423_filter_uncovered_edges': k0423_missing,
         'after_k0423_filter_distinct_uncovered_s6':
+            len(k0423_missing_frequency),
+        'after_k0423_filter_minimum_gap': k0423_remaining[0][0],
+        'solver_trusted_exact_cache_rows': len(cached),
+        'solver_trusted_exact_cache_excluded_s5': sorted(cache_overlap),
+        'solver_trusted_exact_cache_exclusions': len(cache_overlap),
+        'after_both_filters_parent_classes': len(remaining),
+        'after_both_filters_legal_edges': filtered_legal,
+        'after_both_filters_secured_edges': filtered_secured,
+        'after_both_filters_uncovered_edges': filtered_missing,
+        'after_both_filters_distinct_uncovered_s6':
             len(filtered_missing_frequency),
-        'after_k0423_filter_minimum_gap': remaining[0][0],
-        'filter_limit': 'Only K0423 independent S5 verdicts; other known '
-                        'S5 certificates and caches not yet reconciled',
+        'after_both_filters_minimum_gap': remaining[0][0],
+        'filter_limit': 'K0423 independent terminal-only and one pinned '
+                        'solver-trusted exact S5 cache snapshot only; '
+                        'neither gap nor solver cache upgrades a proof',
         'new_s5_win_proofs': 0,
         'two_stone_root_new_closures': 0,
         'empty_board': 'UNKNOWN',
@@ -183,6 +267,12 @@ def main(negative=False):
                 pass
             else:
                 raise ValueError('tampered K0423 S5 receipt accepted')
+            try:
+                solver_trusted_s5_cache(geometry, tamper=True)
+            except ValueError:
+                pass
+            else:
+                raise ValueError('tampered S5 exact cache accepted')
             try:
                 enumerate_frontier(geometry, old_roots, tamper=True)
             except ValueError:
