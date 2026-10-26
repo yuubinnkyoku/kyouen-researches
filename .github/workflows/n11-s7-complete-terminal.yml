@@ -10,6 +10,8 @@ on:
       - 'research/experiments/n11-s9-terminal-neighbor-20261025/verify.py'
       - 'research/experiments/n11-batch-s9-terminal-20261025/verify.py'
       - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
+      - 'research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache'
+      - 'research/experiments/n11-s4-boundary-direct-20261012/output/s5-s6-derived-cache-merge-receipt.json'
   workflow_dispatch:
 
 permissions:
@@ -30,5 +32,5 @@ jobs:
       - name: Independently audit S7 WIN to S6 WIN and S5 witness-edge lift
         run: python3 research/experiments/n11-s7-complete-terminal-20261026/s6_win_lift_audit.py --negative
 
-      - name: Rank proof-only S5 near-closure and independently crosscheck geometry
+      - name: Audit S5 frontier with terminal-only and pinned solver-trusted exclusions
         run: python3 research/experiments/n11-s7-complete-terminal-20261026/s5_proof_only_frontier.py --negative
