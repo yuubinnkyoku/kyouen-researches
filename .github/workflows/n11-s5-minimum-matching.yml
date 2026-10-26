@@ -1,0 +1,25 @@
+name: N11 S5 conditional minimum-edge matching audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s5-minimum-matching.yml'
+      - 'research/experiments/n11-s5-pair-cover-20261026/audit_minimum_matching.js'
+      - 'research/experiments/n11-s5-pair-cover-20261026/verify_minimum_matching.py'
+      - 'research/experiments/n11-s5-pair-cover-20261026/s7-plan14-matching.keys'
+      - 'research/experiments/n11-gap6-terminal-20261019/verify_js.js'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s8_loss_294.txt'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact weighted-matching solver
+        run: python3 -m pip install 'networkx==3.4.2'
+      - name: Independently check geometry, exclusion, minimum matching, and mutations
+        run: python3 research/experiments/n11-s5-pair-cover-20261026/verify_minimum_matching.py --negative
