@@ -9,6 +9,7 @@ on:
       - 'research/experiments/n11-s9-neighbor23-terminal-20261026/verify.py'
       - 'research/experiments/n11-s9-terminal-neighbor-20261025/verify.py'
       - 'research/experiments/n11-batch-s9-terminal-20261025/verify.py'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
   workflow_dispatch:
 
 permissions:
@@ -26,3 +27,5 @@ jobs:
         run: node research/experiments/n11-s7-complete-terminal-20261026/audit.js
       - name: Reject incorrect S7 LOSS to S6 WIN propagation
         run: node research/experiments/n11-s7-complete-terminal-20261026/polarity_audit.js
+      - name: Independently audit S7 WIN to S6 WIN and S5 witness-edge lift
+        run: python3 research/experiments/n11-s7-complete-terminal-20261026/s6_win_lift_audit.py --negative
