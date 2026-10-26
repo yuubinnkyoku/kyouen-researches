@@ -1,0 +1,21 @@
+name: N11 degree-two S9 terminal certificates
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-degree2-terminal.yml'
+      - 'research/experiments/n11-s9-degree2-terminal-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independent terminal proofs, conflict detection, coverage and mutation tests
+        run: node research/experiments/n11-s9-degree2-terminal-20261027/verify.js --negative
