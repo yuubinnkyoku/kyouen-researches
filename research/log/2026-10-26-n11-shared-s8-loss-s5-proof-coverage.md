@@ -32,3 +32,7 @@ node research/experiments/n11-s8-shared-loss-terminal-20261026/audit.js
 最初の検証器は3×3整数行列式と独立した4×4 Bareiss法で、8石LOSSの全9石義務に対する10石LOSS証人を終局まで検証する。今回の監査器はその確定根を前提とした集合演算と合法手列挙であり、終局minimaxの再実行ではない。凍結ラベル、未完探索、pn/dnを新たな勝敗の根拠として使用しない。
 
 5石は後手番なので、6石WINの一つの証人だけでは5石WINにならない。全合法6石子の証明が必要であり、今回の最小残差53類はこの条件を満たさない。**空盤UNKNOWNを維持する。**
+
+## CI確認
+
+追加した監査器の構文を検査し、別経路の整数幾何で77個の8石LOSS根から5石・6石被覆の集計を再計算した。専用GitHub Actionsの[実行40253119759](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40253119759)（監査器変更）と[実行40253142519](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40253142519)（説明追加）はいずれも**Success**。両実行で終局独立検証・負の試験・5石被覆監査を実施した。記録追加自体は証明書の変更ではない。
