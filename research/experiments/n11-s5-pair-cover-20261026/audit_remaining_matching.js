@@ -85,21 +85,27 @@ function audit(negative=false){
  const selected=keys('n11-s5-pair-cover-20261026/s7-plan14-matching.keys');
  function evaluate(plan){
   need(plan.length===14&&new Set(plan).size===14,'invalid plan cardinality');
-  const covered=new Set(),distinct=new Set();
+  const covered=new Set(),distinct=new Set(),unprovedDistinct=new Set(),securedDistinct=new Set();
   let total=0,secured=0,missingEdges=0;
   for(const h of plan){
    need(valid.has(h),'refuted or invalid S7 candidate '+h);
    const row=valid.get(h);
    for(const i of row.covers)covered.add(i);
    total+=row.total;secured+=row.secured;missingEdges+=row.missing;
-   for(const c of children(h))distinct.add(c);
+   for(const c of children(h)){
+    distinct.add(c);
+    if(win.has(c))securedDistinct.add(c);else unprovedDistinct.add(c);
+   }
   }
   need(covered.size===27,'incomplete S6 coverage');
-  return {total,secured,missing:missingEdges,distinct:distinct.size};
+  return {total,secured,missing:missingEdges,distinct:distinct.size,
+   unprovedDistinct:unprovedDistinct.size,securedDistinct:securedDistinct.size};
  }
- const baseline=evaluate(selected);
- need(baseline.total===546&&baseline.distinct===545,
+ const baseline=evaluate(selected),improved=evaluate(optimized);
+ need(baseline.total===546&&baseline.distinct===545&&baseline.missing===541,
   'previous minimum-total plan changed');
+ need(improved.total===548&&improved.secured===12&&improved.missing===536,
+  'minimum remaining-obligation plan changed');
  if(negative){
   for(const bad of [selected.slice(1),
    selected.map((h,i)=>i?h:ROOT),
@@ -116,7 +122,7 @@ function audit(negative=false){
   }).sort((a,b)=>a.i-b.i||a.j-b.j),
   singleOptions:singleOptions.map((row,i)=>({i,s7:row.s7,
    total:row.total,secured:row.secured,missing:row.missing})),
-  baseline,baselineRoots:selected,emptyBoard:'UNKNOWN',
+  baseline,baselineRoots:selected,improved,improvedRoots:optimized,emptyBoard:'UNKNOWN',
   trust:'Terminal-proved S8 WIN only; S8 LOSS is exclusion only; candidate S7 verdicts UNKNOWN.'};
 }
 if(require.main===module)console.log(JSON.stringify(audit(process.argv.includes('--negative'))));
