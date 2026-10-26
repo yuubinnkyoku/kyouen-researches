@@ -1,0 +1,21 @@
+name: N11 short degree-two S9 terminal certificates
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-degree2-short-terminal.yml'
+      - 'research/experiments/n11-s9-degree2-short-terminal-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently prove terminal leaves and audit WIN/LOSS conflicts
+        run: node research/experiments/n11-s9-degree2-short-terminal-20261027/verify.js --negative
