@@ -163,4 +163,4 @@ function audit(negative=false){
   trust:'Terminal-proved S8 WIN only; S8 LOSS is exclusion only; candidate S7 verdicts UNKNOWN.'};
 }
 if(require.main===module)console.log(JSON.stringify(audit(process.argv.includes('--negative'))));
-module.exports={audit};
+module.exports={audit,inventory};
