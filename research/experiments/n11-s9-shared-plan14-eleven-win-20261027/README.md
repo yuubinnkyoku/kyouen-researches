@@ -14,3 +14,7 @@ node research/experiments/n11-s9-shared-plan14-eleven-win-20261027/audit_coverag
 ```
 
 新規7石・5石勝敗証明0件、二石root閉鎖0件。14根は条件付き証明計画のままで、**11×11空盤UNKNOWN**。
+
+## 既存証明との重複除去とCI
+
+独立終局証明・改変拒否・証明限定集合との照合が[専用CI 40375896300](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40375896300)で成功。9石WIN11類の8石親96類中、既存WINとの重複2類を除き**新規8石WIN94類**。14根計画内の38類中2類が既に証明済みで、**新規確保36辺**。証明済み辺32→68、未証明辺516→**480**。WIN/LOSS衝突0。
