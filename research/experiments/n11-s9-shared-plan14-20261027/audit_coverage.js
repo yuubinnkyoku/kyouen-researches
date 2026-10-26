@@ -57,6 +57,9 @@ function audit(negative=false){
        'no secured-coverage improvement or overlap regression');
   const newlyProved=[...derived].filter(h=>!before.has(h));
   const newlyPlan=[...planHit].filter(h=>!before.has(h));
+  need(newlyProved.length===44&&newlyPlan.length===19&&
+       after.size===2221&&now.secured===32&&now.missing===516&&
+       now.distinctMissing===516,'post-proof coverage regression');
   need(now.secured-old.secured===newlyPlan.length,
        'newly secured edge count mismatch');
   if(negative){
