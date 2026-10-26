@@ -24,6 +24,37 @@ const keys=p=>read(p).trim().split(/\s+/);
 const children=h=>g.children(BigInt('0x'+h));
 const reverse=a=>g.reverse(a);
 const same=(a,b)=>a.size===b.size&&[...a].every(x=>b.has(x));
+function bareiss4(pp){
+ const m=pp.map(p=>{const x=p%11,y=Math.floor(p/11);return [x,y,x*x+y*y,1];});
+ let sign=1,prev=1;
+ for(let k=0;k<3;k++){
+  if(!m[k][k]){
+   let j=k+1;while(j<4&&!m[j][k])j++;
+   if(j===4)return 0;
+   [m[k],m[j]]=[m[j],m[k]];sign=-sign;
+  }
+  const pivot=m[k][k];
+  for(let i=k+1;i<4;i++)for(let j=k+1;j<4;j++){
+   const v=m[i][j]*pivot-m[i][k]*m[k][j];
+   need(v%prev===0,'non-exact independent Bareiss division');
+   m[i][j]=v/prev;
+  }
+  for(let i=k+1;i<4;i++)m[i][k]=0;
+  prev=pivot;
+ }
+ return sign*m[3][3];
+}
+function independentChildren(h){
+ const b=BigInt('0x'+h),pp=g.pts(b),tri=[],out=new Set();
+ for(let i=0;i<pp.length;i++)for(let j=i+1;j<pp.length;j++)
+  for(let k=j+1;k<pp.length;k++)tri.push([pp[i],pp[j],pp[k]]);
+ for(let p=0;p<121;p++){
+  if((b>>BigInt(p))&1n)continue;
+  if(!tri.some(t=>bareiss4([...t,p])===0))
+   out.add(g.key(g.canonical(b|(1n<<BigInt(p)))));
+ }
+ return out;
+}
 function inventory(){
  const raw=read('n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt');
  need(crypto.createHash('sha256').update(raw).digest('hex')===FROZEN_SHA,'S7 frozen provenance changed');
@@ -105,8 +136,12 @@ function audit(negative=false){
  const baseline=evaluate(selected),improved=evaluate(optimized);
  need(baseline.total===546&&baseline.distinct===545&&baseline.missing===541,
   'previous minimum-total plan changed');
- need(improved.total===548&&improved.secured===12&&improved.missing===536,
+ need(improved.total===548&&improved.secured===12&&improved.missing===536&&
+  improved.unprovedDistinct===536&&baseline.unprovedDistinct===540,
   'minimum remaining-obligation plan changed');
+ for(const h of [ROOT,...missing,...optimized])
+  need(same(children(h),independentChildren(h)),
+   '3x3 vs independent 4x4 geometry disagreement: '+h);
  if(negative){
   for(const bad of [selected.slice(1),
    selected.map((h,i)=>i?h:ROOT),
@@ -123,7 +158,8 @@ function audit(negative=false){
   }).sort((a,b)=>a.i-b.i||a.j-b.j),
   singleOptions:singleOptions.map((row,i)=>({i,s7:row.s7,
    total:row.total,secured:row.secured,missing:row.missing})),
-  baseline,baselineRoots:selected,improved,improvedRoots:optimized,emptyBoard:'UNKNOWN',
+  baseline,baselineRoots:selected,improved,improvedRoots:optimized,
+  independentlyCheckedGeometry:1+missing.length+optimized.length,emptyBoard:'UNKNOWN',
   trust:'Terminal-proved S8 WIN only; S8 LOSS is exclusion only; candidate S7 verdicts UNKNOWN.'};
 }
 if(require.main===module)console.log(JSON.stringify(audit(process.argv.includes('--negative'))));
