@@ -124,7 +124,9 @@ function audit(){
    'new S8 LOSS did not refute the expected two S7 WIN targets');
  const refutedNear=near7.filter(row=>all7.has(row.s7));
  const actionableNear=near7.filter(row=>!all7.has(row.s7));
- need(refutedNear.length>=2&&actionableNear.length>0,
+ need(refutedNear.length===4&&actionableNear.length===1&&
+   actionableNear[0].s7==='00000000000100001000000042401008'&&
+   actionableNear[0].uncovered===21,
    'S7 near frontier pruning regression');
  const knownLoss8=new Set([...old8,ROOT]);
  const frequencies=new Map();
@@ -141,7 +143,8 @@ function audit(){
    b[1].length-a[1].length||a[0].localeCompare(b[0]))
    .slice(0,15).map(([s8,parents])=>({s8,nearS7Parents:parents.length,
      parents:parents.sort()}));
- need(nextS8Targets.length>0&&
+ need(nextS8Targets.length===15&&
+   nextS8Targets[0].s8==='00000000000100001000000042401088'&&
    nextS8Targets.every(row=>!knownLoss8.has(row.s8)),
    'proven S8 LOSS leaked into actionable S7 worklist');
  const s7ProofOnlyWorklist={
