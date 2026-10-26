@@ -20,8 +20,10 @@ def verify(negative=False):
     cmd = ['node', str(HERE / 'audit_remaining_matching.js')]
     if negative:
         cmd.append('--negative')
-    report = json.loads(subprocess.run(cmd, capture_output=True, text=True,
-                                       check=True).stdout)
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode:
+        raise RuntimeError(f'JavaScript audit failed: {proc.stderr}\\n{proc.stdout}')
+    report = json.loads(proc.stdout)
     assert report['schema'] == 'n11-s5-remaining-proof-only-matching-v1'
     assert len(report['missingS6']) == 27
     assert report['candidates'] == 853
