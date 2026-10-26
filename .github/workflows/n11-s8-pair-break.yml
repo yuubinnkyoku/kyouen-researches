@@ -1,4 +1,4 @@
-name: N11 S8 pair-break LOSS and 13-root replan
+name: N11 S8 pair-break LOSS and 14-root replan
 
 on:
   push:
@@ -20,5 +20,5 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Independently verify S8 LOSS, exact 17-leaf lower bound, and S5 replan
+      - name: Independently verify S8 LOSS, exact 17-leaf lower bound, and corrected S7 replan
         run: python3 research/experiments/n11-s8-pair-break-20261026/verify.py --negative --optimality
