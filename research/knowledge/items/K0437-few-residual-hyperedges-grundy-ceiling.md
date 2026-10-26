@@ -81,3 +81,12 @@ evidence: '2026-10-21監査。署名交換による子局面同型、空署名�
 辺追加三操作による全称的有限帰着と完全同型判定に基づく。C++の残存集合mexと占有集合mexが11辺まで全件一致し、Pythonによる独立生成・占有集合mexは10辺まで一致した。**11辺の同型類生成自体は独立実装で未照合**。整数格子での実現や11×11の探索速度改善は未確認。
 
 [全度数表・証人・証明](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/README.md)／[残存集合検証器](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/verify_graph_cpp.cpp)／[占有集合検証器](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/verify_occupied_cpp.cpp)／[Python独立検証器](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/verify_graph_python.py)。
+
+
+## 森をなす二点残余辺12本以下（2026-10-27）
+
+**計算機援用の全称定理：** 極小残余禁止辺がすべて二点集合で、対応する競合グラフが森、辺数が12以下なら、自由点を任意個許しても **g≤7**。12辺・13頂点の非同型木1,301種類のうち9種類で **g=7**。**連結な木でg=7を達成する最小辺数は12**（11辺以下の木では最大6）。12辺の森全体も上界7が鋭い。
+
+任意の木は葉を一つ除去して帰納的に全生成できる。全根付き括弧符号の最小値による完全同型判定、二つの独立なGrundy再帰、さらに別の木生成器による12辺までの全件照合を実施。森の全称帰着は連結木のxor分解による。これは**抽象的な森に限る**計算機援用証明で、閉路を持つ12辺グラフや標準整数格子での実現は未確認。
+
+[証明・度数表・12辺証人](../../experiments/game-structure/rank2-forest-twelve-edge-20261027/README.md)／[標準ライブラリ検証器](../../experiments/game-structure/rank2-forest-twelve-edge-20261027/verify_trees.py)／[別生成器の独立照合](../../experiments/game-structure/rank2-forest-twelve-edge-20261027/verify_networkx.py)。
