@@ -36,6 +36,9 @@ function audit(){
  const old6=g.reverse(old7),all6=g.reverse(all7),new6=g.reverse(fresh7);
  need(old6.size===1710&&[...old6].every(h=>all6.has(h)),
    'previous S6 WIN reverse coverage changed');
+ need(fresh7.size===8&&all7.size===562&&new6.size===28&&
+   all6.size===1737&&all6.size-old6.size===27,
+   'new S7 LOSS / S6 WIN proof-only union regression');
  for(const h of new6){
    const b=g.board(h,6);
    need([...g.children(b)].some(c=>fresh7.has(c)),
