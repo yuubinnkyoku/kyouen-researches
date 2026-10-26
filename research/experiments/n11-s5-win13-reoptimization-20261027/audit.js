@@ -44,6 +44,21 @@ function audit(negative=false){
   need(excluded===67&&valid.size===786&&pair.size===343&&single.every(Boolean),
        'candidate census changed');
   need(changed>=1&&changed<=3,'unexpected affected valid candidates');
+  // A single new WIN8 can reduce any pair/single option by at most one.
+  // Compare the whole matching instance, not only the saved plan.
+  const oldPairs=new Map(previous.pairOptions.map(r=>[keyOf(r.i,r.j),r.missing]));
+  let reducedPairs=0,reducedSingles=0;
+  for(const [id,row] of pair){
+    need(oldPairs.has(id),'new pair edge appeared');
+    const delta=oldPairs.get(id)-row.cost;
+    need(delta===0||delta===1,'pair cost changed by more than one: '+id);
+    if(delta===1)reducedPairs++;
+  }
+  for(let i=0;i<27;i++){
+    const delta=previous.singleOptions[i].missing-single[i].cost;
+    need(delta===0||delta===1,'single cost changed by more than one: '+i);
+    if(delta===1)reducedSingles++;
+  }
   const plan=fs.readFileSync(path.join(__dirname,
     '../n11-s5-pair-cover-20261026/s7-plan14-remaining.keys'),'ascii')
     .trim().split(/\s+/);
@@ -83,6 +98,7 @@ function audit(negative=false){
     oldKnownWin8:win.size,newKnownWin8:newWin.size,knownLoss8:loss.size,
     s7Candidates:by7.size,excluded,allowed:valid.size,
     affectedS7Parents:candidateParents,affectedValidCandidates:changed,
+    reducedPairOptionCosts:reducedPairs,reducedSingleOptionCosts:reducedSingles,
     pairOptions:[...pair].map(([id,r])=>{
       const [i,j]=id.split(':').map(Number);
       return {i,j,s7:r.s7,total:r.total,secured:r.secured,cost:r.cost};
