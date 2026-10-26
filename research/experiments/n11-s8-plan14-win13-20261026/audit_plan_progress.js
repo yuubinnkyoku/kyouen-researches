@@ -28,7 +28,7 @@ function audit(negative=false){
  for(const h of plan)for(const c of children(h))if(!now.has(c))allMissing.add(c);
  need(remaining===535&&allMissing.size===535,'new secured coverage regression');
  if(negative){
-  for(const tampered of [plan.slice(1),plan.map((h,i)=>i?h:S8)]){
+  for(const tampered of [plan.filter(h=>h!==S7),plan.map(h=>h===S7?S8:h)]){
    let rejected=false;
    try{
     need(tampered.length===14&&tampered.every(h=>h.length===32),
