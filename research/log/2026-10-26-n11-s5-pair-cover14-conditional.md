@@ -11,3 +11,7 @@
 `research/experiments/n11-s5-pair-cover-20261026/audit.js` を作成。凍結17根のSHA-256、7石→6石証人集合、5石→6石合法子、27類→7石合法子、組の重複、14根による完全被覆を検査。3×3行列式と別実装4×4行列式で5石根・27個の6石子・14個の7石子の合法子集合を照合し、証明候補削除・不正被覆・合法子数改変を拒否する負例試験を追加。手元の同一コードと再現入力によるNode.js実行はPASS。専用の短時間CI `.github/workflows/n11-s5-pair-cover.yml` をmainに追加した。
 
 **勝敗証明の純増は0件、5石WIN/LOSS新規閉鎖0件、二石root新規閉鎖0件。標準11×11空盤UNKNOWN。** 次の研究では14根のWIN成立可能性を既存8石WIN/LOSS証拠で調べ、全子WINを要する7石のAND条件を保って候補を絞る。既知6石LOSSがあれば5石LOSS証人を優先する。
+
+## 専用CI追試
+
+[実行40291120915](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40291120915) は監査器・README・専用workflowを含むmainコミット `c313ffd0dba8026667e4aed071dd8ac202bb11be` に対して **success**。27子・853候補・621二重被覆・346組・14根・585辺・584相異類、4×4独立幾何照合、3種の改変拒否が通過した。CIは勝敗を終局まで再探索するものではない。
