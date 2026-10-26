@@ -164,6 +164,12 @@ def lift_and_replan():
         need(all(sum(p in SOURCE.children(geom, s6) for s6 in missing) <= 2
                  for p in proposed), 'unexpected >2-way witness')
         all8 = [SOURCE.children(geom, p) for p in proposed]
+        frozen_loss8 = {int(h, 16) for h in (EXP /
+            'n11-targeted-terminal-lift-20261015/data/all_s8_loss_294.txt')
+            .read_text('ascii').split()}
+        need(len(frozen_loss8) == 294 and
+             all(not (children & frozen_loss8) for children in all8),
+             'proposed S7 WIN has frozen S8 LOSS child')
         need(sum(map(len, all8)) == 558 and
              len(set().union(*all8)) == 558,
              'S7->S8 conditional plan boundary changed')
