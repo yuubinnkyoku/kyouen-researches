@@ -1,0 +1,24 @@
+name: N11 S8 pair-break LOSS and 13-root replan
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s8-pair-break.yml'
+      - 'research/experiments/n11-s8-pair-break-20261026/**'
+      - 'research/experiments/n11-s9-neighbor23-terminal-20261026/verify.py'
+      - 'research/experiments/n11-s9-terminal-neighbor-20261025/verify.py'
+      - 'research/experiments/n11-batch-s9-terminal-20261025/verify.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently verify S8 LOSS, exact 17-leaf lower bound, and S5 replan
+        run: python3 research/experiments/n11-s8-pair-break-20261026/verify.py --negative --optimality
