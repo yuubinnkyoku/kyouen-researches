@@ -1,0 +1,22 @@
+name: N11 S5 post-WIN13 exact conditional matching
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s5-post-win13-matching.yml'
+      - 'research/experiments/n11-s5-win13-reoptimization-20261027/**'
+      - 'research/experiments/n11-s5-pair-cover-20261026/audit_remaining_matching.js'
+      - 'research/experiments/n11-s8-plan14-win13-20261026/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact weighted matching solver
+        run: python3 -m pip install 'networkx==3.4.2'
+      - name: Verify terminal WIN13 and recompute minimum remaining obligations
+        run: python3 research/experiments/n11-s5-win13-reoptimization-20261027/verify.py --negative
