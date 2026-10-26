@@ -29,3 +29,6 @@ jobs:
         run: node research/experiments/n11-s7-complete-terminal-20261026/polarity_audit.js
       - name: Independently audit S7 WIN to S6 WIN and S5 witness-edge lift
         run: python3 research/experiments/n11-s7-complete-terminal-20261026/s6_win_lift_audit.py --negative
+
+      - name: Rank proof-only S5 near-closure and independently crosscheck geometry
+        run: python3 research/experiments/n11-s7-complete-terminal-20261026/s5_proof_only_frontier.py --negative
