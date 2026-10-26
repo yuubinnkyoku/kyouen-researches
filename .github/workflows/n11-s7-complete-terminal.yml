@@ -1,0 +1,26 @@
+name: N11 S7 complete terminal WIN certificate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s7-complete-terminal.yml'
+      - 'research/experiments/n11-s7-complete-terminal-20261026/**'
+      - 'research/experiments/n11-s9-neighbor23-terminal-20261026/verify.py'
+      - 'research/experiments/n11-s9-terminal-neighbor-20261025/verify.py'
+      - 'research/experiments/n11-batch-s9-terminal-20261025/verify.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify full S7 AND/OR certificate using independent terminal solvers
+        run: python3 research/experiments/n11-s7-complete-terminal-20261026/verify.py --negative
+      - name: Audit historical 21 gaps and certified LOSS conflicts
+        run: node research/experiments/n11-s7-complete-terminal-20261026/audit.js
