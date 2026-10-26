@@ -34,6 +34,70 @@ function audit(){
    need(g.children(b).has(ROOT),'S7 parent lacks legal S8 LOSS witness');
  }
  const old6=g.reverse(old7),all6=g.reverse(all7),new6=g.reverse(fresh7);
+ const fresh6=new Set([...all6].filter(h=>!old6.has(h)));
+ // A certified S6 WIN witnesses one secured S5 -> S6 edge. S5 WIN
+ // would require ALL legal S6 children to be WIN: partial coverage is
+ // never promoted to a verdict.
+ const old5=g.reverse(old6),all5=g.reverse(all6),affected5=g.reverse(fresh6);
+ const reverseEdges=roots=>{
+   const edges=new Set();
+   for(const h of roots){
+     const b=g.board(h,6);
+     for(const p of g.pts(b)){
+       const parent=g.key(g.canonical(b^(1n<<BigInt(p))));
+       edges.add(parent+':'+h);
+     }
+   }
+   return edges;
+ };
+ const oldEdges=reverseEdges(old6),allEdges=reverseEdges(all6);
+ need(old5.size===2896&&all5.size===2946&&affected5.size===56&&
+   fresh6.size===27&&oldEdges.size===10260&&allEdges.size===10422&&
+   [...oldEdges].every(e=>allEdges.has(e))&&
+   allEdges.size-oldEdges.size===162,
+   'S5 reverse proof-only coverage regression');
+ // Forward legal-move enumeration must match the independent
+ // reverse-deletion edge census on the newly affected S5 positions.
+ const forwardEdges=new Set(),s5Frontier=[];
+ let affectedLegal=0,affectedSecured=0,affectedRawSecured=0;
+ for(const h of affected5){
+   const b=g.board(h,5),classes=g.children(b);
+   const secured=[...classes].filter(c=>all6.has(c));
+   affectedLegal+=classes.size;
+   affectedSecured+=secured.length;
+   for(const c of secured)forwardEdges.add(h+':'+c);
+   for(const p of g.legal(b)){
+     const c=g.key(g.canonical(b|(1n<<BigInt(p))));
+     if(all6.has(c))affectedRawSecured++;
+   }
+   s5Frontier.push({s5:h,legal:classes.size,secured:secured.length,
+     uncovered:classes.size-secured.length});
+ }
+ s5Frontier.sort((a,b)=>a.uncovered-b.uncovered||
+   b.secured-a.secured||a.s5.localeCompare(b.s5));
+ const reverseAffected=new Set([...allEdges].filter(e=>affected5.has(e.slice(0,32))));
+ need(affectedLegal===5328&&affectedSecured===271&&
+   affectedRawSecured===271&&forwardEdges.size===271&&
+   forwardEdges.size===reverseAffected.size&&
+   [...forwardEdges].every(e=>reverseAffected.has(e))&&
+   s5Frontier[0].s5==='00000000000100001000000042001000'&&
+   s5Frontier[0].uncovered===53&&
+   !s5Frontier.some(row=>row.uncovered===0),
+   'S5 forward/reverse coverage or near-closure regression');
+ // Recompute the full S6 universal boundary. One already certified S6
+ // LOSS remains closed; the new S6 WIN roots are existential witnesses.
+ let s6Legal=0,s6Secured=0;
+ const closed6=[];
+ for(const h of all6){
+   const children=g.children(g.board(h,6));
+   const secured=[...children].filter(c=>all7.has(c)).length;
+   s6Legal+=children.size;s6Secured+=secured;
+   if(secured===children.size)closed6.push(h);
+ }
+ need(s6Legal===134640&&s6Secured===3934&&
+   closed6.length===1&&
+   closed6[0]==='00000000040004001004000004010000',
+   'S6 full-child proof-only coverage regression');
  need(old6.size===1710&&[...old6].every(h=>all6.has(h)),
    'previous S6 WIN reverse coverage changed');
  need(fresh7.size===8&&all7.size===562&&new6.size===28&&
@@ -51,6 +115,19 @@ function audit(){
    previousS6Win:old6.size,affectedS6Win:new6.size,
    addedS6Win:all6.size-old6.size,totalS6Win:all6.size,
    s7LossParents:[...new7].sort(),newS6WinParents:[...all6].filter(h=>!old6.has(h)).sort(),
+   previousS5Parents:old5.size,addedS5Parents:all5.size-old5.size,
+   totalS5Parents:all5.size,affectedS5Parents:affected5.size,
+   previousSecuredS5ClassEdges:oldEdges.size,
+   addedSecuredS5ClassEdges:allEdges.size-oldEdges.size,
+   securedS5ClassEdges:allEdges.size,
+   affectedS5LegalClasses:affectedLegal,
+   affectedS5SecuredClasses:affectedSecured,
+   affectedS5SecuredRawMoves:affectedRawSecured,
+   closestAffectedS5:s5Frontier.slice(0,5),
+   newlyClosedS5:0,previousS6LegalClasses:132573,
+   totalS6LegalClasses:s6Legal,previousSecuredS6Classes:3878,
+   securedS6Classes:s6Secured,addedSecuredS6Classes:s6Secured-3878,
+   closedS6:closed6.sort(),newlyClosedS6:0,
    frozenConflicts:0,emptyBoard:'UNKNOWN'};
 }
 module.exports={audit};
