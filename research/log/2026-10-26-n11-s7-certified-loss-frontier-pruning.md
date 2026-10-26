@@ -31,6 +31,6 @@ python3 research/experiments/n11-s8-shared-loss-terminal-20261026/verify.py --ne
 node research/experiments/n11-s8-shared-loss-terminal-20261026/audit.js
 ```
 
-初回の新しい候補選別を含む[専用CI 40257632376](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40257632376)で、終局独立検証と統合監査が**Success**。そのログから4類除外・1類残存・残差21類を確認した。厳密な数値回帰を固定した後のCIは記録作成時点では未確認。
+初回の新しい候補選別を含む[専用CI 40257632376](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40257632376)で、終局独立検証と統合監査が**Success**。そのログから4類除外・1類残存・残差21類を確認した。さらに4類除外・1類残存・残差21類・次候補鍵を回帰条件に固定した[専用CI 40257709109](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40257709109)も**Success**。終局独立検証・負の試験・証明限定監査が固定後にも成功した。
 
 この改善は**既知LOSSを無視した無駄なWIN探索候補を5類から1類に削減**したもの。新しい7石・二石rootの勝敗証明を増やしたわけではない。標準11×11空盤は**UNKNOWN**。
