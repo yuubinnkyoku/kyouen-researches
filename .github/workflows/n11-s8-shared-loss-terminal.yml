@@ -22,3 +22,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Verify all S9 refutations with two independent integer geometries
         run: python3 research/experiments/n11-s8-shared-loss-terminal-20261026/verify.py --negative
+      - name: Audit S8 LOSS reverse propagation and cache conflicts
+        run: node research/experiments/n11-s8-shared-loss-terminal-20261026/audit.js
