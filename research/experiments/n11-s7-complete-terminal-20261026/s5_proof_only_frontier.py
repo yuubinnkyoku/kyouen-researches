@@ -8,6 +8,7 @@ Run verify.py --negative before treating the new S7 root as terminal-proved.
 import argparse
 from collections import Counter
 import json
+from pathlib import Path
 
 import s6_win_lift_audit as lift
 
@@ -28,6 +29,44 @@ EXPECTED_MISSING = (
     '00000000000101001001010020000000',
     '00000000000101001001014000000000',
 )
+
+# Existing independent terminal-only S5 certificates (K0423). A proof-only
+# S6-WIN coverage gap is NOT an undecided S5 verdict.
+K0423_PILOTS = (
+    (558600, (40, 48, 60, 72, 80), 2,
+     'bbe374db319d9aeb95bbe540fbcae13005b5fa9351215a5ae1e732b87c553bce',
+     270545, 426376, 28813),
+    (209644, (49, 55, 60, 65, 71), 1,
+     'e89bb8010597058607699590f0e30a9ad817012971c3265614c0ba09d70b08a4',
+     349157, 518252, 50131),
+)
+
+
+def certified_s5_from_k0423(geometry, *, tamper=False):
+    base = (Path(__file__).resolve().parent.parent /
+            'n11-s5-s6-quotient-20261013' / 'output')
+    known = {}
+    for index, points, verdict, certificate_sha, nodes, edges, terminals in K0423_PILOTS:
+        receipt = json.loads(
+            (base / f'pilot-{index}-terminal-verification.json').read_text(
+                encoding='utf-8'))
+        if tamper and index == 558600:
+            receipt['verdict'] = 1
+        board = sum(1 << p for p in points)
+        need(int(receipt['root_mask']) == board and
+             receipt['s5_index'] == index and
+             receipt['verdict'] == verdict and
+             receipt['trusted_leaves'] == 0 and
+             receipt['certificate_sha256'] == certificate_sha and
+             (receipt['nodes'], receipt['edges'], receipt['terminal_nodes'])
+             == (nodes, edges, terminals),
+             'K0423 terminal certificate receipt mismatch')
+        need(board.bit_count() == 5 and geometry.safe(board) and
+             geometry.canonical(board) == board,
+             'K0423 S5 root is not canonical and safe')
+        known[f'{board:032x}'] = 'WIN' if verdict == 1 else 'LOSS'
+    need(len(known) == 2, 'K0423 certified S5 roots duplicated')
+    return known
 
 
 def need(ok, message):
@@ -70,6 +109,25 @@ def enumerate_frontier(geometry, old_roots, *, tamper=False):
          'S5 near-closure priority regression')
     need(all(row[0] > 0 for row in records),
          'S5 all-child proof must not be inferred from partial coverage')
+
+    # The original 14-gap "best" root is already independently proved
+    # original-first LOSS in K0423. Exclude it BEFORE scheduling work.
+    certified = certified_s5_from_k0423(geometry)
+    excluded = [(gap, key, certified[key]) for
+                gap, _, key, _, _ in records if key in certified]
+    need(excluded == [(14, EXPECTED_TOP, 'LOSS')],
+         'K0423 certified verdict collision / excluded frontier changed')
+    remaining = [row for row in records if row[2] not in certified]
+    filtered_missing_frequency = Counter(
+        int(key, 16) for row in remaining for key in row[4])
+    filtered_legal = sum(row[3] for row in remaining)
+    filtered_missing = sum(row[0] for row in remaining)
+    filtered_secured = filtered_legal - filtered_missing
+    need(len(remaining) == 297 and remaining[0][0] == 27 and
+         filtered_legal == 26451 and filtered_secured == 651 and
+         filtered_missing == 25800 and
+         len(filtered_missing_frequency) == 25307,
+         'K0423-filtered frontier regression')
     return {
         'parent_classes': len(records),
         'legal_s5_to_s6_class_edges': total_legal,
@@ -82,9 +140,25 @@ def enumerate_frontier(geometry, old_roots, *, tamper=False):
              'uncovered_s6': gap,
              'missing_s6': list(missing) if i == 0 else []}
             for i, (gap, neg_secured, key, legal, missing)
-            in enumerate(records[:5])
+            in enumerate(remaining[:5])
         ],
-        'top_missing_s6_shared_with_other_297_parents': 0,
+        'excluded_original_top': {
+            's5': EXPECTED_TOP, 'verdict': 'LOSS',
+            'prior_proof_only_gap': 14,
+            'certificate': 'K0423 / pilot-558600-terminal-dag.json.gz',
+            'trusted_leaves': 0,
+            'prior_gap_children_unique_within_298': True,
+        },
+        'k0423_certified_s5_exclusions': len(excluded),
+        'after_k0423_filter_parent_classes': len(remaining),
+        'after_k0423_filter_legal_edges': filtered_legal,
+        'after_k0423_filter_secured_edges': filtered_secured,
+        'after_k0423_filter_uncovered_edges': filtered_missing,
+        'after_k0423_filter_distinct_uncovered_s6':
+            len(filtered_missing_frequency),
+        'after_k0423_filter_minimum_gap': remaining[0][0],
+        'filter_limit': 'Only K0423 independent S5 verdicts; other known '
+                        'S5 certificates and caches not yet reconciled',
         'new_s5_win_proofs': 0,
         'two_stone_root_new_closures': 0,
         'empty_board': 'UNKNOWN',
@@ -103,6 +177,12 @@ def main(negative=False):
          '3x3 determinant / independent 4x4 Bareiss frontier mismatch')
     if negative:
         for geometry in proof.GEOMETRIES:
+            try:
+                certified_s5_from_k0423(geometry, tamper=True)
+            except ValueError:
+                pass
+            else:
+                raise ValueError('tampered K0423 S5 receipt accepted')
             try:
                 enumerate_frontier(geometry, old_roots, tamper=True)
             except ValueError:
