@@ -1,0 +1,24 @@
+name: N11 S8 shared LOSS terminal certificate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s8-shared-loss-terminal.yml'
+      - 'research/experiments/n11-s8-shared-loss-terminal-20261026/**'
+      - 'research/experiments/n11-s9-neighbor23-terminal-20261026/verify.py'
+      - 'research/experiments/n11-s9-terminal-neighbor-20261025/verify.py'
+      - 'research/experiments/n11-batch-s9-terminal-20261025/verify.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify all S9 refutations with two independent integer geometries
+        run: python3 research/experiments/n11-s8-shared-loss-terminal-20261026/verify.py --negative
