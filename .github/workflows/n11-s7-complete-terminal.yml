@@ -24,3 +24,5 @@ jobs:
         run: python3 research/experiments/n11-s7-complete-terminal-20261026/verify.py --negative
       - name: Audit historical 21 gaps and certified LOSS conflicts
         run: node research/experiments/n11-s7-complete-terminal-20261026/audit.js
+      - name: Reject incorrect S7 LOSS to S6 WIN propagation
+        run: node research/experiments/n11-s7-complete-terminal-20261026/polarity_audit.js
