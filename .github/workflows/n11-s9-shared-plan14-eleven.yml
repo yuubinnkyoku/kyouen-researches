@@ -1,0 +1,20 @@
+name: N11 eleven shared S9 terminal WIN certificates
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-shared-plan14-eleven.yml'
+      - 'research/experiments/n11-s9-shared-plan14-eleven-win-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent 3x3 and 4x4 full-terminal proof and mutation rejection
+        run: python3 research/experiments/n11-s9-shared-plan14-eleven-win-20261027/verify.py --negative
+      - name: Existing-proof overlap and WIN-LOSS conflict audit
+        run: node research/experiments/n11-s9-shared-plan14-eleven-win-20261027/audit_coverage.js --negative
