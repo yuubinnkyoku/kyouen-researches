@@ -1,0 +1,18 @@
+name: N11 shared S9 terminal WIN and plan14 coverage
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-shared-plan14.yml'
+      - 'research/experiments/n11-s9-shared-plan14-20261027/**'
+  workflow_dispatch:
+jobs:
+  terminal-and-coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent 3x3 and 4x4 terminal verification and mutation rejection
+        run: python3 research/experiments/n11-s9-shared-plan14-20261027/verify.py --negative
+      - name: Proof-only coverage and WIN-LOSS conflict audit
+        run: node research/experiments/n11-s9-shared-plan14-20261027/audit_coverage.js --negative
