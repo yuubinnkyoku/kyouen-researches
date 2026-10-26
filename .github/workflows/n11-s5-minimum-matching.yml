@@ -6,6 +6,8 @@ on:
       - '.github/workflows/n11-s5-minimum-matching.yml'
       - 'research/experiments/n11-s5-pair-cover-20261026/audit_minimum_matching.js'
       - 'research/experiments/n11-s5-pair-cover-20261026/verify_minimum_matching.py'
+      - 'research/experiments/n11-s5-pair-cover-20261026/audit_remaining_matching.js'
+      - 'research/experiments/n11-s5-pair-cover-20261026/verify_remaining_matching.py'
       - 'research/experiments/n11-s5-pair-cover-20261026/s7-plan14-matching.keys'
       - 'research/experiments/n11-gap6-terminal-20261019/verify_js.js'
       - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
@@ -23,3 +25,5 @@ jobs:
         run: python3 -m pip install 'networkx==3.4.2'
       - name: Independently check geometry, exclusion, minimum matching, and mutations
         run: python3 research/experiments/n11-s5-pair-cover-20261026/verify_minimum_matching.py --negative
+      - name: Optimize remaining terminal-proved WIN coverage (no new verdicts)
+        run: python3 research/experiments/n11-s5-pair-cover-20261026/verify_remaining_matching.py --negative
