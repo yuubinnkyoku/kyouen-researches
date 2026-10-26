@@ -6,6 +6,6 @@
 
 既存の証明限定8石WIN2,176類とLOSS除外338類を再利用し、WIN13を追加。853候補の合法8石子を列挙、LOSSで67候補を除外、残り786候補の343組＋27単独の費用を再構築した。28頂点の最小重み完全対応を独立に計算した結果、**厳密最小535辺**。保存済み14根（全合法548辺、確保済み13辺、未証明535辺）がこの最小値を達成し、計画の変更は不要と分かった。
 
-新規の `research/experiments/n11-s5-win13-reoptimization-20261027/` に再現用Node.js監査・Python最小重み完全対応・独立終局検証の連結・改変拒否試験を追加。初回の専用CI [40346072121](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40346072121) は成功。追加の全343組・27単独の費用差分監査と最小値535の固定回帰は追補CIで検証する。
+新規の `research/experiments/n11-s5-win13-reoptimization-20261027/` に再現用Node.js監査・Python最小重み完全対応・独立終局検証の連結・改変拒否試験を追加。初回の専用CI [40346072121](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40346072121) は成功。追加の全343組・27単独の費用差分監査と最小値535の固定回帰も、最終の専用CI [40346461995](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40346461995) で**success**を確認した。
 
 新規勝敗証明0件、7石WIN閉鎖0件、5石閉鎖0件、二石root閉鎖0件。成果は**証明済み8石WINを取り込んだ後の条件付き証明義務の最小性確定**であり、計算時間の実測改善ではない。標準11×11空盤は引き続き**UNKNOWN**。
