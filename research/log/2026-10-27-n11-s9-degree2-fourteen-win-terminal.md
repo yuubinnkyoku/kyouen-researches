@@ -7,3 +7,6 @@
 各9石WINの合法8石親を逆向きに再計算し、既存の証明限定WIN・LOSS集合と突き合わせる。前回の480辺は固定計画の未証明義務数であり、今回の削減幅は `verify.js` の結果で確定させる。14根の7石WIN・5石・二石rootは新規閉鎖なし。**標準11×11空盤UNKNOWN**。
 
 再現：`research/experiments/n11-s9-degree2-terminal-20261027/`。
+
+
+専用CI [40394323773](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40394323773) 成功。9石WIN14類→8石WIN124類、うち新規証明118類、証明限定8石WIN2,315→2,433類。固定14根で26類に接続、純増確保20辺、未証明480→460辺。既知9石LOSS4,807類・10石LOSS494類・8石LOSS338類との衝突0。改変拒否6件成功。新規7石・5石・二石root閉鎖0、空盤UNKNOWN。

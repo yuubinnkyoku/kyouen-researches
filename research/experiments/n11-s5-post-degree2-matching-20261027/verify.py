@@ -49,7 +49,8 @@ def verify(negative=False):
     selected=[options[min(u,v),max(u,v)] for u,v in matching]
     assert len({r['s7'] for r in selected})==14
     optimum=sum(r['cost'] for r in selected)
-    assert optimum<=460, 'matching exceeds fixed-plan bound'
+    assert optimum==460, 'exact minimum changed'
+    assert sorted(r['s7'] for r in selected)==sorted(report['savedPlan']), 'saved plan no longer optimal'
     assert optimum==sum(graph[u][v]['weight'] for u,v in matching)
     result={
       'scope':'conditional 14-S7 witness roots only',
