@@ -60,7 +60,8 @@ def verify(negative=False):
     chosen = [options[min(u,v), max(u,v)] for u,v in matching]
     assert len({r['s7'] for r in chosen}) == 14
     optimum = sum(r['cost'] for r in chosen)
-    assert 534 <= optimum <= 535, 'WIN13 sensitivity bound violated'
+    assert optimum == 535, 'new WIN13 proof must yield exact minimum 535'
+    assert report['after']['missing'] == optimum, 'saved 14-root plan not optimal'
     assert report['emptyBoard'] == 'UNKNOWN'
     print(json.dumps({
         'updated_exact_minimum_unproved_edges':optimum,
