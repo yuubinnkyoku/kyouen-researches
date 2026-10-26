@@ -22,12 +22,6 @@ artifacts:
 - path: research/experiments/binary-cube-xor-orbits-20261025/verify_congruences.py
   role: verifier
   note: 既存指数公式によるd<=64の厳密整数検算と偶数qの有限値回帰
-- path: research/experiments/binary-cube-q5-five-adic-extrema-20261026/README.md
-  role: proof
-  note: 既存5進零点持ち上げ定理と有限合同計算による10^18次元までの厳密最大値
-- path: research/experiments/binary-cube-q5-five-adic-extrema-20261026/q5_five_adic_extrema.py
-  role: verifier
-  note: 5進零点4枝の32段階持ち上げ・二算法・Stirling数独立算術照合
 scope: 全次元dと全qの二値超立方体における座標反転不変q点集合族。超平面切片E_{d,q}の可除性、固定qの規格化個数の最終2進周期性と奇素数法の最終周期性、q=3,4,5の付値・q=6の2進および法3・9・5の厳密合同分類。
 evidence: 座標反転群の軌道安定化群定理と二重計数による全称証明。固定qの周期性はK0561の整数係数指数表示と2冪法の単元群から証明。q=6の鋭さ分類はK0565のd=6..9有限完全列挙と周期定理から導出。3・5点の合同則は既存全次元厳密公式を法8・16で評価。奇素数周期は整数係数指数公式とオイラーの定理による全称証明、q=6の最小周期と剰余類は既知係数・階乗可除性と有限完全合同検査による。
 ---
