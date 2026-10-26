@@ -801,3 +801,12 @@ $$
 **有限完全検査：** \(32<p<10^8\) の全5,761,444素数について、直接合同検査により \(10\mid I_p\) は275件、\(12\mid I_p\) は95件、\(6\mid I_p\) は1922件と確定。\(p<10^6\) の全32混合条件は独立した4底乗法位数算法と一致した。これは全称密度の証明ではなく有限範囲の検算。二値超立方体の5点切片周期の定理であり、平面共円ゲームの勝敗ではない。
 
 [全称証明・全32条件の結果](../../experiments/binary-cube-q5-mixed-index-density-20261027/README.md)／[直接合同検査器](../../experiments/binary-cube-q5-mixed-index-density-20261027/direct.cpp)／[独立乗法位数検査器](../../experiments/binary-cube-q5-mixed-index-density-20261027/independent.py)。
+
+
+## 5点切片の周期短縮倍率の合同類判定限界（2026-10-27）
+
+既証明の4生成元公式で \(I_p=(p-1)/\operatorname{lcm}_{a=2,3,5,7}\operatorname{ord}_p(a)\) とする。**任意の \(m\ge3,N\ge1\) について、\(p\equiv1\pmod{\operatorname{lcm}(m,N)}\) という同じ算術級数内に、\(m\mid I_p\) となる素数とならない素数が、それぞれ正の自然密度で存在する。** 従って \(m\mid I_p\) はどの固定法 \(N\) の合同類だけでも判定できない。一方 \(m=2\) は上記の840合同類で判定でき、\(m=1\) は自明。**合同類だけで可除性を判定できる \(m\) は1と2に限る。**
+
+証明は \(K_m=\mathbb Q(\zeta_m,2^{1/m},3^{1/m},5^{1/m},7^{1/m})\) が \(m\ge3\) で非アーベル（実部分体 \(\mathbb Q(2^{1/m})\) が非Galois）であり、任意の円分体との合成体にChebotarev密度定理を適用することによる**全称数学的証明**。具体的に \(p=2521,152041\) はともに \(1\bmod840\) だが \(I_p=2,4\) で、4による可除性が異なる。\(p\le5\cdot10^6\) の当該1791素数について、べき剰余と乗法位数の二算法を全件照合した。有限計算は全称証明ではない。
+
+[全称証明・検証結果](../../experiments/binary-cube-q5-index-noncongruence-20261027/README.md)／[再現検証器](../../experiments/binary-cube-q5-index-noncongruence-20261027/verify.py)。
