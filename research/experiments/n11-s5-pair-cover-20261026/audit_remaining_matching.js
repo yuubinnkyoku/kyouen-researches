@@ -83,6 +83,7 @@ function audit(negative=false){
   'known-LOSS candidate filtering changed');
  need(singleOptions.every(Boolean),'some S6 has no remaining S7 witness candidate');
  const selected=keys('n11-s5-pair-cover-20261026/s7-plan14-matching.keys');
+ const optimized=keys('n11-s5-pair-cover-20261026/s7-plan14-remaining.keys');
  function evaluate(plan){
   need(plan.length===14&&new Set(plan).size===14,'invalid plan cardinality');
   const covered=new Set(),distinct=new Set(),unprovedDistinct=new Set(),securedDistinct=new Set();
