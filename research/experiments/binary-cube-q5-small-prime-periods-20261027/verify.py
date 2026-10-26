@@ -74,6 +74,16 @@ def check():
             periods.append(T)
         print(f"{p} | {P} | {dict(zip(fac, differences))} | "
               f"{d_slope} | {slope} | {periods}")
+    # Sharp onset for p=7: the only nonunit base 14 has coefficient 2205=45*7^2.
+    for t in range(1, 11):
+        m = 7 ** t
+        T = 6 * 7 ** (t - 1)
+        onset = max(5, t - 2)
+        for d in (onset, onset + 1, onset + 6):
+            assert e_mod(d + T, m) == e_mod(d, m), (t, d)
+        if onset > 5:
+            assert e_mod(onset - 1 + T, m) != e_mod(onset - 1, m), t
+    print("Sharp 7-adic onset t=1..10: PASS")
     print("PASS")
 
 
