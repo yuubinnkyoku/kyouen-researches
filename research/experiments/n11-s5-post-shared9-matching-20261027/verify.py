@@ -66,8 +66,10 @@ def verify(negative=False):
     selected = [options[min(u,v), max(u,v)] for u,v in matching]
     assert len({r['s7'] for r in selected}) == 14
     optimum = sum(r['cost'] for r in selected)
-    assert optimum <= 516
+    assert optimum == 516, 'post-shared-S9 exact minimum changed'
     assert optimum == sum(graph[u][v]['weight'] for u,v in matching)
+    assert sorted(r['s7'] for r in selected) == sorted(report['savedPlan'])
+    assert report['after']['missing'] == optimum
     if negative:
         assert all((min(u,v),max(u,v)) in options for u,v in matching)
         assert report['newS7Verdicts'] == 0
