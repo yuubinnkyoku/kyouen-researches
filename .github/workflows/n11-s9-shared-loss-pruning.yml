@@ -1,0 +1,21 @@
+name: N11 shared S9 LOSS certificate
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-shared-loss-pruning.yml'
+      - 'research/experiments/n11-s9-shared-loss-pruning-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  independent-terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independent S10 terminal verification and S9 proof-only closure
+        run: node research/experiments/n11-s9-shared-loss-pruning-20261027/verify.js --negative
