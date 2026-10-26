@@ -15,3 +15,5 @@ node research/experiments/n11-s8-plan14-win13-20261026/audit_plan_progress.js --
 ```
 
 新規8石WIN証明1件、7石WIN閉鎖0件、5石閉鎖0件、二石root閉鎖0件。**標準11×11空盤UNKNOWN**。
+
+専用CI [40338497955](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40338497955) は **success**（Pythonの二独立整数幾何・終局minimax・改変拒否、Node.jsの既存証明限定集合との非重複・衝突拒否・535辺への減少を検査）。
