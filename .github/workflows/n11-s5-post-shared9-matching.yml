@@ -1,0 +1,21 @@
+name: N11 S5 post shared-S9 exact conditional matching
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s5-post-shared9-matching.yml'
+      - 'research/experiments/n11-s5-post-shared9-matching-20261027/**'
+      - 'research/experiments/n11-s9-shared-plan14-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install exact weighted matching solver
+        run: python3 -m pip install 'networkx==3.4.2'
+      - name: Recheck S9 terminal certificates and solve weighted matching
+        run: python3 research/experiments/n11-s5-post-shared9-matching-20261027/verify.py --negative
