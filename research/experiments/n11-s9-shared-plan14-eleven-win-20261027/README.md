@@ -6,10 +6,10 @@
 
 11個の9石WINから逆向きに8石WINを導出すると、相異なる8石親は96類。そのうち固定14根計画に現れる8石子は38類。**96類のすべてが既存証明と非重複とは限らない**ので、実際の新規証明数と計画上の確保増分は `audit_coverage.js` で既存の証明限定集合と突き合わせる。
 
-`verify.py` は前回の独立幾何実装を再利用し、全合法10石子・逆向き8石親・終局勝敗を再計算する。5種類の改変拒否試験を含む。`audit_coverage.js` は既存証明限定8石WIN 2,221類との重複、既知LOSS 338類との衝突、固定14根の未証明516辺からの減少を監査する。旧凍結cache・pn/dn・未完探索は証明葉として使わない。
+`verify_fast.js` は3×3と独立4×4 Bareissの2つの整数幾何で全合法10石子・逆向き8石親・終局勝敗を再計算する。5種類の改変拒否試験を含む。`verify.py` は前回のPython独立幾何実装を再利用する追加検査器である。`audit_coverage.js` は既存証明限定8石WIN 2,221類との重複、既知LOSS 338類との衝突、固定14根の未証明516辺からの減少を監査する。旧凍結cache・pn/dn・未完探索は証明葉として使わない。
 
 ```sh
-python3 research/experiments/n11-s9-shared-plan14-eleven-win-20261027/verify.py --negative
+node research/experiments/n11-s9-shared-plan14-eleven-win-20261027/verify_fast.js --negative
 node research/experiments/n11-s9-shared-plan14-eleven-win-20261027/audit_coverage.js --negative
 ```
 
