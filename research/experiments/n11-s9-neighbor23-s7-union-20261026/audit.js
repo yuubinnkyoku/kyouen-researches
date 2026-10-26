@@ -126,7 +126,7 @@ function audit(){
  need(old7.size===7764&&affected7.size===702&&all7.size===8382,
    'S7 parent coverage regression');
  let addedMoves=0,addedClasses=0,minGap=Infinity;
- const newlyClosed=[];
+ const newlyClosed=[],frontier=[];
  for(const h of affected7){
   const b=g.board(h,7),legalClasses=new Set(),secured=new Set(),fresh=new Set();
   for(const p of g.legal(b)){
@@ -136,13 +136,28 @@ function audit(){
    if(fresh8.has(c)){fresh.add(c);addedMoves++;}
   }
   addedClasses+=fresh.size;
-  const gap=legalClasses.size-secured.size;
+  const missingS8=[...legalClasses].filter(c=>!secured.has(c)).sort();
+  const gap=missingS8.length;
   minGap=Math.min(minGap,gap);
+  frontier.push({s7:h,uncovered:gap,secured:secured.size,
+    legal:legalClasses.size,missingS8});
   if(gap===0)newlyClosed.push(h);
  }
  need(addedMoves===1456&&addedClasses===1456&&
    addedClasses===allEdges.size-oldEdges.size&&minGap===21&&
    newlyClosed.length===0,'S7 secured-edge or uncovered-gap regression');
+ // A proof-only, reproducible worklist; no unknown position is promoted
+ // to WIN/LOSS. Restrict to newly affected S7 parents to avoid a second
+ // expensive enumeration of all previously covered S7 positions.
+ frontier.sort((a,b)=>a.uncovered-b.uncovered||b.secured-a.secured||
+   a.s7.localeCompare(b.s7));
+ const near=frontier.filter(row=>row.uncovered<=minGap+5);
+ const frequency=new Map();
+ for(const row of near)for(const h of row.missingS8)
+   frequency.set(h,(frequency.get(h)||0)+1);
+ const nextS8Targets=[...frequency].sort((a,b)=>b[1]-a[1]||
+   a[0].localeCompare(b[0])).slice(0,15).map(([s8,nearS7Parents])=>
+     ({s8,nearS7Parents}));
  const provenLoss7=g.reverse(provenLoss8);
  need(newlyClosed.every(h=>!provenLoss7.has(h)),
    'S7 WIN/LOSS conflict');
@@ -156,6 +171,10 @@ function audit(){
    previousSecuredS7Classes:oldEdges.size,addedSecuredS7Classes:addedClasses,
    securedS7Classes:allEdges.size,
    minimumUncoveredAmongAffectedS7:minGap,
+   proofOnlyFrontier:{scope:'newly affected S7 parents only',
+     ranking:'fewest uncovered S8 classes, then most secured, then key',
+     nearGapThreshold:minGap+5,nearS7Parents:near.length,
+     closestS7:frontier.slice(0,10),nextS8Targets},
    newlyClosedS7:newlyClosed.sort(),provenS8Loss:provenLoss8.size,
    winLossConflicts:0,newlyClosedTwoStoneRoots:null,emptyBoard:'UNKNOWN'};
 }
