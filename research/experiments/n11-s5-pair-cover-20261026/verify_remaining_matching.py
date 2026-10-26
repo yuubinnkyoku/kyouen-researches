@@ -26,6 +26,7 @@ def verify(negative=False):
     report = json.loads(proc.stdout)
     assert report['schema'] == 'n11-s5-remaining-proof-only-matching-v1'
     assert len(report['missingS6']) == 27
+    assert report['independentlyCheckedGeometry'] == 42
     assert report['candidates'] == 853
     assert report['excluded'] == 67 and report['allowed'] == 786
     assert len(report['pairOptions']) == 343
