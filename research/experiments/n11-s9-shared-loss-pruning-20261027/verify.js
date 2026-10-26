@@ -75,18 +75,21 @@ function verify(rows,{terminal=true}={}){
   }
   win9.add('00020000000000821090200000400020');
   need([...win9].every(h=>!after9.has(h)),'S9 WIN/LOSS conflict');
-  let oldEdges=0,newEdges=0,affected8=0;
+  let oldEdges=0,newEdges=0,affected8=0,newlyClosed8=0;
   const degrees=new Map();
   for(const h of plan8){
     let a=0,b=0;
-    for(const c of g.children(g.board(h,8))){
+    const s9Children=g.children(g.board(h,8));
+    for(const c of s9Children){
       degrees.set(c,(degrees.get(c)||0)+1);
       if(before9.has(c))a++;
       if(after9.has(c))b++;
     }
     oldEdges+=a;newEdges+=b;if(b>a)affected8++;
+    if(b===s9Children.size&&a<s9Children.size)newlyClosed8++;
   }
   need(oldEdges===12&&newEdges===594,'plan S8->S9 LOSS edge audit mismatch');
+  need(newlyClosed8===0,'new S8 LOSS closure requires separate certificate');
   const shared=[...degrees].filter(([_,degree])=>degree>=3);
   const sharedWin=shared.filter(([h])=>win9.has(h)).length;
   const sharedLoss=shared.filter(([h])=>after9.has(h)).length;
@@ -98,7 +101,8 @@ function verify(rows,{terminal=true}={}){
     oldS9Loss:before9.size,newS9Loss:after9.size,gainedS9Loss:after9.size-before9.size,
     sharedS8ToS9Edges:incidences,plan8:plan8.size,
     plan8S9LossEdgesBefore:oldEdges,plan8S9LossEdgesAfter:newEdges,
-    affectedPlan8:affected8,sharedS9Candidates:shared.length,
+    affectedPlan8:affected8,newlyClosedPlan8:newlyClosed8,
+    sharedS9Candidates:shared.length,
     sharedS9Win:sharedWin,sharedS9Loss:sharedLoss,sharedS9Unknown:0,
     terminalStatesPerGeometry:terminal?states:null,
     independentGeometries:terminal?2:0,newS8Verdicts:0,
