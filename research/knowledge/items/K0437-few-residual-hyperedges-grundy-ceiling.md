@@ -72,3 +72,12 @@ evidence: '2026-10-21監査。署名交換による子局面同型、空署名�
 9辺・10点でg=6となる明示グラフに孤立点を1点追加するとg=7となり、上界は鋭い。これは**抽象的な二点禁止集合ゲーム**の定理であり、標準整数格子での実現や11×11の勝敗を示すものではない。三点以上の極小残余辺が存在する場合にも適用できない。
 
 [全称帰着・全度数表・証人](../../experiments/game-structure/rank2-nine-edge-sharp-20261027/README.md)／[独立C++検証器](../../experiments/game-structure/rank2-nine-edge-sharp-20261027/verify_graph_cpp.cpp)／[独立Python検証器](../../experiments/game-structure/rank2-nine-edge-sharp-20261027/verify_graph_python.py)。
+
+
+## 二点残余辺11本以下への拡張（2026-10-27）
+
+**計算機援用の全称定理：** 二点集合のみからなる包含極小残余禁止辺が高々11本なら、任意個の自由点を許しても **g≤7**。10辺の孤立点なし核4,613種類の最大値は7（達成3種類）、11辺の核15,216種類でも最大7（達成35種類）。自由点なしでg=7を実現するための最小辺数は**10**。
+
+辺追加三操作による全称的有限帰着と完全同型判定に基づく。C++の残存集合mexと占有集合mexが11辺まで全件一致し、Pythonによる独立生成・占有集合mexは10辺まで一致した。**11辺の同型類生成自体は独立実装で未照合**。整数格子での実現や11×11の探索速度改善は未確認。
+
+[全度数表・証人・証明](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/README.md)／[残存集合検証器](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/verify_graph_cpp.cpp)／[占有集合検証器](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/verify_occupied_cpp.cpp)／[Python独立検証器](../../experiments/game-structure/rank2-eleven-edge-sharp-20261027/verify_graph_python.py)。
