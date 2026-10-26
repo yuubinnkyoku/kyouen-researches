@@ -58,6 +58,11 @@ def verify(negative=False):
     optimum = sum(row['missing'] for row in selected)
     assert optimum == sum(graph[u][v]['weight'] for u, v in matching)
     assert optimum <= report['baseline']['missing']
+    assert optimum == report['improved']['missing'] == 536
+    assert report['improved']['total'] == 548
+    assert report['improved']['secured'] == 12
+    assert {row['s7'] for row in selected} == set(report['improvedRoots'])
+    assert len(report['improvedRoots']) == 14
     assert report['emptyBoard'] == 'UNKNOWN'
     result = {
         'scope': 'conditional proof-only 14-S7 matching, not a WIN certificate',
@@ -70,6 +75,8 @@ def verify(negative=False):
         'optimal_unproved_s8_edges': optimum,
         'improvement_in_unproved_edges': report['baseline']['missing'] - optimum,
         'optimized_total_s8_edges': sum(row['total'] for row in selected),
+        'baseline_distinct_unproved_s8': report['baseline']['unprovedDistinct'],
+        'optimized_distinct_unproved_s8': report['improved']['unprovedDistinct'],
         'optimized_secured_s8_edges': sum(row['secured'] for row in selected),
         'optimized_roots': [row['s7'] for row in selected],
         'matching': selected,
