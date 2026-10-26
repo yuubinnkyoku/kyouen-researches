@@ -20,7 +20,7 @@ function audit(negative=false){
  const proofReport=proof.verify(rows,{terminal:false});
  const old=prior.audit(false),{missing,by7,win,loss}=base.inventory();
  need(proofReport.newS8WinProofs===118&&proofReport.updated.missing===460&&
-   old.after.missing===480&&old.proofOnlyWin8After===2315&&
+   old.updated.missing===480&&old.proofOnlyWin8After===2315&&
    win.size===2176&&loss.size===338&&missing.length===27&&by7.size===853,
    'upstream certificate or inventory changed');
  const old5=JSON.parse(read('n11-s9-shared-plan14-20261027/certificate.json'));
