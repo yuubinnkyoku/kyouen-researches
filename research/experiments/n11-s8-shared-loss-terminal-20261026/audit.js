@@ -6,6 +6,7 @@ const fs=require('node:fs'),path=require('node:path');
 const g=require('../n11-gap6-terminal-20261019/verify_js.js');
 const previous=require('../n11-terminal-s7-s8-legacy187-union-20261025/audit.js');
 const latest=require('../n11-s6-legacy3-loss-union-20261025/audit.js');
+const s7Coverage=require('../n11-s9-neighbor23-s7-union-20261026/audit.js');
 const EXP=path.resolve(__dirname,'..');
 const ROOT='000000100010a0011000000001004000';
 const need=(v,m)=>{if(!v)throw Error(m);};
@@ -108,6 +109,52 @@ function audit(){
    need([...g.children(b)].some(c=>fresh7.has(c)),
      'S6 WIN parent lacks legal S7 LOSS witness');
  }
+ // The older S7 near-closure list was assembled BEFORE this S8 LOSS was
+ // terminal-certified. Any S7 parent with a proven S8 LOSS child is itself
+ // proven LOSS (original-first viewpoint) and cannot be an S7 WIN target.
+ // Keep the original S7 audit immutable; derive a new proof-only worklist.
+ const historical=s7Coverage.audit().proofOnlyFrontier;
+ const near7=historical.closestS7.filter(row=>
+   row.uncovered<=historical.nearGapThreshold);
+ need(near7.length===historical.nearS7Parents&&near7.length===5,
+   'historical S7 near frontier incomplete');
+ const newlyRefutedNear=near7.filter(row=>row.missingS8.includes(ROOT));
+ need(newlyRefutedNear.length===2&&
+   newlyRefutedNear.every(row=>all7.has(row.s7)),
+   'new S8 LOSS did not refute the expected two S7 WIN targets');
+ const refutedNear=near7.filter(row=>all7.has(row.s7));
+ const actionableNear=near7.filter(row=>!all7.has(row.s7));
+ need(refutedNear.length>=2&&actionableNear.length>0,
+   'S7 near frontier pruning regression');
+ const knownLoss8=new Set([...old8,ROOT]);
+ const frequencies=new Map();
+ for(const row of actionableNear){
+   const legal=g.children(g.board(row.s7,7));
+   for(const h of row.missingS8){
+     need(legal.has(h)&&!knownLoss8.has(h),
+       'S7 actionable target illegal or already proven S8 LOSS');
+     const parents=frequencies.get(h)||[];
+     parents.push(row.s7);frequencies.set(h,parents);
+   }
+ }
+ const nextS8Targets=[...frequencies].sort((a,b)=>
+   b[1].length-a[1].length||a[0].localeCompare(b[0]))
+   .slice(0,15).map(([s8,parents])=>({s8,nearS7Parents:parents.length,
+     parents:parents.sort()}));
+ need(nextS8Targets.length>0&&
+   nextS8Targets.every(row=>!knownLoss8.has(row.s8)),
+   'proven S8 LOSS leaked into actionable S7 worklist');
+ const s7ProofOnlyWorklist={
+   scope:'historical newly affected S7 parents with gap <=26 only',
+   historicalNearS7:near7.length,
+   refutedNearS7:refutedNear.map(row=>row.s7).sort(),
+   newlyRefutedBySharedS8: new Set(newlyRefutedNear.map(row=>row.s7)).size,
+   remainingNearS7:actionableNear.map(row=>({
+     s7:row.s7,legal:row.legal,secured:row.secured,
+     uncovered:row.uncovered})),
+   nextS8Targets,
+   proofRule:'S7 with a certified S8 LOSS child is LOSS, not a WIN-coverage target'
+ };
  return {s8LossRoot:ROOT,priorCertifiedS8Loss:old8.size,newCertifiedS8Loss:1,
    certifiedS8Loss:old8.size+1,
    previousS7Loss:old7.size,newS7LossWitnessParents:new7.size,
@@ -128,7 +175,7 @@ function audit(){
    totalS6LegalClasses:s6Legal,previousSecuredS6Classes:3878,
    securedS6Classes:s6Secured,addedSecuredS6Classes:s6Secured-3878,
    closedS6:closed6.sort(),newlyClosedS6:0,
-   frozenConflicts:0,emptyBoard:'UNKNOWN'};
+   s7ProofOnlyWorklist,frozenConflicts:0,emptyBoard:'UNKNOWN'};
 }
 module.exports={audit};
 if(require.main===module)console.log(JSON.stringify(audit(),null,2));
