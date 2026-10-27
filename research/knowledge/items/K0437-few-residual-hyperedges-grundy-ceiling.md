@@ -103,3 +103,12 @@ evidence: '2026-10-21監査。署名交換による子局面同型、空署名�
 全称帰着は連結グラフの「閉路辺削除または葉削除」の逆操作による全生成、厳密な同型判定、連結成分の多重集合への一意分解とGrundyのxor則による。連結代表ごとに残存頂点再帰と占有集合再帰を個別照合し、非連結の度数表は個別型の動的計画法と組合せ数による別方式で一致した。**12辺の連結類生成を別の生成器で独立検査したわけではない**。抽象的な二点禁止ゲームに限り、標準整数格子への証人埋め込みや11×11の探索速度改善は未確認。
 
 [全称帰着・完全度数表・連結証人](../../experiments/game-structure/rank2-twelve-edge-sharp-20261027/README.md)／[二再帰・連結類生成検証器](../../experiments/game-structure/rank2-twelve-edge-sharp-20261027/verify_connected.cpp)／[別方式の成分計数検証器](../../experiments/game-structure/rank2-twelve-edge-sharp-20261027/verify_composition.py)。
+
+
+## 二点残余辺13本以下への拡張（2026-10-27）
+
+**計算機援用の全称定理：** 包含極小残余禁止集合がすべて2点集合で、その本数が13以下なら、自由点を任意個許しても **g≤7**。上界は既存の10辺証人で鋭い。13辺の孤立点なし非同型グラフは**193,367類**、うち連結**112,822類**。核のGrundy度数（0〜7）は **(43796,43505,35095,35257,15685,16100,2485,1444)**。連結類の度数は **(25596,25030,18747,18810,11429,11647,1318,245)**。
+
+連結グラフの辺・葉追加による数学的完全生成帰着と厳密同型判定、残存頂点・占有済み独立集合の二再帰の全件照合、成分多重集合の二方式計数による計算機援用証明。**独立生成の検証範囲は13辺・6〜7頂点のGraph Atlasと、13辺・14頂点の非同型木3,159類**。8〜13頂点の連結類の独立生成は未実施である。抽象的な二点禁止ゲームに限り、標準整数格子への埋め込みや11×11の探索速度改善は未確認。
+
+[全称帰着・完全度数表](../../experiments/game-structure/rank2-thirteen-edge-sharp-20261027/README.md)／[C++完全列挙・二再帰](../../experiments/game-structure/rank2-thirteen-edge-sharp-20261027/verify_connected.cpp)／[別生成器による部分照合](../../experiments/game-structure/rank2-thirteen-edge-sharp-20261027/verify_independent.py)／[独立組合せ計数](../../experiments/game-structure/rank2-thirteen-edge-sharp-20261027/verify_composition.py)。
