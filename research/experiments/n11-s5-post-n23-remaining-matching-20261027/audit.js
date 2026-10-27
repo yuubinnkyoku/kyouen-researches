@@ -5,7 +5,6 @@
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const g=require('../n11-gap6-terminal-20261019/verify_js.js');
 const base=require('../n11-s5-pair-cover-20261026/audit_remaining_matching.js');
-const previous=require('../n11-s5-post-n23-matching-20261027/audit.js');
 const n22=require('../n11-s9-n22-complete-20261027/verify.js');
 const n24=require('../n11-s9-n23-remaining-20261027/prove.js');
 const need=(x,m)=>{if(!x)throw Error(m);};
@@ -68,6 +67,7 @@ function audit(negative=false){
     'proof-only WIN8 count or WIN/LOSS conflict');
   const {by7}=base.inventory();
   const valid=new Map(),pairs=new Map(),single=Array(27).fill(null);
+  const oldPairs=new Map(),oldSingle=Array(27).fill(null);
   let excluded=0,affected=0;
   for(const [s7,cover] of by7){
     const cs=g.children(g.board(s7,7));
@@ -75,6 +75,15 @@ function audit(negative=false){
     const r={s7,cover:[...cover].sort((a,b)=>a-b),total:cs.size,
       secured:[...cs].filter(h=>after.has(h)).length};
     r.cost=r.total-r.secured;
+    const old={s7,cover:r.cover,total:r.total,
+      secured:[...cs].filter(h=>secured23.has(h)).length};
+    old.cost=old.total-old.secured;
+    need(old.cost>=r.cost,'new proof increased an S7 cost');
+    for(const i of old.cover)if(better(old,oldSingle[i]))oldSingle[i]=old;
+    if(old.cover.length===2){
+      const k=old.cover.join(':');
+      if(better(old,oldPairs.get(k)))oldPairs.set(k,old);
+    }
     need(r.cost>=0&&r.cover.length>=1&&r.cover.length<=2,
       'invalid S7 candidate');
     valid.set(s7,r);
@@ -87,16 +96,16 @@ function audit(negative=false){
   }
   need(by7.size===853&&excluded===67&&valid.size===786&&
     pairs.size===343&&single.every(Boolean),'S7 candidate inventory changed');
-  const old=previous.audit(false);
-  const oldPairs=new Map(old.pairOptions.map(r=>[r.i+':'+r.j,r.cost]));
+  need(oldPairs.size===343&&oldSingle.every(Boolean),
+    'previous conditional option inventory changed');
   let reducedPairs=0,reducedSingles=0;
   for(const [k,r] of pairs){
-    need(oldPairs.has(k)&&r.cost<=oldPairs.get(k),'pair cost increased');
-    if(r.cost<oldPairs.get(k))reducedPairs++;
+    need(oldPairs.has(k)&&r.cost<=oldPairs.get(k).cost,'pair cost increased');
+    if(r.cost<oldPairs.get(k).cost)reducedPairs++;
   }
   for(let i=0;i<27;i++){
-    need(single[i].cost<=old.singleOptions[i].cost,'single cost increased');
-    if(single[i].cost<old.singleOptions[i].cost)reducedSingles++;
+    need(single[i].cost<=oldSingle[i].cost,'single cost increased');
+    if(single[i].cost<oldSingle[i].cost)reducedSingles++;
   }
   function evaluate(roots){
     need(roots.length===14&&new Set(roots).size===14,
