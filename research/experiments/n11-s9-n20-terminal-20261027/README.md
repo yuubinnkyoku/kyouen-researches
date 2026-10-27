@@ -15,3 +15,16 @@ node research/experiments/n11-s9-n20-terminal-20261027/verify.js --negative
 ```
 
 20子候補の探索に保存済み勝敗表や未完探索のpn/dnを証明葉として使用しない。9石の局所証明は7石・5石・二石root・空盤の証明ではない。**標準11×11空盤UNKNOWN**。
+
+## 第三の独立終局検証（C++17、2026-10-27）
+
+`independent_terminal.cpp` はJavaScriptの盤面・勝敗処理を呼ばず、4×4整数行列式の余因子展開で禁止4点を判定する。9石根の安全性とD4正準性、8石からの合法な逆親、全合法9→10石着手、10石以降の禁止2・3・4点集合を再構成して通常プレイの終局まで解く。未完探索や保存済み勝敗表は参照しない。
+
+9石WIN **80類**、8石WIN逆親 **689類**、9→10石着手 **1,600本**、相異なる10石葉 **1,573類**、探索状態数 **157,557** が既存の二種類の整数幾何と一致した。証明書の根・状態数・UNKNOWNヘッダ・行数の改変拒否 **4/4件**。専用CI [40459371257](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40459371257) 成功。
+
+```sh
+g++ -std=c++17 -O2 -Wall -Wextra -Werror research/experiments/n11-s9-n20-terminal-20261027/independent_terminal.cpp -o /tmp/n11-n20-independent
+/tmp/n11-n20-independent research/experiments/n11-s9-n20-terminal-20261027/certificate.tsv
+```
+
+これは80類の局所証明の独立性強化であり、上流の証明済み8石集合すべてのC++再検証ではない。7石・5石・二石rootの新規閉鎖はなく、空盤勝敗は**UNKNOWN**。

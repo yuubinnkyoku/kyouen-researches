@@ -14,3 +14,9 @@ python3 research/experiments/n11-s5-post-n20-matching-20261027/verify.py --negat
 ```
 
 最適値は現在の証明集合・候補集合・条件付き14根方式に限られ、計算時間の下界ではない。14個の7石候補は依然として勝敗未証明であり、5石・二石root・空盤の新しい勝敗証明はない。**標準11×11空盤UNKNOWN**。
+
+## 単独監査の終局検証を必須化（2026-10-27）
+
+`audit.js` は以前、20子の9石証明書を `terminal:false` で構造検査するだけで8石WINへ逆伝播できた。単独実行時に未検証の証明書を勝敗根拠として受け入れないよう、新規80類の全10石子を `terminal:true` で終局まで再計算してから採用する。上流の古い証明書をこの変更だけで全件再検証したわけではない。
+
+変更後の専用再最適化CI [40459371394](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40459371394) は成功。独立したC++終局検証も [40459371257](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40459371257) で成功。これは証拠の信頼境界の修正であり、勝敗分類数・条件付き14根の最適値・空盤UNKNOWNを変更しない。
