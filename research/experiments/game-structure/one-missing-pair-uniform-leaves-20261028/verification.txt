@@ -1,20 +1,19 @@
 base m=2 t=0: g=1, named_vertices=2, named_states=2
 base m=2 t=1: g=0, named_vertices=4, named_states=6
-base m=2 t=2: g=1, named_vertices=6, named_states=18
+base m=2 t=2: g=1, named_vertices=6, named_states=14
 base m=3 t=0: g=2, named_vertices=5, named_states=6
-base m=3 t=1: g=3, named_vertices=8, named_states=36
-base m=3 t=2: g=2, named_vertices=11, named_states=264
-base m=4 t=0: g=3, named_vertices=9, named_states=36
-base m=4 t=1: g=3, named_vertices=13, named_states=528
-base m=4 t=2: g=3, named_vertices=17, named_states=8256
-base m=5 t=0: g=3, named_vertices=14, named_states=528
-base m=5 t=1: g=2, named_vertices=19, named_states=16512
-base m=5 t=2: g=3, named_vertices=24, named_states=525312
-base m=6 t=0: g=2, named_vertices=20, named_states=16512
-base m=6 t=1: g=2, named_vertices=26, named_states=1050624
-base m=6 t=2: g=2, exact signature DP only
-EXTRA_NAMED_OK m=7 t=0: g=2, vertices=27, states=1050624
-BASE_OK 15 cases; named-vertex states 2669264 (including extra)
+base m=3 t=1: g=3, named_vertices=8, named_states=30
+base m=3 t=2: g=2, named_vertices=11, named_states=49
+base m=4 t=0: g=3, named_vertices=9, named_states=33
+base m=4 t=1: g=3, named_vertices=13, named_states=115
+base m=4 t=2: g=3, named_vertices=17, named_states=158
+base m=5 t=0: g=3, named_vertices=14, named_states=174
+base m=5 t=1: g=2, named_vertices=19, named_states=369
+base m=5 t=2: g=3, named_vertices=24, named_states=465
+base m=6 t=0: g=2, named_vertices=20, named_states=646
+base m=6 t=1: g=2, named_vertices=26, named_states=1064
+base m=6 t=2: g=2, named_vertices=32, named_states=1278
+BASE_OK 15 cases; named-vertex states 4409
 EXTRA_OK m=7, 128 subset states (last t)
 EXTRA_OK m=8, 256 subset states (last t)
 EXTRA_OK m=9, 512 subset states (last t)
@@ -23,7 +22,8 @@ EXTRA_OK m=11, 2048 subset states (last t)
 EXTRA_OK m=12, 4096 subset states (last t)
 EXTRA_OK m=13, 8192 subset states (last t)
 EXTRA_OK m=14, 16384 subset states (last t)
-EXTRA_OK 24 cases
+EXTRA_OK 24 cases; extra named checks 18
+NAMED_OK 33 cases, 1296719 total states
 INDUCTION_OK (m mod 4, t representative): (non-clique child, mex)
   (0, 0): (2, 3)
   (0, 1): (2, 3)
