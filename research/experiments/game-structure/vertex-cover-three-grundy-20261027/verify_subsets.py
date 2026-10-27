@@ -12,7 +12,7 @@ from time import monotonic
 PAIRS = ((0, 1), (0, 2), (1, 2))
 
 
-def brute(edges, counts):
+def brute(edges, counts, free=0):
     # Vertices 0,1,2 form the cover; remaining vertices are distinct.
     adjacency = [0] * 3
     for e, (u, v) in enumerate(PAIRS):
@@ -26,6 +26,8 @@ def brute(edges, counts):
             for u in range(3):
                 if (s >> u) & 1:
                     adjacency[u] |= 1 << v
+
+    adjacency.extend([0] * free)  # Isolated vertices.
 
     memo = {0: 0}
 
@@ -67,6 +69,9 @@ def main():
         0: 3735, 1: 3264, 2: 3695, 3: 4603, 4: 2199
     }
     assert visited_states == 6706678
+    sharp = (0, 0, 0, 0, 1, 2, 1)
+    assert brute(0, sharp)[0] == 4
+    assert brute(0, sharp, free=1)[0] == 5
 
     # Independent checks of uncompressed 3- and 4-copy classes.
     rng = Random(20261027)
