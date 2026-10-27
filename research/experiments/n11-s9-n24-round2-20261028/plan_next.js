@@ -142,6 +142,7 @@ function run(){
     baselineChildCountCost:cost(baseline),
     optimizedChildCountCost:cost(optimized.picked),
     exchanges:optimized.swaps,
+    selectedKeys:optimized.picked.map(x=>x.h),
     selectedKeysSha256:sha(optimized.picked.map(x=>x.h).sort().join('\n')+'\n'),
     newlyProvedS8:0,newTwoStoneClosures:0
   };
