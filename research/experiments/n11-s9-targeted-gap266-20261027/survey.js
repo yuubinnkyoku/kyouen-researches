@@ -53,7 +53,7 @@ selected.sort((a,b)=>b.parents.length-a.parents.length||
   a.s9.localeCompare(b.s9));
 const limit=Math.min(300,selected.length);
 const leafCache=new Map(),wins=[];
-let tested=0,loss=0,states=0;
+let tested=0,states=0;
 for(const row of selected.slice(0,limit)){
   tested++;let sum=0,all=true;
   for(const leaf of row.children){
