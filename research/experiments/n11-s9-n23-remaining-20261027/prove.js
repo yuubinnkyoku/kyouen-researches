@@ -109,7 +109,7 @@ function run(){
     newS7Verdicts:0,newS5Verdicts:0,twoStoneClosures:0};
   const certPath=path.join(__dirname,'compact-certificate.json');
   if(process.argv.includes('--propose')){
-    console.log(JSON.stringify(cert,null,2));
+    if(require.main===module)console.log(JSON.stringify(cert,null,2));
   }else{
     const frozen=JSON.parse(fs.readFileSync(certPath,'utf8'));
     need(JSON.stringify(frozen)===JSON.stringify(cert),
@@ -135,7 +135,7 @@ function run(){
         need(err&&err.message===expected,'forged verdict not rejected');
       }
     }
-    console.log(JSON.stringify({verified:true,...cert},null,2));
+    if(require.main===module)console.log(JSON.stringify({verified:true,...cert},null,2));
   }
   return cert;
 }
