@@ -17,7 +17,7 @@ const better=(a,b)=>!b||a.cost<b.cost||
  (a.total===b.total&&a.s7<b.s7)));
 function audit(negative=false){
  const rows=proof.parse(read('n11-s9-degree2-terminal-20261027/certificate.tsv'));
- const proofReport=proof.verify(rows,{terminal:false});
+ const proofReport=proof.verify(rows,{terminal:true});
  const old=prior.audit(false),{missing,by7,win,loss}=base.inventory();
  need(proofReport.newS8WinProofs===118&&proofReport.updated.missing===460&&
    old.updated.missing===480&&old.proofOnlyWin8After===2315&&

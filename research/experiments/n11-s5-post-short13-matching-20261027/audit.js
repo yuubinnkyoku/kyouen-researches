@@ -17,7 +17,7 @@ const better=(a,b)=>!b||a.cost<b.cost||
 function audit(negative=false){
  const old=previous.audit(false);
  const rows=short.parse(read('n11-s9-degree2-short-terminal-20261027/certificate.tsv'));
- const proof=short.verify(rows,{terminal:false});
+ const proof=short.verify(rows,{terminal:true});
  const {missing,by7,win,loss}=base.inventory();
  need(old.schema==='n11-s5-post-degree2-matching-v1'&&
   old.updated.missing===460&&old.proofOnlyWin8After===2433&&
