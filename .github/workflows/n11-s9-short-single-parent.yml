@@ -17,5 +17,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Recompute targeted short-child terminal verdicts
-        run: node research/experiments/n11-s9-short-single-parent-20261028/prove.js --propose
+      - name: Independently replay 64 minimal LOSS witnesses and forged WIN
+        run: node research/experiments/n11-s9-short-single-parent-20261028/verify_minimal.js --negative
+      - name: Recompute full first-LOSS search (manual audit)
+        if: github.event_name == 'workflow_dispatch'
+        run: node research/experiments/n11-s9-short-single-parent-20261028/prove.js
