@@ -76,6 +76,9 @@ function verify(){
     after.size-secured.size===cert.newProofOnlyWin8&&
     after.size===cert.proofOnlyWin8After,
     'proof-only propagation/coverage mismatch');
+  // Negative controls may evaluate additional leaves; freeze the positive
+  // replay metrics before running any forged-witness checks.
+  const positiveLeaves=terminalCache.size,positiveStates=states;
   if(process.argv.includes('--negative')){
     const wi=raw.indexOf(255),li=raw.findIndex(x=>x!==255);
     if(wi>=0){
@@ -95,8 +98,8 @@ function verify(){
   const result={verified:true,emptyBoard:'UNKNOWN',
     checkedS9:selected.length,win9:win9.length,loss9:selected.length-win9.length,
     minimalTerminalObligations:obligations,
-    distinctTerminalLeaves:terminalCache.size,
-    terminalStatesPerGeometry:states,
+    distinctTerminalLeaves:positiveLeaves,
+    terminalStatesPerGeometry:positiveStates,
     newProofOnlyWin8:after.size-secured.size,
     updated,winLossConflicts:0,twoStoneClosures:0};
   console.log(JSON.stringify(result,null,2));
