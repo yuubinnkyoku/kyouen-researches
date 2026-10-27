@@ -11,4 +11,4 @@ python -m pip install 'networkx==3.4.2'
 python research/experiments/n11-s5-post-n24-round2-matching-20261028/verify.py --negative
 ```
 
-**118本は保存済み14根の確定残数。** 条件付き14根方式の厳密最小値は独立最適性検査の出力に従う。これは計算時間の下界ではない。7石・5石・二石root新規閉鎖0件、空盤UNKNOWN。
+**118本は条件付き14根方式の厳密最小値。** NetworkXの28頂点最小重み完全対応と、独立した整数交互閉路検査（393,236状態、負の費用差閉路0、最小費用差0）が一致し、保存済み14根は引き続き最適だった。[独立最適性検証CI 40537868087](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40537868087) は成功。これは計算時間の下界ではない。7石・5石・二石root新規閉鎖0件、空盤UNKNOWN。

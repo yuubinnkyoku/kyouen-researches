@@ -20,11 +20,11 @@
 
 初回の固定証人生成は [GitHub Actions 40537389994](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40537389994) で成功。証明書には候補順序SHA-256と固定証人32バイトのSHA-256を保存した。
 
-`verify_minimal.js` はWIN9の全24子とLOSS9の固定LOSS10証人31件だけを、独立した両幾何で終局まで再計算する（**55件**）。偽WIN・偽LOSS・不正な証人番号の拒否試験を含む。
+`verify_minimal.js` はWIN9の全24子とLOSS9の固定LOSS10証人31件だけを、独立した両幾何で終局まで再計算する（**55件**）。偽WIN・偽LOSS・不正な証人番号の拒否試験を含む。実測は**55終局・各幾何11,709状態**で、初回198終局から143件（72.2%）削減した。[独立終局検証CI 40537743896](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40537743896) は成功。
 
 ```sh
 node research/experiments/n11-s9-n24-round2-20261028/verify_minimal.js --negative
 node research/experiments/n11-s9-n24-round2-20261028/prove.js
 ```
 
-**信頼境界:** 上流n22/n23/n24の固定証人の順序・ハッシュと派生集合を再構築するが、上流の終局再帰はそれぞれの専用CIで別途再検証する。新規9石LOSSから8石LOSSを逆伝播しない。118辺は保存14根の確定残数であり、全候補の再最適化前は条件付き方式の厳密最小値とは主張しない。新規7石・5石・二石root閉鎖0件。空盤UNKNOWN。
+**信頼境界:** 上流n22/n23/n24の固定証人の順序・ハッシュと派生集合を再構築するが、上流の終局再帰はそれぞれの専用CIで別途再検証する。新規9石LOSSから8石LOSSを逆伝播しない。118辺は保存14根の確定残数であり、[独立再最適化](../n11-s5-post-n24-round2-matching-20261028/README.md)によって現在の条件付き14根方式の厳密最小値でもあると確認した。新規7石・5石・二石root閉鎖0件。空盤UNKNOWN。
