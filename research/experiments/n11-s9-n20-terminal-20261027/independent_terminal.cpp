@@ -33,6 +33,7 @@ bool forbidden(int a,int b,int c,int d){
  }
  return det==0;
 }
+bool safe(U128 b){auto a=pts(b);for(int i=0;i<(int)a.size();i++)for(int j=i+1;j<(int)a.size();j++)for(int k=j+1;k<(int)a.size();k++)for(int l=k+1;l<(int)a.size();l++)if(forbidden(a[i],a[j],a[k],a[l]))return false;return true;}
 vector<int> legal(U128 b){auto a=pts(b);vector<array<int,3>> tri;
  for(int i=0;i<(int)a.size();i++)for(int j=i+1;j<(int)a.size();j++)for(int k=j+1;k<(int)a.size();k++)tri.push_back({a[i],a[j],a[k]});
  vector<int> out;for(int q=0;q<121;q++){if((b>>q)&1)continue;bool ok=true;for(auto t:tri)if(forbidden(t[0],t[1],t[2],q)){ok=false;break;}if(ok)out.push_back(q);}return out;
@@ -88,6 +89,7 @@ int main(int argc,char** argv){try{
  check(roots.size()==80,"wrong S9 witness count");
  unordered_set<U128,Hash128> unique10,parents8;int totalStates=0,totalEdges=0;
  for(auto [key,expected]:roots){U128 b=parse(key);check(pts(b).size()==9&&canonical(b)==b,"invalid canonical S9 root");
+  check(safe(b),"unsafe S9 root");
   for(int occupied:pts(b)){
    U128 parent=canonical(b^((U128)1<<occupied));
    bool incidence=false;
