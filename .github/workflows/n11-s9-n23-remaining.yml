@@ -17,5 +17,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Recompute remaining selected S9 positions through two terminal geometries
+      - name: Check minimal WIN-universal and LOSS-existential terminal obligations\n        run: node research/experiments/n11-s9-n23-remaining-20261027/verify_minimal.js --negative\n      - name: Recompute remaining selected S9 positions through two terminal geometries
         run: node research/experiments/n11-s9-n23-remaining-20261027/prove.js --negative
