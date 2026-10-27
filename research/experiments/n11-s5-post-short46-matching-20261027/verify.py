@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import subprocess
 import networkx as nx
+from alternating_cycle_check import verify_optimality, self_test
 
 HERE = Path(__file__).resolve().parent
 EXP = HERE.parent
@@ -61,9 +62,20 @@ def verify(negative=False):
     optimum = sum(row['cost'] for row in selected)
     assert optimum <= 397, 'minimum cannot exceed saved feasible plan'
     assert optimum == sum(graph[u][v]['weight'] for u, v in matching)
+    # Independent integer-only optimality proof: every cheaper perfect
+    # matching would contain a negative alternating cycle against this one.
+    self_test()
+    edge_costs = {(min(u, v), max(u, v)): data['weight']
+                  for u, v, data in graph.edges(data=True)}
+    independently_verified_cost, minimum_cycle_delta, dp_states = (\n        verify_optimality(edge_costs, matching))
+    assert independently_verified_cost == optimum
+    assert minimum_cycle_delta is None or minimum_cycle_delta >= 0
     result = {
         'scope': 'conditional 14-S7 witness roots only',
         'minimum_unproved_edges': optimum,
+        'alternating_cycle_exact_check': True,
+        'minimum_alternating_cycle_delta': minimum_cycle_delta,
+        'alternating_cycle_dp_states': dp_states,
         'fixed_plan_unproved_edges': 397,
         'improvement_over_fixed_plan': 397 - optimum,
         'saved_plan_is_optimal': optimum == 397,
