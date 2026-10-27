@@ -1,0 +1,21 @@
+name: N11 short S9 terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-short-single-parent.yml'
+      - 'research/experiments/n11-s9-short-single-parent-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recompute targeted short-child terminal verdicts
+        run: node research/experiments/n11-s9-short-single-parent-20261028/prove.js --propose
