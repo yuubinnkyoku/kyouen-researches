@@ -24,6 +24,7 @@ jobs:
           DIR=research/experiments/n11-s9-n24-round2-20261028
           if test -f "$DIR/compact-certificate.json"; then
             node "$DIR/verify_minimal.js" --negative
+            node "$DIR/plan_next.js"
           else
             node "$DIR/prove.js" --propose
           fi
