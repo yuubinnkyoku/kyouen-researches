@@ -21,7 +21,11 @@ const better=(a,b)=>!b||a.cost<b.cost||(a.cost===b.cost&&
 function audit(negative=false){
  const old=prev.audit(false);
  const rows=target.parse(read('n11-s9-targeted-gap266-20261027/certificate.tsv'));
- const cert=target.verify(rows,{terminal:false});
+ // A standalone audit must independently replay the new terminal certificate;
+ // metadata-only checking cannot justify adding these WIN leaves to proof coverage.
+ const cert=target.verify(rows);
+ need(cert.independentGeometries===2&&cert.terminalStatesPerGeometry===25222,
+  'targeted S9 terminal replay was not performed');
  const {missing,by7,win,loss}=base.inventory();
  need(old.proofOnlyWin8After===4011&&old.updated.missing===266&&
   cert.newS9Win===9&&cert.newS8Win===78&&cert.updated.missing===250&&
