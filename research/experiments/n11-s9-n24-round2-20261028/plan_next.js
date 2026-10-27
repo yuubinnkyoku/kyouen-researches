@@ -4,7 +4,6 @@
 // 14-root S8 frontier. Potential incidence is never treated as a WIN proof.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const g=require('../n11-gap6-terminal-20261019/verify_js.js');
-const {source}=require('../n11-s9-n24-priority-20261028/prove.js');
 const {selection}=require('./prove.js');
 const need=(v,m)=>{if(!v)throw Error(m);};
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
@@ -72,7 +71,7 @@ function selfTest(){
 }
 function run(){
   selfTest();
-  const s=selection(),prior=source();
+  const s=selection();
   const cert=JSON.parse(fs.readFileSync(path.join(__dirname,'compact-certificate.json'),'utf8'));
   const bytes=Buffer.from(cert.witnessBase64,'base64');
   need(bytes.length===s.selected.length&&
@@ -86,7 +85,7 @@ function run(){
   const missing=[...s.plan8].filter(h=>!secured.has(h)).sort();
   need(missing.length===118,'conditional 14-root frontier changed');
   const index=new Map(missing.map((h,i)=>[h,i]));
-  const used=new Set([...prior.selected,...s.selected].map(x=>x.h));
+  const used=new Set([...s.priorSelected,...s.selected].map(x=>x.h));
   const options=s.options.filter(x=>!used.has(x.h)).map(x=>{
     let mask=0n;
     for(const h of x.hits)if(index.has(h))mask|=1n<<BigInt(index.get(h));
