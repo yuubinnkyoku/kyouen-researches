@@ -85,7 +85,7 @@ function audit(negative=false){
   need(c6.format==='n11-s9-n24-round6-terminal-v1'&&
     b6.length===p6.selected.length&&b6.length===32&&
     sha(b6)===c6.witnessSha256&&
-    sha(p6.selected.map(x=>x.h).join('\\n')+'\\n')===c6.selectionSha256&&
+    sha(p6.selected.map(x=>x.h).join('\n')+'\n')===c6.selectionSha256&&
     c6.win9===3&&c6.loss9===29&&
     c6.proofOnlyWin8Before===5380&&c6.proofOnlyWin8After===5407,
     'round-six certificate identity');
