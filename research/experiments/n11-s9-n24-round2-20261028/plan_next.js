@@ -14,6 +14,21 @@ function popcount(x){
 }
 function union(rows){let mask=0n;for(const x of rows)mask|=x.mask;return mask;}
 function cost(rows){return rows.reduce((s,x)=>s+x.children,0);}
+// For at-most-limit selection with objective (coverage, -terminal children),
+// A is dispensable when B covers every hit of A at no greater child cost.
+// If B is already picked, A contributes nothing; otherwise replace A by B.
+// Sorting makes the transitive dominance test deterministic and one-pass.
+function pruneDominated(options){
+  const sorted=options.slice().sort((a,b)=>
+    a.children-b.children||popcount(b.mask)-popcount(a.mask)||
+    a.h.localeCompare(b.h));
+  const kept=[];
+  for(const x of sorted){
+    if(kept.some(y=>(x.mask&~y.mask)===0n))continue;
+    kept.push(x);
+  }
+  return kept;
+}
 function greedy(options,limit){
   const picked=[],used=new Set();
   let covered=0n;
@@ -68,6 +83,15 @@ function selfTest(){
   need(popcount(union(before))===5,'synthetic greedy regression');
   const after=improve(rows,before);
   need(popcount(union(after.picked))===6,'synthetic exchange regression');
+  const dominated=[
+    {h:'cheap',mask:7n,children:4,degree:1},
+    {h:'sub',mask:3n,children:5,degree:5},
+    {h:'equal',mask:7n,children:4,degree:0},
+    {h:'other',mask:8n,children:3,degree:1}
+  ];
+  const reduced=pruneDominated(dominated);
+  need(reduced.length===2&&reduced.some(x=>x.h==='cheap')&&
+    reduced.some(x=>x.h==='other'),'synthetic dominance regression');
 }
 function run(){
   selfTest();
@@ -92,14 +116,27 @@ function run(){
     return {...x,mask};
   }).filter(x=>x.mask!==0n);
   need(options.length>0,'no candidate remains');
+  const reduced=pruneDominated(options);
+  need(reduced.length>0&&reduced.length<=options.length,
+    'dominance inventory regression');
   const baseline=greedy(options,32);
-  const optimized=improve(options,baseline);
+  const reducedGreedy=greedy(reduced,32);
+  const better=(a,b)=>popcount(union(a))>popcount(union(b))||
+    (popcount(union(a))===popcount(union(b))&&cost(a)<cost(b));
+  const initial=better(reducedGreedy,baseline)?reducedGreedy:baseline;
+  const optimized=improve(reduced,initial);
   const baselineMask=union(baseline),newMask=union(optimized.picked);
-  need(popcount(newMask)>=popcount(baselineMask),'coverage regression');
+  need(popcount(newMask)>popcount(baselineMask)||
+    (popcount(newMask)===popcount(baselineMask)&&
+      cost(optimized.picked)<=cost(baseline)),
+    'lexicographic planning objective regression');
   const result={
     scope:'potential S9->S8 incidence, not a terminal verdict',
     emptyBoard:'UNKNOWN',proofOnlyWin8:secured.size,unprovedS8:missing.length,
-    eligibleUnprovedS9:options.length,selected:baseline.length,
+    eligibleUnprovedS9:options.length,
+    dominanceUndominatedS9:reduced.length,
+    dominancePrunedS9:options.length-reduced.length,
+    selected:baseline.length,
     baselinePotentialCoverage:popcount(baselineMask),
     optimizedPotentialCoverage:popcount(newMask),
     baselineChildCountCost:cost(baseline),
@@ -112,4 +149,4 @@ function run(){
   return result;
 }
 if(require.main===module)run();
-module.exports={run,greedy,improve,popcount,selfTest};
+module.exports={run,greedy,improve,pruneDominated,popcount,selfTest};
