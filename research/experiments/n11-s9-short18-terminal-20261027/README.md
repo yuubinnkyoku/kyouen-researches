@@ -13,3 +13,7 @@ node research/experiments/n11-s9-short18-terminal-20261027/verify.js --negative
 ```
 
 結果は専用CIによる独立検証後に確定する。これは局所証明であり、7石・5石・二石rootの勝敗を主張しない。**標準11×11空盤UNKNOWN**。
+
+## 独立終局検証の確定（2026-10-27）
+
+専用CI [40431317126](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40431317126) 成功。12個の9石WIN根の全216着手、相異なる10石WIN葉215類を3×3差分行列式と独立4×4 Bareiss法で終局まで再計算し、各方式15,707状態で一致。改変拒否6件成功、WIN/LOSS衝突0。8石WINは2,878→2,968類（純増90）。固定14根の証明済み辺151→164、未証明辺397→384（相異なる384類）。条件付き14根の再最適化は別実験に記録。7石・5石・二石root閉鎖0、空盤UNKNOWN。
