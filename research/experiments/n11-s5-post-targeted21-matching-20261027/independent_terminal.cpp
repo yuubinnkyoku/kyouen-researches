@@ -86,8 +86,14 @@ int main(int argc,char** argv){try{
   roots.push_back({key,states});
  }
  check(roots.size()==9,"wrong S9 witness count");
- unordered_set<U128,Hash128> unique10;int totalStates=0,totalEdges=0;
+ unordered_set<U128,Hash128> unique10,parents8;int totalStates=0,totalEdges=0;
  for(auto [key,expected]:roots){U128 b=parse(key);check(pts(b).size()==9&&canonical(b)==b,"invalid canonical S9 root");
+  for(int occupied:pts(b)){
+   U128 parent=canonical(b^((U128)1<<occupied));
+   bool incidence=false;
+   for(int q:legal(parent))if(canonical(parent|((U128)1<<q))==b){incidence=true;break;}
+   check(incidence,"illegal S8 to S9 witness incidence");parents8.insert(parent);
+  }
   auto children=legal(b);unordered_set<U128,Hash128> childKeys;int subtotal=0;
   for(int q:children){U128 c=canonical(b|((U128)1<<q));childKeys.insert(c);
    auto r=solve10(c);check(r.win,"S10 non-WIN leaf");subtotal+=r.states;unique10.insert(c);totalEdges++;
@@ -95,6 +101,6 @@ int main(int argc,char** argv){try{
   check(childKeys.size()==21&&children.size()==21,"incorrect S9 boundary");
   check(subtotal==expected,"S9 terminal states mismatch");totalStates+=subtotal;
  }
- check(totalEdges==189&&unique10.size()==188&&totalStates==25222,"total witness census mismatch");
- cout<<"PASS independent C++ terminal replay: 9 S9 WIN, 189 S10 edges, 188 distinct leaves, 25222 states; empty board UNKNOWN\n";
+ check(totalEdges==189&&unique10.size()==188&&totalStates==25222&&parents8.size()==79,"total witness census mismatch");
+ cout<<"PASS independent C++ terminal replay: 9 S9 WIN, 79 S8 WIN parents, 189 S10 edges, 188 distinct leaves, 25222 states; empty board UNKNOWN\n";
  }catch(const exception& e){cerr<<"FAIL "<<e.what()<<'\n';return 1;}}
