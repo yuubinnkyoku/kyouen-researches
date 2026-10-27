@@ -66,12 +66,12 @@ def main():
                         continue
                     assert tuple(sorted((a,b))) not in edges
                     hist1[occupied_mex(edges | {tuple(sorted((a,b)))})] += 1
-    assert good==[(u,v) for u in (0,1,2,3,11) for v in (0,1,2)]
+    # An excluded alpha-11 gluing can in fact attain Grundy 11.\n    excluded = glued(2,4) | {(5,15)}\n    assert not independent_twelves(excluded)\n    assert occupied_mex(excluded)==11\n    assert good==[(u,v) for u in (0,1,2,3,11) for v in (0,1,2)]
     assert [hist0[k] for k in range(11)] == [3,0,0,0,1,0,4,2,4,0,1]
     assert [hist1[k] for k in range(11)] == [166,22,10,17,101,64,82,38,69,14,17]
     print('independent gluing classification:',len(good),'of 91')
     print('0 bridge histogram:',dict(sorted(hist0.items())))
     print('1 bridge histogram:',dict(sorted(hist1.items())))
-    print('all 615 Python occupied-mex values match C++')
+    print('all 615 Python occupied-mex values match C++')\n    print('excluded alpha-11 gluing (2,4) plus bridge (5,15): Grundy 11')
 
 if __name__=='__main__':main()
