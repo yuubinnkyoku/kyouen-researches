@@ -6,6 +6,9 @@ on:
       - '.github/workflows/n11-s5-post-n23-remaining-matching.yml'
       - 'research/experiments/n11-s5-post-n23-remaining-matching-20261027/**'
   workflow_dispatch:
+concurrency:
+  group: n11-post-remaining-matching-main
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
