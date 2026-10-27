@@ -58,6 +58,25 @@ function priorProofs(){
   'prior proof-only S8 WIN coverage changed');
  return {old9:new Set(old9),before,loss};
 }
+// Replay each claimed verdict from independent terminal leaves. The negative
+// controls exercise this same path, not merely a checksum inequality.
+function checkedTerminal(leaf,expectedWin){
+ const a=g.solve10(leaf),z=ind.solve4(leaf);
+ need(a.win===expectedWin&&z.win===expectedWin&&
+  a.states===z.states&&a.legal===z.legal,
+  'false '+(expectedWin?'WIN':'LOSS')+'10 leaf / geometry disagreement '+leaf);
+ return a;
+}
+function replayRoot(ordered,index){
+ need(ordered.length===22,'invalid S9 child boundary');
+ if(index===255){
+  let subtotal=0;
+  for(const leaf of ordered)subtotal+=checkedTerminal(leaf,true).states;
+  return subtotal;
+ }
+ need(Number.isInteger(index)&&index>=0&&index<22,'invalid LOSS witness index');
+ return checkedTerminal(ordered[index],false).states;
+}
 function verify({negative=false}={}){
  need(cert.format==='n11-s9-n22-shared-terminal-compact-v1'&&
   cert.board===11&&cert.perspective==='original-first-player'&&
@@ -84,13 +103,8 @@ function verify({negative=false}={}){
   const ordered=[...children].sort(),index=witness[j];
   if(index===255){
    win9.push(h);if(prior.old9.has(h))knownWin9++;
-   let subtotal=0;
-   for(const leaf of ordered){
-    const a=g.solve10(leaf),z=ind.solve4(leaf);
-    need(a.win&&z.win&&a.states===z.states&&a.legal===z.legal,
-     'false WIN10 leaf / geometry disagreement '+leaf);
-    subtotal+=a.states;win10.add(leaf);winEdges++;
-   }
+   const subtotal=replayRoot(ordered,index);
+   for(const leaf of ordered){win10.add(leaf);winEdges++;}
    winStates+=subtotal;expanded.push(h+' WIN - '+subtotal);
    for(const parent of g.reverse([h])){
     need(g.children(g.board(parent,8)).has(h)&&
@@ -98,13 +112,25 @@ function verify({negative=false}={}){
     derived8.add(parent);
    }
   }else{
-   need(index>=0&&index<22,'invalid LOSS witness index '+h);
-   const leaf=ordered[index],a=g.solve10(leaf),z=ind.solve4(leaf);
-   need(!a.win&&!z.win&&a.states===z.states&&a.legal===z.legal,
-    'false LOSS10 witness / geometry disagreement '+leaf);
-   loss9.push(h);loss10.add(leaf);lossStates+=a.states;
-   expanded.push(h+' LOSS '+leaf+' '+a.states);
+   const states=replayRoot(ordered,index),leaf=ordered[index];
+   loss9.push(h);loss10.add(leaf);lossStates+=states;
+   expanded.push(h+' LOSS '+leaf+' '+states);
   }
+ }
+ if(negative){
+  // A forged witness can carry newly calculated digests. The terminal
+  // verifier must reject the false verdict even without any digest check.
+  const reject=(h,index,expected)=>{
+   const ordered=[...g.children(g.board(h,9))].sort();
+   let error=null;
+   try{replayRoot(ordered,index);}catch(e){error=e;}
+   need(error&&error.message.startsWith('false '+expected+'10 leaf'),
+    'forged '+expected+'10 terminal claim was not rejected');
+  };
+  // A WIN root cannot be re-labelled LOSS via a 0..21 witness byte;
+  // a LOSS root cannot be re-labelled WIN via the 255 witness byte.
+  reject(win9[0],0,'LOSS');
+  reject(loss9[0],255,'WIN');
  }
  need(sha(expanded.join('\n')+'\n')===cert.expandedSha256,
   'expanded certificate digest mismatch');
