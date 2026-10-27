@@ -93,7 +93,7 @@ function selfTest(){
   need(reduced.length===2&&reduced.some(x=>x.h==='cheap')&&
     reduced.some(x=>x.h==='other'),'synthetic dominance regression');
 }
-function run(){
+function run({quiet=false}={}){
   selfTest();
   const s=selection();
   const cert=JSON.parse(fs.readFileSync(path.join(__dirname,'compact-certificate.json'),'utf8'));
@@ -146,7 +146,7 @@ function run(){
     selectedKeysSha256:sha(optimized.picked.map(x=>x.h).sort().join('\n')+'\n'),
     newlyProvedS8:0,newTwoStoneClosures:0
   };
-  console.log(JSON.stringify(result,null,2));
+  if(!quiet)console.log(JSON.stringify(result,null,2));
   return result;
 }
 if(require.main===module)run();
