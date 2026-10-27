@@ -1,0 +1,62 @@
+name: N11 four S9 batches third independent C++ terminal audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-batch-cpp-audit.yml'
+      - 'research/experiments/n11-s9-batch-cpp-audit-20261027/**'
+      - 'research/experiments/n11-s9-degree2-terminal-20261027/certificate.tsv'
+      - 'research/experiments/n11-s9-degree2-short-terminal-20261027/certificate.tsv'
+      - 'research/experiments/n11-s9-short46-terminal-20261027/certificate.tsv'
+      - 'research/experiments/n11-s9-short18-terminal-20261027/certificate.tsv'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile independent integer geometry and terminal solver
+        run: |
+          g++ -std=c++17 -O2 -Wall -Wextra -Werror research/experiments/n11-s9-batch-cpp-audit-20261027/independent_terminal.cpp -o /tmp/n11-s9-batch-cpp
+      - name: Recompute all four complete S9 terminal batches
+        run: |
+          for mode in degree2 degree2-short short46 short18; do
+            /tmp/n11-s9-batch-cpp "research/experiments/n11-s9-${mode}-terminal-20261027/certificate.tsv" "$mode"
+          done
+      - name: Reject certificate tampering independently
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess
+          import tempfile
+          for mode in ('degree2', 'degree2-short', 'short46', 'short18'):
+              original = Path(f'research/experiments/n11-s9-{mode}-terminal-20261027/certificate.tsv').read_text()
+              lines = original.splitlines()
+              assert len(lines) > 5 and lines[2] == '# empty_board=UNKNOWN'
+              row1, row2 = lines[4].split(), lines[5].split()
+              assert len(row1) == len(row2) == 3 and int(row2[2]) > 1
+              altered = {}
+              balanced = lines.copy()
+              row1[2] = str(int(row1[2]) + 1)
+              row2[2] = str(int(row2[2]) - 1)
+              balanced[4], balanced[5] = ' '.join(row1), ' '.join(row2)
+              altered['balanced-states'] = '\n'.join(balanced) + '\n'
+              altered['changed-header'] = original.replace('empty_board=UNKNOWN', 'empty_board=WIN', 1)
+              altered['missing-row'] = '\n'.join(lines[:-1]) + '\n'
+              changed = lines.copy()
+              parts = changed[4].split()
+              parts[1] = str(int(parts[1]) + 1)
+              changed[4] = ' '.join(parts)
+              altered['wrong-child-count'] = '\n'.join(changed) + '\n'
+              with tempfile.TemporaryDirectory() as directory:
+                  for name, data in altered.items():
+                      assert data != original
+                      target = Path(directory) / (name + '.tsv')
+                      target.write_text(data)
+                      result = subprocess.run(['/tmp/n11-s9-batch-cpp', str(target), mode], capture_output=True, text=True)
+                      assert result.returncode != 0, f'{mode}: corrupt {name} accepted'
+              print(f'PASS {mode}: four tampering variants rejected')
+          PY
