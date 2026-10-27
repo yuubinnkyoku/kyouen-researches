@@ -17,5 +17,31 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Independently verify 55 S9 WIN proofs and reject tampering
+      - name: Verify 55 S9 WIN roots by two integer geometries and reject tampering
         run: node research/experiments/n11-s9-n19-terminal-20261027/verify.js --negative
+      - name: Compile and replay third independent C++17 terminal checker
+        run: |
+          g++ -std=c++17 -O2 -Wall -Wextra -Werror research/experiments/n11-s9-n19-terminal-20261027/independent_terminal.cpp -o /tmp/n11-n19-independent
+          /tmp/n11-n19-independent research/experiments/n11-s9-n19-terminal-20261027/certificate.tsv
+      - name: Reject four corrupted certificates in independent C++ checker
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess
+          import tempfile
+          original = Path('research/experiments/n11-s9-n19-terminal-20261027/certificate.tsv').read_text()
+          altered = {
+              'changed-root': original.replace('00008000400000821084000400000020', '00008000400000821084000400000021', 1),
+              'changed-states': original.replace('19 883', '19 884', 1),
+              'changed-header': original.replace('empty_board=UNKNOWN', 'empty_board=WIN', 1),
+              'missing-row': '\n'.join(original.splitlines()[:-1]) + '\n',
+          }
+          with tempfile.TemporaryDirectory() as directory:
+              for name, data in altered.items():
+                  assert data != original, name
+                  file = Path(directory) / (name + '.tsv')
+                  file.write_text(data)
+                  result = subprocess.run(['/tmp/n11-n19-independent', str(file)], capture_output=True, text=True)
+                  assert result.returncode != 0, f'corrupt certificate accepted: {name}'
+          print('PASS four independent C++ certificate mutation rejections')
+          PY
