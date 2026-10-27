@@ -22,8 +22,12 @@ node research/experiments/n11-s9-n23-remaining-20261027/verify_minimal.js --nega
 node research/experiments/n11-s9-n23-remaining-20261027/prove.js --negative
 ```
 
-専用workflow `.github/workflows/n11-s9-n23-remaining.yml` では、通常pushは軽量検証のみを実行し、従来の全件再計算は `workflow_dispatch` で手動起動した場合に限る。これにより、既に固定済みの完全分類を文書更新のたびに再計算しない。2026-10-27 23時台JSTの記録時点では[run 40517912159](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40517912159)がqueuedであり、**新検証器の実行成功はまだ確認できていない**。後続回で結果・失敗を回収する。
+専用workflow `.github/workflows/n11-s9-n23-remaining.yml` では、通常pushは軽量検証のみを実行し、従来の全件再計算は `workflow_dispatch` で手動起動した場合に限る。これにより、既に固定済みの完全分類を文書更新のたびに再計算しない。
 
-また、[Knowledge integrity CI](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40512652835)が既存文書のK0336相対リンク誤りで失敗していたため、リンクを `../../../knowledge/items/...` に修正した。修正後のCI結果は別途確認する。
+**CI検証成功**：[run 40518487814](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40518487814)。改変拒否試験込みで9石WIN23・LOSS134、証明義務663件、相異なる10石終局葉**657類**、終局再帰状態**94,390**（各独立幾何）、WIN/LOSS衝突0、証明限定8石WIN5,292、14根未証明126を再現した。負例検査が追加で触れる葉や状態を本体の測定値に混ぜる集計誤りを発見して修正し、再実行成功。
+
+同一CI実行環境の[run 40517912159](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40517912159)では、軽量検証ステップ**16秒**、従来の全件再計算ステップ**108秒**で、壁時計の比較は約**6.75倍**。この時間差はその実行環境での測定であり、一般的な計算時間の下界ではない。
+
+また、[Knowledge integrity CI](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40512652835)が既存文書のK0336相対リンク誤りで失敗していたため、リンクを `../../../knowledge/items/...` に修正した。修正後の[Knowledge integrity CI 40518062457](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40518062457)は成功した。
 
 この回で新規9石・7石・5石勝敗証明0件、二石root閉鎖0件。証明限定8石WIN **5,292類**、条件付き14根の厳密未証明辺 **126本**は変わらない。**11×11空盤UNKNOWN。**
