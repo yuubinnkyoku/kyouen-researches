@@ -17,7 +17,7 @@
 | 保存14根の未証明辺 | **120本（変化なし）** |
 | WIN/LOSS衝突 | 0件 |
 
-固定証明書の検査では、各9石LOSSにつき**10石LOSS証人1個**で十分。したがって`verify_minimal.js --negative`は**64件**の10石終局だけを独立した両幾何で再計算する。偽の9石WINを主張した場合は全子検査中にLOSS子を発見して拒否する。
+固定証明書の検査では、各9石LOSSにつき**10石LOSS証人1個**で十分。したがって`verify_minimal.js --negative`は**64件**の10石終局だけを独立した両幾何で再計算する（各幾何の終局再帰状態**5,579**）。偽の9石WINを主張した場合は全子検査中にLOSS子を発見して拒否する。
 
 ```sh
 node research/experiments/n11-s9-short-single-parent-20261028/verify_minimal.js --negative
@@ -25,7 +25,7 @@ node research/experiments/n11-s9-short-single-parent-20261028/prove.js
 ```
 
 - 初回終局探索CI： https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40528084710 （成功）
-- 固定証人の独立検査CI： https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40528361407 （検証中）
+- 固定証人の独立検査CI： https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40528361407 （成功）
 
 **注意：** 64類の9石LOSSから、その8石親の勝敗は導けない。短い子数が9石LOSSを一般に保証するとも主張しない。今回の有限標本はすべてLOSSだったため、次の証明義務削減では24子以上の候補や、別の選択基準の方が有望な可能性がある。
 
