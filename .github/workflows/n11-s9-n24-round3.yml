@@ -1,0 +1,20 @@
+name: N11 S9 planned round-three bounded terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n24-round3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check 32 planner-selected S9 positions with independent integer geometries
+        run: node research/experiments/n11-s9-n24-round3-20261028/prove.js --propose
