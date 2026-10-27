@@ -1,0 +1,21 @@
+name: N11 targeted 21-child S9 witness survey
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-targeted-gap266.yml'
+      - 'research/experiments/n11-s9-targeted-gap266-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Bounded 300 candidate terminal survey
+        run: node research/experiments/n11-s9-targeted-gap266-20261027/survey.js
