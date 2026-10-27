@@ -32,7 +32,7 @@ function selection(){
   }
   need(selected.length===32,'not enough fresh, nonredundant S9 candidates');
   need(selected.every(x=>x.children>=24&&x.liveHits.length>0),'bad candidate');
-  return {...s,selected,covered,availableCount:s.options.length-used.size,
+  return {...s,selected,covered,priorSelected:prior.selected,availableCount:s.options.length-used.size,
     currentCandidateCount:s.options.filter(x=>!used.has(x.h)&&
       x.hits.some(h=>s.missing.has(h))).length};
 }
