@@ -18,4 +18,4 @@ jobs:
         with:
           node-version: '22'
       - name: Recompute remaining selected S9 positions through two terminal geometries
-        run: node research/experiments/n11-s9-n23-remaining-20261027/prove.js --propose
+        run: node research/experiments/n11-s9-n23-remaining-20261027/prove.js --negative
