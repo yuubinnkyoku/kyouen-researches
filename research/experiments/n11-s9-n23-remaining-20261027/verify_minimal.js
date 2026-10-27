@@ -91,6 +91,9 @@ function verify(negative=false){
   }
   need(win9.length===23&&loss9.length===134&&edges===529&&
     obligations===663,'minimal terminal proof census');
+  // Negative controls may visit additional leaves; do not count them as
+  // certificate obligations or in the measured positive replay.
+  const positiveReplay={obligations,leaves:cache.size,states};
   if(negative){
     const w=witness.indexOf(255),l=witness.findIndex(x=>x!==255);
     need(w>=0&&l>=0,'missing polarity');
@@ -118,9 +121,10 @@ function verify(negative=false){
     updated.missing===126,'conditional 14-root coverage');
   return {verified:true,method:'minimal terminal witness replay',
     selectedS9:157,win9:23,loss9:134,
-    s10Obligations:obligations,uniqueS10Leaves:cache.size,
-    terminalStatesPerGeometry:states,fullChildOccurrences:157*23,
-    obligationsAvoided:157*23-obligations,
+    s10Obligations:positiveReplay.obligations,
+    uniqueS10Leaves:positiveReplay.leaves,
+    terminalStatesPerGeometry:positiveReplay.states,fullChildOccurrences:157*23,
+    obligationsAvoided:157*23-positiveReplay.obligations,
     proofOnlyWin8:after.size,unprovedPlanEdges:updated.missing,
     winLossConflicts:0,emptyBoard:'UNKNOWN'};
 }
