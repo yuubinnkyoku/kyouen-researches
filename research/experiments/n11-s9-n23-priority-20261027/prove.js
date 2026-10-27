@@ -9,6 +9,54 @@ const n22=require('../n11-s9-n22-complete-20261027/verify.js');
 const need=(x,m)=>{if(!x)throw Error(m);};
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const same=(a,b)=>a.size===b.size&&[...a].every(x=>b.has(x));
+function validateFrozen(result,rows,leafCache){
+  const cert=JSON.parse(fs.readFileSync(path.join(__dirname,'compact-certificate.json'),'utf8'));
+  const fields=['format','board','perspective','emptyBoard','candidates',
+    'positiveGapCandidates','selected','selectionSha256','witnessBase64',
+    'witnessSha256','win9','loss9','win10Edges','independentTerminalLeaves',
+    'terminalStatesPerGeometry','derivedWin8','newProofOnlyWin8',
+    'proofOnlyWin8Before','proofOnlyWin8After','knownLoss8'];
+  for(const field of fields)need(cert[field]===result[field],
+    'frozen certificate mismatch: '+field);
+  need(JSON.stringify(cert.previous)===JSON.stringify(result.previous)&&
+    JSON.stringify(cert.updated)===JSON.stringify(result.updated),
+    'frozen conditional proof coverage mismatch');
+  const claims=Buffer.from(cert.witnessBase64,'base64');
+  need(claims.length===rows.length&&
+    claims.toString('base64')===cert.witnessBase64&&
+    sha(claims)===cert.witnessSha256,'invalid frozen witness bytes');
+  function checkClaims(bytes){
+    for(let i=0;i<rows.length;i++){
+      const ordered=[...g.children(g.board(rows[i].h,9))].sort();
+      need(ordered.length===23,'invalid S9 child boundary');
+      const index=bytes[i];
+      if(index===255){
+        need(ordered.every(h=>leafCache.has(h)&&leafCache.get(h).win),
+          'false WIN10 leaf');
+      }else{
+        need(index>=0&&index<23,'invalid LOSS witness index');
+        need(leafCache.has(ordered[index])&&!leafCache.get(ordered[index]).win,
+          'false LOSS10 leaf');
+      }
+    }
+  }
+  checkClaims(claims);
+  if(process.argv.includes('--negative')){
+    const w=rows.findIndex(r=>r.witness===255);
+    const l=rows.findIndex(r=>r.witness!==255);
+    need(w>=0&&l>=0,'missing opposite verdicts for negative tests');
+    const reject=(i,b,expected)=>{
+      const altered=Buffer.from(claims);altered[i]=b;
+      let err=null;try{checkClaims(altered);}catch(e){err=e;}
+      need(err&&err.message.startsWith(expected),
+        'forged terminal verdict was not rejected: '+expected);
+      need(sha(altered)!==cert.witnessSha256,
+        'mutated certificate digest unchanged');
+    };
+    reject(w,0,'false LOSS10 leaf');
+    reject(l,255,'false WIN10 leaf');
+  }
+}
 function run(){
   // The prior 890-root certificate must be terminal-replayed before its
   // propagated WIN8 set is admitted as evidence.
@@ -81,7 +129,7 @@ function run(){
   need(old.total===548&&old.missing===174&&updated.missing<=174,
     'conditional proof-only coverage regression');
   const witness=Buffer.from(rootRows.map(x=>x.witness));
-  return {
+  const result={
     format:'n11-s9-n23-priority-terminal-probe-v1',board:11,
     perspective:'original-first-player',emptyBoard:'UNKNOWN',
     candidates:choices.length,positiveGapCandidates:positive,
@@ -96,6 +144,8 @@ function run(){
     firstFive:rootRows.slice(0,5),winLossConflicts:0,
     newS7Verdicts:0,newS5Verdicts:0,twoStoneClosures:0
   };
+  validateFrozen(result,rootRows,leafCache);
+  return result;
 }
 if(require.main===module)console.log(JSON.stringify(run(),null,2));
 module.exports={run};
