@@ -1,0 +1,21 @@
+name: N11 targeted 24+ child S9 terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n24-priority.yml'
+      - 'research/experiments/n11-s9-n24-priority-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recompute 24+ child candidate verdicts using two integer geometries
+        run: node research/experiments/n11-s9-n24-priority-20261028/prove.js --propose
