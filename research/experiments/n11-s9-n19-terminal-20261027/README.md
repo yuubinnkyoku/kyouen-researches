@@ -20,3 +20,16 @@ node research/experiments/n11-s9-n19-terminal-20261027/verify.js --negative
 専用CI [40437145120](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40437145120) 成功。全55根・1,045着手・相異なる1,026類の10石WIN葉を、3×3差分行列式と独立4×4 Bareiss法で終局まで再計算し、各方式83,884状態で一致した。改変拒否6件成功、WIN/LOSS衝突0。
 
 9石WIN55類から8石WIN477類を導出し、うち**426類が新規証明**。証明限定8石WINは2,968→3,394類。固定14根の証明済み7→8石辺は164→215本、未証明辺は384→**333本**（相異なる333類）。この333は固定計画の上界であり、再最適化前の厳密最小値ではない。新規7石・5石・二石root閉鎖0、**空盤UNKNOWN**。
+
+## 第三の独立終局検証（C++17、2026-10-27）
+
+`independent_terminal.cpp` は、JavaScriptの3×3差分行列式・4×4 Bareiss法や保存済み勝敗表を使用しない。整数4×4行列式の余因子展開で禁止4点を判定し、D4正準化、9石根の安全性、全8石逆親の合法性、9→10石の全合法着手、10石以降の禁止2・3・4点組と終局までの通常プレイ再帰を独立に実装する。
+
+55個の9石WIN根、相異なる8石WIN逆親477類、9→10石着手1,045本、相異なる10石葉1,026類、終局探索状態数83,884が既存二実装の証明書と一致した。証明書の根・状態数・UNKNOWNヘッダ・行数を改変した4件も拒否した。専用CI [40465471579](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40465471579) でC++検証・改変拒否を含む全手順が成功。
+
+```sh
+g++ -std=c++17 -O2 -Wall -Wextra -Werror research/experiments/n11-s9-n19-terminal-20261027/independent_terminal.cpp -o /tmp/n11-n19-independent
+/tmp/n11-n19-independent research/experiments/n11-s9-n19-terminal-20261027/certificate.tsv
+```
+
+これは既存55根の証拠を第三実装で強化したもので、新規勝敗証明は0件。上流の証明済み8石全4,089類をC++だけで検査したわけではない。7石・5石・二石rootの新規閉鎖はなく、**標準11×11空盤UNKNOWN**。
