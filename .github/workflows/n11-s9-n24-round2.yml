@@ -1,0 +1,29 @@
+name: N11 S9 24+ round-two bounded terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n24-round2.yml'
+      - 'research/experiments/n11-s9-n24-round2-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probe 32 current-frontier S9 positions or verify frozen certificate
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR=research/experiments/n11-s9-n24-round2-20261028
+          if test -f "$DIR/compact-certificate.json"; then
+            node "$DIR/verify_minimal.js" --negative
+          else
+            node "$DIR/prove.js" --propose
+          fi
