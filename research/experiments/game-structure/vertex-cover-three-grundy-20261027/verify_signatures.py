@@ -86,7 +86,7 @@ def main():
         0: 3735, 1: 3264, 2: 3695, 3: 4603, 4: 2199
     }
     assert witnesses[4] == (0, (0, 0, 0, 0, 1, 2, 1))
-    print("distribution", dict(sorted(distribution.items())))
+    assert max(g ^ 1 for g in distribution) == 5  # One isolated vertex.\n    print("distribution", dict(sorted(distribution.items())))\n    print("general maximum with isolated vertices", max(g ^ 1 for g in distribution))
     print("maximum", max(distribution), "witness", witnesses[4])
     print("by cover-edge mask", by_cover_edges)
     print("memo", sg.cache_info())
