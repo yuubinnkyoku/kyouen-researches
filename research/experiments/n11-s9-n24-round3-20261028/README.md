@@ -21,7 +21,7 @@
 
 固定証人は `compact-certificate.json`。32局面の順序SHA-256、証人32バイトのSHA-256、各局面のLOSS子番号（WINの場合255）を保存する。WIN9には全合法10石子のWIN、LOSS9には少なくとも1個の合法10石LOSS子が必要である。9石LOSSから8石LOSSは導出しない。
 
-`verify_minimal.js` はWIN9の全53子とLOSS9の固定30証人だけを再計算するため、**終局検証義務は204件から83件（59.3%減）**。両整数幾何で再検査し、偽のWIN・LOSS・範囲外証人を拒否する。改変拒否試験に使った追加計算は正規の検証量へ含めない。
+`verify_minimal.js` はWIN9の全53子とLOSS9の固定30証人だけを再計算するため、**終局検証義務は204件から83件（59.3%減）**。相異なる10石終局も83類、終局再帰状態は各整数幾何**18,029状態**（初回34,627から47.9%減）。両整数幾何で再検査し、偽のWIN・LOSS・範囲外証人を拒否する。改変拒否試験に使った追加計算は正規の検証量へ含めない。[独立最小証人・全探索再検証CI 40568294818](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40568294818) **成功**。改変拒否の有無で正規検証指標が変化しないことも確認した。
 
 ```sh
 node research/experiments/n11-s9-n24-round3-20261028/verify_minimal.js --negative
