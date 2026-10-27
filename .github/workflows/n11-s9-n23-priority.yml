@@ -1,0 +1,21 @@
+name: N11 targeted 23-child S9 terminal proof probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n23-priority.yml'
+      - 'research/experiments/n11-s9-n23-priority-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently classify selected 23-child S9 positions
+        run: node research/experiments/n11-s9-n23-priority-20261027/prove.js
