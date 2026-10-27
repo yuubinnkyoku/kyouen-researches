@@ -1,0 +1,21 @@
+name: N11 remaining 23-child S9 terminal probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n23-remaining.yml'
+      - 'research/experiments/n11-s9-n23-remaining-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recompute remaining selected S9 positions through two terminal geometries
+        run: node research/experiments/n11-s9-n23-remaining-20261027/prove.js --propose
