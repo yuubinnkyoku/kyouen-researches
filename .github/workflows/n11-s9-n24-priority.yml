@@ -17,5 +17,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Recompute 24+ child candidate verdicts using two integer geometries
-        run: node research/experiments/n11-s9-n24-priority-20261028/prove.js --propose
+      - name: Independently replay minimal terminal obligations and forged verdicts
+        run: node research/experiments/n11-s9-n24-priority-20261028/verify_minimal.js --negative
+      - name: Recompute exploratory full first-LOSS census (manual audit)
+        if: github.event_name == 'workflow_dispatch'
+        run: node research/experiments/n11-s9-n24-priority-20261028/prove.js
