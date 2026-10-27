@@ -1,0 +1,26 @@
+name: N11 post n23 terminal exact conditional matching
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s5-post-n23-matching.yml'
+      - 'research/experiments/n11-s5-post-n23-matching-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install matching library
+        run: python -m pip install 'networkx==3.4.2'
+      - name: Replay n23 terminal certificate and independently verify exact matching
+        run: python research/experiments/n11-s5-post-n23-matching-20261027/verify.py --negative
