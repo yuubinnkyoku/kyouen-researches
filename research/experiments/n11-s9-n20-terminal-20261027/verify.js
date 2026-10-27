@@ -69,9 +69,11 @@ function verify(rows,{terminal=true}={}){
   need(!roots.has(row.s9)&&!priorSet.has(row.s9),'duplicate/previous S9 WIN');
   roots.add(row.s9);
   need(!loss9.has(row.s9),'S9 WIN/LOSS conflict: '+row.s9);
-  need(Number.isSafeInteger(row.states)&&row.states>0,'invalid state count');
+  need(Number.isSafeInteger(row.leaves)&&row.leaves>0&&
+   Number.isSafeInteger(row.states)&&row.states>0,'invalid metadata');
   const actual=g.children(g.board(row.s9,9));
-  need(actual.size===20&&same(actual,ind.children4(row.s9)),
+  need(actual.size===20&&actual.size===row.leaves&&
+   same(actual,ind.children4(row.s9)),
    'incomplete/incorrect 9-to-10 AND boundary: '+row.s9);
   const parents=g.reverse([row.s9]);
   need(parents.size===9,'incorrect S8 reverse boundary');
