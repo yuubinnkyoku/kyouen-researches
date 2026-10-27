@@ -1,0 +1,21 @@
+name: N11 shared 22-child S9 complete terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n22-complete.yml'
+      - 'research/experiments/n11-s9-n22-complete-20261027/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recompute all 890 WIN/LOSS terminal certificates with independent integer geometries
+        run: node research/experiments/n11-s9-n22-complete-20261027/verify.js --negative
