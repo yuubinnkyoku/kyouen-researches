@@ -17,6 +17,13 @@ jobs:
         with:
           node-version: '22'
       - name: Replay minimal independent terminal witnesses and forged controls
-        run: node research/experiments/n11-s9-n24-round3-20261028/verify_minimal.js --negative
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR=research/experiments/n11-s9-n24-round3-20261028
+          node "$DIR/verify_minimal.js" > /tmp/n11-positive.json
+          node "$DIR/verify_minimal.js" --negative > /tmp/n11-negative.json
+          diff -u /tmp/n11-positive.json /tmp/n11-negative.json
+          cat /tmp/n11-positive.json
       - name: Replay complete first-loss search against frozen certificate
         run: node research/experiments/n11-s9-n24-round3-20261028/prove.js
