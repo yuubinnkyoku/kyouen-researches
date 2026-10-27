@@ -14,7 +14,12 @@ const count=planner.popcount;
 const union=rows=>rows.reduce((m,x)=>m|x.mask,0n);
 const cost=rows=>rows.reduce((n,x)=>n+x.children,0);
 function inventory(){
-  const old=prior.inventory(),s=old.s;
+  // Upstream planner prints a diagnostic JSON object; keep this module's
+  // stdout machine-readable for the independent matching verifier.
+  let old;const originalLog=console.log;
+  try{console.log=()=>{};old=prior.inventory();}
+  finally{console.log=originalLog;}
+  const s=old.s;
   const cert=JSON.parse(fs.readFileSync(path.join(__dirname,
     '../n11-s9-n24-round3-20261028/compact-certificate.json'),'utf8'));
   const raw=Buffer.from(cert.witnessBase64,'base64');
