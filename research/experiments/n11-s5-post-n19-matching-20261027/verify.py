@@ -24,7 +24,7 @@ def verify(negative=False):
         *(['--negative'] if negative else []),
     ])
     raw = subprocess.check_output([
-        'node', str(HERE / 'audit.js'),
+        'node', str(HERE / ('test_fail_closed.js' if negative else 'audit.js')),
         *(['--negative'] if negative else []),
     ], text=True)
     r = json.loads(raw)
