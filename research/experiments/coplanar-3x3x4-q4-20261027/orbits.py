@@ -8,7 +8,7 @@ verify.py embeds the same action for m=4 only.
 """
 import sys, json
 from itertools import combinations, permutations, product
-m=int(sys.argv[1]); assert m in (4,5,6)
+m=int(sys.argv[1]); assert m in (4,5,6,7)
 P=list(product(range(3),range(3),range(m))); n=len(P)
 perms=list(permutations(range(4)))
 signs={p:(-1 if sum(p[i]>p[j] for i in range(4) for j in range(i+1,4))%2 else 1) for p in perms}

@@ -717,21 +717,28 @@
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (proof): 実験の範囲・方式・再現手順
 - [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) (proof): 実験の範囲・方式・再現手順
 - [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) (proof): 実験の範囲・方式・再現手順（m=4,5,6を収録）
+- [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md) (proof): 実験の範囲・方式・再現手順（m=4,5,6,7を収録）
+## [research/experiments/coplanar-3x3x4-q4-20261027/enum2.cpp](../../../research/experiments/coplanar-3x3x4-q4-20261027/enum2.cpp)
+
+- [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md) (verifier): Leibniz 4×4行列式・安全集合のボトムアップ全生成・上位層からのmexによる独立再計算（C++、点順序はverify.pyと同じ (x,y,z)）
 ## [research/experiments/coplanar-3x3x4-q4-20261027/independent.cpp](../../../research/experiments/coplanar-3x3x4-q4-20261027/independent.cpp)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (verifier): 外積行列式・uint64_tマスク・空盤DFSメモ化による独立再計算（C++、点順序はPythonと異なる）
 - [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) (verifier): 外積行列式・uint64_tマスク・空盤DFSメモ化による独立再計算（C++、点順序はPythonと異なる）
 - [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) (verifier): 外積行列式・uint64_tマスク・空盤DFSメモ化による独立再計算（C++、点順序はPythonと異なる）
+- [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md) (verifier): 外積行列式・uint64_tマスク・空盤DFSメモ化（C++、点順序は (z,y,x)）
 ## [research/experiments/coplanar-3x3x4-q4-20261027/orbits.py](../../../research/experiments/coplanar-3x3x4-q4-20261027/orbits.py)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (verifier): 最大層1,028配置のD4×Z2軌道分割（65軌道）を再現する第三の確認
 - [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) (verifier): 最大層304配置のD4×Z2軌道分割（19軌道）を再現する確認
 - [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) (verifier): 最大層5,376配置のD4×Z2軌道分割（338軌道）を再現する確認
+- [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md) (verifier): 最大層55,240配置のD4×Z2軌道分割（3,466軌道）を再現する確認（Python）
 ## [research/experiments/coplanar-3x3x4-q4-20261027/results.md](../../../research/experiments/coplanar-3x3x4-q4-20261027/results.md)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (data): m=1〜3回帰照合とm=4の全集計（層別局面数・終局数・g/h分布・初手軌道表）
 - [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) (data): m=1〜3回帰照合とm=5の全集計（層別局面数・終局数・g/h分布・初手分類）
 - [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) (data): m=1〜3回帰照合とm=6の全集計（層別局面数・終局数・g/h分布・初手分類）
+- [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md) (data): m=1〜3回帰照合とm=7の全集計（層別局面数・終局数・g/h分布・初手軌道表）
 ## [research/experiments/coplanar-3x3x4-q4-20261027/verify.py](../../../research/experiments/coplanar-3x3x4-q4-20261027/verify.py)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (verifier): Leibniz 4×4行列式・安全集合の昇順全生成・階層mex（Python）
