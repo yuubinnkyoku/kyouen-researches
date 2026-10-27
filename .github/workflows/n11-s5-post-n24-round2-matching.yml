@@ -1,0 +1,25 @@
+name: N11 post-24+ round-two exact matching
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s5-post-n24-round2-matching.yml'
+      - 'research/experiments/n11-s5-post-n24-round2-matching-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  matching:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'networkx==3.4.2'
+      - name: Exact conditional matching and independent alternating-cycle check
+        run: python research/experiments/n11-s5-post-n24-round2-matching-20261028/verify.py --negative
