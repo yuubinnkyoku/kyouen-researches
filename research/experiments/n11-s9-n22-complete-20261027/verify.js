@@ -140,4 +140,4 @@ function verify({negative=false}={}){
   newS7Verdicts:0,newS5Verdicts:0,twoStoneClosures:0,emptyBoard:'UNKNOWN'};
 }
 if(require.main===module)console.log(JSON.stringify(verify({negative:process.argv.includes('--negative')}),null,2));
-module.exports={verify,inventory};
+module.exports={verify,inventory,priorProofs};
