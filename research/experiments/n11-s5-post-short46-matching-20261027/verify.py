@@ -67,7 +67,8 @@ def verify(negative=False):
     self_test()
     edge_costs = {(min(u, v), max(u, v)): data['weight']
                   for u, v, data in graph.edges(data=True)}
-    independently_verified_cost, minimum_cycle_delta, dp_states = (\n        verify_optimality(edge_costs, matching))
+    independently_verified_cost, minimum_cycle_delta, dp_states = (
+        verify_optimality(edge_costs, matching))
     assert independently_verified_cost == optimum
     assert minimum_cycle_delta is None or minimum_cycle_delta >= 0
     result = {
