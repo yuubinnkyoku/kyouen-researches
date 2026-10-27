@@ -14,6 +14,8 @@ WIN23類の8石逆親200類から、**証明限定8石WINを5,120→5,292類（�
 node research/experiments/n11-s9-n23-remaining-20261027/prove.js --negative
 ```
 
+固定証明書の検証には、LOSS根で全23子を再計算する必要がない。追加の `verify_minimal.js --negative` はWIN23根の全529子とLOSS134根の固定証人134子、計**663終局義務**（相異なる657類）だけを独立した2幾何で再計算する。元の3,611義務から2,948件を省き、[専用CI 40518487814](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40518487814)で成功。通常pushはこの軽量検証のみを実行し、完全分類 `prove.js --negative` は手動起動時に実行する。上流n22/n23の終局証明はそれぞれ別途検証が必要。詳しくは [研究記録](../../log/2026-10-27-n11-n23-minimal-witness-replay.md)。
+
 初回計算：[GitHub Actions 40510074168](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40510074168) 成功。最終固定証人検査は別のCIで確認する。
 
 **126辺は保存済み14根に対する残数**であり、全候補再最適化前には条件付き14根方式の厳密最小値とは主張しない。9石LOSSを8石LOSSへ逆伝播しない。新規7石・5石局面閉鎖0件、二石root閉鎖0件。**11×11空盤UNKNOWN。**
