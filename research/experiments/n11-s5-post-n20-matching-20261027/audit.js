@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 // Reoptimize conditional 14-root matching after 80 terminal-proved S9 WINs.
+// Standalone audit must replay terminal leaves before accepting derived S8 WINs.
 const fs=require('node:fs'),path=require('node:path');
 const g=require('../n11-gap6-terminal-20261019/verify_js.js');
 const base=require('../n11-s5-pair-cover-20261026/audit_remaining_matching.js');
@@ -21,7 +22,7 @@ const better=(a,b)=>!b||a.cost<b.cost||
 function audit(negative=false){
  const old=previous.audit(false);
  const rows=proof20.parse(read('n11-s9-n20-terminal-20261027/certificate.tsv'));
- const p=proof20.verify(rows,{terminal:false});
+ const p=proof20.verify(rows,{terminal:true});
  const {missing,by7,win,loss}=base.inventory();
  need(old.schema==='n11-s5-post-n19-matching-v1'&&
   old.updated.missing===333&&old.proofOnlyWin8After===3394&&
