@@ -12,8 +12,8 @@ for row in rows:
     if not row.startswith("edges="):
         continue
     m = re.fullmatch(
-        r"edges=(\\d+) connected_classes=(\\d+) connected_hist=([^ ]+) "
-        r"all_classes=(\\d+) all_hist=([^ ]+) max=(\\d+)", row)
+        r"edges=(\d+) connected_classes=(\d+) connected_hist=([^ ]+) "
+        r"all_classes=(\d+) all_hist=([^ ]+) max=(\d+)", row)
     assert m, row
     edge, nconn, hist, count, all_hist, maximum = m.groups()
     edge = int(edge)
