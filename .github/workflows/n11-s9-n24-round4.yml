@@ -1,0 +1,32 @@
+name: N11 S9 round-four bounded terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s9-n24-round4.yml'
+      - 'research/experiments/n11-s9-n24-round4-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  terminal:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Plan from the 114-edge proof-only frontier and replay terminal claims
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR=research/experiments/n11-s9-n24-round4-20261028
+          if test -f "$DIR/compact-certificate.json"; then
+            node "$DIR/prove.js" --minimal --negative > /tmp/n11-positive.json
+            node "$DIR/prove.js" --minimal > /tmp/n11-no-negative.json
+            node "$DIR/prove.js"
+            cat /tmp/n11-positive.json
+          else
+            node "$DIR/prove.js" --propose
+          fi
