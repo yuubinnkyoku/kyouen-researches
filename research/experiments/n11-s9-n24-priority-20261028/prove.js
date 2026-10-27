@@ -47,14 +47,14 @@ function source(){
   const missing=new Set([...plan8].filter(h=>!secured.has(h)));
   need(missing.size===126,'conditional S8 frontier is no longer 126');
   const known9=new Set([...old9,...candidates,...first.map(x=>x.h),...fresh.map(x=>x.h)]);
-  const options=[],hist={};
+  const options=[],shortOptions=[],hist={};
   for(const [h,parents] of by9){
     if(known9.has(h))continue;
     const hits=[...parents].filter(p=>missing.has(p));
     if(!hits.length)continue;
     const children=g.children(g.board(h,9)).size;
     hist[children]=(hist[children]||0)+1;
-    if(children<24)continue; // previously targeted shorter branches
+    if(children<24){shortOptions.push({h,hits,children,degree:parents.size});continue;}
     options.push({h,hits,children,degree:parents.size});
   }
   need(options.length>0,'no remaining 24+ child candidates');
@@ -71,7 +71,7 @@ function source(){
     for(const h of row.hits)covered.add(h);
   }
   need(selected.length>0,'greedy selection empty');
-  return {plan,plan8,loss,secured,missing,options,hist,selected,covered};
+  return {plan,plan8,loss,secured,missing,options,shortOptions,hist,selected,covered};
 }
 function run(){
   const s=source(),cache=new Map(),win9=[],loss9=[],claims=[];
