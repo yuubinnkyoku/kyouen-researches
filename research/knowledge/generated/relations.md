@@ -2539,6 +2539,12 @@
 - → depends_on [K0516](../items/K0516-n11-s9-win13-terminal-lift.md): 既存68個の9石WIN根の終局証明
 - ← depends_on [K0531](../items/K0531-n11-seven-s9-win-eighty-nine-terminal-leaves.md): 既存10石LOSS葉からの不足境界探索
 
+## [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md) 3×3×m・4点共面禁止版の最大石数は3,6,8,8,9で、3立方は全局面強解決
+
+- ← depends_on [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md): 同じ4点共面禁止家族の容量定理（3×3×4では最大8石・最小極大3石）とm≤3の強解決。本項目はその有限盤拡張
+- ← depends_on [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md): 同じ4点共面禁止家族の容量定理（3×3×5では最大9石・最小極大3石、最大9の真の開始長は5）。本項目はその有限盤の強解決
+- ← depends_on [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×6の有限盤の強解決
+
 ## [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) 2×k×m・4点共面禁止版の全長容量・三石極大数と2×3×3の全局面
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misèreのGrundy定義
@@ -2735,3 +2741,15 @@
 
 - → depends_on [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): d=6のd+3下界（9点証人）を前提とし、本項目で上界を追加する
 - → verifies [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): d=6の9点証人を前提としてK_6=9を確定する方向の上界
+
+## [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) 3×3×4・4点共面禁止版は全局面強解決され空盤Grundy値は3
+
+- → depends_on [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md): 同じ4点共面禁止家族の容量定理（3×3×4では最大8石・最小極大3石）とm≤3の強解決。本項目はその有限盤拡張
+
+## [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) 3×3×5・4点共面禁止版は全局面強解決され全45初手が勝ち手
+
+- → depends_on [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md): 同じ4点共面禁止家族の容量定理（3×3×5では最大9石・最小極大3石、最大9の真の開始長は5）。本項目はその有限盤の強解決
+
+## [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) 3×3×6・4点共面禁止版は全局面強解決され全54初手が勝ち手、最大nimberは7
+
+- → depends_on [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×6の有限盤の強解決
