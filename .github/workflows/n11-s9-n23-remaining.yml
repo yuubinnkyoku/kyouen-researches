@@ -19,5 +19,6 @@ jobs:
           node-version: '22'
       - name: Check minimal WIN-universal and LOSS-existential terminal obligations
         run: node research/experiments/n11-s9-n23-remaining-20261027/verify_minimal.js --negative
-      - name: Recompute remaining selected S9 positions through two terminal geometries
+      - name: Recompute exhaustive 157-root terminal census (manual audit)
+        if: github.event_name == 'workflow_dispatch'
         run: node research/experiments/n11-s9-n23-remaining-20261027/prove.js --negative
