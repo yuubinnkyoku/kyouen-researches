@@ -7,3 +7,8 @@
 証拠は `research/experiments/n11-s9-n22-complete-20261027/compact-certificate.json` に890バイトの証人列とSHA-256で保存。検証器は候補集合、合法境界、WIN全称子、LOSS存在子、終局minimax、8石逆親と既知LOSSの衝突を再検査する。過去の証明に含まれる9石WINも一部再検算しているため、115全類を研究全体での純増とは扱わない。証明限定8石の純増と固定計画の減少は専用検証の結果を採用する。
 
 9石LOSSから8石LOSSを導かず、14根の未証明辺を勝敗や計算時間の下界とも解釈しない。7石・5石・二石rootの新規閉鎖0件、**標準11×11空盤UNKNOWN**。
+
+
+## CIで確定した証明限定被覆
+
+[終局証明CI 40479230171](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40479230171) 成功。9石WIN115類中2類は先行選択済み証明と重複。8石WIN逆親984類から既存証明限定集合への純増855類、合計4,944類。8石LOSS338類との衝突0。保存済み14根の証明済み着手辺は298→374、未証明辺は250→174。さらに[条件付き再最適化CI 40479486556](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40479486556) で174辺の厳密最小性を独立検証した。保存済み14根が引き続き最適。空盤UNKNOWN。
