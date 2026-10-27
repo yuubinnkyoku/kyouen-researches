@@ -85,6 +85,20 @@ def direct_named_vertices(m: int, t: int):
     def solve(c):
         if not c:
             return 0
+        # Isolated vertices form an impartial disjoint sum of single moves.
+        # Strip them in one step rather than exploring their 2^s subsets.
+        active = c
+        isolated_parity = 0
+        todo = c
+        while todo:
+            bit = todo & -todo
+            i = bit.bit_length() - 1
+            todo ^= bit
+            if closed[i] & c == bit:
+                active ^= bit
+                isolated_parity ^= 1
+        if active != c:
+            return solve(active) ^ isolated_parity
         children = []
         todo = c
         while todo:
@@ -124,32 +138,30 @@ def main():
             expected = predicted(m, t)
             a, _ = split_recurrence(m, t)
             assert a == expected, (m, t, expected, a)
-            if m == 6 and t == 2:
-                # 32 named vertices cause >60 million raw subset states.
-                # This base case is instead certified by the exact signature DP.
-                print(f'base m={m} t={t}: g={a}, exact signature DP only')
-            else:
-                b, states, vertices = direct_named_vertices(m, t)
-                assert a == b, (m, t, a, b)
-                named_states += states
-                print(f'base m={m} t={t}: g={a}, named_vertices={vertices}, named_states={states}')
+            b, states, vertices = direct_named_vertices(m, t)
+            assert a == b, (m, t, a, b)
+            named_states += states
+            print(f'base m={m} t={t}: g={a}, named_vertices={vertices}, named_states={states}')
             count += 1
-    extra_named, extra_states, extra_vertices = direct_named_vertices(7, 0)
-    assert extra_named == predicted(7, 0) == 2
-    named_states += extra_states
-    print(f'EXTRA_NAMED_OK m=7 t=0: g={extra_named}, vertices={extra_vertices}, states={extra_states}')
-    print(f'BASE_OK {count} cases; named-vertex states {named_states} (including extra)')
+    print(f'BASE_OK {count} cases; named-vertex states {named_states}')
 
     # Exact subset DP extends well beyond the finite base; it is not used as
     # evidence of the universal induction.
     checked = 0
+    extra_named_count = 0
     for m in range(7, 15):
         for t in range(3):
             a, states = split_recurrence(m, t)
             assert a == predicted(m, t), (m, t, a)
+            if m <= 12:
+                b, named, vertices = direct_named_vertices(m, t)
+                assert a == b, (m, t, a, b)
+                named_states += named
+                extra_named_count += 1
             checked += 1
         print(f'EXTRA_OK m={m}, {states} subset states (last t)')
-    print(f'EXTRA_OK {checked} cases')
+    print(f'EXTRA_OK {checked} cases; extra named checks {extra_named_count}')
+    print(f'NAMED_OK {count + extra_named_count} cases, {named_states} total states')
 
     # The child formulas depend only on m modulo 4, t modulo 2, and t=0
     # versus t>0. Hence the following 12 representatives prove the
