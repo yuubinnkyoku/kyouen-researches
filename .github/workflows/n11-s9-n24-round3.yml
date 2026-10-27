@@ -16,5 +16,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Check 32 planner-selected S9 positions with independent integer geometries
-        run: node research/experiments/n11-s9-n24-round3-20261028/prove.js --propose
+      - name: Replay minimal independent terminal witnesses and forged controls
+        run: node research/experiments/n11-s9-n24-round3-20261028/verify_minimal.js --negative
+      - name: Replay complete first-loss search against frozen certificate
+        run: node research/experiments/n11-s9-n24-round3-20261028/prove.js
