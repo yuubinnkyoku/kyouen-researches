@@ -19,3 +19,5 @@ jobs:
           node-version: '22'
       - name: Bounded 300 candidate terminal survey
         run: node research/experiments/n11-s9-targeted-gap266-20261027/survey.js
+      - name: Independently verify nine S9 WIN proofs and six negative controls
+        run: node research/experiments/n11-s9-targeted-gap266-20261027/verify.js --negative
