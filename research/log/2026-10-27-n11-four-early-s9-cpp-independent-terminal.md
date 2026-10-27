@@ -9,3 +9,7 @@
 初回CI: https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40471415611 。README反映後CI: https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40471528001 。**CI完了結果はこの記録作成時点で未確認**。成功確認前に第三独立検証の成立を主張しない。成功時にも新規勝敗証明ではなく既存証明の独立性向上である。
 
 証明限定8石WIN4,089類、条件付き14根の未証明辺250本は既知値のまま。新規7石・5石・二石root閉鎖なし。**標準11×11空盤UNKNOWN**。
+
+## 後続検証結果
+
+[専用CI 40471528001](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40471528001) の全工程が成功。C++17コンパイル、4群85個の9石WIN証人に対する全1,386着手の独立終局再計算（群別状態数合計84,937）、4群×4件の証明書改変拒否が成功した。これにより**追加独立検証が成立**。群間の10石子・8石親の重複は未除去であり、新規勝敗証明ではない。7石・5石・二石rootの新規閉鎖0、空盤UNKNOWN。
