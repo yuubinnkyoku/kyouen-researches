@@ -25,3 +25,28 @@ jobs:
         run: python -m pip install 'networkx==3.4.2'
       - name: Verify S9 terminal proofs and exact conditional matching
         run: python research/experiments/n11-s5-post-targeted21-matching-20261027/verify.py --negative
+      - name: Compile and replay an independent C++17 terminal checker
+        run: |
+          g++ -std=c++17 -O2 -Wall -Wextra -Werror research/experiments/n11-s5-post-targeted21-matching-20261027/independent_terminal.cpp -o /tmp/n11-targeted21-independent
+          /tmp/n11-targeted21-independent research/experiments/n11-s9-targeted-gap266-20261027/certificate.tsv
+      - name: Reject four corrupted certificates in the independent checker
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import subprocess
+          import tempfile
+          original = Path('research/experiments/n11-s9-targeted-gap266-20261027/certificate.tsv').read_text()
+          altered = {
+              'changed-root': original.replace('00000000000000821080800040100024', '00000000000000821080800040100020', 1),
+              'changed-states': original.replace('21 3590', '21 3591', 1),
+              'changed-header': original.replace('empty_board=UNKNOWN', 'empty_board=WIN', 1),
+              'missing-row': '\n'.join(original.splitlines()[:-1]) + '\n',
+          }
+          with tempfile.TemporaryDirectory() as directory:
+              for name, data in altered.items():
+                  file = Path(directory) / (name + '.tsv')
+                  file.write_text(data)
+                  result = subprocess.run(['/tmp/n11-targeted21-independent', str(file)], capture_output=True, text=True)
+                  assert result.returncode != 0, f'corrupt certificate accepted: {name}'
+          print('PASS four independent C++ certificate mutation rejections')
+          PY
