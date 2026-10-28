@@ -1,0 +1,19 @@
+2026-10-28 | independent full finite-base audit
+
+C++17 -O2 -Wall -Wextra -pedantic, verify_direct.cpp:
+k4 checked=51516 failures=4 (one isomorphism class)
+k5 representatives=11 checked=645408 failures=4 (zero new failures)
+k6 degree-two 6-edge cases checked=746496 failures=0
+TOTAL checked=1443420 memo=1476336
+
+Python 3, verify_python.py (each part executed in a fresh interpreter):
+k4 labelled: 51516 configurations, 4 counterexamples
+k5: 11 missing-graph classes, 645408 configurations, 0 failures
+k6 6a (C6): 373248 configurations, 0 failures
+k6 6b (2K3): 373248 configurations, 0 failures
+TOTAL 1443420 configurations; no cross-implementation disagreements.
+
+Proof of k>=7: mathematical induction using z'_i=z_i and maximum
+missing degree <=2. k6 missing <=5 covered by prior cited theorems;
+k6 missing=6 and all k5 checked above. This is a computer-assisted
+unbounded theorem, not merely finite empirical extrapolation.
