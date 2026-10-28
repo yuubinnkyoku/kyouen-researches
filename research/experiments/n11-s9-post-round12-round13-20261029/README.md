@@ -12,6 +12,12 @@ From the repository root:
 node research/experiments/n11-s9-post-round12-round13-20261029/prove.js > round13-certificate.json
 ```
 
-After a successful run, independently verify the compact witness and freeze the certificate before lifting WIN9 to WIN8. Neither a successful batch nor its prospective coverage implies a two-stone root or the empty-board verdict.
+## Verified result (2026-10-29)
+
+[Discovery run 40723296898](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40723296898) succeeded. The artifact's JSON is frozen as `certificate.json`, with the original 32-root selection and witness SHA-256. Exactly **4 WIN9** and **28 LOSS9** were proved, with **100** WIN10 child obligations for the four WIN9 roots. Discovery evaluated **307** distinct S10 leaves and **49,755** terminal recursive states per exact geometry; the 28 LOSS10 witnesses yield **280** canonical LOSS9 parents.
+
+[Independent verification run 40733280615](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40733280615) **PASS**, including forged-witness rejection and full replay equality. The compact verifier needs **128** distinct S10 terminal leaves and **22,180** recursive states per geometry, **58.3%** and **55.4%** fewer respectively than discovery. These are terminal-recomputation counts, not elapsed-time speedups.
+
+The upward proof-only lift is implemented in `lift.js`; any WIN8 and conditional-plan coverage changes must be independently checked before being counted. No two-stone root was closed by this terminal batch.
 
 **Standard 11×11 empty-board winner: UNKNOWN.**
