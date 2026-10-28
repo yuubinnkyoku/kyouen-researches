@@ -192,7 +192,7 @@ function run(){
     baselinePotentialCoverage:count(baseline),potentialCoverage:count(chosen),
     legal10Children:cost(chosen),exchanges:optimized.swaps,
     newSelectedKeys:chosen.map(x=>x.h),
-    newSelectionSha256:sha(chosen.map(x=>x.h).join('\\n')+'\\n'),
+    newSelectionSha256:sha(chosen.map(x=>x.h).join('\n')+'\n'),
     winLossConflicts:0,newS7Verdicts:0,newS5Verdicts:0,newTwoStoneClosures:0
   };
   const frozen=path.join(__dirname,'next-plan.json');
