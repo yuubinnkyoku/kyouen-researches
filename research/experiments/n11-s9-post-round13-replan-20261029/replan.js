@@ -87,6 +87,14 @@ function run(){
   const parents11=closure(p10,c11,4,28,280);
   const parents12=closure(p11,c12,12,20,200);
   const parents13=closure(p12,c13,4,28,280);
+  // A newly derived LOSS9 parent must never contradict a WIN9 proven in
+  // another batch; same-batch checks alone are insufficient.
+  const allWin9=new Set([...c9.win9Keys,...c10.win9Keys,
+    ...c11.win9Keys,...c12.win9Keys,...c13.win9Keys]);
+  const allLoss9=new Set([...parents9,...parents10,...parents11,
+    ...parents12,...parents13]);
+  need([...allWin9].every(h=>!allLoss9.has(h)),
+    'cross-batch WIN9/LOSS9 contradiction');
   const inv=r7.inventory(),{s,secured}=inv;
   need(secured.size===5407&&inv.missing.length===100,
     'round7 inventory mismatch');
