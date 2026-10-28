@@ -1,0 +1,26 @@
+name: N11 round11 proof-only 79-edge replan
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round11-replan-20261028/replan.js'
+      - 'research/experiments/n11-s9-post-round11-replan-20261028/next-plan.json'
+      - '.github/workflows/n11-s9-post-round11-replan.yml'
+  workflow_dispatch:
+jobs:
+  replan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify round11 certificate and replan against 79 edges
+        run: node research/experiments/n11-s9-post-round11-replan-20261028/replan.js > round11-next-plan.json
+      - name: Show exact conditional replan
+        run: cat round11-next-plan.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round11-proof-only-79-edge-replan
+          path: round11-next-plan.json
