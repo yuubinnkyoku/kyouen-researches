@@ -42,12 +42,14 @@ def quotient(t, pairs):
 
 
 def named(t, pairs):
-    n = K + sum(t) + sum(pairs.values())
+    k = len(t)
+    edges = tuple(combinations(range(k), 2))
+    n = k + sum(t) + sum(pairs.values())
     adj = [0] * n
-    for i, j in EDGES:
+    for i, j in edges:
         adj[i] |= 1 << j
         adj[j] |= 1 << i
-    v = K
+    v = k
     for i, c in enumerate(t):
         for _ in range(c):
             adj[i] |= 1 << v
@@ -106,6 +108,18 @@ def main():
     assert sum(failures.values()) == named_checks == 25
     assert failures == Counter({(2, 3): 5, (3, 2): 8,
                                 (4, 2): 4, (4, 3): 8})
+    # Independent named-vertex check of all 64 binary leaf assignments at k=6,
+    # with exactly one copy of each of the nine present pair types.
+    edges6 = tuple(combinations(range(6), 2))
+    pairs6 = {e: 1 for e in edges6 if not (e[0] < 4 and e[1] < 4)}
+    for bits in range(64):
+        leaves6 = [(bits >> i) & 1 for i in range(6)]
+        u = (sum(leaves6) + sum(pairs6.values())) & 1
+        z = [(leaves6[i] + sum(c for e, c in pairs6.items() if i in e)) & 1
+             for i in range(6)]
+        want = (1 ^ u ^ z[0]) if len(set(z)) == 1 else 2 + u
+        assert named(leaves6, pairs6) == want
+    print("k6 named-vertex binary-leaf cases:", 64)
 
 
 if __name__ == "__main__":
