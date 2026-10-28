@@ -151,7 +151,19 @@ function run(){
     proofOnlyS8Win:secured.size,unprovedConditionalEdges:missing,
     twoStoneClosures:0,
     examplesFreeLoss9:a.freeLoss.slice(0,6),examplesFreeWin9:a.freeWin.slice(0,6).map(x=>x.h)};
-  console.log(JSON.stringify(result,null,2));return result;
+  const saved=path.join(__dirname,'report.json');
+  if(fs.existsSync(saved))need(
+    JSON.stringify(JSON.parse(fs.readFileSync(saved)))===JSON.stringify(result),
+    'frozen cross-batch summary differs');
+  const derivedLoss9=a.freeLoss.map(({h,leaf})=>({
+    h,loss10:leaf,source:cache.get(leaf).source
+  })).sort((a,b)=>a.h.localeCompare(b.h));
+  const fixed=path.join(__dirname,'derived-loss9.json');
+  if(fs.existsSync(fixed))need(
+    JSON.stringify(JSON.parse(fs.readFileSync(fixed)))===JSON.stringify(derivedLoss9),
+    'frozen derived LOSS9 witnesses differ');
+  const output=process.argv.includes('--export')?{report:result,derivedLoss9}:result;
+  console.log(JSON.stringify(output,null,2));return result;
 }
 if(require.main===module)run();
 module.exports={run,add,classify,test};
