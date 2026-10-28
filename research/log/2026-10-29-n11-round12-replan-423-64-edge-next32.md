@@ -17,6 +17,11 @@ The complete ordered selection and SHA-256 `41c3f7d019848012f37bb27e1aaf60773a57
 
 An independent two-geometry S9→S10 boundary preflight was added as `preflight.js` with a bounded [workflow](https://github.com/yuubinnkyoku/kyouen-researches/actions/workflows/n11-s9-post-round12-preflight.yml). It checks all 32 roots, their exact legal children, the selected-key hash, and the total 802 edges, and reports cross-root sharing. Its [first run 40722986586](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40722986586) **PASS**: **802** legal S10 edges, **801** distinct S10 classes, **1** cross-root duplicate (child `0000a000000000821080000400000038`, shared by the roots ending in `...028` and `...030`). Both exact integer geometries agree on every selected root. The output is frozen in `research/experiments/n11-s9-post-round12-replan-20261029/preflight.json`; the subsequent path-triggered CI must separately confirm the frozen equality. The one duplicated child saves at most 1/802 ≈ 0.125% of terminal work if all children are evaluated, excluding reuse against earlier batches.
 
-Next: recover both CI outcomes, freeze independently verified preflight output, then run bounded terminal certificates for precisely the 32 selected roots. Avoid unbounded root runs and treating potential incidence, pn/dn or partial searches as outcomes.
+
+## Follow-up: independent preflight and bounded round13 discovery
+
+The frozen `preflight.json` was independently replayed and passed [post-freeze CI 40723198150](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40723198150), with the same 802 legal edges and 801 distinct S10 classes. A bounded round13 terminal discovery script was added at `research/experiments/n11-s9-post-round12-round13-20261029/prove.js` with a sparse-checkout workflow and 15-minute job limit. [Run 40723296898](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40723296898) was queued at the last check. This launch is **not** a terminal certificate or WIN8 progress; recover the actual result and verify it before making any claims.
+
+Next: recover the round13 terminal-discovery job and post-freeze round12 replan CI, verify any completed certificate independently, and lift only certified WIN9 roots. Avoid unbounded root runs and treating potential incidence, pn/dn or partial searches as outcomes.
 
 **Standard 11×11 empty-board winner: UNKNOWN.**
