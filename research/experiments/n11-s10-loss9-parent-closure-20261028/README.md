@@ -16,7 +16,7 @@ node research/experiments/n11-s10-loss9-parent-closure-20261028/expand.js --expo
 
 **信頼境界:** 10石LOSSは既存の独立終局証明書に依存。局面除去と幾何・対称性の検査は今回独立に実行。9石LOSSを8石LOSSへ誤伝播しない。条件付き14根の未証明辺100本、二石root閉鎖0件、空盤勝敗**UNKNOWN**。
 
-## 全1,306類のLOSS10葉への拡張（検証中）
+## 全1,306類のLOSS10葉への拡張（CI検証済み）
 
 先行する3,250類の閉包は、横断再利用で新規発見した383類の9石LOSSに対応する334類のLOSS10証人だけを展開していた。横断統合済みのLOSS10葉は全部で1,306類あるため、残る972類にも同じ操作を適用できる。`expand_all.js` は `reuse.js --export-loss10` で全11組の固定証明書の選択鍵・SHA-256・極性・衝突を再照合してから、各LOSS10葉の全9石親を3×3差分行列式・独立4×4整数Bareiss法・独立D4正準化で検査する。既知WIN9との衝突は即座に失敗とする。
 
@@ -26,4 +26,8 @@ node research/experiments/n11-s10-loss9-parent-closure-20261028/expand.js --expo
 N11_OUTPUT_DIR=/tmp/n11-all-loss10 node research/experiments/n11-s10-loss9-parent-closure-20261028/expand_all.js
 ```
 
-**注意:** これは既存の独立終局検証済みLOSS10証人の再利用であり、1,306件の終局再帰を新たに解き直すものではない。9石LOSSから8石WIN/LOSSを導出しない。潜在被覆は勝敗証明ではない。空盤勝敗は **UNKNOWN**。CI結果と確定数値を確認するまでは、改善量を確定成果として扱わない。
+[CI 40625335526](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40625335526) **成功**。全1,306類のLOSS10葉から9石LOSS親 **11,979類** を再構築し、旧3,250類を全包含した（旧一覧外8,729類）。既存172類のWIN9と衝突0件。全鍵一覧のSHA-256は `cd7447ee16bb2c3eea3de2dc04b5a75ac26595df957bbd90e2cf6fd293df2f6a`。固定数値は [full-closure-report.json](full-closure-report.json) に保存し、`expand_all.js` はこの固定値との一致を要求する。
+
+ただし第7回終了時の未調査1,063候補との重複は **0類**。既定32候補も不変で、14根の未証明100辺は減っていない。旧一覧外8,729類を全研究での純増とは数えない。
+
+**注意:** これは既存の独立終局検証済みLOSS10証人の再利用であり、1,306件の終局再帰を新たに解き直すものではない。9石LOSSから8石WIN/LOSSを導出しない。潜在被覆は勝敗証明ではない。空盤勝敗は **UNKNOWN**。
