@@ -86,9 +86,21 @@ def main():
             expected = formula(leaves, multiplicities)
             assert actual == expected, (D, seed, actual, expected)
             count += 1
+    # Additional independent samples with positive even pair multiplicities.
+    for D in MASKS:
+        for seed in range(4):
+            leaves = [(seed + i + D) % 2 for i in range(K)]
+            multiplicities = [
+                0 if D >> e & 1 else 1 + ((seed + e + D) % 2)
+                for e in range(15)
+            ]
+            actual = direct_grundy(D, leaves, multiplicities)
+            expected = formula(leaves, multiplicities)
+            assert actual == expected, (D, seed, actual, expected)
+            count += 1
     print(
         f"PASS: {count} independent named-vertex direct-recurrence "
-        "instances across 33 missing graphs"
+        "instances across 33 missing graphs (including even pair multiplicities)"
     )
 
 
