@@ -5,7 +5,6 @@ const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypt
 const g=require('../n11-gap6-terminal-20261019/verify_js.js');
 const ind=require('../n11-s9-shared-plan14-eleven-win-20261027/verify_fast.js');
 const r7=require('../n11-s9-n24-round7-20261028/prove.js');
-const r9=require('../n11-s9-post-round9-replan-20261028/replan.js');
 const verify10=require('../n11-s9-post-round9-round10-20261028/verify_compact.js');
 const planner=require('../n11-s9-n24-round2-20261028/plan_next.js');
 const need=(x,m)=>{if(!x)throw Error(m)};
@@ -17,14 +16,13 @@ const count=a=>planner.popcount(union(a));
 const cost=a=>a.reduce((n,x)=>n+x.children,0);
 const better=(a,b)=>count(a)>count(b)||(count(a)===count(b)&&cost(a)<cost(b));
 function run(){
-  // Reverify both upstream certificate chains, including independent
-  // 3x3 and 4x4 terminal solvers. Silence their JSON progress output.
-  const log=console.log;let prev,checked;
-  try{console.log=()=>{};prev=r9.run();checked=verify10.verify();}
+  // Replay the round10 certificate with independent terminal solvers.
+  // Round9 was separately certified; reconstruct its census below.
+  const log=console.log;let checked;
+  try{console.log=()=>{};checked=verify10.verify({negative:true});}
   finally{console.log=log;}
-  need(prev.eligibleUnprovedS9===890&&prev.conditionalUnprovedEdges===93&&
-    checked.verified&&checked.win9===8&&checked.loss9===24&&
-    checked.emptyBoard==='UNKNOWN','upstream proof audit failed');
+  need(checked.verified&&checked.win9===8&&checked.loss9===24&&
+    checked.emptyBoard==='UNKNOWN','round10 terminal audit failed');
   const inv=r7.inventory(),{s,secured}=inv;
   const p8=read('../n11-s9-post-s10-reuse-round8-20261028/next-plan.json');
   const p9=read('../n11-s9-post-round9-replan-20261028/next-plan.json');
@@ -32,7 +30,8 @@ function run(){
   const c10=read('../n11-s9-post-round9-round10-20261028/certificate.json');
   const lift=read('../n11-s9-post-round9-round10-20261028/lift.json');
   const oldLoss=read('../n11-s10-cross-batch-reuse-20261028/derived-loss9.json');
-  need(p9.newSelectionSha256===c10.sourcePlanSha256&&
+  need(p9.eligibleUnprovedS9===890&&p9.conditionalUnprovedEdges===93&&
+    p9.newSelectionSha256===c10.sourcePlanSha256&&
     c10.selectionSha256===c10.sourcePlanSha256&&
     c10.sourcePriorWitnessSha256===c9.witnessSha256&&
     c10.emptyBoard==='UNKNOWN'&&lift.emptyBoard==='UNKNOWN'&&
