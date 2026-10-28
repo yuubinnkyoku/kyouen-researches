@@ -8,7 +8,7 @@ missing_edges  unlabeled_graphs  normalized_representatives  mismatches
 9               2                  93312                     0
 TOTAL          33                8211456                     0
 C++ wall time on this runner: approximately 13.5 seconds
-Independent Python named-vertex closed-neighborhood recursion: 33*16 = 528; mismatches 0; approximately 4.1 seconds
+Independent Python named-vertex closed-neighborhood recursion: 33*16 + 33*4 = 660; mismatches 0; approximately 29 seconds total (4.1 + 24.6)
 Cross-check of 33 unlabeled graphs and representative count: networkx graph_atlas_g() (6 vertices, maximum degree <= 3, missing edges >= 6)
 Prior k=6 results cover <=5 missing edges; k=5 K4+K1 exceptional family handled by prior classification.
 No whole-repository CI or knowledge rebuild was run.
