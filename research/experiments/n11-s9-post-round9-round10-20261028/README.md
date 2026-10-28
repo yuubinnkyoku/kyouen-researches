@@ -1,6 +1,6 @@
-# N11 post-round9 round10: 32 frozen S9 terminal claims
+# N11 post-round9 round10: 32 frozen S9 terminal claims and WIN8 lift
 
-The next 32 canonical nine-stone positions are the exact keys in
+The 32 canonical nine-stone positions are the exact keys in
 `../n11-s9-post-round9-replan-20261028/next-plan.json` (selection SHA-256
 `42702f97100ee62a07d6c0603409ac17a19f8db47c8bf3039083c8e8fced3299`).
 
@@ -19,10 +19,20 @@ also passed, including forged WIN9/LOSS9 and out-of-range witness rejection.
 end-to-end speedup claim). `prove.js` replays the complete discovery and
 requires exact equality with the frozen certificate.
 
-The next step is `lift.js`: independently rebuild the existing proof-only
-WIN8 frontier and propagate only the eight certified WIN9 roots. Its result
-must be recovered and checked before reporting any new WIN8 or reduction in
-the conditional 14-root unproved-edge count. The terminal certificates alone
-do not prove a two-stone root or the empty board.
+The [bounded proof-only WIN8 lift CI](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40654919639)
+**passed**. `lift.js` independently rebuilds the earlier proof-only WIN8
+frontier and propagates only the eight terminal-certified WIN9 roots, checking
+the source hash chain, legal parent-child incidence, and known LOSS8 conflicts.
+Its output is frozen in `lift.json`; future `lift.js` executions fail on a
+mismatch.
+
+The eight WIN9 yield **72** distinct WIN8 parent classes, **64** new relative
+to the previous proof-only set: **5,449 → 5,513**. The fixed conditional
+14-root S8 frontier has **548** edges, with secured **455 → 465** and unproved
+**93 → 83**. No WIN/LOSS conflicts or new S7/S5/two-stone verdicts.
+
+Next: replan the bounded S9 terminal candidate batch against the **83**
+remaining edges. This fixed conditional 14-root coverage is **not** a
+re-optimized minimum, a two-stone root closure, or an empty-board proof.
 
 **Standard 11×11 empty-board winner: UNKNOWN.**
