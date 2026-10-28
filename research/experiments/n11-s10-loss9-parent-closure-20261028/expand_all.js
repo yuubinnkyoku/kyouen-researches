@@ -66,6 +66,8 @@ const result={schema:'n11-all-loss10-parent-closure-v1',emptyBoard:'UNKNOWN',
   potentialCoverage:count(chosen),legal10ChildCount:cost(chosen),
   exchanges:improved.swaps,manifestSha256:sha(manifest),
   conditionalUnprovedEdges:100,newS8Win:0,twoStoneClosures:0};
+const fixed=JSON.parse(fs.readFileSync(path.join(__dirname,'full-closure-report.json'),'utf8'));
+need(JSON.stringify(fixed)===JSON.stringify(result),'frozen full-closure report differs');
 if(process.env.N11_OUTPUT_DIR){
   fs.mkdirSync(process.env.N11_OUTPUT_DIR,{recursive:true});
   fs.writeFileSync(path.join(process.env.N11_OUTPUT_DIR,'report.json'),
