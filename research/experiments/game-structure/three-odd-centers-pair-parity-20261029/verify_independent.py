@@ -29,14 +29,6 @@ def graph(leaves, pairs):
 def named_value(closed):
     @lru_cache(None)
     def g(mask):
-        seen = 0
-        while mask:
-            # Evaluate all children of the original mask, without mutating it.
-            return children(mask)
-        return 0
-
-    @lru_cache(None)
-    def children(mask):
         rem, seen = mask, 0
         while rem:
             bit = rem & -rem
