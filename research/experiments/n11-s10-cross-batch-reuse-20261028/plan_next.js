@@ -3,6 +3,8 @@
 // Next bounded S9 plan after reusing certified S10 LOSS witnesses.
 // Potential coverage is NOT a verdict or an empty-root proof.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
+// Memoize the expensive nested certificate inventories before importing r7.
+require('./reuse.js');
 const r7=require('../n11-s9-n24-round7-20261028/prove.js');
 const p=require('../n11-s9-n24-round2-20261028/plan_next.js');
 const need=(x,m)=>{if(!x)throw Error(m)};
