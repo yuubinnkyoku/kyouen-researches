@@ -3,9 +3,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'research/experiments/n11-s9-post-round13-round15-20261029/certificate.json'
-      - 'research/experiments/n11-s9-post-round13-round15-20261029/verify_compact.js'
-      - '.github/workflows/n11-s9-post-round13-round15-verify.yml'
+      - 'research/experiments/n11-s9-post-round14-round15-20261029/certificate.json'
+      - 'research/experiments/n11-s9-post-round14-round15-20261029/verify_compact.js'
+      - '.github/workflows/n11-s9-post-round14-round15-verify.yml'
   workflow_dispatch:
 jobs:
   verify:
@@ -19,11 +19,11 @@ jobs:
             research/experiments/n11-s9-shared-plan14-eleven-win-20261027
             research/experiments/n11-s9-post-round13-round14-20261029
             research/experiments/n11-s9-post-round14-replan-20261029
-            research/experiments/n11-s9-post-round13-round15-20261029
+            research/experiments/n11-s9-post-round14-round15-20261029
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Independently replay minimal terminal obligations and reject forged witnesses
-        run: node research/experiments/n11-s9-post-round13-round15-20261029/verify_compact.js --negative
+        run: node research/experiments/n11-s9-post-round14-round15-20261029/verify_compact.js --negative
       - name: Reconstruct full discovery and compare frozen certificate
-        run: node research/experiments/n11-s9-post-round13-round15-20261029/prove.js
+        run: node research/experiments/n11-s9-post-round14-round15-20261029/prove.js
