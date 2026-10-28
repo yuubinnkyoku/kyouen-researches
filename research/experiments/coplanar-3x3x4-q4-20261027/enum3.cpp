@@ -1,6 +1,7 @@
 // Disk-backed bottom-up solver for the 3x3xm 4-coplanar-points-forbidden
-// game, built for m=9 (81 cells, ~3e8 safe states) where the in-RAM design
-// of enum2_128.cpp no longer fits. Same mathematics as enum2_128.cpp:
+// game, built for m>=9 (81+ cells, ~3e8+ safe states) where the in-RAM
+// design of enum2_128.cpp no longer fits; supports m<=11 (99 cells).
+// Same mathematics as enum2_128.cpp:
 // Leibniz 4x4 homogeneous determinant, canonical-parent level generation
 // (children add a cell larger than every cell present, so each safe set is
 // generated exactly once and no dedup is needed), top-down mex evaluation
@@ -21,9 +22,9 @@
 using namespace std;
 using U=unsigned __int128;
 struct P{int x,y,z;};
-P p[81];int N,m,ORDER;
-int transIdx[81]; // label -> canonical (x,y,z) index
-U blocked3[81][81][81];
+P p[99];int N,m,ORDER;
+int transIdx[99]; // label -> canonical (x,y,z) index
+U blocked3[99][99][99];
 long long det4(int a,int b,int c,int d){
     int v[4][4]={{p[a].x,p[a].y,p[a].z,1},{p[b].x,p[b].y,p[b].z,1},{p[c].x,p[c].y,p[c].z,1},{p[d].x,p[d].y,p[d].z,1}};
     int idx[4]={0,1,2,3};long long s=0;
@@ -51,7 +52,7 @@ template<class F> void streamLevel(int k,F&&f){
     while(in){in.read(reinterpret_cast<char*>(buf.data()),buf.size()*sizeof(U));size_t got=in.gcount()/sizeof(U);
         for(size_t i=0;i<got;i++)f(buf[i],pos++);}
 }
-int idsBuf[81];
+int idsBuf[99];
 inline U triples_blocked(U s,int&n){
     n=0;for(U t=s;t;t&=t-1)idsBuf[n++]=ctz128(t);U bad=0;
     for(int a=0;a<n;a++)for(int b=a+1;b<n;b++)for(int c=b+1;c<n;c++)bad|=blocked3[idsBuf[a]][idsBuf[b]][idsBuf[c]];
@@ -159,7 +160,7 @@ int doEval(const char* dumpfile){
     for(int k=0;k<=K;k++)cout<<"layer "<<k<<" states "<<counts[k]<<" terminal "<<term[k]<<"\n";
     for(int k=0;k<32;k++)if(hg[k]||hh[k])cout<<"nimber "<<k<<" normal "<<hg[k]<<" misere "<<hh[k]<<"\n";
     cout<<"first_moves:";
-    int invTrans[81];for(int i=0;i<N;i++)invTrans[transIdx[i]]=i;
+    int invTrans[99];for(int i=0;i<N;i++)invTrans[transIdx[i]]=i;
     for(int c=0;c<N;c++){int j=invTrans[c];auto[g,h]=firstMoves[j];
         cout<<" ("<<p[j].x<<","<<p[j].y<<","<<p[j].z<<")=["<<g<<","<<h<<"]";}
     cout<<"\n";
@@ -167,7 +168,7 @@ int doEval(const char* dumpfile){
 }
 int main(int argc,char**argv){
     if(argc<5)return 2;m=atoi(argv[1]);workdir=argv[2];ORDER=atoi(argv[3]);
-    if(m<1||m>9||(ORDER!=0&&ORDER!=1))return 2;
+    if(m<1||m>11||(ORDER!=0&&ORDER!=1))return 2;
     buildGeometry();
     string phase=argv[4];
     if(phase=="gen")return doGen();

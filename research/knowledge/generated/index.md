@@ -559,3 +559,4 @@
 | [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md) | 3×3×7・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0573](../items/K0573-coplanar-3x3x8-strong-solution.md) | 3×3×8・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0574](../items/K0574-coplanar-3x3x9-strong-solution.md) | 3×3×9・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
+| [K0575](../items/K0575-coplanar-3x3x10-strong-solution.md) | 3×3×10・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |

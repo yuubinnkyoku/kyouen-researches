@@ -2547,6 +2547,7 @@
 - ← depends_on [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×7の有限盤の強解決
 - ← depends_on [K0573](../items/K0573-coplanar-3x3x8-strong-solution.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×8の有限盤の強解決
 - ← depends_on [K0574](../items/K0574-coplanar-3x3x9-strong-solution.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×9の有限盤の強解決
+- ← depends_on [K0575](../items/K0575-coplanar-3x3x10-strong-solution.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×10の有限盤の強解決
 
 ## [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) 2×k×m・4点共面禁止版の全長容量・三石極大数と2×3×3の全局面
 
@@ -2768,3 +2769,9 @@
 ## [K0574](../items/K0574-coplanar-3x3x9-strong-solution.md) 3×3×9・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手
 
 - → depends_on [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×9の有限盤の強解決
+- ← depends_on [K0575](../items/K0575-coplanar-3x3x10-strong-solution.md): 同じ家族の3×3×9の強解決。本項目はその次の m=10 を同じ方式で解いたもの
+
+## [K0575](../items/K0575-coplanar-3x3x10-strong-solution.md) 3×3×10・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手
+
+- → depends_on [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×10の有限盤の強解決
+- → depends_on [K0574](../items/K0574-coplanar-3x3x9-strong-solution.md): 同じ家族の3×3×9の強解決。本項目はその次の m=10 を同じ方式で解いたもの
