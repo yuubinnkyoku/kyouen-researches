@@ -29,7 +29,7 @@ z_i=\left(t_i+\sum_{j\ne i}r_{ij}\right)\bmod2.
 
 ### 1. 偶奇への縮約
 
-既存の [K0336](../../knowledge/items/K0336-independent-residual-twins-parity-compression.md) により、同じ非空近傍を持つ独立点は正の奇数なら1個、正の偶数なら2個に減らしてもGrundy数が変わらない。従って \(t_i\in\{0,1,2\}\)、存在する \(r_{ij}\in\{1,2\}\) を調べれば、無限個の重複数を覆う。これは単なる標本化ではなく全称的な縮約である。
+既存の [K0336](../../../knowledge/items/K0336-independent-residual-twins-parity-compression.md) により、同じ非空近傍を持つ独立点は正の奇数なら1個、正の偶数なら2個に減らしてもGrundy数が変わらない。従って \(t_i\in\{0,1,2\}\)、存在する \(r_{ij}\in\{1,2\}\) を調べれば、無限個の重複数を覆う。これは単なる標本化ではなく全称的な縮約である。
 
 ### 2. 全初手の子値
 
