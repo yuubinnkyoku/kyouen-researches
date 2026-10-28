@@ -15,11 +15,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Recompute fixed 32 S9 roots to terminal under two integer geometries
+      - name: Independently check frozen 32 S9 terminal proof obligations and negative controls
+        run: node research/experiments/n11-s9-post-round8-round9-20261028/verify_compact.js --negative
+      - name: Full first-loss terminal replay (manual only)
+        if: github.event_name == 'workflow_dispatch'
         env:
           N11_ROUND9_OUTPUT: round9-proposal.json
         run: node research/experiments/n11-s9-post-round8-round9-20261028/prove.js --negative
       - uses: actions/upload-artifact@v4
+        if: github.event_name == 'workflow_dispatch'
         with:
           name: n11-round9-terminal-proposal
           path: round9-proposal.json
