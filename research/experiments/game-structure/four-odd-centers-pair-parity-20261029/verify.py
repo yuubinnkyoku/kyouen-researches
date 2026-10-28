@@ -31,20 +31,6 @@ def named(leaves, counts):
             add((i, j))
     closed = tuple(a | (1 << i) for i, a in enumerate(adj))
     @lru_cache(None)
-    def grundy(mask):
-        options = set()
-        while mask:
-            bit = mask & -mask
-            mask -= bit
-            i = bit.bit_length() - 1
-            # IMPORTANT: recurse on original state, not the iteration remainder.
-            options.add(grundy(original & ~closed[i]))
-        mex = 0
-        while mex in options:
-            mex += 1
-        return mex
-    # The helper below avoids mutating the state passed to recursive calls.
-    @lru_cache(None)
     def direct(mask):
         rem, options = mask, set()
         while rem:
