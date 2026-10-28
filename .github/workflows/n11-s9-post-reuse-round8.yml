@@ -17,3 +17,11 @@ jobs:
           node-version: '22'
       - name: Independent 3x3 and 4x4 frozen terminal replay
         run: node research/experiments/n11-s9-post-s10-reuse-round8-20261028/verify.js --full --negative
+      - name: Replan after 32 certified LOSS9 roots
+        env:
+          N11_REPLAN_OUTPUT: round8-next-plan.json
+        run: node research/experiments/n11-s9-post-s10-reuse-round8-20261028/replan.js
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round8-next-plan
+          path: round8-next-plan.json
