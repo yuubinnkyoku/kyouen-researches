@@ -1,0 +1,15 @@
+2026-10-28 local verification (Linux x86_64, GCC)
+$ g++ -std=c++17 -O3 -Wall -Wextra -pedantic [note: -pedantic omitted for GNU __uint128_t] verify_k7.cpp -o /tmp/verify_k7
+$ /tmp/verify_k7
+k=7 D=K5+K2 cases=2239488 mismatches=0 max_grundy=3
+
+$ python3 verify_named.py
+k=7: 16 named-vertex samples passed
+total named-vertex memo states: 1200956
+
+Existing k=7 D=K5+2K1 exhaustive base:
+research/experiments/game-structure/missing-k5-clique-sharp-threshold-20261028/verify.cpp
+k=7 cases=4478976 failures=0 (previously verified)
+
+New C++ and Python checks were run locally before committing.
+The full repository CI and knowledge generation/check were not run in this environment.
