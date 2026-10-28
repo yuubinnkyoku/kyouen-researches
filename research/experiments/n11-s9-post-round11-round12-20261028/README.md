@@ -25,4 +25,10 @@ node research/experiments/n11-s9-post-round11-round12-20261028/prove.js
 node research/experiments/n11-s9-post-round11-round12-20261028/verify_compact.js --negative
 ```
 
-The proof-only upward WIN8 lift is separate: new S8 WIN counts or reductions of the 79 outstanding edges must not be claimed until that calculation is independently checked. Potential incidence is not a WIN verdict. **Standard 11×11 empty-board winner: UNKNOWN.**
+## Verified upward proof-only lift
+
+[Proof-only lift run 40703068702](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40703068702) **PASS**. The script reconstructs the original round7 certified 5,407-class WIN8 frontier, adds the independently terminal-proven round9, round10 and round11 witnesses to obtain 5,545, then adds only the round12 terminal WIN9 parents. The 12 new WIN9 roots yield **107** distinct canonical WIN8 parents; **98** were not already in the 5,545-class proof-only frontier, so the new certified WIN8 count is **5,643**. None conflicts with the frozen LOSS8 set.
+
+For the *fixed* conditional 14-root S7 plan, **484 of 548** move edges are now certified, up from 469; outstanding edges fall from **79 to 64**. This is not an optimized new 14-root minimum, nor a new S7 verdict. The exact result is frozen in `lift.json` and `lift.js` checks its identity on replay.
+
+Potential incidence is not a WIN verdict. No S7, S5, two-stone or empty-board root was closed. **Standard 11×11 empty-board winner: UNKNOWN.**
