@@ -46,3 +46,15 @@ The exact ordered selection and SHA-256 are frozen in `next-plan.json`.
 Future runs check this file against a complete reconstruction. This
 reduces redundant future exploration; it does not establish any new
 S8 WIN or close a two-stone root.
+
+## Independent next-batch preflight
+
+[CI 40671305642](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40671305642)
+**PASS**. `audit_next_batch.js` checks the complete legal-child boundary
+and reverse incidences under two independent integer geometries and
+rejects altered or duplicate selections. The 32 chosen roots have
+**822 ordered S10 children and 822 distinct S10 classes**; their
+**288 S8 reverse incidences are also all distinct**. Thus within-batch
+S10 terminal cache sharing saves **zero** leaves if all are visited.
+The fixed counts are in `preflight.json`. Cross-batch reuse and
+first-LOSS9 short-circuiting are not included in this measurement.
