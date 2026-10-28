@@ -3,9 +3,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'research/experiments/n11-s9-post-round15-round15-20261029/lift.js'
-      - 'research/experiments/n11-s9-post-round15-round15-20261029/lift.json'
-      - '.github/workflows/n11-s9-post-round15-round15-lift.yml'
+      - 'research/experiments/n11-s9-post-round14-round15-20261029/lift.js'
+      - 'research/experiments/n11-s9-post-round14-round15-20261029/lift.json'
+      - '.github/workflows/n11-s9-post-round14-round15-lift.yml'
   workflow_dispatch:
 jobs:
   lift:
@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: '22'
       - name: Independently verify terminal witnesses then lift only certified WIN8
-        run: node research/experiments/n11-s9-post-round15-round15-20261029/lift.js > round15-lift.json
+        run: node research/experiments/n11-s9-post-round14-round15-20261029/lift.js > round15-lift.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
