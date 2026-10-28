@@ -1,0 +1,31 @@
+name: N11 cross-batch certified S10 reuse audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s10-cross-batch-reuse.yml'
+      - 'research/experiments/n11-s10-cross-batch-reuse-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  reuse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild all frozen selections, check S10 conflicts and exact reverse incidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s10-cross-batch-reuse-20261028/reuse.js | tee /tmp/n11-s10-cross-batch-reuse.json
+      - name: Preserve exact report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: n11-s10-cross-batch-reuse-report
+          path: /tmp/n11-s10-cross-batch-reuse.json
+          if-no-files-found: ignore
