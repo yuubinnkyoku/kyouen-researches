@@ -9,3 +9,7 @@ Run from repository root:
     node research/experiments/n11-s9-post-round9-replan-20261028/replan.js
 
 The bounded CI produces a proposed JSON plan as an artifact. It is not a terminal certificate; freeze and independently verify its output before running the next terminal batch. Standard 11x11 empty-board outcome: UNKNOWN.
+
+## Frozen independently checked result
+
+CI run 40648005327 passed. Eligible S9 classes: 1011 to 890 (50 proof exclusions, 71 no longer relevant to the 93-edge frontier). Dominance-pruned: 125. The next 32 proposed candidates potentially cover 43 S8 classes with 830 legal S10 children. The frozen next-plan.json is checked byte-for-byte against fresh replan output in CI.

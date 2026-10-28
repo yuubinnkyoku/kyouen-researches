@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'research/experiments/n11-s9-post-round9-replan-20261028/**'
+      - 'research/experiments/n11-s9-post-round9-replan-20261028/replan.js'
       - '.github/workflows/n11-s9-post-round9-replan.yml'
   workflow_dispatch:
 jobs:
@@ -17,6 +17,8 @@ jobs:
           node-version: '22'
       - name: Recheck terminal certificate and construct proof-only next plan
         run: node research/experiments/n11-s9-post-round9-replan-20261028/replan.js > round9-next-plan.json
+      - name: Compare output with frozen proof-only next plan
+        run: cmp round9-next-plan.json research/experiments/n11-s9-post-round9-replan-20261028/next-plan.json
       - name: Show exact counts
         run: cat round9-next-plan.json
       - uses: actions/upload-artifact@v4
