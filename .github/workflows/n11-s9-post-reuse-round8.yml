@@ -1,0 +1,19 @@
+name: N11 round8 frozen terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-s10-reuse-round8-20261028/**'
+      - '.github/workflows/n11-s9-post-reuse-round8.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independent 3x3 and 4x4 frozen terminal replay
+        run: node research/experiments/n11-s9-post-s10-reuse-round8-20261028/verify.js --full --negative
