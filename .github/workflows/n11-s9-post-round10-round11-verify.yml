@@ -1,0 +1,32 @@
+name: N11 round11 frozen terminal certificate independent verification
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round10-round11-20261028/prove.js'
+      - 'research/experiments/n11-s9-post-round10-round11-20261028/verify_compact.js'
+      - 'research/experiments/n11-s9-post-round10-round11-20261028/certificate.json'
+      - '.github/workflows/n11-s9-post-round10-round11-verify.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            research/experiments/n11-gap6-terminal-20261019
+            research/experiments/n11-s9-shared-plan14-eleven-win-20261027
+            research/experiments/n11-s9-post-round8-round9-20261028
+            research/experiments/n11-s9-post-round9-replan-20261028
+            research/experiments/n11-s9-post-round9-round10-20261028
+            research/experiments/n11-s9-post-round10-replan-20261028
+            research/experiments/n11-s9-post-round10-round11-20261028
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Replay minimal S10 terminal witnesses under two independent integer geometries and reject forged verdicts
+        run: node research/experiments/n11-s9-post-round10-round11-20261028/verify_compact.js --negative
+      - name: Independently reproduce full discovery and compare frozen certificate
+        run: node research/experiments/n11-s9-post-round10-round11-20261028/prove.js > /dev/null
