@@ -1,0 +1,28 @@
+name: N11 certified LOSS10 all-parent closure audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n11-s10-loss9-parent-closure.yml'
+      - 'research/experiments/n11-s10-loss9-parent-closure-20261028/**'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  closure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Audit all inherited LOSS10 witnesses and D4 parent closure
+        run: node research/experiments/n11-s10-loss9-parent-closure-20261028/expand.js --frontier | tee /tmp/n11-loss9-parent-closure.json
+      - name: Preserve measured closure and eligible frontier
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: n11-loss9-parent-closure
+          path: /tmp/n11-loss9-parent-closure.json
+          if-no-files-found: ignore
