@@ -18,6 +18,6 @@ node research/experiments/n11-s9-post-round12-round13-20261029/prove.js > round1
 
 [Independent verification run 40733280615](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40733280615) **PASS**, including forged-witness rejection and full replay equality. The compact verifier needs **128** distinct S10 terminal leaves and **22,180** recursive states per geometry, **58.3%** and **55.4%** fewer respectively than discovery. These are terminal-recomputation counts, not elapsed-time speedups.
 
-The upward proof-only lift is implemented in `lift.js`; any WIN8 and conditional-plan coverage changes must be independently checked before being counted. No two-stone root was closed by this terminal batch.
+[Independent proof-only lift 40733352117](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40733352117) **PASS**. The four WIN9 roots have **36** distinct WIN8 parents, **32** new relative to the previous proof-only frontier. Certified WIN8 rises from **5,643 to 5,675**. The fixed 14-root conditional plan has **488/548** secured S7→S8 edges and **60** unproved, down from 64. The exact result is frozen in `lift.json` and replay-checked by `lift.js`. This does not close an S7, S5, two-stone, or empty-board root.
 
 **Standard 11×11 empty-board winner: UNKNOWN.**
