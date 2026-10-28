@@ -30,3 +30,19 @@ No terminal verdict is inferred from potential coverage or incomplete
 search statistics.
 
 **Standard 11×11 empty-board winner: UNKNOWN.**
+
+## Frozen result (independently verified)
+
+[CI run 40670592328](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40670592328)
+**PASS**. The round10 certificate has 8 WIN9 and 24 LOSS9; 231 terminal
+leaves were checked under each integer geometry. Of the previous **890**
+eligible S9 classes, **41** are removed by certified round10 results
+(including 9 extra LOSS9 parents), and **140** no longer touch any of the
+83 outstanding S8 edges. Thus **709** remain, of which **96** survive
+incidence-dominance pruning. The next **32** candidates have **40**
+potential S8 hits and **822** legal S10 children.
+
+The exact ordered selection and SHA-256 are frozen in `next-plan.json`.
+Future runs check this file against a complete reconstruction. This
+reduces redundant future exploration; it does not establish any new
+S8 WIN or close a two-stone root.
