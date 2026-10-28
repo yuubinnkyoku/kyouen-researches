@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'research/experiments/n11-s9-post-round9-round10-20261028/lift.js'
+      - 'research/experiments/n11-s9-post-round9-round10-20261028/lift.json'
+      - 'research/experiments/n11-s9-post-round9-round10-20261028/certificate.json'
       - '.github/workflows/n11-s9-post-round9-round10-lift.yml'
   workflow_dispatch:
 jobs:
