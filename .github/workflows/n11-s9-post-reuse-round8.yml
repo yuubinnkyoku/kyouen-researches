@@ -21,6 +21,8 @@ jobs:
         env:
           N11_REPLAN_OUTPUT: round8-next-plan.json
         run: node research/experiments/n11-s9-post-s10-reuse-round8-20261028/replan.js
+      - name: Check frozen plan matches reproducible computation
+        run: cmp round8-next-plan.json research/experiments/n11-s9-post-s10-reuse-round8-20261028/next-plan.json
       - uses: actions/upload-artifact@v4
         with:
           name: n11-round8-next-plan
