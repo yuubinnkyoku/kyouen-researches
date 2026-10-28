@@ -4,7 +4,6 @@ on:
     branches: [main]
     paths:
       - 'research/experiments/n11-s9-post-round12-round13-20261029/lift.json'
-      - 'research/experiments/n11-s9-post-round13-replan-20261029/replan.js'
       - 'research/experiments/n11-s9-post-round13-replan-20261029/next-plan.json'
   workflow_dispatch:
 jobs:
