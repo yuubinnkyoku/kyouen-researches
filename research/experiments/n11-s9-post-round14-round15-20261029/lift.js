@@ -14,7 +14,7 @@ function run(){
   try{console.log=()=>{};audited=verify.verify({negative:true});}
   finally{console.log=originalLog;}
   need(audited.verified&&audited.win9===3&&audited.loss9===29,
-    'round14 independent terminal proof failed');
+    'round15 independent terminal proof failed');
   const plan=read('../n11-s9-post-round14-replan-20261029/next-plan.json');
   const cert=read('certificate.json');
   const priorLift=read('../n11-s9-post-round13-round14-20261029/lift.json');
@@ -45,7 +45,7 @@ function run(){
     after11.size===5545&&after12.size===5643&&after13.size===5675&&
     after14.size===5715&&before.total===548&&before.secured===493&&before.missing===55&&
     priorLift.proofOnlyWIN8After===5715&&priorLift.updated.missing===55,
-    'round13 proof-only frontier mismatch');
+    'round14 proof-only frontier mismatch');
   const derived=g.reverse(cert.win9Keys);
   for(const h of derived)need(!s.loss.has(h),'WIN8/LOSS8 conflict '+h);
   for(const h of cert.win9Keys)for(const par of g.reverse([h]))
@@ -56,7 +56,7 @@ function run(){
     'conditional coverage regression');
   const result={schema:'n11-round15-terminal-win8-lift-v1',
     emptyBoard:'UNKNOWN',verifiedWin9:cert.win9,verifiedLoss9:cert.loss9,
-    distinctWIN8ParentsFromRound14:derived.size,
+    distinctWIN8ParentsFromRound15:derived.size,
     newProofOnlyWIN8:after15.size-after14.size,
     proofOnlyWIN8Before:after14.size,proofOnlyWIN8After:after15.size,
     previous:before,updated,
