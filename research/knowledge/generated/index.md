@@ -557,3 +557,4 @@
 | [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) | 3×3×5・4点共面禁止版は全局面強解決され全45初手が勝ち手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) | 3×3×6・4点共面禁止版は全局面強解決され全54初手が勝ち手、最大nimberは7 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0572](../items/K0572-coplanar-3x3x7-strong-solution.md) | 3×3×7・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
+| [K0573](../items/K0573-coplanar-3x3x8-strong-solution.md) | 3×3×8・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
