@@ -1,0 +1,27 @@
+name: N11 round11 proof-only WIN8 conditional lift
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round10-round11-20261028/lift.js'
+      - 'research/experiments/n11-s9-post-round10-round11-20261028/lift.json'
+      - 'research/experiments/n11-s9-post-round10-round11-20261028/certificate.json'
+      - '.github/workflows/n11-s9-post-round10-round11-lift.yml'
+  workflow_dispatch:
+jobs:
+  lift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild the proof-only 5513 WIN8 frontier and lift four terminal WIN9 witnesses
+        run: node research/experiments/n11-s9-post-round10-round11-20261028/lift.js > round11-lift.json
+      - name: Show exact conditional coverage
+        run: cat round11-lift.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round11-proof-only-win8-lift
+          path: round11-lift.json
