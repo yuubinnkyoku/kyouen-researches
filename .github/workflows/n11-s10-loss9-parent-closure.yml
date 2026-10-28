@@ -19,10 +19,17 @@ jobs:
           node-version: '22'
       - name: Audit all inherited LOSS10 witnesses and D4 parent closure
         run: node research/experiments/n11-s10-loss9-parent-closure-20261028/expand.js --frontier | tee /tmp/n11-loss9-parent-closure.json
+      - name: Audit every certified LOSS10 parent and replan eligible frontier
+        env:
+          N11_OUTPUT_DIR: /tmp/n11-full-loss10-closure
+        run: node research/experiments/n11-s10-loss9-parent-closure-20261028/expand_all.js | tee /tmp/n11-full-loss10-closure-summary.json
       - name: Preserve measured closure and eligible frontier
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: n11-loss9-parent-closure
-          path: /tmp/n11-loss9-parent-closure.json
+          path: |
+            /tmp/n11-loss9-parent-closure.json
+            /tmp/n11-full-loss10-closure-summary.json
+            /tmp/n11-full-loss10-closure/
           if-no-files-found: ignore
