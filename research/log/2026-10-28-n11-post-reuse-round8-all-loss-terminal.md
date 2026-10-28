@@ -1,0 +1,9 @@
+# 2026-10-28: post-reuse round 8 proves 32 LOSS9 and 243 S10 leaves
+
+Reviewed latest main, AGENTS.md, research/knowledge/README.md, K0023/K0105, the round-6/7 certificates and logs, the cross-batch 383 LOSS9 reuse and the 11,979 LOSS9 parent closure. The source plan remained the fixed 32 roots with 50 potential S8 hits and 847 legal S10 children. Potential incidence is not a verdict.
+
+Replayed only those 32 roots to terminal using independent 3x3 difference determinant and 4x4 integer Bareiss geometry. **WIN9 0 / LOSS9 32**. First-loss ordered scan checked **243 distinct S10 leaves** (211 WIN / 32 LOSS), **49,224 memo states per geometry**. Selection SHA-256 b1d53d036c305a0a01b6e6a7d0d380bc4ecbf2c6cc4f5e2af7c45f8ffcace978; witness SHA-256 cebe7bcae323005ef6297b59a4000f4150aadb92363f54a3e7071a024ec2f5ab. A separate fixed-witness minimal replay needs only **32 LOSS10 terminal checks, 10,233 states per geometry**. Both passed locally; forged LOSS9 and out-of-range indices were rejected.
+
+The 32 LOSS10 leaves have **320 distinct canonical LOSS9 parents** (SHA-256 0bc80e73c3932150f3ab077e916144bcf5af9318f34a02257c3e21b3045254d4). Each reverse edge is verified under both geometries. The 288 other parent keys may overlap prior proof assets, so this is not a claim of 288 new global LOSS9 classes. The 211 earlier WIN10 leaves are available for future exact-only reuse; no WIN9 or WIN8 follows from partial coverage.
+
+Reproduction: research/experiments/n11-s9-post-s10-reuse-round8-20261028/verify.js --full --negative, with fixed certificate.json. No solver-trusted leaf, unfinished search or pn/dn used for these 32 terminal certificates. Earlier proof-only WIN8 remains **5,407**, conditional 14-root unproved S8 edges **100**, new two-stone closures **0**. **11×11 empty-board winner UNKNOWN**.
