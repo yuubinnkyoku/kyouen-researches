@@ -10,7 +10,7 @@
 
 初回実験の結果（選択順序SHA-256 `137976d03a107be4e5768b48ec6380713c0ace8d17d28b24074cc4f892a7bfdf`、証人SHA-256 `c53e1b52767637ec80a8bf4040c0303be7679cb021e0281a43f30101ebdd3cbd`）を [固定証明書](../experiments/n11-s9-n24-round7-20261028/compact-certificate.json) としてmainに保存した。各LOSS9について、昇順の合法10石子のうち、LOSS10である1子の番号を固定している。これらの32類を次回の候補選択で既調査として除外できる。
 
-固定証明書の再検証は `node research/experiments/n11-s9-n24-round7-20261028/prove.js --minimal --negative`。32件のLOSS10証人だけを独立した2種類の整数幾何で終局再計算し、偽WIN証人と範囲外証人を拒否する。初回探索238件に対して固定証人の最小検証義務は32件（**86.6%減**）。さらに `node research/experiments/n11-s9-n24-round7-20261028/prove.js` で初回の最初のLOSS子探索順まで再現する。固定証人の検証CIは別途確認する。
+固定証明書の再検証は `node research/experiments/n11-s9-n24-round7-20261028/prove.js --minimal --negative`。32件のLOSS10証人だけを独立した2種類の整数幾何で終局再計算し、偽WIN証人と範囲外証人を拒否する。初回探索238件に対して固定証人の最小検証義務は32件（**86.6%減**）。さらに `node research/experiments/n11-s9-n24-round7-20261028/prove.js` で初回の最初のLOSS子探索順まで再現する。[固定証人の独立再検証CI 40606701095](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40606701095) **成功**。32件のLOSS10証人を再計算し、偽WIN・範囲外証人の拒否と初回探索238件の完全再現が成功した。最小再検証は各幾何10,095再帰状態で、初回48,462状態から**79.2%減**。Knowledge integrity CI 40606701068も成功。
 
 ## 勝敗と証明義務の境界
 
