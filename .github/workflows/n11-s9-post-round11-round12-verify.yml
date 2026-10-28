@@ -4,8 +4,6 @@ on:
     branches: [main]
     paths:
       - 'research/experiments/n11-s9-post-round11-round12-20261028/certificate.json'
-      - 'research/experiments/n11-s9-post-round11-round12-20261028/verify_compact.js'
-      - '.github/workflows/n11-s9-post-round11-round12-verify.yml'
   workflow_dispatch:
 jobs:
   verify:
