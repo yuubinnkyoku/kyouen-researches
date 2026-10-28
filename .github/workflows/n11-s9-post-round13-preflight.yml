@@ -1,0 +1,21 @@
+name: N11 round14 next-batch independent S10 preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round13-replan-20261029/preflight.js'
+      - 'research/experiments/n11-s9-post-round13-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round13-replan-20261029/preflight.json'
+      - '.github/workflows/n11-s9-post-round13-preflight.yml'
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify all selected S9 to S10 move boundaries
+        run: node research/experiments/n11-s9-post-round13-replan-20261029/preflight.js
