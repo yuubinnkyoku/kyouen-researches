@@ -1,0 +1,26 @@
+name: N11 round9 next-batch independent geometry preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round9-replan-20261028/audit_next_batch.js'
+      - 'research/experiments/n11-s9-post-round9-replan-20261028/next-plan.json'
+      - '.github/workflows/n11-s9-post-round9-preflight.yml'
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently check S9 safety, S10 children and sharing
+        run: node research/experiments/n11-s9-post-round9-replan-20261028/audit_next_batch.js > n11-next-batch-preflight.json
+      - name: Show bounded structural audit
+        run: cat n11-next-batch-preflight.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-next-batch-preflight
+          path: n11-next-batch-preflight.json
