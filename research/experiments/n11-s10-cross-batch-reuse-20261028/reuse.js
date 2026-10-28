@@ -24,7 +24,7 @@ function add(cache,h,win,source){
   if(old&&old.win!==win)throw Error('WIN/LOSS CONFLICT '+h+' '+old.source+' '+source);
   if(!old)cache.set(h,{win,source});
 }
-function ingest(cache,dir,keys,expected){
+function ingest(cache,dir,keys,expected,known9){
   const c=read(dir),w=Buffer.from(c.witnessBase64,'base64');
   need(c.board===11&&c.perspective==='original-first-player'&&c.emptyBoard==='UNKNOWN',
     'certificate header '+dir);
@@ -34,6 +34,7 @@ function ingest(cache,dir,keys,expected){
     'certificate identity '+dir);
   let wins=0,losses=0;
   for(let i=0;i<keys.length;i++){
+    if(known9)add(known9,keys[i],w[i]===255,dir+':root:'+i);
     const children=[...g.children(g.board(keys[i],9))].sort();
     if(w[i]===255){wins++;for(const h of children)add(cache,h,true,dir+':'+i);}
     else{need(w[i]<children.length,'bad witness index '+dir+':'+i);
@@ -104,8 +105,8 @@ function run(){
     s2=r2.selection();s3=r3.inventory();s4=r4.inventory();
     s5=r5.inventory();s6=r6.inventory();s7=r7.inventory();
   }finally{console.log=original;}
-  const cache=new Map(),batches=[];
-  const addBatch=(d,keys,n)=>batches.push(ingest(cache,d,keys,n));
+  const cache=new Map(),known9=new Map(),batches=[];
+  const addBatch=(d,keys,n)=>batches.push(ingest(cache,d,keys,n,known9));
   addBatch('n11-s9-n22-complete-20261027',inv.candidates,890);
   const [first,remaining]=n23Selections(inv);
   addBatch('n11-s9-n23-priority-20261027',first,256);
@@ -162,6 +163,16 @@ function run(){
   if(fs.existsSync(fixed))need(
     JSON.stringify(JSON.parse(fs.readFileSync(fixed)))===JSON.stringify(derivedLoss9),
     'frozen derived LOSS9 witnesses differ');
+  if(process.argv.includes('--export-loss10')){
+    const loss10=[...cache].filter(([,v])=>!v.win).map(([h,v])=>({h,source:v.source}))
+      .sort((a,b)=>a.h.localeCompare(b.h));
+    const knownWin9=[...known9].filter(([,v])=>v.win).map(([h])=>h).sort();
+    need(loss10.length===result.loss10,'certified LOSS10 export count');
+    console.log(JSON.stringify({schema:'n11-certified-loss10-export-v1',
+      emptyBoard:'UNKNOWN',loss10,knownWin9,distinctS10:cache.size,
+      conflicts:0}));
+    return result;
+  }
   const output=process.argv.includes('--export')?{report:result,derivedLoss9}:result;
   console.log(JSON.stringify(output,null,2));return result;
 }
