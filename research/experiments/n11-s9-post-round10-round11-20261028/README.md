@@ -22,3 +22,7 @@ node research/experiments/n11-s9-post-round10-round11-20261028/verify_compact.js
 `prove.js` recomputes the discovery trace and checks exact equality with `certificate.json`. `verify_compact.js` checks only the necessary terminal obligations and rejects forged WIN9/LOSS9 claims and invalid witness indices. Both require the frozen upstream plan; neither uses an incomplete df-pn result as a terminal verdict.
 
 **Scope:** These are local S9 certificates. The proof-only S8 coverage and the conditional 14-root frontier must be recalculated separately before claiming any reduction of the 83 outstanding edges. Standard 11×11 empty-board winner: **UNKNOWN**.
+
+## Independent verification receipt
+
+[CI run 40677563379](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40677563379) **PASS**: the frozen certificate was independently replayed and all forged-claim negative controls were rejected. The minimal certificate verifier checked **124** distinct S10 terminal leaves and **23,710** recursive states per geometry, versus **320** leaves and **57,384** states in the full discovery replay. This saves **61.25%** of terminal leaves and about **58.68%** of terminal recursion states for repeated checking; it is not a wall-clock benchmark. The complete discovery replay also matched the frozen certificate byte-for-byte.
