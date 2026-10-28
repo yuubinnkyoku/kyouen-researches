@@ -1,0 +1,25 @@
+name: N11 round9 proof-only next-plan audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round9-replan-20261028/**'
+      - '.github/workflows/n11-s9-post-round9-replan.yml'
+  workflow_dispatch:
+jobs:
+  replan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Recheck terminal certificate and construct proof-only next plan
+        run: node research/experiments/n11-s9-post-round9-replan-20261028/replan.js > round9-next-plan.json
+      - name: Show exact counts
+        run: cat round9-next-plan.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round9-proof-only-next-plan
+          path: round9-next-plan.json
