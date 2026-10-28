@@ -1,0 +1,103 @@
+{
+  "schema": "n11-s10-cross-batch-reuse-v1",
+  "emptyBoard": "UNKNOWN",
+  "trust": "terminal witnesses from previously verified frozen certificates; independently checked reverse geometry, not all terminal recursions",
+  "batches": [
+    {
+      "batch": "n11-s9-n22-complete-20261027",
+      "win9": 115,
+      "loss9": 775
+    },
+    {
+      "batch": "n11-s9-n23-priority-20261027",
+      "win9": 21,
+      "loss9": 235
+    },
+    {
+      "batch": "n11-s9-n23-remaining-20261027",
+      "win9": 23,
+      "loss9": 134
+    },
+    {
+      "batch": "n11-s9-n24-priority-20261028",
+      "win9": 3,
+      "loss9": 29
+    },
+    {
+      "batch": "n11-s9-short-single-parent-20261028",
+      "win9": 0,
+      "loss9": 64
+    },
+    {
+      "batch": "n11-s9-n24-round2-20261028",
+      "win9": 1,
+      "loss9": 31
+    },
+    {
+      "batch": "n11-s9-n24-round3-20261028",
+      "win9": 2,
+      "loss9": 30
+    },
+    {
+      "batch": "n11-s9-n24-round4-20261028",
+      "win9": 3,
+      "loss9": 29
+    },
+    {
+      "batch": "n11-s9-n24-round5-20261028",
+      "win9": 1,
+      "loss9": 31
+    },
+    {
+      "batch": "n11-s9-n24-round6-20261028",
+      "win9": 3,
+      "loss9": 29
+    },
+    {
+      "batch": "n11-s9-n24-round7-20261028",
+      "win9": 0,
+      "loss9": 32
+    }
+  ],
+  "distinctS10": 5085,
+  "win10": 3779,
+  "loss10": 1306,
+  "conflicts": 0,
+  "remainingS9": 1446,
+  "freeLoss9": 383,
+  "freeWin9": 0,
+  "partialWin10Candidates": 577,
+  "candidatesTouched": 960,
+  "knownWin10Edges": 879,
+  "newS8Win": 0,
+  "proofOnlyS8Win": 5407,
+  "unprovedConditionalEdges": 100,
+  "twoStoneClosures": 0,
+  "examplesFreeLoss9": [
+    {
+      "h": "00000000010000821080000040100024",
+      "leaf": "00040000010000821080000040100024"
+    },
+    {
+      "h": "00000008000000821080000140000024",
+      "leaf": "00000008000800821080000140000024"
+    },
+    {
+      "h": "00000000010001821080000040000024",
+      "leaf": "00000000010001821080000040000034"
+    },
+    {
+      "h": "00000008000040821080000040000024",
+      "leaf": "00000008000040821080000040004024"
+    },
+    {
+      "h": "00020040000000821080000040000024",
+      "leaf": "00020240000000821080000040000024"
+    },
+    {
+      "h": "00042000000000821080000001000120",
+      "leaf": "00080000040010003080080000400220"
+    }
+  ],
+  "examplesFreeWin9": []
+}
