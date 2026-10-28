@@ -5,6 +5,8 @@ on:
     paths:
       - 'research/experiments/n11-s9-post-round12-round13-20261029/lift.json'
       - 'research/experiments/n11-s9-post-round13-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round13-replan-20261029/replan.js'
+      - '.github/workflows/n11-s9-post-round13-replan.yml'
   workflow_dispatch:
 jobs:
   replan:
