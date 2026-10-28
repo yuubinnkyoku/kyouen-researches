@@ -12,6 +12,6 @@ node research/experiments/n11-s10-loss9-parent-closure-20261028/expand.js --fron
 node research/experiments/n11-s10-loss9-parent-closure-20261028/expand.js --export > /tmp/expanded-loss9-witnesses.tsv
 ```
 
-`--frontier` は第7回終了時の候補1,063類との重なりを再計数する。`--export` は各9石LOSS鍵に対応する10石LOSS証人鍵を出力する。次の候補選択器はこの一覧を取り込み、証明済みLOSS9を再探索しないようにできる。現行の32候補と3,250類の重なりは0件。
+`--frontier` は第7回終了時の候補1,063類との重なりを再計数する。`--export` は各9石LOSS鍵に対応する10石LOSS証人鍵を出力する。[専用CI 40618922337](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40618922337) で全件検査成功。第7回終了時の未調査候補1,063類との重複は **0類**、既定32候補との重複も **0類**。したがって今回の閉包は局所証明集合を拡大したが、次の9石探索対象を減らしていない。
 
 **信頼境界:** 10石LOSSは既存の独立終局証明書に依存。局面除去と幾何・対称性の検査は今回独立に実行。9石LOSSを8石LOSSへ誤伝播しない。条件付き14根の未証明辺100本、二石root閉鎖0件、空盤勝敗**UNKNOWN**。
