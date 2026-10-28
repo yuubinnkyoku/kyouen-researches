@@ -1,0 +1,41 @@
+name: N11 round12 proof-only WIN8 conditional lift
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round11-round12-20261028/lift.js'
+  workflow_dispatch:
+jobs:
+  lift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            research/experiments/n11-gap6-terminal-20261019
+            research/experiments/n11-s9-n24-round7-20261028
+            research/experiments/n11-s9-post-round8-round9-20261028
+            research/experiments/n11-s9-post-round9-round10-20261028
+            research/experiments/n11-s9-post-round10-round11-20261028
+            research/experiments/n11-s9-post-round11-replan-20261028
+            research/experiments/n11-s9-post-round11-round12-20261028
+            research/experiments/n11-s9-n24-round2-20261028
+            research/experiments/n11-s9-n24-round3-20261028
+            research/experiments/n11-s9-n24-round4-20261028
+            research/experiments/n11-s9-n24-round5-20261028
+            research/experiments/n11-s9-n24-round6-20261028
+            research/experiments/n11-s9-n24-20261028
+            research/experiments/n11-s9-shared-plan14-eleven-win-20261027
+            research/experiments/n11-s5-pair-cover-20261026
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rebuild proof-only WIN8 frontier and lift twelve terminal WIN9 witnesses
+        run: node research/experiments/n11-s9-post-round11-round12-20261028/lift.js > round12-lift.json
+      - name: Show exact conditional coverage
+        run: cat round12-lift.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n11-round12-proof-only-win8-lift
+          path: round12-lift.json
