@@ -1,0 +1,13 @@
+# 2026-10-29: N11 round13 bounded terminal certificate, independently verified
+
+Reviewed current main, `AGENTS.md`, `research/knowledge/README.md`, the round12 proof-only replan, the 32-root frozen selection and preflight, the round12 terminal/lift evidence, and the latest 11×11 research log. The previously queued [round13 discovery run 40723296898](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40723296898) completed successfully and uploaded artifact `n11-round13-discovery` (ID `12830889921`, ZIP SHA-256 `a38cf17ccfef393e957d463b625941d7a39e7cf2e2cb63ad8d8357f051612af1`). The artifact's JSON is frozen as `research/experiments/n11-s9-post-round12-round13-20261029/certificate.json` on main.
+
+The selection SHA-256 is `41c3f7d019848012f37bb27e1aaf60773a577fe21b9aac2f025f0093cc3c1d64`. Only its **32** selected S9 roots were explored; their preflight boundary has **802** legal S10 edges (**801** distinct S10 classes). The discovery certificate has **4 WIN9** (all **100** legal S10 children WIN) and **28 LOSS9** (one exact LOSS10 child witness each). Discovery evaluated **307** distinct S10 terminal leaves (**308** first-loss search obligations), **49,755** terminal recursion states *per geometry*. The 28 LOSS10 witnesses induce **280** canonical LOSS9 parents, which is a closure size, not a claim of 280 globally new verdicts. No WIN9/LOSS9 conflict and no two-stone closure.
+
+The independent [post-freeze verification run 40733280615](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40733280615) **PASS**: `verify_compact.js --negative` checked the minimal **128** distinct S10 terminal leaves (**128** obligations), **22,180** terminal recursion states per geometry, with independent 3×3 difference and 4×4 integer determinant geometry. Forged WIN9/LOSS9 and invalid witness indices were rejected. A full discovery replay then exactly matched the frozen certificate. This reduces the independent verification's terminal leaves by **58.3%** and recursion states by **55.4%** versus discovery, not necessarily wall-clock time.
+
+The independent proof-only WIN8 upward lift is implemented as `lift.js`, which rechecks the frozen terminal certificate and rebuilds the certified frontier before propagation. Its result is **not** counted until its own workflow passes. The last independently certified fixed 14-root plan remains **484/548** secured, **64** missing, and proof-only WIN8 **5,643**.
+
+No branch or PR was created. No S7, S5, two-stone, or empty-board verdict follows from these bounded certificates.
+
+**Standard 11×11 empty-board winner: UNKNOWN.**
