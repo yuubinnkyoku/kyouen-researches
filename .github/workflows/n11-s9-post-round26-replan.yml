@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '22'
       - name: Independently replay round26 LOSS9 and select round27 candidates
-        run: node research/experiments/n11-s9-post-round26-replan-20261029/replan.js > round26-replan.json
+        run: node research/experiments/n11-s9-post-round26-replan-20261029/replan.js | tee round26-replan.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
