@@ -79,7 +79,7 @@ function verify({negative=false}={}){
   // Fail closed if a newly derived LOSS9 parent was certified WIN9 in
   // any earlier independently audited terminal batch.
   const earlierWins=new Set();
-  for(let n=9;n<=26;n++{
+  for(let n=9;n<=26;n++){
     const day=n<=12?'20261028':'20261029';
     const c=read('../n11-s9-post-round'+(n-1)+'-round'+n+'-'+day+'/certificate.json');
     for(const h of c.win9Keys)earlierWins.add(h);
