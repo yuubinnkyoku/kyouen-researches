@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'research/experiments/n11-s8-complete-child-audit-20261030/audit.js'
+      - 'research/experiments/n11-s9-post-round26-round27-20261029/verify_compact.js'
       - '.github/workflows/n11-s8-complete-child-audit.yml'
   workflow_dispatch:
 jobs:
@@ -16,7 +17,9 @@ jobs:
         with:
           node-version: '22'
       - name: Independently enumerate every legal S9 child of the fixed14 unproved S8 frontier
-        run: node research/experiments/n11-s8-complete-child-audit-20261030/audit.js | tee n11-s8-child-audit.json
+        run: |
+          set -o pipefail
+          node research/experiments/n11-s8-complete-child-audit-20261030/audit.js | tee n11-s8-child-audit.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
