@@ -44,7 +44,7 @@ def run():
                 "loss10WitnessIndex": i,
                 "loss9ParentClosure": len(closure),
                 "loss9ParentSha256": hashlib.sha256(
-                    ("\\n".join(closure) + "\\n").encode()).hexdigest(),
+                    ("\n".join(closure) + "\n").encode()).hexdigest(),
                 "twoStoneRootClosed": False,
             }
             print(json.dumps(result, indent=2))
