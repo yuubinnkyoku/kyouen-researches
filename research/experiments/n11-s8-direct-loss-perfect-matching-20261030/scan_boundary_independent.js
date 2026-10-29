@@ -58,6 +58,9 @@ function run(){
     need(report[key]===frozen[key],'Python frozen scan mismatch: '+key);
   need(frozen.selectedLoss10===selected.size,'selected count mismatch');
   console.log(JSON.stringify(report,null,2));
+  if(process.argv.includes('--emit-closure'))
+    console.log('CLOSURE_JSON='+JSON.stringify({loss10Keys:lossKeys,
+      loss9ParentKeys:[...lossParents].sort()}));
   return report;
 }
 if(require.main===module)run();
