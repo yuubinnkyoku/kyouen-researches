@@ -120,6 +120,8 @@ function verify(negative=false){
     oldUnknownEdges:829,newlyCertifiedLossEdges:newLossEdges,unknownEdgesAfter:unknownEdges,
     fullyClosedS8:0,proofOnlyWin8:5859,fixedPlanUnprovedS8:37,
     newTwoStoneClosures:0,winLossConflicts:0};
+  need(JSON.stringify(result)===JSON.stringify(read('result.json')),
+    'frozen proof-only result mismatch');
   console.log(JSON.stringify(result,null,2));return result;
 }
 if(require.main===module)verify(process.argv.includes('--negative'));
