@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'research/experiments/n11-s9-post-round26-round27-20261029/certificate.json'
+      - 'research/experiments/n11-s9-post-round26-round27-20261029/verify_compact.js'
+      - 'research/experiments/n11-s9-post-round26-round27-20261029/verify_python.py'
   workflow_dispatch:
 jobs:
   verify:
@@ -18,9 +20,13 @@ jobs:
         with:
           python-version: '3.12'
       - name: Independently verify round27 certificate and reject forged witnesses
-        run: node research/experiments/n11-s9-post-round26-round27-20261029/verify_compact.js --negative | tee round27-node-verify.json
+        run: |
+          set -o pipefail
+          node research/experiments/n11-s9-post-round26-round27-20261029/verify_compact.js --negative | tee round27-node-verify.json
       - name: Independently rederive terminal outcome with Python Bareiss geometry
-        run: python research/experiments/n11-s9-post-round26-round27-20261029/verify_python.py | tee round27-python-verify.json
+        run: |
+          set -o pipefail
+          python research/experiments/n11-s9-post-round26-round27-20261029/verify_python.py | tee round27-python-verify.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
