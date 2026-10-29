@@ -20,7 +20,7 @@ assert cert["sourcePlanSha256"] == plan["newSelectionSha256"]
 prior = json.loads((base / "../n11-s9-post-round20-round21-20261029/certificate.json").read_text())
 assert cert["sourcePriorWitnessSha256"] == prior["witnessSha256"]
 assert plan["sourceWitnessSha256"] == prior["witnessSha256"]
-assert cert["format"] == "n11-s9-post-round20-round22-terminal-v1"
+assert cert["format"] == "n11-s9-post-round21-round22-terminal-v1"
 assert plan["emptyBoard"] == cert["emptyBoard"] == "UNKNOWN"
 assert plan["selectedCount"] == 5 and plan["legal10Children"] == 138
 xy = [(i % 11, i // 11) for i in range(121)]

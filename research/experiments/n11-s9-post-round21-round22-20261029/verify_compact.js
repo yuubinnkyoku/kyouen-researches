@@ -15,7 +15,7 @@ function verify({negative=false}={}){
   const prior=read('../n11-s9-post-round20-round21-20261029/certificate.json');
   const preflight=read('../n11-s9-post-round21-replan-20261029/preflight.json');
   const claims=Buffer.from(cert.witnessBase64,'base64');
-  need(cert.format==='n11-s9-post-round20-round22-terminal-v1'&&
+  need(cert.format==='n11-s9-post-round21-round22-terminal-v1'&&
     cert.board===11&&cert.perspective==='original-first-player'&&
     cert.emptyBoard==='UNKNOWN'&&plan.emptyBoard==='UNKNOWN'&&
     plan.conditionalUnprovedEdges===40&&plan.proofOnlyWin8After===5835&&
@@ -26,7 +26,7 @@ function verify({negative=false}={}){
     preflight.selectionSha256===plan.newSelectionSha256&&
     preflight.legalS10Edges===138&&preflight.distinctS10Classes===138&&
     cert.selectionSha256===plan.newSelectionSha256&&
-    keys.length===5&&claims.length===5&&new Set(keys).size===8&&
+    keys.length===5&&claims.length===5&&new Set(keys).size===5&&
     sha(keys.join('\n')+'\n')===plan.newSelectionSha256&&
     sha(claims)===cert.witnessSha256&&
     claims.toString('base64')===cert.witnessBase64,
