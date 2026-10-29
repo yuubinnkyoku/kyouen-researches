@@ -31,6 +31,6 @@
 - [81葉・684親の固定一覧](../experiments/n11-s8-direct-loss-perfect-matching-20261030/full_loss_closure.json)
 - [Pythonの終局再帰・親閉包・固定14根伝播検証](../experiments/n11-s8-direct-loss-perfect-matching-20261030/audit_full_loss_closure.py)
 - [37行の固定監査結果](../experiments/n11-s8-direct-loss-perfect-matching-20261030/full_loss_closure_result.json)
-- [独立検証CI（2026-10-30）](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40963408911) は、固定結果を追加する前の版で成功。固定結果を含む最新版CIは別途確認する。
+- [独立検証CI（2026-10-30、成功）](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40963638062) は、全480局面のNode独立再帰、81葉・684親のPython再帰、37行伝播、改変拒否に成功。この実行が出力した全37行のJSONと後から固定した `full_loss_closure_result.json` が完全一致することも照合済み。固定結果を含む追加CIは実行中。
 
 Python検証器は既存の証人ハッシュと終局再帰を使用し、全37行の合法着手を再列挙する。Node検証器は全480局面について2種類の整数幾何を独立に照合する。未完df-pnやpn/dnを勝敗証明に使わない。**標準11×11空盤勝敗はUNKNOWN**。
