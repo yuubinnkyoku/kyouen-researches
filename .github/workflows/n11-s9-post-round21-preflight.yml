@@ -1,0 +1,24 @@
+name: N11 round22 independent boundary preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round21-replan-20261029/next-plan.json'
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independent D4 and two integer geometry checks for selected round22 roots
+        run: python research/experiments/n11-s9-post-round21-replan-20261029/preflight_independent.py > round22-preflight.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round22-preflight
+          path: round22-preflight.json
+          retention-days: 14
