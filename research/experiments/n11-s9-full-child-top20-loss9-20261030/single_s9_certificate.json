@@ -1,0 +1,41 @@
+{
+  "schema": "n11-fixed14-post-top20-one-s9-terminal-v1",
+  "emptyBoard": "UNKNOWN",
+  "s9": "00012010000000821084000000000020",
+  "s9Verdict": "LOSS",
+  "s10Children": 22,
+  "testedS10": [
+    {
+      "index": 0,
+      "s10": "00012010000000821084000000000028",
+      "s10Win": true,
+      "terminalStates": 58,
+      "s10LegalMoves": 17
+    },
+    {
+      "index": 1,
+      "s10": "00012010000000821084000000000120",
+      "s10Win": true,
+      "terminalStates": 153,
+      "s10LegalMoves": 16
+    },
+    {
+      "index": 2,
+      "s10": "00012010000000821084000000004020",
+      "s10Win": true,
+      "terminalStates": 58,
+      "s10LegalMoves": 15
+    },
+    {
+      "index": 3,
+      "s10": "00012010000000821084000000040020",
+      "s10Win": false,
+      "terminalStates": 205,
+      "s10LegalMoves": 14
+    }
+  ],
+  "loss10WitnessIndex": 3,
+  "loss9ParentClosure": 10,
+  "loss9ParentSha256": "812d09bed0cff43b7875fe091aaf99522b911392a8f8c424a0eab6c7a2f27354",
+  "twoStoneRootClosed": false
+}
