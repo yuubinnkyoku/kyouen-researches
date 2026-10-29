@@ -126,6 +126,9 @@ def run():
         "newTwoStoneClosures": 0,
         "winLossConflicts": 0,
     }
+    frozen = HERE / "post_top20_frontier.json"
+    if frozen.exists():
+        assert report == load(frozen), "frozen residual frontier mismatch"
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return report
 
