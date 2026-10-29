@@ -26,7 +26,7 @@ function verify({negative=false}={}){
     preflight.selectionSha256===plan.newSelectionSha256&&
     preflight.legalS10Edges===87&&preflight.distinctS10Classes===87&&
     cert.selectionSha256===plan.newSelectionSha256&&
-    keys.length===3&&claims.length===3&&new Set(keys).size===5&&
+    keys.length===3&&claims.length===3&&new Set(keys).size===3&&
     sha(keys.join('\n')+'\n')===plan.newSelectionSha256&&
     sha(claims)===cert.witnessSha256&&
     claims.toString('base64')===cert.witnessBase64,
