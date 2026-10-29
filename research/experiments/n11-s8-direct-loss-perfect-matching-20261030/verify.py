@@ -4,6 +4,8 @@ import hashlib
 import json
 from collections import defaultdict
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'n11-s9-full-child-top20-loss9-20261030'))
 import verify_python as g
 
 HERE = Path(__file__).resolve().parent
@@ -42,7 +44,7 @@ def verify(c):
     assert len(parents) == c["s7ParentCount"] == 8
     for h in parents:
         assert c["s8"] in g.children(int(h, 16))
-    digest = hashlib.sha256(("\\n".join(parents) + "\\n").encode()).hexdigest()
+    digest = hashlib.sha256((chr(10).join(parents) + chr(10)).encode()).hexdigest()
     assert digest == c["s7ParentSha256"]
     return {"verified": True, "language": "Python", "s8": c["s8"],
             "s8Verdict": "LOSS", "s9AllChildren": len(s9),
