@@ -104,7 +104,7 @@ def run():
         'closedS8Keys': sorted(closed),
         'remainingUnprovedS8OfOriginal37': 37 - len(closed),
         'winLossConflicts': 0,
-        'newTwoStoneRootClosures': 0,
+        'twoStoneRootClosureChecked': False,
         's8Rows': rows
     }
     frozen = HERE / 'full_loss_closure_result.json'
