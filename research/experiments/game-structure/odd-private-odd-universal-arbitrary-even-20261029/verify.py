@@ -95,6 +95,13 @@ def main():
             assert actual == (h[full] ^ (isolated & 1)) == ((2 if n & 1 else 3) ^ (isolated & 1))
             independent += 1
             max_states = max(max_states, states)
+    for multiplicity, expected in ((1, 3), (2, 2)):
+        a = {1: 1, 2: 1, 4: 1, 7: 1, 3: multiplicity}
+        h, _ = quotient(a, 3)
+        actual, states = named(a, 3)
+        assert h[7] == actual == expected
+        independent += 1
+        max_states = max(max_states, states)
     print(f'PASS exhaustive_even_type_patterns={total} independent_named_cases={independent} max_named_states={max_states}')
 
 
