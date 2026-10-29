@@ -1,0 +1,23 @@
+name: N11 second S8 LOSS terminal certificate
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-second-direct-loss-20261030/**'
+      - '.github/workflows/n11-s8-second-direct-loss.yml'
+  workflow_dispatch:
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node independent 3x3 and 4x4 geometry, 18 selected leaves, 423 full boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-second-direct-loss-20261030/verify.js --full --negative
+      - name: Python independent terminal recursion, full 97 LOSS10 and 811 LOSS9 closure
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-second-direct-loss-20261030/verify.py --full --negative
