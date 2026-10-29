@@ -82,7 +82,7 @@ def run():
     excess_before = 829 - 799
     excess_after = sum(len(v) - 1 for v in parents.values())
     assert excess_before == 30 and excess_after == 10
-    degree_histogram = dict(sorted(Counter(map(len, parents.values())).items()))
+    degree_histogram = {str(k): v for k, v in sorted(Counter(map(len, parents.values())).items())}
     target = min(rows, key=lambda r: (r["unknownAfter"], r["s8"]))
     target_children = sorted(
         ({"s9": h, "legal10": len(geometry.children(int(h, 16))),
