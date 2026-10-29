@@ -34,6 +34,11 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_full_incidence.py | tee top20-python-incidence.json
+      - name: Audit residual 750 S9 classes and rank the smallest S8 frontier
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s9-full-child-top20-loss9-20261030/plan_remaining.py | tee top20-next-frontier.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
@@ -42,4 +47,5 @@ jobs:
             top20-node.json
             top20-python.json
             top20-python-incidence.json
+            top20-next-frontier.json
           retention-days: 14
