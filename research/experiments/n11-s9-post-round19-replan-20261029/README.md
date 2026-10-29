@@ -7,3 +7,15 @@
 実行: `node research/experiments/n11-s9-post-round19-replan-20261029/replan.js`。実行結果はCI成果物 `n11-round19-replan` に保存し、監査後に `next-plan.json` に固定する。再計画結果を固定する前に、CIの成功と成果物の整合性を確認すること。
 
 第19回までの確定値は証明限定WIN8 **5,819類**、固定14根計画の証明済み506/548辺、未証明**42辺**。新規二石root閉鎖0、標準11×11空盤の勝敗は**UNKNOWN**。
+
+
+## 第20回の固定選定と独立した合法着手検査（2026-10-29）
+
+[再計画CI 40816552346](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40816552346) は成功し、成果物12872819207を回収した。結果を `next-plan.json` に固定し、元の12候補の選定SHA-256、証人SHA-256、WIN8 5,819類、未証明42辺、異なる回のWIN/LOSS矛盾0件を確認した。
+
+- 未証明9石候補 **93→64類**。第19回の12候補と追加のLOSS9親2類を除外して79類、残る42辺に接続しない15類を除いて64類。
+- 支配関係で縮約した候補 **12→9類**。選択は9類、潜在被覆9類、10石合法着手251本。これらは勝敗確定ではない。
+- `preflight_independent.py` は共有探索器・キャッシュを読まず、D4正規化と3×3差分行列式・4×4整数行列式を独立計算する。選定9局面の合法10石着手 **251本・異なる250類**、共有子1類、四点判定の照合 **85,806件**。結果は `preflight.json` に固定した。
+- 再検査: `python3 research/experiments/n11-s9-post-round19-replan-20261029/preflight_independent.py`。固定JSONとの完全一致が必須。専用GitHub Actionsは `n11-s9-post-round19-preflight.yml`。
+
+今回の計算は第20回の**探索対象を確定しただけ**で、終局勝敗の新規証明、S7/S5の新規確定、二石root閉鎖は0件。固定14根計画の未証明42辺は不変。標準11×11空盤は**UNKNOWN**。
