@@ -1,0 +1,25 @@
+name: N11 round25 bounded terminal discovery
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round24-round25-20261029/prove.js'
+      - '.github/workflows/n11-s9-post-round24-round25.yml'
+  workflow_dispatch:
+jobs:
+  prove:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Bounded single-root terminal discovery with independent exact geometry
+        run: node research/experiments/n11-s9-post-round24-round25-20261029/prove.js > round25-discovery.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round25-discovery
+          path: round25-discovery.json
+          retention-days: 14
