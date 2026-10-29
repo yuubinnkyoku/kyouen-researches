@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'research/experiments/n11-s9-post-round27-replan-20261030/replan.js'
+      - 'research/experiments/n11-s9-post-round26-round27-20261029/verify_compact.js'
       - '.github/workflows/n11-s9-post-round27-replan.yml'
   workflow_dispatch:
 jobs:
@@ -16,7 +17,9 @@ jobs:
         with:
           node-version: '22'
       - name: Independently replay round27 LOSS9 and select round28 candidates
-        run: node research/experiments/n11-s9-post-round27-replan-20261030/replan.js | tee round27-replan.json
+        run: |
+          set -o pipefail
+          node research/experiments/n11-s9-post-round27-replan-20261030/replan.js | tee round27-replan.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
