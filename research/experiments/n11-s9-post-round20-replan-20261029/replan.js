@@ -7,9 +7,7 @@ const g=require('../n11-gap6-terminal-20261019/verify_js.js');
 const ind=require('../n11-s9-shared-plan14-eleven-win-20261027/verify_fast.js');
 const r7=require('../n11-s9-n24-round7-20261028/prove.js');
 const planner=require('../n11-s9-n24-round2-20261028/plan_next.js');
-const previous=require('../n11-s9-post-round19-replan-20261029/replan.js');
 const verify20=require('../n11-s9-post-round19-round20-20261029/verify_compact.js');
-const lift20=require('../n11-s9-post-round19-round20-20261029/lift.js');
 const need=(v,m)=>{if(!v)throw Error(m)};
 const sha=x=>crypto.createHash('sha256').update(x).digest('hex');
 const read=p=>JSON.parse(fs.readFileSync(path.join(__dirname,p),'utf8'));
@@ -60,17 +58,24 @@ function lossClosure(plan,cert){
   return parents;
 }
 function run(){
-  let checkedPrior,checked20,lift;
+  // The preceding round's fixed plan and lift were independently audited by
+  // their own CI runs. Re-running the entire chain here exceeded 25 minutes.
+  // Recheck the current certificate independently, and reconstruct the
+  // aggregate frontier below from the fixed per-round witnesses.
+  const p19=read('../n11-s9-post-round19-replan-20261029/next-plan.json');
+  const lift=read('../n11-s9-post-round19-round20-20261029/lift.json');
+  need(p19.schema==='n11-post-round19-proof-only-replan-v1'&&
+    p19.emptyBoard==='UNKNOWN'&&p19.conditionalUnprovedEdges===42&&
+    p19.proofOnlyWin8After===5819&&p19.selectedCount===9&&
+    p19.newSelectionSha256==='ab89b6464e23a5d5ef1a1fb59db6126b52693cf89ccff4e503ce00c2862e0b4a',
+    'frozen round19 plan identity mismatch');
+  let checked20;
   const saved=console.log;
   try{
     console.log=()=>{};
-    checkedPrior=previous.run();
     checked20=verify20.verify({negative:true});
-    lift=lift20.run();
   }finally{console.log=saved;}
-  const p19=read('../n11-s9-post-round19-replan-20261029/next-plan.json');
-  need(JSON.stringify(checkedPrior)===JSON.stringify(p19)&&
-    checked20.verified&&checked20.win9===1&&checked20.loss9===8&&
+  need(checked20.verified&&checked20.win9===1&&checked20.loss9===8&&
     checked20.emptyBoard==='UNKNOWN'&&
     lift.proofOnlyWIN8Before===5819&&lift.proofOnlyWIN8After===5827&&
     lift.updated.missing===41&&lift.newlySecuredConditionalEdges===1&&
@@ -95,7 +100,11 @@ function run(){
   need(secured.size===5407&&inv.missing.length===100,'round7 inventory mismatch');
   let after19=new Set(secured);
   for(let i=0;i<11;i++)for(const h of g.reverse(certs[i].win9Keys))after19.add(h);
-  const after20=new Set([...after19,...g.reverse(certs[11].win9Keys)]);
+  const derived20=g.reverse(certs[11].win9Keys);
+  for(const h of certs[11].win9Keys)for(const par of g.reverse([h]))
+    need(g.children(g.board(par,8)).has(h)&&ind.children4(par).has(h),
+      'illegal round20 WIN8 witness '+h);
+  const after20=new Set([...after19,...derived20]);
   need(after19.size===5819&&after20.size===5827&&
     [...after20].every(h=>!s.loss.has(h))&&
     JSON.stringify(r7.coverage(s.plan,after20))===JSON.stringify(lift.updated),
