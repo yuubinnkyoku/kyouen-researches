@@ -1,0 +1,17 @@
+# 2026-10-29: N11 round16 three WIN9, independent proof and WIN8 5,763
+
+Reviewed latest main, `AGENTS.md`, `research/knowledge/README.md`, K0023, prior round15 certificate/lift, current N11 experiment and log records, and the previously pending round15 replan workflow before continuing. All writes were directly to main, with no branch or PR.
+
+The previously pending [round15 replan workflow 40784709162](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40784709162) succeeded. Downloaded artifact 12859615577 (ZIP SHA-256 `32914e69634cab8b0c01c7314349d6a7998e05f089f4e3461c46742daf5cff3b`) and froze its exact JSON as `research/experiments/n11-s9-post-round15-replan-20261029/next-plan.json`. Eligible S9: 269 -> **215** (-54 = 32 selected + 4 additional proven LOSS9 parents + 18 no-longer-relevant). Undominated: 34 -> **28**. The coordinator chose 28 roots, with potential S8 coverage 28 and 728 S10 child edges; potential coverage is not a proof.
+
+An independent Python exact 3×3 determinant and D4 enumeration checked all 28 selected roots, finding **728 legal S10 edges, 726 distinct classes, 2 shared children**. The separately written repository `preflight.js` checks every boundary in 3×3 and 4×4 integer geometries; [CI 40792078270](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40792078270) succeeded. Its frozen `preflight.json` records the two duplicated child classes and parent keys.
+
+The bounded [round16 terminal discovery workflow 40792147135](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40792147135) succeeded (artifact 12861528445, ZIP SHA-256 `6fde50266dad5f47d13b08bcc0f084fe2d78bf1e38b7ee6a27d05af4c23a6cb5`). The 28 selected S9 classes yielded **3 WIN9 / 25 LOSS9** with 79 universal WIN9 S10 edges, 332 unique terminal leaves, 62,406 recursive states per geometry and 249 derived LOSS9 parents. The 28 witness bytes are fixed with SHA-256 `e1d1231d02a907c230733ccb76ee0b3abfdd18155f6f54d1b73e994723aa52a0`.
+
+The separate [compact verification workflow 40792279382](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40792279382) succeeded (artifact 12862700188, ZIP SHA-256 `feec8a12d28e8b4b483452e5ef2e4158cc58b4bb7a9ddbe987afd25430b57e8a`). It rechecked **104 distinct S10 leaves, 24,643 recursive states per geometry**, independently checking the 3×3 and 4×4 geometry, legal parent incidence, SHA-256 identity, and rejecting forged WIN9/LOSS9 and invalid witness indices. This is 68.7% fewer terminal leaves and 60.5% fewer states than discovery, not a solver speedup claim.
+
+The [round16 WIN8 lift workflow 40792393484](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40792393484) succeeded (artifact 12861579549, ZIP SHA-256 `560ef4a6cb545a6ef804841ee10a9364b6be17492778ba5958ebe55c4f1869bf`). Its exact structured output is frozen as `research/experiments/n11-s9-post-round15-round16-20261029/lift.json`. Three WIN9 gave 27 distinct WIN8 parents, of which **24** were new. Proof-only WIN8: **5,739 -> 5,763**. The fixed conditional 14-root plan secured **496/548 -> 499/548** edges, leaving **52 -> 49** unproved edges. WIN8/LOSS8 conflicts: zero. This does not close an S7, S5, two-stone, or empty root.
+
+Next priority: replan from the 49 missing conditional edges with all round9–16 certificates and 10-stone LOSS parent closures, then select only relevant S9 roots; do not treat prospective coverage or incomplete df-pn as verdicts.
+
+**Standard 11×11 empty-board winner: UNKNOWN.**
