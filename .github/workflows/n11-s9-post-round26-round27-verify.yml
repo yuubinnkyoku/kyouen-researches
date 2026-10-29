@@ -6,6 +6,7 @@ on:
       - 'research/experiments/n11-s9-post-round26-round27-20261029/certificate.json'
       - 'research/experiments/n11-s9-post-round26-round27-20261029/verify_compact.js'
       - 'research/experiments/n11-s9-post-round26-round27-20261029/verify_python.py'
+      - '.github/workflows/n11-s9-post-round26-round27-verify.yml'
   workflow_dispatch:
 jobs:
   verify:
