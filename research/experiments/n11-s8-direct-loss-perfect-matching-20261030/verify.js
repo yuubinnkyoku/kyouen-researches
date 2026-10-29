@@ -53,7 +53,7 @@ function verify(c) {
   need(digest===c.s7ParentSha256,'wrong S7 parent digest');
   return {verified:true,independentGeometries:2,s8:c.s8,s8Verdict:'LOSS',
     s9AllChildren:s9.length,loss10Witnesses:seen.size,
-    terminalStatesPerGeometry:states,derivedS7WinParents:parents.length,
+    terminalStatesPerGeometry:states,derivedS7LossParents:parents.length,
     emptyBoard:'UNKNOWN'};
 }
 function negative(c) {

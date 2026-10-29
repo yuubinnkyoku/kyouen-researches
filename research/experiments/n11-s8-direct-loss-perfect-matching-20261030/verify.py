@@ -49,7 +49,7 @@ def verify(c):
     return {"verified": True, "language": "Python", "s8": c["s8"],
             "s8Verdict": "LOSS", "s9AllChildren": len(s9),
             "loss10Witnesses": len(selected), "terminalStates": total_states,
-            "derivedS7WinParents": len(parents), "emptyBoard": "UNKNOWN"}
+            "derivedS7LossParents": len(parents), "emptyBoard": "UNKNOWN"}
 
 def negative(c):
     def reject(label, change):
