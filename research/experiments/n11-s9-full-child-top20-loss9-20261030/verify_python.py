@@ -78,12 +78,12 @@ def solve10(h):
     result=win(0)
     return result,win.cache_info().currsize,n
 
-def verify(negative=False):
-    assert CERT['format']=='n11-fixed14-s8-full-child-top20-loss9-v1'
-    assert CERT['board']==11 and CERT['emptyBoard']=='UNKNOWN'
-    rows=CERT['s9LossWitnesses']
+def verify_certificate(cert):
+    assert cert['format']=='n11-fixed14-s8-full-child-top20-loss9-v1'
+    assert cert['board']==11 and cert['emptyBoard']=='UNKNOWN'
+    rows=cert['s9LossWitnesses']
     selected=AUDIT['topUnknown9ByPotentialWIN8Coverage']
-    assert len(rows)==len(selected)==CERT['s9LossCount']==20
+    assert len(rows)==len(selected)==cert['s9LossCount']==20
     parents=set()
     states=0
     for row,src in zip(rows,selected):
@@ -105,13 +105,43 @@ def verify(negative=False):
             assert row['s10LossWitness'] in children(parent)
             parents.add(f'{parent:032x}')
     digest=hashlib.sha256(('\n'.join(sorted(parents))+'\n').encode()).hexdigest()
-    assert len(parents)==CERT['s9LossParentClosure']==192
-    assert digest==CERT['s9LossParentSha256'] and states==2602
+    assert len(parents)==cert['s9LossParentClosure']==192
+    assert digest==cert['s9LossParentSha256'] and states==2602
+    return states, parents
+
+
+def verify(negative=False):
+    states, parents = verify_certificate(CERT)
     if negative:
-        fake=dict(rows[0],s10LossWitness=rows[1]['s10LossWitness'])
-        assert fake['s10LossWitness']!=children(int(fake['s9'],16))[fake['index']]
-        fake=dict(rows[0],index=255)
-        assert fake['index']>=len(children(int(fake['s9'],16)))
+        # Exercise the actual verifier. Merely checking that forged fields
+        # differ from the originals would not detect a missing validation.
+        def expect_reject(label, mutate):
+            forged = json.loads(json.dumps(CERT))
+            mutate(forged)
+            try:
+                verify_certificate(forged)
+            except (AssertionError, IndexError, KeyError, ValueError):
+                pass
+            else:
+                raise AssertionError(f'forged certificate accepted: {label}')
+
+        expect_reject('wrong terminal witness', lambda c:
+            c['s9LossWitnesses'][0].update(
+                s10LossWitness=c['s9LossWitnesses'][1]['s10LossWitness']))
+        expect_reject('out-of-range witness index', lambda c:
+            c['s9LossWitnesses'][0].update(index=255))
+        expect_reject('forged terminal recursion count', lambda c:
+            c['s9LossWitnesses'][0].update(
+                s10TerminalStates=c['s9LossWitnesses'][0]['s10TerminalStates'] + 1))
+        expect_reject('forged legal-move count', lambda c:
+            c['s9LossWitnesses'][0].update(
+                s10LegalMoves=c['s9LossWitnesses'][0]['s10LegalMoves'] + 1))
+        expect_reject('forged parent-closure digest', lambda c:
+            c.update(s9LossParentSha256='0' * 64))
+        expect_reject('forged parent-closure count', lambda c:
+            c.update(s9LossParentClosure=c['s9LossParentClosure'] + 1))
+        expect_reject('forged selected position', lambda c:
+            c['s9LossWitnesses'][0].update(s9='0' * 32))
     result={'verified':True,'independentLanguage':'Python','s9Loss':20,
             'terminalStates':states,'loss9ParentClosure':len(parents),
             'emptyBoard':'UNKNOWN'}
