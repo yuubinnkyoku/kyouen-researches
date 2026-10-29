@@ -22,7 +22,7 @@ function run(){
     plan.sourceSelectionSha256===prior.selectionSha256&&
     plan.sourceWitnessSha256===prior.witnessSha256&&
     prior.win9===3&&prior.loss9===25&&
-    keys.length===20&&new Set(keys).size===28&&
+    keys.length===20&&new Set(keys).size===20&&
     sha(keys.join('\n')+'\n')===plan.newSelectionSha256,
     'frozen upstream selection/certificate mismatch');
   need(preflight.schema==='n11-post-round16-independent-boundary-preflight-v1'&&
