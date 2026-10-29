@@ -1,0 +1,155 @@
+{
+  "format": "n11-fixed14-s8-full-child-top20-loss9-v1",
+  "board": 11,
+  "emptyBoard": "UNKNOWN",
+  "sourceIncidence": "research/experiments/n11-s8-complete-child-audit-20261030/incidence.json",
+  "selectionRule": "topUnknown9ByPotentialWIN8Coverage first 20, exact order",
+  "proofOnlyWin8Before": 5859,
+  "fixedPlanUnprovedS8Before": 37,
+  "s9LossCount": 20,
+  "s9LossWitnesses": [
+    {
+      "s9": "00000000000000821081000040004024",
+      "s10LossWitness": "00000000000000821081000140004024",
+      "index": 0,
+      "s10LegalMoves": 11,
+      "s10TerminalStates": 103
+    },
+    {
+      "s9": "00000000000000821084800001000120",
+      "s10LossWitness": "00000000000000821084800001400120",
+      "index": 0,
+      "s10LegalMoves": 9,
+      "s10TerminalStates": 77
+    },
+    {
+      "s9": "000000000002008210800002000000b0",
+      "s10LossWitness": "000000000002008210800002000040b0",
+      "index": 0,
+      "s10LegalMoves": 11,
+      "s10TerminalStates": 99
+    },
+    {
+      "s9": "00000000000840821080000000000068",
+      "s10LossWitness": "00000000000860821080000000000068",
+      "index": 6,
+      "s10LegalMoves": 13,
+      "s10TerminalStates": 291
+    },
+    {
+      "s9": "00000000002840821080000000000060",
+      "s10LossWitness": "000000000028408210800000000000e0",
+      "index": 0,
+      "s10LegalMoves": 11,
+      "s10TerminalStates": 93
+    },
+    {
+      "s9": "00000000002840821081000000000020",
+      "s10LossWitness": "00000000002840821081000000000060",
+      "index": 1,
+      "s10LegalMoves": 7,
+      "s10TerminalStates": 29
+    },
+    {
+      "s9": "00000000014080821084000000000020",
+      "s10LossWitness": "00000000014280821084000000000020",
+      "index": 8,
+      "s10LegalMoves": 8,
+      "s10TerminalStates": 48
+    },
+    {
+      "s9": "00000000014280821080000000000020",
+      "s10LossWitness": "00000000014280821080000000000030",
+      "index": 1,
+      "s10LegalMoves": 10,
+      "s10TerminalStates": 100
+    },
+    {
+      "s9": "00000000100000821081000040000024",
+      "s10LossWitness": "00000000100000821081000140000024",
+      "index": 0,
+      "s10LegalMoves": 9,
+      "s10TerminalStates": 63
+    },
+    {
+      "s9": "00000000102000821081000000000024",
+      "s10LossWitness": "00040000400080821084000000000120",
+      "index": 22,
+      "s10LegalMoves": 12,
+      "s10TerminalStates": 159
+    },
+    {
+      "s9": "00000000102000821081000000400020",
+      "s10LossWitness": "00000000102000821081000000400060",
+      "index": 2,
+      "s10LegalMoves": 11,
+      "s10TerminalStates": 109
+    },
+    {
+      "s9": "00000000102000821081100000000020",
+      "s10LossWitness": "00000000102000821081100200000020",
+      "index": 4,
+      "s10LegalMoves": 13,
+      "s10TerminalStates": 177
+    },
+    {
+      "s9": "000000084000008210c4000000000020",
+      "s10LossWitness": "000000084100008210c4000000000020",
+      "index": 11,
+      "s10LegalMoves": 14,
+      "s10TerminalStates": 236
+    },
+    {
+      "s9": "00000080000000c21080000400000060",
+      "s10LossWitness": "00000080000000c21080000400000160",
+      "index": 0,
+      "s10LegalMoves": 13,
+      "s10TerminalStates": 183
+    },
+    {
+      "s9": "00000080000000c210c0000400000020",
+      "s10LossWitness": "00000080000000c210c0000400000120",
+      "index": 1,
+      "s10LegalMoves": 11,
+      "s10TerminalStates": 133
+    },
+    {
+      "s9": "00001008000000821080000201000020",
+      "s10LossWitness": "000010080000008210800002010000a0",
+      "index": 2,
+      "s10LegalMoves": 14,
+      "s10TerminalStates": 197
+    },
+    {
+      "s9": "00004200100020821080000000000020",
+      "s10LossWitness": "00004200100020821080000000000024",
+      "index": 0,
+      "s10LegalMoves": 11,
+      "s10TerminalStates": 100
+    },
+    {
+      "s9": "00006010000000821080080000000020",
+      "s10LossWitness": "00006010000000821080080000000028",
+      "index": 1,
+      "s10LegalMoves": 13,
+      "s10TerminalStates": 175
+    },
+    {
+      "s9": "00006210000000821080000000000020",
+      "s10LossWitness": "00006210000000821080000000000030",
+      "index": 1,
+      "s10LegalMoves": 10,
+      "s10TerminalStates": 80
+    },
+    {
+      "s9": "00008000000000821080000400000038",
+      "s10LossWitness": "00008000000000821080000400400038",
+      "index": 1,
+      "s10LegalMoves": 14,
+      "s10TerminalStates": 150
+    }
+  ],
+  "s9LossParentClosure": 192,
+  "s9LossParentSha256": "e6eaa0622b6cc39afffd9fbc24e1aa84dd120070a4a3f09c6c8145ccde7300b5",
+  "newTwoStoneClosures": 0
+}
