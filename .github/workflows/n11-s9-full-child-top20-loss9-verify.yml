@@ -29,6 +29,11 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_python.py --negative | tee top20-python.json
+      - name: Independently audit all 37 S8 rows and historical witness closures in Python
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_full_incidence.py | tee top20-python-incidence.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
@@ -36,4 +41,5 @@ jobs:
           path: |
             top20-node.json
             top20-python.json
+            top20-python-incidence.json
           retention-days: 14
