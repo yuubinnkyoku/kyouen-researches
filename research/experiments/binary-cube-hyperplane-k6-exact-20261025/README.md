@@ -81,3 +81,19 @@ DRAT証明書と検証ログはサイズが確定してから添付する。
   二算法完全一致とcircuit化の同値性に依存する。
 - DRAT証明書のdrat-trimによる独立検証は実行中。完了後に status を proved へ更新する。
 - $d\ge7$ の上界、Grundy値、misère版は対象外。
+
+## K=9 SAT制御（完了）
+
+2026-10-30、`certificates/k6_k9.cnf`（exactly-9、4,160変数・19,484,942節）を
+kissatで解き **s SATISFIABLE** を確認。割当のx変数から取り出した
+9点集合 {11, 22, 28, 37, 42, 49, 57, 58, 63} が
+`verify_k9_witness.py` で全 $\binom{9}{7}=36$ 個の7点小行列式非零
+（|det| 1〜9）と検証済み。
+
+これで circuit 節集合の健全性が両側から確認された：
+
+- exactly-9 は SAT（解が幾何学的定義と一致）
+- exactly-10 は UNSAT（kissat実行中、`certificates/k6_k10_fix0.cnf`、
+  x₀=1 の対称性削減つき。超八面体群の推移性により健全な仮定）
+
+UNSAT確定後にDRAT証明書を drat-trim で独立検証し、K0568を proved に更新する。
