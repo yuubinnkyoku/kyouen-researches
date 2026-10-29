@@ -22,11 +22,12 @@ function run(){
     'unverified source frontier');
   const win9=new Set(),loss9=new Set();
   for(let n=9;n<=27;n++){
-    const day=n<=11?'20261028':'20261029';
+    const planDay=n<=12?'20261028':'20261029';
+    const certDay=n<=12?'20261028':'20261029';
     const p=n===9?
       read('../n11-s9-post-s10-reuse-round8-20261028/next-plan.json'):
-      read('../n11-s9-post-round'+(n-1)+'-replan-'+day+'/next-plan.json');
-    const c=read('../n11-s9-post-round'+(n-1)+'-round'+n+'-'+day+'/certificate.json');
+      read('../n11-s9-post-round'+(n-1)+'-replan-'+planDay+'/next-plan.json');
+    const c=read('../n11-s9-post-round'+(n-1)+'-round'+n+'-'+certDay+'/certificate.json');
     const ws=Buffer.from(c.witnessBase64,'base64');
     need(ws.length===p.newSelectedKeys.length,'witness length '+n);
     for(let i=0;i<ws.length;i++){
