@@ -21,3 +21,8 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s8-direct-loss-perfect-matching-20261030/verify.py --negative
+      - name: Reproduce full 480-leaf S10 scan and frozen verdict totals
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-direct-loss-perfect-matching-20261030/scan_boundary.py
