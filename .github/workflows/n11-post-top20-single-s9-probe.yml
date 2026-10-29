@@ -1,0 +1,29 @@
+name: N11 targeted post-top20 single S9 terminal probe
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-full-child-top20-loss9-20261030/probe_one.py'
+      - '.github/workflows/n11-post-top20-single-s9-probe.yml'
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe only the selected S9 and stop after a LOSS10 witness
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile research/experiments/n11-s9-full-child-top20-loss9-20261030/probe_one.py
+          timeout 240s python research/experiments/n11-s9-full-child-top20-loss9-20261030/probe_one.py | tee n11-one-s9-probe.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-one-s9-post-top20-terminal-probe
+          path: n11-one-s9-probe.json
+          retention-days: 14
