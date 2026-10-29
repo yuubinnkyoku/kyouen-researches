@@ -1,0 +1,26 @@
+name: N11 round24 independent boundary preflight
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round24-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round24-replan-20261029/preflight_independent.py'
+      - '.github/workflows/n11-s9-post-round24-preflight.yml'
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independently check 3x3 and 4x4 integer geometry for the round25 candidate
+        run: python research/experiments/n11-s9-post-round24-replan-20261029/preflight_independent.py > round24-preflight.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round24-preflight
+          path: round24-preflight.json
+          retention-days: 14
