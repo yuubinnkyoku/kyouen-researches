@@ -1,0 +1,16 @@
+name: N11 round20 standalone Python terminal audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round19-round20-20261029/verify_python.py'
+      - '.github/workflows/n11-s9-post-round19-round20-python.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay round20 terminal certificate without Node or shared solver
+        run: python3 research/experiments/n11-s9-post-round19-round20-20261029/verify_python.py
