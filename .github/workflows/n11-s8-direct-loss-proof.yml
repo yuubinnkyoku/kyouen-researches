@@ -1,0 +1,23 @@
+name: N11 independent S8 LOSS perfect-matching proof
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-direct-loss-perfect-matching-20261030/**'
+      - '.github/workflows/n11-s8-direct-loss-proof.yml'
+  workflow_dispatch:
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently verify 36 S9 obligations and 18 LOSS10 leaves (Node, two geometries)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-direct-loss-perfect-matching-20261030/verify.js --negative
+      - name: Independently verify matching and terminal recursion (Python)
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-direct-loss-perfect-matching-20261030/verify.py --negative
