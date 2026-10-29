@@ -16,6 +16,6 @@
 - 未証明9石候補 **93→64類**。第19回の12候補と追加のLOSS9親2類を除外して79類、残る42辺に接続しない15類を除いて64類。
 - 支配関係で縮約した候補 **12→9類**。選択は9類、潜在被覆9類、10石合法着手251本。これらは勝敗確定ではない。
 - `preflight_independent.py` は共有探索器・キャッシュを読まず、D4正規化と3×3差分行列式・4×4整数行列式を独立計算する。選定9局面の合法10石着手 **251本・異なる250類**、共有子1類、四点判定の照合 **85,806件**。結果は `preflight.json` に固定した。
-- 再検査: `python3 research/experiments/n11-s9-post-round19-replan-20261029/preflight_independent.py`。固定JSONとの完全一致が必須。専用GitHub Actionsは `n11-s9-post-round19-preflight.yml`。
+- 再検査: `python3 research/experiments/n11-s9-post-round19-replan-20261029/preflight_independent.py`。固定JSONとの完全一致が必須。専用GitHub Actionsは `n11-s9-post-round19-preflight.yml`（[独立検証CI 40821434669](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40821434669)、成功）。
 
 今回の計算は第20回の**探索対象を確定しただけ**で、終局勝敗の新規証明、S7/S5の新規確定、二石root閉鎖は0件。固定14根計画の未証明42辺は不変。標準11×11空盤は**UNKNOWN**。
