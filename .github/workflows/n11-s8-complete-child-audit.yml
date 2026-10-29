@@ -1,0 +1,25 @@
+name: N11 fixed14 complete S8 child audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s8-complete-child-audit-20261030/audit.js'
+      - '.github/workflows/n11-s8-complete-child-audit.yml'
+  workflow_dispatch:
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently enumerate every legal S9 child of the fixed14 unproved S8 frontier
+        run: node research/experiments/n11-s8-complete-child-audit-20261030/audit.js | tee n11-s8-child-audit.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-s8-child-audit
+          path: n11-s8-child-audit.json
+          retention-days: 14
