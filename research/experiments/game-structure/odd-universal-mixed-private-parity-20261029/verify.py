@@ -145,6 +145,10 @@ def main():
             maxstates = max(maxstates, states)
             cases += 1
 
+    # Sharpness: one odd proper pair changes g=1 to g=2 (n=3).
+    assert named({7: 1}, 3)[0] == 1
+    assert named({7: 1, 3: 1}, 3)[0] == 2
+
     print(f'PASS named_and_quotient_cases={cases} '
           f'exhaustive_by_n={by_n} max_named_states={maxstates}')
 
