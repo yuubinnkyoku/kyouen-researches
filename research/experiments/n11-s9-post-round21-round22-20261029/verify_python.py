@@ -158,6 +158,12 @@ assert win_edges == cert["win10Edges"]
 assert len(loss_parents) == cert["loss9ParentClosure"]
 assert hashlib.sha256(("\n".join(sorted(loss_parents)) + "\n").encode()).hexdigest() == cert["loss9ParentSha256"]
 assert all(h not in loss_parents for h in cert["win9Keys"])
+# Cross-batch polarity check: all earlier independently audited WIN9 roots.
+for n in range(9, 22):
+    day = "20261028" if n <= 12 else "20261029"
+    earlier = json.loads((base / f"../n11-s9-post-round{n-1}-round{n}-{day}/certificate.json").read_text())
+    assert loss_parents.isdisjoint(earlier["win9Keys"]), ("cross-batch WIN9/LOSS9 conflict", n)
+
 assert len(memo) <= obligations == cert['win10Edges'] + cert['loss9']
 assert states <= cert['terminalStatesPerGeometry']
 print(json.dumps({"verified": True, "win9": wins, "loss9": losses,

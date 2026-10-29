@@ -76,6 +76,16 @@ function verify({negative=false}={}){
     }
   }
   need(wins.every(h=>!parents.has(h)),'WIN9/LOSS9 conflict');
+  // Fail closed if a newly derived LOSS9 parent was certified WIN9 in
+  // any earlier independently audited terminal batch.
+  const earlierWins=new Set();
+  for(let n=9;n<=21;n++){
+    const day=n<=12?'20261028':'20261029';
+    const c=read('../n11-s9-post-round'+(n-1)+'-round'+n+'-'+day+'/certificate.json');
+    for(const h of c.win9Keys)earlierWins.add(h);
+  }
+  need([...parents].every(h=>!earlierWins.has(h)),
+    'cross-batch WIN9/LOSS9 conflict');
   need(allEdges===138&&cert.orderedS10Children===138&&
     cert.win9===wins.length&&cert.loss9===5-wins.length&&
     JSON.stringify(cert.win9Keys)===JSON.stringify(wins)&&
