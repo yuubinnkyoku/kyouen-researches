@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'research/experiments/n11-s9-post-round21-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round21-replan-20261029/preflight.json'
   workflow_dispatch:
 jobs:
   preflight:
