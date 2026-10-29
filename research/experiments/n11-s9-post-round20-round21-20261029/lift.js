@@ -75,7 +75,7 @@ function run(){
     'conditional coverage regression');
   const result={schema:'n11-round21-terminal-win8-lift-v1',
     emptyBoard:'UNKNOWN',verifiedWin9:cert.win9,verifiedLoss9:cert.loss9,
-    distinctWIN8ParentsFromRound20:derived.size,
+    distinctWIN8ParentsFromRound21:derived.size,
     newProofOnlyWIN8:after21.size-after20.size,
     proofOnlyWIN8Before:after20.size,proofOnlyWIN8After:after21.size,
     previous:before,updated,
