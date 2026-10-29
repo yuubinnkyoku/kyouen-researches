@@ -1,0 +1,39 @@
+name: N11 full-child top20 LOSS9 independent proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-full-child-top20-loss9-20261030/**'
+      - '.github/workflows/n11-s9-full-child-top20-loss9-verify.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify Node integer geometry and cross-batch LOSS9 closure
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check research/experiments/n11-s9-full-child-top20-loss9-20261030/verify.js
+          node research/experiments/n11-s9-full-child-top20-loss9-20261030/verify.js --negative | tee top20-node.json
+      - name: Independently replay all terminal witnesses in Python
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_python.py --negative | tee top20-python.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-full-child-top20-loss9-independent-proof
+          path: |
+            top20-node.json
+            top20-python.json
+          retention-days: 14
