@@ -5,6 +5,10 @@ on:
     paths:
       - 'research/experiments/n11-s9-full-child-top20-loss9-20261030/probe_one.py'
       - '.github/workflows/n11-post-top20-single-s9-probe.yml'
+      - 'research/experiments/n11-s9-full-child-top20-loss9-20261030/single_s9_certificate.json'
+      - 'research/experiments/n11-s9-full-child-top20-loss9-20261030/single_s9_result.json'
+      - 'research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_single.py'
+      - 'research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_single.js'
   workflow_dispatch:
 jobs:
   probe:
@@ -12,6 +16,9 @@ jobs:
     timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -21,9 +28,23 @@ jobs:
           set -euo pipefail
           python -m py_compile research/experiments/n11-s9-full-child-top20-loss9-20261030/probe_one.py
           timeout 240s python research/experiments/n11-s9-full-child-top20-loss9-20261030/probe_one.py | tee n11-one-s9-probe.json
+      - name: Independently verify selected LOSS10 witness and parent closure in Node
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_single.js
+          node research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_single.js --negative | tee n11-one-s9-node.json
+      - name: Independently verify selected LOSS9 and full S8 frontier in Python
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s9-full-child-top20-loss9-20261030/verify_single.py --negative | tee n11-one-s9-python.json
       - uses: actions/upload-artifact@v4
         if: success()
         with:
           name: n11-one-s9-post-top20-terminal-probe
-          path: n11-one-s9-probe.json
+          path: |
+            n11-one-s9-probe.json
+            n11-one-s9-node.json
+            n11-one-s9-python.json
           retention-days: 14
