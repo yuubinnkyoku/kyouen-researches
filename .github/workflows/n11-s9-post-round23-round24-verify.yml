@@ -1,0 +1,34 @@
+name: N11 round24 independent terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round23-round24-20261029/certificate.json'
+      - 'research/experiments/n11-s9-post-round23-round24-20261029/verify_compact.js'
+      - 'research/experiments/n11-s9-post-round23-round24-20261029/verify_python.py'
+      - '.github/workflows/n11-s9-post-round23-round24-verify.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independently replay round24 terminal certificate and reject forged witnesses
+        run: node research/experiments/n11-s9-post-round23-round24-20261029/verify_compact.js --negative > round24-node-verify.json
+      - name: Independently verify round24 using standalone Python integer geometry and recursion
+        run: python research/experiments/n11-s9-post-round23-round24-20261029/verify_python.py > round24-python-verify.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round24-independent-verification
+          path: |
+            round24-node-verify.json
+            round24-python-verify.json
+          retention-days: 14
