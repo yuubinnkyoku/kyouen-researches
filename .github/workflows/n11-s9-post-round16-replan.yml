@@ -1,0 +1,27 @@
+name: N11 round16 proof-only replan
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round16-replan-20261029/replan.js'
+      - 'research/experiments/n11-s9-post-round16-replan-20261029/next-plan.json'
+      - 'research/experiments/n11-s9-post-round15-round16-20261029/lift.json'
+      - '.github/workflows/n11-s9-post-round16-replan.yml'
+  workflow_dispatch:
+jobs:
+  replan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify round16 witnesses and replan 49 remaining edges
+        run: node research/experiments/n11-s9-post-round16-replan-20261029/replan.js > round16-replan.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round16-replan
+          path: round16-replan.json
+          retention-days: 14
