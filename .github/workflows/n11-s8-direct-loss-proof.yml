@@ -21,6 +21,11 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s8-direct-loss-perfect-matching-20261030/verify.py --negative
+      - name: Independently replay all 480 S10 leaves (Node, 3x3 and 4x4 geometries)
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-direct-loss-perfect-matching-20261030/scan_boundary_independent.js
       - name: Reproduce full 480-leaf S10 scan and frozen verdict totals
         shell: bash
         run: |
