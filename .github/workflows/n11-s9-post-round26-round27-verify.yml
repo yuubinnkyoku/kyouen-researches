@@ -1,0 +1,31 @@
+name: N11 round27 independent terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round26-round27-20261029/certificate.json'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independently verify round27 certificate and reject forged witnesses
+        run: node research/experiments/n11-s9-post-round26-round27-20261029/verify_compact.js --negative | tee round27-node-verify.json
+      - name: Independently rederive terminal outcome with Python Bareiss geometry
+        run: python research/experiments/n11-s9-post-round26-round27-20261029/verify_python.py | tee round27-python-verify.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round27-independent-proof
+          path: |
+            round27-node-verify.json
+            round27-python-verify.json
+          retention-days: 14
