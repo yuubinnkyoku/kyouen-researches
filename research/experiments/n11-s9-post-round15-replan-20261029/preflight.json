@@ -1,0 +1,32 @@
+{
+  "schema": "n11-post-round15-independent-boundary-preflight-v1",
+  "emptyBoard": "UNKNOWN",
+  "selectionSha256": "55aee1e12fddfdb4972531999b130b1556396d21404f79a808f2abc9321b13a6",
+  "roots": 28,
+  "legalS10Edges": 728,
+  "distinctS10Classes": 726,
+  "repeatedS10Classes": 2,
+  "crossRootSavings": 2,
+  "sharedChildren": [
+    {
+      "child": "00022000100000821081000000000024",
+      "parents": [
+        "00020000100000821081000000000024",
+        "00022000100000821081000000000020"
+      ]
+    },
+    {
+      "child": "00042010000200821080000040000020",
+      "parents": [
+        "00001008000800821080000001000020",
+        "00042010000200821080000000000020"
+      ]
+    }
+  ],
+  "geometryChecks": [
+    "3x3-difference-determinant",
+    "4x4-independent-integer-determinant"
+  ],
+  "terminalVerdicts": 0,
+  "newTwoStoneClosures": 0
+}
