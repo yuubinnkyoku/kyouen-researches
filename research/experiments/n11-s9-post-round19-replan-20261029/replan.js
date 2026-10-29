@@ -374,9 +374,9 @@ function run(){
     newSelectionSha256:sha(chosen.map(x=>x.h).join('\n')+'\n'),
     winLossConflicts:0,newS7Verdicts:0,newS5Verdicts:0,newTwoStoneClosures:0
   };
-  const frozen=path.join(__dirname,'next-plan.json');
-  if(fs.existsSync(frozen))need(
-    JSON.stringify(read('next-plan.json'))===JSON.stringify(result),
+  const frozen=path.join(__dirname,'../n11-s9-post-round18-replan-20261029/next-plan.json');
+  need(fs.existsSync(frozen)&&
+    JSON.stringify(p18)===JSON.stringify(result),
     'frozen round18 replan mismatch');
 
   // Preserve the exact round18 plan as an audited stepping stone.
