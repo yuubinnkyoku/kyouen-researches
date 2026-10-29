@@ -10,3 +10,9 @@
 [探索CI](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40810196930)、[独立Node検証CI](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40810302248)、[独立Python検証CI](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40810437527) は成功。結果は **2 WIN9 / 10 LOSS9**、LOSS9親閉包100類。初回探索の121終局局面、Python独立検証の66終局局面を混同しない。
 
 8石への伝播は独立に固定されるまで未加算。二石rootの新規閉鎖は0、11×11空盤の勝敗は**UNKNOWN**。
+
+## 第19回WIN8伝播の固定結果（2026-10-29）
+
+[伝播CI 40810381041](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40810381041) が成功。成果物12870540875を回収し、`lift.json` に固定した。WIN9 2類から18類のWIN8親を導出し、既存との重複2類を除いた16類が純増。証明限定WIN8は **5,803→5,819類**、固定14根計画の証明済み辺は **504→506/548本**、未証明辺は **44→42本**。WIN/LOSS衝突0件、新規二石root閉鎖0件。空盤は**UNKNOWN**。
+
+続く候補選定は `../n11-s9-post-round19-replan-20261029/` に分離した。潜在被覆を勝敗証明に数えない。
