@@ -34,7 +34,7 @@ const certDirs=[
 function lossClosure(plan,cert){
   const keys=plan.newSelectedKeys,claims=Buffer.from(cert.witnessBase64,'base64');
   need(keys.length===claims.length&&keys.length===cert.win9+cert.loss9&&
-    sha(keys.join('\\n')+'\\n')===cert.selectionSha256&&
+    sha(keys.join('\n')+'\n')===cert.selectionSha256&&
     sha(claims)===cert.witnessSha256&&
     plan.newSelectionSha256===cert.sourcePlanSha256,'certificate identity');
   const parents=new Set(),wins=[];
@@ -55,7 +55,7 @@ function lossClosure(plan,cert){
   need(wins.length===cert.win9&&
     JSON.stringify(wins)===JSON.stringify(cert.win9Keys)&&
     parents.size===cert.loss9ParentClosure&&
-    sha([...parents].sort().join('\\n')+'\\n')===cert.loss9ParentSha256,
+    sha([...parents].sort().join('\n')+'\n')===cert.loss9ParentSha256,
     'LOSS parent closure mismatch');
   return parents;
 }
@@ -161,7 +161,7 @@ function run(){
     baselinePotentialCoverage:pop(baseline),potentialCoverage:pop(chosen),
     legal10Children:cost(chosen),exchanges:optimized.swaps,
     selectedCount:chosen.length,newSelectedKeys:chosen.map(x=>x.h),
-    newSelectionSha256:sha(chosen.map(x=>x.h).join('\\n')+'\\n'),
+    newSelectionSha256:sha(chosen.map(x=>x.h).join('\n')+'\n'),
     winLossConflicts:0,newS7Verdicts:0,newS5Verdicts:0,newTwoStoneClosures:0
   };
   const fixed=path.join(__dirname,'next-plan.json');
