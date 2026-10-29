@@ -109,6 +109,8 @@ def run():
                         assert expected == perm, (t, neighborhoods, expected, perm)
                         independent += 1
     assert predicted((1, 2, 0), ({0, 1}, {1, 2}, {0, 2})) == Fraction(281, 3240)
+    # Independent 9! enumeration of the genuinely weighted three-hub example.
+    assert permutation_count(*graph((1, 2, 0), ({0, 1}, {1, 2}, {0, 2}))) == Fraction(281, 3240)
     assert predicted((0, 0), (frozenset(),)) == 0
     print(f"exact labeled configurations: {cases}")
     print(f"independent full-priority enumerations: {independent}")
