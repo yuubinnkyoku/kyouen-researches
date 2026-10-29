@@ -1,0 +1,25 @@
+name: N11 round23 proof-only WIN8 lift
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round22-round23-20261029/lift.js'
+      - '.github/workflows/n11-s9-post-round22-round23-lift.yml'
+  workflow_dispatch:
+jobs:
+  lift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Independently verify round23 and propagate proven WIN9 to WIN8
+        run: node research/experiments/n11-s9-post-round22-round23-20261029/lift.js > round23-lift.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round23-lift
+          path: round23-lift.json
+          retention-days: 14
