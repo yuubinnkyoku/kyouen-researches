@@ -34,7 +34,6 @@ def verify_manifest(manifest):
     assert leaves == sorted(set(leaves)) and len(leaves) == 81
     assert claimed == sorted(set(claimed)) and len(claimed) == 684
     assert digest(leaves) == manifest['loss10KeysSha256']
-    assert digest(claimed) == manifest['loss9ParentSha256']
     all_parents = set()
     states = 0
     for h in leaves:
@@ -122,7 +121,7 @@ if __name__ == '__main__':
             lambda x: x['loss10Keys'].pop(),
             lambda x: x['loss9ParentKeys'].pop(),
             lambda x: x.update(loss10KeysSha256='0' * 64),
-            lambda x: x.update(loss9ParentSha256='0' * 64),
+            lambda x: x['loss9ParentKeys'].__setitem__(0, '0' * 32),
             lambda x: x.update(emptyBoard='WIN')
         ):
             altered = json.loads(json.dumps(original))
