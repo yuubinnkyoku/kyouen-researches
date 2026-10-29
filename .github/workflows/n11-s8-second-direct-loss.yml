@@ -21,3 +21,8 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s8-second-direct-loss-20261030/verify.py --full --negative
+      - name: Reconstruct historical proof-only fixed14 frontier and check new LOSS9 edges
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-second-direct-loss-20261030/lift.py
