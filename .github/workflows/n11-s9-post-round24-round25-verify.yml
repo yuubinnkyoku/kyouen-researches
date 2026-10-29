@@ -1,0 +1,34 @@
+name: N11 round25 independent terminal proof
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-s9-post-round24-round25-20261029/certificate.json'
+      - 'research/experiments/n11-s9-post-round24-round25-20261029/verify_compact.js'
+      - 'research/experiments/n11-s9-post-round24-round25-20261029/verify_python.py'
+      - '.github/workflows/n11-s9-post-round24-round25-verify.yml'
+  workflow_dispatch:
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Independently verify certificate, polarity, terminal children and forged witnesses
+        run: node research/experiments/n11-s9-post-round24-round25-20261029/verify_compact.js --negative > round25-node-verify.json
+      - name: Independently rederive the terminal result with Python and integer Bareiss geometry
+        run: python research/experiments/n11-s9-post-round24-round25-20261029/verify_python.py > round25-python-verify.json
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: n11-round25-independent-proof
+          path: |
+            round25-node-verify.json
+            round25-python-verify.json
+          retention-days: 14
