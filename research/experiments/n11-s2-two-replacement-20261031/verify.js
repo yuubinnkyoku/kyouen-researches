@@ -70,7 +70,10 @@ function parseCache(raw){
     const lo=BigInt(f[1]),hi=BigInt(f[2]);
     assert(lo>=0n&&lo<2n**64n&&hi>=0n&&hi<2n**64n);
     const k=hex(lo+(hi<<64n));
-    assert.equal(points(k).length,5);
+    const p=points(k);
+    assert.equal(p.length,5);
+    assert(safe(p),'unsafe S5 cache key '+k);
+    assert.equal(canon(p),k,'noncanonical S5 cache key '+k);
     assert(!out.has(k),'duplicate S5 key '+k);
     out.set(k,Number(f[4]));
   }
@@ -145,6 +148,7 @@ function main(){
     if(merged.has(k))assert.equal(merged.get(k),v,'WIN/LOSS conflict '+k);
     else merged.set(k,v);
   }
+  assert.equal(merged.size,5853,'unexpected merged cache size');
   const selected=new Set(pairs.flatMap(x=>[x.i,x.j]));
   assert.equal(selected.size,313);
   const statuses=new Map();
@@ -264,6 +268,7 @@ function main(){
   console.log(JSON.stringify({
     schema:'n11-s2-two-new-three-old-cover-audit-v1',root:[60,27],
     geometricS4Classes:all.size,knownLoss4:32,newCandidateClasses:cand.length,
+    independentlyCheckedCacheRows:frozen.size+corpus.size,mergedCacheClasses:merged.size,
     geometricPairsReplacingThree:548,distinctCandidatesInPairs:313,
     candidateClassesWithCachedWIN5:97,unrefutedCandidateClasses:216,
     pairsWithoutKnownWIN5:eligiblePairs.length,
