@@ -44,6 +44,12 @@ function run(){
   const allWin=new Set([...secured,...newWin]);
   const allLoss=new Set([...s.loss,...newLoss]);
   need([...allWin].every(h=>!allLoss.has(h)),'merged S8 conflict');
+  // IMPORTANT: S8 W/L above is original-first (also side-to-move at even ply).
+  // At odd ply S7 the *second* player moves. The following S7 W/L labels
+  // are side-to-move verdicts: a LOSS8 child makes S7 WIN for the second
+  // player (= original-first LOSS); all WIN8 children make S7 LOSS for the
+  // second player (= original-first WIN). Keep the frozen JSON labels, but
+  // NEVER merge them with historical fixed-original-first S7 WIN lists.
   const rows=[];
   for(const h of s.plan){
     const kids=g.children(g.board(h,7));
