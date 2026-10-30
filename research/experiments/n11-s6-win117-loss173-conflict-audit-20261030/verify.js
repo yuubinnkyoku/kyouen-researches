@@ -153,6 +153,115 @@ function audit(win7, cacheLoss6) {
     proofTrustBoundary:'S7 WIN7 certificates are independently checked by existing pipelines, not replayed here',
     twoStoneRootClosed:false,emptyBoard:'UNKNOWN'};
 }
+
+function verifyNoS5Conflict(loss5, exactS5) {
+  for (const key of loss5) {
+    need(exactS5.get(key) !== 1, 'S5 WIN/LOSS CONFLICT: ' + key);
+  }
+}
+// A cross-snapshot consistency/coverage audit. The 2026-10-12 S5 cache
+// is a frozen comparison baseline, NOT the live solver cache. No cached
+// verdict is promoted to a terminal-only certificate here.
+function auditS5ToS4(cacheLoss6) {
+  const oldCache = pinned([
+    'research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache',
+    '2dccf42b92337cbcbfb62ea5c77db487b1ad8ead',
+  ]);
+  const exactS5 = new Map();
+  for (const line of oldCache.split(/\r?\n/)) {
+    if (!line || line.startsWith('#')) continue;
+    const f = line.split(',');
+    need(f.length === 6 && f[0] === 's5verdict' &&
+         f[3] === '5' && f[5] === '0' && ['1','2'].includes(f[4]),
+         'malformed frozen S5 cache row');
+    const lo = BigInt(f[1]), hi = BigInt(f[2]);
+    need(lo >= 0n && lo < (1n << 64n) &&
+         hi >= 0n && hi < (1n << 64n), 'invalid S5 key halves');
+    const key = (lo + (hi << 64n)).toString(16).padStart(32,'0');
+    checkBoard(key, 5);
+    need(!exactS5.has(key), 'duplicate frozen S5 key');
+    exactS5.set(key, Number(f[4]));
+  }
+  need(exactS5.size === 5851 &&
+       [...exactS5.values()].filter(v => v === 2).length === 5692 &&
+       [...exactS5.values()].filter(v => v === 1).length === 159,
+       'frozen S5 baseline inventory changed');
+
+  const historical = reverseS5(cacheLoss6).parents;
+  const terminal = reverseS5(new Set([independentlyCertifiedLoss6])).parents;
+  const union = new Set([...historical, ...terminal]);
+  need(historical.size === 897 && terminal.size === 6 &&
+       union.size === 903, 'LOSS6-to-LOSS5 provenance changed');
+  verifyNoS5Conflict(union, exactS5);
+  const overlap = [...union].filter(k => exactS5.has(k));
+  const extra = [...union].filter(k => !exactS5.has(k));
+  need(overlap.length === 873 && extra.length === 30 &&
+       extra.filter(k => historical.has(k)).length === 24 &&
+       extra.filter(k => terminal.has(k)).length === 6,
+       'cross-snapshot S5 LOSS coverage changed');
+
+  // Reverse the 30 not-yet-in-baseline S5 LOSS positions to four stones.
+  // Each S4 child boundary is generated from legal geometry, not copied
+  // from a saved planner report.
+  const parents4 = new Set();
+  for (const key of extra) {
+    const ps = checkBoard(key, 5);
+    for (const p of ps) parents4.add(canonical(ps.filter(x => x !== p)));
+  }
+  let improved = 0, gainedEdges = 0, newlyClosed = 0;
+  let minimumResidual = Infinity, maxGain = 0;
+  for (const parent of parents4) {
+    const ps = checkBoard(parent, 4);
+    const children = new Set();
+    for (let p = 0; p < 121; p++) {
+      if (ps.includes(p)) continue;
+      const next = [...ps,p];
+      if (safe(next)) children.add(canonical(next));
+    }
+    let beforeLoss = 0, beforeWin = 0, afterLoss = 0;
+    for (const key of children) {
+      const old = exactS5.get(key);
+      if (old === 1) beforeWin++;
+      if (old === 2) beforeLoss++;
+      if (old === 2 || union.has(key)) afterLoss++;
+    }
+    const gain = afterLoss - beforeLoss;
+    const remaining = children.size - afterLoss - beforeWin;
+    need(gain > 0 && remaining >= 0, 'S4 cross-snapshot boundary mismatch');
+    gainedEdges += gain;
+    maxGain = Math.max(maxGain, gain);
+    minimumResidual = Math.min(minimumResidual, remaining);
+    if (gain) improved++;
+    if (!beforeWin && remaining === 0) newlyClosed++;
+  }
+  need(parents4.size === 112 && improved === 112 &&
+       gainedEdges === 149 && maxGain === 3 &&
+       minimumResidual === 48 && newlyClosed === 0,
+       'S4 cross-snapshot incidence changed');
+
+  // The same conflict guard must reject a forged WIN5 verdict.
+  const forged = new Map(exactS5);
+  forged.set(extra[0], 1);
+  let rejected = false;
+  try { verifyNoS5Conflict(union, forged); } catch (e) {
+    need(e.message.includes('S5 WIN/LOSS CONFLICT'),
+         'unexpected S5 negative-test failure: ' + e);
+    rejected = true;
+  }
+  need(rejected, 'forged WIN5 row passed the conflict guard');
+  return {
+    frozenExactS5: exactS5.size, frozenWin5: 159, frozenLoss5: 5692,
+    derivedLoss5: union.size, overlappingLoss5: overlap.length,
+    additionalLoss5RelativeToFrozenCache: extra.length,
+    additionalFromHistoricalLoss6: 24, additionalFromTerminalLoss6: 6,
+    improvedS4ParentClasses: improved, newlyCoveredS4ChildEdges: gainedEdges,
+    maximumGainPerS4: maxGain, minimumUncoveredS5Children: minimumResidual,
+    newS4LossClosures: newlyClosed, crossSourceConflicts: 0,
+    trustBoundary: 'frozen 2026-10-12 solver-trusted S5 cache; 172 historical exact S6 LOSS and 1 terminal-proved S6 LOSS; no new terminal replay',
+    emptyBoard: 'UNKNOWN',
+  };
+}
+
 function main() {
   const old=pinned(sources.win7).trim().split(/\r?\n/);
   need(old.length===17 && old.join('\n')===[...new Set(old)].sort().join('\n'),
@@ -170,6 +279,7 @@ function main() {
   const win7=[...old,...firstWin,independentFirstWin7];
   const cacheLoss6=lossCacheKeys(pinned(sources.loss6));
   const result=audit(win7,cacheLoss6);
+  result.s5ToS4CrossSnapshot=auditS5ToS4(cacheLoss6);
   // Exercise the actual conflict check, not merely compare fixture strings.
   const forged=new Set(cacheLoss6);
   forged.delete(forged.values().next().value);
