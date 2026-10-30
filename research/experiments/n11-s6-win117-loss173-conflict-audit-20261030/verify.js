@@ -217,6 +217,7 @@ function auditS5ToS4(cacheLoss6) {
   }));
   let centerParents = 0, centerGain = 0;
   let improved = 0, gainedEdges = 0, newlyClosed = 0;
+  let excludedGain = 0, centralExcludedGain = 0;
   const knownWinS4Witnesses = [];
   let minimumResidual = Infinity, maxGain = 0;
   for (const parent of parents4) {
@@ -237,6 +238,10 @@ function auditS5ToS4(cacheLoss6) {
     }
     const gain = afterLoss - beforeLoss;
     const remaining = children.size - afterLoss - beforeWin;
+    if (beforeWin) {
+      excludedGain += gain;
+      if (ps.includes(60)) centralExcludedGain += gain;
+    }
     // A known fixed-first WIN5 child proves this even-layer S4 is WIN.
     // Such an S4 must not be prioritized as a candidate LOSS4 certificate.
     if (beforeWin) {
@@ -270,7 +275,8 @@ function auditS5ToS4(cacheLoss6) {
   const centralKnownWinS4 = knownWinS4Witnesses.filter(
     w => points(w.s4).includes(60)).length;
   need(JSON.stringify(knownWinS4Witnesses) === JSON.stringify(expectedKnownWinS4) &&
-       centralKnownWinS4 === 2,
+       centralKnownWinS4 === 2 && excludedGain === 4 &&
+       centralExcludedGain === 4,
        'S4 known WIN5 witness exclusion changed');
   need(parents4.size === 112 && improved === 112 &&
        gainedEdges === 149 && maxGain === 3 &&
@@ -312,6 +318,7 @@ function auditS5ToS4(cacheLoss6) {
     improvedS4ParentClasses: improved, newlyCoveredS4ChildEdges: gainedEdges,
     alreadyWinS4Classes: knownWinS4Witnesses.length,
     s4LossCandidateClassesAfterWin5Exclusion: parents4.size - knownWinS4Witnesses.length,
+    s4LossCandidateGainedEdgesAfterWin5Exclusion: gainedEdges - excludedGain,
     knownWinS4Witnesses,
     maximumGainPerS4: maxGain, minimumUncoveredS5Children: minimumResidual,
     newS4LossClosures: newlyClosed, crossSourceConflicts: 0,
@@ -319,6 +326,7 @@ function auditS5ToS4(cacheLoss6) {
       centerContainingS4Classes: centerParents,
       alreadyWinS4Classes: centralKnownWinS4,
       s4LossCandidateClassesAfterWin5Exclusion: centerParents - centralKnownWinS4,
+      s4LossCandidateGainedEdgesAfterWin5Exclusion: centerGain - centralExcludedGain,
       gainedClassEdges: centerGain,
       openingRows: openingRows.map(({first,parents,gainedEdges,minResidual}) =>
         ({first,affectedS4:parents,gainedS4S5Edges:gainedEdges,minUncoveredS5:minResidual})),
