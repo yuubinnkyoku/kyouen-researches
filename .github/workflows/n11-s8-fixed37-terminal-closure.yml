@@ -31,3 +31,8 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s8-fixed37-terminal-closure-20261030/verify_s6_corollary.py
+      - name: Independent S7 perspective and S6 witness baseline-overlap audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_s7_polarity_and_s6_coverage.py
