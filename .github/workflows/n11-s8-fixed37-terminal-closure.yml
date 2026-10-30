@@ -39,3 +39,8 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_s7_polarity_and_s6_coverage.py
+      - name: Independent fixed-first LOSS7 reverse edges and S6 frontier audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_loss7_to_s6_frontier.py
