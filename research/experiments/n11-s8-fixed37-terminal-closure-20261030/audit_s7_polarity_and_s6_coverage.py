@@ -110,6 +110,7 @@ def audit(data, frozen, cert):
     require(len(rows) == 14 and len({r["s7"] for r in rows}) == 14,
             "not fourteen distinct S7 roots")
     first_win, first_loss = [], []
+    used_certified_loss8 = set()
     for r in rows:
         key = r["s7"]
         pp = points(key)
@@ -117,8 +118,9 @@ def audit(data, frozen, cert):
                 "invalid S7 board " + key)
         kids = children(pp)
         certified_loss_children = kids & loss8
-        require(len(certified_loss_children) <= r["knownLoss8Children"],
-                "certified LOSS8 exceeds claimed S7 count " + key)
+        require(len(certified_loss_children) == r["knownLoss8Children"],
+                "S7 LOSS8 count disagrees with certified S8 roots " + key)
+        used_certified_loss8.update(certified_loss_children)
         require(len(kids) == r["legal8"], "wrong legal S8 count " + key)
         losing = r["knownLoss8Children"]
         missing = r["unproved8Children"]
@@ -139,6 +141,8 @@ def audit(data, frozen, cert):
             require(r["verdict"] == "LOSS" and r["witness"] is None,
                     "S7 side-to-move LOSS mismatch " + key)
             first_win.append(key)
+    require(used_certified_loss8 == loss8,
+            "certified LOSS8 root is not attached to the fixed fourteen S7 roots")
     require((len(first_win), len(first_loss)) == (1, 13) and
             first_win == [EXPECTED_FIRST_WIN7] and
             (data["win7"], data["loss7"], data["unknown7"]) == (13, 1, 0),
