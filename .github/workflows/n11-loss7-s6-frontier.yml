@@ -8,6 +8,7 @@ on:
       - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
       - 'research/experiments/n11-s6-win117-loss173-conflict-audit-20261030/**'
       - 'research/experiments/n11-s5-cross-snapshot-win4-20261031/**'
+      - 'research/experiments/n11-s3-loss-guard-root-audit-20261031/**'
       - '.github/workflows/n11-loss7-s6-frontier.yml'
   workflow_dispatch:
 concurrency:
@@ -25,3 +26,5 @@ jobs:
         run: node research/experiments/n11-s6-win117-loss173-conflict-audit-20261030/verify.js
       - name: Verify cross-snapshot WIN5 witnesses and six S4 WIN parents
         run: node research/experiments/n11-s5-cross-snapshot-win4-20261031/verify.js
+      - name: Independently verify S2 LOSS certificate and prune S3 WIN targets
+        run: node research/experiments/n11-s3-loss-guard-root-audit-20261031/verify.js
