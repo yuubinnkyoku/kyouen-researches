@@ -141,13 +141,10 @@ def audit(old, lift, frozen_win):
             for h in win7 for p in points(h)}
     require(len(win6) == 117, "historical + two new WIN7 witness union changed")
     already_win6 = sorted(set(parents) & win6)
-    require(already_win6 == [MIXED_S6] and
-            canonical(tuple(x for x in points(FIRST_WIN7)
-                            if x != next(p for p in points(FIRST_WIN7)
-                                         if canonical(tuple(y for y in points(FIRST_WIN7)
-                                                            if y != p)) == MIXED_S6))) == MIXED_S6,
+    first_win_parents = {canonical(tuple(x for x in points(FIRST_WIN7) if x != p))
+                         for p in points(FIRST_WIN7)}
+    require(already_win6 == [MIXED_S6] and MIXED_S6 in first_win_parents,
             "mixed WIN7/LOSS7 child polarity regression")
-    new_set = set(first_loss)
     rows6 = []
     for parent in parents:
         kids = children(parent)
