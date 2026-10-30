@@ -18,8 +18,12 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 OLD = HERE.parent / "n11-targeted-terminal-lift-20261015" / "data" / "all_s7_loss_2232.txt"
 LIFT = HERE / "lift_result.json"
+FROZEN_WIN7 = HERE.parent / "n11-targeted-terminal-lift-20261015" / "data" / "all_s7_win_17.txt"
 OLD_BLOB = "e2b8fc243422751ce048302a3ed65df1ef7e5211"
 LIFT_BLOB = "f8e335cd8fafec9d98745e89cb207d4e31c220be"
+FROZEN_WIN7_BLOB = "677e962f3f70be73abcd77037df8822880927b22"
+PRIOR_FIRST_WIN7 = "00000000000100001000000042401008"
+MIXED_S6 = "00000000000000821080200000000020"
 FIRST_WIN7 = "00020000000000821080200000000020"
 
 def require(ok, reason):
@@ -89,7 +93,7 @@ def children(six):
             out.add(canonical((*ps, p)))
     return out
 
-def audit(old, lift):
+def audit(old, lift, frozen_win):
     require(len(old) == 2232 and old == sorted(set(old)),
             "historical S7 LOSS inventory changed")
     require(all(len(points(h)) == 7 and canonical(points(h)) == h and
@@ -113,6 +117,10 @@ def audit(old, lift):
     require(all(len(points(h)) == 7 and safe(points(h)) and
                 canonical(points(h)) == h for h in first_loss),
             "new first-LOSS S7 board invalid")
+    require(len(frozen_win) == 17 and frozen_win == sorted(set(frozen_win)) and
+            all(len(points(h)) == 7 and safe(points(h)) and
+                canonical(points(h)) == h for h in frozen_win),
+            "frozen WIN7 comparison list invalid")
     historical = set(old)
     require(not historical.intersection(first_loss),
             "historical and new S7 LOSS overlap changed")
@@ -125,6 +133,20 @@ def audit(old, lift):
     parents = sorted({p for p, _ in edges})
     require(len(parents) == 91 and len(edges) == 91,
             "new S6 reverse-incidence sharing changed")
+    # One S6 parent has both a newly certified fixed-first LOSS7 child and
+    # the independently terminal-backed fixed-first WIN7 child. Its S6
+    # verdict is WIN (OR), not LOSS; a single LOSS7 is never enough.
+    win7 = frozen_win + [FIRST_WIN7, PRIOR_FIRST_WIN7]
+    win6 = {canonical(tuple(x for x in points(h) if x != p))
+            for h in win7 for p in points(h)}
+    require(len(win6) == 117, "historical + two new WIN7 witness union changed")
+    already_win6 = sorted(set(parents) & win6)
+    require(already_win6 == [MIXED_S6] and
+            canonical(tuple(x for x in points(FIRST_WIN7)
+                            if x != next(p for p in points(FIRST_WIN7)
+                                         if canonical(tuple(y for y in points(FIRST_WIN7)
+                                                            if y != p)) == MIXED_S6))) == MIXED_S6,
+            "mixed WIN7/LOSS7 child polarity regression")
     new_set = set(first_loss)
     rows6 = []
     for parent in parents:
@@ -145,6 +167,8 @@ def audit(old, lift):
     totals = {
         "s6ParentClasses": len(rows6),
         "newCertifiedS6ToS7Edges": len(edges),
+        "s6AlreadyWINByIndependentWIN7Witness": len(already_win6),
+        "remainingS6CandidatesAfterWINExclusion": len(rows6)-len(already_win6),
         "historicalS6ToS7EdgesWithinTheseParents":
             sum(r["historicalLoss7"] for r in rows6),
         "allLegalS6ToS7EdgesWithinTheseParents":
@@ -160,6 +184,8 @@ def audit(old, lift):
     require(totals == {
         "s6ParentClasses": 91,
         "newCertifiedS6ToS7Edges": 91,
+        "s6AlreadyWINByIndependentWIN7Witness": 1,
+        "remainingS6CandidatesAfterWINExclusion": 90,
         "historicalS6ToS7EdgesWithinTheseParents": 76,
         "allLegalS6ToS7EdgesWithinTheseParents": 6056,
         "remainingEdgesRelativeToTheseSources": 5889,
@@ -177,6 +203,7 @@ def audit(old, lift):
         "overlapWithHistoricalLoss7": 0,
         **totals,
         "closestFiveS6": rows6[:5],
+        "mixedPolarityS6AlreadyWIN": already_win6,
         "newS6LossProofs": 0,
         "twoStoneRootClosed": False,
         "emptyBoard": "UNKNOWN",
@@ -191,7 +218,8 @@ def main():
     require(det4((0, 1, 11, 24)) != 0, "noncircle fixture")
     old = pinned(OLD, OLD_BLOB).decode("ascii").splitlines()
     lift = json.loads(pinned(LIFT, LIFT_BLOB))
-    result = audit(old, lift)
+    frozen_win = pinned(FROZEN_WIN7, FROZEN_WIN7_BLOB).decode("ascii").splitlines()
+    result = audit(old, lift, frozen_win)
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
