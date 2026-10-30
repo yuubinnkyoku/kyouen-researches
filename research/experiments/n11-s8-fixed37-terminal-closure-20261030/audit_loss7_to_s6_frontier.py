@@ -10,6 +10,7 @@ A missing child in this limited union is not a proved UNKNOWN verdict.
 if not __debug__:
     raise SystemExit("Refusing python -O")
 
+import copy
 import hashlib
 import itertools
 import json
@@ -18,9 +19,11 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 OLD = HERE.parent / "n11-targeted-terminal-lift-20261015" / "data" / "all_s7_loss_2232.txt"
 LIFT = HERE / "lift_result.json"
+CERT = HERE / "certificate.json"
 FROZEN_WIN7 = HERE.parent / "n11-targeted-terminal-lift-20261015" / "data" / "all_s7_win_17.txt"
 OLD_BLOB = "e2b8fc243422751ce048302a3ed65df1ef7e5211"
 LIFT_BLOB = "f8e335cd8fafec9d98745e89cb207d4e31c220be"
+CERT_BLOB = "48d691da7e272c61be02cd2c3d8fe0de7c3d7c6e"
 FROZEN_WIN7_BLOB = "677e962f3f70be73abcd77037df8822880927b22"
 PRIOR_FIRST_WIN7 = "00000000000100001000000042401008"
 MIXED_S6 = "00000000000000821080200000000020"
@@ -93,7 +96,7 @@ def children(six):
             out.add(canonical((*ps, p)))
     return out
 
-def audit(old, lift, frozen_win):
+def audit(old, lift, frozen_win, cert):
     require(len(old) == 2232 and old == sorted(set(old)),
             "historical S7 LOSS inventory changed")
     require(all(len(points(h)) == 7 and canonical(points(h)) == h and
@@ -107,6 +110,40 @@ def audit(old, lift, frozen_win):
     rows = lift["rows"]
     require(len(rows) == 14 and len({r["s7"] for r in rows}) == 14,
             "fixed14 root list malformed")
+    # Bind every claimed S7 LOSS witness to a concrete terminal-backed
+    # S8 LOSS root. A legal but WIN S8 child is not a LOSS witness.
+    require(cert["schema"] == lift["sourceFixed37"] ==
+            "n11-fixed14-37-s8-direct-terminal-v1" and
+            cert["board"] == 11 and cert["emptyBoard"] == "UNKNOWN" and
+            len(cert["rows"]) == 37, "fixed37 certificate identity changed")
+    loss8, win8 = set(), set()
+    for h, verdict, _ in cert["rows"]:
+        ps = points(h)
+        require(len(ps) == 8 and canonical(ps) == h and safe(ps) and
+                verdict in ("W", "L"), "invalid certified S8 root")
+        require(h not in loss8 and h not in win8,
+                "duplicate certified S8 root")
+        (loss8 if verdict == "L" else win8).add(h)
+    require(len(loss8) == lift["newLoss8"] == 29 and
+            len(win8) == lift["newWin8"] == 8,
+            "certified S8 WIN/LOSS inventory changed")
+    loss8_parents = {}
+    for h in loss8:
+        ps = points(h)
+        for removed in ps:
+            parent = canonical(tuple(p for p in ps if p != removed))
+            loss8_parents.setdefault(parent, set()).add(h)
+    used_loss8 = set()
+    for r in rows:
+        witnessed = loss8_parents.get(r["s7"], set())
+        used_loss8.update(witnessed)
+        require(len(witnessed) == r["knownLoss8Children"],
+                "S7 certified LOSS8 child count disagrees with certificate")
+        if r["verdict"] == "WIN":
+            require(r["witness"] in witnessed,
+                    "S7 witness is not a terminal-backed LOSS8 child")
+    require(used_loss8 == loss8,
+            "a certified LOSS8 root is absent from the fixed14 incidence")
     first_loss = sorted(r["s7"] for r in rows if r["verdict"] == "WIN")
     first_win = [r["s7"] for r in rows if r["verdict"] == "LOSS"]
     require(len(first_loss) == 13 and first_win == [FIRST_WIN7] and
@@ -217,7 +254,21 @@ def main():
     old = pinned(OLD, OLD_BLOB).decode("ascii").splitlines()
     lift = json.loads(pinned(LIFT, LIFT_BLOB))
     frozen_win = pinned(FROZEN_WIN7, FROZEN_WIN7_BLOB).decode("ascii").splitlines()
-    result = audit(old, lift, frozen_win)
+    cert = json.loads(pinned(CERT, CERT_BLOB))
+    result = audit(old, lift, frozen_win, cert)
+    # Negative control: a legal S8 child with a WIN certificate must not
+    # be accepted as the LOSS8 witness for this S7 root.
+    forged = copy.deepcopy(lift)
+    forged["rows"][0]["witness"] = "00000000000000821080000001040120"
+    require(forged["rows"][0]["witness"] in
+            {h for h, verdict, _ in cert["rows"] if verdict == "W"},
+            "forged WIN8 fixture no longer certified")
+    try:
+        audit(old, forged, frozen_win, cert)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("forged WIN8-as-LOSS8 witness was accepted")
     print(json.dumps(result, indent=2, ensure_ascii=False))
 
 if __name__ == "__main__":
