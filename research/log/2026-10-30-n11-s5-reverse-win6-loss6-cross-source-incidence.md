@@ -27,3 +27,7 @@ cache由来の897類と終局証明由来の6類は**重複0**。また、WIN6�
 
 再現：`node research/experiments/n11-s6-win117-loss173-conflict-audit-20261030/verify.js`。
 軽量監査CI： https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41045575237 （記録作成時点で実行中。成功確認前に独立CI完了とは扱わない）。
+
+## CI再検証
+
+[軽量独立監査CI 41045575237](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41045575237) はコミット `c511bc71b217effcea340d88af9c56d83770aabb` で **Success**。実行ログの新規出力は5石親318/897/6/903類、親子類別辺696/1,038本、集合交差0類、WIN6/LOSS6衝突0件で一致。これは5石までの構造・来歴監査の成功であり、既存の172個の6石cache判定を終局まで再証明したものではない。
