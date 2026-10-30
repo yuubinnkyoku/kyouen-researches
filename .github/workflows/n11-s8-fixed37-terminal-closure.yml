@@ -26,3 +26,8 @@ jobs:
         run: |
           set -euo pipefail
           node research/experiments/n11-s8-fixed37-terminal-closure-20261030/lift.js
+      - name: Python independent LOSS7 reverse-incidence and seven WIN6 corollaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/verify_s6_corollary.py
