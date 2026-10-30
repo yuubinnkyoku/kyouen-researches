@@ -1,0 +1,67 @@
+{
+  "schema": "n11-cross-snapshot-win5-to-win4-witness-v1",
+  "outcome": "UNKNOWN",
+  "provenance": {
+    "frozen": {
+      "path": "research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache",
+      "gitBlob": "2dccf42b92337cbcbfb62ea5c77db487b1ad8ead"
+    },
+    "corpus": {
+      "path": "research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-cache-corpus-union.cache",
+      "gitBlob": "9887a18c0788d26507be7e8e191c26817634a6b6"
+    }
+  },
+  "caveat": "Only solver-trusted exact S5 WIN labels are imported; witness incidence is independently checked. Relative to frozen S5 cache, not new terminal proof or globally new verdict.",
+  "rows": [
+    {
+      "s4": "00000000000000001000040200010000",
+      "win5": "00000000200000001000040200010000",
+      "center": true,
+      "openingReps": [
+        16,
+        3,
+        14
+      ]
+    },
+    {
+      "s4": "00000000000000001800000000010200",
+      "win5": "00000000000000809100000000000800",
+      "center": true,
+      "openingReps": [
+        16,
+        49,
+        1
+      ]
+    },
+    {
+      "s4": "00000000000000009100000000004000",
+      "win5": "00000000200000001000040200010000",
+      "center": true,
+      "openingReps": [
+        16,
+        14
+      ]
+    },
+    {
+      "s4": "00000000000000801200000000200000",
+      "win5": "00000000000000809100000000000800",
+      "center": true,
+      "openingReps": [
+        49,
+        1
+      ]
+    },
+    {
+      "s4": "00000000000000808100000000000800",
+      "win5": "00000000000000809100000000000800",
+      "center": false,
+      "openingReps": []
+    },
+    {
+      "s4": "00000000200000000000040200010000",
+      "win5": "00000000200000001000040200010000",
+      "center": false,
+      "openingReps": []
+    }
+  ]
+}
