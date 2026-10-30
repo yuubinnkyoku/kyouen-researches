@@ -37,3 +37,5 @@ jobs:
         run: node research/experiments/n11-s2-two-replacement-20261031/verify.js
       - name: Independently verify exact geometric S4 cover minima for 19 central replies
         run: node research/experiments/n11-central-19-cover-20261031/verify.js
+      - name: Exclude S4 WIN witnesses from all 19 central-reply cover candidates
+        run: node research/experiments/n11-central-19-cover-20261031/audit_win4_exclusion.js
