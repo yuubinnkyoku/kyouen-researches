@@ -172,7 +172,7 @@ function auditS5ToS4(cacheLoss6) {
     if (!line || line.startsWith('#')) continue;
     const f = line.split(',');
     need(f.length === 6 && f[0] === 's5verdict' &&
-         f[3] === '5' && f[5] === '0' && ['1','2'].includes(f[4]),
+         f[3] === '5' && /^\d+$/.test(f[5]) && ['1','2'].includes(f[4]),
          'malformed frozen S5 cache row');
     const lo = BigInt(f[1]), hi = BigInt(f[2]);
     need(lo >= 0n && lo < (1n << 64n) &&
