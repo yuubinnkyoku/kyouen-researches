@@ -121,6 +121,15 @@ def audit(data, frozen):
     edges = {(five, six) for six in new6
              for five in parents([six])}
     require(len(edges) == 42, "S5->S6 witness edge count changed")
+    gaps = []
+    for five in old5 | new5:
+        legal6 = children(points(five))
+        covered = legal6 & (old6 | new6)
+        gaps.append((len(legal6) - len(covered), five, len(legal6), len(covered)))
+    gaps.sort()
+    require(len(gaps) == 297 and gaps[0][0] == 14 and
+            all(gap > 0 for gap, _, _, _ in gaps),
+            "S5 full-boundary coverage changed")
     return {
         "schema": "n11-fixed14-s7-polarity-s6-baseline-audit-v1",
         "source": "frozen S8 terminal certificate lift; not a new terminal proof",
@@ -139,6 +148,9 @@ def audit(data, frozen):
         "newS5ClassesBeyondBaseline": len(new5 - old5),
         "combinedS5IncidentClasses": len(old5 | new5),
         "newS5ToS6WitnessEdges": len(edges),
+        "minimumUncoveredS6Children": gaps[0][0],
+        "closestS5": {"key": gaps[0][1], "legalS6": gaps[0][2],
+                      "coveredS6": gaps[0][3], "uncoveredS6": gaps[0][0]},
         "newS5FullWinProofs": 0,
         "twoStoneRootClosed": False,
         "emptyBoard": "UNKNOWN",
