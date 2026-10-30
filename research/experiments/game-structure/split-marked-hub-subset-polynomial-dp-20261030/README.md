@@ -8,34 +8,34 @@
 
 $w_j=t_j+1$、$R=[k]\setminus\{h\}$、$B=A_h$ と置き、$0\le u\le v\le1$ について
 
-$
+$$
 f_j(v,u)=\frac{(1-u)^{w_j}+t_j(1-v)^{w_j}}{w_j},\qquad
 C_S=B\cup\bigcup_{i\in S}A_i\quad(S\subseteq R)
-$
+$$
 
 を定める。二変数多項式 $F_S(v,y)$ を
 
-$
+$$
 \boxed{F_\varnothing(v,y)=1,\qquad
 F_S(v,y)=-\sum_{i\in S}\int_y^v
 F_{S\setminus\{i\}}(v,u)
 \prod_{j\in A_i\setminus C_{S\setminus\{i\}}}f_j(v,u)\,du}
-$
+$$
 
 で再帰的に定めると、
 
-$
+$$
 \boxed{Q_h=\int_0^1
 \left(\prod_{j\in B}(1-v)^{w_j}\right)
 \sum_{S\subseteq R}F_S(v,0)
 \prod_{j\notin C_S}f_j(v,0)\,dv.}
-$
+$$
 
 この式は有限和・多項式の積・有理係数積分のみで計算できる。各項の総次数は高々 $m+L+k-1$ なので、固定した $k$ に対し $m+L$ の多項式回数の有理数演算で評価できる。終局長分布は既知の
 
-$
+$$
 D(z)=\left(1-\sum_hQ_h\right)z^m+\sum_hQ_hz^{m+1-|A_h|}
-$
+$$
 
 で得られる。これは**一様合法着手**の確率分布であり、最適戦略の勝敗や勝率を意味しない。
 
@@ -47,9 +47,9 @@ $
 
 指定された特別中心を優先順位の**遅い順**に並べる。ある中心 $i$ の時刻 $u$ で、既に処理した（より遅い）中心集合が $S\setminus\{i\}$ なら、独立点 $j\in A_i\setminus C_{S\setminus\{i\}}$ は今回初めて制約を受ける。この点の優先順位は $u$ より遅く、さらにその $t_j$ 個の私有中心は $v$ より前に有資格になってはならない。その群の確率は
 
-$
+$$
 \int_u^v(1-x)^{t_j}\,dx+(1-v)^{t_j+1}=f_j(v,u).
-$
+$$
 
 既に制約を受けた独立点には新しい因子を掛けない。遅い順の最後の中心 $i$ を取り出して $u\in[y,v]$ で積分すると、包除原理の符号 $-1$ を含めて $F_S$ の再帰が得られる。
 
