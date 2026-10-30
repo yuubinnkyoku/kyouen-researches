@@ -10,6 +10,7 @@ on:
       - 'research/experiments/n11-s5-cross-snapshot-win4-20261031/**'
       - 'research/experiments/n11-s3-loss-guard-root-audit-20261031/**'
       - 'research/experiments/n11-s2-private-cover-20261031/**'
+      - 'research/experiments/n11-s2-two-replacement-20261031/**'
       - '.github/workflows/n11-loss7-s6-frontier.yml'
   workflow_dispatch:
 concurrency:
@@ -31,3 +32,5 @@ jobs:
         run: node research/experiments/n11-s3-loss-guard-root-audit-20261031/verify.js
       - name: Prove all 32 existing S2 LOSS certificate classes essential
         run: node research/experiments/n11-s2-private-cover-20261031/verify.js
+      - name: Exhaustively audit two-new three-old S2 class substitutions
+        run: node research/experiments/n11-s2-two-replacement-20261031/verify.js
