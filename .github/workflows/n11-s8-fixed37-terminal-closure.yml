@@ -5,6 +5,9 @@ on:
       - 'research/experiments/n11-s8-fixed37-terminal-closure-20261030/**'
       - '.github/workflows/n11-s8-fixed37-terminal-closure.yml'
   workflow_dispatch:
+concurrency:
+  group: n11-fixed37-terminal-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   independent-terminal-proof:
     runs-on: ubuntu-latest
