@@ -31,4 +31,4 @@
 
 この監査により、固定14根からの新しいWIN6証人が、従来未照合だった172個のLOSS6判定と矛盾していないことを継続検査できる。新規6石勝敗確定0、二石root閉鎖0。標準11×11空盤は **UNKNOWN**。
 
-再現：`node research/experiments/n11-s6-win117-loss173-conflict-audit-20261030/verify.js`。GitHub Actionsの最終成功は実行結果の確認後にのみ認定する。
+再現：`node research/experiments/n11-s6-win117-loss173-conflict-audit-20261030/verify.js`。[軽量独立監査CI](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41038084126) はコミット `2d29bb8ad3ebb228126c582ee9475edfadb67f1a` で **成功**。既存の4×4整数幾何によるLOSS7逆向き監査と、新しいNodeによる117対173の衝突検査が完了した。
