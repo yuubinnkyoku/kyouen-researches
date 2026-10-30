@@ -36,7 +36,7 @@ def run():
     assert states == 20997 and len(first_closure) == 684
     losses |= first_closure
     losses |= set(read(second / 'full_loss_closure.json')['loss9ParentKeys'])
-    assert len(wins) == 56 and len(losses) == 3362
+    assert len(wins) == 56 and len(losses) == 3996
     assert not wins & losses
 
     third = read(HERE / 'full_loss_closure.json')
