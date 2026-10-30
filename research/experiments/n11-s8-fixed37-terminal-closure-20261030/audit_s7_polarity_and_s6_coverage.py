@@ -12,6 +12,7 @@ import json
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
+INCIDENCE = HERE.parent / "n11-s8-complete-child-audit-20261030" / "incidence.json"
 BASELINE = HERE.parent / "n11-targeted-terminal-lift-20261015" / "data" / "all_s7_win_17.txt"
 BASELINE_SHA256 = "17282f84fd65ad20ac58ef794449a52bcc796d8129a1a3a58d726a305fbeb21e"
 KNOWN_S6_LOSS = "00000000040004001004000004010000"
@@ -85,6 +86,18 @@ def certified_new_s8(cert, data):
             cert["board"] == 11 and cert["emptyBoard"] == "UNKNOWN",
             "unexpected S8 certificate provenance")
     require(len(cert["rows"]) == 37, "wrong certified S8 root count")
+    # Exact provenance, not merely a plausible count or a legal WIN8 board.
+    incidence = json.loads(INCIDENCE.read_text())
+    require(incidence["schema"] == "n11-fixed14-complete-s8-s9-incidence-v1"
+            and incidence["emptyBoard"] == "UNKNOWN"
+            and incidence["fixedPlanUnprovedS8"] == 37
+            and incidence["proofOnlyWin8"] == data["historicalWin8"] == 5859
+            and incidence["winLossConflicts"] == 0,
+            "historical missing37 inventory provenance mismatch")
+    missing37 = [r["h"] for r in incidence["s8Rows"]]
+    require(len(missing37) == len(set(missing37)) == 37 and
+            missing37 == [r[0] for r in cert["rows"]],
+            "certified S8 roots differ from the 37 originally missing roots")
     seen, losses, wins = set(), set(), set()
     for key, verdict, _ in cert["rows"]:
         pp = points(key)
@@ -111,12 +124,26 @@ def audit(data, frozen, cert):
             "not fourteen distinct S7 roots")
     first_win, first_loss = [], []
     used_certified_loss8 = set()
+    # The 37 new roots must close precisely the prior inventory's gaps.
+    # The other S8 children remain dependent on historical certificates.
+    missing37 = {r["h"] for r in json.loads(INCIDENCE.read_text())["s8Rows"]}
+    all_legal8, prior_legal8 = set(), set()
+    prior_edges = new_win_edges = new_loss_edges = 0
+    first_win_boundary = None
     for r in rows:
         key = r["s7"]
         pp = points(key)
         require(len(pp) == 7 and canonical(pp) == key and safe(pp),
                 "invalid S7 board " + key)
         kids = children(pp)
+        all_legal8.update(kids)
+        prior = kids - missing37
+        prior_legal8.update(prior)
+        prior_edges += len(prior)
+        new_win_edges += len(kids & win8)
+        new_loss_edges += len(kids & loss8)
+        require(len(kids - prior - win8 - loss8) == r["unproved8Children"],
+                "S7 uncovered8 differs from the missing37 inventory " + key)
         certified_loss_children = kids & loss8
         require(len(certified_loss_children) == r["knownLoss8Children"],
                 "S7 LOSS8 count disagrees with certified S8 roots " + key)
@@ -141,6 +168,13 @@ def audit(data, frozen, cert):
             require(r["verdict"] == "LOSS" and r["witness"] is None,
                     "S7 side-to-move LOSS mismatch " + key)
             first_win.append(key)
+            first_win_boundary = (len(prior), len(kids & win8),
+                                  len(certified_loss_children))
+    require(len(all_legal8) == 547 and len(prior_legal8) == 510 and
+            len(all_legal8 & missing37) == 37 and
+            (prior_edges, new_win_edges, new_loss_edges) == (511, 8, 29) and
+            first_win_boundary == (34, 1, 0),
+            "fixed14 S8 incidence or unique first-WIN7 boundary changed")
     require(used_certified_loss8 == loss8,
             "certified LOSS8 root is not attached to the fixed fourteen S7 roots")
     require((len(first_win), len(first_loss)) == (1, 13) and
@@ -209,6 +243,17 @@ def audit(data, frozen, cert):
         "s7SideToMove": {"WIN": 13, "LOSS": 1},
         "s7OriginalFirst": {"WIN": 1, "LOSS": 13},
         "originalFirstWin7": first_win,
+        "fixed14DistinctLegalS8": len(all_legal8),
+        "historicalS8ClassesFromInventory": len(prior_legal8),
+        "historicalS8EdgesFromInventory": prior_edges,
+        "newCertifiedWin8Edges": new_win_edges,
+        "newCertifiedLoss8Edges": new_loss_edges,
+        "soleOriginalFirstWin7Boundary": {
+            "historicalWin8FromInventory": first_win_boundary[0],
+            "newTerminalCertifiedWin8": first_win_boundary[1],
+            "newTerminalCertifiedLoss8": first_win_boundary[2],
+        },
+        "historicalTrustBoundary": "historical WIN8 from incidence, not terminal-replayed here",
         "oldS6WinWitnessClasses": len(old6),
         "additionalS6WinWitnessClasses": len(new6),
         "overlapS6": len(old6 & new6),
@@ -280,6 +325,22 @@ def main():
         pass
     else:
         raise AssertionError("mutated S8 certificate verdict was accepted")
+    # Former false-green: a legal, canonical but unrelated WIN8 root
+    # could replace one of the eight WIN8 rows without affecting LOSS8
+    # witness counts. The exact historical missing37 set must reject it.
+    foreign = "00000000420008080200400000000220"
+    require(len(points(foreign)) == 8 and
+            canonical(points(foreign)) == foreign and safe(points(foreign)),
+            "foreign eight-stone negative fixture is invalid")
+    forged = copy.deepcopy(cert)
+    require(forged["rows"][0][1] == "W", "negative fixture row changed")
+    forged["rows"][0][0] = foreign
+    try:
+        audit(data, frozen, forged)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("unrelated WIN8 root was accepted")
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
