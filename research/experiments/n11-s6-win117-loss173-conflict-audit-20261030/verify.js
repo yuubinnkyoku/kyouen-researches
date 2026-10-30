@@ -217,6 +217,7 @@ function auditS5ToS4(cacheLoss6) {
   }));
   let centerParents = 0, centerGain = 0;
   let improved = 0, gainedEdges = 0, newlyClosed = 0;
+  const knownWinS4Witnesses = [];
   let minimumResidual = Infinity, maxGain = 0;
   for (const parent of parents4) {
     const ps = checkBoard(parent, 4);
@@ -227,14 +228,22 @@ function auditS5ToS4(cacheLoss6) {
       if (safe(next)) children.add(canonical(next));
     }
     let beforeLoss = 0, beforeWin = 0, afterLoss = 0;
+    let win5Witness = null;
     for (const key of children) {
       const old = exactS5.get(key);
-      if (old === 1) beforeWin++;
+      if (old === 1) { beforeWin++; win5Witness = key; }
       if (old === 2) beforeLoss++;
       if (old === 2 || union.has(key)) afterLoss++;
     }
     const gain = afterLoss - beforeLoss;
     const remaining = children.size - afterLoss - beforeWin;
+    // A known fixed-first WIN5 child proves this even-layer S4 is WIN.
+    // Such an S4 must not be prioritized as a candidate LOSS4 certificate.
+    if (beforeWin) {
+      need(beforeWin === 1 && win5Witness !== null,
+           'unexpected known WIN5 witness multiplicity');
+      knownWinS4Witnesses.push({s4: parent, win5: win5Witness});
+    }
     if (ps.includes(60)) {
       centerParents++;
       centerGain += gain;
@@ -253,6 +262,16 @@ function auditS5ToS4(cacheLoss6) {
     if (gain) improved++;
     if (!beforeWin && remaining === 0) newlyClosed++;
   }
+  knownWinS4Witnesses.sort((a, b) => a.s4.localeCompare(b.s4));
+  const expectedKnownWinS4 = [
+    {s4:'00000000000000001003000000100000', win5:'00000000000000409800000000001000'},
+    {s4:'00000010000000001000000000001400', win5:'00000010000000009000000000001400'},
+  ];
+  const centralKnownWinS4 = knownWinS4Witnesses.filter(
+    w => points(w.s4).includes(60)).length;
+  need(JSON.stringify(knownWinS4Witnesses) === JSON.stringify(expectedKnownWinS4) &&
+       centralKnownWinS4 === 2,
+       'S4 known WIN5 witness exclusion changed');
   need(parents4.size === 112 && improved === 112 &&
        gainedEdges === 149 && maxGain === 3 &&
        minimumResidual === 48 && newlyClosed === 0,
@@ -291,10 +310,15 @@ function auditS5ToS4(cacheLoss6) {
     additionalLoss5RelativeToFrozenCache: extra.length,
     additionalFromHistoricalLoss6: 24, additionalFromTerminalLoss6: 6,
     improvedS4ParentClasses: improved, newlyCoveredS4ChildEdges: gainedEdges,
+    alreadyWinS4Classes: knownWinS4Witnesses.length,
+    s4LossCandidateClassesAfterWin5Exclusion: parents4.size - knownWinS4Witnesses.length,
+    knownWinS4Witnesses,
     maximumGainPerS4: maxGain, minimumUncoveredS5Children: minimumResidual,
     newS4LossClosures: newlyClosed, crossSourceConflicts: 0,
     centralReplyAttribution: {
       centerContainingS4Classes: centerParents,
+      alreadyWinS4Classes: centralKnownWinS4,
+      s4LossCandidateClassesAfterWin5Exclusion: centerParents - centralKnownWinS4,
       gainedClassEdges: centerGain,
       openingRows: openingRows.map(({first,parents,gainedEdges,minResidual}) =>
         ({first,affectedS4:parents,gainedS4S5Edges:gainedEdges,minUncoveredS5:minResidual})),
