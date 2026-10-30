@@ -21,3 +21,8 @@ jobs:
         run: |
           set -euo pipefail
           python research/experiments/n11-s8-sixth-direct-loss-20261030/verify.py --full --negative
+      - name: Replay historical sealed proof sets and sixth LOSS8 fixed14 frontier
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-sixth-direct-loss-20261030/lift.py
