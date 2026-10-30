@@ -265,6 +265,21 @@ function main(){
     '00000000000000401000000008000400',
     '00000000000000009100000000000080']);
   assert.equal(byDistinct.filter(x=>x.distinctS5<2939).length,6);
+  // Two-dimensional Pareto frontier among all viable 31-class substitutions.
+  // These are planning proxies, NOT solved game states or terminal DAG costs.
+  const plans=[viableOne[0],...byDistinct];
+  const dominates=(a,b)=>
+    a.unknownUnion<=b.unknownUnion && a.distinctS5<=b.distinctS5 &&
+    (a.unknownUnion<b.unknownUnion || a.distinctS5<b.distinctS5);
+  const pareto=plans.filter((row,i)=>!plans.some((other,j)=>i!==j&&dominates(other,row)))
+    .sort((a,b)=>a.unknownUnion-b.unknownUnion||a.distinctS5-b.distinctS5);
+  assert.equal(plans.length,175);
+  assert.equal(pareto.length,2);
+  assert.deepEqual(pareto.map(x=>[x.unknownUnion,x.distinctS5]),
+    [[94,2939],[189,2930]]);
+  const dominatedByOne=byDistinct.filter(x=>dominates(viableOne[0],x)).length;
+  assert.equal(dominatedByOne,168);
+
   console.log(JSON.stringify({
     schema:'n11-s2-two-new-three-old-cover-audit-v1',root:[60,27],
     geometricS4Classes:all.size,knownLoss4:32,newCandidateClasses:cand.length,
@@ -282,6 +297,13 @@ function main(){
       viableTwoNewThreeOld:byDistinct.length,
       bestTwoNewThreeOld:byDistinct[0],
       twoNewPlansWithFewerDistinctS5ThanOneNew:byDistinct.filter(x=>x.distinctS5<viableOne[0].distinctS5).length,
+      twoMetricPareto:{
+        planCount:plans.length,
+        dominatedTwoNewByOneNew:dominatedByOne,
+        frontier:pareto.map(x=>({new:x.new,removed:x.removed,
+          unknownUnion:x.unknownUnion,distinctS5:x.distinctS5})),
+        note:'Only two count-based proxies; does not rank solver time, terminal proof cost, or reliability'
+      },
       note:'Conditional only: new S4 LOSS and unknown S5 LOSS are unproved; distinct S5 roots are not terminal DAG size'
     },
     trust:'S5 verdicts solver-trusted; UNKNOWN is not LOSS',
