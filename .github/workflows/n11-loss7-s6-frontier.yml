@@ -1,0 +1,21 @@
+name: N11 certified LOSS7 reverse S6 frontier (independent 4x4)
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_loss7_to_s6_frontier.py'
+      - 'research/experiments/n11-s8-fixed37-terminal-closure-20261030/lift_result.json'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_loss_2232.txt'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
+      - '.github/workflows/n11-loss7-s6-frontier.yml'
+  workflow_dispatch:
+concurrency:
+  group: n11-loss7-s6-frontier-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  independent-structural-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify pinned sources, full legal S7 boundary and mixed WIN6 witness
+        run: python3 research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_loss7_to_s6_frontier.py
