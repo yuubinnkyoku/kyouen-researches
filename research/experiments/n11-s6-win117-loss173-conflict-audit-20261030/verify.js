@@ -208,6 +208,14 @@ function auditS5ToS4(cacheLoss6) {
     const ps = checkBoard(key, 5);
     for (const p of ps) parents4.add(canonical(ps.filter(x => x !== p)));
   }
+  // D4 fixes center 60. A canonical S4 may occur in multiple opening roots:
+  // opening-specific gains are overlapping, not additive.
+  const openingReps = [16,38,49,24,0,26,48,12,25,3,13,2,14,5,15,4,1,37,36];
+  const openingRows = openingReps.map(first => ({
+    first, orbit: new Set(maps.map(m => m[first])),
+    parents: 0, gainedEdges: 0, minResidual: null,
+  }));
+  let centerParents = 0, centerGain = 0;
   let improved = 0, gainedEdges = 0, newlyClosed = 0;
   let minimumResidual = Infinity, maxGain = 0;
   for (const parent of parents4) {
@@ -227,6 +235,17 @@ function auditS5ToS4(cacheLoss6) {
     }
     const gain = afterLoss - beforeLoss;
     const remaining = children.size - afterLoss - beforeWin;
+    if (ps.includes(60)) {
+      centerParents++;
+      centerGain += gain;
+      for (const row of openingRows) {
+        if (!ps.some(p => row.orbit.has(p))) continue;
+        row.parents++;
+        row.gainedEdges += gain;
+        row.minResidual = row.minResidual === null
+          ? remaining : Math.min(row.minResidual, remaining);
+      }
+    }
     need(gain > 0 && remaining >= 0, 'S4 cross-snapshot boundary mismatch');
     gainedEdges += gain;
     maxGain = Math.max(maxGain, gain);
@@ -238,6 +257,23 @@ function auditS5ToS4(cacheLoss6) {
        gainedEdges === 149 && maxGain === 3 &&
        minimumResidual === 48 && newlyClosed === 0,
        'S4 cross-snapshot incidence changed');
+
+  // The opening attribution is a planning measurement, not a new
+  // terminal certificate or a secured third move.
+  const actualOpening = openingRows.map(
+    r => [r.first, r.parents, r.gainedEdges, r.minResidual]);
+  const expectedOpening = [
+    [16,6,12,95], [38,18,21,104], [49,6,6,94],
+    [24,8,14,48], [0,10,12,98], [26,17,26,48],
+    [48,11,17,50], [12,27,30,94], [25,7,9,109],
+    [3,21,24,100], [13,6,6,94], [2,6,6,110],
+    [14,3,3,105], [5,0,0,null], [15,0,0,null],
+    [4,0,0,null], [1,3,3,111], [37,0,0,null],
+    [36,0,0,null],
+  ];
+  need(centerParents === 52 && centerGain === 67 &&
+       JSON.stringify(actualOpening) === JSON.stringify(expectedOpening),
+       'central-reply opening attribution changed');
 
   // The same conflict guard must reject a forged WIN5 verdict.
   const forged = new Map(exactS5);
@@ -257,6 +293,13 @@ function auditS5ToS4(cacheLoss6) {
     improvedS4ParentClasses: improved, newlyCoveredS4ChildEdges: gainedEdges,
     maximumGainPerS4: maxGain, minimumUncoveredS5Children: minimumResidual,
     newS4LossClosures: newlyClosed, crossSourceConflicts: 0,
+    centralReplyAttribution: {
+      centerContainingS4Classes: centerParents,
+      gainedClassEdges: centerGain,
+      openingRows: openingRows.map(({first,parents,gainedEdges,minResidual}) =>
+        ({first,affectedS4:parents,gainedS4S5Edges:gainedEdges,minUncoveredS5:minResidual})),
+      caveat: 'opening rows overlap; no new S4 LOSS or secured third move',
+    },
     trustBoundary: 'frozen 2026-10-12 solver-trusted S5 cache; 172 historical exact S6 LOSS and 1 terminal-proved S6 LOSS; no new terminal replay',
     emptyBoard: 'UNKNOWN',
   };
