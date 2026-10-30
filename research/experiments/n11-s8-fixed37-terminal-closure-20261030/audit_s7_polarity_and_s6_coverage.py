@@ -74,11 +74,38 @@ def parents(keys):
             for h in keys for removed in points(h)}
 
 
-def audit(data, frozen):
+def certified_new_s8(cert, data):
+    """Bind the S7 witness labels to the independently checked S8 certificate.
+
+    This is a provenance check, not a substitute for verify.py/verify.js
+    recomputing the terminal S10 leaves.
+    """
+    require(cert["schema"] == data["sourceFixed37"] ==
+            "n11-fixed14-37-s8-direct-terminal-v1" and
+            cert["board"] == 11 and cert["emptyBoard"] == "UNKNOWN",
+            "unexpected S8 certificate provenance")
+    require(len(cert["rows"]) == 37, "wrong certified S8 root count")
+    seen, losses, wins = set(), set(), set()
+    for key, verdict, _ in cert["rows"]:
+        pp = points(key)
+        require(key not in seen and len(pp) == 8 and
+                canonical(pp) == key and safe(pp),
+                "duplicate, unsafe, or noncanonical certified S8 root")
+        require(verdict in ("W", "L"), "invalid certified S8 verdict")
+        seen.add(key)
+        (wins if verdict == "W" else losses).add(key)
+    require(len(wins) == data["newWin8"] == 8 and
+            len(losses) == data["newLoss8"] == 29 and
+            not (wins & losses), "certified S8 WIN/LOSS inventory mismatch")
+    return losses, wins
+
+
+def audit(data, frozen, cert):
     require(data["schema"] == "n11-fixed14-direct37-s7-lift-v1",
             "unexpected lift schema")
     require(data["emptyBoard"] == "UNKNOWN" and
             data["winLossConflicts"] == 0, "lift status/conflict")
+    loss8, win8 = certified_new_s8(cert, data)
     rows = data["rows"]
     require(len(rows) == 14 and len({r["s7"] for r in rows}) == 14,
             "not fourteen distinct S7 roots")
@@ -89,6 +116,9 @@ def audit(data, frozen):
         require(len(pp) == 7 and canonical(pp) == key and safe(pp),
                 "invalid S7 board " + key)
         kids = children(pp)
+        certified_loss_children = kids & loss8
+        require(len(certified_loss_children) <= r["knownLoss8Children"],
+                "certified LOSS8 exceeds claimed S7 count " + key)
         require(len(kids) == r["legal8"], "wrong legal S8 count " + key)
         losing = r["knownLoss8Children"]
         missing = r["unproved8Children"]
@@ -100,6 +130,9 @@ def audit(data, frozen):
             # S7 second-player WIN, equivalently original-first LOSS.
             require(r["verdict"] == "WIN" and r["witness"] in kids,
                     "S7 side-to-move WIN witness mismatch " + key)
+            require(r["witness"] in certified_loss_children and
+                    r["witness"] not in win8,
+                    "S7 witness has no certified LOSS8 provenance " + key)
             first_loss.append(key)
         else:
             # Every S8 first-player WIN: second player cannot avoid losing.
@@ -213,20 +246,36 @@ def main():
             "historical baseline SHA-256 mismatch")
     frozen = raw.decode("ascii").splitlines()
     data = json.loads((HERE / "lift_result.json").read_text())
-    result = audit(data, frozen)
+    cert = json.loads((HERE / "certificate.json").read_text())
+    result = audit(data, frozen, cert)
     # Negative controls must actually exercise the audit.
     import copy
+    # A *legal* S8 child with an independently certified WIN8 verdict
+    # used to pass the old audit as a false LOSS8 witness.
+    legal_but_wrong = "00000000000000821080000001040120"
+    require(legal_but_wrong in certified_new_s8(cert, data)[1] and
+            legal_but_wrong in children(points(data["rows"][0]["s7"])),
+            "false-green fixture is no longer a legal WIN8 child")
     for field, value in (("verdict", "LOSS"),
                          ("legal8", data["rows"][0]["legal8"] + 1),
-                         ("witness", "0"*32)):
+                         ("witness", "0"*32),
+                         ("witness", legal_but_wrong)):
         altered = copy.deepcopy(data)
         altered["rows"][0][field] = value
         try:
-            audit(altered, frozen)
+            audit(altered, frozen, cert)
         except ValueError:
             pass
         else:
             raise AssertionError("mutated S7 " + field + " was accepted")
+    altered_cert = copy.deepcopy(cert)
+    altered_cert["rows"][0][1] = "L"
+    try:
+        audit(data, frozen, altered_cert)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("mutated S8 certificate verdict was accepted")
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
