@@ -7,6 +7,7 @@ on:
       - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_loss_2232.txt'
       - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
       - 'research/experiments/n11-s6-win117-loss173-conflict-audit-20261030/**'
+      - 'research/experiments/n11-s5-cross-snapshot-win4-20261031/**'
       - '.github/workflows/n11-loss7-s6-frontier.yml'
   workflow_dispatch:
 concurrency:
@@ -22,3 +23,5 @@ jobs:
         run: python3 research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_loss7_to_s6_frontier.py
       - name: Audit 117 proof-backed WIN6 against 172 historical and one certified LOSS6
         run: node research/experiments/n11-s6-win117-loss173-conflict-audit-20261030/verify.js
+      - name: Verify cross-snapshot WIN5 witnesses and six S4 WIN parents
+        run: node research/experiments/n11-s5-cross-snapshot-win4-20261031/verify.js
