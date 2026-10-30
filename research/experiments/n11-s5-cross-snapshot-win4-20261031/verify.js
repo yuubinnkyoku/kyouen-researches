@@ -190,8 +190,10 @@ function main() {
     'S4 LOSS-candidate overlap changed');
   // Negative controls exercise the actual conflict and witness guards.
   const forged=new Map(corpus);
-  forged.set(delta.extraWin[0],2);
-  assert.throws(()=>compareCaches(frozen,forged), /WIN\/LOSS CONFLICT|cross-snapshot delta changed/);
+  const shared=[...corpus].find(([k])=>frozen.has(k));
+  need(shared!==undefined, 'no shared S5 row for conflict negative control');
+  forged.set(shared[0],3-shared[1]);
+  assert.throws(()=>compareCaches(frozen,forged), /WIN\/LOSS CONFLICT/);
   assert.throws(()=>validateWitness(
     {s4:rows[0].s4,win5:[...frozen].find(([,v])=>v===2)[0]},corpus),
     /not a corpus WIN5/);
