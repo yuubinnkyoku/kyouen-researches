@@ -103,8 +103,8 @@ int main(){
         }
         assert(bad==expected_bad[n-1]);
         if(n==8){
-            assert(pairs[{1,4}]==25200);
-            assert(pairs[{4,1}]==20160);
+            assert((pairs[{1,4}]==25200));
+            assert((pairs[{4,1}]==20160));
         }
         printf("trees n=%d labeled=%lld bad=%lld\n",n,lim,bad);
     }
