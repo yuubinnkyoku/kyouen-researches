@@ -80,16 +80,51 @@ function parseCache(raw){
   return out;
 }
 function parseProof(raw){
-  const header=JSON.parse(raw);
-  need(header.root_outcome==='LOSS'&&header.legal_root_moves===119&&
-    header.distinct_s4_loss_classes_used===32,'proof header changed');
-  // Preserve integer precision: JSON.parse(Number) rounds 64-bit S4 masks.
-  const loss4=new Set([...raw.matchAll(/"key":\s*\[\s*(\d+),\s*(\d+)\s*\]/g)]
-    .map(m=>hex(BigInt(m[1])+(BigInt(m[2])<<64n))));
-  const witnesses=[...raw.matchAll(/"root_move":\s*(\d+)[\s\S]*?"s4_class":\s*\[\s*(\d+),\s*(\d+)\s*\][\s\S]*?"s4_reply_move":\s*(\d+)/g)]
-    .map(m=>({third:+m[1],s4:hex(BigInt(m[2])+(BigInt(m[3])<<64n)),fourth:+m[4]}));
-  need(loss4.size===32&&witnesses.length===119,'proof witness count');
-  return {loss4,witnesses};
+  // Preserve 64-bit key halves before JSON.parse rounds large integers.
+  // Structured records bind each key to its own witness or S4 boundary.
+  const precise=raw.replace(/("(?:key|s4_class)"\s*:\s*\[\s*)(\d+)(\s*,\s*)(\d+)(\s*\])/g,
+    '$1"$2"$3"$4"$5');
+  const header=JSON.parse(precise);
+  need(header.schema==='n11-reply27-root-loss-move-certificate-v1'&&
+    header.root_outcome==='LOSS'&&header.legal_root_moves===119&&
+    header.distinct_s4_loss_classes_used===32&&
+    header.root_canonical===true&&header.all_root_moves_have_s3_loss_witness===true&&
+    Array.isArray(header.root_stones)&&header.root_stones.length===2&&
+    header.root_stones[0]===60&&header.root_stones[1]===27,
+    'proof header or root changed');
+  function pairKey(pair){
+    need(Array.isArray(pair)&&pair.length===2&&
+      pair.every(v=>typeof v==='string'&&/^\d+$/.test(v)),
+      'invalid exact 64-bit key pair');
+    const lo=BigInt(pair[0]),hi=BigInt(pair[1]);
+    need(lo>=0n&&lo<2n**64n&&hi>=0n&&hi<2n**64n,
+      'proof key half out of range');
+    return hex(lo+(hi<<64n));
+  }
+  need(Array.isArray(header.used_s4_loss_classes)&&
+    header.used_s4_loss_classes.length===32,'S4 class list incomplete');
+  const loss4=new Set(),leafCounts=new Map();
+  for(const row of header.used_s4_loss_classes){
+    const k=pairKey(row.key);
+    need(!loss4.has(k),'duplicate S4 LOSS class');
+    board(k,4);
+    need(Number.isSafeInteger(row.s5_children)&&row.s5_children>0,
+      'invalid declared S5 child count');
+    loss4.add(k);leafCounts.set(k,row.s5_children);
+  }
+  need(Array.isArray(header.third_move_witnesses)&&
+    header.third_move_witnesses.length===119,'third-move list incomplete');
+  const witnesses=header.third_move_witnesses.map(row=>{
+    const k=pairKey(row.s4_class);
+    need(loss4.has(k),'witness references unlisted S4 LOSS class');
+    need(row.s3_is_or===0&&row.s3_stones===3&&
+      row.s4_is_or===1&&row.s4_stones===4,
+      'witness polarity or layer mismatch');
+    need(row.s5_loss_children===leafCounts.get(k),
+      'witness S5 child count mismatch');
+    return {third:row.root_move,s4:k,fourth:row.s4_reply_move};
+  });
+  return {loss4,witnesses,leafCounts};
 }
 function lossBoundary(k,cache){
   const c=children(board(k,4));need(c.size>0,'empty LOSS4 boundary');
@@ -97,7 +132,12 @@ function lossBoundary(k,cache){
   return c.size;
 }
 function checkRoot(proof,cache){
-  let edges=0;for(const k of proof.loss4)edges+=lossBoundary(k,cache);
+  let edges=0;for(const k of proof.loss4){
+    const count=lossBoundary(k,cache);
+    need(count===proof.leafCounts.get(k),
+      'declared S4 S5 boundary count mismatch: '+k);
+    edges+=count;
+  }
   need(edges===3297,'S4->S5 certificate edges changed');
   const seen=new Set(),used=new Set();
   for(const w of proof.witnesses){
@@ -126,7 +166,16 @@ function s3Index(win4){
 }
 function main(){
   const frozen=parseCache(pinned(SRC.frozen)),corpus=parseCache(pinned(SRC.corpus));
-  const proof=parseProof(pinned(SRC.proof)),prior=JSON.parse(pinned(SRC.prior));
+  const rawProof=pinned(SRC.proof),proof=parseProof(rawProof),prior=JSON.parse(pinned(SRC.prior));
+  const badWitnessCount=rawProof.replace(/("s5_loss_children":\s*)(\d+)/,
+    (_,prefix,n)=>prefix+String(Number(n)+1));
+  assert.throws(()=>parseProof(badWitnessCount),/witness S5 child count mismatch/);
+  const badClassCount=rawProof.replace(/("s5_children":\s*)(\d+)/,
+    (_,prefix,n)=>prefix+String(Number(n)+1));
+  assert.throws(()=>parseProof(badClassCount),/witness S5 child count mismatch/);
+  const badRoot=rawProof.replace(/("root_stones":\s*\[\s*)60(\s*,\s*27\s*\])/,
+    (_,prefix,suffix)=>prefix+'99'+suffix);
+  assert.throws(()=>parseProof(badRoot),/proof header or root changed/);
   need(frozen.size===5851&&corpus.size===5700,'cache inventory changed');
   const edges=checkRoot(proof,frozen);
   const old5=[...frozen].filter(([,v])=>v===1).map(([k])=>k);
