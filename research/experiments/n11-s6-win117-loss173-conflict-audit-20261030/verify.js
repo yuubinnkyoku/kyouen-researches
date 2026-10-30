@@ -91,6 +91,21 @@ function lossCacheKeys(text) {
   out.forEach(h=>checkBoard(h,6));
   return new Set(out);
 }
+// Reverse one legal move from a safe six-stone position. This is an
+// incidence audit, not a proof that a five-stone parent is WIN.
+function reverseS5(roots) {
+  const parents=new Set(), edges=new Set();
+  for(const child of roots) {
+    const ps=checkBoard(child,6);
+    for(const removed of ps) {
+      const parent=canonical(ps.filter(p=>p!==removed));
+      checkBoard(parent,5);
+      parents.add(parent);
+      edges.add(parent+'|'+child);
+    }
+  }
+  return {parents,edges};
+}
 function audit(win7, cacheLoss6) {
   need(win7.length===19 && new Set(win7).size===19,
        'expected 17 historical and two independently backed WIN7 roots');
@@ -110,9 +125,30 @@ function audit(win7, cacheLoss6) {
   const comparisonLoss6=new Set([...cacheLoss6,independentlyCertifiedLoss6]);
   const conflicts=[...win6].filter(h=>comparisonLoss6.has(h));
   need(conflicts.length===0,'WIN6/LOSS6 CONFLICT: '+conflicts.join(','));
+  // Five-stone parents of known LOSS6 are LOSS5 (odd-layer AND), but
+  // a parent of a WIN6 is merely a possible WIN5 proof target.
+  const fromWin=reverseS5(win6);
+  const fromCacheLoss=reverseS5(cacheLoss6);
+  const fromTerminalLoss=reverseS5(new Set([independentlyCertifiedLoss6]));
+  const fromLoss=reverseS5(comparisonLoss6);
+  const overlap=[...fromWin.parents].filter(h=>fromLoss.parents.has(h));
+  need(fromWin.parents.size===318 && fromWin.edges.size===696 &&
+       fromCacheLoss.parents.size===897 && fromCacheLoss.edges.size===1032 &&
+       fromTerminalLoss.parents.size===6 && fromTerminalLoss.edges.size===6 &&
+       [...fromTerminalLoss.parents].every(h=>!fromCacheLoss.parents.has(h)) &&
+       fromLoss.parents.size===903 && fromLoss.edges.size===1038 &&
+       overlap.length===0,
+       'S5 reverse incidence / cache-certificate provenance changed');
   return {win7Witnesses:win7.length,securedWin6:win6.size,
     historicalCacheLoss6:cacheLoss6.size,terminalCertifiedLoss6:1,
     comparisonLoss6:comparisonLoss6.size,winLossConflicts:conflicts.length,
+    s5Win6WitnessParentClasses:fromWin.parents.size,
+    s5Win6WitnessClassEdges:fromWin.edges.size,
+    s5HistoricalLoss6WitnessParents:fromCacheLoss.parents.size,
+    s5TerminalLoss6WitnessParents:fromTerminalLoss.parents.size,
+    s5Loss6WitnessParentUnion:fromLoss.parents.size,
+    s5Loss6WitnessClassEdges:fromLoss.edges.size,
+    s5CrossSourceParentOverlap:overlap.length,
     historicalCacheTrustBoundary:'hash-pinned exact solver cache projection; not terminal-replayed here',
     proofTrustBoundary:'S7 WIN7 certificates are independently checked by existing pipelines, not replayed here',
     twoStoneRootClosed:false,emptyBoard:'UNKNOWN'};
