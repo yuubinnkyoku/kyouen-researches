@@ -180,6 +180,87 @@ function main(){
     for(const x of known)if(!row.removed.includes(x.k))m|=x.c;
     assert.equal(m,full,'invalid suggested cover');
   }
+
+  // Count *all distinct S5 dependency roots*, not just the unclassified new
+  // children. This is a conditional proof-plan cost, not a terminal proof.
+  const knownChildren=new Map(known.map(({k})=>{
+    const p=points(k),out=new Set();
+    for(let t=0;t<121;t++)if(!p.includes(t)&&safe([...p,t]))
+      out.add(canon([...p,t]));
+    return [k,out];
+  }));
+  const originalS5=new Set([...knownChildren.values()].flatMap(x=>[...x]));
+  assert.equal(originalS5.size,2995);
+  for(const k of originalS5)
+    assert.equal(merged.get(k),2,'baseline S5 must be cached LOSS: '+k);
+  const candidateIndex=new Map(cand.map((x,i)=>[x.k,i]));
+  function candidateStatus(k){
+    const idx=candidateIndex.get(k);
+    assert.notEqual(idx,undefined);
+    if(!statuses.has(idx)){
+      const p=points(k),children=new Set();
+      for(let t=0;t<121;t++)if(!p.includes(t)&&safe([...p,t]))
+        children.add(canon([...p,t]));
+      let win=0,loss=0,unknown=0;
+      for(const c of children){
+        const v=merged.get(c);
+        if(v===1)win++;else if(v===2)loss++;else unknown++;
+      }
+      statuses.set(idx,{win,loss,unknown,children});
+    }
+    return statuses.get(idx);
+  }
+  function dependencyCost(row){
+    const removed=new Set(row.removed),final=new Set(),newChildren=new Set();
+    for(const [k,children] of knownChildren)if(!removed.has(k))
+      for(const child of children)final.add(child);
+    for(const k of row.new){
+      const st=candidateStatus(k);
+      assert.equal(st.win,0,'known WIN child refutes candidate LOSS');
+      for(const child of st.children){newChildren.add(child);final.add(child);}
+    }
+    const unknownUnion=[...newChildren].filter(k=>!merged.has(k)).length;
+    return {...row,unknownUnion,distinctS5:final.size,
+      removedOldS5:[...originalS5].filter(k=>!final.has(k)).length,
+      introducedS5:[...final].filter(k=>!originalS5.has(k)).length};
+  }
+  // Earlier one-new/two-old alternatives are re-enumerated, rather than
+  // trusting the 2026-10-17 report's best value.
+  const oneNew=[];
+  for(let i=0;i<cand.length;i++){
+    const eligible=[];
+    for(let a=0;a<32;a++)if((priv[a]&~cand[i].c)===0n)
+      eligible.push(a);
+    for(let a=0;a<eligible.length;a++)for(let b=a+1;b<eligible.length;b++){
+      const x=eligible[a],y=eligible[b];
+      let mask=cand[i].c;
+      for(let j=0;j<32;j++)if(j!==x&&j!==y)mask|=known[j].c;
+      if(mask===full)
+        oneNew.push({new:[cand[i].k],removed:[known[x].k,known[y].k]});
+    }
+  }
+  assert.equal(oneNew.length,4);
+  const viableOne=oneNew.filter(row=>candidateStatus(row.new[0]).win===0)
+    .map(dependencyCost).sort((a,b)=>a.distinctS5-b.distinctS5);
+  assert.equal(viableOne.length,1);
+  assert.equal(viableOne[0].unknownUnion,94);
+  assert.equal(viableOne[0].distinctS5,2939);
+  const byDistinct=ranked.map(row=>{
+    const x=dependencyCost(row);
+    assert.equal(x.unknownUnion,row.unknownUnion);
+    return x;
+  }).sort((a,b)=>a.distinctS5-b.distinctS5||
+      a.unknownUnion-b.unknownUnion||
+      a.new.join('').localeCompare(b.new.join('')));
+  assert.equal(byDistinct.length,174);
+  assert.equal(byDistinct[0].distinctS5,2930);
+  assert.equal(byDistinct[0].unknownUnion,189);
+  assert.equal(byDistinct[0].removedOldS5,267);
+  assert.equal(byDistinct[0].introducedS5,202);
+  assert.deepEqual(byDistinct[0].new,[
+    '00000000000000401000000008000400',
+    '00000000000000009100000000000080']);
+  assert.equal(byDistinct.filter(x=>x.distinctS5<2939).length,6);
   console.log(JSON.stringify({
     schema:'n11-s2-two-new-three-old-cover-audit-v1',root:[60,27],
     geometricS4Classes:all.size,knownLoss4:32,newCandidateClasses:cand.length,
@@ -188,6 +269,16 @@ function main(){
     pairsWithoutKnownWIN5:eligiblePairs.length,
     minimumUnclassifiedDistinctS5:ranked[0].unknownUnion,
     top:ranked.slice(0,10),
+    conditionalDependencyComparison:{
+      baselineDistinctS5:originalS5.size,
+      geometricOneNewTwoOld:oneNew.length,
+      viableOneNewTwoOld:viableOne.length,
+      bestOneNewTwoOld:viableOne[0],
+      viableTwoNewThreeOld:byDistinct.length,
+      bestTwoNewThreeOld:byDistinct[0],
+      twoNewPlansWithFewerDistinctS5ThanOneNew:byDistinct.filter(x=>x.distinctS5<viableOne[0].distinctS5).length,
+      note:'Conditional only: new S4 LOSS and unknown S5 LOSS are unproved; distinct S5 roots are not terminal DAG size'
+    },
     trust:'S5 verdicts solver-trusted; UNKNOWN is not LOSS',
     emptyBoard:'UNKNOWN'
   },null,2));
