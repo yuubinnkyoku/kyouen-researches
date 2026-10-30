@@ -11,6 +11,7 @@ on:
       - 'research/experiments/n11-s3-loss-guard-root-audit-20261031/**'
       - 'research/experiments/n11-s2-private-cover-20261031/**'
       - 'research/experiments/n11-s2-two-replacement-20261031/**'
+      - 'research/experiments/n11-central-19-cover-20261031/**'
       - '.github/workflows/n11-loss7-s6-frontier.yml'
   workflow_dispatch:
 concurrency:
@@ -34,3 +35,5 @@ jobs:
         run: node research/experiments/n11-s2-private-cover-20261031/verify.js
       - name: Exhaustively audit two-new three-old S2 class substitutions
         run: node research/experiments/n11-s2-two-replacement-20261031/verify.js
+      - name: Independently verify exact geometric S4 cover minima for 19 central replies
+        run: node research/experiments/n11-central-19-cover-20261031/verify.js
