@@ -2,6 +2,8 @@
 """Independent D4 / integer-geometry check of the fixed14 LOSS7 -> WIN6 lift.
 
 The S7 verdict itself is established by lift.js and the terminal S8 certificates.
+Its S7 LOSS is for the player to move (second player at odd ply), hence
+original-first WIN. Only this fixed-first WIN7 yields seven WIN6 witnesses.
 This script only checks the exact legal geometry and reverse incidence.
 """
 import itertools
