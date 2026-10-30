@@ -16,6 +16,14 @@ BASELINE = HERE.parent / "n11-targeted-terminal-lift-20261015" / "data" / "all_s
 BASELINE_SHA256 = "17282f84fd65ad20ac58ef794449a52bcc796d8129a1a3a58d726a305fbeb21e"
 KNOWN_S6_LOSS = "00000000040004001004000004010000"
 EXPECTED_FIRST_WIN7 = "00020000000000821080200000000020"
+PRIOR_INDEPENDENT_FIRST_WIN7 = "00000000000100001000000042401008"
+K0423_PROVEN_LOSS5 = "00000000000101001001010000000000"
+SOLVER_TRUSTED_LOSS5_EXCLUSIONS = {
+    "00000000000000001204001000100000",
+    "00000000000100009000010000001000",
+    "00000000000100009001000000001000",
+    "00000000100000009001000000001000",
+}
 
 
 def require(ok, why):
@@ -121,15 +129,42 @@ def audit(data, frozen):
     edges = {(five, six) for six in new6
              for five in parents([six])}
     require(len(edges) == 42, "S5->S6 witness edge count changed")
-    gaps = []
-    for five in old5 | new5:
+    prior = points(PRIOR_INDEPENDENT_FIRST_WIN7)
+    require(len(prior) == 7 and safe(prior) and
+            canonical(prior) == PRIOR_INDEPENDENT_FIRST_WIN7,
+            "invalid 2026-10-26 independently proven first-WIN S7 root")
+    prior6 = parents([PRIOR_INDEPENDENT_FIRST_WIN7])
+    require(len(prior6) == 7 and not (prior6 & (old6 | new6)),
+            "2026-10-26 S6 witness overlap changed")
+    combined6 = old6 | new6 | prior6
+    combined5 = parents(combined6)
+    require(len(combined6) == 117 and len(combined5) == 318,
+            "combined S6/S5 inventory changed")
+    records = []
+    for five in combined5:
         legal6 = children(points(five))
-        covered = legal6 & (old6 | new6)
-        gaps.append((len(legal6) - len(covered), five, len(legal6), len(covered)))
-    gaps.sort()
-    require(len(gaps) == 297 and gaps[0][0] == 14 and
-            all(gap > 0 for gap, _, _, _ in gaps),
-            "S5 full-boundary coverage changed")
+        covered = legal6 & combined6
+        records.append((len(legal6) - len(covered), five,
+                        len(legal6), len(covered), legal6 - covered))
+    records.sort()
+    require(len(records) == 318 and records[0][:4] ==
+            (14, K0423_PROVEN_LOSS5, 17, 3),
+            "unfiltered S5 boundary changed")
+    filtered = [r for r in records if r[1] != K0423_PROVEN_LOSS5 and
+                r[1] not in SOLVER_TRUSTED_LOSS5_EXCLUSIONS]
+    require(len(filtered) == 313 and filtered[0][:4] ==
+            (25, "00000000000000821080000000000020", 32, 7),
+            "S5 evidence-aware shortlist changed")
+    def summarize(rows):
+        distinct = set().union(*(r[4] for r in rows))
+        return (len(rows), sum(r[2] for r in rows),
+                sum(r[3] for r in rows), sum(r[0] for r in rows),
+                len(distinct))
+    require(summarize(records) == (318, 28278, 696, 27582, 26994) and
+            summarize(filtered) == (313, 27919, 685, 27234, 26654),
+            "S5 incidence totals changed")
+    require(all(r[0] > 0 for r in filtered),
+            "partial S6 coverage misreported as S5 WIN proof")
     return {
         "schema": "n11-fixed14-s7-polarity-s6-baseline-audit-v1",
         "source": "frozen S8 terminal certificate lift; not a new terminal proof",
@@ -148,9 +183,24 @@ def audit(data, frozen):
         "newS5ClassesBeyondBaseline": len(new5 - old5),
         "combinedS5IncidentClasses": len(old5 | new5),
         "newS5ToS6WitnessEdges": len(edges),
-        "minimumUncoveredS6Children": gaps[0][0],
-        "closestS5": {"key": gaps[0][1], "legalS6": gaps[0][2],
-                      "coveredS6": gaps[0][3], "uncoveredS6": gaps[0][0]},
+        "additional20261026IndependentS6WinClasses": len(prior6),
+        "threeSourceS6WinClasses": len(combined6),
+        "threeSourceS5IncidentClasses": len(combined5),
+        "threeSourceS5LegalEdges": 28278,
+        "threeSourceS5SecuredEdges": 696,
+        "threeSourceS5UncoveredEdges": 27582,
+        "K0423ProvenLossS5Excluded": 1,
+        "solverTrustedLossS5ExcludedForScheduling": 4,
+        "filteredS5CandidateClasses": len(filtered),
+        "filteredS5LegalEdges": 27919,
+        "filteredS5SecuredEdges": 685,
+        "filteredS5UncoveredEdges": 27234,
+        "filteredS5DistinctUncoveredS6": 26654,
+        "filteredMinimumUncoveredS6Children": filtered[0][0],
+        "closestUnexcludedS5": {"key": filtered[0][1],
+                                "legalS6": filtered[0][2],
+                                "coveredS6": filtered[0][3],
+                                "uncoveredS6": filtered[0][0]},
         "newS5FullWinProofs": 0,
         "twoStoneRootClosed": False,
         "emptyBoard": "UNKNOWN",
