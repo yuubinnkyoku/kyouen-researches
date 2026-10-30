@@ -37,3 +37,7 @@ python3 research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_loss
 ```
 
 本記録作成時点では追加した4×4監査のCI成功は未確認。JavaScriptによる独立3×3整数幾何・D4再列挙では上記91/76/6056/5889と最小46を再現した。コード・研究記録をmainへ直接反映し、branch/PRは作成していない。新規二石root閉鎖0。**標準11×11空盤勝敗UNKNOWN**。
+
+## 独立4×4監査のCI追試
+
+軽量専用CI [41012929452](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41012929452) は **success**。凍結2,232 LOSS7・17 WIN7のGit blob同一性、13類の元先手LOSS7からの91本、全6,056合法辺、凍結76辺、未被覆5,889辺、最少46類、混在極性で既にWINの6石1類と除外後90類を4×4整数行列式で再現した。従来の37根の終局検証そのものはこの軽量CIで再計算せず、固定証明書と既存の専用CIを信頼境界とする。
