@@ -27,6 +27,6 @@
 node research/experiments/n11-s3-loss-guard-root-audit-20261031/verify.js
 ```
 
-軽量CI `.github/workflows/n11-loss7-s6-frontier.yml` に追加。GitHub Actionsの成否は本記録作成時点では未確認であり、成功扱いしない。
+軽量CI `.github/workflows/n11-loss7-s6-frontier.yml` に追加。GitHub Actions [41087002009](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41087002009) は **success**。既存3監査と今回の独立S2/S3監査の4段階すべて成功を確認した。
 
 **信頼境界**：独立なのは幾何・証明伝播・証人対応。S5の勝敗ラベルはsolver-trustedで、終局までの独立再探索ではない。既知 `{60,27}` の再監査であり新規二石root閉鎖は0。空盤は **UNKNOWN**。
