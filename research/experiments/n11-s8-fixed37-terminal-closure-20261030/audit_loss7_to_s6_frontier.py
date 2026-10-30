@@ -145,6 +145,7 @@ def audit(old, lift, frozen_win):
                          for p in points(FIRST_WIN7)}
     require(already_win6 == [MIXED_S6] and MIXED_S6 in first_win_parents,
             "mixed WIN7/LOSS7 child polarity regression")
+    new_set = set(first_loss)
     rows6 = []
     for parent in parents:
         kids = children(parent)
