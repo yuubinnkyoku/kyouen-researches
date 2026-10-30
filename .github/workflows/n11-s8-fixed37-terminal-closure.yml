@@ -1,0 +1,23 @@
+name: N11 fixed14 all 37 S8 terminal certificates
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-fixed37-terminal-closure-20261030/**'
+      - '.github/workflows/n11-s8-fixed37-terminal-closure.yml'
+  workflow_dispatch:
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node two independent integer geometries, 37 roots and complete S10 boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-fixed37-terminal-closure-20261030/verify.js --full
+      - name: Python independent terminal recursion and forged-certificate rejection
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/verify.py --negative
