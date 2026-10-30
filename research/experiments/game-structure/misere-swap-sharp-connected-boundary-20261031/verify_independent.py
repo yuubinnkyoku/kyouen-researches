@@ -109,3 +109,7 @@ def audit_trees():
 if __name__ == "__main__":
     audit_graphs()
     audit_trees()
+    cycle = [(i, (i+1)%6) for i in range(6)]
+    assert values(6, cycle) == (0,0)
+    assert values(8, cycle + [(0,6),(0,7)]) == (0,0)
+    print("connected infinite-family bases: C6 and C6+2 leaves verified")
