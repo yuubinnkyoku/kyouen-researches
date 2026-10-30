@@ -12,7 +12,7 @@
 - 全境界の診断走査では、各8石根ごとに重複除去した10石子を合計 **11,884件（根間の重複を含む）**、終局再帰状態数の合計 **1,625,006** と計数。証明自体は612証人で成立し、全境界走査を信用する必要はない。
 - 既存の第1〜第5の直接LOSS8に加え、第六の8石LOSS `00001088000000821080000000000020` も独立再計算済み。第六の境界364類はNodeとPythonで全件一致し、LOSS10 80類、LOSS9親閉包672類。第六の独立CIは成功、固定14根の未確定9石は659→644類、未確定辺は664→649本となった。
 
-[37類のコンパクト証明書](../experiments/n11-s8-fixed37-terminal-closure-20261030/certificate.json)、[Python独立検証器](../experiments/n11-s8-fixed37-terminal-closure-20261030/verify.py)、[Node二方式整数幾何検証器](../experiments/n11-s8-fixed37-terminal-closure-20261030/verify.js) を追加。Pythonで612証人を独立再計算し、全37局面の勝敗と92,603状態が一致。Nodeで全37根の全境界を走査し、既存の5件の全境界検証値とも一致した。[独立CI 40996637946](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40996637946) は **success**。Nodeの3×3/4×4整数幾何で全37根・全11,884件の10石境界を再計算し、Python独立終局再帰で612証人と8種類の改変拒否試験が成功。
+[37類のコンパクト証明書](../experiments/n11-s8-fixed37-terminal-closure-20261030/certificate.json)、[Python独立検証器](../experiments/n11-s8-fixed37-terminal-closure-20261030/verify.py)、[Node二方式整数幾何検証器](../experiments/n11-s8-fixed37-terminal-closure-20261030/verify.js) を追加。Pythonで612証人を独立再計算し、全37局面の勝敗と92,603状態が一致。Nodeで全37根の全境界を走査し、既存の5件の全境界検証値とも一致した。さらに作業環境で独立Python実装を使い、11,884件すべての10石局面について、勝敗・再帰状態数・合法手数をNodeの結果と**局面ごとに照合して完全一致**した。再実行は `verify.py --full` で可能。[独立CI 40996637946](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/40996637946) は **success**。Nodeの3×3/4×4整数幾何で全37根・全11,884件の10石境界を再計算し、Python独立終局再帰で612証人と8種類の改変拒否試験が成功。
 
 重要な限定：**37類が閉じたことは、固定14根の7石局面、二石root、空盤が閉じたことを意味しない**。特に新規LOSS8は、それを合法子に持つ7石局面をWINとするため、以前の「7石LOSSを集める」計画を一部反証しうる。既存の証明済み8石・7石・6石の集合と照合してから、下位への伝播と候補再選定を行う。
 
