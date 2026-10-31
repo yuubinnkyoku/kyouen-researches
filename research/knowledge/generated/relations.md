@@ -126,6 +126,9 @@
 - ← depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 終局を1とするmisère補助mex値の定義
 - ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 通常Grundy数とmisère補助値の定義
 - ← depends_on [K0583](../items/K0583-two-carrier-constant-state-grundy.md): 通常Grundyとmisère補助mexの定義
+- ← depends_on [K0584](../items/K0584-short-board-two-carrier-threshold.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): 通常Grundy値とmisère補助mex値の定義
+- ← depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 通常・misère補助mexの定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2826,8 +2829,37 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・安全追加ルール
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy数とmisère補助値の定義
 - ← depends_on [K0583](../items/K0583-two-carrier-constant-state-grundy.md): 二担い手七型の幾何分類と四群の容量再帰
+- ← generalizes [K0584](../items/K0584-short-board-two-carrier-threshold.md): N=2qの二担い手上界をN≤3q−7へ拡張
+- ← generalizes [K0587](../items/K0587-two-carrier-terminal-spectrum.md): N=2qの七型に限られた極大配置計数を任意の二担い手盤に拡張
 
 ## [K0583](../items/K0583-two-carrier-constant-state-grundy.md) N=2q・q≥7の二担い手七型は定数状態で全局面強解決でき空盤の通常・misère値も無界に確定する
 
 - → depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 二担い手七型の幾何分類と四群の容量再帰
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundyとmisère補助mexの定義
+- ← generalizes [K0586](../items/K0586-two-carrier-universal-constant-state.md): N=2qの七型から二担い手の任意の総点数へ拡張
+
+## [K0584](../items/K0584-short-board-two-carrier-threshold.md) 平面q点禁止ゲームの二担い手領域はN≤3q−7まで鋭く成立しN=2q+1の12型を強解決できる
+
+- → generalizes [K0582](../items/K0582-short-board-2q-two-carriers.md): N=2qの二担い手上界をN≤3q−7へ拡張
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): 二担い手領域とN=2q+1の12型幾何分類
+- ← generalizes [K0587](../items/K0587-two-carrier-terminal-spectrum.md): N=2q+1の十二型に限られた極大配置計数を任意の二担い手盤に拡張
+
+## [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) N=2q+1の二担い手12型は定数状態で強解決でき空盤と全初手を無界qで分類できる
+
+- → depends_on [K0584](../items/K0584-short-board-two-carrier-threshold.md): 二担い手領域とN=2q+1の12型幾何分類
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値とmisère補助mex値の定義
+- ← generalizes [K0586](../items/K0586-two-carrier-universal-constant-state.md): N=2q+1の十二型から二担い手の任意の総点数へ拡張
+
+## [K0586](../items/K0586-two-carrier-universal-constant-state.md) 二担い手q点禁止ゲームは盤面総点数によらず定数状態で強解決できq≥5の空盤値とq≥6の全初手を決定できる
+
+- → generalizes [K0583](../items/K0583-two-carrier-constant-state-grundy.md): N=2qの七型から二担い手の任意の総点数へ拡張
+- → generalizes [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): N=2q+1の十二型から二担い手の任意の総点数へ拡張
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misère補助mexの定義
+- ← depends_on [K0587](../items/K0587-two-carrier-terminal-spectrum.md): 同じ二担い手容量制約モデルを対象とする
+
+## [K0587](../items/K0587-two-carrier-terminal-spectrum.md) 二担い手q点禁止ゲームの全極大配置数・終局長分布・最小最大石数は閉形式で決定できる
+
+- → depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 同じ二担い手容量制約モデルを対象とする
+- → generalizes [K0582](../items/K0582-short-board-2q-two-carriers.md): N=2qの七型に限られた極大配置計数を任意の二担い手盤に拡張
+- → generalizes [K0584](../items/K0584-short-board-two-carrier-threshold.md): N=2q+1の十二型に限られた極大配置計数を任意の二担い手盤に拡張

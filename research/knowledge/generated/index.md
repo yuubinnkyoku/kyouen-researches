@@ -568,3 +568,7 @@
 | [K0581](../items/K0581-short-board-2qminus1-rigidity.md) | 平面q点禁止ゲームのN=2q−1・q≥6では担い手が高々二本で全安全局面に閉公式がある | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe |
 | [K0582](../items/K0582-short-board-2q-two-carriers.md) | 平面q点禁止ゲームのN=2q・q≥7は七つの二担い手型に分類でき全安全局面を二次時間で強解決できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe, strategy-length |
 | [K0583](../items/K0583-two-carrier-constant-state-grundy.md) | N=2q・q≥7の二担い手七型は定数状態で全局面強解決でき空盤の通常・misère値も無界に確定する | proposition | proved | geometry, variants, grundy, residual-games, first-moves |
+| [K0584](../items/K0584-short-board-two-carrier-threshold.md) | 平面q点禁止ゲームの二担い手領域はN≤3q−7まで鋭く成立しN=2q+1の12型を強解決できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe, strategy-length |
+| [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) | N=2q+1の二担い手12型は定数状態で強解決でき空盤と全初手を無界qで分類できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves |
+| [K0586](../items/K0586-two-carrier-universal-constant-state.md) | 二担い手q点禁止ゲームは盤面総点数によらず定数状態で強解決できq≥5の空盤値とq≥6の全初手を決定できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves |
+| [K0587](../items/K0587-two-carrier-terminal-spectrum.md) | 二担い手q点禁止ゲームの全極大配置数・終局長分布・最小最大石数は閉形式で決定できる | proposition | proved | geometry, variants, residual-games, maximal-safe, maximum-safe, strategy-length |

@@ -9338,6 +9338,18 @@
 ## [research/experiments/short-board-2qminus1-20261031/verify.py](../../../research/experiments/short-board-2qminus1-20261031/verify.py)
 
 - [K0581](../items/K0581-short-board-2qminus1-rigidity.md) (verifier): q≤50残数再帰、q≤8整数幾何・全安全部分集合直接mex、二禁止組と小格子全盤検査
+## [research/experiments/short-board-2qplus1-20261031/proof.md](../../../research/experiments/short-board-2qplus1-20261031/proof.md)
+
+- [K0584](../items/K0584-short-board-two-carrier-threshold.md) (proof): 鋭い二担い手上界、12型分類と整数実現、全安全局面再帰
+## [research/experiments/short-board-2qplus1-20261031/verify.py](../../../research/experiments/short-board-2qplus1-20261031/verify.py)
+
+- [K0584](../items/K0584-short-board-two-carrier-threshold.md) (verifier): q=8の1510740全安全局面、極大配置数、整数幾何構成の独立照合
+## [research/experiments/short-board-2qplus1-periodic-20261031/proof.md](../../../research/experiments/short-board-2qplus1-periodic-20261031/proof.md)
+
+- [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) (proof): 3476個の有限mex恒等式を無界帰納法へ接続する証明、12型の空盤と全初手
+## [research/experiments/short-board-2qplus1-periodic-20261031/verify.py](../../../research/experiments/short-board-2qplus1-periodic-20261031/verify.py)
+
+- [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) (verifier): 有限状態証明書とq=8,9,12,25,60の241080圧縮局面の独立照合
 ## [research/experiments/short-board-unique-carrier-20261031/proof.md](../../../research/experiments/short-board-unique-carrier-20261031/proof.md)
 
 - [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (proof): 一曲線剛性、整数格子での全候補実現、終局長・全履歴・Grundyの閉公式、境界の整数反例
@@ -9562,6 +9574,18 @@
 ## [research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py](../../../research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py)
 
 - [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (verifier): 二点和による有限検証
+## [research/experiments/two-carrier-terminal-20261031/proof.md](../../../research/experiments/two-carrier-terminal-20261031/proof.md)
+
+- [K0587](../items/K0587-two-carrier-terminal-spectrum.md) (proof): 全極大集合の飽和場合分けによる全称証明、終局長・人数別履歴数
+## [research/experiments/two-carrier-terminal-20261031/verify.py](../../../research/experiments/two-carrier-terminal-20261031/verify.py)
+
+- [K0587](../items/K0587-two-carrier-terminal-spectrum.md) (verifier): 156構成1296960部分集合の点別極大判定と24構成の順序付き履歴独立照合
+## [research/experiments/two-carrier-universal-20261031/proof.md](../../../research/experiments/two-carrier-universal-20261031/proof.md)
+
+- [K0586](../items/K0586-two-carrier-universal-constant-state.md) (proof): 1505個の局所mex恒等式と帰納法による全称証明
+## [research/experiments/two-carrier-universal-20261031/verify.py](../../../research/experiments/two-carrier-universal-20261031/verify.py)
+
+- [K0586](../items/K0586-two-carrier-universal-constant-state.md) (verifier): 72盤951327安全局面の独立点別再帰と根初手192条件
 ## [research/experiments/two-forbidden-hyperedges-20261018/proof.md](../../../research/experiments/two-forbidden-hyperedges-20261018/proof.md)
 
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (proof): 任意有限点集合の二つの禁止集合に対する全称mex帰納証明
