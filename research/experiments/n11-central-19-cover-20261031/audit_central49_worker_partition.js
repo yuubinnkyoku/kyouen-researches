@@ -166,4 +166,86 @@ const report={
  },
  caveat:'All 28 unresolved S4 are UNKNOWN; child counts are not solve times; shared cache may avoid redundant work.'
 };
-console.log(JSON.stringify(report,null,2));
+// Child-level scheduling: the same S5 class is solved by exactly one worker,
+// then all dependent S4 witnesses may reuse its verdict. This is a worklist
+// partition, NOT a claim of a solved S5, S4, S2, or empty-board position.
+const crypto=require('node:crypto');
+const ROOT=path.resolve(here,'../../..');
+const CACHE_SOURCES=[
+ ['research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache',
+  '2dccf42b92337cbcbfb62ea5c77db487b1ad8ead'],
+ ['research/experiments/n11-boundary-recovery-20261006/output/post-23b52acf-after-round4-s6-escalation-s5-cache-corpus-union.cache',
+  '9887a18c0788d26507be7e8e191c26817634a6b6']
+];
+const cache=new Map();
+for(const [relative,expected] of CACHE_SOURCES){
+ const raw=fs.readFileSync(path.join(ROOT,relative));
+ const actual=crypto.createHash('sha1').update('blob '+raw.length+'\\0').update(raw).digest('hex');
+ assert.equal(actual,expected,'S5 source blob changed: '+relative);
+ const local=new Map();
+ for(const line of raw.toString('utf8').split(/\\r?\\n/)){
+  if(!line||line.startsWith('#'))continue;
+  const cols=line.split(',');
+  assert.equal(cols.length,6);
+  assert.equal(cols[0],'s5verdict');
+  assert.equal(cols[3],'5');
+  assert(['1','2'].includes(cols[4]));
+  assert(/^\\d+$/.test(cols[1])&&/^\\d+$/.test(cols[2]));
+  const lo=BigInt(cols[1]),hi=BigInt(cols[2]);
+  assert(lo>=0n&&lo<1n<<64n&&hi>=0n&&hi<1n<<64n);
+  const key=(lo+(hi<<64n)).toString(16).padStart(32,'0');
+  assert(!local.has(key),'duplicate verdict in one source');
+  local.set(key,Number(cols[4]));
+ }
+ for(const [key,outcome] of local){
+  if(cache.has(key))assert.equal(cache.get(key),outcome,'WIN/LOSS CONFLICT: '+key);
+  else cache.set(key,outcome);
+ }
+}
+assert.equal(cache.size,5853);
+const unresolvedSet=new Set(unknown);
+const neededOwners=[...owners].filter(([,indices])=>indices.some(i=>unresolvedSet.has(i)));
+assert.equal(neededOwners.length,2528);
+const cachedNeeded=neededOwners.filter(([key])=>cache.has(key));
+assert.equal(cachedNeeded.length,3);
+assert(cachedNeeded.every(([key])=>cache.get(key)===2),'known WIN5 under an unresolved S4');
+const pending=neededOwners.filter(([key])=>!cache.has(key)).map(([key])=>key).sort();
+assert.equal(pending.length,2525);
+const shards=Array.from({length:4},()=>[]);
+const assigned=new Map();
+for(let rank=0;rank<pending.length;rank++){
+ const key=pending[rank],worker=rank%4;
+ assert(!assigned.has(key),'duplicate S5 assignment');
+ assigned.set(key,worker);shards[worker].push(key);
+}
+assert.deepEqual(shards.map(s=>s.length),[632,631,631,631]);
+assert.equal(new Set(shards.flat()).size,2525);
+for(const [key,indices] of neededOwners){
+ if(cache.has(key))continue;
+ assert(assigned.has(key),'unassigned S5');
+ assert(indices.every(i=>unresolvedSet.has(i)),'S5 child also belongs to known LOSS4');
+}
+const digest=keys=>crypto.createHash('sha256').update(keys.join('\\n')+'\\n').digest('hex');
+const shardHashes=shards.map(digest);
+const witnessShards=unknown.map(i=>{
+ const keys=neededOwners.filter(([key,indices])=>!cache.has(key)&&indices.includes(i));
+ assert.equal(keys.length,frontier.witnesses[i].unknownS5);
+ const counts=Array(4).fill(0);
+ for(const [key] of keys)counts[assigned.get(key)]++;
+ assert.equal(counts.reduce((a,b)=>a+b,0),frontier.witnesses[i].unknownS5);
+ return {witness:i,workerChildCounts:counts};
+});
+report.childLevelSharding={
+ policy:'sorted canonical UNKNOWN S5 keys, zero-based rank modulo 4',
+ distinctPendingS5:pending.length,sourceCacheClasses:cache.size,
+ knownLOSS5UnderUnresolvedS4:cachedNeeded.length,
+ workerLoads:shards.map(s=>s.length),peak:632,crossWorkerDuplicatedS5:0,
+ totalChildWork:2525,manifestSha256:digest(pending),workerSha256:shardHashes,
+ witnessShards,
+ caveat:'Worklist count, not solve-time balance; each S4 remains UNKNOWN until every legal S5 child has verified LOSS evidence.'
+};
+const args=process.argv.slice(2);
+if(args.length===0)console.log(JSON.stringify(report,null,2));
+else if(args.length===2&&args[0]==='--worker'&&/^[0-3]$/.test(args[1]))
+ process.stdout.write(shards[Number(args[1])].join('\\n')+'\\n');
+else throw new Error('usage: node audit_central49_worker_partition.js [--worker 0|1|2|3]');
