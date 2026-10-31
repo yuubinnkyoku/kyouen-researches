@@ -1,12 +1,13 @@
 'use strict';
-// Independent 4x4 audit of four untouched and one repaired 31-class covers.
+// Independent 4x4 audit of four untouched and five repaired 31-class covers.
 // These are geometric covers avoiding known WIN4, NOT S4 LOSS certificates.
 const fs=require('node:fs'),zlib=require('node:zlib'),assert=require('node:assert/strict');
 const {witnesses,canonical,points,maps}=require('./audit_win4_exclusion');
 const data=JSON.parse(zlib.gunzipSync(Buffer.from(
   fs.readFileSync(__dirname+'/certificate.json.gz.b64','utf8').trim(),'base64')));
 const patch=JSON.parse(fs.readFileSync(__dirname+'/win4-safe-31-repair.json','utf8'));
-const REPS=[38,0,5,36,48],EXCLUDED=[30,3,21,21,112];
+const REPS=[16,38,49,24,0,48,12,5,36];
+const EXCLUDED=[103,30,68,63,3,112,120,21,21];
 function det4(p){
   const a=p.map(i=>{const x=i%11,y=Math.floor(i/11);return[x*x+y*y,x,y,1]});
   let sum=0;
@@ -63,11 +64,12 @@ function verifyDual(row,classes){
     assert(w<=2,'dual inequality: '+k);
   }
 }
-assert.equal(patch.schema,'n11-central-win4-safe-s4-31-patch-v1');
+assert.equal(patch.schema,'n11-central-win4-safe-s4-31-patches-v2');
 assert.equal(patch.board,11);assert.equal(patch.outcome,'UNKNOWN');
-assert.equal(patch.first,48);assert.equal(patch.reply,60);
 assert.equal(patch.base_certificate,'certificate.json.gz.b64');
-assert.equal(patch.remove.length,3);assert.equal(patch.add.length,3);
+assert.deepEqual(patch.repairs.map(r=>r.first),[16,49,24,48,12]);
+assert.equal(patch.repairs.reduce((n,r)=>n+r.remove.length,0),12);
+for(const r of patch.repairs)assert.equal(r.remove.length,r.add.length);
 const results=[];
 for(let i=0;i<REPS.length;i++){
   const a=REPS[i],row=data.roots.find(r=>r.first===a);
@@ -77,14 +79,15 @@ for(let i=0;i<REPS.length;i++){
   const blocked=[...classes.keys()].filter(k=>witnesses.has(k));
   assert.equal(blocked.length,EXCLUDED[i]);
   let selected=[...row.primal_s4_classes];
-  if(a===48){
-    for(const k of patch.remove){
+  const repair=patch.repairs.find(r=>r.first===a);
+  if(repair){
+    for(const k of repair.remove){
       assert(witnesses.has(k));assert(selected.includes(k));
     }
-    for(const k of patch.add){
+    for(const k of repair.add){
       assert(!witnesses.has(k));assert(classes.has(k));assert(!selected.includes(k));
     }
-    selected=selected.filter(k=>!patch.remove.includes(k)).concat(patch.add);
+    selected=selected.filter(k=>!repair.remove.includes(k)).concat(repair.add);
   }else{
     assert(selected.every(k=>!witnesses.has(k)));
   }
@@ -93,9 +96,9 @@ for(let i=0;i<REPS.length;i++){
   assert.throws(()=>verifyCover(a,forged,classes),/known WIN4/);
   assert.throws(()=>verifyCover(a,selected.slice(1),classes));
   results.push({first:a,selected:31,excluded:blocked.length,thirdMovesCovered:119,
-    repaired:a===48});
+    repaired:!!repair});
 }
 console.log(JSON.stringify({schema:'n11-central-win4-safe-31-audit-v1',
-  roots:results,verifiedRoots:5,geometricConstrainedOptimum31:true,
+  roots:results,verifiedRoots:9,geometricConstrainedOptimum31:true,
   negativeControlsPassed:true,emptyBoard:'UNKNOWN',
   note:'No selected S4 LOSS is proved.'},null,2));
