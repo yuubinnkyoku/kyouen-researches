@@ -25,3 +25,28 @@ jobs:
             python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist "$worker" > "/tmp/2277-worker-$worker.txt"
           done
           python3 -c 'from pathlib import Path; a=[Path(f"/tmp/2277-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[570,569,569,569]; assert len(set(sum(a,[])))==2277'
+      - name: Audit automatic minimal-remaining S4 focus against live 2277-class frontier
+        run: |
+          python3 - <<'PY'
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, 'research/experiments/n11-central-19-cover-20261031')
+          import audit_central49_three_swap_worker_results_2277 as m
+          _, owners, witnesses, assignment, shards, _, priority = m.build()
+          target = m.choose_priority_focus(owners, witnesses, {})
+          assert target == witnesses[priority]['s4']
+          focus = m.focus_children(owners, witnesses, target)
+          assert len(focus) == 94
+          worklists = [m.remaining_worklist(shards, assignment, None, i, focus) for i in range(4)]
+          flat = sum(worklists, [])
+          assert len(flat) == len(set(flat)) == 94
+          assert set(flat) == focus
+          assert all(assignment[key] == i for i, part in enumerate(worklists) for key in part)
+          Path('/tmp/central49-focused-0-expected.txt').write_text(
+              ''.join(key + '\\n' for key in worklists[0]))
+          PY
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist 0 --focus-priority > /tmp/central49-focused-0-cli.txt
+          cmp /tmp/central49-focused-0-expected.txt /tmp/central49-focused-0-cli.txt
+          priority_s4=$(python3 -c 'import json; print(json.load(open("/tmp/central49-2277-workers.json"))["priority_s4"])')
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist 0 --focus-s4 "$priority_s4" > /tmp/central49-focused-0-explicit.txt
+          cmp /tmp/central49-focused-0-expected.txt /tmp/central49-focused-0-explicit.txt
