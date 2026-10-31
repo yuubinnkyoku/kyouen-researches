@@ -158,7 +158,7 @@ def build_frontier():
             'repaired certificate verifier failed: '+(check.stderr or check.stdout)[-1200:])
     cert_path = HERE / 'central49-terminal-win5-safe-repair.json'
     raw = cert_path.read_bytes()
-    blob_sha = hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\\0'+raw).hexdigest()
+    blob_sha = hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
     require(blob_sha == REPAIRED_CERT_SHA,
             'repaired cover changed; explicit re-audit required')
     cert = json.loads(raw)
@@ -339,7 +339,7 @@ def main():
         require(not args.worker and args.existing is None,
                 'cannot combine worklist export and report audit')
         _, _, _, _, shards, _, _ = build_frontier()
-        sys.stdout.write('\\n'.join(shards[int(args.worklist)])+'\\n')
+        sys.stdout.write('\n'.join(shards[int(args.worklist)])+'\n')
         return
     workers = []
     for ident, filename in args.worker:
