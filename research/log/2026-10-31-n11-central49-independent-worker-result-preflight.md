@@ -26,3 +26,7 @@ python3 research/experiments/n11-central-19-cover-20261031/audit_central49_worke
 手元の合成データによる正例・負例テストは`SELF_TEST_OK`。誤worker割当、対象外鍵、矛盾、同一ファイル重複、異常形式、未完の誤昇格を拒否する。専用CIに独立再列挙と負例テストを追加した。
 
 未判定S5の新規厳密判定0件、四石LOSS新規証明0件、二石root追加閉鎖0件。**11×11空盤はUNKNOWN**。
+
+## CI確認
+
+2026-10-31の独立監査CI [41179459426](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41179459426) は**成功**。Pythonの負例テストと、実データからの2,525類・91類優先分割の再生成、既存Node監査を含む全工程が成功した。変更後のCIが成功したことは監査実装の回帰確認であり、workerの未実行S5局面が新たにLOSS/WINと判定されたことを意味しない。
