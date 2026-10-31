@@ -28,3 +28,5 @@
 `research/experiments/n11-central-19-cover-20261031/central49-two-swap-2542.json` に全31類と置換差分を固定し、`verify_central49_two_swap_2542.js` が全378組・2,783案とS5依存を再計算する。独立Python監査 `audit_central49_two_swap_worker_results.py` は、四石・五石の整数幾何とD4、2,542類の分割・衝突・担当外報告を別実装で検査する。旧2,584類の作業一覧を新しい証明計画として扱わない。
 
 固定5,851件のS5判定はsolver-trustedであり、全件の独立終局再証明は今回実施していない。6件の終局WIN5は固定検証receiptに依存する。workerのCSV報告は証明書ではない。新規S5厳密判定0件、S4 LOSS証明0件、二石root閉鎖0件。二石 `{49,60}` および標準11×11空盤の勝敗は **UNKNOWN**。
+
+**独立監査CI成功：** [GitHub Actions 41204348256](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41204348256)（変更コミット `79fa5b9d3404cbee97542d0d25c4037661b87214`）。Nodeの全378除去対・2,783置換・2,542未判定類の検算と、別実装Pythonによる2,542類の再構成、636/636/635/635の4分割、重複0・報告拒否回帰が成功した。これはS5判定の独立終局証明ではない。
