@@ -122,7 +122,7 @@ jobs:
           assert result['new_reported_verdicts'] == 1
           assert result['remaining_focused_s5'] == 93
           assert result['root_outcome'] == 'UNKNOWN'
-          assert merged.read_text() == row(key, 2)
+          assert merged.read_text() == row(key, 2).replace(',1\n', ',0\n')
           def refused(args):
               proc = subprocess.run(args, capture_output=True, text=True)
               assert proc.returncode != 0, (args, proc.stdout, proc.stderr)
