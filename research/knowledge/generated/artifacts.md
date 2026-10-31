@@ -9314,6 +9314,12 @@
 ## [research/experiments/saturation/scripts/saturation_20261003_verify.py](../../../research/experiments/saturation/scripts/saturation_20261003_verify.py)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (verifier): 証人と幾何の独立検査
+## [research/experiments/short-board-unique-carrier-20261031/proof.md](../../../research/experiments/short-board-unique-carrier-20261031/proof.md)
+
+- [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (proof): 一曲線剛性、整数格子での全候補実現、終局長・全履歴・Grundyの閉公式、境界の整数反例
+## [research/experiments/short-board-unique-carrier-20261031/verify.py](../../../research/experiments/short-board-unique-carrier-20261031/verify.py)
+
+- [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (verifier): 4×4格子31616盤の禁止辺全列挙、160盤の全安全局面再帰、q=4とq=5の鋭い境界反例
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint

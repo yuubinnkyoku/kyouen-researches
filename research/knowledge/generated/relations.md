@@ -121,6 +121,7 @@
 - ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 元先手固定視点の奇数AND・偶数OR伝播
 - ← depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 通常Grundyと終局1のmisère補助mexの定義
 - ← depends_on [K0577](../items/K0577-qplus1-geometric-rigidity.md): 通常・misèreのmex定義
+- ← depends_on [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): 通常・misère補助mex値の定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2787,3 +2788,9 @@
 
 - → depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 余補一型の抽象禁止集合族の閉公式。幾何によって禁止組数を0・1・Nに制限する
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misèreのmex定義
+- ← generalizes [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): N=q+1の三分律を全q≤N≤2q−3へ拡張し、上界の鋭さも証明
+
+## [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) 平面q点禁止ゲームはN≤2q−3で禁止曲線が一意となり全安全局面を偶奇で強解決できる
+
+- → generalizes [K0577](../items/K0577-qplus1-geometric-rigidity.md): N=q+1の三分律を全q≤N≤2q−3へ拡張し、上界の鋭さも証明
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misère補助mex値の定義

@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 560 / alias: 269 / artifactファイル: 2961
+K項目: 561 / alias: 269 / artifactファイル: 2963
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 560 / alias: 269 / artifactファイル: 2961
 | computation | 39 |
 | definition | 5 |
 | method | 4 |
-| proposition | 448 |
+| proposition | 449 |
 | question | 38 |
 | verification | 26 |
 
@@ -23,7 +23,7 @@ K項目: 560 / alias: 269 / artifactファイル: 2961
 | needs-review | 1 |
 | observed | 26 |
 | open | 36 |
-| proved | 268 |
+| proved | 269 |
 | refuted | 63 |
 | scope-unclear | 1 |
 | superseded | 1 |
@@ -35,11 +35,11 @@ K項目: 560 / alias: 269 / artifactファイル: 2961
 | 値 | 件数 |
 |---|---:|
 | certificates | 60 |
-| first-moves | 58 |
+| first-moves | 59 |
 | formalization | 5 |
-| geometry | 260 |
-| grundy | 132 |
-| maximal-safe | 107 |
+| geometry | 261 |
+| grundy | 133 |
+| maximal-safe | 108 |
 | maximum-safe | 68 |
 | migration | 1 |
 | provenance | 35 |
@@ -50,8 +50,8 @@ K項目: 560 / alias: 269 / artifactファイル: 2961
 | search-methods | 66 |
 | square-outcomes | 56 |
 | statistics | 75 |
-| strategy-length | 38 |
-| variants | 202 |
+| strategy-length | 39 |
+| variants | 203 |
 | verification | 71 |
 
 ## 未解決・要監査・範囲不明

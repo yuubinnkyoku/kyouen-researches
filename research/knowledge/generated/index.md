@@ -562,3 +562,4 @@
 | [K0575](../items/K0575-coplanar-3x3x10-strong-solution.md) | 3×3×10・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) | 余補一型のq点禁止ゲームは全安全局面の通常・misère値と全勝ち初手に閉公式を持つ | proposition | proved | variants, grundy, first-moves, residual-games, maximal-safe, strategy-length |
 | [K0577](../items/K0577-qplus1-geometric-rigidity.md) | 平面上のq+1点では共円・共線の禁止q点組数は0・1・q+1のみで全局面Grundy値は偶奇で決まる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
+| [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) | 平面q点禁止ゲームはN≤2q−3で禁止曲線が一意となり全安全局面を偶奇で強解決できる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
