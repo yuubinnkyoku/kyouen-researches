@@ -10,7 +10,7 @@ const {canonical,points,maps,witnesses:cachedWIN4}=require('./audit_win4_exclusi
 require('./verify_central49_terminal_safe_repair');
 function pinned(file,sha){
   const raw=fs.readFileSync(path.join(ROOT,file));
-  const git=crypto.createHash('sha1').update(Buffer.from('blob '+raw.length+'\\0')).update(raw).digest('hex');
+  const git=crypto.createHash('sha1').update(Buffer.from('blob '+raw.length+'\0')).update(raw).digest('hex');
   assert.equal(git,sha,'changed pinned source '+file);
   return raw.toString('utf8');
 }
@@ -41,7 +41,7 @@ assert.equal(terminalWIN4.size,24);
 const cacheText=pinned('research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache',
   '2dccf42b92337cbcbfb62ea5c77db487b1ad8ead');
 const cache=new Map();
-for(const line of cacheText.split(/\\r?\\n/)){
+for(const line of cacheText.split(/\r?\n/)){
   if(!line||line.startsWith('#'))continue;
   const f=line.split(',');
   assert.equal(f.length,6);assert.equal(f[0],'s5verdict');assert.equal(f[3],'5');
