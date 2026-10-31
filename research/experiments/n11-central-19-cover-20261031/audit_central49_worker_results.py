@@ -86,7 +86,7 @@ def digest(keys):
 def quarantined_s5():
     relative = 'results/n11-s5-evidence-quarantine.json'
     raw = (ROOT / relative).read_bytes()
-    sha = hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\\0'+raw).hexdigest()
+    sha = hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest()
     require(sha == '6a320237545874ddd841c90be095cccccc46249d',
             'S5 quarantine policy changed; explicit re-audit required')
     doc = json.loads(raw)
