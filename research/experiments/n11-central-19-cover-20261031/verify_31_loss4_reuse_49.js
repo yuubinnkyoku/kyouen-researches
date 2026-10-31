@@ -197,3 +197,65 @@ console.log(JSON.stringify({schema:cert.schema,first:49,reply:60,
  before,after,reducedUnknownS5:before.unknownS5-after.unknownS5,
  negativeControlsPassed:true,emptyBoard:'UNKNOWN',
  trust:'Three LOSS4 classes rely on pinned solver-trusted S5 verdicts; other S4 outcomes UNKNOWN.'},null,2));
+
+
+// Audited per-witness frontier for the *fixed* 31-class cover.
+// This does not promote any of the 28 UNKNOWN S4 outcomes to LOSS.
+const frontier=JSON.parse(fs.readFileSync(path.join(__dirname,'central49-frontier-ownership.json'),'utf8'));
+assert.equal(frontier.schema,'n11-central49-s4-frontier-ownership-v1');
+assert.deepEqual(frontier.rootStones,[49,60]);
+assert.equal(frontier.rootOutcome,'UNKNOWN');
+assert.equal(frontier.sourceCertificate,'win4-safe-31-loss4-reuse-49.json');
+assert.deepEqual(frontier.sourceS5CacheBlobs,SOURCES.map(x=>x[1]));
+const thirdFrequency=new Map(),unknownFrequency=new Map(),allChildren=new Set();
+for(const k of selected){
+ for(const x of legalClasses.get(k))thirdFrequency.set(x,(thirdFrequency.get(x)||0)+1);
+ for(const x of children(k)){
+  allChildren.add(x);
+  if(!cache.has(x))unknownFrequency.set(x,(unknownFrequency.get(x)||0)+1);
+ }
+}
+const auditedWitnesses=selected.map(k=>{
+ const covered=[...legalClasses.get(k)].sort((a,b)=>a-b);
+ const ch=[...children(k)],unknown=ch.filter(x=>!cache.has(x));
+ assert(ch.every(x=>cache.get(x)!==1),'WIN5 under selected LOSS4 candidate');
+ const dualOwned=covered.filter(x=>dual.has(x));
+ assert.equal(dualOwned.length,2,'dual saturation broken: '+k);
+ return {s4:k,status:loss4.has(k)?'LOSS4_PINNED_S5':'UNKNOWN',
+  thirdMoves:covered,exclusiveThirdMoves:covered.filter(x=>thirdFrequency.get(x)===1),
+  legalS5Children:ch.length,knownLossS5:ch.length-unknown.length,
+  unknownS5:unknown.length,sharedUnknownS5:unknown.filter(x=>unknownFrequency.get(x)>1).length};
+});
+const dualOwnedAll=auditedWitnesses.flatMap(w=>w.thirdMoves.filter(x=>dual.has(x)));
+assert.equal(new Set(dualOwnedAll).size,62,'dual points multiply covered');
+const unresolved=auditedWitnesses.filter(w=>w.status==='UNKNOWN');
+const auditedSummary={
+ selectedS4:selected.length,reusedLoss4:selected.length-unresolved.length,unresolvedS4:unresolved.length,
+ thirdMoves:thirdFrequency.size,
+ onceCoveredThirdMoves:[...thirdFrequency.values()].filter(n=>n===1).length,
+ multiplyCoveredThirdMove:[...thirdFrequency].find(([x,n])=>n>1)?.[0],
+ multiplyCoveredMultiplicity:Math.max(...thirdFrequency.values()),
+ eachWitnessHasExclusiveThirdMove:auditedWitnesses.every(w=>w.exclusiveThirdMoves.length>0),
+ distinctS5:allChildren.size,knownLossS5:[...allChildren].filter(x=>cache.get(x)===2).length,
+ unknownS5:unknownFrequency.size,
+ unknownS5Incidences:[...unknownFrequency.values()].reduce((a,b)=>a+b,0),
+ unknownS5SharedByTwo:[...unknownFrequency.values()].filter(n=>n===2).length,
+ unknownS5SharedByThreeOrMore:[...unknownFrequency.values()].filter(n=>n>=3).length,
+ minUnknownS5PerUnresolvedS4:Math.min(...unresolved.map(w=>w.unknownS5)),
+ maxUnknownS5PerUnresolvedS4:Math.max(...unresolved.map(w=>w.unknownS5))
+};
+assert.deepEqual(frontier.witnesses,auditedWitnesses,'frontier witness mismatch');
+assert.deepEqual(frontier.summary,auditedSummary,'frontier summary mismatch');
+assert.deepEqual(
+ [auditedSummary.thirdMoves,auditedSummary.onceCoveredThirdMoves,auditedSummary.multiplyCoveredThirdMove,
+  auditedSummary.multiplyCoveredMultiplicity,auditedSummary.unknownS5,auditedSummary.unknownS5Incidences,
+  auditedSummary.unknownS5SharedByTwo],
+ [119,118,71,13,2525,2826,301]);
+assert(auditedSummary.eachWitnessHasExclusiveThirdMove);
+const tampered=JSON.parse(JSON.stringify(frontier));
+tampered.witnesses[0].unknownS5++;
+assert.throws(()=>assert.deepEqual(tampered.witnesses,auditedWitnesses));
+console.log(JSON.stringify({schema:frontier.schema,summary:auditedSummary,
+ lowestUnknownS5:unresolved.slice().sort((a,b)=>a.unknownS5-b.unknownS5||a.s4.localeCompare(b.s4))
+  .slice(0,3).map(w=>({s4:w.s4,unknownS5:w.unknownS5,sharedUnknownS5:w.sharedUnknownS5})),
+ negativeControlPassed:true,emptyBoard:'UNKNOWN'},null,2));
