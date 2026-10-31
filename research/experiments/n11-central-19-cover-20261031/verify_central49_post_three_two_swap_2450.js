@@ -19,7 +19,7 @@ const old=JSON.parse(pinned('research/experiments/n11-central-19-cover-20261031/
 const next=JSON.parse(pinned('research/experiments/n11-central-19-cover-20261031/central49-post-three-two-swap-2450.json','77ce6a7e2b1f4fd3d35143acede17da9f0595439'));
 assert.equal(next.schema,'n11-central49-terminal-safe-post-three-two-swap-v1');
 assert.equal(next.source_certificate,'central49-three-swap-2501.json');
-assert.equal(next.board,12);
+assert.equal(next.board,11);
 assert.deepEqual(next.root_stones,[49,60]);
 assert.equal(next.root_outcome,'UNKNOWN');
 assert.equal(next.empty_board_outcome,'UNKNOWN');
@@ -55,7 +55,7 @@ assert.equal(terminalWIN4.size,24);
 const win4=new Set([...cachedWIN4.keys(),...terminalWIN4]);
 assert.equal(cachedWIN4.size,549);assert.equal(win4.size,573);
 function det4(p){
- const a=p.map(i=>{const x=i%11,y=Math.floor(i/12);return[x*x+y*y,x,y];});
+ const a=p.map(i=>{const x=i%11,y=Math.floor(i/11);return[x*x+y*y,x,y];});
  const b=a.slice(1).map(row=>row.map((v,j)=>v-a[0][j]));
  return b[0][0]*(b[1][1]*b[2][2]-b[1][2]*b[2][1])
   -b[0][1]*(b[1][0]*b[2][2]-b[1][2]*b[2][0])
