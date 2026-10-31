@@ -53,4 +53,22 @@ node research/experiments/n11-central-19-cover-20261031/audit_win4_exclusion.js
 node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_56.js
 ```
 
-残る9 root（幾何最小31類）で、WIN4除外後も31類で被覆できるかは未確定。**56類の選択S4はLOSSと証明されたわけではない**。S5 WINラベルは既存solver-trusted判定に依存するため、この成果は「既知WIN4を避けた幾何学的証明計画の実現可能性」であり、二石rootの勝敗証明ではない。空盤勝敗は**UNKNOWN**。
+この段階では、残る9 root（幾何最小31類）で同じ最小値を達成できるかは未確定だった。**56類の選択S4はLOSSと証明されたわけではない**。S5 WINラベルは既存solver-trusted判定に依存するため、この成果は「既知WIN4を避けた幾何学的証明計画の実現可能性」であり、二石rootの勝敗証明ではない。空盤勝敗は**UNKNOWN**。
+
+## 19 rootすべてでWIN4除外後も幾何最小31/56類を達成（2026-10-31・続報）
+
+残る幾何最小31類の9 rootでも、既知WIN4を避ける31類の被覆を構成できた。うち `38,0,5,36` は元の31類証明書をそのまま使用でき、`16,49,24,48,12` は元の証人をそれぞれ3,2,2,3,2類入れ替えればよい。置換差分を `win4-safe-31-repair.json` に保存した。
+
+- **31類×9 root、56類×10 rootの全19件**について、既知WIN4を除いた後も幾何学的最小被覆数は変わらない。
+- 19件の選択S4クラス数は延べ **839件**（root間の重複を含む）。119第三手×19 rootの全2,261辺を幾何学的に被覆する。
+- 31類のうち4件は元の証人を変更せず、5件は計12類を置換した。初手48の3類置換は双対の未被覆点に限定した局所探索で見つかり、残る4件はSciPy/HiGHSによる0/1整数計画で得た。整数計画の解は保存差分と独立検証器で再検査できる。
+- `verify_win4_safe_31.js` と `verify_win4_safe_56.js` は、4×4整数行列式による合法クラス再列挙、既知WIN4との非衝突、全第三手被覆、既存の双対下界を検証する。元の `audit_win4_exclusion.js` は二系統の固定S5 cacheを照合し、WIN/LOSS衝突を拒否する。
+
+```sh
+node research/experiments/n11-central-19-cover-20261031/verify.js
+node research/experiments/n11-central-19-cover-20261031/audit_win4_exclusion.js
+node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_31.js
+node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_56.js
+```
+
+これは **WIN4除外を課した幾何学的被覆の最小値が全19 rootで31/56のままである**という結果に限る。選択したS4がLOSSである証明ではなく、二石rootや空盤の勝敗も決まらない。保存S5ラベルは過去の厳密探索に依存し、空盤勝敗は**UNKNOWN**。
