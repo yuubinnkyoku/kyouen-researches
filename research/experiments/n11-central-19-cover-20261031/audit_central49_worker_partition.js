@@ -227,6 +227,16 @@ for(const [key,indices] of neededOwners){
 }
 const digest=keys=>crypto.createHash('sha256').update(keys.join('\n')+'\n').digest('hex');
 const shardHashes=shards.map(digest);
+const expectedManifest='18749cc4083357d31c622a8e337cb867bd5700530d0677a9e27dec8197e30e70';
+const expectedWorkerHashes=[
+ '287d3771d1d15bafd48ec9fa021ceb2a5256dda0c30eedece8029b80faa0795a',
+ '5b05d0af10932ca718c2ed960e350dfda4ae25756f6a96431a25dd92bd74e0fe',
+ 'cce0a24bce8838f33ffaf5f882216a46ab4b8934224a7258151e91ed8177ab18',
+ '086f86af2b117ad5f1a6c7e4e5d7fbcae647c85a313e9e3f3771f37298891845'
+];
+assert.equal(digest(pending),expectedManifest,'pending S5 manifest changed');
+assert.deepEqual(shardHashes,expectedWorkerHashes,'S5 worker assignments changed');
+assert.notEqual(digest([...pending].reverse()),expectedManifest,'hash negative control');
 const witnessShards=unknown.map(i=>{
  const keys=neededOwners.filter(([key,indices])=>!cache.has(key)&&indices.includes(i));
  assert.equal(keys.length,frontier.witnesses[i].unknownS5);
