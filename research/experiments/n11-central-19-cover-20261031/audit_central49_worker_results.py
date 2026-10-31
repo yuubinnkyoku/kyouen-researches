@@ -83,6 +83,37 @@ def digest(keys):
     return hashlib.sha256(('\n'.join(keys)+'\n').encode()).hexdigest()
 
 
+def quarantined_s5():
+    relative = 'results/n11-s5-evidence-quarantine.json'
+    raw = (ROOT / relative).read_bytes()
+    sha = hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\\0'+raw).hexdigest()
+    require(sha == '6a320237545874ddd841c90be095cccccc46249d',
+            'S5 quarantine policy changed; explicit re-audit required')
+    doc = json.loads(raw)
+    require(doc.get('schema') == 'n11-s5-evidence-quarantine-v1',
+            'invalid S5 quarantine schema')
+    entries = doc.get('entries')
+    require(isinstance(entries, list), 'invalid S5 quarantine entries')
+    active = [e for e in entries if e.get('active') is True]
+    require(len(active) == 2, 'active S5 quarantine count changed')
+    keys = {}
+    for e in active:
+        pair = e.get('key')
+        require(isinstance(pair, list) and len(pair) == 2
+                and all(type(v) is int for v in pair)
+                and 0 <= pair[0] < 2**64 and 0 <= pair[1] < 2**57
+                and e.get('unsupported_verdict') == 1,
+                'invalid S5 quarantine entry')
+        key = f'{(pair[1] << 64) | pair[0]:032x}'
+        require(key not in keys, 'duplicate S5 quarantine key')
+        keys[key] = 1
+    require(set(keys) == {
+        '00000000000000809100000000000800',
+        '00000000200000001000040200010000',
+    }, 'withdrawn S5 key set changed')
+    return keys
+
+
 def load_fixed_cache():
     cache = {}
     for relative, sha in CACHE_SOURCES:
@@ -108,7 +139,12 @@ def load_fixed_cache():
             require(key not in cache or cache[key] == verdict,
                     'WIN/LOSS CONFLICT in pinned caches: '+key)
             cache[key] = verdict
-    require(len(cache) == 5853, 'pinned cache count changed')
+    require(len(cache) == 5853, 'raw pinned cache count changed')
+    for key, unsupported in quarantined_s5().items():
+        require(cache.get(key) == unsupported,
+                'withdrawn S5 evidence missing or changed: '+key)
+        del cache[key]
+    require(len(cache) == 5851, 'filtered S5 cache count changed')
     return cache
 
 
@@ -222,6 +258,7 @@ def audit(worker_reports, existing=None):
         'root':[49,60], 'root_outcome':'UNKNOWN',
         'evidence_level':'WORKER_REPORTED_NOT_INDEPENDENTLY_REPLAYED',
         'pinned_source_cache_classes':len(cache),
+        'quarantined_unsupported_s5':2,
         'pending_s5_classes':len(ordered),
         'priority_manifest_sha256':digest(ordered),
         'priority_worker_sha256':list(map(digest, shards)),
