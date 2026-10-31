@@ -309,10 +309,18 @@ report.childLevelSharding.priorityFirst={
  priorityWorkerSha256:priorityShards.map(digest),
  caveat:'Rounds assume one S5 per worker per round, equal cost and all 91 new verdicts LOSS. This is a conditional scheduling bound, not a game verdict or measured speedup.'
 };
+// Cross-snapshot terminal-only WIN5 proofs refute two of the 31 selected S4
+// LOSS candidates. Keep the historical partition reproducible, but never
+// export it as a live solver worklist without an explicit historical flag.
+report.childLevelSharding.historicalPlanRefuted=true;
+report.childLevelSharding.terminalWin5ConflictIndices=[126017,162106];
+report.childLevelSharding.historicalOnly='Two selected S4 are independently proved WIN; replace them and rebuild the frontier before running workers.';
 const args=process.argv.slice(2);
 if(args.length===0)console.log(JSON.stringify(report,null,2));
-else if(args.length===2&&args[0]==='--worker'&&/^[0-3]$/.test(args[1]))
+else if(args.length===2&&args[0]==='--historical-worker'&&/^[0-3]$/.test(args[1]))
  process.stdout.write(shards[Number(args[1])].join('\n')+'\n');
-else if(args.length===2&&args[0]==='--priority-worker'&&/^[0-3]$/.test(args[1]))
+else if(args.length===2&&args[0]==='--historical-priority-worker'&&/^[0-3]$/.test(args[1]))
  process.stdout.write(priorityShards[Number(args[1])].join('\n')+'\n');
-else throw new Error('usage: node audit_central49_worker_partition.js [--worker 0|1|2|3 | --priority-worker 0|1|2|3]');
+else if(args.length===2&&['--worker','--priority-worker'].includes(args[0]))
+ throw new Error('REFUTED_PLAN: certified terminal WIN5 126017/162106 invalidate two selected S4. Use --historical-worker or --historical-priority-worker only for reproducing old data; rebuild a new cover before search.');
+else throw new Error('usage: node audit_central49_worker_partition.js [--historical-worker 0|1|2|3 | --historical-priority-worker 0|1|2|3]');
