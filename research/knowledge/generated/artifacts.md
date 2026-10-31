@@ -368,6 +368,12 @@
 ## [research/experiments/absorbing-subsets-20261024/verify.py](../../../research/experiments/absorbing-subsets-20261024/verify.py)
 
 - [K0537](../items/K0537-uniform-forbidden-absorbing-subset-sharp-strategies.md) (verifier): 吸収条件の全上位集合検査と二方式の全安全局面mex
+## [research/experiments/arbitrary-r-terminal-spectra-20261101/proof.md](../../../research/experiments/arbitrary-r-terminal-spectra-20261101/proof.md)
+
+- [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md) (proof): 入れ子型所属署名による全称構成、極大配置数の閉公式、同一N=rqへの均一化
+## [research/experiments/arbitrary-r-terminal-spectra-20261101/verify.py](../../../research/experiments/arbitrary-r-terminal-spectra-20261101/verify.py)
+
+- [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md) (verifier): 165構成・638340部分集合の点別独立完全検算、q点一様化版の極小横断集合列挙
 ## [research/experiments/axis-rectangle-seven-20261023/report.md](../../../research/experiments/axis-rectangle-seven-20261023/report.md)
 
 - [K0515](../items/K0515-axis-rectangle-seven-maximum.md) (proof): 7行の全長公式と三角形分解条件付き一般定理の全称証明
@@ -2526,6 +2532,12 @@
 ## [research/experiments/geometry/scripts/verify_three_row_211_20261011.py](../../../research/experiments/geometry/scripts/verify_three_row_211_20261011.py)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (verifier): 3行盤独立検査
+## [research/experiments/grid-circle-terminal-polynomial-20261101/proof.md](../../../research/experiments/grid-circle-terminal-polynomial-20261101/proof.md)
+
+- [K0599](../items/K0599-grid-circle-terminal-polynomial.md) (proof): 格子状交差の任意整数m,nに対する有理円構成と母関数の全称証明
+## [research/experiments/grid-circle-terminal-polynomial-20261101/verify.py](../../../research/experiments/grid-circle-terminal-polynomial-20261101/verify.py)
+
+- [K0599](../items/K0599-grid-circle-terminal-polynomial.md) (verifier): 12整数点の全495四点組と4096部分集合、四種の抽象盤の全安全局面を独立検査
 ## [research/experiments/grundy-five-residual-obstruction-20261018/independent_verify.cpp](../../../research/experiments/grundy-five-residual-obstruction-20261018/independent_verify.cpp)
 
 - [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) (verifier): 独立の円方程式・ビット集合再帰

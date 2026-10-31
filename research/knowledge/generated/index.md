@@ -582,3 +582,5 @@
 | [K0595](../items/K0595-four-forbidden-sets-sharp-terminal-gaps.md) | 四つの禁止集合の終局長を点の所属次数で分類し整数平面q点版の最大欠番二族の最小点数を決定 | proposition | proved | geometry, maximal-safe, residual-games, variants, grundy |
 | [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) | 任意本数の禁止集合で最大の終局長欠番を生む構造を完全特徴づけ整数平面で鋭い最小点数を決定 | proposition | proved | geometry, maximal-safe, residual-games, variants, strategy-length |
 | [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) | 五禁止集合の終局長を完全分類し全16種類を実現、11×11内14点で交互欠番を構成 | proposition | proved | maximal-safe, residual-games, geometry, variants, grundy |
+| [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md) | 任意本数の禁止集合で全2^(r-1)種類の終局長集合を同一総点数・同一禁止点数で実現 | proposition | proved | maximal-safe, residual-games, variants, strategy-length |
+| [K0599](../items/K0599-grid-circle-terminal-polynomial.md) | 円の格子状交差で任意m×nの極大配置母関数を全称決定し6禁止円で全終局長を整数実現 | proposition | proved | geometry, maximal-safe, residual-games, variants, strategy-length |

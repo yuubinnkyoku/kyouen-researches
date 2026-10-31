@@ -2907,8 +2907,20 @@
 ## [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) 任意本数の禁止集合で最大の終局長欠番を生む構造を完全特徴づけ整数平面で鋭い最小点数を決定
 
 - ← depends_on [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md): 極大安全集合と極小横断集合の対応および私有証人辺
+- ← depends_on [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md): 極大安全集合と包含極小横断集合の対応、私有証人辺
+- ← depends_on [K0599](../items/K0599-grid-circle-terminal-polynomial.md): 極大安全集合と包含極小横断集合の対応を利用
 
 ## [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) 五禁止集合の終局長を完全分類し全16種類を実現、11×11内14点で交互欠番を構成
 
 - → depends_on [K0596](../items/K0596-maximum-terminal-gaps-all-r.md): 極大安全集合と極小横断集合の対応および私有証人辺
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全終局長の同偶奇性から全安全局面の二値Grundy式を得る
+- ← generalizes [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md): 五禁止集合の16種類実現を任意rへ拡張し、q点一様性と総点数の共通化も与える
+
+## [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md) 任意本数の禁止集合で全2^(r-1)種類の終局長集合を同一総点数・同一禁止点数で実現
+
+- → generalizes [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md): 五禁止集合の16種類実現を任意rへ拡張し、q点一様性と総点数の共通化も与える
+- → depends_on [K0596](../items/K0596-maximum-terminal-gaps-all-r.md): 極大安全集合と包含極小横断集合の対応、私有証人辺
+
+## [K0599](../items/K0599-grid-circle-terminal-polynomial.md) 円の格子状交差で任意m×nの極大配置母関数を全称決定し6禁止円で全終局長を整数実現
+
+- → depends_on [K0596](../items/K0596-maximum-terminal-gaps-all-r.md): 極大安全集合と包含極小横断集合の対応を利用
