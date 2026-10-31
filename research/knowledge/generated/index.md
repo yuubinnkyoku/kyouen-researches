@@ -574,3 +574,4 @@
 | [K0587](../items/K0587-two-carrier-terminal-spectrum.md) | 二担い手q点禁止ゲームの全極大配置数・終局長分布・最小最大石数は閉形式で決定できる | proposition | proved | geometry, variants, residual-games, maximal-safe, maximum-safe, strategy-length |
 | [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) | 任意交差・異容量の二制約ゲームでは極大配置多項式が閉形式を持ち終局長は常に連続する | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, variants |
 | [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) | ひまわり型r容量制約の終局長は公差r−1で三制約から任意の欠番が生じ奇数rでは全局面を偶奇で強解決できる | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, grundy, geometry, variants |
+| [K0590](../items/K0590-even-sunflower-quota-grundy.md) | 偶数本のひまわり型容量制約ゲームの通常・misère全安全局面を残容量の最小値と偶奇だけで強解決 | proposition | proved | grundy, residual-games, variants, strategy-length |

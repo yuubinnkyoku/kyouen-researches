@@ -1181,6 +1181,12 @@
 ## [research/experiments/dfpn-frame-children-20261022/test_study.py](../../../research/experiments/dfpn-frame-children-20261022/test_study.py)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 誤局面、新規勝敗、監査の時間比較混入、仕事量・生成数のずれ等を拒否する9テスト
+## [research/experiments/even-sunflower-grundy-20261101/proof.md](../../../research/experiments/even-sunflower-grundy-20261101/proof.md)
+
+- [K0590](../items/K0590-even-sunflower-quota-grundy.md) (proof): 全局面の閉形式と8分類16行のmex恒等式による無界の全称証明
+## [research/experiments/even-sunflower-grundy-20261101/verify.py](../../../research/experiments/even-sunflower-grundy-20261101/verify.py)
+
+- [K0590](../items/K0590-even-sunflower-quota-grundy.md) (verifier): 偶数r=2,4,6,8の139515圧縮局面、54盤7551点別局面を独立照合
 ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
