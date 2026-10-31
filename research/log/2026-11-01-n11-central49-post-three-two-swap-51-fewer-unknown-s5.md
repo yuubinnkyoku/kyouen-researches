@@ -13,3 +13,5 @@
 `central49-post-three-two-swap-2450.json` に31証人と置換差分を固定。`verify_central49_post_three_two_swap_2450.js` は前段の監査を継承し、全3,374合法S4、119第三手、既知WIN4・終局WIN5由来の親の排除、全合法S5子、全2,817通りの置換費用を再計算する。別実装Python `audit_central49_post_three_two_swap_worker_results.py` は局面と仕事一覧を独立再生成し、担当外報告・WIN/LOSS衝突・未完判定の誤昇格を拒否する。
 
 保存済み5,851件のS5判定はsolver-trustedであり全件の独立終局再証明は行っていない。終局WIN5の6件は既存receiptに依存し巨大DAGは再実行していない。新規S5厳密判定0件、S4 LOSS証明0件、二石root閉鎖0件。計算対象種類数の減少は実測探索時間の短縮率ではない。二石 {49,60} と標準11×11空盤は **UNKNOWN**。
+
+**独立監査CI成功：** [GitHub Actions 41213846261](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41213846261)（検証修正コミット `0f0348ddea426c8cf687d364836f47cc0f792a15`）。Nodeの全2,817通りの置換再計算と、別実装Pythonによる2,450類の再構成・4分割・不正報告拒否回帰が成功した。最初の実行では新監査器の盤幅を誤って12と記した実装ミスがあり、11へ修正したうえで再監査に成功した。S5の独立終局再証明を意味しない。
