@@ -578,3 +578,5 @@
 | [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) | 五次元共六点禁止ゲームのK0546強解決を全局面独立再計算で完全再現し、包含極小禁止集合の誤用を確認 | verification | verified | variants, geometry, grundy, verification, maximum-safe |
 | [K0592](../items/K0592-sunflower-short-petal-terminal-spectrum.md) | 花弁が容量より短い任意本数のひまわり型容量ゲームでも極大配置多項式と終局長の欠番数が閉形式で求まる | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, variants |
 | [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md) | 短い花弁を許すひまわり型容量ゲームの全局面二値Grundy条件と巡回人数の終局合同条件を完全決定 | proposition | proved | grundy, residual-games, maximal-safe, strategy-length, variants |
+| [K0594](../items/K0594-three-forbidden-sets-sharp-geometric-gap.md) | 三つの禁止集合で終局長に欠番が生じる必要十分条件と整数平面q点版の最小3q−4点構成 | proposition | proved | geometry, maximal-safe, grundy, variants, residual-games |
+| [K0595](../items/K0595-four-forbidden-sets-sharp-terminal-gaps.md) | 四つの禁止集合の終局長を点の所属次数で分類し整数平面q点版の最大欠番二族の最小点数を決定 | proposition | proved | geometry, maximal-safe, residual-games, variants, grundy |

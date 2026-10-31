@@ -1491,6 +1491,7 @@
 - ← depends_on [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md): 奇数本の場合の極大集合同偶奇性から全局面の二値性を得る
 - ← depends_on [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): 全極大同偶奇のGrundy帰結
 - ← depends_on [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md): 極大石数の同偶奇性と全安全局面二値Grundyの必要十分性
+- ← depends_on [K0594](../items/K0594-three-forbidden-sets-sharp-geometric-gap.md): 全極大石数が同偶奇の場合の全安全局面Grundy公式
 
 ## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
 
@@ -2897,3 +2898,7 @@
 - → depends_on [K0592](../items/K0592-sunflower-short-petal-terminal-spectrum.md): 任意花弁長の極大石数 F(j) と隣接差 k(j)-1
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 極大石数の同偶奇性と全安全局面二値Grundyの必要十分性
 - → depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 終局長差のgcdと巡回多人数対戦の敗者固定性
+
+## [K0594](../items/K0594-three-forbidden-sets-sharp-geometric-gap.md) 三つの禁止集合で終局長に欠番が生じる必要十分条件と整数平面q点版の最小3q−4点構成
+
+- → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大石数が同偶奇の場合の全安全局面Grundy公式

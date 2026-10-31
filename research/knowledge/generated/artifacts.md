@@ -1980,6 +1980,12 @@
 ## [research/experiments/fixed-width/scripts/verify_three_column_height_multiplicity_20261017.py](../../../research/experiments/fixed-width/scripts/verify_three_column_height_multiplicity_20261017.py)
 
 - [K0473](../items/K0473-three-column-five-six-height-gap.md) (verifier): 二点と第三点から円係数を構成する独立完全列挙
+## [research/experiments/four-edge-terminal-gaps-20261101/proof.md](../../../research/experiments/four-edge-terminal-gaps-20261101/proof.md)
+
+- [K0595](../items/K0595-four-forbidden-sets-sharp-terminal-gaps.md) (proof): 四集合の極小横断集合サイズの必要十分条件と二つの幾何学的最小点数の全称証明
+## [research/experiments/four-edge-terminal-gaps-20261101/verify.py](../../../research/experiments/four-edge-terminal-gaps-20261101/verify.py)
+
+- [K0595](../items/K0595-four-forbidden-sets-sharp-terminal-gaps.md) (verifier): 2048所属型族の完全列挙、8点・10点整数盤の全四点組と全安全局面、q=4..6の極大数検算
 ## [research/experiments/four-q4-residual-grundy-20261018/independent.cpp](../../../research/experiments/four-q4-residual-grundy-20261018/independent.cpp)
 
 - [K0443](../items/K0443-four-residual-edges-rank4-nimber-five.md) (verifier): C++の未占有所属型数による独立再帰
@@ -9558,6 +9564,12 @@
 ## [research/experiments/three-column-four-row-q6-20261018/verify.py](../../../research/experiments/three-column-four-row-q6-20261018/verify.py)
 
 - [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (verifier): 整数行列式の独立幾何判定と4096盤の監査
+## [research/experiments/three-edge-gap-20261101/proof.md](../../../research/experiments/three-edge-gap-20261101/proof.md)
+
+- [K0594](../items/K0594-three-forbidden-sets-sharp-geometric-gap.md) (proof): 三集合の極小横断集合の全称分類と任意q≥4の有理円構成・整数化
+## [research/experiments/three-edge-gap-20261101/verify.py](../../../research/experiments/three-edge-gap-20261101/verify.py)
+
+- [K0594](../items/K0594-three-forbidden-sets-sharp-geometric-gap.md) (verifier): 44697抽象三集合構成、1590四点集合構成、8点整数証人とq=4..6の独立完全検査
 ## [research/experiments/three-parallel-lines-q6-20261018/proof.md](../../../research/experiments/three-parallel-lines-q6-20261018/proof.md)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (proof): 二点和衝突の16上界と任意配置の21候補点定理の全称証明
