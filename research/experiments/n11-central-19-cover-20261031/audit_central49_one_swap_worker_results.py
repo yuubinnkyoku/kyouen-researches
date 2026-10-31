@@ -32,7 +32,7 @@ def build():
     require(check.returncode == 0,
             'one-swap verifier failed: ' + (check.stderr or check.stdout)[-1400:])
     raw = CERT.read_bytes()
-    git_sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\\0' + raw).hexdigest()
+    git_sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
     require(git_sha == CERT_BLOB, 'one-swap certificate changed; explicit re-audit required')
     doc = json.loads(raw)
     require(doc['schema'] == 'n11-central49-terminal-safe-one-swap-v1'
@@ -158,7 +158,7 @@ def main():
                 'REPLAN_REQUIRED: reported WIN5 invalidates candidate if verified')
         remaining = [k for k in shards[int(args.worklist)] if k not in verdicts]
         if remaining:
-            sys.stdout.write('\\n'.join(remaining) + '\\n')
+            sys.stdout.write('\n'.join(remaining) + '\n')
         return
     print(json.dumps(audit(workers, args.existing), indent=2, ensure_ascii=False))
 
