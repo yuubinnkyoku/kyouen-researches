@@ -33,3 +33,5 @@
 - 専用GitHub ActionsへNode・Pythonの照合、4分割の全件・重複0検査を追加。
 
 **信頼境界：** 5,851類のS5 cacheは保存済みsolver-trusted判定であり、全件の独立終局再実行は行っていない。終局WIN5の6件は固定receiptに依存する。作業者のCSV報告は独立証明には昇格させない。新規四石LOSS証明0件、二石root閉鎖0件。二石 `{49,60}` および標準11×11空盤の勝敗は **UNKNOWN**。
+
+**独立監査CI成功：** GitHub Actions実行 [41200105232](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41200105232)（コミット `f8ad7a6fadf71c7c9783568ba2476a54bbe96f7e`）。Nodeによる34通りの単一置換全数検査と、Pythonによる2,584類の再構成・646類×4の全一覧・重複0・報告拒否の回帰が成功した。これは既存S5判定の独立終局再証明を意味しない。
