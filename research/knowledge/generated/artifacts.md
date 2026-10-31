@@ -2630,6 +2630,12 @@
 
 - [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
 - [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
+## [research/experiments/maximal-terminal-gap-all-r-20261101/proof.md](../../../research/experiments/maximal-terminal-gap-all-r-20261101/proof.md)
+
+- [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (proof): 任意rの極小横断集合の証明と任意qの整数平面上界達成構成
+## [research/experiments/maximal-terminal-gap-all-r-20261101/verify.py](../../../research/experiments/maximal-terminal-gap-all-r-20261101/verify.py)
+
+- [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (verifier): 32896抽象所属型と11×11内12点証人の495四点組・全安全局面の独立検査
 ## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）

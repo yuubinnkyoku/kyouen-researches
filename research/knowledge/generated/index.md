@@ -580,3 +580,4 @@
 | [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md) | 短い花弁を許すひまわり型容量ゲームの全局面二値Grundy条件と巡回人数の終局合同条件を完全決定 | proposition | proved | grundy, residual-games, maximal-safe, strategy-length, variants |
 | [K0594](../items/K0594-three-forbidden-sets-sharp-geometric-gap.md) | 三つの禁止集合で終局長に欠番が生じる必要十分条件と整数平面q点版の最小3q−4点構成 | proposition | proved | geometry, maximal-safe, grundy, variants, residual-games |
 | [K0595](../items/K0595-four-forbidden-sets-sharp-terminal-gaps.md) | 四つの禁止集合の終局長を点の所属次数で分類し整数平面q点版の最大欠番二族の最小点数を決定 | proposition | proved | geometry, maximal-safe, residual-games, variants, grundy |
+| [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) | 任意本数の禁止集合で最大の終局長欠番を生む構造を完全特徴づけ整数平面で鋭い最小点数を決定 | proposition | proved | geometry, maximal-safe, residual-games, variants, strategy-length |
