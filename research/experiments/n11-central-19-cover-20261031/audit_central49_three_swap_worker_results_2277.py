@@ -176,7 +176,7 @@ def self_test():
 
     def row(key, verdict):
         value = int(key, 16)
-        return f's5verdict,{value & ((1 << 64) - 1)},{value >> 64},5,{verdict},1\\n'
+        return f's5verdict,{value & ((1 << 64) - 1)},{value >> 64},5,{verdict},1\n'
 
     with tempfile.TemporaryDirectory() as directory:
         report = Path(directory) / 'merged.csv'
