@@ -1490,6 +1490,7 @@
 - ← depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 全Grundy0/1と全極大同偶奇の同値を使う
 - ← depends_on [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md): 奇数本の場合の極大集合同偶奇性から全局面の二値性を得る
 - ← depends_on [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): 全極大同偶奇のGrundy帰結
+- ← depends_on [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md): 極大石数の同偶奇性と全安全局面二値Grundyの必要十分性
 
 ## [K0306](../items/K0306-lattice-circle-width-sixteen-theorem.md) 幅w≥16の連続整数行に任意の円が持つ格子点は高々w
 
@@ -1663,6 +1664,7 @@
 - → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2wでの全長系にのみ使う
 - ← depends_on [K0346](../items/K0346-arbitrary-integer-board-unbounded-circle-fault-tolerance.md): 終局サイズ差から多人数の策略非依存敗者を判定する帰結
 - ← depends_on [K0352](../items/K0352-general-dimensional-parallel-columns.md): 多人数版の敗者固定条件に極大サイズ差gcd定理を使う
+- ← depends_on [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md): 終局長差のgcdと巡回多人数対戦の敗者固定性
 
 ## [K0340](../items/K0340-three-dimensional-prism-capacity-and-grundy.md) 三次元の平行格子列では高qでも二列容量が残り、列数の偶奇が全Grundy0/1を決める
 
@@ -2885,3 +2887,13 @@
 
 - → verifies [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md): 安全局面数・最大石数・全Grundy分布・空盤値・初手分類・misère勝敗を独立実装で8項目すべて再現
 - → refutes [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md): K0568のcircuit削減CNF（19,484,942節）は包含極小化の誤用でK_6上界の証明に使えないことを確認
+
+## [K0592](../items/K0592-sunflower-short-petal-terminal-spectrum.md) 花弁が容量より短い任意本数のひまわり型容量ゲームでも極大配置多項式と終局長の欠番数が閉形式で求まる
+
+- ← depends_on [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md): 任意花弁長の極大石数 F(j) と隣接差 k(j)-1
+
+## [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md) 短い花弁を許すひまわり型容量ゲームの全局面二値Grundy条件と巡回人数の終局合同条件を完全決定
+
+- → depends_on [K0592](../items/K0592-sunflower-short-petal-terminal-spectrum.md): 任意花弁長の極大石数 F(j) と隣接差 k(j)-1
+- → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 極大石数の同偶奇性と全安全局面二値Grundyの必要十分性
+- → depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 終局長差のgcdと巡回多人数対戦の敗者固定性

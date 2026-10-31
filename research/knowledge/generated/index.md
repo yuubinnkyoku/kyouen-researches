@@ -576,3 +576,5 @@
 | [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) | ひまわり型r容量制約の終局長は公差r−1で三制約から任意の欠番が生じ奇数rでは全局面を偶奇で強解決できる | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, grundy, geometry, variants |
 | [K0590](../items/K0590-even-sunflower-quota-grundy.md) | 偶数本のひまわり型容量制約ゲームの通常・misère全安全局面を残容量の最小値と偶奇だけで強解決 | proposition | proved | grundy, residual-games, variants, strategy-length |
 | [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) | 五次元共六点禁止ゲームのK0546強解決を全局面独立再計算で完全再現し、包含極小禁止集合の誤用を確認 | verification | verified | variants, geometry, grundy, verification, maximum-safe |
+| [K0592](../items/K0592-sunflower-short-petal-terminal-spectrum.md) | 花弁が容量より短い任意本数のひまわり型容量ゲームでも極大配置多項式と終局長の欠番数が閉形式で求まる | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, variants |
+| [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md) | 短い花弁を許すひまわり型容量ゲームの全局面二値Grundy条件と巡回人数の終局合同条件を完全決定 | proposition | proved | grundy, residual-games, maximal-safe, strategy-length, variants |

@@ -9519,6 +9519,18 @@
 ## [research/experiments/sunflower-grundy-20261019/verify.py](../../../research/experiments/sunflower-grundy-20261019/verify.py)
 
 - [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md) (verifier): 残数再帰と独立した全占有部分集合mexの照合
+## [research/experiments/sunflower-parity-modulus-20261101/proof.md](../../../research/experiments/sunflower-parity-modulus-20261101/proof.md)
+
+- [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md) (proof): 無界の偶奇・合同判定と順序付き全進行数の全称証明、最小非冗長反例
+## [research/experiments/sunflower-parity-modulus-20261101/verify.py](../../../research/experiments/sunflower-parity-modulus-20261101/verify.py)
+
+- [K0593](../items/K0593-sunflower-short-petal-parity-modulus.md) (verifier): 57996構成・3020310安全局面の点別完全検査と8点反例・全進行数の独立照合
+## [research/experiments/sunflower-short-petals-20261101/proof.md](../../../research/experiments/sunflower-short-petals-20261101/proof.md)
+
+- [K0592](../items/K0592-sunflower-short-petal-terminal-spectrum.md) (proof): 任意の花弁長・異容量について極大配置の必要十分条件と終局長の単調差分を全称証明
+## [research/experiments/sunflower-short-petals-20261101/verify.py](../../../research/experiments/sunflower-short-petals-20261101/verify.py)
+
+- [K0592](../items/K0592-sunflower-short-petal-terminal-spectrum.md) (verifier): 20117抽象盤・3230530部分集合を点別完全列挙して公式と独立照合
 ## [research/experiments/three-by-four-q6-row-spacings-20261018/audit-cpp.txt](../../../research/experiments/three-by-four-q6-row-spacings-20261018/audit-cpp.txt)
 
 - [K0469](../items/K0469-three-by-four-q6-row-spacing-classification.md) (data): 独立C++実行記録
