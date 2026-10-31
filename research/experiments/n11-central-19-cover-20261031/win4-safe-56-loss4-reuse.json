@@ -1,0 +1,24 @@
+{
+  "schema": "n11-central-win4-safe-56-loss4-reuse-v1",
+  "board": 11,
+  "outcome": "UNKNOWN",
+  "base_certificate": "win4-safe-56-certificate.json",
+  "loss4_proof": "research/experiments/n11-s4-boundary-direct-20261012/output/root-60-27-loss-proof.json",
+  "swaps": [
+    {
+      "first": 4,
+      "remove": "00000000000000001200000000000050",
+      "add": "00000000000000009200000000000010"
+    },
+    {
+      "first": 1,
+      "remove": "00000000000000001200000000000202",
+      "add": "00000000000000009200000000000002"
+    },
+    {
+      "first": 37,
+      "remove": "0000000000000000120000a000000000",
+      "add": "00000000000000009200002000000000"
+    }
+  ]
+}
