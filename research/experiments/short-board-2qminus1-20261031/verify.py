@@ -23,6 +23,32 @@ def predicted(q,a,b,c):
         g=(u+v+1)%2 if t<=2 else (2+(u+v)%2 if t==3 else (u+v)%2)
     return g, (1-g if g<=1 else g)
 
+def formula_slacks(c,u,v):
+    t=min(u,v)
+    if c==2: return (u+v)%2
+    if c==1:
+        return (u+v)%2 if t==0 else (2+(u+v)%2 if t==1 else (u+v+1)%2)
+    return (u+v+1)%2 if t<=2 else (2+(u+v)%2 if t==3 else (u+v)%2)
+
+def verify_symbolic_mex():
+    # Every integer >=6 is represented by 6 (even) or 7 (odd).
+    # Decrement preserves the threshold/parity class of child formulas.
+    checked=0
+    for c in range(3):
+        for u in range(8):
+            for v in range(8):
+                if c==0 and v==0: continue
+                children=[]
+                if u>0: children.append(formula_slacks(c,u-1,v))
+                if v>(1 if c==0 else 0):
+                    children.append(formula_slacks(c,u,v-1))
+                if c<2 and u>0 and v>0:
+                    children.append(formula_slacks(c+1,u-1,v-1))
+                assert mex(children)==formula_slacks(c,u,v),(c,u,v,children)
+                checked+=1
+    assert checked==184
+    print('symbolic-mex-equivalence-classes',checked,'PASS')
+
 def count_solver(q):
     A,B=q-1,q-2
     @lru_cache(None)
@@ -99,6 +125,7 @@ def mask_solver(q,points,edges):
     return len(states),(g[0],h[0])
 
 def main():
+    verify_symbolic_mex()
     for q in range(4,51):
         root,num=count_solver(q)
         assert root==((2,2) if q==4 else (0,1))
