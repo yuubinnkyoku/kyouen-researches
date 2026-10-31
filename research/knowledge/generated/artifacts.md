@@ -867,6 +867,12 @@
 ## [research/experiments/coplanar-two-layer-all-widths-20261024/verify.py](../../../research/experiments/coplanar-two-layer-all-widths-20261024/verify.py)
 
 - [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (verifier): 3×3整数行列式と全安全局面mex
+## [research/experiments/critical-short-board-20261031/proof.md](../../../research/experiments/critical-short-board-20261031/proof.md)
+
+- [K0580](../items/K0580-critical-short-board-complete-classification.md) (proof): q≥5で高々二担い手、q=4で高々三担い手、全局面値と整数実現の全称証明
+## [research/experiments/critical-short-board-20261031/verify.py](../../../research/experiments/critical-short-board-20261031/verify.py)
+
+- [K0580](../items/K0580-critical-short-board-complete-classification.md) (verifier): 4×4格子20878盤の完全列挙、91盤の全安全局面直接mex検査
 ## [research/experiments/cube-coplanar-q4-20261024/independent-results.txt](../../../research/experiments/cube-coplanar-q4-20261024/independent-results.txt)
 
 - [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (data): C++独立完全列挙の出力
@@ -9547,6 +9553,12 @@
 ## [research/experiments/two-forbidden-hyperedges-20261018/verify.py](../../../research/experiments/two-forbidden-hyperedges-20261018/verify.py)
 
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): n<=7全組とn<=12固定乱数3000組のラベル付き全局面独立検査
+## [research/experiments/two-forbidden-misere-swap-20261031/proof.md](../../../research/experiments/two-forbidden-misere-swap-20261031/proof.md)
+
+- [K0579](../items/K0579-two-forbidden-misere-swap.md) (proof): 低値の子補題とmex交換恒等式による全称帰納証明
+## [research/experiments/two-forbidden-misere-swap-20261031/verify.py](../../../research/experiments/two-forbidden-misere-swap-20261031/verify.py)
+
+- [K0579](../items/K0579-two-forbidden-misere-swap.md) (verifier): n≤7全10795族とn=8..12の1000標本、2383752安全局面の直接mex照合
 ## [research/experiments/two-parallel-five-point-concurrency-20261024/audit.json](../../../research/experiments/two-parallel-five-point-concurrency-20261024/audit.json)
 
 - [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (data): 恒等式・改変拒否・相異なる四円の係数組と全16サイズの達成例の検査receipt

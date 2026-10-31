@@ -122,6 +122,7 @@
 - ← depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 通常Grundyと終局1のmisère補助mexの定義
 - ← depends_on [K0577](../items/K0577-qplus1-geometric-rigidity.md): 通常・misèreのmex定義
 - ← depends_on [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): 通常・misère補助mex値の定義
+- ← depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 終局を1とするmisère補助mex値の定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2348,6 +2349,8 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): mex再帰と独立ゲームのxor
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余の包含極小禁止集合によるゲーム表現
 - ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 二禁止集合の全安全局面Grundy閉公式
+- ← depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止集合の通常Grundy閉公式と値の上界3
+- ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 二禁止辺の通常Grundy閉公式
 
 ## [K0484](../items/K0484-width-five-q9-all-lengths.md) 五行九点版は全長で行容量だけに分離しM_{5,9}=8
 
@@ -2794,3 +2797,16 @@
 
 - → generalizes [K0577](../items/K0577-qplus1-geometric-rigidity.md): N=q+1の三分律を全q≤N≤2q−3へ拡張し、上界の鋭さも証明
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misère補助mex値の定義
+- ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 一曲線の場合の偶奇則と整数格子実現構成を利用
+
+## [K0579](../items/K0579-two-forbidden-misere-swap.md) 包含極小禁止集合が高々二つの配置ゲームでは通常・misèreのGrundy交換則が全安全局面で成立する
+
+- → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二禁止集合の通常Grundy閉公式と値の上界3
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 終局を1とするmisère補助mex値の定義
+- ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 二禁止辺のmisère交換則
+
+## [K0580](../items/K0580-critical-short-board-complete-classification.md) 平面q点禁止ゲームは境界N=2q−2でも禁止曲線と全安全局面を完全分類できる
+
+- → depends_on [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): 一曲線の場合の偶奇則と整数格子実現構成を利用
+- → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二禁止辺の通常Grundy閉公式
+- → depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止辺のmisère交換則
