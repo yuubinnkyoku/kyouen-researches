@@ -24,6 +24,8 @@ jobs:
         run: node research/experiments/n11-central-19-cover-20261031/audit_s5_dependency_loss4_reuse.js
       - name: Verify nine WIN4-safe 31-class covers and their lower bounds
         run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_31.js
+      - name: Verify central-49 31-class cover with three reused LOSS4 boundaries
+        run: node research/experiments/n11-central-19-cover-20261031/verify_31_loss4_reuse_49.js
       - name: Search exact-size repairs for five 31-class covers
         run: node research/experiments/n11-central-19-cover-20261031/repair_31.js
       - name: Audit dual-tight matching feasibility for all nine 31-class roots
