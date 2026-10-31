@@ -712,6 +712,12 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/co-singleton-forbidden-qplus1-20261031/proof.md](../../../research/experiments/co-singleton-forbidden-qplus1-20261031/proof.md)
+
+- [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) (proof): 余補一型の全称mex帰納法、両ルールの全勝ち初手、極大配置と履歴の公式
+## [research/experiments/co-singleton-forbidden-qplus1-20261031/verify.py](../../../research/experiments/co-singleton-forbidden-qplus1-20261031/verify.py)
+
+- [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) (verifier): N=3..10の全非空F・全安全局面を禁止集合の直接再帰で独立検査
 ## [research/experiments/coplanar-3x3x4-q4-20261027/README.md](../../../research/experiments/coplanar-3x3x4-q4-20261027/README.md)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (proof): 実験の範囲・方式・再現手順

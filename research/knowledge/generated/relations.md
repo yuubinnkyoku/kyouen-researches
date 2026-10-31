@@ -119,6 +119,7 @@
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 元先手固定視点の奇数AND・偶数ORの勝敗伝播
 - ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 元先手固定視点の奇数AND・偶数OR伝播
 - ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 元先手固定視点の奇数AND・偶数OR伝播
+- ← depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 通常Grundyと終局1のmisère補助mexの定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2775,3 +2776,7 @@
 
 - → depends_on [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×10の有限盤の強解決
 - → depends_on [K0574](../items/K0574-coplanar-3x3x9-strong-solution.md): 同じ家族の3×3×9の強解決。本項目はその次の m=10 を同じ方式で解いたもの
+
+## [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) 余補一型のq点禁止ゲームは全安全局面の通常・misère値と全勝ち初手に閉公式を持つ
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundyと終局1のmisère補助mexの定義
