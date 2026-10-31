@@ -81,8 +81,11 @@ for(let i=0;i<REPS.length;i++){
   let selected=[...row.primal_s4_classes];
   const repair=patch.repairs.find(r=>r.first===a);
   if(repair){
+    const originallyBlocked=selected.filter(k=>witnesses.has(k));
+    assert(originallyBlocked.length>0);
+    assert(originallyBlocked.every(k=>repair.remove.includes(k)));
     for(const k of repair.remove){
-      assert(witnesses.has(k));assert(selected.includes(k));
+      assert(selected.includes(k));
     }
     for(const k of repair.add){
       assert(!witnesses.has(k));assert(classes.has(k));assert(!selected.includes(k));
