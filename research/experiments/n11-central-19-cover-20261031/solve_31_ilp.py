@@ -16,6 +16,7 @@ import time
 import numpy as np
 from scipy.optimize import Bounds, LinearConstraint, milp
 from scipy.sparse import coo_matrix
+from audit_central49_worker_results import quarantined_s5
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
@@ -87,15 +88,20 @@ def win4_set():
                 assert merged[key] == verdict, "WIN/LOSS CONFLICT"
             merged[key] = verdict
     assert len(merged) == 5853
+    for key, unsupported in quarantined_s5().items():
+        value = int(key, 16)
+        assert merged.get(value) == unsupported, 'withdrawn S5 evidence changed'
+        del merged[value]
+    assert len(merged) == 5851
     wins = [k for k,v in merged.items() if v == 1]
-    assert len(wins) == 161
+    assert len(wins) == 159
     blocked = set()
     for k in wins:
         p = points(k)
         assert len(p) == 5 and canonical(p) == k
         for x in p:
             blocked.add(canonical([y for y in p if y != x]))
-    assert len(blocked) == 555
+    assert len(blocked) == 549
     return blocked
 
 
