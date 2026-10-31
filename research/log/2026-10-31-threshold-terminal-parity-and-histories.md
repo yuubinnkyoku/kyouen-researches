@@ -1,6 +1,6 @@
 # 2026-10-31 高速研究：閾値グラフの終局偶奇と全履歴数
 
-開始時 main: \`30e37812c1f546b6c359d54968ca81bb411a21fe\`。AGENTS.md、research/knowledge/README.md、generated/summary.md、既存の threshold-graph-six-state-20261027 および threshold-misere-five-state-openings-20261031 を確認。固定幅の M_{3,5}=12、M_{4,8}=11、M_{3,4}=24 は既に確定済みなので重複作業しなかった。
+開始時 main: `30e37812c1f546b6c359d54968ca81bb411a21fe`。AGENTS.md、research/knowledge/README.md、generated/summary.md、既存の threshold-graph-six-state-20261027 および threshold-misere-five-state-openings-20261031 を確認。固定幅の M_{3,5}=12、M_{4,8}=11、M_{3,4}=24 は既に確定済みなので重複作業しなかった。
 
 新しい問いは「閾値グラフの終局の長さの偶奇だけから通常版・misère版の勝敗が決まるか」。極大独立集合を構築語から直接分類すると、全 I 頂点の集合と、各 D 頂点1個＋その後の全 I 頂点の集合だけで尽きる。終局集合数は 1+#D、終局長は N と 1+N-p_j。各終局集合の全順列が合法なので、長さ k の完全履歴数は終局集合ごとの k! の和として閉形式になる。
 
