@@ -202,3 +202,26 @@ node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_p
 **中央49の選択31証人は撤回2件の四石親を一つも使用しておらず、S5未判定2,525類・優先証人91類・4分割632/631/631/631類は変わらない。** 既存19被覆も従来のより大きなWIN4除外集合を避けていたため、選択証人の合法性と31/56の幾何下界は維持される。ただしこれらはS4 LOSSの新規証明ではなく、空盤は**UNKNOWN**。
 
 再現：`node audit_win4_exclusion.js`、`node verify_win4_safe_31.js`、`node verify_win4_safe_56.js`、`node verify_31_loss4_reuse_49.js`、`node audit_s5_dependency_loss4_reuse.js`、`node audit_central49_worker_partition.js`、`python3 audit_central49_worker_results.py`（いずれも本ディレクトリからの相対名）。変更後のCI成功は別途確認が必要。
+
+
+## 重要訂正：中央49の固定31証人は終局証明済みWIN5で2類反証（2026-10-31）
+
+上記の「既知WIN4を避けた31類」「未判定S5 2,525類」「4作業者の優先順」は、**2026-10-12の固定S5 cacheだけに関する履歴的な計算計画**であり、現在の証拠全体ではそのままLOSS証明へ使えない。10月14日の独立終局証明（K0424）に、固定31証人の合法な五石子として以下の2件の **WIN5** が存在することを交差監査で確認した。
+
+| 終局証明済みWIN5（元先手視点） | 反証された四石LOSS候補 | 固定被覆で単独担当する第三手 |
+| --- | --- | --- |
+| 126017: {1,49,59,60,61} | `00000000000000003800000000000002` | 11,21,99,109 |
+| 162106: {14,49,59,60,61} | `00000000000000003800000000004000` | 34,42,78,86 |
+
+いずれもtrusted葉0の終局DAG独立検査receiptが保存済み。新監査器はreceiptのGit blob SHA-1、証明書SHA-256、元局面mask、WIN極性、D4正準化、四石→五石の合法な親子関係、第三手被覆を照合する（巨大DAG自体の再実行は今回行っていない）。
+
+**固定31類のうち2類はLOSSになり得ず、元の被覆はこのままでは証明として完成しない。** 反証2類が単独担当する第三手は計8手。2類の合法な五石子は相異なる204類で、うち119類は残る29証人に現れない。これは旧作業一覧の構造的な不要部分であり、修復後の新しい証人が同じ局面を使わない保証ではない。既知LOSS4の3類と幾何下界31は撤回しない。31類の代替被覆の存在は未確定。
+
+旧 `--worker` / `--priority-worker` は反証済み計画の仕事一覧を誤って実行しないよう**拒否**する。歴史的再現に限り `--historical-worker` / `--historical-priority-worker` を明示して出力できる。新しい計算はWIN5反証を制約に含めた被覆の再構成と、全依存の再監査が済むまで開始しない。
+
+```sh
+node research/experiments/n11-central-19-cover-20261031/audit_central49_terminal_win5_conflicts.js
+node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_partition.js --historical-priority-worker 0
+```
+
+**二石局面{49,60}と標準11×11空盤の勝敗はUNKNOWN。** 既存の固定cacheに関する過去の幾何学的計数・2,525類という歴史値を、現在有効なLOSS証明計画と混同しない。
