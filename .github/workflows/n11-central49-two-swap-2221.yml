@@ -1,0 +1,86 @@
+name: N11 central49 2221-class two-swap and independent worker audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/central49-post-three-two-swap-2221.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_two_swap_2221.js'
+      - 'research/experiments/n11-central-19-cover-20261031/audit_central49_two_swap_worker_results_2221.py'
+      - '.github/workflows/n11-central49-two-swap-2221.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exhaustively audit fixed-cover two-for-two replacement
+        run: node research/experiments/n11-central-19-cover-20261031/verify_central49_two_swap_2221.js
+      - name: Independently reconstruct exact S5 frontier and worklists in Python
+        run: |
+          python3 - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-central-19-cover-20261031')
+          import audit_central49_two_swap_worker_results_2221 as m
+          m.self_test()
+          cache, owners, witnesses, assignment, shards, ordered, priority = m.build()
+          assert len(cache) == 5851
+          assert len(ordered) == len(set(ordered)) == len(assignment) == 2221
+          assert list(map(len, shards)) == [556, 555, 555, 555]
+          assert witnesses[priority]['unknown_s5'] == 94
+          assert len([w for w in witnesses if not w['known_loss4']]) == 28
+          plan = m.make_focus_plan(owners, witnesses, assignment, shards, ordered, {})
+          assert plan['root_outcome'] == plan['empty_board_outcome'] == 'UNKNOWN'
+          assert plan['selected_unknown_s5'] == plan['remaining_s5'] == 94
+          assert plan['worker_loads'] == [24, 24, 23, 23]
+          assert len(set(sum(plan['worklists'], []))) == 94
+          print('INDEPENDENT_2221_FRONTIER_OK')
+          PY
+      - name: Audit frozen receipt merge, rejection and resumability
+        run: |
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+          import tempfile
+          from pathlib import Path
+          script = 'research/experiments/n11-central-19-cover-20261031/audit_central49_two_swap_worker_results_2221.py'
+          with tempfile.TemporaryDirectory() as td:
+              root = Path(td)
+              plan_path = root / 'plan.json'
+              plan_path.write_bytes(subprocess.check_output([sys.executable, script, '--focus-plan']))
+              plan = json.loads(plan_path.read_text())
+              assert plan['schema'] == 'n11-central49-2221-focused-snapshot-v1'
+              assert plan['worker_loads'] == [24, 24, 23, 23]
+              key = plan['worklists'][0][0]
+              bits = int(key, 16)
+              def row(v):
+                  return f's5verdict,{bits & ((1<<64)-1)},{bits>>64},5,{v},1\n'
+              worker = root / 'worker0.csv'
+              worker.write_text(row(2))
+              merged = root / 'merged.csv'
+              cmd = [sys.executable, script, '--audit-focus-plan', str(plan_path),
+                     '--worker', '0', str(worker)]
+              out = json.loads(subprocess.check_output(cmd + ['--merged-out', str(merged)]))
+              assert out['new_reported_verdicts'] == 1
+              assert out['remaining_focused_s5'] == 93
+              assert out['root_outcome'] == 'UNKNOWN'
+              assert merged.read_text() == row(2).replace(',1\n', ',0\n')
+              def refused(command):
+                  r = subprocess.run(command, capture_output=True)
+                  assert r.returncode != 0, command
+              refused(cmd + ['--merged-out', str(merged)])
+              refused([sys.executable, script, '--audit-focus-plan', str(plan_path),
+                       '--worker', '1', str(worker)])
+              worker.write_text(row(1))
+              refused(cmd)
+              worker.write_text(row(2))
+              resumed = json.loads(subprocess.check_output([
+                  sys.executable, script, '--focus-plan', '--existing', str(merged)
+              ]))
+              assert resumed['remaining_s5'] == 93
+              assert key not in sum(resumed['worklists'], [])
+              print('FROZEN_2221_RECEIPTS_OK')
+          PY
