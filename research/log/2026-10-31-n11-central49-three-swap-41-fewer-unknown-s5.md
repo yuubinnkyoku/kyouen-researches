@@ -19,4 +19,4 @@
 
 この改善は**計算対象となる未判定S5の種類数**の削減であり、探索時間や勝敗の改善ではない。固定5,851件のS5判定はsolver-trustedであり、今回全件の独立終局証明は行っていない。独立終局WIN5の既存receiptは旧監査を通じて検証するが、巨大DAGそのものは再実行していない。新規S5判定0件、S4 LOSS証明0件、二石root閉鎖0件。二石 `{49,60}` と標準11×11空盤は引き続き **UNKNOWN**。
 
-CI: `.github/workflows/n11-central-win4-safe-cover.yml` に三証人置換と4分割監査を追加。成功したrunの確認は別途行う。
+**独立監査CI成功：** [GitHub Actions 41208782430](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41208782430)（変更コミット `5bd5988d08b7a33e24b599f66d389d96db28672a`）。Nodeによる31証人・全119第三手・2,501未判定S5の再計算と、別実装Pythonによる2,501類の再構成、626/625/625/625の4分割、重複0・不正報告拒否回帰が成功した。これはS5の独立終局再証明ではない。
