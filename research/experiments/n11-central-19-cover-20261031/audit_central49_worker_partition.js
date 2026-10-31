@@ -254,8 +254,62 @@ report.childLevelSharding={
  witnessShards,
  caveat:'Worklist count, not solve-time balance; each S4 remains UNKNOWN until every legal S5 child has verified LOSS evidence.'
 };
+// An equal-cost, four-worker schedule can prioritize the cheapest unresolved
+// S4 witness without changing the 2525-class frontier or duplicating work.
+// The original --worker schedule remains byte-for-byte stable for replay.
+const priorityS4='00000000000000401002010000000000';
+const priorityIndex=keys.indexOf(priorityS4);
+assert.equal(priorityIndex,25,'priority witness changed');
+assert.equal(frontier.witnesses[priorityIndex].status,'UNKNOWN');
+assert.equal(frontier.witnesses[priorityIndex].unknownS5,91);
+assert.equal(frontier.witnesses[priorityIndex].knownLossS5,1);
+assert.equal(frontier.witnesses[priorityIndex].sharedUnknownS5,0);
+assert.equal(Math.min(...unknown.map(i=>frontier.witnesses[i].unknownS5)),91);
+const priorityKeys=pending.filter(k=>owners.get(k).includes(priorityIndex));
+assert.equal(priorityKeys.length,91);
+assert(priorityKeys.every(k=>owners.get(k).length===1),
+ 'priority witness unexpectedly shares pending S5');
+const prioritySet=new Set(priorityKeys);
+const priorityOrder=priorityKeys.concat(pending.filter(k=>!prioritySet.has(k)));
+assert.equal(priorityOrder.length,2525);
+assert.equal(new Set(priorityOrder).size,2525);
+assert.deepEqual([...priorityOrder].sort(),pending);
+const priorityShards=Array.from({length:4},()=>[]);
+for(let rank=0;rank<priorityOrder.length;rank++)
+ priorityShards[rank%4].push(priorityOrder[rank]);
+assert.deepEqual(priorityShards.map(s=>s.length),[632,631,631,631]);
+const priorityLoads=priorityShards.map(s=>s.filter(k=>prioritySet.has(k)).length);
+assert.deepEqual(priorityLoads,[23,23,23,22]);
+for(const s of priorityShards){
+ const firstNonPriority=s.findIndex(k=>!prioritySet.has(k));
+ assert(s.slice(firstNonPriority<0?s.length:firstNonPriority)
+  .every(k=>prioritySet.has(k)),'priority work not at shard head');
+ assert(s.slice(firstNonPriority<0?s.length:firstNonPriority)
+  .every(k=>!prioritySet.has(k)),'priority work interleaved');
+}
+const oldRanks=new Map(pending.map((k,i)=>[k,i]));
+const oldFinishRound=Math.max(...priorityKeys.map(k=>Math.floor(oldRanks.get(k)/4)+1));
+const priorityFinishRound=Math.max(...priorityLoads);
+assert.equal(oldFinishRound,551,'baseline worklist order changed');
+assert.equal(priorityFinishRound,23);
+assert.equal(priorityFinishRound,Math.ceil(priorityKeys.length/4),
+ 'priority completion round not optimal in equal-cost model');
+report.childLevelSharding.priorityFirst={
+ witnessS4:priorityS4,unknownS5:91,alreadyKnownLossS5:1,
+ oldFirstPossibleCompletionRound:oldFinishRound,
+ newFirstPossibleCompletionRound:priorityFinishRound,
+ lowerBoundRound:Math.ceil(priorityKeys.length/4),
+ priorityWorkerLoads:priorityLoads,
+ workerLoads:priorityShards.map(s=>s.length),
+ distinctPendingS5:priorityOrder.length,crossWorkerDuplicatedS5:0,
+ priorityManifestSha256:digest(priorityOrder),
+ priorityWorkerSha256:priorityShards.map(digest),
+ caveat:'Rounds assume one S5 per worker per round, equal cost and all 91 new verdicts LOSS. This is a conditional scheduling bound, not a game verdict or measured speedup.'
+};
 const args=process.argv.slice(2);
 if(args.length===0)console.log(JSON.stringify(report,null,2));
 else if(args.length===2&&args[0]==='--worker'&&/^[0-3]$/.test(args[1]))
  process.stdout.write(shards[Number(args[1])].join('\n')+'\n');
-else throw new Error('usage: node audit_central49_worker_partition.js [--worker 0|1|2|3]');
+else if(args.length===2&&args[0]==='--priority-worker'&&/^[0-3]$/.test(args[1]))
+ process.stdout.write(priorityShards[Number(args[1])].join('\n')+'\n');
+else throw new Error('usage: node audit_central49_worker_partition.js [--worker 0|1|2|3 | --priority-worker 0|1|2|3]');
