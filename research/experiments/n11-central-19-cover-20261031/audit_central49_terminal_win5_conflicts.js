@@ -132,13 +132,34 @@ const receipt=JSON.parse(fs.readFileSync(path.join(ROOT,terminalWin5[0].receipt)
 assert.throws(()=>checkReceipt(terminalWin5[0],{...receipt,verdict:2}));
 assert.throws(()=>checkReceipt(terminalWin5[0],{...receipt,trusted_leaves:1}));
 assert.throws(()=>checkReceipt(terminalWin5[0],{...receipt,root_mask:'0'}));
+// Count historical pending S5 keys attached only to the refuted S4 pair.
+const allOwners=new Map();
+for(let i=0;i<frontier.witnesses.length;i++) {
+  const s4=points(frontier.witnesses[i].s4);
+  const cs=new Set();
+  for(let x=0;x<121;x++) if(!s4.includes(x)&&safe([...s4,x]))
+    cs.add(canonical([...s4,x]));
+  assert.equal(cs.size,frontier.witnesses[i].legalS5Children);
+  for(const child of cs) {
+    if(!allOwners.has(child)) allOwners.set(child,new Set());
+    allOwners.get(child).add(i);
+  }
+}
+const refutedIndices=new Set(impacts.map(x=>
+  cert.selected_s4_classes.indexOf(x.refuted_s4_loss_candidate)));
+const touched=[...allOwners].filter(([k,indices])=>
+  [...indices].some(i=>refutedIndices.has(i)));
+const exclusiveToRefuted=touched.filter(([k,indices])=>
+  [...indices].every(i=>refutedIndices.has(i)));
+assert.equal(touched.length,204);
+assert.equal(exclusiveToRefuted.length,119);
 assert.equal(new Set(impacts.flatMap(x=>x.exclusively_covered_third_moves)).size,8);
 assert.equal(new Set(impacts.map(x=>x.refuted_s4_loss_candidate)).size,2);
 console.log(JSON.stringify({
   schema:'n11-central49-terminal-win5-plan-refutation-v1',
   root:[49,60],root_outcome:'UNKNOWN',empty_board:'UNKNOWN',
   historical_plan_s4:31,certified_win5_conflicts:2,
-  invalidated_s4_loss_candidates:2,exclusive_third_moves_requiring_repair:8,
+  invalidated_s4_loss_candidates:2,exclusive_third_moves_requiring_repair:8,\n  historical_pending_s5_touching_refuted_witnesses:touched.length,\n  historical_pending_s5_only_under_refuted_witnesses:exclusiveToRefuted.length,
   impacts,
   trust:'Both WIN5 labels have stored independent terminal-only receipts with zero trusted leaves. Receipt integrity and geometric incidence are rechecked here; full large terminal DAGs are not replayed by this small audit.',
   consequence:'Historical 31-S4 plan cannot close {49,60} as LOSS without replacing these two S4 classes; the 2525-S5 worker list is stale as an actionable LOSS proof plan.'
