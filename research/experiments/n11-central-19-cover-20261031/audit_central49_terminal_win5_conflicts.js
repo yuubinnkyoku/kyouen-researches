@@ -159,7 +159,9 @@ console.log(JSON.stringify({
   schema:'n11-central49-terminal-win5-plan-refutation-v1',
   root:[49,60],root_outcome:'UNKNOWN',empty_board:'UNKNOWN',
   historical_plan_s4:31,certified_win5_conflicts:2,
-  invalidated_s4_loss_candidates:2,exclusive_third_moves_requiring_repair:8,\n  historical_pending_s5_touching_refuted_witnesses:touched.length,\n  historical_pending_s5_only_under_refuted_witnesses:exclusiveToRefuted.length,
+  invalidated_s4_loss_candidates:2,exclusive_third_moves_requiring_repair:8, 
+  historical_pending_s5_touching_refuted_witnesses:touched.length, 
+  historical_pending_s5_only_under_refuted_witnesses:exclusiveToRefuted.length,
   impacts,
   trust:'Both WIN5 labels have stored independent terminal-only receipts with zero trusted leaves. Receipt integrity and geometric incidence are rechecked here; full large terminal DAGs are not replayed by this small audit.',
   consequence:'Historical 31-S4 plan cannot close {49,60} as LOSS without replacing these two S4 classes; the 2525-S5 worker list is stale as an actionable LOSS proof plan.'
