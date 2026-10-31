@@ -78,13 +78,13 @@ jobs:
                   '--focus-s4', plan['selected_s4']
               ], text=True).splitlines()
               assert actual == plan['worklists'][i]
-              digest = hashlib.sha256(('\\n'.join(actual) + '\\n').encode()).hexdigest()
+              digest = hashlib.sha256(('\n'.join(actual) + '\n').encode()).hexdigest()
               assert digest == plan['worker_sha256'][i]
           with tempfile.TemporaryDirectory() as directory:
               existing = Path(directory) / 'existing.csv'
               key = int(plan['worklists'][0][0], 16)
               existing.write_text(
-                  f's5verdict,{key & ((1<<64)-1)},{key >> 64},5,2,1\\n')
+                  f's5verdict,{key & ((1<<64)-1)},{key >> 64},5,2,1\n')
               resumed = json.loads(subprocess.check_output([
                   sys.executable, script, '--focus-plan',
                   '--focus-s4', plan['selected_s4'], '--existing', str(existing)
