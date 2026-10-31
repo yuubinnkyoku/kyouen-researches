@@ -47,3 +47,13 @@ jobs:
           python3 -c 'import json; x=json.load(open("/tmp/central49-worker-audit.json")); assert x["pending_s5_classes"]==2525 and x["unreported_s5"]==2525 and x["root_outcome"]=="UNKNOWN"'
       - name: Verify repaired central49 31-class cover against six terminal WIN5 receipts
         run: node research/experiments/n11-central-19-cover-20261031/verify_central49_terminal_safe_repair.js
+
+      - name: Independently audit repaired central49 2627-S5 frontier and worker guards
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_repaired_worker_results.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_repaired_worker_results.py > /tmp/central49-repaired-worker-audit.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-repaired-worker-audit.json")); assert x["pending_s5_classes"]==2627 and x["unreported_s5"]==2627 and x["root_outcome"]=="UNKNOWN" and x["priority_unknown_s5"]>0'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_repaired_worker_results.py --worklist "$worker" > "/tmp/repaired-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/repaired-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[657,657,657,656]; assert len(set(sum(a,[])))==2627'
