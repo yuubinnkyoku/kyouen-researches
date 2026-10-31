@@ -130,6 +130,7 @@
 - ← depends_on [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): 通常Grundy値とmisère補助mex値の定義
 - ← depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 通常・misère補助mexの定義
 - ← depends_on [K0589](../items/K0589-sunflower-quota-terminal-gaps.md): 通常Grundy値とmisère補助mexの定義
+- ← depends_on [K0590](../items/K0590-even-sunflower-quota-grundy.md): 通常Grundy値とmisère補助mexの定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2648,6 +2649,7 @@
 ## [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) 五次元二値立方体の6点共超平面禁止版の強解決と全次元の構成下界
 
 - → depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): 五石極大のアフィン階数条件との照合
+- ← verifies [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md): 安全局面数・最大石数・全Grundy分布・空盤値・初手分類・misère勝敗を独立実装で8項目すべて再現
 
 ## [K0549](../items/K0549-quadratic-irrational-three-line-q6-all-length-strong-solution.md) α²−α−4=0の三線整数高さq6帯は全長強解決でき満容量安定化値は5
 
@@ -2759,6 +2761,7 @@
 
 - → depends_on [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): d=6のd+3下界（9点証人）を前提とし、本項目で上界を追加する
 - → verifies [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md): d=6の9点証人を前提としてK_6=9を確定する方向の上界
+- ← refutes [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md): K0568のcircuit削減CNF（19,484,942節）は包含極小化の誤用でK_6上界の証明に使えないことを確認
 
 ## [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) 3×3×4・4点共面禁止版は全局面強解決され空盤Grundy値は3
 
@@ -2873,3 +2876,12 @@
 ## [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) ひまわり型r容量制約の終局長は公差r−1で三制約から任意の欠番が生じ奇数rでは全局面を偶奇で強解決できる
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値とmisère補助mexの定義
+
+## [K0590](../items/K0590-even-sunflower-quota-grundy.md) 偶数本のひまわり型容量制約ゲームの通常・misère全安全局面を残容量の最小値と偶奇だけで強解決
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値とmisère補助mexの定義
+
+## [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) 五次元共六点禁止ゲームのK0546強解決を全局面独立再計算で完全再現し、包含極小禁止集合の誤用を確認
+
+- → verifies [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md): 安全局面数・最大石数・全Grundy分布・空盤値・初手分類・misère勝敗を独立実装で8項目すべて再現
+- → refutes [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md): K0568のcircuit削減CNF（19,484,942節）は包含極小化の誤用でK_6上界の証明に使えないことを確認

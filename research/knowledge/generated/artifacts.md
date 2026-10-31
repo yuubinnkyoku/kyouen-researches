@@ -419,6 +419,18 @@
 ## [research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt](../../../research/experiments/binary-cube-hyperplane-d25-d30-20261025/witnesses.txt)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (data): 25〜30次元の全明示頂点一覧
+## [research/experiments/binary-cube-hyperplane-d5-strong-20261030/README.md](../../../research/experiments/binary-cube-hyperplane-d5-strong-20261030/README.md)
+
+- [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) (log): 手法・照合表・教訓・再現手順
+## [research/experiments/binary-cube-hyperplane-d5-strong-20261030/results.json](../../../research/experiments/binary-cube-hyperplane-d5-strong-20261030/results.json)
+
+- [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) (data): 機械可読な照合結果と教訓
+## [research/experiments/binary-cube-hyperplane-d5-strong-20261030/results_d5.txt](../../../research/experiments/binary-cube-hyperplane-d5-strong-20261030/results_d5.txt)
+
+- [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) (data): 実行出力。安全局面分布・Grundy分布・初手分類
+## [research/experiments/binary-cube-hyperplane-d5-strong-20261030/solve_d5.cpp](../../../research/experiments/binary-cube-hyperplane-d5-strong-20261030/solve_d5.cpp)
+
+- [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) (verifier): rank-check DFS列挙とpopcount降順DPの独立実装。57秒で全1,108,073局面
 ## [research/experiments/binary-cube-hyperplane-five-eighths-20261025/proof.md](../../../research/experiments/binary-cube-hyperplane-five-eighths-20261025/proof.md)
 
 - [K0555](../items/K0555-binary-hypercube-five-eighths-hyperplane-sections.md) (proof): Sperner・LYM等号条件と4座標5点不可能性による全次元分類・計数
@@ -433,13 +445,16 @@
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (verifier): 9点証人の極大性（64頂点すべて禁止）の独立監査
 ## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp)
 
-- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): 包含極小依存集合（circuit）の列挙とCNF生成器。fix0対称性削減つき
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): 包含極小依存集合（circuit）列挙とCNF生成器。d=6のcircuit削減は包含極小にならないため証明には使用不可（K0591の教訓）
 ## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_cnf.cpp](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_cnf.cpp)
 
-- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): C(64,7)個の7点部分集合の依存判定とCNF生成器（二算法照合つき）
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): C(64,7)個の7点部分集合の依存判定とCNF生成器（二算法照合つき）。こちらは依存7点組全部を禁止する正しいCNF
 ## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/results.json](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/results.json)
 
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (data): 機械可読な主張・CNF統計・検証計画
+## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_k9_witness.py](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/verify_k9_witness.py)
+
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (verifier): exactly-9 CNFのSAT証人9点の幾何学的再検証
 ## [research/experiments/binary-cube-hyperplane-large-d-20261025/README.md](../../../research/experiments/binary-cube-hyperplane-large-d-20261025/README.md)
 
 - [K0553](../items/K0553-binary-hypercube-growing-excess-witnesses.md) (log): 手法・制御・小素数の教訓・再現手順
@@ -1181,6 +1196,12 @@
 ## [research/experiments/dfpn-frame-children-20261022/test_study.py](../../../research/experiments/dfpn-frame-children-20261022/test_study.py)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 誤局面、新規勝敗、監査の時間比較混入、仕事量・生成数のずれ等を拒否する9テスト
+## [research/experiments/even-sunflower-grundy-20261101/proof.md](../../../research/experiments/even-sunflower-grundy-20261101/proof.md)
+
+- [K0590](../items/K0590-even-sunflower-quota-grundy.md) (proof): 全局面の閉形式と8分類16行のmex恒等式による無界の全称証明
+## [research/experiments/even-sunflower-grundy-20261101/verify.py](../../../research/experiments/even-sunflower-grundy-20261101/verify.py)
+
+- [K0590](../items/K0590-even-sunflower-quota-grundy.md) (verifier): 偶数r=2,4,6,8の139515圧縮局面、54盤7551点別局面を独立照合
 ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
