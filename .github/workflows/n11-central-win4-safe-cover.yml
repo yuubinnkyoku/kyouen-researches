@@ -20,6 +20,8 @@ jobs:
         run: node research/experiments/n11-central-19-cover-20261031/audit_win4_exclusion.js
       - name: Verify ten WIN4-safe 56-class covers and their lower bounds
         run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_56.js
+      - name: Audit 19-root S5 dependencies and three proven LOSS4 reuse swaps
+        run: node research/experiments/n11-central-19-cover-20261031/audit_s5_dependency_loss4_reuse.js
       - name: Verify nine WIN4-safe 31-class covers and their lower bounds
         run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_31.js
       - name: Search exact-size repairs for five 31-class covers
