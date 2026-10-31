@@ -45,3 +45,5 @@ jobs:
           python3 research/experiments/n11-central-19-cover-20261031/audit_central49_worker_results.py --self-test
           python3 research/experiments/n11-central-19-cover-20261031/audit_central49_worker_results.py > /tmp/central49-worker-audit.json
           python3 -c 'import json; x=json.load(open("/tmp/central49-worker-audit.json")); assert x["pending_s5_classes"]==2525 and x["unreported_s5"]==2525 and x["root_outcome"]=="UNKNOWN"'
+      - name: Verify repaired central49 31-class cover against six terminal WIN5 receipts
+        run: node research/experiments/n11-central-19-cover-20261031/verify_central49_terminal_safe_repair.js
