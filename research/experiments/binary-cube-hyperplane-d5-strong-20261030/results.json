@@ -1,0 +1,35 @@
+{
+  "game": "binary 5-cube V_5={0,1}^5, forbidding 6 points on a common real affine hyperplane (degenerate cases included)",
+  "date": "2026-10-30",
+  "purpose": "independent recomputation of K0546's strong solution over all safe positions",
+  "method": "rank-check DFS enumeration (exact mod 2^61-1, Hadamard-equivalent) + popcount-ordered DP with true game children (any unused vertex)",
+  "results": {
+    "safe_positions": 1108073,
+    "safe_by_popcount": {"0": 1, "1": 32, "2": 496, "3": 4960, "4": 35960, "5": 201376, "6": 556192, "7": 309056},
+    "max_safe_stones": 7,
+    "grundy_histogram": {"0": 454464, "1": 546569, "2": 107040},
+    "empty_board_normal_grundy": 1,
+    "normal_outcome": "first-player-win",
+    "winning_first_moves": "all 32 vertices",
+    "misere_empty_board": "second-player-win (P)",
+    "misere_P_positions": 546569,
+    "misere_winning_first_moves": "none",
+    "zero_one_swap_check": "misere P positions (546569) equal g=1 count; g=0 (454464) plus g=2 (107040) equal N side (561504)"
+  },
+  "matches_k0546": [
+    "safe position count 1108073",
+    "max stones K=7",
+    "seven-stone positions 309056",
+    "Grundy values only 0,1,2",
+    "g=2 confined to 107040 five-stone positions",
+    "empty board g=1",
+    "all 32 first moves win in normal play",
+    "misere second-player-win, all first moves lose"
+  ],
+  "lessons": [
+    "inclusion-minimal banned sets of a stone-adding game with forbidden dependent (d+1)-subsets are exactly all dependent (d+1)-subsets; circuit reduction is impossible because dependencies of fewer points are legal",
+    "the K0568 circuit-reduced CNF (19484942 clauses) is invalid for proving K_6<=9; the full 255036992-clause CNF is required",
+    "game children must be recomputed from the position (any unused safe vertex), never taken from the enumeration path"
+  ],
+  "runtime_seconds": 57.3
+}

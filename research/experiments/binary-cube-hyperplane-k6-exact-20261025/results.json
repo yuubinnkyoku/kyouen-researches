@@ -1,20 +1,30 @@
 {
   "game": "binary 6-cube V_6={0,1}^6, forbidding 7 points on a common real affine hyperplane (degenerate cases included)",
   "date": "2026-10-25",
-  "claim": "K_6 = 9: the maximum number of vertices of the binary 6-cube with every 7-subset in general position is exactly 9",
+  "updated": "2026-10-30",
+  "claim": "K_6 >= 9 (certified witness); upper bound K_6 <= 9 is OPEN",
+  "status": "upper-bound-unproven",
   "lower_bound": {
     "witness_d6_m9": "frontier.txt of binary-cube-hyperplane-large-d-20261025 (both verifiers)",
-    "value": 9
+    "value": 9,
+    "maximality": "audit_frontier9.py: all 64 vertices forbidden as a 10th point for this witness"
   },
   "upper_bound": {
-    "method": "exhaustive enumeration of all C(64,7)=621216192 seven-subsets and UNSAT of the 'exactly 10 chosen' CNF",
-    "cnf": {
-      "file": "/tmp/k6_k10.cnf.gz (compressed from 6.9 GB)",
-      "variables": 4160,
-      "clauses": 255045246,
-      "dependent_7_subsets_banned": 255036992,
-      "counter_clauses": 8254,
-      "encoding": "one clause (-x_a ... -x_g) per dependent 7-subset; Sinz sequential counters for exactly-10 (at-most-10 over x, at-most-54 over -x)"
+    "status": "open",
+    "correct_encoding": {
+      "method": "exhaustive enumeration of all C(64,7)=621216192 seven-subsets and UNSAT of the 'exactly 10 chosen' CNF banning every dependent 7-subset",
+      "cnf": {
+        "variables": 4160,
+        "clauses": 255045246,
+        "dependent_7_subsets_banned": 255036992,
+        "counter_clauses": 8254,
+        "encoding": "one clause (-x_a ... -x_g) per dependent 7-subset; Sinz sequential counters for exactly-10 (at-most-10 over x, at-most-54 over -x)"
+      },
+      "state": "raw 6.9 GB CNF generated in /tmp; CaDiCaL 1.7.4 OOM on a 19 GB machine; no UNSAT verdict"
+    },
+    "invalid_circuit_encoding": {
+      "why_invalid": "inclusion-minimal dependent sets (circuits) include dependent 4/5/6-subsets that are legal in the game; banning circuits instead of all dependent 7-subsets is not equivalent (see K0591 lesson 1)",
+      "kissat_run": "kissat 4.0.4 on certificates/k6_k10_fix0.cnf (4160 vars, 19484943 clauses) terminated by SIGTERM after 8h10m21s; no verdict; partial DRAT is not a proof"
     },
     "dependent_subset_counts": {
       "size_4": 4816,
@@ -24,9 +34,20 @@
       "cross_check": "every predicate call evaluated modulo 2^61-1 and modulo 1000000007 with independent eliminations; all 621216192 seven-subsets agree"
     }
   },
+  "sat_control_exactly_9": {
+    "cnf": "certificates/k6_k9.cnf (circuit clause set, exactly-9 counters)",
+    "result": "SATISFIABLE (kissat 4.0.4, 23 seconds, exit 10)",
+    "witness": [11, 22, 28, 37, 42, 49, 57, 58, 63],
+    "geometric_check": "verify_k9_witness.py: all C(9,7)=36 seven-subset determinants nonzero (|det| 1..9)",
+    "meaning": "control only; does not validate the circuit reduction"
+  },
+  "lessons": [
+    "circuit reduction is invalid for this stone-addition game: minimal forbidden sets are exactly the dependent 7-subsets, because dependencies of fewer points are legal",
+    "full-enumeration game solvers must recompute children from the position (any unused safe vertex), never reuse the enumeration path"
+  ],
   "verification_plan": [
-    "cadical UNSAT on the exactly-10 CNF with DRAT proof",
-    "DRAT proof checked by drat-trim against the original CNF",
-    "SAT sanity run on the exactly-9 CNF, witness re-proved by exact integer determinants"
+    "regenerate the full 255036992-clause CNF and run kissat/CaDiCaL with enough memory",
+    "or find a 10-point general-position set (refuting K_6 <= 9)",
+    "or use coordinate-permutation symmetry / a hyperplane-cardinality encoding / a combinatorial proof"
   ]
 }
