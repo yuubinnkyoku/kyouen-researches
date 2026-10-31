@@ -189,3 +189,16 @@ node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_p
 ```
 
 四石局面は引き続きUNKNOWN。二石rootも標準11×11空盤も**UNKNOWN**。
+
+
+## 訂正：保存済みS5の隔離済み2件を除外（2026-10-31）
+
+**過去の節に記した「5,853類の統合cache」「WIN5 161類」「WIN4 555類」「WIN4除外804件／393類」は、隔離済みの根拠撤回2件を含む履歴値であり、現在の有効な証拠数ではない。** 二つの固定cacheのうち、5,700行の歴史的なunionには `results/n11-s5-evidence-quarantine.json` で active とされた根拠撤回WIN5が2行含まれていた。5,851行の current-exact には含まれず、残り5,698行はすべて current-exact と一致する。
+
+隔離を適用した正しい集計は、**有効S5 5,851類、WIN5 159類、導出WIN4 549類**。未解決19中央応手rootのWIN4による候補除外は**延べ794件（相異なる389類）**、残る幾何候補は**95,536件**。影響を受けたrootの除外数は初手16: 103→100、49: 68→66、3: 48→47、14: 17→15、1: 13→11。ほか14 rootは変わらない。
+
+`quarantine_s5.js` は隔離台帳のGit blob SHA-1・active鍵・元の極性を固定し、各監査器が固定cacheの衝突検査後に撤回2行を除外する。独立Python worker監査器と整数計画の生成器にも同じ隔離条件を追加した。台帳が変更された場合は黙って新しい判定を採用せず、明示的な再監査を要求する。
+
+**中央49の選択31証人は撤回2件の四石親を一つも使用しておらず、S5未判定2,525類・優先証人91類・4分割632/631/631/631類は変わらない。** 既存19被覆も従来のより大きなWIN4除外集合を避けていたため、選択証人の合法性と31/56の幾何下界は維持される。ただしこれらはS4 LOSSの新規証明ではなく、空盤は**UNKNOWN**。
+
+再現：`node audit_win4_exclusion.js`、`node verify_win4_safe_31.js`、`node verify_win4_safe_56.js`、`node verify_31_loss4_reuse_49.js`、`node audit_s5_dependency_loss4_reuse.js`、`node audit_central49_worker_partition.js`、`python3 audit_central49_worker_results.py`（いずれも本ディレクトリからの相対名）。変更後のCI成功は別途確認が必要。
