@@ -120,6 +120,7 @@
 - ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 元先手固定視点の奇数AND・偶数OR伝播
 - ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 元先手固定視点の奇数AND・偶数OR伝播
 - ← depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 通常Grundyと終局1のmisère補助mexの定義
+- ← depends_on [K0577](../items/K0577-qplus1-geometric-rigidity.md): 通常・misèreのmex定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2780,3 +2781,9 @@
 ## [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) 余補一型のq点禁止ゲームは全安全局面の通常・misère値と全勝ち初手に閉公式を持つ
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundyと終局1のmisère補助mexの定義
+- ← depends_on [K0577](../items/K0577-qplus1-geometric-rigidity.md): 余補一型の抽象禁止集合族の閉公式。幾何によって禁止組数を0・1・Nに制限する
+
+## [K0577](../items/K0577-qplus1-geometric-rigidity.md) 平面上のq+1点では共円・共線の禁止q点組数は0・1・q+1のみで全局面Grundy値は偶奇で決まる
+
+- → depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 余補一型の抽象禁止集合族の閉公式。幾何によって禁止組数を0・1・Nに制限する
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misèreのmex定義

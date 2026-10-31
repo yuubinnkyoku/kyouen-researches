@@ -8957,6 +8957,12 @@
 ## [research/experiments/q6-seventeen-audit-20261024/run.py](../../../research/experiments/q6-seventeen-audit-20261024/run.py)
 
 - [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (verifier): 旧Pythonと独立C++の全有限部分を再実行し件数・結論を照合
+## [research/experiments/qplus1-geometric-rigidity-20261031/proof.md](../../../research/experiments/qplus1-geometric-rigidity-20261031/proof.md)
+
+- [K0577](../items/K0577-qplus1-geometric-rigidity.md) (proof): 3点共有の直線・円の一意性、全局面偶奇則、整数格子の三構成の無界証明
+## [research/experiments/qplus1-geometric-rigidity-20261031/verify_geometry.py](../../../research/experiments/qplus1-geometric-rigidity-20261031/verify_geometry.py)
+
+- [K0577](../items/K0577-qplus1-geometric-rigidity.md) (verifier): 4×4格子の全12376個の5点・6点集合の整数行列式検査、q=4..10の三構成
 ## [research/experiments/quadratic-lambda-20261024/proof.md](../../../research/experiments/quadratic-lambda-20261024/proof.md)
 
 - [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (proof): 有限例外・転置・縮尺・二水平行不変性の全称証明
