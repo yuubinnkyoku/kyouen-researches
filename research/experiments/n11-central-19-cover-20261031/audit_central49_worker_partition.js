@@ -3,6 +3,7 @@
 // Independently reconstruct S5 sharing for the fixed {49,60} cover.
 // This is a scheduling/certificate-dependency audit, not a game verdict.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {excludeQuarantined}=require('./quarantine_s5');
 const here=__dirname;
 const cert=JSON.parse(fs.readFileSync(path.join(here,'win4-safe-31-loss4-reuse-49.json'),'utf8'));
 const frontier=JSON.parse(fs.readFileSync(path.join(here,'central49-frontier-ownership.json'),'utf8'));
@@ -203,6 +204,8 @@ for(const [relative,expected] of CACHE_SOURCES){
  }
 }
 assert.equal(cache.size,5853);
+excludeQuarantined(cache);
+assert.equal(cache.size,5851);
 const unresolvedSet=new Set(unknown);
 const neededOwners=[...owners].filter(([,indices])=>indices.some(i=>unresolvedSet.has(i)));
 assert.equal(neededOwners.length,2528);
