@@ -9613,6 +9613,12 @@
 ## [research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp](../../../research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp)
 
 - [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (verifier): 全点整数の鋭さの例を含む2例を独立整数演算し候補9円・6円のうち4円ずつが通ることを確認
+## [research/experiments/two-quota-terminal-spectrum-20261031/proof.md](../../../research/experiments/two-quota-terminal-spectrum-20261031/proof.md)
+
+- [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) (proof): 三つの排反飽和型による全称母関数と連続終局長の証明
+## [research/experiments/two-quota-terminal-spectrum-20261031/verify.py](../../../research/experiments/two-quota-terminal-spectrum-20261031/verify.py)
+
+- [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) (verifier): 6372構成5275338部分集合の独立追加判定と20000標本の検算
 ## [research/experiments/two-row-misere-swap-threshold-20261024/README.md](../../../research/experiments/two-row-misere-swap-threshold-20261024/README.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 二行盤の真の交換開始長7の証明と有限完全列挙

@@ -2863,3 +2863,8 @@
 - → depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 同じ二担い手容量制約モデルを対象とする
 - → generalizes [K0582](../items/K0582-short-board-2q-two-carriers.md): N=2qの七型に限られた極大配置計数を任意の二担い手盤に拡張
 - → generalizes [K0584](../items/K0584-short-board-two-carrier-threshold.md): N=2q+1の十二型に限られた極大配置計数を任意の二担い手盤に拡張
+- ← generalizes [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md): 共通点数0〜2・同じ容量q−1から任意の共通点数と異なる二容量へ拡張
+
+## [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) 任意交差・異容量の二制約ゲームでは極大配置多項式が閉形式を持ち終局長は常に連続する
+
+- → generalizes [K0587](../items/K0587-two-carrier-terminal-spectrum.md): 共通点数0〜2・同じ容量q−1から任意の共通点数と異なる二容量へ拡張
