@@ -243,3 +243,74 @@ console.log(JSON.stringify({
   negativeControlsPassed:true,emptyBoard:'UNKNOWN',
   note:'The 3 reused LOSS4 labels depend on the pinned exact S5 solver results. Other selected S4 remain unproved.'
 },null,2));
+
+
+// Second-stage, matching-preserving two-edge substitutions. Each operation
+// replaces one or two unknown S4s with one pinned LOSS4 and (when needed)
+// one still-unknown S4. The entire 119-move cover is rechecked afterwards.
+const patch2=JSON.parse(fs.readFileSync(path.join(__dirname,'win4-safe-56-loss4-reuse-v2.json')));
+assert.equal(patch2.schema,'n11-central-win4-safe-56-loss4-reuse-v2');
+assert.equal(patch2.board,11);assert.equal(patch2.outcome,'UNKNOWN');
+assert.equal(patch2.base_certificate,'win4-safe-56-certificate.json');
+assert.equal(patch2.loss4_proof,PROOF[0]);
+assert.deepEqual(patch2.roots.map(r=>r.first),[26,25,3,13,2,14,15,4,1,37]);
+const after2=before.map(row=>{
+  const plan=patch2.roots.find(r=>r.first===row.first);
+  if(!plan)return {...row,selected:[...row.selected]};
+  assert.equal(row.minimum,56);
+  let chosen=[...row.selected];
+  const removed=new Set(),added=new Set();
+  for(const op of plan.operations){
+    assert(op.remove.length===op.add.length);
+    assert([1,2].includes(op.remove.length));
+    assert.equal(op.add.filter(k=>loss4.has(k)).length,1,
+      'each operation must introduce exactly one certified LOSS4');
+    for(const k of op.remove){
+      assert(!removed.has(k)&&chosen.includes(k),'duplicate or missing removed class');
+      removed.add(k);
+    }
+    for(const k of op.add){
+      assert(!added.has(k)&&!chosen.includes(k),'duplicate or existing added class');
+      assert(!win4.has(k),'known WIN4 added');
+      added.add(k);
+      if(loss4.has(k))verifyLoss4(k);
+      else children(k);
+    }
+    chosen=chosen.filter(k=>!op.remove.includes(k)).concat(op.add);
+  }
+  assert.equal(new Set(chosen).size,56);
+  checkCover(row.first,chosen,56);
+  return {...row,selected:chosen};
+});
+assert.equal(after2.length,19);
+assert.equal(after2.reduce((n,r)=>n+r.selected.length,0),839);
+const final56=summary(after2.filter(r=>r.minimum===56));
+const final19=summary(after2);
+const loss4Incidences=final56.roots.reduce((n,r)=>n+r.alreadyLOSS4,0);
+assert.equal(loss4Incidences,19);
+assert(final56.roots.every(r=>r.alreadyLOSS4>=1),'one of ten roots still has no reusable LOSS4');
+assert(final56.unknownS5<new56.unknownS5,'v2 did not improve v1');
+assert(final19.unknownS5<new19.unknownS5,'v2 did not improve 19-root union');
+for(const plan of patch2.roots){
+  for(const op of plan.operations)
+    for(const k of op.remove)
+      assert(!after2.find(r=>r.first===plan.first).selected.includes(k));
+}
+console.log(JSON.stringify({
+  schema:'n11-central-19-s5-dependency-loss4-reuse-v2',
+  geometricCoversVerified:19,rootThirdMovesVerified:19*119,
+  exactLoss4Incidences:loss4Incidences,
+  ten56:{before:{unknownS5:old56.unknownS5,alreadyLOSS4:old56.alreadyLOSS4},
+    v1:{unknownS5:new56.unknownS5,alreadyLOSS4:new56.alreadyLOSS4},
+    v2:{uniqueS4:final56.uniqueS4,alreadyLOSS4:final56.alreadyLOSS4,
+      knownS5:final56.knownS5,unknownS5:final56.unknownS5},
+    reducedUnknownS5:old56.unknownS5-final56.unknownS5},
+  all19:{before:{uniqueS4:old19.uniqueS4,unknownS5:old19.unknownS5},
+    v1:{uniqueS4:new19.uniqueS4,unknownS5:new19.unknownS5},
+    v2:{uniqueS4:final19.uniqueS4,alreadyLOSS4:final19.alreadyLOSS4,
+      knownS5:final19.knownS5,unknownS5:final19.unknownS5},
+    reducedUnknownS5:old19.unknownS5-final19.unknownS5,
+    rootCosts:final19.roots.sort((a,b)=>a.unknownS5-b.unknownS5||a.first-b.first)},
+  trust:'Reused S4 LOSS labels rely on pinned solver-trusted exact S5 verdicts; all geometry and S5 boundary edges rechecked.',
+  newS4LOSSProved:0,newS2RootsClosed:0,emptyBoard:'UNKNOWN'
+},null,2));
