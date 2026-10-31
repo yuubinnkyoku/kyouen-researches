@@ -5,6 +5,7 @@
 // NOT new terminal-to-root proofs; n11 empty-board outcome is UNKNOWN.
 const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 const zlib=require('node:zlib'),assert=require('node:assert/strict');
+const {excludeQuarantined}=require('./quarantine_s5');
 const ROOT=path.resolve(__dirname,'../../..');
 const SOURCES=[
  ['research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache','2dccf42b92337cbcbfb62ea5c77db487b1ad8ead'],
@@ -47,6 +48,7 @@ function merge(a,b){
 const frozen=parseCache(pinned(SOURCES[0])),corpus=parseCache(pinned(SOURCES[1]));
 assert.equal(frozen.size,5851);assert.equal(corpus.size,5700);
 const cache=merge(frozen,corpus);assert.equal(cache.size,5853);
+excludeQuarantined(cache);assert.equal(cache.size,5851);
 const shared=[...corpus].find(([k])=>frozen.has(k));assert(shared);
 const forged=new Map(corpus);forged.set(shared[0],3-shared[1]);
 assert.throws(()=>merge(frozen,forged),/WIN\/LOSS CONFLICT/);
@@ -103,7 +105,7 @@ for(const [k,v] of cache)if(v===1){
  const p=points(k);assert.equal(p.length,5);
  for(const x of p)win4.add(canonical(p.filter(y=>y!==x)));
 }
-assert.equal(win4.size,555);
+assert.equal(win4.size,549);
 for(const k of loss4.keys())assert(!win4.has(k),'WIN4/LOSS4 contradiction');
 const cert=JSON.parse(fs.readFileSync(path.join(__dirname,'win4-safe-31-loss4-reuse-49.json'),'utf8'));
 assert.equal(cert.schema,'n11-central-49-win4-safe-loss4-reuse-v1');
