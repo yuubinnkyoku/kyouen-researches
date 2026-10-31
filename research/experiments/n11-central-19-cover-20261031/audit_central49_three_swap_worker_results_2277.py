@@ -6,7 +6,6 @@ Worker verdicts are reports, NOT independent proof. Older worklists are historic
 import argparse
 import hashlib
 import json
-import subprocess
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -25,11 +24,8 @@ def require(ok, message):
 
 
 def build():
-    check = subprocess.run(
-        ['node', str(HERE / 'verify_central49_three_swap_2277.js')],
-        capture_output=True, text=True)
-    require(check.returncode == 0,
-            'three-swap verifier failed: ' + (check.stderr or check.stdout)[-1600:])
+    # The expensive exhaustive 3-for-3 optimality audit runs once in CI.
+    # Worklist export independently checks geometry, WIN exclusions and S5 children.
     raw = CERT.read_bytes()
     sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
     require(sha == CERT_BLOB, 'three-swap certificate changed; explicit re-audit required')
@@ -46,6 +42,43 @@ def build():
     loss4 = set(doc['known_loss4_classes'])
     require(len(loss4) == 3 and loss4 <= set(keys), 'known LOSS4 changed')
     cache = previous.prior.load_fixed_cache()
+    # Independently reconstruct WIN4 parents from the pinned S5 cache and
+    # the six separately terminal-proved WIN5 witnesses.
+    blocked = set()
+    for key, verdict in cache.items():
+        if verdict == 1:
+            points = previous.prior.pts(key)
+            for x in points:
+                blocked.add(previous.prior.canonical(
+                    tuple(y for y in points if y != x)))
+    terminal_win5 = (
+        (5, 45, 49, 53, 60), (1, 49, 59, 60, 61),
+        (37, 49, 59, 60, 61), (49, 51, 59, 60, 71),
+        (2, 49, 59, 60, 61), (14, 49, 59, 60, 61),
+    )
+    for points in terminal_win5:
+        for x in points:
+            blocked.add(previous.prior.canonical(
+                tuple(y for y in points if y != x)))
+    require(len(blocked) == 573 and not blocked.intersection(keys),
+            'WIN4 exclusion failed')
+
+    # The 119 third moves must all be covered by selected canonical S4
+    # classes, considering all eight D4 images containing the fixed root.
+    covered = set()
+    for key in keys:
+        points = previous.prior.pts(key)
+        for t in range(8):
+            image = []
+            for p in points:
+                x, y = p % 11, p // 11
+                u, v = ((x, y), (10-y, x), (10-x, 10-y), (y, 10-x),
+                        (10-x, y), (10-y, 10-x), (x, 10-y), (y, x))[t]
+                image.append(11*v + u)
+            if 49 in image and 60 in image:
+                covered.update(p for p in image if p not in (49, 60))
+    require(covered == set(range(121)) - {49, 60},
+            'incomplete third-move coverage')
     owners = defaultdict(set)
     witnesses = []
     all_children, known_children = set(), set()
