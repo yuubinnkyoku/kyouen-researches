@@ -159,12 +159,18 @@ def audit(workers, existing):
     }
 
 
-def remaining_worklist(shards, assignment, existing, worker_id):
-    """Resume only this exact frontier; never treat a report as a certificate."""
+def remaining_worklist(shards, assignment, existing, worker_id, focus=None):
+    """Resume this frontier, optionally restricting work to one S4 witness.
+
+    Focus changes scheduling only, never the assignment or evidence level.
+    """
+    if focus is not None:
+        require(focus <= assignment.keys(), 'focus includes off-frontier S5')
     verdicts, _ = previous.read_reports(assignment, [], existing)
     require(not any(v == 1 for v in verdicts.values()),
             'REPLAN_REQUIRED: reported WIN5 must be checked before further work')
-    return [k for k in shards[worker_id] if k not in verdicts]
+    return [k for k in shards[worker_id]
+            if k not in verdicts and (focus is None or k in focus)]
 
 
 def self_test():
@@ -187,6 +193,18 @@ def self_test():
                 'reported LOSS was scheduled twice')
         require(remaining_worklist(shards, assignment, report, 1) == [b],
                 'other worker lost its assignment')
+        require(remaining_worklist(shards, assignment, None, 0, {a}) == [a],
+                'focused worklist lost its S5 child')
+        require(remaining_worklist(shards, assignment, None, 1, {a}) == [],
+                'focused worklist leaked another S4 child')
+        require(remaining_worklist(shards, assignment, report, 0, {a}) == [],
+                'focused resume repeated a reported S5')
+        try:
+            remaining_worklist(shards, assignment, None, 0, {c})
+        except ValueError:
+            pass
+        else:
+            raise AssertionError('off-frontier focus was accepted')
         for bad in (row(a, 1), row(a, 0), row(c, 2),
                     row(a, 2) + row(a, 1)):
             report.write_text(bad, encoding='utf-8')
@@ -204,6 +222,8 @@ def main():
                         metavar=('ID', 'CSV'))
     parser.add_argument('--existing', type=Path)
     parser.add_argument('--worklist', choices=('0', '1', '2', '3'))
+    parser.add_argument('--focus-s4', metavar='HEX32',
+                        help='Export only unknown S5 children of this selected, unresolved S4')
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
@@ -215,12 +235,23 @@ def main():
         workers.append((int(ident), Path(filename)))
     if args.worklist is not None:
         require(not workers, 'cannot export worklist with worker reports')
-        _, _, _, assignment, shards, _, _ = build()
+        _, owners, witnesses, assignment, shards, _, _ = build()
+        focus = None
+        if args.focus_s4 is not None:
+            eligible = {w['s4']: i for i, w in enumerate(witnesses)
+                        if not w['known_loss4']}
+            require(args.focus_s4 in eligible,
+                    'focus S4 must be a selected unresolved witness')
+            index = eligible[args.focus_s4]
+            focus = {k for k, memberships in owners.items() if index in memberships}
+            require(len(focus) == witnesses[index]['unknown_s5'],
+                    'focused S4 dependency mismatch')
         keys = remaining_worklist(shards, assignment, args.existing,
-                                  int(args.worklist))
+                                  int(args.worklist), focus)
         if keys:
             sys.stdout.write('\n'.join(keys) + '\n')
         return
+    require(args.focus_s4 is None, '--focus-s4 requires --worklist')
     print(json.dumps(audit(workers, args.existing), indent=2, ensure_ascii=False))
 
 
