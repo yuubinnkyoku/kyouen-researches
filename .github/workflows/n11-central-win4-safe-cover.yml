@@ -33,7 +33,13 @@ jobs:
       - name: Audit dual-tight matching feasibility for all nine 31-class roots
         run: node research/experiments/n11-central-19-cover-20261031/audit_dual_matching.js
       - name: Cross-check central-49 cover against independently terminal-proved WIN5
-        run: node research/experiments/n11-central-19-cover-20261031/audit_central49_terminal_win5_conflicts.js
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/audit_central49_terminal_win5_conflicts.js
+          if node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_partition.js --priority-worker 0 > /tmp/invalid-live-worklist 2>/tmp/invalid-live-error; then
+            echo 'Refuted worker plan was unexpectedly exported' >&2
+            exit 1
+          fi
+          grep -q 'REFUTED_PLAN' /tmp/invalid-live-error
       - name: Independently reconstruct central-49 priority shards and audit worker-report guards
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/audit_central49_worker_results.py --self-test
