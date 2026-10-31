@@ -2351,6 +2351,7 @@
 - ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 二禁止集合の全安全局面Grundy閉公式
 - ← depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止集合の通常Grundy閉公式と値の上界3
 - ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 二禁止辺の通常Grundy閉公式
+- ← depends_on [K0581](../items/K0581-short-board-2qminus1-rigidity.md): 二つのq点禁止組の通常Grundy閉公式
 
 ## [K0484](../items/K0484-width-five-q9-all-lengths.md) 五行九点版は全長で行容量だけに分離しM_{5,9}=8
 
@@ -2804,9 +2805,15 @@
 - → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二禁止集合の通常Grundy閉公式と値の上界3
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 終局を1とするmisère補助mex値の定義
 - ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 二禁止辺のmisère交換則
+- ← depends_on [K0581](../items/K0581-short-board-2qminus1-rigidity.md): 二禁止組のmisère交換則
 
 ## [K0580](../items/K0580-critical-short-board-complete-classification.md) 平面q点禁止ゲームは境界N=2q−2でも禁止曲線と全安全局面を完全分類できる
 
 - → depends_on [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): 一曲線の場合の偶奇則と整数格子実現構成を利用
 - → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二禁止辺の通常Grundy閉公式
 - → depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止辺のmisère交換則
+
+## [K0581](../items/K0581-short-board-2qminus1-rigidity.md) 平面q点禁止ゲームのN=2q−1・q≥6では担い手が高々二本で全安全局面に閉公式がある
+
+- → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二つのq点禁止組の通常Grundy閉公式
+- → depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止組のmisère交換則

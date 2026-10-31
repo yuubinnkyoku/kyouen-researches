@@ -565,3 +565,4 @@
 | [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) | 平面q点禁止ゲームはN≤2q−3で禁止曲線が一意となり全安全局面を偶奇で強解決できる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
 | [K0579](../items/K0579-two-forbidden-misere-swap.md) | 包含極小禁止集合が高々二つの配置ゲームでは通常・misèreのGrundy交換則が全安全局面で成立する | proposition | proved | grundy, variants, residual-games, first-moves |
 | [K0580](../items/K0580-critical-short-board-complete-classification.md) | 平面q点禁止ゲームは境界N=2q−2でも禁止曲線と全安全局面を完全分類できる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
+| [K0581](../items/K0581-short-board-2qminus1-rigidity.md) | 平面q点禁止ゲームのN=2q−1・q≥6では担い手が高々二本で全安全局面に閉公式がある | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe |

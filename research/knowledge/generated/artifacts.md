@@ -9320,6 +9320,12 @@
 ## [research/experiments/saturation/scripts/saturation_20261003_verify.py](../../../research/experiments/saturation/scripts/saturation_20261003_verify.py)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (verifier): 証人と幾何の独立検査
+## [research/experiments/short-board-2qminus1-20261031/proof.md](../../../research/experiments/short-board-2qminus1-20261031/proof.md)
+
+- [K0581](../items/K0581-short-board-2qminus1-rigidity.md) (proof): 担い手分類、整数格子実現、型IIIの全安全局面mex閉公式と交換則の全称証明
+## [research/experiments/short-board-2qminus1-20261031/verify.py](../../../research/experiments/short-board-2qminus1-20261031/verify.py)
+
+- [K0581](../items/K0581-short-board-2qminus1-rigidity.md) (verifier): q≤50残数再帰、q≤8整数幾何・全安全部分集合直接mex、二禁止組と小格子全盤検査
 ## [research/experiments/short-board-unique-carrier-20261031/proof.md](../../../research/experiments/short-board-unique-carrier-20261031/proof.md)
 
 - [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (proof): 一曲線剛性、整数格子での全候補実現、終局長・全履歴・Grundyの閉公式、境界の整数反例
