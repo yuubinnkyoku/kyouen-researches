@@ -111,7 +111,7 @@ jobs:
           key = plan['worklists'][0][0]
           def row(key, verdict):
               bits = int(key, 16)
-              return f's5verdict,{bits & ((1 << 64)-1)},{bits >> 64},5,{verdict},1\\n'
+              return f's5verdict,{bits & ((1 << 64)-1)},{bits >> 64},5,{verdict},1\n'
           receipt = Path('/tmp/frozen-focus-w0.csv')
           receipt.write_text(row(key, 2))
           merged = Path('/tmp/frozen-focus-merged.csv')
