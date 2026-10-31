@@ -159,6 +159,18 @@ def audit(workers, existing):
     }
 
 
+def focus_children(owners, witnesses, s4):
+    """Resolve a coordinator-selected, unproved S4 to its exact S5 frontier."""
+    eligible = {w['s4']: i for i, w in enumerate(witnesses)
+                if not w['known_loss4']}
+    require(s4 in eligible, 'focus S4 must be a selected unresolved witness')
+    index = eligible[s4]
+    focus = {k for k, memberships in owners.items() if index in memberships}
+    require(len(focus) == witnesses[index]['unknown_s5'],
+            'focused S4 dependency mismatch')
+    return focus
+
+
 def remaining_worklist(shards, assignment, existing, worker_id, focus=None):
     """Resume this frontier, optionally restricting work to one S4 witness.
 
@@ -179,6 +191,26 @@ def self_test():
     a, b, c = (f'{i:032x}' for i in (1, 2, 3))
     shards = [[a], [b], [], []]
     assignment = {a: 0, b: 1}
+    example_witnesses = [
+        {'s4': 'candidate', 'known_loss4': False, 'unknown_s5': 1},
+        {'s4': 'proved', 'known_loss4': True, 'unknown_s5': 0},
+    ]
+    example_owners = {a: {0}, b: {0}}
+    try:
+        focus_children(example_owners, example_witnesses, 'candidate')
+    except ValueError:
+        pass
+    else:
+        raise AssertionError('inconsistent focused S4 count accepted')
+    example_owners[b] = set()
+    require(focus_children(example_owners, example_witnesses, 'candidate') == {a},
+            'coordinator focus omitted a child')
+    for bad in ('proved', 'unselected'):
+        try:
+            focus_children(example_owners, example_witnesses, bad)
+        except ValueError:
+            continue
+        raise AssertionError('invalid S4 focus accepted: ' + bad)
 
     def row(key, verdict):
         value = int(key, 16)
@@ -236,16 +268,8 @@ def main():
     if args.worklist is not None:
         require(not workers, 'cannot export worklist with worker reports')
         _, owners, witnesses, assignment, shards, _, _ = build()
-        focus = None
-        if args.focus_s4 is not None:
-            eligible = {w['s4']: i for i, w in enumerate(witnesses)
-                        if not w['known_loss4']}
-            require(args.focus_s4 in eligible,
-                    'focus S4 must be a selected unresolved witness')
-            index = eligible[args.focus_s4]
-            focus = {k for k, memberships in owners.items() if index in memberships}
-            require(len(focus) == witnesses[index]['unknown_s5'],
-                    'focused S4 dependency mismatch')
+        focus = (focus_children(owners, witnesses, args.focus_s4)
+                 if args.focus_s4 is not None else None)
         keys = remaining_worklist(shards, assignment, args.existing,
                                   int(args.worklist), focus)
         if keys:
