@@ -9562,6 +9562,12 @@
 ## [research/experiments/three-parallel-q6-19-20261018/verify.py](../../../research/experiments/three-parallel-q6-19-20261018/verify.py)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 16円の1820四組を有理数で全検査、弦energyの有限標本監査
+## [research/experiments/three-quota-terminal-gaps-20261031/proof.md](../../../research/experiments/three-quota-terminal-gaps-20261031/proof.md)
+
+- [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) (proof): 任意r・異容量の全称母関数、奇数rの強解決、11整数点のq=4幾何実現
+## [research/experiments/three-quota-terminal-gaps-20261031/verify.py](../../../research/experiments/three-quota-terminal-gaps-20261031/verify.py)
+
+- [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) (verifier): 2016抽象構成と整数平面330四点組・1262安全局面の独立完全検査
 ## [research/experiments/three-row-five-columns-20261019/output/q6-five-common-columns-integer-audit.json](../../../research/experiments/three-row-five-columns-20261019/output/q6-five-common-columns-integer-audit.json)
 
 - [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (data): 22638配置の完全列挙集計

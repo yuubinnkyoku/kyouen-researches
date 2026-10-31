@@ -129,6 +129,7 @@
 - ← depends_on [K0584](../items/K0584-short-board-two-carrier-threshold.md): 通常Grundy数とmisère補助値の定義
 - ← depends_on [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): 通常Grundy値とmisère補助mex値の定義
 - ← depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 通常・misère補助mexの定義
+- ← depends_on [K0589](../items/K0589-sunflower-quota-terminal-gaps.md): 通常Grundy値とmisère補助mexの定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2868,3 +2869,7 @@
 ## [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) 任意交差・異容量の二制約ゲームでは極大配置多項式が閉形式を持ち終局長は常に連続する
 
 - → generalizes [K0587](../items/K0587-two-carrier-terminal-spectrum.md): 共通点数0〜2・同じ容量q−1から任意の共通点数と異なる二容量へ拡張
+
+## [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) ひまわり型r容量制約の終局長は公差r−1で三制約から任意の欠番が生じ奇数rでは全局面を偶奇で強解決できる
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値とmisère補助mexの定義
