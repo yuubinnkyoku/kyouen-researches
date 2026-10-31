@@ -173,3 +173,7 @@ console.log(JSON.stringify({
   rootStats,selectedWitnessConflicts,
   note:'Existing solver-trusted S5 WIN labels; geometry audited. No S4 LOSS or root verdict added.'
 },null,2));
+
+// Reuse the pinned-cache, conflict-checked WIN4 set in an independent
+// 4x4-determinant audit of the constrained geometric cover certificate.
+module.exports={witnesses,REPS,canonical,points,maps};
