@@ -94,3 +94,54 @@ jobs:
               assert resumed['remaining_s5'] == 93
               assert plan['worklists'][0][0] not in sum(resumed['worklists'], [])
           PY
+
+      - name: Audit frozen worker receipts and atomic merge
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --audit-focus-plan /tmp/central49-focus-plan.json > /tmp/frozen-empty-audit.json
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          script = 'research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py'
+          plan_path = Path('/tmp/central49-focus-plan.json')
+          plan = json.loads(plan_path.read_text())
+          key = plan['worklists'][0][0]
+          def row(key, verdict):
+              bits = int(key, 16)
+              return f's5verdict,{bits & ((1 << 64)-1)},{bits >> 64},5,{verdict},1\\n'
+          receipt = Path('/tmp/frozen-focus-w0.csv')
+          receipt.write_text(row(key, 2))
+          merged = Path('/tmp/frozen-focus-merged.csv')
+          cmd = [sys.executable, script, '--audit-focus-plan', str(plan_path),
+                 '--worker', '0', str(receipt)]
+          result = json.loads(subprocess.check_output(
+              cmd + ['--merged-out', str(merged)], text=True))
+          assert result['new_reported_verdicts'] == 1
+          assert result['remaining_focused_s5'] == 93
+          assert result['root_outcome'] == 'UNKNOWN'
+          assert merged.read_text() == row(key, 2)
+          def refused(args):
+              proc = subprocess.run(args, capture_output=True, text=True)
+              assert proc.returncode != 0, (args, proc.stdout, proc.stderr)
+          refused(cmd + ['--merged-out', str(merged)])  # never overwrite
+          refused([sys.executable, script, '--audit-focus-plan', str(plan_path),
+                   '--worker', '1', str(receipt)])  # wrong worker
+          receipt.write_text(row(key, 1))
+          refused(cmd)  # WIN5 requires replan
+          receipt.write_text(row(key, 2))
+          other = Path('/tmp/frozen-focus-conflict.csv')
+          other.write_text(row(key, 1))
+          refused(cmd + ['--worker', '0', str(other)])  # conflict
+          old = json.loads(plan_path.read_text())
+          old['worker_sha256'][0] = '0' * 64
+          tampered = Path('/tmp/frozen-focus-tampered.json')
+          tampered.write_text(json.dumps(old))
+          refused([sys.executable, script, '--audit-focus-plan', str(tampered)])
+          full = Path('/tmp/2277-worker-0.txt').read_text().splitlines()
+          outside = next(k for k in full if k not in set(sum(plan['worklists'], [])))
+          receipt.write_text(row(outside, 2))
+          refused(cmd)  # on 2277 frontier but outside frozen focus
+          PY
