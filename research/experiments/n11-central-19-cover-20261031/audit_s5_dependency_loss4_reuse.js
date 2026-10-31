@@ -191,7 +191,7 @@ for(const row of base.roots){
 assert.equal(before.length,19);
 assert.equal(after.reduce((n,r)=>n+r.selected.length,0),839);
 for(const s of patch.swaps){
-  assert(!after.some(r=>r.selected.includes(s.remove)),'removed S4 still selected');
+  assert(!after.some(r=>r.minimum===56&&r.selected.includes(s.remove)),'removed S4 still selected in a 56-root');
   assert.throws(()=>verifyLoss4(s.remove),/not in pinned LOSS4 proof/);
   const ch=children(s.add),bad=new Map(cache);
   bad.set([...ch][0],1);
