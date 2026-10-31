@@ -241,6 +241,98 @@ def remaining_worklist(shards, assignment, existing, worker_id, focus=None):
             if k not in verdicts and (focus is None or k in focus)]
 
 
+
+def audit_frozen_plan(plan_path, existing, workers, merged_out):
+    """Rebuild and audit one frozen coordinator dispatch before merging receipts.
+
+    Unlike the generic frontier audit, this rejects worker rows outside the
+    *selected* S4's frozen worklists, even when they belong to the 2277 pool.
+    All verdicts remain unverified worker reports.
+    """
+    import os
+    import tempfile
+
+    _, owners, witnesses, assignment, shards, ordered, _ = build()
+    raw = plan_path.read_bytes()
+    plan = json.loads(raw)
+    require(isinstance(plan, dict), 'invalid frozen plan document')
+    before = (hashlib.sha256(existing.read_bytes()).hexdigest()
+              if existing is not None else None)
+    require(plan.get('existing_report_sha256') == before,
+            'frozen plan belongs to a different existing report')
+    old, _ = previous.read_reports(assignment, [], existing)
+    after = (hashlib.sha256(existing.read_bytes()).hexdigest()
+             if existing is not None else None)
+    require(before == after, 'existing report changed during snapshot audit')
+    expected = make_focus_plan(owners, witnesses, assignment, shards, ordered,
+                               old, plan.get('selected_s4'), before)
+    require(plan == expected, 'frozen plan differs from reconstructed frontier')
+    focused_assignment = {
+        key: worker
+        for worker, keys in enumerate(expected['worklists'])
+        for key in keys
+    }
+    require(len(focused_assignment) == expected['remaining_s5'],
+            'duplicate frozen worker assignment')
+    verdicts = dict(old)
+    stats = {'rows': 0, 'unknown_rows': 0, 'repeated_verdicts': 0}
+    hashes = [(path, hashlib.sha256(path.read_bytes()).hexdigest())
+              for _, path in workers]
+    for worker, path in workers:
+        previous.prior.parse_rows(path, focused_assignment, worker,
+                                  verdicts, stats, str(path))
+    require(not any(v == 1 for v in verdicts.values()),
+            'REPLAN_REQUIRED: reported WIN5; independently verify before continuing')
+    require(all(hashlib.sha256(path.read_bytes()).hexdigest() == digest
+                for path, digest in hashes),
+            'worker report changed during merge')
+    require(before == (hashlib.sha256(existing.read_bytes()).hexdigest()
+                       if existing is not None else None),
+            'existing report changed during merge')
+    new_keys = set(verdicts) - set(old)
+    require(new_keys <= focused_assignment.keys(),
+            'merged a verdict outside frozen worklists')
+    if merged_out is not None:
+        inputs = [plan_path] + [path for _, path in workers]
+        if existing is not None:
+            inputs.append(existing)
+        require(all(merged_out.resolve() != path.resolve() for path in inputs),
+                'merged output must not overwrite an input')
+        require(not merged_out.exists(), 'merged output already exists')
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(
+                    mode='w', encoding='utf-8', newline='', dir=merged_out.parent,
+                    prefix='.focus-merge-', delete=False) as stream:
+                temporary = Path(stream.name)
+                for key in sorted(verdicts):
+                    bits = int(key, 16)
+                    stream.write(
+                        f's5verdict,{bits & ((1 << 64)-1)},{bits >> 64},'
+                        f'5,{verdicts[key]},1\\n')
+                stream.flush()
+                os.fsync(stream.fileno())
+            os.link(temporary, merged_out)  # atomic, refuses overwrite
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
+    return {
+        'schema': 'n11-central49-2277-frozen-receipt-audit-v1',
+        'root_outcome': 'UNKNOWN', 'empty_board_outcome': 'UNKNOWN',
+        'evidence_level': 'WORKER_REPORTED_NOT_INDEPENDENTLY_REPLAYED',
+        'snapshot_sha256': hashlib.sha256(raw).hexdigest(),
+        'selected_s4': plan['selected_s4'],
+        'frozen_focus_s5': plan['remaining_s5'],
+        'new_reported_verdicts': len(new_keys),
+        'total_reported_verdicts': len(verdicts),
+        'remaining_focused_s5': plan['remaining_s5'] - len(new_keys),
+        'unknown_rows_ignored': stats['unknown_rows'],
+        'repeated_consistent_verdicts': stats['repeated_verdicts'],
+        'merged_output': str(merged_out) if merged_out is not None else None,
+        'caveat': 'Worker reports are not certificates. Independently replay every verdict.'
+    }
+
+
 def self_test():
     import tempfile
     previous.prior.self_test()
@@ -352,6 +444,10 @@ def main():
                         help='Automatically focus the unresolved S4 with fewest unreported S5 children')
     parser.add_argument('--focus-plan', action='store_true',
                         help='Emit one immutable JSON snapshot with all four focused worker lists')
+    parser.add_argument('--audit-focus-plan', type=Path,
+                        help='Audit receipts against one frozen --focus-plan JSON')
+    parser.add_argument('--merged-out', type=Path,
+                        help='Publish a NEW merged CSV only after fail-closed audit')
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
@@ -361,6 +457,16 @@ def main():
     for ident, filename in args.worker:
         require(ident in ('0', '1', '2', '3'), 'worker ID must be 0..3')
         workers.append((int(ident), Path(filename)))
+    if args.audit_focus_plan is not None:
+        require(args.worklist is None and not args.focus_plan
+                and not args.focus_priority and args.focus_s4 is None,
+                'frozen receipt audit cannot export a new worklist')
+        print(json.dumps(audit_frozen_plan(args.audit_focus_plan, args.existing,
+                                          workers, args.merged_out),
+                         indent=2, ensure_ascii=False))
+        return
+    require(args.merged_out is None,
+            '--merged-out requires --audit-focus-plan')
     require(not (args.focus_s4 and args.focus_priority),
             '--focus-s4 and --focus-priority are mutually exclusive')
     require(not (args.focus_plan and args.worklist is not None),
