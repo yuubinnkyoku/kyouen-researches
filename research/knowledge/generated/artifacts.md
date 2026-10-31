@@ -9320,6 +9320,18 @@
 ## [research/experiments/saturation/scripts/saturation_20261003_verify.py](../../../research/experiments/saturation/scripts/saturation_20261003_verify.py)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (verifier): 証人と幾何の独立検査
+## [research/experiments/short-board-2q-20261031/proof.md](../../../research/experiments/short-board-2q-20261031/proof.md)
+
+- [K0582](../items/K0582-short-board-2q-two-carriers.md) (proof): 担い手の七型分類、整数格子実現、四変数再帰の全称正当性、極大配置計数とq=6の反例
+## [research/experiments/short-board-2q-20261031/verify.py](../../../research/experiments/short-board-2q-20261031/verify.py)
+
+- [K0582](../items/K0582-short-board-2q-two-carriers.md) (verifier): q=7,8の557748全安全局面の独立mex照合、整数幾何判定、q≤50の極大配置計数検証
+## [research/experiments/short-board-2q-periodic-20261031/proof.md](../../../research/experiments/short-board-2q-periodic-20261031/proof.md)
+
+- [K0583](../items/K0583-two-carrier-constant-state-grundy.md) (proof): 残容量の偶奇縮約、1723局所恒等式を基底とする無界帰納法
+## [research/experiments/short-board-2q-periodic-20261031/verify.py](../../../research/experiments/short-board-2q-periodic-20261031/verify.py)
+
+- [K0583](../items/K0583-two-carrier-constant-state-grundy.md) (verifier): 有限状態証明書と別表現による119317圧縮局面の独立再帰照合
 ## [research/experiments/short-board-2qminus1-20261031/proof.md](../../../research/experiments/short-board-2qminus1-20261031/proof.md)
 
 - [K0581](../items/K0581-short-board-2qminus1-rigidity.md) (proof): 担い手分類、整数格子実現、型IIIの全安全局面mex閉公式と交換則の全称証明

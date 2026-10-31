@@ -51,6 +51,7 @@
 - ← depends_on [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md): 6点共円・共線禁止の対象定義
 - ← depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 安全な追加だけを合法手とする完全指摘ルールの定義
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 共円4点禁止・合法手と終局規則
+- ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 完全指摘・安全追加ルール
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -123,6 +124,8 @@
 - ← depends_on [K0577](../items/K0577-qplus1-geometric-rigidity.md): 通常・misèreのmex定義
 - ← depends_on [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): 通常・misère補助mex値の定義
 - ← depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 終局を1とするmisère補助mex値の定義
+- ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0583](../items/K0583-two-carrier-constant-state-grundy.md): 通常Grundyとmisère補助mexの定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2817,3 +2820,14 @@
 
 - → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二つのq点禁止組の通常Grundy閉公式
 - → depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止組のmisère交換則
+
+## [K0582](../items/K0582-short-board-2q-two-carriers.md) 平面q点禁止ゲームのN=2q・q≥7は七つの二担い手型に分類でき全安全局面を二次時間で強解決できる
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・安全追加ルール
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0583](../items/K0583-two-carrier-constant-state-grundy.md): 二担い手七型の幾何分類と四群の容量再帰
+
+## [K0583](../items/K0583-two-carrier-constant-state-grundy.md) N=2q・q≥7の二担い手七型は定数状態で全局面強解決でき空盤の通常・misère値も無界に確定する
+
+- → depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 二担い手七型の幾何分類と四群の容量再帰
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundyとmisère補助mexの定義

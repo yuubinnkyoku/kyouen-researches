@@ -566,3 +566,5 @@
 | [K0579](../items/K0579-two-forbidden-misere-swap.md) | 包含極小禁止集合が高々二つの配置ゲームでは通常・misèreのGrundy交換則が全安全局面で成立する | proposition | proved | grundy, variants, residual-games, first-moves |
 | [K0580](../items/K0580-critical-short-board-complete-classification.md) | 平面q点禁止ゲームは境界N=2q−2でも禁止曲線と全安全局面を完全分類できる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
 | [K0581](../items/K0581-short-board-2qminus1-rigidity.md) | 平面q点禁止ゲームのN=2q−1・q≥6では担い手が高々二本で全安全局面に閉公式がある | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe |
+| [K0582](../items/K0582-short-board-2q-two-carriers.md) | 平面q点禁止ゲームのN=2q・q≥7は七つの二担い手型に分類でき全安全局面を二次時間で強解決できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe, strategy-length |
+| [K0583](../items/K0583-two-carrier-constant-state-grundy.md) | N=2q・q≥7の二担い手七型は定数状態で全局面強解決でき空盤の通常・misère値も無界に確定する | proposition | proved | geometry, variants, grundy, residual-games, first-moves |
