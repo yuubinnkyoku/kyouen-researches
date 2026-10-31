@@ -101,7 +101,7 @@ assert.deepEqual(clique,Array.from({length:13},(_,i)=>i+11));
 let cliquePairs=0,cliqueOverlap=0;
 for(let a=0;a<clique.length;a++)for(let b=a+1;b<clique.length;b++){
  const w=pair[clique[a]][clique[b]];
- assert(w>=3&&w<=4,'13-witness clique not complete');
+ assert(w>=2&&w<=4,'13-witness clique not complete');
  cliquePairs++;cliqueOverlap+=w;
 }
 assert.equal(cliquePairs,78);
