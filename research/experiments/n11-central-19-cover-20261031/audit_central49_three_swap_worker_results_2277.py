@@ -309,7 +309,7 @@ def audit_frozen_plan(plan_path, existing, workers, merged_out):
                     bits = int(key, 16)
                     stream.write(
                         f's5verdict,{bits & ((1 << 64)-1)},{bits >> 64},'
-                        f'5,{verdicts[key]},1\\n')
+                        f'5,{verdicts[key]},1\n')
                 stream.flush()
                 os.fsync(stream.fileno())
             os.link(temporary, merged_out)  # atomic, refuses overwrite
