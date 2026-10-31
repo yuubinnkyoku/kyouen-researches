@@ -180,17 +180,17 @@ const CACHE_SOURCES=[
 const cache=new Map();
 for(const [relative,expected] of CACHE_SOURCES){
  const raw=fs.readFileSync(path.join(ROOT,relative));
- const actual=crypto.createHash('sha1').update('blob '+raw.length+'\\0').update(raw).digest('hex');
+ const actual=crypto.createHash('sha1').update('blob '+raw.length+'\0').update(raw).digest('hex');
  assert.equal(actual,expected,'S5 source blob changed: '+relative);
  const local=new Map();
- for(const line of raw.toString('utf8').split(/\\r?\\n/)){
+ for(const line of raw.toString('utf8').split(/\r?\n/)){
   if(!line||line.startsWith('#'))continue;
   const cols=line.split(',');
   assert.equal(cols.length,6);
   assert.equal(cols[0],'s5verdict');
   assert.equal(cols[3],'5');
   assert(['1','2'].includes(cols[4]));
-  assert(/^\\d+$/.test(cols[1])&&/^\\d+$/.test(cols[2]));
+  assert(/^\d+$/.test(cols[1])&&/^\d+$/.test(cols[2]));
   const lo=BigInt(cols[1]),hi=BigInt(cols[2]);
   assert(lo>=0n&&lo<1n<<64n&&hi>=0n&&hi<1n<<64n);
   const key=(lo+(hi<<64n)).toString(16).padStart(32,'0');
@@ -225,7 +225,7 @@ for(const [key,indices] of neededOwners){
  assert(assigned.has(key),'unassigned S5');
  assert(indices.every(i=>unresolvedSet.has(i)),'S5 child also belongs to known LOSS4');
 }
-const digest=keys=>crypto.createHash('sha256').update(keys.join('\\n')+'\\n').digest('hex');
+const digest=keys=>crypto.createHash('sha256').update(keys.join('\n')+'\n').digest('hex');
 const shardHashes=shards.map(digest);
 const witnessShards=unknown.map(i=>{
  const keys=neededOwners.filter(([key,indices])=>!cache.has(key)&&indices.includes(i));
@@ -247,5 +247,5 @@ report.childLevelSharding={
 const args=process.argv.slice(2);
 if(args.length===0)console.log(JSON.stringify(report,null,2));
 else if(args.length===2&&args[0]==='--worker'&&/^[0-3]$/.test(args[1]))
- process.stdout.write(shards[Number(args[1])].join('\\n')+'\\n');
+ process.stdout.write(shards[Number(args[1])].join('\n')+'\n');
 else throw new Error('usage: node audit_central49_worker_partition.js [--worker 0|1|2|3]');
