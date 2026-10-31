@@ -89,3 +89,14 @@ jobs:
             python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results.py --worklist "$worker" > "/tmp/three-swap-worker-$worker.txt"
           done
           python3 -c 'from pathlib import Path; a=[Path(f"/tmp/three-swap-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[626,625,625,625]; assert len(set(sum(a,[])))==2501'
+
+      - name: Verify 51-class post-three two-swap reduction and independent 2450-class frontier
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/verify_central49_post_three_two_swap_2450.js > /tmp/central49-post-three-two-swap.json
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_post_three_two_swap_worker_results.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_post_three_two_swap_worker_results.py > /tmp/central49-post-three-two-swap-workers.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-post-three-two-swap-workers.json")); assert x["pending_s5_classes"]==2450 and x["unreported_s5"]==2450 and x["worker_loads"]==[613,613,612,612] and x["root_outcome"]=="UNKNOWN"'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_post_three_two_swap_worker_results.py --worklist "$worker" > "/tmp/post-three-two-swap-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/post-three-two-swap-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[613,613,612,612]; assert len(set(sum(a,[])))==2450'
