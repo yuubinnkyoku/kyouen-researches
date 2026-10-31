@@ -1,0 +1,22 @@
+name: N11 central WIN4-safe cover audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/**'
+      - '.github/workflows/n11-central-win4-safe-cover.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original 19 geometric primal-dual certificates
+        run: node research/experiments/n11-central-19-cover-20261031/verify.js
+      - name: Verify pinned exact S5 cache and WIN4 exclusions
+        run: node research/experiments/n11-central-19-cover-20261031/audit_win4_exclusion.js
+      - name: Verify ten WIN4-safe 56-class covers and their lower bounds
+        run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_56.js
