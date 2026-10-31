@@ -90,6 +90,12 @@ def mask_solver(q,points,edges):
         b=(m>>(q-1)&((1<<(q-2))-1)).bit_count()
         c=(m>>(2*q-3)).bit_count()
         assert (g[m],h[m])==predicted(q,a,b,c),(q,m,(g[m],h[m]),(a,b,c))
+    terminal=Counter()
+    for m in states:
+        if not any(not (m>>i)&1 and safe[m|(1<<i)] for i in range(n)):
+            terminal[m.bit_count()]+=1
+    assert terminal==Counter({2*q-3:2*q-1,
+                              2*q-4:comb(q-1,2)*(q-2)}),(q,terminal)
     return len(states),(g[0],h[0])
 
 def main():
