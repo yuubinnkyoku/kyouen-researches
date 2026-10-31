@@ -35,7 +35,7 @@ def build():
     git_sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
     require(git_sha == CERT_BLOB, 'post-three-two-swap certificate changed; explicit re-audit required')
     doc = json.loads(raw)
-    require(doc['schema'] == 'n11-central49-terminal-safe-post-three-two-swap-v1'
+    require(doc['schema'] == 'n11-central49-terminal-safe-post-three-two-swap-2345-v1'
             and doc['root_stones'] == [49, 60]
             and doc['root_outcome'] == 'UNKNOWN'
             and doc['empty_board_outcome'] == 'UNKNOWN',
@@ -114,7 +114,7 @@ def audit(workers, existing):
                 len(relevant) == witness['unknown_s5'] and 1 not in relevant
         })
     return {
-        'schema': 'n11-central49-post-three-two-swap-worker-audit-v1',
+        'schema': 'n11-central49-post-three-two-swap-2345-worker-audit-v1',
         'root': [49, 60], 'root_outcome': 'UNKNOWN',
         'empty_board_outcome': 'UNKNOWN',
         'evidence_level': 'WORKER_REPORTED_NOT_INDEPENDENTLY_REPLAYED',
