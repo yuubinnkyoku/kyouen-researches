@@ -43,7 +43,7 @@ jobs:
           assert set(flat) == focus
           assert all(assignment[key] == i for i, part in enumerate(worklists) for key in part)
           Path('/tmp/central49-focused-0-expected.txt').write_text(
-              ''.join(key + '\\n' for key in worklists[0]))
+              ''.join(key + '\n' for key in worklists[0]))
           PY
           python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist 0 --focus-priority > /tmp/central49-focused-0-cli.txt
           cmp /tmp/central49-focused-0-expected.txt /tmp/central49-focused-0-cli.txt
