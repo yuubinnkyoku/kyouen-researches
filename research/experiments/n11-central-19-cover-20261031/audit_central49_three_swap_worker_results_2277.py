@@ -159,6 +159,45 @@ def audit(workers, existing):
     }
 
 
+def remaining_worklist(shards, assignment, existing, worker_id):
+    """Resume only this exact frontier; never treat a report as a certificate."""
+    verdicts, _ = previous.read_reports(assignment, [], existing)
+    require(not any(v == 1 for v in verdicts.values()),
+            'REPLAN_REQUIRED: reported WIN5 must be checked before further work')
+    return [k for k in shards[worker_id] if k not in verdicts]
+
+
+def self_test():
+    import tempfile
+    previous.prior.self_test()
+    a, b, c = (f'{i:032x}' for i in (1, 2, 3))
+    shards = [[a], [b], [], []]
+    assignment = {a: 0, b: 1}
+
+    def row(key, verdict):
+        value = int(key, 16)
+        return f's5verdict,{value & ((1 << 64) - 1)},{value >> 64},5,{verdict},1\\n'
+
+    with tempfile.TemporaryDirectory() as directory:
+        report = Path(directory) / 'merged.csv'
+        require(remaining_worklist(shards, assignment, None, 0) == [a],
+                'empty resume changed full worklist')
+        report.write_text(row(a, 2), encoding='utf-8')
+        require(remaining_worklist(shards, assignment, report, 0) == [],
+                'reported LOSS was scheduled twice')
+        require(remaining_worklist(shards, assignment, report, 1) == [b],
+                'other worker lost its assignment')
+        for bad in (row(a, 1), row(a, 0), row(c, 2),
+                    row(a, 2) + row(a, 1)):
+            report.write_text(bad, encoding='utf-8')
+            try:
+                remaining_worklist(shards, assignment, report, 0)
+            except ValueError:
+                continue
+            raise AssertionError('unsafe resume accepted: ' + repr(bad))
+    print('RESUME_SELF_TEST_OK')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--worker', nargs=2, action='append', default=[],
@@ -168,17 +207,17 @@ def main():
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
-        previous.prior.self_test()
+        self_test()
         return
     workers = []
     for ident, filename in args.worker:
         require(ident in ('0', '1', '2', '3'), 'worker ID must be 0..3')
         workers.append((int(ident), Path(filename)))
     if args.worklist is not None:
-        require(not workers and args.existing is None,
-                'cannot export worklist while accepting unverified reports')
-        _, _, _, _, shards, _, _ = build()
-        keys = shards[int(args.worklist)]
+        require(not workers, 'cannot export worklist with worker reports')
+        _, _, _, assignment, shards, _, _ = build()
+        keys = remaining_worklist(shards, assignment, args.existing,
+                                  int(args.worklist))
         if keys:
             sys.stdout.write('\n'.join(keys) + '\n')
         return
