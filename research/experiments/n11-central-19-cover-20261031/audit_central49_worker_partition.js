@@ -282,7 +282,7 @@ const priorityLoads=priorityShards.map(s=>s.filter(k=>prioritySet.has(k)).length
 assert.deepEqual(priorityLoads,[23,23,23,22]);
 for(const s of priorityShards){
  const firstNonPriority=s.findIndex(k=>!prioritySet.has(k));
- assert(s.slice(firstNonPriority<0?s.length:firstNonPriority)
+ assert(s.slice(0,firstNonPriority<0?s.length:firstNonPriority)
   .every(k=>prioritySet.has(k)),'priority work not at shard head');
  assert(s.slice(firstNonPriority<0?s.length:firstNonPriority)
   .every(k=>!prioritySet.has(k)),'priority work interleaved');
