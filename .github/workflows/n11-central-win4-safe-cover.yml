@@ -24,3 +24,5 @@ jobs:
         run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_31.js
       - name: Search exact-size repairs for five 31-class covers
         run: node research/experiments/n11-central-19-cover-20261031/repair_31.js
+      - name: Audit dual-tight matching feasibility for all nine 31-class roots
+        run: node research/experiments/n11-central-19-cover-20261031/audit_dual_matching.js
