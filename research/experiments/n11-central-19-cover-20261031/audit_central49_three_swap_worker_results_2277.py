@@ -171,6 +171,24 @@ def focus_children(owners, witnesses, s4):
     return focus
 
 
+def choose_priority_focus(owners, witnesses, reported):
+    """Select the smallest *remaining* S4 frontier; reports affect scheduling only.
+
+    A fully reported S4 is NOT a proof. Never infer its verdict here.
+    """
+    candidates = []
+    for i, witness in enumerate(witnesses):
+        if witness['known_loss4']:
+            continue
+        keys = {key for key, membership in owners.items() if i in membership}
+        require(len(keys) == witness['unknown_s5'],
+                'priority S4 dependency mismatch')
+        remaining = len(keys - reported.keys())
+        if remaining:
+            candidates.append((remaining, witness['unknown_s5'], witness['s4']))
+    return min(candidates)[2] if candidates else None
+
+
 def remaining_worklist(shards, assignment, existing, worker_id, focus=None):
     """Resume this frontier, optionally restricting work to one S4 witness.
 
@@ -203,6 +221,10 @@ def self_test():
     else:
         raise AssertionError('inconsistent focused S4 count accepted')
     example_owners[b] = set()
+    require(choose_priority_focus(example_owners, example_witnesses, {}) == 'candidate',
+            'priority focus did not select the unresolved witness')
+    require(choose_priority_focus(example_owners, example_witnesses, {a: 2}) is None,
+            'fully reported S4 was rescheduled')
     require(focus_children(example_owners, example_witnesses, 'candidate') == {a},
             'coordinator focus omitted a child')
     for bad in ('proved', 'unselected'):
@@ -216,6 +238,17 @@ def self_test():
         value = int(key, 16)
         return f's5verdict,{value & ((1 << 64) - 1)},{value >> 64},5,{verdict},1\n'
 
+    two_witnesses = [
+        {'s4': 'large', 'known_loss4': False, 'unknown_s5': 2},
+        {'s4': 'small', 'known_loss4': False, 'unknown_s5': 1},
+    ]
+    two_owners = {a: {0, 1}, b: {0}}
+    require(choose_priority_focus(two_owners, two_witnesses, {}) == 'small',
+            'priority did not choose smaller S4')
+    require(choose_priority_focus(two_owners, two_witnesses, {a: 2}) == 'large',
+            'priority did not update after a report')
+    require(choose_priority_focus(two_owners, two_witnesses, {a: 2, b: 2}) is None,
+            'fully reported witnesses were mistaken for pending work')
     with tempfile.TemporaryDirectory() as directory:
         report = Path(directory) / 'merged.csv'
         require(remaining_worklist(shards, assignment, None, 0) == [a],
@@ -256,6 +289,8 @@ def main():
     parser.add_argument('--worklist', choices=('0', '1', '2', '3'))
     parser.add_argument('--focus-s4', metavar='HEX32',
                         help='Export only unknown S5 children of this selected, unresolved S4')
+    parser.add_argument('--focus-priority', action='store_true',
+                        help='Automatically focus the unresolved S4 with fewest unreported S5 children')
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
@@ -265,17 +300,28 @@ def main():
     for ident, filename in args.worker:
         require(ident in ('0', '1', '2', '3'), 'worker ID must be 0..3')
         workers.append((int(ident), Path(filename)))
+    require(not (args.focus_s4 and args.focus_priority),
+            '--focus-s4 and --focus-priority are mutually exclusive')
     if args.worklist is not None:
         require(not workers, 'cannot export worklist with worker reports')
         _, owners, witnesses, assignment, shards, _, _ = build()
-        focus = (focus_children(owners, witnesses, args.focus_s4)
-                 if args.focus_s4 is not None else None)
+        if args.focus_priority:
+            reported, _ = previous.read_reports(assignment, [], args.existing)
+            require(not any(v == 1 for v in reported.values()),
+                    'REPLAN_REQUIRED: reported WIN5 must be checked before further work')
+            selected = choose_priority_focus(owners, witnesses, reported)
+            focus = (focus_children(owners, witnesses, selected)
+                     if selected is not None else set())
+        else:
+            focus = (focus_children(owners, witnesses, args.focus_s4)
+                     if args.focus_s4 is not None else None)
         keys = remaining_worklist(shards, assignment, args.existing,
                                   int(args.worklist), focus)
         if keys:
             sys.stdout.write('\n'.join(keys) + '\n')
         return
-    require(args.focus_s4 is None, '--focus-s4 requires --worklist')
+    require(args.focus_s4 is None and not args.focus_priority,
+            '--focus-s4 and --focus-priority require --worklist')
     print(json.dumps(audit(workers, args.existing), indent=2, ensure_ascii=False))
 
 
