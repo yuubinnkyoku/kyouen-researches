@@ -581,3 +581,4 @@
 | [K0594](../items/K0594-three-forbidden-sets-sharp-geometric-gap.md) | 三つの禁止集合で終局長に欠番が生じる必要十分条件と整数平面q点版の最小3q−4点構成 | proposition | proved | geometry, maximal-safe, grundy, variants, residual-games |
 | [K0595](../items/K0595-four-forbidden-sets-sharp-terminal-gaps.md) | 四つの禁止集合の終局長を点の所属次数で分類し整数平面q点版の最大欠番二族の最小点数を決定 | proposition | proved | geometry, maximal-safe, residual-games, variants, grundy |
 | [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) | 任意本数の禁止集合で最大の終局長欠番を生む構造を完全特徴づけ整数平面で鋭い最小点数を決定 | proposition | proved | geometry, maximal-safe, residual-games, variants, strategy-length |
+| [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) | 五禁止集合の終局長を完全分類し全16種類を実現、11×11内14点で交互欠番を構成 | proposition | proved | maximal-safe, residual-games, geometry, variants, grundy |
