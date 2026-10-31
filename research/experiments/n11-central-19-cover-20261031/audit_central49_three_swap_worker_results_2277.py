@@ -189,6 +189,44 @@ def choose_priority_focus(owners, witnesses, reported):
     return min(candidates)[2] if candidates else None
 
 
+
+def make_focus_plan(owners, witnesses, assignment, shards, ordered, reported,
+                    requested_s4=None, existing_sha256=None):
+    """Freeze one coordinator decision and all four worklists in one snapshot.
+
+    Each worker must consume its list from this same document, rather than
+    independently reselecting a priority against a changing report file.
+    """
+    require(not any(v == 1 for v in reported.values()),
+            'REPLAN_REQUIRED: reported WIN5 must be checked before further work')
+    selected = (requested_s4 if requested_s4 is not None
+                else choose_priority_focus(owners, witnesses, reported))
+    focus = focus_children(owners, witnesses, selected) if selected is not None else set()
+    worklists = [[key for key in shard if key in focus and key not in reported]
+                 for shard in shards]
+    flat = [key for part in worklists for key in part]
+    require(len(flat) == len(set(flat)), 'duplicate S5 in frozen focus plan')
+    require(set(flat) == focus - reported.keys(),
+            'incomplete frozen focus plan')
+    require(all(assignment[key] == worker for worker, part in enumerate(worklists)
+                for key in part), 'wrong worker in frozen focus plan')
+    return {
+        'schema': 'n11-central49-2277-focused-snapshot-v1',
+        'root': [49, 60], 'root_outcome': 'UNKNOWN',
+        'empty_board_outcome': 'UNKNOWN',
+        'evidence_level': 'SCHEDULING_ONLY_NOT_A_CERTIFICATE',
+        'source_manifest_sha256': previous.prior.digest(ordered),
+        'existing_report_sha256': existing_sha256,
+        'selected_s4': selected,
+        'selected_unknown_s5': len(focus),
+        'remaining_s5': len(flat),
+        'worker_loads': list(map(len, worklists)),
+        'worker_sha256': list(map(previous.prior.digest, worklists)),
+        'worklists': worklists,
+        'caveat': 'One immutable dispatch snapshot. Worker reports are not independent proofs; empty lists never certify S4 LOSS.'
+    }
+
+
 def remaining_worklist(shards, assignment, existing, worker_id, focus=None):
     """Resume this frontier, optionally restricting work to one S4 witness.
 
@@ -227,6 +265,27 @@ def self_test():
             'fully reported S4 was rescheduled')
     require(focus_children(example_owners, example_witnesses, 'candidate') == {a},
             'coordinator focus omitted a child')
+    frozen = make_focus_plan(example_owners, example_witnesses, assignment,
+                             shards, [a, b], {})
+    require(frozen['selected_s4'] == 'candidate'
+            and frozen['worker_loads'] == [1, 0, 0, 0]
+            and frozen['worklists'] == [[a], [], [], []]
+            and frozen['remaining_s5'] == 1,
+            'frozen focus snapshot is inconsistent')
+    finished = make_focus_plan(example_owners, example_witnesses, assignment,
+                               shards, [a, b], {a: 2})
+    require(finished['selected_s4'] is None and finished['remaining_s5'] == 0
+            and finished['evidence_level'] == 'SCHEDULING_ONLY_NOT_A_CERTIFICATE',
+            'fully reported work was promoted to proof')
+    for bad_report, bad_s4 in (({a: 1}, None), ({}, 'proved'),
+                               ({}, 'unselected')):
+        try:
+            make_focus_plan(example_owners, example_witnesses, assignment,
+                            shards, [a, b], bad_report, bad_s4)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError('unsafe frozen focus plan accepted')
     for bad in ('proved', 'unselected'):
         try:
             focus_children(example_owners, example_witnesses, bad)
@@ -291,6 +350,8 @@ def main():
                         help='Export only unknown S5 children of this selected, unresolved S4')
     parser.add_argument('--focus-priority', action='store_true',
                         help='Automatically focus the unresolved S4 with fewest unreported S5 children')
+    parser.add_argument('--focus-plan', action='store_true',
+                        help='Emit one immutable JSON snapshot with all four focused worker lists')
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
@@ -302,6 +363,21 @@ def main():
         workers.append((int(ident), Path(filename)))
     require(not (args.focus_s4 and args.focus_priority),
             '--focus-s4 and --focus-priority are mutually exclusive')
+    require(not (args.focus_plan and args.worklist is not None),
+            '--focus-plan and --worklist are mutually exclusive')
+    if args.focus_plan:
+        require(not workers, 'cannot export a focus plan with worker reports')
+        _, owners, witnesses, assignment, shards, ordered, _ = build()
+        before = (hashlib.sha256(args.existing.read_bytes()).hexdigest()
+                  if args.existing is not None else None)
+        reported, _ = previous.read_reports(assignment, [], args.existing)
+        after = (hashlib.sha256(args.existing.read_bytes()).hexdigest()
+                 if args.existing is not None else None)
+        require(before == after, 'existing report changed during focus snapshot')
+        plan = make_focus_plan(owners, witnesses, assignment, shards, ordered,
+                               reported, args.focus_s4, before)
+        print(json.dumps(plan, indent=2, ensure_ascii=False))
+        return
     if args.worklist is not None:
         require(not workers, 'cannot export worklist with worker reports')
         _, owners, witnesses, assignment, shards, _, _ = build()
