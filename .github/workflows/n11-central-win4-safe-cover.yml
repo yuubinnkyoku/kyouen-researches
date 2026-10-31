@@ -20,3 +20,5 @@ jobs:
         run: node research/experiments/n11-central-19-cover-20261031/audit_win4_exclusion.js
       - name: Verify ten WIN4-safe 56-class covers and their lower bounds
         run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_56.js
+      - name: Search exact-size repairs for five 31-class covers
+        run: node research/experiments/n11-central-19-cover-20261031/repair_31.js
