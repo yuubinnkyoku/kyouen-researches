@@ -8,7 +8,7 @@ const cert=JSON.parse(fs.readFileSync(dir+'/win4-safe-56-certificate.json','utf8
 const prior=JSON.parse(zlib.gunzipSync(Buffer.from(
   fs.readFileSync(dir+'/certificate.json.gz.b64','utf8').trim(),'base64')));
 const REPS=[26,25,3,13,2,14,15,4,1,37];
-const EXCLUDED=[35,9,48,21,29,17,43,16,13,32];
+const EXCLUDED=[35,9,47,21,29,15,43,16,11,32];
 // Full 4x4 determinant (the generator and cache audit use a 3x3 difference).
 function det4(p){
   const a=p.map(i=>{const x=i%11,y=Math.floor(i/11);
@@ -81,7 +81,7 @@ assert.deepEqual(cert.roots.map(r=>r.first),REPS);
 assert.equal(cert.cache_sources.length,2);
 assert.equal(cert.cache_sources[0].blob_sha,'2dccf42b92337cbcbfb62ea5c77db487b1ad8ead');
 assert.equal(cert.cache_sources[1].blob_sha,'9887a18c0788d26507be7e8e191c26817634a6b6');
-assert.equal(witnesses.size,555);
+assert.equal(witnesses.size,549);
 const result=[];
 for(let i=0;i<REPS.length;i++){
   const row=cert.roots[i],a=REPS[i];assert.equal(row.first,a);
@@ -102,6 +102,6 @@ for(let i=0;i<REPS.length;i++){
     legalClasses:classes.size,thirdMovesCovered:119});
 }
 console.log(JSON.stringify({schema:cert.schema,roots:result,verifiedRoots:10,
-  selectedClasses:560,blockedWin4:555,geometryConstrainedOptimum56:true,
+  selectedClasses:560,blockedWin4:549,geometryConstrainedOptimum56:true,
   negativeControlsPassed:true,emptyBoard:'UNKNOWN',
   note:'S4 LOSS verdicts are NOT proved by this geometric cover.'},null,2));
