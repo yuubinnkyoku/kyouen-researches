@@ -560,3 +560,17 @@
 | [K0573](../items/K0573-coplanar-3x3x8-strong-solution.md) | 3×3×8・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0574](../items/K0574-coplanar-3x3x9-strong-solution.md) | 3×3×9・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0575](../items/K0575-coplanar-3x3x10-strong-solution.md) | 3×3×10・4点共面禁止版は全局面強解決され空盤Grundy値は2、辺中点の初手は全て負け手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
+| [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) | 余補一型のq点禁止ゲームは全安全局面の通常・misère値と全勝ち初手に閉公式を持つ | proposition | proved | variants, grundy, first-moves, residual-games, maximal-safe, strategy-length |
+| [K0577](../items/K0577-qplus1-geometric-rigidity.md) | 平面上のq+1点では共円・共線の禁止q点組数は0・1・q+1のみで全局面Grundy値は偶奇で決まる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
+| [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) | 平面q点禁止ゲームはN≤2q−3で禁止曲線が一意となり全安全局面を偶奇で強解決できる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
+| [K0579](../items/K0579-two-forbidden-misere-swap.md) | 包含極小禁止集合が高々二つの配置ゲームでは通常・misèreのGrundy交換則が全安全局面で成立する | proposition | proved | grundy, variants, residual-games, first-moves |
+| [K0580](../items/K0580-critical-short-board-complete-classification.md) | 平面q点禁止ゲームは境界N=2q−2でも禁止曲線と全安全局面を完全分類できる | proposition | proved | geometry, variants, grundy, first-moves, maximal-safe, strategy-length |
+| [K0581](../items/K0581-short-board-2qminus1-rigidity.md) | 平面q点禁止ゲームのN=2q−1・q≥6では担い手が高々二本で全安全局面に閉公式がある | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe |
+| [K0582](../items/K0582-short-board-2q-two-carriers.md) | 平面q点禁止ゲームのN=2q・q≥7は七つの二担い手型に分類でき全安全局面を二次時間で強解決できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe, strategy-length |
+| [K0583](../items/K0583-two-carrier-constant-state-grundy.md) | N=2q・q≥7の二担い手七型は定数状態で全局面強解決でき空盤の通常・misère値も無界に確定する | proposition | proved | geometry, variants, grundy, residual-games, first-moves |
+| [K0584](../items/K0584-short-board-two-carrier-threshold.md) | 平面q点禁止ゲームの二担い手領域はN≤3q−7まで鋭く成立しN=2q+1の12型を強解決できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves, maximal-safe, strategy-length |
+| [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) | N=2q+1の二担い手12型は定数状態で強解決でき空盤と全初手を無界qで分類できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves |
+| [K0586](../items/K0586-two-carrier-universal-constant-state.md) | 二担い手q点禁止ゲームは盤面総点数によらず定数状態で強解決できq≥5の空盤値とq≥6の全初手を決定できる | proposition | proved | geometry, variants, grundy, residual-games, first-moves |
+| [K0587](../items/K0587-two-carrier-terminal-spectrum.md) | 二担い手q点禁止ゲームの全極大配置数・終局長分布・最小最大石数は閉形式で決定できる | proposition | proved | geometry, variants, residual-games, maximal-safe, maximum-safe, strategy-length |
+| [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) | 任意交差・異容量の二制約ゲームでは極大配置多項式が閉形式を持ち終局長は常に連続する | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, variants |
+| [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) | ひまわり型r容量制約の終局長は公差r−1で三制約から任意の欠番が生じ奇数rでは全局面を偶奇で強解決できる | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, grundy, geometry, variants |

@@ -712,6 +712,12 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/co-singleton-forbidden-qplus1-20261031/proof.md](../../../research/experiments/co-singleton-forbidden-qplus1-20261031/proof.md)
+
+- [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) (proof): 余補一型の全称mex帰納法、両ルールの全勝ち初手、極大配置と履歴の公式
+## [research/experiments/co-singleton-forbidden-qplus1-20261031/verify.py](../../../research/experiments/co-singleton-forbidden-qplus1-20261031/verify.py)
+
+- [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) (verifier): N=3..10の全非空F・全安全局面を禁止集合の直接再帰で独立検査
 ## [research/experiments/coplanar-3x3x4-q4-20261027/README.md](../../../research/experiments/coplanar-3x3x4-q4-20261027/README.md)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (proof): 実験の範囲・方式・再現手順
@@ -861,6 +867,12 @@
 ## [research/experiments/coplanar-two-layer-all-widths-20261024/verify.py](../../../research/experiments/coplanar-two-layer-all-widths-20261024/verify.py)
 
 - [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (verifier): 3×3整数行列式と全安全局面mex
+## [research/experiments/critical-short-board-20261031/proof.md](../../../research/experiments/critical-short-board-20261031/proof.md)
+
+- [K0580](../items/K0580-critical-short-board-complete-classification.md) (proof): q≥5で高々二担い手、q=4で高々三担い手、全局面値と整数実現の全称証明
+## [research/experiments/critical-short-board-20261031/verify.py](../../../research/experiments/critical-short-board-20261031/verify.py)
+
+- [K0580](../items/K0580-critical-short-board-complete-classification.md) (verifier): 4×4格子20878盤の完全列挙、91盤の全安全局面直接mex検査
 ## [research/experiments/cube-coplanar-q4-20261024/independent-results.txt](../../../research/experiments/cube-coplanar-q4-20261024/independent-results.txt)
 
 - [K0526](../items/K0526-cube-coplanar-four-all-safe.md) (data): C++独立完全列挙の出力
@@ -8951,6 +8963,12 @@
 ## [research/experiments/q6-seventeen-audit-20261024/run.py](../../../research/experiments/q6-seventeen-audit-20261024/run.py)
 
 - [K0541](../items/K0541-three-arbitrary-parallel-lines-q6-seventeen-sites.md) (verifier): 旧Pythonと独立C++の全有限部分を再実行し件数・結論を照合
+## [research/experiments/qplus1-geometric-rigidity-20261031/proof.md](../../../research/experiments/qplus1-geometric-rigidity-20261031/proof.md)
+
+- [K0577](../items/K0577-qplus1-geometric-rigidity.md) (proof): 3点共有の直線・円の一意性、全局面偶奇則、整数格子の三構成の無界証明
+## [research/experiments/qplus1-geometric-rigidity-20261031/verify_geometry.py](../../../research/experiments/qplus1-geometric-rigidity-20261031/verify_geometry.py)
+
+- [K0577](../items/K0577-qplus1-geometric-rigidity.md) (verifier): 4×4格子の全12376個の5点・6点集合の整数行列式検査、q=4..10の三構成
 ## [research/experiments/quadratic-lambda-20261024/proof.md](../../../research/experiments/quadratic-lambda-20261024/proof.md)
 
 - [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md) (proof): 有限例外・転置・縮尺・二水平行不変性の全称証明
@@ -9302,6 +9320,42 @@
 ## [research/experiments/saturation/scripts/saturation_20261003_verify.py](../../../research/experiments/saturation/scripts/saturation_20261003_verify.py)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (verifier): 証人と幾何の独立検査
+## [research/experiments/short-board-2q-20261031/proof.md](../../../research/experiments/short-board-2q-20261031/proof.md)
+
+- [K0582](../items/K0582-short-board-2q-two-carriers.md) (proof): 担い手の七型分類、整数格子実現、四変数再帰の全称正当性、極大配置計数とq=6の反例
+## [research/experiments/short-board-2q-20261031/verify.py](../../../research/experiments/short-board-2q-20261031/verify.py)
+
+- [K0582](../items/K0582-short-board-2q-two-carriers.md) (verifier): q=7,8の557748全安全局面の独立mex照合、整数幾何判定、q≤50の極大配置計数検証
+## [research/experiments/short-board-2q-periodic-20261031/proof.md](../../../research/experiments/short-board-2q-periodic-20261031/proof.md)
+
+- [K0583](../items/K0583-two-carrier-constant-state-grundy.md) (proof): 残容量の偶奇縮約、1723局所恒等式を基底とする無界帰納法
+## [research/experiments/short-board-2q-periodic-20261031/verify.py](../../../research/experiments/short-board-2q-periodic-20261031/verify.py)
+
+- [K0583](../items/K0583-two-carrier-constant-state-grundy.md) (verifier): 有限状態証明書と別表現による119317圧縮局面の独立再帰照合
+## [research/experiments/short-board-2qminus1-20261031/proof.md](../../../research/experiments/short-board-2qminus1-20261031/proof.md)
+
+- [K0581](../items/K0581-short-board-2qminus1-rigidity.md) (proof): 担い手分類、整数格子実現、型IIIの全安全局面mex閉公式と交換則の全称証明
+## [research/experiments/short-board-2qminus1-20261031/verify.py](../../../research/experiments/short-board-2qminus1-20261031/verify.py)
+
+- [K0581](../items/K0581-short-board-2qminus1-rigidity.md) (verifier): q≤50残数再帰、q≤8整数幾何・全安全部分集合直接mex、二禁止組と小格子全盤検査
+## [research/experiments/short-board-2qplus1-20261031/proof.md](../../../research/experiments/short-board-2qplus1-20261031/proof.md)
+
+- [K0584](../items/K0584-short-board-two-carrier-threshold.md) (proof): 鋭い二担い手上界、12型分類と整数実現、全安全局面再帰
+## [research/experiments/short-board-2qplus1-20261031/verify.py](../../../research/experiments/short-board-2qplus1-20261031/verify.py)
+
+- [K0584](../items/K0584-short-board-two-carrier-threshold.md) (verifier): q=8の1510740全安全局面、極大配置数、整数幾何構成の独立照合
+## [research/experiments/short-board-2qplus1-periodic-20261031/proof.md](../../../research/experiments/short-board-2qplus1-periodic-20261031/proof.md)
+
+- [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) (proof): 3476個の有限mex恒等式を無界帰納法へ接続する証明、12型の空盤と全初手
+## [research/experiments/short-board-2qplus1-periodic-20261031/verify.py](../../../research/experiments/short-board-2qplus1-periodic-20261031/verify.py)
+
+- [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) (verifier): 有限状態証明書とq=8,9,12,25,60の241080圧縮局面の独立照合
+## [research/experiments/short-board-unique-carrier-20261031/proof.md](../../../research/experiments/short-board-unique-carrier-20261031/proof.md)
+
+- [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (proof): 一曲線剛性、整数格子での全候補実現、終局長・全履歴・Grundyの閉公式、境界の整数反例
+## [research/experiments/short-board-unique-carrier-20261031/verify.py](../../../research/experiments/short-board-unique-carrier-20261031/verify.py)
+
+- [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (verifier): 4×4格子31616盤の禁止辺全列挙、160盤の全安全局面再帰、q=4とq=5の鋭い境界反例
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint
@@ -9508,6 +9562,12 @@
 ## [research/experiments/three-parallel-q6-19-20261018/verify.py](../../../research/experiments/three-parallel-q6-19-20261018/verify.py)
 
 - [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md) (verifier): 16円の1820四組を有理数で全検査、弦energyの有限標本監査
+## [research/experiments/three-quota-terminal-gaps-20261031/proof.md](../../../research/experiments/three-quota-terminal-gaps-20261031/proof.md)
+
+- [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) (proof): 任意r・異容量の全称母関数、奇数rの強解決、11整数点のq=4幾何実現
+## [research/experiments/three-quota-terminal-gaps-20261031/verify.py](../../../research/experiments/three-quota-terminal-gaps-20261031/verify.py)
+
+- [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) (verifier): 2016抽象構成と整数平面330四点組・1262安全局面の独立完全検査
 ## [research/experiments/three-row-five-columns-20261019/output/q6-five-common-columns-integer-audit.json](../../../research/experiments/three-row-five-columns-20261019/output/q6-five-common-columns-integer-audit.json)
 
 - [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (data): 22638配置の完全列挙集計
@@ -9520,6 +9580,18 @@
 ## [research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py](../../../research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py)
 
 - [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (verifier): 二点和による有限検証
+## [research/experiments/two-carrier-terminal-20261031/proof.md](../../../research/experiments/two-carrier-terminal-20261031/proof.md)
+
+- [K0587](../items/K0587-two-carrier-terminal-spectrum.md) (proof): 全極大集合の飽和場合分けによる全称証明、終局長・人数別履歴数
+## [research/experiments/two-carrier-terminal-20261031/verify.py](../../../research/experiments/two-carrier-terminal-20261031/verify.py)
+
+- [K0587](../items/K0587-two-carrier-terminal-spectrum.md) (verifier): 156構成1296960部分集合の点別極大判定と24構成の順序付き履歴独立照合
+## [research/experiments/two-carrier-universal-20261031/proof.md](../../../research/experiments/two-carrier-universal-20261031/proof.md)
+
+- [K0586](../items/K0586-two-carrier-universal-constant-state.md) (proof): 1505個の局所mex恒等式と帰納法による全称証明
+## [research/experiments/two-carrier-universal-20261031/verify.py](../../../research/experiments/two-carrier-universal-20261031/verify.py)
+
+- [K0586](../items/K0586-two-carrier-universal-constant-state.md) (verifier): 72盤951327安全局面の独立点別再帰と根初手192条件
 ## [research/experiments/two-forbidden-hyperedges-20261018/proof.md](../../../research/experiments/two-forbidden-hyperedges-20261018/proof.md)
 
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (proof): 任意有限点集合の二つの禁止集合に対する全称mex帰納証明
@@ -9529,6 +9601,12 @@
 ## [research/experiments/two-forbidden-hyperedges-20261018/verify.py](../../../research/experiments/two-forbidden-hyperedges-20261018/verify.py)
 
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (verifier): n<=7全組とn<=12固定乱数3000組のラベル付き全局面独立検査
+## [research/experiments/two-forbidden-misere-swap-20261031/proof.md](../../../research/experiments/two-forbidden-misere-swap-20261031/proof.md)
+
+- [K0579](../items/K0579-two-forbidden-misere-swap.md) (proof): 低値の子補題とmex交換恒等式による全称帰納証明
+## [research/experiments/two-forbidden-misere-swap-20261031/verify.py](../../../research/experiments/two-forbidden-misere-swap-20261031/verify.py)
+
+- [K0579](../items/K0579-two-forbidden-misere-swap.md) (verifier): n≤7全10795族とn=8..12の1000標本、2383752安全局面の直接mex照合
 ## [research/experiments/two-parallel-five-point-concurrency-20261024/audit.json](../../../research/experiments/two-parallel-five-point-concurrency-20261024/audit.json)
 
 - [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (data): 恒等式・改変拒否・相異なる四円の係数組と全16サイズの達成例の検査receipt
@@ -9541,6 +9619,12 @@
 ## [research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp](../../../research/experiments/two-parallel-five-point-concurrency-20261024/witness.cpp)
 
 - [K0542](../items/K0542-two-parallel-five-point-sharp-four-circle-concurrency.md) (verifier): 全点整数の鋭さの例を含む2例を独立整数演算し候補9円・6円のうち4円ずつが通ることを確認
+## [research/experiments/two-quota-terminal-spectrum-20261031/proof.md](../../../research/experiments/two-quota-terminal-spectrum-20261031/proof.md)
+
+- [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) (proof): 三つの排反飽和型による全称母関数と連続終局長の証明
+## [research/experiments/two-quota-terminal-spectrum-20261031/verify.py](../../../research/experiments/two-quota-terminal-spectrum-20261031/verify.py)
+
+- [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) (verifier): 6372構成5275338部分集合の独立追加判定と20000標本の検算
 ## [research/experiments/two-row-misere-swap-threshold-20261024/README.md](../../../research/experiments/two-row-misere-swap-threshold-20261024/README.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 二行盤の真の交換開始長7の証明と有限完全列挙

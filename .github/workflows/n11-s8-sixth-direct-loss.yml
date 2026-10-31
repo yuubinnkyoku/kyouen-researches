@@ -1,0 +1,28 @@
+name: N11 sixth S8 LOSS terminal certificate
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-sixth-direct-loss-20261030/**'
+      - '.github/workflows/n11-s8-sixth-direct-loss.yml'
+  workflow_dispatch:
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node independent 3x3 and 4x4 integer geometries, 364 full boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-sixth-direct-loss-20261030/verify.js --full
+      - name: Python independent recursion, 80 LOSS10 and 672 LOSS9 closure
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-sixth-direct-loss-20261030/verify.py --full --negative
+      - name: Replay historical sealed proof sets and sixth LOSS8 fixed14 frontier
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-sixth-direct-loss-20261030/lift.py

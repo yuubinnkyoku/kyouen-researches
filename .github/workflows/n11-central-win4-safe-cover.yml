@@ -1,0 +1,91 @@
+name: N11 central WIN4-safe cover audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/**'
+      - '.github/workflows/n11-central-win4-safe-cover.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify original 19 geometric primal-dual certificates
+        run: node research/experiments/n11-central-19-cover-20261031/verify.js
+      - name: Verify pinned exact S5 cache and WIN4 exclusions
+        run: node research/experiments/n11-central-19-cover-20261031/audit_win4_exclusion.js
+      - name: Verify ten WIN4-safe 56-class covers and their lower bounds
+        run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_56.js
+      - name: Audit 19-root S5 dependencies and three proven LOSS4 reuse swaps
+        run: node research/experiments/n11-central-19-cover-20261031/audit_s5_dependency_loss4_reuse.js
+      - name: Verify nine WIN4-safe 31-class covers and their lower bounds
+        run: node research/experiments/n11-central-19-cover-20261031/verify_win4_safe_31.js
+      - name: Verify central-49 31-class cover with three reused LOSS4 boundaries
+        run: node research/experiments/n11-central-19-cover-20261031/verify_31_loss4_reuse_49.js
+      - name: Audit central-49 S5 overlap graph and four-worker schedules
+        run: node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_partition.js
+      - name: Search exact-size repairs for five 31-class covers
+        run: node research/experiments/n11-central-19-cover-20261031/repair_31.js
+      - name: Audit dual-tight matching feasibility for all nine 31-class roots
+        run: node research/experiments/n11-central-19-cover-20261031/audit_dual_matching.js
+      - name: Cross-check central-49 cover against independently terminal-proved WIN5
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/audit_central49_terminal_win5_conflicts.js
+          if node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_partition.js --priority-worker 0 > /tmp/invalid-live-worklist 2>/tmp/invalid-live-error; then
+            echo 'Refuted worker plan was unexpectedly exported' >&2
+            exit 1
+          fi
+          grep -q 'REFUTED_PLAN' /tmp/invalid-live-error
+      - name: Independently reconstruct central-49 priority shards and audit worker-report guards
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_worker_results.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_worker_results.py > /tmp/central49-worker-audit.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-worker-audit.json")); assert x["pending_s5_classes"]==2525 and x["unreported_s5"]==2525 and x["root_outcome"]=="UNKNOWN"'
+      - name: Verify repaired central49 31-class cover against six terminal WIN5 receipts
+        run: node research/experiments/n11-central-19-cover-20261031/verify_central49_terminal_safe_repair.js
+
+      - name: Independently audit repaired central49 2627-S5 frontier and worker guards
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_repaired_worker_results.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_repaired_worker_results.py > /tmp/central49-repaired-worker-audit.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-repaired-worker-audit.json")); assert x["pending_s5_classes"]==2627 and x["unreported_s5"]==2627 and x["root_outcome"]=="UNKNOWN" and x["priority_unknown_s5"]>0'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_repaired_worker_results.py --worklist "$worker" > "/tmp/repaired-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/repaired-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[657,657,657,656]; assert len(set(sum(a,[])))==2627'
+
+      - name: Verify 43-class one-swap reduction and independently rebuild the 2584-class worker frontier
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/verify_central49_one_swap_2584.js > /tmp/central49-one-swap.json
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_one_swap_worker_results.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_one_swap_worker_results.py > /tmp/central49-one-swap-workers.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-one-swap-workers.json")); assert x["pending_s5_classes"]==2584 and x["unreported_s5"]==2584 and x["worker_loads"]==[646]*4 and x["root_outcome"]=="UNKNOWN"'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_one_swap_worker_results.py --worklist "$worker" > "/tmp/one-swap-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/one-swap-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[646]*4; assert len(set(sum(a,[])))==2584'
+      - name: Verify 42-class two-swap reduction and independent 2542-class worker frontier
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/verify_central49_two_swap_2542.js > /tmp/central49-two-swap.json
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_two_swap_worker_results.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_two_swap_worker_results.py > /tmp/central49-two-swap-workers.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-two-swap-workers.json")); assert x["pending_s5_classes"]==2542 and x["unreported_s5"]==2542 and x["worker_loads"]==[636,636,635,635] and x["root_outcome"]=="UNKNOWN"'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_two_swap_worker_results.py --worklist "$worker" > "/tmp/two-swap-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/two-swap-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[636,636,635,635]; assert len(set(sum(a,[])))==2542'
+
+      - name: Verify 41-class three-swap reduction and independent 2501-class worker frontier
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_2501.js > /tmp/central49-three-swap.json
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results.py > /tmp/central49-three-swap-workers.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-three-swap-workers.json")); assert x["pending_s5_classes"]==2501 and x["unreported_s5"]==2501 and x["worker_loads"]==[626,625,625,625] and x["root_outcome"]=="UNKNOWN"'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results.py --worklist "$worker" > "/tmp/three-swap-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/three-swap-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[626,625,625,625]; assert len(set(sum(a,[])))==2501'

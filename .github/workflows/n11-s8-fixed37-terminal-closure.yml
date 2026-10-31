@@ -1,0 +1,46 @@
+name: N11 fixed14 all 37 S8 terminal certificates
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-s8-fixed37-terminal-closure-20261030/**'
+      - '.github/workflows/n11-s8-fixed37-terminal-closure.yml'
+  workflow_dispatch:
+concurrency:
+  group: n11-fixed37-terminal-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Node two independent integer geometries, 37 roots and complete S10 boundary
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-fixed37-terminal-closure-20261030/verify.js --full
+      - name: Python independent terminal recursion and forged-certificate rejection
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/verify.py --negative
+      - name: Proof-only S8 to S7 propagation with polarity conflict checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          node research/experiments/n11-s8-fixed37-terminal-closure-20261030/lift.js
+      - name: Python independent LOSS7 reverse-incidence and seven WIN6 corollaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/verify_s6_corollary.py
+      - name: Independent S7 perspective and S6 witness baseline-overlap audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_s7_polarity_and_s6_coverage.py
+      - name: Independent fixed-first LOSS7 reverse edges and S6 frontier audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python research/experiments/n11-s8-fixed37-terminal-closure-20261030/audit_loss7_to_s6_frontier.py

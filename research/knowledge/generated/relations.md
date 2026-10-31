@@ -51,6 +51,7 @@
 - ← depends_on [K0492](../items/K0492-three-row-six-circle-first-width-two-squares.md): 6点共円・共線禁止の対象定義
 - ← depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 安全な追加だけを合法手とする完全指摘ルールの定義
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 共円4点禁止・合法手と終局規則
+- ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 完全指摘・安全追加ルール
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -119,6 +120,16 @@
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 元先手固定視点の奇数AND・偶数ORの勝敗伝播
 - ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 元先手固定視点の奇数AND・偶数OR伝播
 - ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 元先手固定視点の奇数AND・偶数OR伝播
+- ← depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 通常Grundyと終局1のmisère補助mexの定義
+- ← depends_on [K0577](../items/K0577-qplus1-geometric-rigidity.md): 通常・misèreのmex定義
+- ← depends_on [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): 通常・misère補助mex値の定義
+- ← depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 終局を1とするmisère補助mex値の定義
+- ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0583](../items/K0583-two-carrier-constant-state-grundy.md): 通常Grundyとmisère補助mexの定義
+- ← depends_on [K0584](../items/K0584-short-board-two-carrier-threshold.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): 通常Grundy値とmisère補助mex値の定義
+- ← depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 通常・misère補助mexの定義
+- ← depends_on [K0589](../items/K0589-sunflower-quota-terminal-gaps.md): 通常Grundy値とmisère補助mexの定義
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2345,6 +2356,9 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): mex再帰と独立ゲームのxor
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余の包含極小禁止集合によるゲーム表現
 - ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 二禁止集合の全安全局面Grundy閉公式
+- ← depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止集合の通常Grundy閉公式と値の上界3
+- ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 二禁止辺の通常Grundy閉公式
+- ← depends_on [K0581](../items/K0581-short-board-2qminus1-rigidity.md): 二つのq点禁止組の通常Grundy閉公式
 
 ## [K0484](../items/K0484-width-five-q9-all-lengths.md) 五行九点版は全長で行容量だけに分離しM_{5,9}=8
 
@@ -2775,3 +2789,87 @@
 
 - → depends_on [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md): 同じ4点共面禁止家族の容量定理（m≥5では最大9石・最小極大3石）。本項目は3×3×10の有限盤の強解決
 - → depends_on [K0574](../items/K0574-coplanar-3x3x9-strong-solution.md): 同じ家族の3×3×9の強解決。本項目はその次の m=10 を同じ方式で解いたもの
+
+## [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) 余補一型のq点禁止ゲームは全安全局面の通常・misère値と全勝ち初手に閉公式を持つ
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundyと終局1のmisère補助mexの定義
+- ← depends_on [K0577](../items/K0577-qplus1-geometric-rigidity.md): 余補一型の抽象禁止集合族の閉公式。幾何によって禁止組数を0・1・Nに制限する
+
+## [K0577](../items/K0577-qplus1-geometric-rigidity.md) 平面上のq+1点では共円・共線の禁止q点組数は0・1・q+1のみで全局面Grundy値は偶奇で決まる
+
+- → depends_on [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md): 余補一型の抽象禁止集合族の閉公式。幾何によって禁止組数を0・1・Nに制限する
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misèreのmex定義
+- ← generalizes [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): N=q+1の三分律を全q≤N≤2q−3へ拡張し、上界の鋭さも証明
+
+## [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) 平面q点禁止ゲームはN≤2q−3で禁止曲線が一意となり全安全局面を偶奇で強解決できる
+
+- → generalizes [K0577](../items/K0577-qplus1-geometric-rigidity.md): N=q+1の三分律を全q≤N≤2q−3へ拡張し、上界の鋭さも証明
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misère補助mex値の定義
+- ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 一曲線の場合の偶奇則と整数格子実現構成を利用
+
+## [K0579](../items/K0579-two-forbidden-misere-swap.md) 包含極小禁止集合が高々二つの配置ゲームでは通常・misèreのGrundy交換則が全安全局面で成立する
+
+- → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二禁止集合の通常Grundy閉公式と値の上界3
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 終局を1とするmisère補助mex値の定義
+- ← depends_on [K0580](../items/K0580-critical-short-board-complete-classification.md): 二禁止辺のmisère交換則
+- ← depends_on [K0581](../items/K0581-short-board-2qminus1-rigidity.md): 二禁止組のmisère交換則
+
+## [K0580](../items/K0580-critical-short-board-complete-classification.md) 平面q点禁止ゲームは境界N=2q−2でも禁止曲線と全安全局面を完全分類できる
+
+- → depends_on [K0578](../items/K0578-short-board-unique-curve-strong-solution.md): 一曲線の場合の偶奇則と整数格子実現構成を利用
+- → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二禁止辺の通常Grundy閉公式
+- → depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止辺のmisère交換則
+
+## [K0581](../items/K0581-short-board-2qminus1-rigidity.md) 平面q点禁止ゲームのN=2q−1・q≥6では担い手が高々二本で全安全局面に閉公式がある
+
+- → depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 二つのq点禁止組の通常Grundy閉公式
+- → depends_on [K0579](../items/K0579-two-forbidden-misere-swap.md): 二禁止組のmisère交換則
+
+## [K0582](../items/K0582-short-board-2q-two-carriers.md) 平面q点禁止ゲームのN=2q・q≥7は七つの二担い手型に分類でき全安全局面を二次時間で強解決できる
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・安全追加ルール
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0583](../items/K0583-two-carrier-constant-state-grundy.md): 二担い手七型の幾何分類と四群の容量再帰
+- ← generalizes [K0584](../items/K0584-short-board-two-carrier-threshold.md): N=2qの二担い手上界をN≤3q−7へ拡張
+- ← generalizes [K0587](../items/K0587-two-carrier-terminal-spectrum.md): N=2qの七型に限られた極大配置計数を任意の二担い手盤に拡張
+
+## [K0583](../items/K0583-two-carrier-constant-state-grundy.md) N=2q・q≥7の二担い手七型は定数状態で全局面強解決でき空盤の通常・misère値も無界に確定する
+
+- → depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 二担い手七型の幾何分類と四群の容量再帰
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundyとmisère補助mexの定義
+- ← generalizes [K0586](../items/K0586-two-carrier-universal-constant-state.md): N=2qの七型から二担い手の任意の総点数へ拡張
+
+## [K0584](../items/K0584-short-board-two-carrier-threshold.md) 平面q点禁止ゲームの二担い手領域はN≤3q−7まで鋭く成立しN=2q+1の12型を強解決できる
+
+- → generalizes [K0582](../items/K0582-short-board-2q-two-carriers.md): N=2qの二担い手上界をN≤3q−7へ拡張
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy数とmisère補助値の定義
+- ← depends_on [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): 二担い手領域とN=2q+1の12型幾何分類
+- ← generalizes [K0587](../items/K0587-two-carrier-terminal-spectrum.md): N=2q+1の十二型に限られた極大配置計数を任意の二担い手盤に拡張
+
+## [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md) N=2q+1の二担い手12型は定数状態で強解決でき空盤と全初手を無界qで分類できる
+
+- → depends_on [K0584](../items/K0584-short-board-two-carrier-threshold.md): 二担い手領域とN=2q+1の12型幾何分類
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値とmisère補助mex値の定義
+- ← generalizes [K0586](../items/K0586-two-carrier-universal-constant-state.md): N=2q+1の十二型から二担い手の任意の総点数へ拡張
+
+## [K0586](../items/K0586-two-carrier-universal-constant-state.md) 二担い手q点禁止ゲームは盤面総点数によらず定数状態で強解決できq≥5の空盤値とq≥6の全初手を決定できる
+
+- → generalizes [K0583](../items/K0583-two-carrier-constant-state-grundy.md): N=2qの七型から二担い手の任意の総点数へ拡張
+- → generalizes [K0585](../items/K0585-two-carrier-2qplus1-constant-state-grundy.md): N=2q+1の十二型から二担い手の任意の総点数へ拡張
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常・misère補助mexの定義
+- ← depends_on [K0587](../items/K0587-two-carrier-terminal-spectrum.md): 同じ二担い手容量制約モデルを対象とする
+
+## [K0587](../items/K0587-two-carrier-terminal-spectrum.md) 二担い手q点禁止ゲームの全極大配置数・終局長分布・最小最大石数は閉形式で決定できる
+
+- → depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 同じ二担い手容量制約モデルを対象とする
+- → generalizes [K0582](../items/K0582-short-board-2q-two-carriers.md): N=2qの七型に限られた極大配置計数を任意の二担い手盤に拡張
+- → generalizes [K0584](../items/K0584-short-board-two-carrier-threshold.md): N=2q+1の十二型に限られた極大配置計数を任意の二担い手盤に拡張
+- ← generalizes [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md): 共通点数0〜2・同じ容量q−1から任意の共通点数と異なる二容量へ拡張
+
+## [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) 任意交差・異容量の二制約ゲームでは極大配置多項式が閉形式を持ち終局長は常に連続する
+
+- → generalizes [K0587](../items/K0587-two-carrier-terminal-spectrum.md): 共通点数0〜2・同じ容量q−1から任意の共通点数と異なる二容量へ拡張
+
+## [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) ひまわり型r容量制約の終局長は公差r−1で三制約から任意の欠番が生じ奇数rでは全局面を偶奇で強解決できる
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常Grundy値とmisère補助mexの定義
