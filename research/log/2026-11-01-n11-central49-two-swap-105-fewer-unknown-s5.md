@@ -14,4 +14,4 @@
 
 **信頼境界：** 保存済み5,851件のS5判定はsolver-trustedであり、全件の独立終局再証明は行っていない。6件の終局WIN5も保存済みreceiptを継承し、巨大DAGの再実行はしていない。新規S5厳密判定0件、S4 LOSS証明0件、二石root閉鎖0件。仕事の種類数削減は実際の計算時間の短縮率ではない。二石 `{49,60}` と標準11×11空盤は **UNKNOWN**。
 
-検証CI： [N11 central WIN4-safe cover audit](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41218346093)（開始後の成功確認は別途必要）。
+**独立監査CI成功：** [N11 central WIN4-safe cover audit 41218710124](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41218710124)。最初の実行では新Python監査器のschema文字列に旧値が残って拒否されたが、`e496a7020faa01f149fb3a5a25b2b42a18fdee1d` で修正し、Nodeによる2,918通りの全数再計算とPythonによる2,345類の再構成・4分割・不正報告拒否回帰がすべて成功した。
