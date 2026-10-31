@@ -552,7 +552,7 @@
 | [K0565](../items/K0565-binary-cube-six-high-pattern-coefficients.md) | 二値超立方体の六点切片の高次座標型係数と四項指数補正 | proposition | proved | geometry, variants, statistics |
 | [K0566](../items/K0566-binary-cube-universal-third-sparse-section-term.md) | 二値超立方体の任意q点切片における第三指数項の全称公式 | proposition | proved | geometry, variants, statistics |
 | [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) | 二値超立方体の座標反転軌道による切片数の2進可除性と3・5点切片の厳密合同則 | proposition | proved | geometry, variants, statistics |
-| [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) | 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である | proposition | scope-unclear | variants, geometry, maximum-safe |
+| [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) | 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である | proposition | needs-review | variants, geometry, maximum-safe |
 | [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) | 3×3×4・4点共面禁止版は全局面強解決され空盤Grundy値は3 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0570](../items/K0570-coplanar-3x3x5-strong-solution.md) | 3×3×5・4点共面禁止版は全局面強解決され全45初手が勝ち手 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
 | [K0571](../items/K0571-coplanar-3x3x6-strong-solution.md) | 3×3×6・4点共面禁止版は全局面強解決され全54初手が勝ち手、最大nimberは7 | proposition | computed | variants, geometry, grundy, maximal-safe, maximum-safe, strategy-length |
@@ -575,4 +575,3 @@
 | [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) | 任意交差・異容量の二制約ゲームでは極大配置多項式が閉形式を持ち終局長は常に連続する | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, variants |
 | [K0589](../items/K0589-sunflower-quota-terminal-gaps.md) | ひまわり型r容量制約の終局長は公差r−1で三制約から任意の欠番が生じ奇数rでは全局面を偶奇で強解決できる | proposition | proved | maximal-safe, maximum-safe, residual-games, strategy-length, grundy, geometry, variants |
 | [K0590](../items/K0590-even-sunflower-quota-grundy.md) | 偶数本のひまわり型容量制約ゲームの通常・misère全安全局面を残容量の最小値と偶奇だけで強解決 | proposition | proved | grundy, residual-games, variants, strategy-length |
-| [K0591](../items/K0591-binary-cube-d5-strong-solution-verification.md) | 五次元共六点禁止ゲームのK0546強解決を全局面独立再計算で完全再現し、包含極小禁止集合の誤用を確認 | verification | verified | variants, geometry, grundy, verification, maximum-safe |

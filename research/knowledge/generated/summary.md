@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 574 / alias: 269 / artifactファイル: 2992
+K項目: 573 / alias: 269 / artifactファイル: 2987
 
 ## kind
 
@@ -11,7 +11,7 @@ K項目: 574 / alias: 269 / artifactファイル: 2992
 | method | 4 |
 | proposition | 461 |
 | question | 38 |
-| verification | 27 |
+| verification | 26 |
 
 ## status
 
@@ -20,13 +20,14 @@ K項目: 574 / alias: 269 / artifactファイル: 2992
 | active | 9 |
 | computed | 124 |
 | conjectured | 1 |
+| needs-review | 1 |
 | observed | 26 |
 | open | 36 |
 | proved | 281 |
 | refuted | 63 |
-| scope-unclear | 2 |
+| scope-unclear | 1 |
 | superseded | 1 |
-| verified | 27 |
+| verified | 26 |
 | withdrawn | 4 |
 
 ## topics
@@ -36,10 +37,10 @@ K項目: 574 / alias: 269 / artifactファイル: 2992
 | certificates | 60 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 271 |
-| grundy | 144 |
+| geometry | 270 |
+| grundy | 143 |
 | maximal-safe | 115 |
-| maximum-safe | 72 |
+| maximum-safe | 71 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
@@ -50,8 +51,8 @@ K項目: 574 / alias: 269 / artifactファイル: 2992
 | square-outcomes | 56 |
 | statistics | 75 |
 | strategy-length | 46 |
-| variants | 216 |
-| verification | 72 |
+| variants | 215 |
+| verification | 71 |
 
 ## 未解決・要監査・範囲不明
 
@@ -95,7 +96,7 @@ K項目: 574 / alias: 269 / artifactファイル: 2992
 - [K0328](../items/K0328-maximal-fault-tolerance-bound-open.md) [open] n≥2の標準盤の全極大配置で故障耐性ρは一様有界か
 - [K0504](../items/K0504-geometric-rule-variant-comparison.md) [open] 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) [open] 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
-- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [scope-unclear] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [needs-review] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
 
 ## 警告
 
