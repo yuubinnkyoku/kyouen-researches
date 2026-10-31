@@ -7,6 +7,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const zlib = require('node:zlib');
 const assert = require('node:assert/strict');
+const {excludeQuarantined}=require('./quarantine_s5');
 const ROOT = path.resolve(__dirname, '../../..');
 const SOURCES = [
   ['research/experiments/n11-s4-boundary-direct-20261012/output/current-exact-s5.cache',
@@ -16,10 +17,10 @@ const SOURCES = [
 ];
 const REPS = [16,38,49,24,0,26,48,12,25,3,13,2,14,5,15,4,1,37,36];
 const EXPECTED = [
-  [3402,103],[3400,30],[3374,68],[3384,63],[3396,3],
-  [6542,35],[3377,112],[3389,120],[6585,9],[6612,48],
-  [6586,21],[6594,29],[6577,17],[3385,21],[6590,43],
-  [6588,16],[6615,13],[6546,32],[3388,21],
+  [3402,100],[3400,30],[3374,66],[3384,63],[3396,3],
+  [6542,35],[3377,112],[3389,120],[6585,9],[6612,47],
+  [6586,21],[6594,29],[6577,15],[3385,21],[6590,43],
+  [6588,16],[6615,11],[6546,32],[3388,21],
 ];
 const hex = n => n.toString(16).padStart(32, '0');
 const maps = Array.from({length:8}, (_,j) => Array.from({length:121}, (_,i) => {
@@ -106,8 +107,10 @@ assert.equal(frozen.size,5851);
 assert.equal(corpus.size,5700);
 const merged=merge(frozen,corpus);
 assert.equal(merged.size,5853);
+excludeQuarantined(merged);
+assert.equal(merged.size,5851);
 const win5=[...merged].filter(([,v])=>v===1).map(([k])=>k);
-assert.equal(win5.length,161);
+assert.equal(win5.length,159);
 const witnesses=new Map();
 for(const k of win5) {
   const p=points(k);
@@ -116,7 +119,7 @@ for(const k of win5) {
     if(!witnesses.has(parent)) witnesses.set(parent,k);
   }
 }
-assert.equal(witnesses.size,555);
+assert.equal(witnesses.size,549);
 for(const [parent,child] of witnesses) {
   const pp=points(parent),cp=points(child);
   assert.equal(pp.length,4);
@@ -143,8 +146,8 @@ for(let j=0;j<REPS.length;j++) {
     remainingCandidates:classes.size-blocked.length});
 }
 assert.equal(classIncidences,96330);
-assert.equal(blockedIncidences,804);
-assert.equal(uniqueBlocked.size,393);
+assert.equal(blockedIncidences,794);
+assert.equal(uniqueBlocked.size,389);
 // Audit how many of the earlier geometry-only optimal witnesses need repair.
 // This is not an assertion that the minimum 31/56 remains achievable.
 const certRaw=fs.readFileSync(path.join(__dirname,'certificate.json.gz.b64'),'utf8');
@@ -165,6 +168,7 @@ assert.throws(()=>merge(frozen,forged),/WIN\/LOSS CONFLICT/);
 console.log(JSON.stringify({
   board:11,emptyBoard:'UNKNOWN',
   frozenS5:frozen.size,corpusS5:corpus.size,mergedS5:merged.size,
+  quarantinedUnsupportedWIN5:2,
   exactWin5:win5.length,derivedWin4:witnesses.size,
   centralRoots:REPS.length,legalS4ClassIncidences:classIncidences,
   excludedWIN4Incidences:blockedIncidences,
