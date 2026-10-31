@@ -111,3 +111,14 @@ jobs:
             python3 research/experiments/n11-central-19-cover-20261031/audit_central49_post_three_two_swap_worker_results_2345.py --worklist "$worker" > "/tmp/2345-worker-$worker.txt"
           done
           python3 -c 'from pathlib import Path; a=[Path(f"/tmp/2345-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[587,586,586,586]; assert len(set(sum(a,[])))==2345'
+
+      - name: Verify exact 68-class three-swap reduction and independent 2277-class worker frontier
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_2277.js > /tmp/central49-2277-verifier.json
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --self-test
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py > /tmp/central49-2277-workers.json
+          python3 -c 'import json; x=json.load(open("/tmp/central49-2277-workers.json")); assert x["pending_s5_classes"]==2277 and x["unreported_s5"]==2277 and x["worker_loads"]==[570,569,569,569] and x["priority_unknown_s5"]==94 and x["root_outcome"]=="UNKNOWN"'
+          for worker in 0 1 2 3; do
+            python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2277.py --worklist "$worker" > "/tmp/2277-worker-$worker.txt"
+          done
+          python3 -c 'from pathlib import Path; a=[Path(f"/tmp/2277-worker-{i}.txt").read_text().splitlines() for i in range(4)]; assert list(map(len,a))==[570,569,569,569]; assert len(set(sum(a,[])))==2277'
