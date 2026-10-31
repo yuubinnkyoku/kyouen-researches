@@ -36,3 +36,9 @@ node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_p
 ```
 
 未判定S5の新規確定0類、S4 LOSS新規証明0類、二石root閉鎖0件。**標準11×11空盤はUNKNOWN**。
+
+## 検証結果と修正履歴
+
+初回CI（`d2850c0a`）は新しい「優先部分がworker一覧の先頭に連続する」検査で失敗した。検査コードの `slice(start)` を `slice(0,end)` とすべきところを誤っており、仕事一覧自体の構成とは無関係な検査側の不具合だった。`644d117b` で修正し、専用CI `41175260415` の全工程が**成功**した（2026-10-31）。元の19局面の幾何学的双対検査、固定S5 cache照合、中央49のS4依存検査、4分割と優先順の再計算を含む。
+
+成功CI：<https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41175260415>
