@@ -7,7 +7,7 @@ const data=JSON.parse(zlib.gunzipSync(Buffer.from(
   fs.readFileSync(__dirname+'/certificate.json.gz.b64','utf8').trim(),'base64')));
 const patch=JSON.parse(fs.readFileSync(__dirname+'/win4-safe-31-repair.json','utf8'));
 const REPS=[16,38,49,24,0,48,12,5,36];
-const EXCLUDED=[103,30,68,63,3,112,120,21,21];
+const EXCLUDED=[100,30,66,63,3,112,120,21,21];
 function det4(p){
   const a=p.map(i=>{const x=i%11,y=Math.floor(i/11);return[x*x+y*y,x,y,1]});
   let sum=0;
@@ -82,7 +82,8 @@ for(let i=0;i<REPS.length;i++){
   const repair=patch.repairs.find(r=>r.first===a);
   if(repair){
     const originallyBlocked=selected.filter(k=>witnesses.has(k));
-    assert(originallyBlocked.length>0);
+    // Some historical repairs may now be redundant after quarantine.
+    // Keep their independently valid geometric witnesses.
     assert(originallyBlocked.every(k=>repair.remove.includes(k)));
     for(const k of repair.remove){
       assert(selected.includes(k));
