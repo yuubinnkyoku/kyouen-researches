@@ -216,7 +216,18 @@ def self_test():
         pass
     else:
         raise AssertionError("cross-file WIN/LOSS conflict accepted")
-    print(json.dumps({"self_test": "PASS", "negative_tests": 10}))
+    with tempfile.TemporaryDirectory() as directory:
+        output = Path(directory) / "merged.csv"
+        atomic_new(output, good)
+        try:
+            atomic_new(output, "tampered")
+        except (ValueError, FileExistsError):
+            pass
+        else:
+            raise AssertionError("existing receipt overwritten")
+        need(output.read_text(encoding="utf-8") == good,
+             "atomic merge altered existing receipt")
+    print(json.dumps({"self_test": "PASS", "negative_tests": 11}))
 
 
 def main():
