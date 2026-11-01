@@ -22,6 +22,8 @@ jobs:
         run: python research/experiments/fixed-width/scripts/verify_quantitative_density.py
       - name: Audit prime-avoidance finite checks
         run: python research/experiments/fixed-width/scripts/verify_prime_avoidance.py
+      - name: Audit tree graph-star DP
+        run: python research/experiments/tree-graph-star-dp-20261101/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -117,3 +119,5 @@ jobs:
 
 # Refresh trigger for K0609 path graph-star terminal Gaussian theorem (2026-11-01).
 # Refresh trigger for K0610 clique-bouquet terminal Gaussian theorem (2026-11-01).
+
+# Refresh trigger for K0611 forest DP and star terminal spectrum (2026-11-01).
