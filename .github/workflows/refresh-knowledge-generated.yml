@@ -28,6 +28,8 @@ jobs:
         run: python research/experiments/spider-graph-star-20261101/verify.py
       - name: Audit length-three spider terminal Gaussian theorem
         run: python research/experiments/spider-length-three-20261102/verify.py
+      - name: Audit all fixed-length spider terminal Gaussian theorem
+        run: python research/experiments/spider-all-arm-lengths-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -129,3 +131,5 @@ jobs:
 # Refresh trigger for K0612 subdivided-star q4/q5 terminal distribution phase transition (2026-11-01).
 
 # Refresh trigger for K0613 length-three spider all-q Gaussian theorem (2026-11-02).
+
+# Refresh trigger for K0614 all fixed-arm-length spider Gaussian classification (2026-11-02).
