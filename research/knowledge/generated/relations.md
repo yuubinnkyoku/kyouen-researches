@@ -2946,6 +2946,7 @@
 - ← depends_on [K0606](../items/K0606-graph-star-clique-component-threshold.md): 整数平面上のグラフ星型実現、極大配置母関数、最短配置数を使用
 - ← depends_on [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md): 任意q点の整数幾何実現と極大配置分類を使用
 - ← depends_on [K0609](../items/K0609-path-graph-star-terminal-gaussian.md): 任意q点の整数幾何実現と極大配置・最短極大個数の分類を使用
+- ← depends_on [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md): グラフ星型の整数共円実現と極大配置の支配集合分類を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -2986,3 +2987,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点の整数幾何実現と極大配置・最短極大個数の分類を使用
 - → depends_on [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md): 同じ転送行列の固有値と平均・分散係数を利用し、道の境界条件に拡張
+
+## [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) 完全グラフ花束型共円ゲームの極大配置母関数と正規極限
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の整数共円実現と極大配置の支配集合分類を使用

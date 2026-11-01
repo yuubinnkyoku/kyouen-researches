@@ -594,3 +594,4 @@
 | [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md) | グラフ星型共円ゲームの臨界窓における終局長のポアソン極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md) | サイクル型グラフ星共円ゲームの終局長母関数と正規極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0609](../items/K0609-path-graph-star-terminal-gaussian.md) | 道グラフ型共円ゲームの終局長母関数と正規極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) | 完全グラフ花束型共円ゲームの極大配置母関数と正規極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

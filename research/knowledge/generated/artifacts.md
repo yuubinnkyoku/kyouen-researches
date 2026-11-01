@@ -733,6 +733,12 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/clique-bouquet-gaussian-20261101/proof.md](../../../research/experiments/clique-bouquet-gaussian-20261101/proof.md)
+
+- [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) (proof): 花弁ごとの厳密母関数・全変動誤差・正規極限の全称証明
+## [research/experiments/clique-bouquet-gaussian-20261101/verify.py](../../../research/experiments/clique-bouquet-gaussian-20261101/verify.py)
+
+- [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) (verifier): 52条件の支配集合列挙と9条件605312局面の禁止超辺直接完全列挙
 ## [research/experiments/co-singleton-forbidden-qplus1-20261031/proof.md](../../../research/experiments/co-singleton-forbidden-qplus1-20261031/proof.md)
 
 - [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) (proof): 余補一型の全称mex帰納法、両ルールの全勝ち初手、極大配置と履歴の公式
