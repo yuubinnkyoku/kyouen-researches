@@ -65,7 +65,7 @@ jobs:
           assert plan["outcomes"]["empty_board"] == "UNKNOWN"
           for worker, work in enumerate(plan["worklists"]):
               (root / f"balanced-worker-{worker}.csv").write_text(
-                  f"s7workerreport,{worker},{work[0]},original_first,LOSS,unverified\\n",
+                  f"s7workerreport,{worker},{work[0]},original_first,LOSS,unverified\n",
                   encoding="utf-8")
           PY
           python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py \
