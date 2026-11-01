@@ -1,0 +1,141 @@
+{
+  "schema": "n11-central49-conditional46-balanced-unique-s7-ownership-1984-v1",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_1984.json",
+  "worker_index_by_sorted_s6": [
+    2,
+    3,
+    2,
+    3,
+    2,
+    3,
+    3,
+    1,
+    2,
+    1,
+    1,
+    0,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    3,
+    2,
+    1,
+    1,
+    1,
+    3,
+    2,
+    2,
+    2,
+    0,
+    0,
+    2,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    3,
+    3,
+    3,
+    2,
+    3,
+    2
+  ],
+  "owner_policy": "canonical_s7_sorted_per_worker_pair__frozen_quota_to_lower_worker_then_higher_worker",
+  "shared_s7_pair_quotas": {
+    "0-1": [
+      169,
+      70
+    ],
+    "0-2": [
+      48,
+      78
+    ],
+    "0-3": [
+      67,
+      20
+    ],
+    "1-2": [
+      127,
+      0
+    ],
+    "1-3": [
+      82,
+      0
+    ],
+    "2-3": [
+      44,
+      0
+    ]
+  },
+  "baseline_round_robin": {
+    "worker_s6_counts": [
+      12,
+      12,
+      11,
+      11
+    ],
+    "worker_raw_loads": [
+      783,
+      771,
+      702,
+      723
+    ],
+    "cross_worker_s7_dependencies": 769,
+    "within_worker_shared_s7": 226
+  },
+  "balanced_locality": {
+    "worker_s6_counts": [
+      12,
+      12,
+      11,
+      11
+    ],
+    "worker_raw_loads": [
+      787,
+      790,
+      701,
+      701
+    ],
+    "worker_exclusive_s7": [
+      212,
+      217,
+      374,
+      476
+    ],
+    "worker_owned_s7": [
+      496,
+      496,
+      496,
+      496
+    ],
+    "cross_worker_s7_dependencies": 705,
+    "within_worker_shared_s7": 290,
+    "distinct_s7": 1984,
+    "raw_s7_edges": 2979,
+    "shared_s7_pair_counts": {
+      "0-1": 239,
+      "0-2": 126,
+      "0-3": 87,
+      "1-2": 127,
+      "1-3": 82,
+      "2-3": 44
+    }
+  },
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_SCHEDULING_NOT_VERDICTS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Exactly 1984 distinct S7 obligations are uniquely owned by four workers (496 each, the counting lower bound). The 705 cross-worker dependencies improve on 769 for the fixed round-robin baseline but are not globally optimal; raw edge counts do not measure search time. No S6 LOSS, S4 LOSS, two-stone root, or empty-board outcome follows."
+}
