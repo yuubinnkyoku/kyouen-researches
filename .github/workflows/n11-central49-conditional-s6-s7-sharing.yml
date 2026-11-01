@@ -1,0 +1,23 @@
+name: N11 conditional 46-S6 S7-sharing independent audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s7_shared_frontier_46.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46.json'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_loss_2232.txt'
+      - 'research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt'
+      - 'research/experiments/n11-s8-fixed37-terminal-closure-20261030/lift_result.json'
+      - '.github/workflows/n11-central49-conditional-s6-s7-sharing.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify conditional 46-S6 geometry and both lower bounds
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_cover_46.py --self-test
+      - name: Independently rebuild S7 sharing and compare frozen evidence
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_s7_shared_frontier_46.py
