@@ -2934,3 +2934,8 @@
 ## [K0601](../items/K0601-graph-star-circle-universality.md) 任意単純グラフの星型禁止四点組を整数共円実現し全安全・極大母関数を決定
 
 - → generalizes [K0599](../items/K0599-grid-circle-terminal-polynomial.md): 完全二部グラフの円交差構成を任意有限単純グラフへ拡張
+- ← generalizes [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): q=4の任意グラフ星型共円実現を全q>=4へ拡張し、最短極大の閉公式と個数も決定
+
+## [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) 任意q点版のグラフ星型共円実現・全母関数・最短極大配置の次数公式
+
+- → generalizes [K0601](../items/K0601-graph-star-circle-universality.md): q=4の任意グラフ星型共円実現を全q>=4へ拡張し、最短極大の閉公式と個数も決定

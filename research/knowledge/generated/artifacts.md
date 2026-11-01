@@ -2538,6 +2538,12 @@
 ## [research/experiments/graph-star-circle-20261101/verify.py](../../../research/experiments/graph-star-circle-20261101/verify.py)
 
 - [K0601](../items/K0601-graph-star-circle-universality.md) (verifier): 1094ラベル付きグラフ・3802800部分集合、11×11内のK3七点の幾何判定と全局面列挙
+## [research/experiments/graph-star-qpoint-20261101/proof.md](../../../research/experiments/graph-star-qpoint-20261101/proof.md)
+
+- [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (proof): 無界q・無界グラフの整数幾何構成、全安全・極大母関数、最短極大個数の全称証明とq5十点座標
+## [research/experiments/graph-star-qpoint-20261101/verify.py](../../../research/experiments/graph-star-qpoint-20261101/verify.py)
+
+- [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (verifier): 1181グラフ・4395216部分集合、q5十点の全252五点組・1024局面を独立完全検査
 ## [research/experiments/grid-circle-spectrum-20261101/proof.md](../../../research/experiments/grid-circle-spectrum-20261101/proof.md)
 
 - [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) (proof): 安全局面の全石数別母関数、終局長の両極値と唯一性、二行型の全終局長、漸近密度の全称証明
