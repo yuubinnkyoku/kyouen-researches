@@ -1,0 +1,48 @@
+name: N11 central49 focused S7 depth10 geometry gate
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_extension_profile_1984.cpp'
+      - '.github/workflows/n11-central49-focus-s7-depth10.yml'
+  workflow_dispatch:
+
+jobs:
+  finite-extension-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently cross-check 3x3 and 4x4 geometry and enumerate safe supersets
+        run: |
+          g++ -O3 -std=c++20 -Wall -Wextra -Werror \
+            research/experiments/n11-central-19-cover-20261031/focus_s7_extension_profile_1984.cpp \
+            -o "$RUNNER_TEMP/verify-extension"
+          "$RUNNER_TEMP/verify-extension" > "$RUNNER_TEMP/profile.json"
+          python3 - "$RUNNER_TEMP/profile.json" <<'PY'
+          import json, sys
+          data = json.load(open(sys.argv[1], encoding="utf-8"))
+          assert data["unique_safe_supersets_s6_to_s10"] == [1, 57, 1283, 14854, 96024]
+          assert data["minimum_legal_next_moves"] == [57, 32, 17, 10, 4]
+          assert data["maximum_legal_next_moves"] == [57, 51, 46, 41, 35]
+          assert data["raw_four_move_paths"] == 24 * 96024
+          assert data["terminal_s10"] == 0
+          assert data["geometry_cross_checks"] == 34845580
+          assert data["s7_outcome"] == data["s6_outcome"] == data["empty_board_outcome"] == "UNKNOWN"
+          print(json.dumps(data, indent=2))
+          PY
+      - name: Reject an altered frozen S6 root
+        run: |
+          python3 - "$RUNNER_TEMP/tampered.cpp" <<'PY'
+          from pathlib import Path
+          import sys
+          source = Path("research/experiments/n11-central-19-cover-20261031/focus_s7_extension_profile_1984.cpp").read_text()
+          old = 'U root=parse("00000000000000603800000000008000");'
+          assert source.count(old) == 1
+          Path(sys.argv[1]).write_text(source.replace(old, 'U root=parse("00000000000000603800000000008001");'))
+          PY
+          g++ -O3 -std=c++20 "$RUNNER_TEMP/tampered.cpp" -o "$RUNNER_TEMP/tampered"
+          if "$RUNNER_TEMP/tampered"; then
+            echo "Tampered root was accepted" >&2
+            exit 1
+          fi
