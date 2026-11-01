@@ -9545,6 +9545,12 @@
 ## [research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_two_circle.cpp](../../../research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_two_circle.cpp)
 
 - [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (verifier): 独立C++行列式・部分集合Grundy検証
+## [research/experiments/spider-graph-star-20261101/proof.md](../../../research/experiments/spider-graph-star-20261101/proof.md)
+
+- [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) (proof): 全d・全qの母関数の組合せ論的全称証明とq4二峰混合・q5以上の正規極限
+## [research/experiments/spider-graph-star-20261101/verify.py](../../../research/experiments/spider-graph-star-20261101/verify.py)
+
+- [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) (verifier): 28条件の頂点集合直接照合、9条件・1608000局面の禁止超辺直接完全列挙
 ## [research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json](../../../research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json)
 
 - [K0004](../items/K0004-n1-n6-all-safe-grundy.md) (data): 命題・対象範囲・根拠を記した出典
