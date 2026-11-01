@@ -9715,6 +9715,12 @@
 ## [research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py](../../../research/experiments/three-row-five-columns-20261019/scripts/verify_three_rows_five_columns.py)
 
 - [K0480](../items/K0480-three-row-five-common-columns-six-point-circles.md) (verifier): 二点和による有限検証
+## [research/experiments/tree-graph-star-dp-20261101/proof.md](../../../research/experiments/tree-graph-star-dp-20261101/proof.md)
+
+- [K0611](../items/K0611-tree-graph-star-three-state-dp.md) (proof): 任意の森の三状態木動的計画法と星グラフの閉形式・非正規極限の全称証明
+## [research/experiments/tree-graph-star-dp-20261101/verify.py](../../../research/experiments/tree-graph-star-dp-20261101/verify.py)
+
+- [K0611](../items/K0611-tree-graph-star-three-state-dp.md) (verifier): 54744条件の全ラベル付き木直接照合、24条件79856部分集合の禁止超辺直接列挙、星48条件と孤立頂点3条件
 ## [research/experiments/two-carrier-terminal-20261031/proof.md](../../../research/experiments/two-carrier-terminal-20261031/proof.md)
 
 - [K0587](../items/K0587-two-carrier-terminal-spectrum.md) (proof): 全極大集合の飽和場合分けによる全称証明、終局長・人数別履歴数
