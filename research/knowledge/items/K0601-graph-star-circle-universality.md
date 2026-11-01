@@ -9,9 +9,6 @@ relations:
 - type: generalizes
   target: K0599
   note: 完全二部グラフの円交差構成を任意有限単純グラフへ拡張
-- type: depends_on
-  target: K0600
-  note: 既存の完全二部グラフ族との漸近比較
 artifacts:
 - path: research/experiments/graph-star-circle-20261101/proof.md
   role: proof
