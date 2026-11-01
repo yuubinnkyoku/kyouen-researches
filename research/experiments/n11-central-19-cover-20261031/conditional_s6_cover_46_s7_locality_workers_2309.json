@@ -1,0 +1,90 @@
+{
+  "schema": "n11-central49-conditional46-s7-locality-workers-v1",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_2309.json",
+  "worker_index_by_sorted_s6": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    2,
+    3,
+    3,
+    3,
+    0,
+    2,
+    2,
+    3,
+    3,
+    3,
+    2,
+    0,
+    0,
+    3,
+    0,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    0,
+    3,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0
+  ],
+  "evidence_level": "GEOMETRY_ONLY_NO_S6_VERDICTS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "baseline_round_robin": {
+    "worker_raw_loads": [
+      770,
+      757,
+      698,
+      719
+    ],
+    "cross_worker_s7_duplicates": 494
+  },
+  "locality_partition": {
+    "worker_s6_counts": [
+      12,
+      12,
+      11,
+      11
+    ],
+    "worker_raw_loads": [
+      726,
+      736,
+      745,
+      737
+    ],
+    "worker_distinct_s7": [
+      706,
+      735,
+      636,
+      632
+    ],
+    "cross_worker_s7_duplicates": 400
+  },
+  "caveat": "Locality partition of conditional S6 proof obligations; no S6 LOSS or WIN established, no runtime speedup measured, no global optimum claim."
+}
