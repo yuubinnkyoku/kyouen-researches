@@ -34,6 +34,8 @@ jobs:
         run: python research/experiments/mixed-spider-critical-20261102/verify.py
       - name: Audit bounded mixed-length spider Gaussian criterion
         run: python research/experiments/bounded-mixed-spider-20261102/verify.py
+      - name: Audit unbounded-arm q4 spider Gaussian criterion
+        run: python research/experiments/unbounded-spider-gaussian-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -141,3 +143,5 @@ jobs:
 # Refresh trigger for K0615 sparse length-three mixed spider Gaussian threshold (2026-11-02).
 
 # Refresh trigger for K0616 bounded mixed-spider Gaussian criterion (2026-11-02).
+
+# Refresh trigger for K0617 unbounded-arm q4 spider Gaussian criterion (2026-11-02).
