@@ -82,3 +82,9 @@ Scope clarification: local terminal certificates and propagation only; does not 
 Next steps: continue referencing K0355/K0372 for trust boundaries; optional add S8 verifier artifacts (`research/experiments/n11-targeted-terminal-lift-20261015/scripts/verify_s8_batch_cpp.cpp`, `verify_s8_batch_python.py`, `verify_s8_loss_batch_cpp.cpp`, `verify_s8_loss_batch_python.py`, and `certificates/new_s8_171_terminal.cert`, `new_s8_win_sixteen_terminal.cert`, `new_s8_loss_three_terminal.cert`). Preserve warnings about truncated DP/old win-loss claims. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-02：中央49の条件付き六石LOSS計画に終局WIN反証
+
+中央応手二石 `{49,60}` の優先四石局面から構成した46個の条件付き六石LOSS証人の一つ、`00000000000000603800000000008000` は、**元先手固定視点でWIN** と独立終局検証された。六石で元先手が点20へ置き、以後の元先手手番5,923局面に対する選択手と、相手の全合法応手を含む8,949局面・951終局の戦略証明書 `research/experiments/n11-central-19-cover-20261031/focus_s6_win_strategy_1984.cert` を保存した。別実装 `verify_focus_s6_win_strategy.py` は4×4整数Bareiss行列式から全合法手を再生成し、到達した終局がすべて奇数石（元先手WIN）であることを確認する。GitHub Actions #41351576503 成功。保存証明書SHA-256は `390554902426c5876b9742edb4219cae13648e103d6310d4f94b9d690ea4e63e`。
+
+この結果、旧46六石証人のうち当該局面をLOSSと仮定する**選択計画は失効**する。ただし四石局面・二石rootの勝敗が反証されたわけではなく、別の六石LOSS証人による修復可能性は残る。旧1,984七石依存・57類集中配布の幾何計数は歴史的計画として保持するが、証明義務として新規配布しない。標準11×11空盤の勝敗は引き続き**UNKNOWN**。
