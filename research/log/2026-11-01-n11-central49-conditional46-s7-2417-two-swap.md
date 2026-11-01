@@ -27,3 +27,7 @@ python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6
 ```
 
 既知S7 WIN/LOSSは歴史的な original-first 表記と終局由来の side-to-move 表記を区別して照合する。歴史的判定の一致は終局までの独立証明を意味しない。今回の改善は**条件付きの証明計画の幾何学的縮小**に限られる。新規S7/S6/S5勝敗判定0、四石LOSS証明0、二石root閉鎖0。全体の未判定S5は2,208類、優先S5は94類、未証明S4は28類。**11×11空盤はUNKNOWN**。
+
+## CI完走後の追記
+
+専用独立監査は **成功**（[GitHub Actions #1](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41296360014)）。4×4 Bareissによる全S7合法子の再計算で2,919辺・2,417類を確認。歴史的original-first LOSS7との一致7類、WIN7との衝突0類、改変拒否試験4件成功。検証器を含む対象コミットは `f5166396`。この結果は条件付き幾何計画の監査であり、勝敗判定ではない。
