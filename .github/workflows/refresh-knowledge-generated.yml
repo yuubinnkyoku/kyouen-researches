@@ -38,6 +38,8 @@ jobs:
         run: python research/experiments/unbounded-spider-gaussian-20261102/verify.py
       - name: Audit one-macroscopic-arm Gaussian coalescence
         run: python research/experiments/macroscopic-spider-arm-20261102/verify.py
+      - name: Audit unrestricted-arm spider Gaussian sufficiency
+        run: python research/experiments/spider-uniform-clt-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -149,3 +151,5 @@ jobs:
 # Refresh trigger for K0617 unbounded-arm q4 spider Gaussian criterion (2026-11-02).
 
 # Refresh trigger for K0618 macroscopic-arm Gaussian coalescence (2026-11-02).
+
+# Refresh trigger for K0619 uniform Gaussian sufficiency without arm-length bound (2026-11-02).
