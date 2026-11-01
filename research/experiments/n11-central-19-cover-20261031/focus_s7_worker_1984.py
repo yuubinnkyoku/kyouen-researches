@@ -93,7 +93,7 @@ def frozen(focus=None, existing=None):
         "focused_s6": focus,
         "s7_children": children,
         "worker_loads": list(map(len, worklists)),
-        "worker_sha256": [digest(("\\n".join(w) + ("\\n" if w else "")).encode())
+        "worker_sha256": [digest(("\n".join(w) + ("\n" if w else "")).encode())
                           for w in worklists],
         "worklists": worklists,
         "existing_report_sha256": file_digest(existing),
@@ -173,8 +173,8 @@ def self_test():
         parse_report(io.StringIO(rows), "synthetic", set(keys),
                      owners, worker, merged, stats)
         return merged, stats
-    good = f"s7workerreport,0,{keys[0]},original_first,LOSS,unverified\\n"
-    unknown = f"s7workerreport,1,{keys[1]},original_first,UNKNOWN,unverified\\n"
+    good = f"s7workerreport,0,{keys[0]},original_first,LOSS,unverified\n"
+    unknown = f"s7workerreport,1,{keys[1]},original_first,UNKNOWN,unverified\n"
     need(check(good + unknown)[0] == {keys[0]: (0, "LOSS")}
          and check(good + unknown)[1]["unknown_ignored"] == 1,
          "UNKNOWN must not become a verdict")
@@ -223,7 +223,7 @@ def main():
          "dispatch generation cannot accept worker results")
     if args.plan_out:
         plan = frozen(args.focus_s6, args.existing)
-        atomic_new(args.plan_out, json.dumps(plan, indent=2, ensure_ascii=False) + "\\n")
+        atomic_new(args.plan_out, json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
         print(json.dumps({"focused_s6": plan["focused_s6"],
                           "s7_children": len(plan["s7_children"]),
                           "worker_loads": plan["worker_loads"],
@@ -245,12 +245,12 @@ def main():
              "worklist export cannot consume new worker reports")
         pending = [k for k in plan["worklists"][args.worklist] if k not in merged]
         if pending:
-            sys.stdout.write("\\n".join(pending) + "\\n")
+            sys.stdout.write("\n".join(pending) + "\n")
         return
     if args.merged_out is not None:
         lines = [f"s7workerreport,{w},{key},original_first,{verdict},unverified"
                  for key, (w, verdict) in sorted(merged.items())]
-        atomic_new(args.merged_out, "\\n".join(lines) + ("\\n" if lines else ""))
+        atomic_new(args.merged_out, "\n".join(lines) + ("\n" if lines else ""))
     print(json.dumps({
         "schema": "n11-central49-s7-focused-unverified-merge-audit-v1",
         "focused_s6": plan["focused_s6"],
