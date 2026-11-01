@@ -25,6 +25,8 @@ jobs:
             && d.historicalSolverTrustedLoss7Hits === 6
             && d.historicalSolverTrustedLoss7EdgeHits === 11
             && d.terminalBackedLoss7Hits === 0
+            && d.terminalBackedLoss7From38Loss8Roots === 268
+            && d.terminalBackedLoss7From38Loss8Hits === 0
             && d.knownWin7Conflicts === 0 && d.historicalLoss6WitnessOverlap === 0
             && d.noHitInTheseInventories === 1974
             && d.shortestS6.children === 55 && d.shortestS6.shared === 0
