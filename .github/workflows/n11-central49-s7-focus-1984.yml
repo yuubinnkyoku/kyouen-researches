@@ -27,7 +27,7 @@ jobs:
           worker = next(i for i, work in enumerate(p["worklists"]) if work)
           key = p["worklists"][worker][0]
           with open(sys.argv[2], "w", encoding="utf-8") as f:
-              f.write(f"s7workerreport,{worker},{key},original_first,LOSS,unverified\\n")
+              f.write(f"s7workerreport,{worker},{key},original_first,LOSS,unverified\n")
           with open(sys.argv[2] + ".worker", "w", encoding="utf-8") as f:
               f.write(str(worker))
           PY
