@@ -1,0 +1,33 @@
+name: N11 central49 focused S6 terminal WIN certificate
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s6_win_strategy_1984.cert'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_strategy.py'
+      - '.github/workflows/n11-central49-focus-s6-win.yml'
+  workflow_dispatch:
+
+jobs:
+  independent-terminal-replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check frozen complete strategy SHA-256
+        run: |
+          echo '390554902426c5876b9742edb4219cae13648e103d6310d4f94b9d690ea4e63e  research/experiments/n11-central-19-cover-20261031/focus_s6_win_strategy_1984.cert' | sha256sum -c -
+      - name: Independently replay every second-player move to terminal
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_strategy.py --negative > "$RUNNER_TEMP/verified.json"
+          python3 - "$RUNNER_TEMP/verified.json" <<'PY'
+          import json, sys
+          data = json.load(open(sys.argv[1], encoding="utf-8"))
+          assert data["s6_original_first_outcome"] == "WIN"
+          assert data["two_stone_root_outcome"] == data["empty_board_outcome"] == "UNKNOWN"
+          assert data["even_strategy_nodes"] == 5923
+          assert data["visited_states"] == 8949
+          assert data["odd_terminal_win_leaves"] == 951
+          assert data["negative_tests"] == 3
+          print(json.dumps(data, indent=2))
+          PY
