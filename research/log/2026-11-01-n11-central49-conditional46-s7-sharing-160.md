@@ -35,7 +35,7 @@
 
 `research/experiments/n11-central-19-cover-20261031/verify_s7_shared_frontier_46.py` を追加。条件付き証明書、凍結S7両集合、固定14根の伝播結果のGit blob SHA-1を固定し、S6全合法子を4×4整数幾何で再計数する。重複したS7の個数、WIN/LOSS衝突、極性、cache交差を検査する。前回の3×3整数幾何の独立検証器もCIで実行する。
 
-別のローカル4×4実装で2,897/2,737/160を再現し、GitHub接続上の独立JavaScript整数幾何でも、凍結LOSS7 8・WIN7 0・固定14由来の追加一致0を照合した。専用CI：`.github/workflows/n11-central49-conditional-s6-s7-sharing.yml`。実行 `41279393978` は登録時点でqueuedであり、成功は未確認。
+別のローカル4×4実装で2,897/2,737/160を再現し、GitHub接続上の独立JavaScript整数幾何でも、凍結LOSS7 8・WIN7 0・固定14由来の追加一致0を照合した。専用CI：`.github/workflows/n11-central49-conditional-s6-s7-sharing.yml`。実行 [41279393978](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41279393978) は **success**。条件付き46類の3×3幾何・双対検証と、独立4×4幾何による2,897/2,737/160および凍結S7の8/0交差が両方通過した。
 
 ```sh
 python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_cover_46.py --self-test
