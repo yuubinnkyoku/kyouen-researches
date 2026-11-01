@@ -9018,6 +9018,12 @@
 ## [research/experiments/prism-two-maxima-20261005/verify.py](../../../research/experiments/prism-two-maxima-20261005/verify.py)
 
 - [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) (verifier): 別ラベル付き全座標mexと有限budget gap DP
+## [research/experiments/pseudoforest-terminal-dp-20261102/proof.md](../../../research/experiments/pseudoforest-terminal-dp-20261102/proof.md)
+
+- [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md) (proof): 付属木の三状態計数と閉路の隣接二状態4状態遷移による全称証明
+## [research/experiments/pseudoforest-terminal-dp-20261102/verify.py](../../../research/experiments/pseudoforest-terminal-dp-20261102/verify.py)
+
+- [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md) (verifier): 4290グラフ条件の独立削除集合照合と90条件180624部分集合の禁止超辺直接列挙
 ## [research/experiments/q57-frontier-followup-20261005/general-energy-proof.md](../../../research/experiments/q57-frontier-followup-20261005/general-energy-proof.md)
 
 - [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (proof): 任意の異なる実数座標に対する鎖分解・重み付け証明と等差数列の等号

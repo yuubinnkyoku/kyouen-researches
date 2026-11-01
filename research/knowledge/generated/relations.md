@@ -2957,6 +2957,7 @@
 - ← depends_on [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md): 任意グラフの整数平面禁止4点実現と極大配置分類
 - ← depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 任意グラフの自由な整数平面点集合への禁止4点実現
 - ← depends_on [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): グラフ型禁止4点ゲームの自由な整数平面実現
+- ← depends_on [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md): 任意グラフの整数共円実現と削除頂点集合による極大配置分類を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3005,6 +3006,7 @@
 ## [K0611](../items/K0611-tree-graph-star-three-state-dp.md) 森グラフ型共円ゲームの三状態極大計数と星グラフの二点終局分布
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と極大配置の削除集合分類を使用
+- ← generalizes [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md): 森の三状態計数を、各連結成分が高々一閉路を持つ擬森に拡張
 
 ## [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) 細分星型共円ゲームの終局母関数と禁止4点・5点間の確率相転移
 
@@ -3077,3 +3079,8 @@
 - → generalizes [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 最大枝長の制限付き必要十分条件を含む
 - → generalizes [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md): 巨大枝1本の二乗臨界尺度と混合極限を含む
 - → depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 中心残存部門の全枝長一様中心極限定理
+
+## [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md) 擬森グラフ型q点共円ゲームの極大配置石数母関数を多項式時間で厳密計数
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と削除頂点集合による極大配置分類を使用
+- → generalizes [K0611](../items/K0611-tree-graph-star-three-state-dp.md): 森の三状態計数を、各連結成分が高々一閉路を持つ擬森に拡張
