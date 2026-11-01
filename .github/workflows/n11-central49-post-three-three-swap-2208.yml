@@ -7,6 +7,8 @@ on:
       - 'research/experiments/n11-central-19-cover-20261031/central49-post-three-three-swap-2208.json'
       - 'research/experiments/n11-central-19-cover-20261031/verify_central49_post_three_three_swap_2208.js'
       - 'research/experiments/n11-central-19-cover-20261031/audit_central49_post_three_three_swap_worker_results_2208.py'
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s6_balanced_94.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_focus_s6_balanced_94.py'
       - '.github/workflows/n11-central49-post-three-three-swap-2208.yml'
   workflow_dispatch:
 
@@ -85,4 +87,56 @@ jobs:
               assert resumed['remaining_s5'] == 93
               assert key not in sum(resumed['worklists'], [])
               print('FROZEN_2208_RECEIPTS_OK')
+          PY
+      - name: Independently audit optimal sixth-edge partition and balanced frozen receipts
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_focus_s6_balanced_94.py
+          python3 - <<'PY'
+          import json
+          import subprocess
+          import sys
+          import tempfile
+          from pathlib import Path
+          script = 'research/experiments/n11-central-19-cover-20261031/audit_central49_post_three_three_swap_worker_results_2208.py'
+          with tempfile.TemporaryDirectory() as td:
+              root = Path(td)
+              plan_path = root / 'balanced-plan.json'
+              plan_path.write_bytes(subprocess.check_output([
+                  sys.executable, script, '--focus-plan', '--balance-s6'
+              ]))
+              plan = json.loads(plan_path.read_text())
+              assert plan['partition_method'] == 'EXACT_S6_EDGE_BALANCED'
+              assert plan['worker_loads'] == [24, 24, 23, 23]
+              assert plan['selected_unknown_s5'] == plan['remaining_s5'] == 94
+              assert len(set(sum(plan['worklists'], []))) == 94
+              key = plan['worklists'][1][0]
+              bits = int(key, 16)
+              worker = root / 'worker1.csv'
+              worker.write_text(f's5verdict,{bits & ((1<<64)-1)},{bits>>64},5,2,1\n')
+              merged = root / 'merged.csv'
+              cmd = [sys.executable, script, '--audit-focus-plan', str(plan_path),
+                     '--worker', '1', str(worker)]
+              out = json.loads(subprocess.check_output(cmd + ['--merged-out', str(merged)]))
+              assert out['new_reported_verdicts'] == 1
+              assert out['remaining_focused_s5'] == 93
+              assert out['root_outcome'] == out['empty_board_outcome'] == 'UNKNOWN'
+              resumed = json.loads(subprocess.check_output([
+                  sys.executable, script, '--focus-plan', '--balance-s6',
+                  '--existing', str(merged)
+              ]))
+              assert resumed['remaining_s5'] == 93
+              assert key not in sum(resumed['worklists'], [])
+              assert resumed['worker_loads'] == [24, 23, 23, 23]
+              def refused(args):
+                  p = subprocess.run(args, capture_output=True)
+                  assert p.returncode != 0, args
+              refused([sys.executable, script, '--balance-s6'])
+              refused([sys.executable, script, '--audit-focus-plan', str(plan_path),
+                       '--worker', '0', str(worker)])
+              modified = json.loads(plan_path.read_text())
+              modified['worklists'][1][0], modified['worklists'][0][0] = (
+                  modified['worklists'][0][0], modified['worklists'][1][0])
+              plan_path.write_text(json.dumps(modified))
+              refused(cmd)
+              print('BALANCED_94_FROZEN_RECEIPTS_OK')
           PY
