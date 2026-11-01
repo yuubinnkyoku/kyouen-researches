@@ -2925,7 +2925,12 @@
 
 - → depends_on [K0596](../items/K0596-maximum-terminal-gaps-all-r.md): 極大安全集合と包含極小横断集合の対応を利用
 - ← depends_on [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md): 任意m,nの格子状禁止四点組の整数平面実現と極小横断集合の分類
+- ← generalizes [K0601](../items/K0601-graph-star-circle-universality.md): 完全二部グラフの円交差構成を任意有限単純グラフへ拡張
 
 ## [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) 格子状共円盤の全安全局面母関数・唯一の最短最長極大配置・二行型の連続終局欠番
 
 - → depends_on [K0599](../items/K0599-grid-circle-terminal-polynomial.md): 任意m,nの格子状禁止四点組の整数平面実現と極小横断集合の分類
+
+## [K0601](../items/K0601-graph-star-circle-universality.md) 任意単純グラフの星型禁止四点組を整数共円実現し全安全・極大母関数を決定
+
+- → generalizes [K0599](../items/K0599-grid-circle-terminal-polynomial.md): 完全二部グラフの円交差構成を任意有限単純グラフへ拡張

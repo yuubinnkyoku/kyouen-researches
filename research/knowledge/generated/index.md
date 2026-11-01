@@ -585,3 +585,4 @@
 | [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md) | 任意本数の禁止集合で全2^(r-1)種類の終局長集合を同一総点数・同一禁止点数で実現 | proposition | proved | maximal-safe, residual-games, variants, strategy-length |
 | [K0599](../items/K0599-grid-circle-terminal-polynomial.md) | 円の格子状交差で任意m×nの極大配置母関数を全称決定し6禁止円で全終局長を整数実現 | proposition | proved | geometry, maximal-safe, residual-games, variants, strategy-length |
 | [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) | 格子状共円盤の全安全局面母関数・唯一の最短最長極大配置・二行型の連続終局欠番 | proposition | proved | geometry, maximal-safe, maximum-safe, residual-games, statistics, variants, strategy-length |
+| [K0601](../items/K0601-graph-star-circle-universality.md) | 任意単純グラフの星型禁止四点組を整数共円実現し全安全・極大母関数を決定 | proposition | proved | geometry, maximal-safe, maximum-safe, residual-games, statistics, variants, strategy-length |
