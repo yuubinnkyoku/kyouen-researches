@@ -1,0 +1,29 @@
+name: N11 central49 repaired conditional S6 cover audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_exclude_certified_win6.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_s6_cover_exclude_certified_win6.py'
+      - '.github/workflows/n11-central49-repaired-s6-cover.yml'
+  workflow_dispatch:
+
+jobs:
+  independent-geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit 94 S5 coverage and 2900/2711 S7 obligations
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_s6_cover_exclude_certified_win6.py --negative > "$RUNNER_TEMP/repaired.json"
+          python3 - "$RUNNER_TEMP/repaired.json" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1], encoding="utf-8"))
+          assert d["s5_covered"] == 94 and d["s6_witnesses"] == 46
+          assert d["known_win6_conflicts"] == 0
+          assert d["raw_s7_edges"] == 2900 and d["distinct_s7_classes"] == 2711
+          assert d["s6_outcome"] == d["s4_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
+          assert d["negative_tests"] == 5
+          print(json.dumps(d, indent=2))
+          PY
