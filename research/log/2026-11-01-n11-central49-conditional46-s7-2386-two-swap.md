@@ -32,3 +32,7 @@ python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6
 `conditional_s6_cover_46_distinct_s7_2386.json` は前段2,417類の証明計画に対する具体的な二証人置換を保存する。専用CIを追加した。初回記録時点でCIの完走は未確認。
 
 新規S7/S6/S5の厳密勝敗判定0、四石LOSS証明0、二石root閉鎖0。全体の未判定S5は2,208類、優先S5は94類、未証明S4は28類のまま。**標準11×11空盤はUNKNOWN**。
+
+## CI完走後の追記
+
+専用独立監査は **成功**（[GitHub Actions #41300945671](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41300945671)）。4×4 Bareissによる全S7合法子の再計算で2,929辺・2,386類、94親の完全被覆、比較済みoriginal-first WIN7との衝突0件、改変拒否試験5件を確認した。対象コミットは `e4ba8758`。証明計画の幾何学的監査であり、勝敗の確定ではない。
