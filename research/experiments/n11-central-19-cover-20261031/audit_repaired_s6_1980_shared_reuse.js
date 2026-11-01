@@ -199,7 +199,7 @@ function audit() {
   // Negative tests exercise actual guards without changing source artifacts.
   let rejected = 0;
   for (const test of [
-    () => selected(data.source, data.swaps.replace(/00000000000000203808000000000020/,
+    () => selected(data.source, data.swaps.replace(/00000000000000805082002000000000/,
                                                  'ffffffffffffffffffffffffffffffff')),
     () => checkNoWinConflicts(frontier,new Set([frontier.values().next().value])),
     () => s7Inventory(data.loss7 + '\n' + cached[0],2232),
