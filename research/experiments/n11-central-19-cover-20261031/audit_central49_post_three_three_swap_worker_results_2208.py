@@ -231,7 +231,7 @@ def choose_priority_focus(owners, witnesses, reported):
 
 
 def make_focus_plan(owners, witnesses, assignment, shards, ordered, reported,
-                    requested_s4=None, existing_sha256=None):
+                    requested_s4=None, existing_sha256=None, balance_s6=False):
     """Freeze one coordinator decision and all four worklists in one snapshot.
 
     Each worker must consume its list from this same document, rather than
@@ -242,15 +242,29 @@ def make_focus_plan(owners, witnesses, assignment, shards, ordered, reported,
     selected = (requested_s4 if requested_s4 is not None
                 else choose_priority_focus(owners, witnesses, reported))
     focus = focus_children(owners, witnesses, selected) if selected is not None else set()
-    worklists = [[key for key in shard if key in focus and key not in reported]
-                 for shard in shards]
+    if balance_s6:
+        # Geometry-only certificate attains the exact lower bound on maximum
+        # legal raw sixth moves per worker, not a solver-runtime bound.
+        from verify_focus_s6_balanced_94 import verify as verify_s6_balance
+        balanced, balance_sha = verify_s6_balance()
+        require(selected == '00000000000000003800800000000000',
+                'S6 balance is only certified for the priority 94-class S4')
+        require(set(key for part in balanced for key in part) == focus,
+                'balanced certificate differs from the current S5 frontier')
+        worklists = [[key for key in part if key not in reported]
+                     for part in balanced]
+    else:
+        balance_sha = None
+        worklists = [[key for key in shard if key in focus and key not in reported]
+                     for shard in shards]
     flat = [key for part in worklists for key in part]
     require(len(flat) == len(set(flat)), 'duplicate S5 in frozen focus plan')
     require(set(flat) == focus - reported.keys(),
             'incomplete frozen focus plan')
-    require(all(assignment[key] == worker for worker, part in enumerate(worklists)
-                for key in part), 'wrong worker in frozen focus plan')
-    return {
+    if not balance_s6:
+        require(all(assignment[key] == worker for worker, part in enumerate(worklists)
+                    for key in part), 'wrong worker in frozen focus plan')
+    result = {
         'schema': 'n11-central49-2208-focused-snapshot-v1',
         'root': [49, 60], 'root_outcome': 'UNKNOWN',
         'empty_board_outcome': 'UNKNOWN',
@@ -265,6 +279,10 @@ def make_focus_plan(owners, witnesses, assignment, shards, ordered, reported,
         'worklists': worklists,
         'caveat': 'One immutable dispatch snapshot. Worker reports are not independent proofs; empty lists never certify S4 LOSS.'
     }
+    if balance_s6:
+        result['partition_method'] = 'EXACT_S6_EDGE_BALANCED'
+        result['balance_certificate_sha256'] = balance_sha
+    return result
 
 
 def remaining_worklist(shards, assignment, existing, worker_id, focus=None):
@@ -304,8 +322,12 @@ def audit_frozen_plan(plan_path, existing, workers, merged_out):
     after = (hashlib.sha256(existing.read_bytes()).hexdigest()
              if existing is not None else None)
     require(before == after, 'existing report changed during snapshot audit')
-    expected = make_focus_plan(owners, witnesses, assignment, shards, ordered,
-                               old, plan.get('selected_s4'), before)
+    require(plan.get('partition_method') in (None, 'EXACT_S6_EDGE_BALANCED'),
+            'unknown frozen partition method')
+    expected = make_focus_plan(
+        owners, witnesses, assignment, shards, ordered,
+        old, plan.get('selected_s4'), before,
+        balance_s6=plan.get('partition_method') == 'EXACT_S6_EDGE_BALANCED')
     require(plan == expected, 'frozen plan differs from reconstructed frontier')
     focused_assignment = {
         key: worker
@@ -488,6 +510,8 @@ def main():
                         help='Automatically focus the unresolved S4 with fewest unreported S5 children')
     parser.add_argument('--focus-plan', action='store_true',
                         help='Emit one immutable JSON snapshot with all four focused worker lists')
+    parser.add_argument('--balance-s6', action='store_true',
+                        help='With --focus-plan, balance exact legal S6 edges for the 94-class S4')
     parser.add_argument('--audit-focus-plan', type=Path,
                         help='Audit receipts against one frozen --focus-plan JSON')
     parser.add_argument('--merged-out', type=Path,
@@ -502,7 +526,7 @@ def main():
         require(ident in ('0', '1', '2', '3'), 'worker ID must be 0..3')
         workers.append((int(ident), Path(filename)))
     if args.audit_focus_plan is not None:
-        require(args.worklist is None and not args.focus_plan
+        require(args.worklist is None and not args.focus_plan and not args.balance_s6
                 and not args.focus_priority and args.focus_s4 is None,
                 'frozen receipt audit cannot export a new worklist')
         print(json.dumps(audit_frozen_plan(args.audit_focus_plan, args.existing,
@@ -511,6 +535,8 @@ def main():
         return
     require(args.merged_out is None,
             '--merged-out requires --audit-focus-plan')
+    require(not args.balance_s6 or args.focus_plan,
+            '--balance-s6 requires --focus-plan')
     require(not (args.focus_s4 and args.focus_priority),
             '--focus-s4 and --focus-priority are mutually exclusive')
     require(not (args.focus_plan and args.worklist is not None),
@@ -525,7 +551,7 @@ def main():
                  if args.existing is not None else None)
         require(before == after, 'existing report changed during focus snapshot')
         plan = make_focus_plan(owners, witnesses, assignment, shards, ordered,
-                               reported, args.focus_s4, before)
+                               reported, args.focus_s4, before, args.balance_s6)
         print(json.dumps(plan, indent=2, ensure_ascii=False))
         return
     if args.worklist is not None:
