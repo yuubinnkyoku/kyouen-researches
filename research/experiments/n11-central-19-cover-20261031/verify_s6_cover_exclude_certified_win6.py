@@ -87,7 +87,7 @@ def main():
     args = parser.parse_args()
     need(hashlib.sha256(WIN_CERT.read_bytes()).hexdigest() == WIN_SHA,
          "independently terminal-proved WIN6 certificate changed")
-    old = json.loads(base.CERT.read_text(encoding="utf-8"))
+    old = json.loads((HERE / "conditional_s6_cover_46.json").read_text(encoding="utf-8"))
     data = base.reconstruct()
     base.verify(old, data)
     win6, _, _ = old_comparison.known_comparisons()
