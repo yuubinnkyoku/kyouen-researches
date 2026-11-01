@@ -89,6 +89,15 @@ def verify(plan, witnesses, sets):
          and sum(raw) == 2944 and sum(distinct) == 2709
          and cut == sum(distinct) - 2309
          and baseline_cut - cut == 94, "worker balance or reuse invalid")
+    need(plan["baseline_round_robin"] == {
+             "worker_raw_loads": baseline_raw,
+             "cross_worker_s7_duplicates": baseline_cut}
+         and plan["locality_partition"] == {
+             "worker_s6_counts": counts,
+             "worker_raw_loads": raw,
+             "worker_distinct_s7": distinct,
+             "cross_worker_s7_duplicates": cut},
+         "saved summary does not match recomputed geometry")
     return {"schema": "n11-central49-s6-worker-locality-audit-v1",
             "conditional_only": True, "s6_outcomes": "UNKNOWN",
             "empty_board_outcome": "UNKNOWN",
@@ -114,7 +123,7 @@ def main():
     result = verify(plan, witnesses, sets)
     if args.negative:
         tests = 0
-        for mutation in ("wrong_worker", "short", "bad_evidence", "false_verdict"):
+        for mutation in ("wrong_worker", "short", "bad_evidence", "false_verdict", "false_summary"):
             bad = copy.deepcopy(plan)
             if mutation == "wrong_worker":
                 bad["worker_index_by_sorted_s6"][0] = 3
@@ -122,8 +131,10 @@ def main():
                 bad["worker_index_by_sorted_s6"].pop()
             elif mutation == "bad_evidence":
                 bad["evidence_level"] = "PROVED"
-            else:
+            elif mutation == "false_verdict":
                 bad["outcomes"]["s6"] = "LOSS"
+            else:
+                bad["locality_partition"]["cross_worker_s7_duplicates"] = 399
             try:
                 verify(bad, witnesses, sets)
             except (ValueError, KeyError, TypeError):
