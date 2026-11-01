@@ -115,7 +115,7 @@ function checkTight(keys){
  assert.equal(covered.size,62);
 }
 checkTight(selected);checkTight(after);
-const fixed=new Set(next.known_loss4_classes),selectedSet=new Set(selected);
+const fixed=new Set(next.known_loss4_classes),selectedSet=new Set(after);
 const byPair=new Map();
 for(const [k,mask] of classes){
  const pair=dualPair(mask);
@@ -147,23 +147,23 @@ function children(k){
  const out={all,unknown};
  memo.set(k,out);return out;
 }
-for(const k of selected)for(const id of children(k).unknown)counter[id]++;
+for(const k of after)for(const id of children(k).unknown)counter[id]++;
 let baseline=0;
 for(let i=0;i<nextID;i++)if(counter[i])baseline++;
-assert.equal(baseline,2211);
-const free=selected.map((k,i)=>fixed.has(k)?-1:i).filter(i=>i>=0);
+assert.equal(baseline,2208);
+const free=after.map((k,i)=>fixed.has(k)?-1:i).filter(i=>i>=0);
 assert.equal(free.length,28);
 let pairs=0,matchings=0,combos=0,feasible=0,improvements=0,minimum=baseline,best=null;
 for(let ii=0;ii<free.length;ii++)for(let jj=ii+1;jj<free.length;jj++){
  pairs++;
  const rem=[free[ii],free[jj]];
  let kept=0n;
- for(let i=0;i<31;i++)if(!rem.includes(i))kept|=classes.get(selected[i]);
+ for(let i=0;i<31;i++)if(!rem.includes(i))kept|=classes.get(after[i]);
  const missing=target&~kept;
- const vertices=rem.flatMap(i=>dualPair(classes.get(selected[i])));
+ const vertices=rem.flatMap(i=>dualPair(classes.get(after[i])));
  assert.equal(new Set(vertices).size,4,'dual overlap');
  let keptCount=baseline;
- for(const i of rem)for(const id of children(selected[i]).unknown){
+ for(const i of rem)for(const id of children(after[i]).unknown){
   counter[id]--;if(counter[id]===0)keptCount--;
  }
  const [a,b,c,d]=vertices;
@@ -179,16 +179,16 @@ for(let ii=0;ii<free.length;ii++)for(let jj=ii+1;jj<free.length;jj++){
     if(counter[id]===0&&seen[id]!==epoch){seen[id]=epoch;cost++;}
    }
    if(cost<baseline)improvements++;
-   if(cost<minimum){minimum=cost;best={removed:rem.map(i=>selected[i]),added:[x.k,y.k].sort(),cost};}
+   if(cost<minimum){minimum=cost;best={removed:rem.map(i=>after[i]),added:[x.k,y.k].sort(),cost};}
   }
  }
- for(const i of rem)for(const id of children(selected[i]).unknown)counter[id]++;
+ for(const i of rem)for(const id of children(after[i]).unknown)counter[id]++;
 }
 assert.equal(pairs,378);
 assert.equal(matchings,1134);
 assert(combos>=3000,'too few candidate pairs');
 assert(feasible>=3000,'too few feasible pairs');
-assert(improvements>=0);
+assert.equal(improvements,0);
 const allS5=new Set(),unknownS5=new Set();
 for(const k of after){
  const c=children(k);
@@ -219,6 +219,6 @@ console.log(JSON.stringify({
  removed_pairs:pairs,dual_pair_matchings:matchings,
  candidate_pairs:combos,feasible_two_swaps:feasible,improvements,best,
  fixed_known_loss4:fixed.size,unproved_s4:free.length,
- conclusion:'Exhaustive two-for-two neighborhood; do not infer a game outcome.',
+ conclusion:'No improving two-for-two replacement of the fixed 2208-class cover.',
  trust:'Local cover optimality only; no S5 verdict or game outcome.'
 },null,2));
