@@ -2714,6 +2714,12 @@
 
 - [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
 - [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md) (data): 今回の安全性・極大性と阻害三つ組分布
+## [research/experiments/macroscopic-spider-arm-20261102/proof.md](../../../research/experiments/macroscopic-spider-arm-20261102/proof.md)
+
+- [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) (proof): 重み付き4状態転送行列の最大固有値と二正規混合の全称証明
+## [research/experiments/macroscopic-spider-arm-20261102/verify.py](../../../research/experiments/macroscopic-spider-arm-20261102/verify.py)
+
+- [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) (verifier): 独立二値語・グラフ削除全列挙・漸化式と長枝モーメントの照合
 ## [research/experiments/maximal-terminal-gap-all-r-20261101/proof.md](../../../research/experiments/maximal-terminal-gap-all-r-20261101/proof.md)
 
 - [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (proof): 任意rの極小横断集合の証明と任意qの整数平面上界達成構成
