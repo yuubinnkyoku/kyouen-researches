@@ -70,33 +70,33 @@ verify.py は実際の禁止超辺を生成し、9条件で全部分集合を列
 
 完全二部グラフ K_{a,b}（2<=a<=b、r>=2）について、x=r^{-a}、p=x/(1+x)、A=(1+x)^b、E_b=(b+2)(3/4)^b とおく。H を一様な極大配置の石数、s=N-ab とし、実数値確率変数 X=(H-s)/(a-1) を考える（主要族外では整数とは限らない）。全変動距離について、**任意の有限 a,b,r** で
 
-[
+\[
 \boxed{
 d_{TV}(\mathcal L(X),\operatorname{Bin}(b,p))
 \le \frac{E_b+x^b}{A-x^b}+p^b.}
-]
+\]
 
 また \(\lambda=bx\) とすれば
 
-[
+\[
 \boxed{
 d_{TV}(\mathcal L(X),\operatorname{Poisson}(bx))
 \le \frac{E_b+x^b}{A-x^b}+p^b+3bx^2.}
-]
+\]
 
 **証明。** 定理Aの主要族の個数は D=r^{ab}(A-x^b)。主要族での X の分布は Bin(b,p) を X<b で条件付けた分布であり、その無条件分布との全変動距離は p^b。主要族外の確率 \(\delta=(T-D)/T\) は、K0604の \(|T/r^{ab}-A|\le E_b\) より
 
-[
+\[
 0\le\delta\le (E_b+x^b)/(A-x^b).
-]
+\]
 
 混合分布の全変動距離の凸性から第1式。二項分布と Poisson(bp) の全変動距離は Le Cam の不等式で高々 \(2bp^2\)、Poisson(bp) と Poisson(bx) の距離は高々 \(b|x-p|=bx^2/(1+x)\)。\(p\le x\) より合計は高々 \(3bx^2\)。□
 
 特に b→∞、2<=a<=b、r>=2 を固定または変化させても、主要族外の確率は一様に0へ収束する（x<=1/4、E_b→0）。さらに \(bp\to\infty\) なら、二項分布の三角配列に対する中心極限定理により
 
-[
+\[
 \boxed{\frac{X-bp}{\sqrt{bp(1-p)}}\Rightarrow N(0,1).}
-]
+\]
 
 これは臨界窓のポアソン極限だけでなく、**最短配置への集中が失われる側の正規極限**も与える。実際の終局石数については \(X=(H-s)/(a-1)\) と読み替える。
 
@@ -104,40 +104,40 @@ d_{TV}(\mathcal L(X),\operatorname{Poisson}(bx))
 
 h>=3、L>=1、r>=2、E=binom(h,2)、a=h r^{-(h-1)}、p=a/(1+a)、\(\eta_* =2^h r^{-(2h-3)}\) とする。\(Y=(H-s)/(h-2)\) とすれば、任意の有限 h,L,r に対して
 
-[
+\[
 \boxed{
 d_{TV}(\mathcal L(Y),\operatorname{Bin}(L,p))
 \le r^{-LE}+\left(1+\frac{\eta_*}{1+a}\right)^L-1.}
-]
+\]
 
 従って
 
-[
+\[
 \boxed{
 d_{TV}(\mathcal L(Y),\operatorname{Poisson}(La))
 \le r^{-LE}+\left(1+\frac{\eta_*}{1+a}\right)^L-1+3La^2.}
-]
+\]
 
 **証明。** 1成分の全頂点保持重みを r^E、1頂点欠損の合計重みを \(r^E a\) とする。2頂点以上欠損した項の正規化重みの和 \(\eta\) は、各項で少なくとも \(2h-3\) 本の辺が失われるため
 
-[
+\[
 0\le\eta=\sum_{k=2}^{h-1}\binom hk r^{-k(2h-k-1)/2}
 \le 2^h r^{-(2h-3)}=\eta_*.
-]
+\]
 
 主要族の総数は \(D=r^{LE}(1+a)^L\)、全極大配置数は \(T=1+r^{LE}(1+a+\eta)^L\)。主要族内の Y は正確に Bin(L,p) に従う。従って主要族外の割合は
 
-[
+\[
 \delta=(T-D)/T\le (T-D)/D
 \le r^{-LE}+\left(1+\frac{\eta_*}{1+a}\right)^L-1.
-]
+\]
 
 これが第1式。第2式は Le Cam の不等式と \(L|a-p|\le La^2\) から従う。□
 
 臨界条件 \(La\to c\in(0,\infty)\)、h→∞ の下で、\(\eta_*/a=(r^2/h)(2/r)^h\le r^2/h\)（r固定）より \(L\eta_*\to0\)、\(La^2\to0\) となり、定理Bの全変動収束を**明示的な有限誤差付き**で再証明できる。また h→∞、Lp→∞、\(L\eta_*\to0\) なら、主要族の二項分布に中心極限定理を適用でき、
 
-[
+\[
 \boxed{\frac{Y-Lp}{\sqrt{Lp(1-p)}}\Rightarrow N(0,1).}
-]
+\]
 
 これらは極大配置の**一様選択**についての結果であり、ランダムな着手順の分布ではない。数値的な誤差上界は大きな値をとる場合もあるが、常に有効な上界である。
