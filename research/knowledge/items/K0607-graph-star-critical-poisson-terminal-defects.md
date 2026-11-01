@@ -54,25 +54,25 @@ q>=5、r=q-3 を固定し、K0602 の整数平面グラフ星型共円構成の�
 
 完全二部グラフ K_{a,b}（2<=a<=b、r>=2）では、x=r^{-a}、p=x/(1+x)、\(X=(H-s)/(a-1)\) とおくと、
 
-[
+\[
 \boxed{d_{TV}(\mathcal L(X),\mathrm{Bin}(b,p))
 \le \frac{(b+2)(3/4)^b+x^b}{(1+x)^b-x^b}+p^b.}
-]
+\]
 
 さらに右辺に \(3bx^2\) を足せば Poisson(bx) への全変動距離上界になる。b→∞ で \(bp\to\infty\) なら、主要族外の確率が0に収束するため
 
-[
+\[
 \boxed{(X-bp)/\sqrt{bp(1-p)}\Rightarrow N(0,1).}
-]
+\]
 
 これは固定aでbを増やす場合も含む。
 
 L 個の完全グラフ K_h（h>=3、r>=2）では、E=binom(h,2)、a=h r^{-(h-1)}、p=a/(1+a)、\(\eta_*=2^h r^{-(2h-3)}\)、\(Y=(H-s)/(h-2)\) とすると、
 
-[
+\[
 \boxed{d_{TV}(\mathcal L(Y),\mathrm{Bin}(L,p))
 \le r^{-LE}+\left(1+\frac{\eta_*}{1+a}\right)^L-1.}
-]
+\]
 
 右辺に \(3La^2\) を足せば Poisson(La) への全変動距離上界となる。h→∞、Lp→∞、\(L\eta_*\to0\) の下では、\((Y-Lp)/\sqrt{Lp(1-p)}\Rightarrow N(0,1)\) も成立する。
 
