@@ -29,3 +29,7 @@
 `verify_s7_low_remote_balanced_2309.py` は従来の証明書系列・別実装の4×4 Bareiss整数幾何を再実行して、46証人・2,944辺・2,309類の同一性を確認した上で、旧計画と新計画を比較し、六組の共有数、所有数、遠隔依存36類削減、UNKNOWN境界を検査する。`--negative` は作業者・所有数割当・所有規則・偽勝敗・集計・旧計画・出典の改変拒否7件、`--worklist 0`〜`3` は担当する七石正準キーを出力する。
 
 短時間の独立監査専用workflow `.github/workflows/n11-central49-low-remote-balanced-s7.yml` を追加。長時間の未解決探索は起動しない。実際の六石LOSS、五石判定、四石LOSS、二石root閉鎖は増えていない。未判定S5 2,208類、優先S5 94類、未証明S4 28類は据え置き。標準11×11空盤は **UNKNOWN**。
+
+## 独立監査の結果
+
+GitHub Actions [#41325299418](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41325299418) は **success**。証明書系列・4×4整数幾何・46証人・2,944辺・2,309類・遠隔依存446類・所有数578/577/577/577類・改変拒否7件を検査した。これは証明義務の配分の監査であり、勝敗証明ではない。
