@@ -1,0 +1,18 @@
+name: N11 central49 conditional 1984 distinct S7 audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_distinct_s7_1984.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_distinct_s7_1984.py'
+      - '.github/workflows/n11-central49-conditional-s7-1984.yml'
+  workflow_dispatch:
+
+jobs:
+  independent-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify all nine swaps, independent 4x4 geometry, and conflict guards
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_conditional_s6_distinct_s7_1984.py --negative
