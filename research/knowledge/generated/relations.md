@@ -2943,6 +2943,7 @@
 - ← depends_on [K0603](../items/K0603-graph-star-sparse-cycles.md): グラフ星型の整数幾何実現・極小横断集合の母関数・最短極大個数を利用
 - ← depends_on [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): 任意q点版の整数幾何実現と極小横断集合分類を利用
 - ← depends_on [K0605](../items/K0605-domination-bipartition-nonconcentration.md): グラフ星型整数共円実現、極小横断集合分類、最短極大配置数を使用
+- ← depends_on [K0606](../items/K0606-graph-star-clique-component-threshold.md): 整数平面上のグラフ星型実現、極大配置母関数、最短配置数を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -2958,3 +2959,9 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円実現、極小横断集合分類、最短極大配置数を使用
 - → generalizes [K0603](../items/K0603-graph-star-sparse-cycles.md): 最大次数Δの非集中境界を全域森二色分割で強化
+- ← generalizes [K0606](../items/K0606-graph-star-clique-component-threshold.md): 支配集合恒等式を連結成分ごとに積へ分解し、クリーク直和の鋭い境界を決定
+
+## [K0606](../items/K0606-graph-star-clique-component-threshold.md) グラフ星型共円構成の成分積公式とクリーク直和の鋭い集中閾値
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 整数平面上のグラフ星型実現、極大配置母関数、最短配置数を使用
+- → generalizes [K0605](../items/K0605-domination-bipartition-nonconcentration.md): 支配集合恒等式を連結成分ごとに積へ分解し、クリーク直和の鋭い境界を決定

@@ -2544,6 +2544,12 @@
 ## [research/experiments/graph-star-circle-20261101/verify.py](../../../research/experiments/graph-star-circle-20261101/verify.py)
 
 - [K0601](../items/K0601-graph-star-circle-universality.md) (verifier): 1094ラベル付きグラフ・3802800部分集合、11×11内のK3七点の幾何判定と全局面列挙
+## [research/experiments/graph-star-clique-components-20261101/proof.md](../../../research/experiments/graph-star-clique-components-20261101/proof.md)
+
+- [K0606](../items/K0606-graph-star-clique-component-threshold.md) (proof): 成分積公式、全終局多項式、必要十分な対数集中境界の全称証明
+## [research/experiments/graph-star-clique-components-20261101/verify.py](../../../research/experiments/graph-star-clique-components-20261101/verify.py)
+
+- [K0606](../items/K0606-graph-star-clique-component-threshold.md) (verifier): 支配集合直接列挙40条件、禁止超辺全局面列挙6条件、単一成分60条件
 ## [research/experiments/graph-star-domination-bound-20261101/proof.md](../../../research/experiments/graph-star-domination-bound-20261101/proof.md)
 
 - [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (proof): 支配集合恒等式、全域森二色分割による全称上界とq=4の無条件指数的非集中

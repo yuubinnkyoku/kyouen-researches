@@ -590,3 +590,4 @@
 | [K0603](../items/K0603-graph-star-sparse-cycles.md) | グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) | 完全二部グラフ型共円ゲームの終局多項式と最短極大配置集中の鋭い対数境界 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0605](../items/K0605-domination-bipartition-nonconcentration.md) | グラフ星型共円ゲームの支配集合恒等式と次数非依存の最短配置非集中境界 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0606](../items/K0606-graph-star-clique-component-threshold.md) | グラフ星型共円構成の成分積公式とクリーク直和の鋭い集中閾値 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
