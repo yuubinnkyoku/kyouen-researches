@@ -59,7 +59,7 @@ def verify(doc, old, old_stats, s7_sets, source_keys):
          and max(result["worker_owned_s7"]) == 578
          and all(715 <= x <= 760 for x in result["worker_raw_loads"])
          and result["cross_worker_s7_dependencies"] + 7 ==
-             old_stats["cross_worker_s7_dependencies"]
+             old_stats["new"]["cross_worker_s7_dependencies"]
          and result["within_worker_shared_s7"] ==
              old_stats["within_worker_shared_s7"] + 7,
          "balance, S7 coverage, or improvement invalid")
