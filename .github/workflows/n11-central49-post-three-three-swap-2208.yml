@@ -67,11 +67,13 @@ jobs:
               assert out['new_reported_verdicts'] == 1
               assert out['remaining_focused_s5'] == 93
               assert out['root_outcome'] == 'UNKNOWN'
-              assert merged.read_text() == row(2).replace(',1\n', ',0\n')
+              assert merged.read_text() == ('# evidence_level=WORKER_REPORTED_NOT_INDEPENDENTLY_REPLAYED; NOT A CERTIFICATE\n' + row(2).replace('s5verdict,', 's5workerreport,').replace(',1\n', ',0\n'))
               def refused(command):
                   r = subprocess.run(command, capture_output=True)
                   assert r.returncode != 0, command
               refused(cmd + ['--merged-out', str(merged)])
+              # A raw solver-style verdict CSV must not be accepted as a merged report.
+              refused([sys.executable, script, '--focus-plan', '--existing', str(worker)])
               refused([sys.executable, script, '--audit-focus-plan', str(plan_path),
                        '--worker', '1', str(worker)])
               worker.write_text(row(1))
