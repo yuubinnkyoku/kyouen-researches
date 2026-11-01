@@ -2714,6 +2714,12 @@
 ## [research/experiments/maximal-terminal-gap-all-r-20261101/verify.py](../../../research/experiments/maximal-terminal-gap-all-r-20261101/verify.py)
 
 - [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (verifier): 32896抽象所属型と11×11内12点証人の495四点組・全安全局面の独立検査
+## [research/experiments/mixed-spider-critical-20261102/proof.md](../../../research/experiments/mixed-spider-critical-20261102/proof.md)
+
+- [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (proof): 異長枝の厳密母関数、有限誤差、正規極限の必要十分条件、固定長枝数の二点混合の証明
+## [research/experiments/mixed-spider-critical-20261102/verify.py](../../../research/experiments/mixed-spider-critical-20261102/verify.py)
+
+- [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (verifier): グラフ削除24条件・禁止超辺9条件628032部分集合・総数49条件の独立照合
 ## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）
