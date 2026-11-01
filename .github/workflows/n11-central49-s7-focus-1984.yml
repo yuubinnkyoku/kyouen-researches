@@ -17,7 +17,7 @@ jobs:
         run: python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py --self-test
       - name: Independently reconstruct all S7 ownership and freeze one S6 focus
         run: |
-          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py --plan-out "$RUNNER_TEMP/focus.json"
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py --historical-refuted-plan --plan-out "$RUNNER_TEMP/focus.json"
           python3 - "$RUNNER_TEMP/focus.json" "$RUNNER_TEMP/worker.csv" <<'PY'
           import json, sys
           p = json.load(open(sys.argv[1], encoding="utf-8"))
@@ -50,7 +50,7 @@ jobs:
       - name: Audit four-way balanced focused S7 ownership and safe receipts
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py \
-            --balanced-focus --plan-out "$RUNNER_TEMP/focus-balanced.json"
+            --historical-refuted-plan --balanced-focus --plan-out "$RUNNER_TEMP/focus-balanced.json"
           python3 - "$RUNNER_TEMP/focus-balanced.json" "$RUNNER_TEMP" <<'PY'
           import json, pathlib, sys
           plan = json.load(open(sys.argv[1], encoding="utf-8"))
@@ -83,3 +83,16 @@ jobs:
           assert audit["s6_outcome"] == audit["empty_board_outcome"] == "UNKNOWN"
           assert len(lines) == 4 and all(line.endswith(",unverified") for line in lines)
           PY
+
+      - name: Refuse new worklists for the refuted S6 LOSS plan
+        run: |
+          if python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py \
+            --plan-out "$RUNNER_TEMP/must-not-exist.json"; then
+            echo "Refuted S6 was dispatched without explicit historical override" >&2
+            exit 1
+          fi
+          if python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py \
+            --audit-plan "$RUNNER_TEMP/focus-balanced.json" --worklist 0; then
+            echo "Refuted S6 worklist escaped the guard" >&2
+            exit 1
+          fi
