@@ -76,6 +76,22 @@ def verify(plan, witnesses, sets):
     need((total, len(union)) == (2944, 2309)
          and Counter(multiplicity.values()) == {1: 1674, 2: 635},
          "source frontier or multiplicity changed")
+    owners = {}
+    for i, s7s in enumerate(sets):
+        for s7 in s7s:
+            owners.setdefault(s7, []).append(i)
+    parents = list(range(46))
+    def root(i):
+        while parents[i] != i:
+            parents[i] = parents[parents[i]]
+            i = parents[i]
+        return i
+    for indices in owners.values():
+        if len(indices) == 2:
+            parents[root(indices[0])] = root(indices[1])
+    component_sizes = Counter(Counter(root(i) for i in range(46)).values())
+    need(component_sizes == {1: 17, 2: 1, 27: 1},
+         "S6 overlap component geometry changed")
     baseline = [i % 4 for i in range(46)]
     baseline_raw, baseline_distinct, baseline_cut = statistics(baseline, sets)
     raw, distinct, cut = statistics(assignment, sets)
@@ -104,6 +120,7 @@ def verify(plan, witnesses, sets):
             "witnesses": len(witnesses), "raw_s7_edges": total,
             "distinct_s7": len(union),
             "multiplicity_histogram": dict(Counter(multiplicity.values())),
+            "overlap_component_sizes": dict(component_sizes),
             "worker_counts": counts, "worker_raw_loads": raw,
             "worker_distinct_s7": distinct,
             "baseline_raw_loads": baseline_raw,
