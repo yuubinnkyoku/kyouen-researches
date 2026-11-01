@@ -116,6 +116,8 @@ def verify(plan, witnesses, sets):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--negative", action="store_true")
+    parser.add_argument("--worklist", type=int, choices=range(4),
+                        help="print only the verified S6 keys for one worker")
     args = parser.parse_args()
     witnesses = source_witnesses()
     sets = frontier(witnesses)
@@ -142,7 +144,12 @@ def main():
             else:
                 raise AssertionError("tampered allocation accepted: " + mutation)
         result["negative_tests"] = tests
-    print(json.dumps(result, indent=2, ensure_ascii=False))
+    if args.worklist is None:
+        print(json.dumps(result, indent=2, ensure_ascii=False))
+    else:
+        for witness, worker in zip(witnesses, plan["worker_index_by_sorted_s6"]):
+            if worker == args.worklist:
+                print(base.key(witness))
 
 
 if __name__ == "__main__":
