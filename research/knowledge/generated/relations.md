@@ -2950,6 +2950,7 @@
 - ← depends_on [K0611](../items/K0611-tree-graph-star-three-state-dp.md): 任意グラフの整数共円実現と極大配置の削除集合分類を使用
 - ← depends_on [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md): 任意q点版の整数共円実現と削除集合による極大配置分類を使用
 - ← depends_on [K0613](../items/K0613-length-three-spider-gaussian-all-q.md): 任意グラフの整数平面実現と極大配置の削除集合分類
+- ← depends_on [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 任意q点版の整数平面実現と極大配置の削除集合分類
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3002,7 +3003,15 @@
 ## [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) 細分星型共円ゲームの終局母関数と禁止4点・5点間の確率相転移
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点版の整数共円実現と削除集合による極大配置分類を使用
+- ← generalizes [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 長さ2の臨界二峰混合とq>=5正規極限を含む
 
 ## [K0613](../items/K0613-length-three-spider-gaussian-all-q.md) 長さ3の枝を持つ星型共円構成の厳密母関数と全q正規極限
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数平面実現と極大配置の削除集合分類
+- ← generalizes [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 長さ3の全q正規極限を含む
+
+## [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md) 任意固定枝長の星型共円構成の母関数と正規極限の完全分類
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点版の整数平面実現と極大配置の削除集合分類
+- → generalizes [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md): 長さ2の臨界二峰混合とq>=5正規極限を含む
+- → generalizes [K0613](../items/K0613-length-three-spider-gaussian-all-q.md): 長さ3の全q正規極限を含む

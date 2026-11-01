@@ -9545,6 +9545,12 @@
 ## [research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_two_circle.cpp](../../../research/experiments/sparse-hyperedge-nimber-20261019/scripts/verify_two_circle.cpp)
 
 - [K0437](../items/K0437-few-residual-hyperedges-grundy-ceiling.md) (verifier): 独立C++行列式・部分集合Grundy検証
+## [research/experiments/spider-all-arm-lengths-20261102/proof.md](../../../research/experiments/spider-all-arm-lengths-20261102/proof.md)
+
+- [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md) (proof): 任意枝長の母関数と枝長別正規極限の全称証明
+## [research/experiments/spider-all-arm-lengths-20261102/verify.py](../../../research/experiments/spider-all-arm-lengths-20261102/verify.py)
+
+- [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md) (verifier): 頂点削除集合92条件と禁止超辺10条件1497344部分集合の独立完全照合
 ## [research/experiments/spider-graph-star-20261101/proof.md](../../../research/experiments/spider-graph-star-20261101/proof.md)
 
 - [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) (proof): 全d・全qの母関数の組合せ論的全称証明とq4二峰混合・q5以上の正規極限
