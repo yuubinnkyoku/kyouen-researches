@@ -1,0 +1,35 @@
+{
+  "schema": "n11-central49-conditional46-distinct-s7-two-single-swaps-v1",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_2553.json",
+  "priority_s4_key": "00000000000000003800800000000000",
+  "swaps": [
+    {
+      "removed_s6_class": "00000010000000003808000000100000",
+      "added_s6_class": "00000000000000203808000000100000",
+      "raw_s7_edges": 2906,
+      "distinct_s7_classes": 2520
+    },
+    {
+      "removed_s6_class": "00000000000100003800810000000000",
+      "added_s6_class": "00000000000000203808001000000000",
+      "raw_s7_edges": 2913,
+      "distinct_s7_classes": 2491
+    }
+  ],
+  "s5_covered": 94,
+  "s6_witnesses": 46,
+  "previous_raw_s7_edges": 2905,
+  "previous_distinct_s7_classes": 2553,
+  "final_raw_s7_edges": 2913,
+  "final_distinct_s7_classes": 2491,
+  "known_win7_hits": 0,
+  "historical_original_first_loss7_hits": 7,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_PLAN_NOT_VERDICTS",
+  "outcomes": {
+    "s4": "UNKNOWN",
+    "s6": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Two constructive 1-for-1 S6 witness replacements, not a global optimum. Original-first LOSS7 comparison labels are not all independently terminal verified. No S6 LOSS is proved."
+}
