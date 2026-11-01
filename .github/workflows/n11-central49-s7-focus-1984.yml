@@ -46,3 +46,40 @@ jobs:
           lines = open(sys.argv[2], encoding="utf-8").read().splitlines()
           assert len(lines) == 1 and lines[0].startswith("s7workerreport,")
           PY
+
+      - name: Audit four-way balanced focused S7 ownership and safe receipts
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py \
+            --balanced-focus --plan-out "$RUNNER_TEMP/focus-balanced.json"
+          python3 - "$RUNNER_TEMP/focus-balanced.json" "$RUNNER_TEMP" <<'PY'
+          import json, pathlib, sys
+          plan = json.load(open(sys.argv[1], encoding="utf-8"))
+          root = pathlib.Path(sys.argv[2])
+          assert plan["focused_owner_policy"] == "focus_only_round_robin_sorted_s7_v1"
+          assert plan["global_owner_override_scope"] == "FOCUSED_S6_ONLY"
+          assert plan["worker_loads"] == [15, 14, 14, 14]
+          assert len(plan["s7_children"]) == 57
+          all_keys = [key for work in plan["worklists"] for key in work]
+          assert len(all_keys) == len(set(all_keys)) == 57
+          assert sorted(all_keys) == plan["s7_children"]
+          assert plan["outcomes"]["empty_board"] == "UNKNOWN"
+          for worker, work in enumerate(plan["worklists"]):
+              (root / f"balanced-worker-{worker}.csv").write_text(
+                  f"s7workerreport,{worker},{work[0]},original_first,LOSS,unverified\\n",
+                  encoding="utf-8")
+          PY
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1984.py \
+            --audit-plan "$RUNNER_TEMP/focus-balanced.json" \
+            --worker 0 "$RUNNER_TEMP/balanced-worker-0.csv" \
+            --worker 1 "$RUNNER_TEMP/balanced-worker-1.csv" \
+            --worker 2 "$RUNNER_TEMP/balanced-worker-2.csv" \
+            --worker 3 "$RUNNER_TEMP/balanced-worker-3.csv" \
+            --merged-out "$RUNNER_TEMP/balanced-merged.csv" > "$RUNNER_TEMP/balanced-audit.json"
+          python3 - "$RUNNER_TEMP/balanced-audit.json" "$RUNNER_TEMP/balanced-merged.csv" <<'PY'
+          import json, sys
+          audit = json.load(open(sys.argv[1], encoding="utf-8"))
+          lines = open(sys.argv[2], encoding="utf-8").read().splitlines()
+          assert audit["reported_loss7"] == 4 and audit["unreported_s7"] == 53
+          assert audit["s6_outcome"] == audit["empty_board_outcome"] == "UNKNOWN"
+          assert len(lines) == 4 and all(line.endswith(",unverified") for line in lines)
+          PY
