@@ -8940,6 +8940,12 @@
 ## [research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py](../../../research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (solver): 実装（edges厳密列挙＋d降順CNF＋cadical）
+## [research/experiments/path-terminal-gaussian-20261101/proof.md](../../../research/experiments/path-terminal-gaussian-20261101/proof.md)
+
+- [K0609](../items/K0609-path-graph-star-terminal-gaussian.md) (proof): 道の境界条件つき母関数・3項漸化式・正規極限の全称証明
+## [research/experiments/path-terminal-gaussian-20261101/verify.py](../../../research/experiments/path-terminal-gaussian-20261101/verify.py)
+
+- [K0609](../items/K0609-path-graph-star-terminal-gaussian.md) (verifier): 88比較の独立方式照合と11条件171632局面の禁止超辺直接完全列挙
 ## [research/experiments/prism-followup-20261005/even-capacity-output.json](../../../research/experiments/prism-followup-20261005/even-capacity-output.json)
 
 - [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (data): 明示パラメータの完全有限検算。全称命題の根拠は証明artifact
