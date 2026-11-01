@@ -143,12 +143,17 @@ def reports(plan, existing, worker_files):
     need(len(owners) == len(allowed), "invalid focused owner map")
     merged, stats = {}, {"rows": 0, "unknown_ignored": 0,
                          "repeated_consistent": 0}
+    inputs = ([existing] if existing is not None else []) + [
+        path for _, path in worker_files]
+    before = [file_digest(path) for path in inputs]
     if existing is not None:
         with existing.open(encoding="utf-8", newline="") as stream:
             parse_report(stream, existing, allowed, owners, None, merged, stats)
     for worker, path in worker_files:
         with path.open(encoding="utf-8", newline="") as stream:
             parse_report(stream, path, allowed, owners, worker, merged, stats)
+    need(before == [file_digest(path) for path in inputs],
+         "report changed while being read")
     return merged, stats
 
 
@@ -200,7 +205,18 @@ def self_test():
         pass
     else:
         raise AssertionError("wrong worker accepted")
-    print(json.dumps({"self_test": "PASS", "negative_tests": 9}))
+    try:
+        merged, stats = {}, {"rows": 0, "unknown_ignored": 0,
+                             "repeated_consistent": 0}
+        parse_report(io.StringIO(good), "first", set(keys),
+                     owners, 0, merged, stats)
+        parse_report(io.StringIO(good.replace(",LOSS,", ",WIN,")),
+                     "second", set(keys), owners, 0, merged, stats)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("cross-file WIN/LOSS conflict accepted")
+    print(json.dumps({"self_test": "PASS", "negative_tests": 10}))
 
 
 def main():
