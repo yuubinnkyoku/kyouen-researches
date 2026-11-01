@@ -1148,6 +1148,12 @@
 ## [research/experiments/cube-q5-weak-20261022/verify_reflection.py](../../../research/experiments/cube-q5-weak-20261022/verify_reflection.py)
 
 - [K0502](../items/K0502-even-cubes-q5-constructive-weak-solution.md) (verifier): 別方式の直接4×4行列式による独立対称局面・応手検査
+## [research/experiments/cycle-terminal-gaussian-20261101/proof.md](../../../research/experiments/cycle-terminal-gaussian-20261101/proof.md)
+
+- [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md) (proof): 石数別転送行列、漸化式、平均分散の明示定数と正規極限の全称証明
+## [research/experiments/cycle-terminal-gaussian-20261101/verify.py](../../../research/experiments/cycle-terminal-gaussian-20261101/verify.py)
+
+- [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md) (verifier): 36条件の円環・行列・漸化式照合と6条件608768局面の超辺直接完全列挙
 ## [research/experiments/dfpn-combined-options-20261022/doc-smoke.json](../../../research/experiments/dfpn-combined-options-20261022/doc-smoke.json)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): ガイドの小盤・既知11×11 P/N・native exact separate併用の3実行例

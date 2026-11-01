@@ -2944,11 +2944,13 @@
 - ← depends_on [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): 任意q点版の整数幾何実現と極小横断集合分類を利用
 - ← depends_on [K0605](../items/K0605-domination-bipartition-nonconcentration.md): グラフ星型整数共円実現、極小横断集合分類、最短極大配置数を使用
 - ← depends_on [K0606](../items/K0606-graph-star-clique-component-threshold.md): 整数平面上のグラフ星型実現、極大配置母関数、最短配置数を使用
+- ← depends_on [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md): 任意q点の整数幾何実現と極大配置分類を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の整数幾何実現・極小横断集合の母関数・最短極大個数を利用
 - ← generalizes [K0605](../items/K0605-domination-bipartition-nonconcentration.md): 最大次数Δの非集中境界を全域森二色分割で強化
+- ← generalizes [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md): サイクルの極大配置総数の漸化式を石数別母関数に強化
 
 ## [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) 完全二部グラフ型共円ゲームの終局多項式と最短極大配置集中の鋭い対数境界
 
@@ -2972,3 +2974,8 @@
 
 - → depends_on [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): 完全二部グラフの終局多項式と一様誤差評価
 - → depends_on [K0606](../items/K0606-graph-star-clique-component-threshold.md): 完全グラフ直和の成分積公式と欠損項の漸近評価
+
+## [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md) サイクル型グラフ星共円ゲームの終局長母関数と正規極限
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点の整数幾何実現と極大配置分類を使用
+- → generalizes [K0603](../items/K0603-graph-star-sparse-cycles.md): サイクルの極大配置総数の漸化式を石数別母関数に強化

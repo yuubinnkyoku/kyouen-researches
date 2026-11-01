@@ -592,3 +592,4 @@
 | [K0605](../items/K0605-domination-bipartition-nonconcentration.md) | グラフ星型共円ゲームの支配集合恒等式と次数非依存の最短配置非集中境界 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0606](../items/K0606-graph-star-clique-component-threshold.md) | グラフ星型共円構成の成分積公式とクリーク直和の鋭い集中閾値 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md) | グラフ星型共円ゲームの臨界窓における終局長のポアソン極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md) | サイクル型グラフ星共円ゲームの終局長母関数と正規極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
