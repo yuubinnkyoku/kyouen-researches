@@ -1,0 +1,30 @@
+{
+  "schema": "n11-central49-conditional46-distinct-s7-two-for-two-2309-v1",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_2347.json",
+  "priority_s4_key": "00000000000000003800800000000000",
+  "removed_s6_classes": [
+    "00000000000000203800000000004010",
+    "00000000000002841002002000000000"
+  ],
+  "added_s6_classes": [
+    "00000000000000203800008000004000",
+    "00000000000000203808000000000010"
+  ],
+  "s5_covered": 94,
+  "s6_witnesses": 46,
+  "previous_raw_s7_edges": 2934,
+  "previous_distinct_s7_classes": 2347,
+  "final_raw_s7_edges": 2944,
+  "final_distinct_s7_classes": 2309,
+  "distinct_s7_saved": 38,
+  "shared_s7_reuses": 635,
+  "known_win7_hits": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_PLAN_NOT_VERDICTS",
+  "outcomes": {
+    "s4": "UNKNOWN",
+    "s6": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Constructive 2-for-2 substitution; not a global optimum or a game verdict. Frozen S7 labels are comparison evidence. No selected S6 LOSS has been proved."
+}
