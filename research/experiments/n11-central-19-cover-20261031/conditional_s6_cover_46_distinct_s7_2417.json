@@ -1,0 +1,29 @@
+{
+  "schema": "n11-central49-conditional46-distinct-s7-two-for-two-2417-v1",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_2491.json",
+  "priority_s4_key": "00000000000000003800800000000000",
+  "removed_s6_classes": [
+    "00000000000000203800800200000000",
+    "00000000000000203800880000000000"
+  ],
+  "added_s6_classes": [
+    "00000000000000203808000200000000",
+    "00000000000000203808080000000000"
+  ],
+  "s5_covered": 94,
+  "s6_witnesses": 46,
+  "previous_raw_s7_edges": 2913,
+  "previous_distinct_s7_classes": 2491,
+  "final_raw_s7_edges": 2919,
+  "final_distinct_s7_classes": 2417,
+  "distinct_s7_saved": 74,
+  "shared_s7_reuses": 502,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_PLAN_NOT_VERDICTS",
+  "outcomes": {
+    "s4": "UNKNOWN",
+    "s6": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Constructive two-for-two S6 witness replacement with exact geometry counts, not a global optimum. All selected S6 outcomes remain UNKNOWN; no S4 LOSS or root verdict follows."
+}
