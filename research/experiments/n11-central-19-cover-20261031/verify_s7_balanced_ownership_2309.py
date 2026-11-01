@@ -60,7 +60,8 @@ def allocation(assignment, s7_sets):
         owned[worker] += 1
     within = 2944 - 2309 - cross
     need(len(remote) == cross and sum(owned) == len(owner_by_s7) == 2309
-         and sum(exclusive) + cross + within == 2309,
+         and sum(exclusive) + cross == 2309
+         and within + cross == 2944 - 2309,
          "S7 ownership or overlap conservation failed")
     return {
         "worker_s6_counts": counts,
