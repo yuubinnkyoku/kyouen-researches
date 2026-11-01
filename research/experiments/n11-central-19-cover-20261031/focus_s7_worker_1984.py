@@ -20,6 +20,7 @@ HERE = Path(__file__).resolve().parent
 UNKNOWN = {"s6": "UNKNOWN", "s4": "UNKNOWN",
            "two_stone_root": "UNKNOWN", "empty_board": "UNKNOWN"}
 SCHEMA = "n11-central49-1984-s7-frozen-single-s6-focus-v1"
+BALANCED_POLICY = "focus_only_round_robin_sorted_s7_v1"
 
 
 def need(ok, message):
@@ -65,7 +66,7 @@ def final_keys():
     return keys
 
 
-def frozen(focus=None, existing=None):
+def frozen(focus=None, existing=None, balanced=False):
     sets = routing.source_frontier()
     owner_doc = json.loads(routing.PLAN.read_text(encoding="utf-8"))
     _, owners = routing.verify(owner_doc, sets)
@@ -75,8 +76,11 @@ def frozen(focus=None, existing=None):
         focus = min(keys, key=lambda k: (len(sets[keys.index(k)]), k))
     need(focus in keys, "focus must be one of the 46 selected S6 witnesses")
     children = sorted(sets[keys.index(focus)])
-    worklists = [[k for k in children if owners[k] == worker]
-                 for worker in range(4)]
+    # Optional local override: do not mix these owners with global 1984 routing.
+    # Each canonical child appears exactly once and loads differ by at most one.
+    worklists = ([children[worker::4] for worker in range(4)] if balanced
+                 else [[k for k in children if owners[k] == worker]
+                       for worker in range(4)])
     need(len(children) == len(set(children))
          and set().union(*map(set, worklists)) == set(children)
          and sum(map(len, worklists)) == len(children),
@@ -87,6 +91,8 @@ def frozen(focus=None, existing=None):
         "source_sha256": file_digest(routing.source.CERT),
         "ownership_certificate": routing.PLAN.name,
         "ownership_sha256": file_digest(routing.PLAN),
+        **({"focused_owner_policy": BALANCED_POLICY,
+            "global_owner_override_scope": "FOCUSED_S6_ONLY"} if balanced else {}),
         "focus_policy": "minimum_raw_s7_children_then_canonical_key"
                         if focus == min(keys, key=lambda k: (len(sets[keys.index(k)]), k))
                         else "explicit_selected_s6",
@@ -165,8 +171,16 @@ def verify_frozen(plan, existing):
          "plan identity or UNKNOWN evidence boundary changed")
     need(plan.get("existing_report_sha256") == file_digest(existing),
          "existing receipt changed since focus was frozen")
-    expected = frozen(plan.get("focused_s6"), existing)
+    policy = plan.get("focused_owner_policy")
+    need(policy is None or policy == BALANCED_POLICY,
+         "unknown focused owner policy")
+    balanced = policy == BALANCED_POLICY
+    expected = frozen(plan.get("focused_s6"), existing, balanced=balanced)
     need(plan == expected, "frozen focus, ownership or digest changed")
+    if balanced:
+        need(max(plan["worker_loads"]) ==
+             (len(plan["s7_children"]) + 3) // 4,
+             "balanced focus fails the exact count lower bound")
 
 
 def self_test():
@@ -233,6 +247,8 @@ def self_test():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--focus-s6", help="selected canonical S6 key; default: fewest S7 children")
+    parser.add_argument("--balanced-focus", action="store_true",
+                        help="reassign focused S7 children across four workers; not global ownership")
     parser.add_argument("--plan-out", type=Path)
     parser.add_argument("--audit-plan", type=Path)
     parser.add_argument("--existing", type=Path)
@@ -248,8 +264,11 @@ def main():
          "choose exactly one of --plan-out and --audit-plan")
     need(not (args.plan_out and (args.worker or args.merged_out or args.worklist is not None)),
          "dispatch generation cannot accept worker results")
+    need(not (args.balanced_focus and args.audit_plan),
+         "balanced-focus is frozen into a new plan, not an audit option")
     if args.plan_out:
-        plan = frozen(args.focus_s6, args.existing)
+        plan = frozen(args.focus_s6, args.existing,
+                      balanced=args.balanced_focus)
         atomic_new(args.plan_out, json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
         print(json.dumps({"focused_s6": plan["focused_s6"],
                           "s7_children": len(plan["s7_children"]),
