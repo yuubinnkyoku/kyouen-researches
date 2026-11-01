@@ -2956,6 +2956,7 @@
 - ← depends_on [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 任意グラフの整数平面q点実現と極大配置の削除集合分類
 - ← depends_on [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md): 任意グラフの整数平面禁止4点実現と極大配置分類
 - ← depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 任意グラフの自由な整数平面点集合への禁止4点実現
+- ← depends_on [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): グラフ型禁止4点ゲームの自由な整数平面実現
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3027,6 +3028,7 @@
 - ← depends_on [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 任意有限枝長の中心状態別母関数
 - ← depends_on [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md): 任意枝長の中心状態別母関数
 - ← depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 任意枝長の中心状態別の厳密母関数
+- ← depends_on [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): 枝多項式F・G・Jと中心状態による厳密分解
 
 ## [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) 混合枝長2・3の蜘蛛木で疎な長枝が二峰混合を正規極限へ変える鋭い条件
 
@@ -3050,6 +3052,7 @@
 - → depends_on [K0616](../items/K0616-bounded-mixed-spider-gaussian-criterion.md): 混合蜘蛛木の部門分解と有界枝長での正規極限判定
 - ← depends_on [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md): 無界枝長の比の一様評価と条件付き必要十分条件
 - ← depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 全枝長に一様な中心削除部門の比17/20
+- ← generalizes [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): 最大枝長の制限付き必要十分条件を含む
 
 ## [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) 禁止4点蜘蛛木の一本の巨大枝による二峰合流と二乗臨界尺度
 
@@ -3057,6 +3060,7 @@
 - → depends_on [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 任意枝長の中心状態別母関数
 - → depends_on [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 無界枝長の比の一様評価と条件付き必要十分条件
 - ← depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 枝語の転送行列と正の漸近分散係数
+- ← generalizes [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): 巨大枝1本の二乗臨界尺度と混合極限を含む
 
 ## [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md) 禁止4点蜘蛛木の無界混合枝長に対する一様中心極限定理と正規極限の十分条件
 
@@ -3064,3 +3068,12 @@
 - → depends_on [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 任意枝長の中心状態別の厳密母関数
 - → depends_on [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 全枝長に一様な中心削除部門の比17/20
 - → depends_on [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md): 枝語の転送行列と正の漸近分散係数
+- ← depends_on [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): 中心残存部門の全枝長一様中心極限定理
+
+## [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md) 禁止4点蜘蛛木で長さ2の枝が増大する場合の無制限混合枝長・正規極限必要十分条件
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ型禁止4点ゲームの自由な整数平面実現
+- → depends_on [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 枝多項式F・G・Jと中心状態による厳密分解
+- → generalizes [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 最大枝長の制限付き必要十分条件を含む
+- → generalizes [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md): 巨大枝1本の二乗臨界尺度と混合極限を含む
+- → depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 中心残存部門の全枝長一様中心極限定理

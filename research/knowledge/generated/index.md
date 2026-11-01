@@ -604,3 +604,4 @@
 | [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md) | 禁止4点版の無界混合枝長蜘蛛木における正規極限の鋭い非臨界枝数条件 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) | 禁止4点蜘蛛木の一本の巨大枝による二峰合流と二乗臨界尺度 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md) | 禁止4点蜘蛛木の無界混合枝長に対する一様中心極限定理と正規極限の十分条件 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md) | 禁止4点蜘蛛木で長さ2の枝が増大する場合の無制限混合枝長・正規極限必要十分条件 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

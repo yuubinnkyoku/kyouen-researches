@@ -374,6 +374,12 @@
 ## [research/experiments/arbitrary-r-terminal-spectra-20261101/verify.py](../../../research/experiments/arbitrary-r-terminal-spectra-20261101/verify.py)
 
 - [K0598](../items/K0598-arbitrary-r-terminal-spectrum-universality.md) (verifier): 165構成・638340部分集合の点別独立完全検算、q点一様化版の極小横断集合列挙
+## [research/experiments/arbitrary-spider-sharp-clt-20261102/proof.md](../../../research/experiments/arbitrary-spider-sharp-clt-20261102/proof.md)
+
+- [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md) (proof): 全枝長無制限の必要十分条件と有限二部門母関数・臨界混合の全称証明
+## [research/experiments/arbitrary-spider-sharp-clt-20261102/verify.py](../../../research/experiments/arbitrary-spider-sharp-clt-20261102/verify.py)
+
+- [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md) (verifier): 独立枝語・状態遷移・グラフ頂点削除全列挙と有限モーメント検査
 ## [research/experiments/axis-rectangle-seven-20261023/report.md](../../../research/experiments/axis-rectangle-seven-20261023/report.md)
 
 - [K0515](../items/K0515-axis-rectangle-seven-maximum.md) (proof): 7行の全長公式と三角形分解条件付き一般定理の全称証明
