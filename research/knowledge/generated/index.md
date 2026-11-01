@@ -588,3 +588,5 @@
 | [K0601](../items/K0601-graph-star-circle-universality.md) | 任意単純グラフの星型禁止四点組を整数共円実現し全安全・極大母関数を決定 | proposition | proved | geometry, maximal-safe, maximum-safe, residual-games, statistics, variants, strategy-length |
 | [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) | 任意q点版のグラフ星型共円実現・全母関数・最短極大配置の次数公式 | proposition | proved | geometry, maximal-safe, maximum-safe, residual-games, statistics, variants, strategy-length |
 | [K0603](../items/K0603-graph-star-sparse-cycles.md) | グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) | 完全二部グラフ型共円ゲームの終局多項式と最短極大配置集中の鋭い対数境界 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0605](../items/K0605-domination-bipartition-nonconcentration.md) | グラフ星型共円ゲームの支配集合恒等式と次数非依存の最短配置非集中境界 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

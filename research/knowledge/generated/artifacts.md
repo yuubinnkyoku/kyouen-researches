@@ -2532,12 +2532,24 @@
 ## [research/experiments/geometry/scripts/verify_three_row_211_20261011.py](../../../research/experiments/geometry/scripts/verify_three_row_211_20261011.py)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (verifier): 3行盤独立検査
+## [research/experiments/graph-star-bipartite-threshold-20261101/proof.md](../../../research/experiments/graph-star-bipartite-threshold-20261101/proof.md)
+
+- [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) (proof): 完全二部グラフの全母関数、鋭い対数閾値、指数的誤差評価の全称証明
+## [research/experiments/graph-star-bipartite-threshold-20261101/verify.py](../../../research/experiments/graph-star-bipartite-threshold-20261101/verify.py)
+
+- [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) (verifier): 禁止辺からの全局面直接列挙6条件、頂点集合独立列挙100条件、厳密有理数誤差照合315条件
 ## [research/experiments/graph-star-circle-20261101/proof.md](../../../research/experiments/graph-star-circle-20261101/proof.md)
 
 - [K0601](../items/K0601-graph-star-circle-universality.md) (proof): 任意単純グラフの有理円構成・整数化、母関数の全称証明、完全グラフ族の鋭い極値
 ## [research/experiments/graph-star-circle-20261101/verify.py](../../../research/experiments/graph-star-circle-20261101/verify.py)
 
 - [K0601](../items/K0601-graph-star-circle-universality.md) (verifier): 1094ラベル付きグラフ・3802800部分集合、11×11内のK3七点の幾何判定と全局面列挙
+## [research/experiments/graph-star-domination-bound-20261101/proof.md](../../../research/experiments/graph-star-domination-bound-20261101/proof.md)
+
+- [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (proof): 支配集合恒等式、全域森二色分割による全称上界とq=4の無条件指数的非集中
+## [research/experiments/graph-star-domination-bound-20261101/verify.py](../../../research/experiments/graph-star-domination-bound-20261101/verify.py)
+
+- [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (verifier): 792グラフ・重み条件の独立列挙と12条件の禁止超辺全部分集合列挙
 ## [research/experiments/graph-star-qpoint-20261101/proof.md](../../../research/experiments/graph-star-qpoint-20261101/proof.md)
 
 - [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (proof): 無界q・無界グラフの整数幾何構成、全安全・極大母関数、最短極大個数の全称証明とq5十点座標

@@ -2926,6 +2926,7 @@
 - → depends_on [K0596](../items/K0596-maximum-terminal-gaps-all-r.md): 極大安全集合と包含極小横断集合の対応を利用
 - ← depends_on [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md): 任意m,nの格子状禁止四点組の整数平面実現と極小横断集合の分類
 - ← generalizes [K0601](../items/K0601-graph-star-circle-universality.md): 完全二部グラフの円交差構成を任意有限単純グラフへ拡張
+- ← generalizes [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): q=4の格子状円構成と同じ抽象K_{a,b}型の終局多項式を全q>=4に拡張
 
 ## [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) 格子状共円盤の全安全局面母関数・唯一の最短最長極大配置・二行型の連続終局欠番
 
@@ -2940,7 +2941,20 @@
 
 - → generalizes [K0601](../items/K0601-graph-star-circle-universality.md): q=4の任意グラフ星型共円実現を全q>=4へ拡張し、最短極大の閉公式と個数も決定
 - ← depends_on [K0603](../items/K0603-graph-star-sparse-cycles.md): グラフ星型の整数幾何実現・極小横断集合の母関数・最短極大個数を利用
+- ← depends_on [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): 任意q点版の整数幾何実現と極小横断集合分類を利用
+- ← depends_on [K0605](../items/K0605-domination-bipartition-nonconcentration.md): グラフ星型整数共円実現、極小横断集合分類、最短極大配置数を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の整数幾何実現・極小横断集合の母関数・最短極大個数を利用
+- ← generalizes [K0605](../items/K0605-domination-bipartition-nonconcentration.md): 最大次数Δの非集中境界を全域森二色分割で強化
+
+## [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) 完全二部グラフ型共円ゲームの終局多項式と最短極大配置集中の鋭い対数境界
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点版の整数幾何実現と極小横断集合分類を利用
+- → generalizes [K0599](../items/K0599-grid-circle-terminal-polynomial.md): q=4の格子状円構成と同じ抽象K_{a,b}型の終局多項式を全q>=4に拡張
+
+## [K0605](../items/K0605-domination-bipartition-nonconcentration.md) グラフ星型共円ゲームの支配集合恒等式と次数非依存の最短配置非集中境界
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円実現、極小横断集合分類、最短極大配置数を使用
+- → generalizes [K0603](../items/K0603-graph-star-sparse-cycles.md): 最大次数Δの非集中境界を全域森二色分割で強化
