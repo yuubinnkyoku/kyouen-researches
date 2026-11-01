@@ -147,9 +147,12 @@ function audit() {
        && lift.unknown7 === 0 && lift.winLossConflicts === 0,
        'fixed14 lift provenance changed');
   const terminalLoss7 = new Set(lift.rows.filter(r => r.verdict === 'WIN').map(r => r.s7));
+  const extraWin7 = '00000000000100001000000042401008';
+  need(canonical(points(extraWin7,7)) === extraWin7 && safe(points(extraWin7,7)),
+       'independent 2026-10-26 WIN7 geometry changed');
   const win7 = new Set([...historicalWin7,
-    ...lift.rows.filter(r => r.verdict === 'LOSS').map(r => r.s7)]);
-  need(terminalLoss7.size === 13 && win7.size === 18
+    ...lift.rows.filter(r => r.verdict === 'LOSS').map(r => r.s7), extraWin7]);
+  need(terminalLoss7.size === 13 && win7.size === 19
        && ![...terminalLoss7].some(k => cacheLoss7.has(k) || win7.has(k)),
        'terminal lift polarity or overlap changed');
   const cacheLoss6 = oldLoss6(data.loss6);
