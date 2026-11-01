@@ -1,0 +1,40 @@
+name: N11 central49 repaired 1980 S7 sharing and cache reuse audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_repaired_s6_1980_shared_reuse.js'
+      - '.github/workflows/n11-central49-repaired1980-cache-reuse-audit.yml'
+  workflow_dispatch:
+
+jobs:
+  independent-cache-crosscheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recompute 1980 S7 classes and frozen-cache intersections
+        run: |
+          node research/experiments/n11-central-19-cover-20261031/audit_repaired_s6_1980_shared_reuse.js > "$RUNNER_TEMP/reuse.json"
+          node - "$RUNNER_TEMP/reuse.json" <<'JS'
+          const fs = require('node:fs');
+          const d = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+          const ok = d.selectedS6 === 46 && d.rawS7Edges === 2972
+            && d.distinctS7 === 1980
+            && d.s7Multiplicity['1'] === 988 && d.s7Multiplicity['2'] === 992
+            && d.historicalSolverTrustedLoss7Hits === 6
+            && d.historicalSolverTrustedLoss7EdgeHits === 11
+            && d.terminalBackedLoss7Hits === 0
+            && d.knownWin7Conflicts === 0 && d.historicalLoss6WitnessOverlap === 0
+            && d.noHitInTheseInventories === 1974
+            && d.shortestS6.children === 55 && d.shortestS6.shared === 0
+            && d.shortestS6WithAtLeast50SharedChildren.children === 58
+            && d.shortestS6WithAtLeast50SharedChildren.shared === 53
+            && d.negativeTests === 4
+            && d.proofBoundary === 'GEOMETRY_AND_CACHE_REUSE_ONLY'
+            && d.s6Outcome === 'UNKNOWN'
+            && d.twoStoneRootOutcome === 'UNKNOWN'
+            && d.emptyBoardOutcome === 'UNKNOWN';
+          if (!ok) throw Error('S7 reuse audit regression: ' + JSON.stringify(d));
+          console.log(JSON.stringify(d, null, 2));
+          JS
