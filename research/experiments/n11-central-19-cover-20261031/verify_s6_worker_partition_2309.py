@@ -92,6 +92,14 @@ def verify(plan, witnesses, sets):
     component_sizes = Counter(Counter(root(i) for i in range(46)).values())
     need(component_sizes == {1: 17, 2: 1, 27: 1},
          "S6 overlap component geometry changed")
+    pair_weights = Counter(tuple(indices) for indices in owners.values()
+                           if len(indices) == 2)
+    largest = {i for i in range(46) if
+               sum(root(j) == root(i) for j in range(46)) == 27}
+    large_pairs = sum(a in largest and b in largest for a, b in pair_weights)
+    need(len(pair_weights) == 351
+         and Counter(pair_weights.values()) == {1: 67, 2: 284}
+         and large_pairs == 350, "S6 overlap pair graph changed")
     baseline = [i % 4 for i in range(46)]
     baseline_raw, baseline_distinct, baseline_cut = statistics(baseline, sets)
     raw, distinct, cut = statistics(assignment, sets)
@@ -121,6 +129,9 @@ def verify(plan, witnesses, sets):
             "distinct_s7": len(union),
             "multiplicity_histogram": dict(Counter(multiplicity.values())),
             "overlap_component_sizes": dict(component_sizes),
+            "shared_s7_pair_count": len(pair_weights),
+            "shared_s7_pair_weight_histogram": dict(Counter(pair_weights.values())),
+            "largest_component_pair_edges": large_pairs,
             "worker_counts": counts, "worker_raw_loads": raw,
             "worker_distinct_s7": distinct,
             "baseline_raw_loads": baseline_raw,
