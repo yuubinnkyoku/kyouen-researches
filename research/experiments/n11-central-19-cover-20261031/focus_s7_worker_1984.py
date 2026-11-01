@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Fail-closed focused S7 dispatch and unverified receipt merge for the 1984 plan.
 
-This does not prove any S7/S6 verdict. Never import its s7workerreport rows
+The selected default S6 has since been independently proved original-first WIN.
+New dispatch is blocked unless explicitly replaying this superseded plan.
+Never import its s7workerreport rows
 as solver-trusted s7verdict cache entries without independent proof replay.
 """
 import argparse
@@ -21,6 +23,7 @@ UNKNOWN = {"s6": "UNKNOWN", "s4": "UNKNOWN",
            "two_stone_root": "UNKNOWN", "empty_board": "UNKNOWN"}
 SCHEMA = "n11-central49-1984-s7-frozen-single-s6-focus-v1"
 BALANCED_POLICY = "focus_only_round_robin_sorted_s7_v1"
+REFUTED_S6 = "00000000000000603800000000008000"
 
 
 def need(ok, message):
@@ -247,6 +250,8 @@ def self_test():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--focus-s6", help="selected canonical S6 key; default: fewest S7 children")
+    parser.add_argument("--historical-refuted-plan", action="store_true",
+                        help="explicit historical replay only; S6 WIN refutes LOSS plan")
     parser.add_argument("--balanced-focus", action="store_true",
                         help="reassign focused S7 children across four workers; not global ownership")
     parser.add_argument("--plan-out", type=Path)
@@ -267,6 +272,9 @@ def main():
     need(not (args.balanced_focus and args.audit_plan),
          "balanced-focus is frozen into a new plan, not an audit option")
     if args.plan_out:
+        need(args.historical_refuted_plan,
+             "REPLAN_REQUIRED: selected S6 " + REFUTED_S6 +
+             " is independently original-first WIN; do not dispatch the 46-S6 LOSS plan")
         plan = frozen(args.focus_s6, args.existing,
                       balanced=args.balanced_focus)
         atomic_new(args.plan_out, json.dumps(plan, indent=2, ensure_ascii=False) + "\n")
@@ -287,6 +295,8 @@ def main():
     need(not any(verdict == "WIN" for _, verdict in merged.values()),
          "REPLAN_REQUIRED: reported original-first WIN7 may refute S6 LOSS; verify first")
     if args.worklist is not None:
+        need(args.historical_refuted_plan,
+             "REPLAN_REQUIRED: this 57-S7 worklist belongs to a refuted S6 LOSS plan")
         need(not args.merged_out and not args.worker,
              "worklist export cannot consume new worker reports")
         pending = [k for k in plan["worklists"][args.worklist] if k not in merged]
