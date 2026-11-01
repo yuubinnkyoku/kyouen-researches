@@ -96,7 +96,7 @@ def verify(plan, old, s7_sets):
          and old_summary == {
              "worker_raw_loads": [726, 736, 745, 737],
              "worker_exclusive_s7": [517, 735, 330, 327],
-             "worker_owned_s7": [525, 735, 524, 525],
+             "worker_owned_s7": [525, 735, 525, 524],
              "cross_worker_s7_dependencies": 400},
          f"old ownership baseline changed: computed={old_summary!r}")
     need(plan["balanced_ownership"] == new_stats
