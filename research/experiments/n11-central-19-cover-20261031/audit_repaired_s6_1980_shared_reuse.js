@@ -14,6 +14,8 @@ const files = {
   win7: ['research/experiments/n11-targeted-terminal-lift-20261015/data/all_s7_win_17.txt', '677e962f3f70be73abcd77037df8822880927b22'],
   lift: ['research/experiments/n11-s8-fixed37-terminal-closure-20261030/lift_result.json', 'f8e335cd8fafec9d98745e89cb207d4e31c220be'],
   loss6: ['research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-saved-s6-loss-cache-projection.csv', '9d4c4d56e0b8a3ebfaea5271dbaf7895e79ab175'],
+  loss8Roots35: ['research/experiments/n11-s8-to-s7-lift238-20261020/roots35.txt', '0e95f941079f256968d72988192a3ca3b55293ec'],
+  loss8Cert3: ['research/experiments/n11-s7-terminal-loss12-20261024/certificate.json', '5fa68e34b178f25dac4c4619310199ea75df5812'],
 };
 function need(ok, message) { if (!ok) throw Error(message); }
 function pinned([name, expected]) {
@@ -155,6 +157,27 @@ function audit() {
   need(terminalLoss7.size === 13 && win7.size === 19
        && ![...terminalLoss7].some(k => cacheLoss7.has(k) || win7.has(k)),
        'terminal lift polarity or overlap changed');
+  // Independent terminal-backed LOSS7 parents of 35+3 certified LOSS8 roots.
+  const roots35 = data.loss8Roots35.trim().split(/\r?\n/);
+  const cert3 = JSON.parse(data.loss8Cert3);
+  need(roots35.length === 35 && cert3.s8_loss.length === 3,
+       'terminal LOSS8 root inventory changed');
+  const roots8 = new Set([...roots35, ...cert3.s8_loss]);
+  need(roots8.size === 38, 'duplicate terminal LOSS8 root');
+  const terminalFromLoss8 = new Set();
+  for (const k of roots8) {
+    const ps = points(k,8);
+    need(canonical(ps) === k && safe(ps), 'invalid terminal LOSS8 root');
+    for (let i=0;i<8;i++) {
+      const parent = canonical(ps.filter((_,j)=>j!==i));
+      need(safe(points(parent,7)), 'unsafe LOSS8-to-LOSS7 parent');
+      terminalFromLoss8.add(parent);
+    }
+  }
+  need(terminalFromLoss8.size === 268, 'terminal LOSS8 reverse closure changed');
+  const terminalFromLoss8Hits = [...frontier].filter(k => terminalFromLoss8.has(k));
+  need(terminalFromLoss8Hits.length === 0,
+       'repaired frontier overlaps independently certified LOSS8 reverse closure');
   const cacheLoss6 = oldLoss6(data.loss6);
   need(!witnesses.some(k => cacheLoss6.has(k) || k === '00000000040004001004000004010000'),
        'historical or terminal LOSS6 overlap changed');
@@ -219,6 +242,8 @@ function audit() {
     historicalSolverTrustedLoss7Hits:cached.length,
     historicalSolverTrustedLoss7EdgeHits:perWitnessCached,
     terminalBackedLoss7Hits:terminal.length,
+    terminalBackedLoss7From38Loss8Roots:terminalFromLoss8.size,
+    terminalBackedLoss7From38Loss8Hits:terminalFromLoss8Hits.length,
     knownWin7Conflicts:0,historicalLoss6WitnessOverlap:0,
     noHitInTheseInventories:frontier.size-cached.length-terminal.length,
     shortestS6:shortest,shortestS6WithAtLeast50SharedChildren:shortShared,
