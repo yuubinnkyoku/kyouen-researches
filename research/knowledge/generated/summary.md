@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 582 / alias: 269 / artifactファイル: 3008
+K項目: 583 / alias: 269 / artifactファイル: 3010
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 582 / alias: 269 / artifactファイル: 3008
 | computation | 39 |
 | definition | 5 |
 | method | 4 |
-| proposition | 469 |
+| proposition | 470 |
 | question | 38 |
 | verification | 27 |
 
@@ -22,7 +22,7 @@ K項目: 582 / alias: 269 / artifactファイル: 3008
 | conjectured | 1 |
 | observed | 26 |
 | open | 36 |
-| proved | 289 |
+| proved | 290 |
 | refuted | 63 |
 | scope-unclear | 2 |
 | superseded | 1 |
@@ -36,21 +36,21 @@ K項目: 582 / alias: 269 / artifactファイル: 3008
 | certificates | 60 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 276 |
+| geometry | 277 |
 | grundy | 148 |
-| maximal-safe | 123 |
-| maximum-safe | 73 |
+| maximal-safe | 124 |
+| maximum-safe | 74 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
 | rectangles | 103 |
-| residual-games | 99 |
+| residual-games | 100 |
 | rules | 8 |
 | search-methods | 66 |
 | square-outcomes | 56 |
-| statistics | 75 |
-| strategy-length | 51 |
-| variants | 224 |
+| statistics | 76 |
+| strategy-length | 52 |
+| variants | 225 |
 | verification | 72 |
 
 ## 未解決・要監査・範囲不明

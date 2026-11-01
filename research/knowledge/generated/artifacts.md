@@ -2532,6 +2532,12 @@
 ## [research/experiments/geometry/scripts/verify_three_row_211_20261011.py](../../../research/experiments/geometry/scripts/verify_three_row_211_20261011.py)
 
 - [K0408](../items/K0408-three-row-211-classification-and-counts.md) (verifier): 3行盤独立検査
+## [research/experiments/grid-circle-spectrum-20261101/proof.md](../../../research/experiments/grid-circle-spectrum-20261101/proof.md)
+
+- [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) (proof): 安全局面の全石数別母関数、終局長の両極値と唯一性、二行型の全終局長、漸近密度の全称証明
+## [research/experiments/grid-circle-spectrum-20261101/verify.py](../../../research/experiments/grid-circle-spectrum-20261101/verify.py)
+
+- [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) (verifier): 四盤の全安全局面・極大配置完全列挙と十五組の独立極小横断集合検算
 ## [research/experiments/grid-circle-terminal-polynomial-20261101/proof.md](../../../research/experiments/grid-circle-terminal-polynomial-20261101/proof.md)
 
 - [K0599](../items/K0599-grid-circle-terminal-polynomial.md) (proof): 格子状交差の任意整数m,nに対する有理円構成と母関数の全称証明
