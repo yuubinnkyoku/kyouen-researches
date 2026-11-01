@@ -2544,6 +2544,12 @@
 ## [research/experiments/graph-star-qpoint-20261101/verify.py](../../../research/experiments/graph-star-qpoint-20261101/verify.py)
 
 - [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (verifier): 1181グラフ・4395216部分集合、q5十点の全252五点組・1024局面を独立完全検査
+## [research/experiments/graph-star-sparse-cycles-20261101/proof.md](../../../research/experiments/graph-star-sparse-cycles-20261101/proof.md)
+
+- [K0603](../items/K0603-graph-star-sparse-cycles.md) (proof): 最大次数による指数的上界とサイクルの転送行列・特性多項式の全称証明
+## [research/experiments/graph-star-sparse-cycles-20261101/verify.py](../../../research/experiments/graph-star-sparse-cycles-20261101/verify.py)
+
+- [K0603](../items/K0603-graph-star-sparse-cycles.md) (verifier): サイクル36条件・直接極小横断集合6条件・一般グラフ792条件の独立整数照合
 ## [research/experiments/grid-circle-spectrum-20261101/proof.md](../../../research/experiments/grid-circle-spectrum-20261101/proof.md)
 
 - [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) (proof): 安全局面の全石数別母関数、終局長の両極値と唯一性、二行型の全終局長、漸近密度の全称証明

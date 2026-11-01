@@ -587,3 +587,4 @@
 | [K0600](../items/K0600-grid-circle-safe-layers-sharp-extrema.md) | 格子状共円盤の全安全局面母関数・唯一の最短最長極大配置・二行型の連続終局欠番 | proposition | proved | geometry, maximal-safe, maximum-safe, residual-games, statistics, variants, strategy-length |
 | [K0601](../items/K0601-graph-star-circle-universality.md) | 任意単純グラフの星型禁止四点組を整数共円実現し全安全・極大母関数を決定 | proposition | proved | geometry, maximal-safe, maximum-safe, residual-games, statistics, variants, strategy-length |
 | [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) | 任意q点版のグラフ星型共円実現・全母関数・最短極大配置の次数公式 | proposition | proved | geometry, maximal-safe, maximum-safe, residual-games, statistics, variants, strategy-length |
+| [K0603](../items/K0603-graph-star-sparse-cycles.md) | グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

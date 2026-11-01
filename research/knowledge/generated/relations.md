@@ -2939,3 +2939,8 @@
 ## [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) 任意q点版のグラフ星型共円実現・全母関数・最短極大配置の次数公式
 
 - → generalizes [K0601](../items/K0601-graph-star-circle-universality.md): q=4の任意グラフ星型共円実現を全q>=4へ拡張し、最短極大の閉公式と個数も決定
+- ← depends_on [K0603](../items/K0603-graph-star-sparse-cycles.md): グラフ星型の整数幾何実現・極小横断集合の母関数・最短極大個数を利用
+
+## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の整数幾何実現・極小横断集合の母関数・最短極大個数を利用
