@@ -97,6 +97,74 @@ def verify_geometry():
     print('q=5 geometry: 10 points, 252 five-subsets, 1024 game subsets, 0 mismatches')
 
 
+
+def dense_count_independent(n, edges, r):
+    """Count minimal transversals directly from their vertex masks."""
+    adj = [0] * n
+    for a, b in edges:
+        adj[a] |= 1 << b
+        adj[b] |= 1 << a
+    total = 1  # the transversal {O}
+    for x in range(1 << n):
+        if any((x >> v & 1) and not (adj[v] & ~x) for v in range(n)):
+            continue
+        uncovered = sum(not (x >> a & 1) and not (x >> b & 1)
+                        for a, b in edges)
+        total += r ** uncovered
+    return total
+
+
+def verify_dense_concentration():
+    """Exact graph bound, complete-graph spectrum, and q=4/q>=5 contrast."""
+    checked_dense = 0
+    for n in range(3, 6):
+        pairs = list(combinations(range(n), 2))
+        for mask in range(1, 1 << len(pairs)):
+            edges = [edge for i, edge in enumerate(pairs) if mask >> i & 1]
+            deg = [sum(v in edge for edge in edges) for v in range(n)]
+            delta = min(deg)
+            if delta < 2:
+                continue
+            e = len(edges)
+            for r in range(2, 5):
+                N = 1 + n + r * e
+                T = dense_count_independent(n, edges, r)
+                poly = polynomial(n, edges, r + 3)[1]
+                assert T == sum(poly.values()), (n, mask, r)
+                assert poly[N - e] == r ** e, (n, mask, r)
+                # Exact integer bound: no floating point or rounding.
+                upper = r ** e + 1 + sum(
+                    comb(n, k) * r ** (e - (delta * k + 1) // 2)
+                    for k in range(1, n + 1))
+                assert r ** e <= T <= upper, (n, mask, r, T, upper)
+                checked_dense += 1
+    checked_complete = 0
+    for t in range(3, 13):
+        edges = list(combinations(range(t), 2))
+        e = len(edges)
+        for r in range(1, 5):
+            N = 1 + t + r * e
+            spectrum = Counter({N - 1: 1})
+            for j in range(1, t + 1):
+                spectrum[N - t + j - comb(j, 2)] += (
+                    comb(t, j) * r ** comb(j, 2))
+            assert len(spectrum) == t, (t, r, spectrum)
+            assert min(spectrum) == N - e and max(spectrum) == N - 1
+            assert (max(spectrum) - min(spectrum) + 1 - len(spectrum)
+                    == e - t), (t, r)
+            assert spectrum[N - e] == r ** e, (t, r)
+            assert sum(spectrum.values()) == (
+                1 + sum(comb(t, j) * r ** comb(j, 2)
+                        for j in range(1, t + 1)))
+            if r == 1:
+                assert sum(spectrum.values()) == 2 ** t
+            if t <= 7:
+                assert spectrum == polynomial(t, edges, r + 3)[1], (t, r)
+            checked_complete += 1
+    print(f'density corollary: {checked_dense} exact min-degree graphs, '
+          f'{checked_complete} complete-graph spectra, 0 mismatches')
+
+
 def main():
     total_graphs = total_subsets = 0
     for q, max_n in [(4, 5), (5, 4), (6, 3), (7, 3)]:
@@ -115,6 +183,7 @@ def main():
                 total_subsets += 1 << N
     print(f'q=4..7: {total_graphs} labeled graph games, {total_subsets} subsets, 0 mismatches')
     verify_geometry()
+    verify_dense_concentration()
 
 
 if __name__ == '__main__':
