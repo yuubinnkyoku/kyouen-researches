@@ -28,13 +28,13 @@ def build():
     # Worklist export independently checks geometry, WIN exclusions and S5 children.
     raw = CERT.read_bytes()
     sha = hashlib.sha1(b'blob ' + str(len(raw)).encode() + b'\0' + raw).hexdigest()
-    require(sha == CERT_BLOB, 'post-three-two-swap certificate changed; explicit re-audit required')
+    require(sha == CERT_BLOB, 'three-swap certificate changed; explicit re-audit required')
     doc = json.loads(raw)
     require(doc['schema'] == 'n11-central49-terminal-safe-three-swap-2211-v1'
             and doc['root_stones'] == [49, 60]
             and doc['root_outcome'] == 'UNKNOWN'
             and doc['empty_board_outcome'] == 'UNKNOWN',
-            'invalid post-three-two-swap certificate identity')
+            'invalid three-swap certificate identity')
     keys = doc['selected_s4_classes']
     require(len(keys) == 31 and keys == sorted(set(keys))
             and not set(keys).intersection(previous.prior.REFUTED_S4),
@@ -101,7 +101,7 @@ def build():
             and len(pending) == EXPECTED
             and set(pending).isdisjoint(known_children)
             and set(pending).union(known_children) == all_children,
-            'post-three-two-swap frontier mismatch')
+            'three-swap frontier mismatch')
     unresolved = [i for i, w in enumerate(witnesses) if not w['known_loss4']]
     require(len(unresolved) == 28, 'unproved S4 count changed')
     priority = min(unresolved, key=lambda i: (witnesses[i]['unknown_s5'], keys[i]))

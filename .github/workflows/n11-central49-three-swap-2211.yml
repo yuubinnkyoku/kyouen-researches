@@ -4,9 +4,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'research/experiments/n11-central-19-cover-20261031/central49-post-three-three-swap-2211.json'
-      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_two_swap_2211.js'
-      - 'research/experiments/n11-central-19-cover-20261031/audit_central49_two_swap_worker_results_2211.py'
+      - 'research/experiments/n11-central-19-cover-20261031/central49-three-swap-2211.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_2211.js'
+      - 'research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2211.py'
       - '.github/workflows/n11-central49-three-swap-2211.yml'
   workflow_dispatch:
 
@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Exhaustively audit fixed-cover three-for-three replacement
-        run: node research/experiments/n11-central-19-cover-20261031/verify_central49_two_swap_2211.js
+        run: node research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_2211.js
       - name: Independently reconstruct exact S5 frontier and worklists in Python
         run: |
           python3 - <<'PY'
@@ -46,7 +46,7 @@ jobs:
           import sys
           import tempfile
           from pathlib import Path
-          script = 'research/experiments/n11-central-19-cover-20261031/audit_central49_two_swap_worker_results_2211.py'
+          script = 'research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2211.py'
           with tempfile.TemporaryDirectory() as td:
               root = Path(td)
               plan_path = root / 'plan.json'
