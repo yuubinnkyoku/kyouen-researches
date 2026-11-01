@@ -573,6 +573,12 @@
 ## [research/experiments/binary-cube-xor-orbits-20261025/verify_rooted.cpp](../../../research/experiments/binary-cube-xor-orbits-20261025/verify_rooted.cpp)
 
 - [K0567](../items/K0567-binary-cube-section-xor-divisibility.md) (verifier): d=5,6の原点を含む全5点組の独立有限体完全列挙
+## [research/experiments/bounded-mixed-spider-20261102/proof.md](../../../research/experiments/bounded-mixed-spider-20261102/proof.md)
+
+- [K0616](../items/K0616-bounded-mixed-spider-gaussian-criterion.md) (proof): 混合枝長の厳密母関数・全変動距離・正規極限の必要十分条件
+## [research/experiments/bounded-mixed-spider-20261102/verify.py](../../../research/experiments/bounded-mixed-spider-20261102/verify.py)
+
+- [K0616](../items/K0616-bounded-mixed-spider-gaussian-criterion.md) (verifier): グラフ削除177条件、禁止超辺15条件84304部分集合、部門不等式60条件の独立照合
 ## [research/experiments/bundle-integration-20261020/n11-compact-validation.txt](../../../research/experiments/bundle-integration-20261020/n11-compact-validation.txt)
 
 - [K0486](../items/K0486-n11-compact385-terminal-proof-and-s7-lift-verified.md) (log): 今回の再現記録
