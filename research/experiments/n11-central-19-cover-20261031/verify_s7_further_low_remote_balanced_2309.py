@@ -34,9 +34,9 @@ def verify(doc, old, old_stats, s7_sets, source_keys):
              "two_stone_root": "UNKNOWN", "empty_board": "UNKNOWN"},
          "identity, source or UNKNOWN evidence boundary changed")
     need(doc["previous_low_remote"] == {
-             "worker_owned_s7": old_stats["worker_owned_s7"],
+             "worker_owned_s7": old_stats["new"]["worker_owned_s7"],
              "cross_worker_s7_dependencies":
-                 old_stats["cross_worker_s7_dependencies"]} ==
+                 old_stats["new"]["cross_worker_s7_dependencies"]} ==
          {"worker_owned_s7": [578, 577, 577, 577],
           "cross_worker_s7_dependencies": 446},
          "previous verified routing changed")
