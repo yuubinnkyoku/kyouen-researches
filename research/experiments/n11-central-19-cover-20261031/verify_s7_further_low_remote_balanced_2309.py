@@ -61,7 +61,7 @@ def verify(doc, old, old_stats, s7_sets, source_keys):
          and result["cross_worker_s7_dependencies"] + 7 ==
              old_stats["new"]["cross_worker_s7_dependencies"]
          and result["within_worker_shared_s7"] ==
-             old_stats["within_worker_shared_s7"] + 7,
+             old_stats["new"]["within_worker_shared_s7"] + 7,
          "balance, S7 coverage, or improvement invalid")
     return {
         "schema": "n11-central49-further-low-remote-s7-audit-v1",
