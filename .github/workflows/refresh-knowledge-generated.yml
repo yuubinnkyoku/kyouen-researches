@@ -42,6 +42,8 @@ jobs:
         run: python research/experiments/spider-uniform-clt-20261102/verify.py
       - name: Audit sharp unrestricted mixed spider Gaussian criterion
         run: python research/experiments/arbitrary-spider-sharp-clt-20261102/verify.py
+      - name: Audit pseudoforest terminal polynomial transfer theorem
+        run: python research/experiments/pseudoforest-terminal-dp-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -157,3 +159,5 @@ jobs:
 # Refresh trigger for K0619 uniform Gaussian sufficiency without arm-length bound (2026-11-02).
 
 # Refresh trigger for K0620 sharp arbitrary mixed-arm Gaussian iff criterion (2026-11-02).
+
+# Refresh trigger for K0621 pseudoforest terminal polynomial theorem (2026-11-02).
