@@ -21,3 +21,7 @@
 - `.github/workflows/n11-central49-post-three-three-swap-2208.yml`：専用CI。**CIの成功は実行結果を確認するまで未確定**。
 
 S5 cacheは保存済みsolver-trusted 5,851類を固定して再利用した。新規S5判定0、四石LOSS証明0、二石root閉鎖0。今回の3類削減は計算対象数であって実測探索時間の短縮ではない。**標準11×11空盤の勝敗はUNKNOWN**。
+
+## 独立監査CI確定（2026-11-01）
+
+[GitHub Actions #41259917562](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41259917562) はコミット `015f89226c7d3186b5a02f1e1527a8950fbdd43c` で **success**。固定2,211類からの全3証人置換・候補242,491通りの検査、別実装Pythonによる2,208類の子局面再構築・4分割、優先94類の凍結計画、結果受領の拒否・統合・再開試験がすべて成功した。これは条件付き証明計画の監査であり、新規S5 verdictや二石root勝敗の独立証明ではない。空盤は **UNKNOWN**。
