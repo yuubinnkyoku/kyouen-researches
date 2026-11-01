@@ -27,3 +27,9 @@
 - `.github/workflows/n11-central49-three-swap-2211.yml`：専用独立監査。CIの成否は実行結果を確認するまで未確定。
 
 新規S5 verdict 0、S4 LOSS証明0、二石root閉鎖0。**11×11空盤はUNKNOWN**。
+
+## CI確定（2026-11-01）
+
+[専用独立監査CI #41256191286](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41256191286) はコミット `dced8d4c3432d41c76f6dd37b968efec88e31b5a` で **success**。Nodeの全3証人置換・全243,183候補再計算、Pythonによる2,211類の独立再構築と4分配、94類の集中計画、凍結報告の統合・拒否・再開試験がすべて通過した。最初の2回のCI失敗は新しいworkflow内のファイル名・Python import名を旧名称から置き換え忘れたためで、検証本体の反証ではない。修正済みの同一証明候補で全工程を再実行した。
+
+CIが確定したのは証明**計画**の整合性。新規S5判定や二石rootの勝敗を示すものではなく、空盤は引き続き **UNKNOWN**。
