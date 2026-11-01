@@ -4,6 +4,7 @@
 Worker verdicts are reports, NOT independent proof. Older worklists are historical.
 """
 import argparse
+import csv
 import hashlib
 import json
 import sys
@@ -21,6 +22,45 @@ EXPECTED = 2208
 def require(ok, message):
     if not ok:
         raise ValueError(message)
+
+
+
+def read_reports(assignment, workers, existing):
+    """Read prior *unverified* merge receipts without accepting exact-cache CSV.
+
+    The separate s5workerreport tag is intentionally incompatible with
+    solver-trusted s5verdict imports. Raw worker outputs still use s5verdict,
+    but only as unverified reports under an assigned frozen worklist.
+    """
+    verdicts = {}
+    stats = {'rows': 0, 'unknown_rows': 0, 'repeated_verdicts': 0}
+    if existing is not None:
+        seen = set()
+        with existing.open(newline='', encoding='utf-8') as stream:
+            for line_no, row in enumerate(csv.reader(stream), 1):
+                if not row or row[0].strip().startswith('#'):
+                    continue
+                where = f'{existing}:{line_no}'
+                require(len(row) == 6 and row[0] == 's5workerreport'
+                        and row[3] == '5',
+                        'expected unverified s5workerreport row at ' + where)
+                require(all(v.isascii() and v.isdecimal()
+                            for v in (row[1], row[2], row[4], row[5])),
+                        'invalid unverified report integer at ' + where)
+                lo, hi, verdict, nodes = (int(row[i]) for i in (1, 2, 4, 5))
+                require(0 <= lo < 2**64 and 0 <= hi < 2**57
+                        and verdict in (1, 2) and nodes == 0,
+                        'invalid unverified report value at ' + where)
+                key = f'{(hi << 64) | lo:032x}'
+                require(key in assignment and key not in seen,
+                        'off-frontier or duplicate unverified report at ' + where)
+                seen.add(key)
+                verdicts[key] = verdict
+                stats['rows'] += 1
+    for worker, path in workers:
+        previous.prior.parse_rows(path, assignment, worker,
+                                  verdicts, stats, str(path))
+    return verdicts, stats
 
 
 def build():
@@ -120,7 +160,7 @@ def build():
 
 def audit(workers, existing):
     cache, owners, witnesses, assignment, shards, ordered, priority = build()
-    verdicts, stats = previous.read_reports(assignment, workers, existing)
+    verdicts, stats = read_reports(assignment, workers, existing)
     per_s4 = []
     for i, witness in enumerate(witnesses):
         if witness['known_loss4']:
@@ -234,7 +274,7 @@ def remaining_worklist(shards, assignment, existing, worker_id, focus=None):
     """
     if focus is not None:
         require(focus <= assignment.keys(), 'focus includes off-frontier S5')
-    verdicts, _ = previous.read_reports(assignment, [], existing)
+    verdicts, _ = read_reports(assignment, [], existing)
     require(not any(v == 1 for v in verdicts.values()),
             'REPLAN_REQUIRED: reported WIN5 must be checked before further work')
     return [k for k in shards[worker_id]
@@ -260,7 +300,7 @@ def audit_frozen_plan(plan_path, existing, workers, merged_out):
               if existing is not None else None)
     require(plan.get('existing_report_sha256') == before,
             'frozen plan belongs to a different existing report')
-    old, _ = previous.read_reports(assignment, [], existing)
+    old, _ = read_reports(assignment, [], existing)
     after = (hashlib.sha256(existing.read_bytes()).hexdigest()
              if existing is not None else None)
     require(before == after, 'existing report changed during snapshot audit')
@@ -305,10 +345,11 @@ def audit_frozen_plan(plan_path, existing, workers, merged_out):
                     mode='w', encoding='utf-8', newline='', dir=merged_out.parent,
                     prefix='.focus-merge-', delete=False) as stream:
                 temporary = Path(stream.name)
+                stream.write('# evidence_level=WORKER_REPORTED_NOT_INDEPENDENTLY_REPLAYED; NOT A CERTIFICATE\n')
                 for key in sorted(verdicts):
                     bits = int(key, 16)
                     stream.write(
-                        f's5verdict,{bits & ((1 << 64)-1)},{bits >> 64},'
+                        f's5workerreport,{bits & ((1 << 64)-1)},{bits >> 64},'
                         f'5,{verdicts[key]},0\n')  # node count unavailable after merge
                 stream.flush()
                 os.fsync(stream.fileno())
@@ -389,6 +430,9 @@ def self_test():
         value = int(key, 16)
         return f's5verdict,{value & ((1 << 64) - 1)},{value >> 64},5,{verdict},1\n'
 
+    def merged_row(key, verdict):
+        return row(key, verdict).replace('s5verdict,', 's5workerreport,').replace(',1\n', ',0\n')
+
     two_witnesses = [
         {'s4': 'large', 'known_loss4': False, 'unknown_s5': 2},
         {'s4': 'small', 'known_loss4': False, 'unknown_s5': 1},
@@ -404,7 +448,7 @@ def self_test():
         report = Path(directory) / 'merged.csv'
         require(remaining_worklist(shards, assignment, None, 0) == [a],
                 'empty resume changed full worklist')
-        report.write_text(row(a, 2), encoding='utf-8')
+        report.write_text(merged_row(a, 2), encoding='utf-8')
         require(remaining_worklist(shards, assignment, report, 0) == [],
                 'reported LOSS was scheduled twice')
         require(remaining_worklist(shards, assignment, report, 1) == [b],
@@ -421,8 +465,8 @@ def self_test():
             pass
         else:
             raise AssertionError('off-frontier focus was accepted')
-        for bad in (row(a, 1), row(a, 0), row(c, 2),
-                    row(a, 2) + row(a, 1)):
+        for bad in (merged_row(a, 1), merged_row(a, 0), merged_row(c, 2),
+                    merged_row(a, 2) + merged_row(a, 1), row(a, 2)):
             report.write_text(bad, encoding='utf-8')
             try:
                 remaining_worklist(shards, assignment, report, 0)
@@ -447,7 +491,7 @@ def main():
     parser.add_argument('--audit-focus-plan', type=Path,
                         help='Audit receipts against one frozen --focus-plan JSON')
     parser.add_argument('--merged-out', type=Path,
-                        help='Publish a NEW merged CSV only after fail-closed audit')
+                        help='Publish NEW unverified s5workerreport CSV (never an exact cache)')
     parser.add_argument('--self-test', action='store_true')
     args = parser.parse_args()
     if args.self_test:
@@ -476,7 +520,7 @@ def main():
         _, owners, witnesses, assignment, shards, ordered, _ = build()
         before = (hashlib.sha256(args.existing.read_bytes()).hexdigest()
                   if args.existing is not None else None)
-        reported, _ = previous.read_reports(assignment, [], args.existing)
+        reported, _ = read_reports(assignment, [], args.existing)
         after = (hashlib.sha256(args.existing.read_bytes()).hexdigest()
                  if args.existing is not None else None)
         require(before == after, 'existing report changed during focus snapshot')
@@ -488,7 +532,7 @@ def main():
         require(not workers, 'cannot export worklist with worker reports')
         _, owners, witnesses, assignment, shards, _, _ = build()
         if args.focus_priority:
-            reported, _ = previous.read_reports(assignment, [], args.existing)
+            reported, _ = read_reports(assignment, [], args.existing)
             require(not any(v == 1 for v in reported.values()),
                     'REPLAN_REQUIRED: reported WIN5 must be checked before further work')
             selected = choose_priority_focus(owners, witnesses, reported)
