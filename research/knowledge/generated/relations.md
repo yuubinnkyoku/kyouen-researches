@@ -2954,6 +2954,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点版の整数幾何実現と極小横断集合分類を利用
 - → generalizes [K0599](../items/K0599-grid-circle-terminal-polynomial.md): q=4の格子状円構成と同じ抽象K_{a,b}型の終局多項式を全q>=4に拡張
+- ← depends_on [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md): 完全二部グラフの終局多項式と一様誤差評価
 
 ## [K0605](../items/K0605-domination-bipartition-nonconcentration.md) グラフ星型共円ゲームの支配集合恒等式と次数非依存の最短配置非集中境界
 
@@ -2965,3 +2966,9 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 整数平面上のグラフ星型実現、極大配置母関数、最短配置数を使用
 - → generalizes [K0605](../items/K0605-domination-bipartition-nonconcentration.md): 支配集合恒等式を連結成分ごとに積へ分解し、クリーク直和の鋭い境界を決定
+- ← depends_on [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md): 完全グラフ直和の成分積公式と欠損項の漸近評価
+
+## [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md) グラフ星型共円ゲームの臨界窓における終局長のポアソン極限
+
+- → depends_on [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): 完全二部グラフの終局多項式と一様誤差評価
+- → depends_on [K0606](../items/K0606-graph-star-clique-component-threshold.md): 完全グラフ直和の成分積公式と欠損項の漸近評価

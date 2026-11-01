@@ -2556,6 +2556,12 @@
 ## [research/experiments/graph-star-domination-bound-20261101/verify.py](../../../research/experiments/graph-star-domination-bound-20261101/verify.py)
 
 - [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (verifier): 792グラフ・重み条件の独立列挙と12条件の禁止超辺全部分集合列挙
+## [research/experiments/graph-star-poisson-20261101/proof.md](../../../research/experiments/graph-star-poisson-20261101/proof.md)
+
+- [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md) (proof): 二つの臨界窓で主要族を分類し全変動収束を証明
+## [research/experiments/graph-star-poisson-20261101/verify.py](../../../research/experiments/graph-star-poisson-20261101/verify.py)
+
+- [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md) (verifier): 禁止超辺直接完全列挙9条件と整数式照合483条件
 ## [research/experiments/graph-star-qpoint-20261101/proof.md](../../../research/experiments/graph-star-qpoint-20261101/proof.md)
 
 - [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (proof): 無界q・無界グラフの整数幾何構成、全安全・極大母関数、最短極大個数の全称証明とq5十点座標
