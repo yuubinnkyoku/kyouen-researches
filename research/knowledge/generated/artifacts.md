@@ -9808,6 +9808,12 @@
 ## [research/experiments/two-row-misere-swap-threshold-20261024/verify.py](../../../research/experiments/two-row-misere-swap-threshold-20261024/verify.py)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (verifier): 二点和と合法手再帰による完全列挙
+## [research/experiments/unbounded-spider-gaussian-20261102/proof.md](../../../research/experiments/unbounded-spider-gaussian-20261102/proof.md)
+
+- [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md) (proof): 4状態遷移・鋭い一様比17/20・Lindebergと二峰残存による全称証明
+## [research/experiments/unbounded-spider-gaussian-20261102/verify.py](../../../research/experiments/unbounded-spider-gaussian-20261102/verify.py)
+
+- [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md) (verifier): 枝長150の厳密漸化式・15語計数・混合405条件685204頂点部分集合の独立照合
 ## [research/experiments/unequal-row-sharp-chord-energy-20261010/README.md](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/README.md)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (proof): 二行の鋭いエネルギー上界と構成

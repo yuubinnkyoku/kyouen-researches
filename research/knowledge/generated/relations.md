@@ -2953,6 +2953,7 @@
 - ← depends_on [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 任意q点版の整数平面実現と極大配置の削除集合分類
 - ← depends_on [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md): 任意グラフの整数平面q点共円実現と極大配置母関数
 - ← depends_on [K0616](../items/K0616-bounded-mixed-spider-gaussian-criterion.md): 任意グラフのq点整数平面実現と極大配置の削除集合分類
+- ← depends_on [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 任意グラフの整数平面q点実現と極大配置の削除集合分類
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3021,6 +3022,7 @@
 - → generalizes [K0613](../items/K0613-length-three-spider-gaussian-all-q.md): 長さ3の全q正規極限を含む
 - ← depends_on [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md): 中心残存・削除の枝別母関数を異長枝に拡張
 - ← depends_on [K0616](../items/K0616-bounded-mixed-spider-gaussian-criterion.md): 任意枝長の中心状態別母関数と総数不等式
+- ← depends_on [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 任意有限枝長の中心状態別母関数
 
 ## [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) 混合枝長2・3の蜘蛛木で疎な長枝が二峰混合を正規極限へ変える鋭い条件
 
@@ -3035,3 +3037,10 @@
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフのq点整数平面実現と極大配置の削除集合分類
 - → depends_on [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 任意枝長の中心状態別母関数と総数不等式
 - → generalizes [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md): 長さ2・3の混合を、葉を含む有界枝長と全qへ拡張
+- ← depends_on [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md): 混合蜘蛛木の部門分解と有界枝長での正規極限判定
+
+## [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md) 禁止4点版の無界混合枝長蜘蛛木における正規極限の鋭い非臨界枝数条件
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数平面q点実現と極大配置の削除集合分類
+- → depends_on [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md): 任意有限枝長の中心状態別母関数
+- → depends_on [K0616](../items/K0616-bounded-mixed-spider-gaussian-criterion.md): 混合蜘蛛木の部門分解と有界枝長での正規極限判定

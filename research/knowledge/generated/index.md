@@ -601,3 +601,4 @@
 | [K0614](../items/K0614-spider-all-fixed-arm-lengths-gaussian.md) | 任意固定枝長の星型共円構成の母関数と正規極限の完全分類 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) | 混合枝長2・3の蜘蛛木で疎な長枝が二峰混合を正規極限へ変える鋭い条件 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0616](../items/K0616-bounded-mixed-spider-gaussian-criterion.md) | 有界混合枝長の蜘蛛木における正規極限の必要十分条件と葉による二峰消滅 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0617](../items/K0617-unbounded-spider-gaussian-criterion.md) | 禁止4点版の無界混合枝長蜘蛛木における正規極限の鋭い非臨界枝数条件 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
