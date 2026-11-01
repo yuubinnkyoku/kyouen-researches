@@ -175,9 +175,6 @@ function audit() {
     }
   }
   need(terminalFromLoss8.size === 268, 'terminal LOSS8 reverse closure changed');
-  const terminalFromLoss8Hits = [...frontier].filter(k => terminalFromLoss8.has(k));
-  need(terminalFromLoss8Hits.length === 0,
-       'repaired frontier overlaps independently certified LOSS8 reverse closure');
   const cacheLoss6 = oldLoss6(data.loss6);
   need(!witnesses.some(k => cacheLoss6.has(k) || k === '00000000040004001004000004010000'),
        'historical or terminal LOSS6 overlap changed');
@@ -197,6 +194,9 @@ function audit() {
     local.push({s6:k,children:child});
   }
   const frontier = new Set(incidence.keys());
+  const terminalFromLoss8Hits = [...frontier].filter(k => terminalFromLoss8.has(k));
+  need(terminalFromLoss8Hits.length === 0,
+       'repaired frontier overlaps independently certified LOSS8 reverse closure');
   checkNoWinConflicts(frontier,win7);
   const hist = {};
   for (const n of incidence.values()) hist[n] = (hist[n]||0)+1;
