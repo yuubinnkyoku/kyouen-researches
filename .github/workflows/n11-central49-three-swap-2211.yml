@@ -23,7 +23,7 @@ jobs:
           python3 - <<'PY'
           import sys
           sys.path.insert(0, 'research/experiments/n11-central-19-cover-20261031')
-          import audit_central49_two_swap_worker_results_2211 as m
+          import audit_central49_three_swap_worker_results_2211 as m
           m.self_test()
           cache, owners, witnesses, assignment, shards, ordered, priority = m.build()
           assert len(cache) == 5851
