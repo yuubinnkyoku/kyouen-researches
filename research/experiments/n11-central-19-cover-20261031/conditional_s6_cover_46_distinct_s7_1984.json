@@ -1,0 +1,135 @@
+{
+  "schema": "n11-central49-conditional46-nine-two-swap-distinct-s7-1984-v1",
+  "source_certificate": "conditional_s6_cover_46_distinct_s7_2309.json",
+  "priority_s4_key": "00000000000000003800800000000000",
+  "previous_s6_witnesses": 46,
+  "previous_s5_covered": 94,
+  "previous_raw_s7_edges": 2944,
+  "previous_distinct_s7_classes": 2309,
+  "steps": [
+    {
+      "removed_s6_classes": [
+        "00000000000000203800008000004000",
+        "00000000000000801002802000100000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203800000000005000",
+        "00000000000000203808008000000000"
+      ],
+      "raw_s7_edges": 2945,
+      "distinct_s7_classes": 2265
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000203800000000005000",
+        "00000000000200801002020400000000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203800000020001000",
+        "00000000000000203808000000004000"
+      ],
+      "raw_s7_edges": 2948,
+      "distinct_s7_classes": 2217
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000203800000011000000",
+        "00000000000200801002000081000000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203800000010080000",
+        "00000000000000203808000001000000"
+      ],
+      "raw_s7_edges": 2957,
+      "distinct_s7_classes": 2176
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000203800000000800008",
+        "00000000000100003808000000000008"
+      ],
+      "added_s6_classes": [
+        "00000000000000203800010000800000",
+        "00000000000000203808000000000008"
+      ],
+      "raw_s7_edges": 2968,
+      "distinct_s7_classes": 2135
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000203800400800000000",
+        "00000000000082003800000020000000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203800400002000000",
+        "00000000000000203808000800000000"
+      ],
+      "raw_s7_edges": 2980,
+      "distinct_s7_classes": 2094
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000003802800000000002",
+        "00000000000000203802000000002000"
+      ],
+      "added_s6_classes": [
+        "0000000000000020380a000000000000",
+        "00000000000000801002002080000800"
+      ],
+      "raw_s7_edges": 2994,
+      "distinct_s7_classes": 2055
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000801002002080000800",
+        "00000000000200801002000040800000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203808000000002000",
+        "00000000040000003808000000000200"
+      ],
+      "raw_s7_edges": 2998,
+      "distinct_s7_classes": 2003
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000203800010000800000",
+        "00000000040000003808000000000200"
+      ],
+      "added_s6_classes": [
+        "00000000000000203800010040000000",
+        "00000000000000801002002000080800"
+      ],
+      "raw_s7_edges": 2985,
+      "distinct_s7_classes": 1990
+    },
+    {
+      "removed_s6_classes": [
+        "00000000000000203800000020001000",
+        "00000000000000203800400002000000"
+      ],
+      "added_s6_classes": [
+        "00000000000000203800000002001000",
+        "00000000000000203800400020000000"
+      ],
+      "raw_s7_edges": 2979,
+      "distinct_s7_classes": 1984
+    }
+  ],
+  "final_s6_witnesses": 46,
+  "final_s5_covered": 94,
+  "final_raw_s7_edges": 2979,
+  "final_distinct_s7_classes": 1984,
+  "distinct_s7_saved": 325,
+  "shared_s7_reuses": 995,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_PROOF_PLAN_NOT_VERDICTS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Nine constructive two-for-two replacements. Only the 94-S5 geometric cover and S7 obligation count are established, not any S6 LOSS or root verdict. Prior 2309 S7 worker routing does not apply to the changed witness set; rebuild routing before dispatch. Neither global optimality nor runtime speedup is claimed."
+}
