@@ -597,3 +597,4 @@
 | [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) | 完全グラフ花束型共円ゲームの極大配置母関数と正規極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0611](../items/K0611-tree-graph-star-three-state-dp.md) | 森グラフ型共円ゲームの三状態極大計数と星グラフの二点終局分布 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) | 細分星型共円ゲームの終局母関数と禁止4点・5点間の確率相転移 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0613](../items/K0613-length-three-spider-gaussian-all-q.md) | 長さ3の枝を持つ星型共円構成の厳密母関数と全q正規極限 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

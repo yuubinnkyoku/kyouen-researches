@@ -2949,6 +2949,7 @@
 - ← depends_on [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md): グラフ星型の整数共円実現と極大配置の支配集合分類を使用
 - ← depends_on [K0611](../items/K0611-tree-graph-star-three-state-dp.md): 任意グラフの整数共円実現と極大配置の削除集合分類を使用
 - ← depends_on [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md): 任意q点版の整数共円実現と削除集合による極大配置分類を使用
+- ← depends_on [K0613](../items/K0613-length-three-spider-gaussian-all-q.md): 任意グラフの整数平面実現と極大配置の削除集合分類
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3001,3 +3002,7 @@
 ## [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) 細分星型共円ゲームの終局母関数と禁止4点・5点間の確率相転移
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点版の整数共円実現と削除集合による極大配置分類を使用
+
+## [K0613](../items/K0613-length-three-spider-gaussian-all-q.md) 長さ3の枝を持つ星型共円構成の厳密母関数と全q正規極限
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数平面実現と極大配置の削除集合分類

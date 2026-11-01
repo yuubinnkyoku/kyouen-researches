@@ -9551,6 +9551,12 @@
 ## [research/experiments/spider-graph-star-20261101/verify.py](../../../research/experiments/spider-graph-star-20261101/verify.py)
 
 - [K0612](../items/K0612-subdivided-star-terminal-phase-transition.md) (verifier): 28条件の頂点集合直接照合、9条件・1608000局面の禁止超辺直接完全列挙
+## [research/experiments/spider-length-three-20261102/proof.md](../../../research/experiments/spider-length-three-20261102/proof.md)
+
+- [K0613](../items/K0613-length-three-spider-gaussian-all-q.md) (proof): 任意dとqの閉形式の全称証明と全変動距離評価・正規極限
+## [research/experiments/spider-length-three-20261102/verify.py](../../../research/experiments/spider-length-three-20261102/verify.py)
+
+- [K0613](../items/K0613-length-three-spider-gaussian-all-q.md) (verifier): 20条件の頂点削除集合直接列挙、7条件2263296部分集合の禁止超辺直接列挙
 ## [research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json](../../../research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json)
 
 - [K0004](../items/K0004-n1-n6-all-safe-grundy.md) (data): 命題・対象範囲・根拠を記した出典
