@@ -282,7 +282,7 @@ node research/experiments/n11-central-19-cover-20261031/audit_central49_worker_p
 保存済みS5はsolver-trustedであり全件独立終局証明ではない。今回も新規S5判定・S4 LOSS証明・二石root閉鎖は0件。二石 `{49,60}` と標準11×11空盤は **UNKNOWN**。
 
 
-## 現行：中央49の2,221類被覆と凍結した四石集中計算（2026-11-01）
+## 履歴：中央49の2,221類被覆と凍結した四石集中計算（2026-11-01）
 
 上記の2,345類以下の節は研究の履歴。続く2,277類の三証人置換計画をさらに**二証人同時置換**して、未判定五石子を**2,277→2,221類**に減らした。最新の計画は `central49-post-three-two-swap-2221.json`。既知LOSS4は3類、未証明S4は28類、合法S5依存2,535類、既知LOSS5 314類、未判定S5 **2,221類**。幾何学的最小31証人と第三手119通りの完全被覆を維持する。
 
@@ -296,3 +296,17 @@ python3 research/experiments/n11-central-19-cover-20261031/audit_central49_two_s
 ```
 
 **2,277類以下の旧作業一覧を現行の凍結計画として使用しない。** `--focus-plan` で生成した同一JSONから全作業者の一覧を取り出し、回収時は同じJSONを `--audit-focus-plan` に渡す。中断再開時は生成・監査の双方で同一の `--existing` を指定する。担当外報告・WIN/LOSS衝突・WIN5報告は拒否され、統合結果は新規CSVにのみ公開される。作業者報告は独立証明ではない。保存済み5,851類のS5判定はsolver-trustedで、四石LOSS証明も二石root閉鎖も増えていない。**二石 `{49,60}` と11×11空盤はUNKNOWN。**
+
+## 現行：中央49の三証人置換・2,211類計画（2026-11-01）
+
+固定2,221類計画から既知LOSS4 3類を保持し、三証人の同時置換を全数調査して未判定S5依存を **2,221→2,211類**に削減。相異なるS5依存は2,525類、保存済みLOSS5は314類。31証人・第三手119点完全被覆・既知WIN4除外を維持。全3,276除去組・243,183代替候補のうち改善58通り、最良は一意。この**固定計画のちょうど三証人置換近傍**で最良であり、大域最適性は未証明。
+
+現行の証拠は `central49-three-swap-2211.json`、全数検証は `verify_central49_three_swap_2211.js`、Python独立監査と作業配布は `audit_central49_three_swap_worker_results_2211.py`。4作業者への全体分配は553/553/553/552、優先四石局面の未判定子94類への集中は24/24/23/23。旧2,221類以下の作業一覧は歴史用であり、**新規計算には2,211類用の凍結計画のみ**を使用する。
+
+```sh
+node research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_2211.js
+python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2211.py --self-test
+python3 research/experiments/n11-central-19-cover-20261031/audit_central49_three_swap_worker_results_2211.py --focus-plan > focus-2211.json
+```
+
+既存の5,851件のS5判定はsolver-trustedで、未判定2,211類のLOSSは未証明。新規五石判定・四石LOSS証明・二石root閉鎖は0件。**11×11空盤はUNKNOWN**。
