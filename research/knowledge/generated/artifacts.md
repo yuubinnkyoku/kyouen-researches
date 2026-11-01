@@ -9581,6 +9581,12 @@
 ## [research/experiments/spider-length-three-20261102/verify.py](../../../research/experiments/spider-length-three-20261102/verify.py)
 
 - [K0613](../items/K0613-length-three-spider-gaussian-all-q.md) (verifier): 20条件の頂点削除集合直接列挙、7条件2263296部分集合の禁止超辺直接列挙
+## [research/experiments/spider-uniform-clt-20261102/proof.md](../../../research/experiments/spider-uniform-clt-20261102/proof.md)
+
+- [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md) (proof): 解析的転送行列の一様累積量評価と全変動距離による全称証明
+## [research/experiments/spider-uniform-clt-20261102/verify.py](../../../research/experiments/spider-uniform-clt-20261102/verify.py)
+
+- [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md) (verifier): 二値語・頂点削除直接全列挙・300枝長の分散と比の独立有限検査
 ## [research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json](../../../research/experiments/structural-discovery/output/cycle5-grundy-n6-cap14.json)
 
 - [K0004](../items/K0004-n1-n6-all-safe-grundy.md) (data): 命題・対象範囲・根拠を記した出典
