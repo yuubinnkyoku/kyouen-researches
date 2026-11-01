@@ -9,9 +9,6 @@ relations:
 - type: depends_on
   target: K0602
   note: 任意グラフの整数共円実現と極大配置の削除集合分類を使用
-- type: depends_on
-  target: K0609
-  note: 道グラフの正規極限と比較し、木全般への拡張の反例を与える
 artifacts:
 - path: research/experiments/tree-graph-star-dp-20261101/proof.md
   role: proof
