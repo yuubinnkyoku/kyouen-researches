@@ -6841,6 +6841,12 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible audit for reverse s6-to-s5 integration and combined saved-s6 source history.
+## [research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert](../../../research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert)
+
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (certificate): 修復後46証人のうち2類を元先手WINと確定する共有七石終局戦略; 10,881選択局面・16,980到達局面・2,237終局
+## [research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py](../../../research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py)
+
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): 4x4整数幾何で全応手を再計算し、180度回転による2つ目のWIN6も独立検証
 ## [research/experiments/n11-central-reply-frontier-20261012/README.md](../../../research/experiments/n11-central-reply-frontier-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 19初手軌道の中央後手応手境界、代替応手順位、次のexact探索候補
@@ -9850,6 +9856,12 @@
 ## [research/experiments/unequal-row-sharp-chord-energy-20261010/verify_short.py](../../../research/experiments/unequal-row-sharp-chord-energy-20261010/verify_short.py)
 
 - [K0407](../items/K0407-unequal-row-chord-energy-multiline-optimum.md) (verifier): 短範囲直接照合
+## [research/experiments/vertex-cover-terminal-dp-20261102/proof.md](../../../research/experiments/vertex-cover-terminal-dp-20261102/proof.md)
+
+- [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (proof): 3^k包除原理の全称証明、K2m明示式、q=4とq>=5の極限分布
+## [research/experiments/vertex-cover-terminal-dp-20261102/verify.py](../../../research/experiments/vertex-cover-terminal-dp-20261102/verify.py)
+
+- [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (verifier): 8067グラフ条件、996別被覆、100禁止超辺条件472592部分集合、K2m式80条件を照合
 ## [research/knowledge/items/K0034-n10-minimum-maximal-bounds.md](../../../research/knowledge/items/K0034-n10-minimum-maximal-bounds.md)
 
 - [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) (source): 九石全域排除により本問いを解消した現行命題
@@ -9871,6 +9883,9 @@
 ## [research/log/2026-10-23-quadratic-pencil-isomorphism.md](../../../research/log/2026-10-23-quadratic-pencil-isomorphism.md)
 
 - [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) (log): 候補03の実行記録と残課題
+## [research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md](../../../research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md)
+
+- [K0105](../items/K0105-n11-empty-root-winner-open.md) (log): 修復後1,980七石の条件付きLOSS計画失効と証明境界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

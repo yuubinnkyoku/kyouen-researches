@@ -2958,6 +2958,7 @@
 - ← depends_on [K0619](../items/K0619-spider-uniform-clt-unbounded-arms.md): 任意グラフの自由な整数平面点集合への禁止4点実現
 - ← depends_on [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): グラフ型禁止4点ゲームの自由な整数平面実現
 - ← depends_on [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md): 任意グラフの整数共円実現と削除頂点集合による極大配置分類を使用
+- ← depends_on [K0622](../items/K0622-vertex-cover-terminal-polynomial.md): 任意有限単純グラフの整数共円実現と極大配置削除集合の分類を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3084,3 +3085,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と削除頂点集合による極大配置分類を使用
 - → generalizes [K0611](../items/K0611-tree-graph-star-three-state-dp.md): 森の三状態計数を、各連結成分が高々一閉路を持つ擬森に拡張
+
+## [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) 任意多重閉路グラフの頂点被覆数による極大配置厳密計数とK2m相転移
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意有限単純グラフの整数共円実現と極大配置削除集合の分類を使用
