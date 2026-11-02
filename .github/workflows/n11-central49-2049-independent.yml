@@ -1,0 +1,21 @@
+name: N11 central49 2049 conditional S7 independent 4x4 audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_2049_three_swap.py'
+      - '.github/workflows/n11-central49-2049-independent.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-4x4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently recalculate all 46 S6 child frontiers and the S5 cover
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_central49_2049_three_swap.py
