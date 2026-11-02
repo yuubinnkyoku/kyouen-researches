@@ -52,3 +52,6 @@ K0628の固定終局戦略が訪問する22,364生局面を出発点として、
 新しい検証器 `research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_d4_quotient.cpp` は、元の14,440バイトの終局戦略を独立整数幾何で再生したうえで、石数19→6の降順帰納を行う。さらに生局面側の帰納閉包を別に再構成し、256,561生局面→256,193正準類と、今回の256,744正準類の**集合としての包含**を照合する。固定SHA・層別件数・改変検出は同ディレクトリの `verify_terminal_s6_60_d4_quotient.py` が監査する。詳細は `research/log/2026-11-02-n11-second-terminal-d4-quotient-ranked-closure-256744.md`。
 
 この551類はすべて元先手WINの**局所証明**であり、未確定S5のLOSS判定や中央49の2,207七石条件付き計画の成立を意味しない。二石rootと11×11空盤は引き続き**UNKNOWN**。
+
+
+**D4商集合の追加監査：** 旧256,193類の集合包含と新規551類の層別内訳を照合した専用GitHub Actions [41387529381](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41387529381) が成功。六石・七石の新規正準類は0、11×11空盤はUNKNOWN。
