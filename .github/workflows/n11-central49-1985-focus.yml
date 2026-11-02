@@ -19,10 +19,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Receipt parser negative tests
         run: python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --self-test
-      - name: Recompute 1985 geometry and freeze a four-worker single-S6 plan
+      - name: Reject superseded K0634 dispatch without explicit historical opt-in
         run: |
-          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --plan-out /tmp/n11-1985-plan.json
-          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-plan.json --worklist 0 > /tmp/n11-1985-worker0.txt
+          if python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --plan-out /tmp/n11-stale-plan.json; then
+            echo 'ERROR: invalidated 1985 focus accepted for current dispatch'
+            exit 1
+          fi
+      - name: Reproduce historical 1985 geometry and four-worker plan
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --allow-superseded-plan --plan-out /tmp/n11-1985-plan.json
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --allow-superseded-plan --audit-plan /tmp/n11-1985-plan.json --worklist 0 > /tmp/n11-1985-worker0.txt
       - name: Verify ownership, safe merge, and tampered-plan rejection
         run: |
           python3 - <<'PY'
@@ -39,8 +45,8 @@ jobs:
           p['outcomes']['empty_board'] = 'WIN'
           Path('/tmp/n11-1985-tampered.json').write_text(json.dumps(p))
           PY
-          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-plan.json --worker 0 /tmp/n11-1985-report.csv --merged-out /tmp/n11-1985-merged.csv
-          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-plan.json --existing /tmp/n11-1985-merged.csv
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --allow-superseded-plan --audit-plan /tmp/n11-1985-plan.json --worker 0 /tmp/n11-1985-report.csv --merged-out /tmp/n11-1985-merged.csv
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --allow-superseded-plan --audit-plan /tmp/n11-1985-plan.json --existing /tmp/n11-1985-merged.csv
           if python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-tampered.json; then
             echo 'ERROR: promoted verdict accepted'
             exit 1
