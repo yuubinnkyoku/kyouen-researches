@@ -632,3 +632,5 @@
 | [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) | グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants, search-methods |
 | [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) | 11×11中央49の現行条件付き七石義務を2,301類から2,154類に縮小し二証人交換局所最適を検査 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) | 森の極大終局長は支配誘導成分数で決まり、星森では任意の部分和スペクトルを実現できる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) | グラフ星型共円ゲームの全終局長は葉と高次数核で計数でき、最短直上の欠番は次数2で決まる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants, search-methods |
+| [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) | 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減 | computation | computed | square-outcomes, certificates, verification, search-methods |

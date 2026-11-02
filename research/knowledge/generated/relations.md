@@ -159,6 +159,7 @@
 - ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 条件付き幾何被覆と勝敗証明の区別
 - ← depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 局所勝敗と11×11空盤弱解決の区別
 - ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 条件付き証明計画と勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3001,6 +3002,7 @@
 - ← depends_on [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md): 任意qのグラフ星型構成・全極大母関数と最短石数公式
 - ← depends_on [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md): 任意q点グラフ星型構成と極大配置の支配集合母関数
 - ← depends_on [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md): グラフ星型共円構成の極大配置の支配集合母関数
+- ← depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): グラフ星型共円構成と極大配置の支配集合による分類
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3295,6 +3297,7 @@
 - → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 現行46六石証人・2,301七石条件付き証明義務
 - → depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 既存五根と現行被覆の交差4類
 - ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 終局証明由来の七石LOSS23類と現行被覆との交差
+- ← depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 五つの終局戦略と八石親から導出したLOSS7の23類
 
 ## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
 
@@ -3307,7 +3310,22 @@
 - → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 七つの確定WIN6を除外した46証人・2,301七石義務
 - → supersedes [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 同じ94五石被覆を維持して条件付き七石義務を147類削減した現行計画
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
+- ← depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 確定WIN6を除外した現行46証人・2,154七石類の出発点
+- ← supersedes [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 同じ94五石被覆を保ったまま追加で60七石類を削減した条件付き計画
 
 ## [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) 森の極大終局長は支配誘導成分数で決まり、星森では任意の部分和スペクトルを実現できる
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成の極大配置の支配集合母関数
+- ← generalizes [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 森に限らず任意グラフの終局長係数を葉と高次数核で分類する。ただし森の成分数表示や星森の部分和公式は別の系として維持する
+
+## [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) グラフ星型共円ゲームの全終局長は葉と高次数核で計数でき、最短直上の欠番は次数2で決まる
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成と極大配置の支配集合による分類
+- → generalizes [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md): 森に限らず任意グラフの終局長係数を葉と高次数核で分類する。ただし森の成分数表示や星森の部分和公式は別の系として維持する
+
+## [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減
+
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明計画と勝敗の区別
+- → depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 確定WIN6を除外した現行46証人・2,154七石類の出発点
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 五つの終局戦略と八石親から導出したLOSS7の23類
+- → supersedes [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 同じ94五石被覆を保ったまま追加で60七石類を削減した条件付き計画
