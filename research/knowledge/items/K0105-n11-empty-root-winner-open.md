@@ -48,6 +48,15 @@ artifacts:
 - path: research/experiments/n11-s9-second-target-20261015/verify.py
   role: verifier
   note: S9 葉 64 件の C++/Python 一致終局検証; 49 LOSS / 15 WIN; 7,629 状態
+- path: research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert
+  role: certificate
+  note: 修復後46証人のうち2類を元先手WINと確定する共有七石終局戦略; 10,881選択局面・16,980到達局面・2,237終局
+- path: research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py
+  role: verifier
+  note: 4x4整数幾何で全応手を再計算し、180度回転による2つ目のWIN6も独立検証
+- path: research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md
+  role: log
+  note: 修復後1,980七石の条件付きLOSS計画失効と証明境界
 scope: 標準q=4・完全指摘・通常プレイの11×11空盤勝敗。層列挙・極大サイズ・misère勝敗とは別。
 ---
 
