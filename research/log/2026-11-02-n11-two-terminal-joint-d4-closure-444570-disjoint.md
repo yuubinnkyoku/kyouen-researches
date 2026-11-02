@@ -33,3 +33,7 @@
 - `.github/workflows/n11-joint-two-terminal-d4.yml`：専用CI。初版の再計算はGitHub Actions [41392709384](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41392709384) で成功。後続の固定件数回帰を含む最新版CIの状態は別途確認する。
 
 今回の増加は主に深い層であり、六石WINは14正準類、七石WINは2正準類（各戦略の七親から既知）。**新規六石・七石WIN正準類は0**。六石LOSS・四石LOSS・二石root閉鎖は新規0件。中央49の2,207七石条件付きLOSS計画は未証明のまま。**11×11空盤の勝敗はUNKNOWN。**
+
+## 最終監査追補
+
+固定件数・全14層・二つの単独閉包の集合包含・交差0・相乗増分0・改変拒否を含む最新版の専用GitHub Actions [41392902239](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41392902239) は**成功**。K0633を追加し、知識検査・単体試験・生成物の一致を検査した [41393152923](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41393152923) も**成功**。生成知識一覧を更新し、一時的な生成作業workflowを削除した最終コミットは `af7bb789cfc0aa2c582b83e1078d76fe8b5194d5`。この追補は勝敗判定の増分を意味しない。
