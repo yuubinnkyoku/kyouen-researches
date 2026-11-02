@@ -757,6 +757,12 @@
 ## [research/experiments/co-singleton-forbidden-qplus1-20261031/verify.py](../../../research/experiments/co-singleton-forbidden-qplus1-20261031/verify.py)
 
 - [K0576](../items/K0576-co-singleton-forbidden-strong-grundy.md) (verifier): N=3..10の全非空F・全安全局面を禁止集合の直接再帰で独立検査
+## [research/experiments/cograph-terminal-20261102/proof.md](../../../research/experiments/cograph-terminal-20261102/proof.md)
+
+- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (proof): 全部分集合と支配集合の二変数母関数に対する和・完全結合の全称再帰証明
+## [research/experiments/cograph-terminal-20261102/verify.py](../../../research/experiments/cograph-terminal-20261102/verify.py)
+
+- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): 12066条件の削除集合直接列挙、744標本、159条件192144点部分集合の禁止超辺独立検査
 ## [research/experiments/coplanar-3x3x4-q4-20261027/README.md](../../../research/experiments/coplanar-3x3x4-q4-20261027/README.md)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (proof): 実験の範囲・方式・再現手順

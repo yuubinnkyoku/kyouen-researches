@@ -615,3 +615,4 @@
 | [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) | 11×11の二つ目の共有七石終局戦略から六石七類を証明し2,097類計画を反証 | proposition | proved | square-outcomes, certificates, verification, search-methods |
 | [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) | 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) | 11×11の第二終局WIN証明から後退閉包で256,561生局面を帰納証明 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) | コグラフ型q点共円ゲームの極大終局長母関数と構成木による多項式時間厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
