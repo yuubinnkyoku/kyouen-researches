@@ -61,10 +61,15 @@ def audit(raw):
          and child in counts and child not in secured
          and len(frontiers) == 46 and len(counts) == 2096,
          "refuting WIN7 not in the verified 2096 focus")
-    frozen = focus.freeze()
-    need(frozen["focus_s6"] == PARENT
-         and ROOT in frozen["unverified_s7"],
-         "refuting child not assigned by the active 2096 dispatcher")
+    # The dispatcher must now refuse this refuted LOSS-witness plan.
+    # Preserve the historical geometric selection without calling freeze().
+    def score(s):
+        pending = frontiers[s] - secured
+        return (len(pending),
+                -sum(counts[c] > 1 for c in pending), f"{s:032x}")
+    need(min(frontiers, key=score) == parent
+         and child in frontiers[parent] - secured,
+         "refuting child not in the original 2096 focus")
     return {
         "schema": "n11-central49-2096-focus-terminal-win6-refutation-v1",
         "refuted_s6": PARENT,
