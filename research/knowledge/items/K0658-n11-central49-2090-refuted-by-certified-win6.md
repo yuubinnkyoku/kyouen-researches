@@ -15,6 +15,18 @@ relations:
 - type: refutes
   target: K0654
   note: 2,090類の幾何計数は正しいが46六石すべてをLOSSとして閉じる計画は不可能
+- type: refutes
+  target: K0650
+  note: 第2回三証人交換で1984終局WIN6を再導入
+- type: refutes
+  target: K0651
+  note: 2,094類の局所最適性は失効した証人集合の幾何学的性質に限られる
+- type: refutes
+  target: K0652
+  note: 2,093類計画も同じWIN6を保持
+- type: refutes
+  target: K0653
+  note: 2,091類計画も同じWIN6を保持
 artifacts:
 - path: research/experiments/n11-central-19-cover-20261031/audit_2090_known_win6_refutation.py
   role: verifier
@@ -53,3 +65,9 @@ K0654の46六石証人を再生すると、次の正準六石が含まれてい�
 有効な後継計画は、少なくともこのWIN6を除外し、終局証明由来のWIN6を**146類以上**として再監査する必要がある。修復計画の完成・六石LOSSの新規証明は別問題である。
 
 **四石LOSS・二石局面{49,60}・標準11×11空盤の勝敗はUNKNOWN。**
+
+## 失効の起点と後継計画
+
+失効した六石は、K0650の `conditional_s6_cover_46_post_seven_win6_2094_three_swaps.json` にある**第2回三証人交換の追加側**へ現れる。K0646の2,154類段階ではまだ追加されていない。したがってK0650・K0651・K0652・K0653・K0654のLOSS証人計画はいずれも無効であり、幾何計数だけを履歴として残す。
+
+後継のK0659では、このWIN6を含む二証人を除外して2,096七石類・終局証明済み6類・未証明2,090類の条件付き被覆を独立検証した。これは新しい六石LOSS証明ではない。
