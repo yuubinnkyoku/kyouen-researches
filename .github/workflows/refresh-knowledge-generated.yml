@@ -70,6 +70,8 @@ jobs:
         run: python research/experiments/graph-star-q-spectrum-20261102/verify.py
       - name: Audit K0645 vertex-cover upper terminal gap
         run: python research/experiments/graph-star-vertex-cover-terminal-gap-20261103/verify.py
+      - name: Audit K0647 forest dominating-component and subset-sum terminal spectra
+        run: python research/experiments/forest-terminal-spectrum-20261103/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -230,3 +232,5 @@ jobs:
 
 # Refresh trigger for K0645 graph-star vertex-cover upper terminal gap (2026-11-03).
 # Refresh trigger for K0646 N11 central49 2154 conditional two-swap local optimum (2026-11-03).
+
+# Refresh trigger for K0647 forest terminal spectra (2026-11-03).
