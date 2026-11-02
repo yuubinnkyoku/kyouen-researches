@@ -5,6 +5,7 @@ on:
     paths:
       - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_shared58_win6_repair_2089.json'
       - 'research/experiments/n11-central-19-cover-20261031/verify_shared58_win6_repair_2089.py'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_shared_s7_seven_win6.py'
       - '.github/workflows/n11-central49-fixed44-repair.yml'
   workflow_dispatch:
 
@@ -19,3 +20,5 @@ jobs:
           python-version: '3.12'
       - name: Exhaustive repair, independent integer geometry and full terminal replay
         run: python3 research/experiments/n11-central-19-cover-20261031/verify_shared58_win6_repair_2089.py --negative --replay-terminal
+      - name: Independently replay shared WIN7 as seven canonical WIN6 parents
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_shared_s7_seven_win6.py --negative
