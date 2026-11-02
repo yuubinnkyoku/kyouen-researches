@@ -2750,6 +2750,14 @@
 ## [research/experiments/modular-substitution-20261102/verify.py](../../../research/experiments/modular-substitution-20261102/verify.py)
 
 - [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (verifier): 424置換式の直接部分集合照合と103条件の禁止超辺独立完全列挙
+## [research/experiments/modular-substitution-20261102/verify_weighted_total.py](../../../research/experiments/modular-substitution-20261102/verify_weighted_total.py)
+
+- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): q=4,5,6,9の重み付き支配集合再帰1708条件独立監査
+- [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (verifier): q=4,5,6,9の1708条件で直接部分集合列挙と全係数照合
+## [research/experiments/modular-substitution-20261102/weighted-total-proof.md](../../../research/experiments/modular-substitution-20261102/weighted-total-proof.md)
+
+- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (proof): q>=4の終局総数に特化した一変数再帰とコグラフO(n³)上界
+- [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (proof): q>=4の終局総数に対する一変数重み付き支配集合再帰と計算量上界
 ## [research/experiments/multipartite-edge-edits-20261102/proof.md](../../../research/experiments/multipartite-edge-edits-20261102/proof.md)
 
 - [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) (proof): 例外端点を固定し残存部数2以上を(A,Q,s)動的計画法で計数する全称証明
