@@ -35,6 +35,15 @@ K0630は22,364個の生局面を種とし、一石除去候補を繰り返し評
 
 ## 再現と限界
 
-`research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_d4_quotient.cpp` が終局戦略を再生し、D4正準化・石数降順のAND/OR帰納を再計算する。`verify_terminal_s6_60_d4_quotient.py` が固定SHA・全14層の期待件数・証明数・改変検出を照合する。ローカル単一CPUの独立計算では約12秒、最大常駐メモリ約92MBだった（実行環境依存、探索時間の改善率ではない）。専用CI `.github/workflows/n11-central49-terminal-d4-quotient.yml` を追加した。**CI成功は確認してから別途記録する。**
+`research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_d4_quotient.cpp` が終局戦略を再生し、D4正準化・石数降順のAND/OR帰納を再計算する。`verify_terminal_s6_60_d4_quotient.py` が固定SHA・全14層の期待件数・証明数・改変検出を照合する。ローカル単一CPUの独立計算では約12秒、最大常駐メモリ約92MBだった（実行環境依存、探索時間の改善率ではない）。専用CI `.github/workflows/n11-central49-terminal-d4-quotient.yml` を追加した。**専用CIの完了結果は以下の追補に記録。**
 
 今回の追加551類を既存S5/S6/S7証明へ直接持ち上げることはできず、六石LOSS・四石LOSS・二石root閉鎖の追加は0件。中央49の条件付き2,207七石計画のLOSS証人は未証明のまま。**標準11×11空盤はUNKNOWN。**
+
+
+## 追補：旧閉包との集合差分とCI成功
+
+検証器を強化し、D4商集合側だけでなく旧方式の生局面側も石数降順で再構成した。旧方式は**256,561生局面・256,193正準類**と完全一致。全旧正準類が新しい256,744類の集合に含まれることを検査し、**差分551類の石数内訳**を10石38、11石6、12石156、13石20、14石285、15石46と特定した。これ以外の層に差分はない。
+
+固定証明書のSHA、全14層、AND/OR帰納、旧集合の包含、551類の差分、改変検出を含む専用GitHub Actions **41387529381は成功**。計算は約16秒・最大常駐メモリ約111MBの単一CPUでローカル再現した（実行環境依存）。
+
+監査結果： https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41387529381
