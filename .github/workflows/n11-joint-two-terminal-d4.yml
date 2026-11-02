@@ -1,0 +1,24 @@
+name: N11 joint two-terminal D4 WIN closure
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_two_terminal_joint_d4_closure.cpp'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_two_terminal_joint_d4_closure.py'
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64'
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64'
+      - '.github/workflows/n11-joint-two-terminal-d4.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  joint-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently replay both terminal strategies and check joint ranked closure
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_two_terminal_joint_d4_closure.py
