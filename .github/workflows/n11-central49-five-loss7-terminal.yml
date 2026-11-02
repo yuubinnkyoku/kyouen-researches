@@ -64,7 +64,7 @@ jobs:
                   result['historical_solver_trusted_loss7_edge_hits']) == (5, 8)
           print('Five terminal-certified LOSS7 classes cover eight S6->S7 edges.')
           print('Two are children of the selected 60-child focus S6.')
-          print('Selected S6, two-stone root, and empty board remain UNKNOWN.')
+          print('Historical focused S6 is certified WIN; two-stone root and empty board remain UNKNOWN.')
           PY
       - name: Retain reproducible terminal strategy certificates
         uses: actions/upload-artifact@v4
