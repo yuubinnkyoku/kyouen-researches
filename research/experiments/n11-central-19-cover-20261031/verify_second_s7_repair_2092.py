@@ -59,13 +59,13 @@ def replay(doc):
 
     known_win6 = old_win6 | first_seven | second_parents
     # Historical comparison inventory + both newly certified terminal S7.
-    first_terminal_s7 = base.decode("00000000000200801002000081000000") | (1 << 55)
+    first_terminal_s7 = base.decode("00000000000200801002000081000000") | (1 << 43)
     known_win7 = set(old_win7) | {
         base.key(geom.canonical(first_terminal_s7)),
         base.key(geom.canonical(second.S7)),
     }
-    need(len(known_win6) >= 117 and len(known_win7) >= 19,
-         f"known WIN inventory incomplete: WIN6={len(known_win6)} WIN7={len(known_win7)}")
+    need(len(known_win6) == 138 and len(known_win7) == 22,
+         f"known WIN inventory changed: WIN6={len(known_win6)} WIN7={len(known_win7)}")
 
     cache = {}
     def frontier(selection):
