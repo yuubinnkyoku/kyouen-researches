@@ -1,0 +1,37 @@
+name: N11 central49 2090 historical cache and terminal-only focus audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_2090_s7_cache_and_focus.py'
+      - '.github/workflows/n11-central49-2090-cache-focus.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently replay 2090 proof and compare pinned S7 evidence
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/audit_2090_s7_cache_and_focus.py > "$RUNNER_TEMP/n11-cache-focus.txt"
+          python3 - "$RUNNER_TEMP/n11-cache-focus.txt" <<'PY'
+          import json, sys
+          d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
+          assert d["schema"] == "n11-central49-2090-cache-and-terminal-focus-audit-v1"
+          assert (d["selected_s6"], d["distinct_s7"],
+                  d["terminal_proved_loss7"], d["still_unproved_s7"]) == (46, 2090, 6, 2084)
+          assert d["pinned_focus"]["unproved_s7"] == 62
+          assert d["negative_conflict_rejected"] is True
+          assert d["best_first_focus"]["unproved_s7"] <= 62
+          assert d["best_two_s6_union"]["distinct_unproved_s7"] >= d["best_first_focus"]["unproved_s7"]
+          assert d["best_three_s6_union"]["distinct_unproved_s7"] >= d["best_two_s6_union"]["distinct_unproved_s7"]
+          assert d["s6_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY
