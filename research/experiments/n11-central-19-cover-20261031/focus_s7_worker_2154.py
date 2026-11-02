@@ -77,6 +77,15 @@ def geometry():
                  str(folder / ("n11_s7_" + root + ".cert"))],
                 check=True, timeout=180)
         terminal_result = terminal.audit(folder)
+        # K0644's LOSS8 parent lift is sound only if its recorded first
+        # moves really are the first moves of these complete strategies.
+        need(set(current.FIRST_MOVES) == set(terminal.EXPECTED),
+             "K0644 first-move inventory changed")
+        for root, expected_move in current.FIRST_MOVES.items():
+            data = (folder / ("n11_s7_" + root + ".cert")).read_bytes()
+            strategy = terminal.parse(data, root)
+            need(strategy[int(root, 16)] == expected_move,
+                 "K0644 parent lift uses a non-strategy first move")
     need(len(terminal_result["certificates"]) == 5 and
          terminal_result["total_terminal_states"] == 1901,
          "five complete LOSS7 strategies changed")
