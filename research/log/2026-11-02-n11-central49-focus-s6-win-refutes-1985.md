@@ -31,3 +31,7 @@ K0637で得た五つの七石LOSS終局証明は、局面単位では依然有�
 再現：generatorをビルド後、七石 0000000000000020380a100000000000 に対し、出力証明書の指定とともに第3引数 original_first_WIN7 を与える。続いて verify_focus_s6_win_refutation.py を証明書ディレクトリに対して --self-test 付きで実行する。専用GitHub Actionsは .github/workflows/n11-central49-five-loss7-terminal.yml。生成した証明書はActions成果物に保存する。
 
 **確定：新規六石WIN 1類。未確定：六石LOSS、四石LOSS、二石root、標準11×11空盤。空盤はUNKNOWN。**
+
+## 旧分配器の安全停止
+
+K0638による失効を受け、focus_s7_worker_1985.py は新しい計画生成・作業一覧出力・作業報告統合を既定で拒否する。過去の再現に限り --allow-superseded-plan を明示すれば従来の幾何監査と受領書検証を再実行できる。専用CIに「既定の拒否」と「明示的な歴史再現」の両方を追加した。既存の1,985類・94/94被覆の履歴データは改変しない。
