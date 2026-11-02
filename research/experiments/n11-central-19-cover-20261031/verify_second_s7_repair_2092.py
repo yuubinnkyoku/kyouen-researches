@@ -64,7 +64,7 @@ def replay(doc):
         base.key(geom.canonical(first_terminal_s7)),
         base.key(geom.canonical(second.S7)),
     }
-    need(len(known_win6) == 138 and len(known_win7) == 22,
+    need(len(known_win6) == 139 and len(known_win7) == 22,
          f"known WIN inventory changed: WIN6={len(known_win6)} WIN7={len(known_win7)}")
 
     cache = {}
