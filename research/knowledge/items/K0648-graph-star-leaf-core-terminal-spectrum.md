@@ -31,6 +31,12 @@ artifacts:
 - path: research/experiments/graph-star-fixed-defect-fpt-20261103/verify.py
   role: verifier
   note: 支配集合直接列挙との13047係数独立照合
+- path: research/experiments/graph-star-fixed-defect-bit-fpt-20261103/proof.md
+  role: proof
+  note: 固定欠損計数の有理数除去と二進ビット計算量 O(f(d)L^5) の全称証明
+- path: research/experiments/graph-star-fixed-defect-bit-fpt-20261103/verify.py
+  role: verifier
+  note: 16510係数の独立した整数置換・直接列挙照合
 scope: 辺を持つ任意有限単純グラフGと任意固定または可変q>=4のK0602整数平面共円・共線禁止構成。標準全格子盤は対象外。
 evidence: 葉・高次数核への一意分解、次数上界と連結核の分解列挙による全称証明。有限照合は独立監査。
 ---
@@ -65,3 +71,7 @@ r^{C+a(B)-|B|-d(B)}(r+1)^{L-a(B)}u^{d(B)}.}
 ## 固定欠損係数は固定パラメータ容易（2026-11-03）
 
 連結核を頂点とし、重複または隣接する核を競合させるグラフは、欠損上限 d に対して頂点数 O(f(d)n)、最大次数 f(d) 以下となる。重み付き独立集合多項式の対数を連結支持に分解すると、d 次までの係数は大きさ d 以下の連結支持だけから厳密に復元できる。従って **s+d 石の極大配置数は f(d)(n+e) 回の有理数・整数演算で計数できる**。従来の O(f(d)n^d(n+e)) を改善し、パラメータ d に関する固定パラメータ容易性を証明した（ビット演算量の主張ではない）。[全称証明](../../experiments/graph-star-fixed-defect-fpt-20261103/proof.md)と[独立検証器](../../experiments/graph-star-fixed-defect-fpt-20261103/verify.py)を保存。13,047係数で直接列挙と一致、不一致0。
+
+## 二進ビット計算量でも固定パラメータ容易（2026-11-03）
+
+算術 FPT の候補重みの分母を、欠損次数に応じた整数置換で消去できる。各連結核の欠損を t、重みを w とすると、D=r^T(r+1)^T、T=2d(d+1)+3d により D^t w は整数となる。整数多項式 Q(x)=Z_J(Dx) を連結支持の対数展開で計算し、H=lcm(1,…,d) 倍の整数対数係数から、割り切れる漸化式で係数を復元する。従って、入力長の上界 L=n+e+⌈log₂(q+1)⌉ に対して **O(f(d)L⁵) ビット演算**の厳密計数が成立する。有理数演算は不要。組合せ入力 G,q,d に対する結果であり、標準格子盤は対象外。[全称証明](../../experiments/graph-star-fixed-defect-bit-fpt-20261103/proof.md)と[独立検証器](../../experiments/graph-star-fixed-defect-bit-fpt-20261103/verify.py)を保存。16,510係数で不一致0。

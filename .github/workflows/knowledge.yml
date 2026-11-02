@@ -19,5 +19,6 @@ jobs:
       - run: uv run --locked python research/experiments/graph-star-vertex-cover-terminal-gap-20261103/verify.py
       - run: uv run --locked python research/experiments/graph-star-leaf-core-spectrum-20261103/verify.py
       - run: uv run --locked python research/experiments/graph-star-connected-kernel-20261103/verify.py
+      - run: uv run --locked python research/experiments/graph-star-fixed-defect-bit-fpt-20261103/verify.py
       - run: uv run --locked python tools/knowledge/build.py
       - run: git diff --exit-code -- README.md research/knowledge/generated
