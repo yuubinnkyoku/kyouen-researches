@@ -11,6 +11,8 @@ on:
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_compact.py'
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_second_seven_win6.py'
       - 'research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_2097_refuted_by_second_s7.json'
       - 'research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json'
       - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json'
       - 'research/knowledge/items/K0626-n11-central49-terminal-s6-win55.md'
@@ -72,6 +74,7 @@ jobs:
       - name: Independently audit the repaired 46-witness cover
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py --negative
+          python3 research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py
       - uses: astral-sh/setup-uv@v6
       - name: Rebuild and test canonical knowledge views
         run: |
