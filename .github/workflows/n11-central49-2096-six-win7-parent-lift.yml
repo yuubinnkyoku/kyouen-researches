@@ -1,0 +1,32 @@
+name: N11 central49 six WIN7 terminal proofs and WIN6 parent lift
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_2096_focus_six_win7_parent_lift.py'
+      - 'research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py'
+      - '.github/workflows/n11-central49-2096-six-win7-parent-lift.yml'
+
+jobs:
+  independent-terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate six complete strategies and verify 37 six-stone parents
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_2096_focus_six_win7_parent_lift.py --negative > "$RUNNER_TEMP/audit.json"
+          python3 - "$RUNNER_TEMP/audit.json" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1]))
+          assert d["certified_win7_roots"] == 6
+          assert d["distinct_terminal_derived_win6"] == 37
+          assert d["six_to_seven_restoration_edges"] == 42
+          assert d["negative_tests_rejected"] == 6
+          assert d["conditional_2096_loss_witness_plan_valid"] is False
+          assert "00000000000000203800000060000000" in d["selected_2096_s6_conflicts"]
+          assert d["two_stone_root"] == d["empty_board"] == "UNKNOWN"
+          print(json.dumps(d, indent=2, ensure_ascii=False))
+          PY
