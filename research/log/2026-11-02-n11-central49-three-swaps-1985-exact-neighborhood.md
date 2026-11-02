@@ -30,3 +30,7 @@
 1,985は**条件付きLOSS証人を仮定した場合に独立に調べる必要がある七石正準類数**であり、勝敗が証明された七石局面の数ではない。選択六石LOSSの証明は0件。新規四石LOSS、二石root閉鎖も0件。未完探索のpn/dnやsolver-trusted cacheを独立終局証明に昇格させていない。**標準11×11空盤の勝敗はUNKNOWN。**
 
 実装と再現入口：`research/experiments/n11-central-19-cover-20261031/audit_central49_2092_three_swap.py`、`search_central49_1994_three_swap_descent.py`、`verify_central49_three_swap_chain.py`、`conditional_s6_cover_46_three_swap_chain.json`。
+
+## 追補：一・二証人交換も改善不能と確定
+
+`audit_central49_1985_two_swap.py` は最終46証人の除去二組1,035通りから、同一端点の六石候補も含めた非自明交換4,206件を全数検査した。例外五石の被覆を満たす3,978件から既知WIN6/WIN7を含む12件を除外し、**有効3,966件の改善0・同数0**を確認した。専用CI [41416367196](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41416367196) は **success**。したがって最終1,985類計画は**最大三証人の交換で改善不能**（一・二証人交換はこの追加監査、三証人交換は前述の全数監査）。四証人以上の交換・大域最適性は未証明。いずれも勝敗証明ではない。
