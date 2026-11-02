@@ -3,6 +3,9 @@
 ## [.github/workflows/lean-foundations.yml](../../../.github/workflows/lean-foundations.yml)
 
 - [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) (verifier): repository指定のLean toolchainで新規moduleも検査するCI
+## [.github/workflows/n11-central49-2154-two-swap.yml](../../../.github/workflows/n11-central49-2154-two-swap.yml)
+
+- [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) (source): 独立幾何監査と改変負例5件の自動検査、CI 41473966130成功
 ## [.github/workflows/n11-central49-five-loss7-terminal.yml](../../../.github/workflows/n11-central49-five-loss7-terminal.yml)
 
 - [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (source): 五つの戦略を再生成して独立検証し証明書をActions成果物として保存
@@ -6939,6 +6942,9 @@
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (manifest): 新たに確定した七類のWIN6を除いた条件付き46証人・2,097七石類、66組の非衝突二対二修復、選択六石のLOSSは未証明
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 確定WIN6を除外した66組の固定44条件付き修復から得た2,097七石類
+## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2154_swaps.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2154_swaps.json)
+
+- [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) (certificate): 十回の二証人交換、各段階の七石義務数、確定LOSS7との交差
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_repair_2301.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_repair_2301.json)
 
 - [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (certificate): 旧46証人からの除外七類・追加七類、被覆と七石義務の計数
@@ -6975,6 +6981,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json)
 
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 七石から一点除去した七つの六石親とD4正準鍵
+## [research/experiments/n11-central-19-cover-20261031/verify_central49_2154_two_swap_descent.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_2154_two_swap_descent.py)
+
+- [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) (verifier): 4×4整数幾何による現行証人の再構成と十交換、別の3×3整数幾何による全二証人近傍検査
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_post_seven_win6_repair_2301.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_post_seven_win6_repair_2301.py)
 
 - [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) (verifier): 七石の全七親の合法な復帰手、D4正準類の相異、従来138 WIN6との非重複を独立4×4幾何で検査
@@ -10122,6 +10131,9 @@
 ## [research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md](../../../research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md)
 
 - [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (log): 有限計算の結果、相乗増分が0であること、証明境界
+## [research/log/2026-11-03-n11-central49-2154-conditional-two-swap-descent.md](../../../research/log/2026-11-03-n11-central49-2154-conditional-two-swap-descent.md)
+
+- [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) (log): 交換経緯、全数局所検査、確定証拠の再利用範囲
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

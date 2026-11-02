@@ -158,6 +158,7 @@
 - ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 条件付き幾何被覆と実際の勝敗証明を区別
 - ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 条件付き幾何被覆と勝敗証明の区別
 - ← depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 局所勝敗と11×11空盤弱解決の区別
+- ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 条件付き証明義務と確定勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3270,6 +3271,8 @@
 - → depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): K0638の七石WINから導いた七親WIN6
 - ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 現行46六石証人と2,301七石正準類の条件付き被覆
 - ← depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 現行46六石証人・2,301七石条件付き証明義務
+- ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 七つの確定WIN6を除外した46証人・2,301七石義務
+- ← supersedes [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 同じ94五石被覆を維持して条件付き七石義務を147類削減した現行計画
 
 ## [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md) 11×11中央49の現行2,301七石義務には終局証明済みLOSS7が4類含まれる
 
@@ -3290,8 +3293,16 @@
 - → depends_on [K0637](../items/K0637-n11-central49-five-terminal-loss7.md): 五つの固定七石必勝戦略と独立終局検証
 - → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 現行46六石証人・2,301七石条件付き証明義務
 - → depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 既存五根と現行被覆の交差4類
+- ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 終局証明由来の七石LOSS23類と現行被覆との交差
 
 ## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点グラフ星型構成と極大配置の支配集合母関数
 - → depends_on [K0636](../items/K0636-polynomial-bit-graph-star-realization.md): 頂点被覆からのNP困難性を整数座標入力に移す多項式ビット長構成
+
+## [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) 11×11中央49の現行条件付き七石義務を2,301類から2,154類に縮小し二証人交換局所最適を検査
+
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+- → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 七つの確定WIN6を除外した46証人・2,301七石義務
+- → supersedes [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 同じ94五石被覆を維持して条件付き七石義務を147類削減した現行計画
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
