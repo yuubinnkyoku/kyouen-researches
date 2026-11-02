@@ -10,6 +10,7 @@
 ## [.github/workflows/n11-central49-post-seven-win6-repair-2301.yml](../../../.github/workflows/n11-central49-post-seven-win6-repair-2301.yml)
 
 - [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (source): 独立監査CI、実行41443189538成功
+- [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md) (source): 現行被覆と終局LOSS7四類・四辺の監査用CI
 ## [Kyouen/CertificateSoundness.lean](../../../Kyouen/CertificateSoundness.lean)
 
 - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
@@ -6965,6 +6966,7 @@
 
 - [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) (verifier): 七石の全七親の合法な復帰手、D4正準類の相異、従来138 WIN6との非重複を独立4×4幾何で検査
 - [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (verifier): 旧18置換の再生と4×4整数Bareissによる新証人の合法七石子・既知WIN非衝突監査
+- [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md) (verifier): 旧18交換を再生して現行46証人の七石子を独立4×4整数Bareissで構成しK0637の五根と照合
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 別方式の4×4整数Bareissによる三段階の幾何・被覆・既知WIN非衝突の独立再計算
@@ -10066,6 +10068,9 @@
 ## [research/log/2026-11-02-n11-central49-focus-s6-win-refutes-1985.md](../../../research/log/2026-11-02-n11-central49-focus-s6-win-refutes-1985.md)
 
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (log): 反証戦略の統計、SHA-256、旧証人計画への影響と再計画条件
+## [research/log/2026-11-02-n11-central49-k0637-terminal-loss7-overlap-current-2301.md](../../../research/log/2026-11-02-n11-central49-k0637-terminal-loss7-overlap-current-2301.md)
+
+- [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md) (log): 五つのK0637根からの六石親照合、四類の再利用と信頼境界
 ## [research/log/2026-11-02-n11-central49-second-s7-2207-repair.md](../../../research/log/2026-11-02-n11-central49-second-s7-2207-repair.md)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (log): 条件付き被覆の修復と証明境界

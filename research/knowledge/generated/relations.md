@@ -63,6 +63,7 @@
 - ← depends_on [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md): 共円禁止と合法手の定義
 - ← depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): 安全な追加と通常プレイの終局規則
 - ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 完全指摘ルールと安全な追加
+- ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 合法手と安全な局面の定義
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -154,6 +155,7 @@
 - ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 条件付き証明計画と勝敗証明の区別
 - ← depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): 局所WIN証明と空盤弱解決の区別
 - ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 条件付き幾何被覆と実際の勝敗証明を区別
+- ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 条件付き幾何被覆と勝敗証明の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3230,6 +3232,7 @@
 - → depends_on [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md): 11×11空盤の勝敗は未確定
 - → depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 中央49の条件付き六石証人46類と七石1,985類
 - ← depends_on [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md): 同じ旧計画内の別の七石LOSS終局証明は有効
+- ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 元先手LOSS7五類の固定終局戦略と独立監査
 
 ## [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) 11×11中央49の1,985七石条件付き計画は選択六石WINの終局証明で失効
 
@@ -3259,3 +3262,11 @@
 - → depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 第一終局戦略の七親WIN6
 - → depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 第二終局戦略の七親WIN6
 - → depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): K0638の七石WINから導いた七親WIN6
+- ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 現行46六石証人と2,301七石正準類の条件付き被覆
+
+## [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md) 11×11中央49の現行2,301七石義務には終局証明済みLOSS7が4類含まれる
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 合法手と安全な局面の定義
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き幾何被覆と勝敗証明の区別
+- → depends_on [K0637](../items/K0637-n11-central49-five-terminal-loss7.md): 元先手LOSS7五類の固定終局戦略と独立監査
+- → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 現行46六石証人と2,301七石正準類の条件付き被覆
