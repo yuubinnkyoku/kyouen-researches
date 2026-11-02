@@ -1,0 +1,21 @@
+name: N11 central49 1985 exact one-two swap audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py'
+      - '.github/workflows/n11-central49-1985-two-swap.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-neighborhood:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exhaust all one/two-witness replacements under known WIN exclusions
+        run: python3 research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py
