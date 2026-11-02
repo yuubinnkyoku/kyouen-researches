@@ -152,11 +152,30 @@ def run():
                for S in range(1 << 3)) == 6
     assert sum(all((S >> a & 1) or (S >> b & 1) for a, b in edges)
                for S in range(1 << 2)) * 2 == 6
+    # Larger nontrivial Vandermonde systems (15, 21 and 28 bases).
+    stress_checks = 0
+    stress_graphs = [
+        (5, [(0, 1), (1, 2), (2, 3), (3, 4)]),
+        (5, [(0, 1), (1, 2), (2, 3), (3, 4), (4, 0)]),
+        (4, list(combinations(range(4), 2))),
+    ]
+    for n, edges in stress_graphs:
+        m = len(edges)
+        counts = original_coefficients(n, edges)
+        L = (m+1)*(m+2)//2
+        for r in (2, 3):
+            values = [evaluate_closed_form(counts, r, t)
+                      for t in range(1, L+1)]
+            recovered = recover_by_interpolation(m, r, values)
+            assert recovered == {
+                pair: Fraction(counts.get(pair, 0)) for pair in recovered}
+            stress_checks += 1
+    assert stress_checks == 6
     assert (interpolation_checks, direct_checks, hyper_checks) == (72, 144, 7)
     print(f"PASS {interpolation_checks} exact interpolations; "
           f"{direct_checks} direct domination checks; "
           f"{hyper_checks} direct q-uniform terminal checks; "
-          "isolated-vertex correction")
+          f"{stress_checks} larger interpolations; isolated-vertex correction")
 
 
 if __name__ == "__main__":
