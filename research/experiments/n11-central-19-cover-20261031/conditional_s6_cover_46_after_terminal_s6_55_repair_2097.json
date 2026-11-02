@@ -1,0 +1,30 @@
+{
+  "schema": "n11-central49-terminal-win6-fixed44-repair-v1",
+  "source": "conditional_s6_cover_46_after_shared58_win6_repair_2089.json",
+  "terminal_certificate": "terminal_s6_55_strategy.b64",
+  "terminal_raw_sha256": "83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b",
+  "eligible_repair_pairs": 68,
+  "single_replacement_options": 0,
+  "selected_s6": 46,
+  "s5_covered": 94,
+  "distinct_s7": 2097,
+  "raw_s7_edges": 2986,
+  "removed": [
+    "00000000000200801002000081000000",
+    "00000000000000203820000002000000"
+  ],
+  "added": [
+    "00000000000000203820000000080000",
+    "00000000000880801002000040000000"
+  ],
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_S6_LOSS_WITNESS_COVER_NOT_VERDICTS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "The selected six-stone root 00000000000200801002000081000000 is independently terminal-proved original-first WIN. The previous 2089-S7 conditional LOSS plan is refuted. This 2097-S7 plan is the minimum among 2-for-2 replacements that remove that root and one other selected witness, keep the remaining 44, and exclude known original-first WIN6; it does not prove any selected S6 LOSS, S4 LOSS, two-stone closure or empty-board outcome."
+}
