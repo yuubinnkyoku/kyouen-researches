@@ -1,0 +1,29 @@
+name: N11 central49 2092 S7 two-swap local optimum audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_2092_two_swap_local_optimum.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_second_s7_repair_2092_swaps.json'
+      - '.github/workflows/n11-central49-2092-two-swap-optimum.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exact-local-neighborhood:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently audit all three terminal-certified WIN6 parent inventories
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_shared_s7_seven_win6.py
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_second_seven_win6.py
+      - name: Independently replay the 2092-class conditional cover
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_second_s7_repair_2092.py
+      - name: Exhaust all 1- and 2-witness exchanges with exact 3x3 integer geometry
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_central49_2092_two_swap_local_optimum.py
