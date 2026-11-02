@@ -636,4 +636,5 @@
 | [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) | 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) | 11×11中央49の現行2,094七石類は最大二証人交換で改善不能 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) | 11×11中央49の条件付き七石義務を三証人交換で2,094類から2,093類へ削減 | computation | superseded | square-outcomes, certificates, verification, search-methods |
-| [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) | 11×11中央49の条件付き七石証明義務を三証人交換で2,093類から2,091類へ削減 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) | 11×11中央49の条件付き七石証明義務を三証人交換で2,093類から2,091類へ削減 | computation | superseded | square-outcomes, certificates, verification, search-methods |
+| [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) | 11×11中央49の条件付き七石証明義務を二証人交換で2,091類から2,090類へ削減 | computation | computed | square-outcomes, certificates, verification, search-methods |
