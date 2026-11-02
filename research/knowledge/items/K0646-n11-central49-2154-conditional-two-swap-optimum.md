@@ -11,7 +11,10 @@ relations:
   note: 条件付き証明義務と確定勝敗の区別
 - type: depends_on
   target: K0641
-  note: 七つの確定WIN6を除外した現行46証人・2,301七石義務
+  note: 七つの確定WIN6を除外した46証人・2,301七石義務
+- type: supersedes
+  target: K0641
+  note: 同じ94五石被覆を維持して条件付き七石義務を147類削減した現行計画
 - type: depends_on
   target: K0644
   note: 終局証明由来の七石LOSS23類と現行被覆との交差
