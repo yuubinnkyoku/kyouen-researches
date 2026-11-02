@@ -64,6 +64,8 @@ jobs:
         run: python research/experiments/graph-star-count-complexity-20261102/verify.py
       - name: Audit polynomial-bit integer graph-star realization and geometric counting
         run: python research/experiments/graph-star-polynomial-coordinates-20261102/verify.py
+      - name: Audit fixed-q>=5 graph-star counting #P-hardness interpolation
+        run: python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -211,3 +213,5 @@ jobs:
 # Refresh trigger for K0636 final q4-q7 audit and knowledge integration (2026-11-02).
 
 # Refresh trigger for K0637 N11 five independently terminal-certified LOSS7 (2026-11-02).
+
+# Refresh trigger for K0639 fixed-q>=5 graph-star #P-completeness (2026-11-02).
