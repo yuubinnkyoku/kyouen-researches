@@ -25,6 +25,21 @@ jobs:
           assert (d["comparison_win6"], d["comparison_win7"]) == (145, 23)
           assert (d["selected_s6"], d["covered_s5"], d["raw_s7_edges"], d["distinct_s7"]) == (46, 94, 2992, 2301)
           assert d["known_win6_conflicts"] == d["known_win7_conflicts"] == 0
+
+          assert (d["k0637_terminal_loss7_secured_classes"],
+                  d["k0637_terminal_loss7_secured_edges"],
+                  d["k0637_terminal_loss7_secured_witnesses"],
+                  d["s7_not_secured_by_k0637"]) == (4, 4, 2, 2297)
+          assert d["k0637_terminal_loss7_not_in_cover"] == [
+              "00000000000000a03808100000000000"]
+          assert d["k0637_terminal_loss7_hits_by_s6"] == {
+              "00000000000000203808000000000100": [
+                  "00000000000000203808000000000120",
+                  "00000000000200801082008100000000"],
+              "00000000000000203808000000004000": [
+                  "0000000000000020380a000000004000",
+                  "00000000000002043800800000040000"],
+          }
           assert d["negative_tests"] == 4 and d["conditional_only"]
           assert d["s6_outcome"] == d["s4_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
           print(json.dumps(d, indent=2))
