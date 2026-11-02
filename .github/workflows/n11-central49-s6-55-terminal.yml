@@ -8,6 +8,9 @@ on:
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py'
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py'
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_compact.py'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_second_seven_win6.py'
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json'
       - 'research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json'
       - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json'
       - 'research/knowledge/items/K0626-n11-central49-terminal-s6-win55.md'
@@ -35,6 +38,7 @@ jobs:
           DIR=research/experiments/n11-central-19-cover-20261031
           g++ -std=c++20 -O3 -Wall -Wextra "$DIR/terminal_s6_55_strategy_generator.cpp" -o /tmp/n11-s6-generator
           /tmp/n11-s6-generator 00000000000200801002000081000000 /tmp/n11-s6-strategy.txt
+          /tmp/n11-s6-generator 00000000000000203808000000000020 /tmp/n11-s6-strategy2.txt
           python3 - <<'PY'
           from pathlib import Path
           import base64, hashlib, textwrap, zlib
@@ -47,13 +51,24 @@ jobs:
           out = Path('research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64')
           out.write_text('\n'.join(textwrap.wrap(base64.b64encode(zlib.compress(raw, 9)).decode(), 96)) + '\n')
           print(f'generated {len(raw)} strategy bytes, {out.stat().st_size} encoded bytes')
+          src2 = Path('/tmp/n11-s6-strategy2.txt').read_text().splitlines()
+          assert src2[0].startswith('# n11 strategy root=00000000000000203808000000000020')
+          rows2 = [line.split() for line in src2[1:]]
+          assert len(rows2) == 14440 and len({row[0] for row in rows2}) == 14440
+          raw2 = bytes(int(p) for _, p in rows2)
+          assert hashlib.sha256(raw2).hexdigest() == 'debb5464282eb28e6a30496f8728515433d6f9507ffdeeda1eeaf04e3c5d7de4'
+          out2 = Path('research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64')
+          out2.write_text('\n'.join(textwrap.wrap(base64.b64encode(zlib.compress(raw2, 9)).decode(), 96)) + '\n')
+          print(f'generated second {len(raw2)} strategy bytes, {out2.stat().st_size} encoded bytes')
           PY
       - name: Independently verify all terminal branches and tamper rejection
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64 --negative
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_compact.py --negative
       - name: Independently replay seven S6 parents of shared terminal S7
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_second_seven_win6.py
       - name: Independently audit the repaired 46-witness cover
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py --negative
@@ -75,7 +90,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64 README.md research/knowledge/generated
+          git add research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64 research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64 README.md research/knowledge/generated
           if git diff --cached --quiet; then
             echo "Verified certificate already committed."
             exit 0
