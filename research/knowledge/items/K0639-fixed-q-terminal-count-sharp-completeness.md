@@ -41,6 +41,6 @@ T_q(H_t)-1=\sum_{S\subseteq V(G)}r^{b(S)}(1+r)^{t a(S)}(1+r^2)^{t b(S)}.
 
 \((1+r)^a(1+r^2)^b\) は異なる(a,b)で相異なる正整数となるため、\(t=1,\ldots,(m+1)(m+2)/2\) の値から有理数上のVandermonde補間で、各(a,b)を持つ部分集合の個数を厳密復元できる。特にa+b=mならSは頂点被覆なので、#VertexCoverが多項式回の照会で求まる。K0636により、各H_tを多項式ビット長の整数座標に変換できる。
 
-[全称証明](../../experiments/graph-star-fixed-q-count-complexity-20261102/proof.md)・[独立検証器](../../experiments/graph-star-fixed-q-count-complexity-20261102/verify.py)を保存。72条件の厳密補間、144条件の支配集合直接列挙、7条件のq点禁止超辺直接極大列挙を独立照合し、不一致0。有限検査と無界の数学的証明は区別する。
+[全称証明](../../experiments/graph-star-fixed-q-count-complexity-20261102/proof.md)・[独立検証器](../../experiments/graph-star-fixed-q-count-complexity-20261102/verify.py)を保存。72条件の小規模厳密補間と6条件の最大6辺の追加補間、144条件の支配集合直接列挙、7条件のq点禁止超辺直接極大列挙を独立照合し、不一致0。有限検査と無界の数学的証明は区別する。
 
 **限界**：主張は多項式時間チューリング還元の意味であり、単一照会・計数保存還元は未証明。標準n×n全格子盤の計数困難性、空盤勝敗・Grundy値の困難性も示さない。
