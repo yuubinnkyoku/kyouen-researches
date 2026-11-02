@@ -123,7 +123,8 @@ int main(int argc,char**argv) {
         forbidden[triple_index(a,b,c)]=f;
       }
   U root=parse_hex(argv[1]);
-  if (hex32(root)!="00000000000200801002000081000000"
+  if ((hex32(root)!="00000000000200801002000081000000"
+       && hex32(root)!="00000000000000203808000000000020")
       || points(root).size()!=6) throw runtime_error("unexpected root");
   if (solve(root)!=1) throw runtime_error("root was not proved winning");
   ofstream out(argv[2]);
