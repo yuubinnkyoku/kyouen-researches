@@ -264,6 +264,7 @@ function audit() {
     certifiedWin6Witnesses:[newWin6A,newWin6B],
     conditionalLossCover:'REFUTED_BY_TWO_TERMINAL_WIN6',
     noHitInTheseInventories:frontier.size-cached.length-terminal.length,
+    noHitIncludingNewCertifiedWin7:frontier.size-cached.length-terminal.length-1,
     shortestS6:shortest,shortestS6WithAtLeast50SharedChildren:shortShared,
     negativeTests:rejected,proofBoundary:'GEOMETRY_CACHE_REUSE_AND_PINNED_CERTIFICATE_IDENTITY',
     s6Outcome:'TWO_CERTIFIED_WIN_44_UNKNOWN',twoStoneRootOutcome:'UNKNOWN',emptyBoardOutcome:'UNKNOWN'
