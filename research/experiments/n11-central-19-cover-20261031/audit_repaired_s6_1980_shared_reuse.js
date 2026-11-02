@@ -146,7 +146,7 @@ function audit() {
   // independent 4x4 full-terminal verifier of the pinned WIN strategy.
   need(crypto.createHash('sha256').update(data.newWin6).digest('hex')
        === '10e816538fbe6cc0062e2d0dd0fe96930ef294101812701305e1595b531b21da'
-       && data.newWin6.startsWith('# n11-original-first-WIN-strategy-v1\\nBOARD 11\\nROOT 00000000000000203808200000000000\\n'),
+       && data.newWin6.startsWith('# n11-original-first-WIN-strategy-v1\nBOARD 11\nROOT 00000000000000203808200000000000\n'),
        'new WIN6 certificate identity changed');
   const cacheLoss7 = s7Inventory(data.loss7,2232);
   const historicalWin7 = s7Inventory(data.win7,17);
