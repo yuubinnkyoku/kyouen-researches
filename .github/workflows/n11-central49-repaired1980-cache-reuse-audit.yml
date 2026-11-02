@@ -37,10 +37,11 @@ jobs:
             && d.negativeTests === 4
             && d.newlyCertifiedWin7FrontierHits === 1
             && d.certifiedWin7Key === '00000000000000603808200000000000'
-            && d.certifiedWin6Witnesses.length === 2
-            && d.conditionalLossCover === 'REFUTED_BY_TWO_TERMINAL_WIN6'
+            && d.certifiedWin6Witnesses.length === 3
+            && d.certifiedWin6Witnesses.includes('0000000000000020380a000000000000')
+            && d.conditionalLossCover === 'REFUTED_BY_THREE_TERMINAL_WIN6'
             && d.proofBoundary === 'GEOMETRY_CACHE_REUSE_AND_PINNED_CERTIFICATE_IDENTITY'
-            && d.s6Outcome === 'TWO_CERTIFIED_WIN_44_UNKNOWN'
+            && d.s6Outcome === 'THREE_CERTIFIED_WIN_43_UNKNOWN'
             && d.twoStoneRootOutcome === 'UNKNOWN'
             && d.emptyBoardOutcome === 'UNKNOWN';
           if (!ok) throw Error('S7 reuse audit regression: ' + JSON.stringify(d));
