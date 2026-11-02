@@ -20,7 +20,8 @@ jobs:
           python3 research/experiments/n11-central-19-cover-20261031/verify_central49_2094_three_swap_descent.py --negative > "$RUNNER_TEMP/n11-2094-audit.json"
           python3 - "$RUNNER_TEMP/n11-2094-audit.json" <<'PY'
           import json, sys
-          d=json.load(open(sys.argv[1], encoding='utf-8'))
+          raw=open(sys.argv[1], encoding='utf-8').read()
+          d=json.loads(raw[raw.index('{'):])  # generator prints root=... before JSON
           assert (d['source_s7_classes'],d['final_s7_classes'],
                   d['saved_s7_classes'],d['raw_s7_edges'])==(2154,2094,60,2987)
           assert (d['selected_s6'],d['covered_s5'],
