@@ -72,7 +72,7 @@ def freeze():
     old.update({
         "schema": SCHEMA,
         "source_certificate": proof.CERT.name,
-        "source_sha256": previous.previous.previous.previous.old.receipts.file_digest(proof.CERT),
+        "source_sha256": previous.previous.previous.old.receipts.file_digest(proof.CERT),
         "selected_s6_sha256": proof.geometry.digest(frontiers),
         "total_distinct_s7": len(multiplicity),
         "terminal_certified_s7_in_cover": len(secured),
