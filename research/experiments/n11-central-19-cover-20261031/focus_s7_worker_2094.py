@@ -199,6 +199,12 @@ def main():
     if args.self_test:
         self_test()
         return
+    # K0658: the 2094 second three-swap introduced a terminal-certified
+    # original-first WIN6. Later 2093/2091 descendants retain it.
+    # Historical self-tests remain available, but no new work may be issued.
+    need(not (args.plan_out or args.existing or args.worker or
+              args.merged_out or args.worklist is not None),
+         "SUPERSEDED_BY_CERTIFIED_WIN6: use verified 2096 focus instead")
     need(bool(args.plan_out) != bool(args.audit_plan),
          "choose exactly one of --plan-out and --audit-plan")
     if args.plan_out:
