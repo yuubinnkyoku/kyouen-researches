@@ -62,6 +62,8 @@ jobs:
         run: python research/experiments/modular-substitution-20261102/verify_amortized.py
       - name: Audit graph-star terminal count #P-hardness reduction
         run: python research/experiments/graph-star-count-complexity-20261102/verify.py
+      - name: Audit polynomial-bit integer graph-star realization and geometric counting
+        run: python research/experiments/graph-star-polynomial-coordinates-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -203,3 +205,5 @@ jobs:
 # Refresh trigger for K0631/K0632 amortized LCA counting bounds (2026-11-02).
 
 # Refresh trigger for K0635 graph-star q4 terminal counting complexity (2026-11-02).
+
+# Refresh trigger for K0636 polynomial-bit integer graph-star realization (2026-11-02).
