@@ -1,0 +1,58 @@
+name: n11 central49 focused S6 terminal WIN proof
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py'
+      - '.github/workflows/n11-central49-s6-55-terminal.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate deterministic strategy
+        shell: bash
+        run: |
+          set -euo pipefail
+          DIR=research/experiments/n11-central-19-cover-20261031
+          g++ -std=c++20 -O3 -Wall -Wextra "$DIR/terminal_s6_55_strategy_generator.cpp" -o /tmp/n11-s6-generator
+          /tmp/n11-s6-generator 00000000000200801002000081000000 /tmp/n11-s6-strategy.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64, hashlib, textwrap, zlib
+          src = Path('/tmp/n11-s6-strategy.txt').read_text().splitlines()
+          assert src[0].startswith('# n11 strategy root=00000000000200801002000081000000')
+          rows = [line.split() for line in src[1:]]
+          assert len(rows) == 12068 and len({row[0] for row in rows}) == 12068
+          raw = bytes(int(p) for _, p in rows)
+          assert hashlib.sha256(raw).hexdigest() == '83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b'
+          out = Path('research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64')
+          out.write_text('\n'.join(textwrap.wrap(base64.b64encode(zlib.compress(raw, 9)).decode(), 96)) + '\n')
+          print(f'generated {len(raw)} strategy bytes, {out.stat().st_size} encoded bytes')
+          PY
+      - name: Independently verify all terminal branches and tamper rejection
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64 --negative
+      - name: Preserve verified certificate on main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64
+          if git diff --cached --quiet; then
+            echo "Verified certificate already committed."
+            exit 0
+          fi
+          git commit -m "proof(n11): preserve independently checked terminal WIN6 certificate"
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
