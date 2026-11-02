@@ -6847,12 +6847,19 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible audit for reverse s6-to-s5 integration and combined saved-s6 source history.
+## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_2097_refuted_by_second_s7.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_2097_refuted_by_second_s7.json)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 旧2,097類計画の六石証人二類が元先手WINと判明、再計画必須
+## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_second_s7_repair_2207.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_second_s7_repair_2207.json)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 既知WIN6を除外した46六石・2,207七石類の条件付き修復、選択六石LOSSは未証明
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_shared58_win6_repair_2089.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_shared58_win6_repair_2089.json)
 
-- [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (manifest): 固定44六石の条件付き修復被覆、勝敗UNKNOWNの境界を明示
+- [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (manifest): 当時の固定44六石の条件付き修復被覆。後続K0626で選択六石のWINが終局証明され、LOSS証人計画として失効
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json)
 
-- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (manifest): 新たに確定したWIN6を除いた条件付き46証人・2,097七石類、選択六石のLOSSは未証明
+- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (manifest): 新たに確定した七類のWIN6を除いた条件付き46証人・2,097七石類、66組の非衝突二対二修復、選択六石のLOSSは未証明
+- [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 確定WIN6を除外した66組の固定44条件付き修復から得た2,097七石類
 ## [research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert](../../../research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (certificate): 修復後46証人のうち2類を元先手WINと確定する共有七石終局戦略; 10,881選択局面・16,980到達局面・2,237終局
@@ -6860,9 +6867,25 @@
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64)
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (certificate): 深さ優先で初めて訪れた元先手手番局面の着手列12,068バイトをzlib/base64圧縮、復号SHA-256 83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b
+- [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (certificate): 七石へ着手した後の全終局戦略を含む固定証明書、復号SHA-256 83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp)
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (solver): 3×3差分整数行列式で決定的戦略を生成、独立検査器とは別実装
+## [research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (certificate): 二つ目の終局戦略14,440バイトをzlib/base64圧縮、復号SHA-256 debb5464282eb28e6a30496f8728515433d6f9507ffdeeda1eeaf04e3c5d7de4
+## [research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 二つ目の共有七石から一点を除いた七つの六石正準類
+## [research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json)
+
+- [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 七石から一点除去した七つの六石親とD4正準鍵
+## [research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py](../../../research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 旧46証人と七親の交差を独立4×4整数幾何で検査
+## [research/experiments/n11-central-19-cover-20261031/verify_second_s7_repair_2207.py](../../../research/experiments/n11-central-19-cover-20261031/verify_second_s7_repair_2207.py)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 固定44六石の二対二置換3組と2,207七石類を独立4×4整数行列式で監査
 ## [research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py](../../../research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): 4x4整数幾何で全応手を再計算し、180度回転による2つ目のWIN6も独立検証
@@ -6878,6 +6901,16 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py)
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (verifier): 固定44証人の二対二置換68組と七石子を4×4整数行列式で独立監査
+- [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (verifier): 幾何的二対二修復68組のうち確定WIN6で2組を反証し66組を独立監査
+## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_compact.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_compact.py)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 4×4整数行列式による全相手応手・終局の独立検証
+## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_second_seven_win6.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_second_seven_win6.py)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 七親の全終局再生と既存WIN6との重複排除
+## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py)
+
+- [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (verifier): 七つの六石親で4×4整数行列式による全相手応手・終局の独立再生
 ## [research/experiments/n11-central-reply-frontier-20261012/README.md](../../../research/experiments/n11-central-reply-frontier-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 19初手軌道の中央後手応手境界、代替応手順位、次のexact探索候補
@@ -9920,6 +9953,15 @@
 ## [research/log/2026-10-23-quadratic-pencil-isomorphism.md](../../../research/log/2026-10-23-quadratic-pencil-isomorphism.md)
 
 - [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) (log): 候補03の実行記録と残課題
+## [research/log/2026-11-02-n11-central49-second-s7-2207-repair.md](../../../research/log/2026-11-02-n11-central49-second-s7-2207-repair.md)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (log): 条件付き被覆の修復と証明境界
+## [research/log/2026-11-02-n11-central49-second-terminal-win7-seven-win6-refutes-2097.md](../../../research/log/2026-11-02-n11-central49-second-terminal-win7-seven-win6-refutes-2097.md)
+
+- [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (log): 終局戦略・七親・条件付き被覆反証の研究記録
+## [research/log/2026-11-02-n11-central49-seven-win6-66-repair.md](../../../research/log/2026-11-02-n11-central49-seven-win6-66-repair.md)
+
+- [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (log): 七親の終局証明・修復計画の証明境界
 ## [research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md](../../../research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (log): 修復後1,980七石の条件付きLOSS計画失効と証明境界

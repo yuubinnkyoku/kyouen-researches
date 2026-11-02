@@ -611,3 +611,5 @@
 | [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) | 11×11の共有七石終局戦略から七つの六石元先手WINを独立証明 | proposition | proved | square-outcomes, certificates, verification, search-methods |
 | [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) | 完全多部グラフ型q点共円ゲームの部数無制限・極大終局長母関数多項式時間計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) | 11×11中央二石系の六石一類は元先手WIN、旧2,089七石条件付き証人は反証 | proposition | proved | square-outcomes, certificates, verification, search-methods |
+| [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) | 11×11の新規共有七石終局戦略から七類の六石元先手WINを証明 | proposition | proved | square-outcomes, certificates, verification, search-methods |
+| [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) | 11×11の二つ目の共有七石終局戦略から六石七類を証明し2,097類計画を反証 | proposition | proved | square-outcomes, certificates, verification, search-methods |

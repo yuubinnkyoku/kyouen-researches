@@ -54,6 +54,8 @@
 - ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 完全指摘・安全追加ルール
 - ← depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 完全指摘・通常プレイの合法手と終局規則
 - ← depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 完全指摘・通常プレイの合法手と終局規則
+- ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 完全指摘・通常プレイの合法手と終局規則
+- ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 完全指摘・通常プレイの合法手と終局規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -138,6 +140,8 @@
 
 - ← depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 局面証明と空盤弱解決の区別
 - ← depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 六石局面の局所的勝敗と空盤弱解決の区別
+- ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 局所WIN証明と空盤勝敗の区別
+- ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 六石局所証明と空盤弱解決の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3120,3 +3124,17 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局面の局所的勝敗と空盤弱解決の区別
+- ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 固定終局戦略の証明書と独立検証
+
+## [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) 11×11の新規共有七石終局戦略から七類の六石元先手WINを証明
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所WIN証明と空盤勝敗の区別
+- → depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 固定終局戦略の証明書と独立検証
+- ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 一つの終局WIN7戦略を七つの六石親に持ち上げる方法
+
+## [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) 11×11の二つ目の共有七石終局戦略から六石七類を証明し2,097類計画を反証
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局所証明と空盤弱解決の区別
+- → depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 一つの終局WIN7戦略を七つの六石親に持ち上げる方法
