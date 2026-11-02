@@ -20,7 +20,8 @@ UNKNOWN = {"s6": "UNKNOWN", "s4": "UNKNOWN",
            "two_stone_root": "UNKNOWN", "empty_board": "UNKNOWN"}
 FIELDS = {
     "schema", "source_certificate", "removed", "added",
-    "selected_s6_count", "s5_covered", "distinct_s7_classes",
+    "selected_s6_count", "s5_covered", "raw_s7_edges",
+    "distinct_s7_classes", "terminal_backed_loss7_hits_from_k0644",
     "known_win6_conflicts", "known_win7_conflicts",
     "evidence_level", "outcomes",
 }
@@ -79,11 +80,13 @@ def audit(doc):
     secured = union & loss7
     conflicts6 = len(selected & win6)
     conflicts7 = len(union & win7)
-    actual = (len(selected), len(s5), len(union), conflicts6, conflicts7)
+    actual = (len(selected), len(s5), raw, len(union), len(secured),
+              conflicts6, conflicts7)
     claimed = tuple(doc[k] for k in (
-        "selected_s6_count", "s5_covered", "distinct_s7_classes",
+        "selected_s6_count", "s5_covered", "raw_s7_edges",
+        "distinct_s7_classes", "terminal_backed_loss7_hits_from_k0644",
         "known_win6_conflicts", "known_win7_conflicts"))
-    need(actual == claimed == (46, 94, 2091, 0, 0),
+    need(actual == claimed == (46, 94, 2984, 2091, 6, 0, 0),
          "independent 2091 geometry or known-WIN exclusion failed")
     return {
         "schema": "n11-central49-2091-independent-three-swap-audit-v1",
@@ -105,7 +108,7 @@ def audit(doc):
 
 
 def negative_tests(doc):
-    for mode in ("source", "verdict", "member", "added", "count", "collision"):
+    for mode in ("source", "verdict", "member", "added", "count", "raw", "secured", "collision"):
         bad = copy.deepcopy(doc)
         if mode == "source":
             bad["source_certificate"] = "obsolete_2094.json"
@@ -117,6 +120,10 @@ def negative_tests(doc):
             bad["added"][0] = bad["removed"][0]
         elif mode == "count":
             bad["distinct_s7_classes"] += 1
+        elif mode == "raw":
+            bad["raw_s7_edges"] -= 1
+        elif mode == "secured":
+            bad["terminal_backed_loss7_hits_from_k0644"] += 1
         else:
             bad["known_win7_conflicts"] += 1
         try:
@@ -124,7 +131,7 @@ def negative_tests(doc):
         except (ValueError, KeyError, TypeError):
             continue
         raise AssertionError("tampered certificate accepted: " + mode)
-    return 6
+    return 8
 
 
 if __name__ == "__main__":
