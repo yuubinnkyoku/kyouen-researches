@@ -61,6 +61,8 @@
 - ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 共円禁止と合法手の定義
 - ← depends_on [K0637](../items/K0637-n11-central49-five-terminal-loss7.md): 共円禁止と合法手の定義
 - ← depends_on [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md): 共円禁止と合法手の定義
+- ← depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): 安全な追加と通常プレイの終局規則
+- ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 完全指摘ルールと安全な追加
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -150,6 +152,8 @@
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 局所証明と空盤勝敗の区別
 - ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 局所WIN証明と空盤勝敗の区別
 - ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 条件付き証明計画と勝敗証明の区別
+- ← depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): 局所WIN証明と空盤弱解決の区別
+- ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 条件付き幾何被覆と実際の勝敗証明を区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2988,6 +2992,7 @@
 - ← depends_on [K0632](../items/K0632-modular-substitution-terminal-polynomial.md): 任意グラフの整数共円実現と支配集合による極大配置公式
 - ← depends_on [K0635](../items/K0635-graph-star-terminal-count-sharp-complexity.md): グラフ星型禁止4点組と極大配置総数1+支配集合数の恒等式
 - ← depends_on [K0636](../items/K0636-polynomial-bit-graph-star-realization.md): グラフ星型の禁止超辺と極大配置母関数
+- ← depends_on [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md): グラフ星型q点構成と誘導辺重み付き支配集合の極大配置総数公式
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3131,6 +3136,7 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局面証明と空盤弱解決の区別
 - ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 終局証明済み六石WINを除外する根拠
+- ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 共有七石から導いた元先手WIN6
 
 ## [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) 完全多部グラフ型q点共円ゲームの部数無制限・極大終局長母関数多項式時間計数
 
@@ -3153,6 +3159,7 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所WIN証明と空盤勝敗の区別
 - → depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 固定終局戦略の証明書と独立検証
 - ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 一つの終局WIN7戦略を七つの六石親に持ち上げる方法
+- ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 第一終局戦略の七親WIN6
 
 ## [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) 11×11の二つ目の共有七石終局戦略から六石七類を証明し2,097類計画を反証
 
@@ -3162,6 +3169,7 @@
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 第二の固定終局戦略と独立終局検証
 - ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 第二の六石終局戦略
 - ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 第二の六石終局WIN証明
+- ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 第二終局戦略の七親WIN6
 
 ## [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数
 
@@ -3214,6 +3222,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の禁止超辺と極大配置母関数
 - → depends_on [K0635](../items/K0635-graph-star-terminal-count-sharp-complexity.md)
+- ← depends_on [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md): 任意固定q>=4で多項式ビット長の整数座標を決定的に構成できること
 
 ## [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) 11×11中央49の条件付き七石義務1,985類のうち5類を終局戦略で独立証明
 
@@ -3228,3 +3237,25 @@
 - → depends_on [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md): 11×11空盤の勝敗は未確定
 - → depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 失効する1,985七石条件付き計画と選択六石の同一性
 - → depends_on [K0637](../items/K0637-n11-central49-five-terminal-loss7.md): 同じ旧計画内の別の七石LOSS終局証明は有効
+- ← depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): 固定七石の元先手WINを全応手・終局まで独立検証した根拠
+
+## [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md) 任意固定q>=5の整数共円ゲーム極大配置計数は#P完全
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型q点構成と誘導辺重み付き支配集合の極大配置総数公式
+- → depends_on [K0636](../items/K0636-polynomial-bit-graph-star-realization.md): 任意固定q>=4で多項式ビット長の整数座標を決定的に構成できること
+
+## [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) 11×11中央49の確定WIN7から七つの六石WINを導出（うち六類が追加）
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加と通常プレイの終局規則
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所WIN証明と空盤弱解決の区別
+- → depends_on [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md): 固定七石の元先手WINを全応手・終局まで独立検証した根拠
+- ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): K0638の七石WINから導いた七親WIN6
+
+## [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) 11×11中央49の七つの確定WIN6を除外した条件付き六石被覆は七石2,301類
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘ルールと安全な追加
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き幾何被覆と実際の勝敗証明を区別
+- → depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 共有七石から導いた元先手WIN6
+- → depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 第一終局戦略の七親WIN6
+- → depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 第二終局戦略の七親WIN6
+- → depends_on [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md): K0638の七石WINから導いた七親WIN6

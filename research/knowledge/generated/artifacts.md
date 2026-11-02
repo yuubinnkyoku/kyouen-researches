@@ -7,6 +7,9 @@
 
 - [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (source): 五つの戦略を再生成して独立検証し証明書をActions成果物として保存
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (source): 五つのLOSS7と一つの反証WIN7を再生成・独立検証するCI
+## [.github/workflows/n11-central49-post-seven-win6-repair-2301.yml](../../../.github/workflows/n11-central49-post-seven-win6-repair-2301.yml)
+
+- [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (source): 独立監査CI、実行41443189538成功
 ## [Kyouen/CertificateSoundness.lean](../../../Kyouen/CertificateSoundness.lean)
 
 - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
@@ -2596,6 +2599,12 @@
 ## [research/experiments/graph-star-domination-bound-20261101/verify.py](../../../research/experiments/graph-star-domination-bound-20261101/verify.py)
 
 - [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (verifier): 792グラフ・重み条件の独立列挙と12条件の禁止超辺全部分集合列挙
+## [research/experiments/graph-star-fixed-q-count-complexity-20261102/proof.md](../../../research/experiments/graph-star-fixed-q-count-complexity-20261102/proof.md)
+
+- [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md) (proof): 辺ごとの接続複製と相異なる指数底のVandermonde補間による全称的な#VertexCover還元
+## [research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py](../../../research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py)
+
+- [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md) (verifier): 重み付き支配集合直接列挙・厳密有理補間・q点禁止超辺の極大配置直接列挙の独立照合
 ## [research/experiments/graph-star-poisson-20261101/proof.md](../../../research/experiments/graph-star-poisson-20261101/proof.md)
 
 - [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md) (proof): 二つの臨界窓で主要族を分類し全変動収束を証明
@@ -6916,6 +6925,9 @@
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (manifest): 新たに確定した七類のWIN6を除いた条件付き46証人・2,097七石類、66組の非衝突二対二修復、選択六石のLOSSは未証明
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 確定WIN6を除外した66組の固定44条件付き修復から得た2,097七石類
+## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_repair_2301.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_repair_2301.json)
+
+- [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (certificate): 旧46証人からの除外七類・追加七類、被覆と七石義務の計数
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_three_swap_chain.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_three_swap_chain.json)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (certificate): 三段階の六石証人交換、各段階の七石辺数・類数、選択集合のSHA-256
@@ -6949,6 +6961,10 @@
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json)
 
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 七石から一点除去した七つの六石親とD4正準鍵
+## [research/experiments/n11-central-19-cover-20261031/verify_central49_post_seven_win6_repair_2301.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_post_seven_win6_repair_2301.py)
+
+- [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) (verifier): 七石の全七親の合法な復帰手、D4正準類の相異、従来138 WIN6との非重複を独立4×4幾何で検査
+- [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (verifier): 旧18置換の再生と4×4整数Bareissによる新証人の合法七石子・既知WIN非衝突監査
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 別方式の4×4整数Bareissによる三段階の幾何・被覆・既知WIN非衝突の独立再計算
@@ -6958,6 +6974,7 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py](../../../research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py)
 
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (verifier): 元後手の全合法応手を別方式4×4整数Bareissで検査し六石の勝ち手を確認
+- [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) (verifier): 元となる七石WINの固定終局戦略と4×4整数幾何の独立監査
 ## [research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py](../../../research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 旧46証人と七親の交差を独立4×4整数幾何で検査
@@ -10061,6 +10078,10 @@
 ## [research/log/2026-11-02-n11-central49-seven-win6-66-repair.md](../../../research/log/2026-11-02-n11-central49-seven-win6-66-repair.md)
 
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (log): 七親の終局証明・修復計画の証明境界
+## [research/log/2026-11-02-n11-central49-seven-win6-exclusion-and-2301-repair.md](../../../research/log/2026-11-02-n11-central49-seven-win6-exclusion-and-2301-repair.md)
+
+- [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) (log): 七親への逆向き証明、旧証人集合との交差、証明境界
+- [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (log): 旧1,980計画の失効と修復の探索過程・検証境界
 ## [research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md](../../../research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (log): 修復後1,980七石の条件付きLOSS計画失効と証明境界

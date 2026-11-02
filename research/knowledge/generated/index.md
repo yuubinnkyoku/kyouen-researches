@@ -623,3 +623,6 @@
 | [K0636](../items/K0636-polynomial-bit-graph-star-realization.md) | グラフ星型共円構成の多項式ビット長化と整数座標入力の極大配置計数#P完全性 | proposition | proved | geometry, maximal-safe, statistics, variants, search-methods |
 | [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) | 11×11中央49の条件付き七石義務1,985類のうち5類を終局戦略で独立証明 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) | 11×11中央49の1,985七石条件付き計画は選択六石WINの終局証明で失効 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md) | 任意固定q>=5の整数共円ゲーム極大配置計数は#P完全 | proposition | proved | geometry, maximal-safe, statistics, variants, search-methods |
+| [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) | 11×11中央49の確定WIN7から七つの六石WINを導出（うち六類が追加） | proposition | proved | square-outcomes, certificates, verification, search-methods |
+| [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) | 11×11中央49の七つの確定WIN6を除外した条件付き六石被覆は七石2,301類 | computation | computed | square-outcomes, certificates, verification, search-methods |
