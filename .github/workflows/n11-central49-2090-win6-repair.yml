@@ -1,0 +1,36 @@
+name: N11 central49 2090 certified WIN6 two-swap repair search
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/repair_2090_win6_two_swap.py'
+      - '.github/workflows/n11-central49-2090-win6-repair.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exhaust all two-witness replacements forced to remove certified WIN6
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/repair_2090_win6_two_swap.py > "$RUNNER_TEMP/repair.txt"
+          python3 - "$RUNNER_TEMP/repair.txt" <<'PY'
+          import json, sys
+          d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
+          assert d["schema"] == "n11-central49-2090-certified-win6-two-swap-repair-search-v1"
+          assert d["source_distinct_s7"] == 2090
+          assert d["refuted_s6"] == "00000000000000603800000000008000"
+          assert d["new_known_win6_exclusions"] == 146
+          assert d["removed_pairs_examined"] == 45
+          assert d["geometrically_feasible"] == d["excluded_certified_win6"] + d["excluded_certified_win7"] + d["valid_relaxed"]
+          assert d["valid_relaxed"] == d["lost_original_six_terminal_hits"] + d["valid_preserving_all_six"]
+          assert d["s6_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY
