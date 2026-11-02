@@ -3000,6 +3000,7 @@
 - ← depends_on [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md): グラフ星型q点構成と誘導辺重み付き支配集合の極大配置総数公式
 - ← depends_on [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md): 任意qのグラフ星型構成・全極大母関数と最短石数公式
 - ← depends_on [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md): 任意q点グラフ星型構成と極大配置の支配集合母関数
+- ← depends_on [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md): グラフ星型共円構成の極大配置の支配集合母関数
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3306,3 +3307,7 @@
 - → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 七つの確定WIN6を除外した46証人・2,301七石義務
 - → supersedes [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 同じ94五石被覆を維持して条件付き七石義務を147類削減した現行計画
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
+
+## [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) 森の極大終局長は支配誘導成分数で決まり、星森では任意の部分和スペクトルを実現できる
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成の極大配置の支配集合母関数

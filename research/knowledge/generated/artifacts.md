@@ -2034,6 +2034,12 @@
 ## [research/experiments/fixed-width/scripts/verify_three_column_height_multiplicity_20261017.py](../../../research/experiments/fixed-width/scripts/verify_three_column_height_multiplicity_20261017.py)
 
 - [K0473](../items/K0473-three-column-five-six-height-gap.md) (verifier): 二点と第三点から円係数を構成する独立完全列挙
+## [research/experiments/forest-terminal-spectrum-20261103/proof.md](../../../research/experiments/forest-terminal-spectrum-20261103/proof.md)
+
+- [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) (proof): 森の誘導辺数恒等式、星森の積公式、道の連続終局長の全称証明
+## [research/experiments/forest-terminal-spectrum-20261103/verify.py](../../../research/experiments/forest-terminal-spectrum-20261103/verify.py)
+
+- [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) (verifier): 1441木・4323支配集合照合、56星森照合、24禁止超辺完全列挙、24道照合
 ## [research/experiments/four-edge-terminal-gaps-20261101/proof.md](../../../research/experiments/four-edge-terminal-gaps-20261101/proof.md)
 
 - [K0595](../items/K0595-four-forbidden-sets-sharp-terminal-gaps.md) (proof): 四集合の極小横断集合サイズの必要十分条件と二つの幾何学的最小点数の全称証明

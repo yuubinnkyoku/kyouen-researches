@@ -631,3 +631,4 @@
 | [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md) | 11×11の五つの終局LOSS7証明から七石LOSS23類を帰納し現行義務6類を確定 | proposition | proved | square-outcomes, certificates, verification, search-methods |
 | [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) | グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants, search-methods |
 | [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) | 11×11中央49の現行条件付き七石義務を2,301類から2,154類に縮小し二証人交換局所最適を検査 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) | 森の極大終局長は支配誘導成分数で決まり、星森では任意の部分和スペクトルを実現できる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
