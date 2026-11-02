@@ -14,14 +14,14 @@
 
 ## 3状態の動的計画法
 
-K0602 より、中心 O を含まない極大配置はちょうど1つで石数 N−1。O を含む極大配置は、削除したグラフ頂点集合 X⊆V の各頂点が V\\X に隣接するものと対応する。各残存辺について補助点を1個取り除く選択が r 通りある。h=u^{-1}, z=r/u とおくと
+K0602 より、中心 O を含まない極大配置はちょうど1つで石数 N−1。O を含む極大配置は、削除したグラフ頂点集合 X⊆V の各頂点が V\setminus X に隣接するものと対応する。各残存辺について補助点を1個取り除く選択が r 通りある。h=u^{-1}, z=r/u とおくと
 
 \[
 \boxed{
 P_G(u)=u^{N-1}+u^N F_G(h,z),\qquad
 F_G(h,z)=\sum_{\substack{X\subseteq V\\
-\forall x\in X,\ N_G(x)\cap(V\\X)\ne\varnothing}}
-h^{|X|}z^{|E(G[V\\X])|}.
+\forall x\in X,\ N_G(x)\cap(V\setminus X)\ne\varnothing}}
+h^{|X|}z^{|E(G[V\setminus X])|}.
 }
 \]
 
