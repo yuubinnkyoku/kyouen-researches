@@ -111,7 +111,7 @@ def audit():
                 if new & win7:
                     excluded7 += 1
                     continue
-                if len((kept7 | new) & loss7) != 6:
+                if not secured <= (kept7 | new):
                     lost_secured += 1
                     continue
                 valid += 1
@@ -138,7 +138,7 @@ def audit():
         kept = set(selected) - set(removed)
         recomputed = set().union(*(frontiers[s] for s in kept))
         recomputed.update(*(source.four_frontier(s) for s in added))
-        need(len(recomputed) == minimum and len(recomputed & loss7) == 6
+        need(len(recomputed) == minimum and secured <= recomputed
              and not (recomputed & win7),
              "best candidate independent cost or WIN7 conflict")
         best_record = {
