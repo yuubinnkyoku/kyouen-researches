@@ -44,6 +44,18 @@ FOCUS_PARENT_KEYS = {
     "0000000000000020380a000000000000",
 }
 
+# These five S7 roots have terminal-backed original-first LOSS proofs in K0637.
+# This verifier audits only their geometric overlap with the CURRENT cover;
+# it does not re-run the K0637 terminal strategies.
+K0637_TERMINAL_LOSS7 = (
+    "00000000000000203808000000000120",
+    "0000000000000020380a000000004000",
+    "00000000000000a03808100000000000",
+    "00000000000002043800800000040000",
+    "00000000000200801082008100000000",
+)
+K0637_OUTSIDE_CURRENT_COVER = "00000000000000a03808100000000000"
+
 
 def need(ok, message):
     if not ok:
@@ -133,6 +145,27 @@ def verify(doc):
     need((raw, len(frontier)) == (2992, 2301),
          "repaired seven-stone obligation count changed")
     need(not (frontier & win7), "known WIN7 in proposed LOSS7 obligation")
+
+    # K0637 proved five original-first LOSS7 roots by fixed terminal strategies.
+    # Reuse only exact D4-canonical matches, not solver-trusted cache labels.
+    loss7 = set(K0637_TERMINAL_LOSS7)
+    need(len(loss7) == 5 and not (loss7 & win7),
+         "K0637 terminal LOSS7 inventory conflicts with WIN7")
+    for key in loss7:
+        root = int(key, 16)
+        need(root.bit_count() == 7 and geometry.canonical(root) == root,
+             "noncanonical K0637 terminal LOSS7 key")
+    secured = frontier & loss7
+    secured_by_witness = {
+        f"{m:032x}": sorted(children(m) & loss7)
+        for m in sorted(final) if children(m) & loss7
+    }
+    secured_edges = sum(len(v) for v in secured_by_witness.values())
+    need(len(secured) == 4 and secured_edges == 4
+         and len(secured_by_witness) == 2
+         and loss7 - frontier == {K0637_OUTSIDE_CURRENT_COVER},
+         "K0637 independently proved LOSS7 overlap changed")
+
     expected = {
         "schema": "n11-central49-conditional46-post-seven-win6-repair-v1",
         "source_certificate": historical.CERT.name,
@@ -164,6 +197,12 @@ def verify(doc):
         "distinct_s7": len(frontier),
         "known_win6_conflicts": 0,
         "known_win7_conflicts": 0,
+        "k0637_terminal_loss7_secured_classes": len(secured),
+        "k0637_terminal_loss7_secured_edges": secured_edges,
+        "k0637_terminal_loss7_secured_witnesses": len(secured_by_witness),
+        "k0637_terminal_loss7_not_in_cover": sorted(loss7 - frontier),
+        "k0637_terminal_loss7_hits_by_s6": secured_by_witness,
+        "s7_not_secured_by_k0637": len(frontier - secured),
         "conditional_only": True,
         "s6_outcome": "UNKNOWN",
         "s4_outcome": "UNKNOWN",
