@@ -7,6 +7,7 @@
 
 - [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (source): 五つの戦略を再生成して独立検証し証明書をActions成果物として保存
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (source): 五つのLOSS7と一つの反証WIN7を再生成・独立検証するCI
+- [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md) (source): 証明書再生成と七親持ち上げ、CI 41461559484成功
 ## [.github/workflows/n11-central49-post-seven-win6-repair-2301.yml](../../../.github/workflows/n11-central49-post-seven-win6-repair-2301.yml)
 
 - [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) (source): 独立監査CI、実行41443189538成功
@@ -6976,9 +6977,13 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 別方式の4×4整数Bareissによる三段階の幾何・被覆・既知WIN非衝突の独立再計算
+## [research/experiments/n11-central-19-cover-20261031/verify_five_loss7_eight_parent_lift.py](../../../research/experiments/n11-central-19-cover-20261031/verify_five_loss7_eight_parent_lift.py)
+
+- [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md) (verifier): 五終局戦略の独立再検証、初手後八石の全七親と現行46証人の4×4整数幾何監査
 ## [research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py](../../../research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py)
 
 - [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (verifier): 別実装の4×4整数Bareissで相手の全合法応手を独立検証、固定SHA-256と負例も検査
+- [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md) (verifier): 五つの固定戦略のSHA-256・全応手・終局の独立検査
 ## [research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py](../../../research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py)
 
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (verifier): 元後手の全合法応手を別方式4×4整数Bareissで検査し六石の勝ち手を確認
@@ -10102,6 +10107,9 @@
 ## [research/log/2026-11-02-n11-central49-three-swaps-1985-exact-neighborhood.md](../../../research/log/2026-11-02-n11-central49-three-swaps-1985-exact-neighborhood.md)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (log): 探索経過、件数、信頼境界、独立CI
+## [research/log/2026-11-02-n11-five-loss7-eight-parent-lift-23-and-six-current.md](../../../research/log/2026-11-02-n11-five-loss7-eight-parent-lift-23-and-six-current.md)
+
+- [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md) (log): 初手後八石の重複構造、23七親と現行被覆の交差
 ## [research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md](../../../research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md)
 
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (log): 新規五六石WINの証明・独立CI成功・残る未解決事項
