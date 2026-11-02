@@ -107,8 +107,10 @@ def audit():
                                       and proposal < best):
                     minimum = cost
                     best = proposal
-    need(total == feasible + (total - feasible)
-         and feasible == rejected_known + valid, "accounting mismatch")
+    need(feasible == rejected_known + valid, "accounting mismatch")
+    need((total, feasible, rejected_known, valid, better, ties, minimum)
+         == (4206, 3978, 12, 3966, 0, 0, 1985),
+         "1985 <=2-swap exhaustive audit changed")
     return {
         "schema": "n11-central49-1985-exact-up-to-two-swap-audit-v1",
         "source_selected_s6_sha256": local.digest(selected),
