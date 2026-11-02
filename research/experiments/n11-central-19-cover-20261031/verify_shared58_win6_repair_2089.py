@@ -32,11 +32,11 @@ EXPECTED_ADDED = [
 ]
 EXPECTED_OPTIONS = [
     (("0000000000000000380c200000000000",
-      "00000000000000203804200000000000"), 2978, 2089),
+      "00000000000000203804200000000000"), 2978, 2089, 0, 0),
     (("00000000000000083801800000000000",
-      "00000000000000403808200000000000"), 2989, 2100),
+      "00000000000000403808200000000000"), 2989, 2100, 1, 2),
     (("00000000000000083820800000000000",
-      "0000000000000040380c000000000000"), 2988, 2100),
+      "0000000000000040380c000000000000"), 2988, 2100, 0, 0),
 ]
 
 
@@ -84,12 +84,18 @@ def reconstruct():
     pairs = [(u, v) for u, v in itertools.combinations(candidates, 2)
              if missing <= incidence[u] | incidence[v]]
     need(len(pairs) == 3, "exhaustive two-for-two repair count changed")
-    known_win6 = set(old_win6) | {source_audit.REFUTED and
-                  base.decode(source_audit.REFUTED),
-                  terminal.ROOT, terminal.DERIVED_ROOT}
-    known_win7 = set(old_win7)
-    shared_win7 = base.key(independent.canonical(terminal.ROOT | (1 << 70)))
-    known_win7.add(shared_win7)
+    shared_mask = terminal.ROOT | (1 << 70)
+    shared_win7 = base.key(independent.canonical(shared_mask))
+    # Any of the seven legal six-stone parents can play into the
+    # independently terminal-proved shared WIN7, hence all are WIN6.
+    shared_win6_parents = {
+        independent.canonical(shared_mask ^ (1 << p))
+        for p in independent.points(shared_mask)
+    }
+    need(len(shared_win6_parents) == 7, "shared WIN7 parent orbit count changed")
+    known_win6 = (set(old_win6) | shared_win6_parents
+                  | {base.decode(source_audit.REFUTED)})
+    known_win7 = set(old_win7) | {shared_win7}
     need(len(old_win6) == 117 and len(old_win7) == 19
          and shared_win7 not in old_win7,
          "known WIN6/WIN7 inventory changed")
@@ -118,12 +124,11 @@ def evaluate(incidence, cost, fixed, pairs, known_win6, known_win7):
         need(len(selected) == 46
              and set().union(*(incidence[m] for m in selected))
                  == set(range(94)), "incomplete repaired S5 cover")
-        need(not (selected & known_win6),
-             "known WIN6 cannot be used as conditional LOSS witness")
+        win6_conflicts = len(selected & known_win6)
         edges, frontier_keys = frontier(selected)
-        need(not (frontier_keys & known_win7),
-             "known WIN7 contradicts a conditional LOSS7 obligation")
-        output.append(((base.key(u), base.key(v)), edges, len(frontier_keys)))
+        win7_conflicts = len(frontier_keys & known_win7)
+        output.append(((base.key(u), base.key(v)), edges,
+                       len(frontier_keys), win7_conflicts, win6_conflicts))
     output.sort(key=lambda x: x[0])
     need(output == EXPECTED_OPTIONS, "exhaustive repair S7 costs changed")
     return output
@@ -150,13 +155,19 @@ def verify_doc(doc, options):
          == (44, 4, 94, 46, 2978, 2089, 0, 0, 0, 2089),
          "repaired cover summary changed")
     expected = [{"added": list(pair), "raw_s7_edges": edges,
-                 "distinct_s7_classes": distinct}
-                for pair, edges, distinct in options]
+                 "distinct_s7_classes": distinct,
+                 "certified_shared_win7_conflicts": win7_conflicts,
+                 "certified_shared_win6_parent_conflicts": win6_conflicts}
+                for pair, edges, distinct, win7_conflicts, win6_conflicts
+                in options]
     need(doc.get("exhaustive_two_replacement_options") == expected,
          "exhaustive two-replacement alternatives changed")
-    need(min(x[2] for x in options) == 2089
-         and options[0][0] == tuple(doc["added_s6_classes"]),
-         "selected repair does not attain fixed-44 minimum")
+    safe = [x for x in options if x[3] == x[4] == 0]
+    need(doc.get("exhaustive_nonconflicting_two_replacement_options") == 2
+         and len(safe) == 2 and min(x[2] for x in safe) == 2089
+         and options[0][0] == tuple(doc["added_s6_classes"])
+         and options[0][3:] == (0, 0),
+         "selected repair does not attain fixed-44 safe minimum")
 
 
 def main():
@@ -178,6 +189,8 @@ def main():
         "schema": "n11-central49-fixed44-exhaustive-two-win6-repair-audit-v1",
         "s5_covered": 94, "fixed_s6": 44, "replaced_s6": 2,
         "exhaustive_replacement_pairs": len(pairs),
+        "nonconflicting_replacement_pairs": 2,
+        "refuted_replacement_pairs": 1,
         "candidate_s6_touching_missing_s5": 319,
         "s7_costs": [x[2] for x in options],
         "selected_raw_s7_edges": 2978,
@@ -196,6 +209,8 @@ def main():
             lambda d: d.__setitem__("distinct_s7_classes", 2088),
             lambda d: d["exhaustive_two_replacement_options"][1].__setitem__(
                 "distinct_s7_classes", 2099),
+            lambda d: d["exhaustive_two_replacement_options"][1].__setitem__(
+                "certified_shared_win7_conflicts", 0),
             lambda d: d.__setitem__("terminal_win6_sha256", "0" * 64),
         ]
         for mutate in mutations:
