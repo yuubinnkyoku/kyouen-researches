@@ -8,7 +8,7 @@
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行集中配布の安全統合検査CI 41513162204成功
 ## [.github/workflows/n11-central49-2090-three-swap-neighborhood.yml](../../../.github/workflows/n11-central49-2090-three-swap-neighborhood.yml)
 
-- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 三証人交換全数監査CI 41534668506成功
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 三証人交換全数監査CI 41534668506・緩和監査CI 41535314449成功
 ## [.github/workflows/n11-central49-2090-two-swap-neighborhood.yml](../../../.github/workflows/n11-central49-2090-two-swap-neighborhood.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行2090二証人交換監査CI 41534686470成功。六類の同一性を厳密保持
@@ -7009,7 +7009,7 @@
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 最終1,985類計画の一・二証人交換を全数検査し改善0件を確認
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2090_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2090_three_swap_neighborhood.py)
 
-- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090の三証人交換全313,652候補を独立監査。終局証明済み6類を厳密保持した233,089候補に改善0
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090の三証人交換313,652候補を全数監査。既知WINを除外した281,947候補では終局証明済み六類の保持を外しても改善0
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090類計画の二証人交換全数監査。既知WINを除外し元の終局証明6類を厳密保持する3,330候補に改善0
