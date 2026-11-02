@@ -34,6 +34,15 @@ artifacts:
 - path: research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py
   role: verifier
   note: 旧46証人と七親の交差を独立4×4整数幾何で検査
+- path: research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_second_s7_repair_2207.json
+  role: manifest
+  note: 既知WIN6を除外した46六石・2,207七石類の条件付き修復、選択六石LOSSは未証明
+- path: research/experiments/n11-central-19-cover-20261031/verify_second_s7_repair_2207.py
+  role: verifier
+  note: 固定44六石の二対二置換3組と2,207七石類を独立4×4整数行列式で監査
+- path: research/log/2026-11-02-n11-central49-second-s7-2207-repair.md
+  role: log
+  note: 条件付き被覆の修復と証明境界
 - path: research/log/2026-11-02-n11-central49-second-terminal-win7-seven-win6-refutes-2097.md
   role: log
   note: 終局戦略・七親・条件付き被覆反証の研究記録
@@ -61,4 +70,4 @@ evidence: 固定終局戦略を独立4×4整数行列式で各六石親22,364到
 
 ただし、七親のうち二類（`00000000000000203808000000000020` と `00000000000000203808000000002000`）が、K0626/K0627で修復した条件付き46六石証人に含まれている。よって**2,097七石類の条件付きLOSS証明計画は失効**した。修復用の幾何的被覆が成立することと、六石証人がLOSSであることは別である。
 
-新しい有効な六石LOSS被覆は未構成。六石LOSS・四石LOSS・二石root閉鎖は新規0件。**標準11×11空盤の勝敗はUNKNOWN**。
+その後、確定WIN6の二類を除外して残る44証人を固定し、全3,868六石候補から二類を補う修復を構成した。完全被覆を回復する二対二置換は3組だけで、相異なる七石局面の最小値は**2,207類**（合法七石辺2,995本、94/94五石義務被覆）。これはあくまで条件付きの幾何学的証明計画であり、選択した六石のLOSSは未証明。六石LOSS・四石LOSS・二石root閉鎖は新規0件。**標準11×11空盤の勝敗はUNKNOWN**。
