@@ -1,0 +1,24 @@
+name: N11 terminal D4-quotient WIN closure
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_d4_quotient.cpp'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_d4_quotient.py'
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64'
+      - '.github/workflows/n11-central49-terminal-d4-quotient.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-ranked-closure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay source terminal certificate and verify ranked D4 closure
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_d4_quotient.py
