@@ -22,7 +22,7 @@ LAYERS = [7, 1, 296, 36, 10294, 1124, 114567, 11369,
 
 
 def verified_raw(data: bytes) -> bytes:
-    raw = zlib.decompress(base64.b64decode(data, validate=True))
+    raw = zlib.decompress(base64.b64decode(b"".join(data.split()), validate=True))
     if len(raw) != 14440 or hashlib.sha256(raw).hexdigest() != SHA256:
         raise ValueError("strategy bytes or SHA-256 changed")
     return raw
