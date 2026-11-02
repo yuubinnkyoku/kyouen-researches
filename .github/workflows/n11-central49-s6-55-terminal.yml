@@ -11,8 +11,13 @@ on:
       - 'research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json'
       - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json'
       - 'research/knowledge/items/K0626-n11-central49-terminal-s6-win55.md'
+      - 'research/knowledge/items/K0627-n11-terminal-s7-seven-win6.md'
       - '.github/workflows/n11-central49-s6-55-terminal.yml'
   workflow_dispatch:
+
+concurrency:
+  group: n11-central49-s6-55-terminal
+  cancel-in-progress: true
 
 permissions:
   contents: write
