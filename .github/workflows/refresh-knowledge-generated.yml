@@ -74,6 +74,8 @@ jobs:
         run: python research/experiments/forest-terminal-spectrum-20261103/verify.py
       - name: Audit K0648 leaf-core terminal spectrum and degree-two gap
         run: python research/experiments/graph-star-leaf-core-spectrum-20261103/verify.py
+      - name: Audit improved fixed-defect connected-kernel terminal counting
+        run: python research/experiments/graph-star-connected-kernel-20261103/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -238,3 +240,5 @@ jobs:
 # Refresh trigger for K0647 forest terminal spectra (2026-11-03).
 
 # Refresh trigger for K0648 graph-star leaf-core terminal spectrum (2026-11-03).
+
+# Refresh trigger for K0648 connected-kernel fixed-defect exponent improvement (2026-11-03).
