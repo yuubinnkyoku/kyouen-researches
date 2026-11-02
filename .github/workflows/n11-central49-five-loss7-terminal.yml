@@ -1,4 +1,4 @@
-name: N11 central49 five independently verified terminal LOSS7
+name: N11 central49 five LOSS7 and refuting WIN7 terminal proofs
 
 on:
   workflow_dispatch:
@@ -7,6 +7,7 @@ on:
       - .github/workflows/n11-central49-five-loss7-terminal.yml
       - research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp
       - research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py
+      - research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py
 
 jobs:
   terminal-proof:
@@ -36,7 +37,16 @@ jobs:
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py \
             "$RUNNER_TEMP/n11-certs" --self-test
-      - name: Recheck the five roots belong to the current 1985-S7 frontier
+      - name: Generate terminal strategy refuting the selected S6 LOSS witness
+        run: |
+          "$RUNNER_TEMP/n11-s7-generate" 0000000000000020380a100000000000 \
+            "$RUNNER_TEMP/n11-certs/n11_s7_0000000000000020380a100000000000.cert" \
+            original_first_WIN7
+      - name: Independent 4x4 Bareiss WIN7 and S6 WIN6 audit
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py \
+            "$RUNNER_TEMP/n11-certs" --self-test
+      - name: Recheck the five roots belong to the historical 1985-S7 frontier
         run: |
           python3 - <<'PY'
           import sys
@@ -59,6 +69,6 @@ jobs:
       - name: Retain reproducible terminal strategy certificates
         uses: actions/upload-artifact@v4
         with:
-          name: n11-central49-five-loss7-terminal-certificates
+          name: n11-central49-five-loss7-and-refuting-win7-certificates
           path: ${{ runner.temp }}/n11-certs/*.cert
           retention-days: 90
