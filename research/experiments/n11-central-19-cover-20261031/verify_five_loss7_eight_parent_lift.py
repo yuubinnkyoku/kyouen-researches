@@ -88,7 +88,7 @@ def audit(folder):
         need(all(not G.forbidden(*quad)
                  for quad in combinations(G.points(eight), 4)),
              "resulting eight-stone board is not safe")
-        eight_roots.append(f"{eight:032x}")
+        eight_roots.append(f"{G.canonical(eight):032x}")
         for removed in G.points(eight):
             parent = eight ^ (1 << removed)
             checked_parent_transition(parent, eight)
@@ -101,7 +101,7 @@ def audit(folder):
 
     need(len(provenance) == 23 and roots <= set(provenance),
          "seven-parent LOSS7 closure count or source changed")
-    need(len(set(eight_roots)) == 4,
+    need(len(set(eight_roots)) == 3,
          "unexpected number of distinct eight-stone LOSS roots")
     selected = selected_s6()
     hits = {}
