@@ -1,0 +1,29 @@
+{
+  "schema": "n11-central49-second-terminal-s7-fixed44-repair-v1",
+  "source": "conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json",
+  "terminal_s7": "00000000000200821002008000800000",
+  "terminal_raw_sha256": "debb5464282eb28e6a30496f8728515433d6f9507ffdeeda1eeaf04e3c5d7de4",
+  "removed": [
+    "00000000000000203808000000000020",
+    "00000000000000203808000000002000"
+  ],
+  "added": [
+    "00000000000000821082002000000000",
+    "00000000020000801002002080000000"
+  ],
+  "eligible_two_for_two_pairs": 3,
+  "fixed_s6": 44,
+  "selected_s6": 46,
+  "s5_covered": 94,
+  "raw_s7_edges": 2995,
+  "distinct_s7": 2207,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_S6_LOSS_WITNESS_COVER_NOT_VERDICTS",
+  "outcomes": {
+    "selected_s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}
