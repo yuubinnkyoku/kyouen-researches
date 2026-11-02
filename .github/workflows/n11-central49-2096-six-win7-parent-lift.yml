@@ -20,7 +20,8 @@ jobs:
           python3 research/experiments/n11-central-19-cover-20261031/verify_2096_focus_six_win7_parent_lift.py --negative > "$RUNNER_TEMP/audit.json"
           python3 - "$RUNNER_TEMP/audit.json" <<'PY'
           import json, sys
-          d = json.load(open(sys.argv[1]))
+          # Earlier pinned terminal generators print progress before the final JSON.
+          d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
           assert d["certified_win7_roots"] == 6
           assert d["distinct_terminal_derived_win6"] == 37
           assert d["six_to_seven_restoration_edges"] == 42
