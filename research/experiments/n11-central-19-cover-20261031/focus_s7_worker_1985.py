@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Frozen single-S6 focus for the 1985-class N11 conditional cover.
+"""HISTORICAL single-S6 focus for the superseded 1985-class N11 cover.
 
-This dispatches only geometric proof obligations. Worker WIN/LOSS receipts
-are UNVERIFIED, never imported into a trusted cache or promoted to a proof.
+K0638 independently proves the selected focus S6 is original-first WIN, so
+this is NOT a valid current LOSS-certificate work plan. Actual dispatch and
+receipt merging require --allow-superseded-plan for historical reproduction.
+Worker WIN/LOSS receipts remain UNVERIFIED and never become proofs.
 """
 import argparse
 from collections import Counter
@@ -128,6 +130,8 @@ def merge(doc, existing, worker_files):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--self-test", action="store_true")
+    p.add_argument("--allow-superseded-plan", action="store_true",
+                   help="explicitly reproduce invalidated K0634 historical work")
     p.add_argument("--focus-s6")
     p.add_argument("--plan-out", type=Path)
     p.add_argument("--audit-plan", type=Path)
@@ -140,6 +144,11 @@ def main():
     if args.self_test:
         receipts.self_test()  # Generic receipt conflict/owner/atomic-write negatives.
         return
+    need(args.allow_superseded_plan or not (
+         args.plan_out or args.worklist is not None or args.existing
+         or args.worker or args.merged_out),
+         "SUPERSEDED_BY_K0638: selected focus S6 is certified WIN; "
+         "historical dispatch/merge requires --allow-superseded-plan")
     need(bool(args.plan_out) != bool(args.audit_plan),
          "choose exactly one of --plan-out and --audit-plan")
     if args.plan_out:
