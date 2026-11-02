@@ -3004,6 +3004,7 @@
 - ← depends_on [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md): 任意q点グラフ星型構成と極大配置の支配集合母関数
 - ← depends_on [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md): グラフ星型共円構成の極大配置の支配集合母関数
 - ← depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): グラフ星型共円構成と極大配置の支配集合による分類
+- ← depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): グラフ星型の整数共円構成と極大配置分類
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3327,6 +3328,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成と極大配置の支配集合による分類
 - → generalizes [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md): 森に限らず任意グラフの終局長係数を葉と高次数核で分類する。ただし森の成分数表示や星森の部分和公式は別の系として維持する
+- ← depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): 許容核の欠損公式と次数下界
 
 ## [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減
 
@@ -3367,3 +3369,8 @@
 - → depends_on [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 独立監査済み46六石証人・2,091七石類の出発点
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
 - → supersedes [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 同じ94五石被覆を維持した条件付き計算計画を2,090類へ更新
+
+## [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md) グラフ星型共円ゲームの二番目に短い終局長は最小非葉次数で決まる
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の整数共円構成と極大配置分類
+- → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 許容核の欠損公式と次数下界

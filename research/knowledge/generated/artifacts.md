@@ -6,6 +6,9 @@
 ## [.github/workflows/n11-central49-2090-focus.yml](../../../.github/workflows/n11-central49-2090-focus.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行集中配布の安全統合検査CI 41513162204成功
+## [.github/workflows/n11-central49-2090-two-swap-neighborhood.yml](../../../.github/workflows/n11-central49-2090-two-swap-neighborhood.yml)
+
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行2090二証人交換監査CI 41525658051成功
 ## [.github/workflows/n11-central49-2090-two-swap.yml](../../../.github/workflows/n11-central49-2090-two-swap.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 独立証明書検査CI 41513037490成功
@@ -2697,6 +2700,12 @@
 ## [research/experiments/graph-star-qpoint-20261101/verify.py](../../../research/experiments/graph-star-qpoint-20261101/verify.py)
 
 - [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (verifier): 1181グラフ・4395216部分集合、q5十点の全252五点組・1024局面を独立完全検査
+## [research/experiments/graph-star-second-terminal-degree-20261103/proof.md](../../../research/experiments/graph-star-second-terminal-degree-20261103/proof.md)
+
+- [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md) (proof): 二番目の終局長・欠番数・初出係数の全称証明
+## [research/experiments/graph-star-second-terminal-degree-20261103/verify.py](../../../research/experiments/graph-star-second-terminal-degree-20261103/verify.py)
+
+- [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md) (verifier): 支配集合の独立直接列挙8776条件と初出係数940条件の照合
 ## [research/experiments/graph-star-sparse-cycles-20261101/proof.md](../../../research/experiments/graph-star-sparse-cycles-20261101/proof.md)
 
 - [K0603](../items/K0603-graph-star-sparse-cycles.md) (proof): 最大次数による指数的上界とサイクルの転送行列・特性多項式の全称証明
@@ -6989,6 +6998,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 最終1,985類計画の一・二証人交換を全数検査し改善0件を確認
+## [research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py)
+
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090類計画の二証人交換全数監査。既知WINと既存終局証明6類を保持する3,338候補に改善0
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 2,091類からの最大三証人交換の全候補を列挙し44改善候補を検出
