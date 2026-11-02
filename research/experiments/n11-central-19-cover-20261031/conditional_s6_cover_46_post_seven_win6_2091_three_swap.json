@@ -1,0 +1,26 @@
+{
+  "schema": "n11-central49-2093-to-2091-three-swap-v1",
+  "source_certificate": "conditional_s6_cover_46_post_seven_win6_2093_three_swap.json",
+  "removed": [
+    "00000000000000203800000002001000",
+    "00000000000000203800100010000000",
+    "00000000000000403800800400000000"
+  ],
+  "added": [
+    "00000000000000203800100002000000",
+    "00000000000000203801000000001000",
+    "00000000000000901002008000040000"
+  ],
+  "selected_s6_count": 46,
+  "s5_covered": 94,
+  "distinct_s7_classes": 2091,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_COVER_WITH_TERMINAL_REPLAYED_S7_HITS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  }
+}
