@@ -159,4 +159,4 @@ def audit():
 
 
 if __name__ == "__main__":
-    print(json.dumps(audit(), ensure_ascii=False, indent=2))
+    print(json.dumps(audit(), ensure_ascii=False))
