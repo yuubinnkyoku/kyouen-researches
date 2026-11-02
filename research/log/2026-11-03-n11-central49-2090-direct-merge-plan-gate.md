@@ -13,3 +13,7 @@
 対象コード：`research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2090.py`。専用CI：`.github/workflows/n11-central49-2090-focus.yml`。実装コミット `f332fba8726dd7457454bccd4852b055152b771a`。専用CIは本記録作成時点では実行中であり、成功確認までは実装済み・未検証として扱う。
 
 標準11×11空盤の勝敗は **UNKNOWN**。
+
+## 独立CIの完了
+
+実装コミット `f332fba8726dd7457454bccd4852b055152b771a` に対する専用 GitHub Actions [41516392155](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41516392155) は **success**。現行2090証明書の再検査、集中配布の64/2/62計数、通常の不正報告拒否に加え、改変計画4種の直接 `merge()` 呼出し拒否も回帰試験として通過した。新しい勝敗証明を得たものではない。
