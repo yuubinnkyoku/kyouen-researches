@@ -12,6 +12,7 @@ import hashlib
 import io
 import json
 from pathlib import Path
+import subprocess
 import sys
 import tempfile
 
@@ -59,7 +60,23 @@ def geometry():
     selected = selection()
     # Unlike the geometry-only K0644 parent lift, replay all five original
     # complete terminal strategies and check their pinned SHA256 first.
-    terminal_result = terminal.audit(HERE)
+    # Certificates are deterministically regenerated from the pinned source.
+    # They are NOT tracked in Git. SHA256 and all opponent moves are checked
+    # by the separate 4x4 Bareiss verifier before secured children are skipped.
+    with tempfile.TemporaryDirectory(prefix="n11-k0637-") as temp:
+        folder = Path(temp)
+        generator = folder / "generate-five-loss7"
+        subprocess.run(
+            ["g++", "-std=c++20", "-O3",
+             str(HERE / "generate_five_terminal_loss7.cpp"),
+             "-o", str(generator)],
+            check=True, timeout=180)
+        for root in terminal.EXPECTED:
+            subprocess.run(
+                [str(generator), root,
+                 str(folder / ("n11_s7_" + root + ".cert"))],
+                check=True, timeout=180)
+        terminal_result = terminal.audit(folder)
     need(len(terminal_result["certificates"]) == 5 and
          terminal_result["total_terminal_states"] == 1901,
          "five complete LOSS7 strategies changed")
