@@ -64,8 +64,8 @@ def safe(board):
                for triple in itertools.combinations(ps, 3))
 
 
-def verify(data):
-    if not isinstance(data, bytes) or not safe(ROOT) or ROOT.bit_count() != 6:
+def verify(data, root=ROOT):
+    if not isinstance(data, bytes) or not safe(root) or root.bit_count() != 6:
         raise ValueError("invalid certificate or root")
     seen = set()
     index = 0
@@ -98,7 +98,7 @@ def verify(data):
                     edges += 1
                     dfs(board | 1 << p)
 
-    dfs(ROOT)
+    dfs(root)
     if index != len(data):
         raise ValueError("unreachable or extra strategy moves")
     return (len(seen), strategies, opponents, terminals, edges)
