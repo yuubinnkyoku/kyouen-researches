@@ -19,3 +19,7 @@
 `focus_s7_worker_2096.py` の新規配布・直接監査・直接統合を失効拒否に変更し、専用回帰CIを更新。単一WIN7・六WIN7の再生成＋独立検証CIを追加した。CI完了状況は追跡が必要。新たな46六石計画を構築するときは、今回導出した37類のWIN6を既存146類と和集合にして除外し、既存LOSS7を再利用して再最適化する。
 
 六石LOSS・二石{49,60}・空盤勝敗は依然UNKNOWN。未完探索や53/53の探索器終了を証明済みと誤読しない。
+
+## CI回収（追記）
+
+単一WIN7独立検証CI [41546883561](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41546883561)、六WIN7と37親の独立検証CI [41547686997](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41547686997)、失効2096配布器の拒否CI [41546944022](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41546944022) はすべて成功。37六石WINは従来の146既知WIN6と**全て非重複**で、合計183類。2096選択46六石との交差は集中六石1類だけ。新しい有効な計画では183類を除外する必要がある。
