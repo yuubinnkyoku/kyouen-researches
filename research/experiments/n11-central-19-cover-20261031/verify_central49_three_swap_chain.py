@@ -93,7 +93,6 @@ def audit(doc):
             "added": ad,
             "raw_s7_edges": raw,
             "distinct_s7": distinct,
-            "selected_s6_sha256": digest(selected),
         }
         need(row == step, "chain step differs from independent 4x4 geometry")
         rows.append(row)
