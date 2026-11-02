@@ -54,6 +54,11 @@ def main():
     assert result["first_reached"] == 18649
     assert result["second_reached"] == 22364
     assert result["second_only_classes"] == 256744
+    assert result["first_only_classes"] == 187826
+    assert result["source_union"] == 41013
+    assert result["separate_union_classes"] == result["joint_classes"] == 444570
+    assert result["synergy_classes"] == 0
+    assert result["layer_counts_6_to_19"] == [14, 2, 603, 74, 19988, 2178, 221549, 22068, 157135, 14856, 5643, 440, 19, 1]
     assert result["joint_classes"] >= result["separate_union_classes"]
     assert result["joint_classes"] == sum(result["layer_counts_6_to_19"])
     assert result["synergy_classes"] == sum(result["new_beyond_either_6_to_19"])
