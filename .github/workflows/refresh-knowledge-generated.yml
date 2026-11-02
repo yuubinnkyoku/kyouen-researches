@@ -52,6 +52,8 @@ jobs:
         run: python research/experiments/multipartite-terminal-20261102/verify.py
       - name: Audit bounded-edge-edited multipartite terminal polynomial
         run: python research/experiments/multipartite-edge-edits-20261102/verify.py
+      - name: Audit cograph cotree terminal polynomial
+        run: python research/experiments/cograph-terminal-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -181,3 +183,5 @@ jobs:
 # Refresh trigger for K0629 bounded edge edits of complete multipartite graphs (2026-11-02).
 
 # Refresh trigger for K0630 second terminal strategy backward closure (2026-11-02).
+
+# Refresh trigger for K0631 cograph cotree terminal polynomial (2026-11-02).
