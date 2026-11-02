@@ -15,5 +15,6 @@ jobs:
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
+      - run: uv run --locked python research/experiments/graph-star-q-spectrum-20261102/verify.py
       - run: uv run --locked python tools/knowledge/build.py
       - run: git diff --exit-code -- README.md research/knowledge/generated
