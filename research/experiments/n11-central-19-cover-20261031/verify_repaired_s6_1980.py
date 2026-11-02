@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """HISTORICAL audit of the superseded 1980-S7 conditional cover.
 
-Three selected S6 witnesses are now terminal-certified original-first WIN.
+Seven selected S6 witnesses are now terminal-backed original-first WIN.
 Default execution refuses to treat the historical plan as current. Explicit
 --allow-superseded-plan reproduces geometry only, never an S6 LOSS verdict.
 """
@@ -29,12 +29,17 @@ HEADER = [
 ]
 EXPECTED_FINAL = (2972, 1980)
 EXPECTED_STEPS = 18
-# K0624 / shared58 terminal proof (two parents), plus K0638 focus refutation.
-# All three occur in the final historical 46-S6 witness set.
+# Seven historical selections conflict with terminal-backed WIN6:
+# K0624 (two), K0627 (one), K0628 (two), K0638 (one directly,
+# plus one more six-stone parent of the same proven WIN7).
 CURRENT_CERTIFIED_WIN6 = (
+    "00000000000000203808000000000020",
+    "00000000000000203808000000002000",
+    "00000000000000203808100000000000",
     "00000000000000203808200000000000",
-    "0000000000000020380c000000000000",
     "0000000000000020380a000000000000",
+    "0000000000000020380c000000000000",
+    "00000000000200801002000081000000",
 )
 
 
@@ -102,7 +107,7 @@ def audit(rows, data, initial, win6, win7, memo):
     certified_conflicts = sorted({f"{s:032x}" for s in current}
                                  & set(CURRENT_CERTIFIED_WIN6))
     need(certified_conflicts == sorted(CURRENT_CERTIFIED_WIN6),
-         "historical plan no longer matches its three certified WIN6 conflicts")
+         "historical plan no longer matches its seven terminal-backed WIN6 conflicts")
     return {
         "schema": "n11-central49-repaired-46-s6-1980-independent-audit-v1",
         "s5_covered": 94,
@@ -134,7 +139,7 @@ def main():
                         help="historical geometry replay only; never dispatch work")
     args = parser.parse_args()
     need(args.allow_superseded_plan,
-         "SUPERSEDED_BY_CERTIFIED_WIN6: three selected S6 are proven WIN; "
+         "SUPERSEDED_BY_CERTIFIED_WIN6: seven selected S6 are proven WIN; "
          "historical replay requires --allow-superseded-plan")
     need(hashlib.sha256(repaired.WIN_CERT.read_bytes()).hexdigest()
          == repaired.WIN_SHA, "terminal-certified WIN6 artifact changed")
