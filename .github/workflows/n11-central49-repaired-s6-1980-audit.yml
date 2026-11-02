@@ -30,11 +30,15 @@ jobs:
           assert (d["raw_s7_edges"], d["known_win6_conflicts"], d["known_win7_conflicts"]) == (2972, 0, 0)
           assert d["negative_tests"] == 6 and d["conditional_only"]
           assert d["plan_status"] == "SUPERSEDED_BY_CERTIFIED_WIN6"
-          assert d["current_certified_win6_conflicts"] == 3
+          assert d["current_certified_win6_conflicts"] == 7
           assert d["current_certified_win6_keys"] == sorted([
+              "00000000000000203808000000000020",
+              "00000000000000203808000000002000",
+              "00000000000000203808100000000000",
               "00000000000000203808200000000000",
-              "0000000000000020380c000000000000",
               "0000000000000020380a000000000000",
+              "0000000000000020380c000000000000",
+              "00000000000200801002000081000000",
           ])
           assert d["s6_outcome"] == d["s4_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
           print(json.dumps(d, indent=2))
