@@ -206,10 +206,17 @@ function audit() {
   // K0638 adds a third certified WIN6. Its terminal strategy is not replayed
   // by this geometric cross-inventory audit; the K0638 verifier is separate.
   const newWin6C = '0000000000000020380a000000000000';
+  const additionalTerminalWin6 = [
+    '00000000000000203808000000000020', // K0628
+    '00000000000000203808000000002000', // K0628
+    '00000000000200801002000081000000', // K0627
+    '00000000000000203808100000000000', // another parent of K0638 WIN7
+  ];
   const win7A = canonical([...points(newWin6A,6),70]);
   const win7B = canonical([...points(newWin6B,6),75]);
   need(witnesses.includes(newWin6A) && witnesses.includes(newWin6B)
        && witnesses.includes(newWin6C)
+       && additionalTerminalWin6.every(k => witnesses.includes(k))
        && win7A === win7B && frontier.has(win7A)
        && incidence.get(win7A) === 2,
        'new terminal WIN7 does not refute two selected S6 witnesses');
@@ -265,13 +272,13 @@ function audit() {
     terminalBackedLoss7From38Loss8Hits:terminalFromLoss8Hits.length,
     knownWin7Conflicts:0,historicalLoss6WitnessOverlap:0,
     newlyCertifiedWin7FrontierHits:1,certifiedWin7Key:win7A,
-    certifiedWin6Witnesses:[newWin6A,newWin6B,newWin6C],
-    conditionalLossCover:'REFUTED_BY_THREE_TERMINAL_WIN6',
+    certifiedWin6Witnesses:[newWin6A,newWin6B,newWin6C,...additionalTerminalWin6].sort(),
+    conditionalLossCover:'REFUTED_BY_SEVEN_TERMINAL_WIN6',
     noHitInTheseInventories:frontier.size-cached.length-terminal.length,
     noHitIncludingNewCertifiedWin7:frontier.size-cached.length-terminal.length-1,
     shortestS6:shortest,shortestS6WithAtLeast50SharedChildren:shortShared,
     negativeTests:rejected,proofBoundary:'GEOMETRY_CACHE_REUSE_AND_PINNED_CERTIFICATE_IDENTITY',
-    s6Outcome:'THREE_CERTIFIED_WIN_43_UNKNOWN',twoStoneRootOutcome:'UNKNOWN',emptyBoardOutcome:'UNKNOWN'
+    s6Outcome:'SEVEN_CERTIFIED_WIN_39_UNKNOWN',twoStoneRootOutcome:'UNKNOWN',emptyBoardOutcome:'UNKNOWN'
   };
 }
 console.log(JSON.stringify(audit(),null,2));
