@@ -52,7 +52,10 @@ def audit(doc):
 
     # This reconstructs the full 2094 proof, including independent 4x4
     # geometry, the 2154 predecessor, and five complete terminal strategies.
-    frontiers, multiplicity, secured_before = focus.geometry()
+    source_frontiers, multiplicity, secured_before = focus.geometry()
+    # Never mutate the cached 2094 source. Repeated negative tests and
+    # downstream focused dispatch must see the unchanged predecessor.
+    frontiers = dict(source_frontiers)
     _, s5, incidence, costs, win6, win7, loss7, _ = previous.context()
     selected = set(frontiers)
     rm, ad = {int(k, 16) for k in removed}, {int(k, 16) for k in added}
