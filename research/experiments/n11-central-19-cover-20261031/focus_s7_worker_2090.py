@@ -96,6 +96,10 @@ def audit_plan(doc):
 
 
 def merge(doc, existing, workers):
+    # Also enforce the frozen 2090 identity for direct library callers.
+    # The CLI already audits the plan, but a direct merge() previously
+    # accepted a forged worklist and could admit off-plan receipts.
+    audit_plan(doc)
     return previous.merge(doc, existing, workers)
 
 
@@ -122,6 +126,14 @@ def self_test():
             pass
         else:
             raise AssertionError("tampered 2090 focus accepted: " + mode)
+        # A direct merge() must reject the same tampered plan even without
+        # the command-line audit step; no worker report is needed to test it.
+        try:
+            merge(bad, None, [])
+        except (ValueError, KeyError, TypeError):
+            pass
+        else:
+            raise AssertionError("direct merge accepted tampered plan: " + mode)
     first = doc["worklists"][0][0]
     with tempfile.TemporaryDirectory() as folder:
         p = Path(folder) / "worker.csv"
