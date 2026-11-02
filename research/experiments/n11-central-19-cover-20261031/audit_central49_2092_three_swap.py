@@ -32,8 +32,9 @@ def matchings(vertices):
             yield ((a, b),) + tail
 
 
-def audit():
-    selected = local.reconstruct()
+def audit(selected_override=None, expected_baseline=2092):
+    selected = (local.reconstruct() if selected_override is None
+                else sorted(selected_override))
     need(len(selected) == 46, "wrong selected witness count")
     original = local.read("conditional_s6_cover_46.json")
     s4 = int(original["s4_key"], 16)
@@ -87,7 +88,7 @@ def audit():
 
     selected_set = set(selected)
     counts = Counter(q for k in selected for q in frontiers[k])
-    need(len(counts) == 2092, "baseline S7 union changed")
+    need(len(counts) == expected_baseline, "baseline S7 union changed")
     baseline = set(counts)
     exmask = {k: sum(1 << j for j, ex in enumerate(sorted(exceptions))
                      if ex in incidence[k]) for k in incidence}
@@ -146,7 +147,7 @@ def audit():
     need(possible == 15180 and pairing_count == 227700,
          "three-swap enumeration incomplete")
     result = {
-        "schema": "n11-central49-2092-exact-three-swap-audit-v1",
+        "schema": f"n11-central49-{expected_baseline}-exact-three-swap-audit-v1",
         "selected_s6": 46,
         "ordinary_s5": 92,
         "exceptional_s5": 2,
@@ -171,7 +172,7 @@ def audit():
         "conditional_s6_verdict": "UNKNOWN",
         "two_stone_root": "UNKNOWN",
         "empty_board": "UNKNOWN",
-        "scope": "Exact 3-for-3 neighborhood of the fixed 2092-class matching; not global optimality or a game verdict."
+        "scope": f"Exact 3-for-3 neighborhood of the fixed {expected_baseline}-class matching; not global optimality or a game verdict."
     }
     need(total == valid + excluded_known + invalid_exceptions,
          "candidate accounting mismatch")
