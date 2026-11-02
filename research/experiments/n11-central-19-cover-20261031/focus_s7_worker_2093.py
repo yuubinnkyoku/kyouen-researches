@@ -32,7 +32,11 @@ def need(ok, message):
 @lru_cache(maxsize=1)
 def geometry():
     doc = json.loads(proof.CERT.read_text(encoding="utf-8"))
+    predecessor, _, _ = previous.geometry()
+    predecessor_keys = set(predecessor)
     result = proof.audit(doc)  # Five complete terminal replays and 4x4 geometry.
+    need(set(previous.geometry()[0]) == predecessor_keys,
+         "2093 audit mutated the cached 2094 source")
     need(result["final_distinct_s7"] == 2093 and
          result["terminal_certified_loss7"] == 6,
          "2093 independent proof changed")
