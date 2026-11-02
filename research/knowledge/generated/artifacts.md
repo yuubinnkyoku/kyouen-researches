@@ -6880,6 +6880,7 @@
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_60_strategy.b64)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (certificate): 二つ目の終局戦略14,440バイトをzlib/base64圧縮、復号SHA-256 debb5464282eb28e6a30496f8728515433d6f9507ffdeeda1eeaf04e3c5d7de4
+- [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) (certificate): 出発点の終局戦略、復号14,440バイト・SHA-256 debb5464282eb28e6a30496f8728515433d6f9507ffdeeda1eeaf04e3c5d7de4
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 二つ目の共有七石から一点を除いた七つの六石正準類
@@ -6908,6 +6909,12 @@
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (verifier): 固定44証人の二対二置換68組と七石子を4×4整数行列式で独立監査
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (verifier): 幾何的二対二修復68組のうち確定WIN6で2組を反証し66組を独立監査
+## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_closure.cpp](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_closure.cpp)
+
+- [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) (verifier): 独立4×4整数行列式による終局再生と勝敗帰納閉包・D4計数
+## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_closure.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_closure.py)
+
+- [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) (verifier): 固定SHA検査・一時復号・C++検査実行・期待件数照合
 ## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_compact.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_60_compact.py)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 4×4整数行列式による全相手応手・終局の独立検証
@@ -9962,6 +9969,9 @@
 ## [research/log/2026-11-02-n11-central49-second-s7-2207-repair.md](../../../research/log/2026-11-02-n11-central49-second-s7-2207-repair.md)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (log): 条件付き被覆の修復と証明境界
+## [research/log/2026-11-02-n11-central49-second-terminal-win-closure-256561.md](../../../research/log/2026-11-02-n11-central49-second-terminal-win-closure-256561.md)
+
+- [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) (log): 層ごとの証明再利用と限界の記録
 ## [research/log/2026-11-02-n11-central49-second-terminal-win7-seven-win6-refutes-2097.md](../../../research/log/2026-11-02-n11-central49-second-terminal-win7-seven-win6-refutes-2097.md)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (log): 終局戦略・七親・条件付き被覆反証の研究記録

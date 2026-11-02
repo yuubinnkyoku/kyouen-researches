@@ -56,6 +56,7 @@
 - ← depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 完全指摘・通常プレイの合法手と終局規則
 - ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 完全指摘・通常プレイの合法手と終局規則
 - ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 完全指摘・通常プレイの合法手と終局規則
+- ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 完全指摘・通常プレイの合法手と手番
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -142,6 +143,7 @@
 - ← depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 六石局面の局所的勝敗と空盤弱解決の区別
 - ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 局所WIN証明と空盤勝敗の区別
 - ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 六石局所証明と空盤弱解決の区別
+- ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 局所証明と空盤勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3140,8 +3142,15 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局所証明と空盤弱解決の区別
 - → depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 一つの終局WIN7戦略を七つの六石親に持ち上げる方法
+- ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 第二の固定終局戦略と独立終局検証
 
 ## [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と削除頂点の隣接条件を使用
 - → generalizes [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md): 完全多部グラフからの部内辺追加・部間辺削除を任意の有限数だけ許す
+
+## [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) 11×11の第二終局WIN証明から後退閉包で256,561生局面を帰納証明
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と手番
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所証明と空盤勝敗の区別
+- → depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 第二の固定終局戦略と独立終局検証
