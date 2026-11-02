@@ -1,0 +1,38 @@
+{
+  "schema": "n11-central49-conditional46-post-seven-win6-repair-v1",
+  "source_certificate": "conditional_s6_cover_46_repaired_1980_swaps.txt",
+  "removed_certified_win6": [
+    "00000000000000203808000000000020",
+    "00000000000000203808000000002000",
+    "00000000000000203808100000000000",
+    "00000000000000203808200000000000",
+    "0000000000000020380a000000000000",
+    "0000000000000020380c000000000000",
+    "00000000000200801002000081000000"
+  ],
+  "added_s6_classes": [
+    "00000000000000003808100001000000",
+    "0000000000000000380c200000000000",
+    "00000000000000203800100000002000",
+    "00000000000000203800800000080000",
+    "00000000000000203804200000000000",
+    "00000000000000803082002000000000",
+    "00000000000000803082008000000000"
+  ],
+  "s6_witnesses": 46,
+  "s5_covered": 94,
+  "raw_s7_edges": 2992,
+  "distinct_s7_classes": 2301,
+  "known_win6_comparison_classes": 145,
+  "known_win7_comparison_classes": 23,
+  "known_win6_conflicts": 0,
+  "known_win7_conflicts": 0,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_REPAIR_NOT_VERDICTS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "Constructive direct 7-for-7 replacement of the historical 1980 S7 witness set, excluding all 7 currently identified terminal-backed WIN6. The 2301 S7 classes are proof obligations, not proven LOSS7; no optimality or root outcome is claimed."
+}
