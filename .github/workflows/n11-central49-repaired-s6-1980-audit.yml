@@ -14,9 +14,14 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
-      - name: Recompute 94-parent cover and all 18 S6-to-S7 frontiers
+      - name: Reject stale 1980 plan by default, then replay historical geometry
         run: |
-          python3 research/experiments/n11-central-19-cover-20261031/verify_repaired_s6_1980.py --negative > "$RUNNER_TEMP/audit.json"
+          if python3 research/experiments/n11-central-19-cover-20261031/verify_repaired_s6_1980.py > "$RUNNER_TEMP/stale.out" 2>&1; then
+            echo "superseded 1980 plan unexpectedly accepted" >&2
+            exit 1
+          fi
+          grep -q SUPERSEDED_BY_CERTIFIED_WIN6 "$RUNNER_TEMP/stale.out"
+          python3 research/experiments/n11-central-19-cover-20261031/verify_repaired_s6_1980.py --allow-superseded-plan --negative > "$RUNNER_TEMP/audit.json"
           python3 - "$RUNNER_TEMP/audit.json" <<'PY'
           import json, sys
           d = json.load(open(sys.argv[1], encoding="utf-8"))
@@ -24,6 +29,13 @@ jobs:
           assert (d["initial_distinct_s7"], d["final_distinct_s7"]) == (2711, 1980)
           assert (d["raw_s7_edges"], d["known_win6_conflicts"], d["known_win7_conflicts"]) == (2972, 0, 0)
           assert d["negative_tests"] == 6 and d["conditional_only"]
+          assert d["plan_status"] == "SUPERSEDED_BY_CERTIFIED_WIN6"
+          assert d["current_certified_win6_conflicts"] == 3
+          assert d["current_certified_win6_keys"] == sorted([
+              "00000000000000203808200000000000",
+              "0000000000000020380c000000000000",
+              "0000000000000020380a000000000000",
+          ])
           assert d["s6_outcome"] == d["s4_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
           print(json.dumps(d, indent=2))
           PY
