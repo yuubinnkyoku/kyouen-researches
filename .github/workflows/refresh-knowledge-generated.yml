@@ -76,6 +76,8 @@ jobs:
         run: python research/experiments/graph-star-leaf-core-spectrum-20261103/verify.py
       - name: Audit improved fixed-defect connected-kernel terminal counting
         run: python research/experiments/graph-star-connected-kernel-20261103/verify.py
+      - name: Audit FPT fixed-defect graph-star terminal coefficient
+        run: python research/experiments/graph-star-fixed-defect-fpt-20261103/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -246,3 +248,5 @@ jobs:
 # Refresh trigger for K0651/K0652 N11 central49 2094 exact local optimum and 2093 conditional improvement (2026-11-03).
 
 # Refresh trigger for K0652 exact 2094 three-swap neighborhood and 2093 focus CI verification (2026-11-03).
+
+# Refresh trigger for K0648 FPT fixed-defect terminal coefficient (2026-11-03).
