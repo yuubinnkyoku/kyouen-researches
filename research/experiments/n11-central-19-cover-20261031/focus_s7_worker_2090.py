@@ -7,6 +7,7 @@ revalidated, and the global source/digest is rebound to 2090. Reports
 remain unverified and can never be promoted to game outcomes here.
 """
 import argparse
+import hashlib
 from collections import Counter
 from functools import lru_cache
 import json
@@ -60,6 +61,18 @@ def geometry():
 
 
 def freeze():
+    # FAIL CLOSED: this geometrically correct 2090 cover contains the 1984
+    # terminal-certified original-first WIN6. It cannot be dispatched as
+    # a conditional collection of LOSS witnesses (independent CI: 41543737197).
+    import verify_focus_s6_win_strategy as known_win
+    import verify_s6_cover_exclude_certified_win6 as known_source
+    need(known_win.ROOT == int(known_source.REFUTED, 16)
+         and hashlib.sha256(known_win.CERT.read_bytes()).hexdigest()
+             == known_source.WIN_SHA,
+         "1984 terminal WIN6 provenance changed")
+    need(known_win.ROOT not in geometry()[0],
+         "SUPERSEDED_BY_CERTIFIED_WIN6: 2090 LOSS-witness plan contains "
+         + known_source.REFUTED)
     # The focus is unchanged; preserve its already terminal-gated child
     # ownership, but never reuse the obsolete 2091 global plan identity.
     old = previous.freeze()
@@ -104,64 +117,38 @@ def merge(doc, existing, workers):
 
 
 def self_test():
-    doc = freeze()
-    audit_plan(doc)
-    need((doc["total_distinct_s7"], len(doc["focus_s7_children"]),
-          len(doc["certified_loss7"]), len(doc["unverified_s7"])) ==
-         (2090, 64, 2, 62) and doc["worker_loads"] == [16, 16, 15, 15],
-         "2090 focused obligations changed")
-    for mode in ("verdict", "source", "secured", "owner"):
-        bad = json.loads(json.dumps(doc))
-        if mode == "verdict":
-            bad["outcomes"]["s6"] = "LOSS"
-        elif mode == "source":
-            bad["source_sha256"] = "0" * 64
-        elif mode == "secured":
-            bad["certified_loss7"].pop()
-        else:
-            bad["worklists"][0].append(bad["worklists"][1][0])
+    # Historical geometry remains independently auditable, but dispatch,
+    # direct audit and direct merge must all reject the refuted plan.
+    import audit_2090_known_win6_refutation as refutation
+    result = refutation.audit()
+    need(result["conditional_2090_loss_cover_valid"] is False
+         and result["refuting_s6_original_first_outcome"] == "WIN"
+         and result["refuting_s6"] ==
+             "00000000000000603800000000008000",
+         "complete terminal refutation was not reproduced")
+    minimal = {
+        "schema": SCHEMA, "outcomes": UNKNOWN,
+        "evidence_level": "TERMINAL_CERTIFIED_S7_AND_UNVERIFIED_WORKER_REPORTS",
+    }
+    rejected = 0
+    for action in (freeze,
+                   lambda: audit_plan(minimal),
+                   lambda: merge(minimal, None, [])):
         try:
-            audit_plan(bad)
-        except (ValueError, KeyError, TypeError):
-            pass
+            action()
+        except ValueError as exc:
+            need("SUPERSEDED_BY_CERTIFIED_WIN6" in str(exc),
+                 "unexpected rejection reason: " + str(exc))
+            rejected += 1
         else:
-            raise AssertionError("tampered 2090 focus accepted: " + mode)
-        # A direct merge() must reject the same tampered plan even without
-        # the command-line audit step; no worker report is needed to test it.
-        try:
-            merge(bad, None, [])
-        except (ValueError, KeyError, TypeError):
-            pass
-        else:
-            raise AssertionError("direct merge accepted tampered plan: " + mode)
-    first = doc["worklists"][0][0]
-    with tempfile.TemporaryDirectory() as folder:
-        p = Path(folder) / "worker.csv"
-        good = f"s7workerreport,0,{first},original_first,LOSS,unverified\n"
-        p.write_text(good, encoding="utf-8")
-        merged, _ = merge(doc, None, [(0, p)])
-        need(len(merged) == 1, "valid unverified report rejected")
-        p.write_text(good.replace(",LOSS,", ",WIN,"), encoding="utf-8")
-        try:
-            merge(doc, None, [(0, p)])
-        except ValueError:
-            pass
-        else:
-            raise AssertionError("reported WIN failed to require replanning")
-        p.write_text(good.replace(first, doc["certified_loss7"][0]),
-                     encoding="utf-8")
-        try:
-            merge(doc, None, [(0, p)])
-        except ValueError:
-            pass
-        else:
-            raise AssertionError("certified child was redispatched")
+            raise AssertionError("refuted 2090 plan was accepted")
     print(json.dumps({
-        "self_test": "PASS", "focus_s6": FOCUS,
-        "total_distinct_s7": 2090, "total_children": 64,
-        "certified_loss7": 2, "unverified_s7": 62,
-        "worker_loads": [16, 16, 15, 15],
-        "tampered_plan_rejected": 4, "bad_receipts_rejected": 2,
+        "self_test": "PASS",
+        "plan_status": "SUPERSEDED_BY_CERTIFIED_WIN6",
+        "refuting_s6": result["refuting_s6"],
+        "terminal_strategy_nodes": result["terminal_strategy_nodes"],
+        "terminal_winning_leaves": result["terminal_winning_leaves"],
+        "direct_paths_rejected": rejected,
         "outcomes": UNKNOWN,
     }))
 
