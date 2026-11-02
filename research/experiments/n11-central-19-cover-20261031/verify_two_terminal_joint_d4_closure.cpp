@@ -179,6 +179,9 @@ int main(int argc,char**argv) {
   size_t separateUnion=a.size();
   for(u128 s:b) if(!a.count(s)) separateUnion++;
   if(both.size()<separateUnion) throw runtime_error("joint closure shrank");
+  if(a.size()!=187826||separateUnion!=444570||both.size()!=444570||
+     combined.size()!=41013||separateUnion!=a.size()+b.size())
+    throw runtime_error("two-certificate disjoint union regression");
   vector<size_t> layers(20),novelLayers(20);
   for(u128 s:both) {
     int n=points(s).size();
