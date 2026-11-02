@@ -16,6 +16,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT_KEY = "00000000000000203808200000000000"
 ROOT = int(ROOT_KEY, 16)
+DERIVED_ROOT_KEY = "0000000000000020380c000000000000"
+DERIVED_ROOT = int(DERIVED_ROOT_KEY, 16)
 BOARD = (1 << 121) - 1
 CERT = HERE / "shared58_s6_win_strategy.cert"
 EXPECTED_SHA256 = "10e816538fbe6cc0062e2d0dd0fe96930ef294101812701305e1595b531b21da"
@@ -92,12 +94,12 @@ def parse_certificate(text):
     return strategy
 
 
-def replay(strategy):
-    need(ROOT.bit_count() == 6 and all(det4(*quad) != 0
-         for quad in combinations(points(ROOT), 4)), "unsafe six-stone root")
-    need(strategy.get(ROOT) == 70, "root strategy move changed")
+def replay(strategy, root=ROOT, first_move=70):
+    need(root.bit_count() == 6 and all(det4(*quad) != 0
+         for quad in combinations(points(root), 4)), "unsafe six-stone root")
+    need(strategy.get(root) == first_move, "root strategy move changed")
     need(len(strategy) == 10881, "unexpected strategy row count")
-    need(legal(ROOT) & (1 << 70), "root move illegal")
+    need(legal(root) & (1 << first_move), "root move illegal")
     visited, terminals, layers = set(), [], {}
 
     def visit(mask):
@@ -121,7 +123,7 @@ def replay(strategy):
                 visit(mask | bit)
                 moves ^= bit
 
-    visit(ROOT)
+    visit(root)
     need(set(strategy) <= visited, "unreachable/unused strategy rows")
     need((len(visited), len(terminals), min(terminals), max(terminals))
          == (16980, 2237, 13, 17), "terminal DAG counts changed")
@@ -146,9 +148,30 @@ def selected_in_repaired_plan():
         selected.remove(remove1)
         selected.remove(remove2)
         selected.update([add1, add2])
-    need(len(selected) == 46 and ROOT_KEY in selected,
-         "WIN6 not present in repaired 46-witness plan")
+    need(len(selected) == 46 and ROOT_KEY in selected
+         and DERIVED_ROOT_KEY in selected,
+         "certified WIN6 roots not both present in repaired 46-witness plan")
     return True
+
+
+def rotate180(mask):
+    return sum(1 << (120-p) for p in points(mask))
+
+
+def lifted_strategy(base):
+    # The first S7 after base move 70 rotates to the S7 after move 75
+    # from a different repaired-cover S6. All subsequent replies rotate too.
+    need(rotate180(ROOT | (1 << 70)) == DERIVED_ROOT | (1 << 75),
+         "claimed shared seven-stone child is not a 180-degree image")
+    result = {DERIVED_ROOT: 75}
+    for mask, move in base.items():
+        if mask == ROOT:
+            continue
+        rotated = rotate180(mask)
+        need(rotated not in result, "colliding rotated strategy states")
+        result[rotated] = 120-move
+    need(len(result) == 10881, "lifted strategy size mismatch")
+    return result
 
 
 def main():
@@ -160,8 +183,14 @@ def main():
     need(hashlib.sha256(raw).hexdigest() == EXPECTED_SHA256,
          "certificate SHA256 differs from the independently checked witness")
     text = raw.decode("utf-8")
-    result = replay(parse_certificate(text))
+    base = parse_certificate(text)
+    result = replay(base)
+    derived = lifted_strategy(base)
+    result["derived_s6"] = DERIVED_ROOT_KEY
+    result["derived_root_move"] = 75
+    result["derived_proof"] = replay(derived, DERIVED_ROOT, 75)
     result["in_repaired_46_s6"] = selected_in_repaired_plan()
+    result["certified_repaired_s6_win_count"] = 2
     result["s6_original_first_outcome"] = "WIN"
     result["repaired_1980_s7_loss_cover_status"] = "REFUTED"
     result["two_stone_root_outcome"] = "UNKNOWN"
@@ -177,7 +206,15 @@ def main():
             except ValueError:
                 continue
             raise AssertionError("tampered strategy accepted")
-        result["negative_tests"] = 3
+        forged = dict(derived)
+        forged[DERIVED_ROOT] = 74
+        try:
+            replay(forged, DERIVED_ROOT, 75)
+        except ValueError:
+            pass
+        else:
+            raise AssertionError("tampered lifted strategy accepted")
+        result["negative_tests"] = 4
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
