@@ -21,19 +21,25 @@ artifacts:
   note: 12066条件の削除集合直接列挙、744標本、159条件192144点部分集合の禁止超辺独立検査
 - path: research/experiments/modular-substitution-20261102/weighted-total-proof.md
   role: proof
-  note: q>=4の終局総数に特化した一変数再帰とコグラフO(n³)上界
+  note: q>=4の終局総数に特化した一変数再帰とコグラフO(n²)上界
 - path: research/experiments/modular-substitution-20261102/verify_weighted_total.py
   role: verifier
   note: q=4,5,6,9の重み付き支配集合再帰1708条件独立監査
+- path: research/experiments/modular-substitution-20261102/amortized-proof.md
+  role: proof
+  note: 置換木の最小共通祖先への課金でコグラフの終局総数O(n²)・全分布O(n^6)を証明
+- path: research/experiments/modular-substitution-20261102/verify_amortized.py
+  role: verifier
+  note: 1099順序木形と600乱数木形の独立課金監査
 scope: 任意の少なくとも1辺を持つ有限コグラフGとq>=4のK0602整数共円構成。構成木が入力。標準全格子盤は対象外。
-evidence: 和・完全結合における二変数支配集合多項式の全称帰納証明、O(n^7)整数演算。有限完全列挙と独立禁止超辺監査は実装照合。
+evidence: 和・完全結合における二変数支配集合多項式の全称帰納証明、O(n^6)整数演算。有限完全列挙と独立禁止超辺監査は実装照合。
 ---
 
 # コグラフの全極大終局長分布を多項式時間で厳密計算
 
-任意のn頂点コグラフG（誘導4頂点路を持たないグラフ、少なくとも1辺を持つ）とq>=4について、K0602の整数平面上のq点共円・共線禁止ゲームの全極大配置の石数別母関数を、構成木から**O(n^7)回の整数演算**で厳密に求められる。qは二進入力でよく、係数のビット長はO(n²log(q+1))。特にq=4の極大配置総数は**O(n)回の整数演算**で計算できる。
+任意のn頂点コグラフG（誘導4頂点路を持たないグラフ、少なくとも1辺を持つ）とq>=4について、K0602の整数平面上のq点共円・共線禁止ゲームの全極大配置の石数別母関数を、構成木から**O(n^6)回の整数演算**で厳密に求められる。qは二進入力でよく、係数のビット長はO(n²log(q+1))。特にq=4の極大配置総数は**O(n)回の整数演算**で計算できる。
 
-**任意q>=4の極大配置総数だけ**なら、誘導辺数の変数をr=q−3に代入してから残存頂点数だけを追う一変数再帰により、**O(n³)回の整数演算**で厳密計算できる（K0632の商グラフ頂点数k=2の場合）。[全称証明](../../experiments/modular-substitution-20261102/weighted-total-proof.md)と[1708条件の独立検証](../../experiments/modular-substitution-20261102/verify_weighted_total.py)を参照。全終局長分布を求めるO(n⁷)上界とは別の計算課題である。
+**任意q>=4の極大配置総数だけ**なら、誘導辺数の変数をr=q−3に代入してから残存頂点数だけを追う一変数再帰と最小共通祖先への償却により、**O(n²)回の整数演算**で厳密計算できる（K0632の商グラフ頂点数k=2の場合）。従来のO(n³)上界から改善した。[償却証明](../../experiments/modular-substitution-20261102/amortized-proof.md)と[独立検証](../../experiments/modular-substitution-20261102/verify_amortized.py)を参照。[全称証明](../../experiments/modular-substitution-20261102/weighted-total-proof.md)と[1708条件の独立検証](../../experiments/modular-substitution-20261102/verify_weighted_total.py)を参照。全終局長分布を求めるO(n⁶)上界とは別の計算課題である。全分布も従来のO(n⁷)から同じ償却で改善する。
 
 単頂点からグラフの互いに素な和と完全結合を繰り返す際、全部分集合の二変数母関数Aと、支配集合だけの二変数母関数Dを保持する。完全結合の両側に残存頂点がある場合は全削除頂点が自動的に支配され、誘導辺数に両側残存数の積が加わる。この再帰とK0602の極大配置公式で全称証明できる。
 
