@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Independently verify the exact 2091 -> 2090 conditional S6 exchange.
 
-The entire source 2093 plan and five terminal strategies are replayed.
+The entire source 2091 plan and five terminal strategies are replayed.
 All added six-stone children are checked using separate exact 4x4 Bareiss
 and 3x3 difference determinants. No six-stone LOSS is assumed.
 """
@@ -11,7 +11,7 @@ from pathlib import Path
 
 import focus_s7_worker_2091 as focus
 import verify_central49_2091_three_swap as predecessor
-import verify_central49_2094_two_swap_descent as geometry
+import verify_central49_2094_three_swap_descent as geometry
 
 HERE = Path(__file__).resolve().parent
 CERT = HERE / "conditional_s6_cover_46_post_seven_win6_2090_two_swap.json"
