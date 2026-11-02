@@ -2,7 +2,7 @@
 id: K0652
 title: 11×11中央49の条件付き七石義務を三証人交換で2,094類から2,093類へ削減
 kind: computation
-status: computed
+status: superseded
 topics: [square-outcomes, certificates, verification, search-methods]
 aliases: []
 relations:
@@ -48,6 +48,8 @@ evidence: K0650の2,094類計画から六石証人三類を三類へ交換。4×
 ---
 
 # 中央49の条件付き証明義務を2,093類へ縮小
+
+**2026-11-03更新：この計画はK0653の2,091類計画に置き換えられた。** 本項は2,094→2,093類の交換と検証の履歴として保持する。
 
 二証人以下の交換では改善不能だった2,094類の条件付き被覆を、**三証人の交換一回で2,093類に削減**した。選択六石証人46類、94五石類の完全被覆、既存の終局証明済みLOSS7六類を維持する。
 
