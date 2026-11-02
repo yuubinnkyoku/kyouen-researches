@@ -27,7 +27,9 @@
         "00000000000000203804200000000000"
       ],
       "raw_s7_edges": 2978,
-      "distinct_s7_classes": 2089
+      "distinct_s7_classes": 2089,
+      "certified_shared_win7_conflicts": 0,
+      "certified_shared_win6_parent_conflicts": 0
     },
     {
       "added": [
@@ -35,7 +37,9 @@
         "00000000000000403808200000000000"
       ],
       "raw_s7_edges": 2989,
-      "distinct_s7_classes": 2100
+      "distinct_s7_classes": 2100,
+      "certified_shared_win7_conflicts": 1,
+      "certified_shared_win6_parent_conflicts": 2
     },
     {
       "added": [
@@ -43,7 +47,9 @@
         "0000000000000040380c000000000000"
       ],
       "raw_s7_edges": 2988,
-      "distinct_s7_classes": 2100
+      "distinct_s7_classes": 2100,
+      "certified_shared_win7_conflicts": 0,
+      "certified_shared_win6_parent_conflicts": 0
     }
   ],
   "fixed44_exact_minimum_distinct_s7": 2089,
@@ -54,5 +60,6 @@
     "two_stone_root": "UNKNOWN",
     "empty_board": "UNKNOWN"
   },
-  "caveat": "The 44 unchanged witnesses and two replacements have no established LOSS verdict. The minimum 2089 is exhaustive only among two-for-two repairs keeping the other 44 witnesses fixed; it is not a global optimum or a winner proof."
+  "caveat": "All three pairs geometrically cover the four missing S5 classes, but the second pair is refuted by the same terminal-certified WIN7 and its two WIN6 parents. Only the first and third pairs are compatible with current WIN evidence. The minimum 2089 is exhaustive among two-for-two nonconflicting repairs keeping the other 44 witnesses fixed; it is not a global optimum or a winner proof.",
+  "exhaustive_nonconflicting_two_replacement_options": 2
 }
