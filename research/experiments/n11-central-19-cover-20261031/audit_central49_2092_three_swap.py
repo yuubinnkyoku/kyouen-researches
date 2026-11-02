@@ -60,15 +60,17 @@ def audit():
 
     # Historical comparison WIN7 set plus two independently terminal-audited S7.
     # Same evidence inventory as verify_second_s7_repair_2092.py.
-    _, _, _, _, _, old_win7 = prior.previous.previous.reconstruct()
+    _, _, _, historical_win6, first_terminal_parents, old_win7 = prior.previous.previous.reconstruct()
     first_terminal = int("00000000000200801002000081000000", 16) | (1 << 43)
     win7 = {int(k, 16) for k in old_win7} | {
         local.canonical(first_terminal), local.canonical(second.S7)
     }
     need(len(win7) == 22, "known WIN7 inventory changed")
-    win6 = local.certified_win6()
-    need(len(win6) == 21 and not win6.intersection(selected),
-         "terminal-certified WIN6 inventory changed")
+    terminal_win6 = local.certified_win6()
+    win6 = historical_win6 | first_terminal_parents | terminal_win6
+    need(len(terminal_win6) == 21 and len(win6) == 139
+         and not win6.intersection(selected),
+         "known WIN6 inventory changed")
 
     # Compute all legal children independently using the 3x3 integer determinant.
     # No search-derived verdict or partial proof number is used.
@@ -154,6 +156,9 @@ def audit():
         "six_vertex_matchings": pairing_count,
         "nontrivial_exact_three_swap_candidates": total,
         "excluded_known_win6_or_win7": excluded_known,
+        "known_win6_comparison_classes": len(win6),
+        "terminal_certified_win6_classes": len(terminal_win6),
+        "known_win7_comparison_classes": len(win7),
         "excluded_missing_exceptional_s5": invalid_exceptions,
         "valid_exact_three_swap_candidates": valid,
         "improving_candidates": improvement,
