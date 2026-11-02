@@ -2618,6 +2618,12 @@
 ## [research/experiments/graph-star-polynomial-coordinates-20261102/verify.py](../../../research/experiments/graph-star-polynomial-coordinates-20261102/verify.py)
 
 - [K0636](../items/K0636-polynomial-bit-graph-star-realization.md) (verifier): 161条件の独立4×4行列式監査と136条件の終局直接完全列挙
+## [research/experiments/graph-star-q-spectrum-20261102/proof.md](../../../research/experiments/graph-star-q-spectrum-20261102/proof.md)
+
+- [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md) (proof): 最短石数で平行移動した終局母関数の全称恒等式と支配集合数の奇数性の対合証明
+## [research/experiments/graph-star-q-spectrum-20261102/verify.py](../../../research/experiments/graph-star-q-spectrum-20261102/verify.py)
+
+- [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md) (verifier): 全1094グラフ・1855禁止超辺直接列挙条件と有限差分・偶奇の独立監査
 ## [research/experiments/graph-star-qpoint-20261101/proof.md](../../../research/experiments/graph-star-qpoint-20261101/proof.md)
 
 - [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (proof): 無界q・無界グラフの整数幾何構成、全安全・極大母関数、最短極大個数の全称証明とq5十点座標

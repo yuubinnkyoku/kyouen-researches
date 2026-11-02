@@ -627,3 +627,4 @@
 | [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) | 11×11中央49の確定WIN7から七つの六石WINを導出（うち六類が追加） | proposition | proved | square-outcomes, certificates, verification, search-methods |
 | [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md) | 11×11中央49の七つの確定WIN6を除外した条件付き六石被覆は七石2,301類 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md) | 11×11中央49の現行2,301七石義務には終局証明済みLOSS7が4類含まれる | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md) | グラフ星型q点共円ゲームの終局長欠番のq不変性・係数多項式・偶奇法則 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

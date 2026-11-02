@@ -2995,6 +2995,7 @@
 - ← depends_on [K0635](../items/K0635-graph-star-terminal-count-sharp-complexity.md): グラフ星型禁止4点組と極大配置総数1+支配集合数の恒等式
 - ← depends_on [K0636](../items/K0636-polynomial-bit-graph-star-realization.md): グラフ星型の禁止超辺と極大配置母関数
 - ← depends_on [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md): グラフ星型q点構成と誘導辺重み付き支配集合の極大配置総数公式
+- ← depends_on [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md): 任意qのグラフ星型構成・全極大母関数と最短石数公式
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3270,3 +3271,7 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き幾何被覆と勝敗証明の区別
 - → depends_on [K0637](../items/K0637-n11-central49-five-terminal-loss7.md): 元先手LOSS7五類の固定終局戦略と独立監査
 - → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 現行46六石証人と2,301七石正準類の条件付き被覆
+
+## [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md) グラフ星型q点共円ゲームの終局長欠番のq不変性・係数多項式・偶奇法則
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意qのグラフ星型構成・全極大母関数と最短石数公式
