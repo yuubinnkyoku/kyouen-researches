@@ -34,8 +34,8 @@ def audit():
     # geom.inventory checks pinned Git blob identity, sorted unique keys,
     # 7-stone board bounds, and D4 canonical form. These are historical
     # solver-trusted verdicts, not newly checked game trees.
-    historical_loss = geom.inventory(geom.BASE / "all_s7_loss_2232.txt", 2232)
-    historical_win = geom.inventory(geom.BASE / "all_s7_win_17.txt", 17)
+    historical_loss = {int(k, 16) for k in geom.inventory(geom.BASE / "all_s7_loss_2232.txt", 2232)}
+    historical_win = {int(k, 16) for k in geom.inventory(geom.BASE / "all_s7_win_17.txt", 17)}
     lift = json.loads(geom.frozen(geom.LIFT))
     need(lift["schema"] == "n11-fixed14-direct37-s7-lift-v1"
          and (lift["win7"], lift["loss7"], lift["unknown7"],
@@ -43,8 +43,8 @@ def audit():
          and len(lift["rows"]) == 14, "fixed14 evidence identity changed")
     # The fixed14 result is side-to-move. On odd S7, WIN means
     # original-first LOSS; LOSS means original-first WIN.
-    lift_loss = {r["s7"] for r in lift["rows"] if r["verdict"] == "WIN"}
-    lift_win = {r["s7"] for r in lift["rows"] if r["verdict"] == "LOSS"}
+    lift_loss = {int(r["s7"], 16) for r in lift["rows"] if r["verdict"] == "WIN"}
+    lift_win = {int(r["s7"], 16) for r in lift["rows"] if r["verdict"] == "LOSS"}
     need(len(lift_loss) == 13 and len(lift_win) == 1
          and not ((historical_loss | lift_loss) & (historical_win | lift_win)),
          "WIN/LOSS conflict between evidence inventories")
@@ -83,7 +83,7 @@ def audit():
         "historical_solver_trusted_loss7_inventory": len(historical_loss),
         "historical_solver_trusted_loss7_hits": len(cache_hits),
         "historical_solver_trusted_loss7_edge_hits": hit_edges,
-        "historical_loss7_hit_keys": sorted(cache_hits),
+        "historical_loss7_hit_keys": sorted(f"{k:032x}" for k in cache_hits),
         "fixed14_terminal_backed_loss7_hits": len(terminal_hits),
         "historical_and_fixed14_known_win7_conflicts": 0,
         "not_in_these_loss7_inventories": len(frontier - historical_loss - lift_loss),
@@ -92,7 +92,7 @@ def audit():
         "focus_shared_s7": sum(multiplicity[c] == 2 for c in children),
         "focus_unshared_s7": sum(multiplicity[c] == 1 for c in children),
         "focus_historical_solver_trusted_loss7_hits": len(focus_cached),
-        "focus_historical_loss7_hit_keys": sorted(focus_cached),
+        "focus_historical_loss7_hit_keys": sorted(f"{k:032x}" for k in focus_cached),
         "focus_without_historical_loss7_cache_hits": len(children - historical_loss),
         "four_worker_loads": [len(list(sorted(children))[i::4]) for i in range(4)],
         "negative_tests_rejected": rejected,
