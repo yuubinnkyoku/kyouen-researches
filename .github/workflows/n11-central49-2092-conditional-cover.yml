@@ -1,0 +1,22 @@
+name: N11 central49 conditional S7 2092 geometry audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/verify_second_s7_repair_2092.py'
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_second_s7_repair_2092_swaps.json'
+      - '.github/workflows/n11-central49-2092-conditional-cover.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently replay the four conditional S6 exchanges
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_second_s7_repair_2092.py
