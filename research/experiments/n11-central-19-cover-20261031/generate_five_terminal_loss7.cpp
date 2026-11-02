@@ -117,13 +117,14 @@ string hex32(U x) {
 }
 unordered_set<U,Hash> reached;
 map<U,int> strategy;
+int winner_parity=0;
 size_t terminals=0,allmoves=0;
 int minTerminal=100,maxTerminal=0;
 void emit(U mask,int depth) {
     if(!reached.insert(mask).second) return;
     U moves=legal(mask);
     if(!moves) {
-        if((depth&1)==0) throw runtime_error("winner unable to move");
+        if((depth&1)==winner_parity) throw runtime_error("winner unable to move");
         terminals++;
         int n=__builtin_popcountll((uint64_t)mask)
              +__builtin_popcountll((uint64_t)(mask>>64));
@@ -132,9 +133,9 @@ void emit(U mask,int depth) {
         return;
     }
     auto it=tt.find(canon(mask));
-    if(it==tt.end() || it->second.result!=(depth%2==0?1:0))
+    if(it==tt.end() || it->second.result!=((depth%2)==winner_parity?1:0))
         throw runtime_error("missing or inconsistent TT outcome");
-    if((depth&1)==0) {
+    if((depth&1)==winner_parity) {
         int chosen=-1; U rem=moves;
         while(rem) {
             int m=((uint64_t)rem) ? __builtin_ctzll((uint64_t)rem)
@@ -167,8 +168,10 @@ U parse(const string &s) {
     return x;
 }
 int main(int argc,char**argv) {
-    if(argc!=3) { cerr<<"usage: generator ROOT_HEX CERT_OUT\n"; return 2; }
+    if(argc!=3 && argc!=4) { cerr<<"usage: generator ROOT_HEX CERT_OUT [original_first_WIN7]\n"; return 2; }
     try {
+        bool refute = argc==4 && string(argv[3])=="original_first_WIN7";
+        if(argc==4 && !refute) throw runtime_error("invalid requested polarity");
         U root=parse(argv[1]);
         int n=__builtin_popcountll((uint64_t)root)
              +__builtin_popcountll((uint64_t)(root>>64));
@@ -176,11 +179,13 @@ int main(int argc,char**argv) {
         init();
         start_clock=chrono::steady_clock::now();
         int result=dfs(root);
-        if(result!=1) throw runtime_error("root not proved WIN for player to move");
+        if(result!=(refute?0:1)) throw runtime_error("root outcome does not match requested polarity");
+        winner_parity=refute?1:0;
         emit(root,0);
         ofstream out(argv[2]);
         if(!out) throw runtime_error("cannot write certificate");
-        out<<"n11-terminal-strategy-v1 original_first_LOSS7 second_to_move_WIN\n";
+        out<<(refute ? "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS\n"
+                     : "n11-terminal-strategy-v1 original_first_LOSS7 second_to_move_WIN\n");
         out<<"root "<<hex32(root)<<"\n";
         for(auto [board,m]:strategy) out<<hex32(board)<<" "<<m<<"\n";
         out.close();
