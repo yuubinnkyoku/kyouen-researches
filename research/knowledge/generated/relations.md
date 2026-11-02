@@ -2972,6 +2972,7 @@
 - ← depends_on [K0622](../items/K0622-vertex-cover-terminal-polynomial.md): 任意有限単純グラフの整数共円実現と極大配置削除集合の分類を使用
 - ← depends_on [K0623](../items/K0623-treewidth-terminal-polynomial.md): 任意有限単純グラフの整数共円実現と削除頂点集合による極大配置分類を使用
 - ← depends_on [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md): 任意グラフの整数共円実現と削除集合による極大配置母関数を使用
+- ← depends_on [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md): 任意グラフの整数共円実現と削除頂点の隣接条件を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3119,6 +3120,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と削除集合による極大配置母関数を使用
 - → generalizes [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): 完全二部グラフの母関数を任意部数の完全多部グラフへ拡張
+- ← generalizes [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md): 完全多部グラフからの部内辺追加・部間辺削除を任意の有限数だけ許す
 
 ## [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) 11×11中央二石系の六石一類は元先手WIN、旧2,089七石条件付き証人は反証
 
@@ -3138,3 +3140,8 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局所証明と空盤弱解決の区別
 - → depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 一つの終局WIN7戦略を七つの六石親に持ち上げる方法
+
+## [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と削除頂点の隣接条件を使用
+- → generalizes [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md): 完全多部グラフからの部内辺追加・部間辺削除を任意の有限数だけ許す

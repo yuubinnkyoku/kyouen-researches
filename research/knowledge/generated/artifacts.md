@@ -2738,6 +2738,12 @@
 ## [research/experiments/mixed-spider-critical-20261102/verify.py](../../../research/experiments/mixed-spider-critical-20261102/verify.py)
 
 - [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (verifier): グラフ削除24条件・禁止超辺9条件628032部分集合・総数49条件の独立照合
+## [research/experiments/multipartite-edge-edits-20261102/proof.md](../../../research/experiments/multipartite-edge-edits-20261102/proof.md)
+
+- [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) (proof): 例外端点を固定し残存部数2以上を(A,Q,s)動的計画法で計数する全称証明
+## [research/experiments/multipartite-edge-edits-20261102/verify.py](../../../research/experiments/multipartite-edge-edits-20261102/verify.py)
+
+- [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) (verifier): 削除集合10030条件と禁止超辺332条件・2117808点部分集合の独立完全照合
 ## [research/experiments/multipartite-terminal-20261102/proof.md](../../../research/experiments/multipartite-terminal-20261102/proof.md)
 
 - [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) (proof): 残存部の支持数による分類と残存点数・二乗和による多項式時間算法の全称証明

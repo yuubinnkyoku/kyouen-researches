@@ -613,3 +613,4 @@
 | [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) | 11×11中央二石系の六石一類は元先手WIN、旧2,089七石条件付き証人は反証 | proposition | proved | square-outcomes, certificates, verification, search-methods |
 | [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) | 11×11の新規共有七石終局戦略から七類の六石元先手WINを証明 | proposition | proved | square-outcomes, certificates, verification, search-methods |
 | [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) | 11×11の二つ目の共有七石終局戦略から六石七類を証明し2,097類計画を反証 | proposition | proved | square-outcomes, certificates, verification, search-methods |
+| [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) | 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
