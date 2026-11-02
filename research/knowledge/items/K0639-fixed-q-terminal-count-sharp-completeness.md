@@ -12,9 +12,6 @@ relations:
 - type: depends_on
   target: K0636
   note: 任意固定q>=4で多項式ビット長の整数座標を決定的に構成できること
-- type: generalizes
-  target: K0635
-  note: q=4の組合せ入力の計数困難性を任意固定q>=5にも拡張
 artifacts:
 - path: research/experiments/graph-star-fixed-q-count-complexity-20261102/proof.md
   role: proof
@@ -36,7 +33,7 @@ K0635・K0636で未解決だった**q>=5の計数困難性**を解決した。�
 T_q(H)=1+\sum_{R\text{ dominating}}(q-3)^{e_H(R)}
 \]
 
-を使うこと。元グラフGの各辺に、その両端だけと隣接する次数2の独立頂点をt個ずつ追加したH_tを考える。r=q−3>=2、S⊆V(G)、a(S)=SとV\\Sを横切る辺数、b(S)=G[S]の辺数とすれば
+を使うこと。元グラフGの各辺に、その両端だけと隣接する次数2の独立頂点をt個ずつ追加したH_tを考える。r=q−3>=2、S⊆V(G)、a(S)=Sとその補集合を横切る辺数、b(S)=G[S]の辺数とすれば
 
 \[
 T_q(H_t)-1=\sum_{S\subseteq V(G)}r^{b(S)}(1+r)^{t a(S)}(1+r^2)^{t b(S)}.
