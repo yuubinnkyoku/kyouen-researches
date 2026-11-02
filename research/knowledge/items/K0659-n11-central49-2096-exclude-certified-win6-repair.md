@@ -2,7 +2,7 @@
 id: K0659
 title: 11×11中央49の終局WIN6除外後の46六石被覆は七石2,096類
 kind: computation
-status: computed
+status: superseded
 topics: [square-outcomes, certificates, verification, search-methods]
 aliases: []
 relations:
@@ -71,3 +71,7 @@ evidence: 旧2090証人集合に混入した終局WIN6を独立再検証し、�
 旧2,090類計画で固定されていた64子・証明済み2類・未検証62類の集中対象より、初めの一証人を閉じるための未証明子の数は**9類少ない**。ただし旧2,090計画そのものは失効しており、単純な計画間の証明進捗比較ではない。新しい53類の中に元先手WIN7が見つかれば、この六石LOSS仮説も再計画が必要となる。
 
 `focus_s7_worker_2096.py` の `--plan-out` で凍結計画を作り、`--audit-plan` と `--worklist 0..3` で担当を取り出せる。統合関数の直接呼出しも計画を再検証し、担当外・WIN報告・証明済み子の再配布・改変計画を拒否する。独立CI [41544691533](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41544691533) 成功。報告はすべて**未検証**のままであり、53類がLOSSと証明されたわけではない。
+
+## 2026-11-03：終局WIN7によるLOSS証人計画の失効
+
+後続の[K0660](K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md)で、集中六石 `00000000000000203800000060000000` の合法七石子六類が**元先手WIN7**と終局まで独立検証された。この六石は元先手WIN6であり、全46六石をLOSSとして閉じる2096計画は失効した。元の2,096七石類・2,989合法辺・94/94五石被覆という幾何計数自体は変わらない。配布器は新規配布と直接統合を拒否する。空盤勝敗はUNKNOWN。
