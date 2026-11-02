@@ -71,6 +71,10 @@ def audit():
     checked = feasible = excluded6 = excluded7 = lost_secured = valid = improving = 0
     minimum = 2090
     best = None
+    relaxed_improving_distinct = relaxed_improving_unsecured = 0
+    relaxed_min_distinct = 2090
+    relaxed_min_unsecured = 2084
+    relaxed_best = None
     removed_triples = matching_count = 0
     baseline = set(counts)
     need(len(baseline & loss7) == 6 and not (baseline & win7)
@@ -111,11 +115,22 @@ def audit():
                 if new & win7:
                     excluded7 += 1
                     continue
-                if not secured <= (kept7 | new):
+                candidate = kept7 | new
+                cost = len(candidate)
+                unsecured_cost = len(candidate - loss7)
+                if cost < 2090:
+                    relaxed_improving_distinct += 1
+                if unsecured_cost < 2084:
+                    relaxed_improving_unsecured += 1
+                if cost < relaxed_min_distinct:
+                    relaxed_min_distinct = cost
+                if unsecured_cost < relaxed_min_unsecured:
+                    relaxed_min_unsecured = unsecured_cost
+                    relaxed_best = (tuple(sorted(rem)), tuple(sorted(ad)))
+                if not secured <= candidate:
                     lost_secured += 1
                     continue
                 valid += 1
-                cost = len(kept7) + len(new - kept7)
                 if cost < 2090:
                     improving += 1
                 if cost < minimum:
@@ -145,6 +160,24 @@ def audit():
             "removed": [f"{s:032x}" for s in removed],
             "added": [f"{s:032x}" for s in added],
         }
+    relaxed_best_record = None
+    if relaxed_best is not None:
+        removed, added = relaxed_best
+        need(all(source.four_frontier(s) == frontier(s) for s in added),
+             "relaxed best 4x4/3x3 geometry disagreement")
+        kept = selected_set - set(removed)
+        independently = set().union(*(frontiers[s] for s in kept))
+        independently.update(*(source.four_frontier(s) for s in added))
+        need(len(independently - loss7) == relaxed_min_unsecured
+             and not (independently & win7) and not (set(added) & win6),
+             "relaxed best independent audit failed")
+        relaxed_best_record = {
+            "removed": [f"{s:032x}" for s in removed],
+            "added": [f"{s:032x}" for s in added],
+            "certified_loss7_retained": len(independently & secured),
+            "certified_loss7_total": len(independently & loss7),
+            "distinct_s7": len(independently),
+        }
     return {
         "schema": "n11-central49-2090-exact-three-swap-neighborhood-v1",
         "removed_triples": removed_triples,
@@ -161,6 +194,12 @@ def audit():
         "improving_valid_three_swaps": improving,
         "best_distinct_s7": minimum,
         "best_swap": best_record,
+        "relaxed_baseline_unsecured": 2084,
+        "relaxed_improving_distinct": relaxed_improving_distinct,
+        "relaxed_improving_unsecured": relaxed_improving_unsecured,
+        "relaxed_min_distinct": relaxed_min_distinct,
+        "relaxed_min_unsecured": relaxed_min_unsecured,
+        "relaxed_best_swap": relaxed_best_record,
         "conditional_only": True,
         "outcomes": {"s6": "UNKNOWN", "s4": "UNKNOWN",
                      "two_stone_root": "UNKNOWN", "empty_board": "UNKNOWN"},
