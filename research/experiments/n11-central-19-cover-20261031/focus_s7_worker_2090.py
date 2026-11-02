@@ -72,7 +72,7 @@ def freeze():
     old.update({
         "schema": SCHEMA,
         "source_certificate": proof.CERT.name,
-        "source_sha256": previous.previous.previous.old.receipts.file_digest(proof.CERT),
+        "source_sha256": previous.previous.previous.previous.old.receipts.file_digest(proof.CERT),
         "selected_s6_sha256": proof.geometry.digest(frontiers),
         "total_distinct_s7": len(multiplicity),
         "terminal_certified_s7_in_cover": len(secured),
@@ -175,7 +175,7 @@ def main():
                   args.worklist is not None),
              "plan generation cannot consume reports")
         doc = freeze()
-        previous.previous.old.receipts.atomic_new(
+        previous.previous.previous.old.receipts.atomic_new(
             args.plan_out, json.dumps(doc, ensure_ascii=False, indent=2) + "\n")
         print(json.dumps({"focus_s6": FOCUS,
                           "certified_loss7": len(doc["certified_loss7"]),
@@ -200,7 +200,7 @@ def main():
     if args.merged_out:
         lines = [f"s7workerreport,{wid},{k},original_first,{verdict},unverified"
                  for k, (wid, verdict) in sorted(merged.items())]
-        previous.previous.old.receipts.atomic_new(
+        previous.previous.previous.old.receipts.atomic_new(
             args.merged_out, "\n".join(lines) + ("\n" if lines else ""))
     print(json.dumps({
         "focus_s6": FOCUS,
