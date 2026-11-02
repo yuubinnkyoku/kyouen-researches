@@ -56,6 +56,8 @@ jobs:
         run: python research/experiments/cograph-terminal-20261102/verify.py
       - name: Audit bounded-arity modular substitution terminal polynomial
         run: python research/experiments/modular-substitution-20261102/verify.py
+      - name: Audit all-q weighted terminal totals for modular substitution
+        run: python research/experiments/modular-substitution-20261102/verify_weighted_total.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -189,3 +191,5 @@ jobs:
 # Refresh trigger for K0631 cograph cotree terminal polynomial (2026-11-02).
 
 # Refresh trigger for K0632 bounded-arity graph substitution theorem (2026-11-02).
+
+# Refresh trigger for K0631/K0632 all-q weighted terminal total counts (2026-11-02).
