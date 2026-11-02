@@ -616,3 +616,5 @@
 | [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) | 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) | 11×11の第二終局WIN証明から後退閉包で256,561生局面を帰納証明 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) | コグラフ型q点共円ゲームの極大終局長母関数と構成木による多項式時間厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) | 有界商グラフ置換木のq点共円終局長母関数と多項式時間厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) | 11×11の二つの独立終局戦略から444,570正準WIN類を証明、閉包間の交差と相乗増分は0 | computation | computed | square-outcomes, certificates, verification, search-methods |

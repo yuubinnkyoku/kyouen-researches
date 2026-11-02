@@ -2744,6 +2744,12 @@
 ## [research/experiments/mixed-spider-critical-20261102/verify.py](../../../research/experiments/mixed-spider-critical-20261102/verify.py)
 
 - [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (verifier): グラフ削除24条件・禁止超辺9条件628032部分集合・総数49条件の独立照合
+## [research/experiments/modular-substitution-20261102/proof.md](../../../research/experiments/modular-substitution-20261102/proof.md)
+
+- [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (proof): 商グラフの支配集合と内部支配条件による二変数母関数の全称再帰証明
+## [research/experiments/modular-substitution-20261102/verify.py](../../../research/experiments/modular-substitution-20261102/verify.py)
+
+- [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (verifier): 424置換式の直接部分集合照合と103条件の禁止超辺独立完全列挙
 ## [research/experiments/multipartite-edge-edits-20261102/proof.md](../../../research/experiments/multipartite-edge-edits-20261102/proof.md)
 
 - [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) (proof): 例外端点を固定し残存部数2以上を(A,Q,s)動的計画法で計数する全称証明
@@ -6880,6 +6886,7 @@
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (certificate): 深さ優先で初めて訪れた元先手手番局面の着手列12,068バイトをzlib/base64圧縮、復号SHA-256 83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (certificate): 七石へ着手した後の全終局戦略を含む固定証明書、復号SHA-256 83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b
+- [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (certificate): 第一の固定終局戦略（復号12,068バイト）
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp)
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (solver): 3×3差分整数行列式で決定的戦略を生成、独立検査器とは別実装
@@ -6887,6 +6894,7 @@
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (certificate): 二つ目の終局戦略14,440バイトをzlib/base64圧縮、復号SHA-256 debb5464282eb28e6a30496f8728515433d6f9507ffdeeda1eeaf04e3c5d7de4
 - [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md) (certificate): 出発点の終局戦略、復号14,440バイト・SHA-256 debb5464282eb28e6a30496f8728515433d6f9507ffdeeda1eeaf04e3c5d7de4
+- [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (certificate): 第二の固定終局戦略（復号14,440バイト）
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_second_seven_s6_parents.json)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 二つ目の共有七石から一点を除いた七つの六石正準類
@@ -6930,6 +6938,12 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py)
 
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (verifier): 七つの六石親で4×4整数行列式による全相手応手・終局の独立再生
+## [research/experiments/n11-central-19-cover-20261031/verify_two_terminal_joint_d4_closure.cpp](../../../research/experiments/n11-central-19-cover-20261031/verify_two_terminal_joint_d4_closure.cpp)
+
+- [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (verifier): 両証明書の独立整数幾何再生と三種類のD4帰納閉包の集合比較
+## [research/experiments/n11-central-19-cover-20261031/verify_two_terminal_joint_d4_closure.py](../../../research/experiments/n11-central-19-cover-20261031/verify_two_terminal_joint_d4_closure.py)
+
+- [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (verifier): 固定SHA・件数・改変拒否試験とC++検証器の実行
 ## [research/experiments/n11-central-reply-frontier-20261012/README.md](../../../research/experiments/n11-central-reply-frontier-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 19初手軌道の中央後手応手境界、代替応手順位、次のexact探索候補
@@ -9993,6 +10007,9 @@
 ## [research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md](../../../research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md)
 
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (log): 新規五六石WINの証明・独立CI成功・残る未解決事項
+## [research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md](../../../research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md)
+
+- [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (log): 有限計算の結果、相乗増分が0であること、証明境界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

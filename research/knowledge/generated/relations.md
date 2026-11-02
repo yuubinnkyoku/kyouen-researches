@@ -57,6 +57,7 @@
 - ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 完全指摘・通常プレイの合法手と終局規則
 - ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 完全指摘・通常プレイの合法手と終局規則
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 完全指摘・通常プレイの合法手と手番
+- ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 完全指摘・通常プレイの合法手
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -144,6 +145,7 @@
 - ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 局所WIN証明と空盤勝敗の区別
 - ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 六石局所証明と空盤弱解決の区別
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 局所証明と空盤勝敗の区別
+- ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 局所WIN証明と空盤勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2976,6 +2978,7 @@
 - ← depends_on [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md): 任意グラフの整数共円実現と削除集合による極大配置母関数を使用
 - ← depends_on [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md): 任意グラフの整数共円実現と削除頂点の隣接条件を使用
 - ← depends_on [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md): 任意グラフの整数共円実現と支配集合による極大配置公式
+- ← depends_on [K0632](../items/K0632-modular-substitution-terminal-polynomial.md): 任意グラフの整数共円実現と支配集合による極大配置公式
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3131,6 +3134,7 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局面の局所的勝敗と空盤弱解決の区別
 - ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 固定終局戦略の証明書と独立検証
+- ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 第一の六石終局戦略
 
 ## [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) 11×11の新規共有七石終局戦略から七類の六石元先手WINを証明
 
@@ -3145,6 +3149,7 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局所証明と空盤弱解決の区別
 - → depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 一つの終局WIN7戦略を七つの六石親に持ち上げる方法
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 第二の固定終局戦略と独立終局検証
+- ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 第二の六石終局戦略
 
 ## [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数
 
@@ -3156,8 +3161,23 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と手番
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所証明と空盤勝敗の区別
 - → depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 第二の固定終局戦略と独立終局検証
+- ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 第二終局戦略のD4帰納閉包
 
 ## [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) コグラフ型q点共円ゲームの極大終局長母関数と構成木による多項式時間厳密計数
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と支配集合による極大配置公式
 - → generalizes [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md): 完全多部グラフを含む全コグラフで多項式時間計数が成立
+- ← generalizes [K0632](../items/K0632-modular-substitution-terminal-polynomial.md): 和・完全結合の二分構成木を任意の有界次数商グラフによる置換木へ拡張
+
+## [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) 有界商グラフ置換木のq点共円終局長母関数と多項式時間厳密計数
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と支配集合による極大配置公式
+- → generalizes [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md): 和・完全結合の二分構成木を任意の有界次数商グラフによる置換木へ拡張
+
+## [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) 11×11の二つの独立終局戦略から444,570正準WIN類を証明、閉包間の交差と相乗増分は0
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所WIN証明と空盤勝敗の区別
+- → depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 第一の六石終局戦略
+- → depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 第二の六石終局戦略
+- → depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 第二終局戦略のD4帰納閉包
