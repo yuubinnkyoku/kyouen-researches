@@ -1,0 +1,41 @@
+name: N11 central49 1985 pinned S7 cache cross-audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_1985_s7_cache_reuse.py'
+      - '.github/workflows/n11-central49-1985-cache-audit.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cache-cross-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recompute current conditional geometry and pinned S7 cache intersections
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/audit_1985_s7_cache_reuse.py > /tmp/n11-1985-cache-audit.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          doc = json.loads(Path('/tmp/n11-1985-cache-audit.json').read_text())
+          assert (doc['raw_s7_edges'], doc['distinct_s7']) == (2989, 1985)
+          assert (doc['historical_solver_trusted_loss7_hits'],
+                  doc['historical_solver_trusted_loss7_edge_hits']) == (5, 8)
+          assert doc['fixed14_terminal_backed_loss7_hits'] == 0
+          assert doc['historical_and_fixed14_known_win7_conflicts'] == 0
+          assert doc['focus_s7_children'] == 60
+          assert doc['focus_historical_solver_trusted_loss7_hits'] == 2
+          assert doc['focus_without_historical_loss7_cache_hits'] == 58
+          assert doc['four_worker_loads'] == [15, 15, 15, 15]
+          assert doc['negative_tests_rejected'] == 1
+          assert doc['selected_s6_outcome'] == 'UNKNOWN'
+          assert doc['two_stone_root_outcome'] == 'UNKNOWN'
+          assert doc['empty_board_outcome'] == 'UNKNOWN'
+          print(json.dumps(doc, ensure_ascii=False, indent=2))
+          PY
