@@ -2744,19 +2744,27 @@
 ## [research/experiments/mixed-spider-critical-20261102/verify.py](../../../research/experiments/mixed-spider-critical-20261102/verify.py)
 
 - [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (verifier): グラフ削除24条件・禁止超辺9条件628032部分集合・総数49条件の独立照合
+## [research/experiments/modular-substitution-20261102/amortized-proof.md](../../../research/experiments/modular-substitution-20261102/amortized-proof.md)
+
+- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (proof): 置換木の最小共通祖先への課金でコグラフの終局総数O(n²)・全分布O(n^6)を証明
+- [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (proof): 最小共通祖先への一意な課金による全節点償却計算量の全称証明
 ## [research/experiments/modular-substitution-20261102/proof.md](../../../research/experiments/modular-substitution-20261102/proof.md)
 
 - [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (proof): 商グラフの支配集合と内部支配条件による二変数母関数の全称再帰証明
 ## [research/experiments/modular-substitution-20261102/verify.py](../../../research/experiments/modular-substitution-20261102/verify.py)
 
 - [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (verifier): 424置換式の直接部分集合照合と103条件の禁止超辺独立完全列挙
+## [research/experiments/modular-substitution-20261102/verify_amortized.py](../../../research/experiments/modular-substitution-20261102/verify_amortized.py)
+
+- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): 1099順序木形と600乱数木形の独立課金監査
+- [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (verifier): 全1099順序木形と600乱数木形で課金の重複がないことを独立監査
 ## [research/experiments/modular-substitution-20261102/verify_weighted_total.py](../../../research/experiments/modular-substitution-20261102/verify_weighted_total.py)
 
 - [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): q=4,5,6,9の重み付き支配集合再帰1708条件独立監査
 - [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (verifier): q=4,5,6,9の1708条件で直接部分集合列挙と全係数照合
 ## [research/experiments/modular-substitution-20261102/weighted-total-proof.md](../../../research/experiments/modular-substitution-20261102/weighted-total-proof.md)
 
-- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (proof): q>=4の終局総数に特化した一変数再帰とコグラフO(n³)上界
+- [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (proof): q>=4の終局総数に特化した一変数再帰とコグラフO(n²)上界
 - [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) (proof): q>=4の終局総数に対する一変数重み付き支配集合再帰と計算量上界
 ## [research/experiments/multipartite-edge-edits-20261102/proof.md](../../../research/experiments/multipartite-edge-edits-20261102/proof.md)
 
