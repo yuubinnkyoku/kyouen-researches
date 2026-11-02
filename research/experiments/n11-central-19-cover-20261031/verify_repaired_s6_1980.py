@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Independent 4x4 integer-geometry audit of 18 repaired 2-for-2 S6 swaps.
+"""HISTORICAL audit of the superseded 1980-S7 conditional cover.
 
-This checks only a conditional S5->S6 cover and the distinct S7 obligations.
-No selected S6 is asserted LOSS; no S4, two-stone or empty-root verdict follows.
+Three selected S6 witnesses are now terminal-certified original-first WIN.
+Default execution refuses to treat the historical plan as current. Explicit
+--allow-superseded-plan reproduces geometry only, never an S6 LOSS verdict.
 """
 import argparse
 import collections
@@ -28,6 +29,13 @@ HEADER = [
 ]
 EXPECTED_FINAL = (2972, 1980)
 EXPECTED_STEPS = 18
+# K0624 / shared58 terminal proof (two parents), plus K0638 focus refutation.
+# All three occur in the final historical 46-S6 witness set.
+CURRENT_CERTIFIED_WIN6 = (
+    "00000000000000203808200000000000",
+    "0000000000000020380c000000000000",
+    "0000000000000020380a000000000000",
+)
 
 
 def need(ok, why):
@@ -91,6 +99,10 @@ def audit(rows, data, initial, win6, win7, memo):
              f"4x4 independent frontier mismatch at step {i+1}")
         history.append(len(union))
     need((edges, len(union)) == EXPECTED_FINAL, "final S7 cost changed")
+    certified_conflicts = sorted({f"{s:032x}" for s in current}
+                                 & set(CURRENT_CERTIFIED_WIN6))
+    need(certified_conflicts == sorted(CURRENT_CERTIFIED_WIN6),
+         "historical plan no longer matches its three certified WIN6 conflicts")
     return {
         "schema": "n11-central49-repaired-46-s6-1980-independent-audit-v1",
         "s5_covered": 94,
@@ -101,6 +113,9 @@ def audit(rows, data, initial, win6, win7, memo):
         "distinct_s7_saved": 2711 - len(union),
         "raw_s7_edges": edges,
         "known_win6_conflicts": len(current & win6),
+        "current_certified_win6_conflicts": len(certified_conflicts),
+        "current_certified_win6_keys": certified_conflicts,
+        "plan_status": "SUPERSEDED_BY_CERTIFIED_WIN6",
         "known_win7_conflicts": len(union & win7),
         "history": history,
         "conditional_only": True,
@@ -115,7 +130,12 @@ def audit(rows, data, initial, win6, win7, memo):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--negative", action="store_true")
+    parser.add_argument("--allow-superseded-plan", action="store_true",
+                        help="historical geometry replay only; never dispatch work")
     args = parser.parse_args()
+    need(args.allow_superseded_plan,
+         "SUPERSEDED_BY_CERTIFIED_WIN6: three selected S6 are proven WIN; "
+         "historical replay requires --allow-superseded-plan")
     need(hashlib.sha256(repaired.WIN_CERT.read_bytes()).hexdigest()
          == repaired.WIN_SHA, "terminal-certified WIN6 artifact changed")
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
