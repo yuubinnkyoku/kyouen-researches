@@ -93,6 +93,8 @@ def parse_certificate(text):
 
 
 def replay(strategy):
+    need(ROOT.bit_count() == 6 and all(det4(*quad) != 0
+         for quad in combinations(points(ROOT), 4)), "unsafe six-stone root")
     need(strategy.get(ROOT) == 70, "root strategy move changed")
     need(len(strategy) == 10881, "unexpected strategy row count")
     need(legal(ROOT) & (1 << 70), "root move illegal")
