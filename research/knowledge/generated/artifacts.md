@@ -2649,6 +2649,12 @@
 ## [research/experiments/graph-star-domination-bound-20261101/verify.py](../../../research/experiments/graph-star-domination-bound-20261101/verify.py)
 
 - [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (verifier): 792グラフ・重み条件の独立列挙と12条件の禁止超辺全部分集合列挙
+## [research/experiments/graph-star-fixed-defect-bit-fpt-20261103/proof.md](../../../research/experiments/graph-star-fixed-defect-bit-fpt-20261103/proof.md)
+
+- [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) (proof): 固定欠損計数の有理数除去と二進ビット計算量 O(f(d)L^5) の全称証明
+## [research/experiments/graph-star-fixed-defect-bit-fpt-20261103/verify.py](../../../research/experiments/graph-star-fixed-defect-bit-fpt-20261103/verify.py)
+
+- [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) (verifier): 16510係数の独立した整数置換・直接列挙照合
 ## [research/experiments/graph-star-fixed-defect-fpt-20261103/proof.md](../../../research/experiments/graph-star-fixed-defect-fpt-20261103/proof.md)
 
 - [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) (proof): 競合グラフの有界次数と独立集合多項式の連結支持対数展開による f(d)(n+e) 算術演算の全称証明
