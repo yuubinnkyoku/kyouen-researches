@@ -50,6 +50,8 @@ def main():
             or result["layer_counts_6_to_19"] != LAYERS
             or result["certified_s6_classes"] != 7
             or result["certified_s7_classes"] != 1
+            or result["additional_d4_classes"] != 551
+            or result["additional_by_layer_6_to_19"] != [0, 0, 0, 0, 38, 6, 156, 20, 285, 46, 0, 0, 0, 0]
             or sum(result["added_6_to_18"]) != 256744 - 22364
             or result["two_stone_root"] != "UNKNOWN"
             or result["empty_board"] != "UNKNOWN"):
