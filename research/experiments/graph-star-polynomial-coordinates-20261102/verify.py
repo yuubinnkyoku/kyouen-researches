@@ -138,6 +138,14 @@ def run():
                 n,used,bound,bits=audit(t,edges,q,full=(1+t+(q-3)*len(edges)<=12))
                 cases+=1; max_bits=max(max_bits,bits);max_slope=max(max_slope,used)
                 fulls+=int(n<=12)
+    for t in (2,3):
+        possible=list(combinations(range(1,t+1),2))
+        for mask in range(1,1<<len(possible)):
+            edges=[e for j,e in enumerate(possible) if mask>>j&1]
+            for q in (6,7):
+                n,used,bound,bits=audit(t,edges,q,full=(1+t+(q-3)*len(edges)<=12))
+                cases+=1; max_bits=max(max_bits,bits);max_slope=max(max_slope,used)
+                fulls+=int(n<=12)
     for t,edges,q in [(5,[(1,2),(2,3),(3,4),(4,5)],4),
                       (5,[(1,2),(1,3),(1,4),(1,5)],5),
                       (5,[(1,2),(2,3),(3,4),(4,5),(1,5)],4)]:
