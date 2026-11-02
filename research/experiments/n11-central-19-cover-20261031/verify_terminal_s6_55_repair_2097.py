@@ -62,11 +62,11 @@ def reconstruct():
     require(len(seven_parents) == 7 and base.decode(ROOT) in seven_parents
             and len(selected & seven_parents) == 1,
             "seven terminal WIN6 parents conflict with repaired selection")
-    known_win6 = known_win6 | seven_parents
-    return incidence, costs, selected, known_win6, known_win7
+    return incidence, costs, selected, known_win6, seven_parents, known_win7
 
 
-def audit(incidence, costs, selected, known_win6, known_win7):
+def audit(incidence, costs, selected, prior_win6, seven_parents, known_win7):
+    known_win6 = prior_win6 | seven_parents
     memo = {}
 
     def kids(board):
@@ -79,8 +79,10 @@ def audit(incidence, costs, selected, known_win6, known_win7):
         return memo[board]
 
     candidates = sorted(k for k in incidence
-                        if k not in selected and k not in known_win6)
+                        if k not in selected and k not in prior_win6)
     all_options = []
+    geometric_pairs = 0
+    refuted_pairs = 0
     single_replacements = 0
     for other in sorted(selected - {base.decode(ROOT)}):
         fixed = selected - {base.decode(ROOT), other}
@@ -90,6 +92,10 @@ def audit(incidence, costs, selected, known_win6, known_win7):
         single_replacements += sum(missing <= incidence[k] for k in touching)
         for u, v in itertools.combinations(touching, 2):
             if not missing <= incidence[u] | incidence[v]:
+                continue
+            geometric_pairs += 1
+            if u in seven_parents or v in seven_parents:
+                refuted_pairs += 1
                 continue
             chosen = fixed | {u, v}
             require(len(chosen) == 46 and not (chosen & known_win6)
@@ -107,15 +113,18 @@ def audit(incidence, costs, selected, known_win6, known_win7):
                                 base.key(other), base.key(u), base.key(v)))
     require(single_replacements == 0,
             "one-for-one replacement unexpectedly became possible")
+    require(geometric_pairs == 68 and refuted_pairs == 2,
+            "shared terminal S7 did not refute exactly two repair pairs")
     require(len(all_options) == EXPECTED[0],
-            "number of exhaustive 2-for-2 repairs changed")
+            "number of exhaustive nonconflicting 2-for-2 repairs changed")
     best = min(all_options)
     require(best == (2097, 2986, OTHER, *ADDED),
             "claimed best fixed44 repair no longer optimal")
-    return {"eligible_repair_pairs": len(all_options),
+    return {"geometric_repair_pairs": geometric_pairs,
+            "eligible_repair_pairs": len(all_options),
             "single_replacement_options": single_replacements,
-        "refuted_repair_pairs_by_shared_s7": 2,
-        "excluded_terminal_win6_parents": 7,
+        "refuted_repair_pairs_by_shared_s7": refuted_pairs,
+        "excluded_terminal_win6_parents": len(seven_parents),
             "selected_s6": 46, "s5_covered": 94,
             "distinct_s7": best[0], "raw_s7_edges": best[1],
             "removed": [ROOT, best[2]], "added": list(best[3:]),
@@ -134,7 +143,7 @@ def verify_manifest(doc, result):
                 "GEOMETRY_ONLY_CONDITIONAL_S6_LOSS_WITNESS_COVER_NOT_VERDICTS"
             and doc.get("outcomes") == UNKNOWN,
             "manifest identity/provenance/outcome altered")
-    for field in ("eligible_repair_pairs", "single_replacement_options",
+    for field in ("geometric_repair_pairs", "eligible_repair_pairs", "single_replacement_options",
                   "refuted_repair_pairs_by_shared_s7",
                   "excluded_terminal_win6_parents",
                   "selected_s6", "s5_covered", "distinct_s7", "raw_s7_edges",
