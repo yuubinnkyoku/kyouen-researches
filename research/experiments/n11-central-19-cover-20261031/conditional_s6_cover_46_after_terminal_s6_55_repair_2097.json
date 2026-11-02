@@ -1,9 +1,9 @@
 {
-  "schema": "n11-central49-terminal-win6-fixed44-repair-v1",
+  "schema": "n11-central49-terminal-win6-fixed44-repair-v2",
   "source": "conditional_s6_cover_46_after_shared58_win6_repair_2089.json",
   "terminal_certificate": "terminal_s6_55_strategy.b64",
   "terminal_raw_sha256": "83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b",
-  "eligible_repair_pairs": 68,
+  "eligible_repair_pairs": 66,
   "single_replacement_options": 0,
   "selected_s6": 46,
   "s5_covered": 94,
@@ -26,5 +26,7 @@
     "two_stone_root": "UNKNOWN",
     "empty_board": "UNKNOWN"
   },
-  "caveat": "The selected six-stone root 00000000000200801002000081000000 is independently terminal-proved original-first WIN. The previous 2089-S7 conditional LOSS plan is refuted. This 2097-S7 plan is the minimum among 2-for-2 replacements that remove that root and one other selected witness, keep the remaining 44, and exclude known original-first WIN6; it does not prove any selected S6 LOSS, S4 LOSS, two-stone closure or empty-board outcome."
+  "caveat": "The original 2089-S7 conditional LOSS plan is refuted by a terminal-proved WIN6. Its winning S7 child proves seven distinct WIN6 parents. Of 68 geometric two-for-two replacements keeping the other 44 fixed, two contain those certified WIN6 parents and are invalid, leaving 66 nonconflicting repairs. The selected 2097-S7 repair is minimal only in this fixed44/two-for-two family and proves no selected S6 LOSS or higher-root outcome.",
+  "refuted_repair_pairs_by_shared_s7": 2,
+  "excluded_terminal_win6_parents": 7
 }
