@@ -26,7 +26,10 @@ jobs:
           assert d["saved_distinct_s7"] == 2
           assert d["selected_s6"] == 46 and d["covered_s5"] == 94
           assert d["known_win6_conflicts"] == d["known_win7_conflicts"] == 0
-          assert d["negative_tests"] == 6
+          assert d["negative_tests"] == 8
+          assert d["raw_s7_edges"] == 2984
+          assert d["terminal_certified_loss7"] == 6
+          assert d["unsecured_by_k0644"] == 2085
           assert set(d["outcomes"].values()) == {"UNKNOWN"}
           print(json.dumps(d, ensure_ascii=False, indent=2))
           PY
