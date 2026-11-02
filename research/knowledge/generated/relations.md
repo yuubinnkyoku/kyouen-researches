@@ -160,6 +160,7 @@
 - ← depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 局所勝敗と11×11空盤弱解決の区別
 - ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 条件付き証明計画と勝敗の区別
+- ← depends_on [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md): 条件付き計算量と勝敗証明の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3298,6 +3299,8 @@
 - → depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 既存五根と現行被覆の交差4類
 - ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 終局証明由来の七石LOSS23類と現行被覆との交差
 - ← depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 五つの終局戦略と八石親から導出したLOSS7の23類
+- ← depends_on [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md): 五つの終局戦略から導出した独立証明済みLOSS7の23類
+- ← depends_on [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
 
 ## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
 
@@ -3329,3 +3332,20 @@
 - → depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 確定WIN6を除外した現行46証人・2,154七石類の出発点
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 五つの終局戦略と八石親から導出したLOSS7の23類
 - → supersedes [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 同じ94五石被覆を保ったまま追加で60七石類を削減した条件付き計画
+- ← depends_on [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md): 確定WIN6を除外した46六石証人・2,094七石類の条件付き被覆
+- ← depends_on [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 46証人・2,094類の出発点と二度の三証人交換
+- ← supersedes [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 同じ94五石被覆を維持し、三証人交換を一回追加して七石義務を一類削減
+
+## [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) 11×11中央49の現行2,094七石類は最大二証人交換で改善不能
+
+- → depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 確定WIN6を除外した46六石証人・2,094七石類の条件付き被覆
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 五つの終局戦略から導出した独立証明済みLOSS7の23類
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き計算量と勝敗証明の区別
+- ← depends_on [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 二証人以下では改善できないという厳密な局所最適性
+
+## [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) 11×11中央49の条件付き七石義務を三証人交換で2,094類から2,093類へ削減
+
+- → depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 46証人・2,094類の出発点と二度の三証人交換
+- → depends_on [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md): 二証人以下では改善できないという厳密な局所最適性
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
+- → supersedes [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 同じ94五石被覆を維持し、三証人交換を一回追加して七石義務を一類削減

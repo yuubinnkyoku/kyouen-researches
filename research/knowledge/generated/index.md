@@ -634,3 +634,5 @@
 | [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) | 森の極大終局長は支配誘導成分数で決まり、星森では任意の部分和スペクトルを実現できる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) | グラフ星型共円ゲームの全終局長は葉と高次数核で計数でき、最短直上の欠番は次数2で決まる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants, search-methods |
 | [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) | 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) | 11×11中央49の現行2,094七石類は最大二証人交換で改善不能 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) | 11×11中央49の条件付き七石義務を三証人交換で2,094類から2,093類へ削減 | computation | computed | square-outcomes, certificates, verification, search-methods |
