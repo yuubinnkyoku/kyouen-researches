@@ -1,0 +1,31 @@
+name: N11 central49 post-seven-WIN6 2301 conditional repair audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_repair_2301.json'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_central49_post_seven_win6_repair_2301.py'
+      - '.github/workflows/n11-central49-post-seven-win6-repair-2301.yml'
+  workflow_dispatch:
+
+jobs:
+  independent-geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently recompute seven-WIN6 exclusion and 2301 S7 frontier
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_central49_post_seven_win6_repair_2301.py --negative > "$RUNNER_TEMP/audit.json"
+          python3 - "$RUNNER_TEMP/audit.json" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1], encoding="utf-8"))
+          assert d["source_historical_plan"] == "SUPERSEDED_BY_CERTIFIED_WIN6"
+          assert len(d["removed_win6"]) == 7 and len(d["new_win6_from_K0638_parent_lift"]) == 7
+          assert (d["comparison_win6"], d["comparison_win7"]) == (145, 23)
+          assert (d["selected_s6"], d["covered_s5"], d["raw_s7_edges"], d["distinct_s7"]) == (46, 94, 2992, 2301)
+          assert d["known_win6_conflicts"] == d["known_win7_conflicts"] == 0
+          assert d["negative_tests"] == 4 and d["conditional_only"]
+          assert d["s6_outcome"] == d["s4_outcome"] == d["two_stone_root_outcome"] == d["empty_board_outcome"] == "UNKNOWN"
+          print(json.dumps(d, indent=2))
+          PY
