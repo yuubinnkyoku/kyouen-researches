@@ -78,9 +78,9 @@ def legal(mask):
     return FULL & ~banned
 
 
-def parse(data, expected_root):
+def parse(data, expected_root, header=HEADER):
     lines = data.decode('ascii').splitlines()
-    require(len(lines) >= 3 and lines[0] == HEADER, 'wrong certificate header')
+    require(len(lines) >= 3 and lines[0] == header, 'wrong certificate header')
     require(lines[1] == 'root ' + expected_root, 'wrong certificate root')
     strategy = {}
     prev = ''
@@ -99,7 +99,7 @@ def parse(data, expected_root):
     return strategy
 
 
-def verify(root, strategy):
+def verify(root, strategy, winner_parity=0):
     require(root.bit_count() == 7, 'root must have seven stones')
     points = [i for i in range(N) if root & (1 << i)]
     require(all(det4(q) != 0 for q in combinations(points, 4)),
@@ -116,12 +116,12 @@ def verify(root, strategy):
         seen.add(board)
         options = legal(board)
         if options == 0:
-            require(depth % 2 == 1, 'second player has no move')
+            require(depth % 2 != winner_parity, 'winning player has no move')
             require(board not in strategy, 'terminal has strategy move')
             terminals.append(board.bit_count())
             continue
-        if depth % 2 == 0:
-            require(board in strategy, 'missing second-player move')
+        if depth % 2 == winner_parity:
+            require(board in strategy, 'missing winning-player move')
             winner_states.add(board)
             move = strategy[board]
             require(options & (1 << move), 'illegal strategy move')
