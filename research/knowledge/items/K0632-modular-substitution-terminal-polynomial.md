@@ -19,6 +19,12 @@ artifacts:
 - path: research/experiments/modular-substitution-20261102/verify.py
   role: verifier
   note: 424置換式の直接部分集合照合と103条件の禁止超辺独立完全列挙
+- path: research/experiments/modular-substitution-20261102/weighted-total-proof.md
+  role: proof
+  note: q>=4の終局総数に対する一変数重み付き支配集合再帰と計算量上界
+- path: research/experiments/modular-substitution-20261102/verify_weighted_total.py
+  role: verifier
+  note: q=4,5,6,9の1708条件で直接部分集合列挙と全係数照合
 scope: 少なくとも1辺を持つ有限単純グラフGを、各内部節点が高々k個の非空モジュールを持つグラフ置換式木で与える。任意q>=4のK0602整数共円構成。標準全格子盤は対象外。
 evidence: 商グラフ上の支配集合の必要十分条件と誘導辺数の全称恒等式に基づく帰納証明。有限完全列挙は独立監査。
 ---
@@ -40,6 +46,14 @@ evidence: 商グラフ上の支配集合の必要十分条件と誘導辺数の�
 \]
 
 で計算できる。k=2の和・完全結合の場合はK0631を含み、k=4ではコグラフでない無界木幅族も扱う。
+
+**q>=4の極大配置総数のみ**なら、誘導辺数を次数として保存せず、各残存頂点数aについて重み付き係数を保持する一変数再帰により
+
+\[
+\boxed{O(2^k k^2 n^{k+1})\text{ 回の整数演算}}
+\]
+
+で厳密計算できる。k=2のコグラフではO(n³)回。r=q−3とし、支配集合Rの誘導辺数e(R)にr^{e(R)}を掛けて合計すれば、終局総数は1+Σ_{R支配}r^{e(R)}である。全称証明と独立検証1708条件は[専用証明](../../experiments/modular-substitution-20261102/weighted-total-proof.md)・[専用検証器](../../experiments/modular-substitution-20261102/verify_weighted_total.py)に保存した。q=4のO(2^k k² n)上界は引き続き有効。
 
 例としてP4の各頂点をK_mへ置換したグラフG_mは誘導P4を持ち、K_(2m)を含むため木幅・頂点被覆数がともに無界である。a=2^m−1とするとq=4の極大配置総数は
 
