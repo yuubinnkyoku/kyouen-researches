@@ -25,6 +25,6 @@
 
 新しい六石生局面6個は既にK0628で共有七石から持ち上げて証明した親局面であり、**新規の六石正準WIN類を6類追加したわけではない**。大部分の増加は石数10〜16の中間局面で、既存証明を他の探索へ再利用できる候補である。
 
-独立C++検証器 `verify_terminal_s6_60_closure.cpp` と、固定SHAを検査して一時復号・コンパイル・実行する `verify_terminal_s6_60_closure.py` を保存。手元では約17秒・約110MBで全数を再現した。専用CI `n11-central49-terminal-s6-closure.yml` の結果は完了後に確認する。
+独立C++検証器 `verify_terminal_s6_60_closure.cpp` と、固定SHAを検査して一時復号・コンパイル・実行する `verify_terminal_s6_60_closure.py` を保存。手元では約17秒・約110MBで全数を再現した。専用CI `n11-central49-terminal-s6-closure.yml` は [実行41382200963](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41382200963) で成功し、終局再生と後退閉包の全件数を独立検査した。
 
 **限界**：これは既存終局証明からの局所的な後退閉包であり、盤面全体の256,561局面を新たに探索した結果ではない。既存の全勝敗cacheへの統合、二石root閉鎖、六石LOSS証明はいずれも未実施。条件付き46証人・2,207七石類の計画を変更する証拠もない。標準11×11空盤勝敗は**UNKNOWN**。
