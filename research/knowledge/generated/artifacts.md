@@ -3,6 +3,10 @@
 ## [.github/workflows/lean-foundations.yml](../../../.github/workflows/lean-foundations.yml)
 
 - [K0519](../items/K0519-lean-rule-and-capacity-consequences.md) (verifier): repository指定のLean toolchainで新規moduleも検査するCI
+## [.github/workflows/n11-central49-five-loss7-terminal.yml](../../../.github/workflows/n11-central49-five-loss7-terminal.yml)
+
+- [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (source): 五つの戦略を再生成して独立検証し証明書をActions成果物として保存
+- [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (source): 五つのLOSS7と一つの反証WIN7を再生成・独立検証するCI
 ## [Kyouen/CertificateSoundness.lean](../../../Kyouen/CertificateSoundness.lean)
 
 - [K0007](../items/K0007-ranked-and-or-certificates.md) (lean): winning_sound / losing_sound / certificate_soundによるrank帰納
@@ -2580,6 +2584,12 @@
 ## [research/experiments/graph-star-clique-components-20261101/verify.py](../../../research/experiments/graph-star-clique-components-20261101/verify.py)
 
 - [K0606](../items/K0606-graph-star-clique-component-threshold.md) (verifier): 支配集合直接列挙40条件、禁止超辺全局面列挙6条件、単一成分60条件
+## [research/experiments/graph-star-count-complexity-20261102/proof.md](../../../research/experiments/graph-star-count-complexity-20261102/proof.md)
+
+- [K0635](../items/K0635-graph-star-terminal-count-sharp-complexity.md) (proof): #VertexCoverから分割グラフへの単一照会・B進最高位抽出還元の全称証明
+## [research/experiments/graph-star-count-complexity-20261102/verify.py](../../../research/experiments/graph-star-count-complexity-20261102/verify.py)
+
+- [K0635](../items/K0635-graph-star-terminal-count-sharp-complexity.md) (verifier): 814グラフの桁抽出、1255条件の支配集合直接列挙、10条件の禁止超辺直接列挙
 ## [research/experiments/graph-star-domination-bound-20261101/proof.md](../../../research/experiments/graph-star-domination-bound-20261101/proof.md)
 
 - [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (proof): 支配集合恒等式、全域森二色分割による全称上界とq=4の無条件指数的非集中
@@ -2592,6 +2602,12 @@
 ## [research/experiments/graph-star-poisson-20261101/verify.py](../../../research/experiments/graph-star-poisson-20261101/verify.py)
 
 - [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md) (verifier): 禁止超辺直接完全列挙9条件と整数式照合483条件
+## [research/experiments/graph-star-polynomial-coordinates-20261102/proof.md](../../../research/experiments/graph-star-polynomial-coordinates-20261102/proof.md)
+
+- [K0636](../items/K0636-polynomial-bit-graph-star-realization.md) (proof): 放物線芯点と有界整数傾きによる多項式ビット長の全称構成、整数幾何入力への#P困難性移送
+## [research/experiments/graph-star-polynomial-coordinates-20261102/verify.py](../../../research/experiments/graph-star-polynomial-coordinates-20261102/verify.py)
+
+- [K0636](../items/K0636-polynomial-bit-graph-star-realization.md) (verifier): 161条件の独立4×4行列式監査と136条件の終局直接完全列挙
 ## [research/experiments/graph-star-qpoint-20261101/proof.md](../../../research/experiments/graph-star-qpoint-20261101/proof.md)
 
 - [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (proof): 無界q・無界グラフの整数幾何構成、全安全・極大母関数、最短極大個数の全称証明とq5十点座標
@@ -6903,6 +6919,10 @@
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_three_swap_chain.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_three_swap_chain.json)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (certificate): 三段階の六石証人交換、各段階の七石辺数・類数、選択集合のSHA-256
+## [research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp](../../../research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp)
+
+- [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (solver): 3×3整数差分行列式で五つの七石局面の終局戦略を決定的に再生成
+- [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (solver): 元先手WIN7極性でも戦略を決定的に生成できる整数3×3探索器
 ## [research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py](../../../research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (solver): 有限の全数探索を繰り返し1,985類まで縮小、局所改善不能を確認
@@ -6932,6 +6952,12 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 別方式の4×4整数Bareissによる三段階の幾何・被覆・既知WIN非衝突の独立再計算
+## [research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py](../../../research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py)
+
+- [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (verifier): 別実装の4×4整数Bareissで相手の全合法応手を独立検証、固定SHA-256と負例も検査
+## [research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py](../../../research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py)
+
+- [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (verifier): 元後手の全合法応手を別方式4×4整数Bareissで検査し六石の勝ち手を確認
 ## [research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py](../../../research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 旧46証人と七親の交差を独立4×4整数幾何で検査
@@ -10017,6 +10043,12 @@
 ## [research/log/2026-10-23-quadratic-pencil-isomorphism.md](../../../research/log/2026-10-23-quadratic-pencil-isomorphism.md)
 
 - [K0563](../items/K0563-quadratic-pencil-3x3-isomorphism-classes.md) (log): 候補03の実行記録と残課題
+## [research/log/2026-11-02-n11-central49-five-terminal-loss7-cache-upgrade.md](../../../research/log/2026-11-02-n11-central49-five-terminal-loss7-cache-upgrade.md)
+
+- [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (log): 各七石局面の証明規模、既存cacheとの関係、信頼境界
+## [research/log/2026-11-02-n11-central49-focus-s6-win-refutes-1985.md](../../../research/log/2026-11-02-n11-central49-focus-s6-win-refutes-1985.md)
+
+- [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (log): 反証戦略の統計、SHA-256、旧証人計画への影響と再計画条件
 ## [research/log/2026-11-02-n11-central49-second-s7-2207-repair.md](../../../research/log/2026-11-02-n11-central49-second-s7-2207-repair.md)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (log): 条件付き被覆の修復と証明境界

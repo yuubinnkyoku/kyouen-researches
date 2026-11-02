@@ -618,4 +618,8 @@
 | [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) | コグラフ型q点共円ゲームの極大終局長母関数と構成木による多項式時間厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0632](../items/K0632-modular-substitution-terminal-polynomial.md) | 有界商グラフ置換木のq点共円終局長母関数と多項式時間厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) | 11×11の二つの独立終局戦略から444,570正準WIN類を証明、閉包間の交差と相乗増分は0 | computation | computed | square-outcomes, certificates, verification, search-methods |
-| [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) | 11×11中央49の条件付き六石被覆は七石1,985類、固定集合からの最大三証人交換では改善不能 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) | 11×11中央49の旧条件付き六石被覆は七石1,985類、固定集合からの最大三証人交換では改善不能 | computation | superseded | square-outcomes, certificates, verification, search-methods |
+| [K0635](../items/K0635-graph-star-terminal-count-sharp-complexity.md) | グラフ星型4点共円ゲームの極大終局総数計数は組合せ入力で#P完全 | proposition | proved | geometry, maximal-safe, statistics, variants, search-methods |
+| [K0636](../items/K0636-polynomial-bit-graph-star-realization.md) | グラフ星型共円構成の多項式ビット長化と整数座標入力の極大配置計数#P完全性 | proposition | proved | geometry, maximal-safe, statistics, variants, search-methods |
+| [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) | 11×11中央49の条件付き七石義務1,985類のうち5類を終局戦略で独立証明 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) | 11×11中央49の1,985七石条件付き計画は選択六石WINの終局証明で失効 | computation | computed | square-outcomes, certificates, verification, search-methods |
