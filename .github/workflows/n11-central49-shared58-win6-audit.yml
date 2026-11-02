@@ -1,0 +1,24 @@
+name: n11 shared58 S6 terminal WIN certificate audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert"
+      - "research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py"
+      - "research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_exclude_certified_win6.json"
+      - "research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_repaired_1980_swaps.txt"
+      - ".github/workflows/n11-central49-shared58-win6-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independently replay every legal opponent response and reject tampering
+        run: python3 research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py --negative
