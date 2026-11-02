@@ -20,6 +20,7 @@ import verify_conditional_s6_cover_46 as base
 import verify_s7_shared_frontier_46 as geom4
 import verify_shared58_win6_repair_2089 as previous
 import verify_terminal_s6_55_compact as terminal
+import verify_terminal_s7_seven_win6 as seven
 
 HERE = Path(__file__).resolve().parent
 CERT = HERE / "terminal_s6_55_strategy.b64"
@@ -28,7 +29,7 @@ ROOT = "00000000000200801002000081000000"
 OTHER = "00000000000000203820000002000000"
 ADDED = ["00000000000000203820000000080000",
          "00000000000880801002000040000000"]
-EXPECTED = (68, 2097, 2986)
+EXPECTED = (66, 2097, 2986)
 UNKNOWN = {"s6": "UNKNOWN", "s4": "UNKNOWN",
            "two_stone_root": "UNKNOWN", "empty_board": "UNKNOWN"}
 
@@ -56,7 +57,12 @@ def reconstruct():
             "old S5 cover incomplete")
     require(base.decode(ROOT) not in known_win6,
             "new proof was already in the previous comparison set")
-    known_win6 = known_win6 | {base.decode(ROOT)}
+    shared = seven.audit()
+    seven_parents = {base.decode(row["canonical_s6"]) for row in shared["parents"]}
+    require(len(seven_parents) == 7 and base.decode(ROOT) in seven_parents
+            and len(selected & seven_parents) == 1,
+            "seven terminal WIN6 parents conflict with repaired selection")
+    known_win6 = known_win6 | seven_parents
     return incidence, costs, selected, known_win6, known_win7
 
 
@@ -108,6 +114,8 @@ def audit(incidence, costs, selected, known_win6, known_win7):
             "claimed best fixed44 repair no longer optimal")
     return {"eligible_repair_pairs": len(all_options),
             "single_replacement_options": single_replacements,
+        "refuted_repair_pairs_by_shared_s7": 2,
+        "excluded_terminal_win6_parents": 7,
             "selected_s6": 46, "s5_covered": 94,
             "distinct_s7": best[0], "raw_s7_edges": best[1],
             "removed": [ROOT, best[2]], "added": list(best[3:]),
@@ -117,7 +125,7 @@ def audit(incidence, costs, selected, known_win6, known_win7):
 
 
 def verify_manifest(doc, result):
-    require(doc.get("schema") == "n11-central49-terminal-win6-fixed44-repair-v1"
+    require(doc.get("schema") == "n11-central49-terminal-win6-fixed44-repair-v2"
             and doc.get("source") ==
                 "conditional_s6_cover_46_after_shared58_win6_repair_2089.json"
             and doc.get("terminal_certificate") == CERT.name
@@ -127,6 +135,8 @@ def verify_manifest(doc, result):
             and doc.get("outcomes") == UNKNOWN,
             "manifest identity/provenance/outcome altered")
     for field in ("eligible_repair_pairs", "single_replacement_options",
+                  "refuted_repair_pairs_by_shared_s7",
+                  "excluded_terminal_win6_parents",
                   "selected_s6", "s5_covered", "distinct_s7", "raw_s7_edges",
                   "removed", "added", "known_win6_conflicts",
                   "known_win7_conflicts"):
