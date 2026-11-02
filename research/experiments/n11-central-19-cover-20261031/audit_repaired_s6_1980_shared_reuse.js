@@ -16,6 +16,7 @@ const files = {
   loss6: ['research/experiments/n11-boundary-recovery-20261006/output/post-d5136a93-saved-s6-loss-cache-projection.csv', '9d4c4d56e0b8a3ebfaea5271dbaf7895e79ab175'],
   loss8Roots35: ['research/experiments/n11-s8-to-s7-lift238-20261020/roots35.txt', '0e95f941079f256968d72988192a3ca3b55293ec'],
   loss8Cert3: ['research/experiments/n11-s7-terminal-loss12-20261024/certificate.json', '5fa68e34b178f25dac4c4619310199ea75df5812'],
+  newWin6: [here + 'shared58_s6_win_strategy.cert', 'a24ee0c9633331671003576a825e070535abd295'],
 };
 function need(ok, message) { if (!ok) throw Error(message); }
 function pinned([name, expected]) {
@@ -141,6 +142,12 @@ function checkNoWinConflicts(frontier, win7) {
 function audit() {
   const data = Object.fromEntries(Object.entries(files).map(([k,v]) => [k,pinned(v)]));
   const witnesses = selected(data.source, data.swaps);
+  // This script is a geometric cross-audit, not a substitute for the
+  // independent 4x4 full-terminal verifier of the pinned WIN strategy.
+  need(crypto.createHash('sha256').update(data.newWin6).digest('hex')
+       === '10e816538fbe6cc0062e2d0dd0fe96930ef294101812701305e1595b531b21da'
+       && data.newWin6.startsWith('# n11-original-first-WIN-strategy-v1\\nBOARD 11\\nROOT 00000000000000203808200000000000\\n'),
+       'new WIN6 certificate identity changed');
   const cacheLoss7 = s7Inventory(data.loss7,2232);
   const historicalWin7 = s7Inventory(data.win7,17);
   const lift = JSON.parse(data.lift);
@@ -194,6 +201,14 @@ function audit() {
     local.push({s6:k,children:child});
   }
   const frontier = new Set(incidence.keys());
+  const newWin6A = '00000000000000203808200000000000';
+  const newWin6B = '0000000000000020380c000000000000';
+  const win7A = canonical([...points(newWin6A,6),70]);
+  const win7B = canonical([...points(newWin6B,6),75]);
+  need(witnesses.includes(newWin6A) && witnesses.includes(newWin6B)
+       && win7A === win7B && frontier.has(win7A)
+       && incidence.get(win7A) === 2,
+       'new terminal WIN7 does not refute two selected S6 witnesses');
   const terminalFromLoss8Hits = [...frontier].filter(k => terminalFromLoss8.has(k));
   need(terminalFromLoss8Hits.length === 0,
        'repaired frontier overlaps independently certified LOSS8 reverse closure');
@@ -236,7 +251,7 @@ function audit() {
   }
   need(rejected === 4, 'negative tests did not run');
   return {
-    schema:'n11-central49-repaired1980-s7-cross-inventory-audit-v1',
+    schema:'n11-central49-repaired1980-s7-cross-inventory-audit-v2',
     selectedS6:46,rawS7Edges:edges,distinctS7:frontier.size,
     s7Multiplicity:hist,sharedS7:hist[2],uniqueS7:hist[1],
     historicalSolverTrustedLoss7Hits:cached.length,
@@ -245,10 +260,13 @@ function audit() {
     terminalBackedLoss7From38Loss8Roots:terminalFromLoss8.size,
     terminalBackedLoss7From38Loss8Hits:terminalFromLoss8Hits.length,
     knownWin7Conflicts:0,historicalLoss6WitnessOverlap:0,
+    newlyCertifiedWin7FrontierHits:1,certifiedWin7Key:win7A,
+    certifiedWin6Witnesses:[newWin6A,newWin6B],
+    conditionalLossCover:'REFUTED_BY_TWO_TERMINAL_WIN6',
     noHitInTheseInventories:frontier.size-cached.length-terminal.length,
     shortestS6:shortest,shortestS6WithAtLeast50SharedChildren:shortShared,
-    negativeTests:rejected,proofBoundary:'GEOMETRY_AND_CACHE_REUSE_ONLY',
-    s6Outcome:'UNKNOWN',twoStoneRootOutcome:'UNKNOWN',emptyBoardOutcome:'UNKNOWN'
+    negativeTests:rejected,proofBoundary:'GEOMETRY_CACHE_REUSE_AND_PINNED_CERTIFICATE_IDENTITY',
+    s6Outcome:'TWO_CERTIFIED_WIN_44_UNKNOWN',twoStoneRootOutcome:'UNKNOWN',emptyBoardOutcome:'UNKNOWN'
   };
 }
 console.log(JSON.stringify(audit(),null,2));
