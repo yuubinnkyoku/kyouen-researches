@@ -1,4 +1,4 @@
-name: N11 central49 2090 terminal-gated focused worker audit
+name: N11 central49 2090 refuted focus fail-closed audit
 
 on:
   push:
@@ -7,25 +7,34 @@ on:
       - '.github/workflows/n11-central49-2090-focus.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  focus-2090:
+  focus-2090-refusal:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
-      - name: Replay 2090 proof and test focused worker ownership and safe merge
+      - name: Recheck terminal WIN6 and reject all 2090 dispatch/merge entry points
         run: |
           set -euo pipefail
-          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2090.py --self-test > "$RUNNER_TEMP/n11-2090-focus.txt"
-          python3 - "$RUNNER_TEMP/n11-2090-focus.txt" <<'PY'
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2090.py --self-test > "$RUNNER_TEMP/n11-2090-refused.txt"
+          python3 - "$RUNNER_TEMP/n11-2090-refused.txt" <<'PY'
           import json, sys
           d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
           assert d["self_test"] == "PASS"
-          assert d["focus_s6"] == "00000000000000203808000000000040"
-          assert (d["total_distinct_s7"], d["total_children"],
-                  d["certified_loss7"], d["unverified_s7"]) == (2090, 64, 2, 62)
-          assert d["worker_loads"] == [16, 16, 15, 15]
-          assert (d["tampered_plan_rejected"], d["bad_receipts_rejected"]) == (4, 2)
+          assert d["plan_status"] == "SUPERSEDED_BY_CERTIFIED_WIN6"
+          assert d["refuting_s6"] == "00000000000000603800000000008000"
+          assert d["terminal_strategy_nodes"] == 5923
+          assert d["terminal_winning_leaves"] == 951
+          assert d["direct_paths_rejected"] == 3
           assert set(d["outcomes"].values()) == {"UNKNOWN"}
           print(json.dumps(d, ensure_ascii=False, indent=2))
           PY
+          if python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2090.py --plan-out "$RUNNER_TEMP/forbidden.json" > "$RUNNER_TEMP/dispatch.out" 2> "$RUNNER_TEMP/dispatch.err"; then
+            echo "Refuted 2090 plan was dispatched" >&2
+            exit 1
+          fi
+          grep -q SUPERSEDED_BY_CERTIFIED_WIN6 "$RUNNER_TEMP/dispatch.err"
+          test ! -e "$RUNNER_TEMP/forbidden.json"
