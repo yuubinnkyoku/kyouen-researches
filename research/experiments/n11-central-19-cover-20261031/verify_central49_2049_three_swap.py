@@ -4,7 +4,9 @@
 This is a conditional cover with UNKNOWN S6 verdicts, not a game proof.
 The 3-for-3 optimizer uses a different 3x3 difference determinant.
 """
-from collections import Counter, defaultdict
+from collections import Counter
+from copy import deepcopy
+from pathlib import Path
 import hashlib
 import json
 
@@ -67,9 +69,6 @@ def audit():
     s4 = int(source["s4_key"], 16)
     s5 = {independent.canonical(c) for c in independent.children(s4)}
     need(len(s5) == 94, "S5 frontier changed")
-    def covered(selection):
-        return {independent.canonical(c) for k in selection
-                for c in independent.children(k)} & s5
     # S6 witnesses cover S5 via deleting one stone, not via forward S6 children.
     def parents(selection):
         return {independent.canonical(k ^ (1 << p))
@@ -125,4 +124,17 @@ def audit():
 
 
 if __name__ == "__main__":
-    print(json.dumps(audit(), ensure_ascii=False, indent=2))
+    actual = audit()
+    manifest = Path(__file__).resolve().parent / "conditional_s6_cover_46_2049_three_swap.json"
+    expected = json.loads(manifest.read_text(encoding="utf-8"))
+    need(expected == actual, "2049 manifest differs from independent 4x4 replay")
+    for field, bad_value in (
+        ("final_distinct_s7", 2048),
+        ("known_win6_conflicts", 1),
+        ("final_selected_s6_sha256", "0" * 64),
+        ("empty_board", "WIN"),
+    ):
+        altered = deepcopy(expected)
+        altered[field] = bad_value
+        need(altered != actual, "tampered 2049 manifest was accepted")
+    print(json.dumps({**actual, "negative_tests": 4}, ensure_ascii=False, indent=2))
