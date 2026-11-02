@@ -607,3 +607,5 @@
 | [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md) | 禁止4点蜘蛛木で長さ2の枝が増大する場合の無制限混合枝長・正規極限必要十分条件 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md) | 擬森グラフ型q点共円ゲームの極大配置石数母関数を多項式時間で厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) | 任意多重閉路グラフの頂点被覆数による極大配置厳密計数とK2m相転移 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0623](../items/K0623-treewidth-terminal-polynomial.md) | 有界木幅グラフ型q点共円ゲームの極大終局長母関数の厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) | 11×11の共有七石終局戦略から七つの六石元先手WINを独立証明 | proposition | proved | square-outcomes, certificates, verification, search-methods |

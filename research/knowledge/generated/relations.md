@@ -52,6 +52,7 @@
 - ← depends_on [K0504](../items/K0504-geometric-rule-variant-comparison.md): 安全な追加だけを合法手とする完全指摘ルールの定義
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 共円4点禁止・合法手と終局規則
 - ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 完全指摘・安全追加ルール
+- ← depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 完全指摘・通常プレイの合法手と終局規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -131,6 +132,10 @@
 - ← depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 通常・misère補助mexの定義
 - ← depends_on [K0589](../items/K0589-sunflower-quota-terminal-gaps.md): 通常Grundy値とmisère補助mexの定義
 - ← depends_on [K0590](../items/K0590-even-sunflower-quota-grundy.md): 通常Grundy値とmisère補助mexの定義
+
+## [K0003](../items/K0003-solution-and-evidence-levels.md) 解決段階と計算・証明書・監査の区別
+
+- ← depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 局面証明と空盤弱解決の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2959,6 +2964,7 @@
 - ← depends_on [K0620](../items/K0620-arbitrary-spider-sharp-gaussian-criterion.md): グラフ型禁止4点ゲームの自由な整数平面実現
 - ← depends_on [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md): 任意グラフの整数共円実現と削除頂点集合による極大配置分類を使用
 - ← depends_on [K0622](../items/K0622-vertex-cover-terminal-polynomial.md): 任意有限単純グラフの整数共円実現と極大配置削除集合の分類を使用
+- ← depends_on [K0623](../items/K0623-treewidth-terminal-polynomial.md): 任意有限単純グラフの整数共円実現と削除頂点集合による極大配置分類を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3085,7 +3091,18 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と削除頂点集合による極大配置分類を使用
 - → generalizes [K0611](../items/K0611-tree-graph-star-three-state-dp.md): 森の三状態計数を、各連結成分が高々一閉路を持つ擬森に拡張
+- ← generalizes [K0623](../items/K0623-treewidth-terminal-polynomial.md): 擬森に限らず任意の有界木幅グラフに適用可能
 
 ## [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) 任意多重閉路グラフの頂点被覆数による極大配置厳密計数とK2m相転移
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意有限単純グラフの整数共円実現と極大配置削除集合の分類を使用
+
+## [K0623](../items/K0623-treewidth-terminal-polynomial.md) 有界木幅グラフ型q点共円ゲームの極大終局長母関数の厳密計数
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意有限単純グラフの整数共円実現と削除頂点集合による極大配置分類を使用
+- → generalizes [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md): 擬森に限らず任意の有界木幅グラフに適用可能
+
+## [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) 11×11の共有七石終局戦略から七つの六石元先手WINを独立証明
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局面証明と空盤弱解決の区別
