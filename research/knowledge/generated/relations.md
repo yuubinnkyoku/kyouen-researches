@@ -2998,6 +2998,7 @@
 - ← depends_on [K0636](../items/K0636-polynomial-bit-graph-star-realization.md): グラフ星型の禁止超辺と極大配置母関数
 - ← depends_on [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md): グラフ星型q点構成と誘導辺重み付き支配集合の極大配置総数公式
 - ← depends_on [K0643](../items/K0643-q-invariant-terminal-spectrum-parity.md): 任意qのグラフ星型構成・全極大母関数と最短石数公式
+- ← depends_on [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md): 任意q点グラフ星型構成と極大配置の支配集合母関数
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3228,6 +3229,7 @@
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の禁止超辺と極大配置母関数
 - → depends_on [K0635](../items/K0635-graph-star-terminal-count-sharp-complexity.md)
 - ← depends_on [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md): 任意固定q>=4で多項式ビット長の整数座標を決定的に構成できること
+- ← depends_on [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md): 頂点被覆からのNP困難性を整数座標入力に移す多項式ビット長構成
 
 ## [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) 11×11中央49の条件付き七石義務1,985類のうち5類を終局戦略で独立証明
 
@@ -3288,3 +3290,8 @@
 - → depends_on [K0637](../items/K0637-n11-central49-five-terminal-loss7.md): 五つの固定七石必勝戦略と独立終局検証
 - → depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 現行46六石証人・2,301七石条件付き証明義務
 - → depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 既存五根と現行被覆の交差4類
+
+## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点グラフ星型構成と極大配置の支配集合母関数
+- → depends_on [K0636](../items/K0636-polynomial-bit-graph-star-realization.md): 頂点被覆からのNP困難性を整数座標入力に移す多項式ビット長構成
