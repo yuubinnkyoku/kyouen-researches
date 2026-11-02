@@ -165,9 +165,27 @@ def main():
             want[N - 2] += 1
             assert got == dict(sorted(want.items()))
             multi += 1
+    # A width-two family whose minimum vertex cover grows with m.
+    # Every column has a disjoint vertical edge, so tau(G) >= m;
+    # one bipartition gives a cover of size m.
+    ladder = 0
+    for m in (2, 3, 4, 5, 7, 10, 20):
+        edges = []
+        for i in range(m):
+            edges.append((2 * i, 2 * i + 1))
+            if i:
+                edges.extend(((2 * i - 2, 2 * i),
+                              (2 * i - 1, 2 * i + 1)))
+        for r in (1, 2):
+            got, width = path_dp(2 * m, edges, r)
+            assert width == 2
+            if m <= 7:
+                assert got == direct(2 * m, edges, r)
+            assert all(c > 0 for c in got.values())
+            ladder += 1
     print(f"PASS path cases={cases}, join cases={joins}, "
           f"hypergraph cases={hyp}, hypergraph masks={hyper_masks}, "
-          f"K2m cases={multi}")
+          f"K2m cases={multi}, ladder cases={ladder}")
 
 if __name__ == "__main__":
     main()
