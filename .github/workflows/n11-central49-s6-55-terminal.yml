@@ -8,6 +8,7 @@ on:
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py'
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py'
       - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json'
+      - 'research/knowledge/items/K0626-n11-central49-terminal-s6-win55.md'
       - '.github/workflows/n11-central49-s6-55-terminal.yml'
   workflow_dispatch:
 
@@ -46,18 +47,25 @@ jobs:
       - name: Independently audit the repaired 46-witness cover
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py --negative
-      - name: Preserve verified certificate on main
+      - uses: astral-sh/setup-uv@v6
+      - name: Rebuild and test canonical knowledge views
+        run: |
+          uv sync --locked
+          uv run --locked python tools/knowledge/check.py
+          uv run --locked python -m unittest discover -s tools/knowledge/tests
+          uv run --locked python tools/knowledge/build.py
+      - name: Preserve verified certificate and regenerated knowledge on main
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64
+          git add research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64 README.md research/knowledge/generated
           if git diff --cached --quiet; then
             echo "Verified certificate already committed."
             exit 0
           fi
-          git commit -m "proof(n11): preserve independently checked terminal WIN6 certificate"
+          git commit -m "docs(n11): preserve verified S6 proof and refresh generated knowledge"
           git fetch origin main
           git rebase origin/main
           git push origin HEAD:main
