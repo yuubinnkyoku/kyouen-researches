@@ -6,9 +6,12 @@
 ## [.github/workflows/n11-central49-2090-focus.yml](../../../.github/workflows/n11-central49-2090-focus.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行集中配布の安全統合検査CI 41513162204成功
+## [.github/workflows/n11-central49-2090-three-swap-neighborhood.yml](../../../.github/workflows/n11-central49-2090-three-swap-neighborhood.yml)
+
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 三証人交換全数監査CI 41534668506成功
 ## [.github/workflows/n11-central49-2090-two-swap-neighborhood.yml](../../../.github/workflows/n11-central49-2090-two-swap-neighborhood.yml)
 
-- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行2090二証人交換監査CI 41525658051成功
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行2090二証人交換監査CI 41534686470成功。六類の同一性を厳密保持
 ## [.github/workflows/n11-central49-2090-two-swap.yml](../../../.github/workflows/n11-central49-2090-two-swap.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 独立証明書検査CI 41513037490成功
@@ -1226,6 +1229,12 @@
 ## [research/experiments/cycle-terminal-gaussian-20261101/verify.py](../../../research/experiments/cycle-terminal-gaussian-20261101/verify.py)
 
 - [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md) (verifier): 36条件の円環・行列・漸化式照合と6条件608768局面の超辺直接完全列挙
+## [research/experiments/cycle-terminal-run-formula-20261103/proof.md](../../../research/experiments/cycle-terminal-run-formula-20261103/proof.md)
+
+- [K0656](../items/K0656-cycle-run-terminal-coefficients.md) (proof): 削除区間の巡回二重計数による全称閉公式、支持集合、最大中心付き係数の証明
+## [research/experiments/cycle-terminal-run-formula-20261103/verify.py](../../../research/experiments/cycle-terminal-run-formula-20261103/verify.py)
+
+- [K0656](../items/K0656-cycle-run-terminal-coefficients.md) (verifier): 105条件の独立直接列挙・漸化式比較と6条件の禁止超辺全局面完全列挙
 ## [research/experiments/dfpn-combined-options-20261022/doc-smoke.json](../../../research/experiments/dfpn-combined-options-20261022/doc-smoke.json)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (data): ガイドの小盤・既知11×11 P/N・native exact separate併用の3実行例
@@ -6998,9 +7007,12 @@
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 最終1,985類計画の一・二証人交換を全数検査し改善0件を確認
+## [research/experiments/n11-central-19-cover-20261031/audit_central49_2090_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2090_three_swap_neighborhood.py)
+
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090の三証人交換全313,652候補を独立監査。終局証明済み6類を厳密保持した233,089候補に改善0
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py)
 
-- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090類計画の二証人交換全数監査。既知WINと既存終局証明6類を保持する3,338候補に改善0
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090類計画の二証人交換全数監査。既知WINを除外し元の終局証明6類を厳密保持する3,330候補に改善0
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 2,091類からの最大三証人交換の全候補を列挙し44改善候補を検出
@@ -10251,6 +10263,9 @@
 ## [research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md](../../../research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md)
 
 - [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (log): 有限計算の結果、相乗増分が0であること、証明境界
+## [research/log/2026-11-03-n11-central49-2090-exact-three-swap-terminal-identity-audit.md](../../../research/log/2026-11-03-n11-central49-2090-exact-three-swap-terminal-identity-audit.md)
+
+- [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (log): 三証人交換全数監査と終局証明六類の同一性保持の修正
 ## [research/log/2026-11-03-n11-central49-2091-three-swap-reduction.md](../../../research/log/2026-11-03-n11-central49-2091-three-swap-reduction.md)
 
 - [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) (log): 探索全数計数・CI・修正履歴・証拠境界

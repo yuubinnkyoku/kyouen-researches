@@ -637,5 +637,6 @@
 | [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) | 11×11中央49の現行2,094七石類は最大二証人交換で改善不能 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) | 11×11中央49の条件付き七石義務を三証人交換で2,094類から2,093類へ削減 | computation | superseded | square-outcomes, certificates, verification, search-methods |
 | [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) | 11×11中央49の条件付き七石証明義務を三証人交換で2,093類から2,091類へ削減 | computation | superseded | square-outcomes, certificates, verification, search-methods |
-| [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) | 11×11中央49の条件付き七石証明義務を二証人交換で2,091類から2,090類へ削減 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) | 11×11中央49の2,090類計画と終局証明6類を保持する最大三証人交換局所最適性 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md) | グラフ星型共円ゲームの二番目に短い終局長は最小非葉次数で決まる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0656](../items/K0656-cycle-run-terminal-coefficients.md) | サイクル型グラフ星共円ゲームの全終局長係数は削除区間の二項和で閉じる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
