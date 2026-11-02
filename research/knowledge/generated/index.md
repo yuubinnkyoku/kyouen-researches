@@ -633,10 +633,13 @@
 | [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) | 11×11中央49の現行条件付き七石義務を2,301類から2,154類に縮小し二証人交換局所最適を検査 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) | 森の極大終局長は支配誘導成分数で決まり、星森では任意の部分和スペクトルを実現できる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) | グラフ星型共円ゲームの全終局長は葉と高次数核で計数でき、最短直上の欠番は次数2で決まる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants, search-methods |
-| [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) | 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減 | computation | computed | square-outcomes, certificates, verification, search-methods |
-| [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) | 11×11中央49の現行2,094七石類は最大二証人交換で改善不能 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) | 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減 | computation | superseded | square-outcomes, certificates, verification, search-methods |
+| [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) | 11×11中央49の現行2,094七石類は最大二証人交換で改善不能 | computation | superseded | square-outcomes, certificates, verification, search-methods |
 | [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) | 11×11中央49の条件付き七石義務を三証人交換で2,094類から2,093類へ削減 | computation | superseded | square-outcomes, certificates, verification, search-methods |
 | [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) | 11×11中央49の条件付き七石証明義務を三証人交換で2,093類から2,091類へ削減 | computation | superseded | square-outcomes, certificates, verification, search-methods |
-| [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) | 11×11中央49の2,090類計画は既知WIN除外下で最大三証人交換局所最適 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) | 11×11中央49の2,090類計画は既知WIN除外下で最大三証人交換局所最適 | computation | superseded | square-outcomes, certificates, verification, search-methods |
 | [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md) | グラフ星型共円ゲームの二番目に短い終局長は最小非葉次数で決まる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0656](../items/K0656-cycle-run-terminal-coefficients.md) | サイクル型グラフ星共円ゲームの全終局長係数は削除区間の二項和で閉じる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0657](../items/K0657-path-run-terminal-coefficients.md) | 道型グラフ星共円ゲームの全終局長係数は端点付き削除区間の二項和で閉じる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) | 11×11中央49の2,090七石条件付き計画は既知の終局WIN6を再選択しており失効 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) | 11×11中央49の終局WIN6除外後の46六石被覆は七石2,096類 | computation | computed | square-outcomes, certificates, verification, search-methods |

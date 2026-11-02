@@ -6,6 +6,7 @@
 ## [.github/workflows/n11-central49-2090-focus.yml](../../../.github/workflows/n11-central49-2090-focus.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行集中配布の安全統合検査CI 41513162204成功
+- [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) (source): 失効済み計画の配布拒否回帰
 ## [.github/workflows/n11-central49-2090-three-swap-neighborhood.yml](../../../.github/workflows/n11-central49-2090-three-swap-neighborhood.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 三証人交換全数監査CI 41534668506・緩和監査CI 41535314449成功
@@ -15,6 +16,9 @@
 ## [.github/workflows/n11-central49-2090-two-swap.yml](../../../.github/workflows/n11-central49-2090-two-swap.yml)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 独立証明書検査CI 41513037490成功
+## [.github/workflows/n11-central49-2090-win6-refutation.yml](../../../.github/workflows/n11-central49-2090-win6-refutation.yml)
+
+- [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) (source): 独立再検証CI 41543737197成功
 ## [.github/workflows/n11-central49-2091-focus.yml](../../../.github/workflows/n11-central49-2091-focus.yml)
 
 - [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) (source): 現行集中配布の安全統合検査CI
@@ -42,6 +46,12 @@
 ## [.github/workflows/n11-central49-2094-two-swap-optimum.yml](../../../.github/workflows/n11-central49-2094-two-swap-optimum.yml)
 
 - [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) (source): 独立監査CI 41498211386成功
+## [.github/workflows/n11-central49-2096-focus.yml](../../../.github/workflows/n11-central49-2096-focus.yml)
+
+- [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) (source): 修復済み集中配布の53類・4分割・不正報告拒否CI 41544691533成功
+## [.github/workflows/n11-central49-2096-repair.yml](../../../.github/workflows/n11-central49-2096-repair.yml)
+
+- [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) (source): 2096証明書独立検証CI 41544501946成功
 ## [.github/workflows/n11-central49-2154-two-swap.yml](../../../.github/workflows/n11-central49-2154-two-swap.yml)
 
 - [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) (source): 独立幾何監査と改変負例5件の自動検査、CI 41473966130成功
@@ -7004,6 +7014,9 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible audit for reverse s6-to-s5 integration and combined saved-s6 source history.
+## [research/experiments/n11-central-19-cover-20261031/audit_2090_known_win6_refutation.py](../../../research/experiments/n11-central-19-cover-20261031/audit_2090_known_win6_refutation.py)
+
+- [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) (verifier): 2090の46証人を再生し、SHA固定1984 WIN6終局戦略を4×4整数行列式で独立再検証
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 最終1,985類計画の一・二証人交換を全数検査し改善0件を確認
@@ -7028,6 +7041,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_2097_refuted_by_second_s7.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_2097_refuted_by_second_s7.json)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 旧2,097類計画の六石証人二類が元先手WINと判明、再計画必須
+## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_2096_exclude_missed_win6.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_2096_exclude_missed_win6.json)
+
+- [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) (certificate): 除去2・追加2六石、46証人・94五石被覆・2,989合法七石辺・2,096類を固定
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_second_s7_repair_2207.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_second_s7_repair_2207.json)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 既知WIN6を除外した46六石・2,207七石類の条件付き修復、選択六石LOSSは未証明
@@ -7062,16 +7078,23 @@
 ## [research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2090.py](../../../research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2090.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (source): 現行証明書に紐付けて64子中62未検証類を四分配
+- [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) (source): 失効済み2090計画の新規配布・直接監査・直接統合を拒否
 ## [research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2091.py](../../../research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2091.py)
 
 - [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) (source): 2,091類の現行証明書に紐付けて64子中62未検証類を四分配
 ## [research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2093.py](../../../research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2093.py)
 
 - [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) (source): 現行2093類の優先六石64子を終局証明で2類確保し、残り62類を安全に四分配
+## [research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2096.py](../../../research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2096.py)
+
+- [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) (source): 修復済み証人から未証明七石子最少の六石を選び、53類を14/13/13/13に安全配布。CI 41544691533成功
 ## [research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp](../../../research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp)
 
 - [K0637](../items/K0637-n11-central49-five-terminal-loss7.md) (solver): 3×3整数差分行列式で五つの七石局面の終局戦略を決定的に再生成
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (solver): 元先手WIN7極性でも戦略を決定的に生成できる整数3×3探索器
+## [research/experiments/n11-central-19-cover-20261031/repair_2090_win6_two_swap.py](../../../research/experiments/n11-central-19-cover-20261031/repair_2090_win6_two_swap.py)
+
+- [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) (solver): 失効WIN6を必ず除去する45除去組・151候補を全数検査
 ## [research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py](../../../research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py)
 
 - [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (solver): 有限の全数探索を繰り返し1,985類まで縮小、局所改善不能を確認
@@ -7098,6 +7121,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json)
 
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 七石から一点除去した七つの六石親とD4正準鍵
+## [research/experiments/n11-central-19-cover-20261031/verify_2096_win6_repair.py](../../../research/experiments/n11-central-19-cover-20261031/verify_2096_win6_repair.py)
+
+- [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) (verifier): WIN6終局戦略・K0637終局戦略・交換全候補・追加六石4×4整数幾何・改変負例8件を独立監査
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_2090_two_swap.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_2090_two_swap.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 五終局戦略再生、4×4 Bareissと3×3差分整数幾何、改変負例8件
@@ -7135,6 +7161,9 @@
 
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (verifier): 元後手の全合法応手を別方式4×4整数Bareissで検査し六石の勝ち手を確認
 - [K0640](../items/K0640-n11-focus-win7-seven-six-stone-parents.md) (verifier): 元となる七石WINの固定終局戦略と4×4整数幾何の独立監査
+## [research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_strategy.py](../../../research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_strategy.py)
+
+- [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) (verifier): 六石元先手WINの全合法応手・全終局を独立検査
 ## [research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py](../../../research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 旧46証人と七親の交差を独立4×4整数幾何で検査
@@ -9307,6 +9336,12 @@
 ## [research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py](../../../research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (solver): 実装（edges厳密列挙＋d降順CNF＋cadical）
+## [research/experiments/path-run-coefficients-20261103/proof.md](../../../research/experiments/path-run-coefficients-20261103/proof.md)
+
+- [K0657](../items/K0657-path-run-terminal-coefficients.md) (proof): 端点削除と内部削除区間の正長分割による全称二項和・端係数の証明
+## [research/experiments/path-run-coefficients-20261103/verify.py](../../../research/experiments/path-run-coefficients-20261103/verify.py)
+
+- [K0657](../items/K0657-path-run-terminal-coefficients.md) (verifier): 75条件の三方式比較・21条件の大規模漸化式比較・12条件の禁止超辺全局面完全列挙
 ## [research/experiments/path-terminal-gaussian-20261101/proof.md](../../../research/experiments/path-terminal-gaussian-20261101/proof.md)
 
 - [K0609](../items/K0609-path-graph-star-terminal-gaussian.md) (proof): 道の境界条件つき母関数・3項漸化式・正規極限の全称証明
@@ -10266,6 +10301,9 @@
 ## [research/log/2026-11-03-n11-central49-2090-exact-three-swap-terminal-identity-audit.md](../../../research/log/2026-11-03-n11-central49-2090-exact-three-swap-terminal-identity-audit.md)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (log): 三証人交換全数監査と終局証明六類の同一性保持の修正
+## [research/log/2026-11-03-n11-central49-2090-missed-1984-win6-refutation.md](../../../research/log/2026-11-03-n11-central49-2090-missed-1984-win6-refutation.md)
+
+- [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) (log): 既知WIN6の除外漏れ、反証、検証境界と修復方針
 ## [research/log/2026-11-03-n11-central49-2091-three-swap-reduction.md](../../../research/log/2026-11-03-n11-central49-2091-three-swap-reduction.md)
 
 - [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) (log): 探索全数計数・CI・修正履歴・証拠境界
@@ -10279,6 +10317,9 @@
 ## [research/log/2026-11-03-n11-central49-2094-two-three-swaps.md](../../../research/log/2026-11-03-n11-central49-2094-two-three-swaps.md)
 
 - [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) (log): 交換経緯、検証境界、探索手順
+## [research/log/2026-11-03-n11-central49-2096-certified-win6-exclusion-repair.md](../../../research/log/2026-11-03-n11-central49-2096-certified-win6-exclusion-repair.md)
+
+- [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) (log): 失効の起点、交換全数、独立検証、証拠境界
 ## [research/log/2026-11-03-n11-central49-2154-conditional-two-swap-descent.md](../../../research/log/2026-11-03-n11-central49-2154-conditional-two-swap-descent.md)
 
 - [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) (log): 交換経緯、全数局所検査、確定証拠の再利用範囲

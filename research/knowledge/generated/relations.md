@@ -791,6 +791,7 @@
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 局所証明は空盤の未解決性を変えない
 - ← depends_on [K0562](../items/K0562-n11-s9-second-neighbor-win.md): 局所終局証明は空盤勝敗を確定しない
 - ← depends_on [K0564](../items/K0564-n11-six-s9-terminal-neighbor-wins.md): 局所終局証明は空盤勝敗を確定しない
+- ← depends_on [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 1984計画の六石WIN終局戦略とその独立検証
 
 ## [K0106](../items/K0106-minimum-maximal-exponent-lower-bound.md) 固定qの最小極大サイズには漸近指数下界2/3がある
 
@@ -3006,6 +3007,7 @@
 - ← depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): グラフ星型共円構成と極大配置の支配集合による分類
 - ← depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): グラフ星型の整数共円構成と極大配置分類
 - ← depends_on [K0656](../items/K0656-cycle-run-terminal-coefficients.md): グラフ星型整数共円構成の極大配置分類を使用
+- ← depends_on [K0657](../items/K0657-path-run-terminal-coefficients.md): グラフ星型整数共円構成の極大配置分類を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3047,6 +3049,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点の整数幾何実現と極大配置・最短極大個数の分類を使用
 - → depends_on [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md): 同じ転送行列の固有値と平均・分散係数を利用し、道の境界条件に拡張
+- ← depends_on [K0657](../items/K0657-path-run-terminal-coefficients.md): 道型の既知三項漸化式と照合し、その係数を閉形式に精密化
 
 ## [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) 完全グラフ花束型共円ゲームの極大配置母関数と正規極限
 
@@ -3305,6 +3308,8 @@
 - ← depends_on [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
 - ← depends_on [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
 - ← depends_on [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
+- ← depends_on [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 現行幾何計画で再利用した六類の終局LOSS7証明
+- ← depends_on [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 独立終局証明済みLOSS7六類の再利用
 
 ## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
 
@@ -3319,6 +3324,7 @@
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
 - ← depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 確定WIN6を除外した現行46証人・2,154七石類の出発点
 - ← supersedes [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 同じ94五石被覆を保ったまま追加で60七石類を削減した条件付き計画
+- ← depends_on [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 失効した2094段階より前の有効な2154幾何被覆
 
 ## [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md) 森の極大終局長は支配誘導成分数で決まり、星森では任意の部分和スペクトルを実現できる
 
@@ -3340,6 +3346,7 @@
 - ← depends_on [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md): 確定WIN6を除外した46六石証人・2,094七石類の条件付き被覆
 - ← depends_on [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 46証人・2,094類の出発点と二度の三証人交換
 - ← supersedes [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 同じ94五石被覆を維持し、三証人交換を一回追加して七石義務を一類削減
+- ← refutes [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 第2回三証人交換で1984終局WIN6を再導入
 
 ## [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md) 11×11中央49の現行2,094七石類は最大二証人交換で改善不能
 
@@ -3347,6 +3354,7 @@
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 五つの終局戦略から導出した独立証明済みLOSS7の23類
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き計算量と勝敗証明の区別
 - ← depends_on [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 二証人以下では改善できないという厳密な局所最適性
+- ← refutes [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 2,094類の局所最適性は失効した証人集合の幾何学的性質に限られる
 
 ## [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) 11×11中央49の条件付き七石義務を三証人交換で2,094類から2,093類へ削減
 
@@ -3356,6 +3364,7 @@
 - → supersedes [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 同じ94五石被覆を維持し、三証人交換を一回追加して七石義務を一類削減
 - ← depends_on [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 独立監査済み46六石証人・2,093七石類の出発点
 - ← supersedes [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 同じ94五石被覆を維持した条件付き計算計画を2,091類へ更新
+- ← refutes [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 2,093類計画も同じWIN6を保持
 
 ## [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) 11×11中央49の条件付き七石証明義務を三証人交換で2,093類から2,091類へ削減
 
@@ -3364,12 +3373,15 @@
 - → supersedes [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 同じ94五石被覆を維持した条件付き計算計画を2,091類へ更新
 - ← depends_on [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md): 独立監査済み46六石証人・2,091七石類の出発点
 - ← supersedes [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md): 同じ94五石被覆を維持した条件付き計算計画を2,090類へ更新
+- ← refutes [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 2,091類計画も同じWIN6を保持
 
 ## [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) 11×11中央49の2,090類計画は既知WIN除外下で最大三証人交換局所最適
 
 - → depends_on [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 独立監査済み46六石証人・2,091七石類の出発点
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
 - → supersedes [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 同じ94五石被覆を維持した条件付き計算計画を2,090類へ更新
+- ← refutes [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 2,090類の幾何計数は正しいが46六石すべてをLOSSとして閉じる計画は不可能
+- ← supersedes [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 失効した2,090類計画を146既知WIN6除外の2,096類へ修復
 
 ## [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md) グラフ星型共円ゲームの二番目に短い終局長は最小非葉次数で決まる
 
@@ -3379,3 +3391,26 @@
 ## [K0656](../items/K0656-cycle-run-terminal-coefficients.md) サイクル型グラフ星共円ゲームの全終局長係数は削除区間の二項和で閉じる
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円構成の極大配置分類を使用
+
+## [K0657](../items/K0657-path-run-terminal-coefficients.md) 道型グラフ星共円ゲームの全終局長係数は端点付き削除区間の二項和で閉じる
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円構成の極大配置分類を使用
+- → depends_on [K0609](../items/K0609-path-graph-star-terminal-gaussian.md): 道型の既知三項漸化式と照合し、その係数を閉形式に精密化
+
+## [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) 11×11中央49の2,090七石条件付き計画は既知の終局WIN6を再選択しており失効
+
+- → depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 1984計画の六石WIN終局戦略とその独立検証
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 現行幾何計画で再利用した六類の終局LOSS7証明
+- → refutes [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md): 2,090類の幾何計数は正しいが46六石すべてをLOSSとして閉じる計画は不可能
+- → refutes [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 第2回三証人交換で1984終局WIN6を再導入
+- → refutes [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md): 2,094類の局所最適性は失効した証人集合の幾何学的性質に限られる
+- → refutes [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md): 2,093類計画も同じWIN6を保持
+- → refutes [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md): 2,091類計画も同じWIN6を保持
+- ← depends_on [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 旧2,090類計画を失効させた1984終局WIN6と除外漏れ
+
+## [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) 11×11中央49の終局WIN6除外後の46六石被覆は七石2,096類
+
+- → depends_on [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 旧2,090類計画を失効させた1984終局WIN6と除外漏れ
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 独立終局証明済みLOSS7六類の再利用
+- → depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 失効した2094段階より前の有効な2154幾何被覆
+- → supersedes [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md): 失効した2,090類計画を146既知WIN6除外の2,096類へ修復
