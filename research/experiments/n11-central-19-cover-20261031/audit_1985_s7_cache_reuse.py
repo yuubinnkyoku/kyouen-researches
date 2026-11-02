@@ -64,7 +64,7 @@ def audit():
     need((len(cache_hits), len(terminal_hits), hit_edges,
           chosen, len(children), len(focus_cached)) ==
          (5, 0, 8, "0000000000000020380a000000000000", 60, 2),
-         "1985 cache intersection or focus changed")
+         f"1985 cache intersection or focus changed: {(len(cache_hits), len(terminal_hits), hit_edges, chosen, len(children), len(focus_cached))}")
 
     # Negative test: a known-WIN key cannot be selected as an assumed LOSS7.
     try:
