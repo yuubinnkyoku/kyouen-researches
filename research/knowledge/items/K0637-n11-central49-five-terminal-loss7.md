@@ -23,7 +23,7 @@ artifacts:
   role: verifier
   note: 別実装の4×4整数Bareissで相手の全合法応手を独立検証、固定SHA-256と負例も検査
 - path: .github/workflows/n11-central49-five-loss7-terminal.yml
-  role: experiment
+  role: source
   note: 五つの戦略を再生成して独立検証し証明書をActions成果物として保存
 - path: research/log/2026-11-02-n11-central49-five-terminal-loss7-cache-upgrade.md
   role: log
