@@ -2631,6 +2631,12 @@
 ## [research/experiments/graph-star-domination-bound-20261101/verify.py](../../../research/experiments/graph-star-domination-bound-20261101/verify.py)
 
 - [K0605](../items/K0605-domination-bipartition-nonconcentration.md) (verifier): 792グラフ・重み条件の独立列挙と12条件の禁止超辺全部分集合列挙
+## [research/experiments/graph-star-fixed-defect-fpt-20261103/proof.md](../../../research/experiments/graph-star-fixed-defect-fpt-20261103/proof.md)
+
+- [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) (proof): 競合グラフの有界次数と独立集合多項式の連結支持対数展開による f(d)(n+e) 算術演算の全称証明
+## [research/experiments/graph-star-fixed-defect-fpt-20261103/verify.py](../../../research/experiments/graph-star-fixed-defect-fpt-20261103/verify.py)
+
+- [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md) (verifier): 支配集合直接列挙との13047係数独立照合
 ## [research/experiments/graph-star-fixed-q-count-complexity-20261102/proof.md](../../../research/experiments/graph-star-fixed-q-count-complexity-20261102/proof.md)
 
 - [K0639](../items/K0639-fixed-q-terminal-count-sharp-completeness.md) (proof): 辺ごとの接続複製と相異なる指数底のVandermonde補間による全称的な#VertexCover還元
