@@ -7,6 +7,8 @@ on:
       - 'research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp'
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py'
       - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py'
+      - 'research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py'
+      - 'research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json'
       - 'research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json'
       - 'research/knowledge/items/K0626-n11-central49-terminal-s6-win55.md'
       - '.github/workflows/n11-central49-s6-55-terminal.yml'
@@ -44,6 +46,9 @@ jobs:
       - name: Independently verify all terminal branches and tamper rejection
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64 --negative
+      - name: Independently replay seven S6 parents of shared terminal S7
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s7_seven_win6.py
       - name: Independently audit the repaired 46-witness cover
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py --negative
