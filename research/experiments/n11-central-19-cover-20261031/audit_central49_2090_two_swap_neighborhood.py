@@ -94,7 +94,7 @@ def audit():
                 if candidate & win7:
                     excluded7 += 1
                     continue
-                if len(candidate & loss7) < 6:
+                if not secured <= candidate:
                     lost_secured += 1
                     continue
                 valid += 1
@@ -123,7 +123,7 @@ def audit():
                 need(set(independent[s]) == set(frontier(s)),
                      "3x3/4x4 candidate frontier mismatch")
         union = set().union(*independent.values())
-        need(len(union) == best_cost and len(union & loss7) >= 6
+        need(len(union) == best_cost and secured <= union
              and not (union & win7), "independent best-swap check failed")
         best_record = {
             "removed": [f"{s:032x}" for s in rm],
