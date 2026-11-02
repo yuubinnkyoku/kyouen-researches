@@ -58,6 +58,7 @@
 - ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 完全指摘・通常プレイの合法手と終局規則
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 完全指摘・通常プレイの合法手と手番
 - ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 完全指摘・通常プレイの合法手
+- ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 共円禁止と合法手の定義
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -146,6 +147,7 @@
 - ← depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 六石局所証明と空盤弱解決の区別
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 局所証明と空盤勝敗の区別
 - ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 局所WIN証明と空盤勝敗の区別
+- ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 条件付き証明計画と勝敗証明の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -290,6 +292,7 @@
 - ← depends_on [K0092](../items/K0092-n11-dfpn-search-status.md)
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md)
 - ← verifies [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): reply r2=0 の s4 class 2個について有限の厳密判定を与える
+- ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 11×11空盤勝敗は未確定
 
 ## [K0024](../items/K0024-fixed-width-q-point-threshold.md) q点版固定幅盤の十分長さ定理
 
@@ -3121,6 +3124,7 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局面証明と空盤弱解決の区別
+- ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 終局証明済み六石WINを除外する根拠
 
 ## [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) 完全多部グラフ型q点共円ゲームの部数無制限・極大終局長母関数多項式時間計数
 
@@ -3135,6 +3139,7 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局面の局所的勝敗と空盤弱解決の区別
 - ← depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 固定終局戦略の証明書と独立検証
 - ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 第一の六石終局戦略
+- ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 第一の六石終局WIN証明
 
 ## [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) 11×11の新規共有七石終局戦略から七類の六石元先手WINを証明
 
@@ -3150,6 +3155,7 @@
 - → depends_on [K0627](../items/K0627-n11-terminal-s7-seven-win6.md): 一つの終局WIN7戦略を七つの六石親に持ち上げる方法
 - ← depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 第二の固定終局戦略と独立終局検証
 - ← depends_on [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md): 第二の六石終局戦略
+- ← depends_on [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md): 第二の六石終局WIN証明
 
 ## [K0629](../items/K0629-bounded-edge-edits-multipartite-terminal-dp.md) 完全多部グラフの有限辺編集に対するq点共円極大終局長の固定パラメータ厳密計数
 
@@ -3181,3 +3187,12 @@
 - → depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 第一の六石終局戦略
 - → depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 第二の六石終局戦略
 - → depends_on [K0630](../items/K0630-n11-second-terminal-win-predecessor-closure.md): 第二終局戦略のD4帰納閉包
+
+## [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) 11×11中央49の条件付き六石被覆は七石1,985類、固定集合からの最大三証人交換では改善不能
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共円禁止と合法手の定義
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明計画と勝敗証明の区別
+- → depends_on [K0023](../items/K0023-n11-exact-safe-layers-and-unknown-winner.md): 11×11空盤勝敗は未確定
+- → depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 終局証明済み六石WINを除外する根拠
+- → depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 第一の六石終局WIN証明
+- → depends_on [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md): 第二の六石終局WIN証明

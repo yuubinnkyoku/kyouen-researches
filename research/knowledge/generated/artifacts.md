@@ -6873,6 +6873,12 @@
 ## [research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py](../../../research/experiments/n11-boundary-recovery-20261006/scripts/verify_post9dcb_s6_reverse_integration.py)
 
 - [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md) (verifier): Reproducible audit for reverse s6-to-s5 integration and combined saved-s6 source history.
+## [research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_1985_two_swap.py)
+
+- [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 最終1,985類計画の一・二証人交換を全数検査し改善0件を確認
+## [research/experiments/n11-central-19-cover-20261031/audit_central49_2092_three_swap.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2092_three_swap.py)
+
+- [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 3×3整数差分行列式と六頂点完全マッチングによる三証人交換全数監査
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_2097_refuted_by_second_s7.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_2097_refuted_by_second_s7.json)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (manifest): 旧2,097類計画の六石証人二類が元先手WINと判明、再計画必須
@@ -6886,6 +6892,12 @@
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (manifest): 新たに確定した七類のWIN6を除いた条件付き46証人・2,097七石類、66組の非衝突二対二修復、選択六石のLOSSは未証明
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 確定WIN6を除外した66組の固定44条件付き修復から得た2,097七石類
+## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_three_swap_chain.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_three_swap_chain.json)
+
+- [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (certificate): 三段階の六石証人交換、各段階の七石辺数・類数、選択集合のSHA-256
+## [research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py](../../../research/experiments/n11-central-19-cover-20261031/search_central49_1994_three_swap_descent.py)
+
+- [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (solver): 有限の全数探索を繰り返し1,985類まで縮小、局所改善不能を確認
 ## [research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert](../../../research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (certificate): 修復後46証人のうち2類を元先手WINと確定する共有七石終局戦略; 10,881選択局面・16,980到達局面・2,237終局
@@ -6909,6 +6921,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_s7_seven_s6_parents.json)
 
 - [K0627](../items/K0627-n11-terminal-s7-seven-win6.md) (manifest): 七石から一点除去した七つの六石親とD4正準鍵
+## [research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_three_swap_chain.py)
+
+- [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (verifier): 別方式の4×4整数Bareissによる三段階の幾何・被覆・既知WIN非衝突の独立再計算
 ## [research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py](../../../research/experiments/n11-central-19-cover-20261031/verify_second_s7_refutes_2097.py)
 
 - [K0628](../items/K0628-n11-second-terminal-s7-seven-win6-refutes-2097.md) (verifier): 旧46証人と七親の交差を独立4×4整数幾何で検査
@@ -10012,6 +10027,9 @@
 ## [research/log/2026-11-02-n11-central49-terminal-win6-55-and-repair-2097.md](../../../research/log/2026-11-02-n11-central49-terminal-win6-55-and-repair-2097.md)
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (log): 新規WIN6・旧条件付き計画の反証・修復の経緯と検証境界
+## [research/log/2026-11-02-n11-central49-three-swaps-1985-exact-neighborhood.md](../../../research/log/2026-11-02-n11-central49-three-swaps-1985-exact-neighborhood.md)
+
+- [K0634](../items/K0634-n11-central49-1985-three-swap-conditional-cover.md) (log): 探索経過、件数、信頼境界、独立CI
 ## [research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md](../../../research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md)
 
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (log): 新規五六石WINの証明・独立CI成功・残る未解決事項
