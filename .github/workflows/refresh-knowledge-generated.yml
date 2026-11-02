@@ -58,6 +58,8 @@ jobs:
         run: python research/experiments/modular-substitution-20261102/verify.py
       - name: Audit all-q weighted terminal totals for modular substitution
         run: python research/experiments/modular-substitution-20261102/verify_weighted_total.py
+      - name: Audit amortized substitution-tree LCA charging
+        run: python research/experiments/modular-substitution-20261102/verify_amortized.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -195,3 +197,5 @@ jobs:
 # Refresh trigger for K0631/K0632 all-q weighted terminal total counts (2026-11-02).
 
 # Refresh trigger for K0634 N11 central49 1985 exact three-swap conditional cover (2026-11-02).
+
+# Refresh trigger for K0631/K0632 amortized LCA counting bounds (2026-11-02).
