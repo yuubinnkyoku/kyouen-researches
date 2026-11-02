@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
-      - name: Replay repaired cover, prove focused worklist ownership and reject forged reports
+      - name: Replay terminal WIN7 and ensure all refuted 2096 dispatch paths reject
         run: |
           set -euo pipefail
           python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2096.py --self-test > "$RUNNER_TEMP/focus2096.txt"
@@ -25,12 +25,11 @@ jobs:
           import json, sys
           d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
           assert d["self_test"] == "PASS"
-          assert d["total_distinct_s7"] == 2096
-          assert d["unverified_focus_s7"] <= 62
-          assert d["focus_children"] == d["certified_focus_s7"] + d["unverified_focus_s7"]
-          assert sum(d["worker_loads"]) == d["unverified_focus_s7"]
-          assert d["tampered_plan_rejected"] == 4
-          assert d["bad_receipts_rejected"] == 2
+          assert d["plan_status"] == "SUPERSEDED_BY_TERMINAL_WIN7"
+          assert d["refuted_s6"] == "00000000000000203800000060000000"
+          assert d["refuting_s7"] == "00000000000000303800000060000000"
+          assert d["independent_terminal_states"] == 2245
+          assert d["direct_paths_rejected"] == 3
           assert set(d["outcomes"].values()) == {"UNKNOWN"}
           print(json.dumps(d, ensure_ascii=False, indent=2))
           PY
