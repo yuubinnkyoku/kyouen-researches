@@ -1,0 +1,47 @@
+name: N11 central49 1985 single-S6 focus and safe receipt audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py'
+      - '.github/workflows/n11-central49-1985-focus.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  focused-1985:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Receipt parser negative tests
+        run: python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --self-test
+      - name: Recompute 1985 geometry and freeze a four-worker single-S6 plan
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --plan-out /tmp/n11-1985-plan.json
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-plan.json --worklist 0 > /tmp/n11-1985-worker0.txt
+      - name: Verify ownership, safe merge, and tampered-plan rejection
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p = json.loads(Path('/tmp/n11-1985-plan.json').read_text())
+          assert p['outcomes']['empty_board'] == 'UNKNOWN'
+          assert len(p['focus_s7_children']) == sum(p['worker_loads'])
+          assert max(p['worker_loads']) - min(p['worker_loads']) <= 1
+          assert len(Path('/tmp/n11-1985-worker0.txt').read_text().splitlines()) == p['worker_loads'][0]
+          key = p['worklists'][0][0]
+          Path('/tmp/n11-1985-report.csv').write_text(
+              f's7workerreport,0,{key},original_first,LOSS,unverified\n')
+          p['outcomes']['empty_board'] = 'WIN'
+          Path('/tmp/n11-1985-tampered.json').write_text(json.dumps(p))
+          PY
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-plan.json --worker 0 /tmp/n11-1985-report.csv --merged-out /tmp/n11-1985-merged.csv
+          python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-plan.json --existing /tmp/n11-1985-merged.csv
+          if python3 research/experiments/n11-central-19-cover-20261031/focus_s7_worker_1985.py --audit-plan /tmp/n11-1985-tampered.json; then
+            echo 'ERROR: promoted verdict accepted'
+            exit 1
+          fi
