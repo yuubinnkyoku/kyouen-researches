@@ -1,0 +1,36 @@
+name: N11 central49 2090 exact two-swap neighborhood audit
+
+on:
+  push:
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py'
+      - '.github/workflows/n11-central49-2090-two-swap-neighborhood.yml'
+  workflow_dispatch:
+
+jobs:
+  exact-2090-neighborhood:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recheck terminal-gated 2090 and all exact two-witness replacements
+        run: |
+          set -euo pipefail
+          python3 research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py > "$RUNNER_TEMP/n11-2090-two-swap.json"
+          python3 - "$RUNNER_TEMP/n11-2090-two-swap.json" <<'PY'
+          import json, sys
+          d = json.loads(open(sys.argv[1], encoding="utf-8").read().splitlines()[-1])
+          assert d["baseline_distinct_s7"] == 2090
+          assert d["selected_s6"] == 46 and d["covered_s5"] == 94
+          assert d["certified_loss7_in_baseline"] == 6
+          assert d["removed_pairs"] == 1035
+          assert d["candidate_combinations"] == (
+              d["rejected_nontrivial_or_exceptional"] +
+              d["geometrically_feasible_nontrivial"])
+          assert d["geometrically_feasible_nontrivial"] == (
+              d["excluded_known_win6"] + d["excluded_known_win7"] +
+              d["excluded_lost_certified_loss7"] + d["valid_nontrivial"])
+          assert d["best_distinct_s7"] <= 2090
+          assert set(d["outcomes"].values()) == {"UNKNOWN"}
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY
