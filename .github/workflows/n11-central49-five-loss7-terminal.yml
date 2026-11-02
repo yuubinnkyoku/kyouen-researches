@@ -1,0 +1,64 @@
+name: N11 central49 five independently verified terminal LOSS7
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/n11-central49-five-loss7-terminal.yml
+      - research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp
+      - research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py
+
+jobs:
+  terminal-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build deterministic strategy generator
+        run: |
+          g++ -std=c++20 -O3 -Wall -Wextra \
+            research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp \
+            -o "$RUNNER_TEMP/n11-s7-generate"
+      - name: Generate five fixed S7 strategies (bounded, not a giant root)
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/n11-certs"
+          for root in \
+            00000000000000203808000000000120 \
+            0000000000000020380a000000004000 \
+            00000000000000a03808100000000000 \
+            00000000000002043800800000040000 \
+            00000000000200801082008100000000; do
+            "$RUNNER_TEMP/n11-s7-generate" "$root" \
+              "$RUNNER_TEMP/n11-certs/n11_s7_$root.cert"
+          done
+      - name: Independent 4x4 Bareiss terminal audit and negative tests
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py \
+            "$RUNNER_TEMP/n11-certs" --self-test
+      - name: Recheck the five roots belong to the current 1985-S7 frontier
+        run: |
+          python3 - <<'PY'
+          import sys
+          sys.path.insert(0, 'research/experiments/n11-central-19-cover-20261031')
+          import audit_1985_s7_cache_reuse as audit
+          from verify_five_terminal_loss7 import EXPECTED
+          result = audit.audit()
+          assert set(result['historical_loss7_hit_keys']) == set(EXPECTED)
+          assert set(result['focus_historical_loss7_hit_keys']) == {
+              '0000000000000020380a000000004000',
+              '00000000000000a03808100000000000'
+          }
+          assert (result['distinct_s7'], result['raw_s7_edges']) == (1985, 2989)
+          assert (result['historical_solver_trusted_loss7_hits'],
+                  result['historical_solver_trusted_loss7_edge_hits']) == (5, 8)
+          print('Five terminal-certified LOSS7 classes cover eight S6->S7 edges.')
+          print('Two are children of the selected 60-child focus S6.')
+          print('Selected S6, two-stone root, and empty board remain UNKNOWN.')
+          PY
+      - name: Retain reproducible terminal strategy certificates
+        uses: actions/upload-artifact@v4
+        with:
+          name: n11-central49-five-loss7-terminal-certificates
+          path: ${{ runner.temp }}/n11-certs/*.cert
+          retention-days: 90
