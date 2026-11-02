@@ -25,6 +25,12 @@ artifacts:
 - path: research/experiments/graph-star-connected-kernel-20261103/verify.py
   role: verifier
   note: 連結核列挙と支配集合直接列挙の16720係数独立照合
+- path: research/experiments/graph-star-fixed-defect-fpt-20261103/proof.md
+  role: proof
+  note: 競合グラフの有界次数と独立集合多項式の連結支持対数展開による f(d)(n+e) 算術演算の全称証明
+- path: research/experiments/graph-star-fixed-defect-fpt-20261103/verify.py
+  role: verifier
+  note: 支配集合直接列挙との13047係数独立照合
 scope: 辺を持つ任意有限単純グラフGと任意固定または可変q>=4のK0602整数平面共円・共線禁止構成。標準全格子盤は対象外。
 evidence: 葉・高次数核への一意分解、次数上界と連結核の分解列挙による全称証明。有限照合は独立監査。
 ---
@@ -55,3 +61,7 @@ r^{C+a(B)-|B|-d(B)}(r+1)^{L-a(B)}u^{d(B)}.}
 ## 固定欠損係数の改善（2026-11-03）
 
 許容核 B の誘導連結成分はそれぞれ正の欠損を持ち、欠損 d の核は高々 d 成分からなる。また、各核頂点の次数は d+1 以下、核の大きさは 2d 以下である。したがって次数制限付きの連結候補は O(f(d)n) 個しかなく、そのうち高々 d 個を非隣接に選ぶことで係数を計数できる。全称証明は[連結核列挙の証明](../../experiments/graph-star-connected-kernel-20261103/proof.md)、独立検証は[連結核検証器](../../experiments/graph-star-connected-kernel-20261103/verify.py)に保存。全16,720係数で支配集合直接列挙と一致（不一致0）。固定パラメータ容易性は未証明。
+
+## 固定欠損係数は固定パラメータ容易（2026-11-03）
+
+連結核を頂点とし、重複または隣接する核を競合させるグラフは、欠損上限 d に対して頂点数 O(f(d)n)、最大次数 f(d) 以下となる。重み付き独立集合多項式の対数を連結支持に分解すると、d 次までの係数は大きさ d 以下の連結支持だけから厳密に復元できる。従って **s+d 石の極大配置数は f(d)(n+e) 回の有理数・整数演算で計数できる**。従来の O(f(d)n^d(n+e)) を改善し、パラメータ d に関する固定パラメータ容易性を証明した（ビット演算量の主張ではない）。[全称証明](../../experiments/graph-star-fixed-defect-fpt-20261103/proof.md)と[独立検証器](../../experiments/graph-star-fixed-defect-fpt-20261103/verify.py)を保存。13,047係数で直接列挙と一致、不一致0。
