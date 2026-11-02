@@ -34,6 +34,15 @@ ADDED = (
 )
 UNKNOWN = {"s6": "UNKNOWN", "s4": "UNKNOWN",
            "two_stone_root": "UNKNOWN", "empty_board": "UNKNOWN"}
+FOCUS_PARENT_KEYS = {
+    "0000000000000000380a100000000000",
+    "0000000000000020180a100000000000",
+    "0000000000000020280a100000000000",
+    "0000000000000020300a100000000000",
+    "00000000000000203802100000000000",
+    "00000000000000203808100000000000",
+    "0000000000000020380a000000000000",
+}
 
 
 def need(ok, message):
@@ -63,9 +72,9 @@ def comparison_inventories():
         need(focus_root in geometry.children(parent),
              "a six-stone parent cannot legally return to K0638 WIN7")
         focus_parents.add(f"{geometry.canonical(parent):032x}")
-    need(len(focus_parents) == 7 and not
+    need(focus_parents == FOCUS_PARENT_KEYS and not
          (focus_parents & ({f"{m:032x}" for m in old_win6} | old_terminal_parents)),
-         "K0638 WIN7 parent classes are not seven new classes")
+         "K0638 WIN7 parent keys or non-overlap changed")
     win6 = {f"{m:032x}" for m in old_win6} | old_terminal_parents | focus_parents
     need(len(win6) == 145 and set(REMOVED) <= win6,
          "terminal-backed WIN6 inventory changed")
