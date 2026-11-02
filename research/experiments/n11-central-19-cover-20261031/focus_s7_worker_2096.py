@@ -59,6 +59,15 @@ def geometry():
 
 def freeze():
     frontiers, counts, secured = geometry()
+    # A complete terminal strategy (independently checked by
+    # verify_2096_focus_terminal_win6_refutation.py) proves this S7 is
+    # original-first WIN. The selected S6 therefore cannot be a LOSS witness.
+    refuted_s6 = int("00000000000000203800000060000000", 16)
+    refuting_s7 = int("00000000000000303800000060000000", 16)
+    need(refuted_s6 in frontiers and refuting_s7 in frontiers[refuted_s6]
+         and refuting_s7 not in secured,
+         "2096 terminal WIN7 refutation provenance changed")
+    raise ValueError("SUPERSEDED_BY_TERMINAL_WIN7: focused 2096 S6 is proven WIN")
     def score(s):
         pending = frontiers[s] - secured
         return (len(pending), -sum(counts[c] > 1 for c in pending), key(s))
@@ -136,66 +145,36 @@ def merge(doc, existing, workers):
 
 
 def self_test():
-    doc = freeze()
-    audit_plan(doc)
-    need(doc["total_distinct_s7"] == 2096
-         and doc["terminal_proved_s7_in_cover"] == 6
-         and len(doc["unverified_s7"]) <= 62
-         and sum(doc["worker_loads"]) == len(doc["unverified_s7"]),
-         "2096 focused worklist counts changed")
-    for mode in ("verdict", "source", "secured", "owner"):
-        bad = json.loads(json.dumps(doc))
-        if mode == "verdict":
-            bad["outcomes"]["s6"] = "LOSS"
-        elif mode == "source":
-            bad["source_sha256"] = "0" * 64
-        elif mode == "secured":
-            bad["certified_loss7"].append("0" * 32)
-        else:
-            bad["worklists"][0].append(bad["worklists"][1][0])
-        for action in (lambda: audit_plan(bad),
-                       lambda: merge(bad, None, [])):
-            try:
-                action()
-            except (ValueError, KeyError, TypeError):
-                pass
-            else:
-                raise AssertionError("tampered plan accepted: " + mode)
-    first = doc["worklists"][0][0]
-    with tempfile.TemporaryDirectory() as folder:
-        p = Path(folder) / "worker.csv"
-        good = f"s7workerreport,0,{first},original_first,LOSS,unverified\n"
-        p.write_text(good, encoding="utf-8")
-        merged, _ = merge(doc, None, [(0, p)])
-        need(len(merged) == 1, "valid unverified report rejected")
-        p.write_text(good.replace(",LOSS,", ",WIN,"), encoding="utf-8")
+    # Reproduce the terminal strategy with the existing C++ generator and
+    # independently replay all branches using exact 4x4 Bareiss geometry.
+    import verify_2096_focus_terminal_win6_refutation as refutation
+    proof = refutation.audit(refutation.reproduce())
+    need(proof["s6_original_first"] == "WIN"
+         and proof["conditional_2096_loss_witness_plan_valid"] is False,
+         "terminal refutation was not reproduced")
+    minimal = {"schema": SCHEMA, "outcomes": UNKNOWN,
+               "evidence_level":
+               "TERMINAL_CERTIFIED_S7_AND_UNVERIFIED_WORKER_REPORTS"}
+    rejected = 0
+    for action in (freeze, lambda: audit_plan(minimal),
+                   lambda: merge(minimal, None, [])):
         try:
-            merge(doc, None, [(0, p)])
-        except ValueError:
-            pass
+            action()
+        except ValueError as exc:
+            need("SUPERSEDED_BY_TERMINAL_WIN7" in str(exc),
+                 "unexpected refusal reason: " + str(exc))
+            rejected += 1
         else:
-            raise AssertionError("reported WIN failed to stop dispatch")
-        outside = next(k for k in sorted(key(c) for c in geometry()[1])
-                       if k not in doc["unverified_s7"])
-        p.write_text(good.replace(first, outside), encoding="utf-8")
-        try:
-            merge(doc, None, [(0, p)])
-        except ValueError:
-            pass
-        else:
-            raise AssertionError("off-focus report accepted")
+            raise AssertionError("refuted 2096 plan was accepted")
     print(json.dumps({
         "self_test": "PASS",
-        "focus_s6": doc["focus_s6"],
-        "total_distinct_s7": 2096,
-        "focus_children": len(doc["focus_s7_children"]),
-        "certified_focus_s7": len(doc["certified_loss7"]),
-        "unverified_focus_s7": len(doc["unverified_s7"]),
-        "worker_loads": doc["worker_loads"],
-        "tampered_plan_rejected": 4,
-        "bad_receipts_rejected": 2,
+        "plan_status": "SUPERSEDED_BY_TERMINAL_WIN7",
+        "refuted_s6": proof["refuted_s6"],
+        "refuting_s7": proof["refuting_s7"],
+        "independent_terminal_states": proof["terminal_states"],
+        "direct_paths_rejected": rejected,
         "outcomes": UNKNOWN,
-    }, ensure_ascii=False))
+    }))
 
 
 def main():
