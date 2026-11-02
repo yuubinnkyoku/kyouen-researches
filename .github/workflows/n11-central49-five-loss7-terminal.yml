@@ -7,6 +7,7 @@ on:
       - .github/workflows/n11-central49-five-loss7-terminal.yml
       - research/experiments/n11-central-19-cover-20261031/generate_five_terminal_loss7.cpp
       - research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py
+      - research/experiments/n11-central-19-cover-20261031/verify_five_loss7_eight_parent_lift.py
       - research/experiments/n11-central-19-cover-20261031/verify_focus_s6_win_refutation.py
 
 jobs:
@@ -37,6 +38,30 @@ jobs:
         run: |
           python3 research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py \
             "$RUNNER_TEMP/n11-certs" --self-test
+      - name: Independently lift five certified LOSS7 strategies through their LOSS8 first moves
+        run: |
+          python3 research/experiments/n11-central-19-cover-20261031/verify_five_loss7_eight_parent_lift.py \
+            "$RUNNER_TEMP/n11-certs" --negative > "$RUNNER_TEMP/n11-certs/eight-parent-lift.json"
+          python3 - "$RUNNER_TEMP/n11-certs/eight-parent-lift.json" <<'PY'
+          import json, sys
+          d = json.load(open(sys.argv[1], encoding="utf-8"))
+          assert (d["source_terminal_loss7_roots"], d["distinct_certified_loss8_children"],
+                  d["all_7_parent_edges_checked"], d["distinct_certified_loss7_by_parent_lift"],
+                  d["new_loss7_classes_from_lift"]) == (5, 3, 40, 23, 18)
+          assert (d["current_conditional_s7_classes"], d["current_secured_loss7_classes"],
+                  d["previously_secured_by_k0637"], d["new_current_secured_loss7_classes"],
+                  d["current_secured_s6_to_s7_edges"], d["current_secured_s6_witnesses"],
+                  d["current_not_secured_by_this_lift"]) == (2301, 6, 4, 2, 6, 3, 2295)
+          assert d["new_current_hits"] == {
+              "0000000000000020380a000000000040": [
+                  "00000000000000203808000000000040"],
+              "00000000000002043800800000000010": [
+                  "00000000000000203808000000000040"],
+          }
+          assert d["negative_tests"] == 2
+          assert d["s6_outcome"] == d["two_stone_root"] == d["empty_board"] == "UNKNOWN"
+          print(json.dumps(d, ensure_ascii=False, indent=2))
+          PY
       - name: Generate terminal strategy refuting the selected S6 LOSS witness
         run: |
           "$RUNNER_TEMP/n11-s7-generate" 0000000000000020380a100000000000 \
@@ -70,5 +95,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: n11-central49-five-loss7-and-refuting-win7-certificates
-          path: ${{ runner.temp }}/n11-certs/*.cert
+          path: ${{ runner.temp }}/n11-certs/*
           retention-days: 90
