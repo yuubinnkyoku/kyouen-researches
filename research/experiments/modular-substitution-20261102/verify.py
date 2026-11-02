@@ -74,6 +74,62 @@ def recurse(expr):
     return build(False), build(True)
 
 
+
+def recurse_sliced(expr):
+    """Independent degree-sliced implementation; avoid Cartesian products of (a,b) terms."""
+    from itertools import product
+    children, qe = expr
+    if not children:
+        return {(0, 0): 1, (1, 0): 1}, {(1, 0): 1}
+    child_tables = [recurse_sliced(child) for child in children]
+    k = len(children)
+    edges = set(qe)
+
+    def slices(table):
+        by_a = {}
+        for (a, b), multiplicity in table.items():
+            if a:
+                by_a.setdefault(a, {})[b] = multiplicity
+        return sorted(by_a.items())
+
+    all_slices = [slices(a) for a, d in child_tables]
+    dom_slices = [slices(d) for a, d in child_tables]
+
+    def build(require_domination):
+        out = Counter()
+        for mask in range(1 << k):
+            active = [i for i in range(k) if mask >> i & 1]
+            if require_domination and any(
+                i not in active and not any(
+                    (min(i, j), max(i, j)) in edges for j in active
+                ) for i in range(k)
+            ):
+                continue
+            factors = []
+            for i in active:
+                external = any(
+                    (min(i, j), max(i, j)) in edges for j in active if j != i
+                )
+                factors.append(all_slices[i] if external or not require_domination
+                               else dom_slices[i])
+            for choices in product(*factors):
+                counts = {i: a for i, (a, poly) in zip(active, choices)}
+                cross = sum(counts[i] * counts[j] for i, j in edges
+                            if i in counts and j in counts)
+                poly = {0: 1}
+                for _, next_poly in choices:
+                    merged = Counter()
+                    for b, c in poly.items():
+                        for bb, cc in next_poly.items():
+                            merged[b + bb] += c * cc
+                    poly = merged
+                for b, c in poly.items():
+                    out[(sum(counts.values()), b + cross)] += c
+        return dict(out)
+
+    return build(False), build(True)
+
+
 def direct_tables(n, edges):
     a, d = Counter(), Counter()
     adj = [0]*n
@@ -125,6 +181,7 @@ def check(expr, q_values=(4, 5), star=False):
     n, edges = graph_of(expr)
     a, d = recurse(expr)
     aa, dd = direct_tables(n, edges)
+    assert recurse_sliced(expr) == (aa, dd), ('sliced', n, edges)
     assert a == aa, ('A', n, edges, a, aa)
     assert d == dd, ('D', n, edges, d, dd)
     for q in q_values:
