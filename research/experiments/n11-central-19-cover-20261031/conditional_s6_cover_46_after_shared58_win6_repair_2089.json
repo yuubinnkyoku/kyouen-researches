@@ -1,0 +1,58 @@
+{
+  "schema": "n11-central49-fixed44-two-certified-win6-repair-v1",
+  "source": "conditional_s6_cover_46_repaired_1980_swaps.txt",
+  "terminal_win6_certificate": "shared58_s6_win_strategy.cert",
+  "terminal_win6_sha256": "10e816538fbe6cc0062e2d0dd0fe96930ef294101812701305e1595b531b21da",
+  "removed_certified_win6": [
+    "00000000000000203808200000000000",
+    "0000000000000020380c000000000000"
+  ],
+  "added_s6_classes": [
+    "0000000000000000380c200000000000",
+    "00000000000000203804200000000000"
+  ],
+  "fixed_unchanged_s6": 44,
+  "missing_s5_after_removal": 4,
+  "s5_covered": 94,
+  "selected_s6_count": 46,
+  "raw_s7_edges": 2978,
+  "distinct_s7_classes": 2089,
+  "known_original_first_win6_conflicts": 0,
+  "known_original_first_win7_conflicts": 0,
+  "certified_shared_win7_conflicts": 0,
+  "exhaustive_two_replacement_options": [
+    {
+      "added": [
+        "0000000000000000380c200000000000",
+        "00000000000000203804200000000000"
+      ],
+      "raw_s7_edges": 2978,
+      "distinct_s7_classes": 2089
+    },
+    {
+      "added": [
+        "00000000000000083801800000000000",
+        "00000000000000403808200000000000"
+      ],
+      "raw_s7_edges": 2989,
+      "distinct_s7_classes": 2100
+    },
+    {
+      "added": [
+        "00000000000000083820800000000000",
+        "0000000000000040380c000000000000"
+      ],
+      "raw_s7_edges": 2988,
+      "distinct_s7_classes": 2100
+    }
+  ],
+  "fixed44_exact_minimum_distinct_s7": 2089,
+  "evidence_level": "GEOMETRY_ONLY_CONDITIONAL_S6_LOSS_WITNESS_COVER_NOT_VERDICTS",
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "caveat": "The 44 unchanged witnesses and two replacements have no established LOSS verdict. The minimum 2089 is exhaustive only among two-for-two repairs keeping the other 44 witnesses fixed; it is not a global optimum or a winner proof."
+}
