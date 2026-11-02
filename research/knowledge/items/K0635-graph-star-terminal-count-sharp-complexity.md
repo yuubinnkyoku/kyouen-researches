@@ -12,12 +12,12 @@ relations:
 artifacts:
 - path: research/experiments/graph-star-count-complexity-20261102/proof.md
   role: proof
-  note: #VertexCoverから分割グラフへの単一照会・B進最高位抽出還元の全称証明
+  note: '#VertexCoverから分割グラフへの単一照会・B進最高位抽出還元の全称証明'
 - path: research/experiments/graph-star-count-complexity-20261102/verify.py
   role: verifier
   note: 814グラフの桁抽出、1255条件の支配集合直接列挙、10条件の禁止超辺直接列挙
 scope: q=4のK0602グラフ星型ゲーム。入力は有限単純グラフまたは明示的4一様禁止超辺。整数平面での実現可能性はK0602を使用するが座標の多項式ビット長は主張しない。
-evidence: #VertexCoverからの単一照会・多項式時間後処理による還元と、候補極大性の多項式時間検査による#P所属の数学的証明。有限列挙は独立監査。
+evidence: '#VertexCoverからの単一照会・多項式時間後処理による還元と、候補極大性の多項式時間検査による#P所属の数学的証明。有限列挙は独立監査。'
 ---
 
 # 一般グラフ星型の極大終局総数は#P完全
