@@ -1,0 +1,33 @@
+name: N11 central49 retired 2094-2091 dispatch refusal
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2094.py'
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2093.py'
+      - 'research/experiments/n11-central-19-cover-20261031/focus_s7_worker_2091.py'
+      - '.github/workflows/n11-central49-retired-focus-refusal.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refuse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refuse all superseded focus dispatches before issuing work
+        run: |
+          set -euo pipefail
+          for version in 2094 2093 2091; do
+            output="$RUNNER_TEMP/forbidden-$version.json"
+            if python3 "research/experiments/n11-central-19-cover-20261031/focus_s7_worker_$version.py" --plan-out "$output" > "$RUNNER_TEMP/out-$version" 2> "$RUNNER_TEMP/err-$version"; then
+              echo "Superseded focus $version issued work" >&2
+              exit 1
+            fi
+            grep -q SUPERSEDED_BY_CERTIFIED_WIN6 "$RUNNER_TEMP/err-$version"
+            test ! -e "$output"
+          done
