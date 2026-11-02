@@ -46,6 +46,8 @@ jobs:
         run: python research/experiments/pseudoforest-terminal-dp-20261102/verify.py
       - name: Audit vertex-cover terminal polynomial and K2m phase transition
         run: python research/experiments/vertex-cover-terminal-dp-20261102/verify.py
+      - name: Audit bounded-treewidth terminal polynomial and ladder family
+        run: python research/experiments/treewidth-terminal-dp-20261102/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python tools/knowledge/build.py
@@ -165,3 +167,5 @@ jobs:
 # Refresh trigger for K0621 pseudoforest terminal polynomial theorem (2026-11-02).
 
 # Refresh trigger for K0622 generated views and N11 shared-S7 WIN6 evidence (2026-11-02).
+
+# Refresh trigger for K0623 treewidth terminal polynomial theorem (2026-11-02).
