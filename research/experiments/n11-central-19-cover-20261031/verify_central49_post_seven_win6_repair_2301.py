@@ -228,11 +228,14 @@ def main():
                 bad["outcomes"]["s6"] = "LOSS"
             else:
                 bad["source_certificate"] = "unverified.txt"
+            # Exercise the actual verifier, not merely bad != doc.  The
+            # previous check always raised for every changed object, even if
+            # verify() had silently accepted that altered manifest.
             try:
-                need(bad == doc, "tampered certificate")
-            except ValueError:
+                verify(bad)
+            except (ValueError, KeyError, TypeError):
                 continue
-            raise AssertionError("tampering accepted: " + kind)
+            raise AssertionError("tampering accepted by verifier: " + kind)
         result["negative_tests"] = 4
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
