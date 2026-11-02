@@ -39,6 +39,13 @@ def main():
     for step in range(1, 7):
         result = exact.audit(selected, expected_baseline=current)
         print(json.dumps({"round": step, **result}, ensure_ascii=False), flush=True)
+        if current == 1985:
+            exact.need((result["valid_exact_three_swap_candidates"],
+                        result["improving_candidates"],
+                        result["equal_cost_candidates"],
+                        result["best_distinct_s7"])
+                       == (153183, 0, 4, 1985),
+                       "1985 exact three-swap neighborhood changed")
         if result["best_distinct_s7"] == current:
             print(json.dumps({"stopped": "three_swap_local_optimum",
                               "rounds": step, "distinct_s7": current,
