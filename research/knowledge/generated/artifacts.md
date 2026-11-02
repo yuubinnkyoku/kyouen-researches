@@ -2738,6 +2738,12 @@
 ## [research/experiments/mixed-spider-critical-20261102/verify.py](../../../research/experiments/mixed-spider-critical-20261102/verify.py)
 
 - [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (verifier): グラフ削除24条件・禁止超辺9条件628032部分集合・総数49条件の独立照合
+## [research/experiments/multipartite-terminal-20261102/proof.md](../../../research/experiments/multipartite-terminal-20261102/proof.md)
+
+- [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) (proof): 残存部の支持数による分類と残存点数・二乗和による多項式時間算法の全称証明
+## [research/experiments/multipartite-terminal-20261102/verify.py](../../../research/experiments/multipartite-terminal-20261102/verify.py)
+
+- [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) (verifier): 削除集合1506条件、禁止超辺47条件・483184部分集合、既知閉式186条件の独立照合
 ## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）
@@ -6844,10 +6850,19 @@
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_shared58_win6_repair_2089.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_shared58_win6_repair_2089.json)
 
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (manifest): 固定44六石の条件付き修復被覆、勝敗UNKNOWNの境界を明示
+## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_after_terminal_s6_55_repair_2097.json)
+
+- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (manifest): 新たに確定したWIN6を除いた条件付き46証人・2,097七石類、選択六石のLOSSは未証明
 ## [research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert](../../../research/experiments/n11-central-19-cover-20261031/shared58_s6_win_strategy.cert)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (certificate): 修復後46証人のうち2類を元先手WINと確定する共有七石終局戦略; 10,881選択局面・16,980到達局面・2,237終局
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (certificate): 共有七石へ進んだ後の全相手応手を含む元先手戦略、SHA-256 10e816538fbe6cc0062e2d0dd0fe96930ef294101812701305e1595b531b21da
+## [research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64)
+
+- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (certificate): 深さ優先で初めて訪れた元先手手番局面の着手列12,068バイトをzlib/base64圧縮、復号SHA-256 83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b
+## [research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy_generator.cpp)
+
+- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (solver): 3×3差分整数行列式で決定的戦略を生成、独立検査器とは別実装
 ## [research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py](../../../research/experiments/n11-central-19-cover-20261031/verify_shared58_s6_win_strategy.py)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (verifier): 4x4整数幾何で全応手を再計算し、180度回転による2つ目のWIN6も独立検証
@@ -6857,6 +6872,12 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_shared_s7_seven_win6.py](../../../research/experiments/n11-central-19-cover-20261031/verify_shared_s7_seven_win6.py)
 
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (verifier): D4変換で七六石親に戦略を移し、4×4整数行列式で全応手と終局を再検査
+## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_compact.py)
+
+- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (verifier): 独立4×4整数行列式と相手全合法応手の再生、改変拒否4件
+## [research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py](../../../research/experiments/n11-central-19-cover-20261031/verify_terminal_s6_55_repair_2097.py)
+
+- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (verifier): 固定44証人の二対二置換68組と七石子を4×4整数行列式で独立監査
 ## [research/experiments/n11-central-reply-frontier-20261012/README.md](../../../research/experiments/n11-central-reply-frontier-20261012/README.md)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (source): 19初手軌道の中央後手応手境界、代替応手順位、次のexact探索候補
@@ -9902,6 +9923,9 @@
 ## [research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md](../../../research/log/2026-11-02-n11-central49-shared58-two-certified-win6-refute-1980.md)
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (log): 修復後1,980七石の条件付きLOSS計画失効と証明境界
+## [research/log/2026-11-02-n11-central49-terminal-win6-55-and-repair-2097.md](../../../research/log/2026-11-02-n11-central49-terminal-win6-55-and-repair-2097.md)
+
+- [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (log): 新規WIN6・旧条件付き計画の反証・修復の経緯と検証境界
 ## [research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md](../../../research/log/2026-11-02-n11-shared-terminal-s7-seven-certified-win6.md)
 
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (log): 新規五六石WINの証明・独立CI成功・残る未解決事項

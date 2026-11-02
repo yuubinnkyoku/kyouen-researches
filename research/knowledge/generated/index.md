@@ -609,3 +609,5 @@
 | [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) | 任意多重閉路グラフの頂点被覆数による極大配置厳密計数とK2m相転移 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0623](../items/K0623-treewidth-terminal-polynomial.md) | 有界木幅グラフ型q点共円ゲームの極大終局長母関数の厳密計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) | 11×11の共有七石終局戦略から七つの六石元先手WINを独立証明 | proposition | proved | square-outcomes, certificates, verification, search-methods |
+| [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) | 完全多部グラフ型q点共円ゲームの部数無制限・極大終局長母関数多項式時間計数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) | 11×11中央二石系の六石一類は元先手WIN、旧2,089七石条件付き証人は反証 | proposition | proved | square-outcomes, certificates, verification, search-methods |

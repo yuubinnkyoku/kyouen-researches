@@ -53,6 +53,7 @@
 - ← depends_on [K0525](../items/K0525-n11-four-s8-joint-terminal52.md): 共円4点禁止・合法手と終局規則
 - ← depends_on [K0582](../items/K0582-short-board-2q-two-carriers.md): 完全指摘・安全追加ルール
 - ← depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 完全指摘・通常プレイの合法手と終局規則
+- ← depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 完全指摘・通常プレイの合法手と終局規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -136,6 +137,7 @@
 ## [K0003](../items/K0003-solution-and-evidence-levels.md) 解決段階と計算・証明書・監査の区別
 
 - ← depends_on [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md): 局面証明と空盤弱解決の区別
+- ← depends_on [K0626](../items/K0626-n11-central49-terminal-s6-win55.md): 六石局面の局所的勝敗と空盤弱解決の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -2965,6 +2967,7 @@
 - ← depends_on [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md): 任意グラフの整数共円実現と削除頂点集合による極大配置分類を使用
 - ← depends_on [K0622](../items/K0622-vertex-cover-terminal-polynomial.md): 任意有限単純グラフの整数共円実現と極大配置削除集合の分類を使用
 - ← depends_on [K0623](../items/K0623-treewidth-terminal-polynomial.md): 任意有限単純グラフの整数共円実現と削除頂点集合による極大配置分類を使用
+- ← depends_on [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md): 任意グラフの整数共円実現と削除集合による極大配置母関数を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -2977,6 +2980,7 @@
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意q点版の整数幾何実現と極小横断集合分類を利用
 - → generalizes [K0599](../items/K0599-grid-circle-terminal-polynomial.md): q=4の格子状円構成と同じ抽象K_{a,b}型の終局多項式を全q>=4に拡張
 - ← depends_on [K0607](../items/K0607-graph-star-critical-poisson-terminal-defects.md): 完全二部グラフの終局多項式と一様誤差評価
+- ← generalizes [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md): 完全二部グラフの母関数を任意部数の完全多部グラフへ拡張
 
 ## [K0605](../items/K0605-domination-bipartition-nonconcentration.md) グラフ星型共円ゲームの支配集合恒等式と次数非依存の最短配置非集中境界
 
@@ -3106,3 +3110,13 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局面証明と空盤弱解決の区別
+
+## [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) 完全多部グラフ型q点共円ゲームの部数無制限・極大終局長母関数多項式時間計数
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 任意グラフの整数共円実現と削除集合による極大配置母関数を使用
+- → generalizes [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md): 完全二部グラフの母関数を任意部数の完全多部グラフへ拡張
+
+## [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) 11×11中央二石系の六石一類は元先手WIN、旧2,089七石条件付き証人は反証
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイの合法手と終局規則
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 六石局面の局所的勝敗と空盤弱解決の区別
