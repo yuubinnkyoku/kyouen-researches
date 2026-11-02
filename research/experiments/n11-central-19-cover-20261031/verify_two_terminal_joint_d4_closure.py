@@ -35,7 +35,7 @@ def main():
     for raw, (_, digest, size) in zip(raws, SOURCES):
         for damaged in (raw[:-1], raw + b"\0", bytes([raw[0] ^ 1]) + raw[1:]):
             try:
-                decode_and_check(zlib.compress(damaged).hex().encode(), digest, size)
+                decode_and_check(base64.b64encode(zlib.compress(damaged)), digest, size)
             except (ValueError, zlib.error, base64.binascii.Error):
                 pass
             else:
