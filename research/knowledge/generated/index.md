@@ -642,4 +642,6 @@
 | [K0656](../items/K0656-cycle-run-terminal-coefficients.md) | サイクル型グラフ星共円ゲームの全終局長係数は削除区間の二項和で閉じる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0657](../items/K0657-path-run-terminal-coefficients.md) | 道型グラフ星共円ゲームの全終局長係数は端点付き削除区間の二項和で閉じる | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) | 11×11中央49の2,090七石条件付き計画は既知の終局WIN6を再選択しており失効 | computation | computed | square-outcomes, certificates, verification, search-methods |
-| [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) | 11×11中央49の終局WIN6除外後の46六石被覆は七石2,096類 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) | 11×11中央49の終局WIN6除外後の46六石被覆は七石2,096類 | computation | superseded | square-outcomes, certificates, verification, search-methods |
+| [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) | 11×11中央49の六つの終局WIN7から37六石WINを導出し2,096類計画を反証 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) | 11×11中央49の失効2096集中対象53七石子は47 LOSS7・6 WIN7と終局分類 | computation | computed | square-outcomes, certificates, verification, search-methods |

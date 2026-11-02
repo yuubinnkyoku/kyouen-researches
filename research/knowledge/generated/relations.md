@@ -65,6 +65,7 @@
 - ← depends_on [K0641](../items/K0641-n11-central49-post-seven-win6-2301-conditional-cover.md): 完全指摘ルールと安全な追加
 - ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 合法手と安全な局面の定義
 - ← depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 合法な一点追加と通常プレイの終局規則
+- ← depends_on [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 完全指摘・通常プレイと整数行列式による合法手
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -3310,6 +3311,7 @@
 - ← depends_on [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md): 終局証明済みLOSS7の23類と現行被覆との交差6類
 - ← depends_on [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 現行幾何計画で再利用した六類の終局LOSS7証明
 - ← depends_on [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 独立終局証明済みLOSS7六類の再利用
+- ← depends_on [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md): 旧23終局LOSS7と今回の47新規LOSS7の非重複
 
 ## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
 
@@ -3414,3 +3416,17 @@
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 独立終局証明済みLOSS7六類の再利用
 - → depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 失効した2094段階より前の有効な2154幾何被覆
 - → supersedes [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md): 失効した2,090類計画を146既知WIN6除外の2,096類へ修復
+- ← refutes [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 2,096類の幾何計数は正しいが、六石LOSS証人として選んだ局面が終局WIN6である
+- ← refutes [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md): 53子のうち6子が元先手WIN7なので、集中六石をLOSS証人とする計画は無効
+
+## [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) 11×11中央49の六つの終局WIN7から37六石WINを導出し2,096類計画を反証
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイと整数行列式による合法手
+- → refutes [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 2,096類の幾何計数は正しいが、六石LOSS証人として選んだ局面が終局WIN6である
+- ← depends_on [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md): 六つのWIN7と37六石親WINの先行独立証明
+
+## [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) 11×11中央49の失効2096集中対象53七石子は47 LOSS7・6 WIN7と終局分類
+
+- → depends_on [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 六つのWIN7と37六石親WINの先行独立証明
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 旧23終局LOSS7と今回の47新規LOSS7の非重複
+- → refutes [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 53子のうち6子が元先手WIN7なので、集中六石をLOSS証人とする計画は無効

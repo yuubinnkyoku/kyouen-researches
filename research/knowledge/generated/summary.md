@@ -1,12 +1,12 @@
 # 移行集計
 
-K項目: 641 / alias: 269 / artifactファイル: 3195
+K項目: 643 / alias: 269 / artifactファイル: 3203
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 54 |
+| computation | 56 |
 | definition | 5 |
 | method | 4 |
 | proposition | 513 |
@@ -18,14 +18,14 @@ K項目: 641 / alias: 269 / artifactファイル: 3195
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 132 |
+| computed | 133 |
 | conjectured | 1 |
 | observed | 26 |
 | open | 36 |
 | proved | 333 |
 | refuted | 63 |
 | scope-unclear | 2 |
-| superseded | 8 |
+| superseded | 9 |
 | verified | 27 |
 | withdrawn | 4 |
 
@@ -33,7 +33,7 @@ K項目: 641 / alias: 269 / artifactファイル: 3195
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 81 |
+| certificates | 83 |
 | first-moves | 67 |
 | formalization | 5 |
 | geometry | 314 |
@@ -46,12 +46,12 @@ K項目: 641 / alias: 269 / artifactファイル: 3195
 | rectangles | 103 |
 | residual-games | 102 |
 | rules | 8 |
-| search-methods | 92 |
-| square-outcomes | 77 |
+| search-methods | 94 |
+| square-outcomes | 79 |
 | statistics | 113 |
 | strategy-length | 86 |
 | variants | 262 |
-| verification | 93 |
+| verification | 95 |
 
 ## 未解決・要監査・範囲不明
 
