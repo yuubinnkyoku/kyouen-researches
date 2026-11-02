@@ -2,7 +2,7 @@
 id: K0641
 title: 11×11中央49の七つの確定WIN6を除外した条件付き六石被覆は七石2,301類
 kind: computation
-status: computed
+status: superseded
 topics: [square-outcomes, certificates, verification, search-methods]
 aliases: []
 relations:
@@ -42,6 +42,8 @@ evidence: 旧1,980七石計画の46六石証人から、終局戦略に基づく
 ---
 
 # 旧1,980類計画の七つの反証を除いた条件付き修復
+
+> **2026-11-03更新：** この2,301類計画は、K0646の2,154類・46証人計画に置き換えられた。以下は当時の有効な幾何証明として保存する。勝敗証明ではない。
 
 歴史的な46六石証人・1,980七石類の被覆は、元先手WINと終局証明された六石を**七類**含む。従って幾何学的な94/94被覆が正しくても、46類すべてを元先手LOSSとして証明することは不可能だった。
 
