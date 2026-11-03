@@ -16,6 +16,7 @@ import json
 import verify_conditional_s6_cover_46 as base
 import verify_central49_post_seven_win6_repair_2301 as current
 import verify_central49_2154_two_swap_descent as source
+import verify_s6_cover_exclude_certified_win6 as exclude
 
 HERE = source.HERE
 
@@ -72,6 +73,13 @@ def audit():
     known_win7 = {base.decode(k) for k in win7}
     need(len(known_win6) == 145 and len(known_win7) == 23,
          'WIN6/WIN7 exclusions changed')
+    # Terminal-certified WIN6 that is absent from the 145-class WIN7-parent
+    # inventory: focus_s6_win_strategy_1984.cert (K0105/K0658). It must never
+    # be used as a conditional LOSS witness either.
+    REFUTED_WIN6 = int(exclude.REFUTED, 16)
+    need(REFUTED_WIN6 not in known_win6,
+         'certified WIN6 unexpectedly present in inventory')
+    known_win6 = known_win6 | {REFUTED_WIN6}
     loss7 = source.terminal_loss7()
     need(len(kept_union & loss7) == 6, 'terminal LOSS7 overlap changed')
     need(not (kept_union & known_win7), 'known WIN7 selected as LOSS7 obligation')

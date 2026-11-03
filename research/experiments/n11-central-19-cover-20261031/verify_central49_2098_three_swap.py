@@ -17,6 +17,7 @@ from pathlib import Path
 import focus_s7_worker_2154 as focus
 import verify_central49_2154_two_swap_descent as source
 import verify_conditional_s6_cover_46 as base
+import verify_s6_cover_exclude_certified_win6 as exclude
 
 HERE = Path(__file__).resolve().parent
 CERT = HERE / "conditional_s6_cover_46_post_seven_win6_2098_three_swap.json"
@@ -108,6 +109,8 @@ def audit(doc):
          "invalid three-for-three membership")
     need(added <= set(incidence) and not (added & win6),
          "out-of-scope or certified WIN6 witness")
+    need(int(exclude.REFUTED, 16) not in added,
+         "certified WIN6 witness added to LOSS plan")
     selected = (selected - removed) | added
     need(len(selected) == 46 and
          set().union(*(incidence[s] for s in selected)) == set(range(len(s5))),
