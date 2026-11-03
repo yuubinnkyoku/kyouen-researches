@@ -19,6 +19,9 @@ artifacts:
   role: manifest
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json
+  role: verifier
+  note: 2026-11-03にgrundy専用ストリーミングDP（別実装）で全局面を再走査し、空盤g=0・後手必勝を再確認。K0006由来の二次証拠であり、本項目の主証明（AND/OR証明書）は不変
 - path: results/all-certificates-check.txt
   role: log
   note: 命題・対象範囲・根拠を記した出典

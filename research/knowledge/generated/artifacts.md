@@ -8199,6 +8199,7 @@
 ## [research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json](../../../research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json)
 
 - [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (verifier): grundy専用ストリーミングDP（新規実装）で全67億状態を再走査し、層サイズ・P/N数・K_8=15・g_root=0・禁止四点数14564を完全一致で確認。1石/2石層のmex再照合・J_8連結性・σ_8=4を含む
+- [K0018](../items/K0018-n8-second-player-win.md) (verifier): 2026-11-03にgrundy専用ストリーミングDP（別実装）で全局面を再走査し、空盤g=0・後手必勝を再確認。K0006由来の二次証拠であり、本項目の主証明（AND/OR証明書）は不変
 - [K0113](../items/K0113-losing-first-move-odd-nimber-open.md) (data): 2026-11-03 n=8全局面再走による一石層ヒストグラム（値{1:12点,3:52点}）と独立検算
 - [K0119](../items/K0119-jn-losing-board-connectivity-open.md) (data): 2026-11-03 n=8全局面再走によるJ_8連結性の二方式（union-find/BFS）確認
 - [K0182](../items/K0182-all-losing-first-moves-few-nimbers-open.md) (data): 2026-11-03 n=8全局面再走による一石層ヒストグラム（値{1:12点,3:52点}、種類数2）
