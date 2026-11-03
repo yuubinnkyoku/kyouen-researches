@@ -651,3 +651,4 @@
 | [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md) | 木型中心付き終局長多項式の実根性は星K1,3で破れ、星型では次数2以下に限る | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md) | グラフ星型の中心付き終局長多項式は次数2のない非自明グラフで実根性を失う | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0667](../items/K0667-componentwise-terminal-real-rootedness.md) | グラフ星型の中心付き終局長多項式の成分別実根性判定 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0668](../items/K0668-n11-central49-2098-three-swap.md) | 11×11中央49の条件付き七石義務を2,154類から2,098類へ三証人交換で縮小 | computation | computed | square-outcomes, certificates, verification, search-methods |
