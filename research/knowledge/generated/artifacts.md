@@ -834,6 +834,12 @@
 ## [research/experiments/cograph-terminal-20261102/verify.py](../../../research/experiments/cograph-terminal-20261102/verify.py)
 
 - [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): 12066条件の削除集合直接列挙、744標本、159条件192144点部分集合の禁止超辺独立検査
+## [research/experiments/componentwise-terminal-real-rootedness-20261103/proof.md](../../../research/experiments/componentwise-terminal-real-rootedness-20261103/proof.md)
+
+- [K0667](../items/K0667-componentwise-terminal-real-rootedness.md) (proof): 乗法性、実根性の成分別必要十分条件、および混合成分族の判定
+## [research/experiments/componentwise-terminal-real-rootedness-20261103/verify.py](../../../research/experiments/componentwise-terminal-real-rootedness-20261103/verify.py)
+
+- [K0667](../items/K0667-componentwise-terminal-real-rootedness.md) (verifier): 頂点数7以下の有限グラフで成分別乗法性を検査（全称証明の代用ではない）
 ## [research/experiments/coplanar-3x3x4-q4-20261027/README.md](../../../research/experiments/coplanar-3x3x4-q4-20261027/README.md)
 
 - [K0569](../items/K0569-coplanar-3x3x4-strong-solution.md) (proof): 実験の範囲・方式・再現手順

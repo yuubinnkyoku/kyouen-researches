@@ -3355,6 +3355,7 @@
 - → generalizes [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md): 森に限らず任意グラフの終局長係数を葉と高次数核で分類する。ただし森の成分数表示や星森の部分和公式は別の系として維持する
 - ← depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): 許容核の欠損公式と次数下界
 - ← depends_on [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md): 中心付き終局長母関数の非負係数と正の定数項
+- ← depends_on [K0667](../items/K0667-componentwise-terminal-real-rootedness.md): 許容核と重みの連結成分別乗法性
 
 ## [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減
 
@@ -3479,3 +3480,9 @@
 - → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 中心付き終局長母関数の非負係数と正の定数項
 - → depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): 最初の正の終局長差は最小非葉次数から決まる
 - → generalizes [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md): 星型反例を次数2のない任意グラフへ拡張する
+- ← depends_on [K0667](../items/K0667-componentwise-terminal-real-rootedness.md): 次数2を含まない分岐成分の非実根性
+
+## [K0667](../items/K0667-componentwise-terminal-real-rootedness.md) グラフ星型の中心付き終局長多項式の成分別実根性判定
+
+- → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 許容核と重みの連結成分別乗法性
+- → depends_on [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md): 次数2を含まない分岐成分の非実根性
