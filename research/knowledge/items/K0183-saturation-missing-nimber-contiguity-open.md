@@ -36,6 +36,9 @@ artifacts:
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json
+  role: data
+  note: 2026-11-03 n=8全局面再走による飽和開始層σ_8=4の完全プロファイル（missing=[]、σ証人mask=148032 g=11）
 scope: '起点: [個票02・B025〜B030](../../log/claim-audit/batch-02.md)。飽和開始の次層以降が埋まるというmexの直接帰結は新仮説に数えない。'
 evidence: 原文監査 PARTIAL / finite_complete_classification
 ---
@@ -69,3 +72,9 @@ Scope clarification: sigma_8 not determined; saturation-start layer and nimber h
 Next steps: optimized streaming DP over all 6,700,711,937 safe positions recording per-level max Grundy/histogram. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-03 bounded advance（n=8完全再計算）
+
+8×8の全6,700,711,937安全局面を別実装で再走査し、飽和開始層が **σ_8=4**（M_8(k)=[0,3,4,6,11,…]、D_8(k)=[15,11,9,6,0,…] 単調非増加、天井不変式 M≤K−k 全層で成立、K_8=15）と完全に決定した。σ_8層（k=4）の実現nimberは [0..11] で、**欠番は存在しない（missing=[]）**。よってこの有限盤では連続する欠番の反例は存在しない。最適証人 mask=148032（idx 2558、g=11）を独立に再計算済み。上の2026-10-17節の「n=8完全Grundyは不可能」はこの再走で解消された。
+
+Scope clarification: n≤8の有限盤の分類であり、無界全称は証明しない。statusはopenのまま。

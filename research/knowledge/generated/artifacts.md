@@ -8187,6 +8187,20 @@
 ## [research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json](../../../research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json)
 
 - [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (data): 全115対象S4 classの分類と共有局面の有限監査
+## [research/experiments/n8-grundy-layer-profiles-20261101/output/n8_J8_edges.txt](../../../research/experiments/n8-grundy-layer-profiles-20261101/output/n8_J8_edges.txt)
+
+- [K0119](../items/K0119-jn-losing-board-connectivity-open.md) (data): 2026-11-03 n=8全局面再走によるJ_8の1,380辺
+## [research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json](../../../research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json)
+
+- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (verifier): grundy専用ストリーミングDP（新規実装）で全67億状態を再走査し、層サイズ・P/N数・K_8=15・g_root=0・禁止四点数14564を完全一致で確認。1石/2石層のmex再照合・J_8連結性・σ_8=4を含む
+- [K0113](../items/K0113-losing-first-move-odd-nimber-open.md) (data): 2026-11-03 n=8全局面再走による一石層ヒストグラム（値{1:12点,3:52点}）と独立検算
+- [K0119](../items/K0119-jn-losing-board-connectivity-open.md) (data): 2026-11-03 n=8全局面再走によるJ_8連結性の二方式（union-find/BFS）確認
+- [K0182](../items/K0182-all-losing-first-moves-few-nimbers-open.md) (data): 2026-11-03 n=8全局面再走による一石層ヒストグラム（値{1:12点,3:52点}、種類数2）
+- [K0183](../items/K0183-saturation-missing-nimber-contiguity-open.md) (data): 2026-11-03 n=8全局面再走による飽和開始層σ_8=4の完全プロファイル（missing=[]、σ証人mask=148032 g=11）
+- [K0184](../items/K0184-saturation-missing-nimbers-powers-of-two-open.md) (data): 2026-11-03 n=8全局面再走による飽和開始層σ_8=4の完全プロファイル（正の欠番は存在しない）
+## [research/experiments/n8-grundy-layer-profiles-20261101/output/n8_grundy.json](../../../research/experiments/n8-grundy-layer-profiles-20261101/output/n8_grundy.json)
+
+- [K0006](../items/K0006-n8-all-safe-grundy-computed.md) (data): 層別集計とGrundyヒストグラム（2026-11-03、別実装の再走)
 ## [research/experiments/n9-minimum-maximal-catalogue-20261016/README.md](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/README.md)
 
 - [K0297](../items/K0297-minimum-maximal-private-point-open.md) (source): n=9の全最小極大配置1,179件を完全列挙し全件でmin b=1を確認

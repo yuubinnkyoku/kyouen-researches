@@ -37,6 +37,9 @@ artifacts:
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json
+  role: data
+  note: 2026-11-03 n=8全局面再走による一石層ヒストグラム（値{1:12点,3:52点}、種類数2）
 scope: '起点: [個票01](../../log/claim-audit/batch-01.md)。拠点自身への初手にも返せるよう、閉近傍による支配と全域支配を分ける。'
 evidence: 原文監査 PARTIAL / finite_complete_classification
 ---
@@ -62,3 +65,9 @@ Scope clarification: n=8,n=10 are P boards but one-stone nimber kinds uncomputed
 Next steps: compute one-stone nimber kinds for n=8/n=10 P boards if feasible. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-03 bounded advance（n=8完全再計算）
+
+8×8の全6,700,711,937安全局面を別実装で再走査した。n=8は後手勝ち盤で全64初手が負け手であり、一石局面の非零Grundy値は **{1（12点）, 3（52点）} のみ、種類数は2**。
+
+Scope clarification: n≤8の有限盤の分類であり、無界全称は証明しない。n=10は未検査。statusはopenのまま。

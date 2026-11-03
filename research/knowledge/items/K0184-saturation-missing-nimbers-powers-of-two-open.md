@@ -36,6 +36,9 @@ artifacts:
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json
+  role: data
+  note: 2026-11-03 n=8全局面再走による飽和開始層σ_8=4の完全プロファイル（正の欠番は存在しない）
 scope: '起点: [個票02・B025〜B030](../../log/claim-audit/batch-02.md)。飽和開始の次層以降が埋まるというmexの直接帰結は新仮説に数えない。'
 evidence: 原文監査 PARTIAL / finite_complete_classification
 ---
@@ -61,3 +64,9 @@ Scope clarification: finite-case evidence only; no n>=8 complete saturation data
 Next steps: obtain n>=8 saturation-start histograms. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-03 bounded advance（n=8完全再計算）
+
+8×8の全6,700,711,937安全局面を別実装で再走査し、飽和開始層が **σ_8=4** と完全に決定した（詳細はK0183参照）。σ_8層の実現nimberは [0..11] で **正の欠番は存在せず**、よって「欠ける正のnimberは2の冪だけ」は真空に成立した。n=5,7と同様、この有限盤では欠番のない飽和開始層である。
+
+Scope clarification: n≤8の有限盤の分類であり、無界全称は証明しない。statusはopenのまま。

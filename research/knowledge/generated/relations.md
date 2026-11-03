@@ -182,6 +182,11 @@
 ## [K0006](../items/K0006-n8-all-safe-grundy-computed.md) 8×8の全6,700,711,937安全局面をGrundy DPで完全計算
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
+- → supports [K0113](../items/K0113-losing-first-move-odd-nimber-open.md): 一石局面の非零Grundy値は {1,3} のみ（すべて奇数）。n=8有限盤の証拠で、無界全称は証明しない
+- → supports [K0119](../items/K0119-jn-losing-board-connectivity-open.md): J_8は64頂点・1,380辺でunion-find/BFS二方式とも1成分（連結）。n=8有限盤の証拠
+- → supports [K0182](../items/K0182-all-losing-first-moves-few-nimbers-open.md): 後手勝ち8×8の一石nimberの種類数は2（{1,3}）。n=8有限盤の証拠
+- → supports [K0183](../items/K0183-saturation-missing-nimber-contiguity-open.md): σ_8=4層で欠番なし（missing=[]）。有限盤の観測で無界全称は証明しない
+- → supports [K0184](../items/K0184-saturation-missing-nimbers-powers-of-two-open.md): σ_8=4層の正の欠番なし（真空に「2の冪」を満たす）。有限盤の観測
 
 ## [K0007](../items/K0007-ranked-and-or-certificates.md) 順位付きAND/OR証明書の局所条件と健全性
 
@@ -885,6 +890,7 @@
 ## [K0113](../items/K0113-losing-first-move-odd-nimber-open.md) 負け初手後のnimberは奇数
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
+- ← supports [K0006](../items/K0006-n8-all-safe-grundy-computed.md): 一石局面の非零Grundy値は {1,3} のみ（すべて奇数）。n=8有限盤の証拠で、無界全称は証明しない
 
 ## [K0114](../items/K0114-j5-nonisolated-connectivity.md) 5×5のJ_5の非孤立部分は連結
 
@@ -909,6 +915,7 @@
 ## [K0119](../items/K0119-jn-losing-board-connectivity-open.md) 後手勝ち正方形盤のJ_nは連結
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
+- ← supports [K0006](../items/K0006-n8-all-safe-grundy-computed.md): J_8は64頂点・1,380辺でunion-find/BFS二方式とも1成分（連結）。n=8有限盤の証拠
 
 ## [K0120](../items/K0120-same-two-stone-p-graph-different-higher-outcomes.md) 二石Pグラフが同じでも高層の勝敗は違う盤
 
@@ -1121,14 +1128,17 @@
 ## [K0182](../items/K0182-all-losing-first-moves-few-nimbers-open.md) 全初手負け盤でも一石nimberの種類数は小さい
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
+- ← supports [K0006](../items/K0006-n8-all-safe-grundy-computed.md): 後手勝ち8×8の一石nimberの種類数は2（{1,3}）。n=8有限盤の証拠
 
 ## [K0183](../items/K0183-saturation-missing-nimber-contiguity-open.md) 飽和開始層で欠けるnimberは連続しない
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
+- ← supports [K0006](../items/K0006-n8-all-safe-grundy-computed.md): σ_8=4層で欠番なし（missing=[]）。有限盤の観測で無界全称は証明しない
 
 ## [K0184](../items/K0184-saturation-missing-nimbers-powers-of-two-open.md) 飽和開始層で欠ける正のnimberは2の冪だけ
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
+- ← supports [K0006](../items/K0006-n8-all-safe-grundy-computed.md): σ_8=4層の正の欠番なし（真空に「2の冪」を満たす）。有限盤の観測
 
 ## [K0185](../items/K0185-ceiling-with-small-mobility-slack-open.md) 天井達成局面は合法手数の小さい余裕で作れる
 

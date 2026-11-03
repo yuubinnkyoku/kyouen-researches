@@ -37,6 +37,12 @@ artifacts:
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n8-grundy-layer-profiles-20261101/output/n8_J8_edges.txt
+  role: data
+  note: 2026-11-03 n=8全局面再走によるJ_8の1,380辺
+- path: research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json
+  role: data
+  note: 2026-11-03 n=8全局面再走によるJ_8連結性の二方式（union-find/BFS）確認
 scope: この節のJ_nは、盤点を頂点、`g({p,q})=0` を辺とするグラフ。初手勝ちの頂点が孤立点になること自体は再帰定義からの帰結なので候補に数えない。
 evidence: 原文監査 PARTIAL / finite_complete_classification
 ---
@@ -47,9 +53,9 @@ evidence: 原文監査 PARTIAL / finite_complete_classification
 
 適用文脈: この節のJ_nは、盤点を頂点、`g({p,q})=0` を辺とするグラフ。初手勝ちの頂点が孤立点になること自体は再帰定義からの帰結なので候補に数えない。
 
-現在の結論: n7のJは49頂点552辺で連結、n4も連結。全ての後手勝ち盤への一般証明はない。
+現在の結論: n7のJは49頂点552辺で連結、n4も連結、n8も連結（64頂点・1,380辺、二方式一致）。全ての後手勝ち盤への一般証明はない。
 
-採用境界: 7×7までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
+採用境界: 8×8までの一石・飽和・J・空盤WFTを完全検査したが、原文の無界全称は未証明。
 
 根拠は原文量化を照合した最新索引と下記採用報告。旧batchの強いラベルを再採用せず、有限証人・完全列挙・一般証明の範囲を区別する。
 
@@ -60,3 +66,9 @@ New finite evidence: BFS connectivity of non-isolated J_n part for n=1..7: n=4 (
 Scope clarification: finite evidence n<=7 only; n=8,n=10 S-win untested; universal claim unproved. Status remains open (question kind).
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-03 bounded advance（n=8完全再計算）
+
+8×8の全6,700,711,937安全局面を別実装（grundy専用ストリーミングDP）で再走査し、二石層の正確なGrundy値からJ_8を再構築した。**J_8は64頂点・1,380辺・孤立点なし・union-find/BFSの二方式でいずれも1成分（連結）**。次数分布は min=11 / max=59（11:8, 19:4, 44:8, 47:4, 48:16, 51:16, 59:8）。
+
+Scope clarification: n≤8の有限盤の完全な分類であり、無界全称は証明しない。n=10など他の後手勝ち盤は未検査。statusはopenのまま。
