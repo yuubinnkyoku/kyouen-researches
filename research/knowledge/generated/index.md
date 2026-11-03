@@ -645,3 +645,5 @@
 | [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md) | 11×11中央49の終局WIN6除外後の46六石被覆は七石2,096類 | computation | superseded | square-outcomes, certificates, verification, search-methods |
 | [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) | 11×11中央49の六つの終局WIN7から37六石WINを導出し2,096類計画を反証 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) | 11×11中央49の失効2096集中対象53七石子は47 LOSS7・6 WIN7と終局分類 | computation | computed | square-outcomes, certificates, verification, search-methods |
+| [K0662](../items/K0662-cycle-terminal-real-rootedness.md) | サイクル型グラフ星共円ゲームの中心付き終局長多項式は全根が負の実数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) | 11×11の47終局LOSS7から七石LOSS251類を導き既存23類と合わせ274類を確保 | proposition | proved | square-outcomes, certificates, verification, search-methods |

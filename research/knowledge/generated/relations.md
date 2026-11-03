@@ -66,6 +66,7 @@
 - ← depends_on [K0642](../items/K0642-n11-central49-four-terminal-loss7-hits-in-2301-cover.md): 合法手と安全な局面の定義
 - ← depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 合法な一点追加と通常プレイの終局規則
 - ← depends_on [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 完全指摘・通常プレイと整数行列式による合法手
+- ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 完全指摘・通常プレイと合法な一点追加
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -162,6 +163,7 @@
 - ← depends_on [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md): 条件付き証明計画と勝敗の区別
 - ← depends_on [K0651](../items/K0651-n11-central49-2094-exact-two-swap-local-optimum.md): 条件付き計算量と勝敗証明の区別
+- ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 局所終局証明と空盤弱解決の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3009,6 +3011,7 @@
 - ← depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): グラフ星型の整数共円構成と極大配置分類
 - ← depends_on [K0656](../items/K0656-cycle-run-terminal-coefficients.md): グラフ星型整数共円構成の極大配置分類を使用
 - ← depends_on [K0657](../items/K0657-path-run-terminal-coefficients.md): グラフ星型整数共円構成の極大配置分類を使用
+- ← depends_on [K0662](../items/K0662-cycle-terminal-real-rootedness.md): グラフ星型共円構成と許容削除集合の極大配置重みを使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3312,6 +3315,7 @@
 - ← depends_on [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md): 現行幾何計画で再利用した六類の終局LOSS7証明
 - ← depends_on [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 独立終局証明済みLOSS7六類の再利用
 - ← depends_on [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md): 旧23終局LOSS7と今回の47新規LOSS7の非重複
+- ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 既存五根からの23元先手LOSS7の親持ち上げ
 
 ## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
 
@@ -3393,6 +3397,7 @@
 ## [K0656](../items/K0656-cycle-run-terminal-coefficients.md) サイクル型グラフ星共円ゲームの全終局長係数は削除区間の二項和で閉じる
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円構成の極大配置分類を使用
+- ← depends_on [K0662](../items/K0662-cycle-terminal-real-rootedness.md): サイクルの削除区間分類と係数の全範囲正性を使用
 
 ## [K0657](../items/K0657-path-run-terminal-coefficients.md) 道型グラフ星共円ゲームの全終局長係数は端点付き削除区間の二項和で閉じる
 
@@ -3430,3 +3435,16 @@
 - → depends_on [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 六つのWIN7と37六石親WINの先行独立証明
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 旧23終局LOSS7と今回の47新規LOSS7の非重複
 - → refutes [K0659](../items/K0659-n11-central49-2096-exclude-certified-win6-repair.md): 53子のうち6子が元先手WIN7なので、集中六石をLOSS証人とする計画は無効
+- ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 53七石子の独立終局検証と47元先手LOSS7
+
+## [K0662](../items/K0662-cycle-terminal-real-rootedness.md) サイクル型グラフ星共円ゲームの中心付き終局長多項式は全根が負の実数
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成と許容削除集合の極大配置重みを使用
+- → depends_on [K0656](../items/K0656-cycle-run-terminal-coefficients.md): サイクルの削除区間分類と係数の全範囲正性を使用
+
+## [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) 11×11の47終局LOSS7から七石LOSS251類を導き既存23類と合わせ274類を確保
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 完全指摘・通常プレイと合法な一点追加
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所終局証明と空盤弱解決の区別
+- → depends_on [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md): 53七石子の独立終局検証と47元先手LOSS7
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 既存五根からの23元先手LOSS7の親持ち上げ

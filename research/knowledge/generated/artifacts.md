@@ -49,6 +49,7 @@
 ## [.github/workflows/n11-central49-2096-focus-53-terminal.yml](../../../.github/workflows/n11-central49-2096-focus-53-terminal.yml)
 
 - [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) (source): 全53局面の固定総合SHAと独立終局監査・改変拒否
+- [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) (source): 53戦略と親持ち上げ・固定一覧の独立再生CI
 ## [.github/workflows/n11-central49-2096-focus-win6-refutation.yml](../../../.github/workflows/n11-central49-2096-focus-win6-refutation.yml)
 
 - [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) (source): 一局面の独立終局戦略再生と改変拒否
@@ -1248,6 +1249,12 @@
 ## [research/experiments/cycle-terminal-gaussian-20261101/verify.py](../../../research/experiments/cycle-terminal-gaussian-20261101/verify.py)
 
 - [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md) (verifier): 36条件の円環・行列・漸化式照合と6条件608768局面の超辺直接完全列挙
+## [research/experiments/cycle-terminal-real-roots-20261103/proof.md](../../../research/experiments/cycle-terminal-real-roots-20261103/proof.md)
+
+- [K0662](../items/K0662-cycle-terminal-real-rootedness.md) (proof): 長さ2・3の巡回区間の競合グラフをclaw-freeと証明し、真の双子置換とChudnovsky–Seymour定理で実根性を示す
+## [research/experiments/cycle-terminal-real-roots-20261103/verify.py](../../../research/experiments/cycle-terminal-real-roots-20261103/verify.py)
+
+- [K0662](../items/K0662-cycle-terminal-real-rootedness.md) (verifier): 38競合グラフ・28全単射と係数比較・444強対数凹性検査
 ## [research/experiments/cycle-terminal-run-formula-20261103/proof.md](../../../research/experiments/cycle-terminal-run-formula-20261103/proof.md)
 
 - [K0656](../items/K0656-cycle-run-terminal-coefficients.md) (proof): 削除区間の巡回二重計数による全称閉公式、支持集合、最大中心付き係数の証明
@@ -7114,6 +7121,9 @@
 
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) (certificate): 修復後46証人のうち2類を元先手WINと確定する共有七石終局戦略; 10,881選択局面・16,980到達局面・2,237終局
 - [K0624](../items/K0624-n11-shared-s7-seven-terminal-win6.md) (certificate): 共有七石へ進んだ後の全相手応手を含む元先手戦略、SHA-256 10e816538fbe6cc0062e2d0dd0fe96930ef294101812701305e1595b531b21da
+## [research/experiments/n11-central-19-cover-20261031/terminal_loss7_parent_lift_274_manifest.json](../../../research/experiments/n11-central-19-cover-20261031/terminal_loss7_parent_lift_274_manifest.json)
+
+- [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) (data): 47根由来251類、K0644由来23類、和集合274類の正準鍵。単体では証明書でなく独立再生検証器との一致が必要
 ## [research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64](../../../research/experiments/n11-central-19-cover-20261031/terminal_s6_55_strategy.b64)
 
 - [K0626](../items/K0626-n11-central49-terminal-s6-win55.md) (certificate): 深さ優先で初めて訪れた元先手手番局面の着手列12,068バイトをzlib/base64圧縮、復号SHA-256 83bdd3c89555bd80eadae802d47a8dc8289f0aee1a935440fb325f7f9ce25b2b
@@ -7136,6 +7146,7 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_2096_focus_53_terminal_classes.py](../../../research/experiments/n11-central-19-cover-20261031/verify_2096_focus_53_terminal_classes.py)
 
 - [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) (verifier): 53証明書を決定的再生成し、別実装4×4整数Bareissで全応手・全終局を独立監査
+- [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) (verifier): 53終局戦略の固定総合SHAと4×4整数Bareiss全応手監査、47勝ち初手後の八石と376復帰辺、既存23類との非重複を検査
 ## [research/experiments/n11-central-19-cover-20261031/verify_2096_focus_six_win7_parent_lift.py](../../../research/experiments/n11-central-19-cover-20261031/verify_2096_focus_six_win7_parent_lift.py)
 
 - [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) (verifier): 六つの終局WIN7と42本の六石復帰辺・37正準六石WINを独立検査
@@ -10319,6 +10330,9 @@
 ## [research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md](../../../research/log/2026-11-02-n11-two-terminal-joint-d4-closure-444570-disjoint.md)
 
 - [K0633](../items/K0633-n11-two-terminal-disjoint-d4-win-closure.md) (log): 有限計算の結果、相乗増分が0であること、証明境界
+## [research/log/2026-11-03-n11-47-loss7-parent-lift-274.md](../../../research/log/2026-11-03-n11-47-loss7-parent-lift-274.md)
+
+- [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) (log): 導出、既存証明との交差、条件付き被覆の再計画に向けた境界
 ## [research/log/2026-11-03-n11-central49-2090-exact-three-swap-terminal-identity-audit.md](../../../research/log/2026-11-03-n11-central49-2090-exact-three-swap-terminal-identity-audit.md)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (log): 三証人交換全数監査と終局証明六類の同一性保持の修正
