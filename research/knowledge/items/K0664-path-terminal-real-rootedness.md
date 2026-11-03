@@ -12,9 +12,6 @@ relations:
 - type: depends_on
   target: K0657
   note: 道の削除区間が内部長1/2・端点長0/1に限られる分類を使用
-- type: depends_on
-  target: K0662
-  note: 爪なし競合グラフと真の双子置換を用いる実根定理の適用法を拡張
 artifacts:
 - path: research/experiments/path-terminal-real-roots-20261103/proof.md
   role: proof
