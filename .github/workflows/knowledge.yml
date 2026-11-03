@@ -14,6 +14,7 @@ jobs:
       - run: uv sync --locked
       - run: python research/experiments/graph-star-second-terminal-degree-20261103/verify.py
       - run: uv run --locked python research/experiments/path-run-coefficients-20261103/verify.py
+      - run: uv run --locked python research/experiments/path-terminal-real-roots-20261103/verify.py
       - run: uv run --locked python tools/knowledge/check.py
       - run: uv run --locked python -m unittest discover -s tools/knowledge/tests
       - run: uv run --locked python research/experiments/graph-star-fixed-q-count-complexity-20261102/verify.py
