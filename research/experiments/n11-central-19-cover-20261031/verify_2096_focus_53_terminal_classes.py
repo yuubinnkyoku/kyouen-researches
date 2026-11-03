@@ -40,6 +40,22 @@ def need(ok, why):
         raise ValueError(why)
 
 
+def lift_loss7_parent(root, eight, removed):
+    """A certified LOSS7 winning reply makes LOSS8; every safe S7 parent is LOSS7."""
+    need(root.bit_count() == 7 and eight.bit_count() == 8
+         and (root & eight) == root
+         and (eight ^ root).bit_count() == 1,
+         "not a certified seven-to-eight transition")
+    need(independent.legal(root) & (eight ^ root),
+         "winning reply is illegal under independent 4x4 geometry")
+    need(eight & (1 << removed), "removed point absent from LOSS8")
+    parent = eight ^ (1 << removed)
+    need(parent.bit_count() == 7
+         and independent.legal(parent) & (1 << removed),
+         "parent cannot legally restore certified LOSS8")
+    return canonical(parent)
+
+
 def audit(negative=False):
     parent = int(PARENT, 16)
     need(parent.bit_count() == 6 and canonical(parent) == parent,
@@ -64,6 +80,10 @@ def audit(negative=False):
     totals = [0, 0, 0, 0]
     certificate_manifest = []
     examples = {}
+    loss8 = set()
+    lifted_loss7 = set()
+    lifted_edges = 0
+    original_loss7 = set()
     with tempfile.TemporaryDirectory() as temp:
         executable = Path(temp) / "generator"
         certificate = Path(temp) / "strategy.cert"
@@ -85,6 +105,17 @@ def audit(negative=False):
                                        winner_parity=1 if is_win else 0)
             for i in range(4):
                 totals[i] += stats[i]
+            if not is_win:
+                root = int(key, 16)
+                original_loss7.add(root)
+                need(root in strategy, "LOSS7 certificate has no winning first reply")
+                eight = root | (1 << strategy[root])
+                need(eight.bit_count() == 8, "invalid winning reply")
+                loss8.add(canonical(eight))
+                for removed in range(121):
+                    if eight & (1 << removed):
+                        lifted_loss7.add(lift_loss7_parent(root, eight, removed))
+                        lifted_edges += 1
             certificate_manifest.append(
                 key + " " + orientation + " "
                 + hashlib.sha256(raw).hexdigest() + "\n")
@@ -94,6 +125,10 @@ def audit(negative=False):
          "53 complete certificate digests differ from pinned evidence")
     need(tuple(totals) == EXPECTED_TOTALS,
          "53 independent 4x4 proof shapes changed")
+    need(len(original_loss7) == 47 and
+         {canonical(x) for x in original_loss7} <= lifted_loss7
+         and lifted_edges == 47 * 8,
+         "LOSS7 first-reply parent closure incomplete")
     rejected = 0
     if negative:
         for orientation, (key, raw, strategy) in examples.items():
@@ -120,6 +155,12 @@ def audit(negative=False):
         "focused_s7": len(roots),
         "terminal_certified_original_first_loss7": len(roots) - len(WIN7),
         "terminal_certified_original_first_win7": len(WIN7),
+        "certified_loss8_first_replies": len(loss8),
+        "loss8_to_loss7_restoration_edges_checked": lifted_edges,
+        "distinct_terminal_derived_loss7_by_parent_lift": len(lifted_loss7),
+        "new_loss7_beyond_47_original_roots":
+            len(lifted_loss7 - {canonical(x) for x in original_loss7}),
+        "terminal_derived_loss7_keys": [f"{x:032x}" for x in sorted(lifted_loss7)],
         "new_loss7_vs_k0644": len(roots) - len(WIN7),
         "strategy_states": totals[0],
         "reachable_states": totals[1],
