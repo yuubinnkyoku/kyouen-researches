@@ -9380,6 +9380,12 @@
 ## [research/experiments/path-terminal-gaussian-20261101/verify.py](../../../research/experiments/path-terminal-gaussian-20261101/verify.py)
 
 - [K0609](../items/K0609-path-graph-star-terminal-gaussian.md) (verifier): 88比較の独立方式照合と11条件171632局面の禁止超辺直接完全列挙
+## [research/experiments/path-terminal-real-roots-20261103/proof.md](../../../research/experiments/path-terminal-real-roots-20261103/proof.md)
+
+- [K0664](../items/K0664-path-terminal-real-rootedness.md) (proof): 一般の正重み付き長さ1/2/3敷き詰めの実根定理と道型への全単射・全称証明
+## [research/experiments/path-terminal-real-roots-20261103/verify.py](../../../research/experiments/path-terminal-real-roots-20261103/verify.py)
+
+- [K0664](../items/K0664-path-terminal-real-rootedness.md) (verifier): 64三方式完全照合・36長い道・64爪なし・315一般重み・745 Newton監査・長さ4反例
 ## [research/experiments/prism-followup-20261005/even-capacity-output.json](../../../research/experiments/prism-followup-20261005/even-capacity-output.json)
 
 - [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (data): 明示パラメータの完全有限検算。全称命題の根拠は証明artifact

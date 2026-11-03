@@ -3012,6 +3012,7 @@
 - ← depends_on [K0656](../items/K0656-cycle-run-terminal-coefficients.md): グラフ星型整数共円構成の極大配置分類を使用
 - ← depends_on [K0657](../items/K0657-path-run-terminal-coefficients.md): グラフ星型整数共円構成の極大配置分類を使用
 - ← depends_on [K0662](../items/K0662-cycle-terminal-real-rootedness.md): グラフ星型共円構成と許容削除集合の極大配置重みを使用
+- ← depends_on [K0664](../items/K0664-path-terminal-real-rootedness.md): 中心付き極大配置と支配的削除集合の重み付き全単射を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3403,6 +3404,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円構成の極大配置分類を使用
 - → depends_on [K0609](../items/K0609-path-graph-star-terminal-gaussian.md): 道型の既知三項漸化式と照合し、その係数を閉形式に精密化
+- ← depends_on [K0664](../items/K0664-path-terminal-real-rootedness.md): 道の削除区間が内部長1/2・端点長0/1に限られる分類を使用
 
 ## [K0658](../items/K0658-n11-central49-2090-refuted-by-certified-win6.md) 11×11中央49の2,090七石条件付き計画は既知の終局WIN6を再選択しており失効
 
@@ -3448,3 +3450,8 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 局所終局証明と空盤弱解決の区別
 - → depends_on [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md): 53七石子の独立終局検証と47元先手LOSS7
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 既存五根からの23元先手LOSS7の親持ち上げ
+
+## [K0664](../items/K0664-path-terminal-real-rootedness.md) 道型グラフ星共円ゲームの中心付き終局長多項式は全根が負の実数
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 中心付き極大配置と支配的削除集合の重み付き全単射を使用
+- → depends_on [K0657](../items/K0657-path-run-terminal-coefficients.md): 道の削除区間が内部長1/2・端点長0/1に限られる分類を使用

@@ -647,3 +647,4 @@
 | [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) | 11×11中央49の失効2096集中対象53七石子は47 LOSS7・6 WIN7と終局分類 | computation | computed | square-outcomes, certificates, verification, search-methods |
 | [K0662](../items/K0662-cycle-terminal-real-rootedness.md) | サイクル型グラフ星共円ゲームの中心付き終局長多項式は全根が負の実数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) | 11×11の47終局LOSS7から七石LOSS251類を導き既存23類と合わせ274類を確保 | proposition | proved | square-outcomes, certificates, verification, search-methods |
+| [K0664](../items/K0664-path-terminal-real-rootedness.md) | 道型グラフ星共円ゲームの中心付き終局長多項式は全根が負の実数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
