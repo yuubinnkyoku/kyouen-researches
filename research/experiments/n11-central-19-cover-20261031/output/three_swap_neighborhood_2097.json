@@ -1,0 +1,32 @@
+{
+ "schema": "n11-central49-2097-exact-three-swap-neighborhood-v1",
+ "baseline_distinct_s7_classes": 2097,
+ "removed_triples": 15180,
+ "six_vertex_matchings": 227700,
+ "candidate_combinations": 313878,
+ "geometrically_feasible_nontrivial": 283608,
+ "excluded_certified_win6": 1530,
+ "excluded_known_win7": 0,
+ "valid_nontrivial": 282078,
+ "improving_valid_three_swaps": 49,
+ "best_distinct_s7": 2091,
+ "conditional_only": true,
+ "outcomes": {
+  "s6": "UNKNOWN",
+  "s4": "UNKNOWN",
+  "two_stone_root": "UNKNOWN",
+  "empty_board": "UNKNOWN"
+ },
+ "best_swap": {
+  "removed": [
+   "00000000000000203800100008000000",
+   "00000000000000203801000002000000",
+   "00000000000002083800000000020000"
+  ],
+  "added": [
+   "00000000000000203800100002000000",
+   "00000000000000203801000000008000",
+   "00000000000002083800000008000000"
+  ]
+ }
+}

@@ -28,6 +28,7 @@
 ## [.github/workflows/n11-central49-2091-three-swap.yml](../../../.github/workflows/n11-central49-2091-three-swap.yml)
 
 - [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) (source): 独立証明書検査CI
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (source): 独立幾何監査と改変負例6件を検査する専用CI
 ## [.github/workflows/n11-central49-2093-focus.yml](../../../.github/workflows/n11-central49-2093-focus.yml)
 
 - [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) (source): 現行2093類の集中配布・改変負例・安全統合の専用CI
@@ -7069,6 +7070,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2094_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2094_three_swap_neighborhood.py)
 
 - [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) (verifier): 現行2094類からの三証人交換全近傍を厳密列挙し、2093類候補と照合
+## [research/experiments/n11-central-19-cover-20261031/audit_central49_2097_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2097_three_swap_neighborhood.py)
+
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (verifier): 2,097出発点の三証人交換近傍の完全列挙（15,180三つ組・227,700マッチング・候補313,878組・除外修正後有効282,078・改善49・最良2,091）
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2098_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2098_three_swap_neighborhood.py)
 
 - [K0669](../items/K0669-n11-central49-2097-three-swap.md) (verifier): 2,098出発点の三証人交換近傍の完全列挙（除外修正版：15,180三つ組・227,700マッチング・候補314,219組・除外修正後有効282,451・改善2・最良2,097）
@@ -7097,6 +7101,7 @@
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2091_three_swap.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2091_three_swap.json)
 
 - [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) (certificate): 三証人交換と2,984合法七石辺・2,091類・終局証明済み6類を固定
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (certificate): 三証人交換1回、正準七石義務2,091、終局証明済みLOSS7との交差6類
 ## [research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2093_three_swap.json](../../../research/experiments/n11-central-19-cover-20261031/conditional_s6_cover_46_post_seven_win6_2093_three_swap.json)
 
 - [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) (certificate): 交換前後の三つの六石正準鍵と現行被覆の数値・勝敗UNKNOWNを固定
@@ -7138,6 +7143,9 @@
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (solver): 元先手WIN7極性でも戦略を決定的に生成できる整数3×3探索器
 - [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) (solver): 既存の3×3差分行列式による決定的な終局戦略生成器。WIN7向きも指定可能
 - [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) (solver): 元先手WIN7・LOSS7の両方向の終局戦略を再生成する既存3×3差分幾何探索器
+## [research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2097.json](../../../research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2097.json)
+
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (data): 近傍全数監査の機械可読出力（改善49・最良2,091）
 ## [research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2098.json](../../../research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2098.json)
 
 - [K0669](../items/K0669-n11-central49-2097-three-swap.md) (data): 近傍全数監査の機械可読出力（改善2・最良2,097）
@@ -7196,6 +7204,7 @@
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_2091_three_swap.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_2091_three_swap.py)
 
 - [K0653](../items/K0653-n11-central49-2091-conditional-three-swap.md) (verifier): 五終局戦略の再生、4×4 Bareissと3×3差分整数幾何、改変負例8件
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (verifier): 2154→2098→2097→2091のチェーン全体を再生、4×4整数Bareiss、負例6件拒否
 ## [research/experiments/n11-central-19-cover-20261031/verify_central49_2093_three_swap.py](../../../research/experiments/n11-central-19-cover-20261031/verify_central49_2093_three_swap.py)
 
 - [K0652](../items/K0652-n11-central49-2093-conditional-three-swap.md) (verifier): 五終局戦略再生、4×4 Bareissと3×3差分幾何による独立検証、改変負例6件
@@ -10437,6 +10446,9 @@
 ## [research/log/2026-11-03-n11-central49-2154-conditional-two-swap-descent.md](../../../research/log/2026-11-03-n11-central49-2154-conditional-two-swap-descent.md)
 
 - [K0646](../items/K0646-n11-central49-2154-conditional-two-swap-optimum.md) (log): 交換経緯、全数局所検査、確定証拠の再利用範囲
+## [research/log/2026-11-04-n11-central49-2091-three-swap.md](../../../research/log/2026-11-04-n11-central49-2091-three-swap.md)
+
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (log): 交換経緯と検証境界
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

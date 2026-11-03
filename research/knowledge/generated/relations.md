@@ -166,6 +166,7 @@
 - ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 局所終局証明と空盤弱解決の区別
 - ← depends_on [K0668](../items/K0668-n11-central49-2098-three-swap.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0669](../items/K0669-n11-central49-2097-three-swap.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0670](../items/K0670-n11-central49-2091-three-swap.md): 条件付き証明義務と確定勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3334,6 +3335,7 @@
 - ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 既存五根からの23元先手LOSS7の親持ち上げ
 - ← depends_on [K0668](../items/K0668-n11-central49-2098-three-swap.md): 終局証明由来の七石LOSS23類と現行被覆との交差
 - ← depends_on [K0669](../items/K0669-n11-central49-2097-three-swap.md): 終局証明由来の七石LOSS23類と現行被覆との交差
+- ← depends_on [K0670](../items/K0670-n11-central49-2091-three-swap.md): 終局証明由来の七石LOSS23類と現行被覆との交差
 
 ## [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) グラフ星型共円ゲームの最長直下の終局欠番は最小頂点被覆数で決まる
 
@@ -3509,4 +3511,13 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - → depends_on [K0668](../items/K0668-n11-central49-2098-three-swap.md): 46証人・94/94被覆・2,098七石類の出発点
 - → supersedes [K0668](../items/K0668-n11-central49-2098-three-swap.md): 46証人・94/94被覆・確定LOSS7 6類を保ったまま七石義務を1類削減した現行条件付き計画
+- → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
+- ← depends_on [K0670](../items/K0670-n11-central49-2091-three-swap.md): 46証人・94/94被覆・2,097七石類の出発点
+- ← supersedes [K0670](../items/K0670-n11-central49-2091-three-swap.md): 46証人・94/94被覆・確定LOSS7 6類を保ったまま七石義務を6類削減した現行条件付き計画
+
+## [K0670](../items/K0670-n11-central49-2091-three-swap.md) 11×11中央49の条件付き七石義務を2,097類から2,091類へ三証人交換で縮小
+
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+- → depends_on [K0669](../items/K0669-n11-central49-2097-three-swap.md): 46証人・94/94被覆・2,097七石類の出発点
+- → supersedes [K0669](../items/K0669-n11-central49-2097-three-swap.md): 46証人・94/94被覆・確定LOSS7 6類を保ったまま七石義務を6類削減した現行条件付き計画
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
