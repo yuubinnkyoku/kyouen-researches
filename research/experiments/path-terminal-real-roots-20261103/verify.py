@@ -118,7 +118,7 @@ def newton_holds(a):
 def main():
     rng = Random(20261103)
     counts = dict(path_three_way=0, path_large=0, claw_free=0,
-                  weighted_tiling=0, newton=0)
+                  weighted_tiling=0, newton=0, length_four_counterexample=0)
     for n in range(2, 18):
         for r in (1, 2, 3, 5):
             a = deletion_enumeration(n, r)
@@ -147,6 +147,20 @@ def main():
             assert all(x > 0 for x in a)
             assert newton_holds(a), (n, r)
             counts["newton"] += 1
+    # Sharpness: a length-four interval meets three disjoint length-two ones.
+    # Their conflict graph is K_{1,3}, whose independence polynomial
+    # 1+4u+3u^2+u^3 has discriminant -31.
+    sharp_intervals = ((1, 4), (0, 1), (2, 3), (4, 5))
+    coeff = [0, 0, 0, 0]
+    for mask in range(1 << len(sharp_intervals)):
+        chosen = [sharp_intervals[i] for i in range(4) if mask & (1 << i)]
+        if all(x[1] < y[0] or y[1] < x[0] for x, y in combinations(chosen, 2)):
+            coeff[len(chosen)] += 1
+    assert coeff == [1, 4, 3, 1]
+    a, b, c, d = 1, 3, 4, 1
+    discriminant = b*b*c*c - 4*a*c**3 - 4*b**3*d - 27*a*a*d*d + 18*a*b*c*d
+    assert discriminant == -31
+    counts["length_four_counterexample"] += 1
     print("PASS", counts, "total", sum(counts.values()))
 
 if __name__ == "__main__":
