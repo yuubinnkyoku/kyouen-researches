@@ -33,6 +33,16 @@ HEADER_LOSS = independent.HEADER
 EXPECTED_CHILD_DIGEST = "5a49e2b9500722caa84e5222d31408d41cae242624f073ff7f6737cc4dce3648"
 EXPECTED_CERTIFICATE_DIGEST = "034bb4b162d67afa559bad0bbe7cff339c120eb35af0a6ff21e2ee914f5f9bd6"
 EXPECTED_TOTALS = (206668, 313388, 42058, 261323)
+EXPECTED_LIFT = (34, 376, 251, 204)
+# K0644's five independently certified LOSS7 first replies. This is an
+# existing proof input, not a newly inferred solver verdict.
+K0644_FIRST_MOVES = {
+    "00000000000000203808000000000120": 115,
+    "0000000000000020380a000000004000": 76,
+    "00000000000000a03808100000000000": 114,
+    "00000000000002043800800000040000": 49,
+    "00000000000200801082008100000000": 65,
+}
 
 
 def need(ok, why):
@@ -129,6 +139,20 @@ def audit(negative=False):
          {canonical(x) for x in original_loss7} <= lifted_loss7
          and lifted_edges == 47 * 8,
          "LOSS7 first-reply parent closure incomplete")
+    need((len(loss8), lifted_edges, len(lifted_loss7),
+          len(lifted_loss7 - {canonical(x) for x in original_loss7}))
+         == EXPECTED_LIFT, "47-root parent-lift result changed")
+    old_lifted = set()
+    for key, move in K0644_FIRST_MOVES.items():
+        root = int(key, 16)
+        eight = root | (1 << move)
+        for removed in range(121):
+            if eight & (1 << removed):
+                old_lifted.add(lift_loss7_parent(root, eight, removed))
+    need(len(old_lifted) == 23 and not (old_lifted & lifted_loss7),
+         "K0644 23-class closure overlaps or changed")
+    need(len(old_lifted | lifted_loss7) == 274,
+         "total terminal-derived LOSS7 inventory changed")
     rejected = 0
     if negative:
         for orientation, (key, raw, strategy) in examples.items():
@@ -160,6 +184,10 @@ def audit(negative=False):
         "distinct_terminal_derived_loss7_by_parent_lift": len(lifted_loss7),
         "new_loss7_beyond_47_original_roots":
             len(lifted_loss7 - {canonical(x) for x in original_loss7}),
+        "previous_k0644_loss7_classes": len(old_lifted),
+        "overlap_with_k0644": len(old_lifted & lifted_loss7),
+        "combined_terminal_derived_loss7_classes": len(old_lifted | lifted_loss7),
+        "new_loss7_beyond_previously_known_70": len(lifted_loss7) - 47,
         "terminal_derived_loss7_keys": [f"{x:032x}" for x in sorted(lifted_loss7)],
         "new_loss7_vs_k0644": len(roots) - len(WIN7),
         "strategy_states": totals[0],
