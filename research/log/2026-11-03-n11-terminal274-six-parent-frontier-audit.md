@@ -34,3 +34,5 @@ K0663の固定274類（K0661由来251類とK0644由来23類）を対象に、
 不正な一覧・証明出典・勝敗昇格の改変4種類も拒否する。
 
 新規LOSS6・二石rootの閉鎖なし。標準11×11空盤勝敗は **UNKNOWN**。
+
+独立幾何監査CI [41557772206](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41557772206) 成功。K0660の37 WIN6との交差1類を追加した最終版も [41557876647](https://github.com/yuubinnkyoku/kyouen-researches/actions/runs/41557876647) で成功。これは既存274類の完全戦略を再実行したものではなく、既存CI 41550890999の証明済み入力を使った独立した六石親幾何監査である。
