@@ -3515,7 +3515,7 @@
 - ← depends_on [K0670](../items/K0670-n11-central49-2091-three-swap.md): 46証人・94/94被覆・2,097七石類の出発点
 - ← supersedes [K0670](../items/K0670-n11-central49-2091-three-swap.md): 46証人・94/94被覆・確定LOSS7 6類を保ったまま七石義務を6類削減した現行条件付き計画
 
-## [K0670](../items/K0670-n11-central49-2091-three-swap.md) 11×11中央49の条件付き七石義務を2,097類から2,091類へ三証人交換で縮小
+## [K0670](../items/K0670-n11-central49-2091-three-swap.md) 11×11中央49の条件付き七石義務を2,097類から2,091類へ三証人交換で縮小（現行チェーン）
 
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - → depends_on [K0669](../items/K0669-n11-central49-2097-three-swap.md): 46証人・94/94被覆・2,097七石類の出発点
