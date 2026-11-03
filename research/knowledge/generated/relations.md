@@ -449,6 +449,7 @@
 - → depends_on [K0033](../items/K0033-n9-minimum-maximal-size.md)
 - → depends_on [K0038](../items/K0038-n10-safe-10-stone-maximal-witness.md)
 - → supersedes [K0145](../items/K0145-n10-minimum-maximal-ten-open.md): 九石の有無という問い（K0145）を本命題で解消
+- ← depends_on [K0149](../items/K0149-minimum-maximal-monotonicity-open.md): s_10=10確定済み。10→11の非減少性のみ未確定
 
 ## [K0035](../items/K0035-n10-maximum-safe-bounds.md) 10×10の最大安全サイズは19≤K_10≤23
 
@@ -1052,6 +1053,7 @@
 
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 - → depends_on [K0312](../items/K0312-n11-minimum-maximal-bounds.md): 11盤の境界は単調性を証明も反証もしない
+- → depends_on [K0034](../items/K0034-n10-minimum-maximal-bounds.md): s_10=10確定済み。10→11の非減少性のみ未確定
 
 ## [K0150](../items/K0150-minimum-maximal-jump-by-two.md) s_nが一段の拡大で2以上増える
 
