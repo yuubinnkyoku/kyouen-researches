@@ -108,3 +108,12 @@ CNFの生ファイル（完全版約6.9GB、circuit版約560MB）は再現時に
 - 上界は未証明。circuit削減CNFの UNSAT はそもそも取得されていない上、
   符号化自体が不能である。
 - $d\neq6$ の上界、Grundy値、misère版は対象外。
+
+## 2026-11-03 ローカル整理
+
+`certificates/` に残っていた再生成可能なCNF複製を削除した（K0568の証拠境界は不変）：
+
+- `k6_k9.cnf`（circuit版exactly-9、SAT制御用）と `k6_k9.cnf.gz`
+- `k6_k10_fix0.cnf` と `k6_k10_fix0.cnf.gz`（`build_k6_circuits.cpp --cnf 10 out.cnf fix0` で再生成可能。無効なcircuit削減であり証明には使えないことは不変）
+
+削除量は約1.25GB。残置したのは `k6_k10_fix0.drat`（433MB、未完の部分証明・8時間分のtrace。再生成不可能・証明としては無価値であることに注意）、kissatの2ログ、`k6_k9_witness.txt`（小さいプロセス証跡）。
