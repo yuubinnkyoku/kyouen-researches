@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 
 import verify_five_terminal_loss7 as independent
-from verify_2096_focus_six_win7_parent_lift import canonical
+from verify_2096_focus_six_win7_parent_lift import ROOTS, canonical
 
 HERE = Path(__file__).resolve().parent
 MANIFEST = HERE / "terminal_loss7_parent_lift_274_manifest.json"
@@ -80,6 +80,15 @@ def audit(doc):
     for child in certified:
         for p in points(child):
             parents.add(canonical(child ^ (1 << p)))
+    # The six independently certified WIN7 roots imply 37 WIN6 parents.
+    # Compare those certificates' parent closure with the 274 LOSS7 frontier.
+    proven_win6 = {
+        canonical(int(key, 16) ^ (1 << p))
+        for key in ROOTS for p in points(int(key, 16))
+    }
+    need(len(proven_win6) == 37
+         and parents & proven_win6 == {int(FOCUS, 16)},
+         "K0660 WIN6 overlap with LOSS7 six-parent inventory changed")
     rows = []
     for parent in sorted(parents):
         need(parent.bit_count() == 6 and canonical(parent) == parent,
@@ -106,6 +115,8 @@ def audit(doc):
         "source_certified_loss7": len(certified),
         "distinct_six_parents_touched": len(parents),
         "six_parents_fully_covered": 0,
+        "known_k0660_win6_parents": len(proven_win6),
+        "known_k0660_win6_parent_overlap": 1,
         "known_refuted_win6_focus": focus,
         "best_other_parent": others[0],
         "top_ten_other_parents": others[:10],
