@@ -19,6 +19,7 @@ from verify_2096_focus_six_win7_parent_lift import canonical
 
 HERE = Path(__file__).resolve().parent
 GENERATOR = HERE / "generate_five_terminal_loss7.cpp"
+MANIFEST = HERE / "terminal_loss7_parent_lift_274_manifest.json"
 PARENT = "00000000000000203800000060000000"
 WIN7 = {
     "00000000000000283800000060000000",
@@ -153,6 +154,24 @@ def audit(negative=False):
          "K0644 23-class closure overlaps or changed")
     need(len(old_lifted | lifted_loss7) == 274,
          "total terminal-derived LOSS7 inventory changed")
+    manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+    expected_manifest = {
+        "schema": "n11-central49-terminal-loss7-parent-lift-274-v1",
+        "source_focus_s6": PARENT,
+        "source_certificate_manifest_sha256": EXPECTED_CERTIFICATE_DIGEST,
+        "source_terminal_loss7_roots": len(original_loss7),
+        "distinct_certified_loss8_first_replies": len(loss8),
+        "independent_restoration_edges": lifted_edges,
+        "lifted_loss7_keys": [f"{x:032x}" for x in sorted(lifted_loss7)],
+        "previous_k0644_loss7_keys": [f"{x:032x}" for x in sorted(old_lifted)],
+        "combined_terminal_loss7_keys":
+            [f"{x:032x}" for x in sorted(old_lifted | lifted_loss7)],
+        "new_loss7_beyond_previous_70": len(lifted_loss7) - 47,
+        "two_stone_root": "UNKNOWN",
+        "empty_board": "UNKNOWN",
+    }
+    need(manifest == expected_manifest,
+         "committed 274-class manifest differs from independent terminal replay")
     rejected = 0
     if negative:
         for orientation, (key, raw, strategy) in examples.items():
