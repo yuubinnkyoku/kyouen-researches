@@ -9,9 +9,6 @@ relations:
 - type: depends_on
   target: K0602
   note: 中心付き極大配置の許容削除集合と重みの公式を使用
-- type: contrasts
-  target: K0664
-  note: 道型で成立する実根性は一般の木へ拡張できない
 artifacts:
 - path: research/experiments/tree-terminal-real-roots-counterexample-20261103/proof.md
   role: proof

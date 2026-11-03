@@ -3013,6 +3013,7 @@
 - ← depends_on [K0657](../items/K0657-path-run-terminal-coefficients.md): グラフ星型整数共円構成の極大配置分類を使用
 - ← depends_on [K0662](../items/K0662-cycle-terminal-real-rootedness.md): グラフ星型共円構成と許容削除集合の極大配置重みを使用
 - ← depends_on [K0664](../items/K0664-path-terminal-real-rootedness.md): 中心付き極大配置と支配的削除集合の重み付き全単射を使用
+- ← depends_on [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md): 中心付き極大配置の許容削除集合と重みの公式を使用
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
@@ -3343,6 +3344,7 @@
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成と極大配置の支配集合による分類
 - → generalizes [K0647](../items/K0647-forest-dominating-component-terminal-spectra.md): 森に限らず任意グラフの終局長係数を葉と高次数核で分類する。ただし森の成分数表示や星森の部分和公式は別の系として維持する
 - ← depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): 許容核の欠損公式と次数下界
+- ← depends_on [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md): 中心付き終局長母関数の非負係数と正の定数項
 
 ## [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減
 
@@ -3394,6 +3396,7 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の整数共円構成と極大配置分類
 - → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 許容核の欠損公式と次数下界
+- ← depends_on [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md): 最初の正の終局長差は最小非葉次数から決まる
 
 ## [K0656](../items/K0656-cycle-run-terminal-coefficients.md) サイクル型グラフ星共円ゲームの全終局長係数は削除区間の二項和で閉じる
 
@@ -3455,3 +3458,14 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 中心付き極大配置と支配的削除集合の重み付き全単射を使用
 - → depends_on [K0657](../items/K0657-path-run-terminal-coefficients.md): 道の削除区間が内部長1/2・端点長0/1に限られる分類を使用
+
+## [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md) 木型中心付き終局長多項式の実根性は星K1,3で破れ、星型では次数2以下に限る
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): 中心付き極大配置の許容削除集合と重みの公式を使用
+- ← generalizes [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md): 星型反例を次数2のない任意グラフへ拡張する
+
+## [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md) グラフ星型の中心付き終局長多項式は次数2のない非自明グラフで実根性を失う
+
+- → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 中心付き終局長母関数の非負係数と正の定数項
+- → depends_on [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md): 最初の正の終局長差は最小非葉次数から決まる
+- → generalizes [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md): 星型反例を次数2のない任意グラフへ拡張する

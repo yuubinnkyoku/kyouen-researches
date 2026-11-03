@@ -130,7 +130,7 @@ def main() -> None:
                 "probe_nodes_staged": probe_nodes,
                 "probe_nodes_full_1m": full_1m_nodes,
                 "probe_node_reduction": f"{reduction:.4f}",
-                "exact_seconds_sum": f"{sum(exact[(parent, s)]["seconds"] for s in children):.3f}",
+                "exact_seconds_sum": f"{sum(exact[(parent, s)]['seconds'] for s in children):.3f}",
                 "exact_visited_sum": str(sum(exact[(parent, s)]["visited"] for s in children)),
             }
         )

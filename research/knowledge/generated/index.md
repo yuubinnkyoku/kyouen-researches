@@ -648,3 +648,5 @@
 | [K0662](../items/K0662-cycle-terminal-real-rootedness.md) | サイクル型グラフ星共円ゲームの中心付き終局長多項式は全根が負の実数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md) | 11×11の47終局LOSS7から七石LOSS251類を導き既存23類と合わせ274類を確保 | proposition | proved | square-outcomes, certificates, verification, search-methods |
 | [K0664](../items/K0664-path-terminal-real-rootedness.md) | 道型グラフ星共円ゲームの中心付き終局長多項式は全根が負の実数 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md) | 木型中心付き終局長多項式の実根性は星K1,3で破れ、星型では次数2以下に限る | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md) | グラフ星型の中心付き終局長多項式は次数2のない非自明グラフで実根性を失う | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

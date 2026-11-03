@@ -2735,6 +2735,9 @@
 ## [research/experiments/graph-star-qpoint-20261101/verify.py](../../../research/experiments/graph-star-qpoint-20261101/verify.py)
 
 - [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md) (verifier): 1181グラフ・4395216部分集合、q5十点の全252五点組・1024局面を独立完全検査
+## [research/experiments/graph-star-root-gap-obstruction-20261103/proof.md](../../../research/experiments/graph-star-root-gap-obstruction-20261103/proof.md)
+
+- [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md) (proof): 正係数多項式の欠番障害とK0655による全称証明
 ## [research/experiments/graph-star-second-terminal-degree-20261103/proof.md](../../../research/experiments/graph-star-second-terminal-degree-20261103/proof.md)
 
 - [K0655](../items/K0655-graph-star-second-terminal-minimum-degree.md) (proof): 二番目の終局長・欠番数・初出係数の全称証明
@@ -10185,6 +10188,12 @@
 ## [research/experiments/tree-graph-star-dp-20261101/verify.py](../../../research/experiments/tree-graph-star-dp-20261101/verify.py)
 
 - [K0611](../items/K0611-tree-graph-star-three-state-dp.md) (verifier): 54744条件の全ラベル付き木直接照合、24条件79856部分集合の禁止超辺直接列挙、星48条件と孤立頂点3条件
+## [research/experiments/tree-terminal-real-roots-counterexample-20261103/proof.md](../../../research/experiments/tree-terminal-real-roots-counterexample-20261103/proof.md)
+
+- [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md) (proof): 星型の全称母関数と全根の分類
+## [research/experiments/tree-terminal-real-roots-counterexample-20261103/verify.py](../../../research/experiments/tree-terminal-real-roots-counterexample-20261103/verify.py)
+
+- [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md) (verifier): d=2..10、r=1..7の63条件の独立完全列挙
 ## [research/experiments/treewidth-terminal-dp-20261102/proof.md](../../../research/experiments/treewidth-terminal-dp-20261102/proof.md)
 
 - [K0623](../items/K0623-treewidth-terminal-polynomial.md) (proof): 頂点の支配情報3状態と辺導入・合流を用いる木分解上の全称証明
