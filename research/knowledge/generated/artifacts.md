@@ -7060,6 +7060,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2090_two_swap_neighborhood.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 現行2090類計画の二証人交換全数監査。既知WINを除外し元の終局証明6類を厳密保持する3,330候補に改善0
+## [research/experiments/n11-central-19-cover-20261031/audit_central49_2091_descent_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2091_descent_three_swap_neighborhood.py)
+
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (verifier): 2,091出発点の三証人交換近傍の完全列挙（候補313,905組・有効281,978・改善0・最良2,091＝局所最適）
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 2,091類からの最大三証人交換の全候補を列挙し44改善候補を検出
@@ -7147,6 +7150,9 @@
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (solver): 元先手WIN7極性でも戦略を決定的に生成できる整数3×3探索器
 - [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) (solver): 既存の3×3差分行列式による決定的な終局戦略生成器。WIN7向きも指定可能
 - [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) (solver): 元先手WIN7・LOSS7の両方向の終局戦略を再生成する既存3×3差分幾何探索器
+## [research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2091_descent.json](../../../research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2091_descent.json)
+
+- [K0670](../items/K0670-n11-central49-2091-three-swap.md) (data): 上記の機械可読出力（改善0）
 ## [research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2097.json](../../../research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2097.json)
 
 - [K0670](../items/K0670-n11-central49-2091-three-swap.md) (data): 近傍全数監査の機械可読出力（改善49・最良2,091）
