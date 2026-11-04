@@ -8245,6 +8245,20 @@
 ## [research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json](../../../research/experiments/n11-two-target-design-20261010/output/post-probe/strategy-analysis.json)
 
 - [K0373](../items/K0373-n11-reply27-100-108-reflection-equivalence.md) (data): 全115対象S4 classの分類と共有局面の有限監査
+## [research/experiments/n3-certificate-20261104/README.md](../../../research/experiments/n3-certificate-20261104/README.md)
+
+- [K0013](../items/K0013-n3-first-player-win.md) (log): 再生成・検証手順と結果（2026-11-04）
+- [K0671](../items/K0671-n3-certificate-independent-verification.md) (log): 手法・再現手順・証拠の意味と限界
+## [research/experiments/n3-certificate-20261104/inspect_cert.py](../../../research/experiments/n3-certificate-20261104/inspect_cert.py)
+
+- [K0671](../items/K0671-n3-certificate-independent-verification.md) (verifier): ヘッダと全エントリを表示するデコーダ（標準ライブラリのみ）
+## [research/experiments/n3-certificate-20261104/kyouen-3x3.cert](../../../research/experiments/n3-certificate-20261104/kyouen-3x3.cert)
+
+- [K0013](../items/K0013-n3-first-player-win.md) (certificate): 決定的再生成（SHA-256 569c18…は certificates.csv と一致）。全175軌道ノードの局所条件を独立Pythonで再検証（K0671）
+- [K0671](../items/K0671-n3-certificate-independent-verification.md) (certificate): 決定的生成（KYOENC3、28ノード、forbidden=14、SHA-256 569c18efa58d…）
+## [research/experiments/n3-certificate-20261104/validate_cert.py](../../../research/experiments/n3-certificate-20261104/validate_cert.py)
+
+- [K0671](../items/K0671-n3-certificate-independent-verification.md) (verifier): D4軌道展開175ノードすべての局所条件を独立実装で検査 PASS
 ## [research/experiments/n8-grundy-layer-profiles-20261101/output/n8_J8_edges.txt](../../../research/experiments/n8-grundy-layer-profiles-20261101/output/n8_J8_edges.txt)
 
 - [K0119](../items/K0119-jn-losing-board-connectivity-open.md) (data): 2026-11-03 n=8全局面再走によるJ_8の1,380辺

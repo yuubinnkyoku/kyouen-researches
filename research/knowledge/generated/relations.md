@@ -255,6 +255,7 @@
 
 - → depends_on [K0007](../items/K0007-ranked-and-or-certificates.md)
 - ← verifies [K0008](../items/K0008-n1-n9-independent-cpp-certificate-checks.md): 当該空盤の公開AND/OR証明書の独立検査
+- ← verifies [K0671](../items/K0671-n3-certificate-independent-verification.md): 3x3は先手必勝（ranked-and-or certificateの空盤勝敗部分）を独立実装で再検証
 
 ## [K0014](../items/K0014-n4-second-player-win.md) 4×4は後手必勝
 
@@ -789,6 +790,7 @@
 
 - → depends_on [K0022](../items/K0022-n10-all-100-first-moves-classified.md)
 - → depends_on [K0010](../items/K0010-kyoenc4-selected-position-certificates.md)
+- ← supports [K0671](../items/K0671-n3-certificate-independent-verification.md): 3x3/2x2/1x1の小盤証明書がLeanなしでも独立Pythonで検査できることの確認
 
 ## [K0105](../items/K0105-n11-empty-root-winner-open.md) 11×11の真の空盤勝敗は現在の主要未解決問題
 
@@ -3521,3 +3523,8 @@
 - → depends_on [K0669](../items/K0669-n11-central49-2097-three-swap.md): 46証人・94/94被覆・2,097七石類の出発点
 - → supersedes [K0669](../items/K0669-n11-central49-2097-three-swap.md): 46証人・94/94被覆・確定LOSS7 6類を保ったまま七石義務を6類削減した現行条件付き計画
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
+
+## [K0671](../items/K0671-n3-certificate-independent-verification.md) 3×3の空盤AND/OR証明書（KYOENC3）を再生成し、全証明DAGノードの局所条件を独立実装で再検証
+
+- → verifies [K0013](../items/K0013-n3-first-player-win.md): 3x3は先手必勝（ranked-and-or certificateの空盤勝敗部分）を独立実装で再検証
+- → supports [K0103](../items/K0103-n10-single-empty-root-certificate-open.md): 3x3/2x2/1x1の小盤証明書がLeanなしでも独立Pythonで検査できることの確認

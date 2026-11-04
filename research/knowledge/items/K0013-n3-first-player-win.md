@@ -23,6 +23,12 @@ artifacts:
   role: log
   note: 命題・対象範囲・根拠を記した出典
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n3-certificate-20261104/kyouen-3x3.cert
+  role: certificate
+  note: 決定的再生成（SHA-256 569c18…は certificates.csv と一致）。全175軌道ノードの局所条件を独立Pythonで再検証（K0671）
+- path: research/experiments/n3-certificate-20261104/README.md
+  role: log
+  note: 再生成・検証手順と結果（2026-11-04）
 solution:
   board: 3×3
   level: weak
