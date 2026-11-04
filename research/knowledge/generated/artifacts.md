@@ -8268,6 +8268,7 @@
 - [K0018](../items/K0018-n8-second-player-win.md) (verifier): 2026-11-03にgrundy専用ストリーミングDP（別実装）で全局面を再走査し、空盤g=0・後手必勝を再確認。K0006由来の二次証拠であり、本項目の主証明（AND/OR証明書）は不変
 - [K0113](../items/K0113-losing-first-move-odd-nimber-open.md) (data): 2026-11-03 n=8全局面再走による一石層ヒストグラム（値{1:12点,3:52点}）と独立検算
 - [K0119](../items/K0119-jn-losing-board-connectivity-open.md) (data): 2026-11-03 n=8全局面再走によるJ_8連結性の二方式（union-find/BFS）確認
+- [K0121](../items/K0121-uniform-saturation-by-layer-four-open.md) (data): 2026-11-03 n=8全局面再走による天井配列とσ_8=4の完全プロファイル（証人mask=148032 g=11、独立再計算済み）
 - [K0182](../items/K0182-all-losing-first-moves-few-nimbers-open.md) (data): 2026-11-03 n=8全局面再走による一石層ヒストグラム（値{1:12点,3:52点}、種類数2）
 - [K0183](../items/K0183-saturation-missing-nimber-contiguity-open.md) (data): 2026-11-03 n=8全局面再走による飽和開始層σ_8=4の完全プロファイル（missing=[]、σ証人mask=148032 g=11）
 - [K0184](../items/K0184-saturation-missing-nimbers-powers-of-two-open.md) (data): 2026-11-03 n=8全局面再走による飽和開始層σ_8=4の完全プロファイル（正の欠番は存在しない）

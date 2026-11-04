@@ -36,6 +36,9 @@ artifacts:
   role: data
   note: 採用報告の証人・完了範囲・検算を再確認する資産
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
+- path: research/experiments/n8-grundy-layer-profiles-20261101/output/n8_analysis.json
+  role: data
+  note: 2026-11-03 n=8全局面再走による天井配列とσ_8=4の完全プロファイル（証人mask=148032 g=11、独立再計算済み）
 scope: '`M_n(k)=max_{|S|=k}g(S)`、`σ_n=min{k:M_n(k)=K_n−k}`。上限と、一度等号なら後続層でも等号になることは既存結果であり、ここでは新規扱いしない。'
 evidence: 原文監査 PARTIAL / finite_complete_classification
 ---
@@ -61,3 +64,9 @@ Scope clarification: hypothesis sigma_n<=4 for n>=4 holds for all computed n>=4 
 Next steps: complete or extend n=8 enumeration; seek general proof. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-03 bounded advance（8×8完全再計算）
+
+8×8の全6,700,711,937安全局面をgrundy_onlyストリーミングDPで完全再計算し、天井配列 M_8(k)=[0,3,4,6,11,10,9,8,7,6,5,4,3,2,1,0] を得た。M_8(k)=K_8−k=15−k を最初に満たす k は k=4 であり、**σ_8=4** と完全に決定した。一度成立したら後続層でも成立することはK0041で証明済みで、すべての k≥4 で M_8(k)=15−k である。最適証人は mask=148032（idx 2558）の4石局面で g=11（=K_8−4）を独立に再計算済み。deficit D_8(k)=[15,11,9,6,0,… ] は単調非増加。
+
+これまで σ_2=2、σ_3=4、σ_4=2、σ_5=3、σ_6=3、σ_7=4、σ_8=4 と開始層の上界 4 は経験範囲内で確認された。任意の n≥4 で σ_n≤4 という無界全称は依然証明されていない。statusはopenのまま。
