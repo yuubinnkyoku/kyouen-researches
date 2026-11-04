@@ -112,6 +112,20 @@ def audit(doc):
     need(added <= set(incidence) and not (added & win6),
          "out-of-scope or certified WIN6 witness")
     selected = (selected - removed) | added
+    # K0660: all six independently certified terminal WIN7 roots imply
+    # 37 WIN6 parents. Reconstruct them without trusting a worker cache.
+    from verify_2096_focus_six_win7_parent_lift import ROOTS, canonical
+    terminal_win6 = set()
+    for root_key in ROOTS:
+        root = int(root_key, 16)
+        need(root.bit_count() == 7, "terminal WIN7 root changed")
+        for p in range(121):
+            if root & (1 << p):
+                terminal_win6.add(canonical(root ^ (1 << p)))
+    need(len(terminal_win6) == 37 and not (terminal_win6 & win6),
+         "K0660 terminal WIN6 inventory changed")
+    need(not (selected & (win6 | terminal_win6)),
+         "certified WIN6 in final conditional LOSS witness set")
     need(len(selected) == 46 and
          set().union(*(incidence[s] for s in selected)) == set(range(len(s5))),
          "94 five-stone classes not covered")
