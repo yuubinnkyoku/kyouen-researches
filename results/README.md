@@ -5,6 +5,7 @@
 ここにある数値・raw logは計算時の資料で、現在のstatusを並行維持するMarkdownではありません。
 
 - [outcomes.csv](outcomes.csv)：1〜9の共通証明書分類と探索・証明書規模。
+- [results.csv](results.csv)：参考資料（歴史的な集計）。9盤の行が現在の結論を反映していません。正本は [K0019](../research/knowledge/items/K0019-n9-first-player-win.md)・[K0021](../research/knowledge/items/K0021-n9-all-81-first-moves-win.md) で、9×9は81/81の初手が先手勝ち（全初手勝ち）と確定しています。探索・証明書規模だけを引用する場合も `outcomes.csv` を使ってください。
 - [10盤の完全初手分類CSV](../rust/independent-verifier/evidence-sample/10x10-first-move-classification-complete.csv)。
 - [certificates.csv](certificates.csv)：証明書のノード数・サイズ・SHA256。
 - [all-certificates-check.txt](all-certificates-check.txt)、[certificate-logs](certificate-logs/)：公開証明書の機械検査標準出力。
