@@ -27,7 +27,7 @@ import tempfile
 HERE = Path(__file__).resolve().parent
 SOURCE = HERE / 'game_structure_20261003_nine.cpp'
 DOMAIN_SOURCE = HERE / 'game_structure_20261003_nine_audit_domains.cpp'
-FROZEN_SHA256 = '4681a1e92ccc4f4c43fb6c8760b15c46e4ae4fa48989fa9bbc642b7bf0bdaec3'
+FROZEN_SHA256 = '5b525ed28cbbc4624505178bbd6591750b3d5cfa592d364213854e2060f268e9'
 FLAGS = ['-std=c++17', '-O2', '-Wall', '-Wextra']
 
 

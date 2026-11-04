@@ -112,12 +112,13 @@ int run(int argc,char**argv){
  if(argc<2)throw std::runtime_error("usage: binary proof.bin [seconds] [node-cap] [opening]");
  if(std::string(argv[1])=="--probe"){initialize();return probe(argc>2?std::stoi(argv[2]):400);}
  seconds=argc>2?std::stod(argv[2]):800;limit=argc>3?std::stoull(argv[3]):130000000;first_order=argc>4?std::stoi(argv[4]):40;
- if(seconds<=0||limit<1||limit>130000000||first_order<0||first_order>=V)throw std::runtime_error("invalid bounds");
+ if(seconds<=0||limit<1||first_order<0||first_order>=V)throw std::runtime_error("invalid bounds");
+  if(limit>slots)limit=slots;
  initialize();keys.assign(slots,EMPTY);wins.resize((slots+63)/64);deadline();
  fprintf(stderr,"geometry %d, seconds %.1f, memo cap %zu, opening %d\n",forbidden_count,seconds,limit,first_order);
  bool result=solve(Transforms{},ALL);deadline();size_t search_nodes=used;
  fprintf(stderr,"search root solved internally; exporting proof, memo %zu, elapsed %.3f\n",used,elapsed());
- marked.resize((slots+63)/64);limit=180000000;
+ marked.resize((slots+63)/64);if(limit<180000000)limit=180000000;if(limit>slots+100000000)limit=slots+100000000;
  std::ofstream out(argv[1],std::ios::binary);if(!out)throw std::runtime_error("cannot create proof");export_proof(0,out);out.close();if(!out)throw std::runtime_error("proof write failed");
  printf("{\"n\":9,\"complete\":true,\"independently_verified\":false,\"provisional_misere_first_wins\":%s,\"forbidden\":%d,\"search_memo_size\":%zu,\"memo_size\":%zu,\"tiny_calls\":%zu,\"tiny_types\":%zu,\"proof_size\":%zu,\"elapsed_seconds\":%.6f}\n",result?"true":"false",forbidden_count,search_nodes,used,tiny_calls,tiny_cache.size(),proofsize,elapsed());return 0;
 }
