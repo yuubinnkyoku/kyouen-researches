@@ -78,6 +78,8 @@ public:
         ++misses_; probe_sum_+=j; ++probe_n_; return 0;
     }
     inline void put(std::uint64_t klo,std::uint64_t khi,std::uint32_t value){
+        if(value!=Losing && value!=Winning)
+            throw std::invalid_argument("invalid memo verdict");
         std::size_t h=mix(klo,khi)&mask_;
         std::size_t i=h;
         for(int j=0;j<PROBE;++j){
@@ -86,12 +88,15 @@ public:
                 ++used_;++puts_new_;return;
             }
             if(lo_[i]==klo && hi_[i]==khi){
-                if(st_[i]!=value){st_[i]=(std::uint8_t)value;++puts_update_;}
+                if(st_[i]!=value) throw std::logic_error("memo WIN/LOSS conflict");
                 return;
             }
             i=(i+1)&mask_;
         }
-        if(lo_[h]==klo && hi_[h]==khi){ st_[h]=(std::uint8_t)value;++puts_update_;return; }
+        if(lo_[h]==klo && hi_[h]==khi){
+            if(st_[h]!=value) throw std::logic_error("memo WIN/LOSS conflict");
+            return;
+        }
         lo_[h]=klo;hi_[h]=khi;st_[h]=(std::uint8_t)value;++evictions_;
     }
     std::size_t used()const{return used_;}
@@ -135,9 +140,15 @@ static bool memo_key_width_self_test(){
     if(memo.get(lo,high_hi)!=ReplaceMemo121::Losing) return false;
     if(memo.get(lo,low_hi)!=ReplaceMemo121::Unknown) return false;
     memo.put(lo,low_hi,ReplaceMemo121::Winning);
-    return memo.get(lo,high_hi)==ReplaceMemo121::Losing &&
-           memo.get(lo,low_hi)==ReplaceMemo121::Winning &&
-           memo.used()==2;
+    if(memo.get(lo,high_hi)!=ReplaceMemo121::Losing ||
+       memo.get(lo,low_hi)!=ReplaceMemo121::Winning || memo.used()!=2) return false;
+    memo.put(lo,high_hi,ReplaceMemo121::Losing); // identical verdict is idempotent
+    try { memo.put(lo,high_hi,ReplaceMemo121::Winning); return false; }
+    catch(const std::logic_error&) {}
+    if(memo.get(lo,high_hi)!=ReplaceMemo121::Losing) return false;
+    try { memo.put(lo,low_hi,ReplaceMemo121::Unknown); return false; }
+    catch(const std::invalid_argument&) {}
+    return memo.get(lo,low_hi)==ReplaceMemo121::Winning;
 }
 
 class Solver11 {
