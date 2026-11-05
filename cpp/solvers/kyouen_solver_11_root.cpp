@@ -432,6 +432,27 @@ int main(int argc,char**argv){
             L<<"F_11 mismatch, abort\n";return 1;
         }
         if(!reps){ L<<"nothing to do without --reps\n"; return 2; }
+        // Reject unknown --only values before any result file can imply success.
+        // --only accepts D4 representatives, not arbitrary board coordinates.
+        std::vector<int> selected=first_move_reps();
+        if(!only.empty()){
+            std::vector<int> requested;
+            std::stringstream ss(only);
+            std::string tok;
+            while(std::getline(ss,tok,',')){
+                if(tok.empty()) throw std::runtime_error("empty --only entry");
+                std::size_t used=0;
+                int v=std::stoi(tok,&used);
+                if(used!=tok.size()) throw std::runtime_error("invalid --only entry: "+tok);
+                if(std::find(selected.begin(),selected.end(),v)==selected.end())
+                    throw std::runtime_error("--only point is not a D4 representative: "+tok);
+                if(std::find(requested.begin(),requested.end(),v)!=requested.end())
+                    throw std::runtime_error("duplicate --only entry: "+tok);
+                requested.push_back(v);
+            }
+            if(requested.empty()) throw std::runtime_error("empty --only selection");
+            selected=requested;
+        }
         C<<"v,x,y,outcome,visited,seconds,memo_used\n";
         solver.csv_flush();
         auto wall0 = std::chrono::steady_clock::now();
@@ -441,13 +462,7 @@ int main(int argc,char**argv){
         L << "[heartbeat] starting, solver ready" << std::endl;
         L.flush();
         int n_timeout=0, n_done=0;
-        for(int v : first_move_reps()){
-            if(!only.empty()){
-                bool want=false;
-                std::stringstream ss(only); std::string tok;
-                while(std::getline(ss,tok,',')){ if(!tok.empty()&&std::stoi(tok)==v){want=true;break;} }
-                if(!want) continue;
-            }
+        for(int v : selected){
             bool done=false;
             Solver11::Result r{false,0,0,0.0};
             try {
@@ -562,9 +577,11 @@ int main(int argc,char**argv){
             L.flush();
         }
         C<<"# done="<<n_done<<" timeout="<<n_timeout
-                 <<" (all 21 first moves WIN => SECOND_PLAYER_WIN)\n";
+                 <<" selected="<<selected.size()<<"\n";
+        if(n_timeout==0 && only.empty() && n_done==21)
+            C<<"# SECOND_PLAYER_WIN: all 21 D4 first moves proved WIN\n";
         solver.csv_flush();
-        return 0;
+        return n_timeout==0 ? 0 : 3;
     }catch(const std::exception&e){
         std::cerr<<"error: "<<e.what()<<"\n";return 1;
     }
