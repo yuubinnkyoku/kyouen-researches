@@ -121,6 +121,11 @@ private:
     }
 };
 
+// Distinguish an expected search deadline from all other runtime failures.
+struct SearchDeadlineExceeded : std::exception {
+    const char* what() const noexcept override { return "TIME_BUDGET"; }
+};
+
 static bool memo_key_width_self_test(){
     ReplaceMemo121 memo(4);
     const std::uint64_t lo=0x0123456789abcdefULL;
@@ -270,7 +275,7 @@ private:
         if(cfrac>=0) *log_ << " cached_cut_frac=" << cfrac << "%";
         *log_ << std::endl;
         log_->flush();
-        if(el>=deadline_s_) throw std::runtime_error("TIME_BUDGET");
+        if(el>=deadline_s_) throw SearchDeadlineExceeded{};
     }
 
     static long long det3(long long a00,long long a01,long long a02,long long a10,long long a11,long long a12,long long a20,long long a21,long long a22){
@@ -468,7 +473,7 @@ int main(int argc,char**argv){
             try {
                 r=solver.solve_root({v});
                 done=true;
-            } catch(const std::exception& e){
+            } catch(const SearchDeadlineExceeded& e){
                 double wall = std::chrono::duration<double>(std::chrono::steady_clock::now()-wall0).count();
                 std::uint64_t hits,misses,pn,pu,ev; double ap;
                 solver.memo_counters(hits,misses,pn,pu,ev,ap);
