@@ -170,6 +170,7 @@
 - ← depends_on [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0673](../items/K0673-n11-repair-focus-2140.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0674](../items/K0674-n11-all-witnesses-first-win.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 条件付き証明義務と確定勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3555,3 +3556,9 @@
 - → depends_on [K0673](../items/K0673-n11-repair-focus-2140.md): 修復済み46証人集合（最良2,140類）の全子確定検証
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - → refutes [K0673](../items/K0673-n11-repair-focus-2140.md): 修復後も全46証人が手番WINであり、修復計画のLOSS前提も崩壊する
+- ← depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 修復後46証人の46/46手番WINにより方向性は先手WIN側へ転換
+
+## [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) 94五石子S6全集合3,868を全確定し94五石位置を78先手/16第二手に分類（先手WIN方向の転換）
+
+- → depends_on [K0674](../items/K0674-n11-all-witnesses-first-win.md): 修復後46証人の46/46手番WINにより方向性は先手WIN側へ転換
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別

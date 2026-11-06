@@ -7183,6 +7183,21 @@
 ## [research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json](../../../research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (data): 修復列挙の機械可読出力（focus除去有効交換16,043、最良2,140類と交換内訳）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.json](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.json)
+
+- [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (data): 94五石位置の勝敗集計（78先手勝ち・16第二手勝ち、各位置のLOSS/WIN子数）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.py](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.py)
+
+- [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (source): S6判定からの五石位置集計
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s6_sweep.sh](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s6_sweep.sh)
+
+- [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (source): early-exit スイープドライバ（3,868 S6全数、timeout 0）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/sweep_results.json](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/sweep_results.json)
+
+- [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (data): 3,868 S6の判定記録（各S6の勝ち子・試行内訳）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/verified.json](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/verified.json)
+
+- [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (data): スイープ感受性証明書4,288件の独立監査結果（loss 887 / win 3,401 / fails 0）
 ## [research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2091_descent.json](../../../research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2091_descent.json)
 
 - [K0670](../items/K0670-n11-central49-2091-three-swap.md) (data): 上記の機械可読出力（改善0）
@@ -10518,6 +10533,9 @@
 ## [research/log/2026-11-06-n11-repair-focus-neighborhood.md](../../../research/log/2026-11-06-n11-repair-focus-neighborhood.md)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (log): 修復列挙の経緯
+## [research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md](../../../research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md)
+
+- [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (log): スイープと五石集計の経緯
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
