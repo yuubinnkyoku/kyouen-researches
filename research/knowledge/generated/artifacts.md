@@ -7063,6 +7063,9 @@
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2091_descent_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2091_descent_three_swap_neighborhood.py)
 
 - [K0670](../items/K0670-n11-central49-2091-three-swap.md) (verifier): 2,091出発点の三証人交換近傍の完全列挙（候補313,905組・有効281,978・改善0・最良2,091＝局所最適）
+## [research/experiments/n11-central-19-cover-20261031/audit_central49_2091_repair_focus_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2091_repair_focus_neighborhood.py)
+
+- [K0673](../items/K0673-n11-repair-focus-2140.md) (verifier): focus_s6を除外集合に追加し、focus除去交換の最小フロンティアを記録する近傍全数監査
 ## [research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py](../../../research/experiments/n11-central-19-cover-20261031/audit_central49_2091_three_swap_neighborhood.py)
 
 - [K0654](../items/K0654-n11-central49-2090-conditional-two-swap.md) (verifier): 2,091類からの最大三証人交換の全候補を列挙し44改善候補を検出
@@ -7150,6 +7153,21 @@
 - [K0638](../items/K0638-n11-central49-focus-s6-win-refutes-1985.md) (solver): 元先手WIN7極性でも戦略を決定的に生成できる整数3×3探索器
 - [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md) (solver): 既存の3×3差分行列式による決定的な終局戦略生成器。WIN7向きも指定可能
 - [K0661](../items/K0661-n11-central49-focus-53-terminal-outcomes.md) (solver): 元先手WIN7・LOSS7の両方向の終局戦略を再生成する既存3×3差分幾何探索器
+## [research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/results.json](../../../research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/results.json)
+
+- [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) (data): 生成器の実行結果（states/reachable等の内訳）
+## [research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/run_focus62.sh](../../../research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/run_focus62.sh)
+
+- [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) (source): 並列生成スクリプト。62件のcert本体はマシンローカルの /mnt/d/kyouen-focus-certs/ に保存し、生成器＋根から再生成可能
+## [research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verified.json](../../../research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verified.json)
+
+- [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) (data): 62件の独立監査結果（loss 35 / win 27 / fails 0、各証明書sha256を収録したmanifest）
+## [research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verify_focus62.py](../../../research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verify_focus62.py)
+
+- [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) (verifier): 独立4x4 Bareiss監査器による62件の監査ドライバ（fails 0）
+## [research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json](../../../research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json)
+
+- [K0673](../items/K0673-n11-repair-focus-2140.md) (data): 修復列挙の機械可読出力（focus除去有効交換16,043、最良2,140類と交換内訳）
 ## [research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2091_descent.json](../../../research/experiments/n11-central-19-cover-20261031/output/three_swap_neighborhood_2091_descent.json)
 
 - [K0670](../items/K0670-n11-central49-2091-three-swap.md) (data): 上記の機械可読出力（改善0）
@@ -10476,6 +10494,12 @@
 ## [research/log/2026-11-04-n11-central49-2091-descent-three-swap.md](../../../research/log/2026-11-04-n11-central49-2091-descent-three-swap.md)
 
 - [K0670](../items/K0670-n11-central49-2091-three-swap.md) (log): 交換経緯と検証境界・命名の重複回避
+## [research/log/2026-11-06-n11-focus62-classified.md](../../../research/log/2026-11-06-n11-focus62-classified.md)
+
+- [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) (log): 本確定の経緯
+## [research/log/2026-11-06-n11-repair-focus-neighborhood.md](../../../research/log/2026-11-06-n11-repair-focus-neighborhood.md)
+
+- [K0673](../items/K0673-n11-repair-focus-2140.md) (log): 修復列挙の経緯
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

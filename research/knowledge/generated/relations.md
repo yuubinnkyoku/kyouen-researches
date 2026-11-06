@@ -167,6 +167,8 @@
 - ← depends_on [K0668](../items/K0668-n11-central49-2098-three-swap.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0669](../items/K0669-n11-central49-2097-three-swap.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0670](../items/K0670-n11-central49-2091-three-swap.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0673](../items/K0673-n11-repair-focus-2140.md): 条件付き証明義務と確定勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3523,8 +3525,24 @@
 - → depends_on [K0669](../items/K0669-n11-central49-2097-three-swap.md): 46証人・94/94被覆・2,097七石類の出発点
 - → supersedes [K0669](../items/K0669-n11-central49-2097-three-swap.md): 46証人・94/94被覆・確定LOSS7 6類を保ったまま七石義務を6類削減した現行条件付き計画
 - → depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 終局証明由来の七石LOSS23類と現行被覆との交差
+- ← depends_on [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): 2091条件付き計画のfocus六石局面 00000000000000203808000000000040
+- ← refutes [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): focus_s6は手番WINであり46証人集合のLOSS前提を崩壊させる
+- ← supersedes [K0673](../items/K0673-n11-repair-focus-2140.md): 修復済み46証人集合（2,140類）が崩壊した2091計画（2,091類）を置き換える
 
 ## [K0671](../items/K0671-n3-certificate-independent-verification.md) 3×3の空盤AND/OR証明書（KYOENC3）を再生成し、全証明DAGノードの局所条件を独立実装で再検証
 
 - → verifies [K0013](../items/K0013-n3-first-player-win.md): 3x3は先手必勝（ranked-and-or certificateの空盤勝敗部分）を独立実装で再検証
 - → supports [K0103](../items/K0103-n10-single-empty-root-certificate-open.md): 3x3/2x2/1x1の小盤証明書がLeanなしでも独立Pythonで検査できることの確認
+
+## [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) 11x11中央49条件付き計画のfocus六石局面の全62子局面を確定（35 LOSS7・27 WIN7）
+
+- → depends_on [K0670](../items/K0670-n11-central49-2091-three-swap.md): 2091条件付き計画のfocus六石局面 00000000000000203808000000000040
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+- → refutes [K0670](../items/K0670-n11-central49-2091-three-swap.md): focus_s6は手番WINであり46証人集合のLOSS前提を崩壊させる
+- ← depends_on [K0673](../items/K0673-n11-repair-focus-2140.md): focus_s6手番WIN確定により証人候補から除外
+
+## [K0673](../items/K0673-n11-repair-focus-2140.md) 2091計画の崩壊証人focus_s6を除く修復三証人交換で2140類へ（条件付き計画の再構築）
+
+- → depends_on [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): focus_s6手番WIN確定により証人候補から除外
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+- → supersedes [K0670](../items/K0670-n11-central49-2091-three-swap.md): 修復済み46証人集合（2,140類）が崩壊した2091計画（2,091類）を置き換える
