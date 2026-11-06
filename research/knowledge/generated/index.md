@@ -659,3 +659,4 @@
 | [K0673](../items/K0673-n11-repair-focus-2140.md) | 2091計画の崩壊証人focus_s6を除く修復三証人交換で2140類へ（条件付き計画の再構築） | computation | computed | square-outcomes, certificates, verification |
 | [K0674](../items/K0674-n11-all-witnesses-first-win.md) | 修復後46証人は全員手番WINだった：LOSS証人計画は中央領域で不成立（方向性崩壊） | computation | computed | square-outcomes, certificates, verification |
 | [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) | 94五石子S6全集合3,868を全確定し94五石位置を78先手/16第二手に分類（先手WIN方向の転換） | computation | computed | square-outcomes, certificates, verification |
+| [K0676](../items/K0676-n11-region-s4-first-win.md) | 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子） | computation | computed | square-outcomes, certificates, verification |

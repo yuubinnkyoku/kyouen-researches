@@ -7183,9 +7183,13 @@
 ## [research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json](../../../research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (data): 修復列挙の機械可読出力（focus除去有効交換16,043、最良2,140類と交換内訳）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/region_test.py](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/region_test.py)
+
+- [K0676](../items/K0676-n11-region-s4-first-win.md) (verifier): 94五石子の共通四石親の同定と合法子数・先手勝ち子数の計数
 ## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.json](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.json)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (data): 94五石位置の勝敗集計（78先手勝ち・16第二手勝ち、各位置のLOSS/WIN子数）
+- [K0676](../items/K0676-n11-region-s4-first-win.md) (data): 五石位置勝敗の一次データ（78先手/16第二手）
 ## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.py](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.py)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (source): S6判定からの五石位置集計
@@ -10533,6 +10537,9 @@
 ## [research/log/2026-11-06-n11-repair-focus-neighborhood.md](../../../research/log/2026-11-06-n11-repair-focus-neighborhood.md)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (log): 修復列挙の経緯
+## [research/log/2026-11-07-n11-region-s4-first-win.md](../../../research/log/2026-11-07-n11-region-s4-first-win.md)
+
+- [K0676](../items/K0676-n11-region-s4-first-win.md) (log): 領域検証の経緯
 ## [research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md](../../../research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (log): スイープと五石集計の経緯
