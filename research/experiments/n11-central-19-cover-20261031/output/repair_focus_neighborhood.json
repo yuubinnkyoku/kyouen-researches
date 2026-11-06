@@ -1,0 +1,40 @@
+root=00000000000000203808000000000120 states=26169 winner_states=2804 reachable=4239 terminals=510 opponent_edges=3572 terminal_stones=14-18
+root=0000000000000020380a000000004000 states=20039 winner_states=1208 reachable=1877 terminals=323 opponent_edges=1488 terminal_stones=14-16
+root=00000000000000a03808100000000000 states=6010 winner_states=786 reachable=1226 terminals=245 opponent_edges=916 terminal_stones=12-16
+root=00000000000002043800800000040000 states=7376 winner_states=1189 reachable=1851 terminals=318 opponent_edges=1460 terminal_stones=14-16
+root=00000000000200801082008100000000 states=9993 winner_states=2700 reachable=4100 terminals=505 opponent_edges=3484 terminal_stones=14-18
+{
+  "schema": "n11-central49-2091-repair-focus-excluded-neighborhood-v1",
+  "baseline_distinct_s7_classes": 2091,
+  "removed_triples": 15180,
+  "six_vertex_matchings": 227700,
+  "candidate_combinations": 313905,
+  "geometrically_feasible_nontrivial": 283635,
+  "excluded_certified_win6": 5271,
+  "excluded_known_win7": 0,
+  "valid_nontrivial": 278364,
+  "improving_valid_three_swaps": 0,
+  "best_distinct_s7": 2091,
+  "focus_s6": "00000000000000203808000000000040",
+  "repair_focus_removing_valid": 16043,
+  "repair_best_distinct_s7": 2140,
+  "conditional_only": true,
+  "outcomes": {
+    "s6": "UNKNOWN",
+    "s4": "UNKNOWN",
+    "two_stone_root": "UNKNOWN",
+    "empty_board": "UNKNOWN"
+  },
+  "repair_best_swap": {
+    "removed": [
+      "00000000000000203800002000002000",
+      "00000000000000203800440000000000",
+      "00000000000000203808000000000040"
+    ],
+    "added": [
+      "00000000000000203800040000000040",
+      "00000000000000203800400000002000",
+      "0000000000000080100a102000000000"
+    ]
+  }
+}
