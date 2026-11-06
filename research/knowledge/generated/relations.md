@@ -805,6 +805,7 @@
 - → depends_on [K0313](../items/K0313-large-safe-constructions-n11-n12.md): 最大安全サイズの存在下界は空盤勝敗を決めない
 - → depends_on [K0355](../items/K0355-n11-reply27-cache-recovery-frontier.md): reply27の有限証明境界の進捗。二石rootと空盤の勝敗は未確定
 - → depends_on [K0372](../items/K0372-n11-independent-exact-evidence-trust-audit.md): solver/cache 葉への依存の信頼境界を参照
+- → depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 四石領域位置S4-A/B先手勝ち（空盤への鎖の決定部分）
 - ← depends_on [K0276](../items/K0276-h-dense-independent-holdout-open.md): 11盤通常版はUNKNOWNで独立holdoutとして未完了
 - ← depends_on [K0329](../items/K0329-n11-s5-verdict-recovery-and-s4-manifest.md): 11×11空盤勝敗は未確定であり、本項目も thereof閉じない
 - ← depends_on [K0560](../items/K0560-n11-s9-terminal-neighbor-win.md): 局所証明は空盤の未解決性を変えない
@@ -3569,3 +3570,4 @@
 
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置の勝敗分類（78先手/16第二手）
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 四石領域位置S4-A/B先手勝ち（空盤への鎖の決定部分）
