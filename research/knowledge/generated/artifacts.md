@@ -7165,6 +7165,21 @@
 ## [research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verify_focus62.py](../../../research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verify_focus62.py)
 
 - [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) (verifier): 独立4x4 Bareiss監査器による62件の監査ドライバ（fails 0）
+## [research/experiments/n11-central-19-cover-20261031/output/frontier2140/aggregate_repair.py](../../../research/experiments/n11-central-19-cover-20261031/output/frontier2140/aggregate_repair.py)
+
+- [K0674](../items/K0674-n11-all-witnesses-first-win.md) (source): 修復後46証人の勝敗集計スクリプト（基準集合=2091 derivation）
+## [research/experiments/n11-central-19-cover-20261031/output/frontier2140/aggregation.json](../../../research/experiments/n11-central-19-cover-20261031/output/frontier2140/aggregation.json)
+
+- [K0674](../items/K0674-n11-all-witnesses-first-win.md) (data): 修復後46証人の勝敗集計（46/46手番WIN、missing 0）
+## [research/experiments/n11-central-19-cover-20261031/output/frontier2140/classify_frontier.sh](../../../research/experiments/n11-central-19-cover-20261031/output/frontier2140/classify_frontier.sh)
+
+- [K0674](../items/K0674-n11-all-witnesses-first-win.md) (source): 2091フロンティア分類ドライバ（focus62 除外、8並列）
+## [research/experiments/n11-central-19-cover-20261031/output/frontier2140/verified.json](../../../research/experiments/n11-central-19-cover-20261031/output/frontier2140/verified.json)
+
+- [K0674](../items/K0674-n11-all-witnesses-first-win.md) (data): フロンティア2,401類の独立監査結果（loss 1,777 / win 624 / fails 0）
+## [research/experiments/n11-central-19-cover-20261031/output/frontier2140/verify_classify.py](../../../research/experiments/n11-central-19-cover-20261031/output/frontier2140/verify_classify.py)
+
+- [K0674](../items/K0674-n11-all-witnesses-first-win.md) (verifier): 独立4x4 Bareiss監査器による分類結果の監査ドライバ（8並列）
 ## [research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json](../../../research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (data): 修復列挙の機械可読出力（focus除去有効交換16,043、最良2,140類と交換内訳）
@@ -10497,6 +10512,9 @@
 ## [research/log/2026-11-06-n11-focus62-classified.md](../../../research/log/2026-11-06-n11-focus62-classified.md)
 
 - [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) (log): 本確定の経緯
+## [research/log/2026-11-06-n11-frontier2140-all-first-win.md](../../../research/log/2026-11-06-n11-frontier2140-all-first-win.md)
+
+- [K0674](../items/K0674-n11-all-witnesses-first-win.md) (log): 全2,140類確定の経緯
 ## [research/log/2026-11-06-n11-repair-focus-neighborhood.md](../../../research/log/2026-11-06-n11-repair-focus-neighborhood.md)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (log): 修復列挙の経緯

@@ -169,6 +169,7 @@
 - ← depends_on [K0670](../items/K0670-n11-central49-2091-three-swap.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0673](../items/K0673-n11-repair-focus-2140.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0674](../items/K0674-n11-all-witnesses-first-win.md): 条件付き証明義務と確定勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3546,3 +3547,11 @@
 - → depends_on [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md): focus_s6手番WIN確定により証人候補から除外
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - → supersedes [K0670](../items/K0670-n11-central49-2091-three-swap.md): 修復済み46証人集合（2,140類）が崩壊した2091計画（2,091類）を置き換える
+- ← depends_on [K0674](../items/K0674-n11-all-witnesses-first-win.md): 修復済み46証人集合（最良2,140類）の全子確定検証
+- ← refutes [K0674](../items/K0674-n11-all-witnesses-first-win.md): 修復後も全46証人が手番WINであり、修復計画のLOSS前提も崩壊する
+
+## [K0674](../items/K0674-n11-all-witnesses-first-win.md) 修復後46証人は全員手番WINだった：LOSS証人計画は中央領域で不成立（方向性崩壊）
+
+- → depends_on [K0673](../items/K0673-n11-repair-focus-2140.md): 修復済み46証人集合（最良2,140類）の全子確定検証
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+- → refutes [K0673](../items/K0673-n11-repair-focus-2140.md): 修復後も全46証人が手番WINであり、修復計画のLOSS前提も崩壊する

@@ -657,3 +657,4 @@
 | [K0671](../items/K0671-n3-certificate-independent-verification.md) | 3×3の空盤AND/OR証明書（KYOENC3）を再生成し、全証明DAGノードの局所条件を独立実装で再検証 | verification | verified | square-outcomes, certificates, verification |
 | [K0672](../items/K0672-n11-focus-s6-all-62-children-classified.md) | 11x11中央49条件付き計画のfocus六石局面の全62子局面を確定（35 LOSS7・27 WIN7） | computation | computed | square-outcomes, certificates, verification |
 | [K0673](../items/K0673-n11-repair-focus-2140.md) | 2091計画の崩壊証人focus_s6を除く修復三証人交換で2140類へ（条件付き計画の再構築） | computation | computed | square-outcomes, certificates, verification |
+| [K0674](../items/K0674-n11-all-witnesses-first-win.md) | 修復後46証人は全員手番WINだった：LOSS証人計画は中央領域で不成立（方向性崩壊） | computation | computed | square-outcomes, certificates, verification |
