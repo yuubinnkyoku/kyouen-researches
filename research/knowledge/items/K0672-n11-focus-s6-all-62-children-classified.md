@@ -12,6 +12,9 @@ relations:
 - type: depends_on
   target: K0003
   note: 条件付き証明義務と確定勝敗の区別
+- type: refutes
+  target: K0670
+  note: focus_s6は手番WINであり46証人集合のLOSS前提を崩壊させる
 artifacts:
 - path: research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verified.json
   role: data
@@ -30,7 +33,7 @@ artifacts:
   note: 本確定の経緯
 scope: 標準11x11完全指摘・通常プレイの六石局面 00000000000000203808000000000040 の全7手目子62件。
 evidence: >-
-  focus2154_plan.json の unverified_s7 62件すべてに確定戦略生成器（generate_five_terminal_loss7.cpp）で終局まで全探索した結果、LOSS7 35件・WIN7 27件を得た。生成器と独立の 4x4 Bareiss 監査器（verify_five_terminal_loss7.py）で62件すべて PASS（fails 0）。WIN7 子が27件存在するため、focus_s6 の手番（先手）に勝ち手があり、focus_s6 は terminal 戦略レベルで先手勝ちと確定する。これは K0670 等の条件付き計画の outcomes を変更するものではない（従来どおり UNKNOWN）。
+  focus2154_plan.json の unverified_s7 62件すべてに確定戦略生成器（generate_five_terminal_loss7.cpp）で終局まで全探索した結果、LOSS7 35件・WIN7 27件を得た。生成器と独立の 4x4 Bareiss 監査器（verify_five_terminal_loss7.py）で62件すべて PASS（fails 0）。WIN7 子が27件存在するため、focus_s6 の手番（先手）に勝ち手があり、focus_s6 は terminal 戦略レベルで先手勝ちと確定する。K0670 の46証人集合（2091・2097とも）は focus_s6 を含み、focus_s6 は手番 WIN であるため LOSS 証人としては無効であり、2091 の2,091七石類フロンティアは LOSS 計画としての意義を失う（証明書の known_win7_conflicts 0 は拡張した既知集合の下では反証された）。outcomes 自体は従来どおり UNKNOWN。
 ---
 
 # 62子局面の確定
@@ -41,8 +44,14 @@ evidence: >-
 62 件すべて PASS（fails 0）を確認した。
 
 WIN7 子が 27 件存在するため、この六石局面は手番（先手）にとって
-先手勝ちと確定する。これは条件付き計画（K0670 等）の outcomes を
-変更するものではない（従来どおり UNKNOWN）。
+先手勝ちと確定する。
+
+## 含意：K0670 計画前提の崩壊
+
+K0670（2091）の46証人集合は focus_s6 を含む（2097 を含む）。
+focus_s6 が手番 WIN である以上、この46証人集合は LOSS 証人構造として
+成立しない。2091 の2,091七石類フロンティアは幾何的数値としては残るが、
+LOSS 計画としての意義は失われた。outcomes 自体は従来どおり UNKNOWN。
 
 証明書本体（62件、合計約24M）はマシンローカルの
 `/mnt/d/kyouen-focus-certs/` に保存し、生成器と監査器の再実行で
