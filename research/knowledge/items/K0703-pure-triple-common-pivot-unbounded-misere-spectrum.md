@@ -3,7 +3,11 @@ id: K0703
 title: 純三点共通pivot族は通常値0または1を固定して全misère補助値4以上を実現できる
 kind: proposition
 status: proved
-topics: [grundy, residual-games, geometry, variants]
+topics:
+- grundy
+- residual-games
+- geometry
+- variants
 aliases: []
 relations:
 - type: depends_on
@@ -18,6 +22,9 @@ relations:
 - type: depends_on
   target: K0683
   note: 各三点辺に一占有アンカーを置く指定有限整数点盤での実現
+- type: depends_on
+  target: K0704
+  note: 自由点付加の補助値xor1は全有限ゲームに成立する一般補題
 artifacts:
 - path: research/experiments/common-pivot-misere-all-values-20261108/proof.md
   role: proof
@@ -38,6 +45,7 @@ scope: 全極小残余禁止辺が三点集合で共通合法点cを持つ有限
 evidence: 全m>=2のh0,t=mリンクGmの子制限値集合0..m-1と高h子の存在から、pure根の全子h集合0..m+1を導きh=m+2。通常根g1、一自由点付きg0と補助値xor1の特定式を別に導出。独立DAGと小型整数座標でも照合。
 ---
 
+
 任意q≥4について、全て三点の残余辺が一つの合法点cを共有する有限族で
 
 \[
@@ -56,7 +64,7 @@ K0696の相互再帰リンクG_m^0 (m≥2)の各辺uvを{c,u,v}へ置き換え�
 5·2^(m−2)(5·2^(m−1)−m−5)。サイズ最小性は主張しない。
 
 自由点一個を加えた根はg=0、補助値は(m+2) xor 1。
-これはリンクの性質Rと子値集合から導いたこの族固有の式で、hの一般xor則ではない。
+これは一自由点付加に対する一般補題K0704の特例であり、任意直和におけるh同士のxor合成とは区別する。
 q→q xor 1は4以上の整数を置換するため、g=0でも全q≥4を実現する。
 
 [全称帰納・pure根のmex・自由点式](../../experiments/common-pivot-misere-all-values-20261108/proof.md)を保存した。
