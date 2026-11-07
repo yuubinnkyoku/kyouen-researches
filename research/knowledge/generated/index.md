@@ -679,10 +679,11 @@
 | [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) | p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) | 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) | Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる | proposition | proved | grundy, residual-games, geometry, variants |
-| [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) | 二点辺付きrank三共通pivot族のmisère補助値は無界と予想する | proposition | conjectured | grundy, residual-games, variants |
+| [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) | 二点辺一本のrank三共通pivot族で通常値0に固定して全misère補助値3以上を実現でき、補助値は無界 | proposition | proved | grundy, residual-games, variants, geometry |
 | [K0697](../items/K0697-core-path-tail-shift-structure.md) | 核＋道の周期34末尾は裸の道の普遍シフトではない（六点純三点辺1825種・五点以下134種の末尾分類） | computation | computed | grundy, residual-games, search-methods, variants |
 | [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) | 道自己畳み込み再帰は最終34周期な任意の強制を周期34へ吸収する（150配置の有限観測・K0684帰納ステップの候補補題） | computation | computed | grundy, residual-games, search-methods |
 | [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) | 純三点ゲームの通常値とmisère補助値2〜9の点数・辺数Pareto前線が確定し、8と9の最少合法点数は十と十一 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) | 共通合法点を持つ有限整数盤で通常値1から一手で2の任意冪へ増加し、値0からの増加も非有界 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) | 同一整数盤で石数・合法点数・最大追加手数が同じでもGrundy差は非有界で、終局長可能集合も一致させられる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) | p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
+| [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) | 純三点共通pivot族は通常値0または1を固定して全misère補助値4以上を実現できる | proposition | proved | grundy, residual-games, geometry, variants |

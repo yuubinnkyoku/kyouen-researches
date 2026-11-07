@@ -843,6 +843,34 @@
 ## [research/experiments/cograph-terminal-20261102/verify.py](../../../research/experiments/cograph-terminal-20261102/verify.py)
 
 - [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): 12066条件の削除集合直接列挙、744標本、159条件192144点部分集合の禁止超辺独立検査
+## [research/experiments/common-pivot-misere-all-values-20261108/dag_audit.py](../../../research/experiments/common-pivot-misere-all-values-20261108/dag_audit.py)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (verifier): グラフやcellを使わず文字通りの子ゲーム集合と直和で再計算
+## [research/experiments/common-pivot-misere-all-values-20261108/output/audit.json](../../../research/experiments/common-pivot-misere-all-values-20261108/output/audit.json)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (certificate): 全14グラフと18根4396安全状態の一致
+## [research/experiments/common-pivot-misere-all-values-20261108/output/dag_audit.json](../../../research/experiments/common-pivot-misere-all-values-20261108/output/dag_audit.json)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (certificate): m0..64両側130根と4363ゲームDAG局面の独立一致
+- [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) (certificate): m2..64のpure根と自由点付き根の式を独立ゲームDAGで照合
+## [research/experiments/common-pivot-misere-all-values-20261108/output/failed_ternary_doubling.json](../../../research/experiments/common-pivot-misere-all-values-20261108/output/failed_ternary_doubling.json)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (log): 最初の三コピーdoublingではhが6へ出て失敗した記録
+## [research/experiments/common-pivot-misere-all-values-20261108/output/geometry.json](../../../research/experiments/common-pivot-misere-all-values-20261108/output/geometry.json)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (certificate): 15/31/22/23点の四整数盤、49000四点組と3222安全状態
+- [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) (certificate): 十点g1/h4と十一点g0/h5の具体的22/23点整数盤も独立検査
+## [research/experiments/common-pivot-misere-all-values-20261108/proof.md](../../../research/experiments/common-pivot-misere-all-values-20261108/proof.md)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (proof): 性質Rと二側相互帰納で全t=mを実現し、paired/pureの無界性を証明
+- [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) (proof): 低hリンク子の全t集合からpure根h=m+2と一自由点付きの値を導出
+## [research/experiments/common-pivot-misere-all-values-20261108/verify.py](../../../research/experiments/common-pivot-misere-all-values-20261108/verify.py)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (verifier): m0..6両側の原始g/h/tと全残余R、別subset18根を比較
+- [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) (verifier): リンクの相互再帰と全到達残余の性質Rを原始再帰で検査
+## [research/experiments/common-pivot-misere-all-values-20261108/verify_geometry.py](../../../research/experiments/common-pivot-misere-all-values-20261108/verify_geometry.py)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (verifier): 小型paired/pure族を別残余縮約・subset・整数盤で検査
 ## [research/experiments/common-pivot-misere-bound-20261108/audit.py](../../../research/experiments/common-pivot-misere-bound-20261108/audit.py)
 
 - [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (verifier): リンクグラフhと0/1制限ゲームtでの式、41662根の別C++比較
@@ -10997,6 +11025,10 @@
 ## [research/log/2026-11-08-misere-mobility-gap-and-larger-pivot-values.md](../../../research/log/2026-11-08-misere-mobility-gap-and-larger-pivot-values.md)
 
 - [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (log): 値9までの有限証拠と無界性予想・同値帰着を分けた記録
+## [research/log/2026-11-08-misere-unboundedness-mutual-recursion.md](../../../research/log/2026-11-08-misere-unboundedness-mutual-recursion.md)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (log): 有限証拠による予想から二側相互帰納の全称証明へ進めた経緯
+- [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) (log): 二点辺なしのpure coneでも全高値を得た経緯
 ## [research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md](../../../research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md)
 
 - [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (log): 有界探索から完全核表と全点数最適表へ至った経緯

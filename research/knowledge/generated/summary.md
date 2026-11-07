@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 684 / alias: 269 / artifactファイル: 3408
+K項目: 685 / alias: 269 / artifactファイル: 3417
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 684 / alias: 269 / artifactファイル: 3408
 | computation | 66 |
 | definition | 5 |
 | method | 4 |
-| proposition | 542 |
+| proposition | 543 |
 | question | 39 |
 | verification | 28 |
 
@@ -19,11 +19,11 @@ K項目: 684 / alias: 269 / artifactファイル: 3408
 |---|---:|
 | active | 9 |
 | computed | 144 |
-| conjectured | 3 |
+| conjectured | 2 |
 | needs-review | 2 |
 | observed | 26 |
 | open | 37 |
-| proved | 357 |
+| proved | 359 |
 | refuted | 63 |
 | scope-unclear | 2 |
 | superseded | 9 |
@@ -37,21 +37,21 @@ K項目: 684 / alias: 269 / artifactファイル: 3408
 | certificates | 94 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 338 |
-| grundy | 168 |
+| geometry | 340 |
+| grundy | 169 |
 | maximal-safe | 167 |
 | maximum-safe | 78 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
 | rectangles | 103 |
-| residual-games | 122 |
+| residual-games | 123 |
 | rules | 8 |
 | search-methods | 105 |
 | square-outcomes | 90 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 289 |
+| variants | 290 |
 | verification | 106 |
 
 ## 未解決・要監査・範囲不明
@@ -100,7 +100,6 @@ K項目: 684 / alias: 269 / artifactファイル: 3408
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) [needs-review] p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
-- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) [conjectured] 二点辺付きrank三共通pivot族のmisère補助値は無界と予想する
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) [needs-review] p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
 
 ## 警告

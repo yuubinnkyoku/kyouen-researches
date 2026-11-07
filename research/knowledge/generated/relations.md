@@ -3670,6 +3670,7 @@
 - ← depends_on [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md): 達成族の指定有限整数点盤への実現
 - ← depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 純三点族を一辺一占有アンカーの有限整数点盤へ実現
 - ← depends_on [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md): 二グラフの非交和を一つの指定有限整数点盤へ実現
+- ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 各三点辺に一占有アンカーを置く指定有限整数点盤での実現
 
 ## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
@@ -3737,6 +3738,7 @@
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 二点辺が生じた後の通常Grundy閉形式
 - ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 同じ対象の通常Grundyは全点数・全辺数で3以下
 - ← depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 共通pivot付き二点辺の通常値閉形式で一手前g1を確定
+- ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 同じ純三点共通pivot族の通常値上界とリンク子値による初期g1
 
 ## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 
@@ -3753,6 +3755,7 @@
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点達成例の指定有限整数点盤への移送
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): misère補助値の二点辺付きpivot変換
 - ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 二点辺付きpivot変換と自由二点の補助値周期2
+- ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 外側着手後のpaired補助値式と自由点付き純三点の式
 
 ## [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる
 
@@ -3760,11 +3763,12 @@
 - → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): misère補助値の二点辺付きpivot変換
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全kについて指定有限整数点盤に移す
 
-## [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) 二点辺付きrank三共通pivot族のmisère補助値は無界と予想する
+## [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) 二点辺一本のrank三共通pivot族で通常値0に固定して全misère補助値3以上を実現でき、補助値は無界
 
 - → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 二点辺付きpivot変換と自由二点の補助値周期2
 - → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 同じ対象の通常Grundyは全点数・全辺数で3以下
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 各有限rank三族の指定有限整数点盤での実現
+- ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): リンク相互再帰Gmのh0・t=m・制限子値集合・自由点での低所属保存
 
 ## [K0697](../items/K0697-core-path-tail-shift-structure.md) 核＋道の周期34末尾は裸の道の普遍シフトではない（六点純三点辺1825種・五点以下134種の末尾分類）
 
@@ -3803,3 +3807,10 @@
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - → supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないことを示す2例目
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する2番目の反例候補
+
+## [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) 純三点共通pivot族は通常値0または1を固定して全misère補助値4以上を実現できる
+
+- → depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): リンク相互再帰Gmのh0・t=m・制限子値集合・自由点での低所属保存
+- → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 外側着手後のpaired補助値式と自由点付き純三点の式
+- → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 同じ純三点共通pivot族の通常値上界とリンク子値による初期g1
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 各三点辺に一占有アンカーを置く指定有限整数点盤での実現
