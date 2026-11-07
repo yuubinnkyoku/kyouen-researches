@@ -147,6 +147,8 @@
 - ← depends_on [K0589](../items/K0589-sunflower-quota-terminal-gaps.md): 通常Grundy値とmisère補助mexの定義
 - ← depends_on [K0590](../items/K0590-even-sunflower-quota-grundy.md): 通常Grundy値とmisère補助mexの定義
 - ← depends_on [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md): 有限通常ゲームのmexとGrundyの定義
+- ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 通常ゲームのmex定義
+- ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): mexとGrundyの定義
 
 ## [K0003](../items/K0003-solution-and-evidence-levels.md) 解決段階と計算・証明書・監査の区別
 
@@ -900,6 +902,10 @@
 - ← depends_on [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 固定残余clutterと通常Grundyの定義
 - ← depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 純三点残余族の通常ゲームと自由点のxor分離
 - ← depends_on [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md): 全残余族の継続ゲーム表現と自由点のxor分離
+- ← depends_on [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md): 残余ゲームと連結成分・自由点のxor分離
+- ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 安全局面の極小残余禁止族への帰着
+- ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 自由点一個はxor1でg6をg7へ移す
+- ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 全残余族と自由点のxor分離
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -3644,6 +3650,9 @@
 - ← depends_on [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 全rank3核と長道は有限整数点盤の残局として実現できる
 - ← depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 純三点残余族と最大値六型の有限整数点盤への実現
 - ← depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 抽象三点禁止族の全型を指定有限整数点盤へ移せる
+- ← depends_on [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md): 達成する抽象三点族を指定有限整数点盤に移す
+- ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 有限整数点盤での達成
+- ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): rank三以下の達成例を指定有限整数点盤に移す
 
 ## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
@@ -3660,16 +3669,47 @@
 
 - → depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 主計算は初手後の五点rank3核表を参照。独立C++ではこの表を使わない
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点残余族と最大値六型の有限整数点盤への実現
+- ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 六点でg4、七点でg5を達成し二段差の鋭さを示す
+- ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 純三点でg2とg3に必要な最少点数の下界
 
 ## [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) 純三点残余辺が3本以下ならGrundyは1以下、4本以下で3以下、5本以下で5以下で全て鋭い
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 純三点残余族の通常ゲームと自由点のxor分離
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 抽象三点禁止族の全型を指定有限整数点盤へ移せる
+- ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 五本以下の三点辺ならg<=5という全称下界根拠
+- ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 純三点のg2とg3に必要な最少辺数の下界
 
 ## [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) 残余辺の所属被覆重みはGrundy上界を与え、固定rankでは辺数に対する線形上界が成立する
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 有限通常ゲームのmexとGrundyの定義
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余族の継続ゲーム表現と自由点のxor分離
+
+## [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) 純三点Berge森は六辺以下でGrundy3以下、八辺以下で7以下となり全て鋭い
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余ゲームと連結成分・自由点のxor分離
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 達成する抽象三点族を指定有限整数点盤に移す
+
+## [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) 任意rankの禁止集合ゲームは合法点が五個以上ならGrundyが合法点数より二以上小さい
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常ゲームのmex定義
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 安全局面の極小残余禁止族への帰着
+- → depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 六点でg4、七点でg5を達成し二段差の鋭さを示す
+- ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 合法点数の最小値の下界
+
+## [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) 純三点ゲームのGrundy6と7は最少点数が八と九、最少辺数はともに六本
+
+- → depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 五本以下の三点辺ならg<=5という全称下界根拠
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 自由点一個はxor1でg6をg7へ移す
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 有限整数点盤での達成
+- → depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 合法点数の最小値の下界
+
+## [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) 全残余辺が一点を共有するrank三以下のゲームは辺数無制限でもGrundy3以下
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): mexとGrundyの定義
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余族と自由点のxor分離
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): rank三以下の達成例を指定有限整数点盤に移す
+- → depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 純三点でg2とg3に必要な最少点数の下界
+- → depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 純三点のg2とg3に必要な最少辺数の下界
 
 ## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 

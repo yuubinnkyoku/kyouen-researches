@@ -1,0 +1,52 @@
+test_ambiguous_markers_fail_closed (test_knowledge.GenerationTests.test_ambiguous_markers_fail_closed) ... ok
+test_first_append_is_idempotent (test_knowledge.GenerationTests.test_first_append_is_idempotent) ... ok
+test_human_readme_survives_with_both_newline_styles (test_knowledge.GenerationTests.test_human_readme_survives_with_both_newline_styles) ... ok
+test_links_use_actual_path_and_relative_location (test_knowledge.GenerationTests.test_links_use_actual_path_and_relative_location) ... ok
+test_relations_without_notes_have_no_trailing_whitespace (test_knowledge.GenerationTests.test_relations_without_notes_have_no_trailing_whitespace) ... ok
+test_reverse_indexes_and_markdown_escape (test_knowledge.GenerationTests.test_reverse_indexes_and_markdown_escape) ... ok
+test_stage_column_keeps_computed_strong_solution_plain (test_knowledge.GenerationTests.test_stage_column_keeps_computed_strong_solution_plain) ... research/experiments/original-claims/scripts/round3_chunk8_a_quads.py:27: SyntaxWarning: invalid escape sequence '\ '
+  the game with quad family F' = F \ T depends only on which quads are
+ok
+test_artifact_path_boundaries (test_knowledge.IntegrityTests.test_artifact_path_boundaries) ... ok
+test_content_slug_and_legacy_filename (test_knowledge.IntegrityTests.test_content_slug_and_legacy_filename) ... ok
+test_cycles_for_each_acyclic_relation (test_knowledge.IntegrityTests.test_cycles_for_each_acyclic_relation) ... ok
+test_duplicate_yaml_keys_rejected (test_knowledge.IntegrityTests.test_duplicate_yaml_keys_rejected) ... ok
+test_incoming_relation_alone_is_thin_evidence (test_knowledge.IntegrityTests.test_incoming_relation_alone_is_thin_evidence) ... ok
+test_invalid_slug_or_id_prefix_is_rejected (test_knowledge.IntegrityTests.test_invalid_slug_or_id_prefix_is_rejected) ... ok
+test_isolated_item_is_warning_not_error (test_knowledge.IntegrityTests.test_isolated_item_is_warning_not_error) ... ok
+test_kind_specific_invalid_statuses (test_knowledge.IntegrityTests.test_kind_specific_invalid_statuses) ... ok
+test_kind_specific_valid_statuses (test_knowledge.IntegrityTests.test_kind_specific_valid_statuses) ... ok
+test_malformed_classification_reports_error_without_crashing (test_knowledge.IntegrityTests.test_malformed_classification_reports_error_without_crashing) ... research/experiments/original-claims/scripts/round3_chunk8_a_quads.py:27: SyntaxWarning: invalid escape sequence '\ '
+  the game with quad family F' = F \ T depends only on which quads are
+research/experiments/original-claims/scripts/round3_chunk8_a_quads.py:27: SyntaxWarning: invalid escape sequence '\ '
+  the game with quad family F' = F \ T depends only on which quads are
+research/experiments/original-claims/scripts/round3_chunk8_a_quads.py:27: SyntaxWarning: invalid escape sequence '\ '
+  the game with quad family F' = F \ T depends only on which quads are
+ok
+test_missing_or_malformed_status_policy_fails_closed (test_knowledge.IntegrityTests.test_missing_or_malformed_status_policy_fails_closed) ... ok
+test_same_id_with_different_slugs_is_still_duplicate (test_knowledge.IntegrityTests.test_same_id_with_different_slugs_is_still_duplicate) ... ok
+test_self_reference_for_each_acyclic_relation (test_knowledge.IntegrityTests.test_self_reference_for_each_acyclic_relation) ... ok
+test_shared_dependency_is_not_a_cycle (test_knowledge.IntegrityTests.test_shared_dependency_is_not_a_cycle) ... ok
+test_strong_solution_cannot_mean_only_first_moves (test_knowledge.IntegrityTests.test_strong_solution_cannot_mean_only_first_moves) ... research/experiments/original-claims/scripts/round3_chunk8_a_quads.py:27: SyntaxWarning: invalid escape sequence '\ '
+  the game with quad family F' = F \ T depends only on which quads are
+ok
+test_unknown_target_and_alias_collision (test_knowledge.IntegrityTests.test_unknown_target_and_alias_collision) ... ok
+test_unknown_winner_cannot_be_solved (test_knowledge.IntegrityTests.test_unknown_winner_cannot_be_solved) ... research/experiments/original-claims/scripts/round3_chunk8_a_quads.py:27: SyntaxWarning: invalid escape sequence '\ '
+  the game with quad family F' = F \ T depends only on which quads are
+ok
+research/experiments/original-claims/scripts/round3_chunk8_a_quads.py:27: SyntaxWarning: invalid escape sequence '\ '
+  the game with quad family F' = F \ T depends only on which quads are
+test_canonical_items_validate (test_knowledge.MigrationBoundaryTests.test_canonical_items_validate) ... ok
+test_migrated_items_all_have_content_slugs (test_knowledge.MigrationBoundaryTests.test_migrated_items_all_have_content_slugs) ... ok
+test_original_audit_inventory_and_evidence_boundary (test_knowledge.MigrationBoundaryTests.test_original_audit_inventory_and_evidence_boundary) ... ok
+test_readme_table_follows_main_results_before_analysis_and_english (test_knowledge.MigrationBoundaryTests.test_readme_table_follows_main_results_before_analysis_and_english) ... ok
+test_square_outcomes_and_evidence_boundaries (test_knowledge.MigrationBoundaryTests.test_square_outcomes_and_evidence_boundaries) ... ok
+test_builder_can_replace_stale_generated_links_but_checks_still_reject_them (test_layout.LayoutTests.test_builder_can_replace_stale_generated_links_but_checks_still_reject_them) ... ok
+test_legacy_directory_or_file_is_rejected_but_historical_text_is_allowed (test_layout.LayoutTests.test_legacy_directory_or_file_is_rejected_but_historical_text_is_allowed) ... ok
+test_missing_local_link_and_runner_are_rejected (test_layout.LayoutTests.test_missing_local_link_and_runner_are_rejected) ... ok
+test_relative_percent_encoded_link_and_fenced_example (test_layout.LayoutTests.test_relative_percent_encoded_link_and_fenced_example) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 498.441s
+
+OK

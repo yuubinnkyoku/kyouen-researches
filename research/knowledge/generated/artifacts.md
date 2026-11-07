@@ -843,6 +843,15 @@
 ## [research/experiments/cograph-terminal-20261102/verify.py](../../../research/experiments/cograph-terminal-20261102/verify.py)
 
 - [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): 12066条件の削除集合直接列挙、744標本、159条件192144点部分集合の禁止超辺独立検査
+## [research/experiments/common-pivot-residual-game-20261108/audit.py](../../../research/experiments/common-pivot-residual-game-20261108/audit.py)
+
+- [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (verifier): 全小共通pivot族の閉形式をC++個別占有subsetで型ごとに比較
+## [research/experiments/common-pivot-residual-game-20261108/output/audit.json](../../../research/experiments/common-pivot-residual-game-20261108/output/audit.json)
+
+- [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (data): 完全小型比較、鋭いg3達成例、rank四のg4反例
+## [research/experiments/common-pivot-residual-game-20261108/proof.md](../../../research/experiments/common-pivot-residual-game-20261108/proof.md)
+
+- [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (proof): 二点辺がある場合のrank任意閉形式と、純三点のリンクグラフ帰着
 ## [research/experiments/componentwise-terminal-real-rootedness-20261103/proof.md](../../../research/experiments/componentwise-terminal-real-rootedness-20261103/proof.md)
 
 - [K0667](../items/K0667-componentwise-terminal-real-rootedness.md) (proof): 乗法性、実根性の成分別必要十分条件、および混合成分族の判定
@@ -2920,6 +2929,15 @@
 - [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md) (log): 証明の論理監査・再実行範囲・判定
 - [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md) (log): 証明の論理監査・再実行範囲・判定
 - [K0484](../items/K0484-width-five-q9-all-lengths.md) (log): 証明の論理監査・再実行範囲・判定
+## [research/experiments/legal-count-grundy-gap-two-20261108/audit.py](../../../research/experiments/legal-count-grundy-gap-two-20261108/audit.py)
+
+- [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (verifier): 二方式全clutter生成、Python残余mexとC++生subsetの比較
+## [research/experiments/legal-count-grundy-gap-two-20261108/output/audit.json](../../../research/experiments/legal-count-grundy-gap-two-20261108/output/audit.json)
+
+- [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (data): 全7020族と116416安全状態の比較、五点までの全ヒストグラム
+## [research/experiments/legal-count-grundy-gap-two-20261108/proof.md](../../../research/experiments/legal-count-grundy-gap-two-20261108/proof.md)
+
+- [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (proof): 五点以下の完全基底と合法点数についての全称帰納
 ## [research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md](../../../research/experiments/local-main-integration-20261020/source/NEW12-r3-report.md)
 
 - [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md) (source): 探索条件・witness・比較・限界
@@ -9677,6 +9695,21 @@
 ## [research/experiments/pure-triple-few-edge-grundy-20261107/proof.md](../../../research/experiments/pure-triple-few-edge-grundy-20261107/proof.md)
 
 - [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (proof): 所属cellの行和3による全称有限帰着、孤立点処理、鋭い達成例
+## [research/experiments/pure-triple-grundy-synthesis-20261108/audit.py](../../../research/experiments/pure-triple-grundy-synthesis-20261108/audit.py)
+
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (verifier): 八点g6・九点g7のPython原始mexと整数点盤の全共円四点組・全安全状態を検査
+## [research/experiments/pure-triple-grundy-synthesis-20261108/output/witness_audit.json](../../../research/experiments/pure-triple-grundy-synthesis-20261108/output/witness_audit.json)
+
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (certificate): 最少点数達成例、全初手値、14点と15点の具体的整数座標盤
+## [research/experiments/pure-triple-hyperforests-20261107/audit.py](../../../research/experiments/pure-triple-hyperforests-20261107/audit.py)
+
+- [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) (verifier): 所属木生成・残余木mexと別C++生subset DPの比較
+## [research/experiments/pure-triple-hyperforests-20261107/output/audit.json](../../../research/experiments/pure-triple-hyperforests-20261107/output/audit.json)
+
+- [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) (certificate): 全209連結型、7562646安全状態比較、成分xor全スペクトル
+## [research/experiments/pure-triple-hyperforests-20261107/proof.md](../../../research/experiments/pure-triple-hyperforests-20261107/proof.md)
+
+- [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) (proof): 葉辺削除による全型生成完全性、有限核と任意自由点、鋭さ
 ## [research/experiments/pure-triple-maximum-grundy-six-20261107/audit.py](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/audit.py)
 
 - [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (verifier): 全根値のbyte単位一致、全頂点置換、七点証人と具体整数幾何の監査
@@ -9695,6 +9728,15 @@
 ## [research/experiments/pure-triple-maximum-grundy-six-20261107/scan.py](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/scan.py)
 
 - [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (solver): 初手後の小核表による全1048576族の根値計算
+## [research/experiments/pure-triple-six-edge-witnesses-20261108/output/search.json](../../../research/experiments/pure-triple-six-edge-witnesses-20261108/output/search.json)
+
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (certificate): 831入力の探索範囲・度数と九点達成例の全初手値
+## [research/experiments/pure-triple-six-edge-witnesses-20261108/proof.md](../../../research/experiments/pure-triple-six-edge-witnesses-20261108/proof.md)
+
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (proof): 九点六辺g6の具体例、自由点付きg7、五辺以下の排除
+## [research/experiments/pure-triple-six-edge-witnesses-20261108/search.py](../../../research/experiments/pure-triple-six-edge-witnesses-20261108/search.py)
+
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (verifier): 五辺高Grundy核への一辺追加探索とC++/Python根値照合
 ## [research/experiments/q57-frontier-followup-20261005/general-energy-proof.md](../../../research/experiments/q57-frontier-followup-20261005/general-energy-proof.md)
 
 - [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (proof): 任意の異なる実数座標に対する鎖分解・重み付け証明と等差数列の等号
@@ -10745,6 +10787,14 @@
 
 - [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (log): 特殊木族の再帰発見から全長周期証明と整数幾何実現へ至る経緯
 - [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (log): 木の三点制約族の抽象ゲームを標準幾何ルールへ移すための拡張
+## [research/log/2026-11-08-common-pivot-rank-boundary.md](../../../research/log/2026-11-08-common-pivot-rank-boundary.md)
+
+- [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (log): 小型観測からrank境界の反例と全称閉形式へ進んだ経緯
+## [research/log/2026-11-08-grundy-mobility-gap-and-hyperforests.md](../../../research/log/2026-11-08-grundy-mobility-gap-and-hyperforests.md)
+
+- [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) (log): 森の完全分類と合法点数上界を調べた記録
+- [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (log): 五点完全表から点数無制限の定理へ進めた経緯
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (log): 辺数最小と合法点数最小を区別した研究記録
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
