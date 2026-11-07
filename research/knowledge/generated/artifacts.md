@@ -9671,6 +9671,21 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
+## [research/experiments/path-recurrence-periodic-forcing-20261108/README.md](../../../research/experiments/path-recurrence-periodic-forcing-20261108/README.md)
+
+- [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (source): 再帰の導出・方法・2 roundの結果・候補補題と限界
+## [research/experiments/path-recurrence-periodic-forcing-20261108/output/probe.json](../../../research/experiments/path-recurrence-periodic-forcing-20261108/output/probe.json)
+
+- [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (data): round1全50配置のonset34・最小末尾周期・最大Grundy。全件が最小周期ちょうど34
+## [research/experiments/path-recurrence-periodic-forcing-20261108/output/stress.json](../../../research/experiments/path-recurrence-periodic-forcing-20261108/output/stress.json)
+
+- [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (data): round2全100配置。全件が最小周期ちょうど34・例外なし・最大Grundy27
+## [research/experiments/path-recurrence-periodic-forcing-20261108/probe.py](../../../research/experiments/path-recurrence-periodic-forcing-20261108/probe.py)
+
+- [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (solver): round1。arbitrary/structured各25配置をM=2000で解き最終周期を分類
+## [research/experiments/path-recurrence-periodic-forcing-20261108/probe_stress.py](../../../research/experiments/path-recurrence-periodic-forcing-20261108/probe_stress.py)
+
+- [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (solver): round2。強制値0..255/0..1023・大きな選択肢集合・より多くの子をM=4000で攻撃
 ## [research/experiments/path-run-coefficients-20261103/proof.md](../../../research/experiments/path-run-coefficients-20261103/proof.md)
 
 - [K0657](../items/K0657-path-run-terminal-coefficients.md) (proof): 端点削除と内部削除区間の正長分割による全称二項和・端係数の証明

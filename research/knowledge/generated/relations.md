@@ -3644,6 +3644,7 @@
 - → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明
 - ← depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 主計算は初手後の五点rank3核表を参照。独立C++ではこの表を使わない
 - ← depends_on [K0697](../items/K0697-core-path-tail-shift-structure.md): 裸の道Grundy pと五点以下513型の認証済みprefix、有限窓認証の枠組み
+- ← depends_on [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md): 固定核＋長の正確な再帰と有限窓定理。本実験はその再帰の非自己項B(L)を抽象的に直接与える
 
 ## [K0683](../items/K0683-rank-three-residual-geometric-universality.md) rank3以下の全残余clutterは整数共円残局に普遍実現でき、rank4では5点2辺の最小障害がある
 
@@ -3667,6 +3668,7 @@
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全rank3核と長道は有限整数点盤の残局として実現できる
 - ← supports [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明
 - ← supports [K0697](../items/K0697-core-path-tail-shift-structure.md): 末尾が全て周期34であることを構造面から支持するが、核が道をシフトするだけではないことを示す
+- ← supports [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md): 帰納ステップの候補補題（Bが最終34周期なら解も最終34周期）に対する有限証拠。証明ではない
 
 ## [K0685](../items/K0685-n11-chain-audit-wall.md) 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 
@@ -3754,3 +3756,8 @@
 
 - → depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 裸の道Grundy pと五点以下513型の認証済みprefix、有限窓認証の枠組み
 - → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 末尾が全て周期34であることを構造面から支持するが、核が道をシフトするだけではないことを示す
+
+## [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) 道自己畳み込み再帰は最終34周期な任意の強制を周期34へ吸収する（150配置の有限観測・K0684帰納ステップの候補補題）
+
+- → depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 固定核＋長の正確な再帰と有限窓定理。本実験はその再帰の非自己項B(L)を抽象的に直接与える
+- → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 帰納ステップの候補補題（Bが最終34周期なら解も最終34周期）に対する有限証拠。証明ではない

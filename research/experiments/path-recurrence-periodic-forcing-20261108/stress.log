@@ -1,0 +1,32 @@
+arbitrary255 : 40 / 40 eventually 34-periodic onset max 1444 elapsed 127.4
+structured255 : 40 / 40 eventually 34-periodic onset max 1610 elapsed 255.0
+arbitrary1023 : 20 / 20 eventually 34-periodic onset max 1936 elapsed 319.7
+{
+  "recurrence": "g(L)=mex(B(L) u {g(L-2)} u {g(i)^p[L-3-i]:i=0..L-3})",
+  "bare_path_period": 34,
+  "horizon": 4000,
+  "tail_window": 900,
+  "seed": 31415926,
+  "eventually_34_by_family": {
+    "arbitrary255": 40,
+    "structured255": 40,
+    "arbitrary1023": 20
+  },
+  "configs_by_family": {
+    "arbitrary255": 40,
+    "structured255": 40,
+    "arbitrary1023": 20
+  },
+  "min_tail_period_histogram": {
+    "arbitrary1023:34": 20,
+    "arbitrary255:34": 40,
+    "structured255:34": 40
+  },
+  "onset34_max_by_family": {
+    "arbitrary255": 1444,
+    "structured255": 1610,
+    "arbitrary1023": 1936
+  },
+  "max_grundy_overall": 27
+}
+TOTAL elapsed 319.7 s

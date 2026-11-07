@@ -1,0 +1,26 @@
+BASELINE empty forcing: {'onset34': 53, 'min_tail_period': 34, 'max_grundy': 9, 'eventually_34_periodic': True} equals p[L+1]: False
+arbitrary : 25 / 25 eventually 34-periodic elapsed 20.0
+structured : 25 / 25 eventually 34-periodic elapsed 39.9
+{
+  "recurrence": "g(L)=mex(B(L) u {g(L-2)} u {g(i)^p[L-3-i]:i=0..L-3})",
+  "bare_path_period": 34,
+  "horizon": 2000,
+  "tail_window": 600,
+  "baseline_empty_forcing": {
+    "onset34": 53,
+    "min_tail_period": 34,
+    "max_grundy": 9,
+    "eventually_34_periodic": true
+  },
+  "baseline_equals_shifted_path": false,
+  "configs_per_family": 25,
+  "eventually_34_by_family": {
+    "arbitrary": 25,
+    "structured": 25
+  },
+  "min_tail_period_histogram": {
+    "arbitrary:34": 25,
+    "structured:34": 25
+  }
+}
+TOTAL elapsed 39.9 s

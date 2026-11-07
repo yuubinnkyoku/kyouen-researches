@@ -681,3 +681,4 @@
 | [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) | Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) | 二点辺付きrank三共通pivot族のmisère補助値は無界と予想する | proposition | conjectured | grundy, residual-games, variants |
 | [K0697](../items/K0697-core-path-tail-shift-structure.md) | 核＋道の周期34末尾は裸の道の普遍シフトではない（六点純三点辺1825種・五点以下134種の末尾分類） | computation | computed | grundy, residual-games, search-methods, variants |
+| [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) | 道自己畳み込み再帰は最終34周期な任意の強制を周期34へ吸収する（150配置の有限観測・K0684帰納ステップの候補補題） | computation | computed | grundy, residual-games, search-methods |
