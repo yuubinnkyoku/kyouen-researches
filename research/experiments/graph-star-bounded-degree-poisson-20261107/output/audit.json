@@ -1,0 +1,169 @@
+{
+  "audit": "PASS",
+  "all_labeled_graphs_min_degree_two_n3_through_n6": 12332,
+  "exact_rational_distribution_checks": 24664,
+  "exact_edge_corrected_distribution_checks": 12332,
+  "connected_deletion_cost_checks": 342145,
+  "direct_hyperedge_checks": 22,
+  "direct_hyperedge_states": 363136,
+  "independent_integer_cycle_transfer_checks": 30,
+  "largest_exact_deletion_tv": 0.033002252009480405,
+  "largest_exact_edge_corrected_bernoulli_tv": 0.01538835435948447,
+  "diagnostics_only_floating_point_tables": [
+    {
+      "family": "cycle",
+      "n": 25,
+      "r": 5,
+      "q": 8,
+      "poisson_mean": 0.9615384615384616,
+      "shortest_probability": 0.3281917706622018,
+      "limit_shortest": 0.36787944117144233,
+      "poisson_tv_interval": [
+        0.058163626454366756,
+        0.05816362645436687
+      ],
+      "theorem_tv_bound": 4.080000000000001,
+      "edge_corrected_poisson_mean": 1.15995115995116,
+      "edge_corrected_tv_interval": [
+        0.044873984301353365,
+        0.044873984301353476
+      ],
+      "edge_corrected_theorem_bound": 4.000000000000001
+    },
+    {
+      "family": "cycle",
+      "n": 100,
+      "r": 10,
+      "q": 13,
+      "poisson_mean": 0.9900990099009901,
+      "shortest_probability": 0.33917467042515376,
+      "limit_shortest": 0.36787944117144233,
+      "poisson_tv_interval": [
+        0.03237131391350739,
+        0.03237131391350744
+      ],
+      "theorem_tv_bound": 0.6866666666666666,
+      "edge_corrected_poisson_mean": 1.08999910980109,
+      "edge_corrected_tv_interval": [
+        0.009574009809221753,
+        0.009574009809221753
+      ],
+      "edge_corrected_theorem_bound": 0.4666666666666667
+    },
+    {
+      "family": "cycle",
+      "n": 400,
+      "r": 20,
+      "q": 23,
+      "poisson_mean": 0.9975062344139651,
+      "shortest_probability": 0.3514246185956643,
+      "limit_shortest": 0.36787944117144233,
+      "poisson_tv_interval": [
+        0.017373372514372615,
+        0.01737337251437406
+      ],
+      "theorem_tv_bound": 0.255,
+      "edge_corrected_poisson_mean": 1.0474999851951174,
+      "edge_corrected_tv_interval": [
+        0.002129436600438084,
+        0.0021294366004394718
+      ],
+      "edge_corrected_theorem_bound": 0.1
+    },
+    {
+      "family": "cycle",
+      "n": 1600,
+      "r": 40,
+      "q": 43,
+      "poisson_mean": 0.9993753903810119,
+      "shortest_probability": 0.3591552708397537,
+      "limit_shortest": 0.36787944117144233,
+      "poisson_tv_interval": [
+        0.008954023145932449,
+        0.008954023145938832
+      ],
+      "theorem_tv_bound": 0.1123611111111111,
+      "edge_corrected_poisson_mean": 1.0243749997621152,
+      "edge_corrected_tv_interval": [
+        0.0004967251926075209,
+        0.0004967251926139047
+      ],
+      "edge_corrected_theorem_bound": 0.02361111111111111
+    },
+    {
+      "family": "cycle",
+      "n": 6400,
+      "r": 80,
+      "q": 83,
+      "poisson_mean": 0.9998437744102484,
+      "shortest_probability": 0.36339755997812767,
+      "limit_shortest": 0.36787944117144233,
+      "poisson_tv_interval": [
+        0.004539357865533357,
+        0.004539357865533357
+      ],
+      "theorem_tv_bound": 0.05294407894736842,
+      "edge_corrected_poisson_mean": 1.0123437499962336,
+      "edge_corrected_tv_interval": [
+        0.00011960435517485103,
+        0.00011960435517485103
+      ],
+      "edge_corrected_theorem_bound": 0.005756578947368422
+    },
+    {
+      "family": "disjoint_K4",
+      "n": 64,
+      "r": 4,
+      "q": 7,
+      "shortest_probability": 0.342116010853145,
+      "limit_shortest": 0.36787944117144233,
+      "odd_excess_probability": 0.09303674262809287,
+      "edge_corrected_odd_probability": 0.08540960814010731,
+      "center_free_probability_upper_bound_log10": -57.79775916748439
+    },
+    {
+      "family": "disjoint_K4",
+      "n": 512,
+      "r": 8,
+      "q": 11,
+      "shortest_probability": 0.3601245641135077,
+      "limit_shortest": 0.36787944117144233,
+      "odd_excess_probability": 0.024569599125185314,
+      "edge_corrected_odd_probability": 0.022895984533952966,
+      "center_free_probability_upper_bound_log10": -693.5731100098126
+    },
+    {
+      "family": "disjoint_K4",
+      "n": 4096,
+      "r": 16,
+      "q": 19,
+      "shortest_probability": 0.36582156959223394,
+      "limit_shortest": 0.36787944117144233,
+      "odd_excess_probability": 0.006060531405387981,
+      "edge_corrected_odd_probability": 0.005825170920248684,
+      "center_free_probability_upper_bound_log10": -7398.1131734380015
+    },
+    {
+      "family": "disjoint_K4",
+      "n": 32768,
+      "r": 32,
+      "q": 35,
+      "shortest_probability": 0.3673522255712848,
+      "limit_shortest": 0.36787944117144233,
+      "odd_excess_probability": 0.0014929454782122839,
+      "edge_corrected_odd_probability": 0.0014627000332019715,
+      "center_free_probability_upper_bound_log10": -73981.13173438002
+    },
+    {
+      "family": "disjoint_K4",
+      "n": 262144,
+      "r": 64,
+      "q": 67,
+      "shortest_probability": 0.36774614924733756,
+      "limit_shortest": 0.36787944117144233,
+      "odd_excess_probability": 0.0003698831076845166,
+      "edge_corrected_odd_probability": 0.00036607685944425953,
+      "center_free_probability_upper_bound_log10": -710218.8646500481
+    }
+  ]
+}

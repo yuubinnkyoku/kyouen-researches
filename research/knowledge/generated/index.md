@@ -662,3 +662,4 @@
 | [K0676](../items/K0676-n11-region-s4-first-win.md) | 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子） | computation | computed | square-outcomes, certificates, verification |
 | [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) | 一辺細分星の終局多項式は全qの奇数次数で接触二重根をもたず、実根数は常に0個か2個 | proposition | proved | variants, statistics, geometry, strategy-length |
 | [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) | 一辺細分星の奇数次数切替閾値 κ(r) の三項漸近則 | proposition | proved | variants, statistics, geometry, strategy-length |
+| [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) | 有界次数グラフ星型の終局長は単点・隣接対の複合ポアソンで近似でき、正則族の臨界尺度は普遍的 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |

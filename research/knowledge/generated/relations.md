@@ -3038,12 +3038,14 @@
 - ← depends_on [K0664](../items/K0664-path-terminal-real-rootedness.md): 中心付き極大配置と支配的削除集合の重み付き全単射を使用
 - ← depends_on [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md): 中心付き極大配置の許容削除集合と重みの公式を使用
 - ← depends_on [K0677](../items/K0677-subdivided-star-no-contact-double-root.md): グラフ星型共円構成。本項はその q パラメータ族の実根構造
+- ← depends_on [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md): グラフ星型整数共円実現と極大配置の削除集合・重み公式
 
 ## [K0603](../items/K0603-graph-star-sparse-cycles.md) グラフ星型共円ゲームの疎グラフ終局分布とサイクルの厳密漸化式
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型の整数幾何実現・極小横断集合の母関数・最短極大個数を利用
 - ← generalizes [K0605](../items/K0605-domination-bipartition-nonconcentration.md): 最大次数Δの非集中境界を全域森二色分割で強化
 - ← generalizes [K0608](../items/K0608-cycle-graph-star-terminal-gaussian.md): サイクルの極大配置総数の漸化式を石数別母関数に強化
+- ← depends_on [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md): 閾値の低q側に用いる既存の独立集合による非集中評価を証明内で再掲
 
 ## [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) 完全二部グラフ型共円ゲームの終局多項式と最短極大配置集中の鋭い対数境界
 
@@ -3585,3 +3587,8 @@
 
 - → depends_on [K0677](../items/K0677-subdivided-star-no-contact-double-root.md): 単一切替定理、κ(r) の定義と Θ(r log r) 評価
 - → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 一辺細分星の終局長差多項式 T_{k,r} の定義
+
+## [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) 有界次数グラフ星型の終局長は単点・隣接対の複合ポアソンで近似でき、正則族の臨界尺度は普遍的
+
+- → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円実現と極大配置の削除集合・重み公式
+- → depends_on [K0603](../items/K0603-graph-star-sparse-cycles.md): 閾値の低q側に用いる既存の独立集合による非集中評価を証明内で再掲

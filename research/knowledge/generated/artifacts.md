@@ -2672,6 +2672,15 @@
 ## [research/experiments/graph-star-bipartite-threshold-20261101/verify.py](../../../research/experiments/graph-star-bipartite-threshold-20261101/verify.py)
 
 - [K0604](../items/K0604-bipartite-graph-star-concentration-threshold.md) (verifier): 禁止辺からの全局面直接列挙6条件、頂点集合独立列挙100条件、厳密有理数誤差照合315条件
+## [research/experiments/graph-star-bounded-degree-poisson-20261107/output/audit.json](../../../research/experiments/graph-star-bounded-degree-poisson-20261107/output/audit.json)
+
+- [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) (data): 厳密有限監査の集計と、大きいサイクル・K4直和の非厳密な診断表
+## [research/experiments/graph-star-bounded-degree-poisson-20261107/proof.md](../../../research/experiments/graph-star-bounded-degree-poisson-20261107/proof.md)
+
+- [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) (proof): 成分除去単射・連結成分重み評価・独立候補への条件付けによる全称証明
+## [research/experiments/graph-star-bounded-degree-poisson-20261107/verify.py](../../../research/experiments/graph-star-bounded-degree-poisson-20261107/verify.py)
+
+- [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) (verifier): 全12332グラフの削除集合直接列挙、単点と隣接対の有理数監査、禁止超辺独立列挙
 ## [research/experiments/graph-star-circle-20261101/proof.md](../../../research/experiments/graph-star-circle-20261101/proof.md)
 
 - [K0601](../items/K0601-graph-star-circle-universality.md) (proof): 任意単純グラフの有理円構成・整数化、母関数の全称証明、完全グラフ族の鋭い極値
@@ -10565,6 +10574,9 @@
 ## [research/log/2026-11-06-n11-repair-focus-neighborhood.md](../../../research/log/2026-11-06-n11-repair-focus-neighborhood.md)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (log): 修復列挙の経緯
+## [research/log/2026-11-07-bounded-degree-terminal-poisson.md](../../../research/log/2026-11-07-bounded-degree-terminal-poisson.md)
+
+- [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) (log): 既知の特殊族からグラフ形状によらない臨界則と隣接対補正へ至る経緯
 ## [research/log/2026-11-07-n11-region-s4-first-win.md](../../../research/log/2026-11-07-n11-region-s4-first-win.md)
 
 - [K0676](../items/K0676-n11-region-s4-first-win.md) (log): 領域検証の経緯
