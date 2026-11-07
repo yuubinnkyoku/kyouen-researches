@@ -72,10 +72,16 @@ def main() -> int:
         clauses.append([-a, s, b])
         clauses.append([a, -s])
         clauses.append([a, -b])
+    trapezoid = 0
     for q in edges:
-        lits = [-aux - t for t in q if t != 0]
-        if lits:
-            clauses.append(lits)
+        pts = [t for t in q if t != 0]
+        pairs = [t if t <= h else p - t for t in pts]
+        if len(set(pairs)) < len(pairs):
+            # contains a complete pair: implied by the exactly-one-BOTH constraint
+            trapezoid += 1
+            continue
+        clauses.append([-aux - t for t in pts])
+    print(f"trapezoid clauses dropped: {trapezoid}", flush=True)
     nv = aux + p - 1
     print(f"vars={nv} clauses={len(clauses)}", flush=True)
 
