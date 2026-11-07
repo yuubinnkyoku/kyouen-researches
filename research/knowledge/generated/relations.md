@@ -3376,6 +3376,7 @@
 - ← depends_on [K0666](../items/K0666-graph-star-terminal-root-gap-obstruction.md): 中心付き終局長母関数の非負係数と正の定数項
 - ← depends_on [K0667](../items/K0667-componentwise-terminal-real-rootedness.md): 許容核と重みの連結成分別乗法性
 - ← depends_on [K0677](../items/K0677-subdivided-star-no-contact-double-root.md): 一辺細分星 G_k の全終局長差多項式 T_{k,r} の定義と係数公式
+- ← depends_on [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md): 一辺細分星の終局長差多項式 T_{k,r} の定義
 
 ## [K0650](../items/K0650-n11-central49-2094-conditional-three-swaps.md) 11×11中央49の46証人条件付き七石義務を三証人交換2回で2,154類から2,094類に削減
 
@@ -3578,3 +3579,9 @@
 
 - → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 一辺細分星 G_k の全終局長差多項式 T_{k,r} の定義と係数公式
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成。本項はその q パラメータ族の実根構造
+- ← depends_on [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md): 単一切替定理、κ(r) の定義と Θ(r log r) 評価
+
+## [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) 一辺細分星の奇数次数切替閾値は κ(r)=2r log r+r log log r+(1+log 2)r+o(r)
+
+- → depends_on [K0677](../items/K0677-subdivided-star-no-contact-double-root.md): 単一切替定理、κ(r) の定義と Θ(r log r) 評価
+- → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 一辺細分星の終局長差多項式 T_{k,r} の定義
