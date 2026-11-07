@@ -1,6 +1,6 @@
 ---
 id: K0694
-title: 共通pivotのmisère補助値は0/1制限ゲームで変換でき、通常上界3の族にも値7が生じる
+title: 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる
 kind: proposition
 status: proved
 topics: [grundy, residual-games, geometry, variants]
@@ -75,6 +75,7 @@ K0692の通常上界3はhに移らない。
 リンクグラフのh=0/1制限ゲーム値tは4/5で、別C++全占有subsetとも一致。
 K0683により37点・38点の整数点盤へ構成的に移せるが、
 この二例には別の具体座標全数監査は付けていない。
+後続のK0696の有限証拠では、同じrank三共通pivot条件でh8/h9も独立検査済み。
 
 全41662根・3284481安全状態で、リンクグラフのh/t計算と別C++生subset計算が一致。
 rank三以下の共通pivot族で通常／misère交換則が破れる最少合法点数は七。

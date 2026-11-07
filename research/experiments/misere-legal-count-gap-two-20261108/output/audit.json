@@ -1,0 +1,284 @@
+{
+  "audit": "PASS",
+  "rank_free_bases": [
+    {
+      "legal_points": 0,
+      "clutters": 1,
+      "normal_histogram": {
+        "0": 1
+      },
+      "misere_histogram": {
+        "1": 1
+      }
+    },
+    {
+      "legal_points": 1,
+      "clutters": 1,
+      "normal_histogram": {
+        "1": 1
+      },
+      "misere_histogram": {
+        "0": 1
+      }
+    },
+    {
+      "legal_points": 2,
+      "clutters": 2,
+      "normal_histogram": {
+        "0": 1,
+        "1": 1
+      },
+      "misere_histogram": {
+        "0": 1,
+        "1": 1
+      }
+    },
+    {
+      "legal_points": 3,
+      "clutters": 9,
+      "normal_histogram": {
+        "0": 4,
+        "1": 2,
+        "2": 3
+      },
+      "misere_histogram": {
+        "0": 2,
+        "1": 4,
+        "2": 3
+      }
+    },
+    {
+      "legal_points": 4,
+      "clutters": 114,
+      "normal_histogram": {
+        "0": 46,
+        "1": 22,
+        "2": 22,
+        "3": 24
+      },
+      "misere_histogram": {
+        "0": 22,
+        "1": 46,
+        "2": 22,
+        "3": 24
+      }
+    },
+    {
+      "legal_points": 5,
+      "clutters": 6894,
+      "normal_histogram": {
+        "0": 1814,
+        "1": 2850,
+        "2": 390,
+        "3": 1840
+      },
+      "misere_histogram": {
+        "0": 2850,
+        "1": 1814,
+        "2": 390,
+        "3": 1840
+      }
+    }
+  ],
+  "cases_compared": 7037,
+  "cpp_safe_states": 117656,
+  "universal_theorem": "legal_points>=5 implies both g and misere_aux h <= legal_points-2",
+  "arbitrary_rank_minimum_points_h_zero_through_seven": [
+    1,
+    0,
+    3,
+    4,
+    6,
+    7,
+    8,
+    9
+  ],
+  "pure_triple_minimum_points_h_zero_through_seven": [
+    1,
+    0,
+    6,
+    7,
+    6,
+    7,
+    8,
+    9
+  ],
+  "witnesses": {
+    "arbitrary_rank": [
+      {
+        "n": 1,
+        "edges": [],
+        "normal": 1,
+        "misere_aux": 0
+      },
+      {
+        "n": 0,
+        "edges": [],
+        "normal": 0,
+        "misere_aux": 1
+      },
+      {
+        "n": 3,
+        "edges": [
+          3,
+          6
+        ],
+        "normal": 2,
+        "misere_aux": 2
+      },
+      {
+        "n": 4,
+        "edges": [
+          3,
+          6
+        ],
+        "normal": 3,
+        "misere_aux": 3
+      },
+      {
+        "n": 6,
+        "edges": [
+          35,
+          37,
+          25,
+          41,
+          49,
+          14,
+          22
+        ],
+        "normal": 4,
+        "misere_aux": 4
+      },
+      {
+        "n": 7,
+        "edges": [
+          35,
+          37,
+          25,
+          41,
+          49,
+          14,
+          22
+        ],
+        "normal": 5,
+        "misere_aux": 5
+      },
+      {
+        "n": 8,
+        "edges": [
+          22,
+          38,
+          41,
+          49,
+          88,
+          146
+        ],
+        "normal": 6,
+        "misere_aux": 6
+      },
+      {
+        "n": 9,
+        "edges": [
+          22,
+          38,
+          41,
+          49,
+          88,
+          146
+        ],
+        "normal": 7,
+        "misere_aux": 7
+      }
+    ],
+    "pure_triple": [
+      {
+        "n": 1,
+        "edges": [],
+        "normal": 1,
+        "misere_aux": 0
+      },
+      {
+        "n": 0,
+        "edges": [],
+        "normal": 0,
+        "misere_aux": 1
+      },
+      {
+        "n": 6,
+        "edges": [
+          19,
+          21,
+          38,
+          56
+        ],
+        "normal": 2,
+        "misere_aux": 2
+      },
+      {
+        "n": 7,
+        "edges": [
+          19,
+          21,
+          38,
+          56
+        ],
+        "normal": 3,
+        "misere_aux": 3
+      },
+      {
+        "n": 6,
+        "edges": [
+          35,
+          37,
+          25,
+          41,
+          49,
+          14,
+          22
+        ],
+        "normal": 4,
+        "misere_aux": 4
+      },
+      {
+        "n": 7,
+        "edges": [
+          35,
+          37,
+          25,
+          41,
+          49,
+          14,
+          22
+        ],
+        "normal": 5,
+        "misere_aux": 5
+      },
+      {
+        "n": 8,
+        "edges": [
+          22,
+          38,
+          41,
+          49,
+          88,
+          146
+        ],
+        "normal": 6,
+        "misere_aux": 6
+      },
+      {
+        "n": 9,
+        "edges": [
+          22,
+          38,
+          41,
+          49,
+          88,
+          146
+        ],
+        "normal": 7,
+        "misere_aux": 7
+      }
+    ]
+  }
+}
