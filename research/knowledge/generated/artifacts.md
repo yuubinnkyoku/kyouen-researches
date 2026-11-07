@@ -9549,6 +9549,17 @@
 ## [research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py](../../../research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (solver): 実装（edges厳密列挙＋d降順CNF＋cadical）
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/README.md](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/README.md)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 2003..2477への保存証人拡張の報告と再現手順
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizの独立検証（covered/checked・共円0件）の生出力
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (data): generic 4×4 Leibnizによる全62証人の独立検証出力（共円0件）
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json)
+
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 2003..2477の64素数のうち62の等号証人（2207, 2351は予算内未発見）
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2003..2477の64素数のうち62の等号証人。2207, 2351は予算内未発見
 ## [research/experiments/path-run-coefficients-20261103/proof.md](../../../research/experiments/path-run-coefficients-20261103/proof.md)
 
 - [K0657](../items/K0657-path-run-terminal-coefficients.md) (proof): 端点削除と内部削除区間の正長分割による全称二項和・端係数の証明

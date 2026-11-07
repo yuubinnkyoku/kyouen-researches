@@ -31,8 +31,14 @@ artifacts:
 - path: research/experiments/parabola-equality-extension-20261016/output/witnesses_521_2000.json
   role: certificate
   note: 521..1999の全206素数の等号証人
+- path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json
+  role: certificate
+  note: 2003..2477の64素数のうち62の等号証人。2207, 2351は予算内未発見
+- path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt
+  role: data
+  note: generic 4×4 Leibnizによる全62証人の独立検証出力（共円0件）
 scope: 奇素数 p における等号 A(p)=(p+3)/2 の有限検証範囲と d=h 例外の記述。
-evidence: finite computation; d=h sufficient for 5..443 and 2003..2143 except 1087,1091,1367,1523,1847,1861,2027; no counterexample to equality found through 2143; all-prime proof unknown
+evidence: finite computation; no counterexample to equality found through 2477; 5..2203 は穴なし、2213..2477 も 2207 と 2351 を除き証人あり; all-prime proof unknown
 ---
 
 # 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
@@ -59,3 +65,13 @@ Scope clarification: K0101 is not resolved by the `d=h` construction alone; `d=h
 Next steps: characterize the `d=h` exception pattern; extend finite verification beyond 2143; seek an all-prime proof. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+## 2026-11-07 有限証人の保存拡張（2003..2477）
+
+`research/experiments/parabola-equality-extension-2143-2500-20261107` で 2003..2477 の奇素数 64 個を走査し、
+62 個で等号証人を構成・保存した（`d=h-1` は 2027, 2399, 2477、他は `d=h`）。証人は探索と独立な
+generic 4×4 Leibniz 検証器で全件監査済み（共円 0 件）。これで **5..2203 の全奇素数**と **2213..2477** に証人が存在する。
+2207（`d=h..h-120` の 121 個を試行、120 UNSAT・1 タイムアウト）と 2351（`d=h..h-5` の大半がタイムアウト）は
+予算内で未発見であり、等号不成立の証拠ではない。2017 の記録が挙げた 2003..2143 の証人も本実験で再構成・保存した。
+
+Scope clarification: 有限範囲の保存証人が 2203 まで延びただけで、全奇素数での等号は依然未解決。
+`d=h` の例外分布（h-1 が多いが 1861 は h-66）の特徴づけも未解決。

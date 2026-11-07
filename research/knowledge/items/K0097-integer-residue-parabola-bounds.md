@@ -1,6 +1,6 @@
 ---
 id: K0097
-title: 整数剰余放物線の安全最大は高々(p+3)/2、5..2000では等号
+title: 整数剰余放物線の安全最大は高々(p+3)/2、5..2203では等号
 kind: proposition
 status: proved
 topics:
@@ -44,9 +44,18 @@ artifacts:
 - path: research/experiments/parabola-equality-extension-20261016/scripts/probe_parabola.py
   role: solver
   note: 実装（edges厳密列挙＋d降順CNF＋cadical）
+- path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json
+  role: certificate
+  note: 2003..2477の64素数のうち62の等号証人（2207, 2351は予算内未発見）
+- path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt
+  role: data
+  note: generic 4×4 Leibnizの独立検証（covered/checked・共円0件）の生出力
+- path: research/experiments/parabola-equality-extension-2143-2500-20261107/README.md
+  role: source
+  note: 2003..2477への保存証人拡張の報告と再現手順
 ---
 
-# 整数剰余放物線の安全最大は高々(p+3)/2、5..2000では等号
+# 整数剰余放物線の安全最大は高々(p+3)/2、5..2203では等号
 
 Q_p={(t,t² modp)}について奇素数pではA(p)≤(p+3)/2。対{t,p−t}を二組丸ごと取ると同高さ二弦の等脚台形になり共円、完全対は高々一組なので上界が従う。
 
@@ -62,5 +71,14 @@ Q_p={(t,t² modp)}について奇素数pではA(p)≤(p+3)/2。対{t,p−t}を�
 2,196,275,194,090四点組のうち1,385,691,858候補に直接整数行列式を適用して共円0件。p=1009の監査値
 (covered 2699163390, checked 2711706)は既存proof.mdの記録と一致した。
 
-したがって**5..2000の全奇素数で等号が成立する**（509,1009を含む）。この連続有限範囲を超えた
-全奇素数での達成は結論に含めない（K0101）。全盤K_pではなく制限集合Q_p内の値。
+したがって**5..2000の全奇素数で等号が成立する**（509,1009を含む）。
+
+## 2026-11-07 有限範囲の拡張（5..2203）
+
+`research/experiments/parabola-equality-extension-2143-2500-20261107` で 2003..2477 の奇素数 64 個を
+再走査し、62 個で等号証人を構成・保存した（2027, 2399, 2477 は d=h-1、他の 59 は d=h）。
+2207（d=h..h-120 の 121 個を試行）と 2351（d=h..h-5 の大半がタイムアウト）は予算内で未発見であり、
+等号不成立の証拠ではない。generic 4×4 Leibniz の独立検証器で全 62 証人を検査し共円 0 件。
+既存の 5..2000 と合わせ、**5..2203 の全奇素数で等号が成立する**（2207 が最初の未発見素数）。
+
+この連続有限範囲を超えた全奇素数での達成は結論に含めない（K0101）。全盤 K_p ではなく制限集合 Q_p 内の値。

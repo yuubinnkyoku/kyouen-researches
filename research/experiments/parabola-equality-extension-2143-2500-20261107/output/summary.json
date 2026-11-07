@@ -1,0 +1,36 @@
+{
+  "probed_window": [
+    2003,
+    2477
+  ],
+  "odd_primes_in_window": 64,
+  "witnesses": 62,
+  "missing": [
+    2207,
+    2351
+  ],
+  "d_exceptions": [
+    {
+      "p": 2027,
+      "d": 1012,
+      "h": 1013,
+      "offset": 1
+    },
+    {
+      "p": 2399,
+      "d": 1198,
+      "h": 1199,
+      "offset": 1
+    },
+    {
+      "p": 2477,
+      "d": 1237,
+      "h": 1238,
+      "offset": 1
+    }
+  ],
+  "prior_contiguous_ceiling": 2000,
+  "contiguous_ceiling_with_this_run": 2203,
+  "all_witnesses_independently_verified": true,
+  "note": "missing primes are search failures within the given SAT budget, not evidence of non-attainment"
+}
