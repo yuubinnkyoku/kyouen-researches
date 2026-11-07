@@ -663,3 +663,5 @@
 | [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) | 一辺細分星の終局多項式は全qの奇数次数で接触二重根をもたず、実根数は常に0個か2個 | proposition | proved | variants, statistics, geometry, strategy-length |
 | [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) | 一辺細分星の奇数次数切替閾値 κ(r) の三項漸近則 | proposition | proved | variants, statistics, geometry, strategy-length |
 | [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) | 有界次数グラフ星型の終局長は単点・隣接対の複合ポアソンで近似でき、正則族の臨界尺度は普遍的 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
+| [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) | 三葉三点制約付き箒木のGrundyは311以降34周期となり、効果は固定半径近傍と偶奇だけでは決まらない | proposition | proved | residual-games, grundy, geometry, variants |
+| [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) | 任意グラフと独立三点辺1本はn+2e+1個の整数点で共円残局として全状態実現できる | proposition | proved | geometry, residual-games, grundy, variants |

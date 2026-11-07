@@ -2299,6 +2299,7 @@
 ## [research/experiments/game-structure/scripts/verify_graph_realization_20261019.py](../../../research/experiments/game-structure/scripts/verify_graph_realization_20261019.py)
 
 - [K0438](../items/K0438-finite-point-kayles-pspace-complete.md) (verifier): 有理円逐次構成による別証明の有限監査
+- [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (source): 再利用する既存有理円・有理点・構成時det3ヘルパー
 ## [research/experiments/game-structure/scripts/verify_mobility_20261016.py](../../../research/experiments/game-structure/scripts/verify_mobility_20261016.py)
 
 - [K0456](../items/K0456-independent-row-win-loss-mobility-distribution.md) (verifier): 物理的ビット集合の直接列挙と多項式畳み込みの独立比較
@@ -10371,6 +10372,25 @@
 ## [research/experiments/tree-terminal-real-roots-counterexample-20261103/verify.py](../../../research/experiments/tree-terminal-real-roots-counterexample-20261103/verify.py)
 
 - [K0665](../items/K0665-star-terminal-real-rootedness-counterexample.md) (verifier): d=2..10、r=1..7の63条件の独立完全列挙
+## [research/experiments/tree-triple-broom-periodicity-20261107/geometry.md](../../../research/experiments/tree-triple-broom-periodicity-20261107/geometry.md)
+
+- [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (proof): 全グラフ・独立三点集合についての有限除外構成と多項式時間・ビット長証明
+## [research/experiments/tree-triple-broom-periodicity-20261107/output/geometry_audit.json](../../../research/experiments/tree-triple-broom-periodicity-20261107/output/geometry_audit.json)
+
+- [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (certificate): 全52整数盤の座標・占有集合・禁止四点・全安全局面検査集計
+## [research/experiments/tree-triple-broom-periodicity-20261107/output/period_audit.json](../../../research/experiments/tree-triple-broom-periodicity-20261107/output/period_audit.json)
+
+- [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (certificate): 必要な全prefix、311..657の比較、最小周期・開始位置の証拠と全34剰余表
+## [research/experiments/tree-triple-broom-periodicity-20261107/proof.md](../../../research/experiments/tree-triple-broom-periodicity-20261107/proof.md)
+
+- [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md) (proof): 無界箒族の34周期による全長分類と、固定半径・枝長偶奇だけでは効果を判定できない全称系
+- [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (proof): 正確な二列mex再帰、有限窓からの全称周期帰納、34合同類と非局所性の系
+## [research/experiments/tree-triple-broom-periodicity-20261107/verify_geometry.py](../../../research/experiments/tree-triple-broom-periodicity-20261107/verify_geometry.py)
+
+- [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (verifier): 有理構成と別の整数4×4 Leibniz行列式・全安全局面の照合
+## [research/experiments/tree-triple-broom-periodicity-20261107/verify_period.py](../../../research/experiments/tree-triple-broom-periodicity-20261107/verify_period.py)
+
+- [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (verifier): 周期の整数証明書、原始禁止集合の独立subset mex38条件、閉近傍削除19条件
 ## [research/experiments/treewidth-terminal-dp-20261102/proof.md](../../../research/experiments/treewidth-terminal-dp-20261102/proof.md)
 
 - [K0623](../items/K0623-treewidth-terminal-polynomial.md) (proof): 頂点の支配情報3状態と辺導入・合流を用いる木分解上の全称証明
@@ -10586,6 +10606,10 @@
 ## [research/log/2026-11-07-subdivided-star-no-contact-double-root.md](../../../research/log/2026-11-07-subdivided-star-no-contact-double-root.md)
 
 - [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (log): 発見の経緯と検証範囲
+## [research/log/2026-11-07-tree-triple-broom-periodicity.md](../../../research/log/2026-11-07-tree-triple-broom-periodicity.md)
+
+- [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (log): 特殊木族の再帰発見から全長周期証明と整数幾何実現へ至る経緯
+- [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (log): 木の三点制約族の抽象ゲームを標準幾何ルールへ移すための拡張
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

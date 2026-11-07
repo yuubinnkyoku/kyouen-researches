@@ -889,6 +889,8 @@
 - ← depends_on [K0465](../items/K0465-sunflower-residual-grundy-closed-form.md): 標準盤への適用には包含極小の残余禁止集合を正確に構成する
 - ← depends_on [K0482](../items/K0482-tree-grundy-minimum-orders-through-eight.md): 実格子残局では二点残余禁止集合だけの場合に限って木モデルを使用できる
 - ← depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 残余の包含極小禁止集合によるゲーム表現
+- ← depends_on [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 二点グラフに三点辺を加えた全残余禁止族の通常ゲーム
+- ← depends_on [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md): 全包含極小残余禁止集合によるゲームDAGの一致
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1189,6 +1191,7 @@
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md)
 - → depends_on [K0300](../items/K0300-minimal-effective-tree-triple-star.md): 最小接続型K1,3は証明済みで、残るのは大きな木の一般分類
+- → depends_on [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 三葉制約付き箒の全長分類と固定半径・偶奇だけでの判定の不可能性は確定した特殊族
 
 ## [K0194](../items/K0194-cross-clique-triple-redundancy.md) 完全グラフ成分をまたぐ三点制約は冗長か値不変
 
@@ -1708,6 +1711,7 @@
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全極小残余hypergraphによる継続ゲームの表現。Pグラフだけでは足りない
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのmexと分離成分のxor
 - ← generalizes [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 同一全linkの独立双子は混合深さ1の特殊例
+- ← depends_on [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 二点辺だけの三葉を一葉へ圧縮し道のGrundyへ還元
 
 ## [K0337](../items/K0337-odd-uniform-involution-scope.md) 奇数qの鏡映戦略の抽象十分条件と任意禁止族での最小q+1点反例
 
@@ -2268,6 +2272,7 @@
 
 - → depends_on [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md): 任意グラフの円による整数点符号化と多項式ビット長
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余禁止集合の継続ゲームへの対応
+- ← depends_on [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md): 有理円の逐次追加による任意グラフの別構成を三点辺1本へ拡張
 
 ## [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する
 
@@ -3592,3 +3597,16 @@
 
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型整数共円実現と極大配置の削除集合・重み公式
 - → depends_on [K0603](../items/K0603-graph-star-sparse-cycles.md): 閾値の低q側に用いる既存の独立集合による非集中評価を証明内で再掲
+
+## [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) 三葉三点制約付き箒木のGrundyは311以降34周期となり、効果は固定半径近傍と偶奇だけでは決まらない
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 二点グラフに三点辺を加えた全残余禁止族の通常ゲーム
+- → depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 二点辺だけの三葉を一葉へ圧縮し道のGrundyへ還元
+- → depends_on [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md): 全長の抽象木＋三点辺を有限整数点盤の指定安全局面に実現
+- ← depends_on [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md): 三葉制約付き箒の全長分類と固定半径・偶奇だけでの判定の不可能性は確定した特殊族
+
+## [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) 任意グラフと独立三点辺1本はn+2e+1個の整数点で共円残局として全状態実現できる
+
+- → depends_on [K0438](../items/K0438-finite-point-kayles-pspace-complete.md): 有理円の逐次追加による任意グラフの別構成を三点辺1本へ拡張
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全包含極小残余禁止集合によるゲームDAGの一致
+- ← depends_on [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 全長の抽象木＋三点辺を有限整数点盤の指定安全局面に実現
