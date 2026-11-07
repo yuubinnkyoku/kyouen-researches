@@ -1,0 +1,113 @@
+{
+  "status": "BOUNDED_PROBE",
+  "records": [
+    {
+      "sum_colors": [
+        0,
+        0
+      ],
+      "sum_values": [
+        0,
+        1,
+        0
+      ],
+      "sum_restricted_options": [
+        2
+      ],
+      "join_values": {
+        "0": [
+          8,
+          6,
+          null
+        ],
+        "1": [
+          8,
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "sum_colors": [
+        0,
+        1
+      ],
+      "sum_values": [
+        0,
+        0,
+        0
+      ],
+      "sum_restricted_options": [
+        2,
+        3
+      ],
+      "join_values": {
+        "0": [
+          8,
+          0,
+          4
+        ],
+        "1": [
+          8,
+          8,
+          null
+        ]
+      }
+    },
+    {
+      "sum_colors": [
+        1,
+        0
+      ],
+      "sum_values": [
+        0,
+        0,
+        0
+      ],
+      "sum_restricted_options": [
+        2,
+        3
+      ],
+      "join_values": {
+        "0": [
+          8,
+          0,
+          4
+        ],
+        "1": [
+          8,
+          8,
+          null
+        ]
+      }
+    },
+    {
+      "sum_colors": [
+        1,
+        1
+      ],
+      "sum_values": [
+        0,
+        1,
+        0
+      ],
+      "sum_restricted_options": [
+        3
+      ],
+      "join_values": {
+        "0": [
+          8,
+          7,
+          null
+        ],
+        "1": [
+          8,
+          1,
+          2
+        ]
+      }
+    }
+  ],
+  "game_positions": 63,
+  "limitation": "No sum law or infinite doubling family is inferred from these cases."
+}
