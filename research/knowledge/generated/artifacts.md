@@ -2765,6 +2765,24 @@
 ## [research/experiments/graph-star-sparse-cycles-20261101/verify.py](../../../research/experiments/graph-star-sparse-cycles-20261101/verify.py)
 
 - [K0603](../items/K0603-graph-star-sparse-cycles.md) (verifier): サイクル36条件・直接極小横断集合6条件・一般グラフ792条件の独立整数照合
+## [research/experiments/graph-star-subdivided-star-general-odd-threshold-20261105/proof.md](../../../research/experiments/graph-star-subdivided-star-general-odd-threshold-20261105/proof.md)
+
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (proof): 先行の一般論。κ の存在・r 非減少性・発散とデカルトの上界を本項は前提にする
+## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/no_contact_double_root.json](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/no_contact_double_root.json)
+
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (data): r<=1000 の閾値表と各検査の集計
+## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/regression_existing_boundaries.json](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/regression_existing_boundaries.json)
+
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (data): 180 行の一致監査と各境界の証明方式
+## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/proof.md](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/proof.md)
+
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (proof): 接触二重根の不存在（定理A）と単一切替（定理B）の全称証明、有限検査は r=1,2,3 のみ
+## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/regress_existing_boundaries.py](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/regress_existing_boundaries.py)
+
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (verifier): 既発表 q=21..200 の境界表 180 行の再計算一致検査
+## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/verify_no_contact_double_root.py](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/verify_no_contact_double_root.py)
+
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (verifier): 判別式恒等式・M上界・接線上界・約数和条件・閾値表を完全整数／有理数で監査
 ## [research/experiments/graph-star-vertex-cover-terminal-gap-20261103/proof.md](../../../research/experiments/graph-star-vertex-cover-terminal-gap-20261103/proof.md)
 
 - [K0645](../items/K0645-graph-star-vertex-cover-top-terminal-gap.md) (proof): 最小頂点被覆と中心を含む最大終局石数の等式、上端欠番、NP完全性の全称証明
@@ -10543,6 +10561,9 @@
 ## [research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md](../../../research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (log): スイープと五石集計の経緯
+## [research/log/2026-11-07-subdivided-star-no-contact-double-root.md](../../../research/log/2026-11-07-subdivided-star-no-contact-double-root.md)
+
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (log): 発見の経緯と検証範囲
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

@@ -660,3 +660,4 @@
 | [K0674](../items/K0674-n11-all-witnesses-first-win.md) | 修復後46証人は全員手番WINだった：LOSS証人計画は中央領域で不成立（方向性崩壊） | computation | computed | square-outcomes, certificates, verification |
 | [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) | 94五石子S6全集合3,868を全確定し94五石位置を78先手/16第二手に分類（先手WIN方向の転換） | computation | computed | square-outcomes, certificates, verification |
 | [K0676](../items/K0676-n11-region-s4-first-win.md) | 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子） | computation | computed | square-outcomes, certificates, verification |
+| [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) | 一辺細分星の終局多項式は全qの奇数次数で接触二重根をもたず、実根数は常に0個か2個 | proposition | proved | variants, statistics, geometry, strategy-length |
