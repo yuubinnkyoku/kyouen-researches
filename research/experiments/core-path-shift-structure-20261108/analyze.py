@@ -74,6 +74,19 @@ def main():
     shift_blocks = {tuple(p[1000 + s:1034 + s]) for s in SHIFTS}
     distinct_tail = len(tail_blocks)
     distinct_tail_shift_of_p = sum(1 for b in tail_blocks if b in shift_blocks)
+
+    def has_period(b, q):
+        return all(b[i] == b[i + q] for i in range(34 - q))
+    min_period_types = Counter()
+    for b, n in tail_blocks.items():
+        if has_period(b, 1):
+            min_period_types['period1'] += n
+        elif has_period(b, 2):
+            min_period_types['period2'] += n
+        elif has_period(b, 17):
+            min_period_types['period17'] += n
+        else:
+            min_period_types['minperiod34'] += n
     out = dict(
         types=len(records), tail_window=[LO, HI], tail_span=HI - LO + 1,
         shift_range=[min(SHIFTS), max(SHIFTS)],
@@ -84,6 +97,7 @@ def main():
         best_match_count_histogram={str(k): v for k, v in sorted(best_match_hist.items())},
         distinct_period34_tail_blocks=distinct_tail,
         distinct_tail_blocks_that_are_path_shifts=distinct_tail_shift_of_p,
+        types_by_minimum_tail_period=dict(min_period_types),
         largest_tail_block_class=tail_blocks.most_common(1)[0][1],
         shift_vs_core_grundy={str(s): dict(sorted(c.items())) for s, c in sorted(shift_vs_grundy.items())},
         shift_vs_edge_count={str(s): dict(sorted(c.items())) for s, c in sorted(shift_vs_edges.items())},
