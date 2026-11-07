@@ -172,6 +172,7 @@
 - ← depends_on [K0674](../items/K0674-n11-all-witnesses-first-win.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): 条件付き証明義務と確定勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3586,6 +3587,7 @@
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置の勝敗分類（78先手/16第二手）
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 四石領域位置S4-A/B先手勝ち（空盤への鎖の決定部分）
+- ← depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): 四石領域の先手勝ちは確定したが「遠方応手の全称」はoracle外
 
 ## [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) 一辺細分星の終局多項式は全qの奇数次数で接触二重根をもたず、実根数は常に0個か2個
 
@@ -3639,3 +3641,8 @@
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 固定残余clutterと通常Grundyの定義
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全rank3核と長道は有限整数点盤の残局として実現できる
 - ← supports [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明
+
+## [K0685](../items/K0685-n11-chain-audit-wall.md) 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
+
+- → depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 四石領域の先手勝ちは確定したが「遠方応手の全称」はoracle外
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別

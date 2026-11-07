@@ -7221,9 +7221,21 @@
 ## [research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json](../../../research/experiments/n11-central-19-cover-20261031/output/repair_focus_neighborhood.json)
 
 - [K0673](../items/K0673-n11-repair-focus-2140.md) (data): 修復列挙の機械可読出力（focus除去有効交換16,043、最良2,140類と交換内訳）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/blockers.json](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/blockers.json)
+
+- [K0685](../items/K0685-n11-chain-audit-wall.md) (data): 各S2の最良S3に対するブロッカー数分布（最小60〜最大115）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/chain_audit.py](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/chain_audit.py)
+
+- [K0685](../items/K0685-n11-chain-audit-wall.md) (source): oracle限定鎖監査（W4述語のS3/S2/S1伝播）
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/chain_blockers.py](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/chain_blockers.py)
+
+- [K0685](../items/K0685-n11-chain-audit-wall.md) (source): 最良S3のブロッカー分布計測
 ## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/region_test.py](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/region_test.py)
 
 - [K0676](../items/K0676-n11-region-s4-first-win.md) (verifier): 94五石子の共通四石親の同定と合法子数・先手勝ち子数の計数
+## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s2_audit.json](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s2_audit.json)
+
+- [K0685](../items/K0685-n11-chain-audit-wall.md) (data): S2 120件の証明済み先手勝ち数（0）・未証明数（120）の監査結果
 ## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.json](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.json)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (data): 94五石位置の勝敗集計（78先手勝ち・16第二手勝ち、各位置のLOSS/WIN子数）
@@ -10641,6 +10653,9 @@
 ## [research/log/2026-11-07-bounded-degree-terminal-poisson.md](../../../research/log/2026-11-07-bounded-degree-terminal-poisson.md)
 
 - [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) (log): 既知の特殊族からグラフ形状によらない臨界則と隣接対補正へ至る経緯
+## [research/log/2026-11-07-n11-chain-audit.md](../../../research/log/2026-11-07-n11-chain-audit.md)
+
+- [K0685](../items/K0685-n11-chain-audit-wall.md) (log): 鎖監査の記録
 ## [research/log/2026-11-07-n11-region-s4-first-win.md](../../../research/log/2026-11-07-n11-region-s4-first-win.md)
 
 - [K0676](../items/K0676-n11-region-s4-first-win.md) (log): 領域検証の経緯

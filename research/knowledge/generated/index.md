@@ -668,3 +668,4 @@
 | [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) | 固定残余核と長道の周期は有限窓で認証でき、5点以下rank3核の全513型は500以降34周期 | proposition | proved | residual-games, grundy, geometry, variants, search-methods |
 | [K0683](../items/K0683-rank-three-residual-geometric-universality.md) | rank3以下の全残余clutterは整数共円残局に普遍実現でき、rank4では5点2辺の最小障害がある | proposition | proved | geometry, residual-games, grundy, variants |
 | [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) | 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか | proposition | conjectured | residual-games, grundy, geometry, variants |
+| [K0685](../items/K0685-n11-chain-audit-wall.md) | 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+） | question | open | square-outcomes, certificates, verification |

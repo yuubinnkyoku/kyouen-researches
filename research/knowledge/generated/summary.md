@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 666 / alias: 269 / artifactファイル: 3298
+K項目: 667 / alias: 269 / artifactファイル: 3303
 
 ## kind
 
@@ -10,7 +10,7 @@ K項目: 666 / alias: 269 / artifactファイル: 3298
 | definition | 5 |
 | method | 4 |
 | proposition | 527 |
-| question | 38 |
+| question | 39 |
 | verification | 28 |
 
 ## status
@@ -21,7 +21,7 @@ K項目: 666 / alias: 269 / artifactファイル: 3298
 | computed | 141 |
 | conjectured | 2 |
 | observed | 26 |
-| open | 36 |
+| open | 37 |
 | proved | 346 |
 | refuted | 63 |
 | scope-unclear | 2 |
@@ -33,7 +33,7 @@ K項目: 666 / alias: 269 / artifactファイル: 3298
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 93 |
+| certificates | 94 |
 | first-moves | 67 |
 | formalization | 5 |
 | geometry | 327 |
@@ -47,11 +47,11 @@ K項目: 666 / alias: 269 / artifactファイル: 3298
 | residual-games | 107 |
 | rules | 8 |
 | search-methods | 99 |
-| square-outcomes | 89 |
+| square-outcomes | 90 |
 | statistics | 121 |
 | strategy-length | 94 |
 | variants | 275 |
-| verification | 105 |
+| verification | 106 |
 
 ## 未解決・要監査・範囲不明
 
@@ -97,6 +97,7 @@ K項目: 666 / alias: 269 / artifactファイル: 3298
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) [open] 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [scope-unclear] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
+- [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 
 ## 警告
 

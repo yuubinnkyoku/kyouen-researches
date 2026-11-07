@@ -1,5 +1,5 @@
 ---
-id: K0677
+id: K0685
 title: 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 kind: question
 status: open
