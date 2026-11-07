@@ -864,6 +864,15 @@
 ## [research/experiments/common-pivot-misere-bound-20261108/proof.md](../../../research/experiments/common-pivot-misere-bound-20261108/proof.md)
 
 - [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (proof): rank任意の二点辺付きpivot変換、自由二点の補助値周期2、純三点計算法
+## [research/experiments/common-pivot-misere-larger-values-20261108/output/audit.json](../../../research/experiments/common-pivot-misere-larger-values-20261108/output/audit.json)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (certificate): 十九点h8・二十点h9の二根と790944安全状態の一致
+## [research/experiments/common-pivot-misere-larger-values-20261108/proof.md](../../../research/experiments/common-pivot-misere-larger-values-20261108/proof.md)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (proof): 無界性をグラフh0/1制限ゲームへ帰着する証明と、有限Tなら上界T+4の条件付き証明
+## [research/experiments/common-pivot-misere-larger-values-20261108/verify.py](../../../research/experiments/common-pivot-misere-larger-values-20261108/verify.py)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (verifier): リンク値t6/7の再計算とh8/9の別C++全占有subset照合
 ## [research/experiments/common-pivot-residual-game-20261108/audit.py](../../../research/experiments/common-pivot-residual-game-20261108/audit.py)
 
 - [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (verifier): 全小共通pivot族の閉形式をC++個別占有subsetで型ごとに比較
@@ -1028,6 +1037,21 @@
 ## [research/experiments/coplanar-two-layer-all-widths-20261024/verify.py](../../../research/experiments/coplanar-two-layer-all-widths-20261024/verify.py)
 
 - [K0530](../items/K0530-two-layer-coplanar-capacity-and-233-strong.md) (verifier): 3×3整数行列式と全安全局面mex
+## [research/experiments/core-path-shift-structure-20261108/analyze.py](../../../research/experiments/core-path-shift-structure-20261108/analyze.py)
+
+- [K0697](../items/K0697-core-path-tail-shift-structure.md) (solver): 裸の道pと二つの認証済み族のprefixからシフト一致・末尾ブロック・最小周期・核Grundy相関を計算
+## [research/experiments/core-path-shift-structure-20261108/output/per_type.json](../../../research/experiments/core-path-shift-structure-20261108/output/per_type.json)
+
+- [K0697](../items/K0697-core-path-tail-shift-structure.md) (data): 六点純三点辺全10688型のbest_shift・best_match・perfect_shiftフラグ
+## [research/experiments/core-path-shift-structure-20261108/output/per_type_le5.json](../../../research/experiments/core-path-shift-structure-20261108/output/per_type_le5.json)
+
+- [K0697](../items/K0697-core-path-tail-shift-structure.md) (data): 五点以下全513型のbest_shift・best_match・perfect_shiftフラグ
+## [research/experiments/core-path-shift-structure-20261108/output/shift_probe.json](../../../research/experiments/core-path-shift-structure-20261108/output/shift_probe.json)
+
+- [K0697](../items/K0697-core-path-tail-shift-structure.md) (data): 六点純三点辺10688型の集計（1825末尾ブロック・3445純シフト・核Grundy相関）
+## [research/experiments/core-path-shift-structure-20261108/output/shift_probe_le5.json](../../../research/experiments/core-path-shift-structure-20261108/output/shift_probe_le5.json)
+
+- [K0697](../items/K0697-core-path-tail-shift-structure.md) (data): 五点以下513型の集計（134末尾ブロック・134純シフト・offset 1..7・核Grundy相関）
 ## [research/experiments/critical-short-board-20261031/proof.md](../../../research/experiments/critical-short-board-20261031/proof.md)
 
 - [K0580](../items/K0580-critical-short-board-complete-classification.md) (proof): q≥5で高々二担い手、q=4で高々三担い手、全局面値と整数実現の全称証明
@@ -2991,6 +3015,15 @@
 ## [research/experiments/maximal-terminal-gap-all-r-20261101/verify.py](../../../research/experiments/maximal-terminal-gap-all-r-20261101/verify.py)
 
 - [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (verifier): 32896抽象所属型と11×11内12点証人の495四点組・全安全局面の独立検査
+## [research/experiments/misere-legal-count-gap-two-20261108/output/audit.json](../../../research/experiments/misere-legal-count-gap-two-20261108/output/audit.json)
+
+- [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (certificate): 全小型と全達成例7037根・117656安全状態で両値一致
+## [research/experiments/misere-legal-count-gap-two-20261108/proof.md](../../../research/experiments/misere-legal-count-gap-two-20261108/proof.md)
+
+- [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (proof): 終局1の補助mexにも同じ帰納を適用し、任意rankと純三点のh0..7最少点数を確定
+## [research/experiments/misere-legal-count-gap-two-20261108/verify.py](../../../research/experiments/misere-legal-count-gap-two-20261108/verify.py)
+
+- [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (verifier): 残余縮約h再帰と別C++生subsetの通常/補助値比較
 ## [research/experiments/mixed-spider-critical-20261102/proof.md](../../../research/experiments/mixed-spider-critical-20261102/proof.md)
 
 - [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (proof): 異長枝の厳密母関数、有限誤差、正規極限の必要十分条件、固定長枝数の二点混合の証明
@@ -10838,6 +10871,9 @@
 - [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) (log): 森の完全分類と合法点数上界を調べた記録
 - [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (log): 五点完全表から点数無制限の定理へ進めた経緯
 - [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (log): 辺数最小と合法点数最小を区別した研究記録
+## [research/log/2026-11-08-misere-mobility-gap-and-larger-pivot-values.md](../../../research/log/2026-11-08-misere-mobility-gap-and-larger-pivot-values.md)
+
+- [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (log): 値9までの有限証拠と無界性予想・同値帰着を分けた記録
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

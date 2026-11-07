@@ -673,9 +673,11 @@
 | [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) | 純三点残余辺が3本以下ならGrundyは1以下、4本以下で3以下、5本以下で5以下で全て鋭い | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) | 残余辺の所属被覆重みはGrundy上界を与え、固定rankでは辺数に対する線形上界が成立する | proposition | proved | grundy, residual-games, search-methods, variants |
 | [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) | 純三点Berge森は六辺以下でGrundy3以下、八辺以下で7以下となり全て鋭い | proposition | proved | grundy, residual-games, variants |
-| [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) | 任意rankの禁止集合ゲームは合法点が五個以上ならGrundyが合法点数より二以上小さい | proposition | proved | grundy, residual-games, search-methods, variants |
+| [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) | 任意rankの禁止集合ゲームは合法点が五個以上なら通常値とmisère補助値がともに合法点数より二以上小さい | proposition | proved | grundy, residual-games, search-methods, variants |
 | [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) | 純三点ゲームのGrundy6と7は最少点数が八と九、最少辺数はともに六本 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) | 全残余辺が一点を共有するrank三以下のゲームは辺数無制限でもGrundy3以下 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) | p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
-| [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) | 共通pivotのmisère補助値は0/1制限ゲームで変換でき、通常上界3の族にも値7が生じる | proposition | proved | grundy, residual-games, geometry, variants |
+| [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) | 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) | Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる | proposition | proved | grundy, residual-games, geometry, variants |
+| [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) | 二点辺付きrank三共通pivot族のmisère補助値は無界と予想する | proposition | conjectured | grundy, residual-games, variants |
+| [K0697](../items/K0697-core-path-tail-shift-structure.md) | 核＋道の周期34末尾は裸の道の普遍シフトではない（六点純三点辺1825種・五点以下134種の末尾分類） | computation | computed | grundy, residual-games, search-methods, variants |

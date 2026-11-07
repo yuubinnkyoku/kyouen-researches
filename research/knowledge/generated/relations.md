@@ -1584,6 +1584,7 @@
 ## [K0309](../items/K0309-misere-small-legal-set-exchange.md) 合法点5個以下では通常値とmisère補助値は0と1だけ交換される
 
 - ← depends_on [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md): 各部品と全後続局面が0↔1 swap則を満たすことを仮定する
+- ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 五合法点以下の交換則でmisèreの有限基底を得る。六点の完全分類は純三点h3の下界にも使用
 - ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 終局1のmisère補助mexと通常値との交換則の定義・境界
 
 ## [K0310](../items/K0310-misere-square-outcomes-through-eight.md) misère版の6×6は後手勝ち、7×7・8×8は先手勝ち
@@ -3642,6 +3643,7 @@
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 任意個数の三点辺を含む核＋長道を有限整数点盤に全状態実現
 - → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明
 - ← depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 主計算は初手後の五点rank3核表を参照。独立C++ではこの表を使わない
+- ← depends_on [K0697](../items/K0697-core-path-tail-shift-structure.md): 裸の道Grundy pと五点以下513型の認証済みprefix、有限窓認証の枠組み
 
 ## [K0683](../items/K0683-rank-three-residual-geometric-universality.md) rank3以下の全残余clutterは整数共円残局に普遍実現でき、rank4では5点2辺の最小障害がある
 
@@ -3657,12 +3659,14 @@
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): rank三以下の達成例を指定有限整数点盤に移す
 - ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 純三点達成例の指定有限整数点盤への移送
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 全kについて指定有限整数点盤に移す
+- ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 各有限rank三族の指定有限整数点盤での実現
 
 ## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 固定残余clutterと通常Grundyの定義
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全rank3核と長道は有限整数点盤の残局として実現できる
 - ← supports [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明
+- ← supports [K0697](../items/K0697-core-path-tail-shift-structure.md): 末尾が全て周期34であることを構造面から支持するが、核が道をシフトするだけではないことを示す
 
 ## [K0685](../items/K0685-n11-chain-audit-wall.md) 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 
@@ -3693,11 +3697,12 @@
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余ゲームと連結成分・自由点のxor分離
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 達成する抽象三点族を指定有限整数点盤に移す
 
-## [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) 任意rankの禁止集合ゲームは合法点が五個以上ならGrundyが合法点数より二以上小さい
+## [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) 任意rankの禁止集合ゲームは合法点が五個以上なら通常値とmisère補助値がともに合法点数より二以上小さい
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常ゲームのmex定義
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 安全局面の極小残余禁止族への帰着
 - → depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 六点でg4、七点でg5を達成し二段差の鋭さを示す
+- → depends_on [K0309](../items/K0309-misere-small-legal-set-exchange.md): 五合法点以下の交換則でmisèreの有限基底を得る。六点の完全分類は純三点h3の下界にも使用
 - ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 合法点数の最小値の下界
 
 ## [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) 純三点ゲームのGrundy6と7は最少点数が八と九、最少辺数はともに六本
@@ -3716,6 +3721,7 @@
 - → depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 純三点のg2とg3に必要な最少辺数の下界
 - ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 通常rank三以下の共通pivot族の上界3と比較する
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 二点辺が生じた後の通常Grundy閉形式
+- ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 同じ対象の通常Grundyは全点数・全辺数で3以下
 
 ## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 
@@ -3723,16 +3729,28 @@
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する反例候補。監査により確定する
 
-## [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) 共通pivotのmisère補助値は0/1制限ゲームで変換でき、通常上界3の族にも値7が生じる
+## [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余禁止族の継続ゲーム表現
 - → depends_on [K0309](../items/K0309-misere-small-legal-set-exchange.md): 終局1のmisère補助mexと通常値との交換則の定義・境界
 - → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 通常rank三以下の共通pivot族の上界3と比較する
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点達成例の指定有限整数点盤への移送
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): misère補助値の二点辺付きpivot変換
+- ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 二点辺付きpivot変換と自由二点の補助値周期2
 
 ## [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる
 
 - → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 二点辺が生じた後の通常Grundy閉形式
 - → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): misère補助値の二点辺付きpivot変換
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全kについて指定有限整数点盤に移す
+
+## [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) 二点辺付きrank三共通pivot族のmisère補助値は無界と予想する
+
+- → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 二点辺付きpivot変換と自由二点の補助値周期2
+- → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 同じ対象の通常Grundyは全点数・全辺数で3以下
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 各有限rank三族の指定有限整数点盤での実現
+
+## [K0697](../items/K0697-core-path-tail-shift-structure.md) 核＋道の周期34末尾は裸の道の普遍シフトではない（六点純三点辺1825種・五点以下134種の末尾分類）
+
+- → depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 裸の道Grundy pと五点以下513型の認証済みprefix、有限窓認証の枠組み
+- → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 末尾が全て周期34であることを構造面から支持するが、核が道をシフトするだけではないことを示す
