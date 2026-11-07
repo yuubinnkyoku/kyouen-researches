@@ -882,6 +882,18 @@
 ## [research/experiments/common-pivot-residual-game-20261108/proof.md](../../../research/experiments/common-pivot-residual-game-20261108/proof.md)
 
 - [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (proof): 二点辺がある場合のrank任意閉形式と、純三点のリンクグラフ帰着
+## [research/experiments/common-pivot-unbounded-one-move-jump-20261108/output/audit.json](../../../research/experiments/common-pivot-unbounded-one-move-jump-20261108/output/audit.json)
+
+- [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) (certificate): k0..3のグラフとk1/2の一手前後・1764安全状態、6/34点の整数盤
+## [research/experiments/common-pivot-unbounded-one-move-jump-20261108/output/audit_with_free.json](../../../research/experiments/common-pivot-unbounded-one-move-jump-20261108/output/audit_with_free.json)
+
+- [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) (certificate): 自由点付きも含む6/7/34/35点の具体的整数盤と全共円四点組
+## [research/experiments/common-pivot-unbounded-one-move-jump-20261108/proof.md](../../../research/experiments/common-pivot-unbounded-one-move-jump-20261108/proof.md)
+
+- [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) (proof): 既知コグラフ構成への帰属・再証明、初期値1、無界増加、整数盤サイズ公式
+## [research/experiments/common-pivot-unbounded-one-move-jump-20261108/verify.py](../../../research/experiments/common-pivot-unbounded-one-move-jump-20261108/verify.py)
+
+- [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) (verifier): 記号option集合・別グラフ再帰・生subset・整数座標の四点組を比較
 ## [research/experiments/componentwise-terminal-real-rootedness-20261103/proof.md](../../../research/experiments/componentwise-terminal-real-rootedness-20261103/proof.md)
 
 - [K0667](../items/K0667-componentwise-terminal-real-rootedness.md) (proof): 乗法性、実根性の成分別必要十分条件、および混合成分族の判定
@@ -3009,6 +3021,18 @@
 ## [research/experiments/macroscopic-spider-arm-20261102/verify.py](../../../research/experiments/macroscopic-spider-arm-20261102/verify.py)
 
 - [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) (verifier): 独立二値語・グラフ削除全列挙・漸化式と長枝モーメントの照合
+## [research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/output/audit.json](../../../research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/output/audit.json)
+
+- [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) (certificate): 基本対k1..3・148安全状態、同一10点整数盤の同石数二局面
+## [research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/output/audit_terminal_support.json](../../../research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/output/audit_terminal_support.json)
+
+- [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) (certificate): 強化対13/37合法点の終局長全可能集合、別subset267安全状態
+## [research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/proof.md](../../../research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/proof.md)
+
+- [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) (proof): 基本対・同一盤の同石数埋込み・終局長可能集合まで一致する強化の全称証明
+## [research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/verify.py](../../../research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/verify.py)
+
+- [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) (verifier): 別グラフ再帰とsubset、具体的同一盤からの直接合法手再帰で全指標を照合
 ## [research/experiments/maximal-terminal-gap-all-r-20261101/proof.md](../../../research/experiments/maximal-terminal-gap-all-r-20261101/proof.md)
 
 - [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (proof): 任意rの極小横断集合の証明と任意qの整数平面上界達成構成
@@ -9660,6 +9684,9 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/README.md](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/README.md)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 2003..2477への保存証人拡張の報告と再現手順
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2531.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2531.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): d=1265..1の全数走査（UNSAT 1265・unknown 0・SAT 0）
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizの独立検証（covered/checked・共円0件）の生出力
@@ -9669,13 +9696,28 @@
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 2003..2477の64素数のうち62の等号証人（2207, 2351は予算内未発見）
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2003..2477の64素数のうち63の等号証人。2207は深いd走査中
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 隣接63素数では同じ実装がSAT側で証人を返し独立検証も通っている
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 浅いd走査で2531が最初に落ちた記録
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（8並列、dごとに独立なCNF）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (source): 反例候補の方法・証拠・信頼境界・次の監査
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/audit_all_d.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/audit_all_d.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): dごとにCNFとDRAT証明を生成しチェッカーで監査する再開可能ドライバ
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): d=1..1103の判定表を生成し、タイムアウト分は衝突予算2000万で再判定する
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 標本21 dの監査結果（全てVERIFIED、証明行数と検査秒数）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）
@@ -9686,6 +9728,7 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
 ## [research/experiments/path-recurrence-periodic-forcing-20261108/README.md](../../../research/experiments/path-recurrence-periodic-forcing-20261108/README.md)
 
 - [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (source): 再帰の導出・方法・2 roundの結果・候補補題と限界
@@ -10935,6 +10978,10 @@
 
 - [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (log): 特殊木族の再帰発見から全長周期証明と整数幾何実現へ至る経緯
 - [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (log): 木の三点制約族の抽象ゲームを標準幾何ルールへ移すための拡張
+## [research/log/2026-11-08-cograph-geometric-unbounded-gaps.md](../../../research/log/2026-11-08-cograph-geometric-unbounded-gaps.md)
+
+- [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) (log): 完全核表から既知グラフ構成の幾何学的帰結へ移った経緯
+- [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) (log): 一手増加の族から同一盤・同指標の非有界差へ進んだ研究記録
 ## [research/log/2026-11-08-common-pivot-misere-transform.md](../../../research/log/2026-11-08-common-pivot-misere-transform.md)
 
 - [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (log): 単純式の失敗から、0/1制限ゲームと大きいmisère値へ進んだ記録

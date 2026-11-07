@@ -34,6 +34,15 @@ artifacts:
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json
   role: data
   note: 隣接63素数では同じ実装がSAT側で証人を返し独立検証も通っている
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp
+  role: verifier
+  note: 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/audit_all_d.py
+  role: verifier
+  note: dごとにCNFとDRAT証明を生成しチェッカーで監査する再開可能ドライバ
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json
+  role: data
+  note: 標本21 dの監査結果（全てVERIFIED、証明行数と検査秒数）
 scope: 奇素数p=2207のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。任意の他素数への一般化は主張しない。
 evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22もd=1,289,550,1103でUNSAT。p<=23で全数照合。DRAT証明は未検査。
 ---
@@ -75,7 +84,9 @@ K0097 の上界 `A(p) <= (p+3)/2` は一般に証明済みで、p <= 2143 の全
   から **3 形**ある: (a) `(1,0,0)`、(b) `(0,1,0)`、(c) `(1,1,1)`（`0`＋完全対一つ＋空対一つ）。
   2026-11-08: (a) の CNF は UNSAT（31,868 節、cadical 26 秒）、(b) は全 d=1..1103 で UNSAT（unknown 0・SAT 0）。
   (c) は全 (d,e) を覆う単一 CNF で探索中（`research/log/2026-11-08-p2207-1104-shape-search-and-drat-plan.md`）。
-- 全 d の UNSAT は DRAT 監査の途中。`drat_check.cpp`（RUP＋RAT）で d=1, 1050, 1103 は **VERIFIED**。
-  残りは証明が 6-47 MB と大きく、増分チェッカーが必要。
+- 2026-11-08 の DRAT 監査: 増分チェッカー（`drat_check_incremental.cpp`、RUP＋RAT）で
+  **標本 21 個の d（1, 50, 100, 150, 200, 250, 289, 297, 300, 312, 324, 400, 500, 550, 600, 700, 800, 900, 1000, 1100, 1103）の証明を全て VERIFIED**
+  （証明 16〜576,575 行、検査 0.5〜3,223 秒/件、`output/drat_audit_full.json`）。
+  全 1103 件の監査は約 370 CPU 時間規模のため未完了であり、残りはソルバ主張のまま。
 - p=2207 以外の反例素数は未探索（2213..2477 は証人あり、2500 以上は未走査）。
 - 監査が通れば K0101 の「全奇素数で等号」は否定される。現時点では K0101 を open のまま維持する。

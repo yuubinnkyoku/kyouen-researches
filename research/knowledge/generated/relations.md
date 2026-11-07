@@ -497,6 +497,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md)
 - ← depends_on [K0042](../items/K0042-n7-grundy-saturation-layer.md)
+- ← depends_on [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md): 通常Grundyは最大追加手数以下であり、基本対はその両端を達成
 
 ## [K0042](../items/K0042-n7-grundy-saturation-layer.md) 7×7のGrundy飽和開始層はσ_7=4
 
@@ -774,6 +775,7 @@
 - ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md)
 - ← depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
 - ← depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
+- ← depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -791,6 +793,7 @@
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md)
 - ← supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 全奇素数での等号を否定する反例候補。監査により確定する
+- ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 全奇素数での等号を否定する2番目の反例候補
 
 ## [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) 具体巨大証明書をLean核のみで検査する実装は未完成
 
@@ -907,6 +910,8 @@
 - ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 自由点一個はxor1でg6をg7へ移す
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 全残余族と自由点のxor分離
 - ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 残余禁止族の継続ゲーム表現
+- ← depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 残余ゲーム同型と自由点の通常xor則
+- ← depends_on [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md): 占有・不合法点を除いた残余グラフとのゲーム同型
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1719,6 +1724,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
 - → depends_on [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md): Q_pの線上限2・円上限4と円方程式の原始係数
 - ← depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
+- ← depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3662,6 +3668,8 @@
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 全kについて指定有限整数点盤に移す
 - ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 各有限rank三族の指定有限整数点盤での実現
 - ← depends_on [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md): 達成族の指定有限整数点盤への実現
+- ← depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 純三点族を一辺一占有アンカーの有限整数点盤へ実現
+- ← depends_on [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md): 二グラフの非交和を一つの指定有限整数点盤へ実現
 
 ## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
@@ -3728,12 +3736,14 @@
 - ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 通常rank三以下の共通pivot族の上界3と比較する
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 二点辺が生じた後の通常Grundy閉形式
 - ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 同じ対象の通常Grundyは全点数・全辺数で3以下
+- ← depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 共通pivot付き二点辺の通常値閉形式で一手前g1を確定
 
 ## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する反例候補。監査により確定する
+- ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないことを示す2例目
 
 ## [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる
 
@@ -3772,3 +3782,24 @@
 - → depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 純三点の低値2と3の点数下界
 - → depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 任意rankでの合法点数と両値の二段差、および純三点h2とh3の点数下界
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 達成族の指定有限整数点盤への実現
+
+## [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) 共通合法点を持つ有限整数盤で通常値1から一手で2の任意冪へ増加し、値0からの増加も非有界
+
+- → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 共通pivot付き二点辺の通常値閉形式で一手前g1を確定
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点族を一辺一占有アンカーの有限整数点盤へ実現
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余ゲーム同型と自由点の通常xor則
+- ← depends_on [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md): 既知コグラフHkの定義・Grundy・子値集合と出典
+
+## [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) 同一整数盤で石数・合法点数・最大追加手数が同じでもGrundy差は非有界で、終局長可能集合も一致させられる
+
+- → depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 既知コグラフHkの定義・Grundy・子値集合と出典
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 二グラフの非交和を一つの指定有限整数点盤へ実現
+- → depends_on [K0041](../items/K0041-grundy-ceiling-and-saturation.md): 通常Grundyは最大追加手数以下であり、基本対はその両端を達成
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 占有・不合法点を除いた残余グラフとのゲーム同型
+
+## [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
+
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
+- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
+- → supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないことを示す2例目
+- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する2番目の反例候補
