@@ -906,6 +906,7 @@
 - ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 安全局面の極小残余禁止族への帰着
 - ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 自由点一個はxor1でg6をg7へ移す
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 全残余族と自由点のxor分離
+- ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 残余禁止族の継続ゲーム表現
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1583,6 +1584,7 @@
 ## [K0309](../items/K0309-misere-small-legal-set-exchange.md) 合法点5個以下では通常値とmisère補助値は0と1だけ交換される
 
 - ← depends_on [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md): 各部品と全後続局面が0↔1 swap則を満たすことを仮定する
+- ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 終局1のmisère補助mexと通常値との交換則の定義・境界
 
 ## [K0310](../items/K0310-misere-square-outcomes-through-eight.md) misère版の6×6は後手勝ち、7×7・8×8は先手勝ち
 
@@ -3653,6 +3655,8 @@
 - ← depends_on [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md): 達成する抽象三点族を指定有限整数点盤に移す
 - ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 有限整数点盤での達成
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): rank三以下の達成例を指定有限整数点盤に移す
+- ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 純三点達成例の指定有限整数点盤への移送
+- ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 全kについて指定有限整数点盤に移す
 
 ## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
@@ -3710,9 +3714,25 @@
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): rank三以下の達成例を指定有限整数点盤に移す
 - → depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 純三点でg2とg3に必要な最少点数の下界
 - → depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 純三点のg2とg3に必要な最少辺数の下界
+- ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 通常rank三以下の共通pivot族の上界3と比較する
+- ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 二点辺が生じた後の通常Grundy閉形式
 
 ## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する反例候補。監査により確定する
+
+## [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) 共通pivotのmisère補助値は0/1制限ゲームで変換でき、通常上界3の族にも値7が生じる
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余禁止族の継続ゲーム表現
+- → depends_on [K0309](../items/K0309-misere-small-legal-set-exchange.md): 終局1のmisère補助mexと通常値との交換則の定義・境界
+- → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 通常rank三以下の共通pivot族の上界3と比較する
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点達成例の指定有限整数点盤への移送
+- ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): misère補助値の二点辺付きpivot変換
+
+## [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる
+
+- → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 二点辺が生じた後の通常Grundy閉形式
+- → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): misère補助値の二点辺付きpivot変換
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全kについて指定有限整数点盤に移す

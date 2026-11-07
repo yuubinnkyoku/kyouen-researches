@@ -843,6 +843,27 @@
 ## [research/experiments/cograph-terminal-20261102/verify.py](../../../research/experiments/cograph-terminal-20261102/verify.py)
 
 - [K0631](../items/K0631-cograph-cotree-terminal-polynomial.md) (verifier): 12066条件の削除集合直接列挙、744標本、159条件192144点部分集合の禁止超辺独立検査
+## [research/experiments/common-pivot-misere-bound-20261108/audit.py](../../../research/experiments/common-pivot-misere-bound-20261108/audit.py)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (verifier): リンクグラフhと0/1制限ゲームtでの式、41662根の別C++比較
+## [research/experiments/common-pivot-misere-bound-20261108/audit_induced.py](../../../research/experiments/common-pivot-misere-bound-20261108/audit_induced.py)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (verifier): 十五点h6と十六点h7のリンク制限ゲーム計算と独立C++全占有subset
+## [research/experiments/common-pivot-misere-bound-20261108/independent.cpp](../../../research/experiments/common-pivot-misere-bound-20261108/independent.cpp)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (verifier): 通常・misère両方を占有subsetから直接計算
+## [research/experiments/common-pivot-misere-bound-20261108/output/audit.json](../../../research/experiments/common-pivot-misere-bound-20261108/output/audit.json)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (certificate): 3284481安全状態の全一致、純三点h4/h5と混合族h4/h5
+## [research/experiments/common-pivot-misere-bound-20261108/output/geometry.json](../../../research/experiments/common-pivot-misere-bound-20261108/output/geometry.json)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (certificate): 22点と23点の整数座標盤、全禁止四点組、全安全補助値
+## [research/experiments/common-pivot-misere-bound-20261108/output/induced_high_audit.json](../../../research/experiments/common-pivot-misere-bound-20261108/output/induced_high_audit.json)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (certificate): 二点辺二本・三点辺十八本で(g,h)=(0,6),(1,7)の達成例と比較件数
+## [research/experiments/common-pivot-misere-bound-20261108/proof.md](../../../research/experiments/common-pivot-misere-bound-20261108/proof.md)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (proof): rank任意の二点辺付きpivot変換、自由二点の補助値周期2、純三点計算法
 ## [research/experiments/common-pivot-residual-game-20261108/audit.py](../../../research/experiments/common-pivot-residual-game-20261108/audit.py)
 
 - [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (verifier): 全小共通pivot族の閉形式をC++個別占有subsetで型ごとに比較
@@ -9635,6 +9656,15 @@
 ## [research/experiments/path-terminal-real-roots-20261103/verify.py](../../../research/experiments/path-terminal-real-roots-20261103/verify.py)
 
 - [K0664](../items/K0664-path-terminal-real-rootedness.md) (verifier): 64三方式完全照合・36長い道・64爪なし・315一般重み・745 Newton監査・長さ4反例
+## [research/experiments/petersen-common-pivot-misere-family-20261108/output/audit.json](../../../research/experiments/petersen-common-pivot-misere-family-20261108/output/audit.json)
+
+- [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) (certificate): 通常・補助値の全子と二根、26点盤の全共円四点組と具体座標
+## [research/experiments/petersen-common-pivot-misere-family-20261108/proof.md](../../../research/experiments/petersen-common-pivot-misere-family-20261108/proof.md)
+
+- [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) (proof): KG5,2の全閉近傍子C6、joinと全初手証明、盤点数の式
+## [research/experiments/petersen-common-pivot-misere-family-20261108/verify.py](../../../research/experiments/petersen-common-pivot-misere-family-20261108/verify.py)
+
+- [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) (verifier): k1..5の全局所子検査、k1..2の別C++生subset、k1の整数座標幾何検査
 ## [research/experiments/prism-followup-20261005/even-capacity-output.json](../../../research/experiments/prism-followup-20261005/even-capacity-output.json)
 
 - [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) (data): 明示パラメータの完全有限検算。全称命題の根拠は証明artifact
@@ -10153,6 +10183,15 @@
 ## [research/experiments/rooted-core-larger-periods-20261107/verify.py](../../../research/experiments/rooted-core-larger-periods-20261107/verify.py)
 
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (verifier): 既証明の小核表を再利用し、101新規閉状態の有限窓と別subset mex700条件を照合
+## [research/experiments/rooted-core-six-pure-triple-full-20261108/output/audit.json](../../../research/experiments/rooted-core-six-pure-triple-full-20261108/output/audit.json)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (certificate): 6点純三点辺の全10688状態の全0..1343整数値と有限窓証明書。jointly_certified=true・Grundy最大29
+## [research/experiments/rooted-core-six-pure-triple-full-20261108/proof.md](../../../research/experiments/rooted-core-six-pure-triple-full-20261108/proof.md)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (proof): 6点純三点辺の全型（2^20全1048576件・Burnsideで根付き10688型）についての全長周期認証。共同開始637
+## [research/experiments/rooted-core-six-pure-triple-full-20261108/verify.py](../../../research/experiments/rooted-core-six-pure-triple-full-20261108/verify.py)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (verifier): 高速orbit列挙と既証明小核表の再利用・適応有限窓認証。7本以上400型長さ0..6の独立subset mex2800条件で照合
 ## [research/experiments/rooted-core-six-pure-triple-six-edges-20261107/output/audit.json](../../../research/experiments/rooted-core-six-pure-triple-six-edges-20261107/output/audit.json)
 
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (certificate): 6点純三点辺六本以下の完全族732状態の全0..1211整数値と有限窓証明書。jointly_certified=true
@@ -10787,6 +10826,10 @@
 
 - [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (log): 特殊木族の再帰発見から全長周期証明と整数幾何実現へ至る経緯
 - [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (log): 木の三点制約族の抽象ゲームを標準幾何ルールへ移すための拡張
+## [research/log/2026-11-08-common-pivot-misere-transform.md](../../../research/log/2026-11-08-common-pivot-misere-transform.md)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (log): 単純式の失敗から、0/1制限ゲームと大きいmisère値へ進んだ記録
+- [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) (log): misère変換からPetersenの全C6子を使う無限族へ進んだ記録
 ## [research/log/2026-11-08-common-pivot-rank-boundary.md](../../../research/log/2026-11-08-common-pivot-rank-boundary.md)
 
 - [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) (log): 小型観測からrank境界の反例と全称閉形式へ進んだ経緯

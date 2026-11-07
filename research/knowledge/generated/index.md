@@ -677,3 +677,5 @@
 | [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) | 純三点ゲームのGrundy6と7は最少点数が八と九、最少辺数はともに六本 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) | 全残余辺が一点を共有するrank三以下のゲームは辺数無制限でもGrundy3以下 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) | p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
+| [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) | 共通pivotのmisère補助値は0/1制限ゲームで変換でき、通常上界3の族にも値7が生じる | proposition | proved | grundy, residual-games, geometry, variants |
+| [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) | Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる | proposition | proved | grundy, residual-games, geometry, variants |
