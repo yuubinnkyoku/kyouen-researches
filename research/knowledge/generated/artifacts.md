@@ -9757,9 +9757,13 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 標本21 dの監査結果（全てVERIFIED、証明行数と検査秒数）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 標本8 dのDRAT監査結果（全てVERIFIED）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）

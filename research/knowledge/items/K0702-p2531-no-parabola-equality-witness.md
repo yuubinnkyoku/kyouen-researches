@@ -31,8 +31,14 @@ artifacts:
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json
   role: data
   note: 浅いd走査で2531が最初に落ちた記録
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json
+  role: data
+  note: 標本8 dのDRAT監査結果（全てVERIFIED）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp
+  role: verifier
+  note: 増分DRATチェッカー（RUP＋RAT）
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。DRAT証明の監査は未実施。
+evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。標本8 dのDRAT証明は独立チェッカーでVERIFIED（8/8）。
 ---
 
 ## 命題・範囲
@@ -54,8 +60,10 @@ K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 �
 
 ## 限界
 
-- **DRAT 証明の監査は未実施**。p=2207 では標本 21 d の証明を独立チェッカーで VERIFIED にした（K0693）が、
-  p=2531 ではまだソルバ主張のみ。status は `needs-review`。
+- 2026-11-08 の DRAT 監査: 標本 8 個の d（1, 100, 300, 500, 700, 900, 1100, 1265）の証明を
+  独立チェッカー（`drat_check_incremental.cpp`）で監査し、**8/8 VERIFIED**
+  （証明 14〜157,876 行、検査 1〜367 秒/件、`output/drat_audit_full_2531.json`）。
+  全 1265 件の監査は未実施であり、残りはソルバ主張のまま。status は `needs-review`。
 - `A(2531)` の正確な値は未確定。
 - 同時期の走査で p=2539, 2543, 2549 も d=h..h-30 の範囲で証人が見つかっておらず、
   反例素数は 2207, 2531 以外にも存在する可能性がある（未確定）。
