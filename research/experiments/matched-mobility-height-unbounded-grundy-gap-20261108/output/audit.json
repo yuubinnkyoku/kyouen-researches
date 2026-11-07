@@ -1,0 +1,290 @@
+{
+  "audit": "PASS",
+  "symbolic_audits": [
+    {
+      "k": 1,
+      "board_points": 10,
+      "occupied_count": 6,
+      "mobility": 3,
+      "maximum_remaining_moves": 2,
+      "grundy_pair": [
+        2,
+        0
+      ]
+    },
+    {
+      "k": 2,
+      "board_points": 49,
+      "occupied_count": 35,
+      "mobility": 9,
+      "maximum_remaining_moves": 4,
+      "grundy_pair": [
+        4,
+        0
+      ]
+    },
+    {
+      "k": 3,
+      "board_points": 322,
+      "occupied_count": 276,
+      "mobility": 27,
+      "maximum_remaining_moves": 8,
+      "grundy_pair": [
+        8,
+        0
+      ]
+    },
+    {
+      "k": 4,
+      "board_points": 2488,
+      "occupied_count": 2342,
+      "mobility": 81,
+      "maximum_remaining_moves": 16,
+      "grundy_pair": [
+        16,
+        0
+      ]
+    },
+    {
+      "k": 5,
+      "board_points": 20894,
+      "occupied_count": 20440,
+      "mobility": 243,
+      "maximum_remaining_moves": 32,
+      "grundy_pair": [
+        32,
+        0
+      ]
+    },
+    {
+      "k": 6,
+      "board_points": 182158,
+      "occupied_count": 180764,
+      "mobility": 729,
+      "maximum_remaining_moves": 64,
+      "grundy_pair": [
+        64,
+        0
+      ]
+    },
+    {
+      "k": 7,
+      "board_points": 1615564,
+      "occupied_count": 1611318,
+      "mobility": 2187,
+      "maximum_remaining_moves": 128,
+      "grundy_pair": [
+        128,
+        0
+      ]
+    },
+    {
+      "k": 8,
+      "board_points": 14440668,
+      "occupied_count": 14427802,
+      "mobility": 6561,
+      "maximum_remaining_moves": 256,
+      "grundy_pair": [
+        256,
+        0
+      ]
+    },
+    {
+      "k": 9,
+      "board_points": 129541531,
+      "occupied_count": 129502677,
+      "mobility": 19683,
+      "maximum_remaining_moves": 512,
+      "grundy_pair": [
+        512,
+        0
+      ]
+    },
+    {
+      "k": 10,
+      "board_points": 1164033004,
+      "occupied_count": 1163915930,
+      "mobility": 59049,
+      "maximum_remaining_moves": 1024,
+      "grundy_pair": [
+        1024,
+        0
+      ]
+    },
+    {
+      "k": 11,
+      "board_points": 10468221523,
+      "occupied_count": 10467869277,
+      "mobility": 177147,
+      "maximum_remaining_moves": 2048,
+      "grundy_pair": [
+        2048,
+        0
+      ]
+    },
+    {
+      "k": 12,
+      "board_points": 94178275492,
+      "occupied_count": 94177216706,
+      "mobility": 531441,
+      "maximum_remaining_moves": 4096,
+      "grundy_pair": [
+        4096,
+        0
+      ]
+    }
+  ],
+  "graph_audits": [
+    {
+      "k": 1,
+      "legal_points": 3,
+      "high": {
+        "grundy": 2,
+        "maximum_remaining_moves": 2,
+        "states": 4
+      },
+      "low": {
+        "grundy": 0,
+        "maximum_remaining_moves": 2,
+        "states": 4
+      }
+    },
+    {
+      "k": 2,
+      "legal_points": 9,
+      "high": {
+        "grundy": 4,
+        "maximum_remaining_moves": 4,
+        "states": 18
+      },
+      "low": {
+        "grundy": 0,
+        "maximum_remaining_moves": 4,
+        "states": 16
+      }
+    },
+    {
+      "k": 3,
+      "legal_points": 27,
+      "high": {
+        "grundy": 8,
+        "maximum_remaining_moves": 8,
+        "states": 340
+      },
+      "low": {
+        "grundy": 0,
+        "maximum_remaining_moves": 8,
+        "states": 256
+      }
+    }
+  ],
+  "cpp_safe_states": 148,
+  "same_integer_board": {
+    "k": 1,
+    "points": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        9
+      ],
+      [
+        4,
+        16
+      ],
+      [
+        5,
+        25
+      ],
+      [
+        6,
+        36
+      ],
+      [
+        7,
+        49
+      ],
+      [
+        -28,
+        -28
+      ],
+      [
+        -48,
+        -48
+      ],
+      [
+        -51,
+        -103
+      ]
+    ],
+    "actual_quads": [
+      [
+        0,
+        1,
+        3,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        8
+      ],
+      [
+        0,
+        4,
+        5,
+        9
+      ]
+    ],
+    "quadruples_checked": 210,
+    "states": [
+      {
+        "occupied": [
+          0,
+          4,
+          6,
+          7,
+          8,
+          9
+        ],
+        "stone_count": 6,
+        "legal_points": [
+          1,
+          2,
+          3
+        ],
+        "mobility": 3,
+        "maximum_remaining_moves": 2,
+        "grundy": 2
+      },
+      {
+        "occupied": [
+          0,
+          1,
+          2,
+          7,
+          8,
+          9
+        ],
+        "stone_count": 6,
+        "legal_points": [
+          4,
+          5,
+          6
+        ],
+        "mobility": 3,
+        "maximum_remaining_moves": 2,
+        "grundy": 0
+      }
+    ],
+    "game_states": 10
+  },
+  "limitation": "Specified finite integer-point boards; full square-grid version remains open."
+}

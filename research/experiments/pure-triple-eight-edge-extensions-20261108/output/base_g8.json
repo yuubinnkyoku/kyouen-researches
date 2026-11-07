@@ -1,0 +1,79 @@
+{
+  "audit": "PASS",
+  "minimum_base_grundy": 8,
+  "selected_base_types": 1,
+  "cases": 450,
+  "cpp_cell_states": 823356,
+  "cpp_safe_states": 867096,
+  "maximum_normal": 9,
+  "maximum_misere_aux": 9,
+  "witnesses": {
+    "normal": {
+      "n": 12,
+      "edges": [
+        67,
+        224,
+        321,
+        532,
+        584,
+        1058,
+        1168,
+        1792
+      ],
+      "normal": 9,
+      "misere_aux": 0
+    },
+    "misere_aux": {
+      "n": 12,
+      "edges": [
+        200,
+        224,
+        321,
+        532,
+        584,
+        1058,
+        1168,
+        1792
+      ],
+      "normal": 9,
+      "misere_aux": 9
+    }
+  },
+  "pair_histogram": {
+    "0,1": 119,
+    "0,2": 6,
+    "0,3": 3,
+    "0,4": 2,
+    "0,5": 2,
+    "0,7": 1,
+    "1,0": 119,
+    "1,2": 3,
+    "1,3": 6,
+    "1,4": 2,
+    "1,5": 2,
+    "1,6": 1,
+    "2,0": 4,
+    "2,1": 3,
+    "2,2": 39,
+    "3,0": 3,
+    "3,1": 4,
+    "3,3": 39,
+    "4,0": 2,
+    "4,1": 1,
+    "4,4": 23,
+    "5,0": 1,
+    "5,1": 2,
+    "5,5": 23,
+    "6,0": 1,
+    "6,3": 1,
+    "6,6": 9,
+    "7,1": 1,
+    "7,2": 1,
+    "7,7": 9,
+    "8,1": 1,
+    "8,8": 8,
+    "9,0": 1,
+    "9,9": 8
+  },
+  "limitation": "Only one-edge extensions of selected seven-edge cores; not a complete eight-edge census."
+}
