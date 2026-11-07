@@ -3661,6 +3661,7 @@
 - ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 純三点達成例の指定有限整数点盤への移送
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): 全kについて指定有限整数点盤に移す
 - ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 各有限rank三族の指定有限整数点盤での実現
+- ← depends_on [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md): 達成族の指定有限整数点盤への実現
 
 ## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
@@ -3681,13 +3682,15 @@
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点残余族と最大値六型の有限整数点盤への実現
 - ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 六点でg4、七点でg5を達成し二段差の鋭さを示す
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 純三点でg2とg3に必要な最少点数の下界
+- ← depends_on [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md): 純三点の低値2と3の点数下界
 
-## [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) 純三点残余辺が3本以下ならGrundyは1以下、4本以下で3以下、5本以下で5以下で全て鋭い
+## [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) 純三点残余辺1〜7本の通常値とmisère補助値の鋭い最大値は1,1,1,3,5,7,9
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 純三点残余族の通常ゲームと自由点のxor分離
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 抽象三点禁止族の全型を指定有限整数点盤へ移せる
 - ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 五本以下の三点辺ならg<=5という全称下界根拠
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 純三点のg2とg3に必要な最少辺数の下界
+- ← depends_on [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md): 七辺以下の全核と自由点偶奇の通常値・補助値の完全表
 
 ## [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) 残余辺の所属被覆重みはGrundy上界を与え、固定rankでは辺数に対する線形上界が成立する
 
@@ -3706,8 +3709,9 @@
 - → depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 六点でg4、七点でg5を達成し二段差の鋭さを示す
 - → depends_on [K0309](../items/K0309-misere-small-legal-set-exchange.md): 五合法点以下の交換則でmisèreの有限基底を得る。六点の完全分類は純三点h3の下界にも使用
 - ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 合法点数の最小値の下界
+- ← depends_on [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md): 任意rankでの合法点数と両値の二段差、および純三点h2とh3の点数下界
 
-## [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) 純三点ゲームのGrundy6と7は最少点数が八と九、最少辺数はともに六本
+## [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) 純三点のGrundy6と7は最少点数八と九・最少辺数六で、辺数最小核は全十型
 
 - → depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 五本以下の三点辺ならg<=5という全称下界根拠
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 自由点一個はxor1でg6をg7へ移す
@@ -3761,3 +3765,10 @@
 
 - → depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 固定核＋長の正確な再帰と有限窓定理。本実験はその再帰の非自己項B(L)を抽象的に直接与える
 - → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 帰納ステップの候補補題（Bが最終34周期なら解も最終34周期）に対する有限証拠。証明ではない
+
+## [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) 純三点ゲームの通常値とmisère補助値2〜9の点数・辺数Pareto前線が確定し、8と9の最少合法点数は十と十一
+
+- → depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 七辺以下の全核と自由点偶奇の通常値・補助値の完全表
+- → depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 純三点の低値2と3の点数下界
+- → depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 任意rankでの合法点数と両値の二段差、および純三点h2とh3の点数下界
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 達成族の指定有限整数点盤への実現

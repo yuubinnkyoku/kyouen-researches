@@ -3015,6 +3015,21 @@
 ## [research/experiments/maximal-terminal-gap-all-r-20261101/verify.py](../../../research/experiments/maximal-terminal-gap-all-r-20261101/verify.py)
 
 - [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (verifier): 32896抽象所属型と11×11内12点証人の495四点組・全安全局面の独立検査
+## [research/experiments/minimum-grundy-eight-20261108/catalog_both.py](../../../research/experiments/minimum-grundy-eight-20261108/catalog_both.py)
+
+- [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (verifier): 全58146核の両偶奇を集計し、全前線証人を残余再帰で再検査
+## [research/experiments/minimum-grundy-eight-20261108/output/audit_pruned.json](../../../research/experiments/minimum-grundy-eight-20261108/output/audit_pruned.json)
+
+- [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (certificate): 十点八辺の両値8・十一点八辺の両値9、18/19点の整数盤と全四点組
+## [research/experiments/minimum-grundy-eight-20261108/output/pareto_both.json](../../../research/experiments/minimum-grundy-eight-20261108/output/pareto_both.json)
+
+- [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (certificate): 両値2〜9の全非支配組合せと各族の辺mask証人
+## [research/experiments/minimum-grundy-eight-20261108/proof.md](../../../research/experiments/minimum-grundy-eight-20261108/proof.md)
+
+- [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (proof): 点数下界・七辺全核・点数最小証人による未列挙全辺数の支配排除
+## [research/experiments/minimum-grundy-eight-20261108/verify.py](../../../research/experiments/minimum-grundy-eight-20261108/verify.py)
+
+- [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (verifier): 点数最小g/h8と9を独立残余再帰・C++subset・整数座標盤で検査
 ## [research/experiments/misere-legal-count-gap-two-20261108/output/audit.json](../../../research/experiments/misere-legal-count-gap-two-20261108/output/audit.json)
 
 - [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (certificate): 全小型と全達成例7037根・117656安全状態で両値一致
@@ -9806,6 +9821,52 @@
 ## [research/experiments/pure-triple-maximum-grundy-six-20261107/scan.py](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/scan.py)
 
 - [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (solver): 初手後の小核表による全1048576族の根値計算
+## [research/experiments/pure-triple-seven-edge-complete-20261108/audit.py](../../../research/experiments/pure-triple-seven-edge-complete-20261108/audit.py)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (verifier): 全生成と独立母関数・二つの通常値C++計算
+## [research/experiments/pure-triple-seven-edge-complete-20261108/misere.py](../../../research/experiments/pure-triple-seven-edge-complete-20261108/misere.py)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (verifier): 自由点両偶奇の通常値と補助値の全件照合
+## [research/experiments/pure-triple-seven-edge-complete-20261108/output/audit.json](../../../research/experiments/pure-triple-seven-edge-complete-20261108/output/audit.json)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (certificate): 七辺全53340型と通常値ヒストグラム
+## [research/experiments/pure-triple-seven-edge-complete-20261108/output/misere.json](../../../research/experiments/pure-triple-seven-edge-complete-20261108/output/misere.json)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (certificate): 106680根・199776072安全状態の両値比較と全補助値
+## [research/experiments/pure-triple-seven-edge-complete-20261108/proof.md](../../../research/experiments/pure-triple-seven-edge-complete-20261108/proof.md)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (proof): 全53340七辺核・両値最大9・七辺g8唯一核の完全証明
+## [research/experiments/pure-triple-six-edge-complete-20261108/audit.py](../../../research/experiments/pure-triple-six-edge-complete-20261108/audit.py)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (verifier): 六辺全核の生成と別subset根値比較
+## [research/experiments/pure-triple-six-edge-complete-20261108/catalog.py](../../../research/experiments/pure-triple-six-edge-complete-20261108/catalog.py)
+
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (verifier): 全十高値核の抽出と独立補助値再評価
+## [research/experiments/pure-triple-six-edge-complete-20261108/count_signatures.py](../../../research/experiments/pure-triple-six-edge-complete-20261108/count_signatures.py)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (verifier): 母関数係数と分割束反転による独立辺ラベル付き総数
+## [research/experiments/pure-triple-six-edge-complete-20261108/generate.cpp](../../../research/experiments/pure-triple-six-edge-complete-20261108/generate.cpp)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (verifier): 辺次数profileで正規化する完全辺追加生成器
+## [research/experiments/pure-triple-six-edge-complete-20261108/output/audit.json](../../../research/experiments/pure-triple-six-edge-complete-20261108/output/audit.json)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (certificate): 全4279型と3190580安全状態の通常値
+## [research/experiments/pure-triple-six-edge-complete-20261108/output/generation_regression.json](../../../research/experiments/pure-triple-six-edge-complete-20261108/output/generation_regression.json)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (certificate): 一般化生成器と元の六辺全署名・安定化群位数の完全一致
+## [research/experiments/pure-triple-six-edge-complete-20261108/output/maximal_six_kernels.json](../../../research/experiments/pure-triple-six-edge-complete-20261108/output/maximal_six_kernels.json)
+
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (certificate): 八点三型・九点六型・十点一型の全十核と補助値
+## [research/experiments/pure-triple-six-edge-complete-20261108/output/misere.json](../../../research/experiments/pure-triple-six-edge-complete-20261108/output/misere.json)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (certificate): 五辺以下を含む4806核の両偶奇と10171506安全状態
+## [research/experiments/pure-triple-six-edge-complete-20261108/output/misere_values.json](../../../research/experiments/pure-triple-six-edge-complete-20261108/output/misere_values.json)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (data): 核順序hash付きの両自由点偶奇の全補助値
+## [research/experiments/pure-triple-six-edge-complete-20261108/proof.md](../../../research/experiments/pure-triple-six-edge-complete-20261108/proof.md)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (proof): 全称有限帰着・完全生成・独立総数監査・自由点二個周期
+- [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (proof): 六辺完全表と任意個自由点の全称分類
 ## [research/experiments/pure-triple-six-edge-witnesses-20261108/output/search.json](../../../research/experiments/pure-triple-six-edge-witnesses-20261108/output/search.json)
 
 - [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (certificate): 831入力の探索範囲・度数と九点達成例の全初手値
@@ -10889,6 +10950,9 @@
 ## [research/log/2026-11-08-misere-mobility-gap-and-larger-pivot-values.md](../../../research/log/2026-11-08-misere-mobility-gap-and-larger-pivot-values.md)
 
 - [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (log): 値9までの有限証拠と無界性予想・同値帰着を分けた記録
+## [research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md](../../../research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md)
+
+- [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (log): 有界探索から完全核表と全点数最適表へ至った経緯
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

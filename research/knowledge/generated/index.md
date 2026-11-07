@@ -670,11 +670,11 @@
 | [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) | 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか | proposition | conjectured | residual-games, grundy, geometry, variants |
 | [K0685](../items/K0685-n11-chain-audit-wall.md) | 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+） | question | open | square-outcomes, certificates, verification |
 | [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) | 純三点制約の六点Grundyは0・1・2・4のみで、値3の最小点数は値4より大きい | proposition | computed | grundy, residual-games, geometry, variants |
-| [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) | 純三点残余辺が3本以下ならGrundyは1以下、4本以下で3以下、5本以下で5以下で全て鋭い | proposition | proved | grundy, residual-games, geometry, variants |
+| [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) | 純三点残余辺1〜7本の通常値とmisère補助値の鋭い最大値は1,1,1,3,5,7,9 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) | 残余辺の所属被覆重みはGrundy上界を与え、固定rankでは辺数に対する線形上界が成立する | proposition | proved | grundy, residual-games, search-methods, variants |
 | [K0689](../items/K0689-pure-triple-hyperforest-eight-edge-spectrum.md) | 純三点Berge森は六辺以下でGrundy3以下、八辺以下で7以下となり全て鋭い | proposition | proved | grundy, residual-games, variants |
 | [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) | 任意rankの禁止集合ゲームは合法点が五個以上なら通常値とmisère補助値がともに合法点数より二以上小さい | proposition | proved | grundy, residual-games, search-methods, variants |
-| [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) | 純三点ゲームのGrundy6と7は最少点数が八と九、最少辺数はともに六本 | proposition | proved | grundy, residual-games, geometry, variants |
+| [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) | 純三点のGrundy6と7は最少点数八と九・最少辺数六で、辺数最小核は全十型 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) | 全残余辺が一点を共有するrank三以下のゲームは辺数無制限でもGrundy3以下 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) | p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) | 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる | proposition | proved | grundy, residual-games, geometry, variants |
@@ -682,3 +682,4 @@
 | [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) | 二点辺付きrank三共通pivot族のmisère補助値は無界と予想する | proposition | conjectured | grundy, residual-games, variants |
 | [K0697](../items/K0697-core-path-tail-shift-structure.md) | 核＋道の周期34末尾は裸の道の普遍シフトではない（六点純三点辺1825種・五点以下134種の末尾分類） | computation | computed | grundy, residual-games, search-methods, variants |
 | [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) | 道自己畳み込み再帰は最終34周期な任意の強制を周期34へ吸収する（150配置の有限観測・K0684帰納ステップの候補補題） | computation | computed | grundy, residual-games, search-methods |
+| [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) | 純三点ゲームの通常値とmisère補助値2〜9の点数・辺数Pareto前線が確定し、8と9の最少合法点数は十と十一 | proposition | proved | grundy, residual-games, geometry, variants |
