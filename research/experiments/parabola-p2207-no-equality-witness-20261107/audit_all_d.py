@@ -32,7 +32,7 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE / "output"
 TMP = Path(tempfile.gettempdir()) / "p2207_drat"
 EDGES_PATH = TMP / "edges.txt"
-RESULT_PATH = OUT / "drat_audit_full.json"
+RESULT_PATH = None  # set per prime in main
 
 
 def load_edges():
@@ -93,6 +93,8 @@ def main() -> int:
         edges = run_gen(str(Path(os.environ["TEMP"]) / "forbidden_edges.exe"), p)
         EDGES_PATH.write_text("".join(" ".join(map(str, e)) + "\n" for e in edges),
                               encoding="ascii")
+    global RESULT_PATH
+    RESULT_PATH = OUT / f"drat_audit_full_{p}.json"
     checker = str(Path(os.environ["TEMP"]) / "drat_inc.exe")
     if not Path(checker).exists():
         subprocess.run(["g++", "-O2", "-std=c++17",

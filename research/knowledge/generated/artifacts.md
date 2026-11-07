@@ -3091,6 +3091,16 @@
 ## [research/experiments/misere-legal-count-gap-two-20261108/verify.py](../../../research/experiments/misere-legal-count-gap-two-20261108/verify.py)
 
 - [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) (verifier): 残余縮約h再帰と別C++生subsetの通常/補助値比較
+## [research/experiments/misere-one-free-point-xor-20261108/output/audit.json](../../../research/experiments/misere-one-free-point-xor-20261108/output/audit.json)
+
+- [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) (certificate): 全65536ゲーム形式と純三点58146核の自由点対の独立検査
+## [research/experiments/misere-one-free-point-xor-20261108/proof.md](../../../research/experiments/misere-one-free-point-xor-20261108/proof.md)
+
+- [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) (proof): 旧proofの一自由点xor否定文の訂正、一般xor1則と制限ゲーム可換性
+- [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) (proof): mex恒等式と高さ帰納、低h制限との可換性、以前の否定文の訂正
+## [research/experiments/misere-one-free-point-xor-20261108/verify.py](../../../research/experiments/misere-one-free-point-xor-20261108/verify.py)
+
+- [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) (verifier): 全birthday四以下の子集合形式と自由点追加再帰、既存純三点全自由点対を照合
 ## [research/experiments/mixed-spider-critical-20261102/proof.md](../../../research/experiments/mixed-spider-critical-20261102/proof.md)
 
 - [K0615](../items/K0615-mixed-spider-sparse-long-arm-gaussian-threshold.md) (proof): 異長枝の厳密母関数、有限誤差、正規極限の必要十分条件、固定長枝数の二点混合の証明
@@ -9715,6 +9725,9 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2531.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2531.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): d=1265..1の全数走査（UNSAT 1265・unknown 0・SAT 0）
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2503-2700.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2503-2700.txt)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (data): 新21証人のgeneric 4×4独立検証出力（共円0件）
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizの独立検証（covered/checked・共円0件）の生出力
@@ -9726,6 +9739,7 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 隣接63素数では同じ実装がSAT側で証人を返し独立検証も通っている
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json)
 
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2503..2700の21素数の等号証人（5素数は浅いdで未発見）
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 浅いd走査で2531が最初に落ちた記録
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py)
 
@@ -11029,6 +11043,9 @@
 
 - [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (log): 有限証拠による予想から二側相互帰納の全称証明へ進めた経緯
 - [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) (log): 二点辺なしのpure coneでも全高値を得た経緯
+## [research/log/2026-11-08-one-free-point-xor-correction.md](../../../research/log/2026-11-08-one-free-point-xor-correction.md)
+
+- [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) (log): hの非加法性と一自由点xorを混同していた否定文の訂正記録
 ## [research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md](../../../research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md)
 
 - [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (log): 有界探索から完全核表と全点数最適表へ至った経緯

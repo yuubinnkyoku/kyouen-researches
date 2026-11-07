@@ -149,6 +149,7 @@
 - ← depends_on [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md): 有限通常ゲームのmexとGrundyの定義
 - ← depends_on [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md): 通常ゲームのmex定義
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): mexとGrundyの定義
+- ← depends_on [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md): 通常ゲームのmexと独立な一回手との直和
 
 ## [K0003](../items/K0003-solution-and-evidence-levels.md) 解決段階と計算・証明書・監査の区別
 
@@ -3697,6 +3698,7 @@
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 純三点残余族の通常ゲームと自由点のxor分離
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 抽象三点禁止族の全型を指定有限整数点盤へ移せる
+- → depends_on [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md): 全核への自由点付加は補助値にもxor1として扱える一般補題
 - ← depends_on [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md): 五本以下の三点辺ならg<=5という全称下界根拠
 - ← depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 純三点のg2とg3に必要な最少辺数の下界
 - ← depends_on [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md): 七辺以下の全核と自由点偶奇の通常値・補助値の完全表
@@ -3753,6 +3755,7 @@
 - → depends_on [K0309](../items/K0309-misere-small-legal-set-exchange.md): 終局1のmisère補助mexと通常値との交換則の定義・境界
 - → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 通常rank三以下の共通pivot族の上界3と比較する
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点達成例の指定有限整数点盤への移送
+- → depends_on [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md): 一自由点の普遍xor1則と低h制限通常ゲームとの可換性。旧否定文の訂正
 - ← depends_on [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md): misère補助値の二点辺付きpivot変換
 - ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 二点辺付きpivot変換と自由二点の補助値周期2
 - ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 外側着手後のpaired補助値式と自由点付き純三点の式
@@ -3768,6 +3771,7 @@
 - → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 二点辺付きpivot変換と自由二点の補助値周期2
 - → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 同じ対象の通常Grundyは全点数・全辺数で3以下
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 各有限rank三族の指定有限整数点盤での実現
+- → depends_on [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md): 相互再帰で使う性質Rは全有限不偏ゲームで成立し、制限tにも自由点xor1が適用できる
 - ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): リンク相互再帰Gmのh0・t=m・制限子値集合・自由点での低所属保存
 
 ## [K0697](../items/K0697-core-path-tail-shift-structure.md) 核＋道の周期34末尾は裸の道の普遍シフトではない（六点純三点辺1825種・五点以下134種の末尾分類）
@@ -3814,3 +3818,12 @@
 - → depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 外側着手後のpaired補助値式と自由点付き純三点の式
 - → depends_on [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md): 同じ純三点共通pivot族の通常値上界とリンク子値による初期g1
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 各三点辺に一占有アンカーを置く指定有限整数点盤での実現
+- → depends_on [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md): 自由点付加の補助値xor1は全有限ゲームに成立する一般補題
+
+## [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) 任意有限不偏ゲームの終局1補助mexは一自由点でxor1となり、低h制限ゲームとも直和が可換
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常ゲームのmexと独立な一回手との直和
+- ← depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 全核への自由点付加は補助値にもxor1として扱える一般補題
+- ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 一自由点の普遍xor1則と低h制限通常ゲームとの可換性。旧否定文の訂正
+- ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 相互再帰で使う性質Rは全有限不偏ゲームで成立し、制限tにも自由点xor1が適用できる
+- ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 自由点付加の補助値xor1は全有限ゲームに成立する一般補題

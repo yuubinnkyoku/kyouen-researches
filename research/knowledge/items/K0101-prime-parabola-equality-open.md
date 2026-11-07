@@ -43,8 +43,14 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/README.md
   role: source
   note: 反例候補の方法・全数照合・信頼境界
+- path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json
+  role: certificate
+  note: 2503..2700の21素数の等号証人（5素数は浅いdで未発見）
+- path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2503-2700.txt
+  role: data
+  note: 新21証人のgeneric 4×4独立検証出力（共円0件）
 scope: 奇素数 p における等号 A(p)=(p+3)/2 の有限検証範囲と d=h 例外の記述。
-evidence: finite computation; p=2207で等号証人が存在しない計算結果あり（K0693, needs-review）; それ以外の5..2477は証人あり; all-prime proof unknown
+evidence: finite computation; p=2207とp=2531で等号証人が存在しない計算結果あり（K0693/K0702, needs-review）; 5..2477と2503..2700の21素数は証人あり; 2539/2543/2549/2647は浅い走査で未発見; all-prime proof unknown
 ---
 
 # 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
@@ -95,6 +101,11 @@ K0334 の等価（等号 ⟺ ある `d` で CNF 充足可能）とサイズ `h+2
 `A(2207) <= 1104 < 1105 = (2207+3)/2` が従う。**本問の「全奇素数で等号」は p=2207 で否定される**
 （K0693, status needs-review）。ただし UNSAT の DRAT 証明は未取得・未検査であり、本項の status は
 open のまま維持する。監査完了後に K0693 を確定し、本項を superseded にする予定。
+2503..2700 の 26 素数も走査し、21 素数で証人を保存・独立検証した（2503, 2521, 2551, 2557, 2579,
+2591, 2593, 2609, 2617, 2621, 2633, 2657, 2659, 2663, 2671, 2677, 2683, 2687, 2689, 2693, 2699）。
+残る 5 素数（2531, 2539, 2543, 2549, 2647）は d=h..h-6 で証人が出ず、2531 は全 d 走査で
+等号不成立が確定した（K0702）。2003..2477 では浅い失敗が 2207 の 1 個だけだったのに対し、
+2500 以降は浅い失敗が 5/26 と多く、d=h 構成の破綻が p とともに増える可能性がある（未確定）。
 続いて **p=2531 でも d=1..1265 の全数が UNSAT**（unknown 0）となり、2例目の等号不達成候補
 `A(2531) <= 1266 < 1267` が得られた（K0702）。p=2207 では標本 21 d の DRAT 証明を独立チェッカーで
 VERIFIED にしたが、p=2531 の監査は未実施。p=2539, 2543, 2549 も d=h..h-30 で証人未発見であり、

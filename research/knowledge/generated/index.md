@@ -687,3 +687,4 @@
 | [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) | 同一整数盤で石数・合法点数・最大追加手数が同じでもGrundy差は非有界で、終局長可能集合も一致させられる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) | p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) | 純三点共通pivot族は通常値0または1を固定して全misère補助値4以上を実現できる | proposition | proved | grundy, residual-games, geometry, variants |
+| [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) | 任意有限不偏ゲームの終局1補助mexは一自由点でxor1となり、低h制限ゲームとも直和が可換 | proposition | proved | grundy, residual-games, variants |
