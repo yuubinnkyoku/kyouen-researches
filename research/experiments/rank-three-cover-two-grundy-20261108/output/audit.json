@@ -1,0 +1,67 @@
+{
+  "audit": "PASS",
+  "independent_implementation": "labeled residual shrink and blocked-point deletion recursion",
+  "records": [
+    {
+      "n": 10,
+      "edges": [
+        7,
+        22,
+        38,
+        73,
+        265,
+        289,
+        385,
+        522,
+        769
+      ],
+      "grundy": 7,
+      "cpp_discovery_samples": 50000
+    },
+    {
+      "n": 12,
+      "edges": [
+        7,
+        35,
+        37,
+        50,
+        137,
+        261,
+        546,
+        1029,
+        1281,
+        2113,
+        2178,
+        3073,
+        3074
+      ],
+      "grundy": 8,
+      "cpp_discovery_samples": 693
+    },
+    {
+      "n": 14,
+      "edges": [
+        7,
+        26,
+        131,
+        161,
+        262,
+        386,
+        522,
+        530,
+        577,
+        1041,
+        3074,
+        4161,
+        4609,
+        8226,
+        8258,
+        8321,
+        8706
+      ],
+      "grundy": 8,
+      "cpp_discovery_samples": 577
+    }
+  ],
+  "limitation": "no exhaustive census or universal cover-two upper bound"
+}

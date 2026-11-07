@@ -3,12 +3,17 @@
 #include <iostream>
 #include <vector>
 
+#ifndef MAX_LEGAL_POINTS
+#define MAX_LEGAL_POINTS 21
+#endif
+static_assert(MAX_LEGAL_POINTS<=24);
+
 int main(int argc,char**argv){
     if(argc!=4)return 2;
     std::ifstream input(argv[1]);std::ofstream output(argv[2],std::ios::binary);
     uint64_t count;input>>count;uint64_t safe_count=0;
     for(uint64_t row=0;row<count;++row){
-        int n,h;input>>n>>h;if(n>21||n<0)return 3;
+        int n,h;input>>n>>h;if(n>MAX_LEGAL_POINTS||n<0)return 3;
         std::vector<int> edges(h);for(auto&edge:edges)input>>edge;
         std::vector<uint8_t> safe(1<<n),g(1<<n),misere(1<<n);
         for(int s=(1<<n)-1;s>=0;--s){
