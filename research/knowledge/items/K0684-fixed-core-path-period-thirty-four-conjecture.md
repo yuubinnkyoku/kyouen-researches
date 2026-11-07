@@ -37,11 +37,20 @@ artifacts:
 - path: research/experiments/rooted-core-six-pure-triple-six-edges-20261107/output/audit.json
   role: certificate
   note: 6点純三点辺六本以下の完全族732状態の全0..1211整数値と有限窓証明書。jointly_certified=true
+- path: research/experiments/rooted-core-six-pure-triple-full-20261108/proof.md
+  role: proof
+  note: 6点純三点辺の全型（2^20全1048576件・Burnsideで根付き10688型）についての全長周期認証。共同開始637
+- path: research/experiments/rooted-core-six-pure-triple-full-20261108/verify.py
+  role: verifier
+  note: 高速orbit列挙と既証明小核表の再利用・適応有限窓認証。7本以上400型長さ0..6の独立subset mex2800条件で照合
+- path: research/experiments/rooted-core-six-pure-triple-full-20261108/output/audit.json
+  role: certificate
+  note: 6点純三点辺の全10688状態の全0..1343整数値と有限窓証明書。jointly_certified=true・Grundy最大29
 - path: research/log/2026-11-07-rooted-core-and-rank-three-universality.md
   role: log
   note: 有限の核サイズで閉じた定理と、無界核に関する予想を分離した経緯
 scope: 任意有限の合法点上のサイズ2・3のclutterと指定根を固定し、その根に長さLの二点禁止道を付ける通常ゲーム。核サイズは無界、核自体はLに依存しない。
-evidence: K0682で5点以下の全6337ラベル付き核・513型を証明。追加の6・7点有限族100入力型も101新規閉状態の周期証明窓を満たす。さらに6点純三点辺が高々6本の完全族60460件（根付き732型・732新規閉状態）も共同開始571で全長認証。6点以上の任意核の全称証明や反例は未確定。
+evidence: K0682で5点以下の全6337ラベル付き核・513型を証明。6点純三点辺は高々6本の完全族732型（開始571）を経て、全型（2^20全1048576件・Burnsideで根付き10688型・10688新規閉状態）まで拡張し共同開始637で全長認証。すなわち6点の純三点辺核は全て証明済み。二点辺混在や7点以上の任意核の全称証明・反例は未確定。
 ---
 
 ## 予想
@@ -66,6 +75,12 @@ K0682により5点以下の全核は証明済みで、一様開始500、最小�
 `rooted-core-six-pure-triple-six-edges-20261107` で全長認証した。共同開始は571（最悪状態の
 最終周期破綻570）、必要値1211、prefix上Grundy最大27。全732型・長さ0..6の独立subset mex
 5124条件・1345310安全状態で再帰値と一致。これは有限族の完全な定理であり、無界核の全称証明ではない。
+さらに `rooted-core-six-pure-triple-full-20261108` で6点純三点辺の**全型**へ拡張した。
+三点辺同士は包含を持たないので全部分族がclutterであり、raw 2^20=1048576件すべてが合法核。
+Burnsideの補題で根付き同型型数は厳密に10688。全10688新規状態（閉包11201＝新規10688＋既知513）を
+全長認証し、共同開始637（最悪最終周期破綻636）・必要値1343・prefix上Grundy最大29。
+7本以上の型から無作為400型・長さ0..6の独立subset mex2800条件・596850安全状態でも一致。
+これで**6点の純三点辺核は全て**証明済みとなった（二点辺混在・7点以上は未証明）。
 K0682の有限窓定理は候補周期を認証するものであり、認証が必ず成功することは保証しない。
 
 特定の長いprefixで周期が見つからないことだけでは反例にならない。
