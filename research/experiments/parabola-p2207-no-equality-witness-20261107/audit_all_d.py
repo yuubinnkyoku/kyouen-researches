@@ -31,18 +31,18 @@ from pysat.solvers import Cadical195  # noqa: E402
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "output"
 TMP = Path(tempfile.gettempdir()) / "p2207_drat"
-EDGES_PATH = TMP / "edges.txt"
+EDGES_PATH = None  # set per prime in main (edges are prime-specific)
 RESULT_PATH = None  # set per prime in main
 
 
-def load_edges():
-    with EDGES_PATH.open(encoding="ascii") as f:
+def load_edges(path: str):
+    with open(path, encoding="ascii") as f:
         return [tuple(map(int, line.split())) for line in f]
 
 
 def audit_one(args):
-    p, d, checker, budget = args
-    edges = load_edges()
+    p, d, checker, budget, edges_path = args
+    edges = load_edges(edges_path)
     clauses = clauses_for_pair(p, edges, d)
     solver = Cadical195(bootstrap_with=clauses, with_proof=True)
     solver.conf_budget(budget)
@@ -54,8 +54,8 @@ def audit_one(args):
     if res is not False or not proof:
         return {"d": d, "solver": "SAT" if res else "UNKNOWN", "verified": False,
                 "seconds": round(solve_s, 1)}
-    cnf = TMP / f"d{d}.cnf"
-    pf = TMP / f"d{d}.drat"
+    cnf = TMP / f"{p}_d{d}.cnf"
+    pf = TMP / f"{p}_d{d}.drat"
     with cnf.open("w", encoding="ascii") as f:
         f.write(f"p cnf {(p - 1) // 2} {len(clauses)}\n")
         for c in clauses:
@@ -70,8 +70,11 @@ def audit_one(args):
            "verified": chk.returncode == 0 and "VERIFIED" in (out[-1] if out else ""),
            "checker_out": out[-1] if out else chk.stderr.strip()[:200],
            "solve_seconds": round(solve_s, 1), "check_seconds": round(check_s, 1)}
-    cnf.unlink(missing_ok=True)
-    pf.unlink(missing_ok=True)
+    for f in (cnf, pf):
+        try:
+            f.unlink(missing_ok=True)
+        except OSError:
+            pass
     return rec
 
 
@@ -89,6 +92,8 @@ def main() -> int:
     to_d = args.to_d or h
     OUT.mkdir(exist_ok=True)
     TMP.mkdir(parents=True, exist_ok=True)
+    global EDGES_PATH
+    EDGES_PATH = TMP / f"edges_{p}.txt"
     if not EDGES_PATH.exists():
         edges = run_gen(str(Path(os.environ["TEMP"]) / "forbidden_edges.exe"), p)
         EDGES_PATH.write_text("".join(" ".join(map(str, e)) + "\n" for e in edges),
@@ -108,7 +113,7 @@ def main() -> int:
            else list(range(args.from_d, to_d + 1)))
     todo = [d for d in rng if results.get(d, {}).get("verified") is not True]
     print(f"p={p} h={h} todo={len(todo)} done={len(results)}", flush=True)
-    tasks = [(p, d, checker, args.budget) for d in todo]
+    tasks = [(p, d, checker, args.budget, str(EDGES_PATH)) for d in todo]
     t0 = time.time()
     done = 0
     with mp.Pool(processes=args.workers) as pool:
