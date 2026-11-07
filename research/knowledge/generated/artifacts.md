@@ -9581,6 +9581,24 @@
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 2003..2477の64素数のうち62の等号証人（2207, 2351は予算内未発見）
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2003..2477の64素数のうち63の等号証人。2207は深いd走査中
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 隣接63素数では同じ実装がSAT側で証人を返し独立検証も通っている
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (source): 反例候補の方法・証拠・信頼境界・次の監査
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): d=1..1103の判定表を生成し、タイムアウト分は衝突予算2000万で再判定する
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 全1103 dのUNSAT判定と出所（cadicalログ／マルチプロセス／再判定）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/reduction_validation.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/reduction_validation.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 7素数の突合結果（全一致）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
 ## [research/experiments/path-run-coefficients-20261103/proof.md](../../../research/experiments/path-run-coefficients-20261103/proof.md)
 
 - [K0657](../items/K0657-path-run-terminal-coefficients.md) (proof): 端点削除と内部削除区間の正長分割による全称二項和・端係数の証明

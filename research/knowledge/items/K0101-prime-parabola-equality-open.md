@@ -37,8 +37,14 @@ artifacts:
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt
   role: data
   note: generic 4×4 Leibnizによる全63証人の独立検証出力（共円0件）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json
+  role: data
+  note: p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/README.md
+  role: source
+  note: 反例候補の方法・全数照合・信頼境界
 scope: 奇素数 p における等号 A(p)=(p+3)/2 の有限検証範囲と d=h 例外の記述。
-evidence: finite computation; no counterexample to equality found through 2477; 5..2203 は穴なし、2213..2477 も 2207 を除き証人あり; all-prime proof unknown
+evidence: finite computation; p=2207で等号証人が存在しない計算結果あり（K0693, needs-review）; それ以外の5..2477は証人あり; all-prime proof unknown
 ---
 
 # 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
@@ -77,3 +83,16 @@ Next steps: characterize the `d=h` exception pattern; extend finite verification
 
 Scope clarification: 有限範囲の保存証人が 2203 まで延びただけで、全奇素数での等号は依然未解決。
 `d=h` の例外分布（h-1 が多いが 1861 は h-66）の特徴づけも未解決。
+
+## 2026-11-08 p=2207 の反例候補（要監査）
+
+上記 2026-11-07 の走査を続けた結果、**p=2207 では d=1..1103 の全 `d` で CNF が UNSAT**
+（UNSAT 1103・SAT 0・不明 0）となった。タイムアウトした 4 件（289, 297, 312, 324）は
+衝突予算 2000 万で再判定済み。Glucose4 と Minisat22 も d=1,289,550,1103 で UNSAT。
+実装の全数照合は p=5..23 の全安全集合列挙と全 `d` で一致（p=23 で 8,064 集合・d 集合一致）。
+
+K0334 の等価（等号 ⟺ ある `d` で CNF 充足可能）とサイズ `h+2` の集合が一完全対構造を取ることから、
+`A(2207) <= 1104 < 1105 = (2207+3)/2` が従う。**本問の「全奇素数で等号」は p=2207 で否定される**
+（K0693, status needs-review）。ただし UNSAT の DRAT 証明は未取得・未検査であり、本項の status は
+open のまま維持する。監査完了後に K0693 を確定し、本項を superseded にする予定。
+`A(2207)` の正確な値（1104 か、それ未満か）は未確定。

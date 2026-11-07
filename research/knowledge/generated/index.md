@@ -672,3 +672,4 @@
 | [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) | 純三点制約の六点Grundyは0・1・2・4のみで、値3の最小点数は値4より大きい | proposition | computed | grundy, residual-games, geometry, variants |
 | [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) | 純三点残余辺が3本以下ならGrundyは1以下、4本以下で3以下、5本以下で5以下で全て鋭い | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) | 残余辺の所属被覆重みはGrundy上界を与え、固定rankでは辺数に対する線形上界が成立する | proposition | proved | grundy, residual-games, search-methods, variants |
+| [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) | p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |

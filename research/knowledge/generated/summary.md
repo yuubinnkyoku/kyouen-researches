@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 670 / alias: 269 / artifactファイル: 3320
+K項目: 671 / alias: 269 / artifactファイル: 3325
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 670 / alias: 269 / artifactファイル: 3320
 | computation | 64 |
 | definition | 5 |
 | method | 4 |
-| proposition | 530 |
+| proposition | 531 |
 | question | 39 |
 | verification | 28 |
 
@@ -20,6 +20,7 @@ K項目: 670 / alias: 269 / artifactファイル: 3320
 | active | 9 |
 | computed | 142 |
 | conjectured | 2 |
+| needs-review | 1 |
 | observed | 26 |
 | open | 37 |
 | proved | 348 |
@@ -36,17 +37,17 @@ K項目: 670 / alias: 269 / artifactファイル: 3320
 | certificates | 94 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 329 |
+| geometry | 330 |
 | grundy | 156 |
 | maximal-safe | 167 |
-| maximum-safe | 76 |
+| maximum-safe | 77 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
 | rectangles | 103 |
 | residual-games | 110 |
 | rules | 8 |
-| search-methods | 100 |
+| search-methods | 101 |
 | square-outcomes | 90 |
 | statistics | 121 |
 | strategy-length | 94 |
@@ -98,6 +99,7 @@ K項目: 670 / alias: 269 / artifactファイル: 3320
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [scope-unclear] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) [needs-review] p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 
 ## 警告
 

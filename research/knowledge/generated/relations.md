@@ -771,6 +771,7 @@
 - ← depends_on [K0098](../items/K0098-p23-half-interval-counterexample.md)
 - ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md)
 - ← depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
+- ← depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -787,6 +788,7 @@
 ## [K0101](../items/K0101-prime-parabola-equality-open.md) 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md)
+- ← supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 全奇素数での等号を否定する反例候補。監査により確定する
 
 ## [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) 具体巨大証明書をLean核のみで検査する実装は未完成
 
@@ -1707,6 +1709,7 @@
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
 - → depends_on [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md): Q_pの線上限2・円上限4と円方程式の原始係数
+- ← depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3667,3 +3670,9 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 有限通常ゲームのmexとGrundyの定義
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余族の継続ゲーム表現と自由点のxor分離
+
+## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
+
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
+- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
+- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する反例候補。監査により確定する
