@@ -1,0 +1,131 @@
+{
+  "status": "FAILED_FORMULA",
+  "differences": 3519,
+  "first_differences": [
+    {
+      "n": 3,
+      "edges": [
+        3,
+        5
+      ],
+      "expected_normal": 2,
+      "expected_misere": 3,
+      "actual_normal": 2,
+      "actual_misere": 2
+    },
+    {
+      "n": 4,
+      "edges": [
+        3,
+        13
+      ],
+      "expected_normal": 3,
+      "expected_misere": 2,
+      "actual_normal": 3,
+      "actual_misere": 3
+    },
+    {
+      "n": 4,
+      "edges": [
+        5,
+        11
+      ],
+      "expected_normal": 3,
+      "expected_misere": 2,
+      "actual_normal": 3,
+      "actual_misere": 3
+    },
+    {
+      "n": 4,
+      "edges": [
+        3,
+        5
+      ],
+      "expected_normal": 3,
+      "expected_misere": 2,
+      "actual_normal": 3,
+      "actual_misere": 3
+    },
+    {
+      "n": 4,
+      "edges": [
+        9,
+        7
+      ],
+      "expected_normal": 3,
+      "expected_misere": 2,
+      "actual_normal": 3,
+      "actual_misere": 3
+    },
+    {
+      "n": 4,
+      "edges": [
+        3,
+        9
+      ],
+      "expected_normal": 3,
+      "expected_misere": 2,
+      "actual_normal": 3,
+      "actual_misere": 3
+    },
+    {
+      "n": 4,
+      "edges": [
+        5,
+        9
+      ],
+      "expected_normal": 3,
+      "expected_misere": 2,
+      "actual_normal": 3,
+      "actual_misere": 3
+    },
+    {
+      "n": 5,
+      "edges": [
+        3,
+        13
+      ],
+      "expected_normal": 2,
+      "expected_misere": 3,
+      "actual_normal": 2,
+      "actual_misere": 2
+    },
+    {
+      "n": 5,
+      "edges": [
+        3,
+        21
+      ],
+      "expected_normal": 2,
+      "expected_misere": 3,
+      "actual_normal": 2,
+      "actual_misere": 2
+    },
+    {
+      "n": 5,
+      "edges": [
+        3,
+        25
+      ],
+      "expected_normal": 2,
+      "expected_misere": 3,
+      "actual_normal": 2,
+      "actual_misere": 2
+    }
+  ],
+  "native_misere_histogram": {
+    "0": 6421,
+    "1": 31718,
+    "2": 3423,
+    "3": 96
+  },
+  "native_maximum_witness": {
+    "n": 4,
+    "edges": [
+      3,
+      13
+    ],
+    "normal": 3,
+    "misere": 3
+  }
+}
