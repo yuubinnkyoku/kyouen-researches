@@ -2770,13 +2770,13 @@
 - [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (proof): 先行の一般論。κ の存在・r 非減少性・発散とデカルトの上界を本項は前提にする
 ## [research/experiments/graph-star-subdivided-star-kappa-asymptotic-20261107/output/kappa_asymptotic.json](../../../research/experiments/graph-star-subdivided-star-kappa-asymptotic-20261107/output/kappa_asymptotic.json)
 
-- [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) (data): r=4..10000 の残差表と監査結果
+- [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) (data): r=4..30000 の残差表・三項照合表と監査結果
 ## [research/experiments/graph-star-subdivided-star-kappa-asymptotic-20261107/proof.md](../../../research/experiments/graph-star-subdivided-star-kappa-asymptotic-20261107/proof.md)
 
-- [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) (proof): 両側対数評価・Φ の漸近・二項漸近律の全称証明
+- [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) (proof): 両側対数評価・M の展開・閾値の位置・三項（および二項・先頭項）漸近の全称証明
 ## [research/experiments/graph-star-subdivided-star-kappa-asymptotic-20261107/verify_kappa_asymptotic.py](../../../research/experiments/graph-star-subdivided-star-kappa-asymptotic-20261107/verify_kappa_asymptotic.py)
 
-- [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) (verifier): κ(3000)=60057, κ(10000)=225393 の厳密証明、残差表、閾値の両側挟み込み、両側評価の数値監査
+- [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) (verifier): κ(3000)=60057, κ(10000)=225393, κ(30000)=744937 の厳密証明、三項照合表、閾値の挟み込み、両側評価の数値監査
 ## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/no_contact_double_root.json](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/no_contact_double_root.json)
 
 - [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (data): r<=1000 の閾値表と各検査の集計

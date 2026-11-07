@@ -40,6 +40,12 @@ def model(r: int) -> float:
     return 2.0 * r * lr + r * math.log(lr) + CSTAR * r
 
 
+def model_three_terms(r: int) -> float:
+    lr = math.log(r)
+    llr = math.log(lr)
+    return 2.0 * r * lr + r * llr + CSTAR * r + r * (llr + CSTAR) / (2.0 * lr)
+
+
 def decimal_ln_m(k: int, r: int) -> Decimal:
     a = Decimal(r + 2) / Decimal(r + 1)
     return ((Decimal(k + 1) * a.ln()) + (Decimal(k) * Decimal(k).ln())
@@ -71,10 +77,10 @@ def main() -> int:
         recheck[str(r)] = {"imported": kappa.get(r), "recomputed": got,
                            "agrees": kappa.get(r) == got}
         kappa[r] = got
-    for r in (3000, 10000):
-        kappa[r] = base.threshold(r)["threshold"]
+    for r in (3000, 10000, 30000):
+        kappa[r] = base.threshold(r, n_cap=5_000_000)["threshold"]
     results["recheck_sample"] = recheck
-    results["new_large_values"] = {"3000": kappa[3000], "10000": kappa[10000]}
+    results["new_large_values"] = {str(r): kappa[r] for r in (3000, 10000, 30000)}
 
     rows = []
     for r in sorted(kappa):
@@ -103,9 +109,40 @@ def main() -> int:
         "max_residual_over_r": max(x["residual_over_r"] for x in rows),
     }
 
+    # three-term model: kappa = 2r ln r + r ln ln r + (1+ln2)r + r(ln ln r+1+ln2)/(2 ln r) + O(...)
+    three = []
+    for r in sorted(kappa):
+        if r < 1000:
+            continue
+        k = kappa[r]
+        lr = math.log(r)
+        llr = math.log(lr)
+        pred3 = model_three_terms(r)
+        err = k - pred3
+        scale = r * llr * llr / (lr * lr)
+        third = r * (llr + CSTAR) / (2.0 * lr)
+        three.append({
+            "r": r,
+            "kappa": k,
+            "predicted_three_terms": pred3,
+            "error": err,
+            "error_over_r_lnln2_ln2": err / scale,
+            "residual_over_third_term": (k - model(r)) / third,
+        })
+    results["three_term_check"] = {
+        "rows": len(three),
+        "all_error_below_r_lnln2_ln2": all(abs(x["error"]) <= 2 * abs(
+            x["r"] * math.log(math.log(x["r"])) ** 2 / math.log(x["r"]) ** 2) for x in three),
+        "residual_over_third_term_range": [
+            min(x["residual_over_third_term"] for x in three),
+            max(x["residual_over_third_term"] for x in three),
+        ],
+        "rows_data": three,
+    }
+
     # spot checks: below the predicted threshold (rootless) and above it (two roots)
     spot = {}
-    for r in (3000, 10000):
+    for r in (3000, 10000, 30000):
         low = k_candidate(r, 1.2)
         high = k_candidate(r, 2.5)
         spot[str(r)] = {
@@ -146,6 +183,11 @@ def main() -> int:
     print("residual summary:", json.dumps(
         {k: v for k, v in results["residual_table"].items() if k != "samples"},
         ensure_ascii=False))
+    print("three-term rows:")
+    for x in results["three_term_check"]["rows_data"]:
+        print(f"  r={x['r']:>6} kappa={x['kappa']:>9} pred3={x['predicted_three_terms']:.1f}"
+              f" err={x['error']:.1f} err/scale={x['error_over_r_lnln2_ln2']:.4f}"
+              f" resid/third={x['residual_over_third_term']:.4f}")
     print("residual samples:")
     for x in results["residual_table"]["samples"]:
         print(f"  r={x['r']:>6} kappa={x['kappa']:>8} ratio={x['ratio_kappa_over_r_ln_r']:.4f}"

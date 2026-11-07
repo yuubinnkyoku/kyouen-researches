@@ -3581,7 +3581,7 @@
 - → depends_on [K0602](../items/K0602-graph-star-qpoint-circle-extrema.md): グラフ星型共円構成。本項はその q パラメータ族の実根構造
 - ← depends_on [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md): 単一切替定理、κ(r) の定義と Θ(r log r) 評価
 
-## [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) 一辺細分星の奇数次数切替閾値は κ(r)=2r log r+r log log r+(1+log 2)r+o(r)
+## [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) 一辺細分星の奇数次数切替閾値 κ(r) の三項漸近則
 
 - → depends_on [K0677](../items/K0677-subdivided-star-no-contact-double-root.md): 単一切替定理、κ(r) の定義と Θ(r log r) 評価
 - → depends_on [K0648](../items/K0648-graph-star-leaf-core-terminal-spectrum.md): 一辺細分星の終局長差多項式 T_{k,r} の定義

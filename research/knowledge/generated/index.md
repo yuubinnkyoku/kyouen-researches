@@ -661,4 +661,4 @@
 | [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) | 94五石子S6全集合3,868を全確定し94五石位置を78先手/16第二手に分類（先手WIN方向の転換） | computation | computed | square-outcomes, certificates, verification |
 | [K0676](../items/K0676-n11-region-s4-first-win.md) | 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子） | computation | computed | square-outcomes, certificates, verification |
 | [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) | 一辺細分星の終局多項式は全qの奇数次数で接触二重根をもたず、実根数は常に0個か2個 | proposition | proved | variants, statistics, geometry, strategy-length |
-| [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) | 一辺細分星の奇数次数切替閾値は κ(r)=2r log r+r log log r+(1+log 2)r+o(r) | proposition | proved | variants, statistics, geometry, strategy-length |
+| [K0678](../items/K0678-subdivided-star-kappa-two-term-asymptotic.md) | 一辺細分星の奇数次数切替閾値 κ(r) の三項漸近則 | proposition | proved | variants, statistics, geometry, strategy-length |
