@@ -63,4 +63,5 @@ n=3,4の全グラフ・全独立三点集合33条件、n=5の固定16条件、�
 全座標と占有点を[証明書](../../experiments/tree-triple-broom-periodicity-20261107/output/geometry_audit.json)に保存。
 
 これは列挙した有限点だけを盤にする実現であり、周囲の全格子点は含めない。
-複数の任意三点辺の同時実現、標準全正方形格子盤のGrundy無界性や11×11勝敗は未解決のまま。
+任意個数の三点辺の同時実現は[K0683](K0683-rank-three-residual-geometric-universality.md)で解決した。
+標準全正方形格子盤のGrundy無界性や11×11勝敗は未解決のまま。

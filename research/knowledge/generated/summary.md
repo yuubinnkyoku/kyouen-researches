@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 663 / alias: 269 / artifactファイル: 3287
+K項目: 666 / alias: 269 / artifactファイル: 3298
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 663 / alias: 269 / artifactファイル: 3287
 | computation | 64 |
 | definition | 5 |
 | method | 4 |
-| proposition | 524 |
+| proposition | 527 |
 | question | 38 |
 | verification | 28 |
 
@@ -19,10 +19,10 @@ K項目: 663 / alias: 269 / artifactファイル: 3287
 |---|---:|
 | active | 9 |
 | computed | 141 |
-| conjectured | 1 |
+| conjectured | 2 |
 | observed | 26 |
 | open | 36 |
-| proved | 344 |
+| proved | 346 |
 | refuted | 63 |
 | scope-unclear | 2 |
 | superseded | 9 |
@@ -36,21 +36,21 @@ K項目: 663 / alias: 269 / artifactファイル: 3287
 | certificates | 93 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 324 |
-| grundy | 150 |
+| geometry | 327 |
+| grundy | 153 |
 | maximal-safe | 167 |
 | maximum-safe | 76 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
 | rectangles | 103 |
-| residual-games | 104 |
+| residual-games | 107 |
 | rules | 8 |
-| search-methods | 98 |
+| search-methods | 99 |
 | square-outcomes | 89 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 272 |
+| variants | 275 |
 | verification | 105 |
 
 ## 未解決・要監査・範囲不明
@@ -96,6 +96,7 @@ K項目: 663 / alias: 269 / artifactファイル: 3287
 - [K0504](../items/K0504-geometric-rule-variant-comparison.md) [open] 共円ゲームの幾何学的禁止条件を変える拡張案の比較研究
 - [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) [open] 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [scope-unclear] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
 ## 警告
 

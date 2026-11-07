@@ -665,3 +665,6 @@
 | [K0679](../items/K0679-bounded-degree-terminal-poisson-universality.md) | 有界次数グラフ星型の終局長は単点・隣接対の複合ポアソンで近似でき、正則族の臨界尺度は普遍的 | proposition | proved | geometry, maximal-safe, statistics, strategy-length, variants |
 | [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) | 三葉三点制約付き箒木のGrundyは311以降34周期となり、効果は固定半径近傍と偶奇だけでは決まらない | proposition | proved | residual-games, grundy, geometry, variants |
 | [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) | 任意グラフと独立三点辺1本はn+2e+1個の整数点で共円残局として全状態実現できる | proposition | proved | geometry, residual-games, grundy, variants |
+| [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) | 固定残余核と長道の周期は有限窓で認証でき、5点以下rank3核の全513型は500以降34周期 | proposition | proved | residual-games, grundy, geometry, variants, search-methods |
+| [K0683](../items/K0683-rank-three-residual-geometric-universality.md) | rank3以下の全残余clutterは整数共円残局に普遍実現でき、rank4では5点2辺の最小障害がある | proposition | proved | geometry, residual-games, grundy, variants |
+| [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) | 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか | proposition | conjectured | residual-games, grundy, geometry, variants |

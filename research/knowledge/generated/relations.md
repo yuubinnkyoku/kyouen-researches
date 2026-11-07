@@ -891,6 +891,9 @@
 - ← depends_on [K0483](../items/K0483-two-forbidden-hyperedges-closed-grundy.md): 残余の包含極小禁止集合によるゲーム表現
 - ← depends_on [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 二点グラフに三点辺を加えた全残余禁止族の通常ゲーム
 - ← depends_on [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md): 全包含極小残余禁止集合によるゲームDAGの一致
+- ← depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 全残余辺を更新する通常ゲームと分離成分のxor
+- ← depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全残余禁止族による継続ゲームDAGの一致
+- ← depends_on [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 固定残余clutterと通常Grundyの定義
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -1763,6 +1766,7 @@
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 通常プレイのmex。misère補助mexは終端値1で別に定義する
 - → generalizes [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 同一全linkの独立双子は混合深さ1の特殊例
 - ← depends_on [K0493](../items/K0493-residual-closed-form-kernel-saved-n11-benchmark.md): 既存の残余ゲーム圧縮との併用
+- ← depends_on [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 三点辺付き三葉は内部容量2の縮約で二葉箒にGrundy同値となる別説明
 
 ## [K0345](../items/K0345-even-capacity-odd-column-prism-all-lengths-grundy.md) 偶数ペア容量・奇数列の三次元盤は任意長で全Grundy閉公式を持つ
 
@@ -2273,6 +2277,7 @@
 - → depends_on [K0348](../items/K0348-circle-fault-tolerance-vertex-cover-np-complete.md): 任意グラフの円による整数点符号化と多項式ビット長
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 残余禁止集合の継続ゲームへの対応
 - ← depends_on [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md): 有理円の逐次追加による任意グラフの別構成を三点辺1本へ拡張
+- ← depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 有理円の有限除外による二点禁止辺の整数実現
 
 ## [K0440](../items/K0440-five-row-anisotropic-mod3-circle-exclusion.md) 異方整数格子の五行で9点円は存在せず、3進付値条件下で全長強解決する
 
@@ -3602,11 +3607,35 @@
 
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 二点グラフに三点辺を加えた全残余禁止族の通常ゲーム
 - → depends_on [K0336](../items/K0336-independent-residual-twins-parity-compression.md): 二点辺だけの三葉を一葉へ圧縮し道のGrundyへ還元
+- → depends_on [K0344](../items/K0344-exchangeable-residual-class-rank-kernel.md): 三点辺付き三葉は内部容量2の縮約で二葉箒にGrundy同値となる別説明
 - → depends_on [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md): 全長の抽象木＋三点辺を有限整数点盤の指定安全局面に実現
 - ← depends_on [K0193](../items/K0193-effective-triple-tree-minimal-type-open.md): 三葉制約付き箒の全長分類と固定半径・偶奇だけでの判定の不可能性は確定した特殊族
+- ← generalizes [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 特殊な三葉箒から、rank3・5点以下の全固定核と任意長道の分類へ拡張
 
 ## [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) 任意グラフと独立三点辺1本はn+2e+1個の整数点で共円残局として全状態実現できる
 
 - → depends_on [K0438](../items/K0438-finite-point-kayles-pspace-complete.md): 有理円の逐次追加による任意グラフの別構成を三点辺1本へ拡張
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全包含極小残余禁止集合によるゲームDAGの一致
 - ← depends_on [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 全長の抽象木＋三点辺を有限整数点盤の指定安全局面に実現
+- ← generalizes [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 三点辺1本から任意個数の二点・三点辺の同時実現へ拡張
+
+## [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) 固定残余核と長道の周期は有限窓で認証でき、5点以下rank3核の全513型は500以降34周期
+
+- → generalizes [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md): 特殊な三葉箒から、rank3・5点以下の全固定核と任意長道の分類へ拡張
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余辺を更新する通常ゲームと分離成分のxor
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 任意個数の三点辺を含む核＋長道を有限整数点盤に全状態実現
+- → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明
+
+## [K0683](../items/K0683-rank-three-residual-geometric-universality.md) rank3以下の全残余clutterは整数共円残局に普遍実現でき、rank4では5点2辺の最小障害がある
+
+- → generalizes [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md): 三点辺1本から任意個数の二点・三点辺の同時実現へ拡張
+- → depends_on [K0438](../items/K0438-finite-point-kayles-pspace-complete.md): 有理円の有限除外による二点禁止辺の整数実現
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余禁止族による継続ゲームDAGの一致
+- ← depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 任意個数の三点辺を含む核＋長道を有限整数点盤に全状態実現
+- ← depends_on [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 全rank3核と長道は有限整数点盤の残局として実現できる
+
+## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 固定残余clutterと通常Grundyの定義
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全rank3核と長道は有限整数点盤の残局として実現できる
+- ← supports [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明

@@ -9817,6 +9817,15 @@
 ## [research/experiments/quadratic-zero-terminal-spectrum-20261024/results.json](../../../research/experiments/quadratic-zero-terminal-spectrum-20261024/results.json)
 
 - [K0536](../items/K0536-degenerate-quadratic-column-terminal-size-spectrum.md) (data): 幅3〜9の147構成と既存全局面検査の終局サイズ必要条件監査
+## [research/experiments/rank-three-residual-universality-20261107/output/audit.json](../../../research/experiments/rank-three-residual-universality-20261107/output/audit.json)
+
+- [K0683](../items/K0683-rank-three-residual-geometric-universality.md) (certificate): 130整数盤の座標、占有集合、意図した禁止四点組と検査集計
+## [research/experiments/rank-three-residual-universality-20261107/proof.md](../../../research/experiments/rank-three-residual-universality-20261107/proof.md)
+
+- [K0683](../items/K0683-rank-three-residual-geometric-universality.md) (proof): 将来の三点円も避ける全称構成・多項式ビット長・rank4障害の最小性
+## [research/experiments/rank-three-residual-universality-20261107/verify.py](../../../research/experiments/rank-three-residual-universality-20261107/verify.py)
+
+- [K0683](../items/K0683-rank-three-residual-geometric-universality.md) (verifier): 全4点以下clutter125件と大きい5例の有理構成、独立整数4×4行列式と全安全mex照合
 ## [research/experiments/rectangle-reflection-parity-20261011/audit.json](../../../research/experiments/rectangle-reflection-parity-20261011/audit.json)
 
 - [K0389](../items/K0389-rectangle-reflection-parity-and-mod4.md) (data): 49盤245条件の偶奇照合と25盤の四点完全列挙
@@ -10024,6 +10033,29 @@
 ## [research/experiments/residual-quota-calibration-20261021/verify_outputs.py](../../../research/experiments/residual-quota-calibration-20261021/verify_outputs.py)
 
 - [K0497](../items/K0497-small-residual-quota-prospective-confirmation.md) (verifier): 入力・独立期待値・全720根評価・候補選択・採用条件の再集計
+## [research/experiments/rooted-core-larger-periods-20261107/output/audit.json](../../../research/experiments/rooted-core-larger-periods-20261107/output/audit.json)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (certificate): 指定6・7点族の100入力型と101新規閉状態の全0..1069整数値。6点全体の網羅ではない
+## [research/experiments/rooted-core-larger-periods-20261107/proof.md](../../../research/experiments/rooted-core-larger-periods-20261107/proof.md)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (proof): 6点の純三点辺3本以下全1351件と追加67件の指定有限入力族についての全長周期認証
+## [research/experiments/rooted-core-larger-periods-20261107/verify.py](../../../research/experiments/rooted-core-larger-periods-20261107/verify.py)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (verifier): 既証明の小核表を再利用し、101新規閉状態の有限窓と別subset mex700条件を照合
+## [research/experiments/rooted-core-tail-periodicity-20261107/engine.py](../../../research/experiments/rooted-core-tail-periodicity-20261107/engine.py)
+
+- [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (solver): 根を保つclutter正規化と有限核DAG・道分解による整数mex
+## [research/experiments/rooted-core-tail-periodicity-20261107/output/audit.json](../../../research/experiments/rooted-core-tail-periodicity-20261107/output/audit.json)
+
+- [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (certificate): 全513型の0..1069値、最小周期、開始500の鋭さとGrundy最大23
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (certificate): 5点以下全513型については全長の34周期が証明済み。一般核の証明ではない
+## [research/experiments/rooted-core-tail-periodicity-20261107/proof.md](../../../research/experiments/rooted-core-tail-periodicity-20261107/proof.md)
+
+- [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (proof): 任意固定核の正確な再帰・有限窓からの全称周期帰納・全5点核の有限帰着
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (source): 任意核の正確な再帰と有限周期認証規則。周期の必然的存在までは証明しない
+## [research/experiments/rooted-core-tail-periodicity-20261107/verify.py](../../../research/experiments/rooted-core-tail-periodicity-20261107/verify.py)
+
+- [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (verifier): 全6337ラベル付き核の生成と513型の周期証明書、別subset mex11980条件
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
@@ -10399,6 +10431,7 @@
 ## [research/experiments/tree-triple-broom-periodicity-20261107/verify_geometry.py](../../../research/experiments/tree-triple-broom-periodicity-20261107/verify_geometry.py)
 
 - [K0681](../items/K0681-graph-plus-independent-triple-geometric-realization.md) (verifier): 有理構成と別の整数4×4 Leibniz行列式・全安全局面の照合
+- [K0683](../items/K0683-rank-three-residual-geometric-universality.md) (source): 再利用した既存有理円ヘルパーと独立整数Leibniz検算器
 ## [research/experiments/tree-triple-broom-periodicity-20261107/verify_period.py](../../../research/experiments/tree-triple-broom-periodicity-20261107/verify_period.py)
 
 - [K0680](../items/K0680-tree-triple-broom-grundy-periodicity.md) (verifier): 周期の整数証明書、原始禁止集合の独立subset mex38条件、閉近傍削除19条件
@@ -10614,6 +10647,11 @@
 ## [research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md](../../../research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (log): スイープと五石集計の経緯
+## [research/log/2026-11-07-rooted-core-and-rank-three-universality.md](../../../research/log/2026-11-07-rooted-core-and-rank-three-universality.md)
+
+- [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (log): 四点核から五点核への拡張と、rank3普遍実現との統合
+- [K0683](../items/K0683-rank-three-residual-geometric-universality.md) (log): 三点辺の同時実現で必要になった将来円除外とrank境界の発見
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (log): 有限の核サイズで閉じた定理と、無界核に関する予想を分離した経緯
 ## [research/log/2026-11-07-subdivided-star-no-contact-double-root.md](../../../research/log/2026-11-07-subdivided-star-no-contact-double-root.md)
 
 - [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (log): 発見の経緯と検証範囲
