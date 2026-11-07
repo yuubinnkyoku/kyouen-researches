@@ -38,24 +38,19 @@ def run_gen(gen: str, p: int) -> list[tuple[int, int, int, int]]:
     return [tuple(map(int, line.split())) for line in out.read_text(encoding="ascii").splitlines()]
 
 
-def cadical(cnf_text: str, tag: str, timeout: int = 60):
-    cnf = TMP / f"_probe_{tag}.cnf"
-    cnf.write_text(cnf_text, encoding="ascii")
+def _cadical_run(cnf: Path, tag: str, extra: str, timeout: int):
     log = TMP / f"_probe_{tag}.log"
     try:
         with log.open("w", encoding="ascii") as f:
             subprocess.run(["wsl", "-d", "Ubuntu", "-u", "root", "--", "bash", "-c",
-                            f"timeout {timeout} cadical --quiet {to_wsl(cnf)} < /dev/null"],
+                            f"cadical --quiet {extra} -t {timeout} {to_wsl(cnf)} < /dev/null"],
                            stdout=f, stderr=subprocess.STDOUT,
-                           stdin=subprocess.DEVNULL, timeout=timeout + 60)
+                           stdin=subprocess.DEVNULL, timeout=timeout + 90)
     except subprocess.TimeoutExpired:
         return None, set()
     text = log.read_text(encoding="ascii", errors="replace")
-    if "s UNKNOWN" in text or "s SATISFIABLE" not in text and "s UNSATISFIABLE" not in text:
-        return None, set()
-    sat = "s SATISFIABLE" in text
-    model: set[int] = set()
-    if sat:
+    if "s SATISFIABLE" in text:
+        model: set[int] = set()
         for line in text.splitlines():
             if line.startswith("v "):
                 for x in line[2:].split():
@@ -63,6 +58,19 @@ def cadical(cnf_text: str, tag: str, timeout: int = 60):
                         v = int(x)
                         if v > 0:
                             model.add(v)
+        return True, model
+    if "s UNSATISFIABLE" in text:
+        return False, set()
+    return None, set()
+
+
+def cadical(cnf_text: str, tag: str, timeout: int = 60):
+    """Default mode first (fast UNSAT), then the SAT-targeted configuration on timeout."""
+    cnf = TMP / f"_probe_{tag}.cnf"
+    cnf.write_text(cnf_text, encoding="ascii")
+    sat, model = _cadical_run(cnf, tag, "", timeout)
+    if sat is None:
+        sat, model = _cadical_run(cnf, tag + "_sat", "--sat -L1000", timeout)
     return sat, model
 
 
