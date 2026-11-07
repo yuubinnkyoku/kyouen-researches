@@ -220,6 +220,40 @@ def check_quadratic_identity(max_r: int = 40, max_k: int = 21) -> dict:
     return {"points_checked": checked}
 
 
+def kappa_upper(r: int) -> int:
+    """Explicit odd k with roots certified: 5(r+1)*ceil(log2(r+1)), made odd."""
+    n = r.bit_length()          # = ceil(log2(r+1))
+    k = 5 * (r + 1) * n
+    return k + 1 if k % 2 == 0 else k
+
+
+def kappa_lower(r: int) -> int:
+    """Largest odd k <= r*floor(log2 r); every odd k <= it is certified rootless."""
+    k = r * (r.bit_length() - 1)
+    return k - 1 if k % 2 == 0 else k
+
+
+def kappa_two_sided(rmax: int = 400) -> dict:
+    """r*floor(log2 r)-1 < kappa(r) <= 5(r+1)ceil(log2(r+1))+1, exact at both ends."""
+    violations = []
+    rows = 0
+    for r in range(4, rmax + 1):
+        rows += 1
+        ku = kappa_upper(r)
+        kl = kappa_lower(r)
+        if not roots_certified(r, ku):
+            violations.append([r, ku, "upper not certified"])
+        if not no_root_ok(r, kl):
+            violations.append([r, kl, "lower witness fails"])
+    return {
+        "r_range": [4, rmax],
+        "rows": rows,
+        "violations": violations,
+        "kappa_upper_1000": kappa_upper(1000),
+        "kappa_lower_1000": kappa_lower(1000),
+    }
+
+
 def check_mechanism(max_r: int = 60, max_k: int = 51) -> dict:
     """D(r,k) formula agrees with the coefficient discriminant."""
     n = 0
@@ -432,6 +466,7 @@ def main() -> int:
         "all_thresholds": {str(x["r"]): x["threshold"] for x in table},
     }
 
+    results["kappa_two_sided"] = kappa_two_sided(400)
     results["float_cross_check"] = twostep_cross_check(rmax)
 
     OUT.joinpath("no_contact_double_root.json").write_text(

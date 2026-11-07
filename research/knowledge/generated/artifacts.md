@@ -2773,13 +2773,13 @@
 - [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (data): r<=1000 の閾値表と各検査の集計
 ## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/regression_existing_boundaries.json](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/output/regression_existing_boundaries.json)
 
-- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (data): 180 行の一致監査と各境界の証明方式
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (data): 190 行の一致監査と各境界の証明方式
 ## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/proof.md](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/proof.md)
 
 - [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (proof): 接触二重根の不存在（定理A）と単一切替（定理B）の全称証明、有限検査は r=1,2,3 のみ
 ## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/regress_existing_boundaries.py](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/regress_existing_boundaries.py)
 
-- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (verifier): 既発表 q=21..200 の境界表 180 行の再計算一致検査
+- [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (verifier): 既発表 q=21..210 の境界表 190 行の再計算一致検査
 ## [research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/verify_no_contact_double_root.py](../../../research/experiments/graph-star-subdivided-star-no-contact-double-root-20261107/verify_no_contact_double_root.py)
 
 - [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) (verifier): 判別式恒等式・M上界・接線上界・約数和条件・閾値表を完全整数／有理数で監査
