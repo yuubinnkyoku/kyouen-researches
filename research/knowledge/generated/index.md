@@ -669,3 +669,6 @@
 | [K0683](../items/K0683-rank-three-residual-geometric-universality.md) | rank3以下の全残余clutterは整数共円残局に普遍実現でき、rank4では5点2辺の最小障害がある | proposition | proved | geometry, residual-games, grundy, variants |
 | [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) | 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか | proposition | conjectured | residual-games, grundy, geometry, variants |
 | [K0685](../items/K0685-n11-chain-audit-wall.md) | 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+） | question | open | square-outcomes, certificates, verification |
+| [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) | 純三点制約の六点Grundyは0・1・2・4のみで、値3の最小点数は値4より大きい | proposition | computed | grundy, residual-games, geometry, variants |
+| [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) | 純三点残余辺が3本以下ならGrundyは1以下、4本以下で3以下、5本以下で5以下で全て鋭い | proposition | proved | grundy, residual-games, geometry, variants |
+| [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) | 残余辺の所属被覆重みはGrundy上界を与え、固定rankでは辺数に対する線形上界が成立する | proposition | proved | grundy, residual-games, search-methods, variants |

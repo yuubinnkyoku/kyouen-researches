@@ -146,6 +146,7 @@
 - ← depends_on [K0586](../items/K0586-two-carrier-universal-constant-state.md): 通常・misère補助mexの定義
 - ← depends_on [K0589](../items/K0589-sunflower-quota-terminal-gaps.md): 通常Grundy値とmisère補助mexの定義
 - ← depends_on [K0590](../items/K0590-even-sunflower-quota-grundy.md): 通常Grundy値とmisère補助mexの定義
+- ← depends_on [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md): 有限通常ゲームのmexとGrundyの定義
 
 ## [K0003](../items/K0003-solution-and-evidence-levels.md) 解決段階と計算・証明書・監査の区別
 
@@ -895,6 +896,8 @@
 - ← depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 全残余辺を更新する通常ゲームと分離成分のxor
 - ← depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 全残余禁止族による継続ゲームDAGの一致
 - ← depends_on [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 固定残余clutterと通常Grundyの定義
+- ← depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 純三点残余族の通常ゲームと自由点のxor分離
+- ← depends_on [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md): 全残余族の継続ゲーム表現と自由点のxor分離
 
 ## [K0111](../items/K0111-n5-minimal-maximal-first-move-cells.md) 5×5の5石極大四配置は各々勝ち初手セル4・負け初手セル1を含む
 
@@ -3627,6 +3630,7 @@
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余辺を更新する通常ゲームと分離成分のxor
 - → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 任意個数の三点辺を含む核＋長道を有限整数点盤に全状態実現
 - → supports [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 5点以下の全核について無界長道の34周期が証明済み。大きい核の一般予想は未証明
+- ← depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 主計算は初手後の五点rank3核表を参照。独立C++ではこの表を使わない
 
 ## [K0683](../items/K0683-rank-three-residual-geometric-universality.md) rank3以下の全残余clutterは整数共円残局に普遍実現でき、rank4では5点2辺の最小障害がある
 
@@ -3635,6 +3639,8 @@
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余禁止族による継続ゲームDAGの一致
 - ← depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 任意個数の三点辺を含む核＋長道を有限整数点盤に全状態実現
 - ← depends_on [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md): 全rank3核と長道は有限整数点盤の残局として実現できる
+- ← depends_on [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md): 純三点残余族と最大値六型の有限整数点盤への実現
+- ← depends_on [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md): 抽象三点禁止族の全型を指定有限整数点盤へ移せる
 
 ## [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 
@@ -3646,3 +3652,18 @@
 
 - → depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 四石領域の先手勝ちは確定したが「遠方応手の全称」はoracle外
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+
+## [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) 純三点制約の六点Grundyは0・1・2・4のみで、値3の最小点数は値4より大きい
+
+- → depends_on [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md): 主計算は初手後の五点rank3核表を参照。独立C++ではこの表を使わない
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 純三点残余族と最大値六型の有限整数点盤への実現
+
+## [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) 純三点残余辺が3本以下ならGrundyは1以下、4本以下で3以下、5本以下で5以下で全て鋭い
+
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 純三点残余族の通常ゲームと自由点のxor分離
+- → depends_on [K0683](../items/K0683-rank-three-residual-geometric-universality.md): 抽象三点禁止族の全型を指定有限整数点盤へ移せる
+
+## [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) 残余辺の所属被覆重みはGrundy上界を与え、固定rankでは辺数に対する線形上界が成立する
+
+- → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md): 有限通常ゲームのmexとGrundyの定義
+- → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 全残余族の継続ゲーム表現と自由点のxor分離

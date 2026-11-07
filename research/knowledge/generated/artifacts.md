@@ -2833,6 +2833,15 @@
 ## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
+## [research/experiments/incidence-weighted-grundy-bound-20261107/output/audit.json](../../../research/experiments/incidence-weighted-grundy-bound-20261107/output/audit.json)
+
+- [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) (data): 非自明51244安全状態での上界・xor監査と、局所重みによる改善件数
+## [research/experiments/incidence-weighted-grundy-bound-20261107/proof.md](../../../research/experiments/incidence-weighted-grundy-bound-20261107/proof.md)
+
+- [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) (proof): 安全集合の重み被覆不等式と最大残手数による全称上界、次数系と局所重み系
+## [research/experiments/incidence-weighted-grundy-bound-20261107/verify.py](../../../research/experiments/incidence-weighted-grundy-bound-20261107/verify.py)
+
+- [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) (verifier): 全7020小clutterの原始subset mex、全安全状態で残余族と有理被覆上界を再構成
 ## [research/experiments/irrational-three-lines-q6-20261024/audit-c3.json](../../../research/experiments/irrational-three-lines-q6-20261024/audit-c3.json)
 
 - [K0547](../items/K0547-sqrt13-three-line-q6-sharp-stabilization-seven.md) (data): m6の243324安全局面、全18初手、SG最大3、終局14石48局面と15石96局面
@@ -9638,6 +9647,36 @@
 ## [research/experiments/pseudoforest-terminal-dp-20261102/verify.py](../../../research/experiments/pseudoforest-terminal-dp-20261102/verify.py)
 
 - [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md) (verifier): 4290グラフ条件の独立削除集合照合と90条件180624部分集合の禁止超辺直接列挙
+## [research/experiments/pure-triple-few-edge-grundy-20261107/audit.py](../../../research/experiments/pure-triple-few-edge-grundy-20261107/audit.py)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (verifier): Venn行和生成と独立辺追加生成の全型集合一致、cell占有数mex
+## [research/experiments/pure-triple-few-edge-grundy-20261107/independent.cpp](../../../research/experiments/pure-triple-few-edge-grundy-20261107/independent.cpp)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (verifier): 個別頂点占有subsetによる全527型の別根値計算
+## [research/experiments/pure-triple-few-edge-grundy-20261107/output/audit.json](../../../research/experiments/pure-triple-few-edge-grundy-20261107/output/audit.json)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (certificate): h1..5の全型・度数・527型の個別一致・199922安全状態監査
+## [research/experiments/pure-triple-few-edge-grundy-20261107/proof.md](../../../research/experiments/pure-triple-few-edge-grundy-20261107/proof.md)
+
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (proof): 所属cellの行和3による全称有限帰着、孤立点処理、鋭い達成例
+## [research/experiments/pure-triple-maximum-grundy-six-20261107/audit.py](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/audit.py)
+
+- [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (verifier): 全根値のbyte単位一致、全頂点置換、七点証人と具体整数幾何の監査
+## [research/experiments/pure-triple-maximum-grundy-six-20261107/independent.cpp](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/independent.cpp)
+
+- [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (verifier): 小核表・残余縮約を使わない全個別占有subsetのC++再帰
+## [research/experiments/pure-triple-maximum-grundy-six-20261107/output/independent_audit.json](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/output/independent_audit.json)
+
+- [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (certificate): 全件一致・六軌道・最小点数・具体13点以上の整数盤証人
+## [research/experiments/pure-triple-maximum-grundy-six-20261107/output/six_census.json](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/output/six_census.json)
+
+- [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (data): 完全度数、辺数別度数、全値列SHA-256と最初の証人
+## [research/experiments/pure-triple-maximum-grundy-six-20261107/proof.md](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/proof.md)
+
+- [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (proof): 全六点族の有限完全分類、六軌道と八通りの辺追加区間、値0..5の最小点数
+## [research/experiments/pure-triple-maximum-grundy-six-20261107/scan.py](../../../research/experiments/pure-triple-maximum-grundy-six-20261107/scan.py)
+
+- [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (solver): 初手後の小核表による全1048576族の根値計算
 ## [research/experiments/q57-frontier-followup-20261005/general-energy-proof.md](../../../research/experiments/q57-frontier-followup-20261005/general-energy-proof.md)
 
 - [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (proof): 任意の異なる実数座標に対する鎖分解・重み付け証明と等差数列の等号
@@ -10054,6 +10093,15 @@
 ## [research/experiments/rooted-core-larger-periods-20261107/verify.py](../../../research/experiments/rooted-core-larger-periods-20261107/verify.py)
 
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (verifier): 既証明の小核表を再利用し、101新規閉状態の有限窓と別subset mex700条件を照合
+## [research/experiments/rooted-core-six-pure-triple-six-edges-20261107/output/audit.json](../../../research/experiments/rooted-core-six-pure-triple-six-edges-20261107/output/audit.json)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (certificate): 6点純三点辺六本以下の完全族732状態の全0..1211整数値と有限窓証明書。jointly_certified=true
+## [research/experiments/rooted-core-six-pure-triple-six-edges-20261107/proof.md](../../../research/experiments/rooted-core-six-pure-triple-six-edges-20261107/proof.md)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (proof): 6点純三点辺が高々6本の全60460件（根付き732型）についての全長周期認証。共同開始571
+## [research/experiments/rooted-core-six-pure-triple-six-edges-20261107/verify.py](../../../research/experiments/rooted-core-six-pure-triple-six-edges-20261107/verify.py)
+
+- [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) (verifier): 既証明の小核表を再利用し732新規状態の有限窓を認証。全732型長さ0..6の独立subset mex5124条件で照合
 ## [research/experiments/rooted-core-tail-periodicity-20261107/engine.py](../../../research/experiments/rooted-core-tail-periodicity-20261107/engine.py)
 
 - [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (solver): 根を保つclutter正規化と有限核DAG・道分解による整数mex
@@ -10662,6 +10710,11 @@
 ## [research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md](../../../research/log/2026-11-07-n11-s6-sweep-s5-verdicts.md)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (log): スイープと五石集計の経緯
+## [research/log/2026-11-07-pure-triple-spectra-and-incidence-bounds.md](../../../research/log/2026-11-07-pure-triple-spectra-and-incidence-bounds.md)
+
+- [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) (log): 小点数での欠番から少数辺数の全称上界・所属重み上界へ進んだ経緯
+- [K0687](../items/K0687-pure-triple-five-edge-sharp-grundy-bounds.md) (log): 六点全数計算から、辺数による頂点無制限の定理へ進んだ経緯
+- [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) (log): 総辺超過量の帰納上界を考え、安全集合の重み計数で強めた経緯
 ## [research/log/2026-11-07-rooted-core-and-rank-three-universality.md](../../../research/log/2026-11-07-rooted-core-and-rank-three-universality.md)
 
 - [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (log): 四点核から五点核への拡張と、rank3普遍実現との統合

@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 667 / alias: 269 / artifactファイル: 3303
+K項目: 670 / alias: 269 / artifactファイル: 3320
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 667 / alias: 269 / artifactファイル: 3303
 | computation | 64 |
 | definition | 5 |
 | method | 4 |
-| proposition | 527 |
+| proposition | 530 |
 | question | 39 |
 | verification | 28 |
 
@@ -18,11 +18,11 @@ K項目: 667 / alias: 269 / artifactファイル: 3303
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 141 |
+| computed | 142 |
 | conjectured | 2 |
 | observed | 26 |
 | open | 37 |
-| proved | 346 |
+| proved | 348 |
 | refuted | 63 |
 | scope-unclear | 2 |
 | superseded | 9 |
@@ -36,21 +36,21 @@ K項目: 667 / alias: 269 / artifactファイル: 3303
 | certificates | 94 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 327 |
-| grundy | 153 |
+| geometry | 329 |
+| grundy | 156 |
 | maximal-safe | 167 |
 | maximum-safe | 76 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
 | rectangles | 103 |
-| residual-games | 107 |
+| residual-games | 110 |
 | rules | 8 |
-| search-methods | 99 |
+| search-methods | 100 |
 | square-outcomes | 90 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 275 |
+| variants | 278 |
 | verification | 106 |
 
 ## 未解決・要監査・範囲不明
