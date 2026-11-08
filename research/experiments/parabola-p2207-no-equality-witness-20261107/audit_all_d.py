@@ -41,6 +41,13 @@ def load_edges(path: str):
         return [tuple(map(int, line.split())) for line in f]
 
 
+def save_results(path, payload):
+    """Write the audit receipts atomically (temp file + replace)."""
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(payload, indent=1) + "\n", encoding="utf-8", newline="\n")
+    os.replace(tmp, path)
+
+
 def audit_one(args):
     p, d, checker, budget, edges_path = args
     edges = load_edges(edges_path)
@@ -132,14 +139,12 @@ def main() -> int:
                 verified = sum(1 for r in results.values() if r.get("verified"))
                 print(f"progress {done}/{len(todo)} verified={verified} "
                       f"last_d={rec['d']} ({time.time()-t0:.0f}s)", flush=True)
-                RESULT_PATH.write_text(json.dumps(
-                    {"p": p, "h": h, "checker_source_sha256": checker_hash,
-                     "records": sorted(results.values(), key=lambda r: r["d"])},
-                    indent=1) + "\n", encoding="utf-8", newline="\n")
-    RESULT_PATH.write_text(json.dumps(
-        {"p": p, "h": h, "checker_source_sha256": checker_hash,
-         "records": sorted(results.values(), key=lambda r: r["d"])},
-        indent=1) + "\n", encoding="utf-8", newline="\n")
+                save_results(RESULT_PATH,
+                             {"p": p, "h": h, "checker_source_sha256": checker_hash,
+                              "records": sorted(results.values(), key=lambda r: r["d"])})
+    save_results(RESULT_PATH,
+                 {"p": p, "h": h, "checker_source_sha256": checker_hash,
+                  "records": sorted(results.values(), key=lambda r: r["d"])})
     verified = sum(1 for r in results.values() if r.get("verified"))
     print(f"done: verified={verified}/{len(results)} in {time.time()-t0:.0f}s", flush=True)
     return 0
