@@ -69,6 +69,20 @@ struct Checker {
         qhead = trail.size();
     }
 
+    // Deleting a clause can invalidate even level-zero implications and their
+    // transitive consequences. Re-derive them from the remaining database.
+    void invalidateAssignments() {
+        for (int lit : trail) {
+            int v = var(lit);
+            value[v] = 0;
+            level[v] = 0;
+            reason[v] = -2;
+        }
+        trail.clear();
+        trail_lim.clear();
+        qhead = 0;
+    }
+
     bool propagate() {
         while (qhead < trail.size()) {
             int fal = -trail[qhead++];
@@ -235,6 +249,7 @@ int main(int argc, char** argv) {
                 if (chk.deleted[id]) continue;
                 if (chk.clauses[id] == c) { chk.deleted[id] = 1; ++dels; break; }
             }
+            chk.invalidateAssignments();
             continue;
         }
         ++steps;

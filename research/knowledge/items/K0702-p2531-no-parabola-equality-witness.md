@@ -33,13 +33,28 @@ artifacts:
   note: 浅いd走査で2531が最初に落ちた記録
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json
   role: data
-  note: 標本8 dのDRAT監査結果（全てVERIFIED）
+  note: 旧チェッカーの受理記録。K0707の偽受理発見により独立証拠への採用を保留
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp
   role: verifier
   note: 増分DRATチェッカー（RUP＋RAT）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json
+  role: data
+  note: K0707修正後のd=393,395の再生成・再検査。2件ともVERIFIED、検査器ソースhash付き
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。標本8 dのDRAT証明は独立チェッカーでVERIFIED（8/8）。
+evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版でd=393,395を再生成・検査し2/2 VERIFIED。全1265件の再監査は未完了。
 ---
+
+## 現在の監査上の制限（2026-11-09）
+
+[K0707](K0707-incremental-drat-deletion-unsoundness.md) で旧増分DRATチェッカーの偽受理を再現した。
+観測時点の全数出力は1263件が `VERIFIED`、d=393,395が入力読み込みエラーだったが、
+旧実装の受理件数を独立検証済み件数とは数えない。
+以下の旧標本・373件という記録も同じ制限を受ける。
+CNF UNSAT のソルバ主張と幾何への還元はこの反例で否定されないが、
+旧レシートを再利用しない全数再監査が必要で、statusは `needs-review` のまま。
+修正版（ソースSHA-256 `34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b`）で
+d=393,395の証明を再生成し、2件とも受理した。新しい監査範囲はこの2件のみ。
+修正版の一般健全性は有限回帰からは導かれない。
 
 ## 命題・範囲
 

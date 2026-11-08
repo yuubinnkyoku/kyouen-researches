@@ -3,8 +3,8 @@
 For each d: build the exact CNF, solve with pysat's native CaDiCaL asking for a
 DRAT proof (``with_proof=True``), write the proof to a temp file, and check it
 with the independent incremental checker ``drat_check_incremental.cpp``.
-Results are appended to ``output/drat_audit_full.json`` (resumable; finished d
-values are skipped on restart).
+Results use ``output/drat_audit_full_<p>_<checker-source-hash>.json``
+(resumable only with the same checker source; legacy receipts are not reused).
 
 A ``VERIFIED`` record certifies that the CNF for that d is UNSAT without
 trusting the solver: the checker re-derives every learned clause.
@@ -12,6 +12,7 @@ trusting the solver: the checker re-derives every learned clause.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import multiprocessing as mp
 import os
@@ -54,8 +55,9 @@ def audit_one(args):
     if res is not False or not proof:
         return {"d": d, "solver": "SAT" if res else "UNKNOWN", "verified": False,
                 "seconds": round(solve_s, 1)}
-    cnf = TMP / f"{p}_d{d}.cnf"
-    pf = TMP / f"{p}_d{d}.drat"
+    # A separate audit process must not replace or delete this worker's input.
+    cnf = TMP / f"{p}_d{d}_{os.getpid()}.cnf"
+    pf = TMP / f"{p}_d{d}_{os.getpid()}.drat"
     with cnf.open("w", encoding="ascii") as f:
         f.write(f"p cnf {(p - 1) // 2} {len(clauses)}\n")
         for c in clauses:
@@ -99,15 +101,21 @@ def main() -> int:
         EDGES_PATH.write_text("".join(" ".join(map(str, e)) + "\n" for e in edges),
                               encoding="ascii")
     global RESULT_PATH
-    RESULT_PATH = OUT / f"drat_audit_full_{p}.json"
-    checker = str(Path(os.environ["TEMP"]) / "drat_inc.exe")
+    checker_source = HERE / "drat_check_incremental.cpp"
+    checker_hash = hashlib.sha256(checker_source.read_bytes()).hexdigest()
+    # Never reuse a binary or VERIFIED receipts from a different checker.
+    RESULT_PATH = OUT / f"drat_audit_full_{p}_{checker_hash[:16]}.json"
+    checker = str(Path(os.environ["TEMP"]) / f"drat_inc_{checker_hash[:16]}.exe")
     if not Path(checker).exists():
         subprocess.run(["g++", "-O2", "-std=c++17",
-                        str(HERE / "drat_check_incremental.cpp"), "-o", checker], check=True)
+                        str(checker_source), "-o", checker], check=True)
 
     results = {}
     if RESULT_PATH.exists():
-        for rec in json.loads(RESULT_PATH.read_text(encoding="utf-8"))["records"]:
+        saved = json.loads(RESULT_PATH.read_text(encoding="utf-8"))
+        if saved.get("checker_source_sha256") != checker_hash:
+            raise ValueError("checker provenance mismatch; refusing to reuse receipts")
+        for rec in saved["records"]:
             results[rec["d"]] = rec
     rng = ([int(x) for x in args.ds.split(",")] if args.ds
            else list(range(args.from_d, to_d + 1)))
@@ -125,10 +133,12 @@ def main() -> int:
                 print(f"progress {done}/{len(todo)} verified={verified} "
                       f"last_d={rec['d']} ({time.time()-t0:.0f}s)", flush=True)
                 RESULT_PATH.write_text(json.dumps(
-                    {"p": p, "h": h, "records": sorted(results.values(), key=lambda r: r["d"])},
+                    {"p": p, "h": h, "checker_source_sha256": checker_hash,
+                     "records": sorted(results.values(), key=lambda r: r["d"])},
                     indent=1) + "\n", encoding="utf-8", newline="\n")
     RESULT_PATH.write_text(json.dumps(
-        {"p": p, "h": h, "records": sorted(results.values(), key=lambda r: r["d"])},
+        {"p": p, "h": h, "checker_source_sha256": checker_hash,
+         "records": sorted(results.values(), key=lambda r: r["d"])},
         indent=1) + "\n", encoding="utf-8", newline="\n")
     verified = sum(1 for r in results.values() if r.get("verified"))
     print(f"done: verified={verified}/{len(results)} in {time.time()-t0:.0f}s", flush=True)

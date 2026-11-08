@@ -42,10 +42,18 @@ artifacts:
   note: dごとにCNFとDRAT証明を生成しチェッカーで監査する再開可能ドライバ
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json
   role: data
-  note: 標本21 dの監査結果（全てVERIFIED、証明行数と検査秒数）
+  note: 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
 scope: 奇素数p=2207のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。任意の他素数への一般化は主張しない。
-evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22もd=1,289,550,1103でUNSAT。p<=23で全数照合。DRAT証明は未検査。
+evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22も標本でUNSAT。旧DRATチェッカーの偽受理がK0707で再現され、旧受理記録の独立証拠への採用は保留。
 ---
+
+## 現在の監査上の制限（2026-11-09）
+
+[K0707](K0707-incremental-drat-deletion-unsoundness.md) で、旧増分DRATチェッカーが
+充足可能なCNFの偽UNSAT証明を受理することを再現した。
+下記の標本21件の `VERIFIED` は旧実装の受理記録であり、独立検証済み証拠としての採用を保留する。
+幾何命題やソルバのUNSAT主張を反証したわけではない。statusは `needs-review` を維持し、
+旧版と区別した検査器ソースhash付きの再監査を必要とする。
 
 ## 命題・範囲
 

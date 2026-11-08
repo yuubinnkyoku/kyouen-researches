@@ -1424,6 +1424,21 @@
 ## [research/experiments/dfpn-frame-children-20261022/test_study.py](../../../research/experiments/dfpn-frame-children-20261022/test_study.py)
 
 - [K0501](../items/K0501-dfpn-frame-child-geometry-reuse.md) (verifier): 誤局面、新規勝敗、監査の時間比較混入、仕事量・生成数のずれ等を拒否する9テスト
+## [research/experiments/drat-deletion-soundness-20261109/README.md](../../../research/experiments/drat-deletion-soundness-20261109/README.md)
+
+- [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (source): 偽受理の機序、修正、既存監査への影響と限界
+## [research/experiments/drat-deletion-soundness-20261109/invalid.drat](../../../research/experiments/drat-deletion-soundness-20261109/invalid.drat)
+
+- [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (data): 旧版が誤受理する4行の偽UNSAT証明
+## [research/experiments/drat-deletion-soundness-20261109/regression.json](../../../research/experiments/drat-deletion-soundness-20261109/regression.json)
+
+- [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (data): 13ケースの実行結果とソース・入力ハッシュ
+## [research/experiments/drat-deletion-soundness-20261109/regression.py](../../../research/experiments/drat-deletion-soundness-20261109/regression.py)
+
+- [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (verifier): 旧版・修正版・素朴版のソースビルドと偽証明・正例の比較
+## [research/experiments/drat-deletion-soundness-20261109/sat.cnf](../../../research/experiments/drat-deletion-soundness-20261109/sat.cnf)
+
+- [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (data): 単位節1のみの充足可能な最小入力
 ## [research/experiments/even-sunflower-grundy-20261101/proof.md](../../../research/experiments/even-sunflower-grundy-20261101/proof.md)
 
 - [K0590](../items/K0590-even-sunflower-quota-grundy.md) (proof): 全局面の閉形式と8分類16行のmex恒等式による無界の全称証明
@@ -9768,6 +9783,7 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/audit_all_d.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/audit_all_d.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): dごとにCNFとDRAT証明を生成しチェッカーで監査する再開可能ドライバ
+- [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (verifier): 検査器ソースhashごとに旧レシートとバイナリを分離する再監査ドライバ
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): d=1..1103の判定表を生成し、タイムアウト分は衝突予算2000万で再判定する
@@ -9775,12 +9791,16 @@
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT）
+- [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (verifier): 削除時に代入を失効する修正版。一般健全性の証明ではない
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 標本21 dの監査結果（全てVERIFIED、証明行数と検査秒数）
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json)
 
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 標本8 dのDRAT監査結果（全てVERIFIED）
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 旧チェッカーの受理記録。K0707の偽受理発見により独立証拠への採用を保留
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): K0707修正後のd=393,395の再生成・再検査。2件ともVERIFIED、検査器ソースhash付き
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）

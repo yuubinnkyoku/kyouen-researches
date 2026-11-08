@@ -690,3 +690,4 @@
 | [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) | 任意有限不偏ゲームの終局1補助mexは一自由点でxor1となり、低h制限ゲームとも直和が可換 | proposition | proved | grundy, residual-games, variants |
 | [K0705](../items/K0705-n11-p4-census.md) | 94五石子の四石親族338を全数調査：284先手確定・54脅威残（残る壁の正確な位置） | computation | computed | square-outcomes, certificates, verification |
 | [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) | p=2647でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（3例目・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
+| [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) | 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する | proposition | computed | verification, certificates, provenance |
