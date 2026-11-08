@@ -9915,6 +9915,15 @@
 ## [research/experiments/prism-two-maxima-20261005/verify.py](../../../research/experiments/prism-two-maxima-20261005/verify.py)
 
 - [K0347](../items/K0347-prism-all-length-two-maxima-grundy-kernel.md) (verifier): 別ラベル付き全座標mexと有限budget gap DP
+## [research/experiments/proof-length-versus-deletion-distance-20261109/README.md](../../../research/experiments/proof-length-versus-deletion-distance-20261109/README.md)
+
+- [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) (proof): 全m,kの明示構成、節削除数の上下界、一行RUP証明と適用範囲
+## [research/experiments/proof-length-versus-deletion-distance-20261109/results.json](../../../research/experiments/proof-length-versus-deletion-distance-20261109/results.json)
+
+- [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) (data): m<=5の有限検査と入力・検証器ソースhash。全称証明の代替ではない
+## [research/experiments/proof-length-versus-deletion-distance-20261109/verify.py](../../../research/experiments/proof-length-versus-deletion-distance-20261109/verify.py)
+
+- [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) (verifier): 15個のCNFで最少節削除数を全数列挙し、共通証明を修正版チェッカーで検査する
 ## [research/experiments/pseudoforest-terminal-dp-20261102/proof.md](../../../research/experiments/pseudoforest-terminal-dp-20261102/proof.md)
 
 - [K0621](../items/K0621-pseudoforest-terminal-polynomial-dp.md) (proof): 付属木の三状態計数と閉路の隣接二状態4状態遷移による全称証明
