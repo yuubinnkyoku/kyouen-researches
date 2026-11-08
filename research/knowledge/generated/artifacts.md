@@ -9781,7 +9781,7 @@
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): generic 4×4 Leibnizによる全63証人の独立検証出力（共円0件）
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json)
 
-- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 2003..2477の64素数のうち62の等号証人（2207, 2351は予算内未発見）
+- [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 2003..2477の64素数のうち2207を除く63素数の等号証人（2351も構成済み）
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2003..2477の64素数のうち2207を除く63素数の等号証人
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 隣接63素数では同じ実装がSAT側で証人を返し独立検証も通っている
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json)
@@ -9809,6 +9809,33 @@
 ## [research/experiments/parabola-equality-refutation-20261109/verify_receipts.py](../../../research/experiments/parabola-equality-refutation-20261109/verify_receipts.py)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (verifier): コミット済み監査記録の範囲・重複・ソースhashを確認する。DRATの再検査ではない
+## [research/experiments/parabola-local-repair-20261109/README.md](../../../research/experiments/parabola-local-repair-20261109/README.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 構成、再現手順と信頼境界
+## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/assessment.json](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/assessment.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 元53886節の直接評価41違反、1325点から33点除去した1292点候補
+## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/candidate.txt](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): ソート済み1292パラメータ。点は(t,t² mod 2647)
+## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/geometry.json](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で43730623候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/model.json](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 固定d=1323の元CNFで41違反の割当。最適性は未主張
+## [research/experiments/parabola-local-repair-20261109/regression.json](../../../research/experiments/parabola-local-repair-20261109/regression.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 4玩具CNF、96小集合の2モード比較、7不正入力制御とhash照合
+## [research/experiments/parabola-local-repair-20261109/verify.py](../../../research/experiments/parabola-local-repair-20261109/verify.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 小規模比較回帰と明示的な証人監査の再現ドライバ
+## [research/experiments/parabola-local-repair-20261109/verify_subset.cpp](../../../research/experiments/parabola-local-repair-20261109/verify_subset.cpp)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 探索・CNF・edge cacheを読まない独立整数幾何検査器
+## [research/experiments/parabola-local-repair-20261109/walk_initial.cpp](../../../research/experiments/parabola-local-repair-20261109/walk_initial.cpp)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 実際の100万flip・seed20261109の局所探索ソース
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界

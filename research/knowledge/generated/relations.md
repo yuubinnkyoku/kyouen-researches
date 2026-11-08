@@ -67,6 +67,7 @@
 - ← depends_on [K0644](../items/K0644-n11-five-loss7-eight-parent-lift-23-classes.md): 合法な一点追加と通常プレイの終局規則
 - ← depends_on [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 完全指摘・通常プレイと整数行列式による合法手
 - ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 完全指摘・通常プレイと合法な一点追加
+- ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 共線・共円四点を含まない安全集合
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -1736,6 +1737,7 @@
 - ← depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - ← depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
+- ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3855,6 +3857,7 @@
 - → refutes [K0101](../items/K0101-prime-parabola-equality-open.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md): p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 2647に続く4例目
+- ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 全1323 dの修正版DRAT監査による上界A(2647)<=1324
 
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する
 
@@ -3867,3 +3870,9 @@
 - → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 2647に続く4例目
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する4番目の反例候補
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
+
+## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の最大安全サイズは1292以上1324以下
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合
+- → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 全1323 dの修正版DRAT監査による上界A(2647)<=1324
+- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件

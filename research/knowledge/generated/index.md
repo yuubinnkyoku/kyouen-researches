@@ -694,3 +694,4 @@
 | [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) | p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) | 一行RUP証明を持つCNFでもSAT化に必要な節削除数は任意に大きい | proposition | proved | search-methods, verification, provenance |
 | [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) | 連結・有界次数のsigned NAE4でも15行RUP証明のまま最少削除距離は無界になる | proposition | proved | search-methods, verification, provenance |
+| [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の最大安全サイズは1292以上1324以下 | proposition | computed | maximum-safe, geometry, search-methods |

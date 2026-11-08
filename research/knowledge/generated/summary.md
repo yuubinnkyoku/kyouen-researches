@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 692 / alias: 269 / artifactファイル: 3450
+K項目: 693 / alias: 269 / artifactファイル: 3459
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 692 / alias: 269 / artifactファイル: 3450
 | computation | 67 |
 | definition | 5 |
 | method | 4 |
-| proposition | 550 |
+| proposition | 551 |
 | question | 38 |
 | verification | 28 |
 
@@ -18,7 +18,7 @@ K項目: 692 / alias: 269 / artifactファイル: 3450
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 147 |
+| computed | 148 |
 | conjectured | 2 |
 | needs-review | 3 |
 | observed | 26 |
@@ -37,17 +37,17 @@ K項目: 692 / alias: 269 / artifactファイル: 3450
 | certificates | 96 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 342 |
+| geometry | 343 |
 | grundy | 170 |
 | maximal-safe | 167 |
-| maximum-safe | 80 |
+| maximum-safe | 81 |
 | migration | 1 |
 | provenance | 38 |
 | reconfiguration | 34 |
 | rectangles | 103 |
 | residual-games | 124 |
 | rules | 8 |
-| search-methods | 109 |
+| search-methods | 110 |
 | square-outcomes | 91 |
 | statistics | 121 |
 | strategy-length | 94 |
