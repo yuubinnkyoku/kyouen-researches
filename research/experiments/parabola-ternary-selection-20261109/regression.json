@@ -1,0 +1,42 @@
+{
+  "small_primes": [
+    {
+      "p": 5,
+      "assignments": 6,
+      "unsafe": 0,
+      "integer_forbidden_quadruples": 1
+    },
+    {
+      "p": 7,
+      "assignments": 27,
+      "unsafe": 0,
+      "integer_forbidden_quadruples": 3
+    },
+    {
+      "p": 11,
+      "assignments": 405,
+      "unsafe": 0,
+      "integer_forbidden_quadruples": 10
+    },
+    {
+      "p": 13,
+      "assignments": 1458,
+      "unsafe": 0,
+      "integer_forbidden_quadruples": 15
+    },
+    {
+      "p": 17,
+      "assignments": 17496,
+      "unsafe": 864,
+      "integer_forbidden_quadruples": 30
+    }
+  ],
+  "total_assignments": 19392,
+  "cardinality_cases": 444,
+  "invalid_one_hot_states": "REJECTED",
+  "arbitrary_binary_simplification_counterexample": "PASS",
+  "known_1292_witness_in_full_encoder": "SAT, zero hard violations, 33 empty pairs",
+  "saved_1296_witness": "PASS: reproduced CNF, model, 29 empty pairs, candidate and geometry hashes",
+  "target1300": "UNKNOWN, no UNSAT conclusion",
+  "scope": "Finite exhaustive regression of the edge-wise ternary encoding, not the general mathematical proof."
+}

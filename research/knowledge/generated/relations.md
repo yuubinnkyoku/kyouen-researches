@@ -1738,6 +1738,8 @@
 - ← depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
+- ← depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 禁止四点から固定完全対dへの直接投影節の定義
+- ← generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3871,8 +3873,13 @@
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する4番目の反例候補
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
-## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の最大安全サイズは1292以上1324以下
+## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の最大安全サイズは1296以上1324以下
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合
 - → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 全1323 dの修正版DRAT監査による上界A(2647)<=1324
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
+
+## [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる
+
+- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 禁止四点から固定完全対dへの直接投影節の定義
+- → generalizes [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張

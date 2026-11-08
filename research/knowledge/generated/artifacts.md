@@ -9811,19 +9811,16 @@
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (verifier): コミット済み監査記録の範囲・重複・ソースhashを確認する。DRATの再検査ではない
 ## [research/experiments/parabola-local-repair-20261109/README.md](../../../research/experiments/parabola-local-repair-20261109/README.md)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 構成、再現手順と信頼境界
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 初回1292点構成、再現手順と信頼境界
 ## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/assessment.json](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/assessment.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 元53886節の直接評価41違反、1325点から33点除去した1292点候補
 ## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/candidate.txt](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/candidate.txt)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): ソート済み1292パラメータ。点は(t,t² mod 2647)
-## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/geometry.json](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/geometry.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で43730623候補を検査、禁止四点0件。入力・ソースhash付き
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 初回1292点証人。新しいSAT探索のphaseの起点としても保持
 ## [research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/model.json](../../../research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/model.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 固定d=1323の元CNFで41違反の割当。最適性は未主張
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 初回1292点構成に用いた固定d=1323の41違反割当。最適性は未主張
 ## [research/experiments/parabola-local-repair-20261109/regression.json](../../../research/experiments/parabola-local-repair-20261109/regression.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 4玩具CNF、96小集合の2モード比較、7不正入力制御とhash照合
@@ -9883,6 +9880,36 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
+## [research/experiments/parabola-ternary-selection-20261109/README.md](../../../research/experiments/parabola-ternary-selection-20261109/README.md)
+
+- [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (source): 実装、再現入力・出力、1296点構成と1300点UNKNOWNの範囲
+## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与えるソート済み1296パラメータ。点は(t,t² mod 2647)
+## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44277012候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/input.cnf.gz](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 低側・高側・空対と空対32以下を符号化した142992節の実入力
+## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/model.json](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 全142992節を満たす保存モデル。空対29、1296点を選択
+## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/result.json](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1293点以上を要求したSAT試行が1296点を返した記録。幾何検査は別artifact
+## [research/experiments/parabola-ternary-selection-20261109/regression.json](../../../research/experiments/parabola-ternary-selection-20261109/regression.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 小規模完全照合、既存1292点の適合性、現在の1296点モデルの全節充足確認
+- [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (data): p=5,7,11,13,17の19392三値割当、無効one-hotと任意の二値簡約への反例
+## [research/experiments/parabola-ternary-selection-20261109/regression.py](../../../research/experiments/parabola-ternary-selection-20261109/regression.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 19392三値割当・444 cardinalityケースと保存CNF・モデル・幾何receiptの再評価
+- [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (verifier): 小素数の全三値割当と独立整数幾何の照合、444 cardinalityケースと実証人の再評価
+## [research/experiments/parabola-ternary-selection-20261109/ternary.py](../../../research/experiments/parabola-ternary-selection-20261109/ternary.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 直接投影節を点選択制約へ変換し、空対数を制限する探索器
+- [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (solver): 直接投影節の点選択への変換と空対数のcardinality制約
 ## [research/experiments/path-recurrence-periodic-forcing-20261108/README.md](../../../research/experiments/path-recurrence-periodic-forcing-20261108/README.md)
 
 - [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (source): 再帰の導出・方法・2 roundの結果・候補補題と限界
