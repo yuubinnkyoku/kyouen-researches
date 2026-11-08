@@ -2,7 +2,7 @@
 id: K0706
 title: p=2647でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（3例目・監査待ち）
 kind: proposition
-status: needs-review
+status: computed
 topics: [maximum-safe, geometry, search-methods]
 aliases: []
 relations:
@@ -32,7 +32,7 @@ artifacts:
   role: verifier
   note: p<=23で符号化と完全対構造の全数照合
 scope: 奇素数p=2647のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1323 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。DRAT証明の監査は未実施。
+evidence: 全1323 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。さらに全1323 dのDRAT証明を修正版（削除時に代入を失効する）独立検証器で検査し、1323/1323 VERIFIED。
 ---
 
 ## 命題・範囲
@@ -57,8 +57,12 @@ K0693（p=2207）、K0702（p=2531）に次ぐ**3例目の等号不達成**で�
 
 ## 限界
 
-- **DRAT 証明の監査は未実施**。p=2207 では標本 21 d、p=2531 では全 d の監査が進行中（400 件超が
-  VERIFIED）。p=2647 の監査はまだ行っていない。status は `needs-review`。
+- **2026-11-09 完了: 全 1323 d の DRAT 証明を修正版検証器（削除時に代入を失効させる）で検査し、
+  1323/1323 VERIFIED（失敗 0）**。証明は 22〜29,212 行、検査 0.5〜43 秒/件
+  （`output/drat_audit_full_2647_34249932790a9e9d.json`）。
+  旧検証器の健全性不具合（K0707）を踏まえ、修正版ソースの SHA-256 ごとに新しい監査を行った。
+  これで p=2647 の等号不達成は、K0334 の還元と合わせて**有限計算として完全に証明された**
+  （status を `computed` に更新）。
 - `A(2647)` の正確な値は未確定。
 - p=2647 以外にも、タイムアウトを含む浅い失敗候補が多数あるが、証人を取りこぼした可能性があり
   確定には全数走査が必要。

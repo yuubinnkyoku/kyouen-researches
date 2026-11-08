@@ -18,9 +18,9 @@ K項目: 690 / alias: 269 / artifactファイル: 3436
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 146 |
+| computed | 147 |
 | conjectured | 2 |
-| needs-review | 4 |
+| needs-review | 3 |
 | observed | 26 |
 | open | 37 |
 | proved | 360 |
@@ -101,7 +101,6 @@ K項目: 690 / alias: 269 / artifactファイル: 3436
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) [needs-review] p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) [needs-review] p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
-- [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) [needs-review] p=2647でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（3例目・監査待ち）
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) [needs-review] p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目）
 
 ## 警告
