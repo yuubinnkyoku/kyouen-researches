@@ -3,9 +3,9 @@
 For a fixed d the equality CNF is UNSAT; here we ask for the minimum number of
 violated edge clauses, i.e. whether a near-witness exists.  Each clause gets a
 relaxation variable r_c (satisfied or r_c true) and an at-most-k cardinality
-constraint over all r_c.  If the instance with k=1 is SAT, then removing the
-points of the single violated quadruple yields a safe set of size h+1, i.e. a
-lower bound A(p) >= h+1.
+constraint over all r_c. If the instance with k=1 is SAT, removing one selected
+point in the single violated projected clause can give a safe set of size h+1.
+The original forbidden edges are checked before saving such a lower-bound witness.
 
 Usage: maxsat_probe.py <p> <d> [k]
 """
@@ -26,6 +26,28 @@ from pysat.solvers import Cadical195  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "output"
+
+
+def decode_model(p, d, base, model):
+    """Evaluate original signed literals and repair their selected-point supports."""
+    h = (p - 1) // 2
+    positive = {lit for lit in model if lit > 0}
+    violated = [c for c in base if not any(
+        (lit > 0) == (abs(lit) in positive) for lit in c)]
+    chosen = {0, d, p - d} | {p - i if i in positive else i
+                                   for i in range(1, h + 1) if i != d}
+    remaining = set(chosen)
+    removed = []
+    for clause in violated:
+        points = [lit if lit > 0 else p + lit for lit in clause]
+        if not points:
+            raise ValueError("empty projected clause has no removable point")
+        if any(point not in remaining for point in points):
+            continue  # a previous removal already broke this condition
+        point = points[0]
+        remaining.remove(point)
+        removed.append(point)
+    return violated, chosen, remaining, removed
 
 
 def main() -> int:
@@ -60,25 +82,7 @@ def main() -> int:
               "vars": card.nv, "clauses": len(clauses), "sat": res,
               "unknown": res is None, "seconds": round(dt, 1)}
     if res:
-        pos = {i for i in model if i > 0}
-        violated = [c for c in base if not any(
-            (lit > 0) == (lit in pos) for lit in c)]
-        chosen = {0}
-        upper = {i for i in pos if i <= h}
-        for i in range(1, h + 1):
-            if i == d:
-                chosen.update({d, p - d})
-            else:
-                chosen.add(i if i in upper else p - i)
-        safe_set = set(chosen)
-        removed = []
-        for c in violated:
-            for lit in c:
-                pt = lit if lit > 0 else p - lit
-                if pt in safe_set:
-                    safe_set.discard(pt)
-                    removed.append(pt)
-                    break
+        violated, chosen, safe_set, removed = decode_model(p, d, base, model)
         safe = not any(set(e) <= safe_set for e in edges)
         record.update({"violated_clauses": len(violated),
                        "violated": [list(c) for c in violated],

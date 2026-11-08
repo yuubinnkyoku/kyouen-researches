@@ -1,0 +1,39 @@
+{
+  "small_primes": [
+    {
+      "p": 5,
+      "templates": 4,
+      "violating_templates": 0,
+      "integer_forbidden_quadruples": 1
+    },
+    {
+      "p": 7,
+      "templates": 12,
+      "violating_templates": 0,
+      "integer_forbidden_quadruples": 3
+    },
+    {
+      "p": 11,
+      "templates": 80,
+      "violating_templates": 0,
+      "integer_forbidden_quadruples": 10
+    },
+    {
+      "p": 13,
+      "templates": 192,
+      "violating_templates": 0,
+      "integer_forbidden_quadruples": 15
+    },
+    {
+      "p": 17,
+      "templates": 1024,
+      "violating_templates": 192,
+      "integer_forbidden_quadruples": 30
+    }
+  ],
+  "total_templates": 1312,
+  "negative_literal_regression": "PASS",
+  "saved_cnf_sha256": "0f09fc6efce1ba1b3df795eef24e4bb014fcfad836f31d4e6ba7e99b242ff0b3",
+  "supervised_toy_rc2": "PASS (geometry unchecked)",
+  "scope": "Finite regression; no bound for p=2647 is inferred."
+}
