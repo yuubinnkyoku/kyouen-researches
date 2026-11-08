@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 687 / alias: 269 / artifactファイル: 3428
+K項目: 688 / alias: 269 / artifactファイル: 3429
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 687 / alias: 269 / artifactファイル: 3428
 | computation | 67 |
 | definition | 5 |
 | method | 4 |
-| proposition | 544 |
+| proposition | 545 |
 | question | 39 |
 | verification | 28 |
 
@@ -20,7 +20,7 @@ K項目: 687 / alias: 269 / artifactファイル: 3428
 | active | 9 |
 | computed | 145 |
 | conjectured | 2 |
-| needs-review | 2 |
+| needs-review | 3 |
 | observed | 26 |
 | open | 37 |
 | proved | 360 |
@@ -37,17 +37,17 @@ K項目: 687 / alias: 269 / artifactファイル: 3428
 | certificates | 95 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 340 |
+| geometry | 341 |
 | grundy | 170 |
 | maximal-safe | 167 |
-| maximum-safe | 78 |
+| maximum-safe | 79 |
 | migration | 1 |
 | provenance | 35 |
 | reconfiguration | 34 |
 | rectangles | 103 |
 | residual-games | 124 |
 | rules | 8 |
-| search-methods | 105 |
+| search-methods | 106 |
 | square-outcomes | 91 |
 | statistics | 121 |
 | strategy-length | 94 |
@@ -101,6 +101,7 @@ K項目: 687 / alias: 269 / artifactファイル: 3428
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) [needs-review] p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) [needs-review] p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
+- [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) [needs-review] p=2647でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（3例目・監査待ち）
 
 ## 警告
 

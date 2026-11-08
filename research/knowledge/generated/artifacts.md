@@ -9726,6 +9726,9 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2531.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2531.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): d=1265..1の全数走査（UNSAT 1265・unknown 0・SAT 0）
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2647.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2647.json)
+
+- [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (data): d=1323..1の全数走査（UNSAT 1323・unknown 0・SAT 0、2,899秒）
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2503-2700.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2503-2700.txt)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): 新21証人のgeneric 4×4独立検証出力（共円0件）
@@ -9757,6 +9760,7 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（8並列、dごとに独立なCNF）
+- [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（4並列、dごとに独立なCNF）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
@@ -9788,6 +9792,7 @@
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
+- [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
 ## [research/experiments/path-recurrence-periodic-forcing-20261108/README.md](../../../research/experiments/path-recurrence-periodic-forcing-20261108/README.md)
 
 - [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (source): 再帰の導出・方法・2 roundの結果・候補補題と限界
