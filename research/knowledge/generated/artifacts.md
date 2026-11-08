@@ -9732,6 +9732,9 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2701-2900.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2701-2900.txt)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): 20証人の独立検証出力（共円0件）
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2901-3100.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2901-3100.txt)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (data): 17証人の独立検証出力（共円0件）
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizの独立検証（covered/checked・共円0件）の生出力
@@ -9748,6 +9751,9 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2701_2900.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2701_2900.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2701..2900の20素数の等号証人（6素数は浅いdで未発見）
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2901_3100.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2901_3100.json)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2901..3100の17素数の等号証人（6素数は浅いdで未発見）
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/scan_mp.py)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（8並列、dごとに独立なCNF）
