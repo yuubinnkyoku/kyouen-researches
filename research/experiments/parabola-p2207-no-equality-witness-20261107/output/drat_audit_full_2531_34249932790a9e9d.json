@@ -4,6 +4,16 @@
  "checker_source_sha256": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
  "records": [
   {
+   "d": 268,
+   "solver": "UNSAT",
+   "proof_lines": 13,
+   "checker_rc": 0,
+   "verified": true,
+   "checker_out": "VERIFIED",
+   "solve_seconds": 0.0,
+   "check_seconds": 0.2
+  },
+  {
    "d": 393,
    "solver": "UNSAT",
    "proof_lines": 170001,
@@ -22,6 +32,16 @@
    "checker_out": "VERIFIED",
    "solve_seconds": 8.3,
    "check_seconds": 346.6
+  },
+  {
+   "d": 700,
+   "solver": "UNSAT",
+   "proof_lines": 14,
+   "checker_rc": 0,
+   "verified": true,
+   "checker_out": "VERIFIED",
+   "solve_seconds": 0.0,
+   "check_seconds": 0.2
   }
  ]
 }
