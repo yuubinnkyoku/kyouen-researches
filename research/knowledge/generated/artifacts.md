@@ -9744,6 +9744,9 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2647.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2647.json)
 
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (data): d=1323..1の全数走査（UNSAT 1323・unknown 0・SAT 0、2,899秒）
+## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_3251.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_3251.json)
+
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (data): d=1625..1の全数走査（UNSAT 1625・unknown 0・SAT 0、4,694秒）
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2503-2700.txt](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2503-2700.txt)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): 新21証人のgeneric 4×4独立検証出力（共円0件）
@@ -9776,6 +9779,7 @@
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（8並列、dごとに独立なCNF）
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（4並列、dごとに独立なCNF）
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（4並列、dごとに独立なCNF）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
