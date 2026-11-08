@@ -43,8 +43,18 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json
   role: data
   note: 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2207_34249932790a9e9d.json
+  role: data
+  commit: 87e28af3c927d640bde3fbc8a20238efc30bccb8
+  note: 修正版の受理記録5 d。全1103 dのうち1098 dは本snapshotの監査範囲外
+- path: research/experiments/parabola-audit-coverage-20261109/inventory.json
+  role: data
+  note: 固定commitのレシート整合性と被覆の検査。DRATの再実行ではない
+- path: research/experiments/parabola-audit-coverage-20261109/inventory.py
+  role: verifier
+  note: 重複・未被覆・計画標本の照合と13制御。証明内容の検査器ではない
 scope: 奇素数p=2207のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。任意の他素数への一般化は主張しない。
-evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22も標本でUNSAT。旧DRATチェッカーの偽受理がK0707で再現され、旧受理記録の独立証拠への採用は保留。
+evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22も標本でUNSAT。K0707修正版の受理記録は固定commitで5/1103 d、全数監査未完了。旧チェッカーの受理記録は独立証拠への採用を保留。
 ---
 
 ## 現在の監査上の制限（2026-11-09）
@@ -53,7 +63,12 @@ evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確�
 充足可能なCNFの偽UNSAT証明を受理することを再現した。
 下記の標本21件の `VERIFIED` は旧実装の受理記録であり、独立検証済み証拠としての採用を保留する。
 幾何命題やソルバのUNSAT主張を反証したわけではない。statusは `needs-review` を維持し、
-旧版と区別した検査器ソースhash付きの再監査を必要とする。
+全数の再監査は未完了である。
+修正版ソースSHA-256 `34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b`
+のレシートは、commit `87e28af3c927d640bde3fbc8a20238efc30bccb8` で
+**d={1,50,100,200,300}の5件**がUNSAT・終了コード0・出力VERIFIEDである。
+全1103 dのうち1098 dはこのsnapshotの修正版監査範囲外。
+inventoryはレシートの整合性を検査したもので、今回DRATを再生したわけではない。
 
 ## 命題・範囲
 
@@ -85,16 +100,17 @@ K0097 の上界 `A(p) <= (p+3)/2` は一般に証明済みで、p <= 2143 の全
 
 ## 限界（監査待ち）
 
-- **UNSAT の DRAT 証明は取得していない**。本項の status は `needs-review` であり、
-  「3 ソルバ一致の計算結果」以上の強さでは主張しない。cadical は DRAT を出力できるので、
-  証明生成と独立検査が次の監査段階である。
+- 全dのUNSAT主張と、修正版検査器の5 dのDRAT受理記録を区別する。
+  全数監査は未完了でstatusは `needs-review`。有限の回帰・受理記録から検査器の一般健全性は導かれない。
 - `A(2207)` の正確な値は未確定。サイズ `h+1`（1104）の集合は `x+c-e=1`（`x`=0 を含む、`c`=完全対数、`e`=空対数）
   から **3 形**ある: (a) `(1,0,0)`、(b) `(0,1,0)`、(c) `(1,1,1)`（`0`＋完全対一つ＋空対一つ）。
   2026-11-08: (a) の CNF は UNSAT（31,868 節、cadical 26 秒）、(b) は全 d=1..1103 で UNSAT（unknown 0・SAT 0）。
-  (c) は全 (d,e) を覆う単一 CNF で探索中（`research/log/2026-11-08-p2207-1104-shape-search-and-drat-plan.md`）。
+  (c) の全 (d,e) を覆う単一CNFの探索記録は
+  `research/log/2026-11-08-p2207-1104-shape-search-and-drat-plan.md`。本項では完了判定を採用していない。
 - 2026-11-08 の DRAT 監査: 増分チェッカー（`drat_check_incremental.cpp`、RUP＋RAT）で
   **標本 21 個の d（1, 50, 100, 150, 200, 250, 289, 297, 300, 312, 324, 400, 500, 550, 600, 700, 800, 900, 1000, 1100, 1103）の証明を全て VERIFIED**
   （証明 16〜576,575 行、検査 0.5〜3,223 秒/件、`output/drat_audit_full.json`）。
-  全 1103 件の監査は約 370 CPU 時間規模のため未完了であり、残りはソルバ主張のまま。
-- p=2207 以外の反例素数は未探索（2213..2477 は証人あり、2500 以上は未走査）。
-- 監査が通れば K0101 の「全奇素数で等号」は否定される。現時点では K0101 を open のまま維持する。
+  これは旧版の歴史的な受理記録であり、現在の修正版の被覆数には加えない。
+- 他素数の現在の監査状態はK0702/K0706/K0708を参照する。
+  K0101の全奇素数予想は、p=2647の全1323 dを監査したK0706により既に `refuted`。
+  p=2207の監査未完了とは別の結論である。

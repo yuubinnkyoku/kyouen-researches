@@ -39,9 +39,16 @@ artifacts:
   note: 増分DRATチェッカー（RUP＋RAT）
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json
   role: data
-  note: K0707修正後のd=393,395の再生成・再検査。2件ともVERIFIED、検査器ソースhash付き
+  commit: 87e28af3c927d640bde3fbc8a20238efc30bccb8
+  note: K0707修正版で143 dの受理記録。計画標本63/63を含むが、全1265 dの監査ではない
+- path: research/experiments/parabola-audit-coverage-20261109/inventory.json
+  role: data
+  note: 固定commitの被覆検査。修正版143/1265 d、未被覆1122 d
+- path: research/experiments/parabola-audit-coverage-20261109/inventory.py
+  role: verifier
+  note: 件数と計画標本63件の集合包含を区別して照合する再現コード
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版でd=393,395を再生成・検査し2/2 VERIFIED。全1265件の再監査は未完了。
+evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitでは143 dがVERIFIEDで計画標本63/63を被覆。全1265件の再監査は未完了。
 ---
 
 ## 現在の監査上の制限（2026-11-09）
@@ -53,7 +60,11 @@ evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。�
 CNF UNSAT のソルバ主張と幾何への還元はこの反例で否定されないが、
 旧レシートを再利用しない全数再監査が必要で、statusは `needs-review` のまま。
 修正版（ソースSHA-256 `34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b`）で
-d=393,395の証明を再生成し、2件とも受理した。新しい監査範囲はこの2件のみ。
+d=393,395から再監査を開始し、commit `87e28af3c927d640bde3fbc8a20238efc30bccb8` では
+重複のない**143 d**のUNSAT・終了コード0・出力VERIFIEDの受理記録がある。
+計画標本 `d=1,21,...,1241` の63件を全て含むが、全1265 dのうち1122 dは未被覆。
+「標本完了」は「全数監査完了」ではない。
+inventoryは保存レシートの整合性・被覆のみを検査し、今回DRATを再生していない。
 修正版の一般健全性は有限回帰からは導かれない。
 
 ## 命題・範囲
@@ -75,11 +86,8 @@ K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 �
 
 ## 限界
 
-- 2026-11-08 の DRAT 監査: 標本 8 個の d（1, 100, 300, 500, 700, 900, 1100, 1265）の証明を
-  独立チェッカー（`drat_check_incremental.cpp`）で監査し **8/8 VERIFIED**。その後、全 1265 d の
-  監査キャンペーンを開始し、本記録時点で **373 件完了・373 件すべて VERIFIED（失敗 0）**
-  （証明 14〜157,876 行、検査 1〜367 秒/件、`output/drat_audit_full_2531.json`、逐次保存・再開可能）。
-  残りはソルバ主張のまま。status は `needs-review`。
+- 旧版の標本8件・途中373件のVERIFIED記録は、K0707により現在の修正版の被覆数には加えない。
+  修正版の受理記録143 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
 - `A(2531)` の正確な値は未確定。
 - 同時期の走査で p=2539, 2543, 2549 も d=h..h-30 の範囲で証人が見つかっておらず、
   反例素数は 2207, 2531 以外にも存在する可能性がある（未確定）。

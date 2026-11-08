@@ -3858,7 +3858,7 @@
 
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する
 
-- ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): DRAT検証器の削除時代入失効の修正。本項はソルバ主張のみで、DRAT監査は別途
+- ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
 ## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目）
 
@@ -3866,4 +3866,4 @@
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 2647に続く4例目
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する4番目の反例候補
-- → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項はソルバ主張のみで、DRAT監査は別途
+- → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ

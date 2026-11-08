@@ -9730,6 +9730,16 @@
 ## [research/experiments/pairsum-reconstruction-20261018/verify.py](../../../research/experiments/pairsum-reconstruction-20261018/verify.py)
 
 - [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): Python整数演算による構成・恒等式・有限小例の検査
+## [research/experiments/parabola-audit-coverage-20261109/inventory.json](../../../research/experiments/parabola-audit-coverage-20261109/inventory.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 固定commitのレシート整合性と被覆の検査。DRATの再実行ではない
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 固定commitの被覆検査。修正版143/1265 d、未被覆1122 d
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (data): 固定commitで修正版70/1625 d、計画標本の未被覆14 dを特定
+## [research/experiments/parabola-audit-coverage-20261109/inventory.py](../../../research/experiments/parabola-audit-coverage-20261109/inventory.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 重複・未被覆・計画標本の照合と13制御。証明内容の検査器ではない
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 件数と計画標本63件の集合包含を区別して照合する再現コード
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (verifier): 総件数70と計画標本51/65の被覆を区別する再現コード
 ## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
@@ -9818,16 +9828,22 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2207_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2207_34249932790a9e9d.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 修正版の受理記録5 d。全1103 dのうち1098 dは本snapshotの監査範囲外
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 旧チェッカーの受理記録。K0707の偽受理発見により独立証拠への採用を保留
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json)
 
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): K0707修正後のd=393,395の再生成・再検査。2件ともVERIFIED、検査器ソースhash付き
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): K0707修正版で143 dの受理記録。計画標本63/63を含むが、全1265 dの監査ではない
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2647_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2647_34249932790a9e9d.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2647の全1323 dの修正版DRAT受理記録。K0706の有限計算の根拠
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (data): 全1323 dでUNSAT・VERIFIED。修正版検証器ソースSHA-256付き
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_3251_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_3251_34249932790a9e9d.json)
+
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (data): 修正版の受理記録70 d。計画標本は51/65、全1625 dの監査ではない
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）
