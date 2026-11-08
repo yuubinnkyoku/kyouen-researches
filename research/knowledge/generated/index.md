@@ -102,7 +102,7 @@
 | [K0098](../items/K0098-p23-half-interval-counterexample.md) | 剰余放物線の前半区間安全説はp=23で反例 | proposition | refuted | maximum-safe, geometry |
 | [K0099](../items/K0099-private-passes-terminal-pass-allowed.md) | 終端パス可の有限私有パス版は残数差と通常gで勝敗・mexを分類 | proposition | proved | variants, grundy |
 | [K0100](../items/K0100-private-passes-immediate-terminal.md) | 通常終端即終了の私有パス版は一手終端可能性も必要 | proposition | proved | variants, grundy |
-| [K0101](../items/K0101-prime-parabola-equality-open.md) | 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定 | question | open | maximum-safe, geometry |
+| [K0101](../items/K0101-prime-parabola-equality-open.md) | 全奇素数で剰余放物線上界(p+3)/2を達成するという予想は反証された | proposition | refuted | maximum-safe, geometry |
 | [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) | 具体巨大証明書をLean核のみで検査する実装は未完成 | question | open | formalization, certificates |
 | [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) | 10×10空盤面全体の単一KYOENC4証明書は未統合 | question | open | certificates, verification |
 | [K0104](../items/K0104-prior-work-search-scope.md) | 先行研究・初出主張は2026-09-23調査範囲に限定 | proposition | observed | provenance |
@@ -689,6 +689,6 @@
 | [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) | 純三点共通pivot族は通常値0または1を固定して全misère補助値4以上を実現できる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) | 任意有限不偏ゲームの終局1補助mexは一自由点でxor1となり、低h制限ゲームとも直和が可換 | proposition | proved | grundy, residual-games, variants |
 | [K0705](../items/K0705-n11-p4-census.md) | 94五石子の四石親族338を全数調査：284先手確定・54脅威残（残る壁の正確な位置） | computation | computed | square-outcomes, certificates, verification |
-| [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) | p=2647でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（3例目・監査待ち） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) | p=2647では剰余放物線の等号A(p)=(p+3)/2を達成できない（全d監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) | 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する | proposition | computed | verification, certificates, provenance |
 | [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) | p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目） | proposition | needs-review | maximum-safe, geometry, search-methods |

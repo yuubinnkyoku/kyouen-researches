@@ -1,0 +1,33 @@
+{
+  "input_commit": "b52faa12b77ff8bae9cf5343b20f3561917381a6",
+  "receipt_path": "research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2647_34249932790a9e9d.json",
+  "receipt_sha256": "bc838b7273d1115803f98847b06ab392b6e3573f70c3b69cb76f85b1023908bd",
+  "checker_source_sha256": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
+  "prime": 2647,
+  "odd_prime_by_trial_division": true,
+  "h": 1323,
+  "verified": 1323,
+  "failures": 0,
+  "unique_complete_d_range": [
+    1,
+    1323
+  ],
+  "proof_lines_total": 8038838,
+  "proof_lines_min": 10,
+  "proof_lines_max": 52650,
+  "check_seconds_min": 0.2,
+  "check_seconds_max": 79.3,
+  "rejected_negative_controls": [
+    "missing",
+    "duplicate",
+    "out-of-range",
+    "wrong-prime",
+    "wrong-source",
+    "not-verified",
+    "nonzero-exit",
+    "wrong-checker-output",
+    "unknown-solver",
+    "empty-proof"
+  ],
+  "scope": "Receipt consistency only; no DRAT replay, encoding proof, or Lean verification."
+}

@@ -774,7 +774,7 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md)
 - ← depends_on [K0098](../items/K0098-p23-half-interval-counterexample.md)
-- ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md)
+- ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md): 一般上界と等号集合の完全対構造
 - ← depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
 - ← depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - ← depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
@@ -793,12 +793,14 @@
 
 - → depends_on [K0002](../items/K0002-grundy-and-first-move-conventions.md)
 
-## [K0101](../items/K0101-prime-parabola-equality-open.md) 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
+## [K0101](../items/K0101-prime-parabola-equality-open.md) 全奇素数で剰余放物線上界(p+3)/2を達成するという予想は反証された
 
-- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md)
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界と等号集合の完全対構造
+- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号の存在とある完全対dのCNFのSATが同値
+- → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
 - ← supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 全奇素数での等号を否定する反例候補。監査により確定する
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 全奇素数での等号を否定する2番目の反例候補
-- ← supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 全奇素数での等号を否定する3番目の反例候補
+- ← refutes [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 全奇素数での等号を否定する4番目の反例候補
 
 ## [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) 具体巨大証明書をLean核のみで検査する実装は未完成
@@ -1729,6 +1731,7 @@
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 等号集合が原点・一完全対・残り各対の一側を含む形であること
 - → depends_on [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md): Q_pの線上限2・円上限4と円方程式の原始係数
+- ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md): 等号の存在とある完全対dのCNFのSATが同値
 - ← depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - ← depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - ← depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
@@ -3843,13 +3846,14 @@
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置の勝敗分類（78先手/16第二手）
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 
-## [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) p=2647でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（3例目・監査待ち）
+## [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) p=2647では剰余放物線の等号A(p)=(p+3)/2を達成できない（全d監査済み）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - → supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないこと
 - → supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 2531に続く3例目
-- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する3番目の反例候補
+- → refutes [K0101](../items/K0101-prime-parabola-equality-open.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
+- ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md): p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 2647に続く4例目
 
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する

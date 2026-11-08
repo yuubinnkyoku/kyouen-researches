@@ -2266,7 +2266,7 @@
 - [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (data): 全13素数p≤43の禁止四点完全検査と分解の比較記録
 ## [research/experiments/frontier-geometry-2026-10-05/proof.md](../../../research/experiments/frontier-geometry-2026-10-05/proof.md)
 
-- [K0101](../items/K0101-prime-parabola-equality-open.md) (proof): 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数の充足可能性は未証明
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (proof): 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数で充足可能という主張は含まない
 - [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (proof): 原始整数方程式・有限体根数による全称証明とk=2,3,4の鋭さ証人
 - [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (proof): 完全対補題・四元和・反射によるNAE分解の全称証明
 ## [research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json)
@@ -9724,7 +9724,7 @@
 ## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
-- [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 521..2000への有限拡張。全奇素数の等号は依然未証明
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 521..2000への有限拡張の当時の記録
 ## [research/experiments/parabola-equality-extension-20261016/output/parabola-equality-audit.txt](../../../research/experiments/parabola-equality-extension-20261016/output/parabola-equality-audit.txt)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibniz独立検証（covered/checked・共円0件）の生出力
@@ -9763,7 +9763,7 @@
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 2003..2477の64素数のうち62の等号証人（2207, 2351は予算内未発見）
-- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2003..2477の64素数のうち63の等号証人。2207は深いd走査中
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 2003..2477の64素数のうち2207を除く63素数の等号証人
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 隣接63素数では同じ実装がSAT側で証人を返し独立検証も通っている
 ## [research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json](../../../research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2503_2700.json)
 
@@ -9780,6 +9780,16 @@
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（8並列、dごとに独立なCNF）
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（4並列、dごとに独立なCNF）
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (verifier): マルチプロセス衝突予算スキャナ（4並列、dごとに独立なCNF）
+## [research/experiments/parabola-equality-refutation-20261109/README.md](../../../research/experiments/parabola-equality-refutation-20261109/README.md)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 全称命題の反証の論理と有限計算の信頼境界
+## [research/experiments/parabola-equality-refutation-20261109/receipt_coverage.json](../../../research/experiments/parabola-equality-refutation-20261109/receipt_coverage.json)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (manifest): 全dの完全被覆、入力SHA-256、10負例拒否、実測範囲
+- [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (manifest): コミット済み受理記録の完全被覆と実測範囲の独立な整合性確認
+## [research/experiments/parabola-equality-refutation-20261109/verify_receipts.py](../../../research/experiments/parabola-equality-refutation-20261109/verify_receipts.py)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (verifier): コミット済み監査記録の範囲・重複・ソースhashを確認する。DRATの再検査ではない
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
@@ -9805,6 +9815,10 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2531_34249932790a9e9d.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): K0707修正後のd=393,395の再生成・再検査。2件ともVERIFIED、検査器ソースhash付き
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2647_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2647_34249932790a9e9d.json)
+
+- [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2647の全1323 dの修正版DRAT受理記録。K0706の有限計算の根拠
+- [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (data): 全1323 dでUNSAT・VERIFIED。修正版検証器ソースSHA-256付き
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）

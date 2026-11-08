@@ -1,8 +1,8 @@
 ---
 id: K0101
-title: 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
-kind: question
-status: open
+title: 全奇素数で剰余放物線上界(p+3)/2を達成するという予想は反証された
+kind: proposition
+status: refuted
 topics:
 - maximum-safe
 - geometry
@@ -10,7 +10,13 @@ aliases: []
 relations:
 - type: depends_on
   target: K0097
-  note: ''
+  note: 一般上界と等号集合の完全対構造
+- type: depends_on
+  target: K0334
+  note: 等号の存在とある完全対dのCNFのSATが同値
+- type: depends_on
+  target: K0706
+  note: p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
 artifacts:
 - path: research/experiments/structural-lemmas-2026-10-02/quadratic-constructions.md
   role: source
@@ -18,7 +24,7 @@ artifacts:
   commit: 9a574ca80380e35ef46fbbc99324218a38c7551e
 - path: research/experiments/frontier-geometry-2026-10-05/proof.md
   role: proof
-  note: 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数の充足可能性は未証明
+  note: 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数で充足可能という主張は含まない
 - path: research/experiments/frontier-geometry-2026-10-05/recovered-witnesses.json
   role: certificate
   note: 131..251拡張の追跡されていなかった証人を回復・保存
@@ -27,13 +33,13 @@ artifacts:
   note: 509,1009の追加有限等号証人
 - path: research/experiments/parabola-equality-extension-20261016/README.md
   role: source
-  note: 521..2000への有限拡張。全奇素数の等号は依然未証明
+  note: 521..2000への有限拡張の当時の記録
 - path: research/experiments/parabola-equality-extension-20261016/output/witnesses_521_2000.json
   role: certificate
   note: 521..1999の全206素数の等号証人
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/witnesses_2143_2500.json
   role: certificate
-  note: 2003..2477の64素数のうち63の等号証人。2207は深いd走査中
+  note: 2003..2477の64素数のうち2207を除く63素数の等号証人
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit.txt
   role: data
   note: generic 4×4 Leibnizによる全63証人の独立検証出力（共円0件）
@@ -61,84 +67,59 @@ artifacts:
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/parabola-equality-audit-2901-3100.txt
   role: data
   note: 17証人の独立検証出力（共円0件）
-scope: 奇素数 p における等号 A(p)=(p+3)/2 の有限検証範囲と d=h 例外の記述。
-evidence: finite computation; p=2207とp=2531で等号証人が存在しない計算結果あり（K0693/K0702, needs-review）; 5..2477と2503..2700の21素数は証人あり; 2539/2543/2549/2647は浅い走査で未発見; all-prime proof unknown
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2647_34249932790a9e9d.json
+  role: data
+  note: p=2647の全1323 dの修正版DRAT受理記録。K0706の有限計算の根拠
+  commit: b52faa12b77ff8bae9cf5343b20f3561917381a6
+- path: research/experiments/parabola-equality-refutation-20261109/verify_receipts.py
+  role: verifier
+  note: コミット済み監査記録の範囲・重複・ソースhashを確認する。DRATの再検査ではない
+- path: research/experiments/parabola-equality-refutation-20261109/receipt_coverage.json
+  role: manifest
+  note: 全dの完全被覆、入力SHA-256、10負例拒否、実測範囲
+- path: research/experiments/parabola-equality-refutation-20261109/README.md
+  role: source
+  note: 全称命題の反証の論理と有限計算の信頼境界
+scope: 全奇素数pについてQ_p内の最大安全サイズA(p)が(p+3)/2に等しいという全称命題。反例p=2647の最大値そのものは決定しない。
+evidence: K0706の全1323 dの修正版DRAT検査とK0334の等価よりA(2647)<=1324<1325。全称命題は有限計算で監査された反例によって否定される。
 ---
 
-## 現在の証拠の制限（2026-11-09）
+## 命題・対象範囲
 
-p=2207/2531/2647 の等号不達成はK0693/K0702/K0706のソルバ計算による候補であり、
-本問のstatusは `open` を維持する。[K0707](K0707-incremental-drat-deletion-unsoundness.md) で
-旧増分DRATチェッカーの偽受理を再現したため、旧 `VERIFIED` の件数を
-独立検証済み証拠としては採用しない。旧版と区別した再監査が必要。
-下記の「否定される」「確定」は、監査未完了の計算結果を前提にした記述として読む。
+元の全称命題は、全奇素数pに対して、標準q=4の剰余放物線
+`Q_p = {(t,t² mod p): 0<=t<p}` 内の最大安全サイズA(p)が
+`(p+3)/2` に等しい、という主張である。この命題は反証された。
+同じK番号の真偽を更新したもので、別の修正版の予想に置き換えたわけではない。
 
-# 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
+## 監査済み反例と反証の論理
 
-Q_p内の一般上界は証明済みで、5..2000の全奇素数で安全証人が等号を達成する。
-5..127の29素数は既存独立検算。131..251の23素数については追跡されていなかった証人を回復し、
-generic 4×4 Leibniz展開で全選択四点を再検査した。257..439の31素数と443..503の11素数も、証明済み必要合同式で全候補を絞った後に直接整数行列式で独立検査した。521..1999の全206素数は
-research/experiments/parabola-equality-extension-20261016 で構成し、同じ独立検証器で検査した
-（必要合同式を満たす総計2,196,275,194,090四点組のうち1,385,691,858候補に直接整数行列式、共円0件）。
-したがって5..2000は穴なく有限確認済み。1009を超える範囲の等号も有限に確認している。
+1. K0097により一般上界は `A(p)<=(p+3)/2`。
+2. K0334により、h=(p-1)/2として、等号h+2の達成は、ある完全対dについて
+   対応するCNFがSATであることと同値である。
+3. K0706ではp=2647の全d=1..1323についてUNSATのDRAT証明を修正版検証器で受理した。
+   コミット済み受理記録は1323件、重複・欠落・失敗0で、検証器ソースhashも一致する。
+4. 従って `A(2647)<=1324<1325=(2647+3)/2`。一つの奇素数の反例で全称命題は偽となる。
 
-**全奇素数に同じ達成構成があるかは未証明**。2000を超える反例素数も未発見。
+このためstatusは `refuted`。従来のquestionから、否定された同じ全称命題を表すpropositionへ変更した。
+これは有限計算に支えられた反例による否定であり、未検査の他素数に同じ不達成を一般化しない。
 
-K0334は、等号問題をある完全対dについてsigned NAE3/4と原点由来2/3リテラル節の
-同時充足可能性へ正確に帰着した。その全称充足可能性も反例素数も未確定。
-認証方式の上界や全盤K_pの既知下界とは別の問い。
+## 他の証拠と残る問い
 
-## 2026-10-17 bounded advance
+5..2203の全奇素数、2213..2477、およびその後の多くの素数には、保存・検査された等号証人がある。
+これらの肯定例は反例p=2647と矛盾しない。有限範囲の証人と独立検証の出典はartifactに保持する。
+保存証人の完全対は必ずしもd=hではなく、例えばp=1861ではd=864=h-66、
+p=2027,2399,2477ではd=h-1の証人が保存されている。
+この証人の選び方だけから、同じ素数でd=hの証人が存在しないとは結論しない。
+p=2207、2531、3251の等号不達成のソルバ計算はK0693、K0702、K0708を参照し、
+それぞれの未完監査をp=2647の結果から完了扱いにはしない。
 
-New finite evidence: `d=h` is sufficient for all primes 5..443 and (newly) 2003..2143, except `d=h-1` for 1087, 1091, 1367, 1523, 1847, 2027 and `d=h-66` for 1861; p=2027 independently verified with `verify_witnesses.cpp`. All 302 odd primes up to 2000 already had equality witnesses; new runs add independently checked witnesses for 2003..2053 and 2069..2143. No counterexample prime to equality found.
+`A(2647)` の正確値、等号を達成する素数の特徴づけ、不達成素数の分布は未解決である。
+例えば `A(2647)=1324` の下界証人は今回得ていない。
 
-Scope clarification: K0101 is not resolved by the `d=h` construction alone; `d=h` works for most primes but has exceptions, so a uniform construction remains unknown.
+## 信頼境界
 
-Next steps: characterize the `d=h` exception pattern; extend finite verification beyond 2143; seek an all-prime proof. Status remains open.
-
-統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
-## 2026-11-07 有限証人の保存拡張（2003..2477）
-
-`research/experiments/parabola-equality-extension-2143-2500-20261107` で 2003..2477 の奇素数 64 個を走査し、
-63 個で等号証人を構成・保存した（`d=h-1` は 2027, 2399, 2477、他の 60 は `d=h`）。
-2351 は既定設定の cadical がタイムアウトしたが SAT 向け設定（`--sat -L1000`）で `d=h` の解を得た。
-証人は探索と独立な generic 4×4 Leibniz 検証器で全件監査済み（共円 0 件）。
-これで **5..2203 の全奇素数**と **2213..2477** に証人が存在する。
-2207 は `d=h..h-528` の走査で未発見であり（深い d を走査中）、等号不成立の証拠ではない。
-2017 の記録が挙げた 2003..2143 の証人も本実験で再構成・保存した。
-
-Scope clarification: 有限範囲の保存証人が 2203 まで延びただけで、全奇素数での等号は依然未解決。
-`d=h` の例外分布（h-1 が多いが 1861 は h-66）の特徴づけも未解決。
-
-## 2026-11-08 p=2207 の反例候補（要監査）
-
-上記 2026-11-07 の走査を続けた結果、**p=2207 では d=1..1103 の全 `d` で CNF が UNSAT**
-（UNSAT 1103・SAT 0・不明 0）となった。タイムアウトした 4 件（289, 297, 312, 324）は
-衝突予算 2000 万で再判定済み。Glucose4 と Minisat22 も d=1,289,550,1103 で UNSAT。
-実装の全数照合は p=5..23 の全安全集合列挙と全 `d` で一致（p=23 で 8,064 集合・d 集合一致）。
-
-K0334 の等価（等号 ⟺ ある `d` で CNF 充足可能）とサイズ `h+2` の集合が一完全対構造を取ることから、
-`A(2207) <= 1104 < 1105 = (2207+3)/2` が従う。**本問の「全奇素数で等号」は p=2207 で否定される**
-（K0693, status needs-review）。ただし UNSAT の DRAT 証明は未取得・未検査であり、本項の status は
-open のまま維持する。監査完了後に K0693 を確定し、本項を superseded にする予定。
-2503..2700 の 26 素数も走査し、21 素数で証人を保存・独立検証した（2503, 2521, 2551, 2557, 2579,
-2591, 2593, 2609, 2617, 2621, 2633, 2657, 2659, 2663, 2671, 2677, 2683, 2687, 2689, 2693, 2699）。
-残る 5 素数（2531, 2539, 2543, 2549, 2647）は d=h..h-6 で証人が出ず、2531 は全 d 走査で
-等号不成立が確定した（K0702）。さらに 2701..2900 の 26 素数では 20 素数で証人を保存・独立検証し、
-**2789, 2791, 2837, 2843, 2887, 2897 の 6 素数**が浅い d で証人なし（候補）。
-2901..3100 の 23 素数では 17 素数で証人を保存・独立検証し、**2927, 3023, 3037, 3041, 3079, 3083** が候補。
-浅い走査の失敗は 18 素数あるが、**6 個の d すべてが UNSAT 証明済み（タイムアウト 0）なのは
-2207, 2531, 2647 の 3 素数だけ**。残りはタイムアウトを含み、証人を取りこぼした可能性がある。
-タイムアウトなしに限ると範囲ごとの失敗は 1〜2/40 で、**p 依存の上昇傾向は見られない**
-（「2% → 18%」という以前の観察はソルバ難易度の交絡だった。2026-11-08 訂正ログ参照）。
-剰余による説明（p mod 8, mod 12, v2(p−1)）は permutation test で有意でなかった。2003..2477 では浅い失敗が 2207 の 1 個だけだったのに対し、
-2500 以降は浅い失敗が 5/26 と多く、d=h 構成の破綻が p とともに増える可能性がある（未確定）。
-続いて **p=3251 でも d=1..1625 の全数が UNSAT**（unknown 0）となり、4例目 `A(3251) <= 1626 < 1627`
-が得られた（K0708）。
-続いて **p=2647 でも d=1..1323 の全数が UNSAT**（unknown 0、UNSAT 1323）となり、3例目
-`A(2647) <= 1324 < 1325` が得られた（K0706）。これは「浅い走査で 6 d すべて UNSAT 証明済み・証人なし」
-という交絡のない基準で選ばれた候補である。
-続いて **p=2531 でも d=1..1265 の全数が UNSAT**（unknown 0）となり、2例目の等号不達成候補
-`A(2531) <= 1266 < 1267` が得られた（K0702）。p=2207 では標本 21 d の DRAT 証明を独立チェッカーで
-VERIFIED にしたが、p=2531 の監査は未実施。p=2539, 2543, 2549 も d=h..h-30 で証人未発見であり、
-反例素数はさらに増える可能性がある。`A(2207)`, `A(2531)` の正確な値は未確定。
+反証はK0334の幾何からCNFへの還元と、K0706の修正版DRAT検査による有限計算に依存する。
+K0707で偽受理が見つかった旧検証器の記録は使わない。
+今回追加したverify_receipts.pyはコミット済み受理記録の完全被覆と整合性を検査するもので、
+個々のDRAT証明の再実行や、修正版検証器の一般的健全性の形式証明ではない。
+検証器・符号化・コンパイラ等への実装上の依存は残る。

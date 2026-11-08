@@ -1,6 +1,6 @@
 ---
 id: K0706
-title: p=2647でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（3例目・監査待ち）
+title: p=2647では剰余放物線の等号A(p)=(p+3)/2を達成できない（全d監査済み）
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -18,9 +18,9 @@ relations:
 - type: supports
   target: K0702
   note: 2531に続く3例目
-- type: supports
+- type: refutes
   target: K0101
-  note: 全奇素数での等号を否定する3番目の反例候補
+  note: 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 artifacts:
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2647.json
   role: data
@@ -31,6 +31,13 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py
   role: verifier
   note: p<=23で符号化と完全対構造の全数照合
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_2647_34249932790a9e9d.json
+  role: data
+  note: 全1323 dでUNSAT・VERIFIED。修正版検証器ソースSHA-256付き
+  commit: b52faa12b77ff8bae9cf5343b20f3561917381a6
+- path: research/experiments/parabola-equality-refutation-20261109/receipt_coverage.json
+  role: manifest
+  note: コミット済み受理記録の完全被覆と実測範囲の独立な整合性確認
 scope: 奇素数p=2647のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
 evidence: 全1323 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。さらに全1323 dのDRAT証明を修正版（削除時に代入を失効する）独立検証器で検査し、1323/1323 VERIFIED。
 ---
@@ -40,7 +47,7 @@ evidence: 全1323 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。�
 `Q_p = {(t, t² mod p)}` の安全集合の最大を `A(p)` とすると、**p = 2647 では
 `A(2647) < (2647+3)/2 = 1325`**（すなわち `A(2647) <= 1324`）。
 K0693（p=2207）、K0702（p=2531）に次ぐ**3例目の等号不達成**であり、K0101 の
-「全奇素数で等号」に対する三つ目の反例候補である。`A(2647)` の正確な値は未確定。
+「全奇素数で等号」に対する、有限計算で監査した反例である。`A(2647)` の正確な値は未確定。
 
 ## 根拠
 
@@ -58,11 +65,11 @@ K0693（p=2207）、K0702（p=2531）に次ぐ**3例目の等号不達成**で�
 ## 限界
 
 - **2026-11-09 完了: 全 1323 d の DRAT 証明を修正版検証器（削除時に代入を失効させる）で検査し、
-  1323/1323 VERIFIED（失敗 0）**。証明は 22〜29,212 行、検査 0.5〜43 秒/件
+  1323/1323 VERIFIED（失敗 0）**。証明は 10〜52,650 行、検査 0.2〜79.3 秒/件
   （`output/drat_audit_full_2647_34249932790a9e9d.json`）。
   旧検証器の健全性不具合（K0707）を踏まえ、修正版ソースの SHA-256 ごとに新しい監査を行った。
-  これで p=2647 の等号不達成は、K0334 の還元と合わせて**有限計算として完全に証明された**
-  （status を `computed` に更新）。
+  K0334 の還元と合わせて、p=2647の等号不達成を支える有限計算の監査が完了した
+  （status は `computed`）。検証器・符号化・コンパイラ等の実装への依存は残り、Leanによる形式証明ではない。
 - `A(2647)` の正確な値は未確定。
 - p=2647 以外にも、タイムアウトを含む浅い失敗候補が多数あるが、証人を取りこぼした可能性があり
   確定には全数走査が必要。

@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 690 / alias: 269 / artifactファイル: 3436
+K項目: 690 / alias: 269 / artifactファイル: 3440
 
 ## kind
 
@@ -9,8 +9,8 @@ K項目: 690 / alias: 269 / artifactファイル: 3436
 | computation | 67 |
 | definition | 5 |
 | method | 4 |
-| proposition | 547 |
-| question | 39 |
+| proposition | 548 |
+| question | 38 |
 | verification | 28 |
 
 ## status
@@ -22,9 +22,9 @@ K項目: 690 / alias: 269 / artifactファイル: 3436
 | conjectured | 2 |
 | needs-review | 3 |
 | observed | 26 |
-| open | 37 |
+| open | 36 |
 | proved | 360 |
-| refuted | 63 |
+| refuted | 64 |
 | scope-unclear | 2 |
 | superseded | 9 |
 | verified | 28 |
@@ -58,7 +58,6 @@ K項目: 690 / alias: 269 / artifactファイル: 3436
 
 数学的未解決と監査不足の件数は合算しない。
 
-- [K0101](../items/K0101-prime-parabola-equality-open.md) [open] 全奇素数で剰余放物線上界(p+3)/2が達成されるかは未確定
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) [open] 具体巨大証明書をLean核のみで検査する実装は未完成
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) [open] 10×10空盤面全体の単一KYOENC4証明書は未統合
 - [K0105](../items/K0105-n11-empty-root-winner-open.md) [open] 11×11の真の空盤勝敗は現在の主要未解決問題
