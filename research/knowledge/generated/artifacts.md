@@ -7398,6 +7398,7 @@
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (data): 94五石位置の勝敗集計（78先手勝ち・16第二手勝ち、各位置のLOSS/WIN子数）
 - [K0676](../items/K0676-n11-region-s4-first-win.md) (data): 五石位置勝敗の一次データ（78先手/16第二手）
+- [K0705](../items/K0705-n11-p4-census.md) (data): 五石位置勝敗の一次データ（78先手/16第二手）
 ## [research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.py](../../../research/experiments/n11-central-19-cover-20261031/output/s6sweep/s5_verdicts.py)
 
 - [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md) (source): S6判定からの五石位置集計
@@ -11053,6 +11054,9 @@
 
 - [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) (log): 有限証拠による予想から二側相互帰納の全称証明へ進めた経緯
 - [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) (log): 二点辺なしのpure coneでも全高値を得た経緯
+## [research/log/2026-11-08-n11-p4-census.md](../../../research/log/2026-11-08-n11-p4-census.md)
+
+- [K0705](../items/K0705-n11-p4-census.md) (log): 四石親族全数の census の経緯
 ## [research/log/2026-11-08-one-free-point-xor-correction.md](../../../research/log/2026-11-08-one-free-point-xor-correction.md)
 
 - [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) (log): hの非加法性と一自由点xorを混同していた否定文の訂正記録

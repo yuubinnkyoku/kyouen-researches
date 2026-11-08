@@ -177,6 +177,7 @@
 - ← depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0705](../items/K0705-n11-p4-census.md): 条件付き証明義務と確定勝敗の区別
 
 ## [K0004](../items/K0004-n1-n6-all-safe-grundy.md) 1×1〜6×6の全安全局面Grundy分類
 
@@ -3603,6 +3604,7 @@
 - → depends_on [K0674](../items/K0674-n11-all-witnesses-first-win.md): 修復後46証人の46/46手番WINにより方向性は先手WIN側へ転換
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 94五石位置の勝敗分類（78先手/16第二手）
+- ← depends_on [K0705](../items/K0705-n11-p4-census.md): 94五石位置の勝敗分類（78先手/16第二手）
 
 ## [K0676](../items/K0676-n11-region-s4-first-win.md) 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子）
 
@@ -3827,3 +3829,8 @@
 - ← depends_on [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md): 一自由点の普遍xor1則と低h制限通常ゲームとの可換性。旧否定文の訂正
 - ← depends_on [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md): 相互再帰で使う性質Rは全有限不偏ゲームで成立し、制限tにも自由点xor1が適用できる
 - ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 自由点付加の補助値xor1は全有限ゲームに成立する一般補題
+
+## [K0705](../items/K0705-n11-p4-census.md) 94五石子の四石親族338を全数調査：284先手確定・54脅威残（残る壁の正確な位置）
+
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置の勝敗分類（78先手/16第二手）
+- → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
