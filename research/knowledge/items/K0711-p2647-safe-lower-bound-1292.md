@@ -1,6 +1,6 @@
 ---
 id: K0711
-title: 剰余放物線Q_2647の最大安全サイズは1296以上1324以下
+title: 剰余放物線Q_2647の最大安全サイズは1296以上1322以下
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -43,6 +43,15 @@ artifacts:
 - path: research/experiments/parabola-local-repair-20261109/README.md
   role: source
   note: 初回1292点構成、再現手順と信頼境界
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json
+  role: data
+  note: サイズ1323の4形状クラスすべてUNSATの記録（上界1322の根拠）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json
+  role: data
+  note: サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
+- path: research/log/2026-11-09-p2647-near-miss-and-size-1323.md
+  role: source
+  note: 形状クラス判定の方法と結果
 - path: research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/candidate.txt
   role: certificate
   note: 初回1292点証人。新しいSAT探索のphaseの起点としても保持
@@ -64,13 +73,13 @@ artifacts:
 - path: research/experiments/parabola-ternary-selection-20261109/regression.json
   role: data
   note: 小規模完全照合、既存1292点の適合性、現在の1296点モデルの全節充足確認
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。有限存在証人による下界1296とK0706の上界1324。正確値や他素数への一般化は主張しない。
-evidence: 1296点証人を保存し、全117002820060選択四点を必要合同式と44277012回の直接整数4×4行列式で検査して禁止四点0件。上界はK0706の全d監査から従う。
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。有限存在証人による下界1296と、形状クラス判定による上界1322。正確値や他素数への一般化は主張しない。
+evidence: 1296点証人を保存し、全117002820060選択四点を必要合同式と44277012回の直接整数4×4行列式で検査して禁止四点0件。上界はK0706の全d監査（A<=1324）と、サイズ1324・1323の全形状クラスのUNSAT（A<=1322）から従う。
 ---
 
 ## 命題と構成
 
-**1296 <= A(2647) <= 1324**。正確な最大値は未確定。
+**1296 <= A(2647) <= 1322**。正確な最大値は未確定。
 
 保存CNF（p=2647,d=1323、1323変数・53886節）へ局所探索を100万flip、seed=20261109で行い、
 元CNFの41節に違反する割当を得た。Pythonでも元の全節を直接評価して41違反と一致した。

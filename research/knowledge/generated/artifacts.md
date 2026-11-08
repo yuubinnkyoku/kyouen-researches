@@ -9875,6 +9875,12 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/reduction_validation.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/reduction_validation.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 7素数の突合結果（全一致）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1323の4形状クラスすべてUNSATの記録（上界1322の根拠）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
@@ -11200,6 +11206,9 @@
 ## [research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md](../../../research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md)
 
 - [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (log): 有界探索から完全核表と全点数最適表へ至った経緯
+## [research/log/2026-11-09-p2647-near-miss-and-size-1323.md](../../../research/log/2026-11-09-p2647-near-miss-and-size-1323.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 形状クラス判定の方法と結果
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
