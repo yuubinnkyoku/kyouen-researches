@@ -141,6 +141,8 @@ def main() -> int:
                 (OUT / f"shape_class_witness_{p}_{args.size}.json").write_text(
                     json.dumps(rec, indent=2) + "\n", encoding="utf-8", newline="\n")
         results.append(rec)
+        (OUT / f"shape_class_{p}_{args.size}.json").write_text(
+            json.dumps(results, indent=2) + "\n", encoding="utf-8", newline="\n")
     (OUT / f"shape_class_{p}_{args.size}.json").write_text(
         json.dumps(results, indent=2) + "\n", encoding="utf-8", newline="\n")
     return 0
