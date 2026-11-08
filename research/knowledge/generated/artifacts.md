@@ -8566,6 +8566,15 @@
 ## [research/experiments/n9-minimum-maximal-catalogue-20261016/scripts/verify_n9.py](../../../research/experiments/n9-minimum-maximal-catalogue-20261016/scripts/verify_n9.py)
 
 - [K0297](../items/K0297-minimum-maximal-private-point-open.md) (verifier): 曲線正規化を使わない独立検証器
+## [research/experiments/nae4-constant-rup-deletion-distance-20261109/README.md](../../../research/experiments/nae4-constant-rup-deletion-distance-20261109/README.md)
+
+- [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) (proof): 全m,kの連結・有界次数構成、両削除距離k、共通15行RUP証明
+## [research/experiments/nae4-constant-rup-deletion-distance-20261109/results.json](../../../research/experiments/nae4-constant-rup-deletion-distance-20261109/results.json)
+
+- [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) (data): 6例・12816割当・共通15行証明の受理結果とhash。全称証明の代替ではない
+## [research/experiments/nae4-constant-rup-deletion-distance-20261109/verify.py](../../../research/experiments/nae4-constant-rup-deletion-distance-20261109/verify.py)
+
+- [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) (verifier): m<=3の全割当による最小違反数、入力条件、共通証明の検査
 ## [research/experiments/original-claims/output/batch09_pairs_n4.json](../../../research/experiments/original-claims/output/batch09_pairs_n4.json)
 
 - [K0321](../items/K0321-n4-board-deletion-strategic-interaction.md) (data): 全120二点削除対と単独削除のg・K

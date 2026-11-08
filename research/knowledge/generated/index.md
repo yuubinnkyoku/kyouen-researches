@@ -693,3 +693,4 @@
 | [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) | 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する | proposition | computed | verification, certificates, provenance |
 | [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) | p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) | 一行RUP証明を持つCNFでもSAT化に必要な節削除数は任意に大きい | proposition | proved | search-methods, verification, provenance |
+| [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) | 連結・有界次数のsigned NAE4でも15行RUP証明のまま最少削除距離は無界になる | proposition | proved | search-methods, verification, provenance |
