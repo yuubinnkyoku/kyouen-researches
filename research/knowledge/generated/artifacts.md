@@ -10117,6 +10117,39 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
+## [research/experiments/parabola-p2531-lrat-20261109/README.md](../../../research/experiments/parabola-p2531-lrat-20261109/README.md)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): 入力・証拠・各検査の再現、異なる検査方法の被覆和と全数未完了の区別
+## [research/experiments/parabola-p2531-lrat-20261109/audit.py](../../../research/experiments/parabola-p2531-lrat-20261109/audit.py)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 未被覆d=82..85の新しいDRAT生成、全提供辺の整数幾何、独立投影schema、DRAT-trimと修正LRAT検査
+## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/coverage.json](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/coverage.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 修正版DRAT143 dと新LRAT4 dは重複なし、独立被覆和147/1265、残り1118 d
+## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d82/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d82/core.lrat.gz)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=82の修正LRAT検査器で受理した反駁。原DRAT・CNFとreceiptは同じexperimentへ保存
+## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d83/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d83/core.lrat.gz)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=83の修正LRAT検査器で受理した反駁
+## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d84/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d84/core.lrat.gz)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=84の修正LRAT検査器で受理した反駁
+## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d85/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d85/core.lrat.gz)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=85の修正LRAT検査器で受理した反駁
+## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/edges.txt.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/edges.txt.gz)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): ヘッダ2531 837640と全提供禁止四点。UNSATに完全性は不要で全辺の健全性を実検査
+## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/geometry.json](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/geometry.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 837640辺をgeneric整数4×4行列式で受理。wrapper・generic sourceとinput hash付き
+## [research/experiments/parabola-p2531-lrat-20261109/output/saved-verification.json](../../../research/experiments/parabola-p2531-lrat-20261109/output/saved-verification.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 全4入力を各1265変数・38160節の独立投影schemaへ照合し、保存LRAT・原DRAT・被覆を検査
+## [research/experiments/parabola-p2531-lrat-20261109/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-20261109/verify_saved.py)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): SATソルバや元generatorを使わず、保存辺の独立投影・入力と証拠hash・旧143件との被覆和を照合
 ## [research/experiments/parabola-size1323-drat-20261109/README.md](../../../research/experiments/parabola-size1323-drat-20261109/README.md)
 
 - [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (source): 反例、修正、旧証拠への制限、保存証明と監査再開の手順

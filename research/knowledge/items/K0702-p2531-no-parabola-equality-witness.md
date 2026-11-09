@@ -19,6 +19,39 @@ relations:
   target: K0101
   note: 全奇素数での等号を否定する2番目の反例候補
 artifacts:
+- path: research/experiments/parabola-p2531-lrat-20261109/audit.py
+  role: verifier
+  note: 未被覆d=82..85の新しいDRAT生成、全提供辺の整数幾何、独立投影schema、DRAT-trimと修正LRAT検査
+- path: research/experiments/parabola-p2531-lrat-20261109/verify_saved.py
+  role: verifier
+  note: SATソルバや元generatorを使わず、保存辺の独立投影・入力と証拠hash・旧143件との被覆和を照合
+- path: research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/edges.txt.gz
+  role: data
+  note: ヘッダ2531 837640と全提供禁止四点。UNSATに完全性は不要で全辺の健全性を実検査
+- path: research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/geometry.json
+  role: data
+  note: 837640辺をgeneric整数4×4行列式で受理。wrapper・generic sourceとinput hash付き
+- path: research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/coverage.json
+  role: manifest
+  note: 修正版DRAT143 dと新LRAT4 dは重複なし、独立被覆和147/1265、残り1118 d
+- path: research/experiments/parabola-p2531-lrat-20261109/output/saved-verification.json
+  role: data
+  note: 全4入力を各1265変数・38160節の独立投影schemaへ照合し、保存LRAT・原DRAT・被覆を検査
+- path: research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d82/core.lrat.gz
+  role: certificate
+  note: d=82の修正LRAT検査器で受理した反駁。原DRAT・CNFとreceiptは同じexperimentへ保存
+- path: research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d83/core.lrat.gz
+  role: certificate
+  note: d=83の修正LRAT検査器で受理した反駁
+- path: research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d84/core.lrat.gz
+  role: certificate
+  note: d=84の修正LRAT検査器で受理した反駁
+- path: research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d85/core.lrat.gz
+  role: certificate
+  note: d=85の修正LRAT検査器で受理した反駁
+- path: research/experiments/parabola-p2531-lrat-20261109/README.md
+  role: source
+  note: 入力・証拠・各検査の再現、異なる検査方法の被覆和と全数未完了の区別
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_2531.json
   role: data
   note: d=1265..1の全数走査（UNSAT 1265・unknown 0・SAT 0）
@@ -48,7 +81,7 @@ artifacts:
   role: verifier
   note: 件数と計画標本63件の集合包含を区別して照合する再現コード
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitでは143 dがVERIFIEDで計画標本63/63を被覆。全1265件の再監査は未完了。
+evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと、新しいd=82..85の独立LRAT受理4 dは重複なしで合計147/1265。全数再監査は未完了。
 ---
 
 ## 現在の監査上の制限（2026-11-09）
@@ -66,6 +99,15 @@ d=393,395から再監査を開始し、commit `87e28af3c927d640bde3fbc8a20238efc
 「標本完了」は「全数監査完了」ではない。
 inventoryは保存レシートの整合性・被覆のみを検査し、今回DRATを再生していない。
 修正版の一般健全性は有限回帰からは導かれない。
+
+その後、修正版143 dに含まれない **d=82,83,84,85** で新しい証明を生成した。
+各CNFは1265変数・38160節。入力に使った837640禁止四点すべてを別のgeneric整数4×4検査器で受理し、
+全4入力の節集合を元generatorを使わない独立な固定完全対の投影schemaへ照合した。
+各原DRATを固定DRAT-trim -Uで受理・LRAT化し、K0714の空節処理を修正した別実装で全4 LRATを受理した。
+旧修正版143 dと新LRAT4 dに重複はなく、**現在の独立被覆の和は147/1265 d、未被覆1118 d**。
+異なる検証器の受理を同じsource hashの143件へ混ぜず、別manifestで集合和を保存する。
+提供辺集合の完全性はUNSAT排除には不要であり、健全な辺の部分集合でも安全テンプレートに対する緩和となる。
+これは一部のdの有限反駁検査であり、全数監査や検証器の一般健全性の形式証明ではない。
 
 ## 命題・範囲
 
@@ -87,7 +129,7 @@ K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 �
 ## 限界
 
 - 旧版の標本8件・途中373件のVERIFIED記録は、K0707により現在の修正版の被覆数には加えない。
-  修正版の受理記録143 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
+  修正版DRAT143 dと新LRAT4 dの和147 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
 - `A(2531)` の正確な値は未確定。
 - 同時期の走査で p=2539, 2543, 2549 も d=h..h-30 の範囲で証人が見つかっておらず、
   反例素数は 2207, 2531 以外にも存在する可能性がある（未確定）。
