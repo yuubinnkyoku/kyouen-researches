@@ -9730,6 +9730,9 @@
 ## [research/experiments/pairsum-reconstruction-20261018/verify.py](../../../research/experiments/pairsum-reconstruction-20261018/verify.py)
 
 - [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): Python整数演算による構成・恒等式・有限小例の検査
+## [research/experiments/parabola-audit-coverage-20261109/inventory-20261109T1016.json](../../../research/experiments/parabola-audit-coverage-20261109/inventory-20261109T1016.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 最新mainの保存レシートも21/1103 dと確認。残り1082 d、旧固定snapshot5 dと区別。DRAT再生ではない
 ## [research/experiments/parabola-audit-coverage-20261109/inventory.json](../../../research/experiments/parabola-audit-coverage-20261109/inventory.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 固定commitのレシート整合性と被覆の検査。DRATの再実行ではない
@@ -10013,7 +10016,7 @@
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (source): 実装、再現入力・出力、1296点構成と1300点UNKNOWNの範囲
 ## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与えるソート済み1296パラメータ。点は(t,t² mod 2647)
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1296点証人。今回の探索のphase起点
 ## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44277012候補を検査、禁止四点0件。入力・ソースhash付き
@@ -10038,6 +10041,33 @@
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 直接投影節を点選択制約へ変換し、空対数を制限する探索器
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (solver): 直接投影節の点選択への変換と空対数のcardinality制約
+## [research/experiments/parabola-warm-improvement-20261109/README.md](../../../research/experiments/parabola-warm-improvement-20261109/README.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 1298点証人とUNKNOWNの範囲、凍結符号化・予算・再現手順
+## [research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt](../../../research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与える1298点のソート済みパラメータ。点は(t,t² mod 2647)
+## [research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/geometry.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全117727574580四点を合同式で被覆し44555181候補の整数4×4行列式を検査、禁止四点0件
+## [research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/input.cnf.gz](../../../research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 原点と完全対d=1323を固定し1297点以上を要求した実入力
+## [research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/model.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 132904節を全て満たす40201変数の完全モデル。選択結果1298点、空対27
+## [research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1296点をphaseに使い7.76秒で1298点を返したSAT記録。幾何検査は別
+## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget100000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget100000/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1298点をphaseにした1299点以上の探索は10万衝突予算でUNKNOWN。不存在の証明ではない
+## [research/experiments/parabola-warm-improvement-20261109/output/verification.json](../../../research/experiments/parabola-warm-improvement-20261109/output/verification.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1298点SATと1299点UNKNOWNの保存証拠・warm source・凍結符号化の照合結果
+## [research/experiments/parabola-warm-improvement-20261109/verify_saved.py](../../../research/experiments/parabola-warm-improvement-20261109/verify_saved.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 2実入力の再生成・hash、完全モデルの全節充足と点抽出、独立幾何receiptを検査
 ## [research/experiments/path-recurrence-periodic-forcing-20261108/README.md](../../../research/experiments/path-recurrence-periodic-forcing-20261108/README.md)
 
 - [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (source): 再帰の導出・方法・2 roundの結果・候補補題と限界

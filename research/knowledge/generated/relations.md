@@ -3874,7 +3874,7 @@
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する4番目の反例候補
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
-## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1296以上1322以下
+## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1298以上1322以下
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合
 - → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322

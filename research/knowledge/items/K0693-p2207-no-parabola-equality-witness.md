@@ -53,6 +53,9 @@ artifacts:
 - path: research/experiments/parabola-audit-coverage-20261109/inventory.py
   role: verifier
   note: 重複・未被覆・計画標本の照合と13制御。証明内容の検査器ではない
+- path: research/experiments/parabola-audit-coverage-20261109/inventory-20261109T1016.json
+  role: data
+  note: 最新mainの保存レシートも21/1103 dと確認。残り1082 d、旧固定snapshot5 dと区別。DRAT再生ではない
 - path: research/log/2026-11-09-drat-reaudit-status-omp.md
   role: source
   note: HEAD時点の修正版再監査の確定状態（2207は12/1103、標本12/21）
@@ -112,7 +115,7 @@ K0097 の上界 `A(p) <= (p+3)/2` は一般に証明済みで、p <= 2143 の全
 
 ## 限界（監査待ち）
 
-- 全dのUNSAT主張と、修正版検査器の5 dのDRAT受理記録を区別する。
+- 全dのUNSAT主張と、修正版検査器の21 dのDRAT受理記録を区別する。
   全数監査は未完了でstatusは `needs-review`。有限の回帰・受理記録から検査器の一般健全性は導かれない。
 - `A(2207)` の正確な値は未確定。サイズ `h+1`（1104）の集合は `x+c-e=1`（`x`=0 を含む、`c`=完全対数、`e`=空対数）
   から **3 形**ある: (a) `(1,0,0)`、(b) `(0,1,0)`、(c) `(1,1,1)`（`0`＋完全対一つ＋空対一つ）。

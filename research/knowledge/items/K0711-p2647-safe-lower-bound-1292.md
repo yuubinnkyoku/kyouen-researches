@@ -1,6 +1,6 @@
 ---
 id: K0711
-title: 剰余放物線Q_2647の独立監査済み範囲は1296以上1322以下
+title: 剰余放物線Q_2647の独立監査済み範囲は1298以上1322以下
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -19,9 +19,36 @@ relations:
   target: K0334
   note: 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 artifacts:
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt
+  role: certificate
+  note: 現在の下界を与える1298点のソート済みパラメータ。点は(t,t² mod 2647)
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/geometry.json
+  role: data
+  note: 全117727574580四点を合同式で被覆し44555181候補の整数4×4行列式を検査、禁止四点0件
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/model.json
+  role: certificate
+  note: 132904節を全て満たす40201変数の完全モデル。選択結果1298点、空対27
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/input.cnf.gz
+  role: data
+  note: 原点と完全対d=1323を固定し1297点以上を要求した実入力
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/result.json
+  role: data
+  note: 1296点をphaseに使い7.76秒で1298点を返したSAT記録。幾何検査は別
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget100000/result.json
+  role: data
+  note: 1298点をphaseにした1299点以上の探索は10万衝突予算でUNKNOWN。不存在の証明ではない
+- path: research/experiments/parabola-warm-improvement-20261109/verify_saved.py
+  role: verifier
+  note: 2実入力の再生成・hash、完全モデルの全節充足と点抽出、独立幾何receiptを検査
+- path: research/experiments/parabola-warm-improvement-20261109/output/verification.json
+  role: data
+  note: 1298点SATと1299点UNKNOWNの保存証拠・warm source・凍結符号化の照合結果
+- path: research/experiments/parabola-warm-improvement-20261109/README.md
+  role: source
+  note: 1298点証人とUNKNOWNの範囲、凍結符号化・予算・再現手順
 - path: research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt
   role: certificate
-  note: 現在の下界を与えるソート済み1296パラメータ。点は(t,t² mod 2647)
+  note: 前段の1296点証人。今回の探索のphase起点
 - path: research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json
   role: data
   note: generic 4×4整数行列式で44277012候補を検査、禁止四点0件。入力・ソースhash付き
@@ -151,13 +178,13 @@ artifacts:
 - path: research/experiments/parabola-drat-trim-20261109/README.md
   role: source
   note: 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1296と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
-evidence: 下界は1296点の独立整数幾何検査。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1298と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
+evidence: 下界は1298点の独立整数幾何検査と保存SATモデルの全132904節の充足確認。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
 ---
 
 ## 命題と構成
 
-**独立監査済みの範囲は1296 <= A(2647) <= 1322**。正確な最大値は未確定。
+**独立監査済みの範囲は1298 <= A(2647) <= 1322**。正確な最大値は未確定。
 上界1322は、修正後入力に対する全4形状の反駁検査で確認した有限計算の結論である。
 
 保存CNF（p=2647,d=1323、1323変数・53886節）へ局所探索を100万flip、seed=20261109で行い、
@@ -171,12 +198,17 @@ CaDiCaLは11.233秒でSATを返し、空対29・1296点を選択した。
 保存した142992節を再生成してhashを照合し、保存モデルが全節を満たすことと点選択を直接検査した。
 初回1292点証人はphase指定に使ったが、新しい集合が初回集合を包含するとは主張しない。
 
+さらに、その1296点証人をphaseにし、1297点以上・空対28以下を要求した。
+CaDiCaLは7.761秒・13815衝突でSATを返し、空対27・1298点の新しい証人を得た。
+保存した40201変数・132904節の実入力を再生成し、完全モデルの全節充足と点選択を検査した。
+warm startは探索のphase指定であり、既存の点を固定したり包含を要求するassumptionではない。
+
 ## 下界の独立検査
 
-証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
-探索とは別の検証器で、全117002820060選択四点を対象に必要合同式で候補を絞り、
-44277012候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
-`2647 1296 117002820060 44277012`、終了コード0。
+現在の1298点証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
+探索とは別の検証器で、全117727574580選択四点を対象に必要合同式で候補を絞り、
+44555181候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
+`2647 1298 117727574580 44555181`、終了コード0。
 
 合同式フィルタの完全性は、行列式をmod pへ落とすとVandermonde積とパラメータ和の積になることによる。
 異なる四パラメータで前者は非零だから、整数行列式0なら和は0 mod p。
@@ -238,8 +270,9 @@ RATは使わず、全追加が元CNFの論理的帰結となるため、削除�
 ## 旧ソルバ記録と未確定事項
 
 従来の上界1324はK0706の全1323 dのDRAT監査による。1324点の3形状監査で1323へ、今回の4形状監査で1322へ強化した。
-1296点集合の最大性や空対29の最小性は未確定。1300点以上を求める別試行は60秒でUNKNOWNであり、
-1300点の不存在を意味しない。
+1298点集合の最大性や空対27の最小性は未確定。1298点をphaseにした1299点以上の試行は
+10万衝突予算・48.37秒でUNKNOWNだった。以前の1300点以上の試行も60秒でUNKNOWNであり、
+いずれも該当サイズの不存在を意味しない。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。
 一方、上界1322（サイズ1323の形状クラス判定）の旧ソルバ記録は、
