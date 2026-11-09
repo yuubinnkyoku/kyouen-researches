@@ -115,6 +115,15 @@ artifacts:
 - path: research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json
   role: data
   note: ローカルに保持する2127240行の未検査生証明のhash。生証明はGit非収録で受理証拠ではない
+- path: research/experiments/parabola-monotone-rup-20261109/encoding_audit.py
+  role: verifier
+  note: CardEncを呼ばず修正後4入力の全節を独立schemaとprefix閾値counterへ比較し、全提供辺を再検査
+- path: research/experiments/parabola-monotone-rup-20261109/output/encoding-audit-reservation.json
+  role: data
+  note: 1323点の全4入力で全節schema一致。辺53886件の整数幾何も再検査成功。UNSAT検査とは別
+- path: research/experiments/parabola-monotone-rup-20261109/README.md
+  role: source
+  note: 閾値counterによる安全集合からCNFモデルへの拡張可能性とRUP-only検査の論理
 scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立検査済み下界1296と3形状DRAT監査の上界1323。旧1322根拠CNFの一部にK0713の変数衝突があり、修正版の全4形状監査は未完了。正確値や他素数への一般化は主張しない。
 evidence: 下界は1296点の独立整数幾何検査。上界は1324点の全3形状の入力・DRAT証明を保存し、53886提供辺の整数幾何健全性と全3本の修正版DRAT受理を確認。実証明の再生も全件成功。
 ---
@@ -185,6 +194,9 @@ Cardinalityの実節は、明示的なprefix OR鎖の別実装と全3入力で�
 receipts を再生成し、節数が旧ログ表と全件一致した
 （[receipts再生成ログ](../../log/2026-11-09-a2647-size1323-receipts-regenerated.md)）。
 修正後入力へ結び付けた監査は000/011/101の3形状が完了し、112はUNSAT証明を保存したが検査未完了。
+さらに全4入力の全節を、CardEncを使わない別実装のone-hot・点同値・辺回避・prefix閾値counterへ照合した。
+112のNONE=2を含め、重みkの任意の入力がcounterのモデルへ拡張できる節schemaと一致した。
+全53886提供辺の整数幾何も再検査した。この写像の検査と、残るUNSAT証明の検査完了は別である。
 全4形状の独立監査が揃うまでは、1322を監査済み範囲へ混ぜない。
 本項は有限計算の証人検査であり、Lean形式証明ではない。
 小集合96例の全四点検査・合同式フィルタ・Python整数行列式の一致は回帰であり、

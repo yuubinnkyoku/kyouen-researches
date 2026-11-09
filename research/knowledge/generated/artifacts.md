@@ -9740,6 +9740,30 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 重複・未被覆・計画標本の照合と13制御。証明内容の検査器ではない
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 件数と計画標本63件の集合包含を区別して照合する再現コード
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (verifier): 総件数70と計画標本51/65の被覆を区別する再現コード
+## [research/experiments/parabola-drat-trim-20261109/README.md](../../../research/experiments/parabola-drat-trim-20261109/README.md)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (source): 証拠形式・原版不具合・局所修正と監査での扱い
+## [research/experiments/parabola-drat-trim-20261109/input/false-empty.lrat](../../../research/experiments/parabola-drat-trim-20261109/input/false-empty.lrat)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 節1のhintだけで空節を導いたとする1行の偽LRAT反駁
+## [research/experiments/parabola-drat-trim-20261109/input/sat-unit.cnf](../../../research/experiments/parabola-drat-trim-20261109/input/sat-unit.cnf)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 単位節1だけの充足可能なCNF
+## [research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c](../../../research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (verifier): RUPが矛盾しなかった空節をRAT分岐へ渡さず拒否する局所修正版
+## [research/experiments/parabola-drat-trim-20261109/lrat_controls.py](../../../research/experiments/parabola-drat-trim-20261109/lrat_controls.py)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (verifier): 原文と局所修正をソースからビルドし正例・hint破損・偽空節を比較
+## [research/experiments/parabola-drat-trim-20261109/output/lrat-controls.json](../../../research/experiments/parabola-drat-trim-20261109/output/lrat-controls.json)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 5制御例の原版・修正版の実測結果とsource/binary hash
+## [research/experiments/parabola-drat-trim-20261109/vendor/lrat-check.c](../../../research/experiments/parabola-drat-trim-20261109/vendor/lrat-check.c)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (source): 指定commitの本文を保持するWindows CRLF checkout。LF正規化はGit blobとbyte一致
+## [research/experiments/parabola-drat-trim-20261109/vendor/provenance.json](../../../research/experiments/parabola-drat-trim-20261109/vendor/provenance.json)
+
+- [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): upstream commit、Git blobとWindows checkout双方のhash、改行変換の照合、コンパイル指定
 ## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
@@ -9863,6 +9887,15 @@
 ## [research/experiments/parabola-local-repair-20261109/walk_initial.cpp](../../../research/experiments/parabola-local-repair-20261109/walk_initial.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 実際の100万flip・seed20261109の局所探索ソース
+## [research/experiments/parabola-monotone-rup-20261109/README.md](../../../research/experiments/parabola-monotone-rup-20261109/README.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 閾値counterによる安全集合からCNFモデルへの拡張可能性とRUP-only検査の論理
+## [research/experiments/parabola-monotone-rup-20261109/encoding_audit.py](../../../research/experiments/parabola-monotone-rup-20261109/encoding_audit.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): CardEncを呼ばず修正後4入力の全節を独立schemaとprefix閾値counterへ比較し、全提供辺を再検査
+## [research/experiments/parabola-monotone-rup-20261109/output/encoding-audit-reservation.json](../../../research/experiments/parabola-monotone-rup-20261109/output/encoding-audit-reservation.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1323点の全4入力で全節schema一致。辺53886件の整数幾何も再検査成功。UNSAT検査とは別
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界

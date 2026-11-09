@@ -697,3 +697,4 @@
 | [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の独立監査済み範囲は1296以上1323以下 | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) | 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる | proposition | proved | geometry, maximum-safe, search-methods |
 | [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
+| [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) | 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す | proposition | computed | verification, certificates, provenance |

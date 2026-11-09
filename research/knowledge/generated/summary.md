@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 695 / alias: 269 / artifactファイル: 3495
+K項目: 696 / alias: 269 / artifactファイル: 3506
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 695 / alias: 269 / artifactファイル: 3495
 | computation | 67 |
 | definition | 5 |
 | method | 4 |
-| proposition | 553 |
+| proposition | 554 |
 | question | 38 |
 | verification | 28 |
 
@@ -18,7 +18,7 @@ K項目: 695 / alias: 269 / artifactファイル: 3495
 | 値 | 件数 |
 |---|---:|
 | active | 9 |
-| computed | 149 |
+| computed | 150 |
 | conjectured | 2 |
 | needs-review | 3 |
 | observed | 26 |
@@ -34,7 +34,7 @@ K項目: 695 / alias: 269 / artifactファイル: 3495
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 96 |
+| certificates | 97 |
 | first-moves | 67 |
 | formalization | 5 |
 | geometry | 345 |
@@ -42,7 +42,7 @@ K項目: 695 / alias: 269 / artifactファイル: 3495
 | maximal-safe | 167 |
 | maximum-safe | 82 |
 | migration | 1 |
-| provenance | 39 |
+| provenance | 40 |
 | reconfiguration | 34 |
 | rectangles | 103 |
 | residual-games | 124 |
@@ -52,7 +52,7 @@ K項目: 695 / alias: 269 / artifactファイル: 3495
 | statistics | 121 |
 | strategy-length | 94 |
 | variants | 291 |
-| verification | 111 |
+| verification | 112 |
 
 ## 未解決・要監査・範囲不明
 

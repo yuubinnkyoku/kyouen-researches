@@ -1,0 +1,4 @@
+vendor/** -text !eol whitespace=cr-at-eol
+output/** -text !eol whitespace=cr-at-eol
+input/** -text !eol whitespace=cr-at-eol
+lrat-check-empty-fixed.c -text !eol whitespace=cr-at-eol

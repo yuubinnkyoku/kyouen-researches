@@ -1,0 +1,116 @@
+{
+  "p": 2647,
+  "excluded_size": 1323,
+  "all_four_clause_schemas_match": true,
+  "records": [
+    {
+      "shape": "000",
+      "clauses": 73727,
+      "variables": 7938,
+      "counters": [
+        {
+          "bound": 0,
+          "clauses": 1323,
+          "complemented": false
+        },
+        {
+          "bound": 0,
+          "clauses": 1323,
+          "complemented": false
+        }
+      ],
+      "input_sha256": "1f2d41845765b88ca0765f9982d620fafa172e24c4fc87ebd3db929ac43637cd",
+      "full_clause_schema_match": true
+    },
+    {
+      "shape": "011",
+      "clauses": 79013,
+      "variables": 10582,
+      "counters": [
+        {
+          "bound": 1322,
+          "clauses": 1,
+          "complemented": true
+        },
+        {
+          "bound": 1,
+          "clauses": 3965,
+          "complemented": false
+        },
+        {
+          "bound": 1322,
+          "clauses": 1,
+          "complemented": true
+        },
+        {
+          "bound": 1,
+          "clauses": 3965,
+          "complemented": false
+        }
+      ],
+      "input_sha256": "4391526a75f1a19aef8e43e041e11bde179db94f6fd095dfa8c24886c3948cdf",
+      "full_clause_schema_match": true
+    },
+    {
+      "shape": "101",
+      "clauses": 76374,
+      "variables": 9260,
+      "counters": [
+        {
+          "bound": 0,
+          "clauses": 1323,
+          "complemented": false
+        },
+        {
+          "bound": 1322,
+          "clauses": 1,
+          "complemented": true
+        },
+        {
+          "bound": 1,
+          "clauses": 3965,
+          "complemented": false
+        }
+      ],
+      "input_sha256": "ce15acb83f2c742b8a27e0e596e1d07cac7e2b85c25fd81ff9d51309238ed9a8",
+      "full_clause_schema_match": true
+    },
+    {
+      "shape": "112",
+      "clauses": 85619,
+      "variables": 14544,
+      "counters": [
+        {
+          "bound": 1322,
+          "clauses": 1,
+          "complemented": true
+        },
+        {
+          "bound": 1,
+          "clauses": 3965,
+          "complemented": false
+        },
+        {
+          "bound": 1321,
+          "clauses": 3965,
+          "complemented": true
+        },
+        {
+          "bound": 2,
+          "clauses": 6603,
+          "complemented": false
+        }
+      ],
+      "input_sha256": "d9cd7a0ff18a234b8d747aad0c302c12d130e42d45a07e6b996bf3e260592246",
+      "full_clause_schema_match": true
+    }
+  ],
+  "provided_edges_geometry": {
+    "returncode": 0,
+    "stdout": "VERIFIED_EDGES 2647 53886\n",
+    "edge_input_sha256": "4e17fe105f191f781192466d0775a59d3c341b16b267ebe372ba279911f67a72",
+    "wrapper_sha256": "9db79269574eee6d5f897aa446bb661686b67a93f8e6f25d612d1584e1d0f401",
+    "included_verifier_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c"
+  },
+  "scope": "Independent complete clause schemas and threshold-extension interpretation; no SAT solver or CardEnc called."
+}
