@@ -13,6 +13,7 @@
 | `output/target1300-budget100000` | 1300以上 | 25 | 壁時計60秒でUNKNOWN、モデルなし |
 | `output/target1293-budget100000` | 1293以上 | 32 | SAT、空対29・1296点を構成 |
 | `output/target1322-budget100000` | 1322以上 | 3 | 衝突予算100000を使い切りUNKNOWN（solve 14.3秒、モデルなし） |
+| `output/target1322-budget3000000` | 1322以上 | 3 | 衝突予算3000000を使い切りUNKNOWN（solve 605.1秒、実効約4960 conflicts/秒、モデルなし） |
 
 いずれもconflict budgetは100000、Python-SAT 1.9.dev21のCadical195。
 1292点の既存証人からphaseを設定したが、点を固定するassumptionは置いていない。
