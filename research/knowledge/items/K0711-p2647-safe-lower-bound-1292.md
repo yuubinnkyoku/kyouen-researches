@@ -76,6 +76,18 @@ artifacts:
 - path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/proof-check.json
   role: data
   note: 二方式の証明受理・打切り拒否と検査器ソースhash
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete3-budget300000/input.cnf.gz
+  role: data
+  note: 固定対・削除高々3点・1304点以上の保存CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete3-budget300000/local-proof.drat.gz
+  role: certificate
+  note: 固定対・削除高々3点の部分問題のUNSAT証明
+- path: research/experiments/parabola-1296-warm-start-20261109/check_local_incremental.py
+  role: verifier
+  note: 修正版増分検査器による証明受理と打切り拒否を再現
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete3-budget300000/incremental-check.json
+  role: data
+  note: 3点削除の証明検査結果と入力・検査器のhash
 - path: research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/candidate.txt
   role: certificate
   note: 先行する1302点証人。新たなSAT探索のphaseとしても使用
@@ -250,6 +262,8 @@ CaDiCaLは11.233秒でSATを返し、空対29・1296点を選択した。
 さらにこの同じ集合は、**選択済みの1点を削除して未選択の2点を追加する操作でも改善できない**。未選択点ごとの禁止四点群から、どの1点を削除しても追加できない点1221個を証明し、残る点について許され得る削除点を絞る。その結果生じる候補二点組12210組のそれぞれに、削除されない既存2点との禁止四点を保存した。独立検査器が各障害の整数行列式、未選択点の網羅、削除点集合の包含、全候補二点組の被覆を確認した。これは指定された局所操作の排除であり、複数点を削除する改善や別の1304点集合の不存在を意味しない。
 
 さらに原点と完全対 `d=1323` を維持し、他の各対から高々一側を選ぶ範囲では、この証人から**高々2点の削除で1304点以上へ改善することもできない**。直接投影に基づく三値符号化と削除数制約を加えた33886変数・121584節のCNFはUNSAT。保存した24030行のDRATを、修正版増分検査器と毎回代入を再構築する別実装の両方が受理し、打切り証明を拒否した。CNFは再生成して一致し、符号付き削除数制約は小規模1008ケースで全数照合した。これは固定対・二点削除以内という条件付きの計算機援用証明であり、固定対を壊す改善や全1304点集合の不存在は示さない。
+
+同じ条件で削除を**高々3点**まで許した35181変数・124172節のCNFについても、再生成した入力が保存されたCNFと一致し、修正版増分検査器が266831行の証明を受理、打切り証明を拒否した。こちらの別実装による検査は未完了。結論は固定対を維持する局所改善に限り、一般の1304点集合の不存在を意味しない。
 
 ## 下界の独立検査
 
