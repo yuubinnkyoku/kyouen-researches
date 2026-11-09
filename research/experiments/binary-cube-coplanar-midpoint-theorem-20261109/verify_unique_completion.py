@@ -47,7 +47,7 @@ def classify(d):
 
 if __name__=='__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dimension', type=int, choices=range(2, 7))
+    parser.add_argument('--dimension', type=int, choices=range(2, 8))
     args = parser.parse_args()
     result = classify(args.dimension) if args.dimension else [classify(d) for d in range(2,6)]
     print(json.dumps(result,indent=2))

@@ -21,13 +21,16 @@ artifacts:
   note: 二頂点共起数と一点次数の全称公式
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py
   role: verifier
-  note: 整数アフィン小行列式によるd=2..6の全四点・三点・二点の照合
+  note: 整数アフィン小行列式によるd=2..7の全四点・三点・二点の照合
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json
   role: data
   note: d=2..5における禁止四点数と補完可能三点数
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json
   role: data
   note: d=6における禁止四点数と全二点・三点の照合
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d7.json
+  role: data
+  note: d=7における禁止四点数と全二点・三点の照合
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md
   role: proof
   note: 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
@@ -38,7 +41,7 @@ artifacts:
   role: data
   note: 各次元・重みの禁止四点数
 scope: 任意のd>=2に対する二値超立方体の相異なる頂点と実数アフィン共面四点。共面五点や平面共円ゲームには拡張しない。
-evidence: 二座標射影による平行四辺形の全称証明と少数派座標による一意補完・共起数の組合せ証明。d=2..6の全四点を整数アフィン小行列式で検算。
+evidence: 二座標射影による平行四辺形の全称証明と少数派座標による一意補完・共起数の組合せ証明。d=2..7の全四点を整数アフィン小行列式で検算。
 ---
 
 # 二値立方体の共面四点と一意補完
@@ -51,4 +54,4 @@ evidence: 二座標射影による平行四辺形の全称証明と少数派座�
 
 重み `k` の頂点に限った禁止四点数にも、互いに素な二つの偶数サイズの支持集合による全称計数式がある。特に重み2では `3·binom(d,4)` 個であり、頂点を `K_d` の辺と対応させると、禁止四点は四角形に対応する。各重み層の公式を `d=2..7` で別途全数列挙して照合した。
 
-根拠は二座標射影・一意な対角線分割・座標支持集合の計数による**数学的全称証明**。独立検算として整数小行列式から `d=2,3,4,5,6` の全四点を分類し、全二点・三点について公式と条件を照合した。`d=6` では禁止四点4816個、補完可能な三点19264個となる。有限検算を全称証明の代わりにはしない。一般の格子上の共円四点では三点からの補完が複数存在し得る。
+根拠は二座標射影・一意な対角線分割・座標支持集合の計数による**数学的全称証明**。独立検算として整数小行列式から `d=2,3,4,5,6,7` の全四点を分類し、全二点・三点について公式と条件を照合した。`d=7` では禁止四点30912個、補完可能な三点123648個となる。有限検算を全称証明の代わりにはしない。一般の格子上の共円四点では三点からの補完が複数存在し得る。
