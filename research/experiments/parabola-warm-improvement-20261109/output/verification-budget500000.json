@@ -1,0 +1,47 @@
+{
+  "records": [
+    {
+      "case": "target1297-warm1296-budget100000",
+      "status": "SAT",
+      "variables": 40201,
+      "clauses": 132904,
+      "input_sha256": "ed65dc7c513247fa1fa46eb7ed98f7e4a5f4eff232e76c3b11e378e50ee9081c",
+      "size": 1298,
+      "all_model_clauses_satisfied": true,
+      "independent_geometry_verified": true,
+      "covered_quadruples": 117727574580,
+      "modular_candidates": 44555181
+    },
+    {
+      "case": "target1299-warm1298-budget100000",
+      "status": "UNKNOWN",
+      "variables": 37665,
+      "clauses": 127836,
+      "input_sha256": "ec55b41a9d5fee9fbe6e259b69f18ac2446b73d25094212a702034bf7648deb4",
+      "nonexistence_claim": false
+    },
+    {
+      "case": "target1299-warm1298-budget500000",
+      "status": "SAT",
+      "variables": 37665,
+      "clauses": 127836,
+      "input_sha256": "ec55b41a9d5fee9fbe6e259b69f18ac2446b73d25094212a702034bf7648deb4",
+      "size": 1300,
+      "all_model_clauses_satisfied": true,
+      "independent_geometry_verified": true,
+      "covered_quadruples": 118455690925,
+      "modular_candidates": 44831921
+    },
+    {
+      "case": "target1301-warm1300-budget100000",
+      "status": "UNKNOWN",
+      "variables": 35121,
+      "clauses": 122752,
+      "input_sha256": "68ce0d6ace7d4a7ba59eebcd0ad63ab9dc35470fd12aae81e166f237b0139cf7",
+      "nonexistence_claim": false
+    }
+  ],
+  "all_checks_passed": true,
+  "unchanged_encoding_snapshot_sha256": "9b96e84cc63ceaa31b317e5db1eec86552cf8b9ed8e9f01b62fc7332fe9f3681",
+  "scope": "Saved CNF/model/hash and independent geometry receipt validation; no solver reruns or UNSAT proof claims."
+}

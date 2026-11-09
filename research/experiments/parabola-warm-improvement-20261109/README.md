@@ -34,3 +34,22 @@ uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabol
 ```
 
 独立幾何検査は既存verify.pyの--auditと--receiptを使い、receiptを新しい出力先へ保存する。
+
+## 後続: 50万衝突予算で1300点へ
+
+2026-11-09、1299点要求の衝突予算を10万から50万へ増やした。
+同じwarm startと同じCNF（SHA-256 ec55b41a...）で83.515秒・190902衝突でSATとなり、1300点・空対25を得た。
+保存先は `output/target1299-warm1298-budget500000`、親の壁時計上限300秒。
+37665変数・127836節の完全モデルを検査し、実入力を再生成してbyte一致を確認した。
+独立幾何検査は `2647 1300 118455690925 44831921`、禁止四点0件・終了コード0。
+UNKNOWNだった入力が予算増加でSATになった事例として、両方の原記録を保持する。
+
+続く `output/target1301-warm1300-budget100000` は1300点をphaseにした1301点以上の要求で、
+10万衝突予算・52.79秒でUNKNOWN（親の壁時計上限90秒）。不存在の証明は得ていない。
+`output/verification-budget500000.json` は旧2件と新2件を一緒に照合した結果。
+
+新しい予算の探索を再現する場合も、既存の出力先は上書きしない:
+
+```sh
+uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabola-warm-improvement-20261109/run.py --target 1299 --warm research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt --budget 500000 --timeout 300 --output FRESH-budget500000-directory
+```
