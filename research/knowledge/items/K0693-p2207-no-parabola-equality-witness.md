@@ -53,8 +53,11 @@ artifacts:
 - path: research/experiments/parabola-audit-coverage-20261109/inventory.py
   role: verifier
   note: 重複・未被覆・計画標本の照合と13制御。証明内容の検査器ではない
+- path: research/log/2026-11-09-drat-reaudit-status-omp.md
+  role: source
+  note: HEAD時点の修正版再監査の確定状態（2207は12/1103、標本12/21）
 scope: 奇素数p=2207のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。任意の他素数への一般化は主張しない。
-evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22も標本でUNSAT。K0707修正版の受理記録は固定commitで5/1103 d、全数監査未完了。旧チェッカーの受理記録は独立証拠への採用を保留。
+evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22も標本でUNSAT。K0707修正版の受理記録は固定commitで5/1103 d、その後のHEADで12/1103 d（標本21件中12件）まで追記、全数監査未完了。旧チェッカーの受理記録は独立証拠への採用を保留。
 ---
 
 ## 現在の監査上の制限（2026-11-09）
@@ -69,6 +72,10 @@ evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確�
 **d={1,50,100,200,300}の5件**がUNSAT・終了コード0・出力VERIFIEDである。
 全1103 dのうち1098 dはこのsnapshotの修正版監査範囲外。
 inventoryはレシートの整合性を検査したもので、今回DRATを再生したわけではない。
+追記（2026-11-09）: その後レシートはHEAD `a0fcb1f` 時点で12件
+（d={1,50,100,150,200,250,289,297,300,312,324,400}、全件VERIFIED、標本21件中12件）まで追記された。
+上記の5件は固定snapshot時点の記録として残す。現況の確定は
+[再監査ステータスログ](../../log/2026-11-09-drat-reaudit-status-omp.md) を参照。
 
 ## 命題・範囲
 

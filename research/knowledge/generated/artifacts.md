@@ -11206,6 +11206,13 @@
 ## [research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md](../../../research/log/2026-11-08-pure-triple-edge-censuses-and-pareto-fronts.md)
 
 - [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) (log): 有界探索から完全核表と全点数最適表へ至った経緯
+## [research/log/2026-11-09-a2647-size1323-receipts-regenerated.md](../../../research/log/2026-11-09-a2647-size1323-receipts-regenerated.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): サイズ1323の4形状クラスのreceipts再生成（全UNSAT、節数は旧ログ表と全件一致）
+## [research/log/2026-11-09-drat-reaudit-status-omp.md](../../../research/log/2026-11-09-drat-reaudit-status-omp.md)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (source): HEAD時点の修正版再監査の確定状態（2207は12/1103、標本12/21）
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (source): HEAD時点の修正版再監査の確定状態（3251は84/1625、計画標本65/65完了）
 ## [research/log/2026-11-09-p2647-near-miss-and-size-1323.md](../../../research/log/2026-11-09-p2647-near-miss-and-size-1323.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 形状クラス判定の方法と結果

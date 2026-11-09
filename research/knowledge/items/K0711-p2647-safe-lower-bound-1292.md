@@ -52,6 +52,9 @@ artifacts:
 - path: research/log/2026-11-09-p2647-near-miss-and-size-1323.md
   role: source
   note: 形状クラス判定の方法と結果
+- path: research/log/2026-11-09-a2647-size1323-receipts-regenerated.md
+  role: source
+  note: サイズ1323の4形状クラスのreceipts再生成（全UNSAT、節数は旧ログ表と全件一致）
 - path: research/experiments/parabola-local-repair-20261109/output/walk-1000000-seed20261109/candidate.txt
   role: certificate
   note: 初回1292点証人。新しいSAT探索のphaseの起点としても保持
@@ -113,6 +116,11 @@ CaDiCaLは11.233秒でSATを返し、空対29・1296点を選択した。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の上界1323はソルバ主張であり、
 本項で独立監査済みとして採用した上界は1324。単一CNFのDRAT監査による強化は今後の課題である。
+なお本項の上界1322（サイズ1323の形状クラス判定）もソルバ主張に基づく。当初その機械可読な記録は
+(1,1,2) のみで、残り3クラスはログ表だけだったが、2026-11-09 に全4クラスを再実行して
+receipts を再生成し、節数が旧ログ表と全件一致した
+（[receipts再生成ログ](../../log/2026-11-09-a2647-size1323-receipts-regenerated.md)）。
+1322についてのDRAT監査も今後の課題である。
 本項は有限計算の証人検査であり、Lean形式証明ではない。
 小集合96例の全四点検査・合同式フィルタ・Python整数行列式の一致は回帰であり、
 一般的健全性の証明と区別する。

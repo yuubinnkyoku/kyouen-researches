@@ -38,8 +38,11 @@ artifacts:
 - path: research/experiments/parabola-audit-coverage-20261109/inventory.py
   role: verifier
   note: 総件数70と計画標本51/65の被覆を区別する再現コード
+- path: research/log/2026-11-09-drat-reaudit-status-omp.md
+  role: source
+  note: HEAD時点の修正版再監査の確定状態（3251は84/1625、計画標本65/65完了）
 scope: 奇素数p=3251のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1625 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。修正版の固定commitには70 dのDRAT受理記録があり、計画標本は51/65。全数監査は未完了。
+evidence: 全1625 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。修正版の固定commitには70 dのDRAT受理記録があり、計画標本は51/65。その後のHEADでは84 d（計画標本65/65完了）まで追記。全数監査は未完了。
 ---
 
 ## 命題・範囲
@@ -66,6 +69,9 @@ K0101 の「全奇素数で等号」に対する四つ目の反例候補であ�
   受理記録は重複のない70 d。全件UNSAT・終了コード0・出力VERIFIEDだが、全1625 dのうち1555 dは未被覆。
   計画標本 `d=1,26,...,1601` も51/65であり、総件数が65を超えていても標本完了ではない。
   このsnapshotの未被覆標本は `d=1276,1301,...,1601` の14件。
+  追記（2026-11-09）: その後レシートはHEAD `a0fcb1f` 時点で84 dまで追記され、
+  計画標本 `d=1,26,...,1601` は65/65完了した（残りは標本外の1541 d）。
+  現況の確定は [再監査ステータスログ](../../log/2026-11-09-drat-reaudit-status-omp.md) を参照。
 - inventoryは保存レシートの整合性・被覆を検査したもので、今回DRATを再生していない。
   全数監査未完了のためstatusは `needs-review`。検査器の一般健全性の証明でもない。
 - K0693/K0702でも旧版と修正版の受理記録を区別する。K0101は全数監査済みのK0706により反証済み。
