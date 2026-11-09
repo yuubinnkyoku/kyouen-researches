@@ -11,7 +11,7 @@ def determinant(a):
 def coplanar(q):
     base=points[q[0]]
     vectors=[[points[i][j]-base[j] for j in range(4)] for i in q[1:]]
-    return all(determin([[row[j] for j in cols] for row in vectors])==0
+    return all(determinant([[row[j] for j in cols] for row in vectors])==0
                for cols in combinations(range(4),3))
 forbidden=[sum(1<<i for i in q) for q in combinations(range(16),4) if coplanar(q)]
 safe=[False]*65536

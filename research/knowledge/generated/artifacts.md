@@ -478,6 +478,30 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): 各次元・重みの禁止四点数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=2..5における禁止四点数と補完可能三点数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 二頂点共起数と一点次数の全称公式
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/proof.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/proof.md)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 単射な二座標射影による共面四点と平行四辺形の同値
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 三点のxorによる一意補完と少数派条件の全称証明
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_constant_weight.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_constant_weight.py)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): d=2..7の各重み層で対角和の全数列挙と計数式を照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..5の全四点・三点・二点の照合
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
@@ -1005,6 +1029,21 @@
 ## [research/experiments/coplanar-3x3xm-q4-20261024/verify.py](../../../research/experiments/coplanar-3x3xm-q4-20261024/verify.py)
 
 - [K0529](../items/K0529-coplanar-three-by-three-prism-capacity-and-cube-grundy.md) (verifier): 4×4行列式の24項展開によるm≤3全安全局面の完全生成とmex
+## [research/experiments/coplanar-4cube-q4-20261109/compare_states.py](../../../research/experiments/coplanar-4cube-q4-20261109/compare_states.py)
+
+- [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) (verifier): 頂点順序の対応を計算し全部分集合の安全性と全安全局面の値を一件ずつ照合
+## [research/experiments/coplanar-4cube-q4-20261109/independent_midpoint_audit.py](../../../research/experiments/coplanar-4cube-q4-20261109/independent_midpoint_audit.py)
+
+- [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) (verifier): 対角線中点による禁止組生成と全状態の下からの再帰
+## [research/experiments/coplanar-4cube-q4-20261109/results.md](../../../research/experiments/coplanar-4cube-q4-20261109/results.md)
+
+- [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) (source): 元の完全列挙集計。独立照合以前の記録として保持
+## [research/experiments/coplanar-4cube-q4-20261109/state-comparison.json](../../../research/experiments/coplanar-4cube-q4-20261109/state-comparison.json)
+
+- [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) (data): 全65536部分集合と8193安全局面の比較、層別Grundy・misère集計
+## [research/experiments/coplanar-4cube-q4-20261109/verify.py](../../../research/experiments/coplanar-4cube-q4-20261109/verify.py)
+
+- [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) (verifier): 整数アフィン小行列式による禁止組と全安全局面の再帰
 ## [research/experiments/coplanar-4cube-q5-20261024/independent.cpp](../../../research/experiments/coplanar-4cube-q5-20261024/independent.cpp)
 
 - [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md) (verifier): Gram行列式による独立完全列挙
@@ -9730,6 +9769,144 @@
 ## [research/experiments/pairsum-reconstruction-20261018/verify.py](../../../research/experiments/pairsum-reconstruction-20261018/verify.py)
 
 - [K0459](../items/K0459-pairsum-reconstruction-power-of-two.md) (verifier): Python整数演算による構成・恒等式・有限小例の検査
+## [research/experiments/parabola-1296-warm-start-20261109/README.md](../../../research/experiments/parabola-1296-warm-start-20261109/README.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 既存証人からのphase指定、各試行と独立検査の再現範囲
+## [research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py](../../../research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 局所CNFの再生成と符号付き削除数制約の小規模全数照合
+## [research/experiments/parabola-1296-warm-start-20261109/check_local_proof.py](../../../research/experiments/parabola-1296-warm-start-20261109/check_local_proof.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 二つのDRAT検査器と打切り証明の拒否を再現
+## [research/experiments/parabola-1296-warm-start-20261109/extend.cpp](../../../research/experiments/parabola-1296-warm-start-20261109/extend.cpp)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 必要合同式と整数行列式により各未選択点の禁止四点証人を生成
+## [research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/candidate.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1298点証人。新たなSAT探索のphaseとしても使用
+## [research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/geometry.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44554130候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 空対29以下を要求して実際に解いた三値CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/model.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 135432節を満たす保存モデル。空対27、1298点を選択
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/candidate.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1299点証人。新たなSAT探索のphaseとしても使用
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/geometry.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44688249候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 空対26以下を要求して実際に解いた三値CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/model.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 127836節を満たす保存モデル。空対26、1299点を選択
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/candidate.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1300点証人。新たなSAT探索のphaseとしても使用
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/geometry.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44826944候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 空対25以下を要求して実際に解いた三値CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/model.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 125296節を満たす保存モデル。空対25、1300点を選択
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/candidate.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1301点証人。新たなSAT探索のphaseとしても使用
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/geometry.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44964434候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 空対24以下を要求して実際に解いた三値CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/model.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 122752節を満たす保存モデル。空対24、1301点を選択
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/candidate.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1302点証人。新たなSAT探索のphaseとしても使用
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/geometry.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で45104559候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 空対23以下を要求して実際に解いた三値CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/model.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 120204節を満たす保存モデル。空対23、1302点を選択
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/candidate.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与えるソート済み1303パラメータ。点は(t,t² mod 2647)
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/extensions.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/extensions.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 1303点証人への各未選択点1344個について、追加を阻む禁止四点の証人
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/geometry.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で45241569候補を検査、禁止四点0件。入力・ソースhash付き
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 空対22以下を要求して実際に解いた三値CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/model.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 117652節を満たす保存モデル。空対22、1303点を選択
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/one-deletion-blockers.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/one-deletion-blockers.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 各未選択点の一削除後に許され得る削除点を絞る禁止四点群
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/two-add-blockers.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/two-add-blockers.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 残る12210組の二点追加をそれぞれ阻む禁止四点
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 固定対・削除高々2点・1304点以上の保存CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/local-proof.drat.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/local-proof.drat.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 固定対・削除高々2点の部分問題のUNSAT証明
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/proof-check.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/proof-check.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 二方式の証明受理・打切り拒否と検査器ソースhash
+## [research/experiments/parabola-1296-warm-start-20261109/probe.py](../../../research/experiments/parabola-1296-warm-start-20261109/probe.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 監査済み1296点証人をphaseとして与える固定d三値SAT探索
+## [research/experiments/parabola-1296-warm-start-20261109/probe_1298.py](../../../research/experiments/parabola-1296-warm-start-20261109/probe_1298.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 監査済み1298点証人をphaseとして与える固定d三値SAT探索
+## [research/experiments/parabola-1296-warm-start-20261109/probe_from_witness.py](../../../research/experiments/parabola-1296-warm-start-20261109/probe_from_witness.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 指定された既存証人をphaseとして与える固定d三値SAT探索
+## [research/experiments/parabola-1296-warm-start-20261109/probe_local_swap.py](../../../research/experiments/parabola-1296-warm-start-20261109/probe_local_swap.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 固定対と既存証人からの削除数を制限した三値SAT符号化
+## [research/experiments/parabola-1296-warm-start-20261109/test_extensions.py](../../../research/experiments/parabola-1296-warm-start-20261109/test_extensions.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 証人の欠落・改変を拒否する回帰
+## [research/experiments/parabola-1296-warm-start-20261109/test_two_add.py](../../../research/experiments/parabola-1296-warm-start-20261109/test_two_add.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 点・二点組の障害証人の欠落と改変を拒否する回帰
+## [research/experiments/parabola-1296-warm-start-20261109/test_verify.py](../../../research/experiments/parabola-1296-warm-start-20261109/test_verify.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 候補・モデル・worker hashの改変を拒否する回帰
+## [research/experiments/parabola-1296-warm-start-20261109/try_swap.cpp](../../../research/experiments/parabola-1296-warm-start-20261109/try_swap.cpp)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 一削除後の候補二点組に対する障害四点の生成
+## [research/experiments/parabola-1296-warm-start-20261109/two_add.cpp](../../../research/experiments/parabola-1296-warm-start-20261109/two_add.cpp)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 一削除後の単点追加に関する障害四点群の生成
+## [research/experiments/parabola-1296-warm-start-20261109/verify.py](../../../research/experiments/parabola-1296-warm-start-20261109/verify.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 保存モデルの全節・点選択と独立幾何receiptのhashを検査
+## [research/experiments/parabola-1296-warm-start-20261109/verify_extensions.py](../../../research/experiments/parabola-1296-warm-start-20261109/verify_extensions.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 全未選択点の被覆と禁止四点を独立3×3整数行列式で検査
+## [research/experiments/parabola-1296-warm-start-20261109/verify_two_add.py](../../../research/experiments/parabola-1296-warm-start-20261109/verify_two_add.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 障害四点群、削除候補の包含関係、候補二点組の全被覆を整数行列式で検査
 ## [research/experiments/parabola-audit-coverage-20261109/inventory.json](../../../research/experiments/parabola-audit-coverage-20261109/inventory.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 固定commitのレシート整合性と被覆の検査。DRATの再実行ではない
@@ -9891,7 +10068,7 @@
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (source): 実装、再現入力・出力、1296点構成と1300点UNKNOWNの範囲
 ## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与えるソート済み1296パラメータ。点は(t,t² mod 2647)
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1296点証人。新たなSAT探索のphaseとしても使用
 ## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44277012候補を検査、禁止四点0件。入力・ソースhash付き
@@ -9906,7 +10083,7 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1293点以上を要求したSAT試行が1296点を返した記録。幾何検査は別artifact
 ## [research/experiments/parabola-ternary-selection-20261109/regression.json](../../../research/experiments/parabola-ternary-selection-20261109/regression.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 小規模完全照合、既存1292点の適合性、現在の1296点モデルの全節充足確認
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 小規模完全照合、既存1292点の適合性、先行1296点モデルの全節充足確認
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (data): p=5,7,11,13,17の19392三値割当、無効one-hotと任意の二値簡約への反例
 ## [research/experiments/parabola-ternary-selection-20261109/regression.py](../../../research/experiments/parabola-ternary-selection-20261109/regression.py)
 
