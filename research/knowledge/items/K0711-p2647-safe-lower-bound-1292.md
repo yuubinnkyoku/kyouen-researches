@@ -19,6 +19,18 @@ relations:
   target: K0334
   note: 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 artifacts:
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/input.cnf.gz
+  role: data
+  note: 保存1302点から4点以下除去で1303点以上を要求した37749変数・129303節の新しい実入力
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/result.json
+  role: data
+  note: 77.497秒・100005衝突でUNKNOWN。候補・モデル・証明はなく不存在を主張しない
+- path: research/experiments/parabola-bounded-exchange-20261109/verify_unknown.py
+  role: verifier
+  note: UNKNOWNの初期記録・実入力byte再生成・変数予約・source hashとモデル等の不在を照合
+- path: research/experiments/parabola-bounded-exchange-20261109/output/unknown-remove4-validation.json
+  role: data
+  note: 新しい4点以下除去の保存入力とUNKNOWNの出典を検査。SAT/UNSATの証拠ではない
 - path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt
   role: certificate
   note: 現在の下界を与える1302点。保存1301点から3点を除き4点を追加
@@ -418,6 +430,11 @@ RATは使わず、全追加が元CNFの論理的帰結となるため、削除�
 一般の局所最適性、または全体の上界の改善は主張しない。
 採用LRAT本体は約80MBでローカル保持し、Gitにはhashと所在を収録する。
 Git管理された元DRATと変換コードから再生成でき、再現に新しいSAT探索は不要である。
+除去上限を4へ広げた1303点要求は77.497秒・100005衝突でUNKNOWNだった。
+37749変数・129303節の入力をbyte再生成し、変数予約・source hashと候補・モデル・証明の不在を確認した。
+このUNKNOWNを不存在や局所最適性の証明へ読み替えない。
+一方、現在の保存1302点集合そのものの包含極大性は[K0716](K0716-p2647-saved-1302-witness-inclusion-maximal.md)で
+全1345単点追加の明示禁止四点を独立整数幾何検査して確認した。最大性や交換不能とは別である。
 以前の1299点・1300点要求のUNKNOWNも原記録を保持する。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。

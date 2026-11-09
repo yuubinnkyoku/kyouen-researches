@@ -699,3 +699,4 @@
 | [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
 | [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) | 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す | proposition | computed | verification, certificates, provenance |
 | [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) | Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
+| [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) | Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |

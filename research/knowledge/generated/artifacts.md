@@ -9761,9 +9761,11 @@
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与える1302点。保存1301点から3点を除き4点を追加
+- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 本項で固定する1302点集合。SHA-256 5395d232...、原点と完全対d=1323を含む
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全119187179475四点を合同式で被覆し45110020候補を整数行列式で検査、禁止四点0件
+- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (data): 指定集合自体の安全性を独立整数幾何で確認した受理記録
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 元の1301点から失う点数に逐次counterの上限3を課した保存入力
@@ -9782,9 +9784,21 @@
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存1302点から3点以下除去の1303点要求のSOLVER_UNSAT原記録。後の独立LRAT受理とは分離して保持
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存1302点から4点以下除去で1303点以上を要求した37749変数・129303節の新しい実入力
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 77.497秒・100005衝突でUNKNOWN。候補・モデル・証明はなく不存在を主張しない
+## [research/experiments/parabola-bounded-exchange-20261109/output/unknown-remove4-validation.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/unknown-remove4-validation.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 新しい4点以下除去の保存入力とUNKNOWNの出典を検査。SAT/UNSATの証拠ではない
 ## [research/experiments/parabola-bounded-exchange-20261109/search.py](../../../research/experiments/parabola-bounded-exchange-20261109/search.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 固定原点・完全対で選択点の除去数を制限するSAT探索。補助変数の予約上限を保持
+## [research/experiments/parabola-bounded-exchange-20261109/verify_unknown.py](../../../research/experiments/parabola-bounded-exchange-20261109/verify_unknown.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): UNKNOWNの初期記録・実入力byte再生成・変数予約・source hashとモデル等の不在を照合
 ## [research/experiments/parabola-drat-trim-20261109/README.md](../../../research/experiments/parabola-drat-trim-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
@@ -9995,9 +10009,22 @@
 ## [research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp](../../../research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp)
 
 - [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の幾何と補集合の重複なし完全被覆だけを検査する独立wrapper
+- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の整数幾何と補集合の完全被覆を検査する既存C++wrapper
 ## [research/experiments/parabola-maximal-1300-20261109/verify_exchange.py](../../../research/experiments/parabola-maximal-1300-20261109/verify_exchange.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 保存交換・幾何receipt・旧UNKNOWN入力への完全モデルの充足を照合
+## [research/experiments/parabola-maximal-1302-20261109/README.md](../../../research/experiments/parabola-maximal-1302-20261109/README.md)
+
+- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (source): 対象集合・証明形式・再現と包含極大性の論理
+## [research/experiments/parabola-maximal-1302-20261109/audit.py](../../../research/experiments/parabola-maximal-1302-20261109/audit.py)
+
+- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFは候補提案のみに使い、全行を明示四点へ変換して別C++実装で検査
+## [research/experiments/parabola-maximal-1302-20261109/output/initial/audit.json](../../../research/experiments/parabola-maximal-1302-20261109/output/initial/audit.json)
+
+- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (data): 全補集合被覆・相異性・所属・整数行列式0を受理し7不正制御を拒否。sourceと証拠hash付き
+## [research/experiments/parabola-maximal-1302-20261109/output/initial/blockers.txt](../../../research/experiments/parabola-maximal-1302-20261109/output/initial/blockers.txt)
+
+- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 未選択1345点すべてに、追加tと既存3点からなる明示的禁止四点を1個ずつ指定
 ## [research/experiments/parabola-monotone-rup-20261109/README.md](../../../research/experiments/parabola-monotone-rup-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 閾値counterによる安全集合からCNFモデルへの拡張可能性とRUP-only検査の論理

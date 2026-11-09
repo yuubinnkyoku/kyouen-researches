@@ -58,3 +58,17 @@ uv run --locked python research/experiments/parabola-monotone-rup-20261109/regre
 
 未知探索、ソルバ主張、実証明の独立検査、符号化の回帰、数学的な一般証明を区別する。
 この実験はLean形式証明や、任意の素数に対する最大サイズ公式を与えない。
+
+## 2026-11-09: 除去上限4の次の入力
+
+保存1302点を種に、除去上限を3から4へ広げた別の1303点要求を実行した。
+`output/target1303-remove4-budget100000` は37749変数・129303節、
+77.497秒・100005衝突でUNKNOWN。候補・モデル・証明はなく、不存在や交換不能は主張しない。
+初回ツールの終了値は原記録出力後に1と報告されたため、正常終了の推測で採用範囲を広げない。
+`verify_unknown.py` は実入力をbyte再生成し、初期記録・source hash・変数予約と各出力の不在を確認する。
+この検査は保存されたUNKNOWNの出典確認であり、SAT/UNSATを判定しない。
+
+```sh
+uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabola-bounded-exchange-20261109/search.py --seed research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt --target 1303 --max-removed 4 --budget 100000 --output FRESH-remove4
+uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabola-bounded-exchange-20261109/verify_unknown.py --saved research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000 --output FRESH-unknown-validation.json
+```
