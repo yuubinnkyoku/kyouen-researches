@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check coplanar quadruples by integer minors and triple/codegree formulas."""
 from collections import Counter, defaultdict
+import argparse
 from itertools import combinations
 import json
 
@@ -45,4 +46,8 @@ def classify(d):
 
 
 if __name__=='__main__':
-    print(json.dumps([classify(d) for d in range(2,6)],indent=2))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--dimension', type=int, choices=range(2, 7))
+    args = parser.parse_args()
+    result = classify(args.dimension) if args.dimension else [classify(d) for d in range(2,6)]
+    print(json.dumps(result,indent=2))

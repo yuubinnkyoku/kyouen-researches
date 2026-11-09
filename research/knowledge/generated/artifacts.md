@@ -484,6 +484,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json)
+
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=6における禁止四点数と全二点・三点の照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=2..5における禁止四点数と補完可能三点数
@@ -501,7 +504,7 @@
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): d=2..7の各重み層で対角和の全数列挙と計数式を照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
 
-- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..5の全四点・三点・二点の照合
+- [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..6の全四点・三点・二点の照合
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
