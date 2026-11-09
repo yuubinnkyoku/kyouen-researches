@@ -19,6 +19,30 @@ relations:
   target: K0101
   note: 全奇素数での等号を否定する2番目の反例候補
 artifacts:
+- path: research/experiments/parabola-p2531-lrat-20261110/audit.py
+  role: verifier
+  note: 既存147 dとの重複を避けてd=86..100を生成し、整数幾何・投影schema・DRAT-trim・修正LRATで検査
+- path: research/experiments/parabola-p2531-lrat-20261110/verify_saved.py
+  role: verifier
+  note: 省略辺の構造、前段4入力のbyte一致、新15入力の独立投影、圧縮CNFとLRATの実再生、被覆履歴を照合
+- path: research/experiments/parabola-p2531-lrat-20261110/input/edges.txt
+  role: data
+  note: 二完全対の自明な799480辺を除いた38160辺。全提供辺の整数幾何を再検査
+- path: research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/geometry.json
+  role: data
+  note: 38160辺をgeneric整数4×4で受理。完全性ではなく健全性をUNSATの根拠に使う
+- path: research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/coverage.json
+  role: manifest
+  note: 前段147 dと新15 dは重複なし、独立被覆和162/1265、残り1103。前段manifestのhash付き
+- path: research/experiments/parabola-p2531-lrat-20261110/output/certificate-manifest.json
+  role: manifest
+  note: 新15件のGit管理CNF・採用LRAT gzipのpathとhash。原DRAT gzipはローカル保持しhashを記録
+- path: research/experiments/parabola-p2531-lrat-20261110/output/saved-verification.json
+  role: data
+  note: 全15圧縮証明を修正LRATで再生し、独立投影schema・原DRAT15 hash・162 dの被覆和も照合
+- path: research/experiments/parabola-p2531-lrat-20261110/README.md
+  role: source
+  note: 有用辺への入力縮約、証拠の保存範囲、独立再生と被覆履歴の再現手順
 - path: research/experiments/parabola-p2531-lrat-20261109/audit.py
   role: verifier
   note: 未被覆d=82..85の新しいDRAT生成、全提供辺の整数幾何、独立投影schema、DRAT-trimと修正LRAT検査
@@ -81,7 +105,7 @@ artifacts:
   role: verifier
   note: 件数と計画標本63件の集合包含を区別して照合する再現コード
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと、新しいd=82..85の独立LRAT受理4 dは重複なしで合計147/1265。全数再監査は未完了。
+evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと、d=82..100の独立LRAT受理19 dは重複なしで合計162/1265。全数再監査は未完了。
 ---
 
 ## 現在の監査上の制限（2026-11-09）
@@ -104,10 +128,18 @@ inventoryは保存レシートの整合性・被覆のみを検査し、今回DR
 各CNFは1265変数・38160節。入力に使った837640禁止四点すべてを別のgeneric整数4×4検査器で受理し、
 全4入力の節集合を元generatorを使わない独立な固定完全対の投影schemaへ照合した。
 各原DRATを固定DRAT-trim -Uで受理・LRAT化し、K0714の空節処理を修正した別実装で全4 LRATを受理した。
-旧修正版143 dと新LRAT4 dに重複はなく、**現在の独立被覆の和は147/1265 d、未被覆1118 d**。
+その段階では旧修正版143 dと新LRAT4 dに重複はなく、独立被覆の和は147/1265 d、未被覆1118 dだった。
 異なる検証器の受理を同じsource hashの143件へ混ぜず、別manifestで集合和を保存する。
 提供辺集合の完全性はUNSAT排除には不要であり、健全な辺の部分集合でも安全テンプレートに対する緩和となる。
 これは一部のdの有限反駁検査であり、全数監査や検証器の一般健全性の形式証明ではない。
+
+さらに **d=86..100の15件** を同じ二実装の経路で受理した。
+二完全対の自明な辺を除いた38160提供辺を整数幾何で再検査し、前段4入力は縮約後もbyte一致した。
+新15入力も独立投影schemaへ全節集合が一致し、Git管理する各CNF・LRAT gzipを展開して修正LRATで実再生した。
+前段147 dと新15 dは重複がなく、**現在の独立被覆の和は162/1265 d、未被覆1103 d**。
+修正版DRAT143 dとLRAT19 dを区別し、前段manifestのhashを含む被覆履歴として保存する。
+新15件は採用LRATとCNFをGit管理し、生成時の原DRAT gzipはローカル保持してhashをmanifestへ記録した。
+原DRATがない別checkoutでも採用LRATの独立再生は可能である。
 
 ## 命題・範囲
 
@@ -129,7 +161,7 @@ K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 �
 ## 限界
 
 - 旧版の標本8件・途中373件のVERIFIED記録は、K0707により現在の修正版の被覆数には加えない。
-  修正版DRAT143 dと新LRAT4 dの和147 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
+  修正版DRAT143 dと新LRAT19 dの和162 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
 - `A(2531)` の正確な値は未確定。
 - 同時期の走査で p=2539, 2543, 2549 も d=h..h-30 の範囲で証人が見つかっておらず、
   反例素数は 2207, 2531 以外にも存在する可能性がある（未確定）。

@@ -1,0 +1,48 @@
+{
+  "p": 2531,
+  "d": 88,
+  "variables": 1265,
+  "clauses": 38160,
+  "input_sha256": "e3f1df2c0a102b2a22e5e56d14d8dd295665fdeccd4a19e582284e34ba6a074b",
+  "edge_input_sha256": "2ec500ff16c2e0141d26291f5dc7d412a2c81598fad50459a434a4ccded509d3",
+  "generator_sha256": "1c535d52c9e5841bbbb448e2a75a3fe3067b87a44620ebd37b4666cc0a46e070",
+  "source_sha256": "ae510ac4ee40d837248fb6de24fafc356919728a36959f85ac15fe3ab4137ed0",
+  "independent_projection_schema_equal": true,
+  "conflict_budget": 100000,
+  "python_sat": "1.9.dev21",
+  "original_drat_distribution": "local gzip retained; adopted LRAT and CNF distributed",
+  "verified": true,
+  "solver": "UNSAT",
+  "solve_seconds": 2.6163983999995253,
+  "statistics": {
+    "restarts": 842,
+    "conflicts": 23244,
+    "decisions": 41524,
+    "propagations": 2177653
+  },
+  "proof_sha256": "ea62c9cb18c8f55ad18f5de1bd584edd447f094fc85da7575522f762104c33e5",
+  "proof_lines": 133128,
+  "trim": {
+    "returncode": 0,
+    "stdout": "\nc parsing input formula with 1265 variables and 38160 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 12659 of 38160 clauses in core                            \n\nc 25243 of 59492 lemmas in core using 943098 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 1.757 seconds\n",
+    "stderr": "",
+    "seconds": 1.7931769999995595,
+    "timed_out": false,
+    "verified": true
+  },
+  "lrat": {
+    "returncode": 0,
+    "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 63403.  Deleted clauses = 63340.  Max live clauses = 38160\nc verification time = 0.42 secs\n",
+    "stderr": "",
+    "seconds": 0.4583138999987568,
+    "timed_out": false,
+    "verified": true
+  },
+  "lrat_sha256": "258d71810d626f8db94ead2cc40eab6c0e62152a1a93af98fc1423efbe1c8a81",
+  "lrat_lines": 42511,
+  "lrat_raw_bytes": 8275094,
+  "trim_source_sha256": "78026871882de3f2fee66034e549e9c1a0a9a5291abd817d06f611f9ba0f355d",
+  "fixed_lrat_source_sha256": "ca64680b89dde26ff2ea96b05c0fb926972eb307b74ffa18453e89a5da2988c8",
+  "trim_binary_sha256": "64594d9b22d8a833ff2988f46535a4796893260e3aca910925c4f4333e5e9b48",
+  "lrat_binary_sha256": "a76456adfb1d2bee7c92969ffbaa5c353b4a6aa50e1d7c9d340a2550647c9778"
+}

@@ -1,0 +1,303 @@
+{
+  "filtered_edges": 38160,
+  "omitted_two_pair_edges": 799480,
+  "pilot_inputs_byte_equal": 4,
+  "independent_projection_schemas": 15,
+  "new_lrat_d": [
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "prior_verified_count": 147,
+  "verified_union_count": 162,
+  "remaining": 1103,
+  "original_drat_local_checks": 15,
+  "compressed_certificate_replays": 15,
+  "fixed_lrat_source_sha256": "ca64680b89dde26ff2ea96b05c0fb926972eb307b74ffa18453e89a5da2988c8",
+  "records": [
+    {
+      "d": 86,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d86/input.cnf.gz",
+      "input_sha256": "17a391cd21ac4ae1f1a60193aa3de5e28e020851e458f06df83ef7063a37ad1e",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d86/core.lrat.gz",
+      "lrat_raw_sha256": "b0c0cf36ec4e89c9fed8c1aaa50d85fe2ed9e2e8d2a3d249f9351f0fc0ba3ec4",
+      "lrat_gzip_sha256": "85af374a630f9bc7e648b084c5a9208f667642ae9bd135a1bcdb552509840bb3",
+      "original_drat_sha256": "814d693611bd84cc0210f0ead9207cb3fc68d7d10484e200aa52d101837aa378",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 72098.  Deleted clauses = 72031.  Max live clauses = 38160\nc verification time = 1.61 secs\n",
+        "stderr": "",
+        "seconds": 1.7769621999996161,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 87,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d87/input.cnf.gz",
+      "input_sha256": "e0bdeca0d697bec36799b3a0c31d3384e09190ec84ea502252e069b9c01b3e8d",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d87/core.lrat.gz",
+      "lrat_raw_sha256": "cecaa349951d77785b092a0645f81ce54ef9127178322b5003b6b6d9b577ad4d",
+      "lrat_gzip_sha256": "023c2179d7f945eaab91d1adac9e3466f140300360e586c0acd6165f5ac02f0f",
+      "original_drat_sha256": "d57fcb4dcd3705c368e65a436dcd2b6394923db0e6cb592efc207b494a76ba18",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 68908.  Deleted clauses = 68874.  Max live clauses = 38160\nc verification time = 1.76 secs\n",
+        "stderr": "",
+        "seconds": 1.8633441999991192,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 88,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d88/input.cnf.gz",
+      "input_sha256": "e3f1df2c0a102b2a22e5e56d14d8dd295665fdeccd4a19e582284e34ba6a074b",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d88/core.lrat.gz",
+      "lrat_raw_sha256": "258d71810d626f8db94ead2cc40eab6c0e62152a1a93af98fc1423efbe1c8a81",
+      "lrat_gzip_sha256": "14982f34194edfd8510bcbed2c56010aa6138d686f4b29e92b303196e896b6e6",
+      "original_drat_sha256": "ea62c9cb18c8f55ad18f5de1bd584edd447f094fc85da7575522f762104c33e5",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 63403.  Deleted clauses = 63340.  Max live clauses = 38160\nc verification time = 1.38 secs\n",
+        "stderr": "",
+        "seconds": 1.5082598999997572,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 89,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d89/input.cnf.gz",
+      "input_sha256": "d69f8a42737f292ea360a8cc00e65e7e4a4f6a5129c005b84d9f4685de3ecc65",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d89/core.lrat.gz",
+      "lrat_raw_sha256": "29cc21574f6e71a851d3f90f37f964fa05fb6f38cfca5a7c38a850e9154bd682",
+      "lrat_gzip_sha256": "02eb457e6338b728986d0e6374b28efd46bd127e96dcc0b9ab0463a96f73a795",
+      "original_drat_sha256": "41129508ddc2c529c2290d5d55b84fdaf4ab7e11667352cb6279fd9511fd93f7",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 55159.  Deleted clauses = 55106.  Max live clauses = 38160\nc verification time = 0.90 secs\n",
+        "stderr": "",
+        "seconds": 0.9798924999995506,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 90,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d90/input.cnf.gz",
+      "input_sha256": "642a285070075b8072c7cbe3f30131f53268e50383e8802f9bba38978057d349",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d90/core.lrat.gz",
+      "lrat_raw_sha256": "c5bcc6c0ea4ff663707fccc7279aad7e9329d9a240c25fdd02bb7139b8786c75",
+      "lrat_gzip_sha256": "b28760ab53a9a10542de21040e91b4e0ebae2d51a88835a0d9380c8a1c971ec1",
+      "original_drat_sha256": "eb97db6d3af8989d3f5e55dfb15bedeaf22d97fc43b60b3e674d3b7b3fc93ca3",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 42693\nc Added clauses = 39072.  Deleted clauses = 39038.  Max live clauses = 38160\nc verification time = 0.22 secs\n",
+        "stderr": "",
+        "seconds": 0.29013169999961974,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 91,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d91/input.cnf.gz",
+      "input_sha256": "7ab2aa46f7c4a5613de1faf56b500dcbdd397d1b0fc02c90d4def3dd4c14e4df",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d91/core.lrat.gz",
+      "lrat_raw_sha256": "65a88a9547b31e6fa7c41a86c6d65690c218b03d27d95b41ea71ec5f599ab669",
+      "lrat_gzip_sha256": "824702c2e8ee02414975566e34a90c67c011007ee300a9ead18a2578ebb880d8",
+      "original_drat_sha256": "22d7ce19a951d70c547630e4f34181185732aec83a18474beae5ebb567ab8d89",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 62355.  Deleted clauses = 62268.  Max live clauses = 38160\nc verification time = 1.09 secs\n",
+        "stderr": "",
+        "seconds": 1.1498547999999573,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 92,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d92/input.cnf.gz",
+      "input_sha256": "1cb08b641bb34b593e83f08538150015be6389f26a8ba65fac74c072f34add7a",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d92/core.lrat.gz",
+      "lrat_raw_sha256": "8503e7d77212bc41395ebfc25e2637164444e88cf361bf144579373c61fd4e48",
+      "lrat_gzip_sha256": "4f53a7e2e1b21d6b34d28ee2220eb239a222a65d98fd41d72214d87df4007db5",
+      "original_drat_sha256": "be19e493e181bda9d7f52ebb1b903e5d2e08bff32938985fc029a2734e88001b",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 67488.  Deleted clauses = 67393.  Max live clauses = 38160\nc verification time = 1.39 secs\n",
+        "stderr": "",
+        "seconds": 1.4662692000001698,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 93,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d93/input.cnf.gz",
+      "input_sha256": "085e7121ff131d146e316c34aafc34bb594f8416c81dc78c7e7e9ac358bb61dd",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d93/core.lrat.gz",
+      "lrat_raw_sha256": "3a0b844796ae2c818566e9a743155a901662b1085bb72fe9bf850491ad2ce7f7",
+      "lrat_gzip_sha256": "b5cd2db72358d220a21c41f44cd123f1fee86b0cfa949f90f194b43dadfccf8c",
+      "original_drat_sha256": "2fd6d5a644ffcc282a4b4db034f1d52b9589e097004f761775d6121ff0755380",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 71456.  Deleted clauses = 71435.  Max live clauses = 38160\nc verification time = 1.92 secs\n",
+        "stderr": "",
+        "seconds": 1.9976807000002736,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 94,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d94/input.cnf.gz",
+      "input_sha256": "8a4628b51773198b001d9ad88cc135e34a1b49f0334f5859626a98b6e750fe7b",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d94/core.lrat.gz",
+      "lrat_raw_sha256": "76392f1b2a72c045ab28817504753efdd0992241f9111145163fa449a52031e6",
+      "lrat_gzip_sha256": "09508b2441f4c38efeb4fc8c296bc48ce73f2e9c4911ff6886b7b8284e42183c",
+      "original_drat_sha256": "bf9da859ba0a51b33775e55f05c61e50d4c585613ff16a5d5e7256658670f160",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 70318.  Deleted clauses = 70286.  Max live clauses = 38160\nc verification time = 1.57 secs\n",
+        "stderr": "",
+        "seconds": 1.656667400000515,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 95,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d95/input.cnf.gz",
+      "input_sha256": "f87f29376ef69b5769a094c92315ad4472007e98863bb26d555ed5bc3d0c9e20",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d95/core.lrat.gz",
+      "lrat_raw_sha256": "080f6d47c474b795e2fbd2eab96ac0bbefb196b40efc6cbe02b39687ca11c232",
+      "lrat_gzip_sha256": "9e38320d9544bf7f8193e35fe3244cb7e958fd00a62df65416485a18f8d1b9ed",
+      "original_drat_sha256": "956d30e6db784f8b774035485a144c7956a46700d26442b1c5b3133aa4a8446d",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 70156.  Deleted clauses = 70128.  Max live clauses = 38160\nc verification time = 1.53 secs\n",
+        "stderr": "",
+        "seconds": 1.599458799999411,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 96,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d96/input.cnf.gz",
+      "input_sha256": "d28845e742e2014ea429fa0ace3458d7588a836993ccf4740bee009e1da441f5",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d96/core.lrat.gz",
+      "lrat_raw_sha256": "3840c0dd0f71c9fd905dd6cfca9036047e6e0686dc1721351ff8c7912523b423",
+      "lrat_gzip_sha256": "b718eb321ab5bb405106ae8ca937fee842e9073f842ea38eb2b8cfc8c5a6ca86",
+      "original_drat_sha256": "a1eaf922e3048719b56425257ca42d1cc9058a599a06f371b03f3a3d5e1c0dd8",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 42693\nc Added clauses = 41753.  Deleted clauses = 41619.  Max live clauses = 38160\nc verification time = 0.40 secs\n",
+        "stderr": "",
+        "seconds": 0.4736581999986811,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 97,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d97/input.cnf.gz",
+      "input_sha256": "2ccb49d4664fb04b3ba6fc45ef7ae59b63cc79de5fe7e6b34dba3029a140bb01",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d97/core.lrat.gz",
+      "lrat_raw_sha256": "6f557aff8d4d9b49a246f61c31cb626c3847f1a391f9c350b81d0f105c6c83c7",
+      "lrat_gzip_sha256": "a0384204b097d24f39c195868094fa23a0c813c229f7b442aed727bd43e549ed",
+      "original_drat_sha256": "4bb72fcf4c546635779fb600f0bb50763536c324ce2ce093ab7e518d4531ca27",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 69818.  Deleted clauses = 69778.  Max live clauses = 38160\nc verification time = 2.06 secs\n",
+        "stderr": "",
+        "seconds": 2.1605967999985296,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 98,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d98/input.cnf.gz",
+      "input_sha256": "6426f8c250b4c64e984fe5972bc4b5000e8768c0092d24f2cf2867a952581bc8",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d98/core.lrat.gz",
+      "lrat_raw_sha256": "09a3035f8d39877ed3be11395b66ee86c799ee54f7138b600fec0dbb90dacc6e",
+      "lrat_gzip_sha256": "0d311d26b93e64c42dad9f0f0771da276c9c8bdb36f2ab6e4ae6070c97679167",
+      "original_drat_sha256": "30b70f284ff53d5003933dab3f83d23b5e24ea844e24b1591ae5bef23082e4fa",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 69595.  Deleted clauses = 69488.  Max live clauses = 38160\nc verification time = 1.84 secs\n",
+        "stderr": "",
+        "seconds": 2.025763999999981,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 99,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d99/input.cnf.gz",
+      "input_sha256": "7090942629c81bdb2d5eb22810fef3f21fd45937a4896c47e3ce8b0ed4da8ab2",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d99/core.lrat.gz",
+      "lrat_raw_sha256": "bba8b3f4a4a43fabae778b60c9f5be07e2f4c7790caa9267a5f4cd5fc58d9a1b",
+      "lrat_gzip_sha256": "b737d62aabd0a88070dfd04dd519a88eebaa9300e3f3e58b491b2f96dc3468e7",
+      "original_drat_sha256": "e3788aa63fdd9694801abd55f8499b7d7b2e758ef350e2db0cb33ec63f5ccc1c",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 70877.  Deleted clauses = 70783.  Max live clauses = 38160\nc verification time = 1.73 secs\n",
+        "stderr": "",
+        "seconds": 1.7981468999987555,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    },
+    {
+      "d": 100,
+      "input_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d100/input.cnf.gz",
+      "input_sha256": "4c0c44bf1770dfeb8a199bc634e49c59c9e210fdca2973e489a343ee1d1a7cc8",
+      "lrat_path": "research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/d100/core.lrat.gz",
+      "lrat_raw_sha256": "859dcea351464e7296a508b8616b5cccce3779221263410bd595a516f9611f1c",
+      "lrat_gzip_sha256": "df13c50dd90de34f17b00a4884f8eb20952b1621e211abd1e3030b7ec554f58c",
+      "original_drat_sha256": "c7e218cb73f7886753edc564259b60f7e8d5b50151812644fdc9aa0e2f70affa",
+      "original_drat_distribution": "local gzip retained",
+      "verified": true,
+      "archive_replay": {
+        "returncode": 0,
+        "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 63940.  Deleted clauses = 63900.  Max live clauses = 38160\nc verification time = 1.25 secs\n",
+        "stderr": "",
+        "seconds": 1.3453613000001496,
+        "binary_sha256": "2d1b40cddcc038eb919c61e3eed2b279e0207cb9f31b933d9facc1327389bbba"
+      }
+    }
+  ],
+  "source_sha256": "7f55e54ab8a2fa9b0f6ec61d840ffbb95066d77fe64cf68f0ca00ee39a7fc263",
+  "scope": "Independent input projection and optional replay of distributed CNF/LRAT archives, with mixed-method coverage chain. Not a completed all-d audit."
+}

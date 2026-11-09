@@ -10150,6 +10150,30 @@
 ## [research/experiments/parabola-p2531-lrat-20261109/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-20261109/verify_saved.py)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): SATソルバや元generatorを使わず、保存辺の独立投影・入力と証拠hash・旧143件との被覆和を照合
+## [research/experiments/parabola-p2531-lrat-20261110/README.md](../../../research/experiments/parabola-p2531-lrat-20261110/README.md)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): 有用辺への入力縮約、証拠の保存範囲、独立再生と被覆履歴の再現手順
+## [research/experiments/parabola-p2531-lrat-20261110/audit.py](../../../research/experiments/parabola-p2531-lrat-20261110/audit.py)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 既存147 dとの重複を避けてd=86..100を生成し、整数幾何・投影schema・DRAT-trim・修正LRATで検査
+## [research/experiments/parabola-p2531-lrat-20261110/input/edges.txt](../../../research/experiments/parabola-p2531-lrat-20261110/input/edges.txt)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 二完全対の自明な799480辺を除いた38160辺。全提供辺の整数幾何を再検査
+## [research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/coverage.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/coverage.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 前段147 dと新15 dは重複なし、独立被覆和162/1265、残り1103。前段manifestのhash付き
+## [research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/geometry.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/geometry.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 38160辺をgeneric整数4×4で受理。完全性ではなく健全性をUNSATの根拠に使う
+## [research/experiments/parabola-p2531-lrat-20261110/output/certificate-manifest.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/certificate-manifest.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 新15件のGit管理CNF・採用LRAT gzipのpathとhash。原DRAT gzipはローカル保持しhashを記録
+## [research/experiments/parabola-p2531-lrat-20261110/output/saved-verification.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/saved-verification.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 全15圧縮証明を修正LRATで再生し、独立投影schema・原DRAT15 hash・162 dの被覆和も照合
+## [research/experiments/parabola-p2531-lrat-20261110/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-20261110/verify_saved.py)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 省略辺の構造、前段4入力のbyte一致、新15入力の独立投影、圧縮CNFとLRATの実再生、被覆履歴を照合
 ## [research/experiments/parabola-size1323-drat-20261109/README.md](../../../research/experiments/parabola-size1323-drat-20261109/README.md)
 
 - [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (source): 反例、修正、旧証拠への制限、保存証明と監査再開の手順
