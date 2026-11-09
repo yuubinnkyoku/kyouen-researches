@@ -53,3 +53,10 @@ UNKNOWNだった入力が予算増加でSATになった事例として、両方�
 ```sh
 uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabola-warm-improvement-20261109/run.py --target 1299 --warm research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt --budget 500000 --timeout 300 --output FRESH-budget500000-directory
 ```
+
+## 後続: 1301点要求も50万衝突へ
+
+`output/target1301-warm1300-budget500000` は、1301点要求の予算を50万衝突へ増やしたもの。
+同じCNF・同じ1300点phaseで269.43秒・500000衝突まで進めてもUNKNOWNだった（親上限300秒）。
+モデル・証人はなく、1301点の不存在を意味しない。
+`output/verification-1301-budget500000.json` に旧4件と新1件の照合を保存した。

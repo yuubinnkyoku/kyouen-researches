@@ -698,3 +698,4 @@
 | [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) | 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる | proposition | proved | geometry, maximum-safe, search-methods |
 | [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
 | [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) | 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す | proposition | computed | verification, certificates, provenance |
+| [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) | Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |

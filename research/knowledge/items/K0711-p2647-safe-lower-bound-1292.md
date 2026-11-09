@@ -40,18 +40,18 @@ artifacts:
 - path: research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt
   role: certificate
   note: 前段の1298点証人。今回の探索のphase起点
-- path: research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget100000/result.json
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/result.json
   role: data
-  note: 1300点をphaseにした1301点以上の探索は10万衝突予算・52.79秒でUNKNOWN。不存在の証明ではない
+  note: 1300点をphaseにした1301点以上の探索は50万衝突予算・269.43秒でもUNKNOWN。不存在の証明ではない
 - path: research/experiments/parabola-warm-improvement-20261109/verify_saved.py
   role: verifier
   note: 保存した全実入力の再生成・hash、完全モデルの全節充足と点抽出、独立幾何receiptを検査
 - path: research/experiments/parabola-warm-improvement-20261109/output/verification.json
   role: data
   note: 1298点SATと1299点UNKNOWNの保存証拠・warm source・凍結符号化の照合結果
-- path: research/experiments/parabola-warm-improvement-20261109/output/verification-budget500000.json
+- path: research/experiments/parabola-warm-improvement-20261109/output/verification-1301-budget500000.json
   role: data
-  note: 4保存試行を照合し、同一入力のUNKNOWNからSATへの進展と1300点証人の独立幾何を確認
+  note: 5保存試行を照合し、1300点証人の独立幾何と1301点の二予算UNKNOWNを確認
 - path: research/experiments/parabola-warm-improvement-20261109/README.md
   role: source
   note: 1298点・1300点証人とUNKNOWNの範囲、凍結符号化・予算・再現手順
@@ -284,8 +284,10 @@ RATは使わず、全追加が元CNFの論理的帰結となるため、削除�
 ## 旧ソルバ記録と未確定事項
 
 従来の上界1324はK0706の全1323 dのDRAT監査による。1324点の3形状監査で1323へ、今回の4形状監査で1322へ強化した。
-1300点集合の最大性や空対25の最小性は未確定。1300点をphaseにした1301点以上の試行は
-10万衝突予算・52.79秒でUNKNOWNだった。これは1301点の不存在を意味しない。
+保存1300点集合の包含極大性は[K0715](K0715-p2647-saved-1300-witness-inclusion-maximal.md)で全1347個の単点追加の阻止証明を検査した。
+最大性や空対25の最小性は未確定。1300点をphaseにした1301点以上の試行は、
+10万衝突予算・52.79秒に続き、同じCNF・phaseの50万衝突予算・269.43秒でもUNKNOWNだった。
+これは1301点の不存在を意味しない。
 以前の1299点・1300点要求のUNKNOWNは当時の予算付き観測として保持する。現在は1300点の存在を確認済み。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。

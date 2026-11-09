@@ -68,6 +68,7 @@
 - ← depends_on [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 完全指摘・通常プレイと整数行列式による合法手
 - ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 完全指摘・通常プレイと合法な一点追加
 - ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 共線・共円四点を含まない安全集合
+- ← depends_on [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md): 共線または共円の四点を含まない標準q=4の安全性
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -422,6 +423,7 @@
 - ← depends_on [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
 - ← depends_on [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 最大安全石数の定義
+- ← depends_on [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -3885,3 +3887,8 @@
 
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 禁止四点から固定完全対dへの直接投影節の定義
 - → generalizes [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
+
+## [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円の四点を含まない標準q=4の安全性
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 包含極大と最大サイズを区別する

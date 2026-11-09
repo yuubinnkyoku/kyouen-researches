@@ -9907,6 +9907,21 @@
 ## [research/experiments/parabola-local-repair-20261109/walk_initial.cpp](../../../research/experiments/parabola-local-repair-20261109/walk_initial.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 実際の100万flip・seed20261109の局所探索ソース
+## [research/experiments/parabola-maximal-1300-20261109/README.md](../../../research/experiments/parabola-maximal-1300-20261109/README.md)
+
+- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (source): 固定点集合、証明形式、単点追加不能から包含極大への論理と再現手順
+## [research/experiments/parabola-maximal-1300-20261109/audit.py](../../../research/experiments/parabola-maximal-1300-20261109/audit.py)
+
+- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): 既存CNFは候補提案だけに用い、証明を明示四点へ変換してC++で再検査するドライバ
+## [research/experiments/parabola-maximal-1300-20261109/output/initial/audit.json](../../../research/experiments/parabola-maximal-1300-20261109/output/initial/audit.json)
+
+- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (data): 全1347点被覆・四点の所属と整数行列式0を受理し、7不正制御を拒否したsource/binary/hash付き記録
+## [research/experiments/parabola-maximal-1300-20261109/output/initial/blockers.txt](../../../research/experiments/parabola-maximal-1300-20261109/output/initial/blockers.txt)
+
+- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 各未選択tに対し、tと既存3点からなる真の禁止四点を1個ずつ記す全1347行
+## [research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp](../../../research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp)
+
+- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の幾何と補集合の重複なし完全被覆だけを検査する独立wrapper
 ## [research/experiments/parabola-monotone-rup-20261109/README.md](../../../research/experiments/parabola-monotone-rup-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 閾値counterによる安全集合からCNFモデルへの拡張可能性とRUP-only検査の論理
@@ -10053,9 +10068,11 @@
 ## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/candidate.txt](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/candidate.txt)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与える1300点のソート済みパラメータ。点は(t,t² mod 2647)
+- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 本項で固定する1300点集合。input SHA-256 4ef5b03e...、原点と完全対1323を含む
 ## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/geometry.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全118455690925四点を合同式で被覆し44831921候補の整数4×4行列式を検査、禁止四点0件
+- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (data): この集合自体の安全性を独立整数幾何検査した受理記録
 ## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/input.cnf.gz](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/input.cnf.gz)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 原点と完全対d=1323を固定し1299点以上を要求した実入力。以前UNKNOWNだった入力とbyte一致
@@ -10065,12 +10082,12 @@
 ## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/result.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1298点をphaseに使い50万衝突予算で83.52秒・190902衝突で1300点を返したSAT記録
-## [research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget100000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget100000/result.json)
+## [research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/result.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1300点をphaseにした1301点以上の探索は10万衝突予算・52.79秒でUNKNOWN。不存在の証明ではない
-## [research/experiments/parabola-warm-improvement-20261109/output/verification-budget500000.json](../../../research/experiments/parabola-warm-improvement-20261109/output/verification-budget500000.json)
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1300点をphaseにした1301点以上の探索は50万衝突予算・269.43秒でもUNKNOWN。不存在の証明ではない
+## [research/experiments/parabola-warm-improvement-20261109/output/verification-1301-budget500000.json](../../../research/experiments/parabola-warm-improvement-20261109/output/verification-1301-budget500000.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 4保存試行を照合し、同一入力のUNKNOWNからSATへの進展と1300点証人の独立幾何を確認
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 5保存試行を照合し、1300点証人の独立幾何と1301点の二予算UNKNOWNを確認
 ## [research/experiments/parabola-warm-improvement-20261109/output/verification.json](../../../research/experiments/parabola-warm-improvement-20261109/output/verification.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1298点SATと1299点UNKNOWNの保存証拠・warm source・凍結符号化の照合結果
