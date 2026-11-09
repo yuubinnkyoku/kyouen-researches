@@ -1,6 +1,6 @@
 ---
 id: K0711
-title: 剰余放物線Q_2647の独立監査済み範囲は1301以上1322以下
+title: 剰余放物線Q_2647の独立監査済み範囲は1302以上1322以下
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -19,9 +19,51 @@ relations:
   target: K0334
   note: 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 artifacts:
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt
+  role: certificate
+  note: 現在の下界を与える1302点。保存1301点から3点を除き4点を追加
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json
+  role: data
+  note: 全119187179475四点を合同式で被覆し45110020候補を整数行列式で検査、禁止四点0件
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/model.json
+  role: certificate
+  note: 1302点要求・元の証人から3点以下除去の全129266節を満たす37731変数の完全モデル
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz
+  role: data
+  note: 元の1301点から失う点数に逐次counterの上限3を課した保存入力
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/result.json
+  role: data
+  note: 7.11秒・8180衝突で1302点SATを得た当時の記録。幾何の未検査表示は原記録として保持
+- path: research/experiments/parabola-bounded-exchange-20261109/search.py
+  role: solver
+  note: 固定原点・完全対で選択点の除去数を制限するSAT探索。補助変数の予約上限を保持
+- path: research/experiments/parabola-bounded-exchange-20261109/audit.py
+  role: verifier
+  note: 除去counterの真理値表、保存入力のbyte再生成、完全モデル全節・点抽出・交換差分と幾何receiptを照合
+- path: research/experiments/parabola-bounded-exchange-20261109/output/audit-1302/audit.json
+  role: data
+  note: 768除去counterケース、全129266節、3不正モデル拒否、全変数固定の再生成功
+- path: research/experiments/parabola-bounded-exchange-20261109/README.md
+  role: source
+  note: 有界交換の入力・再現手順と、1302点下界および次の近傍の信頼境界
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json
+  role: data
+  note: 保存1302点から3点以下除去の1303点要求はSOLVER_UNSAT。独立監査未完了
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/input.cnf.gz
+  role: data
+  note: 1303点要求の36457変数・126721節の実入力。全体を覆わない近傍条件付き
+- path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz
+  role: certificate
+  note: 325093行の未監査DRAT。RUP-only検査timeoutを受理と混同しない
+- path: research/experiments/parabola-bounded-exchange-20261109/audit_proof.py
+  role: verifier
+  note: 保存証明を削除無視・RAT禁止の既存RUP-only検査器で再生するドライバ
+- path: research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json
+  role: data
+  note: 独立検査は120秒でtimeout、verified false。上界の根拠には使わない
 - path: research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt
   role: certificate
-  note: 現在の下界を与える1301点。保存1300点から1300と2262を除き385と610と1723を追加
+  note: 前段の1301点。保存1300点から1300と2262を除き385と610と1723を追加。今回の交換の種
 - path: research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/geometry.json
   role: data
   note: 全118821013025四点を合同式で被覆し44971096候補の整数行列式を検査、禁止四点0件
@@ -226,13 +268,13 @@ artifacts:
 - path: research/experiments/parabola-drat-trim-20261109/README.md
   role: source
   note: 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1301と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
-evidence: 下界は交換で得た1301点の独立整数幾何検査と完全モデルの全122752節の充足確認。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1302と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
+evidence: 下界は交換で得た1302点の独立整数幾何検査と完全モデルの全129266節の充足確認。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
 ---
 
 ## 命題と構成
 
-**独立監査済みの範囲は1301 <= A(2647) <= 1322**。正確な最大値は未確定。
+**独立監査済みの範囲は1302 <= A(2647) <= 1322**。正確な最大値は未確定。
 上界1322は、修正後入力に対する全4形状の反駁検査で確認した有限計算の結論である。
 
 保存CNF（p=2647,d=1323、1323変数・53886節）へ局所探索を100万flip、seed=20261109で行い、
@@ -263,12 +305,20 @@ warm startは探索のphase指定であり、既存の点を固定したり包�
 この補完では点選択を固定し、既知の証人に対する充足モデルを構成・検査した。
 証人のSHA-256は `1e02ea20ab61516d267887a7a31fa1b2aefd4aa9c305da403c60468da9bfc27b`。
 
+さらにその1301点集合から失う点数を3以下に制限し、1302点以上を要求する有界交換CNFを作った。
+CaDiCaLは7.110秒・8180衝突でSATを返し、`{684,1430,1785}` を除き `{150,1217,1294,1963}` を加えた
+1302点を得た。原点と完全対d=1323を維持し、空対は23。
+保存入力のbyte再生成と、37731変数の完全モデルが全129266節を満たすこと、点抽出・交換差分を検査した。
+追加した除去counterは768小規模割当で個数条件と一致し、実入力の補助変数予約上限にも衝突がない。
+これは符号化の回帰であり、安全性の根拠は次の独立整数幾何検査である。
+1302点証人のSHA-256は `5395d2326e08dfe8ac43b57103cc1d469ceddf68a0b522b4d7092e9db342000b`。
+
 ## 下界の独立検査
 
-現在の1301点証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
-探索とは別の検証器で、全118821013025選択四点を対象に必要合同式で候補を絞り、
-44971096候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
-`2647 1301 118821013025 44971096`、終了コード0。
+現在の1302点証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
+探索とは別の検証器で、全119187179475選択四点を対象に必要合同式で候補を絞り、
+45110020候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
+`2647 1302 119187179475 45110020`、終了コード0。
 
 合同式フィルタの完全性は、行列式をmod pへ落とすとVandermonde積とパラメータ和の積になることによる。
 異なる四パラメータで前者は非零だから、整数行列式0なら和は0 mod p。
@@ -332,11 +382,15 @@ RATは使わず、全追加が元CNFの論理的帰結となるため、削除�
 従来の上界1324はK0706の全1323 dのDRAT監査による。1324点の3形状監査で1323へ、今回の4形状監査で1322へ強化した。
 保存1300点集合の包含極大性は[K0715](K0715-p2647-saved-1300-witness-inclusion-maximal.md)で全1347個の単点追加の阻止証明を検査した。
 この包含極大性はその保存集合についての結論であり、2点を除いて3点を加えた新しい1301点集合と矛盾しない。
-現在の1301点集合の最大性や空対24の最小性は未確定。1300点をphaseにした1301点以上の旧試行は、
+現在の1302点集合の最大性や空対23の最小性は未確定。1300点をphaseにした1301点以上の旧試行は、
 10万衝突予算・52.79秒に続き、同じCNF・phaseの50万衝突予算・269.43秒でもUNKNOWNだった。
 旧UNKNOWNは当時の予算付き観測として保持する。現在は交換と独立検査で1301点の存在を確認済み。
 新しい1301点集合に対し2点以下を除く投影CNF交換を試したところ、36066除去候補・286追加候補では改善未発見だった。
 固定完全対を保つ実装上の局所探索の結果であり、1302点の不存在や一般の局所最適性を証明したものではない。
+現在は3点以下除去へ広げて1302点を構成済み。
+その1302点から3点以下除去で1303点以上を要求した次のCNFはSOLVER_UNSATだったが、
+保存DRATの独立RUP-only再生は120秒でtimeoutした。これは未監査のソルバ主張として保持し、
+1303点の不存在、局所最適性、または全体の上界の根拠には採用しない。
 以前の1299点・1300点要求のUNKNOWNも原記録を保持する。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。

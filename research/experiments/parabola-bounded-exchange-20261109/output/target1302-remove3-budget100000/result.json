@@ -1,0 +1,42 @@
+{
+  "p": 2647,
+  "d": 1323,
+  "seed_path": "research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt",
+  "seed_size": 1301,
+  "seed_sha256": "1e02ea20ab61516d267887a7a31fa1b2aefd4aa9c305da403c60468da9bfc27b",
+  "target": 1302,
+  "max_removed": 3,
+  "conflict_budget": 100000,
+  "variables": 37731,
+  "clauses": 129266,
+  "prior_top_id": 33846,
+  "removal_literals": 1298,
+  "input_cnf_sha256": "d88f99784a1d893068d5f6009337ab7832d0ffa632e59ead94fc86043c4a5d46",
+  "base_cnf_sha256": "0f09fc6efce1ba1b3df795eef24e4bb014fcfad836f31d4e6ba7e99b242ff0b3",
+  "encoding_snapshot_sha256": "9b96e84cc63ceaa31b317e5db1eec86552cf8b9ed8e9f01b62fc7332fe9f3681",
+  "source_sha256": "87b454d15577b6e13d43c8128158430f513e39dec64d0b3e70d8fd5d40b3f269",
+  "python_sat": "1.9.dev21",
+  "solver": "Cadical195",
+  "scope": "Fixed origin/complete pair, bounded seed deletions. Solver UNSAT needs proof audit; UNKNOWN gives no nonexistence result; positive geometry is separate.",
+  "status": "SAT",
+  "solve_seconds": 7.1098541999999725,
+  "statistics": {
+    "restarts": 191,
+    "conflicts": 8180,
+    "decisions": 25793,
+    "propagations": 29823679
+  },
+  "size": 1302,
+  "removed": [
+    684,
+    1430,
+    1785
+  ],
+  "added": [
+    150,
+    1217,
+    1294,
+    1963
+  ],
+  "geometry": "UNCHECKED"
+}

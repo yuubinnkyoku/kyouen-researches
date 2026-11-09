@@ -9743,6 +9743,48 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 重複・未被覆・計画標本の照合と13制御。証明内容の検査器ではない
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 件数と計画標本63件の集合包含を区別して照合する再現コード
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (verifier): 総件数70と計画標本51/65の被覆を区別する再現コード
+## [research/experiments/parabola-bounded-exchange-20261109/README.md](../../../research/experiments/parabola-bounded-exchange-20261109/README.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 有界交換の入力・再現手順と、1302点下界および次の近傍の信頼境界
+## [research/experiments/parabola-bounded-exchange-20261109/audit.py](../../../research/experiments/parabola-bounded-exchange-20261109/audit.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 除去counterの真理値表、保存入力のbyte再生成、完全モデル全節・点抽出・交換差分と幾何receiptを照合
+## [research/experiments/parabola-bounded-exchange-20261109/audit_proof.py](../../../research/experiments/parabola-bounded-exchange-20261109/audit_proof.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 保存証明を削除無視・RAT禁止の既存RUP-only検査器で再生するドライバ
+## [research/experiments/parabola-bounded-exchange-20261109/output/audit-1302/audit.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/audit-1302/audit.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 768除去counterケース、全129266節、3不正モデル拒否、全変数固定の再生成功
+## [research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 独立検査は120秒でtimeout、verified false。上界の根拠には使わない
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与える1302点。保存1301点から3点を除き4点を追加
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全119187179475四点を合同式で被覆し45110020候補を整数行列式で検査、禁止四点0件
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 元の1301点から失う点数に逐次counterの上限3を課した保存入力
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/model.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/model.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 1302点要求・元の証人から3点以下除去の全129266節を満たす37731変数の完全モデル
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 7.11秒・8180衝突で1302点SATを得た当時の記録。幾何の未検査表示は原記録として保持
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1303点要求の36457変数・126721節の実入力。全体を覆わない近傍条件付き
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 325093行の未監査DRAT。RUP-only検査timeoutを受理と混同しない
+## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存1302点から3点以下除去の1303点要求はSOLVER_UNSAT。独立監査未完了
+## [research/experiments/parabola-bounded-exchange-20261109/search.py](../../../research/experiments/parabola-bounded-exchange-20261109/search.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 固定原点・完全対で選択点の除去数を制限するSAT探索。補助変数の予約上限を保持
 ## [research/experiments/parabola-drat-trim-20261109/README.md](../../../research/experiments/parabola-drat-trim-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
@@ -9928,7 +9970,7 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1301点から36066除去候補を試し改善未発見。1302点の不存在は主張しない
 ## [research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与える1301点。保存1300点から1300と2262を除き385と610と1723を追加
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1301点。保存1300点から1300と2262を除き385と610と1723を追加。今回の交換の種
 ## [research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/geometry.json](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全118821013025四点を合同式で被覆し44971096候補の整数行列式を検査、禁止四点0件
