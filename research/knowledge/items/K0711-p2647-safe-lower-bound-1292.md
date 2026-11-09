@@ -1,6 +1,6 @@
 ---
 id: K0711
-title: 剰余放物線Q_2647の独立監査済み範囲は1300以上1322以下
+title: 剰余放物線Q_2647の独立監査済み範囲は1301以上1322以下
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -19,9 +19,48 @@ relations:
   target: K0334
   note: 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 artifacts:
+- path: research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt
+  role: certificate
+  note: 現在の下界を与える1301点。保存1300点から1300と2262を除き385と610と1723を追加
+- path: research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/geometry.json
+  role: data
+  note: 全118821013025四点を合同式で被覆し44971096候補の整数行列式を検査、禁止四点0件
+- path: research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/result.json
+  role: data
+  note: 2点除去・3点追加の投影CNF候補を得た当時の記録。geometry未検査という原記録は保持
+- path: research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/completion-model.json
+  role: certificate
+  note: 1301点要求の旧UNKNOWN入力について全122752節を満たす35121変数の完全モデル
+- path: research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/validation.json
+  role: data
+  note: 3966点選択変数を証人に固定してモデル補完し全節充足・点抽出・幾何receiptのhashを照合
+- path: research/experiments/parabola-maximal-1300-20261109/exchange.py
+  role: solver
+  note: 保存1300点に対して2点以下除去の交換候補を生成した固定ソース
+- path: research/experiments/parabola-maximal-1300-20261109/exchange_seeded.py
+  role: solver
+  note: 証人入力を指定する交換探索版。1302点への局所的試行に使用
+- path: research/experiments/parabola-maximal-1300-20261109/verify_exchange.py
+  role: verifier
+  note: 保存交換・幾何receipt・旧UNKNOWN入力への完全モデルの充足を照合
+- path: research/experiments/parabola-maximal-1300-20261109/audit_saved_exchange.py
+  role: verifier
+  note: SAT・符号化generatorを使わず保存完全モデルの全節と点状態を再評価、3不正モデルを拒否
+- path: research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/saved-audit.json
+  role: data
+  note: 保存完全モデルの独立評価と新しい入力指定交換版の証人byte一致を確認
+- path: research/experiments/parabola-maximal-1300-20261109/output/exchange-from1301/result.json
+  role: data
+  note: 1301点から36066除去候補を試し改善未発見。1302点の不存在は主張しない
+- path: research/experiments/parabola-maximal-1300-20261109/README.md
+  role: source
+  note: 保存1300点の包含極大性と、別の1301点集合を得る交換の再現手順・信頼境界
+- path: research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/input.cnf.gz
+  role: data
+  note: 当時UNKNOWNだった1301点要求の35121変数・122752節。今回のモデル補完は同じ入力を使用
 - path: research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/candidate.txt
   role: certificate
-  note: 現在の下界を与える1300点のソート済みパラメータ。点は(t,t² mod 2647)
+  note: 前段の1300点のソート済みパラメータ。今回の2点除去・3点追加の起点
 - path: research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/geometry.json
   role: data
   note: 全118455690925四点を合同式で被覆し44831921候補の整数4×4行列式を検査、禁止四点0件
@@ -42,7 +81,7 @@ artifacts:
   note: 前段の1298点証人。今回の探索のphase起点
 - path: research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/result.json
   role: data
-  note: 1300点をphaseにした1301点以上の探索は50万衝突予算・269.43秒でもUNKNOWN。不存在の証明ではない
+  note: 当時の1301点以上の探索は50万衝突予算・269.43秒でもUNKNOWN。現在は別の交換で存在を確認、旧記録は保持
 - path: research/experiments/parabola-warm-improvement-20261109/verify_saved.py
   role: verifier
   note: 保存した全実入力の再生成・hash、完全モデルの全節充足と点抽出、独立幾何receiptを検査
@@ -187,13 +226,13 @@ artifacts:
 - path: research/experiments/parabola-drat-trim-20261109/README.md
   role: source
   note: 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1300と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
-evidence: 下界は1300点の独立整数幾何検査と保存SATモデルの全127836節の充足確認。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1301と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
+evidence: 下界は交換で得た1301点の独立整数幾何検査と完全モデルの全122752節の充足確認。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
 ---
 
 ## 命題と構成
 
-**独立監査済みの範囲は1300 <= A(2647) <= 1322**。正確な最大値は未確定。
+**独立監査済みの範囲は1301 <= A(2647) <= 1322**。正確な最大値は未確定。
 上界1322は、修正後入力に対する全4形状の反駁検査で確認した有限計算の結論である。
 
 保存CNF（p=2647,d=1323、1323変数・53886節）へ局所探索を100万flip、seed=20261109で行い、
@@ -217,12 +256,19 @@ warm startは探索のphase指定であり、既存の点を固定したり包�
 両入力のSHA-256は `ec55b41a9d5fee9fbe6e259b69f18ac2446b73d25094212a702034bf7648deb4` で一致する。
 37665変数の完全モデルが全127836節を満たすこと、点抽出と保存証人の一致を検査した。
 
+保存1300点集合から `{1300,2262}` を除き、`{385,610,1723}` を加える交換で1301点を得た。
+原点と完全対d=1323は維持し、空対は24となる。投影CNFでの候補発見は6.21秒だった。
+独立整数幾何検査に加え、以前UNKNOWNだった1301点要求の同じCNFへ3966個の点選択変数を全て固定し、
+補助変数を補完した35121変数のモデルが全122752節を満たすことと、点抽出を確認した。
+この補完では点選択を固定し、既知の証人に対する充足モデルを構成・検査した。
+証人のSHA-256は `1e02ea20ab61516d267887a7a31fa1b2aefd4aa9c305da403c60468da9bfc27b`。
+
 ## 下界の独立検査
 
-現在の1300点証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
-探索とは別の検証器で、全118455690925選択四点を対象に必要合同式で候補を絞り、
-44831921候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
-`2647 1300 118455690925 44831921`、終了コード0。
+現在の1301点証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
+探索とは別の検証器で、全118821013025選択四点を対象に必要合同式で候補を絞り、
+44971096候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
+`2647 1301 118821013025 44971096`、終了コード0。
 
 合同式フィルタの完全性は、行列式をmod pへ落とすとVandermonde積とパラメータ和の積になることによる。
 異なる四パラメータで前者は非零だから、整数行列式0なら和は0 mod p。
@@ -285,10 +331,13 @@ RATは使わず、全追加が元CNFの論理的帰結となるため、削除�
 
 従来の上界1324はK0706の全1323 dのDRAT監査による。1324点の3形状監査で1323へ、今回の4形状監査で1322へ強化した。
 保存1300点集合の包含極大性は[K0715](K0715-p2647-saved-1300-witness-inclusion-maximal.md)で全1347個の単点追加の阻止証明を検査した。
-最大性や空対25の最小性は未確定。1300点をphaseにした1301点以上の試行は、
+この包含極大性はその保存集合についての結論であり、2点を除いて3点を加えた新しい1301点集合と矛盾しない。
+現在の1301点集合の最大性や空対24の最小性は未確定。1300点をphaseにした1301点以上の旧試行は、
 10万衝突予算・52.79秒に続き、同じCNF・phaseの50万衝突予算・269.43秒でもUNKNOWNだった。
-これは1301点の不存在を意味しない。
-以前の1299点・1300点要求のUNKNOWNは当時の予算付き観測として保持する。現在は1300点の存在を確認済み。
+旧UNKNOWNは当時の予算付き観測として保持する。現在は交換と独立検査で1301点の存在を確認済み。
+新しい1301点集合に対し2点以下を除く投影CNF交換を試したところ、36066除去候補・286追加候補では改善未発見だった。
+固定完全対を保つ実装上の局所探索の結果であり、1302点の不存在や一般の局所最適性を証明したものではない。
+以前の1299点・1300点要求のUNKNOWNも原記録を保持する。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。
 一方、上界1322（サイズ1323の形状クラス判定）の旧ソルバ記録は、
