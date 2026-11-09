@@ -1,6 +1,6 @@
 ---
 id: K0711
-title: 剰余放物線Q_2647の最大安全サイズは1296以上1322以下
+title: 剰余放物線Q_2647の独立監査済み範囲は1296以上1323以下
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -9,9 +9,12 @@ relations:
 - type: depends_on
   target: K0001
   note: 共線・共円四点を含まない安全集合
-- type: depends_on
+- type: supports
   target: K0706
-  note: 全1323 dの修正版DRAT監査による上界A(2647)<=1324
+  note: 従来の全d監査による1324より強い、3形状DRAT監査の上界1323
+- type: depends_on
+  target: K0097
+  note: 安全集合は完全対を高々一つしか含まず、h+1点を3形状に分類できる
 - type: depends_on
   target: K0334
   note: 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
@@ -45,7 +48,7 @@ artifacts:
   note: 初回1292点構成、再現手順と信頼境界
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json
   role: data
-  note: サイズ1323の4形状クラスすべてUNSATの記録（上界1322の根拠）
+  note: サイズ1323の4形状クラスすべてUNSATというソルバ記録（上界1322候補、DRAT未監査）
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json
   role: data
   note: サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
@@ -76,13 +79,44 @@ artifacts:
 - path: research/experiments/parabola-ternary-selection-20261109/regression.json
   role: data
   note: 小規模完全照合、既存1292点の適合性、現在の1296点モデルの全節充足確認
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。有限存在証人による下界1296と、形状クラス判定による上界1322。正確値や他素数への一般化は主張しない。
-evidence: 1296点証人を保存し、全117002820060選択四点を必要合同式と44277012回の直接整数4×4行列式で検査して禁止四点0件。上界はK0706の全d監査（A<=1324）と、サイズ1324・1323の全形状クラスのUNSAT（A<=1322）から従う。
+- path: research/experiments/parabola-hplus1-drat-20261109/input/verified_edges.txt.gz
+  role: data
+  note: 上界に使う53886禁止四点の部分集合。全件を独立整数行列式で検査
+- path: research/experiments/parabola-hplus1-drat-20261109/input/geometry.json
+  role: data
+  note: 全提供辺の健全性を検査したreceipt。辺集合の完全性は上界に不要
+- path: research/experiments/parabola-hplus1-drat-20261109/verify_edges.cpp
+  role: verifier
+  note: 探索generatorを使わないgeneric整数4×4の禁止四点検査
+- path: research/experiments/parabola-hplus1-drat-20261109/output/shape-a/audit.json
+  role: data
+  note: 形状(1,0,0)の1324点不存在CNFのDRAT受理記録
+- path: research/experiments/parabola-hplus1-drat-20261109/output/shape-b/audit.json
+  role: data
+  note: 形状(0,1,0)の1324点不存在CNFのDRAT受理記録
+- path: research/experiments/parabola-hplus1-drat-20261109/output/shape-c/audit.json
+  role: data
+  note: 形状(1,1,1)の1324点不存在CNFのDRAT受理記録
+- path: research/experiments/parabola-hplus1-drat-20261109/output/replay-20261109/summary.json
+  role: data
+  note: 後日の実DRAT再生も全3件VERIFIED。入力・証明・検査器sourceとbinaryのhash付き
+- path: research/experiments/parabola-hplus1-drat-20261109/regression.py
+  role: verifier
+  note: 5917配置の幾何照合、全提供辺検査、全入力再生成と明示的counter節の別実装照合
+- path: research/experiments/parabola-hplus1-drat-20261109/regression.json
+  role: data
+  note: 3形状の構造・小例・hash照合の実測結果。DRAT受理とは別の検査
+- path: research/experiments/parabola-hplus1-drat-20261109/README.md
+  role: source
+  note: 保存された3入力・DRAT証明と再生方法、上界への論理と信頼境界
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立検査済み下界1296と3形状DRAT監査の上界1323。上界1322のソルバ主張は別レベルで保持。正確値や他素数への一般化は主張しない。
+evidence: 下界は1296点の独立整数幾何検査。上界は1324点の全3形状の入力・DRAT証明を保存し、53886提供辺の整数幾何健全性と全3本の修正版DRAT受理を確認。実証明の再生も全件成功。
 ---
 
 ## 命題と構成
 
-**1296 <= A(2647) <= 1322**。正確な最大値は未確定。
+**独立監査済みの範囲は1296 <= A(2647) <= 1323**。正確な最大値は未確定。
+ソルバ主張による上界1322は、下記の別の証拠レベルとして保持する。
 
 保存CNF（p=2647,d=1323、1323変数・53886節）へ局所探索を100万flip、seed=20261109で行い、
 元CNFの41節に違反する割当を得た。Pythonでも元の全節を直接評価して41違反と一致した。
@@ -108,19 +142,41 @@ CaDiCaLは11.233秒でSATを返し、空対29・1296点を選択した。
 検査器はCNF・モデル・edge cacheを使わない。したがって下界証人の安全性は、
 局所探索やCNF符号化の正しさとは独立に確認される。
 
-## 上界と限界
+## 上界1323の独立監査
 
-上界1324はK0706の全1323 dのUNSAT証明の修正版DRAT監査と等号還元から従う。
+h=1323とし、原点の有無x、完全対数c、空対数eで点数は `|S|=h+x+c-e`。
+安全集合には完全対が高々一つなので、1324=h+1点なら次の3形状が全てを尽くす。
+
+| 形状(x,c,e) | CNF変数 | 節 | 保存DRAT行数 | 独立検査 |
+|---|---:|---:|---:|---|
+| (1,0,0) | 7938 | 73731 | 19525 | VERIFIED |
+| (0,1,0) | 9260 | 76370 | 56616 | VERIFIED |
+| (1,1,1) | 10582 | 79017 | 126556 | VERIFIED |
+
+各対のBOTH/NONE/LOW/HIGHをexactly-oneで表し、BOTH・NONEの個数を制限する。
+点選択補助変数は側の選択またはBOTHと同値なので、任意の当該形状の集合を表せる。
+Cardinalityの実節は、明示的なprefix OR鎖の別実装と全3入力で一致した。
+各提供四点を整数行列式で検査して真の禁止四点と確認したため、任意の安全集合はその回避節を満たす。
+辺を一部しか使わなくても、CNFは安全集合に対する緩和であり、UNSATによる排除は健全である。
+辺集合の完全性を仮定しない。
+
+全3本のDRATをK0707修正版ソース
+`34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b` からビルドした検証器で受理した。
+入力を再生成し、入力・保存証明をhash照合した。後日の実再生でも全3本を受理（合計66419 RUP、0 RAT）。
+従って1324点安全集合は存在せず、より大きい安全集合の1324点部分集合も存在し得ないので上界1323となる。
+
+## ソルバ上界1322と未確定事項
+
+従来の上界1324はK0706の全1323 dのDRAT監査による。上記3形状監査はそれを1323へ強化する。
 1296点集合の最大性や空対29の最小性は未確定。1300点以上を求める別試行は60秒でUNKNOWNであり、
 1300点の不存在を意味しない。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
-[訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の上界1323はソルバ主張であり、
-本項で独立監査済みとして採用した上界は1324。単一CNFのDRAT監査による強化は今後の課題である。
-なお本項の上界1322（サイズ1323の形状クラス判定）もソルバ主張に基づく。当初その機械可読な記録は
+[訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。
+一方、上界1322（サイズ1323の形状クラス判定）はソルバ主張に基づく。当初その機械可読な記録は
 (1,1,2) のみで、残り3クラスはログ表だけだったが、2026-11-09 に全4クラスを再実行して
 receipts を再生成し、節数が旧ログ表と全件一致した
 （[receipts再生成ログ](../../log/2026-11-09-a2647-size1323-receipts-regenerated.md)）。
-1322についてのDRAT監査も今後の課題である。
+1322についてのDRAT監査は今後の課題であり、今回の監査済み範囲に混ぜない。
 本項は有限計算の証人検査であり、Lean形式証明ではない。
 小集合96例の全四点検査・合同式フィルタ・Python整数行列式の一致は回帰であり、
 一般的健全性の証明と区別する。

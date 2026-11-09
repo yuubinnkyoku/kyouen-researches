@@ -694,5 +694,5 @@
 | [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) | p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) | 一行RUP証明を持つCNFでもSAT化に必要な節削除数は任意に大きい | proposition | proved | search-methods, verification, provenance |
 | [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) | 連結・有界次数のsigned NAE4でも15行RUP証明のまま最少削除距離は無界になる | proposition | proved | search-methods, verification, provenance |
-| [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の最大安全サイズは1296以上1322以下 | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の独立監査済み範囲は1296以上1323以下 | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) | 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる | proposition | proved | geometry, maximum-safe, search-methods |

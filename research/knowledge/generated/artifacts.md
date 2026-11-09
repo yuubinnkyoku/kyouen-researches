@@ -9809,6 +9809,36 @@
 ## [research/experiments/parabola-equality-refutation-20261109/verify_receipts.py](../../../research/experiments/parabola-equality-refutation-20261109/verify_receipts.py)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (verifier): コミット済み監査記録の範囲・重複・ソースhashを確認する。DRATの再検査ではない
+## [research/experiments/parabola-hplus1-drat-20261109/README.md](../../../research/experiments/parabola-hplus1-drat-20261109/README.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 保存された3入力・DRAT証明と再生方法、上界への論理と信頼境界
+## [research/experiments/parabola-hplus1-drat-20261109/input/geometry.json](../../../research/experiments/parabola-hplus1-drat-20261109/input/geometry.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全提供辺の健全性を検査したreceipt。辺集合の完全性は上界に不要
+## [research/experiments/parabola-hplus1-drat-20261109/input/verified_edges.txt.gz](../../../research/experiments/parabola-hplus1-drat-20261109/input/verified_edges.txt.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 上界に使う53886禁止四点の部分集合。全件を独立整数行列式で検査
+## [research/experiments/parabola-hplus1-drat-20261109/output/replay-20261109/summary.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/replay-20261109/summary.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 後日の実DRAT再生も全3件VERIFIED。入力・証明・検査器sourceとbinaryのhash付き
+## [research/experiments/parabola-hplus1-drat-20261109/output/shape-a/audit.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/shape-a/audit.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 形状(1,0,0)の1324点不存在CNFのDRAT受理記録
+## [research/experiments/parabola-hplus1-drat-20261109/output/shape-b/audit.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/shape-b/audit.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 形状(0,1,0)の1324点不存在CNFのDRAT受理記録
+## [research/experiments/parabola-hplus1-drat-20261109/output/shape-c/audit.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/shape-c/audit.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 形状(1,1,1)の1324点不存在CNFのDRAT受理記録
+## [research/experiments/parabola-hplus1-drat-20261109/regression.json](../../../research/experiments/parabola-hplus1-drat-20261109/regression.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 3形状の構造・小例・hash照合の実測結果。DRAT受理とは別の検査
+## [research/experiments/parabola-hplus1-drat-20261109/regression.py](../../../research/experiments/parabola-hplus1-drat-20261109/regression.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 5917配置の幾何照合、全提供辺検査、全入力再生成と明示的counter節の別実装照合
+## [research/experiments/parabola-hplus1-drat-20261109/verify_edges.cpp](../../../research/experiments/parabola-hplus1-drat-20261109/verify_edges.cpp)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 探索generatorを使わないgeneric整数4×4の禁止四点検査
 ## [research/experiments/parabola-local-repair-20261109/README.md](../../../research/experiments/parabola-local-repair-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 初回1292点構成、再現手順と信頼境界
@@ -9880,7 +9910,7 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1323の4形状クラスすべてUNSATの記録（上界1322の根拠）
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1323の4形状クラスすべてUNSATというソルバ記録（上界1322候補、DRAT未監査）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
