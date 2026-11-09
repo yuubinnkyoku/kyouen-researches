@@ -1,0 +1,182 @@
+{
+  "counterexample": "PASS",
+  "valid_assignments": 11896,
+  "cases": [
+    {
+      "p": 3,
+      "class": "000",
+      "valid_assignments": 2,
+      "unsafe": 0
+    },
+    {
+      "p": 3,
+      "class": "011",
+      "valid_assignments": 0,
+      "unsafe": 0
+    },
+    {
+      "p": 3,
+      "class": "101",
+      "valid_assignments": 1,
+      "unsafe": 0
+    },
+    {
+      "p": 3,
+      "class": "112",
+      "valid_assignments": 0,
+      "unsafe": 0
+    },
+    {
+      "p": 5,
+      "class": "000",
+      "valid_assignments": 4,
+      "unsafe": 0
+    },
+    {
+      "p": 5,
+      "class": "011",
+      "valid_assignments": 2,
+      "unsafe": 0
+    },
+    {
+      "p": 5,
+      "class": "101",
+      "valid_assignments": 4,
+      "unsafe": 0
+    },
+    {
+      "p": 5,
+      "class": "112",
+      "valid_assignments": 0,
+      "unsafe": 0
+    },
+    {
+      "p": 7,
+      "class": "000",
+      "valid_assignments": 8,
+      "unsafe": 0
+    },
+    {
+      "p": 7,
+      "class": "011",
+      "valid_assignments": 12,
+      "unsafe": 0
+    },
+    {
+      "p": 7,
+      "class": "101",
+      "valid_assignments": 12,
+      "unsafe": 0
+    },
+    {
+      "p": 7,
+      "class": "112",
+      "valid_assignments": 3,
+      "unsafe": 0
+    },
+    {
+      "p": 11,
+      "class": "000",
+      "valid_assignments": 32,
+      "unsafe": 0
+    },
+    {
+      "p": 11,
+      "class": "011",
+      "valid_assignments": 160,
+      "unsafe": 0
+    },
+    {
+      "p": 11,
+      "class": "101",
+      "valid_assignments": 80,
+      "unsafe": 0
+    },
+    {
+      "p": 11,
+      "class": "112",
+      "valid_assignments": 120,
+      "unsafe": 0
+    },
+    {
+      "p": 13,
+      "class": "000",
+      "valid_assignments": 64,
+      "unsafe": 0
+    },
+    {
+      "p": 13,
+      "class": "011",
+      "valid_assignments": 480,
+      "unsafe": 0
+    },
+    {
+      "p": 13,
+      "class": "101",
+      "valid_assignments": 192,
+      "unsafe": 0
+    },
+    {
+      "p": 13,
+      "class": "112",
+      "valid_assignments": 480,
+      "unsafe": 0
+    },
+    {
+      "p": 17,
+      "class": "000",
+      "valid_assignments": 256,
+      "unsafe": 32
+    },
+    {
+      "p": 17,
+      "class": "011",
+      "valid_assignments": 3584,
+      "unsafe": 352
+    },
+    {
+      "p": 17,
+      "class": "101",
+      "valid_assignments": 1024,
+      "unsafe": 64
+    },
+    {
+      "p": 17,
+      "class": "112",
+      "valid_assignments": 5376,
+      "unsafe": 240
+    }
+  ],
+  "shared_source_matches_fixed_snapshot": true,
+  "large_cnf_comparison": [
+    {
+      "class": "000",
+      "same_cnf": false,
+      "legacy_base": 5290,
+      "fixed_base": 5292,
+      "fixed_variables": 7938
+    },
+    {
+      "class": "011",
+      "same_cnf": true,
+      "legacy_base": 7936,
+      "fixed_base": 7936,
+      "fixed_variables": 10582
+    },
+    {
+      "class": "101",
+      "same_cnf": false,
+      "legacy_base": 6612,
+      "fixed_base": 6614,
+      "fixed_variables": 9260
+    },
+    {
+      "class": "112",
+      "same_cnf": true,
+      "legacy_base": 11898,
+      "fixed_base": 11898,
+      "fixed_variables": 14544
+    }
+  ],
+  "scope": "Finite implementation tests. Legacy 000/101 UNSAT receipts do not certify the intended geometric classes; legacy 011/112 inputs are byte-identical to the repaired encoder."
+}

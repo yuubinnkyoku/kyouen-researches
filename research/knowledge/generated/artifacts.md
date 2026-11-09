@@ -9910,12 +9910,48 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1323の4形状クラスすべてUNSATというソルバ記録（上界1322候補、DRAT未監査）
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 旧4形状UNSAT記録。000/101はK0713の変数衝突があり、幾何上界の根拠への採用を保留
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (solver): 各counter後にそれまでの予約範囲とnvのmaxを保持する修正版
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
+## [research/experiments/parabola-size1323-drat-20261109/README.md](../../../research/experiments/parabola-size1323-drat-20261109/README.md)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (source): 反例、修正、旧証拠への制限、保存証明と監査再開の手順
+## [research/experiments/parabola-size1323-drat-20261109/counterexample.json](../../../research/experiments/parabola-size1323-drat-20261109/counterexample.json)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (data): 重複ID、旧CNFのDRAT受理、修正版モデルと2点のパラメータ、各hash
+## [research/experiments/parabola-size1323-drat-20261109/encoding_fixed.py](../../../research/experiments/parabola-size1323-drat-20261109/encoding_fixed.py)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正後共有builderとbyte一致する凍結スナップショット
+## [research/experiments/parabola-size1323-drat-20261109/encoding_snapshot.py](../../../research/experiments/parabola-size1323-drat-20261109/encoding_snapshot.py)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正前search_shape_class.pyの凍結コード
+## [research/experiments/parabola-size1323-drat-20261109/input/fixed-p5-000.cnf](../../../research/experiments/parabola-size1323-drat-20261109/input/fixed-p5-000.cnf)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (data): 変数範囲を保持した修正版のSAT入力
+## [research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.cnf](../../../research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.cnf)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (data): 禁止辺なしのp=5・2点形状なのにUNSATとなる30節の旧CNF
+## [research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.drat](../../../research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.drat)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (certificate): 旧CNF自体のUNSAT証明。幾何形状の不存在を証明するものではない
+## [research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json](../../../research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 修正版と同一の1323点入力3形状はDRAT受理、残る112は検査未完了。全4形状は未完了
+## [research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json](../../../research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): ローカルに保持する2127240行の未検査生証明のhash。生証明はGit非収録で受理証拠ではない
+## [research/experiments/parabola-size1323-drat-20261109/regression.json](../../../research/experiments/parabola-size1323-drat-20261109/regression.json)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (data): 小例の全照合、000/101の入力差分と011/112のbyte一致
+## [research/experiments/parabola-size1323-drat-20261109/regression.py](../../../research/experiments/parabola-size1323-drat-20261109/regression.py)
+
+- [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (verifier): 反例の再現、修正版11896配置の整数幾何照合とp=2647の旧新CNF比較
 ## [research/experiments/parabola-ternary-selection-20261109/README.md](../../../research/experiments/parabola-ternary-selection-20261109/README.md)
 
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (source): 実装、再現入力・出力、1296点構成と1300点UNKNOWNの範囲

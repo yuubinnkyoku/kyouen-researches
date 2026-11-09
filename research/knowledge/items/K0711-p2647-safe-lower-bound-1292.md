@@ -48,7 +48,7 @@ artifacts:
   note: 初回1292点構成、再現手順と信頼境界
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json
   role: data
-  note: サイズ1323の4形状クラスすべてUNSATというソルバ記録（上界1322候補、DRAT未監査）
+  note: 旧4形状UNSAT記録。000/101はK0713の変数衝突があり、幾何上界の根拠への採用を保留
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json
   role: data
   note: サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
@@ -109,7 +109,13 @@ artifacts:
 - path: research/experiments/parabola-hplus1-drat-20261109/README.md
   role: source
   note: 保存された3入力・DRAT証明と再生方法、上界への論理と信頼境界
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立検査済み下界1296と3形状DRAT監査の上界1323。上界1322のソルバ主張は別レベルで保持。正確値や他素数への一般化は主張しない。
+- path: research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json
+  role: data
+  note: 修正版と同一の1323点入力3形状はDRAT受理、残る112は検査未完了。全4形状は未完了
+- path: research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json
+  role: data
+  note: ローカルに保持する2127240行の未検査生証明のhash。生証明はGit非収録で受理証拠ではない
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立検査済み下界1296と3形状DRAT監査の上界1323。旧1322根拠CNFの一部にK0713の変数衝突があり、修正版の全4形状監査は未完了。正確値や他素数への一般化は主張しない。
 evidence: 下界は1296点の独立整数幾何検査。上界は1324点の全3形状の入力・DRAT証明を保存し、53886提供辺の整数幾何健全性と全3本の修正版DRAT受理を確認。実証明の再生も全件成功。
 ---
 
@@ -172,11 +178,14 @@ Cardinalityの実節は、明示的なprefix OR鎖の別実装と全3入力で�
 1300点の不存在を意味しない。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。
-一方、上界1322（サイズ1323の形状クラス判定）はソルバ主張に基づく。当初その機械可読な記録は
+一方、上界1322（サイズ1323の形状クラス判定）の旧ソルバ記録は、
+[K0713](K0713-shape-cnf-auxiliary-variable-aliasing.md) の変数衝突が000/101で見つかり、そのままでは根拠として使えない。
+当初その機械可読な記録は
 (1,1,2) のみで、残り3クラスはログ表だけだったが、2026-11-09 に全4クラスを再実行して
 receipts を再生成し、節数が旧ログ表と全件一致した
 （[receipts再生成ログ](../../log/2026-11-09-a2647-size1323-receipts-regenerated.md)）。
-1322についてのDRAT監査は今後の課題であり、今回の監査済み範囲に混ぜない。
+修正後入力へ結び付けた監査は000/011/101の3形状が完了し、112はUNSAT証明を保存したが検査未完了。
+全4形状の独立監査が揃うまでは、1322を監査済み範囲へ混ぜない。
 本項は有限計算の証人検査であり、Lean形式証明ではない。
 小集合96例の全四点検査・合同式フィルタ・Python整数行列式の一致は回帰であり、
 一般的健全性の証明と区別する。

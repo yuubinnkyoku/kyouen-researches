@@ -1,0 +1,47 @@
+{
+  "p": 5,
+  "class": [
+    0,
+    0,
+    0
+  ],
+  "intended_size": 2,
+  "forbidden_edges": [],
+  "intended_shape_is_satisfiable": true,
+  "legacy_solver_unsat": true,
+  "legacy_variables": 10,
+  "legacy_point_base": 6,
+  "last_pair_selector_ids": [
+    7,
+    8
+  ],
+  "aliased_point_ids": [
+    7,
+    8
+  ],
+  "fixed_variables": 12,
+  "fixed_point_base": 8,
+  "fixed_signed_model": [
+    -1,
+    -2,
+    3,
+    -4,
+    -5,
+    -6,
+    7,
+    -8,
+    9,
+    10,
+    -11,
+    -12
+  ],
+  "fixed_parameters": [
+    1,
+    2
+  ],
+  "legacy_cnf_sha256": "77f2126b71d136d9f80249ec4534172a89c2d90b8a3c3e682577b2817182519f",
+  "fixed_cnf_sha256": "a47d8e5908fa248a585ac6bbc2efd5a496d8e31b24d36cd500d4742d81608ead",
+  "legacy_drat_sha256": "b15c4695e8d69e719d752c19fad27ff9a32584e38b288a98a9bbae4a3b6a99fd",
+  "legacy_drat_checker_stdout": "steps=8 rup=8 rat=0 rat_checks=0 deletions=4 empty=1 ok=1\nVERIFIED\n",
+  "scope": "The old CNF really is UNSAT, but it incorrectly represents an obviously feasible two-point shape. This is an encoding bug, not a solver or DRAT-checker false verdict."
+}

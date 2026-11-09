@@ -1,0 +1,34 @@
+{
+  "p": 2647,
+  "h": 1323,
+  "target_size": 1323,
+  "shape": "000",
+  "origin_both_none": [
+    0,
+    0,
+    0
+  ],
+  "variables": 7938,
+  "clauses": 73727,
+  "point_base": 5292,
+  "provided_edges": 53886,
+  "used_edges": 53882,
+  "conflict_budget": 20000000,
+  "input_sha256": "1f2d41845765b88ca0765f9982d620fafa172e24c4fc87ebd3db929ac43637cd",
+  "edge_input_sha256": "4e17fe105f191f781192466d0775a59d3c341b16b267ebe372ba279911f67a72",
+  "encoding_source_sha256": "95ae201b05caf2ae8bfaf6c9d88a4151b42e88511e00668286ee59db0fe5e5b6",
+  "encoding_snapshot_sha256": "52de6fd038e3f9a452f38d5ea12abb0086c305fdfc8c0a5b51877bd69009543e",
+  "generator_source_sha256": "34ea5eee6f4e8deb92257bb574c5615c9d5c62d1422700b8f4db70be42c35c95",
+  "python_sat": "1.9.dev21",
+  "solver": "Cadical195",
+  "solve_seconds": 0.40657110000029206,
+  "statistics": {
+    "restarts": 31,
+    "conflicts": 742,
+    "decisions": 1874,
+    "propagations": 166667
+  },
+  "solver_status": "SOLVER_UNSAT",
+  "proof_sha256": "87c5d03dd3454891b18972f69bd0c044865a9f3799444bbd4c8c1bdef7394840",
+  "proof_lines": 18736
+}

@@ -49,9 +49,12 @@ def build(p: int, edges, x: int, c: int, e: int):
     none = [v(i, "N") for i in range(1, h + 1)]
     card_b = CardEnc.equals(lits=both, bound=c, top_id=top, encoding=EncType.seqcounter)
     clauses.extend(card_b.clauses)
-    card_n = CardEnc.equals(lits=none, bound=e, top_id=card_b.nv, encoding=EncType.seqcounter)
+    # Bound-zero encodings can report only their highest input literal in nv.
+    # Reserve ALL existing pair selectors before allocating another counter.
+    top = max(top, card_b.nv)
+    card_n = CardEnc.equals(lits=none, bound=e, top_id=top, encoding=EncType.seqcounter)
     clauses.extend(card_n.clauses)
-    aux = card_n.nv
+    aux = max(top, card_n.nv)
     for t in range(1, p):
         pair = t if t <= h else p - t
         s = v(pair, "L" if t <= h else "H")
