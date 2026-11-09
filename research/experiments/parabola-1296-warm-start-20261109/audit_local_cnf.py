@@ -27,7 +27,7 @@ def main():
     EXP=ap.parse_args().directory
     tests=0
     for n in range(1,8):
-        for limit in range(min(n,4)+1):
+        for limit in range(min(n,5)+1):
             encoded=CardEnc.atmost([-i for i in range(1,n+1)],bound=limit,top_id=n,encoding=EncType.seqcounter)
             with Cadical195(bootstrap_with=encoded.clauses) as solver:
                 for states in product((False,True),repeat=n):
@@ -38,7 +38,7 @@ def main():
     result=json.loads((EXP/'result.json').read_text())
     assert all(result[k]==v for k,v in init.items())
     assert (init['p'],init['d'],init['target'])==(2647,1323,1304)
-    assert init['max_deletions'] in (2,3,4)
+    assert init['max_deletions'] in (2,3,4,5)
     assert init['worker_sha256']==sha((HERE/'probe_local_swap.py').read_bytes())
     assert init['encoder_sha256']==sha(Path(t.__file__).read_bytes())
     base=t.BASE.read_bytes()
