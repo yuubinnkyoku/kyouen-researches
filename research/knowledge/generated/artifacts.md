@@ -9757,7 +9757,7 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 768除去counterケース、全129266節、3不正モデル拒否、全変数固定の再生成功
 ## [research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 独立検査は120秒でtimeout、verified false。上界の根拠には使わない
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当初のRUP-only検査は120秒でtimeout、verified false。後のLRAT受理と混同しない歴史的記録
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与える1302点。保存1301点から3点を除き4点を追加
@@ -9778,10 +9778,10 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1303点要求の36457変数・126721節の実入力。全体を覆わない近傍条件付き
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 325093行の未監査DRAT。RUP-only検査timeoutを受理と混同しない
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 325093行の元DRAT。後にDRAT-trim -Uで受理し変換LRATを別実装で検査。旧RUP-only timeoutは保持
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存1302点から3点以下除去の1303点要求はSOLVER_UNSAT。独立監査未完了
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存1302点から3点以下除去の1303点要求のSOLVER_UNSAT原記録。後の独立LRAT受理とは分離して保持
 ## [research/experiments/parabola-bounded-exchange-20261109/search.py](../../../research/experiments/parabola-bounded-exchange-20261109/search.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 固定原点・完全対で選択点の除去数を制限するSAT探索。補助変数の予約上限を保持
@@ -10013,6 +10013,27 @@
 ## [research/experiments/parabola-monotone-rup-20261109/rup_check.cpp](../../../research/experiments/parabola-monotone-rup-20261109/rup_check.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 000/011/101を受理した削除無視・RAT禁止の追加列RUP検査器
+## [research/experiments/parabola-neighborhood-lrat-20261109/README.md](../../../research/experiments/parabola-neighborhood-lrat-20261109/README.md)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 同じ保存証拠からの変換・独立検査の再現方法と有界近傍の範囲
+## [research/experiments/parabola-neighborhood-lrat-20261109/audit.py](../../../research/experiments/parabola-neighborhood-lrat-20261109/audit.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 元DRATを固定upstreamのDRAT-trim -Uで検査・LRAT化し、空節処理修正版の別実装で再生
+## [research/experiments/parabola-neighborhood-lrat-20261109/output/lrat-controls.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/lrat-controls.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): K0714の原版偽受理を再現し、今回使った修正版の5制御の期待判定を確認
+## [research/experiments/parabola-neighborhood-lrat-20261109/output/saved-verification.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/saved-verification.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 36457変数・126721節の実入力byte一致と全証拠hash、DRAT-trim6制御・修正LRAT5制御を照合
+## [research/experiments/parabola-neighborhood-lrat-20261109/output/target1303-remove3/result.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/target1303-remove3/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (manifest): 限定CNFの独立LRAT受理、43074行・80008871 bytesのhashとローカル所在。元DRATはGit管理済み
+## [research/experiments/parabola-neighborhood-lrat-20261109/output/trim-controls.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/trim-controls.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): K0707の4偽証明・直接偽空節を拒否しresolution正例を受理
+## [research/experiments/parabola-neighborhood-lrat-20261109/verify_saved.py](../../../research/experiments/parabola-neighborhood-lrat-20261109/verify_saved.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 実入力のbyte再生成、補助変数領域、元DRAT・LRAT・ソース・制御例を照合
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界

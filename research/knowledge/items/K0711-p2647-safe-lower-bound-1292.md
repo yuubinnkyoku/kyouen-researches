@@ -48,19 +48,40 @@ artifacts:
   note: 有界交換の入力・再現手順と、1302点下界および次の近傍の信頼境界
 - path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json
   role: data
-  note: 保存1302点から3点以下除去の1303点要求はSOLVER_UNSAT。独立監査未完了
+  note: 保存1302点から3点以下除去の1303点要求のSOLVER_UNSAT原記録。後の独立LRAT受理とは分離して保持
 - path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/input.cnf.gz
   role: data
   note: 1303点要求の36457変数・126721節の実入力。全体を覆わない近傍条件付き
 - path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz
   role: certificate
-  note: 325093行の未監査DRAT。RUP-only検査timeoutを受理と混同しない
+  note: 325093行の元DRAT。後にDRAT-trim -Uで受理し変換LRATを別実装で検査。旧RUP-only timeoutは保持
 - path: research/experiments/parabola-bounded-exchange-20261109/audit_proof.py
   role: verifier
   note: 保存証明を削除無視・RAT禁止の既存RUP-only検査器で再生するドライバ
 - path: research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json
   role: data
-  note: 独立検査は120秒でtimeout、verified false。上界の根拠には使わない
+  note: 当初のRUP-only検査は120秒でtimeout、verified false。後のLRAT受理と混同しない歴史的記録
+- path: research/experiments/parabola-neighborhood-lrat-20261109/audit.py
+  role: verifier
+  note: 元DRATを固定upstreamのDRAT-trim -Uで検査・LRAT化し、空節処理修正版の別実装で再生
+- path: research/experiments/parabola-neighborhood-lrat-20261109/verify_saved.py
+  role: verifier
+  note: 実入力のbyte再生成、補助変数領域、元DRAT・LRAT・ソース・制御例を照合
+- path: research/experiments/parabola-neighborhood-lrat-20261109/output/target1303-remove3/result.json
+  role: manifest
+  note: 限定CNFの独立LRAT受理、43074行・80008871 bytesのhashとローカル所在。元DRATはGit管理済み
+- path: research/experiments/parabola-neighborhood-lrat-20261109/output/saved-verification.json
+  role: data
+  note: 36457変数・126721節の実入力byte一致と全証拠hash、DRAT-trim6制御・修正LRAT5制御を照合
+- path: research/experiments/parabola-neighborhood-lrat-20261109/output/trim-controls.json
+  role: data
+  note: K0707の4偽証明・直接偽空節を拒否しresolution正例を受理
+- path: research/experiments/parabola-neighborhood-lrat-20261109/output/lrat-controls.json
+  role: data
+  note: K0714の原版偽受理を再現し、今回使った修正版の5制御の期待判定を確認
+- path: research/experiments/parabola-neighborhood-lrat-20261109/README.md
+  role: source
+  note: 同じ保存証拠からの変換・独立検査の再現方法と有界近傍の範囲
 - path: research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt
   role: certificate
   note: 前段の1301点。保存1300点から1300と2262を除き385と610と1723を追加。今回の交換の種
@@ -388,9 +409,15 @@ RATは使わず、全追加が元CNFの論理的帰結となるため、削除�
 新しい1301点集合に対し2点以下を除く投影CNF交換を試したところ、36066除去候補・286追加候補では改善未発見だった。
 固定完全対を保つ実装上の局所探索の結果であり、1302点の不存在や一般の局所最適性を証明したものではない。
 現在は3点以下除去へ広げて1302点を構成済み。
-その1302点から3点以下除去で1303点以上を要求した次のCNFはSOLVER_UNSATだったが、
-保存DRATの独立RUP-only再生は120秒でtimeoutした。これは未監査のソルバ主張として保持し、
-1303点の不存在、局所最適性、または全体の上界の根拠には採用しない。
+その1302点から3点以下除去で1303点以上を要求した次のCNFはSOLVER_UNSATで、
+当初の独立RUP-only再生は120秒でtimeoutした。その原記録は保持する。
+その後、同じ保存DRATをDRAT-trim -Uで受理・LRAT化し、43074行のLRATを空節処理修正版の
+別実装で6.201秒・終了コード0で受理した。36457変数・126721節の実入力のbyte再生成、
+追加counterの変数予約、証拠・ソースhash、11制御例も照合した。
+これにより当該CNFのUNSATを独立検査済みとする。固定完全対や除去上限を外した1303点の不存在、
+一般の局所最適性、または全体の上界の改善は主張しない。
+採用LRAT本体は約80MBでローカル保持し、Gitにはhashと所在を収録する。
+Git管理された元DRATと変換コードから再生成でき、再現に新しいSAT探索は不要である。
 以前の1299点・1300点要求のUNKNOWNも原記録を保持する。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。

@@ -1,0 +1,53 @@
+{
+  "input_cnf_sha256": "4848c54905cd9f97020fdded1168e4fd0b3324bbf44149851caeabd7a060c2e2",
+  "original_drat_sha256": "7803e9d948b49d60f51eb4ab7f92796e31f3670a4c1daa64aec9e7d5a8e2d149",
+  "original_drat_lines": 325093,
+  "input_variables": 36457,
+  "input_clauses": 126721,
+  "source_sha256": "f8fc264a5bc026080919ecb16fd64675b810f748d3b63292128eb00acaf70307",
+  "upstream": {
+    "repository": "https://github.com/marijnheule/drat-trim",
+    "commit": "2e3b2dc0ecf938addbd779d42877b6ed69d9a985",
+    "files": {
+      "drat-trim.c": "78026871882de3f2fee66034e549e9c1a0a9a5291abd817d06f611f9ba0f355d",
+      "lrat-check.c": "6283834a55a39b2b879ee18e7542ad3e969eba564eee5e4ec28cdf39d68a95d0",
+      "LICENSE": "0cc0980a36c87c5884bf6f9aad4556187c19881ab6dfcf8cd7ed016a65277a8d"
+    },
+    "build_flags": [
+      "-std=c99",
+      "-O2",
+      "-Dgetc_unlocked=getc"
+    ],
+    "portability": "The macro maps unlocked character reads to standard getc on Windows; source bytes are unchanged.",
+    "upstream_git_blobs": {
+      "drat-trim.c": {
+        "sha256": "d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee",
+        "git_blob_oid": "cf8a676ffcc7ef5a47124bbafc9b680a2df333e0",
+        "checkout_line_endings": "CRLF"
+      },
+      "lrat-check.c": {
+        "sha256": "bf07c2ac96b9035da1ebcc578cb95e956a2b795629d613154cdb307f8a8f4a95",
+        "git_blob_oid": "8fe998a14efa91daccc85404ceb5e871a86d99e4",
+        "checkout_line_endings": "CRLF"
+      },
+      "LICENSE": {
+        "sha256": "71ab2a9dc5a294ad8fba4ccb8c45aaa8a439596d314a2a046ac9b62266872a18",
+        "git_blob_oid": "9859ca161d5c7d1e2959621b9b3860c3148b05c0",
+        "checkout_line_endings": "CRLF"
+      }
+    },
+    "source_byte_provenance": "files contains the byte hashes of the Windows checkout used for compilation. Its CRLF-to-LF normalization is byte-identical to the pinned upstream Git blobs; upstream_git_blobs records their independent hashes. No source tokens were changed."
+  },
+  "fixed_lrat_source_sha256": "ca64680b89dde26ff2ea96b05c0fb926972eb307b74ffa18453e89a5da2988c8",
+  "scope": "Independent LRAT replay of one saved bounded-neighborhood CNF; no global geometric upper bound.",
+  "trim_binary_sha256": "49c01e12730b0c9b746b7274cca18a386f0d68ec4f2e54b51fccd460432a2265",
+  "fixed_lrat_binary_sha256": "cca63bf44b21d9a4b5a63c839e867a45dc6d7ea5b838b01574cb7b221f0c33f8",
+  "trim": {
+    "returncode": 0,
+    "stdout": "\nc parsing input formula with 36457 variables and 126721 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 18066 of 126721 clauses in core                            \n\nc 25007 of 148993 lemmas in core using 10914690 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 11.760 seconds\n",
+    "stderr": "",
+    "seconds": 11.891179700000066,
+    "timed_out": false,
+    "verified": true
+  }
+}
