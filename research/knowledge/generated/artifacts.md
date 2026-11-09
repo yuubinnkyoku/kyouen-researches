@@ -9892,6 +9892,15 @@
 ## [research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete4-budget300000/local-proof.drat.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete4-budget300000/local-proof.drat.gz)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 固定対・削除高々4点の部分問題のUNSAT証明
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/drat-trim-check.json](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/drat-trim-check.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): DRAT-trimによる証明受理・打切り拒否と入力・検査器のhash
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/input.cnf.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/input.cnf.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 固定対・削除高々5点・1304点以上の保存CNF
+## [research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/local-proof.drat.gz](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/local-proof.drat.gz)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 固定対・削除高々5点の部分問題のUNSAT証明
 ## [research/experiments/parabola-1296-warm-start-20261109/probe.py](../../../research/experiments/parabola-1296-warm-start-20261109/probe.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 監査済み1296点証人をphaseとして与える固定d三値SAT探索

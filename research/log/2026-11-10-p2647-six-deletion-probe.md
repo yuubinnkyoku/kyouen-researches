@@ -5,3 +5,5 @@ remote main `6d7e1bc4` を確認後、1303点証人を初期位相として、�
 三値符号化の入力は39054変数・131912節。CaDiCaL195は300000衝突の予算を超えた時点で UNKNOWN を返した。これは制限内での改善の存在も不存在も示さない。
 
 入力、設定、結果は `research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete6-budget300000-180s/` に保存した。別途、5点削除のUNSAT証明の独立検査は実行中である。
+
+100万衝突予算での再試行は300秒の時間制限に達し、ソルバーの結果を返さなかった。入力と制限到達の記録は `output/target1304-seed1303-delete6-budget1m-300s/` に保存した。こちらも結論は得られていない。

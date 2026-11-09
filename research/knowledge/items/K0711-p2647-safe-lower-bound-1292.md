@@ -97,6 +97,15 @@ artifacts:
 - path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete4-budget300000/incremental-check.json
   role: data
   note: 4点削除の証明検査結果と入力・検査器のhash
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/input.cnf.gz
+  role: data
+  note: 固定対・削除高々5点・1304点以上の保存CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/local-proof.drat.gz
+  role: certificate
+  note: 固定対・削除高々5点の部分問題のUNSAT証明
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/drat-trim-check.json
+  role: data
+  note: DRAT-trimによる証明受理・打切り拒否と入力・検査器のhash
 - path: research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/candidate.txt
   role: certificate
   note: 先行する1302点証人。新たなSAT探索のphaseとしても使用
@@ -275,6 +284,8 @@ CaDiCaLは11.233秒でSATを返し、空対29・1296点を選択した。
 同じ条件で削除を**高々3点**まで許した35181変数・124172節のCNFについても、再生成した入力が保存されたCNFと一致し、修正版増分検査器が266831行の証明を受理、打切り証明を拒否した。こちらの別実装による検査は未完了。結論は固定対を維持する局所改善に限り、一般の1304点集合の不存在を意味しない。
 
 さらに**高々4点**を削除する場合も、再生成された36474変数・126756節のCNFについて、修正版増分検査器が381164行の証明を受理し、打切り証明を拒否した。削除数制約は小規模1248ケースで照合した。別実装での4点削除証明の検査は未実施であり、この結論も固定対の下での局所的なものである。
+
+同じ固定対の条件で**高々5点**を削除する場合も、再生成した37765変数・129336節のCNFと1256894行の証明を保存した。DRAT-trimが証明を受理し、先頭100行だけの打切り証明を拒否した。削除数制約は小規模1472ケースで照合した。固定対を壊す改善や、一般の1304点集合の不存在は示さない。
 
 ## 下界の独立検査
 
