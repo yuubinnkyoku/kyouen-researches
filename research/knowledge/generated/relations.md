@@ -781,7 +781,7 @@
 - ← depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - ← depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
-- ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 安全集合は完全対を高々一つしか含まず、h+1点を3形状に分類できる
+- ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -3860,7 +3860,7 @@
 - → refutes [K0101](../items/K0101-prime-parabola-equality-open.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md): p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 2647に続く4例目
-- ← supports [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 従来の全d監査による1324より強い、3形状DRAT監査の上界1323
+- ← supports [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
 
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する
 
@@ -3874,11 +3874,11 @@
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する4番目の反例候補
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
-## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1296以上1323以下
+## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1296以上1322以下
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合
-- → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 従来の全d監査による1324より強い、3形状DRAT監査の上界1323
-- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合は完全対を高々一つしか含まず、h+1点を3形状に分類できる
+- → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 
 ## [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる

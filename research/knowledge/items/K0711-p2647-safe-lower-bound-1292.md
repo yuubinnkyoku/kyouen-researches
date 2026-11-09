@@ -1,6 +1,6 @@
 ---
 id: K0711
-title: 剰余放物線Q_2647の独立監査済み範囲は1296以上1323以下
+title: 剰余放物線Q_2647の独立監査済み範囲は1296以上1322以下
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -11,10 +11,10 @@ relations:
   note: 共線・共円四点を含まない安全集合
 - type: supports
   target: K0706
-  note: 従来の全d監査による1324より強い、3形状DRAT監査の上界1323
+  note: 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
 - type: depends_on
   target: K0097
-  note: 安全集合は完全対を高々一つしか含まず、h+1点を3形状に分類できる
+  note: 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
 - type: depends_on
   target: K0334
   note: 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
@@ -111,10 +111,10 @@ artifacts:
   note: 保存された3入力・DRAT証明と再生方法、上界への論理と信頼境界
 - path: research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json
   role: data
-  note: 修正版と同一の1323点入力3形状はDRAT受理、残る112は検査未完了。全4形状は未完了
+  note: 当時の3形状DRAT受理と112未完了のsnapshot。現在は後述のRUP/LRAT監査を採用
 - path: research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json
   role: data
-  note: ローカルに保持する2127240行の未検査生証明のhash。生証明はGit非収録で受理証拠ではない
+  note: 当初保存した2127240行の原DRAT証明のhash。ローカル保持・Git非収録。受理根拠は別のLRAT receipt
 - path: research/experiments/parabola-monotone-rup-20261109/encoding_audit.py
   role: verifier
   note: CardEncを呼ばず修正後4入力の全節を独立schemaとprefix閾値counterへ比較し、全提供辺を再検査
@@ -124,14 +124,41 @@ artifacts:
 - path: research/experiments/parabola-monotone-rup-20261109/README.md
   role: source
   note: 閾値counterによる安全集合からCNFモデルへの拡張可能性とRUP-only検査の論理
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立検査済み下界1296と3形状DRAT監査の上界1323。旧1322根拠CNFの一部にK0713の変数衝突があり、修正版の全4形状監査は未完了。正確値や他素数への一般化は主張しない。
-evidence: 下界は1296点の独立整数幾何検査。上界は1324点の全3形状の入力・DRAT証明を保存し、53886提供辺の整数幾何健全性と全3本の修正版DRAT受理を確認。実証明の再生も全件成功。
+- path: research/experiments/parabola-drat-trim-20261109/output/qualified-upper-1322-preserved.json
+  role: data
+  note: 修正後の全4入力をschema・原入力hash・3 RUP受理と1 LRAT受理へ結び付けた上界1322の集約
+- path: research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json
+  role: data
+  note: 残る112の943588行LRATをK0714局所修正版で受理。241.9秒、終了コード0、source/binary/proof hash付き
+- path: research/experiments/parabola-drat-trim-20261109/output/lrat-core-preserved-manifest.json
+  role: data
+  note: 採用した2711546166 bytesのLRAT証明のhashとローカルraw pin。証明本体はGit非収録
+- path: research/experiments/parabola-drat-trim-20261109/replay_lrat_stream.py
+  role: verifier
+  note: 大証明をstreamでhash検査しpreflightを先に永続化して局所修正版LRATを実行するドライバ
+- path: research/experiments/parabola-drat-trim-20261109/qualify_upper.py
+  role: verifier
+  note: 全4入力のhashとschema、検査器回帰・受理receiptを照合し、全件受理時だけ上界を返す
+- path: research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c
+  role: verifier
+  note: 原版の偽空節受理をK0714で修正したhint検査器。空節には実際のRUP矛盾を要求
+- path: research/experiments/parabola-monotone-rup-20261109/rup_check.cpp
+  role: verifier
+  note: 000/011/101を受理した削除無視・RAT禁止の追加列RUP検査器
+- path: research/experiments/parabola-monotone-rup-20261109/output/regression.json
+  role: data
+  note: 上記RUP実装は毎回初期化するPython UPと516例で一致。K0707の4偽証明を拒否
+- path: research/experiments/parabola-drat-trim-20261109/README.md
+  role: source
+  note: 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1296と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
+evidence: 下界は1296点の独立整数幾何検査。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
 ---
 
 ## 命題と構成
 
-**独立監査済みの範囲は1296 <= A(2647) <= 1323**。正確な最大値は未確定。
-ソルバ主張による上界1322は、下記の別の証拠レベルとして保持する。
+**独立監査済みの範囲は1296 <= A(2647) <= 1322**。正確な最大値は未確定。
+上界1322は、修正後入力に対する全4形状の反駁検査で確認した有限計算の結論である。
 
 保存CNF（p=2647,d=1323、1323変数・53886節）へ局所探索を100万flip、seed=20261109で行い、
 元CNFの41節に違反する割当を得た。Pythonでも元の全節を直接評価して41違反と一致した。
@@ -180,9 +207,37 @@ Cardinalityの実節は、明示的なprefix OR鎖の別実装と全3入力で�
 入力を再生成し、入力・保存証明をhash照合した。後日の実再生でも全3本を受理（合計66419 RUP、0 RAT）。
 従って1324点安全集合は存在せず、より大きい安全集合の1324点部分集合も存在し得ないので上界1323となる。
 
-## ソルバ上界1322と未確定事項
+## 上界1322の独立監査
 
-従来の上界1324はK0706の全1323 dのDRAT監査による。上記3形状監査はそれを1323へ強化する。
+安全集合では完全対が高々一つなので、h=1323点の場合は `e=x+c`、x,c∈{0,1}より
+次の4形状が全てを尽くす。
+
+| 形状(x,c,e) | 変数 | 節 | 採用した反駁検査 |
+|---|---:|---:|---|
+| (0,0,0) | 7938 | 73727 | RUP-only、5326追加節 |
+| (0,1,1) | 10582 | 79013 | RUP-only、61818追加節 |
+| (1,0,1) | 9260 | 76374 | RUP-only、147006追加節 |
+| (1,1,2) | 14544 | 85619 | K0714局所修正版LRAT、943588行、241.9秒で受理 |
+
+全4入力の全節を、CardEncを使わないone-hot・点同値・辺回避・prefix閾値counterの別実装へ照合した。
+counter補助変数が選択変数や他counterと重ならず、点補助変数より前の予約範囲に収まることも確認した。
+112のNONE=2も、重みkの任意の入力をprefix閾値で拡張できる節schemaと一致する。
+全53886提供辺の整数幾何も再検査したので、安全な当該形状の集合は対応CNFのモデルへ拡張できる。
+
+000/011/101では、削除を消した追加列の全節をRUPで検査した。
+RATは使わず、全追加が元CNFの論理的帰結となるため、削除された節も保持することは健全である。
+112では抽出されたLRATを元の85619節に対し再生し、実際のRUP矛盾を要求する空節の受理まで確認した。
+[K0714](K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) の原版LRAT検査器の受理は採用しない。
+入力・証明・検査器・回帰のhashを照合した集約で全4件の受理を確認した。
+従って1323点安全集合は存在せず、より大きい安全集合の1323点部分集合も存在し得ないので上界は1322となる。
+
+112の採用LRAT本体は約2.7GBでローカルに保持し、Gitにはhashと所在manifest・検査receiptを収録する。
+別checkoutでは同じ証明本体の復元が必要で、Gitだけで全反駁を再生できるとは主張しない。
+元のDRAT生成・gzip処理の最終receiptに依存せず、採用したLRAT自体の検査を根拠にする。
+
+## 旧ソルバ記録と未確定事項
+
+従来の上界1324はK0706の全1323 dのDRAT監査による。1324点の3形状監査で1323へ、今回の4形状監査で1322へ強化した。
 1296点集合の最大性や空対29の最小性は未確定。1300点以上を求める別試行は60秒でUNKNOWNであり、
 1300点の不存在を意味しない。
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
@@ -193,11 +248,8 @@ Cardinalityの実節は、明示的なprefix OR鎖の別実装と全3入力で�
 (1,1,2) のみで、残り3クラスはログ表だけだったが、2026-11-09 に全4クラスを再実行して
 receipts を再生成し、節数が旧ログ表と全件一致した
 （[receipts再生成ログ](../../log/2026-11-09-a2647-size1323-receipts-regenerated.md)）。
-修正後入力へ結び付けた監査は000/011/101の3形状が完了し、112はUNSAT証明を保存したが検査未完了。
-さらに全4入力の全節を、CardEncを使わない別実装のone-hot・点同値・辺回避・prefix閾値counterへ照合した。
-112のNONE=2を含め、重みkの任意の入力がcounterのモデルへ拡張できる節schemaと一致した。
-全53886提供辺の整数幾何も再検査した。この写像の検査と、残るUNSAT証明の検査完了は別である。
-全4形状の独立監査が揃うまでは、1322を監査済み範囲へ混ぜない。
+当初のqualification-finalでは000/011/101だけが完了していたが、現在は上記の修正後全4形状監査を採用する。
+旧000/101の不正入力に対するUNSATを根拠へ復帰させたものではない。
 本項は有限計算の証人検査であり、Lean形式証明ではない。
 小集合96例の全四点検査・合同式フィルタ・Python整数行列式の一致は回帰であり、
 一般的健全性の証明と区別する。

@@ -50,3 +50,29 @@ uv run --locked python research/experiments/parabola-drat-trim-20261109/lrat_con
 
 5制御例で原版・局所修正を比較し、原版の偽受理と局所修正での拒否を再現した。
 コンパイラ・parser・残る経路を含む実装全体の形式証明を主張しない。
+
+## 112の受理と上界への採用
+
+`output/lrat-stream-replay-112/result.json` で、14544変数・85619節に対する
+943588行のLRATを局所修正版で受理した（241.9秒、終了コード0）。
+証明は2711546166 bytes、raw SHA-256は `3f2789475cea38cb8edd7ea43e5042cac4a6702a4c1ab04e367987155dad7ca1`。
+`output/qualified-upper-1322-preserved.json` は、修正後の4入力の全節schemaと
+000/011/101のRUP-only受理、112のLRAT受理をhashで結び付けた集約である。
+現在の監査済み上界はK0711の1322。有限計算の証明検査であり、Lean形式証明ではない。
+
+元driverのlevel-9 gzip化が重かったため、その自分の後処理だけを中断した。
+元DRAT-trimの最終verdictは永続化されなかったので採用しない。
+採用根拠は生成元のverdictに依存しない、LRAT自身の局所修正版による受理である。
+raw LRATは生成一時ディレクトリ外へhard linkで保持し、別のstreaming level-1処理でgzipを保存した。
+現在の所在・rawとgzipのhashは `output/lrat-core-preserved-manifest.json` を参照する。
+大証明と原DRATはローカルに保持し、Gitにはmanifestとreceiptを収録する。
+
+```sh
+uv run --locked python research/experiments/parabola-drat-trim-20261109/replay_lrat_stream.py --proof LOCAL-core.lrat.gz --timeout 600 --output FRESH-replay-directory
+uv run --locked python research/experiments/parabola-drat-trim-20261109/qualify_upper.py --lrat-result research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json --output FRESH-qualification.json
+```
+
+stream版は全証明を一括bufferへ読まず、preflightを検査開始前に保存する。
+rawとgzipの双方を受け付ける。既存の出力先への書き込みは拒否する。
+保存用のlevel-1 gzipは880640417 bytes。検査したraw証明と一致することはmanifestと
+`output/lrat-preservation-roundtrip.json` の往復展開によるhash照合で確認する。

@@ -1,0 +1,8 @@
+{
+  "reason": "Fixed LRAT replay completed independently. Stop the owned level-9 postprocessing job and replace it with streaming level-1 compression. Raw LRAT hard link, DRAT core, and original proof are retained. The original DRAT-trim verdict was not persisted and is not used.",
+  "working_set_bytes": 3314552832,
+  "command": "\"C:\\Users\\yuubi\\AppData\\Local\\uv\\cache\\builds-v0\\.tmpKQ9G05\\Scripts\\python.exe\" research/experiments/parabola-drat-trim-20261109/audit.py --shape 112 --timeout 600 --output research/experiments/parabola-drat-trim-20261109/output/shape-112",
+  "user_mode_100ns": 12402343750,
+  "process_id": 30328,
+  "time": "2026-11-09T18:59:28.4353201+09:00"
+}

@@ -1,0 +1,48 @@
+{
+  "p": 2647,
+  "excluded_size": 1323,
+  "all_four_verified": true,
+  "independent_upper_bound": 1322,
+  "records": [
+    {
+      "shape": "000",
+      "input_sha256": "1f2d41845765b88ca0765f9982d620fafa172e24c4fc87ebd3db929ac43637cd",
+      "method": "deletion-erased RUP, RAT forbidden",
+      "verified": true,
+      "proof_sha256": "87c5d03dd3454891b18972f69bd0c044865a9f3799444bbd4c8c1bdef7394840",
+      "receipt_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/parabola-monotone-rup-20261109/output/audit-shape-000.json",
+      "receipt_sha256": "8e66f82c2144817bd09ae293af0ee449fc749fb8c43821d0398c29fb7e87fcce"
+    },
+    {
+      "shape": "011",
+      "input_sha256": "4391526a75f1a19aef8e43e041e11bde179db94f6fd095dfa8c24886c3948cdf",
+      "method": "deletion-erased RUP, RAT forbidden",
+      "verified": true,
+      "proof_sha256": "d7245ce9de53e89eda60b66ca0acf4f7e1ea61bec9172351f29b470bf7271212",
+      "receipt_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/parabola-monotone-rup-20261109/output/audit-shape-011.json",
+      "receipt_sha256": "b861976cb436d9bb0c9bc08c0e4090624422af8646333fe189ab04f890fa3748"
+    },
+    {
+      "shape": "101",
+      "input_sha256": "ce15acb83f2c742b8a27e0e596e1d07cac7e2b85c25fd81ff9d51309238ed9a8",
+      "method": "deletion-erased RUP, RAT forbidden",
+      "verified": true,
+      "proof_sha256": "1a22d1cddf63edfd56afd2382d82f855a8c6064145253f78686041eee4456541",
+      "receipt_path": "D:/ghq/github.com/yuubinnkyoku/kyouen-researches/research/experiments/parabola-monotone-rup-20261109/output/audit-shape-101.json",
+      "receipt_sha256": "7d24e5f5b30b70767289d57f45d1c36cf1c15d34a4dcf870c4aa3233ebe69dc2"
+    },
+    {
+      "shape": "112",
+      "input_sha256": "d9cd7a0ff18a234b8d747aad0c302c12d130e42d45a07e6b996bf3e260592246",
+      "method": "LRAT hints, K0714 empty-clause fix",
+      "verified": true,
+      "proof_sha256": "3f2789475cea38cb8edd7ea43e5042cac4a6702a4c1ab04e367987155dad7ca1",
+      "receipt_path": "research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json",
+      "receipt_sha256": "3fd12ea4d4a6d915ea12621c0680c672fcbf09a706797a1411c6b010c6a03542"
+    }
+  ],
+  "schema_receipt_sha256": "898edff993edda60327f85549f8592e810c3b812fce043e52ea8a3a2726a1c15",
+  "encoding_audit_source_sha256": "f14244749dbd1606cf7d87f652a5d779c6d6fe4bfb6c06c7d8b564203fa82908",
+  "scope": "Receipt/hash/schema qualification, not a replay of all four proofs or a Lean proof.",
+  "availability": "The 112 LRAT proof is local evidence, not distributed in Git; see the proof manifest."
+}

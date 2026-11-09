@@ -9742,6 +9742,7 @@
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (verifier): 総件数70と計画標本51/65の被覆を区別する再現コード
 ## [research/experiments/parabola-drat-trim-20261109/README.md](../../../research/experiments/parabola-drat-trim-20261109/README.md)
 
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
 - [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (source): 証拠形式・原版不具合・局所修正と監査での扱い
 ## [research/experiments/parabola-drat-trim-20261109/input/false-empty.lrat](../../../research/experiments/parabola-drat-trim-20261109/input/false-empty.lrat)
 
@@ -9751,6 +9752,7 @@
 - [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 単位節1だけの充足可能なCNF
 ## [research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c](../../../research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c)
 
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 原版の偽空節受理をK0714で修正したhint検査器。空節には実際のRUP矛盾を要求
 - [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (verifier): RUPが矛盾しなかった空節をRAT分岐へ渡さず拒否する局所修正版
 ## [research/experiments/parabola-drat-trim-20261109/lrat_controls.py](../../../research/experiments/parabola-drat-trim-20261109/lrat_controls.py)
 
@@ -9758,6 +9760,21 @@
 ## [research/experiments/parabola-drat-trim-20261109/output/lrat-controls.json](../../../research/experiments/parabola-drat-trim-20261109/output/lrat-controls.json)
 
 - [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 5制御例の原版・修正版の実測結果とsource/binary hash
+## [research/experiments/parabola-drat-trim-20261109/output/lrat-core-preserved-manifest.json](../../../research/experiments/parabola-drat-trim-20261109/output/lrat-core-preserved-manifest.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 採用した2711546166 bytesのLRAT証明のhashとローカルraw pin。証明本体はGit非収録
+## [research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json](../../../research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 残る112の943588行LRATをK0714局所修正版で受理。241.9秒、終了コード0、source/binary/proof hash付き
+## [research/experiments/parabola-drat-trim-20261109/output/qualified-upper-1322-preserved.json](../../../research/experiments/parabola-drat-trim-20261109/output/qualified-upper-1322-preserved.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 修正後の全4入力をschema・原入力hash・3 RUP受理と1 LRAT受理へ結び付けた上界1322の集約
+## [research/experiments/parabola-drat-trim-20261109/qualify_upper.py](../../../research/experiments/parabola-drat-trim-20261109/qualify_upper.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 全4入力のhashとschema、検査器回帰・受理receiptを照合し、全件受理時だけ上界を返す
+## [research/experiments/parabola-drat-trim-20261109/replay_lrat_stream.py](../../../research/experiments/parabola-drat-trim-20261109/replay_lrat_stream.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 大証明をstreamでhash検査しpreflightを先に永続化して局所修正版LRATを実行するドライバ
 ## [research/experiments/parabola-drat-trim-20261109/vendor/lrat-check.c](../../../research/experiments/parabola-drat-trim-20261109/vendor/lrat-check.c)
 
 - [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) (source): 指定commitの本文を保持するWindows CRLF checkout。LF正規化はGit blobとbyte一致
@@ -9896,6 +9913,12 @@
 ## [research/experiments/parabola-monotone-rup-20261109/output/encoding-audit-reservation.json](../../../research/experiments/parabola-monotone-rup-20261109/output/encoding-audit-reservation.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1323点の全4入力で全節schema一致。辺53886件の整数幾何も再検査成功。UNSAT検査とは別
+## [research/experiments/parabola-monotone-rup-20261109/output/regression.json](../../../research/experiments/parabola-monotone-rup-20261109/output/regression.json)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 上記RUP実装は毎回初期化するPython UPと516例で一致。K0707の4偽証明を拒否
+## [research/experiments/parabola-monotone-rup-20261109/rup_check.cpp](../../../research/experiments/parabola-monotone-rup-20261109/rup_check.cpp)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 000/011/101を受理した削除無視・RAT禁止の追加列RUP検査器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
@@ -9975,10 +9998,10 @@
 - [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (certificate): 旧CNF自体のUNSAT証明。幾何形状の不存在を証明するものではない
 ## [research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json](../../../research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 修正版と同一の1323点入力3形状はDRAT受理、残る112は検査未完了。全4形状は未完了
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当時の3形状DRAT受理と112未完了のsnapshot。現在は後述のRUP/LRAT監査を採用
 ## [research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json](../../../research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): ローカルに保持する2127240行の未検査生証明のhash。生証明はGit非収録で受理証拠ではない
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当初保存した2127240行の原DRAT証明のhash。ローカル保持・Git非収録。受理根拠は別のLRAT receipt
 ## [research/experiments/parabola-size1323-drat-20261109/regression.json](../../../research/experiments/parabola-size1323-drat-20261109/regression.json)
 
 - [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) (data): 小例の全照合、000/101の入力差分と011/112のbyte一致
