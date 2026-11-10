@@ -487,9 +487,18 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 11辺最小配置の総数と次数列別個数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_masks_degrees.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_masks_degrees.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形マスクによる独立の次数列別集計
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_c4.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_c4.cpp)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 隣接ビット集合によるC4生成判定と安全な辺集合の再帰列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_degrees.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_degrees.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 隣接集合による11辺極大配置の次数列別集計
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形ビットマスクと固定サイズ部分集合走査による独立列挙

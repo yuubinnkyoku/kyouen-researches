@@ -19,6 +19,15 @@ artifacts:
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json
   role: data
   note: 2実装で一致した安全配置と極大配置の集計・ソースhash
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_degrees.cpp
+  role: verifier
+  note: 隣接集合による11辺極大配置の次数列別集計
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_masks_degrees.cpp
+  role: verifier
+  note: 四角形マスクによる独立の次数列別集計
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json
+  role: data
+  note: 11辺最小配置の総数と次数列別個数
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md
   role: certificate
   note: 9次元11辺の包含極大C4禁止構成
@@ -35,5 +44,7 @@ K0715の下界により、極大配置には少なくとも10石が必要。11�
 隣接集合からC4を判定する再帰列挙と、固定サイズの部分集合を走査して四角形マスクを照合する別実装は、それぞれC4を含まない候補14113575個、極大候補0個と一致した。後者は全候補数も直接検査する。したがって10石の極大配置は存在せず、11石が最小である。
 
 両実装は5次元5辺、6次元6辺、7次元8辺、8次元9辺でも一致し、先行する5〜7次元の全列挙結果と整合する。8次元9辺では固定辺を含む極大配置が3240個。ラベル付き配置を「配置に含まれる辺」で二重計数すると、総数は `3240·binom(8,2)/9=10080` 個である。
+
+同様に9次元11辺では固定辺を含む極大配置が83160個なので、ラベル付き最小配置は `83160·binom(9,2)/11=272160` 個。2実装による次数列の集計では6種類に分かれ、その個数は添付のデータに記録した。次数列はグラフ同型類の分類を意味しない。
 
 再現は各C++ソースを `g++ -std=c++17 -O3` でコンパイルし、実行ファイルに `9 10` を渡す。マスク版は高速化のため実行環境が対応する場合に `-mpopcnt` を追加できる。通常プレイ・misèreの勝敗や、他の次元の最小値はこの列挙からは決まらない。
