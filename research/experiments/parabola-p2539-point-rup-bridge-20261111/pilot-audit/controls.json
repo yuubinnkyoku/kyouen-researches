@@ -1,0 +1,45 @@
+{
+  "cases": [
+    {
+      "name": "valid-unit",
+      "expected_derivation": true,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 2 variables and 2 clauses\n\nc finished parsing\n\nc start forward verification\n\nc 2 of 2 clauses in core                            \n\nc 1 of 2 lemmas in core using 2 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\nc VERIFIED derivation: all lemmas preserve satisfiability\n\nc WARNING: no empty clause detected, this is not a refutation\n\ns DERIVATION\n\nc verification time: 0.128 seconds\n",
+      "stderr": "",
+      "elapsed_seconds": 0.29276759999993374
+    },
+    {
+      "name": "false-unit",
+      "expected_derivation": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 2 variables and 1 clauses\n\nc finished parsing\n\nc start forward verification\n\nc RUP check failed\nc failed at proof line 1 (modulo deletion errors)\n\ns NOT VERIFIED\n\nc verification time: 0.142 seconds\n",
+      "stderr": "",
+      "elapsed_seconds": 0.18235590000040247
+    },
+    {
+      "name": "false-binary",
+      "expected_derivation": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 1 clauses\n\nc finished parsing\n\nc start forward verification\n\nc RUP check failed\nc failed at proof line 1 (modulo deletion errors)\n\ns NOT VERIFIED\n\nc verification time: 0.142 seconds\n",
+      "stderr": "",
+      "elapsed_seconds": 0.18972460000077263
+    },
+    {
+      "name": "rat-only",
+      "expected_derivation": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 2 variables and 1 clauses\n\nc finished parsing\n\nc start forward verification\n\nc RUP check failed\nc failed at proof line 1 (modulo deletion errors)\n\ns NOT VERIFIED\n\nc verification time: 0.137 seconds\n",
+      "stderr": "",
+      "elapsed_seconds": 0.17785820000062813
+    },
+    {
+      "name": "valid-nonunit",
+      "expected_derivation": true,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 1 clauses\n\nc finished parsing\n\nc start forward verification\n\nc 1 of 1 clauses in core                            \n\nc 1 of 2 lemmas in core using 1 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\nc VERIFIED derivation: all lemmas preserve satisfiability\n\nc WARNING: no empty clause detected, this is not a refutation\n\ns DERIVATION\n\nc verification time: 0.133 seconds\n",
+      "stderr": "",
+      "elapsed_seconds": 0.17551409999941825
+    }
+  ],
+  "checker_source_sha256": "78026871882de3f2fee66034e549e9c1a0a9a5291abd817d06f611f9ba0f355d"
+}

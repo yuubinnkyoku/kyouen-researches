@@ -127,6 +127,33 @@ artifacts:
 - path: research/experiments/parabola-p2539-five-pruned-20261111/README.md
   role: data
   note: 新しい除外条件を採用したprobeの再現、UNKNOWNの限界、次の手順
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/individual-summary.json
+  role: manifest
+  note: 親CNFだけから受理済みの60個別RUP導出の所在・hash、結合検査と独立した採用
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/all-units.rup.gz
+  role: certificate
+  note: 60負point単位節を親CNFだけから導く追加696834・削除696774行の結合RUP、空節なし
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/summary.json
+  role: manifest
+  note: 固定checkerの-f -UでDERIVATION受理、UNSAT refutationではない
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/qualification.json
+  role: manifest
+  note: 元の保持側CNFと60単位節付きpruned CNFの全モデル一致、既存の形状条件との結合
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/audit-output/controls.json
+  role: data
+  note: native partial RUP checkerで正しい単位・非単位を受理し、偽の節を拒否
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/native-controls.json
+  role: data
+  note: 新しい変数の単位節をRATとして受理し-Uでは拒否、guard付き導出を受理しguard欠落を拒否
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/regression.json
+  role: data
+  note: 独立小型UPと総当たりで561仮定下の負例・574 lift節を照合、guard欠落等を拒否
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/replay.json
+  role: data
+  note: SATライブラリや子証明を使わず結合RUPを別処理再生、DERIVATIONと全体UNSATを区別
+- path: research/experiments/parabola-p2539-point-rup-bridge-20261111/README.md
+  role: proof
+  note: 仮定除去のRUP論証、個別と結合受理・初回timeoutの区別、全モデル一致と大きなTへの縮小
 scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の60点集合Uの回避が必要。残る候補の実在・非存在、五点削除局所最適性、全体の最大性は主張しない。
 evidence: 四点以下と原点・完全対変更の形状を独立schema・整数幾何・RUP/LRATで排除。さらに提供辺からの一点追加障害族を五点以下でhitできない60点を独立証明木と6514四点の実整数幾何で排除。部分集合縮小とhitting-tree帰納論証は有限検査と区別する。
 ---
@@ -195,7 +222,13 @@ U以外の1221追加候補には、提供した一点追加障害族だけをhit
 これは安全な改善証人や、他の幾何障害を全て回避する証人ではない。
 その後、親の保持側CNFに60負point単位節を追加した51570変数144606節を一回探索した。
 この新入力もbudget100000・85.197秒でUNKNOWNだった。入力の意味と幾何・hitting根拠は独立監査したが、負の完結証明はない。
-追加60節を親CNFだけのRUPで導出したとは主張せず、元の幾何・hitting-tree根拠と区別する。
+その後、この60節それぞれを親CNFだけから導くRUP証明を独立受理した。
+各a_u仮定下の子証明へ¬a_uを付けて仮定を除去し、親Fだけで全追加を-f -U検査した。
+60個別導出と結合版、SATライブラリ・子証明を使わない別処理再生がDERIVATIONとして受理された。
+したがってFと60単位節付きpruned CNFは全モデルが一致する。これは空節のない導出で、全体UNSATではない。
+大きな改善Tが除外点uを含めば、(S∩T)∪{u}の1254点を含む1259点部分集合を取り、親Fへモデル拡張できる。
+原点と元の完全対はS∩Tに保たれ、a_uと今回導いた¬a_uが矛盾するため、同じ60点回避の別根拠となる。
+元の幾何hitting証明と今回の親だけのRUP導出は独立した根拠として保持する。
 五点削除近傍全体の局所最適性やA(2539)=1258を主張しない。
 現在の全体範囲1258≤A(2539)≤1271は変わらない。
 有限回帰を全称証明に代用せず、検査器やコンパイラ一般の健全性、Lean形式証明は主張しない。

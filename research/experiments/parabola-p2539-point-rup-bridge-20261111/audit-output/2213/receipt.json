@@ -1,0 +1,16 @@
+{
+  "point": 2213,
+  "derived_unit": -38725,
+  "parent_input_sha256": "64496e29f631e4f4090c103e571490f7959a30558462d9b4992ec668633f561b",
+  "child_proof_sha256": "31cf6af5410fd28a5acab57657c54044287771c982a58bb6870e67ee2c821ed2",
+  "lifted_raw_sha256": "963a0489464115ab676acbd0d33b8898c4804d65808df9a83411310cb504b62d",
+  "lifted_lines": 16635,
+  "checker_source_sha256": "78026871882de3f2fee66034e549e9c1a0a9a5291abd817d06f611f9ba0f355d",
+  "driver_source_sha256": "491076a5e2175094229f1d62d01a4b8c734e37ec1ce1586f7f217d332babcbaa",
+  "verified_parent_only_derivation": true,
+  "scope": "A RUP-only derivation of one negative point unit from the retained parent CNF alone; no empty clause and no parent UNSAT claim.",
+  "returncode": 1,
+  "stdout": "\nc parsing input formula with 51570 variables and 144546 clauses\n\nc finished parsing\n\nc start forward verification\n\nc 13853 of 144546 clauses in core                            \n\nc 43 of 16636 lemmas in core using 21041997 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\nc VERIFIED derivation: all lemmas preserve satisfiability\n\nc WARNING: no empty clause detected, this is not a refutation\n\ns DERIVATION\n\nc verification time: 5.354 seconds\n",
+  "stderr": "",
+  "elapsed_seconds": 5.40251569999964
+}

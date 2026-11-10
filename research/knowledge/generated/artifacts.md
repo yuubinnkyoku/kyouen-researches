@@ -10897,6 +10897,33 @@
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py](../../../research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): ソルバ・辺cache・局所モデルを読まず固定集合と全阻止証拠を再検査
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/README.md](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/README.md)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 仮定除去のRUP論証、個別と結合受理・初回timeoutの区別、全モデル一致と大きなTへの縮小
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/audit-output/controls.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/audit-output/controls.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): native partial RUP checkerで正しい単位・非単位を受理し、偽の節を拒否
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/all-units.rup.gz](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/all-units.rup.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 60負point単位節を親CNFだけから導く追加696834・削除696774行の結合RUP、空節なし
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/summary.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/summary.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 固定checkerの-f -UでDERIVATION受理、UNSAT refutationではない
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/individual-summary.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/individual-summary.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 親CNFだけから受理済みの60個別RUP導出の所在・hash、結合検査と独立した採用
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/native-controls.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/native-controls.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい変数の単位節をRATとして受理し-Uでは拒否、guard付き導出を受理しguard欠落を拒否
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/qualification.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/qualification.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 元の保持側CNFと60単位節付きpruned CNFの全モデル一致、既存の形状条件との結合
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/regression.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/regression.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 独立小型UPと総当たりで561仮定下の負例・574 lift節を照合、guard欠落等を拒否
+## [research/experiments/parabola-p2539-point-rup-bridge-20261111/replay.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/replay.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): SATライブラリや子証明を使わず結合RUPを別処理再生、DERIVATIONと全体UNSATを区別
 ## [research/experiments/parabola-p2539-without-origin-20261111/README.md](../../../research/experiments/parabola-p2539-without-origin-20261111/README.md)
 
 - [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
