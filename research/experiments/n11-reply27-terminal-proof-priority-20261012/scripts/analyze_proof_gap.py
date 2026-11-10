@@ -110,7 +110,10 @@ def main() -> None:
     if not remaining:
         raise ValueError("no open solver-trusted S5 dependency remains for pilot selection")
     pilot_positive = [remaining[0], remaining[len(remaining) // 2], remaining[-1]]
-    pilot_zero = [zero_node[0], zero_node[len(zero_node) // 2], zero_node[-1]] if zero_node else []
+    remaining_zero = [row for row in zero_node if tuple(row["key"]) not in closed_roots]
+    pilot_zero = [remaining_zero[0], remaining_zero[len(remaining_zero) // 2], remaining_zero[-1]] if remaining_zero else []
+    if any(tuple(row["key"]) in closed_roots for row in pilot_positive + pilot_zero):
+        raise ValueError("already-certified root selected for proof pilot")
 
     target_s6_audit = json.loads((REPLY / "output/s6-fourteenth-batch-audit.json").read_text(encoding="utf-8"))
     target_s6_raw = target_s6_audit["loss_witnesses"]
