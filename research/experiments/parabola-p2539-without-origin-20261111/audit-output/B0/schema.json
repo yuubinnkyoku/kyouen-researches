@@ -1,0 +1,73 @@
+{
+  "p": 2539,
+  "origin": 0,
+  "complete_pairs": 0,
+  "target_size": 1259,
+  "total_deletion_bound": 4,
+  "origin_deletion_cost": 1,
+  "nonzero_deletion_bound": 3,
+  "variables": 36556,
+  "clauses": 115767,
+  "onehot_clauses": 8883,
+  "point_base": 30256,
+  "point_definition_clauses": 7614,
+  "geometric_clauses": 38866,
+  "deletion_clauses": 8775,
+  "counters": [
+    {
+      "name": "NONE-lower-via-complement",
+      "clauses": 23931,
+      "bound": 1259,
+      "inputs": 1269,
+      "domain": [
+        5077,
+        17666
+      ],
+      "rules": {
+        "input": 10,
+        "carry": 11331,
+        "increment": 12580,
+        "overflow": 10
+      }
+    },
+    {
+      "name": "NONE-upper",
+      "clauses": 26429,
+      "bound": 10,
+      "inputs": 1269,
+      "domain": [
+        17667,
+        30256
+      ],
+      "rules": {
+        "input": 1259,
+        "carry": 12580,
+        "increment": 11331,
+        "overflow": 1259
+      }
+    },
+    {
+      "name": "at-most-three-nonzero-deletions",
+      "clauses": 8775,
+      "bound": 3,
+      "inputs": 1257,
+      "domain": [
+        32795,
+        36556
+      ],
+      "rules": {
+        "input": 1254,
+        "carry": 3759,
+        "increment": 2508,
+        "overflow": 1254
+      }
+    }
+  ],
+  "scope": "Every origin-free safe exact1259 set in this pair class and at most4 TOTAL seed deletions extends to all clauses. Geometry is separately checked; the missing origin consumes one deletion.",
+  "input_sha256": "efb46b8515034fc6bb044fe49220037d8033392b11b545235af44cbec8d779a3",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "edge_input_sha256": "28140d8cf88ab592f2ce20c02486e46a618d69d67025338ee779385389823008",
+  "schema_source_sha256": "edc7ea19112b165fdfdba9854455b53c6e7d6c5073709cc7cdefc26941dc9255",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "driver_source_sha256": "5bc9d0cda3530d8bf7b0f1d276f802aedee0279625bd8af8e2f9eccde33f4f80"
+}

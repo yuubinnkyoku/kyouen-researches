@@ -74,6 +74,7 @@
 - ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 共線または共円四点を含まない標準q=4の安全性
 - ← depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 標準q=4の共円・共線禁止四点を含まない安全性
 - ← depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 標準q=4の共線・共円禁止四点に関する安全性
+- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 標準q=4の共線・共円禁止四点に関する安全性
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -795,6 +796,7 @@
 - ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 一般上界A(p)<=(p+3)/2をp=2539に適用
 - ← depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 安全集合の完全対は高々一つであり、完全対6を含めば他の各対は低側・高側・空対に限られる
 - ← depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 安全集合に含まれる完全対は高々一つ
+- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 安全集合の完全対は高々一つ
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -3957,6 +3959,7 @@
 - → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による
 - ← depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 対象とするSHA-256固定の1258点安全証人
 - ← depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): SHA-256固定の1258点安全証人
+- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): SHA-256固定の1258点安全証人
 
 ## [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み）
 
@@ -3973,4 +3976,14 @@
 - → generalizes [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 完全対を固定する条件を外し、原点を保つ全クラスへ広げる
 - → depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合に含まれる完全対は高々一つ
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の共線・共円禁止四点に関する安全性
+- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 同じ固定1258点集合について原点を保つ全クラスの独立排除
+- ← generalizes [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 原点を保持する条件を外し、全ての改善候補へ広げる
+
+## [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし）
+
+- → depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 同じ固定1258点集合について原点を保つ全クラスの独立排除
+- → generalizes [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 原点を保持する条件を外し、全ての改善候補へ広げる
+- → depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合の完全対は高々一つ
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の共線・共円禁止四点に関する安全性

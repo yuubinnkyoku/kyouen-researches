@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "complete_pairs": 0,
+      "rejected": [
+        "broken-onehot",
+        "wrong-BOTH-count",
+        "wrong-point-definition",
+        "point-selector-alias",
+        "origin-dependent-triple",
+        "wrong-loss-polarity",
+        "wrong-nonzero-bound"
+      ],
+      "point_truth_assignments": 64
+    },
+    {
+      "complete_pairs": 1,
+      "rejected": [
+        "broken-onehot",
+        "wrong-BOTH-count",
+        "wrong-point-definition",
+        "point-selector-alias",
+        "origin-dependent-triple",
+        "wrong-loss-polarity",
+        "wrong-nonzero-bound"
+      ],
+      "point_truth_assignments": 64
+    }
+  ],
+  "point_truth_assignments": 128,
+  "subset_cases": 152,
+  "schema_source_sha256": "edc7ea19112b165fdfdba9854455b53c6e7d6c5073709cc7cdefc26941dc9255",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "regression_source_sha256": "49bb48d28e1d51dd46a896e98a22662e8a091edaf7a78ba5be691f9171c064fa",
+  "scope": "Fourteen corrupt schemas rejected, origin-cost accounting, actual point truth tables, finite origin-free subset analogue. Not a general soundness proof."
+}

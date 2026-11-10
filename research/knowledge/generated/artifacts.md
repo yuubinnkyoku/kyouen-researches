@@ -10789,6 +10789,42 @@
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py](../../../research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): ソルバ・辺cache・局所モデルを読まず固定集合と全阻止証拠を再検査
+## [research/experiments/parabola-p2539-without-origin-20261111/README.md](../../../research/experiments/parabola-p2539-without-origin-20261111/README.md)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
+## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/input.cnf.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/input.cnf.gz)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): 原点なし・完全対なしの36556変数115767節、exact1259点・総削除数4以下
+## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/manifest.json](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/manifest.json)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (manifest): 採用CNF/DRATとローカル保持1277行LRATの所在・hash・独立受理
+## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/verified-proof.drat.gz)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): RUP限定検査と別処理再生を通った23072行DRAT
+## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/input.cnf.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/input.cnf.gz)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): 原点なし・完全対一つの40320変数123294節、exact1259点・総削除数4以下
+## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/manifest.json](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/manifest.json)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (manifest): 採用CNF/DRATとローカル保持22797行LRATの所在・hash・独立受理
+## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/verified-proof.drat.gz)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): RUP限定検査と別処理再生を通った205896行DRAT
+## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/summary.json)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (data): 二クラスの独立schema・幾何・RUP・空節修正版LRAT受理
+## [research/experiments/parabola-p2539-without-origin-20261111/qualification.json](../../../research/experiments/parabola-p2539-without-origin-20261111/qualification.json)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (manifest): 原点保持のK0725と原点なし二クラスを同一seedへ結び付ける集約、部分集合論証のhash
+## [research/experiments/parabola-p2539-without-origin-20261111/regression.json](../../../research/experiments/parabola-p2539-without-origin-20261111/regression.json)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (data): 14不正入力の拒否、128 point真理値割当て、原点損失を含む部分集合縮小例152件
+## [research/experiments/parabola-p2539-without-origin-20261111/replay.json](../../../research/experiments/parabola-p2539-without-origin-20261111/replay.json)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (data): 採用圧縮CNF/DRATを独立schema・幾何とともに別処理実再生
+## [research/experiments/parabola-p2539-without-origin-20261111/schema.py](../../../research/experiments/parabola-p2539-without-origin-20261111/schema.py)
+
+- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (verifier): SATライブラリ・探索builderを使わず全節を解釈し、原点の損失1と非原点削除上限3を区別する
 ## [research/experiments/parabola-single-cnf-audits-20261110/README.md](../../../research/experiments/parabola-single-cnf-audits-20261110/README.md)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): 単一CNFで全h+2点集合を排除する論理、保存証拠再生と旧d別監査との区別
