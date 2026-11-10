@@ -28,6 +28,21 @@ artifacts:
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json
   role: data
   note: 11辺最小配置の総数と次数列別個数
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/collect_d9_minima.cpp
+  role: verifier
+  note: 固定辺を含む全最小配置のビットマスクを列挙・保存
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-fixed-edge.txt.gz
+  role: data
+  note: 固定辺を含む全83160配置の辺集合ビットマスク
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py
+  role: verifier
+  note: 全保存配置を同型判定し代表と自己同型数を集計
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py
+  role: verifier
+  note: 各代表の安全性・極大性・全頂点順列による自己同型と軌道サイズを独立検査
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json
+  role: data
+  note: 6同型類の代表ビットマスクと個数・自己同型数
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md
   role: certificate
   note: 9次元11辺の包含極大C4禁止構成
@@ -45,6 +60,6 @@ K0715の下界により、極大配置には少なくとも10石が必要。11�
 
 両実装は5次元5辺、6次元6辺、7次元8辺、8次元9辺でも一致し、先行する5〜7次元の全列挙結果と整合する。8次元9辺では固定辺を含む極大配置が3240個。ラベル付き配置を「配置に含まれる辺」で二重計数すると、総数は `3240·binom(8,2)/9=10080` 個である。
 
-同様に9次元11辺では固定辺を含む極大配置が83160個なので、ラベル付き最小配置は `83160·binom(9,2)/11=272160` 個。2実装による次数列の集計では6種類に分かれ、その個数は添付のデータに記録した。次数列はグラフ同型類の分類を意味しない。
+同様に9次元11辺では固定辺を含む極大配置が83160個なので、ラベル付き最小配置は `83160·binom(9,2)/11=272160` 個。これらは **6同型類**に分かれ、それぞれ異なる次数列を持つ。全保存配置の同型判定に加え、6代表の安全性と極大性を直接検査し、全 `9!` 頂点順列から求めた自己同型数で各軌道の大きさを算出した。各軌道の大きさが2実装で得た対応する次数列の全個数に一致するので、各次数列が1同型類で尽くされることも独立に確認できる。代表の辺集合ビットマスクは、辞書順 `combinations(range(9),2)` の各辺を下位ビットから対応させる。
 
 再現は各C++ソースを `g++ -std=c++17 -O3` でコンパイルし、実行ファイルに `9 10` を渡す。マスク版は高速化のため実行環境が対応する場合に `-mpopcnt` を追加できる。通常プレイ・misèreの勝敗や、他の次元の最小値はこの列挙からは決まらない。

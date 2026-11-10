@@ -481,15 +481,27 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 全保存配置を同型判定し代表と自己同型数を集計
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/collect_d9_minima.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/collect_d9_minima.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 固定辺を含む全最小配置のビットマスクを列挙・保存
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): 各次元・重みの禁止四点数
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 6同型類の代表ビットマスクと個数・自己同型数
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 11辺最小配置の総数と次数列別個数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-fixed-edge.txt.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-fixed-edge.txt.gz)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 固定辺を含む全83160配置の辺集合ビットマスク
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_masks_degrees.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_masks_degrees.cpp)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形マスクによる独立の次数列別集計
@@ -529,6 +541,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_constant_weight.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_constant_weight.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): d=2..7の各重み層で対角和の全数列挙と計数式を照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 各代表の安全性・極大性・全頂点順列による自己同型と軌道サイズを独立検査
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..7の全四点・三点・二点の照合
