@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {
+      "p": 17,
+      "full_edges": 30,
+      "nontrivial_edges": 2,
+      "safe_assignments": 1664,
+      "unsafe_assignments": 384,
+      "assignments": 2048
+    },
+    {
+      "p": 19,
+      "full_edges": 40,
+      "nontrivial_edges": 4,
+      "safe_assignments": 3008,
+      "unsafe_assignments": 1600,
+      "assignments": 4608
+    }
+  ],
+  "total_assignments": 6656,
+  "source_sha256": "4b296e505b8e67b0e4152cd12b61d40dfa80f9bf9d409d7ea813fac177e7affc",
+  "scope": "Exhaustive p17,p19 assignments exercise nonempty signed clauses and both safe and unsafe templates."
+}

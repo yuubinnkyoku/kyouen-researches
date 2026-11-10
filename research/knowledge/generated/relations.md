@@ -71,6 +71,7 @@
 - ← depends_on [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md): 共線または共円の四点を含まない標準q=4の安全性
 - ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 共線または共円四点を含まない標準q=4の安全性
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 共線または共円四点を含まない標準q=4の安全性
+- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 共線または共円四点を含まない標準q=4の安全性
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -427,6 +428,7 @@
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 最大安全石数の定義
 - ← depends_on [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
 - ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
+- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 固定集合の包含極大性と最大サイズを区別する
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -788,6 +790,7 @@
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
+- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 一般上界A(p)<=(p+3)/2をp=2539に適用
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -1748,6 +1751,7 @@
 - ← depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 禁止四点から固定完全対dへの直接投影節の定義
 - ← generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
+- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3937,3 +3941,10 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
+
+## [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) Q_2539の安全最大サイズは1254以上1271以下、保存1254点集合は包含極大
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2をp=2539に適用
+- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
+- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 固定集合の包含極大性と最大サイズを区別する
