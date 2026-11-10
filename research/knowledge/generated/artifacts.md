@@ -10644,7 +10644,7 @@
 - [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (source): 追加探索の再現と、負のソルバ結果を独立排除へ採用していないことの説明
 ## [research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 範囲外の四追加探索の入力byte監査。UNKNOWN一件・未独立検証のソルバUNSAT三件であり本命題を拡張しない
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 当時の四追加探索の入力byte監査。UNKNOWN一件・ソルバUNSAT三件。完全対変更/なしの上限4は後にK0725で独立監査
 ## [research/experiments/parabola-p2539-broader-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/regression.json)
 
 - [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
@@ -10723,6 +10723,42 @@
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/schema.py](../../../research/experiments/parabola-p2539-exchange-audit-20261110/schema.py)
 
 - [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (verifier): SATライブラリや探索器をimportせず、各counter補助変数をprefix個数へ解釈して全節の拡張可能性を確認
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/README.md](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/README.md)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (proof): 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/input.cnf.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/input.cnf.gz)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): 完全対変更の44062変数・130779節。元の完全対6を禁止し原点と1259点・削除上限4を指定
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/manifest.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/manifest.json)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 採用CNF/DRATと、ローカル保持した42292行LRATの所在・hash・独立受理
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/verified-proof.drat.gz)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): RUP限定で受理し別処理でも再生した254562行DRAT
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/input.cnf.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/input.cnf.gz)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): 完全対なしの40302変数・123259節。原点と1259点・削除上限4を指定
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/manifest.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/manifest.json)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 採用CNF/DRATと、ローカル保持した33132行LRATの所在・hash・独立受理
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/verified-proof.drat.gz)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): RUP限定で受理し別処理でも再生した298208行DRAT
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/summary.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/summary.json)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (data): 二つの独立schema・幾何・RUP・空節修正版LRAT受理の集約
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/qualification.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/qualification.json)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 元完全対・別完全対・完全対なしの三場合を同一seedへ結び付ける集約と部分集合論証のhash
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/regression.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/regression.json)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (data): 実入力14改変の拒否、point定義128真理値割当て、部分集合選択の有限縮小例356件
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/replay.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/replay.json)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (data): Git管理された採用圧縮CNF/DRATを、独立schemaと幾何を含めて別処理実再生
+## [research/experiments/parabola-p2539-origin-local-audit-20261111/schema.py](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/schema.py)
+
+- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (verifier): 探索器とSATライブラリをimportせず、4値状態・exact cardinality・point定義・削除counter・幾何を全節照合
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/README.md](../../../research/experiments/parabola-p2539-pair-pilot-20261110/README.md)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 再現手順・証拠の保存境界・探索と独立検査の区別

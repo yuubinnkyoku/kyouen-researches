@@ -1,0 +1,50 @@
+{
+  "cases": [
+    {
+      "case": "changed-pair",
+      "input_sha256": "d9c986210993b9d63202a9b714686049f68a2c597ca4170ed279bb7c26e24169",
+      "drat_raw_sha256": "1bec48f93b911f1fdb860af6c3d05979aa038dc2b776ee905fec6f67b3bbdfad",
+      "schema_verified": true,
+      "geometry": {
+        "returncode": 0,
+        "stdout": "VERIFIED_EDGES 2539 38868\n",
+        "stderr": "",
+        "timed_out": false,
+        "elapsed_seconds": 0.18746330000067246
+      },
+      "rup": {
+        "returncode": 0,
+        "stdout": "\nc parsing input formula with 44062 variables and 130779 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 22215 of 130779 clauses in core                            \n\nc 24163 of 123583 lemmas in core using 9825071 resolution steps\n\nc 0 RAT lemmas in core; 23238 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 6.751 seconds\n",
+        "stderr": "",
+        "timed_out": false,
+        "elapsed_seconds": 6.871987199996511
+      }
+    },
+    {
+      "case": "no-pair",
+      "input_sha256": "984f103da5304d0719d4df8efb4280274898f86468087530a373cf9db9fc1486",
+      "drat_raw_sha256": "8ca7193413313a4f97858da2f2b0b7d8370c4d550848b848c1fee5cb8db0deb1",
+      "schema_verified": true,
+      "geometry": {
+        "returncode": 0,
+        "stdout": "VERIFIED_EDGES 2539 38868\n",
+        "stderr": "",
+        "timed_out": false,
+        "elapsed_seconds": 0.1113387999976112
+      },
+      "rup": {
+        "returncode": 0,
+        "stdout": "\nc parsing input formula with 40302 variables and 123259 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 18278 of 123259 clauses in core                            \n\nc 18328 of 140919 lemmas in core using 6787382 resolution steps\n\nc 0 RAT lemmas in core; 13450 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 4.226 seconds\n",
+        "stderr": "",
+        "timed_out": false,
+        "elapsed_seconds": 4.272561100002349
+      }
+    }
+  ],
+  "both_verified": true,
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "schema_source_sha256": "8093265797255c50967e61297f8f16d10734c389eb3cdd0ea487c1a2de618969",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "replay_source_sha256": "d5506868f4f68f0b49c0bf4a3b102375ee7004cc5d0914df56adf175843e8354",
+  "scope": "Portable compressed CNF/DRAT replay with independent schema/geometry; original proof-output, local LRAT and SAT library not read."
+}

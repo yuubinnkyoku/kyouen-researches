@@ -1,0 +1,27 @@
+{
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "origin_retained": true,
+  "excluded_size_at_least": 1259,
+  "max_removed": 4,
+  "old_fixed_pair_manifest_sha256": "ac0760ddbff2b259ec618093684f53046722273e9ae7be9278f3bba9109a1d81",
+  "old_fixed_pair_replay_sha256": "e1681535bbc35f2f2de828659eeb4ea98ca1cd2c15b69392fceeba970eae0458",
+  "new_cases": [
+    {
+      "case": "changed-pair",
+      "manifest_sha256": "9cafb456a684dacd7af73d91e8a71facd607442634be7a15dfb93d03a79fc7d6",
+      "input_sha256": "d9c986210993b9d63202a9b714686049f68a2c597ca4170ed279bb7c26e24169",
+      "proof_sha256": "1bec48f93b911f1fdb860af6c3d05979aa038dc2b776ee905fec6f67b3bbdfad"
+    },
+    {
+      "case": "no-pair",
+      "manifest_sha256": "feb774335d51ab535b457bd5f083471a5da4fcf467e149dd0c1f827cd35b442b",
+      "input_sha256": "984f103da5304d0719d4df8efb4280274898f86468087530a373cf9db9fc1486",
+      "proof_sha256": "8ca7193413313a4f97858da2f2b0b7d8370c4d550848b848c1fee5cb8db0deb1"
+    }
+  ],
+  "replay_sha256": "7aa2837d8f6b9fc28c3c6dde7720c20bf43cc5c362718d0e378b01564ee24a45",
+  "subset_argument_sha256": "450a201fa35802e21ef2a2df3351e35a06f21b6449a608524646b23c6bf7e7c4",
+  "source_sha256": "eee2340b8d7ee8b630cc84790bb2b334885fe0fba041eb186433720ab2fd4a8c",
+  "all_three_classes_bound": true,
+  "scope": "Finite independent CNF proof checks plus the separately stated subset argument exclude every origin-retaining improvement deleting at most4 seed points. No unrestricted local optimality or global maximum."
+}

@@ -1,0 +1,36 @@
+{
+  "cases": [
+    {
+      "case": "changed-pair",
+      "rejected": [
+        "broken-onehot",
+        "wrong-BOTH-cardinality",
+        "wrong-NONE-complement-polarity",
+        "wrong-point-definition",
+        "point-selector-alias",
+        "wrong-loss-polarity",
+        "positive-geometric-clause"
+      ],
+      "point_truth_assignments": 64
+    },
+    {
+      "case": "no-pair",
+      "rejected": [
+        "broken-onehot",
+        "wrong-BOTH-cardinality",
+        "wrong-NONE-complement-polarity",
+        "wrong-point-definition",
+        "point-selector-alias",
+        "wrong-loss-polarity",
+        "positive-geometric-clause"
+      ],
+      "point_truth_assignments": 64
+    }
+  ],
+  "point_truth_assignments": 128,
+  "subset_lemma_cases": 356,
+  "schema_source_sha256": "8093265797255c50967e61297f8f16d10734c389eb3cdd0ea487c1a2de618969",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "regression_source_sha256": "ac7a3e5ffc6fa397b0b5cc0a99cd75e4592d29afe5d24c330a9caa81562ae020",
+  "scope": "Fourteen actual-schema corruptions rejected, exact point-definition truth tables, finite subset-lemma analogue. Not a general checker soundness proof."
+}
