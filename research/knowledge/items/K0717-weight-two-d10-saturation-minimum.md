@@ -16,6 +16,15 @@ artifacts:
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp
   role: verifier
   note: 連結性枝刈りなしの再列挙。C4判定は共有する
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp
+  role: verifier
+  note: 別の四角形マスク方式による固定辺候補の列挙
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py
+  role: verifier
+  note: 隣接集合方式と四角形マスク方式の小次元・各辺数の差分照合
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json
+  role: data
+  note: 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json
   role: data
   note: 2回の列挙の集計、検査器のhashと証拠上の制約

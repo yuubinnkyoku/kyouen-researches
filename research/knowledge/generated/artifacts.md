@@ -478,12 +478,18 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 隣接集合方式と四角形マスク方式の小次元・各辺数の差分照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 全保存配置を同型判定し代表と自己同型数を集計
@@ -529,6 +535,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形ビットマスクと固定サイズ部分集合走査による独立列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 別の四角形マスク方式による固定辺候補の列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結性枝刈りなしの再列挙。C4判定は共有する
