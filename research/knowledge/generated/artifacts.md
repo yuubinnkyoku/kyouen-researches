@@ -478,12 +478,69 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 隣接集合方式と四角形マスク方式の小次元・各辺数の差分照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 全保存配置を同型判定し代表と自己同型数を集計
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/collect_d9_minima.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/collect_d9_minima.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 固定辺を含む全最小配置のビットマスクを列挙・保存
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): 各次元・重みの禁止四点数
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/input.cnf.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/input.cnf.gz)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 上記試行の固定辺・11辺のCNF
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/result.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 別SAT符号化の30万衝突探索はUNKNOWN
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-2m-20261110/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-2m-20261110/result.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 同一CNFの200万衝突探索もUNKNOWN
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 2回の列挙の集計、検査器のhashと証拠上の制約
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 6同型類の代表ビットマスクと個数・自己同型数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-degree-audit.json)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 11辺最小配置の総数と次数列別個数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-fixed-edge.txt.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-fixed-edge.txt.gz)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 固定辺を含む全83160配置の辺集合ビットマスク
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_masks_degrees.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_masks_degrees.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形マスクによる独立の次数列別集計
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_c4.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_c4.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 隣接ビット集合によるC4生成判定と安全な辺集合の再帰列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_degrees.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_degrees.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 隣接集合による11辺極大配置の次数列別集計
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形ビットマスクと固定サイズ部分集合走査による独立列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 別の四角形マスク方式による全固定辺候補の独立列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結性枝刈りなしの再列挙。C4判定は共有する
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=6における禁止四点数と全二点・三点の照合
@@ -499,15 +556,44 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/proof.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/proof.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 単射な二座標射影による共面四点と平行四辺形の同値
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 偶奇それぞれの構成の有限検算結果
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation-sat-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation-sat-small-audit.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 小グラフ16925件について直接検査とSATの一致
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation_sat.py)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 四角形禁止・欠辺ごとの長さ3の道・辺数を用いる別のSAT符号化
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/search_sparse_c4_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/search_sparse_c4_n10.cpp)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結可能性で枝刈りする固定辺・11辺の安全配置列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 2実装で一致した安全配置と極大配置の集計・ソースhash
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 三点のxorによる一意補完と少数派条件の全称証明
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_constant_weight.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_constant_weight.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): d=2..7の各重み層で対角和の全数列挙と計数式を照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 各代表の安全性・極大性・全頂点順列による自己同型と軌道サイズを独立検査
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..7の全四点・三点・二点の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-c4-saturation-unicyclic-classification-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-c4-saturation-unicyclic-classification-20261110.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): n辺以下の極大C4禁止グラフの分類とn>=7でのn+1下界
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 偶数次元の構成と全欠辺の極大性の証明
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (certificate): 10次元12辺の包含極大C4禁止構成
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (certificate): 9次元11辺の包含極大C4禁止構成
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
@@ -9781,6 +9867,9 @@
 ## [research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py](../../../research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 局所CNFの再生成と符号付き削除数制約の小規模全数照合
+## [research/experiments/parabola-1296-warm-start-20261109/check_drat_trim.py](../../../research/experiments/parabola-1296-warm-start-20261109/check_drat_trim.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 固定版DRAT-trimのコンパイル、入力と証明のhash照合、証明受理と打切り拒否の再現
 ## [research/experiments/parabola-1296-warm-start-20261109/check_local_incremental.py](../../../research/experiments/parabola-1296-warm-start-20261109/check_local_incremental.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 修正版増分検査器による証明受理と打切り拒否を再現
@@ -9974,11 +10063,11 @@
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1302点。保存1301点から3点を除き4点を追加
-- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 本項で固定する1302点集合。SHA-256 5395d232...、原点と完全対d=1323を含む
+- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 本項で固定する1302点集合。SHA-256 5395d232...、原点と完全対d=1323を含む
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全119187179475四点を合同式で被覆し45110020候補を整数行列式で検査、禁止四点0件
-- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (data): 指定集合自体の安全性を独立整数幾何で確認した受理記録
+- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (data): 指定集合自体の安全性を独立整数幾何で確認した受理記録
 ## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 元の1301点から失う点数に逐次counterの上限3を課した保存入力
@@ -10179,10 +10268,10 @@
 ## [research/experiments/parabola-maximal-1300-20261109/README.md](../../../research/experiments/parabola-maximal-1300-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 保存1300点の包含極大性と、別の1301点集合を得る交換の再現手順・信頼境界
-- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (source): 固定点集合、証明形式、単点追加不能から包含極大への論理と再現手順
+- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (source): 固定点集合、証明形式、単点追加不能から包含極大への論理と再現手順
 ## [research/experiments/parabola-maximal-1300-20261109/audit.py](../../../research/experiments/parabola-maximal-1300-20261109/audit.py)
 
-- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): 既存CNFは候補提案だけに用い、証明を明示四点へ変換してC++で再検査するドライバ
+- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): 既存CNFは候補提案だけに用い、証明を明示四点へ変換してC++で再検査するドライバ
 ## [research/experiments/parabola-maximal-1300-20261109/audit_saved_exchange.py](../../../research/experiments/parabola-maximal-1300-20261109/audit_saved_exchange.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): SAT・符号化generatorを使わず保存完全モデルの全節と点状態を再評価、3不正モデルを拒否
@@ -10215,29 +10304,29 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 3966点選択変数を証人に固定してモデル補完し全節充足・点抽出・幾何receiptのhashを照合
 ## [research/experiments/parabola-maximal-1300-20261109/output/initial/audit.json](../../../research/experiments/parabola-maximal-1300-20261109/output/initial/audit.json)
 
-- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (data): 全1347点被覆・四点の所属と整数行列式0を受理し、7不正制御を拒否したsource/binary/hash付き記録
+- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (data): 全1347点被覆・四点の所属と整数行列式0を受理し、7不正制御を拒否したsource/binary/hash付き記録
 ## [research/experiments/parabola-maximal-1300-20261109/output/initial/blockers.txt](../../../research/experiments/parabola-maximal-1300-20261109/output/initial/blockers.txt)
 
-- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 各未選択tに対し、tと既存3点からなる真の禁止四点を1個ずつ記す全1347行
+- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 各未選択tに対し、tと既存3点からなる真の禁止四点を1個ずつ記す全1347行
 ## [research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp](../../../research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp)
 
-- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の幾何と補集合の重複なし完全被覆だけを検査する独立wrapper
-- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の整数幾何と補集合の完全被覆を検査する既存C++wrapper
+- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の幾何と補集合の重複なし完全被覆だけを検査する独立wrapper
+- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の整数幾何と補集合の完全被覆を検査する既存C++wrapper
 ## [research/experiments/parabola-maximal-1300-20261109/verify_exchange.py](../../../research/experiments/parabola-maximal-1300-20261109/verify_exchange.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 保存交換・幾何receipt・旧UNKNOWN入力への完全モデルの充足を照合
 ## [research/experiments/parabola-maximal-1302-20261109/README.md](../../../research/experiments/parabola-maximal-1302-20261109/README.md)
 
-- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (source): 対象集合・証明形式・再現と包含極大性の論理
+- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (source): 対象集合・証明形式・再現と包含極大性の論理
 ## [research/experiments/parabola-maximal-1302-20261109/audit.py](../../../research/experiments/parabola-maximal-1302-20261109/audit.py)
 
-- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFは候補提案のみに使い、全行を明示四点へ変換して別C++実装で検査
+- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFは候補提案のみに使い、全行を明示四点へ変換して別C++実装で検査
 ## [research/experiments/parabola-maximal-1302-20261109/output/initial/audit.json](../../../research/experiments/parabola-maximal-1302-20261109/output/initial/audit.json)
 
-- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (data): 全補集合被覆・相異性・所属・整数行列式0を受理し7不正制御を拒否。sourceと証拠hash付き
+- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (data): 全補集合被覆・相異性・所属・整数行列式0を受理し7不正制御を拒否。sourceと証拠hash付き
 ## [research/experiments/parabola-maximal-1302-20261109/output/initial/blockers.txt](../../../research/experiments/parabola-maximal-1302-20261109/output/initial/blockers.txt)
 
-- [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 未選択1345点すべてに、追加tと既存3点からなる明示的禁止四点を1個ずつ指定
+- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 未選択1345点すべてに、追加tと既存3点からなる明示的禁止四点を1個ずつ指定
 ## [research/experiments/parabola-monotone-rup-20261109/README.md](../../../research/experiments/parabola-monotone-rup-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 閾値counterによる安全集合からCNFモデルへの拡張可能性とRUP-only検査の論理
@@ -10321,10 +10410,10 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 旧4形状UNSAT記録。000/101はK0717の変数衝突があり、幾何上界の根拠への採用を保留
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 旧4形状UNSAT記録。000/101はK0721の変数衝突があり、幾何上界の根拠への採用を保留
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (solver): 各counter後にそれまでの予約範囲とnvのmaxを保持する修正版
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (solver): 各counter後にそれまでの予約範囲とnvのmaxを保持する修正版
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
@@ -10425,25 +10514,25 @@
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 前段manifestのhash連鎖、新入力の独立投影schema、圧縮証明の実再生を照合
 ## [research/experiments/parabola-size1323-drat-20261109/README.md](../../../research/experiments/parabola-size1323-drat-20261109/README.md)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (source): 反例、修正、旧証拠への制限、保存証明と監査再開の手順
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (source): 反例、修正、旧証拠への制限、保存証明と監査再開の手順
 ## [research/experiments/parabola-size1323-drat-20261109/counterexample.json](../../../research/experiments/parabola-size1323-drat-20261109/counterexample.json)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (data): 重複ID、旧CNFのDRAT受理、修正版モデルと2点のパラメータ、各hash
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 重複ID、旧CNFのDRAT受理、修正版モデルと2点のパラメータ、各hash
 ## [research/experiments/parabola-size1323-drat-20261109/encoding_fixed.py](../../../research/experiments/parabola-size1323-drat-20261109/encoding_fixed.py)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正後共有builderとbyte一致する凍結スナップショット
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正後共有builderとbyte一致する凍結スナップショット
 ## [research/experiments/parabola-size1323-drat-20261109/encoding_snapshot.py](../../../research/experiments/parabola-size1323-drat-20261109/encoding_snapshot.py)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正前search_shape_class.pyの凍結コード
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正前search_shape_class.pyの凍結コード
 ## [research/experiments/parabola-size1323-drat-20261109/input/fixed-p5-000.cnf](../../../research/experiments/parabola-size1323-drat-20261109/input/fixed-p5-000.cnf)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (data): 変数範囲を保持した修正版のSAT入力
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 変数範囲を保持した修正版のSAT入力
 ## [research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.cnf](../../../research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.cnf)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (data): 禁止辺なしのp=5・2点形状なのにUNSATとなる30節の旧CNF
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 禁止辺なしのp=5・2点形状なのにUNSATとなる30節の旧CNF
 ## [research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.drat](../../../research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.drat)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (certificate): 旧CNF自体のUNSAT証明。幾何形状の不存在を証明するものではない
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (certificate): 旧CNF自体のUNSAT証明。幾何形状の不存在を証明するものではない
 ## [research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json](../../../research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当時の3形状DRAT受理と112未完了のsnapshot。現在は後述のRUP/LRAT監査を採用
@@ -10452,10 +10541,10 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当初保存した2127240行の原DRAT証明のhash。ローカル保持・Git非収録。受理根拠は別のLRAT receipt
 ## [research/experiments/parabola-size1323-drat-20261109/regression.json](../../../research/experiments/parabola-size1323-drat-20261109/regression.json)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (data): 小例の全照合、000/101の入力差分と011/112のbyte一致
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 小例の全照合、000/101の入力差分と011/112のbyte一致
 ## [research/experiments/parabola-size1323-drat-20261109/regression.py](../../../research/experiments/parabola-size1323-drat-20261109/regression.py)
 
-- [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) (verifier): 反例の再現、修正版11896配置の整数幾何照合とp=2647の旧新CNF比較
+- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (verifier): 反例の再現、修正版11896配置の整数幾何照合とp=2647の旧新CNF比較
 ## [research/experiments/parabola-ternary-selection-20261109/README.md](../../../research/experiments/parabola-ternary-selection-20261109/README.md)
 
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (source): 実装、再現入力・出力、1296点構成と1300点UNKNOWNの範囲
@@ -10498,11 +10587,11 @@
 ## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/candidate.txt](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/candidate.txt)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1300点のソート済みパラメータ。今回の2点除去・3点追加の起点
-- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 本項で固定する1300点集合。input SHA-256 4ef5b03e...、原点と完全対1323を含む
+- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 本項で固定する1300点集合。input SHA-256 4ef5b03e...、原点と完全対1323を含む
 ## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/geometry.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全118455690925四点を合同式で被覆し44831921候補の整数4×4行列式を検査、禁止四点0件
-- [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) (data): この集合自体の安全性を独立整数幾何検査した受理記録
+- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (data): この集合自体の安全性を独立整数幾何検査した受理記録
 ## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/input.cnf.gz](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/input.cnf.gz)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 原点と完全対d=1323を固定し1299点以上を要求した実入力。以前UNKNOWNだった入力とbyte一致

@@ -1,0 +1,17 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--with",
+    "python-sat==1.9.dev21",
+    "python",
+    "research\\experiments\\binary-cube-coplanar-midpoint-theorem-20261109\\audit_saturated_constructions.py"
+  ],
+  "source_sha256": "2dea3a379a7f93c4a7f18ba5669e25a69564ea804d732a910ae3452e1d1f4b64",
+  "returncode": 0,
+  "seconds": 0.4424569000000247,
+  "stderr": "",
+  "stdout": "[\n  {\n    \"dimension\": 5,\n    \"edges\": 5,\n    \"missing_edges_checked\": 5,\n    \"quadruples_checked_for_safety\": 5,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 6,\n    \"edges\": 6,\n    \"missing_edges_checked\": 9,\n    \"quadruples_checked_for_safety\": 15,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 7,\n    \"edges\": 8,\n    \"missing_edges_checked\": 13,\n    \"quadruples_checked_for_safety\": 35,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 8,\n    \"edges\": 9,\n    \"missing_edges_checked\": 19,\n    \"quadruples_checked_for_safety\": 70,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 9,\n    \"edges\": 11,\n    \"missing_edges_checked\": 25,\n    \"quadruples_checked_for_safety\": 126,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 10,\n    \"edges\": 12,\n    \"missing_edges_checked\": 33,\n    \"quadruples_checked_for_safety\": 210,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 11,\n    \"edges\": 14,\n    \"missing_edges_checked\": 41,\n    \"quadruples_checked_for_safety\": 330,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 12,\n    \"edges\": 15,\n    \"missing_edges_checked\": 51,\n    \"quadruples_checked_for_safety\": 495,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 13,\n    \"edges\": 17,\n    \"missing_edges_checked\": 61,\n    \"quadruples_checked_for_safety\": 715,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 14,\n    \"edges\": 18,\n    \"missing_edges_checked\": 73,\n    \"quadruples_checked_for_safety\": 1001,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 15,\n    \"edges\": 20,\n    \"missing_edges_checked\": 85,\n    \"quadruples_checked_for_safety\": 1365,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 16,\n    \"edges\": 21,\n    \"missing_edges_checked\": 99,\n    \"quadruples_checked_for_safety\": 1820,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 17,\n    \"edges\": 23,\n    \"missing_edges_checked\": 113,\n    \"quadruples_checked_for_safety\": 2380,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 18,\n    \"edges\": 24,\n    \"missing_edges_checked\": 129,\n    \"quadruples_checked_for_safety\": 3060,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 19,\n    \"edges\": 26,\n    \"missing_edges_checked\": 145,\n    \"quadruples_checked_for_safety\": 3876,\n    \"status\": \"PASS\"\n  },\n  {\n    \"dimension\": 20,\n    \"edges\": 27,\n    \"missing_edges_checked\": 163,\n    \"quadruples_checked_for_safety\": 4845,\n    \"status\": \"PASS\"\n  }\n]\n",
+  "scope": "Small regression only; no large unresolved search was rerun."
+}

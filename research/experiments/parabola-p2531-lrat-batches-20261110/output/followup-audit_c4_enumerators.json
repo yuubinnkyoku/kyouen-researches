@@ -1,0 +1,17 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "--with",
+    "python-sat==1.9.dev21",
+    "python",
+    "research\\experiments\\binary-cube-coplanar-midpoint-theorem-20261109\\audit_c4_enumerators.py"
+  ],
+  "source_sha256": "57d4f9d11ee017148ada04eadee8901411a607118e5bae56020179eb665ed621",
+  "returncode": 0,
+  "seconds": 6.452724900000021,
+  "stderr": "",
+  "stdout": "[\n  {\n    \"vertices\": 4,\n    \"edges\": 2,\n    \"checked\": 5,\n    \"c4_free\": 5,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 4,\n    \"edges\": 3,\n    \"checked\": 10,\n    \"c4_free\": 10,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 4,\n    \"edges\": 4,\n    \"checked\": 10,\n    \"c4_free\": 8,\n    \"saturated\": 8\n  },\n  {\n    \"vertices\": 4,\n    \"edges\": 5,\n    \"checked\": 5,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 2,\n    \"checked\": 9,\n    \"c4_free\": 9,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 3,\n    \"checked\": 36,\n    \"c4_free\": 36,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 4,\n    \"checked\": 84,\n    \"c4_free\": 78,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 5,\n    \"checked\": 126,\n    \"c4_free\": 81,\n    \"saturated\": 36\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 6,\n    \"checked\": 126,\n    \"c4_free\": 9,\n    \"saturated\": 9\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 7,\n    \"checked\": 84,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 8,\n    \"checked\": 36,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 5,\n    \"edges\": 9,\n    \"checked\": 9,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 2,\n    \"checked\": 14,\n    \"c4_free\": 14,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 3,\n    \"checked\": 91,\n    \"c4_free\": 91,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 4,\n    \"checked\": 364,\n    \"c4_free\": 352,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 5,\n    \"checked\": 1001,\n    \"c4_free\": 836,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 6,\n    \"checked\": 2002,\n    \"c4_free\": 1072,\n    \"saturated\": 48\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 7,\n    \"checked\": 3003,\n    \"c4_free\": 420,\n    \"saturated\": 420\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 8,\n    \"checked\": 3432,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 9,\n    \"checked\": 3003,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 10,\n    \"checked\": 2002,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 11,\n    \"checked\": 1001,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 12,\n    \"checked\": 364,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 13,\n    \"checked\": 91,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 6,\n    \"edges\": 14,\n    \"checked\": 14,\n    \"c4_free\": 0,\n    \"saturated\": 0\n  },\n  {\n    \"vertices\": 7,\n    \"edges\": 8,\n    \"checked\": 77520,\n    \"c4_free\": 13560,\n    \"saturated\": 1920\n  }\n]\n",
+  "scope": "Small regression only; no large unresolved search was rerun."
+}

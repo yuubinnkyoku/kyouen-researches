@@ -1,6 +1,6 @@
 # 保存1302点集合の包含極大性
 
-命題・対象は[K0716](../../knowledge/items/K0716-p2647-saved-1302-witness-inclusion-maximal.md)を参照する。
+命題・対象は[K0720](../../knowledge/items/K0720-p2647-saved-1302-witness-inclusion-maximal.md)を参照する。
 保存1302点の安全性の独立幾何receiptへhashを結び付け、未選択1345点すべてへの単点追加不能を検査した。
 
 `output/initial/blockers.txt` の先頭は `2647 1345`、各行は `追加t q0 q1 q2 q3`。

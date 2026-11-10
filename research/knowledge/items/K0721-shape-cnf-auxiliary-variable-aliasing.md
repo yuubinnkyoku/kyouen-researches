@@ -1,5 +1,5 @@
 ---
-id: K0717
+id: K0721
 title: 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した
 kind: proposition
 status: computed

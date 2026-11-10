@@ -1,0 +1,13 @@
+{
+  "fixed_edge": [0, 1],
+  "recursive_adjacency_source_sha256": "d2b83f710e5c9b11a2e15d63e17b1bfed1a48a4d65fa897dbb44a428f40fcbeb",
+  "independent_cycle_masks_source_sha256": "a9d2288fd3cd47ceb1c05251463c262ad570c62252d384f23a1b69b3eab8cdba",
+  "cases": [
+    {"vertices": 5, "edges": 5, "all_checked": 126, "c4_free": 81, "saturated": 36},
+    {"vertices": 6, "edges": 6, "all_checked": 2002, "c4_free": 1072, "saturated": 48},
+    {"vertices": 7, "edges": 8, "all_checked": 77520, "c4_free": 13560, "saturated": 1920},
+    {"vertices": 8, "edges": 9, "all_checked": 2220075, "c4_free": 425520, "saturated": 3240},
+    {"vertices": 9, "edges": 10, "all_checked": 70607460, "c4_free": 14113575, "saturated": 0}
+  ],
+  "scope": "labelled graphs containing edge 0-1; all counts independently agree in both programs"
+}

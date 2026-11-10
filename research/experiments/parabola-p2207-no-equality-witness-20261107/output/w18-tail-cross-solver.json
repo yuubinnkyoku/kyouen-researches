@@ -1,0 +1,490 @@
+{
+ "p": 2647,
+ "size": 1322,
+ "class": [
+  1,
+  1,
+  3
+ ],
+ "budget": 100000,
+ "vars": 17180,
+ "clauses": 90891,
+ "kept_edges": 53886,
+ "build_seconds": 1.7,
+ "build_source": "cached:output/w14-cnf-cache.pkl",
+ "device_timeout": 240.0,
+ "caps": "1280:120,1300:120,1316:240,1317:120",
+ "deadline": 2400.0,
+ "jobs": 4,
+ "solvers": [
+  "Cadical195",
+  "Ergo",
+  "MinisatGH",
+  "Kissat404",
+  "Glucose4",
+  "Minisat22",
+  "Maplesat",
+  "Glucose3",
+  "Glucose42",
+  "Gluecard3",
+  "Gluecard4",
+  "Mergesat3",
+  "MapleCM",
+  "MapleChrono"
+ ],
+ "records": [
+  {
+   "solver": "MinisatGH",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 5.251,
+   "build_seconds": 0.578,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Ergo",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 5.346,
+   "build_seconds": 0.278,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Cadical195",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 5.924,
+   "build_seconds": 0.594,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Maplesat",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 5.098,
+   "build_seconds": 0.503,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Minisat22",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 5.934,
+   "build_seconds": 0.318,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose4",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 6.401,
+   "build_seconds": 0.398,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Kissat404",
+   "d": 1280,
+   "setup": "unit-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 13.402,
+   "build_seconds": 0.292,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Gluecard3",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 4.401,
+   "build_seconds": 0.297,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Gluecard4",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 4.096,
+   "build_seconds": 0.216,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Mergesat3",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 2.226,
+   "build_seconds": 0.103,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose3",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 7.594,
+   "build_seconds": 0.581,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose42",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 7.383,
+   "build_seconds": 0.603,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Ergo",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.804,
+   "build_seconds": 0.201,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Cadical195",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 4.016,
+   "build_seconds": 0.303,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "MinisatGH",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.177,
+   "build_seconds": 0.201,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "MapleCM",
+   "d": 1280,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 8.612,
+   "build_seconds": 0.288,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Minisat22",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 1.675,
+   "build_seconds": 0.104,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose4",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.504,
+   "build_seconds": 0.204,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Maplesat",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.195,
+   "build_seconds": 0.205,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Kissat404",
+   "d": 1300,
+   "setup": "unit-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 8.584,
+   "build_seconds": 0.196,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose3",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.212,
+   "build_seconds": 0.2,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose42",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.219,
+   "build_seconds": 0.263,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Gluecard3",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.214,
+   "build_seconds": 0.205,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Gluecard4",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.197,
+   "build_seconds": 0.216,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Mergesat3",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 3.499,
+   "build_seconds": 0.278,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "MapleCM",
+   "d": 1300,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 11.881,
+   "build_seconds": 0.201,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "MapleChrono",
+   "d": 1280,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "MapleChrono",
+   "d": 1300,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Cadical195",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Ergo",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "MinisatGH",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Kissat404",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Glucose4",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Minisat22",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Maplesat",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Glucose3",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Glucose42",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Gluecard3",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Gluecard4",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Mergesat3",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "MapleCM",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "MapleChrono",
+   "d": 1317,
+   "verdict": "timeout",
+   "seconds": 120.0,
+   "reason": "wall cap 120s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Ergo",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 25.011,
+   "build_seconds": 0.412,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "MinisatGH",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 43.313,
+   "build_seconds": 0.413,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Cadical195",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 49.214,
+   "build_seconds": 0.721,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Kissat404",
+   "d": 1316,
+   "setup": "unit-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 116.508,
+   "build_seconds": 0.43,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Minisat22",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 120.779,
+   "build_seconds": 0.19,
+   "verdict": "unsat"
+  }
+ ]
+}

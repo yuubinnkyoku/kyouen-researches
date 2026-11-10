@@ -698,7 +698,10 @@
 | [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) | 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる | proposition | proved | geometry, maximum-safe, search-methods |
 | [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) | 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完 | proposition | proved | variants, geometry, rectangles |
 | [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) | 四次元二値立方体・共面四点禁止版は通常とmisèreの全局面を分類 | computation | computed | variants, geometry, grundy, maximal-safe, maximum-safe |
-| [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) | Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
-| [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) | Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
-| [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
+| [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) | 二値立方体の重み2層における極小極大配置の上下界 | proposition | proved | variants, geometry, maximal-safe |
+| [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) | 二値立方体重み2層の9次元最小極大配置は11石 | computation | computed | variants, geometry, maximal-safe |
+| [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) | 二値立方体重み2層の10次元最小極大配置は12石 | computation | computed | variants, geometry, maximal-safe |
 | [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) | 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す | proposition | computed | verification, certificates, provenance |
+| [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) | Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
+| [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) | Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
+| [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |

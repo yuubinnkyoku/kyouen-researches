@@ -1,0 +1,112 @@
+{
+ "p": 2647,
+ "size": 1322,
+ "class": [
+  1,
+  1,
+  3
+ ],
+ "budget": 100000,
+ "vars": 17180,
+ "clauses": 90891,
+ "kept_edges": 53886,
+ "build_seconds": 1.0,
+ "build_source": "cached:research/experiments/parabola-p2207-no-equality-witness-20261107/output/w14-cnf-cache.pkl",
+ "device_timeout": 240.0,
+ "caps": "1316:240",
+ "deadline": 3000.0,
+ "jobs": 2,
+ "solvers": [
+  "MapleCM",
+  "MapleChrono",
+  "Glucose3",
+  "Glucose4",
+  "Glucose42",
+  "Gluecard3",
+  "Gluecard4",
+  "Mergesat3"
+ ],
+ "records": [
+  {
+   "solver": "Maplesat",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 224.885,
+   "build_seconds": 0.101,
+   "verdict": "unsat",
+   "cpu_seconds": 81.191
+  },
+  {
+   "solver": "MapleCM",
+   "d": 1316,
+   "verdict": "timeout",
+   "seconds": 240.0,
+   "reason": "wall cap 240s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "MapleChrono",
+   "d": 1316,
+   "verdict": "timeout",
+   "seconds": 240.0,
+   "reason": "wall cap 240s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Glucose3",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 189.793,
+   "build_seconds": 0.107,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose4",
+   "d": 1316,
+   "verdict": "timeout",
+   "seconds": 240.0,
+   "reason": "wall cap 240s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Gluecard3",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 182.216,
+   "build_seconds": 0.217,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Glucose42",
+   "d": 1316,
+   "verdict": "timeout",
+   "seconds": 240.0,
+   "reason": "wall cap 240s (conflict budget 100000 not reached)"
+  },
+  {
+   "solver": "Gluecard4",
+   "d": 1316,
+   "setup": "assumption-B_d",
+   "budget": 100000,
+   "sat": false,
+   "unknown": false,
+   "seconds": 221.463,
+   "build_seconds": 0.099,
+   "verdict": "unsat"
+  },
+  {
+   "solver": "Mergesat3",
+   "d": 1316,
+   "verdict": "timeout",
+   "seconds": 240.0,
+   "reason": "wall cap 240s (conflict budget 100000 not reached)"
+  }
+ ],
+ "elapsed": 910.4
+}

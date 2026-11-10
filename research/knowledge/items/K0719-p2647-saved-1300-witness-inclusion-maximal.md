@@ -1,5 +1,5 @@
 ---
-id: K0715
+id: K0719
 title: Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合
 kind: proposition
 status: computed

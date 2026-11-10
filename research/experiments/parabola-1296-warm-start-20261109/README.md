@@ -45,9 +45,13 @@ uv run --locked python research/experiments/parabola-1296-warm-start-20261109/ve
 uv run --locked python research/experiments/parabola-1296-warm-start-20261109/test_two_add.py
 uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py
 uv run --locked python research/experiments/parabola-1296-warm-start-20261109/check_local_proof.py
+uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m
+uv run --locked python research/experiments/parabola-1296-warm-start-20261109/check_drat_trim.py --source /path/to/pinned/drat-trim.c
 uv run --locked python research/experiments/parabola-1296-warm-start-20261109/audit_slice.py
 uv run --locked python research/experiments/parabola-local-repair-20261109/verify.py --audit research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/candidate.txt --receipt /tmp/q2647-1303-geometry.json
 ```
+
+5点削除の証明の再検査には [DRAT-trim](https://github.com/marijnheule/drat-trim) のコミット `2e3b2dc0ecf938addbd779d42877b6ed69d9a985` にある `drat-trim.c` と `gcc` が必要。検査器はソース・CNF・証明のハッシュを確認し、証明受理と先頭100行に切り詰めた証明の拒否を確かめる。
 
 `probe.py` と `probe_1298.py` は最初の二実行の固定source snapshot、`probe_from_witness.py` は次の実行以降の汎用worker。実行ごとにworker・符号化・初期値・CNFのハッシュを記録し、既存出力先を上書きしない。探索を再実行する場合は必ず新しい `--output` を指定する。
 

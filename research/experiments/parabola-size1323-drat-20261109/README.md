@@ -2,7 +2,7 @@
 
 サイズh=1323を4形状 `(x,c,e)=(0,0,0),(0,1,1),(1,0,1),(1,1,2)` に分け、
 既存ソルバ記録をDRATへ進める過程で、一般形状builderの変数衝突を発見した。
-不具合の現在の知識は [K0717](../../knowledge/items/K0717-shape-cnf-auxiliary-variable-aliasing.md)、
+不具合の現在の知識は [K0721](../../knowledge/items/K0721-shape-cnf-auxiliary-variable-aliasing.md)、
 監査済み範囲は [K0711](../../knowledge/items/K0711-p2647-safe-lower-bound-1292.md) を参照する。
 
 ## 反例と修正

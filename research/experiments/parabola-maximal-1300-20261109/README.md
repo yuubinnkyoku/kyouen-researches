@@ -1,6 +1,6 @@
 # 保存1300点集合の包含極大性
 
-厳密な命題は[K0715](../../knowledge/items/K0715-p2647-saved-1300-witness-inclusion-maximal.md)を参照する。
+厳密な命題は[K0719](../../knowledge/items/K0719-p2647-saved-1300-witness-inclusion-maximal.md)を参照する。
 現在の最大安全サイズの境界とは別に、保存した1300点集合へ1点も追加できないことを証明する。
 
 `output/initial/blockers.txt` は先頭に `2647 1347`、以後は
