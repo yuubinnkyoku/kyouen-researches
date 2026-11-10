@@ -112,6 +112,21 @@ artifacts:
 - path: research/experiments/parabola-p2539-five-obstructions-20261111/README.md
   role: proof
   note: 一点追加の障害族と五点削除の必要条件、証明木の帰納的健全性、再現と限界
+- path: research/experiments/parabola-p2539-five-pruned-20261111/output/input.cnf.gz
+  role: data
+  note: 保持側の親CNFに60負point単位節を追加した51570変数144606節、未解決入力
+- path: research/experiments/parabola-p2539-five-pruned-20261111/output/result.json
+  role: data
+  note: 新しい60節付き入力もbudget100000・85.197秒でUNKNOWN、完結した負証明なし
+- path: research/experiments/parabola-p2539-five-pruned-20261111/input-audit/summary.json
+  role: data
+  note: 親全節と追加60節の意味・hitting-tree・整数幾何監査、UNSAT監査ではない
+- path: research/experiments/parabola-p2539-five-pruned-20261111/regression.json
+  role: data
+  note: 実入力10改変の拒否と60負point単位節の120真理値割当て
+- path: research/experiments/parabola-p2539-five-pruned-20261111/README.md
+  role: data
+  note: 新しい除外条件を採用したprobeの再現、UNKNOWNの限界、次の手順
 scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の60点集合Uの回避が必要。残る候補の実在・非存在、五点削除局所最適性、全体の最大性は主張しない。
 evidence: 四点以下と原点・完全対変更の形状を独立schema・整数幾何・RUP/LRATで排除。さらに提供辺からの一点追加障害族を五点以下でhitできない60点を独立証明木と6514四点の実整数幾何で排除。部分集合縮小とhitting-tree帰納論証は有限検査と区別する。
 ---
@@ -178,7 +193,9 @@ branchは障害Rをhitする全選択v∈Rを被覆し、残りを予算k−1で
 UNSATもSATも、安全な1259点証人も得ていない。
 U以外の1221追加候補には、提供した一点追加障害族だけをhitする五点以下の削除証人がある。
 これは安全な改善証人や、他の幾何障害を全て回避する証人ではない。
-親CNFへの60負point単位節の追加探索は、この証明書の検査では実施していない。
+その後、親の保持側CNFに60負point単位節を追加した51570変数144606節を一回探索した。
+この新入力もbudget100000・85.197秒でUNKNOWNだった。入力の意味と幾何・hitting根拠は独立監査したが、負の完結証明はない。
+追加60節を親CNFだけのRUPで導出したとは主張せず、元の幾何・hitting-tree根拠と区別する。
 五点削除近傍全体の局所最適性やA(2539)=1258を主張しない。
 現在の全体範囲1258≤A(2539)≤1271は変わらない。
 有限回帰を全称証明に代用せず、検査器やコンパイラ一般の健全性、Lean形式証明は主張しない。

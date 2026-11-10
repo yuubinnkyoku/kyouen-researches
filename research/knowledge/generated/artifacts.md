@@ -10816,6 +10816,21 @@
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/schema.py](../../../research/experiments/parabola-p2539-five-pair-split-20261111/schema.py)
 
 - [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 全構造節・損失counter・末尾のB6否定単位節を独立解釈
+## [research/experiments/parabola-p2539-five-pruned-20261111/README.md](../../../research/experiments/parabola-p2539-five-pruned-20261111/README.md)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい除外条件を採用したprobeの再現、UNKNOWNの限界、次の手順
+## [research/experiments/parabola-p2539-five-pruned-20261111/input-audit/summary.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/input-audit/summary.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 親全節と追加60節の意味・hitting-tree・整数幾何監査、UNSAT監査ではない
+## [research/experiments/parabola-p2539-five-pruned-20261111/output/input.cnf.gz](../../../research/experiments/parabola-p2539-five-pruned-20261111/output/input.cnf.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 保持側の親CNFに60負point単位節を追加した51570変数144606節、未解決入力
+## [research/experiments/parabola-p2539-five-pruned-20261111/output/result.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/output/result.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい60節付き入力もbudget100000・85.197秒でUNKNOWN、完結した負証明なし
+## [research/experiments/parabola-p2539-five-pruned-20261111/regression.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/regression.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力10改変の拒否と60負point単位節の120真理値割当て
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/README.md](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/README.md)
 
 - [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (proof): 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証
