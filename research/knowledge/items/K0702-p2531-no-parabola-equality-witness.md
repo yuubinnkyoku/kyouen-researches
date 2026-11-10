@@ -19,6 +19,21 @@ relations:
   target: K0101
   note: 全奇素数での等号を否定する2番目の反例候補
 artifacts:
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/plan.json
+  role: manifest
+  note: d=182..300から既被覆6件を集合差で除く113件の計画。前段238 dとsource hashを固定
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/coverage.json
+  role: manifest
+  note: 前段238 dと新113 dに重複なし、被覆和351/1265、残り914。未完了・失敗・UNKNOWNはなし
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates182-300.json
+  role: manifest
+  note: 新113件の採用CNF・LRAT gzipのpathとhash、ローカル保持する原DRATのpathとhash
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/verification182-300.json
+  role: data
+  note: 新113入力の独立投影schema、保存圧縮証明の実再生、原DRAT hashと前段台帳のhash連鎖を照合
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/README.md
+  role: source
+  note: d=182..300の未監査113件の選択と独立監査・保存証拠再生の固定再現手順
 - path: research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/plan.json
   role: manifest
   note: 既被覆d=141,161を除く38件の計画。前段200 dとsource hashを固定
@@ -147,7 +162,7 @@ artifacts:
   role: verifier
   note: 件数と計画標本63件の集合包含を区別して照合する再現コード
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと独立LRAT受理95 dは重複なしで合計238/1265。全数再監査は未完了。
+evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと独立LRAT受理208 dは重複なしで合計351/1265。全数再監査は未完了。
 ---
 
 ## 現在の監査上の制限（2026-11-09）
@@ -195,8 +210,14 @@ inventoryは保存レシートの整合性・被覆のみを検査し、今回DR
 既被覆のd=141,161を除き、全38件がDRAT-trim -Uと修正版LRATで受理された。
 全新入力の独立投影schemaを照合し、保存したCNF・圧縮LRATの別処理での実再生も全件成功した。
 前段台帳のhash連鎖と原DRAT38件のローカルhashを確認し、前段200 dとの重複はない。
-**現在の独立被覆の和は238/1265 d、未被覆1027 d**。内訳は修正版DRAT143 d、LRAT95 dである。
+その段階の独立被覆の和は238/1265 d、未被覆1027 d。内訳は修正版DRAT143 d、LRAT95 dだった。
 全数監査や正確な最大サイズ、検証器の一般健全性の形式証明を主張しない。
+
+続いて **d=182..300の未監査113件** を、前段台帳との集合差で選んで監査した。
+既被覆の201,221,241,261,268,281を除外し、全113件がDRAT-trim -Uと修正版LRATで受理された。
+保存したCNF・圧縮LRATの別処理での実再生も全件成功し、独立投影schema・sourceと証拠hash・前段台帳の連鎖を照合した。
+**現在の独立被覆の和は351/1265 d、未被覆914 d**。内訳は修正版DRAT143 d、LRAT208 dである。
+このbatchの未完了・失敗・UNKNOWNは0だが、残り914 dの独立検査は未完了である。
 
 ## 命題・範囲
 
@@ -218,7 +239,7 @@ K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 �
 ## 限界
 
 - 旧版の標本8件・途中373件のVERIFIED記録は、K0707により現在の修正版の被覆数には加えない。
-  修正版DRAT143 dと新LRAT95 dの和238 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
+  修正版DRAT143 dと新LRAT208 dの和351 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
 - `A(2531)` の正確な値は未確定。
 - 同時期の走査で p=2539, 2543, 2549 も d=h..h-30 の範囲で証人が見つかっておらず、
   反例素数は 2207, 2531 以外にも存在する可能性がある（未確定）。

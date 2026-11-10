@@ -10497,12 +10497,24 @@
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/plan.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/plan.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 既被覆d=141,161を除く38件の計画。前段200 dとsource hashを固定
+## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/README.md](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/README.md)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): d=182..300の未監査113件の選択と独立監査・保存証拠再生の固定再現手順
+## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/coverage.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/coverage.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 前段238 dと新113 dに重複なし、被覆和351/1265、残り914。未完了・失敗・UNKNOWNはなし
+## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/plan.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/plan.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): d=182..300から既被覆6件を集合差で除く113件の計画。前段238 dとsource hashを固定
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates102-140.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates102-140.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 採用CNFとLRAT gzip38件のpath・hash、ローカル保持した原DRATのpathとhash
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates142-180.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates142-180.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 新38件の採用CNF・LRAT gzipのpathとhash、ローカル保持する原DRATのpathとhash
+## [research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates182-300.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates182-300.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 新113件の採用CNF・LRAT gzipのpathとhash、ローカル保持する原DRATのpathとhash
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/output/controller-regression.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/controller-regression.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 重複・既監査dなどの拒否と、未確定や失敗を被覆へ加えない合成制御の成功
@@ -10518,6 +10530,9 @@
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/output/verification142-180.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/verification142-180.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 新38件の独立投影schema、保存圧縮証明の実再生、原DRAT hashと前段台帳のhash連鎖を照合
+## [research/experiments/parabola-p2531-lrat-batches-20261110/output/verification182-300.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/verification182-300.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 新113入力の独立投影schema、保存圧縮証明の実再生、原DRAT hashと前段台帳のhash連鎖を照合
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/regression.py](../../../research/experiments/parabola-p2531-lrat-batches-20261110/regression.py)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 7不正planと、UNKNOWN・失敗・未完了・既存coverage上書きの制御を再現
