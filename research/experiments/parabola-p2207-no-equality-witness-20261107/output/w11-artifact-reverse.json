@@ -1,0 +1,83 @@
+{
+ "p": 2647,
+ "h": 1323,
+ "size": 1322,
+ "class": [
+  1,
+  1,
+  3
+ ],
+ "budget": 100000,
+ "mode": "shared-reverse",
+ "order": [
+  1322,
+  1000,
+  851,
+  500,
+  478,
+  300,
+  100,
+  1
+ ],
+ "vars": 17180,
+ "clauses": 90891,
+ "kept_edges": 53886,
+ "records": [
+  {
+   "d": 1322,
+   "sat": null,
+   "unknown": true,
+   "seconds": 34.493,
+   "budget": 100000
+  },
+  {
+   "d": 1000,
+   "sat": null,
+   "unknown": true,
+   "seconds": 32.196,
+   "budget": 100000
+  },
+  {
+   "d": 851,
+   "sat": false,
+   "unknown": false,
+   "seconds": 13.203,
+   "budget": 100000
+  },
+  {
+   "d": 500,
+   "sat": null,
+   "unknown": true,
+   "seconds": 39.381,
+   "budget": 100000
+  },
+  {
+   "d": 478,
+   "sat": false,
+   "unknown": false,
+   "seconds": 1.375,
+   "budget": 100000
+  },
+  {
+   "d": 300,
+   "sat": false,
+   "unknown": false,
+   "seconds": 0.228,
+   "budget": 100000
+  },
+  {
+   "d": 100,
+   "sat": null,
+   "unknown": true,
+   "seconds": 47.277,
+   "budget": 100000
+  },
+  {
+   "d": 1,
+   "sat": false,
+   "unknown": false,
+   "seconds": 0.238,
+   "budget": 100000
+  }
+ ]
+}
