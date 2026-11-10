@@ -1,0 +1,105 @@
+{
+  "case": "x0-B1",
+  "p": 2539,
+  "origin": 0,
+  "complete_pairs": 1,
+  "target_size": 1259,
+  "removed_exactly": 5,
+  "origin_deletion_cost": 1,
+  "nonzero_removed_exactly": 4,
+  "variables": 46582,
+  "clauses": 134567,
+  "onehot_clauses": 8883,
+  "point_base": 34020,
+  "point_definition_clauses": 7614,
+  "geometric_clauses": 38866,
+  "deletion_clauses": 20048,
+  "counters": [
+    {
+      "name": "BOTH-upper-one",
+      "clauses": 3803,
+      "bound": 1,
+      "inputs": 1269,
+      "domain": [
+        5077,
+        6344
+      ],
+      "rules": {
+        "input": 1268,
+        "carry": 1267,
+        "overflow": 1268
+      }
+    },
+    {
+      "name": "NONE-lower",
+      "clauses": 26429,
+      "bound": 1258,
+      "inputs": 1269,
+      "domain": [
+        6345,
+        20182
+      ],
+      "rules": {
+        "input": 11,
+        "carry": 12580,
+        "increment": 13827,
+        "overflow": 11
+      }
+    },
+    {
+      "name": "NONE-upper",
+      "clauses": 28923,
+      "bound": 11,
+      "inputs": 1269,
+      "domain": [
+        20183,
+        34020
+      ],
+      "rules": {
+        "input": 1258,
+        "carry": 13827,
+        "increment": 12580,
+        "overflow": 1258
+      }
+    },
+    {
+      "name": "nonzero-loss-lower",
+      "clauses": 8775,
+      "bound": 1253,
+      "inputs": 1257,
+      "domain": [
+        36559,
+        41570
+      ],
+      "rules": {
+        "input": 4,
+        "carry": 3759,
+        "increment": 5008,
+        "overflow": 4
+      }
+    },
+    {
+      "name": "nonzero-loss-upper",
+      "clauses": 11273,
+      "bound": 4,
+      "inputs": 1257,
+      "domain": [
+        41571,
+        46582
+      ],
+      "rules": {
+        "input": 1253,
+        "carry": 5008,
+        "increment": 3759,
+        "overflow": 1253
+      }
+    }
+  ],
+  "scope": "Every safe exact1259 set in this class losing exactly5 seed points extends to all recognized clauses. Actual geometric quadruples require independent determinant checks.",
+  "input_sha256": "acd90c01dbf5de752bfb5b9fa296c8ade23d75cad9b5189fb1880bd36563c4cd",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "edge_input_sha256": "28140d8cf88ab592f2ce20c02486e46a618d69d67025338ee779385389823008",
+  "schema_source_sha256": "bc76caf986fb85b65869729de7c4010f11d7cd9d1b7a07e6a399f6827a4e2fde",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "driver_source_sha256": "934849926cc5c02f5ad53163d86bcfd05702cd43296964fe926cf774e0b96836"
+}

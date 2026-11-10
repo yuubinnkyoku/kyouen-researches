@@ -10648,6 +10648,48 @@
 ## [research/experiments/parabola-p2539-broader-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/regression.json)
 
 - [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
+## [research/experiments/parabola-p2539-exact-five-20261111/README.md](../../../research/experiments/parabola-p2539-exact-five-20261111/README.md)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
+## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/summary.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 三入力の独立schema・整数幾何・RUP・空節修正版LRAT受理とローカルLRATのhash・所在
+## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/input.cnf.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/input.cnf.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点なし・完全対なし、42818変数127040節
+## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/verified-proof.drat.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った318386行DRAT
+## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/input.cnf.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/input.cnf.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点なし・完全対一つ、46582変数134567節
+## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/verified-proof.drat.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った312040行DRAT
+## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/input.cnf.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/input.cnf.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点あり・完全対なし、47810変数137026節
+## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/verified-proof.drat.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った486382行DRAT
+## [research/experiments/parabola-p2539-exact-five-20261111/output/x1-B1-target1259-remove5/result.json](../../../research/experiments/parabola-p2539-exact-five-20261111/output/x1-B1-target1259-remove5/result.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 原点あり・完全対一つは100000 conflictsでUNKNOWN、独立排除も安全証人もない
+## [research/experiments/parabola-p2539-exact-five-20261111/qualification.json](../../../research/experiments/parabola-p2539-exact-five-20261111/qualification.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 四点削除排除・exact五点三形状・未解決形状を同一seedと部分集合論証へ結合
+## [research/experiments/parabola-p2539-exact-five-20261111/regression.json](../../../research/experiments/parabola-p2539-exact-five-20261111/regression.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 小素数のexact点数・損失・原点会計131940割当ての有限回帰
+## [research/experiments/parabola-p2539-exact-five-20261111/replay.json](../../../research/experiments/parabola-p2539-exact-five-20261111/replay.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 採用圧縮CNF/DRATから独立schema・幾何・RUPを別処理再生
+## [research/experiments/parabola-p2539-exact-five-20261111/schema-regression.json](../../../research/experiments/parabola-p2539-exact-five-20261111/schema-regression.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力27改変の拒否、point定義192割当て、部分集合縮小例342件
+## [research/experiments/parabola-p2539-exact-five-20261111/schema.py](../../../research/experiments/parabola-p2539-exact-five-20261111/schema.py)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索builderとSATライブラリを使わずexact損失の上下両counterを全照合
 ## [research/experiments/parabola-p2539-exchange-20261110/README.md](../../../research/experiments/parabola-p2539-exchange-20261110/README.md)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 交換探索・保存証拠監査・極大性証明の再現手順と非達成の未確定性

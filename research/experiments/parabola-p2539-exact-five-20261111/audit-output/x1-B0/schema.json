@@ -1,0 +1,90 @@
+{
+  "case": "x1-B0",
+  "p": 2539,
+  "origin": 1,
+  "complete_pairs": 0,
+  "target_size": 1259,
+  "removed_exactly": 5,
+  "origin_deletion_cost": 0,
+  "nonzero_removed_exactly": 5,
+  "variables": 47810,
+  "clauses": 137026,
+  "onehot_clauses": 8883,
+  "point_base": 32752,
+  "point_definition_clauses": 7614,
+  "geometric_clauses": 38868,
+  "deletion_clauses": 25040,
+  "counters": [
+    {
+      "name": "NONE-lower",
+      "clauses": 26429,
+      "bound": 1258,
+      "inputs": 1269,
+      "domain": [
+        5077,
+        18914
+      ],
+      "rules": {
+        "input": 11,
+        "carry": 12580,
+        "increment": 13827,
+        "overflow": 11
+      }
+    },
+    {
+      "name": "NONE-upper",
+      "clauses": 28923,
+      "bound": 11,
+      "inputs": 1269,
+      "domain": [
+        18915,
+        32752
+      ],
+      "rules": {
+        "input": 1258,
+        "carry": 13827,
+        "increment": 12580,
+        "overflow": 1258
+      }
+    },
+    {
+      "name": "nonzero-loss-lower",
+      "clauses": 11273,
+      "bound": 1252,
+      "inputs": 1257,
+      "domain": [
+        35291,
+        41550
+      ],
+      "rules": {
+        "input": 5,
+        "carry": 5008,
+        "increment": 6255,
+        "overflow": 5
+      }
+    },
+    {
+      "name": "nonzero-loss-upper",
+      "clauses": 13767,
+      "bound": 5,
+      "inputs": 1257,
+      "domain": [
+        41551,
+        47810
+      ],
+      "rules": {
+        "input": 1252,
+        "carry": 6255,
+        "increment": 5008,
+        "overflow": 1252
+      }
+    }
+  ],
+  "scope": "Every safe exact1259 set in this class losing exactly5 seed points extends to all recognized clauses. Actual geometric quadruples require independent determinant checks.",
+  "input_sha256": "e0adb23802c5a880586cce589a7023d1168c25f26327bddfd0a1f012d317fe40",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "edge_input_sha256": "30e5d500f658a7a245fdff3e5c7830dc62b376632f2a6c1e75dea08552671dff",
+  "schema_source_sha256": "bc76caf986fb85b65869729de7c4010f11d7cd9d1b7a07e6a399f6827a4e2fde",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "driver_source_sha256": "934849926cc5c02f5ad53163d86bcfd05702cd43296964fe926cf774e0b96836"
+}

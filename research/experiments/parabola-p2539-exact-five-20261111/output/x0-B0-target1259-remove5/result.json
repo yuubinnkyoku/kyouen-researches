@@ -1,0 +1,33 @@
+{
+  "p": 2539,
+  "origin": 0,
+  "complete_pairs": 0,
+  "target": 1259,
+  "removed_exactly": 5,
+  "nonzero_removed_exactly": 4,
+  "origin_removal_cost": 1,
+  "seed_path": "research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt",
+  "seed_size": 1258,
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "edge_input_sha256": "30e5d500f658a7a245fdff3e5c7830dc62b376632f2a6c1e75dea08552671dff",
+  "input_sha256": "5670862f38ba42535dd907cc131c022e197aea32d02f785ec6a145a550269ea8",
+  "variables": 42818,
+  "clauses": 127040,
+  "point_base": 30256,
+  "base_nv": 32794,
+  "geometric_clauses": 38866,
+  "conflict_budget": 100000,
+  "source_sha256": "4a2c92f62548a8a196397f33ac61e9a108b112ffbcf740664dbc9e9c5e025af5",
+  "frozen_source_sha256": "52de6fd038e3f9a452f38d5ea12abb0086c305fdfc8c0a5b51877bd69009543e",
+  "python_sat": "1.9.dev21",
+  "proof_enabled": false,
+  "scope": "Exact target and EXACT seed deletions; proven four-deletion region is excluded by a lower cardinality bound. Solver statuses alone are not independent geometric conclusions.",
+  "status": "SOLVER_UNSAT",
+  "solve_seconds": 15.326944500000536,
+  "statistics": {
+    "restarts": 206,
+    "conflicts": 10616,
+    "decisions": 23374,
+    "propagations": 41061449
+  }
+}
