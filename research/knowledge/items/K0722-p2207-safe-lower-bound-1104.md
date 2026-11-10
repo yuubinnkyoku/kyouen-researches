@@ -1,6 +1,6 @@
 ---
 id: K0722
-title: 剰余放物線Q_2207の独立監査済み範囲は1104以上1105以下
+title: 剰余放物線Q_2207の最大安全サイズは1104（単一CNFのDRAT証明つき）
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, verification]
@@ -20,6 +20,15 @@ artifacts:
   role: data
   commit: eece6d3cf909f97cc2edfaa5cd85fd0701b50bc1
   note: 保存されたshape cのSAT候補。safe_against_edgesの自己判定だけでは採用しない
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.cnf
+  role: certificate
+  note: サイズ1105（クラス(1,1,0)）の単一CNF。7,720変数・50,616節
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.drat.gz
+  role: certificate
+  note: 上記CNFのDRAT証明（解凍後497,179行、SHA-256 F0CE140D...D77A7EA）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2207_1105.json
+  role: data
+  note: 単一CNFの求解記録（UNSAT、19.9秒、検証875秒）
 - path: research/experiments/parabola-p2207-1104-witness-20261110/audit.py
   role: verifier
   note: 候補抽出・点集合と対構造の照合・generic整数幾何の独立実行・5制御例
@@ -41,13 +50,13 @@ artifacts:
 - path: research/experiments/parabola-p2207-1104-witness-20261110/README.md
   role: source
   note: 固定点集合の出所・独立幾何検査・再現手順と最大値の信頼境界
-scope: Q_2207={(t,t² mod 2207):0<=t<2207}の標準q=4安全最大サイズ。指定1104点集合による有限検算の下界と一般定理の上界。正確値1104や他素数への一般化は主張しない。
-evidence: 保存1104パラメータを整数幾何検査し、合同式で全61560516876四点を被覆して残る27941252行列式すべて非零。一般上界1105と合わせて1104<=A(2207)<=1105。CNFのSAT判定やcached edge listへ依存しない。
+scope: Q_2207={(t,t² mod 2207):0<=t<2207}の標準q=4安全最大サイズ。指定1104点集合による有限検算の下界と、サイズ1105の単一CNFに対するDRAT証明つき上界。正確値1104を主張し、他素数への一般化は主張しない。
+evidence: 保存1104パラメータを整数幾何検査し、合同式で全61560516876四点を被覆して残る27941252行列式すべて非零。上界はサイズ1105の単一CNF（7,720変数・50,616節）のUNSATを修正版DRAT検証器でVERIFIED（証明497,179行）として独立に確認。これにより A(2207)=1104。
 ---
 
 ## 命題と固定証人
 
-**1104 <= A(2207) <= 1105**。
+**A(2207) = 1104**。下界は保存1104点の独立幾何監査、上界はサイズ1105の単一CNFのDRAT証明（2026-11-10）。
 下界の証人は指定candidate.txtの1104点で、点は(t,t² mod 2207)とする。
 パラメータは相異なり0..2206に属し、原点0を含む。
 完全対は{307,1900}の一つ、空対は{1078,1129}の一つであり、他の対は片側を含む。

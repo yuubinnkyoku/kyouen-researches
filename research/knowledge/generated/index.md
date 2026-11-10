@@ -705,4 +705,4 @@
 | [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) | Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
 | [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) | Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
 | [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
-| [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) | 剰余放物線Q_2207の独立監査済み範囲は1104以上1105以下 | proposition | computed | maximum-safe, geometry, verification |
+| [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) | 剰余放物線Q_2207の最大安全サイズは1104（単一CNFのDRAT証明つき） | proposition | computed | maximum-safe, geometry, verification |

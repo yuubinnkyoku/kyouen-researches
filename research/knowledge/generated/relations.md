@@ -3930,7 +3930,7 @@
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 包含極大と最大サイズを区別する
 - → depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 指定1302点集合自体の安全性を確認した独立整数幾何receipt
 
-## [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) 剰余放物線Q_2207の独立監査済み範囲は1104以上1105以下
+## [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) 剰余放物線Q_2207の最大安全サイズは1104（単一CNFのDRAT証明つき）
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
