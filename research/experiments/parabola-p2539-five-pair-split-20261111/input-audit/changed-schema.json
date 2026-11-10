@@ -1,0 +1,107 @@
+{
+  "case": "changed",
+  "p": 2539,
+  "origin": 1,
+  "complete_pairs": 1,
+  "target_size": 1259,
+  "removed_exactly": 5,
+  "split_unit": -21,
+  "origin_deletion_cost": 0,
+  "nonzero_removed_exactly": 5,
+  "variables": 51570,
+  "clauses": 144546,
+  "onehot_clauses": 8883,
+  "point_base": 36512,
+  "point_definition_clauses": 7614,
+  "geometric_clauses": 38868,
+  "deletion_clauses": 25040,
+  "counters": [
+    {
+      "name": "BOTH-upper-one",
+      "clauses": 3803,
+      "bound": 1,
+      "inputs": 1269,
+      "domain": [
+        5077,
+        6344
+      ],
+      "rules": {
+        "input": 1268,
+        "carry": 1267,
+        "overflow": 1268
+      }
+    },
+    {
+      "name": "NONE-lower",
+      "clauses": 28923,
+      "bound": 1257,
+      "inputs": 1269,
+      "domain": [
+        6345,
+        21428
+      ],
+      "rules": {
+        "input": 12,
+        "carry": 13827,
+        "increment": 15072,
+        "overflow": 12
+      }
+    },
+    {
+      "name": "NONE-upper",
+      "clauses": 31413,
+      "bound": 12,
+      "inputs": 1269,
+      "domain": [
+        21429,
+        36512
+      ],
+      "rules": {
+        "input": 1257,
+        "carry": 15072,
+        "increment": 13827,
+        "overflow": 1257
+      }
+    },
+    {
+      "name": "nonzero-loss-lower",
+      "clauses": 11273,
+      "bound": 1252,
+      "inputs": 1257,
+      "domain": [
+        39051,
+        45310
+      ],
+      "rules": {
+        "input": 5,
+        "carry": 5008,
+        "increment": 6255,
+        "overflow": 5
+      }
+    },
+    {
+      "name": "nonzero-loss-upper",
+      "clauses": 13767,
+      "bound": 5,
+      "inputs": 1257,
+      "domain": [
+        45311,
+        51570
+      ],
+      "rules": {
+        "input": 1252,
+        "carry": 6255,
+        "increment": 5008,
+        "overflow": 1252
+      }
+    }
+  ],
+  "scope": "Every safe exact1259 set in this class losing exactly5 seed points, with B6 iff retained, extends to all recognized clauses. Actual geometric quadruples require independent determinant checks.",
+  "input_sha256": "0db9d47b642bdbee0979a0505e302623f3f61ad892aaf1f0f888de3537434845",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "schema_source_sha256": "878940fe30e6c71ddf48065b6e55480b33474c36436d744e7a45e4251e5dc050",
+  "prefix_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "geometry_stdout": "VERIFIED_EDGES 2539 38868\n",
+  "generic_source_sha256": "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c",
+  "wrapper_source_sha256": "9db79269574eee6d5f897aa446bb661686b67a93f8e6f25d612d1584e1d0f401"
+}

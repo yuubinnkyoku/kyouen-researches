@@ -1,0 +1,27 @@
+{
+  "cases": [
+    {
+      "case": "retained",
+      "status": "UNKNOWN",
+      "input_sha256": "64496e29f631e4f4090c103e571490f7959a30558462d9b4992ec668633f561b",
+      "parent_plus_unit_byte_exact": true,
+      "independent_schema_geometry": true,
+      "verified_safe": false,
+      "independent_unsat_proof": false
+    },
+    {
+      "case": "changed",
+      "status": "SOLVER_UNSAT",
+      "input_sha256": "0db9d47b642bdbee0979a0505e302623f3f61ad892aaf1f0f888de3537434845",
+      "parent_plus_unit_byte_exact": true,
+      "independent_schema_geometry": true,
+      "verified_safe": false,
+      "independent_unsat_proof": false
+    }
+  ],
+  "exhaustive_partition": true,
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "parent_input_sha256": "d23890f881d73064f41719de379346d80193fea8ec507a9f7fe0050edf73f40a",
+  "source_sha256": "69a2d1a075e4fd66e2159e3e6bdcc4519924d5e80941934a9334856f0b1b9bdc",
+  "scope": "Exhaustive B6/not B6 partition verified by byte comparison, schemas and real geometry. Solver-negative statuses remain unaudited here; only generic-verified positive witnesses establish lower bounds."
+}

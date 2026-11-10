@@ -10765,6 +10765,36 @@
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/schema.py](../../../research/experiments/parabola-p2539-exchange-audit-20261110/schema.py)
 
 - [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (verifier): SATライブラリや探索器をimportせず、各counter補助変数をprefix個数へ解釈して全節の拡張可能性を確認
+## [research/experiments/parabola-p2539-five-pair-split-20261111/README.md](../../../research/experiments/parabola-p2539-five-pair-split-20261111/README.md)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 完全対の位置も保つ部分集合論証、分割・モデル拡張、再現と限界
+## [research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/input.cnf.gz](../../../research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/input.cnf.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点・完全対一つ・exact五点損失の親CNFに[-B6]を加えた51570変数144546節
+## [research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/manifest.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/manifest.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 独立schema・整数幾何・RUP/LRAT受理、採用証明とローカル保持147349行LRATのhash・所在
+## [research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/verified-proof.drat.gz)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った483675行DRAT
+## [research/experiments/parabola-p2539-five-pair-split-20261111/input-audit/summary.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/input-audit/summary.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 親+相補単位節のbyte完全照合と両形状の独立schema・幾何確認
+## [research/experiments/parabola-p2539-five-pair-split-20261111/output/retained/result.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/output/retained/result.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 原点と元の完全対を保つexact五点損失はbudget100000でUNKNOWN、実conflicts100004
+## [research/experiments/parabola-p2539-five-pair-split-20261111/qualification.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/qualification.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 既存三形状排除と元の完全対変更の独立排除を同一seed・部分集合論証へ結合
+## [research/experiments/parabola-p2539-five-pair-split-20261111/regression.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/regression.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 16不正入力拒否と元の完全対に対応する実point・splitの128真理値割当て
+## [research/experiments/parabola-p2539-five-pair-split-20261111/replay.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/replay.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 採用CNF/DRATを独立schema・整数幾何・RUPとともに別処理再生
+## [research/experiments/parabola-p2539-five-pair-split-20261111/schema.py](../../../research/experiments/parabola-p2539-five-pair-split-20261111/schema.py)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 全構造節・損失counter・末尾のB6否定単位節を独立解釈
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/README.md](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/README.md)
 
 - [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (proof): 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証

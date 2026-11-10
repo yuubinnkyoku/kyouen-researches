@@ -1,0 +1,30 @@
+{
+  "case": "changed",
+  "parent_input_sha256": "d23890f881d73064f41719de379346d80193fea8ec507a9f7fe0050edf73f40a",
+  "input_sha256": "0db9d47b642bdbee0979a0505e302623f3f61ad892aaf1f0f888de3537434845",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "split_unit": -21,
+  "variables": 51570,
+  "clauses": 144546,
+  "origin": 1,
+  "complete_pairs": 1,
+  "target": 1259,
+  "removed_exactly": 5,
+  "point_base": 36512,
+  "conflict_budget": 100000,
+  "proof_enabled": true,
+  "source_sha256": "d3266f3e68aae6673377df3a2c91dbd5af5888495ffb053068612c93c41f7ffe",
+  "python_sat": "1.9.dev21",
+  "scope": "Frozen exact-five UNKNOWN input plus one unit B6 or not B6. Solver claims need independent audit; models need integer geometry.",
+  "status": "SOLVER_UNSAT",
+  "solve_seconds": 116.76238069999818,
+  "statistics": {
+    "restarts": 4114,
+    "conflicts": 99424,
+    "decisions": 245618,
+    "propagations": 376089533
+  },
+  "proof_complete": true,
+  "proof_sha256": "e2b27abee02214b755025608abb09a411a707797c7d8ae8ea559d98233f329c4",
+  "proof_lines": 483675
+}
