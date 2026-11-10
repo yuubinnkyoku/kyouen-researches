@@ -1,0 +1,35 @@
+{
+  "p": 2207,
+  "variables": 7720,
+  "clauses": 50616,
+  "structural_clauses": 18748,
+  "geometry_clauses": 31868,
+  "selectors": [
+    1,
+    4412
+  ],
+  "prefix_counter": [
+    4413,
+    5514
+  ],
+  "point_variables": [
+    5515,
+    7720
+  ],
+  "point_base": 5514,
+  "origin_both_none": [
+    1,
+    1,
+    0
+  ],
+  "method": "Explicit one-hot, Sinz exactly-one BOTH, NONE units and point definitions; no CardEnc or search encoder import.",
+  "input_sha256": "b408d22039c90ffbf4c862ec510118c410c05566473339cc22054bf3c3ea6cd9",
+  "source_cnf_path": "research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.cnf",
+  "original_drat_sha256": "f0ce140db899e4c9009fced1bc38aa753315d71bd8eb9f1498db0c74ad77a7ea",
+  "original_drat_lines": 497179,
+  "original_drat_path": "research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.drat.gz",
+  "edge_input_sha256": "648dbccf225c8087ae8333a4bc58ae5bff0bff24ed2aea76a9b73def4987207e",
+  "driver_source_sha256": "19f27738a13e7db74de11bc61552a21f0e0e51bb6fbcec3aabbc34fb0a85a831",
+  "schema_source_sha256": "7021cb8b23fae7e3935e439df43679158c94fdc0d204f884fdc8c577670699d2",
+  "scope": "Every safe 1105-set extends to these structural clauses; residual clauses must additionally pass integer geometry. No completeness of the supplied edge set is required for UNSAT exclusion."
+}
