@@ -1,0 +1,60 @@
+{
+  "cases": [
+    {
+      "name": "K0707-1-False",
+      "accepted": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 1 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879042304] 1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.108 seconds\n",
+      "stderr": "",
+      "input_sha256": "74e917203dcef0c02d02eb1979f1968fc086b1c074682526de22aa895b018706",
+      "proof_sha256": "71779c04a6da0872765f1a3054a3a818240b9c16e19918656f2b7fed16790793"
+    },
+    {
+      "name": "K0707-1-True",
+      "accepted": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 2 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879046144] 1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.098 seconds\n",
+      "stderr": "",
+      "input_sha256": "5f1a1ed0e54a1c5c460176fdbb824d857c82a10b818df7b07264db38ec4c317d",
+      "proof_sha256": "71779c04a6da0872765f1a3054a3a818240b9c16e19918656f2b7fed16790793"
+    },
+    {
+      "name": "K0707--1-False",
+      "accepted": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 1 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879045587] -1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.099 seconds\n",
+      "stderr": "",
+      "input_sha256": "694a0a24308ab4954193321cbef627d1e10548958f4905358c1187aca2cd7596",
+      "proof_sha256": "6fe7f2691fad024d335b2143f4403f0158dc507d5b847d5e2a7b5f15833fddb9"
+    },
+    {
+      "name": "K0707--1-True",
+      "accepted": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 3 variables and 2 clauses\n\nc WARNING: backward mode ignores deletion of (pseudo) unit clause [-1879033088] -1 0\n\nc finished parsing\n\nc conflict claimed, but not detected\n\ns NOT VERIFIED\n\nc verification time: 0.089 seconds\n",
+      "stderr": "",
+      "input_sha256": "b874b2872c95f78b6f5bb543f6910e31154461905746af43e4a64f20e63e2185",
+      "proof_sha256": "6fe7f2691fad024d335b2143f4403f0158dc507d5b847d5e2a7b5f15833fddb9"
+    },
+    {
+      "name": "resolution-unsat",
+      "accepted": true,
+      "returncode": 0,
+      "stdout": "\nc parsing input formula with 2 variables and 4 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 4 of 4 clauses in core                            \n\nc 2 of 3 lemmas in core using 5 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 0.086 seconds\n",
+      "stderr": "",
+      "input_sha256": "bdcfed14408fb3f368fe82437336d283a9dedc953677460e9c7317724c5e1e58",
+      "proof_sha256": "ed124fbf8ffd811c88b3cc955212778eacce7a20b83ad9c8e79a9729cfb9b0b9"
+    },
+    {
+      "name": "sat-direct-false-empty",
+      "accepted": false,
+      "returncode": 1,
+      "stdout": "\nc parsing input formula with 1 variables and 1 clauses\n\nc finished parsing\n\nc ERROR: no conflict\n\ns NOT VERIFIED\n\nc verification time: 0.077 seconds\n",
+      "stderr": "",
+      "input_sha256": "6642f3ff4fae6f869a53f303bc768802cec0a16af731686c6bf03f342cf0489e",
+      "proof_sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+    }
+  ],
+  "source_sha256": "78026871882de3f2fee66034e549e9c1a0a9a5291abd817d06f611f9ba0f355d",
+  "binary_sha256": "6e2af52e1e53cf194c06d4a4f046198e7ffe30bba29c7d76d3742358bc962f12"
+}

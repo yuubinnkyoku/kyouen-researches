@@ -10660,18 +10660,60 @@
 ## [research/experiments/parabola-p2539-exchange-20261110/maximal-output/verification.json](../../../research/experiments/parabola-p2539-exchange-20261110/maximal-output/verification.json)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 新規安全性receiptへのhash bindingと全阻止四点の独立Bareiss受理
+## [research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 固定する1258点集合S、SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
 ## [research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove3/result.json](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove3/result.json)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限3のソルバUNSATとローカル保持proof.drat.gzの解凍後hash・行数。独立未監査
 ## [research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/result.json](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/result.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限4のソルバUNSATとローカル保持228249行proof.drat.gzのhash。独立未監査
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限4の発見時のソルバ記録とローカル228249行DRATのhash。現在の独立監査はK0724
 ## [research/experiments/parabola-p2539-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-exchange-20261110/regression.json)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 小素数の13194三値割当てで点数下限・種からの削除上限・整数幾何を全数照合
 ## [research/experiments/parabola-p2539-exchange-20261110/search.py](../../../research/experiments/parabola-p2539-exchange-20261110/search.py)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (solver): 完全対d=6を保つ有界交換。補助変数の予約上限を保持した二つのcounter
+## [research/experiments/parabola-p2539-exchange-audit-20261110/README.md](../../../research/experiments/parabola-p2539-exchange-audit-20261110/README.md)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (proof): 安全候補から全CNF節を満たす補助変数への拡張証明、再現手順と信頼境界
+## [research/experiments/parabola-p2539-exchange-audit-20261110/lrat-controls.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/lrat-controls.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 空節処理修正の五制御。原版の偽受理を再現し、採用する局所修正版で拒否
+## [research/experiments/parabola-p2539-exchange-audit-20261110/output/core.lrat.gz](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/core.lrat.gz)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 元228249行DRATから抽出し局所修正版で検査した64571行LRAT
+## [research/experiments/parabola-p2539-exchange-audit-20261110/output/geometry.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/geometry.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 各幾何節に対応する38868四点をgeneric整数4x4行列式で実検査
+## [research/experiments/parabola-p2539-exchange-audit-20261110/output/input.cnf.gz](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/input.cnf.gz)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 23883変数・86583節、1259点以上かつ種からの削除上限4を課す採用入力
+## [research/experiments/parabola-p2539-exchange-audit-20261110/output/lrat.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/lrat.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 空節処理修正版LRAT検査器の受理
+## [research/experiments/parabola-p2539-exchange-audit-20261110/output/manifest.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/manifest.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (manifest): 固定種・CNF・採用圧縮LRAT・検査sourceのhashと局所排除の範囲
+## [research/experiments/parabola-p2539-exchange-audit-20261110/output/rup.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/rup.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 固定upstream DRAT-trimのRUP限定受理
+## [research/experiments/parabola-p2539-exchange-audit-20261110/output/schema.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/schema.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 全節を38868幾何節・5072 one-hot節・31388空対counter節・11255削除counter節へ独立照合
+## [research/experiments/parabola-p2539-exchange-audit-20261110/regression.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/regression.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 2064 prefix割当て、六つの破損schema、modular和0の非禁止四点の拒否
+## [research/experiments/parabola-p2539-exchange-audit-20261110/replay.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/replay.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 元DRAT・探索builder・辺cacheを読まない、採用圧縮CNF/LRATと独立schema・幾何の別処理実再生
+## [research/experiments/parabola-p2539-exchange-audit-20261110/rup-controls.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/rup-controls.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): K0707の四偽証明拒否・resolution受理・SAT偽空節拒否の六制御
+## [research/experiments/parabola-p2539-exchange-audit-20261110/schema.py](../../../research/experiments/parabola-p2539-exchange-audit-20261110/schema.py)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (verifier): SATライブラリや探索器をimportせず、各counter補助変数をprefix個数へ解釈して全節の拡張可能性を確認
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/README.md](../../../research/experiments/parabola-p2539-pair-pilot-20261110/README.md)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 再現手順・証拠の保存境界・探索と独立検査の区別

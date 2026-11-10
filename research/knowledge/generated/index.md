@@ -707,3 +707,4 @@
 | [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
 | [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) | 剰余放物線Q_2207の最大安全サイズは1104（単一CNFの独立schema・RUP/LRAT監査済み） | proposition | computed | maximum-safe, geometry, verification |
 | [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) | Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大 | proposition | computed | geometry, maximum-safe, maximal-safe, verification |
+| [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) | Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |

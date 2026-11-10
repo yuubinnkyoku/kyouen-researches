@@ -1,0 +1,378 @@
+{
+  "counter_cases": [
+    {
+      "inputs": 3,
+      "bound": 1,
+      "signed": false,
+      "assignments": 8,
+      "rules": {
+        "input": 2,
+        "carry": 1,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 3,
+      "bound": 1,
+      "signed": true,
+      "assignments": 8,
+      "rules": {
+        "input": 2,
+        "carry": 1,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 4,
+      "bound": 1,
+      "signed": false,
+      "assignments": 16,
+      "rules": {
+        "input": 3,
+        "carry": 2,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 4,
+      "bound": 1,
+      "signed": true,
+      "assignments": 16,
+      "rules": {
+        "input": 3,
+        "carry": 2,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 4,
+      "bound": 2,
+      "signed": false,
+      "assignments": 16,
+      "rules": {
+        "input": 2,
+        "carry": 2,
+        "increment": 2,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 4,
+      "bound": 2,
+      "signed": true,
+      "assignments": 16,
+      "rules": {
+        "input": 2,
+        "carry": 2,
+        "increment": 2,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 5,
+      "bound": 1,
+      "signed": false,
+      "assignments": 32,
+      "rules": {
+        "input": 4,
+        "carry": 3,
+        "overflow": 4
+      }
+    },
+    {
+      "inputs": 5,
+      "bound": 1,
+      "signed": true,
+      "assignments": 32,
+      "rules": {
+        "input": 4,
+        "carry": 3,
+        "overflow": 4
+      }
+    },
+    {
+      "inputs": 5,
+      "bound": 2,
+      "signed": false,
+      "assignments": 32,
+      "rules": {
+        "input": 3,
+        "carry": 4,
+        "increment": 3,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 5,
+      "bound": 2,
+      "signed": true,
+      "assignments": 32,
+      "rules": {
+        "input": 3,
+        "carry": 4,
+        "increment": 3,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 5,
+      "bound": 3,
+      "signed": false,
+      "assignments": 32,
+      "rules": {
+        "input": 2,
+        "carry": 3,
+        "increment": 4,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 5,
+      "bound": 3,
+      "signed": true,
+      "assignments": 32,
+      "rules": {
+        "input": 2,
+        "carry": 3,
+        "increment": 4,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 1,
+      "signed": false,
+      "assignments": 64,
+      "rules": {
+        "input": 5,
+        "carry": 4,
+        "overflow": 5
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 1,
+      "signed": true,
+      "assignments": 64,
+      "rules": {
+        "input": 5,
+        "carry": 4,
+        "overflow": 5
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 2,
+      "signed": false,
+      "assignments": 64,
+      "rules": {
+        "input": 4,
+        "carry": 6,
+        "increment": 4,
+        "overflow": 4
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 2,
+      "signed": true,
+      "assignments": 64,
+      "rules": {
+        "input": 4,
+        "carry": 6,
+        "increment": 4,
+        "overflow": 4
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 3,
+      "signed": false,
+      "assignments": 64,
+      "rules": {
+        "input": 3,
+        "carry": 6,
+        "increment": 6,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 3,
+      "signed": true,
+      "assignments": 64,
+      "rules": {
+        "input": 3,
+        "carry": 6,
+        "increment": 6,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 4,
+      "signed": false,
+      "assignments": 64,
+      "rules": {
+        "input": 2,
+        "carry": 4,
+        "increment": 6,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 6,
+      "bound": 4,
+      "signed": true,
+      "assignments": 64,
+      "rules": {
+        "input": 2,
+        "carry": 4,
+        "increment": 6,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 1,
+      "signed": false,
+      "assignments": 128,
+      "rules": {
+        "input": 6,
+        "carry": 5,
+        "overflow": 6
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 1,
+      "signed": true,
+      "assignments": 128,
+      "rules": {
+        "input": 6,
+        "carry": 5,
+        "overflow": 6
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 2,
+      "signed": false,
+      "assignments": 128,
+      "rules": {
+        "input": 5,
+        "carry": 8,
+        "increment": 5,
+        "overflow": 5
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 2,
+      "signed": true,
+      "assignments": 128,
+      "rules": {
+        "input": 5,
+        "carry": 8,
+        "increment": 5,
+        "overflow": 5
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 3,
+      "signed": false,
+      "assignments": 128,
+      "rules": {
+        "input": 4,
+        "carry": 9,
+        "increment": 8,
+        "overflow": 4
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 3,
+      "signed": true,
+      "assignments": 128,
+      "rules": {
+        "input": 4,
+        "carry": 9,
+        "increment": 8,
+        "overflow": 4
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 4,
+      "signed": false,
+      "assignments": 128,
+      "rules": {
+        "input": 3,
+        "carry": 8,
+        "increment": 9,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 4,
+      "signed": true,
+      "assignments": 128,
+      "rules": {
+        "input": 3,
+        "carry": 8,
+        "increment": 9,
+        "overflow": 3
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 5,
+      "signed": false,
+      "assignments": 128,
+      "rules": {
+        "input": 2,
+        "carry": 5,
+        "increment": 8,
+        "overflow": 2
+      }
+    },
+    {
+      "inputs": 7,
+      "bound": 5,
+      "signed": true,
+      "assignments": 128,
+      "rules": {
+        "input": 2,
+        "carry": 5,
+        "increment": 8,
+        "overflow": 2
+      }
+    }
+  ],
+  "total_assignments": 2064,
+  "rejected_schema_controls": [
+    "broken-onehot",
+    "wrong-empty-input-polarity",
+    "wrong-removal-polarity",
+    "aux-selection-alias",
+    "wrong-overflow-threshold",
+    "positive-geometric-clause"
+  ],
+  "geometry_controls": [
+    {
+      "name": "true-edge",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "modular-nonedge",
+      "actual": 4,
+      "expected": 4
+    }
+  ],
+  "schema_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "regression_source_sha256": "b5fb0fed1eecd9b2e05f4824aeb1aca74847b9189e48fc9e9b19202c8447511a",
+  "scope": "Exhaustive small prefix interpretations and corrupt-schema controls, including a modular-sum-zero nonedge. No general checker soundness proof."
+}

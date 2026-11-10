@@ -1,0 +1,24 @@
+{
+  "schema_verified": true,
+  "geometry": {
+    "returncode": 0,
+    "stdout": "VERIFIED_EDGES 2539 38868\n",
+    "stderr": "",
+    "timed_out": false,
+    "elapsed_seconds": 0.15837420000025304
+  },
+  "lrat": {
+    "returncode": 0,
+    "stdout": "c parsed a formula with 23883 variables and 86583 clauses\nc VERIFIED\nc allocated 1024 584434 238830\nc Added clauses = 124986.  Deleted clauses = 124672.  Max live clauses = 86583\nc verification time = 5.03 secs\n",
+    "stderr": "",
+    "timed_out": false,
+    "elapsed_seconds": 5.108174399998461
+  },
+  "input_sha256": "162e2736ff52378d6d0bbbee1eef1f2f4e252df189496dd30276203b9d7b416e",
+  "lrat_raw_sha256": "0d125830107c4095bf831ae3dc9023363952974ed9c2537db665f5f1fa1530e9",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "schema_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "fixed_lrat_source_sha256": "ca64680b89dde26ff2ea96b05c0fb926972eb307b74ffa18453e89a5da2988c8",
+  "replay_source_sha256": "5adbb44ad8adad888490b359e00611fb74003f892700ad3f4215ec771b8a32c8",
+  "scope": "Fresh process replay of adopted compressed proof and independent semantics; no SAT search, original DRAT, edge cache or search builder. Local fixed-origin/pair exclusion only."
+}

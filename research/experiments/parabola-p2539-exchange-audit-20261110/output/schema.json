@@ -1,0 +1,44 @@
+{
+  "p": 2539,
+  "d": 6,
+  "target": 1259,
+  "max_removed": 4,
+  "variables": 23883,
+  "clauses": 86583,
+  "geometric_clauses": 38868,
+  "onehot_clauses": 5072,
+  "empty_counter_clauses": 31388,
+  "removal_counter_clauses": 11255,
+  "empty_bound": 12,
+  "empty_inputs": 1268,
+  "removal_inputs": 1255,
+  "first_aux_domain": [
+    3808,
+    18879
+  ],
+  "second_aux_domain": [
+    18880,
+    23883
+  ],
+  "empty_counter_rules": {
+    "input": 1256,
+    "carry": 15060,
+    "increment": 13816,
+    "overflow": 1256
+  },
+  "removal_counter_rules": {
+    "input": 1251,
+    "carry": 5000,
+    "increment": 3753,
+    "overflow": 1251
+  },
+  "scope": "Every safe fixed-origin/fixed-pair set meeting size and deletion bounds extends to all audited clauses via prefix-count auxiliary assignments. Geometry still requires actual integer determinant checks.",
+  "input_sha256": "162e2736ff52378d6d0bbbee1eef1f2f4e252df189496dd30276203b9d7b416e",
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "edge_input_sha256": "34db9c5e0c8f250dd85b8897314dd4d3199d2713c647e22a6c85bd72f13f9c58",
+  "schema_source_sha256": "54e2d15ff11f35ba1e7b9a7323a3f5b9dc2bab8b729232bbd8ff6e3dcdf4d1a8",
+  "driver_source_sha256": "78fd1cce678a8ab4cd60060261e4ff6c5f84058517e8e2bf9e2dd1eea50e9abc",
+  "original_drat_path": "research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/proof.drat.gz",
+  "original_drat_sha256": "4337040de36e4000fcacf0c305e0cdb3f1e242d1b89834e8d29ac6a9ee9a7078",
+  "original_drat_lines": 228249
+}
