@@ -61,6 +61,15 @@ artifacts:
 - path: research/experiments/parabola-p2539-exchange-audit-20261110/README.md
   role: proof
   note: 安全候補から全CNF節を満たす補助変数への拡張証明、再現手順と信頼境界
+- path: research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json
+  role: data
+  note: 範囲外の四追加探索の入力byte監査。UNKNOWN一件・未独立検証のソルバUNSAT三件であり本命題を拡張しない
+- path: research/experiments/parabola-p2539-broader-exchange-20261110/regression.json
+  role: data
+  note: 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
+- path: research/experiments/parabola-p2539-broader-exchange-20261110/README.md
+  role: source
+  note: 追加探索の再現と、負のソルバ結果を独立排除へ採用していないことの説明
 scope: 指定1258点集合Sに対し、Q_2539内で0,6,2533を保ち、|S\T|<=4かつ|T|>=1259となる安全集合Tは存在しない。他の種、固定点の変更、5点以上の削除、条件なしの局所最適性、A(2539)=1258は主張しない。
 evidence: 独立schemaが全86583節の安全候補からの拡張可能性を確認。38868幾何節は真の禁止四点へ整数幾何で照合し、二counterの補助変数は互いに素な領域でprefix個数を表す。元DRATのRUP限定受理、抽出LRATの局所修正版受理、圧縮証明・schema・幾何・固定種の別処理再生が成功。
 ---
@@ -99,3 +108,7 @@ schemaは探索器・投影builder・CardEncをimportしない。幾何も辺cac
 これらは有限回帰であり、検査器やコンパイラの一般健全性の形式証明ではない。
 LRATはK0718の空節問題を修正した固定sourceを使い、原版の受理は根拠にしない。
 この局所排除はK0723の全体範囲1258≤A(2539)≤1271を狭めるものではない。
+
+固定対を保つ除去上限5の追加探索は10万衝突でUNKNOWNを記録した後に異常終了した。保存入力と出典は確認したが、未解決のままである。
+原点を保って完全対を変更する形の除去上限3・4、および完全対なしの除去上限4はソルバUNSATのみで、証明は未監査。
+これらは保存入力の出典確認と小例回帰に留まり、独立排除の範囲を広げない。

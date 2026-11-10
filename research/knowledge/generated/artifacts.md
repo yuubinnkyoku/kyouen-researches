@@ -10639,6 +10639,15 @@
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-batches-20261110/verify_saved.py)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 前段manifestのhash連鎖、新入力の独立投影schema、圧縮証明の実再生を照合
+## [research/experiments/parabola-p2539-broader-exchange-20261110/README.md](../../../research/experiments/parabola-p2539-broader-exchange-20261110/README.md)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (source): 追加探索の再現と、負のソルバ結果を独立排除へ採用していないことの説明
+## [research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 範囲外の四追加探索の入力byte監査。UNKNOWN一件・未独立検証のソルバUNSAT三件であり本命題を拡張しない
+## [research/experiments/parabola-p2539-broader-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/regression.json)
+
+- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
 ## [research/experiments/parabola-p2539-exchange-20261110/README.md](../../../research/experiments/parabola-p2539-exchange-20261110/README.md)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 交換探索・保存証拠監査・極大性証明の再現手順と非達成の未確定性

@@ -1,0 +1,22 @@
+{
+  "arguments": [
+    "C:\\Users\\yuubi\\AppData\\Local\\uv\\cache\\builds-v0\\.tmpXRq3oy\\Scripts\\python.exe",
+    "research\\experiments\\parabola-p2539-broader-exchange-20261110\\change_pair.py",
+    "--seed",
+    "research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt",
+    "--edges",
+    "research/experiments/parabola-p2539-pair-pilot-20261110/output/edges.txt.gz",
+    "--target",
+    "1259",
+    "--max-removed",
+    "4",
+    "--budget",
+    "100000",
+    "--output",
+    "research\\experiments\\parabola-p2539-broader-exchange-20261110\\output\\change-pair-target1259-remove4"
+  ],
+  "returncode": 0,
+  "stdout": "READY changed pair target 1259 vars 44062 clauses 130779\nSOLVER_UNSAT size None pair None seconds 14.123591300000044\n",
+  "stderr": "",
+  "elapsed_seconds": 15.748374499999045
+}
