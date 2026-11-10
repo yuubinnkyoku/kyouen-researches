@@ -700,3 +700,4 @@
 | [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) | 四次元二値立方体・共面四点禁止版は通常とmisèreの全局面を分類 | computation | computed | variants, geometry, grundy, maximal-safe, maximum-safe |
 | [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) | 二値立方体の重み2層における極小極大配置の上下界 | proposition | proved | variants, geometry, maximal-safe |
 | [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) | 二値立方体重み2層の9次元最小極大配置は11石 | computation | computed | variants, geometry, maximal-safe |
+| [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) | 二値立方体重み2層の10次元最小極大配置は12石 | computation | computed | variants, geometry, maximal-safe |

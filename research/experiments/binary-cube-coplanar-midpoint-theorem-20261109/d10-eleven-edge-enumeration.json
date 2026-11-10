@@ -1,0 +1,15 @@
+{
+  "vertices": 10,
+  "edges": 11,
+  "fixed_edge": [0, 1],
+  "all_fixed_edge_candidates": 2481256778,
+  "connected_pruning_source_sha256": "4cf689492276001533972098ffe7d7b0ecd9b5db545a502e2205f3017c6ea082",
+  "connected_search_nodes": 783034750,
+  "connected_c4_free": 398428800,
+  "connected_saturated": 0,
+  "unpruned_source_sha256": "516e02dedf62a620827224a1d0036ba64154a27e0c4d7d1598819df976e90f87",
+  "unpruned_search_nodes": 800601736,
+  "all_c4_free": 506030448,
+  "unpruned_saturated": 0,
+  "limitation": "Both searches share the C4 and saturation predicate; the SAT encoding has not established UNSAT."
+}

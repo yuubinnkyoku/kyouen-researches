@@ -481,6 +481,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 全保存配置を同型判定し代表と自己同型数を集計
@@ -493,6 +496,18 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/input.cnf.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/input.cnf.gz)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 上記試行の固定辺・11辺のCNF
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/result.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 別SAT符号化の30万衝突探索はUNKNOWN
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-2m-20261110/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-2m-20261110/result.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 同一CNFの200万衝突探索もUNKNOWN
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 2回の列挙の集計、検査器のhashと証拠上の制約
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 6同型類の代表ビットマスクと個数・自己同型数
@@ -514,6 +529,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形ビットマスクと固定サイズ部分集合走査による独立列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結性枝刈りなしの再列挙。C4判定は共有する
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=6における禁止四点数と全二点・三点の照合
@@ -532,6 +550,15 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 偶奇それぞれの構成の有限検算結果
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation-sat-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation-sat-small-audit.json)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 小グラフ16925件について直接検査とSATの一致
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation_sat.py)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 四角形禁止・欠辺ごとの長さ3の道・辺数を用いる別のSAT符号化
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/search_sparse_c4_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/search_sparse_c4_n10.cpp)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結可能性で枝刈りする固定辺・11辺の安全配置列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 2実装で一致した安全配置と極大配置の集計・ソースhash
@@ -553,6 +580,7 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 偶数次元の構成と全欠辺の極大性の証明
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (certificate): 10次元12辺の包含極大C4禁止構成
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明
