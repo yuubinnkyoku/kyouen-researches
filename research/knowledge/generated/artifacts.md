@@ -10639,21 +10639,48 @@
 ## [research/experiments/parabola-p2531-lrat-batches-20261110/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-batches-20261110/verify_saved.py)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 前段manifestのhash連鎖、新入力の独立投影schema、圧縮証明の実再生を照合
+## [research/experiments/parabola-p2539-exchange-20261110/README.md](../../../research/experiments/parabola-p2539-exchange-20261110/README.md)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 交換探索・保存証拠監査・極大性証明の再現手順と非達成の未確定性
+## [research/experiments/parabola-p2539-exchange-20261110/audit-output/summary.json](../../../research/experiments/parabola-p2539-exchange-20261110/audit-output/summary.json)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 1255〜1258点の全モデル・入力byte再生成・独立整数幾何。二つの負の結果はソルバ主張のまま
+## [research/experiments/parabola-p2539-exchange-20261110/audit.py](../../../research/experiments/parabola-p2539-exchange-20261110/audit.py)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): 全モデルを直接評価して点を別に抽出し、探索辺・CNFに依存しない整数幾何を実行
+## [research/experiments/parabola-p2539-exchange-20261110/certify_maximal.py](../../../research/experiments/parabola-p2539-exchange-20261110/certify_maximal.py)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): 現在の安全性receiptへ結び付け、全補集合の明示四点を別Bareiss検査へ渡す
+## [research/experiments/parabola-p2539-exchange-20261110/maximal-output/blockers.txt](../../../research/experiments/parabola-p2539-exchange-20261110/maximal-output/blockers.txt)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 現在の集合外1281点すべてに対する、追加点と既存三点からなる明示禁止四点
+## [research/experiments/parabola-p2539-exchange-20261110/maximal-output/candidate.txt](../../../research/experiments/parabola-p2539-exchange-20261110/maximal-output/candidate.txt)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 現在の1258パラメータ。SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
+## [research/experiments/parabola-p2539-exchange-20261110/maximal-output/verification.json](../../../research/experiments/parabola-p2539-exchange-20261110/maximal-output/verification.json)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 新規安全性receiptへのhash bindingと全阻止四点の独立Bareiss受理
+## [research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove3/result.json](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove3/result.json)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限3のソルバUNSATとローカル保持proof.drat.gzの解凍後hash・行数。独立未監査
+## [research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/result.json](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/result.json)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限4のソルバUNSATとローカル保持228249行proof.drat.gzのhash。独立未監査
+## [research/experiments/parabola-p2539-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-exchange-20261110/regression.json)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 小素数の13194三値割当てで点数下限・種からの削除上限・整数幾何を全数照合
+## [research/experiments/parabola-p2539-exchange-20261110/search.py](../../../research/experiments/parabola-p2539-exchange-20261110/search.py)
+
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (solver): 完全対d=6を保つ有界交換。補助変数の予約上限を保持した二つのcounter
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/README.md](../../../research/experiments/parabola-p2539-pair-pilot-20261110/README.md)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 再現手順・証拠の保存境界・探索と独立検査の区別
-## [research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/blockers.txt](../../../research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/blockers.txt)
-
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 集合外1285点すべてに対する、追加点と既存三点からなる明示禁止四点
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/candidate.txt](../../../research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/candidate.txt)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 本項で固定する1254パラメータ。SHA-256 36205b39cc3826c010156db5e52623668e48029968971dd72455419f28f4914b
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 改善前の1254点極大集合。今回の四段階の交換の種として保持
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/trials.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/trials.json)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 九つの貪欲拡張trialと最良集合の由来。全trialの独立安全性は主張しない
-## [research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/verification.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/verification.json)
-
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 安全性と全阻止四点のC++整数幾何検査、入力・source hash
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/local-output/summary.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/local-output/summary.json)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 三つの局所探索からの修復結果。最良1253点を独立幾何で検査してから拡張
@@ -10671,7 +10698,7 @@
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 小素数192割当ての符号化全数照合、修復制御、不正阻止証拠五種の拒否
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/replay.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/replay.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 保存集合の別処理実再生と、全阻止四点のPython Bareiss独立検査、五制御
+- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 改善前1254点集合の別処理実再生と全1285阻止四点のPython Bareiss独立検査、五制御
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py](../../../research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py)
 
 - [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): ソルバ・辺cache・局所モデルを読まず固定集合と全阻止証拠を再検査

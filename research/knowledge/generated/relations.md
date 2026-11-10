@@ -3899,6 +3899,7 @@
 
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 禁止四点から固定完全対dへの直接投影節の定義
 - → generalizes [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
+- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による
 
 ## [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完
 
@@ -3942,9 +3943,10 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
 
-## [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) Q_2539の安全最大サイズは1254以上1271以下、保存1254点集合は包含極大
+## [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2をp=2539に適用
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 固定集合の包含極大性と最大サイズを区別する
+- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による

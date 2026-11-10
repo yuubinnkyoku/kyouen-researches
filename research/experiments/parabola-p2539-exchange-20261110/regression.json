@@ -1,0 +1,156 @@
+{
+  "rows": [
+    {
+      "p": 5,
+      "target": 3,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 2,
+      "assignments": 3
+    },
+    {
+      "p": 5,
+      "target": 3,
+      "max_removed": 1,
+      "sat": 3,
+      "unsat": 0,
+      "assignments": 3
+    },
+    {
+      "p": 5,
+      "target": 3,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 2,
+      "assignments": 3
+    },
+    {
+      "p": 5,
+      "target": 3,
+      "max_removed": 1,
+      "sat": 3,
+      "unsat": 0,
+      "assignments": 3
+    },
+    {
+      "p": 5,
+      "target": 4,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 2,
+      "assignments": 3
+    },
+    {
+      "p": 5,
+      "target": 4,
+      "max_removed": 1,
+      "sat": 2,
+      "unsat": 1,
+      "assignments": 3
+    },
+    {
+      "p": 7,
+      "target": 3,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 8,
+      "assignments": 9
+    },
+    {
+      "p": 7,
+      "target": 3,
+      "max_removed": 2,
+      "sat": 9,
+      "unsat": 0,
+      "assignments": 9
+    },
+    {
+      "p": 7,
+      "target": 4,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 8,
+      "assignments": 9
+    },
+    {
+      "p": 7,
+      "target": 4,
+      "max_removed": 2,
+      "sat": 8,
+      "unsat": 1,
+      "assignments": 9
+    },
+    {
+      "p": 7,
+      "target": 5,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 8,
+      "assignments": 9
+    },
+    {
+      "p": 7,
+      "target": 5,
+      "max_removed": 2,
+      "sat": 4,
+      "unsat": 5,
+      "assignments": 9
+    },
+    {
+      "p": 17,
+      "target": 3,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 2186,
+      "assignments": 2187
+    },
+    {
+      "p": 17,
+      "target": 3,
+      "max_removed": 2,
+      "sat": 97,
+      "unsat": 2090,
+      "assignments": 2187
+    },
+    {
+      "p": 17,
+      "target": 9,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 2186,
+      "assignments": 2187
+    },
+    {
+      "p": 17,
+      "target": 9,
+      "max_removed": 2,
+      "sat": 76,
+      "unsat": 2111,
+      "assignments": 2187
+    },
+    {
+      "p": 17,
+      "target": 10,
+      "max_removed": 0,
+      "sat": 1,
+      "unsat": 2186,
+      "assignments": 2187
+    },
+    {
+      "p": 17,
+      "target": 10,
+      "max_removed": 2,
+      "sat": 27,
+      "unsat": 2160,
+      "assignments": 2187
+    }
+  ],
+  "total_assignments": 13194,
+  "rejected_models": [
+    "missing",
+    "duplicate",
+    "false-clause"
+  ],
+  "source_sha256": "f8e7c743921bc7782a03a3e8421c3554b56d41643c68a954c0566d67eb06991c",
+  "scope": "Small-prime exhaustive bounded deletion and target semantics with real geometric edges, including trivial cardinality bounds. Not a general implementation proof."
+}

@@ -1,0 +1,32 @@
+{
+  "p": 2539,
+  "d": 6,
+  "seed_path": "research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt",
+  "seed_size": 1258,
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "target": 1259,
+  "max_removed": 4,
+  "conflict_budget": 100000,
+  "variables": 23883,
+  "clauses": 86583,
+  "prior_top": 18879,
+  "seed_literals": 1255,
+  "input_sha256": "162e2736ff52378d6d0bbbee1eef1f2f4e252df189496dd30276203b9d7b416e",
+  "edge_input_sha256": "30e5d500f658a7a245fdff3e5c7830dc62b376632f2a6c1e75dea08552671dff",
+  "source_sha256": "acdc5883d25595e56166059d8485a4dd962155e764135922a3982300e10958fc",
+  "ternary_source_sha256": "9b96e84cc63ceaa31b317e5db1eec86552cf8b9ed8e9f01b62fc7332fe9f3681",
+  "projection_source_sha256": "1c535d52c9e5841bbbb448e2a75a3fe3067b87a44620ebd37b4666cc0a46e070",
+  "python_sat": "1.9.dev21",
+  "scope": "Fixed origin and complete pair; bounded deletions. Negative solver results give no global upper bound. Positive geometry is checked separately.",
+  "status": "SOLVER_UNSAT",
+  "solve_seconds": 19.26572750000014,
+  "statistics": {
+    "restarts": 1850,
+    "conflicts": 40436,
+    "decisions": 93300,
+    "propagations": 105053618
+  },
+  "proof_sha256": "4337040de36e4000fcacf0c305e0cdb3f1e242d1b89834e8d29ac6a9ee9a7078",
+  "proof_lines": 228249,
+  "independent_proof_audit": "NOT_RUN"
+}

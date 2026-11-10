@@ -3,12 +3,12 @@
 現在の結論は[K0723](../../knowledge/items/K0723-p2539-safe-bound-and-maximal-witness.md)を参照する。
 このexperimentは2026-11-10の入力・出力を凍結する。既存出力を上書きしない。
 生成した出力directoryとreceiptの出力pathには未使用の名前を指定する。
-rootのlocked uv環境（実行時python-sat 1.9.dev21）とg++を使う。
+rootのlocked uv環境とg++を使う。SAT依存は--withで実行時のpython-sat 1.9.dev21を指定する。
 
 ## 再現
 
 ```sh
-uv run --locked python research/experiments/parabola-p2539-pair-pilot-20261110/pilot.py --edges research/experiments/parabola-p2539-pair-pilot-20261110/output/edges.txt.gz --output FRESH-pilot
+uv run --locked --with python-sat==1.9.dev21 python research/experiments/parabola-p2539-pair-pilot-20261110/pilot.py --edges research/experiments/parabola-p2539-pair-pilot-20261110/output/edges.txt.gz --output FRESH-pilot
 uv run --locked python research/experiments/parabola-p2539-pair-pilot-20261110/local.py --saved research/experiments/parabola-p2539-pair-pilot-20261110/output --output FRESH-local
 uv run --locked python research/experiments/parabola-p2539-pair-pilot-20261110/augment.py --saved research/experiments/parabola-p2539-pair-pilot-20261110/output --repaired research/experiments/parabola-p2539-pair-pilot-20261110/local-output --output FRESH-augmented
 uv run --locked python research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py --saved research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output --output FRESH-replay.json
