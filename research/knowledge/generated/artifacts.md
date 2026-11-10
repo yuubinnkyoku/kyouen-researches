@@ -537,7 +537,7 @@
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形ビットマスクと固定サイズ部分集合走査による独立列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp)
 
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 別の四角形マスク方式による固定辺候補の列挙
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 別の四角形マスク方式による全固定辺候補の独立列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結性枝刈りなしの再列挙。C4判定は共有する

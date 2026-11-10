@@ -11,5 +11,9 @@
   "unpruned_search_nodes": 800601736,
   "all_c4_free": 506030448,
   "unpruned_saturated": 0,
-  "limitation": "Both searches share the C4 and saturation predicate; the SAT encoding has not established UNSAT."
+  "cycle_mask_source_sha256": "8b37b625dd38411a64ddc10bf92159cc3ff441427538aaa333e4687176e54599",
+  "cycle_mask_checked": 2481256778,
+  "cycle_mask_c4_free": 506030448,
+  "cycle_mask_saturated": 0,
+  "limitation": "The two adjacency searches share their predicate; the cycle-mask enumeration is independent. The SAT encoding has not established UNSAT."
 }
