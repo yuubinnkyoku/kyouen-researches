@@ -106,6 +106,9 @@ artifacts:
 - path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/drat-trim-check.json
   role: data
   note: DRAT-trimによる証明受理・打切り拒否と入力・検査器のhash
+- path: research/experiments/parabola-1296-warm-start-20261109/check_drat_trim.py
+  role: verifier
+  note: 固定版DRAT-trimのコンパイル、入力と証明のhash照合、証明受理と打切り拒否の再現
 - path: research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/candidate.txt
   role: certificate
   note: 先行する1302点証人。新たなSAT探索のphaseとしても使用

@@ -9781,6 +9781,9 @@
 ## [research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py](../../../research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 局所CNFの再生成と符号付き削除数制約の小規模全数照合
+## [research/experiments/parabola-1296-warm-start-20261109/check_drat_trim.py](../../../research/experiments/parabola-1296-warm-start-20261109/check_drat_trim.py)
+
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 固定版DRAT-trimのコンパイル、入力と証明のhash照合、証明受理と打切り拒否の再現
 ## [research/experiments/parabola-1296-warm-start-20261109/check_local_incremental.py](../../../research/experiments/parabola-1296-warm-start-20261109/check_local_incremental.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 修正版増分検査器による証明受理と打切り拒否を再現
