@@ -3889,7 +3889,12 @@
 
 - → depends_on [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): 共面四点数の公式と二値立方体の長方形構造
 - ← depends_on [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md): 全次元の共面四点と中点一致の同値。有限計算は整数アフィン小行列式でも独立に判定
+- ← depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): 重み2層の共面四点禁止と完全グラフ上のC4禁止の同値
 
 ## [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) 四次元二値立方体・共面四点禁止版は通常とmisèreの全局面を分類
 
 - → depends_on [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md): 全次元の共面四点と中点一致の同値。有限計算は整数アフィン小行列式でも独立に判定
+
+## [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) 二値立方体の重み2層における極小極大配置の上下界
+
+- → depends_on [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md): 重み2層の共面四点禁止と完全グラフ上のC4禁止の同値

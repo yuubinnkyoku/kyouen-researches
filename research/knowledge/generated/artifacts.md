@@ -478,6 +478,9 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-audit.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): 各次元・重みの禁止四点数
@@ -499,6 +502,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/proof.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/proof.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 単射な二座標射影による共面四点と平行四辺形の同値
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 偶奇それぞれの構成の有限検算結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 三点のxorによる一意補完と少数派条件の全称証明
@@ -508,6 +514,15 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..7の全四点・三点・二点の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-c4-saturation-unicyclic-classification-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-c4-saturation-unicyclic-classification-20261110.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): n辺以下の極大C4禁止グラフの分類とn>=7でのn+1下界
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 偶数次元の構成と全欠辺の極大性の証明
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
