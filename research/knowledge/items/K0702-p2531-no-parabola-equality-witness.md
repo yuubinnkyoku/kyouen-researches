@@ -1,8 +1,8 @@
 ---
 id: K0702
-title: p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
+title: p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・単一DRAT証明つき）
 kind: proposition
-status: needs-review
+status: computed
 topics: [maximum-safe, geometry, search-methods]
 aliases: []
 relations:
@@ -19,6 +19,12 @@ relations:
   target: K0101
   note: 全奇素数での等号を否定する2番目の反例候補
 artifacts:
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json
+  role: certificate
+  note: サイズ1267（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明190,979行を修正版検証器でVERIFIED（103.5秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/a2531_1267.drat.gz
+  role: certificate
+  note: 上記のDRAT証明（gzip、SHA-256はreceipt.json）
 - path: research/experiments/parabola-p2531-lrat-batches-20261110/output/batch302-500/plan.json
   role: manifest
   note: d=302..500から既被覆11件を集合差で除く188件の計画。前段351 dとsource hashを固定

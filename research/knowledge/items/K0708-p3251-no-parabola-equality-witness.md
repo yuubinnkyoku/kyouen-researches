@@ -1,8 +1,8 @@
 ---
 id: K0708
-title: p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目）
+title: p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目・単一DRAT証明つき）
 kind: proposition
-status: needs-review
+status: computed
 topics: [maximum-safe, geometry, search-methods]
 aliases: []
 relations:
@@ -22,6 +22,12 @@ relations:
   target: K0707
   note: DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 artifacts:
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json
+  role: certificate
+  note: サイズ1627（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明229,866行を修正版検証器でVERIFIED（185.6秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz
+  role: certificate
+  note: 上記のDRAT証明（gzip、SHA-256はreceipt.json）
 - path: research/experiments/parabola-equality-extension-2143-2500-20261107/output/deep_scan_3251.json
   role: data
   note: d=1625..1の全数走査（UNSAT 1625・unknown 0・SAT 0、4,694秒）

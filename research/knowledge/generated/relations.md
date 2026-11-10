@@ -3766,13 +3766,14 @@
 - ← depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 共通pivot付き二点辺の通常値閉形式で一手前g1を確定
 - ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 同じ純三点共通pivot族の通常値上界とリンク子値による初期g1
 
-## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
+## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立監査済み）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する反例候補。監査により確定する
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないことを示す2例目
 - ← supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないこと
+- ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 全1105点集合を覆う単一CNFの独立schema・幾何・RUP/LRAT監査による上界1104
 
 ## [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる
 
@@ -3830,7 +3831,7 @@
 - → depends_on [K0041](../items/K0041-grundy-ceiling-and-saturation.md): 通常Grundyは最大追加手数以下であり、基本対はその両端を達成
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 占有・不合法点を除いた残余グラフとのゲーム同型
 
-## [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
+## [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・単一DRAT証明つき）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
@@ -3874,7 +3875,7 @@
 
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
-## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目）
+## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目・単一DRAT証明つき）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
@@ -3930,8 +3931,9 @@
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 包含極大と最大サイズを区別する
 - → depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 指定1302点集合自体の安全性を確認した独立整数幾何receipt
 
-## [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) 剰余放物線Q_2207の最大安全サイズは1104（単一CNFのDRAT証明つき）
+## [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) 剰余放物線Q_2207の最大安全サイズは1104（単一CNFの独立schema・RUP/LRAT監査済み）
 
+- → depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 全1105点集合を覆う単一CNFの独立schema・幾何・RUP/LRAT監査による上界1104
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件

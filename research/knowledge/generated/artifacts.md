@@ -10404,6 +10404,18 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.drat.gz)
 
 - [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): 上記CNFのDRAT証明（解凍後497,179行、SHA-256 F0CE140D...D77A7EA）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/a2531_1267.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/a2531_1267.drat.gz)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): 上記のDRAT証明（gzip、SHA-256はreceipt.json）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json)
+
+- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): サイズ1267（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明190,979行を修正版検証器でVERIFIED（103.5秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz)
+
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): 上記のDRAT証明（gzip、SHA-256はreceipt.json）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json)
+
+- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): サイズ1627（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明229,866行を修正版検証器でVERIFIED（185.6秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
@@ -10450,6 +10462,44 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/README.md](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/README.md)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (source): 全1105点安全集合からCNFモデルを構成する論理、独立監査・再生と信頼境界
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/audit.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/audit.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 保存CNFの独立schemaと全提供幾何節、元DRATのRUP限定検査と空節処理修正版LRATを実検査
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/geometry.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/geometry.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 全31868提供辺をgeneric整数4x4行列式で禁止四点と確認。辺集合の完全性はUNSAT排除に不要
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/lrat.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/lrat.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 空節処理修正版LRATで187955行の抽出証明を実検査して受理
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/manifest.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/manifest.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (manifest): Git管理する採用CNF・LRAT gzipと保持した元DRATの所在、raw・gzip hashと検査器source hash
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (manifest): 独立schemaと幾何を照合した上界CNF・採用LRAT gzipの所在とhash、二実装の検査記録
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/regression.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/regression.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 1104状態の存在射影と6改変拒否、schemaだけでは通る非辺を幾何検査で拒否
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/replay.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/replay.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 採用圧縮証明の別処理での実再生、全bindingの照合と独立上界1104
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 圧縮CNF・LRATの別処理実再生と、既存の1104点下界receipt・入力hashの結び付け
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/rup.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/rup.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 元497179行DRATを固定DRAT-trim -Uで受理し、RUPだけのcoreを抽出
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/schema.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/schema.json)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (manifest): 7720変数・50616節を18748構造節と31868幾何節へ全分離し、予約ID範囲と元証拠hashを保存
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/regression.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/regression.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 小素数で状態とcounter補助変数を全列挙し、schema改変6件と独立幾何の正負制御を検査
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/replay.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/replay.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 配布するCNF・LRAT gzipを別処理で実再生し、source・schema・幾何・証拠hashと既存下界を照合
+## [research/experiments/parabola-p2207-single-cnf-audit-20261110/schema.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/schema.py)
+
+- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): CardEncと探索builderを使わずone-hot・明示Sinz counter・NONE単位節・点定義を再構成し、残余幾何節を分離
 ## [research/experiments/parabola-p2531-lrat-20261109/README.md](../../../research/experiments/parabola-p2531-lrat-20261109/README.md)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): 入力・証拠・各検査の再現、異なる検査方法の被覆和と全数未完了の区別
