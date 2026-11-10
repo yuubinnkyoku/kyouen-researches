@@ -10262,6 +10262,7 @@
 ## [research/experiments/parabola-local-repair-20261109/verify_subset.cpp](../../../research/experiments/parabola-local-repair-20261109/verify_subset.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 探索・CNF・edge cacheを読まない独立整数幾何検査器
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (verifier): CNFや探索辺を読み込まないgeneric 4x4 Leibniz整数行列式と完全合同式フィルタ
 ## [research/experiments/parabola-local-repair-20261109/walk_initial.cpp](../../../research/experiments/parabola-local-repair-20261109/walk_initial.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 実際の100万flip・seed20261109の局所探索ソース
@@ -10363,6 +10364,24 @@
 ## [research/experiments/parabola-neighborhood-lrat-20261109/verify_saved.py](../../../research/experiments/parabola-neighborhood-lrat-20261109/verify_saved.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 実入力のbyte再生成、補助変数領域、元DRAT・LRAT・ソース・制御例を照合
+## [research/experiments/parabola-p2207-1104-witness-20261110/README.md](../../../research/experiments/parabola-p2207-1104-witness-20261110/README.md)
+
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (source): 固定点集合の出所・独立幾何検査・再現手順と最大値の信頼境界
+## [research/experiments/parabola-p2207-1104-witness-20261110/audit.py](../../../research/experiments/parabola-p2207-1104-witness-20261110/audit.py)
+
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (verifier): 候補抽出・点集合と対構造の照合・generic整数幾何の独立実行・5制御例
+## [research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt)
+
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): SHA-256 ce97d4a9447fd32cd67e3cfad59151774fa45cf90c8985287abb1a45480e2347の1104パラメータ
+## [research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json)
+
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 安全三点の受理、二完全対の禁止四点・重複・入力打切り・合成数の拒否
+## [research/experiments/parabola-p2207-1104-witness-20261110/output/extraction.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/extraction.json)
+
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (manifest): 元JSON・抽出入力・driver・幾何検査器のhashと完全対・空対の対応
+## [research/experiments/parabola-p2207-1104-witness-20261110/output/geometry.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/geometry.json)
+
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 全61560516876四点の被覆と27941252整数行列式の非零を確認した実検査
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
@@ -10408,6 +10427,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_c_2207.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_c_2207.json)
+
+- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 保存されたshape cのSAT候補。safe_against_edgesの自己判定だけでは採用しない
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 旧4形状UNSAT記録。000/101はK0721の変数衝突があり、幾何上界の根拠への採用を保留

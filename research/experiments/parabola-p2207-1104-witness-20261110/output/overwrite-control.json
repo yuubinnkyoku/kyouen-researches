@@ -1,0 +1,21 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--locked",
+    "python",
+    "research\\experiments\\parabola-p2207-1104-witness-20261110\\audit.py",
+    "--output",
+    "research\\experiments\\parabola-p2207-1104-witness-20261110\\output"
+  ],
+  "returncode": 1,
+  "expected_rejection": "FileExistsError",
+  "existing_output_hashes_unchanged": true,
+  "original_files_checked": {
+    "candidate.txt": "ce97d4a9447fd32cd67e3cfad59151774fa45cf90c8985287abb1a45480e2347",
+    "controls.json": "dcf4a6cae71f9b3c040c79936e18a9137a4777d805a764b43a7aa943d5041db7",
+    "extraction.json": "b9240e777ffa12be816b35e131ac655ce59fda2a343589a5877fb378cb3d8b76",
+    "geometry.json": "2dde2e5cfd4247694b455218c9959cc01894c410c2f7c499d01aa564efc53a57"
+  },
+  "scope": "Reject repeat use of an existing output directory without modifying evidence."
+}
