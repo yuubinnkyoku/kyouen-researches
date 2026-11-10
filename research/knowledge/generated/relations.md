@@ -3898,3 +3898,8 @@
 ## [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) 二値立方体の重み2層における極小極大配置の上下界
 
 - → depends_on [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md): 重み2層の共面四点禁止と完全グラフ上のC4禁止の同値
+- ← depends_on [K0716](../items/K0716-weight-two-d9-saturation-minimum.md): 重み2層のC4対応、9次元の10石下界と11石構成
+
+## [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) 二値立方体重み2層の9次元最小極大配置は11石
+
+- → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): 重み2層のC4対応、9次元の10石下界と11石構成

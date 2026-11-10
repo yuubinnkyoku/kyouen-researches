@@ -487,6 +487,12 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_c4.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_c4.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 隣接ビット集合によるC4生成判定と安全な辺集合の再帰列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形ビットマスクと固定サイズ部分集合走査による独立列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=6における禁止四点数と全二点・三点の照合
@@ -505,6 +511,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 偶奇それぞれの構成の有限検算結果
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json)
+
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 2実装で一致した安全配置と極大配置の集計・ソースhash
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 三点のxorによる一意補完と少数派条件の全称証明
@@ -523,6 +532,7 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明
+- [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (certificate): 9次元11辺の包含極大C4禁止構成
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
