@@ -1,0 +1,49 @@
+{
+  "source_sha256": "f3ca2af05fc3eaf66fdfdd72c6eea78942466dfde885adc7095272620a69b234",
+  "generator_sha256": "1c535d52c9e5841bbbb448e2a75a3fe3067b87a44620ebd37b4666cc0a46e070",
+  "independent_schema_source_sha256": "7f55e54ab8a2fa9b0f6ec61d840ffbb95066d77fe64cf68f0ca00ee39a7fc263",
+  "edge_input_sha256": "2ec500ff16c2e0141d26291f5dc7d412a2c81598fad50459a434a4ccded509d3",
+  "trim_source_sha256": "78026871882de3f2fee66034e549e9c1a0a9a5291abd817d06f611f9ba0f355d",
+  "fixed_lrat_source_sha256": "ca64680b89dde26ff2ea96b05c0fb926972eb307b74ffa18453e89a5da2988c8",
+  "python_sat": "1.9.dev21",
+  "trim_binary_sha256": "4618e0f881cd87b653f1e232178042634eccf355295638876dcbefed984268b8",
+  "lrat_binary_sha256": "a6330133d7a71c6434c349b6981c2312082e28e981ff7ad5019e23746e85ac6f",
+  "p": 2531,
+  "d": 158,
+  "variables": 1265,
+  "clauses": 38160,
+  "input_sha256": "205e79696b3eef559f999323b1d6eb3bace6ddc4f78d6ba9ee9e71528bffd783",
+  "conflict_budget": 100000,
+  "verified": true,
+  "independent_projection_schema_equal": true,
+  "original_drat_distribution": "local gzip retained; adopted CNF and LRAT distributed",
+  "solver": "UNSAT",
+  "solve_seconds": 4.884848599999941,
+  "statistics": {
+    "restarts": 1797,
+    "conflicts": 32257,
+    "decisions": 64338,
+    "propagations": 3216843
+  },
+  "proof_sha256": "a5eb48004c2afeb782a51a0769e8a47de5f86875c10f37508ea3d502a8c8690a",
+  "proof_lines": 173210,
+  "trim": {
+    "returncode": 0,
+    "stdout": "\nc parsing input formula with 1265 variables and 38160 clauses\n\nc finished parsing\n\nc detected empty clause; start verification via backward checking\n\nc 12441 of 38160 clauses in core                            \n\nc 31839 of 80062 lemmas in core using 1178753 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\ns VERIFIED\n\nc verification time: 2.570 seconds\n",
+    "stderr": "",
+    "seconds": 2.607063199999857,
+    "timed_out": false,
+    "verified": true
+  },
+  "lrat": {
+    "returncode": 0,
+    "stdout": "c parsed a formula with 1265 variables and 38160 clauses\nc VERIFIED\nc allocated 1024 257580 28462\nc Added clauses = 69999.  Deleted clauses = 69889.  Max live clauses = 38160\nc verification time = 0.55 secs\n",
+    "stderr": "",
+    "seconds": 0.5843964999999116,
+    "timed_out": false,
+    "verified": true
+  },
+  "lrat_sha256": "1ac546a6bbfd03a78a98d7e3d1d77af2ce393d0ce1ab73796db47d9f27457b96",
+  "lrat_lines": 53675,
+  "lrat_raw_bytes": 10070686
+}
