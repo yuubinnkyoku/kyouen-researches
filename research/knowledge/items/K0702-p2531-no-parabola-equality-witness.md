@@ -19,6 +19,33 @@ relations:
   target: K0101
   note: 全奇素数での等号を否定する2番目の反例候補
 artifacts:
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/audit.py
+  role: verifier
+  note: 前段被覆を引き継ぎ、既被覆・重複dを拒否してcase分離した並列LRAT監査と再開可能な集計を行う
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/verify_saved.py
+  role: verifier
+  note: 前段manifestのhash連鎖、新入力の独立投影schema、圧縮証明の実再生を照合
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/regression.py
+  role: verifier
+  note: 7不正planと、UNKNOWN・失敗・未完了・既存coverage上書きの制御を再現
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/controller-regression.json
+  role: data
+  note: 重複・既監査dなどの拒否と、未確定や失敗を被覆へ加えない合成制御の成功
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/batch102-140/plan.json
+  role: manifest
+  note: 既被覆d=121を除いた38件の新規計画。前段162 d・source hash・4 process設定を保存
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/batch102-140/coverage.json
+  role: manifest
+  note: 前段162 dと新38 dは重複なし、被覆和200/1265、残り1065。未完了・失敗・UNKNOWNはなし
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates102-140.json
+  role: manifest
+  note: 採用CNFとLRAT gzip38件のpath・hash、ローカル保持した原DRATのpathとhash
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/verification102-140.json
+  role: data
+  note: 新38件の独立投影schemaと圧縮証明実再生、原DRAT hash、前段履歴のhash連鎖を照合
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/README.md
+  role: source
+  note: case分離、計画と集計、保存証拠の独立再生と被覆の範囲
 - path: research/experiments/parabola-p2531-lrat-20261110/audit.py
   role: verifier
   note: 既存147 dとの重複を避けてd=86..100を生成し、整数幾何・投影schema・DRAT-trim・修正LRATで検査
@@ -105,7 +132,7 @@ artifacts:
   role: verifier
   note: 件数と計画標本63件の集合包含を区別して照合する再現コード
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと、d=82..100の独立LRAT受理19 dは重複なしで合計162/1265。全数再監査は未完了。
+evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと独立LRAT受理57 dは重複なしで合計200/1265。全数再監査は未完了。
 ---
 
 ## 現在の監査上の制限（2026-11-09）
@@ -136,10 +163,18 @@ inventoryは保存レシートの整合性・被覆のみを検査し、今回DR
 さらに **d=86..100の15件** を同じ二実装の経路で受理した。
 二完全対の自明な辺を除いた38160提供辺を整数幾何で再検査し、前段4入力は縮約後もbyte一致した。
 新15入力も独立投影schemaへ全節集合が一致し、Git管理する各CNF・LRAT gzipを展開して修正LRATで実再生した。
-前段147 dと新15 dは重複がなく、**現在の独立被覆の和は162/1265 d、未被覆1103 d**。
+その段階の前段147 dと新15 dは重複がなく、独立被覆の和は162/1265 d、未被覆1103 dだった。
 修正版DRAT143 dとLRAT19 dを区別し、前段manifestのhashを含む被覆履歴として保存する。
 新15件は採用LRATとCNFをGit管理し、生成時の原DRAT gzipはローカル保持してhashをmanifestへ記録した。
 原DRATがない別checkoutでも採用LRATの独立再生は可能である。
+
+続いて **d=102..120,122..140の38件** をcaseごとに入力・証明を分離して最大4並列で監査した。
+既被覆のd=121は対象から除外し、同じcaseを重複起動しない計画検査を行った。
+全38件がDRAT-trim -Uと修正版LRATで受理され、保存したCNFと圧縮LRATの別処理での実再生も全件成功した。
+全新入力の独立投影schema・sourceと証拠hash・前段manifestの連鎖も照合した。
+**現在の独立被覆の和は200/1265 d、未被覆1065 d**。内訳は修正版DRAT143 d、LRAT57 dである。
+7不正planとUNKNOWN・失敗・未完了・既存coverageの上書きに関する制御も期待通りだった。
+これは計画と被覆集計の制御であり、一般的な検証器健全性の数学的証明ではない。
 
 ## 命題・範囲
 
@@ -161,7 +196,7 @@ K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 �
 ## 限界
 
 - 旧版の標本8件・途中373件のVERIFIED記録は、K0707により現在の修正版の被覆数には加えない。
-  修正版DRAT143 dと新LRAT19 dの和162 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
+  修正版DRAT143 dと新LRAT57 dの和200 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
 - `A(2531)` の正確な値は未確定。
 - 同時期の走査で p=2539, 2543, 2549 も d=h..h-30 の範囲で証人が見つかっておらず、
   反例素数は 2207, 2531 以外にも存在する可能性がある（未確定）。

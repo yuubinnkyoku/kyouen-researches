@@ -2761,6 +2761,7 @@
 - → depends_on [K0544](../items/K0544-hyperplane-minimal-terminal-rectangular-boxes.md): d石極大のアフィン階数判定
 - → depends_on [K0305](../items/K0305-binary-grundy-iff-maximal-parity.md): 全極大同偶奇のGrundy帰結
 - ← generalizes [K0551](../items/K0551-binary-cube-maximal-affine-sections.md): K0545の共面四点数の全称公式を任意のアフィン次元kに拡張（同項目の四次元ゲーム強解決は対象外）
+- ← depends_on [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md): 共面四点数の公式と二値立方体の長方形構造
 
 ## [K0546](../items/K0546-five-cube-hyperplane-strong-and-general-lower-bound.md) 五次元二値立方体の6点共超平面禁止版の強解決と全次元の構成下界
 
@@ -3878,7 +3879,7 @@
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する4番目の反例候補
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
-## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1302以上1322以下
+## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1303以上1322以下
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合
 - → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
@@ -3890,6 +3891,15 @@
 
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 禁止四点から固定完全対dへの直接投影節の定義
 - → generalizes [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
+
+## [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完
+
+- → depends_on [K0545](../items/K0545-four-cube-hyperplane-strong-and-binary-rectangles.md): 共面四点数の公式と二値立方体の長方形構造
+- ← depends_on [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md): 全次元の共面四点と中点一致の同値。有限計算は整数アフィン小行列式でも独立に判定
+
+## [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) 四次元二値立方体・共面四点禁止版は通常とmisèreの全局面を分類
+
+- → depends_on [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md): 全次元の共面四点と中点一致の同値。有限計算は整数アフィン小行列式でも独立に判定
 
 ## [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合
 

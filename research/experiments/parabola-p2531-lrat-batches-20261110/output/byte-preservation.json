@@ -1,0 +1,131 @@
+{
+  "reason": "Restore exact incoming Git blob bytes after Windows CRLF conversion; no numeric changes.",
+  "records": [
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/candidate.txt",
+      "checkout_sha256": "2e5b1e260ef6dd779a88b0cd3fa918c1192b41507574e35102aa6d65d2aafbac",
+      "original_git_blob_sha256": "2a38e80707c5197162dccb44288f5120695248e5621a0c14fdad637d286e89e0",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/stdout.txt",
+      "checkout_sha256": "f32340ad784fbf3b253376acd0bdb3af0d72450f85bd1de0d1bb9075a9a7add0",
+      "original_git_blob_sha256": "4e5c5a38f683a1a10786fc592451078ea02e1870d295fe5d7714b19c7cfe5fb8",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1299-budget200000/stdout.txt",
+      "checkout_sha256": "1a70e6bf8225d2af7f091ab0e9c4d1893af4afa0cc4a4caa0b97912998c7c87a",
+      "original_git_blob_sha256": "9ffc21ffb55ff20e6c509bb86a0158bca77686dc7de3ebaf49f08c289c3db517",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/candidate.txt",
+      "checkout_sha256": "b1f67a9b002089ed74098c7cd37b057ddb156bc6f6aa2ab699e9100e040d6d77",
+      "original_git_blob_sha256": "de4f4e275204f78228b61f55b63d25987c8ac0e06ab49d6699b6f33c89677942",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/stdout.txt",
+      "checkout_sha256": "24dd409608f4fbdb185d85d01037858962cc0b1cdec882d1fd470a802b782e4c",
+      "original_git_blob_sha256": "ddb1217c3d76ea0cb6595df00f8ac2be8b152bb9d009770c19c00cc45337b0c9",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/candidate.txt",
+      "checkout_sha256": "f79cd0fa4b5d8c6a210f801a10f72f474bcd7074989a2431f57db898cd72c3f7",
+      "original_git_blob_sha256": "482f802c002d9a519e00e8574d509cd650a68b306c356e558bdf68bc53deb368",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/stdout.txt",
+      "checkout_sha256": "64b252d56a43c6e280a6d33dd6412d344f1186451d91f926bf4456e16e907b32",
+      "original_git_blob_sha256": "be5d0ffed6a4bdd9a25209fcd5e532c955036a939353b6730244c87c3e8bf8ab",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/candidate.txt",
+      "checkout_sha256": "358764a2aa142e82199b0e691a16156787333099463d06f7c5979751581070d0",
+      "original_git_blob_sha256": "c03cca021b9b27b4c6e797dca80418eaa3a98186cecdaf67f1b4da2e944c8c1f",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/stdout.txt",
+      "checkout_sha256": "0a227adbfd8b4fb6e545d3a464d15d3fe1a18a7fe8198c5ed40d113c1773825d",
+      "original_git_blob_sha256": "3ec143c1512000ace9d5df368313614a0b547d3534916b8055f9bb6daf1c9e70",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/candidate.txt",
+      "checkout_sha256": "f5c6576b26eb0f948122ad482d637adadffe5af0b18c738a5a7ebef09254397e",
+      "original_git_blob_sha256": "04cb21dd59fd818d42020d3d6b530482120d097d777fcf17ac485373f5ba9925",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/stdout.txt",
+      "checkout_sha256": "d6c3b161097dacadd1df5a277e1595129809149645a64cf937ae3071ea19d280",
+      "original_git_blob_sha256": "b7712615b39add3f9b0cbf0b4a41c49c06ae910f70dd09860a710c3318dbe863",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget300000/stdout.txt",
+      "checkout_sha256": "7cd3a1d5e06b1f647d4eaff17cfa6a3c972603ae10e027f1d12fdb93b1318e90",
+      "original_git_blob_sha256": "a126afe57d7a3f66e68a751a7fd8475c85b1815b7bb886b44d61ecb5e534b09e",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/candidate.txt",
+      "checkout_sha256": "178b993021221a4fda77e12d47205a9682ad61b4444d71160b445824e9edbac8",
+      "original_git_blob_sha256": "fff209531230fbcda4cd400587e5e717a457eac9c2919e75668646e7f6420655",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/extensions.txt",
+      "checkout_sha256": "ba79e9a0e5d34283dfbecf5f5311b601a1456b3aedf6c3c26a409515c5572d62",
+      "original_git_blob_sha256": "bd670d7b660c24edcc2747f41e84bb3784a3dd8311736dc4bb4b68a2a781abf4",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/one-deletion-blockers.txt",
+      "checkout_sha256": "12f35ff3b5db4dae3dc2895ae9782bb665fc7af13024c21dbf68f7e3ddd0609c",
+      "original_git_blob_sha256": "eda6010e095ea74a0b3e6483c6069ff7a31c22201975460cfae60e6ce75da0c7",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/stdout.txt",
+      "checkout_sha256": "a460ddca0e08bec6dfb8ec26154e2d7c763c82155fca0560c14fe222878a013f",
+      "original_git_blob_sha256": "a4fe4ca70ab20efd73dc28de56644efa64d513bd0e04b60220db90110f793b06",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/two-add-blockers.txt",
+      "checkout_sha256": "fcb07b878001e3a5b006f0fee996e53854b41afa3601cb2b5c88d81489f30a58",
+      "original_git_blob_sha256": "a209a243d360c7c78e1f61b15d90ab08fc743c615a455435a6af05ad740be29d",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1302-budget300000/stdout.txt",
+      "checkout_sha256": "e09c30ee59b9ab998b8fc65471eb347026db13e998930d625a80be66028430e7",
+      "original_git_blob_sha256": "2758ee427091525cf7c4f3458bc2d3c8f4f19e0e8295ef442db1a85890f88ecd",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-budget1m/stdout.txt",
+      "checkout_sha256": "bfaff5db04ecc306c85b0058a8c2015dbad25d106a7f5304cd8e96d2f8c97de8",
+      "original_git_blob_sha256": "04d5328d10b50f62c5d5c46ea98177393452b199605ed2d90224c7b8e70801f6",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-budget300000/stdout.txt",
+      "checkout_sha256": "4458b8d9fcc8b644912bb4ade4d86a50a96ddf284176b61e747e28f985f9ffc4",
+      "original_git_blob_sha256": "c296ef8d943949cc420ee411210806372d5b8709cd80be7b15efdb07a392bb3f",
+      "parameter_tokens_unchanged": true
+    },
+    {
+      "path": "research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/stdout.txt",
+      "checkout_sha256": "372b0bc7efccc5ef0d7ca0badcf0f3a3a003ebf152ce9083850a07056a515abb",
+      "original_git_blob_sha256": "91b900ac03c22c959b226c91bf34e05270bbd3a0ca460d5d497ae65027bcf50b",
+      "parameter_tokens_unchanged": true
+    }
+  ]
+}

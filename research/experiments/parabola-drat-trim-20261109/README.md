@@ -40,7 +40,7 @@ auditの再実行には原証明が必要だが、core再生には保存され�
 
 原版lrat-check.cは、SATである `input/sat-unit.cnf` に対する
 `input/false-empty.lrat` の偽空節を受理した。原因と現在の知識は
-[K0714](../../knowledge/items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) を参照する。
+[K0718](../../knowledge/items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) を参照する。
 原文を保持し、局所コピーの `lrat-check-empty-fixed.c` で、RUP矛盾のない空節が
 vacuous RATとして成功する経路を拒否した。原版の受理を証拠として採用しない。
 

@@ -1,0 +1,91 @@
+{
+  "states_checked": 65536,
+  "safe_states_checked": 8193,
+  "forbidden_sets_equal": 100,
+  "vertex_permutation": [
+    0,
+    8,
+    4,
+    12,
+    2,
+    10,
+    6,
+    14,
+    1,
+    9,
+    5,
+    13,
+    3,
+    11,
+    7,
+    15
+  ],
+  "layer_grundy_misere": [
+    {
+      "stones": 0,
+      "grundy": 0,
+      "misere_win": false,
+      "count": 1
+    },
+    {
+      "stones": 1,
+      "grundy": 1,
+      "misere_win": true,
+      "count": 16
+    },
+    {
+      "stones": 2,
+      "grundy": 0,
+      "misere_win": false,
+      "count": 120
+    },
+    {
+      "stones": 3,
+      "grundy": 1,
+      "misere_win": true,
+      "count": 560
+    },
+    {
+      "stones": 4,
+      "grundy": 0,
+      "misere_win": false,
+      "count": 1000
+    },
+    {
+      "stones": 4,
+      "grundy": 0,
+      "misere_win": true,
+      "count": 720
+    },
+    {
+      "stones": 5,
+      "grundy": 1,
+      "misere_win": false,
+      "count": 272
+    },
+    {
+      "stones": 5,
+      "grundy": 2,
+      "misere_win": true,
+      "count": 2896
+    },
+    {
+      "stones": 6,
+      "grundy": 0,
+      "misere_win": true,
+      "count": 1008
+    },
+    {
+      "stones": 6,
+      "grundy": 1,
+      "misere_win": false,
+      "count": 1360
+    },
+    {
+      "stones": 7,
+      "grundy": 0,
+      "misere_win": true,
+      "count": 240
+    }
+  ]
+}

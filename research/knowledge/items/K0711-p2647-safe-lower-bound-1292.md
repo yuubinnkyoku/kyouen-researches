@@ -1,6 +1,6 @@
 ---
 id: K0711
-title: 剰余放物線Q_2647の独立監査済み範囲は1302以上1322以下
+title: 剰余放物線Q_2647の独立監査済み範囲は1303以上1322以下
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -19,6 +19,183 @@ relations:
   target: K0334
   note: 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 artifacts:
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/candidate.txt
+  role: certificate
+  note: 統合した1303点の下界を与えるソート済み1303パラメータ。点は(t,t² mod 2647)
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/geometry.json
+  role: data
+  note: generic 4×4整数行列式で45241569候補を検査、禁止四点0件。入力・ソースhash付き
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/model.json
+  role: certificate
+  note: 117652節を満たす保存モデル。空対22、1303点を選択
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/input.cnf.gz
+  role: data
+  note: 空対22以下を要求して実際に解いた三値CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/extensions.txt
+  role: certificate
+  note: 1303点証人への各未選択点1344個について、追加を阻む禁止四点の証人
+- path: research/experiments/parabola-1296-warm-start-20261109/extend.cpp
+  role: solver
+  note: 必要合同式と整数行列式により各未選択点の禁止四点証人を生成
+- path: research/experiments/parabola-1296-warm-start-20261109/verify_extensions.py
+  role: verifier
+  note: 全未選択点の被覆と禁止四点を独立3×3整数行列式で検査
+- path: research/experiments/parabola-1296-warm-start-20261109/test_extensions.py
+  role: verifier
+  note: 証人の欠落・改変を拒否する回帰
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/one-deletion-blockers.txt
+  role: certificate
+  note: 各未選択点の一削除後に許され得る削除点を絞る禁止四点群
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/two-add-blockers.txt
+  role: certificate
+  note: 残る12210組の二点追加をそれぞれ阻む禁止四点
+- path: research/experiments/parabola-1296-warm-start-20261109/two_add.cpp
+  role: solver
+  note: 一削除後の単点追加に関する障害四点群の生成
+- path: research/experiments/parabola-1296-warm-start-20261109/try_swap.cpp
+  role: solver
+  note: 一削除後の候補二点組に対する障害四点の生成
+- path: research/experiments/parabola-1296-warm-start-20261109/verify_two_add.py
+  role: verifier
+  note: 障害四点群、削除候補の包含関係、候補二点組の全被覆を整数行列式で検査
+- path: research/experiments/parabola-1296-warm-start-20261109/test_two_add.py
+  role: verifier
+  note: 点・二点組の障害証人の欠落と改変を拒否する回帰
+- path: research/experiments/parabola-1296-warm-start-20261109/probe_local_swap.py
+  role: solver
+  note: 固定対と既存証人からの削除数を制限した三値SAT符号化
+- path: research/experiments/parabola-1296-warm-start-20261109/audit_local_cnf.py
+  role: verifier
+  note: 局所CNFの再生成と符号付き削除数制約の小規模全数照合
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/input.cnf.gz
+  role: data
+  note: 固定対・削除高々2点・1304点以上の保存CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/local-proof.drat.gz
+  role: certificate
+  note: 固定対・削除高々2点の部分問題のUNSAT証明
+- path: research/experiments/parabola-1296-warm-start-20261109/check_local_proof.py
+  role: verifier
+  note: 二つのDRAT検査器と打切り証明の拒否を再現
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete2-budget300000/proof-check.json
+  role: data
+  note: 二方式の証明受理・打切り拒否と検査器ソースhash
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete3-budget300000/input.cnf.gz
+  role: data
+  note: 固定対・削除高々3点・1304点以上の保存CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete3-budget300000/local-proof.drat.gz
+  role: certificate
+  note: 固定対・削除高々3点の部分問題のUNSAT証明
+- path: research/experiments/parabola-1296-warm-start-20261109/check_local_incremental.py
+  role: verifier
+  note: 修正版増分検査器による証明受理と打切り拒否を再現
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete3-budget300000/incremental-check.json
+  role: data
+  note: 3点削除の証明検査結果と入力・検査器のhash
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete4-budget300000/input.cnf.gz
+  role: data
+  note: 固定対・削除高々4点・1304点以上の保存CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete4-budget300000/local-proof.drat.gz
+  role: certificate
+  note: 固定対・削除高々4点の部分問題のUNSAT証明
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete4-budget300000/incremental-check.json
+  role: data
+  note: 4点削除の証明検査結果と入力・検査器のhash
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/input.cnf.gz
+  role: data
+  note: 固定対・削除高々5点・1304点以上の保存CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/local-proof.drat.gz
+  role: certificate
+  note: 固定対・削除高々5点の部分問題のUNSAT証明
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1304-seed1303-delete5-budget1m/drat-trim-check.json
+  role: data
+  note: DRAT-trimによる証明受理・打切り拒否と入力・検査器のhash
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/candidate.txt
+  role: certificate
+  note: 先行する1302点証人。新たなSAT探索のphaseとしても使用
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/geometry.json
+  role: data
+  note: generic 4×4整数行列式で45104559候補を検査、禁止四点0件。入力・ソースhash付き
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/model.json
+  role: certificate
+  note: 120204節を満たす保存モデル。空対23、1302点を選択
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1302-seed1301-budget1m/input.cnf.gz
+  role: data
+  note: 空対23以下を要求して実際に解いた三値CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/candidate.txt
+  role: certificate
+  note: 先行する1301点証人。新たなSAT探索のphaseとしても使用
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/geometry.json
+  role: data
+  note: generic 4×4整数行列式で44964434候補を検査、禁止四点0件。入力・ソースhash付き
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/model.json
+  role: certificate
+  note: 122752節を満たす保存モデル。空対24、1301点を選択
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1301-seed1300-budget300000/input.cnf.gz
+  role: data
+  note: 空対24以下を要求して実際に解いた三値CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/candidate.txt
+  role: certificate
+  note: 先行する1300点証人。新たなSAT探索のphaseとしても使用
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/geometry.json
+  role: data
+  note: generic 4×4整数行列式で44826944候補を検査、禁止四点0件。入力・ソースhash付き
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/model.json
+  role: certificate
+  note: 125296節を満たす保存モデル。空対25、1300点を選択
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1300-seed1299-budget300000/input.cnf.gz
+  role: data
+  note: 空対25以下を要求して実際に解いた三値CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/probe_from_witness.py
+  role: solver
+  note: 指定された既存証人をphaseとして与える固定d三値SAT探索
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/candidate.txt
+  role: certificate
+  note: 先行する1299点証人。新たなSAT探索のphaseとしても使用
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/geometry.json
+  role: data
+  note: generic 4×4整数行列式で44688249候補を検査、禁止四点0件。入力・ソースhash付き
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/model.json
+  role: certificate
+  note: 127836節を満たす保存モデル。空対26、1299点を選択
+- path: research/experiments/parabola-1296-warm-start-20261109/output/target1299-seed1298-budget300000/input.cnf.gz
+  role: data
+  note: 空対26以下を要求して実際に解いた三値CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/probe_1298.py
+  role: solver
+  note: 監査済み1298点証人をphaseとして与える固定d三値SAT探索
+- path: research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/candidate.txt
+  role: certificate
+  note: 先行する1298点証人。新たなSAT探索のphaseとしても使用
+- path: research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/geometry.json
+  role: data
+  note: generic 4×4整数行列式で44554130候補を検査、禁止四点0件。入力・ソースhash付き
+- path: research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/model.json
+  role: certificate
+  note: 135432節を満たす保存モデル。空対27、1298点を選択
+- path: research/experiments/parabola-1296-warm-start-20261109/output/control-target1296/input.cnf.gz
+  role: data
+  note: 空対29以下を要求して実際に解いた三値CNF
+- path: research/experiments/parabola-1296-warm-start-20261109/probe.py
+  role: solver
+  note: 監査済み1296点証人をphaseとして与える固定d三値SAT探索
+- path: research/experiments/parabola-1296-warm-start-20261109/verify.py
+  role: verifier
+  note: 保存モデルの全節・点選択と独立幾何receiptのhashを検査
+- path: research/experiments/parabola-1296-warm-start-20261109/test_verify.py
+  role: verifier
+  note: 候補・モデル・worker hashの改変を拒否する回帰
+- path: research/experiments/parabola-1296-warm-start-20261109/README.md
+  role: source
+  note: 既存証人からのphase指定、各試行と独立検査の再現範囲
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/integrated-1303-geometry-lf.json
+  role: data
+  note: 統合時に既存generic整数4×4検査器で1303点を実再生。45241569候補、禁止四点0件
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/verify_integrated_witness.py
+  role: verifier
+  note: 統合した保存モデル全117652節と点抽出、独立幾何receiptを照合
+- path: research/experiments/parabola-p2531-lrat-batches-20261110/output/integrated-1303-model-lf.json
+  role: data
+  note: 32569変数の完全モデル全節充足、1303点一致と1302点集合との差分を確認
 - path: research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/input.cnf.gz
   role: data
   note: 保存1302点から4点以下除去で1303点以上を要求した37749変数・129303節の新しい実入力
@@ -33,7 +210,7 @@ artifacts:
   note: 新しい4点以下除去の保存入力とUNKNOWNの出典を検査。SAT/UNSATの証拠ではない
 - path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt
   role: certificate
-  note: 現在の下界を与える1302点。保存1301点から3点を除き4点を追加
+  note: 先行する1302点。保存1301点から3点を除き4点を追加
 - path: research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json
   role: data
   note: 全119187179475四点を合同式で被覆し45110020候補を整数行列式で検査、禁止四点0件
@@ -90,7 +267,7 @@ artifacts:
   note: K0707の4偽証明・直接偽空節を拒否しresolution正例を受理
 - path: research/experiments/parabola-neighborhood-lrat-20261109/output/lrat-controls.json
   role: data
-  note: K0714の原版偽受理を再現し、今回使った修正版の5制御の期待判定を確認
+  note: K0718の原版偽受理を再現し、今回使った修正版の5制御の期待判定を確認
 - path: research/experiments/parabola-neighborhood-lrat-20261109/README.md
   role: source
   note: 同じ保存証拠からの変換・独立検査の再現方法と有界近傍の範囲
@@ -198,7 +375,7 @@ artifacts:
   note: 初回1292点構成、再現手順と信頼境界
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json
   role: data
-  note: 旧4形状UNSAT記録。000/101はK0713の変数衝突があり、幾何上界の根拠への採用を保留
+  note: 旧4形状UNSAT記録。000/101はK0717の変数衝突があり、幾何上界の根拠への採用を保留
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json
   role: data
   note: サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
@@ -279,7 +456,7 @@ artifacts:
   note: 修正後の全4入力をschema・原入力hash・3 RUP受理と1 LRAT受理へ結び付けた上界1322の集約
 - path: research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json
   role: data
-  note: 残る112の943588行LRATをK0714局所修正版で受理。241.9秒、終了コード0、source/binary/proof hash付き
+  note: 残る112の943588行LRATをK0718局所修正版で受理。241.9秒、終了コード0、source/binary/proof hash付き
 - path: research/experiments/parabola-drat-trim-20261109/output/lrat-core-preserved-manifest.json
   role: data
   note: 採用した2711546166 bytesのLRAT証明のhashとローカルraw pin。証明本体はGit非収録
@@ -291,7 +468,7 @@ artifacts:
   note: 全4入力のhashとschema、検査器回帰・受理receiptを照合し、全件受理時だけ上界を返す
 - path: research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c
   role: verifier
-  note: 原版の偽空節受理をK0714で修正したhint検査器。空節には実際のRUP矛盾を要求
+  note: 原版の偽空節受理をK0718で修正したhint検査器。空節には実際のRUP矛盾を要求
 - path: research/experiments/parabola-monotone-rup-20261109/rup_check.cpp
   role: verifier
   note: 000/011/101を受理した削除無視・RAT禁止の追加列RUP検査器
@@ -301,13 +478,13 @@ artifacts:
 - path: research/experiments/parabola-drat-trim-20261109/README.md
   role: source
   note: 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
-scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1302と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0713の不正入力やK0714の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
-evidence: 下界は交換で得た1302点の独立整数幾何検査と完全モデルの全129266節の充足確認。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
+scope: Q_2647={(t,t² mod 2647):0<=t<2647}の標準q=4安全集合。独立整数幾何検査の下界1303と、修正後のサイズ1323全4形状のRUP/LRAT反駁検査による上界1322。旧K0717の不正入力やK0718の原版LRAT受理は使わない。正確値や他素数への一般化は主張しない。
+evidence: 下界は統合した1303点の独立整数幾何検査と完全モデルの全117652節の充足確認。上界は全4入力の全節を独立schemaへ照合し53886提供辺の整数幾何を検査。000/011/101はRUP-only追加列として受理、112は局所修正版LRATで受理。入力・証明・検査器hashを集約して全4件を確認。
 ---
 
 ## 命題と構成
 
-**独立監査済みの範囲は1302 <= A(2647) <= 1322**。正確な最大値は未確定。
+**独立監査済みの範囲は1303 <= A(2647) <= 1322**。正確な最大値は未確定。
 上界1322は、修正後入力に対する全4形状の反駁検査で確認した有限計算の結論である。
 
 保存CNF（p=2647,d=1323、1323変数・53886節）へ局所探索を100万flip、seed=20261109で行い、
@@ -346,12 +523,32 @@ CaDiCaLは7.110秒・8180衝突でSATを返し、`{684,1430,1785}` を除き `{1
 これは符号化の回帰であり、安全性の根拠は次の独立整数幾何検査である。
 1302点証人のSHA-256は `5395d2326e08dfe8ac43b57103cc1d469ceddf68a0b522b4d7092e9db342000b`。
 
+## 統合した別系統の1303点証人
+
+origin/mainの別系統のwarm探索は1303点を得ていた。統合時に同じ保存候補を既存の独立整数幾何検査器で再検査し、禁止四点0件を確認した。
+保存32569変数の完全モデルも全117652節を満たし、点抽出が一致した。
+証人ファイルSHA-256は `fff209531230fbcda4cd400587e5e717a457eac9c2919e75668646e7f6420655`。
+従来の本項の1302点集合から117点を除き118点を加えた別の集合であり、K0716の単点追加不能や旧3除去近傍の反駁と矛盾しない。
+1303点の最大性や空対22の最小性は未確定。以下の局所操作の受理はincomingの保存検査記録を引き継ぐもので、全体の最大性へ拡張しない。
+
+この1303点集合は**包含について極大**である。未選択1344点それぞれに対し、その点と選択済みの3点からなる禁止四点を明示し、全点の被覆と各四点の整数行列式ゼロを独立な3×3計算で確認した。これは1点も追加できないという意味であり、1303点が最大とは主張しない。
+
+さらにこの同じ集合は、**選択済みの1点を削除して未選択の2点を追加する操作でも改善できない**。未選択点ごとの禁止四点群から、どの1点を削除しても追加できない点1221個を証明し、残る点について許され得る削除点を絞る。その結果生じる候補二点組12210組のそれぞれに、削除されない既存2点との禁止四点を保存した。独立検査器が各障害の整数行列式、未選択点の網羅、削除点集合の包含、全候補二点組の被覆を確認した。これは指定された局所操作の排除であり、複数点を削除する改善や別の1304点集合の不存在を意味しない。
+
+さらに原点と完全対 `d=1323` を維持し、他の各対から高々一側を選ぶ範囲では、この証人から**高々2点の削除で1304点以上へ改善することもできない**。直接投影に基づく三値符号化と削除数制約を加えた33886変数・121584節のCNFはUNSAT。保存した24030行のDRATを、修正版増分検査器と毎回代入を再構築する別実装の両方が受理し、打切り証明を拒否した。CNFは再生成して一致し、符号付き削除数制約は小規模1008ケースで全数照合した。これは固定対・二点削除以内という条件付きの計算機援用証明であり、固定対を壊す改善や全1304点集合の不存在は示さない。
+
+同じ条件で削除を**高々3点**まで許した35181変数・124172節のCNFについても、再生成した入力が保存されたCNFと一致し、修正版増分検査器が266831行の証明を受理、打切り証明を拒否した。こちらの別実装による検査は未完了。結論は固定対を維持する局所改善に限り、一般の1304点集合の不存在を意味しない。
+
+さらに**高々4点**を削除する場合も、再生成された36474変数・126756節のCNFについて、修正版増分検査器が381164行の証明を受理し、打切り証明を拒否した。削除数制約は小規模1248ケースで照合した。別実装での4点削除証明の検査は未実施であり、この結論も固定対の下での局所的なものである。
+
+同じ固定対の条件で**高々5点**を削除する場合も、再生成した37765変数・129336節のCNFと1256894行の証明を保存した。DRAT-trimが証明を受理し、先頭100行だけの打切り証明を拒否した。削除数制約は小規模1472ケースで照合した。固定対を壊す改善や、一般の1304点集合の不存在は示さない。
+
 ## 下界の独立検査
 
-現在の1302点証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
-探索とは別の検証器で、全119187179475選択四点を対象に必要合同式で候補を絞り、
-45110020候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
-`2647 1302 119187179475 45110020`、終了コード0。
+現在の1303点証人のパラメータの範囲・ソート・重複を検査し、座標を整数として再計算した。
+探索とは別の検証器で、全119554191575選択四点を対象に必要合同式で候補を絞り、
+45241569候補にgeneric 4×4 Leibniz行列式を適用して0件だった。生出力は
+`2647 1303 119554191575 45241569`、終了コード0。
 
 合同式フィルタの完全性は、行列式をmod pへ落とすとVandermonde積とパラメータ和の積になることによる。
 異なる四パラメータで前者は非零だから、整数行列式0なら和は0 mod p。
@@ -392,7 +589,7 @@ Cardinalityの実節は、明示的なprefix OR鎖の別実装と全3入力で�
 | (0,0,0) | 7938 | 73727 | RUP-only、5326追加節 |
 | (0,1,1) | 10582 | 79013 | RUP-only、61818追加節 |
 | (1,0,1) | 9260 | 76374 | RUP-only、147006追加節 |
-| (1,1,2) | 14544 | 85619 | K0714局所修正版LRAT、943588行、241.9秒で受理 |
+| (1,1,2) | 14544 | 85619 | K0718局所修正版LRAT、943588行、241.9秒で受理 |
 
 全4入力の全節を、CardEncを使わないone-hot・点同値・辺回避・prefix閾値counterの別実装へ照合した。
 counter補助変数が選択変数や他counterと重ならず、点補助変数より前の予約範囲に収まることも確認した。
@@ -402,7 +599,7 @@ counter補助変数が選択変数や他counterと重ならず、点補助変数
 000/011/101では、削除を消した追加列の全節をRUPで検査した。
 RATは使わず、全追加が元CNFの論理的帰結となるため、削除された節も保持することは健全である。
 112では抽出されたLRATを元の85619節に対し再生し、実際のRUP矛盾を要求する空節の受理まで確認した。
-[K0714](K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) の原版LRAT検査器の受理は採用しない。
+[K0718](K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) の原版LRAT検査器の受理は採用しない。
 入力・証明・検査器・回帰のhashを照合した集約で全4件の受理を確認した。
 従って1323点安全集合は存在せず、より大きい安全集合の1323点部分集合も存在し得ないので上界は1322となる。
 
@@ -415,7 +612,7 @@ RATは使わず、全追加が元CNFの論理的帰結となるため、削除�
 従来の上界1324はK0706の全1323 dのDRAT監査による。1324点の3形状監査で1323へ、今回の4形状監査で1322へ強化した。
 保存1300点集合の包含極大性は[K0715](K0715-p2647-saved-1300-witness-inclusion-maximal.md)で全1347個の単点追加の阻止証明を検査した。
 この包含極大性はその保存集合についての結論であり、2点を除いて3点を加えた新しい1301点集合と矛盾しない。
-現在の1302点集合の最大性や空対23の最小性は未確定。1300点をphaseにした1301点以上の旧試行は、
+保存1302点集合の最大性や空対23の最小性は未確定。1300点をphaseにした1301点以上の旧試行は、
 10万衝突予算・52.79秒に続き、同じCNF・phaseの50万衝突予算・269.43秒でもUNKNOWNだった。
 旧UNKNOWNは当時の予算付き観測として保持する。現在は交換と独立検査で1301点の存在を確認済み。
 新しい1301点集合に対し2点以下を除く投影CNF交換を試したところ、36066除去候補・286追加候補では改善未発見だった。
@@ -439,7 +636,7 @@ Git管理された元DRATと変換コードから再生成でき、再現に新�
 旧commit `666a778c` の「A(2647)<=1103」はp=2207の数値との混同で、その後 `48f916ca` で訂正された。
 [訂正後の形状ログ](../../log/2026-11-09-p2647-no-size-h1-set-corrected.md) の1323を今回DRAT独立監査した。
 一方、上界1322（サイズ1323の形状クラス判定）の旧ソルバ記録は、
-[K0713](K0713-shape-cnf-auxiliary-variable-aliasing.md) の変数衝突が000/101で見つかり、そのままでは根拠として使えない。
+[K0717](K0717-shape-cnf-auxiliary-variable-aliasing.md) の変数衝突が000/101で見つかり、そのままでは根拠として使えない。
 当初その機械可読な記録は
 (1,1,2) のみで、残り3クラスはログ表だけだったが、2026-11-09 に全4クラスを再実行して
 receipts を再生成し、節数が旧ログ表と全件一致した

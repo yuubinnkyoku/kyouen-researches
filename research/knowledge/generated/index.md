@@ -694,9 +694,11 @@
 | [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) | p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) | 一行RUP証明を持つCNFでもSAT化に必要な節削除数は任意に大きい | proposition | proved | search-methods, verification, provenance |
 | [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) | 連結・有界次数のsigned NAE4でも15行RUP証明のまま最少削除距離は無界になる | proposition | proved | search-methods, verification, provenance |
-| [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の独立監査済み範囲は1302以上1322以下 | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の独立監査済み範囲は1303以上1322以下 | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) | 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる | proposition | proved | geometry, maximum-safe, search-methods |
-| [K0713](../items/K0713-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
-| [K0714](../items/K0714-lrat-empty-clause-vacuous-rat-unsoundness.md) | 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す | proposition | computed | verification, certificates, provenance |
+| [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) | 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完 | proposition | proved | variants, geometry, rectangles |
+| [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) | 四次元二値立方体・共面四点禁止版は通常とmisèreの全局面を分類 | computation | computed | variants, geometry, grundy, maximal-safe, maximum-safe |
 | [K0715](../items/K0715-p2647-saved-1300-witness-inclusion-maximal.md) | Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
 | [K0716](../items/K0716-p2647-saved-1302-witness-inclusion-maximal.md) | Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
+| [K0717](../items/K0717-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
+| [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) | 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す | proposition | computed | verification, certificates, provenance |

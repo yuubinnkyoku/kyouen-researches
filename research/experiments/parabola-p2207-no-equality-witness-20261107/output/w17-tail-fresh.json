@@ -1,0 +1,132 @@
+{
+ "p": 2647,
+ "h": 1323,
+ "size": 1322,
+ "class": [
+  1,
+  1,
+  3
+ ],
+ "budget": 100000,
+ "wall_limit": 300.0,
+ "mode": "fresh-each",
+ "order": [
+  1280,
+  1290,
+  1300,
+  1310,
+  1316,
+  1317,
+  1322,
+  1200
+ ],
+ "vars": 17180,
+ "clauses": 90891,
+ "kept_edges": 53886,
+ "records": [
+  {
+   "d": 1280,
+   "sat": false,
+   "unknown": false,
+   "seconds": 0.104,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 661,
+   "decisions": 1313,
+   "propagations": 513792,
+   "wall_timeout": false,
+   "total_seconds": 0.296
+  },
+  {
+   "d": 1290,
+   "sat": false,
+   "unknown": false,
+   "seconds": 0.209,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 946,
+   "decisions": 1754,
+   "propagations": 719969,
+   "wall_timeout": false,
+   "total_seconds": 0.387
+  },
+  {
+   "d": 1300,
+   "sat": false,
+   "unknown": false,
+   "seconds": 0.176,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 693,
+   "decisions": 1401,
+   "propagations": 377762,
+   "wall_timeout": false,
+   "total_seconds": 0.288
+  },
+  {
+   "d": 1310,
+   "sat": false,
+   "unknown": false,
+   "seconds": 0.103,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 565,
+   "decisions": 1295,
+   "propagations": 212922,
+   "wall_timeout": false,
+   "total_seconds": 0.215
+  },
+  {
+   "d": 1316,
+   "sat": false,
+   "unknown": false,
+   "seconds": 20.853,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 33464,
+   "decisions": 84633,
+   "propagations": 26900429,
+   "wall_timeout": false,
+   "total_seconds": 20.964
+  },
+  {
+   "d": 1317,
+   "sat": null,
+   "unknown": true,
+   "seconds": 55.101,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 100004,
+   "decisions": 320247,
+   "propagations": 90691681,
+   "wall_timeout": false,
+   "total_seconds": 55.317
+  },
+  {
+   "d": 1322,
+   "sat": null,
+   "unknown": true,
+   "seconds": 72.204,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 100003,
+   "decisions": 333010,
+   "propagations": 93344326,
+   "wall_timeout": false,
+   "total_seconds": 72.374
+  },
+  {
+   "d": 1200,
+   "sat": null,
+   "unknown": true,
+   "seconds": 58.975,
+   "budget": 100000,
+   "unit_conflict": false,
+   "conflicts": 100000,
+   "decisions": 324497,
+   "propagations": 98992004,
+   "wall_timeout": false,
+   "total_seconds": 59.103
+  }
+ ]
+}

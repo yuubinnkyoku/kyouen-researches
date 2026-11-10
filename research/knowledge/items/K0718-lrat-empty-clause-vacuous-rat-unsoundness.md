@@ -1,5 +1,5 @@
 ---
-id: K0714
+id: K0718
 title: 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す
 kind: proposition
 status: computed

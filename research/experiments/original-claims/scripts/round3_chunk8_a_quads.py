@@ -24,7 +24,7 @@ This round:
        solve.  Instead: build the full 4x4 game once (V=16), and use the
        "legal-move" structure: a game over a family F of forbidden quads has
        at most 2^16 = 65536 states.  So instead of 1.2M separate games, note
-       the game with quad family F' = F \ T depends only on which quads are
+       the game with quad family F' = F \\ T depends only on which quads are
        present.  Use a *symmetry-reduced* search + incremental structure.
        Concretely: we can solve each variant in ~ms with memoized DFS over
        65536 states, but 1.2M * 65536 is far too much.  So: (a) use D4
