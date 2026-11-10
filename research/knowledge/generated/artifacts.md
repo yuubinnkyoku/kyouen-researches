@@ -10765,6 +10765,27 @@
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/schema.py](../../../research/experiments/parabola-p2539-exchange-audit-20261110/schema.py)
 
 - [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (verifier): SATライブラリや探索器をimportせず、各counter補助変数をprefix個数へ解釈して全節の拡張可能性を確認
+## [research/experiments/parabola-p2539-five-obstructions-20261111/README.md](../../../research/experiments/parabola-p2539-five-obstructions-20261111/README.md)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 一点追加の障害族と五点削除の必要条件、証明木の帰納的健全性、再現と限界
+## [research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/geometry.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/geometry.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): generic整数4×4行列式検査の正常終了・出力・入力とsourceのhash
+## [research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/summary.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 60点排除、packing306・branch123 node受理、6514禁止四点の実検査
+## [research/experiments/parabola-p2539-five-obstructions-20261111/output/certificate.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/output/certificate.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 全1281候補のうち60点の負hitting証明木と1221点の提供障害族だけをhitする削除証人
+## [research/experiments/parabola-p2539-five-obstructions-20261111/qualification.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/qualification.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 同一seedの原点・完全対保持条件と追加候補60点の独立排除を結合
+## [research/experiments/parabola-p2539-five-obstructions-20261111/regression.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/regression.json)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 正負双方の証明木・削除証人を総当たり2224例と照合、14改変を拒否
+## [research/experiments/parabola-p2539-five-obstructions-20261111/verify.py](../../../research/experiments/parabola-p2539-five-obstructions-20261111/verify.py)
+
+- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索コードをimportせず分岐被覆・残予算・互いに素な障害と実整数幾何を確認
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/README.md](../../../research/experiments/parabola-p2539-five-pair-split-20261111/README.md)
 
 - [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 完全対の位置も保つ部分集合論証、分割・モデル拡張、再現と限界

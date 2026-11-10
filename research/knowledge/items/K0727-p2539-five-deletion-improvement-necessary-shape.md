@@ -1,6 +1,6 @@
 ---
 id: K0727
-title: Q_2539の保存1258点集合を五点以下の削除で改善するには原点と元の完全対の保持が必要
+title: Q_2539の五点削除改善は原点・元の完全対を保持し60候補点を避ける必要がある
 kind: proposition
 status: computed
 topics: [geometry, maximum-safe, reconfiguration, verification]
@@ -91,8 +91,29 @@ artifacts:
 - path: research/experiments/parabola-p2539-five-pair-split-20261111/README.md
   role: proof
   note: 完全対の位置も保つ部分集合論証、分割・モデル拡張、再現と限界
-scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、0∈T、元の完全対{6,2533}の保持が必要。残る形状の実在・非存在や五点削除局所最適性、全体の最大性は主張しない。
-evidence: K0726で四点以下を排除。exact五点損失の原点なし二形状・原点あり完全対なしに加え、完全対を別の位置へ変える形状も独立schema・整数幾何・RUP/LRATと採用DRAT再生で排除。共通種点と完全対の位置を保つ1259点部分集合への縮小で大きな改善集合へ拡張する。
+- path: research/experiments/parabola-p2539-five-obstructions-20261111/qualification.json
+  role: manifest
+  note: 同一seedの原点・完全対保持条件と追加候補60点の独立排除を結合
+- path: research/experiments/parabola-p2539-five-obstructions-20261111/output/certificate.json
+  role: certificate
+  note: 全1281候補のうち60点の負hitting証明木と1221点の提供障害族だけをhitする削除証人
+- path: research/experiments/parabola-p2539-five-obstructions-20261111/verify.py
+  role: verifier
+  note: 探索コードをimportせず分岐被覆・残予算・互いに素な障害と実整数幾何を確認
+- path: research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/summary.json
+  role: data
+  note: 60点排除、packing306・branch123 node受理、6514禁止四点の実検査
+- path: research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/geometry.json
+  role: manifest
+  note: generic整数4×4行列式検査の正常終了・出力・入力とsourceのhash
+- path: research/experiments/parabola-p2539-five-obstructions-20261111/regression.json
+  role: data
+  note: 正負双方の証明木・削除証人を総当たり2224例と照合、14改変を拒否
+- path: research/experiments/parabola-p2539-five-obstructions-20261111/README.md
+  role: proof
+  note: 一点追加の障害族と五点削除の必要条件、証明木の帰納的健全性、再現と限界
+scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の60点集合Uの回避が必要。残る候補の実在・非存在、五点削除局所最適性、全体の最大性は主張しない。
+evidence: 四点以下と原点・完全対変更の形状を独立schema・整数幾何・RUP/LRATで排除。さらに提供辺からの一点追加障害族を五点以下でhitできない60点を独立証明木と6514四点の実整数幾何で排除。部分集合縮小とhitting-tree帰納論証は有限検査と区別する。
 ---
 
 ## 命題
@@ -101,6 +122,7 @@ SはSHA-256 `454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb` �
 |T|≥1259、|S∖T|≤5を満たすQ_2539内の安全集合Tがあれば、
 **正確に五点を失い、原点0と元の完全対{6,2533}を全て保つ。**
 安全集合の完全対は高々一つなので、完全対の位置も元の対に限られる。
+さらに、後掲の60点集合Uを含めることはできない。
 これは改善の必要条件であり、改善の存在は未確定。
 
 ## 根拠
@@ -128,10 +150,35 @@ Sが0を含むため、Tが0を含む場合はS∩Tによって0も保たれる�
 T'も原点・五点損失・その完全対を保つ。部分集合は新しい完全対を作らないのでT'も¬B6であり、
 変更側CNFの独立排除に反する。従って完全対は元の{6,2533}でなければならない。
 
+## 一点追加障害による60点の独立排除
+
+Uは次の60点であり、いずれもSに含まれない。
+
+```
+555 856 934 956 1095 1187 1189 1190 1277 1283
+1286 1287 1288 1289 1290 1291 1292 1293 1294 1295
+1296 1297 1298 1299 1300 1301 1302 1303 1304 1305
+1306 1307 1308 1309 1310 1311 1312 1313 1363 1379
+1448 1472 1511 1532 1567 1572 1594 1627 1647 1781
+1806 1825 1835 1979 1997 2043 2171 2204 2213 2225
+```
+
+F={0,6,2533}とする。候補点uを含み、残り三点がS内にある提供禁止四点qから、
+障害R=(q∖{u})∖Fを作る。F⊆Tでu∈Tなら、安全性のためD=S∖Tは全てのRをhitする必要がある。
+Uの各uについて、五点以下ではhitできない証明木を独立検査した。
+leafは残予算kに対するk+1個の互いに素な非空障害、または空障害。
+branchは障害Rをhitする全選択v∈Rを被覆し、残りを予算k−1で排除する。
+この帰納論証と、実際のpacking306・branch123 node受理を区別する。
+抽出した6514四点はgeneric整数4×4行列式0を実確認し、提供辺の完全性には依存しない。
+従ってT∩U=∅。この障害論証自体はTの点数に依らず、同時に複数点を追加しても成立する。
+
 ## 未解決と限界
 
 残る「原点と元の完全対を保持」はexact五点削除・budget100000（実conflicts100004）でUNKNOWN。
 UNSATもSATも、安全な1259点証人も得ていない。
+U以外の1221追加候補には、提供した一点追加障害族だけをhitする五点以下の削除証人がある。
+これは安全な改善証人や、他の幾何障害を全て回避する証人ではない。
+親CNFへの60負point単位節の追加探索は、この証明書の検査では実施していない。
 五点削除近傍全体の局所最適性やA(2539)=1258を主張しない。
 現在の全体範囲1258≤A(2539)≤1271は変わらない。
 有限回帰を全称証明に代用せず、検査器やコンパイラ一般の健全性、Lean形式証明は主張しない。
