@@ -1,8 +1,8 @@
 ---
 id: K0693
-title: p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
+title: p=2207では剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立監査済み）
 kind: proposition
-status: needs-review
+status: computed
 topics: [maximum-safe, geometry, search-methods]
 aliases: []
 relations:
@@ -14,8 +14,44 @@ relations:
   note: 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
 - type: supports
   target: K0101
-  note: 全奇素数での等号を否定する反例候補。監査により確定する
+  note: p=2207の単一CNF独立監査による等号不達成が、全奇素数での等号への反例を与える
 artifacts:
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/schema.py
+  role: verifier
+  note: CardEncと探索builderを使わずone-hot・明示Sinz counter・NONE単位節・点定義を再構成し、残余幾何節を分離
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/audit.py
+  role: verifier
+  note: 保存CNFの独立schemaと全提供幾何節、元DRATのRUP限定検査と空節処理修正版LRATを実検査
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/replay.py
+  role: verifier
+  note: 配布するCNF・LRAT gzipを別処理で実再生し、source・schema・幾何・証拠hashと既存下界を照合
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/output/schema.json
+  role: manifest
+  note: 7720変数・50616節を18748構造節と31868幾何節へ全分離し、予約ID範囲と元証拠hashを保存
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/output/geometry.json
+  role: data
+  note: 全31868提供辺をgeneric整数4x4行列式で禁止四点と確認。辺集合の完全性はUNSAT排除に不要
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/output/rup.json
+  role: data
+  note: 元497179行DRATを固定DRAT-trim -Uで受理し、RUPだけのcoreを抽出
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/output/lrat.json
+  role: data
+  note: 空節処理修正版LRATで187955行の抽出証明を実検査して受理
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/output/manifest.json
+  role: manifest
+  note: Git管理する採用CNF・LRAT gzipと保持した元DRATの所在、raw・gzip hashと検査器source hash
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/output/replay.json
+  role: data
+  note: 採用圧縮証明の別処理での実再生、全bindingの照合と独立上界1104
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/regression.py
+  role: verifier
+  note: 小素数で状態とcounter補助変数を全列挙し、schema改変6件と独立幾何の正負制御を検査
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/output/regression.json
+  role: data
+  note: 1104状態の存在射影と6改変拒否、schemaだけでは通る非辺を幾何検査で拒否
+- path: research/experiments/parabola-p2207-single-cnf-audit-20261110/README.md
+  role: source
+  note: 全1105点安全集合からCNFモデルを構成する論理、独立監査・再生と信頼境界
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/README.md
   role: source
   note: 反例候補の方法・証拠・信頼境界・次の監査
@@ -63,16 +99,16 @@ artifacts:
   role: source
   note: 標本残り9点の逐次再監査の完了記録（標本21/21 全点VERIFIED）
 scope: 奇素数p=2207のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。任意の他素数への一般化は主張しない。
-evidence: 全1103 dでCNF UNSAT（cadical。4件は衝突予算2000万で再確認）。Glucose4とMinisat22も標本でUNSAT。K0707修正版の受理記録は固定commitで5/1103 d、その後の再監査で21/1103 d（標本21件は全点完了）まで追記、全数監査未完了。旧チェッカーの受理記録は独立証拠への採用を保留。
+evidence: 別経路のサイズ1105単一CNFをCardEnc非依存の独立schemaへ全照合し、全31868提供幾何節を整数4x4で検査。元DRATを固定DRAT-trim -Uと空節処理修正版LRATで受理し、採用CNF・LRAT gzipも別処理で実再生した。これにより上界1104を有限計算として独立監査済み。旧d別の修正版被覆は21/1103のままであり、単一CNFの完了と混同しない。
 ---
 
-## 現在の監査上の制限（2026-11-09）
+## d別旧証拠の信頼境界（2026-11-09）
 
 [K0707](K0707-incremental-drat-deletion-unsoundness.md) で、旧増分DRATチェッカーが
 充足可能なCNFの偽UNSAT証明を受理することを再現した。
 下記の標本21件の `VERIFIED` は旧実装の受理記録であり、独立検証済み証拠としての採用を保留する。
-幾何命題やソルバのUNSAT主張を反証したわけではない。statusは `needs-review` を維持し、
-全数の再監査は未完了である。
+幾何命題やソルバのUNSAT主張を反証したわけではない。d別の全数再監査は未完了である。
+現在の本項は、下記の別経路の単一CNF監査により `computed` とする。旧受理件数を増やしたものではない。
 修正版ソースSHA-256 `34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b`
 のレシートは、commit `87e28af3c927d640bde3fbc8a20238efc30bccb8` で
 **d={1,50,100,200,300}の5件**がUNSAT・終了コード0・出力VERIFIEDである。
@@ -92,9 +128,26 @@ inventoryはレシートの整合性を検査したもので、今回DRATを再�
 すなわち `A(2207) <= 1104`。
 
 K0097 の上界 `A(p) <= (p+3)/2` は一般に証明済みで、p <= 2143 の全奇素数では等号証人が知られていた。
-本項はその範囲外で最初の「等号を達成できない」素数を与える（監査待ち）。
+本項はその範囲外で最初の「等号を達成できない」素数を与える（有限計算による独立監査）。
 独立幾何検査した1104点の下界と現在の監査済み範囲は[K0722](K0722-p2207-safe-lower-bound-1104.md)を参照する。
-本項の候補上界1104の全数監査は未完了であり、正確値の採用や任意の他素数への一般化は主張しない。
+本項の上界1104は単一CNF経路で独立監査済みであり、K0722の下界と合わせて正確値1104となる。
+任意の他素数への一般化は主張しない。
+
+## 単一CNFによる独立監査（2026-11-10）
+
+安全1105点集合はK0097の完全対構造から、原点を含み、完全対が一つ、空対がない形に限られる。
+保存CNFの18748構造節を、探索builderやCardEncを使わない明示schemaと全照合した。
+変数はone-hot選択子1..4412、prefix counter 4413..5514、点選択子5515..7720であり衝突しない。
+残る31868節は原点が常に選択されることを織り込んだ禁止三点／四点節で、
+全てをgeneric整数4x4行列式で実際の禁止四点と確認した。
+
+任意の安全1105点集合から、その対状態・点選択とBOTHのprefix ORを割り当てれば構造節を全て満たす。
+安全性により、提供した禁止四点の負節も全て満たす。よって安全集合があればこのCNFはSATである。
+提供辺集合の完全性はこの方向の論理に不要である。
+
+元497179行のDRATを固定DRAT-trimのRUP限定検査で受理し、抽出187955行LRATを
+空節処理修正版の別C実装で受理した。Git管理する圧縮CNF・LRATからの別処理での実再生も成功した。
+したがって単一CNFはUNSATであり、安全1105点集合は存在せず、A(2207)<=1104である。
 
 ## 現在の根拠
 
@@ -114,21 +167,22 @@ K0097 の上界 `A(p) <= (p+3)/2` は一般に証明済みで、p <= 2143 の全
    探索と独立な generic 4×4 検証器で共円 0 件を確認している（`witnesses_2143_2500.json`）。
 6. 別ソルバ一致: d ∈ {1, 289, 550, 1103} を Glucose4 と Minisat22（衝突予算 2000 万）でも解き、全て UNSAT。
 
-## 限界（監査待ち）
+## 限界と旧d別監査の範囲
 
 - 全dのUNSAT主張と、修正版検査器の21 dのDRAT受理記録を区別する。
-  全数監査は未完了でstatusは `needs-review`。有限の回帰・受理記録から検査器の一般健全性は導かれない。
-- `A(2207)` の正確な値は未確定。サイズ `h+1`（1104）の集合は `x+c-e=1`（`x`=0 を含む、`c`=完全対数、`e`=空対数）
+  d別の全数監査は未完了だが、現在の上界はそれらを前提にせず単一CNFで監査した。
+  有限の回帰・受理記録から検査器の一般健全性は導かれない。
+- `A(2207)` の正確値はK0722で1104とする。サイズ `h+1`（1104）の集合は `x+c-e=1`（`x`=0 を含む、`c`=完全対数、`e`=空対数）
   から **3 形**ある: (a) `(1,0,0)`、(b) `(0,1,0)`、(c) `(1,1,1)`（`0`＋完全対一つ＋空対一つ）。
   2026-11-08: (a) の CNF は UNSAT（31,868 節、cadical 26 秒）、(b) は全 d=1..1103 で UNSAT（unknown 0・SAT 0）。
   (c) の全 (d,e) を覆う単一CNFの探索記録は
   `research/log/2026-11-08-p2207-1104-shape-search-and-drat-plan.md`。
   その後保存された(c)の1104点候補は[K0722](K0722-p2207-safe-lower-bound-1104.md)で独立幾何検査に成功した。
-  これは下界の証拠であり、本項の等号1105不達成の全数UNSAT監査を完了させるものではない。
+  この下界検査と、別の単一CNFによる上界検査を組み合わせる。d別全数監査の完了とは扱わない。
 - 2026-11-08 の DRAT 監査: 増分チェッカー（`drat_check_incremental.cpp`、RUP＋RAT）で
   **標本 21 個の d（1, 50, 100, 150, 200, 250, 289, 297, 300, 312, 324, 400, 500, 550, 600, 700, 800, 900, 1000, 1100, 1103）の証明を全て VERIFIED**
   （証明 16〜576,575 行、検査 0.5〜3,223 秒/件、`output/drat_audit_full.json`）。
   これは旧版の歴史的な受理記録であり、現在の修正版の被覆数には加えない。
 - 他素数の現在の監査状態はK0702/K0706/K0708を参照する。
   K0101の全奇素数予想は、p=2647の全1323 dを監査したK0706により既に `refuted`。
-  p=2207の監査未完了とは別の結論である。
+  p=2207の旧d別監査の未完了とは別の結論である。

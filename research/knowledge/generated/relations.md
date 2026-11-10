@@ -806,7 +806,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号の存在とある完全対dのCNFのSATが同値
 - → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
-- ← supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 全奇素数での等号を否定する反例候補。監査により確定する
+- ← supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): p=2207の単一CNF独立監査による等号不達成が、全奇素数での等号への反例を与える
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 全奇素数での等号を否定する2番目の反例候補
 - ← refutes [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 全奇素数での等号を否定する4番目の反例候補
@@ -3770,7 +3770,7 @@
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
-- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する反例候補。監査により確定する
+- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): p=2207の単一CNF独立監査による等号不達成が、全奇素数での等号への反例を与える
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないことを示す2例目
 - ← supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないこと
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 全1105点集合を覆う単一CNFの独立schema・幾何・RUP/LRAT監査による上界1104
