@@ -1,0 +1,39 @@
+{
+  "p": 3251,
+  "variables": 11374,
+  "clauses": 87888,
+  "structural_clauses": 27622,
+  "geometry_clauses": 60266,
+  "selectors": [
+    1,
+    6500
+  ],
+  "prefix_counter": [
+    6501,
+    8124
+  ],
+  "point_variables": [
+    8125,
+    11374
+  ],
+  "point_base": 8124,
+  "origin_both_none": [
+    1,
+    1,
+    0
+  ],
+  "method": "Explicit one-hot, Sinz exactly-one BOTH, NONE units and point definitions; no CardEnc or search encoder import.",
+  "schema_source_sha256": "7021cb8b23fae7e3935e439df43679158c94fdc0d204f884fdc8c577670699d2",
+  "helper_source_sha256": "19f27738a13e7db74de11bc61552a21f0e0e51bb6fbcec3aabbc34fb0a85a831",
+  "prior_semantics_regression_sha256": "1dc3ab67331326de8754f05a0a0a24b3f3c45c582f8af08e806b01cd8f7df0f0",
+  "target_size": 1627,
+  "input_sha256": "5e71e8df636283beb8a63759ebe55f269b03a37a25da6a710dead1124ca1789a",
+  "source_cnf_path": "research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.cnf",
+  "original_drat_path": "research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz",
+  "original_drat_sha256": "34106047c97238641a1d57487a78a36f1c7b403a1a2f8d14f9abba0408eb4f13",
+  "original_drat_lines": 229866,
+  "original_receipt_sha256": "ca03e0e5ab59d2563a0fef584984e70f20045fe35999248cf1039c3638968971",
+  "edge_input_sha256": "d6aa4d01f79197aff7acf3240ddab9e7df6bd54a39d8eac87c131781d5f0c819",
+  "driver_source_sha256": "fc3ba406db72a9dfe1b0b128707bb94b928abbce2f58b0b79fa3d8f2e6d89471",
+  "scope": "Every safe h+2 set extends to this class CNF; all residual clauses separately checked by integer geometry. No SAT search or reliance on original checker status."
+}

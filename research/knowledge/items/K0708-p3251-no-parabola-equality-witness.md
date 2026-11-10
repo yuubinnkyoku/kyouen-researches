@@ -1,6 +1,6 @@
 ---
 id: K0708
-title: p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目・単一DRAT証明つき）
+title: p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立schema・RUP/LRAT監査済み）
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -17,11 +17,44 @@ relations:
   note: 2647に続く4例目
 - type: supports
   target: K0101
-  note: 全奇素数での等号を否定する4番目の反例候補
+  note: 単一CNFの独立監査により全奇素数での等号を否定する4番目の反例
 - type: depends_on
   target: K0707
-  note: DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
+  note: 旧d別監査では削除時代入失効の修正版を使用。別経路の単一CNFはRUP限定検査と空節処理修正版LRATで再検査
 artifacts:
+- path: research/experiments/parabola-single-cnf-audits-20261110/check_case.py
+  role: verifier
+  note: 凍結したCardEnc非依存schemaを用いて単一CNFの構造・幾何・元DRATを検査
+- path: research/experiments/parabola-single-cnf-audits-20261110/replay.py
+  role: verifier
+  note: 採用CNF・LRAT gzipの別処理実再生と全source・schema・幾何・証拠hash binding
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p3251/schema.json
+  role: manifest
+  note: 11374変数・87888節を27622構造節と60266幾何節へ全分離した独立schema
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p3251/geometry.json
+  role: data
+  note: 全60266提供辺をgeneric整数4x4行列式で禁止四点と確認
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p3251/rup.json
+  role: data
+  note: 元229866行DRATを固定DRAT-trim -UでRUP限定受理
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p3251/lrat.json
+  role: data
+  note: 抽出44623行LRATを空節処理修正版の別C実装で受理
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p3251/manifest.json
+  role: manifest
+  note: 上界1626の採用CNF・LRAT gzipと元DRATの所在、raw・gzip hashと検査器source hash
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/replay-p3251.json
+  role: data
+  note: 圧縮CNF・LRATの実再生と全bindingの照合に成功
+- path: research/experiments/parabola-single-cnf-audits-20261110/regression.py
+  role: verifier
+  note: 両実入力と10件のschema改変・素数取り違えを制御
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/regression.json
+  role: data
+  note: 凍結schemaの既存意味検査bindingと、新しい10負例の拒否
+- path: research/experiments/parabola-single-cnf-audits-20261110/README.md
+  role: source
+  note: 単一CNFで全h+2点集合を排除する論理、保存証拠再生と旧d別監査との区別
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json
   role: certificate
   note: サイズ1627（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明229,866行を修正版検証器でVERIFIED（185.6秒）
@@ -48,7 +81,7 @@ artifacts:
   role: source
   note: HEAD時点の修正版再監査の確定状態（3251は84/1625、計画標本65/65完了）
 scope: 奇素数p=3251のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1625 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。修正版の固定commitには70 dのDRAT受理記録があり、計画標本は51/65。その後のHEADでは84 d（計画標本65/65完了）まで追記。全数監査は未完了。
+evidence: 別経路のサイズ1627単一CNFを27622構造節と60266真の禁止四点へ独立照合し、元DRATをRUP限定検査・空節処理修正版LRATで受理した。採用CNF・LRAT gzipの別処理実再生と全bindingも成功し、A(3251)<=1626を有限計算として独立監査済み。旧d別の修正版被覆84/1625は履歴として維持する。
 ---
 
 ## 命題・範囲
@@ -56,7 +89,18 @@ evidence: 全1625 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。�
 `Q_p = {(t, t² mod p)}` の安全集合の最大を `A(p)` とすると、**p = 3251 では
 `A(3251) < (3251+3)/2 = 1627`**（すなわち `A(3251) <= 1626`）。
 K0693（2207）、K0702（2531）、K0706（2647）に次ぐ**4例目の等号不達成**であり、
-K0101 の「全奇素数で等号」に対する四つ目の反例候補である。`A(3251)` の正確な値は未確定。
+K0101 の「全奇素数で等号」に対する四つ目の反例である。`A(3251)` の正確な値は未確定。
+
+## 単一CNFによる独立監査（2026-11-10）
+
+全1627点安全集合は原点あり・完全対一つ・空対なしの形に限られる。
+保存11374変数・87888節のCNFを、探索builderやCardEncを使わない凍結schemaへ全照合した。
+構造27622節と幾何60266節に全分離し、全提供幾何節をgeneric整数4x4行列式で禁止四点と確認した。
+任意の安全1627点集合から対状態・点選択・BOTH prefix ORでCNFモデルを作れるため、辺集合の完全性は排除に不要である。
+
+元229866行DRATを固定DRAT-trim -Uで受理し、抽出44623行LRATを空節処理修正版の別C実装で受理した。
+Git管理する採用CNF・LRAT gzipの別処理での実再生と全bindingも成功した。
+したがって安全1627点集合は存在せず、A(3251)<=1626である。旧d別全数監査の完了とは扱わない。
 
 ## 根拠
 
@@ -79,6 +123,7 @@ K0101 の「全奇素数で等号」に対する四つ目の反例候補であ�
   計画標本 `d=1,26,...,1601` は65/65完了した（残りは標本外の1541 d）。
   現況の確定は [再監査ステータスログ](../../log/2026-11-09-drat-reaudit-status-omp.md) を参照。
 - inventoryは保存レシートの整合性・被覆を検査したもので、今回DRATを再生していない。
-  全数監査未完了のためstatusは `needs-review`。検査器の一般健全性の証明でもない。
+  旧d別全数監査は未完了だが、現在の本項は別経路の単一CNF監査により `computed` とする。
+  検査器・コンパイラ依存は残り、一般健全性やLean形式証明ではない。
 - K0693/K0702でも旧版と修正版の受理記録を区別する。K0101は全数監査済みのK0706により反証済み。
 - `A(3251)` の正確な値は未確定。

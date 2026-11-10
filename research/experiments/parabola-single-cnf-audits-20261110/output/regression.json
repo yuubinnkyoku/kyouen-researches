@@ -1,0 +1,33 @@
+{
+  "cases": [
+    {
+      "p": 2531,
+      "input_sha256": "f0e49c374c3dbc4a1d68aa20ae0653a811a3dfba22601e5db6d8bb90c2be75f0",
+      "rejected": [
+        "missing-structure",
+        "extra-positive-unit",
+        "selector-geometry",
+        "point-selector-alias",
+        "wrong-prime-route"
+      ]
+    },
+    {
+      "p": 3251,
+      "input_sha256": "5e71e8df636283beb8a63759ebe55f269b03a37a25da6a710dead1124ca1789a",
+      "rejected": [
+        "missing-structure",
+        "extra-positive-unit",
+        "selector-geometry",
+        "point-selector-alias",
+        "wrong-prime-route"
+      ]
+    }
+  ],
+  "frozen_bindings": {
+    "schema_source_sha256": "7021cb8b23fae7e3935e439df43679158c94fdc0d204f884fdc8c577670699d2",
+    "helper_source_sha256": "19f27738a13e7db74de11bc61552a21f0e0e51bb6fbcec3aabbc34fb0a85a831",
+    "prior_semantics_regression_sha256": "1dc3ab67331326de8754f05a0a0a24b3f3c45c582f8af08e806b01cd8f7df0f0"
+  },
+  "source_sha256": "f3680e2c4ee47d18e88a9a27321e967ee314b3c4fbee9f9110eafc09e95bfc7a",
+  "scope": "Two real inputs, ten schema/routing corruptions. Frozen prior schema also has exhaustive small semantic controls."
+}

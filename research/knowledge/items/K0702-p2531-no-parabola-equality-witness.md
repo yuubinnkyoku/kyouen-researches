@@ -1,6 +1,6 @@
 ---
 id: K0702
-title: p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・単一DRAT証明つき）
+title: p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立schema・RUP/LRAT監査済み）
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -17,8 +17,41 @@ relations:
   note: 等号不達成がp=2207に限らないことを示す2例目
 - type: supports
   target: K0101
-  note: 全奇素数での等号を否定する2番目の反例候補
+  note: 単一CNFの独立監査により全奇素数での等号を否定する2番目の反例
 artifacts:
+- path: research/experiments/parabola-single-cnf-audits-20261110/check_case.py
+  role: verifier
+  note: 凍結したCardEnc非依存schemaを用いて単一CNFの構造・幾何・元DRATを検査
+- path: research/experiments/parabola-single-cnf-audits-20261110/replay.py
+  role: verifier
+  note: 採用CNF・LRAT gzipの別処理実再生と全source・schema・幾何・証拠hash binding
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p2531/schema.json
+  role: manifest
+  note: 8854変数・59662節を21502構造節と38160幾何節へ全分離した独立schema
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p2531/geometry.json
+  role: data
+  note: 全38160提供辺をgeneric整数4x4行列式で禁止四点と確認
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p2531/rup.json
+  role: data
+  note: 元190979行DRATを固定DRAT-trim -UでRUP限定受理
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p2531/lrat.json
+  role: data
+  note: 抽出57444行LRATを空節処理修正版の別C実装で受理
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/p2531/manifest.json
+  role: manifest
+  note: 上界1266の採用CNF・LRAT gzipと元DRATの所在、raw・gzip hashと検査器source hash
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/replay-p2531.json
+  role: data
+  note: 圧縮CNF・LRATの実再生と全bindingの照合に成功
+- path: research/experiments/parabola-single-cnf-audits-20261110/regression.py
+  role: verifier
+  note: 両実入力と10件のschema改変・素数取り違えを制御
+- path: research/experiments/parabola-single-cnf-audits-20261110/output/regression.json
+  role: data
+  note: 凍結schemaの既存意味検査bindingと、新しい10負例の拒否
+- path: research/experiments/parabola-single-cnf-audits-20261110/README.md
+  role: source
+  note: 単一CNFで全h+2点集合を排除する論理、保存証拠再生と旧d別監査との区別
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json
   role: certificate
   note: サイズ1267（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明190,979行を修正版検証器でVERIFIED（103.5秒）
@@ -183,17 +216,17 @@ artifacts:
   role: verifier
   note: 件数と計画標本63件の集合包含を区別して照合する再現コード
 scope: 奇素数p=2531のQ_p、標準q=4、等号A(p)=(p+3)/2の不達成。他素数への一般化は主張しない。
-evidence: 全1265 dでCNF UNSAT（cadical、衝突予算20万、unknown 0）。旧DRAT受理記録はK0707により独立証拠に採用しない。修正版の固定commitの143 dと独立LRAT受理396 dは重複なしで合計539/1265。d=1..500を全て含む。全数再監査は未完了。
+evidence: 別経路のサイズ1267単一CNFを21502構造節と38160真の禁止四点へ独立照合し、元DRATをRUP限定検査・空節処理修正版LRATで受理した。採用CNF・LRAT gzipも別処理で実再生し、A(2531)<=1266を有限計算として独立監査済み。旧d別被覆539/1265（修正版DRAT143、LRAT396）は履歴として維持し、単一CNFの完了と混ぜない。
 ---
 
-## 現在の監査上の制限（2026-11-09）
+## 旧d別監査の信頼境界と被覆履歴
 
 [K0707](K0707-incremental-drat-deletion-unsoundness.md) で旧増分DRATチェッカーの偽受理を再現した。
 観測時点の全数出力は1263件が `VERIFIED`、d=393,395が入力読み込みエラーだったが、
 旧実装の受理件数を独立検証済み件数とは数えない。
 以下の旧標本・373件という記録も同じ制限を受ける。
 CNF UNSAT のソルバ主張と幾何への還元はこの反例で否定されないが、
-旧レシートを再利用しない全数再監査が必要で、statusは `needs-review` のまま。
+旧レシートを独立証拠には採用しない。現在の本項は別経路の単一CNF監査により `computed` とする。
 修正版（ソースSHA-256 `34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b`）で
 d=393,395から再監査を開始し、commit `87e28af3c927d640bde3fbc8a20238efc30bccb8` では
 重複のない**143 d**のUNSAT・終了コード0・出力VERIFIEDの受理記録がある。
@@ -244,7 +277,7 @@ inventoryは保存レシートの整合性・被覆のみを検査し、今回DR
 既被覆の321,341,361,381,393,395,401,421,441,461,481を除外した。
 全188件がDRAT-trim -Uと修正版LRATで受理され、保存したCNF・圧縮LRATの別処理での実再生も全件成功した。
 独立投影schema・sourceと証拠hash・原DRAT hash・前段台帳の連鎖を照合し、重複はない。
-**現在の独立被覆の和は539/1265 d、未被覆726 d**。内訳は修正版DRAT143 d、LRAT396 dである。
+旧d別経路の独立被覆の和は539/1265 d、未被覆726 d。内訳は修正版DRAT143 d、LRAT396 dである。
 この和はd=1..500を全て含む。このbatchの未完了・失敗・UNKNOWNは0だが、全数監査は未完了である。
 
 ## 命題・範囲
@@ -252,7 +285,19 @@ inventoryは保存レシートの整合性・被覆のみを検査し、今回DR
 `Q_p = {(t, t² mod p)}` の安全集合の最大を `A(p)` とすると、**p = 2531 では
 `A(2531) < (2531+3)/2 = 1267`**（すなわち `A(2531) <= 1266`）。
 K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 の「全奇素数で等号」に対する
-二つ目の反例候補である。`A(2531)` の正確な値と他素数への一般化は主張しない。
+二つ目の反例である。`A(2531)` の正確な値と他素数への一般化は主張しない。
+
+## 単一CNFによる独立監査（2026-11-10）
+
+全1267点安全集合は原点あり・完全対一つ・空対なしの形に限られる。
+保存8854変数・59662節のCNFを、探索builderやCardEncを使わない凍結schemaへ全照合した。
+構造21502節は対状態one-hot、BOTHの明示prefix counter、NONE単位節、点定義であり、変数領域は交差しない。
+残る38160幾何節は全てgeneric整数4x4行列式で実際の禁止四点と確認した。
+任意の安全1267点集合から対状態・点選択・BOTH prefix ORを割り当ててモデルを作れるため、提供辺の完全性は排除に不要である。
+
+元190979行DRATを固定DRAT-trimのRUP限定検査で受理し、抽出57444行LRATを空節処理修正版で受理した。
+さらに採用CNF・LRAT gzipの別処理実再生と全bindingも成功した。よって安全1267点集合は存在せず、A(2531)<=1266。
+この経路は旧d別の未被覆726件を前提とせず、個別に再生したdの件数を増やすものでもない。
 
 ## 根拠
 
@@ -267,7 +312,8 @@ K0693（p=2207）に次ぐ**2例目の等号不達成素数**であり、K0101 �
 ## 限界
 
 - 旧版の標本8件・途中373件のVERIFIED記録は、K0707により現在の修正版の被覆数には加えない。
-  修正版DRAT143 dと新LRAT396 dの和539 d以外はソルバ主張のまま。全数監査は未完了でstatusは `needs-review`。
+  旧d別経路の被覆は539 dで全数再生ではないが、現在の上界は全h+2点集合を覆う別の単一CNFで監査済み。
+  検査器・コンパイラへの依存は残り、一般的健全性やLean形式証明を主張しない。
 - `A(2531)` の正確な値は未確定。
 - 同時期の走査で p=2539, 2543, 2549 も d=h..h-30 の範囲で証人が見つかっておらず、
   反例素数は 2207, 2531 以外にも存在する可能性がある（未確定）。
