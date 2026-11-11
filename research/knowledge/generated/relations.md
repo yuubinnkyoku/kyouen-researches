@@ -71,11 +71,11 @@
 - ← depends_on [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md): 共線または共円の四点を含まない標準q=4の安全性
 - ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 共線または共円四点を含まない標準q=4の安全性
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 共線または共円四点を含まない標準q=4の安全性
-- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 共線または共円四点を含まない標準q=4の安全性
-- ← depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 標準q=4の共円・共線禁止四点を含まない安全性
-- ← depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 標準q=4の共線・共円禁止四点に関する安全性
-- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 標準q=4の共線・共円禁止四点に関する安全性
-- ← depends_on [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md): 標準q=4の安全性は部分集合に継承される
+- ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 共線または共円四点を含まない標準q=4の安全性
+- ← depends_on [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md): 標準q=4の共円・共線禁止四点を含まない安全性
+- ← depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 標準q=4の共線・共円禁止四点に関する安全性
+- ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 標準q=4の共線・共円禁止四点に関する安全性
+- ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 標準q=4の安全性は部分集合に継承される
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -352,6 +352,7 @@
 - ← depends_on [K0303](../items/K0303-width-three-all-q-all-length-grundy.md)
 - ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 固定幅q点版の全r系にのみ使う既存の満容量定理
 - ← depends_on [K0351](../items/K0351-width-three-q4-exact-stabilization.md): 固定幅q点版の一般的な満容量安定化枠組み
+- ← depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): より弱い初期上界T=2965は参考
 
 ## [K0025](../items/K0025-q-above-two-width-all-lengths.md) q>2wでは全長の固定幅盤が分離し強解決
 
@@ -432,7 +433,7 @@
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 最大安全石数の定義
 - ← depends_on [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
 - ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
-- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 固定集合の包含極大性と最大サイズを区別する
+- ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 固定集合の包含極大性と最大サイズを区別する
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -794,11 +795,11 @@
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
-- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 一般上界A(p)<=(p+3)/2をp=2539に適用
-- ← depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 安全集合の完全対は高々一つであり、完全対6を含めば他の各対は低側・高側・空対に限られる
-- ← depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 安全集合に含まれる完全対は高々一つ
-- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 安全集合の完全対は高々一つ
-- ← depends_on [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md): 安全集合の完全対は高々一つ
+- ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 一般上界A(p)<=(p+3)/2をp=2539に適用
+- ← depends_on [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md): 安全集合の完全対は高々一つであり、完全対6を含めば他の各対は低側・高側・空対に限られる
+- ← depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 安全集合に含まれる完全対は高々一つ
+- ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 安全集合の完全対は高々一つ
+- ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 安全集合の完全対は高々一つ
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -1584,6 +1585,7 @@
 - → generalizes [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11を含む
 - ← supports [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 本項の下界証人M_{3,4}>=24はK0302の確定値24と一致する。一般定理の上界69は十分長であり真の値ではない
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
+- ← verifies [K0727](../items/K0727-blocker-obligation-fill-m57.md): 5×18のrepo既知witnessを座標まで完全再現
 
 ## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類
 
@@ -1668,6 +1670,7 @@
 - → supports [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 初期証明の無界末尾と固定幅上界の文脈
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 初期一般上界200とcurve packingの文脈
+- ← depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): 曲線充填上界への(5,6)代入による一般上界249
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -1740,6 +1743,9 @@
 - → depends_on [K0107](../items/K0107-sharp-point-cover-bound.md): 反転した外部石へMelchiorの一般式を適用
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 六石行の同和弦energyの鋭い上界29
 - ← supports [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): 六石の外部行対ごとの同和弦予算29を与える
+- ← supports [K0726](../items/K0726-width-five-nineteen-curve-census.md): 5×m・q=7の下界押し上げと将来のM_{5,7}厳密決定に使う曲線census
+- ← supports [K0727](../items/K0727-blocker-obligation-fill-m57.md): M_{5,7} 厳密決定に向けたoccupancyクラス別全ケース列挙キャンペーンの中核機械
+- ← supports [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): M_{5,7}=19 予想のうち欠損行≤5石・単一行欠損の行0/行4側の否定部
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -1759,7 +1765,7 @@
 - ← depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 禁止四点から固定完全対dへの直接投影節の定義
 - ← generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
-- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
+- ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3639,6 +3645,9 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 94五石位置の勝敗分類（78先手/16第二手）
 - ← depends_on [K0705](../items/K0705-n11-p4-census.md): 94五石位置の勝敗分類（78先手/16第二手）
+- ← depends_on [K0724](../items/K0724-n11-classa-decomposition.md): 78先手勝ち/16第二手勝ち五石位置oracle
+- ← depends_on [K0725](../items/K0725-s2-5960-closure-worklist.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
 
 ## [K0676](../items/K0676-n11-region-s4-first-win.md) 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子）
 
@@ -3646,6 +3655,7 @@
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
 - ← depends_on [K0105](../items/K0105-n11-empty-root-winner-open.md): 四石領域位置S4-A/B先手勝ち（空盤への鎖の決定部分）
 - ← depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): 四石領域の先手勝ちは確定したが「遠方応手の全称」はoracle外
+- ← depends_on [K0725](../items/K0725-s2-5960-closure-worklist.md): S4-A/B/C四石親構造。S4-C={51,59,60,61}のFW子6個を確認
 
 ## [K0677](../items/K0677-subdivided-star-no-contact-double-root.md) 一辺細分星の終局多項式は全qの奇数次数で接触二重根をもたず、実根数は常に0個か2個
 
@@ -3721,6 +3731,9 @@
 
 - → depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): 四石領域の先手勝ちは確定したが「遠方応手の全称」はoracle外
 - → depends_on [K0003](../items/K0003-solution-and-evidence-levels.md): 条件付き証明義務と確定勝敗の区別
+- ← depends_on [K0724](../items/K0724-n11-classa-decomposition.md): 13,244 blockerのうちuniverseに触れるclassAの完全列挙
+- ← depends_on [K0725](../items/K0725-s2-5960-closure-worklist.md): best-S3 blocker監査の直接子列挙による閉鎖要件の定量化
+- ← depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): best-S3 blocker監査・blocker選定規則
 
 ## [K0686](../items/K0686-pure-triple-six-point-grundy-spectrum.md) 純三点制約の六点Grundyは0・1・2・4のみで、値3の最小点数は値4より大きい
 
@@ -3907,8 +3920,8 @@
 
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 禁止四点から固定完全対dへの直接投影節の定義
 - → generalizes [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
-- ← depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による
-- ← depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 原点・完全対固定の三値選択と空対数によるサイズ表示
+- ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による
+- ← depends_on [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md): 原点・完全対固定の三値選択と空対数によるサイズ表示
 
 ## [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完
 
@@ -3952,49 +3965,91 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
 
-## [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大
+## [K0723](../items/K0723-width-five-q6-stabilization-bounds.md) 5×m・q=6の満容量安定化長は16以上249以下
+
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 曲線充填上界への(5,6)代入による一般上界249
+- → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): より弱い初期上界T=2965は参考
+
+## [K0724](../items/K0724-n11-classa-decomposition.md) best-S3壁のclassA分解: classA blockerは32個・8 S2のみで、すべて16第二手勝ち五石子由来（SW16部分集合）
+
+- → depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): 13,244 blockerのうちuniverseに触れるclassAの完全列挙
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle
+
+## [K0725](../items/K0725-s2-5960-closure-worklist.md) S2 {59,60} 閉鎖に必要な新S5 verdictはちょうど1,447 D4 orbit、最小部分証明書は54 orbitで2 blockerを閉じる
+
+- → depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): best-S3 blocker監査の直接子列挙による閉鎖要件の定量化
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- → depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): S4-A/B/C四石親構造。S4-C={51,59,60,61}のFW子6個を確認
+- ← depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 閉鎖worklist 1,447 orbitの直接の子列挙による証明書分解
+
+## [K0726](../items/K0726-width-five-nineteen-curve-census.md) 5×19盤の7点以上曲線は95本の円と5本の行直線のみ（7点円8本・8点円87本）
+
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5×m・q=7の下界押し上げと将来のM_{5,7}厳密決定に使う曲線census
+- ← depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): 欠損行blockerの候補は5×19の7-8点円census（95本）に限る
+- ← depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+
+## [K0727](../items/K0727-blocker-obligation-fill-m57.md) blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械
+
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): 欠損行blockerの候補は5×19の7-8点円census（95本）に限る
+- → verifies [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 5×18のrepo既知witnessを座標まで完全再現
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7} 厳密決定に向けたoccupancyクラス別全ケース列挙キャンペーンの中核機械
+- ← depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): blocker-obligation-fill DFS（sound+complete）による完全列挙
+
+## [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行0/行4欠損の極大安全配置は全8,378ケースで存在しない
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): blocker-obligation-fill DFS（sound+complete）による完全列挙
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち欠損行≤5石・単一行欠損の行0/行4側の否定部
+
+## [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) S2 {59,60} の60 blockerは未知S5子のD4 orbit集合が一致する34 certificateに崩壊し、greedy順序のsecured coverageは1,447 orbitで完結する
+
+- → depends_on [K0725](../items/K0725-s2-5960-closure-worklist.md): 閉鎖worklist 1,447 orbitの直接の子列挙による証明書分解
+- → depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): best-S3 blocker監査・blocker選定規則
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+
+## [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2をp=2539に適用
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
 - → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 固定集合の包含極大性と最大サイズを区別する
 - → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による
-- ← depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 対象とするSHA-256固定の1258点安全証人
-- ← depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): SHA-256固定の1258点安全証人
-- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): SHA-256固定の1258点安全証人
-- ← depends_on [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md): SHA-256固定の1258点安全証人
+- ← depends_on [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md): 対象とするSHA-256固定の1258点安全証人
+- ← depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): SHA-256固定の1258点安全証人
+- ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): SHA-256固定の1258点安全証人
+- ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): SHA-256固定の1258点安全証人
 
-## [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み）
+## [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み）
 
-- → depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): 対象とするSHA-256固定の1258点安全証人
+- → depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 対象とするSHA-256固定の1258点安全証人
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合の完全対は高々一つであり、完全対6を含めば他の各対は低側・高側・空対に限られる
 - → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 原点・完全対固定の三値選択と空対数によるサイズ表示
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の共円・共線禁止四点を含まない安全性
-- ← depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 同じ固定1258点集合について、原点と元の完全対6を保つ場合の独立排除
-- ← generalizes [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 完全対を固定する条件を外し、原点を保つ全クラスへ広げる
+- ← depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 同じ固定1258点集合について、原点と元の完全対6を保つ場合の独立排除
+- ← generalizes [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 完全対を固定する条件を外し、原点を保つ全クラスへ広げる
 
-## [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み）
+## [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み）
 
-- → depends_on [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 同じ固定1258点集合について、原点と元の完全対6を保つ場合の独立排除
-- → generalizes [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md): 完全対を固定する条件を外し、原点を保つ全クラスへ広げる
-- → depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
+- → depends_on [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md): 同じ固定1258点集合について、原点と元の完全対6を保つ場合の独立排除
+- → generalizes [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md): 完全対を固定する条件を外し、原点を保つ全クラスへ広げる
+- → depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合に含まれる完全対は高々一つ
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の共線・共円禁止四点に関する安全性
-- ← depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 同じ固定1258点集合について原点を保つ全クラスの独立排除
-- ← generalizes [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 原点を保持する条件を外し、全ての改善候補へ広げる
+- ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 同じ固定1258点集合について原点を保つ全クラスの独立排除
+- ← generalizes [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 原点を保持する条件を外し、全ての改善候補へ広げる
 
-## [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし）
+## [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし）
 
-- → depends_on [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 同じ固定1258点集合について原点を保つ全クラスの独立排除
-- → generalizes [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md): 原点を保持する条件を外し、全ての改善候補へ広げる
-- → depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
+- → depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 同じ固定1258点集合について原点を保つ全クラスの独立排除
+- → generalizes [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 原点を保持する条件を外し、全ての改善候補へ広げる
+- → depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合の完全対は高々一つ
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の共線・共円禁止四点に関する安全性
-- ← depends_on [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md): 同じ固定集合から四点以下の削除による改善は全形状で独立排除済み
+- ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 同じ固定集合から四点以下の削除による改善は全形状で独立排除済み
 
-## [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) Q_2539の五点削除改善は原点・元の完全対を保持し60候補点を避ける必要がある
+## [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) Q_2539の五点削除改善は116点を避け空対26点から追加する必要がある
 
-- → depends_on [K0726](../items/K0726-p2539-four-deletion-local-optimum.md): 同じ固定集合から四点以下の削除による改善は全形状で独立排除済み
-- → depends_on [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
+- → depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 同じ固定集合から四点以下の削除による改善は全形状で独立排除済み
+- → depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合の完全対は高々一つ
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の安全性は部分集合に継承される

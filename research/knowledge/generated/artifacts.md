@@ -1639,6 +1639,20 @@
 ## [research/experiments/five-edge-terminal-spectrum-20261101/verify.py](../../../research/experiments/five-edge-terminal-spectrum-20261101/verify.py)
 
 - [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) (verifier): 17902所属型族・4717374安全局面、271重複署名盤・383059安全局面、14点全1001四点組・12651安全局面の独立照合
+## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
+- [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (source): blocker-obligation-fill DFSの再現ソース
+## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_m19_search.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_m19_search.ts)
+
+- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (source): 行対ペア列挙と全三点組列挙の2系統によるcensus再現、SA探索、独立検証器を同梱
+## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class0.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class0.ts)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{0} スライスrunner（双方向・global NODE_CAP）
+- [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (source): 双方向スライスrunner
+## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{1}（行1欠損）スライスrunner（Y0=1、葉fillは行0から）
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -7728,6 +7742,9 @@
 ## [research/experiments/n11-central-reply-frontier-20261012/scripts/select_small_s5_probe.py](../../../research/experiments/n11-central-reply-frontier-20261012/scripts/select_small_s5_probe.py)
 
 - [K0415](../items/K0415-n11-opening-first-move-d4-partial-classification.md) (verifier): 上位中央rootのUNKNOWN S4に必要なS5 exact子数と共有効果を測定
+## [research/experiments/n11-classa-decompose-20261110/scripts/blockers_classA_decompose.ts](../../../research/experiments/n11-classa-decompose-20261110/scripts/blockers_classA_decompose.ts)
+
+- [K0724](../items/K0724-n11-classa-decomposition.md) (source): 純TS再現（W4=FW78部分集合の単純化、BigInt盤、Bareiss幾何）
 ## [research/experiments/n11-cover-duality/output/center-corner-cover.json](../../../research/experiments/n11-cover-duality/output/center-corner-cover.json)
 
 - [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) (certificate): n3/5/7/9/11/13/15の上界coverと分母2の下界dual
@@ -8254,6 +8271,15 @@
 ## [research/experiments/n11-residual-twins/scripts/verify_twins.py](../../../research/experiments/n11-residual-twins/scripts/verify_twins.py)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (verifier): m≤5の全clutter監査と、保存格子証人の全L・最小R・Grundy再検査
+## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts)
+
+- [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon）。 単独実行で分布・13,244・classA 32件・worklist 1,447・鏡映同一性まで全数値を再現
+## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s6_census_smallest_blockers.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s6_census_smallest_blockers.ts)
+
+- [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 最小2 blockerのS6 census（2,191/2,150/共通79/union 4,262）
+## [research/experiments/n11-s2-cert-collapse-20261111/scripts/cert_collapse.ts](../../../research/experiments/n11-s2-cert-collapse-20261111/scripts/cert_collapse.ts)
+
+- [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon、universe閉包監査込み）。 単独実行で34 certificate・ペア実現元・greedy曲線・1,447完結を再現。 DO_S6=trueでmilestone-2のS6 census、DO_CROSS=nで横断worklistを再現
 ## [research/experiments/n11-s4-boundary-direct-20261012/README.md](../../../research/experiments/n11-s4-boundary-direct-20261012/README.md)
 
 - [K0414](../items/K0414-n11-reply27-root-loss.md) (source): 探索選定、全結果、費用、信頼範囲、再現手順
@@ -10263,7 +10289,7 @@
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 探索・CNF・edge cacheを読まない独立整数幾何検査器
 - [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (verifier): CNFや探索辺を読み込まないgeneric 4x4 Leibniz整数行列式と完全合同式フィルタ
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): 完全な合同式フィルタとgeneric 4x4 Leibniz整数行列式による集合安全性
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (verifier): 完全な合同式フィルタとgeneric 4x4 Leibniz整数行列式による集合安全性
 ## [research/experiments/parabola-local-repair-20261109/walk_initial.cpp](../../../research/experiments/parabola-local-repair-20261109/walk_initial.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 実際の100万flip・seed20261109の局所探索ソース
@@ -10641,325 +10667,349 @@
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 前段manifestのhash連鎖、新入力の独立投影schema、圧縮証明の実再生を照合
 ## [research/experiments/parabola-p2539-broader-exchange-20261110/README.md](../../../research/experiments/parabola-p2539-broader-exchange-20261110/README.md)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (source): 追加探索の再現と、負のソルバ結果を独立排除へ採用していないことの説明
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (source): 追加探索の再現と、負のソルバ結果を独立排除へ採用していないことの説明
 ## [research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 当時の四追加探索の入力byte監査。UNKNOWN一件・ソルバUNSAT三件。完全対変更/なしの上限4は後にK0725で独立監査
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 当時の四追加探索の入力byte監査。UNKNOWN一件・ソルバUNSAT三件。完全対変更/なしの上限4は後にK0732で独立監査
 ## [research/experiments/parabola-p2539-broader-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/regression.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
 ## [research/experiments/parabola-p2539-exact-five-20261111/README.md](../../../research/experiments/parabola-p2539-exact-five-20261111/README.md)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
 ## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/summary.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 三入力の独立schema・整数幾何・RUP・空節修正版LRAT受理とローカルLRATのhash・所在
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 三入力の独立schema・整数幾何・RUP・空節修正版LRAT受理とローカルLRATのhash・所在
 ## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/input.cnf.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/input.cnf.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点なし・完全対なし、42818変数127040節
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点なし・完全対なし、42818変数127040節
 ## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B0/verified-proof.drat.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った318386行DRAT
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った318386行DRAT
 ## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/input.cnf.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/input.cnf.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点なし・完全対一つ、46582変数134567節
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点なし・完全対一つ、46582変数134567節
 ## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x0-B1/verified-proof.drat.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った312040行DRAT
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った312040行DRAT
 ## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/input.cnf.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/input.cnf.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点あり・完全対なし、47810変数137026節
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点あり・完全対なし、47810変数137026節
 ## [research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-exact-five-20261111/audit-output/x1-B0/verified-proof.drat.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った486382行DRAT
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った486382行DRAT
 ## [research/experiments/parabola-p2539-exact-five-20261111/output/x1-B1-target1259-remove5/result.json](../../../research/experiments/parabola-p2539-exact-five-20261111/output/x1-B1-target1259-remove5/result.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 原点あり・完全対一つは100000 conflictsでUNKNOWN、独立排除も安全証人もない
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 原点あり・完全対一つは100000 conflictsでUNKNOWN、独立排除も安全証人もない
 ## [research/experiments/parabola-p2539-exact-five-20261111/qualification.json](../../../research/experiments/parabola-p2539-exact-five-20261111/qualification.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 四点削除排除・exact五点三形状・未解決形状を同一seedと部分集合論証へ結合
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 四点削除排除・exact五点三形状・未解決形状を同一seedと部分集合論証へ結合
 ## [research/experiments/parabola-p2539-exact-five-20261111/regression.json](../../../research/experiments/parabola-p2539-exact-five-20261111/regression.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 小素数のexact点数・損失・原点会計131940割当ての有限回帰
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 小素数のexact点数・損失・原点会計131940割当ての有限回帰
 ## [research/experiments/parabola-p2539-exact-five-20261111/replay.json](../../../research/experiments/parabola-p2539-exact-five-20261111/replay.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 採用圧縮CNF/DRATから独立schema・幾何・RUPを別処理再生
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 採用圧縮CNF/DRATから独立schema・幾何・RUPを別処理再生
 ## [research/experiments/parabola-p2539-exact-five-20261111/schema-regression.json](../../../research/experiments/parabola-p2539-exact-five-20261111/schema-regression.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力27改変の拒否、point定義192割当て、部分集合縮小例342件
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力27改変の拒否、point定義192割当て、部分集合縮小例342件
 ## [research/experiments/parabola-p2539-exact-five-20261111/schema.py](../../../research/experiments/parabola-p2539-exact-five-20261111/schema.py)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索builderとSATライブラリを使わずexact損失の上下両counterを全照合
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索builderとSATライブラリを使わずexact損失の上下両counterを全照合
 ## [research/experiments/parabola-p2539-exchange-20261110/README.md](../../../research/experiments/parabola-p2539-exchange-20261110/README.md)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 交換探索・保存証拠監査・極大性証明の再現手順と非達成の未確定性
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (source): 交換探索・保存証拠監査・極大性証明の再現手順と非達成の未確定性
 ## [research/experiments/parabola-p2539-exchange-20261110/audit-output/summary.json](../../../research/experiments/parabola-p2539-exchange-20261110/audit-output/summary.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 1255〜1258点の全モデル・入力byte再生成・独立整数幾何。二つの負の結果はソルバ主張のまま
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 1255〜1258点の全モデル・入力byte再生成・独立整数幾何。二つの負の結果はソルバ主張のまま
 ## [research/experiments/parabola-p2539-exchange-20261110/audit.py](../../../research/experiments/parabola-p2539-exchange-20261110/audit.py)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): 全モデルを直接評価して点を別に抽出し、探索辺・CNFに依存しない整数幾何を実行
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (verifier): 全モデルを直接評価して点を別に抽出し、探索辺・CNFに依存しない整数幾何を実行
 ## [research/experiments/parabola-p2539-exchange-20261110/certify_maximal.py](../../../research/experiments/parabola-p2539-exchange-20261110/certify_maximal.py)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): 現在の安全性receiptへ結び付け、全補集合の明示四点を別Bareiss検査へ渡す
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (verifier): 現在の安全性receiptへ結び付け、全補集合の明示四点を別Bareiss検査へ渡す
 ## [research/experiments/parabola-p2539-exchange-20261110/maximal-output/blockers.txt](../../../research/experiments/parabola-p2539-exchange-20261110/maximal-output/blockers.txt)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 現在の集合外1281点すべてに対する、追加点と既存三点からなる明示禁止四点
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (certificate): 現在の集合外1281点すべてに対する、追加点と既存三点からなる明示禁止四点
 ## [research/experiments/parabola-p2539-exchange-20261110/maximal-output/candidate.txt](../../../research/experiments/parabola-p2539-exchange-20261110/maximal-output/candidate.txt)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 現在の1258パラメータ。SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (certificate): 現在の1258パラメータ。SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
 ## [research/experiments/parabola-p2539-exchange-20261110/maximal-output/verification.json](../../../research/experiments/parabola-p2539-exchange-20261110/maximal-output/verification.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 新規安全性receiptへのhash bindingと全阻止四点の独立Bareiss受理
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 新規安全性receiptへのhash bindingと全阻止四点の独立Bareiss受理
 ## [research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 固定する1258点集合S、SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 固定する1258点集合S、SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
 ## [research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove3/result.json](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove3/result.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限3のソルバUNSATとローカル保持proof.drat.gzの解凍後hash・行数。独立未監査
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限3のソルバUNSATとローカル保持proof.drat.gzの解凍後hash・行数。独立未監査
 ## [research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/result.json](../../../research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/result.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限4の発見時のソルバ記録とローカル228249行DRATのhash。現在の独立監査はK0724
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (manifest): 除去上限4の発見時のソルバ記録とローカル228249行DRATのhash。現在の独立監査はK0731
 ## [research/experiments/parabola-p2539-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-exchange-20261110/regression.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 小素数の13194三値割当てで点数下限・種からの削除上限・整数幾何を全数照合
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 小素数の13194三値割当てで点数下限・種からの削除上限・整数幾何を全数照合
 ## [research/experiments/parabola-p2539-exchange-20261110/search.py](../../../research/experiments/parabola-p2539-exchange-20261110/search.py)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (solver): 完全対d=6を保つ有界交換。補助変数の予約上限を保持した二つのcounter
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (solver): 完全対d=6を保つ有界交換。補助変数の予約上限を保持した二つのcounter
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/README.md](../../../research/experiments/parabola-p2539-exchange-audit-20261110/README.md)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (proof): 安全候補から全CNF節を満たす補助変数への拡張証明、再現手順と信頼境界
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (proof): 安全候補から全CNF節を満たす補助変数への拡張証明、再現手順と信頼境界
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/lrat-controls.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/lrat-controls.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 空節処理修正の五制御。原版の偽受理を再現し、採用する局所修正版で拒否
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 空節処理修正の五制御。原版の偽受理を再現し、採用する局所修正版で拒否
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/output/core.lrat.gz](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/core.lrat.gz)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 元228249行DRATから抽出し局所修正版で検査した64571行LRAT
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 元228249行DRATから抽出し局所修正版で検査した64571行LRAT
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/output/geometry.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/geometry.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 各幾何節に対応する38868四点をgeneric整数4x4行列式で実検査
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 各幾何節に対応する38868四点をgeneric整数4x4行列式で実検査
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/output/input.cnf.gz](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/input.cnf.gz)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 23883変数・86583節、1259点以上かつ種からの削除上限4を課す採用入力
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (certificate): 23883変数・86583節、1259点以上かつ種からの削除上限4を課す採用入力
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/output/lrat.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/lrat.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 空節処理修正版LRAT検査器の受理
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 空節処理修正版LRAT検査器の受理
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/output/manifest.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/manifest.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (manifest): 固定種・CNF・採用圧縮LRAT・検査sourceのhashと局所排除の範囲
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (manifest): 固定種・CNF・採用圧縮LRAT・検査sourceのhashと局所排除の範囲
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/output/rup.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/rup.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 固定upstream DRAT-trimのRUP限定受理
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 固定upstream DRAT-trimのRUP限定受理
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/output/schema.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/output/schema.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 全節を38868幾何節・5072 one-hot節・31388空対counter節・11255削除counter節へ独立照合
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 全節を38868幾何節・5072 one-hot節・31388空対counter節・11255削除counter節へ独立照合
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/regression.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/regression.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 2064 prefix割当て、六つの破損schema、modular和0の非禁止四点の拒否
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 2064 prefix割当て、六つの破損schema、modular和0の非禁止四点の拒否
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/replay.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/replay.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 元DRAT・探索builder・辺cacheを読まない、採用圧縮CNF/LRATと独立schema・幾何の別処理実再生
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 元DRAT・探索builder・辺cacheを読まない、採用圧縮CNF/LRATと独立schema・幾何の別処理実再生
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/rup-controls.json](../../../research/experiments/parabola-p2539-exchange-audit-20261110/rup-controls.json)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): K0707の四偽証明拒否・resolution受理・SAT偽空節拒否の六制御
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): K0707の四偽証明拒否・resolution受理・SAT偽空節拒否の六制御
 ## [research/experiments/parabola-p2539-exchange-audit-20261110/schema.py](../../../research/experiments/parabola-p2539-exchange-audit-20261110/schema.py)
 
-- [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) (verifier): SATライブラリや探索器をimportせず、各counter補助変数をprefix個数へ解釈して全節の拡張可能性を確認
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (verifier): SATライブラリや探索器をimportせず、各counter補助変数をprefix個数へ解釈して全節の拡張可能性を確認
 ## [research/experiments/parabola-p2539-five-obstructions-20261111/README.md](../../../research/experiments/parabola-p2539-five-obstructions-20261111/README.md)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 一点追加の障害族と五点削除の必要条件、証明木の帰納的健全性、再現と限界
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 一点追加の障害族と五点削除の必要条件、証明木の帰納的健全性、再現と限界
 ## [research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/geometry.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/geometry.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): generic整数4×4行列式検査の正常終了・出力・入力とsourceのhash
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): generic整数4×4行列式検査の正常終了・出力・入力とsourceのhash
 ## [research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/audit-output/summary.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 60点排除、packing306・branch123 node受理、6514禁止四点の実検査
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 60点排除、packing306・branch123 node受理、6514禁止四点の実検査
 ## [research/experiments/parabola-p2539-five-obstructions-20261111/output/certificate.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/output/certificate.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 全1281候補のうち60点の負hitting証明木と1221点の提供障害族だけをhitする削除証人
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 全1281候補のうち60点の負hitting証明木と1221点の提供障害族だけをhitする削除証人
 ## [research/experiments/parabola-p2539-five-obstructions-20261111/qualification.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/qualification.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 同一seedの原点・完全対保持条件と追加候補60点の独立排除を結合
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 同一seedの原点・完全対保持条件と追加候補60点の独立排除を結合
 ## [research/experiments/parabola-p2539-five-obstructions-20261111/regression.json](../../../research/experiments/parabola-p2539-five-obstructions-20261111/regression.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 正負双方の証明木・削除証人を総当たり2224例と照合、14改変を拒否
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 正負双方の証明木・削除証人を総当たり2224例と照合、14改変を拒否
 ## [research/experiments/parabola-p2539-five-obstructions-20261111/verify.py](../../../research/experiments/parabola-p2539-five-obstructions-20261111/verify.py)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索コードをimportせず分岐被覆・残予算・互いに素な障害と実整数幾何を確認
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索コードをimportせず分岐被覆・残予算・互いに素な障害と実整数幾何を確認
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/README.md](../../../research/experiments/parabola-p2539-five-pair-split-20261111/README.md)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 完全対の位置も保つ部分集合論証、分割・モデル拡張、再現と限界
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 完全対の位置も保つ部分集合論証、分割・モデル拡張、再現と限界
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/input.cnf.gz](../../../research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/input.cnf.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点・完全対一つ・exact五点損失の親CNFに[-B6]を加えた51570変数144546節
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 原点・完全対一つ・exact五点損失の親CNFに[-B6]を加えた51570変数144546節
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/manifest.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/manifest.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 独立schema・整数幾何・RUP/LRAT受理、採用証明とローカル保持147349行LRATのhash・所在
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 独立schema・整数幾何・RUP/LRAT受理、採用証明とローカル保持147349行LRATのhash・所在
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-five-pair-split-20261111/audit-output/changed/verified-proof.drat.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った483675行DRAT
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): RUP限定検査と別処理再生を通った483675行DRAT
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/input-audit/summary.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/input-audit/summary.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 親+相補単位節のbyte完全照合と両形状の独立schema・幾何確認
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 親+相補単位節のbyte完全照合と両形状の独立schema・幾何確認
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/output/retained/result.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/output/retained/result.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 原点と元の完全対を保つexact五点損失はbudget100000でUNKNOWN、実conflicts100004
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 原点と元の完全対を保つexact五点損失はbudget100000でUNKNOWN、実conflicts100004
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/qualification.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/qualification.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 既存三形状排除と元の完全対変更の独立排除を同一seed・部分集合論証へ結合
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 既存三形状排除と元の完全対変更の独立排除を同一seed・部分集合論証へ結合
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/regression.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/regression.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 16不正入力拒否と元の完全対に対応する実point・splitの128真理値割当て
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 16不正入力拒否と元の完全対に対応する実point・splitの128真理値割当て
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/replay.json](../../../research/experiments/parabola-p2539-five-pair-split-20261111/replay.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 採用CNF/DRATを独立schema・整数幾何・RUPとともに別処理再生
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 採用CNF/DRATを独立schema・整数幾何・RUPとともに別処理再生
 ## [research/experiments/parabola-p2539-five-pair-split-20261111/schema.py](../../../research/experiments/parabola-p2539-five-pair-split-20261111/schema.py)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 全構造節・損失counter・末尾のB6否定単位節を独立解釈
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 全構造節・損失counter・末尾のB6否定単位節を独立解釈
 ## [research/experiments/parabola-p2539-five-pruned-20261111/README.md](../../../research/experiments/parabola-p2539-five-pruned-20261111/README.md)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい除外条件を採用したprobeの再現、UNKNOWNの限界、次の手順
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい除外条件を採用したprobeの再現、UNKNOWNの限界、次の手順
 ## [research/experiments/parabola-p2539-five-pruned-20261111/input-audit/summary.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/input-audit/summary.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 親全節と追加60節の意味・hitting-tree・整数幾何監査、UNSAT監査ではない
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 親全節と追加60節の意味・hitting-tree・整数幾何監査、UNSAT監査ではない
 ## [research/experiments/parabola-p2539-five-pruned-20261111/output/input.cnf.gz](../../../research/experiments/parabola-p2539-five-pruned-20261111/output/input.cnf.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 保持側の親CNFに60負point単位節を追加した51570変数144606節、未解決入力
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 保持側の親CNFに60負point単位節を追加した51570変数144606節、未解決入力
 ## [research/experiments/parabola-p2539-five-pruned-20261111/output/result.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/output/result.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい60節付き入力もbudget100000・85.197秒でUNKNOWN、完結した負証明なし
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい60節付き入力もbudget100000・85.197秒でUNKNOWN、完結した負証明なし
 ## [research/experiments/parabola-p2539-five-pruned-20261111/regression.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/regression.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力10改変の拒否と60負point単位節の120真理値割当て
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力10改変の拒否と60負point単位節の120真理値割当て
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/README.md](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/README.md)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (proof): 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (proof): 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/input.cnf.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/input.cnf.gz)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): 完全対変更の44062変数・130779節。元の完全対6を禁止し原点と1259点・削除上限4を指定
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): 完全対変更の44062変数・130779節。元の完全対6を禁止し原点と1259点・削除上限4を指定
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/manifest.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/manifest.json)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 採用CNF/DRATと、ローカル保持した42292行LRATの所在・hash・独立受理
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 採用CNF/DRATと、ローカル保持した42292行LRATの所在・hash・独立受理
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/changed-pair/verified-proof.drat.gz)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): RUP限定で受理し別処理でも再生した254562行DRAT
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): RUP限定で受理し別処理でも再生した254562行DRAT
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/input.cnf.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/input.cnf.gz)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): 完全対なしの40302変数・123259節。原点と1259点・削除上限4を指定
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): 完全対なしの40302変数・123259節。原点と1259点・削除上限4を指定
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/manifest.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/manifest.json)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 採用CNF/DRATと、ローカル保持した33132行LRATの所在・hash・独立受理
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 採用CNF/DRATと、ローカル保持した33132行LRATの所在・hash・独立受理
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/no-pair/verified-proof.drat.gz)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): RUP限定で受理し別処理でも再生した298208行DRAT
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (certificate): RUP限定で受理し別処理でも再生した298208行DRAT
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/output/summary.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/output/summary.json)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (data): 二つの独立schema・幾何・RUP・空節修正版LRAT受理の集約
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (data): 二つの独立schema・幾何・RUP・空節修正版LRAT受理の集約
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/qualification.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/qualification.json)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 元完全対・別完全対・完全対なしの三場合を同一seedへ結び付ける集約と部分集合論証のhash
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (manifest): 元完全対・別完全対・完全対なしの三場合を同一seedへ結び付ける集約と部分集合論証のhash
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/regression.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/regression.json)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (data): 実入力14改変の拒否、point定義128真理値割当て、部分集合選択の有限縮小例356件
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (data): 実入力14改変の拒否、point定義128真理値割当て、部分集合選択の有限縮小例356件
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/replay.json](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/replay.json)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (data): Git管理された採用圧縮CNF/DRATを、独立schemaと幾何を含めて別処理実再生
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (data): Git管理された採用圧縮CNF/DRATを、独立schemaと幾何を含めて別処理実再生
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/schema.py](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/schema.py)
 
-- [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) (verifier): 探索器とSATライブラリをimportせず、4値状態・exact cardinality・point定義・削除counter・幾何を全節照合
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (verifier): 探索器とSATライブラリをimportせず、4値状態・exact cardinality・point定義・削除counter・幾何を全節照合
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/README.md](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/README.md)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 完全対保持から単点障害を得る論証、116点除外、空対26点の追加が必要な数え上げとnative RUP
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/audit-output/summary.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 全7769四点の整数幾何とpacking248・branch99 nodeの独立受理、残り1165点は必要障害族だけの削除証人
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/gate-output/empty-pair-clause.rup.gz](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/gate-output/empty-pair-clause.rup.gz)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 元の空対26点から少なくとも一点を選ぶ正ORを親だけから導く一行RUP、空節ではない
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/gate-output/receipt.json](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/gate-output/receipt.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 親の保持側CNFだけを使い-f -Uで26-literal clauseをDERIVATION受理
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/gate-regression.json](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/gate-regression.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 20880組の小seed/targetで鏡像単射と空対追加の必要性を検査、うち2920組が厳密改善
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/output/certificate.json](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/output/certificate.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 1255個の完全対四点を加えた障害族で116点を排除、既存60点に新規56点を追加
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/qualification.json](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/qualification.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 同一seedの116点除外と空対26点の正追加gateを既存の原点・完全対保持条件へ結合
+## [research/experiments/parabola-p2539-pair-obstructions-20261111/regression.json](../../../research/experiments/parabola-p2539-pair-obstructions-20261111/regression.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 小素数272 seed・528完全対四点・6084削除例、5不正入力拒否
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/README.md](../../../research/experiments/parabola-p2539-pair-pilot-20261110/README.md)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (source): 再現手順・証拠の保存境界・探索と独立検査の区別
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (source): 再現手順・証拠の保存境界・探索と独立検査の区別
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/candidate.txt](../../../research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/candidate.txt)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (certificate): 改善前の1254点極大集合。今回の四段階の交換の種として保持
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (certificate): 改善前の1254点極大集合。今回の四段階の交換の種として保持
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/trials.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/augmented-output/trials.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 九つの貪欲拡張trialと最良集合の由来。全trialの独立安全性は主張しない
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 九つの貪欲拡張trialと最良集合の由来。全trialの独立安全性は主張しない
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/local-output/summary.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/local-output/summary.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 三つの局所探索からの修復結果。最良1253点を独立幾何で検査してから拡張
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 三つの局所探索からの修復結果。最良1253点を独立幾何で検査してから拡張
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/output/plan.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/output/plan.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (manifest): 固定完全対12件の有限予算pilot、source・入力hashと元cache所在
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (manifest): 固定完全対12件の有限予算pilot、source・入力hashと元cache所在
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/output/summary.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/output/summary.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): UNKNOWN 11件とソルバのみのUNSAT 1件。等号不達成の証明としては採用しない
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): UNKNOWN 11件とソルバのみのUNSAT 1件。等号不達成の証明としては採用しない
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/projection-controls.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/projection-controls.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 非自明辺のあるp17,p19の6656割当てを全数照合し安全・禁止の両側を検査
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 非自明辺のあるp17,p19の6656割当てを全数照合し安全・禁止の両側を検査
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/regression.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/regression.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 小素数192割当ての符号化全数照合、修復制御、不正阻止証拠五種の拒否
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 小素数192割当ての符号化全数照合、修復制御、不正阻止証拠五種の拒否
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/replay.json](../../../research/experiments/parabola-p2539-pair-pilot-20261110/replay.json)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (data): 改善前1254点集合の別処理実再生と全1285阻止四点のPython Bareiss独立検査、五制御
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 改善前1254点集合の別処理実再生と全1285阻止四点のPython Bareiss独立検査、五制御
 ## [research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py](../../../research/experiments/parabola-p2539-pair-pilot-20261110/verify_saved.py)
 
-- [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) (verifier): ソルバ・辺cache・局所モデルを読まず固定集合と全阻止証拠を再検査
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (verifier): ソルバ・辺cache・局所モデルを読まず固定集合と全阻止証拠を再検査
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/README.md](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/README.md)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (proof): 仮定除去のRUP論証、個別と結合受理・初回timeoutの区別、全モデル一致と大きなTへの縮小
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 仮定除去のRUP論証、個別と結合受理・初回timeoutの区別、全モデル一致と大きなTへの縮小
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/audit-output/controls.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/audit-output/controls.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): native partial RUP checkerで正しい単位・非単位を受理し、偽の節を拒否
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): native partial RUP checkerで正しい単位・非単位を受理し、偽の節を拒否
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/all-units.rup.gz](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/all-units.rup.gz)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 60負point単位節を親CNFだけから導く追加696834・削除696774行の結合RUP、空節なし
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 60負point単位節を親CNFだけから導く追加696834・削除696774行の結合RUP、空節なし
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/summary.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/combined-output/summary.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 固定checkerの-f -UでDERIVATION受理、UNSAT refutationではない
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 固定checkerの-f -UでDERIVATION受理、UNSAT refutationではない
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/individual-summary.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/individual-summary.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 親CNFだけから受理済みの60個別RUP導出の所在・hash、結合検査と独立した採用
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 親CNFだけから受理済みの60個別RUP導出の所在・hash、結合検査と独立した採用
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/native-controls.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/native-controls.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい変数の単位節をRATとして受理し-Uでは拒否、guard付き導出を受理しguard欠落を拒否
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 新しい変数の単位節をRATとして受理し-Uでは拒否、guard付き導出を受理しguard欠落を拒否
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/qualification.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/qualification.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 元の保持側CNFと60単位節付きpruned CNFの全モデル一致、既存の形状条件との結合
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 元の保持側CNFと60単位節付きpruned CNFの全モデル一致、既存の形状条件との結合
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/regression.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/regression.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): 独立小型UPと総当たりで561仮定下の負例・574 lift節を照合、guard欠落等を拒否
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 独立小型UPと総当たりで561仮定下の負例・574 lift節を照合、guard欠落等を拒否
 ## [research/experiments/parabola-p2539-point-rup-bridge-20261111/replay.json](../../../research/experiments/parabola-p2539-point-rup-bridge-20261111/replay.json)
 
-- [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) (data): SATライブラリや子証明を使わず結合RUPを別処理再生、DERIVATIONと全体UNSATを区別
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): SATライブラリや子証明を使わず結合RUPを別処理再生、DERIVATIONと全体UNSATを区別
 ## [research/experiments/parabola-p2539-without-origin-20261111/README.md](../../../research/experiments/parabola-p2539-without-origin-20261111/README.md)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
 ## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/input.cnf.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/input.cnf.gz)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): 原点なし・完全対なしの36556変数115767節、exact1259点・総削除数4以下
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (certificate): 原点なし・完全対なしの36556変数115767節、exact1259点・総削除数4以下
 ## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/manifest.json](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/manifest.json)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (manifest): 採用CNF/DRATとローカル保持1277行LRATの所在・hash・独立受理
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (manifest): 採用CNF/DRATとローカル保持1277行LRATの所在・hash・独立受理
 ## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/verified-proof.drat.gz)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): RUP限定検査と別処理再生を通った23072行DRAT
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (certificate): RUP限定検査と別処理再生を通った23072行DRAT
 ## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/input.cnf.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/input.cnf.gz)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): 原点なし・完全対一つの40320変数123294節、exact1259点・総削除数4以下
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (certificate): 原点なし・完全対一つの40320変数123294節、exact1259点・総削除数4以下
 ## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/manifest.json](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/manifest.json)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (manifest): 採用CNF/DRATとローカル保持22797行LRATの所在・hash・独立受理
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (manifest): 採用CNF/DRATとローカル保持22797行LRATの所在・hash・独立受理
 ## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/verified-proof.drat.gz](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/B1/verified-proof.drat.gz)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (certificate): RUP限定検査と別処理再生を通った205896行DRAT
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (certificate): RUP限定検査と別処理再生を通った205896行DRAT
 ## [research/experiments/parabola-p2539-without-origin-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-without-origin-20261111/audit-output/summary.json)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (data): 二クラスの独立schema・幾何・RUP・空節修正版LRAT受理
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (data): 二クラスの独立schema・幾何・RUP・空節修正版LRAT受理
 ## [research/experiments/parabola-p2539-without-origin-20261111/qualification.json](../../../research/experiments/parabola-p2539-without-origin-20261111/qualification.json)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (manifest): 原点保持のK0725と原点なし二クラスを同一seedへ結び付ける集約、部分集合論証のhash
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (manifest): 原点保持のK0732と原点なし二クラスを同一seedへ結び付ける集約、部分集合論証のhash
 ## [research/experiments/parabola-p2539-without-origin-20261111/regression.json](../../../research/experiments/parabola-p2539-without-origin-20261111/regression.json)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (data): 14不正入力の拒否、128 point真理値割当て、原点損失を含む部分集合縮小例152件
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (data): 14不正入力の拒否、128 point真理値割当て、原点損失を含む部分集合縮小例152件
 ## [research/experiments/parabola-p2539-without-origin-20261111/replay.json](../../../research/experiments/parabola-p2539-without-origin-20261111/replay.json)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (data): 採用圧縮CNF/DRATを独立schema・幾何とともに別処理実再生
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (data): 採用圧縮CNF/DRATを独立schema・幾何とともに別処理実再生
 ## [research/experiments/parabola-p2539-without-origin-20261111/schema.py](../../../research/experiments/parabola-p2539-without-origin-20261111/schema.py)
 
-- [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) (verifier): SATライブラリ・探索builderを使わず全節を解釈し、原点の損失1と非原点削除上限3を区別する
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (verifier): SATライブラリ・探索builderを使わず全節を解釈し、原点の損失1と非原点削除上限3を区別する
 ## [research/experiments/parabola-single-cnf-audits-20261110/README.md](../../../research/experiments/parabola-single-cnf-audits-20261110/README.md)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): 単一CNFで全h+2点集合を排除する論理、保存証拠再生と旧d別監査との区別
@@ -11319,6 +11369,15 @@
 ## [research/experiments/pure-triple-six-edge-witnesses-20261108/search.py](../../../research/experiments/pure-triple-six-edge-witnesses-20261108/search.py)
 
 - [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) (verifier): 五辺高Grundy核への一辺追加探索とC++/Python根値照合
+## [research/experiments/q56-five-row-20261110/output/q56_witness_5x15.json](../../../research/experiments/q56-five-row-20261110/output/q56_witness_5x15.json)
+
+- [K0723](../items/K0723-width-five-q6-stabilization-bounds.md) (data): 5×15の24石安全極大証人と全51空点のblocker記録
+## [research/experiments/q56-five-row-20261110/report.md](../../../research/experiments/q56-five-row-20261110/report.md)
+
+- [K0723](../items/K0723-width-five-q6-stabilization-bounds.md) (proof): 下界証人・blocker・上界代入・限界
+## [research/experiments/q56-five-row-20261110/scripts/q56_witness_check.ts](../../../research/experiments/q56-five-row-20261110/scripts/q56_witness_check.ts)
+
+- [K0723](../items/K0723-width-five-q6-stabilization-bounds.md) (verifier): 全三点組・整数行列式による独立安全性・極大性・上界検査
 ## [research/experiments/q57-frontier-followup-20261005/general-energy-proof.md](../../../research/experiments/q57-frontier-followup-20261005/general-energy-proof.md)
 
 - [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md) (proof): 任意の異なる実数座標に対する鎖分解・重み付け証明と等差数列の等号
@@ -12423,6 +12482,31 @@
 ## [research/log/2026-11-09-p2647-near-miss-and-size-1323.md](../../../research/log/2026-11-09-p2647-near-miss-and-size-1323.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 形状クラス判定の方法と結果
+## [research/log/2026-11-10-five-row-q7-m19-search.md](../../../research/log/2026-11-10-five-row-q7-m19-search.md)
+
+- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (log): 探索キャンペーン記録（m=19証人は見つからず、M=19予想の補強証拠）
+## [research/log/2026-11-10-n11-classa-decompose.md](../../../research/log/2026-11-10-n11-classa-decompose.md)
+
+- [K0724](../items/K0724-n11-classa-decomposition.md) (log): 実行記録
+## [research/log/2026-11-10-n11-s2-5960-worklist.md](../../../research/log/2026-11-10-n11-s2-5960-worklist.md)
+
+- [K0725](../items/K0725-s2-5960-closure-worklist.md) (log): 実行記録
+## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
+
+- [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
+## [research/log/2026-11-11-m57-blocker-obligation-fill.md](../../../research/log/2026-11-11-m57-blocker-obligation-fill.md)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 機械開発・検証・キャンペーン開始の記録
+## [research/log/2026-11-11-n11-s2-cert-collapse.md](../../../research/log/2026-11-11-n11-s2-cert-collapse.md)
+
+- [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (log): 実行記録
+## [research/log/2026-11-11-parabola-local-id-integration.md](../../../research/log/2026-11-11-parabola-local-id-integration.md)
+
+- [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 未pushローカル旧K0723から現行K0730への番号対応
+- [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 未pushローカル旧K0724から現行K0731への番号対応
+- [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (data): 未pushローカル旧K0725から現行K0732への番号対応
+- [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (data): 未pushローカル旧K0726から現行K0733への番号対応
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 未pushローカル旧K0727から現行K0734への番号対応、凍結証拠の旧番号の解釈
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

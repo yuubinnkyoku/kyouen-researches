@@ -1,5 +1,5 @@
 ---
-id: K0723
+id: K0730
 title: Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大
 kind: proposition
 status: computed
@@ -22,6 +22,9 @@ relations:
   target: K0712
   note: 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による
 artifacts:
+- path: research/log/2026-11-11-parabola-local-id-integration.md
+  role: data
+  note: 未pushローカル旧K0723から現行K0730への番号対応
 - path: research/experiments/parabola-p2539-exchange-20261110/maximal-output/candidate.txt
   role: certificate
   note: 現在の1258パラメータ。SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
@@ -51,7 +54,7 @@ artifacts:
   note: 除去上限3のソルバUNSATとローカル保持proof.drat.gzの解凍後hash・行数。独立未監査
 - path: research/experiments/parabola-p2539-exchange-20261110/output/target1259-remove4/result.json
   role: manifest
-  note: 除去上限4の発見時のソルバ記録とローカル228249行DRATのhash。現在の独立監査はK0724
+  note: 除去上限4の発見時のソルバ記録とローカル228249行DRATのhash。現在の独立監査はK0731
 - path: research/experiments/parabola-p2539-exchange-20261110/README.md
   role: source
   note: 交換探索・保存証拠監査・極大性証明の再現手順と非達成の未確定性
@@ -121,7 +124,7 @@ Sは安全だが各S∪{t}は安全でないため、Sを真に含む安全集�
 その後、完全対d=6と原点を固定し、各段階で3点以下を除く交換を四回行って1255,1256,1257,1258点へ改善した。
 四つの保存入力をbyte再生成し、全モデルの節評価・独立な点抽出・交換差分・各集合の独立整数幾何を確認した。
 1258点から1259点を求める除去上限3と4の二入力は当初ソルバUNSATのみだった。
-現在はK0724で除去上限4の独立schema・幾何・RUP/LRAT監査が完了し、固定原点・完全対を保つ局所排除を採用した。
+現在はK0731で除去上限4の独立schema・幾何・RUP/LRAT監査が完了し、固定原点・完全対を保つ局所排除を採用した。
 除去上限3のDRATを個別再生したわけではない。条件なしの交換不能や全体上界の改善には読み替えない。
 局所探索の違反節数最小化や貪欲修復は最適性を保証しない。
 

@@ -1,16 +1,16 @@
 ---
-id: K0727
-title: Q_2539の五点削除改善は原点・元の完全対を保持し60候補点を避ける必要がある
+id: K0734
+title: Q_2539の五点削除改善は116点を避け空対26点から追加する必要がある
 kind: proposition
 status: computed
 topics: [geometry, maximum-safe, reconfiguration, verification]
 aliases: []
 relations:
 - type: depends_on
-  target: K0726
+  target: K0733
   note: 同じ固定集合から四点以下の削除による改善は全形状で独立排除済み
 - type: depends_on
-  target: K0723
+  target: K0730
   note: SHA-256固定の1258点安全証人
 - type: depends_on
   target: K0097
@@ -19,6 +19,9 @@ relations:
   target: K0001
   note: 標準q=4の安全性は部分集合に継承される
 artifacts:
+- path: research/log/2026-11-11-parabola-local-id-integration.md
+  role: data
+  note: 未pushローカル旧K0727から現行K0734への番号対応、凍結証拠の旧番号の解釈
 - path: research/experiments/parabola-p2539-exact-five-20261111/qualification.json
   role: manifest
   note: 四点削除排除・exact五点三形状・未解決形状を同一seedと部分集合論証へ結合
@@ -154,8 +157,32 @@ artifacts:
 - path: research/experiments/parabola-p2539-point-rup-bridge-20261111/README.md
   role: proof
   note: 仮定除去のRUP論証、個別と結合受理・初回timeoutの区別、全モデル一致と大きなTへの縮小
-scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の60点集合Uの回避が必要。残る候補の実在・非存在、五点削除局所最適性、全体の最大性は主張しない。
-evidence: 四点以下と原点・完全対変更の形状を独立schema・整数幾何・RUP/LRATで排除。さらに提供辺からの一点追加障害族を五点以下でhitできない60点を独立証明木と6514四点の実整数幾何で排除。部分集合縮小とhitting-tree帰納論証は有限検査と区別する。
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/qualification.json
+  role: manifest
+  note: 同一seedの116点除外と空対26点の正追加gateを既存の原点・完全対保持条件へ結合
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/output/certificate.json
+  role: certificate
+  note: 1255個の完全対四点を加えた障害族で116点を排除、既存60点に新規56点を追加
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/audit-output/summary.json
+  role: data
+  note: 全7769四点の整数幾何とpacking248・branch99 nodeの独立受理、残り1165点は必要障害族だけの削除証人
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/regression.json
+  role: data
+  note: 小素数272 seed・528完全対四点・6084削除例、5不正入力拒否
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/gate-output/empty-pair-clause.rup.gz
+  role: certificate
+  note: 元の空対26点から少なくとも一点を選ぶ正ORを親だけから導く一行RUP、空節ではない
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/gate-output/receipt.json
+  role: manifest
+  note: 親の保持側CNFだけを使い-f -Uで26-literal clauseをDERIVATION受理
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/gate-regression.json
+  role: data
+  note: 20880組の小seed/targetで鏡像単射と空対追加の必要性を検査、うち2920組が厳密改善
+- path: research/experiments/parabola-p2539-pair-obstructions-20261111/README.md
+  role: proof
+  note: 完全対保持から単点障害を得る論証、116点除外、空対26点の追加が必要な数え上げとnative RUP
+scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の116点集合Uの回避、元の空対26点集合Eから少なくとも一点の追加が必要。残る候補の実在・非存在や全体最大性は主張しない。
+evidence: 四点以下と原点・完全対変更の形状を独立排除。完全対の四点を加えた7769障害で116点の負hitting証明木を独立受理。追加点の鏡像から削除点への単射でE追加が必要となり、正26-literal clauseも親だけのRUPで受理。既存60点のnative RUPと新規56点の幾何hitting根拠は区別する。
 ---
 
 ## 命題
@@ -164,12 +191,12 @@ SはSHA-256 `454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb` �
 |T|≥1259、|S∖T|≤5を満たすQ_2539内の安全集合Tがあれば、
 **正確に五点を失い、原点0と元の完全対{6,2533}を全て保つ。**
 安全集合の完全対は高々一つなので、完全対の位置も元の対に限られる。
-さらに、後掲の60点集合Uを含めることはできない。
+さらに、後掲の116点集合Uを避け、元の空対26点集合Eから少なくとも一点を追加しなければならない。
 これは改善の必要条件であり、改善の存在は未確定。
 
 ## 根拠
 
-K0726によりr=|S∖T|は5。完全対数は高々一つなので、原点有無と完全対数で四形状に分かれる。
+K0733によりr=|S∖T|は5。完全対数は高々一つなので、原点有無と完全対数で四形状に分かれる。
 exact1259点の三形状（原点なしの二形状、原点あり・完全対なし）を独立排除した。
 全節を独立schemaで解釈し、損失の上下両counterと原点損失1を確認した。
 各幾何節を実四点へ戻して整数行列式0を検査し、DRATのRUP限定受理、
@@ -194,7 +221,7 @@ T'も原点・五点損失・その完全対を保つ。部分集合は新しい
 
 ## 一点追加障害による60点の独立排除
 
-Uは次の60点であり、いずれもSに含まれない。
+初回の除外集合U0は次の60点であり、いずれもSに含まれない。
 
 ```
 555 856 934 956 1095 1187 1189 1190 1277 1283
@@ -207,18 +234,50 @@ Uは次の60点であり、いずれもSに含まれない。
 
 F={0,6,2533}とする。候補点uを含み、残り三点がS内にある提供禁止四点qから、
 障害R=(q∖{u})∖Fを作る。F⊆Tでu∈Tなら、安全性のためD=S∖Tは全てのRをhitする必要がある。
-Uの各uについて、五点以下ではhitできない証明木を独立検査した。
+U0の各uについて、五点以下ではhitできない証明木を独立検査した。
 leafは残予算kに対するk+1個の互いに素な非空障害、または空障害。
 branchは障害Rをhitする全選択v∈Rを被覆し、残りを予算k−1で排除する。
 この帰納論証と、実際のpacking306・branch123 node受理を区別する。
 抽出した6514四点はgeneric整数4×4行列式0を実確認し、提供辺の完全性には依存しない。
-従ってT∩U=∅。この障害論証自体はTの点数に依らず、同時に複数点を追加しても成立する。
+従ってT∩U0=∅。この障害論証自体はTの点数に依らず、同時に複数点を追加しても成立する。
+
+## 完全対保持の障害で116点へ強化
+
+u∉S、2539−u∈Sなら、{6,2533,u,2539−u}も禁止四点である。
+固定対を保ってuを追加するには2539−uを削除する必要があり、障害族へ単点{2539−u}を追加できる。
+1255個のこの四点を加え、全7769四点を整数行列式0と実確認した。
+強化した障害族の独立証明木で、新規56点U1を排除した。
+
+```
+27 258 265 324 352 417 489 520 604 648 690 703 729 756
+826 863 913 927 961 1016 1055 1132 1193 1282 1317 1354 1381 1396
+1447 1458 1632 1694 1748 1787 1796 1803 1805 1822 1856 1858 1862 1872
+1901 1991 2039 2057 2082 2109 2186 2199 2222 2312 2355 2387 2402 2435
+```
+
+U=U0∪U1は116点で、T∩U=∅が必要。負証明木はpacking248・branch99 nodeを受理した。
+新規56点の根拠は整数幾何とhitting-treeであり、既存60点の親だけのRUP導出とは区別する。
+
+## 元の空対26点からの追加が必要
+
+Sで両側とも空の13対が作る26点集合Eは次の通り。
+
+```
+60 106 262 269 612 647 692 916 992 1021 1027 1172 1197
+1342 1367 1512 1518 1547 1623 1847 1892 1927 2270 2277 2433 2479
+```
+
+A=T∖S、D=S∖Tとする。u∈A∖Eの鏡像2539−uはSにあり、元の完全対を保つためDに属する。
+この鏡像写像は単射なので|A∖E|≤|D|<|A|。従ってT∩E≠∅が必要である。
+正point変数26個のOR一行も、既存の保持側親CNFだけから-f -UでDERIVATION受理した。
+これは空節ではなく、親全体UNSATを意味しない。EとUは交わらず、26点の個別仮定で未知部分を被覆できる。
 
 ## 未解決と限界
 
 残る「原点と元の完全対を保持」はexact五点削除・budget100000（実conflicts100004）でUNKNOWN。
 UNSATもSATも、安全な1259点証人も得ていない。
-U以外の1221追加候補には、提供した一点追加障害族だけをhitする五点以下の削除証人がある。
+初回のU0以外1221候補には初回の障害族だけをhitする削除証人があった。
+強化後はU以外1165候補について、完全対の障害も含めた族だけをhitする五点以下の削除証人がある。
 これは安全な改善証人や、他の幾何障害を全て回避する証人ではない。
 その後、親の保持側CNFに60負point単位節を追加した51570変数144606節を一回探索した。
 この新入力もbudget100000・85.197秒でUNKNOWNだった。入力の意味と幾何・hitting根拠は独立監査したが、負の完結証明はない。
@@ -226,7 +285,7 @@ U以外の1221追加候補には、提供した一点追加障害族だけをhit
 各a_u仮定下の子証明へ¬a_uを付けて仮定を除去し、親Fだけで全追加を-f -U検査した。
 60個別導出と結合版、SATライブラリ・子証明を使わない別処理再生がDERIVATIONとして受理された。
 したがってFと60単位節付きpruned CNFは全モデルが一致する。これは空節のない導出で、全体UNSATではない。
-大きな改善Tが除外点uを含めば、(S∩T)∪{u}の1254点を含む1259点部分集合を取り、親Fへモデル拡張できる。
+大きな改善TがU0の除外点uを含めば、(S∩T)∪{u}の1254点を含む1259点部分集合を取り、親Fへモデル拡張できる。
 原点と元の完全対はS∩Tに保たれ、a_uと今回導いた¬a_uが矛盾するため、同じ60点回避の別根拠となる。
 元の幾何hitting証明と今回の親だけのRUP導出は独立した根拠として保持する。
 五点削除近傍全体の局所最適性やA(2539)=1258を主張しない。

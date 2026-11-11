@@ -706,8 +706,15 @@
 | [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) | Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
 | [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
 | [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) | 剰余放物線Q_2207の最大安全サイズは1104（単一CNFの独立schema・RUP/LRAT監査済み） | proposition | computed | maximum-safe, geometry, verification |
-| [K0723](../items/K0723-p2539-safe-bound-and-maximal-witness.md) | Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大 | proposition | computed | geometry, maximum-safe, maximal-safe, verification |
-| [K0724](../items/K0724-p2539-fixed-pair-four-deletion-local-exclusion.md) | Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
-| [K0725](../items/K0725-p2539-origin-retaining-four-deletion-exclusion.md) | Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
-| [K0726](../items/K0726-p2539-four-deletion-local-optimum.md) | Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
-| [K0727](../items/K0727-p2539-five-deletion-improvement-necessary-shape.md) | Q_2539の五点削除改善は原点・元の完全対を保持し60候補点を避ける必要がある | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
+| [K0723](../items/K0723-width-five-q6-stabilization-bounds.md) | 5×m・q=6の満容量安定化長は16以上249以下 | proposition | proved | rectangles, variants, maximal-safe |
+| [K0724](../items/K0724-n11-classa-decomposition.md) | best-S3壁のclassA分解: classA blockerは32個・8 S2のみで、すべて16第二手勝ち五石子由来（SW16部分集合） | computation | computed | square-outcomes, certificates, verification |
+| [K0725](../items/K0725-s2-5960-closure-worklist.md) | S2 {59,60} 閉鎖に必要な新S5 verdictはちょうど1,447 D4 orbit、最小部分証明書は54 orbitで2 blockerを閉じる | computation | computed | square-outcomes, certificates, verification |
+| [K0726](../items/K0726-width-five-nineteen-curve-census.md) | 5×19盤の7点以上曲線は95本の円と5本の行直線のみ（7点円8本・8点円87本） | computation | computed | rectangles, geometry, variants, maximal-safe |
+| [K0727](../items/K0727-blocker-obligation-fill-m57.md) | blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械 | method | active | rectangles, variants, maximal-safe, verification |
+| [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行0/行4欠損の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) | S2 {59,60} の60 blockerは未知S5子のD4 orbit集合が一致する34 certificateに崩壊し、greedy順序のsecured coverageは1,447 orbitで完結する | computation | computed | square-outcomes, certificates, verification |
+| [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) | Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大 | proposition | computed | geometry, maximum-safe, maximal-safe, verification |
+| [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) | Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
+| [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) | Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
+| [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) | Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
+| [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) | Q_2539の五点削除改善は116点を避け空対26点から追加する必要がある | proposition | computed | geometry, maximum-safe, reconfiguration, verification |

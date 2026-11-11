@@ -1,5 +1,5 @@
 ---
-id: K0724
+id: K0731
 title: Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み）
 kind: proposition
 status: computed
@@ -7,7 +7,7 @@ topics: [geometry, maximum-safe, reconfiguration, verification]
 aliases: []
 relations:
 - type: depends_on
-  target: K0723
+  target: K0730
   note: 対象とするSHA-256固定の1258点安全証人
 - type: depends_on
   target: K0097
@@ -19,6 +19,9 @@ relations:
   target: K0001
   note: 標準q=4の共円・共線禁止四点を含まない安全性
 artifacts:
+- path: research/log/2026-11-11-parabola-local-id-integration.md
+  role: data
+  note: 未pushローカル旧K0724から現行K0731への番号対応
 - path: research/experiments/parabola-p2539-exchange-20261110/output/target1258-remove3/candidate.txt
   role: certificate
   note: 固定する1258点集合S、SHA-256 454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb
@@ -63,7 +66,7 @@ artifacts:
   note: 安全候補から全CNF節を満たす補助変数への拡張証明、再現手順と信頼境界
 - path: research/experiments/parabola-p2539-broader-exchange-20261110/audit-output/summary.json
   role: data
-  note: 当時の四追加探索の入力byte監査。UNKNOWN一件・ソルバUNSAT三件。完全対変更/なしの上限4は後にK0725で独立監査
+  note: 当時の四追加探索の入力byte監査。UNKNOWN一件・ソルバUNSAT三件。完全対変更/なしの上限4は後にK0732で独立監査
 - path: research/experiments/parabola-p2539-broader-exchange-20261110/regression.json
   role: data
   note: 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
@@ -80,7 +83,7 @@ Sはartifactで固定した1258パラメータの集合、F={0,6,2533}とする�
 **F⊆T、|S∖T|≤4、|T|≥1259を同時に満たすQ_2539内の安全集合Tは存在しない。**
 固定原点・完全対を保つ条件では、改善のために少なくとも5点をSから除く必要がある。
 原点や完全対を変える交換については結論しない。
-完全対の固定を外して原点だけを保つ拡張はK0725を参照する。
+完全対の固定を外して原点だけを保つ拡張はK0732を参照する。
 
 ## 独立schemaからCNFへの拡張
 
@@ -108,9 +111,9 @@ schemaは探索器・投影builder・CardEncをimportしない。幾何も辺cac
 2064小規模prefix割当て、六つの破損schema、合同式だけを満たす非禁止四点、RUP/LRAT制御を検査した。
 これらは有限回帰であり、検査器やコンパイラの一般健全性の形式証明ではない。
 LRATはK0718の空節問題を修正した固定sourceを使い、原版の受理は根拠にしない。
-この局所排除はK0723の全体範囲1258≤A(2539)≤1271を狭めるものではない。
+この局所排除はK0730の全体範囲1258≤A(2539)≤1271を狭めるものではない。
 
 固定対を保つ除去上限5の追加探索は10万衝突でUNKNOWNを記録した後に異常終了した。保存入力と出典は確認したが、未解決のままである。
 原点を保って完全対を変更する形の除去上限3・4、および完全対なしの除去上限4は当初ソルバUNSATのみだった。
-現在は上限4の二形状をK0725で独立schema・幾何・RUP/LRAT監査し、原点保持の場合へ局所排除を広げた。
+現在は上限4の二形状をK0732で独立schema・幾何・RUP/LRAT監査し、原点保持の場合へ局所排除を広げた。
 上限3のDRATを個別再生したわけではなく、上限4の被覆へ含まれる。

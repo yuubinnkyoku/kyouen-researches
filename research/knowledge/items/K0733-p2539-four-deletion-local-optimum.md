@@ -1,5 +1,5 @@
 ---
-id: K0726
+id: K0733
 title: Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし）
 kind: proposition
 status: computed
@@ -7,13 +7,13 @@ topics: [geometry, maximum-safe, reconfiguration, verification]
 aliases: []
 relations:
 - type: depends_on
-  target: K0725
+  target: K0732
   note: 同じ固定1258点集合について原点を保つ全クラスの独立排除
 - type: generalizes
-  target: K0725
+  target: K0732
   note: 原点を保持する条件を外し、全ての改善候補へ広げる
 - type: depends_on
-  target: K0723
+  target: K0730
   note: SHA-256固定の1258点安全証人
 - type: depends_on
   target: K0097
@@ -22,9 +22,12 @@ relations:
   target: K0001
   note: 標準q=4の共線・共円禁止四点に関する安全性
 artifacts:
+- path: research/log/2026-11-11-parabola-local-id-integration.md
+  role: data
+  note: 未pushローカル旧K0726から現行K0733への番号対応
 - path: research/experiments/parabola-p2539-without-origin-20261111/qualification.json
   role: manifest
-  note: 原点保持のK0725と原点なし二クラスを同一seedへ結び付ける集約、部分集合論証のhash
+  note: 原点保持のK0732と原点なし二クラスを同一seedへ結び付ける集約、部分集合論証のhash
 - path: research/experiments/parabola-p2539-without-origin-20261111/audit-output/B0/input.cnf.gz
   role: certificate
   note: 原点なし・完全対なしの36556変数115767節、exact1259点・総削除数4以下
@@ -59,7 +62,7 @@ artifacts:
   role: proof
   note: 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界
 scope: 指定SHA-256のQ_2539内1258点集合Sに対し、|S\T|<=4かつ|T|>=1259となる安全集合Tは存在しない。原点・完全対は固定しない。他の種、5点以上の削除、A(2539)=1258は主張しない。
-evidence: 原点保持はK0725による。原点なしの完全対数0/1の両exact1259点CNFを独立schema・整数幾何・RUP/LRAT・採用圧縮DRAT実再生で排除。原点が失われるためr>=1となる部分集合論証を用い、1259点以上の任意の改善候補へ拡張した。
+evidence: 原点保持はK0732による。原点なしの完全対数0/1の両exact1259点CNFを独立schema・整数幾何・RUP/LRAT・採用圧縮DRAT実再生で排除。原点が失われるためr>=1となる部分集合論証を用い、1259点以上の任意の改善候補へ拡張した。
 ---
 
 ## 命題
@@ -72,7 +75,7 @@ SはSHA-256 `454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb` �
 
 ## 原点なしの場合の独立排除
 
-原点を保つ候補はK0725で既に排除したので、0∉Tだけを扱う。
+原点を保つ候補はK0732で既に排除したので、0∉Tだけを扱う。
 完全対は高々一つであり、完全対数0/1の二クラスに分かれる。
 exact1259点では空対数がそれぞれ10/11となる。
 種Sは原点を含むため、その損失だけで削除数1を使い、非原点1257点の削除上限は3。

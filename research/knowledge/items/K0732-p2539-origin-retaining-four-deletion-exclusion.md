@@ -1,5 +1,5 @@
 ---
-id: K0725
+id: K0732
 title: Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み）
 kind: proposition
 status: computed
@@ -7,13 +7,13 @@ topics: [geometry, maximum-safe, reconfiguration, verification]
 aliases: []
 relations:
 - type: depends_on
-  target: K0724
+  target: K0731
   note: 同じ固定1258点集合について、原点と元の完全対6を保つ場合の独立排除
 - type: generalizes
-  target: K0724
+  target: K0731
   note: 完全対を固定する条件を外し、原点を保つ全クラスへ広げる
 - type: depends_on
-  target: K0723
+  target: K0730
   note: SHA-256固定の1258点安全証人
 - type: depends_on
   target: K0097
@@ -22,6 +22,9 @@ relations:
   target: K0001
   note: 標準q=4の共線・共円禁止四点に関する安全性
 artifacts:
+- path: research/log/2026-11-11-parabola-local-id-integration.md
+  role: data
+  note: 未pushローカル旧K0725から現行K0732への番号対応
 - path: research/experiments/parabola-p2539-origin-local-audit-20261111/qualification.json
   role: manifest
   note: 元完全対・別完全対・完全対なしの三場合を同一seedへ結び付ける集約と部分集合論証のhash
@@ -59,7 +62,7 @@ artifacts:
   role: proof
   note: 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証
 scope: 指定SHA-256のQ_2539内1258点集合Sに対し、0∈T、|S\T|<=4、|T|>=1259を同時に満たす安全集合Tは存在しない。完全対は固定しない。原点を除く交換、5点以上の削除、他の種、A(2539)=1258は主張しない。
-evidence: 元完全対を保つ場合はK0724、他の二場合は独立4値schema・全幾何節の整数行列式・RUP/LRAT・採用圧縮DRATの別処理再生でexact1259点を排除。安全性の遺伝性と交差集合の大きさによる部分集合論証で1259点以上の全改善集合へ拡張した。
+evidence: 元完全対を保つ場合はK0731、他の二場合は独立4値schema・全幾何節の整数行列式・RUP/LRAT・採用圧縮DRATの別処理再生でexact1259点を排除。安全性の遺伝性と交差集合の大きさによる部分集合論証で1259点以上の全改善集合へ拡張した。
 ---
 
 ## 命題
@@ -72,7 +75,7 @@ SはSHA-256 `454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb` �
 ## 三場合の被覆
 
 Tの完全対は高々一つである。
-元の完全対{6,2533}を含む場合はK0724で1259点以上が既に排除されている。
+元の完全対{6,2533}を含む場合はK0731で1259点以上が既に排除されている。
 完全対が別の一つ、または完全対がない場合は、本監査の二CNFでexact1259点を排除した。
 
 大きいTの被覆には部分集合論証を要する。
@@ -99,8 +102,8 @@ point変数は対応するBOTHまたは片側選択の論理和と三節で同�
 
 ## 限界
 
-K0724の完全対固定という条件を外すが、原点を保持する条件は残る。
-原点の保持条件も外した同じ種の四点削除局所最適性はK0726を参照する。
+K0731の完全対固定という条件を外すが、原点を保持する条件は残る。
+原点の保持条件も外した同じ種の四点削除局所最適性はK0733を参照する。
 5点以上の削除や原点を失う交換、他の1258点集合の局所最適性は結論しない。
 14不正入力・128真理値割当て・356縮小例は有限回帰であり、部分集合の全称論証とは区別する。
 検査器・コンパイラの一般健全性の形式証明やLean形式証明は主張しない。

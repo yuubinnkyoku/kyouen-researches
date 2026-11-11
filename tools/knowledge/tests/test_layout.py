@@ -1,4 +1,6 @@
 import sys
+import hashlib
+import json
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,6 +10,58 @@ from layout import LEGACY_DIRECTORIES, layout_errors
 
 
 class LayoutTests(unittest.TestCase):
+    def frozen_fixture(self, root):
+        source = root / "research/experiments/frozen/README.md"
+        source.parent.mkdir(parents=True)
+        source.write_text("[old](../../knowledge/items/K0001-old.md)\n", encoding="utf-8")
+        target = root / "research/knowledge/items/K0002-new.md"
+        target.parent.mkdir(parents=True)
+        target.write_text("# Current\n", encoding="utf-8")
+        manifest = root / "research/knowledge/frozen_links.json"
+        data = {"version": 1, "files": {source.relative_to(root).as_posix(): {
+            "sha256": hashlib.sha256(source.read_bytes()).hexdigest(),
+            "targets": {"research/knowledge/items/K0001-old.md": target.relative_to(root).as_posix()}}}}
+        manifest.write_text(json.dumps(data), encoding="utf-8")
+        return source, target, manifest, data
+
+    def test_frozen_reference_keeps_original_bytes_and_checks_successor(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            source, target, _, _ = self.frozen_fixture(root)
+            before = source.read_bytes()
+            self.assertEqual(layout_errors(root), [])
+            self.assertEqual(source.read_bytes(), before)
+            target.unlink()
+            self.assertTrue(any("frozen target" in e for e in layout_errors(root)))
+            self.assertTrue(any("broken local link" in e for e in layout_errors(root)))
+
+    def test_frozen_hash_and_source_scope_fail_closed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            source, _, _, _ = self.frozen_fixture(root)
+            (source.parent / "other.md").write_bytes(source.read_bytes())
+            self.assertTrue(any("other.md: broken local link" in e for e in layout_errors(root)))
+            source.write_bytes(source.read_bytes() + b"changed\n")
+            self.assertTrue(any("frozen source hash mismatch" in e for e in layout_errors(root)))
+            self.assertTrue(any("README.md: broken local link" in e for e in layout_errors(root)))
+
+    def test_frozen_manifest_rejects_unsafe_and_duplicate_entries(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            _, _, manifest, data = self.frozen_fixture(root)
+            spec = next(iter(data["files"].values()))
+            spec["targets"]["research/knowledge/items/K0001-old.md"] = "research/knowledge/items/../../../../outside.md"
+            manifest.write_text(json.dumps(data), encoding="utf-8")
+            self.assertTrue(any("unsafe frozen target" in e for e in layout_errors(root)))
+            other = root / "docs/outside-items.md"
+            other.parent.mkdir()
+            other.write_text("# Not a knowledge item\n", encoding="utf-8")
+            spec["targets"]["research/knowledge/items/K0001-old.md"] = "research/knowledge/items/../../../docs/outside-items.md"
+            manifest.write_text(json.dumps(data), encoding="utf-8")
+            self.assertTrue(any("unsafe frozen target" in e for e in layout_errors(root)))
+            manifest.write_text('{"version":1,"version":1,"files":{}}', encoding="utf-8")
+            self.assertTrue(any("duplicate manifest key" in e for e in layout_errors(root)))
+
     def test_legacy_directory_or_file_is_rejected_but_historical_text_is_allowed(self):
         for name in LEGACY_DIRECTORIES:
             with self.subTest(name=name), tempfile.TemporaryDirectory() as temp:

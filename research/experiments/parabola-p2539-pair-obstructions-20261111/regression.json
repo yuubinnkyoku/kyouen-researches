@@ -1,0 +1,16 @@
+{
+  "small_seed_cases": 272,
+  "pair_quadruples": 528,
+  "deletion_cases": 6084,
+  "corruptions_rejected": [
+    "duplicate-constraint",
+    "under-budget-count",
+    "invalid-edge",
+    "missed-singleton",
+    "too-many-deletions"
+  ],
+  "source_sha256": "2d68c5644ba21a03840e1e0867a642b5bd6d4666447f8f8308127902fae8ccf7",
+  "family_verifier_source_sha256": "064c2248d13537323a852677355f4d432de3f583cd02dde97b6e3cd4e6f11754",
+  "hitting_verifier_source_sha256": "9283c482daa43e3b29e1a44aad4eb7f9ed62f496cb9614b13dc6437f1e6234c5",
+  "scope": "Exhaustive p7/p11 seed families, independent integer determinant and deletion/singleton semantics; existing hitting-tree brute-force regression remains separately pinned."
+}
