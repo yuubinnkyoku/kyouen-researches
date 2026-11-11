@@ -11,41 +11,42 @@ from audit_circle_census import long_circles
 HERE = Path(__file__).resolve().parent
 
 
-def run_search(name, first=0, second=1):
+def run_search(name, first=0, second=1, index=0):
     assert 0 <= first < second < 5
     source = (HERE/name).read_text()
     replacements = [
         ('const W = 5, M = 19;', 'const W = 5, M = 8;'),
         ('const Y0 = 0, Y1 = 1;', f'const Y0 = {first}, Y1 = {second};'),
+        ('const START = 0;', f'const START = {index};'),
         ('const NODE_CAP = 600_000;', 'const NODE_CAP = 10_000_000;'),
         ('const witnessList: number[][][] = [];',
          'const witnessList: number[][][] = []; const unique = new Set<string>();'),
         ('witnesses++; if (witnessList.length < 10)',
          'witnesses++; unique.add(JSON.stringify(rows)); if (witnessList.length < 10)'),
-        ('while (idx >= 0 && idx < reps.length)', 'while (idx === 0 && idx < reps.length)'),
+        ('while (idx >= 0 && idx < reps.length)', f'while (idx === {index} && idx < reps.length)'),
         ('maxCaseNodes, witnessList };', 'maxCaseNodes, witnessList, unique: [...unique] };'),
     ]
     for old,new in replacements:
         assert source.count(old) == 1, (name,old)
         source = source.replace(old,new)
-    assert 'const START = 0;' in source and f'const Y0 = {first}, Y1 = {second};' in source
+    assert f'const START = {index};' in source and f'const Y0 = {first}, Y1 = {second};' in source
     with tempfile.TemporaryDirectory(prefix='five-row-pair-audit-') as tmp:
         script = Path(tmp)/'search.ts'
         script.write_text(source+'\nmain().then(result => console.log(JSON.stringify(result)));\n')
         result = subprocess.run(['node','--disable-warning=ExperimentalWarning',str(script)],
                                 check=True, capture_output=True, text=True, timeout=120)
     data = json.loads(result.stdout)
-    assert data['nC'] == 16 and data['done'] == 1 and data['nextIdx'] == 1 and data['cappedCase'] == -1
-    assert data['lastS0s'][0].startswith('0:0,1,2,3,4(')
+    assert data['nC'] == 16 and data['done'] == 1 and data['nextIdx'] == index+1 and data['cappedCase'] == -1
+    assert data['lastS0s'][0].startswith(f'{index}:')
     return data
 
 
-def brute_force(first=0, second=1):
+def brute_force(first=0, second=1, first_stones=(0,1,2,3,4)):
     assert 0 <= first < second < 5
     width = 8
     circles = [sum(1 << (width*y+x) for x,y in circle) for circle in long_circles(width)]
     assert len(circles) == 16
-    row0 = sum(1 << (width*first+x) for x in range(5))
+    row0 = sum(1 << (width*first+x) for x in first_stones)
     row1 = [sum(1 << (width*second+x) for x in xs)
             for k in range(6) for xs in combinations(range(width),k)]
     full = [[sum(1 << (width*y+x) for x in xs) for xs in combinations(range(width),6)]

@@ -37,6 +37,12 @@ artifacts:
 - path: research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json
   role: data
   note: 6組合計28844928候補・45840証人の照合結果
+- path: research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_mixed.py
+  role: verifier
+  note: 欠損行0の石数0..5を含む7条件で直接列挙と元版・flat版を照合
+- path: research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-mixed-audit.json
+  role: data
+  note: 7条件計33652416候補の照合結果
 - path: research/log/2026-11-11-five-row-multi-deficient-machine.md
   role: log
   note: 開発・制御・第3 witness・5×19 pair {0,1} 初スライスの記録
@@ -69,9 +75,10 @@ soundness/completeness: 欠損行の空点 p の blocker は p を含む危険�
   （最大 28,488）。1ペアクラス ≈ 72スライス（600k）、6代表で計 ~430スライスの見込み。
 - **独立な小盤全数照合**: 5×8、欠損行0・1、行0の石列 `{0,1,2,3,4}` を固定し、行1の0〜5石と他3行の各6石からなる全4807488候補を直接検査。相異なる4542極大安全配置の集合が元版・flat版それぞれの出力集合と一致した。両runnerの `witnesses=116674` はblocker割当による重複を含む。
 - 同じ5×8で欠損行ペアの鏡映代表6組について、各組の最初の欠損行を `{0,1,2,3,4}` に固定して直接全列挙した。6組計28844928候補から得られた45840配置は、元版・flat版のそれぞれと組ごとに一致した。各組の候補数・証人集合hash・探索枝数を保存した。
+- 欠損行ペア `{0,1}` では、最初の欠損行の石数0〜5を含む7条件も直接全列挙した。計33652416候補から得られた10573配置が、両runnerの出力集合と条件ごとに一致した。証人0件の条件も含む。
 
 限界:
-- 5×8の欠損行ペア6組について各1条件では直接全列挙と一致したが、他の固定石列や5×19全ケースの独立検証ではない。
+- 5×8の欠損行ペア6組と、うち1組の異なる石数条件では直接全列挙と一致したが、他の固定石列や5×19全ケースの独立検証ではない。
   陽性対照（第3 witness の発見・独立検証）と S0 既知ケースでの単一完走も PASS。
 - witnesses は blocker 割当の異なる枝で同一配置を重複計上しうる（0件は「不存在」を意味する）。
 - 複数行欠損の全ペアクラス完了前に M_{5,7} の値は確定しない。
