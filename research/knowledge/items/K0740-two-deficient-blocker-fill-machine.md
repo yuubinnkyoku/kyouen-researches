@@ -40,7 +40,7 @@ occupancy クラス（欠損行ペア Y0,Y1）に一般化したハイブリッ�
 
 soundness/completeness: 欠損行の空点 p の blocker は p を含む危険曲線上の
 ちょうど6石だが、p の行は ≤5 石で blocker になれず、他の行は p を含まない。
-従って blocker は census 円に限り、blocker 割当の全列挙で完备する。
+従って blocker は census 円に限り、blocker 割当の全列挙で完備する。
 石/空の全分岐が欠損行の全点を決定する。行cap（欠損行5・他行6）・
 円石数 ≤6・円飽和伝播・行飽和伝播は K0727 と同一。
 
