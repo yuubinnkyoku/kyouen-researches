@@ -155,7 +155,7 @@ START=715 から5スライス実施。全 witness 0・leaves 0・nC=95・reps 8,
   11×11空盤・二石root {49,60} は **UNKNOWN**。
 ## 追記6: 4行欠損 {0,1,2,3} スライス継続5（2026-11-11・q96高速レーン）
 
-START=2628 から6スライス実施（multi_deficient_runner.ts・DEF_ROWS=[0,1,2,3]・300k global NODE_CAP・単独実行）。
+START=2628 から7スライス実施（multi_deficient_runner.ts・DEF_ROWS=[0,1,2,3]・300k global NODE_CAP・単独実行）。
 全 witness 0・leaves 0・nC=95・reps 8,378 一致。cappedケースは同START再実行で全て成功。
 
 | START | done | 範囲 | max/case |
