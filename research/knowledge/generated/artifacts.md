@@ -10881,6 +10881,27 @@
 ## [research/experiments/parabola-p2539-five-pruned-20261111/regression.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/regression.json)
 
 - [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力10改変の拒否と60負point単位節の120真理値割当て
+## [research/experiments/parabola-p2539-gate-cover-20261111/README.md](../../../research/experiments/parabola-p2539-gate-cover-20261111/README.md)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 正gateから点追加被覆を得る論証、新規97点、幾何hittingとnative RUPの区別、範囲と再現
+## [research/experiments/parabola-p2539-gate-cover-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-gate-cover-20261111/audit-output/summary.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 全族の独立再構成、packing7439・branch2056 node、4891実四点の整数幾何受理
+## [research/experiments/parabola-p2539-gate-cover-20261111/output/certificate.json.gz](../../../research/experiments/parabola-p2539-gate-cover-20261111/output/certificate.json.gz)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 新規20502組の5010負hitting証明と15492必要障害族だけの削除証人、97点の全18仮定被覆
+## [research/experiments/parabola-p2539-gate-cover-20261111/output/manifest.json](../../../research/experiments/parabola-p2539-gate-cover-20261111/output/manifest.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 圧縮証明書とraw bytesのSHA-256、新規97点と両状態の件数
+## [research/experiments/parabola-p2539-gate-cover-20261111/qualification.json](../../../research/experiments/parabola-p2539-gate-cover-20261111/qualification.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 既存正18点gateと97点の全仮定排除を結合した221点回避の必要条件
+## [research/experiments/parabola-p2539-gate-cover-20261111/regression.json](../../../research/experiments/parabola-p2539-gate-cover-20261111/regression.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実証明書8改変の拒否、特に被覆仮定の欠落と重複を拒否
+## [research/experiments/parabola-p2539-gate-cover-20261111/verify.py](../../../research/experiments/parabola-p2539-gate-cover-20261111/verify.py)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索をimportせず全1139点と18被覆仮定・負証明・削除証人を検査
 ## [research/experiments/parabola-p2539-gate-pair-obstructions-20261111/README.md](../../../research/experiments/parabola-p2539-gate-pair-obstructions-20261111/README.md)
 
 - [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 非鏡像二組の六つの互いに素な削除障害、全7組同時追加禁止、範囲と再現

@@ -1,0 +1,15 @@
+{
+  "corruptions_rejected": [
+    "missing-point",
+    "missing-cover-case",
+    "repeated-cover-case",
+    "false-empty-refutation",
+    "empty-hitting-witness",
+    "omitted-new-point",
+    "wrong-prior-gate",
+    "wrong-budget"
+  ],
+  "verifier_source_sha256": "5b21c6aab235becb3e880c96d3cfd90228b43de644ebc683f39bbae204bf4fad",
+  "source_sha256": "1f4898373e5b873a158436be3414066d99c67e496e7e4ef591ff69a102f654c3",
+  "scope": "Actual covering/proof corruption controls. The frozen hitting solver/verifier already have495 brute-force comparisons in the gate-pair experiment; these controls test the new cover layer."
+}
