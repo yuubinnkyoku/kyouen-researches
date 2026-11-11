@@ -10674,6 +10674,30 @@
 ## [research/experiments/parabola-p2539-broader-exchange-20261110/regression.json](../../../research/experiments/parabola-p2539-broader-exchange-20261110/regression.json)
 
 - [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) (data): 完全対変更・完全対なしの新しい探索builderの65925小例選択割当ての照合
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/README.md](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/README.md)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 26仮定中8点の独立排除、116幾何除外を前提とするRUPの範囲、大きなTへの縮小、残る18 UNKNOWN
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/input-audit/summary.json](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/input-audit/summary.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 親schema・116除外のhittingと整数幾何・26正仮定の独立監査、初回18 UNKNOWNと8ソルバ負主張
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/output/base.cnf.gz](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/output/base.cnf.gz)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 保持側親に116幾何除外節を加えた51570変数144662節の共通base
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/proof-audit/summary.json](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/proof-audit/summary.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 8子DRATの独立反証と仮定除去した8負単位節、残る18点gate、各圧縮核・導出のhash
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/qualification.json](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/qualification.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 同一seedの124点除外・18点追加条件を既存の保持条件と部分集合論証へ結合
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/regression.json](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/regression.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実baseの6改変を拒否、26正point仮定の52真理値割当てを照合
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/replay-output/coverage.rup.gz](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/replay-output/coverage.rup.gz)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 116幾何除外付きbaseだけから8負単位節と正18点ORを導く20491行RUP、空節なし
+## [research/experiments/parabola-p2539-empty-gate-probes-20261111/replay-output/receipt.json](../../../research/experiments/parabola-p2539-empty-gate-probes-20261111/replay-output/receipt.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): ソルバと子DRATを使わない別処理再生で-f -UのDERIVATION受理、元の親単独の反証ではない
 ## [research/experiments/parabola-p2539-exact-five-20261111/README.md](../../../research/experiments/parabola-p2539-exact-five-20261111/README.md)
 
 - [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 安全候補からのモデル拡張、exact1259から全改善集合への部分集合論証、再現と限界

@@ -1,6 +1,6 @@
 ---
 id: K0734
-title: Q_2539の五点削除改善は116点を避け空対26点から追加する必要がある
+title: Q_2539の五点削除改善は124点を避け空対18点から追加する必要がある
 kind: proposition
 status: computed
 topics: [geometry, maximum-safe, reconfiguration, verification]
@@ -181,8 +181,32 @@ artifacts:
 - path: research/experiments/parabola-p2539-pair-obstructions-20261111/README.md
   role: proof
   note: 完全対保持から単点障害を得る論証、116点除外、空対26点の追加が必要な数え上げとnative RUP
-scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の116点集合Uの回避、元の空対26点集合Eから少なくとも一点の追加が必要。残る候補の実在・非存在や全体最大性は主張しない。
-evidence: 四点以下と原点・完全対変更の形状を独立排除。完全対の四点を加えた7769障害で116点の負hitting証明木を独立受理。追加点の鏡像から削除点への単射でE追加が必要となり、正26-literal clauseも親だけのRUPで受理。既存60点のnative RUPと新規56点の幾何hitting根拠は区別する。
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/output/base.cnf.gz
+  role: data
+  note: 保持側親に116幾何除外節を加えた51570変数144662節の共通base
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/input-audit/summary.json
+  role: data
+  note: 親schema・116除外のhittingと整数幾何・26正仮定の独立監査、初回18 UNKNOWNと8ソルバ負主張
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/proof-audit/summary.json
+  role: manifest
+  note: 8子DRATの独立反証と仮定除去した8負単位節、残る18点gate、各圧縮核・導出のhash
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/replay-output/coverage.rup.gz
+  role: certificate
+  note: 116幾何除外付きbaseだけから8負単位節と正18点ORを導く20491行RUP、空節なし
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/replay-output/receipt.json
+  role: manifest
+  note: ソルバと子DRATを使わない別処理再生で-f -UのDERIVATION受理、元の親単独の反証ではない
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/qualification.json
+  role: manifest
+  note: 同一seedの124点除外・18点追加条件を既存の保持条件と部分集合論証へ結合
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/regression.json
+  role: data
+  note: 実baseの6改変を拒否、26正point仮定の52真理値割当てを照合
+- path: research/experiments/parabola-p2539-empty-gate-probes-20261111/README.md
+  role: proof
+  note: 26仮定中8点の独立排除、116幾何除外を前提とするRUPの範囲、大きなTへの縮小、残る18 UNKNOWN
+scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の124点集合Uの回避、元の空対から残る18点集合Eの少なくとも一点の追加が必要。残る候補の実在・非存在や全体最大性は主張しない。
+evidence: 四点以下と原点・完全対変更の形状を独立排除。7769幾何障害の負hitting証明木で116点を排除。元の空対26点の正ORを親だけのRUPで受理。その116除外を加えた共通baseで8仮定を独立反証し、8負単位節と正18点ORのRUPを別処理再生。元の親だけの導出とは区別し、残る18仮定は各budget10000でUNKNOWN。
 ---
 
 ## 命題
@@ -191,7 +215,7 @@ SはSHA-256 `454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb` �
 |T|≥1259、|S∖T|≤5を満たすQ_2539内の安全集合Tがあれば、
 **正確に五点を失い、原点0と元の完全対{6,2533}を全て保つ。**
 安全集合の完全対は高々一つなので、完全対の位置も元の対に限られる。
-さらに、後掲の116点集合Uを避け、元の空対26点集合Eから少なくとも一点を追加しなければならない。
+さらに、後掲の124点集合Uを避け、元の空対から残る18点集合Eの少なくとも一点を追加しなければならない。
 これは改善の必要条件であり、改善の存在は未確定。
 
 ## 根拠
@@ -255,29 +279,57 @@ u∉S、2539−u∈Sなら、{6,2533,u,2539−u}も禁止四点である。
 1901 1991 2039 2057 2082 2109 2186 2199 2222 2312 2355 2387 2402 2435
 ```
 
-U=U0∪U1は116点で、T∩U=∅が必要。負証明木はpacking248・branch99 nodeを受理した。
+U01=U0∪U1は116点で、T∩U01=∅が必要。負証明木はpacking248・branch99 nodeを受理した。
 新規56点の根拠は整数幾何とhitting-treeであり、既存60点の親だけのRUP導出とは区別する。
 
 ## 元の空対26点からの追加が必要
 
-Sで両側とも空の13対が作る26点集合Eは次の通り。
+Sで両側とも空の13対が作る26点集合E0は次の通り。
 
 ```
 60 106 262 269 612 647 692 916 992 1021 1027 1172 1197
 1342 1367 1512 1518 1547 1623 1847 1892 1927 2270 2277 2433 2479
 ```
 
-A=T∖S、D=S∖Tとする。u∈A∖Eの鏡像2539−uはSにあり、元の完全対を保つためDに属する。
-この鏡像写像は単射なので|A∖E|≤|D|<|A|。従ってT∩E≠∅が必要である。
+A=T∖S、D=S∖Tとする。u∈A∖E0の鏡像2539−uはSにあり、元の完全対を保つためDに属する。
+この鏡像写像は単射なので|A∖E0|≤|D|<|A|。従ってT∩E0≠∅が必要である。
 正point変数26個のOR一行も、既存の保持側親CNFだけから-f -UでDERIVATION受理した。
-これは空節ではなく、親全体UNSATを意味しない。EとUは交わらず、26点の個別仮定で未知部分を被覆できる。
+これは空節ではなく、親全体UNSATを意味しない。E0とU01は交わらず、26点の個別仮定で未知部分を被覆できる。
+
+## 空対8仮定を独立排除し124点除外・18点gateへ
+
+保持側親へU01の116負point単位節を加えた共通base（51570変数144662節）を独立監査し、
+E0の各点を選ぶ26個の異なる仮定をbudget10000で一回ずつ探索した。
+18 UNKNOWN、8 SOLVER_UNSAT、SATモデルなし。負主張の8点だけをproof付き再生成し、
+各子の完結DRATを固定DRAT-trimの-Uで独立受理した。追加の排除集合U2は次の8点。
+
+```
+612 1367 1518 1547 1623 1892 2277 2479
+```
+
+各子の核DRATを抽出し、¬a_uでliftして仮定を除去した。
+8負単位節と、E=E0∖U2の正18点ORを、共通baseだけから-f -UでDERIVATION受理した。
+20491行の結合RUPはソルバ・子DRATなしの別処理再生でも受理した。
+これは**116幾何除外を含むbaseからの導出**であり、元の保持側親だけの導出や全体UNSATではない。
+
+大きなTがu∈U2を含めば、(S∩T)∪{u}の1254点を含む1259点部分集合T'を選べる。
+T'は安全性、共通1253点、原点・完全対、u、U01回避を保つので、共通baseへa_uを真とするモデル拡張ができる。
+今回導いた¬a_uに反するため、T∩U2=∅。従ってU=U01∪U2の124点を避け、次の18点集合Eからの追加が必要。
+
+```
+60 106 262 269 647 692 916 992 1021
+1027 1172 1197 1342 1512 1847 1927 2270 2433
+```
+
+この18仮定は各budget10000でUNKNOWNのままであり、安全な改善証人も独立反証もない。
+共通baseへ導出済み8負単位節を加えた入力は全モデルが一致する。
 
 ## 未解決と限界
 
 残る「原点と元の完全対を保持」はexact五点削除・budget100000（実conflicts100004）でUNKNOWN。
 UNSATもSATも、安全な1259点証人も得ていない。
 初回のU0以外1221候補には初回の障害族だけをhitする削除証人があった。
-強化後はU以外1165候補について、完全対の障害も含めた族だけをhitする五点以下の削除証人がある。
+幾何障害強化後はU01以外1165候補について、完全対の障害も含めた族だけをhitする五点以下の削除証人がある。
 これは安全な改善証人や、他の幾何障害を全て回避する証人ではない。
 その後、親の保持側CNFに60負point単位節を追加した51570変数144606節を一回探索した。
 この新入力もbudget100000・85.197秒でUNKNOWNだった。入力の意味と幾何・hitting根拠は独立監査したが、負の完結証明はない。

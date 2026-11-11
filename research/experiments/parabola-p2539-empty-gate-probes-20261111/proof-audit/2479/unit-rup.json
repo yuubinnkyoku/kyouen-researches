@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "base_input_sha256": "eb98c36c1d5e60b692a6a68ae222a56bf83ed964a04100647a9201f88d1f381b",
+  "derived_unit": -38991,
+  "core_sha256": "8f89d29f218ba370c57ce1e2fde2d08010490ddf1e4db929bb5716a591c4cb0b",
+  "proof_sha256": "346b36993836322f3d57b5e8f540ce3a2645cf285f1dfbec76d95e8dc6736c99",
+  "returncode": 1,
+  "stdout": "\nc parsing input formula with 51570 variables and 144662 clauses\n\nc finished parsing\n\nc start forward verification\n\nc 11334 of 144662 clauses in core                            \n\nc 225 of 279 lemmas in core using 461524 resolution steps\n\nc 0 RAT lemmas in core; 0 redundant literals in core lemmas\n\nc optimized proofs are not supported for forward checking\n\nc VERIFIED derivation: all lemmas preserve satisfiability\n\nc WARNING: no empty clause detected, this is not a refutation\n\ns DERIVATION\n\nc verification time: 1.056 seconds\n",
+  "stderr": "",
+  "timed_out": false,
+  "elapsed_seconds": 1.1373407000000952
+}
