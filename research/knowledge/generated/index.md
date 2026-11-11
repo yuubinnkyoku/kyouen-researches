@@ -726,3 +726,4 @@
 | [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) | two_deficient_pair_runner: 5×m・q=7 の2行欠損 occupancy クラスを完全列挙する機械 | method | active | rectangles, variants, maximal-safe, verification |
 | [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・2行欠損 pair {0,1}/{3,4} の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
 | [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) | 葉を持つC4飽和グラフの最小辺数はfloor((3n-5)/2) | proposition | proved | variants, geometry, maximal-safe |
+| [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) | 二値立方体重み2層の11次元最小極大配置は14石 | computation | computed | variants, geometry, maximal-safe |
