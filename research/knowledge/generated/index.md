@@ -727,3 +727,4 @@
 | [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・2行欠損 pair {0,1}/{3,4} の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
 | [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) | 葉を持つC4飽和グラフの最小辺数はfloor((3n-5)/2) | proposition | proved | variants, geometry, maximal-safe |
 | [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) | 二値立方体重み2層の11次元最小極大配置は14石 | computation | computed | variants, geometry, maximal-safe |
+| [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) | C4飽和グラフはn>=11でn+3辺以上、重み2層の12次元最小値は15 | proposition | proved | variants, geometry, maximal-safe |

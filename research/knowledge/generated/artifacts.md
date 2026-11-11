@@ -500,6 +500,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_cores.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_cores.py)
 
 - [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (verifier): 6・7頂点の全対象グラフの核被覆と11頂点全候補の四角形マスク照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_diameters.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (verifier): 12頂点の核・道長18334ケースをFloyd-Warshall法で検査
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-boundary-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-boundary-audit.json)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 8頂点12核・9頂点16核の直接検査結果
@@ -607,6 +610,12 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 70四点集合と19欠辺の検査結果
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-diameter-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-diameter-audit.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 12頂点の直径分布と13頂点からの縮約可能性の有限検算
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-general-lower-bound.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-general-lower-bound.md)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (proof): 三重閉路核の12頂点への縮約と細分による直径単調性
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-audit.json)
 
 - [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (data): 小次元被覆および11頂点候補の独立判定結果
@@ -616,6 +625,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-result.json)
 
 - [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (data): 10408候補・C4禁止4452候補・極大0件
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n12-result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n12-result.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 12頂点14辺のC4飽和候補の核・道長列挙結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 三点のxorによる一意補完と少数派条件の全称証明
@@ -628,6 +640,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_three_leaf_counterexample.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_three_leaf_counterexample.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 明示された8頂点3葉グラフのC4不在と全欠辺追加の独立検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_tricyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_tricyclic_diameters.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (verifier): 同じ全ケースの直径分布を幅優先探索で照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..7の全四点・三点・二点の照合
@@ -639,6 +654,7 @@
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 偶数次元の構成と全欠辺の極大性の証明
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (certificate): 10次元12辺の包含極大C4禁止構成
 - [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (certificate): 偶数n>=6で葉を持ち下界を達成する明示構成
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (certificate): 12頂点15辺の明示構成
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明

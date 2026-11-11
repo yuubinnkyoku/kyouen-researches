@@ -47,7 +47,7 @@ def length_assignments(edges, total):
 
 
 def expand(branches, core, lengths):
-    adj = [0]*11
+    adj = [0]*(branches + sum(length-1 for length in lengths))
     nxt = branches
     for (u,v), length in zip(core,lengths):
         previous = u
@@ -81,7 +81,7 @@ def is_saturated(adj):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('vertices',type=int,choices=range(6,12))
+    parser.add_argument('vertices',type=int,choices=range(6,21))
     args = parser.parse_args()
     n, m = args.vertices, args.vertices+2
     records = []
