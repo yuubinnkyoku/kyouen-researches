@@ -478,8 +478,12 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_boundary.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_boundary.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 8・9頂点の二重閉路核を四角形と欠辺追加で直接検査
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py)
 
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 10頂点21核の直径をFloyd-Warshall法で照合
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 基礎21核の直径をFloyd-Warshall法で独立照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
 
@@ -490,9 +494,16 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-boundary-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-boundary-audit.json)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 8頂点12核・9頂点16核の直接検査結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-saturation-n-plus-two-corrected.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-saturation-n-plus-two-corrected.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 正しい葉高々3個を用いるn>=9のn+2下界と有限核の排除
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (proof): 正しい3葉上界による葉あり候補の排除と二重閉路による構造証明
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 全保存配置を同型判定し代表と自己同型数を集計
