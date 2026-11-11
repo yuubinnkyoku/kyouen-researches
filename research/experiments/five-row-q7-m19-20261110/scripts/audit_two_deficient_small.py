@@ -11,10 +11,12 @@ from audit_circle_census import long_circles
 HERE = Path(__file__).resolve().parent
 
 
-def run_search(name):
+def run_search(name, first=0, second=1):
+    assert 0 <= first < second < 5
     source = (HERE/name).read_text()
     replacements = [
         ('const W = 5, M = 19;', 'const W = 5, M = 8;'),
+        ('const Y0 = 0, Y1 = 1;', f'const Y0 = {first}, Y1 = {second};'),
         ('const NODE_CAP = 600_000;', 'const NODE_CAP = 10_000_000;'),
         ('const witnessList: number[][][] = [];',
          'const witnessList: number[][][] = []; const unique = new Set<string>();'),
@@ -26,7 +28,7 @@ def run_search(name):
     for old,new in replacements:
         assert source.count(old) == 1, (name,old)
         source = source.replace(old,new)
-    assert 'const START = 0;' in source and 'const Y0 = 0, Y1 = 1;' in source
+    assert 'const START = 0;' in source and f'const Y0 = {first}, Y1 = {second};' in source
     with tempfile.TemporaryDirectory(prefix='five-row-pair-audit-') as tmp:
         script = Path(tmp)/'search.ts'
         script.write_text(source+'\nmain().then(result => console.log(JSON.stringify(result)));\n')
@@ -38,15 +40,16 @@ def run_search(name):
     return data
 
 
-def brute_force():
+def brute_force(first=0, second=1):
+    assert 0 <= first < second < 5
     width = 8
     circles = [sum(1 << (width*y+x) for x,y in circle) for circle in long_circles(width)]
     assert len(circles) == 16
-    row0 = sum(1 << x for x in range(5))
-    row1 = [sum(1 << (width+x) for x in xs)
+    row0 = sum(1 << (width*first+x) for x in range(5))
+    row1 = [sum(1 << (width*second+x) for x in xs)
             for k in range(6) for xs in combinations(range(width),k)]
     full = [[sum(1 << (width*y+x) for x in xs) for xs in combinations(range(width),6)]
-            for y in (2,3,4)]
+            for y in range(5) if y not in (first,second)]
     found = set()
     checked = 0
     for a,b,c,d in product(row1,*full):
@@ -54,7 +57,8 @@ def brute_force():
         state = row0 | a | b | c | d
         if any((circle & state).bit_count() > 6 for circle in circles):
             continue
-        blanks = [p for p in range(2*width) if not state & (1 << p)]
+        blanks = [width*y+x for y in (first,second) for x in range(width)
+                  if not state & (1 << (width*y+x))]
         if not all(any((circle & (1 << p)) and (circle & state).bit_count() == 6
                        for circle in circles) for p in blanks):
             continue

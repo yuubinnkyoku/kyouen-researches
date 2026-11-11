@@ -1666,6 +1666,9 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 5×8の固定欠損行について直接全列挙とrunner出力の集合を比較
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_pairs.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_pairs.py)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (verifier): 5×8の2行欠損6代表を直接列挙と元版・flat版で比較
 ## [research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py)
 
 - [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (verifier): 5×8・行0固定の2行欠損で直接全列挙と2実装の出力集合を比較
@@ -1712,6 +1715,9 @@
 ## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json)
 
 - [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 4807488候補・相異なる4542証人の照合結果
+## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 6組合計28844928候補・45840証人の照合結果
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
