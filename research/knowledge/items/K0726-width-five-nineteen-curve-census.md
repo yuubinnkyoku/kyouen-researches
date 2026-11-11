@@ -9,9 +9,6 @@ relations:
 - type: supports
   target: K0332
   note: 5×m・q=7の下界押し上げと将来のM_{5,7}厳密決定に使う曲線census
-- type: related
-  target: K0318
-  note: 固定幅曲線充填上界の文脈
 artifacts:
 - path: research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_m19_search.ts
   role: source
