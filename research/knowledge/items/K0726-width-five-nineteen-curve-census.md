@@ -16,6 +16,12 @@ artifacts:
 - path: research/log/2026-11-10-five-row-q7-m19-search.md
   role: log
   note: 探索キャンペーン記録（m=19証人は見つからず、M=19予想の補強証拠）
+- path: research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py
+  role: verifier
+  note: 別行の水平弦2本から長い円を生成する独立検算
+- path: research/experiments/five-row-q7-m19-20261110/circle-census-independent.json
+  role: data
+  note: 5×18では84本、5×19では95本の7点以上の円
 ---
 
 # 5×19盤の7点以上曲線は95本の円と5本の行直線のみ
@@ -26,6 +32,7 @@ artifacts:
 
 2つの独立した生成方式（行対ペア列挙: 64,980円構成、全三点組列挙:
 132,180組・distinct円83,471）で分布が完全に一致した有限確定計算である。
+別行にある2本の水平弦からの独立再計算でも5×19では同じ95本となった。比較のため5×18を数えると84本（7点円4本・8点円80本）である。
 
 構造的帰結: この盤で q<=7 の禁止曲線として意味を持つのは上記100本のみ。
 q=7・行容量6の設定では、石数6の行の空点は行直線で塞がれ、

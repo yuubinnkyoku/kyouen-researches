@@ -23,7 +23,7 @@ async function main() {
   const N = W * M;
   const xs = new Int32Array(N), ys = new Int32Array(N);
   for (let y = 0; y < W; y++) for (let x = 0; x < M; x++) { xs[x + M * y] = x; ys[x + M * y] = y; }
-  // census of circles with >= 7 grid points (5×19: 95; 5×18: 95 too — verify nC)
+  // census of circles with >= 7 grid points (5×19: 95; 5×18: 84)
   const circles: number[][] = [];
   {
     const buf = new Int32Array(16);
@@ -100,6 +100,7 @@ async function main() {
   let nodes = 0, witnesses = 0, capped = false, leaves = 0;
   const witnessList: number[][][] = [];
   function fillRows(row: number): boolean {
+    if (row === Y0) return fillRows(row + 1);
     if (row === W) {
       const rows: number[][] = [[], [], [], [], []];
       for (let p = 0; p < N; p++) if (forced[p] === 1) rows[ys[p]].push(xs[p]);
@@ -191,7 +192,7 @@ async function main() {
       }
       if (selOptCount === 1) break;
     }
-    if (selPt === -1) { leaves++; return fillRows(1); }
+    if (selPt === -1) { leaves++; return fillRows(0); }
     for (const ci of selOptArr) {
       const mark = trail.length;
       if (tryBlocker(selPt, ci)) return true;

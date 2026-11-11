@@ -25,9 +25,21 @@ artifacts:
 - path: research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts
   role: source
   note: クラス{1}（行1欠損）スライスrunner（Y0=1、葉fillは行0から）
+- path: research/experiments/five-row-q7-m19-20261110/scripts/test_fill_rows.mjs
+  role: verifier
+  note: 欠損行0..4と石数0..5の行fill回帰、修正前の誤動作も再現
+- path: research/experiments/five-row-q7-m19-20261110/scripts/test_known_witness.mjs
+  role: verifier
+  note: 実際の5×18探索で保存済み証人を再現
+- path: research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py
+  role: verifier
+  note: 独立した円censusで2つの5×18証人の安全性・全空点の阻止を確認
 - path: research/log/2026-11-11-m57-blocker-obligation-fill.md
   role: log
   note: 機械開発・検証・キャンペーン開始の記録
+- path: research/log/2026-11-11-five-row-class1-fill-fix.md
+  role: log
+  note: 欠損行fill修正と既存スライスへの影響、円数の訂正
 ---
 
 # blocker-obligation-fill DFS（5×m・q=7 欠損行クラス完全列挙機械）
@@ -48,14 +60,14 @@ artifacts:
 - 円の重複排除キーは中心 AND 半径。(Ux,Uy,D) を gcd 正規化後、
   R2n/R2d を別々に gcd 正規化する（同時正規化はスケール不変でなく誤り）。
 
-検証（5×18, S0={5,8,12,14,17}）: 49,162 ノードで完走し、repo の 5×18 witness
+検証（5×18, S0={5,8,12,14,17}）: repo の 5×18 witness
 （research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json
-の行データ）を座標まで完全再現。機械の soundness・completeness を端から端まで検証。
+の行データ）を座標まで完全再現。陽性例の端から端までの照合であり、それ自体は探索の完全性の証明ではない。
 
 追加の独立検証済み結果:
 - 5×18 の2個目の witness（鏡映非同値）:
   rows = [[0,1,2,6,14],[4,7,9,11,13,16],[2,4,7,11,13,16],[3,5,7,10,11,15],[7,8,10,12,13,17]]。
-  29石・行占有 (5,6,6,6,6)・全95 census円 ≤6石・全空点 blocked
+  29石・行占有 (5,6,6,6,6)・全84 census円 ≤6石・全空点 blocked
   （行0の13空点はすべて8点円 blocker）。独立検証器 PASS。
 - S0={5,8,12,14,17} は 5×18 では witness を生むが、5×19 では
   769 ノードの完全探索で witness 0（証明的不存在）。
@@ -70,3 +82,5 @@ capped ケースは次スライス先頭で再挑戦すれば成功する。
 限界: 機械は盤・occupancyクラスごとの有限列挙であり、クラス横断の全パターン
 完了前に M_{5,7} の値は確定しない。クラス{0}の全ケース完了は K0728 に記録。
 クラス{1}・{2}・複数行欠損クラスは進行中。
+
+2026-11-11に行fillの不具合を修正した。旧クラス{1} runnerは欠損行1も6石に埋めようとし、blocker割当完了後に到達する配置を誤って拒否した。記録済みのクラス{1}スライスはすべて `leaves=0` で、その不具合箇所に到達していない。修正後の行fillは欠損行を位置によらず飛ばす。回帰は欠損行0..4・石数0..5・他行の充填あり/なしの180ケースと、5×18の既知証人再現で確認した。これは旧スライスの別実装による完全な再監査を意味しない。

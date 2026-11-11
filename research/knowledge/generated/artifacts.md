@@ -1646,6 +1646,12 @@
 ## [research/experiments/five-edge-terminal-spectrum-20261101/verify.py](../../../research/experiments/five-edge-terminal-spectrum-20261101/verify.py)
 
 - [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) (verifier): 17902所属型族・4717374安全局面、271重複署名盤・383059安全局面、14点全1001四点組・12651安全局面の独立照合
+## [research/experiments/five-row-q7-m19-20261110/circle-census-independent.json](../../../research/experiments/five-row-q7-m19-20261110/circle-census-independent.json)
+
+- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (data): 5×18では84本、5×19では95本の7点以上の円
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py)
+
+- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (verifier): 別行の水平弦2本から長い円を生成する独立検算
 ## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
@@ -1660,6 +1666,15 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{1}（行1欠損）スライスrunner（Y0=1、葉fillは行0から）
+## [research/experiments/five-row-q7-m19-20261110/scripts/test_fill_rows.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_fill_rows.mjs)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 欠損行0..4と石数0..5の行fill回帰、修正前の誤動作も再現
+## [research/experiments/five-row-q7-m19-20261110/scripts/test_known_witness.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_known_witness.mjs)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 実際の5×18探索で保存済み証人を再現
+## [research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 独立した円censusで2つの5×18証人の安全性・全空点の阻止を確認
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -12185,6 +12200,9 @@
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 一般下界の基礎となる10頂点21核の分類と直径の検査
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (proof): 葉なし補題と二重閉路の21核・直径による11辺の構造的排除
+## [research/log/2026-11-11-five-row-class1-fill-fix.md](../../../research/log/2026-11-11-five-row-class1-fill-fix.md)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 欠損行fill修正と既存スライスへの影響、円数の訂正
 ## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
 
 - [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
