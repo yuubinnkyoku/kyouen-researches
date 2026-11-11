@@ -478,6 +478,10 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 10頂点21核の直径をFloyd-Warshall法で独立照合し11..20頂点も有限検算
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 基礎21核の直径をFloyd-Warshall法で独立照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 隣接集合方式と四角形マスク方式の小次元・各辺数の差分照合
@@ -487,6 +491,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-diameter-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-diameter-audit.json)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 二重閉路の基礎21ケースと11..20頂点の検算結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
@@ -12168,6 +12175,16 @@
 ## [research/log/2026-11-10-n11-s2-5960-worklist.md](../../../research/log/2026-11-10-n11-s2-5960-worklist.md)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (log): 実行記録
+## [research/log/2026-11-11-c4-saturated-n-plus-one-all-n-ge-ten.md](../../../research/log/2026-11-11-c4-saturated-n-plus-one-all-n-ge-ten.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 二重閉路の構造分類と細分によりn>=10でn+1辺を排除
+## [research/log/2026-11-11-c4-saturated-n-plus-one-leaf-free.md](../../../research/log/2026-11-11-c4-saturated-n-plus-one-leaf-free.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): n>=8かつn+1辺のC4飽和グラフに葉がないことの証明
+## [research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md](../../../research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 一般下界の基礎となる10頂点21核の分類と直径の検査
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (proof): 葉なし補題と二重閉路の21核・直径による11辺の構造的排除
 ## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
 
 - [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
