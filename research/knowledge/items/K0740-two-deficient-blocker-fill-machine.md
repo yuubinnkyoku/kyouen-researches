@@ -11,7 +11,7 @@ relations:
   note: blocker-obligation-fill DFS の2行欠損への一般化（census・伝播・葉fillは同一）
 - type: depends_on
   target: K0726
-  note: blocker候補曲線census（5×19: 7点円8本・8点円87本）
+  note: "blocker候補曲線census（5×19: 7点円8本・8点円87本）"
 - type: supports
   target: K0332
   note: M_{5,7}=19 の確定に必要な複数行欠損クラスの否定キャンペーンの中核機械
@@ -47,7 +47,7 @@ soundness/completeness: 欠損行の空点 p の blocker は p を含む危険�
 検証済みの制御（詳細はlog）:
 - **全分岐版の陽性対照**: 欠損行 Y0 の石も分岐する版（単一行欠損設定）が 5×18 で
   既知2個と鏡映非同値の**第3 witness（行0 {0,1,5,13,17}・29石・(5,6,6,6,6)）を発見**。
-  全89曲線の独立censusで安全・全66空点blocker付きで極大（独立検証 PASS）。
+  全89曲線の独立censusで安全・全61空点blocker付きで極大（独立検証 PASS）。
 - S0 事前決定なしの2行全分岐は爆発（600kノードで葉なし）→ ハイブリッド設計が必要。
 - 5×18・pair {0,1}・S0={5,8,12,14,17}: 17,511ノード完走・witness 0。
 - 5×19・pair {0,1} 初スライス: idx 0..117 全 witness 0、平均 ~5.1kノード/case

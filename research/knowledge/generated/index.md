@@ -721,3 +721,7 @@
 | [K0735](../items/K0735-easy-unsat-history-solver-independence.md) | 候補B の易 UNSAT は学習節の履歴に依存せず、ソルバ横断でも d に応じた範囲で再現する | verification | verified | geometry, maximum-safe, verification |
 | [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) | ternary 符号化の d 一般化実装は d=1323 で現行と同一の CNF・同一探索を再現し、任意 d で節生成が健全 | verification | verified | geometry, maximum-safe, search-methods, verification |
 | [K0737](../items/K0737-assumption-unsat-drat-gap.md) | 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である | question | open | maximum-safe, search-methods, certificates |
+| [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行1/行3欠損の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行2欠損の極大安全配置は全8,378ケースで存在しない — 単一行欠損クラス完結 | computation | computed | rectangles, variants, maximal-safe |
+| [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) | two_deficient_pair_runner: 5×m・q=7 の2行欠損 occupancy クラスを完全列挙する機械 | method | active | rectangles, variants, maximal-safe, verification |
+| [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・2行欠損 pair {0,1}/{3,4} の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |

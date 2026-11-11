@@ -1575,6 +1575,7 @@
 - ← supports [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 本項の下界証人M_{3,4}>=24はK0302の確定値24と一致する。一般定理の上界69は十分長であり真の値ではない
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 - ← verifies [K0727](../items/K0727-blocker-obligation-fill-m57.md): 5×18のrepo既知witnessを座標まで完全再現
+- ← verifies [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): 全分岐版が5×18で第3 witnessを発見し独立検証で確認（石分岐の健全性の実証）
 
 ## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類
 
@@ -1735,6 +1736,10 @@
 - ← supports [K0726](../items/K0726-width-five-nineteen-curve-census.md): 5×m・q=7の下界押し上げと将来のM_{5,7}厳密決定に使う曲線census
 - ← supports [K0727](../items/K0727-blocker-obligation-fill-m57.md): M_{5,7} 厳密決定に向けたoccupancyクラス別全ケース列挙キャンペーンの中核機械
 - ← supports [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): M_{5,7}=19 予想のうち欠損行≤5石・単一行欠損の行0/行4側の否定部
+- ← supports [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): M_{5,7}=19 予想のうち単一行欠損クラスの行1/行3側の否定部
+- ← supports [K0739](../items/K0739-five-row-m19-class2-nonexistence.md): M_{5,7}=19 予想のうち単一行欠損クラスの行2（中央行）側の否定部
+- ← supports [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): M_{5,7}=19 の確定に必要な複数行欠損クラスの否定キャンペーンの中核機械
+- ← supports [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md): M_{5,7}=19 予想のうち2行欠損クラス pair {0,1}/{3,4} 側の否定部
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -3979,6 +3984,10 @@
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5×m・q=7の下界押し上げと将来のM_{5,7}厳密決定に使う曲線census
 - ← depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): 欠損行blockerの候補は5×19の7-8点円census（95本）に限る
 - ← depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- ← depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- ← depends_on [K0739](../items/K0739-five-row-m19-class2-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- ← depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): blocker候補曲線census（5×19: 7点円8本・8点円87本）
+- ← depends_on [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 
 ## [K0727](../items/K0727-blocker-obligation-fill-m57.md) blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械
 
@@ -3986,6 +3995,9 @@
 - → verifies [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 5×18のrepo既知witnessを座標まで完全再現
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7} 厳密決定に向けたoccupancyクラス別全ケース列挙キャンペーンの中核機械
 - ← depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): blocker-obligation-fill DFS（sound+complete）による完全列挙
+- ← depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): blocker-obligation-fill DFS（sound+complete・行fill修正済み）による完全列挙
+- ← depends_on [K0739](../items/K0739-five-row-m19-class2-nonexistence.md): blocker-obligation-fill DFS（sound+complete・行fill修正済み）による完全列挙
+- ← depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): blocker-obligation-fill DFS の2行欠損への一般化（census・伝播・葉fillは同一）
 
 ## [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行0/行4欠損の極大安全配置は全8,378ケースで存在しない
 
@@ -4056,3 +4068,29 @@
 
 - → depends_on [K0731](../items/K0731-candidate-b-assumption-partition.md): 前提(4) の所在
 - → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): DRAT 監査の実施例
+
+## [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行1/行3欠損の極大安全配置は全8,378ケースで存在しない
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): blocker-obligation-fill DFS（sound+complete・行fill修正済み）による完全列挙
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち単一行欠損クラスの行1/行3側の否定部
+
+## [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行2欠損の極大安全配置は全8,378ケースで存在しない — 単一行欠損クラス完結
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): blocker-obligation-fill DFS（sound+complete・行fill修正済み）による完全列挙
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち単一行欠損クラスの行2（中央行）側の否定部
+
+## [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) two_deficient_pair_runner: 5×m・q=7 の2行欠損 occupancy クラスを完全列挙する機械
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): blocker-obligation-fill DFS の2行欠損への一般化（census・伝播・葉fillは同一）
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（5×19: 7点円8本・8点円87本）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 の確定に必要な複数行欠損クラスの否定キャンペーンの中核機械
+- → verifies [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 全分岐版が5×18で第3 witnessを発見し独立検証で確認（石分岐の健全性の実証）
+- ← depends_on [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md): two_deficient_pair_runner（ハイブリッド blocker-fill DFS・等価検証済み flat 版）による完全列挙
+
+## [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) 5×19 の (5,6,6,6,6) 型・2行欠損 pair {0,1}/{3,4} の極大安全配置は全8,378ケースで存在しない
+
+- → depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): two_deficient_pair_runner（ハイブリッド blocker-fill DFS・等価検証済み flat 版）による完全列挙
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち2行欠損クラス pair {0,1}/{3,4} 側の否定部

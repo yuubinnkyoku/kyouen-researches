@@ -480,7 +480,6 @@
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py)
 
-- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 10頂点21核の直径をFloyd-Warshall法で独立照合し11..20頂点も有限検算
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 基礎21核の直径をFloyd-Warshall法で独立照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
 
@@ -491,9 +490,6 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-diameter-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-diameter-audit.json)
-
-- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 二重閉路の基礎21ケースと11..20頂点の検算結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
@@ -578,6 +574,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 2実装で一致した安全配置と極大配置の集計・ソースhash
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 70四点集合と19欠辺の検査結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 三点のxorによる一意補完と少数派条件の全称証明
@@ -587,6 +586,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 各代表の安全性・極大性・全頂点順列による自己同型と軌道サイズを独立検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_three_leaf_counterexample.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_three_leaf_counterexample.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 明示された8頂点3葉グラフのC4不在と全欠辺追加の独立検査
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..7の全四点・三点・二点の照合
@@ -1672,6 +1674,10 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{1}（行1欠損）スライスrunner（Y0=1、葉fillは行0から）
+- [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) (source): クラス{1}（Y0=1）スライスrunner。行fill修正後の全スライスで使用
+## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class2.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class2.ts)
+
+- [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) (source): クラス{2}（Y0=2・中央行）スライスrunner。slice_runner_class1.ts の Y0 を 2 にした同一機械
 ## [research/experiments/five-row-q7-m19-20261110/scripts/test_class1_witness.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_class1_witness.mjs)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 実際の5×8クラス1探索で証人を生成し独立検証、旧処理の失敗も再現
@@ -1681,6 +1687,12 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/test_known_witness.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_known_witness.mjs)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 実際の5×18探索で保存済み証人を再現
+## [research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner.ts)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (source): 機械本体。M/Y0/Y1/START/NODE_CAP を設定してスライス実行
+## [research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts)
+
+- [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) (source): 等価検証済み flat 版 runner（Y0=0, Y1=1）
 ## [research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 独立した円censusで2つの5×18証人の安全性・全空点の阻止を確認
@@ -12202,28 +12214,35 @@
 ## [research/log/2026-11-10-n11-s2-5960-worklist.md](../../../research/log/2026-11-10-n11-s2-5960-worklist.md)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (log): 実行記録
-## [research/log/2026-11-11-c4-saturated-n-plus-one-all-n-ge-ten.md](../../../research/log/2026-11-11-c4-saturated-n-plus-one-all-n-ge-ten.md)
-
-- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 二重閉路の構造分類と細分によりn>=10でn+1辺を排除
-## [research/log/2026-11-11-c4-saturated-n-plus-one-leaf-free.md](../../../research/log/2026-11-11-c4-saturated-n-plus-one-leaf-free.md)
-
-- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): n>=8かつn+1辺のC4飽和グラフに葉がないことの証明
 ## [research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md](../../../research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md)
 
-- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 一般下界の基礎となる10頂点21核の分類と直径の検査
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (proof): 葉なし補題と二重閉路の21核・直径による11辺の構造的排除
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (source): 二重閉路21核の直径計算。葉あり候補を除外する部分は誤った補題に依存
 ## [research/log/2026-11-11-five-row-class1-fill-fix.md](../../../research/log/2026-11-11-five-row-class1-fill-fix.md)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 欠損行fill修正と既存スライスへの影響、円数の訂正
 ## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
 
 - [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
+## [research/log/2026-11-11-five-row-m19-class1-slices.md](../../../research/log/2026-11-11-five-row-m19-class1-slices.md)
+
+- [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) (log): 全スライス記録・k-block境界の厳密確定・完了宣言
+## [research/log/2026-11-11-five-row-m19-class2-slices.md](../../../research/log/2026-11-11-five-row-m19-class2-slices.md)
+
+- [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) (log): 全スライス記録・完了宣言・クラス{2}は行鏡映で自身と同値であることの記録
+## [research/log/2026-11-11-five-row-multi-deficient-machine.md](../../../research/log/2026-11-11-five-row-multi-deficient-machine.md)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (log): 開発・制御・第3 witness・5×19 pair {0,1} 初スライスの記録
+- [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) (log): 全スライス記録・pair {0,1} 完了宣言（続き1–7）
 ## [research/log/2026-11-11-m57-blocker-obligation-fill.md](../../../research/log/2026-11-11-m57-blocker-obligation-fill.md)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 機械開発・検証・キャンペーン開始の記録
 ## [research/log/2026-11-11-n11-s2-cert-collapse.md](../../../research/log/2026-11-11-n11-s2-cert-collapse.md)
 
 - [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (log): 実行記録
+## [research/log/2026-11-12-c4-three-leaf-false-lemma-counterexample.md](../../../research/log/2026-11-12-c4-three-leaf-false-lemma-counterexample.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (source): 3葉補題の反例とそれに依存する一般下界の証明の破綻
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (source): 葉なし補題の根拠となった3葉補題への反例
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典
