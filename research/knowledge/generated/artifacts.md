@@ -1654,12 +1654,21 @@
 ## [research/experiments/five-row-q7-m19-20261110/class1-5x8-audit.json](../../../research/experiments/five-row-q7-m19-20261110/class1-5x8-audit.json)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (data): 614656候補と相異なる759証人の照合結果
+## [research/experiments/five-row-q7-m19-20261110/class1-5x8-mixed-audit.json](../../../research/experiments/five-row-q7-m19-20261110/class1-5x8-mixed-audit.json)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (data): 計4302592候補・相異なる86998証人の照合結果
 ## [research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (verifier): 別行の水平弦2本から長い円を生成する独立検算
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_mixed.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_mixed.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 欠損行の石数0..5を含む7条件で直接全列挙とrunnerの出力集合を比較
 ## [research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 5×8の固定欠損行について直接全列挙とrunner出力の集合を比較
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (verifier): 5×8・行0固定の2行欠損で直接全列挙と2実装の出力集合を比較
 ## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
@@ -1692,6 +1701,7 @@
 - [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (source): 機械本体。M/Y0/Y1/START/NODE_CAP を設定してスライス実行
 ## [research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts)
 
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (source): flat配列を用いる高速版
 - [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) (source): 等価検証済み flat 版 runner（Y0=0, Y1=1）
 ## [research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py)
 
@@ -1699,6 +1709,9 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/verify_five_row_witness.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_five_row_witness.py)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 弦による独立円censusを用いた5行q=7配置の安全性・極大性検査
+## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 4807488候補・相異なる4542証人の照合結果
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker

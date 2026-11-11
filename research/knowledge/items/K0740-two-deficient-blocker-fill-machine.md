@@ -22,6 +22,15 @@ artifacts:
 - path: research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner.ts
   role: source
   note: 機械本体。M/Y0/Y1/START/NODE_CAP を設定してスライス実行
+- path: research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts
+  role: source
+  note: flat配列を用いる高速版
+- path: research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py
+  role: verifier
+  note: 5×8・行0固定の2行欠損で直接全列挙と2実装の出力集合を比較
+- path: research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json
+  role: data
+  note: 4807488候補・相異なる4542証人の照合結果
 - path: research/log/2026-11-11-five-row-multi-deficient-machine.md
   role: log
   note: 開発・制御・第3 witness・5×19 pair {0,1} 初スライスの記録
@@ -52,10 +61,10 @@ soundness/completeness: 欠損行の空点 p の blocker は p を含む危険�
 - 5×18・pair {0,1}・S0={5,8,12,14,17}: 17,511ノード完走・witness 0。
 - 5×19・pair {0,1} 初スライス: idx 0..117 全 witness 0、平均 ~5.1kノード/case
   （最大 28,488）。1ペアクラス ≈ 72スライス（600k）、6代表で計 ~430スライスの見込み。
+- **独立な小盤全数照合**: 5×8、欠損行0・1、行0の石列 `{0,1,2,3,4}` を固定し、行1の0〜5石と他3行の各6石からなる全4807488候補を直接検査。相異なる4542極大安全配置の集合が元版・flat版それぞれの出力集合と一致した。両runnerの `witnesses=116674` はblocker割当による重複を含む。
 
 限界:
-- 本機械の監査は K0727 の 5×8 全候補照合（614,656候補 vs 759証人）ほど深くない。
-  陽性対照（第3 witness の発見・独立検証）と S0 既知ケースでの単一完走は PASS。
-  5×19 での witness 0 報告の確定前に、小盤での直接全列挙照合を推奨。
+- 5×8の1条件では直接全列挙と一致したが、他の欠損行ペアや5×19全ケースの独立検証ではない。
+  陽性対照（第3 witness の発見・独立検証）と S0 既知ケースでの単一完走も PASS。
 - witnesses は blocker 割当の異なる枝で同一配置を重複計上しうる（0件は「不存在」を意味する）。
 - 複数行欠損の全ペアクラス完了前に M_{5,7} の値は確定しない。

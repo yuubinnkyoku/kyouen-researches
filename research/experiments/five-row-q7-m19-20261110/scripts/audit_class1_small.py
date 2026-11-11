@@ -11,17 +11,17 @@ from audit_circle_census import long_circles
 HERE = Path(__file__).resolve().parent
 
 
-def run_search():
+def run_search(index=0):
     source = (HERE/'slice_runner_class1.ts').read_text()
     replacements = [
         ('const W = 5, M = 19;', 'const W = 5, M = 8;'),
-        ('const START = 79;', 'const START = 0;'),
+        ('const START = 79;', f'const START = {index};'),
         ('const NODE_CAP = 600_000;', 'const NODE_CAP = 5_000_000;'),
         ('const witnessList: number[][][] = [];',
          'const witnessList: number[][][] = []; const unique = new Set<string>();'),
         ('witnesses++; if (witnessList.length < 20)',
          'witnesses++; unique.add(JSON.stringify(rows)); if (witnessList.length < 20)'),
-        ('while (idx >= 0 && idx < reps.length)', 'while (idx === 0 && idx < reps.length)'),
+        ('while (idx >= 0 && idx < reps.length)', f'while (idx === {index} && idx < reps.length)'),
         ('cappedCase, witnesses, leaves, perKDone, lastS0s, witnessList };',
          'cappedCase, witnesses, leaves, perKDone, lastS0s, witnessList, unique: [...unique] };'),
     ]
@@ -35,15 +35,16 @@ def run_search():
                                 check=True, text=True, capture_output=True, timeout=60)
     data = json.loads(result.stdout)
     assert data['nC'] == 16 and data['done'] == 1 and data['cappedCase'] == -1
+    assert data['nextIdx'] == index + 1
     return data
 
 
-def brute_force():
+def brute_force(deficient_stones=(0,1,2,3,4)):
     width = 8
     circles = [sum(1 << (width*y+x) for x,y in circle) for circle in long_circles(width)]
     assert len(circles) == 16
-    deficient = sum(1 << (width+x) for x in range(5))
-    blanks = [width+x for x in (5,6,7)]
+    deficient = sum(1 << (width+x) for x in deficient_stones)
+    blanks = [width+x for x in range(width) if x not in deficient_stones]
     options = [[sum(1 << (width*y+x) for x in xs) for xs in combinations(range(width),6)]
                for y in (0,2,3,4)]
     found = set()
