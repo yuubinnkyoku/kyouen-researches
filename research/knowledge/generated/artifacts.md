@@ -491,6 +491,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leaf_saturation_bound.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leaf_saturation_bound.py)
 
 - [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (verifier): n=4..6の全グラフとn=5..20の明示構成で下界・達成・極大性を照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leafless_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leafless_sat.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (verifier): n=4..6の固定辺を含む全グラフでSAT符号化と直接判定を比較
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
@@ -541,6 +544,12 @@
 
 - [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (data): 11頂点13辺・固定辺SAT試行の50万衝突結果はUNKNOWN
 - [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (data): 固定辺SATの50万衝突試行はUNKNOWN
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/input.cnf.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/input.cnf.gz)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 13頂点16辺・葉なし・固定辺のSAT入力
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/result.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 50万衝突でUNKNOWN。SAT・UNSATのどちらも主張しない
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 6同型類の代表ビットマスクと個数・自己同型数
@@ -586,6 +595,12 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-exact.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-exact.md)
 
 - [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (proof): 葉の支持点の近傍・葉数上限・辺数式を用いる下界と明示構成による達成
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless-sat-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless-sat-small-audit.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 小次元16925グラフの符号化検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless_saturation_sat.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (solver): 固定辺・最小次数2以上のC4飽和グラフのSAT探索
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 二頂点共起数と一点次数の全称公式

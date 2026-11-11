@@ -34,6 +34,21 @@ artifacts:
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md
   role: certificate
   note: 12頂点15辺の明示構成
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless_saturation_sat.py
+  role: solver
+  note: 固定辺・最小次数2以上のC4飽和グラフのSAT探索
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leafless_sat.py
+  role: verifier
+  note: n=4..6の固定辺を含む全グラフでSAT符号化と直接判定を比較
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless-sat-small-audit.json
+  role: data
+  note: 小次元16925グラフの符号化検査
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/input.cnf.gz
+  role: data
+  note: 13頂点16辺・葉なし・固定辺のSAT入力
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/result.json
+  role: data
+  note: 50万衝突でUNKNOWN。SAT・UNSATのどちらも主張しない
 scope: n>=11頂点のC4飽和単純グラフと、二値立方体重み2層の包含極大配置。有限核検査に依存し、正方形格子や一般次元の厳密値は含まない。
 evidence: 葉あり候補の辺数下界、三重閉路核の12頂点への縮約、12頂点18334候補の2種類の直径計算。n=11はK0743の有限核検査。
 ---
@@ -47,3 +62,5 @@ evidence: 葉あり候補の辺数下界、三重閉路核の12頂点への縮�
 12頂点の場合、核と道長の全18334ケースで直径は4以上だった。Floyd-Warshall法と幅優先探索が直径分布でも一致した。細分は元の頂点間距離を縮めない一方、C4飽和グラフの直径は高々3なので矛盾する。11頂点13辺はK0743で別途排除済み。
 
 全称的な縮約と有限核の検査を組み合わせた結果であり、両直径検査は候補生成器を共有する。一般次元でこの下界が常に鋭いとは主張しない。
+
+13次元については下界16と既存構成の上界17がある。16辺の候補はK0742により葉を持たない。固定辺・最小次数2以上のSAT符号化は小次元の全16925グラフで直接判定と一致したが、13頂点16辺の50万衝突試行はUNKNOWNで、16石の存在・不存在は分かっていない。
