@@ -1,0 +1,2303 @@
+{
+  "p": 2539,
+  "seed_sha256": "454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb",
+  "edge_input_sha256": "30e5d500f658a7a245fdff3e5c7830dc62b376632f2a6c1e75dea08552671dff",
+  "prior_qualification_sha256": "0933b1a2f90c6a82c306295162230e9d811809c6eb54e810906b85d0f7c141c6",
+  "gate": [
+    60,
+    106,
+    262,
+    269,
+    647,
+    692,
+    916,
+    992,
+    1021,
+    1027,
+    1172,
+    1197,
+    1342,
+    1512,
+    1847,
+    1927,
+    2270,
+    2433
+  ],
+  "fixed": [
+    0,
+    6,
+    2533
+  ],
+  "max_deletions": 5,
+  "entries": [
+    {
+      "pair": [
+        60,
+        106
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        406
+      ]
+    },
+    {
+      "pair": [
+        60,
+        262
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        137,
+        212,
+        757,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        60,
+        269
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        402
+      ]
+    },
+    {
+      "pair": [
+        60,
+        647
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        500
+      ]
+    },
+    {
+      "pair": [
+        60,
+        692
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        881
+      ]
+    },
+    {
+      "pair": [
+        60,
+        916
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        60,
+        992
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        137,
+        212,
+        807,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1021
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1027
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        224
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1172
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        137,
+        212,
+        392,
+        587,
+        737
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1197
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        137,
+        212,
+        915,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1342
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        137,
+        212,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1512
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        137,
+        212,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1847
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        137,
+        212,
+        461,
+        827
+      ]
+    },
+    {
+      "pair": [
+        60,
+        1927
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        137,
+        212,
+        497,
+        717,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        60,
+        2270
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        137,
+        212,
+        1115,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        60,
+        2433
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        137,
+        171,
+        212,
+        1083,
+        1119
+      ]
+    },
+    {
+      "pair": [
+        106,
+        262
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        406,
+        757,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        106,
+        269
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        402,
+        406
+      ]
+    },
+    {
+      "pair": [
+        106,
+        647
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        406,
+        500
+      ]
+    },
+    {
+      "pair": [
+        106,
+        692
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        406,
+        881
+      ]
+    },
+    {
+      "pair": [
+        106,
+        916
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        406,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        106,
+        992
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        406,
+        807,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1021
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        406,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1027
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        224,
+        406
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1172
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        392,
+        406,
+        587,
+        737
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1197
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        406,
+        915,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1342
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        406,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1512
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        406,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1847
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        406,
+        461,
+        827
+      ]
+    },
+    {
+      "pair": [
+        106,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        406,
+        497,
+        717,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        106,
+        2270
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        406,
+        1115,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        106,
+        2433
+      ],
+      "obstructions": 5,
+      "status": "EXCLUDED",
+      "calls": 1,
+      "refutation": {
+        "type": "empty",
+        "edge": 0
+      }
+    },
+    {
+      "pair": [
+        262,
+        269
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        402,
+        757,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        647
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        500,
+        757,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        692
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        757,
+        881,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        916
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        757,
+        1048,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        992
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        757,
+        807,
+        1124,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1021
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        757,
+        1163,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1027
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        224,
+        757,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1172
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        392,
+        587,
+        737,
+        757,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1197
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        757,
+        915,
+        1198,
+        1199,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1342
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        757,
+        1198,
+        1254,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1512
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        757,
+        1254,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1847
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        461,
+        757,
+        827,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        1927
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        497,
+        717,
+        757,
+        1199,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        262,
+        2270
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        757,
+        1115,
+        1254,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        262,
+        2433
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        171,
+        757,
+        1083,
+        1119,
+        1254
+      ]
+    },
+    {
+      "pair": [
+        269,
+        647
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        402,
+        500
+      ]
+    },
+    {
+      "pair": [
+        269,
+        692
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        402,
+        881
+      ]
+    },
+    {
+      "pair": [
+        269,
+        916
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        402,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        269,
+        992
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        402,
+        807,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1021
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        402,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1027
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        224,
+        402
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1172
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        392,
+        402,
+        587,
+        737
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1197
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        402,
+        915,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1342
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        402,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1512
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        402,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1847
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        402,
+        461,
+        827,
+        1001
+      ]
+    },
+    {
+      "pair": [
+        269,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        402,
+        497,
+        717,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        269,
+        2270
+      ],
+      "obstructions": 6,
+      "status": "EXCLUDED",
+      "calls": 1,
+      "refutation": {
+        "type": "empty",
+        "edge": 0
+      }
+    },
+    {
+      "pair": [
+        269,
+        2433
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        171,
+        402,
+        1083,
+        1119
+      ]
+    },
+    {
+      "pair": [
+        647,
+        692
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        500,
+        881
+      ]
+    },
+    {
+      "pair": [
+        647,
+        916
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        500,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        647,
+        992
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        500,
+        807,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1021
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        500,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1027
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        224,
+        500
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1172
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        392,
+        500,
+        587,
+        737
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1197
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        500,
+        915,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1342
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        500,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1512
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        500,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1847
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        461,
+        500,
+        827
+      ]
+    },
+    {
+      "pair": [
+        647,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        497,
+        500,
+        717,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        647,
+        2270
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        500,
+        1115,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        647,
+        2433
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        171,
+        500,
+        1083,
+        1119
+      ]
+    },
+    {
+      "pair": [
+        692,
+        916
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        881,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        692,
+        992
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        807,
+        881,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        692,
+        1021
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        881,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        692,
+        1027
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        224,
+        881
+      ]
+    },
+    {
+      "pair": [
+        692,
+        1172
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        392,
+        587,
+        737,
+        881
+      ]
+    },
+    {
+      "pair": [
+        692,
+        1197
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        881,
+        915,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        692,
+        1342
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        881,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        692,
+        1512
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        881,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        692,
+        1847
+      ],
+      "obstructions": 4,
+      "status": "EXCLUDED",
+      "calls": 1,
+      "refutation": {
+        "type": "empty",
+        "edge": 0
+      }
+    },
+    {
+      "pair": [
+        692,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        497,
+        717,
+        881,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        692,
+        2270
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        881,
+        1001,
+        1115,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        692,
+        2433
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        171,
+        881,
+        1083,
+        1119
+      ]
+    },
+    {
+      "pair": [
+        916,
+        992
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        807,
+        1048,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1021
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        1048,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1027
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        224,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1172
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        392,
+        587,
+        737,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1197
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        915,
+        1048,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1342
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        1048,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1512
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        1048,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1847
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        461,
+        827,
+        1048
+      ]
+    },
+    {
+      "pair": [
+        916,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        497,
+        717,
+        1048,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        916,
+        2270
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        1048,
+        1115,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        916,
+        2433
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        171,
+        1048,
+        1083,
+        1119
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1021
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        807,
+        1124,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1027
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        224,
+        807,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1172
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        392,
+        587,
+        737,
+        807,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1197
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        807,
+        915,
+        1124,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1342
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        807,
+        1124,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1512
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        807,
+        1124,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1847
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        461,
+        807,
+        827,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        992,
+        1927
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        497,
+        717,
+        807,
+        1124,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        992,
+        2270
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        807,
+        1115,
+        1124,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        992,
+        2433
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        171,
+        807,
+        1083,
+        1119,
+        1124
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        1027
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        224,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        1172
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        392,
+        587,
+        737,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        1197
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        915,
+        1163,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        1342
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        1163,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        1512
+      ],
+      "obstructions": 2,
+      "status": "HITTING_WITNESS",
+      "calls": 3,
+      "deletions": [
+        1163,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        1847
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        461,
+        827,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        497,
+        717,
+        1163,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        2270
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        1115,
+        1163,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        1021,
+        2433
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        171,
+        1083,
+        1119,
+        1163
+      ]
+    },
+    {
+      "pair": [
+        1027,
+        1172
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        224,
+        392,
+        587,
+        737
+      ]
+    },
+    {
+      "pair": [
+        1027,
+        1197
+      ],
+      "obstructions": 7,
+      "status": "EXCLUDED",
+      "calls": 1,
+      "refutation": {
+        "type": "packing",
+        "edges": [
+          2,
+          3,
+          4,
+          0,
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "pair": [
+        1027,
+        1342
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        224,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        1027,
+        1512
+      ],
+      "obstructions": 3,
+      "status": "EXCLUDED",
+      "calls": 1,
+      "refutation": {
+        "type": "empty",
+        "edge": 0
+      }
+    },
+    {
+      "pair": [
+        1027,
+        1847
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        224,
+        461,
+        827
+      ]
+    },
+    {
+      "pair": [
+        1027,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        224,
+        497,
+        717,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        1027,
+        2270
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        224,
+        1115,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        1027,
+        2433
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        171,
+        224,
+        1083,
+        1119
+      ]
+    },
+    {
+      "pair": [
+        1172,
+        1197
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 7,
+      "deletions": [
+        392,
+        587,
+        737,
+        915,
+        1339
+      ]
+    },
+    {
+      "pair": [
+        1172,
+        1342
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        392,
+        587,
+        737,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        1172,
+        1512
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        392,
+        587,
+        737,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1172,
+        1847
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        392,
+        461,
+        587,
+        737,
+        827
+      ]
+    },
+    {
+      "pair": [
+        1172,
+        1927
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 8,
+      "deletions": [
+        497,
+        717,
+        737,
+        1199,
+        2537
+      ]
+    },
+    {
+      "pair": [
+        1172,
+        2270
+      ],
+      "obstructions": 7,
+      "status": "HITTING_WITNESS",
+      "calls": 8,
+      "deletions": [
+        737,
+        1115,
+        1346,
+        1577,
+        2537
+      ]
+    },
+    {
+      "pair": [
+        1172,
+        2433
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 8,
+      "deletions": [
+        171,
+        737,
+        1083,
+        1119,
+        2537
+      ]
+    },
+    {
+      "pair": [
+        1197,
+        1342
+      ],
+      "obstructions": 6,
+      "status": "EXCLUDED",
+      "calls": 1,
+      "refutation": {
+        "type": "empty",
+        "edge": 0
+      }
+    },
+    {
+      "pair": [
+        1197,
+        1512
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        915,
+        1198,
+        1199,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1197,
+        1847
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        461,
+        827,
+        915,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        1197,
+        1927
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        497,
+        717,
+        915,
+        1198,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        1197,
+        2270
+      ],
+      "obstructions": 7,
+      "status": "HITTING_WITNESS",
+      "calls": 7,
+      "deletions": [
+        915,
+        1115,
+        1339,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        1197,
+        2433
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 7,
+      "deletions": [
+        171,
+        915,
+        1083,
+        1119,
+        1339
+      ]
+    },
+    {
+      "pair": [
+        1342,
+        1512
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        1198,
+        1394,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1342,
+        1847
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        461,
+        827,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        1342,
+        1927
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        497,
+        717,
+        1199,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        1342,
+        2270
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        1115,
+        1198,
+        1346,
+        1394,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        1342,
+        2433
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        171,
+        1083,
+        1119,
+        1198,
+        1394
+      ]
+    },
+    {
+      "pair": [
+        1512,
+        1847
+      ],
+      "obstructions": 3,
+      "status": "HITTING_WITNESS",
+      "calls": 4,
+      "deletions": [
+        461,
+        827,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1512,
+        1927
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        497,
+        717,
+        1199,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1512,
+        2270
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        1115,
+        1346,
+        1577,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1512,
+        2433
+      ],
+      "obstructions": 4,
+      "status": "HITTING_WITNESS",
+      "calls": 5,
+      "deletions": [
+        171,
+        1083,
+        1119,
+        1593
+      ]
+    },
+    {
+      "pair": [
+        1847,
+        1927
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        461,
+        497,
+        717,
+        827,
+        1199
+      ]
+    },
+    {
+      "pair": [
+        1847,
+        2270
+      ],
+      "obstructions": 6,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        461,
+        827,
+        1115,
+        1346,
+        1577
+      ]
+    },
+    {
+      "pair": [
+        1847,
+        2433
+      ],
+      "obstructions": 5,
+      "status": "HITTING_WITNESS",
+      "calls": 6,
+      "deletions": [
+        171,
+        461,
+        827,
+        1083,
+        1119
+      ]
+    },
+    {
+      "pair": [
+        1927,
+        2270
+      ],
+      "obstructions": 8,
+      "status": "HITTING_WITNESS",
+      "calls": 8,
+      "deletions": [
+        497,
+        975,
+        1199,
+        1654,
+        1885
+      ]
+    },
+    {
+      "pair": [
+        1927,
+        2433
+      ],
+      "obstructions": 6,
+      "status": "EXCLUDED",
+      "calls": 1,
+      "refutation": {
+        "type": "packing",
+        "edges": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    {
+      "pair": [
+        2270,
+        2433
+      ],
+      "obstructions": 7,
+      "status": "HITTING_WITNESS",
+      "calls": 8,
+      "deletions": [
+        171,
+        1083,
+        1119,
+        1654,
+        1885
+      ]
+    }
+  ],
+  "excluded_pairs": [
+    [
+      106,
+      2433
+    ],
+    [
+      269,
+      2270
+    ],
+    [
+      692,
+      1847
+    ],
+    [
+      1027,
+      1197
+    ],
+    [
+      1027,
+      1512
+    ],
+    [
+      1197,
+      1342
+    ],
+    [
+      1927,
+      2433
+    ]
+  ],
+  "source_sha256": "1749087bebea23145ba47ac1fb1d3292d664ace8cd8ae6e716f953d50e466464",
+  "hitting_search_source_sha256": "79f8c75086fc3e4e461ed283ff756f55c013bb45dd53591b9bd3dc46aeaf353c",
+  "scope": "Pair incompatibility from provided geometric quadruples only; positive hitting witnesses do not establish safe extensions."
+}

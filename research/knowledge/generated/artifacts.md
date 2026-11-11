@@ -10881,6 +10881,21 @@
 ## [research/experiments/parabola-p2539-five-pruned-20261111/regression.json](../../../research/experiments/parabola-p2539-five-pruned-20261111/regression.json)
 
 - [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実入力10改変の拒否と60負point単位節の120真理値割当て
+## [research/experiments/parabola-p2539-gate-pair-obstructions-20261111/README.md](../../../research/experiments/parabola-p2539-gate-pair-obstructions-20261111/README.md)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 非鏡像二組の六つの互いに素な削除障害、全7組同時追加禁止、範囲と再現
+## [research/experiments/parabola-p2539-gate-pair-obstructions-20261111/audit-output/summary.json](../../../research/experiments/parabola-p2539-gate-pair-obstructions-20261111/audit-output/summary.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 独立族再構成と空障害5個・六障害packing2個の受理、実45四点の整数幾何
+## [research/experiments/parabola-p2539-gate-pair-obstructions-20261111/output/certificate.json](../../../research/experiments/parabola-p2539-gate-pair-obstructions-20261111/output/certificate.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): gate18点の全153組を覆う7負証明と146必要障害族だけの削除証人
+## [research/experiments/parabola-p2539-gate-pair-obstructions-20261111/regression.json](../../../research/experiments/parabola-p2539-gate-pair-obstructions-20261111/regression.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実証明書8改変の拒否、小型hitting族495例の総当たり比較
+## [research/experiments/parabola-p2539-gate-pair-obstructions-20261111/verify.py](../../../research/experiments/parabola-p2539-gate-pair-obstructions-20261111/verify.py)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索をimportせず全153組の被覆・hitting証明・削除証人と整数幾何を検査
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/README.md](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/README.md)
 
 - [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (proof): 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証
