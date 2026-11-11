@@ -3935,6 +3935,7 @@
 - → depends_on [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md): 重み2層の共面四点禁止と完全グラフ上のC4禁止の同値
 - ← depends_on [K0716](../items/K0716-weight-two-d9-saturation-minimum.md): 重み2層のC4対応、9次元の10石下界と11石構成
 - ← depends_on [K0717](../items/K0717-weight-two-d10-saturation-minimum.md): 重み2層のC4対応、10次元の11石下界と12石構成
+- ← depends_on [K0742](../items/K0742-c4-saturation-with-leaf-exact.md): 偶奇別のC4飽和明示構成と重み2層の対応
 
 ## [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) 二値立方体重み2層の9次元最小極大配置は11石
 
@@ -4094,3 +4095,7 @@
 - → depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): two_deficient_pair_runner（ハイブリッド blocker-fill DFS・等価検証済み flat 版）による完全列挙
 - → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち2行欠損クラス pair {0,1}/{3,4} 側の否定部
+
+## [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) 葉を持つC4飽和グラフの最小辺数はfloor((3n-5)/2)
+
+- → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): 偶奇別のC4飽和明示構成と重み2層の対応

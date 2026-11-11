@@ -46,7 +46,7 @@ def verify_model(n, size, edges, model):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--n', type=int, required=True, choices=range(4,11))
+    parser.add_argument('--n', type=int, required=True, choices=range(4,12))
     parser.add_argument('--edges', type=int, required=True)
     parser.add_argument('--budget', type=int, default=300000)
     parser.add_argument('--output', type=Path, required=True)

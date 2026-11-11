@@ -725,3 +725,4 @@
 | [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行2欠損の極大安全配置は全8,378ケースで存在しない — 単一行欠損クラス完結 | computation | computed | rectangles, variants, maximal-safe |
 | [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) | two_deficient_pair_runner: 5×m・q=7 の2行欠損 occupancy クラスを完全列挙する機械 | method | active | rectangles, variants, maximal-safe, verification |
 | [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・2行欠損 pair {0,1}/{3,4} の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) | 葉を持つC4飽和グラフの最小辺数はfloor((3n-5)/2) | proposition | proved | variants, geometry, maximal-safe |

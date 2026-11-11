@@ -488,6 +488,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 隣接集合方式と四角形マスク方式の小次元・各辺数の差分照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leaf_saturation_bound.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leaf_saturation_bound.py)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (verifier): n=4..6の全グラフとn=5..20の明示構成で下界・達成・極大性を照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
@@ -528,6 +531,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 2回の列挙の集計、検査器のhashと証拠上の制約
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d11-c4-saturation-sat-20261111/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d11-c4-saturation-sat-20261111/result.json)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (data): 11頂点13辺・固定辺SAT試行の50万衝突結果はUNKNOWN
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 6同型類の代表ビットマスクと個数・自己同型数
@@ -564,6 +570,12 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=2..5における禁止四点数と補完可能三点数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-bound-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-bound-audit.json)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (data): 小次元の列挙数と明示構成の辺数・葉数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-exact.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-exact.md)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (proof): 葉の支持点の近傍・葉数上限・辺数式を用いる下界と明示構成による達成
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 二頂点共起数と一点次数の全称公式
@@ -610,10 +622,12 @@
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 偶数次元の構成と全欠辺の極大性の証明
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (certificate): 10次元12辺の包含極大C4禁止構成
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (certificate): 偶数n>=6で葉を持ち下界を達成する明示構成
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (certificate): 9次元11辺の包含極大C4禁止構成
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (certificate): 奇数n>=5で葉を持ち下界を達成する明示構成
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
