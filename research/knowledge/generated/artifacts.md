@@ -1649,9 +1649,15 @@
 ## [research/experiments/five-row-q7-m19-20261110/circle-census-independent.json](../../../research/experiments/five-row-q7-m19-20261110/circle-census-independent.json)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (data): 5×18では84本、5×19では95本の7点以上の円
+## [research/experiments/five-row-q7-m19-20261110/class1-5x8-audit.json](../../../research/experiments/five-row-q7-m19-20261110/class1-5x8-audit.json)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (data): 614656候補と相異なる759証人の照合結果
 ## [research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (verifier): 別行の水平弦2本から長い円を生成する独立検算
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 5×8の固定欠損行について直接全列挙とrunner出力の集合を比較
 ## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
@@ -1666,6 +1672,9 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{1}（行1欠損）スライスrunner（Y0=1、葉fillは行0から）
+## [research/experiments/five-row-q7-m19-20261110/scripts/test_class1_witness.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_class1_witness.mjs)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 実際の5×8クラス1探索で証人を生成し独立検証、旧処理の失敗も再現
 ## [research/experiments/five-row-q7-m19-20261110/scripts/test_fill_rows.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_fill_rows.mjs)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 欠損行0..4と石数0..5の行fill回帰、修正前の誤動作も再現
@@ -1675,6 +1684,9 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 独立した円censusで2つの5×18証人の安全性・全空点の阻止を確認
+## [research/experiments/five-row-q7-m19-20261110/scripts/verify_five_row_witness.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_five_row_witness.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 弦による独立円censusを用いた5行q=7配置の安全性・極大性検査
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker

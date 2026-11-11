@@ -34,6 +34,18 @@ artifacts:
 - path: research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py
   role: verifier
   note: 独立した円censusで2つの5×18証人の安全性・全空点の阻止を確認
+- path: research/experiments/five-row-q7-m19-20261110/scripts/test_class1_witness.mjs
+  role: verifier
+  note: 実際の5×8クラス1探索で証人を生成し独立検証、旧処理の失敗も再現
+- path: research/experiments/five-row-q7-m19-20261110/scripts/verify_five_row_witness.py
+  role: verifier
+  note: 弦による独立円censusを用いた5行q=7配置の安全性・極大性検査
+- path: research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py
+  role: verifier
+  note: 5×8の固定欠損行について直接全列挙とrunner出力の集合を比較
+- path: research/experiments/five-row-q7-m19-20261110/class1-5x8-audit.json
+  role: data
+  note: 614656候補と相異なる759証人の照合結果
 - path: research/log/2026-11-11-m57-blocker-obligation-fill.md
   role: log
   note: 機械開発・検証・キャンペーン開始の記録
@@ -78,9 +90,12 @@ global累積とすること（ケースごとのリセットは process safety d
 capped ケースは次スライス先頭で再挑戦すれば成功する。
 各スライスは START..nextIdx を正確に報告するため、gap・overlap は
 事後に厳密に再構成でき、overlap 区間の再実行は二重検証になる。
+`witnesses` はblocker割当の異なる枝で同じ配置を重複して数えうるため、配置の相異なる個数を表さない。0件なら発見された配置がないことを意味する。
 
 限界: 機械は盤・occupancyクラスごとの有限列挙であり、クラス横断の全パターン
 完了前に M_{5,7} の値は確定しない。クラス{0}の全ケース完了は K0728 に記録。
 クラス{1}・{2}・複数行欠損クラスは進行中。
 
-2026-11-11に行fillの不具合を修正した。旧クラス{1} runnerは欠損行1も6石に埋めようとし、blocker割当完了後に到達する配置を誤って拒否した。記録済みのクラス{1}スライスはすべて `leaves=0` で、その不具合箇所に到達していない。修正後の行fillは欠損行を位置によらず飛ばす。回帰は欠損行0..4・石数0..5・他行の充填あり/なしの180ケースと、5×18の既知証人再現で確認した。これは旧スライスの別実装による完全な再監査を意味しない。
+2026-11-11に行fillの不具合を修正した。旧クラス{1} runnerは欠損行1も6石に埋めようとし、blocker割当完了後に到達する配置を誤って拒否した。記録済みのクラス{1}スライスはすべて `leaves=0` で、その不具合箇所に到達していない。修正後の行fillは欠損行を位置によらず飛ばす。回帰は欠損行0..4・石数0..5・他行の充填あり/なしの180ケース、5×18の既知証人再現、および実際の5×8クラス{1}探索による証人生成と独立検証で確認した。旧処理では同じ5×8探索がblocker割当完了に到達しながら証人0件となる。これは旧スライスの別実装による完全な再監査を意味しない。
+
+さらに5×8・欠損行1の石列 `{0,1,2,3,4}` を固定し、他4行各6石の全 `28^4=614656` 候補を独立に直接検査した。極大安全配置は相異なる759件で、修正後runnerが出力した配置の集合と完全一致した。runnerの `witnesses=5276` は異なるblocker割当による重複を含む。この1ケースの完全照合は5×19全ケースの独立検証ではない。
