@@ -1,6 +1,6 @@
 ---
 id: K0727
-title: blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械
+title: "blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械"
 kind: method
 status: active
 topics: [rectangles, variants, maximal-safe, verification]

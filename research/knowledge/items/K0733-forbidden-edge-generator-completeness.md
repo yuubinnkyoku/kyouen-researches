@@ -1,5 +1,5 @@
 ---
-id: K0720
+id: K0733
 title: 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない
 kind: proposition
 status: proved
@@ -7,10 +7,10 @@ topics: [geometry, maximum-safe, verification]
 aliases: []
 relations:
 - type: depends_on
-  target: K0719
+  target: K0732
   note: 系C1 の必要方向と第四点の一意性
 - type: supports
-  target: K0718
+  target: K0731
   note: 前提(1)（辺リスト完全性）
 artifacts:
 - path: research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp
@@ -28,7 +28,7 @@ evidence: 健全性・完全性・重複なし・計算の完全性の4点の証
 `forbidden_edges.cpp` は `i<j<k` を全走査し `l = (−(i+j+k)) mod p` を取って
 `l>k` かつ `det({i,j,k,l})=0` の行だけを出力する。この出力集合は全禁止四点集合に一致する:
 
-(i) 健全性は出力条件 `det==0` と K0719 の同値性から従う。
+(i) 健全性は出力条件 `det==0` と K0732 の同値性から従う。
 (ii) 完全性は、禁止四点なら `Σt≡0` より `t_4 ≡ −(t_1+t_2+t_3)` で、
 `l` の計算値が `t_4` に一致し `l>k` を満たすことから従う。
 (iii) 重複なしは、同一 4 点集合の他の三つ組から得られる `l` が常に `k` より

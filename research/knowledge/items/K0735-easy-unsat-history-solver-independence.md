@@ -1,5 +1,5 @@
 ---
-id: K0722
+id: K0735
 title: 候補B の易 UNSAT は学習節の履歴に依存せず、ソルバ横断でも d に応じた範囲で再現する
 kind: verification
 status: verified
@@ -7,13 +7,13 @@ topics: [geometry, maximum-safe, verification]
 aliases: []
 relations:
 - type: verifies
-  target: K0718
+  target: K0731
   note: 候補B 分割の適用に対する独立性検証
 - type: depends_on
-  target: K0717
+  target: K0730
   note: 掃引記録
 - type: depends_on
-  target: K0721
+  target: K0734
   note: 同一符号化の基数制約
 artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py

@@ -1,15 +1,15 @@
 # 移行集計
 
-K項目: 706 / alias: 269 / artifactファイル: 3585
+K項目: 719 / alias: 269 / artifactファイル: 3784
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 70 |
+| computation | 76 |
 | definition | 5 |
-| method | 4 |
-| proposition | 557 |
+| method | 5 |
+| proposition | 563 |
 | question | 39 |
 | verification | 31 |
 
@@ -17,13 +17,12 @@ K項目: 706 / alias: 269 / artifactファイル: 3585
 
 | 値 | 件数 |
 |---|---:|
-| active | 9 |
-| computed | 151 |
+| active | 10 |
+| computed | 165 |
 | conjectured | 2 |
-| needs-review | 3 |
 | observed | 26 |
 | open | 37 |
-| proved | 368 |
+| proved | 369 |
 | refuted | 64 |
 | scope-unclear | 2 |
 | superseded | 9 |
@@ -34,25 +33,25 @@ K項目: 706 / alias: 269 / artifactファイル: 3585
 
 | 値 | 件数 |
 |---|---:|
-| certificates | 97 |
+| certificates | 101 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 354 |
+| geometry | 360 |
 | grundy | 171 |
-| maximal-safe | 170 |
-| maximum-safe | 90 |
+| maximal-safe | 177 |
+| maximum-safe | 91 |
 | migration | 1 |
-| provenance | 38 |
+| provenance | 40 |
 | reconfiguration | 34 |
-| rectangles | 104 |
+| rectangles | 108 |
 | residual-games | 124 |
 | rules | 8 |
-| search-methods | 116 |
-| square-outcomes | 91 |
+| search-methods | 117 |
+| square-outcomes | 94 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 295 |
-| verification | 114 |
+| variants | 300 |
+| verification | 123 |
 
 ## 未解決・要監査・範囲不明
 
@@ -98,10 +97,7 @@ K項目: 706 / alias: 269 / artifactファイル: 3585
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [scope-unclear] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) [needs-review] p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) [needs-review] p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
-- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) [needs-review] p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目）
-- [K0724](../items/K0724-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
+- [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
 
 ## 警告
 

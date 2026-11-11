@@ -1,5 +1,5 @@
 ---
-id: K0723
+id: K0736
 title: ternary 符号化の d 一般化実装は d=1323 で現行と同一の CNF・同一探索を再現し、任意 d で節生成が健全
 kind: verification
 status: verified
@@ -13,7 +13,7 @@ relations:
   target: K0712
   note: d=1323 固定の保存CNFから任意 d の再生成へ
 - type: supports
-  target: K0717
+  target: K0730
   note: 候補A/三値系の一般化が次の測定の前提になる
 artifacts:
 - path: research/experiments/parabola-ternary-selection-20261109/ternary_general.py

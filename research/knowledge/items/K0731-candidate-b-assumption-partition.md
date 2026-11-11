@@ -1,5 +1,5 @@
 ---
-id: K0718
+id: K0731
 title: 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値
 kind: proposition
 status: proved
@@ -10,13 +10,13 @@ relations:
   target: K0712
   note: 固定原点・一完全対の還元
 - type: depends_on
-  target: K0720
+  target: K0733
   note: 辺リスト完全性（前提(1)）
 - type: depends_on
-  target: K0719
+  target: K0732
   note: 捨て規則 (ii) の和条件（前提(2)）
 - type: depends_on
-  target: K0721
+  target: K0734
   note: 基数符号化の範囲限定検証（前提(3)）
 artifacts:
 - path: research/log/2026-11-10-a2647-113-candidate-b-proof-omp.md
@@ -32,7 +32,7 @@ artifacts:
   role: data
   note: 分割の適用記録 (1,323 d)
 scope: c=1 の形状クラスCNF一般。分割と同値性は論理命題として述べ、ソルバ実行への応用は前提(4) に依存する部分を分離する。
-evidence: 符号化定義からの論理的導出。前提(1)(2) は K0720/K0719 で証明済み、(3) は K0721 で範囲限定の検証済み。(4) は K0724 の未解決の問い。
+evidence: 符号化定義からの論理的導出。前提(1)(2) は K0733/K0732 で証明済み、(3) は K0734 で範囲限定の検証済み。(4) は K0737 の未解決の問い。
 ---
 
 ## 命題

@@ -1,6 +1,6 @@
 ---
 id: K0724
-title: best-S3壁のclassA分解: classA blockerは32個・8 S2のみで、すべて16第二手勝ち五石子由来（SW16部分集合）
+title: "best-S3壁のclassA分解: classA blockerは32個・8 S2のみで、すべて16第二手勝ち五石子由来（SW16部分集合）"
 kind: computation
 status: computed
 topics: [square-outcomes, certificates, verification]

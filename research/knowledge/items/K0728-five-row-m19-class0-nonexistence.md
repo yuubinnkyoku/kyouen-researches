@@ -18,6 +18,7 @@ relations:
 artifacts:
 - path: research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts
   role: source
+  note: 欠損行クラスのblocker-obligation-fill DFS実装
 - path: research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class0.ts
   role: source
   note: 双方向スライスrunner
