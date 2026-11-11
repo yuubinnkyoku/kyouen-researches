@@ -202,3 +202,20 @@ K0727 の blocker-obligation-fill DFS を2行欠損に一般化した。
 - runner: verbatim（repo two_deficient_pair_runner.ts）または
   修正版 two_deficient_pair_runner_flat.ts のどちらでも可（等価検証済み）。
   verbatim はまれに process safety deadline 超過 → 同一START再実行で回復。
+
+## 続き6: 追加2スライス（同高速レーン・続き、600k global NODE_CAP・flat修正版）
+
+| slice | START | done | 範囲 | capped | max/case |
+|---|---|---|---|---|---|
+| A14 | 2472 | 211 | 2472..2682 | 2683 | 14,996 |
+| B13 | 6436 | 278 | 6436..6713 | 6714 | 15,099 |
+
+- 全スライス witness 0・leaves 0・nC=95・repsTotal=8,378 一致（lane A k=5、lane B k=4）。
+
+## レジューム状態（更新6・本セッション最終）
+
+- **pair {0,1} 和集合: idx 0..2682 + 3000..6713 完成（6,397/8,378 = 76.3%）。**
+- **lane A START=2683（capped再挑戦）/ lane B START=6714（capped再挑戦）。**
+- 残り: idx 2683..2999（gap 317ケース）+ 6714..8377。
+- 確定事実: 5×19・pair {0,1} の idx 0..2682・3000..6713 では
+  2行欠損の極大安全配置は完全列挙により存在しない。
