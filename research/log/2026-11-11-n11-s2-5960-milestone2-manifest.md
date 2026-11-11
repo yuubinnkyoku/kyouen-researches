@@ -48,7 +48,22 @@ S6 orbit worklist manifestを完全列挙した（78 FW oracle条件付き・K06
 - 8証明書ladder+manifest同時生成はsandbox process safety deadline超過
   （2回とも）。5証明書manifest単独は成功。ladder数値は別実行で確定し
   script本文には含めない。
-- 1.1MBのmanifestはreturn→ローカル保存→jq検証→pushで問題なく扱えた。
+- manifest（minified 715,236 bytes・pretty 1.1MB）はreturn→ローカル保存→
+  jq検証→pushで扱えたが、**push経路で注意点あり（追記参照）**。
+
+## 追記: 大型ファイルpushの経路（実装教訓）
+
+- **`tools.file_system.read_file` は64,000 bytesで打ち切られる**
+  （`was_truncated` を必ず確認）。初回はこれに気づかず
+  **64KBに切れたmanifestをcommitしてしまった**（b714e9d）。
+  修復: `split -b 60000` で12チャンクに分割→各チャンクを
+  `read_file`で結合→`push_files`で上書き（6c4384e）。
+  リモート側を再取得して715,236 bytes・10,988 orbit・末尾まで一致を確認済み。
+- **`create_or_update_file`（contents PUT）は~1MBペイロードで500/502**。
+  **`push_files`（tree API）は単一715KBファイルで成功**。
+  大型成果物はpush_files経路で。
+- 反映コミット: bee326f（script+log+K0748）→ 6d1a255（truncated manifest、
+  のちに修復）→ 6c4384e（フルmanifest 715,236 bytes）。
 
 ## 次の一手
 
