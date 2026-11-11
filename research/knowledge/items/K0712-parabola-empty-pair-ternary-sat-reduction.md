@@ -16,6 +16,9 @@ artifacts:
 - path: research/experiments/parabola-ternary-selection-20261109/ternary.py
   role: solver
   note: 直接投影節の点選択への変換と空対数のcardinality制約
+- path: research/experiments/parabola-ternary-selection-20261109/ternary_general.py
+  role: solver
+  note: d を引数化した同符号化の生成器（保存 CNF は d=1323 専用なので必ず再生成する）
 - path: research/experiments/parabola-ternary-selection-20261109/regression.py
   role: verifier
   note: 小素数の全三値割当と独立整数幾何の照合、444 cardinalityケースと実証人の再評価
@@ -74,4 +77,5 @@ exactly-oneによって各対の選択は三値と一対一に対応する。
 p=5,7,11,13,17の全d・全三値19392割当で、符号化と整数幾何から完全列挙した禁止四点の判定が一致。
 one-hotの無効状態を拒否し、sequential counterの444ケースも独立に照合した。
 実際の1292点証人を全p=2647符号化へ戻して充足を確認し、別のSAT試行から1296点を構成した（K0711）。
+保存 CNF（`target1322-budget3000000/input.cnf.gz`）は **d=1323 でフィルタ済み**の産物であり、別 d では `clauses_for_pair` による再生成が必要。一般 d の生成器と d=1323 でのバイト一致は 2026-11-10 に検証済み（K0723）。
 これらは実装回帰であり、上記全称証明とは区別する。

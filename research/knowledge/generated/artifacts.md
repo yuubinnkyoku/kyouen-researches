@@ -478,18 +478,9 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 隣接集合方式と四角形マスク方式の小次元・各辺数の差分照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 全保存配置を同型判定し代表と自己同型数を集計
@@ -502,18 +493,6 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/constant-weight-layers.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 等重み層の禁止四点数の全称公式と重み2の場合の四角形禁止グラフへの帰着
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/input.cnf.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/input.cnf.gz)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 上記試行の固定辺・11辺のCNF
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-20261110/result.json)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 別SAT符号化の30万衝突探索はUNKNOWN
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-2m-20261110/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-c4-saturation-sat-2m-20261110/result.json)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 同一CNFの200万衝突探索もUNKNOWN
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 2回の列挙の集計、検査器のhashと証拠上の制約
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 6同型類の代表ビットマスクと個数・自己同型数
@@ -535,12 +514,6 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks.cpp)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 四角形ビットマスクと固定サイズ部分集合走査による独立列挙
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_masks_n10.cpp)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 別の四角形マスク方式による全固定辺候補の独立列挙
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結性枝刈りなしの再列挙。C4判定は共有する
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=6における禁止四点数と全二点・三点の照合
@@ -559,15 +532,6 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturated-constructions-audit.json)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 偶奇それぞれの構成の有限検算結果
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation-sat-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation-sat-small-audit.json)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 小グラフ16925件について直接検査とSATの一致
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/saturation_sat.py)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 四角形禁止・欠辺ごとの長さ3の道・辺数を用いる別のSAT符号化
-## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/search_sparse_c4_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/search_sparse_c4_n10.cpp)
-
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結可能性で枝刈りする固定辺・11辺の安全配置列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 2実装で一致した安全配置と極大配置の集計・ソースhash
@@ -589,7 +553,6 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 偶数次元の構成と全欠辺の極大性の証明
-- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (certificate): 10次元12辺の包含極大C4禁止構成
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明
@@ -2391,6 +2354,10 @@
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 509,1009の二つの追加有限存在証人
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 509,1009の追加有限等号証人
+## [research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp](../../../research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp)
+
+- [K0719](../items/K0719-parabola-four-point-determinant-factorization.md) (verifier): det() の 3×3 実装（補題A の対象）
+- [K0720](../items/K0720-forbidden-edge-generator-completeness.md) (verifier): 列挙本体（i<j<k と l の一意化）
 ## [research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json)
 
 - [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (data): 66多項式グラフ・13素数Q_pカタログ・次数3,4の明示整数証人
@@ -2400,6 +2367,7 @@
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (proof): 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数で充足可能という主張は含まない
 - [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (proof): 原始整数方程式・有限体根数による全称証明とk=2,3,4の鋭さ証人
 - [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (proof): 完全対補題・四元和・反射によるNAE分解の全称証明
+- [K0719](../items/K0719-parabola-four-point-determinant-factorization.md) (proof): K0334 側の全称証明（本項とは独立ルート）
 ## [research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizによる全94575425選択四点の独立検算
@@ -9941,7 +9909,7 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 120204節を満たす保存モデル。空対23、1302点を選択
 ## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/candidate.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/candidate.txt)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 統合した1303点の下界を与えるソート済み1303パラメータ。点は(t,t² mod 2647)
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 現在の下界を与えるソート済み1303パラメータ。点は(t,t² mod 2647)
 ## [research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/extensions.txt](../../../research/experiments/parabola-1296-warm-start-20261109/output/target1303-seed1302-budget300000/extensions.txt)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 1303点証人への各未選択点1344個について、追加を阻む禁止四点の証人
@@ -10032,9 +10000,6 @@
 ## [research/experiments/parabola-1296-warm-start-20261109/verify_two_add.py](../../../research/experiments/parabola-1296-warm-start-20261109/verify_two_add.py)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 障害四点群、削除候補の包含関係、候補二点組の全被覆を整数行列式で検査
-## [research/experiments/parabola-audit-coverage-20261109/inventory-20261109T1016.json](../../../research/experiments/parabola-audit-coverage-20261109/inventory-20261109T1016.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 最新mainの保存レシートも21/1103 dと確認。残り1082 d、旧固定snapshot5 dと区別。DRAT再生ではない
 ## [research/experiments/parabola-audit-coverage-20261109/inventory.json](../../../research/experiments/parabola-audit-coverage-20261109/inventory.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 固定commitのレシート整合性と被覆の検査。DRATの再実行ではない
@@ -10045,103 +10010,6 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 重複・未被覆・計画標本の照合と13制御。証明内容の検査器ではない
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 件数と計画標本63件の集合包含を区別して照合する再現コード
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (verifier): 総件数70と計画標本51/65の被覆を区別する再現コード
-## [research/experiments/parabola-bounded-exchange-20261109/README.md](../../../research/experiments/parabola-bounded-exchange-20261109/README.md)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 有界交換の入力・再現手順と、1302点下界および次の近傍の信頼境界
-## [research/experiments/parabola-bounded-exchange-20261109/audit.py](../../../research/experiments/parabola-bounded-exchange-20261109/audit.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 除去counterの真理値表、保存入力のbyte再生成、完全モデル全節・点抽出・交換差分と幾何receiptを照合
-## [research/experiments/parabola-bounded-exchange-20261109/audit_proof.py](../../../research/experiments/parabola-bounded-exchange-20261109/audit_proof.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 保存証明を削除無視・RAT禁止の既存RUP-only検査器で再生するドライバ
-## [research/experiments/parabola-bounded-exchange-20261109/output/audit-1302/audit.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/audit-1302/audit.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 768除去counterケース、全129266節、3不正モデル拒否、全変数固定の再生成功
-## [research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/proof-audit-1303.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当初のRUP-only検査は120秒でtimeout、verified false。後のLRAT受理と混同しない歴史的記録
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/candidate.txt)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1302点。保存1301点から3点を除き4点を追加
-- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 本項で固定する1302点集合。SHA-256 5395d232...、原点と完全対d=1323を含む
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/geometry.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全119187179475四点を合同式で被覆し45110020候補を整数行列式で検査、禁止四点0件
-- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (data): 指定集合自体の安全性を独立整数幾何で確認した受理記録
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/input.cnf.gz)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 元の1301点から失う点数に逐次counterの上限3を課した保存入力
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/model.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/model.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 1302点要求・元の証人から3点以下除去の全129266節を満たす37731変数の完全モデル
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1302-remove3-budget100000/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 7.11秒・8180衝突で1302点SATを得た当時の記録。幾何の未検査表示は原記録として保持
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/input.cnf.gz)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1303点要求の36457変数・126721節の実入力。全体を覆わない近傍条件付き
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/proof.drat.gz)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 325093行の元DRAT。後にDRAT-trim -Uで受理し変換LRATを別実装で検査。旧RUP-only timeoutは保持
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove3-budget100000/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存1302点から3点以下除去の1303点要求のSOLVER_UNSAT原記録。後の独立LRAT受理とは分離して保持
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/input.cnf.gz](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/input.cnf.gz)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存1302点から4点以下除去で1303点以上を要求した37749変数・129303節の新しい実入力
-## [research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/result.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/target1303-remove4-budget100000/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 77.497秒・100005衝突でUNKNOWN。候補・モデル・証明はなく不存在を主張しない
-## [research/experiments/parabola-bounded-exchange-20261109/output/unknown-remove4-validation.json](../../../research/experiments/parabola-bounded-exchange-20261109/output/unknown-remove4-validation.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 新しい4点以下除去の保存入力とUNKNOWNの出典を検査。SAT/UNSATの証拠ではない
-## [research/experiments/parabola-bounded-exchange-20261109/search.py](../../../research/experiments/parabola-bounded-exchange-20261109/search.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 固定原点・完全対で選択点の除去数を制限するSAT探索。補助変数の予約上限を保持
-## [research/experiments/parabola-bounded-exchange-20261109/verify_unknown.py](../../../research/experiments/parabola-bounded-exchange-20261109/verify_unknown.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): UNKNOWNの初期記録・実入力byte再生成・変数予約・source hashとモデル等の不在を照合
-## [research/experiments/parabola-drat-trim-20261109/README.md](../../../research/experiments/parabola-drat-trim-20261109/README.md)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 指定upstream・局所修正・証拠の可用性とstream LRAT再生手順
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (source): 証拠形式・原版不具合・局所修正と監査での扱い
-## [research/experiments/parabola-drat-trim-20261109/input/false-empty.lrat](../../../research/experiments/parabola-drat-trim-20261109/input/false-empty.lrat)
-
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 節1のhintだけで空節を導いたとする1行の偽LRAT反駁
-## [research/experiments/parabola-drat-trim-20261109/input/sat-unit.cnf](../../../research/experiments/parabola-drat-trim-20261109/input/sat-unit.cnf)
-
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 単位節1だけの充足可能なCNF
-## [research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c](../../../research/experiments/parabola-drat-trim-20261109/lrat-check-empty-fixed.c)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 原版の偽空節受理をK0718で修正したhint検査器。空節には実際のRUP矛盾を要求
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (verifier): RUPが矛盾しなかった空節をRAT分岐へ渡さず拒否する局所修正版
-## [research/experiments/parabola-drat-trim-20261109/lrat_controls.py](../../../research/experiments/parabola-drat-trim-20261109/lrat_controls.py)
-
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (verifier): 原文と局所修正をソースからビルドし正例・hint破損・偽空節を比較
-## [research/experiments/parabola-drat-trim-20261109/output/lrat-controls.json](../../../research/experiments/parabola-drat-trim-20261109/output/lrat-controls.json)
-
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): 5制御例の原版・修正版の実測結果とsource/binary hash
-## [research/experiments/parabola-drat-trim-20261109/output/lrat-core-preserved-manifest.json](../../../research/experiments/parabola-drat-trim-20261109/output/lrat-core-preserved-manifest.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 採用した2711546166 bytesのLRAT証明のhashとローカルraw pin。証明本体はGit非収録
-## [research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json](../../../research/experiments/parabola-drat-trim-20261109/output/lrat-stream-replay-112/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 残る112の943588行LRATをK0718局所修正版で受理。241.9秒、終了コード0、source/binary/proof hash付き
-## [research/experiments/parabola-drat-trim-20261109/output/qualified-upper-1322-preserved.json](../../../research/experiments/parabola-drat-trim-20261109/output/qualified-upper-1322-preserved.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 修正後の全4入力をschema・原入力hash・3 RUP受理と1 LRAT受理へ結び付けた上界1322の集約
-## [research/experiments/parabola-drat-trim-20261109/qualify_upper.py](../../../research/experiments/parabola-drat-trim-20261109/qualify_upper.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 全4入力のhashとschema、検査器回帰・受理receiptを照合し、全件受理時だけ上界を返す
-## [research/experiments/parabola-drat-trim-20261109/replay_lrat_stream.py](../../../research/experiments/parabola-drat-trim-20261109/replay_lrat_stream.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 大証明をstreamでhash検査しpreflightを先に永続化して局所修正版LRATを実行するドライバ
-## [research/experiments/parabola-drat-trim-20261109/vendor/lrat-check.c](../../../research/experiments/parabola-drat-trim-20261109/vendor/lrat-check.c)
-
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (source): 指定commitの本文を保持するWindows CRLF checkout。LF正規化はGit blobとbyte一致
-## [research/experiments/parabola-drat-trim-20261109/vendor/provenance.json](../../../research/experiments/parabola-drat-trim-20261109/vendor/provenance.json)
-
-- [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) (data): upstream commit、Git blobとWindows checkout双方のhash、改行変換の照合、コンパイル指定
 ## [research/experiments/parabola-equality-extension-20261016/README.md](../../../research/experiments/parabola-equality-extension-20261016/README.md)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (source): 521..2000への有限拡張の完全報告
@@ -10211,36 +10079,6 @@
 ## [research/experiments/parabola-equality-refutation-20261109/verify_receipts.py](../../../research/experiments/parabola-equality-refutation-20261109/verify_receipts.py)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (verifier): コミット済み監査記録の範囲・重複・ソースhashを確認する。DRATの再検査ではない
-## [research/experiments/parabola-hplus1-drat-20261109/README.md](../../../research/experiments/parabola-hplus1-drat-20261109/README.md)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 保存された3入力・DRAT証明と再生方法、上界への論理と信頼境界
-## [research/experiments/parabola-hplus1-drat-20261109/input/geometry.json](../../../research/experiments/parabola-hplus1-drat-20261109/input/geometry.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全提供辺の健全性を検査したreceipt。辺集合の完全性は上界に不要
-## [research/experiments/parabola-hplus1-drat-20261109/input/verified_edges.txt.gz](../../../research/experiments/parabola-hplus1-drat-20261109/input/verified_edges.txt.gz)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 上界に使う53886禁止四点の部分集合。全件を独立整数行列式で検査
-## [research/experiments/parabola-hplus1-drat-20261109/output/replay-20261109/summary.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/replay-20261109/summary.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 後日の実DRAT再生も全3件VERIFIED。入力・証明・検査器sourceとbinaryのhash付き
-## [research/experiments/parabola-hplus1-drat-20261109/output/shape-a/audit.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/shape-a/audit.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 形状(1,0,0)の1324点不存在CNFのDRAT受理記録
-## [research/experiments/parabola-hplus1-drat-20261109/output/shape-b/audit.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/shape-b/audit.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 形状(0,1,0)の1324点不存在CNFのDRAT受理記録
-## [research/experiments/parabola-hplus1-drat-20261109/output/shape-c/audit.json](../../../research/experiments/parabola-hplus1-drat-20261109/output/shape-c/audit.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 形状(1,1,1)の1324点不存在CNFのDRAT受理記録
-## [research/experiments/parabola-hplus1-drat-20261109/regression.json](../../../research/experiments/parabola-hplus1-drat-20261109/regression.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 3形状の構造・小例・hash照合の実測結果。DRAT受理とは別の検査
-## [research/experiments/parabola-hplus1-drat-20261109/regression.py](../../../research/experiments/parabola-hplus1-drat-20261109/regression.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 5917配置の幾何照合、全提供辺検査、全入力再生成と明示的counter節の別実装照合
-## [research/experiments/parabola-hplus1-drat-20261109/verify_edges.cpp](../../../research/experiments/parabola-hplus1-drat-20261109/verify_edges.cpp)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 探索generatorを使わないgeneric整数4×4の禁止四点検査
 ## [research/experiments/parabola-local-repair-20261109/README.md](../../../research/experiments/parabola-local-repair-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 初回1292点構成、再現手順と信頼境界
@@ -10262,126 +10100,9 @@
 ## [research/experiments/parabola-local-repair-20261109/verify_subset.cpp](../../../research/experiments/parabola-local-repair-20261109/verify_subset.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 探索・CNF・edge cacheを読まない独立整数幾何検査器
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (verifier): CNFや探索辺を読み込まないgeneric 4x4 Leibniz整数行列式と完全合同式フィルタ
 ## [research/experiments/parabola-local-repair-20261109/walk_initial.cpp](../../../research/experiments/parabola-local-repair-20261109/walk_initial.cpp)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 実際の100万flip・seed20261109の局所探索ソース
-## [research/experiments/parabola-maximal-1300-20261109/README.md](../../../research/experiments/parabola-maximal-1300-20261109/README.md)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 保存1300点の包含極大性と、別の1301点集合を得る交換の再現手順・信頼境界
-- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (source): 固定点集合、証明形式、単点追加不能から包含極大への論理と再現手順
-## [research/experiments/parabola-maximal-1300-20261109/audit.py](../../../research/experiments/parabola-maximal-1300-20261109/audit.py)
-
-- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): 既存CNFは候補提案だけに用い、証明を明示四点へ変換してC++で再検査するドライバ
-## [research/experiments/parabola-maximal-1300-20261109/audit_saved_exchange.py](../../../research/experiments/parabola-maximal-1300-20261109/audit_saved_exchange.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): SAT・符号化generatorを使わず保存完全モデルの全節と点状態を再評価、3不正モデルを拒否
-## [research/experiments/parabola-maximal-1300-20261109/exchange.py](../../../research/experiments/parabola-maximal-1300-20261109/exchange.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 保存1300点に対して2点以下除去の交換候補を生成した固定ソース
-## [research/experiments/parabola-maximal-1300-20261109/exchange_seeded.py](../../../research/experiments/parabola-maximal-1300-20261109/exchange_seeded.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 証人入力を指定する交換探索版。1302点への局所的試行に使用
-## [research/experiments/parabola-maximal-1300-20261109/output/exchange-from1301/result.json](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-from1301/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1301点から36066除去候補を試し改善未発見。1302点の不存在は主張しない
-## [research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/candidate.txt)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1301点。保存1300点から1300と2262を除き385と610と1723を追加。今回の交換の種
-## [research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/geometry.json](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/geometry.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全118821013025四点を合同式で被覆し44971096候補の整数行列式を検査、禁止四点0件
-## [research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/result.json](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-remove-at-most-two/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 2点除去・3点追加の投影CNF候補を得た当時の記録。geometry未検査という原記録は保持
-## [research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/completion-model.json](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/completion-model.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 1301点要求の旧UNKNOWN入力について全122752節を満たす35121変数の完全モデル
-## [research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/saved-audit.json](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/saved-audit.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 保存完全モデルの独立評価と新しい入力指定交換版の証人byte一致を確認
-## [research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/validation.json](../../../research/experiments/parabola-maximal-1300-20261109/output/exchange-validation/validation.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 3966点選択変数を証人に固定してモデル補完し全節充足・点抽出・幾何receiptのhashを照合
-## [research/experiments/parabola-maximal-1300-20261109/output/initial/audit.json](../../../research/experiments/parabola-maximal-1300-20261109/output/initial/audit.json)
-
-- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (data): 全1347点被覆・四点の所属と整数行列式0を受理し、7不正制御を拒否したsource/binary/hash付き記録
-## [research/experiments/parabola-maximal-1300-20261109/output/initial/blockers.txt](../../../research/experiments/parabola-maximal-1300-20261109/output/initial/blockers.txt)
-
-- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 各未選択tに対し、tと既存3点からなる真の禁止四点を1個ずつ記す全1347行
-## [research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp](../../../research/experiments/parabola-maximal-1300-20261109/verify_blockers.cpp)
-
-- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の幾何と補集合の重複なし完全被覆だけを検査する独立wrapper
-- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFを読まず、明示四点の整数幾何と補集合の完全被覆を検査する既存C++wrapper
-## [research/experiments/parabola-maximal-1300-20261109/verify_exchange.py](../../../research/experiments/parabola-maximal-1300-20261109/verify_exchange.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 保存交換・幾何receipt・旧UNKNOWN入力への完全モデルの充足を照合
-## [research/experiments/parabola-maximal-1302-20261109/README.md](../../../research/experiments/parabola-maximal-1302-20261109/README.md)
-
-- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (source): 対象集合・証明形式・再現と包含極大性の論理
-## [research/experiments/parabola-maximal-1302-20261109/audit.py](../../../research/experiments/parabola-maximal-1302-20261109/audit.py)
-
-- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (verifier): CNFは候補提案のみに使い、全行を明示四点へ変換して別C++実装で検査
-## [research/experiments/parabola-maximal-1302-20261109/output/initial/audit.json](../../../research/experiments/parabola-maximal-1302-20261109/output/initial/audit.json)
-
-- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (data): 全補集合被覆・相異性・所属・整数行列式0を受理し7不正制御を拒否。sourceと証拠hash付き
-## [research/experiments/parabola-maximal-1302-20261109/output/initial/blockers.txt](../../../research/experiments/parabola-maximal-1302-20261109/output/initial/blockers.txt)
-
-- [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) (certificate): 未選択1345点すべてに、追加tと既存3点からなる明示的禁止四点を1個ずつ指定
-## [research/experiments/parabola-monotone-rup-20261109/README.md](../../../research/experiments/parabola-monotone-rup-20261109/README.md)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 閾値counterによる安全集合からCNFモデルへの拡張可能性とRUP-only検査の論理
-## [research/experiments/parabola-monotone-rup-20261109/encoding_audit.py](../../../research/experiments/parabola-monotone-rup-20261109/encoding_audit.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): CardEncを呼ばず修正後4入力の全節を独立schemaとprefix閾値counterへ比較し、全提供辺を再検査
-## [research/experiments/parabola-monotone-rup-20261109/output/encoding-audit-reservation.json](../../../research/experiments/parabola-monotone-rup-20261109/output/encoding-audit-reservation.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1323点の全4入力で全節schema一致。辺53886件の整数幾何も再検査成功。UNSAT検査とは別
-## [research/experiments/parabola-monotone-rup-20261109/output/regression.json](../../../research/experiments/parabola-monotone-rup-20261109/output/regression.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 上記RUP実装は毎回初期化するPython UPと516例で一致。K0707の4偽証明を拒否
-## [research/experiments/parabola-monotone-rup-20261109/rup_check.cpp](../../../research/experiments/parabola-monotone-rup-20261109/rup_check.cpp)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 000/011/101を受理した削除無視・RAT禁止の追加列RUP検査器
-## [research/experiments/parabola-neighborhood-lrat-20261109/README.md](../../../research/experiments/parabola-neighborhood-lrat-20261109/README.md)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 同じ保存証拠からの変換・独立検査の再現方法と有界近傍の範囲
-## [research/experiments/parabola-neighborhood-lrat-20261109/audit.py](../../../research/experiments/parabola-neighborhood-lrat-20261109/audit.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 元DRATを固定upstreamのDRAT-trim -Uで検査・LRAT化し、空節処理修正版の別実装で再生
-## [research/experiments/parabola-neighborhood-lrat-20261109/output/lrat-controls.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/lrat-controls.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): K0718の原版偽受理を再現し、今回使った修正版の5制御の期待判定を確認
-## [research/experiments/parabola-neighborhood-lrat-20261109/output/saved-verification.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/saved-verification.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 36457変数・126721節の実入力byte一致と全証拠hash、DRAT-trim6制御・修正LRAT5制御を照合
-## [research/experiments/parabola-neighborhood-lrat-20261109/output/target1303-remove3/result.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/target1303-remove3/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (manifest): 限定CNFの独立LRAT受理、43074行・80008871 bytesのhashとローカル所在。元DRATはGit管理済み
-## [research/experiments/parabola-neighborhood-lrat-20261109/output/trim-controls.json](../../../research/experiments/parabola-neighborhood-lrat-20261109/output/trim-controls.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): K0707の4偽証明・直接偽空節を拒否しresolution正例を受理
-## [research/experiments/parabola-neighborhood-lrat-20261109/verify_saved.py](../../../research/experiments/parabola-neighborhood-lrat-20261109/verify_saved.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 実入力のbyte再生成、補助変数領域、元DRAT・LRAT・ソース・制御例を照合
-## [research/experiments/parabola-p2207-1104-witness-20261110/README.md](../../../research/experiments/parabola-p2207-1104-witness-20261110/README.md)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (source): 固定点集合の出所・独立幾何検査・再現手順と最大値の信頼境界
-## [research/experiments/parabola-p2207-1104-witness-20261110/audit.py](../../../research/experiments/parabola-p2207-1104-witness-20261110/audit.py)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (verifier): 候補抽出・点集合と対構造の照合・generic整数幾何の独立実行・5制御例
-## [research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): SHA-256 ce97d4a9447fd32cd67e3cfad59151774fa45cf90c8985287abb1a45480e2347の1104パラメータ
-## [research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 安全三点の受理、二完全対の禁止四点・重複・入力打切り・合成数の拒否
-## [research/experiments/parabola-p2207-1104-witness-20261110/output/extraction.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/extraction.json)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (manifest): 元JSON・抽出入力・driver・幾何検査器のhashと完全対・空対の対応
-## [research/experiments/parabola-p2207-1104-witness-20261110/output/geometry.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/geometry.json)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 全61560516876四点の被覆と27941252整数行列式の非零を確認した実検査
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/README.md](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/README.md)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (source): 反例候補の方法・全数照合・信頼境界
@@ -10393,29 +10114,17 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): d=1..1103の判定表を生成し、タイムアウト分は衝突予算2000万で再判定する
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py)
+
+- [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (verifier): 交差ソルバ実行器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT）
 - [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (verifier): 削除時に代入を失効する修正版。一般健全性の証明ではない
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.cnf](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.cnf)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): サイズ1105（クラス(1,1,0)）の単一CNF。7,720変数・50,616節
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2207-1105/a2207_1105.drat.gz)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): 上記CNFのDRAT証明（解凍後497,179行、SHA-256 F0CE140D...D77A7EA）
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/a2531_1267.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/a2531_1267.drat.gz)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): 上記のDRAT証明（gzip、SHA-256はreceipt.json）
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): サイズ1267（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明190,979行を修正版検証器でVERIFIED（103.5秒）
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz)
-
-- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): 上記のDRAT証明（gzip、SHA-256はreceipt.json）
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/receipt.json)
-
-- [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): サイズ1627（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明229,866行を修正版検証器でVERIFIED（185.6秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 旧チェッカーの標本21 dの受理記録。K0707の偽受理発見により独立証拠への採用を保留
@@ -10445,238 +10154,72 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_c_2207.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_c_2207.json)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 保存されたshape cのSAT候補。safe_against_edgesの自己判定だけでは採用しない
-## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2207_1105.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2207_1105.json)
-
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 単一CNFの求解記録（UNSAT、19.9秒、検証875秒）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 旧4形状UNSAT記録。000/101はK0721の変数衝突があり、幾何上界の根拠への採用を保留
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1323の4形状クラスすべてUNSATの記録（上界1322の根拠）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-fresh.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-fresh.json)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (data): 履歴ゼロ 4 点の判定
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-reverse.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-reverse.json)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (data): 逆順 8 点の判定
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w14-cross-solver.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w14-cross-solver.json)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (data): d=1/100/300/478/851 のソルバ表（54 レコード）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w15-cardenc-verify.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w15-cardenc-verify.json)
+
+- [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md) (data): 473 ケース・1,588,640 割当・不一致 0・構造不変量 0（negative_control は未保存）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w17-tail-fresh.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w17-tail-fresh.json)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (data): 尾部 5 点 UNSAT・境界 3 点 UNKNOWN
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w18-tail-cross-solver.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w18-tail-cross-solver.json)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (data): d=1280/1300/1316/1317（47 レコード）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w19-1316-cross-rest.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w19-1316-cross-rest.json)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (data): d=1316 の残り 9 種
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w7-assump-2647-1322-full100k.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w7-assump-2647-1322-full100k.json)
+
+- [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md) (data): 1,323 レコード、67 UNSAT・1,256 UNKNOWN・0 SAT、予算 100k/d
+- [K0718](../items/K0718-candidate-b-assumption-partition.md) (data): 分割の適用記録 (1,323 d)
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (verifier): 逆順と fresh-each の再解器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py)
 
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (solver): 各counter後にそれまでの予約範囲とnvのmaxを保持する修正版
+- [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md) (solver): クラス (1,1,3) の CNF 構築 (build)
+- [K0718](../items/K0718-candidate-b-assumption-partition.md) (solver): #B = c の cardinality 制約と対ごと exactly-one の本体
+- [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md) (solver): 照合対象の build() 呼び出し形
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class_assump.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class_assump.py)
+
+- [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md) (solver): 1 インスタンス + assumption B_d の掃引器
+- [K0718](../items/K0718-candidate-b-assumption-partition.md) (solver): assumption 掃引の実装（SAT 側は復号点を全 928,389 辺と照合）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py)
+
+- [K0722](../items/K0722-easy-unsat-history-solver-independence.md) (verifier): 尾部 fresh-each と unit_conflict/統計の計測
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
 - [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) (verifier): p<=23で符号化と完全対構造の全数照合
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/README.md](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/README.md)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (source): 全1105点安全集合からCNFモデルを構成する論理、独立監査・再生と信頼境界
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/audit.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/audit.py)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 保存CNFの独立schemaと全提供幾何節、元DRATのRUP限定検査と空節処理修正版LRATを実検査
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/geometry.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/geometry.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 全31868提供辺をgeneric整数4x4行列式で禁止四点と確認。辺集合の完全性はUNSAT排除に不要
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/lrat.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/lrat.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 空節処理修正版LRATで187955行の抽出証明を実検査して受理
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/manifest.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/manifest.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (manifest): Git管理する採用CNF・LRAT gzipと保持した元DRATの所在、raw・gzip hashと検査器source hash
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (manifest): 独立schemaと幾何を照合した上界CNF・採用LRAT gzipの所在とhash、二実装の検査記録
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/regression.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/regression.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 1104状態の存在射影と6改変拒否、schemaだけでは通る非辺を幾何検査で拒否
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/replay.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/replay.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 採用圧縮証明の別処理での実再生、全bindingの照合と独立上界1104
-- [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 圧縮CNF・LRATの別処理実再生と、既存の1104点下界receipt・入力hashの結び付け
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/rup.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/rup.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 元497179行DRATを固定DRAT-trim -Uで受理し、RUPだけのcoreを抽出
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/output/schema.json](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/output/schema.json)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (manifest): 7720変数・50616節を18748構造節と31868幾何節へ全分離し、予約ID範囲と元証拠hashを保存
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/regression.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/regression.py)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 小素数で状態とcounter補助変数を全列挙し、schema改変6件と独立幾何の正負制御を検査
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/replay.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/replay.py)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 配布するCNF・LRAT gzipを別処理で実再生し、source・schema・幾何・証拠hashと既存下界を照合
-## [research/experiments/parabola-p2207-single-cnf-audit-20261110/schema.py](../../../research/experiments/parabola-p2207-single-cnf-audit-20261110/schema.py)
-
-- [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): CardEncと探索builderを使わずone-hot・明示Sinz counter・NONE単位節・点定義を再構成し、残余幾何節を分離
-## [research/experiments/parabola-p2531-lrat-20261109/README.md](../../../research/experiments/parabola-p2531-lrat-20261109/README.md)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): 入力・証拠・各検査の再現、異なる検査方法の被覆和と全数未完了の区別
-## [research/experiments/parabola-p2531-lrat-20261109/audit.py](../../../research/experiments/parabola-p2531-lrat-20261109/audit.py)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 未被覆d=82..85の新しいDRAT生成、全提供辺の整数幾何、独立投影schema、DRAT-trimと修正LRAT検査
-## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/coverage.json](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/coverage.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 修正版DRAT143 dと新LRAT4 dは重複なし、独立被覆和147/1265、残り1118 d
-## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d82/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d82/core.lrat.gz)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=82の修正LRAT検査器で受理した反駁。原DRAT・CNFとreceiptは同じexperimentへ保存
-## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d83/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d83/core.lrat.gz)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=83の修正LRAT検査器で受理した反駁
-## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d84/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d84/core.lrat.gz)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=84の修正LRAT検査器で受理した反駁
-## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d85/core.lrat.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/d85/core.lrat.gz)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): d=85の修正LRAT検査器で受理した反駁
-## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/edges.txt.gz](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/edges.txt.gz)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): ヘッダ2531 837640と全提供禁止四点。UNSATに完全性は不要で全辺の健全性を実検査
-## [research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/geometry.json](../../../research/experiments/parabola-p2531-lrat-20261109/output/batch82-85-v2/geometry.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 837640辺をgeneric整数4×4行列式で受理。wrapper・generic sourceとinput hash付き
-## [research/experiments/parabola-p2531-lrat-20261109/output/saved-verification.json](../../../research/experiments/parabola-p2531-lrat-20261109/output/saved-verification.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 全4入力を各1265変数・38160節の独立投影schemaへ照合し、保存LRAT・原DRAT・被覆を検査
-## [research/experiments/parabola-p2531-lrat-20261109/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-20261109/verify_saved.py)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): SATソルバや元generatorを使わず、保存辺の独立投影・入力と証拠hash・旧143件との被覆和を照合
-## [research/experiments/parabola-p2531-lrat-20261110/README.md](../../../research/experiments/parabola-p2531-lrat-20261110/README.md)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): 有用辺への入力縮約、証拠の保存範囲、独立再生と被覆履歴の再現手順
-## [research/experiments/parabola-p2531-lrat-20261110/audit.py](../../../research/experiments/parabola-p2531-lrat-20261110/audit.py)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 既存147 dとの重複を避けてd=86..100を生成し、整数幾何・投影schema・DRAT-trim・修正LRATで検査
-## [research/experiments/parabola-p2531-lrat-20261110/input/edges.txt](../../../research/experiments/parabola-p2531-lrat-20261110/input/edges.txt)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 二完全対の自明な799480辺を除いた38160辺。全提供辺の整数幾何を再検査
-## [research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/coverage.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/coverage.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 前段147 dと新15 dは重複なし、独立被覆和162/1265、残り1103。前段manifestのhash付き
-## [research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/geometry.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/batch86-100/geometry.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 38160辺をgeneric整数4×4で受理。完全性ではなく健全性をUNSATの根拠に使う
-## [research/experiments/parabola-p2531-lrat-20261110/output/certificate-manifest.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/certificate-manifest.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 新15件のGit管理CNF・採用LRAT gzipのpathとhash。原DRAT gzipはローカル保持しhashを記録
-## [research/experiments/parabola-p2531-lrat-20261110/output/saved-verification.json](../../../research/experiments/parabola-p2531-lrat-20261110/output/saved-verification.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 全15圧縮証明を修正LRATで再生し、独立投影schema・原DRAT15 hash・162 dの被覆和も照合
-## [research/experiments/parabola-p2531-lrat-20261110/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-20261110/verify_saved.py)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 省略辺の構造、前段4入力のbyte一致、新15入力の独立投影、圧縮CNFとLRATの実再生、被覆履歴を照合
-## [research/experiments/parabola-p2531-lrat-batches-20261110/README.md](../../../research/experiments/parabola-p2531-lrat-batches-20261110/README.md)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): case分離、計画と集計、保存証拠の独立再生と被覆の範囲
-## [research/experiments/parabola-p2531-lrat-batches-20261110/audit.py](../../../research/experiments/parabola-p2531-lrat-batches-20261110/audit.py)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 前段被覆を引き継ぎ、既被覆・重複dを拒否してcase分離した並列LRAT監査と再開可能な集計を行う
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch102-140/coverage.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch102-140/coverage.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 前段162 dと新38 dは重複なし、被覆和200/1265、残り1065。未完了・失敗・UNKNOWNはなし
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch102-140/plan.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch102-140/plan.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 既被覆d=121を除いた38件の新規計画。前段162 d・source hash・4 process設定を保存
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/README.md](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/README.md)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): d=142..160,162..180の独立監査と保存証拠再生の固定再現手順
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/coverage.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/coverage.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 前段200 dと新38 dに重複なし、被覆和238/1265、残り1027。未完了・失敗・UNKNOWNはなし
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/plan.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch142-180/plan.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 既被覆d=141,161を除く38件の計画。前段200 dとsource hashを固定
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/README.md](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/README.md)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): d=182..300の未監査113件の選択と独立監査・保存証拠再生の固定再現手順
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/coverage.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/coverage.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 前段238 dと新113 dに重複なし、被覆和351/1265、残り914。未完了・失敗・UNKNOWNはなし
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/plan.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch182-300/plan.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): d=182..300から既被覆6件を集合差で除く113件の計画。前段238 dとsource hashを固定
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch302-500/README.md](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch302-500/README.md)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (source): d=302..500の未監査188件の選択と独立監査・保存証拠再生の固定再現手順
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch302-500/coverage.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch302-500/coverage.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 前段351 dと新188 dに重複なし、被覆和539/1265、残り726。未完了・失敗・UNKNOWNはなし
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/batch302-500/plan.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/batch302-500/plan.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): d=302..500から既被覆11件を集合差で除く188件の計画。前段351 dとsource hashを固定
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates102-140.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates102-140.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 採用CNFとLRAT gzip38件のpath・hash、ローカル保持した原DRATのpathとhash
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates142-180.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates142-180.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 新38件の採用CNF・LRAT gzipのpathとhash、ローカル保持する原DRATのpathとhash
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates182-300.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates182-300.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 新113件の採用CNF・LRAT gzipのpathとhash、ローカル保持する原DRATのpathとhash
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates302-500.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/certificates302-500.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (manifest): 新188件の採用CNF・LRAT gzipのpathとhash、ローカル保持する原DRATのpathとhash
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/controller-regression.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/controller-regression.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 重複・既監査dなどの拒否と、未確定や失敗を被覆へ加えない合成制御の成功
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/integrated-1303-geometry-lf.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/integrated-1303-geometry-lf.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 統合時に既存generic整数4×4検査器で1303点を実再生。45241569候補、禁止四点0件
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/integrated-1303-model-lf.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/integrated-1303-model-lf.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 32569変数の完全モデル全節充足、1303点一致と1302点集合との差分を確認
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/verification102-140.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/verification102-140.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 新38件の独立投影schemaと圧縮証明実再生、原DRAT hash、前段履歴のhash連鎖を照合
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/verification142-180.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/verification142-180.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 新38件の独立投影schema、保存圧縮証明の実再生、原DRAT hashと前段台帳のhash連鎖を照合
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/verification182-300.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/verification182-300.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 新113入力の独立投影schema、保存圧縮証明の実再生、原DRAT hashと前段台帳のhash連鎖を照合
-## [research/experiments/parabola-p2531-lrat-batches-20261110/output/verification302-500.json](../../../research/experiments/parabola-p2531-lrat-batches-20261110/output/verification302-500.json)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (data): 新188入力の独立投影schema、保存圧縮証明の実再生、原DRAT hashと前段台帳のhash連鎖を照合
-## [research/experiments/parabola-p2531-lrat-batches-20261110/regression.py](../../../research/experiments/parabola-p2531-lrat-batches-20261110/regression.py)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 7不正planと、UNKNOWN・失敗・未完了・既存coverage上書きの制御を再現
-## [research/experiments/parabola-p2531-lrat-batches-20261110/verify_integrated_witness.py](../../../research/experiments/parabola-p2531-lrat-batches-20261110/verify_integrated_witness.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 統合した保存モデル全117652節と点抽出、独立幾何receiptを照合
-## [research/experiments/parabola-p2531-lrat-batches-20261110/verify_saved.py](../../../research/experiments/parabola-p2531-lrat-batches-20261110/verify_saved.py)
-
-- [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (verifier): 前段manifestのhash連鎖、新入力の独立投影schema、圧縮証明の実再生を照合
-## [research/experiments/parabola-size1323-drat-20261109/README.md](../../../research/experiments/parabola-size1323-drat-20261109/README.md)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (source): 反例、修正、旧証拠への制限、保存証明と監査再開の手順
-## [research/experiments/parabola-size1323-drat-20261109/counterexample.json](../../../research/experiments/parabola-size1323-drat-20261109/counterexample.json)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 重複ID、旧CNFのDRAT受理、修正版モデルと2点のパラメータ、各hash
-## [research/experiments/parabola-size1323-drat-20261109/encoding_fixed.py](../../../research/experiments/parabola-size1323-drat-20261109/encoding_fixed.py)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正後共有builderとbyte一致する凍結スナップショット
-## [research/experiments/parabola-size1323-drat-20261109/encoding_snapshot.py](../../../research/experiments/parabola-size1323-drat-20261109/encoding_snapshot.py)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (source): 修正前search_shape_class.pyの凍結コード
-## [research/experiments/parabola-size1323-drat-20261109/input/fixed-p5-000.cnf](../../../research/experiments/parabola-size1323-drat-20261109/input/fixed-p5-000.cnf)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 変数範囲を保持した修正版のSAT入力
-## [research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.cnf](../../../research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.cnf)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 禁止辺なしのp=5・2点形状なのにUNSATとなる30節の旧CNF
-## [research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.drat](../../../research/experiments/parabola-size1323-drat-20261109/input/legacy-p5-000.drat)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (certificate): 旧CNF自体のUNSAT証明。幾何形状の不存在を証明するものではない
-## [research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json](../../../research/experiments/parabola-size1323-drat-20261109/output/qualification-final.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当時の3形状DRAT受理と112未完了のsnapshot。現在は後述のRUP/LRAT監査を採用
-## [research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json](../../../research/experiments/parabola-size1323-drat-20261109/output/shape-112/proof-manifest.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当初保存した2127240行の原DRAT証明のhash。ローカル保持・Git非収録。受理根拠は別のLRAT receipt
-## [research/experiments/parabola-size1323-drat-20261109/regression.json](../../../research/experiments/parabola-size1323-drat-20261109/regression.json)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (data): 小例の全照合、000/101の入力差分と011/112のbyte一致
-## [research/experiments/parabola-size1323-drat-20261109/regression.py](../../../research/experiments/parabola-size1323-drat-20261109/regression.py)
-
-- [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (verifier): 反例の再現、修正版11896配置の整数幾何照合とp=2647の旧新CNF比較
 ## [research/experiments/parabola-ternary-selection-20261109/README.md](../../../research/experiments/parabola-ternary-selection-20261109/README.md)
 
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (source): 実装、再現入力・出力、1296点構成と1300点UNKNOWNの範囲
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/init.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/init.json)
+
+- [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md) (data): base 53,886 節一致の記録
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/result.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/result.json)
+
+- [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md) (data): 統計完全一致・UNKNOWN
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1293-budget100000/result.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1293-budget100000/result.json)
+
+- [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md) (data): UNKNOWN 90.207 s / 142,992 節
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1322-budget100000/result.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1322-budget100000/result.json)
+
+- [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md) (data): SOLVER_UNSAT 1.811 s / 1,808 conflicts
 ## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1296点証人。今回の探索のphase起点
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 先行する1296点証人。新たなSAT探索のphaseとしても使用
 ## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/geometry.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): generic 4×4整数行列式で44277012候補を検査、禁止四点0件。入力・ソースhash付き
@@ -10691,7 +10234,7 @@
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1293点以上を要求したSAT試行が1296点を返した記録。幾何検査は別artifact
 ## [research/experiments/parabola-ternary-selection-20261109/regression.json](../../../research/experiments/parabola-ternary-selection-20261109/regression.json)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 小規模完全照合、既存1292点の適合性、現在の1296点モデルの全節充足確認
+- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 小規模完全照合、既存1292点の適合性、先行1296点モデルの全節充足確認
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (data): p=5,7,11,13,17の19392三値割当、無効one-hotと任意の二値簡約への反例
 ## [research/experiments/parabola-ternary-selection-20261109/regression.py](../../../research/experiments/parabola-ternary-selection-20261109/regression.py)
 
@@ -10701,47 +10244,10 @@
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 直接投影節を点選択制約へ変換し、空対数を制限する探索器
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (solver): 直接投影節の点選択への変換と空対数のcardinality制約
-## [research/experiments/parabola-warm-improvement-20261109/README.md](../../../research/experiments/parabola-warm-improvement-20261109/README.md)
+## [research/experiments/parabola-ternary-selection-20261109/ternary_general.py](../../../research/experiments/parabola-ternary-selection-20261109/ternary_general.py)
 
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 1298点・1300点証人とUNKNOWNの範囲、凍結符号化・予算・再現手順
-## [research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt](../../../research/experiments/parabola-warm-improvement-20261109/output/target1297-warm1296-budget100000/candidate.txt)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1298点証人。今回の探索のphase起点
-## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget100000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget100000/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当時の10万衝突予算ではUNKNOWNだった記録。現在は同じ入力の50万予算でSAT、旧記録は保持
-## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/candidate.txt](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/candidate.txt)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1300点のソート済みパラメータ。今回の2点除去・3点追加の起点
-- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (certificate): 本項で固定する1300点集合。input SHA-256 4ef5b03e...、原点と完全対1323を含む
-## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/geometry.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/geometry.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 全118455690925四点を合同式で被覆し44831921候補の整数4×4行列式を検査、禁止四点0件
-- [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) (data): この集合自体の安全性を独立整数幾何検査した受理記録
-## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/input.cnf.gz](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/input.cnf.gz)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 原点と完全対d=1323を固定し1299点以上を要求した実入力。以前UNKNOWNだった入力とbyte一致
-## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/model.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/model.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 127836節を全て満たす37665変数の完全モデル。選択結果1300点、空対25
-## [research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1299-warm1298-budget500000/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1298点をphaseに使い50万衝突予算で83.52秒・190902衝突で1300点を返したSAT記録
-## [research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/input.cnf.gz](../../../research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/input.cnf.gz)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当時UNKNOWNだった1301点要求の35121変数・122752節。今回のモデル補完は同じ入力を使用
-## [research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/result.json](../../../research/experiments/parabola-warm-improvement-20261109/output/target1301-warm1300-budget500000/result.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 当時の1301点以上の探索は50万衝突予算・269.43秒でもUNKNOWN。現在は別の交換で存在を確認、旧記録は保持
-## [research/experiments/parabola-warm-improvement-20261109/output/verification-1301-budget500000.json](../../../research/experiments/parabola-warm-improvement-20261109/output/verification-1301-budget500000.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 5保存試行を照合し、1300点証人の独立幾何と1301点の二予算UNKNOWNを確認
-## [research/experiments/parabola-warm-improvement-20261109/output/verification.json](../../../research/experiments/parabola-warm-improvement-20261109/output/verification.json)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 1298点SATと1299点UNKNOWNの保存証拠・warm source・凍結符号化の照合結果
-## [research/experiments/parabola-warm-improvement-20261109/verify_saved.py](../../../research/experiments/parabola-warm-improvement-20261109/verify_saved.py)
-
-- [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (verifier): 保存した全実入力の再生成・hash、完全モデルの全節充足と点抽出、独立幾何receiptを検査
+- [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (solver): d を引数化した同符号化の生成器（保存 CNF は d=1323 専用なので必ず再生成する）
+- [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md) (solver): d を引数化した三値符号化の生成器
 ## [research/experiments/path-recurrence-periodic-forcing-20261108/README.md](../../../research/experiments/path-recurrence-periodic-forcing-20261108/README.md)
 
 - [K0698](../items/K0698-path-recurrence-periodic-forcing-absorption.md) (source): 再帰の導出・方法・2 roundの結果・候補補題と限界
@@ -12045,6 +11551,20 @@
 ## [research/log/2026-11-09-p2647-near-miss-and-size-1323.md](../../../research/log/2026-11-09-p2647-near-miss-and-size-1323.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 形状クラス判定の方法と結果
+## [research/log/2026-11-10-a2647-113-candidate-b-proof-omp.md](../../../research/log/2026-11-10-a2647-113-candidate-b-proof-omp.md)
+
+- [K0718](../items/K0718-candidate-b-assumption-partition.md) (proof): 第1部の分割・健全性・完全性の証明と §1.7 の前提一覧。証明の記述であり Lean 形式化ではない
+- [K0724](../items/K0724-assumption-unsat-drat-gap.md) (log): 第2部の証明書計画（候補A、d 固定 CNF + DRAT）
+## [research/log/2026-11-10-a2647-113-full-sweep-100k-result.md](../../../research/log/2026-11-10-a2647-113-full-sweep-100k-result.md)
+
+- [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md) (log): 完走時刻・区間構造・留保
+## [research/log/2026-11-10-a2647-113-hardcore-attack-plan-omp.md](../../../research/log/2026-11-10-a2647-113-hardcore-attack-plan-omp.md)
+
+- [K0724](../items/K0724-assumption-unsat-drat-gap.md) (log): 候補A 予算ラダーの計画
+## [research/log/2026-11-10-k0334-identity-verification-omp.md](../../../research/log/2026-11-10-k0334-identity-verification-omp.md)
+
+- [K0719](../items/K0719-parabola-four-point-determinant-factorization.md) (log): 定理B・系C/D/E/F と p=2647 の会計
+- [K0720](../items/K0720-forbidden-edge-generator-completeness.md) (log): 4.3 の 1-4 と p=2647 実走の会計
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

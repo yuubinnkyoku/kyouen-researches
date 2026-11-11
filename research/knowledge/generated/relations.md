@@ -68,9 +68,6 @@
 - ← depends_on [K0660](../items/K0660-n11-central49-six-terminal-win7-37-win6-parents-refute-2096.md): 完全指摘・通常プレイと整数行列式による合法手
 - ← depends_on [K0663](../items/K0663-n11-terminal-loss7-parent-lift-274-classes.md): 完全指摘・通常プレイと合法な一点追加
 - ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 共線・共円四点を含まない安全集合
-- ← depends_on [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md): 共線または共円の四点を含まない標準q=4の安全性
-- ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 共線または共円四点を含まない標準q=4の安全性
-- ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 共線または共円四点を含まない標準q=4の安全性
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -425,8 +422,6 @@
 - ← depends_on [K0487](../items/K0487-n12-twelve-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
 - ← depends_on [K0488](../items/K0488-n13-thirteen-stone-maximal-safe-set-verified.md): 極大安全集合の定義（包含極大）
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 最大安全石数の定義
-- ← depends_on [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
-- ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 包含極大と最大サイズを区別する
 
 ## [K0027](../items/K0027-two-n-minus-one-conjecture-refuted.md) 全正方形盤でK_n=2n−1という仮説は反証済み
 
@@ -786,8 +781,6 @@
 - ← depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - ← depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
-- ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
-- ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -806,7 +799,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号の存在とある完全対dのCNFのSATが同値
 - → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
-- ← supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): p=2207の単一CNF独立監査による等号不達成が、全奇素数での等号への反例を与える
+- ← supports [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 全奇素数での等号を否定する反例候補。監査により確定する
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 全奇素数での等号を否定する2番目の反例候補
 - ← refutes [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 全奇素数での等号を否定する4番目の反例候補
@@ -1747,7 +1740,7 @@
 - ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
 - ← depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 禁止四点から固定完全対dへの直接投影節の定義
 - ← generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
-- ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
+- ← supports [K0719](../items/K0719-parabola-four-point-determinant-factorization.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3766,14 +3759,13 @@
 - ← depends_on [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md): 共通pivot付き二点辺の通常値閉形式で一手前g1を確定
 - ← depends_on [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md): 同じ純三点共通pivot族の通常値上界とリンク子値による初期g1
 
-## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立監査済み）
+## [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
-- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): p=2207の単一CNF独立監査による等号不達成が、全奇素数での等号への反例を与える
+- → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する反例候補。監査により確定する
 - ← supports [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないことを示す2例目
 - ← supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 等号不達成がp=2207に限らないこと
-- ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 全1105点集合を覆う単一CNFの独立schema・幾何・RUP/LRAT監査による上界1104
 
 ## [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる
 
@@ -3831,7 +3823,7 @@
 - → depends_on [K0041](../items/K0041-grundy-ceiling-and-saturation.md): 通常Grundyは最大追加手数以下であり、基本対はその両端を達成
 - → depends_on [K0108](../items/K0108-residual-hypergraph-versus-pair-graph.md): 占有・不合法点を除いた残余グラフとのゲーム同型
 
-## [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・単一DRAT証明つき）
+## [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
@@ -3869,13 +3861,14 @@
 - → refutes [K0101](../items/K0101-prime-parabola-equality-open.md): 修正版で全dのUNSAT証明を検査した反例により、全奇素数での等号を否定する
 - ← depends_on [K0101](../items/K0101-prime-parabola-equality-open.md): p=2647の全1323 dのUNSAT証明が修正版検証器で検査済み
 - ← supports [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 2647に続く4例目
-- ← supports [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
+- ← depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 全1323 dの修正版DRAT監査による上界A(2647)<=1324
+- ← depends_on [K0724](../items/K0724-assumption-unsat-drat-gap.md): DRAT 監査の実施例
 
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する
 
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
-## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目・単一DRAT証明つき）
+## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と等号集合の完全対構造
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 等号 ⟺ あるdについてsigned NAE3/4と原点節のCNFが充足可能（全奇素数で証明済み）
@@ -3883,18 +3876,20 @@
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 全奇素数での等号を否定する4番目の反例候補
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): DRAT検証器の削除時代入失効の修正。本項の修正版監査は一部dのみ
 
-## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1303以上1322以下
+## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の最大安全サイズは1303以上1322以下
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合
-- → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 従来の全d監査による1324より強い、4形状RUP/LRAT監査の上界1322
-- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合は完全対を高々一つしか含まず、h点を4形状に分類できる
+- → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 全1323 dの修正版DRAT監査による上界A(2647)<=1324
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式が0なら四パラメータ和が0 mod pとなる必要条件
-- ← depends_on [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md): 指定1302点集合自体の安全性を確認した独立整数幾何receipt
 
 ## [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる
 
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 禁止四点から固定完全対dへの直接投影節の定義
 - → generalizes [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
+- ← depends_on [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md): 固定原点・一完全対の還元の上でのクラス符号化
+- ← depends_on [K0718](../items/K0718-candidate-b-assumption-partition.md): 固定原点・一完全対の還元
+- ← verifies [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md): 三値還元の一般 d 実装の検証
+- ← generalizes [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md): d=1323 固定の保存CNFから任意 d の再生成へ
 
 ## [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完
 
@@ -3910,30 +3905,65 @@
 
 - → depends_on [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md): 重み2層の共面四点禁止と完全グラフ上のC4禁止の同値
 - ← depends_on [K0716](../items/K0716-weight-two-d9-saturation-minimum.md): 重み2層のC4対応、9次元の10石下界と11石構成
-- ← depends_on [K0717](../items/K0717-weight-two-d10-saturation-minimum.md): 重み2層のC4対応、10次元の11石下界と12石構成
 
 ## [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) 二値立方体重み2層の9次元最小極大配置は11石
 
 - → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): 重み2層のC4対応、9次元の10石下界と11石構成
 
-## [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) 二値立方体重み2層の10次元最小極大配置は12石
+## [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md) p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した
 
-- → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): 重み2層のC4対応、10次元の11石下界と12石構成
+- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の還元の上でのクラス符号化
+- → supports [K0718](../items/K0718-candidate-b-assumption-partition.md): 候補B分割の適用記録
+- → supports [K0722](../items/K0722-easy-unsat-history-solver-independence.md): 独立性検証の対象データ
+- ← depends_on [K0722](../items/K0722-easy-unsat-history-solver-independence.md): 掃引記録
+- ← supports [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md): 候補A/三値系の一般化が次の測定の前提になる
 
-## [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合
+## [K0718](../items/K0718-candidate-b-assumption-partition.md) 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値
 
-- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円の四点を含まない標準q=4の安全性
-- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 包含極大と最大サイズを区別する
+- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の還元
+- → depends_on [K0720](../items/K0720-forbidden-edge-generator-completeness.md): 辺リスト完全性（前提(1)）
+- → depends_on [K0719](../items/K0719-parabola-four-point-determinant-factorization.md): 捨て規則 (ii) の和条件（前提(2)）
+- → depends_on [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md): 基数符号化の範囲限定検証（前提(3)）
+- ← supports [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md): 候補B分割の適用記録
+- ← supports [K0719](../items/K0719-parabola-four-point-determinant-factorization.md): 捨て規則の和条件
+- ← supports [K0720](../items/K0720-forbidden-edge-generator-completeness.md): 前提(1)（辺リスト完全性）
+- ← supports [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md): 前提(3) の範囲限定格上げ
+- ← verifies [K0722](../items/K0722-easy-unsat-history-solver-independence.md): 候補B 分割の適用に対する独立性検証
+- ← depends_on [K0724](../items/K0724-assumption-unsat-drat-gap.md): 前提(4) の所在
 
-## [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合
+## [K0719](../items/K0719-parabola-four-point-determinant-factorization.md) 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値
 
-- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
-- → depends_on [K0026](../items/K0026-maximum-versus-minimum-maximal.md): 包含極大と最大サイズを区別する
-- → depends_on [K0711](../items/K0711-p2647-safe-lower-bound-1292.md): 指定1302点集合自体の安全性を確認した独立整数幾何receipt
+- → supports [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
+- → supports [K0718](../items/K0718-candidate-b-assumption-partition.md): 捨て規則の和条件
+- ← depends_on [K0718](../items/K0718-candidate-b-assumption-partition.md): 捨て規則 (ii) の和条件（前提(2)）
+- ← depends_on [K0720](../items/K0720-forbidden-edge-generator-completeness.md): 系C1 の必要方向と第四点の一意性
 
-## [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) 剰余放物線Q_2207の最大安全サイズは1104（単一CNFの独立schema・RUP/LRAT監査済み）
+## [K0720](../items/K0720-forbidden-edge-generator-completeness.md) 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない
 
-- → depends_on [K0693](../items/K0693-p2207-no-parabola-equality-witness.md): 全1105点集合を覆う単一CNFの独立schema・幾何・RUP/LRAT監査による上界1104
-- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
-- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 一般上界A(p)<=(p+3)/2からA(2207)<=1105
-- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
+- → depends_on [K0719](../items/K0719-parabola-four-point-determinant-factorization.md): 系C1 の必要方向と第四点の一意性
+- → supports [K0718](../items/K0718-candidate-b-assumption-partition.md): 前提(1)（辺リスト完全性）
+- ← depends_on [K0718](../items/K0718-candidate-b-assumption-partition.md): 辺リスト完全性（前提(1)）
+
+## [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
+
+- → supports [K0718](../items/K0718-candidate-b-assumption-partition.md): 前提(3) の範囲限定格上げ
+- ← depends_on [K0718](../items/K0718-candidate-b-assumption-partition.md): 基数符号化の範囲限定検証（前提(3)）
+- ← depends_on [K0722](../items/K0722-easy-unsat-history-solver-independence.md): 同一符号化の基数制約
+
+## [K0722](../items/K0722-easy-unsat-history-solver-independence.md) 候補B の易 UNSAT は学習節の履歴に依存せず、ソルバ横断でも d に応じた範囲で再現する
+
+- → verifies [K0718](../items/K0718-candidate-b-assumption-partition.md): 候補B 分割の適用に対する独立性検証
+- → depends_on [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md): 掃引記録
+- → depends_on [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md): 同一符号化の基数制約
+- ← supports [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md): 独立性検証の対象データ
+
+## [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md) ternary 符号化の d 一般化実装は d=1323 で現行と同一の CNF・同一探索を再現し、任意 d で節生成が健全
+
+- → verifies [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 三値還元の一般 d 実装の検証
+- → generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): d=1323 固定の保存CNFから任意 d の再生成へ
+- → supports [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md): 候補A/三値系の一般化が次の測定の前提になる
+
+## [K0724](../items/K0724-assumption-unsat-drat-gap.md) 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
+
+- → depends_on [K0718](../items/K0718-candidate-b-assumption-partition.md): 前提(4) の所在
+- → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): DRAT 監査の実施例

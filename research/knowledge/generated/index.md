@@ -676,7 +676,7 @@
 | [K0690](../items/K0690-legal-mobility-universal-grundy-gap-two.md) | 任意rankの禁止集合ゲームは合法点が五個以上なら通常値とmisère補助値がともに合法点数より二以上小さい | proposition | proved | grundy, residual-games, search-methods, variants |
 | [K0691](../items/K0691-pure-triple-minimum-six-edges-for-grundy-six-seven.md) | 純三点のGrundy6と7は最少点数八と九・最少辺数六で、辺数最小核は全十型 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0692](../items/K0692-common-pivot-rank-three-sharp-grundy-bound.md) | 全残余辺が一点を共有するrank三以下のゲームは辺数無制限でもGrundy3以下 | proposition | proved | grundy, residual-games, geometry, variants |
-| [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) | p=2207では剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) | p=2207では剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（計算結果・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0694](../items/K0694-common-pivot-misere-binary-restriction-transform.md) | 二点辺付き共通pivotのmisère補助値は0/1制限ゲームのGrundy値と外側点数の偶奇で決まる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0695](../items/K0695-petersen-join-common-pivot-both-play-losses.md) | Petersen完全joinの共通pivot純三点族は全サイズで通常・misèreとも後手勝ちとなる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0696](../items/K0696-common-pivot-rank-three-misere-unboundedness-conjecture.md) | 二点辺一本のrank三共通pivot族で通常値0に固定して全misère補助値3以上を実現でき、補助値は無界 | proposition | proved | grundy, residual-games, variants, geometry |
@@ -685,24 +685,26 @@
 | [K0699](../items/K0699-pure-triple-point-edge-pareto-fronts-two-through-nine.md) | 純三点ゲームの通常値とmisère補助値2〜9の点数・辺数Pareto前線が確定し、8と9の最少合法点数は十と十一 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0700](../items/K0700-common-legal-pivot-unbounded-one-move-grundy-increase.md) | 共通合法点を持つ有限整数盤で通常値1から一手で2の任意冪へ増加し、値0からの増加も非有界 | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) | 同一整数盤で石数・合法点数・最大追加手数が同じでもGrundy差は非有界で、終局長可能集合も一致させられる | proposition | proved | grundy, residual-games, geometry, variants |
-| [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) | p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・単一DRAT証明つき） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) | p=2531でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（2例目・監査待ち） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0703](../items/K0703-pure-triple-common-pivot-unbounded-misere-spectrum.md) | 純三点共通pivot族は通常値0または1を固定して全misère補助値4以上を実現できる | proposition | proved | grundy, residual-games, geometry, variants |
 | [K0704](../items/K0704-misere-one-free-point-xor-and-restriction-commutation.md) | 任意有限不偏ゲームの終局1補助mexは一自由点でxor1となり、低h制限ゲームとも直和が可換 | proposition | proved | grundy, residual-games, variants |
 | [K0705](../items/K0705-n11-p4-census.md) | 94五石子の四石親族338を全数調査：284先手確定・54脅威残（残る壁の正確な位置） | computation | computed | square-outcomes, certificates, verification |
 | [K0706](../items/K0706-p2647-no-parabola-equality-witness.md) | p=2647では剰余放物線の等号A(p)=(p+3)/2を達成できない（全d監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) | 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する | proposition | computed | verification, certificates, provenance |
-| [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) | p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目・単一DRAT証明つき） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) | p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成する証人が存在しない（4例目） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0709](../items/K0709-one-line-rup-unbounded-clause-deletion-distance.md) | 一行RUP証明を持つCNFでもSAT化に必要な節削除数は任意に大きい | proposition | proved | search-methods, verification, provenance |
 | [K0710](../items/K0710-nae4-constant-rup-unbounded-deletion-distance.md) | 連結・有界次数のsigned NAE4でも15行RUP証明のまま最少削除距離は無界になる | proposition | proved | search-methods, verification, provenance |
-| [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の独立監査済み範囲は1303以上1322以下 | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) | 剰余放物線Q_2647の最大安全サイズは1303以上1322以下 | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) | 原点と一完全対を固定した安全集合は低側・高側・空対のSATへ厳密還元できる | proposition | proved | geometry, maximum-safe, search-methods |
 | [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) | 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完 | proposition | proved | variants, geometry, rectangles |
 | [K0714](../items/K0714-four-cube-coplanar-four-strong-solution.md) | 四次元二値立方体・共面四点禁止版は通常とmisèreの全局面を分類 | computation | computed | variants, geometry, grundy, maximal-safe, maximum-safe |
 | [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) | 二値立方体の重み2層における極小極大配置の上下界 | proposition | proved | variants, geometry, maximal-safe |
 | [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) | 二値立方体重み2層の9次元最小極大配置は11石 | computation | computed | variants, geometry, maximal-safe |
-| [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) | 二値立方体重み2層の10次元最小極大配置は12石 | computation | computed | variants, geometry, maximal-safe |
-| [K0718](../items/K0718-lrat-empty-clause-vacuous-rat-unsoundness.md) | 固定したupstream LRAT検査器はRUP矛盾のない空節を受理し偽UNSATを返す | proposition | computed | verification, certificates, provenance |
-| [K0719](../items/K0719-p2647-saved-1300-witness-inclusion-maximal.md) | Q_2647の保存1300点安全集合は全1347個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
-| [K0720](../items/K0720-p2647-saved-1302-witness-inclusion-maximal.md) | Q_2647の保存1302点安全集合は全1345個の単点追加を禁止四点で阻止する包含極大集合 | proposition | computed | geometry, maximal-safe, verification |
-| [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) | 一般形状CNFの補助変数割当は選択変数と衝突し、実現可能な形状をUNSATへ誤符号化した | proposition | computed | geometry, search-methods, verification, provenance |
-| [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) | 剰余放物線Q_2207の最大安全サイズは1104（単一CNFの独立schema・RUP/LRAT監査済み） | proposition | computed | maximum-safe, geometry, verification |
+| [K0717](../items/K0717-p2647-113-full-d-sweep-100k.md) | p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した | computation | computed | geometry, maximum-safe, search-methods |
+| [K0718](../items/K0718-candidate-b-assumption-partition.md) | 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値 | proposition | proved | geometry, maximum-safe, search-methods |
+| [K0719](../items/K0719-parabola-four-point-determinant-factorization.md) | 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値 | proposition | proved | geometry, maximum-safe |
+| [K0720](../items/K0720-forbidden-edge-generator-completeness.md) | 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない | proposition | proved | geometry, maximum-safe, verification |
+| [K0721](../items/K0721-pysat-seqcounter-equals-small-verification.md) | pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす | verification | verified | verification, search-methods |
+| [K0722](../items/K0722-easy-unsat-history-solver-independence.md) | 候補B の易 UNSAT は学習節の履歴に依存せず、ソルバ横断でも d に応じた範囲で再現する | verification | verified | geometry, maximum-safe, verification |
+| [K0723](../items/K0723-ternary-encoding-arbitrary-d-verification.md) | ternary 符号化の d 一般化実装は d=1323 で現行と同一の CNF・同一探索を再現し、任意 d で節生成が健全 | verification | verified | geometry, maximum-safe, search-methods, verification |
+| [K0724](../items/K0724-assumption-unsat-drat-gap.md) | 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である | question | open | maximum-safe, search-methods, certificates |
