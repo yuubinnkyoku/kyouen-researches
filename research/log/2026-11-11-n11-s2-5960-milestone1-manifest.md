@@ -27,3 +27,7 @@
 - 次回: 外部計算資源でmilestone-1のS6 orbit消化（cost昇順・resume形式）、
   またはmanifestのcert拡張（greedy 3位 {71} 以降のS5/S6 orbit列挙）。
 - なお generated再生成（uv/Python）は本環境では未実施（CI差分検出あり・保留中の既知課題）。
+
+- 訂正（同一コミット時間帯の並走とK番号衝突）: 並走セッションが先に
+  K0745（5×19満容量witness）をmain反映していたため、本項目は **K0746** に再採番した
+  （旧K0745-s2-5960-milestone1-s6-manifest.mdは削除・内容不変）。
