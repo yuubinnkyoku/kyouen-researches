@@ -110,7 +110,9 @@ def main():
                         min(costs), max(costs), sum(costs), prefix))
     ok_all = all(r[2] == r[3] for r in roadmap)
 
-    assert s5_match and obligations_ok and count_ok and sweep_count_ok and set_ok and loss_all_in and ok_all, "certificate reuse audit failed"\n\n    summary = {
+    assert s5_match and obligations_ok and count_ok and sweep_count_ok and set_ok and loss_all_in and ok_all, "certificate reuse audit failed"
+
+    summary = {
       "manifest_md5_expected": "452b4336edbe272a49dcd76c4a7764af",
       "cert73": {"bit": CERT73_BIT, "step": int(c73["step"]), "s5Orbits": int(c73["s5Orbits"]),
                  "s6Orbits": len(c73_s6), "rawObligations": int(c73["rawObligations"])},
