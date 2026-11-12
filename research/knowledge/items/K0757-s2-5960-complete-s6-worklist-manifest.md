@@ -1,0 +1,100 @@
+---
+id: K0757
+title: S2 {59,60} 完全S6 worklist manifest（greedy証明書1–33・43,375 S6 orbit = 全worklist・S5 1,447・q59推定41,842の訂正）
+kind: computation
+status: computed
+topics: [square-outcomes, certificates, verification]
+aliases: []
+relations:
+- type: depends_on
+  target: K0754
+  note: milestone-3 manifest（証明書1–8・S6 20,534）の全33ステップ拡張。
+    milestone-3の20,534鍵は本unionの部分集合でcost不一致0件（機械検証）・
+    516 s5Repsも義務数不一致0件で部分集合
+- type: depends_on
+  target: K0729
+  note: 34 certificate崩壊とgreedy順序。step 9–33の証明書選択は
+    greedy-ladder-complete log（2026-11-12）のS5レベル確定値と完全一致
+- type: depends_on
+  target: K0675
+  note: 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）。
+    本計算は78 FW oracle条件下の条件付きworklist確定
+artifacts:
+- path: research/experiments/n11-s2-5960-milestone4-20261112/scripts/milestone4_worklist.ts
+  role: source
+  note: 証明書1–33のS6 orbit列挙（整数外接円circle-mask幾何・D4 canon・K0746/K0748/K0754と同一機関）。
+    16MiB制約のためCHUNK=1..10の分割実行でフラグメントを生成
+- path: research/experiments/n11-s2-5960-milestone4-20261112/scripts/merge_ms4.sh
+  role: source
+  note: フラグメント10個からpublished manifestをbyte-exactに再構築する手順
+    （certsビットはフラグメント間で非交差なので加算merge＝OR）
+- path: research/experiments/n11-s2-5960-milestone4-20261112/output/milestone4_manifest.json.part1
+  role: data
+  note: 完全S2 {59,60} S6 worklist manifest（compact形式・S5 orbit 1,447 rep・
+    S6 orbit 43,375のcost順フルリスト [unpadded hex, cost, certs]・
+    certStats（greedy step 1–33・0-marginalクラス除く）・protocol・検証記録）。
+    16MiB sandbox制約により等幅3分割で公開: milestone4_manifest.json.part1/part2/part3
+    （`cat` で byte-exact 再結合。全体 1,782,977 bytes・
+    md5 f8c1a724c6c7d757192f15f38d4c5da0・2026-11-12再生成版: 全体1,782,603 bytes・md5 452b4336edbe272a49dcd76c4a7764af・各分割594,201 bytes・旧版はsuperseded）
+- path: research/log/2026-11-12-n11-s2-5960-ms4-complete-worklist.md
+  role: log
+  note: 実行記録・milestone-1/2/3再生成による制御検証・milestone-3 subset検証PASS・
+    q59推定の訂正・実装教訓（32ビットOR・8MiB上限・フラグメント破損）
+---
+
+# S2 {59,60} milestone-4: 完全S6 worklist manifest（greedy証明書1–33・43,375 orbit）
+
+S2 {59,60}（best S3 r=61）閉鎖のgreedy証明書ladder（K0729/K0754-ladder、
+{5,115} → {27,93} → {71} → {82} → {104} → {73} → {90,96} → {23} → … → {114,116}、
+計33ステップ・61/61 blocker、step 16/24/26は0-marginalで追加orbit 0）に対して、
+milestone-1/2/3と同一の幾何機関でS6 orbit worklistを完全列挙した（78 FW oracle条件付き）。
+
+- **完全worklist: S6 orbit 43,375 / S5 orbit rep 1,447**。S5 union 1,447は
+  K0725/K061の完全D4 orbit censusと一致、**S5義務総和133,524はq59のraw義務censusと一致**
+  → worklistの完全性を2つの独立した既知censusで確認。
+- **訂正: q59のhash-dedupe推定「S6 orbit ≈41,842」は過少**（完全列挙で43,375、約3.6%低）。
+  したがってmilestone-2/3のcoverageは 20,534/41,842=49.1% でなく
+  **20,534/43,375=47.3%** が正しい。以後の進捗測定は分母43,375を用いる。
+- cost（合法S7子数）: min 50 / 中央値 81 / max 101 / 平均 80.165 /
+  **合計 3,477,178 raw S7辺**（milestone-3の1,604,047比 +1,873,131）。
+- 単体証明書S6 orbit（step 9–33は本項目が初測定; 値はlog・manifest certStats参照）。
+  step 1–8の単体値・累積値はK0746/K0748/K0754と完全一致（第三系統再現）。
+- **milestone-3 subset検証PASS**: 公表manifestの20,534 s6All鍵は本unionの部分集合で
+  cost不一致0件・516 s5Repsも義務数不一致0件（group_by join機械検証）。
+- merge中間値の累積S5 orbit（756→1,248→1,349→1,415→1,439→1,447）は
+  greedy-ladder-complete logの確定値と全て一致。
+
+solver protocolはK0746/K0748/K0754と同一（WIN証明書=認定済みWIN7子鍵1個・
+LOSS=全合法子認定・同一canonical鍵のverdict不一致=WIN/LOSS conflictで即停止・D4で1 orbit 1 rep）。
+
+## 意味
+
+S2 {59,60}閉鎖に必要なS6 verdict作業の全体像が確定した:
+43,375 S6 orbit（1 orbit 1 rep）にWIN/LOSSを認定すればS5 1,447 repが閉じ、
+61 blocker→S2 {59,60}の条件付き判定に到達する。
+
+本計算は78 FW oracleの下の条件付きworklist確定であり、いかなるS6 verdict・
+S2・空盤の勝敗も含まない。空盤・二石root {49,60} は **UNKNOWN** のままである。
+
+## 2026-11-12 監査追記: certs 所属ビットは未検証・使用禁止
+
+公開manifestの `s6All[][2]`（証明書所属ビット）に不整合を確認した。`certStats[].s6OrbitsSingle` と各証明書ビットを含む S6 行数を照合すると、30項目中26項目で不一致（例: step 5 は期待2,563件に対し7,094件、step 28 は期待5,027件に対し0件）。原因は生成器が同一証明書内で複数のS5親から到達した同一canonical S6鍵に対し、証明書ビットを繰り返し加算していたこと。生成器はコミット `feef03e` で同一証明書内の重複加算を抑止した。
+
+**旧manifestの所属ビットをworker割当て・被覆判定・証明書検証に使ってはならない。** S6鍵の集合43,375件、cost、S5鍵集合1,447件、義務数などは今回の不具合の直接の影響を受けないが、修正後の全再生成と独立照合は未実施である。`s5Reps[].certs` については本不具合の直接影響はない。勝敗はUNKNOWNのまま。
+
+## 2026-11-12 追加監査: 証明書ビットの衝突（別件）
+
+生成器の旧 `CHUNKS` 定義では step 22 `{99,109}` のビットが `2^32 + 2^32 = 2^33` となり、step 23 `{15}` の `2^33` と完全に衝突していた。さらに step 22 以降のビット位置が本来の一意な連番からずれていた。**これは同一証明書内の重複加算とは独立した欠陥**であり、先の `feef03e` だけでは解消しない。step 22 の2代表は互いに識別不能、step 22 と23も区別不能だった。修正コミット `6fd5d47` で step 22 を `2^32+2^33`、step 23 を `2^34` とし、以降も衝突のないビット位置へ修正した。
+
+**公開済み milestone-4 manifest の `s6All[][2]` と `s5Reps[].certs` はどちらも使用禁止。** 旧 `certStats` の単体個数はビット割当てそのものとは別に算出されるが、公開manifestの所属情報から検証してはならない。全10分割の再生成・結合・所属数照合・独立検証が済むまで、修正版の証明書所属情報は未認定とする。43,375件のS6鍵集合やcostが正しいという既存の主張を、このビット修正だけで新たに検証したわけではない。11×11の勝敗はUNKNOWN。
+
+
+## 2026-11-12 再生成完了: 修正版manifestの公開とcerts使用禁止の解除
+
+全10チャンクをrepo正本のfwHex/swHex配列から修正済み生成器で再生成し（数値配列は手書き転写せずrepo文字列をJSON.parseで直接抽出）、加算mergeして修正版manifestを再公開した。
+
+- **独立照合 全PASS**: certStats単体S6 orbit数とのper-cert membership照合が30/30で一致（旧manifestは26/30不一致）。certs値は宣言済み50個の2の冪（pair証明書は隣接2ビット p+2p）へ完全分解し、未宣言ビット0・半ペアビット0・衝突0。S6 43,375行（127,748 membership）・S5 1,447行（2,835 membership・全30証明書被覆0欠落）。
+- **旧manifestとの対照**: S6鍵集合43,375件・cost全一致・S5鍵集合1,447件・義務数全一致・certStatsのorbit/義務列も全一致。certs値の差異は s6All 18,292件・s5Reps 859件で、いずれも旧生成器の2欠陥（同一証明書内重複加算=feef03e抑止、ビット衝突=6fd5d47修正）に帰着。旧 {78,86} ビット 412316847416 は隣接2冪の和ではなく下位に13,000の散在ビットを含み、旧certsは旧certStatsでも検証不能だった。
+- **修正版: 全体 1,782,603 bytes・md5 452b4336edbe272a49dcd76c4a7764af・等幅3分割（各594,201 bytes）**。cat再結合のbyte-exact性を検証済み。cross_checksに再生成・照合記録を記載。
+- **使用禁止を解除**: 新partの s6All[][2]・s5Reps[].certs はworker割当て・被覆判定・証明書検証に使用可能。旧版（md5 f8c1a724…）を参照する記録は更新が必要。
+- 本作業は78 FW oracle条件下のworklist確定・検証のみ。S6 verdictは未認定。11×11空盤・二石root {49,60} は **UNKNOWN**。

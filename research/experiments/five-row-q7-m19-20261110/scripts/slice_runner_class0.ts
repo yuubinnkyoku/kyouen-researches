@@ -60,6 +60,7 @@ async function main() {
   let nodes = 0, witnesses = 0, capped = false, leaves = 0;
   const witnessList: number[][][] = [];
   function fillRows(row: number): boolean {
+    if (row === Y0) return fillRows(row + 1);
     if (row === W) { const rows: number[][] = [[], [], [], [], []];
       for (let p = 0; p < N; p++) if (forced[p] === 1) rows[ys[p]].push(xs[p]);
       witnesses++; if (witnessList.length < 20) witnessList.push(rows); return false; }
@@ -105,7 +106,7 @@ async function main() {
       if (selOptCount === -1 || optArr.length < selOptCount) { selOptCount = optArr.length; selPt = i;
         selOptArr.length = 0; for (const v of optArr) selOptArr.push(v); }
       if (selOptCount === 1) break; }
-    if (selPt === -1) { leaves++; return fillRows(Y0 === 0 ? 1 : 0); }
+    if (selPt === -1) { leaves++; return fillRows(0); }
     for (const ci of selOptArr) { const mark = trail.length; if (tryBlocker(selPt, ci)) return true; undoTo(mark); if (capped) return true; }
     return false;
   }

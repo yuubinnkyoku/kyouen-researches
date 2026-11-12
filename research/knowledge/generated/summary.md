@@ -1,38 +1,61 @@
 # 移行集計
 
+<<<<<<< HEAD
 K項目: 716 / alias: 269 / artifactファイル: 3921
+=======
+K項目: 726 / alias: 269 / artifactファイル: 3835
+>>>>>>> origin/main
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
+<<<<<<< HEAD
 | computation | 75 |
 | definition | 5 |
 | method | 5 |
 | proposition | 565 |
 | question | 38 |
 | verification | 28 |
+=======
+| computation | 80 |
+| definition | 5 |
+| method | 6 |
+| proposition | 565 |
+| question | 39 |
+| verification | 31 |
+>>>>>>> origin/main
 
 ## status
 
 | 値 | 件数 |
 |---|---:|
+<<<<<<< HEAD
 | active | 10 |
 | computed | 169 |
 | conjectured | 2 |
 | observed | 26 |
 | open | 36 |
 | proved | 366 |
+=======
+| active | 11 |
+| computed | 169 |
+| conjectured | 2 |
+| observed | 26 |
+| open | 37 |
+| proved | 371 |
+>>>>>>> origin/main
 | refuted | 64 |
 | scope-unclear | 2 |
 | superseded | 9 |
-| verified | 28 |
+| verified | 31 |
 | withdrawn | 4 |
 
 ## topics
 
 | 値 | 件数 |
 |---|---:|
+<<<<<<< HEAD
 | certificates | 100 |
 | first-moves | 67 |
 | formalization | 5 |
@@ -51,6 +74,26 @@ K項目: 716 / alias: 269 / artifactファイル: 3921
 | statistics | 121 |
 | strategy-length | 94 |
 | variants | 300 |
+=======
+| certificates | 101 |
+| first-moves | 67 |
+| formalization | 5 |
+| geometry | 363 |
+| grundy | 171 |
+| maximal-safe | 184 |
+| maximum-safe | 91 |
+| migration | 1 |
+| provenance | 40 |
+| reconfiguration | 34 |
+| rectangles | 112 |
+| residual-games | 124 |
+| rules | 8 |
+| search-methods | 117 |
+| square-outcomes | 94 |
+| statistics | 121 |
+| strategy-length | 94 |
+| variants | 307 |
+>>>>>>> origin/main
 | verification | 124 |
 
 ## 未解決・要監査・範囲不明
@@ -97,6 +140,7 @@ K項目: 716 / alias: 269 / artifactファイル: 3921
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) [scope-unclear] 二値六次元立方体の共七点禁止版の最大安全石数はK_6=9である
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
+- [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
 
 ## 警告
 

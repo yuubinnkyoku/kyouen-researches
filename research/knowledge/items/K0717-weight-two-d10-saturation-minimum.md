@@ -49,6 +49,18 @@ artifacts:
 - path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-even-dimension-improved-saturation-20261110.md
   role: certificate
   note: 10次元12辺の包含極大C4禁止構成
+- path: research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md
+  role: source
+  note: 二重閉路21核の直径計算。葉あり候補を除外する部分は誤った補題に依存
+- path: research/log/2026-11-12-c4-three-leaf-false-lemma-counterexample.md
+  role: source
+  note: 葉なし補題の根拠となった3葉補題への反例
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py
+  role: verifier
+  note: 基礎21核の直径をFloyd-Warshall法で独立照合
+- path: research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-saturation-n-plus-two-corrected.md
+  role: proof
+  note: 正しい3葉上界による葉あり候補の排除と二重閉路による構造証明
 scope: 二値立方体の重み2層、共面四点禁止、10次元の包含極大安全配置の最小サイズ。有限計算に依存し、全立方体や正方形格子には適用しない。
 evidence: 固定辺を含む11辺グラフの隣接集合による列挙と、全2481256778候補を走査する四角形マスク方式が、安全配置506030448個と極大配置0件で一致。SATによる独立証明は未完了。
 ---
@@ -56,6 +68,8 @@ evidence: 固定辺を含む11辺グラフの隣接集合による列挙と、�
 # 10次元重み2層の最小極大配置
 
 二値立方体 `{0,1}^10` の重み2層で、共面四点を禁止した場合の包含極大安全配置の最小サイズは、**有限全数列挙によれば12石**。
+
+以前ここに記載した構造的証明は、その根拠となる3葉補題に反例が見つかったため撤回した。その後、正しい「葉は高々3個」だけを使えば `n≥9` の `n+1` 辺候補には葉がないことが分かり、二重閉路の分類と有限核の検査で構造的証明を修復できた。詳細はK0715。以下の全数列挙も葉を持つ候補を含めて独立に同じ結論を与える。
 
 K0715の一般下界は11石、偶数次元の構成は12石を与える。11辺グラフは頂点の付け替えにより辺 `{0,1}` を含められるため、固定辺を含む `binom(44,10)=2481256778` 候補を対象にした。四角形を作る辺の追加を除外する再帰探索は、C4を含まない506030448配置のいずれも極大でないと判定した。連結可能性による枝刈りを追加した再実行でも、連結なC4禁止配置398428800個のうち極大なものは0個だった。よって同列挙が正しければ11石は不可能で、構成の12石が最小となる。
 

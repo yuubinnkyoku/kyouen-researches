@@ -1,0 +1,32 @@
+{
+  "rows": 5,
+  "columns": 8,
+  "deficient_rows": [
+    0,
+    1
+  ],
+  "first_row_stones": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "direct_candidates": 4807488,
+  "distinct_witnesses": 4542,
+  "witness_set_sha256": "a8abfd938aa5692d475b8a464288799b10ceb8b4d56cdd765ac634729d5aed24",
+  "runs": [
+    {
+      "runner": "two_deficient_pair_runner.ts",
+      "search_branches": 116674,
+      "nodes": 652453,
+      "distinct_witnesses": 4542
+    },
+    {
+      "runner": "two_deficient_pair_runner_flat.ts",
+      "search_branches": 116674,
+      "nodes": 652453,
+      "distinct_witnesses": 4542
+    }
+  ]
+}

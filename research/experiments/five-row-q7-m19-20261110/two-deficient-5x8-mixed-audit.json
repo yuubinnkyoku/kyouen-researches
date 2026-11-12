@@ -1,0 +1,161 @@
+[
+  {
+    "index": 0,
+    "first_row_stones": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "candidates_checked": 4807488,
+    "distinct_witnesses": 4542,
+    "witness_set_sha256": "a8abfd938aa5692d475b8a464288799b10ceb8b4d56cdd765ac634729d5aed24",
+    "runs": [
+      {
+        "runner": "two_deficient_pair_runner.ts",
+        "search_branches": 116674,
+        "nodes": 652453
+      },
+      {
+        "runner": "two_deficient_pair_runner_flat.ts",
+        "search_branches": 116674,
+        "nodes": 652453
+      }
+    ]
+  },
+  {
+    "index": 27,
+    "first_row_stones": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "candidates_checked": 4807488,
+    "distinct_witnesses": 2390,
+    "witness_set_sha256": "94d8b5675ac725f4e92568ae1762e80a1afb27137856c3bcff56c08bea74bfc6",
+    "runs": [
+      {
+        "runner": "two_deficient_pair_runner.ts",
+        "search_branches": 54568,
+        "nodes": 248277
+      },
+      {
+        "runner": "two_deficient_pair_runner_flat.ts",
+        "search_branches": 54568,
+        "nodes": 248277
+      }
+    ]
+  },
+  {
+    "index": 28,
+    "first_row_stones": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "candidates_checked": 4807488,
+    "distinct_witnesses": 1651,
+    "witness_set_sha256": "6a324c1442e30297413a616bb8041e596c8e215412a594c6315f1a8d5887337b",
+    "runs": [
+      {
+        "runner": "two_deficient_pair_runner.ts",
+        "search_branches": 25304,
+        "nodes": 123086
+      },
+      {
+        "runner": "two_deficient_pair_runner_flat.ts",
+        "search_branches": 25304,
+        "nodes": 123086
+      }
+    ]
+  },
+  {
+    "index": 66,
+    "first_row_stones": [
+      0,
+      1,
+      2
+    ],
+    "candidates_checked": 4807488,
+    "distinct_witnesses": 1482,
+    "witness_set_sha256": "2f61b4ade41fd58c6020e505e776d63298823572acbdfa0ccbf81e031756ac15",
+    "runs": [
+      {
+        "runner": "two_deficient_pair_runner.ts",
+        "search_branches": 13148,
+        "nodes": 41260
+      },
+      {
+        "runner": "two_deficient_pair_runner_flat.ts",
+        "search_branches": 13148,
+        "nodes": 41260
+      }
+    ]
+  },
+  {
+    "index": 94,
+    "first_row_stones": [
+      0,
+      1
+    ],
+    "candidates_checked": 4807488,
+    "distinct_witnesses": 422,
+    "witness_set_sha256": "fe6b3f429d26fe04a2df35313f42954f154e6125ad8882bf5e70013591c17e62",
+    "runs": [
+      {
+        "runner": "two_deficient_pair_runner.ts",
+        "search_branches": 1969,
+        "nodes": 6805
+      },
+      {
+        "runner": "two_deficient_pair_runner_flat.ts",
+        "search_branches": 1969,
+        "nodes": 6805
+      }
+    ]
+  },
+  {
+    "index": 110,
+    "first_row_stones": [
+      0
+    ],
+    "candidates_checked": 4807488,
+    "distinct_witnesses": 0,
+    "witness_set_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "runs": [
+      {
+        "runner": "two_deficient_pair_runner.ts",
+        "search_branches": 0,
+        "nodes": 58
+      },
+      {
+        "runner": "two_deficient_pair_runner_flat.ts",
+        "search_branches": 0,
+        "nodes": 58
+      }
+    ]
+  },
+  {
+    "index": 114,
+    "first_row_stones": [],
+    "candidates_checked": 4807488,
+    "distinct_witnesses": 86,
+    "witness_set_sha256": "7847ad8d1edee0d33d88d6a6864ec2643e549ab5e2122ffad26370ff3b914cfa",
+    "runs": [
+      {
+        "runner": "two_deficient_pair_runner.ts",
+        "search_branches": 152,
+        "nodes": 529
+      },
+      {
+        "runner": "two_deficient_pair_runner_flat.ts",
+        "search_branches": 152,
+        "nodes": 529
+      }
+    ]
+  }
+]

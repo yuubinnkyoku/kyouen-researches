@@ -478,18 +478,44 @@
 ## [research/experiments/binary-cube-affine-sections-20261024/verify.py](../../../research/experiments/binary-cube-affine-sections-20261024/verify.py)
 
 - [K0551](../items/K0551-binary-cube-maximal-affine-sections.md) (verifier): 有理数RREFによるd≤5のアフィン平坦の直接完全列挙
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_boundary.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_boundary.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 8・9頂点の二重閉路核を四角形と欠辺追加で直接検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_bicyclic_diameters.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 10頂点21核の直径をFloyd-Warshall法で照合
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 基礎21核の直径をFloyd-Warshall法で独立照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_c4_enumerators.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 隣接集合方式と四角形マスク方式の小次元・各辺数の差分照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leaf_saturation_bound.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leaf_saturation_bound.py)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (verifier): n=4..6の全グラフとn=5..20の明示構成で下界・達成・極大性を照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leafless_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_leafless_sat.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (verifier): n=4..6の固定辺を含む全グラフでSAT符号化と直接判定を比較
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturated_constructions.py)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): n=5..20で四点上の閉路と全欠辺追加後の閉路を直接照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_cores.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_cores.py)
+
+- [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (verifier): 6・7頂点の全対象グラフの核被覆と11頂点全候補の四角形マスク照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_diameters.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (verifier): 12頂点の核・道長18334ケースをFloyd-Warshall法で検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-boundary-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/bicyclic-boundary-audit.json)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 8頂点12核・9頂点16核の直接検査結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-enumerator-small-audit.json)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 次元4..6の各辺数と次元7の既知ケース計94442候補の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-saturation-n-plus-two-corrected.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/c4-saturation-n-plus-two-corrected.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 正しい葉高々3個を用いるn>=9のn+2下界と有限核の排除
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (proof): 正しい3葉上界による葉あり候補の排除と二重閉路による構造証明
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/classify_d9_minima.py)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 全保存配置を同型判定し代表と自己同型数を集計
@@ -514,6 +540,16 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d10-eleven-edge-enumeration.json)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (data): 2回の列挙の集計、検査器のhashと証拠上の制約
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d11-c4-saturation-sat-20261111/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d11-c4-saturation-sat-20261111/result.json)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (data): 11頂点13辺・固定辺SAT試行の50万衝突結果はUNKNOWN
+- [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (data): 固定辺SATの50万衝突試行はUNKNOWN
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/input.cnf.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/input.cnf.gz)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 13頂点16辺・葉なし・固定辺のSAT入力
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d13-leafless-sat-20261111/result.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 50万衝突でUNKNOWN。SAT・UNSATのどちらも主張しない
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/d9-minimum-classes.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 6同型類の代表ビットマスクと個数・自己同型数
@@ -541,6 +577,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結性枝刈りなしの再列挙。C4判定は共有する
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_tricyclic_cores.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_tricyclic_cores.py)
+
+- [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (verifier): ループと平行辺を許す核および道長の全候補を列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit-d6.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=6における禁止四点数と全二点・三点の照合
@@ -550,6 +589,18 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/finite-audit.json)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (data): d=2..5における禁止四点数と補完可能三点数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-bound-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-bound-audit.json)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (data): 小次元の列挙数と明示構成の辺数・葉数
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-exact.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leaf-saturation-exact.md)
+
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (proof): 葉の支持点の近傍・葉数上限・辺数式を用いる下界と明示構成による達成
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless-sat-small-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless-sat-small-audit.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 小次元16925グラフの符号化検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/leafless_saturation_sat.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (solver): 固定辺・最小次数2以上のC4飽和グラフのSAT探索
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/pair-codegrees.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 二頂点共起数と一点次数の全称公式
@@ -571,6 +622,27 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 2実装で一致した安全配置と極大配置の集計・ソースhash
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 70四点集合と19欠辺の検査結果
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-diameter-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-diameter-audit.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 12頂点の直径分布と13頂点からの縮約可能性の有限検算
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-general-lower-bound.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-general-lower-bound.md)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (proof): 三重閉路核の12頂点への縮約と細分による直径単調性
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-audit.json)
+
+- [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (data): 小次元被覆および11頂点候補の独立判定結果
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-proof.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-proof.md)
+
+- [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (proof): 次数2の道の縮約による全候補の有限核への帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n11-result.json)
+
+- [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (data): 10408候補・C4禁止4452候補・極大0件
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n12-result.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tricyclic-n12-result.json)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (data): 12頂点14辺のC4飽和候補の核・道長列挙結果
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/triple-unique-completion.md)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (proof): 三点のxorによる一意補完と少数派条件の全称証明
@@ -580,6 +652,12 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_d9_classes.py)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (verifier): 各代表の安全性・極大性・全頂点順列による自己同型と軌道サイズを独立検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_three_leaf_counterexample.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_three_leaf_counterexample.py)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (verifier): 明示された8頂点3葉グラフのC4不在と全欠辺追加の独立検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_tricyclic_diameters.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_tricyclic_diameters.py)
+
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (verifier): 同じ全ケースの直径分布を幅優先探索で照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/verify_unique_completion.py)
 
 - [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) (verifier): 整数アフィン小行列式によるd=2..7の全四点・三点・二点の照合
@@ -590,10 +668,14 @@
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 偶数次元の構成と全欠辺の極大性の証明
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (certificate): 10次元12辺の包含極大C4禁止構成
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (certificate): 偶数n>=6で葉を持ち下界を達成する明示構成
+- [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) (certificate): 12頂点15辺の明示構成
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/weight-two-odd-dimension-improved-saturation-20261110.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (proof): 奇数次元の構成と全欠辺の極大性の証明
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (certificate): 9次元11辺の包含極大C4禁止構成
+- [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (certificate): 奇数n>=5で葉を持ち下界を達成する明示構成
+- [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (certificate): 11頂点14辺の明示構成
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
@@ -1639,10 +1721,44 @@
 ## [research/experiments/five-edge-terminal-spectrum-20261101/verify.py](../../../research/experiments/five-edge-terminal-spectrum-20261101/verify.py)
 
 - [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) (verifier): 17902所属型族・4717374安全局面、271重複署名盤・383059安全局面、14点全1001四点組・12651安全局面の独立照合
+<<<<<<< HEAD
 ## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
 - [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (source): blocker-obligation-fill DFSの再現ソース
+=======
+## [research/experiments/five-row-q7-m19-20261110/circle-census-independent.json](../../../research/experiments/five-row-q7-m19-20261110/circle-census-independent.json)
+
+- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (data): 5×18では84本、5×19では95本の7点以上の円
+## [research/experiments/five-row-q7-m19-20261110/class1-5x8-audit.json](../../../research/experiments/five-row-q7-m19-20261110/class1-5x8-audit.json)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (data): 614656候補と相異なる759証人の照合結果
+## [research/experiments/five-row-q7-m19-20261110/class1-5x8-mixed-audit.json](../../../research/experiments/five-row-q7-m19-20261110/class1-5x8-mixed-audit.json)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (data): 計4302592候補・相異なる86998証人の照合結果
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py)
+
+- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (verifier): 別行の水平弦2本から長い円を生成する独立検算
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_mixed.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_mixed.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 欠損行の石数0..5を含む7条件で直接全列挙とrunnerの出力集合を比較
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_class1_small.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 5×8の固定欠損行について直接全列挙とrunner出力の集合を比較
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_mixed.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_mixed.py)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (verifier): 欠損行0の石数0..5を含む7条件で直接列挙と元版・flat版を照合
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_pairs.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_pairs.py)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (verifier): 5×8の2行欠損6代表を直接列挙と元版・flat版で比較
+## [research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_two_deficient_small.py)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (verifier): 5×8・行0固定の2行欠損で直接全列挙と2実装の出力集合を比較
+## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
+- [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (source): 欠損行クラスのblocker-obligation-fill DFS実装
+>>>>>>> origin/main
 ## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_m19_search.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_m19_search.ts)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (source): 行対ペア列挙と全三点組列挙の2系統によるcensus再現、SA探索、独立検証器を同梱
@@ -1653,6 +1769,44 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{1}（行1欠損）スライスrunner（Y0=1、葉fillは行0から）
+<<<<<<< HEAD
+=======
+- [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) (source): クラス{1}（Y0=1）スライスrunner。行fill修正後の全スライスで使用
+## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class2.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class2.ts)
+
+- [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) (source): クラス{2}（Y0=2・中央行）スライスrunner。slice_runner_class1.ts の Y0 を 2 にした同一機械
+## [research/experiments/five-row-q7-m19-20261110/scripts/test_class1_witness.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_class1_witness.mjs)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 実際の5×8クラス1探索で証人を生成し独立検証、旧処理の失敗も再現
+## [research/experiments/five-row-q7-m19-20261110/scripts/test_fill_rows.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_fill_rows.mjs)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 欠損行0..4と石数0..5の行fill回帰、修正前の誤動作も再現
+## [research/experiments/five-row-q7-m19-20261110/scripts/test_known_witness.mjs](../../../research/experiments/five-row-q7-m19-20261110/scripts/test_known_witness.mjs)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 実際の5×18探索で保存済み証人を再現
+## [research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner.ts)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (source): 機械本体。M/Y0/Y1/START/NODE_CAP を設定してスライス実行
+## [research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/two_deficient_pair_runner_flat.ts)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (source): flat配列を用いる高速版
+- [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) (source): 等価検証済み flat 版 runner（Y0=0, Y1=1）
+## [research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_5x18_witnesses.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 独立した円censusで2つの5×18証人の安全性・全空点の阻止を確認
+## [research/experiments/five-row-q7-m19-20261110/scripts/verify_five_row_witness.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/verify_five_row_witness.py)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (verifier): 弦による独立円censusを用いた5行q=7配置の安全性・極大性検査
+## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-audit.json)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 4807488候補・相異なる4542証人の照合結果
+## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-mixed-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-mixed-audit.json)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 7条件計33652416候補の照合結果
+## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 6組合計28844928候補・45840証人の照合結果
+>>>>>>> origin/main
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -2405,6 +2559,10 @@
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (certificate): 509,1009の二つの追加有限存在証人
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 509,1009の追加有限等号証人
+## [research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp](../../../research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp)
+
+- [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) (verifier): det() の 3×3 実装（補題A の対象）
+- [K0733](../items/K0733-forbidden-edge-generator-completeness.md) (verifier): 列挙本体（i<j<k と l の一意化）
 ## [research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json)
 
 - [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (data): 66多項式グラフ・13素数Q_pカタログ・次数3,4の明示整数証人
@@ -2414,6 +2572,7 @@
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (proof): 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数で充足可能という主張は含まない
 - [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (proof): 原始整数方程式・有限体根数による全称証明とk=2,3,4の鋭さ証人
 - [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (proof): 完全対補題・四元和・反射によるNAE分解の全称証明
+- [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) (proof): K0334 側の全称証明（本項とは独立ルート）
 ## [research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizによる全94575425選択四点の独立検算
@@ -10420,6 +10579,12 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): d=1..1103の判定表を生成し、タイムアウト分は衝突予算2000万で再判定する
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py)
+
+- [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 交差ソルバ実行器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
@@ -10481,9 +10646,47 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 旧4形状UNSAT記録。000/101はK0721の変数衝突があり、幾何上界の根拠への採用を保留
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-fresh.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-fresh.json)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): 履歴ゼロ 4 点の判定
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-reverse.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-reverse.json)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): 逆順 8 点の判定
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w14-cross-solver.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w14-cross-solver.json)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): d=1/100/300/478/851 のソルバ表（54 レコード）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w15-cardenc-verify.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w15-cardenc-verify.json)
+
+- [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) (data): 473 ケース・1,588,640 割当・不一致 0・構造不変量 0（negative_control は未保存）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w17-tail-fresh.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w17-tail-fresh.json)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): 尾部 5 点 UNSAT・境界 3 点 UNKNOWN
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w18-tail-cross-solver.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w18-tail-cross-solver.json)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): d=1280/1300/1316/1317（47 レコード）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w19-1316-cross-rest.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w19-1316-cross-rest.json)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): d=1316 の残り 9 種
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w7-assump-2647-1322-full100k.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w7-assump-2647-1322-full100k.json)
+
+- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (data): 1,323 レコード、67 UNSAT・1,256 UNKNOWN・0 SAT、予算 100k/d
+- [K0731](../items/K0731-candidate-b-assumption-partition.md) (data): 分割の適用記録 (1,323 d)
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 逆順と fresh-each の再解器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py)
 
 - [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (solver): 各counter後にそれまでの予約範囲とnvのmaxを保持する修正版
+- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (solver): クラス (1,1,3) の CNF 構築 (build)
+- [K0731](../items/K0731-candidate-b-assumption-partition.md) (solver): #B = c の cardinality 制約と対ごと exactly-one の本体
+- [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) (solver): 照合対象の build() 呼び出し形
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class_assump.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class_assump.py)
+
+- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (solver): 1 インスタンス + assumption B_d の掃引器
+- [K0731](../items/K0731-candidate-b-assumption-partition.md) (solver): assumption 掃引の実装（SAT 側は復号点を全 928,389 辺と照合）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py)
+
+- [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 尾部 fresh-each と unit_conflict/統計の計測
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する
@@ -11183,6 +11386,18 @@
 ## [research/experiments/parabola-ternary-selection-20261109/README.md](../../../research/experiments/parabola-ternary-selection-20261109/README.md)
 
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (source): 実装、再現入力・出力、1296点構成と1300点UNKNOWNの範囲
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/init.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/init.json)
+
+- [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) (data): base 53,886 節一致の記録
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/result.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d1323-target1322-budget100000/result.json)
+
+- [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) (data): 統計完全一致・UNKNOWN
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1293-budget100000/result.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1293-budget100000/result.json)
+
+- [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) (data): UNKNOWN 90.207 s / 142,992 節
+## [research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1322-budget100000/result.json](../../../research/experiments/parabola-ternary-selection-20261109/output/generalization-check-d300-target1322-budget100000/result.json)
+
+- [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) (data): SOLVER_UNSAT 1.811 s / 1,808 conflicts
 ## [research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt](../../../research/experiments/parabola-ternary-selection-20261109/output/target1293-budget100000/candidate.txt)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (certificate): 前段の1296点証人。今回の探索のphase起点
@@ -11210,6 +11425,10 @@
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (solver): 直接投影節を点選択制約へ変換し、空対数を制限する探索器
 - [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (solver): 直接投影節の点選択への変換と空対数のcardinality制約
+## [research/experiments/parabola-ternary-selection-20261109/ternary_general.py](../../../research/experiments/parabola-ternary-selection-20261109/ternary_general.py)
+
+- [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md) (solver): d を引数化した同符号化の生成器（保存 CNF は d=1323 専用なので必ず再生成する）
+- [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) (solver): d を引数化した三値符号化の生成器
 ## [research/experiments/parabola-warm-improvement-20261109/README.md](../../../research/experiments/parabola-warm-improvement-20261109/README.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 1298点・1300点証人とUNKNOWNの範囲、凍結符号化・予算・再現手順
@@ -12563,24 +12782,67 @@
 ## [research/log/2026-11-09-p2647-near-miss-and-size-1323.md](../../../research/log/2026-11-09-p2647-near-miss-and-size-1323.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 形状クラス判定の方法と結果
+<<<<<<< HEAD
 ## [research/log/2026-11-10-five-row-q7-m19-search.md](../../../research/log/2026-11-10-five-row-q7-m19-search.md)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (log): 探索キャンペーン記録（m=19証人は見つからず、M=19予想の補強証拠）
+=======
+## [research/log/2026-11-10-a2647-113-candidate-b-proof-omp.md](../../../research/log/2026-11-10-a2647-113-candidate-b-proof-omp.md)
+
+- [K0731](../items/K0731-candidate-b-assumption-partition.md) (proof): 第1部の分割・健全性・完全性の証明と §1.7 の前提一覧。証明の記述であり Lean 形式化ではない
+- [K0737](../items/K0737-assumption-unsat-drat-gap.md) (log): 第2部の証明書計画（候補A、d 固定 CNF + DRAT）
+## [research/log/2026-11-10-a2647-113-full-sweep-100k-result.md](../../../research/log/2026-11-10-a2647-113-full-sweep-100k-result.md)
+
+- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (log): 完走時刻・区間構造・留保
+## [research/log/2026-11-10-a2647-113-hardcore-attack-plan-omp.md](../../../research/log/2026-11-10-a2647-113-hardcore-attack-plan-omp.md)
+
+- [K0737](../items/K0737-assumption-unsat-drat-gap.md) (log): 候補A 予算ラダーの計画
+## [research/log/2026-11-10-five-row-q7-m19-search.md](../../../research/log/2026-11-10-five-row-q7-m19-search.md)
+
+- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (log): 探索キャンペーン記録（m=19証人は見つからず、M=19予想の補強証拠）
+## [research/log/2026-11-10-k0334-identity-verification-omp.md](../../../research/log/2026-11-10-k0334-identity-verification-omp.md)
+
+- [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) (log): 定理B・系C/D/E/F と p=2647 の会計
+- [K0733](../items/K0733-forbidden-edge-generator-completeness.md) (log): 4.3 の 1-4 と p=2647 実走の会計
+>>>>>>> origin/main
 ## [research/log/2026-11-10-n11-classa-decompose.md](../../../research/log/2026-11-10-n11-classa-decompose.md)
 
 - [K0724](../items/K0724-n11-classa-decomposition.md) (log): 実行記録
 ## [research/log/2026-11-10-n11-s2-5960-worklist.md](../../../research/log/2026-11-10-n11-s2-5960-worklist.md)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (log): 実行記録
+<<<<<<< HEAD
 ## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
 
 - [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
+=======
+## [research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md](../../../research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md)
+
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (source): 二重閉路21核の直径計算。葉あり候補を除外する部分は誤った補題に依存
+## [research/log/2026-11-11-five-row-class1-fill-fix.md](../../../research/log/2026-11-11-five-row-class1-fill-fix.md)
+
+- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 欠損行fill修正と既存スライスへの影響、円数の訂正
+## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
+
+- [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
+## [research/log/2026-11-11-five-row-m19-class1-slices.md](../../../research/log/2026-11-11-five-row-m19-class1-slices.md)
+
+- [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) (log): 全スライス記録・k-block境界の厳密確定・完了宣言
+## [research/log/2026-11-11-five-row-m19-class2-slices.md](../../../research/log/2026-11-11-five-row-m19-class2-slices.md)
+
+- [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) (log): 全スライス記録・完了宣言・クラス{2}は行鏡映で自身と同値であることの記録
+## [research/log/2026-11-11-five-row-multi-deficient-machine.md](../../../research/log/2026-11-11-five-row-multi-deficient-machine.md)
+
+- [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (log): 開発・制御・第3 witness・5×19 pair {0,1} 初スライスの記録
+- [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) (log): 全スライス記録・pair {0,1} 完了宣言（続き1–7）
+>>>>>>> origin/main
 ## [research/log/2026-11-11-m57-blocker-obligation-fill.md](../../../research/log/2026-11-11-m57-blocker-obligation-fill.md)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 機械開発・検証・キャンペーン開始の記録
 ## [research/log/2026-11-11-n11-s2-cert-collapse.md](../../../research/log/2026-11-11-n11-s2-cert-collapse.md)
 
 - [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (log): 実行記録
+<<<<<<< HEAD
 ## [research/log/2026-11-11-parabola-local-id-integration.md](../../../research/log/2026-11-11-parabola-local-id-integration.md)
 
 - [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 未pushローカル旧K0723から現行K0730への番号対応
@@ -12588,6 +12850,12 @@
 - [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (data): 未pushローカル旧K0725から現行K0732への番号対応
 - [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (data): 未pushローカル旧K0726から現行K0733への番号対応
 - [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 未pushローカル旧K0727から現行K0734への番号対応、凍結証拠の旧番号の解釈
+=======
+## [research/log/2026-11-12-c4-three-leaf-false-lemma-counterexample.md](../../../research/log/2026-11-12-c4-three-leaf-false-lemma-counterexample.md)
+
+- [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (source): 3葉補題の反例とそれに依存する一般下界の証明の破綻
+- [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (source): 葉なし補題の根拠となった3葉補題への反例
+>>>>>>> origin/main
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

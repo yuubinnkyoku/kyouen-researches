@@ -1,7 +1,7 @@
-// five_row_q7_blocker_dfs slice runner — 5×19 class{0} campaign, bidirectional-capable.
+// five_row_q7_blocker_dfs slice runner — 5×19 class{1} campaign, bidirectional-capable.
 // NODE_CAP is a GLOBAL cumulative budget per sandbox call (nodes never reset per case).
 // Reuse for future slices: set START / DIR (+1 forward, -1 backward) / NODE_CAP.
-// Sound + complete for maximal safe placements (5,6,6,6,6) with deficient row 0.
+// Sound + complete for maximal safe placements with deficient row 1.
 function gcd(a: number, b: number): number { a = Math.abs(a); b = Math.abs(b); while (b) { [a, b] = [b, a % b]; } return a || 1; }
 
 async function main() {
@@ -60,6 +60,7 @@ async function main() {
   let nodes = 0, witnesses = 0, capped = false, leaves = 0;
   const witnessList: number[][][] = [];
   function fillRows(row: number): boolean {
+    if (row === Y0) return fillRows(row + 1);
     if (row === W) { const rows: number[][] = [[], [], [], [], []];
       for (let p = 0; p < N; p++) if (forced[p] === 1) rows[ys[p]].push(xs[p]);
       witnesses++; if (witnessList.length < 20) witnessList.push(rows); return false; }
@@ -105,7 +106,7 @@ async function main() {
       if (selOptCount === -1 || optArr.length < selOptCount) { selOptCount = optArr.length; selPt = i;
         selOptArr.length = 0; for (const v of optArr) selOptArr.push(v); }
       if (selOptCount === 1) break; }
-    if (selPt === -1) { leaves++; return fillRows(Y0 === 0 ? 1 : 0); }
+    if (selPt === -1) { leaves++; return fillRows(0); }
     for (const ci of selOptArr) { const mark = trail.length; if (tryBlocker(selPt, ci)) return true; undoTo(mark); if (capped) return true; }
     return false;
   }

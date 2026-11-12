@@ -713,8 +713,26 @@
 | [K0727](../items/K0727-blocker-obligation-fill-m57.md) | blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械 | method | active | rectangles, variants, maximal-safe, verification |
 | [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行0/行4欠損の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
 | [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) | S2 {59,60} の60 blockerは未知S5子のD4 orbit集合が一致する34 certificateに崩壊し、greedy順序のsecured coverageは1,447 orbitで完結する | computation | computed | square-outcomes, certificates, verification |
+<<<<<<< HEAD
 | [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) | Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大 | proposition | computed | geometry, maximum-safe, maximal-safe, verification |
 | [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) | Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) | Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) | Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) | Q_2539の五点削除改善は248点を避け空対18点から二点以上を追加する必要がある | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
+=======
+| [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) | p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した | computation | computed | geometry, maximum-safe, search-methods |
+| [K0731](../items/K0731-candidate-b-assumption-partition.md) | 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値 | proposition | proved | geometry, maximum-safe, search-methods |
+| [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) | 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値 | proposition | proved | geometry, maximum-safe |
+| [K0733](../items/K0733-forbidden-edge-generator-completeness.md) | 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない | proposition | proved | geometry, maximum-safe, verification |
+| [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) | pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす | verification | verified | verification, search-methods |
+| [K0735](../items/K0735-easy-unsat-history-solver-independence.md) | 候補B の易 UNSAT は学習節の履歴に依存せず、ソルバ横断でも d に応じた範囲で再現する | verification | verified | geometry, maximum-safe, verification |
+| [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) | ternary 符号化の d 一般化実装は d=1323 で現行と同一の CNF・同一探索を再現し、任意 d で節生成が健全 | verification | verified | geometry, maximum-safe, search-methods, verification |
+| [K0737](../items/K0737-assumption-unsat-drat-gap.md) | 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である | question | open | maximum-safe, search-methods, certificates |
+| [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行1/行3欠損の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行2欠損の極大安全配置は全8,378ケースで存在しない — 単一行欠損クラス完結 | computation | computed | rectangles, variants, maximal-safe |
+| [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) | two_deficient_pair_runner: 5×m・q=7 の2行欠損 occupancy クラスを完全列挙する機械 | method | active | rectangles, variants, maximal-safe, verification |
+| [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・2行欠損 pair {0,1}/{3,4} の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) | 葉を持つC4飽和グラフの最小辺数はfloor((3n-5)/2) | proposition | proved | variants, geometry, maximal-safe |
+| [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) | 二値立方体重み2層の11次元最小極大配置は14石 | computation | computed | variants, geometry, maximal-safe |
+| [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) | C4飽和グラフはn>=11でn+3辺以上、重み2層の12次元最小値は15 | proposition | proved | variants, geometry, maximal-safe |
+>>>>>>> origin/main
