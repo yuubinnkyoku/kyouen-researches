@@ -1,3 +1,4 @@
+successfully downloaded text file (SHA: 5561d74fc240ed54bb68ee94268e37b6f31a599c)
 successfully downloaded text file (SHA: 9ea208b539c59debe972bd7e7e434972a5e03364)
 ---
 id: K0784
@@ -18,7 +19,7 @@ solution:
   verification: [mathematical-proof]
   certificate: 窓マスク完備候補生成（mod 9×11）+ 係数4/16合同証明書 + g₀計数補題 + 周期解析（c99=42・法9係数16周期最大6）+ A=0有限因子分解 + 標準形掃引（R'≤2×10⁷・e偶数強制）
   independent_check: witness 650 円の 26×26 全走査（24点・行集合=S*・重複なし）・切り詰め点数の直接列挙・witness 円 (A,e)=(9,−44) 制御再現・K0778/K0782 とは独立の第六実装・K0776 witness 探索が 650 円を見逃した理由の同定（行スパン 26 > 探索窓 17..22）
-  note: "P(21) は K0789 で 16 に確定（level 9 の生残 16 集合が素数冪 121=11²・343=7³ で全滅）。S* 実現の A>0 側は R'≤2×10⁷ の有限観測（ただし P(26)=24 上界は証明書による全称で R' 非依存）。level 13 の w=36..40 は未完で P(36)..P(40) ∈ [24, 2k−4]"
+  note: "P(21) は K0789 で 16 に確定（level 9 の生残 16 集合が素数冪 121=11²・343=7³ で全滅）。S* 実現の A>0 側は R'≤2×10⁷ の有限観測（ただし P(26)=24 上界は証明書による全称で R' 非依存）。level 13 の w=36..48 は K0788 で完了（P(36)..P(42)=24・P(43)..P(48)=26..32）"
 relations:
 - type: supports
   target: K0776
