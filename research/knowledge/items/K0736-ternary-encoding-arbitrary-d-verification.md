@@ -13,7 +13,7 @@ relations:
   target: K0712
   note: d=1323 固定の保存CNFから任意 d の再生成へ
 - type: supports
-  target: K0730
+  target: K0768
   note: 候補A/三値系の一般化が次の測定の前提になる
 artifacts:
 - path: research/experiments/parabola-ternary-selection-20261109/ternary_general.py

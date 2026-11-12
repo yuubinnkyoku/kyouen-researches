@@ -30,8 +30,8 @@ artifacts:
 - path: research/experiments/five-row-q7-m19-20261110/scripts/multi_deficient_runner.ts
   role: solver
   note: 完全列挙ランナー（旧front matterから移行）
-scope: ''旧front matterの evidence を移行: complete-enumeration''
-evidence: complete-enumeration（verification: deterministic-machine）。本文の完全列挙・監査記述を参照。
+scope: '旧front matterの evidence を移行: complete-enumeration'
+evidence: 'complete-enumeration（verification: deterministic-machine）。本文の完全列挙・監査記述を参照。'
 ---
 
 # 5x19 three-row deficient class {0,2,4} nonexistence

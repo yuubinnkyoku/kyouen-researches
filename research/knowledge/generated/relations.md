@@ -76,6 +76,8 @@
 - ← depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 標準q=4の共線・共円禁止四点に関する安全性
 - ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 標準q=4の共線・共円禁止四点に関する安全性
 - ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 標準q=4の安全性は部分集合に継承される
+- ← depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
+- ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -360,6 +362,10 @@
 - ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): q>2wでの全長系にのみ使う
 - ← generalizes [K0353](../items/K0353-two-dimensional-parallel-columns.md): 二次元の平行列配置についてq>2wで局面構造まで完全分類する
 - ← depends_on [K0455](../items/K0455-independent-row-capacity-state-counts.md): 独立行容量への幾何的帰着が成立する盤に適用
+- ← generalizes [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): q>2w（q≥13）を幅6のq=9..12まで拡張
+- ← generalizes [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): q>2w（w=7ではq≥15）をq=11..14まで拡張
+- ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 行分離公式の枠組み。本項目はP≤2wの自明円上界をP(8)=12に改良して閾値をq>16からq>12へ下げる
+- ← generalizes [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 行分離公式の新規(w,q)領域（w=12は全q未確定だった）
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -684,6 +690,10 @@
 - ← depends_on [K0385](../items/K0385-gcd-one-double-rows-up-to-400.md): 二重点行の整数係数・合同式の必要条件
 - ← depends_on [K0467](../items/K0467-tangent-mod16-fixed-width-circle-capacity.md): 連続整数行における二重点行数の全称上界を利用
 - ← depends_on [K0484](../items/K0484-width-five-q9-all-lengths.md): 法9平方剰余による連続行の障害と比較
+- ← depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 二重行数上界 d≤4（6連続行）のmod9中核を独立に再現して使用。行公式の枠組みも同じ
+- ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 二重行数上界のmod9枠組み（7連続行版を本項目で独立計算）
+- ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 二重行数上界のmod9枠組み（8連続行版を本項目で独立計算）
+- ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): Vieta整数化・合同除外証明書（w=9..14小幅とw=15..18半密度）。本項目は証明書が接点行混合集合にも有効であること（QR0）を解釈してP≤2(d+s)に変換
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -1586,10 +1596,7 @@
 - ← supports [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 本項の下界証人M_{3,4}>=24はK0302の確定値24と一致する。一般定理の上界69は十分長であり真の値ではない
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 - ← verifies [K0727](../items/K0727-blocker-obligation-fill-m57.md): 5×18のrepo既知witnessを座標まで完全再現
-<<<<<<< HEAD
-=======
 - ← verifies [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): 全分岐版が5×18で第3 witnessを発見し独立検証で確認（石分岐の健全性の実証）
->>>>>>> origin/main
 
 ## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類
 
@@ -1750,13 +1757,20 @@
 - ← supports [K0726](../items/K0726-width-five-nineteen-curve-census.md): 5×m・q=7の下界押し上げと将来のM_{5,7}厳密決定に使う曲線census
 - ← supports [K0727](../items/K0727-blocker-obligation-fill-m57.md): M_{5,7} 厳密決定に向けたoccupancyクラス別全ケース列挙キャンペーンの中核機械
 - ← supports [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): M_{5,7}=19 予想のうち欠損行≤5石・単一行欠損の行0/行4側の否定部
-<<<<<<< HEAD
-=======
 - ← supports [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): M_{5,7}=19 予想のうち単一行欠損クラスの行1/行3側の否定部
 - ← supports [K0739](../items/K0739-five-row-m19-class2-nonexistence.md): M_{5,7}=19 予想のうち単一行欠損クラスの行2（中央行）側の否定部
 - ← supports [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): M_{5,7}=19 の確定に必要な複数行欠損クラスの否定キャンペーンの中核機械
 - ← supports [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md): M_{5,7}=19 予想のうち2行欠損クラス pair {0,1}/{3,4} 側の否定部
->>>>>>> origin/main
+- ← supports [K0745](../items/K0745-five-row-m19-full-capacity-witness.md): M_{5,7}=19 における満容量安定化が空振りでないこと（30石極大配置の実在）を計算的に支持
+- ← supports [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md): M_{5,7}=19 予想のうち5行欠損クラス側の否定部
+- ← supports [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md): M_{5,7}=19 予想のうち4行欠損クラス{0,1,2,3}側の否定部
+- ← supports [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md): M_{5,7}=19 予想のうち4行欠損クラス{0,1,2,4}側の否定部
+- ← supports [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md): 安定化長 M_{6,7}（幅6版）が空振りでないことの計算的支持
+- ← supports [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 幅6安定化長M_{6,7}は m≥20 の候補に絞られた（6×19では35石極大安全配置が存在するため）
+- ← supports [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 幅6の安定化長はq≥9で確定（M_{6,q}=q−1）。M_{6,7}はm≥20のままopen
+- ← supports [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 幅7の安定化長はq≥11で確定。M_{7,q}(q≤10)はopen
+- ← supports [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 幅8の安定化長はq≥13で確定。M_{8,q}(q≤12)はopen
+- ← supports [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 安定化長M_{w,q}=q−1の大幅拡大（w=15:q=17..23・w=16:q=17..24・w=17:q=19..26・w=18:q=19..27等）
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -1776,11 +1790,8 @@
 - ← depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 禁止四点から固定完全対dへの直接投影節の定義
 - ← generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
-<<<<<<< HEAD
 - ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
-=======
-- ← supports [K0732](../items/K0732-parabola-four-point-determinant-factorization.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
->>>>>>> origin/main
+- ← supports [K0770](../items/K0770-parabola-four-point-determinant-factorization.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3663,6 +3674,12 @@
 - ← depends_on [K0724](../items/K0724-n11-classa-decomposition.md): 78先手勝ち/16第二手勝ち五石位置oracle
 - ← depends_on [K0725](../items/K0725-s2-5960-closure-worklist.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
 - ← depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）。 本計算は78 FW oracle条件下の条件付きworklist確定
+- ← depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): 94五石位置universe・3,868 S6スイープ（3,854 WIN/14 LOSS・感受性証明書fails 0）が 証明書{73}のS5/S6集合と同一（key-for-key・算術・部分集合の3系統で機械照合）
+- ← depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): 94五石位置オラクル（FW 78+SW 16・3,868 S6 verdict）をD4像込みで再利用する
 
 ## [K0676](../items/K0676-n11-region-s4-first-win.md) 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子）
 
@@ -3936,15 +3953,12 @@
 
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 禁止四点から固定完全対dへの直接投影節の定義
 - → generalizes [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 空対0の等号集合から、任意の空対数を持つ固定原点・完全対の集合へ拡張
-<<<<<<< HEAD
 - ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 空対を許す固定原点・完全対の三値選択を候補探索に使う。安全下界の採用は独立幾何による
 - ← depends_on [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md): 原点・完全対固定の三値選択と空対数によるサイズ表示
-=======
-- ← depends_on [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md): 固定原点・一完全対の還元の上でのクラス符号化
-- ← depends_on [K0731](../items/K0731-candidate-b-assumption-partition.md): 固定原点・一完全対の還元
 - ← verifies [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): 三値還元の一般 d 実装の検証
 - ← generalizes [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): d=1323 固定の保存CNFから任意 d の再生成へ
->>>>>>> origin/main
+- ← depends_on [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 固定原点・一完全対の還元の上でのクラス符号化
+- ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 固定原点・一完全対の還元
 
 ## [K0713](../items/K0713-binary-cube-coplanar-triple-completion.md) 二値立方体の共面四点は一意な平行四辺形で三点から高々一通りに補完
 
@@ -4007,19 +4021,22 @@
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
 - → depends_on [K0676](../items/K0676-n11-region-s4-first-win.md): S4-A/B/C四石親構造。S4-C={51,59,60,61}のFW子6個を確認
 - ← depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 閉鎖worklist 1,447 orbitの直接の子列挙による証明書分解
+- ← depends_on [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md): 閉鎖worklist 1,447 orbit・最小部分証明書 {5,115}/{27,93} 54 orbitの直接の子列挙
 
 ## [K0726](../items/K0726-width-five-nineteen-curve-census.md) 5×19盤の7点以上曲線は95本の円と5本の行直線のみ（7点円8本・8点円87本）
 
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5×m・q=7の下界押し上げと将来のM_{5,7}厳密決定に使う曲線census
 - ← depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): 欠損行blockerの候補は5×19の7-8点円census（95本）に限る
 - ← depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
-<<<<<<< HEAD
-=======
 - ← depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 - ← depends_on [K0739](../items/K0739-five-row-m19-class2-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 - ← depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): blocker候補曲線census（5×19: 7点円8本・8点円87本）
 - ← depends_on [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
->>>>>>> origin/main
+- ← depends_on [K0745](../items/K0745-five-row-m19-full-capacity-witness.md): 危険曲線census（95本）を同行ペア法で独立再生成し一致確認
+- ← depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- ← depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- ← depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- ← depends_on [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md): 5×19危険曲線census（95本）を同じ機械で完全再現する制御として使用
 
 ## [K0727](../items/K0727-blocker-obligation-fill-m57.md) blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械
 
@@ -4027,26 +4044,38 @@
 - → verifies [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 5×18のrepo既知witnessを座標まで完全再現
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7} 厳密決定に向けたoccupancyクラス別全ケース列挙キャンペーンの中核機械
 - ← depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md): blocker-obligation-fill DFS（sound+complete）による完全列挙
-<<<<<<< HEAD
-=======
 - ← depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): blocker-obligation-fill DFS（sound+complete・行fill修正済み）による完全列挙
 - ← depends_on [K0739](../items/K0739-five-row-m19-class2-nonexistence.md): blocker-obligation-fill DFS（sound+complete・行fill修正済み）による完全列挙
 - ← depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): blocker-obligation-fill DFS の2行欠損への一般化（census・伝播・葉fillは同一）
->>>>>>> origin/main
+- ← depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- ← depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- ← depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
 
 ## [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行0/行4欠損の極大安全配置は全8,378ケースで存在しない
 
 - → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): blocker-obligation-fill DFS（sound+complete）による完全列挙
 - → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち欠損行≤5石・単一行欠損の行0/行4側の否定部
+- ← depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- ← depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- ← depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
 
-## [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) S2 {59,60} の60 blockerは未知S5子のD4 orbit集合が一致する34 certificateに崩壊し、greedy順序のsecured coverageは1,447 orbitで完結する
+## [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) S2 {59,60} の61 blockerは未知S5子のD4 orbit集合が一致する35 certificateに崩壊し、greedy順序のsecured coverageは1,447 orbitで完結する
 
 - → depends_on [K0725](../items/K0725-s2-5960-closure-worklist.md): 閉鎖worklist 1,447 orbitの直接の子列挙による証明書分解
 - → depends_on [K0685](../items/K0685-n11-chain-audit-wall.md): best-S3 blocker監査・blocker選定規則
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md): 34 certificate崩壊とgreedy順序（先頭2証明書の選定基準）
+- ← depends_on [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md): 34 certificate崩壊とgreedy順序（証明書3–5位 {71},{82},{104} の選定基準）。 単独S6 orbit 2,421/2,516/2,563と累積union曲線は全て一致
+- ← depends_on [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md): 34 certificate崩壊とgreedy順序（証明書6–8位 {73},{90,96},{23}）。 単独S6 orbit 3,868/4,232/4,416と累積union 20,534はladder測定と完全一致
+- ← depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): 34 certificate崩壊とgreedy順序。step 9–33の証明書選択は greedy-ladder-complete log（2026-11-12）のS5レベル確定値と完全一致
 
-<<<<<<< HEAD
 ## [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線または共円四点を含まない標準q=4の安全性
@@ -4093,63 +4122,23 @@
 - → depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 安全集合の完全対は高々一つ
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の安全性は部分集合に継承される
-=======
-## [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した
-
-- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の還元の上でのクラス符号化
-- → supports [K0731](../items/K0731-candidate-b-assumption-partition.md): 候補B分割の適用記録
-- → supports [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 独立性検証の対象データ
-- ← depends_on [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 掃引記録
-- ← supports [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): 候補A/三値系の一般化が次の測定の前提になる
-
-## [K0731](../items/K0731-candidate-b-assumption-partition.md) 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値
-
-- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の還元
-- → depends_on [K0733](../items/K0733-forbidden-edge-generator-completeness.md): 辺リスト完全性（前提(1)）
-- → depends_on [K0732](../items/K0732-parabola-four-point-determinant-factorization.md): 捨て規則 (ii) の和条件（前提(2)）
-- → depends_on [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md): 基数符号化の範囲限定検証（前提(3)）
-- ← supports [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md): 候補B分割の適用記録
-- ← supports [K0732](../items/K0732-parabola-four-point-determinant-factorization.md): 捨て規則の和条件
-- ← supports [K0733](../items/K0733-forbidden-edge-generator-completeness.md): 前提(1)（辺リスト完全性）
-- ← supports [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md): 前提(3) の範囲限定格上げ
-- ← verifies [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 候補B 分割の適用に対する独立性検証
-- ← depends_on [K0737](../items/K0737-assumption-unsat-drat-gap.md): 前提(4) の所在
-
-## [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値
-
-- → supports [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
-- → supports [K0731](../items/K0731-candidate-b-assumption-partition.md): 捨て規則の和条件
-- ← depends_on [K0731](../items/K0731-candidate-b-assumption-partition.md): 捨て規則 (ii) の和条件（前提(2)）
-- ← depends_on [K0733](../items/K0733-forbidden-edge-generator-completeness.md): 系C1 の必要方向と第四点の一意性
-
-## [K0733](../items/K0733-forbidden-edge-generator-completeness.md) 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない
-
-- → depends_on [K0732](../items/K0732-parabola-four-point-determinant-factorization.md): 系C1 の必要方向と第四点の一意性
-- → supports [K0731](../items/K0731-candidate-b-assumption-partition.md): 前提(1)（辺リスト完全性）
-- ← depends_on [K0731](../items/K0731-candidate-b-assumption-partition.md): 辺リスト完全性（前提(1)）
-
-## [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
-
-- → supports [K0731](../items/K0731-candidate-b-assumption-partition.md): 前提(3) の範囲限定格上げ
-- ← depends_on [K0731](../items/K0731-candidate-b-assumption-partition.md): 基数符号化の範囲限定検証（前提(3)）
-- ← depends_on [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 同一符号化の基数制約
 
 ## [K0735](../items/K0735-easy-unsat-history-solver-independence.md) 候補B の易 UNSAT は学習節の履歴に依存せず、ソルバ横断でも d に応じた範囲で再現する
 
-- → verifies [K0731](../items/K0731-candidate-b-assumption-partition.md): 候補B 分割の適用に対する独立性検証
-- → depends_on [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md): 掃引記録
-- → depends_on [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md): 同一符号化の基数制約
-- ← supports [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md): 独立性検証の対象データ
+- → verifies [K0769](../items/K0769-candidate-b-assumption-partition.md): 候補B 分割の適用に対する独立性検証
+- → depends_on [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 掃引記録
+- → depends_on [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md): 同一符号化の基数制約
+- ← supports [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 独立性検証の対象データ
 
 ## [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) ternary 符号化の d 一般化実装は d=1323 で現行と同一の CNF・同一探索を再現し、任意 d で節生成が健全
 
 - → verifies [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 三値還元の一般 d 実装の検証
 - → generalizes [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): d=1323 固定の保存CNFから任意 d の再生成へ
-- → supports [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md): 候補A/三値系の一般化が次の測定の前提になる
+- → supports [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 候補A/三値系の一般化が次の測定の前提になる
 
 ## [K0737](../items/K0737-assumption-unsat-drat-gap.md) 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
 
-- → depends_on [K0731](../items/K0731-candidate-b-assumption-partition.md): 前提(4) の所在
+- → depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 前提(4) の所在
 - → depends_on [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): DRAT 監査の実施例
 
 ## [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行1/行3欠損の極大安全配置は全8,378ケースで存在しない
@@ -4171,6 +4160,10 @@
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 の確定に必要な複数行欠損クラスの否定キャンペーンの中核機械
 - → verifies [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 全分岐版が5×18で第3 witnessを発見し独立検証で確認（石分岐の健全性の実証）
 - ← depends_on [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md): two_deficient_pair_runner（ハイブリッド blocker-fill DFS・等価検証済み flat 版）による完全列挙
+- ← supports [K0745](../items/K0745-five-row-m19-full-capacity-witness.md): 残る3/4/5行欠損クラスのblocker構造（必ず他欠損行の石が必要）の定量基礎を供給
+- ← depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md): two_deficient_pair_runner の DEF_ROWS 汎用版 multi_deficient_runner による完全列挙（等価性・陽性対照とも PASS）
+- ← depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md): multi_deficient_runner（two_deficient_pair_runner_flat の DEF_ROWS 汎用版）による完全列挙（制御2種とも PASS）
+- ← depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md): multi_deficient_runner（two_deficient_pair_runner_flat の DEF_ROWS 汎用版）による完全列挙（制御2種とも PASS）
 
 ## [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) 5×19 の (5,6,6,6,6) 型・2行欠損 pair {0,1}/{3,4} の極大安全配置は全8,378ケースで存在しない
 
@@ -4195,4 +4188,292 @@
 - → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): n+2下界と重み2層のC4対応、偶数次元の構成
 - → depends_on [K0742](../items/K0742-c4-saturation-with-leaf-exact.md): 葉を持つ候補の辺数下界
 - → depends_on [K0743](../items/K0743-weight-two-d11-saturation-minimum.md): 11頂点13辺の有限核排除と三重閉路核の構造
->>>>>>> origin/main
+
+## [K0745](../items/K0745-five-row-m19-full-capacity-witness.md) 5×19には(6,6,6,6,6)型30石の安全極大配置が存在する（検証済みwitness）
+
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): 危険曲線census（95本）を同行ペア法で独立再生成し一致確認
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 における満容量安定化が空振りでないこと（30石極大配置の実在）を計算的に支持
+- → supports [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): 残る3/4/5行欠損クラスのblocker構造（必ず他欠損行の石が必要）の定量基礎を供給
+- ← depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md): 満容量 (6,6,6,6,6) witness 実在との対比で occupancy クラス空間を分割
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+- ← depends_on [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md): 満容量witness構成・2経路検証の方法を幅6に拡張
+
+## [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md) S2 {59,60} milestone-1のS6 orbit worklist manifest（greedy先頭2証明書・blocker 4個・S6 orbit 4,262・コスト分布とsolver protocol確定）
+
+- → depends_on [K0725](../items/K0725-s2-5960-closure-worklist.md): 閉鎖worklist 1,447 orbit・最小部分証明書 {5,115}/{27,93} 54 orbitの直接の子列挙
+- → depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 34 certificate崩壊とgreedy順序（先頭2証明書の選定基準）
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md): milestone-1 manifest（証明書2個・S6 orbit 4,262）のgreedy順拡張。 milestone-1の4,262鍵は本unionのcerts&3部分集合として完全一致・cost全件一致
+
+## [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md) 5×19 の5行欠損クラス（全行 ≤5 石・occupancy 自由）の極大安全配置は全8,378ケースで存在しない
+
+- → depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): two_deficient_pair_runner の DEF_ROWS 汎用版 multi_deficient_runner による完全列挙（等価性・陽性対照とも PASS）
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- → depends_on [K0745](../items/K0745-five-row-m19-full-capacity-witness.md): 満容量 (6,6,6,6,6) witness 実在との対比で occupancy クラス空間を分割
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち5行欠損クラス側の否定部
+- ← depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md): 同一機械・同一k-block分割による5行欠損クラス完全否定の直接の後継
+- ← depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- ← depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- ← depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+- ← depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 移植元のmulti_deficient_runner機械（アルゴリズム・探索順・計数を同一移植）
+
+## [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md) S2 {59,60} milestone-2のS6 orbit worklist manifest（greedy証明書1–5・blocker 7個・S6 orbit 10,988・cost分布とladder拡張測定）
+
+- → depends_on [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md): milestone-1 manifest（証明書2個・S6 orbit 4,262）のgreedy順拡張。 milestone-1の4,262鍵は本unionのcerts&3部分集合として完全一致・cost全件一致
+- → depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 34 certificate崩壊とgreedy順序（証明書3–5位 {71},{82},{104} の選定基準）。 単独S6 orbit 2,421/2,516/2,563と累積union曲線は全て一致
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md): milestone-2 manifest（証明書1–5・S6 orbit 10,988）のgreedy順拡張。 milestone-2の10,988鍵は本unionの部分集合でcost全件一致・共有2,248件はcerts拡張
+
+## [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md) 5×19 の4行欠損クラス {0,1,2,3}（行0-3 ≤5石・行4ちょうど6石）の極大安全配置は全8,378ケースで存在しない
+
+- → depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): multi_deficient_runner（two_deficient_pair_runner_flat の DEF_ROWS 汎用版）による完全列挙（制御2種とも PASS）
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md): 同一機械・同一k-block分割による5行欠損クラス完全否定の直接の後継
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち4行欠損クラス{0,1,2,3}側の否定部
+- ← depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md): 同一機械・同一k-block分割による4行欠損クラス{0,1,2,3}完全否定の直接の後継
+- ← depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- ← depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- ← depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md) 5×19 の4行欠損クラス {0,1,2,4}（行0-2・行4 ≤5石・行3ちょうど6石）の極大安全配置は全8,378ケースで存在しない
+
+- → depends_on [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): multi_deficient_runner（two_deficient_pair_runner_flat の DEF_ROWS 汎用版）による完全列挙（制御2種とも PASS）
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md): 同一機械・同一k-block分割による4行欠損クラス{0,1,2,3}完全否定の直接の後継
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち4行欠損クラス{0,1,2,4}側の否定部
+- ← depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- ← depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- ← depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md) 5x19 four-row deficient class {0,1,3,4} nonexistence
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md)
+- → depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md)
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md)
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md)
+- → depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md)
+- ← depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- ← depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0752](../items/K0752-three-row-m19-class012-nonexistence.md) 5x19 three-row deficient class {0,1,2} nonexistence
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md)
+- → depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md)
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md)
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md)
+- → depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md)
+- → depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- ← depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0753](../items/K0753-three-row-m19-class013-nonexistence.md) 5x19 three-row deficient class {0,1,3} nonexistence
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md)
+- → depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md)
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md)
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md)
+- → depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md)
+- → depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- → depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- ← depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md) S2 {59,60} milestone-3のS6 orbit worklist manifest（greedy証明書1–8・blocker 14個（61中）・S6 orbit 20,534 = 49.1%・milestone-2完全包含）
+
+- → depends_on [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md): milestone-2 manifest（証明書1–5・S6 orbit 10,988）のgreedy順拡張。 milestone-2の10,988鍵は本unionの部分集合でcost全件一致・共有2,248件はcerts拡張
+- → depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 34 certificate崩壊とgreedy順序（証明書6–8位 {73},{90,96},{23}）。 単独S6 orbit 3,868/4,232/4,416と累積union 20,534はladder測定と完全一致
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）
+- ← depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): milestone-3 manifest（証明書1–8・S6 20,534）の全33ステップ拡張。 milestone-3の20,534鍵は本unionの部分集合でcost不一致0件（機械検証）・ 516 s5Repsも義務数不一致0件で部分集合
+- ← depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): milestone-3の{73}単体3,868・greedy順序（step 6）と一致
+
+## [K0755](../items/K0755-three-row-m19-class014-nonexistence.md) 5x19 three-row deficient class {0,1,4} nonexistence
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md)
+- → depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md)
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md)
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md)
+- → depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md)
+- → depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- → depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- → depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- ← depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0756](../items/K0756-three-row-m19-class023-nonexistence.md) 5x19 three-row deficient class {0,2,3} nonexistence
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md)
+- → depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md)
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md)
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md)
+- → depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md)
+- → depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- → depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- → depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- → depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- ← depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) S2 {59,60} 完全S6 worklist manifest（greedy証明書1–33・43,375 S6 orbit = 全worklist・S5 1,447・q59推定41,842の訂正）
+
+- → depends_on [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md): milestone-3 manifest（証明書1–8・S6 20,534）の全33ステップ拡張。 milestone-3の20,534鍵は本unionの部分集合でcost不一致0件（機械検証）・ 516 s5Repsも義務数不一致0件で部分集合
+- → depends_on [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md): 34 certificate崩壊とgreedy順序。step 9–33の証明書選択は greedy-ladder-complete log（2026-11-12）のS5レベル確定値と完全一致
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）。 本計算は78 FW oracle条件下の条件付きworklist確定
+- ← depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): 修正版milestone-4 manifestの証明書{73}（greedy step 6・bit 32・s6All 3,868・ s5Reps 94・rawObligations 7,890）を対象とする
+- ← depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): published ladderの61 blocker（raw一致のみ）は全D4像照合で8 blockerに訂正縮小される
+
+## [K0758](../items/K0758-three-row-m19-class024-nonexistence.md) 5x19 three-row deficient class {0,2,4} nonexistence
+
+- → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md)
+- → depends_on [K0728](../items/K0728-five-row-m19-class0-nonexistence.md)
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md)
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md)
+- → depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md)
+- → depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- → depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- → depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- → depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- → depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- ← depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md)
+
+## [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md) 5x19 three-row deficient class {1,2,3} nonexistence and completion of row-occupancy classification
+
+- → depends_on [K0745](../items/K0745-five-row-m19-full-capacity-witness.md)
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md)
+- → depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md)
+- → depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md)
+- → depends_on [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md)
+- → depends_on [K0752](../items/K0752-three-row-m19-class012-nonexistence.md)
+- → depends_on [K0753](../items/K0753-three-row-m19-class013-nonexistence.md)
+- → depends_on [K0755](../items/K0755-three-row-m19-class014-nonexistence.md)
+- → depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
+- → depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
+- ← depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 5×19では同クラスが不在（全極大安全配置が満容量30石）— 本項目はその幅6版が6×19では在ることを示す対比
+
+## [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) 6×m（q=7）危険曲線censusと満容量36石witness — 幅6 occupancyプログラムのseed
+
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): 5×19危険曲線census（95本）を同じ機械で完全再現する制御として使用
+- → depends_on [K0745](../items/K0745-five-row-m19-full-capacity-witness.md): 満容量witness構成・2経路検証の方法を幅6に拡張
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長 M_{6,7}（幅6版）が空振りでないことの計算的支持
+- ← depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 危険円census（chord法・6×13で3点外心brute-forceと一致検証済み）を機械が使用
+- ← depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 8点円の実在（census・再現一致）により上界の等号成立を保証
+
+## [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) 6×m（q=7）1行欠損クラスは6×13/16/19に存在 — 5×19（K0759）との質的対比、m≥20は未解決
+
+- → depends_on [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md): 危険円census（chord法・6×13で3点外心brute-forceと一致検証済み）を機械が使用
+- → depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md): 5×19では同クラスが不在（全極大安全配置が満容量30石）— 本項目はその幅6版が6×19では在ることを示す対比
+- → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md): 移植元のmulti_deficient_runner機械（アルゴリズム・探索順・計数を同一移植）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 幅6安定化長M_{6,7}は m≥20 の候補に絞られた（6×19では35石極大安全配置が存在するため）
+
+## [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) S2 {59,60} 証明書{73}のS6 worklistはK0675スイープで全て認定済み（新規S6計算ゼロ・残り39,507 orbit）・30証明書閉鎖ロードマップ
+
+- → depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): 修正版milestone-4 manifestの証明書{73}（greedy step 6・bit 32・s6All 3,868・ s5Reps 94・rawObligations 7,890）を対象とする
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置universe・3,868 S6スイープ（3,854 WIN/14 LOSS・感受性証明書fails 0）が 証明書{73}のS5/S6集合と同一（key-for-key・算術・部分集合の3系統で機械照合）
+- → depends_on [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md): milestone-3の{73}単体3,868・greedy順序（step 6）と一致
+- ← depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): judgedS6 3,868の再確定と方向規約の確認により「blocker 73閉鎖判定はデータready」の前提が確定した
+
+## [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) 幅6整数格子の円は全mで最大8格子点 — P(6)=8の全称証明とq=9..12の行分離公式 M_{6,q}=q−1
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 二重行数上界 d≤4（6連続行）のmod9中核を独立に再現して使用。行公式の枠組みも同じ
+- → depends_on [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md): 8点円の実在（census・再現一致）により上界の等号成立を保証
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 幅6の安定化長はq≥9で確定（M_{6,q}=q−1）。M_{6,7}はm≥20のままopen
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2w（q≥13）を幅6のq=9..12まで拡張
+- ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 接点補題（f|t・符号論・(1,4)一意分解）のw=7拡張。P(6)=8との対比でw依存性を分離
+- ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 接点補題（f|t・符号論）の原形
+- ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): P=2d+s・接点行s≤2の会計枠組み
+
+## [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) 幅7整数格子の円は全mでP(7)=10・可能サイズ{7,8,10} — 9・11・12点円の全称不在とq=11..12の行分離公式
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 二重行数上界のmod9枠組み（7連続行版を本項目で独立計算）
+- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 接点補題（f|t・符号論・(1,4)一意分解）のw=7拡張。P(6)=8との対比でw依存性を分離
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 幅7の安定化長はq≥11で確定。M_{7,q}(q≤10)はopen
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2w（w=7ではq≥15）をq=11..14まで拡張
+- ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): w=7 の非両立ペア排除((1,3),(2,3),(3,4),(3,5),(1,4),(5,6))をt∈{1..6}に再利用
+- ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): witness円(2x−7)²+(2y−7)²=50の原形（w=9,10 witnessと同一円）
+
+## [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) 幅8整数格子の円は全mでP(8)=12・可能サイズ{7,8,10,12}・9以上は偶数のみ — 素数オフセット補題とq=13..16の行分離公式
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 二重行数上界のmod9枠組み（8連続行版を本項目で独立計算）
+- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 接点補題（f|t・符号論）の原形
+- → depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): w=7 の非両立ペア排除((1,3),(2,3),(3,4),(3,5),(1,4),(5,6))をt∈{1..6}に再利用
+- → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の枠組み。本項目はP≤2wの自明円上界をP(8)=12に改良して閾値をq>16からq>12へ下げる
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 幅8の安定化長はq≥13で確定。M_{8,q}(q≤12)はopen
+- ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 幅6/7/8の決定と接続。w=8 witnessがw=9,10のwitnessを兼ねる
+
+## [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md) S3 {59,60,61}のblockerは全D4像照合で102/110が即W4閉鎖・残り8個（3 V4類）・残work新規S6 7,880/cost 616,491・judgedS6矛盾（4,342 vs 3,868）はhex転写破損と確定
+
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置オラクル（FW 78+SW 16・3,868 S6 verdict）をD4像込みで再利用する
+- → depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): published ladderの61 blocker（raw一致のみ）は全D4像照合で8 blockerに訂正縮小される
+- → depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): judgedS6 3,868の再確定と方向規約の確認により「blocker 73閉鎖判定はデータready」の前提が確定した
+
+## [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) 幅9..16整数格子の円点数P(w)完全決定（12,12,14,16,16,16,16,16）・P(17),P(18)≤18 — 混合点行証明書の接点対応解釈と新規q領域の行分離公式
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): Vieta整数化・合同除外証明書（w=9..14小幅とw=15..18半密度）。本項目は証明書が接点行混合集合にも有効であること（QR0）を解釈してP≤2(d+s)に変換
+- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): P=2d+s・接点行s≤2の会計枠組み
+- → depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): witness円(2x−7)²+(2y−7)²=50の原形（w=9,10 witnessと同一円）
+- → depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 幅6/7/8の決定と接続。w=8 witnessがw=9,10のwitnessを兼ねる
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規(w,q)領域（w=12は全q未確定だった）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}=q−1の大幅拡大（w=15:q=17..23・w=16:q=17..24・w=17:q=19..26・w=18:q=19..27等）
+
+## [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した
+
+- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の還元の上でのクラス符号化
+- → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 候補B分割の適用記録
+- → supports [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 独立性検証の対象データ
+- ← depends_on [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 掃引記録
+- ← supports [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md): 候補A/三値系の一般化が次の測定の前提になる
+
+## [K0769](../items/K0769-candidate-b-assumption-partition.md) 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値
+
+- → depends_on [K0712](../items/K0712-parabola-empty-pair-ternary-sat-reduction.md): 固定原点・一完全対の還元
+- → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 辺リスト完全性（前提(1)）
+- → depends_on [K0770](../items/K0770-parabola-four-point-determinant-factorization.md): 捨て規則 (ii) の和条件（前提(2)）
+- → depends_on [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md): 基数符号化の範囲限定検証（前提(3)）
+- ← verifies [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 候補B 分割の適用に対する独立性検証
+- ← depends_on [K0737](../items/K0737-assumption-unsat-drat-gap.md): 前提(4) の所在
+- ← supports [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md): 候補B分割の適用記録
+- ← supports [K0770](../items/K0770-parabola-four-point-determinant-factorization.md): 捨て規則の和条件
+- ← supports [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 前提(1)（辺リスト完全性）
+- ← supports [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md): 前提(3) の範囲限定格上げ
+
+## [K0770](../items/K0770-parabola-four-point-determinant-factorization.md) 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値
+
+- → supports [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
+- → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 捨て規則の和条件
+- ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 捨て規則 (ii) の和条件（前提(2)）
+- ← depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 系C1 の必要方向と第四点の一意性
+
+## [K0771](../items/K0771-forbidden-edge-generator-completeness.md) 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない
+
+- → depends_on [K0770](../items/K0770-parabola-four-point-determinant-factorization.md): 系C1 の必要方向と第四点の一意性
+- → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 前提(1)（辺リスト完全性）
+- ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 辺リスト完全性（前提(1)）
+
+## [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
+
+- → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 前提(3) の範囲限定格上げ
+- ← depends_on [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 同一符号化の基数制約
+- ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 基数符号化の範囲限定検証（前提(3)）

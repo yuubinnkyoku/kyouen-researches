@@ -1,50 +1,28 @@
 # 移行集計
 
-<<<<<<< HEAD
-K項目: 716 / alias: 269 / artifactファイル: 3921
-=======
-K項目: 726 / alias: 269 / artifactファイル: 3835
->>>>>>> origin/main
+K項目: 754 / alias: 269 / artifactファイル: 4043
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-<<<<<<< HEAD
-| computation | 75 |
-| definition | 5 |
-| method | 5 |
-| proposition | 565 |
-| question | 38 |
-| verification | 28 |
-=======
-| computation | 80 |
+| computation | 92 |
 | definition | 5 |
 | method | 6 |
-| proposition | 565 |
+| proposition | 581 |
 | question | 39 |
 | verification | 31 |
->>>>>>> origin/main
 
 ## status
 
 | 値 | 件数 |
 |---|---:|
-<<<<<<< HEAD
-| active | 10 |
-| computed | 169 |
-| conjectured | 2 |
-| observed | 26 |
-| open | 36 |
-| proved | 366 |
-=======
 | active | 11 |
-| computed | 169 |
+| computed | 193 |
 | conjectured | 2 |
 | observed | 26 |
 | open | 37 |
-| proved | 371 |
->>>>>>> origin/main
+| proved | 375 |
 | refuted | 64 |
 | scope-unclear | 2 |
 | superseded | 9 |
@@ -55,46 +33,25 @@ K項目: 726 / alias: 269 / artifactファイル: 3835
 
 | 値 | 件数 |
 |---|---:|
-<<<<<<< HEAD
-| certificates | 100 |
+| certificates | 107 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 359 |
+| geometry | 372 |
 | grundy | 171 |
-| maximal-safe | 178 |
-| maximum-safe | 89 |
+| maximal-safe | 198 |
+| maximum-safe | 96 |
 | migration | 1 |
 | provenance | 40 |
 | reconfiguration | 38 |
-| rectangles | 108 |
-| residual-games | 124 |
-| rules | 8 |
-| search-methods | 112 |
-| square-outcomes | 94 |
-| statistics | 121 |
-| strategy-length | 94 |
-| variants | 300 |
-=======
-| certificates | 101 |
-| first-moves | 67 |
-| formalization | 5 |
-| geometry | 363 |
-| grundy | 171 |
-| maximal-safe | 184 |
-| maximum-safe | 91 |
-| migration | 1 |
-| provenance | 40 |
-| reconfiguration | 34 |
-| rectangles | 112 |
+| rectangles | 129 |
 | residual-games | 124 |
 | rules | 8 |
 | search-methods | 117 |
-| square-outcomes | 94 |
+| square-outcomes | 100 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 307 |
->>>>>>> origin/main
-| verification | 124 |
+| variants | 317 |
+| verification | 138 |
 
 ## 未解決・要監査・範囲不明
 

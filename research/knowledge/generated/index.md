@@ -712,19 +712,12 @@
 | [K0726](../items/K0726-width-five-nineteen-curve-census.md) | 5×19盤の7点以上曲線は95本の円と5本の行直線のみ（7点円8本・8点円87本） | computation | computed | rectangles, geometry, variants, maximal-safe |
 | [K0727](../items/K0727-blocker-obligation-fill-m57.md) | blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械 | method | active | rectangles, variants, maximal-safe, verification |
 | [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) | 5×19 の (5,6,6,6,6) 型・行0/行4欠損の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
-| [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) | S2 {59,60} の60 blockerは未知S5子のD4 orbit集合が一致する34 certificateに崩壊し、greedy順序のsecured coverageは1,447 orbitで完結する | computation | computed | square-outcomes, certificates, verification |
-<<<<<<< HEAD
+| [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) | S2 {59,60} の61 blockerは未知S5子のD4 orbit集合が一致する35 certificateに崩壊し、greedy順序のsecured coverageは1,447 orbitで完結する | computation | computed | square-outcomes, certificates, verification |
 | [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) | Q_2539の安全最大サイズは1258以上1271以下、保存1258点集合は包含極大 | proposition | computed | geometry, maximum-safe, maximal-safe, verification |
 | [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) | Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) | Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) | Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) | Q_2539の五点削除改善は248点を避け空対18点から二点以上を追加する必要がある | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
-=======
-| [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) | p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した | computation | computed | geometry, maximum-safe, search-methods |
-| [K0731](../items/K0731-candidate-b-assumption-partition.md) | 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値 | proposition | proved | geometry, maximum-safe, search-methods |
-| [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) | 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値 | proposition | proved | geometry, maximum-safe |
-| [K0733](../items/K0733-forbidden-edge-generator-completeness.md) | 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない | proposition | proved | geometry, maximum-safe, verification |
-| [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) | pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす | verification | verified | verification, search-methods |
 | [K0735](../items/K0735-easy-unsat-history-solver-independence.md) | 候補B の易 UNSAT は学習節の履歴に依存せず、ソルバ横断でも d に応じた範囲で再現する | verification | verified | geometry, maximum-safe, verification |
 | [K0736](../items/K0736-ternary-encoding-arbitrary-d-verification.md) | ternary 符号化の d 一般化実装は d=1323 で現行と同一の CNF・同一探索を再現し、任意 d で節生成が健全 | verification | verified | geometry, maximum-safe, search-methods, verification |
 | [K0737](../items/K0737-assumption-unsat-drat-gap.md) | 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である | question | open | maximum-safe, search-methods, certificates |
@@ -735,4 +728,31 @@
 | [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) | 葉を持つC4飽和グラフの最小辺数はfloor((3n-5)/2) | proposition | proved | variants, geometry, maximal-safe |
 | [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) | 二値立方体重み2層の11次元最小極大配置は14石 | computation | computed | variants, geometry, maximal-safe |
 | [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md) | C4飽和グラフはn>=11でn+3辺以上、重み2層の12次元最小値は15 | proposition | proved | variants, geometry, maximal-safe |
->>>>>>> origin/main
+| [K0745](../items/K0745-five-row-m19-full-capacity-witness.md) | 5×19には(6,6,6,6,6)型30石の安全極大配置が存在する（検証済みwitness） | computation | computed | rectangles, variants, maximal-safe, verification |
+| [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md) | S2 {59,60} milestone-1のS6 orbit worklist manifest（greedy先頭2証明書・blocker 4個・S6 orbit 4,262・コスト分布とsolver protocol確定） | computation | computed | square-outcomes, certificates, verification |
+| [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md) | 5×19 の5行欠損クラス（全行 ≤5 石・occupancy 自由）の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md) | S2 {59,60} milestone-2のS6 orbit worklist manifest（greedy証明書1–5・blocker 7個・S6 orbit 10,988・cost分布とladder拡張測定） | computation | computed | square-outcomes, certificates, verification |
+| [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md) | 5×19 の4行欠損クラス {0,1,2,3}（行0-3 ≤5石・行4ちょうど6石）の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md) | 5×19 の4行欠損クラス {0,1,2,4}（行0-2・行4 ≤5石・行3ちょうど6石）の極大安全配置は全8,378ケースで存在しない | computation | computed | rectangles, variants, maximal-safe |
+| [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md) | 5x19 four-row deficient class {0,1,3,4} nonexistence | proposition | computed | rectangles, maximal-safe |
+| [K0752](../items/K0752-three-row-m19-class012-nonexistence.md) | 5x19 three-row deficient class {0,1,2} nonexistence | proposition | computed | rectangles, maximal-safe |
+| [K0753](../items/K0753-three-row-m19-class013-nonexistence.md) | 5x19 three-row deficient class {0,1,3} nonexistence | proposition | computed | rectangles, maximal-safe |
+| [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md) | S2 {59,60} milestone-3のS6 orbit worklist manifest（greedy証明書1–8・blocker 14個（61中）・S6 orbit 20,534 = 49.1%・milestone-2完全包含） | computation | computed | square-outcomes, certificates, verification |
+| [K0755](../items/K0755-three-row-m19-class014-nonexistence.md) | 5x19 three-row deficient class {0,1,4} nonexistence | proposition | computed | rectangles, maximal-safe |
+| [K0756](../items/K0756-three-row-m19-class023-nonexistence.md) | 5x19 three-row deficient class {0,2,3} nonexistence | proposition | computed | rectangles, maximal-safe |
+| [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) | S2 {59,60} 完全S6 worklist manifest（greedy証明書1–33・43,375 S6 orbit = 全worklist・S5 1,447・q59推定41,842の訂正） | computation | computed | square-outcomes, certificates, verification |
+| [K0758](../items/K0758-three-row-m19-class024-nonexistence.md) | 5x19 three-row deficient class {0,2,4} nonexistence | proposition | computed | rectangles, maximal-safe |
+| [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md) | 5x19 three-row deficient class {1,2,3} nonexistence and completion of row-occupancy classification | proposition | computed | rectangles, maximal-safe |
+| [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) | 6×m（q=7）危険曲線censusと満容量36石witness — 幅6 occupancyプログラムのseed | computation | computed | rectangles, variants, maximal-safe, verification |
+| [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) | 6×m（q=7）1行欠損クラスは6×13/16/19に存在 — 5×19（K0759）との質的対比、m≥20は未解決 | computation | computed | rectangles, variants, maximal-safe, verification |
+| [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) | S2 {59,60} 証明書{73}のS6 worklistはK0675スイープで全て認定済み（新規S6計算ゼロ・残り39,507 orbit）・30証明書閉鎖ロードマップ | computation | computed | square-outcomes, certificates, verification |
+| [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) | 幅6整数格子の円は全mで最大8格子点 — P(6)=8の全称証明とq=9..12の行分離公式 M_{6,q}=q−1 | proposition | proved | rectangles, geometry, variants |
+| [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) | 幅7整数格子の円は全mでP(7)=10・可能サイズ{7,8,10} — 9・11・12点円の全称不在とq=11..12の行分離公式 | proposition | proved | rectangles, geometry, variants |
+| [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) | 幅8整数格子の円は全mでP(8)=12・可能サイズ{7,8,10,12}・9以上は偶数のみ — 素数オフセット補題とq=13..16の行分離公式 | proposition | proved | rectangles, geometry, variants |
+| [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md) | S3 {59,60,61}のblockerは全D4像照合で102/110が即W4閉鎖・残り8個（3 V4類）・残work新規S6 7,880/cost 616,491・judgedS6矛盾（4,342 vs 3,868）はhex転写破損と確定 | computation | computed | square-outcomes, certificates, verification |
+| [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) | 幅9..16整数格子の円点数P(w)完全決定（12,12,14,16,16,16,16,16）・P(17),P(18)≤18 — 混合点行証明書の接点対応解釈と新規q領域の行分離公式 | proposition | proved | rectangles, geometry, variants |
+| [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) | p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した | computation | computed | geometry, maximum-safe, search-methods |
+| [K0769](../items/K0769-candidate-b-assumption-partition.md) | 形状クラスCNFのモデル集合は完全対の仮定 B_d で互いに素に分割され、全 d の UNSAT はクラス UNSAT と同値 | proposition | proved | geometry, maximum-safe, search-methods |
+| [K0770](../items/K0770-parabola-four-point-determinant-factorization.md) | 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値 | proposition | proved | geometry, maximum-safe |
+| [K0771](../items/K0771-forbidden-edge-generator-completeness.md) | 剰余放物線の禁止四点の列挙アルゴリズムは健全・完全・重複なしで、辺リストは過不足がない | proposition | proved | geometry, maximum-safe, verification |
+| [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) | pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす | verification | verified | verification, search-methods |

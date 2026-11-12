@@ -1,5 +1,5 @@
 ---
-id: K0734
+id: K0772
 title: pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
 kind: verification
 status: verified
@@ -7,7 +7,7 @@ topics: [verification, search-methods]
 aliases: []
 relations:
 - type: supports
-  target: K0731
+  target: K0769
   note: 前提(3) の範囲限定格上げ
 artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py

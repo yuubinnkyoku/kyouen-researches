@@ -1721,12 +1721,6 @@
 ## [research/experiments/five-edge-terminal-spectrum-20261101/verify.py](../../../research/experiments/five-edge-terminal-spectrum-20261101/verify.py)
 
 - [K0597](../items/K0597-five-forbidden-sets-terminal-spectrum.md) (verifier): 17902所属型族・4717374安全局面、271重複署名盤・383059安全局面、14点全1001四点組・12651安全局面の独立照合
-<<<<<<< HEAD
-## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_blocker_dfs.ts)
-
-- [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
-- [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (source): blocker-obligation-fill DFSの再現ソース
-=======
 ## [research/experiments/five-row-q7-m19-20261110/circle-census-independent.json](../../../research/experiments/five-row-q7-m19-20261110/circle-census-independent.json)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (data): 5×18では84本、5×19では95本の7点以上の円
@@ -1736,6 +1730,9 @@
 ## [research/experiments/five-row-q7-m19-20261110/class1-5x8-mixed-audit.json](../../../research/experiments/five-row-q7-m19-20261110/class1-5x8-mixed-audit.json)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (data): 計4302592候補・相異なる86998証人の照合結果
+## [research/experiments/five-row-q7-m19-20261110/output/full_capacity_witness_5x19.json](../../../research/experiments/five-row-q7-m19-20261110/output/full_capacity_witness_5x19.json)
+
+- [K0745](../items/K0745-five-row-m19-full-capacity-witness.md) (data): witness W1・検証結果・密度・census行分布・残クラス統計
 ## [research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py](../../../research/experiments/five-row-q7-m19-20261110/scripts/audit_circle_census.py)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (verifier): 別行の水平弦2本から長い円を生成する独立検算
@@ -1758,10 +1755,24 @@
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): 機械本体。MODE='single' で単一S0、MODE='campaign' + START でスライス実行
 - [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (source): 欠損行クラスのblocker-obligation-fill DFS実装
->>>>>>> origin/main
 ## [research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_m19_search.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/five_row_q7_m19_search.ts)
 
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (source): 行対ペア列挙と全三点組列挙の2系統によるcensus再現、SA探索、独立検証器を同梱
+## [research/experiments/five-row-q7-m19-20261110/scripts/full_capacity_witness_5x19.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/full_capacity_witness_5x19.ts)
+
+- [K0745](../items/K0745-five-row-m19-full-capacity-witness.md) (source): census再生成・witness探索・3経路安全性検証・密度測定・残クラスblocker統計の完全再現スクリプト
+## [research/experiments/five-row-q7-m19-20261110/scripts/multi_deficient_runner.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/multi_deficient_runner.ts)
+
+- [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md) (source): DEF_ROWS 差し替え汎用機械（5/4/3行欠損クラスすべてに使用可・制御2種で検証済み）
+- [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md) (source): DEF_ROWS=[0,1,2,3] で実行（等価性制御1・陽性対照制御2はK0747と同一）
+- [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md) (source): DEF_ROWS=[0,1,2,4] で実行（等価性制御1・陽性対照制御2はK0747と同一）
+- [K0751](../items/K0751-four-row-m19-class0134-nonexistence.md) (solver): 完全列挙ランナー（旧front matterから移行）
+- [K0752](../items/K0752-three-row-m19-class012-nonexistence.md) (solver): 完全列挙ランナー（旧front matterから移行）
+- [K0753](../items/K0753-three-row-m19-class013-nonexistence.md) (solver): 完全列挙ランナー（旧front matterから移行）
+- [K0755](../items/K0755-three-row-m19-class014-nonexistence.md) (solver): 完全列挙ランナー（旧front matterから移行）
+- [K0756](../items/K0756-three-row-m19-class023-nonexistence.md) (solver): 完全列挙ランナー（旧front matterから移行）
+- [K0758](../items/K0758-three-row-m19-class024-nonexistence.md) (solver): 完全列挙ランナー（旧front matterから移行）
+- [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md) (solver): 完全列挙ランナー（旧front matterから移行）
 ## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class0.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class0.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{0} スライスrunner（双方向・global NODE_CAP）
@@ -1769,8 +1780,6 @@
 ## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class1.ts)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (source): クラス{1}（行1欠損）スライスrunner（Y0=1、葉fillは行0から）
-<<<<<<< HEAD
-=======
 - [K0738](../items/K0738-five-row-m19-class1-nonexistence.md) (source): クラス{1}（Y0=1）スライスrunner。行fill修正後の全スライスで使用
 ## [research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class2.ts](../../../research/experiments/five-row-q7-m19-20261110/scripts/slice_runner_class2.ts)
 
@@ -1806,7 +1815,6 @@
 ## [research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json](../../../research/experiments/five-row-q7-m19-20261110/two-deficient-5x8-pairs-audit.json)
 
 - [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (data): 6組合計28844928候補・45840証人の照合結果
->>>>>>> origin/main
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -2561,8 +2569,8 @@
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (certificate): 509,1009の追加有限等号証人
 ## [research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp](../../../research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp)
 
-- [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) (verifier): det() の 3×3 実装（補題A の対象）
-- [K0733](../items/K0733-forbidden-edge-generator-completeness.md) (verifier): 列挙本体（i<j<k と l の一意化）
+- [K0770](../items/K0770-parabola-four-point-determinant-factorization.md) (verifier): det() の 3×3 実装（補題A の対象）
+- [K0771](../items/K0771-forbidden-edge-generator-completeness.md) (verifier): 列挙本体（i<j<k と l の一意化）
 ## [research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/polynomial-curve-audit.json)
 
 - [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (data): 66多項式グラフ・13素数Q_pカタログ・次数3,4の明示整数証人
@@ -2572,7 +2580,7 @@
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (proof): 禁止四点の完全対分類とNAE・原点節の厳密な分解。全素数で充足可能という主張は含まない
 - [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) (proof): 原始整数方程式・有限体根数による全称証明とk=2,3,4の鋭さ証人
 - [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md) (proof): 完全対補題・四元和・反射によるNAE分解の全称証明
-- [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) (proof): K0334 側の全称証明（本項とは独立ルート）
+- [K0770](../items/K0770-parabola-four-point-determinant-factorization.md) (proof): K0334 側の全称証明（本項とは独立ルート）
 ## [research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json](../../../research/experiments/frontier-geometry-2026-10-05/recovered-independent-audit.json)
 
 - [K0097](../items/K0097-integer-residue-parabola-bounds.md) (data): generic 4×4 Leibnizによる全94575425選択四点の独立検算
@@ -8430,6 +8438,48 @@
 ## [research/experiments/n11-residual-twins/scripts/verify_twins.py](../../../research/experiments/n11-residual-twins/scripts/verify_twins.py)
 
 - [K0336](../items/K0336-independent-residual-twins-parity-compression.md) (verifier): m≤5の全clutter監査と、保存格子証人の全L・最小R・Grundy再検査
+## [research/experiments/n11-s2-5960-cert73-reuse-20261112/output/cert73_reuse_summary.json](../../../research/experiments/n11-s2-5960-cert73-reuse-20261112/output/cert73_reuse_summary.json)
+
+- [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) (data): 機械可読の照合結果（94/94・7,813+77=7,890・14/14・残り39,507 orbit/3,196,057 cost辺・ bit51 位置421/所属0（2026-11-12監査完了）・閉鎖prefix {73} 35,308）
+## [research/experiments/n11-s2-5960-cert73-reuse-20261112/output/cert_closure_roadmap.tsv](../../../research/experiments/n11-s2-5960-cert73-reuse-20261112/output/cert_closure_roadmap.tsv)
+
+- [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) (data): 30証明書の declared/seen/minCost/maxCost/sumCost/閉鎖prefix（cost昇順消化の到達順位・ declared==seen 30/30）
+## [research/experiments/n11-s2-5960-cert73-reuse-20261112/scripts/cert73_regen_audit.ts](../../../research/experiments/n11-s2-5960-cert73-reuse-20261112/scripts/cert73_regen_audit.ts)
+
+- [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) (source): 2026-11-12監査完了版。milestone-4 manifestを読まずrepo生成機関（整数外接円circle-mask幾何・ D4 canon・fwHex/swHex配列）からcert {73}を独立再生成し、S5一致・義務算術・LOSS包含・ bit51両計数（所属マスク0・位置421）を再実行するTS検証script（sandbox harness直実行）
+## [research/experiments/n11-s2-5960-cert73-reuse-20261112/scripts/cert73_reuse_check.py](../../../research/experiments/n11-s2-5960-cert73-reuse-20261112/scripts/cert73_reuse_check.py)
+
+- [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) (source): 修正版manifestとs6sweep（s5_verdicts.json・sweep_results.json）を読み、 S5鍵一致・義務算術・S6数一致・14 LOSS部分集合・bit51計数・30証明書閉鎖ロードマップを 全て再実行する標準ライブラリのみの検証スクリプト
+## [research/experiments/n11-s2-5960-milestone1-20261111/output/milestone1_manifest.json](../../../research/experiments/n11-s2-5960-milestone1-20261111/output/milestone1_manifest.json)
+
+- [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md) (data): milestone-1 manifest（106 S5 orbit rep×義務数・S6 orbit 4,262のcost順フルリスト・protocol）
+## [research/experiments/n11-s2-5960-milestone1-20261111/scripts/milestone1_worklist.ts](../../../research/experiments/n11-s2-5960-milestone1-20261111/scripts/milestone1_worklist.ts)
+
+- [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md) (source): 純JS/TS再現（整数外接円circle-mask幾何・D4 canon・full S6 worklist出力）。 単独実行でmanifest全体を再生成する
+## [research/experiments/n11-s2-5960-milestone2-20261111/output/milestone2_manifest.json](../../../research/experiments/n11-s2-5960-milestone2-20261111/output/milestone2_manifest.json)
+
+- [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md) (data): milestone-2 manifest（261 S5 orbit rep×義務数・S6 orbit 10,988の cost順フルリスト・certs bitmask・protocol）
+## [research/experiments/n11-s2-5960-milestone2-20261111/scripts/milestone2_worklist.ts](../../../research/experiments/n11-s2-5960-milestone2-20261111/scripts/milestone2_worklist.ts)
+
+- [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md) (source): 純JS/TS再現（整数外接円circle-mask幾何・D4 canon・K0746と同一機械）。 単独実行でmanifest全体を再生成する
+## [research/experiments/n11-s2-5960-milestone3-20261112/output/milestone3_manifest.json](../../../research/experiments/n11-s2-5960-milestone3-20261112/output/milestone3_manifest.json)
+
+- [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md) (data): milestone-3 manifest（compact形式627,770 bytes・S5 orbit 516 rep・ S6 orbit 20,534のcost順フルリスト [非ゼロパディングhex, cost, certs]・ certs bitmask（9 entry）・protocol）。merge_manifest.shがbyte-exact再現
+## [research/experiments/n11-s2-5960-milestone3-20261112/scripts/merge_manifest.sh](../../../research/experiments/n11-s2-5960-milestone3-20261112/scripts/merge_manifest.sh)
+
+- [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md) (source): milestone-2 output と fresh union を jq でmergeしてmilestone-3 manifestを 再構築する完全再現手順（16MiB sandbox制約による分割生成）
+## [research/experiments/n11-s2-5960-milestone3-20261112/scripts/milestone3_worklist.ts](../../../research/experiments/n11-s2-5960-milestone3-20261112/scripts/milestone3_worklist.ts)
+
+- [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md) (source): 証明書6–8（{73},{90,96},{23}）のS6 orbit列挙（整数外接円circle-mask幾何・ D4 canon・K0746/K0748と同一機械）。単独実行でfresh unionを再生成する
+## [research/experiments/n11-s2-5960-milestone4-20261112/output/milestone4_manifest.json.part1](../../../research/experiments/n11-s2-5960-milestone4-20261112/output/milestone4_manifest.json.part1)
+
+- [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) (data): 完全S2 {59,60} S6 worklist manifest（compact形式・S5 orbit 1,447 rep・ S6 orbit 43,375のcost順フルリスト [unpadded hex, cost, certs]・ certStats（greedy step 1–33・0-marginalクラス除く）・protocol・検証記録）。 16MiB sandbox制約により等幅3分割で公開: milestone4_manifest.json.part1/part2/part3 （`cat` で byte-exact 再結合。全体 1,782,977 bytes・ md5 f8c1a724c6c7d757192f15f38d4c5da0・2026-11-12再生成版: 全体1,782,603 bytes・md5 452b4336edbe272a49dcd76c4a7764af・各分割594,201 bytes・旧版はsuperseded）
+## [research/experiments/n11-s2-5960-milestone4-20261112/scripts/merge_ms4.sh](../../../research/experiments/n11-s2-5960-milestone4-20261112/scripts/merge_ms4.sh)
+
+- [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) (source): フラグメント10個からpublished manifestをbyte-exactに再構築する手順 （certsビットはフラグメント間で非交差なので加算merge＝OR）
+## [research/experiments/n11-s2-5960-milestone4-20261112/scripts/milestone4_worklist.ts](../../../research/experiments/n11-s2-5960-milestone4-20261112/scripts/milestone4_worklist.ts)
+
+- [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) (source): 証明書1–33のS6 orbit列挙（整数外接円circle-mask幾何・D4 canon・K0746/K0748/K0754と同一機関）。 16MiB制約のためCHUNK=1..10の分割実行でフラグメントを生成
 ## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon）。 単独実行で分布・13,244・classA 32件・worklist 1,447・鏡映同一性まで全数値を再現
@@ -8438,7 +8488,13 @@
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 最小2 blockerのS6 census（2,191/2,150/共通79/union 4,262）
 ## [research/experiments/n11-s2-cert-collapse-20261111/scripts/cert_collapse.ts](../../../research/experiments/n11-s2-cert-collapse-20261111/scripts/cert_collapse.ts)
 
-- [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon、universe閉包監査込み）。 単独実行で34 certificate・ペア実現元・greedy曲線・1,447完結を再現。 DO_S6=trueでmilestone-2のS6 census、DO_CROSS=nで横断worklistを再現
+- [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon、universe閉包監査込み）。 単独実行でcertificate分解・ペア実現元・greedy曲線・1,447完結を再現。 DO_S6=trueでmilestone-2のS6 census、DO_CROSS=nで横断worklistを再現
+## [research/experiments/n11-s3-361-blocker-collapse-20261112/output/blocker_collapse_summary.json](../../../research/experiments/n11-s3-361-blocker-collapse-20261112/output/blocker_collapse_summary.json)
+
+- [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md) (data): 機械可読の照合結果と3件の訂正記録（judgedS6破損・{23}統計・61→8 blocker）
+## [research/experiments/n11-s3-361-blocker-collapse-20261112/scripts/blocker_collapse_audit.ts](../../../research/experiments/n11-s3-361-blocker-collapse-20261112/scripts/blocker_collapse_audit.ts)
+
+- [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md) (source): オラクル94位置を埋込み（s5_verdicts.json由来）・全錨（94/7,890/3,868/110/102/8/3類・ per-representative統計・union 8,340/460/7,880/616,491）をassertする自己完結TS検証script
 ## [research/experiments/n11-s4-boundary-direct-20261012/README.md](../../../research/experiments/n11-s4-boundary-direct-20261012/README.md)
 
 - [K0414](../items/K0414-n11-reply27-root-loss.md) (source): 探索選定、全結果、費用、信頼範囲、再現手順
@@ -10581,7 +10637,7 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): d=1..1103の判定表を生成し、タイムアウト分は衝突予算2000万で再判定する
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py)
 
-- [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
+- [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 交差ソルバ実行器
@@ -10657,7 +10713,7 @@
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): d=1/100/300/478/851 のソルバ表（54 レコード）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w15-cardenc-verify.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w15-cardenc-verify.json)
 
-- [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) (data): 473 ケース・1,588,640 割当・不一致 0・構造不変量 0（negative_control は未保存）
+- [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (data): 473 ケース・1,588,640 割当・不一致 0・構造不変量 0（negative_control は未保存）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w17-tail-fresh.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w17-tail-fresh.json)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): 尾部 5 点 UNSAT・境界 3 点 UNKNOWN
@@ -10669,21 +10725,21 @@
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): d=1316 の残り 9 種
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w7-assump-2647-1322-full100k.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w7-assump-2647-1322-full100k.json)
 
-- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (data): 1,323 レコード、67 UNSAT・1,256 UNKNOWN・0 SAT、予算 100k/d
-- [K0731](../items/K0731-candidate-b-assumption-partition.md) (data): 分割の適用記録 (1,323 d)
+- [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) (data): 1,323 レコード、67 UNSAT・1,256 UNKNOWN・0 SAT、予算 100k/d
+- [K0769](../items/K0769-candidate-b-assumption-partition.md) (data): 分割の適用記録 (1,323 d)
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 逆順と fresh-each の再解器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class.py)
 
 - [K0721](../items/K0721-shape-cnf-auxiliary-variable-aliasing.md) (solver): 各counter後にそれまでの予約範囲とnvのmaxを保持する修正版
-- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (solver): クラス (1,1,3) の CNF 構築 (build)
-- [K0731](../items/K0731-candidate-b-assumption-partition.md) (solver): #B = c の cardinality 制約と対ごと exactly-one の本体
-- [K0734](../items/K0734-pysat-seqcounter-equals-small-verification.md) (solver): 照合対象の build() 呼び出し形
+- [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) (solver): クラス (1,1,3) の CNF 構築 (build)
+- [K0769](../items/K0769-candidate-b-assumption-partition.md) (solver): #B = c の cardinality 制約と対ごと exactly-one の本体
+- [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (solver): 照合対象の build() 呼び出し形
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class_assump.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/search_shape_class_assump.py)
 
-- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (solver): 1 インスタンス + assumption B_d の掃引器
-- [K0731](../items/K0731-candidate-b-assumption-partition.md) (solver): assumption 掃引の実装（SAT 側は復号点を全 928,389 辺と照合）
+- [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) (solver): 1 インスタンス + assumption B_d の掃引器
+- [K0769](../items/K0769-candidate-b-assumption-partition.md) (solver): assumption 掃引の実装（SAT 側は復号点を全 928,389 辺と照合）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 尾部 fresh-each と unit_conflict/統計の計測
@@ -12207,6 +12263,18 @@
 ## [research/experiments/short-board-unique-carrier-20261031/verify.py](../../../research/experiments/short-board-unique-carrier-20261031/verify.py)
 
 - [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (verifier): 4×4格子31616盤の禁止辺全列挙、160盤の全安全局面再帰、q=4とq=5の鋭い境界反例
+## [research/experiments/six-row-q7-deficient-20261112/output/six_row_one_deficient.json](../../../research/experiments/six-row-q7-deficient-20261112/output/six_row_one_deficient.json)
+
+- [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) (data): 全実行結果・witness・独立検証・サンプリング較正
+## [research/experiments/six-row-q7-deficient-20261112/scripts/six_row_one_deficient_runner.ts](../../../research/experiments/six-row-q7-deficient-20261112/scripts/six_row_one_deficient_runner.ts)
+
+- [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) (source): 幅6 1行欠損機械（probe + census verify + 独立検証。1実行1エントリの手順は冒頭）
+## [research/experiments/six-row-q7-width6-20261112/output/six_row_q7_census_witness.json](../../../research/experiments/six-row-q7-width6-20261112/output/six_row_q7_census_witness.json)
+
+- [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) (data): census表・span分布・witness 7件・検証結果
+## [research/experiments/six-row-q7-width6-20261112/scripts/six_row_q7_census_witness.ts](../../../research/experiments/six-row-q7-width6-20261112/scripts/six_row_q7_census_witness.ts)
+
+- [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) (source): census・制御・witness探索・独立検証の完全再現スクリプト（バッチ実行の手順は冒頭に記載）
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint
@@ -12592,6 +12660,42 @@
 ## [research/experiments/vertex-cover-terminal-dp-20261102/verify.py](../../../research/experiments/vertex-cover-terminal-dp-20261102/verify.py)
 
 - [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (verifier): 8067グラフ条件、996別被覆、100禁止超辺条件472592部分集合、K2m式80条件を照合
+## [research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json](../../../research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json)
+
+- [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (data): 全制御の実行結果
+## [research/experiments/width6-circle-eight-point-20261112/reports/width6-circle-eight-point-bound.md](../../../research/experiments/width6-circle-eight-point-20261112/reports/width6-circle-eight-point-bound.md)
+
+- [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (proof): 定理・系・全証明段階の記録
+## [research/experiments/width6-circle-eight-point-20261112/scripts/width6_circle_bound.ts](../../../research/experiments/width6-circle-eight-point-20261112/scripts/width6_circle_bound.ts)
+
+- [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (verifier): mod9分類・接点補題制御・端末例・census再現の全機械検証
+## [research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json](../../../research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json)
+
+- [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) (data): 全制御の実行結果
+## [research/experiments/width7-circle-ten-point-20261112/reports/width7-circle-ten-point.md](../../../research/experiments/width7-circle-ten-point-20261112/reports/width7-circle-ten-point.md)
+
+- [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) (proof): 定理・系・証明・witness・w=6との対比の記録
+## [research/experiments/width7-circle-ten-point-20261112/scripts/width7_circle_bound.ts](../../../research/experiments/width7-circle-ten-point-20261112/scripts/width7_circle_bound.ts)
+
+- [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) (verifier): witness列挙・接点補題制御・2接点プロファイル・mod9分類・censusの機械検証
+## [research/experiments/width8-circle-twelve-point-20261112/output/width8_circle_bound.json](../../../research/experiments/width8-circle-twelve-point-20261112/output/width8_circle_bound.json)
+
+- [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) (data): 全制御の実行結果
+## [research/experiments/width8-circle-twelve-point-20261112/reports/width8-circle-twelve-point.md](../../../research/experiments/width8-circle-twelve-point-20261112/reports/width8-circle-twelve-point.md)
+
+- [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) (proof): 定理・系・証明・素数オフセット補題・P(w)データ列の記録
+## [research/experiments/width8-circle-twelve-point-20261112/scripts/width8_circle_bound.ts](../../../research/experiments/width8-circle-twelve-point-20261112/scripts/width8_circle_bound.ts)
+
+- [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) (verifier): witness列挙・mod9分類・素数補題制御・f=2・2接点・censusの機械検証
+## [research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json](../../../research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json)
+
+- [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (data): 全数値の機械出力
+## [research/experiments/width9-18-circle-point-max-20261112/reports/width9-16-circle-point-max.md](../../../research/experiments/width9-18-circle-point-max-20261112/reports/width9-16-circle-point-max.md)
+
+- [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (proof): 定理・全系・ケース帰結・witness・系表の記録
+## [research/experiments/width9-18-circle-point-max-20261112/scripts/width9_18_circle_bound.ts](../../../research/experiments/width9-18-circle-point-max-20261112/scripts/width9_18_circle_bound.ts)
+
+- [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (verifier): 窓カウント・混合除外（第三実装）・g=2形カウント・witness幾何検証の単独再現
 ## [research/knowledge/items/K0034-n10-minimum-maximal-bounds.md](../../../research/knowledge/items/K0034-n10-minimum-maximal-bounds.md)
 
 - [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) (source): 九石全域排除により本問いを解消した現行命題
@@ -12782,18 +12886,13 @@
 ## [research/log/2026-11-09-p2647-near-miss-and-size-1323.md](../../../research/log/2026-11-09-p2647-near-miss-and-size-1323.md)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (source): 形状クラス判定の方法と結果
-<<<<<<< HEAD
-## [research/log/2026-11-10-five-row-q7-m19-search.md](../../../research/log/2026-11-10-five-row-q7-m19-search.md)
-
-- [K0726](../items/K0726-width-five-nineteen-curve-census.md) (log): 探索キャンペーン記録（m=19証人は見つからず、M=19予想の補強証拠）
-=======
 ## [research/log/2026-11-10-a2647-113-candidate-b-proof-omp.md](../../../research/log/2026-11-10-a2647-113-candidate-b-proof-omp.md)
 
-- [K0731](../items/K0731-candidate-b-assumption-partition.md) (proof): 第1部の分割・健全性・完全性の証明と §1.7 の前提一覧。証明の記述であり Lean 形式化ではない
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) (log): 第2部の証明書計画（候補A、d 固定 CNF + DRAT）
+- [K0769](../items/K0769-candidate-b-assumption-partition.md) (proof): 第1部の分割・健全性・完全性の証明と §1.7 の前提一覧。証明の記述であり Lean 形式化ではない
 ## [research/log/2026-11-10-a2647-113-full-sweep-100k-result.md](../../../research/log/2026-11-10-a2647-113-full-sweep-100k-result.md)
 
-- [K0730](../items/K0730-p2647-113-full-d-sweep-100k.md) (log): 完走時刻・区間構造・留保
+- [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) (log): 完走時刻・区間構造・留保
 ## [research/log/2026-11-10-a2647-113-hardcore-attack-plan-omp.md](../../../research/log/2026-11-10-a2647-113-hardcore-attack-plan-omp.md)
 
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) (log): 候補A 予算ラダーの計画
@@ -12802,26 +12901,25 @@
 - [K0726](../items/K0726-width-five-nineteen-curve-census.md) (log): 探索キャンペーン記録（m=19証人は見つからず、M=19予想の補強証拠）
 ## [research/log/2026-11-10-k0334-identity-verification-omp.md](../../../research/log/2026-11-10-k0334-identity-verification-omp.md)
 
-- [K0732](../items/K0732-parabola-four-point-determinant-factorization.md) (log): 定理B・系C/D/E/F と p=2647 の会計
-- [K0733](../items/K0733-forbidden-edge-generator-completeness.md) (log): 4.3 の 1-4 と p=2647 実走の会計
->>>>>>> origin/main
+- [K0770](../items/K0770-parabola-four-point-determinant-factorization.md) (log): 定理B・系C/D/E/F と p=2647 の会計
+- [K0771](../items/K0771-forbidden-edge-generator-completeness.md) (log): 4.3 の 1-4 と p=2647 実走の会計
 ## [research/log/2026-11-10-n11-classa-decompose.md](../../../research/log/2026-11-10-n11-classa-decompose.md)
 
 - [K0724](../items/K0724-n11-classa-decomposition.md) (log): 実行記録
 ## [research/log/2026-11-10-n11-s2-5960-worklist.md](../../../research/log/2026-11-10-n11-s2-5960-worklist.md)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (log): 実行記録
-<<<<<<< HEAD
-## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
-
-- [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
-=======
 ## [research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md](../../../research/log/2026-11-11-c4-saturated-ten-eleven-bicyclic-diameter-exclusion.md)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (source): 二重閉路21核の直径計算。葉あり候補を除外する部分は誤った補題に依存
 ## [research/log/2026-11-11-five-row-class1-fill-fix.md](../../../research/log/2026-11-11-five-row-class1-fill-fix.md)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 欠損行fill修正と既存スライスへの影響、円数の訂正
+## [research/log/2026-11-11-five-row-m19-5row-deficient-complete.md](../../../research/log/2026-11-11-five-row-m19-5row-deficient-complete.md)
+
+- [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md) (log): 全スライス記録・5行欠損完了宣言・4行欠損開始
+- [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md) (log): 追記〜追記7: 4行欠損{0,1,2,3}全21スライス記録・完全完了宣言
+- [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md) (log): 追記8・追記9: 4行欠損{0,1,2,4}全22スライス記録・完全完了宣言
 ## [research/log/2026-11-11-five-row-m19-class0-complete.md](../../../research/log/2026-11-11-five-row-m19-class0-complete.md)
 
 - [K0728](../items/K0728-five-row-m19-class0-nonexistence.md) (log): 完走時のスライス記録・2レーン合流の検証
@@ -12831,18 +12929,25 @@
 ## [research/log/2026-11-11-five-row-m19-class2-slices.md](../../../research/log/2026-11-11-five-row-m19-class2-slices.md)
 
 - [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) (log): 全スライス記録・完了宣言・クラス{2}は行鏡映で自身と同値であることの記録
+## [research/log/2026-11-11-five-row-m19-full-capacity-witness.md](../../../research/log/2026-11-11-five-row-m19-full-capacity-witness.md)
+
+- [K0745](../items/K0745-five-row-m19-full-capacity-witness.md) (log): 構成・検証・残クラス確定の記録
 ## [research/log/2026-11-11-five-row-multi-deficient-machine.md](../../../research/log/2026-11-11-five-row-multi-deficient-machine.md)
 
 - [K0740](../items/K0740-two-deficient-blocker-fill-machine.md) (log): 開発・制御・第3 witness・5×19 pair {0,1} 初スライスの記録
 - [K0741](../items/K0741-two-deficient-pair-class01-nonexistence.md) (log): 全スライス記録・pair {0,1} 完了宣言（続き1–7）
->>>>>>> origin/main
 ## [research/log/2026-11-11-m57-blocker-obligation-fill.md](../../../research/log/2026-11-11-m57-blocker-obligation-fill.md)
 
 - [K0727](../items/K0727-blocker-obligation-fill-m57.md) (log): 機械開発・検証・キャンペーン開始の記録
+## [research/log/2026-11-11-n11-s2-5960-milestone1-manifest.md](../../../research/log/2026-11-11-n11-s2-5960-milestone1-manifest.md)
+
+- [K0746](../items/K0746-s2-5960-milestone1-s6-manifest.md) (log): 実行記録・幾何機械の第三系統検証・外部solver向けプロトコル・K0745→K0746再採番記録
+## [research/log/2026-11-11-n11-s2-5960-milestone2-manifest.md](../../../research/log/2026-11-11-n11-s2-5960-milestone2-manifest.md)
+
+- [K0748](../items/K0748-s2-5960-milestone2-s6-manifest.md) (log): 実行記録・milestone-1 subset検証・greedy ladder証明書8位までの拡張測定・ K0729義務数の訂正
 ## [research/log/2026-11-11-n11-s2-cert-collapse.md](../../../research/log/2026-11-11-n11-s2-cert-collapse.md)
 
 - [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (log): 実行記録
-<<<<<<< HEAD
 ## [research/log/2026-11-11-parabola-local-id-integration.md](../../../research/log/2026-11-11-parabola-local-id-integration.md)
 
 - [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md) (data): 未pushローカル旧K0723から現行K0730への番号対応
@@ -12850,12 +12955,40 @@
 - [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (data): 未pushローカル旧K0725から現行K0732への番号対応
 - [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) (data): 未pushローカル旧K0726から現行K0733への番号対応
 - [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 未pushローカル旧K0727から現行K0734への番号対応、凍結証拠の旧番号の解釈
-=======
 ## [research/log/2026-11-12-c4-three-leaf-false-lemma-counterexample.md](../../../research/log/2026-11-12-c4-three-leaf-false-lemma-counterexample.md)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (source): 3葉補題の反例とそれに依存する一般下界の証明の破綻
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (source): 葉なし補題の根拠となった3葉補題への反例
->>>>>>> origin/main
+## [research/log/2026-11-12-n11-s2-5960-blocker-61-audit.md](../../../research/log/2026-11-12-n11-s2-5960-blocker-61-audit.md)
+
+- [K0725](../items/K0725-s2-5960-closure-worklist.md) (log): 2026-11-12監査: blocker総数は60でなく61（blocker 22の検出・ 2系統幾何で確認）。閉鎖要件（1,447 orbit・極大56）は全て不変
+- [K0729](../items/K0729-s2-5960-cert-collapse-cross-s2.md) (log): 2026-11-12監査: blocker 61 / certificate 35（26ペア+9単独）への訂正。 greedy曲線・1,447完結・milestone全数値は不変
+## [research/log/2026-11-12-n11-s2-5960-cert73-k0675-reuse.md](../../../research/log/2026-11-12-n11-s2-5960-cert73-k0675-reuse.md)
+
+- [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) (log): 実行記録・再現手順・blocker 73方向規約の未解決問題・実装教訓
+## [research/log/2026-11-12-n11-s2-5960-milestone3-manifest.md](../../../research/log/2026-11-12-n11-s2-5960-milestone3-manifest.md)
+
+- [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md) (log): 実行記録・milestone-2 subset検証（cost不一致0件）・16MiB制約への対応
+## [research/log/2026-11-12-n11-s2-5960-ms4-complete-worklist.md](../../../research/log/2026-11-12-n11-s2-5960-ms4-complete-worklist.md)
+
+- [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) (log): 実行記録・milestone-1/2/3再生成による制御検証・milestone-3 subset検証PASS・ q59推定の訂正・実装教訓（32ビットOR・8MiB上限・フラグメント破損）
+## [research/log/2026-11-12-n11-s3-361-blocker-collapse-judgeds6-correction.md](../../../research/log/2026-11-12-n11-s3-361-blocker-collapse-judgeds6-correction.md)
+
+- [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md) (log): 実行記録・矛盾解消の経緯・実装教訓（hex定数の手再埋込み禁止・fetch由来埋込み）
+## [research/log/2026-11-12-six-row-one-deficient-class.md](../../../research/log/2026-11-12-six-row-one-deficient-class.md)
+
+- [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-12-six-row-q7-width6-seed.md](../../../research/log/2026-11-12-six-row-q7-width6-seed.md)
+
+- [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) (log): 手法・バグ教訓4件・レジューム候補
+## [research/log/2026-11-12-width6-circle-eight-point-proof.md](../../../research/log/2026-11-12-width6-circle-eight-point-proof.md)
+
+- [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (log): 判断・教訓・レジューム
+- [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) (log): 本セッションの判断・教訓・レジューム（幅6と共用）
+- [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) (log): 本セッションの判断・教訓・レジューム（幅6/7/8共用）
+## [research/log/2026-11-12-width9-18-circle-point-max.md](../../../research/log/2026-11-12-width9-18-circle-point-max.md)
+
+- [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

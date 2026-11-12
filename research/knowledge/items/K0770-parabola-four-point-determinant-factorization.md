@@ -1,5 +1,5 @@
 ---
-id: K0732
+id: K0770
 title: 剰余放物線の四点行列式は −(パラメータ和)×Vandermonde 積に合同で、det=0 は共円・共線と同値
 kind: proposition
 status: proved
@@ -10,7 +10,7 @@ relations:
   target: K0334
   note: K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
 - type: supports
-  target: K0731
+  target: K0769
   note: 捨て規則の和条件
 artifacts:
 - path: research/experiments/frontier-geometry-2026-10-05/forbidden_edges.cpp

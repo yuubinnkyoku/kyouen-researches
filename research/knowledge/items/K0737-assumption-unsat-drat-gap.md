@@ -7,7 +7,7 @@ topics: [maximum-safe, search-methods, certificates]
 aliases: []
 relations:
 - type: depends_on
-  target: K0731
+  target: K0769
   note: 前提(4) の所在
 - type: depends_on
   target: K0706
@@ -35,7 +35,7 @@ d 固定 CNF（または B_d を加えた CNF）を書き出して DRAT を取�
 
 ## 現状
 
-- 前提(1)(2) は証明で閉じ（K0733/K0732）、前提(3) は範囲限定で検証済み（K0734）。
+- 前提(1)(2) は証明で閉じ（K0771/K0770）、前提(3) は範囲限定で検証済み（K0772）。
   符号化側で残る外挿は (3) の一般 n のみ。
 - ソルバ側の前提(4) は本項のみが未解決で、候補B の UNSAT 主張
-  （K0730 の掃引 67 件を含む）を DRAT 監査済みに引き上げる唯一の経路が候補A 化である。
+  （K0768 の掃引 67 件を含む）を DRAT 監査済みに引き上げる唯一の経路が候補A 化である。

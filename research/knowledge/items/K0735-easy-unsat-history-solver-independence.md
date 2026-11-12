@@ -7,13 +7,13 @@ topics: [geometry, maximum-safe, verification]
 aliases: []
 relations:
 - type: verifies
-  target: K0731
+  target: K0769
   note: 候補B 分割の適用に対する独立性検証
 - type: depends_on
-  target: K0730
+  target: K0768
   note: 掃引記録
 - type: depends_on
-  target: K0734
+  target: K0772
   note: 同一符号化の基数制約
 artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/reverse_order_probe.py
