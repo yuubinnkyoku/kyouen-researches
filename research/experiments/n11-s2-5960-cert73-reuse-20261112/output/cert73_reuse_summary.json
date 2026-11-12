@@ -1,0 +1,88 @@
+{
+ "generated": "2026-11-12",
+ "basis_main": "3912a73f4fe8a29e822e48d7322cc1b022f1ed8d",
+ "manifest": {
+  "md5": "452b4336edbe272a49dcd76c4a7764af",
+  "bytes": 1782603,
+  "k": "K0757 regenerated (use-prohibition lifted)"
+ },
+ "cert73": {
+  "bit": 32,
+  "greedy_step": 6,
+  "s5_orbits": 94,
+  "s6_orbits": 3868,
+  "raw_obligations": 7890,
+  "sum_cost": 281121,
+  "min_cost": 51,
+  "max_cost": 88
+ },
+ "s5_universe_identity": {
+  "cert73_s5Reps_vs_K0675_universe": "94/94 key-for-key PASS",
+  "first_win": 78,
+  "second_win": 16
+ },
+ "obligation_arithmetic": {
+  "children_sum": 7813,
+  "symmetry_doubled_delta": 77,
+  "detail": [
+   "203800800000000000: 39 children -> 78",
+   "203808000000000000: 38 children -> 76"
+  ],
+  "raw_obligations": 7890,
+  "match": true
+ },
+ "s6_level": {
+  "cert73_s6": 3868,
+  "k0675_sweep": 3868,
+  "count_match": true,
+  "loss_s6_covers_in_cert73": "14/14 PASS",
+  "verdicts": {
+   "win_for_mover": 3854,
+   "loss_for_mover": 14
+  },
+  "sensitivity_audit": "fails 0 (K0675 verified.json, 4,288 certs)"
+ },
+ "conclusion": "certificate {73} requires ZERO new S6 verdicts; fully covered by the published K0675 sweep",
+ "remaining_worklist": {
+  "s6_orbits": 39507,
+  "reduction_orbits_pct": 8.92,
+  "cost_edges": 3196057,
+  "reduction_cost_pct": 8.09
+ },
+ "cert73_s6_with_bit51": 421,
+ "closure_roadmap": {
+  "earliest": {
+   "cert": "{73}",
+   "closure_prefix": 35308
+  },
+  "next": [
+   {
+    "cert": "{90,96}",
+    "closure_prefix": 40410
+   },
+   {
+    "cert": "{80,84}",
+    "closure_prefix": 41123
+   },
+   {
+    "cert": "{27,93}",
+    "closure_prefix": 41125
+   },
+   {
+    "cert": "{5,115}",
+    "closure_prefix": 41227
+   },
+   {
+    "cert": "{91,95}",
+    "closure_prefix": 41509
+   }
+  ],
+  "max_closure_prefix": 43374,
+  "declared_seen_match": "30/30"
+ },
+ "caveats": [
+  "blocker 73 closure verdict NOT judged: chain direction convention (FIRST_WIN/SECOND_WIN child -> blocker verdict) unverified vs q60 T1; resume item",
+  "FW oracle (78 positions) remains conditional under the S2 {59,60} plan framing; K0675 provides machine-verified S5/S6 verdicts for the 94-position universe itself",
+  "11x11 empty board and two-stone root {49,60} remain UNKNOWN"
+ ]
+}
