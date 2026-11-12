@@ -1,5 +1,5 @@
 ---
-id: K0773
+id: K0774
 title: パラメータの単元倍 t↦at は剰余放物線の安全性を保たない（p=2207の1104点証人で反例）
 kind: proposition
 status: computed
