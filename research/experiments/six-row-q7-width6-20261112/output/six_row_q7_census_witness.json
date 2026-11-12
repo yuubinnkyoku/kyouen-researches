@@ -19,7 +19,9 @@
     "40": { "total": 782, "bySize": { "7": 92, "8": 690 }, "max": 8 },
     "46": { "total": 938, "bySize": { "7": 104, "8": 834 }, "max": 8 },
     "52": { "total": 1126, "bySize": { "7": 140, "8": 986 }, "max": 8 },
-    "58": { "total": 1314, "bySize": { "7": 160, "8": 1154 }, "max": 8 }
+    "58": { "total": 1314, "bySize": { "7": 160, "8": 1154 }, "max": 8 },
+    "64": { "total": 1530, "bySize": { "7": 196, "8": 1334 }, "max": 8 },
+    "70": { "total": 1758, "bySize": { "7": 232, "8": 1526 }, "max": 8 }
   },
   "row_span_distribution": {
     "19": { "4": 48, "5": 126, "6": 70 },
@@ -36,7 +38,7 @@
     "58": { "rows": [[10,26,30,43,44,45],[0,18,31,42,47,49],[2,12,35,45,47,53],[5,34,40,44,47,55],[1,2,14,36,46,47],[21,23,28,30,40,48]], "safeRate": "200/200", "verify": { "ok": true, "worst": 5 } }
   },
   "claims": {
-    "census": "For every tested m in {13,16,19,22,25,28,31,34,40,46,52,58}, the 6xm grid contains exactly census_6xm[m].total circles with >=7 lattice points; all of them have exactly 7 or 8 points; no circle with >=9 lattice points exists in any 6xm grid with tested m<=58. The only >=7-point lines are the 6 row lines (a non-horizontal line meets 6 rows in <=6 points).",
+    "census": "For every tested m in {13,16,19,22,25,28,31,34,40,46,52,58,64,70}, the 6xm grid contains exactly census_6xm[m].total circles with >=7 lattice points; all of them have exactly 7 or 8 points; no circle with >=9 lattice points exists in any 6xm grid with tested m<=70. The only >=7-point lines are the 6 row lines (a non-horizontal line meets 6 rows in <=6 points).",
     "witnesses": "For each m in {19,25,31,40,46,52,58} a full-capacity (6,6,6,6,6,6) 36-stone safe maximal configuration exists (rows listed; column-mirror canonical form). Safety is verified by two independent exact-integer paths (danger-census check and stone-triple circumcircle enumeration); maximality is a proof: each row holds exactly 6 stones and m>=7, so adding any stone creates 7 collinear stones on its row.",
     "scope": "Finite computed facts. These do not determine M_{6,7} (the smallest m at which every maximal safe configuration on 6xm is full-capacity); that requires the deficient-row-class enumeration campaign."
   },
