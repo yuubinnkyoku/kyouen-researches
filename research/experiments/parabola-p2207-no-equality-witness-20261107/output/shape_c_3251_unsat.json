@@ -1,0 +1,21 @@
+{
+  "p": 3251,
+  "h": 1625,
+  "size": 1626,
+  "shape": "c",
+  "class": [
+    1,
+    1,
+    1
+  ],
+  "vars": 12998,
+  "clauses": 91135,
+  "kept_edges": 60266,
+  "trapezoid_edges_dropped": 1319500,
+  "solver": "cadical 1.7.3 (WSL), default configuration, no --sat",
+  "invocation": "cadical --quiet -t 7200 shape_c_3251.cnf",
+  "result": "UNSATISFIABLE",
+  "wall_seconds_approx": 2100,
+  "status": "solver claim; DRAT certificate pending",
+  "cnf_sha256": "ac06449ee8f662364e1519201efd9159eec9970dd4ad4c58241b6b3080bd56e5"
+}
