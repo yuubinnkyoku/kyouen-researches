@@ -8547,9 +8547,15 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_stats.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_stats.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 導出anchor・md5一致・再利用分類の全計数
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開行の限定監査結果とmove座標の注意
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_candidates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_candidates.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 公開行の安全性・親子関係・件数を独立検査。候補の完全性や分類の正当性は検査しない
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts)
 
-- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 決定論的な再導出・再分類プログラム
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): コメントのみで実行本体は未公開。再導出・再分類の再現器としては使用できない
 ## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon）。 単独実行で分布・13,244・classA 32件・worklist 1,447・鏡映同一性まで全数値を再現
@@ -13180,6 +13186,9 @@
 ## [research/log/2026-11-13-greedy-lower-bounds-2531-3251.md](../../../research/log/2026-11-13-greedy-lower-bounds-2531-3251.md)
 
 - [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (log): 手法・較正（2207/2647）・限界
+## [research/log/2026-11-13-n11-ms5-reproducer-source-audit.md](../../../research/log/2026-11-13-n11-ms5-reproducer-source-audit.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 再導出プログラムの実行本体が欠けることの監査
 ## [research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md](../../../research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 経緯と再現上の注意（メモリ上限・実装上の修正点）

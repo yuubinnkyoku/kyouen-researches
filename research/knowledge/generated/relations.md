@@ -4590,7 +4590,7 @@
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規 (w,q)（(21,22),(23,24),(25,26)）
 - ← supports [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): w=26 の level 13 全滅（P≤24）を再利用し、level 12 唯一生残 S* を実現（650 円）して P(26)=24 を確定。w=19,20 の P=16 予想には影響しない（650 円の行スパンは 26）
 
-## [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) n11 S2{59,60} milestone-5のS6ワークリスト（鍵・classes・cost）が完全独立再導出で公開manifestと全行一致し、S7再利用候補8,763は既知LOSS396と証明書プール候補8,367に完全分解される（K0675条件下）
+## [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) n11 S2{59,60} milestone-5のS6ワークリスト再導出報告とS7再利用候補8,763行の監査（K0675条件下）
 
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94オラクル位置（78 FW + 16 SW）と14 LOSS sweep鍵が導出の全入力
 - → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): focus2154の62証明書（27 WIN7 + 35 LOSS7）が再利用分類の入力

@@ -1,5 +1,10 @@
 # n11 S2 {59,60} milestone-5: full independent worklist derivation + S7 certificate-reuse partition
 
+## 後続監査の注意
+`scripts/ms5_s7_reuse_analysis.ts` はコメントのみで実行本体がなく、下記の再導出・分類を再実行できない。`scripts/audit_published_candidates.py` は公開済み行の安全性・親子関係・件数を検査するが、網羅性や分類を検証しない。現在の評価は K0783 を参照。
+
+候補CSVの `move` は正規化済み `s6_hex` にそのまま適用できるとは限らない。親の対称像を試し、空き位置 `move` を加えた子の正規形が `s7_hex` に一致する像を選ぶ。part2とpart3にはCSVヘッダーがない。
+
 Baseline main: `5af484bb241cd776af2eda5e26eda4e97595baee` (includes the full S6 geometry cost audit of 2026-11-13, which verified the cost column of all 7,867 published rows but explicitly not the key set or classes column).
 
 ## Part 1: full independent worklist derivation (keys + classes + cost)
