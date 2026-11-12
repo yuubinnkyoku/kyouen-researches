@@ -1,0 +1,47 @@
+{
+  "p": 2531,
+  "h": 1265,
+  "size": 1265,
+  "classes": [
+    {
+      "class": [
+        0,
+        0,
+        0
+      ],
+      "solver": "pysat Cadical195 budget 2e6",
+      "result": "UNSAT",
+      "seconds": 5.4
+    },
+    {
+      "class": [
+        0,
+        1,
+        1
+      ],
+      "solver": "pysat Cadical195 budget 2e6",
+      "result": "UNKNOWN",
+      "seconds": 1312.1
+    },
+    {
+      "class": [
+        1,
+        0,
+        1
+      ],
+      "solver": "pysat Cadical195 budget 2e6",
+      "result": "UNKNOWN",
+      "seconds": 993.4
+    },
+    {
+      "class": [
+        1,
+        1,
+        2
+      ],
+      "solver": "cadical 1.7.3 WSL default -t 20000",
+      "result": "running since 2026-11-13T04:56:57"
+    }
+  ],
+  "note": "external cadical runs on the dumped per-class CNFs in D:/tmp/sizeh (011,101,112 are still running)"
+}

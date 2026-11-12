@@ -85,6 +85,8 @@ def main() -> int:
     ap.add_argument("--c", type=int, default=None)
     ap.add_argument("--e", type=int, default=None)
     ap.add_argument("--budget", type=int, default=20_000_000)
+    ap.add_argument("--warm", default=None,
+                    help="JSON witness from build_safe.cpp; its pair states are used as solver phases")
     ap.add_argument("--write-cnf", default=None,
                     help="write the first selected class as DIMACS and exit (external solver)")
     args = ap.parse_args()
@@ -108,6 +110,20 @@ def main() -> int:
         return 1
     OUT.mkdir(exist_ok=True)
     edges = run_gen(str(Path(__import__("os").environ["TEMP"]) / "forbidden_edges.exe"), p)
+    warm_states = None
+    if args.warm:
+        import json as _json
+        warm = _json.loads(Path(args.warm).read_text(encoding="utf-8"))
+        if warm["p"] != p:
+            raise SystemExit("warm witness prime mismatch")
+        chosen = set(warm["points"])
+        warm_states = {}
+        for i in range(1, h + 1):
+            lo, hi = i in chosen, p - i in chosen
+            warm_states[i] = "B" if lo and hi else "N" if not lo and not hi else "L" if lo else "H"
+        print(f"warm: {len(chosen)} points, "
+              f"B={sum(1 for s in warm_states.values() if s == 'B')} "
+              f"N={sum(1 for s in warm_states.values() if s == 'N')}", flush=True)
     results = []
     for (x, c, e) in classes:
         clauses, nv, kept = build(p, edges, x, c, e)
@@ -122,6 +138,15 @@ def main() -> int:
                   f"vars={nv} clauses={len(clauses)}", flush=True)
             continue
         solver = Cadical195(bootstrap_with=clauses)
+        if warm_states is not None:
+            def vv2(pair, kind):
+                return 4 * pair - 4 + {"B": 1, "N": 2, "L": 3, "H": 4}[kind]
+            phases = []
+            for i, k in warm_states.items():
+                for kind in ("B", "N", "L", "H"):
+                    lit = vv2(i, kind)
+                    phases.append(lit if kind == k else -lit)
+            solver.set_phases(phases)
         solver.conf_budget(args.budget)
         t0 = time.time()
         res = solver.solve_limited()
