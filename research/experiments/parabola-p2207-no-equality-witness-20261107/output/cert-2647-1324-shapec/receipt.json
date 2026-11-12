@@ -1,0 +1,28 @@
+{
+  "p": 2647,
+  "h": 1323,
+  "size": 1324,
+  "shape": "c",
+  "class": [
+    1,
+    1,
+    1
+  ],
+  "vars": 10582,
+  "clauses": 79017,
+  "kept_edges": 53886,
+  "trapezoid_edges_dropped": 874503,
+  "cnf_sha256": "4e188763baed7d14daa1ef08e5b863c6cda612b7a749b0c12267d0137ef896b7",
+  "proof_sha256": "47e5915869b8209e71f6dbc183ca08ab74ca02a72111f0648f5f1d8e0a5a34e0",
+  "proof_lines": 126556,
+  "proof_bytes": 9269105,
+  "checker_source_sha256": "34249932790a9e9d924e9403b75563a2ff051277923301e34ace33e2a5a3650b",
+  "checker_rc": 0,
+  "checker_last_line": "VERIFIED",
+  "verified": true,
+  "check_seconds": 95.7,
+  "solver": "pysat Cadical195 with_proof, budget 5e6",
+  "conclusion": "A(2647) <= 1323",
+  "proof_gz_sha256": "8556b891311cdc2bfa3e313d74bfc57f080d836976891f6da597f2ec4af9095d",
+  "proof_gz_bytes": 1943933
+}
