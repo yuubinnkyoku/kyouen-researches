@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-12",
+  "note": "third independent implementation, QR0 (0 included) everywhere",
+  "session": "fast lane q111 - audit of K0072 w>=19 half-density certificates under the mixed point-row (double + tangent) QR0 interpretation",
+  "segment1_w19_20": {
+    "primes": [11, 19, 23],
+    "L18": { "maxPointRows": 10, "ceilHalf": 9, "note": "10 > 9: this 3-prime certificate cannot close w=18 (consistent with the original report; K0767 closed w=17,18 with more primes)" },
+    "L19": { "maxPointRows": 10, "ceilHalf": 10, "ok": true },
+    "L20": { "maxPointRows": 10, "ceilHalf": 10, "ok": true },
+    "method": "distinct window bitmasks per prime over (n,c) in (Z/p)^2; max popcount of 3-prime AND; equivalent to (N,C) enumeration via A=N-C^2, U=2C"
+  },
+  "segment2_w21_26": {
+    "primes": [11, 23, 31],
+    "L21": { "maxPointRows": 11, "ceilHalf": 11, "ok": true },
+    "L22": { "maxPointRows": 11, "ceilHalf": 11, "ok": true },
+    "L23": { "maxPointRows": 11, "ceilHalf": 12, "ok": true },
+    "L24": { "maxPointRows": 12, "ceilHalf": 12, "ok": true },
+    "L25": { "maxPointRows": 12, "ceilHalf": 13, "ok": true },
+    "L26": { "maxPointRows": 13, "ceilHalf": 13, "ok": true }
+  },
+  "segment3_w27_plus": {
+    "primes": [23, 31],
+    "period": 713,
+    "periodMax": 221,
+    "periodMaxFactorization": "13*17 (per-prime QR0 maxima; without 0 it would be 12*16=192, so the recorded 221 independently confirms the original certificate used QR0)",
+    "maxWindowByL": { "L26": 14, "L27": 14, "L28": 14, "L30": 15, "L50": 23, "L100": 42, "L200": 76, "L300": 112, "L442": 156 },
+    "violations": [],
+    "checkedRange": "all L in 27..442 exhaustively (min-span method over all 713 (n23,n31) classes and all rotations); L26 control reproduces the reported 14 > 13",
+    "trivialForLge443": "maxPointRows<=221<ceil(L/2)+1 for L>=443",
+    "composition": "w=713k+r: point rows <= 221k + f(r), f(r)<=ceil(r/2) for r>=27 (audited), f(r)<=r for r<27; 221k+max(r,ceil(r/2)) <= ceil(w/2) for all k>=1, r>=0 (K0072 argument, unchanged)"
+  },
+  "perPrimeMax": {
+    "p11": { "QR0": 7, "QRno0": 6 },
+    "p19": { "QR0": 11, "QRno0": 10 },
+    "p23": { "QR0": 13, "QRno0": 12 },
+    "p31": { "QR0": 17, "QRno0": 16 }
+  },
+  "originalScriptCheck": "research/experiments/fixed-width/scripts/mod11-mod19-mod23-circle-half-density.py uses qr = {x*x % p for x in range(p)} (0 included) and its docstring says 'zero included'",
+  "conclusion": "for every w >= 19 the maximum number of point rows (double + tangent) satisfying the congruence certificate is <= ceil(w/2); with the K0767 accounting P <= 2(d+s) and the non-Vieta alternating-set argument this yields P(w) <= 2*ceil(w/2) for all w >= 19"
+}
