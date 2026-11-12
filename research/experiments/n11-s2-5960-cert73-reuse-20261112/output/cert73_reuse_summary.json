@@ -1,5 +1,6 @@
 {
  "generated": "2026-11-12",
+ "updated": "2026-11-12 (bit51 audit completed: membership 0 / position 421; manifest-independent regeneration reproduces all controls)",
  "basis_main": "3912a73f4fe8a29e822e48d7322cc1b022f1ed8d",
  "manifest": {
   "md5": "452b4336edbe272a49dcd76c4a7764af",
@@ -49,7 +50,14 @@
   "cost_edges": 3196057,
   "reduction_cost_pct": 8.09
  },
- "cert73_s6_with_bit51": 421,
+ "bit51_audit": {
+  "superseded_field": "cert73_s6_with_bit51 (former value 421)",
+  "membership_bit51_count": 0,
+  "membership_bit51_note": "no certificate in the 33-step greedy allocation uses bit 2^51 (max is 2^49), so the membership-mask reading is identically 0",
+  "position_cell51_count": 421,
+  "position_cell51_note": "the former value 421 counts position-key bit 51 (cell 51 occupied), reproduced exactly by manifest-independent regeneration (scripts/cert73_regen_audit.ts); valid as the quantitative lower bound for frontier 2,401 cache verdict reuse",
+  "audit_log": "research/log/2026-11-12-n11-cert73-bit51-audit-correction.md"
+ },
  "closure_roadmap": {
   "earliest": {
    "cert": "{73}",
