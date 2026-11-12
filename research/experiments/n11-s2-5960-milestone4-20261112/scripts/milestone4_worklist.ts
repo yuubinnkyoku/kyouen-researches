@@ -100,8 +100,15 @@ for(const cert of certs){
     if(seen.has(rep))continue; seen.add(rep); s5count++;
     const st5=bitsOf(BigInt(rep));const ch=bitsOf(legalOf(st5));oblig+=ch.length;
     const e5=s5Union.get(rep);if(e5!==undefined)s5Union.set(rep,e5+cert.bit);else s5Union.set(rep,cert.bit);
-    for(const c of ch){const k=String(canon(BigInt(rep)|(1n<<BigInt(c))));s6.add(k);
-      const e=s6Union.get(k);if(e!==undefined)s6Union.set(k,e+cert.bit);else s6Union.set(k,cert.bit);}
+    for(const c of ch){
+      const k=String(canon(BigInt(rep)|(1n<<BigInt(c))));
+      // Each certificate contributes its bit once per canonical S6 orbit.
+      // Different S5 parents can lead to the same S6 orbit.
+      if(s6.has(k))continue;
+      s6.add(k);
+      const e=s6Union.get(k);
+      s6Union.set(k,e===undefined?cert.bit:e+cert.bit);
+    }
   }
   certStats.push({cert:cert.reps.join(','),bit:cert.bit,s5Orbits:s5count,rawObligations:oblig,s6OrbitsSingle:s6.size});
 }
