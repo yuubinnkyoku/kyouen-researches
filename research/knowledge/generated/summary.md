@@ -1,12 +1,16 @@
 # 移行集計
 
+<<<<<<< HEAD
 K項目: 758 / alias: 269 / artifactファイル: 4059
+=======
+K項目: 759 / alias: 269 / artifactファイル: 4066
+>>>>>>> origin/main
 
 ## kind
 
 | 値 | 件数 |
 |---|---:|
-| computation | 93 |
+| computation | 94 |
 | definition | 5 |
 | method | 6 |
 | proposition | 584 |
@@ -18,7 +22,7 @@ K項目: 758 / alias: 269 / artifactファイル: 4059
 | 値 | 件数 |
 |---|---:|
 | active | 11 |
-| computed | 195 |
+| computed | 196 |
 | conjectured | 2 |
 | needs-review | 1 |
 | observed | 26 |
@@ -37,9 +41,13 @@ K項目: 758 / alias: 269 / artifactファイル: 4059
 | certificates | 108 |
 | first-moves | 67 |
 | formalization | 5 |
+<<<<<<< HEAD
 | geometry | 375 |
+=======
+| geometry | 376 |
+>>>>>>> origin/main
 | grundy | 171 |
-| maximal-safe | 198 |
+| maximal-safe | 199 |
 | maximum-safe | 98 |
 | migration | 1 |
 | provenance | 40 |
@@ -51,7 +59,11 @@ K項目: 758 / alias: 269 / artifactファイル: 4059
 | square-outcomes | 101 |
 | statistics | 121 |
 | strategy-length | 94 |
+<<<<<<< HEAD
 | variants | 318 |
+=======
+| variants | 319 |
+>>>>>>> origin/main
 | verification | 139 |
 
 ## 未解決・要監査・範囲不明

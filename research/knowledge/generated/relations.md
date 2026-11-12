@@ -4187,6 +4187,7 @@
 - → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): 偶奇別のC4飽和明示構成と重み2層の対応
 - ← depends_on [K0743](../items/K0743-weight-two-d11-saturation-minimum.md): 葉を持つ11頂点C4飽和グラフは14辺以上
 - ← depends_on [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md): 葉を持つ候補の辺数下界
+- ← depends_on [K0777](../items/K0777-weight-two-d13-saturation-minimum.md): 葉を持つ13頂点C4飽和グラフは17辺以上
 
 ## [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) 二値立方体重み2層の11次元最小極大配置は14石
 
@@ -4199,6 +4200,7 @@
 - → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): n+2下界と重み2層のC4対応、偶数次元の構成
 - → depends_on [K0742](../items/K0742-c4-saturation-with-leaf-exact.md): 葉を持つ候補の辺数下界
 - → depends_on [K0743](../items/K0743-weight-two-d11-saturation-minimum.md): 11頂点13辺の有限核排除と三重閉路核の構造
+- ← depends_on [K0777](../items/K0777-weight-two-d13-saturation-minimum.md): 重み2層のC4対応とn+3下界
 
 ## [K0745](../items/K0745-five-row-m19-full-capacity-witness.md) 5×19には(6,6,6,6,6)型30石の安全極大配置が存在する（検証済みwitness）
 
@@ -4519,3 +4521,11 @@
 - → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式 g(S)=(w·min(m,q−1)−|S|) mod2・M_{w,q}=q−1 の導出枠組み
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 新規(w,q)は q∈(2⌈w/2⌉, w+⌈w/2⌉]（K0025のq>2wとK0072のq>w+⌈w/2⌉の間の全帯）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}=q−1の無限族拡大（例: w=19:q=21..29・w=30:q=31..45・w=100:q=101..150）
+<<<<<<< HEAD
+=======
+
+## [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) 二値立方体重み2層の13次元最小極大配置は17石
+
+- → depends_on [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md): 重み2層のC4対応とn+3下界
+- → depends_on [K0742](../items/K0742-c4-saturation-with-leaf-exact.md): 葉を持つ13頂点C4飽和グラフは17辺以上
+>>>>>>> origin/main
