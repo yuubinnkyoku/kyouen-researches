@@ -10,7 +10,7 @@ evidence: "数学的証明（mod9剰余分類による二重行数上界 d≤4 �
 solution:
   board: 幅6固定長m可変の標準整数格子
   level: strong
-  outcome: unconditional
+  outcome: conditional
   classification: [all-safe-grundy]
   coverage: 幅6・q≥9は全m≥1・全安全局面
   conditions: 連続整数行・q≥9（円の上界はqに依らず全称）
@@ -31,7 +31,7 @@ relations:
 - type: supports
   target: K0332
   note: 幅6の安定化長はq≥9で確定（M_{6,q}=q−1）。M_{6,7}はm≥20のままopen
-- type: extends
+- type: generalizes
   target: K0025
   note: q>2w（q≥13）を幅6のq=9..12まで拡張
 artifacts:

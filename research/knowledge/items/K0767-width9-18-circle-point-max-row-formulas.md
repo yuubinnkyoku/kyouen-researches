@@ -10,7 +10,7 @@ evidence: "数学的証明（K0072のVieta整数化+合同除外証明書の『�
 solution:
   board: 幅w=9..18固定長m可変の標準整数格子
   level: strong
-  outcome: unconditional
+  outcome: conditional
   classification: [all-safe-grundy]
   coverage: w=9..16はP(w)全称決定・系の行公式は該当(w,q)で全m≥1・全安全局面
   conditions: 連続整数行・系はq>P(w)かつq>w
@@ -31,7 +31,7 @@ relations:
 - type: depends_on
   target: K0765
   note: 幅6/7/8の決定と接続。w=8 witnessがw=9,10のwitnessを兼ねる
-- type: extends
+- type: generalizes
   target: K0025
   note: 行分離公式の新規(w,q)領域（w=12は全q未確定だった）
 - type: supports

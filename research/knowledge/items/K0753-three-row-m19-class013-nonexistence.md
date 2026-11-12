@@ -1,12 +1,31 @@
 ---
 id: K0753
 title: 5x19 three-row deficient class {0,1,3} nonexistence
-status: established
-established: 2026-11-12
-evidence: complete-enumeration
-verification: deterministic-machine
-machine: research/experiments/five-row-q7-m19-20261110/scripts/multi_deficient_runner.ts
-depends: [K0727, K0728, K0747, K0749, K0750, K0751, K0752]
+kind: proposition
+status: computed
+topics: [rectangles, maximal-safe]
+aliases: []
+relations:
+- type: depends_on
+  target: K0727
+- type: depends_on
+  target: K0728
+- type: depends_on
+  target: K0747
+- type: depends_on
+  target: K0749
+- type: depends_on
+  target: K0750
+- type: depends_on
+  target: K0751
+- type: depends_on
+  target: K0752
+artifacts:
+- path: research/experiments/five-row-q7-m19-20261110/scripts/multi_deficient_runner.ts
+  role: solver
+  note: 完全列挙ランナー（旧front matterから移行）
+scope: '旧front matterの evidence を移行: complete-enumeration'
+evidence: 'complete-enumeration（verification: deterministic-machine）。本文の完全列挙・監査記述を参照。'
 ---
 
 # 5×19 three-row deficient class {0,1,3} nonexistence

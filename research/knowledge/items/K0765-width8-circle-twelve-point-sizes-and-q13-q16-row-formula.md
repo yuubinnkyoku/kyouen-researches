@@ -10,7 +10,7 @@ evidence: "数学的証明（mod9剰余分類 d≤6 + K0763/K0764接点補題の
 solution:
   board: 幅8固定長m可変の標準整数格子
   level: strong
-  outcome: unconditional
+  outcome: conditional
   classification: [all-safe-grundy]
   coverage: 幅8・q≥13は全m≥1・全安全局面
   conditions: 連続整数行・q≥13（円の構造定理はqに依らず全称）

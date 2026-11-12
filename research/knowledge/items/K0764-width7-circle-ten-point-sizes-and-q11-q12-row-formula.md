@@ -10,7 +10,7 @@ evidence: "数学的証明（mod9剰余分類 d≤5 + K0763接点補題のw=7拡
 solution:
   board: 幅7固定長m可変の標準整数格子
   level: strong
-  outcome: unconditional
+  outcome: conditional
   classification: [all-safe-grundy]
   coverage: 幅7・q≥11は全m≥1・全安全局面
   conditions: 連続整数行・q≥11（円の構造定理はqに依らず全称）
@@ -31,7 +31,7 @@ relations:
 - type: supports
   target: K0332
   note: 幅7の安定化長はq≥11で確定。M_{7,q}(q≤10)はopen
-- type: extends
+- type: generalizes
   target: K0025
   note: q>2w（w=7ではq≥15）をq=11..14まで拡張
 artifacts:
