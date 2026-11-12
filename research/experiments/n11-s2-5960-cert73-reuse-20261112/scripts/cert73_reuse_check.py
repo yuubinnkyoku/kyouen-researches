@@ -73,6 +73,8 @@ def main():
     m = json.load(open(manifest_path))
     s5v = json.load(open(os.path.join(sweep_dir, "s5_verdicts.json")))
     sweep_keys = load_sweep_keys(os.path.join(sweep_dir, "sweep_results.json"))
+    if sweep_keys is None:
+        raise ValueError("S6 sweep keys unavailable or unparseable; cannot verify key-for-key identity")
 
     c73 = [c for c in m["certStats"] if int(c["bit"]) == CERT73_BIT]
     assert len(c73) == 1, "cert {73} (bit 32) not unique in certStats"
@@ -94,9 +96,11 @@ def main():
     loss_keys = set(int(k, 16) for k in s5v["loss_s6_covers"])
     loss_all_in = loss_keys <= c73_s6_keys
     count_ok = len(c73_s6) == 3868
-    sweep_count_ok = (sweep_keys is None) or (len(sweep_keys) == len(c73_s6_keys))
-    set_ok = (sweep_keys is None) or (sweep_keys == c73_s6_keys)
-    bit51 = sum(1 for r in c73_s6 if int(r[2]) & DEF_BIT51 == DEF_BIT51)
+    sweep_count_ok = len(sweep_keys) == len(c73_s6_keys)
+    set_ok = sweep_keys == c73_s6_keys
+    position_cell51 = sum(1 for r in c73_s6 if int(r[0], 16) & DEF_BIT51)
+    membership_bit51 = sum(1 for r in c73_s6 if int(r[2]) & DEF_BIT51)
+    assert membership_bit51 == 0, "unexpected certificate membership bit 51"
 
     # ---- 4. closure roadmap ----
     rows = m["s6All"]
@@ -131,7 +135,8 @@ def main():
                    "win": 3854, "loss": 14, "sensitivity_audit": "fails 0 (K0675 verified.json)"},
       "new_s6_computation_needed": 0,
       "remaining_worklist": {"orbits": 43375 - len(c73_s6), "cost_edges": 3477178 - sum(int(r[1]) for r in c73_s6)},
-      "cert73_s6_with_bit51": bit51,
+      "cert73_s6_with_position_cell51": position_cell51,
+      "cert73_s6_with_membership_bit51": membership_bit51,
       "roadmap_declared_seen_all_match": ok_all,
     }
     os.makedirs(out_dir, exist_ok=True)
