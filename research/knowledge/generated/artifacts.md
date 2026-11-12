@@ -500,6 +500,12 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_saturation_sat.py)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): n=4..6の固定辺を含む全小グラフとSAT符号化の照合
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tetracyclic_cores.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tetracyclic_cores.py)
+
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (verifier): 核・道長の被覆を独立生成で照合し四角形マスクで全候補を検査
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tetracyclic_positive.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tetracyclic_positive.py)
+
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (verifier): 8頂点11辺の陽性例を全辺集合列挙と自己同型による軌道数で照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_cores.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/audit_tricyclic_cores.py)
 
 - [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (verifier): 6・7頂点の全対象グラフの核被覆と11頂点全候補の四角形マスク照合
@@ -577,6 +583,9 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_sparse_unpruned_n10.cpp)
 
 - [K0717](../items/K0717-weight-two-d10-saturation-minimum.md) (verifier): 連結性枝刈りなしの再列挙。C4判定は共有する
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_tetracyclic_cores.cpp](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_tetracyclic_cores.cpp)
+
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (verifier): 同型を除いた多重グラフの核と道長を列挙
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_tricyclic_cores.py](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/enumerate_tricyclic_cores.py)
 
 - [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (verifier): ループと平行辺を許す核および道長の全候補を列挙
@@ -622,6 +631,18 @@
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/sparse-c4-enumeration.json)
 
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (data): 2実装で一致した安全配置と極大配置の集計・ソースhash
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-n13-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-n13-audit.json)
+
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (data): 独立監査の候補数・C4禁止数・飽和数と入力hash
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-n13-candidates.txt.gz](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-n13-candidates.txt.gz)
+
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (data): 55822候補の核と道長。異なる候補が同型の場合を含む
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-n13-proof.md](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-n13-proof.md)
+
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (proof): 葉なし16辺候補を核・道長の有限ケースへ帰着
+## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-positive-control.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/tetracyclic-positive-control.json)
+
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (data): 8頂点陽性対照の5同型類と90720配置の照合
 ## [research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json](../../../research/experiments/binary-cube-coplanar-midpoint-theorem-20261109/three-leaf-counterexample-audit.json)
 
 - [K0715](../items/K0715-weight-two-c4-saturation-bounds.md) (data): 70四点集合と19欠辺の検査結果
@@ -676,6 +697,7 @@
 - [K0716](../items/K0716-weight-two-d9-saturation-minimum.md) (certificate): 9次元11辺の包含極大C4禁止構成
 - [K0742](../items/K0742-c4-saturation-with-leaf-exact.md) (certificate): 奇数n>=5で葉を持ち下界を達成する明示構成
 - [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) (certificate): 11頂点14辺の明示構成
+- [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) (certificate): 13頂点17辺の明示構成
 ## [research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md](../../../research/experiments/binary-cube-dense-section-polynomial-20261025/proof.md)
 
 - [K0558](../items/K0558-binary-cube-dense-hyperplane-section-polynomiality.md) (proof): 任意固定正密度の有限支持・支持一意性・整数値多項式性と計算可能性の全称証明
@@ -12688,6 +12710,18 @@
 ## [research/experiments/vertex-cover-terminal-dp-20261102/verify.py](../../../research/experiments/vertex-cover-terminal-dp-20261102/verify.py)
 
 - [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (verifier): 8067グラフ条件、996別被覆、100禁止超辺条件472592部分集合、K2m式80条件を照合
+## [research/experiments/width19-plus-half-density-mixed-20261112/output/circle_witness_search.json](../../../research/experiments/width19-plus-half-density-mixed-20261112/output/circle_witness_search.json)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (data): witness探索の機械出力（制御・最大16）
+## [research/experiments/width19-plus-half-density-mixed-20261112/output/width19_plus_mixed_audit.json](../../../research/experiments/width19-plus-half-density-mixed-20261112/output/width19_plus_mixed_audit.json)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (data): 監査全数値の機械出力
+## [research/experiments/width19-plus-half-density-mixed-20261112/reports/width19-plus-circle-point-max.md](../../../research/experiments/width19-plus-half-density-mixed-20261112/reports/width19-plus-circle-point-max.md)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (proof): 定理・証明・系表・witness探索の記録
+## [research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts](../../../research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (verifier): 監査3セグメント+witness探索の単独再現（MODE切替）
 ## [research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json](../../../research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (data): 全制御の実行結果
@@ -13012,6 +13046,9 @@
 ## [research/log/2026-11-12-six-row-q7-width6-seed.md](../../../research/log/2026-11-12-six-row-q7-width6-seed.md)
 
 - [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) (log): 手法・バグ教訓4件・レジューム候補
+## [research/log/2026-11-12-width19-plus-half-density-mixed.md](../../../research/log/2026-11-12-width19-plus-half-density-mixed.md)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
 ## [research/log/2026-11-12-width6-circle-eight-point-proof.md](../../../research/log/2026-11-12-width6-circle-eight-point-proof.md)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (log): 判断・教訓・レジューム

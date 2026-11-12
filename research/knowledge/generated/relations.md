@@ -368,6 +368,8 @@
 - ← generalizes [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): q>2w（w=7ではq≥15）をq=11..14まで拡張
 - ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 行分離公式の枠組み。本項目はP≤2wの自明円上界をP(8)=12に改良して閾値をq>16からq>12へ下げる
 - ← generalizes [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 行分離公式の新規(w,q)領域（w=12は全q未確定だった）
+- ← depends_on [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): 行分離公式 g(S)=(w·min(m,q−1)−|S|) mod2・M_{w,q}=q−1 の導出枠組み
+- ← generalizes [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): 新規(w,q)は q∈(2⌈w/2⌉, w+⌈w/2⌉]（K0025のq>2wとK0072のq>w+⌈w/2⌉の間の全帯）
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -696,6 +698,7 @@
 - ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 二重行数上界のmod9枠組み（7連続行版を本項目で独立計算）
 - ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 二重行数上界のmod9枠組み（8連続行版を本項目で独立計算）
 - ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): Vieta整数化・合同除外証明書（w=9..14小幅とw=15..18半密度）。本項目は証明書が接点行混合集合にも有効であること（QR0）を解釈してP≤2(d+s)に変換
+- ← depends_on [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): w≧19半密度証明書（4807 CRT・11·23·31・周期713）のQR₀混合妥当性を監査して点行上界d+s≦⌈w/2⌉として昇格
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -1775,6 +1778,7 @@
 - ← supports [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 幅7の安定化長はq≥11で確定。M_{7,q}(q≤10)はopen
 - ← supports [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 幅8の安定化長はq≥13で確定。M_{8,q}(q≤12)はopen
 - ← supports [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 安定化長M_{w,q}=q−1の大幅拡大（w=15:q=17..23・w=16:q=17..24・w=17:q=19..26・w=18:q=19..27等）
+- ← supports [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): 安定化長M_{w,q}=q−1の無限族拡大（例: w=19:q=21..29・w=30:q=31..45・w=100:q=101..150）
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -4183,6 +4187,7 @@
 - → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): 偶奇別のC4飽和明示構成と重み2層の対応
 - ← depends_on [K0743](../items/K0743-weight-two-d11-saturation-minimum.md): 葉を持つ11頂点C4飽和グラフは14辺以上
 - ← depends_on [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md): 葉を持つ候補の辺数下界
+- ← depends_on [K0777](../items/K0777-weight-two-d13-saturation-minimum.md): 葉を持つ13頂点C4飽和グラフは17辺以上
 
 ## [K0743](../items/K0743-weight-two-d11-saturation-minimum.md) 二値立方体重み2層の11次元最小極大配置は14石
 
@@ -4195,6 +4200,7 @@
 - → depends_on [K0715](../items/K0715-weight-two-c4-saturation-bounds.md): n+2下界と重み2層のC4対応、偶数次元の構成
 - → depends_on [K0742](../items/K0742-c4-saturation-with-leaf-exact.md): 葉を持つ候補の辺数下界
 - → depends_on [K0743](../items/K0743-weight-two-d11-saturation-minimum.md): 11頂点13辺の有限核排除と三重閉路核の構造
+- ← depends_on [K0777](../items/K0777-weight-two-d13-saturation-minimum.md): 重み2層のC4対応とn+3下界
 
 ## [K0745](../items/K0745-five-row-m19-full-capacity-witness.md) 5×19には(6,6,6,6,6)型30石の安全極大配置が存在する（検証済みwitness）
 
@@ -4447,6 +4453,7 @@
 - → depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 幅6/7/8の決定と接続。w=8 witnessがw=9,10のwitnessを兼ねる
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規(w,q)領域（w=12は全q未確定だった）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}=q−1の大幅拡大（w=15:q=17..23・w=16:q=17..24・w=17:q=19..26・w=18:q=19..27等）
+- ← depends_on [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): P≦2(d+s)会計・QR₀解釈・非Vietaカスケード（接点行積分性）・w=15..18のP≦2⌈w/2⌉（本項目と合わせ全w≧15）
 
 ## [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した
 
@@ -4506,3 +4513,16 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): サイズh+2=1627の不存在（単一CNF・監査済み）からA(3251)<=1626、本項はそこから1下げる
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
+
+## [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) 幅w≧19整数格子の円点数上界P(w)≦2⌈w/2⌉（偶数wでは≦w）— w≧19半密度証明書のQR₀混合点行解釈の監査完了と行分離公式の無限族拡大
+
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): w≧19半密度証明書（4807 CRT・11·23·31・周期713）のQR₀混合妥当性を監査して点行上界d+s≦⌈w/2⌉として昇格
+- → depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): P≦2(d+s)会計・QR₀解釈・非Vietaカスケード（接点行積分性）・w=15..18のP≦2⌈w/2⌉（本項目と合わせ全w≧15）
+- → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式 g(S)=(w·min(m,q−1)−|S|) mod2・M_{w,q}=q−1 の導出枠組み
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 新規(w,q)は q∈(2⌈w/2⌉, w+⌈w/2⌉]（K0025のq>2wとK0072のq>w+⌈w/2⌉の間の全帯）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}=q−1の無限族拡大（例: w=19:q=21..29・w=30:q=31..45・w=100:q=101..150）
+
+## [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) 二値立方体重み2層の13次元最小極大配置は17石
+
+- → depends_on [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md): 重み2層のC4対応とn+3下界
+- → depends_on [K0742](../items/K0742-c4-saturation-with-leaf-exact.md): 葉を持つ13頂点C4飽和グラフは17辺以上

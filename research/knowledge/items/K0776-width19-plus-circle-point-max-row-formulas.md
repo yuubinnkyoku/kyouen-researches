@@ -33,7 +33,7 @@ relations:
   note: 新規(w,q)は q∈(2⌈w/2⌉, w+⌈w/2⌉]（K0025のq>2wとK0072のq>w+⌈w/2⌉の間の全帯）
 - type: supports
   target: K0332
-  note: 安定化長M_{w,q}=q−1の無限族拡大（例: w=19:q=21..29・w=30:q=31..45・w=100:q=101..150）
+  note: "安定化長M_{w,q}=q−1の無限族拡大（例: w=19:q=21..29・w=30:q=31..45・w=100:q=101..150）"
 artifacts:
 - path: research/experiments/width19-plus-half-density-mixed-20261112/reports/width19-plus-circle-point-max.md
   role: proof
