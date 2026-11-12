@@ -55,6 +55,12 @@ def main() -> int:
     ap.add_argument("--proof", required=True)
     ap.add_argument("--expect-cnf-sha256", default=None)
     ap.add_argument("--solver", default="")
+    ap.add_argument("--checker-exe", default=None,
+                    help="prebuilt checker binary (default: compile drat_check_incremental.cpp)")
+    ap.add_argument("--checker-source", default="drat_check_incremental.cpp",
+                    help="checker source the binary came from (recorded by sha256)")
+    ap.add_argument("--no-gzip", action="store_true",
+                    help="skip the .drat.gz copy (for proofs too large to commit)")
     args = ap.parse_args()
     p = args.p
     h = (p - 1) // 2
@@ -78,10 +84,15 @@ def main() -> int:
     if args.expect_cnf_sha256 and cnf_sha != args.expect_cnf_sha256:
         raise SystemExit(f"CNF mismatch: {cnf_sha} != {args.expect_cnf_sha256}")
 
-    checker = TMP / "drat_inc_cert.exe"
+    checker = Path(args.checker_exe) if args.checker_exe else TMP / "drat_inc_cert.exe"
+    if args.checker_exe and not checker.exists():
+        raise SystemExit(f"missing checker executable: {checker}")
     if not checker.exists():
         subprocess.run(["g++", "-O2", "-std=c++17", str(CHECKER_SOURCE), "-o", str(checker)],
                        check=True)
+    checker_source = HERE / args.checker_source
+    if not checker_source.exists():
+        raise SystemExit(f"missing checker source: {checker_source}")
     proof_sha = sha256(proof)
     t0 = time.time()
     chk = subprocess.run([str(checker), str(cnf), str(proof)], capture_output=True, text=True)
@@ -95,7 +106,8 @@ def main() -> int:
         "cnf_sha256": cnf_sha, "proof_sha256": proof_sha,
         "proof_lines": sum(1 for _ in proof.open("rb")),
         "proof_bytes": proof.stat().st_size,
-        "checker_source_sha256": sha256(CHECKER_SOURCE),
+        "checker_source_sha256": sha256(checker_source),
+        "checker_exe": str(checker),
         "checker_rc": chk.returncode,
         "checker_last_line": out[-1] if out else chk.stderr.strip()[:300],
         "verified": verified,
@@ -103,7 +115,7 @@ def main() -> int:
         "solver": args.solver,
         "conclusion": (f"A({p}) <= {h}" if verified else "NOT VERIFIED"),
     }
-    if verified:
+    if verified and not args.no_gzip:
         gz = dest / f"a{p}_{size}.drat.gz"
         if not gz.exists():
             with gzip.open(gz, "wb", compresslevel=6) as g:
