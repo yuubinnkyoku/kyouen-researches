@@ -1,6 +1,6 @@
 ---
 id: K0753
-title: S2 {59,60} milestone-3のS6 orbit worklist manifest（greedy証明書1–8・blocker 12個・S6 orbit 20,534 = 49.1%・milestone-2完全包含）
+title: S2 {59,60} milestone-3のS6 orbit worklist manifest（greedy証明書1–8・blocker 14個（61中）・S6 orbit 20,534 = 49.1%・milestone-2完全包含）
 kind: computation
 status: computed
 topics: [square-outcomes, certificates, verification]
@@ -40,7 +40,7 @@ artifacts:
 
 S2 {59,60}（best S3 r=61）閉鎖のgreedy証明書順
 {5,115} → {27,93} → {71} → {82} → {104} → {73} → {90,96} → {23}
-（**60 blocker中12個閉鎖**）に対して、milestone-2（K0748）と同一の幾何機関で
+（証明書1–8で**61 blocker中14個（11クラス）がworklist-covered**。2026-11-12監査で旧記録の「60 blocker・12閉鎖」は「61 blocker・14 covered」に訂正。manifest本文のgreedy_orderヘッダの "12 of 60" もこの訂正に従う）に対して、milestone-2（K0748）と同一の幾何機関で
 S6 orbit worklistを完全列挙した（78 FW oracle条件付き）。
 
 - 単独証明書S6 orbit: 3,868 / 4,232 / 4,232 / 4,416（{73}/{90}/{96}/{23}）。
@@ -62,3 +62,14 @@ solver protocolはK0746/K0748と同一（WIN証明書=認定済みWIN7子鍵1個
 
 本計算は78 FW oracleの下の条件付きworklist確定であり、いかなるS6 verdict・
 S2・空盤の勝敗も含まない。空盤・二石root {49,60} は **UNKNOWN** のままである。
+
+## 訂正（2026-11-12監査・同セッション後半）
+
+- blocker総数は61（K0725/K0729訂正参照）。証明書1–8のworklist-covered blockerは
+  **14個 / 11クラス**（8証明書 + {31},{89,97}の0-marginal被他覆）。
+  旧記録「12/60」は過少。
+- manifest JSON本文の greedy_order 文字列 "12 of 60 blockers closed" は
+  この訂正に従う（データ部・certStats・s6All・s5Repsは影響なし。
+  ヘッダ文字列の修正は次回のmanifest更新時に合わせて行う）。
+- greedy ladderはstep 33まで完走測定済み（K0729追記・
+  research/log/2026-11-12-n11-s2-5960-greedy-ladder-complete.md）。
