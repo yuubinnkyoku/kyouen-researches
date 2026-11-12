@@ -8532,6 +8532,15 @@
 ## [research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts](../../../research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts)
 
 - [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (source): 94オラクル鍵+14 LOSS S6鍵を埋込み（s5_verdicts.json由来・自己assert 78+16/3,868/14）、 orbit-level blocker特定・196 S5会計・settled-10判定・7,867/615,497 manifest生成を 再実行する自己完結TS検証script（anchor不一致でthrow）
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 候補S7表 s7_hex,s6_hex,move,cat（1=既知LOSS子、2=プール候補）。part1..3で計8,763行
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_stats.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_stats.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 導出anchor・md5一致・再利用分類の全計数
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 決定論的な再導出・再分類プログラム
 ## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon）。 単独実行で分布・13,244・classA 32件・worklist 1,447・鏡映同一性まで全数値を再現
@@ -12767,6 +12776,24 @@
 ## [research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts](../../../research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts)
 
 - [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (verifier): 監査3セグメント+witness探索の単独再現（MODE切替）
+## [research/experiments/width21-26-point-row-20261112/output/width21_26_point_row.json](../../../research/experiments/width21-26-point-row-20261112/output/width21_26_point_row.json)
+
+- [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) (data): 全数値の機械出力（探索は分割実行の記録値）
+## [research/experiments/width21-26-point-row-20261112/reports/width21-26-point-row.md](../../../research/experiments/width21-26-point-row-20261112/reports/width21-26-point-row.md)
+
+- [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) (proof): 定理・証明骨子・g₀計数補題・実現可能性・制御・限界
+## [research/experiments/width21-26-point-row-20261112/scripts/width21_26_point_row.ts](../../../research/experiments/width21-26-point-row-20261112/scripts/width21_26_point_row.ts)
+
+- [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) (verifier): 分類・全列挙・A=0・探索の単独再現（STAGE 分割実行・探索は SET 毎に分割）
+## [research/experiments/width21-35-point-row-exact-20261112/output/width21_35_point_row.json](../../../research/experiments/width21-35-point-row-exact-20261112/output/width21_35_point_row.json)
+
+- [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) (data): 全数値の機械出力（探索は分割実行の記録値）
+## [research/experiments/width21-35-point-row-exact-20261112/reports/width21-35-point-row.md](../../../research/experiments/width21-35-point-row-exact-20261112/reports/width21-35-point-row.md)
+
+- [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) (proof): 定理・証明骨子・S* 同定と実現・周期解析・制御・限界
+## [research/experiments/width21-35-point-row-exact-20261112/scripts/width21_35_point_row.ts](../../../research/experiments/width21-35-point-row-exact-20261112/scripts/width21_35_point_row.ts)
+
+- [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) (verifier): 分類・周期掃引・witness・A=0・探索の単独再現（STAGE 分割実行）
 ## [research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json](../../../research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (data): 全制御の実行結果
@@ -13097,6 +13124,12 @@
 ## [research/log/2026-11-12-width19-plus-half-density-mixed.md](../../../research/log/2026-11-12-width19-plus-half-density-mixed.md)
 
 - [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-12-width21-26-point-row.md](../../../research/log/2026-11-12-width21-26-point-row.md)
+
+- [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-12-width21-35-point-row-exact.md](../../../research/log/2026-11-12-width21-35-point-row-exact.md)
+
+- [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) (log): 判断・教訓・レジューム
 ## [research/log/2026-11-12-width6-circle-eight-point-proof.md](../../../research/log/2026-11-12-width6-circle-eight-point-proof.md)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (log): 判断・教訓・レジューム
@@ -13105,6 +13138,9 @@
 ## [research/log/2026-11-12-width9-18-circle-point-max.md](../../../research/log/2026-11-12-width9-18-circle-point-max.md)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md](../../../research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 経緯と再現上の注意（メモリ上限・実装上の修正点）
 ## [research/log/2026-11-13-p2531-no-size-h1-set.md](../../../research/log/2026-11-13-p2531-no-size-h1-set.md)
 
 - [K0781](../items/K0781-p2531-no-size-h1-set.md) (log): 発見の経緯と当時の検証状態、4素数を並べた表

@@ -33,7 +33,7 @@ relations:
   note: 安定化長 M_{w,q}=q−1 の定義と枠組み
 - type: generalizes
   target: K0025
-  note: 行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)
+  note: "行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)"
 artifacts:
 - path: research/experiments/width21-35-point-row-exact-20261112/reports/width21-35-point-row.md
   role: proof

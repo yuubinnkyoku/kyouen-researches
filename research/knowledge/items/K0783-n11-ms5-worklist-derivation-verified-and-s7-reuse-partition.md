@@ -3,7 +3,7 @@ id: K0783
 title: n11 S2{59,60} milestone-5のS6ワークリスト（鍵・classes・cost）が完全独立再導出で公開manifestと全行一致し、S7再利用候補8,763は既知LOSS396と証明書プール候補8,367に完全分解される（K0675条件下）
 kind: proposition
 status: computed
-topics: [n11, s2-5960, milestone5, verification, certificate-reuse]
+topics: [verification, certificates, provenance, search-methods]
 aliases: []
 relations:
 - type: depends_on
@@ -20,7 +20,7 @@ artifacts:
   role: manifest
   note: 導出anchor・md5一致・再利用分類の全計数
 - path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts
-  role: code
+  role: verifier
   note: 決定論的な再導出・再分類プログラム
 - path: research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md
   role: log

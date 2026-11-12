@@ -372,6 +372,8 @@
 - ← depends_on [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): 行分離公式 g(S)=(w·min(m,q−1)−|S|) mod2・M_{w,q}=q−1 の導出枠組み
 - ← generalizes [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): 新規(w,q)は q∈(2⌈w/2⌉, w+⌈w/2⌉]（K0025のq>2wとK0072のq>w+⌈w/2⌉の間の全帯）
 - ← generalizes [K0778](../items/K0778-width17-20-circle-point-bounds.md): 行分離公式の新規 (w,q)（w=17:q=18・w=19:q=20。w≥21 の低 q 帯は K0776 と同一結論）
+- ← generalizes [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): 行分離公式の新規 (w,q)（(21,22),(23,24),(25,26)）
+- ← generalizes [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): 行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -702,6 +704,8 @@
 - ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): Vieta整数化・合同除外証明書（w=9..14小幅とw=15..18半密度）。本項目は証明書が接点行混合集合にも有効であること（QR0）を解釈してP≤2(d+s)に変換
 - ← depends_on [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): w≧19半密度証明書（4807 CRT・11·23·31・周期713）のQR₀混合妥当性を監査して点行上界d+s≦⌈w/2⌉として昇格
 - ← depends_on [K0778](../items/K0778-width17-20-circle-point-bounds.md): Vieta 整数化・半密度証明書（CRT4807・周期713）。周期713補題を独立再実装
+- ← depends_on [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): Vieta 整数化・合同証明書の枠組み。g₀計数補題で e∉ℤ ケースを明示的に閉鎖
+- ← depends_on [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): Vieta 整数化・合同証明書・窓マスクの枠組み
 
 ## [K0073](../items/K0073-q-two-width-circle-criterion.md) q=2w共円の一般必要十分条件は行ペア和一致と積の二階差
 
@@ -1784,6 +1788,8 @@
 - ← supports [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 安定化長M_{w,q}=q−1の大幅拡大（w=15:q=17..23・w=16:q=17..24・w=17:q=19..26・w=18:q=19..27等）
 - ← supports [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): 安定化長M_{w,q}=q−1の無限族拡大（例: w=19:q=21..29・w=30:q=31..45・w=100:q=101..150）
 - ← depends_on [K0778](../items/K0778-width17-20-circle-point-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
+- ← depends_on [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
+- ← depends_on [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -3695,6 +3701,7 @@
 - ← depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): 94五石位置universe・3,868 S6スイープ（3,854 WIN/14 LOSS・感受性証明書fails 0）が 証明書{73}のS5/S6集合と同一（key-for-key・算術・部分集合の3系統で機械照合）
 - ← depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): 94五石位置オラクル（FW 78+SW 16・3,868 S6 verdict）をD4像込みで再利用する
 - ← depends_on [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md): 94五石位置オラクル（78 FW+16 SW・3,868 S6 sweep・14 LOSS S6）を正として全 会計を実行
+- ← depends_on [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md): 94オラクル位置（78 FW + 16 SW）と14 LOSS sweep鍵が導出の全入力
 
 ## [K0676](../items/K0676-n11-region-s4-first-win.md) 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子）
 
@@ -4056,6 +4063,7 @@
 - ← depends_on [K0749](../items/K0749-four-row-m19-class0123-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 - ← depends_on [K0750](../items/K0750-four-row-m19-class0124-nonexistence.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 - ← depends_on [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md): 5×19危険曲線census（95本）を同じ機械で完全再現する制御として使用
+- ← depends_on [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md): focus2154の62証明書（27 WIN7 + 35 LOSS7）が再利用分類の入力
 
 ## [K0727](../items/K0727-blocker-obligation-fill-m57.md) blocker-obligation-fill DFS: 5×m・q=7 欠損行クラスの極大安全配置を完全列挙する機械
 
@@ -4533,6 +4541,8 @@
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 新規(w,q)は q∈(2⌈w/2⌉, w+⌈w/2⌉]（K0025のq>2wとK0072のq>w+⌈w/2⌉の間の全帯）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}=q−1の無限族拡大（例: w=19:q=21..29・w=30:q=31..45・w=100:q=101..150）
 - ← supports [K0778](../items/K0778-width17-20-circle-point-bounds.md): K0776 は P(19),P(20)≤20 だが本項目は候補完全分類経由で P≤18 に鋭化し、w=19 の系に q=20 を追加。周期713・w=21..26 窓カウントの独立再現で相互検証
+- ← supports [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): P(w) ≤ 2⌈w/2⌉（全 w≥19）を w=21..26 で 2⌈w/2⌉−2 に鋭化。系の新規 q (21,22),(23,24),(25,26)
+- ← supports [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): P(w) ≤ 2⌈w/2⌉ を w≠26 で 2⌈w/2⌉−4 に鋭化（全称・周期解析で w≥65 も閉鎖）。系の下端を全奇数 w≥21 の q=w+1 に拡張
 
 ## [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) 二値立方体重み2層の13次元最小極大配置は17石
 
@@ -4547,6 +4557,7 @@
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): Vieta 整数化・半密度証明書（CRT4807・周期713）。周期713補題を独立再実装
 - → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規 (w,q)（w=17:q=18・w=19:q=20。w≥21 の低 q 帯は K0776 と同一結論）
+- ← supports [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): w=19,20 候補点行集合の実現可能性否定を e≡0 mod 4 から e∈Z 全域に拡張し、A=0（行0接点）を厳密に不可能とした（有限因子分解）
 
 ## [K0779](../items/K0779-c4-saturation-n-plus-four-bound.md) C4飽和グラフはn>=13でn+4辺以上、重み2層の14次元最小値は18
 
@@ -4564,3 +4575,25 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): サイズh+2=1267の不存在（単一CNF・監査済み）からA(2531)<=1266、本項はそこから1下げる
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
+
+## [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) 幅21..26の円点数 P(w) ≤ 2⌈w/2⌉−2（k=⌈w/2⌉ 候補点行集合がmod 19で全滅）・w=19,20候補の実現可能性は e∈Z・R'≤2×10⁷ で否定・A=0は厳密不可能
+
+- → supports [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): P(w) ≤ 2⌈w/2⌉（全 w≥19）を w=21..26 で 2⌈w/2⌉−2 に鋭化。系の新規 q (21,22),(23,24),(25,26)
+- → supports [K0778](../items/K0778-width17-20-circle-point-bounds.md): w=19,20 候補点行集合の実現可能性否定を e≡0 mod 4 から e∈Z 全域に拡張し、A=0（行0接点）を厳密に不可能とした（有限因子分解）
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): Vieta 整数化・合同証明書の枠組み。g₀計数補題で e∉ℤ ケースを明示的に閉鎖
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規 (w,q)（(21,22),(23,24),(25,26)）
+- ← supports [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): w=26 の level 13 全滅（P≤24）を再利用し、level 12 唯一生残 S* を実現（650 円）して P(26)=24 を確定。w=19,20 の P=16 予想には影響しない（650 円の行スパンは 26）
+
+## [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) n11 S2{59,60} milestone-5のS6ワークリスト（鍵・classes・cost）が完全独立再導出で公開manifestと全行一致し、S7再利用候補8,763は既知LOSS396と証明書プール候補8,367に完全分解される（K0675条件下）
+
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94オラクル位置（78 FW + 16 SW）と14 LOSS sweep鍵が導出の全入力
+- → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): focus2154の62証明書（27 WIN7 + 35 LOSS7）が再利用分類の入力
+
+## [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) 幅21..35の円点数の完全決定 P(22)=18・P(23)=P(24)=20・P(25)=22・P(26)=…=P(35)=24・24点witness円650 — 全称上界 P(w) ≤ 2⌈w/2⌉−4（全w≥21・w≠26）・行分離公式 M_{w,w+1}=w（全奇数w≥21）
+
+- → supports [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): P(w) ≤ 2⌈w/2⌉ を w≠26 で 2⌈w/2⌉−4 に鋭化（全称・周期解析で w≥65 も閉鎖）。系の下端を全奇数 w≥21 の q=w+1 に拡張
+- → supports [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): w=26 の level 13 全滅（P≤24）を再利用し、level 12 唯一生残 S* を実現（650 円）して P(26)=24 を確定。w=19,20 の P=16 予想には影響しない（650 円の行スパンは 26）
+- → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): Vieta 整数化・合同証明書・窓マスクの枠組み
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)
