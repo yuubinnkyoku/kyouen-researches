@@ -1,0 +1,56 @@
+{
+  "session": "2026-11-12 q108 fast lane: width-6 one-row-deficient class campaign (seed)",
+  "machine": "six_row_one_deficient_runner.ts — width-6 port of multi_deficient_runner.ts (5x19); identical DFS/blocker algorithm; census = chord method (validated vs 3-point brute-force at 6x13 in K0760 control b); dangers = row lines (6 stones) + >=7-point circles (<=6 stones); non-horizontal lines meet the 6-row grid in <=6 points so no 7-point line exists (proof)",
+  "runs": [
+    {
+      "M": 13, "S0": [0,1,2,3,4], "DEF_ROWS": [0], "nC": 116,
+      "mirrorRepsTotal": 1212,
+      "nodes": 600000, "capped": true, "witnesses": 1006128, "leaves": 419,
+      "note": "first mirror rep alone floods: >1,006,128 maximal safe configs before the 600k node cap; 12 sampled witnesses all verify PASS with rowCounts (5,6,6,6,6,6)",
+      "sampleWitness": {"rows": [[0,1,2,3,4],[0,1,6,7,8,9],[0,6,8,10,11,12],[1,2,3,8,9,10],[2,4,5,6,7,8],[0,2,3,5,6,7]], "safe": true, "maximal": true, "rowCounts": [5,6,6,6,6,6]},
+      "verdict": "class exists at 6x13, abundantly"
+    },
+    {
+      "M": 16, "S0": [0,1,2,3,4], "nC": 176,
+      "nodes": 28, "capped": false, "witnesses": 3, "leaves": 1,
+      "firstWitness": {"rows": [[0,1,2,3,4],[6,7,8,13,14,15],[0,1,6,9,14,15],[7,8,9,12,13,14],[8,9,10,11,12,13],[0,5,9,11,12,15]], "safe": true, "maximal": true, "rowCounts": [5,6,6,6,6,6]},
+      "verdict": "class exists at 6x16 (35 stones)"
+    },
+    {
+      "M": 19, "S0": [0,1,2,3,4], "nC": 244,
+      "nodes": 203446, "capped": false, "witnesses": 3, "leaves": 3,
+      "firstWitness": {"rows": [[0,1,2,3,4],[3,9,12,13,14,16],[7,8,13,14,16,17],[1,7,8,10,14,15],[6,8,10,12,13,15],[0,2,7,8,13,15]], "safe": true, "maximal": true, "rowCounts": [5,6,6,6,6,6]},
+      "independentVerification": {"method": "stone-triple circumcircle enumeration, census-free, exact integer arithmetic", "stones": 35, "worstCircleStones": 6, "unblockedEmptyPoints": 0, "tripleCirclesChecked": 5977},
+      "verdict": "class exists at 6x19 (35 stones) — contrasts with 5x19 where the class is empty (K0759)"
+    },
+    {
+      "M": 20, "S0": [0,1,2,3,4], "nC": 268,
+      "nodes": 300000, "capped": true, "witnesses": 0, "leaves": 0,
+      "verdict": "inconclusive (open); 500k attempt exceeded the sandbox process-safety deadline"
+    },
+    {
+      "M": 22, "S0": [0,5,10,15,20], "nC": 316,
+      "nodes": 249271, "capped": false, "witnesses": 0, "leaves": 0,
+      "verdict": "no witness for this single mirror rep (complete enumeration of this S0)"
+    },
+    {
+      "M": 22, "S0": [0,1,2,3,4], "nC": 316,
+      "nodes": 300000, "capped": true, "witnesses": 0, "leaves": 0,
+      "verdict": "inconclusive (open)"
+    }
+  ],
+  "randomSampling": {
+    "setup": "row0 = 5 stones, rows1-5 = 6 stones, mulberry32 seed 20261112+13m+5, 20000 samples; safe = all census circles <= 6 stones; maximal = row0 empty points each covered by a census circle with exactly 6 stones (rows1-5 blocked by row lines)",
+    "results": {
+      "19": {"nC": 244, "safe": 15891, "maximalSafe": 0},
+      "20": {"nC": 268, "safe": 16751, "maximalSafe": 0},
+      "21": {"nC": 292, "safe": 17416, "maximalSafe": 0},
+      "22": {"nC": 316, "safe": 17961, "maximalSafe": 0},
+      "25": {"nC": 388, "safe": 18899, "maximalSafe": 0},
+      "28": {"nC": 468, "safe": 19360, "maximalSafe": 0}
+    },
+    "lesson": "sampling is NOT sensitive for this class: at m=19 it returns 0 maximal-safe in 20k samples although machine-verified witnesses exist. Absence claims require the DFS machine; sampling cannot support them."
+  },
+  "open": "one-row-deficient class existence at m >= 20 is open (m=13/16/19: exists). The transition m (if any) where the class vanishes — the width-6 analogue of the 5x19 result — is unknown.",
+  "resume": "(1) m=20/21/22 with per-S0 higher budgets (500k+ needs deadline management: split census build from DFS or use incremental resume), (2) k=5 rep sweep at 6x19 to count witnesses per rep and locate the cheapest reps, (3) full 6x13 class enumeration (1212 reps) as a first complete width-6 class datum, (4) two-row-deficient classes at 6x13/16/19."
+}
