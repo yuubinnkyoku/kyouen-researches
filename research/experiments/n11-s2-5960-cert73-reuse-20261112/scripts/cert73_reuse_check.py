@@ -22,7 +22,7 @@ Usage:
 <s6sweep_dir>  research/experiments/n11-central-19-cover-20261031/output/s6sweep/
   (requires s5_verdicts.json; sweep_results.json used for the S6 count when present).
 """
-import json, os, sys
+import hashlib, json, os, sys
 
 CERT73_BIT = 32
 DEF_BIT51 = 1 << 51
@@ -65,6 +65,11 @@ def load_sweep_keys(sweep_results_path):
 
 def main():
     manifest_path, sweep_dir, out_dir = sys.argv[1:4]
+    expected_md5 = "452b4336edbe272a49dcd76c4a7764af"
+    with open(manifest_path, "rb") as f:
+        actual_md5 = hashlib.md5(f.read()).hexdigest()
+    if actual_md5 != expected_md5:
+        raise ValueError(f"manifest MD5 mismatch: expected {expected_md5}, got {actual_md5}")
     m = json.load(open(manifest_path))
     s5v = json.load(open(os.path.join(sweep_dir, "s5_verdicts.json")))
     sweep_keys = load_sweep_keys(os.path.join(sweep_dir, "sweep_results.json"))
@@ -113,7 +118,8 @@ def main():
     assert s5_match and obligations_ok and count_ok and sweep_count_ok and set_ok and loss_all_in and ok_all, "certificate reuse audit failed"
 
     summary = {
-      "manifest_md5_expected": "452b4336edbe272a49dcd76c4a7764af",
+      "manifest_md5_expected": expected_md5,
+      "manifest_md5_actual": actual_md5,
       "cert73": {"bit": CERT73_BIT, "step": int(c73["step"]), "s5Orbits": int(c73["s5Orbits"]),
                  "s6Orbits": len(c73_s6), "rawObligations": int(c73["rawObligations"])},
       "s5_universe_identity": {"match": s5_match, "cert73_s5": len(s5_keys), "universe": len(uni_keys)},
