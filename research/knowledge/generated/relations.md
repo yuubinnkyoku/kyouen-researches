@@ -78,6 +78,7 @@
 - ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 標準q=4の安全性は部分集合に継承される
 - ← depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
 - ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
+- ← depends_on [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -810,6 +811,7 @@
 - ← depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 安全集合に含まれる完全対は高々一つ
 - ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 安全集合の完全対は高々一つ
 - ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 安全集合の完全対は高々一つ
+- ← depends_on [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -1792,6 +1794,7 @@
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
 - ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
 - ← supports [K0770](../items/K0770-parabola-four-point-determinant-factorization.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
+- ← depends_on [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md): 四点のパラメータ和0 mod pは整数共円性の必要条件にすぎないという限定
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -4477,3 +4480,9 @@
 - → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 前提(3) の範囲限定格上げ
 - ← depends_on [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 同一符号化の基数制約
 - ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 基数符号化の範囲限定検証（前提(3)）
+
+## [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) パラメータの単元倍 t↦at は剰余放物線の安全性を保たない（p=2207の1104点証人で反例）
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
+- → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 四点のパラメータ和0 mod pは整数共円性の必要条件にすぎないという限定
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比

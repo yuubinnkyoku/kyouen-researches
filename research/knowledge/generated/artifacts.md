@@ -10615,6 +10615,7 @@
 ## [research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt)
 
 - [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): SHA-256 ce97d4a9447fd32cd67e3cfad59151774fa45cf90c8985287abb1a45480e2347の1104パラメータ
+- [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) (certificate): 監査済みのp=2207の1104点（形状(1,1,1)、完全対307、空対1078）
 ## [research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json)
 
 - [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 安全三点の受理、二完全対の禁止四点・重複・入力打切り・合成数の拒否
@@ -10638,6 +10639,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py)
 
 - [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py)
+
+- [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) (verifier): 証人を単元倍し、辺リストとの包含と独立なgeneric整数4x4行列式で共円性を再計算する
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 交差ソルバ実行器
@@ -10690,6 +10694,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/reduction_validation.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/reduction_validation.json)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 7素数の突合結果（全一致）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/scaling_invariance.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/scaling_invariance.json)
+
+- [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) (data): 原証人0辺・単元倍後1957辺（1957件すべて独立行列式で共円）の生出力
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）

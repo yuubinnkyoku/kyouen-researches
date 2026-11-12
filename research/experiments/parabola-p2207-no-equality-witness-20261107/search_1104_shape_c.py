@@ -1,4 +1,4 @@
-"""Unified SAT search for h+1 = 1104 point sets in Q_2207 (all shapes).
+"""Unified SAT search for h+1 point sets in Q_p (all shapes).
 
 For size h+1 the counting x + c - e = 1 (x = contains 0, c = complete pairs,
 e = empty pairs) leaves three shapes:
@@ -12,6 +12,10 @@ forbids all its points being selected.
 
 A model is turned into a set and checked against the full forbidden-edge list,
 so a reported witness is a genuine safe set.
+
+Usage:
+  search_1104_shape_c.py <p> [budget]
+  search_1104_shape_c.py <p> --write-cnf <path>     # dump DIMACS, do not solve
 """
 from __future__ import annotations
 
@@ -28,25 +32,19 @@ from pysat.solvers import Cadical195  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "output"
+KINDS = {"B": 1, "N": 2, "L": 3, "H": 4}
 
 
-def main() -> int:
-    p = int(sys.argv[1]) if len(sys.argv) > 1 else 2207
-    h = (p - 1) // 2
-    budget = int(sys.argv[2]) if len(sys.argv) > 2 else 20_000_000
-    OUT.mkdir(exist_ok=True)
-    edges = run_gen(str(Path(__import__("os").environ["TEMP"]) / "forbidden_edges.exe"), p)
-    print(f"p={p} h={h} edges={len(edges)}", flush=True)
+def build(p: int, edges):
+    """Shape (c) at size h+1: exactly one BOTH and exactly one NONE pair.
 
-    # variable layout: pair i (1..h) -> B=4i-3, N=4i-2, L=4i-1, H=4i
+    Returns (clauses, nv, kept_edges, dropped_trapezoid_edges).
+    """
+
     def v(pair, kind):
-        base = 4 * pair - 4
-        return base + {"B": 1, "N": 2, "L": 3, "H": 4}[kind]
+        return 4 * pair - 4 + KINDS[kind]
 
-    def side_var(point):
-        pair = point if point <= h else p - point
-        return v(pair, "L" if point <= h else "H"), v(pair, "B")
-
+    h = (p - 1) // 2
     clauses = []
     for i in range(1, h + 1):
         B, N, L, H = v(i, "B"), v(i, "N"), v(i, "L"), v(i, "H")
@@ -60,10 +58,9 @@ def main() -> int:
     card_n = CardEnc.equals(lits=none, bound=1, top_id=card_b.nv, encoding=EncType.seqcounter)
     clauses.extend(card_b.clauses)
     clauses.extend(card_n.clauses)
-    nv = card_n.nv
 
     # auxiliary a_t: point t is selected  <=>  side_t or BOTH(pair(t))
-    aux = nv
+    aux = card_n.nv
     for t in range(1, p):
         pair = t if t <= h else p - t
         s = v(pair, "L" if t <= h else "H")
@@ -73,6 +70,7 @@ def main() -> int:
         clauses.append([a, -s])
         clauses.append([a, -b])
     trapezoid = 0
+    kept = 0
     for q in edges:
         pts = [t for t in q if t != 0]
         pairs = [t if t <= h else p - t for t in pts]
@@ -81,9 +79,34 @@ def main() -> int:
             trapezoid += 1
             continue
         clauses.append([-aux - t for t in pts])
-    print(f"trapezoid clauses dropped: {trapezoid}", flush=True)
-    nv = aux + p - 1
+        kept += 1
+    return clauses, aux + p - 1, kept, trapezoid
+
+
+def main() -> int:
+    p = int(sys.argv[1]) if len(sys.argv) > 1 else 2207
+    if "--write-cnf" in sys.argv:
+        target = Path(sys.argv[sys.argv.index("--write-cnf") + 1])
+        budget = None
+    else:
+        target = None
+        budget = int(sys.argv[2]) if len(sys.argv) > 2 else 20_000_000
+    h = (p - 1) // 2
+    OUT.mkdir(exist_ok=True)
+    edges = run_gen(str(Path(__import__("os").environ["TEMP"]) / "forbidden_edges.exe"), p)
+    print(f"p={p} h={h} edges={len(edges)}", flush=True)
+    clauses, nv, kept, trapezoid = build(p, edges)
+    print(f"trapezoid clauses dropped: {trapezoid} kept={kept}", flush=True)
     print(f"vars={nv} clauses={len(clauses)}", flush=True)
+
+    if target is not None:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with target.open("w", encoding="ascii", newline="\n") as f:
+            f.write(f"p cnf {nv} {len(clauses)}\n")
+            for c in clauses:
+                f.write(" ".join(map(str, c)) + " 0\n")
+        print(f"wrote {target} ({target.stat().st_size} bytes)", flush=True)
+        return 0
 
     solver = Cadical195(bootstrap_with=clauses)
     solver.conf_budget(budget)
@@ -91,11 +114,16 @@ def main() -> int:
     res = solver.solve_limited()
     model = solver.get_model() if res else None
     solver.delete()
-    print(f"shape(c): sat={res} secs={time.time()-t0:.1f}", flush=True)
+    secs = time.time() - t0
+    print(f"shape(c): sat={res} secs={secs:.1f}", flush=True)
     record = {"p": p, "h": h, "target_size": h + 1, "shape": "c",
-              "vars": nv, "clauses": len(clauses), "sat": bool(res),
-              "unknown": res is None, "seconds": round(time.time() - t0, 1)}
+              "vars": nv, "clauses": len(clauses), "kept_edges": kept,
+              "trapezoid_edges_dropped": trapezoid, "budget": budget,
+              "sat": bool(res), "unknown": res is None, "seconds": round(secs, 1)}
     if res:
+        def v(pair, kind):
+            return 4 * pair - 4 + KINDS[kind]
+
         pos = {i for i in model if i > 0}
         chosen = {0}
         for i in range(1, h + 1):
