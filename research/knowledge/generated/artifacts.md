@@ -10917,6 +10917,27 @@
 ## [research/experiments/parabola-p2539-gate-pair-obstructions-20261111/verify.py](../../../research/experiments/parabola-p2539-gate-pair-obstructions-20261111/verify.py)
 
 - [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (verifier): 探索をimportせず全153組の被覆・hitting証明・削除証人と整数幾何を検査
+## [research/experiments/parabola-p2539-one-gate-20261111/README.md](../../../research/experiments/parabola-p2539-one-gate-20261111/README.md)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (proof): 大きなTからの部分集合論証で二点追加を要請、唯一の両立gateしかない27点の排除、制限反証と全体未解決の区別
+## [research/experiments/parabola-p2539-one-gate-20261111/audit-final/summary.json](../../../research/experiments/parabola-p2539-one-gate-20261111/audit-final/summary.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 全schemaと追加375節・38868四点の整数幾何・RUP反証の独立受理
+## [research/experiments/parabola-p2539-one-gate-20261111/output/input.cnf.gz](../../../research/experiments/parabola-p2539-one-gate-20261111/output/input.cnf.gz)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): 221点除外・正18点OR・153負二項節でexact-one空対追加へ制限した51570変数144921節
+## [research/experiments/parabola-p2539-one-gate-20261111/output/proof.drat.gz](../../../research/experiments/parabola-p2539-one-gate-20261111/output/proof.drat.gz)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (certificate): exact-one制限入力を独立反証する60539行DRAT、RUP限定検査と別処理再生で受理
+## [research/experiments/parabola-p2539-one-gate-20261111/qualification.json](../../../research/experiments/parabola-p2539-one-gate-20261111/qualification.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (manifest): 空対二点以上の必要条件と459既存負hitting証明を結合し27点追加排除、総248点
+## [research/experiments/parabola-p2539-one-gate-20261111/regression.json](../../../research/experiments/parabola-p2539-one-gate-20261111/regression.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 実CNF6改変を拒否、全262144 gate割当てでexact-oneの18通りだけを受理
+## [research/experiments/parabola-p2539-one-gate-20261111/replay.json](../../../research/experiments/parabola-p2539-one-gate-20261111/replay.json)
+
+- [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) (data): 採用圧縮CNF/DRATから探索コード・SATライブラリなしで独立schemaとRUPを別処理再生
 ## [research/experiments/parabola-p2539-origin-local-audit-20261111/README.md](../../../research/experiments/parabola-p2539-origin-local-audit-20261111/README.md)
 
 - [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) (proof): 安全候補からのモデル拡張と、大きい改善集合をexact1259点へ縮める全称部分集合論証

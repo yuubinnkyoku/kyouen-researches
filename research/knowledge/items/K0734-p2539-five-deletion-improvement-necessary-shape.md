@@ -1,6 +1,6 @@
 ---
 id: K0734
-title: Q_2539の五点削除改善は221点を避け空対18点から追加する必要がある
+title: Q_2539の五点削除改善は248点を避け空対18点から二点以上を追加する必要がある
 kind: proposition
 status: computed
 topics: [geometry, maximum-safe, reconfiguration, verification]
@@ -241,8 +241,29 @@ artifacts:
 - path: research/experiments/parabola-p2539-gate-cover-20261111/README.md
   role: proof
   note: 正gateから点追加被覆を得る論証、新規97点、幾何hittingとnative RUPの区別、範囲と再現
-scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の221点集合Uの回避、元の空対から残る18点集合Eの少なくとも一点の追加と本文7組の同時追加回避が必要。残る候補の実在・非存在や全体最大性は主張しない。
-evidence: 四点以下と原点・完全対変更を独立排除。幾何hittingで116点排除、116除外付きbaseのRUPで8点追加排除と正18点ORを受理。gate内7組と新規20502組を独立hitting・整数幾何検査し、全18仮定を覆う97点をさらに排除。総221点回避。新規97点のnative RUPは主張せず、個別18仮定はUNKNOWN、必要障害族だけの削除証人は安全改善証人ではない。
+- path: research/experiments/parabola-p2539-one-gate-20261111/output/input.cnf.gz
+  role: certificate
+  note: 221点除外・正18点OR・153負二項節でexact-one空対追加へ制限した51570変数144921節
+- path: research/experiments/parabola-p2539-one-gate-20261111/output/proof.drat.gz
+  role: certificate
+  note: exact-one制限入力を独立反証する60539行DRAT、RUP限定検査と別処理再生で受理
+- path: research/experiments/parabola-p2539-one-gate-20261111/audit-final/summary.json
+  role: manifest
+  note: 全schemaと追加375節・38868四点の整数幾何・RUP反証の独立受理
+- path: research/experiments/parabola-p2539-one-gate-20261111/replay.json
+  role: data
+  note: 採用圧縮CNF/DRATから探索コード・SATライブラリなしで独立schemaとRUPを別処理再生
+- path: research/experiments/parabola-p2539-one-gate-20261111/qualification.json
+  role: manifest
+  note: 空対二点以上の必要条件と459既存負hitting証明を結合し27点追加排除、総248点
+- path: research/experiments/parabola-p2539-one-gate-20261111/regression.json
+  role: data
+  note: 実CNF6改変を拒否、全262144 gate割当てでexact-oneの18通りだけを受理
+- path: research/experiments/parabola-p2539-one-gate-20261111/README.md
+  role: proof
+  note: 大きなTからの部分集合論証で二点追加を要請、唯一の両立gateしかない27点の排除、制限反証と全体未解決の区別
+scope: 指定SHA-256の1258点集合Sについて、安全集合Tが|T|>=1259かつ|S\T|<=5を満たすなら、|S\T|=5、原点と元の完全対{6,2533}の保持、本文の248点集合Uの回避、元の空対から残る18点集合Eの二点以上の追加と本文7組の同時追加回避が必要。残る候補の実在・非存在や全体最大性は主張しない。
+evidence: 四点以下と原点・完全対変更を独立排除し、幾何hitting・正18点gateの被覆で221点回避を確認。221除外付きexact-one-gate入力を全schema・38868四点幾何・RUPで独立反証し別処理再生した。従ってE追加は二点以上。既存459負相互制約と結合して27点をさらに排除、総248点回避。元の親単独の反証や新規27点のnative RUPは主張せず、全体は未解決。
 ---
 
 ## 命題
@@ -251,7 +272,7 @@ SはSHA-256 `454f0e293fd846aa6616dd45500dbaf9b325834408ec7f69234852e3e35e22fb` �
 |T|≥1259、|S∖T|≤5を満たすQ_2539内の安全集合Tがあれば、
 **正確に五点を失い、原点0と元の完全対{6,2533}を全て保つ。**
 安全集合の完全対は高々一つなので、完全対の位置も元の対に限られる。
-さらに、後掲の221点集合Uを避け、元の空対から残る18点集合Eの少なくとも一点を追加しなければならない。
+さらに、後掲の248点集合Uを避け、元の空対から残る18点集合Eの二点以上を追加しなければならない。
 E内の後掲7組は同時に追加できない。
 これは改善の必要条件であり、改善の存在は未確定。
 
@@ -403,10 +424,41 @@ S外の1281点から既除外U012の124点とEの18点を除く1139点uについ
 
 u∈T∩U3なら、既存の正gateよりv∈T∩Eを選べる。
 その組{u,v}の負hitting証明によりD=S∖Tは五点以下では存在できず、矛盾する。
-従ってT∩U3=∅であり、U=U012∪U3の221点回避が必要。
+従ってT∩U3=∅であり、U0123=U012∪U3の221点回避が必要。
 この論証はTのサイズに依存しない。18仮定は重なってもよいが、一つも欠けてはならない。
 新規97点の根拠は幾何hittingと正gateの被覆であり、新しいnative RUP導出とは区別する。
 Eは同じ18点のまま、残る1042非gate点にも安全な改善証人を得たわけではない。
+
+## 空対からの追加は二点以上必要
+
+保持側親へU0123の221負単位節、Eの正18点OR、E内全153組の負二項節を加え、
+Eから正確に一点だけ追加する新しい形状を51570変数144921節で表した。
+一回のproof-enabled探索で実conflicts667・1.761秒、SOLVER_UNSATを得た。
+全schemaと追加375節を探索から独立に解釈し、親の38868四点を整数行列式で確認した。
+60539行DRATを固定DRAT-trimの-Uで反証受理し、採用圧縮CNF/DRATからの別処理再生も受理した。
+これは221除外を含むexact-one制限形状の反証で、元の親単独や五点削除近傍全体の反証ではない。
+
+大きな改善Tで|T∩E|=1、その一点がvなら、(S∩T)∪{v}の1254点を含む1259点部分集合T'を選べる。
+T'は安全性、五点損失、原点・完全対保持、221点回避と|T'∩E|=1を保ち、制限入力へモデル拡張できる。
+独立反証に矛盾するため、全ての改善Tについて|T∩E|≥2が必要。
+この新しい条件は、複数E点を許していた以前の18個別UNKNOWNとは区別する。
+
+## 二点追加条件による27点の追加排除
+
+保存済み20502相互制約を評価すると、既除外221点以外で、Eのうち一つとの組だけが未排除となる点が27個あった。
+これをU4とする。
+
+```
+4 632 813 819 824 879 937 1018 1046
+1316 1358 1478 1550 1657 1665 1721 1731 1742
+1811 1895 1910 1929 1931 1941 1963 2096 2160
+```
+
+各u∈U4について他の17点との負hitting証明、計459個を再検査した。
+u∈TならT∩Eに入れられる点は高々一つとなり、|T∩E|≥2に反する。
+従ってT∩U4=∅、U=U0123∪U4の248点回避が必要。
+唯一の未排除gate点と各負証明へのhashはqualification・既存圧縮証明書に保持する。
+この27点のnative RUP導出は作っておらず、制限形状の反証・部分集合論証・幾何hittingの結合として採用する。
 
 ## 未解決と限界
 

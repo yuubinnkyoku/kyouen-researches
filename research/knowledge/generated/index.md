@@ -717,4 +717,4 @@
 | [K0731](../items/K0731-p2539-fixed-pair-four-deletion-local-exclusion.md) | Q_2539の保存1258点集合は原点・完全対固定で4点以下を除く改善ができない（独立schema・RUP/LRAT監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md) | Q_2539の保存1258点集合は原点を保つ4点以下の削除で改善できない（完全対変更・完全対なしも独立監査済み） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
 | [K0733](../items/K0733-p2539-four-deletion-local-optimum.md) | Q_2539の保存1258点集合は4点以下の削除で改善できない（原点・完全対の保持条件なし） | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
-| [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) | Q_2539の五点削除改善は221点を避け空対18点から追加する必要がある | proposition | computed | geometry, maximum-safe, reconfiguration, verification |
+| [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) | Q_2539の五点削除改善は248点を避け空対18点から二点以上を追加する必要がある | proposition | computed | geometry, maximum-safe, reconfiguration, verification |

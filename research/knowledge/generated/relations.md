@@ -4047,7 +4047,7 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 標準q=4の共線・共円禁止四点に関する安全性
 - ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 同じ固定集合から四点以下の削除による改善は全形状で独立排除済み
 
-## [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) Q_2539の五点削除改善は221点を避け空対18点から追加する必要がある
+## [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md) Q_2539の五点削除改善は248点を避け空対18点から二点以上を追加する必要がある
 
 - → depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 同じ固定集合から四点以下の削除による改善は全形状で独立排除済み
 - → depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): SHA-256固定の1258点安全証人
