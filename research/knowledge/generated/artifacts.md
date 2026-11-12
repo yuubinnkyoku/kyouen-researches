@@ -12688,6 +12688,18 @@
 ## [research/experiments/vertex-cover-terminal-dp-20261102/verify.py](../../../research/experiments/vertex-cover-terminal-dp-20261102/verify.py)
 
 - [K0622](../items/K0622-vertex-cover-terminal-polynomial.md) (verifier): 8067グラフ条件、996別被覆、100禁止超辺条件472592部分集合、K2m式80条件を照合
+## [research/experiments/width19-plus-half-density-mixed-20261112/output/circle_witness_search.json](../../../research/experiments/width19-plus-half-density-mixed-20261112/output/circle_witness_search.json)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (data): witness探索の機械出力（制御・最大16）
+## [research/experiments/width19-plus-half-density-mixed-20261112/output/width19_plus_mixed_audit.json](../../../research/experiments/width19-plus-half-density-mixed-20261112/output/width19_plus_mixed_audit.json)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (data): 監査全数値の機械出力
+## [research/experiments/width19-plus-half-density-mixed-20261112/reports/width19-plus-circle-point-max.md](../../../research/experiments/width19-plus-half-density-mixed-20261112/reports/width19-plus-circle-point-max.md)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (proof): 定理・証明・系表・witness探索の記録
+## [research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts](../../../research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (verifier): 監査3セグメント+witness探索の単独再現（MODE切替）
 ## [research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json](../../../research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (data): 全制御の実行結果
@@ -13012,6 +13024,9 @@
 ## [research/log/2026-11-12-six-row-q7-width6-seed.md](../../../research/log/2026-11-12-six-row-q7-width6-seed.md)
 
 - [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) (log): 手法・バグ教訓4件・レジューム候補
+## [research/log/2026-11-12-width19-plus-half-density-mixed.md](../../../research/log/2026-11-12-width19-plus-half-density-mixed.md)
+
+- [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
 ## [research/log/2026-11-12-width6-circle-eight-point-proof.md](../../../research/log/2026-11-12-width6-circle-eight-point-proof.md)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (log): 判断・教訓・レジューム
