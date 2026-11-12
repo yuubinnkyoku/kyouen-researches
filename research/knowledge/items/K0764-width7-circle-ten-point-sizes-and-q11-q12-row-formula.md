@@ -17,7 +17,7 @@ solution:
   verification: [mathematical-proof]
   certificate: mod9剰余分類 + mod3排除((1,3),(2,3),(3,4),(3,5),(5,6)) + (a−u)(a+u)=3一意分解
   independent_check: witness円の直接列挙・census(7×13/16/19)・Pell個数の厳密一致
-  note: "q=11,12が新規確定。q≥13はK0025と重複（整合）"
+  note: "q=11..14が新規確定（w=7ではK0025のq>2wはq≥15から）"
 relations:
 - type: depends_on
   target: K0072
@@ -33,7 +33,7 @@ relations:
   note: 幅7の安定化長はq≥11で確定。M_{7,q}(q≤10)はopen
 - type: extends
   target: K0025
-  note: q>2w（q≥13）を幅7のq=11,12まで拡張
+  note: q>2w（w=7ではq≥15）をq=11..14まで拡張
 artifacts:
 - path: research/experiments/width7-circle-ten-point-20261112/reports/width7-circle-ten-point.md
   role: proof
@@ -60,7 +60,7 @@ artifacts:
 3. **系（q ≥ 11）**: 円 ≤ 10 < q、非水平直線 ≤ 7 < q により行を跨ぐ禁止 q 点集合なし。
    全 m ≥ 1・全安全局面 S で
 
-   g(S) = (7·min(m, q−1) − |S|) mod 2,　M_{7,q} = q−1（q = 11, 12 が新規）。
+   g(S) = (7·min(m, q−1) − |S|) mod 2,　M_{7,q} = q−1（q = 11..14 が新規。q ≥ 15 は K0025 と重複整合）。
 
 ## 証明の骨子（K0763 機械の w=7 拡張）
 
