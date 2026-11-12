@@ -1,0 +1,28 @@
+{
+  "p": 2531,
+  "h": 1265,
+  "size": 1266,
+  "shape": "c",
+  "class": [1, 1, 1],
+  "cnf": "a2531_1266.cnf",
+  "cnf_sha256": "896a4efa25a0a73666ca63cf584c4c87685f290b92182aa66fc91a91699bd233",
+  "vars": 10118,
+  "clauses": 62189,
+  "kept_edges": 38160,
+  "trapezoid_edges_dropped": 799480,
+  "solver": "cadical 1.7.3 (WSL Ubuntu, x86_64)",
+  "invocation": "cadical --quiet -t 7200 shape_c_2531.cnf",
+  "configuration": "default (no --sat)",
+  "result": "s UNSATISFIABLE",
+  "wall_seconds_approx": 5920,
+  "started": "2026-11-13T01:06:56+09:00",
+  "finished": "2026-11-13T02:45:36+09:00",
+  "sibling_classes": {
+    "a_1_0_0": "UNSAT 4.1 s (shape_class_2531_1266.json)",
+    "b_0_1_0": "UNSAT 7.5 s (shape_class_2531_1266.json)"
+  },
+  "proof": null,
+  "proof_note": "text DRAT regeneration started after the result (cadical --no-binary); the expected size is of order 1-2 GB, so checking needs drat_check_fast.cpp",
+  "status": "solver claim; DRAT certificate pending",
+  "created": "2026-11-13"
+}

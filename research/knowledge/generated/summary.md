@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 762 / alias: 269 / artifactファイル: 4078
+K項目: 763 / alias: 269 / artifactファイル: 4082
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 762 / alias: 269 / artifactファイル: 4078
 | computation | 94 |
 | definition | 5 |
 | method | 7 |
-| proposition | 586 |
+| proposition | 587 |
 | question | 39 |
 | verification | 31 |
 
@@ -20,7 +20,7 @@ K項目: 762 / alias: 269 / artifactファイル: 4078
 | active | 12 |
 | computed | 196 |
 | conjectured | 2 |
-| needs-review | 1 |
+| needs-review | 2 |
 | observed | 26 |
 | open | 37 |
 | proved | 378 |
@@ -37,17 +37,17 @@ K項目: 762 / alias: 269 / artifactファイル: 4078
 | certificates | 108 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 378 |
+| geometry | 379 |
 | grundy | 171 |
 | maximal-safe | 200 |
-| maximum-safe | 99 |
+| maximum-safe | 100 |
 | migration | 1 |
 | provenance | 40 |
 | reconfiguration | 38 |
 | rectangles | 131 |
 | residual-games | 124 |
 | rules | 8 |
-| search-methods | 120 |
+| search-methods | 121 |
 | square-outcomes | 101 |
 | statistics | 121 |
 | strategy-length | 94 |
@@ -100,6 +100,7 @@ K項目: 762 / alias: 269 / artifactファイル: 4078
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
 - [K0775](../items/K0775-p3251-no-size-h1-set.md) [needs-review] 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査）
+- [K0781](../items/K0781-p2531-no-size-h1-set.md) [needs-review] 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（ソルバ主張、証明書未検査）
 
 ## 警告
 
