@@ -91,7 +91,7 @@ def main():
     count_ok = len(c73_s6) == 3868
     sweep_count_ok = (sweep_keys is None) or (len(sweep_keys) == len(c73_s6_keys))
     set_ok = (sweep_keys is None) or (sweep_keys == c73_s6_keys)
-    bit51 = sum(1 for k in c73_s6_keys if k & DEF_BIT51)
+    bit51 = sum(1 for r in c73_s6 if int(r[2]) & DEF_BIT51 == DEF_BIT51)
 
     # ---- 4. closure roadmap ----
     rows = m["s6All"]
@@ -110,7 +110,7 @@ def main():
                         min(costs), max(costs), sum(costs), prefix))
     ok_all = all(r[2] == r[3] for r in roadmap)
 
-    summary = {
+    assert s5_match and obligations_ok and count_ok and sweep_count_ok and set_ok and loss_all_in and ok_all, "certificate reuse audit failed"\n\n    summary = {
       "manifest_md5_expected": "452b4336edbe272a49dcd76c4a7764af",
       "cert73": {"bit": CERT73_BIT, "step": int(c73["step"]), "s5Orbits": int(c73["s5Orbits"]),
                  "s6Orbits": len(c73_s6), "rawObligations": int(c73["rawObligations"])},
