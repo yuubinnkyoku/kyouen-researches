@@ -85,6 +85,8 @@ def main() -> int:
     ap.add_argument("--c", type=int, default=None)
     ap.add_argument("--e", type=int, default=None)
     ap.add_argument("--budget", type=int, default=20_000_000)
+    ap.add_argument("--write-cnf", default=None,
+                    help="write the first selected class as DIMACS and exit (external solver)")
     args = ap.parse_args()
     p, h = args.p, (args.p - 1) // 2
     # enumerate classes with x + c + h - e = size
@@ -109,6 +111,16 @@ def main() -> int:
     results = []
     for (x, c, e) in classes:
         clauses, nv, kept = build(p, edges, x, c, e)
+        if args.write_cnf:
+            target = Path(args.write_cnf)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            with target.open("w", encoding="ascii", newline="\n") as f:
+                f.write(f"p cnf {nv} {len(clauses)}\n")
+                for cl in clauses:
+                    f.write(" ".join(map(str, cl)) + " 0\n")
+            print(f"p={p} size={args.size} class(x={x},c={c},e={e}) wrote {target} "
+                  f"vars={nv} clauses={len(clauses)}", flush=True)
+            continue
         solver = Cadical195(bootstrap_with=clauses)
         solver.conf_budget(args.budget)
         t0 = time.time()
