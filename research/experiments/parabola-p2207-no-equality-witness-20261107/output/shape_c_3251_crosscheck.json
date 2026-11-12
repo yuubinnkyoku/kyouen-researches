@@ -1,0 +1,20 @@
+{
+  "p": 3251,
+  "h": 1625,
+  "size": 1626,
+  "shape": "c",
+  "class": [
+    1,
+    1,
+    1
+  ],
+  "cnf_sha256": "ac06449ee8f662364e1519201efd9159eec9970dd4ad4c58241b6b3080bd56e5",
+  "cross_check": {
+    "solver": "pysat Glucose4",
+    "budget_conflicts": 20000000,
+    "result": false,
+    "seconds": 7196.8,
+    "note": "independent solver, no proof; agrees with cadical 1.7.3 (default config, ~2100 s)"
+  },
+  "status": "two independent solvers agree on UNSAT; DRAT certificate regeneration in progress"
+}
