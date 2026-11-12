@@ -1,3 +1,4 @@
+successfully downloaded text file (SHA: 971952013066bef2dc11c481fa4b56a41f3e696a)
 successfully downloaded text file (SHA: 5561d74fc240ed54bb68ee94268e37b6f31a599c)
 successfully downloaded text file (SHA: 9ea208b539c59debe972bd7e7e434972a5e03364)
 ---
@@ -108,7 +109,7 @@ K0776 の sum-of-two-squares witness 探索が 650 円（同族: Σe=4 ≤ 8）�
   K0789 で 16 に確定（650 円は行スパン 26 で本項目の witness ではない）。
 - S* 実現の A > 0 側は R' ≤ 2×10⁷ の有限観測。ただし P(26)=24 の上界は
   K0782 の証明書による全称で R' に依存しない。
-- level 13 の w=36..40 分類は未完（候補爆発・要 streaming）。
-  P(36)..P(40) ∈ [24, 2k−4]。
+- level 13 の w=36..40 分類は本項目時点で未完だったが **K0788 が完了**
+  （streaming 機で全滅・P(36)..P(42)=24・P(43)..P(48)=26..32）。
 - 次のプラトー跳躍の予測: 26点以上の円の最小行スパン（r₂表現数と
   行スパンの兼ね合い）で P が 24 を超える。
