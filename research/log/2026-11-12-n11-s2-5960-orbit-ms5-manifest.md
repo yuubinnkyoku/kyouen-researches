@@ -47,3 +47,12 @@ K0762のレジューム（blocker 73閉鎖判定の方向規約未確認）か�
 - 7,867 S6の消化（first-strike 3候補から開始が最安）。S5 verdict merge後、
   3類blocker閉鎖 → S3 {59,60,61} proven-first → S2 {59,60}。
 - 11×11空盤・二石root {49,60}・S2 {59,60} は全てUNKNOWN。
+
+## erratum（同日）
+
+初回pushの `ms5_s6_manifest.csv` がsandboxのread_file ~64KB上限で1,683行（cost≤72）まで
+切れていたことをpush後検証で発見（push前に取得したcontent長63,971と正本298,963の
+不一致が手掛かり）。ローカル正本から行チャンク読みで全7,867行を復元し（バイト数完全一致）、
+6 part（1,312行×5＋1,307行）に分割して再pushした。教訓: **push前にread_fileの
+content長とwrite_file時の長さ（file_size_bytes）を必ず照合する**。was_truncatedは
+「ファイルに続きがある」の意味で「このレスポンスが切れた」ではない。

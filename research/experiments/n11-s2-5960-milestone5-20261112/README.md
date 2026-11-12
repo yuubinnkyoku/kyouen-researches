@@ -27,8 +27,9 @@ milestone-1..4のconcrete-level fc/UNI会計（61 blocker・43,375 S6 orbit）�
   再実行する自己完結TS検証script。anchor不一致時はthrow。
 - `output/ms5_closure_summary.json` — 全anchor・類別統計・first-strike表。
 - `output/ms5_s5_worklist.json` — 196未知S5（類bit・義務・judged LOSS子有無・cost）。
-- `output/ms5_s6_manifest.csv` — 7,867 S6 orbit（cost昇順。classes列はblocker類bit
-  のOR: 1={5,115}, 2={27,93}, 4={23,31,89,97}）。外部solverの直接入力。
+- `output/ms5_s6_manifest_part1..6.csv` — 7,867 S6 orbit（cost昇順・6 part分割・全行検証済み。
+  classes列はblocker類bitのOR: 1={5,115}, 2={27,93}, 4={23,31,89,97}）。外部solverの直接入力。
+  （erratum: 初回pushの単一csvは~64KBで切れていたため6 partに分割して差し替えた）
 
 ## 消化プロトコル（レジューム）
 
