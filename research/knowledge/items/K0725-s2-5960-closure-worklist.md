@@ -28,8 +28,7 @@ artifacts:
   note: 実行記録
 - path: research/log/2026-11-12-n11-s2-5960-blocker-61-audit.md
   role: log
-  note: 2026-11-12監査: blocker総数は60でなく61（blocker 22の検出・
-    2系統幾何で確認）。閉鎖要件（1,447 orbit・極大56）は全て不変
+  note: '2026-11-12監査: blocker総数は60でなく61（blocker 22の検出・ 2系統幾何で確認）。閉鎖要件（1,447 orbit・極大56）は全て不変'
 ---
 
 # S2 {59,60} の閉鎖worklist: 1,447 orbitの完全一致とfrontier分解

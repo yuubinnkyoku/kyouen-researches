@@ -24,7 +24,7 @@ artifacts:
   note: DEF_ROWS=[0,1,2,4] で実行（等価性制御1・陽性対照制御2はK0747と同一）
 - path: research/log/2026-11-11-five-row-m19-5row-deficient-complete.md
   role: log
-  note: 追記8・追記9: 4行欠損{0,1,2,4}全22スライス記録・完全完了宣言
+  note: '追記8・追記9: 4行欠損{0,1,2,4}全22スライス記録・完全完了宣言'
 ---
 
 # 5×19・4行欠損 {0,1,2,4} の完全完了: 全 8,378 S0 ケースで witness 0

@@ -30,12 +30,7 @@ artifacts:
     （certsビットはフラグメント間で非交差なので加算merge＝OR）
 - path: research/experiments/n11-s2-5960-milestone4-20261112/output/milestone4_manifest.json.part1
   role: data
-  note: 完全S2 {59,60} S6 worklist manifest（compact形式・S5 orbit 1,447 rep・
-    S6 orbit 43,375のcost順フルリスト [unpadded hex, cost, certs]・
-    certStats（greedy step 1–33・0-marginalクラス除く）・protocol・検証記録）。
-    16MiB sandbox制約により等幅3分割で公開: milestone4_manifest.json.part1/part2/part3
-    （`cat` で byte-exact 再結合。全体 1,782,977 bytes・
-    md5 f8c1a724c6c7d757192f15f38d4c5da0・2026-11-12再生成版: 全体1,782,603 bytes・md5 452b4336edbe272a49dcd76c4a7764af・各分割594,201 bytes・旧版はsuperseded）
+  note: '完全S2 {59,60} S6 worklist manifest（compact形式・S5 orbit 1,447 rep・ S6 orbit 43,375のcost順フルリスト [unpadded hex, cost, certs]・ certStats（greedy step 1–33・0-marginalクラス除く）・protocol・検証記録）。 16MiB sandbox制約により等幅3分割で公開: milestone4_manifest.json.part1/part2/part3 （`cat` で byte-exact 再結合。全体 1,782,977 bytes・ md5 f8c1a724c6c7d757192f15f38d4c5da0・2026-11-12再生成版: 全体1,782,603 bytes・md5 452b4336edbe272a49dcd76c4a7764af・各分割594,201 bytes・旧版はsuperseded）'
 - path: research/log/2026-11-12-n11-s2-5960-ms4-complete-worklist.md
   role: log
   note: 実行記録・milestone-1/2/3再生成による制御検証・milestone-3 subset検証PASS・

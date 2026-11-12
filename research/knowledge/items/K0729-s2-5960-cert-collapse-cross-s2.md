@@ -26,8 +26,7 @@ artifacts:
   note: 実行記録
 - path: research/log/2026-11-12-n11-s2-5960-blocker-61-audit.md
   role: log
-  note: 2026-11-12監査: blocker 61 / certificate 35（26ペア+9単独）への訂正。
-    greedy曲線・1,447完結・milestone全数値は不変
+  note: '2026-11-12監査: blocker 61 / certificate 35（26ペア+9単独）への訂正。 greedy曲線・1,447完結・milestone全数値は不変'
 ---
 
 # S2 {59,60} の証明書崩壊: 61 blocker → 35 certificate
