@@ -26,18 +26,21 @@ artifacts:
 - path: research/log/2026-11-10-n11-s2-5960-worklist.md
   role: log
   note: 実行記録
+- path: research/log/2026-11-12-n11-s2-5960-blocker-61-audit.md
+  role: log
+  note: 2026-11-12監査: blocker総数は60でなく61（blocker 22の検出・
+    2系統幾何で確認）。閉鎖要件（1,447 orbit・極大56）は全て不変
 ---
 
 # S2 {59,60} の閉鎖worklist: 1,447 orbitの完全一致とfrontier分解
 
-二石root S2 = {60,59} のbest S3 r=61に対する60 blocker S4の全合法五石子を列挙し、
+二石root S2 = {60,59} のbest S3 r=61に対するblocker S4の全合法五石子を列挙し、
 94位置universeに含まれない未知子を集計した（78 FW oracle条件付き）。
 
 - 未知子はdistinct 4,519 S5位置、D4 orbitちょうど1,447。
   q59の独立census（S6義務133,524から逆算した~1,447 orbit）と完全一致する相互検証。
-- orbitは1–8個のblockerに使われる（serve分布
-  {1:4, 2:50, 3:99, 4:940, 5:172, 6:163, 7:15, 8:4}）。
-- 60 blockerのうち56個は極大（他blockerの真部分集合でない）、4個は被他覆、
+- orbitは1–8個のblockerに使われる（serve分布は追記訂正参照）。
+- blockerのうち56個は極大（他blockerの真部分集合でない）、5個は被他覆、
   極大blockerのorbit unionは全1,447に一致。
 - 最小部分証明書: t=5とt=115のorbit集合は完全同一（54 orbit）で2 blockerを同時に閉じる。
   t=27とt=93も同一（54 orbit）。2組の共通orbitは2個のみ。
@@ -58,3 +61,17 @@ artifacts:
 - blocker t=27: 未知子98（54 orbit）のS6義務8,595 → S6 orbit 2,150。
 - 2組のS6 orbit共通は79。4 blocker（t=5,115,27,93）閉鎖の第1マイルストーンは
   S6 orbit 4,262（41,842全体の約10.2%）。
+
+## 訂正（2026-11-12監査・K0753セッション）: blocker総数は60でなく61
+
+- blockerは**61個**（旧記録60から **blocker 22**（x=0,y=2）の検出）。
+  2系統の幾何（整数外接円circle-mask・q61と同一のBareiss det4）で
+  t=22は合法かつFW oracle強制外と確認。旧60-blocker serve分布に
+  orb(22)（104 orbit）を重ねると61-blocker分布に正確に移る
+  （moved-from 0/2/3/84/8/7/0・合計104）。
+- **被他覆は5個**: 15⊂103, **22⊂88**, 23⊂89, 26⊂92, 31⊂89
+  （旧「4個被他覆」は22を数えていなかった）。
+- 61-blocker serve分布: {1:4, 2:48, 3:98, 4:859, 5:248, 6:164, 7:22, 8:4}。
+- **閉鎖要件は一切不変**: S5 orbit union は22を除いても1,447・極大56のunionも
+  1,447・S6 census 41,842も不変（22は88の証明書で自動閉鎖）。
+  詳細は research/log/2026-11-12-n11-s2-5960-blocker-61-audit.md。
