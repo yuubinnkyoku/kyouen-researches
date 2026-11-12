@@ -12812,6 +12812,15 @@
 ## [research/experiments/width21-35-point-row-exact-20261112/scripts/width21_35_point_row.ts](../../../research/experiments/width21-35-point-row-exact-20261112/scripts/width21_35_point_row.ts)
 
 - [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) (verifier): 分類・周期掃引・witness・A=0・探索の単独再現（STAGE 分割実行）
+## [research/experiments/width36-48-circle-strip-scan-20261112/output/circle_strip_scan.json](../../../research/experiments/width36-48-circle-strip-scan-20261112/output/circle_strip_scan.json)
+
+- [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) (data): 全数値の機械出力（per-w表・witnesses検証結果）
+## [research/experiments/width36-48-circle-strip-scan-20261112/reports/width36-48-circle-strip-scan.md](../../../research/experiments/width36-48-circle-strip-scan-20261112/reports/width36-48-circle-strip-scan.md)
+
+- [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) (proof): 意味論・結果・証明と観測の区別・実装バグの記録
+## [research/experiments/width36-48-circle-strip-scan-20261112/scripts/circle_strip_scan.ts](../../../research/experiments/width36-48-circle-strip-scan-20261112/scripts/circle_strip_scan.ts)
+
+- [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) (verifier): 家族スキャン・制御比較・witness整数検証の単独再現（決定的・依存なし）
 ## [research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json](../../../research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (data): 全制御の実行結果
@@ -13148,6 +13157,9 @@
 ## [research/log/2026-11-12-width21-35-point-row-exact.md](../../../research/log/2026-11-12-width21-35-point-row-exact.md)
 
 - [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-12-width36-48-circle-strip-scan.md](../../../research/log/2026-11-12-width36-48-circle-strip-scan.md)
+
+- [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) (log): 判断・教訓・レジューム
 ## [research/log/2026-11-12-width6-circle-eight-point-proof.md](../../../research/log/2026-11-12-width6-circle-eight-point-proof.md)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (log): 判断・教訓・レジューム

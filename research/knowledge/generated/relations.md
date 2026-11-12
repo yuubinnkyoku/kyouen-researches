@@ -1791,6 +1791,7 @@
 - ← depends_on [K0778](../items/K0778-width17-20-circle-point-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
 - ← depends_on [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
 - ← depends_on [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
+- ← depends_on [K0786](../items/K0786-width36-48-circle-strip-witnesses.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -4601,6 +4602,7 @@
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): Vieta 整数化・合同証明書・窓マスクの枠組み
 - → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)
+- ← supports [K0786](../items/K0786-width36-48-circle-strip-witnesses.md): K0784末尾の「次の跳躍予測」に正例。24プラトーは（座標≦256の有限観測で）w=42まで継続し、跳躍はw=43の26点（2210円・r₂=32）。level 13分類が全滅すればP(36)..P(40)=24となるK0784レジュームと整合する下界
 
 ## [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) 貪欲＋破壊再構成でQ_2531は1246点以上、Q_3251は1598点以上の安全集合を持つ（独立整数幾何監査済み）
 
@@ -4608,3 +4610,8 @@
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 - → supports [K0781](../items/K0781-p2531-no-size-h1-set.md): A(2531)<=1265 と合わせて 1246 <= A(2531) <= 1265
 - → supports [K0775](../items/K0775-p3251-no-size-h1-set.md): A(3251)<=1625 と合わせて 1598 <= A(3251) <= 1625
+
+## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
+
+- → supports [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): K0784末尾の「次の跳躍予測」に正例。24プラトーは（座標≦256の有限観測で）w=42まで継続し、跳躍はw=43の26点（2210円・r₂=32）。level 13分類が全滅すればP(36)..P(40)=24となるK0784レジュームと整合する下界
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）
