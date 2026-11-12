@@ -758,3 +758,4 @@
 | [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) | pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす | verification | verified | verification, search-methods |
 | [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) | milestone1-4オラクルhex配列の転写破損6件を機関特定（61 blocker過大計上の原因確定）・未知S5 196のうち10個はK0675 LOSS子で即SECOND_WIN・milestone-5残worklist 7,867 orbit/615,497 cost manifest生成 | computation | computed | square-outcomes, certificates, verification |
 | [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) | パラメータの単元倍 t↦at は剰余放物線の安全性を保たない（p=2207の1104点証人で反例） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0775](../items/K0775-p3251-no-size-h1-set.md) | 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査） | proposition | needs-review | maximum-safe, geometry, search-methods |

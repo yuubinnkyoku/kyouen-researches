@@ -79,6 +79,7 @@
 - ← depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
 - ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
 - ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
+- ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -812,6 +813,7 @@
 - ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 安全集合の完全対は高々一つ
 - ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 安全集合の完全対は高々一つ
 - ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
+- ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -3944,6 +3946,7 @@
 - → supports [K0706](../items/K0706-p2647-no-parabola-equality-witness.md): 2647に続く4例目
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 単一CNFの独立監査により全奇素数での等号を否定する4番目の反例
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): 旧d別監査では削除時代入失効の修正版を使用。別経路の単一CNFはRUP限定検査と空節処理修正版LRATで再検査
+- ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): サイズh+2=1627の不存在（単一CNF・監査済み）からA(3251)<=1626、本項はそこから1下げる
 
 ## [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) 剰余放物線Q_2647の独立監査済み範囲は1303以上1322以下
 
@@ -4497,3 +4500,9 @@
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 四点のパラメータ和0 mod pは整数共円性の必要条件にすぎないという限定
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
+
+## [K0775](../items/K0775-p3251-no-size-h1-set.md) 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査）
+
+- → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
+- → depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): サイズh+2=1627の不存在（単一CNF・監査済み）からA(3251)<=1626、本項はそこから1下げる
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）

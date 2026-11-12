@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 756 / alias: 269 / artifactファイル: 4050
+K項目: 757 / alias: 269 / artifactファイル: 4054
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 756 / alias: 269 / artifactファイル: 4050
 | computation | 93 |
 | definition | 5 |
 | method | 6 |
-| proposition | 582 |
+| proposition | 583 |
 | question | 39 |
 | verification | 31 |
 
@@ -20,6 +20,7 @@ K項目: 756 / alias: 269 / artifactファイル: 4050
 | active | 11 |
 | computed | 195 |
 | conjectured | 2 |
+| needs-review | 1 |
 | observed | 26 |
 | open | 37 |
 | proved | 375 |
@@ -36,17 +37,17 @@ K項目: 756 / alias: 269 / artifactファイル: 4050
 | certificates | 108 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 373 |
+| geometry | 374 |
 | grundy | 171 |
 | maximal-safe | 198 |
-| maximum-safe | 97 |
+| maximum-safe | 98 |
 | migration | 1 |
 | provenance | 40 |
 | reconfiguration | 38 |
 | rectangles | 129 |
 | residual-games | 124 |
 | rules | 8 |
-| search-methods | 118 |
+| search-methods | 119 |
 | square-outcomes | 101 |
 | statistics | 121 |
 | strategy-length | 94 |
@@ -98,6 +99,7 @@ K項目: 756 / alias: 269 / artifactファイル: 4050
 - [K0684](../items/K0684-fixed-core-path-period-thirty-four-conjecture.md) [conjectured] 任意の固定rank3残余核に長道を付けたGrundy列は最終的に34周期になるか
 - [K0685](../items/K0685-n11-chain-audit-wall.md) [open] 11x11空盤勝敗は領域機械の壁で留まる（S2 120件全て未証明、最良S3でも遠方ブロッカー60+）
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
+- [K0775](../items/K0775-p3251-no-size-h1-set.md) [needs-review] 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査）
 
 ## 警告
 

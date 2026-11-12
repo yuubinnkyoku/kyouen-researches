@@ -10674,6 +10674,12 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-2531-1267/receipt.json)
 
 - [K0702](../items/K0702-p2531-no-parabola-equality-witness.md) (certificate): サイズ1267（クラス(1,1,0)）の単一CNFがUNSAT、DRAT証明190,979行を修正版検証器でVERIFIED（103.5秒）
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1626-shapec/a3251_1626.cnf](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1626-shapec/a3251_1626.cnf)
+
+- [K0775](../items/K0775-p3251-no-size-h1-set.md) (data): 形状(c)（0＋一完全対＋一空対＋各対一側）の単一CNF。12,998変数・91,135節、sha256 ac06449e...
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1626-shapec/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1626-shapec/receipt.json)
+
+- [K0775](../items/K0775-p3251-no-size-h1-set.md) (manifest): ソルバ・実行コマンド・結果・証明書を作らなかった理由の記録
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz)
 
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): 上記のDRAT証明（gzip、SHA-256はreceipt.json）
@@ -10721,6 +10727,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_2647_1323.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): 旧4形状UNSAT記録。000/101はK0721の変数衝突があり、幾何上界の根拠への採用を保留
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_3251_1626.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_3251_1626.json)
+
+- [K0775](../items/K0775-p3251-no-size-h1-set.md) (data): 形状(a)(b)のUNSAT記録（3.6秒・5.5秒、200万衝突予算）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-fresh.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/w11-artifact-fresh.json)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (data): 履歴ゼロ 4 点の判定
@@ -13011,6 +13020,9 @@
 ## [research/log/2026-11-12-width9-18-circle-point-max.md](../../../research/log/2026-11-12-width9-18-circle-point-max.md)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-p3251-no-size-h1-set.md](../../../research/log/2026-11-13-p3251-no-size-h1-set.md)
+
+- [K0775](../items/K0775-p3251-no-size-h1-set.md) (log): 発見の経緯と当時の検証状態
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

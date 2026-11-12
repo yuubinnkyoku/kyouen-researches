@@ -1,0 +1,22 @@
+{
+  "p": 3251,
+  "h": 1625,
+  "size": 1626,
+  "shape": "c",
+  "class": [1, 1, 1],
+  "cnf": "a3251_1626.cnf",
+  "cnf_sha256": "ac06449ee8f662364e1519201efd9159eec9970dd4ad4c58241b6b3080bd56e5",
+  "vars": 12998,
+  "clauses": 91135,
+  "kept_edges": 60266,
+  "trapezoid_edges_dropped": 1319500,
+  "solver": "cadical 1.7.3 (WSL Ubuntu, x86_64)",
+  "invocation": "cadical --quiet -t 7200 a3251_1626.cnf",
+  "configuration": "default (no --sat)",
+  "result": "s UNSATISFIABLE",
+  "wall_seconds_approx": 2100,
+  "proof": null,
+  "proof_note": "text DRAT via --no-binary reached 143,562,752 bytes after 212 s (projected > 2 GB); aborted because drat_check_incremental.cpp verifies only about 1.3k lines/s",
+  "status": "solver claim; cross-solver Glucose4 confirmation and a checkable proof are pending",
+  "created": "2026-11-13"
+}
