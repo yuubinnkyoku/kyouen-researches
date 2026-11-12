@@ -1,0 +1,1 @@
+{"path":"/home/user/kyouen-push/width9_18_circle_bound.ts","content":"// Verifier for: P(w) exact fo

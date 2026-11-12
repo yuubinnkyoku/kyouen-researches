@@ -1,0 +1,1 @@
+{"path":"/home/user/kyouen-push/width9-16-circle-point-max.md","content":"# P(w) 完全決定 w=9..16 と上界 w=
