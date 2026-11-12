@@ -1,1 +1,66 @@
-{"path":"/home/user/kyouen-push/width9_18_circle_bound.json","content":"{\n  \"generated\": \"2026-1
+{
+  "generated": "2026-11-12",
+  "session": "q110 fast lane",
+  "claim": {
+    "Pw": { "9": 12, "10": 12, "11": 14, "12": 16, "13": 16, "14": 16, "15": 16, "16": 16 },
+    "Pw_upper_bounds": { "17": 18, "18": 18 },
+    "Pw_lower_bounds_1718": 16,
+    "status": { "9..16": "proved-equality", "17,18": "upper-bound-only" }
+  },
+  "parts": {
+    "windowCountsW_mod9_standardForm": { "9": 6, "10": 7, "11": 8, "12": 8, "13": 9, "14": 10, "15": 10, "16": 11, "17": 12, "18": 12 },
+    "subsetElimination_mixed_double_tangent": {
+      "w9_k7":  { "subsets": 36,    "mixedRowsBound": 6, "eliminated": 36,    "survivors": 0, "perMod": { "9": 36 } },
+      "w10_k7": { "subsets": 120,   "mixedRowsBound": 6, "eliminated": 120,   "survivors": 0, "perMod": { "9": 118, "11": 2 } },
+      "w11_k8": { "subsets": 165,   "mixedRowsBound": 7, "eliminated": 165,   "survivors": 0, "perMod": { "9": 164, "11": 1 } },
+      "w12_k9": { "subsets": 220,   "mixedRowsBound": 8, "eliminated": 220,   "survivors": 0, "perMod": { "9": 220 } },
+      "w13_k9": { "subsets": 715,   "mixedRowsBound": 8, "eliminated": 715,   "survivors": 0, "perMod": { "9": 712, "11": 2, "19": 1 } },
+      "w14_k9": { "subsets": 2002,  "mixedRowsBound": 8, "eliminated": 2002,  "survivors": 0, "perMod": { "9": 1986, "11": 12, "19": 2, "23": 2 } },
+      "w15_k9": { "subsets": 5005,  "mixedRowsBound": 8, "eliminated": 5005,  "survivors": 0, "perMod": { "9": 4963, "11": 35, "19": 3, "23": 4 } },
+      "w16_k9": { "subsets": 11440, "mixedRowsBound": 8, "eliminated": 11440, "survivors": 0, "perMod": { "9": 11264, "11": 148, "19": 14, "23": 12, "7": 2 } },
+      "w17_k10":{ "subsets": 19448, "mixedRowsBound": 9, "eliminated": 19448, "survivors": 0, "perMod": { "9": 19348, "11": 98, "23": 2 } },
+      "w18_k10":{ "subsets": 43758, "mixedRowsBound": 9, "eliminated": 43758, "survivors": 0, "perMod": { "9": 43533, "11": 219, "19": 3, "23": 3 } },
+      "note": "third independent implementation (direct (R,D) scan per modulus, early exit); w=9..14 small-width total 3038 and w=15..18 half-density total 79651 match K0072's recorded candidate counts; QR0 includes 0 so certificates apply to mixed double+tangent point-row sets"
+    },
+    "g2FormCounts_scaledEighthIntegerD": {
+      "form": "A - 7y^2 - Uy in QR9 (from 4C^2-16y^2-2ey-16N = (2s)^2, 16 = 7 mod 9)",
+      "17": { "evens": 9, "evensMax": 6, "bestAU": [1, 1], "odds": 8, "oddsMax": 6 },
+      "18": { "evens": 9, "evensMax": 6, "bestAU": [1, 1], "odds": 9, "oddsMax": 6 },
+      "consequence": "non-Vieta d=9,s=0 (unique pure-parity non-adjacent max independent sets on w=17,18) impossible"
+    },
+    "witnesses": {
+      "circleA": "(2x+(-11))^2 + (2y+(-11))^2 = 130",
+      "circleA_note": "mirror of K0072 w=14 counterexample x^2+y^2+x-11y-2=0 (same R=130, D=-11)",
+      "circleA_points": [[4,0],[7,0],[2,1],[9,1],[1,2],[10,2],[0,4],[11,4],[0,7],[11,7],[1,9],[10,9],[2,10],[9,10],[4,11],[7,11]],
+      "circleA_doubleRows": [0,1,2,4,7,9,10,11],
+      "circleB": "(2x+(-7))^2 + (2y+(-7))^2 = 50",
+      "circleB_note": "identical to K0765 w=8 witness circle",
+      "circleB_points": [[3,0],[4,0],[1,1],[6,1],[0,3],[7,3],[0,4],[7,4],[1,6],[6,6],[3,7],[4,7]],
+      "circleB_doubleRows": [0,1,3,4,6,7],
+      "perWidth": {
+        "9":  { "circle": "B", "points": 12, "m_needed": 8,  "verified": true },
+        "10": { "circle": "B", "points": 12, "m_needed": 8,  "verified": true },
+        "11": { "circle": "A", "points": 14, "m_needed": 12, "verified": true },
+        "12": { "circle": "A", "points": 16, "m_needed": 12, "verified": true },
+        "13": { "circle": "A", "points": 16, "m_needed": 12, "verified": true },
+        "14": { "circle": "A", "points": 16, "m_needed": 12, "verified": true },
+        "15": { "circle": "A", "points": 16, "m_needed": 12, "verified": true },
+        "16": { "circle": "A", "points": 16, "m_needed": 12, "verified": true },
+        "17": { "circle": "A", "points": 16, "m_needed": 12, "verified": true },
+        "18": { "circle": "A", "points": 16, "m_needed": 12, "verified": true }
+      },
+      "verification": "all points exact-integer on-circle, in-board (x>=0, 0<=y<w), distinct"
+    },
+    "witnessSearchCoverage": {
+      "w1718": "integer circles |D|<=100, R<=20000: max 16 points; no 17/18-point witness found",
+      "note": "search covers all integer-D circles in range; larger R requires factorization-based enumeration (resume item)"
+    }
+  },
+  "corollary_row_separation_new_regions": {
+    "M_wq_eq_q_minus_1": {
+      "9": [13,18], "10": [13,20], "11": [15,22], "12": [17,24], "13": [17,26],
+      "14": [17,28], "15": [17,23], "16": [17,24], "17": [19,26], "18": [19,27]
+    },
+    "previously_known": "K0072 small-width (w=9:q16, w=10:q17-18, w=11:q19, w=13:q22, w=14:q23-24), K0072 half-density (w=15:q24-26, w=16:q25-28, w=17:q27-29, w=18:q28-30), K0025 (q>2w)"
+  }
+}
