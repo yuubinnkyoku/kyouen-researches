@@ -760,7 +760,6 @@
 | [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) | パラメータの単元倍 t↦at は剰余放物線の安全性を保たない（p=2207の1104点証人で反例） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0775](../items/K0775-p3251-no-size-h1-set.md) | 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査） | proposition | needs-review | maximum-safe, geometry, search-methods |
 | [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) | 幅w≧19整数格子の円点数上界P(w)≦2⌈w/2⌉（偶数wでは≦w）— w≧19半密度証明書のQR₀混合点行解釈の監査完了と行分離公式の無限族拡大 | proposition | proved | rectangles, geometry, variants |
-<<<<<<< HEAD
-=======
 | [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) | 二値立方体重み2層の13次元最小極大配置は17石 | computation | computed | variants, geometry, maximal-safe |
->>>>>>> origin/main
+| [K0778](../items/K0778-width17-20-circle-point-bounds.md) | 幅17・18の円点数 P(17)=P(18)=16 確定・幅19・20 は P≤18 で候補点行集合を完全分類（並走 K0776 の P(w)≤2⌈w/2⌉ を独立に再現・P(19),P(20) は更に 18 へ鋭化） | proposition | proved | rectangles, geometry, variants |
+| [K0779](../items/K0779-c4-saturation-n-plus-four-bound.md) | C4飽和グラフはn>=13でn+4辺以上、重み2層の14次元最小値は18 | proposition | proved | variants, geometry, maximal-safe |

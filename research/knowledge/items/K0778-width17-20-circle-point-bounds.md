@@ -1,5 +1,5 @@
 ---
-id: K0777
+id: K0778
 title: "幅17・18の円点数 P(17)=P(18)=16 確定・幅19・20 は P≤18 で候補点行集合を完全分類（並走 K0776 の P(w)≤2⌈w/2⌉ を独立に再現・P(19),P(20) は更に 18 へ鋭化）"
 kind: proposition
 status: proved
@@ -19,10 +19,10 @@ solution:
   independent_check: 第四実装・K0072/K0767 の実装と制御部分で perMod 完全一致・周期713補題は K0776 の監査実装とも独立に一致
   note: "P(19),P(20) は上界18・候補分類まで（真値open・予想16）。w=21..26 の上界は K0776 と同一（本項目の独立再現付き）"
 relations:
-- type: strengthens
+- type: supports
   target: K0767
   note: P(17),P(18) を 16 に確定（上界18から）。w=17 の系に q=18 を追加
-- type: strengthens
+- type: supports
   target: K0776
   note: K0776 は P(19),P(20)≤20 だが本項目は候補完全分類経由で P≤18 に鋭化し、w=19 の系に q=20 を追加。周期713・w=21..26 窓カウントの独立再現で相互検証
 - type: depends_on

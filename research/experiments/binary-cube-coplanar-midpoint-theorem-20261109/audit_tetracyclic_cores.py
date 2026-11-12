@@ -6,17 +6,20 @@ import gzip
 import hashlib
 import json
 from pathlib import Path
+import sys
 
 HERE = Path(__file__).resolve().parent
-INPUT = HERE/'tetracyclic-n13-candidates.txt.gz'
-N = 13
+N = int(sys.argv[1]) if len(sys.argv) == 2 else 13
+if N not in (13,14):
+    raise ValueError('dimension must be 13 or 14')
+INPUT = HERE/f'tetracyclic-n{N}-candidates.txt.gz'
 EDGES = list(combinations(range(N),2))
 EDGE_INDEX = {e:i for i,e in enumerate(EDGES)}
 CYCLES = []
 for a,b,c,d in combinations(range(N),4):
     for q in ((a,b,c,d),(a,b,d,c),(a,c,b,d)):
         CYCLES.append(sum(1 << EDGE_INDEX[tuple(sorted((q[i],q[(i+1)%4])))] for i in range(4)))
-assert len(CYCLES) == len(set(CYCLES)) == 2145
+assert len(CYCLES) == len(set(CYCLES)) == 3*len(list(combinations(range(N),4)))
 
 
 def canonical(b, pairs):
@@ -142,7 +145,7 @@ def main():
         labelled, expected_cores, admissible = all_core_types(b)
         actual_groups = [(pairs,ls) for (bb,pairs),ls in groups.items() if bb == b]
         actual_cores = {canonical(b,pairs) for pairs,_ in actual_groups}
-        # Only cores which admit a 16-edge simple expansion can appear.
+        # Only cores which admit an (n+3)-edge simple expansion can appear.
         assert len(actual_cores) == len(actual_groups)
         assert actual_cores == admissible and admissible <= expected_cores
         for pairs,lengths in actual_groups:
@@ -150,7 +153,8 @@ def main():
         records.append({'branch_vertices':b,'labelled_cores':labelled,'core_types':len(expected_cores),
                         'admissible_core_types':len(actual_cores),
                         'assignments':checked[b],'c4_free':free[b],'saturated':saturated[b]})
-    assert sum(checked.values()) == 55822 and sum(free.values()) == 19567
+    expected = {13:(55822,19567),14:(109249,44296)}
+    assert (sum(checked.values()),sum(free.values())) == expected[N]
     assert sum(saturated.values()) == 0
     print(json.dumps({'candidate_sha256':hashlib.sha256(raw).hexdigest(),
                       'records':records,'total_assignments':sum(checked.values()),
