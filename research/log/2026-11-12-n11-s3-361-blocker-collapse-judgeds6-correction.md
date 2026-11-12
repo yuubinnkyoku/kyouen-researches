@@ -46,3 +46,12 @@ K0762の「blocker 73閉鎖判定は方向規約未確認」は解消。blocker 
 2. 8 blocker閉鎖でS3 {59,60,61} proven-first、その後S2 {59,60}条件付き判定。
 
 S2 {59,60}・二石root・11×11空盤は**UNKNOWN**のまま。本日はいかなる勝敗も断定していない。
+
+## cost昇順バッチmanifestの生成
+
+同日の追記: 4代表blocker（5, 27, 23, 31）の新規S6 7,880件をcost（合法S7子数）昇順にソートした
+worklist manifestを `output/blocker_new_s6_worklist.tsv` として生成した（schema: n11-s3-361-blocker-new-s6-worklist-v1）。
+各エントリは canonical hex key・cost・親代表blocker。総cost 616,491・cost分布はsummary参照。
+次段はこのmanifestの頭からバッチ判定（df-pn/solver）し、blocker単位でW4判定へ集約する。
+judged除外の検証はscript（blocker_collapse_audit.ts）のunion錨（8,340/460/7,880/616,491）と
+manifest行数・cost総和の一致で担保される。
