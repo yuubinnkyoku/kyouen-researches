@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 768 / alias: 269 / artifactファイル: 4105
+K項目: 769 / alias: 269 / artifactファイル: 4108
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 768 / alias: 269 / artifactファイル: 4105
 | computation | 94 |
 | definition | 5 |
 | method | 7 |
-| proposition | 592 |
+| proposition | 593 |
 | question | 39 |
 | verification | 31 |
 
@@ -20,7 +20,7 @@ K項目: 768 / alias: 269 / artifactファイル: 4105
 | active | 12 |
 | computed | 199 |
 | conjectured | 2 |
-| needs-review | 2 |
+| needs-review | 3 |
 | observed | 26 |
 | open | 37 |
 | proved | 380 |
@@ -37,21 +37,21 @@ K項目: 768 / alias: 269 / artifactファイル: 4105
 | certificates | 109 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 383 |
+| geometry | 384 |
 | grundy | 171 |
 | maximal-safe | 200 |
 | maximum-safe | 101 |
 | migration | 1 |
 | provenance | 41 |
 | reconfiguration | 38 |
-| rectangles | 134 |
+| rectangles | 135 |
 | residual-games | 124 |
 | rules | 8 |
 | search-methods | 123 |
 | square-outcomes | 101 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 324 |
+| variants | 325 |
 | verification | 141 |
 
 ## 未解決・要監査・範囲不明
@@ -101,6 +101,7 @@ K項目: 768 / alias: 269 / artifactファイル: 4105
 - [K0737](../items/K0737-assumption-unsat-drat-gap.md) [open] 候補B の assumption-UNSAT を単体の DRAT 証明へ落とす手続きは未取得である
 - [K0775](../items/K0775-p3251-no-size-h1-set.md) [needs-review] 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査）
 - [K0781](../items/K0781-p2531-no-size-h1-set.md) [needs-review] 剰余放物線Q_2531はサイズh+1=1266の集合を持たず、上界はh=1265に下がる（ソルバ主張、証明書未検査）
+- [K0785](../items/K0785-circle-26-points-min-row-span.md) [needs-review] 26点円の最小行スパン43（中心窓で全称・R=2210は一意）と34..48点の上界（円11050）— 本文は未投入のプレースホルダ
 
 ## 警告
 

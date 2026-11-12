@@ -81,7 +81,7 @@
 - ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
 - ← depends_on [K0775](../items/K0775-p3251-no-size-h1-set.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
 - ← depends_on [K0781](../items/K0781-p2531-no-size-h1-set.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
-- ← depends_on [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md): 共線・共円四点を含まない安全集合の定義
+- ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 共線・共円四点を含まない安全集合の定義
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -4509,7 +4509,7 @@
 - → depends_on [K0770](../items/K0770-parabola-four-point-determinant-factorization.md): 系C1 の必要方向と第四点の一意性
 - → supports [K0769](../items/K0769-candidate-b-assumption-partition.md): 前提(1)（辺リスト完全性）
 - ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 辺リスト完全性（前提(1)）
-- ← depends_on [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
+- ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 
 ## [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) pysat の seqcounter による CardEnc.equals は build と同一の呼び出し形で小規模全件「ちょうど bound 個」を満たす
 
@@ -4535,7 +4535,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): サイズh+2=1627の不存在（単一CNF・監査済み）からA(3251)<=1626、本項はそこから1下げる
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
-- ← supports [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md): A(3251)<=1625 と合わせて 1598 <= A(3251) <= 1625
+- ← supports [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): A(3251)<=1625 と合わせて 1598 <= A(3251) <= 1625
 
 ## [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) 幅w≧19整数格子の円点数上界P(w)≦2⌈w/2⌉（偶数wでは≦w）— w≧19半密度証明書のQR₀混合点行解釈の監査完了と行分離公式の無限族拡大
 
@@ -4579,7 +4579,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0702](../items/K0702-p2531-no-parabola-equality-witness.md): サイズh+2=1267の不存在（単一CNF・監査済み）からA(2531)<=1266、本項はそこから1下げる
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
-- ← supports [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md): A(2531)<=1265 と合わせて 1246 <= A(2531) <= 1265
+- ← supports [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): A(2531)<=1265 と合わせて 1246 <= A(2531) <= 1265
 
 ## [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) 幅21..26の円点数 P(w) ≤ 2⌈w/2⌉−2（k=⌈w/2⌉ 候補点行集合がmod 19で全滅）・w=19,20候補の実現可能性は e∈Z・R'≤2×10⁷ で否定・A=0は厳密不可能
 
@@ -4604,14 +4604,14 @@
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)
 - ← supports [K0786](../items/K0786-width36-48-circle-strip-witnesses.md): K0784末尾の「次の跳躍予測」に正例。24プラトーは（座標≦256の有限観測で）w=42まで継続し、跳躍はw=43の26点（2210円・r₂=32）。level 13分類が全滅すればP(36)..P(40)=24となるK0784レジュームと整合する下界
 
-## [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) 貪欲＋破壊再構成でQ_2531は1246点以上、Q_3251は1598点以上の安全集合を持つ（独立整数幾何監査済み）
+## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
+
+- → supports [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): K0784末尾の「次の跳躍予測」に正例。24プラトーは（座標≦256の有限観測で）w=42まで継続し、跳躍はw=43の26点（2210円・r₂=32）。level 13分類が全滅すればP(36)..P(40)=24となるK0784レジュームと整合する下界
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）
+
+## [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) 貪欲＋破壊再構成でQ_2531は1246点以上、Q_3251は1598点以上の安全集合を持つ（独立整数幾何監査済み）
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 - → supports [K0781](../items/K0781-p2531-no-size-h1-set.md): A(2531)<=1265 と合わせて 1246 <= A(2531) <= 1265
 - → supports [K0775](../items/K0775-p3251-no-size-h1-set.md): A(3251)<=1625 と合わせて 1598 <= A(3251) <= 1625
-
-## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
-
-- → supports [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): K0784末尾の「次の跳躍予測」に正例。24プラトーは（座標≦256の有限観測で）w=42まで継続し、跳躍はw=43の26点（2210円・r₂=32）。level 13分類が全滅すればP(36)..P(40)=24となるK0784レジュームと整合する下界
-- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）

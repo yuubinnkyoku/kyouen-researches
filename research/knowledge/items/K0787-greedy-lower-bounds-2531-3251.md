@@ -1,5 +1,5 @@
 ---
-id: K0785
+id: K0787
 title: 貪欲＋破壊再構成でQ_2531は1246点以上、Q_3251は1598点以上の安全集合を持つ（独立整数幾何監査済み）
 kind: proposition
 status: computed

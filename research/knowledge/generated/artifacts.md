@@ -1063,6 +1063,15 @@
 
 - [K0102](../items/K0102-concrete-lean-certificate-checker-open.md) (source): 9×9証明書の外部C++検査記録
 - [K0103](../items/K0103-n10-single-empty-root-certificate-open.md) (source): 1x1-9x9 single-certificate verification boundary; 10x10 remains unintegrated
+## [research/experiments/circle-26pt-min-rowspan-20261112/output/circle_26pt_min_rowspan.json](../../../research/experiments/circle-26pt-min-rowspan-20261112/output/circle_26pt_min_rowspan.json)
+
+- [K0785](../items/K0785-circle-26-points-min-row-span.md) (data): family E/O/Zの全数列挙・bestK・good13・spectrum・verify・controls（同様にプレースホルダ）
+## [research/experiments/circle-26pt-min-rowspan-20261112/reports/circle-26pt-min-rowspan.md](../../../research/experiments/circle-26pt-min-rowspan-20261112/reports/circle-26pt-min-rowspan.md)
+
+- [K0785](../items/K0785-circle-26-points-min-row-span.md) (proof): 定理A/B/C・補題鎖L0-L6・限界・K0786との役割分担（2026-11-13時点で本文はプレースホルダ）
+## [research/experiments/circle-26pt-min-rowspan-20261112/scripts/circle_26pt_min_rowspan.ts](../../../research/experiments/circle-26pt-min-rowspan-20261112/scripts/circle_26pt_min_rowspan.ts)
+
+- [K0785](../items/K0785-circle-26-points-min-row-span.md) (solver): 単独再現機械（STAGE分割: E/O/Z全数列挙＋witness検証）
 ## [research/experiments/clique-bouquet-gaussian-20261101/proof.md](../../../research/experiments/clique-bouquet-gaussian-20261101/proof.md)
 
 - [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) (proof): 花弁ごとの厳密母関数・全変動誤差・正規極限の全称証明
@@ -10696,13 +10705,13 @@
 - [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) (verifier): 検査器ソースhashごとに旧レシートとバイナリを分離する再監査ドライバ
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/audit_safe_set.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/audit_safe_set.py)
 
-- [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) (verifier): 辺の非包含と独立generic 4x4 Leibniz検証器の二重検査、入出力hash保存
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (verifier): 辺の非包含と独立generic 4x4 Leibniz検証器の二重検査、入出力hash保存
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/build_inventory.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): d=1..1103の判定表を生成し、タイムアウト分は衝突予算2000万で再判定する
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/build_safe.cpp](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/build_safe.cpp)
 
-- [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) (solver): 貪欲＋ruin-and-recreate（探索器。出力は証人であり最適性の証明ではない）
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (solver): 貪欲＋ruin-and-recreate（探索器。出力は証人であり最適性の証明ではない）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cardenc_verify.py)
 
 - [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
@@ -10771,16 +10780,16 @@
 - [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md) (data): 4証明書の新旧時間・speedup・負の対照2件の拒否記録
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/audit_2531.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/audit_2531.json)
 
-- [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) (data): 2531の監査生出力（99,946,516,285四点を被覆、39,548,349候補の行列式が非零）
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (data): 2531の監査生出力（99,946,516,285四点を被覆、39,548,349候補の行列式が非零）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/audit_3251.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/audit_3251.json)
 
-- [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) (data): 3251の監査生出力（270,684,896,405四点を被覆、83,362,522候補の行列式が非零）
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (data): 3251の監査生出力（270,684,896,405四点を被覆、83,362,522候補の行列式が非零）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531.json)
 
-- [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) (certificate): 1246点（形状(1,1,21)、辺0件）。点は(t,t² mod 2531)
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1246点（形状(1,1,21)、辺0件）。点は(t,t² mod 2531)
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251.json)
 
-- [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) (certificate): 1598点（形状(1,1,29)、辺0件）。点は(t,t² mod 3251)
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1598点（形状(1,1,29)、辺0件）。点は(t,t² mod 3251)
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）
@@ -13170,7 +13179,7 @@
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
 ## [research/log/2026-11-13-greedy-lower-bounds-2531-3251.md](../../../research/log/2026-11-13-greedy-lower-bounds-2531-3251.md)
 
-- [K0785](../items/K0785-greedy-lower-bounds-2531-3251.md) (log): 手法・較正（2207/2647）・限界
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (log): 手法・較正（2207/2647）・限界
 ## [research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md](../../../research/log/2026-11-13-n11-ms5-worklist-derivation-and-s7-reuse-partition.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 経緯と再現上の注意（メモリ上限・実装上の修正点）
