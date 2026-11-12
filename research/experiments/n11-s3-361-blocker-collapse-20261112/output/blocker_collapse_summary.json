@@ -1,0 +1,94 @@
+{
+  "schema": "n11-s3-361-blocker-collapse-audit-v1",
+  "date": "2026-11-12",
+  "priority_s4": "{47,59,60,61}",
+  "anchors": {
+    "s5_reps": 94,
+    "raw_s6_edges": 7890,
+    "judged_s6_classes": 3868
+  },
+  "s3": "{59,60,61}",
+  "legal_s4_children": 110,
+  "direct_w4_closures": 102,
+  "blockers": [
+    5,
+    23,
+    27,
+    31,
+    89,
+    93,
+    97,
+    115
+  ],
+  "v4_classes": [
+    [
+      5,
+      115
+    ],
+    [
+      27,
+      93
+    ],
+    [
+      23,
+      31,
+      89,
+      97
+    ]
+  ],
+  "judged_s6": 3868,
+  "per_representative": [
+    {
+      "u": 5,
+      "s5": 54,
+      "oblig": 4795,
+      "s6all": 2191,
+      "judged": 159,
+      "new_s6": 2032,
+      "new_cost": 159266
+    },
+    {
+      "u": 27,
+      "s5": 54,
+      "oblig": 4698,
+      "s6all": 2150,
+      "judged": 77,
+      "new_s6": 2073,
+      "new_cost": 157179
+    },
+    {
+      "u": 23,
+      "s5": 100,
+      "oblig": 9014,
+      "s6all": 4417,
+      "judged": 234,
+      "new_s6": 4183,
+      "new_cost": 330227
+    },
+    {
+      "u": 31,
+      "s5": 100,
+      "oblig": 9014,
+      "s6all": 4417,
+      "judged": 234,
+      "new_s6": 4183,
+      "new_cost": 330227
+    }
+  ],
+  "union4": {
+    "all": 8340,
+    "judged": 460,
+    "new_s6": 7880,
+    "new_cost": 616491
+  },
+  "corrections": {
+    "judgeds6_4342": "前回セッションのjudgedS6 4,342は埋込みfwHex/swHex定数の転写破損（先行ゼロ過多で約8ビットずれた位置）によるartifact。正しくは3,868（repo s5_verdicts.json直接fetchで再確定）。",
+    "per_blocker_23": "前回の{23}=98/8,859/4,416は誤り。{23}は{31}と同一V4類で100/9,014/4,417。",
+    "k0757_61_blockers": "K0757 published ladderの61 blocker（+実測62）はraw一致のみの照合。全D4像照合では8 blocker（3 V4類）に縮小。"
+  },
+  "caveats": [
+    "S2 {59,60}・11x11空盤・二石rootの勝敗は全てUNKNOWN",
+    "blocker 8個のW4/second-win判定は未実施",
+    "方向規約: W4(S4)=exists FIRST_WIN S5子, S3 proven-first iff 全S4子W4 (chain_audit.py機関で確認済み)"
+  ]
+}
