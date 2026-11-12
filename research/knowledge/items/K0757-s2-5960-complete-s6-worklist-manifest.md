@@ -35,7 +35,7 @@ artifacts:
     certStats（greedy step 1–33・0-marginalクラス除く）・protocol・検証記録）。
     16MiB sandbox制約により等幅3分割で公開: milestone4_manifest.json.part1/part2/part3
     （`cat` で byte-exact 再結合。全体 1,782,977 bytes・
-    md5 f8c1a724c6c7d757192f15f38d4c5da0）
+    md5 f8c1a724c6c7d757192f15f38d4c5da0・2026-11-12再生成版: 全体1,782,603 bytes・md5 452b4336edbe272a49dcd76c4a7764af・各分割594,201 bytes・旧版はsuperseded）
 - path: research/log/2026-11-12-n11-s2-5960-ms4-complete-worklist.md
   role: log
   note: 実行記録・milestone-1/2/3再生成による制御検証・milestone-3 subset検証PASS・
@@ -87,3 +87,14 @@ S2・空盤の勝敗も含まない。空盤・二石root {49,60} は **UNKNOWN*
 生成器の旧 `CHUNKS` 定義では step 22 `{99,109}` のビットが `2^32 + 2^32 = 2^33` となり、step 23 `{15}` の `2^33` と完全に衝突していた。さらに step 22 以降のビット位置が本来の一意な連番からずれていた。**これは同一証明書内の重複加算とは独立した欠陥**であり、先の `feef03e` だけでは解消しない。step 22 の2代表は互いに識別不能、step 22 と23も区別不能だった。修正コミット `6fd5d47` で step 22 を `2^32+2^33`、step 23 を `2^34` とし、以降も衝突のないビット位置へ修正した。
 
 **公開済み milestone-4 manifest の `s6All[][2]` と `s5Reps[].certs` はどちらも使用禁止。** 旧 `certStats` の単体個数はビット割当てそのものとは別に算出されるが、公開manifestの所属情報から検証してはならない。全10分割の再生成・結合・所属数照合・独立検証が済むまで、修正版の証明書所属情報は未認定とする。43,375件のS6鍵集合やcostが正しいという既存の主張を、このビット修正だけで新たに検証したわけではない。11×11の勝敗はUNKNOWN。
+
+
+## 2026-11-12 再生成完了: 修正版manifestの公開とcerts使用禁止の解除
+
+全10チャンクをrepo正本のfwHex/swHex配列から修正済み生成器で再生成し（数値配列は手書き転写せずrepo文字列をJSON.parseで直接抽出）、加算mergeして修正版manifestを再公開した。
+
+- **独立照合 全PASS**: certStats単体S6 orbit数とのper-cert membership照合が30/30で一致（旧manifestは26/30不一致）。certs値は宣言済み50個の2の冪（pair証明書は隣接2ビット p+2p）へ完全分解し、未宣言ビット0・半ペアビット0・衝突0。S6 43,375行（127,748 membership）・S5 1,447行（2,835 membership・全30証明書被覆0欠落）。
+- **旧manifestとの対照**: S6鍵集合43,375件・cost全一致・S5鍵集合1,447件・義務数全一致・certStatsのorbit/義務列も全一致。certs値の差異は s6All 18,292件・s5Reps 859件で、いずれも旧生成器の2欠陥（同一証明書内重複加算=feef03e抑止、ビット衝突=6fd5d47修正）に帰着。旧 {78,86} ビット 412316847416 は隣接2冪の和ではなく下位に13,000の散在ビットを含み、旧certsは旧certStatsでも検証不能だった。
+- **修正版: 全体 1,782,603 bytes・md5 452b4336edbe272a49dcd76c4a7764af・等幅3分割（各594,201 bytes）**。cat再結合のbyte-exact性を検証済み。cross_checksに再生成・照合記録を記載。
+- **使用禁止を解除**: 新partの s6All[][2]・s5Reps[].certs はworker割当て・被覆判定・証明書検証に使用可能。旧版（md5 f8c1a724…）を参照する記録は更新が必要。
+- 本作業は78 FW oracle条件下のworklist確定・検証のみ。S6 verdictは未認定。11×11空盤・二石root {49,60} は **UNKNOWN**。
