@@ -8480,6 +8480,18 @@
 ## [research/experiments/n11-s2-5960-milestone4-20261112/scripts/milestone4_worklist.ts](../../../research/experiments/n11-s2-5960-milestone4-20261112/scripts/milestone4_worklist.ts)
 
 - [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) (source): 証明書1–33のS6 orbit列挙（整数外接円circle-mask幾何・D4 canon・K0746/K0748/K0754と同一機関）。 16MiB制約のためCHUNK=1..10の分割実行でフラグメントを生成
+## [research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_closure_summary.json](../../../research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_closure_summary.json)
+
+- [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (data): 全anchor（sweep 3,868・110/102/8・196/17,524/479/13/10・7,880/616,491 crosscheck・ 7,867/615,497）・類別未解決S5数・first-strike最安候補表
+## [research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s5_worklist.json](../../../research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s5_worklist.json)
+
+- [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (data): 196未知S5 orbit（類bit・raw義務・unjudged子数・judged LOSS子有=即SECOND_WIN・cost）
+## [research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest.csv](../../../research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest.csv)
+
+- [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (manifest): 旧単一csv（supersededの索引）。7,867行の実体は同ディレクトリのms5_s6_manifest_part1..6.csv（各49,873バイト、part6のみ49,683）
+## [research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts](../../../research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts)
+
+- [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (source): 94オラクル鍵+14 LOSS S6鍵を埋込み（s5_verdicts.json由来・自己assert 78+16/3,868/14）、 orbit-level blocker特定・196 S5会計・settled-10判定・7,867/615,497 manifest生成を 再実行する自己完結TS検証script（anchor不一致でthrow）
 ## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon）。 単独実行で分布・13,244・classA 32件・worklist 1,447・鏡映同一性まで全数値を再現
@@ -10615,7 +10627,7 @@
 ## [research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt)
 
 - [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (certificate): SHA-256 ce97d4a9447fd32cd67e3cfad59151774fa45cf90c8985287abb1a45480e2347の1104パラメータ
-- [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) (certificate): 監査済みのp=2207の1104点（形状(1,1,1)、完全対307、空対1078）
+- [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) (certificate): 監査済みのp=2207の1104点（形状(1,1,1)、完全対307、空対1078）
 ## [research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json](../../../research/experiments/parabola-p2207-1104-witness-20261110/output/controls.json)
 
 - [K0722](../items/K0722-p2207-safe-lower-bound-1104.md) (data): 安全三点の受理、二完全対の禁止四点・重複・入力打切り・合成数の拒否
@@ -10641,7 +10653,7 @@
 - [K0772](../items/K0772-pysat-seqcounter-equals-small-verification.md) (verifier): 全主割当の拡張可能性を自前 DPLL と Cadical assumption の2系統で判定する照合器
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/check_scaling_invariance.py)
 
-- [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) (verifier): 証人を単元倍し、辺リストとの包含と独立なgeneric整数4x4行列式で共円性を再計算する
+- [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) (verifier): 証人を単元倍し、辺リストとの包含と独立なgeneric整数4x4行列式で共円性を再計算する
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 交差ソルバ実行器
@@ -10696,7 +10708,7 @@
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (data): 7素数の突合結果（全一致）
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/scaling_invariance.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/scaling_invariance.json)
 
-- [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) (data): 原証人0辺・単元倍後1957辺（1957件すべて独立行列式で共円）の生出力
+- [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) (data): 原証人0辺・単元倍後1957辺（1957件すべて独立行列式で共円）の生出力
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_b_single_2647.json)
 
 - [K0711](../items/K0711-p2647-safe-lower-bound-1292.md) (data): サイズ1324の形状(b)がUNSAT（形状(a),(c)は別記録）
@@ -12979,6 +12991,9 @@
 ## [research/log/2026-11-12-n11-s2-5960-ms4-complete-worklist.md](../../../research/log/2026-11-12-n11-s2-5960-ms4-complete-worklist.md)
 
 - [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md) (log): 実行記録・milestone-1/2/3再生成による制御検証・milestone-3 subset検証PASS・ q59推定の訂正・実装教訓（32ビットOR・8MiB上限・フラグメント破損）
+## [research/log/2026-11-12-n11-s2-5960-orbit-ms5-manifest.md](../../../research/log/2026-11-12-n11-s2-5960-orbit-ms5-manifest.md)
+
+- [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (log): 実行記録・K0766との並走と独立一致・配列破損のforensics・実装教訓
 ## [research/log/2026-11-12-n11-s3-361-blocker-collapse-judgeds6-correction.md](../../../research/log/2026-11-12-n11-s3-361-blocker-collapse-judgeds6-correction.md)
 
 - [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md) (log): 実行記録・矛盾解消の経緯・実装教訓（hex定数の手再埋込み禁止・fetch由来埋込み）

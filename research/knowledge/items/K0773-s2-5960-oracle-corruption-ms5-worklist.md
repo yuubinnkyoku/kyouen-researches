@@ -34,11 +34,9 @@ artifacts:
 - path: research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s5_worklist.json
   role: data
   note: 196未知S5 orbit（類bit・raw義務・unjudged子数・judged LOSS子有=即SECOND_WIN・cost）
-- path: research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part1..6.csv
-  role: data
-  note: 7,867 S6 orbitのcost昇順manifestを6 partに分割（classes列=blocker類bit OR）。
-    外部solver直接入力。erratum: 初回pushの単一csvは取得経路の~64KB上限で1,683行
-    （cost≤72）まで切れていたため、全7,867行を検証の上6 partに分割して差し替えた
+- path: research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest.csv
+  role: manifest
+  note: "旧単一csv（supersededの索引）。7,867行の実体は同ディレクトリのms5_s6_manifest_part1..6.csv（各49,873バイト、part6のみ49,683）"
 - path: research/log/2026-11-12-n11-s2-5960-orbit-ms5-manifest.md
   role: log
   note: 実行記録・K0766との並走と独立一致・配列破損のforensics・実装教訓

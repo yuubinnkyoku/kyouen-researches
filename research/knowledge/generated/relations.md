@@ -78,7 +78,7 @@
 - ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 標準q=4の安全性は部分集合に継承される
 - ← depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
 - ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 行分離帰結の行公式はK0072と同一の行ゲーム導出
-- ← depends_on [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
+- ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -811,7 +811,7 @@
 - ← depends_on [K0732](../items/K0732-p2539-origin-retaining-four-deletion-exclusion.md): 安全集合に含まれる完全対は高々一つ
 - ← depends_on [K0733](../items/K0733-p2539-four-deletion-local-optimum.md): 安全集合の完全対は高々一つ
 - ← depends_on [K0734](../items/K0734-p2539-five-deletion-improvement-necessary-shape.md): 安全集合の完全対は高々一つ
-- ← depends_on [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
+- ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
 
 ## [K0098](../items/K0098-p23-half-interval-counterexample.md) 剰余放物線の前半区間安全説はp=23で反例
 
@@ -1794,7 +1794,7 @@
 - ← depends_on [K0722](../items/K0722-p2207-safe-lower-bound-1104.md): 整数共円行列式0なら四パラメータの和が0 mod pとなる必要条件
 - ← depends_on [K0730](../items/K0730-p2539-safe-bound-and-maximal-witness.md): 整数禁止四点のパラメータ和が0 mod pとなる必要条件による完全フィルタ
 - ← supports [K0770](../items/K0770-parabola-four-point-determinant-factorization.md): K0334 文3 の t³ 係数ルートとは独立な第2証明を与え、等号分解の前提を裏づける
-- ← depends_on [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md): 四点のパラメータ和0 mod pは整数共円性の必要条件にすぎないという限定
+- ← depends_on [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md): 四点のパラメータ和0 mod pは整数共円性の必要条件にすぎないという限定
 
 ## [K0335](../items/K0335-center-corner-s4-cover-exact-all-odd-squares.md) 奇数盤の中心・隅rootのs4 class cover最小数はceil((n²+n−8)/4)
 
@@ -3683,6 +3683,7 @@
 - ← depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）。 本計算は78 FW oracle条件下の条件付きworklist確定
 - ← depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): 94五石位置universe・3,868 S6スイープ（3,854 WIN/14 LOSS・感受性証明書fails 0）が 証明書{73}のS5/S6集合と同一（key-for-key・算術・部分集合の3系統で機械照合）
 - ← depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): 94五石位置オラクル（FW 78+SW 16・3,868 S6 verdict）をD4像込みで再利用する
+- ← depends_on [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md): 94五石位置オラクル（78 FW+16 SW・3,868 S6 sweep・14 LOSS S6）を正として全 会計を実行
 
 ## [K0676](../items/K0676-n11-region-s4-first-win.md) 四石領域位置S4-A/S4-Bは先手勝ち（各94合法子のうち37先手勝ち五石子）
 
@@ -4345,6 +4346,7 @@
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 78先手勝ち/16第二手勝ち五石位置oracle（94位置universe）。 本計算は78 FW oracle条件下の条件付きworklist確定
 - ← depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): 修正版milestone-4 manifestの証明書{73}（greedy step 6・bit 32・s6All 3,868・ s5Reps 94・rawObligations 7,890）を対象とする
 - ← depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): published ladderの61 blocker（raw一致のみ）は全D4像照合で8 blockerに訂正縮小される
+- ← depends_on [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md): published milestone-4 ladder（61 blocker・43,375 orbit census）はconcrete-level照合+ 配列破損に基づく歴史的会計として置き換えられる
 
 ## [K0758](../items/K0758-three-row-m19-class024-nonexistence.md) 5x19 three-row deficient class {0,2,4} nonexistence
 
@@ -4395,6 +4397,7 @@
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置universe・3,868 S6スイープ（3,854 WIN/14 LOSS・感受性証明書fails 0）が 証明書{73}のS5/S6集合と同一（key-for-key・算術・部分集合の3系統で機械照合）
 - → depends_on [K0754](../items/K0754-s2-5960-milestone3-s6-manifest.md): milestone-3の{73}単体3,868・greedy順序（step 6）と一致
 - ← depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): judgedS6 3,868の再確定と方向規約の確認により「blocker 73閉鎖判定はデータready」の前提が確定した
+- ← depends_on [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md): cert73_regen_audit.tsの配列破損を特定したが、同監査のpublished結果（pass）は 破損エントリに非感受性のため無傷
 
 ## [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) 幅6整数格子の円は全mで最大8格子点 — P(6)=8の全称証明とq=9..12の行分離公式 M_{6,q}=q−1
 
@@ -4431,6 +4434,7 @@
 - → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置オラクル（FW 78+SW 16・3,868 S6 verdict）をD4像込みで再利用する
 - → depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): published ladderの61 blocker（raw一致のみ）は全D4像照合で8 blockerに訂正縮小される
 - → depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): judgedS6 3,868の再確定と方向規約の確認により「blocker 73閉鎖判定はデータready」の前提が確定した
+- ← depends_on [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md): orbit-level（全D4像）blocker縮小110→102閉鎖/8残・方向規約（W4(S4)=∃FIRST_WIN S5子）を 引き継ぎ、削減前会計 7,880/616,491 と本項の独立会計が完全一致した
 
 ## [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) 幅9..16整数格子の円点数P(w)完全決定（12,12,14,16,16,16,16,16）・P(17),P(18)≤18 — 混合点行証明書の接点対応解釈と新規q領域の行分離公式
 
@@ -4481,7 +4485,14 @@
 - ← depends_on [K0735](../items/K0735-easy-unsat-history-solver-independence.md): 同一符号化の基数制約
 - ← depends_on [K0769](../items/K0769-candidate-b-assumption-partition.md): 基数符号化の範囲限定検証（前提(3)）
 
-## [K0773](../items/K0773-no-scaling-symmetry-for-parabola-safety.md) パラメータの単元倍 t↦at は剰余放物線の安全性を保たない（p=2207の1104点証人で反例）
+## [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) milestone1-4オラクルhex配列の転写破損6件を機関特定（61 blocker過大計上の原因確定）・未知S5 196のうち10個はK0675 LOSS子で即SECOND_WIN・milestone-5残worklist 7,867 orbit/615,497 cost manifest生成
+
+- → depends_on [K0766](../items/K0766-s3-361-blocker-collapse-8-remaining.md): orbit-level（全D4像）blocker縮小110→102閉鎖/8残・方向規約（W4(S4)=∃FIRST_WIN S5子）を 引き継ぎ、削減前会計 7,880/616,491 と本項の独立会計が完全一致した
+- → depends_on [K0675](../items/K0675-n11-s6-universe-s5-verdicts.md): 94五石位置オラクル（78 FW+16 SW・3,868 S6 sweep・14 LOSS S6）を正として全 会計を実行
+- → depends_on [K0757](../items/K0757-s2-5960-complete-s6-worklist-manifest.md): published milestone-4 ladder（61 blocker・43,375 orbit census）はconcrete-level照合+ 配列破損に基づく歴史的会計として置き換えられる
+- → depends_on [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md): cert73_regen_audit.tsの配列破損を特定したが、同監査のpublished結果（pass）は 破損エントリに非感受性のため無傷
+
+## [K0774](../items/K0774-no-scaling-symmetry-for-parabola-safety.md) パラメータの単元倍 t↦at は剰余放物線の安全性を保たない（p=2207の1104点証人で反例）
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義（整数平面の点として判定する）
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 四点のパラメータ和0 mod pは整数共円性の必要条件にすぎないという限定
