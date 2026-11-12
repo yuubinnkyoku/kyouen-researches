@@ -51,3 +51,16 @@ w=19..21 はスコープ内最大16、24プラトーは（スコープ内で）w
 5. K0761レジューム（6×13全1,212代表の完全列挙）は引き続き残置。
 
 11×11 空盤・二石 root {49,60} は **UNKNOWN**。
+
+## 補記（同日・push後）
+
+- K0786 の items 追加に伴う generated/ 再生成トリガーとして
+  `.github/workflows/refresh-knowledge-generated.yml` 末尾への
+  「# Refresh trigger for K0786 ...」1行追記を試みたが、当該yml（約9.6KB）は
+  push_files で tree タイムアウト・create_or_update_file で 500/502 が継続し
+  本実行では更新不可（小ファイル≤約8KBは問題なくpush可能）。
+  **次回の統合時に (a) 同yml末尾へのトリガー行追記を再試行するか、
+  (b) uv環境で `tools/knowledge/build.py` を実行して generated/ を直接コミット
+  すること。それまで knowledge.yml CI の generated チェックが赤いまま。**
+- 5ファイル（script・output・report・K0786・本log）の push 後読み戻し検証は完了
+  （全て main HEAD に存在・内容照合済み）。
