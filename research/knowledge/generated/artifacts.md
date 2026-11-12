@@ -10697,6 +10697,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/cross_solver_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 交差ソルバ実行器
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_fast.cpp](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_fast.cpp)
+
+- [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md) (verifier): drat_check_incremental.cppの高速版。Zobrist hashの節索引＋reason単位の削除失効
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_incremental.cpp)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): 増分DRATチェッカー（RUP＋RAT、決定レベルとtrail）
@@ -10745,6 +10748,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_3251_34249932790a9e9d.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/drat_audit_full_3251_34249932790a9e9d.json)
 
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (data): 修正版の受理記録70 d。計画標本は51/65、全1625 dの監査ではない
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/fast_checker_validation.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/fast_checker_validation.json)
+
+- [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md) (data): 4証明書の新旧時間・speedup・負の対照2件の拒否記録
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/p2207_d_verdicts.json)
 
 - [K0101](../items/K0101-prime-parabola-equality-open.md) (data): p=2207の全1103 dのCNF UNSAT判定（反例候補。DRAT未検査）
@@ -10811,6 +10817,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/tail_fresh_probe.py)
 
 - [K0735](../items/K0735-easy-unsat-history-solver-independence.md) (verifier): 尾部 fresh-each と unit_conflict/統計の計測
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_fast_checker.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_fast_checker.py)
+
+- [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md) (verifier): 既存4証明書の再検査と負の対照（リテラル反転・空節削除）を一括実行
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/validate_reduction.py)
 
 - [K0693](../items/K0693-p2207-no-parabola-equality-witness.md) (verifier): p<=23の全安全集合を列挙し、完全対dの集合とCNFのSAT/UNSATを全dで比較する

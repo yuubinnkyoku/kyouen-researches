@@ -1,0 +1,87 @@
+{
+  "checker": "D:\\tmp\\fastchk\\drat_fast.exe",
+  "checker_source": "research/experiments/parabola-p2207-no-equality-witness-20261107/drat_check_fast.cpp",
+  "certs": [
+    {
+      "rc": 0,
+      "seconds": 122.0,
+      "last_line": "VERIFIED",
+      "stats": "steps=237785 rup=237785 rat=0 rat_checks=0 deletions=259394 delete_misses=0 empty=1 ok=1",
+      "verified": true,
+      "cert": "cert-2207-1105",
+      "p": 2207,
+      "size": 1105,
+      "proof_bytes": 48458346,
+      "receipt_verified": true,
+      "receipt_check_seconds": 875.0
+    },
+    {
+      "rc": 0,
+      "seconds": 35.1,
+      "last_line": "VERIFIED",
+      "stats": "steps=86533 rup=86533 rat=0 rat_checks=0 deletions=104446 delete_misses=0 empty=1 ok=1",
+      "verified": true,
+      "cert": "cert-2531-1267",
+      "p": 2531,
+      "size": 1267,
+      "proof_bytes": 13765400,
+      "receipt_verified": true,
+      "receipt_check_seconds": 103.5
+    },
+    {
+      "rc": 0,
+      "seconds": 3.6,
+      "last_line": "VERIFIED",
+      "stats": "steps=7256 rup=7256 rat=0 rat_checks=0 deletions=49361 delete_misses=0 empty=1 ok=1",
+      "verified": true,
+      "cert": "cert-2647-1325",
+      "p": 2647,
+      "size": 1325,
+      "proof_bytes": 1521374,
+      "receipt_verified": true,
+      "receipt_check_seconds": 39.3
+    },
+    {
+      "rc": 0,
+      "seconds": 54.6,
+      "last_line": "VERIFIED",
+      "stats": "steps=93926 rup=93926 rat=0 rat_checks=0 deletions=135940 delete_misses=0 empty=1 ok=1",
+      "verified": true,
+      "cert": "cert-3251-1627",
+      "p": 3251,
+      "size": 1627,
+      "proof_bytes": 9288021,
+      "receipt_verified": true,
+      "receipt_check_seconds": 185.6
+    }
+  ],
+  "all_verified": true,
+  "matches_receipts": true,
+  "negative_controls_all_rejected": true,
+  "negatives": [
+    {
+      "rc": 1,
+      "seconds": 2.7,
+      "last_line": "steps=4097 rup=4096 rat=0 rat_checks=1 deletions=14827 delete_misses=0 empty=0 ok=0",
+      "stats": "",
+      "verified": false,
+      "control": "flipped_literal",
+      "rejected": true
+    },
+    {
+      "rc": 1,
+      "seconds": 3.5,
+      "last_line": "steps=7255 rup=7255 rat=0 rat_checks=0 deletions=49361 delete_misses=0 empty=0 ok=1",
+      "stats": "",
+      "verified": false,
+      "control": "dropped_empty_clause",
+      "rejected": true
+    }
+  ],
+  "speedups": {
+    "cert-2207-1105": 7.17,
+    "cert-2531-1267": 2.95,
+    "cert-2647-1325": 10.92,
+    "cert-3251-1627": 3.4
+  }
+}

@@ -3945,6 +3945,7 @@
 ## [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md) 旧増分DRATチェッカーは節削除後の古い代入により偽UNSAT証明を受理する
 
 - ← depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): 旧d別監査では削除時代入失効の修正版を使用。別経路の単一CNFはRUP限定検査と空節処理修正版LRATで再検査
+- ← depends_on [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md): 削除で代入を失効させないと偽UNSATを受理する不具合と、その修正方針（reason単位の失効）
 
 ## [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) p=3251でも剰余放物線の等号A(p)=(p+3)/2を達成できない（単一CNF独立schema・RUP/LRAT監査済み）
 
@@ -4550,3 +4551,7 @@
 - → depends_on [K0742](../items/K0742-c4-saturation-with-leaf-exact.md): 葉を持つ候補の辺数下界
 - → depends_on [K0744](../items/K0744-c4-saturation-n-plus-three-bound.md): n>=11のn+3下界
 - → depends_on [K0777](../items/K0777-weight-two-d13-saturation-minimum.md): 13頂点16辺の有限核排除
+
+## [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md) DRAT検査器の高速版（削除時はreasonのみ失効・節検索をhash化）は既存4証明書で同一判定のまま3〜11倍速い
+
+- → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): 削除で代入を失効させないと偽UNSATを受理する不具合と、その修正方針（reason単位の失効）

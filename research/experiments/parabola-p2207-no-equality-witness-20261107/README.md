@@ -63,6 +63,22 @@ K0097 は上界 `A(p) <= (p+3)/2` を証明し、5..2203 の全奇素数で等�
   変数あたり約 4.4 節でランダム 4-SAT のしきい値付近に入り、証人が存在する p=2503 でも 10 分以上未決。
   d 固定の CNF（密度約 29）の方が易しく、単一クエリ化は採用しない。
 
+## 形状 (c) の証明書パイプライン
+
+- `search_1104_shape_c.py <p> --write-cnf OUT.cnf`: 形状 (c) の CNF を書き出す（再生成可能）。
+- `certify_shape_c_unsat.py --p <p> --proof P.drat`: CNF を再生成して hash を突き合わせ、
+  `drat_check_incremental.cpp` で DRAT を検査し、receipt（CNF/proof/checker の hash）を書く。
+- `scan_shape_c_census.py --start 5 --end 401`: 小さい素数の形状 (c) 国勢調査（77/77 SAT）。
+- `drat_check_fast.cpp`: 検証器の高速版（K0780）。既存4証明書で旧版と同一判定のまま 3〜11 倍速い。
+  `validate_fast_checker.py` が4証明書の再検査と負の対照2件をまとめて実行する。
+
+```sh
+g++ -O2 -std=c++17 drat_check_fast.cpp -o drat_fast
+uv run --locked --with python-sat python search_1104_shape_c.py 3251 --write-cnf a3251_1626.cnf
+uv run --locked --with python-sat python certify_shape_c_unsat.py --p 3251 --proof a3251.drat
+uv run --locked python validate_fast_checker.py --checker ./drat_fast
+```
+
 ## 再現
 
 ```sh
@@ -76,6 +92,6 @@ uv run --locked --with python-sat python audit_all_d.py --p 2531 --workers 12   
 
 - p=2207 の DRAT 監査は標本 21/1103、p=2531 は 400 件超/1265 で継続中。残りはソルバ主張のまま。
 - 両素数とも「全 d UNSAT」は cadical の主張であり、全数証明が揃うまで status は `needs-review`。
-- `A(2531)`, `A(3251)` の正確な値は未確定（上界は h+1。形状 (c) が未決なので h+1 か h 以下かが残る。
-  `A(2207) = 1104 = h+1` は K0722 で確定済み）。
+- `A(2531)` の正確な値は未確定（上界は h+1。形状 (c) が未決なので h+1 か h 以下かが残る）。
+  `A(2207) = 1104 = h+1` は K0722 で確定済み。`A(3251) <= 1625` は K0775（証明書は作成中）。
 - 不達成素数の分布・特徴づけは K0101 の問いとして残る。

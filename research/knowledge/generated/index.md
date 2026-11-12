@@ -763,3 +763,4 @@
 | [K0777](../items/K0777-weight-two-d13-saturation-minimum.md) | 二値立方体重み2層の13次元最小極大配置は17石 | computation | computed | variants, geometry, maximal-safe |
 | [K0778](../items/K0778-width17-20-circle-point-bounds.md) | 幅17・18の円点数 P(17)=P(18)=16 確定・幅19・20 は P≤18 で候補点行集合を完全分類（並走 K0776 の P(w)≤2⌈w/2⌉ を独立に再現・P(19),P(20) は更に 18 へ鋭化） | proposition | proved | rectangles, geometry, variants |
 | [K0779](../items/K0779-c4-saturation-n-plus-four-bound.md) | C4飽和グラフはn>=13でn+4辺以上、重み2層の14次元最小値は18 | proposition | proved | variants, geometry, maximal-safe |
+| [K0780](../items/K0780-drat-checker-fast-reason-local-invalidation.md) | DRAT検査器の高速版（削除時はreasonのみ失効・節検索をhash化）は既存4証明書で同一判定のまま3〜11倍速い | method | active | verification, search-methods, maximum-safe |
