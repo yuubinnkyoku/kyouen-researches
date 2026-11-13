@@ -1018,3 +1018,96 @@ fresh engine per batch・native Node ~470k nodes/s・chunk cap 50M）で全走�
 
 - **WIN7-D10**: bit50（root `000000000200000038040000a0000000`, mob 50, 2,107,194 nodes）・
   bit77（`000000000200200038000000a0000000`, mob 58, 11,058,432 nodes）・
+  bit91（`000000000a00000038000000a0000000`, mob 46, 9,345,201 nodes）。全候補未cap完了。
+- **REFUTED-D10**: 残り64候補。per-candidate nodes値はコンパクションで喪失
+ （sweep record に喪失注記付きで正直に記録。判定自体は影響なし）。
+- kill分解: bit77 58初手全kill（420 chunks, 18,896,573 nodes）・
+  bit91 46初手全kill（425 chunks, 14,954,647 nodes）・
+  bit50 50初手全kill（kill 279 chunks, 3,717,922 nodes）。
+
+### 証明書3件の抽出・独立検証・push（全て PASS・push後読み戻し確認）
+
+| bit | root hex | rows | bytes | md5 | commit |
+|-----|----------|------|-------|-----|--------|
+| 50 | 000000000200000038040000a0000000 | 25,085 | 906,647 | 9c1233a2d90e6acf50415d8faab22228 | d1bdccf3 |
+| 77 | 000000000200200038000000a0000000 | 54,558 | 1,973,077 | 8feb168914ebc801f608418860c92c20 (fnv-1a 1601464846) | 8625f1c5 |
+| 91 | 000000000a00000038000000a0000000 | 37,305 | 1,347,285 | b28da716469d8ce01c42d9aad2bbd6f6 (fnv-1a 631694243) | c2da5401 |
+
+- 検証は repo の verify_bit7_win7_cert.ts（engine不使用・cache不使用・厳密Bareiss det4）で
+  sub-root 分解（58/46/50 sub-roots）全PASS・消費行集合と証明書行集合の双方向diff 0・
+  端末石数範囲 [13,17]・root検査 PASS（7石・4点共円なし・敵mobility一致）。
+- **covers**: bit50 = 7軌道（sweepしたchild #2 自身を含む）、3証明書のunion = 16 S6軌道。
+- bit77証明書（1.97MB）はpushツールの記録上限を超えるため pack-delta+base64 テンポラリchunk
+ （A/B）で転送し、fnv-1a・行数・バイト数検証のうえpush、chunkは削除コミットで除去
+ （bb184bea / 5804b8f6）。
+
+### 反映（1コミット1ファイル・push後読み戻し確認・並走はwidth69-84レーンでパス不整合なし）
+
+- d1bdccf3 / c2da5401 / 8625f1c5: 証明書3件（class4-batch2-certificates/）
+- 6ae43ff81e: sweep record `output/class4-batch2-child2-sweep.json`
+- a51bd38c8: 検証receipts `output/class4-batch2-certificates-verified.json`
+- 313bcb177: ledger（child2_sweep_session18・next更新）
+- 597c850d4: audit（session18_child2_sweep_certificates）
+- 本コミット: log 第18セッション
+
+### 解釈上の注意（変更なし）
+
+- WIN7証明書は「7石rootから深さ10以内の勝ち」の証明のみ。REFUTEDは「深さ10以内のWIN7の否定」のみ。
+- class 4・S2 {59,60}・二石root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 次回
+
+1. **frontier再計算**: audit_class_frontier.py の WIN7_VERIFIED に
+ `class4-batch2-certificates-verified.json` を加えて再実行（assertはローカル実行のみ無効化）。
+ 結果record・CSV 2件をpush。
+2. frontier更新後のCSV順で、目標S5の次の S6 child を sweep・証明書化。
+3. 11×11 空盤は UNKNOWN のまま。
+
+
+## 第18セッション続き（2026-11-14、長期レーン）: batch2 frontier再計算反映 — manifest解決S6軌道 657→665・レーン目標S5残り35→32軌道
+
+### frontier再計算（第18セッション next 1の実行）
+
+repo `scripts/audit_class_frontier.py` の WIN7_VERIFIED に
+`output/class4-batch2-certificates-verified.json`（bit50/bit77/bit91 の3root）を追加して再実行
+（assertはローカル実行のみ無効化、repoファイルは変更なし。入力はmainの公開CSV/gz/JSON 14件）。
+
+- **covers**: 3証明書のunion = 16 S6軌道（全てbatch1ベースラインに対しmarginal）、
+  うちmanifest内の新規解決は **8件**。per-cert: bit50=7（manifest 4）/ bit77=7（4）/ bit91=4（2）。
+- **frontier確定値**: solved&manifest S6 657→**665**、unique remaining S6 7,189→**7,181**、
+  残コスト 564,070→**563,509**、open class必要S6 5,406→**5,398**（423,516）。
+- **class-4レーン目標S5 `00000000020000003800000080000000`: 35→32 S6軌道（コスト2,756→2,530）**。
+  sweep済みchild #2（コスト67）は認証済み7石目子孫経由でsolved扱い。
+  次の最安 S6 child = `00000000020000003802000080000000`（コスト68）。
+- class-2最良blocker `00000000000000003802000008000000`（32軌道・2,206）は
+  軌道数でレーン目標と同数になり、コストは下回る（レーン選択時に再考査する価値あり）。
+
+### 反映（1コミット1ファイル・push後読み戻しmd5確認）
+
+- c4cac26c50: frontier record `output/class4-batch2-frontier-update-20261114.json`
+  （1件typo: manifest hexの"0000"連続脱落 → 修正push dacd57cb6d）
+- 511a7577ca: `output/class-frontier-s5-ranking-after-batch2.csv`
+  （読み戻しmd5 593aaa7f9cd94aed18e836fe853e145c 一致）
+- ae2a6161ef: `output/class-frontier-top-candidates-s6-after-batch2.csv`
+  （読み戻しmd5 148491e0609fe999370dd3f97b692575 一致）
+- 1423786e: ledger（frontier_session18b・next更新）—
+  **push事故**: read_fileの返却オブジェクト（wrapper）をそのまま本文として書き込んでしまった。
+  読み戻しmd5不一致で即検出し、**dc5f9c27** で正本（md5 18a8fc26e6868da8efee8d5b6e0c880e）を
+  再pushして復旧、コミットblobとの一致を確認。事故と復旧はauditにも記録。
+- be88fbfef: audit（session18b_frontier_update・ledger事故記録込み）
+- 本コミット: log追記
+
+### 解釈上の注意（変更なし）
+
+- 今回は**bookkeepingのみ**（公開receiptsに基づく再計算）。新規探索判定なし。
+- WIN7証明書は「7石rootから深さ10以内の勝ち」の証明のみ。
+- class 4・S2 {59,60}・二石root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 次回
+
+1. **class-4レーン継続**: 目標S5の次の S6 child `00000000020000003802000080000000`（コスト68）の
+   7石目sweep（候補列挙＋pilot d6=5,949制御から。native Node chunk法）。
+2. class-2最良blocker（32軌道・2,206）へのレーン切り替え候補としてfrontier記録を参照。
+3. 11×11 空盤は UNKNOWN のまま。
