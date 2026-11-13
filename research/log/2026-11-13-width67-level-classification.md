@@ -1,4 +1,4 @@
-successfully downloaded text file (SHA: fecb68844b9760fbf369d5b96e8c4ca86b1649f5)# 2026-11-13 高速レーン: w=67 キャンペーン開始（K0799 P(66)=32 の直接続編）
+successfully downloaded text file (SHA: 33e7c176f6ca46bfc37d728c9d472ae17300d8af)successfully downloaded text file (SHA: fecb68844b9760fbf369d5b96e8c4ca86b1649f5)# 2026-11-13 高速レーン: w=67 キャンペーン開始（K0799 P(66)=32 の直接続編）
 
 K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 決定に必要な
 前提は level 17 全滅掃引のみ（下界は 2210 円 32 点・v-span 94 ≤ 132）。
@@ -79,5 +79,29 @@ K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 
    （cap 2.4M/chunk・1実行1チャンク・第一 heavy band 継続中・~999 まで）。
 2. 完走時は K0800（P(67)=32）に昇格・results/fixed-width/ 追従。
 3. 次の空き K 番号: **K0800**。
+
+11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
+## 第4セッション（chunks 12-17・第一 heavy band 減衰開始）
+
+1. **chunks 12-17**: mask 887..986 を 6 チャンク（各 2.4M nodes cap）で完了。
+   chunk12: 887→898（~218k/mask）・chunk13: 898→914（~150k）・
+   chunk14: 914→928（~171k）・chunk15: 928→945（~141k）・
+   chunk16: 945→970（**~96k・減衰**）・chunk17: 970→987（~141k・再上昇）。
+   **累計 45.6M nodes・987/3,300 = 29.9%・leaves=0・生残0・phase2 必要 mask 0件。**
+2. **第一 heavy band は後半で減衰し始めた**（chunk16 は 25 mask/2.4M = ~96k/mask）。
+   w=65/66 の ~1000 dip 構造と整合し、第一帯終点 ~999..1310 の観測的予測を維持。
+   総計推定は ~75..95M nodes（複数セッション必須）。
+3. **K番号再採番**: 完走時の昇格先は **K0801**（K0800 は 2026-11-13 11:34 に
+   joint g0 会計（w≤114・別レーン）が使用済み）。progress JSON の semantics を訂正済み。
+4. 反映: progress JSON 更新（481c0734・resume_from=987・読み戻し検証済み）・
+   script CFG.from=987（320bc4db）・本log。反映前 HEAD 8526387f 再取得（並走なし）。
+
+## レジューム（次回の実行）
+
+1. **w=67 キャンペーン継続**: CFG.from=987・resume_from=lastDone を厳守
+   （cap 2.4M/chunk・1実行1〜2チャンク・第一 heavy band 減衰帯・dip 到達か注視）。
+2. 完走時は K0801（P(67)=32）に昇格・results/fixed-width/ 追従
+   （pw_circle_point_max.csv・mwq_stabilization.csv・README）。
+3. 次の空き K 番号: **K0801**。
 
 11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
