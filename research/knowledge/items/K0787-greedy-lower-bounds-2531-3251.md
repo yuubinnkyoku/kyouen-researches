@@ -1,6 +1,6 @@
 ---
 id: K0787
-title: 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1260点以上、Q_3251は1611点以上の安全集合を持つ（独立整数幾何監査済み）
+title: 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1261点以上、Q_3251は1611点以上の安全集合を持つ（独立整数幾何監査済み）
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -14,7 +14,7 @@ relations:
   note: 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 - type: supports
   target: K0781
-  note: A(2531)<=1265 と合わせて 1260 <= A(2531) <= 1265
+  note: A(2531)<=1265 と合わせて 1261 <= A(2531) <= 1265（残り 4）
 - type: supports
   target: K0775
   note: A(3251)<=1625 と合わせて 1611 <= A(3251) <= 1625
@@ -31,6 +31,9 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251.json
   role: certificate
   note: 1598点（形状(1,1,29)、辺0件）。点は(t,t² mod 3251)
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_1261.json
+  role: certificate
+  note: 1261点（形状(1,1,6)、辺0件）。温暖開始SATの反復による最新形
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_2531_1260.json
   role: certificate
   note: 1260点（辺0件）。温暖開始SATの反復による最新形
@@ -71,7 +74,7 @@ artifacts:
   role: log
   note: 手法・較正（2207/2647）・限界
 scope: p=2531 と p=3251 の二点集合。下界のみで、A(p) の正確な値は主張しない。
-evidence: 4素数で同じ構成器を走らせ、2207は1085（既知の最大1104の98.2%）、2647は1292（既知の下界1303の99.2%）と較正した上で、2531は1246・3251は1598（その後、温暖開始SATの反復で1260・1611へ）。両方とも辺0件かつ独立検証器が受理（verifier_rc=0）。
+evidence: 4素数で同じ構成器を走らせ、2207は1085（既知の最大1104の98.2%）、2647は1292（既知の下界1303の99.2%）と較正した上で、2531は1246・3251は1598（その後、温暖開始SATの反復で1261・1611へ）。両方とも辺0件かつ独立検証器が受理（verifier_rc=0）。
 ---
 
 ## 主張
