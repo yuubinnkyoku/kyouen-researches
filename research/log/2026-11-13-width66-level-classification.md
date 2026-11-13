@@ -31,3 +31,32 @@ K0798 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(66) 
 3. 次の空き K 番号: **K0799**。
 
 11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
+
+## 第2セッション（chunks 3-8・gap mask 修正）
+
+1. **off-by-one 発見・修正**: 機械の lastDone = (完了した最大 mask index)+1 なので
+   resume_from は lastDone をそのまま使うのが正しい。第1-2セッションの
+   resume_from=489 は lastDone=488 に +1 しており **mask 488 を飛ばしていた**。
+   classifyOne（単一 mask 完走機）で mask 488 を個別完走（leaves=0・20,582 nodes）。
+   制御: mask 200 再実行で chunk1 と整合（16,661 nodes・leaves=0）。
+2. **chunks 3-8**: mask 489..888 を 6 チャンク（各 2.4M nodes cap）で完了。
+   chunk3: 489→773（軽い帯 ~8.5k/mask・heavy band は ~772 から開始・w=65 とほぼ同位置）、
+   chunk4: 774→794（~114k/mask）・chunk5: 795→820（~92k）・chunk6: 821→847（~89k）・
+   chunk7: 847→874（~86k）・chunk8: 874→889（~150k）。
+   **累計 19.6M nodes・leaves=0・生残0・フェーズ2必要 mask 0件。**
+3. **chunk 境界の未走査 mask（773/794/820）も classifyOne で個別証明**
+   （217,690 / 168,089 / 12,955 nodes・全て leaves=0）。
+   → **mask 0..888 は隣接漏れなしに完全走査済み**（889/3,300 = 26.9%）。
+4. **heavy band 開始位置は w=65（~772）とほぼ同じ**。1実行1チャンクが安定
+   （2チャンクは sandbox の process safety deadline 超過・軽い帯の chunk3 は除く）。
+5. 反映: progress JSON（resumeConvention・gapCertifications 追加）・script CFG.from=889
+   （c2062833・3f5fd797・読み戻し検証済み・並走なし〔反映前に HEAD a50f183 を再取得〕）。
+
+## レジューム（次回の実行）
+
+1. **w=66 キャンペーン継続**: CFG.from=889 から（resume_from=lastDone を厳守）。
+   heavy band 継続中・1実行1チャンク（2.4M cap）。
+2. 完走時は K0799（P(66)=32）に昇格・results/fixed-width/ 追従。
+3. 次の空き K 番号: **K0799**。
+
+11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
