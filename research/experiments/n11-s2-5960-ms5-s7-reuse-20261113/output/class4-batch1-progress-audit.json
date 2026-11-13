@@ -170,9 +170,13 @@
       }
     },
     "probe_150k_session3": {
-      "policy": "cheap first-pass probes at 150k nodes per candidate to triage untried candidates (a WIN7 candidate may complete far below 950k; fails and deep wins cap)",
+      "policy": "cheap first-pass probes at 150k nodes per candidate to triage untried candidates (a WIN7 candidate may complete far below 950k; fails and deep wins cap). Fresh memo per candidate; fbt cache shared within a run.",
       "results": {
         "6": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "11": {
           "nodes": 150001,
           "capped": true
         },
@@ -180,11 +184,57 @@
           "nodes": 150001,
           "capped": true
         },
+        "28": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "37": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "42": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "43": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "45": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "70": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "75": {
+          "nodes": 150001,
+          "capped": true
+        },
         "77": {
           "nodes": 150001,
           "capped": true
         },
+        "78": {
+          "nodes": 149998,
+          "capped": true,
+          "note": "cut by run total budget"
+        },
+        "82": {
+          "nodes": 150001,
+          "capped": true
+        },
         "83": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "84": {
+          "nodes": 49995,
+          "capped": true,
+          "note": "probe cut short by the run total budget"
+        },
+        "93": {
           "nodes": 150001,
           "capped": true
         },
@@ -195,31 +245,29 @@
         "103": {
           "nodes": 49995,
           "capped": true,
-          "note": "probe cut short by the 950k total budget of the run; inconclusive even as a probe"
+          "note": "probe cut short by the 950k total budget of the run"
         },
         "108": {
           "nodes": 150001,
           "capped": true
+        },
+        "113": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "114": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "118": {
+          "nodes": 149998,
+          "capped": true,
+          "note": "cut by run total budget (149,997)"
         }
       },
-      "interpretation": "all probed candidates exceeded 150k nodes; no verdicts. mob-51..52 band is also non-cheap. capped probes prove nothing either way"
+      "interpretation": "all 22 probed candidates exceeded 150k nodes; no verdicts. The whole mob 50-61 band is heavier than 150k; 150k probes have exhausted their informational value — remaining candidates need full ~950k runs. capped probes prove nothing either way"
     },
     "not_yet_searched": [
-      "43",
-      "75",
-      "82",
-      "11",
-      "37",
-      "70",
-      "84",
-      "93",
-      "113",
-      "114",
-      "118",
-      "28",
-      "42",
-      "45",
-      "78",
       "3",
       "34",
       "54",
@@ -283,12 +331,12 @@
       ],
       "conclusion": "completing mob-50 candidates needs either a bigger-memory runner (external compute lane), a fundamentally smaller proof (certificate-chunked per-universal-child facts), or a better search. Do not retry naive cross-run memo persistence in the sandbox"
     },
-    "cheap_probe_strategy": "first-pass 150k probes triage untried candidates cheaply; all 7 probed candidates (83,108,6,18,77,94,103) capped, so the whole mob>=50 band is heavy; probes continue for the remaining 46 untried candidates (43,75,82,11,37,70,...) at 150-250k each"
+    "cheap_probe_strategy": "first-pass 150k probes triaged 22 untried candidates; all capped. 150k probes are now exhausted as an information source; the 32 unprobed candidates (3,34,54,88,102,15,50,86,90,92,105,116,21,36,4,38,67,109,112,117,8,10,76,33,66,104,106,110,0,44,120,2) each need a full ~950k run"
   },
   "interpretation_guard": [
     "d=10 fail means no winner win within 10 ply; it does NOT refute the candidate (deeper wins possible)",
     "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN",
     "capped runs (7, 25, 32, 40, 80, 87 and all 150k probes) prove nothing either way"
   ],
-  "next": "continue 150-250k probes across the 46 untried candidates (cheap triage, win candidates may complete well below 950k); heavy-pending {7,25,32,40,80,87} needs external compute or certificate-chunked decomposition; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
+  "next": "32 unprobed candidates remain (mob 56-63 band: 3,34,54,88,102,15,50,86,90,92,105,116,21,36,4,38,67,109,112,117,8,10,76,33,66,104,106,110,0,44,120,2); run full ~950k passes on them one per run (skip 150k probes — no longer informative); heavy-pending {7,25,32,40,80,87} needs external compute or certificate-chunked decomposition; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
 }
