@@ -406,7 +406,7 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) bit=25 certificate rebuild with scripts/class4_child1_cert_extractor.ts (kill-first using this kill table), verify with scripts/verify_bit7_win7_cert.ts --root 00000000020000003800000082080000, push cert + record",
+    "1) DONE (session 9): bit=25 certificate rebuild + verification + push (cert commit 0b835029, record 5a9ec762)",
     "2) continue chunk campaigns for heavy-pending {32,40,80,87,34} and unprobed candidates; WIN discovery => same certificate protocol",
     "3) keep the d8-witness != d10-witness lesson and the UNKNOWN guards"
   ],
@@ -604,6 +604,16 @@
       17
     ],
     "orientation": "root mover = loser side; winner = the 7th-stone player (winner_parity=1); verdict = win forced within 10 plies against every defense",
-    "status": "certificate rebuild + independent verification pending (same protocol as bit7: extractor -> 50 sub-root decomposition verification -> union equality -> push)"
+    "status": "certificate extracted, independently verified and pushed (session 9): see output/class4-batch1-bit25-certificate.json; 37,854 rows, ALL 50 sub-root decomposition PASS, union equality exact, root checks PASS",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_00000000020000003800000082080000.cert",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "rows": 37854,
+      "bytes": 1363951,
+      "md5": "66c35945925c8c8286d58f745cc22507",
+      "extraction_nodes_total": 4475425,
+      "extraction_batches": "b1 357,373 / b2 496,080 / b3 555,389 / b4 480,926 / b5 457,485 / b6 563,911 / b7 719,805 / b8 348,057 / b9 496,399; per-run files + sort -u merge",
+      "verification": "verify_bit7_win7_cert.ts --root 00000000020000003800000082080000; 50 sub-root decomposition ALL PASS; consumed union = 37,854 = row set exactly; terminals 13,161 in [13,17]; root checks PASS (7 stones, no 4 cocircular, loser mobility 50)"
+    }
   }
 }
