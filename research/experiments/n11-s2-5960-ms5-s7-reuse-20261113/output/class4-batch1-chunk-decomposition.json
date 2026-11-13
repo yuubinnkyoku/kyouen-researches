@@ -406,9 +406,9 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) chunk campaign for heavy-pending {34} (mob 56, first of the mob-56 band) then unprobed candidates; same protocol (chunk depth 8, replies at root+m); persist per-chunk node logs in the state file as done for bit80",
+    "1) chunk campaigns for the unprobed candidates (see progress audit not_yet_searched; mob 56-63 band starts at 13.67M nodes/candidate for bit34-class roots — per-candidate budget estimation mandatory; persist per-chunk node logs)",
     "2) on WIN7 discovery: kill-first extraction -> 50-sub-root decomposition verification -> union equality -> one commit per file",
-    "3) external compute via scripts/class4_child1_runner.ts at cap 5M-50M if available"
+    "3) external compute via scripts/class4_child1_runner.ts if available"
   ],
   "bit25": {
     "candidate": "bit=25 (mob 50), heavy-pending since session 2 (v15 monolithic d10 capped at 950k x3 incl. close-first AND; v14 capped 700k). Second WIN7 candidate found by the chunk campaign.",
@@ -945,5 +945,106 @@
     "record": "output/class4-batch1-bit87-campaign.json",
     "resume": "state file /home/user/b87/state.json (kill table + done replies); replies enumerated at root+m so r!=m holds structurally",
     "cost_note": "6.18M v15 nodes, same band as bit80 (6.01M) despite mob 49; refutation cost spread across heavy-pending now bit85 1.70M / bit40 3.10M / bit80 6.01M / bit87 6.18M / bit32 15.88M"
+  },
+  "bit34": {
+    "status": "DONE - REFUTED within depth 10 (session 14)",
+    "root_hex": "00000000020000003800000088080000",
+    "mob": 56,
+    "verdict": "REFUTED-D10: lossAt(root,10)=false via witness m=45; all 42 winner replies at root+45 uncapped pass chunks (loss=false); kill table 21 entries (all r!=m); 34 first moves unexamined (not needed)",
+    "witness": {
+      "m": 45,
+      "replies": 42
+    },
+    "kill_table": {
+      "0": 40,
+      "2": 88,
+      "3": 40,
+      "4": 38,
+      "6": 81,
+      "7": 83,
+      "8": 50,
+      "10": 37,
+      "11": 3,
+      "15": 80,
+      "18": 25,
+      "21": 32,
+      "25": 50,
+      "28": 80,
+      "32": 21,
+      "33": 7,
+      "36": 8,
+      "37": 32,
+      "38": 25,
+      "40": 84,
+      "44": 104
+    },
+    "totals": {
+      "nodes": 13672100,
+      "runs": 15,
+      "batch_nodes": [
+        2037327,
+        3026361,
+        1634557,
+        300001,
+        300001,
+        300001,
+        300001,
+        300001,
+        300001,
+        300001,
+        300001,
+        300001,
+        300001,
+        341994,
+        3631851
+      ],
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 341994,
+      "chunks_total": 258,
+      "kill_chunks": 21,
+      "pass_chunks": 237,
+      "kill_nodes_sum": 1472847,
+      "pass_nodes_sum": 8899242,
+      "wasted_capped_retry_nodes": 3000010
+    },
+    "protocol_note": "per-chunk node log persisted (session 13 lesson); chunk (36,8) capped at 300k in 10 fresh batch runs (3.0M wasted nodes on identical capped attempts) then solved standalone at cap 20M (341,994 nodes, kill); batch chunk cap then raised to 1M (no later chunk exceeded 300k); native Node.js execution, replies at root+m so r!=m structurally",
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes (PASS)",
+      "witness_coverage": "root+45 has 42 legal winner replies; done-set has exactly 42 entries, all loss=false, all uncapped, set-equality verified",
+      "determinism_fresh_resolves": {
+        "(36,8)": {
+          "loss": true,
+          "nodes": 341994
+        },
+        "(0,40)": {
+          "loss": true,
+          "nodes": 81839
+        },
+        "(11,3)": {
+          "loss": true,
+          "nodes": 42463
+        },
+        "(44,104)": {
+          "loss": true,
+          "nodes": 75723
+        },
+        "(45,48)": {
+          "loss": false,
+          "nodes": 7528
+        },
+        "(45,50)": {
+          "loss": false,
+          "nodes": 25984
+        },
+        "(45,36)": {
+          "loss": false,
+          "nodes": 50890
+        },
+        "note": "all seven fresh re-solves identical to the persisted per-chunk records (recorded-count matching available: per-chunk logs persisted this time)"
+      }
+    },
+    "record": "output/class4-batch1-bit34-campaign.json",
+    "resume": "state file /home/user/b34/state.json (kill table + done replies + per-chunk log); engine verbatim from repo scripts",
+    "cost_note": "13.67M v15 nodes for the mob-56 band opener; heavy-band cost spread now bit85 1.70M / bit40 3.10M / bit80 6.01M / bit87 6.18M / bit34 13.67M / bit32 15.88M; heavy-pending is now EMPTY"
   }
 }
