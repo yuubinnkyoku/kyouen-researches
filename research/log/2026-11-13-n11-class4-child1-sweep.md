@@ -769,3 +769,72 @@ bit87 の state 初期化は第12セッション log 記載後に実際に実施
 2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
  （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
 3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
+
+## 第14セッション（2026-11-14、長期レーン）: bit34 chunkキャンペーン — 5件目のREFUTED（witness m=45・13.67M nodes・15実行）・heavy-pending全消化・repo反映
+
+### レジューム実行（第13セッション next 1）
+
+heavy-pending 最後の候補 bit=34（mob 56・mob-56帯最初。150kプローブ（第3セッション）と
+v15単体d10 950k（第5セッション）でいずれもcapped・判定なし）をchunk分解で消化した。
+chunk深さ8・応手列挙はroot+m合法手から（r===m構造的に不可能）・
+**per-chunk node logをstate fileに永続化**（第13セッションのプロトコル改善を適用）。
+実行はnative Node.js（sandbox 16MiB/60s制限なし・~530k nodes/s・実行毎fresh engine）。
+
+### 結果: bit34 は depth 10 で REFUTED（5件目のchunk反証・heavy-pending全消化）
+
+- **witness m=45**: winner 応手 42 個すべての chunk が未capで loss=false →
+  lossAt(root,10)=false。root hex 00000000020000003800000088080000
+ （S6 child + bit34・7石・loser to move）。witnessは22番目の検討初手で発見。
+- 総 **13,672,100 nodes / 15実行**・capped chunk 0（記録上）・単一chunk最大 341,994・
+  chunk計258（kill 21 / pass 237・witness 42応手計 1,946,019 nodes）。
+  kill 表 21件 {0:40, 2:88, 3:40, 4:38, 6:81, 7:83, 8:50, 10:37, 11:3, 15:80, 18:25,
+  21:32, 25:50, 28:80, 32:21, 33:7, 36:8, 37:32, 38:25, 40:84, 44:104}（全てr≠m）。
+  残り34初手は未走査のまま打ち切り（verdictに不要・記録済み）。
+- **heavy-pending は空になった**: {7→WIN7証明書, 25→WIN7証明書, 32/40/80/87/34→REFUTED}。
+  S6 child #1 の7石目sweepはWIN7証明書2件・chunk反証6件・v14 standing反証5件で、
+  残りは未走査候補（progress audit 参照）。
+- **heavy帯コスト分布の更新**: bit85 1.70M / bit40 3.10M / bit80 6.01M / bit87 6.18M /
+  bit34 13.67M / bit32 15.88M — mob-56帯の入口は13.67Mで、per-candidate見積り必須。
+
+### 運用上の実験事実（記録）
+
+chunk (36,8) は300k batch capで10連続のfresh batch実行すべてcap超過
+ （各300,001 nodes・実行間memo非永続のため同一cap試行の純浪費 3,000,010 nodes）。
+単体fresh実行（cap 20M）では **341,994 nodesで完走・loss=true（kill）** だった。
+capを20Mに上げるだけで解決し深さ梯子の再帰は不要だった。
+**教訓: batch cap retryはmemo永続がない限り純浪費。cap超過chunkは単体で大cap再実行する。**
+(36,8) kill記録後にbatch chunk capを1Mに引き上げたが、以後300k超のchunkは発生していない。
+
+### 検証（全て PASS）
+
+- pilot d6 制御 5,949（公表v15制御と完全一致）。
+- **witness完全被覆**: root+45 の合法応手42個と done 表が集合として完全一致
+ （プログラム検証・欠落0・全loss=false・全未cap）。
+- **決定制御**: fresh再解7件が永続化済みper-chunk記録とnode数・判定・terminal範囲まで
+  完全一致（kill (36,8)=341,994・(0,40)=81,839・(11,3)=42,463・(44,104)=75,723・
+  witness pass (45,48)=7,528・(45,50)=25,984・(45,36)=50,890）。
+  per-chunk log永続化により第13セッションで不可だった記録値照合が今回可能
+ （プロトコル改善の実効性を実証）。
+- root mob 56 直接列挙で再確認（56初手・21 kill + witness 1 = 22検討・34未走査）。
+
+### 解釈上の注意（変更なし）
+
+- bit34 の REFUTED は「深さ10以内のWIN7の否定」のみ（より深い勝ちはあり得る）。
+  class 4・S2 {59,60}・二石 root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 反映（全て push 後読み戻し確認・1コミット1ファイル・並走なし）
+
+- campaign record output/class4-batch1-bit34-campaign.json
+- ledger JSON（bit34 エントリ追記・next更新: heavy-pending空・未走査候補へ）
+- audit JSON session14_bit34_chunk_campaign 追記（pending_incomplete 34 完了化）
+- 本コミット: log 第14セッション
+
+### 次回
+
+1. 未走査候補（54, 88, 102, ...・mob 56-63帯）の chunk キャンペーン
+ （同一プロトコル・per-chunk log永続化・per-candidate予算見積り必須・
+  cap超過chunkは単体大cap再実行）。
+2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
+ （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
+3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
