@@ -13272,6 +13272,12 @@
 ## [research/experiments/width66-level-classification-20261113/scripts/width66_level_classify.ts](../../../research/experiments/width66-level-classification-20261113/scripts/width66_level_classify.ts)
 
 - [K0799](../items/K0799-width66-pw32-plateau-completion.md) (verifier): w=66用REST6 2フェーズstreaming分類機（決定的・依存なし・完走済みCFG.from=3300）
+## [research/experiments/width67-level-classification-20261113/output/width67_progress.json](../../../research/experiments/width67-level-classification-20261113/output/width67_progress.json)
+
+- [K0801](../items/K0801-width67-pw32-plateau-completion.md) (data): 全31チャンクの機械出力（完走状態・ノード会計・heavy bandコスト曲線）
+## [research/experiments/width67-level-classification-20261113/scripts/width67_level_classify.ts](../../../research/experiments/width67-level-classification-20261113/scripts/width67_level_classify.ts)
+
+- [K0801](../items/K0801-width67-pw32-plateau-completion.md) (verifier): w=67用REST6 2フェーズstreaming分類機（決定的・依存なし・完走済みCFG.from=3300）
 ## [research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json](../../../research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json)
 
 - [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) (data): 全制御の実行結果
@@ -13655,6 +13661,9 @@
 ## [research/log/2026-11-13-width66-level-classification.md](../../../research/log/2026-11-13-width66-level-classification.md)
 
 - [K0799](../items/K0799-width66-pw32-plateau-completion.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-width67-level-classification.md](../../../research/log/2026-11-13-width67-level-classification.md)
+
+- [K0801](../items/K0801-width67-pw32-plateau-completion.md) (log): 判断・教訓・レジューム
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

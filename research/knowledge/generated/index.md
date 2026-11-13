@@ -784,3 +784,4 @@
 | [K0798](../items/K0798-width65-pw32-plateau-completion.md) | 幅65の円点数の完全決定 P(65)=32 — 32点プラトーがw=49..65に拡大・P(w)は全幅6..65で決定済み・level 17の復活点は(65,83]・REST6 2フェーズ機の完走検証 | proposition | proved | rectangles, geometry, variants |
 | [K0799](../items/K0799-width66-pw32-plateau-completion.md) | 幅66の円点数の完全決定 P(66)=32 — 32点プラトーがw=49..66に拡大・P(w)は全幅6..66で決定済み・level 17の復活点は(66,83]・w=66キャンペーン完走（REST6 2フェーズ・23チャンク・54.8M nodes） | proposition | proved | rectangles, geometry, variants |
 | [K0800](../items/K0800-joint-g0-accounting-w114.md) | convention B g0会計の合同フロンティアはjoint合同証明書でw≤114に延伸 — K0797のg3壁(size29)は単一法解析のアーティファクト — p-チェーン補題で33法は34個の最大素数冪に無損失簡約 | proposition | proved | rectangles, geometry, variants |
+| [K0801](../items/K0801-width67-pw32-plateau-completion.md) | 幅67の円点数の完全決定 P(67)=32 — 32点プラトーがw=49..67に拡大・P(w)は全幅6..67で決定済み・level 17の復活点は(67,83]・w=67キャンペーン完走（REST6 2フェーズ・31チャンク・78.3M nodes） | proposition | proved | rectangles, geometry, variants |

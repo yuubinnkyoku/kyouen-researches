@@ -4633,6 +4633,7 @@
 - ← supports [K0798](../items/K0798-width65-pw32-plateau-completion.md): level 17復活点を (59,83] から (65,83] に狭窄
 - ← supports [K0799](../items/K0799-width66-pw32-plateau-completion.md): level 17復活点を (65,83] から (66,83] に狭窄
 - ← supports [K0800](../items/K0800-joint-g0-accounting-w114.md): 会計上の正当化範囲がw≤114に拡大（level 17復活点下界83を超えてカバー・P(w)実務上の寄与はw≤82）
+- ← supports [K0801](../items/K0801-width67-pw32-plateau-completion.md): level 17復活点を (66,83] から (67,83] に狭窄
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4681,6 +4682,7 @@
 - ← depends_on [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): 分類機・mod 9×11 maximal mask 候補生成・×1.36 成長則（本項目で×1.27..1.31 への漸減を観測）
 - ← depends_on [K0798](../items/K0798-width65-pw32-plateau-completion.md): streaming分類機・意味論・2210 witness
 - ← depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): streaming分類機・意味論・2210 witness
+- ← depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): streaming分類機・意味論・2210 witness
 
 ## [K0791](../items/K0791-circle-34pt-witness-verified.md) 11050円（奇奇実現）witnessの完全検証と34点帯のwitness掃引 — K0785下界の独立確認・K0790注記の訂正（level 17復活点(55,83]は維持）・R′≤10⁸で34点の最小幅はちょうど83
 
@@ -4734,6 +4736,7 @@
 - ← depends_on [K0798](../items/K0798-width65-pw32-plateau-completion.md): g0会計のw=65有効性（拡張法33法・g4形classMax=5）・非標準形前提の正当化
 - ← depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): g0会計のw=66有効性（拡張法33法・g4形classMax=5・w≦84）・非標準形前提の正当化
 - ← depends_on [K0800](../items/K0800-joint-g0-accounting-w114.md): K0797レジューム(2)「g3 size≥29を切る非合同式手法」への回答。単一法フロンティアw≤84をjoint合同証明書でw≤114に延伸し「合同式以外の手法が必要」限界記述を訂正
+- ← depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): g0会計のw=67有効性（拡張法33法・w≦84）・非標準形前提の正当化
 
 ## [K0798](../items/K0798-width65-pw32-plateau-completion.md) 幅65の円点数の完全決定 P(65)=32 — 32点プラトーがw=49..65に拡大・P(w)は全幅6..65で決定済み・level 17の復活点は(65,83]・REST6 2フェーズ機の完走検証
 
@@ -4749,9 +4752,17 @@
 - → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=66有効性（拡張法33法・g4形classMax=5・w≦84）・非標準形前提の正当化
 - → depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming分類機・意味論・2210 witness
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (65,83] から (66,83] に狭窄
+- ← depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): w=66完走機・REST6 2フェーズ方式の直接拡張。32プラトーを w=66 から w=67 へ延長
 
 ## [K0800](../items/K0800-joint-g0-accounting-w114.md) convention B g0会計の合同フロンティアはjoint合同証明書でw≤114に延伸 — K0797のg3壁(size29)は単一法解析のアーティファクト — p-チェーン補題で33法は34個の最大素数冪に無損失簡約
 
 - → depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): convention B g0会計（classMax・u奇制限・類変数t）の定式化をそのまま使用
 - → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): K0797レジューム(2)「g3 size≥29を切る非合同式手法」への回答。単一法フロンティアw≤84をjoint合同証明書でw≤114に延伸し「合同式以外の手法が必要」限界記述を訂正
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 会計上の正当化範囲がw≤114に拡大（level 17復活点下界83を超えてカバー・P(w)実務上の寄与はw≤82）
+
+## [K0801](../items/K0801-width67-pw32-plateau-completion.md) 幅67の円点数の完全決定 P(67)=32 — 32点プラトーがw=49..67に拡大・P(w)は全幅6..67で決定済み・level 17の復活点は(67,83]・w=67キャンペーン完走（REST6 2フェーズ・31チャンク・78.3M nodes）
+
+- → depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): w=66完走機・REST6 2フェーズ方式の直接拡張。32プラトーを w=66 から w=67 へ延長
+- → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=67有効性（拡張法33法・w≦84）・非標準形前提の正当化
+- → depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming分類機・意味論・2210 witness
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (66,83] から (67,83] に狭窄
