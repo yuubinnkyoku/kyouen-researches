@@ -10,7 +10,7 @@ evidence: "数学的証明（有限計算からの全称昇格）。骨子: (1) 
 solution:
   board: level 17 標準形掃引 harness（mod 9×11・(a,u) 全列挙窓マスク）
   level: strong
-  outcome: unconditional
+  outcome: conditional
   classification: [all-safe-grundy]
   coverage: 全幅 w≧99（掃引 mask 構造に関する全称・上限なし）
   conditions: L=17・mod 9×11 窓マスク生成・連続整数行
@@ -36,7 +36,7 @@ artifacts:
   role: data
   note: 検査結果・サンプル幅・広幅プローブの機械出力（maximal 全幅 3,300・w=396 unique 会計一致）
 - path: research/experiments/maximal-mask-plateau-universal-20261113/report.md
-  role: report
+  role: proof
   note: 定理・証明・制御・限定の本文（全 w≧99 拡張版）
 - path: research/log/2026-11-13-maximal-mask-plateau-universal.md
   role: log

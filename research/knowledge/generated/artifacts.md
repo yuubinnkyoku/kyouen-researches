@@ -3471,6 +3471,15 @@
 ## [research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/verify.py](../../../research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/verify.py)
 
 - [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) (verifier): 別グラフ再帰とsubset、具体的同一盤からの直接合法手再帰で全指標を照合
+## [research/experiments/maximal-mask-plateau-universal-20261113/output/plateau_universal_output.json](../../../research/experiments/maximal-mask-plateau-universal-20261113/output/plateau_universal_output.json)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (data): 検査結果・サンプル幅・広幅プローブの機械出力（maximal 全幅 3,300・w=396 unique 会計一致）
+## [research/experiments/maximal-mask-plateau-universal-20261113/report.md](../../../research/experiments/maximal-mask-plateau-universal-20261113/report.md)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (proof): 定理・証明・制御・限定の本文（全 w≧99 拡張版）
+## [research/experiments/maximal-mask-plateau-universal-20261113/scripts/maximal_mask_plateau_universal.ts](../../../research/experiments/maximal-mask-plateau-universal-20261113/scripts/maximal_mask_plateau_universal.ts)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (verifier): 周期性・CRT・popcount ギャップ・支配補題の機械検査 + sampled/広幅の exhaustive 再現 + 境界プローブ
 ## [research/experiments/maximal-terminal-gap-all-r-20261101/proof.md](../../../research/experiments/maximal-terminal-gap-all-r-20261101/proof.md)
 
 - [K0596](../items/K0596-maximum-terminal-gaps-all-r.md) (proof): 任意rの極小横断集合の証明と任意qの整数平面上界達成構成
@@ -13640,6 +13649,9 @@
 ## [research/log/2026-11-13-joint-g0-accounting.md](../../../research/log/2026-11-13-joint-g0-accounting.md)
 
 - [K0800](../items/K0800-joint-g0-accounting-w114.md) (log): 実行記録・教訓（1<<32 wraparoundバグ・LAWS→MODS coprime切替）・レジューム
+## [research/log/2026-11-13-maximal-mask-plateau-universal.md](../../../research/log/2026-11-13-maximal-mask-plateau-universal.md)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (log): 判断・経緯・レジューム
 ## [research/log/2026-11-13-n11-ms5-reproducer-source-audit.md](../../../research/log/2026-11-13-n11-ms5-reproducer-source-audit.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (log): 再導出プログラムの実行本体が欠けることの監査
