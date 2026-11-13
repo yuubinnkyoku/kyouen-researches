@@ -52,6 +52,17 @@ K0798 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(66) 
 5. 反映: progress JSON（resumeConvention・gapCertifications 追加）・script CFG.from=889
    （c2062833・3f5fd797・読み戻し検証済み・並走なし〔反映前に HEAD a50f183 を再取得〕）。
 
+### 第2セッション続き（chunks 9-14）
+
+- chunks 9-14 を実行し **mask 0..1233 完了（隣接漏れなし・1,234/3,300 = 37.4%）**。
+  chunk9: 889→914（~92k/mask）・chunk10: 914→940（~89k）・chunk11: 940→964（~96k）・
+  chunk12: 964→1000（~65k・減衰）・chunk13: 1000→1214（**~1000 で沈み込み ~11k/mask・
+  214 mask/chunk**）・chunk14: 1214→1234（**~1190 から第二 heavy band 再出現 ~114k/mask**）。
+- **heavy band は w=65 と同じ非単調構造**: 第一帯 ~772..999 → ~1000 の dip →
+  第二帯 ~1190..。累計 34.0M nodes・leaves=0・生残0・phase2 必要 mask 0件。
+- 反映: progress JSON（97d7de19・resume_from=1234）・script CFG.from=1234（b864e33f）。
+  読み戻し検証済み。
+
 ## レジューム（次回の実行）
 
 1. **w=66 キャンペーン継続**: CFG.from=889 から（resume_from=lastDone を厳守）。
