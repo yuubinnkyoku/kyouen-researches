@@ -14,7 +14,7 @@ solution:
   classification: [all-safe-grundy]
   coverage: w=83の生残パターン完全特定は全3,300 maximal maskの全走査による全称（有限計算）。P(83)≥34は全m≥1でのwitness
   conditions: 連続整数行
-  verification: [mathematical-proof, exhaustive-search]
+  verification: [mathematical-proof, exhaustive-enumeration]
   certificate: 幅83 REST6 level 17 掃引完走（leaves=2・生残2・2.42G nodes）+ 生残mask・生残集合の帰属再現（probe・node数まで一致）+ REST16 16法再検査 + 11050円2窓の直接列挙一致 + R'≤1e6 実現スキャン（realizerは5525のみ）
   independent_check: probe の classifyOne node数（mask456=101,881・mask3119=156,184）・11050円の独立直接列挙（x∈[0,82]/[23,105] 34点・17行）・REST16再検査（16法全通過）・実現スキャン（1,964円・制御込み realizer 5525 のみ）・state_w83.json の生残チャンク位置一致
   note: "w=83 は K0797 会計（g0≥2形・w≤84）の範囲内だが、witness が既知のため level 17 全滅は P≤32 を与えない（K0804の限界どおり）。本項の価値は (i) 掃引機の生存検出感度の正制御（w≤82全滅の信頼性の実証的裏付け）・(ii) 復活点の実測確定・(iii) w=83 の level 17 実現可能パターンがちょうど2件でいずれも11050円の両端窓であるという孤立性（witness の certificate-理論的な剛性: 2パターンは同一円の中心対称な2窓に対応し、独立した2つのwitness族ではない）"

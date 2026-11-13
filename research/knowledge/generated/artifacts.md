@@ -13341,6 +13341,9 @@
 ## [research/experiments/width69-84-sweep-20261114/output/state_w82.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w82.json)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (data): w=82完走状態（2.4M capプロトコル・totalNodes 1,949,902,072・capEsc 57・leaves=0・生残0）。w70..81のstate_w70..w81.jsonも同形式
+## [research/experiments/width69-84-sweep-20261114/output/state_w83.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w83.json)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): w=83完走状態（2.4M capプロトコル・2,420,302,072 nodes・leaves=2・生残2・capEsc 72）
 ## [research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs](../../../research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (verifier): パラメータ化REST6掃引機（per-chunk状態永続化・停滞検出cap拡張・w=83/84正制御対応をheaderに明記）
@@ -13362,6 +13365,15 @@
 ## [research/experiments/width8-circle-twelve-point-20261112/scripts/width8_circle_bound.ts](../../../research/experiments/width8-circle-twelve-point-20261112/scripts/width8_circle_bound.ts)
 
 - [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md) (verifier): witness列挙・mod9分類・素数補題制御・f=2・2接点・censusの機械検証
+## [research/experiments/width83-positive-control-20261114/output/width83_positive_control.json](../../../research/experiments/width83-positive-control-20261114/output/width83_positive_control.json)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (data): 完走走査・帰属・REST16・実現・スキャンの全記録
+## [research/experiments/width83-positive-control-20261114/scripts/width83_realizability_scan.ts](../../../research/experiments/width83-positive-control-20261114/scripts/width83_realizability_scan.ts)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): REST16再検査 + 11050円2窓の直接検証 + R'≤1e6 実現スキャン
+## [research/experiments/width83-positive-control-20261114/scripts/width83_survivor_probe.mjs](../../../research/experiments/width83-positive-control-20261114/scripts/width83_survivor_probe.mjs)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (verifier): 生存mask・生残17行集合の帰属ログ付きプローブ（width_sweep.mjs と同一アルゴリズム）
 ## [research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json](../../../research/experiments/width9-18-circle-point-max-20261112/output/width9_18_circle_bound.json)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (data): 全数値の機械出力
@@ -13739,6 +13751,9 @@
 ## [research/log/2026-11-14-width69-82-dual-run-integration.md](../../../research/log/2026-11-14-width69-82-dual-run-integration.md)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-14-width83-positive-control.md](../../../research/log/2026-11-14-width83-positive-control.md)
+
+- [K0807](../items/K0807-width83-positive-control-revival-point.md) (log): 判断・教訓・レジューム
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

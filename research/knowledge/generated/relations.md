@@ -4639,6 +4639,8 @@
 - ← supports [K0801](../items/K0801-width67-pw32-plateau-completion.md): level 17復活点を (66,83] から (67,83] に狭窄
 - ← supports [K0802](../items/K0802-width68-pw32-plateau-completion.md): level 17復活点を (67,83] から (68,83] に狭窄
 - ← supports [K0804](../items/K0804-width69-82-pw32-plateau.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
+- ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 11050円 witness（P(83)≥34・34点最小幅83）が生残予測の源
+- ← supports [K0807](../items/K0807-width83-positive-control-revival-point.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4694,6 +4696,7 @@
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 11050円奇奇実現の全点・窓計数を厳密検証し下界6件を確認。定理A（σ₁₃=43）の本体検証は含まない（K0785の実験ファイルは依然プレースホルダ）
 - → supports [K0790](../items/K0790-width49-55-pw32-plateau.md): K0790本文「11050円はw=49..83で16..20点・witnessは別円族（要確認）」を訂正。奇奇実現は22..34点。命題P(49..55)=32自体には影響なし
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 行分離・円格子点の標準形（2x−A)²+(2y−B)²=R と3原始実現の分類
+- ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 34点最小幅83（復活点の右端の理論的裏付け）
 
 ## [K0792](../items/K0792-width56-pw32-plateau-extension.md) 幅56..59の円点数の完全決定 P(56)=…=P(59)=32 — 32点プラトーがw=59まで継続 — P(w)は全幅6..59で決定済み・level 17の復活点は(59,83]に狭窄・g4会計はw=65で飽和
 
@@ -4803,6 +4806,7 @@
 - → depends_on [K0803](../items/K0803-maximal-mask-plateau-universal.md): maximal mask数3,300（全幅で一致・小パターンはuniqueにのみ参入）
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
 - ← depends_on [K0805](../items/K0805-mask-census-closed-form.md): dual-run unique（w=69..82・14 点）が閉形式の制御値
+- ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了
 
 ## [K0805](../items/K0805-mask-census-closed-form.md) マスクセンサスの全幅閉形式決定 — level 17 窓マスク掃引の (unique(w), maximal(w)) が交叉統計と区間支配判定で全 w≧17 に決定（unique 3630 到達は w=96 が鋭い・初出現 w=37・maximal=3300 は全 w≧66 で厳密・小パターン参入窓 265..286/309..363/529..561）
 
@@ -4815,3 +4819,10 @@
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 曲線充填上界U_{w,q}への(6,7)代入による初の明示的上界402
 - → depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 下界20は6×13/16/19の35石1行欠損極大安全配置の実在による
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 従来の暗黙の一般上界T_{6,7}=10,101（402はその25分の1）
+
+## [K0807](../items/K0807-width83-positive-control-revival-point.md) w=83正制御の完走 — REST6掃引機の生存検出感度を実証（生残ちょうど2件・両方11050円の両端83幅窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w=83の生残パターン完全特定（2.42G nodes・leaves=2・実現可能）
+
+- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了
+- → depends_on [K0785](../items/K0785-circle-26-points-min-row-span.md): 11050円 witness（P(83)≥34・34点最小幅83）が生残予測の源
+- → depends_on [K0791](../items/K0791-circle-34pt-witness-verified.md): 34点最小幅83（復活点の右端の理論的裏付け）
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定

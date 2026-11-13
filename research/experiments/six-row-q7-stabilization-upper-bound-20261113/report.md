@@ -9,7 +9,7 @@ K0318 曲線充填定理への (6,7) 代入で埋めた。
 > [knowledge](../../knowledge/README.md) です。
 =======
 > **実験一次資料**：本文の判定・数値は記録時点のものです。現在の結論の唯一の正本は
-> [knowledge](../../../knowledge/README.md) です。
+> [knowledge](../../knowledge/README.md) です。
 >>>>>>> origin/main
 
 ## 主張
