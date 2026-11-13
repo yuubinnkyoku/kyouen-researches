@@ -165,10 +165,6 @@
         "d10_nodes_so_far_v15": 950001,
         "note": "v15 session 5: fresh-memo default-order d10 capped at 950k (first mob-56 band candidate tried at full budget); not a refutation"
       },
-      "81": {
-        "d10_nodes_so_far_v15": 950001,
-        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k; the v14 d10 refutation (323,872 nodes, listed under refuted_d10) remains the standing evidence — this entry only records that v15 cannot reproduce it within 950k nodes"
-      },
       "40": {
         "d10_nodes_so_far_v15": 950001,
         "note": "v15 session 2: capped at 950k (and at 280k in a first attempt); not a refutation"
@@ -176,6 +172,10 @@
       "80": {
         "d10_nodes_so_far_v15": 950001,
         "note": "v15 session 3: capped at 950k (fresh memo, 3 attempts incl. persistence experiments); not a refutation; joined heavy-pending"
+      },
+      "81": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k; the v14 d10 refutation (323,872 nodes, listed under refuted_d10) remains the standing evidence — this entry only records that v15 cannot reproduce it within 950k nodes"
       },
       "87": {
         "d10_nodes_so_far": 700001,
@@ -402,10 +402,42 @@
   "session5_sandbox_saturation": {
     "date": "2026-11-13",
     "runs": [
-      { "bit": 25, "ordering": "close-first AND", "depth": 10, "cap": 950000, "capped": true, "loss": false, "terminal_stone_range_seen": [13, 17] },
-      { "bit": 34, "ordering": "default", "depth": 10, "cap": 950000, "capped": true, "loss": false },
-      { "bit": 48, "ordering": "close-first AND", "depth": 10, "cap": 950000, "capped": true, "loss": false },
-      { "bit": 81, "ordering": "default", "depth": 10, "cap": 950000, "capped": true, "loss": false }
+      {
+        "bit": 25,
+        "ordering": "close-first AND",
+        "depth": 10,
+        "cap": 950000,
+        "capped": true,
+        "loss": false,
+        "terminal_stone_range_seen": [
+          13,
+          17
+        ]
+      },
+      {
+        "bit": 34,
+        "ordering": "default",
+        "depth": 10,
+        "cap": 950000,
+        "capped": true,
+        "loss": false
+      },
+      {
+        "bit": 48,
+        "ordering": "close-first AND",
+        "depth": 10,
+        "cap": 950000,
+        "capped": true,
+        "loss": false
+      },
+      {
+        "bit": 81,
+        "ordering": "default",
+        "depth": 10,
+        "cap": 950000,
+        "capped": true,
+        "loss": false
+      }
     ],
     "conclusion": "close-first AND's -30% pilot-d8 gain does NOT carry to d10 within the 950k sandbox ceiling (bit=25 and bit=48 both cap). Four distinct candidates spanning mob 44-56 — including two that v14 refuted at 133k-380k of its own units (48, 81) and the first full-budget mob-56 attempt (34) — all cap in v15 units. Per the session-4 decision rule the sandbox grind is information-poor and the lane switches to external-compute preparation.",
     "external_runner": {
@@ -421,8 +453,7 @@
       "note": "the runner's node counts are v15-unit and remain non-comparable with v14; verdicts and terminal ranges are the comparable quantities"
     },
     "next": "1) run scripts/class4_child1_runner.ts on external compute (start with heavy-pending {7,25,32,40,80,87}, then mob-56 band 34(also re-try externally),54,88,102,...); collect JSONL and fold verdicts into this audit; 2) certificate-chunked decomposition design remains the fallback if external compute is unavailable; 3) win discovery: rebuild certificate, verify with repo verifier (verify_five_terminal_loss7.py copy, winner_parity=1), deflate+b64, then class4-batch1-certificates push; 4) capped runs prove nothing either way — do not record them as refutations"
-  }
-,
+  },
   "session6_chunk_decomposition": {
     "date": "2026-11-13",
     "trigger": "no external compute available this session; session5 next item 2 (certificate-chunked decomposition) executed in-sandbox",
@@ -444,5 +475,68 @@
     },
     "consequence": "the d10 frontier is no longer sandbox-blocked: heavy-pending {25,32,40,80,87,34} and unprobed candidates are closable by per-chunk multi-run campaigns; capped monolithic runs remain non-evidence",
     "next": "1) bit=7 certificate rebuild + independent verifier run + certificates push; 2) chunk campaigns for heavy-pending {25,32,40,80,87,34} then unprobed candidates; 3) on any further WIN discovery, same certificate protocol"
+  },
+  "session7_bit7_certificate": {
+    "date": "2026-11-13",
+    "trigger": "session6_chunk_decomposition.next item 1 executed: bit=7 certificate rebuilt, independently verified, and pushed",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_00000000020000003800000080080080.cert",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "root_hex": "00000000020000003800000080080080",
+      "rows": 30947,
+      "bytes": 1121870,
+      "md5": "0f1fedfe06c658acdd02577f9d7da9d2",
+      "encoding": "plain text (deflate+b64 skipped: no compressor in sandbox; md5 recorded)",
+      "extraction_script": "scripts/class4_child1_cert_extractor.ts (engine v15 verbatim inline; kill-first depth-1 move priority from the session6 kill table, 10-40x over blind order)",
+      "extraction_nodes_total": 3557376,
+      "batches": "b1(m10-44) 667,470 / b2(45-82) 634,317 / b3(83-92) 656,983 / b4(93-110) 643,407 / b5(112-120) 517,343 / r1fix(m0,8 re-extraction) 437,856; merge by per-run files + sort -u"
+    },
+    "verification": {
+      "script": "scripts/verify_bit7_win7_cert.ts (TS port of n11-central-19-cover-20261031/verify_five_terminal_loss7.py; exact Bareiss det4 in number arithmetic, Hadamard-bound exactness note; BigInt reference agreement on 84 diagnostic triples; no engine import, no verdict cache)",
+      "method": "50 sub-root decomposition (root|m, 8 stones, winner to move, local winner_parity=0), runs V1..V7 in batches of 8",
+      "result": "ALL 50 SUB-ROOTS PASS; union of consumed winner states = 30,947 = full row set exactly (comm both directions empty); terminals 11,430 in stone range [13,17]; opponent edges 71,225; seen states 69,162 (with duplicates)",
+      "root_checks": "7 stones, no 4 cocircular, loser mobility 50 — PASS",
+      "control": "fresh extraction on published pilot root 00000000000000a03808100000000000 (2,510 rows) PASS with the same verifier port, terminals [14,16]"
+    },
+    "operational_incidents": [
+      "per-run read-modify-write of row files lost ~33k rows to the ~64KB read cap (recurrence of the session-3 failure); fixed by per-run independent files + sort -u merge",
+      "run 1 (m=0,8) lost a 24-row tail, caught by the verifier missing-row check; re-extracted as r1fix and the certificate rebuilt — the verification protocol demonstrably catches real data loss"
+    ],
+    "status": "bit=7 proven as class4-batch1-internal WIN7 within depth 10, with an independently verifiable certificate. Class 4 / S2 {59,60} / 11x11 empty board all remain UNKNOWN.",
+    "record": "output/class4-batch1-bit7-certificate.json",
+    "next": "1) chunk campaigns for heavy-pending {25,32,40,80,87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
+  },
+  "session7b_bit25_chunk_campaign": {
+    "date": "2026-11-13",
+    "trigger": "session7_bit7_certificate.next item 1 executed in the same session: chunk campaign for heavy-pending bit=25 (mob 50; v15 monolithic d10 capped 950k x3, close-first AND included)",
+    "verdict": "WIN7 CANDIDATE WITHIN DEPTH 10 (second after bit=7): lossAt(root,10)=true — ALL 50 loser first-moves killed by uncapped d8 kill chunks",
+    "root_hex": "00000000020000003800000082080000",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (bit25 entry: kill table, per-chunk node counts, resume protocol, controls)",
+    "totals": {
+      "nodes": 6768196,
+      "runs": 10,
+      "batch_nodes": [
+        642403,
+        712362,
+        697536,
+        670495,
+        680450,
+        689548,
+        692524,
+        670967,
+        696745,
+        615166
+      ],
+      "capped_chunks": 0,
+      "kill_nodes_sum": 1848372,
+      "pass_chunk_nodes_sum": 4919824
+    },
+    "controls": "pilot d6 5,949 reproduced at campaign start; 5 fresh re-solves (4 kill chunks (0,42)/(34,50)/(114,91)/(113,50) and 1 pass chunk (21,82)) identical to the campaign node counts; root enumeration 50/50 covered exactly by the kill table",
+    "observed_terminal_stone_range": [
+      13,
+      17
+    ],
+    "status": "certificate rebuild + independent verification pending (same protocol as bit7); class 4 / S2 {59,60} / 11x11 empty board all remain UNKNOWN",
+    "next": "1) bit=25 certificate extraction with the kill-first extractor, 50 sub-root decomposition verification, cert push; 2) continue chunk campaigns for heavy-pending {32,40,80,87,34} and unprobed candidates"
   }
 }

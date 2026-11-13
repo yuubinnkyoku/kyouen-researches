@@ -1,0 +1,105 @@
+{
+  "schema": "kyouen-n11-bit7-certificate-record-v1",
+  "date": "2026-11-13",
+  "session": "long-lane session 7",
+  "status": "VERIFIED (class4-batch1 internal WIN7, depth<=10 from the 7-stone position; NOT a solution of class 4 / S2 / empty board)",
+  "interpretation_guard": "11x11 empty board, two-stone root {49,60} and S2 {59,60} all remain UNKNOWN. This certificate only proves: with 7 stones placed (root below) and the 7th-stone player (parity 1) to force, that player wins against every defense within 10 plies.",
+  "certificate": {
+    "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class4-batch1-certificates/n11_s7_00000000020000003800000080080080.cert",
+    "format": "n11-terminal-strategy-v1",
+    "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+    "root_hex": "00000000020000003800000080080080",
+    "root_cells": [
+      7,
+      19,
+      31,
+      59,
+      60,
+      61,
+      89
+    ],
+    "root_stones": 7,
+    "orientation": "original_first_WIN7 second_to_move_LOSS (loser to move at root)",
+    "rows": 30947,
+    "bytes": 1121870,
+    "md5": "0f1fedfe06c658acdd02577f9d7da9d2",
+    "git_blob_sha": "e85a00a41646f95d02f4e6a341124233efc863af",
+    "encoding_note": "plain text lines \"<32hex> <move>\", sorted ascending; deflate+b64 skipped because the sandbox has no compressor — md5 recorded instead"
+  },
+  "extraction": {
+    "tool": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_cert_extractor.ts",
+    "engine": "engine v15 (verbatim inline), kill-first move ordering (kill table depth-1 priority, 10-40x blind-order reduction)",
+    "batches": [
+      {
+        "batch": "b1",
+        "first_moves": "m 10-44",
+        "nodes": 667470
+      },
+      {
+        "batch": "b2",
+        "first_moves": "m 45-82",
+        "nodes": 634317
+      },
+      {
+        "batch": "b3",
+        "first_moves": "m 83-92",
+        "nodes": 656983
+      },
+      {
+        "batch": "b4",
+        "first_moves": "m 93-110",
+        "nodes": 643407
+      },
+      {
+        "batch": "b5",
+        "first_moves": "m 112-120",
+        "nodes": 517343
+      },
+      {
+        "batch": "r1fix",
+        "first_moves": "m 0,8 (re-extraction after a truncated tail was caught by the missing-row check)",
+        "nodes": 437856
+      }
+    ],
+    "total_nodes": 3557376,
+    "merge": "per-run independent files, bash sort -u merge (no read-modify-write)"
+  },
+  "verification": {
+    "tool": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_bit7_win7_cert.ts",
+    "independence": "no engine import, no verdict cache; exact 4x4 integer Bareiss determinant in number arithmetic (Hadamard bound keeps values far below 2^53; Bareiss divisions checked exact); agrees with BigInt reference port on all 84 triples of diagnostic position root+8+21; port of research/experiments/n11-central-19-cover-20261031/verify_five_terminal_loss7.py",
+    "method": "50 sub-root decomposition: every legal loser first move m gives sub-root root|m (8 stones, winner to move, local winner_parity=0) verified independently; turn parity is a function of stone count so decomposition is sound",
+    "runs": "V1..V7 (batches of 8 sub-roots per run) + r1fix sub-roots re-verified",
+    "sub_roots": 50,
+    "result": "ALL 50 SUB-ROOTS PASS",
+    "consumed_rows_total_with_duplicates": 44543,
+    "consumed_rows_unique": 30947,
+    "union_equality": "union of consumed winner states over all 50 sub-roots = certificate row set exactly (30,947); comm both directions empty; no unreachable rows, no missing rows",
+    "seen_states_total_with_duplicates": 69162,
+    "terminals_total": 11430,
+    "opponent_edges_total": 71225,
+    "terminal_stone_range": [
+      13,
+      17
+    ],
+    "root_checks": {
+      "stones": 7,
+      "four_cocircular": false,
+      "loser_mobility": 50
+    }
+  },
+  "control_experiment": {
+    "root_hex": "00000000000000a03808100000000000",
+    "note": "published pilot root, winner = root mover (winner_parity=0 orientation)",
+    "fresh_extraction_rows": 2510,
+    "result": "PASS with same verifier port",
+    "terminal_stone_range": [
+      14,
+      16
+    ],
+    "difference_from_published_cert": "different valid strategy (786-row published cert) — comparable quantities are the verdict and the terminal range, both consistent"
+  },
+  "operational_incidents": [
+    "run-to-run read-modify-write of row files truncated by the ~64KB read cap lost ~33k rows from earlier runs (same failure mode as session 3); fixed by per-run independent files + bash sort -u merge",
+    "run 1 (m=0,8) tail lost 24 rows, caught by the verifier missing-row check; re-extracted (r1fix) and certificate rebuilt — demonstrates the verification protocol catches real data loss"
+  ]
+}

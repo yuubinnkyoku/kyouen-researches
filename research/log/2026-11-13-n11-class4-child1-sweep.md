@@ -384,3 +384,107 @@ d10 での効果は未検証（bit95 close-AND >756k capped で有意差未確�
    （1候補複数実行・chunk毎に再開）。WIN 発見時は同じ証明書プロトコル。
 3. d8 witness ≠ d10 witness の教訓を維持: より浅い witness の再利用は
    目標深さで chunk 集合を再検証してから。
+
+## 第7セッション（2026-11-13、長期レーン）: bit7 WIN7 証明書の抽出・独立検証・反映（第6セッション next 1 完了）
+
+### 証明書の抽出・構築
+
+- root 00000000020000003800000080080080（S6 child + bit7・7石・loser to move）の
+  勝ち戦略を n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS 形式で
+  **30,947 行**（<32hex> <move> 昇順ソート済み・プレーンテキスト 1,121,870 bytes・
+  md5 0f1fedfe06c658acdd02577f9d7da9d2）として確定。
+- 抽出は extractW/extractL 再帰（winner手は closeScore 順で最初に lossAt=true となる手を
+  記録、loserは全合法応手を展開）。**kill-first**（第6セッション kill 表 m→r_k を深さ1の
+  優先手にする）で盲順の 10-40 倍削減（m=0 盲 597k → kill-first 数百k/実行）。
+- 実行統計: b1(m10-44) 667,470 / b2(45-82) 634,317 / b3(83-92) 656,983 / b4(93-110) 643,407 /
+  b5(112-120) 517,343 / r1fix(m0,8) 437,856 nodes・総 3,557,376。
+
+### 独立検証（全て PASS）
+
+- verify_five_terminal_loss7.py の TS 移植（厳密 Bareiss 4x4 行列式・number 演算で
+  Hadamard bound 下厳密・BigInt リファレンス移植と 84 triple 完全一致・engine 不使用・
+  cache 不使用）。単一 root 全文検証は 16MiB 制限で不可のため **50 部分木分解検証**
+  （sub-root=root|m・8石・winner手番・局所 winner_parity=0、V1..V7 の 8実行単位バッチ）:
+  全 50 sub-root PASS・terminal 石数範囲 [13,17]。
+- **消費済み戦略行の和集合 = 30,947 行と完全一致**（comm 双方向 0・到達不能行/欠落行なし）。
+- root 検査 PASS（7石・4点共円なし・loser mob=50）。
+- **制御**: 公表 pilot root 00000000000000a03808100000000000（winner=root mover）での
+  新規抽出 2,510 行が同一 verifier で PASS（terminal [14,16]。公表証明書786行とは
+  別の有効戦略で、判定+terminal 範囲が比較可能量）。
+
+### 運用事故 2 件（記録）
+
+1. run 間の read-modify-write で read_file の ~64KB 切断により過去実験分 ~33k 行が欠落
+   （第3セッションと同一過誤の再発）。**修正**: 実行ごとに独立ファイル + sort -u で bash merge。
+2. run 1（m=0,8）末尾 24 行欠落を verifier の missing-row チェックが検出 →
+   r1fix 再抽出で復元・証明書再構築。**verifier が実際の欠落を捕捉したことは
+   検証プロトコルの有効性の実証**。
+
+### 反映（全て push 後読み戻し確認）
+
+- 761b6ea7: scripts/class4_child1_cert_extractor.ts（抽出器・engine v15 verbatim 内蔵）
+- 31a52068: scripts/verify_bit7_win7_cert.ts（TS verifier 移植・sub-root 分解・root 検査）
+- 8f38a849: output/class4-batch1-certificates/n11_s7_00000000020000003800000080080080.cert
+  （1,121,870 bytes・md5 記録。deflate+b64 は sandbox に圧縮ツール無のため省略）
+- 8defb938: output/class4-batch1-bit7-certificate.json（検証記録）
+- a95a46f5: audit JSON session7_bit7_certificate 追記
+- 本コミット: log 第7セッション
+
+### 解釈上の注意（変更なし）
+
+- bit=7 は「class4-batch1 内の深さ10以内 WIN7」として証明書+独立検証が完了したのみ。
+  class 4・S2 {59,60}・二石 root {49,60}・**11x11 空盤はいずれも UNKNOWN**。
+- 本証明書は 7石局面からの winner_parity=1 勝ちを深さ10以内で示すもので、
+  空盤の勝敗を何ら断定しない。
+
+### 次回
+
+1. heavy-pending {25,32,40,80,87,34} と未走査候補を chunk キャンペーンで消化。
+   WIN 発見時は同一証明書プロトコル（抽出 → 独立検証 → push）。
+2. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
+3. 証明書はプレーンテキスト運用（md5 記録）。読み戻し検証と union 等価チェックを
+   プロトコルの標準部分とする。
+
+## 第8セッション（2026-11-13、長期レーン）: bit25 chunkキャンペーン — 2件目のWIN7候補（全50初手 kill・6.77M nodes・10実行）
+
+### レジューム実行（第7セッション next 1）
+
+heavy-pending bit=25（mob 50。v15 単体 d10 は default/close-first AND とも 950k で
+capped・判定なし）を chunk 分解で消化した。run 予算 ~620-700k・chunk cap 300k・
+chunk 深さ 8・reply 順 wscore 降順（fail-fast）。予算打ち切りは kill 表を --dead、
+解決済み pass reply を --done に渡して厳密に再開（再開欠落ゼロ）。
+
+### 結果: bit25 は depth 10 以内の WIN7 候補（2件目）
+
+- **全50個の loser 初手が kill された** → lossAt(root,10)=true。
+  root hex 00000000020000003800000082080000（S6 child + bit25・7石・loser to move）。
+- 総 **6,768,196 nodes / 10実行**（642,403 / 712,362 / 697,536 / 670,495 / 680,450 /
+  689,548 / 692,524 / 670,967 / 696,745 / 615,166）・capped chunk 0。
+  kill chunk 計 1,848,372 / pass chunk 計 4,919,824 nodes。
+  kill 表（50件の m→r_k）と per-chunk node 数は ledger の bit25 エントリ参照。
+- **検証（全て一致）**: pilot d6 制御 5,949（キャンペーン開始時）・
+  kill chunk 4件の fresh 再解（(0,42)=219,816・(34,50)=12,317・(114,91)=8,041・
+  (113,50)=34,181）と pass chunk 1件（(21,82)=92,425）が node 数まで完全一致・
+  root 50手の列挙が kill 表と完全一致。terminal 石数範囲 [13,17]。
+
+### 解釈上の注意（変更なし）
+
+- bit=25 の WIN7 候補は class4-batch1 内部の深さ10以内判定にすぎず、
+  class 4・S2 {59,60}・二石 root {49,60}・**11x11 空盤はいずれも UNKNOWN**。
+- 証明書再構築・独立検証は未実施（次回の最初の作業。bit7 と同一プロトコル:
+  kill-first 抽出 → 50部分木分解検証 → union 等価 → push）。
+
+### 反映
+
+- 65cb836a: ledger JSON（bit25 エントリ・kill 表・制御・解釈ガード）
+- 続くコミット: audit JSON session7b_bit25_chunk_campaign・log 第8セッション
+（push 後読み戻し確認。並走なし。）
+
+### 次回
+
+1. **bit=25 証明書再構築・独立検証・push**（第7セッションの bit7 プロトコル踏襲。
+   verifier は --root 00000000020000003800000082080000 で再利用可）。
+2. heavy-pending 残り {32,40,80,87,34} と未走査候補の chunk キャンペーン継続。
+   WIN 発見時は同じ証明書プロトコル。
+3. mob-50 帯で WIN7 が連続（bit7・bit25）— 帯全体の証明書化コストを考慮し、
+   抽出器の kill-first 指定は ledger の kill 表から自動読み込みに拡張する価値あり。
