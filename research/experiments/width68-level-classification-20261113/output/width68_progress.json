@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-13",
  "status": "in_progress",
- "resume_from": 880,
+ "resume_from": 890,
  "machine": "research/experiments/width68-level-classification-20261113/scripts/width68_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
  "machineNote": "K0801 の w=67 完走機と同一構造（verbatim 移植・W=68・窓マスク 68 ビット・ワード数 ceil(w/32) 自動）。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。",
  "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。次 chunk の from は直前 chunk の lastDone を verbatim で使う（+1 はしない・境界 off-by-one 再発防止）。",
@@ -24,20 +24,22 @@
   { "chunk": 8, "from": 808, "lastDone": 822, "nodes": 2400000, "wordOps": 226643213, "leaves": 0, "aborted": true, "survivors": 0, "note": "14 mask/2.4M = ~171k/mask（heavy band）〔from=808 は境界 off-by-one → mask 807 は gapCertifications で個別証明〕" },
   { "chunk": 9, "from": 822, "lastDone": 840, "nodes": 2400000, "wordOps": 230319356, "leaves": 0, "aborted": true, "survivors": 0, "note": "18 mask/2.4M = ~133k/mask（heavy band）" },
   { "chunk": 10, "from": 840, "lastDone": 861, "nodes": 2400000, "wordOps": 232668079, "leaves": 0, "aborted": true, "survivors": 0, "note": "21 mask/2.4M = ~114k/mask（heavy band）" },
-  { "chunk": 11, "from": 861, "lastDone": 880, "nodes": 2400000, "wordOps": 229561779, "leaves": 0, "aborted": true, "survivors": 0, "note": "19 mask/2.4M = ~126k/mask（heavy band）" }
+  { "chunk": 11, "from": 861, "lastDone": 880, "nodes": 2400000, "wordOps": 229561779, "leaves": 0, "aborted": true, "survivors": 0, "note": "19 mask/2.4M = ~126k/mask（heavy band）" },
+  { "chunk": 12, "from": 880, "lastDone": 885, "nodes": 2400000, "wordOps": 218394024, "leaves": 0, "aborted": true, "survivors": 0, "note": "5 mask/2.4M = ~480k/mask（第一 heavy band 最重要部・これまでの最高加重）" },
+  { "chunk": 13, "from": 885, "lastDone": 890, "nodes": 2400000, "wordOps": 220820479, "leaves": 0, "aborted": true, "survivors": 0, "note": "5 mask/2.4M = ~480k/mask（同上・最重要部持続）" }
  ],
  "gapCertifications": [
   { "mask": 788, "nodes": 314127, "leaves": 0, "survivors": 0, "note": "chunk6→7 境界の off-by-one（lastDone=788 に対し chunk7 を from=789 で実行）を classifyOne 単一mask完走機で個別証明" },
   { "mask": 807, "nodes": 273404, "leaves": 0, "survivors": 0, "note": "chunk7→8 境界の off-by-one（lastDone=807 に対し chunk8 を from=808 で実行）を classifyOne で個別証明" }
  ],
  "totals": {
-  "masksDone": 880,
-  "nodes": 24000000,
+  "masksDone": 890,
+  "nodes": 28800000,
   "gapCertNodes": 587531,
   "leaves": 0,
   "survivors": 0,
   "phase2Masks": 0
  },
- "estimate": "前置帯は w=67 の約2.2倍（chunk1 ~23k/mask）。第一 heavy band（~770..999 見込み）は ~114..200k/mask・ここまで 24M+0.6M nodes で 880/3,300 = 26.7%。w=65..67 パターン（~1000 で沈み込み→~1190 で第二帯→軽い帯で完走）なら総計 110..170M nodes・複数セッション必須。",
- "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 134）⟹ 完走なら P(68) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。昇格先 K 番号は K0802（要再確認）。現在は部分進行（880/3,300 mask = 26.7%）であり P(68) はまだ確定しない。"
+ "estimate": "前置帯は w=67 の約2.2倍（chunk1 ~23k/mask）。第一 heavy band は ~770 開始で ~114..200k/mask だったが chunk12-13 で ~480k/mask に急上昇（最重要部）。ここまで 28.8M+0.6M nodes で 890/3,300 = 27.0%。heavy band 残り（~999 まで）は加重次第で総計 110..170M nodes 見込み・複数セッション必須。",
+ "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 134）⟹ 完走なら P(68) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。昇格先 K 番号は K0802（要再確認）。現在は部分進行（890/3,300 mask = 27.0%）であり P(68) はまだ確定しない。"
 }
