@@ -869,5 +869,64 @@
     "consequence": "the 7th-stone sweep of S6 child #1 is complete; the class-4 frontier worklist can now be recomputed against a fully classified child; five new certificate targets queued",
     "status": "WIN7-D10 candidates require certificate extraction + independent verification before settled; REFUTED excludes only wins within 10 plies; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
     "next": "1) certificates for {18,67,82,117,120}; 2) frontier bookkeeping update; 3) keep UNKNOWN guards"
+  },
+  "session16_win7_certificates": {
+    "date": "2026-11-14",
+    "trigger": "session 15 next item 1: extract and independently verify certificates for the five new WIN7-D10 candidates {18, 67, 82, 117, 120}",
+    "protocol": "kill-first extraction (repo class4_child1_cert_extractor.ts extractBatch, kill tables from the session-15 states, ONE fresh native process per candidate, CAP=1e9) -> sorted-row merge in-process -> header+root -> independent verification with repo verify_bit7_win7_cert.ts (engine-free, cache-free, exact Bareiss det4; local fs-import patch for the node CLI only, verification logic untouched) -> sub-root decomposition verification for every loser first-move -> union equality check both directions",
+    "extraction_totals": {
+      "nodes": 34496301,
+      "runs": 5
+    },
+    "certificates": {
+      "bit18": {
+        "rows": 43550,
+        "bytes": 1571258,
+        "md5": "11a0f14f761f71c4d77fd6e618dee336",
+        "subroots": 52,
+        "terminals": 14608,
+        "all_pass": true
+      },
+      "bit67": {
+        "rows": 57896,
+        "bytes": 2088010,
+        "md5": "d3aa2871e08afdf48d82b94ad3c0abb5",
+        "subroots": 59,
+        "terminals": 18181,
+        "all_pass": true
+      },
+      "bit82": {
+        "rows": 48352,
+        "bytes": 1743255,
+        "md5": "ac5200a83c0342d284b5d026d7ebbf62",
+        "subroots": 53,
+        "terminals": 17092,
+        "all_pass": true
+      },
+      "bit117": {
+        "rows": 61952,
+        "bytes": 2230811,
+        "md5": "3119ae37fd843267a81c78cde40a4446",
+        "subroots": 59,
+        "terminals": 23288,
+        "all_pass": true
+      },
+      "bit120": {
+        "rows": 62336,
+        "bytes": 2244853,
+        "md5": "bb2b8da776ca4d8b16dc5121a072d0cf",
+        "subroots": 62,
+        "terminals": 22563,
+        "all_pass": true
+      }
+    },
+    "push": {
+      "files": "5 certificates under output/class4-batch1-certificates/ + verification record output/class4-batch1-win7-certificates-20261114.json, all on main, md5 re-verified against raw.githubusercontent after push"
+    },
+    "consequence": "S6 child #1 7th-stone sweep fully classified within depth 10: 7 certified WIN7-D10 (bit7, bit25, bit18, bit67, bit82, bit117, bit120) + 59 refutations; 66/66 non-degenerate candidates settled",
+    "next": [
+      "recompute the class-4 frontier from the seven certificates (audit bookkeeping)",
+      "propagate toward S2 {59,60} blockers; deeper objects stay UNKNOWN"
+    ]
   }
 }
