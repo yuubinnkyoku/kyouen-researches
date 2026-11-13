@@ -37,13 +37,17 @@
 // verifier's missing-row check). Write one file per run and merge with sort -u.
 //
 // CLI (zero dependencies, node --experimental-strip-types):
-//   node --experimental-strip-types class4_child1_cert_extractor.ts \
+//   node --experimental-strip-types class4_child1_cert_extractor.ts (continuation
+//        backslash omitted: it does not survive the push transport)
 //     --child 00000000020000003800000080080000 --bit 7 --moves 10,15,18 --out rows.txt
 // Each root first-move m is extracted as extractW(root+m, 9, KILL[m]); pass --moves in
 // batches that fit the node budget (~620k nodes per sandbox-class run). Rows are appended
 // to --out as "<32hex> <move>" lines (merge batches with sort -u, then prepend the header
 // and root lines).
 
+// NOTE (2026-11-14 repair): see the CLI block note below about the fs import.
+import fs from 'fs';
+const NL = String.fromCharCode(10);
 const N = 121;
 const FULL0 = 0xFFFFFFFF|0, FULL1 = 0xFFFFFFFF|0, FULL2 = 0xFFFFFFFF|0, FULL3 = 0x01FFFFFF|0;
 const X = new Int32Array(N), Y = new Int32Array(N), Q = new Int32Array(N);
@@ -213,6 +217,10 @@ if (typeof process !== 'undefined' && process.argv && process.argv[1] && process
   const KILL_BIT7 = {0:114,8:21,10:81,15:40,18:40,21:40,28:80,32:81,33:18,34:83,38:70,40:18,44:81,45:28,50:18,54:8,66:18,67:80,70:38,72:88,75:50,76:40,78:70,80:28,81:32,82:50,83:8,84:40,86:72,87:70,88:72,90:8,91:8,92:50,93:8,94:28,102:90,104:40,105:18,106:81,108:18,109:70,110:8,112:82,113:81,114:38,116:8,117:8,118:18,120:28};
   const moves = arg('moves','').split(',').filter(s=>s!=='').map(Number);
   const res = extractBatch(arg('child','00000000020000003800000080080000'), Number(arg('bit',7)), KILL_BIT7, moves);
-  process.stdout.write(JSON.stringify({ ...res, rows: res.rows ? res.rows.length : undefined }) + '\n');
-  if (res.rows && arg('out','')) { require('fs').appendFileSync(arg('out',''), res.rows.join('\n') + '\n'); }
+  process.stdout.write(JSON.stringify({ ...res, rows: res.rows ? res.rows.length : undefined }) + NL);
+  // NOTE (2026-11-14 repair): this module is ESM (top-level exports), so the CLI
+  // block's require('fs') was undefined under --experimental-strip-types and the
+  // rows file was silently never written. Also, backslash escape literals do not
+  // survive the push transport; use String.fromCharCode(10).
+  if (res.rows && arg('out','')) { fs.appendFileSync(arg('out',''), res.rows.join(NL) + NL); }
 }
