@@ -1,0 +1,19 @@
+{
+ "generated": "2026-11-13",
+ "status": "in_progress",
+ "resume_from": 770,
+ "machine": "research/experiments/width67-level-classification-20261113/scripts/width67_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
+ "machineNote": "K0799 の w=66 完走機と同一構造（verbatim 移植・W=67・窓マスク 67 ビット・ワード数 ceil(w/32) 自動）。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。",
+ "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。w=66 第1-2セッションの off-by-one 教訓を踏襲し +1 はしない。",
+ "uniqueMasks": 3300,
+ "totalMaximal": 3300,
+ "harnessControl": { "w64_L17": { "unique": 3288, "maximal": 3288, "note": "既往値と完全一致" }, "w65_L17": { "unique": 3296, "maximal": 3296, "note": "K0798 と一致" }, "w66_L17": { "unique": 3300, "maximal": 3300, "note": "K0799 と一致" } },
+ "chunks": [
+  { "chunk": 1, "from": 0,   "lastDone": 223, "nodes": 2400000, "wordOps": 255673713, "leaves": 0, "aborted": true, "survivors": 0, "note": "223 mask/2.4M = ~10.8k/mask（軽い帯）・word-ops は w=66 chunk1 と完全一致" },
+  { "chunk": 2, "from": 223, "lastDone": 488, "nodes": 2400000, "wordOps": 262407946, "leaves": 0, "aborted": true, "survivors": 0, "note": "265 mask/2.4M = ~9.1k/mask（軽い帯）・word-ops は w=66 chunk2 と完全一致 → mask 0..487 は w=66 と同一前置区間" },
+  { "chunk": 3, "from": 488, "lastDone": 770, "nodes": 2400000, "wordOps": 257706771, "leaves": 0, "aborted": true, "survivors": 0, "note": "282 mask/2.4M = ~8.5k/mask（軽い帯）・ここで w=66 と分岐（w=66 chunk3 は wordOps 255484677・chunk3 の from も off-by-one 期で 489）" }
+ ],
+ "totals": { "masksDone": 770, "nodes": 7200000, "leaves": 0, "survivors": 0, "phase2Masks": 0 },
+ "estimate": "w=66 総計 54.8M × 成長則 ~1.35 で総 ~74M nodes・heavy band は ~770 以降（第一帯 ~772..~1000・dip・第二帯 ~1190..~1310・窓位相 99 周期で w=65/66 と同位置）。複数セッション必須。",
+ "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 132）⟹ 完走なら P(67) = 32（等号付き・全称）→ K0800 に昇格予定・results/fixed-width/ 追従。現在は部分進行（770/3,300 mask = 23.3%）であり P(67) はまだ確定しない。"
+}
