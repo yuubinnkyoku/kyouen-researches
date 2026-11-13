@@ -1,0 +1,54 @@
+{
+ "generated": "2026-11-13",
+ "machine": "width56_level_classify.ts (K0790 streaming + K0789 prime-power leaf certificate 49/121/343; chunked by maximal-mask index)",
+ "w56_L17": {
+  "uniqueMasks": 2752, "totalMaximal": 2752,
+  "chunks": [
+   {"range": [0, 40], "nodes": 42217},
+   {"range": [40, 400], "nodes": 205023},
+   {"range": [400, 760], "nodes": 749623},
+   {"range": [760, 1120], "nodes": 1603744},
+   {"range": [1120, 1480], "nodes": 484655},
+   {"range": [1480, 1840], "nodes": 199509},
+   {"range": [1840, 2752], "nodes": 429385}
+  ],
+  "totalNodes": 3714156, "leaves": 0, "ppKills": 0, "uniqueSurvivors": 0,
+  "verdict": "level 17 fully dead at w=56 with the original 16-mod set; prime-power leaf certificate never needed (leaves=0)"
+ },
+ "control_w26_L12": { "nodes": 1111, "leaves": 1, "uniqueSurvivors": 1,
+  "survivor": [0,1,3,4,7,10,15,18,21,22,24,25],
+  "note": "S* exactly 1 survivor - matches K0782/K0784/K0788/K0790" },
+ "w57_L17_partial": {
+  "uniqueMasks": 2880, "totalMaximal": 2880,
+  "chunks": [
+   {"range": [0, 300], "nodes": 287738},
+   {"range": [300, 700], "nodes": 552797},
+   {"range": [700, 740], "nodes": 393891, "perMaskNodesRange": [171, 53659]}
+  ],
+  "masksDone": 740, "nodesDone": 1234426, "leaves": 0, "resumeAtMask": 740,
+  "note": "heavy region from mask ~700 (~10k nodes/mask); est. total >>10M nodes; multi-session chunked campaign"
+ },
+ "g0Accounting_conventionB": {
+  "w56": {"g2_evens": 8, "g2_odds": 8, "g3": 11, "g4_classSize": 14, "allBelow17": true},
+  "w57": {"g2_evens": 8, "g2_odds": 8, "g3": 11, "g4_classSize": 15, "allBelow17": true},
+  "w58": {"g2_evens": 8, "g2_odds": 8, "g3": 12, "g4_classSize": 15, "allBelow17": true},
+  "w59": {"g2_evens": 8, "g2_odds": 8, "g3": 12, "g4_classSize": 15, "allBelow17": true},
+  "w60": {"g2_evens": 8, "g2_odds": 8, "g3": 12, "g4_classSize": 15, "allBelow17": true},
+  "w61": {"g2_evens": 8, "g2_odds": 8, "g3": 13, "g4_classSize": 16, "allBelow17": true},
+  "w62": {"g2_evens": 8, "g2_odds": 8, "g3": 13, "g4_classSize": 16, "allBelow17": true},
+  "w63": {"g2_evens": 8, "g2_odds": 8, "g3": 13, "g4_classSize": 16, "allBelow17": true},
+  "w64": {"g2_evens": 8, "g2_odds": 8, "g3": 13, "g4_classSize": 16, "allBelow17": true},
+  "w65": {"g2_evens": 9, "g2_odds": 8, "g3": 13, "g4_classSize": 17, "allBelow17": false},
+  "saturationNote": "g4 class-size ceiling argument saturates at w=65 (ceil(65/4)=17=L); w>=65 needs refined g4 accounting"
+ },
+ "witness2210": { "totalPoints": 32, "vSpan": 94,
+  "perW_49to67_all": 32,
+  "note": "v-span 94 <= 2(w-1) for all w>=49, so all 32 points fit every w>=49; P(w)>=32 for all w>=49" },
+ "claims": {
+  "exact": {"56": 32},
+  "accounting": "level 17 dead at w=56 (3,714,156 nodes, leaves=0) => d+s<=16 => P(56)<=32; g0>=2 forms: classMax g2=8 (uodd, convention B), g3=11, g4 class 14, all <17; witness 2210 circle gives P(56)>=32",
+  "closure": "P(w) now closed for all w=6..56; level-17 revival point narrowed from (55,83] to (56,83] (K0785 P(83)>=34)",
+  "nodeGrowth": "w=56: 3,714,156 nodes vs w=55: 2,644,771 (x1.40, consistent with the x1.36/w law)",
+  "negativeObservation": "inline prime-power mods (49/121/343 in DFS) do NOT accelerate: per-node cost x12 dominates over pruning gain on heavy masks (mask range 700..740 of w=57 exceeded deadline inline vs 394k nodes leaf-certificate version)"
+ }
+}
