@@ -1,6 +1,6 @@
 ---
 id: K0803
-title: "maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（周期性+順序同型+popcountギャップ+支配補題の全称証明・unique=3,630は99≦w<198に限定・level 17 掃引ワークロードはw=66以降不定項）"
+title: "maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（周期性+順序同型+popcountギャップ+支配補題の全称証明・unique=3,630は99≦w<198に限定・level 17 掃引ワークロードはw=66以降不変）"
 kind: proposition
 status: proved
 topics: [rectangles, geometry, variants]
@@ -17,7 +17,7 @@ solution:
   verification: [mathematical-proof, exhaustive-enumeration]
   certificate: 周期性補題 + パターン順序同型 + CRT popcount 積 + popcount ギャップ [7,17] 空き + big パターン全通過 + 小パターン支配補題（w=99 exhaustive 計算 3,630/3,300 が基底）
   independent_check: 4 機械検査（periodicity99・CRT 不一致 0・gap7to17Empty・dominationCheck 例外 0）PASS・sampled 9 幅の直接 exhaustive が理論値と完全一致・広幅プローブ w=296/396（unique 増加と maximal 不変の両面を実証・w=396 は unique の理論会計と完全一致）
-  note: "maximal-mask-saturation-20261113 の有限観測（w=62..132・maximal 3,300 プラトー）の予想『w<198 まで維持』を支配補題で全 w≧99 に拡張して全称定理に昇格。L≠17 は未検証（L≦12 では小パターンが早期参入し要再検証）。w≧198 帯の unique の増加様式は |T(w)|=k|P|+|P∩[0,rem)|≧17 の会計で完全に決定可能（予閉形式）"
+  note: "maximal-mask-saturation-20261113 の有限観測（w=62..132・maximal 3,300 プラトー）の予想『w<198 まで維持』を支配補題で全 w≧99 に拡張して全称定理に昇格。L≠17 は未検証（L≦12 では小パターンが早期参入し要再検証）。w≧198 帯の unique の増加様式は |T(w)|=k|P|+|P∩[0,rem)|≧17 の会計で完全に決定可能（閉形式）"
 relations:
 - type: depends_on
   target: K0799
