@@ -4823,6 +4823,7 @@
 - → depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 下界20は6×13/16/19の35石1行欠損極大安全配置の実在による
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 従来の暗黙の一般上界T_{6,7}=10,101（402はその25分の1）
 - ← supports [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): K0806 が上界のみ記録した (6,5)/(6,6)/(6,8) に下界を与え、境界を [20,658]/[16,495]/[12,371] の両側にした
+- ← supports [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): (6,5)/(6,6) の境界を [22,658]/[17,495] に更新
 
 ## [K0807](../items/K0807-width83-positive-control-revival-point.md) w=83正制御の完走 — REST6掃引機の生存検出感度を実証（生残ちょうど2件・両方11050円の両端83幅窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w=83の生残パターン完全特定（2.42G nodes・leaves=2・実現可能）
 
@@ -4837,3 +4838,11 @@
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 上界は K0318 代入（U=658/495/371・K0024 の T 値に基づく）
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2×8 q=4 の5石witness再発見制御
 - → depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md): 5×19 q=7 の全極大30石との一致制御
+- ← generalizes [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): K0808の貪欲では発見できなかった m=20,21（6,5）と m=16（6,6）に行capハンディキャップで到達し、下界 M_{6,5}≥20→22・M_{6,6}≥16→17 を更新
+- ← depends_on [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): census（3点組外心完全列挙）と独立検証器の実装をverbatim流用
+
+## [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) 行capハンディキャップ貪欲による欠損witness — M_{6,5}≥22・M_{6,6}≥17（下界更新）
+
+- → generalizes [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): K0808の貪欲では発見できなかった m=20,21（6,5）と m=16（6,6）に行capハンディキャップで到達し、下界 M_{6,5}≥20→22・M_{6,6}≥16→17 を更新
+- → supports [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): (6,5)/(6,6) の境界を [22,658]/[17,495] に更新
+- → depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): census（3点組外心完全列挙）と独立検証器の実装をverbatim流用

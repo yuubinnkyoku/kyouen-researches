@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Full manifest-level class-2/4 frontier recomputation over ALL published
 WIN7 receipts as of main 08e060f0, including class4-batch3 (bit37, child#3/#4,
-child#5, child#7). Follows scripts/audit_class_frontier.py logic exactly;
+child#5, child#7). Follows the audit_class_frontier.py logic in this same directory exactly;
 snapshot asserts are replaced by staged controls (baseline / after_batch1 /
 after_batch2 must reproduce the published frontier-update JSONs) before the
 batch3 additions are measured.
@@ -216,7 +216,7 @@ result = {
     'schema': 'n11-class4-batch3-frontier-full-recompute-20261114-v1',
     'date': '2026-11-14',
     'baseline_main': '08e060f0',
-    'method': 'full recomputation of scripts/audit_class_frontier.py logic over '
+    'method': 'full recomputation of the audit_class_frontier.py logic over '
               'win7-reuse-hits + 12 baseline verified JSONs + class4 batch1/batch2 '
               'verified + batch3 (bit37, child#3/#4 x3, child#5 x4, child#7 x5); '
               'controls reproduce the published baseline/after_batch1/after_batch2 '

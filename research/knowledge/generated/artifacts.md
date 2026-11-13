@@ -3325,6 +3325,15 @@
 ## [research/experiments/grundy-five-residual-obstruction-20261018/verify.py](../../../research/experiments/grundy-five-residual-obstruction-20261018/verify.py)
 
 - [K0441](../items/K0441-fixed-grundy-five-witness-residual-exclusion.md) (verifier): 整数行列式・全緩和候補列挙
+## [research/experiments/handicap-deficient-witnesses-20261113/output/scan_results.json](../../../research/experiments/handicap-deficient-witnesses-20261113/output/scan_results.json)
+
+- [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) (data): witness座標・独立検証詳細・抵抗記録・制御
+## [research/experiments/handicap-deficient-witnesses-20261113/report.md](../../../research/experiments/handicap-deficient-witnesses-20261113/report.md)
+
+- [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) (proof): 主結果表・抵抗表・候補予想・レジューム
+## [research/experiments/handicap-deficient-witnesses-20261113/scripts/handicap_deficient_machine.ts](../../../research/experiments/handicap-deficient-witnesses-20261113/scripts/handicap_deficient_machine.ts)
+
+- [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) (source): 行capパターン付きハンディキャップ貪欲機（freeリスト保守でのcap再チェック必須という教訓込み）
 ## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
@@ -13718,6 +13727,9 @@
 ## [research/log/2026-11-13-greedy-lower-bounds-2531-3251.md](../../../research/log/2026-11-13-greedy-lower-bounds-2531-3251.md)
 
 - [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (log): 手法・較正（2207/2647）・限界
+## [research/log/2026-11-13-handicap-deficient-witnesses.md](../../../research/log/2026-11-13-handicap-deficient-witnesses.md)
+
+- [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) (log): 発見順・バグ1件・抵抗の経緯
 ## [research/log/2026-11-13-joint-g0-accounting.md](../../../research/log/2026-11-13-joint-g0-accounting.md)
 
 - [K0800](../items/K0800-joint-g0-accounting-w114.md) (log): 実行記録・教訓（1<<32 wraparoundバグ・LAWS→MODS coprime切替）・レジューム

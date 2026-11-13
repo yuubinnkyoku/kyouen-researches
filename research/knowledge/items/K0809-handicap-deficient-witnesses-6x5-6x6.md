@@ -8,7 +8,7 @@ aliases: []
 scope: "6×m整数格子・q∈{5,6}。(6,5) m=20,21 に23石・(6,6) m=16 に29石の極大安全配置（石数<満容量・欠損witness）の実在。独立検証による存在証明であり、不在は主張しない"
 evidence: "行capハンディキャップ貪欲+shake（K0808機のcensus・独立検証ロジックはverbatim）で発見し、census不使用の独立検証（石ペア直線・石3点組外心の全列挙・厳密整数演算）で全witnessが safe+maximal PASS。制御: (6,6) m=15 で29石witness再発見"
 relations:
-- type: extends
+- type: generalizes
   target: K0808
   note: K0808の貪欲では発見できなかった m=20,21（6,5）と m=16（6,6）に行capハンディキャップで到達し、下界 M_{6,5}≥20→22・M_{6,6}≥16→17 を更新
 - type: supports
