@@ -222,7 +222,7 @@ result = {
               'controls reproduce the published baseline/after_batch1/after_batch2 '
               'snapshot values exactly before batch3 is measured',
     'controls': {
-        'baseline': {solved_in_manifest': 638, 'unique_remaining': 7208,
+        'baseline': {'solved_in_manifest': 638, 'unique_remaining': 7208,
                       'sum_cost': 565500, 'reproduced': True},
         'after_batch1': {'solved_in_manifest': 657, 'unique_remaining': 7189,
                          'sum_cost': 564070, 'reproduced': True},
