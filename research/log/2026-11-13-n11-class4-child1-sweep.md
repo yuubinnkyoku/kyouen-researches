@@ -709,3 +709,63 @@ reply 順 wscore 降順（fail-fast）。予算打ち切りは候補ごとの st
 2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
  （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
 3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
+
+
+## 第13セッション（2026-11-14、長期レーン）: bit87 chunkキャンペーン — 4件目のREFUTED（witness m=36・6.18M nodes・10実行）・repo反映
+
+### レジューム実行（第12セッション next 1）
+
+heavy-pending bit=87（mob 49。v14 単体 d10 は第1セッションから 700k で capped・判定なし）を
+chunk 分解で消化した。run 予算 ~590k・chunk cap 300k・chunk 深さ 8・
+reply 順 wscore 降順（fail-fast）。予算打ち切りは候補ごとの state file
+ （kill 表 + done replies・/home/user/b87/state.json）に逐次 flush して厳密に再開
+（再開欠落ゼロ）。winner 応手列挙は root+m の合法手リストから（r===m は構造的に不可能）。
+bit87 の state 初期化は第12セッション log 記載後に実際に実施（root hex 00000000018000003800000080080000）。
+
+### 結果: bit87 は depth 10 で REFUTED（4件目の chunk 反証）
+
+- **witness m=36**: winner 応手 43 個すべての chunk が未capで loss=false →
+  lossAt(root,10)=false。root hex 00000000018000003800000080080000。
+- 総 **6,177,830 nodes / 10実行**（681,914 / 749,509 / 621,891 / 630,314 / 609,968 /
+  686,697 / 648,812 / 605,978 / 603,920 / 338,827）・capped chunk 0・
+  単一chunk最大 213,728・chunk計123（kill 12 / pass 111・log行数はバッチ順
+  13/17/15/16/12/16/12/9/6/7）。
+  kill 表 {0:40, 2:81, 4:28, 7:70, 8:83, 10:67, 11:43, 15:70, 25:37, 28:50, 33:25, 34:50}
+ （全て r≠m）。残り36初手は未走査のまま打ち切り（verdict に不要・記録済み）。
+- witness は13番目の検討初手で発見。**mob-49 帯内でも反証コストは2.6倍開く**
+ （bit32 15.88M vs bit87 6.18M）— per-candidate 見積り必須（既知の教訓を再確認）。
+
+### 検証（全て PASS）
+
+- pilot d6 制御 5,949（キャンペーン冒頭）。
+- **witness 完全被覆**: root+36 の合法応手 43個と done 表が完全一致（欠落0）。
+- root mob 49 再確認（直接列挙）。
+- **決定制御（2独立実行一致）**: kill 3件 (0,40)=80,233・(10,67)=52,102・(25,37)=29,291 と
+  witness pass 2件 (36,70)=11,284・(36,116)=48,463 の fresh 再解を
+  2つの独立実行で実施し node 数まで完全一致。
+- **プロトコル上の相違（記録）**: 本キャンペーンでは per-chunk node log を
+  state に永続化していなかったため、bit80 流の「記録値との照合」が不可。
+  代替として2独立実行間一致で決定論を検証した。以後のキャンペーンは
+  per-chunk log の永続化を必須とする（ledger next に反映済み）。
+
+### 解釈上の注意（変更なし）
+
+- bit87 の REFUTED は「深さ10以内のWIN7の否定」のみ（より深い勝ちはあり得る）。
+  class 4・S2 {59,60}・二石 root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 反映（全て push 後読み戻し確認・1コミット1ファイル・並走なし）
+
+- 351ab120: campaign record output/class4-batch1-bit87-campaign.json
+- d61ef077: ledger JSON（bit87 エントリ追記・next更新: heavy-pending {34}）
+- b5daa30d: audit JSON session13_bit87_chunk_campaign 追記
+- 本コミット: log 第13セッション
+
+### 次回
+
+1. heavy-pending 残り {34}（mob 56・mob-56 帯最初の候補）の chunk キャンペーン。
+   同一プロトコル・応手列挙は root+m 合法手から・**per-chunk node log を state に永続化**。
+   候補は /home/user/b34/state.json で再開（初期化はまだ未実施）。
+2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
+ （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
+3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
