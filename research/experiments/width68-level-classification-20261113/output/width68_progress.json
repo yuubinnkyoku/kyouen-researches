@@ -1,0 +1,43 @@
+{
+ "generated": "2026-11-13",
+ "status": "in_progress",
+ "resume_from": 880,
+ "machine": "research/experiments/width68-level-classification-20261113/scripts/width68_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
+ "machineNote": "K0801 の w=67 完走機と同一構造（verbatim 移植・W=68・窓マスク 68 ビット・ワード数 ceil(w/32) 自動）。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。",
+ "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。次 chunk の from は直前 chunk の lastDone を verbatim で使う（+1 はしない・境界 off-by-one 再発防止）。",
+ "uniqueMasks": 3300,
+ "totalMaximal": 3300,
+ "harnessControl": {
+  "w64_L17": { "unique": 3288, "maximal": 3288, "note": "既往値と完全一致" },
+  "w65_L17": { "unique": 3296, "maximal": 3296, "note": "K0798 と一致" },
+  "w66_L17": { "unique": 3300, "maximal": 3300, "note": "K0799 と一致" },
+  "w67_L17": { "unique": 3300, "maximal": 3300, "note": "K0801 と一致" }
+ },
+ "chunks": [
+  { "chunk": 1, "from": 0, "lastDone": 104, "nodes": 2400000, "wordOps": 245724873, "leaves": 0, "aborted": true, "survivors": 0, "note": "104 mask/2.4M = ~23k/mask（前置帯は w=67 chunk1 の ~10.8k/mask の約2.2倍 — w=68 は軽い帯から重い）" },
+  { "chunk": 2, "from": 104, "lastDone": 297, "nodes": 2400000, "wordOps": 255867318, "leaves": 0, "aborted": true, "survivors": 0, "note": "193 mask/2.4M = ~12.4k/mask（軽い帯・減衰）" },
+  { "chunk": 3, "from": 297, "lastDone": 502, "nodes": 2400000, "wordOps": 258146326, "leaves": 0, "aborted": true, "survivors": 0, "note": "205 mask/2.4M = ~11.7k/mask（軽い帯）" },
+  { "chunk": 4, "from": 502, "lastDone": 724, "nodes": 2400000, "wordOps": 257509173, "leaves": 0, "aborted": true, "survivors": 0, "note": "222 mask/2.4M = ~10.8k/mask（軽い帯・w=67 と同水準に減衰）" },
+  { "chunk": 5, "from": 724, "lastDone": 776, "nodes": 2400000, "wordOps": 229646635, "leaves": 0, "aborted": true, "survivors": 0, "note": "52 mask/2.4M = ~46k/mask（heavy band 入り口 ~770 — 窓位相不变則どおり）" },
+  { "chunk": 6, "from": 776, "lastDone": 788, "nodes": 2400000, "wordOps": 225603695, "leaves": 0, "aborted": true, "survivors": 0, "note": "12 mask/2.4M = ~200k/mask（第一 heavy band 本格化）" },
+  { "chunk": 7, "from": 789, "lastDone": 807, "nodes": 2400000, "wordOps": 227339453, "leaves": 0, "aborted": true, "survivors": 0, "note": "18 mask/2.4M = ~133k/mask（heavy band・非単調）〔from=789 は境界 off-by-one → mask 788 は gapCertifications で個別証明〕" },
+  { "chunk": 8, "from": 808, "lastDone": 822, "nodes": 2400000, "wordOps": 226643213, "leaves": 0, "aborted": true, "survivors": 0, "note": "14 mask/2.4M = ~171k/mask（heavy band）〔from=808 は境界 off-by-one → mask 807 は gapCertifications で個別証明〕" },
+  { "chunk": 9, "from": 822, "lastDone": 840, "nodes": 2400000, "wordOps": 230319356, "leaves": 0, "aborted": true, "survivors": 0, "note": "18 mask/2.4M = ~133k/mask（heavy band）" },
+  { "chunk": 10, "from": 840, "lastDone": 861, "nodes": 2400000, "wordOps": 232668079, "leaves": 0, "aborted": true, "survivors": 0, "note": "21 mask/2.4M = ~114k/mask（heavy band）" },
+  { "chunk": 11, "from": 861, "lastDone": 880, "nodes": 2400000, "wordOps": 229561779, "leaves": 0, "aborted": true, "survivors": 0, "note": "19 mask/2.4M = ~126k/mask（heavy band）" }
+ ],
+ "gapCertifications": [
+  { "mask": 788, "nodes": 314127, "leaves": 0, "survivors": 0, "note": "chunk6→7 境界の off-by-one（lastDone=788 に対し chunk7 を from=789 で実行）を classifyOne 単一mask完走機で個別証明" },
+  { "mask": 807, "nodes": 273404, "leaves": 0, "survivors": 0, "note": "chunk7→8 境界の off-by-one（lastDone=807 に対し chunk8 を from=808 で実行）を classifyOne で個別証明" }
+ ],
+ "totals": {
+  "masksDone": 880,
+  "nodes": 24000000,
+  "gapCertNodes": 587531,
+  "leaves": 0,
+  "survivors": 0,
+  "phase2Masks": 0
+ },
+ "estimate": "前置帯は w=67 の約2.2倍（chunk1 ~23k/mask）。第一 heavy band（~770..999 見込み）は ~114..200k/mask・ここまで 24M+0.6M nodes で 880/3,300 = 26.7%。w=65..67 パターン（~1000 で沈み込み→~1190 で第二帯→軽い帯で完走）なら総計 110..170M nodes・複数セッション必須。",
+ "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 134）⟹ 完走なら P(68) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。昇格先 K 番号は K0802（要再確認）。現在は部分進行（880/3,300 mask = 26.7%）であり P(68) はまだ確定しない。"
+}

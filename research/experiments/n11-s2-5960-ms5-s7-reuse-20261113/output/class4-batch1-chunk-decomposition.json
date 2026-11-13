@@ -1,0 +1,413 @@
+{
+  "schema": "n11-class4-batch1-chunk-decomposition-v1",
+  "date": "2026-11-13",
+  "root_s5": "00000000020000003800000080000000",
+  "s6_child": "00000000020000003800000080080000",
+  "method": {
+    "decomposition": "lossAt(root,10)=false <=> EXISTS loser move m: FOR ALL winner replies r: lossAt(root+m+r,8)=false (pass chunks); lossAt(root,10)=true <=> FOR ALL m EXISTS r: lossAt(root+m+r,8)=true (kill chunks)",
+    "depth_ladder": "10->chunk depth 8 (10-2); recursive 8->6->4 for deeper cuts if a chunk caps",
+    "unit_of_work": "one chunk = one independent uncapped depth-bounded engine proof; resume = skip recorded chunks; capped chunks stay pending and prove nothing",
+    "engine": "v15 verbatim (scripts/class4_child1_sweep_engine.ts), inlined in scripts/class4_child1_chunk_prover.ts",
+    "run_budget": "sandbox: <=~750k nodes and <=60s per run; chunk cap 300k; reply order wscore-desc (engine winAt ordering, fail-fast for kills)"
+  },
+  "bit85": {
+    "candidate": "bit=85 (mob 44), v14 d10 refutation 132,921 nodes was standing evidence; v15 monolithic d10 capped at 950k",
+    "controls": {
+      "d6_fresh": {
+        "loss": false,
+        "nodes": 13820,
+        "range": [
+          13,
+          13
+        ],
+        "note": "matches published v15 control exactly"
+      },
+      "d8_fresh": {
+        "loss": false,
+        "nodes": 172806,
+        "range": [
+          13,
+          15
+        ],
+        "note": "new v15 measurement (single-pass, default ordering)"
+      },
+      "ctl_A_isomorphism": {
+        "description": "d8-level decomposition via direct-d8 witness m=0: 40 replies, chunks lossAt(base+[0,r],6)",
+        "all_chunks_pass": true,
+        "total_nodes": 172804,
+        "direct_d8_nodes": 172806,
+        "note": "delta 2 = the root-level nodes; decomposition is isomorphic to the direct search when run in one process"
+      },
+      "ctl_B_determinism": {
+        "chunk": [
+          2,
+          66
+        ],
+        "fresh_resolve_nodes": 58292,
+        "loss": false,
+        "identical_to_batch3": true
+      }
+    },
+    "d10_verdict": "REFUTED in v15 units — lossAt(root,10)=false via witness m=2",
+    "witness_note": "the d8 witness (m=0) is NOT the d10 witness: m=0 is killed by reply r=18 (loss=true, 43,513 nodes at depth 8). Witness identification must be per-depth.",
+    "m0_attempt": {
+      "chunks_solved": 11,
+      "killed_by": {
+        "r": 18,
+        "nodes": 43513,
+        "loss": true
+      },
+      "batch_nodes": 376581
+    },
+    "m2_chunks": [
+      {
+        "r": 72,
+        "nodes": 1128
+      },
+      {
+        "r": 40,
+        "nodes": 2980
+      },
+      {
+        "r": 70,
+        "nodes": 19800
+      },
+      {
+        "r": 48,
+        "nodes": 18146
+      },
+      {
+        "r": 84,
+        "nodes": 17134
+      },
+      {
+        "r": 82,
+        "nodes": 11772
+      },
+      {
+        "r": 28,
+        "nodes": 87394
+      },
+      {
+        "r": 36,
+        "nodes": 159438
+      },
+      {
+        "r": 42,
+        "nodes": 4842
+      },
+      {
+        "r": 8,
+        "nodes": 10434
+      },
+      {
+        "r": 18,
+        "nodes": 22958
+      },
+      {
+        "r": 32,
+        "nodes": 5412
+      },
+      {
+        "r": 94,
+        "nodes": 19058
+      },
+      {
+        "r": 10,
+        "nodes": 13410
+      },
+      {
+        "r": 54,
+        "nodes": 20309
+      },
+      {
+        "r": 92,
+        "nodes": 19432
+      },
+      {
+        "r": 93,
+        "nodes": 12206
+      },
+      {
+        "r": 3,
+        "nodes": 99878
+      },
+      {
+        "r": 6,
+        "nodes": 35706
+      },
+      {
+        "r": 67,
+        "nodes": 19533
+      },
+      {
+        "r": 88,
+        "nodes": 75057
+      },
+      {
+        "r": 0,
+        "nodes": 69288
+      },
+      {
+        "r": 4,
+        "nodes": 25795
+      },
+      {
+        "r": 34,
+        "nodes": 6816
+      },
+      {
+        "r": 66,
+        "nodes": 58292
+      },
+      {
+        "r": 76,
+        "nodes": 68832
+      },
+      {
+        "r": 102,
+        "nodes": 14740
+      },
+      {
+        "r": 105,
+        "nodes": 32194
+      },
+      {
+        "r": 106,
+        "nodes": 82682
+      },
+      {
+        "r": 108,
+        "nodes": 3658
+      },
+      {
+        "r": 109,
+        "nodes": 46169
+      },
+      {
+        "r": 110,
+        "nodes": 32390
+      },
+      {
+        "r": 112,
+        "nodes": 10538
+      },
+      {
+        "r": 113,
+        "nodes": 16482
+      },
+      {
+        "r": 33,
+        "nodes": 18258
+      },
+      {
+        "r": 45,
+        "nodes": 16259
+      },
+      {
+        "r": 114,
+        "nodes": 12472
+      },
+      {
+        "r": 117,
+        "nodes": 60403
+      },
+      {
+        "r": 118,
+        "nodes": 25036
+      },
+      {
+        "r": 120,
+        "nodes": 13178
+      },
+      {
+        "r": 44,
+        "nodes": 15798
+      }
+    ],
+    "m2_reply_count": 40,
+    "totals": {
+      "nodes": 1701951,
+      "runs": 3,
+      "batch_nodes": [
+        376581,
+        765378,
+        559992
+      ],
+      "capped_chunks": 0
+    },
+    "comparison": "monolithic v15 d10 capped at 950k with no verdict; the decomposition closed the same claim at 1.70M nodes over 3 resumable runs"
+  },
+  "bit7": {
+    "candidate": "bit=7 (mob 50), heavy-pending: v14 capped at 506k with no verdict; v15 never attempted at full budget",
+    "root_mob": 50,
+    "d10_verdict": "WIN7 CANDIDATE WITHIN DEPTH 10 — lossAt(root,10)=true: ALL 50 loser first-moves killed",
+    "kill_table": {
+      "0": 114,
+      "8": 21,
+      "10": 81,
+      "15": 40,
+      "18": 40,
+      "21": 40,
+      "28": 80,
+      "32": 81,
+      "33": 18,
+      "34": 83,
+      "38": 70,
+      "40": 18,
+      "44": 81,
+      "45": 28,
+      "50": 18,
+      "54": 8,
+      "66": 18,
+      "67": 80,
+      "70": 38,
+      "72": 88,
+      "75": 50,
+      "76": 40,
+      "78": 70,
+      "80": 28,
+      "81": 32,
+      "82": 50,
+      "83": 8,
+      "84": 40,
+      "86": 72,
+      "87": 70,
+      "88": 72,
+      "90": 8,
+      "91": 8,
+      "92": 50,
+      "93": 8,
+      "94": 28,
+      "102": 90,
+      "104": 40,
+      "105": 18,
+      "106": 81,
+      "108": 18,
+      "109": 70,
+      "110": 8,
+      "112": 82,
+      "113": 81,
+      "114": 38,
+      "116": 8,
+      "117": 8,
+      "118": 18,
+      "120": 28
+    },
+    "kill_chunk_nodes": {
+      "0": 14123,
+      "8": 34019,
+      "10": 25695,
+      "15": 31695,
+      "18": 5505,
+      "21": 32929,
+      "28": 14597,
+      "32": 7557,
+      "33": 17649,
+      "34": 4510,
+      "38": 54273,
+      "40": 5505,
+      "44": 38129,
+      "45": 13789,
+      "50": 9949,
+      "54": 48019,
+      "66": 5771,
+      "67": 23785,
+      "70": 54273,
+      "72": 9895,
+      "75": 24279,
+      "76": 24439,
+      "78": 7315,
+      "80": 14597,
+      "81": 7557,
+      "82": 17423,
+      "83": 48425,
+      "84": 14233,
+      "86": 6735,
+      "87": 41705,
+      "88": 9895,
+      "90": 63043,
+      "91": 62168,
+      "92": 23343,
+      "93": 55603,
+      "94": 4615,
+      "102": 14875,
+      "104": 14947,
+      "105": 8345,
+      "106": 16903,
+      "108": 3091,
+      "109": 31739,
+      "110": 124166,
+      "112": 41899,
+      "113": 15751,
+      "114": 35597,
+      "116": 62345,
+      "117": 28697,
+      "118": 10543,
+      "120": 21687
+    },
+    "totals": {
+      "nodes": 4156721,
+      "runs": 6,
+      "batch_nodes": [
+        723573,
+        705439,
+        708483,
+        704147,
+        712062,
+        603417
+      ],
+      "capped_chunks": 0
+    },
+    "verification": {
+      "pilot_d6_control": {
+        "loss": false,
+        "nodes": 5949,
+        "note": "reproduced in the same run as the kill re-solves"
+      },
+      "kill_chunk_fresh_resolves": [
+        {
+          "m": 0,
+          "r": 114,
+          "nodes": 14123,
+          "match": true
+        },
+        {
+          "m": 120,
+          "r": 28,
+          "nodes": 21687,
+          "match": true
+        },
+        {
+          "m": 110,
+          "r": 8,
+          "nodes": 124166,
+          "match": true
+        }
+      ],
+      "root_enumeration": {
+        "mob": 50,
+        "n_moves": 50,
+        "all_covered_by_kill_table": true,
+        "moves_match_table_exactly": true
+      }
+    },
+    "observed_terminal_stone_range": [
+      13,
+      17
+    ],
+    "orientation": "root mover = loser side; winner = the 7th-stone player (winner_parity=1); verdict = win forced within 10 plies against every defense"
+  },
+  "interpretation_guard": [
+    "verdicts are WIN7-within-depth-10 / refutation-within-depth-10 under the v15 engine rules (validated against the repo verifier conventions by the published controls); the certificate rebuild and independent verifier run are pending",
+    "bit=7 WIN7 candidate status does not by itself close class 4, S2 {59,60}, the two-stone root {49,60} or the 11x11 empty board",
+    "11x11 empty board and two-stone root {49,60} remain UNKNOWN",
+    "capped runs prove nothing either way; all chunks recorded here completed uncapped",
+    "node counts are v15 units and non-comparable with v14 numbers"
+  ],
+  "next": [
+    "1) certificate rebuild for bit=7: extract the winning strategy tree chunk-by-chunk (winner moves at depths 1,3,5,7,9), serialize as n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS with root <hex>, verify with the verify_five_terminal_loss7.py copy adapted to winner_parity=1, deflate+b64, then class4-batch1-certificates push",
+    "2) apply the chunk prover to heavy-pending {25,32,40,80,87,34} and the unprobed candidates (one candidate per multi-run campaign, resuming per chunk)",
+    "3) keep the d8-witness != d10-witness lesson: never reuse a shallower witness without re-verifying its chunk set at the target depth"
+  ]
+}

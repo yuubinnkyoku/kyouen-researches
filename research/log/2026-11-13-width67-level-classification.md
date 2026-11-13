@@ -1,3 +1,4 @@
+successfully downloaded text file (SHA: 307eab1b272c55ebb525315ba7a3b1730088f89b)
 successfully downloaded text file (SHA: 260023327f7a969dedf87d8d2f2af84a955c4bfe)successfully downloaded text file (SHA: 8f0c49d3f914b3b7056295961e5ab05397b6f5a8)successfully downloaded text file (SHA: 33e7c176f6ca46bfc37d728c9d472ae17300d8af)successfully downloaded text file (SHA: fecb68844b9760fbf369d5b96e8c4ca86b1649f5)# 2026-11-13 高速レーン: w=67 キャンペーン開始（K0799 P(66)=32 の直接続編）
 
 K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 決定に必要な
@@ -146,5 +147,39 @@ K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 
    （cap 2.4M/chunk・1実行1〜2チャンク・第二 heavy band 終点 ~1330± を注視）。
 2. 完走時は K0801（P(67)=32）に昇格・results/fixed-width/ 追従。
 3. 次の空き K 番号: **K0801**。
+
+11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
+
+## 第6セッション（chunks 24-31・キャンペーン完走 → P(67)=32 確定・K0801）
+
+1. **chunks 24-31**: mask 1320..3,299 を 8 チャンクで完了し**全 3,300 maximal mask
+   走査終了**。chunk24: 1320→1662（**342 mask/2.4M = ~7.0k/mask・第二 heavy band は
+   1320 で終了**）・chunk25: 1662→1954（~8.2k）・chunk26: 1954→2107（~15.7k・
+   軽い帯内の中間バンプ）・chunk27: 2107→2393（~8.4k）・chunk28: 2393→2620（~10.6k）・
+   chunk29: 2620→2952（~7.2k）・chunk30: 2952→3140（~12.8k）・
+   **chunk31: 3140→3300 完走（160 mask・1,519,651 nodes・capped なし・leaves=0）**。
+   本実行合計 18,319,651 nodes・キャンペーン総計 **78,319,651 nodes
+   （60,000,000〔chunks 1-23〕+18,319,651）・leaves=0・生残0・phase2 必要 mask 0件**。
+2. **P(67)=32（等号付き・全称）確定・K0801 昇格**: level 17 全滅 + K0797 会計
+   （w ≤ 84 有効）+ 2210 円下界 32 点（v-span 94 ≤ 132）。
+   **P(w) は全幅 w=6..67 で決定済み**（32 プラトー 49..67）・
+   **level 17 復活点は (67, 83]**。
+3. **構造観察**: 第二 heavy band 終点は 1320 で右肩上がり則
+   1302（w=65）→1313（w=66）→1320（w=67）を維持。第一帯入り口は w=66 の約 3 倍
+   （~343k/mask）で総ノードは ×1.43（成長則 ~1.35 をやや上回る・第一帯加重の反映）。
+   heavy band の開始位置（~770..772）と窓位相は法 9×11 構造で決まり
+   終点のみ右へずれるという観察をさらに支持。
+4. 反映: progress JSON 完走化（b1a9a12a・resume_from=3300・status=complete）・
+   script CFG.from=3300 完走注記（56d88ae9）・K0801 item（592656ff）・
+   本log・results/fixed-width/ 追従。反映前 HEAD d3263dce 再取得（並走なし・
+   K0801 は items 実参照で空きを確認済み）。
+
+## レジューム（次回の実行）
+
+1. **w=68 キャンペーン候補**（同一機の W=68 版・unique/maximal 要再計測・
+   推定 ~105M nodes・成長則 ×1.35..1.43・複数セッション必須）。
+   完走時は K0802〔P(68)=32〕+results/fixed-width/ 追従。
+2. g3形size≥29非合同式手法（w≥85の会計の壁）・(10⁷,10⁸]34点帯掃引・σ₁₇ は残置。
+3. 次の空き K 番号: **K0802**。
 
 11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。

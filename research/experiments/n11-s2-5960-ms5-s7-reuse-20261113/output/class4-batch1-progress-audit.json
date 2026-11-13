@@ -422,4 +422,27 @@
     },
     "next": "1) run scripts/class4_child1_runner.ts on external compute (start with heavy-pending {7,25,32,40,80,87}, then mob-56 band 34(also re-try externally),54,88,102,...); collect JSONL and fold verdicts into this audit; 2) certificate-chunked decomposition design remains the fallback if external compute is unavailable; 3) win discovery: rebuild certificate, verify with repo verifier (verify_five_terminal_loss7.py copy, winner_parity=1), deflate+b64, then class4-batch1-certificates push; 4) capped runs prove nothing either way — do not record them as refutations"
   }
+,
+  "session6_chunk_decomposition": {
+    "date": "2026-11-13",
+    "trigger": "no external compute available this session; session5 next item 2 (certificate-chunked decomposition) executed in-sandbox",
+    "method": {
+      "decomposition": "lossAt(root,10)=false <=> EXISTS loser m: FOR ALL winner r: lossAt(root+m+r,8)=false; lossAt(root,10)=true <=> FOR ALL m EXISTS r: lossAt(root+m+r,8)=true",
+      "unit_of_work": "one chunk = one independent uncapped depth-8 engine proof; resumable per chunk; capped chunks stay pending (unlike the monolithic 950k grind)",
+      "script": "scripts/class4_child1_chunk_prover.ts (engine v15 inlined verbatim)",
+      "ledger": "output/class4-batch1-chunk-decomposition.json"
+    },
+    "bit85": {
+      "verdict": "REFUTED at d10 in v15 units (loss=false, witness m=2, all 40 reply chunks uncapped pass; 1,701,951 nodes over 3 runs)",
+      "controls": "d6 fresh 13,820 (published control exact); d8 fresh 172,806 (new); ctl A: d8-decomposition via m=0 totals 172,804 vs direct 172,806 (isomorphic within 2 root nodes); ctl B: chunk (2,66) fresh re-solve 58,292 identical",
+      "lesson": "the d8 witness (m=0) is NOT the d10 witness (m=0 killed by r=18): witness identification must be per-depth"
+    },
+    "bit7": {
+      "verdict": "WIN7 CANDIDATE WITHIN DEPTH 10: lossAt(root,10)=true — all 50 loser first-moves killed by uncapped d8 kill chunks (4,156,721 nodes over 6 runs; kill table in the ledger)",
+      "verification": "pilot d6 5,949 reproduced; 3 kill chunks fresh-re-solved to identical node counts; root enumeration (50 moves) covered exactly by the kill table",
+      "status": "certificate rebuild pending (n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS, winner_parity=1, repo verifier copy, deflate+b64, class4-batch1-certificates push)"
+    },
+    "consequence": "the d10 frontier is no longer sandbox-blocked: heavy-pending {25,32,40,80,87,34} and unprobed candidates are closable by per-chunk multi-run campaigns; capped monolithic runs remain non-evidence",
+    "next": "1) bit=7 certificate rebuild + independent verifier run + certificates push; 2) chunk campaigns for heavy-pending {25,32,40,80,87,34} then unprobed candidates; 3) on any further WIN discovery, same certificate protocol"
+  }
 }
