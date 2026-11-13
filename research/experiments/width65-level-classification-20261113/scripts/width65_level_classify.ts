@@ -8,9 +8,9 @@
 // よって level 17 全滅 ⟹ d+s ≤ 16 ⟹ P(65) ≤ 32 が標準形掃引完走で確定する。
 // 下界: 2210 円の全 32 点（v-span 94 ≤ 2·64）→ 完走なら P(65) = 32（等号付き）。
 //
-// 進捗（2026-11-13 本セッション）: mask 0..840 完了（lastDone=841）・
-// ノード計 9.6M（8チャンク×1.2M・w26制御別）・leaves=0・生残0。重い帯は mask ~772 から始まり
-// 58k..130k nodes/mask（w64 より重い・heavy band の延長が予想より重い）。
+// 進捗（2026-11-13 第3セッション末）: mask 0..974 完了（lastDone=975）・
+// ノード計 21.6M（18チャンク×1.2M・w26制御別）・leaves=0・生残0。重い帯は mask ~772 以降
+// 沈まず 71k..100k nodes/mask でほぼ平坦（総ノード推定 ~200..250M に上方修正）。
 // 制御: w=26 L=12 は S* ちょうど1生残（K0782..K0794 と一致・初回実行で確認済み）。
 //
 // レジューム: CFG.from を直前の lastDone に更新して再実行（チャンク境界は
@@ -107,7 +107,7 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 65, L: 17, from: 841, cap: 1200000, chunksPerRun: 2, control26: false };
+const CFG = { w: 65, L: 17, from: 975, cap: 1200000, chunksPerRun: 2, control26: false };
 async function main() {
   const out: any = { generated: "2026-11-13", chunks: [] };
   let from = CFG.from;
