@@ -3459,6 +3459,15 @@
 ## [research/experiments/macroscopic-spider-arm-20261102/verify.py](../../../research/experiments/macroscopic-spider-arm-20261102/verify.py)
 
 - [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) (verifier): 独立二値語・グラフ削除全列挙・漸化式と長枝モーメントの照合
+## [research/experiments/mask-census-closed-form-20261114/output/mask_census_closed_form_output.json](../../../research/experiments/mask-census-closed-form-20261114/output/mask_census_closed_form_output.json)
+
+- [K0805](../items/K0805-mask-census-closed-form.md) (data): 完全表 w=17..98・changePoints（交叉統計の増分表）・s17 ヒストグラム・小パターン参入窓・制御照合結果
+## [research/experiments/mask-census-closed-form-20261114/report.md](../../../research/experiments/mask-census-closed-form-20261114/report.md)
+
+- [K0805](../items/K0805-mask-census-closed-form.md) (proof): 定理・証明骨子・制御・限定の本文
+## [research/experiments/mask-census-closed-form-20261114/scripts/mask_census_closed_form.ts](../../../research/experiments/mask-census-closed-form-20261114/scripts/mask_census_closed_form.ts)
+
+- [K0805](../items/K0805-mask-census-closed-form.md) (verifier): 交叉統計 + prefix 単射確認 + 区間支配判定による全幅 table 計算・published 制御点の内部 assert 付き依存なし単一ファイル
 ## [research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/output/audit.json](../../../research/experiments/matched-mobility-height-unbounded-grundy-gap-20261108/output/audit.json)
 
 - [K0701](../items/K0701-same-board-mobility-height-unbounded-grundy-gap.md) (certificate): 基本対k1..3・148安全状態、同一10点整数盤の同石数二局面
@@ -12773,6 +12782,15 @@
 ## [research/experiments/six-row-q7-deficient-20261112/scripts/six_row_one_deficient_runner.ts](../../../research/experiments/six-row-q7-deficient-20261112/scripts/six_row_one_deficient_runner.ts)
 
 - [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) (source): 幅6 1行欠損機械（probe + census verify + 独立検証。1実行1エントリの手順は冒頭）
+## [research/experiments/six-row-q7-stabilization-upper-bound-20261113/output/six_row_q7_upper_bound.json](../../../research/experiments/six-row-q7-stabilization-upper-bound-20261113/output/six_row_q7_upper_bound.json)
+
+- [K0806](../items/K0806-six-row-q7-stabilization-bounds.md) (data): 全検査結果・argmax・K0024再計算・U_{6,q}補助表
+## [research/experiments/six-row-q7-stabilization-upper-bound-20261113/report.md](../../../research/experiments/six-row-q7-stabilization-upper-bound-20261113/report.md)
+
+- [K0806](../items/K0806-six-row-q7-stabilization-bounds.md) (proof): 代入の詳細・検証・限界
+## [research/experiments/six-row-q7-stabilization-upper-bound-20261113/scripts/six_row_q7_upper_bound.py](../../../research/experiments/six-row-q7-stabilization-upper-bound-20261113/scripts/six_row_q7_upper_bound.py)
+
+- [K0806](../items/K0806-six-row-q7-stabilization-bounds.md) (verifier): K0318 verbatim関数のインライン・3独立実装一致・制御再現・w=6小盤監査
 ## [research/experiments/six-row-q7-width6-20261112/output/six_row_q7_census_witness.json](../../../research/experiments/six-row-q7-width6-20261112/output/six_row_q7_census_witness.json)
 
 - [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) (data): census表・span分布・witness 7件・検証結果
@@ -13314,6 +13332,18 @@
 ## [research/experiments/width68-level-classification-20261113/scripts/width68_level_classify.ts](../../../research/experiments/width68-level-classification-20261113/scripts/width68_level_classify.ts)
 
 - [K0802](../items/K0802-width68-pw32-plateau-completion.md) (verifier): w=68用REST6 2フェーズstreaming分類機（決定的・依存なし・完走済みCFG.from=3300）
+## [research/experiments/width69-84-sweep-20261114/output/dual_run_independent_sweep.json](../../../research/experiments/width69-84-sweep-20261114/output/dual_run_independent_sweep.json)
+
+- [K0804](../items/K0804-width69-82-pw32-plateau.md) (data): 独立実装による二重走査記録（clean単一連続ノード総数・14幅uniqueMasks一致表・回帰制御）
+## [research/experiments/width69-84-sweep-20261114/output/state_w69.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w69.json)
+
+- [K0804](../items/K0804-width69-82-pw32-plateau.md) (data): w=69完走状態（2.4M capプロトコル・totalNodes 122,980,751・leaves=0・生残0）
+## [research/experiments/width69-84-sweep-20261114/output/state_w82.json](../../../research/experiments/width69-84-sweep-20261114/output/state_w82.json)
+
+- [K0804](../items/K0804-width69-82-pw32-plateau.md) (data): w=82完走状態（2.4M capプロトコル・totalNodes 1,949,902,072・capEsc 57・leaves=0・生残0）。w70..81のstate_w70..w81.jsonも同形式
+## [research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs](../../../research/experiments/width69-84-sweep-20261114/scripts/width_sweep.mjs)
+
+- [K0804](../items/K0804-width69-82-pw32-plateau.md) (verifier): パラメータ化REST6掃引機（per-chunk状態永続化・停滞検出cap拡張・w=83/84正制御対応をheaderに明記）
 ## [research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json](../../../research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json)
 
 - [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) (data): 全制御の実行結果
@@ -13706,6 +13736,9 @@
 ## [research/log/2026-11-13-width68-level-classification.md](../../../research/log/2026-11-13-width68-level-classification.md)
 
 - [K0802](../items/K0802-width68-pw32-plateau-completion.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-14-width69-82-dual-run-integration.md](../../../research/log/2026-11-14-width69-82-dual-run-integration.md)
+
+- [K0804](../items/K0804-width69-82-pw32-plateau.md) (log): 判断・教訓・レジューム
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

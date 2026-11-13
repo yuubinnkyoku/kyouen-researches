@@ -359,6 +359,7 @@
 - ← depends_on [K0339](../items/K0339-multiplayer-terminal-modulus.md): 固定幅q点版の全r系にのみ使う既存の満容量定理
 - ← depends_on [K0351](../items/K0351-width-three-q4-exact-stabilization.md): 固定幅q点版の一般的な満容量安定化枠組み
 - ← depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): より弱い初期上界T=2965は参考
+- ← depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 従来の暗黙の一般上界T_{6,7}=10,101（402はその25分の1）
 
 ## [K0025](../items/K0025-q-above-two-width-all-lengths.md) q>2wでは全長の固定幅盤が分離し強解決
 
@@ -1706,6 +1707,7 @@
 - ← depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): 初期証明の無界末尾と固定幅上界の文脈
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 初期一般上界200とcurve packingの文脈
 - ← depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): 曲線充填上界への(5,6)代入による一般上界249
+- ← depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 曲線充填上界U_{w,q}への(6,7)代入による初の明示的上界402
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -4429,6 +4431,7 @@
 - → depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md): 5×19では同クラスが不在（全極大安全配置が満容量30石）— 本項目はその幅6版が6×19では在ることを示す対比
 - → depends_on [K0747](../items/K0747-five-row-m19-5row-deficient-nonexistence.md): 移植元のmulti_deficient_runner機械（アルゴリズム・探索順・計数を同一移植）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 幅6安定化長M_{6,7}は m≥20 の候補に絞られた（6×19では35石極大安全配置が存在するため）
+- ← depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 下界20は6×13/16/19の35石1行欠損極大安全配置の実在による
 
 ## [K0762](../items/K0762-s2-5960-cert73-k0675-already-solved.md) S2 {59,60} 証明書{73}のS6 worklistはK0675スイープで全て認定済み（新規S6計算ゼロ・残り39,507 orbit）・30証明書閉鎖ロードマップ
 
@@ -4635,6 +4638,7 @@
 - ← supports [K0800](../items/K0800-joint-g0-accounting-w114.md): 会計上の正当化範囲がw≤114に拡大（level 17復活点下界83を超えてカバー・P(w)実務上の寄与はw≤82）
 - ← supports [K0801](../items/K0801-width67-pw32-plateau-completion.md): level 17復活点を (66,83] から (67,83] に狭窄
 - ← supports [K0802](../items/K0802-width68-pw32-plateau-completion.md): level 17復活点を (67,83] から (68,83] に狭窄
+- ← supports [K0804](../items/K0804-width69-82-pw32-plateau.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4713,6 +4717,7 @@
 - ← depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): K0794レジューム(1)への回答。会計有効範囲をw≤64からw≤84に延長し、『g4が唯一の壁』の帰結を訂正（真の壁はg3）
 - ← depends_on [K0798](../items/K0798-width65-pw32-plateau-completion.md): w=64完了機の直接拡張（3ワード化）。32プラトーを w=64 から w=65 へ延長
 - ← supports [K0803](../items/K0803-maximal-mask-plateau-universal.md): level 17 掃引キャンペーンの mask ワークロードが w=66 以降常に 3,300 であることの理論的裏付け（コスト増は per-mask 加重のみ・前処理は w=99 の 1 回で定数化可能）
+- ← supports [K0805](../items/K0805-mask-census-closed-form.md): level 17 掃引キャンペーンの mask ワークロードが全 w≧66 で 3,300（K0803 は w≧99 とサンプル点のみをカバー → 全 w≧66 に拡張完了）
 
 ## [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) 固定幅盤のP(w)とM_{w,q}の横断表 — 合成分離帯 M_{w,q}=q−1（q≥max(P(w),w)+1・w=6..64）の統一とresults/統合
 
@@ -4740,6 +4745,7 @@
 - ← depends_on [K0800](../items/K0800-joint-g0-accounting-w114.md): K0797レジューム(2)「g3 size≥29を切る非合同式手法」への回答。単一法フロンティアw≤84をjoint合同証明書でw≤114に延伸し「合同式以外の手法が必要」限界記述を訂正
 - ← depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): g0会計のw=67有効性（拡張法33法・w≦84）・非標準形前提の正当化
 - ← depends_on [K0802](../items/K0802-width68-pw32-plateau-completion.md): g0会計のw=68有効性（拡張法33法・w≦84）・非標準形前提の正当化
+- ← depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): g0会計のw=69..82有効性（拡張法33法・w≦84）・非標準形前提の正当化
 
 ## [K0798](../items/K0798-width65-pw32-plateau-completion.md) 幅65の円点数の完全決定 P(65)=32 — 32点プラトーがw=49..65に拡大・P(w)は全幅6..65で決定済み・level 17の復活点は(65,83]・REST6 2フェーズ機の完走検証
 
@@ -4779,6 +4785,7 @@
 - → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=68有効性（拡張法33法・w≦84）・非標準形前提の正当化
 - → depends_on [K0803](../items/K0803-maximal-mask-plateau-universal.md): maximal mask数3,300はw=66..132の有限測定（本項の3,300と整合）
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (67,83] から (68,83] に狭窄
+- ← depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): 完走機（REST6 2フェーズ）のパラメータ化版。32プラトーを w=68 から w=82 まで一括延長
 
 ## [K0803](../items/K0803-maximal-mask-plateau-universal.md) maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（周期性+順序同型+popcountギャップ+支配補題の全称証明・unique=3,630は99≦w<198に限定・level 17 掃引ワークロードはw=66以降不変）
 
@@ -4786,3 +4793,25 @@
 - → depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): w=67 完走（3,300）・saturation 実験の制御値の供給源
 - → supports [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): level 17 掃引キャンペーンの mask ワークロードが w=66 以降常に 3,300 であることの理論的裏付け（コスト増は per-mask 加重のみ・前処理は w=99 の 1 回で定数化可能）
 - ← depends_on [K0802](../items/K0802-width68-pw32-plateau-completion.md): maximal mask数3,300はw=66..132の有限測定（本項の3,300と整合）
+- ← depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): maximal mask数3,300（全幅で一致・小パターンはuniqueにのみ参入）
+- ← depends_on [K0805](../items/K0805-mask-census-closed-form.md): パターン構造（3,994 相違・popcount ギャップ・小パターン支配補題）と w≧99 の包含⟺P⊆P' の源泉。本項目は K0803 の 66..98 有限測定を全幅厳密化
+
+## [K0804](../items/K0804-width69-82-pw32-plateau.md) 幅69..82の円点数の完全決定 P(w)=32（全14幅） — 32点プラトーがw=49..82に拡大・P(w)は全幅6..82で決定済み・level 17の復活点はちょうど(82,83]・2独立REST6実装による二重走査（全幅leaves=0・生残0・uniqueMasks 14/14完全一致）
+
+- → depends_on [K0802](../items/K0802-width68-pw32-plateau-completion.md): 完走機（REST6 2フェーズ）のパラメータ化版。32プラトーを w=68 から w=82 まで一括延長
+- → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=69..82有効性（拡張法33法・w≦84）・非標準形前提の正当化
+- → depends_on [K0803](../items/K0803-maximal-mask-plateau-universal.md): maximal mask数3,300（全幅で一致・小パターンはuniqueにのみ参入）
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
+- ← depends_on [K0805](../items/K0805-mask-census-closed-form.md): dual-run unique（w=69..82・14 点）が閉形式の制御値
+
+## [K0805](../items/K0805-mask-census-closed-form.md) マスクセンサスの全幅閉形式決定 — level 17 窓マスク掃引の (unique(w), maximal(w)) が交叉統計と区間支配判定で全 w≧17 に決定（unique 3630 到達は w=96 が鋭い・初出現 w=37・maximal=3300 は全 w≧66 で厳密・小パターン参入窓 265..286/309..363/529..561）
+
+- → depends_on [K0803](../items/K0803-maximal-mask-plateau-universal.md): パターン構造（3,994 相違・popcount ギャップ・小パターン支配補題）と w≧99 の包含⟺P⊆P' の源泉。本項目は K0803 の 66..98 有限測定を全幅厳密化
+- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): dual-run unique（w=69..82・14 点）が閉形式の制御値
+- → supports [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): level 17 掃引キャンペーンの mask ワークロードが全 w≧66 で 3,300（K0803 は w≧99 とサンプル点のみをカバー → 全 w≧66 に拡張完了）
+
+## [K0806](../items/K0806-six-row-q7-stabilization-bounds.md) 6×m・q=7の満容量安定化長は20以上402以下
+
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 曲線充填上界U_{w,q}への(6,7)代入による初の明示的上界402
+- → depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 下界20は6×13/16/19の35石1行欠損極大安全配置の実在による
+- → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 従来の暗黙の一般上界T_{6,7}=10,101（402はその25分の1）
