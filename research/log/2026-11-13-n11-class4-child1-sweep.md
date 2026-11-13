@@ -305,3 +305,82 @@ d10 での効果は未検証（bit95 close-AND >756k capped で有意差未確�
 
 - 11x11 空盤・二石 root {49,60}・S2 {59,60} はいずれも **UNKNOWN**。
 - capped 実行（950k 含む）はいずれの方向にも何も証明しない。
+
+## 第6セッション（2026-11-13、長期レーン）: certificate-chunked decomposition の設計・検証・実行 — bit85 の d10 反証を v15 単位で再現、bit7 が d10内 WIN7 候補（全50初手 kill）
+
+### レジューム実行（第5セッション next 1-2）
+
+外部計算資源が本セッションに無いため、次の代替である certificate-chunked decomposition
+（第3セッションの結論 (b)、第5セッション next 2）を設計・実装・検証した。
+
+### 手法: d10 判定の chunk 分解
+
+- `lossAt(root,10)=false` ⟺ ∃ loser初手 m: ∀ winner応手 r: `lossAt(root+m+r,8)=false`（pass chunk）
+- `lossAt(root,10)=true` ⟺ ∀ m: ∃ r: `lossAt(root+m+r,8)=true`（kill chunk）
+- 深さ帳簿は 10−2=8（再帰的に 8→6→4 の梯子も可能）。
+- **作業単位は chunk**（独立・未cap・depth-bounded engine証明）。実行予算で打ち切られても
+  証明済み chunk は残り、記録済み chunk を skip して再開できる。capped chunk は pending
+  のままで他を無効化しない。単一的 950k grind（第5セッションで情報効率乏しいと確定）
+  の置き換え。
+- 実装: `scripts/class4_child1_chunk_prover.ts`（engine v15 を verbatim 内蔵・依存ゼロ）。
+  ledger: `output/class4-batch1-chunk-decomposition.json`。
+
+### 制御（全て PASS）
+
+1. bit85 d6 fresh = **13,820**（公表 v15 制御と完全一致）。
+2. bit85 d8 fresh = **172,806**（新計測・default ordering）。
+3. **制御A（同型性）**: bit85 の d8 分解（直接d8 witness m=0・40応手・chunk深さ6・
+   1実行・memo共有）は総 **172,804** nodes で直接 d8 の 172,806 と差2（root節点分）しか
+   違わず判定も一致 — 分解は1プロセス実行では直接探索と同型。
+4. **制御B（決定論）**: chunk (m=2, r=66) の fresh 再解が 58,292 nodes・判定まで完全一致。
+
+### bit85: d10 反証を v15 単位で再現（witness m=2）
+
+- m=0（d8 witness）は d10 witness ではない: 応手 r=18 の chunk が loss=true（43,513 nodes）
+  で m=0 は d10 で殺される。**witness 同定は深さ毎に行うこと**（新教訓）。
+- m=2 は40応手全ての chunk が未cap・loss=false → **lossAt(root,10)=false、REFUTED**。
+  総 1,701,951 nodes / 3実行（376,581 + 765,378 + 559,992）・capped chunk 0。
+- 単体 v15 d10 は 950k で capped・判定なしであったのと対照的に、同一主張を
+  再開可能な複数実行で閉じた。v14 の standing evidence（d10 反証）と判定一致。
+
+### bit7: d10内 WIN7 候補の発見（本セッションの主成果）
+
+- **全50個の loser 初手が kill された**: 各 m について winner 応手 r_k が存在し
+  `lossAt(root+m+r_k, 8)=true`（未cap）。ゆえに `lossAt(root,10)=true`、
+  すなわち **7石目 bit=7 は depth 10 以内の WIN（winner_parity=1）**。
+- 総 4,156,721 nodes / 6実行（723,573 / 705,439 / 708,483 / 704,147 / 712,062 / 603,417）・
+  capped chunk 0。kill 表（50件の m→r_k と node数）は ledger 参照。
+- **検証**: 同一 run 内で pilot d6 制御 5,949 再現・kill chunk 3件の fresh 再解が
+  node数完全一致（(0,114)=14,123・(120,28)=21,687・(110,8)=124,166）・
+  root 50手の列挙が kill 表と完全一致。
+- v14 は bit=7 を 506k で capped（判定なし）だった。chunk 分解で初めて判定が確定した。
+
+### 解釈上の注意
+
+- 本 verdict は v15 engine 規則（repo verifier 規則と公表制御で検証済み）での
+  **depth-bounded な WIN7-within-10** である。証明書再構築と独立 verifier 実行は未実施
+  （次回の最初の作業）。bit=7 の WIN7 候補という事実のみでは class 4・S2 {59,60}・
+  二石 root {49,60}・11x11 空盤は閉じない。
+- 11x11 空盤・二石 root {49,60}・S2 {59,60} はいずれも **UNKNOWN**。
+- capped 実行はいずれの方向にも何も証明しない（本セッションの全 chunk は未cap 完了）。
+
+### 反映
+
+- e55d8225: chunk prover script（engine v15 verbatim 内蔵・検証記載）
+- 674e1ec4: ledger JSON（bit85/bit7 の chunk 記録・kill 表・制御・解釈ガード）
+- 0e011b6f: audit JSON session6_chunk_decomposition 追記
+- 本コミット: log 第6セッション
+（全て push 後に repo から読み戻し検証。並走: 高速レーン width67/68 キャンペーンと
+主題独立・反映前に HEAD 5a1a19ef を再確認・競合なし。）
+
+### 次回
+
+1. **bit=7 証明書再構築**: chunk 毎に勝ち戦略木を抽出（深さ1,3,5,7,9のwinner着手）し
+   `n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS` 形式
+   （root 行・32hex board 行ソート済み）で証明書化 → repo verifier
+   （verify_five_terminal_loss7.py 複製・winner_parity=1・EXPECTED に本件追加）で独立検証 →
+   deflate+b64 → class4-batch1-certificates push。
+2. heavy-pending {25,32,40,80,87,34} と未走査候補を chunk キャンペーンで消化
+   （1候補複数実行・chunk毎に再開）。WIN 発見時は同じ証明書プロトコル。
+3. d8 witness ≠ d10 witness の教訓を維持: より浅い witness の再利用は
+   目標深さで chunk 集合を再検証してから。
