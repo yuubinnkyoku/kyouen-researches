@@ -105,7 +105,30 @@ for (let x = 0; x < 81; x++) for (let y = 0; y < 121; y++) {
     if (n >= 17) smallEnters296 = true;
   }
 }
+// (g) 支配補題（定理の全 w >= 99 への拡張）: 非空の小パターン（|P| <= 6）は
+// すべて点順序上位の big パターン（|P| >= 18）に支配されるか（完全判定）。
+const superset = (sub: Uint8Array, sup: Uint8Array) => { for (let i = 0; i < sub.length; i++) if (sub[i] && !sup[i]) return false; return true; };
+const sup9d: number[][] = m9.map((mk, x) => m9.map((mk2, x2) => x !== x2 && superset(mk, mk2) ? x2 : -1).filter(v => v >= 0));
+const sup11d: number[][] = m11.map((mk, y) => m11.map((mk2, y2) => y !== y2 && superset(mk, mk2) ? y2 : -1).filter(v => v >= 0));
+let allSmallDominated = true; let undomCount = 0;
+for (let x = 0; x < 81; x++) for (let y = 0; y < 121; y++) {
+  if (pc(m9[x]) * pc(m11[y]) <= 6 && pc(m9[x]) >= 1) {
+    let dominated = false;
+    const xlist = [x, ...sup9d[x]], ylist = [y, ...sup11d[y]];
+    for (const x2 of xlist) { if (dominated) break; for (const y2 of ylist) {
+      if (pc(m9[x2]) * pc(m11[y2]) >= 18) { dominated = true; break; }
+    } }
+    if (!dominated) { allSmallDominated = false; undomCount++; }
+  }
+}
+// (h) 広幅プローブ（拡張の実証）: w = 296・396 では unique は増えるが maximal は 3,300 のまま。
+//     w=396 では |P|>=5 が全てフィルタ通過（4|P|>=20）し |P|=3 は 12<17 で不通過 →
+//     unique = 3,994 - 1（空） - 33（|P|=3）= 3,960 と理論値が完全一致するはず。
+const wide296 = maximalMasks(296, 17);
+const wide396 = maximalMasks(396, 17);
 const out = {
+  dominationCheck: { allSmallPatternsDominatedByBig: allSmallDominated, undominatedCount: undomCount },
+  wideWidthProbes: [wide296, wide396],
   generated: "2026-11-13",
   theoremScope: "99 <= w < 198",
   checks: {
