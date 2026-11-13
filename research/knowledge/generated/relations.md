@@ -376,6 +376,7 @@
 - ← generalizes [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): 行分離公式の新規 (w,q)（(21,22),(23,24),(25,26)）
 - ← generalizes [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): 行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)
 - ← supports [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): P(w)の新確定値は行分離公式の M_{w,q}=q−1 帯の基礎データを更新（K0784系の系と同じ導出で拡張可能）
+- ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): q>2w無限族とg公式の枠組み
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -667,6 +668,7 @@
 - → refutes [K0263](../items/K0263-three-row-periodic-winner-nonperiodic-moves-refuted.md): 本文の証明・証人が原文に与える帰結
 - ← generalizes [K0024](../items/K0024-fixed-width-q-point-threshold.md): q≥4の一般定理は標準q4定理を含む
 - ← depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md)
+- ← supports [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 十分長さT_2=9が最小であることを確定（真の安定化長と一致）
 
 ## [K0069](../items/K0069-two-row-all-lengths-strong-solution.md) 標準二行盤は全mで強解決、m≥6の空盤は後手勝ち
 
@@ -674,6 +676,7 @@
 - → refutes [K0260](../items/K0260-two-row-large-midgame-nimber.md): 本文の証明・証人が原文に与える帰結
 - → proves [K0259](../items/K0259-two-row-opposite-row-first-response.md): 本文の証明・証人が原文に与える帰結
 - ← depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 二水平行の不変性を用いた数値的帰結には既存強解決を使用
+- ← depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 上界（m≥9全極大6石）と幾何モデル（B214圧縮・弦和同値）の出典
 
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
@@ -1616,6 +1619,8 @@
 - ← supports [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 個別の厳密閾値を閉じる有限区間を短縮する一般上界
 - ← verifies [K0727](../items/K0727-blocker-obligation-fill-m57.md): 5×18のrepo既知witnessを座標まで完全再現
 - ← verifies [K0740](../items/K0740-two-deficient-blocker-fill-machine.md): 全分岐版が5×18で第3 witnessを発見し独立検証で確認（石分岐の健全性の実証）
+- ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 確定閾値5件（M_{3,4}..M_{4,8}）の出典
+- ← depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 確定閾値リスト（5件）に続き2行盤の確定値を追加
 
 ## [K0303](../items/K0303-width-three-all-q-all-length-grundy.md) 幅3・全q≥4・全長の空盤Grundyと全局面最大値を分類
 
@@ -1796,6 +1801,7 @@
 - ← depends_on [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): 安定化長 M_{w,q}=q−1 の定義と枠組み
 - ← depends_on [K0786](../items/K0786-width36-48-circle-strip-witnesses.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）
 - ← depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): 固定幅盤の枠組みと円点数P(w)の定義
+- ← supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 安定化長M_{w,q}の定義と枠組み。本項目で確定値・境界・分離帯が機械可読化された
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -4479,6 +4485,7 @@
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}=q−1の大幅拡大（w=15:q=17..23・w=16:q=17..24・w=17:q=19..26・w=18:q=19..27等）
 - ← depends_on [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): P≦2(d+s)会計・QR₀解釈・非Vietaカスケード（接点行積分性）・w=15..18のP≦2⌈w/2⌉（本項目と合わせ全w≧15）
 - ← supports [K0778](../items/K0778-width17-20-circle-point-bounds.md): P(17),P(18) を 16 に確定（上界18から）。w=17 の系に q=18 を追加
+- ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 行分離系（q>P(w)かつq>w⟹M=q−1）と会計の枠組み。合成の本体
 
 ## [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した
 
@@ -4691,3 +4698,20 @@
 
 - → depends_on [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): 同じlevel分類とg0会計を幅64に拡張
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 34点以上が初めて現れる幅の下限を更新
+- ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): P(w)全幅確定（w=6..64）の最終幅。合成帯の全幅性はK0763..K0794に依存
+
+## [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) 固定幅盤のP(w)とM_{w,q}の横断表 — 合成分離帯 M_{w,q}=q−1（q≥max(P(w),w)+1・w=6..64）の統一とresults/統合
+
+- → depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 行分離系（q>P(w)かつq>w⟹M=q−1）と会計の枠組み。合成の本体
+- → depends_on [K0025](../items/K0025-q-above-two-width-all-lengths.md): q>2w無限族とg公式の枠組み
+- → depends_on [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 確定閾値5件（M_{3,4}..M_{4,8}）の出典
+- → depends_on [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): P(w)全幅確定（w=6..64）の最終幅。合成帯の全幅性はK0763..K0794に依存
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 安定化長M_{w,q}の定義と枠組み。本項目で確定値・境界・分離帯が機械可読化された
+- ← supports [K0796](../items/K0796-two-row-m24-stabilization-nine.md): results表の(2,4)行をbounds（≤9・最小性未検証）からexact-threshold（9・proved）へ昇格
+
+## [K0796](../items/K0796-two-row-m24-stabilization-nine.md) 2×m・q=4の真の満容量安定化長はM_{2,4}=9 — K0069の十分長さ9が最小であることが確定
+
+- → depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md): 上界（m≥9全極大6石）と幾何モデル（B214圧縮・弦和同値）の出典
+- → supports [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 十分長さT_2=9が最小であることを確定（真の安定化長と一致）
+- → supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): results表の(2,4)行をbounds（≤9・最小性未検証）からexact-threshold（9・proved）へ昇格
+- → depends_on [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 確定閾値リスト（5件）に続き2行盤の確定値を追加

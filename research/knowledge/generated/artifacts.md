@@ -3527,6 +3527,15 @@
 ## [research/experiments/multipartite-terminal-20261102/verify.py](../../../research/experiments/multipartite-terminal-20261102/verify.py)
 
 - [K0625](../items/K0625-complete-multipartite-terminal-polynomial.md) (verifier): 削除集合1506条件、禁止超辺47条件・483184部分集合、既知閉式186条件の独立照合
+## [research/experiments/mwq-results-integration-20261113/output/mwq_results_check.json](../../../research/experiments/mwq-results-integration-20261113/output/mwq_results_check.json)
+
+- [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (data): 検査結果（nChecks=289・fails=0・monotone=true）
+## [research/experiments/mwq-results-integration-20261113/reports/mwq-results-integration.md](../../../research/experiments/mwq-results-integration-20261113/reports/mwq-results-integration.md)
+
+- [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (proof): 統合の設計・合成帯の導出・検証・限界
+## [research/experiments/mwq-results-integration-20261113/scripts/mwq_results_check.ts](../../../research/experiments/mwq-results-integration-20261113/scripts/mwq_results_check.ts)
+
+- [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (verifier): 289点包含・単調性・奇数w系包含の独立検査
 ## [research/experiments/n10-nine-stone-sat-20261016/README.md](../../../research/experiments/n10-nine-stone-sat-20261016/README.md)
 
 - [K0034](../items/K0034-n10-minimum-maximal-bounds.md) (source): 九石全域排除の完全報告（D4代表15点・95,816,876,802節点・AUDIT PASS）
@@ -8575,6 +8584,15 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-s6-proof.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-s6-proof.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 各六石軌道の既存スイープ・監査記録・新証明書による勝ち子
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch3-certificates-verified.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch3-certificates-verified.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 追加3証明書のSHA-256と検証結果
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch3-certificates/00000000000000805202000000200040-win7.cert.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch3-certificates/00000000000000805202000000200040-win7.cert.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 追加3件の証明書の一例。全ファイルとハッシュはmanifestに列挙
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch3-progress-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch3-progress-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 残六石7228軌道と類2候補の残27軌道
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch5-certificates-verified.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch5-certificates-verified.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 追加5証明書のSHA-256と検証結果
@@ -8583,7 +8601,7 @@
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 追加5件の証明書の一例。全ファイルとハッシュはmanifestに列挙
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch5-progress-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-batch5-progress-audit.json)
 
-- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 残六石7235軌道と類2候補の残32軌道
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加3証明前のスナップショット。残六石7235軌道と類2候補の残32軌道
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-certificates-verified.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-certificates-verified.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 追加14件のSHA-256と独立検査結果
@@ -8704,6 +8722,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class1_closure.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class1_closure.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 五石位置の全六石子・証明書・blocker類1への合法手を照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_batch3_progress.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_batch3_progress.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 追加証明書の再利用と残ワークリストを再集計
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_batch5_progress.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_batch5_progress.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 追加証明書の再利用と残ワークリストを再集計
@@ -8749,6 +8770,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): コメントのみで実行本体は未公開。再導出・再分類の再現器としては使用できない
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_batch3.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_batch3.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 類2候補から得た追加3件のWIN7証明書を独立検査
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_batch5.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_batch5.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 類2候補から得た追加5件のWIN7証明書を独立検査
@@ -12972,6 +12996,15 @@
 ## [research/experiments/two-quota-terminal-spectrum-20261031/verify.py](../../../research/experiments/two-quota-terminal-spectrum-20261031/verify.py)
 
 - [K0588](../items/K0588-two-quota-contiguous-terminal-spectrum.md) (verifier): 6372構成5275338部分集合の独立追加判定と20000標本の検算
+## [research/experiments/two-row-m24-stabilization-20261113/output/two_row_m24.json](../../../research/experiments/two-row-m24-stabilization-20261113/output/two_row_m24.json)
+
+- [K0796](../items/K0796-two-row-m24-stabilization-nine.md) (data): 全数値・witness・独立制御の機械出力
+## [research/experiments/two-row-m24-stabilization-20261113/reports/two-row-m24.md](../../../research/experiments/two-row-m24-stabilization-20261113/reports/two-row-m24.md)
+
+- [K0796](../items/K0796-two-row-m24-stabilization-nine.md) (proof): 主張・証明・分類表・制御・限界
+## [research/experiments/two-row-m24-stabilization-20261113/scripts/two_row_m24.ts](../../../research/experiments/two-row-m24-stabilization-20261113/scripts/two_row_m24.ts)
+
+- [K0796](../items/K0796-two-row-m24-stabilization-nine.md) (verifier): pair-sumモデルによるm=1..12全極大分類の単独再現
 ## [research/experiments/two-row-misere-swap-threshold-20261024/README.md](../../../research/experiments/two-row-misere-swap-threshold-20261024/README.md)
 
 - [K0309](../items/K0309-misere-small-legal-set-exchange.md) (proof): 二行盤の真の交換開始長7の証明と有限完全列挙
@@ -13661,6 +13694,15 @@
 ## [results/discovery_full_board_forbid_48.json](../../../results/discovery_full_board_forbid_48.json)
 
 - [K0271](../items/K0271-n7-fourth-corner-global-gate.md) (certificate): 角禁止の250局面成分
+## [results/fixed-width/README.md](../../../results/fixed-width/README.md)
+
+- [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (source): 列定義と正本ポインタ
+## [results/fixed-width/mwq_stabilization.csv](../../../results/fixed-width/mwq_stabilization.csv)
+
+- [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (data): M_{w,q}の確定閾値8件・open境界3件・合成分離帯59行・parametric無限族6行
+## [results/fixed-width/pw_circle_point_max.csv](../../../results/fixed-width/pw_circle_point_max.csv)
+
+- [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) (data): P(w)確定値 w=6..64（出典・witness付き）
 ## [results/maxsafe_exchange_components_n6.csv](../../../results/maxsafe_exchange_components_n6.csv)
 
 - [K0266](../items/K0266-n7-maximum-exchange-distance.md) (data): n6最大層の成分

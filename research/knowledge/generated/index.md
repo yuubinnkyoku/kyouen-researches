@@ -778,3 +778,5 @@
 | [K0792](../items/K0792-width56-pw32-plateau-extension.md) | 幅56..59の円点数の完全決定 P(56)=…=P(59)=32 — 32点プラトーがw=59まで継続 — P(w)は全幅6..59で決定済み・level 17の復活点は(59,83]に狭窄・g4会計はw=65で飽和 | proposition | proved | rectangles, geometry, variants |
 | [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) | 幅60..63の円点数の完全決定 P(60)=…=P(63)=32 — 32点プラトーがw=63まで継続 — P(w)は全幅6..63で決定済み・level 17の復活点は(63,83]に狭窄・ノード成長則は×1.27へ漸減 | proposition | proved | rectangles, geometry, variants |
 | [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) | 幅64の円点数 P(64)=32 と現行g0会計の有効全範囲完走 | proposition | proved | rectangles, geometry, variants |
+| [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) | 固定幅盤のP(w)とM_{w,q}の横断表 — 合成分離帯 M_{w,q}=q−1（q≥max(P(w),w)+1・w=6..64）の統一とresults/統合 | proposition | proved | rectangles, geometry, variants, grundy |
+| [K0796](../items/K0796-two-row-m24-stabilization-nine.md) | 2×m・q=4の真の満容量安定化長はM_{2,4}=9 — K0069の十分長さ9が最小であることが確定 | proposition | proved | rectangles, variants, grundy |
