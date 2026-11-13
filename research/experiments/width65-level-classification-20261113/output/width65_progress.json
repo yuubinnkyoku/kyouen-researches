@@ -1,0 +1,26 @@
+{
+ "generated": "2026-11-13",
+ "status": "in_progress",
+ "resume_from": 841,
+ "machine": "research/experiments/width65-level-classification-20261113/scripts/width65_level_classify.ts",
+ "uniqueMasks": 3296,
+ "totalMaximal": 3296,
+ "control": { "w26_L12": { "survivors": 1, "survivor": "S* = [0,1,3,4,7,10,15,18,21,22,24,25]", "note": "K0782..K0794 と一致" } },
+ "chunks": [
+  { "chunk": 1, "from": 0,   "lastDone": 172, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 2, "from": 172, "lastDone": 376, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 3, "from": 376, "lastDone": 568, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 4, "from": 568, "lastDone": 772, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 5, "from": 772, "lastDone": 782, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 6, "from": 782, "lastDone": 800, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 7, "from": 800, "lastDone": 818, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 8, "from": 818, "lastDone": 841, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 }
+ ],
+ "totals": { "masksDone": 841, "nodes": 9600000, "leaves": 0, "survivors": 0 },
+ "costCurve": {
+  "mask_0_772": "~6.2k nodes/mask（軽い帯）",
+  "mask_772_841": "58k..130k nodes/mask（重い帯開始・w64 より重い）",
+  "note": "重い帯は mask ~772 から開始。K0793 の w63 観測（heavy band 下端が沈む）と整合しない重さ — w65 の heavy band は幅・密度とも増大の可能性。総ノード推定は 43M より大幅上の可能性（60..150M）。完走までは複数セッション想定。"
+ },
+ "semantics": "level 17 全滅（完走時 leaves=0・生残0）+ K0797 会計（g2=8・g3=12・g4=5 全形 < 17）+ 2210 円下界 32 点 ⟹ P(65) = 32（等号付き・全称）。完了まで OPEN。"
+}
