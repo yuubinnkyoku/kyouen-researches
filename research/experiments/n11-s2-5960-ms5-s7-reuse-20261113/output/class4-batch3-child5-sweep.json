@@ -1,0 +1,27 @@
+{
+ "lane": "n11 class-4 long lane, session 19 continued",
+ "target_s5": "00000000020000003800000080000000",
+ "child_s6": "00000000020000003800000080001000",
+ "child_s6_s7_edge_cost": 72,
+ "date": "2026-11-14",
+ "engine": "v15 verbatim (class4_child1_runner.ts), native Node",
+ "candidates": 72,
+ "results": {"refuted_d10": 68, "win7_d10": [108, 95, 99, 17], "capped": 0},
+ "win7_roots": {
+  "108": "00001000020000003800000080001000",
+  "95": "00000000820000003800000080001000",
+  "99": "00000008020000003800000080001000",
+  "17": "00000000020000003800000080021000"
+ },
+ "win7_root_nodes": {"108": 1759232, "95": 2515780, "99": 10291560, "17": 8703066},
+ "total_nodes": 256648013,
+ "executions": "4 foreground executions (24+24+24 candidates, cap 50M/candidate never reached)",
+ "controls": {
+  "pilot_d6": {"loss": false, "nodes": 5949, "pass": true},
+  "win_bits_3_independent_runs_node_exact": [108, 95, 99, 17],
+  "refuted_re solves_node_exact": [42, 76],
+  "terminal_stone_range_all_uncapped": [13, 17]
+ },
+ "frontier_note": "win7 certificate coverage of remaining lane-target children recorded separately; see win7 certificates record",
+ "status": "REFUTED-D10 negates only WIN7-within-depth-10; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty root all UNKNOWN"
+}
