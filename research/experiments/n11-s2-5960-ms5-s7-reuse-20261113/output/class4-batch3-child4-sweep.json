@@ -1,0 +1,595 @@
+{
+ "schema": "n11-class4-batch3-child4-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "class4_lane_target_s5": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003800000084000000",
+  "s6_s7_edge_cost": 69,
+  "demand": "c1=0,c2=0,c4=2",
+  "role": "next cheapest remaining S6 child after the bit37 double kill (session 19, second half)"
+ },
+ "method": "same as class4-batch3-child3-sweep: v15 engine verbatim via native Node, per-candidate freshEngine, close-first AND at depth>=8, cap 50M, depth 10 single-run, 69 non-degenerate candidates (of 115 empty cells) ordered by root mobility ascending (mob 38..65), 2 foreground executions (35+34).",
+ "verdicts": {
+  "win7_d10": [
+   94,
+   80,
+   86
+  ],
+  "refuted_d10": [
+   0,
+   2,
+   3,
+   4,
+   5,
+   8,
+   10,
+   11,
+   14,
+   15,
+   17,
+   18,
+   21,
+   25,
+   30,
+   32,
+   34,
+   35,
+   38,
+   40,
+   41,
+   43,
+   44,
+   45,
+   46,
+   48,
+   51,
+   53,
+   54,
+   66,
+   69,
+   70,
+   72,
+   75,
+   76,
+   77,
+   78,
+   79,
+   82,
+   83,
+   84,
+   85,
+   87,
+   88,
+   91,
+   92,
+   93,
+   95,
+   99,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   108,
+   109,
+   110,
+   112,
+   113,
+   114,
+   115,
+   116,
+   117,
+   118,
+   120
+  ],
+  "capped": [],
+  "counts": {
+   "win7": 3,
+   "refuted": 66,
+   "capped": 0,
+   "total": 69
+  },
+  "note": "bit94/80/86 are WIN7-D10 (winner_parity=1 wins within depth 10); all other 66 candidates negate WIN7-within-depth-10 only. Candidate bit77 exhibited an 11-stone loser-stuck terminal (range [11,17]) - the first sub-13 terminal observed in this lane; recorded as-is."
+ },
+ "totals": {
+  "nodes": 171686664,
+  "executions": 2,
+  "candidates": 69
+ },
+ "pilot_control": {
+  "root": "00000000000000003802000008000006",
+  "depth": 6,
+  "loss": false,
+  "nodes": 5949,
+  "result": "PASS"
+ },
+ "determinism_controls": {
+  "11": {
+   "independent_reruns": 2,
+   "node_counts_identical": true,
+   "loss_identical": true
+  },
+  "54": {
+   "independent_reruns": 2,
+   "node_counts_identical": true,
+   "loss_identical": true
+  },
+  "77": {
+   "independent_reruns": 2,
+   "node_counts_identical": true,
+   "loss_identical": true
+  },
+  "80": {
+   "independent_reruns": 2,
+   "node_counts_identical": true,
+   "loss_identical": true
+  },
+  "86": {
+   "independent_reruns": 2,
+   "node_counts_identical": true,
+   "loss_identical": true
+  },
+  "94": {
+   "independent_reruns": 2,
+   "node_counts_identical": true,
+   "loss_identical": true
+  }
+ },
+ "per_candidate": {
+  "0": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 3105728,
+   "capped": false
+  },
+  "2": {
+   "mob": 64,
+   "loss": false,
+   "nodes": 1058407,
+   "capped": false
+  },
+  "3": {
+   "mob": 61,
+   "loss": false,
+   "nodes": 3063755,
+   "capped": false
+  },
+  "4": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 1983166,
+   "capped": false
+  },
+  "5": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 997693,
+   "capped": false
+  },
+  "8": {
+   "mob": 63,
+   "loss": false,
+   "nodes": 3338680,
+   "capped": false
+  },
+  "10": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 6546487,
+   "capped": false
+  },
+  "11": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 8314550,
+   "capped": false
+  },
+  "14": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 1110054,
+   "capped": false
+  },
+  "15": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 754180,
+   "capped": false
+  },
+  "17": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 4321999,
+   "capped": false
+  },
+  "18": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 732258,
+   "capped": false
+  },
+  "21": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 4872185,
+   "capped": false
+  },
+  "25": {
+   "mob": 47,
+   "loss": false,
+   "nodes": 589563,
+   "capped": false
+  },
+  "30": {
+   "mob": 52,
+   "loss": false,
+   "nodes": 228590,
+   "capped": false
+  },
+  "32": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 1250840,
+   "capped": false
+  },
+  "34": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 3344737,
+   "capped": false
+  },
+  "35": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 2668409,
+   "capped": false
+  },
+  "38": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 720731,
+   "capped": false
+  },
+  "40": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 736437,
+   "capped": false
+  },
+  "41": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 2204823,
+   "capped": false
+  },
+  "43": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 2009274,
+   "capped": false
+  },
+  "44": {
+   "mob": 65,
+   "loss": false,
+   "nodes": 733728,
+   "capped": false
+  },
+  "45": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 813796,
+   "capped": false
+  },
+  "46": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 3868342,
+   "capped": false
+  },
+  "48": {
+   "mob": 50,
+   "loss": false,
+   "nodes": 1601978,
+   "capped": false
+  },
+  "51": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 1528255,
+   "capped": false
+  },
+  "53": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 2059507,
+   "capped": false
+  },
+  "54": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 11116733,
+   "capped": false
+  },
+  "66": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 1884112,
+   "capped": false
+  },
+  "69": {
+   "mob": 50,
+   "loss": false,
+   "nodes": 2578575,
+   "capped": false
+  },
+  "70": {
+   "mob": 50,
+   "loss": false,
+   "nodes": 1675538,
+   "capped": false
+  },
+  "72": {
+   "mob": 49,
+   "loss": false,
+   "nodes": 3082329,
+   "capped": false
+  },
+  "75": {
+   "mob": 62,
+   "loss": false,
+   "nodes": 1378131,
+   "capped": false
+  },
+  "76": {
+   "mob": 65,
+   "loss": false,
+   "nodes": 4106094,
+   "capped": false
+  },
+  "77": {
+   "mob": 62,
+   "loss": false,
+   "nodes": 7700846,
+   "capped": false
+  },
+  "78": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 4343753,
+   "capped": false
+  },
+  "79": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 3067404,
+   "capped": false
+  },
+  "80": {
+   "mob": 47,
+   "loss": true,
+   "nodes": 4382762,
+   "capped": false
+  },
+  "82": {
+   "mob": 61,
+   "loss": false,
+   "nodes": 5288369,
+   "capped": false
+  },
+  "83": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 946954,
+   "capped": false
+  },
+  "84": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 1556591,
+   "capped": false
+  },
+  "85": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 1013784,
+   "capped": false
+  },
+  "86": {
+   "mob": 53,
+   "loss": true,
+   "nodes": 7779605,
+   "capped": false
+  },
+  "87": {
+   "mob": 63,
+   "loss": false,
+   "nodes": 3267174,
+   "capped": false
+  },
+  "88": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 1150787,
+   "capped": false
+  },
+  "91": {
+   "mob": 47,
+   "loss": false,
+   "nodes": 294143,
+   "capped": false
+  },
+  "92": {
+   "mob": 51,
+   "loss": false,
+   "nodes": 1468955,
+   "capped": false
+  },
+  "93": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 668804,
+   "capped": false
+  },
+  "94": {
+   "mob": 38,
+   "loss": true,
+   "nodes": 1292794,
+   "capped": false
+  },
+  "95": {
+   "mob": 47,
+   "loss": false,
+   "nodes": 642857,
+   "capped": false
+  },
+  "99": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 2799529,
+   "capped": false
+  },
+  "101": {
+   "mob": 52,
+   "loss": false,
+   "nodes": 1038167,
+   "capped": false
+  },
+  "102": {
+   "mob": 51,
+   "loss": false,
+   "nodes": 1021832,
+   "capped": false
+  },
+  "103": {
+   "mob": 44,
+   "loss": false,
+   "nodes": 1130661,
+   "capped": false
+  },
+  "104": {
+   "mob": 63,
+   "loss": false,
+   "nodes": 3647417,
+   "capped": false
+  },
+  "105": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 3663622,
+   "capped": false
+  },
+  "106": {
+   "mob": 64,
+   "loss": false,
+   "nodes": 1167796,
+   "capped": false
+  },
+  "108": {
+   "mob": 52,
+   "loss": false,
+   "nodes": 3356577,
+   "capped": false
+  },
+  "109": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 2055181,
+   "capped": false
+  },
+  "110": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 2236930,
+   "capped": false
+  },
+  "112": {
+   "mob": 63,
+   "loss": false,
+   "nodes": 1861679,
+   "capped": false
+  },
+  "113": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 873512,
+   "capped": false
+  },
+  "114": {
+   "mob": 50,
+   "loss": false,
+   "nodes": 241250,
+   "capped": false
+  },
+  "115": {
+   "mob": 51,
+   "loss": false,
+   "nodes": 1898803,
+   "capped": false
+  },
+  "116": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 727772,
+   "capped": false
+  },
+  "117": {
+   "mob": 64,
+   "loss": false,
+   "nodes": 2931826,
+   "capped": false
+  },
+  "118": {
+   "mob": 65,
+   "loss": false,
+   "nodes": 2999881,
+   "capped": false
+  },
+  "120": {
+   "mob": 63,
+   "loss": false,
+   "nodes": 2788983,
+   "capped": false
+  }
+ },
+ "win7_detail": [
+  {
+   "bit": 94,
+   "root_hex": "00000000420000003800000084000000",
+   "nodes": 1292794
+  },
+  {
+   "bit": 80,
+   "root_hex": "00000000020100003800000084000000",
+   "nodes": 4382762
+  },
+  {
+   "bit": 86,
+   "root_hex": "00000000024000003800000084000000",
+   "nodes": 7779605
+  }
+ ],
+ "frontier_effect_local": {
+  "covers_union": 16,
+  "in_class4_target_remaining": {
+   "00000000020000003800000084000000": 69,
+   "00000000020000003800010080000000": 72,
+   "00000000020000003800000480000000": 80
+  },
+  "class4_target_delta": {
+   "remaining_s6_orbits": [
+    31,
+    28
+   ],
+   "remaining_s7_edge_cost": [
+    2462,
+    2241
+   ]
+  },
+  "note": "delta computed against the after-bit37 state (31 orbits / 2462); cumulative session-19 delta 32->28 orbits, 2530->2241 cost. Full manifest-level recompute pending (gz inputs)."
+ },
+ "interpretation_guard": [
+  "WIN7 certificates prove only a win within depth 10 from their 7-stone root. REFUTED entries negate only WIN7-within-depth-10.",
+  "class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN."
+ ]
+}

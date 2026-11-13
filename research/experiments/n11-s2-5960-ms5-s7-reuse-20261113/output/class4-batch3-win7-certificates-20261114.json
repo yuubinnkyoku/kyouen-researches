@@ -1,0 +1,96 @@
+{
+ "schema": "n11-class4-batch3-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "child": "00000000020000003800000084000000",
+ "verifier": "TS port of verify_five_terminal_loss7.py (verify_bit7_win7_cert.ts logic verbatim, --root adapted); no engine import, exact integer Bareiss",
+ "certificates": [
+  {
+   "root": "00000000420000003800000084000000",
+   "bit": 94,
+   "verdict": "WIN7",
+   "certificate": "output/class4-batch3-certificates/n11_s7_00000000420000003800000084000000.cert",
+   "rows": 14435,
+   "bytes": 520636,
+   "md5": "81e77d73107fa05da92b69e77cdc5704",
+   "subroots_verified": 38,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 38,
+   "search_nodes": 1292794,
+   "search_reruns_node_identical": 2,
+   "extraction_nodes": 2990899,
+   "extraction_rows": 14435,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000020100003800000084000000",
+   "bit": 80,
+   "verdict": "WIN7",
+   "certificate": "output/class4-batch3-certificates/n11_s7_00000000020100003800000084000000.cert",
+   "rows": 19922,
+   "bytes": 720192,
+   "md5": "ac66288e79e18807d06503cf723d5aaa",
+   "subroots_verified": 47,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 47,
+   "search_nodes": 4382762,
+   "search_reruns_node_identical": 2,
+   "extraction_nodes": 8368188,
+   "extraction_rows": 19922,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000024000003800000084000000",
+   "bit": 86,
+   "verdict": "WIN7",
+   "certificate": "output/class4-batch3-certificates/n11_s7_00000000024000003800000084000000.cert",
+   "rows": 33994,
+   "bytes": 1228990,
+   "md5": "c49d52f068c547df616000cf1ae6734e",
+   "subroots_verified": 53,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 53,
+   "search_nodes": 7779605,
+   "search_reruns_node_identical": 2,
+   "extraction_nodes": 13647556,
+   "extraction_rows": 33994,
+   "terminal_range": [
+    13,
+    17
+   ]
+  }
+ ],
+ "frontier_effect": {
+  "class4_lane_target_s5": "00000000020000003800000080000000",
+  "remaining_s6_orbits": [
+   32,
+   28
+  ],
+  "remaining_s7_edge_cost": [
+   2530,
+   2241
+  ],
+  "closed_orbits": [
+   "00000000020000003802000080000000",
+   "00000000020000003800002080000000",
+   "00000000020000003800000084000000",
+   "00000000020000003800010080000000",
+   "00000000020000003800000480000000"
+  ]
+ },
+ "interpretation_guard": [
+  "WIN7 = win within depth 10 from the 7-stone root only.",
+  "class 4, S2 {59,60}, two-stone root {49,60}, 11x11 empty root: UNKNOWN"
+ ]
+}
