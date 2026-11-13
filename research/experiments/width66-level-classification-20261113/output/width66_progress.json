@@ -1,0 +1,16 @@
+{
+ "generated": "2026-11-13",
+ "status": "in_progress",
+ "resume_from": 489,
+ "machine": "research/experiments/width66-level-classification-20261113/scripts/width66_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
+ "machineNote": "K0798 の w=65 完走機と同一構造。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。フェーズ2（REST16 再走査）必要 mask は 0 件。",
+ "uniqueMasks": 3300,
+ "totalMaximal": 3300,
+ "control": { "w26_L12_REST6": { "survivors": 1, "survivor": "S* = [0,1,3,4,7,10,15,18,21,22,24,25]", "note": "width65-pruning-audit で確認済み（K0782..K0798 と一致）" } },
+ "chunks": [
+  { "chunk": 1, "from": 0,   "lastDone": 223, "nodes": 2400000, "wordOps": 255673713, "leaves": 0, "aborted": true, "survivors": 0, "note": "223 mask/2.4M = ~10.8k/mask（軽い帯）" },
+  { "chunk": 2, "from": 223, "lastDone": 488, "nodes": 2400000, "wordOps": 262407946, "leaves": 0, "aborted": true, "survivors": 0, "note": "265 mask/2.4M = ~9.1k/mask（軽い帯）" }
+ ],
+ "totals": { "masksDone": 488, "nodes": 4800000, "leaves": 0, "survivors": 0, "phase2Masks": 0 },
+ "semantics": "level 17 全滅（完走時 leaves=0・生残0）+ K0797 会計（g2=8・g3=12・g4=5 全形 < 17・w≤84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 130）⟹ P(66) = 32（等号付き・全称）。完了まで OPEN。P(66) ∈ [32, 128]。"
+}
