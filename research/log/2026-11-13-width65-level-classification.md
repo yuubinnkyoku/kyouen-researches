@@ -1,4 +1,4 @@
-successfully downloaded text file (SHA: aa6ff6d4e8172aebf8fd023db1930ecbb70edef7)# 2026-11-13 高速レーン: w=65 level 17 キャンペーン開始（進行中・resume from=1302・REST6 2フェーズ採用）+ K0797 会計拡張の続き
+successfully downloaded text file (SHA: d7fd72bd088d280cd04bd62838c479b21ff1b25a)successfully downloaded text file (SHA: aa6ff6d4e8172aebf8fd023db1930ecbb70edef7)# 2026-11-13 高速レーン: w=65 level 17 キャンペーン開始（進行中・resume from=1302・REST6 2フェーズ採用）+ K0797 会計拡張の続き
 
 K0797（g0 会計 w≤84 延長）の直後にレジューム(1)「w=65 標準形 DFS」に着手。
 
@@ -30,6 +30,12 @@ K0797（g0 会計 w≤84 延長）の直後にレジューム(1)「w=65 標準�
    heavy band が mask 975 まで沈まず 71k..100k/mask を維持することが判明した。
    残り 2,321 mask が同密度なら総ノード ~200..250M（当初 80..160M 推定を上方修正）。
    REST6 2フェーズで word-ops 観点は約半減。
+0d. **第3セッション追記その3（REST6 でのキャンペーン前進）**: chunks 19-22 を
+    REST6=[19,23,7,29,43,47]・cap 2.4M nodes/chunk で実行し **masks 975..1301 を完了**
+    （計 9.6M nodes・leaves=0・生残0・フェーズ2必要 mask 0件・cumulative 31.2M nodes）。
+    heavy band は非単調であることが判明: ~1000 で一旦沈み
+    （chunk19: 215 mask/2.4M = ~11k/mask）・~1190 で再出現（chunks 20-22: ~57k..73k/mask）。
+    resume from=1302・残り 1,994 mask。
 
 ## 意味論（P(65) はまだ OPEN）
 
