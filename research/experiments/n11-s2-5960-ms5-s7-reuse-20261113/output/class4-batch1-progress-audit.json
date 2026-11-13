@@ -145,8 +145,7 @@
     "refuted_note": "cost is not monotone in mobility: bit=91 (mob 49) = 193,987 nodes while bit=32/87 (same mob) each exceed 700k",
     "pending_incomplete": {
       "3": {
-        "d10_nodes_so_far_v15": 950001,
-        "note": "v15 session 4: fresh-memo d10 capped at 950k (first of the mob-56 band); not a refutation; heavy-pending"
+        "status": "RESOLVED session 14/15: see ledger bit3 entry and output/class4-batch1-unprobed-sweep.json / bit34 campaign record"
       },
       "7": {
         "d10_nodes_so_far": 506014,
@@ -162,7 +161,7 @@
         "note": "single candidate consumed full 700k node budget; expect >1M nodes; needs dedicated runs or d=8-first"
       },
       "34": {
-        "status": "RESOLVED session 14: REFUTED-D10 via chunk campaign (witness m=45, 13.67M nodes, 15 runs); see session14_bit34_chunk_campaign and output/class4-batch1-bit34-campaign.json"
+        "status": "RESOLVED session 14/15: see ledger bit34 entry and output/class4-batch1-unprobed-sweep.json / bit34 campaign record"
       },
       "40": {
         "d10_nodes_so_far_v15": 950001,
@@ -279,38 +278,8 @@
       },
       "interpretation": "All 22 probes ended without a verdict: 18 consumed at least 150,000 nodes, while 4 were interrupted below that threshold (bit 78: 149998, bit 84: 49995, bit 103: 49995, bit 118: 149998). Capped runs prove no WIN/LOSS. The observation that the first 18 full-budget probes failed to finish is not evidence that every remaining candidate requires 950k nodes; shorter probes can still discover cheap candidates."
     },
-    "not_yet_searched": [
-      "54",
-      "88",
-      "102",
-      "15",
-      "50",
-      "86",
-      "90",
-      "92",
-      "105",
-      "116",
-      "21",
-      "36",
-      "4",
-      "38",
-      "67",
-      "109",
-      "112",
-      "117",
-      "8",
-      "10",
-      "76",
-      "33",
-      "66",
-      "104",
-      "106",
-      "110",
-      "0",
-      "44",
-      "120",
-      "2"
-    ]
+    "not_yet_searched": [],
+    "sweep_status": "COMPLETE (session 15): all 66 non-degenerate candidates classified - WIN7-D10: bit7(cert), bit25(cert), bit18, bit67, bit82, bit117, bit120 (5 certificates pending); REFUTED-D10: the other 59"
   },
   "session3_structural_findings": {
     "memo_state_after_950k_bit80": {
@@ -878,5 +847,27 @@
     "consequence": "heavy-pending is now EMPTY: {7->WIN7 cert, 25->WIN7 cert, 32->REFUTED, 40->REFUTED, 80->REFUTED, 87->REFUTED, 34->REFUTED}. Six chunk-method refutations and two WIN7 certificates overall for the S6 child #1 7th-stone sweep; unprobed candidates remain in the progress audit. Cost spread across the heavy band: 1.70M / 3.10M / 6.01M / 6.18M / 13.67M / 15.88M nodes.",
     "status": "refutation of WIN7-within-depth-10 only: bit=34 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
     "next": "1) chunk campaigns for the unprobed candidates (54, 88, 102, ... - mob 56-63 band, per-candidate budget estimation mandatory); 2) WIN7 discovery => certificate protocol; 3) keep UNKNOWN guards"
+  },
+  "session15_unprobed_sweep": {
+    "date": "2026-11-14",
+    "trigger": "session14 ledger next item 1 executed: chunk campaigns for the unprobed candidates; extended to all probe/pending candidates",
+    "verdict": "ALL 66 candidates of the S6 child #1 7th-stone sweep are now classified within depth 10: 7 WIN7 candidates (bit7, bit25 certified; bit18, bit67, bit82, bit117, bit120 pending certificates) and 59 refuted (48 in this session record + bit34 + v14 standing evidence + prior chunk campaigns)",
+    "totals_54": {
+      "nodes": 455601226,
+      "runs": 115,
+      "chunks": 11007
+    },
+    "wins": [
+      "bit18 (000000000200000038000000800c0000, mob 52)",
+      "bit67 (00000000020000083800000080080000, mob 59)",
+      "bit82 (00000000020400003800000080080000, mob 53)",
+      "bit117 (00200000020000003800000080080000, mob 59)",
+      "bit120 (01000000020000003800000080080000, mob 62)"
+    ],
+    "record": "output/class4-batch1-unprobed-sweep.json",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (unprobed_sweep_session15 + per-win entries)",
+    "consequence": "the 7th-stone sweep of S6 child #1 is complete; the class-4 frontier worklist can now be recomputed against a fully classified child; five new certificate targets queued",
+    "status": "WIN7-D10 candidates require certificate extraction + independent verification before settled; REFUTED excludes only wins within 10 plies; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": "1) certificates for {18,67,82,117,120}; 2) frontier bookkeeping update; 3) keep UNKNOWN guards"
   }
 }
