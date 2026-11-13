@@ -14,7 +14,8 @@
 //  - bit=85 d6 fresh: loss=false, 13,820 nodes (matches session-4 default figure)
 //
 // Usage (Node >= 22):
-//   node --experimental-strip-types class4_child1_runner.ts \
+//   node --experimental-strip-types class4_child1_runner.ts (continuation
+//        backslash omitted here: it does not survive the push transport)
 //        --bits 34,54,88 --depth 10 --cap 950000 --out results.jsonl
 //   --andclose 0|1   close-first AND ordering (lossAt children by wscore DESC);
 //                   default 1: applied only when depth >= 8 (session-4 finding:
@@ -206,9 +207,13 @@ if (typeof process !== 'undefined' && process.argv && process.argv.length > 2) {
   };
   const out = get('--out', null);
   const results = runBatch(cfg);
-  const lines = results.map(r => JSON.stringify(r)).join('
-') + '
-';
+  // NOTE (2026-11-14 repair): the previously pushed copy of this file was
+// transport-corrupted at this line (the two-char backslash-escape newline
+// string literals had been decoded into real newlines, making the file
+// uncompilable under --experimental-strip-types).
+// Repaired to String.fromCharCode(10) literals, which survive the push transport.
+const NL = String.fromCharCode(10);
+  const lines = results.map(r => JSON.stringify(r)).join(NL) + NL;
   if (out) { const fs = require('fs'); fs.appendFileSync(out, lines); }
   process.stdout.write(lines);
 }
