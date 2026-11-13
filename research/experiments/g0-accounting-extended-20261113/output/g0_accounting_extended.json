@@ -1,0 +1,631 @@
+{
+ "generated": "2026-11-13",
+ "claim": {
+  "accounting_valid_w_le": 84,
+  "base18_only_frontier": 78,
+  "wall": "g3 form: class size 29 (w=85..87) has classMax=17 under every modulus tried (incl. 343); g4 form is NOT a wall (classMax 5..9 via uOdd + coef 64)"
+ },
+ "controls": {
+  "k0788_k0792_k0794_base18": {
+   "w36": {
+    "g2": 6,
+    "g3": 8
+   },
+   "w42": {
+    "g2": 7,
+    "g3": 10
+   },
+   "w48": {
+    "g2": 7,
+    "g3": 11
+   },
+   "w64": {
+    "g2": 8,
+    "g3": 13
+   },
+   "expect": {
+    "w36": [
+     6,
+     8
+    ],
+    "w42": [
+     7,
+     10
+    ],
+    "w48": [
+     7,
+     11
+    ],
+    "w64": [
+     8,
+     13
+    ]
+   }
+  },
+  "sweep_vs_direct": {
+   "g2_m16_s32": [
+    8,
+    8
+   ],
+   "g3_m49_s28": [
+    16,
+    16
+   ]
+  },
+  "g3_size29_failure": {
+   "cm": 17,
+   "bestM": 31,
+   "witness_au": [
+    0,
+    1
+   ]
+  }
+ },
+ "accounting": {
+  "w65": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 33,
+     "cm": 8,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 22,
+     "cm": 12,
+     "bestM": 121
+    },
+    "g4": {
+     "size": 17,
+     "cm": 5,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 13,
+     "trivial": true
+    }
+   }
+  },
+  "w66": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 33,
+     "cm": 8,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 22,
+     "cm": 12,
+     "bestM": 121
+    },
+    "g4": {
+     "size": 17,
+     "cm": 5,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 14,
+     "trivial": true
+    }
+   }
+  },
+  "w67": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 34,
+     "cm": 9,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 23,
+     "cm": 13,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 17,
+     "cm": 5,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 14,
+     "trivial": true
+    }
+   }
+  },
+  "w68": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 34,
+     "cm": 9,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 23,
+     "cm": 13,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 17,
+     "cm": 5,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 14,
+     "trivial": true
+    }
+   }
+  },
+  "w69": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 35,
+     "cm": 9,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 23,
+     "cm": 13,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 18,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 14,
+     "trivial": true
+    }
+   }
+  },
+  "w70": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 35,
+     "cm": 9,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 24,
+     "cm": 14,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 18,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 14,
+     "trivial": true
+    }
+   }
+  },
+  "w71": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 36,
+     "cm": 9,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 24,
+     "cm": 14,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 18,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 15,
+     "trivial": true
+    }
+   }
+  },
+  "w72": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 36,
+     "cm": 9,
+     "bestM": 32
+    },
+    "g3": {
+     "size": 24,
+     "cm": 14,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 18,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 15,
+     "trivial": true
+    }
+   }
+  },
+  "w73": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 37,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 25,
+     "cm": 15,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 19,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 15,
+     "trivial": true
+    }
+   }
+  },
+  "w74": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 37,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 25,
+     "cm": 15,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 19,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 15,
+     "trivial": true
+    }
+   }
+  },
+  "w75": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 38,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 25,
+     "cm": 15,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 19,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 15,
+     "trivial": true
+    }
+   }
+  },
+  "w76": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 38,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 26,
+     "cm": 16,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 19,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 16,
+     "trivial": true
+    }
+   }
+  },
+  "w77": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 39,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 26,
+     "cm": 16,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 20,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 16,
+     "trivial": true
+    }
+   }
+  },
+  "w78": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 39,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 26,
+     "cm": 16,
+     "bestM": 23
+    },
+    "g4": {
+     "size": 20,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 16,
+     "trivial": true
+    }
+   }
+  },
+  "w79": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 40,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 27,
+     "cm": 16,
+     "bestM": 49
+    },
+    "g4": {
+     "size": 20,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 16,
+     "trivial": true
+    }
+   }
+  },
+  "w80": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 40,
+     "cm": 9,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 27,
+     "cm": 16,
+     "bestM": 49
+    },
+    "g4": {
+     "size": 20,
+     "cm": 6,
+     "bestM": 16
+    },
+    "g5": {
+     "size": 16,
+     "trivial": true
+    }
+   }
+  },
+  "w81": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 41,
+     "cm": 10,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 27,
+     "cm": 16,
+     "bestM": 49
+    },
+    "g4": {
+     "size": 21,
+     "cm": 6,
+     "bestM": 32
+    },
+    "g5": {
+     "size": 17,
+     "cm": 11,
+     "bestM": 19
+    }
+   }
+  },
+  "w82": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 41,
+     "cm": 10,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 28,
+     "cm": 16,
+     "bestM": 49
+    },
+    "g4": {
+     "size": 21,
+     "cm": 6,
+     "bestM": 32
+    },
+    "g5": {
+     "size": 17,
+     "cm": 11,
+     "bestM": 19
+    }
+   }
+  },
+  "w83": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 42,
+     "cm": 10,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 28,
+     "cm": 16,
+     "bestM": 49
+    },
+    "g4": {
+     "size": 21,
+     "cm": 6,
+     "bestM": 32
+    },
+    "g5": {
+     "size": 17,
+     "cm": 11,
+     "bestM": 19
+    }
+   }
+  },
+  "w84": {
+   "valid": true,
+   "forms": {
+    "g2": {
+     "size": 42,
+     "cm": 10,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 28,
+     "cm": 16,
+     "bestM": 49
+    },
+    "g4": {
+     "size": 21,
+     "cm": 6,
+     "bestM": 32
+    },
+    "g5": {
+     "size": 17,
+     "cm": 11,
+     "bestM": 19
+    }
+   }
+  },
+  "w85": {
+   "valid": false,
+   "forms": {
+    "g2": {
+     "size": 43,
+     "cm": 10,
+     "bestM": 64
+    },
+    "g3": {
+     "size": 29,
+     "cm": 17,
+     "bestM": 31
+    },
+    "g4": {
+     "size": 22,
+     "cm": 6,
+     "bestM": 32
+    },
+    "g5": {
+     "size": 17,
+     "cm": 11,
+     "bestM": 19
+    }
+   }
+  }
+ },
+ "modulusLists": {
+  "BASE18": [
+   9,
+   11,
+   19,
+   23,
+   7,
+   5,
+   13,
+   17,
+   8,
+   16,
+   25,
+   27,
+   29,
+   31,
+   37,
+   41,
+   43,
+   47
+  ],
+  "EXTRA": [
+   49,
+   121,
+   53,
+   59,
+   61,
+   67,
+   71,
+   73,
+   32,
+   64,
+   81,
+   125,
+   169,
+   79,
+   83
+  ],
+  "BIG": [
+   343,
+   89,
+   97,
+   101,
+   103,
+   107,
+   109,
+   113,
+   127,
+   128,
+   243,
+   289,
+   131,
+   137,
+   139
+  ]
+ }
+}
