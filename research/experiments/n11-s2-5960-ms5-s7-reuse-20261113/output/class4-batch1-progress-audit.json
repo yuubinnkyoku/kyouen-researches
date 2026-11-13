@@ -565,5 +565,24 @@
     "status": "bit=25 proven as class4-batch1-internal WIN7 within depth 10, with an independently verifiable certificate (second after bit=7). Class 4 / S2 {59,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve (2026-11-14 arithmetic audit) is unrelated and remains open.",
     "record": "output/class4-batch1-bit25-certificate.json",
     "next": "1) chunk campaigns for heavy-pending {32,40,80,87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
+  },
+  "session9_bit32_chunk_campaign": {
+    "date": "2026-11-14",
+    "trigger": "session8_bit25_certificate.next item 1 executed: chunk campaign for heavy-pending bit=32 (mob 49; v14 monolithic d10 capped at 700k with no verdict)",
+    "verdict": "REFUTED within depth 10 (first heavy-pending refuted by the chunk method): lossAt(root,10)=false via witness m=44 — all 48 winner replies uncapped pass chunks; 40 other first moves killed before the witness was found; 8 unexamined (not needed)",
+    "root_hex": "00000000020000003800000180080000",
+    "totals": {
+      "nodes": 15884259,
+      "runs": 23,
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 275350
+    },
+    "driver_bug": "first two runs enumerated winner replies from the ROOT legal list (includes the loser first move m itself); r=m produced 6 bogus 1-node kills — detected in review, purged, and affected first moves fully recomputed with the corrected driver; all recorded kills have r != m",
+    "determinism": "recomputed chunks reproduced identical node counts across fresh-memo runs, e.g. (70,50)=23,416 / (90,42)=136,346 / (90,70)=56,072 each twice",
+    "record": "output/class4-batch1-bit32-campaign.json",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (bit32 entry)",
+    "consequence": "heavy-pending is now {40,80,87,34} plus unprobed candidates; the chunk method closes both directions (bit85 refuted, bit7/bit25 WIN7, bit32 refuted) at 1.7M-15.9M nodes per candidate, resumable and uncapped",
+    "status": "refutation of WIN7-within-depth-10 only: bit=32 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
+    "next": "1) chunk campaigns for heavy-pending {40,80,87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
   }
 }
