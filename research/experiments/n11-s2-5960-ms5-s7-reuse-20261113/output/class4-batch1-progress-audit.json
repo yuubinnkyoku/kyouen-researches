@@ -44,10 +44,11 @@
   },
   "ordering_findings": {
     "candidate_order": "root mobility ascending (loser to move at root)",
-    "move_ordering": "closeScore retained; mobility ordering measured 6x worse on pilot d6 (20121 vs 3257 nodes)"
+    "move_ordering": "closeScore retained; mobility ordering measured 6x worse on pilot d6 (20121 vs 3257 nodes)",
+    "and_node_ordering_session3": "sorting AND-node (lossAt) children by wscore ascending measured 1.8x WORSE than the default bit order on pilot d8 (capped >500k vs 277,393 nodes completed); default bit order retained. Negative result: do not sort AND-node children by closeness."
   },
   "sweep": {
-    "depths_policy": "d=10 single-pass per candidate (subsumes d=6/8 refutations); per-run nodeCap 700000 (sandbox deadline)",
+    "depths_policy": "d=10 single-pass per candidate (subsumes d=6/8 refutations); per-run nodeCap 700000-950000 (sandbox deadline); session 3 added cheap 150k-per-candidate probes for untried candidates",
     "ncandidates_nondegenerate": 66,
     "candidate_order_mob": [
       "85:44",
@@ -159,20 +160,51 @@
         "d10_nodes_so_far_v15": 950001,
         "note": "v15 session 2: capped at 950k (and at 280k in a first attempt); not a refutation"
       },
+      "80": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 3: capped at 950k (fresh memo, 3 attempts incl. persistence experiments); not a refutation; joined heavy-pending"
+      },
       "87": {
         "d10_nodes_so_far": 700001,
         "note": "same; consumed full budget"
       }
     },
+    "probe_150k_session3": {
+      "policy": "cheap first-pass probes at 150k nodes per candidate to triage untried candidates (a WIN7 candidate may complete far below 950k; fails and deep wins cap)",
+      "results": {
+        "6": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "18": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "77": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "83": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "94": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "103": {
+          "nodes": 49995,
+          "capped": true,
+          "note": "probe cut short by the 950k total budget of the run; inconclusive even as a probe"
+        },
+        "108": {
+          "nodes": 150001,
+          "capped": true
+        }
+      },
+      "interpretation": "all probed candidates exceeded 150k nodes; no verdicts. mob-51..52 band is also non-cheap. capped probes prove nothing either way"
+    },
     "not_yet_searched": [
-      "80",
-      "83",
-      "108",
-      "6",
-      "18",
-      "77",
-      "94",
-      "103",
       "43",
       "75",
       "82",
@@ -222,10 +254,41 @@
       "2"
     ]
   },
+  "session3_structural_findings": {
+    "memo_state_after_950k_bit80": {
+      "occupied_entries": 238430,
+      "entries_with_proven_bounds": 117212,
+      "bound_types": "all 117,212 are definite win/lose bounds; no noWin/noLose bound >= 5 exists at the cap frontier (frontier subtrees never complete)",
+      "win_bound_dist": {
+        "1": 31813,
+        "3": 57585,
+        "5": 7573,
+        "7": 205,
+        "9": 1
+      },
+      "lose_bound_dist": {
+        "2": 13077,
+        "4": 6745,
+        "6": 212,
+        "8": 1
+      }
+    },
+    "cross_run_memo_persistence": {
+      "verdict": "INFEASIBLE in the current sandbox; structural cause recorded",
+      "findings": [
+        "sandbox 16MiB memory cap: base working set (memo 262144-entry table + fbt cache + search) is ~13-15MB, leaving <1MB headroom; a full dump of the 117k proven bounds is ~4.7MB and exceeds the cap in-run (write_file arguments are retained by the run)",
+        "high-value-only persistence (win>=5 or lose>=4, ~15k lines) is I/O-feasible but resumption is ineffective: the ~89k dropped shallow facts (win<=3, lose<=2) are re-proven from scratch every run and consume most of the node budget; loaded entries produced 0 root-level memo hits and the cap frontier did not observably advance",
+        "memo table at 91% occupancy (238k/262k) causes memoEntry probe failures: the table then holds duplicate keys (4,766 dump lines -> 1,796 unique). MS=1<<19 would need ~2MB more and does not fit the 16MiB cap",
+        "file_system read_file truncates at ~64KB per call; cross-run loaders must loop offset/next_offset (an initial loader silently read only 1,594 of 14,737 lines)"
+      ],
+      "conclusion": "completing mob-50 candidates needs either a bigger-memory runner (external compute lane), a fundamentally smaller proof (certificate-chunked per-universal-child facts), or a better search. Do not retry naive cross-run memo persistence in the sandbox"
+    },
+    "cheap_probe_strategy": "first-pass 150k probes triage untried candidates cheaply; all 7 probed candidates (83,108,6,18,77,94,103) capped, so the whole mob>=50 band is heavy; probes continue for the remaining 46 untried candidates (43,75,82,11,37,70,...) at 150-250k each"
+  },
   "interpretation_guard": [
     "d=10 fail means no winner win within 10 ply; it does NOT refute the candidate (deeper wins possible)",
     "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN",
-    "capped runs (7, 25, 32, 40, 87) prove nothing either way"
+    "capped runs (7, 25, 32, 40, 80, 87 and all 150k probes) prove nothing either way"
   ],
-  "next": "resume the mob-50 band with 80, 83, 108 (one candidate per sandbox run, nodeCap ~950k); bits 25/40 join 7/32/87 in the heavy-pending list (dedicated runs, d=8-first, or cross-run memo persistence needed); on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
+  "next": "continue 150-250k probes across the 46 untried candidates (cheap triage, win candidates may complete well below 950k); heavy-pending {7,25,32,40,80,87} needs external compute or certificate-chunked decomposition; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
 }
