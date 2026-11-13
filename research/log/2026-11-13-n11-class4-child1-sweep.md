@@ -838,3 +838,62 @@ capを20Mに上げるだけで解決し深さ梯子の再帰は不要だった�
 2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
  （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
 3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
+
+## 第15セッション（2026-11-14、長期レーン）: 残全候補の一括chunk走査 — S6 child #1 の7石目sweep全66候補完了・新WIN7候補5件（bit18/67/82/117/120）・repo反映
+
+### レジューム実行（第14セッション next 1）
+
+bit34完了後、native Node実行の速度（~500k nodes/s・実行毎fresh engine）が
+残候補の一括消化に十分であることを確認し、未走査30件 + プローブ/pending 23件
+（bit3含む）の計53候補を同一プロトコル（chunk深さ8・応手はroot+m合法手から・
+per-chunk logを候補毎stateに永続化・chunk cap 50M〔native〕・batch予算5-8M）で連続走査した。
+
+### 結果: 全66候補の分類完了
+
+- **48 REFUTED-D10 / 5 WIN7-D10（このrecord）**。WIN7-D10新候補:
+  **bit18**（root 000000000200000038000000800c0000・mob 52・全52初手kill）・
+  **bit67**（00000000020000083800000080080000・mob 59）・
+  **bit82**（00000000020400003800000080080000・mob 53）・
+  **bit117**（00200000020000003800000080080000・mob 59）・
+  **bit120**（01000000020000003800000080080000・mob 62）。
+- **S6 child #1 の7石目sweepは全66非退化候補で完了**:
+  WIN7-D10が7件（bit7〔証明書済〕・bit25〔証明書済〕+ 新5件〔証明書未〕）・
+  REFUTED-D10が59件。第4セッション以来未解決だったbit3もREFUTED確定。
+- 54候補（bit34含む）合計 **455,601,226 nodes / 115実行 / 11,007 chunks**。
+  最重はbit2（34.08M・mob 63）。capped chunk 0（chunk cap 50M・native）。
+- 反証コストはmob 44-63帯で1.7M-34Mと20倍分散 — per-candidate見積りの教訓再確認。
+
+### 検証（全て PASS）
+
+- pilot d6 制御 5,949（公表v15制御）。
+- **構造検査（54状態すべて）**: logにcapped行0・全killのr≠m（応手はroot+m）・
+  REFUTEDはwitness chunk数==done数・WIN7はkill数==root mob。
+- **決定制御**: WIN7候補5件のkill chunk 10件のfresh再解が全て永続化記録と
+  node数・判定・terminal範囲まで完全一致
+ （(18,0,40)=28,157・(18,2,70)=64,249・(67,0,48)=18,473・(67,2,117)=129,796・
+  (82,0,92)=29,215・(82,2,50)=111,394・(117,0,25)=119,716・(117,2,40)=21,043・
+  (120,2,40)=193,200・(120,3,80)=36,559）。pass chunkサンプル2件も完全一致
+ （(67,21,40)=118,787・(82,33,50)=16,383）。
+
+### 解釈上の注意（変更なし）
+
+- WIN7-D10は「深さ10以内のWIN7」であって証明書化（抽出→独立検証）までは確定扱いにしない。
+  REFUTEDは「深さ10以内のWIN7の否定」のみ。
+- class 4・S2 {59,60}・二石 root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 反映（全て push 後読み戻し確認・1コミット1ファイル）
+
+- output/class4-batch1-unprobed-sweep.json（53候補の統合record・WIN7候補のkill表込み）
+- ledger JSON（unprobed_sweep_session15 + WIN7候補5件のエントリ・next更新）
+- audit JSON（session15_unprobed_sweep・sweep_status完了化・not_yet_searched空化）
+- 本コミット: log 第15セッション
+
+### 次回
+
+1. **新WIN7候補5件 {18, 67, 82, 117, 120} の証明書プロトコル**
+ （kill-first抽出 → 部分木分解検証 → union等価 → 1コミット1ファイルpush。
+  verifierは --root <hex> で再利用可。kill表は ledger/unprobed-sweep record 参照）。
+2. 全66候補分類確定を起点に、class-4 frontierの実効ワークリスト再計算
+ （audit_class_frontier.py bookkeeping・S6 child #1の証明書が閉じるblocker辺の整理）。
+3. 11×11 空盤は UNKNOWN のまま。
