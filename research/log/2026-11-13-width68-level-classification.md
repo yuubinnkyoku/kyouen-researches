@@ -47,16 +47,35 @@ K0801 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(68) 
    第一 heavy band（~770..）は ~114..200k/mask で w=67 の ~1.3..1.4倍。
 3. resume from=880。
 
+## 第3セッション（chunks 12-13: mask 880..889・第一 heavy band 最重要部到達）
+
+1. **chunks 12-13**: mask 880..889 完了（chunk12: 880→885〔5 mask・**~480k/mask**〕・
+   chunk13: 885→890〔5 mask・~480k〕・計 4.8M nodes・leaves=0・生残0・
+   phase2 必要 mask 0件）。chunk 境界は from=直前 lastDone verbatim で
+   gap 証明不要。
+2. **観察**: 第一 heavy band の加重は ~130..200k/mask から chunk12-13 で
+   **~480k/mask に急上昇**（w=68 固有の最重要部・これまでの最高加重）。
+   1 chunk あたり消化 mask 数が 19..21 から 5 に急減 → heavy band 残り
+   （~999 まで）の消化は複数セッション必須。窓位相不変則（入り口 ~770）と
+   整合する位置で加重のみが増幅。
+3. **進捗**: mask 0..889 = 890/3,300 = 27.0%・累計 28.8M+0.6M nodes・
+   resume from=890。
+4. 反映: progress JSON（chunks 12-13 追記・resume_from=890）・script
+   CFG.from=890 + header訂正（stale CFG.from=822 行の除去）・本log。
+   全ファイル repo 読み戻し検証済み・並走なし（反映前 HEAD a586d612 再取得）。
+
 ## 意味論（P(68) は OPEN）
 
 - 完走時（leaves=0・生残0）で **P(68) = 32 が等号付き・全称で確定**する。
-  それまでは P(68) ∈ [32, 130] open。現在は部分進行（880/3,300 = 26.7%）。
+  それまでは P(68) ∈ [32, 130] open。現在は部分進行（890/3,300 = 27.0%）。
 
 ## レジューム（次回の実行）
 
 1. **w=68 キャンペーン継続**: output/width68_progress.json の chunks に追記
-   （CFG.from=880・**次 chunk の from は直前 lastDone を verbatim で**・
-   cap 2.4M/chunk・1実行1〜2チャンク・heavy band は ~999 まで・
+   （CFG.from=890・**次 chunk の from は直前 lastDone を verbatim で**・
+   cap 2.4M/chunk・1実行1〜2チャンク・heavy band は ~999 まで
+   （chunk12-13 で ~480k/mask の最重要部に入ったばかり・1チャンク ~5 mask の
+   ペースが当面続く見込み）・
    ~1000 での沈み込みと ~1190 での第二帯再出現〔w=65..67 パターン〕を注視）。
 2. 完走時は K0802（P(68)=32・**反映前に K 番号の空きを再確認**）に昇格・
    results/fixed-width/ 追従（pw_circle_point_max.csv・mwq_stabilization.csv・README）。
