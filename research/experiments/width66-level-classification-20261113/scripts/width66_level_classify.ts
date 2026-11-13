@@ -12,11 +12,12 @@
 // REST6 生残0の mask は REST16 でも生残0確定。生残が出た mask のみフェーズ2で再走査。
 // 窓マスクは66ビット（bits 配列のワード数は ceil(w/32) で自動化）。
 //
-// 進捗: unique=maximal 3,300 mask。chunks 1-14 で mask 0..1233 完了（隣接漏れなし。
-// gap mask 488/773/794/820 は個別証明済み）。計 34.0M nodes・leaves=0・生残0。
-// heavy band は ~772..999 と ~1190..（~1000 は dip・w=65 と同位置）。
-// resume from=1234（=lastDone。resume_from は lastDone をそのまま使うこと — +1 すると
-// mask を1個飛ばす〔第1-2セッションの教訓・mask 488 は飛ばし後に個別完走〕）。
+// 完走済み: unique=maximal 3,300 mask を chunks 1-23 で全走査
+// （計 54,811,799 nodes・leaves=0・生残0・phase2 必要 mask 0件・境界未走査 mask 0件。
+// gap mask 488/773/794/820 は個別証明済み）。heavy band は ~772..999 と ~1190..1313
+// （~1000 は dip・w=65 の 1190..1302 とほぼ同位置）→ 1314 以降は軽い帯。
+// ⟹ level 17 全滅 + K0797 会計 + 2210 円下界 ⟹ **P(66) = 32（K0799・完走済み）**。
+// CFG.from=3300 は再実行時は何もしない（resume_from=lastDone 規約・+1 すると mask を飛ばす）。
 const qrC: Record<number, Uint8Array> = {};
 const getQR = (m: number): Uint8Array => {
   if (!qrC[m]) { const s = new Uint8Array(m); for (let x = 0; x < m; x++) s[(x * x) % m] = 1; qrC[m] = s; }
@@ -111,7 +112,7 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, wordOps: ops, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 66, L: 17, from: 1234, cap: 2400000, chunksPerRun: 1, control26: false };
+const CFG = { w: 66, L: 17, from: 3300, cap: 2400000, chunksPerRun: 1, control26: false };
 async function main() {
   const out: any = { generated: "2026-11-13", rest: REST.join(","), chunks: [] };
   let from = CFG.from;
