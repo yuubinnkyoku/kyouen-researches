@@ -1,0 +1,28 @@
+{
+ "generated": "2026-11-13",
+ "theoremScope": "99 <= w < 198 (L=17, 標準形掃引 harness と同一の窓マスク生成)",
+ "checks": {
+  "periodicity99": true,
+  "crtAbs": true,
+  "crtMismatches": 0,
+  "c9Popcounts": [[0,18],[3,9],[5,27],[6,27]],
+  "c11Popcounts": [[1,11],[6,55],[7,55]],
+  "distinctPatterns": 3994,
+  "patternPopcountHistogram": [[0,1],[3,33],[5,297],[6,33],[18,165],[21,165],[30,1485],[35,1485],[36,165],[42,165]],
+  "gap7to17Empty": true
+ },
+ "sampledWidths": [
+  { "w": 99, "unique": 3630, "maximal": 3300 },
+  { "w": 133, "unique": 3630, "maximal": 3300 },
+  { "w": 140, "unique": 3630, "maximal": 3300 },
+  { "w": 150, "unique": 3630, "maximal": 3300 },
+  { "w": 160, "unique": 3630, "maximal": 3300 },
+  { "w": 170, "unique": 3630, "maximal": 3300 },
+  { "w": 180, "unique": 3630, "maximal": 3300 },
+  { "w": 190, "unique": 3630, "maximal": 3300 },
+  { "w": 197, "unique": 3630, "maximal": 3300 }
+ ],
+ "boundaryProbe_w296_smallPatternEnters": true,
+ "interpretation": "定理の全称部分は紙証明（周期性+順序同型+popcountギャップ）で w∈[99,198) の全幅をカバー。 sampledWidths は同型論の機械的再現（同型なら全幅で 3,630/3,300）。 w=99 は maximal-mask-saturation-20261113 の公表値と完全一致（制御）。 boundaryProbe は定理の限定が真であること（w≥198 帯では |P|≤6 の小パターンがフィルタに参入し得る）の実証で、全 w への安易な拡大を防ぐ否定的制御。",
+ "note": ".histogram の合計 3,994 は相違パターン総数（|T|>=17 フィルタ前）。 フィルタ通過（|P|>=18）は 165+165+1485+1485+165+165=3,630 = unique と一致。"
+}
