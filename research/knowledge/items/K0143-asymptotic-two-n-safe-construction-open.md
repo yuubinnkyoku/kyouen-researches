@@ -56,3 +56,18 @@ Scope clarification: negative evidence for direct algebraic doubling routes; spl
 Next steps: other algebraic families or non-doubling constructions. Status remains open.
 
 統合監査（2026-10-20）: 上記2026-10-17の追記はローカル研究時点の報告であり、今回すべての探索・測定を再実行したものではない。再検証の範囲は `research/experiments/local-main-integration-20261020/README.md` に記す。既存の未解決性・量化の限界を維持する。
+
+## 2026-11-13 外部理論との比較（書誌情報を確認）
+
+**現行の外部最良漸近下界は `K_n≥2n−o(n)`**。Dong–Xu (2025) の `n−o(n)` と Ghosal–Goenka–Grebennikov–Keevash–Kwan–Pham (2026) の定理1.5による改善である。Ghosal–Goenka–Keevash (2026) の `7n/12` は別の確率的削除法を示すもので、`n−o(n)` を上回る下界ではない。Ghosal–Goenka (2026) は、単一の無限集合 `S⊆ℤ²` が全ての十分大きいnで `|S∩[n]²|=Ω(n)` を満たす別の量化問題を解決した。
+
+これらの外部結果を**このK0143の `2n−O(1)`・明示的構成の証明とはみなさない**。特に、漸近的存在下界 `2n−o(n)` は定数個の不足しかない構成を保証しない。
+
+書誌（正式な論文名・恒久識別子）：
+
+- Dong, Z., & Xu, Z. (2025). *Large grid subsets without many cospherical points*. arXiv:2506.18113. https://doi.org/10.48550/arXiv.2506.18113
+- Ghosal, A., Goenka, R., & Keevash, P. (2026). On subsets of lattice cubes avoiding affine and spherical degeneracies. *Discrete & Computational Geometry, 76*, 1886–1911. https://doi.org/10.1007/s00454-026-00853-7
+- Ghosal, A., Goenka, R., Grebennikov, A., Keevash, P., Kwan, M., & Pham, H. T. (2026). *No-$(k+1)$-in-line problem for $k\geqslant3$*. arXiv:2607.05255, Theorem 1.5. https://doi.org/10.48550/arXiv.2607.05255
+- Ghosal, A., & Goenka, R. (2026). *The extensible no-four-on-a-circle problem*. arXiv:2609.20447, Theorem 1.1. https://doi.org/10.48550/arXiv.2609.20447
+
+原論文・計算記録との照合一覧は [2025〜2026年の外部文献](../../../docs/EXTREMAL_LITERATURE_2025_2026.md) を参照。これは外部文献に基づく境界の明確化であり、本項目の `status: open` は変更しない。
