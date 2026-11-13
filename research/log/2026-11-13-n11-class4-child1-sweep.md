@@ -240,3 +240,68 @@ d10 での効果は未検証（bit95 close-AND >756k capped で有意差未確�
 
 - 11x11 空盤・二石 root {49,60}・S2 {59,60} はいずれも **UNKNOWN**。
 - capped 実行（950k 含む）はいずれの方向にも何も証明しない。
+
+## 第5セッション（2026-11-13、長期レーン）: sandbox 飽和の確定（4候補全て capped）、close-first AND の d10 不達、外部ランナー整備・検証
+
+### レジューム実行（第4セッション next 1-3）
+
+全 run fresh memo・cap 950k・d10:
+
+| bit | mob | ordering | 結果 |
+|-----|-----|----------|------|
+| 25 | 50 | close-first AND | capped 950k（未反証・未解決） |
+| 34 | 56 | default | capped 950k（未反証・未解決） |
+| 48 | 46 | close-first AND | capped 950k（未反証・未解決） |
+| 81 | 46 | default | capped 950k（未反証・未解決） |
+
+### 主結論: close-first AND の -30% は d10 に届かない + sandbox 飽和
+
+- pilot d8 の -30%（277,800→193,556）は bit=25・bit=48 の d10 では 950k cap 内に
+  完結させられず、有意な前進が無い。**d8 段階限定の改善としてのみ有効**。
+- mob 44-56 に跨る4候補（うち2件は v14 が自単位 13-38万で反証済みの 48/81、
+  1件は mob-56 帯初の full-budget 試行 34）が**全て v15 単位で 950k を超える**。
+  第4セッションの判定基準により sandbox での候補消化は情報効率が乏しいと確定し、
+  レーンを外部計算準備に移行する（certificate-chunked decomposition は次の代替）。
+
+### 外部ランナーの整備・検証（本セッションの成果物）
+
+`scripts/class4_child1_runner.ts`（commit 3b0603fa）:
+- v15 と同一規則を **per-candidate freshEngine() factory** で完全リセット可能に包装
+  （memo・fbt・wscore を候補間で共有しない — sandbox では実行毎に新規プロセスで
+  等価実現していたが、外部では1プロセスで多数候補を回すため必須）。
+- **pilot d6 制御内蔵**（loss=false・5,949 nodes 以外は abort）。
+- close-first AND は depth>=8 に自動ゲート（d6 悪化の計測に基づく）。
+- CLI: `node --experimental-strip-types class4_child1_runner.ts --bits 34,54 --depth 10 --cap 50000000 --out results.jsonl`
+  （依存ゼロ・JSONL 出力・--andclose/--nocontrol/--child オプション）。
+- **検証（sandbox 内でコミット対象コードをそのまま実行）**: pilot d6=5,949 ✓・
+  pilot d8 default=277,393 ✓・pilot d8 close-AND=193,556 ✓（第4セッション計測と
+  完全一致）・bit85 d6 fresh=13,820 ✓（第4セッション default 値と一致）。
+
+### 外部での想定運用
+
+- 1プロセス1候補・cap 5M-50M nodes（外部機には 16MiB/950k の制約なし）。
+- 優先順: heavy-pending {7,25,32,40,80,87} → mob-56 帯（34 の再試行を含む
+  54, 88, 102, ...）。JSONL を持ち帰り verdict を audit JSON に反映。
+- node 数は引き続き v15 単位（v14 と非比較）。判定と terminal 範囲のみが比較可能量。
+
+### 反映
+
+- 3b0603fa: runner script（検証結果を header に記載）
+- 8da0047a: audit JSON（session5_sandbox_saturation・pending_incomplete に 34/81 追加・
+  not_yet_searched から 34 除去・bit25 に session5_close_and 注記）
+- 本コミット: log 第5セッション
+（全て push 後に repo から読み戻し検証。並走なし: 反映前に HEAD e2de0830 を再確認。）
+
+### 次回
+
+1. 外部計算資源で runner を実行し JSONL を回収・反映（資源が無い場合は
+   certificate-chunked decomposition の設計に移行）。
+2. sandbox 内での 950k 候補 grind は情報効率が乏しいことが確定したため
+   原則再開しない（安価な制御・回帰は例外）。
+3. win 発見時: 証明書再構築 → repo verifier（winner_parity=1）→ deflate+b64 →
+   class4-batch1-certificates push。
+
+### 解釈上の注意（変更なし）
+
+- 11x11 空盤・二石 root {49,60}・S2 {59,60} はいずれも **UNKNOWN**。
+- capped 実行（950k 含む）はいずれの方向にも何も証明しない。
