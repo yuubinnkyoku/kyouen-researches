@@ -117,3 +117,56 @@ audit JSON を訂正済み（commit 1664139c）。
 
 - 11x11 空盤・二石 root {49,60}・S2 {59,60} はいずれも **UNKNOWN**。
 - capped 実行はいずれの方向にも何も証明しない。
+
+## 第3セッション（2026-11-13、長期レーン）: bit=80 capped、cross-run memo永続化の計測的否定的結論、安価プローブ戦略
+
+### bit=80（mob 50）d10
+
+950k nodes で capped（複数回）。**未反証・未解決**。heavy pending に追加。
+このときの memo 状態（計測価値あり）:
+- occupied 238,430 / 262,144（91%）、proven bounds 117,212 件
+- **全 117,212 件が確定 win/lose bounds**（noWin/noLose bound >=5 は cap frontier に存在しない —
+  frontier 部分木は一度も完成しない）
+- win bound 分布: 1ply=31,813 / 3=57,585 / 5=7,573 / 7=205 / 9=1
+- lose bound 分布: 2=13,077 / 4=6,745 / 6=212 / 8=1
+
+### cross-run memo 永続化: 計測に基づき**不可**と結論
+
+1. sandbox 16MiB 制限: base working set ~13-15MB、headroom <1MB。
+   全 117k bounds の dump（~4.7MB）は in-run に保持不能（write_file 引数も run に保持される）。
+2. 高価値のみ（win>=5/lose>=4、~15k行）の永続化は I/O 上可能だが、
+   **resume 効果がない**: 落とした浅い facts（win<=3/lose<=2、~89k件）を毎回再証明して
+   予算を消費する。loaded entries による root-level memo hit は 0 件、frontier は前進しない。
+3. memo 表が91%占有率で memoEntry の probe 失敗が多発し、同一 key の重複エントリが
+   発生（dump 4,766行 -> unique 1,796）。MS=1<<19 は 16MiB に収まらない。
+4. file_system read_file は ~64KB/chunk で打ち切られる。offset/next_offset の
+   loop が必須（最初の loader は 14,737行中 1,594行しか読めていなかった）。
+
+**結論**: mob-50帯の完了には (a) 外部計算資源、(b) 証明書の decomposition
+（universal 節点を child 単位の独立 fact に分割）、(c) 探索の根本改善のいずれかが必要。
+sandbox内での単純な memo 永続化の再試行はしないこと。
+
+### 安価プローブ戦略（150k/candidate triage）
+
+残候補を 150k nodes/candidate で一斉スキャン（WIN 候補は遠か 950k で完了し得るため）。
+結果: 83, 108, 6, 18, 77, 94 が各 150k で capped、103 は 50k で予算切れ。
+**全候補 heavy、verdict 無し**。mob-51..52 帯も軽くない。
+次回は 43, 75, 82, ... の残り 46 候補を継続プローブ。
+
+### AND 節点 move ordering の負の結果
+
+lossAt（AND 節点）の子を wscore 昇順（石から遠い手を先）にソートすると
+pilot d8 で **1.8倍悪化**（>500k capped vs baseline 277,393 nodes 完了）。
+bit 順（デフォルト）を維持。closeScore は winAt（OR 節点）専用のまま。
+
+### log 復元（運用記録）
+
+第2セッションの log 追記で push_files が**ファイル全体を置換**してしまい、
+第1セッションの記録が一時失われた。git 履歴（1664139c 時点）から復元し、
+訂正注記付きで再push（ceb8218）。以後 log 追記は必ず既存全文を読み戻して
+結合してから push すること。
+
+### 解釈上の注意（変更なし）
+
+- 11x11 空盤・二石 root {49,60}・S2 {59,60} はいずれも **UNKNOWN**。
+- capped 実行（950k 含む）はいずれの方向にも何も証明しない。
