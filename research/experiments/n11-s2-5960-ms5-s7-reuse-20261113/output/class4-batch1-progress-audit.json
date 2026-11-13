@@ -162,8 +162,7 @@
         "note": "single candidate consumed full 700k node budget; expect >1M nodes; needs dedicated runs or d=8-first"
       },
       "34": {
-        "d10_nodes_so_far_v15": 950001,
-        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k (first mob-56 band candidate tried at full budget); not a refutation"
+        "status": "RESOLVED session 14: REFUTED-D10 via chunk campaign (witness m=45, 13.67M nodes, 15 runs); see session14_bit34_chunk_campaign and output/class4-batch1-bit34-campaign.json"
       },
       "40": {
         "d10_nodes_so_far_v15": 950001,
@@ -796,5 +795,88 @@
     "consequence": "heavy-pending is now {34} plus unprobed candidates; fifth chunk-method refutation overall (bit85, bit32, bit40, bit80, bit87) alongside two WIN7 certificates (bit7, bit25); cost spread reconfirmed: 1.70M / 3.10M / 6.01M / 6.18M / 15.88M nodes - mob-49 band splits (bit32 15.88M vs bit87 6.18M), per-candidate budget estimation mandatory",
     "status": "refutation of WIN7-within-depth-10 only: bit=87 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
     "next": "1) chunk campaign for heavy-pending {34} (mob 56, first of the mob-56 band) then the unprobed candidate list, with certificate protocol on any WIN; persist per-chunk node logs; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
+  },
+  "session14_bit34_chunk_campaign": {
+    "date": "2026-11-14",
+    "trigger": "session13_bit87_chunk_campaign.next item 1 executed: chunk campaign for heavy-pending bit=34 (mob 56, first of the mob-56 band; last remaining heavy-pending candidate)",
+    "verdict": "REFUTED within depth 10: lossAt(root,10)=false via witness m=45 - all 42 winner replies at root+45 solved uncapped with loss=false; 21 other first moves killed before the witness was found (22nd examined); 34 first moves unexamined (not needed for the verdict)",
+    "root_hex": "00000000020000003800000088080000",
+    "totals": {
+      "nodes": 13672100,
+      "runs": 15,
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 341994,
+      "chunks_total": 258,
+      "kill_chunks": 21,
+      "pass_chunks": 237,
+      "kill_nodes_sum": 1472847,
+      "pass_nodes_sum": 8899242,
+      "wasted_capped_retry_nodes": 3000010
+    },
+    "kill_table": {
+      "0": 40,
+      "2": 88,
+      "3": 40,
+      "4": 38,
+      "6": 81,
+      "7": 83,
+      "8": 50,
+      "10": 37,
+      "11": 3,
+      "15": 80,
+      "18": 25,
+      "21": 32,
+      "25": 50,
+      "28": 80,
+      "32": 21,
+      "33": 7,
+      "36": 8,
+      "37": 32,
+      "38": 25,
+      "40": 84,
+      "44": 104
+    },
+    "method_note": "per-chunk node log persisted in the state file (mandatory since session 13); replies enumerated from the legal-move list AT root+m so r!=m holds structurally; native Node.js execution (no sandbox ceiling); chunk (36,8) capped at 300k in 10 fresh batch runs (3.0M wasted nodes on identical capped attempts - memo is not persisted across runs), then solved standalone fresh at cap 20M: 341,994 nodes loss=true; batch chunk cap then raised to 1M (no later chunk exceeded 300k)",
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes (PASS; published v15 control)",
+      "witness_coverage": "root+45 has 42 legal winner replies; the campaign done-set for m=45 contains exactly 42 entries, all loss=false, all uncapped; set-equality with the engine reply enumeration verified programmatically",
+      "determinism_fresh_resolves": {
+        "(36,8)": {
+          "loss": true,
+          "nodes": 341994
+        },
+        "(0,40)": {
+          "loss": true,
+          "nodes": 81839
+        },
+        "(11,3)": {
+          "loss": true,
+          "nodes": 42463
+        },
+        "(44,104)": {
+          "loss": true,
+          "nodes": 75723
+        },
+        "(45,48)": {
+          "loss": false,
+          "nodes": 7528
+        },
+        "(45,50)": {
+          "loss": false,
+          "nodes": 25984
+        },
+        "(45,36)": {
+          "loss": false,
+          "nodes": 50890
+        },
+        "note": "all seven fresh re-solves identical to the persisted per-chunk campaign records (recorded-count matching available because per-chunk logs were persisted this time)"
+      },
+      "root_mob_recheck": "mob 56 confirmed by direct enumeration (PASS)"
+    },
+    "record": "output/class4-batch1-bit34-campaign.json",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (bit34 entry)",
+    "consequence": "heavy-pending is now EMPTY: {7->WIN7 cert, 25->WIN7 cert, 32->REFUTED, 40->REFUTED, 80->REFUTED, 87->REFUTED, 34->REFUTED}. Six chunk-method refutations and two WIN7 certificates overall for the S6 child #1 7th-stone sweep; unprobed candidates remain in the progress audit. Cost spread across the heavy band: 1.70M / 3.10M / 6.01M / 6.18M / 13.67M / 15.88M nodes.",
+    "status": "refutation of WIN7-within-depth-10 only: bit=34 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
+    "next": "1) chunk campaigns for the unprobed candidates (54, 88, 102, ... - mob 56-63 band, per-candidate budget estimation mandatory); 2) WIN7 discovery => certificate protocol; 3) keep UNKNOWN guards"
   }
 }
