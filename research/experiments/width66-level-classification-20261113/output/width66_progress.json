@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-13",
  "status": "in_progress",
- "resume_from": 889,
+ "resume_from": 1234,
  "machine": "research/experiments/width66-level-classification-20261113/scripts/width66_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
  "machineNote": "K0798 の w=65 完走機と同一構造。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。フェーズ2（REST16 再走査）必要 mask は 0 件。",
  "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。第1-2セッションの resume_from=489 は off-by-one で mask 488 を飛ばしていた → 第2セッションで個別完走し証明済み（gapCertifications 参照）。以後 resume_from=lastDone を厳守。",
@@ -16,7 +16,13 @@
   { "chunk": 5, "from": 795, "lastDone": 820, "nodes": 2400000, "wordOps": 231579428, "leaves": 0, "aborted": true, "survivors": 0, "note": "26 mask/2.4M = ~92k/mask（heavy band）" },
   { "chunk": 6, "from": 821, "lastDone": 847, "nodes": 2400000, "wordOps": 235145891, "leaves": 0, "aborted": true, "survivors": 0, "note": "27 mask/2.4M = ~89k/mask（heavy band）" },
   { "chunk": 7, "from": 847, "lastDone": 874, "nodes": 2400000, "wordOps": 235316180, "leaves": 0, "aborted": true, "survivors": 0, "note": "28 mask/2.4M = ~86k/mask（heavy band）" },
-  { "chunk": 8, "from": 874, "lastDone": 889, "nodes": 2400000, "wordOps": 229628949, "leaves": 0, "aborted": true, "survivors": 0, "note": "16 mask/2.4M = ~150k/mask（heavy band・加重）" }
+  { "chunk": 8, "from": 874, "lastDone": 889, "nodes": 2400000, "wordOps": 229628949, "leaves": 0, "aborted": true, "survivors": 0, "note": "16 mask/2.4M = ~150k/mask（heavy band・加重）" },
+  { "chunk": 9, "from": 889, "lastDone": 914, "nodes": 2400000, "wordOps": 233963642, "leaves": 0, "aborted": true, "survivors": 0, "note": "26 mask/2.4M = ~92k/mask（heavy band）" },
+  { "chunk": 10, "from": 914, "lastDone": 940, "nodes": 2400000, "wordOps": 230770729, "leaves": 0, "aborted": true, "survivors": 0, "note": "27 mask/2.4M = ~89k/mask（heavy band）" },
+  { "chunk": 11, "from": 940, "lastDone": 964, "nodes": 2400000, "wordOps": 233602432, "leaves": 0, "aborted": true, "survivors": 0, "note": "25 mask/2.4M = ~96k/mask（heavy band）" },
+  { "chunk": 12, "from": 964, "lastDone": 1000, "nodes": 2400000, "wordOps": 235080894, "leaves": 0, "aborted": true, "survivors": 0, "note": "37 mask/2.4M = ~65k/mask（heavy band・減衰開始）" },
+  { "chunk": 13, "from": 1000, "lastDone": 1214, "nodes": 2400000, "wordOps": 254622049, "leaves": 0, "aborted": true, "survivors": 0, "note": "214 mask/2.4M = ~11k/mask（~1000 の沈み込み・w=65 と同位置の非単調 dip）" },
+  { "chunk": 14, "from": 1214, "lastDone": 1234, "nodes": 2400000, "wordOps": 231800109, "leaves": 0, "aborted": true, "survivors": 0, "note": "21 mask/2.4M = ~114k/mask（第二 heavy band ~1190..・w=65 と同位置に再出現）" }
  ],
  "gapCertifications": [
   { "idx": 488, "nodes": 20582, "leaves": 0, "note": "resume off-by-one で未走査だった mask を classifyOne で個別完走（maskSize 24）" },
@@ -24,6 +30,6 @@
   { "idx": 794, "nodes": 168089, "leaves": 0, "note": "chunk4/5 境界の未走査 mask（maskSize 28）" },
   { "idx": 820, "nodes": 12955, "leaves": 0, "note": "chunk5/6 境界の未走査 mask（maskSize 24・軽量）" }
  ],
- "totals": { "masksDone": 889, "nodes": 19619316, "leaves": 0, "survivors": 0, "phase2Masks": 0 },
- "semantics": "level 17 全滅（完走時 leaves=0・生残0）+ K0797 会計（g2=8・g3=12・g4=5 全形 < 17・w≤84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 130）⟹ P(66) = 32（等号付き・全称）。完了まで OPEN。P(66) ∈ [32, 128]。mask 0..888 は隣接漏れなしに完全走査済み。"
+ "totals": { "masksDone": 1234, "nodes": 34019316, "leaves": 0, "survivors": 0, "phase2Masks": 0 },
+ "semantics": "level 17 全滅（完走時 leaves=0・生残0）+ K0797 会計（g2=8・g3=12・g4=5 全形 < 17・w≤84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 130）⟹ P(66) = 32（等号付き・全称）。完了まで OPEN。P(66) ∈ [32, 128]。mask 0..1233 は隣接漏れなしに完全走査済み。heavy band は ~772..999（第一）と ~1190..（第二）に局在 — w=65（1190..1302 heavy・~1000 dip）と同じ非単調構造。"
 }
