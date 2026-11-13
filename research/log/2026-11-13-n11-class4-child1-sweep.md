@@ -178,3 +178,65 @@ bit 順（デフォルト）を維持。closeScore は winAt（OR 節点）専�
 計22候補がすべて 150k を超えたため、150k プローブはこれ以上情報を増やさない。
 残り32候補（3, 34, 54, 88, ..., 2、mob 56-63帯）は各々フル ~950k run が必要。
 audit JSON に全プローブ結果を反映済み（4b0e86ce）。
+
+## 第4セッション（2026-11-13、長期レーン）: bit=3 capped、v15-vs-v14 コスト監査（インフレ 1.8-7.2倍）、順序/deepening 否定結果、close-first AND の -30%
+
+### bit=3（mob 56、未走査帯の最初）d10
+
+fresh memo・cap 950k で capped。**未反証・未解決**。heavy pending に追加。
+pilot d6 制御（loss=false・5,949 nodes）は公表値と完全一致（実装健全性の再確認）。
+run ceiling の再確認: pilot+950k×2 の混在 run と 1.4M node 尘用 run は両方
+process safety deadline 超過（timeout 2件を実験事実として記録）。~950k-1M/run が上限。
+
+### v15-vs-v14 コストインフレの定量監査（本セッションの主成果）
+
+v14 の d10 反証 6 候補を v15 で安価に再確認しようとしたところ、**1件も再現しない**:
+- pilot d6: v14 3,257 vs v15 5,949（1.83x）/ pilot d8: 108,869 vs 277,800（2.55x）
+- bit85 d10: v14 132,921 vs v15 >950,000（≥7.15x）
+- bit95 d10: v14 275,989 vs v15 >950,000（≥3.44x）
+- bit48 d10: v14 379,447 vs v15 >500,000（≥1.32x、500k cap で打ち切り）
+
+**解釈**: v14 の node 数は失われた実装の産物であり、committed engine（v15）では
+再現不能。v14 の d10 反証 6 件は判定・terminal range の standing evidence として有効だが、
+node 数は非比較対象。**第2-3セッションの「mob-50帯は一様に重い」結論は
+このインフレで交絡している**（v15 の 950k cap には v14 が 133k-380k 自単位で
+完了した候補が含まれる）。以後の予算計画は v15 単位で行うこと。
+
+### v14 効率回復の試み（全て否定的・計測済み）
+
+1. **OR/AND ソート方向グリッド**（close-desc/close-asc/bit × 3、9組合せ）pilot d6:
+   5,917-14,179 nodes。v14 の 3,257 に近づく組合せなし（default が最良）。
+2. **closeScore 半径/重みバリアント**（r1/r2/r3/r4/r3sq/r3flat）pilot d6:
+   5,949-5,970 nodes。不感。
+3. **細段階 deepening**（d2→d4→d6→d8、memo 共有・累積）pilot:
+   34/683/6,637/284,462。v14（3,257/108,869）を再現しない。
+4. **カウンタ定義仮説**: winAt 呼び出しのみ（694/92,769）・lossAt のみ（5,255/184,624）も
+   v14 公表値と不一致。
+5. **last-response ordering**（winAt 子を相手直前の石への chebyshev 距離でソート）bit85:
+   d6 13,818 / d8 211,848 / d10 capped。d8 でむしろ悪化。
+6. **bit85 deepening**（d6→d8→d10・累積）: 13,820 / 186,626 / >950,000。
+   興味深い非対称: d6 段階は v14 の 40,965 より **3倍安い**のに d10 段階は爆発する。
+
+### 唯一の肯定的結果: close-first AND ordering
+
+lossAt（AND 節点）の子を wscore **降順**（近い手を先）にソートすると
+pilot d8 が 277,800 → **193,556 nodes（-30%）**。ただし深さ依存（d6 では 7,646 と悪化）。
+d10 での効果は未検証（bit95 close-AND >756k capped で有意差未確定）。
+第3セッションの「昇順は1.8倍悪化」結果と対になう検証として記録。
+（v16 候補: d8+ 段階に限定して採用する価値あり。）
+
+### 次回
+
+1. close-first AND variant を heavy-pending 1件（例: bit=25）に 950k で適用し、
+   d8 の -30% が d10 に届くかを検証。
+2. 届かない場合、sandboxでの候補消化は情報効率が乏しいと判断し、
+   (a) 外部計算ランナー向け engine+driver の整備、または
+   (b) certificate-chunked decomposition（universal 子ごとの独立 fact 分割）
+   に移行する準備を優先。
+3. mob-56 帯の継続は1実行1候補（34, 54, 88, 102, ...）で並行して継続可。
+4. win 発見時: 証明書再構築 → repo verifier → deflate+b64 → class4-batch1-certificates push。
+
+### 解釈上の注意（変更なし）
+
+- 11x11 空盤・二石 root {49,60}・S2 {59,60} はいずれも **UNKNOWN**。
+- capped 実行（950k 含む）はいずれの方向にも何も証明しない。
