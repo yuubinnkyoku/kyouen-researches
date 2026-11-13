@@ -15,7 +15,7 @@
 // chunk12-13 は第一 heavy band 最重要部 ~480k/mask（5 mask/chunk）。CFG.from=890 は resume_from=lastDone 規約
 // chunk6→7（mask 788）と chunk7→8（mask 807）の境界 off-by-one は classifyOne 単一mask完走機で
 // 個別証明済み（nodes 314,127 / 273,404・leaves=0）→ mask 0..821 は隣接漏れなし。
-// 第一 heavy band は ~770 開始・~130..200k/mask。CFG.from=822 は resume_from=lastDone 規約
+// 第一 heavy band は ~770 開始（chunk12-13 で ~480k/mask に急上昇）。CFG.from は resume_from=lastDone 規約
 // （+1 すると mask を飛ばす・progress JSON が正本）。
 const qrC: Record<number, Uint8Array> = {};
 const getQR = (m: number): Uint8Array => {
