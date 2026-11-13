@@ -14,7 +14,7 @@ solution:
   classification: [all-safe-grundy]
   coverage: level 17 全滅 ⟹ P(w) ≤ 32 論法の非標準形（g0 ≥ 2）側の前提が全w ≤ 84で正当
   conditions: 連続整数行
-  verification: [mathematical-proof, finite-verification]
+  verification: [mathematical-proof, exhaustive-enumeration]
   certificate: 全 (a,u) 全数走査による classMax = min_m max_{a,u} #{t ∈ 類: a − 4g0²t² − ut ∈ QR(m)} < 17 の機械検証（2実装一致）
   independent_check: 直接法と増分sweepの一致・既知会計値（K0788/K0792/K0794）の完全再現・失敗側witnessの明示
   note: "K0794の『g4形のclassMax精密化が唯一の壁』は訂正: g4形はu奇制限（g0偶⟹q奇）と係数64でclassMax 5..9に自明に切り下がり、真の壁はg3形（類サイズ29 = w85..87でclassMax=17・全法で不変）。g2形はm=32/64のu奇制限付きで類サイズ43までclassMax=10に強化。P(65)..P(84)はopenのまま（標準形16法DFSの実行コストが長期レーン対象・w=64で33.2Mノード×1.3/w成長）。"
