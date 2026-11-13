@@ -1,9 +1,9 @@
 {
  "generated": "2026-11-13",
  "status": "in_progress",
- "resume_from": 1232,
+ "resume_from": 1302,
  "machine": "research/experiments/width65-level-classification-20261113/scripts/width65_level_classify.ts（chunks 1-18: REST16）+ width65-pruning-audit-20261113 の REST6 2フェーズ方式（chunks 19-）",
- "machineNote": "chunks 19以降は REST6=[19,23,7,29,43,47]・cap 2.4M nodes/chunk（word-ops 観点で旧1.2Mチャンクと同等）。健全性: survivors(REST6) ⊇ survivors(REST16)（pruning-audit 実験・w26 L12 制控 S* 1生残で確認）。REST6 生残0の mask は REST16 でも生残0確定。フェーズ2（REST16 再走査）必要 mask は 0 件。",
+ "machineNote": "chunks 19以降は REST6=[19,23,7,29,43,47]・cap 2.4M nodes/chunk（word-ops 観点で旧1.2Mチャンクと同等）。健全性: survivors(REST6) ⊇ survivors(REST16)（pruning-audit 実験・w26 L12 制御 S* 1生残で確認）。REST6 生残0の mask は REST16 でも生残0確定。フェーズ2（REST16 再走査）必要 mask は 0 件。",
  "uniqueMasks": 3296,
  "totalMaximal": 3296,
  "control": { "w26_L12_REST16": { "survivors": 1, "survivor": "S* = [0,1,3,4,7,10,15,18,21,22,24,25]", "note": "K0782..K0794 と一致" }, "w26_L12_REST6": { "survivors": 1, "survivor": "S*（同一）", "note": "REST6 でも誤殺なし" } },
@@ -27,15 +27,17 @@
   { "chunk": 17, "from": 950, "lastDone": 962, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0, "rest": "16" },
   { "chunk": 18, "from": 962, "lastDone": 975, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0, "rest": "16" },
   { "chunk": 19, "from": 975, "lastDone": 1190, "nodes": 2400000, "wordOps": 250829444, "leaves": 0, "aborted": true, "survivors": 0, "rest": "6", "note": "215 mask/2.4M = ~11k/mask（heavy band が ~1000 で沈んだ）" },
-  { "chunk": 20, "from": 1190, "lastDone": 1232, "nodes": 2400000, "wordOps": 236656110, "leaves": 0, "aborted": true, "survivors": 0, "rest": "6", "note": "42 mask/2.4M = ~57k/mask（heavy band 再出現・非単調）" }
+  { "chunk": 20, "from": 1190, "lastDone": 1232, "nodes": 2400000, "wordOps": 236656110, "leaves": 0, "aborted": true, "survivors": 0, "rest": "6", "note": "42 mask/2.4M = ~57k/mask（heavy band 再出現・非単調）" },
+  { "chunk": 21, "from": 1232, "lastDone": 1265, "nodes": 2400000, "wordOps": 235045865, "leaves": 0, "aborted": true, "survivors": 0, "rest": "6", "note": "33 mask/2.4M = ~73k/mask" },
+  { "chunk": 22, "from": 1265, "lastDone": 1302, "nodes": 2400000, "wordOps": 237199259, "leaves": 0, "aborted": true, "survivors": 0, "rest": "6", "note": "37 mask/2.4M = ~65k/mask" }
  ],
- "totals": { "masksDone": 1232, "nodes": 26400000, "leaves": 0, "survivors": 0, "phase2Masks": 0 },
+ "totals": { "masksDone": 1302, "nodes": 31200000, "leaves": 0, "survivors": 0, "phase2Masks": 0 },
  "costCurve": {
   "mask_0_772": "~6.2k nodes/mask（軽い帯・REST16）",
   "mask_772_975": "71k..150k nodes/mask（heavy band 中核・REST16）",
   "mask_975_1190": "~11k nodes/mask（REST6・heavy band が一旦沈む）",
-  "mask_1190_1232": "~57k nodes/mask（REST6・heavy band 再出現・コストは非単調）",
-  "note": "heavy band は沈んだり戻ったりする非単調構造。REST6 で word-ops は全帯で 40..45% 削減済み。残り 2,064 mask。"
+  "mask_1190_1302": "~65k/mask（REST6・heavy band 再出現）",
+  "note": "heavy band は非単調（~1000 で一旦沈み ~1190 で再出現）。REST6 で word-ops は全帯 40..45% 削減済み。残り 1,994 mask・同密度が続くと REST6 で ~260M ops/~130M nodes 見込み。"
  },
  "semantics": "level 17 全滅（完走時 leaves=0・生残0）+ K0797 会計（g2=8・g3=12・g4=5 全形 < 17）+ 2210 円下界 32 点 ⟹ P(65) = 32（等号付き・全称）。完了まで OPEN。"
 }
