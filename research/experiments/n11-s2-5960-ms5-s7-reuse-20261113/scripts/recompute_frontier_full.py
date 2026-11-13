@@ -256,8 +256,7 @@ result = {
         'S2 {59,60} / class 2 / class 4 remain UNKNOWN',
 }
 (OUT / 'class4-batch3-frontier-full-recompute-20261114.json').write_text(
-    json.dumps(result, indent=1) + '
-')
+    json.dumps(result, indent=1) + '\n')
 print('written class4-batch3-frontier-full-recompute-20261114.json')
 
 # ---------- after-batch3 ranking CSVs (same format as -after-batch1/-batch2) ----------
@@ -267,21 +266,19 @@ ranking = sorted(
       'remaining_s7_edge_cost': sum(int(r['s6_s7_edge_cost']) for r in rows)}
      for k, rows in rem3.items()),
     key=lambda r: (0 if r['classes'] & 6 else 1, r['remaining_s6_orbits'],
-                   r['remaining_s7_edge_cost'], r['s5_hex']))
+                  r['remaining_s7_edge_cost'], r['s5_hex']))
 with (OUT / 'class-frontier-s5-ranking-after-batch3.csv').open('w', newline='') as f:
-    w = csv.writer(f, lineterminator='
-')
+    w = csv.writer(f, lineterminator='\n')
     w.writerow(('s5_hex', 'classes', 'remaining_s6_orbits', 'remaining_s7_edge_cost'))
     for r in ranking:
         w.writerow((r['s5_hex'], r['classes'], r['remaining_s6_orbits'],
                     r['remaining_s7_edge_cost']))
 with (OUT / 'class-frontier-top-candidates-s6-after-batch3.csv').open('w', newline='') as f:
-    w = csv.writer(f, lineterminator='
-')
+    w = csv.writer(f, lineterminator='\n')
     for label, cand in (('best class-4 blocker-candidate S5', class4[0]),
                         ('best class-2 blocker-candidate S5', class2[0])):
-        w.writerow((f"# {label}: s5={cand['s5_hex']} classes={cand['classes']} "
-                    f"remaining={cand['remaining_s6_orbits']} cost={cand['remaining_s7_edge_cost']}"))
+        w.writerow([f"# {label}: s5={cand['s5_hex']} classes={cand['classes']} "
+                    f"remaining={cand['remaining_s6_orbits']} cost={cand['remaining_s7_edge_cost']}"])
         w.writerow(('s5_hex', 's6_hex', 's6_s7_edge_cost', 'demand'))
         for row in sorted(rem3[cand['s5_hex']], key=lambda r: int(r['s6_s7_edge_cost'])):
             d = dem3[row['s6_hex']]
