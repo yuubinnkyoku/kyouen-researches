@@ -2,7 +2,7 @@
 """Frontier recomputation including the class2-lane cost-60 WIN7 certificates
 (19 roots, output/class2-lane-cost60-win7-certificates-20261114.json).
 
-Extends scripts/recompute_frontier_full.py: the after-batch3 frontier
+Extends the recompute_frontier_full.py logic: the after-batch3 frontier
 (690 / 7156 / 561764 / 5373 / 421771) is recomputed as a STAGED CONTROL
 (assert) over the same inputs, then the 19 new certificate covers are added.
 Outputs the after-cost60 frontier JSON and ranking CSVs.
