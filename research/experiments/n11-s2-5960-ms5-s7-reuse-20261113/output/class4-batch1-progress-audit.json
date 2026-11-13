@@ -265,7 +265,7 @@
           "note": "cut by run total budget (149,997)"
         }
       },
-      "interpretation": "all 22 probed candidates exceeded 150k nodes; no verdicts. The whole mob 50-61 band is heavier than 150k; 150k probes have exhausted their informational value — remaining candidates need full ~950k runs. capped probes prove nothing either way"
+      "interpretation": "All 22 probes ended without a verdict: 18 consumed at least 150,000 nodes, while 4 were interrupted below that threshold (bit 78: 149998, bit 84: 49995, bit 103: 49995, bit 118: 149998). Capped runs prove no WIN/LOSS. The observation that the first 18 full-budget probes failed to finish is not evidence that every remaining candidate requires 950k nodes; shorter probes can still discover cheap candidates."
     },
     "not_yet_searched": [
       "3",
@@ -331,12 +331,12 @@
       ],
       "conclusion": "completing mob-50 candidates needs either a bigger-memory runner (external compute lane), a fundamentally smaller proof (certificate-chunked per-universal-child facts), or a better search. Do not retry naive cross-run memo persistence in the sandbox"
     },
-    "cheap_probe_strategy": "first-pass 150k probes triaged 22 untried candidates; all capped. 150k probes are now exhausted as an information source; the 32 unprobed candidates (3,34,54,88,102,15,50,86,90,92,105,116,21,36,4,38,67,109,112,117,8,10,76,33,66,104,106,110,0,44,120,2) each need a full ~950k run"
+    "cheap_probe_strategy": "22 candidates probed, 18 at >=150k nodes and 4 cut short by total run budget. None yielded a verdict. The remaining 32 are unprobed, so their costs are unknown; use measured prioritization rather than treating ~950k as a proven lower bound."
   },
   "interpretation_guard": [
     "d=10 fail means no winner win within 10 ply; it does NOT refute the candidate (deeper wins possible)",
     "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN",
     "capped runs (7, 25, 32, 40, 80, 87 and all 150k probes) prove nothing either way"
   ],
-  "next": "32 unprobed candidates remain (mob 56-63 band: 3,34,54,88,102,15,50,86,90,92,105,116,21,36,4,38,67,109,112,117,8,10,76,33,66,104,106,110,0,44,120,2); run full ~950k passes on them one per run (skip 150k probes — no longer informative); heavy-pending {7,25,32,40,80,87} needs external compute or certificate-chunked decomposition; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
+  "next": "32 unprobed candidates remain (mob 56-63 band: 3,34,54,88,102,15,50,86,90,92,105,116,21,36,4,38,67,109,112,117,8,10,76,33,66,104,106,110,0,44,120,2); prioritize targeted runs within resource limits; 150k probes are inconclusive for 4 partially tested bits and the 32 unprobed candidates; ~950k is a proposed cap, not a proven required cost; heavy-pending {7,25,32,40,80,87} needs external compute or certificate-chunked decomposition; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
 }
