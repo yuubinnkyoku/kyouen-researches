@@ -406,9 +406,9 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) continue the class-4 lane: the target S5 00000000020000003800000080000000 now has 35 remaining S6 orbits (cost 2756) - run S6 child sweeps / certificates for the next children in the recomputed ranking (output/class-frontier-top-candidates-s6-after-batch1.csv)",
-    "2) bookkeeping only so far: class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN",
-    "3) keep UNKNOWN guards"
+    "1) recompute the class-2/4 frontier with the three batch2 child#2 certificates (add output/class4-batch2-certificates-verified.json to WIN7_VERIFIED; snapshot asserts disabled locally only) and republish the ranking CSVs",
+    "2) continue the class-4 lane: sweep the next S6 child of the lane target S5 00000000020000003800000080000000 in the recomputed ranking order",
+    "3) bookkeeping only so far: class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; keep UNKNOWN guards"
   ],
   "bit25": {
     "candidate": "bit=25 (mob 50), heavy-pending since session 2 (v15 monolithic d10 capped at 950k x3 incl. close-first AND; v14 capped 700k). Second WIN7 candidate found by the chunk campaign.",
@@ -1829,5 +1829,20 @@
       "output/class-frontier-s5-ranking-after-batch1.csv",
       "output/class-frontier-top-candidates-s6-after-batch1.csv"
     ]
+  }
+,
+  "child2_sweep_session18": {
+    "date": "2026-11-14",
+    "summary": "S6 child #2 000000000200000038000000a0000000 (cheapest remaining S6 orbit of the lane target S5, cost 67): all 67 non-degenerate 7th-stone candidates swept within depth 10 - 3 WIN7-D10 (bit50, bit77, bit91) and 64 REFUTED-D10; all three WIN7 certificates extracted, independently verified and pushed",
+    "win7_certificates": {
+      "bit50": {"root_hex": "000000000200000038040000a0000000", "rows": 25085, "bytes": 906647, "md5": "9c1233a2d90e6acf50415d8faab22228", "mob": 50, "commit": "d1bdccf3"},
+      "bit77": {"root_hex": "000000000200200038000000a0000000", "rows": 54558, "bytes": 1973077, "md5": "8feb168914ebc801f608418860c92c20", "fnv1a": 1601464846, "mob": 58, "commit": "8625f1c5"},
+      "bit91": {"root_hex": "000000000a00000038000000a0000000", "rows": 37305, "bytes": 1347285, "md5": "b28da716469d8ce01c42d9aad2bbd6f6", "fnv1a": 631694243, "mob": 46, "commit": "c2da5401"}
+    },
+    "verification": "verify_bit7_win7_cert.ts per root: all sub-root decompositions PASS (58/46/50 sub-roots), consumed union = certificate row set exactly (diff 0 both ways), terminal stone range [13,17], root checks PASS",
+    "sweep_record": "output/class4-batch2-child2-sweep.json",
+    "verified_receipts": "output/class4-batch2-certificates-verified.json",
+    "covers": {"bit50": 7, "union_of_the_three": 16},
+    "note": "the per-candidate node counts of the 64 REFUTED candidates were lost in a lane-log context compaction (recorded honestly in the sweep record); the three WIN7 node counts survived: bit50 2,107,194 / bit77 11,058,432 / bit91 9,345,201 (all uncapped, chunk cap 50M, ~470k nodes/s)"
   }
 }
