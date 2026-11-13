@@ -1,0 +1,101 @@
+{
+ "schema": "n11-class2-lane-cost61-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "child": "00000000000000801a02000000080000",
+ "source_sweep": "output/class2-lane-cost61-sweep-20261114.json (4 WIN7-D10 candidates: bits 14,18,108,116; 0 capped)",
+ "method": "kill-table-first extraction (engine v15 verbatim via extract_engine_patched.ts = class4_child1_cert_extractor.ts with export keywords added only, no logic change; per-candidate fresh process with pilot d6 control loss=false; own kill tables); independent verification by verify_bit7_win7_cert.ts (exact integer Bareiss 4x4, no engine import; fs-import + argv-guard ESM patch only, logic verbatim): root-check + every legal sub-root PASS + consumed winner-state union vs certificate rows compared in both directions (0/0)",
+ "certificates": [
+  {
+   "root": "00000000000000801a02000000084000",
+   "bit": 14,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61-certificates/n11_s7_00000000000000801a02000000084000.cert",
+   "rows": 27442,
+   "bytes": 989985,
+   "md5": "da08083457a857257ca7010ff014b736",
+   "subroots_verified": 48,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 48,
+   "extraction_nodes": 1259273,
+   "extraction_rows": 27442,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00000000000000801a020000000c0000",
+   "bit": 18,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61-certificates/n11_s7_00000000000000801a020000000c0000.cert",
+   "rows": 30413,
+   "bytes": 1097124,
+   "md5": "3d1aa9504507492f3f75c6b2136dfc55",
+   "subroots_verified": 48,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 48,
+   "extraction_nodes": 1310779,
+   "extraction_rows": 30413,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00001000000000801a02000000080000",
+   "bit": 108,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61-certificates/n11_s7_00001000000000801a02000000080000.cert",
+   "rows": 39483,
+   "bytes": 1426107,
+   "md5": "d99976756743b222a1f456d666ec8fd0",
+   "subroots_verified": 53,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 53,
+   "extraction_nodes": 2338505,
+   "extraction_rows": 39483,
+   "terminal_range": [
+    13,
+    17
+   ]
+  },
+  {
+   "root": "00100000000000801a02000000080000",
+   "bit": 116,
+   "verdict": "WIN7",
+   "certificate": "output/class2-lane-cost61-certificates/n11_s7_00100000000000801a02000000080000.cert",
+   "rows": 56810,
+   "bytes": 2048518,
+   "md5": "0e412bd362da8cca28910b7cb68dffca",
+   "subroots_verified": 53,
+   "all_subroots_pass": true,
+   "union_missing": 0,
+   "union_extra": 0,
+   "loser_mobility": 53,
+   "extraction_nodes": 4864291,
+   "extraction_rows": 56810,
+   "terminal_range": [
+    13,
+    17
+   ]
+  }
+ ],
+ "totals": {
+  "certificates": 4,
+  "rows": 154148,
+  "bytes": 5561734,
+  "extraction_nodes": 9772848
+ },
+ "frontier_effect_note": "frontier numbers change only via the recomputation in output/class2-lane-cost61-frontier-recompute-20261114.json (staged controls reproduce published baseline/batch1/batch2/batch3/cost60 exactly before these 4 certificates are measured)",
+ "interpretation_guard": [
+  "WIN7 certificates prove a win within depth 10 from the corresponding 7-stone root only.",
+  "REFUTED-D10 sweep entries negate only WIN7-within-depth-10; deeper wins remain possible.",
+  "class 2, class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN."
+ ]
+}
