@@ -538,5 +538,32 @@
     ],
     "status": "certificate rebuild + independent verification pending (same protocol as bit7); class 4 / S2 {59,60} / 11x11 empty board all remain UNKNOWN",
     "next": "1) bit=25 certificate extraction with the kill-first extractor, 50 sub-root decomposition verification, cert push; 2) continue chunk campaigns for heavy-pending {32,40,80,87,34} and unprobed candidates"
+  },
+  "session8_bit25_certificate": {
+    "date": "2026-11-14",
+    "trigger": "session7b_bit25_chunk_campaign.next item 1 executed: bit=25 certificate rebuilt, independently verified, and pushed",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_00000000020000003800000082080000.cert",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "root_hex": "00000000020000003800000082080000",
+      "rows": 37854,
+      "bytes": 1363951,
+      "md5": "66c35945925c8c8286d58f745cc22507",
+      "encoding": "plain text (deflate+b64 skipped: no compressor in sandbox; md5 recorded)",
+      "extraction_script": "scripts/class4_child1_cert_extractor.ts (engine v15 verbatim inline; kill-first depth-1 move priority from the session-7b kill table)",
+      "extraction_nodes_total": 4475425,
+      "batches": "b1 357,373 / b2 496,080 / b3 555,389 / b4 480,926 / b5 457,485 / b6 563,911 / b7 719,805 / b8 348,057 / b9 496,399; merge by per-run files + sort -u",
+      "duplicate_rows": "46,670 raw rows -> 37,854 unique; duplicate hex keys from shared subtrees between mutual-kill first-move pairs; conflicting moves resolved by the sort -u lexicographic (minimum move) rule and confirmed closed by full-tree verification"
+    },
+    "verification": {
+      "script": "scripts/verify_bit7_win7_cert.ts --root 00000000020000003800000082080000 (reused unchanged from bit7; exact Bareiss det4, no engine import, no verdict cache)",
+      "method": "50 sub-root decomposition (root|m, 8 stones, winner to move, local winner_parity=0), runs V1..V7 (8/8/8/8/8/8/2)",
+      "result": "ALL 50 SUB-ROOTS PASS; union of consumed winner states = 37,854 = full row set exactly (comm both directions empty); terminals 13,161 in stone range [13,17]; opponent edges 72,848; seen states 81,162 with duplicates",
+      "root_checks": "7 stones, no 4 cocircular, loser mobility 50 — PASS",
+      "negative_control": "first verifier attempt truncated the top key word (bits 64+) into Int32; the missing-winning-player-move check fired at the very first sub-root and aborted the run — the integrity checks demonstrably catch table corruption; after the 4-word fix all 50 sub-roots pass"
+    },
+    "status": "bit=25 proven as class4-batch1-internal WIN7 within depth 10, with an independently verifiable certificate (second after bit=7). Class 4 / S2 {59,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve (2026-11-14 arithmetic audit) is unrelated and remains open.",
+    "record": "output/class4-batch1-bit25-certificate.json",
+    "next": "1) chunk campaigns for heavy-pending {32,40,80,87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
   }
 }
