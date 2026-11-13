@@ -1,3 +1,4 @@
+
 K0801 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(68) 決定に必要な
 前提は level 17 全滅掃引のみ（下界は 2210 円 32 点・v-span 94 ≤ 134）。
 
@@ -77,6 +78,43 @@ K0801 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(68) 
    （chunk12-13 で ~480k/mask の最重要部に入ったばかり・1チャンク ~5 mask の
    ペースが当面続く見込み）・
    ~1000 での沈み込みと ~1190 での第二帯再出現〔w=65..67 パターン〕を注視）。
+2. 完走時は K0802（P(68)=32・**反映前に K 番号の空きを再確認**）に昇格・
+   results/fixed-width/ 追従（pw_circle_point_max.csv・mwq_stabilization.csv・README）。
+3. 次の空き K 番号: **K0802**（本log時点・要再確認）。
+
+11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
+
+
+## 第4セッション（chunks 14-24: mask 890..1222 = 37.1%・第一 heavy band 通過・~1000 dip・第二帯入り口到達）
+
+1. **chunks 14-24**（REST6 2フェーズ機・repo script verbatim・cap 2.4M/chunk・
+   境界は from=直前 lastDone verbatim で gap なし）: mask 890..1222 完了
+   （chunk14: 890→900〔10 mask・~240k〕・chunk15: 900→915〔15・~160k〕・
+   chunk16: 915→926〔11・~218k〕・chunk17: 926→933〔7・**~343k 局所ピーク**〕・
+   chunk18: 933→944〔11・~218k〕・chunk19: 944→960〔16・~150k〕・
+   chunk20: 960→972〔12・~200k〕・chunk21: 972→985〔13・~185k〕・
+   chunk22: 985→1127〔**142 mask・~17k**〕・chunk23: 1127→1213〔86・~28k〕・
+   chunk24: 1213→1223〔10・**~240k・第二帯入り口**〕・計 26.4M nodes・leaves=0・
+   生残0・phase2 必要 mask 0件）。
+2. **heavy band 構造（w=68 固有の観察）**: 第一 heavy band（~770..984）の
+   加重は ~114..200k が主体で・chunk12-13 の ~480k/mask は band 内でも
+   きわめて局在した最重要部（chunk14 以降はすぐ ~150..240k に減衰）。
+   **~1000 で沈み込み（chunk22: ~17k/mask）→ ~1190 で第二 heavy band 再出現
+   （chunk24: ~240k/mask）— w=65/66/67 と同一の窓位相**。第二帯終点は
+   右肩上がり則（1302→1313→1320）から ~1330..1340 見込み。
+3. **進捗**: mask 0..1222 = 1,223/3,300 = 37.1%・累計 55.2M+0.6M nodes。
+   残り ~2,077 mask（第二帯 ~1330..1340 まで ~110 mask が重い・
+   その後は軽い帯）→ 総計 ~65..90M nodes 見込み・複数セッション必須。
+4. 反映: progress JSON（chunks 14-24 追記・resume_from=1223）・script
+   CFG.from=1223 + header 更新・本log。全ファイル repo 読み戻し検証済み・
+   並走なし（反映前 HEAD cfec308f 再取得・本セッションコミットは
+   b91dc668〔progress〕・8cf667ef〔script〕のみ）。
+
+## レジューム（次回の実行）— 更新
+
+1. **w=68 キャンペーン継続**: CFG.from=1223 から（**次 chunk の from は
+   直前 chunk の lastDone を verbatim で**・cap 2.4M/chunk・1実行1〜2チャンク・
+   第二 heavy band ~1190..~1330..1340 を通過・終点以降は軽い帯で高速消化）。
 2. 完走時は K0802（P(68)=32・**反映前に K 番号の空きを再確認**）に昇格・
    results/fixed-width/ 追従（pw_circle_point_max.csv・mwq_stabilization.csv・README）。
 3. 次の空き K 番号: **K0802**（本log時点・要再確認）。

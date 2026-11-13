@@ -406,9 +406,9 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) DONE (session 9): bit=25 certificate rebuild + verification + push (cert commit 0b835029, record 5a9ec762)",
-    "2) IN PROGRESS (session 9): chunk campaigns for heavy-pending — bit=32 REFUTED at d10 (witness m=44); remaining {40,80,87,34} and unprobed candidates; WIN discovery => same certificate protocol",
-    "3) keep the d8-witness != d10-witness lesson and the UNKNOWN guards"
+    "1) chunk campaigns for heavy-pending {80,87,34} then unprobed candidates; same protocol (chunk depth 8, replies at root+m)",
+    "2) on WIN7 discovery: kill-first extraction -> 50-sub-root decomposition verification -> union equality -> one commit per file",
+    "3) external compute via scripts/class4_child1_runner.ts at cap 5M-50M if available"
   ],
   "bit25": {
     "candidate": "bit=25 (mob 50), heavy-pending since session 2 (v15 monolithic d10 capped at 950k x3 incl. close-first AND; v14 capped 700k). Second WIN7 candidate found by the chunk campaign.",
@@ -758,5 +758,55 @@
     "driver_bug_note": "the first two campaign runs enumerated winner replies from the ROOT-level legal move list, which includes the loser's first move m itself; reply r=m produced 6 bogus kills (r===m, 1-node positions with a duplicated stone). Detected in post-run review, purged from the campaign state, and the affected first moves were fully recomputed with the corrected driver (replies = root legal moves minus m). All recorded kills have r != m. Total nodes include the wasted bogus-era chunks.",
     "determinism_controls": "recomputed chunks reproduced identical node counts across independent fresh-memo runs, e.g. (70,50)=23,416 twice, (90,42)=136,346 twice, (90,70)=56,072 twice; engine is deterministic under fixed ordering",
     "record": "output/class4-batch1-bit32-campaign.json"
+  },
+  "bit40": {
+    "status": "DONE - REFUTED within depth 10 (session 10)",
+    "root_hex": "00000000020000003800010080080000",
+    "mob": 50,
+    "verdict": "REFUTED-D10: lossAt(root,10)=false via witness m=8; all 44 winner replies at root+8 uncapped pass chunks (loss=false); kill table 5 entries (all r!=m); 44 first moves unexamined (not needed)",
+    "witness": {
+      "m": 8,
+      "replies": 44
+    },
+    "totals": {
+      "nodes": 3101124,
+      "runs": 5,
+      "batch_nodes": [
+        656192,
+        650950,
+        660051,
+        650062,
+        483869
+      ],
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 162444,
+      "chunks_total": 85,
+      "kill_chunks": 5,
+      "pass_chunks": 80
+    },
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes at the start of every run (5/5 PASS)",
+      "determinism_fresh_resolves": {
+        "(8,44)": {
+          "loss": false,
+          "nodes": 79103
+        },
+        "(8,104)": {
+          "loss": false,
+          "nodes": 68443
+        },
+        "(0,18)": {
+          "loss": true,
+          "nodes": 28157
+        },
+        "(2,90)": {
+          "loss": true,
+          "nodes": 97107
+        }
+      },
+      "note": "all four fresh re-solves identical to the campaign chunk records (node counts and verdicts)"
+    },
+    "record": "output/class4-batch1-bit40-campaign.json",
+    "resume": "state file per candidate (kill table + done replies); replies enumerated at root+m so r!=m holds structurally"
   }
 }
