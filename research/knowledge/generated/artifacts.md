@@ -8551,6 +8551,9 @@
 ## [research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts](../../../research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts)
 
 - [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (source): 94オラクル鍵+14 LOSS S6鍵を埋込み（s5_verdicts.json由来・自己assert 78+16/3,868/14）、 orbit-level blocker特定・196 S5会計・settled-10判定・7,867/615,497 manifest生成を 再実行する自己完結TS検証script（anchor不一致でthrow）
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/class1-blocker-closure.md](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/class1-blocker-closure.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (proof): blocker類1の条件付き閉鎖と証明書の検査手順
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加6309件。moveは正規化されたs6の座標
@@ -8560,6 +8563,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全15072件と公開表に欠ける6309件の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-closure-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-closure-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 五石位置の40六石軌道とblocker 5・115への手の照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-s6-proof.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class1-s6-proof.csv)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 各六石軌道の既存スイープ・監査記録・新証明書による勝ち子
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/classified-candidates.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/classified-candidates.csv.gz)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全候補の照合結果。possible_first_winは証明済み勝利ではない
@@ -8569,12 +8578,21 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_stats.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_stats.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 導出anchor・md5一致・再利用分類の全計数
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/new-certificate-reuse-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/new-certificate-reuse-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 先手WIN六石523件、残7344件・コスト575287の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-certificates-verified.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-certificates-verified.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 先手WIN7証明書13件とLOSS7証明書2件のハッシュ・検証結果
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-certificates/00000000000000803082000000000404-win7.cert.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-certificates/00000000000000803082000000000404-win7.cert.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 保存した15件の証明書の一例。他のファイルとハッシュはmanifestに列挙
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-s5-children-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-s5-children-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 最小候補の七石局面の重複除去と既知結果の集計
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-s5-unknown-s7.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/priority-s5-unknown-s7.csv.gz)
 
-- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 既存記録に一致しない七石局面と六石親・合法手
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 新規証明書生成前の七石局面と六石親・合法手のスナップショット
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開行の限定監査結果とmove座標の注意
@@ -8605,6 +8623,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness_independent.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness_independent.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 4点部分集合の逆引きと行列式による別実装で全親子対を照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class1_closure.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class1_closure.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 五石位置の全六石子・証明書・blocker類1への合法手を照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_new_certificate_reuse.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_new_certificate_reuse.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 新規証明書のワークリスト全体への再利用と残件数を集計
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_priority_children.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_priority_children.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): class 1最小候補の13六石軌道から七石軌道を生成し、公開済み勝敗記録と照合
@@ -8623,6 +8647,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): コメントのみで実行本体は未公開。再導出・再分類の再現器としては使用できない
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_priority_certificates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_priority_certificates.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 保存した15件のWIN7・LOSS7戦略証明書を独立検査器で再検証
 ## [research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts](../../../research/experiments/n11-s2-5960-worklist-20261110/scripts/s2_worklist.ts)
 
 - [K0725](../items/K0725-s2-5960-closure-worklist.md) (source): 純TS再現（BigInt盤、Bareiss幾何、D4 canon）。 単独実行で分布・13,244・classA 32件・worklist 1,447・鏡映同一性まで全数値を再現
