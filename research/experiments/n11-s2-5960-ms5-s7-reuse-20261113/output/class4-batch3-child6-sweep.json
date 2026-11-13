@@ -1,0 +1,19 @@
+{
+ "lane": "n11 class-4 long lane, session 19 continued",
+ "target_s5": "00000000020000003800000080000000",
+ "child_s6": "000000000200000038000000c0000000",
+ "child_s6_s7_edge_cost": 73,
+ "date": "2026-11-14",
+ "engine": "v15 verbatim (class4_child1_runner.ts), native Node",
+ "candidates": 73,
+ "results": {"refuted_d10": 73, "win7_d10": [], "capped": 0},
+ "total_nodes": 214167492,
+ "executions": "3 foreground executions (24+24+25 candidates, cap 50M/candidate never reached)",
+ "controls": {
+  "pilot_d6": {"loss": false, "nodes": 5949, "pass": true},
+  "refuted_re solves_node_exact": [29, 74, 112, 33],
+  "terminal_stone_range_all_uncapped": [13, 17]
+ },
+ "interpretation": "no WIN7-within-depth-10 exists from any 7-stone root extending this S6 child; this child cannot be closed by a batch3-style WIN7-D10 certificate rooted inside it (it remains coverable only via certificates rooted in other S6 parents of a shared S7 orbit, or by deeper analysis)",
+ "status": "REFUTED-D10 negates only WIN7-within-depth-10; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty root all UNKNOWN"
+}
