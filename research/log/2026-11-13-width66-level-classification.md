@@ -65,7 +65,7 @@ K0798 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(66) 
 
 ## レジューム（次回の実行）
 
-1. **w=66 キャンペーン継続**: CFG.from=889 から（resume_from=lastDone を厳守）。
+1. **w=66 キャンペーン継続**: CFG.from=1234 から（resume_from=lastDone を厳守）。
    heavy band 継続中・1実行1チャンク（2.4M cap）。
 2. 完走時は K0799（P(66)=32）に昇格・results/fixed-width/ 追従。
 3. 次の空き K 番号: **K0799**。
