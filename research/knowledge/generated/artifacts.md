@@ -11145,6 +11145,9 @@
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251_1603.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251_1603.json)
 
 - [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1603点（辺0件）。温暖開始SATの反復で1601からさらに2点伸ばした最新形
+## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251_1606.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251_1606.json)
+
+- [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1606点（辺0件）。温暖開始SATの反復で1603からさらに3点伸ばした最新形
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251_extended.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/greedy-lower-bounds/witness_3251_extended.json)
 
 - [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (certificate): 1601点（形状(1,1,26)、辺0件）。貪欲1598を3点伸ばした最終形
