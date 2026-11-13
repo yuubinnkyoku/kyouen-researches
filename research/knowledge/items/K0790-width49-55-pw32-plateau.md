@@ -17,7 +17,7 @@ solution:
   verification: [mathematical-proof]
   certificate: 窓マスク完備候補生成（mod 9×11）+ 16法bit-set DFS level 17 全滅 + g0≧2 convention-B classMax 会計 + 2210 witness 下界
   independent_check: 2210 per-w 再計数が K0786 と一致・ノード数の単調成長則（×1.36/w）・g0 会計値の K0788 からの連続性
-  note: "32プラトーはw=43..48の漸増帯（K0788）の後、w=49から平らになる。level 17の復活点は(55,83]に絞り込まれた（K0785のP(83)≧34）。11050円は本幅では16..20点で疎ら"
+  note: "32プラトーはw=43..48の漸増帯（K0788）の後、w=49から平らになる。level 17の復活点は(55,83]に絞り込まれた（K0785のP(83)≧34）。11050円の奇奇実現（K0785 witness・K0791で厳密検証）はw=49..83で22..34点・整数中心実現は16..26点で疎ら"
 relations:
 - type: depends_on
   target: K0788
@@ -27,7 +27,7 @@ relations:
   note: level 全滅原理・窓マスク候補生成・意味論
 - type: supports
   target: K0785
-  note: P(83)≧34 により level 17 復活点を (55,83] に特定。w=49..55 では 11050 円族は脅威にならない（16..20点）
+  note: P(83)≧34 により level 17 復活点を (55,83] に特定。w=49..55 では 11050 円は脅威にならない（奇奇実現で22..24点・整数中心実現で16..20点・2210円の32点に及ばない。K0791）
 artifacts:
 - path: research/experiments/width49-55-level-classification-20261113/scripts/width49_55_level_classify.ts
   role: verifier
@@ -69,8 +69,9 @@ artifacts:
 - ノード数は ×1.36/w で成長（49→55 で 7.2 倍）。全滅のまま伸びる限り
   プラトーが延びる。復活点の予測には witness 側の探索（34 点円族の
   最小行スパン）が鍵。
-- 11050 円（r₂ = 48・v-span 420）は w=49..83 で 16..20 点しか収まらない。
-  K0785 の P(83) ≥ 34 の witness は別円族（要確認）。
+- 11050 円には2つの原始実現がある（K0791）: 整数中心実現（v-span 420）は w=49..83 で
+  16..26 点だが、K0785 の witness である奇奇実現（(2x−105)²+(2y−105)²=11050・
+  行スパン105）は 22..34 点を与え P(83) ≥ 34 を成立させる。K0785 の witness は正しい。
 
 ## 限界
 
