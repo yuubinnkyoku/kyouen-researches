@@ -1,0 +1,26 @@
+{
+ "generated": "2026-11-13",
+ "question": "w=65 bit-set DFS 機の heavy band 枝刈りは改善できるか（素数冪追加・検査順・REST6 2フェーズ）",
+ "scope": "有限測定（masks 962..974 heavy・0..19 light・w26 L12 制御）。全称主張ではない。",
+ "measurements": {
+  "heavy_962_974": {
+   "REST16_baseline": { "nodes": 1166798, "wordOps": 221394143, "leaves": 0, "survivors": 0, "killCount": { "19": 266585, "23": 180991, "7": 154972, "29": 28203, "43": 12703, "47": 9141, "5": 0, "27": 0, "13": 0, "17": 0, "8": 0, "16": 0, "25": 0, "31": 0, "37": 0, "41": 0 } },
+   "REST16_plus_121_last": { "nodes": 1042011, "wordOps": 435502004, "leaves": 0, "survivors": 0, "kill121": 40312, "note": "nodes -10.7% だが wordOps +96.8% → 純損" },
+   "reorder_7_19_23_first": { "nodes": 1166798, "wordOps": 215574073, "leaves": 0, "survivors": 0, "note": "wordOps -2.6% のみ" },
+   "REST6_19_23_7_29_43_47": { "nodes": 1236093, "wordOps": 120909799, "leaves": 0, "survivors": 0, "note": "wordOps -45.4%・nodes +6.0%" }
+  },
+  "light_0_19": {
+   "REST16_baseline": { "nodes": 235712, "wordOps": 49441450, "leaves": 0, "survivors": 0 },
+   "REST6": { "nodes": 278687, "wordOps": 29582011, "leaves": 0, "survivors": 0, "note": "wordOps -40.1%・nodes +18.2%" }
+  },
+  "control_w26_L12_REST6": { "nodes": 1270, "leaves": 1, "survivors": 1, "survivor": "0,1,3,4,7,10,15,18,21,22,24,25", "note": "S* = 650円実現候補がREST6でも誤殺なし（K0782..K0794制御と一致）" }
+ },
+ "twoPhaseSoundness": "実現可能標準形行集合は全合同証明書を通過（整数(a,u)が任意の法へ落ちる）ため survivors(REST6) ⊇ survivors(REST16)。ゆえに REST6 で生残0の mask は REST16 でも生残0が確定し、K0797 会計 + 2210円下界と合わせて P(65)=32 の主張にそのまま使える。REST6 で生残が出た mask のみ REST16 で再走査（フェーズ2）。",
+ "conclusions": [
+  "K0789 の素数冪 121 は bit-set DFS には不採用（候補掃引では決定的だったが本機のコストモデルでは純損）。",
+  "法検査順は既にほぼ費用最適（-2.6%）。heavy band の殺しは6法（19,23,7,29,43,47）に集中し他10法は heavy で一度も殺さない。",
+  "REST6 フェーズ1方式で heavy/light 両帯の wordOps を 40..45% 削減。総ノード推定 ~200..250M は nodes 観点で変わらないが実行コスト観点で約2倍高速。",
+  "キャンペーン残り 2,321 mask は REST6 2フェーズ機で再開すべき（フェーズ2必要 mask は今のところ0件・要継続監視）。"
+ ],
+ "semantics": "有限実験（計測・制御）。P(65) の決定には mask 0..3295 全完走が依然必要。"
+}
