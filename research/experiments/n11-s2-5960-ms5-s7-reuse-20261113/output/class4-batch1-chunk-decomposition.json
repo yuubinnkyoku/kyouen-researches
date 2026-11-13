@@ -406,9 +406,9 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) certificate extraction + independent verification for the five new WIN7-D10 candidates {18, 67, 82, 117, 120} (bit7/bit25 protocol; verifier reuse with --root)",
-    "2) with all 66 candidates classified, assemble the class-4 frontier consequence: which S6-child-1 certificates close which blocker edges (audit_class_frontier.py bookkeeping)",
-    "3) keep UNKNOWN guards"
+    "1) with all 66 candidates classified and the seven certificates pushed, recompute the class-4 frontier (which blocker edges the S6-child-1 certificates close) via the audit bookkeeping",
+    "2) propagate the frontier consequence toward the S2 {59,60} blockers; keep every deeper object UNKNOWN",
+    "3) keep UNKNOWN guards; next ledger milestone is the class-4 frontier consequence statement"
   ],
   "bit25": {
     "candidate": "bit=25 (mob 50), heavy-pending since session 2 (v15 monolithic d10 capped at 950k x3 incl. close-first AND; v14 capped 700k). Second WIN7 candidate found by the chunk campaign.",
@@ -1060,7 +1060,7 @@
     "controls": "pilot d6 5,949 PASS; structural checks (zero capped rows, r!=m, witness/done equality, kills==mob) all 54 PASS; 12 fresh re-solves (10 kills of the 5 WIN7 candidates + 2 pass chunks) node-exact"
   },
   "bit18": {
-    "status": "WIN7 CANDIDATE WITHIN DEPTH 10 (session 15) - certificate extraction pending",
+    "status": "WIN7 WITHIN DEPTH 10 - CERTIFIED (session 16): certificate extracted, independently verified (sub-root decomposition all-pass), union-equality 0/0, pushed to main",
     "root_hex": "000000000200000038000000800c0000",
     "mob": 52,
     "d10_verdict": "WIN7-D10: ALL 52 loser first-moves killed (lossAt(root,10)=true)",
@@ -1185,10 +1185,22 @@
       "single_chunk_max": 251106
     },
     "record": "output/class4-batch1-unprobed-sweep.json",
-    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file"
+    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_000000000200000038000000800c0000.cert",
+      "rows": 43550,
+      "bytes": 1571258,
+      "md5": "11a0f14f761f71c4d77fd6e618dee336",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "extraction_nodes": 5750652,
+      "extraction_runs": 1,
+      "terminals": 14608,
+      "verification": "repo verify_bit7_win7_cert.ts (fs-import patch only, logic untouched): root checks PASS, all 52 sub-roots PASS",
+      "record": "output/class4-batch1-win7-certificates-20261114.json"
+    }
   },
   "bit67": {
-    "status": "WIN7 CANDIDATE WITHIN DEPTH 10 (session 15) - certificate extraction pending",
+    "status": "WIN7 WITHIN DEPTH 10 - CERTIFIED (session 16): certificate extracted, independently verified (sub-root decomposition all-pass), union-equality 0/0, pushed to main",
     "root_hex": "00000000020000083800000080080000",
     "mob": 59,
     "d10_verdict": "WIN7-D10: ALL 59 loser first-moves killed (lossAt(root,10)=true)",
@@ -1329,10 +1341,22 @@
       "single_chunk_max": 250529
     },
     "record": "output/class4-batch1-unprobed-sweep.json",
-    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file"
+    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_00000000020000083800000080080000.cert",
+      "rows": 57896,
+      "bytes": 2088010,
+      "md5": "d3aa2871e08afdf48d82b94ad3c0abb5",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "extraction_nodes": 6994702,
+      "extraction_runs": 1,
+      "terminals": 18181,
+      "verification": "repo verify_bit7_win7_cert.ts (fs-import patch only, logic untouched): root checks PASS, all 59 sub-roots PASS",
+      "record": "output/class4-batch1-win7-certificates-20261114.json"
+    }
   },
   "bit82": {
-    "status": "WIN7 CANDIDATE WITHIN DEPTH 10 (session 15) - certificate extraction pending",
+    "status": "WIN7 WITHIN DEPTH 10 - CERTIFIED (session 16): certificate extracted, independently verified (sub-root decomposition all-pass), union-equality 0/0, pushed to main",
     "root_hex": "00000000020400003800000080080000",
     "mob": 53,
     "d10_verdict": "WIN7-D10: ALL 53 loser first-moves killed (lossAt(root,10)=true)",
@@ -1459,10 +1483,22 @@
       "single_chunk_max": 205502
     },
     "record": "output/class4-batch1-unprobed-sweep.json",
-    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file"
+    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_00000000020400003800000080080000.cert",
+      "rows": 48352,
+      "bytes": 1743255,
+      "md5": "ac5200a83c0342d284b5d026d7ebbf62",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "extraction_nodes": 5736905,
+      "extraction_runs": 1,
+      "terminals": 17092,
+      "verification": "repo verify_bit7_win7_cert.ts (fs-import patch only, logic untouched): root checks PASS, all 53 sub-roots PASS",
+      "record": "output/class4-batch1-win7-certificates-20261114.json"
+    }
   },
   "bit117": {
-    "status": "WIN7 CANDIDATE WITHIN DEPTH 10 (session 15) - certificate extraction pending",
+    "status": "WIN7 WITHIN DEPTH 10 - CERTIFIED (session 16): certificate extracted, independently verified (sub-root decomposition all-pass), union-equality 0/0, pushed to main",
     "root_hex": "00200000020000003800000080080000",
     "mob": 59,
     "d10_verdict": "WIN7-D10: ALL 59 loser first-moves killed (lossAt(root,10)=true)",
@@ -1602,10 +1638,22 @@
       "single_chunk_max": 261041
     },
     "record": "output/class4-batch1-unprobed-sweep.json",
-    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file"
+    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_00200000020000003800000080080000.cert",
+      "rows": 61952,
+      "bytes": 2230811,
+      "md5": "3119ae37fd843267a81c78cde40a4446",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "extraction_nodes": 7719053,
+      "extraction_runs": 1,
+      "terminals": 23288,
+      "verification": "repo verify_bit7_win7_cert.ts (fs-import patch only, logic untouched): root checks PASS, all 59 sub-roots PASS",
+      "record": "output/class4-batch1-win7-certificates-20261114.json"
+    }
   },
   "bit120": {
-    "status": "WIN7 CANDIDATE WITHIN DEPTH 10 (session 15) - certificate extraction pending",
+    "status": "WIN7 WITHIN DEPTH 10 - CERTIFIED (session 16): certificate extracted, independently verified (sub-root decomposition all-pass), union-equality 0/0, pushed to main",
     "root_hex": "01000000020000003800000080080000",
     "mob": 62,
     "d10_verdict": "WIN7-D10: ALL 62 loser first-moves killed (lossAt(root,10)=true)",
@@ -1753,6 +1801,23 @@
       "single_chunk_max": 222613
     },
     "record": "output/class4-batch1-unprobed-sweep.json",
-    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file"
+    "next": "certificate protocol (bit7/bit25): kill-first extraction -> sub-root decomposition verification -> union equality -> one commit per file",
+    "certificate": {
+      "path": "output/class4-batch1-certificates/n11_s7_01000000020000003800000080080000.cert",
+      "rows": 62336,
+      "bytes": 2244853,
+      "md5": "bb2b8da776ca4d8b16dc5121a072d0cf",
+      "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS",
+      "extraction_nodes": 8294989,
+      "extraction_runs": 1,
+      "terminals": 22563,
+      "verification": "repo verify_bit7_win7_cert.ts (fs-import patch only, logic untouched): root checks PASS, all 62 sub-roots PASS",
+      "record": "output/class4-batch1-win7-certificates-20261114.json"
+    }
+  },
+  "win7_certificates_session16": {
+    "date": "2026-11-14",
+    "summary": "all five session-15 WIN7-D10 candidates now have independently verified certificates on main (with bit7 and bit25: seven total); the S6 child #1 7th-stone sweep is fully classified within depth 10: 7 certified wins, 59 refutations, 66/66 non-degenerate candidates settled",
+    "record": "output/class4-batch1-win7-certificates-20261114.json"
   }
 }
