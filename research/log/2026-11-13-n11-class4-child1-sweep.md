@@ -543,3 +543,56 @@ chunk 深さ 8・reply 順 wscore 降順（fail-fast）。予算打ち切りは 
 2. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
 3. 共有部分木での move 競合は sort -u 最小move規則 + 全文検証で閉じられることを
    本セッションで実証済み — heavy帯の証明書コスト見積りに反映する価値あり。
+
+## 第10セッション（2026-11-14、長期レーン）: bit32 chunkキャンペーン — heavy-pending初のREFUTED（witness m=44・15.88M nodes・23実行）・driver bug検出と完全再計算
+
+### レジューム実行（第9セッション next 1）
+
+heavy-pending bit=32（mob 49。v14 単体 d10 は 700k で capped・判定なし）を
+chunk 分解で消化した。run 予算 ~700k・chunk cap 300k・chunk 深さ 8・
+reply 順 wscore 降順（fail-fast）。予算打ち切りは state に chunk 進捗を記録して
+厳密に再開（再開欠落ゼロ）。
+
+### 結果: bit32 は depth 10 で REFUTED（heavy-pending 初の chunk 法による反証）
+
+- **witness m=44**: winner 応手 48 個すべての chunk が未capで loss=false →
+  lossAt(root,10)=false。root hex 00000000020000003800000180080000
+ （S6 child + bit32・7石・loser to move）。
+- 反証確定のため残り 8 初手 {76,104,105,106,116,117,118,120} は未走査のまま
+  打ち切り（verdict に不要・記録済み）。
+- 総 **15,884,259 nodes / 23実行**・capped chunk 0・単一chunk最大 275,350。
+  kill 表（40初手の m→r_k）は campaign record 参照。全 kill の r≠m を確認済み。
+
+### driver bug の検出と完全再計算（本セッションの重要修正）
+
+- 初期2実行は winner 応手列挙を root 合法手リスト（初手 m 自身を含む）から行って
+  おり、r===m の偽kill（1-node・石重複）が6件発生。レビューで検出し state から
+  除去、影響初手は修正 driver（**replies = root合法手 − m**）で完全再計算した。
+- **決定制御**: 再計算 chunk が独立実行間で node 数まで完全一致
+ （(70,50)=23,416・(90,42)=136,346・(90,70)=56,072 が各2回）。
+- 旧killのうち r≠m のもの（例: 初回run m=0 の r=10）は位置が合法のため有効。
+
+### 解釈上の注意
+
+- bit32 の REFUTED は「深さ10以内のWIN7の否定」のみ（より深い勝ちはあり得る）。
+  class 4・S2 {59,60}・二石 root {49,60}・**11x11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+- chunk 法は両方向を閉じられる（bit85/bit32 REFUTED、bit7/bit25 WIN7）ことが確定。
+
+### 反映（全て push 後読み戻し確認・1コミット1ファイル）
+
+- 77104f79: campaign record output/class4-batch1-bit32-campaign.json
+ （verdict・witness・kill表40件・driver_bug_note・決定制御・解釈ガード・未走査8件）
+- 58d0746c: ledger JSON（bit32 エントリ追記・next更新: item 2 IN PROGRESS）
+- e850c5f3: audit JSON session9_bit32_chunk_campaign 追記
+ （初回pushは31KBファイルでtimeout・読み戻し確認後に再pushで完了）
+- 本コミット: log 第10セッション
+
+### 次回
+
+1. heavy-pending 残り {40,80,87,34} の chunk キャンペーン（同一プロトコル・
+   修正driver: replies = root合法手 − m を必ず守る）。bit40/80 は mob50、
+   bit87 は mob49、bit34 は mob56。
+2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
+ （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
+3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
