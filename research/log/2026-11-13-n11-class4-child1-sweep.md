@@ -185,7 +185,7 @@ audit JSON に全プローブ結果を反映済み（4b0e86ce）。
 
 fresh memo・cap 950k で capped。**未反証・未解決**。heavy pending に追加。
 pilot d6 制御（loss=false・5,949 nodes）は公表値と完全一致（実装健全性の再確認）。
-run ceiling の再確認: pilot+950k×2 の混在 run と 1.4M node 尘用 run は両方
+run ceiling の再確認: pilot+950k×2 の混在 run と 1.4M node 専用 run は両方
 process safety deadline 超過（timeout 2件を実験事実として記録）。~950k-1M/run が上限。
 
 ### v15-vs-v14 コストインフレの定量監査（本セッションの主成果）
@@ -222,7 +222,7 @@ node 数は非比較対象。**第2-3セッションの「mob-50帯は一様に�
 lossAt（AND 節点）の子を wscore **降順**（近い手を先）にソートすると
 pilot d8 が 277,800 → **193,556 nodes（-30%）**。ただし深さ依存（d6 では 7,646 と悪化）。
 d10 での効果は未検証（bit95 close-AND >756k capped で有意差未確定）。
-第3セッションの「昇順は1.8倍悪化」結果と対になう検証として記録。
+第3セッションの「昇順は1.8倍悪化」結果と対をなす検証として記録。
 （v16 候補: d8+ 段階に限定して採用する価値あり。）
 
 ### 次回
