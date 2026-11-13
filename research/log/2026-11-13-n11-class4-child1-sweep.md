@@ -651,3 +651,61 @@ r===m は構造的に不可能 — 第10セッションの driver bug クラス�
 2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
  （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
 3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
+
+
+## 第12セッション（2026-11-14、長期レーン）: bit80 chunkキャンペーン — 3件目のREFUTED（witness m=38・6.01M nodes・10実行）・repo反映
+
+### レジューム実行（第11セッション next 1）
+
+heavy-pending bit=80（mob 50。v15 単体 d10 は第3セッションから 950k で3回 capped・判定なし）を
+chunk 分解で消化した。run 予算 ~600k・chunk cap 650k・chunk 深さ 8・
+reply 順 wscore 降順（fail-fast）。予算打ち切りは候補ごとの state file
+ （kill 表 + done replies・/home/user/b80/state.json）に逐次 flush して厳密に再開
+（再開欠落ゼロ）。**winner 応手列挙は root+m の合法手リストから**
+（m は occupied のので r===m は構造的に不可能）。
+
+### 結果: bit80 は depth 10 で REFUTED（3件目の chunk 反証）
+
+- **witness m=38**: winner 応手 44 個すべての chunk が未capで loss=false →
+  lossAt(root,10)=false。root hex 00000000020100003800000080080000
+ （S6 child + bit80・7石・loser to move。第3セッションの memo 構造計測と同一候補）。
+- 総 **6,008,832 nodes / 10実行**（617,981 / 607,268 / 639,820 / 601,406 / 615,855 /
+  607,250 / 644,349 / 646,137 / 609,691 / 419,075）・capped chunk 0・
+  単一chunk最大 185,781・chunk計183（kill 15 / pass 168・witness 44応手計 1,513,491 nodes）。
+  kill 表 {0:81, 2:90, 3:78, 4:103, 6:18, 7:28, 8:78, 15:32, 18:6, 28:50, 32:103,
+  33:67, 34:28, 36:82, 37:45}（全て r≠m）。残り34初手は未走査のまま打ち切り
+（verdict に不要・記録済み）。
+- witness は16番目の初手で発見。**反証コストの分散は引き続き5倍以上**
+ （bit85 1.70M / bit40 3.10M / bit80 6.01M / bit32 15.88M）— per-candidate 見積り必須。
+
+### 検証（全て PASS）
+
+- pilot d6 制御 5,949（キャンペーン開始時と事後制御実行の2回）。
+- **witness 完全被覆**: root+38 の合法応手 44個と done 表が完全一致（欠落0）。
+- **決定制御**: fresh 再解5件が node 数まで完全一致
+ （kill (0,81)=60,593・(15,32)=63,944・(37,45)=88,230・
+  pass (38,0)=61,268・(38,44)=57,513）。
+- root mob 50 再確認・kill 表の r≠m 全確認。
+
+### 解釈上の注意（変更なし）
+
+- bit80 の REFUTED は「深さ10以内のWIN7の否定」のみ（より深い勝ちはあり得る）。
+  class 4・S2 {59,60}・二石 root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 反映（全て push 後読み戻し確認・1コミット1ファイル・並走なし）
+
+- 8703c720: campaign record output/class4-batch1-bit80-campaign.json
+- bdc2ad3d: ledger JSON（bit80 エントリ追記・next更新: heavy-pending {87,34}）
+- f530b06c: audit JSON session11_bit80_chunk_campaign 追記（37KB push・timeoutなし）
+- 本コミット: log 第12セッション
+
+### 次回
+
+1. heavy-pending 残り {87,34} の chunk キャンペーン（同一プロトコル・
+   応手列挙は root+m 合法手から）。bit87 は mob49（bit32 と同帯で重い可能性）、
+   bit34 は mob56。候補ごとに /home/user/bXX/state.json で再開。
+   bit87 は本セッションで state file を初期化済み（root hex 00000000018000003800000080080000）。
+2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
+ （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
+3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
