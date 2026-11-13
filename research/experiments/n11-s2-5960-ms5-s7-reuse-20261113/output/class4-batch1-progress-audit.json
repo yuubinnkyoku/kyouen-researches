@@ -953,4 +953,29 @@
       "keep UNKNOWN guards"
     ]
   }
+,
+  "session18_child2_sweep_certificates": {
+    "date": "2026-11-14",
+    "trigger": "session 17 next item 1: sweep the next S6 child of the class-4 lane target S5 00000000020000003800000080000000",
+    "s6_child": "000000000200000038000000a0000000 (cheapest remaining S6 orbit of the target, s6_s7_edge_cost 67)",
+    "sweep": "all 67 non-degenerate 7th-stone candidates swept with the chunk method (depth 8 chunks, replies at root+m, fresh engine per batch, native Node ~470k nodes/s, chunk cap 50M, all candidates uncapped): 3 WIN7-D10 (bit50, bit77, bit91) and 64 REFUTED-D10; the per-candidate node counts of the REFUTED side were lost to a lane-log context compaction (recorded honestly in the sweep record); WIN7 node counts survived: bit50 2,107,194 / bit77 11,058,432 / bit91 9,345,201",
+    "certificates": {
+      "bit50": {"root_hex": "000000000200000038040000a0000000", "rows": 25085, "bytes": 906647, "md5": "9c1233a2d90e6acf50415d8faab22228", "mob": 50, "commit": "d1bdccf3"},
+      "bit77": {"root_hex": "000000000200200038000000a0000000", "rows": 54558, "bytes": 1973077, "md5": "8feb168914ebc801f608418860c92c20", "fnv1a": 1601464846, "mob": 58, "commit": "8625f1c5"},
+      "bit91": {"root_hex": "000000000a00000038000000a0000000", "rows": 37305, "bytes": 1347285, "md5": "b28da716469d8ce01c42d9aad2bbd6f6", "fnv1a": 631694243, "mob": 46, "commit": "c2da5401"}
+    },
+    "verification": "verify_bit7_win7_cert.ts per root: all sub-root decompositions PASS (58/46/50 sub-roots), consumed union = certificate row set exactly (diff 0 both directions), terminal stone range [13,17], root checks PASS (7 stones, no 4 cocircular, loser mobility as listed)",
+    "records": [
+      "output/class4-batch2-child2-sweep.json",
+      "output/class4-batch2-certificates-verified.json"
+    ],
+    "covers": "bit50 closes 7 S6 orbits (including the swept S6 child itself); the union of the three closes 16 S6 orbits",
+    "consequence": "the cheapest remaining S6 orbit of the lane target S5 is now certified solved via its 7th-stone descendants; frontier recomputation with the new receipts file is the next bookkeeping step",
+    "status": "WIN7 certificates prove only a win within depth 10 from the 7-stone roots; REFUTED excludes only wins within 10 plies; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": [
+      "recompute the class-2/4 frontier with output/class4-batch2-certificates-verified.json added",
+      "continue the class-4 lane: next S6 child of the target S5 in the recomputed ranking",
+      "keep UNKNOWN guards"
+    ]
+  }
 }
