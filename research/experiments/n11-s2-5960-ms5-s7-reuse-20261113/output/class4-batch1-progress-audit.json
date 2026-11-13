@@ -1024,6 +1024,7 @@
       "continue the class-4 lane: sweep the next S6 child 00000000020000003802000080000000 (cost 68) of the lane target S5",
       "keep UNKNOWN guards"
     ],
-    "ledger_push_incident": "ledger entry push: commit 1423786e accidentally wrote the read_file wrapper object instead of the file body (detected by md5 read-back mismatch); corrected in commit dc5f9c27 with the exact local file, md5 18a8fc26e6868da8efee8d5b6e0c880e verified against the commit blob"
+    "ledger_push_incident": "ledger entry push: commit 1423786e accidentally wrote the read_file wrapper object instead of the file body (detected by md5 read-back mismatch); corrected in commit dc5f9c27 with the exact local file, md5 18a8fc26e6868da8efee8d5b6e0c880e verified against the commit blob",
+    "log_push_incident": "log continuation push: commit a6e92d3b wrote a read-truncated copy (63,939 of 70,099 bytes; file_system read_file default cap); detected by md5 read-back mismatch, corrected in a653a3af via paged read reassembly, full-file md5 5bec53c093d42694de6d80f713434675 verified against the commit blob. Lesson recorded: paged read reassembly mandatory for files >~60KB"
   }
 }
