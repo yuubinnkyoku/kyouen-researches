@@ -19,7 +19,7 @@ relations:
   note: 固定幅盤の枠組みと円点数P(w)の定義
 - type: supports
   target: K0778
-  note: convention監査: K0767..K0784で使われた同パリティ係数16 classMaxは行値y座標（=64t²）で計算されており導出不能。正当な証明書は類変数tの4g0²（convention B）。数値検証でK0778のw=17..20 classMaxはBでも6/6/7/7<9で結論不変・法9周期最大もBで6のまま
+  note: "convention監査: K0767..K0784で使われた同パリティ係数16 classMaxは行値y座標（=64t²）で計算されており導出不能。正当な証明書は類変数tの4g0²（convention B）。数値検証でK0778のw=17..20 classMaxはBでも6/6/7/7<9で結論不変・法9周期最大もBで6のまま"
 - type: supports
   target: K0025
   note: P(w)の新確定値は行分離公式の M_{w,q}=q−1 帯の基礎データを更新（K0784系の系と同じ導出で拡張可能）

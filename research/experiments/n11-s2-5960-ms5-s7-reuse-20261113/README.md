@@ -3,6 +3,8 @@
 ## 後続監査の注意
 `scripts/ms5_s7_reuse_analysis.ts` はコメントのみで実行本体がなく、下記の再導出・分類を再実行できない。`scripts/audit_published_candidates.py` は公開済み行の安全性・親子関係・件数を検査するが、網羅性や分類を検証しない。現在の評価は K0783 を参照。
 
+後続の全列挙 `scripts/audit_candidate_completeness.py` により、下記の8,763件は完全ではなく、94オラクルの全対称像を使うと15,072件あることが判明した。追加6,309件は `output/additional-candidates.csv.gz` に収録し、その安全性は別の行列式検査でも確認した。追加分は勝敗未分類。候補のない親は下記の1,591個ではなく611個。
+
 候補CSVの `move` は正規化済み `s6_hex` にそのまま適用できるとは限らない。親の対称像を試し、空き位置 `move` を加えた子の正規形が `s7_hex` に一致する像を選ぶ。part2とpart3にはCSVヘッダーがない。
 
 Baseline main: `5af484bb241cd776af2eda5e26eda4e97595baee` (includes the full S6 geometry cost audit of 2026-11-13, which verified the cost column of all 7,867 published rows but explicitly not the key set or classes column).

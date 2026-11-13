@@ -1,4 +1,3 @@
-successfully downloaded text file (SHA: 48402cd3ecf9acecc4b40d008491512c0eff6621)
 ---
 id: K0778
 title: "幅17・18の円点数 P(17)=P(18)=16 確定・幅19・20 は P≤18 で候補点行集合を完全分類（並走 K0776 の P(w)≤2⌈w/2⌉ を独立に再現・P(19),P(20) は更に 18 へ鋭化）"

@@ -14,7 +14,7 @@ solution:
   classification: [all-safe-grundy]
   coverage: 下界は全称（円を盤に置く構成）。34点带の最良性は R′≦10⁷ の有限掃引
   conditions: 連続整数行
-  verification: [independent-implementation]
+  verification: [exhaustive-enumeration]
   certificate: 円上格子点の全列挙 + 窓スライド計数 + 3実現掃引（29,832円）
   independent_check: 2実装経路（ガウス象限結合・直接u掃引）の行集合完全一致・既知witnes計数3件との一致
   note: "K0785の下界6件を全て厳密確認。K0790の「11050円は16..20点」は整数中心実現（R=44200相当・v-span 420）の計数で奇奇実現（v-span 210・行スパン105）とは別円。level 17復活点(55,83]はK0790のまま有効"
@@ -22,7 +22,7 @@ relations:
 - type: supports
   target: K0785
   note: 11050円奇奇実現の全点・窓計数を厳密検証し下界6件を確認。定理A（σ₁₃=43）の本体検証は含まない（K0785の実験ファイルは依然プレースホルダ）
-- type: corrects
+- type: supports
   target: K0790
   note: K0790本文「11050円はw=49..83で16..20点・witnessは別円族（要確認）」を訂正。奇奇実現は22..34点。命題P(49..55)=32自体には影響なし
 - type: depends_on

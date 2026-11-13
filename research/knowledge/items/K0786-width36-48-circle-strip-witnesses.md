@@ -1,4 +1,3 @@
-successfully downloaded text file (SHA: 03a6a110b96851883a8dcf4891de02c0ba1699da)
 ---
 id: K0786
 title: "幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）"

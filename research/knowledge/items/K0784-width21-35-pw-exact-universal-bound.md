@@ -1,6 +1,3 @@
-successfully downloaded text file (SHA: 971952013066bef2dc11c481fa4b56a41f3e696a)
-successfully downloaded text file (SHA: 5561d74fc240ed54bb68ee94268e37b6f31a599c)
-successfully downloaded text file (SHA: 9ea208b539c59debe972bd7e7e434972a5e03364)
 ---
 id: K0784
 title: "幅21..35の円点数の完全決定 P(22)=18・P(23)=P(24)=20・P(25)=22・P(26)=…=P(35)=24・24点witness円650 — 全称上界 P(w) ≤ 2⌈w/2⌉−4（全w≥21・w≠26）・行分離公式 M_{w,w+1}=w（全奇数w≥21）"

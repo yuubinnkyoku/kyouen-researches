@@ -1072,6 +1072,16 @@
 ## [research/experiments/circle-26pt-min-rowspan-20261112/scripts/circle_26pt_min_rowspan.ts](../../../research/experiments/circle-26pt-min-rowspan-20261112/scripts/circle_26pt_min_rowspan.ts)
 
 - [K0785](../items/K0785-circle-26-points-min-row-span.md) (solver): 単独再現機械（STAGE分割: E/O/Z全数列挙＋witness検証）
+## [research/experiments/circle-34pt-witness-scan-20261113/output/circle_34pt_witness_scan.json](../../../research/experiments/circle-34pt-witness-scan-20261113/output/circle_34pt_witness_scan.json)
+
+- [K0791](../items/K0791-circle-34pt-witness-verified.md) (data): 制御・窓計数表・掃引結果・大円結果の機械出力
+## [research/experiments/circle-34pt-witness-scan-20261113/reports/circle-34pt-witness-scan.md](../../../research/experiments/circle-34pt-witness-scan-20261113/reports/circle-34pt-witness-scan.md)
+
+- [K0791](../items/K0791-circle-34pt-witness-verified.md) (proof): 主張・3実現の背景・制御・限界・レジューム
+## [research/experiments/circle-34pt-witness-scan-20261113/scripts/circle_34pt_witness_scan.ts](../../../research/experiments/circle-34pt-witness-scan-20261113/scripts/circle_34pt_witness_scan.ts)
+
+- [K0785](../items/K0785-circle-26-points-min-row-span.md) (verifier): K0791: 11050円奇奇実現の全48点・窓計数の厳密検証＋34点帯掃引（定理Aの検証を含まない）
+- [K0791](../items/K0791-circle-34pt-witness-verified.md) (verifier): 単独再現機械（制御3件・11050円2経路検証・R′≦10⁷掃引・大円的を絞った確認・決定的）
 ## [research/experiments/clique-bouquet-gaussian-20261101/proof.md](../../../research/experiments/clique-bouquet-gaussian-20261101/proof.md)
 
 - [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) (proof): 花弁ごとの厳密母関数・全変動誤差・正規極限の全称証明
@@ -8541,6 +8551,12 @@
 ## [research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts](../../../research/experiments/n11-s2-5960-milestone5-20261112/scripts/orbit_ms5_worklist.ts)
 
 - [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (source): 94オラクル鍵+14 LOSS S6鍵を埋込み（s5_verdicts.json由来・自己assert 78+16/3,868/14）、 orbit-level blocker特定・196 S5会計・settled-10判定・7,867/615,497 manifest生成を 再実行する自己完結TS検証script（anchor不一致でthrow）
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加6309件。moveは正規化されたs6の座標で未分類
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全15072件と公開表に欠ける6309件の集計
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 候補S7表 s7_hex,s6_hex,move,cat（1=既知LOSS子、2=プール候補）。part1..3で計8,763行
@@ -8550,6 +8566,15 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開行の限定監査結果とmove座標の注意
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_additional_geometry.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_additional_geometry.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 追加候補の安全性を独立な行列式判定で確認
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 公開オラクル94位置の全対称像からS6ワークリスト上の合法な補完候補を全列挙
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness_independent.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness_independent.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 4点部分集合の逆引きと行列式による別実装で全親子対を照合
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_candidates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_candidates.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 公開行の安全性・親子関係・件数を独立検査。候補の完全性や分類の正当性は検査しない
@@ -12797,6 +12822,15 @@
 ## [research/experiments/width17-20-circle-point-bound-20261112/scripts/width17_20_circle_bound.ts](../../../research/experiments/width17-20-circle-point-bound-20261112/scripts/width17_20_circle_bound.ts)
 
 - [K0778](../items/K0778-width17-20-circle-point-bounds.md) (verifier): 除外・周期・713補題・探索の単独再現（STAGE 分割実行可）・K0776 の監査実装とは独立
+## [research/experiments/width19-21-pw16-certificate-20261113/output/width19_21_pw16_certificate.json](../../../research/experiments/width19-21-pw16-certificate-20261113/output/width19_21_pw16_certificate.json)
+
+- [K0789](../items/K0789-width19-21-pw16-certificate.md) (data): 全数値の機械出力（生残集合・killedBy・classMax・witness・perMod）
+## [research/experiments/width19-21-pw16-certificate-20261113/reports/width19-21-pw16-certificate.md](../../../research/experiments/width19-21-pw16-certificate-20261113/reports/width19-21-pw16-certificate.md)
+
+- [K0789](../items/K0789-width19-21-pw16-certificate.md) (proof): 定理・証明骨子・制御・構造観察・限界
+## [research/experiments/width19-21-pw16-certificate-20261113/scripts/width19_21_pw16_certificate.ts](../../../research/experiments/width19-21-pw16-certificate-20261113/scripts/width19_21_pw16_certificate.ts)
+
+- [K0789](../items/K0789-width19-21-pw16-certificate.md) (verifier): 生残列挙・拡張法掃引・g0会計・witness の単独再現（決定的・STAGE 分割・依存なし）
 ## [research/experiments/width19-plus-half-density-mixed-20261112/output/circle_witness_search.json](../../../research/experiments/width19-plus-half-density-mixed-20261112/output/circle_witness_search.json)
 
 - [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (data): witness探索の機械出力（制御・最大16）
@@ -12836,6 +12870,33 @@
 ## [research/experiments/width36-48-circle-strip-scan-20261112/scripts/circle_strip_scan.ts](../../../research/experiments/width36-48-circle-strip-scan-20261112/scripts/circle_strip_scan.ts)
 
 - [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) (verifier): 家族スキャン・制御比較・witness整数検証の単独再現（決定的・依存なし）
+## [research/experiments/width36-48-level-classification-20261113/output/width36_48_level_classify.json](../../../research/experiments/width36-48-level-classification-20261113/output/width36_48_level_classify.json)
+
+- [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) (data): 全段階の機械出力（分類12件・制御・g0会計・witness・主張）
+## [research/experiments/width36-48-level-classification-20261113/reports/width36-48-level-classification.md](../../../research/experiments/width36-48-level-classification-20261113/reports/width36-48-level-classification.md)
+
+- [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) (proof): 意味論・証明の構造・convention監査・制御・限界
+## [research/experiments/width36-48-level-classification-20261113/scripts/width36_48_level_classify.ts](../../../research/experiments/width36-48-level-classification-20261113/scripts/width36_48_level_classify.ts)
+
+- [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) (verifier): streaming bitset DFS機械の単独再現（決定的・STAGE分割実行・制御・g0会計・witness検証込み）
+## [research/experiments/width49-55-level-classification-20261113/output/width49_55_level_classify.json](../../../research/experiments/width49-55-level-classification-20261113/output/width49_55_level_classify.json)
+
+- [K0790](../items/K0790-width49-55-pw32-plateau.md) (data): 全数値の機械出力（nodes・g0 会計・witness per-w）
+## [research/experiments/width49-55-level-classification-20261113/reports/width49-55-level-classification.md](../../../research/experiments/width49-55-level-classification-20261113/reports/width49-55-level-classification.md)
+
+- [K0790](../items/K0790-width49-55-pw32-plateau.md) (proof): 定理・証明骨子・制御・ノード成長則・限界
+## [research/experiments/width49-55-level-classification-20261113/scripts/width49_55_level_classify.ts](../../../research/experiments/width49-55-level-classification-20261113/scripts/width49_55_level_classify.ts)
+
+- [K0790](../items/K0790-width49-55-pw32-plateau.md) (verifier): streaming 分類・g0 会計・2210 witness の単独再現（決定的・TARGETS 分割実行・依存なし）
+## [research/experiments/width56-level-classification-20261113/output/width56_level_classify.json](../../../research/experiments/width56-level-classification-20261113/output/width56_level_classify.json)
+
+- [K0792](../items/K0792-width56-pw32-plateau-extension.md) (data): 全数値の機械出力（chunks・g0 会計・witness・w56..w59 完走）
+## [research/experiments/width56-level-classification-20261113/reports/width56-level-classification.md](../../../research/experiments/width56-level-classification-20261113/reports/width56-level-classification.md)
+
+- [K0792](../items/K0792-width56-pw32-plateau-extension.md) (proof): 定理・証明骨子・制御・g4 飽和・限界
+## [research/experiments/width56-level-classification-20261113/scripts/width56_level_classify.ts](../../../research/experiments/width56-level-classification-20261113/scripts/width56_level_classify.ts)
+
+- [K0792](../items/K0792-width56-pw32-plateau-extension.md) (verifier): 分割実行対応 streaming 分類機（決定的・依存なし・素数冪リーフ証明書装備）
 ## [research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json](../../../research/experiments/width6-circle-eight-point-20261112/output/width6_circle_bound.json)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (data): 全制御の実行結果
@@ -13183,6 +13244,9 @@
 ## [research/log/2026-11-12-width9-18-circle-point-max.md](../../../research/log/2026-11-12-width9-18-circle-point-max.md)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-circle-34pt-witness-scan.md](../../../research/log/2026-11-13-circle-34pt-witness-scan.md)
+
+- [K0791](../items/K0791-circle-34pt-witness-verified.md) (log): 判断・バグ2件の捕捉経緯・K0790誤りの特定・レジューム
 ## [research/log/2026-11-13-greedy-lower-bounds-2531-3251.md](../../../research/log/2026-11-13-greedy-lower-bounds-2531-3251.md)
 
 - [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) (log): 手法・較正（2207/2647）・限界
@@ -13198,6 +13262,15 @@
 ## [research/log/2026-11-13-p3251-no-size-h1-set.md](../../../research/log/2026-11-13-p3251-no-size-h1-set.md)
 
 - [K0775](../items/K0775-p3251-no-size-h1-set.md) (log): 発見の経緯と当時の検証状態
+## [research/log/2026-11-13-width19-21-pw16-certificate.md](../../../research/log/2026-11-13-width19-21-pw16-certificate.md)
+
+- [K0789](../items/K0789-width19-21-pw16-certificate.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-width49-55-level-classification.md](../../../research/log/2026-11-13-width49-55-level-classification.md)
+
+- [K0790](../items/K0790-width49-55-pw32-plateau.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-width56-level-classification.md](../../../research/log/2026-11-13-width56-level-classification.md)
+
+- [K0792](../items/K0792-width56-pw32-plateau-extension.md) (log): 判断・教訓・レジューム
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

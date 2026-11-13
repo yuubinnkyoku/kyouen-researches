@@ -16,7 +16,7 @@ solution:
   conditions: 連続整数行
   verification: [mathematical-proof]
   certificate: 基底18法 k=9 完備生残列挙 + 拡張法（素数冪 11²・7³）無条件全滅 + g0≧2 convention-B classMax 会計 + 130円下界
-  independent_check: 生残数の三重一致（w17/18: 0・w19: 2 with S1 文字一致・w20: 8・w21: 16 = K0784 命題4）・実在3 witness の拡張法全通過・perMod 内訳の総和検算（293,914+16=293,930）
+  independent_check: "生残数の三重一致（w17/18: 0・w19: 2 with S1 文字一致・w20: 8・w21: 16 = K0784 命題4）・実在3 witness の拡張法全通過・perMod 内訳の総和検算（293,914+16=293,930）"
   note: "素数掃引で死なず素数冪で死ぬ候補の初例。level 分類の標準法リストに素数冪を加める価値の根拠。P(21) は K0784 の最後の open（∈{16,17,18}）であった"
 relations:
 - type: supports

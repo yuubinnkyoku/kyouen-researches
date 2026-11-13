@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 769 / alias: 269 / artifactファイル: 4111
+K項目: 774 / alias: 269 / artifactファイル: 4135
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 769 / alias: 269 / artifactファイル: 4111
 | computation | 94 |
 | definition | 5 |
 | method | 7 |
-| proposition | 593 |
+| proposition | 598 |
 | question | 39 |
 | verification | 31 |
 
@@ -18,12 +18,12 @@ K項目: 769 / alias: 269 / artifactファイル: 4111
 | 値 | 件数 |
 |---|---:|
 | active | 12 |
-| computed | 199 |
+| computed | 200 |
 | conjectured | 2 |
 | needs-review | 3 |
 | observed | 26 |
 | open | 37 |
-| proved | 380 |
+| proved | 384 |
 | refuted | 64 |
 | scope-unclear | 2 |
 | superseded | 9 |
@@ -37,21 +37,21 @@ K項目: 769 / alias: 269 / artifactファイル: 4111
 | certificates | 109 |
 | first-moves | 67 |
 | formalization | 5 |
-| geometry | 384 |
+| geometry | 389 |
 | grundy | 171 |
 | maximal-safe | 200 |
 | maximum-safe | 101 |
 | migration | 1 |
 | provenance | 41 |
 | reconfiguration | 38 |
-| rectangles | 135 |
+| rectangles | 140 |
 | residual-games | 124 |
 | rules | 8 |
 | search-methods | 123 |
 | square-outcomes | 101 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 325 |
+| variants | 330 |
 | verification | 141 |
 
 ## 未解決・要監査・範囲不明
