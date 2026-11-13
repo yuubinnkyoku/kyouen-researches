@@ -1,0 +1,232 @@
+{
+ "schema": "n11-class2-lane-cost60-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "source_sweep": "output/class2-lane-cost60-sweep-20261114.json",
+ "target": {
+  "s6_child_hex": "00000000000000801a02000020000000",
+  "cost": 60,
+  "demand": "c2=2"
+ },
+ "certificates": [
+  {
+   "bit": 0,
+   "root": "00000000000000801a02000020000001",
+   "verdict": "WIN7",
+   "loser_first_moves": 51,
+   "rows": 34101,
+   "extraction_nodes": 4269365,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a02000020000001.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 51 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 1,
+   "root": "00000000000000801a02000020000002",
+   "verdict": "WIN7",
+   "loser_first_moves": 50,
+   "rows": 34376,
+   "extraction_nodes": 5372592,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a02000020000002.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 50 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 10,
+   "root": "00000000000000801a02000020000400",
+   "verdict": "WIN7",
+   "loser_first_moves": 54,
+   "rows": 43695,
+   "extraction_nodes": 5438470,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a02000020000400.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 54 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 20,
+   "root": "00000000000000801a02000020100000",
+   "verdict": "WIN7",
+   "loser_first_moves": 46,
+   "rows": 22561,
+   "extraction_nodes": 2268753,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a02000020100000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 46 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 25,
+   "root": "00000000000000801a02000022000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 52,
+   "rows": 45068,
+   "extraction_nodes": 10558962,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a02000022000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 52 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 26,
+   "root": "00000000000000801a02000024000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 50,
+   "rows": 35311,
+   "extraction_nodes": 4687766,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a02000024000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 50 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 50,
+   "root": "00000000000000801a06000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 43,
+   "rows": 15018,
+   "extraction_nodes": 1092226,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a06000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 43 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 52,
+   "root": "00000000000000801a12000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 53,
+   "rows": 49003,
+   "extraction_nodes": 11482856,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a12000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 53 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 53,
+   "root": "00000000000000801a22000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 47,
+   "rows": 36987,
+   "extraction_nodes": 5623057,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000000801a22000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 47 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 72,
+   "root": "00000000000001801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 44,
+   "rows": 24052,
+   "extraction_nodes": 3076601,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000001801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 44 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 76,
+   "root": "00000000000010801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 55,
+   "rows": 46474,
+   "extraction_nodes": 10428581,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000000010801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 55 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 92,
+   "root": "00000000100000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 45,
+   "rows": 22728,
+   "extraction_nodes": 3102158,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000000100000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 45 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 96,
+   "root": "00000001000000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 49,
+   "rows": 29509,
+   "extraction_nodes": 4258889,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000001000000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 49 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 98,
+   "root": "00000004000000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 52,
+   "rows": 27444,
+   "extraction_nodes": 3818286,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00000004000000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 52 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 110,
+   "root": "00004000000000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 49,
+   "rows": 25721,
+   "extraction_nodes": 4155257,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00004000000000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 49 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 111,
+   "root": "00008000000000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 49,
+   "rows": 28560,
+   "extraction_nodes": 2540541,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00008000000000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 49 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 112,
+   "root": "00010000000000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 48,
+   "rows": 39060,
+   "extraction_nodes": 7145551,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00010000000000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 48 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 113,
+   "root": "00020000000000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 48,
+   "rows": 26579,
+   "extraction_nodes": 2359086,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00020000000000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 48 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  },
+  {
+   "bit": 117,
+   "root": "00200000000000801a02000020000000",
+   "verdict": "WIN7",
+   "loser_first_moves": 47,
+   "rows": 19340,
+   "extraction_nodes": 1330266,
+   "cert_file": "output/class2-lane-cost60-certificates/n11_s7_00200000000000801a02000020000000.cert",
+   "verification": "PASS",
+   "verifier": "scripts/verify_bit7_win7_cert.ts (Bareiss det4, engine-free): all 47 sub-roots PASS, consumed-union == row set, root-check 7 stones / no 4-cocircular"
+  }
+ ],
+ "totals": {
+  "win7_certificates": 19,
+  "total_rows": 605587,
+  "total_extraction_nodes": 93009263
+ },
+ "verification_method": "per certificate: extract full strategy tree via scripts/class4_child1_cert_extractor.ts (v15 rules, per-root fresh engine, depth 9 after loser first move), then independent verification with scripts/verify_bit7_win7_cert.ts (engine-free exact Bareiss 4x4 determinant) over ALL first-loser-move sub-roots; require() structural checks (every winner-to-move position has a legal strategy move, terminals only on loser turn, no strategy rows on opponent turn, rows sorted-unique); union of consumed winner states must equal the certificate row set exactly; root-check (7 stones, no 4 cocircular). ALL 19 PASS.",
+ "frontier_note": "These 19 certificates are verified and counted. Measured marginal vs the after-batch3 solved set: +34 solved S6 in manifest (formal frontier recomputation with these covers included is pending; expect solved_s6_in_manifest 690 -> ~724 pending formal rerun).",
+ "interpretation_guard": [
+  "Each certificate proves only: from the listed 7-stone root with the 7th-stone player to force, that player wins against every defense within 10 plies. REFUTED-D10 entries from the same sweep negate only depth-10 wins from their roots.",
+  "class 2, class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN."
+ ]
+}
