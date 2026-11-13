@@ -952,17 +952,39 @@
       "continue the class-4 lane on the target S5 (35 remaining S6 orbits)",
       "keep UNKNOWN guards"
     ]
-  }
-,
+  },
   "session18_child2_sweep_certificates": {
     "date": "2026-11-14",
     "trigger": "session 17 next item 1: sweep the next S6 child of the class-4 lane target S5 00000000020000003800000080000000",
     "s6_child": "000000000200000038000000a0000000 (cheapest remaining S6 orbit of the target, s6_s7_edge_cost 67)",
     "sweep": "all 67 non-degenerate 7th-stone candidates swept with the chunk method (depth 8 chunks, replies at root+m, fresh engine per batch, native Node ~470k nodes/s, chunk cap 50M, all candidates uncapped): 3 WIN7-D10 (bit50, bit77, bit91) and 64 REFUTED-D10; the per-candidate node counts of the REFUTED side were lost to a lane-log context compaction (recorded honestly in the sweep record); WIN7 node counts survived: bit50 2,107,194 / bit77 11,058,432 / bit91 9,345,201",
     "certificates": {
-      "bit50": {"root_hex": "000000000200000038040000a0000000", "rows": 25085, "bytes": 906647, "md5": "9c1233a2d90e6acf50415d8faab22228", "mob": 50, "commit": "d1bdccf3"},
-      "bit77": {"root_hex": "000000000200200038000000a0000000", "rows": 54558, "bytes": 1973077, "md5": "8feb168914ebc801f608418860c92c20", "fnv1a": 1601464846, "mob": 58, "commit": "8625f1c5"},
-      "bit91": {"root_hex": "000000000a00000038000000a0000000", "rows": 37305, "bytes": 1347285, "md5": "b28da716469d8ce01c42d9aad2bbd6f6", "fnv1a": 631694243, "mob": 46, "commit": "c2da5401"}
+      "bit50": {
+        "root_hex": "000000000200000038040000a0000000",
+        "rows": 25085,
+        "bytes": 906647,
+        "md5": "9c1233a2d90e6acf50415d8faab22228",
+        "mob": 50,
+        "commit": "d1bdccf3"
+      },
+      "bit77": {
+        "root_hex": "000000000200200038000000a0000000",
+        "rows": 54558,
+        "bytes": 1973077,
+        "md5": "8feb168914ebc801f608418860c92c20",
+        "fnv1a": 1601464846,
+        "mob": 58,
+        "commit": "8625f1c5"
+      },
+      "bit91": {
+        "root_hex": "000000000a00000038000000a0000000",
+        "rows": 37305,
+        "bytes": 1347285,
+        "md5": "b28da716469d8ce01c42d9aad2bbd6f6",
+        "fnv1a": 631694243,
+        "mob": 46,
+        "commit": "c2da5401"
+      }
     },
     "verification": "verify_bit7_win7_cert.ts per root: all sub-root decompositions PASS (58/46/50 sub-roots), consumed union = certificate row set exactly (diff 0 both directions), terminal stone range [13,17], root checks PASS (7 stones, no 4 cocircular, loser mobility as listed)",
     "records": [
@@ -977,5 +999,31 @@
       "continue the class-4 lane: next S6 child of the target S5 in the recomputed ranking",
       "keep UNKNOWN guards"
     ]
+  },
+  "session18b_frontier_update": {
+    "date": "2026-11-14",
+    "trigger": "session 18 next item 1 / session-17 next item 2: recompute the class-2/4 frontier with the three batch2 child#2 WIN7 certificates",
+    "method": "repo scripts/audit_class_frontier.py recomputation with output/class4-batch2-certificates-verified.json added to WIN7_VERIFIED (the three verified WIN7 roots of session 18: bit50, bit77, bit91, children of S6 orbit 000000000200000038000000a0000000); snapshot asserts disabled in the local run only (if False: assert); no repo file changed",
+    "covers": "union of the 3 certificates covers 16 S6 orbits (all marginal vs the batch1 baseline), 8 of them newly solved in the ms5 manifest; per-certificate covers bit50 7 / bit77 7 / bit91 4",
+    "delta": {
+      "solved_s6_in_manifest": "657 -> 665",
+      "unique_remaining_s6": "7189 -> 7181",
+      "sum_remaining_cost": "564070 -> 563509",
+      "s6_needed_by_open_classes": "5406 -> 5398 (cost 423516)",
+      "best_class2_blocker": "00000000000000003802000008000000, 32 orbits, cost 2206 - orbit count now tied with the class-4 lane target at lower cost",
+      "best_class4_blocker": "00000000020000003800000080000000: 35 -> 32 remaining S6 orbits, cost 2756 -> 2530; cheapest remaining S6 orbit 00000000020000003802000080000000 (cost 68)"
+    },
+    "record": "output/class4-batch2-frontier-update-20261114.json",
+    "outputs": [
+      "output/class-frontier-s5-ranking-after-batch2.csv",
+      "output/class-frontier-top-candidates-s6-after-batch2.csv"
+    ],
+    "verification": "both CSVs read back from main and md5-verified (593aaa7f9cd94aed18e836fe853e145c / 148491e0609fe999370dd3f97b692575); frontier record JSON corrected once (a manifest hex lost a 0000 run in hand transcription), commit dacd57cb6d",
+    "status": "bookkeeping over published receipts; no new search verdict; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": [
+      "continue the class-4 lane: sweep the next S6 child 00000000020000003802000080000000 (cost 68) of the lane target S5",
+      "keep UNKNOWN guards"
+    ],
+    "ledger_push_incident": "ledger entry push: commit 1423786e accidentally wrote the read_file wrapper object instead of the file body (detected by md5 read-back mismatch); corrected in commit dc5f9c27 with the exact local file, md5 18a8fc26e6868da8efee8d5b6e0c880e verified against the commit blob"
   }
 }
