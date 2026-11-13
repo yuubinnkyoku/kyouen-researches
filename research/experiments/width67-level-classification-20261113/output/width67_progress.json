@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-13",
  "status": "in_progress",
- "resume_from": 987,
+ "resume_from": 1266,
  "machine": "research/experiments/width67-level-classification-20261113/scripts/width67_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
  "machineNote": "K0799 の w=66 完走機と同一構造（verbatim 移植・W=67・窓マスク 67 ビット・ワード数 ceil(w/32) 自動）。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。",
  "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。w=66 第1-2セッションの off-by-one 教訓を踏襲し +1 はしない。",
@@ -211,15 +211,59 @@
    "aborted": true,
    "survivors": 0,
    "note": "17 mask/2.4M = ~141k/mask（heavy band・再上昇）"
+  },
+  {
+   "chunk": 18,
+   "from": 987,
+   "lastDone": 1155,
+   "nodes": 2400000,
+   "wordOps": 255739126,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "168 mask/2.4M = ~14.3k/mask（dip 到達・w=65/66 と同様の ~1000 沈み込み。第一 heavy band 終点は ~999 でなく ~987..1155 帯）"
+  },
+  {
+   "chunk": 19,
+   "from": 1155,
+   "lastDone": 1218,
+   "nodes": 2400000,
+   "wordOps": 239559850,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "63 mask/2.4M = ~38k/mask（第二 heavy band 開始 ~1190・w=65/66 の第二帯位置と一致）"
+  },
+  {
+   "chunk": 20,
+   "from": 1218,
+   "lastDone": 1241,
+   "nodes": 2400000,
+   "wordOps": 231900733,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "23 mask/2.4M = ~104k/mask（第二 heavy band）"
+  },
+  {
+   "chunk": 21,
+   "from": 1241,
+   "lastDone": 1266,
+   "nodes": 2400000,
+   "wordOps": 234601906,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "25 mask/2.4M = ~96k/mask（第二 heavy band）"
   }
  ],
  "totals": {
-  "masksDone": 987,
-  "nodes": 45600000,
+  "masksDone": 1266,
+  "nodes": 55200000,
   "leaves": 0,
   "survivors": 0,
   "phase2Masks": 0
  },
- "estimate": "第一 heavy band は後半で ~96k/mask まで減衰（chunk16）し、w=65/66 と同様の ~1000 dip 構造と整合。987/3,300 = 29.9% で 45.6M nodes 消費。第一帯終点 ~999..1310 とその後の軽い帯 ~10k/mask を仮定すると総計 ~75..95M nodes・複数セッション必須。",
- "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 132）⟹ 完走なら P(67) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。※昇格先 K 番号は K0801（K0800 は 2026-11-13 11:34 に joint g0 会計（w≤114）が使用済みのため再採番）。現在は部分進行（987/3,300 mask = 29.9%）であり P(67) はまだ確定しない。"
+ "estimate": "第一 heavy band（~772..~1155・dip は ~987..1155 で ~14k/mask）を通過。第二 heavy band 開始 ~1190（w=65/66 と同位置）。1266/3,300 = 38.4% で 55.2M nodes。第二帯は w=65 で 1190..1302・w=66 で ~1313 終点だったので w=67 も ~1300± で終了し、残り ~2,000 mask は軽い帯 ~10k/mask と予測 → 総計 ~65..75M nodes（~74M の当初予測に近い）。",
+ "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 132）⟹ 完走なら P(67) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。※昇格先 K 番号は K0801（K0800 は 2026-11-13 11:34 に joint g0 会計（w≤114）が使用済みのため再採番）。現在は部分進行（1266/3,300 mask = 38.4%）であり P(67) はまだ確定しない。"
 }
