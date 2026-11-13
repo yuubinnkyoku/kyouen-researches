@@ -222,8 +222,8 @@ result = {
               'controls reproduce the published baseline/after_batch1/after_batch2 '
               'snapshot values exactly before batch3 is measured',
     'controls': {
-        'baseline': {'solved_in_manifest': 638, 'unique_remaining': 7208,
-                     'sum_cost': 565500, 'reproduced': True},
+        'baseline': {solved_in_manifest': 638, 'unique_remaining': 7208,
+                      'sum_cost': 565500, 'reproduced': True},
         'after_batch1': {'solved_in_manifest': 657, 'unique_remaining': 7189,
                          'sum_cost': 564070, 'reproduced': True},
         'after_batch2': {'solved_in_manifest': 665, 'unique_remaining': 7181,
@@ -256,7 +256,7 @@ result = {
         'S2 {59,60} / class 2 / class 4 remain UNKNOWN',
 }
 (OUT / 'class4-batch3-frontier-full-recompute-20261114.json').write_text(
-    json.dumps(result, indent=1) + '\n')
+    json.dumps(result, indent=1) + chr(10))
 print('written class4-batch3-frontier-full-recompute-20261114.json')
 
 # ---------- after-batch3 ranking CSVs (same format as -after-batch1/-batch2) ----------
@@ -268,13 +268,13 @@ ranking = sorted(
     key=lambda r: (0 if r['classes'] & 6 else 1, r['remaining_s6_orbits'],
                   r['remaining_s7_edge_cost'], r['s5_hex']))
 with (OUT / 'class-frontier-s5-ranking-after-batch3.csv').open('w', newline='') as f:
-    w = csv.writer(f, lineterminator='\n')
+    w = csv.writer(f, lineterminator=chr(10))
     w.writerow(('s5_hex', 'classes', 'remaining_s6_orbits', 'remaining_s7_edge_cost'))
     for r in ranking:
         w.writerow((r['s5_hex'], r['classes'], r['remaining_s6_orbits'],
                     r['remaining_s7_edge_cost']))
 with (OUT / 'class-frontier-top-candidates-s6-after-batch3.csv').open('w', newline='') as f:
-    w = csv.writer(f, lineterminator='\n')
+    w = csv.writer(f, lineterminator=chr(10))
     for label, cand in (('best class-4 blocker-candidate S5', class4[0]),
                         ('best class-2 blocker-candidate S5', class2[0])):
         w.writerow([f"# {label}: s5={cand['s5_hex']} classes={cand['classes']} "
