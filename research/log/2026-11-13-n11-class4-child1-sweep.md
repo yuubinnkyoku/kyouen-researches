@@ -1096,7 +1096,10 @@ repo `scripts/audit_class_frontier.py` の WIN7_VERIFIED に
   読み戻しmd5不一致で即検出し、**dc5f9c27** で正本（md5 18a8fc26e6868da8efee8d5b6e0c880e）を
   再pushして復旧、コミットblobとの一致を確認。事故と復旧はauditにも記録。
 - be88fbfef: audit（session18b_frontier_update・ledger事故記録込み）
-- 本コミット: log追記
+- a6e92d3b→a653a3af: log追記 — 1回目のpushは read_file のサイズ上限で
+  末尾打ち切りのコピー（63,939/70,099 bytes）を書いてしまった（読み戻しmd5不一致で検出）。
+  ページ分割読み出しで再構成して再pushし、正本md5一致を確認。
+  **教訓: ~60KB超のファイルはページ分割読み出しで再構成してからpushする。**
 
 ### 解釈上の注意（変更なし）
 
