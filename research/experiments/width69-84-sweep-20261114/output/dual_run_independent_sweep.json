@@ -1,0 +1,192 @@
+{
+ "description": "K0804 二重走査記録: 独立実装（sweep・同一REST6アルゴリズムの独立書き下ろし・Node.js v22）による w=69..82 level 17 掃引。cap 2.4M連続チャンクで走査したrepo掲載state_wXX.json（width_sweep.mjs）との対比。ノード総数はチャンクプロトコル依存（2.4M cap中止チャンクは部分mask再探索を二重計上・本実装はcap 600M..4Gで単一連続〔clean計上〕）。",
+ "generated": "2026-11-14",
+ "rest": "19,23,7,29,43,47",
+ "protocol": "clean single-pass (no aborted-chunk partial recount); identical REST6 two-phase algorithm, independently reimplemented from K0802 verifier",
+ "widths": [
+  {
+   "w": 69,
+   "L": 17,
+   "uniqueMasks": 3300,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 122980751,
+   "repoStateTotalNodes": 122980751,
+   "match": "node-exact (same 2.4M-cap protocol)"
+  },
+  {
+   "w": 70,
+   "L": 17,
+   "uniqueMasks": 3300,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 160083797,
+   "repoStateTotalNodes": 160083797,
+   "match": "node-exact (same 2.4M-cap protocol)"
+  },
+  {
+   "w": 71,
+   "L": 17,
+   "uniqueMasks": 3300,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 202737214,
+   "repoStateTotalNodes": 202737214,
+   "match": "node-exact (same 2.4M-cap protocol)"
+  },
+  {
+   "w": 72,
+   "L": 17,
+   "uniqueMasks": 3300,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 255040369,
+   "repoStateTotalNodes": 255040369,
+   "match": "node-exact (same 2.4M-cap protocol)"
+  },
+  {
+   "w": 73,
+   "L": 17,
+   "uniqueMasks": 3313,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 278993737,
+   "repoStateTotalNodes": 332071700
+  },
+  {
+   "w": 74,
+   "L": 17,
+   "uniqueMasks": 3326,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 343218984,
+   "repoStateTotalNodes": 412625985
+  },
+  {
+   "w": 75,
+   "L": 17,
+   "uniqueMasks": 3339,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 416763974,
+   "repoStateTotalNodes": 492991341
+  },
+  {
+   "w": 76,
+   "L": 17,
+   "uniqueMasks": 3353,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 509510835,
+   "repoStateTotalNodes": 591493386
+  },
+  {
+   "w": 77,
+   "L": 17,
+   "uniqueMasks": 3367,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 615580292,
+   "repoStateTotalNodes": 713869251
+  },
+  {
+   "w": 78,
+   "L": 17,
+   "uniqueMasks": 3381,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 747684447,
+   "repoStateTotalNodes": 866630415
+  },
+  {
+   "w": 79,
+   "L": 17,
+   "uniqueMasks": 3400,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 915374175,
+   "repoStateTotalNodes": 1086515738
+  },
+  {
+   "w": 80,
+   "L": 17,
+   "uniqueMasks": 3419,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 1103319150,
+   "repoStateTotalNodes": 1319315738
+  },
+  {
+   "w": 81,
+   "L": 17,
+   "uniqueMasks": 3438,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 1318611397,
+   "repoStateTotalNodes": 1584440539
+  },
+  {
+   "w": 82,
+   "L": 17,
+   "uniqueMasks": 3447,
+   "maximal": 3300,
+   "leaves": 0,
+   "survivors": 0,
+   "done": true,
+   "cleanTotalNodes": 1593581640,
+   "repoStateTotalNodes": 1949902072
+  }
+ ],
+ "agreements": {
+  "uniqueMasks": "14/14 exact match (3300,3300,3300,3300,3313,3326,3339,3353,3367,3381,3400,3419,3438,3447)",
+  "maximal": "3300 at every width (consistent with K0803; small patterns enter unique only, never maximal)",
+  "leaves": "0 at every width in both runs",
+  "survivors": "0 at every width in both runs",
+  "nodeTotals": "protocol-dependent; w=69..72 node-exact (both used the 2.4M-cap chunk protocol); w=73..82 differ because repo states count aborted-chunk partial-mask re-exploration while this run is a single clean pass"
+ },
+ "controls": [
+  {
+   "name": "w26-L12-S-star",
+   "result": "exactly 1 survivor S*={0,1,3,4,7,10,15,18,21,22,24,25} (no false kill)",
+   "nodes": 1270,
+   "leaves": 1
+  },
+  {
+   "name": "w68-regression",
+   "result": "96,626,896 nodes, leaves=0, survivors=0, 42 chunks x 2.4M cap - exact match with K0802 native independent full rerun",
+   "nodes": 96626896
+  }
+ ],
+ "internalReproducibility": "w=73..77 were each executed twice in this lane (before and after an execution-environment reset): clean totals identical (278,993,737 / 343,218,984 / 416,763,974 / 509,510,835 / 615,580,292). w=78..82 clean totals are from single runs.",
+ "notes": [
+  "cleanTotalNodes for w=81/82 are from the pre-reset background batch; conclusion fields (leaves=0, survivors=0, complete) were read from persisted state files before the reset and match the repo-published states.",
+  "growth rate ~1.20..1.22 per width (96.6M at w=68 -> 1.59G at w=82, clean)",
+  "w=83/84 positive control (expected survivors>0 from the 11050-circle 34-point witness, K0785/K0791) is a resume item, not yet run."
+ ]
+}

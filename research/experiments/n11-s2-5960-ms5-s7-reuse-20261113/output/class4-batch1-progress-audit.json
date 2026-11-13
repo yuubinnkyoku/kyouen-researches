@@ -145,8 +145,7 @@
     "refuted_note": "cost is not monotone in mobility: bit=91 (mob 49) = 193,987 nodes while bit=32/87 (same mob) each exceed 700k",
     "pending_incomplete": {
       "3": {
-        "d10_nodes_so_far_v15": 950001,
-        "note": "v15 session 4: fresh-memo d10 capped at 950k (first of the mob-56 band); not a refutation; heavy-pending"
+        "status": "RESOLVED session 14/15: see ledger bit3 entry and output/class4-batch1-unprobed-sweep.json / bit34 campaign record"
       },
       "7": {
         "d10_nodes_so_far": 506014,
@@ -162,8 +161,7 @@
         "note": "single candidate consumed full 700k node budget; expect >1M nodes; needs dedicated runs or d=8-first"
       },
       "34": {
-        "d10_nodes_so_far_v15": 950001,
-        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k (first mob-56 band candidate tried at full budget); not a refutation"
+        "status": "RESOLVED session 14/15: see ledger bit34 entry and output/class4-batch1-unprobed-sweep.json / bit34 campaign record"
       },
       "40": {
         "d10_nodes_so_far_v15": 950001,
@@ -280,38 +278,8 @@
       },
       "interpretation": "All 22 probes ended without a verdict: 18 consumed at least 150,000 nodes, while 4 were interrupted below that threshold (bit 78: 149998, bit 84: 49995, bit 103: 49995, bit 118: 149998). Capped runs prove no WIN/LOSS. The observation that the first 18 full-budget probes failed to finish is not evidence that every remaining candidate requires 950k nodes; shorter probes can still discover cheap candidates."
     },
-    "not_yet_searched": [
-      "54",
-      "88",
-      "102",
-      "15",
-      "50",
-      "86",
-      "90",
-      "92",
-      "105",
-      "116",
-      "21",
-      "36",
-      "4",
-      "38",
-      "67",
-      "109",
-      "112",
-      "117",
-      "8",
-      "10",
-      "76",
-      "33",
-      "66",
-      "104",
-      "106",
-      "110",
-      "0",
-      "44",
-      "120",
-      "2"
-    ]
+    "not_yet_searched": [],
+    "sweep_status": "COMPLETE (session 15): all 66 non-degenerate candidates classified - WIN7-D10: bit7(cert), bit25(cert), bit18, bit67, bit82, bit117, bit120 (5 certificates pending); REFUTED-D10: the other 59"
   },
   "session3_structural_findings": {
     "memo_state_after_950k_bit80": {
@@ -796,5 +764,267 @@
     "consequence": "heavy-pending is now {34} plus unprobed candidates; fifth chunk-method refutation overall (bit85, bit32, bit40, bit80, bit87) alongside two WIN7 certificates (bit7, bit25); cost spread reconfirmed: 1.70M / 3.10M / 6.01M / 6.18M / 15.88M nodes - mob-49 band splits (bit32 15.88M vs bit87 6.18M), per-candidate budget estimation mandatory",
     "status": "refutation of WIN7-within-depth-10 only: bit=87 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
     "next": "1) chunk campaign for heavy-pending {34} (mob 56, first of the mob-56 band) then the unprobed candidate list, with certificate protocol on any WIN; persist per-chunk node logs; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
+  },
+  "session14_bit34_chunk_campaign": {
+    "date": "2026-11-14",
+    "trigger": "session13_bit87_chunk_campaign.next item 1 executed: chunk campaign for heavy-pending bit=34 (mob 56, first of the mob-56 band; last remaining heavy-pending candidate)",
+    "verdict": "REFUTED within depth 10: lossAt(root,10)=false via witness m=45 - all 42 winner replies at root+45 solved uncapped with loss=false; 21 other first moves killed before the witness was found (22nd examined); 34 first moves unexamined (not needed for the verdict)",
+    "root_hex": "00000000020000003800000088080000",
+    "totals": {
+      "nodes": 13672100,
+      "runs": 15,
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 341994,
+      "chunks_total": 258,
+      "kill_chunks": 21,
+      "pass_chunks": 237,
+      "kill_nodes_sum": 1472847,
+      "pass_nodes_sum": 8899242,
+      "wasted_capped_retry_nodes": 3000010
+    },
+    "kill_table": {
+      "0": 40,
+      "2": 88,
+      "3": 40,
+      "4": 38,
+      "6": 81,
+      "7": 83,
+      "8": 50,
+      "10": 37,
+      "11": 3,
+      "15": 80,
+      "18": 25,
+      "21": 32,
+      "25": 50,
+      "28": 80,
+      "32": 21,
+      "33": 7,
+      "36": 8,
+      "37": 32,
+      "38": 25,
+      "40": 84,
+      "44": 104
+    },
+    "method_note": "per-chunk node log persisted in the state file (mandatory since session 13); replies enumerated from the legal-move list AT root+m so r!=m holds structurally; native Node.js execution (no sandbox ceiling); chunk (36,8) capped at 300k in 10 fresh batch runs (3.0M wasted nodes on identical capped attempts - memo is not persisted across runs), then solved standalone fresh at cap 20M: 341,994 nodes loss=true; batch chunk cap then raised to 1M (no later chunk exceeded 300k)",
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes (PASS; published v15 control)",
+      "witness_coverage": "root+45 has 42 legal winner replies; the campaign done-set for m=45 contains exactly 42 entries, all loss=false, all uncapped; set-equality with the engine reply enumeration verified programmatically",
+      "determinism_fresh_resolves": {
+        "(36,8)": {
+          "loss": true,
+          "nodes": 341994
+        },
+        "(0,40)": {
+          "loss": true,
+          "nodes": 81839
+        },
+        "(11,3)": {
+          "loss": true,
+          "nodes": 42463
+        },
+        "(44,104)": {
+          "loss": true,
+          "nodes": 75723
+        },
+        "(45,48)": {
+          "loss": false,
+          "nodes": 7528
+        },
+        "(45,50)": {
+          "loss": false,
+          "nodes": 25984
+        },
+        "(45,36)": {
+          "loss": false,
+          "nodes": 50890
+        },
+        "note": "all seven fresh re-solves identical to the persisted per-chunk campaign records (recorded-count matching available because per-chunk logs were persisted this time)"
+      },
+      "root_mob_recheck": "mob 56 confirmed by direct enumeration (PASS)"
+    },
+    "record": "output/class4-batch1-bit34-campaign.json",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (bit34 entry)",
+    "consequence": "heavy-pending is now EMPTY: {7->WIN7 cert, 25->WIN7 cert, 32->REFUTED, 40->REFUTED, 80->REFUTED, 87->REFUTED, 34->REFUTED}. Six chunk-method refutations and two WIN7 certificates overall for the S6 child #1 7th-stone sweep; unprobed candidates remain in the progress audit. Cost spread across the heavy band: 1.70M / 3.10M / 6.01M / 6.18M / 13.67M / 15.88M nodes.",
+    "status": "refutation of WIN7-within-depth-10 only: bit=34 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
+    "next": "1) chunk campaigns for the unprobed candidates (54, 88, 102, ... - mob 56-63 band, per-candidate budget estimation mandatory); 2) WIN7 discovery => certificate protocol; 3) keep UNKNOWN guards"
+  },
+  "session15_unprobed_sweep": {
+    "date": "2026-11-14",
+    "trigger": "session14 ledger next item 1 executed: chunk campaigns for the unprobed candidates; extended to all probe/pending candidates",
+    "verdict": "ALL 66 candidates of the S6 child #1 7th-stone sweep are now classified within depth 10: 7 WIN7 candidates (bit7, bit25 certified; bit18, bit67, bit82, bit117, bit120 pending certificates) and 59 refuted (48 in this session record + bit34 + v14 standing evidence + prior chunk campaigns)",
+    "totals_54": {
+      "nodes": 455601226,
+      "runs": 115,
+      "chunks": 11007
+    },
+    "wins": [
+      "bit18 (000000000200000038000000800c0000, mob 52)",
+      "bit67 (00000000020000083800000080080000, mob 59)",
+      "bit82 (00000000020400003800000080080000, mob 53)",
+      "bit117 (00200000020000003800000080080000, mob 59)",
+      "bit120 (01000000020000003800000080080000, mob 62)"
+    ],
+    "record": "output/class4-batch1-unprobed-sweep.json",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (unprobed_sweep_session15 + per-win entries)",
+    "consequence": "the 7th-stone sweep of S6 child #1 is complete; the class-4 frontier worklist can now be recomputed against a fully classified child; five new certificate targets queued",
+    "status": "WIN7-D10 candidates require certificate extraction + independent verification before settled; REFUTED excludes only wins within 10 plies; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": "1) certificates for {18,67,82,117,120}; 2) frontier bookkeeping update; 3) keep UNKNOWN guards"
+  },
+  "session16_win7_certificates": {
+    "date": "2026-11-14",
+    "trigger": "session 15 next item 1: extract and independently verify certificates for the five new WIN7-D10 candidates {18, 67, 82, 117, 120}",
+    "protocol": "kill-first extraction (repo class4_child1_cert_extractor.ts extractBatch, kill tables from the session-15 states, ONE fresh native process per candidate, CAP=1e9) -> sorted-row merge in-process -> header+root -> independent verification with repo verify_bit7_win7_cert.ts (engine-free, cache-free, exact Bareiss det4; local fs-import patch for the node CLI only, verification logic untouched) -> sub-root decomposition verification for every loser first-move -> union equality check both directions",
+    "extraction_totals": {
+      "nodes": 34496301,
+      "runs": 5
+    },
+    "certificates": {
+      "bit18": {
+        "rows": 43550,
+        "bytes": 1571258,
+        "md5": "11a0f14f761f71c4d77fd6e618dee336",
+        "subroots": 52,
+        "terminals": 14608,
+        "all_pass": true
+      },
+      "bit67": {
+        "rows": 57896,
+        "bytes": 2088010,
+        "md5": "d3aa2871e08afdf48d82b94ad3c0abb5",
+        "subroots": 59,
+        "terminals": 18181,
+        "all_pass": true
+      },
+      "bit82": {
+        "rows": 48352,
+        "bytes": 1743255,
+        "md5": "ac5200a83c0342d284b5d026d7ebbf62",
+        "subroots": 53,
+        "terminals": 17092,
+        "all_pass": true
+      },
+      "bit117": {
+        "rows": 61952,
+        "bytes": 2230811,
+        "md5": "3119ae37fd843267a81c78cde40a4446",
+        "subroots": 59,
+        "terminals": 23288,
+        "all_pass": true
+      },
+      "bit120": {
+        "rows": 62336,
+        "bytes": 2244853,
+        "md5": "bb2b8da776ca4d8b16dc5121a072d0cf",
+        "subroots": 62,
+        "terminals": 22563,
+        "all_pass": true
+      }
+    },
+    "push": {
+      "files": "5 certificates under output/class4-batch1-certificates/ + verification record output/class4-batch1-win7-certificates-20261114.json, all on main, md5 re-verified against raw.githubusercontent after push"
+    },
+    "consequence": "S6 child #1 7th-stone sweep fully classified within depth 10: 7 certified WIN7-D10 (bit7, bit25, bit18, bit67, bit82, bit117, bit120) + 59 refutations; 66/66 non-degenerate candidates settled",
+    "next": [
+      "recompute the class-4 frontier from the seven certificates (audit bookkeeping)",
+      "propagate toward S2 {59,60} blockers; deeper objects stay UNKNOWN"
+    ]
+  },
+  "session17_frontier_update": {
+    "date": "2026-11-14",
+    "trigger": "session 16 next item 1 / session-15 next item 2: recompute the class-2/4 frontier with the seven batch1 WIN7 certificates",
+    "method": "repo audit_class_frontier.py with the added receipts file output/class4-batch1-certificates-verified.json (7 verified WIN7 roots: bit7, bit25, bit18, bit67, bit82, bit117, bit120); snapshot asserts pinned the pre-batch1 baseline and were disabled in the local run only (if False: assert); no repo file changed",
+    "covers": "union of the 7 certificates covers 43 S6 orbits (40 marginal vs baseline), 19 of them in the ms5 manifest",
+    "delta": {
+      "solved_s6_in_manifest": "638 -> 657",
+      "unique_remaining_s6": "7208 -> 7189",
+      "sum_remaining_cost": "565500 -> 564070",
+      "s6_needed_by_open_classes": "5425 -> 5406 (cost 424077)",
+      "best_class2_blocker": "unchanged: 00000000000000003802000008000000, 32 orbits, cost 2206",
+      "best_class4_blocker": "00000000020000003800000080000000: 43 -> 35 remaining S6 orbits, cost 3391 -> 2756 (this S5 is the current lane target; its own S6 child #1 sweep is fully certified)"
+    },
+    "record": "output/class4-batch1-frontier-update-20261114.json",
+    "outputs": [
+      "output/class-frontier-s5-ranking-after-batch1.csv",
+      "output/class-frontier-top-candidates-s6-after-batch1.csv"
+    ],
+    "status": "bookkeeping over published receipts; no new search verdict; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": [
+      "continue the class-4 lane on the target S5 (35 remaining S6 orbits)",
+      "keep UNKNOWN guards"
+    ]
+  },
+  "session18_child2_sweep_certificates": {
+    "date": "2026-11-14",
+    "trigger": "session 17 next item 1: sweep the next S6 child of the class-4 lane target S5 00000000020000003800000080000000",
+    "s6_child": "000000000200000038000000a0000000 (cheapest remaining S6 orbit of the target, s6_s7_edge_cost 67)",
+    "sweep": "all 67 non-degenerate 7th-stone candidates swept with the chunk method (depth 8 chunks, replies at root+m, fresh engine per batch, native Node ~470k nodes/s, chunk cap 50M, all candidates uncapped): 3 WIN7-D10 (bit50, bit77, bit91) and 64 REFUTED-D10; the per-candidate node counts of the REFUTED side were lost to a lane-log context compaction (recorded honestly in the sweep record); WIN7 node counts survived: bit50 2,107,194 / bit77 11,058,432 / bit91 9,345,201",
+    "certificates": {
+      "bit50": {
+        "root_hex": "000000000200000038040000a0000000",
+        "rows": 25085,
+        "bytes": 906647,
+        "md5": "9c1233a2d90e6acf50415d8faab22228",
+        "mob": 50,
+        "commit": "d1bdccf3"
+      },
+      "bit77": {
+        "root_hex": "000000000200200038000000a0000000",
+        "rows": 54558,
+        "bytes": 1973077,
+        "md5": "8feb168914ebc801f608418860c92c20",
+        "fnv1a": 1601464846,
+        "mob": 58,
+        "commit": "8625f1c5"
+      },
+      "bit91": {
+        "root_hex": "000000000a00000038000000a0000000",
+        "rows": 37305,
+        "bytes": 1347285,
+        "md5": "b28da716469d8ce01c42d9aad2bbd6f6",
+        "fnv1a": 631694243,
+        "mob": 46,
+        "commit": "c2da5401"
+      }
+    },
+    "verification": "verify_bit7_win7_cert.ts per root: all sub-root decompositions PASS (58/46/50 sub-roots), consumed union = certificate row set exactly (diff 0 both directions), terminal stone range [13,17], root checks PASS (7 stones, no 4 cocircular, loser mobility as listed)",
+    "records": [
+      "output/class4-batch2-child2-sweep.json",
+      "output/class4-batch2-certificates-verified.json"
+    ],
+    "covers": "bit50 closes 7 S6 orbits (including the swept S6 child itself); the union of the three closes 16 S6 orbits",
+    "consequence": "the cheapest remaining S6 orbit of the lane target S5 is now certified solved via its 7th-stone descendants; frontier recomputation with the new receipts file is the next bookkeeping step",
+    "status": "WIN7 certificates prove only a win within depth 10 from the 7-stone roots; REFUTED excludes only wins within 10 plies; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": [
+      "recompute the class-2/4 frontier with output/class4-batch2-certificates-verified.json added",
+      "continue the class-4 lane: next S6 child of the target S5 in the recomputed ranking",
+      "keep UNKNOWN guards"
+    ]
+  },
+  "session18b_frontier_update": {
+    "date": "2026-11-14",
+    "trigger": "session 18 next item 1 / session-17 next item 2: recompute the class-2/4 frontier with the three batch2 child#2 WIN7 certificates",
+    "method": "repo scripts/audit_class_frontier.py recomputation with output/class4-batch2-certificates-verified.json added to WIN7_VERIFIED (the three verified WIN7 roots of session 18: bit50, bit77, bit91, children of S6 orbit 000000000200000038000000a0000000); snapshot asserts disabled in the local run only (if False: assert); no repo file changed",
+    "covers": "union of the 3 certificates covers 16 S6 orbits (all marginal vs the batch1 baseline), 8 of them newly solved in the ms5 manifest; per-certificate covers bit50 7 / bit77 7 / bit91 4",
+    "delta": {
+      "solved_s6_in_manifest": "657 -> 665",
+      "unique_remaining_s6": "7189 -> 7181",
+      "sum_remaining_cost": "564070 -> 563509",
+      "s6_needed_by_open_classes": "5406 -> 5398 (cost 423516)",
+      "best_class2_blocker": "00000000000000003802000008000000, 32 orbits, cost 2206 - orbit count now tied with the class-4 lane target at lower cost",
+      "best_class4_blocker": "00000000020000003800000080000000: 35 -> 32 remaining S6 orbits, cost 2756 -> 2530; cheapest remaining S6 orbit 00000000020000003802000080000000 (cost 68)"
+    },
+    "record": "output/class4-batch2-frontier-update-20261114.json",
+    "outputs": [
+      "output/class-frontier-s5-ranking-after-batch2.csv",
+      "output/class-frontier-top-candidates-s6-after-batch2.csv"
+    ],
+    "verification": "both CSVs read back from main and md5-verified (593aaa7f9cd94aed18e836fe853e145c / 148491e0609fe999370dd3f97b692575); frontier record JSON corrected once (a manifest hex lost a 0000 run in hand transcription), commit dacd57cb6d",
+    "status": "bookkeeping over published receipts; no new search verdict; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": [
+      "continue the class-4 lane: sweep the next S6 child 00000000020000003802000080000000 (cost 68) of the lane target S5",
+      "keep UNKNOWN guards"
+    ],
+    "ledger_push_incident": "ledger entry push: commit 1423786e accidentally wrote the read_file wrapper object instead of the file body (detected by md5 read-back mismatch); corrected in commit dc5f9c27 with the exact local file, md5 18a8fc26e6868da8efee8d5b6e0c880e verified against the commit blob",
+    "log_push_incident": "log continuation push: commit a6e92d3b wrote a read-truncated copy (63,939 of 70,099 bytes; file_system read_file default cap); detected by md5 read-back mismatch, corrected in a653a3af via paged read reassembly, full-file md5 5bec53c093d42694de6d80f713434675 verified against the commit blob. Lesson recorded: paged read reassembly mandatory for files >~60KB"
   }
 }

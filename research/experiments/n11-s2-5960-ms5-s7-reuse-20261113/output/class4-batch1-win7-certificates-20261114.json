@@ -1,0 +1,144 @@
+{
+  "schema": "n11-class4-batch1-win7-certificates-20261114-v1",
+  "date": "2026-11-14",
+  "trigger": "session 15 next item 1: certificate protocol for the five new WIN7-D10 candidates {18, 67, 82, 117, 120}",
+  "protocol": "kill-first extraction (repo class4_child1_cert_extractor.ts extractBatch, kill tables from the session-15 campaign states, ONE fresh native process per candidate, CAP=1e9) -> sort -u merge in-process (rows.set) -> header+root lines -> independent verification (repo verify_bit7_win7_cert.ts: exact Bareiss det4, engine-free, cache-free; local fs-import patch for native node CLI only, logic untouched) -> per-candidate sub-root decomposition verification (all first loser moves) -> union equality check (consumed winner states vs row set, both directions)",
+  "verifier_patch_note": "the committed verifier CLI references require('fs') which collides with its own require(cond, reason) assert helper and fails under node --experimental-strip-types ESM; the local run adds an fs import at the top without touching any verification logic. Recommend the upstream one-line fix separately.",
+  "environment": "native Node.js (no 16MiB/60s sandbox constraint); extraction ~6-8.3M nodes per candidate in a single run (13-20s each)",
+  "certificates": {
+    "bit18": {
+      "root_hex": "000000000200000038000000800c0000",
+      "mob": 52,
+      "rows": 43550,
+      "bytes": 1571258,
+      "md5": "11a0f14f761f71c4d77fd6e618dee336",
+      "extraction_nodes": 5750652,
+      "extraction_runs": 1,
+      "verification": {
+        "subroots": 52,
+        "all_pass": true,
+        "terminals": 14608,
+        "opponentEdges": 82267,
+        "seenStates": 90639,
+        "union_rows": 43550,
+        "union_diff_both_directions": 0,
+        "terminal_range": "[13,15]..[15,17] subsets of [13,17]",
+        "root_checks": {
+          "stones": 7,
+          "loserMobility": 52,
+          "no4Cocircular": true
+        }
+      },
+      "path": "output/class4-batch1-certificates/n11_s7_000000000200000038000000800c0000.cert"
+    },
+    "bit67": {
+      "root_hex": "00000000020000083800000080080000",
+      "mob": 59,
+      "rows": 57896,
+      "bytes": 2088010,
+      "md5": "d3aa2871e08afdf48d82b94ad3c0abb5",
+      "extraction_nodes": 6994702,
+      "extraction_runs": 1,
+      "verification": {
+        "subroots": 59,
+        "all_pass": true,
+        "terminals": 18181,
+        "opponentEdges": 105670,
+        "seenStates": 115336,
+        "union_rows": 57896,
+        "union_diff_both_directions": 0,
+        "root_checks": {
+          "stones": 7,
+          "loserMobility": 59,
+          "no4Cocircular": true
+        }
+      },
+      "path": "output/class4-batch1-certificates/n11_s7_00000000020000083800000080080000.cert"
+    },
+    "bit82": {
+      "root_hex": "00000000020400003800000080080000",
+      "mob": 53,
+      "rows": 48352,
+      "bytes": 1743255,
+      "md5": "ac5200a83c0342d284b5d026d7ebbf62",
+      "extraction_nodes": 5736905,
+      "extraction_runs": 1,
+      "verification": {
+        "subroots": 53,
+        "all_pass": true,
+        "terminals": 17092,
+        "opponentEdges": 88020,
+        "seenStates": 99631,
+        "union_rows": 48352,
+        "union_diff_both_directions": 0,
+        "root_checks": {
+          "stones": 7,
+          "loserMobility": 53,
+          "no4Cocircular": true
+        }
+      },
+      "path": "output/class4-batch1-certificates/n11_s7_00000000020400003800000080080000.cert"
+    },
+    "bit117": {
+      "root_hex": "00200000020000003800000080080000",
+      "mob": 59,
+      "rows": 61952,
+      "bytes": 2230811,
+      "md5": "3119ae37fd843267a81c78cde40a4446",
+      "extraction_nodes": 7719053,
+      "extraction_runs": 1,
+      "verification": {
+        "subroots": 59,
+        "all_pass": true,
+        "terminals": 23288,
+        "opponentEdges": 118014,
+        "seenStates": 133938,
+        "union_rows": 61952,
+        "union_diff_both_directions": 0,
+        "root_checks": {
+          "stones": 7,
+          "loserMobility": 59,
+          "no4Cocircular": true
+        }
+      },
+      "path": "output/class4-batch1-certificates/n11_s7_00200000020000003800000080080000.cert"
+    },
+    "bit120": {
+      "root_hex": "01000000020000003800000080080000",
+      "mob": 62,
+      "rows": 62336,
+      "bytes": 2244853,
+      "md5": "bb2b8da776ca4d8b16dc5121a072d0cf",
+      "extraction_nodes": 8294989,
+      "extraction_runs": 1,
+      "verification": {
+        "subroots": 62,
+        "all_pass": true,
+        "terminals": 22563,
+        "opponentEdges": 116292,
+        "seenStates": 132205,
+        "union_rows": 62336,
+        "union_diff_both_directions": 0,
+        "root_checks": {
+          "stones": 7,
+          "loserMobility": 62,
+          "no4Cocircular": true
+        }
+      },
+      "path": "output/class4-batch1-certificates/n11_s7_01000000020000003800000080080000.cert"
+    }
+  },
+  "totals": {
+    "certificates": 5,
+    "rows_total": 274086,
+    "extraction_nodes_total": 34496301,
+    "terminals_total": 95732
+  },
+  "header": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS (plain text, sorted rows, md5 recorded per file)",
+  "consequence": "the S6 child #1 7th-stone sweep now has SEVEN verified WIN7-within-depth-10 certificates (bit7, bit25, bit18, bit67, bit82, bit117, bit120) and 59 refutations; every one of the 66 non-degenerate candidates is settled within depth 10 (wins certified, refutations as recorded chunk campaigns)",
+  "interpretation_guard": [
+    "these are depth-10-bounded results: WIN7 certificates prove a win within 10 plies from the 7-stone root; REFUTED excludes only wins within 10 plies; deeper structure is not decided",
+    "class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN",
+    "the bit7 400-node aggregation discrepancy reserve remains open and is unrelated"
+  ]
+}
