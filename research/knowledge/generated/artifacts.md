@@ -12779,6 +12779,15 @@
 ## [research/experiments/short-board-unique-carrier-20261031/verify.py](../../../research/experiments/short-board-unique-carrier-20261031/verify.py)
 
 - [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (verifier): 4×4格子31616盤の禁止辺全列挙、160盤の全安全局面再帰、q=4とq=5の鋭い境界反例
+## [research/experiments/six-row-deficient-witnesses-20261113/output/scan_results.json](../../../research/experiments/six-row-deficient-witnesses-20261113/output/scan_results.json)
+
+- [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) (data): 全スキャン結果・witness座標・独立検証詳細・制御
+## [research/experiments/six-row-deficient-witnesses-20261113/report.md](../../../research/experiments/six-row-deficient-witnesses-20261113/report.md)
+
+- [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) (proof): 主結果表・バグ2件の教訓・レジューム
+## [research/experiments/six-row-deficient-witnesses-20261113/scripts/deficient_maximal_machine.ts](../../../research/experiments/six-row-deficient-witnesses-20261113/scripts/deficient_maximal_machine.ts)
+
+- [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) (source): 汎用欠損極大探索機（3点外心完全census・ハイブリッド貪欲+shake・独立検証器内蔵）
 ## [research/experiments/six-row-q7-deficient-20261112/output/six_row_one_deficient.json](../../../research/experiments/six-row-q7-deficient-20261112/output/six_row_one_deficient.json)
 
 - [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md) (data): 全実行結果・witness・独立検証・サンプリング較正
@@ -13724,6 +13733,9 @@
 ## [research/log/2026-11-13-p3251-no-size-h1-set.md](../../../research/log/2026-11-13-p3251-no-size-h1-set.md)
 
 - [K0775](../items/K0775-p3251-no-size-h1-set.md) (log): 発見の経緯と当時の検証状態
+## [research/log/2026-11-13-six-row-deficient-witnesses.md](../../../research/log/2026-11-13-six-row-deficient-witnesses.md)
+
+- [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) (log): 発見順・探索機のバグ2件・レジューム位置
 ## [research/log/2026-11-13-width19-21-pw16-certificate.md](../../../research/log/2026-11-13-width19-21-pw16-certificate.md)
 
 - [K0789](../items/K0789-width19-21-pw16-certificate.md) (log): 判断・教訓・レジューム

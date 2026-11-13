@@ -1708,6 +1708,7 @@
 - ← depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 初期一般上界200とcurve packingの文脈
 - ← depends_on [K0723](../items/K0723-width-five-q6-stabilization-bounds.md): 曲線充填上界への(5,6)代入による一般上界249
 - ← depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 曲線充填上界U_{w,q}への(6,7)代入による初の明示的上界402
+- ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 上界は K0318 代入（U=658/495/371・K0024 の T 値に基づく）
 
 ## [K0319](../items/K0319-misere-direct-sum-normal-grundy-rule.md) swap則が全後続局面で成り立つ部品のmisère直和は通常Grundy値だけで解ける
 
@@ -4416,6 +4417,7 @@
 - → depends_on [K0756](../items/K0756-three-row-m19-class023-nonexistence.md)
 - → depends_on [K0758](../items/K0758-three-row-m19-class024-nonexistence.md)
 - ← depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 5×19では同クラスが不在（全極大安全配置が満容量30石）— 本項目はその幅6版が6×19では在ることを示す対比
+- ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 5×19 q=7 の全極大30石との一致制御
 
 ## [K0760](../items/K0760-six-row-q7-width6-census-full-capacity-witnesses.md) 6×m（q=7）危険曲線censusと満容量36石witness — 幅6 occupancyプログラムのseed
 
@@ -4737,6 +4739,7 @@
 - → supports [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 十分長さT_2=9が最小であることを確定（真の安定化長と一致）
 - → supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): results表の(2,4)行をbounds（≤9・最小性未検証）からexact-threshold（9・proved）へ昇格
 - → depends_on [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 確定閾値リスト（5件）に続き2行盤の確定値を追加
+- ← depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 2×8 q=4 の5石witness再発見制御
 
 ## [K0797](../items/K0797-g0-accounting-valid-through-w84.md) convention B g0会計の有効範囲は拡張法でw≤84に延長 — g4形は壁でなく真の壁はg3形（類サイズ29）— P(65)..P(84)の決定に必要な非標準形前提が復活点下界83をちょうどカバー
 
@@ -4819,6 +4822,7 @@
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 曲線充填上界U_{w,q}への(6,7)代入による初の明示的上界402
 - → depends_on [K0761](../items/K0761-six-row-one-deficient-class-witnesses.md): 下界20は6×13/16/19の35石1行欠損極大安全配置の実在による
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 従来の暗黙の一般上界T_{6,7}=10,101（402はその25分の1）
+- ← supports [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): K0806 が上界のみ記録した (6,5)/(6,6)/(6,8) に下界を与え、境界を [20,658]/[16,495]/[12,371] の両側にした
 
 ## [K0807](../items/K0807-width83-positive-control-revival-point.md) w=83正制御の完走 — REST6掃引機の生存検出感度を実証（生残ちょうど2件・両方11050円の両端83幅窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w=83の生残パターン完全特定（2.42G nodes・leaves=2・実現可能）
 
@@ -4826,3 +4830,10 @@
 - → depends_on [K0785](../items/K0785-circle-26-points-min-row-span.md): 11050円 witness（P(83)≥34・34点最小幅83）が生残予測の源
 - → depends_on [K0791](../items/K0791-circle-34pt-witness-verified.md): 34点最小幅83（復活点の右端の理論的裏付け）
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定
+
+## [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) 6×m q=5/6/8 の欠損極大witness — M_{6,5}≥20・M_{6,6}≥16・M_{6,8}≥12（下界の初記録）
+
+- → supports [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): K0806 が上界のみ記録した (6,5)/(6,6)/(6,8) に下界を与え、境界を [20,658]/[16,495]/[12,371] の両側にした
+- → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 上界は K0318 代入（U=658/495/371・K0024 の T 値に基づく）
+- → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2×8 q=4 の5石witness再発見制御
+- → depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md): 5×19 q=7 の全極大30石との一致制御

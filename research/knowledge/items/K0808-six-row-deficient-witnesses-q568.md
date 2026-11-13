@@ -3,7 +3,7 @@ id: K0808
 title: "6×m q=5/6/8 の欠損極大witness — M_{6,5}≥20・M_{6,6}≥16・M_{6,8}≥12（下界の初記録）"
 kind: computation
 status: computed
-topics: [rectangles, maximal-safe, verification, stabilization-length]
+topics: [rectangles, maximal-safe, verification, geometry]
 aliases: []
 scope: "6×m整数格子・q∈{5,6,8}。(6,5) m=8..19・(6,6) m=8..15・(6,8) m=9..11 の各mで石数<満容量の極大安全配置（欠損witness）の実在。いずれも貪欲探索+独立検証による実在証明であり、不在は主張しない"
 evidence: "汎用(w,m,q)貪欲+shake探索機と、census不使用の独立検証（石ペア直線・石3点組外心の全列挙・厳密整数演算）で全witnessが safe+maximal PASS。制御4件（K0796・K0069・K0759・K0761 witness）全PASS"
@@ -28,10 +28,11 @@ artifacts:
   role: data
   note: 全スキャン結果・witness座標・独立検証詳細・制御
 - path: research/experiments/six-row-deficient-witnesses-20261113/report.md
-  role: report
+  role: proof
   note: 主結果表・バグ2件の教訓・レジューム
 - path: research/log/2026-11-13-six-row-deficient-witnesses.md
   role: log
+  note: 発見順・探索機のバグ2件・レジューム位置
 ---
 
 ## 命題（計算された事実）
