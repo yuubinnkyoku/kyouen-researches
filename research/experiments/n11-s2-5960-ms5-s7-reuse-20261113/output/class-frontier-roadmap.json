@@ -1,0 +1,51 @@
+{
+  "baseline_main": "2da40f42 (2026-11-13 class-2 batch1/batch1b certificates included)",
+  "method": "fresh recount over published receipts: win7-reuse-hits.csv.gz (498 parents) + covers() of all 67 verified WIN7 certificate roots (priority, class2, class2-next..next4, batch1..batch5, batch2b) + 3 refuted LOSS6 keys; S5 classes from s5-remaining-after-reuse.csv.gz; incidences from s5-s6-remaining-incidences.csv.gz",
+  "inputs": {
+    "incidences_rows": 14558,
+    "hits_rows": 498,
+    "s5_class_rows": 186,
+    "win7_cert_roots": 67,
+    "loss6_keys": 3,
+    "manifest_rows": 7867
+  },
+  "controls": {
+    "remaining_s5_orbits": 177,
+    "unique_remaining_s6": 7208,
+    "sum_remaining_cost": 565500,
+    "solved_s6_in_manifest": 638,
+    "class2_target_remaining": 32,
+    "pruned_s5": 8
+  },
+  "class_composition": { "bit1": 49, "bit2": 44, "bit4": 88 },
+  "effective_open_worklist": {
+    "s6_needed_only_by_closed_class1": 1783,
+    "s6_needed_by_open_classes": 5425,
+    "cost_needed_by_open_classes": 425507,
+    "note": "blocker class 1 ({5,115}) is conditionally closed (class1-blocker-closure.md); S6 orbits demanded only by class-1 S5 orbits are deferrable for the open blockers 2 ({27,93}) and 4 ({23,31,89,97})"
+  },
+  "demand_histogram_open_only": [
+    ["c2=0,c4=1", 531],
+    ["c2=0,c4=2", 3078],
+    ["c2=0,c4=3", 35],
+    ["c2=1,c4=0", 279],
+    ["c2=1,c4=1", 65],
+    ["c2=1,c4=2", 9],
+    ["c2=2,c4=0", 1356],
+    ["c2=2,c4=1", 6],
+    ["c2=2,c4=2", 66]
+  ],
+  "best_class2": { "s5": "00000000000000003802000008000000", "classes": 2, "remaining_s6": 32, "cost": 2206 },
+  "best_class4": { "s5": "00000000020000003800000080000000", "classes": 4, "remaining_s6": 43, "cost": 3391 },
+  "next_class2_candidates": [
+    { "s5": "00000000000000809082000000000000", "classes": 3, "remaining_s6": 37, "cost": 2507 },
+    { "s5": "00000000000000809102000000000000", "classes": 2, "remaining_s6": 40, "cost": 2850 },
+    { "s5": "00000000000000803202000000000000", "classes": 2, "remaining_s6": 41, "cost": 2776 }
+  ],
+  "scheduling_observations": [
+    "the best class-4 candidate's S6 children mostly have class-4 demand 3: one WIN7 certificate per S6 closes up to three class-4 S5 candidates at once",
+    "66 remaining S6 orbits are demanded by two class-2 and two class-4 candidates each (c2=2,c4=2) - the highest-value dual-use certificate targets",
+    "the current class-2 lane target 00000000000000003802000008000000 still has exactly 32 unresolved S6 children, consistent with the latest published batch audit"
+  ],
+  "scope": "bookkeeping over published receipts only; no new verdict was produced or verified; 11x11 empty root / {49,60} / S2 {59,60}: UNKNOWN"
+}

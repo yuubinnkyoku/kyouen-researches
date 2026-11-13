@@ -1,0 +1,425 @@
+{
+  "schema": "n11-class4-batch1-child1-d10-sweep-audit",
+  "date": "2026-11-13",
+  "root_s5": "00000000020000003800000080000000",
+  "s6_child": "00000000020000003800000080080000",
+  "child_cells": [
+    19,
+    31,
+    59,
+    60,
+    61,
+    89
+  ],
+  "child_cells_note": "corrected in session 2: the previous session's child_cells [27,31,57,58,59,89] was a transcription error; the bit-cells of the hex key are [19,31,59,60,61,89], confirmed by exact reproduction of all 66 candidate bits and mobilities",
+  "engine": "v15 sandbox TS depth-limited solver (committed at scripts/class4_child1_sweep_engine.ts); rules identical to v14 description: incremental triple-ban (fbt) masks, position memo with depth-bounded win/lose/noWin/noLose facts, closeScore ordering, iterative deepening",
+  "engine_rebuild_session2": {
+    "reason": "engine v14 existed only in the previous sandbox session and was never committed; rebuilt from the rules defined by n11-central-19-cover-20261031/verify_five_terminal_loss7.py",
+    "bugs_found_during_rebuild": [
+      "shared move-array aliasing: legalMoves() refilled one array across recursion levels, silently truncating loops (per-depth arrays fixed)",
+      "the placed stone's own bit must be OR-ed into the child banned words; forgetting it lets the mover replay the same cell (same bug class as v14's per-chunk bit bug)"
+    ],
+    "validation": {
+      "candidate_set": "66 non-degenerate 7th-stone candidates reproduced; set and all 66 root mobilities match candidate_order_mob exactly",
+      "pilot_root_d6": "loss=false (5,949 nodes) matches published d6 fail",
+      "pilot_root_d8": "loss=false (277,800 nodes) matches published d8 fail",
+      "pilot_root_d10": "not re-completed: v15 needed >700k nodes at d10 within the sandbox deadline (capped); the published v14 d10 WIN (622,788 nodes) is the standing evidence",
+      "win_detection_control": "published LOSS7-orientation root 00000000000000a03808100000000000 (winner = root mover, 786 strategy states): winAt(10)=true with terminal stone range [12,16], exactly matching the published verifier stats"
+    },
+    "node_count_caveat": "v15 node counts are not comparable with v14 numbers (ordering details differ); verdicts and terminal ranges are the comparable quantities"
+  },
+  "engine_fixes_this_session_v14": [
+    "memo mVal Uint8 -> Uint16 (packed w*32+l+1 overflows 255; Uint8 truncation misread LOSS@d as tiny win distance)",
+    "FULL[3] = 0x01FFFFFF (0x07FFFFFF exposed off-board cells 121/122 as legal)",
+    "candidate legal masks: 7th-stone bit must be removed from its own 32-bit chunk (earlier runs removed it only from chunk0; bits>=32 results invalid, incl. bogus nodes=1 memo-collision artifacts at bit=32/95)",
+    "ST[6] must be set before solve of each candidate root (stale ST[6] produced unsound bans)"
+  ],
+  "engine_validation": {
+    "pilot_root": "00000000000000003802000008000006",
+    "d6_fail_nodes": 3257,
+    "d8_fail_nodes": 108869,
+    "d10_win_nodes": 622788,
+    "max_stones": 17,
+    "note": "v14 numbers kept for the record; pilot certificate already published, not regenerated"
+  },
+  "ordering_findings": {
+    "candidate_order": "root mobility ascending (loser to move at root)",
+    "move_ordering": "closeScore retained; mobility ordering measured 6x worse on pilot d6 (20121 vs 3257 nodes)",
+    "and_node_ordering_session3": "sorting AND-node (lossAt) children by wscore ascending measured 1.8x WORSE than the default bit order on pilot d8 (capped >500k vs 277,393 nodes completed); default bit order retained. Negative result: do not sort AND-node children by closeness."
+  },
+  "sweep": {
+    "depths_policy": "d=10 single-pass per candidate (subsumes d=6/8 refutations); per-run nodeCap 700000-950000 (sandbox deadline); session 3 added cheap 150k-per-candidate probes for untried candidates",
+    "ncandidates_nondegenerate": 66,
+    "candidate_order_mob": [
+      "85:44",
+      "95:44",
+      "48:46",
+      "81:46",
+      "72:48",
+      "32:49",
+      "87:49",
+      "91:49",
+      "7:50",
+      "25:50",
+      "40:50",
+      "80:50",
+      "83:50",
+      "108:50",
+      "6:51",
+      "18:52",
+      "77:52",
+      "94:52",
+      "103:52",
+      "43:53",
+      "75:53",
+      "82:53",
+      "11:54",
+      "37:54",
+      "70:54",
+      "84:54",
+      "93:54",
+      "113:54",
+      "114:54",
+      "118:54",
+      "28:55",
+      "42:55",
+      "45:55",
+      "78:55",
+      "3:56",
+      "34:56",
+      "54:56",
+      "88:56",
+      "102:56",
+      "15:57",
+      "50:57",
+      "86:57",
+      "90:57",
+      "92:57",
+      "105:57",
+      "116:57",
+      "21:58",
+      "36:58",
+      "4:59",
+      "38:59",
+      "67:59",
+      "109:59",
+      "112:59",
+      "117:59",
+      "8:60",
+      "10:60",
+      "76:60",
+      "33:61",
+      "66:61",
+      "104:61",
+      "106:61",
+      "110:61",
+      "0:62",
+      "44:62",
+      "120:62",
+      "2:63"
+    ],
+    "refuted_d10": {
+      "48": {
+        "d10": 379447
+      },
+      "72": {
+        "d10": 219730
+      },
+      "81": {
+        "d10": 323872
+      },
+      "85": {
+        "d6": 40965,
+        "d8": 102274,
+        "d10": 132921
+      },
+      "91": {
+        "d10": 193987
+      },
+      "95": {
+        "d6": 60171,
+        "d8": 172738,
+        "d10": 275989
+      }
+    },
+    "refuted_note": "cost is not monotone in mobility: bit=91 (mob 49) = 193,987 nodes while bit=32/87 (same mob) each exceed 700k",
+    "pending_incomplete": {
+      "3": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 4: fresh-memo d10 capped at 950k (first of the mob-56 band); not a refutation; heavy-pending"
+      },
+      "7": {
+        "d10_nodes_so_far": 506014,
+        "note": "v14 capped at 506k; resume with dedicated run"
+      },
+      "25": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 2: capped at 950k (and at 450k in a first attempt); mob-50 band is uniformly heavy; not a refutation",
+        "session5_close_and": "v15 session 5: close-first AND variant also capped at 950k on a fresh memo — the d8 -30% does not carry to d10 within the sandbox ceiling"
+      },
+      "32": {
+        "d10_nodes_so_far": 700001,
+        "note": "single candidate consumed full 700k node budget; expect >1M nodes; needs dedicated runs or d=8-first"
+      },
+      "34": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k (first mob-56 band candidate tried at full budget); not a refutation"
+      },
+      "81": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k; the v14 d10 refutation (323,872 nodes, listed under refuted_d10) remains the standing evidence — this entry only records that v15 cannot reproduce it within 950k nodes"
+      },
+      "40": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 2: capped at 950k (and at 280k in a first attempt); not a refutation"
+      },
+      "80": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 3: capped at 950k (fresh memo, 3 attempts incl. persistence experiments); not a refutation; joined heavy-pending"
+      },
+      "87": {
+        "d10_nodes_so_far": 700001,
+        "note": "same; consumed full budget"
+      }
+    },
+    "probe_150k_session3": {
+      "policy": "cheap first-pass probes at 150k nodes per candidate to triage untried candidates (a WIN7 candidate may complete far below 950k; fails and deep wins cap). Fresh memo per candidate; fbt cache shared within a run.",
+      "results": {
+        "6": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "11": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "18": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "28": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "37": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "42": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "43": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "45": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "70": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "75": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "77": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "78": {
+          "nodes": 149998,
+          "capped": true,
+          "note": "cut by run total budget"
+        },
+        "82": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "83": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "84": {
+          "nodes": 49995,
+          "capped": true,
+          "note": "probe cut short by the run total budget"
+        },
+        "93": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "94": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "103": {
+          "nodes": 49995,
+          "capped": true,
+          "note": "probe cut short by the 950k total budget of the run"
+        },
+        "108": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "113": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "114": {
+          "nodes": 150001,
+          "capped": true
+        },
+        "118": {
+          "nodes": 149998,
+          "capped": true,
+          "note": "cut by run total budget (149,997)"
+        }
+      },
+      "interpretation": "All 22 probes ended without a verdict: 18 consumed at least 150,000 nodes, while 4 were interrupted below that threshold (bit 78: 149998, bit 84: 49995, bit 103: 49995, bit 118: 149998). Capped runs prove no WIN/LOSS. The observation that the first 18 full-budget probes failed to finish is not evidence that every remaining candidate requires 950k nodes; shorter probes can still discover cheap candidates."
+    },
+    "not_yet_searched": [
+      "54",
+      "88",
+      "102",
+      "15",
+      "50",
+      "86",
+      "90",
+      "92",
+      "105",
+      "116",
+      "21",
+      "36",
+      "4",
+      "38",
+      "67",
+      "109",
+      "112",
+      "117",
+      "8",
+      "10",
+      "76",
+      "33",
+      "66",
+      "104",
+      "106",
+      "110",
+      "0",
+      "44",
+      "120",
+      "2"
+    ]
+  },
+  "session3_structural_findings": {
+    "memo_state_after_950k_bit80": {
+      "occupied_entries": 238430,
+      "entries_with_proven_bounds": 117212,
+      "bound_types": "all 117,212 are definite win/lose bounds; no noWin/noLose bound >= 5 exists at the cap frontier (frontier subtrees never complete)",
+      "win_bound_dist": {
+        "1": 31813,
+        "3": 57585,
+        "5": 7573,
+        "7": 205,
+        "9": 1
+      },
+      "lose_bound_dist": {
+        "2": 13077,
+        "4": 6745,
+        "6": 212,
+        "8": 1
+      }
+    },
+    "cross_run_memo_persistence": {
+      "verdict": "INFEASIBLE in the current sandbox; structural cause recorded",
+      "findings": [
+        "sandbox 16MiB memory cap: base working set (memo 262144-entry table + fbt cache + search) is ~13-15MB, leaving <1MB headroom; a full dump of the 117k proven bounds is ~4.7MB and exceeds the cap in-run (write_file arguments are retained by the run)",
+        "high-value-only persistence (win>=5 or lose>=4, ~15k lines) is I/O-feasible but resumption is ineffective: the ~89k dropped shallow facts (win<=3, lose<=2) are re-proven from scratch every run and consume most of the node budget; loaded entries produced 0 root-level memo hits and the cap frontier did not observably advance",
+        "memo table at 91% occupancy (238k/262k) causes memoEntry probe failures: the table then holds duplicate keys (4,766 dump lines -> 1,796 unique). MS=1<<19 would need ~2MB more and does not fit the 16MiB cap",
+        "file_system read_file truncates at ~64KB per call; cross-run loaders must loop offset/next_offset (an initial loader silently read only 1,594 of 14,737 lines)"
+      ],
+      "conclusion": "completing mob-50 candidates needs either a bigger-memory runner (external compute lane), a fundamentally smaller proof (certificate-chunked per-universal-child facts), or a better search. Do not retry naive cross-run memo persistence in the sandbox"
+    },
+    "cheap_probe_strategy": "22 candidates probed, 18 at >=150k nodes and 4 cut short by total run budget. None yielded a verdict. The remaining 32 are unprobed, so their costs are unknown; use measured prioritization rather than treating ~950k as a proven lower bound."
+  },
+  "interpretation_guard": [
+    "d=10 fail means no winner win within 10 ply; it does NOT refute the candidate (deeper wins possible)",
+    "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN",
+    "capped runs (3, 7, 25, 32, 40, 80, 87 and all 150k probes) prove nothing either way"
+  ],
+  "next": "superseded by session4_engine_cost_audit.next (bit=3 capped 950k in session 4; 31 unprobed remain in the mob 56-63 band; v14 node counts non-reproducible in v15, budget in v15 units; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push)",
+  "session4_engine_cost_audit": {
+    "date": "2026-11-13",
+    "purpose": "quantify the v15-vs-v14 cost gap before committing further 950k runs, and test cheap hypotheses that might recover v14-level efficiency",
+    "run_ceiling": "a run mixing pilot control + 2x950k candidate attempts and a dedicated 1.4M-node run both exceeded the process safety deadline; ~950k-1M nodes per run remains the practical ceiling (2 timeout incidents recorded as experiment facts)",
+    "v15_vs_v14_inflation": {
+      "pilot_d6": {
+        "v14": 3257,
+        "v15_fresh": 5949,
+        "ratio": 1.83
+      },
+      "pilot_d8": {
+        "v14": 108869,
+        "v15_fresh": 277800,
+        "ratio": 2.55
+      },
+      "pilot_d10": {
+        "v14": 622788,
+        "v15": ">950000 (capped, single-pass and deepening)",
+        "ratio_lower_bound": 1.52
+      },
+      "bit85_d10": {
+        "v14": 132921,
+        "v15": ">950000 (capped)",
+        "ratio_lower_bound": 7.15
+      },
+      "bit95_d10": {
+        "v14": 275989,
+        "v15": ">950000 (capped)",
+        "ratio_lower_bound": 3.44
+      },
+      "bit48_d10": {
+        "v14": 379447,
+        "v15": ">500000 (capped at 500k in this session)",
+        "ratio_lower_bound": 1.32
+      },
+      "conclusion": "v15 cannot cheaply re-confirm ANY of the 6 published v14 d10 refutations; v14 node numbers are not reproducible with the committed engine and must be treated as non-comparable evidence (verdicts and terminal ranges remain the standing evidence)"
+    },
+    "negative_results": [
+      "OR/AND sort-direction grid (close-desc/close-asc/bit x close-desc/close-asc/bit, 9 combos) on pilot d6: 5,917-14,179 nodes; none approaches v14's 3,257; AND=bit+OR=close-desc (v15 default) is best at d6",
+      "closeScore radius/weight variants on pilot d6 (r1/r2/r3/r4/r3sq/r3flat): 5,949-5,970 nodes, insensitive",
+      "fine-grained deepening d2->d4->d6->d8 on pilot (shared memo, cumulative): 34/683/6,637/284,462; does not reproduce v14 (d6 3,257 / d8 108,869)",
+      "counter-definition hypothesis: winAt-only calls (694 / 92,769) and lossAt-only calls (5,255 / 184,624) at pilot d6/d8 do not match v14 published numbers either",
+      "last-response ordering (winAt children sorted by chebyshev distance to the opponent's last stone, with deepening) on bit85: d6 13,818 / d8 211,848 / d10 capped >950k; worse than default at d8",
+      "bit85 deepening d6->d8->d10 (shared memo, cumulative): 13,820 / 186,626 / >950,000; note the d6 stage is 3x CHEAPER than v14's 40,965 while the d10 stage still explodes"
+    ],
+    "positive_result": "close-first AND ordering (lossAt children sorted by wscore descending) cuts pilot d8 from 277,800 to 193,556 nodes (-30%); depth-dependent (worse at d6: 7,646 vs 5,949), unproven at d10; candidate engine variant for future runs targeting d8+ stages",
+    "recalibration": "the session-2/3 conclusion that the mob-50 band is uniformly heavy is confounded: v15 caps at 950k include candidates v14 finished at 133k-380k of its own units. True v15 costs of most candidates are unknown; the sweep plan should treat v14 numbers as non-reproducible and budget per-candidate runs in v15 units. The remaining 31 unprobed candidates (mob 56-63) and heavy-pending {7,25,32,40,80,87} are, if anything, harder than v15 measurements suggest, not easier",
+    "next": "executed in session 5; superseded by session5_sandbox_saturation.next"
+  },
+  "session5_sandbox_saturation": {
+    "date": "2026-11-13",
+    "runs": [
+      { "bit": 25, "ordering": "close-first AND", "depth": 10, "cap": 950000, "capped": true, "loss": false, "terminal_stone_range_seen": [13, 17] },
+      { "bit": 34, "ordering": "default", "depth": 10, "cap": 950000, "capped": true, "loss": false },
+      { "bit": 48, "ordering": "close-first AND", "depth": 10, "cap": 950000, "capped": true, "loss": false },
+      { "bit": 81, "ordering": "default", "depth": 10, "cap": 950000, "capped": true, "loss": false }
+    ],
+    "conclusion": "close-first AND's -30% pilot-d8 gain does NOT carry to d10 within the 950k sandbox ceiling (bit=25 and bit=48 both cap). Four distinct candidates spanning mob 44-56 — including two that v14 refuted at 133k-380k of its own units (48, 81) and the first full-budget mob-56 attempt (34) — all cap in v15 units. Per the session-4 decision rule the sandbox grind is information-poor and the lane switches to external-compute preparation.",
+    "external_runner": {
+      "script": "scripts/class4_child1_runner.ts (commit 3b0603fa)",
+      "design": "per-candidate freshEngine() factory (full memo/fbt/score reset), built-in pilot d6 control (must be loss=false at exactly 5949 nodes or abort), close-first AND gated to depth>=8, JSONL CLI (node --experimental-strip-types, --bits/--depth/--cap/--out/--andclose/--nocontrol), zero dependencies",
+      "validation": {
+        "pilot_d6": "loss=false, 5949 nodes — PASS",
+        "pilot_d8_default": "loss=false, 277,393 nodes — PASS (matches session-3/4)",
+        "pilot_d8_close_and": "loss=false, 193,556 nodes — PASS (matches session-4 -30% measurement)",
+        "bit85_d6_fresh": "loss=false, 13,820 nodes — PASS (matches session-4 default figure)"
+      },
+      "suggested_external_usage": "one process per candidate bit at cap 5M-50M nodes (external machines have no 16MiB/950k limits); order: heavy-pending {7,25,32,40,80,87} plus mob 56-63 band; report JSONL back and record verdicts here",
+      "note": "the runner's node counts are v15-unit and remain non-comparable with v14; verdicts and terminal ranges are the comparable quantities"
+    },
+    "next": "1) run scripts/class4_child1_runner.ts on external compute (start with heavy-pending {7,25,32,40,80,87}, then mob-56 band 34(also re-try externally),54,88,102,...); collect JSONL and fold verdicts into this audit; 2) certificate-chunked decomposition design remains the fallback if external compute is unavailable; 3) win discovery: rebuild certificate, verify with repo verifier (verify_five_terminal_loss7.py copy, winner_parity=1), deflate+b64, then class4-batch1-certificates push; 4) capped runs prove nothing either way — do not record them as refutations"
+  }
+}

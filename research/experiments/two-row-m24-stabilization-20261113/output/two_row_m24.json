@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-13",
+  "claim": "M_{2,4} = 9 exactly (full-capacity stabilization length of 2xm, q=4)",
+  "modelEnumeration": [
+    { "m": 1, "countFull": 0, "countDeficient": 1, "maxDeficientStones": 2, "example": { "A": [0], "B": [0], "stones": 2 } },
+    { "m": 2, "countFull": 0, "countDeficient": 4, "maxDeficientStones": 3, "example": { "A": [0], "B": [0, 1], "stones": 3 } },
+    { "m": 3, "countFull": 0, "countDeficient": 12, "maxDeficientStones": 4, "example": { "A": [0], "B": [0, 1, 2], "stones": 4 } },
+    { "m": 4, "countFull": 0, "countDeficient": 24, "maxDeficientStones": 5, "example": { "A": [0, 1], "B": [0, 2, 3], "stones": 5 } },
+    { "m": 5, "countFull": 6, "countDeficient": 72, "maxDeficientStones": 5, "example": { "A": [0, 1], "B": [0, 2, 3], "stones": 5 } },
+    { "m": 6, "countFull": 64, "countDeficient": 108, "maxDeficientStones": 5, "example": { "A": [0, 1], "B": [0, 2, 3], "stones": 5 } },
+    { "m": 7, "countFull": 320, "countDeficient": 60, "maxDeficientStones": 5, "example": { "A": [0, 1], "B": [0, 2, 4], "stones": 5 } },
+    { "m": 8, "countFull": 1058, "countDeficient": 16, "maxDeficientStones": 5, "example": { "A": [0, 2], "B": [1, 2, 5], "stones": 5 } },
+    { "m": 9, "countFull": 2846, "countDeficient": 0 },
+    { "m": 10, "countFull": 6564, "countDeficient": 0 },
+    { "m": 11, "countFull": 13650, "countDeficient": 0 },
+    { "m": 12, "countFull": 26086, "countDeficient": 0 }
+  ],
+  "witnessM8": {
+    "board": "2x8",
+    "row0": [0, 2],
+    "row1": [1, 2, 5],
+    "stones": 5,
+    "safety": "pairsums(row0)={2}, pairsums(row1)={3,6,7}, disjoint; rows have <=3 stones",
+    "maximality": "adding x to row0 (x in {1,3,4,5,6,7}) always creates a pair sum in {3,6,7}; row1 is full (3 stones)",
+    "blockedSums": { "x=1": [0+1=1,2+1=3], "x=3": [3,5], "x=4": [4,6], "x=5": [5,7], "x=6": [6,8], "x=7": [7,9] }
+  },
+  "independentGeometryControl": {
+    "description": "direct circumcircle/collinearity brute force over all 4-subsets of cells (exact integer arithmetic), m=1..5; total maximal-safe counts identical to the pair-sum model",
+    "m1": 1, "m2": 4, "m3": 12, "m4": 24, "m5": 78,
+    "note": "m=5: 78 = 6 full + 72 deficient, matching the model split"
+  },
+  "conclusion": "deficient maximal safe configurations exist exactly for m<=8; none for m>=9 (model, m=9..12) and none for all m>=9 (K0069 general theorem: all maximal 6 stones). Lower bound from the m=8 witness, upper bound from K0069. Hence M_{2,4}=9."
+}

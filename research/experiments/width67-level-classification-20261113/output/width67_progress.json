@@ -1,0 +1,291 @@
+{
+ "generated": "2026-11-13",
+ "status": "in_progress",
+ "resume_from": 1320,
+ "machine": "research/experiments/width67-level-classification-20261113/scripts/width67_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
+ "machineNote": "K0799 の w=66 完走機と同一構造（verbatim 移植・W=67・窓マスク 67 ビット・ワード数 ceil(w/32) 自動）。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。",
+ "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。w=66 第1-2セッションの off-by-one 教訓を踏襲し +1 はしない。",
+ "uniqueMasks": 3300,
+ "totalMaximal": 3300,
+ "harnessControl": {
+  "w64_L17": {
+   "unique": 3288,
+   "maximal": 3288,
+   "note": "既往値と完全一致"
+  },
+  "w65_L17": {
+   "unique": 3296,
+   "maximal": 3296,
+   "note": "K0798 と一致"
+  },
+  "w66_L17": {
+   "unique": 3300,
+   "maximal": 3300,
+   "note": "K0799 と一致"
+  }
+ },
+ "chunks": [
+  {
+   "chunk": 1,
+   "from": 0,
+   "lastDone": 223,
+   "nodes": 2400000,
+   "wordOps": 255673713,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "223 mask/2.4M = ~10.8k/mask（軽い帯）・word-ops は w=66 chunk1 と完全一致"
+  },
+  {
+   "chunk": 2,
+   "from": 223,
+   "lastDone": 488,
+   "nodes": 2400000,
+   "wordOps": 262407946,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "265 mask/2.4M = ~9.1k/mask（軽い帯）・word-ops は w=66 chunk2 と完全一致 → mask 0..487 は w=66 と同一前置区間"
+  },
+  {
+   "chunk": 3,
+   "from": 488,
+   "lastDone": 770,
+   "nodes": 2400000,
+   "wordOps": 257706771,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "282 mask/2.4M = ~8.5k/mask（軽い帯）・ここで w=66 と分岐（w=66 chunk3 は wordOps 255484677・chunk3 の from も off-by-one 期で 489）"
+  },
+  {
+   "chunk": 4,
+   "from": 770,
+   "lastDone": 777,
+   "nodes": 2400000,
+   "wordOps": 223994737,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "7 mask/2.4M = ~343k/mask（heavy band 開始・入り口は w=66 の ~114k/mask より約3倍重い）"
+  },
+  {
+   "chunk": 5,
+   "from": 777,
+   "lastDone": 789,
+   "nodes": 2400000,
+   "wordOps": 223248981,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "12 mask/2.4M = ~200k/mask（heavy band）"
+  },
+  {
+   "chunk": 6,
+   "from": 789,
+   "lastDone": 807,
+   "nodes": 2400000,
+   "wordOps": 227339453,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "18 mask/2.4M = ~133k/mask（heavy band・減衰）"
+  },
+  {
+   "chunk": 7,
+   "from": 807,
+   "lastDone": 820,
+   "nodes": 2400000,
+   "wordOps": 226441854,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "13 mask/2.4M = ~185k/mask（heavy band・再上昇）"
+  },
+  {
+   "chunk": 8,
+   "from": 820,
+   "lastDone": 840,
+   "nodes": 2400000,
+   "wordOps": 230701344,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "20 mask/2.4M = ~120k/mask（heavy band）"
+  },
+  {
+   "chunk": 9,
+   "from": 840,
+   "lastDone": 861,
+   "nodes": 2400000,
+   "wordOps": 232668079,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "21 mask/2.4M = ~114k/mask（heavy band）"
+  },
+  {
+   "chunk": 10,
+   "from": 861,
+   "lastDone": 880,
+   "nodes": 2400000,
+   "wordOps": 229561779,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "19 mask/2.4M = ~126k/mask（heavy band）"
+  },
+  {
+   "chunk": 11,
+   "from": 880,
+   "lastDone": 887,
+   "nodes": 2400000,
+   "wordOps": 222280632,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "7 mask/2.4M = ~343k/mask（heavy band・加重スパイク）"
+  },
+  {
+   "chunk": 12,
+   "from": 887,
+   "lastDone": 898,
+   "nodes": 2400000,
+   "wordOps": 230388986,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "11 mask/2.4M = ~218k/mask（heavy band）"
+  },
+  {
+   "chunk": 13,
+   "from": 898,
+   "lastDone": 914,
+   "nodes": 2400000,
+   "wordOps": 227377920,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "16 mask/2.4M = ~150k/mask（heavy band）"
+  },
+  {
+   "chunk": 14,
+   "from": 914,
+   "lastDone": 928,
+   "nodes": 2400000,
+   "wordOps": 228201075,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "14 mask/2.4M = ~171k/mask（heavy band）"
+  },
+  {
+   "chunk": 15,
+   "from": 928,
+   "lastDone": 945,
+   "nodes": 2400000,
+   "wordOps": 224645479,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "17 mask/2.4M = ~141k/mask（heavy band）"
+  },
+  {
+   "chunk": 16,
+   "from": 945,
+   "lastDone": 970,
+   "nodes": 2400000,
+   "wordOps": 235206657,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "25 mask/2.4M = ~96k/mask（heavy band・減衰。w=65/66 と同様 ~1000 手前で沈み込みが始まる可能性）"
+  },
+  {
+   "chunk": 17,
+   "from": 970,
+   "lastDone": 987,
+   "nodes": 2400000,
+   "wordOps": 229916102,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "17 mask/2.4M = ~141k/mask（heavy band・再上昇）"
+  },
+  {
+   "chunk": 18,
+   "from": 987,
+   "lastDone": 1155,
+   "nodes": 2400000,
+   "wordOps": 255739126,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "168 mask/2.4M = ~14.3k/mask（dip 到達・w=65/66 と同様の ~1000 沈み込み。第一 heavy band 終点は ~999 でなく ~987..1155 帯）"
+  },
+  {
+   "chunk": 19,
+   "from": 1155,
+   "lastDone": 1218,
+   "nodes": 2400000,
+   "wordOps": 239559850,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "63 mask/2.4M = ~38k/mask（第二 heavy band 開始 ~1190・w=65/66 の第二帯位置と一致）"
+  },
+  {
+   "chunk": 20,
+   "from": 1218,
+   "lastDone": 1241,
+   "nodes": 2400000,
+   "wordOps": 231900733,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "23 mask/2.4M = ~104k/mask（第二 heavy band）"
+  },
+  {
+   "chunk": 21,
+   "from": 1241,
+   "lastDone": 1266,
+   "nodes": 2400000,
+   "wordOps": 234601906,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "25 mask/2.4M = ~96k/mask（第二 heavy band）"
+  },
+  {
+   "chunk": 22,
+   "from": 1266,
+   "lastDone": 1294,
+   "nodes": 2400000,
+   "wordOps": 233156166,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "28 mask/2.4M = ~86k/mask（第二 heavy band 継続）"
+  },
+  {
+   "chunk": 23,
+   "from": 1294,
+   "lastDone": 1320,
+   "nodes": 2400000,
+   "wordOps": 233295128,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "26 mask/2.4M = ~92k/mask（第二 heavy band・1320 まで継続。w=66 の第二帯終点 1313 を超えても重い — 終点は更に右か）"
+  }
+ ],
+ "totals": {
+  "masksDone": 1320,
+  "nodes": 60000000,
+  "leaves": 0,
+  "survivors": 0,
+  "phase2Masks": 0
+ },
+ "estimate": "第二 heavy band は 1320 まで継続（~86..104k/mask）。w=65 の第二帯終点 1302・w=66 の 1313 を超えているため終点は ~1330± 以降。1320/3,300 = 40.0% で 60.0M nodes。残り ~1,980 mask が軽い帯なら総計 ~65..75M nodes。",
+ "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 132）⟹ 完走なら P(67) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。※昇格先 K 番号は K0801（K0800 は 2026-11-13 11:34 に joint g0 会計（w≤114）が使用済みのため再採番）。現在は部分進行（1320/3,300 mask = 40.0%）であり P(67) はまだ確定しない。"
+}

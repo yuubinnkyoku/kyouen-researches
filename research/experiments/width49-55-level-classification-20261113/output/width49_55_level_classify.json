@@ -1,0 +1,19 @@
+{
+  "generated": "2026-11-13",
+  "stages": {
+    "w49_L17": { "w": 49, "L": 17, "uniqueMasks": 1603, "maximalMasks": 1603, "nodes": 368728, "leaves": 0, "uniqueSurvivors": 0, "survivors": [], "g0Accounting": { "classMax_g2_B_uodd": { "evens": 8, "odds": 7 }, "classMax_g3_B": 11, "g4_classSize": 13, "levelDead": true } },
+    "w50_L17": { "w": 50, "L": 17, "uniqueMasks": 1786, "maximalMasks": 1786, "nodes": 529364, "leaves": 0, "uniqueSurvivors": 0, "survivors": [], "g0Accounting": { "classMax_g2_B_uodd": { "evens": 8, "odds": 8 }, "classMax_g3_B": 11, "g4_classSize": 13, "levelDead": true } },
+    "w51_L17": { "w": 51, "L": 17, "uniqueMasks": 1955, "maximalMasks": 1955, "nodes": 739255, "leaves": 0, "uniqueSurvivors": 0, "survivors": [], "g0Accounting": { "classMax_g2_B_uodd": { "evens": 8, "odds": 8 }, "classMax_g3_B": 11, "g4_classSize": 13, "levelDead": true } },
+    "w52_L17": { "w": 52, "L": 17, "uniqueMasks": 2100, "maximalMasks": 2100, "nodes": 1057876, "leaves": 0, "uniqueSurvivors": 0, "survivors": [], "g0Accounting": { "classMax_g2_B_uodd": { "evens": 8, "odds": 8 }, "classMax_g3_B": 11, "g4_classSize": 13, "levelDead": true } },
+    "w53_L17": { "w": 53, "L": 17, "uniqueMasks": 2262, "maximalMasks": 2262, "nodes": 1437558, "leaves": 0, "uniqueSurvivors": 0, "survivors": [], "g0Accounting": { "classMax_g2_B_uodd": { "evens": 8, "odds": 8 }, "classMax_g3_B": 11, "g4_classSize": 14, "levelDead": true } },
+    "w54_L17": { "w": 54, "L": 17, "uniqueMasks": 2424, "maximalMasks": 2424, "nodes": 1915406, "leaves": 0, "uniqueSurvivors": 0, "survivors": [], "g0Accounting": { "classMax_g2_B_uodd": { "evens": 8, "odds": 8 }, "classMax_g3_B": 11, "g4_classSize": 14, "levelDead": true } },
+    "w55_L17": { "w": 55, "L": 17, "uniqueMasks": 2604, "maximalMasks": 2604, "nodes": 2644771, "leaves": 0, "uniqueSurvivors": 0, "survivors": [], "g0Accounting": { "classMax_g2_B_uodd": { "evens": 8, "odds": 8 }, "classMax_g3_B": 11, "g4_classSize": 14, "levelDead": true } }
+  },
+  "witness2210": { "totalPoints": 32, "vSpan": 94, "perW": { "43": 26, "44": 28, "45": 28, "46": 30, "47": 30, "48": 32, "49": 32, "50": 32, "51": 32, "52": 32, "53": 32, "54": 32, "55": 32 } },
+  "claims": {
+    "exact": { "49..55": 32 },
+    "plateau32": "w = 49..55 (K0788 の w=43..48 の帯 26..32 に続き、32 が平らに継続)",
+    "accounting": "level 17 dead => d+s <= 16 => P <= 32; 2210 witness (32 pts, span 94 <= 2(w-1)) => P >= 32",
+    "next": "level 17 revival point lies in (55, 83] (K0785: P(83) >= 34 => alive at 83). Binary search needs heavy runs (~1e8+ nodes); prime-power extended mods (K0789) may prune."
+  }
+}

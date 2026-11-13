@@ -1,1 +1,466 @@
-<OUTPUT>
+{
+  "experiment": "circle-26pt-min-rowspan",
+  "date": "2026-11-13",
+  "knowledge": "K0785",
+  "rebuilt_note": "旧セッションの本文プレースホルダ喪失を受け、機械をゼロから再建して全数値を再導出した。旧(11.3M,21M]分析チャンクの偽陽性452円(E sigma13=43)は旧コードのバグ。例 R'=13,128,505=1105*109^2 は min c=109 で真の best13=2352。",
+  "formulation": {
+    "Rp": "奇・1mod4-smooth。3mod4素因数は平方のみ(t^2*r)。行オフセット集合はちょうど t 倍になるので W(t^2*r)=t*(W(r)-1)+1 >= W(r)。よって最小円は t=1 に限る。",
+    "E": "(2x-A)^2+(2y-B)^2=2R' (A,B奇)。行オフセット ±c/2, c in {X+Y, |X-Y|} (奇)。W=(c_max-c_min)/2+1。",
+    "O": "(2x-A)^2+(2y-B)^2=R' (A奇,B偶)。行オフセット ±Y_even/2。W=span+1。",
+    "Z": "(2x-A)^2+(2y-B)^2=4R' (A,B偶)。行オフセット ±X, ±Y。W=span+1。",
+    "pairs": "g=prod (a_j+ib_j)^k (a_j-ib_j)^(e_j-k) の (|Re|,|Im|)。全ペアで X^2+Y^2=R' を機械検証。"
+  },
+  "sweep": {
+    "method": "1mod4-smooth R' の D>=7 全数DFS（枝刈り: 完了に必要な追加素因数指数の下界 Fmin、REPMAX=HI/65）",
+    "chunks": [
+      {
+        "lo": 1,
+        "hi": 11296324,
+        "nodes": 150936,
+        "c7": 149492,
+        "c8": 149490,
+        "c14": 16350,
+        "anomalies": 6
+      },
+      {
+        "lo": 11296325,
+        "hi": 24000000,
+        "nodes": 332659,
+        "c7": 180915,
+        "c8": 180915,
+        "c14": 23388,
+        "anomalies": 0
+      },
+      {
+        "lo": 24000001,
+        "hi": 37000000,
+        "nodes": 522776,
+        "c7": 189466,
+        "c8": 189465,
+        "c14": 0,
+        "anomalies": 0
+      },
+      {
+        "lo": 37000001,
+        "hi": 51200000,
+        "nodes": 733242,
+        "c7": 209867,
+        "c8": 209867,
+        "c14": 0,
+        "anomalies": 0
+      },
+      {
+        "lo": 51200001,
+        "hi": 62000000,
+        "nodes": 894536,
+        "c7": 160897,
+        "c8": 160897,
+        "c14": 0,
+        "anomalies": 0
+      }
+    ],
+    "totals": {
+      "c7": 890637,
+      "c8": 890634,
+      "d7_only_exactly": [
+        15625,
+        4826809,
+        24137569
+      ],
+      "d7_only_note": "c7-c8=3 = {5^6, 13^6, 17^6} で理論値と一致"
+    },
+    "brute_cross_check": {
+      "range": "R'<=20000 全D>=7円 118個",
+      "families": "E/O/Z",
+      "mismatches": 0
+    },
+    "pair_assert_failures": 0
+  },
+  "completeness_bounds": {
+    "E": "B_E(W)=max(C^2, floor(C^2*((C-2)^2+16)/32)), C=2(W-1)。導出: s型c<=C → R'<=C^2; d型のみ2相異なら (s1-s2)(s1+s2)=(d2-d1)(d2+d1), s奇 → s1+s2<=C(C-2)/2 → 2*sqrt(2R'-C^2)<=C(C-2)/2。",
+    "Z": "B_Z(W)=max(2C'^2, floor(C'^4/4+C'^2)), C'=W-1。導出: 2相異な小さいY → (X1-X2)(X1+X2)=Y2^2-Y1^2 <= C'^2, X1+X2<=C'^2 → 2*sqrt(R'-C'^2)<=C'^2。",
+    "O": "B_O(W)=floor(C''^4/4+C''^2), C''=2(W-1)。Zと同型（偶Y）。",
+    "theorem": "W(K個の二重行を含む中心窓)が W0 以下 → R' <= B(W0)。よって掃引上限 >= B(bestK[K]) なら bestK[K] は全称（全円に対する最小）。"
+  },
+  "bestK": {
+    "E": {
+      "13": {
+        "w": 43,
+        "witnesses": [
+          1105
+        ],
+        "unique": true,
+        "bound": 1486170,
+        "global": true,
+        "second": {
+          "w": 52,
+          "rp": 1625,
+          "unique": true
+        }
+      },
+      "14": {
+        "w": 44,
+        "witnesses": [
+          1105
+        ],
+        "bound": 1634516,
+        "global": true
+      },
+      "15": {
+        "w": 46,
+        "witnesses": [
+          1105
+        ],
+        "bound": 1964250,
+        "global": true
+      },
+      "16": {
+        "w": 48,
+        "witnesses": [
+          1105
+        ],
+        "bound": 2341540,
+        "global": true
+      },
+      "17": {
+        "w": 83,
+        "witnesses": [
+          5525
+        ],
+        "bound": 22071530,
+        "global": true
+      },
+      "18": {
+        "w": 87,
+        "witnesses": [
+          5525
+        ],
+        "bound": 26732842,
+        "global": true
+      },
+      "19": {
+        "w": 94,
+        "witnesses": [
+          5525
+        ],
+        "bound": 36619866,
+        "global": true
+      },
+      "20": {
+        "w": 96,
+        "witnesses": [
+          5525
+        ],
+        "bound": 39890500,
+        "global": true
+      },
+      "21": {
+        "w": 100,
+        "witnesses": [
+          5525
+        ],
+        "bound": 47084004,
+        "global": true
+      },
+      "22": {
+        "w": 101,
+        "witnesses": [
+          5525
+        ],
+        "bound": 49025000,
+        "global": true
+      },
+      "23": {
+        "w": 105,
+        "witnesses": [
+          5525
+        ],
+        "bound": 57395104,
+        "global": true
+      },
+      "24": {
+        "w": 106,
+        "witnesses": [
+          5525
+        ],
+        "bound": 59645250,
+        "global": true
+      },
+      "25": {
+        "w": 211,
+        "witnesses": [
+          27625
+        ],
+        "bound": 963254250,
+        "global": false,
+        "note": "R'<=6.2e7 での最小。全称には掃引 ~9.7e8 が必要"
+      },
+      "26": {
+        "w": 214,
+        "witnesses": [
+          27625
+        ],
+        "bound": 1019622906,
+        "global": false,
+        "note": "同上 ~1.02e9"
+      }
+    },
+    "Z": {
+      "13": {
+        "w": 58,
+        "witnesses": [
+          1105
+        ],
+        "unique": true,
+        "bound": 2642249,
+        "global": true,
+        "second": {
+          "w": 70,
+          "rp": 1625
+        }
+      },
+      "14": {
+        "w": 65,
+        "witnesses": [
+          1105
+        ],
+        "bound": 4198400,
+        "global": true
+      },
+      "15": {
+        "w": 66,
+        "witnesses": [
+          1105
+        ],
+        "bound": 4466881,
+        "global": true
+      },
+      "16": {
+        "w": 67,
+        "witnesses": [
+          1105
+        ],
+        "bound": 4748040,
+        "global": true
+      },
+      "17": {
+        "w": 116,
+        "witnesses": [
+          5525
+        ],
+        "bound": 43738381,
+        "global": true
+      },
+      "18": {
+        "w": 125,
+        "witnesses": [
+          5525
+        ],
+        "bound": 59120720,
+        "global": true
+      },
+      "19": {
+        "w": 130,
+        "witnesses": [
+          5525
+        ],
+        "bound": 69247361,
+        "global": false,
+        "note": "R'<=6.2e7 での最小"
+      },
+      "20": {
+        "w": 137,
+        "witnesses": [
+          5525
+        ],
+        "bound": 85544000,
+        "global": false
+      },
+      "21": {
+        "w": 145,
+        "witnesses": [
+          5525
+        ],
+        "bound": 107516160,
+        "global": false
+      },
+      "22": {
+        "w": 146,
+        "witnesses": [
+          5525
+        ],
+        "bound": 110533681,
+        "global": false
+      },
+      "23": {
+        "w": 148,
+        "witnesses": [
+          5525
+        ],
+        "bound": 116758829,
+        "global": false
+      },
+      "24": {
+        "w": 149,
+        "witnesses": [
+          5525
+        ],
+        "bound": 119968208,
+        "global": false
+      },
+      "25": {
+        "w": 286,
+        "witnesses": [
+          27625
+        ],
+        "bound": 1649456381,
+        "global": false
+      },
+      "26": {
+        "w": 298,
+        "witnesses": [
+          27625
+        ],
+        "bound": 1945295129,
+        "global": false
+      }
+    },
+    "O": {
+      "13": {
+        "w": 149,
+        "witnesses": [
+          27625
+        ],
+        "bound": 1919228480,
+        "global": false,
+        "note": "R'<=6.2e7 での最小。全称には掃引 ~1.9e9 が必要",
+        "second": {
+          "w": 151,
+          "rp": 32045
+        }
+      },
+      "14": {
+        "w": 155,
+        "witnesses": [
+          27625
+        ],
+        "bound": 2249889488,
+        "global": false
+      },
+      "15": {
+        "w": 163,
+        "witnesses": [
+          27625
+        ],
+        "bound": 2755095120,
+        "global": false
+      },
+      "16": {
+        "w": 165,
+        "witnesses": [
+          27625
+        ],
+        "bound": 2893686848,
+        "global": false
+      },
+      "17": {
+        "w": 265,
+        "witnesses": [
+          71825
+        ],
+        "bound": 19430408448,
+        "global": false
+      },
+      "18": {
+        "w": 269,
+        "witnesses": [
+          71825
+        ],
+        "bound": 20635035200,
+        "global": false
+      },
+      "19": {
+        "w": 351,
+        "witnesses": [
+          160225
+        ],
+        "bound": 60025490000,
+        "global": false
+      },
+      "20": {
+        "w": 371,
+        "witnesses": [
+          138125
+        ],
+        "bound": 74966987600,
+        "global": false
+      },
+      "21": {
+        "w": 381,
+        "witnesses": [
+          160225
+        ],
+        "bound": 83406017600,
+        "global": false
+      },
+      "22": {
+        "w": 393,
+        "witnesses": [
+          160225
+        ],
+        "bound": 94451114240,
+        "global": false
+      },
+      "23": {
+        "w": 397,
+        "witnesses": [
+          160225
+        ],
+        "bound": 98365658688,
+        "global": false
+      },
+      "24": {
+        "w": 401,
+        "witnesses": [
+          160225
+        ],
+        "bound": 102400640000,
+        "global": false
+      },
+      "25": {
+        "w": 801,
+        "witnesses": [
+          801125
+        ],
+        "bound": 1638402560000,
+        "global": false
+      },
+      "26": {
+        "w": 807,
+        "witnesses": [
+          801125
+        ],
+        "bound": 1688110328528,
+        "global": false
+      }
+    }
+  },
+  "witness_geometry": {
+    "Rp_1105_R_2210": "E: 円(2x-105)^2+(2y-105)^2=2210。行29..76の16行、うち行34..76(幅43)にちょうど13二重行26点。行34..76は窓幅43でこれが最小。R'=1105=5·13·17、c=±{1,19,23,29,37,41,43,47}。",
+    "Rp_1625": "5^3·13。E best13=52、Z best13=70。",
+    "Rp_5525": "5^2·13·17。E 17..24 の証人(R=11050)。",
+    "Rp_27625": "5^3·13·17。E 25/26、O 13..16 の証人。"
+  },
+  "controls_vs_previous_session": {
+    "c8_le_11_296_324": "149,490 — 旧セッションの計数と完全一致",
+    "bestK_tables": "E/Z/O 全て旧セッション制御値(43/44/46/48@1105, 83..106@5525, 211/214@27625, Z 58/65/66/67, O 149@27625)と完全一致",
+    "K0791_geometry": "11050円の下界(P(83)>=34等)はK0791の独立検証済み。本掃引のE bestK 17..24 (83..106 @R'=5525) と整合。",
+    "d7_only": "5^6, 13^6, 17^6 の3円のみ — 理論どおり"
+  },
+  "open_items": [
+    "E K=25,26 と Z K>=19 の全称化には掃引拡大(E: ~1.02e9, Z: ~1.2e8〜1.95e9)",
+    "O 族の全称化には掃引 ~1.9e9 (K=13)",
+    "側窓(位置自由)の sigma_13 は旧データから再建不能のため open のまま",
+    "旧'全体 sigma_13 in [36,43]' の注意も側窓がらみで open"
+  ]
+}
