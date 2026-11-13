@@ -1,0 +1,73 @@
+{
+  "total_s5_orbits": 196,
+  "already_second_win_s5": 10,
+  "remaining_s5_orbits": 186,
+  "newly_closed_s5": 0,
+  "minimum_missing_s6_orbits": 13,
+  "s5_s6_remaining_orbit_incidences": 14558,
+  "sum_of_incidence_costs": 1138543,
+  "missing_s6_orbits_histogram": {
+    "13": 1,
+    "18": 2,
+    "33": 1,
+    "36": 4,
+    "37": 1,
+    "38": 1,
+    "39": 1,
+    "40": 2,
+    "41": 1,
+    "43": 1,
+    "55": 1,
+    "61": 2,
+    "68": 2,
+    "69": 2,
+    "70": 3,
+    "72": 5,
+    "74": 4,
+    "75": 5,
+    "76": 6,
+    "77": 7,
+    "78": 5,
+    "79": 13,
+    "80": 4,
+    "81": 12,
+    "82": 10,
+    "83": 7,
+    "84": 11,
+    "85": 14,
+    "86": 8,
+    "87": 10,
+    "88": 8,
+    "89": 7,
+    "90": 18,
+    "91": 6,
+    "92": 1
+  },
+  "least_missing": {
+    "s5_hex": "00000000000000803082000000000000",
+    "classes": 1,
+    "missing_s6_orbits": 13,
+    "missing_s7_edge_cost": 859
+  },
+  "least_missing_by_class": {
+    "1": {
+      "s5_hex": "00000000000000803082000000000000",
+      "classes": 1,
+      "missing_s6_orbits": 13,
+      "missing_s7_edge_cost": 859
+    },
+    "2": {
+      "s5_hex": "00000000000000809202000000000000",
+      "classes": 2,
+      "missing_s6_orbits": 18,
+      "missing_s7_edge_cost": 1092
+    },
+    "4": {
+      "s5_hex": "00000000020000003800000080000000",
+      "classes": 4,
+      "missing_s6_orbits": 43,
+      "missing_s7_edge_cost": 3391
+    }
+  },
+  "scope": "conditional on sweep verdicts, prior S5 worklist and WIN7 receipt records; costs count S5-S6 incidences"
+}

@@ -776,3 +776,5 @@
 | [K0790](../items/K0790-width49-55-pw32-plateau.md) | 幅49..55の円点数の完全決定 P(49)=…=P(55)=32 — 32点プラトーがw=55まで平らに継続 — P(w)は全幅6..55で決定済み・level 17の復活点は(55,83]に特定 | proposition | proved | rectangles, geometry, variants |
 | [K0791](../items/K0791-circle-34pt-witness-verified.md) | 11050円（奇奇実現）witnessの完全検証と34点帯のwitness掃引 — K0785下界の独立確認・K0790注記の訂正（level 17復活点(55,83]は維持）・R′≤10⁷で34点の最小幅はちょうど83 | proposition | proved | rectangles, geometry, variants |
 | [K0792](../items/K0792-width56-pw32-plateau-extension.md) | 幅56..59の円点数の完全決定 P(56)=…=P(59)=32 — 32点プラトーがw=59まで継続 — P(w)は全幅6..59で決定済み・level 17の復活点は(59,83]に狭窄・g4会計はw=65で飽和 | proposition | proved | rectangles, geometry, variants |
+| [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) | 幅60..63の円点数の完全決定 P(60)=…=P(63)=32 — 32点プラトーがw=63まで継続 — P(w)は全幅6..63で決定済み・level 17の復活点は(63,83]に狭窄・ノード成長則は×1.27へ漸減 | proposition | proved | rectangles, geometry, variants |
+| [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) | 幅64の円点数 P(64)=32 と現行g0会計の有効全範囲完走 | proposition | proved | rectangles, geometry, variants |

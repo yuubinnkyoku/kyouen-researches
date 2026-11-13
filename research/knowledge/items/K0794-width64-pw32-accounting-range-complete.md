@@ -1,3 +1,34 @@
+---
+id: K0794
+title: 幅64の円点数 P(64)=32 と現行g0会計の有効全範囲完走
+kind: proposition
+status: proved
+topics: [rectangles, geometry, variants]
+aliases: []
+scope: 標準整数格子の幅64の連続整数行、全整数m≥1での円点数。幅65以上の厳密値は未確定。
+evidence: 有限核の全数検査と32点円の明示構成。詳細な件数と適用範囲は本文と検証器を参照。
+relations:
+- type: depends_on
+  target: K0793
+  note: 同じlevel分類とg0会計を幅64に拡張
+- type: supports
+  target: K0785
+  note: 34点以上が初めて現れる幅の下限を更新
+artifacts:
+- path: research/experiments/width64-level-classification-20261113/scripts/width64_level_classify.ts
+  role: verifier
+  note: 幅64の有限ケース分類
+- path: research/experiments/width64-level-classification-20261113/output/width64_level_classify.json
+  role: data
+  note: 分類結果と制御
+- path: research/experiments/width64-level-classification-20261113/reports/width64-level-classification.md
+  role: proof
+  note: 証明の構造と適用範囲
+- path: research/log/2026-11-13-width64-level-classification.md
+  role: log
+  note: 実行記録
+---
+
 # K0794: 幅64の円点数の決定 P(64)=32 — 現行g0会計の有効全範囲完走
 
 - id: K0794

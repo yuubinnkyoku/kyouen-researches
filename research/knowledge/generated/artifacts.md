@@ -8572,6 +8572,15 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開行の限定監査結果とmove座標の注意
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/s5-remaining-after-reuse.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/s5-remaining-after-reuse.csv.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 未解消186五石位置の残六石軌道数とコスト
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/s5-remaining-after-reuse.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/s5-remaining-after-reuse.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 五石位置の残局面数と最小候補の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/s5-s6-remaining-incidences.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/s5-s6-remaining-incidences.csv.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 五石位置と未解消六石軌道の対応表
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/win7-reuse-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/win7-reuse-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 534証人対・498親と削減後の件数・コスト
@@ -8596,6 +8605,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_reused_witnesses.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_reused_witnesses.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 抽出された勝ち子の合法性と証明書監査記録を個別照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_s5_remaining.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_s5_remaining.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 全五石位置の合法子を再生成し、スイープとWIN7再利用を反映。幾何判定は2方式で照合
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_win7_reuse.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_win7_reuse.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 公開WIN7監査記録を全S6ワークリストと照合
@@ -12927,6 +12939,24 @@
 ## [research/experiments/width6-circle-eight-point-20261112/scripts/width6_circle_bound.ts](../../../research/experiments/width6-circle-eight-point-20261112/scripts/width6_circle_bound.ts)
 
 - [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md) (verifier): mod9分類・接点補題制御・端末例・census再現の全機械検証
+## [research/experiments/width60-63-level-classification-20261113/output/width60_63_level_classify.json](../../../research/experiments/width60-63-level-classification-20261113/output/width60_63_level_classify.json)
+
+- [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) (data): 全数値の機械出力（chunks・g0 会計・witness・w60..w63 完走）
+## [research/experiments/width60-63-level-classification-20261113/reports/width60-63-level-classification.md](../../../research/experiments/width60-63-level-classification-20261113/reports/width60-63-level-classification.md)
+
+- [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) (proof): 定理・証明骨子・制御・重い帯の下界側拡大・g4 有効期限
+## [research/experiments/width60-63-level-classification-20261113/scripts/width60_63_level_classify.ts](../../../research/experiments/width60-63-level-classification-20261113/scripts/width60_63_level_classify.ts)
+
+- [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) (verifier): ノード上限チャンク対応 streaming 分類機（classify が lastDone を返す・決定的・依存なし）
+## [research/experiments/width64-level-classification-20261113/output/width64_level_classify.json](../../../research/experiments/width64-level-classification-20261113/output/width64_level_classify.json)
+
+- [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) (data): 分類結果と制御
+## [research/experiments/width64-level-classification-20261113/reports/width64-level-classification.md](../../../research/experiments/width64-level-classification-20261113/reports/width64-level-classification.md)
+
+- [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) (proof): 証明の構造と適用範囲
+## [research/experiments/width64-level-classification-20261113/scripts/width64_level_classify.ts](../../../research/experiments/width64-level-classification-20261113/scripts/width64_level_classify.ts)
+
+- [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) (verifier): 幅64の有限ケース分類
 ## [research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json](../../../research/experiments/width7-circle-ten-point-20261112/output/width7_circle_bound.json)
 
 - [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) (data): 全制御の実行結果
@@ -13292,6 +13322,12 @@
 ## [research/log/2026-11-13-width56-level-classification.md](../../../research/log/2026-11-13-width56-level-classification.md)
 
 - [K0792](../items/K0792-width56-pw32-plateau-extension.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-width60-63-level-classification.md](../../../research/log/2026-11-13-width60-63-level-classification.md)
+
+- [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-13-width64-level-classification.md](../../../research/log/2026-11-13-width64-level-classification.md)
+
+- [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) (log): 実行記録
 ## [research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md](../../../research/log/claim-audit/N11-DFPN-NIGHT-REPORT-2026-09-30.md)
 
 - [K0092](../items/K0092-n11-dfpn-search-status.md) (source): 命題・対象範囲・根拠を記した出典

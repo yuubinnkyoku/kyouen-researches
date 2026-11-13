@@ -4620,6 +4620,8 @@
 - ← supports [K0790](../items/K0790-width49-55-pw32-plateau.md): P(83)≧34 により level 17 復活点を (55,83] に特定。w=49..55 では 11050 円は脅威にならない（奇奇実現で22..24点・整数中心実現で16..20点・2210円の32点に及ばない。K0791）
 - ← supports [K0791](../items/K0791-circle-34pt-witness-verified.md): 11050円奇奇実現の全点・窓計数を厳密検証し下界6件を確認。定理A（σ₁₃=43）の本体検証は含まない（K0785の実験ファイルは依然プレースホルダ）
 - ← supports [K0792](../items/K0792-width56-pw32-plateau-extension.md): level 17 復活点を (55,83] から (59,83] に狭窄
+- ← supports [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): level 17 復活点を (59,83] から (63,83] に狭窄
+- ← supports [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): 34点以上が初めて現れる幅の下限を更新
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4663,6 +4665,7 @@
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): P(83)≧34 により level 17 復活点を (55,83] に特定。w=49..55 では 11050 円は脅威にならない（奇奇実現で22..24点・整数中心実現で16..20点・2210円の32点に及ばない。K0791）
 - ← supports [K0791](../items/K0791-circle-34pt-witness-verified.md): K0790本文「11050円はw=49..83で16..20点・witnessは別円族（要確認）」を訂正。奇奇実現は22..34点。命題P(49..55)=32自体には影響なし
 - ← depends_on [K0792](../items/K0792-width56-pw32-plateau-extension.md): streaming 分類機・意味論・2210 witness の直接拡張。32 プラトーを w=55 から w=59 へ延長
+- ← depends_on [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): 分類機・mod 9×11 maximal mask 候補生成・×1.36 成長則（本項目で×1.27..1.31 への漸減を観測）
 
 ## [K0791](../items/K0791-circle-34pt-witness-verified.md) 11050円（奇奇実現）witnessの完全検証と34点帯のwitness掃引 — K0785下界の独立確認・K0790注記の訂正（level 17復活点(55,83]は維持）・R′≤10⁷で34点の最小幅はちょうど83
 
@@ -4675,3 +4678,16 @@
 - → depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming 分類機・意味論・2210 witness の直接拡張。32 プラトーを w=55 から w=59 へ延長
 - → depends_on [K0789](../items/K0789-width19-21-pw16-certificate.md): 素数冪法（49/121/343）をリーフ証明書として統合。w=56..59 では不発だが w 増大時の保険
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17 復活点を (55,83] から (59,83] に狭窄
+- ← depends_on [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): streaming 機・意味論・g0 会計数表・2210 witness の直接拡張。32 プラトーを w=59 から w=63 へ延長・ノード上限チャンクを関数化
+
+## [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) 幅60..63の円点数の完全決定 P(60)=…=P(63)=32 — 32点プラトーがw=63まで継続 — P(w)は全幅6..63で決定済み・level 17の復活点は(63,83]に狭窄・ノード成長則は×1.27へ漸減
+
+- → depends_on [K0792](../items/K0792-width56-pw32-plateau-extension.md): streaming 機・意味論・g0 会計数表・2210 witness の直接拡張。32 プラトーを w=59 から w=63 へ延長・ノード上限チャンクを関数化
+- → depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): 分類機・mod 9×11 maximal mask 候補生成・×1.36 成長則（本項目で×1.27..1.31 への漸減を観測）
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17 復活点を (59,83] から (63,83] に狭窄
+- ← depends_on [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): 同じlevel分類とg0会計を幅64に拡張
+
+## [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) 幅64の円点数 P(64)=32 と現行g0会計の有効全範囲完走
+
+- → depends_on [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): 同じlevel分類とg0会計を幅64に拡張
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 34点以上が初めて現れる幅の下限を更新
