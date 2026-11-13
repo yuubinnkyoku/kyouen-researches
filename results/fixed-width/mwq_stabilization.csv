@@ -1,4 +1,5 @@
 kind,w,q_min,q_max,M,status,source,note
+exact-threshold,2,4,4,9,proved,K0796;K0069,"m=8 has 5-stone deficient maximal (witness row0={0,2}, row1={1,2,5}); m>=9 all maximal 6 stones (K0069)"
 exact-threshold,3,4,4,24,proved,K0351;K0302;K0068,"g(S)=(9-|S|) mod2 for m>=24; m=23 has 8-stone deficient maximal"
 exact-threshold,3,5,5,12,proved,K0071;K0302,""
 exact-threshold,3,6,6,9,proved,K0070,""
@@ -6,7 +7,6 @@ exact-threshold,4,6,6,16,proved,K0302,""
 exact-threshold,4,7,7,13,proved,K0302,""
 exact-threshold,4,8,8,11,proved,K0302;K0077,""
 exact-threshold,5,8,8,16,proved,K0331,""
-bounds,2,4,4,<=9,open,K0069;K0068,"m>=9 all maximal 6 stones (K0069); minimality of 9 not separately established"
 bounds,5,6,6,16..249,open,K0723,"lower: 24-stone deficient maximal in 5x15; upper: K0318 substitution"
 bounds,5,7,7,19..158,open,K0332,"lower: 29-stone deficient maximal in 5x18; 5x19 complete enumeration (K0759 campaign) covers only m=19"
 bounds,6,7,7,>=20,open,K0761,"35-stone deficient maximal witnesses exist in 6x19 (and 6x13/16); m>=20 undecided"
