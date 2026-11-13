@@ -4549,7 +4549,7 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): サイズh+2=1627の不存在（単一CNF・監査済み）からA(3251)<=1626、本項はそこから1下げる
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
-- ← supports [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): A(3251)<=1625 と合わせて 1610 <= A(3251) <= 1625
+- ← supports [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): A(3251)<=1625 と合わせて 1611 <= A(3251) <= 1625
 
 ## [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) 幅w≧19整数格子の円点数上界P(w)≦2⌈w/2⌉（偶数wでは≦w）— w≧19半密度証明書のQR₀混合点行解釈の監査完了と行分離公式の無限族拡大
 
@@ -4649,12 +4649,12 @@
 - → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）
 - ← depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): witness下界（650円・2210円strip）。本項目の等号の下界側
 
-## [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1260点以上、Q_3251は1610点以上の安全集合を持つ（独立整数幾何監査済み）
+## [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1260点以上、Q_3251は1611点以上の安全集合を持つ（独立整数幾何監査済み）
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
 - → supports [K0781](../items/K0781-p2531-no-size-h1-set.md): A(2531)<=1265 と合わせて 1260 <= A(2531) <= 1265
-- → supports [K0775](../items/K0775-p3251-no-size-h1-set.md): A(3251)<=1625 と合わせて 1610 <= A(3251) <= 1625
+- → supports [K0775](../items/K0775-p3251-no-size-h1-set.md): A(3251)<=1625 と合わせて 1611 <= A(3251) <= 1625
 
 ## [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) 幅36..48の円点数の完全決定 P(36)..P(42)=24・P(43)=26・P(44)=P(45)=28・P(46)=P(47)=30・P(48)=32 — level分類のstreaming bitset DFS完了・g0証明書のconvention B厳密化（既存定理は不変）
 
