@@ -1,4 +1,4 @@
-successfully downloaded text file (SHA: 1c4bd9e28803375ea2db74350b0bafd8ba601e56)successfully downloaded text file (SHA: 54833a19efb5d102a829db5efa4270070f893865)// width67_level_classify.ts — P(67) 決定キャンペーン（高速レーン 2026-11-13 開始・進行中）。
+successfully downloaded text file (SHA: ae01cb70ddfa5ca418efa8e61ec53985ac4e5b4f)successfully downloaded text file (SHA: 1c4bd9e28803375ea2db74350b0bafd8ba601e56)successfully downloaded text file (SHA: 54833a19efb5d102a829db5efa4270070f893865)// width67_level_classify.ts — P(67) 決定キャンペーン（高速レーン 2026-11-13 開始・進行中）。
 // K0799（P(66)=32 完走）の直接続編。w=65/66 で確立した REST6 2フェーズ機
 // （width65-pruning-audit の run() と同一構造・width66_level_classify.ts の verbatim 移植）。
 //
@@ -112,7 +112,7 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, wordOps: ops, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 67, L: 17, from: 987, cap: 2400000, chunksPerRun: 1, control26: false };
+const CFG = { w: 67, L: 17, from: 1266, cap: 2400000, chunksPerRun: 1, control26: false };
 async function main() {
   const out: any = { generated: "2026-11-13", rest: REST.join(","), chunks: [] };
   let from = CFG.from;
