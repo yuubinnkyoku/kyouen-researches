@@ -488,3 +488,58 @@ chunk 深さ 8・reply 順 wscore 降順（fail-fast）。予算打ち切りは 
    WIN 発見時は同じ証明書プロトコル。
 3. mob-50 帯で WIN7 が連続（bit7・bit25）— 帯全体の証明書化コストを考慮し、
    抽出器の kill-first 指定は ledger の kill 表から自動読み込みに拡張する価値あり。
+## 第9セッション（2026-11-14、長期レーン）: bit25 WIN7 証明書の抽出・独立検証・反映（第8セッション next 1 完了）
+
+### 証明書の抽出・構築
+
+- root 00000000020000003800000082080000（S6 child + bit25・7石・loser to move）の
+  勝ち戦略を n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS 形式で
+  **37,854 行**（<32hex> <move> 昇順ソート済み・プレーンテキスト 1,363,951 bytes・
+  md5 66c35945925c8c8286d58f745cc22507）として確定。
+- 抽出は bit7 と同一の extractW/extractL 再帰 + kill-first（ledger bit25 kill 表を深さ1優先手）。
+  実行統計: b1 357,373 / b2 496,080 / b3 555,389 / b4 480,926 / b5 457,485 / b6 563,911 /
+  b7 719,805 / b8 348,057 / b9(m=0) 496,399 nodes・総 4,475,425 nodes（9実行）。
+  m=0 は ok=true・capped=false・terminal range [13,17]（最終runで完走確認）。
+- 生row 46,670 → sort -u で 37,854 unique。重複 hex は相互kill対（90<->72・37<->18・
+  40<->70・50<->38・33<->45系）の共有部分木によるもので、同一局面に異なる勝ち手が
+  競合する場合は sort -u の辞書式（最小move）規則で解決し、全文検証で閉包性を確認。
+
+### 独立検証（全て PASS）
+
+- repoの verify_bit7_win7_cert.ts を --root 00000000020000003800000082080000 で再利用
+  （TS移植・厳密Bareiss 4x4行列式・engine不使用・cache不使用）。16MiB 制限のため
+  証明書は read_file chunk 読み込み + 4語 open-addressing flat table で保持
+ （Map<string> 全文保持は OOM）。
+- **50 部分木分解検証**（V1..V7・8/8/8/8/8/8/2の7実行）: **全50 sub-root PASS**・
+  terminal 石数範囲 [13,17]・terminals 計 13,161・opponent edges 計 72,848・
+  seen states 計 81,162。
+- **消費済み戦略行の和集合 = 37,854 行と完全一致**（comm 双方向 0・到達不能行/欠落行なし）。
+- root 検査 PASS（7石・4点共円なし・loser mob=50）。
+- **負制御（実効性の実証）**: 初回の verifier 実装は盤面 key の最上位語（bit64超）を
+  Int32 に切捨てるバグがあり、missing-winning-player-move チェックが最初の sub-root
+  （root|m=0）で即発火・中断 — 整合性チェックが表の破損を実際に捕捉。
+  4語化修正後に全50 sub-root が PASS。
+
+### 反映（全て push 後読み戻し確認・1コミット1ファイル）
+
+- 0b835029: 証明書本体 output/class4-batch1-certificates/n11_s7_00000000020000003800000082080000.cert
+  （1,363,951 bytes・md5 記録・git 37,856 additions = ローカル行数と一致）
+- 5a9ec762: 検証記録 output/class4-batch1-bit25-certificate.json
+- 6991c23f: ledger JSON（bit25 status 完了化・certificate オブジェクト追記・next item 1 済）
+- 35f681b1: audit JSON session8_bit25_certificate 追記
+- 本コミット: log 第9セッション
+
+### 解釈上の注意（変更なし）
+
+- bit=25 は「class4-batch1 内の深さ10以内 WIN7」として証明書+独立検証が完了したのみ
+ （bit7 に次ぐ2件目）。class 4・S2 {59,60}・二石 root {49,60}・
+  **11x11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差（2026-11-14 監査の留保）は本証明書とは独立で未解決のまま。
+
+### 次回
+
+1. heavy-pending 残り {32,40,80,87,34} と未走査候補の chunk キャンペーン継続。
+   WIN 発見時は同一証明書プロトコル（抽出 → 独立検証 → push）。
+2. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
+3. 共有部分木での move 競合は sort -u 最小move規則 + 全文検証で閉じられることを
+   本セッションで実証済み — heavy帯の証明書コスト見積りに反映する価値あり。
