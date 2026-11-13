@@ -11,7 +11,8 @@
 //
 // 進行中: unique=maximal 3,300 mask（harness 制御: w64=3288・w65=3296・w66/67=3300 を完全再現。
 // w=68 も 3,300 — w≥66 で maximal mask 数は 3,300 に飽和か）。
-// chunks 1-11 で mask 0..879 完了（24M+0.6M nodes 含 gap 証明・leaves=0・生残0・phase2 必要 mask 0件）。
+// chunks 1-13 で mask 0..889 完了（28.8M+0.6M nodes 含 gap 証明・leaves=0・生残0・phase2 必要 mask 0件）。
+// chunk12-13 は第一 heavy band 最重要部 ~480k/mask（5 mask/chunk）。CFG.from=890 は resume_from=lastDone 規約
 // chunk6→7（mask 788）と chunk7→8（mask 807）の境界 off-by-one は classifyOne 単一mask完走機で
 // 個別証明済み（nodes 314,127 / 273,404・leaves=0）→ mask 0..821 は隣接漏れなし。
 // 第一 heavy band は ~770 開始・~130..200k/mask。CFG.from=822 は resume_from=lastDone 規約
@@ -110,7 +111,7 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, wordOps: ops, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 68, L: 17, from: 880, cap: 2400000, chunksPerRun: 1, control26: false };
+const CFG = { w: 68, L: 17, from: 890, cap: 2400000, chunksPerRun: 1, control26: false };
 async function main() {
   const out: any = { generated: "2026-11-13", rest: REST.join(","), chunks: [] };
   let from = CFG.from;
