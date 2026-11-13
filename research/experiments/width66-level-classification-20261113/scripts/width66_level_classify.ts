@@ -12,8 +12,10 @@
 // REST6 生残0の mask は REST16 でも生残0確定。生残が出た mask のみフェーズ2で再走査。
 // 窓マスクは66ビット（bits 配列のワード数は ceil(w/32) で自動化）。
 //
-// 進捗: unique=maximal 3,300 mask。chunks 1-2 で mask 0..487 完了
-// （4.8M nodes・leaves=0・生残0・軽い帯 ~9..11k nodes/mask）。resume from=489。
+// 進捗: unique=maximal 3,300 mask。chunks 1-8 で mask 0..888 完了（隣接漏れなし。
+// gap mask 488/773/794/820 は個別証明済み）。計 19.6M nodes・leaves=0・生残0。
+// resume from=889（=lastDone。resume_from は lastDone をそのまま使うこと — +1 すると
+// mask を1個飛ばす〔第1-2セッションの教訓・mask 488 は飛ばし後に個別完走〕）。
 const qrC: Record<number, Uint8Array> = {};
 const getQR = (m: number): Uint8Array => {
   if (!qrC[m]) { const s = new Uint8Array(m); for (let x = 0; x < m; x++) s[(x * x) % m] = 1; qrC[m] = s; }
@@ -108,7 +110,7 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, wordOps: ops, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 66, L: 17, from: 489, cap: 2400000, chunksPerRun: 1, control26: false };
+const CFG = { w: 66, L: 17, from: 889, cap: 2400000, chunksPerRun: 1, control26: false };
 async function main() {
   const out: any = { generated: "2026-11-13", rest: REST.join(","), chunks: [] };
   let from = CFG.from;
