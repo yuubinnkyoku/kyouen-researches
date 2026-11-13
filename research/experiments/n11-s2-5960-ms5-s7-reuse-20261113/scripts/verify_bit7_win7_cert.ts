@@ -38,6 +38,10 @@
 // With --subroots, prints per-sub-root stats and the consumed winner-state keys (hex) so the
 // caller can accumulate the union across batches and compare against the certificate keys.
 
+// NOTE (2026-11-14 repair): this module is ESM (top-level exports), so the CLI block's
+// require('fs') was undefined under --experimental-strip-types; replaced with a
+// top-level fs import.
+import fs from 'fs';
 const N = 121;
 function require(cond: boolean, reason: string): void { if (!cond) throw new Error(reason); }
 export function det4(points: number[]): number {
@@ -153,7 +157,6 @@ export function parseCert(text: string, expectedRootHex: string) {
 
 if (typeof process !== 'undefined' && process.argv && process.argv[1] && process.argv[1].endsWith('verify_bit7_win7_cert.ts')) {
   const arg = (name: string, dflt: string) => { const i = process.argv.indexOf('--'+name); return i >= 0 ? process.argv[i+1] : dflt; };
-  const fs = require('fs');
   const cert = fs.readFileSync(arg('cert', ''), 'utf8');
   const strat = parseCert(cert, arg('root', '00000000020000003800000080080080'));
   const rootV = BigInt('0x' + arg('root', '00000000020000003800000080080080'));
