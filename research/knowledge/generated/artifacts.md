@@ -8557,6 +8557,9 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/class2-candidate-refutation.md](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/class2-candidate-refutation.md)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (proof): 62子のLOSS7証明書による六石LOSSと3つの五石SECOND_WIN
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/class2-next-candidate-refutation.md](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/class2-next-candidate-refutation.md)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (proof): 72子のLOSS7証明書による六石LOSSと2つの五石SECOND_WIN
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加6309件。moveは正規化されたs6の座標
@@ -8593,6 +8596,15 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-certificates/00000000000000003800004008000802-win7.cert.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-certificates/00000000000000003800004008000802-win7.cert.gz)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 追加4件の証明書の一例。全ファイルとハッシュはmanifestに列挙
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-counterexample-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-counterexample-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 六石LOSS・2つの五石SECOND_WIN・残六石7244件の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-loss-certificates/0000000000000000380000400800000a-loss7.cert.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-loss-certificates/0000000000000000380000400800000a-loss7.cert.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): LOSS7証明書72件の一例。全ファイルとハッシュはmanifestに列挙
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-loss-verified.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-loss-verified.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 全72件のLOSS7証明書のSHA-256と独立検査結果
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-progress-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next-progress-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加7証明前のスナップショット。残六石7288軌道と類2次候補の残27軌道
@@ -8613,7 +8625,16 @@
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 追加8件の証明書の一例。全ファイルとハッシュはmanifestに列挙
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next3-progress-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next3-progress-audit.json)
 
-- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 残六石7263軌道と類2候補の残12軌道
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加7証明前のスナップショット。残六石7263軌道と類2候補の残12軌道
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next4-certificates-verified.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next4-certificates-verified.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (manifest): 追加7証明書のSHA-256と検証結果
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next4-certificates/00000000000000003800004208100000-win7.cert.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next4-certificates/00000000000000003800004208100000-win7.cert.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (certificate): 追加7件の証明書の一例。全ファイルとハッシュはmanifestに列挙
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next4-progress-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-next4-progress-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 次の六石LOSS検出前のスナップショット。残六石7251軌道
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-progress-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-progress-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 類2候補の17軌道解消後、最後の1軌道を判定する前のスナップショット
@@ -8683,6 +8704,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next3_progress.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next3_progress.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 追加証明書の再利用と残ワークリストを再集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next4_progress.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next4_progress.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 追加証明書の再利用と残ワークリストを再集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next_counterexample.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next_counterexample.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 72証明書による六石LOSSと2つの五石SECOND_WIN、残ワークリストを2幾何判定で照合
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next_progress.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_class2_next_progress.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 新規証明書の再利用と残ワークリストを再集計
@@ -8722,9 +8749,15 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next3_certificates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next3_certificates.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 類2次候補から得た追加8件のWIN7証明書を独立検査
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next4_certificates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next4_certificates.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 類2候補から得た追加7件のWIN7証明書を独立検査
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next_certificates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next_certificates.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 次の類2候補で得られた4件のWIN7証明書を独立検査
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next_loss.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_class2_next_loss.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 類2次候補の六石位置の全72七石子に対するLOSS7戦略証明書を独立検査
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_priority_certificates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_priority_certificates.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 保存した15件のWIN7・LOSS7戦略証明書を独立検査器で再検証
