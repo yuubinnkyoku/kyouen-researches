@@ -1,0 +1,39 @@
+{
+ "generated": "2026-11-13",
+ "level": 17,
+ "machine": "scripts/maximal_mask_saturation.ts（width68_level_classify.ts と同一の窓マスク生成・(x,y)∈81×121 全列挙・部分順序 maximal 判定の完全計算）",
+ "results": [
+  { "w": 62, "unique": 3242, "maximal": 3242 },
+  { "w": 63, "unique": 3278, "maximal": 3278 },
+  { "w": 64, "unique": 3288, "maximal": 3288 },
+  { "w": 65, "unique": 3296, "maximal": 3296 },
+  { "w": 66, "unique": 3300, "maximal": 3300 },
+  { "w": 67, "unique": 3300, "maximal": 3300 },
+  { "w": 68, "unique": 3300, "maximal": 3300 },
+  { "w": 69, "unique": 3300, "maximal": 3300 },
+  { "w": 70, "unique": 3300, "maximal": 3300 },
+  { "w": 71, "unique": 3300, "maximal": 3300 },
+  { "w": 72, "unique": 3300, "maximal": 3300 },
+  { "w": 75, "unique": 3339, "maximal": 3300 },
+  { "w": 80, "unique": 3419, "maximal": 3300 },
+  { "w": 90, "unique": 3531, "maximal": 3300 },
+  { "w": 99, "unique": 3630, "maximal": 3300 },
+  { "w": 105, "unique": 3630, "maximal": 3300 },
+  { "w": 110, "unique": 3630, "maximal": 3300 },
+  { "w": 121, "unique": 3630, "maximal": 3300 },
+  { "w": 132, "unique": 3630, "maximal": 3300 }
+ ],
+ "findings": {
+  "maximalPlateau": "maximal mask 数は w=66..132 の全測定点でちょうど 3,300（exhaustive-enumeration・有限確定事実）",
+  "uniqueGrowth": "unique は w とともに単調増加し w=99 以降 3,630 で固定（窓条件は 99 周期・最初の 1 周期で全相違が出揃う）",
+  "contrast": "w=75..90 では unique>maximal（3300 を超える unique は全て既存 maximal の部分集合）— maximal プラトーは unique の増加に対して頑健",
+  "workload": "level 17 掃引キャンペーン（P(w) 決定）は w≥66 で mask ワークロード数が一定 3,300 — コスト増は per-mask ノード加重のみ。11×11（w≤121）でも同様",
+  "caveat": "w>132 は未計算。99 周期構造から w<198 まで 3,300 維持が予想されるが予想の域を出ない"
+ },
+ "controls": {
+  "w64": "3,288 — K0794 既往値と一致",
+  "w65": "3,296 — K0798 と一致",
+  "w66_w67": "3,300 — K0799/K0801 と一致",
+  "note": "width68 progress JSON の harnessControl と完全一致（相互検証）"
+ }
+}
