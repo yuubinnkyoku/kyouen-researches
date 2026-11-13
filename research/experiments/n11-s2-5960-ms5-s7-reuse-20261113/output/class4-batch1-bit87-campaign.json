@@ -1,0 +1,153 @@
+{
+  "experiment": "n11-s2-5960-ms5-s7-reuse-20261113",
+  "record": "class4-batch1-bit87-campaign",
+  "session": "session13_bit87_chunk_campaign",
+  "date": "2026-11-14",
+  "candidate": {
+    "bit": 87,
+    "mob": 49,
+    "root_hex": "00000000018000003800000080080000",
+    "description": "S6 child #1 + 7th stone bit87, 7 stones, loser to move (winner_parity=1 direction)"
+  },
+  "method": {
+    "type": "certificate-chunked decomposition (chunk prover v15, identical to bit80/40/32 campaigns)",
+    "chunk_depth": 8,
+    "chunk_cap": 300000,
+    "run_budget": "~590k nodes/run",
+    "reply_order": "wscore descending (fail-fast)",
+    "reply_enumeration": "legal moves of root+m (m occupied, r===m structurally impossible)",
+    "resume": "state file /home/user/b87/state.json (kill table + done replies), flushed per run, resume gap zero"
+  },
+  "verdict": {
+    "result": "REFUTED at depth 10",
+    "witness_m": 36,
+    "witness_replies": 43,
+    "meaning": "lossAt(root,10)=false: no WIN7 within depth 10 for bit87; deeper wins remain possible"
+  },
+  "totals": {
+    "nodes": 6177830,
+    "runs": 10,
+    "per_run_nodes": [
+      681914,
+      749509,
+      621891,
+      630314,
+      609968,
+      686697,
+      648812,
+      605978,
+      603920,
+      338827
+    ],
+    "per_run_log_rows": [
+      13,
+      17,
+      15,
+      16,
+      12,
+      16,
+      12,
+      9,
+      6,
+      7
+    ],
+    "capped_chunks": 0,
+    "max_single_chunk_nodes": 213728,
+    "note": "per-chunk node logs were not persisted during this campaign (protocol difference vs bit80); batch totals and log-row counts recorded instead. Witness found at the 13th examined first move; remaining 36 first moves unexamined (not needed for verdict)."
+  },
+  "kill_table": {
+    "0": 40,
+    "2": 81,
+    "4": 28,
+    "7": 70,
+    "8": 83,
+    "10": 67,
+    "11": 43,
+    "15": 70,
+    "25": 37,
+    "28": 50,
+    "33": 25,
+    "34": 50
+  },
+  "kill_r_ne_m_all": true,
+  "controls": {
+    "pilot_d6": {
+      "loss": false,
+      "nodes": 5949,
+      "pass": true
+    },
+    "witness_coverage": {
+      "root_plus_36_legal_replies": 43,
+      "done_entries": 43,
+      "missing": 0,
+      "pass": true
+    },
+    "root_mob_recheck": {
+      "mob": 49,
+      "pass": true
+    },
+    "determinism_two_independent_executions": {
+      "chunks": [
+        {
+          "m": 0,
+          "r": 40,
+          "loss": true,
+          "nodes": 80233
+        },
+        {
+          "m": 10,
+          "r": 67,
+          "loss": true,
+          "nodes": 52102
+        },
+        {
+          "m": 25,
+          "r": 37,
+          "loss": true,
+          "nodes": 29291
+        },
+        {
+          "m": 36,
+          "r": 70,
+          "loss": false,
+          "nodes": 11284
+        },
+        {
+          "m": 36,
+          "r": 116,
+          "loss": false,
+          "nodes": 48463
+        }
+      ],
+      "both_executions_identical": true,
+      "pass": true,
+      "note": "fresh re-solves in two independent executions agreed to the node; per-chunk campaign logs unpersisted, so recorded-count matching (as done for bit80) was not available"
+    },
+    "terminal_stone_ranges": {
+      "kill_chunks": [
+        13,
+        17
+      ],
+      "witness_pass_chunks": [
+        15,
+        17
+      ]
+    }
+  },
+  "interpretation_guard": {
+    "bit87_refuted_scope": "negation of WIN7-within-depth-10 only",
+    "class4": "UNKNOWN",
+    "s2_59_60": "UNKNOWN",
+    "two_stone_root_49_60": "UNKNOWN",
+    "n11_empty_board": "UNKNOWN",
+    "bit7_400_node_discrepancy": "still unresolved",
+    "refutation_cost_spread": {
+      "bit85": 1701951,
+      "bit40": 3101124,
+      "bit80": 6008832,
+      "bit87": 6177830,
+      "bit32": 15884259
+    }
+  },
+  "engine": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_chunk_prover.ts (engine v15 verbatim)"
+}

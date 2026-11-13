@@ -1,3 +1,4 @@
+
 successfully downloaded text file (SHA: 1758ec9e19ee62a5c8c78afeddcf45cea0d2b48f)
 kind,w,q_min,q_max,M,status,source,note
 exact-threshold,2,4,4,9,proved,K0796;K0069,"m=8 has 5-stone deficient maximal (witness row0={0,2}, row1={1,2,5}); m>=9 all maximal 6 stones (K0069)"
@@ -73,6 +74,7 @@ separation-band,64,65,INF,q-1,proved,K0794;K0767-corollary,"q>=max(P(64),64)+1"
 separation-band,65,66,INF,q-1,proved,K0798;K0767-corollary,"q>=max(P(65),65)+1"
 separation-band,66,67,INF,q-1,proved,K0799;K0767-corollary,"q>=max(P(66),66)+1"
 separation-band,67,68,INF,q-1,proved,K0801;K0767-corollary,"q>=max(P(67),67)+1"
+separation-band,68,69,INF,q-1,proved,K0802;K0767-corollary,"q>=max(P(68),68)+1"
 parametric,all,2w+1,INF,q-1,proved,K0025,"q>2w, q>=4; g=(w*min(m,q-1)-|S|) mod2 for all m>=1"
 parametric,w>=5,2w,2w,2w-1,proved,K0072,"q=2w"
 parametric,w>=6,2w-1,2w-1,2w-2,proved,K0072,"q=2w-1"

@@ -10,14 +10,17 @@
 // （実現可能標準形は全合同証明書を通過・w26 L12 制御で S* ちょうど1生残・width65-pruning-audit）。
 // REST6 生残0の mask は REST16 でも生残0確定。生残が出た mask のみフェーズ2で再走査。
 //
-// 進行中: unique=maximal 3,300 mask（harness 制御: w64=3288・w65=3296・w66/67=3300 を完全再現。
-// w=68 も 3,300 — w≥66 で maximal mask 数は 3,300 に飽和か）。
-// chunks 1-24 で mask 0..1222 完了（55.2M+0.6M nodes 含 gap 証明・leaves=0・生残0・phase2 必要 mask 0件）。
-// 第一 heavy band（~770..984・~114..480k/mask・最重要部 chunk12-13 の ~480k）は通過し
-// chunk22 で ~1000 沈み込み（~17k/mask）→ chunk24 で第二 heavy band ~1190 再出現（~240k/mask・
-// w=65..67 と同一の窓位相）。CFG.from=1223 は resume_from=lastDone 規約
-// chunk6→7（mask 788）と chunk7→8（mask 807）の境界 off-by-one は classifyOne 単一mask完走機で
-// 個別証明済み（nodes 314,127 / 273,404・leaves=0）→ mask 0..821 は隣接漏れなし（以後 gap なし）。
+// 【完走済み・K0802（P(68)=32）として昇格】
+// 全 3,300 maximal mask を完走（sandbox chunks 1-24 + ネイティブ Node chunks 25-40・
+// 総 92,219,331 + gap 587,531 nodes・leaves=0・生残0・phase2 必要 mask 0件）。
+// 加えてネイティブ Node による独立全幅再実行（from=0・42チャンク・96,626,896 nodes・
+// 28.6秒・leaves=0・生残0・gap なし単一連続）で二重確認済み
+// （output/width68_native_completion.json。chunks 1-6 の境界と wordOps は sandbox 記録と
+// 完全一致・mask 788/807 の classifyOne node 数も完全一致）。
+// heavy band 構造: 第一帯 ~770..984（~46..480k/mask・最重要部 chunk12-13 の ~480k）→
+// ~1000 沈み込み（~17k）→ 第二帯 ~1190..1308（~31..240k/mask・終点は w=67 の 1320 を
+// 下回り右肩上がり則の反例）→ 以降 ~9..18k/mask の軽い帯。
+// CFG.from=3300（完走状態・これ以上の再開不要）。
 // CFG.from は resume_from=lastDone 規約（+1 すると mask を飛ばす・progress JSON が正本）。
 const qrC: Record<number, Uint8Array> = {};
 const getQR = (m: number): Uint8Array => {
@@ -113,16 +116,17 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, wordOps: ops, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 68, L: 17, from: 1223, cap: 2400000, chunksPerRun: 1, control26: false };
+// 完走実行のドライバ: resume ループは r.lastDone > from の間継続
+// （aborted チャンクも lastDone までの mask は完了済みなので from=lastDone で冪等再開）。
+const CFG = { w: 68, L: 17, from: 3300, cap: 2400000, chunksPerRun: 200, note: "完走済み（K0802）。再実行時は from=0 から" };
 async function main() {
-  const out: any = { generated: "2026-11-13", rest: REST.join(","), chunks: [] };
+  const out: any = { generated: "2026-11-14", rest: REST.join(","), chunks: [] };
   let from = CFG.from;
   for (let c = 0; c < CFG.chunksPerRun; c++) {
     const r = classify(CFG.w, CFG.L, from, CFG.cap);
     out.chunks.push(r);
-    if (!r.aborted) from = r.lastDone; else break;
+    if (r.lastDone > from) from = r.lastDone; else break;
   }
-  if (CFG.control26) out.control_w26_L12 = { note: "S*=[0,1,3,4,7,10,15,18,21,22,24,25] ちょうど1生残（width65-pruning-audit で REST6 制御済み・本機と同一構造）" };
   return out;
 }
 const _r = await main();

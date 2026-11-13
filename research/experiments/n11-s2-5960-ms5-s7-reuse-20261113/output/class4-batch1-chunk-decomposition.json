@@ -406,7 +406,7 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) chunk campaigns for heavy-pending {80,87,34} then unprobed candidates; same protocol (chunk depth 8, replies at root+m)",
+    "1) chunk campaign for heavy-pending {34} (mob 56, first of the mob-56 band) then unprobed candidates; same protocol (chunk depth 8, replies at root+m); persist per-chunk node logs in the state file as done for bit80",
     "2) on WIN7 discovery: kill-first extraction -> 50-sub-root decomposition verification -> union equality -> one commit per file",
     "3) external compute via scripts/class4_child1_runner.ts at cap 5M-50M if available"
   ],
@@ -808,5 +808,142 @@
     },
     "record": "output/class4-batch1-bit40-campaign.json",
     "resume": "state file per candidate (kill table + done replies); replies enumerated at root+m so r!=m holds structurally"
+  },
+  "bit80": {
+    "status": "DONE - REFUTED within depth 10 (session 12)",
+    "root_hex": "00000000020100003800000080080000",
+    "mob": 50,
+    "verdict": "REFUTED-D10: lossAt(root,10)=false via witness m=38; all 44 winner replies at root+38 uncapped pass chunks (loss=false); kill table 15 entries (all r!=m); 34 first moves unexamined (not needed)",
+    "witness": {
+      "m": 38,
+      "replies": 44
+    },
+    "totals": {
+      "nodes": 6008832,
+      "runs": 10,
+      "batch_nodes": [
+        617981,
+        607268,
+        639820,
+        601406,
+        615855,
+        607250,
+        644349,
+        646137,
+        609691,
+        419075
+      ],
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 185781,
+      "chunks_total": 183,
+      "kill_chunks": 15,
+      "pass_chunks": 168,
+      "witness_reply_nodes_sum": 1513491
+    },
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes at campaign start (run 1) and in the post-campaign control run (PASS x2)",
+      "determinism_fresh_resolves": {
+        "(0,81)": {
+          "loss": true,
+          "nodes": 60593
+        },
+        "(15,32)": {
+          "loss": true,
+          "nodes": 63944
+        },
+        "(37,45)": {
+          "loss": true,
+          "nodes": 88230
+        },
+        "(38,0)": {
+          "loss": false,
+          "nodes": 61268
+        },
+        "(38,44)": {
+          "loss": false,
+          "nodes": 57513
+        }
+      },
+      "witness_coverage": "root+38 has 44 legal winner replies; the done-set contains exactly 44 entries, all loss=false, all uncapped",
+      "note": "all five fresh re-solves identical to the campaign chunk records (node counts and verdicts)"
+    },
+    "record": "output/class4-batch1-bit80-campaign.json",
+    "resume": "state file per candidate (/home/user/b80/state.json: kill table + done replies); replies enumerated at root+m so r!=m holds structurally",
+    "cost_note": "6.01M v15 nodes vs 15.88M (bit32) / 3.10M (bit40): refutation cost varies >5x among heavy-pending candidates; per-candidate budget estimation mandatory"
+  },
+  "bit87": {
+    "status": "DONE - REFUTED within depth 10 (session 13)",
+    "root_hex": "00000000018000003800000080080000",
+    "mob": 49,
+    "verdict": "REFUTED-D10: lossAt(root,10)=false via witness m=36; all 43 winner replies at root+36 uncapped pass chunks (loss=false); kill table 12 entries (all r!=m); 36 first moves unexamined (not needed)",
+    "witness": {
+      "m": 36,
+      "replies": 43
+    },
+    "kill_table": {
+      "0": 40,
+      "2": 81,
+      "4": 28,
+      "7": 70,
+      "8": 83,
+      "10": 67,
+      "11": 43,
+      "15": 70,
+      "25": 37,
+      "28": 50,
+      "33": 25,
+      "34": 50
+    },
+    "totals": {
+      "nodes": 6177830,
+      "runs": 10,
+      "batch_nodes": [
+        681914,
+        749509,
+        621891,
+        630314,
+        609968,
+        686697,
+        648812,
+        605978,
+        603920,
+        338827
+      ],
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 213728,
+      "chunks_total": 123,
+      "kill_chunks": 12,
+      "note": "per-chunk node logs not persisted during this campaign (protocol difference vs bit80); batch totals and log-row counts recorded in the campaign record"
+    },
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes (PASS)",
+      "witness_coverage": "root+36 has 43 legal winner replies; the done-set contains exactly 43 entries, all loss=false, all uncapped (missing 0)",
+      "determinism_two_independent_executions": {
+        "(0,40)": {
+          "loss": true,
+          "nodes": 80233
+        },
+        "(10,67)": {
+          "loss": true,
+          "nodes": 52102
+        },
+        "(25,37)": {
+          "loss": true,
+          "nodes": 29291
+        },
+        "(36,70)": {
+          "loss": false,
+          "nodes": 11284
+        },
+        "(36,116)": {
+          "loss": false,
+          "nodes": 48463
+        },
+        "note": "fresh re-solves in two independent executions agreed to the node; recorded-count matching (bit80 protocol) unavailable because per-chunk logs were not persisted"
+      }
+    },
+    "record": "output/class4-batch1-bit87-campaign.json",
+    "resume": "state file /home/user/b87/state.json (kill table + done replies); replies enumerated at root+m so r!=m holds structurally",
+    "cost_note": "6.18M v15 nodes, same band as bit80 (6.01M) despite mob 49; refutation cost spread across heavy-pending now bit85 1.70M / bit40 3.10M / bit80 6.01M / bit87 6.18M / bit32 15.88M"
   }
 }
