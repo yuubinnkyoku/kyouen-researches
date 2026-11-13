@@ -1,0 +1,22 @@
+{
+ "schema": "n11-class4-batch3-child5-sweep-independent-reproduction-20261114-v1",
+ "date": "2026-11-14",
+ "purpose": "cross-lane reproducibility check of the class4-batch3 child#5 sweep (00000000020000003800000080001000, cost 72) that a parallel run pushed to main at 2026-11-13T21:38Z; this session re-derived the same child from a separately prepared native-Node harness before noticing the parallel push.",
+ "comparison": {
+  "parallel_main_record": "output/class4-batch3-child5-sweep.json (256,648,013 nodes, 68 REFUTED-D10 + 4 WIN7-D10 bit108/95/99/17, 0 capped)",
+  "this_session_rederivation": {
+   "verdicts": "identical: 68 REFUTED-D10 + 4 WIN7-D10 (bit108/95/99/17), 0 capped, 72/72 candidates",
+   "candidate_ordering": "identical 72 non-degenerate candidates, mob range 42..69",
+   "pilot_d6": "5,949 nodes PASS (both)",
+   "nodes_total": 300572910,
+   "nodes_note": "NOT comparable: this harness sorts lossAt children by wscore-descending at depth>=8 (close-first AND variant) while the published run used its own ordering; verdicts and terminal ranges are ordering-invariant, node counts are not",
+   "certificates": "row counts identical: bit108 16,700 / bit95 24,611 / bit99 50,090 / bit17 46,051; all four re-extracted certificates pass the independent Bareiss verifier (sub-roots 42/49/56/59 all PASS, union exact 0/0, terminals [13,17]) - certificate files NOT re-pushed to avoid duplication with the parallel lane's push",
+   "determinism_controls": "7 bits (108/95/99/17/67/2/114) independent rerun node-exact within this session"
+  }
+ },
+ "engine_provenance": "both runs use the v15 engine verbatim from scripts/class4_child1_sweep_engine.ts, so this is a re-derivation with a differing search-variant, not a fully independent implementation; the value is cross-lane determinism of verdicts, candidate sets, certificate row counts and verification outcomes",
+ "interpretation_guard": [
+  "WIN7 certificates prove only a win within depth 10 from their 7-stone root. REFUTED entries negate only WIN7-within-depth-10.",
+  "class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN."
+ ]
+}
