@@ -897,3 +897,64 @@ per-chunk logを候補毎stateに永続化・chunk cap 50M〔native〕・batch�
 2. 全66候補分類確定を起点に、class-4 frontierの実効ワークリスト再計算
  （audit_class_frontier.py bookkeeping・S6 child #1の証明書が閉じるblocker辺の整理）。
 3. 11×11 空盤は UNKNOWN のまま。
+
+## 第16セッション（2026-11-14）: 新WIN7候補5件の証明書抽出・独立検証・main反映
+
+### 作業
+
+- **抽出**: repoの class4_child1_cert_extractor.ts extractBatch をkill表
+ （session-15のstate.jsonの st.kill）指定で1候補1プロセス（native・CAP=1e9・
+ 実行毎fresh engine）で実行。5候補合計 34,496,301 nodes / 5 runs
+ （bit18: 5,750,652 / bit67: 6,994,702 / bit82: 5,736,905 / bit117: 7,719,053 /
+ bit120: 8,294,989）。rowsはin-processのsort-u mergeで確定。
+- **独立検証**: repoの verify_bit7_win7_cert.ts（engine-free・cache-free・Bareiss det4）を
+ 使用。ローカルのnode CLI実行には先頭に `import * as fs from 'node:fs'` を追加したのみ
+ （`require('fs')` が同ファイル内の require(cond, reason) assert helperと衝突するため。
+ 検証ロジックは無改変。upstream修正は推奨のみ記録）。
+ 全候補で root checks PASS（石数7・敵mobility一致・4点共円なし）＋
+ 全sub-root（loserの全初期応手）分解検証 PASS。
+- **union等価**: 抽出rowsと消費winner状態集合の双方向diff 0。
+
+### 成果物（全てmain反映・push後rawでmd5再確認）
+
+| bit | root hex | rows | bytes | md5 |
+|-----|----------|------|-------|-----|
+| 18 | 000000000200000038000000800c0000 | 43,550 | 1,571,258 | 11a0f14f761f71c4d77fd6e618dee336 |
+| 67 | 00000000020000083800000080080000 | 57,896 | 2,088,010 | d3aa2871e08afdf48d82b94ad3c0abb5 |
+| 82 | 00000000020400003800000080080000 | 48,352 | 1,743,255 | ac5200a83c0342d284b5d026d7ebbf62 |
+| 117 | 00200000020000003800000080080000 | 61,952 | 2,230,811 | 3119ae37fd843267a81c78cde40a4446 |
+| 120 | 01000000020000003800000080080000 | 62,336 | 2,244,853 | bb2b8da776ca4d8b16dc5121a072d0cf |
+
+- 証明書5件: `output/class4-batch1-certificates/n11_s7_<root_hex>.cert`
+ （bit7/bit25の命名規約・ヘッダー2行＋sort済みrows）
+- 検証記録: `output/class4-batch1-win7-certificates-20261114.json`
+- ledger JSON（5件のcertificate完了化 + win7_certificates_session16 + next更新）
+- audit JSON（session16_win7_certificates追記）
+- 本コミット: log 第16セッション
+
+### 反映時の技術的事実（備忘）
+
+- 証明書2件（bit117: 2.23MB・bit120: 2.24MB）はpushツールの16MiB記録制限を超えるため、
+ pack-delta（hex行前方一致差分をnibble境界でbyte packing）+base64化した転送表
+ （~0.61/0.66MB）からsandbox内でblock単位に復号してpushする方式で反映。
+ 復号後の内容はfnv-1a checksum・行数・バイト数で検証し、push後はrawでmd5一致を確認。
+- この制限事象は一時的な作業環境の問題であり、repo側の証明書・検証内容には影響しない。
+
+### 結果
+
+- S6 child #1 の7石目sweepは**深さ10以内で全66候補確定**:
+ 証明書付きWIN7 7件（bit7, 25, 18, 67, 82, 117, 120）+ REFUTED 59件。
+
+### 解釈上の注意（変更なし）
+
+- WIN7証明書は「7石rootから深さ10以内の勝ち」の証明。それ以上深い構造は決定していない。
+ REFUTEDは「深さ10以内のWIN7の否定」のみ。
+- class 4・S2 {59,60}・二石root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 次回
+
+1. **class-4 frontierの再計算**（7証明書が閉じるblocker辺の整理・
+ audit_class_frontier.py bookkeeping）。
+2. frontier結果をS2 {59,60}のblocker構造へ接続。より深いオブジェクトは UNKNOWN 維持。
+3. 11×11 空盤は UNKNOWN のまま。
