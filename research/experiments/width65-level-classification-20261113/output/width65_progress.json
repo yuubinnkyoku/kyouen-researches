@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-13",
  "status": "in_progress",
- "resume_from": 893,
+ "resume_from": 975,
  "machine": "research/experiments/width65-level-classification-20261113/scripts/width65_level_classify.ts",
  "uniqueMasks": 3296,
  "totalMaximal": 3296,
@@ -18,14 +18,20 @@
   { "chunk": 9, "from": 841, "lastDone": 858, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
   { "chunk": 10, "from": 858, "lastDone": 877, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
   { "chunk": 11, "from": 877, "lastDone": 886, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
-  { "chunk": 12, "from": 886, "lastDone": 893, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 }
+  { "chunk": 12, "from": 886, "lastDone": 893, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 13, "from": 893, "lastDone": 909, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 14, "from": 909, "lastDone": 921, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 15, "from": 921, "lastDone": 933, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 16, "from": 933, "lastDone": 950, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 17, "from": 950, "lastDone": 962, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 18, "from": 962, "lastDone": 975, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 }
  ],
- "totals": { "masksDone": 893, "nodes": 14400000, "leaves": 0, "survivors": 0 },
+ "totals": { "masksDone": 975, "nodes": 21600000, "leaves": 0, "survivors": 0 },
  "costCurve": {
   "mask_0_772": "~6.2k nodes/mask（軽い帯）",
-  "mask_772_841": "58k..130k nodes/mask",
-  "mask_841_893": "67k..150k nodes/mask（単調増加・heavy band 中核）",
-  "note": "重い帯は mask ~772 以降も沈まず単調増加（K0793 w63 の『下端が沈む』観測と非整合・w65 は heavy band が構造的に重い）。総ノード推定: heavy band が ~1400 まで続くと想定すると 80..160M。複数セッション必須。"
+  "mask_772_893": "58k..150k nodes/mask（単調増加・heavy band 中核）",
+  "mask_893_975": "71k..100k nodes/mask（heavy band 内でほぼ平坦・chunk毎 12..17 mask/1.2M）",
+  "note": "heavy band は mask 975 時点でも沈まず 71k..100k/mask を維持。残り 2,321 mask が同密度と仮定すると総ノードは ~200..250M に達し、K0793 の『下端が沈む』観測（w63 で heavy band が有限区間）と w=65 では質的に異なる可能性が強まってきた。複数セッション必須。"
  },
  "semantics": "level 17 全滅（完走時 leaves=0・生残0）+ K0797 会計（g2=8・g3=12・g4=5 全形 < 17）+ 2210 円下界 32 点 ⟹ P(65) = 32（等号付き・全称）。完了まで OPEN。"
 }
