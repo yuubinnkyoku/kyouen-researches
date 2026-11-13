@@ -19,9 +19,9 @@
         1,
         1
       ],
-      "solver": "pysat Cadical195 budget 2e6",
-      "result": "UNKNOWN",
-      "seconds": 1312.1
+      "solver": "cadical 1.7.3 WSL default -t 20000",
+      "result": "running",
+      "started": "2026-11-13T04:56:17+09:00"
     },
     {
       "class": [
@@ -29,9 +29,11 @@
         0,
         1
       ],
-      "solver": "pysat Cadical195 budget 2e6",
-      "result": "UNKNOWN",
-      "seconds": 993.4
+      "solver": "cadical 1.7.3 WSL default -t 20000",
+      "result": "UNSAT",
+      "started": "2026-11-13T04:56:42+09:00",
+      "finished": "2026-11-13T06:53",
+      "seconds_approx": 7000
     },
     {
       "class": [
@@ -40,8 +42,9 @@
         2
       ],
       "solver": "cadical 1.7.3 WSL default -t 20000",
-      "result": "running since 2026-11-13T04:56:57"
+      "result": "running",
+      "started": "2026-11-13T04:56:57+09:00"
     }
   ],
-  "note": "external cadical runs on the dumped per-class CNFs in D:/tmp/sizeh (011,101,112 are still running)"
+  "note": "per-class CNFs are in D:/tmp/sizeh; a class SAT gives A(2531)>=1265, all four UNSAT gives A(2531)<=1264"
 }

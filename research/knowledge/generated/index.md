@@ -770,4 +770,4 @@
 | [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) | 幅21..35の円点数の完全決定 P(22)=18・P(23)=P(24)=20・P(25)=22・P(26)=…=P(35)=24・24点witness円650 — 全称上界 P(w) ≤ 2⌈w/2⌉−4（全w≥21・w≠26）・行分離公式 M_{w,w+1}=w（全奇数w≥21） | proposition | proved | rectangles, geometry, variants |
 | [K0785](../items/K0785-circle-26-points-min-row-span.md) | 26点円の最小行スパン43（中心窓で全称・R=2210は一意）と34..48点の上界（円11050）— 本文は未投入のプレースホルダ | proposition | needs-review | rectangles, geometry, variants |
 | [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) | 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35） | proposition | computed | rectangles, geometry, variants |
-| [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) | 貪欲＋破壊再構成でQ_2531は1246点以上、Q_3251は1598点以上の安全集合を持つ（独立整数幾何監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) | 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1256点以上、Q_3251は1601点以上の安全集合を持つ（独立整数幾何監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
