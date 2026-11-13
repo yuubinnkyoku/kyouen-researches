@@ -1,0 +1,569 @@
+{
+ "schema": "n11-class4-batch3-bit37-certificate-20261114-v1",
+ "date": "2026-11-14",
+ "root_hex": "00000000020000003802002080000000",
+ "root_origin": {
+  "s6_child_hex": "00000000020000003802000080000000",
+  "bit": 37,
+  "orientation": "7 stones, loser to move; WIN7 = the 7th-stone player (winner_parity=1) wins within depth 10"
+ },
+ "verdict": "WIN7-D10 (original_first_WIN7 second_to_move_LOSS)",
+ "certificate": {
+  "path": "output/class4-batch3-certificates/n11_s7_00000000020000003802002080000000.cert",
+  "format": "n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS (plain text)",
+  "rows": 36092,
+  "bytes": 1300688,
+  "md5": "5228c195af4a4b8a7d4b252e7eea3a5e"
+ },
+ "search_verdict": {
+  "lossAt_root_10": true,
+  "nodes": 9625156,
+  "capped": false,
+  "reruns_node_identical": 3
+ },
+ "extraction": {
+  "method": "kill-first single-process extraction (repo scripts/class4_child1_cert_extractor.ts logic verbatim, driver adapted); one process, all 49 root first-moves, shared memo",
+  "root_first_moves": 49,
+  "all_ok": true,
+  "sum_nodes": 17310200,
+  "n_rows": 36092,
+  "terminal_range": [
+   13,
+   17
+  ],
+  "kill_table": {
+   "0": 117,
+   "10": 30,
+   "102": 30,
+   "103": 113,
+   "105": 41,
+   "106": 84,
+   "108": 80,
+   "11": 91,
+   "110": 93,
+   "112": 30,
+   "113": 30,
+   "114": 35,
+   "115": 4,
+   "116": 84,
+   "117": 83,
+   "118": 108,
+   "120": 14,
+   "14": 21,
+   "15": 83,
+   "16": 72,
+   "18": 72,
+   "2": 93,
+   "21": 14,
+   "3": 83,
+   "30": 83,
+   "32": 41,
+   "33": 45,
+   "35": 78,
+   "4": 30,
+   "41": 72,
+   "43": 102,
+   "45": 84,
+   "5": 11,
+   "54": 15,
+   "66": 72,
+   "67": 11,
+   "72": 41,
+   "74": 103,
+   "76": 14,
+   "78": 35,
+   "8": 72,
+   "80": 108,
+   "83": 84,
+   "84": 83,
+   "87": 91,
+   "88": 21,
+   "91": 30,
+   "93": 78,
+   "95": 15
+  }
+ },
+ "independent_verification": {
+  "verifier": "TS port of verify_five_terminal_loss7.py (repo scripts/verify_bit7_win7_cert.ts, logic verbatim, --root adapted); no engine import, no verdict cache, exact integer Bareiss 4x4 determinant",
+  "root_checks": "PASS (7 stones, no 4-point cocircular/collinear subset, loser mobility 49)",
+  "subroots_verified": 49,
+  "all_pass": true,
+  "union_equality": {
+   "consumed_union": 36092,
+   "certificate_rows": 36092,
+   "missing_rows": 0,
+   "extra_rows": 0
+  },
+  "terminals": "loser-stuck positions, stone counts within [13,17] per sub-root stats",
+  "per_subroot_stats": {
+   "m0": {
+    "seen": 1719,
+    "terminals": 252,
+    "opponentEdges": 1572,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m2": {
+    "seen": 1472,
+    "terminals": 172,
+    "opponentEdges": 1448,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m3": {
+    "seen": 2334,
+    "terminals": 285,
+    "opponentEdges": 2221,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m4": {
+    "seen": 1067,
+    "terminals": 185,
+    "opponentEdges": 925,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m5": {
+    "seen": 1317,
+    "terminals": 211,
+    "opponentEdges": 1185,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m8": {
+    "seen": 1214,
+    "terminals": 214,
+    "opponentEdges": 1086,
+    "range": [
+     13,
+     15
+    ]
+   },
+   "m10": {
+    "seen": 2995,
+    "terminals": 426,
+    "opponentEdges": 2838,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m11": {
+    "seen": 620,
+    "terminals": 98,
+    "opponentEdges": 626,
+    "range": [
+     15,
+     15
+    ]
+   },
+   "m14": {
+    "seen": 1069,
+    "terminals": 163,
+    "opponentEdges": 938,
+    "range": [
+     13,
+     15
+    ]
+   },
+   "m15": {
+    "seen": 1123,
+    "terminals": 120,
+    "opponentEdges": 1075,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m16": {
+    "seen": 1019,
+    "terminals": 160,
+    "opponentEdges": 935,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m18": {
+    "seen": 990,
+    "terminals": 154,
+    "opponentEdges": 895,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m21": {
+    "seen": 1069,
+    "terminals": 163,
+    "opponentEdges": 938,
+    "range": [
+     13,
+     15
+    ]
+   },
+   "m30": {
+    "seen": 1179,
+    "terminals": 177,
+    "opponentEdges": 1091,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m32": {
+    "seen": 3481,
+    "terminals": 416,
+    "opponentEdges": 3425,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m33": {
+    "seen": 1948,
+    "terminals": 182,
+    "opponentEdges": 2010,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m35": {
+    "seen": 1379,
+    "terminals": 186,
+    "opponentEdges": 1245,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m41": {
+    "seen": 996,
+    "terminals": 166,
+    "opponentEdges": 905,
+    "range": [
+     15,
+     15
+    ]
+   },
+   "m43": {
+    "seen": 1323,
+    "terminals": 222,
+    "opponentEdges": 1186,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m45": {
+    "seen": 1036,
+    "terminals": 135,
+    "opponentEdges": 1021,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m54": {
+    "seen": 1514,
+    "terminals": 263,
+    "opponentEdges": 1368,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m66": {
+    "seen": 1027,
+    "terminals": 179,
+    "opponentEdges": 901,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m67": {
+    "seen": 2656,
+    "terminals": 270,
+    "opponentEdges": 2788,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m72": {
+    "seen": 996,
+    "terminals": 166,
+    "opponentEdges": 905,
+    "range": [
+     15,
+     15
+    ]
+   },
+   "m74": {
+    "seen": 698,
+    "terminals": 93,
+    "opponentEdges": 618,
+    "range": [
+     13,
+     15
+    ]
+   },
+   "m76": {
+    "seen": 3026,
+    "terminals": 432,
+    "opponentEdges": 2878,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m78": {
+    "seen": 1379,
+    "terminals": 186,
+    "opponentEdges": 1245,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m80": {
+    "seen": 830,
+    "terminals": 119,
+    "opponentEdges": 771,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m83": {
+    "seen": 1748,
+    "terminals": 152,
+    "opponentEdges": 1928,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m84": {
+    "seen": 1748,
+    "terminals": 152,
+    "opponentEdges": 1928,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m87": {
+    "seen": 666,
+    "terminals": 96,
+    "opponentEdges": 586,
+    "range": [
+     13,
+     15
+    ]
+   },
+   "m88": {
+    "seen": 1785,
+    "terminals": 243,
+    "opponentEdges": 1632,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m91": {
+    "seen": 535,
+    "terminals": 67,
+    "opponentEdges": 527,
+    "range": [
+     13,
+     15
+    ]
+   },
+   "m93": {
+    "seen": 1291,
+    "terminals": 97,
+    "opponentEdges": 1380,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m95": {
+    "seen": 834,
+    "terminals": 100,
+    "opponentEdges": 798,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m102": {
+    "seen": 2286,
+    "terminals": 226,
+    "opponentEdges": 2369,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m103": {
+    "seen": 806,
+    "terminals": 108,
+    "opponentEdges": 764,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m105": {
+    "seen": 3255,
+    "terminals": 364,
+    "opponentEdges": 3239,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m106": {
+    "seen": 1322,
+    "terminals": 215,
+    "opponentEdges": 1135,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m108": {
+    "seen": 830,
+    "terminals": 119,
+    "opponentEdges": 771,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m110": {
+    "seen": 1749,
+    "terminals": 136,
+    "opponentEdges": 1939,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m112": {
+    "seen": 1768,
+    "terminals": 233,
+    "opponentEdges": 1656,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m113": {
+    "seen": 1953,
+    "terminals": 147,
+    "opponentEdges": 2123,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m114": {
+    "seen": 1197,
+    "terminals": 194,
+    "opponentEdges": 1038,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m115": {
+    "seen": 1171,
+    "terminals": 159,
+    "opponentEdges": 1127,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m116": {
+    "seen": 1896,
+    "terminals": 215,
+    "opponentEdges": 1946,
+    "range": [
+     13,
+     17
+    ]
+   },
+   "m117": {
+    "seen": 1478,
+    "terminals": 183,
+    "opponentEdges": 1355,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m118": {
+    "seen": 1528,
+    "terminals": 230,
+    "opponentEdges": 1366,
+    "range": [
+     15,
+     17
+    ]
+   },
+   "m120": {
+    "seen": 4147,
+    "terminals": 520,
+    "opponentEdges": 4063,
+    "range": [
+     13,
+     17
+    ]
+   }
+  }
+ },
+ "frontier_effect": {
+  "covers_canonical_s6": [
+   "00000000000000003802002080000000",
+   "00000000000000801802800000080000",
+   "00000000020000001802002080000000",
+   "00000000020000002802002080000000",
+   "00000000020000003002002080000000",
+   "00000000020000003800002080000000",
+   "00000000020000003802000080000000"
+  ],
+  "class4_lane_target_delta": {
+   "s5": "00000000020000003800000080000000",
+   "remaining_s6_orbits": [
+    32,
+    30
+   ],
+   "remaining_s7_edge_cost": [
+    2530,
+    2385
+   ]
+  }
+ },
+ "interpretation_guard": [
+  "This certificate proves only: a win within depth 10 from this 7-stone root, against every loser defense.",
+  "class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN.",
+  "node counts are v15-engine counts and not comparable with the lost v14 figures"
+ ]
+}
