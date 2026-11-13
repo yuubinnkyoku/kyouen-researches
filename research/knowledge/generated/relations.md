@@ -4634,6 +4634,7 @@
 - ← supports [K0799](../items/K0799-width66-pw32-plateau-completion.md): level 17復活点を (65,83] から (66,83] に狭窄
 - ← supports [K0800](../items/K0800-joint-g0-accounting-w114.md): 会計上の正当化範囲がw≤114に拡大（level 17復活点下界83を超えてカバー・P(w)実務上の寄与はw≤82）
 - ← supports [K0801](../items/K0801-width67-pw32-plateau-completion.md): level 17復活点を (66,83] から (67,83] に狭窄
+- ← supports [K0802](../items/K0802-width68-pw32-plateau-completion.md): level 17復活点を (67,83] から (68,83] に狭窄
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4738,6 +4739,7 @@
 - ← depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): g0会計のw=66有効性（拡張法33法・g4形classMax=5・w≦84）・非標準形前提の正当化
 - ← depends_on [K0800](../items/K0800-joint-g0-accounting-w114.md): K0797レジューム(2)「g3 size≥29を切る非合同式手法」への回答。単一法フロンティアw≤84をjoint合同証明書でw≤114に延伸し「合同式以外の手法が必要」限界記述を訂正
 - ← depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): g0会計のw=67有効性（拡張法33法・w≦84）・非標準形前提の正当化
+- ← depends_on [K0802](../items/K0802-width68-pw32-plateau-completion.md): g0会計のw=68有効性（拡張法33法・w≦84）・非標準形前提の正当化
 
 ## [K0798](../items/K0798-width65-pw32-plateau-completion.md) 幅65の円点数の完全決定 P(65)=32 — 32点プラトーがw=49..65に拡大・P(w)は全幅6..65で決定済み・level 17の復活点は(65,83]・REST6 2フェーズ機の完走検証
 
@@ -4768,10 +4770,19 @@
 - → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=67有効性（拡張法33法・w≦84）・非標準形前提の正当化
 - → depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming分類機・意味論・2210 witness
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (66,83] から (67,83] に狭窄
+- ← depends_on [K0802](../items/K0802-width68-pw32-plateau-completion.md): w=67完走機・REST6 2フェーズ方式の直接拡張。32プラトーを w=67 から w=68 へ延長
 - ← depends_on [K0803](../items/K0803-maximal-mask-plateau-universal.md): w=67 完走（3,300）・saturation 実験の制御値の供給源
+
+## [K0802](../items/K0802-width68-pw32-plateau-completion.md) 幅68の円点数の完全決定 P(68)=32 — 32点プラトーがw=49..68に拡大・P(w)は全幅6..68で決定済み・level 17の復活点は(68,83]・w=68キャンペーン完走（REST6 2フェーズ・40チャンク+独立全幅再実行・92.2M/96.6M nodes）
+
+- → depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): w=67完走機・REST6 2フェーズ方式の直接拡張。32プラトーを w=67 から w=68 へ延長
+- → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=68有効性（拡張法33法・w≦84）・非標準形前提の正当化
+- → depends_on [K0803](../items/K0803-maximal-mask-plateau-universal.md): maximal mask数3,300はw=66..132の有限測定（本項の3,300と整合）
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (67,83] から (68,83] に狭窄
 
 ## [K0803](../items/K0803-maximal-mask-plateau-universal.md) maximal mask 3,300 プラトーの全称化 — 窓マスク掃引の maximal=3,300 が全幅 w≧99で成立（周期性+順序同型+popcountギャップ+支配補題の全称証明・unique=3,630は99≦w<198に限定・level 17 掃引ワークロードはw=66以降不変）
 
 - → depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): w=66 完走（unique=maximal 3,300）・harness の窓マスク生成の直接の源泉
 - → depends_on [K0801](../items/K0801-width67-pw32-plateau-completion.md): w=67 完走（3,300）・saturation 実験の制御値の供給源
 - → supports [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): level 17 掃引キャンペーンの mask ワークロードが w=66 以降常に 3,300 であることの理論的裏付け（コスト増は per-mask 加重のみ・前処理は w=99 の 1 回で定数化可能）
+- ← depends_on [K0802](../items/K0802-width68-pw32-plateau-completion.md): maximal mask数3,300はw=66..132の有限測定（本項の3,300と整合）
