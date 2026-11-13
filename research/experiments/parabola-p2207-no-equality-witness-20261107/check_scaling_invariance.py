@@ -29,7 +29,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "research/experiments/parabola-equality-extension-2143-2500-20261107"))
-from probe_driver import run_gen  # noqa: E402
+from edges_gen import run_edges  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 CANDIDATE = ROOT / "research/experiments/parabola-p2207-1104-witness-20261110/output/candidate.txt"
@@ -99,7 +99,7 @@ def main() -> int:
     points = sorted(int(x) for x in " ".join(lines[1:]).split())
     if len(points) != 1104 or len(set(points)) != 1104:
         raise SystemExit("unexpected candidate size")
-    edges = run_gen(str(Path(__import__("os").environ["TEMP"]) / "forbidden_edges.exe"), P)
+    edges = run_edges(P)
     a = pow(COMPLETE_PAIR, -1, P)
     scaled = sorted((a * t) % P for t in points)
     record = {

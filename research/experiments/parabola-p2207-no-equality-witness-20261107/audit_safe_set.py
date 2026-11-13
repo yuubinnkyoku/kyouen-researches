@@ -23,7 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "research/experiments/parabola-equality-extension-2143-2500-20261107"))
-from probe_driver import run_gen  # noqa: E402
+from edges_gen import run_edges  # noqa: E402
 
 VERIFIER = ROOT / "research/experiments/parabola-local-repair-20261109/verify_subset.cpp"
 VERIFIER_SHA = "c817e7808e5d853a6ca0b897e5a0f454944f38069c8c32b5a10ef7f97b32261c"
@@ -45,7 +45,7 @@ def main() -> int:
     points = sorted(data["points"])
     if len(points) != len(set(points)) or any(not 0 <= t < p for t in points):
         raise SystemExit("invalid point list")
-    edges = run_gen(str(Path(__import__("os").environ["TEMP"]) / "forbidden_edges.exe"), p)
+    edges = run_edges(p)
     chosen = set(points)
     inside = [q for q in edges if set(q) <= chosen]
     h = (p - 1) // 2

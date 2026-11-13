@@ -33,7 +33,7 @@ ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT / "research/experiments/parabola-equality-extension-2143-2500-20261107"))
-from probe_driver import run_gen  # noqa: E402
+from edges_gen import run_edges  # noqa: E402
 from search_1104_shape_c import build  # noqa: E402
 
 OUT = HERE / "output"
@@ -71,7 +71,7 @@ def main() -> int:
 
     dest = OUT / f"cert-{p}-{size}-shapec"
     dest.mkdir(parents=True, exist_ok=True)
-    edges = run_gen(str(TMP / "forbidden_edges.exe"), p)
+    edges = run_edges(p)
     clauses, nv, kept, trapezoid = build(p, edges)
     cnf = dest / f"a{p}_{size}.cnf"
     with cnf.open("w", encoding="ascii", newline="\n") as f:

@@ -22,7 +22,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT / "research/experiments/parabola-equality-extension-2143-2500-20261107"))
 sys.path.insert(0, str(ROOT / "research/experiments/structural-lemmas-2026-10-02/checks"))
-from probe_driver import run_gen  # noqa: E402
+from edges_gen import run_edges  # noqa: E402
 from quadratic_modular_barrier import prime  # noqa: E402
 from search_1104_shape_c import build  # noqa: E402
 from pysat.solvers import Cadical195  # noqa: E402
@@ -52,7 +52,7 @@ def main() -> int:
         if not prime(p):
             continue
         h = (p - 1) // 2
-        edges = run_gen(gen, p)
+        edges = run_edges(p)
         clauses, nv, kept, trapezoid = build(p, edges)
         solver = Cadical195(bootstrap_with=clauses)
         solver.conf_budget(args.budget)

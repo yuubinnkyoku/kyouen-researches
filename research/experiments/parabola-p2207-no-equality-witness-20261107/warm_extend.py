@@ -23,7 +23,7 @@ ROOT = Path(__file__).resolve().parents[3]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 sys.path.insert(0, str(ROOT / "research/experiments/parabola-equality-extension-2143-2500-20261107"))
-from probe_driver import run_gen  # noqa: E402
+from edges_gen import run_edges  # noqa: E402
 from pysat.card import CardEnc, EncType  # noqa: E402
 from pysat.solvers import Cadical195  # noqa: E402
 
@@ -93,7 +93,7 @@ def main() -> int:
     if data["p"] != p:
         raise SystemExit("prime mismatch")
     points = sorted(data["points"])
-    edges = run_gen(str(Path(__import__("os").environ["TEMP"]) / "forbidden_edges.exe"), p)
+    edges = run_edges(p)
     out = Path(args.out) if args.out else Path(args.witness).with_name(
         Path(args.witness).stem + "_extended.json")
     trail = []
