@@ -144,6 +144,10 @@
     },
     "refuted_note": "cost is not monotone in mobility: bit=91 (mob 49) = 193,987 nodes while bit=32/87 (same mob) each exceed 700k",
     "pending_incomplete": {
+      "3": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 4: fresh-memo d10 capped at 950k (first of the mob-56 band); not a refutation; heavy-pending"
+      },
       "7": {
         "d10_nodes_so_far": 506014,
         "note": "v14 capped at 506k; resume with dedicated run"
@@ -268,7 +272,6 @@
       "interpretation": "All 22 probes ended without a verdict: 18 consumed at least 150,000 nodes, while 4 were interrupted below that threshold (bit 78: 149998, bit 84: 49995, bit 103: 49995, bit 118: 149998). Capped runs prove no WIN/LOSS. The observation that the first 18 full-budget probes failed to finish is not evidence that every remaining candidate requires 950k nodes; shorter probes can still discover cheap candidates."
     },
     "not_yet_searched": [
-      "3",
       "34",
       "54",
       "88",
@@ -336,7 +339,56 @@
   "interpretation_guard": [
     "d=10 fail means no winner win within 10 ply; it does NOT refute the candidate (deeper wins possible)",
     "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN",
-    "capped runs (7, 25, 32, 40, 80, 87 and all 150k probes) prove nothing either way"
+    "capped runs (3, 7, 25, 32, 40, 80, 87 and all 150k probes) prove nothing either way"
   ],
-  "next": "32 unprobed candidates remain (mob 56-63 band: 3,34,54,88,102,15,50,86,90,92,105,116,21,36,4,38,67,109,112,117,8,10,76,33,66,104,106,110,0,44,120,2); prioritize targeted runs within resource limits; 150k probes are inconclusive for 4 partially tested bits and the 32 unprobed candidates; ~950k is a proposed cap, not a proven required cost; heavy-pending {7,25,32,40,80,87} needs external compute or certificate-chunked decomposition; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
+  "next": "superseded by session4_engine_cost_audit.next (bit=3 capped 950k in session 4; 31 unprobed remain in the mob 56-63 band; v14 node counts non-reproducible in v15, budget in v15 units; on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push)",
+  "session4_engine_cost_audit": {
+    "date": "2026-11-13",
+    "purpose": "quantify the v15-vs-v14 cost gap before committing further 950k runs, and test cheap hypotheses that might recover v14-level efficiency",
+    "run_ceiling": "a run mixing pilot control + 2x950k candidate attempts and a dedicated 1.4M-node run both exceeded the process safety deadline; ~950k-1M nodes per run remains the practical ceiling (2 timeout incidents recorded as experiment facts)",
+    "v15_vs_v14_inflation": {
+      "pilot_d6": {
+        "v14": 3257,
+        "v15_fresh": 5949,
+        "ratio": 1.83
+      },
+      "pilot_d8": {
+        "v14": 108869,
+        "v15_fresh": 277800,
+        "ratio": 2.55
+      },
+      "pilot_d10": {
+        "v14": 622788,
+        "v15": ">950000 (capped, single-pass and deepening)",
+        "ratio_lower_bound": 1.52
+      },
+      "bit85_d10": {
+        "v14": 132921,
+        "v15": ">950000 (capped)",
+        "ratio_lower_bound": 7.15
+      },
+      "bit95_d10": {
+        "v14": 275989,
+        "v15": ">950000 (capped)",
+        "ratio_lower_bound": 3.44
+      },
+      "bit48_d10": {
+        "v14": 379447,
+        "v15": ">500000 (capped at 500k in this session)",
+        "ratio_lower_bound": 1.32
+      },
+      "conclusion": "v15 cannot cheaply re-confirm ANY of the 6 published v14 d10 refutations; v14 node numbers are not reproducible with the committed engine and must be treated as non-comparable evidence (verdicts and terminal ranges remain the standing evidence)"
+    },
+    "negative_results": [
+      "OR/AND sort-direction grid (close-desc/close-asc/bit x close-desc/close-asc/bit, 9 combos) on pilot d6: 5,917-14,179 nodes; none approaches v14's 3,257; AND=bit+OR=close-desc (v15 default) is best at d6",
+      "closeScore radius/weight variants on pilot d6 (r1/r2/r3/r4/r3sq/r3flat): 5,949-5,970 nodes, insensitive",
+      "fine-grained deepening d2->d4->d6->d8 on pilot (shared memo, cumulative): 34/683/6,637/284,462; does not reproduce v14 (d6 3,257 / d8 108,869)",
+      "counter-definition hypothesis: winAt-only calls (694 / 92,769) and lossAt-only calls (5,255 / 184,624) at pilot d6/d8 do not match v14 published numbers either",
+      "last-response ordering (winAt children sorted by chebyshev distance to the opponent's last stone, with deepening) on bit85: d6 13,818 / d8 211,848 / d10 capped >950k; worse than default at d8",
+      "bit85 deepening d6->d8->d10 (shared memo, cumulative): 13,820 / 186,626 / >950,000; note the d6 stage is 3x CHEAPER than v14's 40,965 while the d10 stage still explodes"
+    ],
+    "positive_result": "close-first AND ordering (lossAt children sorted by wscore descending) cuts pilot d8 from 277,800 to 193,556 nodes (-30%); depth-dependent (worse at d6: 7,646 vs 5,949), unproven at d10; candidate engine variant for future runs targeting d8+ stages",
+    "recalibration": "the session-2/3 conclusion that the mob-50 band is uniformly heavy is confounded: v15 caps at 950k include candidates v14 finished at 133k-380k of its own units. True v15 costs of most candidates are unknown; the sweep plan should treat v14 numbers as non-reproducible and budget per-candidate runs in v15 units. The remaining 31 unprobed candidates (mob 56-63) and heavy-pending {7,25,32,40,80,87} are, if anything, harder than v15 measurements suggest, not easier",
+    "next": "1) try close-first-AND variant on one heavy-pending candidate (e.g. bit=25) at 950k to test whether the -30% d8 gain carries to d10; 2) continue mob-56 band one candidate per run (34, 54, 88, 102, ...) at 950k cap, close-first-AND variant preferred for d8+; 3) if close-first-AND does not complete any candidate, the sandbox grind is information-poor: switch to external-compute preparation (engine+driver export for a bigger-memory runner) or certificate-chunked decomposition; 4) on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
+  }
 }
