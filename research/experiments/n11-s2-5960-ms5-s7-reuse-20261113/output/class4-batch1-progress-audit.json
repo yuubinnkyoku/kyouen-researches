@@ -4,15 +4,31 @@
   "root_s5": "00000000020000003800000080000000",
   "s6_child": "00000000020000003800000080080000",
   "child_cells": [
-    27,
+    19,
     31,
-    57,
-    58,
     59,
+    60,
+    61,
     89
   ],
-  "engine": "v14 sandbox TS depth-limited solver; memo open-addressing Uint16 (w*32+l+1, w=32=unproven), fbt triple-ban store, closeScore ordering, iterative deepening",
-  "engine_fixes_this_session": [
+  "child_cells_note": "corrected in session 2: the previous session's child_cells [27,31,57,58,59,89] was a transcription error; the bit-cells of the hex key are [19,31,59,60,61,89], confirmed by exact reproduction of all 66 candidate bits and mobilities",
+  "engine": "v15 sandbox TS depth-limited solver (committed at scripts/class4_child1_sweep_engine.ts); rules identical to v14 description: incremental triple-ban (fbt) masks, position memo with depth-bounded win/lose/noWin/noLose facts, closeScore ordering, iterative deepening",
+  "engine_rebuild_session2": {
+    "reason": "engine v14 existed only in the previous sandbox session and was never committed; rebuilt from the rules defined by n11-central-19-cover-20261031/verify_five_terminal_loss7.py",
+    "bugs_found_during_rebuild": [
+      "shared move-array aliasing: legalMoves() refilled one array across recursion levels, silently truncating loops (per-depth arrays fixed)",
+      "the placed stone's own bit must be OR-ed into the child banned words; forgetting it lets the mover replay the same cell (same bug class as v14's per-chunk bit bug)"
+    ],
+    "validation": {
+      "candidate_set": "66 non-degenerate 7th-stone candidates reproduced; set and all 66 root mobilities match candidate_order_mob exactly",
+      "pilot_root_d6": "loss=false (5,949 nodes) matches published d6 fail",
+      "pilot_root_d8": "loss=false (277,800 nodes) matches published d8 fail",
+      "pilot_root_d10": "not re-completed: v15 needed >700k nodes at d10 within the sandbox deadline (capped); the published v14 d10 WIN (622,788 nodes) is the standing evidence",
+      "win_detection_control": "published LOSS7-orientation root 00000000000000a03808100000000000 (winner = root mover, 786 strategy states): winAt(10)=true with terminal stone range [12,16], exactly matching the published verifier stats"
+    },
+    "node_count_caveat": "v15 node counts are not comparable with v14 numbers (ordering details differ); verdicts and terminal ranges are the comparable quantities"
+  },
+  "engine_fixes_this_session_v14": [
     "memo mVal Uint8 -> Uint16 (packed w*32+l+1 overflows 255; Uint8 truncation misread LOSS@d as tiny win distance)",
     "FULL[3] = 0x01FFFFFF (0x07FFFFFF exposed off-board cells 121/122 as legal)",
     "candidate legal masks: 7th-stone bit must be removed from its own 32-bit chunk (earlier runs removed it only from chunk0; bits>=32 results invalid, incl. bogus nodes=1 memo-collision artifacts at bit=32/95)",
@@ -24,7 +40,7 @@
     "d8_fail_nodes": 108869,
     "d10_win_nodes": 622788,
     "max_stones": 17,
-    "note": "matches published terminal stone range [13,17]; pilot certificate already published, not regenerated"
+    "note": "v14 numbers kept for the record; pilot certificate already published, not regenerated"
   },
   "ordering_findings": {
     "candidate_order": "root mobility ascending (loser to move at root)",
@@ -129,11 +145,19 @@
     "pending_incomplete": {
       "7": {
         "d10_nodes_so_far": 506014,
-        "note": "capped at 506k; resume with dedicated run"
+        "note": "v14 capped at 506k; resume with dedicated run"
+      },
+      "25": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 2: capped at 950k (and at 450k in a first attempt); mob-50 band is uniformly heavy; not a refutation"
       },
       "32": {
         "d10_nodes_so_far": 700001,
         "note": "single candidate consumed full 700k node budget; expect >1M nodes; needs dedicated runs or d=8-first"
+      },
+      "40": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 2: capped at 950k (and at 280k in a first attempt); not a refutation"
       },
       "87": {
         "d10_nodes_so_far": 700001,
@@ -141,8 +165,6 @@
       }
     },
     "not_yet_searched": [
-      "25",
-      "40",
       "80",
       "83",
       "108",
@@ -202,7 +224,8 @@
   },
   "interpretation_guard": [
     "d=10 fail means no winner win within 10 ply; it does NOT refute the candidate (deeper wins possible)",
-    "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN"
+    "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN",
+    "capped runs (7, 25, 32, 40, 87) prove nothing either way"
   ],
-  "next": "continue sweep from bit=25 (mob 50) with skipBits {85,95,48,81,72,91}; dedicated runs needed for 32, 87, 7; on win: rebuild certificate, verify mirror, deflate+b64, then class4-batch1-certificates push"
+  "next": "resume the mob-50 band with 80, 83, 108 (one candidate per sandbox run, nodeCap ~950k); bits 25/40 join 7/32/87 in the heavy-pending list (dedicated runs, d=8-first, or cross-run memo persistence needed); on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
 }
