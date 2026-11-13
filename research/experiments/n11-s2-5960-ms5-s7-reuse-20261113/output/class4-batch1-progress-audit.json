@@ -116,13 +116,21 @@
         "d8": 102274,
         "d10": 132921
       },
+      "91": {
+        "d10": 193987
+      },
       "95": {
         "d6": 60171,
         "d8": 172738,
         "d10": 275989
       }
     },
+    "refuted_note": "cost is not monotone in mobility: bit=91 (mob 49) = 193,987 nodes while bit=32/87 (same mob) each exceed 700k",
     "pending_incomplete": {
+      "7": {
+        "d10_nodes_so_far": 506014,
+        "note": "capped at 506k; resume with dedicated run"
+      },
       "32": {
         "d10_nodes_so_far": 700001,
         "note": "single candidate consumed full 700k node budget; expect >1M nodes; needs dedicated runs or d=8-first"
@@ -133,8 +141,6 @@
       }
     },
     "not_yet_searched": [
-      "91",
-      "7",
       "25",
       "40",
       "80",
@@ -198,5 +204,5 @@
     "d=10 fail means no winner win within 10 ply; it does NOT refute the candidate (deeper wins possible)",
     "verdicts are WIN7-within-depth-10 only; 11x11 empty board and two-stone root {49,60} remain UNKNOWN"
   ],
-  "next": "continue sweep from bit=91 (mob 49) with skipBits {85,95,48,81,72}; retry 32 and 87 with dedicated runs; on win: rebuild certificate, verify mirror, deflate+b64, then class4-batch1-certificates push"
+  "next": "continue sweep from bit=25 (mob 50) with skipBits {85,95,48,81,72,91}; dedicated runs needed for 32, 87, 7; on win: rebuild certificate, verify mirror, deflate+b64, then class4-batch1-certificates push"
 }
