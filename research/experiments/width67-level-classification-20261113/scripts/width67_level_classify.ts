@@ -112,7 +112,7 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, wordOps: ops, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 67, L: 17, from: 840, cap: 2400000, chunksPerRun: 1, control26: false };
+const CFG = { w: 67, L: 17, from: 887, cap: 2400000, chunksPerRun: 1, control26: false };
 async function main() {
   const out: any = { generated: "2026-11-13", rest: REST.join(","), chunks: [] };
   let from = CFG.from;
