@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-13",
  "status": "in_progress",
- "resume_from": 841,
+ "resume_from": 893,
  "machine": "research/experiments/width65-level-classification-20261113/scripts/width65_level_classify.ts",
  "uniqueMasks": 3296,
  "totalMaximal": 3296,
@@ -14,13 +14,18 @@
   { "chunk": 5, "from": 772, "lastDone": 782, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
   { "chunk": 6, "from": 782, "lastDone": 800, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
   { "chunk": 7, "from": 800, "lastDone": 818, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
-  { "chunk": 8, "from": 818, "lastDone": 841, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 }
+  { "chunk": 8, "from": 818, "lastDone": 841, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 9, "from": 841, "lastDone": 858, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 10, "from": 858, "lastDone": 877, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 11, "from": 877, "lastDone": 886, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 },
+  { "chunk": 12, "from": 886, "lastDone": 893, "nodes": 1200000, "leaves": 0, "aborted": true, "survivors": 0 }
  ],
- "totals": { "masksDone": 841, "nodes": 9600000, "leaves": 0, "survivors": 0 },
+ "totals": { "masksDone": 893, "nodes": 14400000, "leaves": 0, "survivors": 0 },
  "costCurve": {
   "mask_0_772": "~6.2k nodes/mask（軽い帯）",
-  "mask_772_841": "58k..130k nodes/mask（重い帯開始・w64 より重い）",
-  "note": "重い帯は mask ~772 から開始。K0793 の w63 観測（heavy band 下端が沈む）と整合しない重さ — w65 の heavy band は幅・密度とも増大の可能性。総ノード推定は 43M より大幅上の可能性（60..150M）。完走までは複数セッション想定。"
+  "mask_772_841": "58k..130k nodes/mask",
+  "mask_841_893": "67k..150k nodes/mask（単調増加・heavy band 中核）",
+  "note": "重い帯は mask ~772 以降も沈まず単調増加（K0793 w63 の『下端が沈む』観測と非整合・w65 は heavy band が構造的に重い）。総ノード推定: heavy band が ~1400 まで続くと想定すると 80..160M。複数セッション必須。"
  },
  "semantics": "level 17 全滅（完走時 leaves=0・生残0）+ K0797 会計（g2=8・g3=12・g4=5 全形 < 17）+ 2210 円下界 32 点 ⟹ P(65) = 32（等号付き・全称）。完了まで OPEN。"
 }
