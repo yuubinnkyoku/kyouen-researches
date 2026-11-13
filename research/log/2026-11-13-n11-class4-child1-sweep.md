@@ -596,3 +596,58 @@ reply 順 wscore 降順（fail-fast）。予算打ち切りは state に chunk �
 2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
  （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
 3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
+
+## 第11セッション（2026-11-14、長期レーン）: bit40 chunkキャンペーン — 2件目のREFUTED（witness m=8・3.10M nodes・5実行）・repo反映（audit timeout教訓の再現なし）
+
+### レジューム実行（第10セッション next 1）
+
+heavy-pending bit=40（mob 50。v15 単体 d10 は 950k で2回 capped・判定なし）を
+chunk 分解で消化した。run 予算 ~650k・chunk cap 300k・chunk 深さ 8・
+reply 順 wscore 降順（fail-fast）。予算打ち切りは候補ごとの state file
+ （kill 表 + done replies）に逐次 flush して厳密に再開（再開欠落ゼロ）。
+**winner 応手列挙は root+m の合法手リストから**（m は occupied ので
+r===m は構造的に不可能 — 第10セッションの driver bug クラスの再発防止）。
+
+### 結果: bit40 は depth 10 で REFUTED（2件目・最速の chunk 反証）
+
+- **witness m=8**: winner 応手 44 個すべての chunk が未capで loss=false →
+  lossAt(root,10)=false。root hex 00000000020000003800010080080000
+ （S6 child + bit40・7石・loser to move）。
+- 総 **3,101,124 nodes / 5実行**（656,192 / 650,950 / 660,051 / 650,062 / 483,869）・
+  capped chunk 0・単一chunk最大 162,444・chunk計85（kill 5 / pass 80）。
+  kill 表 {0:18, 2:90, 3:85, 6:84, 7:18}（全て r≠m）。
+  残り44初手は未走査のまま打ち切り（verdict に不要・記録済み）。
+- bit32（15.88M/23実行）と対照的に、witness が6番目の初手で見つかり
+  chunk 法として最速で閉じた。**反証コストの分散は候補間で5倍以上**
+ （bit85 1.70M / bit40 3.10M / bit32 15.88M）— 予算計画は per-candidate 見積り必須。
+
+### 検証（全て PASS）
+
+- pilot d6 制御 5,949（全5実行の冒頭で再現・5/5 PASS）。
+- **witness 完全被覆**: root+8 の合法応手 44個と done 表が完全一致（欠落0）。
+- **決定制御**: fresh 再解4件が node 数まで完全一致
+ （pass (8,44)=79,103・(8,104)=68,443・kill (0,18)=28,157・(2,90)=97,107）。
+- root mob 50 再確認・kill 表の r≠m 全確認。
+
+### 解釈上の注意（変更なし）
+
+- bit40 の REFUTED は「深さ10以内のWIN7の否定」のみ（より深い勝ちはあり得る）。
+  class 4・S2 {59,60}・二石 root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 反映（全て push 後読み戻し確認・1コミット1ファイル・並走なし）
+
+- 6ddbbdbb: campaign record output/class4-batch1-bit40-campaign.json
+- 7835203c: ledger JSON（bit40 エントリ追記・next更新: heavy-pending {80,87,34}）
+- e6bedbb8: audit JSON session10_bit40_chunk_campaign 追記
+ （34KB push・今回は timeout なし）
+- 本コミット: log 第11セッション
+
+### 次回
+
+1. heavy-pending 残り {80,87,34} の chunk キャンペーン（同一プロトコル・
+   応手列挙は root+m 合法手から）。bit80 は mob50、bit87 は mob49、bit34 は mob56。
+   候補ごとに /home/user/bXX/state.json で再開。
+2. WIN7 発見時は bit7/bit25 と同一の証明書プロトコル
+ （kill-first抽出 → 50部分木分解検証 → union等価 → 1コミット1ファイルpush）。
+3. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
