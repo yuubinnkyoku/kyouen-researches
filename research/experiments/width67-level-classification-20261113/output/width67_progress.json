@@ -1,7 +1,7 @@
 {
  "generated": "2026-11-13",
  "status": "in_progress",
- "resume_from": 1266,
+ "resume_from": 1320,
  "machine": "research/experiments/width67-level-classification-20261113/scripts/width67_level_classify.ts（REST6=[19,23,7,29,43,47] 2フェーズ機・cap 2.4M nodes/chunk・lastDone 冪等再開）",
  "machineNote": "K0799 の w=66 完走機と同一構造（verbatim 移植・W=67・窓マスク 67 ビット・ワード数 ceil(w/32) 自動）。健全性: survivors(REST6) ⊇ survivors(REST16)（width65-pruning-audit・w26 L12 制御 S* 1生残）。REST6 生残0の mask は REST16 でも生残0確定。",
  "resumeConvention": "lastDone = (完了した最大 mask index)+1・resume_from = lastDone。w=66 第1-2セッションの off-by-one 教訓を踏襲し +1 はしない。",
@@ -255,15 +255,37 @@
    "aborted": true,
    "survivors": 0,
    "note": "25 mask/2.4M = ~96k/mask（第二 heavy band）"
+  },
+  {
+   "chunk": 22,
+   "from": 1266,
+   "lastDone": 1294,
+   "nodes": 2400000,
+   "wordOps": 233156166,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "28 mask/2.4M = ~86k/mask（第二 heavy band 継続）"
+  },
+  {
+   "chunk": 23,
+   "from": 1294,
+   "lastDone": 1320,
+   "nodes": 2400000,
+   "wordOps": 233295128,
+   "leaves": 0,
+   "aborted": true,
+   "survivors": 0,
+   "note": "26 mask/2.4M = ~92k/mask（第二 heavy band・1320 まで継続。w=66 の第二帯終点 1313 を超えても重い — 終点は更に右か）"
   }
  ],
  "totals": {
-  "masksDone": 1266,
-  "nodes": 55200000,
+  "masksDone": 1320,
+  "nodes": 60000000,
   "leaves": 0,
   "survivors": 0,
   "phase2Masks": 0
  },
- "estimate": "第一 heavy band（~772..~1155・dip は ~987..1155 で ~14k/mask）を通過。第二 heavy band 開始 ~1190（w=65/66 と同位置）。1266/3,300 = 38.4% で 55.2M nodes。第二帯は w=65 で 1190..1302・w=66 で ~1313 終点だったので w=67 も ~1300± で終了し、残り ~2,000 mask は軽い帯 ~10k/mask と予測 → 総計 ~65..75M nodes（~74M の当初予測に近い）。",
- "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 132）⟹ 完走なら P(67) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。※昇格先 K 番号は K0801（K0800 は 2026-11-13 11:34 に joint g0 会計（w≤114）が使用済みのため再採番）。現在は部分進行（1266/3,300 mask = 38.4%）であり P(67) はまだ確定しない。"
+ "estimate": "第二 heavy band は 1320 まで継続（~86..104k/mask）。w=65 の第二帯終点 1302・w=66 の 1313 を超えているため終点は ~1330± 以降。1320/3,300 = 40.0% で 60.0M nodes。残り ~1,980 mask が軽い帯なら総計 ~65..75M nodes。",
+ "semantics": "level 17 全滅（完走時）+ K0797 会計（w ≤ 84 で有効）+ 2210 円下界 32 点（v-span 94 ≤ 132）⟹ 完走なら P(67) = 32（等号付き・全称）に昇格・results/fixed-width/ 追従。※昇格先 K 番号は K0801（K0800 は 2026-11-13 11:34 に joint g0 会計（w≤114）が使用済みのため再採番）。現在は部分進行（1320/3,300 mask = 40.0%）であり P(67) はまだ確定しない。"
 }
