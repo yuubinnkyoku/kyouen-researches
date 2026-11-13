@@ -406,8 +406,204 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) certificate rebuild for bit=7: extract the winning strategy tree chunk-by-chunk (winner moves at depths 1,3,5,7,9), serialize as n11-terminal-strategy-v1 original_first_WIN7 second_to_move_LOSS with root <hex>, verify with the verify_five_terminal_loss7.py copy adapted to winner_parity=1, deflate+b64, then class4-batch1-certificates push",
-    "2) apply the chunk prover to heavy-pending {25,32,40,80,87,34} and the unprobed candidates (one candidate per multi-run campaign, resuming per chunk)",
-    "3) keep the d8-witness != d10-witness lesson: never reuse a shallower witness without re-verifying its chunk set at the target depth"
-  ]
+    "1) bit=25 certificate rebuild with scripts/class4_child1_cert_extractor.ts (kill-first using this kill table), verify with scripts/verify_bit7_win7_cert.ts --root 00000000020000003800000082080000, push cert + record",
+    "2) continue chunk campaigns for heavy-pending {32,40,80,87,34} and unprobed candidates; WIN discovery => same certificate protocol",
+    "3) keep the d8-witness != d10-witness lesson and the UNKNOWN guards"
+  ],
+  "bit25": {
+    "candidate": "bit=25 (mob 50), heavy-pending since session 2 (v15 monolithic d10 capped at 950k x3 incl. close-first AND; v14 capped 700k). Second WIN7 candidate found by the chunk campaign.",
+    "root_hex": "00000000020000003800000082080000",
+    "root_mob": 50,
+    "d10_verdict": "WIN7 CANDIDATE WITHIN DEPTH 10 — lossAt(root,10)=true: ALL 50 loser first-moves killed",
+    "kill_table": {
+      "0": 42,
+      "2": 78,
+      "3": 92,
+      "4": 70,
+      "8": 37,
+      "10": 37,
+      "18": 37,
+      "21": 92,
+      "33": 45,
+      "34": 50,
+      "37": 18,
+      "38": 50,
+      "40": 70,
+      "42": 10,
+      "43": 40,
+      "44": 37,
+      "45": 72,
+      "50": 38,
+      "54": 40,
+      "66": 42,
+      "67": 40,
+      "70": 40,
+      "72": 90,
+      "76": 43,
+      "78": 40,
+      "82": 92,
+      "83": 10,
+      "84": 38,
+      "86": 72,
+      "87": 37,
+      "90": 72,
+      "91": 70,
+      "92": 50,
+      "93": 50,
+      "94": 40,
+      "95": 37,
+      "102": 84,
+      "103": 92,
+      "104": 70,
+      "105": 72,
+      "106": 70,
+      "108": 84,
+      "109": 38,
+      "110": 72,
+      "113": 50,
+      "114": 91,
+      "116": 37,
+      "117": 50,
+      "118": 37,
+      "120": 40
+    },
+    "kill_chunk_nodes": {
+      "0": 219816,
+      "2": 142323,
+      "3": 18377,
+      "4": 21327,
+      "8": 39431,
+      "10": 21045,
+      "18": 18605,
+      "21": 33039,
+      "33": 35485,
+      "34": 12317,
+      "37": 18605,
+      "38": 74333,
+      "40": 24335,
+      "42": 29763,
+      "43": 26481,
+      "44": 24607,
+      "45": 10689,
+      "50": 74333,
+      "54": 11783,
+      "66": 78849,
+      "67": 22993,
+      "70": 24335,
+      "72": 13159,
+      "76": 74372,
+      "78": 17633,
+      "82": 27765,
+      "83": 9681,
+      "84": 97227,
+      "86": 21267,
+      "87": 29291,
+      "90": 13159,
+      "91": 20349,
+      "92": 17245,
+      "93": 13697,
+      "94": 16959,
+      "95": 13719,
+      "102": 20319,
+      "103": 17427,
+      "104": 57987,
+      "105": 11743,
+      "106": 71127,
+      "108": 10613,
+      "109": 50285,
+      "110": 18815,
+      "113": 34181,
+      "114": 8041,
+      "116": 38643,
+      "117": 66693,
+      "118": 27163,
+      "120": 46941
+    },
+    "totals": {
+      "nodes": 6768196,
+      "runs": 10,
+      "batch_nodes": [
+        642403,
+        712362,
+        697536,
+        670495,
+        680450,
+        689548,
+        692524,
+        670967,
+        696745,
+        615166
+      ],
+      "capped_chunks": 0,
+      "kill_nodes_sum": 1848372,
+      "pass_chunk_nodes_sum": 4919824
+    },
+    "resume_protocol": "per-run budget cuts were resumed by passing the kill table as --dead and the solved pass replies as --done (see session 7 log); every chunk completed uncapped",
+    "verification": {
+      "pilot_d6_control": {
+        "loss": false,
+        "nodes": 5949,
+        "note": "reproduced at campaign start"
+      },
+      "fresh_resolves": [
+        {
+          "chunk": [
+            0,
+            42
+          ],
+          "nodes": 219816,
+          "loss": true,
+          "match": true
+        },
+        {
+          "chunk": [
+            34,
+            50
+          ],
+          "nodes": 12317,
+          "loss": true,
+          "match": true
+        },
+        {
+          "chunk": [
+            114,
+            91
+          ],
+          "nodes": 8041,
+          "loss": true,
+          "match": true
+        },
+        {
+          "chunk": [
+            113,
+            50
+          ],
+          "nodes": 34181,
+          "loss": true,
+          "match": true
+        },
+        {
+          "chunk": [
+            21,
+            82
+          ],
+          "nodes": 92425,
+          "loss": false,
+          "match": true
+        }
+      ],
+      "root_enumeration": {
+        "mob": 50,
+        "n_moves": 50,
+        "all_covered_by_kill_table": true,
+        "moves_match_table_exactly": true
+      }
+    },
+    "observed_terminal_stone_range": [
+      13,
+      17
+    ],
+    "orientation": "root mover = loser side; winner = the 7th-stone player (winner_parity=1); verdict = win forced within 10 plies against every defense",
+    "status": "certificate rebuild + independent verification pending (same protocol as bit7: extractor -> 50 sub-root decomposition verification -> union equality -> push)"
+  }
 }
