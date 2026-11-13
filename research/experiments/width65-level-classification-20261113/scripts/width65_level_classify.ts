@@ -107,7 +107,9 @@ function classify(w: number, L: number, from: number, cap: number) {
   const survivors = [...survSet].map(s => s.split(",").map(Number));
   return { w, L, uniqueMasks: unique, totalMaximal: maximal, from, nodes, leaves, aborted, lastDone, uniqueSurvivors: survivors.length, survivors: survivors.slice(0, 10) };
 }
-const CFG = { w: 65, L: 17, from: 975, cap: 1200000, chunksPerRun: 2, control26: false };
+const CFG = { w: 65, L: 17, from: 3296, cap: 1200000, chunksPerRun: 2, control26: false };
+// 完走（2026-11-13）: 全 3,296 maximal mask・leaves=0・生残0（chunks 1-18 本機 REST16・
+// chunks 19-27 は width65-pruning-audit の REST6 2フェーズ機 cap 2.4M）。P(65)=32 → K0798。
 async function main() {
   const out: any = { generated: "2026-11-13", chunks: [] };
   let from = CFG.from;
