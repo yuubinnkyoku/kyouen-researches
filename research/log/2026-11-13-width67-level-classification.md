@@ -1,4 +1,4 @@
-successfully downloaded text file (SHA: 8f0c49d3f914b3b7056295961e5ab05397b6f5a8)successfully downloaded text file (SHA: 33e7c176f6ca46bfc37d728c9d472ae17300d8af)successfully downloaded text file (SHA: fecb68844b9760fbf369d5b96e8c4ca86b1649f5)# 2026-11-13 高速レーン: w=67 キャンペーン開始（K0799 P(66)=32 の直接続編）
+successfully downloaded text file (SHA: 260023327f7a969dedf87d8d2f2af84a955c4bfe)successfully downloaded text file (SHA: 8f0c49d3f914b3b7056295961e5ab05397b6f5a8)successfully downloaded text file (SHA: 33e7c176f6ca46bfc37d728c9d472ae17300d8af)successfully downloaded text file (SHA: fecb68844b9760fbf369d5b96e8c4ca86b1649f5)# 2026-11-13 高速レーン: w=67 キャンペーン開始（K0799 P(66)=32 の直接続編）
 
 K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 決定に必要な
 前提は level 17 全滅掃引のみ（下界は 2210 円 32 点・v-span 94 ≤ 132）。
@@ -122,6 +122,28 @@ K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 
 
 1. **w=67 キャンペーン継続**: CFG.from=1266・resume_from=lastDone を厳守
    （cap 2.4M/chunk・第二 heavy band・~1300± で軽い帯に戻るか注視）。
+2. 完走時は K0801（P(67)=32）に昇格・results/fixed-width/ 追従。
+3. 次の空き K 番号: **K0801**。
+
+11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
+## 第5セッション追記2（同一実行・chunks 22-23・実行終了時点）
+
+1. **chunks 22-23**: mask 1266..1319 を 2 チャンクで完了
+   （chunk22: 1266→1294〔~86k/mask〕・chunk23: 1294→1320〔~92k〕）。
+   本実行の合計: **chunks 12-23 の12チャンクで mask 887→1320（433 mask）・
+   28.8M nodes・leaves=0・生残0・phase2 必要 mask 0件。**
+   キャンペーン累計 **60.0M nodes・1320/3,300 = 40.0%**。
+2. **第二 heavy band は 1320 まで継続**（w=65 終点 1302・w=66 終点 1313 を
+   超えても ~86..104k/mask）。w=67 の第二帯終点は ~1330± 以降。
+   位相が w 毎に僅かずつ右へずれるという観察（第一帯入り口は 772 で不変だが
+   終点は 999→1302→1313→1320+ と右肩上がり）。
+3. 反映: progress JSON（resume_from=1320）・script CFG.from=1320・本追記。
+   反映前 HEAD 628cd815 再取得（並走なし）。
+
+## レジューム（次回の実行）
+
+1. **w=67 キャンペーン継続**: CFG.from=1320・resume_from=lastDone を厳守
+   （cap 2.4M/chunk・1実行1〜2チャンク・第二 heavy band 終点 ~1330± を注視）。
 2. 完走時は K0801（P(67)=32）に昇格・results/fixed-width/ 追従。
 3. 次の空き K 番号: **K0801**。
 
