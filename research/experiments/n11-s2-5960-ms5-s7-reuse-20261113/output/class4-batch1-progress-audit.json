@@ -928,5 +928,29 @@
       "recompute the class-4 frontier from the seven certificates (audit bookkeeping)",
       "propagate toward S2 {59,60} blockers; deeper objects stay UNKNOWN"
     ]
+  },
+  "session17_frontier_update": {
+    "date": "2026-11-14",
+    "trigger": "session 16 next item 1 / session-15 next item 2: recompute the class-2/4 frontier with the seven batch1 WIN7 certificates",
+    "method": "repo audit_class_frontier.py with the added receipts file output/class4-batch1-certificates-verified.json (7 verified WIN7 roots: bit7, bit25, bit18, bit67, bit82, bit117, bit120); snapshot asserts pinned the pre-batch1 baseline and were disabled in the local run only (if False: assert); no repo file changed",
+    "covers": "union of the 7 certificates covers 43 S6 orbits (40 marginal vs baseline), 19 of them in the ms5 manifest",
+    "delta": {
+      "solved_s6_in_manifest": "638 -> 657",
+      "unique_remaining_s6": "7208 -> 7189",
+      "sum_remaining_cost": "565500 -> 564070",
+      "s6_needed_by_open_classes": "5425 -> 5406 (cost 424077)",
+      "best_class2_blocker": "unchanged: 00000000000000003802000008000000, 32 orbits, cost 2206",
+      "best_class4_blocker": "00000000020000003800000080000000: 43 -> 35 remaining S6 orbits, cost 3391 -> 2756 (this S5 is the current lane target; its own S6 child #1 sweep is fully certified)"
+    },
+    "record": "output/class4-batch1-frontier-update-20261114.json",
+    "outputs": [
+      "output/class-frontier-s5-ranking-after-batch1.csv",
+      "output/class-frontier-top-candidates-s6-after-batch1.csv"
+    ],
+    "status": "bookkeeping over published receipts; no new search verdict; class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN; bit7 400-node reserve remains open",
+    "next": [
+      "continue the class-4 lane on the target S5 (35 remaining S6 orbits)",
+      "keep UNKNOWN guards"
+    ]
   }
 }
