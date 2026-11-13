@@ -958,3 +958,48 @@ per-chunk logを候補毎stateに永続化・chunk cap 50M〔native〕・batch�
  audit_class_frontier.py bookkeeping）。
 2. frontier結果をS2 {59,60}のblocker構造へ接続。より深いオブジェクトは UNKNOWN 維持。
 3. 11×11 空盤は UNKNOWN のまま。
+
+## 第17セッション（2026-11-14）: class-4 frontier再計算 — 7証明書がmanifest内S6軌道19件を解決・レーン目標S5の残り43→35軌道
+
+### 作業
+
+- repoの `audit_class_frontier.py` を、新規の検証receiptsファイル
+ `output/class4-batch1-certificates-verified.json`（bit7/25/18/67/82/117/120の7root・
+  session 7/9/16のverify結果）を追加して再実行。スナップショットassertは
+ 事前batch1基準に固定されているため設計通り無効化（ローカル実行のみ
+ `if False: assert` 化・repoファイルは無変更）。
+- 入力は全てmain公開ファイル（win7-reuse-hits・class2系verified JSON 12件・
+  ms5 S6 manifest・remaining/incidences CSV）。
+
+### 結果（全数値はbookkeeping・新たな探索判定ではない）
+
+- **7証明書のcovers和集合は43 S6軌道**（基準比で40件が新規）。うち**manifest内19件が新規解決**:
+ solved&manifest 638 → **657**。unique remaining S6 7208 → 7189・
+ 残コスト 565,500 → 564,070。open class必要S6 5425 → 5406（424,077）。
+- **class-4レーン目標S5 `00000000020000003800000080000000` の残りが43 → 35 S6軌道**
+ （コスト3391 → 2756）。自身のS6 child #1 sweepが全証明済みで、
+ covers経由で自S5の残8軌道を閉じた。
+- class-2最良blockerは不変（`...3802000008000000`・32軌道・2206）。
+
+### 反映（push後読み戻し確認・1コミット1ファイル・並走なし）
+
+- `output/class4-batch1-certificates-verified.json`（7root receipts）
+- `output/class4-batch1-frontier-update-20261114.json`（再計算record・covers分析・frontier差分）
+- `output/class-frontier-s5-ranking-after-batch1.csv`
+- `output/class-frontier-top-candidates-s6-after-batch1.csv`
+- ledger JSON（frontier_session17 + next更新）
+- audit JSON（session17_frontier_update追記）
+- 本コミット: log 第17セッション
+
+### 解釈上の注意（変更なし）
+
+- 本セッションは既存receiptsのbookkeepingのみで、新たな探索判定は無い。
+- class 4・S2 {59,60}・二石root {49,60}・**11×11 空盤はいずれも UNKNOWN**。
+- bit7 の 400 node 集計差の留保は未解決のまま。
+
+### 次回
+
+1. **class-4レーン継続**: 目標S5（残35 S6軌道・2756）の次の子を
+ `class-frontier-top-candidates-s6-after-batch1.csv` の順でsweep・証明書化。
+2. frontierの更新は証明書push毎に再計算（assert基準の更新方法は要検討）。
+3. 11×11 空盤は UNKNOWN のまま。
