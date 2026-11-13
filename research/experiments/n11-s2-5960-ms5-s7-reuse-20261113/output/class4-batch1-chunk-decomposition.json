@@ -406,9 +406,9 @@
     "node counts are v15 units and non-comparable with v14 numbers"
   ],
   "next": [
-    "1) with all 66 candidates classified and the seven certificates pushed, recompute the class-4 frontier (which blocker edges the S6-child-1 certificates close) via the audit bookkeeping",
-    "2) propagate the frontier consequence toward the S2 {59,60} blockers; keep every deeper object UNKNOWN",
-    "3) keep UNKNOWN guards; next ledger milestone is the class-4 frontier consequence statement"
+    "1) continue the class-4 lane: the target S5 00000000020000003800000080000000 now has 35 remaining S6 orbits (cost 2756) - run S6 child sweeps / certificates for the next children in the recomputed ranking (output/class-frontier-top-candidates-s6-after-batch1.csv)",
+    "2) bookkeeping only so far: class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN",
+    "3) keep UNKNOWN guards"
   ],
   "bit25": {
     "candidate": "bit=25 (mob 50), heavy-pending since session 2 (v15 monolithic d10 capped at 950k x3 incl. close-first AND; v14 capped 700k). Second WIN7 candidate found by the chunk campaign.",
@@ -1819,5 +1819,15 @@
     "date": "2026-11-14",
     "summary": "all five session-15 WIN7-D10 candidates now have independently verified certificates on main (with bit7 and bit25: seven total); the S6 child #1 7th-stone sweep is fully classified within depth 10: 7 certified wins, 59 refutations, 66/66 non-degenerate candidates settled",
     "record": "output/class4-batch1-win7-certificates-20261114.json"
+  },
+  "frontier_session17": {
+    "date": "2026-11-14",
+    "summary": "class-2/4 frontier recomputed with the seven batch1 WIN7 certificates: solved manifest S6 orbits 638 -> 657 (+19), unique remaining S6 7208 -> 7189, remaining cost 565,500 -> 564,070; the class-4 lane target S5 00000000020000003800000080000000 drops from 43 to 35 remaining S6 orbits (cost 3391 -> 2756); best class-2 blocker unchanged (32 orbits, 2206)",
+    "method": "repo audit_class_frontier.py recomputation with output/class4-batch1-certificates-verified.json added (asserts disabled locally only)",
+    "record": "output/class4-batch1-frontier-update-20261114.json",
+    "outputs": [
+      "output/class-frontier-s5-ranking-after-batch1.csv",
+      "output/class-frontier-top-candidates-s6-after-batch1.csv"
+    ]
   }
 }
