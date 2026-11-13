@@ -1,0 +1,74 @@
+{
+  "schema": "n11-class4-batch2-child2-sweep-20261114-v1",
+  "date": "2026-11-14",
+  "trigger": "session 17 next item 1: sweep the next S6 child of the class-4 lane target S5 00000000020000003800000080000000",
+  "s6_child": "000000000200000038000000a0000000",
+  "child_note": "cheapest remaining S6 orbit of the lane target S5 (s6_s7_edge_cost 67, per output/class-frontier-top-candidates-s6-after-batch1.csv); the sweep enumerates the non-degenerate 7th-stone candidates of this S6 child",
+  "method": "chunk decomposition per 7th-stone candidate: depth-10 verdict decomposed into chunks of depth 8 (10-2); loser first move m, winner replies enumerated at root+m so r!=m holds structurally; fresh engine per candidate batch; native Node.js at ~470k nodes/s; chunk cap 50M; every candidate completed uncapped",
+  "engine": "v15 verbatim rules (scripts/class4_child1_sweep_engine.ts, inlined in the session-6/7 chunk prover and extractor)",
+  "candidate_count": 67,
+  "result": {
+    "WIN7_D10": 3,
+    "REFUTED_D10": 64,
+    "win7_candidates": {
+      "bit50": {
+        "root_hex": "000000000200000038040000a0000000",
+        "mob": 50,
+        "sweep_nodes": 2107194,
+        "certificate": "output/class4-batch2-certificates/n11_s7_000000000200000038040000a0000000.cert (commit d1bdccf3, 25085 rows)"
+      },
+      "bit77": {
+        "root_hex": "000000000200200038000000a0000000",
+        "mob": 58,
+        "sweep_nodes": 11058432,
+        "certificate": "output/class4-batch2-certificates/n11_s7_000000000200200038000000a0000000.cert (commit 8625f1c5, 54558 rows)"
+      },
+      "bit91": {
+        "root_hex": "000000000a00000038000000a0000000",
+        "mob": 46,
+        "sweep_nodes": 9345201,
+        "certificate": "output/class4-batch2-certificates/n11_s7_000000000a00000038000000a0000000.cert (commit c2da5401, 37305 rows)"
+      }
+    },
+    "refuted_note": "the remaining 64 candidates are REFUTED-D10 (no WIN7 within depth 10 under v15 rules; a deeper win is not excluded). The per-candidate node counts of the REFUTED side were lost in a context compaction of the lane log and are NOT recorded here; only the three WIN7 node counts survived. The verdicts themselves are unaffected and the three WIN7 certificates were independently verified after extraction."
+  },
+  "kill_tables": {
+    "bit77": {
+      "root_mob": 58,
+      "killed_first_moves": 58,
+      "chunks": 420,
+      "total_nodes": 18896573,
+      "m_to_r": {
+        "0": 30, "2": 37, "3": 50, "6": 48, "7": 41, "8": 30, "10": 7, "11": 71, "14": 95, "16": 101, "21": 8, "27": 6, "28": 7, "30": 42, "32": 53, "33": 72, "34": 50, "37": 50, "38": 66, "41": 67, "42": 30, "44": 74, "46": 71, "48": 72, "50": 37, "53": 32, "54": 71, "66": 38, "67": 48, "71": 46, "72": 48, "74": 80, "76": 50, "78": 80, "80": 78, "82": 48, "83": 30, "85": 48, "90": 30, "92": 90, "93": 6, "95": 30, "101": 50, "102": 48, "103": 42, "104": 30, "105": 72, "106": 37, "108": 48, "109": 48, "110": 101, "112": 37, "113": 80, "114": 30, "115": 74, "116": 50, "118": 37, "120": 37
+      }
+    },
+    "bit91": {
+      "root_mob": 46,
+      "killed_first_moves": 46,
+      "chunks": 425,
+      "total_nodes": 14954647,
+      "m_to_r": {
+        "0": 6, "2": 48, "6": 48, "8": 42, "10": 92, "11": 37, "12": 67, "14": 37, "16": 28, "27": 104, "28": 72, "30": 90, "33": 48, "34": 8, "36": 84, "37": 90, "38": 72, "42": 8, "44": 83, "46": 72, "48": 72, "53": 108, "54": 120, "66": 0, "67": 12, "72": 48, "74": 48, "76": 37, "78": 112, "82": 48, "83": 30, "84": 36, "86": 8, "87": 72, "90": 30, "92": 48, "93": 16, "104": 92, "106": 83, "108": 53, "109": 83, "110": 28, "112": 78, "114": 72, "118": 48, "120": 54
+      }
+    },
+    "bit50": {
+      "root_mob": 50,
+      "killed_first_moves": 50,
+      "kill_chunks": 279,
+      "kill_nodes": 3717922,
+      "m_to_r": "not persisted in the surviving lane state (verdict and certificate are independently verified; see the certificate commit d1bdccf3)"
+    }
+  },
+  "covers": {
+    "bit50": 7,
+    "union_of_the_three": 16,
+    "note": "covers() = S6 orbits closed by each certificate; bit50's covers includes the swept S6 child itself"
+  },
+  "interpretation_guard": [
+    "verdicts are WIN7-within-depth-10 / refutation-within-depth-10 under v15 engine rules (published controls); nothing deeper is decided",
+    "REFUTED means only 'no WIN7 within depth 10'; a deeper win is not excluded",
+    "class 4, S2 {59,60}, the two-stone root {49,60} and the 11x11 empty board all remain UNKNOWN",
+    "node counts are v15 units, non-comparable with v14 numbers",
+    "capped runs prove nothing either way; all sweep candidates completed uncapped"
+  ]
+}
