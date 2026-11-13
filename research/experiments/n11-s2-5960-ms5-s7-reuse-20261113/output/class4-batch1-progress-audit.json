@@ -154,11 +154,20 @@
       },
       "25": {
         "d10_nodes_so_far_v15": 950001,
-        "note": "v15 session 2: capped at 950k (and at 450k in a first attempt); mob-50 band is uniformly heavy; not a refutation"
+        "note": "v15 session 2: capped at 950k (and at 450k in a first attempt); mob-50 band is uniformly heavy; not a refutation",
+        "session5_close_and": "v15 session 5: close-first AND variant also capped at 950k on a fresh memo — the d8 -30% does not carry to d10 within the sandbox ceiling"
       },
       "32": {
         "d10_nodes_so_far": 700001,
         "note": "single candidate consumed full 700k node budget; expect >1M nodes; needs dedicated runs or d=8-first"
+      },
+      "34": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k (first mob-56 band candidate tried at full budget); not a refutation"
+      },
+      "81": {
+        "d10_nodes_so_far_v15": 950001,
+        "note": "v15 session 5: fresh-memo default-order d10 capped at 950k; the v14 d10 refutation (323,872 nodes, listed under refuted_d10) remains the standing evidence — this entry only records that v15 cannot reproduce it within 950k nodes"
       },
       "40": {
         "d10_nodes_so_far_v15": 950001,
@@ -272,7 +281,6 @@
       "interpretation": "All 22 probes ended without a verdict: 18 consumed at least 150,000 nodes, while 4 were interrupted below that threshold (bit 78: 149998, bit 84: 49995, bit 103: 49995, bit 118: 149998). Capped runs prove no WIN/LOSS. The observation that the first 18 full-budget probes failed to finish is not evidence that every remaining candidate requires 950k nodes; shorter probes can still discover cheap candidates."
     },
     "not_yet_searched": [
-      "34",
       "54",
       "88",
       "102",
@@ -389,6 +397,29 @@
     ],
     "positive_result": "close-first AND ordering (lossAt children sorted by wscore descending) cuts pilot d8 from 277,800 to 193,556 nodes (-30%); depth-dependent (worse at d6: 7,646 vs 5,949), unproven at d10; candidate engine variant for future runs targeting d8+ stages",
     "recalibration": "the session-2/3 conclusion that the mob-50 band is uniformly heavy is confounded: v15 caps at 950k include candidates v14 finished at 133k-380k of its own units. True v15 costs of most candidates are unknown; the sweep plan should treat v14 numbers as non-reproducible and budget per-candidate runs in v15 units. The remaining 31 unprobed candidates (mob 56-63) and heavy-pending {7,25,32,40,80,87} are, if anything, harder than v15 measurements suggest, not easier",
-    "next": "1) try close-first-AND variant on one heavy-pending candidate (e.g. bit=25) at 950k to test whether the -30% d8 gain carries to d10; 2) continue mob-56 band one candidate per run (34, 54, 88, 102, ...) at 950k cap, close-first-AND variant preferred for d8+; 3) if close-first-AND does not complete any candidate, the sandbox grind is information-poor: switch to external-compute preparation (engine+driver export for a bigger-memory runner) or certificate-chunked decomposition; 4) on win: rebuild certificate, verify with repo verifier, deflate+b64, then class4-batch1-certificates push"
+    "next": "executed in session 5; superseded by session5_sandbox_saturation.next"
+  },
+  "session5_sandbox_saturation": {
+    "date": "2026-11-13",
+    "runs": [
+      { "bit": 25, "ordering": "close-first AND", "depth": 10, "cap": 950000, "capped": true, "loss": false, "terminal_stone_range_seen": [13, 17] },
+      { "bit": 34, "ordering": "default", "depth": 10, "cap": 950000, "capped": true, "loss": false },
+      { "bit": 48, "ordering": "close-first AND", "depth": 10, "cap": 950000, "capped": true, "loss": false },
+      { "bit": 81, "ordering": "default", "depth": 10, "cap": 950000, "capped": true, "loss": false }
+    ],
+    "conclusion": "close-first AND's -30% pilot-d8 gain does NOT carry to d10 within the 950k sandbox ceiling (bit=25 and bit=48 both cap). Four distinct candidates spanning mob 44-56 — including two that v14 refuted at 133k-380k of its own units (48, 81) and the first full-budget mob-56 attempt (34) — all cap in v15 units. Per the session-4 decision rule the sandbox grind is information-poor and the lane switches to external-compute preparation.",
+    "external_runner": {
+      "script": "scripts/class4_child1_runner.ts (commit 3b0603fa)",
+      "design": "per-candidate freshEngine() factory (full memo/fbt/score reset), built-in pilot d6 control (must be loss=false at exactly 5949 nodes or abort), close-first AND gated to depth>=8, JSONL CLI (node --experimental-strip-types, --bits/--depth/--cap/--out/--andclose/--nocontrol), zero dependencies",
+      "validation": {
+        "pilot_d6": "loss=false, 5949 nodes — PASS",
+        "pilot_d8_default": "loss=false, 277,393 nodes — PASS (matches session-3/4)",
+        "pilot_d8_close_and": "loss=false, 193,556 nodes — PASS (matches session-4 -30% measurement)",
+        "bit85_d6_fresh": "loss=false, 13,820 nodes — PASS (matches session-4 default figure)"
+      },
+      "suggested_external_usage": "one process per candidate bit at cap 5M-50M nodes (external machines have no 16MiB/950k limits); order: heavy-pending {7,25,32,40,80,87} plus mob 56-63 band; report JSONL back and record verdicts here",
+      "note": "the runner's node counts are v15-unit and remain non-comparable with v14; verdicts and terminal ranges are the comparable quantities"
+    },
+    "next": "1) run scripts/class4_child1_runner.ts on external compute (start with heavy-pending {7,25,32,40,80,87}, then mob-56 band 34(also re-try externally),54,88,102,...); collect JSONL and fold verdicts into this audit; 2) certificate-chunked decomposition design remains the fallback if external compute is unavailable; 3) win discovery: rebuild certificate, verify with repo verifier (verify_five_terminal_loss7.py copy, winner_parity=1), deflate+b64, then class4-batch1-certificates push; 4) capped runs prove nothing either way — do not record them as refutations"
   }
 }
