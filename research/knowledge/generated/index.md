@@ -768,19 +768,19 @@
 | [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) | 幅21..26の円点数 P(w) ≤ 2⌈w/2⌉−2（k=⌈w/2⌉ 候補点行集合がmod 19で全滅）・w=19,20候補の実現可能性は e∈Z・R'≤2×10⁷ で否定・A=0は厳密不可能 | proposition | proved | rectangles, geometry, variants |
 | [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) | n11 S2{59,60} milestone-5のS7候補監査とblocker類1の条件付き閉鎖 | proposition | computed | verification, certificates, provenance, search-methods |
 | [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md) | 幅21..35の円点数の完全決定 P(22)=18・P(23)=P(24)=20・P(25)=22・P(26)=…=P(35)=24・24点witness円650 — 全称上界 P(w) ≤ 2⌈w/2⌉−4（全w≥21・w≠26）・行分離公式 M_{w,w+1}=w（全奇数w≥21） | proposition | proved | rectangles, geometry, variants |
-| [K0785](../items/K0785-circle-26-points-min-row-span.md) | 26点円の最小行スパン43（中心窓で全称・R=2210は一意）と34..48点の上界（円11050）— 本文は未投入のプレースホルダ | proposition | needs-review | rectangles, geometry, variants |
+| [K0785](../items/K0785-circle-26-points-min-row-span.md) | 26点円の中心窓最小幅43（E族・R=2210一意）とZ族58 — 全称証明、bestK表（E K=13..24・Z K=13..18 全称） | proposition | proved | rectangles, geometry, variants |
 | [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) | 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35） | proposition | computed | rectangles, geometry, variants |
-<<<<<<< HEAD
 | [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) | 貪欲＋破壊再構成と温暖開始の反復でQ_2531は1256点以上、Q_3251は1601点以上の安全集合を持つ（独立整数幾何監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
-=======
-| [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md) | 貪欲＋破壊再構成でQ_2531は1246点以上、Q_3251は1598点以上の安全集合を持つ（独立整数幾何監査済み） | proposition | computed | maximum-safe, geometry, search-methods |
 | [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) | 幅36..48の円点数の完全決定 P(36)..P(42)=24・P(43)=26・P(44)=P(45)=28・P(46)=P(47)=30・P(48)=32 — level分類のstreaming bitset DFS完了・g0証明書のconvention B厳密化（既存定理は不変） | proposition | computed | rectangles, geometry, variants |
 | [K0789](../items/K0789-width19-21-pw16-certificate.md) | 幅19..21の円点数の完全決定 P(19)=P(20)=P(21)=16 — 基底18法生残16集合が素数冪（11²・7³）のみで全滅 — K0778の条件付き上界を無条件等号に強化・P(w)は全幅6..48で決定済みに | proposition | proved | rectangles, geometry, variants |
 | [K0790](../items/K0790-width49-55-pw32-plateau.md) | 幅49..55の円点数の完全決定 P(49)=…=P(55)=32 — 32点プラトーがw=55まで平らに継続 — P(w)は全幅6..55で決定済み・level 17の復活点は(55,83]に特定 | proposition | proved | rectangles, geometry, variants |
-| [K0791](../items/K0791-circle-34pt-witness-verified.md) | 11050円（奇奇実現）witnessの完全検証と34点帯のwitness掃引 — K0785下界の独立確認・K0790注記の訂正（level 17復活点(55,83]は維持）・R′≤10⁷で34点の最小幅はちょうど83 | proposition | proved | rectangles, geometry, variants |
+| [K0791](../items/K0791-circle-34pt-witness-verified.md) | 11050円（奇奇実現）witnessの完全検証と34点帯のwitness掃引 — K0785下界の独立確認・K0790注記の訂正（level 17復活点(55,83]は維持）・R′≤10⁸で34点の最小幅はちょうど83 | proposition | proved | rectangles, geometry, variants |
 | [K0792](../items/K0792-width56-pw32-plateau-extension.md) | 幅56..59の円点数の完全決定 P(56)=…=P(59)=32 — 32点プラトーがw=59まで継続 — P(w)は全幅6..59で決定済み・level 17の復活点は(59,83]に狭窄・g4会計はw=65で飽和 | proposition | proved | rectangles, geometry, variants |
 | [K0793](../items/K0793-width60-63-pw32-plateau-extension.md) | 幅60..63の円点数の完全決定 P(60)=…=P(63)=32 — 32点プラトーがw=63まで継続 — P(w)は全幅6..63で決定済み・level 17の復活点は(63,83]に狭窄・ノード成長則は×1.27へ漸減 | proposition | proved | rectangles, geometry, variants |
 | [K0794](../items/K0794-width64-pw32-accounting-range-complete.md) | 幅64の円点数 P(64)=32 と現行g0会計の有効全範囲完走 | proposition | proved | rectangles, geometry, variants |
 | [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) | 固定幅盤のP(w)とM_{w,q}の横断表 — 合成分離帯 M_{w,q}=q−1（q≥max(P(w),w)+1・w=6..64）の統一とresults/統合 | proposition | proved | rectangles, geometry, variants, grundy |
 | [K0796](../items/K0796-two-row-m24-stabilization-nine.md) | 2×m・q=4の真の満容量安定化長はM_{2,4}=9 — K0069の十分長さ9が最小であることが確定 | proposition | proved | rectangles, variants, grundy |
->>>>>>> origin/main
+| [K0797](../items/K0797-g0-accounting-valid-through-w84.md) | convention B g0会計の有効範囲は拡張法でw≤84に延長 — g4形は壁でなく真の壁はg3形（類サイズ29）— P(65)..P(84)の決定に必要な非標準形前提が復活点下界83をちょうどカバー | proposition | proved | rectangles, geometry, variants |
+| [K0798](../items/K0798-width65-pw32-plateau-completion.md) | 幅65の円点数の完全決定 P(65)=32 — 32点プラトーがw=49..65に拡大・P(w)は全幅6..65で決定済み・level 17の復活点は(65,83]・REST6 2フェーズ機の完走検証 | proposition | proved | rectangles, geometry, variants |
+| [K0799](../items/K0799-width66-pw32-plateau-completion.md) | 幅66の円点数の完全決定 P(66)=32 — 32点プラトーがw=49..66に拡大・P(w)は全幅6..66で決定済み・level 17の復活点は(66,83]・w=66キャンペーン完走（REST6 2フェーズ・23チャンク・54.8M nodes） | proposition | proved | rectangles, geometry, variants |
+| [K0800](../items/K0800-joint-g0-accounting-w114.md) | convention B g0会計の合同フロンティアはjoint合同証明書でw≤114に延伸 — K0797のg3壁(size29)は単一法解析のアーティファクト — p-チェーン補題で33法は34個の最大素数冪に無損失簡約 | proposition | proved | rectangles, geometry, variants |

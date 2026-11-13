@@ -4622,13 +4622,17 @@
 - ← supports [K0789](../items/K0789-width19-21-pw16-certificate.md): 命題4（P(21) open）を閉鎖。w=21 level 9 の生残16集合を拡張法で全滅させ P(21)=16 を確定。P(w) の全幅決定（6..48）の最後の欠片
 - ← depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): level 全滅原理・窓マスク候補生成・意味論
 
-## [K0785](../items/K0785-circle-26-points-min-row-span.md) 26点円の最小行スパン43（中心窓で全称・R=2210は一意）と34..48点の上界（円11050）— 本文は未投入のプレースホルダ
+## [K0785](../items/K0785-circle-26-points-min-row-span.md) 26点円の中心窓最小幅43（E族・R=2210一意）とZ族58 — 全称証明、bestK表（E K=13..24・Z K=13..18 全称）
 
 - ← supports [K0790](../items/K0790-width49-55-pw32-plateau.md): P(83)≧34 により level 17 復活点を (55,83] に特定。w=49..55 では 11050 円は脅威にならない（奇奇実現で22..24点・整数中心実現で16..20点・2210円の32点に及ばない。K0791）
 - ← supports [K0791](../items/K0791-circle-34pt-witness-verified.md): 11050円奇奇実現の全点・窓計数を厳密検証し下界6件を確認。定理A（σ₁₃=43）の本体検証は含まない（K0785の実験ファイルは依然プレースホルダ）
 - ← supports [K0792](../items/K0792-width56-pw32-plateau-extension.md): level 17 復活点を (55,83] から (59,83] に狭窄
 - ← supports [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): level 17 復活点を (59,83] から (63,83] に狭窄
 - ← supports [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): 34点以上が初めて現れる幅の下限を更新
+- ← supports [K0797](../items/K0797-g0-accounting-valid-through-w84.md): 会計有効範囲がK0785のlevel 17復活点下界83をちょうどカバー — w=83,84のlevel 17分類は会計上は正当化可能（DFSコストは別）
+- ← supports [K0798](../items/K0798-width65-pw32-plateau-completion.md): level 17復活点を (59,83] から (65,83] に狭窄
+- ← supports [K0799](../items/K0799-width66-pw32-plateau-completion.md): level 17復活点を (65,83] から (66,83] に狭窄
+- ← supports [K0800](../items/K0800-joint-g0-accounting-w114.md): 会計上の正当化範囲がw≤114に拡大（level 17復活点下界83を超えてカバー・P(w)実務上の寄与はw≤82）
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4641,12 +4645,8 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 共線・共円四点を含まない安全集合の定義
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストが健全・完全・重複なしであることを前提に、辺の非包含で安全性を判定
-<<<<<<< HEAD
 - → supports [K0781](../items/K0781-p2531-no-size-h1-set.md): A(2531)<=1265 と合わせて 1256 <= A(2531) <= 1265
 - → supports [K0775](../items/K0775-p3251-no-size-h1-set.md): A(3251)<=1625 と合わせて 1601 <= A(3251) <= 1625
-=======
-- → supports [K0781](../items/K0781-p2531-no-size-h1-set.md): A(2531)<=1265 と合わせて 1246 <= A(2531) <= 1265
-- → supports [K0775](../items/K0775-p3251-no-size-h1-set.md): A(3251)<=1625 と合わせて 1598 <= A(3251) <= 1625
 
 ## [K0788](../items/K0788-width36-48-exact-circle-point-counts.md) 幅36..48の円点数の完全決定 P(36)..P(42)=24・P(43)=26・P(44)=P(45)=28・P(46)=P(47)=30・P(48)=32 — level分類のstreaming bitset DFS完了・g0証明書のconvention B厳密化（既存定理は不変）
 
@@ -4658,6 +4658,8 @@
 - ← supports [K0786](../items/K0786-width36-48-circle-strip-witnesses.md): 本itemのwitness下界26/28/28/30/30/32（w=43..48）と650円24点（w=36..42）がK0788の等号の下界側。K0788のlevel 13/14..17分類（全滅）で上界側が確定し、両者は一致した
 - ← depends_on [K0789](../items/K0789-width19-21-pw16-certificate.md): g0≧2 証明書の convention B（類変数 t に係数 4g0²）の正当性。本項目の classMax 会計は B で実施
 - ← depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming level 分類機・convention B g0 会計・2210 witness の直接拡張。w=43..48 の跳躍帯に続き 32 を平らに延長
+- ← depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): convention B g0会計（classMax・u奇制限・類変数t）の定式化をそのまま使用
+- ← depends_on [K0800](../items/K0800-joint-g0-accounting-w114.md): convention B g0会計（classMax・u奇制限・類変数t）の定式化をそのまま使用
 
 ## [K0789](../items/K0789-width19-21-pw16-certificate.md) 幅19..21の円点数の完全決定 P(19)=P(20)=P(21)=16 — 基底18法生残16集合が素数冪（11²・7³）のみで全滅 — K0778の条件付き上界を無条件等号に強化・P(w)は全幅6..48で決定済みに
 
@@ -4677,8 +4679,10 @@
 - ← supports [K0791](../items/K0791-circle-34pt-witness-verified.md): K0790本文「11050円はw=49..83で16..20点・witnessは別円族（要確認）」を訂正。奇奇実現は22..34点。命題P(49..55)=32自体には影響なし
 - ← depends_on [K0792](../items/K0792-width56-pw32-plateau-extension.md): streaming 分類機・意味論・2210 witness の直接拡張。32 プラトーを w=55 から w=59 へ延長
 - ← depends_on [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): 分類機・mod 9×11 maximal mask 候補生成・×1.36 成長則（本項目で×1.27..1.31 への漸減を観測）
+- ← depends_on [K0798](../items/K0798-width65-pw32-plateau-completion.md): streaming分類機・意味論・2210 witness
+- ← depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): streaming分類機・意味論・2210 witness
 
-## [K0791](../items/K0791-circle-34pt-witness-verified.md) 11050円（奇奇実現）witnessの完全検証と34点帯のwitness掃引 — K0785下界の独立確認・K0790注記の訂正（level 17復活点(55,83]は維持）・R′≤10⁷で34点の最小幅はちょうど83
+## [K0791](../items/K0791-circle-34pt-witness-verified.md) 11050円（奇奇実現）witnessの完全検証と34点帯のwitness掃引 — K0785下界の独立確認・K0790注記の訂正（level 17復活点(55,83]は維持）・R′≤10⁸で34点の最小幅はちょうど83
 
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 11050円奇奇実現の全点・窓計数を厳密検証し下界6件を確認。定理A（σ₁₃=43）の本体検証は含まない（K0785の実験ファイルは依然プレースホルダ）
 - → supports [K0790](../items/K0790-width49-55-pw32-plateau.md): K0790本文「11050円はw=49..83で16..20点・witnessは別円族（要確認）」を訂正。奇奇実現は22..34点。命題P(49..55)=32自体には影響なし
@@ -4703,6 +4707,8 @@
 - → depends_on [K0793](../items/K0793-width60-63-pw32-plateau-extension.md): 同じlevel分類とg0会計を幅64に拡張
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 34点以上が初めて現れる幅の下限を更新
 - ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): P(w)全幅確定（w=6..64）の最終幅。合成帯の全幅性はK0763..K0794に依存
+- ← depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): K0794レジューム(1)への回答。会計有効範囲をw≤64からw≤84に延長し、『g4が唯一の壁』の帰結を訂正（真の壁はg3）
+- ← depends_on [K0798](../items/K0798-width65-pw32-plateau-completion.md): w=64完了機の直接拡張（3ワード化）。32プラトーを w=64 から w=65 へ延長
 
 ## [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md) 固定幅盤のP(w)とM_{w,q}の横断表 — 合成分離帯 M_{w,q}=q−1（q≥max(P(w),w)+1・w=6..64）の統一とresults/統合
 
@@ -4719,4 +4725,33 @@
 - → supports [K0068](../items/K0068-standard-fixed-width-parity-threshold.md): 十分長さT_2=9が最小であることを確定（真の安定化長と一致）
 - → supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): results表の(2,4)行をbounds（≤9・最小性未検証）からexact-threshold（9・proved）へ昇格
 - → depends_on [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): 確定閾値リスト（5件）に続き2行盤の確定値を追加
->>>>>>> origin/main
+
+## [K0797](../items/K0797-g0-accounting-valid-through-w84.md) convention B g0会計の有効範囲は拡張法でw≤84に延長 — g4形は壁でなく真の壁はg3形（類サイズ29）— P(65)..P(84)の決定に必要な非標準形前提が復活点下界83をちょうどカバー
+
+- → depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): convention B g0会計（classMax・u奇制限・類変数t）の定式化をそのまま使用
+- → depends_on [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): K0794レジューム(1)への回答。会計有効範囲をw≤64からw≤84に延長し、『g4が唯一の壁』の帰結を訂正（真の壁はg3）
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 会計有効範囲がK0785のlevel 17復活点下界83をちょうどカバー — w=83,84のlevel 17分類は会計上は正当化可能（DFSコストは別）
+- ← depends_on [K0798](../items/K0798-width65-pw32-plateau-completion.md): g0会計のw=65有効性（拡張法33法・g4形classMax=5）・非標準形前提の正当化
+- ← depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): g0会計のw=66有効性（拡張法33法・g4形classMax=5・w≦84）・非標準形前提の正当化
+- ← depends_on [K0800](../items/K0800-joint-g0-accounting-w114.md): K0797レジューム(2)「g3 size≥29を切る非合同式手法」への回答。単一法フロンティアw≤84をjoint合同証明書でw≤114に延伸し「合同式以外の手法が必要」限界記述を訂正
+
+## [K0798](../items/K0798-width65-pw32-plateau-completion.md) 幅65の円点数の完全決定 P(65)=32 — 32点プラトーがw=49..65に拡大・P(w)は全幅6..65で決定済み・level 17の復活点は(65,83]・REST6 2フェーズ機の完走検証
+
+- → depends_on [K0794](../items/K0794-width64-pw32-accounting-range-complete.md): w=64完了機の直接拡張（3ワード化）。32プラトーを w=64 から w=65 へ延長
+- → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=65有効性（拡張法33法・g4形classMax=5）・非標準形前提の正当化
+- → depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming分類機・意味論・2210 witness
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (59,83] から (65,83] に狭窄
+- ← depends_on [K0799](../items/K0799-width66-pw32-plateau-completion.md): w=65完走機・REST6 2フェーズ方式の直接拡張。32プラトーを w=65 から w=66 へ延長
+
+## [K0799](../items/K0799-width66-pw32-plateau-completion.md) 幅66の円点数の完全決定 P(66)=32 — 32点プラトーがw=49..66に拡大・P(w)は全幅6..66で決定済み・level 17の復活点は(66,83]・w=66キャンペーン完走（REST6 2フェーズ・23チャンク・54.8M nodes）
+
+- → depends_on [K0798](../items/K0798-width65-pw32-plateau-completion.md): w=65完走機・REST6 2フェーズ方式の直接拡張。32プラトーを w=65 から w=66 へ延長
+- → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): g0会計のw=66有効性（拡張法33法・g4形classMax=5・w≦84）・非標準形前提の正当化
+- → depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming分類機・意味論・2210 witness
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (65,83] から (66,83] に狭窄
+
+## [K0800](../items/K0800-joint-g0-accounting-w114.md) convention B g0会計の合同フロンティアはjoint合同証明書でw≤114に延伸 — K0797のg3壁(size29)は単一法解析のアーティファクト — p-チェーン補題で33法は34個の最大素数冪に無損失簡約
+
+- → depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): convention B g0会計（classMax・u奇制限・類変数t）の定式化をそのまま使用
+- → depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): K0797レジューム(2)「g3 size≥29を切る非合同式手法」への回答。単一法フロンティアw≤84をjoint合同証明書でw≤114に延伸し「合同式以外の手法が必要」限界記述を訂正
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): 会計上の正当化範囲がw≤114に拡大（level 17復活点下界83を超えてカバー・P(w)実務上の寄与はw≤82）

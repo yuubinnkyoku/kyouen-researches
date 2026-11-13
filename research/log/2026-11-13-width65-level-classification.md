@@ -9,7 +9,7 @@ K0797（g0 会計 w≤84 延長）の直後にレジューム(1)「w=65 標準�
     全て leaves=0・生残0。mask 893..975 の heavy band は 71k..100k nodes/mask で
     ほぼ平坦（chunk あたり 12..17 mask）。resume from=975。
 0c. **第3セッション追記その2（枝刈り監査・別実験に詳細）**:
-    [width65-pruning-audit](../../experiments/width65-pruning-audit-20261113/) で
+    [width65-pruning-audit](../experiments/width65-pruning-audit-20261113/report.md) で
     ①素数冪 121 追加は nodes -10.7% だが word-ops +96.8% で**不採用**（K0789 の
     候補掃引とは逆の結論・コストモデル依存）、②法検査順はほぼ最適（-2.6%）、
     ③heavy band の殺しは6法（19,23,7,29,43,47）に集中し他10法は一度も殺さない、
