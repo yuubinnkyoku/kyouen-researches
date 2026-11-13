@@ -1,8 +1,8 @@
 ---
 id: K0775
-title: 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査）
+title: 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（DRAT証明書を検査済み）
 kind: proposition
-status: needs-review
+status: computed
 topics: [maximum-safe, geometry, search-methods]
 aliases: []
 relations:
@@ -21,15 +21,15 @@ artifacts:
   note: 形状(c)（0＋一完全対＋一空対＋各対一側）の単一CNF。12,998変数・91,135節、sha256 ac06449e...
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1626-shapec/receipt.json
   role: manifest
-  note: ソルバ・実行コマンド・結果・証明書を作らなかった理由の記録
+  note: 7,024,576行・1,649,635,679バイトのDRATを高速検査器でVERIFIED（19,934秒）。CNF/proof/checkerのhash付き
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/shape_class_3251_1626.json
   role: data
   note: 形状(a)(b)のUNSAT記録（3.6秒・5.5秒、200万衝突予算）
 - path: research/log/2026-11-13-p3251-no-size-h1-set.md
   role: log
   note: 発見の経緯と当時の検証状態
-scope: p=3251のみ。形状(a)(b)は既存記録のUNSAT、形状(c)はcadical 1.7.3の既定設定によるUNSAT主張。
-evidence: 形状(a)(b)はshape_class_3251_1626.jsonの記録。形状(c)はCNFのsha256固定済みで、cadicalが`s UNSATISFIABLE`。ただしDRAT証明書は大きすぎて未検査（143MB/212秒時点で中断）。
+scope: p=3251のみ。形状(a)(b)は既存記録のUNSAT、形状(c)はcadical 1.7.3の既定設定によるUNSATで、DRAT証明書を検査済み。
+evidence: 形状(a)(b)はshape_class_3251_1626.jsonの記録。形状(c)はCNFのsha256固定済みで、cadicalが`s UNSATISFIABLE`を返し、そのテキストDRAT（7,024,576行・1.65GB）を drat_check_fast.cpp（K0780）で検査してVERIFIED（19,934秒）。Glucose4も独立にUNSAT（7,197秒）。
 ---
 
 ## 主張
@@ -58,12 +58,16 @@ A(3251) <= 1625 = h
 （証明を出したCNFと同一）。同じ符号化は p=2207 で実際に1104点のモデルを返すので（K0722）、
 符号化自体の健全性は別経路で裏づけられている。
 
+## 検証
+
+- 形状(c)のテキストDRAT（7,024,576行・1,649,635,679バイト、sha256 `e73740f6...`）を
+  `drat_check_fast.cpp`（K0780、削除時にreasonだけ失効させる高速検査器）で検査し **VERIFIED**。
+  検査時間 19,934 秒（5.5 時間）、`checker_rc=0`。
+- 同じ CNF を Glucose4 でも解いて UNSAT（7,197 秒、衝突予算 2,000 万）。二実装一致。
+- 証明書そのものは 1.65 GB なので repo には入れず、CNF と receipt（全 hash）だけを管理する。
+
 ## 限界
 
-- **証明書は未検査**。テキストDRATは 212 秒で 143 MB に達し（全体で 2 GB 超の見込み）、
-  既存の `drat_check_incremental.cpp` は約 1.3k 行/秒なので検査に数日かかる。
-  そのため本項の status は `computed` ではなく `needs-review` とする。
-- 独立ソルバ（Glucose4）での確認を実行中。両ソルバ一致でも「証明書検査」ではない。
 - 下界は K0787 が与える: `A(3251) >= 1610`（独立整数幾何監査済み）。よって
   `1610 <= A(3251) <= 1625`。サイズ `h=1625` の4形状のうち (0,0,0)・(0,1,1)・(1,0,1) は UNSAT、
   (1,1,2) は走行中。

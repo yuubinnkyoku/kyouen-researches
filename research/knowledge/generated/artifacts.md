@@ -11104,7 +11104,7 @@
 - [K0775](../items/K0775-p3251-no-size-h1-set.md) (data): 形状(c)（0＋一完全対＋一空対＋各対一側）の単一CNF。12,998変数・91,135節、sha256 ac06449e...
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1626-shapec/receipt.json](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1626-shapec/receipt.json)
 
-- [K0775](../items/K0775-p3251-no-size-h1-set.md) (manifest): ソルバ・実行コマンド・結果・証明書を作らなかった理由の記録
+- [K0775](../items/K0775-p3251-no-size-h1-set.md) (manifest): 7,024,576行・1,649,635,679バイトのDRATを高速検査器でVERIFIED（19,934秒）。CNF/proof/checkerのhash付き
 ## [research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz](../../../research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3251-1627/a3251_1627.drat.gz)
 
 - [K0708](../items/K0708-p3251-no-parabola-equality-witness.md) (certificate): 上記のDRAT証明（gzip、SHA-256はreceipt.json）

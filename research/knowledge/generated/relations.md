@@ -4541,7 +4541,7 @@
 - → depends_on [K0334](../items/K0334-residue-parabola-nae-origin-decomposition.md): 四点のパラメータ和0 mod pは整数共円性の必要条件にすぎないという限定
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 完全対{t,p−t}の数え上げが使う反射t↦p−tの正当化との対比
 
-## [K0775](../items/K0775-p3251-no-size-h1-set.md) 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（ソルバ主張、証明書未検査）
+## [K0775](../items/K0775-p3251-no-size-h1-set.md) 剰余放物線Q_3251はサイズh+1=1626の集合を持たず、上界はh=1625に下がる（DRAT証明書を検査済み）
 
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2と、サイズh+1の集合が(x,c,e)で3形状に尽きること
 - → depends_on [K0708](../items/K0708-p3251-no-parabola-equality-witness.md): サイズh+2=1627の不存在（単一CNF・監査済み）からA(3251)<=1626、本項はそこから1下げる
