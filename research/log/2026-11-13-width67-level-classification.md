@@ -1,4 +1,4 @@
-# 2026-11-13 高速レーン: w=67 キャンペーン開始（K0799 P(66)=32 の直接続編）
+successfully downloaded text file (SHA: fecb68844b9760fbf369d5b96e8c4ca86b1649f5)# 2026-11-13 高速レーン: w=67 キャンペーン開始（K0799 P(66)=32 の直接続編）
 
 K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 決定に必要な
 前提は level 17 全滅掃引のみ（下界は 2210 円 32 点・v-span 94 ≤ 132）。
@@ -33,6 +33,30 @@ K0799 完走直後に着手。K0797 会計は w ≤ 84 で有効なので P(67) 
    （CFG.from=770・resume_from=lastDone を厳守・cap 2.4M/chunk・1実行1チャンク）。
 2. 完走時は K0800（P(67)=32）に昇格・results/fixed-width/ 追従
    （pw_circle_point_max.csv・mwq_stabilization.csv・README）。
+3. 次の空き K 番号: **K0800**。
+
+11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
+
+## 第2セッション（chunks 4-8・heavy band 開始）
+
+1. **chunks 4-8**: mask 770..839 を 5 チャンク（各 2.4M nodes cap）で完了。
+   chunk4: 770→777（**~343k/mask・heavy band 開始**）・chunk5: 777→789（~200k）・
+   chunk6: 789→807（~133k・減衰）・chunk7: 807→820（~185k・再上昇）・
+   chunk8: 820→840（~120k）。
+   **累計 21.6M nodes・leaves=0・生残0・phase2 必要 mask 0件**
+   （840/3,300 = 25.5%）。resume from=840。
+2. **heavy band 入り口は w=66 の約3倍重い**（~343k vs ~114k/mask）。
+   総ノードは ×1.35 則の ~74M を上振れする可能性（第一帯の幅・dip 構造次第）。
+   heavy band 位相自体は 99 周期窓構造で w=65/66 とほぼ同位置
+   （開始 ~770..772）という観察は維持。
+3. 反映: progress JSON 更新（bdf42bf・resume_from=840）。
+   反映前 HEAD 6c323de4 再取得で並走なし。
+
+## レジューム（次回の実行）
+
+1. **w=67 キャンペーン継続**: CFG.from=840・resume_from=lastDone を厳守
+   （cap 2.4M/chunk・1実行1チャンク・heavy band 継続中）。
+2. 完走時は K0800（P(67)=32）に昇格・results/fixed-width/ 追従。
 3. 次の空き K 番号: **K0800**。
 
 11×11 空盤・二石 root {49,60} は **UNKNOWN**（長期レーン）。
