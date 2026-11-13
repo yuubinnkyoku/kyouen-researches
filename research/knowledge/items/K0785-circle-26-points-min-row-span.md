@@ -16,6 +16,9 @@ artifacts:
 - path: research/experiments/circle-26pt-min-rowspan-20261112/scripts/circle_26pt_min_rowspan.ts
   role: solver
   note: "単独再現機械（STAGE分割: E/O/Z全数列挙＋witness検証）"
+- path: research/experiments/circle-34pt-witness-scan-20261113/scripts/circle_34pt_witness_scan.ts
+  role: verifier
+  note: "K0791: 11050円奇奇実現の全48点・窓計数の厳密検証＋34点帯掃引（定理Aの検証を含まない）"
 scope: "連続整数行の円の格子点数。2026-11-13時点では見出しのみで、主張・根拠・限界の本文が未投入。"
 evidence: "未投入。コミット9d6cfc8b/a8cc2daf/42359e98/4d5670c7 が置いた本文・report・output・logはいずれも `<KITEM>` / `<REPORT>` / `<OUTPUT>` / `<LOG>` というプレースホルダで、検証できる内容が無い。"
 ---
@@ -36,3 +39,12 @@ evidence: "未投入。コミット9d6cfc8b/a8cc2daf/42359e98/4d5670c7 が置い
   コミットメッセージにしか存在せず、本文・report・output からは検証できない。
 - 著者による本文と report / output の投入後に status と relations を付け直す必要がある。
 - K0786（幅36..48の円ストリップ証人）との役割分担も未投入。
+
+## 独立検証（2026-11-13・K0791）
+
+下界部分（円11050による P(83)≥34・P(87)≥36・P(94)≥38・P(96)≥40・P(101)≥44・P(106)≥48）は
+K0791 で厳密検証された: 円 (2x−105)²+(2y−105)²=11050（奇奇実現）は48整数点・24行・
+行スパン105を持ち、窓計数が上記下界を全て再現（2実装経路で一致）。
+R′≤10⁷ の全掃引（3原始実現・29,832円）でも 34点を w≤82 に収める円は存在しない。
+定理A（σ₁₃=43・R=2210一意）の本体と E/O/Z 列挙の検証は依然として未実施であり、
+本項目の status: needs-review は維持される。
