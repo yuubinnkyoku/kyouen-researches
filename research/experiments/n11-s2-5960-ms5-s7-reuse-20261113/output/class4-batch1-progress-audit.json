@@ -584,5 +584,62 @@
     "consequence": "heavy-pending is now {40,80,87,34} plus unprobed candidates; the chunk method closes both directions (bit85 refuted, bit7/bit25 WIN7, bit32 refuted) at 1.7M-15.9M nodes per candidate, resumable and uncapped",
     "status": "refutation of WIN7-within-depth-10 only: bit=32 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
     "next": "1) chunk campaigns for heavy-pending {40,80,87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
+  },
+  "session10_bit40_chunk_campaign": {
+    "date": "2026-11-14",
+    "trigger": "session9_bit32_chunk_campaign.next item 1 executed: chunk campaign for heavy-pending bit=40 (mob 50; v15 monolithic d10 capped at 950k x2, close-first AND not tried; v14 capped at 280k/950k in earlier sessions)",
+    "verdict": "REFUTED within depth 10: lossAt(root,10)=false via witness m=8 - all 44 winner replies at root+8 solved uncapped with loss=false; 5 other first moves killed before the witness was found; 44 first moves unexamined (not needed for the verdict)",
+    "root_hex": "00000000020000003800010080080000",
+    "totals": {
+      "nodes": 3101124,
+      "runs": 5,
+      "batch_nodes": [
+        656192,
+        650950,
+        660051,
+        650062,
+        483869
+      ],
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 162444,
+      "chunks_total": 85,
+      "kill_chunks": 5,
+      "pass_chunks": 80
+    },
+    "kill_table": {
+      "0": 18,
+      "2": 90,
+      "3": 85,
+      "6": 84,
+      "7": 18
+    },
+    "method_note": "replies enumerated from the legal-move list AT root+m (m occupied) so r != m holds structurally - the bit32 r===m driver-bug class cannot occur with this enumeration",
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes at the start of every run (5/5 PASS)",
+      "determinism_fresh_resolves": {
+        "(8,44)": {
+          "loss": false,
+          "nodes": 79103
+        },
+        "(8,104)": {
+          "loss": false,
+          "nodes": 68443
+        },
+        "(0,18)": {
+          "loss": true,
+          "nodes": 28157
+        },
+        "(2,90)": {
+          "loss": true,
+          "nodes": 97107
+        }
+      },
+      "note": "all four fresh re-solves identical to the campaign chunk records (node counts and verdicts)"
+    },
+    "record": "output/class4-batch1-bit40-campaign.json",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (bit40 entry)",
+    "consequence": "heavy-pending is now {80,87,34} plus unprobed candidates; third chunk-method refutation overall (bit85, bit32, bit40) alongside two WIN7 certificates (bit7, bit25) - the method closes both directions at 1.7M-15.9M nodes per candidate",
+    "status": "refutation of WIN7-within-depth-10 only: bit=40 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
+    "next": "1) chunk campaigns for heavy-pending {80,87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
   }
 }
