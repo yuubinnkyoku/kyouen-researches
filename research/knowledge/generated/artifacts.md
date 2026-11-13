@@ -8553,10 +8553,16 @@
 - [K0773](../items/K0773-s2-5960-oracle-corruption-ms5-worklist.md) (source): 94オラクル鍵+14 LOSS S6鍵を埋込み（s5_verdicts.json由来・自己assert 78+16/3,868/14）、 orbit-level blocker特定・196 S5会計・settled-10判定・7,867/615,497 manifest生成を 再実行する自己完結TS検証script（anchor不一致でthrow）
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/additional-candidates.csv.gz)
 
-- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加6309件。moveは正規化されたs6の座標で未分類
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 追加6309件。moveは正規化されたs6の座標
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-classification-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-classification-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 条件付き先手LOSSと未確定候補の内訳
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/candidate-completeness-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全15072件と公開表に欠ける6309件の集計
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/classified-candidates.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/classified-candidates.csv.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 全候補の照合結果。possible_first_winは証明済み勝利ではない
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_reuse_candidates_part1.csv)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 候補S7表 s7_hex,s6_hex,move,cat（1=既知LOSS子、2=プール候補）。part1..3で計8,763行
@@ -8566,9 +8572,18 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/published-candidates-audit.json)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 公開行の限定監査結果とmove座標の注意
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/win7-reuse-audit.json](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/win7-reuse-audit.json)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 534証人対・498親と削減後の件数・コスト
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/win7-reuse-hits.csv.gz](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/win7-reuse-hits.csv.gz)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (data): 各親の勝ち手・子・証明書監査記録の所在とハッシュ
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_additional_geometry.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_additional_geometry.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 追加候補の安全性を独立な行列式判定で確認
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_classification.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_classification.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 既存の条件付きLOSS6と証明書監査記録に照らし全候補を分類
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_candidate_completeness.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 公開オラクル94位置の全対称像からS6ワークリスト上の合法な補完候補を全列挙
@@ -8578,6 +8593,12 @@
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_candidates.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_published_candidates.py)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 公開行の安全性・親子関係・件数を独立検査。候補の完全性や分類の正当性は検査しない
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_reused_witnesses.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_reused_witnesses.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 抽出された勝ち子の合法性と証明書監査記録を個別照合
+## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_win7_reuse.py](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_win7_reuse.py)
+
+- [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (verifier): 公開WIN7監査記録を全S6ワークリストと照合
 ## [research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts](../../../research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/ms5_s7_reuse_analysis.ts)
 
 - [K0783](../items/K0783-n11-ms5-worklist-derivation-verified-and-s7-reuse-partition.md) (source): コメントのみで実行本体は未公開。再導出・再分類の再現器としては使用できない

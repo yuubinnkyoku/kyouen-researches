@@ -3,7 +3,9 @@
 ## 後続監査の注意
 `scripts/ms5_s7_reuse_analysis.ts` はコメントのみで実行本体がなく、下記の再導出・分類を再実行できない。`scripts/audit_published_candidates.py` は公開済み行の安全性・親子関係・件数を検査するが、網羅性や分類を検証しない。現在の評価は K0783 を参照。
 
-後続の全列挙 `scripts/audit_candidate_completeness.py` により、下記の8,763件は完全ではなく、94オラクルの全対称像を使うと15,072件あることが判明した。追加6,309件は `output/additional-candidates.csv.gz` に収録し、その安全性は別の行列式検査でも確認した。追加分は勝敗未分類。候補のない親は下記の1,591個ではなく611個。
+後続の全列挙 `scripts/audit_candidate_completeness.py` により、下記の8,763件は完全ではなく、94オラクルの全対称像を使うと15,072件あることが判明した。追加6,309件は `output/additional-candidates.csv.gz` に収録し、その安全性は別の行列式検査でも確認した。候補のない親は下記の1,591個ではなく611個。
+
+さらに `scripts/audit_win7_reuse.py` でリポジトリ内のWIN7監査記録を照合すると、534親子対・498親に勝ち子が見つかり、残りは7,369親となる。監査記録を前提にした結果で、別保管の証明書本体は再検証していない。照合表は `output/win7-reuse-hits.csv.gz` を参照。
 
 候補CSVの `move` は正規化済み `s6_hex` にそのまま適用できるとは限らない。親の対称像を試し、空き位置 `move` を加えた子の正規形が `s7_hex` に一致する像を選ぶ。part2とpart3にはCSVヘッダーがない。
 
