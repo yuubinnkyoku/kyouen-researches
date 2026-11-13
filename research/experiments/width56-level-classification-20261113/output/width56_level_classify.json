@@ -34,6 +34,25 @@
   "totalNodes": 5045586, "leaves": 0, "ppKills": 0, "uniqueSurvivors": 0,
   "verdict": "level 17 fully dead at w=57 with the original 16-mod set; heavy band was localized to masks ~700..950 (per-mask 171..53,659); node growth vs w=56: x1.36 (on the K0790 law)"
  },
+ "w58_L17": {
+  "uniqueMasks": 2997, "totalMaximal": 2997,
+  "chunks": [
+   {"range": [0, 350], "nodes": 353457},
+   {"range": [350, 700], "nodes": 231435},
+   {"range": [700, 750], "nodes": 962010},
+   {"range": [750, 800], "nodes": 662628},
+   {"range": [800, 860], "nodes": 1012655},
+   {"range": [860, 920], "nodes": 795463},
+   {"range": [920, 1000], "nodes": 33636},
+   {"range": [1000, 1050], "nodes": 77217},
+   {"range": [1050, 1241], "nodes": 1200000, "note": "node-cap chunk: masks 1050..1240 fully done, cap hit inside mask 1241 (re-run as [1241,...] next)"},
+   {"range": [1241, 2507], "nodes": 1200000, "note": "node-cap chunk: masks 1241..2506 fully done, cap hit inside mask 2507"},
+   {"range": [2507, 2997], "nodes": 422708}
+  ],
+  "totalNodes": 6951209, "leaves": 0, "ppKills": 0, "uniqueSurvivors": 0,
+  "verdict": "level 17 fully dead at w=58 with the original 16-mod set; heavy band shifted to masks ~700..920 plus a broad mid band 1050..2500; total 6,951,209 nodes vs x1.36-law prediction ~6.86M (x1.38 actual); survival frontier: no leaf ever reached depth 17",
+  "accounting": "g0 convention B: g2 evens 8 / uodds 8, g3 12, g4 class 15 - all < 17"
+ },
  "control_w26_L12": { "nodes": 1111, "leaves": 1, "uniqueSurvivors": 1,
   "survivor": [0,1,3,4,7,10,15,18,21,22,24,25],
   "note": "S* exactly 1 survivor - matches K0782/K0784/K0788/K0790" },
@@ -54,10 +73,10 @@
   "perW_49to67_all": 32,
   "note": "v-span 94 <= 2(w-1) for all w>=49, so all 32 points fit every w>=49; P(w)>=32 for all w>=49" },
  "claims": {
-  "exact": {"56": 32, "57": 32},
-  "accounting": "level 17 dead at w=56 (3,714,156 nodes) and w=57 (5,045,586 nodes), leaves=0 both => d+s<=16 => P<=32; g0>=2 forms: classMax g2=8 (uodd, convention B), g3=11, g4 class 14/15, all <17; witness 2210 circle gives P>=32",
-  "closure": "P(w) now closed for all w=6..57; level-17 revival point narrowed from (55,83] to (57,83] (K0785 P(83)>=34)",
-  "nodeGrowth": "w=56: 3,714,156; w=57: 5,045,586 (x1.36, exactly on the K0790 growth law)",
+  "exact": {"56": 32, "57": 32, "58": 32},
+  "accounting": "level 17 dead at w=56 (3,714,156 nodes), w=57 (5,045,586 nodes), w=58 (6,951,209 nodes), leaves=0 all => d+s<=16 => P<=32; g0>=2 forms: classMax g2=8 (uodd, convention B), g3 11..12, g4 class 14..15, all <17; witness 2210 circle gives P>=32",
+  "closure": "P(w) now closed for all w=6..58; level-17 revival point narrowed from (57,83] to (58,83] (K0785 P(83)>=34)",
+  "nodeGrowth": "w=56: 3,714,156; w=57: 5,045,586 (x1.36); w=58: 6,951,209 (x1.38) - on the K0790 growth law",
   "negativeObservation": "inline prime-power mods (49/121/343 in DFS) do NOT accelerate: per-node cost x12 dominates over pruning gain on heavy masks (w=57 mask 700..740: leaf-certificate 394k nodes vs inline deadline exceed)"
  }
 }
