@@ -719,5 +719,82 @@
     "consequence": "heavy-pending is now {87,34} plus unprobed candidates; fourth chunk-method refutation overall (bit85, bit32, bit40, bit80) alongside two WIN7 certificates (bit7, bit25); cost spread reconfirmed: 1.70M / 3.10M / 6.01M / 15.88M nodes across refuted candidates - per-candidate budget estimation mandatory",
     "status": "refutation of WIN7-within-depth-10 only: bit=80 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
     "next": "1) chunk campaigns for heavy-pending {87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
+  },
+  "session13_bit87_chunk_campaign": {
+    "date": "2026-11-14",
+    "trigger": "session11_bit80_chunk_campaign.next item 1 executed: chunk campaign for heavy-pending bit=87 (mob 49; v14 monolithic d10 capped at 700k with no verdict since session 1)",
+    "verdict": "REFUTED within depth 10: lossAt(root,10)=false via witness m=36 - all 43 winner replies at root+36 solved uncapped with loss=false; 12 other first moves killed before the witness was found (13th examined); 36 first moves unexamined (not needed for the verdict)",
+    "root_hex": "00000000018000003800000080080000",
+    "totals": {
+      "nodes": 6177830,
+      "runs": 10,
+      "batch_nodes": [
+        681914,
+        749509,
+        621891,
+        630314,
+        609968,
+        686697,
+        648812,
+        605978,
+        603920,
+        338827
+      ],
+      "capped_chunks": 0,
+      "single_chunk_max_nodes": 213728,
+      "chunks_total": 123,
+      "kill_chunks": 12,
+      "protocol_note": "per-chunk node logs were NOT persisted during this campaign (protocol difference vs bit80); batch totals and log-row counts recorded instead; future campaigns should persist per-chunk logs in the state file (ledger next item 1)"
+    },
+    "kill_table": {
+      "0": 40,
+      "2": 81,
+      "4": 28,
+      "7": 70,
+      "8": 83,
+      "10": 67,
+      "11": 43,
+      "15": 70,
+      "25": 37,
+      "28": 50,
+      "33": 25,
+      "34": 50
+    },
+    "method_note": "replies enumerated from the legal-move list AT root+m (m occupied) so r != m holds structurally; run budget ~590k nodes, chunk cap 300k, resumable state file /home/user/b87/state.json",
+    "controls": {
+      "pilot_d6": "loss=false, 5,949 nodes (PASS; published v15 control)",
+      "witness_coverage": "root+36 has 43 legal winner replies; the campaign done-set for m=36 contains exactly 43 entries, all loss=false, all uncapped - complete coverage (missing 0)",
+      "determinism_two_independent_executions": {
+        "chunks": {
+          "(0,40)": {
+            "loss": true,
+            "nodes": 80233
+          },
+          "(10,67)": {
+            "loss": true,
+            "nodes": 52102
+          },
+          "(25,37)": {
+            "loss": true,
+            "nodes": 29291
+          },
+          "(36,70)": {
+            "loss": false,
+            "nodes": 11284
+          },
+          "(36,116)": {
+            "loss": false,
+            "nodes": 48463
+          }
+        },
+        "note": "fresh re-solves of 3 kill chunks and 2 witness pass chunks in TWO independent executions agreed to the node; recorded-count matching (bit80 protocol) unavailable because per-chunk logs were not persisted"
+      },
+      "root_mob_recheck": "mob 49 confirmed by direct enumeration (PASS)"
+    },
+    "record": "output/class4-batch1-bit87-campaign.json",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (bit87 entry)",
+    "consequence": "heavy-pending is now {34} plus unprobed candidates; fifth chunk-method refutation overall (bit85, bit32, bit40, bit80, bit87) alongside two WIN7 certificates (bit7, bit25); cost spread reconfirmed: 1.70M / 3.10M / 6.01M / 6.18M / 15.88M nodes - mob-49 band splits (bit32 15.88M vs bit87 6.18M), per-candidate budget estimation mandatory",
+    "status": "refutation of WIN7-within-depth-10 only: bit=87 may still be a win at greater depth. Class 4 / S2 {59,60} / two-stone root {49,60} / 11x11 empty board all remain UNKNOWN. The bit7 400-node aggregation discrepancy reserve remains open.",
+    "next": "1) chunk campaign for heavy-pending {34} (mob 56, first of the mob-56 band) then the unprobed candidate list, with certificate protocol on any WIN; persist per-chunk node logs; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
   }
 }
