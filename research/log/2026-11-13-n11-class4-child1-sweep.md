@@ -444,3 +444,47 @@ d10 での効果は未検証（bit95 close-AND >756k capped で有意差未確�
 2. 外部計算資源が使える場合は scripts/class4_child1_runner.ts で cap 5M-50M を投入。
 3. 証明書はプレーンテキスト運用（md5 記録）。読み戻し検証と union 等価チェックを
    プロトコルの標準部分とする。
+
+## 第8セッション（2026-11-13、長期レーン）: bit25 chunkキャンペーン — 2件目のWIN7候補（全50初手 kill・6.77M nodes・10実行）
+
+### レジューム実行（第7セッション next 1）
+
+heavy-pending bit=25（mob 50。v15 単体 d10 は default/close-first AND とも 950k で
+capped・判定なし）を chunk 分解で消化した。run 予算 ~620-700k・chunk cap 300k・
+chunk 深さ 8・reply 順 wscore 降順（fail-fast）。予算打ち切りは kill 表を --dead、
+解決済み pass reply を --done に渡して厳密に再開（再開欠落ゼロ）。
+
+### 結果: bit25 は depth 10 以内の WIN7 候補（2件目）
+
+- **全50個の loser 初手が kill された** → lossAt(root,10)=true。
+  root hex 00000000020000003800000082080000（S6 child + bit25・7石・loser to move）。
+- 総 **6,768,196 nodes / 10実行**（642,403 / 712,362 / 697,536 / 670,495 / 680,450 /
+  689,548 / 692,524 / 670,967 / 696,745 / 615,166）・capped chunk 0。
+  kill chunk 計 1,848,372 / pass chunk 計 4,919,824 nodes。
+  kill 表（50件の m→r_k）と per-chunk node 数は ledger の bit25 エントリ参照。
+- **検証（全て一致）**: pilot d6 制御 5,949（キャンペーン開始時）・
+  kill chunk 4件の fresh 再解（(0,42)=219,816・(34,50)=12,317・(114,91)=8,041・
+  (113,50)=34,181）と pass chunk 1件（(21,82)=92,425）が node 数まで完全一致・
+  root 50手の列挙が kill 表と完全一致。terminal 石数範囲 [13,17]。
+
+### 解釈上の注意（変更なし）
+
+- bit=25 の WIN7 候補は class4-batch1 内部の深さ10以内判定にすぎず、
+  class 4・S2 {59,60}・二石 root {49,60}・**11x11 空盤はいずれも UNKNOWN**。
+- 証明書再構築・独立検証は未実施（次回の最初の作業。bit7 と同一プロトコル:
+  kill-first 抽出 → 50部分木分解検証 → union 等価 → push）。
+
+### 反映
+
+- 65cb836a: ledger JSON（bit25 エントリ・kill 表・制御・解釈ガード）
+- 続くコミット: audit JSON session7b_bit25_chunk_campaign・log 第8セッション
+（push 後読み戻し確認。並走なし。）
+
+### 次回
+
+1. **bit=25 証明書再構築・独立検証・push**（第7セッションの bit7 プロトコル踏襲。
+   verifier は --root 00000000020000003800000082080000 で再利用可）。
+2. heavy-pending 残り {32,40,80,87,34} と未走査候補の chunk キャンペーン継続。
+   WIN 発見時は同じ証明書プロトコル。
+3. mob-50 帯で WIN7 が連続（bit7・bit25）— 帯全体の証明書化コストを考慮し、
+   抽出器の kill-first 指定は ledger の kill 表から自動読み込みに拡張する価値あり。

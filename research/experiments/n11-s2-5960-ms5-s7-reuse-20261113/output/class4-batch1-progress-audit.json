@@ -505,5 +505,38 @@
     "status": "bit=7 proven as class4-batch1-internal WIN7 within depth 10, with an independently verifiable certificate. Class 4 / S2 {59,60} / 11x11 empty board all remain UNKNOWN.",
     "record": "output/class4-batch1-bit7-certificate.json",
     "next": "1) chunk campaigns for heavy-pending {25,32,40,80,87,34} then the unprobed candidate list, with certificate protocol on any WIN; 2) external compute via scripts/class4_child1_runner.ts if available; 3) keep UNKNOWN guards"
+  },
+  "session7b_bit25_chunk_campaign": {
+    "date": "2026-11-13",
+    "trigger": "session7_bit7_certificate.next item 1 executed in the same session: chunk campaign for heavy-pending bit=25 (mob 50; v15 monolithic d10 capped 950k x3, close-first AND included)",
+    "verdict": "WIN7 CANDIDATE WITHIN DEPTH 10 (second after bit=7): lossAt(root,10)=true — ALL 50 loser first-moves killed by uncapped d8 kill chunks",
+    "root_hex": "00000000020000003800000082080000",
+    "ledger": "output/class4-batch1-chunk-decomposition.json (bit25 entry: kill table, per-chunk node counts, resume protocol, controls)",
+    "totals": {
+      "nodes": 6768196,
+      "runs": 10,
+      "batch_nodes": [
+        642403,
+        712362,
+        697536,
+        670495,
+        680450,
+        689548,
+        692524,
+        670967,
+        696745,
+        615166
+      ],
+      "capped_chunks": 0,
+      "kill_nodes_sum": 1848372,
+      "pass_chunk_nodes_sum": 4919824
+    },
+    "controls": "pilot d6 5,949 reproduced at campaign start; 5 fresh re-solves (4 kill chunks (0,42)/(34,50)/(114,91)/(113,50) and 1 pass chunk (21,82)) identical to the campaign node counts; root enumeration 50/50 covered exactly by the kill table",
+    "observed_terminal_stone_range": [
+      13,
+      17
+    ],
+    "status": "certificate rebuild + independent verification pending (same protocol as bit7); class 4 / S2 {59,60} / 11x11 empty board all remain UNKNOWN",
+    "next": "1) bit=25 certificate extraction with the kill-first extractor, 50 sub-root decomposition verification, cert push; 2) continue chunk campaigns for heavy-pending {32,40,80,87,34} and unprobed candidates"
   }
 }
