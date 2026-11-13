@@ -1,0 +1,590 @@
+{
+ "schema": "n11-class4-batch3-child3-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "class4_lane_target_s5": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003802000080000000",
+  "s6_s7_edge_cost": 68,
+  "role": "cheapest remaining S6 child of the class-4 lane target after batch2 (session-18 resume item 1)"
+ },
+ "method": "native Node run of scripts/class4_child1_runner.ts engine logic (v15 rules, verbatim; per-candidate freshEngine, close-first AND at depth>=8, cap 50,000,000 nodes/candidate, depth 10 single-run per candidate). Candidate list: all non-degenerate 7th-stone additions (no 4-cocircular with the 6 stones), 68 of 115 empty cells, ordered by root mobility ascending. 3 foreground executions (5+32+31 candidates).",
+ "verdicts": {
+  "win7_d10": [
+   37
+  ],
+  "refuted_d10": [
+   93,
+   25,
+   91,
+   95,
+   80,
+   115,
+   72,
+   85,
+   16,
+   6,
+   51,
+   30,
+   38,
+   44,
+   70,
+   83,
+   42,
+   77,
+   108,
+   4,
+   32,
+   67,
+   102,
+   35,
+   114,
+   3,
+   15,
+   112,
+   11,
+   88,
+   33,
+   8,
+   76,
+   106,
+   118,
+   14,
+   2,
+   40,
+   5,
+   82,
+   34,
+   113,
+   36,
+   41,
+   54,
+   75,
+   84,
+   45,
+   92,
+   109,
+   21,
+   43,
+   78,
+   28,
+   103,
+   116,
+   7,
+   105,
+   117,
+   18,
+   10,
+   66,
+   74,
+   87,
+   110,
+   0,
+   120
+  ],
+  "capped": [],
+  "counts": {
+   "win7": 1,
+   "refuted": 67,
+   "capped": 0,
+   "total": 68
+  },
+  "note": "REFUTED-D10 = lossAt(root,10)=false uncapped, i.e. NO WIN7 within depth 10 (deeper wins remain possible). WIN7-D10 = lossAt(root,10)=true: the 7th-stone player (winner_parity=1) wins within depth 10 against every loser defense."
+ },
+ "totals": {
+  "nodes": 218994665,
+  "executions": 3,
+  "candidates": 68
+ },
+ "terminal_stone_ranges_observed": [
+  [
+   13,
+   17
+  ]
+ ],
+ "pilot_control": {
+  "root": "00000000000000003802000008000006",
+  "depth": 6,
+  "loss": false,
+  "nodes": 5949,
+  "result": "PASS (matches published v15 reference)"
+ },
+ "determinism_controls": {
+  "7": {
+   "independent_reruns": 2,
+   "node_counts_identical": true
+  },
+  "16": {
+   "independent_reruns": 2,
+   "node_counts_identical": true
+  },
+  "36": {
+   "independent_reruns": 2,
+   "node_counts_identical": true
+  },
+  "37": {
+   "independent_reruns": 3,
+   "node_counts_identical": true
+  },
+  "40": {
+   "independent_reruns": 2,
+   "node_counts_identical": true
+  },
+  "112": {
+   "independent_reruns": 2,
+   "node_counts_identical": true
+  },
+  "114": {
+   "independent_reruns": 2,
+   "node_counts_identical": true
+  }
+ },
+ "per_candidate": {
+  "0": {
+   "mob": 64,
+   "loss": false,
+   "nodes": 3354569,
+   "capped": false
+  },
+  "2": {
+   "mob": 65,
+   "loss": false,
+   "nodes": 2889443,
+   "capped": false
+  },
+  "3": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 4320980,
+   "capped": false
+  },
+  "4": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 1223963,
+   "capped": false
+  },
+  "5": {
+   "mob": 51,
+   "loss": false,
+   "nodes": 924568,
+   "capped": false
+  },
+  "6": {
+   "mob": 52,
+   "loss": false,
+   "nodes": 3721694,
+   "capped": false
+  },
+  "7": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 11196395,
+   "capped": false
+  },
+  "8": {
+   "mob": 62,
+   "loss": false,
+   "nodes": 2766990,
+   "capped": false
+  },
+  "10": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 4957301,
+   "capped": false
+  },
+  "11": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 752064,
+   "capped": false
+  },
+  "14": {
+   "mob": 64,
+   "loss": false,
+   "nodes": 4309837,
+   "capped": false
+  },
+  "15": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 2134319,
+   "capped": false
+  },
+  "16": {
+   "mob": 51,
+   "loss": false,
+   "nodes": 4108879,
+   "capped": false
+  },
+  "18": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 8380555,
+   "capped": false
+  },
+  "21": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 2353301,
+   "capped": false
+  },
+  "25": {
+   "mob": 47,
+   "loss": false,
+   "nodes": 1576517,
+   "capped": false
+  },
+  "28": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 1049896,
+   "capped": false
+  },
+  "30": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 1215858,
+   "capped": false
+  },
+  "32": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 2014584,
+   "capped": false
+  },
+  "33": {
+   "mob": 60,
+   "loss": false,
+   "nodes": 3825085,
+   "capped": false
+  },
+  "34": {
+   "mob": 52,
+   "loss": false,
+   "nodes": 5431464,
+   "capped": false
+  },
+  "35": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 2612756,
+   "capped": false
+  },
+  "36": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 11083932,
+   "capped": false
+  },
+  "37": {
+   "mob": 49,
+   "loss": true,
+   "nodes": 9625156,
+   "capped": false
+  },
+  "38": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 1147933,
+   "capped": false
+  },
+  "40": {
+   "mob": 50,
+   "loss": false,
+   "nodes": 159144,
+   "capped": false
+  },
+  "41": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 7573401,
+   "capped": false
+  },
+  "42": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 502376,
+   "capped": false
+  },
+  "43": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 2503985,
+   "capped": false
+  },
+  "44": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 2193650,
+   "capped": false
+  },
+  "45": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 3753073,
+   "capped": false
+  },
+  "51": {
+   "mob": 52,
+   "loss": false,
+   "nodes": 2759475,
+   "capped": false
+  },
+  "54": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 3404632,
+   "capped": false
+  },
+  "66": {
+   "mob": 61,
+   "loss": false,
+   "nodes": 398323,
+   "capped": false
+  },
+  "67": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 3962429,
+   "capped": false
+  },
+  "70": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 376402,
+   "capped": false
+  },
+  "72": {
+   "mob": 49,
+   "loss": false,
+   "nodes": 1149437,
+   "capped": false
+  },
+  "74": {
+   "mob": 62,
+   "loss": false,
+   "nodes": 4314963,
+   "capped": false
+  },
+  "75": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 4445073,
+   "capped": false
+  },
+  "76": {
+   "mob": 62,
+   "loss": false,
+   "nodes": 3275297,
+   "capped": false
+  },
+  "77": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 1620823,
+   "capped": false
+  },
+  "78": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 3073275,
+   "capped": false
+  },
+  "80": {
+   "mob": 48,
+   "loss": false,
+   "nodes": 3658031,
+   "capped": false
+  },
+  "82": {
+   "mob": 51,
+   "loss": false,
+   "nodes": 5513760,
+   "capped": false
+  },
+  "83": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 950066,
+   "capped": false
+  },
+  "84": {
+   "mob": 54,
+   "loss": false,
+   "nodes": 3212417,
+   "capped": false
+  },
+  "85": {
+   "mob": 50,
+   "loss": false,
+   "nodes": 1776210,
+   "capped": false
+  },
+  "87": {
+   "mob": 62,
+   "loss": false,
+   "nodes": 4061310,
+   "capped": false
+  },
+  "88": {
+   "mob": 59,
+   "loss": false,
+   "nodes": 354770,
+   "capped": false
+  },
+  "91": {
+   "mob": 47,
+   "loss": false,
+   "nodes": 2212665,
+   "capped": false
+  },
+  "92": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 1307008,
+   "capped": false
+  },
+  "93": {
+   "mob": 46,
+   "loss": false,
+   "nodes": 1521080,
+   "capped": false
+  },
+  "95": {
+   "mob": 47,
+   "loss": false,
+   "nodes": 356095,
+   "capped": false
+  },
+  "102": {
+   "mob": 56,
+   "loss": false,
+   "nodes": 1927999,
+   "capped": false
+  },
+  "103": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 2473958,
+   "capped": false
+  },
+  "105": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 1405204,
+   "capped": false
+  },
+  "106": {
+   "mob": 62,
+   "loss": false,
+   "nodes": 3517865,
+   "capped": false
+  },
+  "108": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 411546,
+   "capped": false
+  },
+  "109": {
+   "mob": 55,
+   "loss": false,
+   "nodes": 2216040,
+   "capped": false
+  },
+  "110": {
+   "mob": 63,
+   "loss": false,
+   "nodes": 3476052,
+   "capped": false
+  },
+  "112": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 7736584,
+   "capped": false
+  },
+  "113": {
+   "mob": 52,
+   "loss": false,
+   "nodes": 2791074,
+   "capped": false
+  },
+  "114": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 7234505,
+   "capped": false
+  },
+  "115": {
+   "mob": 48,
+   "loss": false,
+   "nodes": 4916502,
+   "capped": false
+  },
+  "116": {
+   "mob": 57,
+   "loss": false,
+   "nodes": 5387623,
+   "capped": false
+  },
+  "117": {
+   "mob": 58,
+   "loss": false,
+   "nodes": 1087245,
+   "capped": false
+  },
+  "118": {
+   "mob": 63,
+   "loss": false,
+   "nodes": 5399522,
+   "capped": false
+  },
+  "120": {
+   "mob": 64,
+   "loss": false,
+   "nodes": 1645737,
+   "capped": false
+  }
+ },
+ "win7_detail": {
+  "bit": 37,
+  "root_hex": "00000000020000003802002080000000",
+  "nodes_first_run": 9625156,
+  "certificate": "output/class4-batch3-certificates/n11_s7_00000000020000003802002080000000.cert",
+  "certificate_md5": "5228c195af4a4b8a7d4b252e7eea3a5e",
+  "certificate_bytes": 1300688
+ },
+ "frontier_effect_local": {
+  "covers_canonical_s6": [
+   "00000000000000003802002080000000",
+   "00000000000000801802800000080000",
+   "00000000020000001802002080000000",
+   "00000000020000002802002080000000",
+   "00000000020000003002002080000000",
+   "00000000020000003800002080000000",
+   "00000000020000003802000080000000"
+  ],
+  "in_class4_target_remaining": {
+   "00000000020000003802000080000000": 68,
+   "00000000020000003800002080000000": 77
+  },
+  "class4_target_delta": {
+   "remaining_s6_orbits": [
+    32,
+    30
+   ],
+   "remaining_s7_edge_cost": [
+    2530,
+    2385
+   ]
+  },
+  "note": "covers() computed with the published images() 8-symmetry canonicalization (audit_published_candidates.py); the child#3 orbit itself plus the cost-77 orbit 00000000020000003800002080000000 close together. Full manifest-level audit (solved&manifest, demand histogram) requires the repo audit_class_frontier.py recompute with gz inputs (next session)."
+ },
+ "interpretation_guard": [
+  "WIN7 certificates prove only: win within depth 10 from this 7-stone root. REFUTED entries negate only WIN7-within-depth-10.",
+  "class 4, S2 {59,60}, two-stone root {49,60}, and the 11x11 empty root remain UNKNOWN.",
+  "the bit7 400-node aggregation discrepancy reserve remains open and unrelated"
+ ]
+}
