@@ -1,4 +1,4 @@
-# 2026-11-15 class2-lane: cost-69e sweep — 11 WIN7-D10 (3 certificates verified, all 11 WIN7 bits v15-anchored), frontier 1012 -> 1015 (merged baseline)
+# 2026-11-15 class2-lane: cost-69e sweep — 11 WIN7-D10 (6 certificates verified incl. warm rebuilds, all 11 WIN7 bits v15-anchored), frontier 1012 -> 1019 (merged baseline)
 
 Long-term lane parallel execution, continuing after the cost-68c frontier
 recompute (after-cost-68c solved 998; commit `368e2b1f`). Sweep target: the
@@ -91,37 +91,69 @@ union).
   the sandbox memory limit AFTER the push call completed; the remote file was
   verified byte-exact afterwards.
 - Certificates: `class2-lane-cost69e-certificates/bit{21,99,87}-root-<hex>.cert`.
-- 8 WIN7-D10 bits remain without extracted certificates (2, 76, 84, 89, 90,
-  94, 108, 116): warm certificate-rebuild candidates (bit 2 already
-  certified by the parallel cost-65g-warm bit-15 rebuild); they change no
-  frontier number.
+- After the warm rebuilds, 4 WIN7-D10 bits remain without extracted
+  certificates (89, 94, 108, 116; bit 2 already certified by the parallel
+  cost-65g-warm bit-15 rebuild): further warm certificate-rebuild
+  candidates; they change no frontier number beyond the +7 published above.
 - Records pushed (commit `6f776bef`): sweep record + win7-certificates record
   (schema-consistent with the cost-65h/67b/68c records) + inflight updated to
   completed.
 
+## Warm certificate rebuilds (same session)
+
+Three more WIN7-D10 candidates were rebuilt as warm certificates in the same
+session and fully verified (same blind extraction and verification pipeline;
+root-check mobility match, all sub-roots PASS in 2 splits, consumed/rows
+union 0/0):
+
+| bit | root hex | rows | extraction nodes | mobility | sub-roots | union miss/extra | md5 |
+|---:|---|---:|---:|---:|---:|---|---|
+| 84 | `00000000001000803202000000008000` | 29,614 | 9,940,934 | 50 | 50/50 | 0/0 | `41adac3c...` |
+| 76 | `00000000000010803202000000008000` | 45,665 | 8,663,434 | 57 | 57/57 | 0/0 | `2358870d...` |
+| 90 | `00000000040000803202000000008000` | 46,959 | 10,061,833 | 58 | 58/58 | 0/0 | `b0e6f779...` |
+
+- All three landed byte-exact (commits `53102729` and the memory-limit-after-
+  push landings verified by remote md5: bit 76
+  `2358870d7a2625b4d40a0c178f8cba66`, bit 90
+  `b0e6f779b229ef4993c8715691db7ede`, bit 84
+  `41adac3c1d684d4b4dde25c416c2ae20`).
+- Records updated (commit `53511442`): 6 certificates total; unverified WIN7
+  bits now 89/94/108/116 (bit 2 already certified by the parallel cost-65g-warm
+  bit-15 rebuild).
+
 ## Frontier recompute after cost-69e
 
 `recompute_frontier_cost69e_20261115.py` (direct runpy extension of the
-published merged recompute script; commit `b37252d3`): the merged baseline
-reproduced exactly (asserted 1012/6,835/538,670/5,105/402,393), the child's
-remaining membership re-derived from the merged frontier (confirmed closed
-mid-flight; demand bookkeeping recorded), the completed cost-69e sweep
-asserted from the published raw batches (69 candidates, 9 pilots, 11 WIN7 +
-58 REFUTED, 80,172,332 nodes; determinism + v15 anchors asserted from the
-published JSONL files), and the three verified receipts added in the
-published record order.
+published merged recompute script; first pushed at commit `b37252d3`,
+extended to the 6-receipt final version at commits `7cec3e7e` /
+`93c90db6`): the merged baseline reproduced exactly (asserted
+1012/6,835/538,670/5,105/402,393), the child's remaining membership
+re-derived from the merged frontier (confirmed closed mid-flight; demand
+bookkeeping recorded), the completed cost-69e sweep asserted from the
+published raw batches (69 candidates, 9 pilots, 11 WIN7 + 58 REFUTED,
+80,172,332 nodes; determinism + v15 anchors asserted from the published
+JSONL files), and the six verified receipts added in the published record
+order (21/99/87 sweep certificates, then 84/76/90 warm rebuilds).
 
 - cost-69e additions (covers / marginal / in-manifest): bit 21: 7/5/1, bit
-  99: 7/5/1, bit 87: 7/5/1 (each receipt covers 7 S6 orbits; the in-manifest
-  marginals are outside this target's parent).
-- **after cost-69e: solved 1015 · unique remaining 6,832 · sum 538,445 ·
-  open 5,102 / 402,168** (net in-manifest +3 from 1012).
-- Second class-2 target S5 `00000000000000803202000000000000`: unchanged at
-  7 orbits / 513 (the child was already closed in the merged manifest; the
-  three receipts' in-manifest marginals land on other parents), still the
-  best coverable class-2 target. Next cheapest remaining children: the
-  cost-70 child `00000000000000803242000000000000` (claimed in parallel as
-  cost-70c, commit `fee1a57b`) and the cost-71 child
+  99: 7/5/1, bit 87: 7/5/1, bit 84: 7/5/1, bit 76: 7/6/2, bit 90: 7/5/1
+  (each receipt covers 7 S6 orbits; the in-manifest marginals are outside
+  this target's parent).
+- **after cost-69e (6 receipts): solved 1019 · unique remaining 6,832 with 3
+  receipts -> 6,828 with 6 · sum 538,445 -> 538,143 · open 5,102/402,168 ->
+  5,098/401,866** (net in-manifest +7 from 1012). The intermediate 3-receipt
+  state (solved 1015) was published first; the 6-receipt recompute is the
+  final state (commits `7cec3e7e` + method-text fix `93c90db6`).
+- Notably the warm bit-76 receipt marginally covers **the cost-70 child
+  `00000000000000803242000000000000` claimed in parallel as cost-70c** (its
+  other in-manifest marginal is `00000000000000849002000000020000`): the
+  parallel lane's cost-70c recompute will find that child already
+  receipt-closed in the manifest by this receipt.
+- Second class-2 target S5 `00000000000000803202000000000000`:
+  7 -> 6 orbits / 513 -> 443, still the best coverable class-2 target. Next
+  cheapest remaining children: the cost-70 child
+  `00000000000000803242000000000000` (claimed in parallel as cost-70c,
+  commit `fee1a57b`) and the cost-71 child
   `00000000000000803202000400000000`. Best class-4 unchanged (18 / 1,460).
 - Two consecutive recompute runs byte-identical (JSON + both CSVs); remote
   md5 verified for the recompute JSON, ranking CSV, top-candidates CSV and
