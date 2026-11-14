@@ -1,0 +1,48 @@
+{
+  "experiment": "five-row-q6-m22-class-split-20261114",
+  "kind": "resistance-record",
+  "claim": "NOT nonexistence: all swept canonical deficiency classes of 5x22 q=6 remain INDET at the 250s budget",
+  "board": {
+    "w": 5,
+    "m": 22,
+    "q": 6
+  },
+  "canonical_classes_total": 19,
+  "classes_swept": 8,
+  "results": {
+    "SAT": 0,
+    "UNSAT": 0,
+    "INDET": 8
+  },
+  "krow_splits": {
+    "tried": 2,
+    "INDET": 2
+  },
+  "control": {
+    "w": 5,
+    "m": 21,
+    "q": 6,
+    "class": "0",
+    "result": "SAT",
+    "conflicts": 330743,
+    "rediscovered": "K0815 m=21 witness"
+  },
+  "sa": {
+    "tried": 1,
+    "found": 0
+  },
+  "raw_status": "most raws lost to two execution-environment resets; conflict counts from session stdout; deterministic rerun reproducible (kissat 4.0.4 default seed)",
+  "unswept_classes": [
+    "0,3",
+    "0,4",
+    "1,2",
+    "1,3",
+    "0,1,3",
+    "0,1,4",
+    "0,2,3",
+    "0,2,4",
+    "1,2,3",
+    "0,1,2,4",
+    "0,1,3,4"
+  ]
+}

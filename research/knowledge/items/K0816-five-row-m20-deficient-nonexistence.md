@@ -13,6 +13,9 @@ relations:
   target: K0332
   note: "5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来"
 - type: depends_on
+  target: K0821
+  note: "5x21 witness-free (K0821, all 19 classes by class-split SAT with the k/minpos decomposition from this item) extends the witness-free width set to {19,20,21}: M_{5,7} in {19,20,21} or >= 23; the frontier stated here (5x21) is settled"
+- type: depends_on
   target: K0815
   note: "5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定"
 - type: depends_on
@@ -66,7 +69,7 @@ evidence: "'complete-enumeration（verification: deterministic-machine + indepen
    (exactly 30 stones); no deficient maximal safe configuration exists on 5x20.
 3. Combined with K0332 (29-stone witness at 5x18) and K0738–K0759 (witness-free 5x19):
    the witness-free width set is {19, 20} and the least witness width is 18, so
-   **M_{5,7} ∈ {19, 20} or M_{5,7} ≥ 22**; the witness-search frontier moves to 5x21.
+   **M_{5,7} ∈ {19, 20} or M_{5,7} ≥ 22**; the witness-search frontier moves to 5x21 (settled witness-free by K0821: M_{5,7} ∈ {19,20,21} or ≥ 23).
    The upper bound 158 (K0332/K0024 substitution) is unchanged.
 
 ## Method
@@ -102,6 +105,7 @@ positive control. Raw run records (including superseded smaller-budget timeouts)
 ## Scope
 
 Finite machine verification up to the correctness of the two independent implementations;
-not a number-theoretic proof. Persistence at m ≥ 21 remains open (5x21 is the new frontier);
+not a number-theoretic proof. Persistence at m ≥ 22 remains open (5x21 settled witness-free by
+K0821; 5x22 is the new frontier);
 the full-capacity class structure, other widths, and the 11x11 empty board / two-stone root
 {49,60} / S2 {59,60} / class 2 / class 4 are unaffected and remain UNKNOWN.
