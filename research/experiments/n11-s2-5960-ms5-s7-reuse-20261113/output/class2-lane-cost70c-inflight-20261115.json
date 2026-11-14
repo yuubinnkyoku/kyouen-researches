@@ -84,5 +84,17 @@
  "batch_plan": "70 candidates in 9 batches (8x8 + 6), raw JSONL pushed per batch as completed",
  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
  "session": "long-term lane (2026-11-15 JST), running in parallel with the cost-69e lane execution (records pending) and other lanes",
- "status": "in-flight"
+ "status": "completed",
+ "completion": {
+  "date": "2026-11-15",
+  "result": "70 candidates: 13 WIN7-D10 (bits 3,8,11,20,23,24,40,42,86,92,94,103,105) + 57 REFUTED + 0 capped, 100,935,666 v16 nodes, all 9 pilots 3,402 PASS",
+  "records": [
+   "class2-lane-cost70c-sweep-20261115.json",
+   "class2-lane-cost70c-win7-certificates-20261115.json",
+   "class2-lane-cost70c-v16-determinism-rerun-20261115.jsonl",
+   "class2-lane-cost70c-v15-crosscheck-20261115.jsonl"
+  ],
+  "certificates": "3 fully verified (bits 94/20/23)",
+  "note": "mid-flight manifest closure by the parallel cost-69e warm bit-76 receipt documented in the sweep record; certificates are pure new-coverage additions"
+ }
 }
