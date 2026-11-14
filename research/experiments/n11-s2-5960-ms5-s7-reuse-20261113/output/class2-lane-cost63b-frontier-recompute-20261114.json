@@ -1,0 +1,312 @@
+{
+ "schema": "n11-class2-lane-cost63b-frontier-recompute-20261114-v1",
+ "date": "2026-11-14",
+ "baseline_main": "cost-75-frontier-recompute-2026-11-14",
+ "method": "full recomputation of the audit_class_frontier.py logic over all published WIN7 receipts through the class2-lane cost-75 sweep plus the cost-61-c (1) and cost-63 (4) WIN7 certificates; staged controls reproduce the published baseline/after_batch1/after_batch2/after_batch3/after_cost60/after_cost61/after_cost61b/after_cost64/after_cost65/after_cost68/after_cost58/after_cost75 values exactly before the cost-61-c and cost-63 additions are measured",
+ "controls": {
+  "baseline": {
+   "solved_in_manifest": 638,
+   "unique_remaining": 7208,
+   "sum_cost": 565500,
+   "reproduced": true
+  },
+  "after_batch1": {
+   "solved_in_manifest": 657,
+   "unique_remaining": 7189,
+   "sum_cost": 564070,
+   "reproduced": true
+  },
+  "after_batch2": {
+   "solved_in_manifest": 665,
+   "unique_remaining": 7181,
+   "sum_cost": 563509,
+   "open_s6": 5398,
+   "open_cost": 423516,
+   "reproduced": true
+  },
+  "batch2_newly_solved_distinct_keys": 8,
+  "bit37_covers_matches_published_frontier_effect": true,
+  "after_batch3": {
+   "solved_in_manifest": 690,
+   "unique_remaining": 7156,
+   "sum_cost": 561764,
+   "open_s6": 5373,
+   "open_cost": 421771,
+   "reproduced": true
+  },
+  "after_cost60": {
+   "solved_in_manifest": 724,
+   "unique_remaining": 7122,
+   "sum_cost": 559294,
+   "open_s6": 5339,
+   "open_cost": 419301,
+   "reproduced": true
+  },
+  "after_cost61": {
+   "solved_in_manifest": 735,
+   "unique_remaining": 7111,
+   "sum_cost": 558480,
+   "open_s6": 5328,
+   "open_cost": 418487,
+   "reproduced": true
+  },
+  "after_cost61b": {
+   "solved_in_manifest": 749,
+   "unique_remaining": 7097,
+   "sum_cost": 557548,
+   "open_s6": 5314,
+   "open_cost": 417555,
+   "reproduced": true
+  },
+  "after_cost64": {
+   "solved_in_manifest": 779,
+   "unique_remaining": 7067,
+   "sum_cost": 555327,
+   "open_s6": 5284,
+   "open_cost": 415334,
+   "reproduced": true
+  },
+  "after_cost65": {
+   "solved_in_manifest": 786,
+   "unique_remaining": 7060,
+   "sum_cost": 554836,
+   "open_s6": 5277,
+   "open_cost": 414843,
+   "reproduced": true
+  },
+  "after_cost68": {
+   "solved_in_manifest": 804,
+   "unique_remaining": 7042,
+   "sum_cost": 553474,
+   "open_s6": 5259,
+   "open_cost": 413481,
+   "reproduced": true
+  },
+  "after_cost58": {
+   "solved_in_manifest": 814,
+   "unique_remaining": 7032,
+   "sum_cost": 552811,
+   "open_s6": 5256,
+   "open_cost": 413283,
+   "reproduced": true
+  },
+  "after_cost75": {
+   "solved_in_manifest": 831,
+   "unique_remaining": 7016,
+   "sum_cost": 551482,
+   "open_s6": 5240,
+   "open_cost": 411954,
+   "reproduced": true
+  },
+  "after_cost61c": {
+   "solved_in_manifest": 833,
+   "unique_remaining": 7014,
+   "sum_cost": 551352,
+   "open_s6": 5239,
+   "open_cost": 411885,
+   "reproduced": true
+  },
+  "cost75_target_s5_absent": true,
+  "after_cost63": {
+   "solved_in_manifest": 841,
+   "unique_remaining": 7006,
+   "sum_cost": 550810,
+   "open_s6": 5236,
+   "open_cost": 411675,
+   "reproduced": true
+  }
+ },
+ "cost75_addition": {
+  "roots": [
+   "00000000000000801a02040000000001",
+   "00000000000000801a02040000000010",
+   "00000000000000801a02040000004000",
+   "00000000000000801a02040000020000",
+   "00000000000000801a02040000100000",
+   "00000000000000801a02040000200000",
+   "00000000000000801a02040000400000",
+   "00000000000000801a02040080000000",
+   "00000000000000801a02040100000000",
+   "00000000000000801a02040400000000",
+   "00000000000000801a06040000000000",
+   "00000000000000801a42040000000000",
+   "00000000000001801a02040000000000",
+   "00000000000010801a02040000000000",
+   "00000000000080801a02040000000000",
+   "00000000040000801a02040000000000",
+   "00000000100000801a02040000000000",
+   "00001000000000801a02040000000000",
+   "00400000000000801a02040000000000"
+  ],
+  "covers": 112,
+  "marginal": 89,
+  "marginal_in_manifest": 17,
+  "marginal_manifest_hexes": [
+   "00000000000000801202040000000001",
+   "00000000000000801202040000000010",
+   "00000000000000801202040000004000",
+   "00000000000000801202040000100000",
+   "00000000000000801202040000200000",
+   "00000000000000801202040000400000",
+   "00000000000000801202040100000000",
+   "00000000000000801202040400000000",
+   "00000000000000801206040000000000",
+   "00000000000000801242040000000000",
+   "00000000000000849002000400000000",
+   "00000000000000c09002000400000000",
+   "00000000000040809002000000000004",
+   "00000000000040809002000000001000",
+   "00000000000040809002000010000000",
+   "00000000000040809002000040000000",
+   "00000000000040809002020000000000"
+  ]
+ },
+ "cost61c_addition": {
+  "roots": [
+   "00000000000000809082200000008000"
+  ],
+  "covers": 7,
+  "marginal": 5,
+  "marginal_in_manifest": 2,
+  "marginal_manifest_hexes": [
+   "00000000000000801222000000020000",
+   "00000000000000809082200000000000"
+  ],
+  "published_effect_note": "published frontier_effect (7 covers/5 marginal/2 in-manifest) was measured against the smaller after-cost58 solved set; marginals here are measured against the full through-cost75 solved set",
+  "published_marginals_still_marginal": [
+   "00000000000000801222000000020000",
+   "00000000000000809082200000000000"
+  ],
+  "published_marginals_already_solved": []
+ },
+ "cost63_addition": {
+  "roots": [
+   "00000000000000809082000000000808",
+   "00000000000000809082000000100800",
+   "00000000000000c09082000000000800",
+   "00800000000000809082000000000800"
+  ],
+  "covers": 25,
+  "marginal": 20,
+  "marginal_in_manifest": 8,
+  "marginal_manifest_hexes": [
+   "00000000000000003801000000000220",
+   "00000000000000801202000000200080",
+   "00000000000000809082000000000008",
+   "00000000000000809082000000000800",
+   "00000000000000809082000000100000",
+   "00000000000000809083000000000000",
+   "00000000000000c09002000000000800",
+   "00000008000000809002000000000200"
+  ],
+  "published_effect_note": "published frontier_effect (25 covers/20 marginal/8 in-manifest) was measured against the through-cost61-c solved set; marginals here are measured against the full through-cost75+cost61c solved set",
+  "published_marginals_still_marginal": [
+   "00000000000000003801000000000220",
+   "00000000000000801202000000200080",
+   "00000000000000809082000000000008",
+   "00000000000000809082000000000800",
+   "00000000000000809082000000100000",
+   "00000000000000809083000000000000",
+   "00000000000000c09002000000000800",
+   "00000008000000809002000000000200"
+  ],
+  "published_marginals_already_solved": []
+ },
+ "cost63b_addition": {
+  "roots": [
+   "00000000000000809083000000001000",
+   "00001000000000809082000000001000",
+   "00400000000000809082000000001000"
+  ],
+  "covers": 19,
+  "marginal": 17,
+  "marginal_in_manifest": 8,
+  "marginal_manifest_hexes": [
+   "00000000000000003801000000001020",
+   "00000000000000801206000000100000",
+   "00000000000000809082000000000100",
+   "00000000000000809082000000001000",
+   "00000000010000003800000000100020",
+   "00000000210000003800000000100000",
+   "00000010000000003800000000100020",
+   "00000010000000003800000008100000"
+  ]
+ },
+ "frontier_after_cost63b": {
+  "solved_s6_in_manifest": 849,
+  "remaining_s5_orbits": 176,
+  "unique_remaining_s6": 6998,
+  "sum_remaining_cost": 550269,
+  "s6_needed_by_open_classes": 5233,
+  "cost_needed_by_open_classes": 411475,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 528,
+   "c2=0,c4=2": 3043,
+   "c2=0,c4=3": 18,
+   "c2=1,c4=0": 256,
+   "c2=1,c4=1": 65,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1248,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 60
+  },
+  "class_composition": {
+   "bit1": 49,
+   "bit2": 43,
+   "bit4": 88
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 26,
+   "remaining_s7_edge_cost": 1798
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 40,
+    "remaining_s7_edge_cost": 2850
+   },
+   {
+    "s5_hex": "00000000000000803202000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 41,
+    "remaining_s7_edge_cost": 2776
+   },
+   {
+    "s5_hex": "0000000000000080120a000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 56,
+    "remaining_s7_edge_cost": 4066
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 24,
+   "remaining_s7_edge_cost": 1934
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000003800000000802000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4598
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 66,
+    "remaining_s7_edge_cost": 4521
+   }
+  ]
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}
