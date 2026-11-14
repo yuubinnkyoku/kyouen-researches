@@ -778,3 +778,15 @@ merged chain headは **解消S6 1,148・残り6,699・費用528,423・open需要
 成果物: [merged再計算JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-merged-multiband2-68dhyg-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-merged-multiband2-68dhyg-20261115.csv)、[再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_after_multiband2_68dhyg_20261115.py)、[log](../../log/2026-11-15-n11-class2-merged-recompute-multiband2-68dhyg.md)。
 
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+## 2026-11-15: class2-lane 50-receipt和解監査とcost-70c warm 6証明書、解消予測1,154 = 1,148 + 6
+
+自レーンbatch-2 warm抽出のうち並走multiband2選択からdeferredだった **cost-70c gain-1証明書6件（bits 105/92/40/24/11/8、child `00000000000000803242000000000000`）** をblind抽出・BigInt独立検証（33,992〜52,755行、全部分木PASS、行集合差0/0、終局石数13..17）し、remote公開とサイズ照合まで完了した（md5・バイト数はaudit JSONに記録）。先行3証明書（94/20/23）と合わせ **cost-70cは13 WIN7中9件認証済み**、残りはbits 3/42/86/103（warm再構築候補）。
+
+両batch-2レーンの独立抽出は29 rootで一致（両側byte検証、multiband2記録は first_pushed_by 自レーン18/並走13 と記録）— 正の重複照合であり衝突ではない。自レーン固有の追加は上記6件、並走固有はcost-64b bit-40とcost-61d bit-23。
+
+**50-receipt和解監査**（[audit JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-unified-fold-reconciliation-20261115.json)、[log](../../log/2026-11-15-n11-class2-lane-unified-fold-reconciliation.md)）: 全50 receipt（68d 7 + hygiene 6 + multiband2 31 + 70c 6）の root == child | 1<<bit のBigInt検査・3-way root disjointnessが全て通過。各receiptのmarginal in-manifest hex和集合 A(8)/B(31)/C(6) は相互に非交差で、合計45。1109 + 45 = **解消予測1,154**。
+
+同一セッション内の訂正: audit初版は1117/1140を未統合の分岐headとして記述したが、**併合再計算head 1,148（commit 19bb2abc）は既にmainに存在していた**（push前collision checkのフィルタが unified/reconcil のみで merged/recompute を見落とした）。併合foldは本監査の算術を独立に確認している: cost-68dの8 hexは1109状態と1140状態でset-identical（batch-2の31 hexと非交差であることの実証）、かつ本監査はcost-70cの6 hexが併合39 hex全てと非交差であることを再検証した。よって予測は変更なく **1,154 = 1,148 + 6** となり、未foldはcost-70cの6件のみ。次回実行のfold仕様（audit JSON記載）: `recompute_frontier_merged_after_multiband2_68dhyg_20261115.py` を拡張し1,148 endpointをbyte-identical再現→6件を貪欲順 105, 92, 40, 24, 11, 8 でfold→set-equalityと解消1,154をassert。collision checkは merged/recompute フィルタを含める運用に修正した。
+
+環境事実: 本セッションは実行環境（bash/filesystem）が終始利用不能で、全計算をsandbox + GitHubコネクタで実施した。解消計数はmanifest被覆であり盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
