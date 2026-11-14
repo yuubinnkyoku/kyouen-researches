@@ -1,0 +1,13 @@
+const fs = require('fs');
+const mod = require('./row_deficient_sat.js');
+const [w, m, q] = process.argv.slice(2, 5).map(Number);
+const args = process.argv.slice(5);
+const capArg = args.find(a => a.startsWith('--cap='));
+const maxStones = capArg ? Number(capArg.slice(6)) : null;
+const out = args.find(a => a.startsWith('--out='))?.slice(6);
+const t0 = Date.now();
+const { enc, cell, curves, P, mode } = mod.encode(w, m, q, maxStones != null ? { maxStones } : {});
+const dimacs = mod.toDimacs(enc);
+const meta = { w, m, q, mode, maxStones, curves: curves.length, vars: enc.nv, clauses: enc.clauses.length, encMs: Date.now() - t0 };
+if (out) fs.writeFileSync(out, dimacs + '\n');
+console.log(JSON.stringify(meta));
