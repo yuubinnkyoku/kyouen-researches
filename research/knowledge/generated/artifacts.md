@@ -12734,6 +12734,12 @@
 ## [research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js](../../../research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js)
 
 - [K0810](../items/K0810-sat-row-deficient-witnesses.md) (source): census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
+## [research/experiments/sa-frontier-extension-20261114/output/results.jsonl](../../../research/experiments/sa-frontier-extension-20261114/output/results.jsonl)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 第2弾29実行・6×26/6×27/6×21 witness座標・独立検証・抵抗run（SAパラメータ多様化込み）
+## [research/experiments/sa-frontier-extension-20261114/report.md](../../../research/experiments/sa-frontier-extension-20261114/report.md)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (proof): 第2弾（同一機械・シード/予算/パラメータ多様化のみ）の下界更新と抵抗の記録
 ## [research/experiments/sa-row-deficient-witnesses-20261114/output/sa_results.jsonl](../../../research/experiments/sa-row-deficient-witnesses-20261114/output/sa_results.jsonl)
 
 - [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 全26実行・witness座標・独立検証詳細・抵抗（非発見）の記録
@@ -13278,6 +13284,15 @@
 ## [research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts](../../../research/experiments/width19-plus-half-density-mixed-20261112/scripts/width19_plus_mixed_audit.ts)
 
 - [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md) (verifier): 監査3セグメント+witness探索の単独再現（MODE切替）
+## [research/experiments/width2-5-circle-point-max-20261114/output/width2_5_circle_point_max.json](../../../research/experiments/width2-5-circle-point-max-20261114/output/width2_5_circle_point_max.json)
+
+- [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) (data): 全数値の機械出力
+## [research/experiments/width2-5-circle-point-max-20261114/report.md](../../../research/experiments/width2-5-circle-point-max-20261114/report.md)
+
+- [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) (proof): 定理・系・証明・witness・検証の記録
+## [research/experiments/width2-5-circle-point-max-20261114/scripts/width2_5_circle_point_max.js](../../../research/experiments/width2-5-circle-point-max-20261114/scripts/width2_5_circle_point_max.js)
+
+- [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) (verifier): witness行別点数の整数検証・50円の再確認・全円列挙による補強
 ## [research/experiments/width21-26-point-row-20261112/output/width21_26_point_row.json](../../../research/experiments/width21-26-point-row-20261112/output/width21_26_point_row.json)
 
 - [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md) (data): 全数値の機械出力（探索は分割実行の記録値）
@@ -13859,6 +13874,9 @@
 ## [research/log/2026-11-14-new-exceptional-primes-3719-3727.md](../../../research/log/2026-11-14-new-exceptional-primes-3719-3727.md)
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (log): 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
+## [research/log/2026-11-14-width2-5-circle-point-max.md](../../../research/log/2026-11-14-width2-5-circle-point-max.md)
+
+- [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) (log): 判断・経緯・レジューム
 ## [research/log/2026-11-14-width69-82-dual-run-integration.md](../../../research/log/2026-11-14-width69-82-dual-run-integration.md)
 
 - [K0804](../items/K0804-width69-82-pw32-plateau.md) (log): 判断・教訓・レジューム

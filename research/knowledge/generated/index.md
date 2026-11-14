@@ -796,3 +796,4 @@
 | [K0810](../items/K0810-sat-row-deficient-witnesses.md) | SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証） | proposition | proved | rectangles, variants |
 | [K0811](../items/K0811-sa-row-deficient-witnesses.md) | SA探索による行欠損極大witness — M_{6,5}≥28・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾で延長） | proposition | proved | rectangles, variants |
 | [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) | p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見） | proposition | computed | maximum-safe, geometry, search-methods |
+| [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) | 幅2..5の円格子点数P(w)完全決定（4,6,8,8）・系としてw=5・q≥9の行分離 M_{5,q}=q−1 | proposition | proved | rectangles, geometry, variants |

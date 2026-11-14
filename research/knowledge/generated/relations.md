@@ -378,6 +378,7 @@
 - ← generalizes [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): 行分離公式の新規 (w,q): 全奇数 w≥21 の (w,w+1)
 - ← supports [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): P(w)の新確定値は行分離公式の M_{w,q}=q−1 帯の基礎データを更新（K0784系の系と同じ導出で拡張可能）
 - ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): q>2w無限族とg公式の枠組み
+- ← generalizes [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): 行分離公式の新規(w,q)領域（w=5・q=9,10。q≥11はK0025のq>2w帯と一致）
 
 ## [K0026](../items/K0026-maximum-versus-minimum-maximal.md) 最大安全サイズK_nと最小極大サイズs_nは別の量
 
@@ -678,10 +679,12 @@
 - → proves [K0259](../items/K0259-two-row-opposite-row-first-response.md): 本文の証明・証人が原文に与える帰結
 - ← depends_on [K0532](../items/K0532-quadratic-parameter-finite-classes-and-two-row-invariance.md): 二水平行の不変性を用いた数値的帰結には既存強解決を使用
 - ← depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 上界（m≥9全極大6石）と幾何モデル（B214圧縮・弦和同値）の出典
+- ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): M_{2,4}=9の確定値（対偶によるP(2)≥4の第2導出・K0796と併用）
 
 ## [K0070](../items/K0070-width-three-q6-stabilization.md) 3×m・q=6の真の満容量安定化長M_{3,6}=9
 
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md)
+- ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): M_{3,6}=9（対偶によるP(3)≥6の第2導出）
 
 ## [K0071](../items/K0071-width-three-q5-exact-stabilization.md) 3×m・q=5の真の満容量安定化長はM_{3,5}=12
 
@@ -742,6 +745,7 @@
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): q=2w境界の整数格子構造を使う
 - ← generalizes [K0302](../items/K0302-fixed-width-five-exact-stabilization-thresholds.md): M_{4,8}=11を含む
 - ← supports [K0317](../items/K0317-four-row-q8-pell-circle-family.md): 4×m・q=8では非局所円が無限に現れても早い安定化と両立する
+- ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): M_{4,8}=11（対偶によるP(4)≥8の第2導出）
 
 ## [K0078](../items/K0078-width-three-q5-intermediate-range-closed.md) 3×m・q=5のm=22..39にも不足極大安全集合は存在しない
 
@@ -1775,6 +1779,7 @@
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): 初期証明の無界末尾と固定幅上界の文脈
 - → depends_on [K0342](../items/K0342-sharp-horizontal-chord-sum-energy.md): E7=47の鋭い同和弦energyから短い無界末尾を証明
 - ← supports [K0350](../items/K0350-parallel-q-two-width-chord-stabilization.md): 標準五行の八点円の四行構造と組合せて全称末尾101、必要有限証明255件を得る
+- ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): M_{5,8}=16の確定値（対偶によるP(5)≥8の第2導出）
 
 ## [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) 5×m・q=7の満容量安定化長は19以上158以下
 
@@ -1807,6 +1812,7 @@
 - ← depends_on [K0786](../items/K0786-width36-48-circle-strip-witnesses.md): 固定幅盤の枠組みと円点数P(w)の定義（K0784と同一の依存）
 - ← depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): 固定幅盤の枠組みと円点数P(w)の定義
 - ← supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 安定化長M_{w,q}の定義と枠組み。本項目で確定値・境界・分離帯が機械可読化された
+- ← supports [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): w=5の低q側帯の上界会計にP(5)=8を供給
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -4456,6 +4462,7 @@
 - ← depends_on [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md): 接点補題（f|t・符号論・(1,4)一意分解）のw=7拡張。P(6)=8との対比でw依存性を分離
 - ← depends_on [K0765](../items/K0765-width8-circle-twelve-point-sizes-and-q13-q16-row-formula.md): 接点補題（f|t・符号論）の原形
 - ← depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): P=2d+s・接点行s≤2の会計枠組み
+- ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(6)=8（単調性によるP(5)≤8）とwitness円(2x−7)²+(2y−7)²=50の原形
 
 ## [K0764](../items/K0764-width7-circle-ten-point-sizes-and-q11-q12-row-formula.md) 幅7整数格子の円は全mでP(7)=10・可能サイズ{7,8,10} — 9・11・12点円の全称不在とq=11..12の行分離公式
 
@@ -4494,6 +4501,7 @@
 - ← depends_on [K0776](../items/K0776-width19-plus-circle-point-max-row-formulas.md): P≦2(d+s)会計・QR₀解釈・非Vietaカスケード（接点行積分性）・w=15..18のP≦2⌈w/2⌉（本項目と合わせ全w≧15）
 - ← supports [K0778](../items/K0778-width17-20-circle-point-bounds.md): P(17),P(18) を 16 に確定（上界18から）。w=17 の系に q=18 を追加
 - ← depends_on [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 行分離系（q>P(w)かつq>w⟹M=q−1）と会計の枠組み。合成の本体
+- ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): 系「q>P(w)かつq>wなら行分離M_{w,q}=q−1」へのP(5)=8の代入と対偶
 
 ## [K0768](../items/K0768-p2647-113-full-d-sweep-100k.md) p=2647 サイズ1322 形状クラス (1,1,3) の 100k/d 全 d 掃引は 67 UNSAT・1,256 UNKNOWN・0 SAT で完走した
 
@@ -4875,3 +4883,14 @@
 - → depends_on [K0771](../items/K0771-forbidden-edge-generator-completeness.md): 禁止四点リストの健全・完全・重複なし（CNFの幾何節の根拠）
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 「全奇素数で等号」の反例が4個から6個に増えた
 - → depends_on [K0707](../items/K0707-incremental-drat-deletion-unsoundness.md): 削除時に代入を失効させる修正版の増分DRAT検査器で証明書を検査
+
+## [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) 幅2..5の円格子点数P(w)完全決定（4,6,8,8）・系としてw=5・q≥9の行分離 M_{5,q}=q−1
+
+- → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): P(6)=8（単調性によるP(5)≤8）とwitness円(2x−7)²+(2y−7)²=50の原形
+- → depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 系「q>P(w)かつq>wなら行分離M_{w,q}=q−1」へのP(5)=8の代入と対偶
+- → depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): M_{5,8}=16の確定値（対偶によるP(5)≥8の第2導出）
+- → depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md): M_{2,4}=9の確定値（対偶によるP(2)≥4の第2導出・K0796と併用）
+- → depends_on [K0070](../items/K0070-width-three-q6-stabilization.md): M_{3,6}=9（対偶によるP(3)≥6の第2導出）
+- → depends_on [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11（対偶によるP(4)≥8の第2導出）
+- → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規(w,q)領域（w=5・q=9,10。q≥11はK0025のq>2w帯と一致）
+- → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): w=5の低q側帯の上界会計にP(5)=8を供給

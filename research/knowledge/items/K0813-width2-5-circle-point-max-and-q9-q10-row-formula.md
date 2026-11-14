@@ -10,11 +10,11 @@ evidence: "数学的証明（上界: 円と水平線の交点≤2によるP(w)�
 solution:
   board: 幅w=2..5固定長m可変の標準整数格子
   level: strong
-  outcome: solved
+  outcome: conditional
   classification: [all-safe-grundy]
   coverage: P(w)はw=2..5で全称決定・系は(w=5,q≥9)で全m≥1・全安全局面
   conditions: 連続整数行・円はa≠0の真円（直線は含めない）・系はq>P(5)=8かつq>5
-  verification: [mathematical-proof, independent-verification]
+  verification: [mathematical-proof, independent-enumeration]
   certificate: witness円(2x−3)²+(2y−3)²=10（整係数形x²+y²−3x−3y+2=0・行0..3各2点）とP(5)別witness円(2x−7)²+(2y−7)²=50
   independent_check: 対偶導出（K0069/K0070/K0077/K0331の確定M値とK0767系）がwitness下界と完全一致・全円列挙スクリプトで窓内最大一致
   note: "P(w)表はw=2..82で連続に。P(17),P(18)∈{16,17,18}はopenのまま"
