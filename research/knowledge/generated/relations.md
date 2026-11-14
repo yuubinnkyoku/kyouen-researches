@@ -4599,6 +4599,7 @@
 - ← supports [K0782](../items/K0782-width21-26-point-row-sharpened-bounds.md): w=19,20 候補点行集合の実現可能性否定を e≡0 mod 4 から e∈Z 全域に拡張し、A=0（行0接点）を厳密に不可能とした（有限因子分解）
 - ← supports [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): convention監査: K0767..K0784で使われた同パリティ係数16 classMaxは行値y座標（=64t²）で計算されており導出不能。正当な証明書は類変数tの4g0²（convention B）。数値検証でK0778のw=17..20 classMaxはBでも6/6/7/7<9で結論不変・法9周期最大もBで6のまま
 - ← supports [K0789](../items/K0789-width19-21-pw16-certificate.md): w=19,20 の条件付き上界 P≦18（R≦2×10⁷ 有限観測）を無条件の等号 P=16 に強化。w=19 の生残2集合・w=20 の8集合は w=21 の16集合に含まれ素数冪掃引で全滅
+- ← depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(17)=P(18)=16の全称確定（K0767に残る旧open範囲を解消）
 
 ## [K0779](../items/K0779-c4-saturation-n-plus-four-bound.md) C4飽和グラフはn>=13でn+4辺以上、重み2層の14次元最小値は18
 
@@ -4829,6 +4830,7 @@
 - → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
 - ← depends_on [K0805](../items/K0805-mask-census-closed-form.md): dual-run unique（w=69..82・14 点）が閉形式の制御値
 - ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了（w83..86）
+- ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(82)=32 の全称値を漸近上界に代入
 
 ## [K0805](../items/K0805-mask-census-closed-form.md) マスクセンサスの全幅閉形式決定 — level 17 窓マスク掃引の (unique(w), maximal(w)) が交叉統計と区間支配判定で全 w≧17 に決定（unique 3630 到達は w=96 が鋭い・初出現 w=37・maximal=3300 は全 w≧66 で厳密・小パターン参入窓 265..286/309..363/529..561）
 
@@ -4899,12 +4901,14 @@
 
 - → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): P(6)=8（単調性によるP(5)≤8）とwitness円(2x−7)²+(2y−7)²=50の原形
 - → depends_on [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md): 系「q>P(w)かつq>wなら行分離M_{w,q}=q−1」へのP(5)=8の代入と対偶
+- → depends_on [K0778](../items/K0778-width17-20-circle-point-bounds.md): P(17)=P(18)=16の全称確定（K0767に残る旧open範囲を解消）
 - → depends_on [K0331](../items/K0331-width-five-q8-exact-stabilization.md): M_{5,8}=16の確定値（対偶によるP(5)≥8の第2導出）
 - → depends_on [K0069](../items/K0069-two-row-all-lengths-strong-solution.md): M_{2,4}=9の確定値（対偶によるP(2)≥4の第2導出・K0796と併用）
 - → depends_on [K0070](../items/K0070-width-three-q6-stabilization.md): M_{3,6}=9（対偶によるP(3)≥6の第2導出）
 - → depends_on [K0077](../items/K0077-width-four-q8-stabilization.md): M_{4,8}=11（対偶によるP(4)≥8の第2導出）
 - → generalizes [K0025](../items/K0025-q-above-two-width-all-lengths.md): 行分離公式の新規(w,q)領域（w=5・q=9,10。q≥11はK0025のq>2w帯と一致）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): w=5の低q側帯の上界会計にP(5)=8を供給
+- ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(w) の円格子点数定義と各水平行2点上界の枠組み
 
 ## [K0814](../items/K0814-attained-equality-3793-3803-3863.md) p=3793・3803・3863は等号A(p)=(p+3)/2を達成する（サイズh+2の証人を独立整数幾何で監査）
 
@@ -4927,3 +4931,8 @@
 - → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来
 - → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
+
+## [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) 円の連続行窓点数 P(w) の劣加法性と漸近密度上界
+
+- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): P(82)=32 の全称値を漸近上界に代入
+- → depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(w) の円格子点数定義と各水平行2点上界の枠組み
