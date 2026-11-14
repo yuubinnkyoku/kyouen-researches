@@ -4863,7 +4863,7 @@
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
 - ← generalizes [K0811](../items/K0811-sa-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
 
-## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥26・M_{6,6}≥21・M_{5,6}≥19（K0810の下界3件を更新）
+## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥28・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾で延長）
 
 - → generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
 - → depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): census・census不使用独立検証器の verbatim 移植

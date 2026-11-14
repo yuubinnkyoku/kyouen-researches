@@ -1,4 +1,8 @@
 w,P(w),status,source,witness
+2,4,proved-exact,K0813,"(2x-3)^2+(2y-3)^2=10 (2 points per row, rows 0..1)"
+3,6,proved-exact,K0813,"(2x-3)^2+(2y-3)^2=10 (rows 0..2)"
+4,8,proved-exact,K0813,"(2x-3)^2+(2y-3)^2=10 (4x4 board, 2 per row rows 0..3)"
+5,8,proved-exact,K0813,"(2x-3)^2+(2y-3)^2=10 (rows 0..3 of 5-row window); upper P(5)<=P(6)=8 (K0763); alt witness (2x-7)^2+(2y-7)^2=50"
 6,8,proved-exact,K0763,"(2x-7)^2+(2y-7)^2=50"
 7,10,proved-exact,K0764,"(2x-7)^2+(2y-7)^2=50 (5 double rows)"
 8,12,proved-exact,K0765,"(2x-7)^2+(2y-7)^2=50 (6 double rows, 8x8)"

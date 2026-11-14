@@ -1,11 +1,20 @@
 #!/usr/bin/env python3
-"""Independent non-degenerate 7th-stone candidate enumerator for an 11x11 S6 child.
+"""Independent non-degenerate candidate enumerator for an 11x11 S6 child / S7 root.
 
-A candidate cell p is legal iff placing the 7th stone on p keeps the 7-stone
-set free of 4-concyclic subsets (exact integer Bareiss 4x4 determinants of
+A candidate cell p is legal iff placing the new stone on p keeps the stone set
+free of 4-concyclic subsets (exact integer Bareiss 4x4 determinants of
 [x^2+y^2, x, y, 1] rows; zero determinant = concyclic or collinear quadruple).
 Validated bit-exact against the published candidate lists of the class2-lane
-cost-58 (58), cost-61-c (61) and cost-63 (63) sweeps on 2026-11-14.
+cost-58 (58), cost-61-c (61) and cost-63 (63) sweeps and the class4-lane
+cost-74a/b sweeps (74/74) on 2026-11-14, and against the engine loser-mobility
+of the six cost-74b 7-stone WIN7 roots (50/55/57/58/63/64) on 2026-11-14.
+
+2026-11-14 bugfix: the triple enumeration was hardcoded to
+itertools.combinations(range(6), 3), so on a 7-stone root it never inspected
+triples containing the last occupied stone and over-reported legal candidates
+(e.g. 74 instead of the true 57 for root 00000000020000003821000080000000).
+It is now combinations(range(len(st)), 3), correct for any stone count.
+6-stone child enumerations are unchanged by this fix.
 """
 import itertools
 import sys
@@ -47,7 +56,7 @@ def legal_candidates(hexstr):
         px, py = p % 11, p // 11
         prow = [px * px + py * py, px, py, 1]
         unsafe = False
-        for (i, j, k) in itertools.combinations(range(6), 3):
+        for (i, j, k) in itertools.combinations(range(len(st)), 3):
             if det4([rows[i], rows[j], rows[k], prow]) == 0:
                 unsafe = True
                 break

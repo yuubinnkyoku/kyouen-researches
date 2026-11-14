@@ -1,0 +1,168 @@
+{
+ "date": "2026-11-14",
+ "claims": {
+  "P(2)": {
+   "witness": "(2x+39)^2+(2y-3)^2=10",
+   "points": 4,
+   "allOn": true,
+   "perRow": {
+    "0": 2,
+    "1": 2
+   }
+  },
+  "P(3)": {
+   "witness": "(2x+39)^2+(2y-3)^2=10",
+   "points": 6,
+   "allOn": true,
+   "perRow": {
+    "0": 2,
+    "1": 2,
+    "2": 2
+   }
+  },
+  "P(4)": {
+   "witness": "(2x+39)^2+(2y-3)^2=10",
+   "points": 8,
+   "allOn": true,
+   "perRow": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 2
+   }
+  },
+  "P(5)": {
+   "witness": "(2x+39)^2+(2y-3)^2=10",
+   "points": 8,
+   "allOn": true,
+   "perRow": {
+    "0": 2,
+    "1": 2,
+    "2": 2,
+    "3": 2
+   }
+  }
+ },
+ "checks": {
+  "circle50_rows0_4": {
+   "points": 8,
+   "pts": [
+    [
+     4,
+     0
+    ],
+    [
+     3,
+     0
+    ],
+    [
+     6,
+     1
+    ],
+    [
+     1,
+     1
+    ],
+    [
+     7,
+     3
+    ],
+    [
+     0,
+     3
+    ],
+    [
+     7,
+     4
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "allOn": true
+  },
+  "contrapositive": [
+   {
+    "w": 2,
+    "q": 4,
+    "M": 9,
+    "source": "K0796;K0069",
+    "qMinus1": 3,
+    "recordedDiffers": true,
+    "forcedPlower": 3
+   },
+   {
+    "w": 3,
+    "q": 6,
+    "M": 9,
+    "source": "K0070",
+    "qMinus1": 5,
+    "recordedDiffers": true,
+    "forcedPlower": 5
+   },
+   {
+    "w": 4,
+    "q": 8,
+    "M": 11,
+    "source": "K0077;K0302",
+    "qMinus1": 7,
+    "recordedDiffers": true,
+    "forcedPlower": 7
+   },
+   {
+    "w": 5,
+    "q": 8,
+    "M": 16,
+    "source": "K0331",
+    "qMinus1": 7,
+    "recordedDiffers": true,
+    "forcedPlower": 7
+   }
+  ],
+  "rowBound": true,
+  "monotoneWitness": true,
+  "searchX20": {
+   "w2": {
+    "max": 4,
+    "bestCo": [
+     1,
+     39,
+     -1,
+     380
+    ],
+    "circles": 34000
+   },
+   "w3": {
+    "max": 6,
+    "bestCo": [
+     1,
+     39,
+     -3,
+     380
+    ],
+    "circles": 164739
+   },
+   "w4": {
+    "max": 8,
+    "bestCo": [
+     1,
+     39,
+     -3,
+     380
+    ],
+    "circles": 446128
+   },
+   "w5": {
+    "max": 8,
+    "bestCo": [
+     1,
+     39,
+     -3,
+     380
+    ],
+    "circles": 937609
+   }
+  }
+ }
+}
