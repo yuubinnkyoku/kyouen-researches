@@ -1,6 +1,6 @@
 ---
 id: K0826
-title: "7xm q=7 row-deficient witness band — witnesses 7x7..7x25 (M_{7,7} >= 26, upper 708 by K0318 substitution); first (7,7) family results (q=w diagonal)"
+title: "7xm q=7 row-deficient witness band — witnesses 7x7..7x26 (M_{7,7} >= 27, upper 708 by K0318 substitution); first (7,7) family results (q=w diagonal)"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -28,34 +28,40 @@ artifacts:
 - path: research/experiments/seven-row-q7-witness-search-20261114/output/row-split/s7x25q7_rowY3.witness.json
   role: data
   note: "largest-width (7,7) witness (41 stones at 7x25, rows 6,6,6,5,6,6,6, found via the rowY=3 split); m=7..24 witnesses at output/def-search/s7xMq7_none.witness.json, all dual-verified (sat.js verifyConfig + Python Fraction)"
+- path: research/experiments/seven-row-q7-witness-search-20261114/output/results.jsonl
+  role: data
+  note: "parallel-lane independent-run records: SAT m=8..26 with raw kissat logs m=8..21; conflicts bit-exact with the def-search/row-split records on shared instances (m=24 def OR 2,105,329; m=25 rowY=3 756,785); m=26 record: rowY=3 SAT, 1,951,966 conflicts, 41 stones rows 6,6,6,5,6,6,6, dual-verified"
+- path: research/experiments/seven-row-q7-witness-search-20261114/output/w7q7_7x26q7_rowY3.witness.json
+  role: data
+  note: "m=26 witness (41 stones, rows 6,6,6,5,6,6,6) extends the band to 7x26: M_{7,7} >= 27, frontier 7x27; raw log at output/w7q7_7x26q7_rowY3.kissat.txt; m=27 rowY=3 262s-cap INDET log at output/w7q7_7x27q7_rowY3.kissat.txt (2,242,940 conflicts, honest negative)"
 scope: "finite machine verification: kissat 4.0.4 (all instances); widths stated per family only; up to census completeness and solver correctness"
-evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + m=24 bit-exact determinism re-run (2,105,329 conflicts reproduced). See report.md."
+evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + m=24 bit-exact determinism re-run (2,105,329 conflicts reproduced; cross-lane independent-run bit-exact reproduction on shared instances m=24/m=25 rowY=3: 2,105,329 / 756,785). See report.md."
 ---
 
-# 7×m q=7 行欠損witness帯 — witness 7×7..7×25（M_{7,7} ≥ 26・上界708）・q=w 対角ファミリー初の結果
+# 7×m q=7 行欠損witness帯 — witness 7×7..7×26（M_{7,7} ≥ 27・上界708）・q=w 対角ファミリー初の結果
 
 ## 主張
 
 1. **(7,7)（7×m・q=7・q点共円/共線禁止）**: 行欠損の極大安全配置が
-   **m=7..25 の全幅で存在する**（本ファミリー初の結果。q=w の対角ケース）。
+   **m=7..26 の全幅で存在する**（本ファミリー初の結果。q=w の対角ケース）。
    - m=7..14 は深欠損（30, 32, 34, 37, 38, 39, 40, 41 石・deficiency 12..1。
      m=10..14 は上位6行が6石・最下段 1..5 石の構造系列）。
-   - m=15..25 は単一欠損の **41石**（ある行のみ5石・他の6行は6石。
+   - m=15..26 は単一欠損の **41石**（ある行のみ5石・他の6行は6石。
      満容量 42 = 7·6）。
    - すべて census 不使用 JS verifyConfig と Python Fraction 独立実装の
      2系統検証で safe + maximal + 行欠損 PASS。
-2. よって witness 幅集合は {7..25} を含み **M_{7,7} ≥ 26**
-   （M ∈ [26, 708]・上界 708 は K0318 曲線パッキング代入・U_{7,7}=708）。
+2. よって witness 幅集合は {7..26} を含み **M_{7,7} ≥ 27**
+   （M ∈ [27, 708]・上界 708 は K0318 曲線パッキング代入・U_{7,7}=708）。
 3. **m=25 の解法**: def OR 実例は 240s cap で INDET（2,478,476 conflicts）だったが、
    欠損行固定の **rowY 分解（V 対称で 4 クラス）の rowY=3（中央行）で SAT**
    （756,785 conflicts）。rowY=0/1/2 は 200s cap で INDET（不在の主張ではない）。
    K0825 の (7,8) m=24 と同様、**行固定分解が OR 壁を突破**（q=7 でも再確認）。
-4. **正直な負記録**: m=25 rowY=0/1/2 の INDET、m=26 以降は未走査。
-   witness 探索の前線は **7×26**。
+4. **正直な負記録**: m=25 rowY=0/1/2 の INDET、m=27 rowY=3 は 262s cap で INDET（2,242,940 conflicts・不在の主張ではない）。
+   witness 探索の前線は **7×27**。m=26 は rowY=3 固定分解で SAT（1,951,966 conflicts・41石 rows 6,6,6,5,6,6,6・並走独立run・2系統検証 PASS）。
 5. **観測（全称主張ではない）**: 7行族の単一欠損 witness 帯は
-   (7,8) m=13..24 と (7,7) m=15..25 で同型（欠損行の位置は幅ごとに変わり、
+   (7,8) m=13..24 と (7,7) m=15..26 で同型（欠損行の位置は幅ごとに変わり、
    (7,7) m=25 では中央行）。def OR 実例の難化も同様
-   （(7,7): m=23 SAT 119,071 → m=24 SAT 2,105,329 → m=25 OR INDET 2,478,476）。
+   （(7,7): m=23 SAT 119,071 → m=24 SAT 2,105,329 → m=25 OR INDET 2,478,476 → m=26 rowY=3 SAT 1,951,966 → m=27 rowY=3 INDET 2,242,940@262s）。
 
 ## 手法と検証
 
@@ -68,7 +74,7 @@ conflicts 2,105,329 が bit-exact 再現（決定性）。sat2.js の符号化�
 ## 範囲と限界
 
 有限機械検証（census 完全性とソルバ正確性まで）。数論的証明ではない。
-M_{7,7} の確定には 7×26..7×28（census 実用範囲）以降の評価と
+M_{7,7} の確定には 7×27..7×28（census 実用範囲）以降の評価と
 上界 708 の改善（K0342 型 tail 評価）が残る。
 
 ## 備考

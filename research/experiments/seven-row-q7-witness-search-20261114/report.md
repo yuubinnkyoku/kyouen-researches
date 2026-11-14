@@ -83,3 +83,28 @@ q=w の対角ファミリーで単一欠損witness帯が m=15..25 で続く観�
 
 K番号は作業時点での仮番号（AGENTS.md の再採番規則による）。
 実行環境は 2026-11-14 高速レーン第9回と同一（kissat 4.0.4 公式バイナリ）。
+
+---
+
+## 第3バッチ（並走レーン・m=26 witness）
+
+日付: 2026-11-14（高速レーン・並走独立run）
+
+同一実験ディレクトリで並走した独立runによる追加バッチ。符号化・ソルバ・
+検証プロトコルは第1・2バッチと同一（sat2.js verbatim・kissat 4.0.4 公式
+linux-amd64 バイナリ・2系統検証）。
+
+1. **m=26 行欠損witness**: rowY=3（中央行）固定分解で **SAT
+   （1,951,966 conflicts・約233s）**。41石 witness rows 6,6,6,5,6,6,6・
+   2系統検証 PASS（`output/w7q7_7x26q7_rowY3.witness.json`・
+   raw log `output/w7q7_7x26q7_rowY3.kissat.txt`・レコードは
+   `output/results.jsonl` の m=26 エントリ）。
+   → witness 幅集合は {7..26} を含み **M_{7,7} ≥ 27**（M ∈ [27, 708]）・
+   **witness 探索の前線は 7×27**。
+2. **並走独立再現（決定性の追証）**: 本runは共有実例で第2バッチと
+   conflicts が bit-exact 一致（m=24 def OR: 2,105,329・
+   m=25 rowY=3: 756,785）。別runによる再現であり、決定性較正の
+   「単一run内再実行」を補う独立再現の傍証となる。
+3. **正直な負記録**: m=27 rowY=3 は 262s cap で INDET
+   （2,242,940 conflicts・不在の主張ではない）。
+

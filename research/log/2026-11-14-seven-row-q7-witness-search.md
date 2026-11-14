@@ -41,3 +41,25 @@ K0318 上界 U_{7,7}=708 のみ既知）の行欠損witness探索に着手した
 - (7,6)/(7,5)/(7,4) witness 探索（同型の sat2 機械で m=q から開始可能）。
 - (7,9)/(7,10) 帯延長 m=101..200（genfast+kissat・1幅6-9s）。
 - K0342 型 tail 評価（U=708/651/613/587 の改善）。
+
+---
+
+## 2026-11-14 並走run分（m=26 witness・前線7×27）
+
+同じ実験dir・同名テーマで並走していた独立run（同一の sat2.js + kissat 4.0.4
+公式バイナリ）の追加分。ファイル名が異なるため相互clobberなし
+（本runの成果物は `output/w7q7_*` 接頭辞・第1〜2バッチは
+`output/def-search/`・`output/row-split/`）。
+
+- m=8..26 の witness 探索を `scripts/lane7k.js` + `scripts/extract_verify.py`
+  （生ログ→石抽出→JS/Python 2系統検証→results.jsonl追記）で実施。
+  m=8..24 は def OR で SAT・m=25..26 は rowY=3 固定分解で SAT。
+  共有実例の conflicts は第1〜2バッチの記録と bit-exact 一致
+  （m=24: 2,105,329・m=25 rowY=3: 756,785）→ 独立runによる決定性再現。
+- **m=26 rowY=3: SAT（1,951,966 conflicts・41石 rows 6,6,6,5,6,6,6・
+  2系統検証 PASS）→ M_{7,7} ≥ 27・前線 7×27**。
+- 2×8/2×9 q=4 制御（fastsat 121/535・kissat 37/316）は記録値と bit-exact
+  （較正PASS）。
+- m=27 rowY=3: 262s cap INDET（2,242,940 conflicts・正直な負記録）。
+  長時間runは継続中のため、確定時に別バッチで記録する。
+
