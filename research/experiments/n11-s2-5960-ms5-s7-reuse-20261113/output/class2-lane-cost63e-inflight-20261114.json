@@ -77,5 +77,36 @@
  "batch_plan": "63 candidates in 8 batches (8,8,8,8,8,8,8,7), raw JSONL pushed per batch as completed",
  "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots.",
  "session": "long-term lane session 12 (2026-11-14)",
- "status": "in flight (claimed by the long-term lane session 12)"
+ "status": "completed",
+ "result": {
+  "win7_d10": 8,
+  "win7_bits": [
+   28,
+   42,
+   73,
+   90,
+   97,
+   100,
+   116,
+   120
+  ],
+  "refuted_d10": 55,
+  "capped": 0,
+  "total_nodes": 50421919,
+  "certificates": [
+   28,
+   90,
+   97
+  ],
+  "unverified_win7_bits": [
+   42,
+   73,
+   100,
+   116,
+   120
+  ],
+  "records": "class2-lane-cost63e-sweep-20261114.json + class2-lane-cost63e-win7-certificates-20261114.json",
+  "log": "research/log/2026-11-14-class2-lane-cost63e-win7.md"
+ },
+ "sweep": "completed in 8 batches (8,8,8,8,8,8,8,7); all raw batches + v15 crosscheck + v16 determinism rerun published"
 }

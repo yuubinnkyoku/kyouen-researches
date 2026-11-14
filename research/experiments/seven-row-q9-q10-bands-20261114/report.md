@@ -7,12 +7,12 @@
    54). All witnesses are dual-verified (census-free JS verifyConfig + Python Fraction).
    Combined with `seven-row-inband-families-20261114` (witnesses at m=9..14), the witness
    width set of (7,9) includes **{9..23}**.
-2. **(7,9)**: On the 7×24..7×60 integer grids, the def-mode instance ("some row has ≤ 7
+2. **(7,9)**: On the 7×24..7×100 integer grids, the def-mode instance ("some row has ≤ 7
    stones", no lex) is **UNSAT** for kissat 4.0.4 (exit 20). Widths 24 and 33 are
    re-checked UNSAT with the independent def+lex=H,V,HV encoding (81,997 / 38,424
-   conflicts); the extended band endpoints 52 and 60 are likewise re-checked UNSAT with
-   def+lex=H,V,HV (25,855 / 19,373 conflicts). Hence the witness-free band of (7,9)
-   contains **{24..60}**, and **M_{7,9} = 24 or M_{7,9} ≥ 61** (M ∈ {24} ∪ [61, 613];
+   conflicts); the extended band endpoints 52, 60 and 100 are likewise re-checked UNSAT with
+   def+lex=H,V,HV (25,855 / 19,373 / 15,637 conflicts). Hence the witness-free band of (7,9)
+   contains **{24..100}**, and **M_{7,9} = 24 or M_{7,9} ≥ 101** (M ∈ {24} ∪ [101, 613];
    upper bound 613 by K0318 curve-packing substitution, recorded in the source
    experiment's w7_upper_bounds.json).
 3. **(7,10)**: The `seven-row-inband-families-20261114` fastsat UNSAT band (m=19..40,
@@ -22,11 +22,12 @@
    4,122 / 4,486 / 11,408 / 4,804 / 2,179 / 11,809 / 3,628 / 41,278 / 3,866 / 4,458 /
    3,195 / 4,702) and kissat returns UNSAT for every width. The band is **extended to
    m=41..51** (both fastsat and kissat UNSAT; worst 15,399 fastsat conflicts at m=46)
-   and further to **m=52..60** (kissat 4.0.4 UNSAT per width, lean2.sh; 888–1,634
-   conflicts; m=52/60 def+lex=H,V,HV cross-checks UNSAT at 1,033 / 1,020 conflicts).
+   and further to **m=52..100** (kissat 4.0.4 UNSAT per width, lean2.sh; 888–3,727
+   conflicts; m=52/60/100 def+lex=H,V,HV cross-checks UNSAT at 1,033 / 1,020 / 2,657
+   conflicts).
    With the m=10..18 witnesses of the source experiment, the witness width set of (7,10)
-   is {10..18} and the witness-free band is **{19..60}**: **M_{7,10} = 19 or M_{7,10} ≥ 61**
-   (M ∈ {19} ∪ [61, 587]; upper bound 587 by K0318 substitution).
+   is {10..18} and the witness-free band is **{19..100}**: **M_{7,10} = 19 or M_{7,10} ≥ 101**
+   (M ∈ {19} ∪ [101, 587]; upper bound 587 by K0318 substitution).
 
 ## Method
 
@@ -79,11 +80,13 @@ Generation cost: 2.7 s at 7×52 (vs OOM); lean2.sh = genfast + kissat + (SAT: du
   independent implementations (sat.js verifyConfig census-free JS; verify_witness.py
   Python Fraction — pairs-of-stones lines / triples-of-stones circles) as safe +
   maximal + row-deficient. 9/9 new (7,9) witnesses PASS both.
-- Second encoding: (7,9) UNSAT widths 24, 33, 52, 60 re-checked with def+lex=H,V,HV;
-  (7,10) widths 52, 60 likewise (all UNSAT).
+- Second encoding: (7,9) UNSAT widths 24, 33, 52, 60, 100 re-checked with
+  def+lex=H,V,HV; (7,10) widths 52, 60, 100 likewise (all UNSAT).
 - Determinism: all recorded numbers survived **two execution-environment resets** and
   were re-run bit-exact (fastsat calibration set and kissat conflicts identical
-  across resets).
+  across resets). A third reset occurred during the m=61..100 extension; the affected
+  widths (q9 61..70, q10 61..90) were regenerated with **conflicts identical** to the
+  pre-reset runs (recorded in both output notes).
 - Negative observation (honest limitation): fastsat could **not** confirm the (7,9)
   UNSAT band within a 60 s cap at m=24 (210k conflicts, TIMEOUT); the (7,9) band
   evidence is kissat-only (+ lex cross-encoding at 2 widths), unlike the (7,10) band
@@ -91,11 +94,11 @@ Generation cost: 2.7 s at 7×52 (vs OOM); lean2.sh = genfast + kissat + (SAT: du
 
 ## Results
 
-- q9-witness-search/records.jsonl: 50 records — SAT m=15..23 (witnesses in
-  s7xMq9_none.witness.json), UNSAT m=24..60 (m=34..45 via lean1.sh/sat2.js,
-  m=46..60 via lean2.sh/genfast.js), lex cross-checks at m=24/33/52/60.
-- q10-band/records.jsonl: 44 records — m=19..60 all UNSAT (m=19..40 confirmation,
-  m=41..51 fastsat+kissat extension, m=52..60 kissat lean2 extension + m=52/60
+- q9-witness-search/records.jsonl: 91 records — SAT m=15..23 (witnesses in
+  s7xMq9_none.witness.json), UNSAT m=24..100 (m=34..45 via lean1.sh/sat2.js,
+  m=46..100 via lean2.sh/genfast.js), lex cross-checks at m=24/33/52/60/100.
+- q10-band/records.jsonl: 85 records — m=19..100 all UNSAT (m=19..40 confirmation,
+  m=41..51 fastsat+kissat extension, m=52..100 kissat lean2 extension + m=52/60/100
   lex cross-checks).
 - controls/records.jsonl: 2×8/2×9 q=4.
 
@@ -104,9 +107,9 @@ Generation cost: 2.7 s at 7×52 (vs OOM); lean2.sh = genfast + kissat + (SAT: du
 Finite machine verification, up to census completeness (all lines/circles with ≥ q grid
 points enumerated by the K0810 census or the validated genfast census) and solver
 correctness (kissat 4.0.4; fastsat for the calibrated (7,10) band m=19..51). Not a
-number-theoretic proof. Determining M_{7,9} = 24 exactly needs persistence at m=61..612
-(or a K0342-style tail bound); M_{7,10} = 19 needs persistence at m=61..586. The
-witness-search frontiers are 7×61 (q=9) and 7×61 (q=10).
+number-theoretic proof. Determining M_{7,9} = 24 exactly needs persistence at m=101..612
+(or a K0342-style tail bound); M_{7,10} = 19 needs persistence at m=101..586. The
+witness-search frontiers are 7×101 (q=9) and 7×101 (q=10).
 
 ## Reproduction
 
