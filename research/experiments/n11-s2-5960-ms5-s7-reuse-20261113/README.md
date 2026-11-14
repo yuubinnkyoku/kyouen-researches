@@ -58,3 +58,20 @@ This is verification and bookkeeping only. **No game verdict is established**: 1
 The baseline 498-parent S7 reuse audit was extended with the cost-69c, cost-70b, cost-71, and cost-75 WIN7 certificate manifests. The 23 new roots are distinct and exactly safe; they yield 70 S6-parent incidences over 48 distinct worklist parents. After removing the five parents already covered by the baseline, **43 additional D4-canonical S6 worklist orbits** are covered. The remaining worklist falls from 7,369 to 7,326 rows, and the remaining legal seventh-move candidate cost falls from 577,110 to 573,835 (a reduction of 3,275).
 
 This is certificate-reuse bookkeeping, not closure of S2 or the empty root. Certificate bodies were not re-run in this audit; see [the run log](../../log/2026-11-14-n11-s2-class2-win7-incremental-reuse.md), [the reproducible audit script](scripts/audit_incremental_class2_win7_reuse.py), and [the JSON result](output/class2-win7-reuse-incremental-20261114.json).
+
+## 2026-11-14 v16 runner: signed transposition-key repair
+
+The original `class4_child1_runner.ts` is retained as v15 for reproducibility. Its memo keys are stored in `Uint32Array`, while the live bitwise occupancy words are signed 32-bit values; strict equality therefore misses states whenever a word's high bit is set. The negative-bound arrays also used sentinel 255 with update conditions that could never succeed at search depths up to 10.
+
+Use the separate `scripts/class4_child1_runner_v16.ts` for future sweeps after any already-claimed v15 job has completed. It compares keys as unsigned words and writes `mNoWin` / `mNoLose` bounds when the 255 sentinel is still empty.
+
+Regression command (Node 22):
+
+```sh
+node --experimental-strip-types research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.test.ts
+```
+
+The fixed pilot is `loss=false` at 3,402 nodes. On child `00000000020000003800000280000000`, bit 15 at depth 8 with close-first AND, v15 used 146,514 nodes and v16 used 56,791; both returned `loss=false` and terminal range [13,15]. This is a bounded implementation regression, not a game verdict. A second case exercises the sign bit in the next word: on child `00000000000000809102000001000000` plus bit 0 at depth 8, v15 reached the 200,000-node cap while v16 completed in 121,837 nodes with `loss=false` and terminal range [13,15].
+
+The in-flight cost-86c and cost-62a claims still use v15. Do not combine their raw batches with v16 results. Other copies of the signed-key pattern (sweep engine, chunk prover, certificate extractors, and FBT-saturation runners) still require separate audit before reuse.
+

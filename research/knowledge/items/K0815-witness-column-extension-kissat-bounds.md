@@ -1,6 +1,6 @@
 ---
 id: K0815
-title: 列追加拡張・深除去拡張と外部SATソルバによる下界更新 — M_{6,5}≥31・M_{6,6}≥24・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37
+title: 列追加拡張・深除去拡張と外部SATソルバによる下界更新 — M_{6,5}≥31・M_{6,6}≥24・M_{5,6}≥22・M_{6,7}≥22・M_{6,8}≥19・6×12 q=8最小極大=37
 kind: proposition
 status: proved
 topics: [rectangles, variants]
@@ -49,6 +49,9 @@ artifacts:
 - path: research/experiments/witness-extension-kissat-20261114/output/w67_20.json
   role: data
   note: 6×20 q=7 35石witness（行構成 6,6,5,6,6,6）・2系統検証PASS → M_{6,7} ≥ 21
+- path: research/experiments/six-row-q7-m21-class-split-20261114/output/w67_21.json
+  role: data
+  note: 6×21 q=7 35石witness（行構成 6,6,5,6,6,6・class-split SAT class {2}・1,904,706 conflicts）・2系統検証PASS → M_{6,7} ≥ 22
 - path: research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json
   role: data
   note: kissat実行記録（制御・timeout記録込み）
@@ -93,12 +96,12 @@ solution:
   level: weak
   outcome: conditional
   classification: [root]
-  coverage: (6,5) 6×29,30・(6,6) 6×22,23・(5,6) 5×20,21・(6,7) 6×20・(6,8) 6×18 の各盤の欠損極大witness・6×12 q=8 の37石極大安全配置
+  coverage: (6,5) 6×29,30・(6,6) 6×22,23・(5,6) 5×20,21・(6,7) 6×20,21・(6,8) 6×18 の各盤の欠損極大witness・6×12 q=8 の37石極大安全配置
   conditions: q点共円・共線禁止・標準整数格子
   verification: [independent-enumeration]
   certificate: witness座標（全witnessがJS census不使用独立検証器とPython別実装検証器の2系統で safe+maximal PASS）
   independent_check: 別言語・別アルゴリズム（石ペア直線・石3点組円の全列挙・Fraction厳密演算）による直接判定の一致
-  note: 下界更新のみ（第1〜3弾）。第4弾で6×12 q=8 cap=36 が UNSAT（totalizer+lex 符号化 10,225,097 conflicts・K0810元符号化 20,469,242 conflicts の2符号化で一致）に決着し、6×12 q=8 最小極大サイズ=37 が確定。第5弾で 6×30 (q=5)・6×23 (q=6) に欠損極大witnessが実在し M_{6,5}=30・M_{6,6}=23 の可能性が反証。6×31 (q=5)・6×24 (q=6)・5×22 (q=6)・6×21 (q=7) は未決着であり不在証明ではない。6×19 (q=8) は K0818（全35正準欠損クラスのclass-split UNSAT）で・5×20 (q=7) は K0816 で欠損極大不在が確定済み。5×19 (q=7) は K0738–K0759 の occupancy 完全列挙で不在が確定済み（第3弾参照）
+  note: 下界更新のみ（第1〜3弾）。第4弾で6×12 q=8 cap=36 が UNSAT（totalizer+lex 符号化 10,225,097 conflicts・K0810元符号化 20,469,242 conflicts の2符号化で一致）に決着し、6×12 q=8 最小極大サイズ=37 が確定。第5弾で 6×30 (q=5)・6×23 (q=6) に欠損極大witnessが実在し M_{6,5}=30・M_{6,6}=23 の可能性が反証。6×31 (q=5)・6×24 (q=6)・5×22 (q=6)・6×22 (q=7) は未決着であり不在証明ではない（6×21 q=7 は第7弾でwitness実在・6×22 q=7 class {2} は単発280秒5.04M conflictsでINDET）。6×19 (q=8) は K0818（全35正準欠損クラスのclass-split UNSAT）で・5×20 (q=7) は K0816 で欠損極大不在が確定済み。5×19 (q=7) は K0738–K0759 の occupancy 完全列挙で不在が確定済み（第3弾参照）
 ---
 
 # 列追加拡張とkissatによる下界更新（2026-11-14）
@@ -254,3 +257,19 @@ setsid バックグラウンド長時間実行）で同じ前線を直接探索�
 - 運用メモ: 5×22 q=6 の直接SAT（欠損行単一節・1500秒予算）は約1330秒/14.7M
   conflicts 進行時に実行環境アウテージで中断（verdict未取得・レジュームは
   research/log/2026-11-14-encoding-symmetry-frontier-runs.md）。
+
+
+## 第7弾: class-split SATによる 6×21 q=7 witness — M_{6,7} ≥ 22
+
+K0818 の class-split 符号化（sat3.js・K0810 census + sat2.js counter core・欠損クラス単一節）
+を q=7 盤に初適用し、(6,7) の未決着前線 6×21 を直接攻撃した（kissat 4.0.4・
+単発280秒・lex無し）。6×20 の既知witnessと同じ行構成クラス {2}（行2が5石・他行6石）が
+**1,904,706 conflicts・99秒で SAT** — **6×21 q=7 に35石欠損極大witness（行構成 6,6,5,6,6,6）**
+が実在し **M_{6,7} ∈ [22,402]**（上界不変）。第2弾の「6×21 q=7 def+lex 4.55M未決着」は
+class分割で決着した例（符号化の分割が難度を崩す第4弾観察の再確認）。
+
+- 検証: JS census不使用 verifyConfig と Python Fraction 別実装の2系統で safe+maximal PASS。
+- 正制御: 6×20 q=7 class {2} が 641,859 conflicts・29秒で SAT・35石 rows (6,6,5,6,6,6)
+  （K0815 第2弾witness盤の同経路再発見・2系統検証PASS）。
+- 次前線: 6×22 q=7（class {2} は単発280秒で 5,038,264 conflicts INDET・非不在）。
+  実験: research/experiments/six-row-q7-m21-class-split-20261114/。
