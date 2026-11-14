@@ -1,6 +1,6 @@
 ---
 id: K0810
-title: SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証）
+title: SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥20（K0809候補予想4件の反証・fastsat seed portfolioで(5,6) m=19突破）
 kind: proposition
 status: proved
 topics: [rectangles, variants]
@@ -18,13 +18,16 @@ relations:
 artifacts:
 - path: research/experiments/sat-fastcdcl-20261114/scripts/fastsat.js
   role: source
-  note: 高速CDCL（2-watched literals・EVSIDS heap・Luby restarts・LBD削減・phase saving・cell変数ブート）・cap=38 witnessの発見機
+  note: 高速CDCL（2-watched literals・EVSIDS heap・Luby restarts・LBD削減・phase saving・cell変数ブート・--seed jitter）・cap=38 witness・5×19 witnessの発見機
+- path: research/experiments/sat-fastcdcl-20261114/output/w56_19.json
+  role: data
+  note: 5×19 の24石行欠損witness座標（fastsat seed=7 SAT・census不使用独立検証 PASS）
 - path: research/experiments/sat-fastcdcl-20261114/output/results.jsonl
   role: data
-  note: cap=38 witness・6×22 2石欠損witness・制御・fuzz450・相互検証60・抵抗（6×29/6×28/cap=37）
+  note: cap=38 witness・6×22 2石欠損witness・5×19 witness・制御・fuzz450・相互検証60・抵抗（6×29/6×28/cap=37/(5,7) m=19,20/cap=41）
 - path: research/experiments/sat-fastcdcl-20261114/report.md
   role: proof
-  note: 手法・検証プロトコル・実装バグ2件の捕捉記録
+  note: 手法・検証プロトコル・実装バグ2件の捕捉記録・seed portfolioの難度非単調性
 - path: research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js
   role: source
   note: census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
@@ -39,12 +42,12 @@ solution:
   level: weak
   outcome: conditional
   classification: [root]
-  coverage: (6,5) m=22・(6,6) m=17,19・(6,8) m=12..17・(5,6) m=16,17 の各盤
+  coverage: (6,5) m=22・(6,6) m=17,19・(6,8) m=12..17・(5,6) m=16,17,19 の各盤
   conditions: q点共円・共線禁止・標準整数格子
   verification: [exact-search, independent-enumeration]
   certificate: SAT model（全witnessがcensus不使用独立検証で safe+maximal PASS）
   independent_check: 別プロセスでの再検証・2ソルバ相互検証・全列挙制御（2×8/2×9）・fuzz 800題
-  note: 下界更新のみ。timeout した m（(6,8) m=18・(5,6) m=18,19・(5,7) m=19・(6,7) m=20・(6,6) m=18,20,21）は未解決であり不在証明ではない
+  note: 下界更新のみ。timeout した m（(6,8) m=18・(5,6) m=18・(5,7) m=19・(6,7) m=20・(6,6) m=18,20,21）は未解決であり不在証明ではない。(5,7) m=19 は fastsat seed portfolio（5設定・110-125k conflicts/run）でも抵抗
 ---
 
 # SAT探索による行欠損極大witness — 4組の下界更新（2026-11-14）
@@ -63,16 +66,20 @@ sequential counter によるSAT符号化（safety・blocking・行欠損）で�
   cap=38（38石・行構成 7,7,7,6,7,4）は sat-fastcdcl-20261114 の新規CDCL fastsat.js で
   SAT（133,524 conflicts）。**6×12 q=8 の最小極大サイズは ≤38 に更新**。
   cap=37 は未解決・不在証明ではない）。
-- **M_{5,6} ≥ 18**: 24石@5×16 と 24石@5×17（行構成 5,5,5,5,4 / 5,5,5,4,5）。
+- **M_{5,6} ≥ 20**: 24石@5×16,5×17（行構成 5,5,5,5,4 / 5,5,5,4,5）に加え、
+  fastsat seed portfolio（--seed による初期アクティビティ/位相jitter・seed=7）が
+  5×19 の24石（行構成 5,5,5,5,4）を 8,378 conflicts で発見
+ （sat-fastcdcl-20261114・K0811 SA 5 run抵抗の m=19 を解決・独立検証 PASS）。
 - 6×22 q=5 には22石（2石欠損・行構成 4,4,4,2,4,4）の行欠損極大も存在する
  （sat-fastcdcl-20261114・fastsat 3,382 conflicts。K0811参照）。
 
 これにより K0809 の候補予想 M_{6,5}=22・M_{6,6}=17・M_{6,8}=12・M_{5,6}=16 は反証された
 （ヒューリスティックな予想であり、貪欲系探索の非発見 m は実際の不在と系統的にズレる）。
-(5,7) m=19・(6,7) m=20 はCDCL予算内で解けず未解決（不在証明ではない）。
+(5,7) m=19・(6,7) m=20 はCDCL予算内で解けず未解決（不在証明ではない。
+(5,7) m=19 は seed portfolio 5設定・計568,576 conflicts でも非決着）。
 
 現在の境界: M_{6,5} ∈ [23,658]・M_{6,6} ∈ [20,495]・M_{6,8} ∈ [18,371]・
-M_{5,6} ∈ [18,249]・M_{5,7} ∈ [19,158]・M_{6,7} ∈ [20,402]。
+M_{5,6} ∈ [20,249]・M_{5,7} ∈ [19,158]・M_{6,7} ∈ [20,402]。
 
 制御: 6×12・q=8 census 92曲線（K0809と一致）・2×8 q=4 SAT（5石witness・K0796再発見）・
 2×9 q=4 UNSAT（CDCL+DPLL+全列挙で M_{2,4}=9 制御）・2×8 全列挙（欠損極大16個・最小5石）・
