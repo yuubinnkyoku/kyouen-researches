@@ -88,6 +88,8 @@ for (let ci = 0; ci < clauses.length; ci++) {
 clauses.length = 0;
 // cell var prioritization (applied after parse, before heap build)
 const NCELLS = OPT.ncells ? parseInt(OPT.ncells) : 0;
+let lcgS = (OPT.seed ? parseInt(OPT.seed) : 0) >>> 0;
+function lcg() { lcgS = (1103515245 * lcgS + 12345) >>> 0; return lcgS / 4294967296; }
 
 const vact = new Float64Array(nv + 1);
 const heap = new Int32Array(4 * nv + 8); const hpos = new Int32Array(nv + 1);
@@ -106,6 +108,7 @@ function heapReinsert(v) { heapN++; heap[heapN] = v; hpos[v] = heapN; heapUp(hea
 function popVar() { while (heapN > 0) { const v = heapRemoveTop(); if (val[v] === 0) return v; } return 0; }
 const phase = new Int8Array(nv + 1).fill(1);
 if (OPT.cellphase === '0') { for (let v = 1; v <= NCELLS && v <= nv; v++) phase[v] = -1; }
+if (lcgS) { for (let v = 1; v <= nv; v++) vact[v] += lcg() * 0.01; for (let v = NCELLS + 1; v <= nv; v++) phase[v] = lcg() < 0.5 ? 1 : -1; }
 let varInc = 1;
 const VAR_DECAY = OPT.vdecay ? parseFloat(OPT.vdecay) : 0.95;
 let propCount = 0;
@@ -408,5 +411,5 @@ if (status === 'SAT' && OPT.model) {
   for (let v = 1; v <= nv; v++) m.push(val[v] === 0 ? (phase[v] === 1 ? v : -v) : (val[v] === 1 ? v : -v));
   fs.writeFileSync(OPT.model, m.join(' '));
 }
-const out = { status, nv, nOrig, conflicts, decisions, props: propCount, learnt: nLearnt, sec: +((Date.now() - t0) / 1000).toFixed(1), memMB: +(memTop * 4 / 1048576).toFixed(1), err: globalThis.errMsg || null };
+const out = { status, nv, nOrig, conflicts, decisions, props: propCount, learnt: nLearnt, seed: OPT.seed ? parseInt(OPT.seed) : 0, sec: +((Date.now() - t0) / 1000).toFixed(1), memMB: +(memTop * 4 / 1048576).toFixed(1), err: globalThis.errMsg || null };
 console.log(JSON.stringify(out));

@@ -52,3 +52,19 @@ Node.js 上に書き下ろした競争的CDCLソルバ `scripts/fastsat.js` を�
 2. 6×12・q=8 cap=37（UNSATなら最小極大=38確定）。
 3. (6,8) m=18 cap=41・(6,6) m=22・(5,6) m=19・(5,7) m=19,20・(6,7) m=20 への適用。
 4. UNSATが取れた場合の DRAT チェッカ（Node実装）の整備。
+
+## 追加成果（第2実行・同日）
+
+4. **5×19・q=6 に行欠損極大witness（24石・行構成 5,5,5,5,4）→ M_{5,6} ≥ 20**（従来 ≥19）。
+   K0811 のSAが5 run抵抗した m=19。fastsat に `--seed` 機能
+ （LCGで初期アクティビティに ≤0.01 のjitter＋補助変数の初期位相ランダマイズ）を追加した
+   seed portfolio の seed=7 が 8,378 conflicts / 7.1 秒で解決。
+   census不使用独立検証器で safe+maximal PASS・SAT model は元CNF全節を充足。
+5. **抵抗の記録（非発見・不在証明ではない）**:
+   (5,7) m=19 — seeds 1,2,3（base=8192）・11,12（base=4096）の5設定・各100-120秒・
+   110,139〜124,512 conflicts すべて TIMEOUT（計568,576 conflicts）。(5,7) m=20 —
+   seed=3・117,144 conflicts で TIMEOUT。(6,8) m=18 cap=41 — 3設定・計約440,000 conflicts 未決着。
+6. seed portfolio の教訓: 同一インスタンス・同一ヒューリスティクスでも初期アクティビティ/位相の
+   わずかなjitterで (5,6) m=19 が SA 5 run抵抗→8千 conflicts で解決するほど難度が変わる。
+   cap=38 の設定依存性（第3節）と同種の非単調性であり、単発runの抵抗を
+   不在の証拠として扱えないことをさらに補強する。
