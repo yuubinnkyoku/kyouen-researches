@@ -2,7 +2,7 @@
 
 ## 作業前の確認
 
-- 最新 main の HEAD は e2acad0d001051ae163a44cdc69b356232a6d383。AGENTS.md、research/knowledge/README.md、generated/summary.md を確認し、K項目800件・警告なしを確認した。
+- 作業開始時の main HEAD は e2acad0d001051ae163a44cdc69b356232a6d383。AGENTS.md、research/knowledge/README.md、generated/summary.md を確認し、K項目800件・警告なしを確認した。作業中に main は並行レーンで前進したため、各更新直前に対象ファイルを main から読み直して直接反映した。
 - AGENTS.md の「同一命題の証拠更新は同じK項目」「generatedは直接編集しない」「統合後にcheck・unittest・build」を確認した。
 - K0817 は P(w) の全称劣加法性、λ≤16/41、P(83)=34を証明済み。
 - results/fixed-width/pw_circle_point_max.csv は w=2..83 の全値が proved-exact。P(1)=2 は水平行と真円の交点上界・円の存在から自明。
