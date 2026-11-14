@@ -1,5 +1,5 @@
 {
-  "session": "class2-lane cost-65e WIN7 certificate (long-term lane session 11 second run, 2026-11-14)",
+  "session": "class2-lane cost-65e WIN7 certificate receipts (sweep 2026-11-14; incremental receipt update 2026-11-15)",
   "child_hex": "00000000000000809102000000800000",
   "certificates": [
     {
@@ -29,12 +29,50 @@
       "file": "class2-lane-cost65e-certificates/bit107-root-00000800000000809102000000800000.cert.part1of2 + .part2of2 (line-boundary split at line 9466; cat to rejoin, joined md5 89fe2214aa925b12100d9e924752924c)",
       "root_not_among_existing": true,
       "existing_roots_checked": "root hex grepped against all 36 published win7-certificates manifests on main (incl. the fresh cost-61d/61e and cost-63a bit-119 receipts): 0 hits"
+    },
+    {
+      "bit": 7,
+      "root_hex": "00000000000000809102000000800080",
+      "verdict": "WIN7",
+      "nodes": 9066326,
+      "rows": 44561,
+      "rows_sorted_unique": true,
+      "root_check": {
+        "stones": 7,
+        "loser_mobility": 56,
+        "independent_enumeration_legal": 56,
+        "match": true
+      },
+      "sub_roots_verified": 56,
+      "sub_roots_pass": 56,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "file": "class2-lane-cost65e-certificates/bit7-root-00000000000000809102000000800080.cert",
+      "git_blob_sha1": "080a111667e79af507e001e888159dcaae8f429a",
+      "independent_audit": "class2-lane-cost65e-bit7-independent-audit-20261115.json",
+      "parent_lift_incremental": [
+        {
+          "s6_hex": "00000000000000809102000000000080",
+          "cost": 79,
+          "classes": 2
+        },
+        {
+          "s6_hex": "00000000000000801202000080000008",
+          "cost": 75,
+          "classes": 2
+        }
+      ],
+      "prior_win_loss_conflicts": 0,
+      "note": "BigInt 3x3-minor independent audit: all 56 sub-roots pass; consumed strategy-state union equals all 44,561 rows."
     }
   ],
   "unverified_win7_bits": [
     1,
     2,
-    7,
     26,
     29,
     31,
@@ -53,6 +91,7 @@
     118,
     120
   ],
-  "unverified_note": "search verdicts from the completed sweep record (class2-lane-cost65e-sweep-20261114.json); certificates not yet extracted; the single verified bit-107 receipt suffices to cover the S6 child orbit within the WIN7-D10 receipt framework; this child is unusually receipt-rich (21/65 WIN7)",
-  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN"
+  "unverified_note": "Search verdicts from the completed cost65e sweep. Bit 7 has now been extracted and independently audited; the remaining listed WIN7-D10 bits are still search candidates without published certificates.",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN",
+  "updated_at": "2026-11-15"
 }
