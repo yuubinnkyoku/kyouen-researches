@@ -1,0 +1,259 @@
+{
+ "board": "5x20",
+ "q": 7,
+ "defCap": 5,
+ "fullPerRow": 6,
+ "nCircles": 104,
+ "circleLenHist": {
+  "7": 8,
+  "8": 96
+ },
+ "canonicalClassesUnderRowMirror": 19,
+ "note": "row-mirror canonical deficiency classes; rows in class <=5 stones, rows outside exactly 6; column-mirror representative enumeration of first deficient row contents (k=0..5)",
+ "totalReps": 206682,
+ "totalWitnesses": 0,
+ "totalLeaves": 0,
+ "conclusion": "no deficient maximal safe configuration on 5x20 (witnesses 0 and leaves 0 in all 19 classes, 206682 reps)",
+ "classes": [
+  {
+   "defRows": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 10434,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 20412,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    1,
+    2,
+    4
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 15389,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    1,
+    2
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 44146,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    1,
+    3,
+    4
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 8266,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    1,
+    3
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 24781,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    1,
+    4
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 13877,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    1
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 53386,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    2,
+    3
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 27752,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    2,
+    4
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 24660,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    2
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 45442,
+   "nCircles": 104,
+   "slices": 2
+  },
+  {
+   "defRows": [
+    0,
+    3
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 37071,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0,
+    4
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 33266,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    0
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 35520,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    1,
+    2,
+    3
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 12359,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    1,
+    2
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 34264,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    1,
+    3
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 26913,
+   "nCircles": 104,
+   "slices": 1
+  },
+  {
+   "defRows": [
+    1
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 49984,
+   "nCircles": 104,
+   "slices": 2
+  },
+  {
+   "defRows": [
+    2
+   ],
+   "repsTotal": 10878,
+   "witnesses": 0,
+   "leaves": 0,
+   "maxCaseNodes": 35593,
+   "nCircles": 104,
+   "slices": 1
+  }
+ ]
+}
