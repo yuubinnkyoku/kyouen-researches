@@ -1,0 +1,1121 @@
+{
+  "schema": "n11-s2-5960-incremental-win7-reuse-audit-v1",
+  "date": "2026-11-14",
+  "source_main_commit": "b8e0427e8d7e8a460ac6fe55bde1ce6cac0f9d58",
+  "input": {
+    "s6_worklist_manifest": "research/experiments/n11-s2-5960-milestone5-20261112/output/ms5_s6_manifest_part1.csv .. part6.csv",
+    "baseline_win7_receipts": [
+      "research/experiments/n11-central-19-cover-20261031/output/s6sweep/verified.json",
+      "research/experiments/n11-central-19-cover-20261031/output/focus2154_62certs/verified.json",
+      "research/experiments/n11-central-19-cover-20261031/output/frontier2140/verified.json"
+    ],
+    "added_win7_manifests": [
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69c-win7-certificates-20261114.json",
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70b-win7-certificates-20261114.json",
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71-win7-certificates-20261114.json",
+      "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost75-win7-certificates-20261114.json"
+    ]
+  },
+  "checks": {
+    "worklist_rows": 7867,
+    "worklist_unique": true,
+    "total_legal_child_cost": 615497,
+    "baseline_win7_roots": 4052,
+    "baseline_loss7_roots": 2699,
+    "baseline_win_loss_conflicts": 0,
+    "new_win7_roots": 23,
+    "new_win7_roots_all_exact_safe": true,
+    "new_roots_already_in_baseline_win7": 0,
+    "new_roots_conflicting_with_baseline_loss7": 0,
+    "new_parent_child_pairs": 70,
+    "new_unique_worklist_parents": 48,
+    "new_parents_already_covered_by_baseline": 5,
+    "baseline_worklist_parent_hits": 498,
+    "incremental_new_worklist_parents": 43,
+    "total_worklist_parent_hits_after_union": 541,
+    "remaining_worklist_parents_not_closed_by_win7_reuse": 7326,
+    "baseline_remaining_legal_child_cost": 577110,
+    "incremental_legal_child_cost_removed": 3275,
+    "remaining_legal_child_cost_after_union": 573835,
+    "incremental_class_histogram": {
+      "1": 3,
+      "2": 35,
+      "3": 5
+    },
+    "total_class_histogram_after_union": {
+      "1": 208,
+      "2": 114,
+      "3": 6,
+      "4": 194,
+      "5": 17,
+      "6": 2
+    }
+  },
+  "source_manifest_counts": {
+    "class2-lane-cost69c-win7-certificates-20261114.json": 1,
+    "class2-lane-cost70b-win7-certificates-20261114.json": 1,
+    "class2-lane-cost71-win7-certificates-20261114.json": 2,
+    "class2-lane-cost75-win7-certificates-20261114.json": 19
+  },
+  "new_roots": [
+    {
+      "s7_hex": "00000000000000801a02040000000001",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040000000010",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040000004000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040000020000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040000100000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040000200000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040000400000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040080000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040100000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a02040400000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a06040000000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000801a42040000000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000809082000000000204",
+      "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json",
+      "sha256": "455ee71f81e99a34eb10584d3e364bc3e996e3f4ac5d9677a3bec7f4ca6710e4",
+      "md5": "98c76fea4a0ac26c4671643848631930"
+    },
+    {
+      "s7_hex": "00000000000000809082082000000000",
+      "source_manifest": "class2-lane-cost70b-win7-certificates-20261114.json",
+      "sha256": "7e42e08e398c3a425aa7d7515a1dc69149076ecd8a8cc7dd14d8d869395cdf52",
+      "md5": "739d89938dfb5d01ab8ad9acc682cec5"
+    },
+    {
+      "s7_hex": "0000000000000084b002000400000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000000c09082000000000004",
+      "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json",
+      "sha256": "7cb1b33d6863a76ae31289ddae1199423b7d4f0e33de91d54f488f9d6423f04c",
+      "md5": "0cb59138856c1c34397486709e032478"
+    },
+    {
+      "s7_hex": "00000000000000c0b002000400000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "0000000000004080b002000000000004",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "0000000000004080b002000000001000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "0000000000004080b002000010000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "0000000000004080b002000040000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "0000000000004080b002020000000000",
+      "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json",
+      "sha256": null,
+      "md5": null
+    },
+    {
+      "s7_hex": "00000000000040821202000000020000",
+      "source_manifest": "class2-lane-cost69c-win7-certificates-20261114.json",
+      "sha256": "641a6f6d48e8dfd00821ad51112e8eef1e50fbbec31d4192cf5d773f54adf2ae",
+      "md5": "4bb1299324fb69634a848cebc109961c"
+    }
+  ],
+  "new_parent_records": [
+    {
+      "s6_hex": "00000000000000003801000100000020",
+      "cost": 73,
+      "classes": 1,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000c09082000000000004",
+          "removed_bits_in_canonical_s7": [
+            63
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000003802000008000001",
+      "cost": 69,
+      "classes": 2,
+      "already_in_baseline": true,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000000001",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000003802000008000004",
+      "cost": 73,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000400000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000003802000008004000",
+      "cost": 73,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040400000000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000003802000009000000",
+      "cost": 69,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002000040000000",
+          "removed_bits_in_canonical_s7": [
+            78
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "0000000000000000380200000a000000",
+      "cost": 65,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002020000000000",
+          "removed_bits_in_canonical_s7": [
+            78
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000003802000408000000",
+      "cost": 75,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000004000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000003802100008000000",
+      "cost": 70,
+      "classes": 2,
+      "already_in_baseline": true,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000000010",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000003802400008000000",
+      "cost": 69,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002000010000000",
+          "removed_bits_in_canonical_s7": [
+            78
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000083800000008040000",
+      "cost": 74,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000040821202000000020000",
+          "removed_bits_in_canonical_s7": [
+            65
+          ],
+          "source_manifest": "class2-lane-cost69c-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000083802000008000000",
+      "cost": 66,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000020000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000403802000008000000",
+      "cost": 68,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a06040000000000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000c0b002000400000000",
+          "removed_bits_in_canonical_s7": [
+            34
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801082000000000204",
+      "cost": 80,
+      "classes": 1,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000809082000000000204",
+          "removed_bits_in_canonical_s7": [
+            63
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202000000000102",
+      "cost": 79,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000809082000000000204",
+          "removed_bits_in_canonical_s7": [
+            55
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040000000001",
+      "cost": 84,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000000001",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040000000010",
+      "cost": 89,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000000010",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040000004000",
+      "cost": 88,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000004000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040000020000",
+      "cost": 81,
+      "classes": 2,
+      "already_in_baseline": true,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000020000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040000100000",
+      "cost": 80,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000100000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040000200000",
+      "cost": 81,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000200000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040000400000",
+      "cost": 90,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000400000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040080000000",
+      "cost": 79,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040080000000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040100000000",
+      "cost": 90,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040100000000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801202040400000000",
+      "cost": 79,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040400000000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801206040000000000",
+      "cost": 74,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a06040000000000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801242040000000000",
+      "cost": 83,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a42040000000000",
+          "removed_bits_in_canonical_s7": [
+            59
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801a02000000000100",
+      "cost": 74,
+      "classes": 2,
+      "already_in_baseline": true,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002000000000004",
+          "removed_bits_in_canonical_s7": [
+            78
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801a02000000100000",
+      "cost": 64,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000100000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000004080b002000000001000",
+          "removed_bits_in_canonical_s7": [
+            78
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801a02000000200000",
+      "cost": 68,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000200000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801a02000080000000",
+      "cost": 68,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040080000000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801a02000100000000",
+      "cost": 75,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040100000000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801a02040000000000",
+      "cost": 75,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a02040000000001",
+          "removed_bits_in_canonical_s7": [
+            0
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040000000010",
+          "removed_bits_in_canonical_s7": [
+            4
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040000004000",
+          "removed_bits_in_canonical_s7": [
+            14
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040000020000",
+          "removed_bits_in_canonical_s7": [
+            17
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040000100000",
+          "removed_bits_in_canonical_s7": [
+            20
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040000200000",
+          "removed_bits_in_canonical_s7": [
+            21
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040000400000",
+          "removed_bits_in_canonical_s7": [
+            22
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040080000000",
+          "removed_bits_in_canonical_s7": [
+            31
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040100000000",
+          "removed_bits_in_canonical_s7": [
+            32
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a02040400000000",
+          "removed_bits_in_canonical_s7": [
+            34
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a06040000000000",
+          "removed_bits_in_canonical_s7": [
+            50
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000801a42040000000000",
+          "removed_bits_in_canonical_s7": [
+            54
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000000084b002000400000000",
+          "removed_bits_in_canonical_s7": [
+            66
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000c0b002000400000000",
+          "removed_bits_in_canonical_s7": [
+            70
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000004080b002000000000004",
+          "removed_bits_in_canonical_s7": [
+            2
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000004080b002000000001000",
+          "removed_bits_in_canonical_s7": [
+            12
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000004080b002000010000000",
+          "removed_bits_in_canonical_s7": [
+            28
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000004080b002000040000000",
+          "removed_bits_in_canonical_s7": [
+            30
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000004080b002020000000000",
+          "removed_bits_in_canonical_s7": [
+            41
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000801a42000000000000",
+      "cost": 73,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000801a42040000000000",
+          "removed_bits_in_canonical_s7": [
+            42
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "0000000000000084b002000400000000",
+          "removed_bits_in_canonical_s7": [
+            34
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000809082000000000004",
+      "cost": 71,
+      "classes": 3,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000809082000000000204",
+          "removed_bits_in_canonical_s7": [
+            9
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        },
+        {
+          "s7_hex": "00000000000000c09082000000000004",
+          "removed_bits_in_canonical_s7": [
+            70
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000809082000000000200",
+      "cost": 71,
+      "classes": 3,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000809082000000000204",
+          "removed_bits_in_canonical_s7": [
+            2
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000809082000000008000",
+      "cost": 63,
+      "classes": 3,
+      "already_in_baseline": true,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000040821202000000020000",
+          "removed_bits_in_canonical_s7": [
+            78
+          ],
+          "source_manifest": "class2-lane-cost69c-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000809082040000000000",
+      "cost": 69,
+      "classes": 3,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000040821202000000020000",
+          "removed_bits_in_canonical_s7": [
+            17
+          ],
+          "source_manifest": "class2-lane-cost69c-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000809082080000000000",
+      "cost": 70,
+      "classes": 3,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000809082082000000000",
+          "removed_bits_in_canonical_s7": [
+            37
+          ],
+          "source_manifest": "class2-lane-cost70b-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000809083000000000000",
+      "cost": 65,
+      "classes": 3,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000c09082000000000004",
+          "removed_bits_in_canonical_s7": [
+            2
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000849002000400000000",
+      "cost": 86,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000000084b002000400000000",
+          "removed_bits_in_canonical_s7": [
+            61
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000c09002000000000004",
+      "cost": 71,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000c09082000000000004",
+          "removed_bits_in_canonical_s7": [
+            55
+          ],
+          "source_manifest": "class2-lane-cost71-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000000c09002000400000000",
+      "cost": 71,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000000c0b002000400000000",
+          "removed_bits_in_canonical_s7": [
+            61
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000040809002000000000004",
+      "cost": 86,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002000000000004",
+          "removed_bits_in_canonical_s7": [
+            61
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000040809002000000001000",
+      "cost": 78,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002000000001000",
+          "removed_bits_in_canonical_s7": [
+            61
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000040809002000010000000",
+      "cost": 83,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002000010000000",
+          "removed_bits_in_canonical_s7": [
+            61
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000040809002000040000000",
+      "cost": 84,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002000040000000",
+          "removed_bits_in_canonical_s7": [
+            61
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000040809002020000000000",
+      "cost": 82,
+      "classes": 2,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "0000000000004080b002020000000000",
+          "removed_bits_in_canonical_s7": [
+            61
+          ],
+          "source_manifest": "class2-lane-cost75-win7-certificates-20261114.json"
+        }
+      ]
+    },
+    {
+      "s6_hex": "00000000000040821002000000020000",
+      "cost": 84,
+      "classes": 1,
+      "already_in_baseline": false,
+      "new_win7_children": [
+        {
+          "s7_hex": "00000000000040821202000000020000",
+          "removed_bits_in_canonical_s7": [
+            57
+          ],
+          "source_manifest": "class2-lane-cost69c-win7-certificates-20261114.json"
+        }
+      ]
+    }
+  ],
+  "incremental_parent_hex": [
+    "00000000000000003801000100000020",
+    "00000000000000003802000008000004",
+    "00000000000000003802000008004000",
+    "00000000000000003802000009000000",
+    "0000000000000000380200000a000000",
+    "00000000000000003802000408000000",
+    "00000000000000003802400008000000",
+    "00000000000000083800000008040000",
+    "00000000000000083802000008000000",
+    "00000000000000403802000008000000",
+    "00000000000000801082000000000204",
+    "00000000000000801202000000000102",
+    "00000000000000801202040000000001",
+    "00000000000000801202040000000010",
+    "00000000000000801202040000004000",
+    "00000000000000801202040000100000",
+    "00000000000000801202040000200000",
+    "00000000000000801202040000400000",
+    "00000000000000801202040080000000",
+    "00000000000000801202040100000000",
+    "00000000000000801202040400000000",
+    "00000000000000801206040000000000",
+    "00000000000000801242040000000000",
+    "00000000000000801a02000000100000",
+    "00000000000000801a02000000200000",
+    "00000000000000801a02000080000000",
+    "00000000000000801a02000100000000",
+    "00000000000000801a02040000000000",
+    "00000000000000801a42000000000000",
+    "00000000000000809082000000000004",
+    "00000000000000809082000000000200",
+    "00000000000000809082040000000000",
+    "00000000000000809082080000000000",
+    "00000000000000809083000000000000",
+    "00000000000000849002000400000000",
+    "00000000000000c09002000000000004",
+    "00000000000000c09002000400000000",
+    "00000000000040809002000000000004",
+    "00000000000040809002000000001000",
+    "00000000000040809002000010000000",
+    "00000000000040809002000040000000",
+    "00000000000040809002020000000000",
+    "00000000000040821002000000020000"
+  ]
+}

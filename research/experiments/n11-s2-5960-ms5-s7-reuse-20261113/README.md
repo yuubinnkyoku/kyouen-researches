@@ -51,3 +51,10 @@ Intersect the `s7_hex` column of `ms5_s7_reuse_candidates_part1..3.csv` (cat=2 r
 ## Status
 
 This is verification and bookkeeping only. **No game verdict is established**: 11x11 empty root, two-stone root {49,60}, and S2 {59,60} all remain **UNKNOWN**. All win/loss statements above are conditioned on the K0675 oracles (78 FW + 16 SW positions).
+
+
+## 2026-11-14 incremental reuse from later class2-lane certificates
+
+The baseline 498-parent S7 reuse audit was extended with the cost-69c, cost-70b, cost-71, and cost-75 WIN7 certificate manifests. The 23 new roots are distinct and exactly safe; they yield 70 S6-parent incidences over 48 distinct worklist parents. After removing the five parents already covered by the baseline, **43 additional D4-canonical S6 worklist orbits** are covered. The remaining worklist falls from 7,369 to 7,326 rows, and the remaining legal seventh-move candidate cost falls from 577,110 to 573,835 (a reduction of 3,275).
+
+This is certificate-reuse bookkeeping, not closure of S2 or the empty root. Certificate bodies were not re-run in this audit; see [the run log](../../log/2026-11-14-n11-s2-class2-win7-incremental-reuse.md), [the reproducible audit script](scripts/audit_incremental_class2_win7_reuse.py), and [the JSON result](output/class2-win7-reuse-incremental-20261114.json).
