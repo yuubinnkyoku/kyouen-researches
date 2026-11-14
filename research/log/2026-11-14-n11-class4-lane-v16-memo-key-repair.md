@@ -33,6 +33,8 @@ Same child, candidate, depth, ordering, and cap:
 
 That is 89,723 fewer nodes (**61.24% reduction**, 2.58x fewer nodes) on this regression. The instrumented v16 run recorded 31,513 memo lookups, 10,853 hits, 20,467 insertions, 5,458 no-WIN writes, 8,864 no-LOSS writes, 2,793 no-WIN hits, and 4,419 no-LOSS hits. The pilot changed from 5,949 to 3,402 nodes while retaining `loss=false`.
 
+A second regression exercises the sign bit in word M1 using the claimed class2 cost-62a child `00000000000000809102000001000000` plus bit 0 at depth 8: v15 reached the 200,000-node cap, while v16 completed in 121,837 nodes with `loss=false` and terminal range [13,15]. This confirms the unsigned comparison is needed in every 32-bit word, not only M0.
+
 These are finite depth-8 implementation measurements, not a depth-10 game verdict or a proof of the full search. The V8 tool runtime executed the transformed runner in this turn; the Node 22 CLI test file is committed for direct reproduction, but was not run inside the container.
 
 ## Do not mix active v15 sweeps
