@@ -1,0 +1,88 @@
+{
+  "verifier": "scripts/verify_independent.ts",
+  "system": "third independent verification system: pure TypeScript + BigInt exact arithmetic, no repo code; circle identity via exact rational (cx,cy,r^2) keys computed from stone triples (bijective reparameterization of the center), membership re-tested by the 4x4 cocircularity determinant; lines via canonical (a,b,c)",
+  "date": "2026-11-14",
+  "lane": "high-speed lane, run 9 (batch 4)",
+  "family": {
+    "w": 7,
+    "q": 7
+  },
+  "verified": {
+    "w7q7_7x25q7_rowY3.witness.json": {
+      "blob_sha": "1f77c932f25aab025627028c42231dfbfce8d2ee",
+      "verdict": "PASS (safe + maximal + row-deficient)",
+      "n": 41,
+      "minRow": 5,
+      "rowCnt": [
+        6,
+        6,
+        6,
+        5,
+        6,
+        6,
+        6
+      ],
+      "maxLine": 6,
+      "maxCirc": 6,
+      "safe": true,
+      "nCircles": 9477,
+      "nQ1Curves": 120,
+      "uncoveredCount": 0,
+      "rowDeficient": true,
+      "maximal": true,
+      "pass": true
+    },
+    "w7q7_7x26q7_rowY3.witness.json": {
+      "blob_sha": "f69a5bb22807cdefef7f1ed8c62adc5c5c24a1db",
+      "verdict": "PASS (safe + maximal + row-deficient) — triple-verified",
+      "n": 41,
+      "minRow": 5,
+      "rowCnt": [
+        6,
+        6,
+        6,
+        5,
+        6,
+        6,
+        6
+      ],
+      "maxLine": 6,
+      "maxCirc": 6,
+      "safe": true,
+      "nCircles": 9407,
+      "nQ1Curves": 117,
+      "uncoveredCount": 0,
+      "rowDeficient": true,
+      "maximal": true,
+      "pass": true
+    }
+  },
+  "negative_control": {
+    "config": "7 collinear stones on row 0 of a 7x7 board (q=7)",
+    "expected": "unsafe (a line with q stones)",
+    "result": {
+      "n": 7,
+      "minRow": 0,
+      "rowCnt": [
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "maxLine": 7,
+      "maxCirc": 0,
+      "safe": false,
+      "nCircles": 0,
+      "nQ1Curves": 6,
+      "uncoveredCount": 42,
+      "rowDeficient": true,
+      "maximal": false,
+      "pass": false
+    },
+    "ok": true
+  },
+  "conclusion": "both rowY=3 witnesses PASS (safe + maximal + row-deficient); the m=26 witness is now verified by three independent systems (sat.js verifyConfig, verify_witness.py Python Fraction, pure-TS BigInt), so M_{7,7} >= 27 rests on triple verification; the negative control is correctly detected unsafe"
+}

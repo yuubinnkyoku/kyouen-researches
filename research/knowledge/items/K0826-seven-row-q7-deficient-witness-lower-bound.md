@@ -18,7 +18,7 @@ relations:
 artifacts:
 - path: research/experiments/seven-row-q7-witness-search-20261114/report.md
   role: proof
-  note: "claims, method (sat2.js all-triples census at q=w, rowY split), verification protocol (dual witness verification, m=24 bit-exact determinism re-run), results table, honest negatives, scope and limits"
+  note: "claims, method (sat2.js all-triples census at q=w, rowY split), verification protocol (dual witness verification + third-system pure-TS/BigInt confirmation, m=24 bit-exact determinism re-run), results table, honest negatives, scope and limits"
 - path: research/experiments/seven-row-q7-witness-search-20261114/output/def-search/records.jsonl
   role: data
   note: "19 records: SAT m=7..25 witnesses dual-verified (m=7..14 deep deficiency 30..41 stones, m=15..24 single-deficiency 41 stones) + m=25 OR-instance INDET (2,478,476 conflicts at 240s cap — honest negative)"
@@ -34,8 +34,14 @@ artifacts:
 - path: research/experiments/seven-row-q7-witness-search-20261114/output/w7q7_7x26q7_rowY3.witness.json
   role: data
   note: "m=26 witness (41 stones, rows 6,6,6,5,6,6,6) extends the band to 7x26: M_{7,7} >= 27, frontier 7x27; raw log at output/w7q7_7x26q7_rowY3.kissat.txt; m=27 rowY=3 262s-cap INDET log at output/w7q7_7x27q7_rowY3.kissat.txt (2,242,940 conflicts, honest negative)"
+- path: research/experiments/seven-row-q7-witness-search-20261114/scripts/verify_independent.ts
+  role: verifier
+  note: "third verification system, independent of all repo code: pure TypeScript + BigInt exact arithmetic; circle identity by exact rational keys from stone triples (bijective reparameterization of the center), membership re-tested by the 4x4 cocircularity determinant; lines by canonical (a,b,c)"
+- path: research/experiments/seven-row-q7-witness-search-20261114/output/ts-verify.json
+  role: data
+  note: "third-system records: m=25/m=26 rowY=3 witnesses both safe (9,477/9,407 circles, all curves and lines <= 6 stones), maximal (0 uncovered cells), row-deficient (rows 6,6,6,5,6,6,6); 7-collinear negative control correctly unsafe; m=26 hence triple-verified"
 scope: "finite machine verification: kissat 4.0.4 (all instances); widths stated per family only; up to census completeness and solver correctness"
-evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + m=24 bit-exact determinism re-run (2,105,329 conflicts reproduced; cross-lane independent-run bit-exact reproduction on shared instances m=24/m=25 rowY=3: 2,105,329 / 756,785). See report.md."
+evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-deficient maximal safe config') + constructive dual-verified witnesses (census-free sat.js verifyConfig + Python Fraction) + third independent verification system (pure TS/BigInt, no repo code: scripts/verify_independent.ts + output/ts-verify.json — m=25/m=26 rowY=3 witnesses PASS, 7-collinear negative control unsafe, m=26 triple-verified) + m=24 bit-exact determinism re-run (2,105,329 conflicts reproduced; cross-lane independent-run bit-exact reproduction on shared instances m=24/m=25 rowY=3: 2,105,329 / 756,785). See report.md."
 ---
 
 # 7×m q=7 行欠損witness帯 — witness 7×7..7×26（M_{7,7} ≥ 27・上界708）・q=w 対角ファミリー初の結果
@@ -62,6 +68,13 @@ evidence: "complete-encoding SAT instances (def mode is exactly 'exists row-defi
    (7,8) m=13..24 と (7,7) m=15..26 で同型（欠損行の位置は幅ごとに変わり、
    (7,7) m=25 では中央行）。def OR 実例の難化も同様
    （(7,7): m=23 SAT 119,071 → m=24 SAT 2,105,329 → m=25 OR INDET 2,478,476 → m=26 rowY=3 SAT 1,951,966 → m=27 rowY=3 INDET 2,242,940@262s）。
+6. **第3検証系（純TS・BigInt・repoコード不使用）**: m=25 rowY=3・m=26 rowY=3
+   の両 witness を独立実装（円は有理 (cx, cy, r²) キー + 4×4 共円行列式・
+   直線は正規化 (a,b,c)）で検証し、いずれも safe + maximal + 行欠損 PASS
+   （m=25: 円 9,477・m=26: 円 9,407・全曲線・全直線 ≤ 6 石・未覆空点 0）。
+   負対照（7点共線）は正しく unsafe。**m=26 witness は3系統検証**となり、
+   M_{7,7} ≥ 27 の構成要素は3つの独立実装系で確認済み。
+
 
 ## 手法と検証
 

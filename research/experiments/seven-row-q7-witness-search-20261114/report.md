@@ -1,4 +1,4 @@
-# 7×m q=7 行欠損witness探索 — 新ファミリー (7,7)（q=w 対角）のwitness 7×7..7×25 と M_{7,7} ≥ 26
+# 7×m q=7 行欠損witness探索 — 新ファミリー (7,7)（q=w 対角）のwitness 7×7..7×26 と M_{7,7} ≥ 27
 
 日付: 2026-11-14（高速レーン第9回・第2バッチ）
 
@@ -108,3 +108,27 @@ linux-amd64 バイナリ・2系統検証）。
 3. **正直な負記録**: m=27 rowY=3 は 262s cap で INDET
    （2,242,940 conflicts・不在の主張ではない）。
 
+
+---
+
+## 第4バッチ（第3検証系・純TS による独立確認）
+
+日付: 2026-11-14（高速レーン）
+
+repo の既存コードに一切依存しない第3の検証系 `scripts/verify_independent.ts`
+（純 TypeScript + BigInt 厳密計算）を追加した。円の同一性は石の三つ組から
+有理 (cx, cy, r²) キー（中心の全単射再パラメータ化）で判定し、所属は
+4×4 共円行列式で再判定。直線は正規化 (a,b,c)。sat.js verifyConfig
+（JS・census 不使用）・verify_witness.py（Python Fraction）とは
+アルゴリズム・実装系がすべて独立。
+
+1. **m=26 witness**（`output/w7q7_7x26q7_rowY3.witness.json`）: safe +
+   maximal + 行欠損 **PASS**（円 9,407・全円・全直線 ≤ 6 石・≥6石曲線
+   117 本・未覆空点 0・rows 6,6,6,5,6,6,6）。
+   → **M_{7,7} ≥ 27 が3系統検証**（verifyConfig・Python Fraction・純TS）で確定。
+2. **m=25 witness**（`output/w7q7_7x25q7_rowY3.witness.json`・陽性対照）:
+   **PASS**（円 9,477・≥6石曲線 120 本・rows 6,6,6,5,6,6,6）。第2バッチの
+   2系統検証と一致。
+3. **負対照**: 7点共線配置（7×7 の行0に7石・q=7）は正しく **unsafe**
+   （maxLine=7 ≥ q）と判定され、検証系の否定的検出力を確認。
+4. 記録: `output/ts-verify.json`。前線（7×27・rowY分解の残クラス）は不変。
