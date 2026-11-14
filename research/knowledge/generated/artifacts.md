@@ -775,7 +775,7 @@
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (verifier): 9点証人の極大性（64頂点すべて禁止）の独立監査
 ## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_circuits.cpp)
 
-- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): 包含極小依存集合（circuit）列挙とCNF生成器。d=6のcircuit削減は包含極小にならないため証明には使用不可（K0591の教訓）
+- [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): 包含極小依存集合（circuit）列挙とCNF生成器。10点存在判定に限りcircuit禁止と全依存7点組禁止は同値（2026-11-14の一般補題）。列挙器の完全性・UNSATは未検証
 ## [research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_cnf.cpp](../../../research/experiments/binary-cube-hyperplane-k6-exact-20261025/build_k6_cnf.cpp)
 
 - [K0568](../items/K0568-binary-cube-k6-exact-upper-bound.md) (solver): C(64,7)個の7点部分集合の依存判定とCNF生成器（二算法照合つき）。こちらは依存7点組全部を禁止する正しいCNF
