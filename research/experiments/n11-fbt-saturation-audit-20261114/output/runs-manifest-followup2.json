@@ -24,7 +24,7 @@
    "occupancy_total": 87984,
    "fbtMaxProbe": 43,
    "saturated": true,
-   "dropfree_reresolve": "pending (interrupted by execution-environment outage)"
+   "dropfree_reresolve": "confirmed surviving: FBS=1<<20 crosscheck (class2-lane-cost73a-runner-fbs20-crosscheck-20261114.jsonl) fbtDrops=0, node count 20,603,022 bit-exact identical, verdict unchanged"
   },
   {
    "bit": 23,
@@ -37,7 +37,7 @@
    "occupancy_total": 97145,
    "fbtMaxProbe": 47,
    "saturated": true,
-   "dropfree_reresolve": "pending (interrupted by execution-environment outage)"
+   "dropfree_reresolve": "confirmed surviving: FBS=1<<20 crosscheck (class2-lane-cost73a-runner-fbs20-crosscheck-20261114.jsonl) fbtDrops=0, node count 18,497,705 bit-exact identical, verdict unchanged"
   },
   {
    "bit": 81,
@@ -62,5 +62,25 @@
   "fbtMaxProbe is not a saturation indicator: dropped 48-step probe walks never update the counter (bit92 saturates with recorded maxProbe=43)"
  ],
  "v15_context": "instrumented/drop-free variants are v15-derived for raw comparability; under the parallel lane v16 memo-key repair the memo actually hits, changing search-time fbt insert patterns — onset figures are v15-specific",
- "interpretation_guard": "REFUTED-D10 is not a child refutation; this audit changes no verdict. 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN."
+ "interpretation_guard": "REFUTED-D10 is not a child refutation; this audit changes no verdict. 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN.",
+ "dropfree_confirmation": {
+  "source": "class2-lane-cost73a-runner-fbs20-crosscheck-20261114.jsonl (parallel lane, published with the cost-73a takeover)",
+  "runner": "runner_fbs20.ts (FBS=1<<20 + counters)",
+  "bits": [
+   92,
+   23,
+   48,
+   81
+  ],
+  "fbtDrops_all": 0,
+  "node_counts_bit_exact_vs_canonical": [
+   20603022,
+   18497705,
+   16806863,
+   5530773
+  ],
+  "verdicts_unchanged": true,
+  "fbtMaxProbe_max": 6,
+  "note": "the two saturated rows drop-free node counts are identical to the saturated canonical counts (unlike the six first-pass saturated rows, whose drop-free counts differed); at 67.1%/74.1% occupancy the ~1.4k/1.8k dropped queries did not alter the search"
+ }
 }
