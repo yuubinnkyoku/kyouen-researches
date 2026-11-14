@@ -1,0 +1,89 @@
+{
+ "session": "class2-lane cost-67b WIN7 certificates (long-term lane parallel execution, 2026-11-14)",
+ "child_hex": "00000000000000803202000020000000",
+ "certificates": [
+  {
+   "bit": 17,
+   "root_hex": "00000000000000803202000020020000",
+   "root_check": "7 stones, loserMobility 47 = independent legal_candidates.py enumeration",
+   "rows": 34860,
+   "extraction_nodes": 2884412,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_pass": "47/47",
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "6a75b5f707ca9686bdc0653549c72d4e",
+   "sha256": "563e9c6557e12df35b4bbc2bf0c2dd2f98729a373f81b0ab9f9612522ceda70a",
+   "bytes": 1257450,
+   "file": "class2-lane-cost67b-certificates/bit17-root-00000000000000803202000020020000.cert",
+   "v15_crosscheck_verdict": "loss=true at 1,775,234 nodes (v15 anchor)",
+   "v16_search_nodes": 601724,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "bit": 117,
+   "root_hex": "00200000000000803202000020000000",
+   "root_check": "7 stones, loserMobility 50 = independent legal_candidates.py enumeration",
+   "rows": 32441,
+   "extraction_nodes": 3212680,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_pass": "50/50",
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "1989bfd4fb2113737529def5055fa48d",
+   "sha256": "2c5b60a92c4ec09e7b97e34bff36b076c4b9e56bf7b7b23459d0e14fa9855b56",
+   "bytes": 1167052,
+   "file": "class2-lane-cost67b-certificates/bit117-root-00200000000000803202000020000000.cert",
+   "v15_crosscheck_verdict": "loss=true at 1,840,199 nodes (v15 anchor)",
+   "v16_search_nodes": 715380,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  },
+  {
+   "bit": 109,
+   "root_hex": "00002000000000803202000020000000",
+   "root_check": "7 stones, loserMobility 47 = independent legal_candidates.py enumeration",
+   "rows": 27559,
+   "extraction_nodes": 3211752,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table), FBS=1<<20: fbt_drops=0, all per-move extractions ok and uncapped",
+   "rows_sorted_unique": true,
+   "sub_roots_pass": "47/47",
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "4812896aa31933cd61b8116bb95ca449",
+   "sha256": "7ccc6eee5569db4d29ac4afd82da83103b9d33071b855731a3447b22a37088c0",
+   "bytes": 992405,
+   "file": "class2-lane-cost67b-certificates/bit109-root-00002000000000803202000020000000.cert",
+   "v15_crosscheck_verdict": "loss=true at 2,011,805 nodes (v15 anchor)",
+   "v16_search_nodes": 717971,
+   "root_not_among_existing": true,
+   "root_absence_check": "GitHub code search over yuubinnkyoku/kyouen-researches for the root hex: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing"
+  }
+ ],
+ "unverified_win7_bits": [
+  11,
+  20,
+  33,
+  99
+ ],
+ "duplicate_root_note": "the bit-20 WIN7 root 00000000000000803202000020100000 is a cross-child duplicate of the cost-64b bit-29 win7_roots listing (root reachable from both S6 children 00000000000000803202000000100000 and 00000000000000803202000020000000); no prior published certificate exists for it, so a future certificate is new coverage (cost-61e bit-1 pattern)",
+ "unknown_status": "11x11 empty board: UNKNOWN. Certificates prove only individual 7-stone roots within depth 10."
+}
