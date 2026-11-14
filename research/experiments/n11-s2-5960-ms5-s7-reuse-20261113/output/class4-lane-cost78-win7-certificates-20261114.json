@@ -1,0 +1,58 @@
+{
+ "schema": "n11-class4-lane-cost78-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "target": {
+  "class4_lane_target_s5": "00000000020000003800000080000000",
+  "s6_child_hex": "00000000020000003800000080000040",
+  "s6_s7_edge_cost": 78,
+  "demand": "c4=3"
+ },
+ "engine": "v15 engine verbatim (scripts/class4_child1_runner.ts) for the sweep; class4_child1_cert_extractor_exact.ts (FBS=1<<20, probe 96, drop counter) for extraction; verify_bit7_win7_cert.ts (engine-independent exact Bareiss det4) for verification",
+ "summary": {
+  "win7_d10_bits": [
+   70,
+   116
+  ],
+  "total_certificate_rows": 103126,
+  "total_extraction_nodes": 31802325
+ },
+ "extraction_method": "per root: exact loser-first-move list enumerated by exact integer Bareiss over ALL C(7,3) triples of the root (truelegal.py protocol, engine legalMoves cross-checked bit-exact), one process per root via class4_child1_cert_extractor_exact.ts, fbt_drops=0 asserted, fatal=null, rows sort -u (no duplicates observed); bit116 extracted twice in separate processes with identical row sets (diff 0)",
+ "certificates": [
+  {
+   "bit": 70,
+   "root": "00000000020000403800000080000040",
+   "rows": 51058,
+   "extraction_nodes": 12060637,
+   "md5": "696cad4a710d9650f8efd9096aeaea6e",
+   "certificate_path": "output/class4-lane-cost78-certificates/n11_s7_00000000020000403800000080000040.cert",
+   "verification": {
+    "subroot_count": 60,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=60",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 116,
+   "root": "00100000020000003800000080000040",
+   "rows": 52068,
+   "extraction_nodes": 19741688,
+   "md5": "31e5f483d21f59866712ae766bef55a6",
+   "certificate_path": "output/class4-lane-cost78-certificates/n11_s7_00100000020000003800000080000040.cert",
+   "verification": {
+    "subroot_count": 62,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=62",
+    "terminal_range": [
+     13,
+     17
+    ],
+    "note": "remote md5 verified bit-exact against the local file including the trailing newline (commit-pinned raw fetch)"
+   }
+  }
+ ],
+ "interpretation_guard": "each certificate proves only a winner win within depth 10 from the individual 7-stone root (loser to move). No statement about deeper play, the S5/S6 orbits, the two-stone root {49,60}, S2 {59,60}, or the 11x11 empty board, all of which remain UNKNOWN."
+}
