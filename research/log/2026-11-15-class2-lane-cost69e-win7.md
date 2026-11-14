@@ -317,6 +317,24 @@ and the same remaining/ranking content). The next session verifies their
 landed recompute against this prediction and folds the cost-72 receipts
 (bits 52/111, pending their sweep record / recompute) into the next merge.
 
+### Cross-check result (same day, after the parallel merge landed)
+
+The parallel lane's canonical merged recompute landed (commit `73f8b5d8`,
+record `class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json`,
+claim closed at `0e5dd49d`): 23 receipts folded onto the 69e v2 1023
+baseline in chronological order. **Verified against this lane's independent
+union-control prediction: FULL MATCH** — solved 1045 / unique remaining
+6,802 / sum 536,131 / open 5,072/399,854 / remaining_s5_orbits 176; demand
+histogram identical; every ranking section (best/next class-2 and class-4)
+identical; and the **full S5 ranking CSV is byte-identical** (md5
+`cac000deb21461c4eab2c74359203561`, both computations). Two structurally
+different merge computations (1023-baseline chronological fold vs
+1040-baseline union control) agree on the complete unified frontier state.
+Their `outstanding_not_folded` list matches this lane's understanding
+(cost-72 pending its completed sweep record; warm candidates without
+records). The frontier is now unified at **1045**; the next merge folds the
+cost-72 receipts once that lane's sweep record lands.
+
 ## Status
 
 11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}:
