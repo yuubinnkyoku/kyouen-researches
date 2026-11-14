@@ -189,3 +189,4 @@ if (require.main === module) {
   meta.gen_sec = ((Date.now() - t0) / 1000).toFixed(1);
   console.log(JSON.stringify(meta));
 }
+module.exports = { fastCensus3 };
