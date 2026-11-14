@@ -1,0 +1,497 @@
+{
+  "schema": "n11-class2-win7-circle-bigint-independent-audit-v2",
+  "audited_main_head": "0b9e53d492605dcb2b6f5b224351dc0050c4eb60",
+  "method": "Exact BigInt 3x3 Cramer circle equation; collinear triples use exact line cross-products; all opponent replies expanded; no solver/cache/verifier imports.",
+  "totals": {
+    "certificates": 18,
+    "strategy_rows": 630410,
+    "subroots_verified": 896,
+    "subroot_seen_states_sum": 1405024,
+    "terminal_visits": 207232,
+    "opponent_reply_edges": 1302337
+  },
+  "unique_d4_root_classes": 18,
+  "results": [
+    {
+      "lane": "cost63e-original",
+      "file": "bit28-root-00000000000000803202200010000000.cert",
+      "git_blob_sha": "02542389e3601f4146ee0cf629422b85c51381d1",
+      "published_sha256": "795bbf9019fbd78d7d2ad5e548e5eae4fa3658ccfcb4a4a50f3f1886d84390fd",
+      "root_hex": "00000000000000803202200010000000",
+      "d4_canonical_root": "00000000000000803202200010000000",
+      "strategy_rows": 30830,
+      "root_mobility": 47,
+      "subroots_verified": 47,
+      "subroot_seen_states_sum": 73872,
+      "terminal_visits": 10686,
+      "opponent_reply_edges": 68956,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 30830,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost63e-original",
+      "file": "bit90-root-00000000040000803202200000000000.cert",
+      "git_blob_sha": "deae67d4507e6f22be732b5de488f063c278c373",
+      "published_sha256": "fc23d153d2d569f6f0b14b26568dc9ab297508094231fe72491b54ee846a6c1d",
+      "root_hex": "00000000040000803202200000000000",
+      "d4_canonical_root": "00000000000000803800000009020000",
+      "strategy_rows": 26272,
+      "root_mobility": 49,
+      "subroots_verified": 49,
+      "subroot_seen_states_sum": 60162,
+      "terminal_visits": 7999,
+      "opponent_reply_edges": 56972,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 26272,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost63e-original",
+      "file": "bit97-root-00000002000000803202200000000000.cert",
+      "git_blob_sha": "d86a213e1dd8af2fc4f0cefdf1a87a4da9b2534f",
+      "published_sha256": "b93eca0f90680e251460694eccdb522d88230507828cbe98acfe30518f435ca3",
+      "root_hex": "00000002000000803202200000000000",
+      "d4_canonical_root": "00000000000000883202000080000000",
+      "strategy_rows": 31528,
+      "root_mobility": 44,
+      "subroots_verified": 44,
+      "subroot_seen_states_sum": 72106,
+      "terminal_visits": 10360,
+      "opponent_reply_edges": 67739,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 31528,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost63e-warm",
+      "file": "bit42-root-00000000000000803202240000000000.cert",
+      "git_blob_sha": "51903c30bbc19242132719f9949c53e5eceec75f",
+      "published_sha256": "90c7f7c721fa0eb99f27d2ff5c118e2bb5e6310199784d68d09c8be3c4cb3be3",
+      "root_hex": "00000000000000803202240000000000",
+      "d4_canonical_root": "00000000000000803202240000000000",
+      "strategy_rows": 45348,
+      "root_mobility": 54,
+      "subroots_verified": 54,
+      "subroot_seen_states_sum": 99601,
+      "terminal_visits": 13960,
+      "opponent_reply_edges": 93234,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 45348,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost63e-warm",
+      "file": "bit73-root-00000000000002803202200000000000.cert",
+      "git_blob_sha": "ac9cdb10bd237f4d8b3d6a43ebef9b2a7eae2bad",
+      "published_sha256": "992166eb843281da0102f8410f431c3ff52a75f0f0cab215e9ae3006efa473fc",
+      "root_hex": "00000000000002803202200000000000",
+      "d4_canonical_root": "0000000000000088320a000000000000",
+      "strategy_rows": 40313,
+      "root_mobility": 50,
+      "subroots_verified": 50,
+      "subroot_seen_states_sum": 90247,
+      "terminal_visits": 13437,
+      "opponent_reply_edges": 83798,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 40313,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost63e-warm",
+      "file": "bit100-root-00000010000000803202200000000000.cert",
+      "git_blob_sha": "e733c50cbe795734b54d7411c14a5eff687da689",
+      "published_sha256": "d05b4b6b1cadfa5d6a29c904aa34ed88cd48168680b4d62d339f48bdfee3e327",
+      "root_hex": "00000010000000803202200000000000",
+      "d4_canonical_root": "00000000000000803800000008021000",
+      "strategy_rows": 33856,
+      "root_mobility": 49,
+      "subroots_verified": 49,
+      "subroot_seen_states_sum": 70321,
+      "terminal_visits": 9084,
+      "opponent_reply_edges": 68099,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 33856,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost63e-warm",
+      "file": "bit116-root-00100000000000803202200000000000.cert",
+      "git_blob_sha": "8e04c068fb21ea45cd85847dc26306d7e22818b0",
+      "published_sha256": "e99a4b55d7859039911ed91f9c669f74b51ab6d21baecf1daeec3f1edc4cb12b",
+      "root_hex": "00100000000000803202200000000000",
+      "d4_canonical_root": "00000000000000843800000008020000",
+      "strategy_rows": 48268,
+      "root_mobility": 53,
+      "subroots_verified": 53,
+      "subroot_seen_states_sum": 109795,
+      "terminal_visits": 15972,
+      "opponent_reply_edges": 102372,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 48268,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost63e-warm",
+      "file": "bit120-root-01000000000000803202200000000000.cert",
+      "git_blob_sha": "63f82e708ae2104de21a93806bdf5189658d83f4",
+      "published_sha256": "d12d26a3b68b22e5d3e7fa7bdd893cd58a385494ec74c131adc9042fd58751d8",
+      "root_hex": "01000000000000803202200000000000",
+      "d4_canonical_root": "00000000000000883202000000000400",
+      "strategy_rows": 44172,
+      "root_mobility": 55,
+      "subroots_verified": 55,
+      "subroot_seen_states_sum": 94162,
+      "terminal_visits": 14194,
+      "opponent_reply_edges": 86020,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 44172,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost65h",
+      "file": "bit7-root-00000000000000803202000000001080.cert",
+      "git_blob_sha": "3a1865e2f1c48d850ef50ec21f39d448b2a31fe9",
+      "published_sha256": "f3b21f78a95379a93e354ab92b6a84899b110024d577a2f56924e22063245be7",
+      "root_hex": "00000000000000803202000000001080",
+      "d4_canonical_root": "00000000000000803202000000001080",
+      "strategy_rows": 28375,
+      "root_mobility": 51,
+      "subroots_verified": 51,
+      "subroot_seen_states_sum": 65377,
+      "terminal_visits": 10374,
+      "opponent_reply_edges": 59374,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 28375,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost65h",
+      "file": "bit109-root-00002000000000803202000000001000.cert",
+      "git_blob_sha": "9c5036c8e52613c480da152ec13c52df1acbe7c8",
+      "published_sha256": "67b8f7c4f58ffe8ae58bf6fa4e456d1397f67933a1e2650487b49b2144a6cbf2",
+      "root_hex": "00002000000000803202000000001000",
+      "d4_canonical_root": "00000008000000809802000000100000",
+      "strategy_rows": 26774,
+      "root_mobility": 50,
+      "subroots_verified": 50,
+      "subroot_seen_states_sum": 60915,
+      "terminal_visits": 9190,
+      "opponent_reply_edges": 56271,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 26774,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost65h",
+      "file": "bit24-root-00000000000000803202000001001000.cert",
+      "git_blob_sha": "ef38cb0fe14c268ca476a6edec83e6d454d2b0ec",
+      "published_sha256": "2a311775de0ebffcacb9c723c58c08d8c9a9cf722c02541848a613bf08c37eff",
+      "root_hex": "00000000000000803202000001001000",
+      "d4_canonical_root": "00000000000000803202000001001000",
+      "strategy_rows": 38440,
+      "root_mobility": 50,
+      "subroots_verified": 50,
+      "subroot_seen_states_sum": 82198,
+      "terminal_visits": 12663,
+      "opponent_reply_edges": 75377,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 38440,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost65i",
+      "file": "bit7-root-00000000000000803202000000080080.cert",
+      "git_blob_sha": "dc784750262b5f763cba9b42cc1f67b78ecd50c9",
+      "published_sha256": "c011be1a9a71288de3e530e7828d6ff359fd47b0593a856ae3f24857de158e4c",
+      "root_hex": "00000000000000803202000000080080",
+      "d4_canonical_root": "00000000000000803202000000080080",
+      "strategy_rows": 26034,
+      "root_mobility": 45,
+      "subroots_verified": 45,
+      "subroot_seen_states_sum": 58078,
+      "terminal_visits": 8697,
+      "opponent_reply_edges": 53372,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 26034,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost65i",
+      "file": "bit43-root-00000000000000803202080000080000.cert",
+      "git_blob_sha": "af7215b24e1658b20fab7339cfc8a3e802f5616c",
+      "published_sha256": "aa8eb94428dac984faa0ca57d5fdda57c44d69ffdd0e6dce2778fbb16896ec51",
+      "root_hex": "00000000000000803202080000080000",
+      "d4_canonical_root": "00000000000000803202080000080000",
+      "strategy_rows": 44467,
+      "root_mobility": 53,
+      "subroots_verified": 53,
+      "subroot_seen_states_sum": 95939,
+      "terminal_visits": 15550,
+      "opponent_reply_edges": 86336,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 44467,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost65i",
+      "file": "bit99-root-00000008000000803202000000080000.cert",
+      "git_blob_sha": "ec8c4758c858bc56d6ffe532ec8406c83b33b4f7",
+      "published_sha256": "b6600fd4c444a4557bc76b3f135f97b61c918e5908fd0ff8a50d80c5cf5258aa",
+      "root_hex": "00000008000000803202000000080000",
+      "d4_canonical_root": "00000000020000803800000008000200",
+      "strategy_rows": 30066,
+      "root_mobility": 50,
+      "subroots_verified": 50,
+      "subroot_seen_states_sum": 69581,
+      "terminal_visits": 10659,
+      "opponent_reply_edges": 64025,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 30066,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost67b",
+      "file": "bit17-root-00000000000000803202000020020000.cert",
+      "git_blob_sha": "f087663046a6b9724d187aa4e6b07a85c7aa467a",
+      "published_sha256": "563e9c6557e12df35b4bbc2bf0c2dd2f98729a373f81b0ab9f9612522ceda70a",
+      "root_hex": "00000000000000803202000020020000",
+      "d4_canonical_root": "00000000000000803202000020020000",
+      "strategy_rows": 34860,
+      "root_mobility": 47,
+      "subroots_verified": 47,
+      "subroot_seen_states_sum": 77887,
+      "terminal_visits": 11693,
+      "opponent_reply_edges": 71745,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 34860,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost67b",
+      "file": "bit117-root-00200000000000803202000020000000.cert",
+      "git_blob_sha": "0c55d6b84ac9f4cebb54f6365fbe22912d695478",
+      "published_sha256": "2c5b60a92c4ec09e7b97e34bff36b076c4b9e56bf7b7b23459d0e14fa9855b56",
+      "root_hex": "00200000000000803202000020000000",
+      "d4_canonical_root": "00000000002020803800000008000000",
+      "strategy_rows": 32441,
+      "root_mobility": 50,
+      "subroots_verified": 50,
+      "subroot_seen_states_sum": 72110,
+      "terminal_visits": 10258,
+      "opponent_reply_edges": 66556,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 32441,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost67b",
+      "file": "bit109-root-00002000000000803202000020000000.cert",
+      "git_blob_sha": "3e1450167191cda48fd93c9394ccb2d326b9a2f5",
+      "published_sha256": "7ccc6eee5569db4d29ac4afd82da83103b9d33071b855731a3447b22a37088c0",
+      "root_hex": "00002000000000803202000020000000",
+      "d4_canonical_root": "00000000080000809802000000000800",
+      "strategy_rows": 27559,
+      "root_mobility": 47,
+      "subroots_verified": 47,
+      "subroot_seen_states_sum": 60614,
+      "terminal_visits": 8595,
+      "opponent_reply_edges": 56508,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 27559,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    },
+    {
+      "lane": "cost65g-warm",
+      "file": "bit44-root-00000000000000803202100000000004.cert",
+      "git_blob_sha": "80bdf6e1d561f8a639cc76b238561470ca067df4",
+      "published_sha256": null,
+      "root_hex": "00000000000000803202100000000004",
+      "d4_canonical_root": "00000000000000803202100000000004",
+      "strategy_rows": 40807,
+      "root_mobility": 52,
+      "subroots_verified": 52,
+      "subroot_seen_states_sum": 92059,
+      "terminal_visits": 13861,
+      "opponent_reply_edges": 85583,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "consumed_rows": 40807,
+      "missing_rows": 0,
+      "extra_rows": 0,
+      "pass": true
+    }
+  ],
+  "frontier_merge": {
+    "common_baseline": {
+      "solved": 991,
+      "remaining": 6856,
+      "cost": 540177,
+      "open_s6": 5126,
+      "open_cost": 403900
+    },
+    "cost63e_warm_delta": {
+      "new_manifest_keys": 6,
+      "cost_reduction": 432
+    },
+    "cost67b_delta": {
+      "new_manifest_keys": 2,
+      "cost_reduction": 142
+    },
+    "disjoint_union_keys": 8,
+    "merged": {
+      "solved": 999,
+      "remaining": 6848,
+      "cost": 539603,
+      "open_s6": 5118,
+      "open_cost": 403326
+    }
+  },
+  "local_second_class2_s5": {
+    "s5_hex": "00000000000000803202000000000000",
+    "baseline": {
+      "remaining_s6": 15,
+      "cost": 1072
+    },
+    "after_cost63e_warm": {
+      "remaining_s6": 14,
+      "cost": 1001
+    },
+    "after_cost67b": {
+      "remaining_s6": 14,
+      "cost": 1005
+    },
+    "after_disjoint_union": {
+      "remaining_s6": 13,
+      "cost": 934
+    },
+    "removed_cost63e_warm": "00000000000000803202000000000040",
+    "removed_cost67b": "00000000000000803202000020000000"
+  },
+  "cost67b_parent_lifts": {
+    "shared_s6_parent": "00000000000000803202000020000000",
+    "legal_winning_moves": [
+      17,
+      109,
+      117
+    ],
+    "second_manifest_parent": "00000000080000809002000000000800",
+    "unique_s6_manifest_orbits_closed": 2
+  },
+  "cost65g_bit44": {
+    "root": "00000000000000803202100000000004",
+    "parent_s6": "00000000000000803202000000000004",
+    "already_absent_from_remaining_second_class2_children": true,
+    "new_frontier_closure_counted": 0
+  },
+  "cost68c_raw_sweep": {
+    "candidates": 68,
+    "unique_candidates": 68,
+    "claim_candidate_set_match": true,
+    "win7_d10_candidates": 5,
+    "win7_bits": [
+      11,
+      21,
+      24,
+      53,
+      118
+    ],
+    "refuted_d10_candidates": 63,
+    "capped": 0,
+    "total_nodes": 104482623,
+    "pilot_controls": 9,
+    "pilot_nodes": 3402,
+    "claim_status": "in_flight",
+    "summary_file_present": false,
+    "note": "All 68 raw rows are present and exact, but the claim JSON still says in_flight and the finalized sweep summary is absent. The five loss=true rows are WIN7-D10 candidates, not certificates."
+  },
+  "execution_note": "The 18 certificate replays and raw/frontier audits were executed in the tool V8 runtime from GitHub blob/file contents. The standalone Node script is added for repository-local reproduction; it was not executed from a local checkout in this run because the checkout attempt failed at DNS resolution.",
+  "interpretation_guard": "WIN7 certificates prove only their individual seven-stone roots. REFUTED-D10 means no WIN7-D10 receipt, not a LOSS proof. S2 {59,60}, two-stone root {49,60}, standard 11x11 empty root, class2 and class4 remain UNKNOWN."
+}
