@@ -1,11 +1,11 @@
 {
-  "schema": 2,
-  "note": "(7,10) witness-free band confirmation+extension, all widths UNSAT. m=19..51: def+lex=H,V,HV, fastsat calibration (bit-exact vs seven-row-inband-families results.jsonl for m=19..40) + kissat 4.0.4 (band1.sh). m=52..90: kissat-only (lean2.sh/genfast.js; CNF byte-identical to sat2.js; sat2.js census OOMs at m>=52); lex cross-checks at m=52/60 UNSAT. m=61..90 regenerated bit-exact after an execution-environment reset",
-  "total": 74,
+  "schema": 3,
+  "note": "(7,10) witness-free band confirmation+extension, all widths UNSAT. m=19..51: def+lex=H,V,HV, fastsat calibration (bit-exact vs source results.jsonl for m=19..40) + kissat 4.0.4 (band1.sh). m=52..100: kissat-only (lean2.sh/genfast.js; CNF byte-identical to sat2.js; sat2.js census OOMs at m>=52); lex cross-checks at m=52/60/100 UNSAT. m=61..90 regenerated bit-exact after an execution-environment reset",
+  "total": 85,
   "allUnsat": true,
   "band": {
     "min": 19,
-    "max": 90
+    "max": 100
   },
   "fastsatConflicts": {
     "19": 3215,
@@ -282,6 +282,61 @@
       "m": 90,
       "lex": "none",
       "kissatConflicts": 2326
+    },
+    {
+      "m": 91,
+      "lex": "none",
+      "kissatConflicts": 2881
+    },
+    {
+      "m": 92,
+      "lex": "none",
+      "kissatConflicts": 1425
+    },
+    {
+      "m": 93,
+      "lex": "none",
+      "kissatConflicts": 3727
+    },
+    {
+      "m": 94,
+      "lex": "none",
+      "kissatConflicts": 2107
+    },
+    {
+      "m": 95,
+      "lex": "none",
+      "kissatConflicts": 2737
+    },
+    {
+      "m": 96,
+      "lex": "none",
+      "kissatConflicts": 1898
+    },
+    {
+      "m": 97,
+      "lex": "none",
+      "kissatConflicts": 2369
+    },
+    {
+      "m": 98,
+      "lex": "none",
+      "kissatConflicts": 1745
+    },
+    {
+      "m": 99,
+      "lex": "none",
+      "kissatConflicts": 1999
+    },
+    {
+      "m": 100,
+      "lex": "none",
+      "kissatConflicts": 2388
+    },
+    {
+      "m": 100,
+      "lex": "H,V,HV",
+      "kissatConflicts": 2657
     }
   ]
 }

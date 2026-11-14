@@ -1,7 +1,7 @@
 {
-  "schema": 2,
-  "note": "(7,9) def-mode (no lex) witness search + witness-free band, kissat 4.0.4; SAT witnesses dual-verified; lex rows are second-encoding cross-checks of UNSAT widths. m=34..45 sat2.js (lean1.sh); m>=46 genfast.js (lean2.sh; CNF byte-identical to sat2.js, 12-sample validation; sat2.js census OOMs at m>=52). m=61..90 regenerated bit-exact after an execution-environment reset (conflicts identical to the pre-reset run)",
-  "total": 80,
+  "schema": 3,
+  "note": "(7,9) def-mode (no lex) witness search + witness-free band, kissat 4.0.4; SAT witnesses dual-verified; lex rows are second-encoding cross-checks of UNSAT widths. m=34..45 sat2.js (lean1.sh); m>=46 genfast.js (lean2.sh; CNF byte-identical to sat2.js, 12-sample validation; sat2.js census OOMs at m>=52). m=61..70 and m=83..90 regenerated bit-exact after an execution-environment reset (conflicts identical to pre-reset runs)",
+  "total": 91,
   "sat": 9,
   "satWidths": [
     15,
@@ -16,7 +16,7 @@
   ],
   "witnessFreeBand": {
     "min": 24,
-    "max": 90,
+    "max": 100,
     "widths": [
       24,
       25,
@@ -84,14 +84,25 @@
       87,
       88,
       89,
-      90
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100
     ]
   },
   "lexCrossChecks": [
     "24(H,V,HV)",
     "33(H,V,HV)",
     "52(H,V,HV)",
-    "60(H,V,HV)"
+    "60(H,V,HV)",
+    "100(H,V,HV)"
   ],
   "allWitnessesDualVerified": true
 }
