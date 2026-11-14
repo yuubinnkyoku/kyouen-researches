@@ -3468,6 +3468,14 @@
 ## [research/experiments/macroscopic-spider-arm-20261102/verify.py](../../../research/experiments/macroscopic-spider-arm-20261102/verify.py)
 
 - [K0618](../items/K0618-one-macroscopic-arm-gaussian-coalescence.md) (verifier): 独立二値語・グラフ削除全列挙・漸化式と長枝モーメントの照合
+## [research/experiments/mask-census-closed-form-20261114/audit/audit_plateau_boundaries.py](../../../research/experiments/mask-census-closed-form-20261114/audit/audit_plateau_boundaries.py)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (verifier): 合同式の直接列挙とビット集合によるunique境界の独立監査
+- [K0805](../items/K0805-mask-census-closed-form.md) (verifier): 合同式の直接列挙とビット集合によるunique境界の独立監査
+## [research/experiments/mask-census-closed-form-20261114/audit/plateau-boundaries.json](../../../research/experiments/mask-census-closed-form-20261114/audit/plateau-boundaries.json)
+
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (data): 幅95・96・197・198・264・265のunique件数
+- [K0805](../items/K0805-mask-census-closed-form.md) (data): 幅95・96・197・198・264・265のunique件数
 ## [research/experiments/mask-census-closed-form-20261114/output/mask_census_closed_form_output.json](../../../research/experiments/mask-census-closed-form-20261114/output/mask_census_closed_form_output.json)
 
 - [K0805](../items/K0805-mask-census-closed-form.md) (data): 完全表 w=17..98・changePoints（交叉統計の増分表）・s17 ヒストグラム・小パターン参入窓・制御照合結果
@@ -3494,7 +3502,7 @@
 - [K0803](../items/K0803-maximal-mask-plateau-universal.md) (data): 検査結果・サンプル幅・広幅プローブの機械出力（maximal 全幅 3,300・w=396 unique 会計一致）
 ## [research/experiments/maximal-mask-plateau-universal-20261113/report.md](../../../research/experiments/maximal-mask-plateau-universal-20261113/report.md)
 
-- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (proof): 定理・証明・制御・限定の本文（全 w≧99 拡張版）
+- [K0803](../items/K0803-maximal-mask-plateau-universal.md) (proof): maximal部分の証明。uniqueの「ちょうど99≦w<198」は誤りで後続監査により訂正
 ## [research/experiments/maximal-mask-plateau-universal-20261113/scripts/maximal_mask_plateau_universal.ts](../../../research/experiments/maximal-mask-plateau-universal-20261113/scripts/maximal_mask_plateau_universal.ts)
 
 - [K0803](../items/K0803-maximal-mask-plateau-universal.md) (verifier): 周期性・CRT・popcount ギャップ・支配補題の機械検査 + sampled/広幅の exhaustive 再現 + 境界プローブ
@@ -12776,6 +12784,21 @@
 ## [research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js](../../../research/experiments/sa-row-deficient-witnesses-20261114/scripts/sa_machine.js)
 
 - [K0811](../items/K0811-sa-row-deficient-witnesses.md) (source): K0808 census・独立検証器の機械移植＋SA探索部（Metropolis・冷却・再シード）
+## [research/experiments/sat-fastcdcl-20261114/output/results.jsonl](../../../research/experiments/sat-fastcdcl-20261114/output/results.jsonl)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (data): cap=38 witness・6×22 2石欠損witness・5×19 witness・制御・fuzz450・相互検証60・抵抗（6×29/6×28/cap=37/(5,7) m=19,20/cap=41）
+## [research/experiments/sat-fastcdcl-20261114/output/w56_19.json](../../../research/experiments/sat-fastcdcl-20261114/output/w56_19.json)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (data): 5×19 の24石行欠損witness座標（fastsat seed=7 SAT・census不使用独立検証 PASS）
+## [research/experiments/sat-fastcdcl-20261114/output/w65_22.json](../../../research/experiments/sat-fastcdcl-20261114/output/w65_22.json)
+
+- [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 6×22 の22石（2石欠損）witness座標（fastsat SAT・census不使用独立検証 PASS）
+## [research/experiments/sat-fastcdcl-20261114/report.md](../../../research/experiments/sat-fastcdcl-20261114/report.md)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (proof): 手法・検証プロトコル・実装バグ2件の捕捉記録・seed portfolioの難度非単調性
+## [research/experiments/sat-fastcdcl-20261114/scripts/fastsat.js](../../../research/experiments/sat-fastcdcl-20261114/scripts/fastsat.js)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (source): 高速CDCL（2-watched literals・EVSIDS heap・Luby restarts・LBD削減・phase saving・cell変数ブート・--seed jitter）・cap=38 witness・5×19 witnessの発見機
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数
@@ -13527,6 +13550,42 @@
 ## [research/experiments/width9-18-circle-point-max-20261112/scripts/width9_18_circle_bound.ts](../../../research/experiments/width9-18-circle-point-max-20261112/scripts/width9_18_circle_bound.ts)
 
 - [K0767](../items/K0767-width9-18-circle-point-max-row-formulas.md) (verifier): 窓カウント・混合除外（第三実装）・g=2形カウント・witness幾何検証の単独再現
+## [research/experiments/witness-extension-kissat-20261114/output/extended.json](../../../research/experiments/witness-extension-kissat-20261114/output/extended.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 拡張witness 4件（6×29 q=5 23石・6×22 q=6 29石・6×19/6×21 q=6 29石）の座標と2系統検証結果
+## [research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json](../../../research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): kissat実行記録（制御・timeout記録込み）
+## [research/experiments/witness-extension-kissat-20261114/output/kissat_runs2.json](../../../research/experiments/witness-extension-kissat-20261114/output/kissat_runs2.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 第2弾kissat実行記録（M_{5,6}/M_{6,7}/M_{6,8}下界更新3件・timeout記録）
+## [research/experiments/witness-extension-kissat-20261114/output/w37.json](../../../research/experiments/witness-extension-kissat-20261114/output/w37.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×12 q=8 37石witness（行構成 7,7,7,2,7,7）・2系統検証PASS
+## [research/experiments/witness-extension-kissat-20261114/output/w56_20.json](../../../research/experiments/witness-extension-kissat-20261114/output/w56_20.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 5×20 q=6 24石witness（行構成 4,5,5,5,5）・2系統検証PASS → M_{5,6} ≥ 21
+## [research/experiments/witness-extension-kissat-20261114/output/w56_21.json](../../../research/experiments/witness-extension-kissat-20261114/output/w56_21.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 5×21 q=6 24石witness（行構成 4,5,5,5,5）・2系統検証PASS → M_{5,6} ≥ 22
+## [research/experiments/witness-extension-kissat-20261114/output/w67_20.json](../../../research/experiments/witness-extension-kissat-20261114/output/w67_20.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×20 q=7 35石witness（行構成 6,6,5,6,6,6）・2系統検証PASS → M_{6,7} ≥ 21
+## [research/experiments/witness-extension-kissat-20261114/output/w68_18.json](../../../research/experiments/witness-extension-kissat-20261114/output/w68_18.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×18 q=8 41石witness（行構成 7,6,7,7,7,7）・2系統検証PASS → M_{6,8} ≥ 19
+## [research/experiments/witness-extension-kissat-20261114/report.md](../../../research/experiments/witness-extension-kissat-20261114/report.md)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (proof): 手法・拡張列挙の完全性根拠・制御・未解決の記録
+## [research/experiments/witness-extension-kissat-20261114/scripts/dump.js](../../../research/experiments/witness-extension-kissat-20261114/scripts/dump.js)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): K0810符号化からDIMACSを吐出
+## [research/experiments/witness-extension-kissat-20261114/scripts/extend.js](../../../research/experiments/witness-extension-kissat-20261114/scripts/extend.js)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): 列追加拡張の決定的完全列挙（既知witnessの平行移動+新規列部分集合・verifyConfigで検証）
+## [research/experiments/witness-extension-kissat-20261114/scripts/verify_py.py](../../../research/experiments/witness-extension-kissat-20261114/scripts/verify_py.py)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): 別実装Python独立検証器（Fraction厳密演算・石ペア直線/石3点組円全列挙）— 初版の÷2バグをJS検証器との矛盾で捕捉し修正
 ## [research/knowledge/items/K0034-n10-minimum-maximal-bounds.md](../../../research/knowledge/items/K0034-n10-minimum-maximal-bounds.md)
 
 - [K0145](../items/K0145-n10-minimum-maximal-ten-open.md) (source): 九石全域排除により本問いを解消した現行命題

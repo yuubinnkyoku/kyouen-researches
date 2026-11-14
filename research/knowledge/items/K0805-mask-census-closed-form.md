@@ -38,6 +38,12 @@ artifacts:
 - path: research/experiments/mask-census-closed-form-20261114/report.md
   role: proof
   note: 定理・証明骨子・制御・限定の本文
+- path: research/experiments/mask-census-closed-form-20261114/audit/audit_plateau_boundaries.py
+  role: verifier
+  note: 合同式の直接列挙とビット集合によるunique境界の独立監査
+- path: research/experiments/mask-census-closed-form-20261114/audit/plateau-boundaries.json
+  role: data
+  note: 幅95・96・197・198・264・265のunique件数
 ---
 
 ## 命題（証明済み・全称）
@@ -59,6 +65,8 @@ artifacts:
    - 広幅帯の unique は一括増加ではなく w*(P) ごとの段階的増加
      （unique(265)=3632 → unique(286)=3663 → unique(363)=3960 →
      unique(561)=3993 = 3,994 − 1〔空〕）。
+
+独立な合同式列挙でも unique(95)=3615、unique(96)=3630、unique(264)=3630、unique(265)=3632 を確認した。幅を広げると各通過マスクは同じパラメータから拡張され、異なるマスクは制限先で区別できるため、unique は非減少。よって **unique=3630 となる整数幅はちょうど96〜264** である。K0803初版の「ちょうど99〜197」は十分範囲を必要条件と誤認したもの。
 
 ## 証明の骨子
 
