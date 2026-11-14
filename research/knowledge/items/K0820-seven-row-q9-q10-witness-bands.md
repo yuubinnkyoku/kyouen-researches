@@ -1,6 +1,6 @@
 ---
 id: K0820
-title: "7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 / witness-free 24..200 (M_{7,9} = 24 or >= 201), (7,10) witness-free band 19..40 confirmed by kissat and extended to 200 (M_{7,10} = 19 or >= 201)"
+title: "7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 / witness-free 24..200 (M_{7,9} = 24 or >= 201), (7,10) witness-free band 19..586 fully swept (M_{7,10} = 19 exact)"
 kind: proposition
 status: computed
 topics: [rectangles, maximal-safe]
@@ -52,6 +52,12 @@ artifacts:
 - path: research/experiments/seven-row-q9-q10-band-extension-101-200-20261114/scripts/genfast2.js
   role: verifier
   note: "integer-keyed fast census variant (canonical (N480,RHO) keys, typed-array open addressing, sat2.js encode reused via the genfast.js monkey-patch); CNF byte-identical to genfast.js on 4 samples incl. w=8 (controls_byteid.json); ~10.7x faster (m=101: 21.4s -> 2.0s), q>=w+1 only"
+- path: research/experiments/seven-row-q10-band-closure-201-586-20261115/output/q10-band/records.jsonl
+  role: data
+  note: "386 records m=201..586 all UNSAT (genfast3 chord-pair census + kissat 4.0.4 def-mode, conflicts 1,324..4,623, INDET 0, 200s cap): completes the (7,10) witness-free band 19..586; per-width raw kissat logs in output/q10-band/raw-logs/"
+- path: research/experiments/seven-row-q10-band-closure-201-586-20261115/output/controls/byteid_genfast3_vs_genfast2_q10.json
+  role: verifier
+  note: "genfast3 (chord-pair census from the q9-closure lane, md5 12c2bd9c) vs genfast2 CNF byte-identity on 4 q10 samples (def 110/150/200, lex=H,V,HV 200); m=200 instance-identity bit-exact (2,941 conflicts); m=300 determinism rerun bit-exact (2,608); def+lex cross-encodings UNSAT at m=201/400/586"
 scope: "finite machine verification: kissat 4.0.4 (all instances) + fastsat calibration/cross-check (the (7,10) band); widths stated per family only; up to census completeness and solver correctness"
 evidence: "complete-encoding UNSAT instances (def mode is exactly 'exists row-deficient maximal safe config' since safety caps every row at q-1) + constructive dual-verified witnesses + bit-exact instance-identity calibration + second-encoding (def+lex) cross-checks at (7,9) 24/33 + determinism across environment resets. See report.md."
 ---
@@ -170,3 +176,31 @@ q10 83..90 は 2195/2214/2217/2422/2351/2415/2404/2326 が双方で一致）。
 - 帰結: exact M の残課題は (7,9) m=201..612・(7,10) m=201..586 の持続性
   （または K0342 型 tail 評価）。witness 探索前線は **7×201 (q=9)** と
   **7×201 (q=10)** に移動。上界 613/587（K0318 代入）は不変。
+
+## 追記4 (2026-11-15 (7,10) 帯閉包 201..586: M_{7,10} = 19 exact)
+
+`seven-row-q10-band-closure-201-586-20261115`（本項目の後続レーン・第3弾）が
+残る (7,10) の全幅 **m=201..586 を完走**し、witness-free 帯を **19..586** に閉じた。
+
+- **掃引**: 386 幅すべて kissat 4.0.4 def 単一節符号化で **UNSAT**・
+  conflicts 1,324..4,623・solve ≤1.0s/幅・200s cap 内完走・**INDET 0・SAT 0**。
+- **生成器**: q9 閉包レーンが commit した `genfast3.js`（弦対抽象円 census・
+  md5 12c2bd9c・q ≥ w+2 で全 q 点円を列挙: 任意の q 点円は鳩の巣で二重行を
+  ≥2 持ち、二重行対の弦長対 (ℓ,ℓ') から中心 (v,ρ²) が u 非依存に決まる）
+  を再利用。**CNF byte-identity を q=10 向けに4サンプルで再検証**
+  （def m=110/150/200・lex=H,V,HV m=200・すべて genfast2.js と cmp 0 diff）。
+- **較正**: leanband3 パイプライン m=200 再実行が band-extension レーンの
+  record と bit-exact（vars 36,315 / clauses 132,264 / curves 393 /
+  UNSAT 2,941 conflicts）。**決定性**: m=300 再生成・再解が batch 記録と
+  bit-exact（2,608 conflicts）。**別符号化交差確認**: def+lex=H,V,HV が
+  m=201 (2,076) / m=400 (9,841) / m=586 (7,652) すべて UNSAT。
+- **決着**: witness 幅集合 {10..18}（K0820）+ witness-free 19..586
+  （K0820 + band-extension + 本閉包）+ **m ≥ 587 での witness 不可能在**
+  （K0318 substitution U=587・status proved）により
+  **M_{7,10} = 19 が exact に決着**（w=7 では初・w≥6 でも初の完全決着）。
+  (7,9) は q9 閉包レーンが m=201..612 を掃引中（IN FLIGHT・52fd92c1）。
+- 運用記録: records.jsonl の初回 push で read_file の 64KB 超トランケーションに
+  より 328/386 行で着地した欠陥を検出・全行再 push で md5 f5e5fa78 の
+  byte-exact 着地を API で検証。生ログ9幅（チャンク末尾）の末尾改行が
+  cat トランスポートで喪失した欠陥も検出・修復（q9 レーンの 5590f225 と
+  同一の輸送アーティファクト）。
