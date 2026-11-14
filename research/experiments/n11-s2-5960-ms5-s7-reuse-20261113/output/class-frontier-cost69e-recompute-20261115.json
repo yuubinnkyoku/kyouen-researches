@@ -1,8 +1,8 @@
 {
- "schema": "n11-class-frontier-cost69e-recompute-20261115-v1",
+ "schema": "n11-class-frontier-cost69e-recompute-20261115-v2",
  "date": "2026-11-15",
  "baseline_main": "class-frontier-merged-recompute-after65h65i-warm67b68c-20261115 (solved 1012 / unique remaining 6835 / sum 538670 / open 5105/402393)",
- "method": "direct runpy extension of recompute_frontier_merged_after65h65i_warm_67b68c_20261115.py: the merged baseline is reproduced exactly (asserted 1012/6835/538670/5105/402393), the cost-69e child remaining-membership and demand are re-derived from the merged frontier (the child was closed in the manifest mid-flight by the parallel cost-65g-warm bit-15 receipt; the sweep completed on an already-receipt-closed child and its certificates are pure new-coverage additions), the completed cost-69e sweep is asserted from the published raw batches (69 candidates: 11 WIN7-D10 + 58 REFUTED, 0 capped, 80,172,332 v16 nodes; 9 pilot d6 controls; determinism rerun bits 116/44 node-exact; v15 cross-engine anchors on all 11 WIN7 bits loss=true at 1,131,809/1,746,232/4,764,589/9,765,935/5,510,814/5,109,539/6,478,505/5,747,330/5,599,058/6,171,899/16,776,783 nodes), and the three fully verified receipts (bits 21/99/87 + warm rebuilds 84/76/90; rows 22,261/25,149/43,838/29,614/45,665/46,959; sub-roots 45/50/59/50/57/58 PASS; union 0/0 each) are added in the published record order with per-bit marginals re-derived from the growing union; the bit-21 WIN7 root 00000000000000803202000000208000 is a cross-child duplicate of the cost-60b bit-15 win7_roots listing with no prior published certificate, so that receipt is new coverage and also closes the cost-60b bit-15 warm entry; the bit-2 WIN7 root duplicates the cost-65g-warm bit-15 certificate (cross-lane reproduction, no new certificate needed); the remaining WIN7-D10 bits (89/94/108/116; bit 2 already certified by the parallel cost-65g-warm bit-15 rebuild; bits 84/76/90 rebuilt as warm certificates) stay warm certificate-rebuild candidates and change no frontier number",
+ "method": "direct runpy extension of recompute_frontier_merged_after65h65i_warm_67b68c_20261115.py: the merged baseline is reproduced exactly (asserted 1012/6835/538670/5105/402393), the cost-69e child remaining-membership and demand are re-derived from the merged frontier (the child was closed in the manifest mid-flight by the parallel cost-65g-warm bit-15 receipt; the sweep completed on an already-receipt-closed child and its certificates are pure new-coverage additions), the completed cost-69e sweep is asserted from the published raw batches (69 candidates: 11 WIN7-D10 + 58 REFUTED, 0 capped, 80,172,332 v16 nodes; 9 pilot d6 controls; determinism rerun bits 116/44 node-exact; v15 cross-engine anchors on all 11 WIN7 bits loss=true at 1,131,809/1,746,232/4,764,589/9,765,935/5,510,814/5,109,539/6,478,505/5,747,330/5,599,058/6,171,899/16,776,783 nodes), and the ten fully verified receipts (bits 21/99/87/84/76/90 plus the 2026-11-15 warm rebuilds 89/94/108/116; rows 22,261/25,149/43,838/29,614/45,665/46,959/47,035/42,538/33,942/74,113; sub-roots 45/50/59/50/57/58/54/52/51/59 PASS; union 0/0 each; bit-116 published as base64(gzip -9) with records-pinned uncompressed md5/sha256) are added in the published record order with per-bit marginals re-derived from the growing union; the bit-21 WIN7 root 00000000000000803202000000208000 is a cross-child duplicate of the cost-60b bit-15 win7_roots listing with no prior published certificate, so that receipt is new coverage and also closes the cost-60b bit-15 warm entry; the bit-2 WIN7 root duplicates the cost-65g-warm bit-15 certificate (cross-lane reproduction, no new certificate needed); each of the four warm-rebuilt bits 89/94/108/116 closes exactly one additional manifest S6 orbit (marginal 5, in-manifest 1 each), advancing solved 1019->1023 / remaining 6,828->6,824 / sum 538,143->537,833 / open 5,098->5,094 / 401,866->401,556 over the six-receipt publication",
  "controls": {
   "merged_baseline": {
    "solved_in_manifest": 1012,
@@ -33,23 +33,13 @@
     "00000000000000801202000000208000"
    ]
   },
-  "76": {
-   "root_hex": "00000000000010803202000000008000",
-   "covers": 7,
-   "marginal": 6,
-   "marginal_in_manifest": 2,
-   "marginal_manifest_hexes": [
-    "00000000000000803242000000000000",
-    "00000000000000849002000000020000"
-   ]
-  },
-  "84": {
-   "root_hex": "00000000001000803202000000008000",
+  "99": {
+   "root_hex": "00000008000000803202000000008000",
    "covers": 7,
    "marginal": 5,
    "marginal_in_manifest": 1,
    "marginal_manifest_hexes": [
-    "00000000000100003820000008000000"
+    "00000000000000003800200008000200"
    ]
   },
   "87": {
@@ -61,6 +51,25 @@
     "00000000000020809002000000020000"
    ]
   },
+  "84": {
+   "root_hex": "00000000001000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000100003820000008000000"
+   ]
+  },
+  "76": {
+   "root_hex": "00000000000010803202000000008000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000803242000000000000",
+    "00000000000000849002000000020000"
+   ]
+  },
   "90": {
    "root_hex": "00000000040000803202000000008000",
    "covers": 7,
@@ -70,23 +79,50 @@
     "00000000000000003800200048000000"
    ]
   },
-  "99": {
-   "root_hex": "00000008000000803202000000008000",
+  "89": {
+   "root_hex": "00000000020000803202000000008000",
    "covers": 7,
    "marginal": 5,
    "marginal_in_manifest": 1,
    "marginal_manifest_hexes": [
-    "00000000000000003800200008000200"
+    "00000000000000003800200008080000"
+   ]
+  },
+  "94": {
+   "root_hex": "00000000400000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000103820000008000000"
+   ]
+  },
+  "108": {
+   "root_hex": "00001000000000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000200000083800000000100000"
+   ]
+  },
+  "116": {
+   "root_hex": "00100000000000803202000000008000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000043820000008000000"
    ]
   }
  },
  "frontier_after_cost69e": {
-  "solved_s6_in_manifest": 1019,
+  "solved_s6_in_manifest": 1023,
   "remaining_s5_orbits": 176,
-  "unique_remaining_s6": 6828,
-  "sum_remaining_cost": 538143,
-  "s6_needed_by_open_classes": 5098,
-  "cost_needed_by_open_classes": 401866,
+  "unique_remaining_s6": 6824,
+  "sum_remaining_cost": 537833,
+  "s6_needed_by_open_classes": 5094,
+  "cost_needed_by_open_classes": 401556,
   "demand_histogram_open_only": {
    "c2=0,c4=1": 527,
    "c2=0,c4=2": 3021,
@@ -94,7 +130,7 @@
    "c2=1,c4=0": 246,
    "c2=1,c4=1": 60,
    "c2=1,c4=2": 9,
-   "c2=2,c4=0": 1162,
+   "c2=2,c4=0": 1158,
    "c2=2,c4=1": 6,
    "c2=2,c4=2": 55
   },
@@ -105,6 +141,14 @@
    "remaining_s7_edge_cost": 443
   },
   "best_class2_note": "best_class2 and best_coverable_class2 are the same coverable S5; the separate receipt-unclosable S5 is recorded in receipt_unclosable_class2.",
+  "receipt_unclosable_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698,
+   "all_remaining_children_sterile_swept": true,
+   "status": "unresolved; no WIN7-D10 was found in the recorded sweeps"
+  },
   "best_coverable_class2": {
    "s5_hex": "00000000000000803202000000000000",
    "classes": 2,
@@ -156,15 +200,7 @@
     "remaining_s6_orbits": 64,
     "remaining_s7_edge_cost": 4570
    }
-  ],
-  "receipt_unclosable_class2": {
-   "s5_hex": "00000000000000809082000000000000",
-   "classes": 3,
-   "remaining_s6_orbits": 10,
-   "remaining_s7_edge_cost": 698,
-   "all_remaining_children_sterile_swept": true,
-   "status": "unresolved; no WIN7-D10 was found in the recorded sweeps"
-  }
+  ]
  },
  "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
 }

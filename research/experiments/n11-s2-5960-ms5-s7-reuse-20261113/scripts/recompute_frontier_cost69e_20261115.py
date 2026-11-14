@@ -25,10 +25,10 @@ This script:
    REFUTED, 0 capped, 80,172,332 v16 nodes; all 9 raw batches re-summed from
    the published JSONL; the v16 determinism rerun and the v15 cross-engine
    anchors on all 11 WIN7 bits are asserted from the published JSONL files);
-4. adds the three fully verified cost-69e receipts (bits 21/99/87) in the
-   published record order, re-deriving every per-bit marginal from the growing
-   union, and produces the after-cost-69e frontier + ranking CSV +
-   top-candidates CSV.
+4. adds the ten fully verified cost-69e receipts (bits 21/99/87/84/76/90 +
+   the 2026-11-15 warm rebuilds 89/94/108/116) in the published record order,
+   re-deriving every per-bit marginal from the growing union, and produces the
+   after-cost-69e frontier + ranking CSV + top-candidates CSV.
 """
 import csv, json, runpy
 from pathlib import Path
@@ -132,19 +132,28 @@ for b, n in v15_expect.items():
 print('CONTROL determinism rerun (116/44 node-exact) and v15 anchors '
       '(all 11 WIN7 bits loss=true) asserted')
 
-# ---------- 4. the three verified receipts, marginals from the growing union ----------
+# ---------- 4. the ten verified receipts, marginals from the growing union ----------
 certs_rec = json.loads((OUT / 'class2-lane-cost69e-win7-certificates-20261114.json').read_text())
 assert certs_rec['child_hex'] == CHILD
 certs = [c for c in certs_rec['certificates'] if c.get('verdict') == 'WIN7']
-assert [c['bit'] for c in certs] == [21, 99, 87, 84, 76, 90]
-ROWS = {21: 22261, 99: 25149, 87: 43838, 84: 29614, 76: 45665, 90: 46959}
-SUBS = {21: 45, 99: 50, 87: 59, 84: 50, 76: 57, 90: 58}
+assert [c['bit'] for c in certs] == [21, 99, 87, 84, 76, 90, 89, 94, 108, 116]
+ROWS = {21: 22261, 99: 25149, 87: 43838, 84: 29614, 76: 45665, 90: 46959,
+       89: 47035, 94: 42538, 108: 33942, 116: 74113}
+SUBS = {21: 45, 99: 50, 87: 59, 84: 50, 76: 57, 90: 58,
+        89: 54, 94: 52, 108: 51, 116: 59}
 MD5 = {21: 'b229fe7c0c96901fe04ddf05763ffb9e',
        99: '69f5fae13d3c712df7b2883ec79d7c2a',
        87: '5f5063233ff919b704e01a105e1fb132',
        84: '41adac3c1d684d4b4dde25c416c2ae20',
        76: '2358870d7a2625b4d40a0c178f8cba66',
-       90: 'b0e6f779b229ef4993c8715691db7ede'}
+       90: 'b0e6f779b229ef4993c8715691db7ede',
+       89: '1e2c8db6cd9303fcf0167f59ccb83bae',
+       94: '4dc6076b96edc3a472b4b23f38739451',
+       108: '74d071466140e1b0a48b67134431a570',
+       116: '691140486067132237d8c11d93a12559'}
+# bit-116 md5 is the uncompressed certificate md5 (file published as base64
+# (76 cols) of gzip -9; the records file pins uncompressed md5/sha256 and the
+# gz_b64 md5), so the records-field assert holds unchanged.
 child_v = int(CHILD, 16)
 group_covers = {}
 for c in certs:
@@ -153,11 +162,12 @@ for c in certs:
     assert c['md5'] == MD5[c['bit']]
     assert int(c['root_hex'], 16) == child_v | (1 << c['bit'])
     group_covers[c['bit']] = covers(int(c['root_hex'], 16))
-print('CONTROL cost-69e receipts asserted: bits 21/99/87/84/76/90 (rows/sub-roots/union/md5/roots)')
+print('CONTROL cost-69e receipts asserted: bits 21/99/87/84/76/90/89/94/108/116 '
+      '(rows/sub-roots/union/md5/roots; 116 md5 = uncompressed, file published as base64(gzip))')
 
 s_cur = set(sM)
 cost69e_addition = {}
-for bit in (21, 99, 87, 84, 76, 90):
+for bit in (21, 99, 87, 84, 76, 90, 89, 94, 108, 116):
     cov = group_covers[bit]
     marg = cov - s_cur
     marg_m = marg & manifest
@@ -189,7 +199,7 @@ print('best class4:', class4[0])
 print('next class4:', class4[1:4])
 
 result = {
-    'schema': 'n11-class-frontier-cost69e-recompute-20261115-v1',
+    'schema': 'n11-class-frontier-cost69e-recompute-20261115-v2',
     'date': '2026-11-15',
     'baseline_main': 'class-frontier-merged-recompute-after65h65i-warm67b68c-20261115 '
                      '(solved 1012 / unique remaining 6835 / sum 538670 / open 5105/402393)',
@@ -202,18 +212,21 @@ result = {
               'raw batches (69 candidates: 11 WIN7-D10 + 58 REFUTED, 0 capped, 80,172,332 v16 nodes; '
               '9 pilot d6 controls; determinism rerun bits 116/44 node-exact; v15 cross-engine anchors '
               'on all 11 WIN7 bits loss=true at 1,131,809/1,746,232/4,764,589/9,765,935/5,510,814/'
-              '5,109,539/6,478,505/5,747,330/5,599,058/6,171,899/16,776,783 nodes), and the three fully '
-              'verified receipts (bits 21/99/87 + warm rebuilds 84/76/90; rows 22,261/25,149/43,838/29,614/'
-              '45,665/46,959; sub-roots 45/50/59/50/57/58 PASS; union 0/0 each) are added in the '
-              'published record order with per-bit marginals re-derived '
-              'from the growing union; the bit-21 WIN7 root 00000000000000803202000000208000 is a '
+              '5,109,539/6,478,505/5,747,330/5,599,058/6,171,899/16,776,783 nodes), and the ten fully '
+              'verified receipts (bits 21/99/87/84/76/90 plus the 2026-11-15 warm rebuilds '
+              '89/94/108/116; rows 22,261/25,149/43,838/29,614/45,665/46,959/47,035/42,538/33,942/'
+              '74,113; sub-roots 45/50/59/50/57/58/54/52/51/59 PASS; union 0/0 each; bit-116 '
+              'published as base64(gzip -9) with records-pinned uncompressed md5/sha256) are added '
+              'in the published record order with per-bit marginals re-derived from the growing '
+              'union; the bit-21 WIN7 root 00000000000000803202000000208000 is a '
               'cross-child duplicate of the cost-60b bit-15 win7_roots listing with no prior published '
               'certificate, so that receipt is new coverage and also closes the cost-60b bit-15 warm '
               'entry; the bit-2 WIN7 root duplicates the cost-65g-warm bit-15 certificate (cross-lane '
-              'reproduction, no new certificate needed); the remaining WIN7-D10 bits '
-              '(89/94/108/116; bit 2 already certified by the parallel cost-65g-warm bit-15 '
-              'rebuild; bits 84/76/90 rebuilt as warm certificates) stay warm certificate-rebuild '
-              'candidates and change no frontier number',
+              'reproduction, no new certificate needed); each of the four warm-rebuilt bits '
+              '89/94/108/116 closes exactly one additional manifest S6 orbit (marginal 5, '
+              'in-manifest 1 each), advancing solved 1019->1023 / remaining 6,828->6,824 / '
+              'sum 538,143->537,833 / open 5,098->5,094 / 401,866->401,556 over the six-receipt '
+              'publication',
     'controls': {
         'merged_baseline': {'solved_in_manifest': 1012, 'unique_remaining': 6835,
                             'sum_cost': 538670, 'open_s6': 5105, 'open_cost': 402393,
