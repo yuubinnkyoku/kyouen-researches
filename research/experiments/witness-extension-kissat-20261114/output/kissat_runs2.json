@@ -1,0 +1,76 @@
+{
+ "solver": "kissat 4.0.4 (official linux-amd64 release binary)",
+ "encoding": "row_deficient_sat.js encode({maxStones}) + toDimacs + total counter + sound row-symmetry clause (deficient row in top half)",
+ "runs": [
+  {
+   "instance": "6x30 q=5 cap=23",
+   "result": "timeout",
+   "wall_s": 260,
+   "conflicts": 837680,
+   "note": "undecided, not absence"
+  },
+  {
+   "instance": "5x19 q=7 cap=29",
+   "result": "timeout",
+   "wall_s": 260,
+   "conflicts": 5544223,
+   "note": "undecided, not absence; fastsat CDCL also timed out (sat-fastcdcl-20261114)"
+  },
+  {
+   "instance": "5x20 q=7 cap=29",
+   "result": "timeout",
+   "wall_s": 250,
+   "conflicts": 5278732,
+   "note": "undecided, not absence"
+  },
+  {
+   "instance": "6x18 q=8 cap=41",
+   "result": "SAT",
+   "conflicts": 696972,
+   "wall_s": 32,
+   "witness": "41 stones rows [7,6,7,7,7,7], verified JS+Python -> M_{6,8} >= 19"
+  },
+  {
+   "instance": "6x19 q=8 cap=41",
+   "result": "timeout",
+   "wall_s": 255,
+   "conflicts": 4522276,
+   "note": "undecided, not absence"
+  },
+  {
+   "instance": "5x20 q=6 cap=24",
+   "result": "SAT",
+   "conflicts": 328304,
+   "wall_s": 26,
+   "witness": "24 stones rows [4,5,5,5,5], verified JS+Python -> M_{5,6} >= 21"
+  },
+  {
+   "instance": "5x21 q=6 cap=24",
+   "result": "SAT",
+   "conflicts": 913249,
+   "wall_s": 69,
+   "witness": "24 stones rows [4,5,5,5,5], verified JS+Python -> M_{5,6} >= 22"
+  },
+  {
+   "instance": "5x22 q=6 cap=24",
+   "result": "timeout",
+   "wall_s": 240,
+   "conflicts": 2765544,
+   "note": "undecided, not absence"
+  },
+  {
+   "instance": "6x20 q=7 cap=35",
+   "result": "SAT",
+   "conflicts": 531416,
+   "wall_s": 35,
+   "witness": "35 stones rows [6,6,5,6,6,6], verified JS+Python -> M_{6,7} >= 21"
+  },
+  {
+   "instance": "6x21 q=7 cap=35",
+   "result": "timeout",
+   "wall_s": 235,
+   "conflicts": 2981526,
+   "note": "undecided, not absence"
+  }
+ ]
+}

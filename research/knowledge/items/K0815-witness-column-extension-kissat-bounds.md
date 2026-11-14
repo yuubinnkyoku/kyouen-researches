@@ -1,6 +1,6 @@
 ---
 id: K0815
-title: 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・6×12 q=8最小極大≤37
+title: 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大≤37
 kind: proposition
 status: proved
 topics: [rectangles, variants]
@@ -34,6 +34,21 @@ artifacts:
 - path: research/experiments/witness-extension-kissat-20261114/output/w37.json
   role: data
   note: 6×12 q=8 37石witness（行構成 7,7,7,2,7,7）・2系統検証PASS
+- path: research/experiments/witness-extension-kissat-20261114/output/kissat_runs2.json
+  role: data
+  note: 第2弾kissat実行記録（M_{5,6}/M_{6,7}/M_{6,8}下界更新3件・timeout記録）
+- path: research/experiments/witness-extension-kissat-20261114/output/w68_18.json
+  role: data
+  note: 6×18 q=8 41石witness（行構成 7,6,7,7,7,7）・2系統検証PASS → M_{6,8} ≥ 19
+- path: research/experiments/witness-extension-kissat-20261114/output/w56_20.json
+  role: data
+  note: 5×20 q=6 24石witness（行構成 4,5,5,5,5）・2系統検証PASS → M_{5,6} ≥ 21
+- path: research/experiments/witness-extension-kissat-20261114/output/w56_21.json
+  role: data
+  note: 5×21 q=6 24石witness（行構成 4,5,5,5,5）・2系統検証PASS → M_{5,6} ≥ 22
+- path: research/experiments/witness-extension-kissat-20261114/output/w67_20.json
+  role: data
+  note: 6×20 q=7 35石witness（行構成 6,6,5,6,6,6）・2系統検証PASS → M_{6,7} ≥ 21
 - path: research/experiments/witness-extension-kissat-20261114/output/kissat_runs.json
   role: data
   note: kissat実行記録（制御・timeout記録込み）
@@ -41,16 +56,16 @@ artifacts:
   role: proof
   note: 手法・拡張列挙の完全性根拠・制御・未解決の記録
 solution:
-  board: 6×m（q=5,6）・6×12（q=8）
+  board: 6×m（q=5,6,7,8）・5×m（q=6,7）・6×12（q=8）
   level: weak
   outcome: conditional
   classification: [root]
-  coverage: (6,5) 6×29・(6,6) 6×22 の各盤の欠損極大witness・6×12 q=8 の37石極大安全配置
+  coverage: (6,5) 6×29・(6,6) 6×22・(5,6) 5×20,21・(6,7) 6×20・(6,8) 6×18 の各盤の欠損極大witness・6×12 q=8 の37石極大安全配置
   conditions: q点共円・共線禁止・標準整数格子
   verification: [independent-enumeration]
   certificate: witness座標（全witnessがJS census不使用独立検証器とPython別実装検証器の2系統で safe+maximal PASS）
   independent_check: 別言語・別アルゴリズム（石ペア直線・石3点組円の全列挙・Fraction厳密演算）による直接判定の一致
-  note: 下界更新のみ。6×30 (q=5)・6×23 (q=6)・6×12 q=8 cap=36 は未決着であり不在証明ではない
+  note: 下界更新のみ。6×30 (q=5)・6×23 (q=6)・5×22 (q=6)・6×19 (q=8)・6×21 (q=7)・5×19,20 (q=7)・6×12 q=8 cap=36 は未決着であり不在証明ではない
 ---
 
 # 列追加拡張とkissatによる下界更新（2026-11-14）
@@ -91,5 +106,15 @@ JS検証器と矛盾する判定（6×29 witness を非極大と誤判定）を�
 実際にバグを捕捉した事例（K0808・K0810 に続き3例目）。修正後、拡張witness 4件・
 既知witness制御3件（2×8 q=4・6×22 q=5・6×28 q=5）すべて一致。
 
-現在の境界: M_{6,5} ∈ [30,658]・M_{6,6} ∈ [23,495]・M_{6,8} ∈ [18,371]・
-M_{5,6} ∈ [19,249]・M_{5,7} ∈ [19,158]・M_{6,7} ∈ [20,402]（上界は不変）。
+## 第2弾: 同一機械による追加3件（kissatのみ・同一拡張符号化）
+
+- **M_{6,8} ≥ 19**: 41石@6×18（行構成 7,6,7,7,7,7・696,972 conflicts・32秒）。K0810/K0811 の最前線 m=17 の次。
+- **M_{5,6} ≥ 22**: 24石@5×20・5×21（いずれも行構成 4,5,5,5,5）。fastsat の 5×19 に続き2盤延長。
+- **M_{6,7} ≥ 21**: 35石@6×20（行構成 6,6,5,6,6,6・531,416 conflicts・35秒）。K0761 の m=19 の次。
+- 未決着（非不在）: 6×30 q=5（838k conflicts）・6×23 q=6・5×22 q=6（2.77M）・
+  6×19 q=8（4.52M）・6×21 q=7（2.98M）・5×19 q=7（5.54M）・5×20 q=7（5.28M）。
+  拡張列挙（fastsat/自レーンの新witness込み反復）では新たな m は得られず
+  （6×22の22石2石欠損witness→6×23は既知帯内であったのみ）。
+
+現在の境界: M_{6,5} ∈ [30,658]・M_{6,6} ∈ [23,495]・M_{6,8} ∈ [19,371]・
+M_{5,6} ∈ [22,249]・M_{5,7} ∈ [19,158]・M_{6,7} ∈ [21,402]（上界は不変）。
