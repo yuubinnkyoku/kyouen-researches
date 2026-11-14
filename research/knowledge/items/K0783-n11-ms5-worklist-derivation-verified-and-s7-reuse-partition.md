@@ -482,3 +482,41 @@ Interpretation guard: REFUTED-D10 is not a child refutation. 11x11 empty board, 
 Follow-up (same session, 2026-11-14): the audit was extended to the whole class2 lane. All 19 published class2-lane sweep records were scanned; every raw row >= 19M nodes and every remaining WIN7 row (17 deduplicated rows) were re-solved instrumented, 17/17 node-exact vs the published raw batches. Three new saturated rows appeared (cost-69c bit110: 13,151 drops; cost-69c bit68: 208,479; cost-70 bit86: 5,703; occupancy 94,547-106,411 = 72%-81%), and all three survived the FBS=1<<20 drop-free re-solve (loss=false). WIN7 coverage is now complete class2-lane-wide: 19/19 WIN7 rows audited, all with fbtDrops=0. Combined: 37 rows audited, 9 saturated, 9/9 confirmed drop-free, 0 verdict flips. Clean heavy rows at 28.8M/24.8M/22.3M nodes with only 71k-85k occupancy confirm that occupancy (fbtInserts), not node count, predicts saturation. Details in the followup section of research/experiments/n11-fbt-saturation-audit-20261114/README.md and the followup fields of runs-manifest.json. 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN.
 
 Follow-up 2 (same session, 2026-11-14): the parallel lane's cost-73a sweep record (1 WIN7 bit81 + 72 REFUTED-D10, 0 capped, 383,290,602 nodes; certificate and frontier recompute published by that lane, solved 921) was audited row-wise. The two heaviest REFUTED rows and the WIN7 row reproduced node-exact: bit92 with 1,384 drops at only 87,984 total inserts (67.1%), bit23 with 1,761 drops at 97,145 (74.1%), and bit81 clean (0 drops, 55,402 occupancy). Two findings revise the audit record: the saturation-onset bracket tightens to [87,159 clean; 87,984 saturated] of 131,072 slots, and fbtMaxProbe is not a saturation indicator because dropped 48-step probe walks never update the counter (bit92 saturates with recorded maxProbe=43). The FBS=1<<20 drop-free re-solves of bits 92/23 are confirmed: the parallel lane's crosscheck (class2-lane-cost73a-runner-fbs20-crosscheck-20261114.jsonl, bits 92/23/48/81) reports fbtDrops=0 on every row with verdicts unchanged and node counts bit-exact identical to the canonical rows, so both rows are saturated-but-confirmed-surviving (combined: 11 saturated rows, 11/11 confirmed drop-free, 0 verdict flips), and no published verdict, frontier number, or certificate changes. Distinct class2-lane WIN7 rows audited remain 19/19 with fbtDrops=0 (bit81 now a third independent node-exact reproduction). The instrumented/drop-free variants are v15-derived for raw comparability; under the parallel lane's v16 memo-key repair the memo actually hits, so the v15 occupancy-onset figures must be re-measured before reuse for v16 sweeps. 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN.
+
+
+## 2026-11-14: cost-56a / cost-58b WIN7 certificates and cost-63a partial sweep
+
+The class2 lane added two new seven-stone WIN7 strategy roots, both independently
+replayed with a separate BigInt 3x3-minor determinant implementation (no solver
+or repository-verifier import, no floating point, and no verdict cache).
+
+- cost-56a root **00000000020000803202020000000000**: 27,817 strategy rows;
+  43/43 sub-roots PASS; consumed-row union missing 0 / extra 0. Its seven
+  one-stone deletions include three S6 worklist orbits, all three marginal.
+  The full frontier recomputation moves to 927 solved-in-manifest, 6,920
+  remaining S6 orbits, cost 544,617, and open-class demand 5,190 / 408,340.
+  S5 **00000000000000803202000000000000** falls from 41 / 2,776 to 39 / 2,657.
+- cost-58b root **00000000000000803202000000042000**: 33,459 strategy rows;
+  48/48 sub-roots PASS; consumed-row union missing 0 / extra 0. Its seven
+  deletions include four S6 worklist orbits. One is the cost-58 child
+  **00000000000000803202000000002000**, explicitly listed under the same S5
+  target at 39 / 2,657; this certificate supplies a winning move for that
+  child, giving a local 38 / 2,599. The global frontier has not yet been
+  recomputed after cost-58b, so the other three parent lifts are not counted
+  as marginal and no global totals are changed.
+- cost-63a is a separate in-flight class2 sweep on S6
+  **00000000000000809102000800000000** (63 legal seventh moves). Independent
+  exact geometry reproduces the full 63-bit candidate set. The first raw
+  batch covers 8 candidates; bit 2 is one WIN7-D10 search candidate, with
+  no certificate yet. The other seven are REFUTED-D10 only. This batch does
+  not close an S6 worklist row.
+
+Records: [cost-56a independent certificate audit](../../log/2026-11-14-n11-class2-cost56a-independent-certificate-audit.md),
+[cost-58b independent certificate audit](../../log/2026-11-14-n11-class2-cost58b-independent-certificate-audit.md),
+[cost-63a batch-1 audit](../../log/2026-11-14-n11-class2-cost63a-batch1-independent-audit.md).
+The latest global frontier source is
+[after cost-56a](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost56a-recompute-20261114.json).
+
+These are S6 child wins and bounded seven-stone searches only. The S5 parent
+blockers, S2 {59,60}, two-stone root {49,60}, and standard 11×11 empty
+root remain **UNKNOWN**.
