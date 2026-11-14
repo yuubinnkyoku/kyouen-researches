@@ -1,0 +1,61 @@
+{
+ "date": "2026-11-14",
+ "generator": "genfast3.js (chord-pair abstract-circle census, q>=w+2; from seven-row-q9-band-extension-201-612-20261114, md5 12c2bd9cb3b24887fc3896f7ea9bcadf); w=8 q=10 satisfies q>=w+2 (10>=10)",
+ "byteid_vs_genfast_eight_row": {
+  "reference": "research/experiments/eight-row-bands-20261114/scripts/genfast.js (pair-census, w=8-ready; header documents fastCensus replacing sat2.js buildCensus)",
+  "samples": [
+   {
+    "instance": "8x26 q10 def",
+    "cmp": "MATCH",
+    "bytes": 511123
+   },
+   {
+    "instance": "8x40 q10 def",
+    "cmp": "MATCH",
+    "bytes": 1065862
+   },
+   {
+    "instance": "8x60 q10 def",
+    "cmp": "MATCH",
+    "bytes": 1869915
+   }
+  ]
+ },
+ "instance_identity_reproduction": {
+  "instance": "8x25 q10 def",
+  "expected": {
+   "result": "SAT",
+   "conflicts": 1221994,
+   "source": "eight-row-bands-20261114 w8q10 records.jsonl (commit 4c8c441c)"
+  },
+  "observed": {
+   "result": "SAT",
+   "conflicts": 1221994,
+   "sec": 38.8
+  }
+ },
+ "negative_control": {
+  "instance": "7x200 q10 def",
+  "expected": {
+   "result": "UNSAT",
+   "conflicts": 2941,
+   "vars": 36315,
+   "clauses": 132264,
+   "curves": 393,
+   "source": "seven-row-q10-band-closure-201-586-20261115 instance-identity control / K0820 m=200"
+  },
+  "observed": {
+   "result": "UNSAT",
+   "conflicts": 2941,
+   "sec": 0.3,
+   "vars": 36315,
+   "clauses": 132264,
+   "curves": 393
+  }
+ },
+ "leanband8_smoke": {
+  "instance": "7x200 q10 def via leanband8.sh cap 30",
+  "result": "UNSAT 2941 conflicts",
+  "cap_recorded": 30
+ }
+}
