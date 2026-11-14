@@ -764,3 +764,17 @@ warm multibandの35 WIN7 rootを、同じS2再利用実験の17 verified manifes
 成果物: [sweep記録](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68d-sweep-20261115.json)、[証明書manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost68d-win7-certificates-20261115.json)、[hygiene manifest](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-warm-band-hygiene-certificates-20261115.json)、[frontier再計算](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost68d-recompute-20261115.json)、[再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost68d_20261115.py)、[log](../../log/2026-11-15-n11-class2-lane-cost68d-win7.md)。
 
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+## 2026-11-15: multiband2 + cost-68d/hygiene併合再計算、chain head 1,148
+
+1109基準で分岐していた2つの公開fold — 自レーンのcost-68d + hygiene 13 receipt（解消1,117）と並走レーンのwarm multiband 2 31 receipt（解消1,140）— を統合した。receipt集合はpublished duplicate crosscheck（31 batch-2 rootと13 cost-68d/hygiene root、54 entry、byte-exact重複のみ、WIN/LOSS衝突0）で互いに素と確認済みで、batch-2選択は自レーンのhygiene bits（62a 1/89、63a 11/109、61d bit-22=71b bit-1）を明示的にdeferredしており、fold順序で二重被覆は生じない。
+
+`recompute_frontier_merged_after_multiband2_68dhyg_20261115.py`（commit 19bb2abc）は、並走のmultiband2スクリプトをrunpyで1,140 head（1,140/6,707/528,979/4,977/392,702）からbyte-identical再現し、1,140状態でcost-68d子 `00000000000000809122000000000000` のmembershipを文字列keyで再導出（31 batch-2 receiptは同子を被覆していない、需要c1=0,c2=2,c4=0）、9 raw batchからsweep再集計（68候補・7 WIN7-D10 + 61 REFUTED・0 capped・61,325,518 v16 nodes、determinism rerun 8 bit node-exact、v15 anchor照合）、7+6 receiptの全記録を検査（rows・sub-roots・union 0/0・md5・sha256・root==child|1<<bit）した上で、31 batch-2 receiptを既に含む拡大和集合からper-record marginalを再導出しつつ13 receiptを公開順にfoldした。cost-61d bit-22 rootはcost-71b bit-1 rootとbyte-identicalで、重複上のmarginal 0は正の重複照合である。2回実行でbyte-identical、push後のremote git blob shaでbyte-exact確認済み。
+
+merged chain headは **解消S6 1,148・残り6,699・費用528,423・open需要4,969/392,146**（1,140基準から+8、すべて68d由来。13 receipt・marginal 56・manifest内8・zero-marginal 7 receipt）。第三class-2ターゲットS5 `00000000000000809102000000000000` は12軌道・871から **8軌道・588** へ。bottleneck不変: audit-blocked class2 `00000000000000809082000000000000`（10軌道・698、receipt-unclosable）とclass4 `00000000020000003800000080000000`（18軌道・1,460）。
+
+並走cost-69f sweep（子 `00000000000000809102000000000008`、69候補）は完了監査済み（9 WIN7-D10・60 REFUTED・0 capped・112,752,229 nodes）だが証明書未抽出のため未fold。残る最安未sweep子は `00000000000000809102000000002000`（cost 69、需要c1=0,c2=2,c4=2）。six gain-1 cost-70c warm candidatesはこのmerged headに対して非零marginalを持ちうるが、並走bandに属するためここではfoldしない。
+
+成果物: [merged再計算JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-merged-multiband2-68dhyg-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-merged-multiband2-68dhyg-20261115.csv)、[再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_merged_after_multiband2_68dhyg_20261115.py)、[log](../../log/2026-11-15-n11-class2-merged-recompute-multiband2-68dhyg.md)。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
