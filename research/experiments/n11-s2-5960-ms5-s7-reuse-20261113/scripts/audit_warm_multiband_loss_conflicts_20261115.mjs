@@ -98,22 +98,24 @@ assert(Object.values(conflicts).every(x=>x.length===0));
 
 const result = {
   schema:'n11-warm-multiband-win-loss-conflict-audit-20261115-v1',
+  source_snapshot_main:'3631e7ba84b4db97329e4b7de670dde95ce2c814',
+  main_commit_after_audit:'52fd92c12c27fe02d94d76fe58964b47d4a6fa73',
   method:'D4 canonicalization using the same eight coordinate images as audit_published_candidates.py; exact integer bitmasks, no floating point',
   warm_multiband:{records:warmRoots.length,unique_roots:uniqueCount(warmRoots),unique_d4_orbits:warmD4.size,stone_counts:[7]},
   prior_verified_manifests:{
     manifest_count:manifests.length,record_count:manifests.reduce((n,m)=>n+m.records.length,0),
     win7_records:priorWins.length,loss7_records:priorLosses.length,
     unique_win7_d4_orbits:winD4.size,unique_loss7_d4_orbits:lossD4.size,
-    manifest_names:manifestNames,
+    paths:manifestNames,
   },
   additional_loss_sources:{
-    central49_parent_lift:{entries:centralRoots.length,unique_d4_orbits:centralD4.size},
-    knownloss_category1_candidate_pool:{rows:knownRoots.length,unique_d4_orbits:knownD4.size,interpretation:'candidate rows, not independent LOSS7 certificates'},
+    central49_parent_lift:{path:'research/experiments/n11-central-19-cover-20261031/terminal_loss7_parent_lift_274_manifest.json',entries:centralRoots.length,unique_d4_orbits:centralD4.size},
+    knownloss_category1_candidate_pool:{path:'research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/ms5_s7_knownloss_candidates.csv',rows:knownRoots.length,unique_d4_orbits:knownD4.size,interpretation:'candidate rows, not independent LOSS7 certificates'},
     combined_unique_d4_orbits:new Set([...lossD4,...centralD4,...knownD4]).size,
     cross_source_d4_overlaps:sourceOverlaps,
   },
   conflicts:{...Object.fromEntries(Object.entries(conflicts).map(([k,v])=>[k,v.length])),total:0},
-  interpretation_guard:'Bounded audit of published manifests and the category-1 candidate index only; not every raw cache or private worker cache. No frontier count or game outcome is changed.',
+  interpretation_guard:'No D4-equivalent WIN7/LOSS7 conflict was found between the 35 warm roots and the listed published sources. This is a bounded manifest/candidate-index audit, not a scan of every raw cache, private worker cache, or every certificate in the repository. It does not change S6 frontier counts or decide the empty board.',
 };
 await writeFile(resolve(OUT_DIR, 'warm-multiband-loss-conflict-audit-20261115.json'), JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({warm:35,priorWin7:77,priorLoss7:200,centralParentLift:274,knownlossCategory1:396,conflicts:0},null,2));
