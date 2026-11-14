@@ -1,6 +1,6 @@
 # 移行集計
 
-K項目: 791 / alias: 269 / artifactファイル: 4309
+K項目: 792 / alias: 269 / artifactファイル: 4312
 
 ## kind
 
@@ -9,7 +9,7 @@ K項目: 791 / alias: 269 / artifactファイル: 4309
 | computation | 96 |
 | definition | 5 |
 | method | 7 |
-| proposition | 613 |
+| proposition | 614 |
 | question | 39 |
 | verification | 31 |
 
@@ -23,7 +23,7 @@ K項目: 791 / alias: 269 / artifactファイル: 4309
 | needs-review | 1 |
 | observed | 26 |
 | open | 37 |
-| proved | 400 |
+| proved | 401 |
 | refuted | 64 |
 | scope-unclear | 2 |
 | superseded | 9 |
@@ -44,14 +44,14 @@ K項目: 791 / alias: 269 / artifactファイル: 4309
 | migration | 1 |
 | provenance | 41 |
 | reconfiguration | 38 |
-| rectangles | 157 |
+| rectangles | 158 |
 | residual-games | 124 |
 | rules | 8 |
 | search-methods | 123 |
 | square-outcomes | 101 |
 | statistics | 121 |
 | strategy-length | 94 |
-| variants | 345 |
+| variants | 346 |
 | verification | 143 |
 
 ## 未解決・要監査・範囲不明

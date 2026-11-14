@@ -793,3 +793,4 @@
 | [K0807](../items/K0807-width83-positive-control-revival-point.md) | w=83正制御の完走 — REST6掃引機の生存検出感度を実証（生残ちょうど2件・両方11050円の両端83幅窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w=83の生残パターン完全特定（2.42G nodes・leaves=2・実現可能） | proposition | proved | rectangles, geometry, variants |
 | [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) | 6×m q=5/6/8 の欠損極大witness — M_{6,5}≥20・M_{6,6}≥16・M_{6,8}≥12（下界の初記録） | computation | computed | rectangles, maximal-safe, verification, geometry |
 | [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) | 行capハンディキャップ貪欲による欠損witness — M_{6,5}≥22・M_{6,6}≥17（下界更新） | computation | computed | rectangles, maximal-safe, verification, geometry |
+| [K0810](../items/K0810-sat-row-deficient-witnesses.md) | SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証） | proposition | proved | rectangles, variants |

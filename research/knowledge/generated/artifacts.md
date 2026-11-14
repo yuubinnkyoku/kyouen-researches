@@ -12710,6 +12710,15 @@
 ## [research/experiments/rooted-core-tail-periodicity-20261107/verify.py](../../../research/experiments/rooted-core-tail-periodicity-20261107/verify.py)
 
 - [K0682](../items/K0682-rooted-core-path-periodicity-certificate.md) (verifier): 全6337ラベル付き核の生成と513型の周期証明書、別subset mex11980条件
+## [research/experiments/row-deficient-sat-witnesses-20261114/output/sat_results.json](../../../research/experiments/row-deficient-sat-witnesses-20261114/output/sat_results.json)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (data): 全16実行・witness座標・独立検証詳細・制御・fuzz記録
+## [research/experiments/row-deficient-sat-witnesses-20261114/report.md](../../../research/experiments/row-deficient-sat-witnesses-20261114/report.md)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (proof): 手法・制御・捕捉した実装バグ4件・未解決の区別
+## [research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js](../../../research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js)
+
+- [K0810](../items/K0810-sat-row-deficient-witnesses.md) (source): census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
 ## [research/experiments/saturation/output/saturation_20261003_exact_results.json](../../../research/experiments/saturation/output/saturation_20261003_exact_results.json)
 
 - [K0312](../items/K0312-n11-minimum-maximal-bounds.md) (data): 11盤7石排除の完了計数

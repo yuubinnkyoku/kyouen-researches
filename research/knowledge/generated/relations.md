@@ -4824,6 +4824,7 @@
 - → depends_on [K0024](../items/K0024-fixed-width-q-point-threshold.md): 従来の暗黙の一般上界T_{6,7}=10,101（402はその25分の1）
 - ← supports [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): K0806 が上界のみ記録した (6,5)/(6,6)/(6,8) に下界を与え、境界を [20,658]/[16,495]/[12,371] の両側にした
 - ← supports [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): (6,5)/(6,6) の境界を [22,658]/[17,495] に更新
+- ← depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): 上界（K0318代入）は不変
 
 ## [K0807](../items/K0807-width83-positive-control-revival-point.md) w=83正制御の完走 — REST6掃引機の生存検出感度を実証（生残ちょうど2件・両方11050円の両端83幅窓で実現・certificate-phantom 0件）・level 17復活点の実測確定はちょうどw=83・w=83の生残パターン完全特定（2.42G nodes・leaves=2・実現可能）
 
@@ -4840,9 +4841,17 @@
 - → depends_on [K0759](../items/K0759-three-row-m19-class123-nonexistence-occupancy-complete.md): 5×19 q=7 の全極大30石との一致制御
 - ← generalizes [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): K0808の貪欲では発見できなかった m=20,21（6,5）と m=16（6,6）に行capハンディキャップで到達し、下界 M_{6,5}≥20→22・M_{6,6}≥16→17 を更新
 - ← depends_on [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): census（3点組外心完全列挙）と独立検証器の実装をverbatim流用
+- ← generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): 貪欲では発見できなかったm帯のwitnessをSATで発見し(6,5)/(6,6)/(6,8)下界を更新
 
 ## [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md) 行capハンディキャップ貪欲による欠損witness — M_{6,5}≥22・M_{6,6}≥17（下界更新）
 
 - → generalizes [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): K0808の貪欲では発見できなかった m=20,21（6,5）と m=16（6,6）に行capハンディキャップで到達し、下界 M_{6,5}≥20→22・M_{6,6}≥16→17 を更新
 - → supports [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): (6,5)/(6,6) の境界を [22,658]/[17,495] に更新
 - → depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): census（3点組外心完全列挙）と独立検証器の実装をverbatim流用
+- ← generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): 行capハンディキャップ貪欲の候補予想 M=22/17/12/16 を4件とも反証
+
+## [K0810](../items/K0810-sat-row-deficient-witnesses.md) SAT探索による行欠損極大witness — M_{6,5}≥23・M_{6,6}≥20・M_{6,8}≥18・M_{5,6}≥18（K0809候補予想4件の反証）
+
+- → generalizes [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): 貪欲では発見できなかったm帯のwitnessをSATで発見し(6,5)/(6,6)/(6,8)下界を更新
+- → generalizes [K0809](../items/K0809-handicap-deficient-witnesses-6x5-6x6.md): 行capハンディキャップ貪欲の候補予想 M=22/17/12/16 を4件とも反証
+- → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変

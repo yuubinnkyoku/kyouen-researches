@@ -6,10 +6,10 @@ status: proved
 topics: [rectangles, variants]
 aliases: []
 relations:
-- type: refines
+- type: generalizes
   target: K0808
   note: 貪欲では発見できなかったm帯のwitnessをSATで発見し(6,5)/(6,6)/(6,8)下界を更新
-- type: refines
+- type: generalizes
   target: K0809
   note: 行capハンディキャップ貪欲の候補予想 M=22/17/12/16 を4件とも反証
 - type: depends_on
@@ -17,7 +17,7 @@ relations:
   note: 上界（K0318代入）は不変
 artifacts:
 - path: research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js
-  role: experiment
+  role: source
   note: census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
 - path: research/experiments/row-deficient-sat-witnesses-20261114/output/sat_results.json
   role: data
@@ -27,12 +27,12 @@ artifacts:
   note: 手法・制御・捕捉した実装バグ4件・未解決の区別
 solution:
   board: 6×m・5×m（q=5,6,8・q=6）
-  level: strong
-  outcome: bounds-only
-  classification: [deficient-maximal-witnesses]
+  level: weak
+  outcome: conditional
+  classification: [root]
   coverage: (6,5) m=22・(6,6) m=17,19・(6,8) m=12..17・(5,6) m=16,17 の各盤
   conditions: q点共円・共線禁止・標準整数格子
-  verification: [exhaustive-search-SAT, independent-verification]
+  verification: [exact-search, independent-enumeration]
   certificate: SAT model（全witnessがcensus不使用独立検証で safe+maximal PASS）
   independent_check: 別プロセスでの再検証・2ソルバ相互検証・全列挙制御（2×8/2×9）・fuzz 800題
   note: 下界更新のみ。timeout した m（(6,8) m=18・(5,6) m=18,19・(5,7) m=19・(6,7) m=20・(6,6) m=18,20,21）は未解決であり不在証明ではない
