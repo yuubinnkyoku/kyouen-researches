@@ -209,6 +209,39 @@ since the file is published as base64(gzip)).
   md5 verified for the recompute JSON, ranking CSV, top-candidates CSV and
   the script.
 
+## Independent audit of all ten certificates (2026-11-15)
+
+A fully independent Python audit of all ten lane certificates (script
+`scripts/audit_cost69e_win7_certs_20261115.py`, record
+`output/class2-lane-cost69e-10cert-python-independent-audit-20261115.json`):
+fresh implementation written from the published game-rule description only —
+no repository verifier import, no engine, no verdict cache, no floating
+point; the kyouen predicate is an exact integer Bareiss 4x4 determinant of
+[x^2+y^2, x, y, 1] on arbitrary-precision integers, forbidden-by-triple masks
+recomputed from scratch.
+
+Checks per certificate: file md5/sha256 against the records file (bit-116
+restored from the base64(gzip -9) publication and checked against the
+records-pinned uncompressed hashes and byte size 2,670,116); exact
+header/root lines; root = child | 1<<bit with 7 stones and all C(7,4)=35
+root determinants non-zero; loser mobility re-enumerated independently and
+matched to the records root_check and the one-bit strategy rows; full
+sub-root decomposition with every strategy move legal, all loser replies
+expanded, terminals loser-stuck at 13..17 stones, no strategy rows at
+loser or terminal states; exact consumed/rows union over all sub-roots
+(0 missing / 0 extra).
+
+**All 10 certificates PASS every check**: 411,114 strategy rows,
+893,019 visited states, 830,898 loser reply edges, 535/535 sub-roots,
+terminal range [13, 17] on every certificate; wall ~51 s for the full set
+(two consecutive runs identical modulo per-certificate wall times). Per
+certificate (rows / mobility = sub-roots / visited / loser edges): 21
+22,261/45/51,285/48,620 · 99 25,149/50/55,552/50,571 · 87
+43,838/59/93,566/85,999 · 84 29,614/50/69,534/65,303 · 76
+45,665/57/96,678/89,709 · 90 46,959/58/98,588/90,977 · 89
+47,035/54/106,325/101,069 · 94 42,538/52/99,751/94,297 · 108
+33,942/51/75,305/69,644 · 116 74,113/59/146,435/134,709.
+
 ## Status
 
 11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}:
