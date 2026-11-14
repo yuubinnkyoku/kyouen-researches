@@ -1090,10 +1090,10 @@
 - [K0791](../items/K0791-circle-34pt-witness-verified.md) (verifier): 旧掃引機械。制御経路（tab直呼び）は正しいが、掃引dfsはnpf蓄積バグを持ちR′≦10⁷掃引部分を再現しない（歴史資料・編集しない）
 ## [research/experiments/circle-strip-subadditivity-20261114/report.md](../../../research/experiments/circle-strip-subadditivity-20261114/report.md)
 
-- [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (proof): 劣加法性・Fekete の補題・P(82)=32 からの漸近上界の全称証明
+- [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (proof): 劣加法性・Fekete の補題・P(83)=34 の全称証明
 ## [research/experiments/circle-strip-subadditivity-20261114/verify.py](../../../research/experiments/circle-strip-subadditivity-20261114/verify.py)
 
-- [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (verifier): P(w)表の連続性・P(82)・既知範囲の劣加法性・最小既知比率を検査
+- [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (verifier): P(w)表・劣加法性の有限範囲・11050円のP(83) witnessを整数演算で検査
 ## [research/experiments/clique-bouquet-gaussian-20261101/proof.md](../../../research/experiments/clique-bouquet-gaussian-20261101/proof.md)
 
 - [K0610](../items/K0610-clique-bouquet-terminal-gaussian.md) (proof): 花弁ごとの厳密母関数・全変動誤差・正規極限の全称証明
@@ -14056,6 +14056,9 @@
 ## [research/log/2026-11-13-width68-level-classification.md](../../../research/log/2026-11-13-width68-level-classification.md)
 
 - [K0802](../items/K0802-width68-pw32-plateau-completion.md) (log): 判断・教訓・レジューム
+## [research/log/2026-11-14-circle-strip-p83-exact.md](../../../research/log/2026-11-14-circle-strip-p83-exact.md)
+
+- [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (log): P(83)=34 の導出・独立再計算・証拠範囲
 ## [research/log/2026-11-14-circle-strip-subadditivity.md](../../../research/log/2026-11-14-circle-strip-subadditivity.md)
 
 - [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) (log): 発見経緯・有限表検査・証拠境界・次の未解決課題
