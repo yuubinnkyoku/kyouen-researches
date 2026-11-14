@@ -1,0 +1,22 @@
+{
+ "w": 6,
+ "m": 20,
+ "q": 8,
+ "classes": 35,
+ "unsat": 35,
+ "sat": 0,
+ "indet": 0,
+ "total_conflicts": 16446081,
+ "hardest_class": "2",
+ "hardest_conflicts": 2763766,
+ "lex_cross_checks": {
+  "1": 2038080,
+  "2": 2331073
+ },
+ "controls": {
+  "2x8_q4_class0": "SAT (K0796 rediscovered)",
+  "2x9_q4_class0": "UNSAT (M_{2,4}=9 consistent)",
+  "6x18_q8_class1": "SAT 511895 conflicts (K0815 witness board rediscovered, bit-exact with K0818)"
+ },
+ "claim": "no row-deficient maximal safe configuration on 6x20 q=8; witness-free width set of (6,8) extends to {19,20}; M_{6,8} in {19,20} or >= 22 (upper 371 unchanged)"
+}
