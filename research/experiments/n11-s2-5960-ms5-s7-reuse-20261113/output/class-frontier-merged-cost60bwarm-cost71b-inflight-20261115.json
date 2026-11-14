@@ -1,0 +1,28 @@
+{
+  "session": "class-frontier merged recompute (cost-70c + cost-60b-warm 17 + cost-71b 3) on the cost-69e v2 baseline - long-term lane, 2026-11-15",
+  "status": "completed",
+  "completed": "2026-11-15 (JST)",
+  "commit": "73f8b5d8c6e77f21630c19857c1517fefca1533a",
+  "outputs": [
+    "scripts/recompute_frontier_merged_after69ev2_70c_60bwarm_71b_20261115.py (26756 B)",
+    "output/class-frontier-merged-cost60bwarm-cost71b-recompute-20261115.json (14646 B)",
+    "output/class-frontier-s5-ranking-after-merged-cost60bwarm-cost71b-20261115.csv (7623 B)",
+    "output/class-frontier-top-candidates-s6-after-merged-cost60bwarm-cost71b-20261115.csv (3551 B)"
+  ],
+  "result": {
+    "baseline_reproduced_by_runpy": "cost-69e v2: 1023 / 6824 / 537833 / 5094 / 401556",
+    "chain_break_repaired": "superseded endpoints re-derived exactly from raw records: pre-v2 six-receipt state 1019, after-cost-70c 1022, after-cost-60b-warm 1040, after-cost-71b 1026 (all contained in the merged solved set; the three superseded scripts remain on main as historical documentation with failing baseline asserts recorded as experiment fact)",
+    "stage_frontiers": {
+      "after_cost70c": "1026 / 6821 / 537611 / 5091 / 401334",
+      "after_cost60b_warm": "1044 / 6803 / 536212 / 5073 / 399935",
+      "after_cost71b_merged": "1045 / 6802 / 536131 / 5072 / 399854"
+    },
+    "receipts_folded": 23,
+    "duplicate_fold_cases": "71b bits 109/21 marginal 0 vs published 6/5 (marginal_reduced_vs_published=true; bit-21 root duplicates the 60b-warm bit-22 root); 60b-warm bits 95/100 marginal 0 (cross-child duplicates); bits 15/34 not re-added",
+    "second_target_S5": "00000000000000803202000000000000 now has only 3 remaining children: 00000000000000803202000000000200 (cost 72, parallel lane sweeping), 00000000000000803202000000000008 (cost 75), 00000000000000803202000000004000 (cost 75); total remaining cost 222",
+    "best_class4": "00000000020000003800000080000000 remaining 18 cost 1460",
+    "reproducibility": "two runs byte-identical (md5 b1576b72b6ff14810b31926082b287e7 / cac000deb21461c4eab2c74359203561 / fdd96e880fba8f1ce99a8f9e6a3c815b)"
+  },
+  "not_folded": "cost-72 sweep (parallel lane: raw batches + audit + bit-111 certificate published, no completed sweep record - certificates without records are not receipts); warm-rebuild candidates without records (cost-61d bit-22 = cost-71b bit-1 root, cost-71b remaining WIN7 bits 1/14/32/74/94/117)",
+  "unknown_status": "11x11 empty board: UNKNOWN; this merged recompute is bookkeeping over published receipts and proves no new game outcome"
+}

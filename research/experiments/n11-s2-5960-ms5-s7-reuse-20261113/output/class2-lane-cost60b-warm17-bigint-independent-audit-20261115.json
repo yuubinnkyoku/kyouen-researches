@@ -1,0 +1,381 @@
+{
+  "schema": "n11-class2-lane-cost60b-warm17-bigint-independent-audit-20261115-v1",
+  "date": "2026-11-15",
+  "audited_main": "74170faf91873ddc5abd2f0bbc07a968c5084c87",
+  "target_s6_hex": "00000000000000803202000000200000",
+  "certificate_directory": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60b-certificates/",
+  "scope": "The 17 warm-rebuilt WIN7 certificates (bits 8,22,26,28,32,40,43,44,74,77,87,88,95,100,106,108,114); excludes the six original cost-60b receipts (bits 23,73,94,96,105,117).",
+  "method": "Fresh multi-certificate V8 implementation using BigInt 3x3 cofactor expansion of the exact lifted determinant [x^2+y^2,x,y,1]. No floating point, solver, verdict cache, or repository verifier import. For every root, it checked seven stones, safety, exact opponent legal-move set, every opponent-first-move subtree, legal winner strategy moves, no strategy rows at opponent or terminal states, sorted unique rows, exact consumed-row union, and terminal size 13..17.",
+  "parent_extension_check": {
+    "parent_s6_hex": "00000000000000803202000000200000",
+    "distinct_roots": 17,
+    "all_roots_equal_parent_plus_named_bit": true
+  },
+  "totals": {
+    "certificates": 17,
+    "root_safe": 17,
+    "root_stones": 7,
+    "distinct_roots": 17,
+    "subroots_passed": 843,
+    "strategy_rows": 488398,
+    "visited_states_across_subroots": 1097295,
+    "winner_states": 710849,
+    "loser_states": 223692,
+    "loser_reply_edges": 1005327,
+    "terminal_count": 162754,
+    "terminal_range": [
+      13,
+      17
+    ],
+    "rows_sorted_unique": 17,
+    "union_missing": 0,
+    "union_extra": 0
+  },
+  "certificates": [
+    {
+      "bit": 8,
+      "root_hex": "00000000000000803202000000200100",
+      "blob_sha": "84fdf278011b5073fc00b211475a53b421599779",
+      "bytes": 920261,
+      "rows": 25431,
+      "mobility": 48,
+      "visited": 56944,
+      "terminals": 7797,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 48,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 22,
+      "root_hex": "00000000000000803202000000600000",
+      "blob_sha": "518f571d2c0b011205594b6cbdff5060da723e6a",
+      "bytes": 1055178,
+      "rows": 29242,
+      "mobility": 52,
+      "visited": 70384,
+      "terminals": 10339,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 52,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 26,
+      "root_hex": "00000000000000803202000004200000",
+      "blob_sha": "8615ce30d4b9c5c3e7e3b39c31e469e0fd603374",
+      "bytes": 865840,
+      "rows": 23978,
+      "mobility": 51,
+      "visited": 57566,
+      "terminals": 8438,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 28,
+      "root_hex": "00000000000000803202000010200000",
+      "blob_sha": "6cc72e021306d06239c72b3d3b02ca6df9914168",
+      "bytes": 642674,
+      "rows": 17776,
+      "mobility": 42,
+      "visited": 41778,
+      "terminals": 5684,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 42,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 32,
+      "root_hex": "00000000000000803202000100200000",
+      "blob_sha": "fa891c92caaa49930ed2213994569195a8a5f4d9",
+      "bytes": 1494831,
+      "rows": 41391,
+      "mobility": 54,
+      "visited": 86170,
+      "terminals": 13529,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 54,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 40,
+      "root_hex": "00000000000000803202010000200000",
+      "blob_sha": "141d7c39ff5487ee5d0859f9acdf464a27164481",
+      "bytes": 763105,
+      "rows": 21115,
+      "mobility": 44,
+      "visited": 51498,
+      "terminals": 7459,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 44,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 43,
+      "root_hex": "00000000000000803202080000200000",
+      "blob_sha": "0f93edf2918aa6d3668424654f9aac483db5a8fb",
+      "bytes": 1314705,
+      "rows": 36424,
+      "mobility": 51,
+      "visited": 84271,
+      "terminals": 13407,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 44,
+      "root_hex": "00000000000000803202100000200000",
+      "blob_sha": "f562165df4933af3148b4a22b69350c48a884c49",
+      "bytes": 1027711,
+      "rows": 28432,
+      "mobility": 51,
+      "visited": 65295,
+      "terminals": 9377,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 74,
+      "root_hex": "00000000000004803202000000200000",
+      "blob_sha": "6233377ea8f4f72f9a64c13a11b3e946d06c41ae",
+      "bytes": 973088,
+      "rows": 26957,
+      "mobility": 48,
+      "visited": 61628,
+      "terminals": 9233,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 48,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 77,
+      "root_hex": "00000000000020803202000000200000",
+      "blob_sha": "cb38f753c1dd7c568b38ae9e01a9140af1f03409",
+      "bytes": 898301,
+      "rows": 24881,
+      "mobility": 48,
+      "visited": 53480,
+      "terminals": 8170,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 48,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 87,
+      "root_hex": "00000000008000803202000000200000",
+      "blob_sha": "0cb25b04c2677c0f587552498af7f79e254d9873",
+      "bytes": 1109528,
+      "rows": 30672,
+      "mobility": 51,
+      "visited": 67611,
+      "terminals": 10332,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 88,
+      "root_hex": "00000000010000803202000000200000",
+      "blob_sha": "526502480dac19b2a92d569d39291e529f001d7e",
+      "bytes": 1212599,
+      "rows": 33554,
+      "mobility": 51,
+      "visited": 72814,
+      "terminals": 10746,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 95,
+      "root_hex": "00000000800000803202000000200000",
+      "blob_sha": "db6a1dbfdc95a042ca31e99345f91674a650f8bb",
+      "bytes": 1006484,
+      "rows": 27875,
+      "mobility": 47,
+      "visited": 61917,
+      "terminals": 8742,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 47,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 100,
+      "root_hex": "00000010000000803202000000200000",
+      "blob_sha": "c210bcc09a73e35f7556e27451cf38c588add8ab",
+      "bytes": 987068,
+      "rows": 27369,
+      "mobility": 50,
+      "visited": 62444,
+      "terminals": 9465,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 50,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 106,
+      "root_hex": "00000400000000803202000000200000",
+      "blob_sha": "5c48516a0847c8d178728ba0938167d7d8b66d43",
+      "bytes": 1027265,
+      "rows": 28496,
+      "mobility": 51,
+      "visited": 60837,
+      "terminals": 8464,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 108,
+      "root_hex": "00001000000000803202000000200000",
+      "blob_sha": "a8547749e346faf482c66f263e8cec3eefe93d3e",
+      "bytes": 1063138,
+      "rows": 29454,
+      "mobility": 50,
+      "visited": 64201,
+      "terminals": 9541,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 50,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    },
+    {
+      "bit": 114,
+      "root_hex": "00040000000000803202000000200000",
+      "blob_sha": "f721cad6b1d9e15bf9e75e7fdb8954561a379f1c",
+      "bytes": 1276144,
+      "rows": 35351,
+      "mobility": 54,
+      "visited": 78457,
+      "terminals": 12031,
+      "root_stones": 7,
+      "root_safe": true,
+      "rows_sorted_unique": true,
+      "subroots_passed": 54,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ]
+    }
+  ],
+  "frontier_effect": {
+    "status": "not_recomputed",
+    "note": "These 17 certificates prove their individual seven-stone roots. Their complete seven-parent D4 coverage has not been merged into the current class frontier here. Bit 22 is byte-identical to the cost-71b bit-21 receipt and is already included in the published after-cost-71b frontier; do not count it twice. The other 16 warm receipts must be merged by a full manifest-level recomputation before any frontier reduction is claimed."
+  },
+  "execution_note": "The multi-certificate verifier was executed in the tool V8 runtime against the exact GitHub blobs. The standalone Node CLI verifier was not run from a local checkout in this run; the repository's single-certificate BigInt verifier remains available for per-file reproduction."
+}

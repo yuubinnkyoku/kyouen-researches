@@ -1,0 +1,204 @@
+{
+  "schema": "n11-class2-lane-cost72-batches1-9-audit-20261115-v1",
+  "date": "2026-11-15",
+  "audited_main": "63a5b2d3d14cbfd8bc4e08fa19ce4fb4e01470b4",
+  "claim_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-inflight-20261115.json",
+  "target": {
+    "s5_hex": "00000000000000803202000000000000",
+    "s6_child_hex": "00000000000000803202000000000200",
+    "edge_cost": 72,
+    "demand": "c1=0,c2=2,c4=0"
+  },
+  "candidate_claim": {
+    "legal_candidates_total": 72,
+    "source": "published legal_candidates.py Bareiss enumeration; this audit checks raw batch bits against the claim, not the enumerator itself"
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "bits": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        8,
+        11,
+        12
+      ],
+      "nodes": 5609463,
+      "win7": [],
+      "refuted": 8
+    },
+    {
+      "batch": 2,
+      "bits": [
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        22
+      ],
+      "nodes": 7088702,
+      "win7": [],
+      "refuted": 8
+    },
+    {
+      "batch": 3,
+      "bits": [
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "nodes": 4299396,
+      "win7": [],
+      "refuted": 8
+    },
+    {
+      "batch": 4,
+      "bits": [
+        33,
+        34,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "nodes": 10633305,
+      "win7": [],
+      "refuted": 8
+    },
+    {
+      "batch": 5,
+      "bits": [
+        51,
+        52,
+        53,
+        66,
+        67,
+        73,
+        74,
+        75
+      ],
+      "nodes": 16244653,
+      "win7": [
+        {
+          "bit": 52,
+          "nodes": 7498054,
+          "root_hex": "00000000000000803212000000000200"
+        }
+      ],
+      "refuted": 7
+    },
+    {
+      "batch": 6,
+      "bits": [
+        76,
+        77,
+        78,
+        84,
+        85,
+        86,
+        87,
+        88
+      ],
+      "nodes": 5470216,
+      "win7": [],
+      "refuted": 8
+    },
+    {
+      "batch": 7,
+      "bits": [
+        89,
+        90,
+        92,
+        94,
+        95,
+        96,
+        97,
+        98
+      ],
+      "nodes": 7258345,
+      "win7": [],
+      "refuted": 8
+    },
+    {
+      "batch": 8,
+      "bits": [
+        100,
+        101,
+        102,
+        103,
+        105,
+        106,
+        107,
+        110
+      ],
+      "nodes": 3939222,
+      "win7": [],
+      "refuted": 8
+    },
+    {
+      "batch": 9,
+      "bits": [
+        111,
+        112,
+        113,
+        114,
+        116,
+        117,
+        118,
+        120
+      ],
+      "nodes": 9019712,
+      "win7": [
+        {
+          "bit": 111,
+          "nodes": 1872720,
+          "root_hex": "00008000000000803202000000000200"
+        }
+      ],
+      "refuted": 7
+    }
+  ],
+  "totals": {
+    "candidate_records": 72,
+    "unique_bits": 72,
+    "duplicates": [],
+    "missing_from_claim": [],
+    "unexpected_bits": [],
+    "win7_d10": 2,
+    "win7_bits": [
+      52,
+      111
+    ],
+    "refuted_d10": 70,
+    "capped": 0,
+    "candidate_nodes": 69563014,
+    "pilot_controls": 9,
+    "pilot_each": {
+      "loss": false,
+      "nodes": 3402,
+      "capped": false
+    },
+    "all_bits_match_plan": true,
+    "all_pilot_controls_match": true,
+    "all_andclose": true,
+    "all_terminal_ranges": [
+      13,
+      17
+    ]
+  },
+  "interpretation": "In the published runner convention loss=true denotes a WIN7-D10 candidate and loss=false denotes REFUTED-D10. The two candidates are bit52 (7,498,054 nodes) and bit111 (1,872,720 nodes). Neither has a published certificate in the cost72 output set at this snapshot; they do not close S6 or change the frontier.",
+  "status_guard": "All nine raw batches are present and internally match the claim, but the inflight JSON still says status=in-flight. v15 cross-engine checks, certificate extraction, and a completed sweep record are not confirmed here. Do not mark the sweep complete or count any frontier gain."
+}

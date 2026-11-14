@@ -1,0 +1,103 @@
+{
+ "schema": "n11-class2-lane-cost69e-sweep-20261114-v1",
+ "date": "2026-11-14",
+ "session": "long-term lane parallel execution (2026-11-14), continuing after the cost-68c frontier recompute (solved 998)",
+ "s5_parent_hex": "00000000000000803202000000000000",
+ "s6_child_hex": "00000000000000803202000000008000",
+ "s6_s7_edge_cost": 69,
+ "demand_classes_at_claim": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "demand_verification": "VERIFIED before the claim from the after-cost68c frontier (class-frontier-top-candidates-s6-after-cost68c-20261114.csv): the child was one of the two cheapest remaining unswept children of the second class-2 target (12 orbits / 864 after cost-68c); membership in the remaining-children set and non-empty demand re-verified before the claim per the cost-61e correction lesson. NOTE: while this sweep was in flight, the parallel warm-merged recompute (class-frontier-merged-recompute-after65h65i-warm67b68c-20261115.json, commit a7f3fc97) closed this child in the manifest via the cost-65g-warm bit-15 receipt (root 00000000000000803202000000008004, the same 7-stone root this sweep independently re-found as WIN7 bit 2); the sweep therefore completed on an already-receipt-closed child and its certificates are pure new-coverage additions",
+ "candidate_enumeration": "legal_candidates.py independent Bareiss 4x4 enumeration: 69 legal candidates, bit-exact with the published edge cost 69; named cost-69e (cost-69a/b/c/d occupied by earlier lanes on other parents)",
+ "engine": "class4_child1_runner_v16.ts (published repo-verbatim v16 runner), depth 10, andclose=1, cap 1e9, pilot d6 control (loss=false at exactly 3,402 nodes) per batch",
+ "engine_gate": "v16 agreement-gated in cost-56a and used for cost-58b/60b/61d/61e/61f/63e/64b/65g/65h/65i/67b/68c",
+ "win7_d10": 11,
+ "win7_bits": [
+  2,
+  21,
+  76,
+  84,
+  87,
+  89,
+  90,
+  94,
+  99,
+  108,
+  116
+ ],
+ "win7_roots": [
+  "00000000000000803202000000008004",
+  "00000000000000803202000000208000",
+  "00000000000010803202000000008000",
+  "00000000001000803202000000008000",
+  "00000000008000803202000000008000",
+  "00000000020000803202000000008000",
+  "00000000040000803202000000008000",
+  "00000000400000803202000000008000",
+  "00000008000000803202000000008000",
+  "00001000000000803202000000008000",
+  "00100000000000803202000000008000"
+ ],
+ "verdict": "WIN7",
+ "refuted_d10": 58,
+ "capped": 0,
+ "total_nodes": 80172332,
+ "total_nodes_note": "v16 engine node count; all 11 WIN7 candidates have v15 loss=true cross-engine anchors; the heaviest WIN7 (116) and the heaviest overall candidate (44, REFUTED; 33, REFUTED) covered by node-exact determinism rerun",
+ "pilot_d6_controls": "loss=false at exactly 3,402 nodes in all 9 batch invocations (identical control lines)",
+ "terminal_stone_range_all": [
+  [
+   13,
+   17
+  ]
+ ],
+ "heaviest_bits": [
+  {
+   "bit": 116,
+   "nodes": 6683450,
+   "verdict": "WIN7"
+  },
+  {
+   "bit": 44,
+   "nodes": 5674763,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 33,
+   "nodes": 5104350,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 4,
+   "nodes": 3692028,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 22,
+   "nodes": 3141962,
+   "verdict": "REFUTED"
+  },
+  {
+   "bit": 94,
+   "nodes": 2679844,
+   "verdict": "WIN7"
+  }
+ ],
+ "determinism_rerun_node_exact": "bits 116 (WIN7, 6,683,450) and 44 (REFUTED, 5,674,763) re-solved fresh in a separate process after the sweep: node counts identical (class2-lane-cost69e-v16-determinism-rerun-20261114.jsonl)",
+ "cross_engine_check": "v15 runner (class4_child1_runner.ts, pilot 5,949 PASS) on the same child: ALL 11 WIN7 bits (21/99/87/84/2/76/90/108/89/94/116) loss=true at 1,131,809 / 1,746,232 / 4,764,589 / 9,765,935 / 5,510,814 / 5,109,539 / 6,478,505 / 5,747,330 / 5,599,058 / 6,171,899 / 16,776,783 nodes - verdicts identical to v16 (class2-lane-cost69e-v15-crosscheck-20261114.jsonl)",
+ "duplicate_root_check": "all 11 WIN7 root hexes code-searched over yuubinnkyoku/kyouen-researches before pushing certificates: 9 roots 0 hits. Two cross-child duplicates found: (1) the bit-2 root 00000000000000803202000000008004 duplicates the cost-65g bit-15 win7_roots listing AND the parallel lane's cost-65g-warm bit-15 rebuild certificate (published mid-flight, commit a7f3fc97) - this sweep independently re-derived it WIN7-D10 with both engines (an unplanned cross-lane reproduction; no new certificate needed); (2) the bit-21 root 00000000000000803202000000208000 duplicates the cost-60b bit-15 win7_roots listing but had NO prior published certificate (cost-60b certified bits 117/96/94/105/73/23 only), so this certificate is new coverage and also closes the cost-60b bit-15 warm entry",
+ "raw_batches": "class2-lane-cost69e-raw-batch{1..9}-20261114.jsonl (9 batches 8x8+5, pushed as completed, commit cd7d558f)",
+ "certificate": [],
+ "unverified_win7_bits": [
+  2,
+  89,
+  94,
+  108,
+  116
+ ],
+ "unverified_win7_bits_note": "5 WIN7-D10 candidates without extracted certificates yet (warm certificate-rebuild candidates; bit 2 already certified by the parallel cost-65g-warm bit-15 rebuild; bits 84/76/90 rebuilt on 2026-11-15); they change no frontier number",
+ "unknown_status": "11x11 empty board: UNKNOWN. All WIN7 certificates prove only individual 7-stone roots within depth 10.",
+ "status": "completed"
+}

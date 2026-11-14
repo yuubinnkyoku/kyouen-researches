@@ -1,0 +1,211 @@
+{
+ "schema": "n11-class2-lane-cost69e-10cert-python-independent-audit-20261115-v1",
+ "date": "2026-11-15",
+ "audited_scope": "all ten WIN7 certificates of the class2-lane cost-69e sweep (bits 21/99/87/84/76/90/89/94/108/116 of child 00000000000000803202000000008000)",
+ "method": "fresh Python implementation; no repository verifier import, no engine, no verdict cache, no floating point; exact integer Bareiss 4x4 determinant of [x^2+y^2,x,y,1] on arbitrary-precision integers; forbidden-by-triple masks recomputed from scratch; per certificate: file md5/sha256 against the records file (bit-116 restored from the published base64(gzip-9) form and checked against the records-pinned uncompressed hashes), exact header/root lines, root = child | 1<<bit with 7 stones and C(7,4)=35 non-zero determinants (no 4 cocircular), loser mobility re-enumerated and matched to the one-bit strategy rows, full sub-root decomposition with every strategy move legal, all loser replies expanded, terminals loser-stuck at 13..17 stones, no strategy rows at loser or terminal states, and the exact consumed/rows union (0 missing / 0 extra) over all sub-roots",
+ "totals": {
+  "certificates": 10,
+  "strategy_rows": 411114,
+  "visited_states": 893019,
+  "loser_reply_edges": 830898,
+  "subroots_verified": 535,
+  "all_pass": true,
+  "terminal_range_all": [
+   13,
+   17
+  ]
+ },
+ "certificates": [
+  {
+   "bit": 21,
+   "root_hex": "00000000000000803202000000208000",
+   "file": "class2-lane-cost69e-certificates/bit21-root-00000000000000803202000000208000.cert",
+   "storage": "plain",
+   "bytes": 802884,
+   "rows": 22261,
+   "loser_mobility": 45,
+   "subroots_verified": 45,
+   "visited_states": 51285,
+   "loser_reply_edges": 48620,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 6.0
+  },
+  {
+   "bit": 99,
+   "root_hex": "00000008000000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit99-root-00000008000000803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 905701,
+   "rows": 25149,
+   "loser_mobility": 50,
+   "subroots_verified": 50,
+   "visited_states": 55552,
+   "loser_reply_edges": 50571,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 5.3
+  },
+  {
+   "bit": 87,
+   "root_hex": "00000000008000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit87-root-00000000008000803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 1585747,
+   "rows": 43838,
+   "loser_mobility": 59,
+   "subroots_verified": 59,
+   "visited_states": 93566,
+   "loser_reply_edges": 85999,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 6.8
+  },
+  {
+   "bit": 84,
+   "root_hex": "00000000001000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit84-root-00000000001000803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 1068973,
+   "rows": 29614,
+   "loser_mobility": 50,
+   "subroots_verified": 50,
+   "visited_states": 69534,
+   "loser_reply_edges": 65303,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 3.6
+  },
+  {
+   "bit": 76,
+   "root_hex": "00000000000010803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit76-root-00000000000010803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 1645600,
+   "rows": 45665,
+   "loser_mobility": 57,
+   "subroots_verified": 57,
+   "visited_states": 96678,
+   "loser_reply_edges": 89709,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 4.9
+  },
+  {
+   "bit": 90,
+   "root_hex": "00000000040000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit90-root-00000000040000803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 1693810,
+   "rows": 46959,
+   "loser_mobility": 58,
+   "subroots_verified": 58,
+   "visited_states": 98588,
+   "loser_reply_edges": 90977,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 4.8
+  },
+  {
+   "bit": 89,
+   "root_hex": "00000000020000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit89-root-00000000020000803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 1698203,
+   "rows": 47035,
+   "loser_mobility": 54,
+   "subroots_verified": 54,
+   "visited_states": 106325,
+   "loser_reply_edges": 101069,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 4.7
+  },
+  {
+   "bit": 94,
+   "root_hex": "00000000400000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit94-root-00000000400000803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 1532586,
+   "rows": 42538,
+   "loser_mobility": 52,
+   "subroots_verified": 52,
+   "visited_states": 99751,
+   "loser_reply_edges": 94297,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 4.6
+  },
+  {
+   "bit": 108,
+   "root_hex": "00001000000000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit108-root-00001000000000803202000000008000.cert",
+   "storage": "plain",
+   "bytes": 1224805,
+   "rows": 33942,
+   "loser_mobility": 51,
+   "subroots_verified": 51,
+   "visited_states": 75305,
+   "loser_reply_edges": 69644,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 3.3
+  },
+  {
+   "bit": 116,
+   "root_hex": "00100000000000803202000000008000",
+   "file": "class2-lane-cost69e-certificates/bit116-root-00100000000000803202000000008000.cert.gz.b64",
+   "storage": "base64(gzip-9) publication, uncompressed hashes verified",
+   "bytes": 445162,
+   "rows": 74113,
+   "loser_mobility": 59,
+   "subroots_verified": 59,
+   "visited_states": 146435,
+   "loser_reply_edges": 134709,
+   "terminals_range": [
+    13,
+    17
+   ],
+   "union_missing": 0,
+   "union_extra": 0,
+   "seconds": 6.6
+  }
+ ],
+ "interpretation_guard": "the audit reproduces the certificates game-legal content exactly; WIN7 certificates prove a win within depth 10 from the individual 7-stone roots only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

@@ -376,8 +376,62 @@ artifacts:
 - path: research/log/2026-11-14-n11-class2-cost73d-independent-certificate-audit.md
   role: log
   note: 66,680行証明書の別実装検査と7親D4軌道の照合
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/verify_win7_certificate_bigint_independent.mjs
+  role: verifier
+  note: cost69e bit21 WIN7証明書をBigInt余因子展開で独立検査。既存のNumber Bareiss検証器とは別実装
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/cost69e-bit21-bigint-independent-verification-20261115.json
+  role: data
+  note: 22,261行・45/45部分木・欠落/余分0・終局石数13〜17
+- path: research/log/2026-11-15-n11-class2-cost69e-bit21-bigint-independent-verification.md
+  role: log
+  note: bit21 WIN7証明書の独立BigInt検査記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_cost70c_raw_sweep.py
+  role: verifier
+  note: cost70cの70候補をBareiss整数行列式で再列挙し、13 WIN7-D10 rootの合法手数と既存記録を照合
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-raw-sweep-audit-20261115.json
+  role: data
+  note: cost70cの13候補・節点100,935,666・mobility・既存証明書照合・mid-flight閉鎖
+- path: research/log/2026-11-15-n11-class2-cost70c-raw-sweep-audit.md
+  role: log
+  note: cost70c raw sweepの独立監査とcost69e bit76による途中閉鎖
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_cost69e_20261115.py
+  role: source
+  note: S5親keyを文字列で一貫して扱うよう修正。receipt-unclosable S5とbest coverable S5を分離
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json
+  role: data
+  note: 6証明書反映後frontier 1,019/6,828/538,143と別個のreceipt-unclosable S5を記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-cost69e-20261115.csv
+  role: data
+  note: cost69eの7 marginal S6を除いた正しい候補表。best coverable class2は6軌道・費用443
 scope: n11 S2 {59,60} milestone-5のワークリストとS7証明書再利用。局所S6と三石位置のblocker類1・2の条件付き勝敗を含むが、二石rootや空盤の勝敗は含まない。
-evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。
+evidence: 公開manifestの辞書順md5は0e95a438dbcb486368393de9c73fc21e。94オラクルの全744対称像を使い補完候補15072件を独立列挙。類1の新規WIN7戦略証明書13件・LOSS7証明書2件、類2のWIN7証明書54件と3六石位置の全62子・全72子・全64子のLOSS7証明書を独立検査。類1の五石位置の40六石軌道は既存記録と合わせて全て先手WIN。既存の一部証明書本体は別保管であり、公開監査記録に依存する。- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost60b-warm17-bigint-independent-audit-20261115.json
+  role: verifier
+  note: cost-60b warm WIN7証明書17件のBigInt独立検査。843部分木・488,398戦略行・集合差0/0
+- path: research/log/2026-11-15-n11-class2-cost60b-warm17-bigint-audit-and-cost71b-frontier.md
+  role: log
+  note: 17 warm証明書の独立検査、cost-71b frontier 1,026解消、bit22重複と未統合範囲
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost71b-recompute-20261115.json
+  role: data
+  note: cost-70c後からcost-71bの3 receiptを追加したmanifest-level frontier再計算
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost71b-bigint-independent-audit-20261115.json
+  role: verifier
+  note: cost-71b bits 109/21/105の独立BigInt検証結果- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-batches1-5-audit-20261115.json
+  role: data
+  note: cost72 raw batch 1–5の40候補をclaim計画と照合。bit52は未証明のWIN7-D10候補
+- path: research/log/2026-11-15-n11-class2-cost72-partial-batches1-5-audit.md
+  role: log
+  note: cost69e v2とcost70c/71bのfrontier基準差、およびcost72部分監査を記録
+- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69e-recompute-20261115.json
+  role: data
+  note: cost69e 10 receipt・schema v2の独立再計算（merged baseline 1012から1023）
+- path: research/log/2026-11-15-class2-lane-cost69e-win7.md
+  role: log
+  note: cost69e全11 WIN7候補の証明書化と10 receipt後のfrontier記録- path: research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-batches1-9-audit-20261115.json
+  role: data
+  note: cost72全9 batch・72候補のraw記録監査。WIN7-D10候補bit52/111、未証明
+- path: research/log/2026-11-15-n11-class2-cost72-batches1-9-audit.md
+  role: log
+  note: cost72の全72候補記録整合性、2つのWIN7-D10候補、未完了扱いの理由
 ---
 
 ## 主張
@@ -520,3 +574,53 @@ The latest global frontier source is
 These are S6 child wins and bounded seven-stone searches only. The S5 parent
 blockers, S2 {59,60}, two-stone root {49,60}, and standard 11×11 empty
 root remain **UNKNOWN**.
+
+
+## 2026-11-15: cost69e統合後のfrontierとcost70c
+
+cost69eでは69候補中11件がWIN7-D10、58件がREFUTED-D10、打切り0、探索節点80,172,332だった。bit21・99・87・84・76・90の6証明書を統合し、cost69e統合前の1,012解消から1,019解消へ進んだ。残りは6,828軌道、費用538,143。開いた類が必要とする六石軌道は5,098、費用401,866。
+
+bit21の7石証明書は、BigIntの3×3余因子展開による別実装でも22,261行・45/45部分木を検査し、欠落・余分0、終局石数13〜17を確認した。探索器・判定cache・既存検証器を使わない独立検査である。
+
+cost69eの元の六石子局面 00000000000000803202000000008000 は、cost65g warmのbit15証明書で既に閉じていた。cost69eの6証明書が追加したのは、その親以外への再利用を含む7つのS6軌道である。
+
+cost70cは70候補のraw探索が完了し、WIN7-D10 13件、REFUTED-D10 57件、打切り0、100,935,666節点だった。Bareiss整数行列式による独立再列挙で合法候補70個が完全一致し、13個の7石rootはすべて安全、相手の合法初手数は46〜64だった。40個の既存WIN7証明書manifestに一致するrootはない。bit20だけはcost64bのbit54でもWIN7-D10だったが、証明書はまだない。
+
+ただしcost70cの六石子局面 00000000000000803242000000000000 は、探索中にcost69e bit76証明書の親子再利用で既に閉じた。したがってcost70cのraw sweep自体ではfrontierは増えていない。13候補は他の親S6への再利用候補として保持し、v15交差検査と証明書抽出は未完了のまま扱う。
+
+現在の最良のcoverable class2五石親 00000000000000803202000000000000 は残り6軌道・費用443。次の子は費用71、六石局面 00000000000000803202000000400000。最良class4は18軌道・費用1,460。
+
+cost69e後のtop-candidates CSVに行が出なかった原因は、S5 keyが文字列なのに整数で辞書参照していたことだった。再計算スクリプトを文字列keyに統一し、候補表を再生成した。receipt-unclosableの別S5 00000000000000809082000000000000 は10軌道・費用698で、全て既存sweep済みだが未解消であり、best coverable class2とは別に記録した。
+
+これらは局所S6と7石証明書の進展であり、標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60} の勝敗は引き続き UNKNOWN。
+
+
+## 2026-11-15: cost-60b warm 17証明書の独立検査とcost-71b frontier
+
+cost-60bのwarm rebuild証明書17件（bits 8,22,26,28,32,40,43,44,74,77,87,88,95,100,106,108,114）を、BigInt 3×3余因子展開による別実装で全件再検査した。17 rootは同一六石親 `00000000000000803202000000200000` の異なる一石追加である。全17件でroot安全性、相手合法初手、全部分木、戦略手の合法性、行の整列・一意性、消費行集合との完全一致、終局石数13〜17が通った。
+
+合計843部分木、488,398戦略行、1,097,295訪問局面、162,754終局。戦略行の不足・余分は0/0。全詳細は監査JSONとlogを参照。これは個別WIN7証明書の独立再検査であり、17件の親被覆を現行frontierへ再計算したものではない。
+
+cost-71bではbits 109/21/105の3証明書がBigInt独立検査済み。bit21はcost-60b warm bit22と同じroot・同一blobであり、二重計上しない。公開済みcost-71b再計算後はS6解消1,026、残り6,821、残り費用537,604、開いた類の必要S6 5,091・費用401,327。最良coverable class2五石親は残り5軌道・費用372となった。
+
+ただし、cost-60b warm17件のうちbit22以外の16件は、このcost-71b frontierにまだ統合されていない。完全なD4親被覆を再計算し、既存receiptとの重複を除いてから追加の解消数を報告する。標準11×11空盤、二石root `{49,60}`、S2 `{59,60}`、class2・class4はいずれも引き続き **UNKNOWN**。
+
+## 2026-11-15: cost69e v2の追加receiptとcost72の途中監査
+
+cost69eの第二warm rebuild（bits 89/94/108/116）を含む10 receipt版の再計算が公開された。merged baseline 1,012から1,023解消へ進み、残り6,824・費用537,833、開いた類の必要S6 5,094・費用401,556。これはcost69e六receipt版ではなく10 receipt版の状態である。
+
+前節に記したcost70c/71b後の1,026解消は、cost69e六receipt版（1,019）を基準にした別の再計算であり、cost69e第二warm batchの4 receiptを含まない。したがって1,023と1,026は別々の枝の集計で、単純加算・比較をしない。両方を重複排除して一つにまとめたfrontier再計算はまだない。
+
+cost72は五石親 `00000000000000803202000000000000` の六石子 `00000000000000803202000000000200`（費用72、需要c1=0,c2=2,c4=0）を対象とする72候補探索。raw batch 1–5を照合し、40候補すべてがclaimのbit列と一致、重複0、候補節点43,875,519、WIN7-D10候補1件（bit52・7,498,054節点）、REFUTED-D10 39件、打切り0。5つのpilot controlは全て3,402節点で一致した。
+
+bit52はまだ探索候補であり、証明書抽出・独立検証前。batch 6–9の32候補も未回収なのでcost72 sweepはin-flight、frontierへの寄与は0として扱う。次は残りbatchを回収し、bit52の交差検査と証明書化の有無を確認する。
+
+標準11×11空盤、二石root `{49,60}`、S2 `{59,60}`、class2・class4はいずれも **UNKNOWN**。
+
+## 2026-11-15: cost72 raw batch 1–9の全件記録確認
+
+cost72の9 raw batchすべてが公開され、72/72候補のbit列はinflight claimの計画と完全一致。重複・欠落・計画外bitは0、候補節点69,563,014、WIN7-D10候補2件（bit52: 7,498,054節点、bit111: 1,872,720節点）、REFUTED-D10 70件、打切り0。pilot control 9件も全て3,402節点で一致した。
+
+ただしinflight claimはまだ `status=in-flight`。v15交差検査、証明書抽出・独立検証、完了記録は未確認。bit52/111は探索候補であり、S6 closure・frontier改善には算入しない。詳細はcost72全件監査logとJSONを参照。
+
+標準11×11空盤、二石root `{49,60}`、S2 `{59,60}`、class2・class4は **UNKNOWN**。
