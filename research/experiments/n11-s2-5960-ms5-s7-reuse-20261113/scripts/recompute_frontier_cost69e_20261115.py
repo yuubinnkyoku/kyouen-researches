@@ -136,12 +136,15 @@ print('CONTROL determinism rerun (116/44 node-exact) and v15 anchors '
 certs_rec = json.loads((OUT / 'class2-lane-cost69e-win7-certificates-20261114.json').read_text())
 assert certs_rec['child_hex'] == CHILD
 certs = [c for c in certs_rec['certificates'] if c.get('verdict') == 'WIN7']
-assert [c['bit'] for c in certs] == [21, 99, 87]
-ROWS = {21: 22261, 99: 25149, 87: 43838}
-SUBS = {21: 45, 99: 50, 87: 59}
+assert [c['bit'] for c in certs] == [21, 99, 87, 84, 76, 90]
+ROWS = {21: 22261, 99: 25149, 87: 43838, 84: 29614, 76: 45665, 90: 46959}
+SUBS = {21: 45, 99: 50, 87: 59, 84: 50, 76: 57, 90: 58}
 MD5 = {21: 'b229fe7c0c96901fe04ddf05763ffb9e',
        99: '69f5fae13d3c712df7b2883ec79d7c2a',
-       87: '5f5063233ff919b704e01a105e1fb132'}
+       87: '5f5063233ff919b704e01a105e1fb132',
+       84: '41adac3c1d684d4b4dde25c416c2ae20',
+       76: '2358870d7a2625b4d40a0c178f8cba66',
+       90: 'b0e6f779b229ef4993c8715691db7ede'}
 child_v = int(CHILD, 16)
 group_covers = {}
 for c in certs:
@@ -150,11 +153,11 @@ for c in certs:
     assert c['md5'] == MD5[c['bit']]
     assert int(c['root_hex'], 16) == child_v | (1 << c['bit'])
     group_covers[c['bit']] = covers(int(c['root_hex'], 16))
-print('CONTROL cost-69e receipts asserted: bits 21/99/87 (rows/sub-roots/union/md5/roots)')
+print('CONTROL cost-69e receipts asserted: bits 21/99/87/84/76/90 (rows/sub-roots/union/md5/roots)')
 
 s_cur = set(sM)
 cost69e_addition = {}
-for bit in (21, 99, 87):
+for bit in (21, 99, 87, 84, 76, 90):
     cov = group_covers[bit]
     marg = cov - s_cur
     marg_m = marg & manifest
@@ -200,8 +203,9 @@ result = {
               '9 pilot d6 controls; determinism rerun bits 116/44 node-exact; v15 cross-engine anchors '
               'on all 11 WIN7 bits loss=true at 1,131,809/1,746,232/4,764,589/9,765,935/5,510,814/'
               '5,109,539/6,478,505/5,747,330/5,599,058/6,171,899/16,776,783 nodes), and the three fully '
-              'verified receipts (bits 21/99/87; rows 22,261/25,149/43,838; sub-roots 45/50/59 PASS; '
-              'union 0/0 each) are added in the published record order with per-bit marginals re-derived '
+              'verified receipts (bits 21/99/87 + warm rebuilds 84/76/90; rows 22,261/25,149/43,838/29,614/'
+              '45,665/46,959; sub-roots 45/50/59/50/57/58 PASS; union 0/0 each) are added in the '
+              'published record order with per-bit marginals re-derived '
               'from the growing union; the bit-21 WIN7 root 00000000000000803202000000208000 is a '
               'cross-child duplicate of the cost-60b bit-15 win7_roots listing with no prior published '
               'certificate, so that receipt is new coverage and also closes the cost-60b bit-15 warm '
