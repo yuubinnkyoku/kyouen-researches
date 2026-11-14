@@ -773,5 +773,515 @@
  "conclusion": "fbt cache saturation is real on the heaviest d10 sweep candidates (up to 834,047 dropped queries on cost-73c bit32 at ~89% occupancy) and silently skips blocked-mask OR contributions in the canonical engine. Every saturated row's published REFUTED-D10 verdict was re-solved with FBS=1<<20 (fbtDrops=0 required) and survived unchanged (loss=false, no verdict flips, no WIN7 appearing or disappearing). All eight audited WIN7 rows show zero drops, so no published certificate is affected. The certificate layer is independently drop-guarded (the extractor already requires FBS=1<<20 with fbt_drops=0 on every published certificate). No published record, frontier number, or verdict changes as a result of this audit.",
  "saturation_threshold_observation": "Observed saturation onset: the least-inserted saturated row is cost-74 bit70 (90,581 search-time inserts, i.e. 90,616 total occupancy = 69.1% of 131,072 slots); the most-inserted clean row is cost-74 bit20 (87,124 inserts = 66.5% occupancy). All rows below ~87k inserts were clean; all rows above ~90.6k saturated. fbtMaxProbe reached the 47/48 probe ceiling exactly on the saturated rows.",
  "recommendation": "Sweep candidates expected above ~19M nodes (roughly >=90k fbt inserts) should be run with the drop counter; any saturated verdict must be confirmed with the FBS=1<<20 re-solve before being reused as evidence. The canonical runner stays byte-identical for raw comparability. Remaining unaudited >=19M-node rows from earlier sweeps (e.g. cost-65b/66a/66b/68/68b/70b heaviest rows) are cheap follow-ups.",
- "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN. This audit changes no verdicts and proves no game-theoretic claim beyond the audited rows."
+ "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN. This audit changes no verdicts and proves no game-theoretic claim beyond the audited rows.",
+ "followup": {
+  "date": "2026-11-14",
+  "scope": "every remaining >=19M-node row and every remaining WIN7 row across ALL published class2-lane sweeps (not only the S5 target children of the first pass)",
+  "enumeration": "all 19 published class2-lane sweep records (cost-65b/65c/65d/66a/66b/67/68b/69a/69b/69c/69d/70/70b/71/73b/73c/73d/73e/74) were scanned; every raw candidate row with nodes >= 19,000,000 (6 rows) plus every win7_bits row not yet audited (11 rows) were listed, deduplicated (17 rows) and re-solved instrumented",
+  "instrumented_runs": [
+   {
+    "child": "00000000000000809082000010000000",
+    "sweep": "cost65d",
+    "child_label": "class2-lane cost65d",
+    "bit": 112,
+    "loss": false,
+    "nodes": 28802858,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 75475,
+    "fbtMaxProbe": 31,
+    "ms": 60213,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000010000000",
+    "sweep": "cost65d",
+    "child_label": "class2-lane cost65d",
+    "bit": 103,
+    "loss": true,
+    "nodes": 7884063,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 50484,
+    "fbtMaxProbe": 12,
+    "ms": 15233,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000004000",
+    "sweep": "cost73d",
+    "child_label": "class2-lane cost73d",
+    "bit": 100,
+    "loss": false,
+    "nodes": 24766290,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 84561,
+    "fbtMaxProbe": 35,
+    "ms": 53305,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082040000000000",
+    "sweep": "cost69c",
+    "child_label": "class2-lane cost69c",
+    "bit": 110,
+    "loss": false,
+    "nodes": 23731323,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 13151,
+    "fbtInserts": 95280,
+    "fbtMaxProbe": 47,
+    "ms": 50790,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082040000000000",
+    "sweep": "cost69c",
+    "child_label": "class2-lane cost69c",
+    "bit": 68,
+    "loss": false,
+    "nodes": 22139194,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 208479,
+    "fbtInserts": 106376,
+    "fbtMaxProbe": 47,
+    "ms": 48775,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082040000000000",
+    "sweep": "cost69c",
+    "child_label": "class2-lane cost69c",
+    "bit": 103,
+    "loss": true,
+    "nodes": 13442759,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 62063,
+    "fbtMaxProbe": 17,
+    "ms": 26985,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082080000000000",
+    "sweep": "cost70b",
+    "child_label": "class2-lane cost70b",
+    "bit": 12,
+    "loss": false,
+    "nodes": 22344826,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 71585,
+    "fbtMaxProbe": 38,
+    "ms": 47702,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082080000000000",
+    "sweep": "cost70b",
+    "child_label": "class2-lane cost70b",
+    "bit": 37,
+    "loss": true,
+    "nodes": 8135396,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 52276,
+    "fbtMaxProbe": 15,
+    "ms": 16139,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000000001",
+    "sweep": "cost70",
+    "child_label": "class2-lane cost70",
+    "bit": 86,
+    "loss": false,
+    "nodes": 20457811,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 5703,
+    "fbtInserts": 94512,
+    "fbtMaxProbe": 47,
+    "ms": 43876,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000200000",
+    "sweep": "cost65c",
+    "child_label": "class2-lane cost65c",
+    "bit": 9,
+    "loss": true,
+    "nodes": 4355945,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 68898,
+    "fbtMaxProbe": 27,
+    "ms": 8524,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000200000",
+    "sweep": "cost65c",
+    "child_label": "class2-lane cost65c",
+    "bit": 48,
+    "loss": true,
+    "nodes": 6621847,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 48851,
+    "fbtMaxProbe": 12,
+    "ms": 12583,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000200000",
+    "sweep": "cost65c",
+    "child_label": "class2-lane cost65c",
+    "bit": 70,
+    "loss": true,
+    "nodes": 3775671,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 55859,
+    "fbtMaxProbe": 18,
+    "ms": 7165,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000040000000",
+    "sweep": "cost68b",
+    "child_label": "class2-lane cost68b",
+    "bit": 23,
+    "loss": true,
+    "nodes": 5693395,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 47910,
+    "fbtMaxProbe": 8,
+    "ms": 10874,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000040000000",
+    "sweep": "cost68b",
+    "child_label": "class2-lane cost68b",
+    "bit": 118,
+    "loss": true,
+    "nodes": 8061432,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 58736,
+    "fbtMaxProbe": 16,
+    "ms": 16154,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000000400",
+    "sweep": "cost69a",
+    "child_label": "class2-lane cost69a",
+    "bit": 48,
+    "loss": true,
+    "nodes": 9063361,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 61850,
+    "fbtMaxProbe": 19,
+    "ms": 18083,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000000400",
+    "sweep": "cost69a",
+    "child_label": "class2-lane cost69a",
+    "bit": 70,
+    "loss": true,
+    "nodes": 6774907,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 53920,
+    "fbtMaxProbe": 20,
+    "ms": 13623,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000000400",
+    "sweep": "cost69a",
+    "child_label": "class2-lane cost69a",
+    "bit": 103,
+    "loss": true,
+    "nodes": 5390095,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 46682,
+    "fbtMaxProbe": 9,
+    "ms": 10632,
+    "andclose": true
+   }
+  ],
+  "drop_free_reresolve": [
+   {
+    "child": "00000000000000809082040000000000",
+    "sweep": "cost69c",
+    "child_label": "class2-lane cost69c",
+    "bit": 110,
+    "loss": false,
+    "nodes": 23850131,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 95304,
+    "fbtMaxProbe": 6,
+    "ms": 47111,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082040000000000",
+    "sweep": "cost69c",
+    "child_label": "class2-lane cost69c",
+    "bit": 68,
+    "loss": false,
+    "nodes": 21821889,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 106518,
+    "fbtMaxProbe": 6,
+    "ms": 42378,
+    "andclose": true
+   },
+   {
+    "child": "00000000000000809082000000000001",
+    "sweep": "cost70",
+    "child_label": "class2-lane cost70",
+    "bit": 86,
+    "loss": false,
+    "nodes": 20458227,
+    "capped": false,
+    "terminalStoneRange": [
+     13,
+     17
+    ],
+    "fbtDrops": 0,
+    "fbtInserts": 94530,
+    "fbtMaxProbe": 4,
+    "ms": 40746,
+    "andclose": true
+   }
+  ],
+  "followup_saturated_rows": [
+   {
+    "sweep": "cost69c",
+    "child": "00000000000000809082040000000000",
+    "bit": 110,
+    "published_verdict": "REFUTED-D10",
+    "canonical_nodes": 23731323,
+    "fbtDrops": 13151,
+    "fbtInserts": 95280,
+    "fbtMaxProbe": 47,
+    "drop_free_nodes": 23850131,
+    "drop_free_loss": false,
+    "verdict_confirmed": true
+   },
+   {
+    "sweep": "cost69c",
+    "child": "00000000000000809082040000000000",
+    "bit": 68,
+    "published_verdict": "REFUTED-D10",
+    "canonical_nodes": 22139194,
+    "fbtDrops": 208479,
+    "fbtInserts": 106376,
+    "fbtMaxProbe": 47,
+    "drop_free_nodes": 21821889,
+    "drop_free_loss": false,
+    "verdict_confirmed": true
+   },
+   {
+    "sweep": "cost70",
+    "child": "00000000000000809082000000000001",
+    "bit": 86,
+    "published_verdict": "REFUTED-D10",
+    "canonical_nodes": 20457811,
+    "fbtDrops": 5703,
+    "fbtInserts": 94512,
+    "fbtMaxProbe": 47,
+    "drop_free_nodes": 20458227,
+    "drop_free_loss": false,
+    "verdict_confirmed": true
+   }
+  ],
+  "followup_win7_rows_all_zero_drops": [
+   {
+    "sweep": "cost65d",
+    "child": "00000000000000809082000010000000",
+    "bit": 103,
+    "nodes": 7884063,
+    "fbtDrops": 0,
+    "fbtInserts": 50484
+   },
+   {
+    "sweep": "cost69c",
+    "child": "00000000000000809082040000000000",
+    "bit": 103,
+    "nodes": 13442759,
+    "fbtDrops": 0,
+    "fbtInserts": 62063
+   },
+   {
+    "sweep": "cost70b",
+    "child": "00000000000000809082080000000000",
+    "bit": 37,
+    "nodes": 8135396,
+    "fbtDrops": 0,
+    "fbtInserts": 52276
+   },
+   {
+    "sweep": "cost65c",
+    "child": "00000000000000809082000000200000",
+    "bit": 9,
+    "nodes": 4355945,
+    "fbtDrops": 0,
+    "fbtInserts": 68898
+   },
+   {
+    "sweep": "cost65c",
+    "child": "00000000000000809082000000200000",
+    "bit": 48,
+    "nodes": 6621847,
+    "fbtDrops": 0,
+    "fbtInserts": 48851
+   },
+   {
+    "sweep": "cost65c",
+    "child": "00000000000000809082000000200000",
+    "bit": 70,
+    "nodes": 3775671,
+    "fbtDrops": 0,
+    "fbtInserts": 55859
+   },
+   {
+    "sweep": "cost68b",
+    "child": "00000000000000809082000040000000",
+    "bit": 23,
+    "nodes": 5693395,
+    "fbtDrops": 0,
+    "fbtInserts": 47910
+   },
+   {
+    "sweep": "cost68b",
+    "child": "00000000000000809082000040000000",
+    "bit": 118,
+    "nodes": 8061432,
+    "fbtDrops": 0,
+    "fbtInserts": 58736
+   },
+   {
+    "sweep": "cost69a",
+    "child": "00000000000000809082000000000400",
+    "bit": 48,
+    "nodes": 9063361,
+    "fbtDrops": 0,
+    "fbtInserts": 61850
+   },
+   {
+    "sweep": "cost69a",
+    "child": "00000000000000809082000000000400",
+    "bit": 70,
+    "nodes": 6774907,
+    "fbtDrops": 0,
+    "fbtInserts": 53920
+   },
+   {
+    "sweep": "cost69a",
+    "child": "00000000000000809082000000000400",
+    "bit": 103,
+    "nodes": 5390095,
+    "fbtDrops": 0,
+    "fbtInserts": 46682
+   }
+  ],
+  "combined_totals": {
+   "rows_audited_both_phases": 37,
+   "win7_rows_audited_both_phases": 19,
+   "win7_rows_with_nonzero_drops": 0,
+   "saturated_rows_total": 9,
+   "saturated_verdicts_confirmed_drop_free": 9,
+   "verdict_flips": 0
+  },
+  "followup_conclusion": "Across all 19 published class2-lane sweeps, every WIN7 row (19/19, including the parallel-lane cost-73a bit81) shows zero fbt drops, and every >=19M-node REFUTED row has now been audited: 9 saturated rows total (3 new: cost-69c bit110 with 13,151 drops; cost-69c bit68 with 208,479; cost-70 bit86 with 5,703), all 9 confirmed unchanged by FBS=1<<20 drop-free re-solves (loss=false maintained, fbtDrops=0). The 3 new saturated rows sit at 94,547-106,411 total occupancy (72.1%-81.2%), consistent with the ~69% saturation onset of the first pass. No published verdict, frontier number, or certificate changes.",
+  "unknown_status": "11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN."
+ }
 }
