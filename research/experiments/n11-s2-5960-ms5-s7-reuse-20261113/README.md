@@ -71,7 +71,7 @@ Regression command (Node 22):
 node --experimental-strip-types research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/class4_child1_runner_v16.test.ts
 ```
 
-The fixed pilot is `loss=false` at 3,402 nodes. On child `00000000020000003800000280000000`, bit 15 at depth 8 with close-first AND, v15 used 146,514 nodes and v16 used 56,791; both returned `loss=false` and terminal range [13,15]. This is a bounded implementation regression, not a game verdict.
+The fixed pilot is `loss=false` at 3,402 nodes. On child `00000000020000003800000280000000`, bit 15 at depth 8 with close-first AND, v15 used 146,514 nodes and v16 used 56,791; both returned `loss=false` and terminal range [13,15]. This is a bounded implementation regression, not a game verdict. A second case exercises the sign bit in the next word: on child `00000000000000809102000001000000` plus bit 0 at depth 8, v15 reached the 200,000-node cap while v16 completed in 121,837 nodes with `loss=false` and terminal range [13,15].
 
 The in-flight cost-86c and cost-62a claims still use v15. Do not combine their raw batches with v16 results. Other copies of the signed-key pattern (sweep engine, chunk prover, certificate extractors, and FBT-saturation runners) still require separate audit before reuse.
 
