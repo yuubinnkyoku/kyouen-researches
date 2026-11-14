@@ -37,6 +37,10 @@ A second regression exercises the sign bit in word M1 using the claimed class2 c
 
 These are finite depth-8 implementation measurements, not a depth-10 game verdict or a proof of the full search. The V8 tool runtime executed the transformed runner in this turn; the Node 22 CLI test file is committed for direct reproduction, but was not run inside the container.
 
+## Depth-10 cross-version validation on class2 cost-62a
+
+The four existing WIN7-D10 candidates from the class2 cost-62a child were rerun with v16 at depth 10, close-first AND, cap 1e9. All retained `loss=true`, uncapped, terminal range [13,17]. v15/v16 node counts were 11,849,776/3,347,408 (bit 1), 2,557,437/476,373 (bit 11), 7,975,993/1,907,635 (bit 32), and 3,444,804/719,224 (bit 66). Total: 25,828,010 -> 6,450,640 nodes, a 75.02% reduction. This is a cross-version rerun, not an independent certificate check; no certificate body has been produced yet.
+
 ## Do not mix active v15 sweeps
 
 - Class4 cost-86c is still in flight on v15. Its 67/86 published candidates are all REFUTED-D10, uncapped, with 223,650,541 nodes; the 67 bit indices are unique and match the published candidate list with 19 not yet present. All 11 pilot controls are loss=false at 5,949 nodes. These partial raw records must remain v15 data.

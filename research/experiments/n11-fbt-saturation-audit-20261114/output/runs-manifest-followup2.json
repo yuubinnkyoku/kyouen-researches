@@ -1,0 +1,66 @@
+{
+ "schema": "n11-fbt-saturation-audit-20261114-followup2-v1",
+ "date": "2026-11-14",
+ "session": "long-term lane session 11 continuation",
+ "audited_at_commit": "63c0497d1f57739bf3caa0afb64a8aacd5135d78",
+ "source_record": "class2-lane-cost73a-sweep-20261114.json (first published c6d4aa78, re-pushed ff417b0f; audited at 63c0497d1f57739bf3caa0afb64a8aacd5135d78)",
+ "child": "00000000000000809082000000000010",
+ "engine": {
+  "runner": "scripts/runner_instr.ts (canonical FBS=1<<17 + counters, v15-derived)",
+  "pilot_control": {
+   "loss": false,
+   "nodes": 5949
+  }
+ },
+ "rows": [
+  {
+   "bit": 92,
+   "verdict": "REFUTED-D10",
+   "nodes": 20603022,
+   "record_nodes": 20603022,
+   "node_exact": true,
+   "fbtDrops": 1384,
+   "fbtInserts": 87949,
+   "occupancy_total": 87984,
+   "fbtMaxProbe": 43,
+   "saturated": true,
+   "dropfree_reresolve": "pending (interrupted by execution-environment outage)"
+  },
+  {
+   "bit": 23,
+   "verdict": "REFUTED-D10",
+   "nodes": 18497705,
+   "record_nodes": 18497705,
+   "node_exact": true,
+   "fbtDrops": 1761,
+   "fbtInserts": 97110,
+   "occupancy_total": 97145,
+   "fbtMaxProbe": 47,
+   "saturated": true,
+   "dropfree_reresolve": "pending (interrupted by execution-environment outage)"
+  },
+  {
+   "bit": 81,
+   "verdict": "WIN7-D10",
+   "nodes": 5530773,
+   "record_nodes": 5530773,
+   "node_exact": true,
+   "fbtDrops": 0,
+   "fbtInserts": 55367,
+   "occupancy_total": 55402,
+   "fbtMaxProbe": 16,
+   "saturated": false,
+   "note": "third independent node-exact reproduction of the WIN7 row"
+  }
+ ],
+ "onset_bracket": {
+  "clean_max_occupancy": 87159,
+  "saturated_min_occupancy": 87984,
+  "slots": 131072
+ },
+ "corrections": [
+  "fbtMaxProbe is not a saturation indicator: dropped 48-step probe walks never update the counter (bit92 saturates with recorded maxProbe=43)"
+ ],
+ "v15_context": "instrumented/drop-free variants are v15-derived for raw comparability; under the parallel lane v16 memo-key repair the memo actually hits, changing search-time fbt insert patterns — onset figures are v15-specific",
+ "interpretation_guard": "REFUTED-D10 is not a child refutation; this audit changes no verdict. 11x11 empty board, two-stone root {49,60}, S2 {59,60}, class 2, class 4: UNKNOWN."
+}

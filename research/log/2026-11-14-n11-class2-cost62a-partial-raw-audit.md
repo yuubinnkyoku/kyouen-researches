@@ -51,3 +51,17 @@ The earlier best class2 S5 `00000000000000809082000000000000` remains receipt-un
 ## Status
 
 No certificate body has yet been added for these four roots. The cost-62a sweep remains **in flight** at 32/62 candidates. Standard 11x11 empty root, two-stone root `{49,60}`, S2 `{59,60}`, class 2, and class 4 remain **UNKNOWN**.
+
+## v16 cross-version rerun of all four WIN7 candidates
+
+After the v16 memo-key repair, the same four depth-10 candidates were rerun with the corrected runner (same game rules, move ordering, AND order, and 1e9 cap). All four again returned `loss=true`, uncapped, with terminal range [13,17]:
+
+| bit | v15 nodes | v16 nodes |
+|---:|---:|---:|
+| 1 | 11,849,776 | 3,347,408 |
+| 11 | 2,557,437 | 476,373 |
+| 32 | 7,975,993 | 1,907,635 |
+| 66 | 3,444,804 | 719,224 |
+| **total** | **25,828,010** | **6,450,640** |
+
+The v16 reruns use 19,377,370 fewer nodes (**75.02% reduction**, about 4.00x fewer nodes) across these four roots. This is a cross-version rerun of the same search algorithm, not an independent certificate verifier. It confirms the four bounded WIN7-D10 search results under the repaired memo table; certificate extraction and independent verification are still required.

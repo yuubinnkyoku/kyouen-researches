@@ -1,0 +1,40 @@
+{
+ "date": "2026-11-14",
+ "m6x20q8": {
+  "classes": 35,
+  "unsat": 35,
+  "sat": 0,
+  "indet": 0,
+  "totalConflicts": 16338528,
+  "hardest": [
+   {
+    "class": "2",
+    "conflicts": 2763766
+   },
+   {
+    "class": "1,2",
+    "conflicts": 2729150
+   },
+   {
+    "class": "1",
+    "conflicts": 2289935
+   },
+   {
+    "class": "1,3",
+    "conflicts": 1384493
+   },
+   {
+    "class": "2,3",
+    "conflicts": 1185037
+   }
+  ]
+ },
+ "m6x21q7": {
+  "class2": "SAT witness 35 stones rows (6,6,5,6,6,6), conflicts 1,904,706",
+  "class1": "INDET 250s 2,341,807 conflicts",
+  "class0123": "INDET 250s 2,848,875 conflicts"
+ },
+ "controls": "2x8 q=4 SAT / 2x9 q=4 UNSAT / 6x18 q=8 class {1} SAT 511,895 conflicts (bit-exact vs K0818)",
+ "crosschecks": "lex=H UNSAT on {2}=2,331,073 / {1}=2,038,080 / {1,2}=1,606,595 / {1,3}=1,209,815; fresh reruns {2}=2,763,766 and {1}=2,289,935 node-exact",
+ "mirror_check": "non-canonical {1,5} UNSAT 258,595 consistent with canonical {0,4} UNSAT 246,856"
+}
