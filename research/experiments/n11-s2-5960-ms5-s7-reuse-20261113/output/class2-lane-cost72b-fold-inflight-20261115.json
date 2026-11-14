@@ -1,0 +1,20 @@
+{
+ "schema": "n11-class2-lane-cost72b-fold-inflight-20261115-v1",
+ "title": "n11 class2-lane cost-72b receipts fold in flight (claimed by a long-term lane execution)",
+ "date": "2026-11-15",
+ "status": "in-flight",
+ "claimed_by": "long-term class2 lane",
+ "s6_child": "00000000000000809102000002000000",
+ "s6_s7_edge_cost": 72,
+ "demand": {
+  "c1": 0,
+  "c2": 2,
+  "c4": 0
+ },
+ "fold_scope": "fold the 13 published WIN7-D10 receipts (bits 2/11/21/30/31/36/47/66/85/95/97/100/106, all certificate-backed, 19/19 blob-exact on main) of the cost-72b sweep (class2-lane-cost72b-sweep-20261115.json, 72 candidates / 13 WIN7 / 59 REFUTED / 0 capped) on the cost-74d receipts chain head 1179/6668/526075/4938/389798 (class-frontier-cost74d-receipts-recompute-20261115.json, git blob 06724afe0698ce93319d092521c5887da6eec0f0)",
+ "baseline_verification": "the 74d receipts head was reproduced locally end-to-end (runpy chain from the MS5 manifest inputs) with the head JSON and both ranking CSVs byte-identical to main; the 13 local certificate files were re-verified bytes x md5 x sha256 x git blob sha against class2-lane-cost72b-win7-certificates-20261115.json (13/13 OK)",
+ "child_status_at_baseline": "the cost-72b child orbit 00000000000000809102000002000000 is already solved at the 1179 baseline (absorbed cross-orbit by the 74d receipts fold; not in the remaining-children sets of either open parent 00000000000000801202000020000000 or 00000000000000809102000000000000); the fold is a provenance-completion fold with correction note, following the cost-61e precedent",
+ "predicted_marginal": "local computation at the 1179 baseline: +9 marginal-in-manifest orbits from bits 2/30/31/36/47/95/97/100/106 (+1 each); expected new head 1188; zero-mim receipts expected: 11/21/66/85",
+ "chain_head_at_claim": "1179/6668/526075/4938/389798 (class-frontier-cost74d-receipts-recompute-20261115.json)",
+ "unknown_status": "standard 11x11 empty board, two-stone roots {49,60}/{59,60}, S2 {59,60}, class 2, class 4 remain UNKNOWN"
+}
