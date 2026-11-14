@@ -1,0 +1,34 @@
+{
+  "session": "class2-lane cost-73a WIN7 certificate (long-term lane session 11, 2026-11-14)",
+  "child_hex": "00000000000000809082000000000010",
+  "certificates": [
+    {
+      "bit": 81,
+      "root_hex": "00000000000200809082000000000010",
+      "verdict": "WIN7",
+      "rows": 37309,
+      "extraction_nodes": 8777255,
+      "extraction": "blind extractBatch (empty kill table, FBS=1<<20): fbt_drops=0, fatal=null, all 51 per-move extractions ok and uncapped",
+      "rows_sorted_unique": true,
+      "root_check": {
+        "stones": 7,
+        "loser_mobility": 51,
+        "independent_enumeration_legal": 51,
+        "match": true
+      },
+      "sub_roots_verified": 51,
+      "sub_roots_pass": 51,
+      "union_missing": 0,
+      "union_extra": 0,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "md5": "ecf3ab773961f877c3044862ba2ad7b7",
+      "sha256": "9fd0462be8698101d45960d1e41a03d54967ede8e60f3b6550badd7e13727fc1",
+      "file": "class2-lane-cost73a-certificates/bit81-root-00000000000200809082000000000010.cert.part1of2 + .part2of2 (line-boundary split; cat to rejoin, joined md5 ecf3ab773961f877c3044862ba2ad7b7)",
+      "root_not_among_existing": true,
+      "existing_roots_checked": "20 published win7-certificates records on main (class2-lane cost-58..cost-75 bands, class4-lane cost-74b/78/78b/80b) fetched and grepped for the root hex: 0 hits"
+    }
+  ]
+}
