@@ -40,6 +40,26 @@ INDET は honest negative として記録し不在主張とはしない。
   kissat SAT **129,923 conflicts bit-exact**（公開 record と一致・117.6s）。
   両 witness とも js+py 2系統検証 PASS。
 
+## 結果（第1バッチ・2026-11-14T22:30Z 時点）
+
+- **(7,6) 7×28 SAT**（rowY=3 分割・442,479 conflicts・137.0s・cap 250）:
+  **34石単一欠損 witness rows [5,5,5,4,5,5,5]**・js+py 2系統検証 PASS
+  （`output/q6-m28-row-split/`）。**(7,6) witness 帯は m=6..28 に延伸。
+  M_{7,6} ∈ [29, 862]**（上界 K0318 U=862 は不変）。
+- **(7,6) 7×29 空列延伸**: 同一34石配置が7×29盤でも js+py 2系統検証 PASS
+  （`output/freecol-extensions/s7x29q6.witness.json`）。
+  **M_{7,6} ∈ [30, 862]**。m=30 では cell (29,3) が未遮断で失敗。
+- (7,6) 7×30 rowY=3: cap 280s INDET **929,785 conflicts**（honest negative・不在主張ではない）。
+- (7,5) 7×33: rowY=0/1/2/3 全4クラス cap 250s INDET
+  （399,206 / 399,144 / 344,970 / 345,432 conflicts）— クラス間の抵抗がほぼ一様
+  （(5,6) m=22 class-split と同型）。不在主張ではない。次候補は長時間 cap か
+  k×minpos 分解。
+- **空列延伸の負記録（全家族前線）**: 各前線 witness の空列延伸は
+  (7,5) m=32→33（cell (32,0) 未遮断）・(7,6) m=27→28（(27,3)）・(7,7) m=26→27・
+  (7,8) m=24→25・(7,4) m=53 SA base→57（m=56 までは PASS・SA lane と一致）の
+  いずれも1幅も延びない（`output/freecol-extensions/frontier-freecol-probe.json`）。
+  (7,6) m=28 SAT witness のみ3幅…ではなく1幅（m=29 まで）延伸した。
+
 ## スコープ
 
 有限機械検証（sat3 census は sat2 と9対照バイト一致済み、kissat 正確性）まで。
