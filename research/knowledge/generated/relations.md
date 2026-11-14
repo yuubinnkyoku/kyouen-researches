@@ -4886,7 +4886,7 @@
 - → generalizes [K0810](../items/K0810-sat-row-deficient-witnesses.md): SATで解けた m 帯の先の witness を SA で発見し (6,5)/(6,6)/(5,6) 下界を更新
 - → depends_on [K0808](../items/K0808-six-row-deficient-witnesses-q568.md): census・census不使用独立検証器の verbatim 移植
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変
-- ← generalizes [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証
+- ← generalizes [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証。深除去拡張（第5弾）で6×30・6×23にもwitnessを実在させ M_{6,5}=30・M_{6,6}=23 の可能性も反証
 
 ## [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) p=3719・3727・3967・4211・4231・4373は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
 
@@ -4913,9 +4913,9 @@
 - → depends_on [K0097](../items/K0097-integer-residue-parabola-bounds.md): 上界A(p)<=(p+3)/2。本項の証人はこの上界にちょうど到達する
 - → supports [K0101](../items/K0101-prime-parabola-equality-open.md): 3701..3899 には達成側と不達成側が混在することを示す
 
-## [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37
+## [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) 列追加拡張・深除去拡張と外部SATソルバによる下界更新 — M_{6,5}≥31・M_{6,6}≥24・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37
 
-- → generalizes [K0811](../items/K0811-sa-row-deficient-witnesses.md): SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証
+- → generalizes [K0811](../items/K0811-sa-row-deficient-witnesses.md): SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証。深除去拡張（第5弾）で6×30・6×23にもwitnessを実在させ M_{6,5}=30・M_{6,6}=23 の可能性も反証
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): encode()/toDimacs 符号化をverbatim使用しDIMACSをkissat 4.0.4に投入。6×12 q=8 cap=38/37（自作CDCLのtimeout×2帯）がSAT
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2×8 q=4 5石witnessの制御再現
 - → depends_on [K0806](../items/K0806-six-row-q7-stabilization-bounds.md): 上界（K0318代入）は不変

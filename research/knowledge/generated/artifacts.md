@@ -1741,6 +1741,21 @@
 ## [research/experiments/even-sunflower-grundy-20261101/verify.py](../../../research/experiments/even-sunflower-grundy-20261101/verify.py)
 
 - [K0590](../items/K0590-even-sunflower-quota-grundy.md) (verifier): 偶数r=2,4,6,8の139515圧縮局面、54盤7551点別局面を独立照合
+## [research/experiments/extend6-deep-removal-20261114/output/w65_30.json](../../../research/experiments/extend6-deep-removal-20261114/output/w65_30.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×30 q=5 23石witness 2件（行構成 4,4,4,4,3,4・rem=4/add=4・2系統検証PASS）→ M_{6,5} >= 31
+## [research/experiments/extend6-deep-removal-20261114/output/w66_23.json](../../../research/experiments/extend6-deep-removal-20261114/output/w66_23.json)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (data): 6×23 q=6 29石witness 8件（行構成 5,4,5,5,5,5・rem=3/add=3・2系統検証PASS）→ M_{6,6} >= 24
+## [research/experiments/extend6-deep-removal-20261114/report.md](../../../research/experiments/extend6-deep-removal-20261114/report.md)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (proof): 第5弾の手法・部分空間完全性根拠・較正・陰性結果の記録
+## [research/experiments/extend6-deep-removal-20261114/scripts/extend6.js](../../../research/experiments/extend6-deep-removal-20261114/scripts/extend6.js)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): 深除去列拡張の決定的列挙（base witnessのシフト+除去r石+未ブロック空セルへの追加 |kept|+|A|<=w(q-1)-1・全候補verifyConfig・u>24/maxA>6の葉は文書化済み不完備スキップ）
+## [research/experiments/extend6-deep-removal-20261114/scripts/verify_rowcase.py](../../../research/experiments/extend6-deep-removal-20261114/scripts/verify_rowcase.py)
+
+- [K0815](../items/K0815-witness-column-extension-kissat-bounds.md) (source): Python独立検証器ラッパー（verify_py.py と同方式・Fraction厳密演算）
 ## [research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json](../../../research/experiments/fact-discovery/output/fact_10x10_12pt_circles.json)
 
 - [K0062](../items/K0062-twelve-point-circle-radius-families.md) (data): 10×10の中心・半径・点集合
