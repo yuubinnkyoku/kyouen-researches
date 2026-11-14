@@ -1,0 +1,139 @@
+{
+  "schema": "n11-class2-lane-cost72-partial-batches1-5-audit-20261115-v1",
+  "date": "2026-11-15",
+  "audited_main": "4c8c441cc376855ae8663e9876caa16fbea80e43",
+  "claim_path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost72-inflight-20261115.json",
+  "target": {
+    "s5_hex": "00000000000000803202000000000000",
+    "s6_child_hex": "00000000000000803202000000000200",
+    "edge_cost": 72,
+    "demand": "c1=0,c2=2,c4=0"
+  },
+  "candidate_enumeration": {
+    "legal_candidates_total": 72,
+    "source": "published legal_candidates.py Bareiss enumeration claim; bit-exact with edge cost",
+    "batches_planned": 9
+  },
+  "audited_batches": [
+    {
+      "batch": 1,
+      "bits": [
+        0,
+        1,
+        3,
+        4,
+        7,
+        8,
+        11,
+        12
+      ],
+      "nodes": 5609463,
+      "win7_bits": [],
+      "refuted": 8,
+      "capped": 0
+    },
+    {
+      "batch": 2,
+      "bits": [
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        22
+      ],
+      "nodes": 7088702,
+      "win7_bits": [],
+      "refuted": 8,
+      "capped": 0
+    },
+    {
+      "batch": 3,
+      "bits": [
+        23,
+        24,
+        26,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "nodes": 4299396,
+      "win7_bits": [],
+      "refuted": 8,
+      "capped": 0
+    },
+    {
+      "batch": 4,
+      "bits": [
+        33,
+        34,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "nodes": 10633305,
+      "win7_bits": [],
+      "refuted": 8,
+      "capped": 0
+    },
+    {
+      "batch": 5,
+      "bits": [
+        51,
+        52,
+        53,
+        66,
+        67,
+        73,
+        74,
+        75
+      ],
+      "nodes": 16244653,
+      "win7_bits": [
+        {
+          "bit": 52,
+          "nodes": 7498054
+        }
+      ],
+      "refuted": 7,
+      "capped": 0
+    }
+  ],
+  "partial_totals": {
+    "candidate_records": 40,
+    "unique_bits": 40,
+    "duplicates": [],
+    "planned_bits_covered": 40,
+    "win7_d10": 1,
+    "win7_bits": [
+      {
+        "bit": 52,
+        "nodes": 7498054
+      }
+    ],
+    "refuted_d10": 39,
+    "capped": 0,
+    "candidate_nodes": 43875519,
+    "pilot_controls": 5,
+    "pilot_control_each": {
+      "loss": false,
+      "nodes": 3402,
+      "capped": false
+    },
+    "all_batch_bits_match_claim": true,
+    "all_candidates_andclose": true,
+    "all_terminal_ranges": [
+      13,
+      17
+    ]
+  },
+  "interpretation": "In this runner's established convention, loss=true is a WIN7-D10 candidate and loss=false is REFUTED-D10. Bit52 is only a depth-10 WIN7 candidate at this stage; no certificate has been extracted or independently verified, so it does not close an S6 manifest orbit.",
+  "scope": "Raw-record provenance/integrity audit only. It does not independently re-enumerate legal moves or verify search verdicts. Batches 6-9 remain pending; the 72-candidate sweep is still in-flight and has no frontier effect yet."
+}
