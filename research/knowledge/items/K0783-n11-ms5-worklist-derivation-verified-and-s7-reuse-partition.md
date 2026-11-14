@@ -805,3 +805,16 @@ unified chain headは **解消S6 1,154・残り6,693・費用527,949・open需�
 成果物: [unified merge再計算JSON](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-unified-merge-recompute-20261115.json)、[ranking CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-s5-ranking-after-unified-merge-20261115.csv)、[top-candidates CSV](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-top-candidates-s6-after-unified-merge-20261115.csv)、[再計算スクリプト](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/recompute_frontier_unified_merge_20261115.py)、[log](../../log/2026-11-15-n11-class2-unified-merge-50-receipts.md)。
 
 解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。WIN7証明書は個別7石rootの深さ10以内のWINのみを証明する。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。
+
+
+## 2026-11-15: unified mergeの二重独立実行・同一endpoint確認とcollision記録、cost-70c warm6独立検証、cost-69f raw再集計
+
+**同時実行の記録**: 和解監査のfold仕様（訂正版）を2つの並走レーンがほぼ同時に独立実行した — 7aaa7d83（20:47:56Z、log [2026-11-15-n11-class2-unified-merge-50-receipts.md](../../log/2026-11-15-n11-class2-unified-merge-50-receipts.md)）と625b0e0c（20:51:40Z、log [2026-11-15-n11-class2-unified-merge-recompute-1154.md](../../log/2026-11-15-n11-class2-unified-merge-recompute-1154.md)）。両実装は同一の公開順fold（13 68d/hygiene → 31 multiband2 → 6 cost-70c、貪欲順 105/92/40/24/11/8）、同一のset-equality制御、同一endpoint **1,154/6,693/527,949/4,963/391,672**（残りS5軌道175）に到達し、いずれも2回実行byte-identical。2実装の一致はfold算術に対する正の交叉検証である。
+
+**collisionの簿記**: 625b0e0cは同一パスの4ファイル（スクリプト・frontier JSON・ranking CSV・top-candidates CSV）を上書きした（push前のcollision確認listが7aaa7d83より古かった）。現行mainのライブファイルは625b0e0c版で、7aaa7d83版に加えて (a) 公開merged 1,148 head（1148/6699/528423/4969/392146）のbyte-identical再現（再生成JSONのmd5をmain値と照合）と `s_1148 == s_1117 | s_1140` のunion恒等式、(b) 31 multiband2 receiptを1,117上にfoldして1,148状態を独立再導出し集合一致をassert、(c) 6 cost-70c warm証明書の独立BigInt検証記録 [class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json](../../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost70c-warm6-bigint-independent-verification-20261115.json)（rows 33,992〜47,165、全sub-root PASS、union 0/0、終局13..17、md5/sha256/git blob sha込み。先行manifest証明書94/20/23はmarginal-0の正の重複照合）を含む。7aaa7d83側の成果物記載はlog・K0783前節に残る。**教訓: push直前に目標パスのlistを取り直すこと（分単位で並走が動く）**。
+
+**cost-69f raw sweep独立再集計**: 並走公開のraw batch 1–9を独立再集計しsweep-audit記録と完全一致 — 69候補、9 pilot（3,402 nodes）、WIN7-D10 9件（bits 2/20/44/68/69/94/109/118/119）、REFUTED 60、capped 0、候補節点112,752,229。child `00000000000000809102000000000008`（cost 69）は第三class-2ターゲットS5 `00000000000000809102000000000000` の最安の子（もう一方のcost-69子 `00000000000000809102000000002000` が現時点の最安未sweep子）。69f証明書は公開が始まったばかり（本セッション終了時点でbit20の1件/9件）で、全件公開後の次のunified mergeでfoldする。
+
+**batch-2 lane-takeover crosscheck log**を出版（[2026-11-15-n11-class2-warm-multiband2-lane-takeover-crosscheck.md](../../log/2026-11-15-n11-class2-warm-multiband2-lane-takeover-crosscheck.md)）: 31証明書出版（自レーン18/並走13）、54/54 remote byte-exact、WIN/LOSS衝突0、chain break（cost65e in-place拡張、bit-107のみfold・bit-7既知重複）の独立発見・修理、frontier 1,109→1,140。
+
+解消計数はmanifest被覆の前進であり、盤全体の勝敗ではない。標準11×11空盤、二石root `{49,60}`・`{59,60}`、S2 `{59,60}`、class2・class4は引き続き **UNKNOWN**。

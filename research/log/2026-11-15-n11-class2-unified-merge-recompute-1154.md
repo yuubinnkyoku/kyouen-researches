@@ -96,6 +96,20 @@ top-candidates表で会員性を再導入済み）。証明書抽出・foldは69
 - cost-65h/67b/68c warm候補とin-flightのcost-65j sweepは並走レーンの
   バンド（marginal一覧は class2-lane-warm-candidate-ranking2 JSON）。
 
+## 同時実行（collision記録）
+
+本セッションのpush（625b0e0c、20:51:40Z）の約4分前に、並走レーンが同一の
+fold仕様を独立実行して同一パスへpush済みだった
+（7aaa7d83、20:47:56Z、log
+[2026-11-15-n11-class2-unified-merge-50-receipts.md](2026-11-15-n11-class2-unified-merge-50-receipts.md)）。
+push前のcollision確認listが7aaa7d83より古かったため、本pushは同一パスの
+4ファイル（スクリプト・frontier JSON・CSV 2件）を上書きした。両実装は
+同一fold順・同一制御・同一endpoint **1,154/6,693/527,949/4,963/391,672**
+に到達しており、2実装一致はfold算術の正の交叉検証である。現行mainの
+ライブファイルは本push版（merged 1,148 head byte-identical再現制御と
+cost-70c warm6独立検証JSONを追加で含む）。詳細と教訓はK0783の
+2026-11-15 collision記録節に記載。
+
 ## 勝敗に関する明記
 
 **標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 2、class 4
