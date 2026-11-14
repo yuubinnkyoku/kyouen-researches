@@ -1,0 +1,35 @@
+{
+ "schema": "n11-class2-lane-cost69c-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child_hex": "00000000000000809082040000000000",
+ "s5_parent_hex": "00000000000000809082000000000000",
+ "s6_s7_edge_cost": 69,
+ "certificates": [
+  {
+   "bit": 103,
+   "root": "00000080000000809082040000000000",
+   "verdict": "WIN7",
+   "depth": 10,
+   "rows": 52338,
+   "extraction_nodes": 20357850,
+   "fbt_drops": 0,
+   "fatal": null,
+   "subroots": 53,
+   "subroots_pass": 53,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_stone_range": [
+    13,
+    17
+   ],
+   "loser_mobility": 53,
+   "file": "cert-bit103-root-00000080000000809082040000000000.txt (xz+base64, 3 parts)",
+   "md5": "4bb1299324fb69634a848cebc109961c",
+   "sha256": "641a6f6d48e8dfd00821ad51112e8eef1e50fbbec31d4192cf5d773f54adf2ae",
+   "transport": "research/experiments/n11/output/class2-lane-cost69c-certificates/ (parts 1-3 of 3, b64 md5 fdf83e5a3434ee5cc1ee198dcf871db2, remote decode verified byte-identical at commit fb71dbff)",
+   "full_record": "research/experiments/n11/output/class2-lane-cost69c-certificates/class2-lane-cost69c-win7-certificates-20261114.json"
+  }
+ ],
+ "sweep_record": "class2-lane-cost69c-sweep-20261114.json (69 candidates: 1 WIN7-D10 bit103 + 68 REFUTED-D10, 0 capped, 440,238,688 nodes)",
+ "root_is_new_in_repo": "yes (code search total_count=0 before push)"
+}
