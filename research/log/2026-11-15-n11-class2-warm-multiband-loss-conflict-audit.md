@@ -32,3 +32,8 @@ S6 frontierの計数は変更しない。manifest被覆の増加を勝敗確定�
 実行: `node scripts/audit_warm_multiband_loss_conflicts_20261115.mjs`（repo rootからの通常Node環境）。
 
 **標準11×11空盤、二石root {49,60}/{59,60}、S2 {59,60}、class 2、class 4はすべて UNKNOWN。**
+
+
+## 追補: 知識項目のメタデータ修復
+
+K0783のfront matterで、過去の追記により `evidence` の後ろへ置かれていた7件のartifact項目を `artifacts` 配列へ戻し、`scope`・`evidence` の前に整理した。今回追加した3 artifactも同じ配列内に置いた。これは証明内容やfrontier数を変更するものではなく、知識索引の構造を正す修復である。知識整合性検査はGitHub Actions待ちで、合格は未確認。
