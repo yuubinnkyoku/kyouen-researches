@@ -38,7 +38,7 @@ jobs:
         run: python research/experiments/unbounded-spider-gaussian-20261102/verify.py
       - name: Audit one-macroscopic-arm Gaussian coalescence
         run: python research/experiments/macroscopic-spider-arm-20261102/verify.py
-      - name: Audit unrestricted-arm spider Gaussian sufficiency
+      - name: Audit unrestricted-arm Gaussian sufficiency
         run: python research/experiments/spider-uniform-clt-20261102/verify.py
       - name: Audit sharp unrestricted mixed spider Gaussian criterion
         run: python research/experiments/arbitrary-spider-sharp-clt-20261102/verify.py
@@ -76,7 +76,7 @@ jobs:
         run: python research/experiments/graph-star-leaf-core-spectrum-20261103/verify.py
       - name: Audit improved fixed-defect connected-kernel terminal counting
         run: python research/experiments/graph-star-connected-kernel-20261103/verify.py
-      - name: Audit FPT fixed-defect graph-star terminal coefficient
+      - name: Audit FPT fixed-defect terminal coefficient
         run: python research/experiments/graph-star-fixed-defect-fpt-20261103/verify.py
       - name: Audit K0655 first positive terminal degree theorem
         run: python research/experiments/graph-star-second-terminal-degree-20261103/verify.py
@@ -118,163 +118,96 @@ jobs:
 # Refresh trigger for K0525 terminal-certificate knowledge integration (2026-10-23).
 # Refresh trigger for K0526 cube-coplanar-q4 finite strong solution (2026-10-24).
 # Refresh after K0526 result-mask correction and K0504 cross-reference (2026-10-24).
-# Refresh trigger for K0530 two-layer coplanar capacity and 2x3x3 strong solution (2026-10-24).
+# Refresh trigger for K0530 two-layer coplanar prism and 2x3x3 strong solution (2026-10-24).
 # Retry-on-concurrent-push fix for K0530 generated-view refresh (2026-10-24).
-
-# Refresh trigger for K0540 all-opening coplanar prism classification after ID collision (2026-10-24).
-
+# Refresh trigger for K0540 all-opening coplanar prism strong solution after ID collision (2026-10-24).
 # Refresh trigger for K0544 hyperplane minimal terminal theorem (2026-10-24).
 # Refresh trigger for K0531 n11 four-s7-WIN certificate coverage union (2026-10-24).
 # Refresh trigger for K0545 four-dimensional binary hyperplane strong solution (2026-10-24).
 # Refresh trigger for K0552 d+3 binary hypercube witnesses (2026-10-24).
-
 # Refresh trigger for K0553 d25-d30 Gale-minor certificates (2026-10-25).
 # Refresh trigger for K0554 second-largest hyperplane sections (2026-10-25).
 # Refresh trigger for K0555 five-eighths hyperplane sections (2026-10-25).
-# Refresh trigger for K0556 complete superquarter hyperplane spectrum (2026-10-25).
+# Refresh trigger for K0556 complete superquarter hyperplane sections (2026-10-25).
 # Refresh trigger for K0557 exact-quarter vertex-section classification (2026-10-25).
-
-# Refresh trigger for K0559 sparse hyperplane vertex-section formulas (2026-10-25).
-
 # Refresh trigger for K0559 four-vertex section formula and verifier (2026-10-25).
-
-# Refresh trigger for K0560 n11 S9 terminal-neighbor WIN (2026-10-25).
+# Refresh trigger for K0560 N11 S9 terminal-neighbor WIN (2026-10-25).
 # Refresh trigger for K0561 sparse q-point pattern-diversity theorem and five-point counts (2026-10-25).
-
 # Refresh trigger for K0564 six N11 S9 terminal-neighbor certificates (2026-10-25).
 # Refresh trigger for K0565 six-point high-pattern coefficients (2026-10-25).
-
 # Refresh trigger for K0576 co-singleton forbidden-family strong theorem (2026-10-31).
-
 # Refresh trigger for K0577 planar q+1 rigidity (2026-10-31).
 # Refresh trigger for K0578 sharp short-board one-curve theorem (2026-10-31).
-
 # Refresh trigger for K0579 two-forbidden misere swap and K0580 critical short boards (2026-10-31).
-
 # Refresh trigger for K0581 N=2q-1 short-board strong solution (2026-10-31).
-
 # Refresh trigger for K0583 constant-state N=2q two-carrier theorem (2026-10-31).
-
 # Refresh trigger for K0587 two-carrier terminal spectrum and history counts (2026-10-31).
-
 # Refresh trigger for K0588 two-quota contiguous terminal spectrum (2026-10-31).
-
 # Refresh trigger for K0589 sunflower quota terminal gaps and planar witness (2026-10-31).
 # Refresh trigger for K0590 even-sunflower normal/misere Grundy theorem (2026-11-01).
 # Refresh trigger for K0593 short-petal parity/modulus theorem (2026-11-01).
 # Refresh trigger for K0595 four-edge terminal spectra and sharp planar q-point witnesses (2026-11-01).
 # Refresh trigger for K0596 maximum terminal gaps for arbitrary r (2026-11-01).
-
 # Refresh trigger for K0597 five-edge terminal spectrum (2026-11-01).
 # Refresh trigger for K0600 grid-circle safe-layer and terminal-gap theorem (2026-11-01).
-
 # Refresh trigger for K0601 graph-star circle universality (2026-11-01).
-
 # Refresh trigger for K0602 q-point graph-star circle theorem (2026-11-01).
 # Refresh trigger for K0603 sparse graph-star cycles and bounded-degree theorem (2026-11-01).
 # Refresh trigger for K0605 domination bipartition theorem (2026-11-01).
-
 # Refresh trigger for K0606 clique-component concentration theorem (2026-11-01).
 # Refresh trigger for K0607 graph-star critical Poisson terminal law (2026-11-01).
-
 # Refresh trigger for K0608 cycle graph-star terminal Gaussian theorem (2026-11-01).
-
 # Refresh trigger for K0609 path graph-star terminal Gaussian theorem (2026-11-01).
 # Refresh trigger for K0610 clique-bouquet terminal Gaussian theorem (2026-11-01).
-
 # Refresh trigger for K0611 forest DP and star terminal spectrum (2026-11-01).
-
 # Refresh trigger for K0612 subdivided-star q4/q5 terminal distribution phase transition (2026-11-01).
-
 # Refresh trigger for K0613 length-three spider all-q Gaussian theorem (2026-11-02).
-
 # Refresh trigger for K0614 all fixed-arm-length spider Gaussian classification (2026-11-02).
-
 # Refresh trigger for K0615 sparse length-three mixed spider Gaussian threshold (2026-11-02).
-
 # Refresh trigger for K0616 bounded mixed-spider Gaussian criterion (2026-11-02).
-
 # Refresh trigger for K0617 unbounded-arm q4 spider Gaussian criterion (2026-11-02).
-
 # Refresh trigger for K0618 macroscopic-arm Gaussian coalescence (2026-11-02).
-
 # Refresh trigger for K0619 uniform Gaussian sufficiency without arm-length bound (2026-11-02).
-
 # Refresh trigger for K0620 sharp arbitrary mixed-arm Gaussian iff criterion (2026-11-02).
-
 # Refresh trigger for K0621 pseudoforest terminal polynomial theorem (2026-11-02).
-
 # Refresh trigger for K0622 generated views and N11 shared-S7 WIN6 evidence (2026-11-02).
-
 # Refresh trigger for K0623 treewidth terminal polynomial theorem (2026-11-02).
-
 # Refresh trigger for K0624 shared terminal WIN7 seven WIN6 (2026-11-02).
-
 # Refresh trigger for K0625 complete multipartite terminal polynomial (2026-11-02).
-
 # Refresh trigger for K0629 bounded edge edits of complete multipartite graphs (2026-11-02).
-
 # Refresh trigger for K0630 second terminal strategy backward closure (2026-11-02).
-
 # Refresh trigger for K0631 cograph cotree terminal polynomial (2026-11-02).
-
 # Refresh trigger for K0632 bounded-arity graph substitution theorem (2026-11-02).
-
 # Refresh trigger for K0631/K0632 all-q weighted terminal total counts (2026-11-02).
-
 # Refresh trigger for K0634 N11 central49 1985 exact three-swap conditional cover (2026-11-02).
-
 # Refresh trigger for K0631/K0632 amortized LCA counting bounds (2026-11-02).
-
-# Refresh trigger for K0635 graph-star q4 terminal counting complexity (2026-11-02).
-
+# Refresh trigger for K0635 graph-star q4 terminal counting #P-hardness (2026-11-02).
 # Refresh trigger for K0636 polynomial-bit integer graph-star realization (2026-11-02).
-
 # Refresh trigger for K0636 final q4-q7 audit and knowledge integration (2026-11-02).
-
 # Refresh trigger for K0637 N11 five independently terminal-certified LOSS7 (2026-11-02).
-
 # Refresh trigger for K0639 fixed-q>=5 graph-star #P-completeness (2026-11-02).
-
 # Refresh trigger for K0640/K0641 N11 focus WIN7 parent lift and 2301 conditional cover (2026-11-02).
-
 # Refresh trigger for K0642 N11 terminal-backed LOSS7 reuse in current 2301 frontier (2026-11-02).
-
 # Refresh trigger for K0643 q-invariant terminal spectrum and parity (2026-11-02).
-
 # Refresh trigger for K0644 N11 five LOSS7 eight-parent closure (2026-11-02).
-
 # Refresh trigger for K0645 graph-star vertex-cover upper terminal gap (2026-11-03).
 # Refresh trigger for K0646 N11 central49 2154 conditional two-swap local optimum (2026-11-03).
-
 # Refresh trigger for K0647 forest terminal spectra (2026-11-03).
-
 # Refresh trigger for K0648 graph-star leaf-core terminal spectrum (2026-11-03).
-
 # Refresh trigger for K0648 connected-kernel fixed-defect exponent improvement (2026-11-03).
-
 # Refresh trigger for K0651/K0652 N11 central49 2094 exact local optimum and 2093 conditional improvement (2026-11-03).
-
 # Refresh trigger for K0652 exact 2094 three-swap neighborhood and 2093 focus CI verification (2026-11-03).
-
 # Refresh trigger for K0648 FPT fixed-defect terminal coefficient (2026-11-03).
 # Refresh trigger: 2026-11-03 K0653 2091-class conditional cover
-
-# Refresh generated knowledge views for K0654 (2090-class conditional n11 cover; 2026-11-03).
-
+# Refresh generated views for K0654 (2090-class conditional n11 cover; 2026-11-03).
 # Refresh trigger for K0648 bit-complexity FPT and integer-only verification (2026-11-03).
-
 # Refresh trigger for K0655 minimum nonleaf degree and second terminal length (2026-11-03).
 # Refresh trigger for K0654 terminal-preserving 2090 two-swap exact neighborhood audit (2026-11-03).
 # Refresh trigger for K0654 exact 2090 three-swap terminal-identity audit (2026-11-03).
 # Refresh trigger for K0654 relaxed 2090 three-swap optimum (2026-11-03).
-
 # 2026-11-03: refresh K0658/K0659 after certified WIN6 exclusion repair.
-
 # Refresh trigger for K0660 terminal WIN7 six roots, 37 WIN6 parents, and K0659 retirement (2026-11-03).
-
-# Refresh trigger for K0663 n11 terminal-certified 274 LOSS7 parent closure (2026-11-03).
-
+# Refresh trigger for K0663 N11 terminal-certified 274 LOSS7 parent closure (2026-11-03).
 # Refresh trigger for K0664 path terminal real-rootedness (2026-11-03).
-
 # Refresh generated views for K0817 circle-strip subadditivity and K0813 P(17)/P(18) correction (2026-11-14).
+# Refresh generated views for K0817 exact P(83)=34 (2026-11-14).
