@@ -4940,7 +4940,7 @@
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
 - ← generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): same class-split methodology as the 5x20 q=7 nonexistence, applied at w=6 without the runner system: pure per-class UNSAT sweep with lex cross-checks and small-board ground-truth validation
 
-## [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) 円の連続行窓点数 P(w) の劣加法性・漸近密度上界・P(83)=34
+## [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) 円の連続行窓点数 P(w) の劣加法性・鋭い線形誤差上界・P(83)=34
 
 - → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): P(82)=32 の全称値を漸近上界と P(83) 上界に使用
 - → depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(w) の円格子点数定義と各水平行2点上界の枠組み
