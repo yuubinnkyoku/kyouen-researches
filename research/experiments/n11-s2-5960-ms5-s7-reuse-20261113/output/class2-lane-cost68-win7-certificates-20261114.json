@@ -1,0 +1,378 @@
+{
+ "schema": "n11-class2-lane-cost68-win7-certificates-20261114-v1",
+ "date": "2026-11-14",
+ "s6_child": "00000000000000801a02000080000000",
+ "child_cost": 68,
+ "engine": "blind kill-table-free extraction (repo class4_child1_cert_extractor.ts, pref=null) + independent Bareiss-det4 verification (verify_bit7_win7_cert.ts, engine-free)",
+ "certificates": [
+  {
+   "bit": 0,
+   "root": "00000000000000801a02000080000001",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 34288,
+    "bytes": 1241137,
+    "md5": "7408b056e75636fbb047bb94a2fe95a1",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000080000001.cert"
+   },
+   "extraction_nodes": 5685111,
+   "verification": {
+    "subroot_count": 55,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=55",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 4,
+   "root": "00000000000000801a02000080000010",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 36598,
+    "bytes": 1325257,
+    "md5": "a84e7da41a9d08949ee1807861f7699c",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000080000010.cert"
+   },
+   "extraction_nodes": 9370418,
+   "verification": {
+    "subroot_count": 53,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=53",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 7,
+   "root": "00000000000000801a02000080000080",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 32421,
+    "bytes": 1172173,
+    "md5": "92cc8153e00104e794282ef99fa83fc5",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000080000080.cert"
+   },
+   "extraction_nodes": 6894078,
+   "verification": {
+    "subroot_count": 51,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=51",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 8,
+   "root": "00000000000000801a02000080000100",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 33116,
+    "bytes": 1197000,
+    "md5": "280f1b48de8862f9dfad8eea2ad08a33",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000080000100.cert"
+   },
+   "extraction_nodes": 8598216,
+   "verification": {
+    "subroot_count": 55,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=55",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 9,
+   "root": "00000000000000801a02000080000200",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 36728,
+    "bytes": 1328484,
+    "md5": "e4db81dad3c4f4ddbc4b591683a4d050",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000080000200.cert"
+   },
+   "extraction_nodes": 7893906,
+   "verification": {
+    "subroot_count": 53,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=53",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 12,
+   "root": "00000000000000801a02000080001000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 42152,
+    "bytes": 1522436,
+    "md5": "84790263f427143fa47645c4e4560ccb",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000080001000.cert"
+   },
+   "extraction_nodes": 11181147,
+   "verification": {
+    "subroot_count": 58,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=58",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 20,
+   "root": "00000000000000801a02000080100000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 40037,
+    "bytes": 1445428,
+    "md5": "e4302c85f3854fb483bc1134aebdd3f2",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000080100000.cert"
+   },
+   "extraction_nodes": 14459030,
+   "verification": {
+    "subroot_count": 52,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=52",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 24,
+   "root": "00000000000000801a02000081000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 20946,
+    "bytes": 758495,
+    "md5": "8deeb7aa605ed6e13912816c284fa158",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02000081000000.cert"
+   },
+   "extraction_nodes": 3640245,
+   "verification": {
+    "subroot_count": 48,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=48",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 40,
+   "root": "00000000000000801a02010080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 38827,
+    "bytes": 1401132,
+    "md5": "b05cd5680d52df82d1fbfdfd88b1af70",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02010080000000.cert"
+   },
+   "extraction_nodes": 15019522,
+   "verification": {
+    "subroot_count": 50,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=50",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 42,
+   "root": "00000000000000801a02040080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 46776,
+    "bytes": 1688953,
+    "md5": "58d0ecf265ea74d38912122b430b2140",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a02040080000000.cert"
+   },
+   "extraction_nodes": 16639402,
+   "verification": {
+    "subroot_count": 56,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=56",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 50,
+   "root": "00000000000000801a06000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 40852,
+    "bytes": 1475387,
+    "md5": "89e8158525e7d21eb3cab09609fec6f7",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a06000080000000.cert"
+   },
+   "extraction_nodes": 10888958,
+   "verification": {
+    "subroot_count": 54,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=54",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 52,
+   "root": "00000000000000801a12000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 43740,
+    "bytes": 1581322,
+    "md5": "1a3868b887067e067ce920dff2434a73",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000000801a12000080000000.cert"
+   },
+   "extraction_nodes": 16157069,
+   "verification": {
+    "subroot_count": 57,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=57",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 78,
+   "root": "00000000000040801a02000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 56833,
+    "bytes": 2051530,
+    "md5": "a92c492bd3cfab6de6ae39b2e5f9e616",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000000040801a02000080000000.cert"
+   },
+   "extraction_nodes": 17002460,
+   "verification": {
+    "subroot_count": 59,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=59",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 87,
+   "root": "00000000008000801a02000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 64844,
+    "bytes": 2342925,
+    "md5": "e93199b7961f8445b1faa7c07222d796",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000000008000801a02000080000000.cert",
+    "transport_note": "stored without the trailing newline (transport artifact); the stored bytes were re-verified in full after the push: 64844 rows, 61/61 sub-roots PASS, union 0/0, root-check stones=7 loserMobility=61; md5 above is of the stored bytes"
+   },
+   "extraction_nodes": 24299015,
+   "verification": {
+    "subroot_count": 61,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=61",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 96,
+   "root": "00000001000000801a02000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 36411,
+    "bytes": 1315112,
+    "md5": "1a9c4d7fbac6ea6772501bfbdeb16d15",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00000001000000801a02000080000000.cert"
+   },
+   "extraction_nodes": 11568045,
+   "verification": {
+    "subroot_count": 54,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=54",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 110,
+   "root": "00004000000000801a02000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 49111,
+    "bytes": 1770258,
+    "md5": "063c30e2bcaf7ca8379fd448a5e2f254",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00004000000000801a02000080000000.cert"
+   },
+   "extraction_nodes": 11187853,
+   "verification": {
+    "subroot_count": 56,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=56",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  },
+  {
+   "bit": 112,
+   "root": "00010000000000801a02000080000000",
+   "verdict": "WIN7",
+   "certificate": {
+    "rows": 33136,
+    "bytes": 1194402,
+    "md5": "4f1baa52ec006b5fabed84f47b7fab06",
+    "certificate_path": "output/class2-lane-cost68-certificates/n11_s7_00010000000000801a02000080000000.cert"
+   },
+   "extraction_nodes": 9385873,
+   "verification": {
+    "subroot_count": 55,
+    "union_diff": "0/0",
+    "root_check": "stones=7, loserMobility=55",
+    "terminal_range": [
+     13,
+     17
+    ]
+   }
+  }
+ ],
+ "summary": {
+  "certificates": 17,
+  "rows_total": 686816,
+  "extraction_nodes_total": 199870348,
+  "all_root_check": "PASS",
+  "all_subroots": "PASS",
+  "union": "0/0 all",
+  "terminal_range": "[13,17] within",
+  "bit87_note": "certificate bit87 stored without trailing newline; re-verified stored bytes independently (all checks PASS)"
+ },
+ "interpretation_guard": "each certificate proves a win within depth 10 from its individual 7-stone root only; no claim about 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 which remain UNKNOWN"
+}
