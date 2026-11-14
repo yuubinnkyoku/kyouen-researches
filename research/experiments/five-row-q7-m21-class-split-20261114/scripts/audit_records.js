@@ -81,7 +81,7 @@ for (const y of ['0', '1']) {
     assert.equal(found.length, 1, 'exact-k split ' + y + ':' + k);
   }
   for (let p = 0; p <= 10; p++) {
-    const found = group.filter(r => r.krow === y + ':5' && r.minpos === p);
+    const found = group.filter(r => r.krow === y + ':5' && Number(r.minpos) === p);
     assert.equal(found.length, 1, 'minpos split ' + y + ':5:' + p);
     assert.equal(found[0].result, 'UNSAT', 'minpos result ' + y + ':' + p);
   }
