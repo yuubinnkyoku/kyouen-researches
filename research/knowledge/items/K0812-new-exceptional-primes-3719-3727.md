@@ -1,6 +1,6 @@
 ---
 id: K0812
-title: p=3719とp=3727は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
+title: p=3719・3727・3967は等号A(p)=(p+3)/2を達成せず、単一CNFのDRAT証明書で監査済み（既知4素数の外側で新発見）
 kind: proposition
 status: computed
 topics: [maximum-safe, geometry, search-methods]
@@ -28,24 +28,28 @@ artifacts:
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3727-1865/receipt.json
   role: manifest
   note: 13,040変数・100,592節・334,667行DRAT・VERIFIED（929秒）
+- path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3967-1985/receipt.json
+  role: manifest
+  note: 13,880変数・111,115節・10,941行DRAT・VERIFIED（7.8秒）
 - path: research/experiments/parabola-p2207-no-equality-witness-20261107/output/cert-3719-1861/a3719_1861.cnf
   role: data
   note: 形状(1,1,0)の単一CNF（sha256はreceipt参照）
 - path: research/log/2026-11-14-new-exceptional-primes-3719-3727.md
   role: log
   note: 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
-scope: p=3719 と p=3727 の2素数。他の素数での不達成は主張しない。
+scope: p=3719・3727・3967 の3素数。他の素数での不達成は主張しない。
 evidence: 両素数とも形状(1,1,0)の単一CNFがcadicalでUNSAT（2.0秒/20.7秒）。DRATを修正版増分検査器で検査し両方VERIFIED（31.6秒/929秒）。d走査でも24個（3719）のdが全て高速UNSATで、候補として独立に一致した。
 ---
 
 ## 主張
 
-`p = 3719`（`h = 1859`）と `p = 3727`（`h = 1863`）について、サイズ `h+2` の安全集合は存在しない。
-すなわち
+`p = 3719`（`h = 1859`）・`p = 3727`（`h = 1863`）・`p = 3967`（`h = 1983`）について、
+サイズ `h+2` の安全集合は存在しない。すなわち
 
 ```
 A(3719) <= 1860 = h+1
 A(3727) <= 1864 = h+1
+A(3967) <= 1984 = h+1
 ```
 
 一般上界 `A(p) <= (p+3)/2`（K0097）に対し、この2素数は等号を達成しない。
@@ -75,5 +79,6 @@ SAT 側（達成）は証人密度が低く単一クエリでは遅いので、�
 
 - この2素数について言えるのは「サイズ `h+2` が存在しない」ことだけ。
   `h+1` が存在するか、`A(p)` の正確な値は未確定。
-- 3719 の `h+1 = 1860` と 3727 の `h+1 = 1864` は未判定。
+- 3719 の `h+1 = 1860` と 3727 の `h+1 = 1864` は未判定（(1,0,0)・(0,1,0) は UNSAT、(1,1,1) が未決）。
+  3967 の `h+1 = 1984` も未判定。
 - 国勢調査は範囲を限った有限計算であり、全素数についての主張ではない。
