@@ -112,3 +112,15 @@ K0827 observation for 7-row q<=w families).
   were regenerated deterministically where they were lost. Batches were
   re-run after restore; records.jsonl lines for CNF-gen OOM (rc=1) were
   pruned.
+
+## Addendum (same session, post-integration)
+
+- **(4,5) m=20 RESOLVED SAT** by the rowY=3 fixed-row split (36s /
+  600,345 conflicts; 15-stone single-deficiency witness rows [4,4,4,3];
+  js+py dual-verified + tsVerify PASS → triple-verified). The def-mode OR
+  instance had resisted 210s / 3.3M conflicts. **Band extends to m=5..20,
+  M_{4,5} ∈ [21, 140]**; CSV row updated. Fifth successful application of
+  the rowY split technique (after (7,8),(7,7),(7,5),(7,6)).
+- New frontier **(4,5) m=21**: rowY=0..3 all INDET at 55s (871,503 /
+  796,043 / 806,981 / 853,465 conflicts), rowY=3 rerun INDET at 200s /
+  2,714,555 conflicts — honest negatives, not absence claims.

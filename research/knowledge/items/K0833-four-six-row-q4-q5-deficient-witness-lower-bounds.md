@@ -94,3 +94,17 @@ K0810 sat2.js verbatim（q≤w でも (4,5) は genfast.js PAIRTHRESH=12 が
 で U=140 を大きく下回る確定閾値の候補; (2) sat3.js streaming census で
 (6,4) m≥32・(5,4) m≥37 の OOM 壁を越える; (3) (4,4) m=35+, (5,5) m=24+;
 (4) (4,4) m=32 ベースの blocking-coverage 分析（K0827 型の貪欲バンド延伸）。
+
+## 追記 (2026-11-15 rowY 固定分割による (4,5) m=20 前線の解決)
+
+1. **(4,5) m=20 SAT・3系統検証 PASS**（rowY=3 固定分割・36s・600,345
+   conflicts・15石単一欠損 rows [4,4,4,3]）。def-mode OR は 210s INDET
+   （3,296,257 conflicts）だった前線を解決し、**witness帯は m=5..20 に拡大、
+   M_{4,5} ≥ 21**（M ∈ [21, 140]）。rowY 分割は (7,8)/(7,7)/(7,5)/(7,6)
+   に続き5例目の成功。rowY=0/1/2 は 55s INDET（916,641/872,920/877,644）。
+2. **前線は m=21**: rowY=0..3 すべて 55s INDET（871,503/796,043/806,981/
+   853,465）、rowY=3 の 200s 再実行も INDET（2,714,555 conflicts）。
+   いずれも不在主張ではない。
+3. 上記で (4,5) の records.jsonl は 21 行（m=5..20 SAT 16幅 + m=20 INDET
+   負記録 + m=21 rowY 負記録5件）、m=20 witness は
+   ts-verify-cross-family.json で第3系統検証済み。

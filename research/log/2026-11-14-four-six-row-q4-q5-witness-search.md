@@ -50,3 +50,9 @@ bound() で再計算し一致確認）。sat2.js（K0810）verbatim + kissat 4.0
   （7行レーンで DIMACS byte-identical を実証済み）。
 - (4,4) m=35+, (5,5) m=24+ の前線延長。
 - (4,4) m=32 ベースの blocking-coverage 分析（K0827 型の貪欲延伸）。
+
+## 追記 (統合後)
+
+- **(4,5) m=20 が rowY=3 分割で SAT**（36s/600,345・15石 rows [4,4,4,3]・
+  3系統検証）。M_{4,5} ∈ [21, 140] に更新。CSV・K0833・report に反映。
+- m=21 は rowY 全分割・200s まで INDET（2.7M conflicts）— 次回の前線。
