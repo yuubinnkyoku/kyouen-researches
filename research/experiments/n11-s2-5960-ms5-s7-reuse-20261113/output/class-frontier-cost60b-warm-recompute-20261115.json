@@ -1,0 +1,264 @@
+{
+ "schema": "n11-class-frontier-cost60b-warm-recompute-20261115-v1",
+ "date": "2026-11-15",
+ "baseline_main": "class-frontier-cost70c-recompute-20261115 (solved 1022 / unique remaining 6825 / sum 537921 / open 5095/401644)",
+ "method": "direct runpy extension of recompute_frontier_cost70c_20261115.py: the after-cost-70c baseline is reproduced exactly (asserted 1022/6825/537921/5095/401644), the cost-60b child solved-status is re-derived (swept child, 6 original receipts in the manifest since the after-cost-60b recompute), the published sweep record unverified bits (19: 8/15/22/26/28/32/34/40/43/44/74/77/87/88/95/100/106/108/114) and the new warm record (17 certificates, bits 40/77/26/74/44/28/8/88/95/106/87/22/100/108/32/114/43; rows 21,115/24,881/23,978/26,957/28,432/17,776/25,431/33,554/27,875/28,496/30,672/29,242/27,369/29,454/41,391/35,351/36,424; sub-roots 44/48/51/48/51/42/48/51/47/51/51/52/50/50/54/54/51 PASS; union 0/0 each; extraction nodes 1,510,483..8,535,755; fbt_drops=0) are asserted, and the 17 receipts are added in the warm record order with per-bit marginals re-derived from the growing union; the 2 cross-child duplicates (bit 15 = cost-69e bit-21, bit 34 = cost-68c bit-21) are NOT re-added (already in the manifest via those bands); the parallel cost-69e warm receipts (bits 89/94/108/116, records updated on main) are NOT part of this chain yet and stay warm candidates for the next merged recompute (the lanes forked at the after-cost-70c state)",
+ "controls": {
+  "after_cost70c_baseline": {
+   "solved_in_manifest": 1022,
+   "unique_remaining": 6825,
+   "sum_cost": 537921,
+   "open_s6": 5095,
+   "open_cost": 401644,
+   "reproduced": true
+  },
+  "child_solved_status_reproduced_string_keys": true,
+  "warm_record_asserted": true,
+  "extends_after_cost70c_baseline": true
+ },
+ "child_membership": {
+  "child_hex": "00000000000000803202000000200000",
+  "status": "swept child of the second class-2 target; its 6 original receipts (bits 117/96/94/105/73/23) have been in the manifest since the after-cost-60b recompute; the cross-child duplicate roots of bits 15 (cost-69e bit-21) and 34 (cost-68c bit-21) were already added by those bands' recomputes and are NOT re-added here (no double counting)",
+  "still_in_parent_remaining_children_after_cost70c": false,
+  "in_solved_manifest_after_cost70c": true
+ },
+ "cost60b_warm_addition": {
+  "40": {
+   "root_hex": "00000000000000803202010000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202010000200000"
+   ]
+  },
+  "77": {
+   "root_hex": "00000000000020803202000000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020801202000000200000"
+   ]
+  },
+  "26": {
+   "root_hex": "00000000000000803202000004200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000004200000"
+   ]
+  },
+  "74": {
+   "root_hex": "00000000000004803202000000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000909002000000000800"
+   ]
+  },
+  "44": {
+   "root_hex": "00000000000000803202100000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202100000200000"
+   ]
+  },
+  "28": {
+   "root_hex": "00000000000000803202000010200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000010200000"
+   ]
+  },
+  "8": {
+   "root_hex": "00000000000000803202000000200100",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000200100"
+   ]
+  },
+  "88": {
+   "root_hex": "00000000010000803202000000200000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000803202000000400000",
+    "00000000010000801202000000200000"
+   ]
+  },
+  "95": {
+   "root_hex": "00000000800000803202000000200000",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  },
+  "106": {
+   "root_hex": "00000400000000803202000000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000200000003800000400000200"
+   ]
+  },
+  "87": {
+   "root_hex": "00000000008000803202000000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000020809002000000000800"
+   ]
+  },
+  "22": {
+   "root_hex": "00000000000000803202000000600000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000000600000"
+   ]
+  },
+  "100": {
+   "root_hex": "00000010000000803202000000200000",
+   "covers": 7,
+   "marginal": 0,
+   "marginal_in_manifest": 0,
+   "marginal_manifest_hexes": []
+  },
+  "108": {
+   "root_hex": "00001000000000803202000000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000200000003800000000001200"
+   ]
+  },
+  "32": {
+   "root_hex": "00000000000000803202000100200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000801202000100200000",
+    "00000000000000803202000100000000"
+   ]
+  },
+  "114": {
+   "root_hex": "00040000000000803202000000200000",
+   "covers": 7,
+   "marginal": 6,
+   "marginal_in_manifest": 2,
+   "marginal_manifest_hexes": [
+    "00000000000000803202000000000010",
+    "00000000200000043800000000000200"
+   ]
+  },
+  "43": {
+   "root_hex": "00000000000000803202080000200000",
+   "covers": 7,
+   "marginal": 5,
+   "marginal_in_manifest": 1,
+   "marginal_manifest_hexes": [
+    "00000000000000801202080000200000"
+   ]
+  }
+ },
+ "frontier_after_cost60b_warm": {
+  "solved_s6_in_manifest": 1040,
+  "remaining_s5_orbits": 176,
+  "unique_remaining_s6": 6807,
+  "sum_remaining_cost": 536522,
+  "s6_needed_by_open_classes": 5077,
+  "cost_needed_by_open_classes": 400245,
+  "demand_histogram_open_only": {
+   "c2=0,c4=1": 527,
+   "c2=0,c4=2": 3021,
+   "c2=0,c4=3": 12,
+   "c2=1,c4=0": 245,
+   "c2=1,c4=1": 60,
+   "c2=1,c4=2": 9,
+   "c2=2,c4=0": 1142,
+   "c2=2,c4=1": 6,
+   "c2=2,c4=2": 55
+  },
+  "best_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 222
+  },
+  "best_class2_note": "",
+  "audit_blocked_class2": {
+   "s5_hex": "00000000000000809082000000000000",
+   "classes": 3,
+   "remaining_s6_orbits": 10,
+   "remaining_s7_edge_cost": 698
+  },
+  "best_coverable_class2": {
+   "s5_hex": "00000000000000803202000000000000",
+   "classes": 2,
+   "remaining_s6_orbits": 3,
+   "remaining_s7_edge_cost": 222
+  },
+  "next_class2": [
+   {
+    "s5_hex": "00000000000000809082000000000000",
+    "classes": 3,
+    "remaining_s6_orbits": 10,
+    "remaining_s7_edge_cost": 698
+   },
+   {
+    "s5_hex": "00000000000000809102000000000000",
+    "classes": 2,
+    "remaining_s6_orbits": 35,
+    "remaining_s7_edge_cost": 2525
+   },
+   {
+    "s5_hex": "00000000000000801202000000200000",
+    "classes": 2,
+    "remaining_s6_orbits": 41,
+    "remaining_s7_edge_cost": 3058
+   }
+  ],
+  "best_class4": {
+   "s5_hex": "00000000020000003800000080000000",
+   "classes": 4,
+   "remaining_s6_orbits": 18,
+   "remaining_s7_edge_cost": 1460
+  },
+  "next_class4": [
+   {
+    "s5_hex": "00000000000000003800002000800000",
+    "classes": 4,
+    "remaining_s6_orbits": 60,
+    "remaining_s7_edge_cost": 4216
+   },
+   {
+    "s5_hex": "00000000000000801802000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4390
+   },
+   {
+    "s5_hex": "00000000020000003800000000080000",
+    "classes": 4,
+    "remaining_s6_orbits": 64,
+    "remaining_s7_edge_cost": 4570
+   }
+  ]
+ },
+ "interpretation_guard": "bookkeeping over published receipts; REFUTED-D10 sweeps prove only absence of WIN7-D10; WIN7 certificates prove a win within depth 10 from the 7-stone root only; 11x11 empty root / {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+}

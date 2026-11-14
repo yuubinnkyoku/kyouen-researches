@@ -1,0 +1,517 @@
+{
+ "session": "class2-lane cost-60b warm certificate rebuild (long-term lane parallel execution, 2026-11-15)",
+ "child_hex": "00000000000000803202000000200000",
+ "note": "warm rebuild of the 19 cost-60b WIN7-D10 candidates that stayed unverified in the original cost-60b sweep record (bits 8,15,22,26,28,32,34,40,43,44,74,77,87,88,95,100,106,108,114 listed in class2-lane-cost60b-sweep-20261114.json unverified_win7_bits); the original 6 certificates (bits 117/96/94/105/73/23) and their records (class2-lane-cost60b-win7-certificates-20261114.json) are untouched - this record adds the new receipts without modifying any published record (the published recompute chain keeps asserting the original records). 2 of the 19 are cross-child duplicates already certified elsewhere (no new certificate): bit 15 (root 00000000000000803202000000208000, certified as cost-69e bit-21, commit 2583540f) and bit 34 (root 00000000000000803202000400200000, certified as cost-68c bit-21, the cross-child duplicate noted in that record). The remaining 17 were extracted and verified in this session; after this rebuild ALL 25 cost-60b WIN7-D10 candidates carry fully verified certificates (unverified 0).",
+ "duplicate_cross_child_entries": [
+  {
+   "bit": 15,
+   "root_hex": "00000000000000803202000000208000",
+   "note": "cross-child duplicate of the cost-69e bit-21 certificate (class2-lane-cost69e-certificates/bit21-root-00000000000000803202000000208000.cert, md5 b229fe7c0c96901fe04ddf05763ffb9e); already certified, no new certificate needed (cost-61e bit-1 pattern)"
+  },
+  {
+   "bit": 34,
+   "root_hex": "00000000000000803202000400200000",
+   "note": "cross-child duplicate of the cost-68c bit-21 certificate (class2-lane-cost68c-certificates/bit21-root-00000000000000803202000400200000.cert); already certified, no new certificate needed"
+  }
+ ],
+ "certificates": [
+  {
+   "bit": 40,
+   "root_hex": "00000000000000803202010000200000",
+   "verdict": "WIN7",
+   "rows": 21115,
+   "extraction_nodes": 1510483,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 44,
+    "independent_enumeration_legal": 44,
+    "match": true
+   },
+   "sub_roots_verified": 44,
+   "sub_roots_pass": 44,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "56b950b9b51f8608fb136ee2df526b06",
+   "sha256": "5eb4a89a40a49cb1bf8d4d7117852080549d187e3bc5ab0efea59c8deddf5082",
+   "file": "class2-lane-cost60b-certificates/bit40-root-00000000000000803202010000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit afcc1fef)"
+  },
+  {
+   "bit": 77,
+   "root_hex": "00000000000020803202000000200000",
+   "verdict": "WIN7",
+   "rows": 24881,
+   "extraction_nodes": 2381950,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 48,
+    "independent_enumeration_legal": 48,
+    "match": true
+   },
+   "sub_roots_verified": 48,
+   "sub_roots_pass": 48,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "46512a5d30cb31079f95b4547d3a6a36",
+   "sha256": "7e68aad11c465c3c92672e3ffa05d6cabe0a15f5aa00b0c2c900dba54252ee59",
+   "file": "class2-lane-cost60b-certificates/bit77-root-00000000000020803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit b72c92a9)"
+  },
+  {
+   "bit": 26,
+   "root_hex": "00000000000000803202000004200000",
+   "verdict": "WIN7",
+   "rows": 23978,
+   "extraction_nodes": 2458043,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "e3fd1dd2667da65644c392b7100483fb",
+   "sha256": "7946a2dd67ee88da6267a41cc50c2e9a2621de4bfae583878cf50e9a0a7554ca",
+   "file": "class2-lane-cost60b-certificates/bit26-root-00000000000000803202000004200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit ea11c945)"
+  },
+  {
+   "bit": 74,
+   "root_hex": "00000000000004803202000000200000",
+   "verdict": "WIN7",
+   "rows": 26957,
+   "extraction_nodes": 1953702,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 48,
+    "independent_enumeration_legal": 48,
+    "match": true
+   },
+   "sub_roots_verified": 48,
+   "sub_roots_pass": 48,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "ca2b07c7db11de35f7ea80d184b0b2b3",
+   "sha256": "7bfd9f986d223c230c58474f48fc28d5f31eff98d1c0c3f94012ca62b911539e",
+   "file": "class2-lane-cost60b-certificates/bit74-root-00000000000004803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit e06bbe74)"
+  },
+  {
+   "bit": 44,
+   "root_hex": "00000000000000803202100000200000",
+   "verdict": "WIN7",
+   "rows": 28432,
+   "extraction_nodes": 2505216,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "84c22e9e7f7597cb50b08467f41651ab",
+   "sha256": "147b1e83c0e456927cd1cc30f745031edffd402d004a81c600e36ca77b6820ae",
+   "file": "class2-lane-cost60b-certificates/bit44-root-00000000000000803202100000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 818f185f)"
+  },
+  {
+   "bit": 28,
+   "root_hex": "00000000000000803202000010200000",
+   "verdict": "WIN7",
+   "rows": 17776,
+   "extraction_nodes": 3494345,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 42,
+    "independent_enumeration_legal": 42,
+    "match": true
+   },
+   "sub_roots_verified": 42,
+   "sub_roots_pass": 42,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "4a028a955cf1f037eac3355ebbdd61ce",
+   "sha256": "294f57b518323b7d0fd86727f64c83a0c1acd5ada816870d469dc801a89f13f3",
+   "file": "class2-lane-cost60b-certificates/bit28-root-00000000000000803202000010200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit c2684a9a)"
+  },
+  {
+   "bit": 8,
+   "root_hex": "00000000000000803202000000200100",
+   "verdict": "WIN7",
+   "rows": 25431,
+   "extraction_nodes": 2727531,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 48,
+    "independent_enumeration_legal": 48,
+    "match": true
+   },
+   "sub_roots_verified": 48,
+   "sub_roots_pass": 48,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "5ada7ba5b639eadef4790f088afb9a7e",
+   "sha256": "c645b74ef87ab6ed6a57d807838e670686fad1cb1450ffaf53c2f3c5871a7e11",
+   "file": "class2-lane-cost60b-certificates/bit8-root-00000000000000803202000000200100.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 31c237d4)"
+  },
+  {
+   "bit": 88,
+   "root_hex": "00000000010000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 33554,
+   "extraction_nodes": 3072584,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "cc01c0c72a66811222ffd3639939a55f",
+   "sha256": "03387785233ec02848d34aecc9b48e5e86eff3eee7726e5a3dc82ee7f5e3b353",
+   "file": "class2-lane-cost60b-certificates/bit88-root-00000000010000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 4573f31b)"
+  },
+  {
+   "bit": 95,
+   "root_hex": "00000000800000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 27875,
+   "extraction_nodes": 8535755,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 47,
+    "independent_enumeration_legal": 47,
+    "match": true
+   },
+   "sub_roots_verified": 47,
+   "sub_roots_pass": 47,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "10ba4b046fc26e2d07195f190337c8e3",
+   "sha256": "14f6f1afc6aa10f2216a2aa792227e3f7ce0c7cb10f6a69f0be3a985f4addfd3",
+   "file": "class2-lane-cost60b-certificates/bit95-root-00000000800000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit eaf18b24)"
+  },
+  {
+   "bit": 106,
+   "root_hex": "00000400000000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 28496,
+   "extraction_nodes": 4269102,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "140f28ab429970b7f993344adf914646",
+   "sha256": "6788fd1e2d490c4ba6a191293f5262bcd26dfbbe09e111a04347eb298891caec",
+   "file": "class2-lane-cost60b-certificates/bit106-root-00000400000000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit b71e9f05)"
+  },
+  {
+   "bit": 87,
+   "root_hex": "00000000008000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 30672,
+   "extraction_nodes": 4109578,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "7e198eea86b9c03d71893e8a17345c99",
+   "sha256": "9dc2e1d7d98853df83fac477c8614400643cc1548a746ef636f81f6ba6088c31",
+   "file": "class2-lane-cost60b-certificates/bit87-root-00000000008000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 0d31f532)"
+  },
+  {
+   "bit": 22,
+   "root_hex": "00000000000000803202000000600000",
+   "verdict": "WIN7",
+   "rows": 29242,
+   "extraction_nodes": 4454710,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 52,
+    "independent_enumeration_legal": 52,
+    "match": true
+   },
+   "sub_roots_verified": 52,
+   "sub_roots_pass": 52,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "0bca8499e98e1a0197db2a6f6bd2d6ab",
+   "sha256": "d910caa2a7f0ca353730fc544a5f202741c18dcccbbb61f5ea4b1f9ddde45d95",
+   "file": "class2-lane-cost60b-certificates/bit22-root-00000000000000803202000000600000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit f69d2d4d)"
+  },
+  {
+   "bit": 100,
+   "root_hex": "00000010000000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 27369,
+   "extraction_nodes": 4377221,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "a53826ed8448b68ee38a0c64c93318c4",
+   "sha256": "9653378f2b00f67595c85af942942c0dab1b8ca1784f59ee0b46d98180d0d729",
+   "file": "class2-lane-cost60b-certificates/bit100-root-00000010000000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit d1b71306)"
+  },
+  {
+   "bit": 108,
+   "root_hex": "00001000000000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 29454,
+   "extraction_nodes": 5242890,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 50,
+    "independent_enumeration_legal": 50,
+    "match": true
+   },
+   "sub_roots_verified": 50,
+   "sub_roots_pass": 50,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "6914fa1ec2f6709bf0a59cce1a2fd3e8",
+   "sha256": "47dcc0b27ee2af01257b8c1b1152d80d019d914dc52199bcb7b75f38c8ba3702",
+   "file": "class2-lane-cost60b-certificates/bit108-root-00001000000000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 235b55ef)"
+  },
+  {
+   "bit": 32,
+   "root_hex": "00000000000000803202000100200000",
+   "verdict": "WIN7",
+   "rows": 41391,
+   "extraction_nodes": 5524659,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "b8c5e9cbae8d935c9c4c1bc950f7a9da",
+   "sha256": "19dea48dddb8f62aeb3781d54b67e5842a8adf6b3b5557ff718afd5d807d1ab0",
+   "file": "class2-lane-cost60b-certificates/bit32-root-00000000000000803202000100200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 02e2c4fa)",
+   "v15_crosscheck_verdict": "loss=true at 3192492 nodes (v15 anchor from the published cost-60b v15 crosscheck JSONL)"
+  },
+  {
+   "bit": 114,
+   "root_hex": "00040000000000803202000000200000",
+   "verdict": "WIN7",
+   "rows": 35351,
+   "extraction_nodes": 6292430,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 54,
+    "independent_enumeration_legal": 54,
+    "match": true
+   },
+   "sub_roots_verified": 54,
+   "sub_roots_pass": 54,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "a6ca671ae1db518a2238bf85196f8b0d",
+   "sha256": "0d339306070841bd5e422656daefa4d4dcacd379b1075d771b873fee94158957",
+   "file": "class2-lane-cost60b-certificates/bit114-root-00040000000000803202000000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 57fe8288)",
+   "v15_crosscheck_verdict": "loss=true at 3898429 nodes (v15 anchor from the published cost-60b v15 crosscheck JSONL)"
+  },
+  {
+   "bit": 43,
+   "root_hex": "00000000000000803202080000200000",
+   "verdict": "WIN7",
+   "rows": 36424,
+   "extraction_nodes": 7640986,
+   "extraction": "class4_child1_cert_extractor_exact.ts (repo-verbatim), blind (empty kill table, FBS=1<<20): fbt_drops=0, all per-move extractions ok and uncapped (warm rebuild, 2026-11-15); sed -n 2p stdin recipe",
+   "rows_sorted_unique": true,
+   "root_check": {
+    "stones": 7,
+    "loser_mobility": 51,
+    "independent_enumeration_legal": 51,
+    "match": true
+   },
+   "sub_roots_verified": 51,
+   "sub_roots_pass": 51,
+   "union_missing": 0,
+   "union_extra": 0,
+   "terminal_range": [
+    13,
+    17
+   ],
+   "md5": "f2590a956c4a976d686de3e63008b3e2",
+   "sha256": "3997e8aa6400a6aca46723d87bd9b1c4e71fb4acfab4df35ab5cb1d8ac52a6ea",
+   "file": "class2-lane-cost60b-certificates/bit43-root-00000000000000803202080000200000.cert",
+   "root_not_among_existing": true,
+   "root_absence_check": "all 17 warm root hexes checked against every published *.cert file on main (250 files) and all *certificates*.json records before extraction: 0 hits",
+   "push_note": "full paged-read push; remote md5 verified byte-exact after landing (commit 80ec2e15)",
+   "v15_crosscheck_verdict": "loss=true at 3882328 nodes (v15 anchor from the published cost-60b v15 crosscheck JSONL)"
+  }
+ ],
+ "verification": "independent engine-free verification with verify_bit7_win7_cert.ts (exact integer Bareiss 4x4): root-check stones=7 and loserMobility equal the independent legal_candidates.py enumeration on every root; every sub-root PASS (verified in 2 splits per certificate); the union of consumed winner states over all sub-roots equals the certificate row set exactly (0 missing / 0 extra, both directions) on all 17 certificates; fbt_drops=0 on every extraction; rows LC_ALL=C sort -u, strictly ascending, no duplicates. Pipeline validation: the published cost-60b bit-117 certificate was re-extracted first and matched the published file byte-exactly (md5 94f9411adfd26ac8441c0438bc4861d1). v15 cross-engine anchors carried over from the published cost-60b v15 crosscheck JSONL (bits 32/114/43 loss=true at 3192492/3898429/3882328 nodes).",
+ "unknown_status": "11x11 empty board: UNKNOWN. Each WIN7 certificate proves only that its individual 7-stone root is a winner-side win within depth 10."
+}
