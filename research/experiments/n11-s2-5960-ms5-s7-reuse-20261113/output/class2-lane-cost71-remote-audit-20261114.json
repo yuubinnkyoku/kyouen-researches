@@ -1,0 +1,51 @@
+{
+  "title": "n11 class2-lane cost-71 sweep independent remote audit",
+  "date": "2026-11-14",
+  "auditor": "long-term lane session 9 (remote-only audit while execution env unavailable)",
+  "target": {
+    "s6_child": "00000000000000809082000000000004",
+    "s6_s7_edge_cost": 71,
+    "source_commit": "240fcf2fc8105c8a323dd25170e99d9ced1367ff",
+    "files": "class2-lane-cost71-raw-batch1..9-20261114.jsonl, class2-lane-cost71-determinism-rerun-20261114.jsonl, class2-lane-cost71-sweep-20261114.json, class2-lane-cost71-win7-certificates-20261114.json"
+  },
+  "checks": [
+    {
+      "check": "raw batch candidate rows",
+      "result": "71 rows, 71 unique bits (no duplicates, no missing vs legal 71-candidate enumeration claimed in sweep record)",
+      "pass": true
+    },
+    {
+      "check": "pilot d6 controls",
+      "result": "9/9 batch invocations, each loss=false at exactly 5,949 nodes",
+      "pass": true
+    },
+    {
+      "check": "node accounting",
+      "result": "sum over raw candidate rows = 385,100,613, exactly equals sweep record total_nodes",
+      "pass": true
+    },
+    {
+      "check": "capped",
+      "result": "0 capped rows, matches sweep record capped=0",
+      "pass": true
+    },
+    {
+      "check": "WIN7 bits",
+      "result": "raw rows with loss=true are exactly bits {9, 70}, matching sweep record win7_bits and the win7-certificates record (bit9 root 00000000000000809082000000000204 rows 55,430; bit70 root 00000000000000c09082000000000004)",
+      "pass": true
+    },
+    {
+      "check": "determinism rerun",
+      "result": "5 rerun bits {9,70,94,100,110} node-exact identical to raw batch rows (loss and nodes)",
+      "pass": true
+    },
+    {
+      "check": "root hex arithmetic",
+      "result": "child | (1<<9) and child | (1<<70) reproduce both certificate root hexes exactly (independent BigInt recomputation)",
+      "pass": true
+    }
+  ],
+  "audit_result": "PASS (7/7 checks). The pushed cost-71 sweep record is internally consistent and independently reproducible from its raw artifacts.",
+  "status_note": "This audit re-derives accounting from raw batches only; it does not re-run the df-pn searches themselves (full re-run is the determinism rerun's role, already pushed and node-exact).",
+  "unknown_status": "11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}: UNKNOWN. class 2 / class 4 blockers: UNKNOWN."
+}
