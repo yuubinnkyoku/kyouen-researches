@@ -25,6 +25,17 @@
   "cost70c_warm_batch2": {
    "frontier": null,
    "receipts": "6 WIN7 (this lane batch-2 warm extraction); certificates published under class2-lane-cost70c-certificates/, folded in neither head"
+  },
+  "merged_1148": {
+   "frontier": "class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json",
+   "commit": "19bb2abc",
+   "solved": 1148,
+   "unique_remaining": 6699,
+   "sum_cost": 528423,
+   "open_s6": 4969,
+   "open_cost": 392146,
+   "receipts": "44 of the 50 (31 warm multiband2 + 13 cost-68d/hygiene), status: published; supersedes both divergent heads",
+   "best_coverable_class2": "S5 00000000000000809102000000000000 at 8 remaining orbits / 588 edge cost (the third class-2 target, narrowed from 13/937 by the merged fold)"
   }
  },
  "receipt_reconciliation": {
@@ -190,7 +201,8 @@
   },
   "union_size": 45,
   "predicted_unified_solved": 1154,
-  "prediction_status": "set-union prediction over the published per-receipt marginal manifest hexes of the 50 reconciled receipts; NOT a chain-head publication; the authoritative unified fold must reproduce the 1117 and 1140 endpoints byte-identically and then fold all 50 receipts (expected solved 1154)"
+  "prediction_status": "set-union prediction confirmed at both stages: 1109 + 45 = 1154 and merged 1148 + 6 = 1154; NOT a chain-head publication; the authoritative fold must reproduce the merged 1148 endpoint byte-identically and then fold the six cost-70c receipts (expected solved 1154)",
+  "merged_head_reference": "the merged head 1148 folds hexes A (8, re-derived at 1140, set-identical to this audit's A at 1109) and B (31, in the reproduced 1140 baseline); C (6) is verified disjoint from all 39 here"
  },
  "cost70c_consistency": {
   "sweep_win7_bits": [
@@ -228,13 +240,13 @@
   "note": "sweep record class2-lane-cost70c-sweep-20261115.json: 13 WIN7-D10 at 100,935,666 v16 nodes, all 13 v15-anchored loss=true, determinism rerun node-exact"
  },
  "unified_fold_specification": {
-  "script_for_next_execution": "recompute_frontier_unified_merge_20261115.py (direct runpy chain: ns68 = recompute_frontier_cost68d_20261115 -> s_1109 = ns68 baseline, s_1117 = ns68 head; nsM2 = recompute_frontier_warm_multiband2_20261115 -> s_1140 = nsM2 head; then fold)",
-  "fold_order": "13 cost-68d-lane receipts in published order (7 WIN7 then 6 hygiene), then 31 multiband2 receipts in published order, then the 6 cost-70c receipts in greedy order 105, 92, 40, 24, 11, 8",
+  "script_for_next_execution": "recompute_frontier_unified_merge_20261115.py (direct runpy chain: the merged recompute script recompute_frontier_merged_after_multiband2_68dhyg_20261115.py already reproduces 1109 -> 1140 -> 1148; extend it to fold the six cost-70c receipts after the merged endpoint)",
+  "fold_order": "the 44 receipts already folded by the merged recompute (31 batch-2 then 13 cost-68d/hygiene), then the 6 cost-70c receipts in greedy order 105, 92, 40, 24, 11, 8",
   "controls": [
-   "reproduce the 1109 baseline byte-identically (1109/6738/531295/5008/395018)",
-   "reproduce the 1117 endpoint and the 1140 endpoint byte-identically",
-   "set-equality: s_merged == s_1117 UNION s_1140 UNION covers(6 cost-70c receipts)",
-   "three-way root disjointness of the 50 receipts",
+   "reproduce the merged 1148 endpoint byte-identically (1148/6699/528423/4969/392146)",
+   "fold the six cost-70c warm batch-2 receipts with per-record marginals re-derived from the growing union",
+   "set-equality: s_merged_final == s_1148 UNION covers(6)",
+   "root disjointness of the 6 against the 44",
    "expected solved_s6_in_manifest 1154"
   ],
   "expected_outputs": [
@@ -246,8 +258,17 @@
  "outstanding": {
   "cost69f_sweep": "completed on the parallel lane (9 WIN7-D10 bits 2/20/44/68/69/94/109/118/119, raw batches only, certificates and fold pending with that lane); the next unified merge must fold its receipts once published",
   "cost70c_remaining": "WIN7 bits 3/42/86/103 uncertified (warm rebuild candidates)",
-  "parallel_bands": "cost-65h/67b/68c warm candidates and the in-flight cost-65j sweep stay with the parallel lane (their in-manifest marginals are listed in class2-lane-warm-candidate-ranking2-20261115.json for future folds)"
+  "parallel_bands": "cost-65h/67b/68c warm candidates and the in-flight cost-65j sweep stay with the parallel lane (their in-manifest marginals are listed in class2-lane-warm-candidate-ranking2-20261115.json for future folds)",
+  "merged_note": "the merged head recompute (19bb2abc) notes the six gain-1 cost-70c warm candidates now fold against 1148; their fold belongs to this lane (its band) or a later canonical recompute - this audit supplies the receipts and the expected 1154 endpoint"
  },
  "win_loss_conflict_check": "no new conflict found by this reconciliation: the three receipt groups root sets and marginal-hex unions are pairwise disjoint; the per-lane published crosschecks (LOSS7 manifest scans, byte-exact landing verification, v15 cross-engine anchors) are cited and not re-run here",
- "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of the 11x11 empty board; 11x11 empty root / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN"
+ "interpretation_guard": "bookkeeping over published receipts; solved counts measure manifest coverage, not the game-theoretic value of the 11x11 empty board; 11x11 empty root / two-stone root {49,60} / S2 {59,60} / class 2 / class 4 remain UNKNOWN",
+ "correction_20261115_b": {
+  "issued_after": "the first version of this audit (commit f1427d99) described the 1117 and 1140 heads as un-merged divergent forks",
+  "fact": "the merged recompute (class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json, commit 19bb2abc, pushed to main BEFORE the first version of this audit - its commit message was missed by the collision filter which looked only for unified/reconcil) already folds all 44 receipts of both forks: it reproduces the 1140 head byte-identically, then folds the 13 cost-68d/hygiene receipts on top with per-record marginals re-derived from the growing union at the 1140 state, reaching the merged chain head 1148/6699/528423/4969/392146 (script recompute_frontier_merged_after_multiband2_68dhyg_20261115.py)",
+  "independent_confirmation": "this audit's marginal-union arithmetic is confirmed by that published fold: the cost-68d 8 in-manifest marginal hexes are identical against the 1109 state (this audit) and against the 1140 state (their fold), exactly because the 31 batch-2 and 13 cost-68d/hygiene hex unions are disjoint (re-verified here: set equality of the 8 hexes, and the six cost-70c hexes are disjoint from all 39)",
+  "fold_status": "44 of the 50 reconciled receipts are folded in the merged head 1148; only the six cost-70c warm batch-2 receipts remain unfolded",
+  "prediction_unchanged": "predicted unified solved 1154 = 1148 + 6; NOT a chain-head publication until the authoritative recompute folds them",
+  "lesson": "pre-push collision checks must also filter for merged/recompute commit messages, not only unified/reconcil"
+ }
 }

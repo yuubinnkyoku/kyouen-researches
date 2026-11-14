@@ -29,3 +29,9 @@ From the published per-receipt marginal manifest hexes: cost-68d fold adds 8, mu
 Audit artifact: [class2-lane-unified-fold-reconciliation-20261115.json](../experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-unified-fold-reconciliation-20261115.json)
 
 Interpretation guard: bookkeeping over published receipts; solved counts measure manifest coverage, not game-theoretic value. The 11x11 empty board, the two-stone root {49,60}, S2 {59,60}, class 2 and class 4 all remain UNKNOWN.
+
+## Correction (post-push, same session)
+
+The first version of this log and the audit JSON described the 1117 and 1140 heads as un-merged divergent forks. In fact the merged recompute `class-frontier-merged-recompute-after-multiband2-68dhyg-20261115.json` (commit 19bb2abc) was already on main before that push - the pre-push collision check filtered only for unified/reconcil commit messages and missed it. That recompute reproduces the 1140 head byte-identically and folds the 13 cost-68d/hygiene receipts on top, reaching the **merged chain head 1148/6699/528423/4969/392146** (44 of the 50 reconciled receipts folded; the third class-2 target S5 `00000000000000809102000000000000` narrows to 8 remaining orbits / 588 edge cost).
+
+This is an independent confirmation of this session's reconciliation arithmetic: the cost-68d 8 marginal hexes are set-identical against the 1109 state (this audit) and the 1140 state (their fold), and the six cost-70c hexes are disjoint from all 39 folded hexes (re-verified here). The prediction is therefore unchanged and sharpened: **1154 = 1148 + 6**, pending only the fold of the six cost-70c warm batch-2 receipts. Fold spec and lesson recorded in the audit JSON.
