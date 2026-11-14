@@ -1,33 +1,35 @@
-# 2026-11-14 n11 S2 {59,60}: incremental WIN7 reuse の再現性監査
+# 2026-11-14 n11 S2 {59,60}: incremental WIN7 reuse の独立監査
 
 Audit base: `main` = `24b89f40b73622be83acc1d013ecd6d11500217a` (2026-11-14 21:09 JST 時点)。
 
-`AGENTS.md`、`research/knowledge/README.md`、K0023、K0783、milestone-5 reuse experiment README、incremental reuse script / JSON、関連 receipt を確認した。
+`AGENTS.md`、`research/knowledge/README.md`、SCHEMA / VOCABULARY、K0023、K0783、milestone-5 reuse experiment README、incremental reuse script / JSON、関連receiptを確認した。
 
-## 独立に再計算できた範囲
+## 独立再計算
 
-入力は現在 main の S6 manifest part 1..6、cost-69c / 70b / 71 / 75 の4つの WIN7 manifest、incremental reuse JSON。D4 の8変換と整数座標の4点共線・共円判定を別実装で再計算した。
+S6 worklist part 1..6、4つの新規WIN7 manifest、baselineの3 receiptを読み、D4の8変換と整数座標の4点共線・共円判定を別実装で再計算した。大きな `s6sweep/verified.json` と `sweep_results.json` はGitHubファイル取得関数が本文を返さなかったが、rawファイル取得では全内容を読み取れた。以前の「0 byte」という判定は取得器の制限による誤りであり、ここで訂正する。
 
-- S6 worklist: **7,867行・重複なし・合法七石目候補コスト615,497**。
-- 新規WIN7 manifest: **23件**（1 + 1 + 2 + 19）。D4正規化後も23 rootすべて相異なり、7石で、整数幾何判定を通過。
-- 23 root からの親子 incidence: **70組・48個の異なるS6 worklist親**。
-- 保存済み `new_parent_records` は、再計算した48親と各親の子root集合に完全一致。cost / classes もworklistと一致。
-- JSONで baseline 未被覆と記された43親は、`incremental_parent_hex` と完全一致し、cost合計 **3,275**、class内訳 **1:3 / 2:35 / 3:5**。
-- 残っている baseline receipt 2ファイル（focus2154: 62鍵、frontier2140: 2,401鍵）との照合では、新規23 rootの重複・LOSS7 conflictは **0件**。
+### K0675 baseline
 
-ここまでは独立再計算できた。ただし「43親が本当にbaseline未被覆」という分類は、次の欠落により完全には再検証できない。
+- `sweep_results.json`: **3,868 S6**、WIN-for-mover **3,854**、LOSS-for-mover **14**、timeout **0**、試行 **29,680**、勝ち子を持つS6 **3,854**。
+- `s6sweep/verified.json`: **4,288 receipt**（WIN7 **3,401** / LOSS7 **887**）、fails **0**。
+- focus2154 / frontier2140を合わせた全baseline receipt union: WIN7 **4,052** / LOSS7 **2,699**、相互conflict **0**。
 
-## 再現性の欠落
+### 23新規WIN7 rootの親への再利用
 
-1. `research/experiments/n11-central-19-cover-20261031/output/s6sweep/verified.json` は現在 main で **0 byte**（Git blob SHA `a60a7881001c762be3ca604096a9357115f796ab`）。同じ `s6sweep/sweep_results.json` も0 byte。K0675と `win7-reuse-audit.json` は前者を4,288件（WIN7 3,401 / LOSS7 887）の監査receiptとして参照し、その非空内容のSHA-256を `f647a6c2837328b054a3a691ae0da6668ea3063177ea02bc5877dc76df88674f` と記録しているが、現checkoutからその内容を取得できない。
-2. 残るfocus2154 / frontier2140のreceiptは合計2,463鍵（WIN7 651 / LOSS7 1,812）にとどまり、baseline全体として記録されたWIN7 4,052 / LOSS7 2,699を再構成できない。したがって48親のうち5親を「baselineで既に被覆」とした判定、baseline 498親、合計541親、残7,326親・cost573,835は今回独立に再確定していない。
-3. 現在の `audit_incremental_class2_win7_reuse.py` は空の `s6sweep/verified.json` を `json.loads` するため、clean checkoutでは先へ進めない。また、現スクリプトは出力に `inputs`（複数形）を書き、`checks.worklist_unique` を出さない一方、保存JSONは `input`（単数形）と `worklist_unique` を含む。保存JSONが現在のスクリプトからそのまま生成されたことも確認できない。
+- S6 worklist: **7,867行・重複なし・合法七石目候補cost 615,497**。
+- 新規WIN7 manifest: **23件**（cost-69c:1、70b:1、71:2、75:19）。D4正規化後も23 rootすべて相異なり、7石で、独立整数幾何判定を通過。
+- 新規rootとbaseline WIN7 / LOSS7 receiptの重複・conflict: **0 / 0**。
+- baseline WIN7から閉じるS6親: **498**、削減cost **38,387**、残 **7,369親・cost577,110**。
+- 新規23 rootからの親子incidence: **70組・48親**。うちbaselineで既に閉じていた親 **5**、増分 **43親**。
+- 増分43親のcost **3,275**、class内訳 **1:3 / 2:35 / 3:5**。
+- union後: **541親**、残 **7,326親・cost573,835**。
 
-## 評価と次の要件
+保存JSONの48 parent record、各子root集合、43件の `incremental_parent_hex`、cost/class集計は再計算結果と一致した。したがって、前回記録した43親・cost3,275の増分はbaselineを含めて再現できた。
 
-- **確認済み**: 23新規rootの幾何安全性、70 incidence、48親、保存JSONの親・子対応、43件の「新規」フラグとcost/class集計の内部整合性。
-- **未再確認**: baseline receiptとの重複5件、541親・残7,326親・cost573,835という全体差分。43件の分類は保存JSONのbaselineフラグを入力としている。
-- **未実施**: 23個のWIN7証明書本体の再実行。WIN7 verdictは既存manifest・検証記録を前提にした。
-- 次に全体差分を確定するには、4,288件の元receiptを復元するか、K0675のS6 sweep結果から同じ鍵集合を再生成し、SHA-256を照合してからincremental auditを現main上で再実行する必要がある。
+## 残る再現性の注意
 
-この監査はworklist accountingと再現性の評価であり、S2 {59,60}、二石root {49,60}、11×11空盤の勝敗を決めない。これらは引き続き **UNKNOWN**。
+現在の `audit_incremental_class2_win7_reuse.py` と保存JSONは出力schemaが一致しない。スクリプトは `inputs`、`already_covered_by_baseline` を書くが、保存JSONは `input`、`already_in_baseline` を持ち、さらに `checks.worklist_unique` を含む。数値と親子集合は独立再計算で一致したものの、保存JSONが現在のスクリプトからそのまま生成されたことは確認できない。再現器と出力schemaを次回統一する余地がある。
+
+証明書本体23件は今回再実行していない。WIN7判定は公開manifestと既存独立検証記録を前提にし、今回新たに検査したのはrootの幾何安全性、D4正規形、baselineとの重複/conflict、親への再利用である。
+
+この監査はS6 worklistの閉鎖数を更新するもので、S2 {59,60}、二石root {49,60}、標準11×11空盤の勝敗を決めない。これらは引き続き **UNKNOWN**。
