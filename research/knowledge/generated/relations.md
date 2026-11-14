@@ -2681,6 +2681,7 @@
 - ← depends_on [K0515](../items/K0515-axis-rectangle-seven-maximum.md): 軸平行長方形だけを禁止する規則の区別
 - ← depends_on [K0518](../items/K0518-quadratic-form-small-board-parameter-classification.md): 退化を含む二次形式パラメータ版の定義
 - ← depends_on [K0526](../items/K0526-cube-coplanar-four-all-safe.md): 共面のみ4点禁止という別変種の定義
+- ← supports [K0832](../items/K0832-vertical-fiber-degree-reduction.md): 多項式超曲面変種のq>t|B|領域を解決する。q≤t|B|、特に補間が効くq≤|B|領域は未解決のまま
 
 ## [K0505](../items/K0505-odd-cubes-q5-weak-frontier.md) 3次元5点禁止版の7×7×7以降の奇数辺立方盤はどちらが必勝か
 
@@ -4993,7 +4994,7 @@
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
 - ← depends_on [K0829](../items/K0829-six-row-q8-m21-deficient-nonexistence.md): 6x19/6x20 witness-free by the 35-class deficiency split; K0819 opened the 6x21 frontier and stated exactly this extension branch
 
-## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..100 (M_{7,9} = 24 or >= 101), (7,10) witness-free band 19..40 confirmed by kissat and extended to 100 (M_{7,10} = 19 or >= 101)
+## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witness-free band 24..612 fully swept (M_{7,9} = 24 exact), (7,10) witness-free band 19..586 fully swept (M_{7,10} = 19 exact)
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9
@@ -5029,6 +5030,7 @@
 
 - → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする通常プレイの規則
 - → generalizes [K0352](../items/K0352-general-dimensional-parallel-columns.md): K0352の一般位置底面に限らず任意の有限底面で占有ベクトル縮約が成立する。K0352の閉形式分類までは一般化しない
+- ← generalizes [K0832](../items/K0832-vertical-fiber-degree-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
 
 ## [K0825](../items/K0825-seven-row-q8-deficient-witness-lower-bound.md) 7xm q=8 row-deficient witness band — witnesses 7x8..7x24 (M_{7,8} >= 25, upper 651 by K0318 substitution); first (7,8) family results
 
@@ -5073,3 +5075,8 @@
 - → proves [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): K0830 の探索有限性（q ∈ {1,2,4,8}・q=1 への絞り込み L2/L3）の根拠
 - → depends_on [K0763](../items/K0763-width6-circle-eight-point-max-and-q9-q12-row-formula.md): 接点・判別式の行ごとの構造解析の枠組み（本補題は中心座標の可直接的な分母制御を与える）
 - ← depends_on [K0830](../items/K0830-seven-row-ten-point-circle-classification.md): 分母補題 q | 4δ′（L2）と parity 排除（L3）が探索の有限性を与える
+
+## [K0832](../items/K0832-vertical-fiber-degree-reduction.md) 垂直ファイバー次数による一般縮約 — q>t|B| なら占有ベクトルで厳密化
+
+- → generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0824の超平面・球面に対するq>2|B|縮約を、各ファイバー上の次数が高々tである多項式超曲面へ一般化する。K0824のq=2|B|境界反例や超平面跡列挙補題を置き換えるものではない
+- → supports [K0504](../items/K0504-geometric-rule-variant-comparison.md): 多項式超曲面変種のq>t|B|領域を解決する。q≤t|B|、特に補間が効くq≤|B|領域は未解決のまま
