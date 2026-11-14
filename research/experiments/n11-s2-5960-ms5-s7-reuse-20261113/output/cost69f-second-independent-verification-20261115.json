@@ -1,0 +1,182 @@
+{
+  "schema": "n11-class2-cost69f-second-independent-verification-20261115-v1",
+  "date": "2026-11-15",
+  "source": {
+    "old_certificate_manifest": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-20261115.json",
+      "blob_sha": "ad56d02f23107fabd0afb99ba0b901933aa1a24b"
+    },
+    "completion_records": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class2-lane-cost69f-win7-certificates-2-20261115.json",
+      "blob_sha": "6a1f7a9da13a252889f8f49d6ed3d5a6f75b5e7e"
+    },
+    "receipt_fold": {
+      "path": "research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-cost69f-receipts-recompute-20261115.json",
+      "blob_sha": "683cbb8671e12ce0f91cd3c4bd0bbb519878a965"
+    }
+  },
+  "method": {
+    "full_tree": "The four split certificate bodies were fetched by Git blob SHA and rechecked in separate V8 executions using the published BigInt 3x3-cofactor strategy-verifier algorithm; no solver, verdict cache, or search result was imported.",
+    "independent_geometry": "A separate 4x4 determinant permutation expansion independently re-enumerated every legal 8th move from each 7-stone root and checked all 35 root quadruples.",
+    "integrity": "MD5 and SHA256 of each joined certificate, and Git blob SHA1 of all eight stored parts, were recomputed from fetched bytes."
+  },
+  "second_independent_results": [
+    {
+      "bit": 2,
+      "root_hex": "0000000000000080910200000000000c",
+      "rows": 69879,
+      "bytes": 2532382,
+      "md5": "9069f6d9ce4acf1d19854b1eb30d0d42",
+      "sha256": "c489e925c1830ff744e7cf27d7c73a3173227c0d4835aab8b194b747fe935b59",
+      "root_mobility": 58,
+      "subroots_pass": 58,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 142740,
+      "winner_states": 92342,
+      "loser_states": 27477,
+      "loser_reply_edges": 131019,
+      "terminal_count": 22921,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "v15_anchor_nodes": 16285738,
+      "part_blob_shas": [
+        "6f2e74d833053f0bd662ea68917d8c955ad4ab06",
+        "1b3f062900dcf35c4f8a38db29164436f2317cdb"
+      ]
+    },
+    {
+      "bit": 94,
+      "root_hex": "00000000400000809102000000000008",
+      "rows": 53449,
+      "bytes": 1932853,
+      "md5": "54cedbaaf5dfbdb3453747bab342ba26",
+      "sha256": "01c1c7512d5a86789e686ecd6a148a2b45787839c2564d8a0cd5113b430d2feb",
+      "root_mobility": 56,
+      "subroots_pass": 56,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 120250,
+      "winner_states": 77307,
+      "loser_states": 22782,
+      "loser_reply_edges": 107309,
+      "terminal_count": 20161,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "v15_anchor_nodes": 15200842,
+      "part_blob_shas": [
+        "8b0886a7e519973dc87088a4b295c13552b68ff5",
+        "264f6842f3b9e86005f0109b24a48e507cc05084"
+      ]
+    },
+    {
+      "bit": 109,
+      "root_hex": "00002000000000809102000000000008",
+      "rows": 71485,
+      "bytes": 2583344,
+      "md5": "565997a4ed5dfdefddf2c2fd4af08102",
+      "sha256": "0ce501ace90bf9fea32c2f8a5ec60300f8d12795b4bc7cf0f5bf8a29e45abfa7",
+      "root_mobility": 60,
+      "subroots_pass": 60,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 153920,
+      "winner_states": 98972,
+      "loser_states": 28551,
+      "loser_reply_edges": 136384,
+      "terminal_count": 26397,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "v15_anchor_nodes": 13955169,
+      "part_blob_shas": [
+        "fe74858df6402fd120657087afd40d56300ba01c",
+        "93bc79e30c2ef4286b4a26eeed7a3b8ca249dbb4"
+      ]
+    },
+    {
+      "bit": 119,
+      "root_hex": "00800000000000809102000000000008",
+      "rows": 67423,
+      "bytes": 2432356,
+      "md5": "1e2b661e5c69a51d7b00b84174e4104e",
+      "sha256": "1dc1124ad8591381bb640afeb02387a273bd97259b130c983ba37807b3963486",
+      "root_mobility": 61,
+      "subroots_pass": 61,
+      "union_missing": 0,
+      "union_extra": 0,
+      "visited_states": 143363,
+      "winner_states": 92238,
+      "loser_states": 27346,
+      "loser_reply_edges": 127388,
+      "terminal_count": 23779,
+      "terminal_range": [
+        13,
+        17
+      ],
+      "v15_anchor_nodes": 13661829,
+      "part_blob_shas": [
+        "7275fcd94de09b16aa80e608ea918825a1795b72",
+        "5fde79ff940e0f8090dc03b793fd3d6f7f64d4c6"
+      ]
+    }
+  ],
+  "aggregate": {
+    "rows": 262236,
+    "extraction_nodes": 90446193,
+    "visited_states": 560273,
+    "winner_states": 360859,
+    "loser_states": 106156,
+    "loser_reply_edges": 502100,
+    "terminal_count": 93258,
+    "bytes": 9480935,
+    "v15_nodes": 59103578,
+    "root_mobility": 235
+  },
+  "checks": {
+    "all_four_full_tree_verifications_pass": true,
+    "all_four_strategy_rows_sorted_unique": true,
+    "all_four_union_missing_zero_extra_zero": true,
+    "all_four_terminal_ranges_13_17": true,
+    "all_four_root_mobility_matches_independent_4x4_determinant": true,
+    "all_four_marginal_parent_orbits_are_subsets_of_root_d4_parent_covers": true,
+    "all_four_joined_md5_sha256_and_bytes_match_manifest": true,
+    "all_eight_git_blob_sha1_match": true,
+    "cost69f_all_nine_certificates_present": true,
+    "cost69f_uncertified_bits_after_empty": true
+  },
+  "frontier": {
+    "baseline_solved_s6_in_manifest": 1154,
+    "after_solved_s6_in_manifest": 1163,
+    "newly_certificate_backed_s6_orbits": 9,
+    "remaining_s5_orbits": 175,
+    "unique_remaining_s6": 6684,
+    "sum_remaining_cost": 527280,
+    "s6_needed_by_open_classes": 4954,
+    "cost_needed_by_open_classes": 391003,
+    "best_class2": {
+      "s5_hex": "00000000000000809102000000000000",
+      "classes": 2,
+      "remaining_s6_orbits": 7,
+      "remaining_s7_edge_cost": 519
+    },
+    "interpretation": "Coverage of nine S6 manifest orbits is now certificate-backed. This does not close the S5 parent, a two-stone root, or the empty board."
+  },
+  "coordination": {
+    "cost69g_claim": {
+      "s6_child": "00000000000000809102000000002000",
+      "s6_s7_edge_cost": 69,
+      "candidate_count": 69,
+      "status": "claimed/in-flight by another lane"
+    },
+    "cost65j_claimed_child": "00000000000000809102000080000000",
+    "cost65j_child_status_in_cost69g_claim": "already covered at canonical head according to the current cost69g claim; recheck before allocating work",
+    "cross_cover_note": "cost65j bit113's potential 7-stone root shares the S6 parent orbit 00000000000000809102000000000008 with the now-verified cost69f bit2 root, but is a different S7 D4 orbit. Any later certificate for that parent must not be double-counted."
+  },
+  "unknown_status": "Standard 11x11 empty board UNKNOWN; two-stone roots {49,60} and {59,60}, S2 {59,60}, class 2 and class 4 UNKNOWN."
+}
