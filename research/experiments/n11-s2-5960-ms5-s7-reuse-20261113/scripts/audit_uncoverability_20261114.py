@@ -200,4 +200,3 @@ for r in next2[:5]:
     print(' ', r['s5_hex'], 'remaining', r['remaining_s6_orbits'], 'cost', r['remaining_s7_edge_cost'],
           'sterile-swept', r['sterile_swept_children'], 'unswept', r['unswept_children'],
           'cheapest-unswept', r['cheapest_unswept'])
-

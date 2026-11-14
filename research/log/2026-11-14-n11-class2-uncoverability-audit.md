@@ -75,4 +75,3 @@ class 2, and class 4 all remain **UNKNOWN**.
 
 - `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/scripts/audit_uncoverability_20261114.py`
 - `research/experiments/n11-s2-5960-ms5-s7-reuse-20261113/output/class-frontier-uncoverability-audit-20261114.json`
-
