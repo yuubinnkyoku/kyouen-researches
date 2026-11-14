@@ -71,3 +71,4 @@ environment with the raw batches unpushed).
 11x11 empty board: UNKNOWN. Two-stone root {49,60}: UNKNOWN. S2 {59,60}: UNKNOWN.
 class 2 / class 4 blockers: UNKNOWN. (REFUTED-D10 decides nothing about the child;
 WIN7 certificates prove only individual 7-stone roots.)
+

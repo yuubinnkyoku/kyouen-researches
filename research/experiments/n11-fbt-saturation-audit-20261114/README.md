@@ -82,13 +82,42 @@ differ by the documented constant 35.
 - Remaining unaudited ≥19M-node rows from earlier sweeps (e.g. cost-65b/66a/66b/
   68/68b/70b heaviest rows) are cheap follow-ups.
 
+
+## Follow-up (same day): full class2-lane closure
+
+The first pass covered this S5 target's swept children. The follow-up scanned all 19
+published class2-lane sweep records (cost-65b through cost-74), listed every raw
+candidate row with >= 19M nodes (6 unaudited) plus every remaining WIN7 row (11
+unaudited), and re-solved all 17 deduplicated rows instrumented. All 17 are
+node-exact / verdict-exact against the published raw batches.
+
+- **Every WIN7 row of the entire class2 lane is now audited: 19/19 with fbtDrops=0**
+  (first pass 8 + follow-up 11, including the parallel-lane cost-73a bit81).
+- **3 new saturated rows** (all REFUTED-D10, all confirmed surviving drop-free):
+
+  | sweep | bit | drops | occupancy | canonical nodes | drop-free nodes | verdict |
+  |-------|-----|-------|-----------|-----------------|-----------------|---------|
+  | cost-69c | 68 | **208,479** | 106,411 (81.2%) | 22,139,194 | 21,821,889 | survives |
+  | cost-69c | 110 | 13,151 | 95,315 (72.7%) | 23,731,323 | 23,850,131 | survives |
+  | cost-70 | 86 | 5,703 | 94,547 (72.1%) | 20,457,811 | 20,458,227 | survives |
+
+- Clean heavy REFUTED rows at 28.8M / 24.8M / 22.3M nodes with only 75,510 /
+  84,596 / 71,620 occupancy show that node count alone does not predict saturation;
+  occupancy (fbtInserts) does. Every saturated row across both phases sits above
+  ~90.6k occupancy, every clean row below ~87.2k.
+- **Combined totals: 37 rows audited, 9 saturated, 9/9 confirmed drop-free, 0
+  verdict flips, 0 WIN7 rows affected.** No published verdict, frontier number, or
+  certificate changes.
+
 ## Files
 
 - `scripts/runner_instr.ts` — instrumented canonical (FBS=1<<17 + counters)
 - `scripts/runner_fbs20.ts` — drop-free variant (FBS=1<<20 + counters)
 - `output/instrumented-runs.jsonl` — 20 audited rows with counters
 - `output/drop-free-reresolve.jsonl` — 6 saturated rows re-solved drop-free
-- `output/runs-manifest.json` — structured summary, cross-checks, conclusions
+- `output/instrumented-runs-followup.jsonl` — 17 follow-up rows (>=19M + remaining WIN7)
+- `output/drop-free-reresolve-followup.jsonl` — 3 follow-up saturated rows re-solved drop-free
+- `output/runs-manifest.json` — structured summary, cross-checks, conclusions (both phases)
 
 ## Interpretation guard
 

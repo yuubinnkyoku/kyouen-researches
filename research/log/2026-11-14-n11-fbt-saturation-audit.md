@@ -64,3 +64,23 @@ scratch.
 REFUTED-D10 is the absence of a winner-win-within-depth-10 in a 7-stone subtree;
 it is not a refutation of the child. **11x11 empty board, two-stone root {49,60},
 S2 {59,60}, class 2, class 4: UNKNOWN.**
+
+## Follow-up (same session): full class2-lane closure
+
+Scanned all 19 published class2-lane sweep records and enumerated every raw row
+>= 19M nodes (6 unaudited) plus every remaining WIN7 row (11 unaudited); re-solved
+all 17 deduplicated rows with the instrumented runner (17/17 node-exact vs the
+published raw batches) and re-solved the 3 newly found saturated rows drop-free.
+
+- New saturated rows: cost-69c bit110 (13,151 drops, 95,315 occupancy), cost-69c
+  bit68 (208,479 drops, 106,411 occupancy), cost-70 bit86 (5,703 drops, 94,547
+  occupancy). All three survive the FBS=1<<20 drop-free re-solve (loss=false).
+- All 11 follow-up WIN7 rows are clean (0 drops), completing the class2-lane
+  WIN7 coverage: 19/19 WIN7 rows audited, all with 0 drops.
+- Clean 28.8M/24.8M/22.3M-node rows with only 71k-85k occupancy show node count
+  alone does not predict saturation; occupancy does.
+- Combined: 37 rows audited, 9 saturated, 9/9 confirmed drop-free, 0 verdict
+  flips. Frontier numbers and certificates unchanged. 11x11 remains UNKNOWN.
+
+Artifacts: `output/instrumented-runs-followup.jsonl`,
+`output/drop-free-reresolve-followup.jsonl`, updated `output/runs-manifest.json`.
