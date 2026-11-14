@@ -1,6 +1,6 @@
 ---
 id: K0815
-title: 列追加拡張と外部SATソルバによる下界更新 — M_{6,5}≥30・M_{6,6}≥23・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37
+title: 列追加拡張・深除去拡張と外部SATソルバによる下界更新 — M_{6,5}≥31・M_{6,6}≥24・M_{5,6}≥22・M_{6,7}≥21・M_{6,8}≥19・6×12 q=8最小極大=37
 kind: proposition
 status: proved
 topics: [rectangles, variants]
@@ -8,7 +8,7 @@ aliases: []
 relations:
 - type: generalizes
   target: K0811
-  note: SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証
+  note: SA抵抗帯6×29/6×22に欠損極大witnessが実在することを拡張列挙で示し下界を更新。M_{6,5}=29可能性（6×29 UNSAT）は反証。深除去拡張（第5弾）で6×30・6×23にもwitnessを実在させ M_{6,5}=30・M_{6,6}=23 の可能性も反証
 - type: depends_on
   target: K0810
   note: encode()/toDimacs 符号化をverbatim使用しDIMACSをkissat 4.0.4に投入。6×12 q=8 cap=38/37（自作CDCLのtimeout×2帯）がSAT
@@ -73,17 +73,32 @@ artifacts:
 - path: research/experiments/encoding-symmetry-kissat-20261114/report.md
   role: proof
   note: 第4弾の手法・検証プロトコル・決定的再現・符号化の非対称効果の記録
+- path: research/experiments/extend6-deep-removal-20261114/scripts/extend6.js
+  role: source
+  note: 深除去列拡張の決定的列挙（base witnessのシフト+除去r石+未ブロック空セルへの追加 |kept|+|A|<=w(q-1)-1・全候補verifyConfig・u>24/maxA>6の葉は文書化済み不完備スキップ）
+- path: research/experiments/extend6-deep-removal-20261114/scripts/verify_rowcase.py
+  role: source
+  note: Python独立検証器ラッパー（verify_py.py と同方式・Fraction厳密演算）
+- path: research/experiments/extend6-deep-removal-20261114/output/w65_30.json
+  role: data
+  note: 6×30 q=5 23石witness 2件（行構成 4,4,4,4,3,4・rem=4/add=4・2系統検証PASS）→ M_{6,5} >= 31
+- path: research/experiments/extend6-deep-removal-20261114/output/w66_23.json
+  role: data
+  note: 6×23 q=6 29石witness 8件（行構成 5,4,5,5,5,5・rem=3/add=3・2系統検証PASS）→ M_{6,6} >= 24
+- path: research/experiments/extend6-deep-removal-20261114/report.md
+  role: proof
+  note: 第5弾の手法・部分空間完全性根拠・較正・陰性結果の記録
 solution:
   board: 6×m（q=5,6,7,8）・5×m（q=6,7）・6×12（q=8）
   level: weak
   outcome: conditional
   classification: [root]
-  coverage: (6,5) 6×29・(6,6) 6×22・(5,6) 5×20,21・(6,7) 6×20・(6,8) 6×18 の各盤の欠損極大witness・6×12 q=8 の37石極大安全配置
+  coverage: (6,5) 6×29,30・(6,6) 6×22,23・(5,6) 5×20,21・(6,7) 6×20・(6,8) 6×18 の各盤の欠損極大witness・6×12 q=8 の37石極大安全配置
   conditions: q点共円・共線禁止・標準整数格子
   verification: [independent-enumeration]
   certificate: witness座標（全witnessがJS census不使用独立検証器とPython別実装検証器の2系統で safe+maximal PASS）
   independent_check: 別言語・別アルゴリズム（石ペア直線・石3点組円の全列挙・Fraction厳密演算）による直接判定の一致
-  note: 下界更新のみ（第1〜3弾）。第4弾で6×12 q=8 cap=36 が UNSAT（totalizer+lex 符号化 10,225,097 conflicts・K0810元符号化 20,469,242 conflicts の2符号化で一致）に決着し、6×12 q=8 最小極大サイズ=37 が確定。6×30 (q=5)・6×23 (q=6)・5×22 (q=6)・6×19 (q=8)・6×21 (q=7)・5×20 (q=7) は未決着であり不在証明ではない。5×19 (q=7) は K0738–K0759 の occupancy 完全列挙で不在が確定済み（第3弾参照）
+  note: 下界更新のみ（第1〜3弾）。第4弾で6×12 q=8 cap=36 が UNSAT（totalizer+lex 符号化 10,225,097 conflicts・K0810元符号化 20,469,242 conflicts の2符号化で一致）に決着し、6×12 q=8 最小極大サイズ=37 が確定。第5弾で 6×30 (q=5)・6×23 (q=6) に欠損極大witnessが実在し M_{6,5}=30・M_{6,6}=23 の可能性が反証。6×31 (q=5)・6×24 (q=6)・5×22 (q=6)・6×19 (q=8)・6×21 (q=7)・5×20 (q=7) は未決着であり不在証明ではない。5×19 (q=7) は K0738–K0759 の occupancy 完全列挙で不在が確定済み（第3弾参照）
 ---
 
 # 列追加拡張とkissatによる下界更新（2026-11-14）
@@ -191,3 +206,30 @@ K0810符号化コアをそのまま使い、3点を追加した符号化 sat2.js
   「totalizer+lex」のポートフォリオを推奨。
 - 275秒単発では 6×19 q=8 def+lex 5.86M・6×21 q=7 def+lex 4.55M でも未決着
   （旧拡張符号化との比較で conflict/秒は改善・決着には長時間予算が必要）。
+
+## 第5弾: 深除去列拡張（extend6）— M_{6,5} ≥ 31・M_{6,6} ≥ 24
+
+既知witnessプールを base とし、(列シフト) − (除去 r 石) + (未ブロック空セルへの追加・
+|kept|+|A| ≤ w(q−1)−1) の候補を決定的に全列挙する extend6.js を開発した
+（research/experiments/extend6-deep-removal-20261114/・コードヘッダに部分空間内の
+完全性根拠・u>24/maxA>6 の葉は文書化済み不完備スキップ）。
+較正: 6×28→6×29 r=0・6×21→6×22 r=0 で第1弾の既知witnessを再現。
+
+- **M_{6,5} ≥ 31**: 6×30 q=5 に23石欠損極大witness 2件（6×29 23石base から
+  rem=4/add=4・off=1・行構成 4,4,4,4,3,4）。第1弾の「6×30 未決着」
+  （kissat 260s・余剰0空列ブロック・r≤3+新規列追加で不発）を深除去 r=4 で決着。
+  M_{6,5}=30 の可能性は反証。
+- **M_{6,6} ≥ 24**: 6×23 q=6 に29石欠損極大witness 8件（6×22 29石base から
+  rem=3/add=3・off=0/1・行構成 5,4,5,5,5,5）。
+- 全witness 2系統検証 PASS（JS census 不使用・Python Fraction 別実装）。
+  repo 版 extend6.js（パス環境変数化）での再実行で distinct 2件・8件を再現。
+- 陰性（pool相対・uOverflow スキップが支配的で証拠力は限定的）:
+  6×31 q=5 r≤5 ← 30base（44,552 leaves・uOverflow ≈99.8%）・
+  6×24 q=6 r≤4 ← 23base（27,841 leaves・uOverflow ≈99%）は 0件。
+  第2ラウンド（dm=1 前線の直接拡張）: 6×21 q=7 r≤3 ← 20base（7,176 leaves/off・
+  uOverflow 88%・subsets 1,118,211）・5×22 q=6 r≤3 ← 21base（2,325 leaves/off・
+  uOverflow 90%）・6×19 q=8 r≤2 ← 18base（862 leaves/off・uOverflow 57%・r=3 未走査）
+  も 0件 — いずれも限定非不在。
+
+現在の境界: M_{6,5} ∈ [31,658]・M_{6,6} ∈ [24,495]（上界は不変）。
+witness 前線は 6×31・6×24 に移動。
