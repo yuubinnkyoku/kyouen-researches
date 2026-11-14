@@ -13,9 +13,6 @@ relations:
   target: K0332
   note: "5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来"
 - type: depends_on
-  target: K0821
-  note: "5x21 witness-free (K0821, all 19 classes by class-split SAT with the k/minpos decomposition from this item) extends the witness-free width set to {19,20,21}: M_{5,7} in {19,20,21} or >= 23; the frontier stated here (5x21) is settled"
-- type: depends_on
   target: K0815
   note: "5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定"
 - type: depends_on

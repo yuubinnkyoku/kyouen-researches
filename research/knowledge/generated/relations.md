@@ -83,6 +83,7 @@
 - ← depends_on [K0781](../items/K0781-p2531-no-size-h1-set.md): 安全集合の定義（整数平面で共円・共線の四点を含まない）
 - ← depends_on [K0787](../items/K0787-greedy-lower-bounds-2531-3251.md): 共線・共円四点を含まない安全集合の定義
 - ← depends_on [K0814](../items/K0814-attained-equality-3793-3803-3863.md): 共線・共円四点を含まない安全集合の定義
+- ← depends_on [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): 安全な追加だけを合法手とする通常プレイの規則
 
 ## [K0002](../items/K0002-grundy-and-first-move-conventions.md) Grundy数・P/Nと勝ち初手の向き
 
@@ -1818,6 +1819,7 @@
 - ← supports [K0795](../items/K0795-fixed-width-pw-mwq-results-table.md): 安定化長M_{w,q}の定義と枠組み。本項目で確定値・境界・分離帯が機械可読化された
 - ← supports [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): w=5の低q側帯の上界会計にP(5)=8を供給
 - ← depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): 5x18 29石witnessが下界（M≥19）と5x18陽性対照の由来
+- ← depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts)
 
 ## [K0333](../items/K0333-modular-polynomial-curve-q-point-bound.md) 次数k≥2の剰余多項式グラフは直線高々k点・円高々2k点でq≥2k+1版が全点安全
 
@@ -1958,6 +1960,7 @@
 - ← depends_on [K0363](../items/K0363-capacity-finite-height-distribution-error.md): 最大到達終局石数による全対局長の一様上限を使う
 - ← depends_on [K0387](../items/K0387-unequal-capacity-even-slack-grundy-three.md): 等容量の抽象ゲームを列別上限へ変更する際の適用境界を明確化する
 - ← generalizes [K0403](../items/K0403-unequal-top-h-terminal-spectrum-and-hole-count.md): 等容量上位h列の終局分類を異容量へ拡張
+- ← generalizes [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md): K0352の一般位置底面に限らず任意の有限底面で占有ベクトル縮約が成立する。K0352の閉形式分類までは一般化しない
 
 ## [K0353](../items/K0353-two-dimensional-parallel-columns.md) 二次元平行列盤では各列独立容量となり全局面Grundyは石数偶奇だけで決まる
 
@@ -4202,6 +4205,7 @@
 - → depends_on [K0727](../items/K0727-blocker-obligation-fill-m57.md): blocker-obligation-fill DFS（sound+complete・行fill修正済み）による完全列挙
 - → depends_on [K0726](../items/K0726-width-five-nineteen-curve-census.md): blocker候補曲線census（7点円8本・8点円87本・行直線5本）
 - → supports [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): M_{5,7}=19 予想のうち単一行欠損クラスの行1/行3側の否定部
+- ← depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
 
 ## [K0739](../items/K0739-five-row-m19-class2-nonexistence.md) 5×19 の (5,6,6,6,6) 型・行2欠損の極大安全配置は全8,378ケースで存在しない — 単一行欠損クラス完結
 
@@ -4646,6 +4650,7 @@
 - ← depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): level会計・窓マスク・証明書の枠組みと24プラトーw=26..35・普遍上界。本項目はK0784レジューム「level 13のw=36..42分類（streaming）」の完了
 - ← supports [K0789](../items/K0789-width19-21-pw16-certificate.md): 命題4（P(21) open）を閉鎖。w=21 level 9 の生残16集合を拡張法で全滅させ P(21)=16 を確定。P(w) の全幅決定（6..48）の最後の欠片
 - ← depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): level 全滅原理・窓マスク候補生成・意味論
+- ← depends_on [K0823](../items/K0823-sigma-side-window-p-inverse.md): P(22..35) の全称値と650円S* witness が σ(17..24) を確定
 
 ## [K0785](../items/K0785-circle-26-points-min-row-span.md) 26点円の中心窓最小幅43（E族・R=2210一意）とZ族58 — 全称証明、bestK表（E K=13..24・Z K=13..18 全称）
 
@@ -4663,6 +4668,7 @@
 - ← supports [K0804](../items/K0804-width69-82-pw32-plateau.md): level 17復活点を (68,83] からちょうど (82,83] に狭窄・34点最小幅83の左端を確定
 - ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 11050円 witness（P(83..86)≥34・34点最小幅83）が生残予測の源（w86の生残も本円の窓censusから予測された）
 - ← supports [K0807](../items/K0807-width83-positive-control-revival-point.md): level 17 復活点を理論値 (82,83] から実測でちょうど w=83 に確定・witness パターンの掃引機内での完全特定（w83..w86）
+- ← supports [K0823](../items/K0823-sigma-side-window-p-inverse.md): E族中心窓bestK(K=13..17)が側窓σ(2k)と完全一致。旧「側窓σ₁₃はopen・全体σ₁₃∈[36,43]」注記は本項目で解消（σ₁₃=43）
 
 ## [K0786](../items/K0786-width36-48-circle-strip-witnesses.md) 幅36..48の円点数の新規下界 P(43)≧26・P(44),P(45)≧28・P(46),P(47)≧30・P(48)≧32 — witness円2210（初の26点超）・P(36)..P(42)≧24・族スキャン制御は既知P(w)と完全一致（w=6..35）
 
@@ -4690,6 +4696,7 @@
 - ← depends_on [K0790](../items/K0790-width49-55-pw32-plateau.md): streaming level 分類機・convention B g0 会計・2210 witness の直接拡張。w=43..48 の跳躍帯に続き 32 を平らに延長
 - ← depends_on [K0797](../items/K0797-g0-accounting-valid-through-w84.md): convention B g0会計（classMax・u奇制限・類変数t）の定式化をそのまま使用
 - ← depends_on [K0800](../items/K0800-joint-g0-accounting-w114.md): convention B g0会計（classMax・u奇制限・類変数t）の定式化をそのまま使用
+- ← depends_on [K0823](../items/K0823-sigma-side-window-p-inverse.md): P(36..48) の全称値が σ(25..32) の下界
 
 ## [K0789](../items/K0789-width19-21-pw16-certificate.md) 幅19..21の円点数の完全決定 P(19)=P(20)=P(21)=16 — 基底18法生残16集合が素数冪（11²・7³）のみで全滅 — K0778の条件付き上界を無条件等号に強化・P(w)は全幅6..48で決定済みに
 
@@ -4720,6 +4727,7 @@
 - → depends_on [K0072](../items/K0072-mod9-integer-row-separation.md): 行分離・円格子点の標準形（2x−A)²+(2y−B)²=R と3原始実現の分類
 - ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 34点最小幅83（復活点の右端の理論的裏付け）
 - ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(83)≥34 を与える11050円の全整数点・窓計数 witness
+- ← supports [K0823](../items/K0823-sigma-side-window-p-inverse.md): レジューム2「σ₁₇の直接決定」は掃引延長なしで閉じた（σ₁₇=83）。34点最小幅83がR′≤10⁸掃引スコープから全称に昇格
 
 ## [K0792](../items/K0792-width56-pw32-plateau-extension.md) 幅56..59の円点数の完全決定 P(56)=…=P(59)=32 — 32点プラトーがw=59まで継続 — P(w)は全幅6..59で決定済み・level 17の復活点は(59,83]に狭窄・g4会計はw=65で飽和
 
@@ -4836,6 +4844,7 @@
 - ← depends_on [K0805](../items/K0805-mask-census-closed-form.md): dual-run unique（w=69..82・14 点）が閉形式の制御値
 - ← depends_on [K0807](../items/K0807-width83-positive-control-revival-point.md): 掃引機（width_sweep.mjs）と w≤82 全滅の境界。本項はその正制御完了（w83..86）
 - ← depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(82)=32 の全称値を漸近上界と P(83) 上界に使用
+- ← depends_on [K0823](../items/K0823-sigma-side-window-p-inverse.md): P(49..82)=32 の全称値が σ(33),σ(34)≥83 の下界
 
 ## [K0805](../items/K0805-mask-census-closed-form.md) マスクセンサスの全幅閉形式決定 — level 17 窓マスク掃引の (unique(w), maximal(w)) が交叉統計と区間支配判定で全 w≧17 に決定（unique 3630 到達は w=96 が鋭い・初出現 w=37・maximal=3300 は全 w≧66 で厳密・小パターン参入窓 265..286/309..363/529..561）
 
@@ -4890,6 +4899,8 @@
 - ← depends_on [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js); the class-split unit clauses are the only addition
 - ← depends_on [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses are the only addition
 - ← depends_on [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
+- ← depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- ← depends_on [K0822](../items/K0822-row-mirror-canonical-class-count.md): the --class=D row constraints are unit clauses on the K0810 rowGe/row-chain core; the objects counted (non-empty exact deficiency sets of rows, modulo the row mirror) are defined by that machinery (sat3.js)
 
 ## [K0811](../items/K0811-sa-row-deficient-witnesses.md) SA探索による行欠損極大witness — M_{6,5}≥29・M_{6,6}≥22・M_{5,6}≥19（K0810の下界を更新・第2弾/第3弾で延長）
 
@@ -4942,12 +4953,16 @@
 - → depends_on [K0815](../items/K0815-witness-column-extension-kissat-bounds.md): 5×20はkissat/貪欲/SA/portfolio全てで未決着だった前線（K0815 note・frontier-portfolio-20261114）。今回完全列挙で不在確定
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): SAT交叉確認はK0810 sat.jsのcensus（circleABC整数三元組・runnerの外心形式と独立）を使用
 - ← generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): same class-split methodology as the 5x20 q=7 nonexistence, applied at w=6 without the runner system: pure per-class UNSAT sweep with lex cross-checks and small-board ground-truth validation
+- ← depends_on [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- ← generalizes [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md): the same class-split proposition one width further: 5x20 (K0816) -> 5x21; witness-free width set {19,20} -> {19,20,21}
+- ← generalizes [K0822](../items/K0822-row-mirror-canonical-class-count.md): the 19 row-mirror-canonical classes swept at 5x20 equal C(5) = 19 (the first recorded use of the w=5 count)
 
 ## [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md) 円の連続行窓点数 P(w) の劣加法性・鋭い線形誤差上界・P(83)=34
 
 - → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): P(82)=32 の全称値を漸近上界と P(83) 上界に使用
 - → depends_on [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md): P(w) の円格子点数定義と各水平行2点上界の枠組み
 - → depends_on [K0791](../items/K0791-circle-34pt-witness-verified.md): P(83)≥34 を与える11050円の全整数点・窓計数 witness
+- ← depends_on [K0823](../items/K0823-sigma-side-window-p-inverse.md): P(83)=34・P(1)=2・劣加法性とP表の枠組み
 
 ## [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md) 6x19 q=8 row-deficient maximal nonexistence (all 35 canonical classes UNSAT) — witness-free width set of (6,8) gains 19, M_{6,8} = 19 or >= 21
 
@@ -4956,6 +4971,7 @@
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): same class-split methodology as the 5x20 q=7 nonexistence, applied at w=6 without the runner system: pure per-class UNSAT sweep with lex cross-checks and small-board ground-truth validation
 - ← generalizes [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
+- ← generalizes [K0822](../items/K0822-row-mirror-canonical-class-count.md): the 35 row-mirror-canonical classes swept at 6x19 equal C(6) = 35 (K0819 at 6x20 and K0821 at 5x21 reuse the same counts)
 
 ## [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) 6x20 q=8 row-deficient maximal nonexistence (all 35 canonical classes UNSAT) — witness-free width set of (6,8) extends to {19,20}, M_{6,8} ∈ {19,20} or >= 22
 
@@ -4964,8 +4980,36 @@
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone control (SAT rediscovered); 2x9 q=4 UNSAT control consistent with M_{2,4}=9
 - → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the m=19 class-split sweep extended to m=20 with the identical machinery; 6x20 was the witness-search frontier opened by K0818
 
-## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..60 (M_{7,9} = 24 or >= 61), (7,10) witness-free band 19..40 confirmed by kissat and extended to 60 (M_{7,10} = 19 or >= 61)
+## [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) 7xm q=9 / q=10 row-deficient witness bands — (7,9) witnesses 9..23 and witness-free 24..100 (M_{7,9} = 24 or >= 101), (7,10) witness-free band 19..40 confirmed by kissat and extended to 100 (M_{7,10} = 19 or >= 101)
 
 - → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) + sequential-counter/maximality core used verbatim (sat.js/sat2.js); the def-mode single clause and lex-leader constraints are the source experiment's sat2.js additions
 - → depends_on [K0796](../items/K0796-two-row-m24-stabilization-nine.md): 2x8 q=4 5-stone SAT control and 2x9 q=4 UNSAT control (fastsat conflicts bit-exact with the source experiment; kissat agrees) — consistent with M_{2,4}=9
 - → depends_on [K0318](../items/K0318-fixed-width-curve-packing-upper-bound.md): upper bounds U_{7,9}=613 and U_{7,10}=587 by curve-packing substitution (w7_upper_bounds.json of the source experiment)
+
+## [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) 5x21 q=7 row-deficient maximal nonexistence (all 19 canonical classes UNSAT) — witness-free width set of (5,7) extends to {19,20,21}, M_{5,7} ∈ {19,20,21} or >= 23
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): census (circleABC integer triples, line pairs) and the sequential-counter/maximality core are used verbatim (sat.js / sat2.js / sat3.js); the class-split unit clauses and the k/minpos splits are the only additions
+- → depends_on [K0332](../items/K0332-width-five-q7-stabilization-bounds.md): 5x18 29-stone witness is the lower bound (least witness width 18) and the positive-control board (rediscovered SAT, 343,134 conflicts)
+- → depends_on [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the m=20 nonexistence item; the k x minpos decomposition protocol for the hard singleton classes {0},{1} and the 5x18 positive control are taken from its cross-check lane
+- → depends_on [K0738](../items/K0738-five-row-m19-class1-nonexistence.md): 5x19 witness-free by the occupancy complete enumeration (via the K0759 machine) — the first element of the witness-free width set
+- → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the same class-split proposition one width further: 5x20 (K0816) -> 5x21; witness-free width set {19,20} -> {19,20,21}
+
+## [K0822](../items/K0822-row-mirror-canonical-class-count.md) Row-mirror-canonical deficiency class count for w-row class-split sweeps: C(w) = 2^(w-1) + 2^(ceil(w/2)-1) - 1 (19 at w=5, 35 at w=6, 71 at w=7, 135 at w=8)
+
+- → depends_on [K0810](../items/K0810-sat-row-deficient-witnesses.md): the --class=D row constraints are unit clauses on the K0810 rowGe/row-chain core; the objects counted (non-empty exact deficiency sets of rows, modulo the row mirror) are defined by that machinery (sat3.js)
+- → generalizes [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md): the 19 row-mirror-canonical classes swept at 5x20 equal C(5) = 19 (the first recorded use of the w=5 count)
+- → generalizes [K0818](../items/K0818-six-row-q8-m19-deficient-nonexistence.md): the 35 row-mirror-canonical classes swept at 6x19 equal C(6) = 35 (K0819 at 6x20 and K0821 at 5x21 reuse the same counts)
+
+## [K0823](../items/K0823-sigma-side-window-p-inverse.md) 円格子点の最小行窓幅 σ(n)=min{w:P(w)≥n} — n≤34の全称決定（σ₁₃=43・σ₁₇=83）・中心窓版n=26..34の同値・K0791レジューム2と旧側窓σ₁₃注記の解消
+
+- → depends_on [K0817](../items/K0817-circle-strip-subadditivity-and-density-bound.md): P(83)=34・P(1)=2・劣加法性とP表の枠組み
+- → depends_on [K0804](../items/K0804-width69-82-pw32-plateau.md): P(49..82)=32 の全称値が σ(33),σ(34)≥83 の下界
+- → depends_on [K0788](../items/K0788-width36-48-exact-circle-point-counts.md): P(36..48) の全称値が σ(25..32) の下界
+- → depends_on [K0784](../items/K0784-width21-35-pw-exact-universal-bound.md): P(22..35) の全称値と650円S* witness が σ(17..24) を確定
+- → supports [K0785](../items/K0785-circle-26-points-min-row-span.md): E族中心窓bestK(K=13..17)が側窓σ(2k)と完全一致。旧「側窓σ₁₃はopen・全体σ₁₃∈[36,43]」注記は本項目で解消（σ₁₃=43）
+- → supports [K0791](../items/K0791-circle-34pt-witness-verified.md): レジューム2「σ₁₇の直接決定」は掃引延長なしで閉じた（σ₁₇=83）。34点最小幅83がR′≤10⁸掃引スコープから全称に昇格
+
+## [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) 任意底面の高次元平行列盤は超平面跡容量ゲームへ厳密縮約される
+
+- → depends_on [K0001](../items/K0001-complete-call-rules.md): 安全な追加だけを合法手とする通常プレイの規則
+- → generalizes [K0352](../items/K0352-general-dimensional-parallel-columns.md): K0352の一般位置底面に限らず任意の有限底面で占有ベクトル縮約が成立する。K0352の閉形式分類までは一般化しない

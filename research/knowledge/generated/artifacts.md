@@ -1955,6 +1955,30 @@
 ## [research/experiments/five-row-q7-m20-20261114/scripts/run_class.sh](../../../research/experiments/five-row-q7-m20-20261114/scripts/run_class.sh)
 
 - [K0816](../items/K0816-five-row-m20-deficient-nonexistence.md) (source): クラス単位のスライス再開ドライバ（JSONL永続化・witness検出時停止）
+## [research/experiments/five-row-q7-m21-class-split-20261114/output/r5x21q7_0k5p0.txt](../../../research/experiments/five-row-q7-m21-class-split-20261114/output/r5x21q7_0k5p0.txt)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (data): hardest deciding instance raw kissat log ({0} k=5 minpos=0: 3,295,997 conflicts UNSAT); all 51 raw logs r5x21q7_*.txt
+## [research/experiments/five-row-q7-m21-class-split-20261114/output/r_ctrl_5x18_c0.txt](../../../research/experiments/five-row-q7-m21-class-split-20261114/output/r_ctrl_5x18_c0.txt)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (data): positive control log: 5x18 class {0} SAT 343,134 conflicts; decoded 29 stones rows (5,6,6,6,6), census-free verifyConfig PASS (K0332 witness rediscovered end-to-end)
+## [research/experiments/five-row-q7-m21-class-split-20261114/output/records.jsonl](../../../research/experiments/five-row-q7-m21-class-split-20261114/output/records.jsonl)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (data): 52 records: 17 direct class UNSAT + 32 k/minpos decomposition UNSAT ({0},{1}: k=0..4 and k=5 x minpos=0..10) + 2 lex=H cross-checks + 1 positive control (SAT); total m=21 conflicts 28,617,104
+## [research/experiments/five-row-q7-m21-class-split-20261114/output/summary.json](../../../research/experiments/five-row-q7-m21-class-split-20261114/output/summary.json)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (data): aggregate: 0 SAT / 0 INDET among the deciding instances; hardest {0} k=5 mp=0 (3,295,997 conflicts); decomposition soundness note
+## [research/experiments/five-row-q7-m21-class-split-20261114/report.md](../../../research/experiments/five-row-q7-m21-class-split-20261114/report.md)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (proof): claim, coverage and decomposition-completeness argument (k partitions the row count; minpos<=10 by the column mirror min(x1,20-x5)<=10), verification protocol, per-class results, scope and limits
+## [research/experiments/five-row-q7-m21-class-split-20261114/scripts/mkrecords57.js](../../../research/experiments/five-row-q7-m21-class-split-20261114/scripts/mkrecords57.js)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (source): records.jsonl / summary.json builder from raw kissat logs
+## [research/experiments/five-row-q7-m21-class-split-20261114/scripts/runall57.sh](../../../research/experiments/five-row-q7-m21-class-split-20261114/scripts/runall57.sh)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (source): deterministic sweep driver: 19 classes + k x minpos decomposition for {0},{1} + lex=H cross-checks + 5x18 positive control
+## [research/experiments/five-row-q7-m21-class-split-20261114/scripts/sat3.js](../../../research/experiments/five-row-q7-m21-class-split-20261114/scripts/sat3.js)
+
+- [K0821](../items/K0821-five-row-q7-m21-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (verbatim from the K0818 lane), plus kissat model decoding with census-free verifyConfig
 ## [research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json](../../../research/experiments/fixed-width-frontier-20261005/output/q57_independent_witness.json)
 
 - [K0332](../items/K0332-width-five-q7-stabilization-bounds.md) (data): 5×18の29石安全極大証人と全61空点のblocker
@@ -3412,6 +3436,12 @@
 ## [research/experiments/highdim-q5-cubes-20261016/verify_certificate.py](../../../research/experiments/highdim-q5-cubes-20261016/verify_certificate.py)
 
 - [K0435](../items/K0435-three-cube-five-point-lean-certificate-check.md) (verifier): 独立Python検証器
+## [research/experiments/higher-dimensional-fiber-trace-reduction-20261115/report.md](../../../research/experiments/higher-dimensional-fiber-trace-reduction-20261115/report.md)
+
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (proof): ファイバー交点数による全称縮約定理・2次元/3次元系・適用限界
+## [research/experiments/higher-dimensional-fiber-trace-reduction-20261115/verify_small_instance.py](../../../research/experiments/higher-dimensional-fiber-trace-reduction-20261115/verify_small_instance.py)
+
+- [K0824](../items/K0824-higher-dimensional-fiber-trace-reduction.md) (verifier): 共線三点を持つ非一般位置底面の全4096局面を直接幾何・Grundy再帰と照合
 ## [research/experiments/incidence-weighted-grundy-bound-20261107/output/audit.json](../../../research/experiments/incidence-weighted-grundy-bound-20261107/output/audit.json)
 
 - [K0688](../items/K0688-incidence-weighted-grundy-upper-bound.md) (data): 非自明51244安全状態での上界・xor監査と、局所重みによる改善件数
@@ -12889,6 +12919,15 @@
 ## [research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js](../../../research/experiments/row-deficient-sat-witnesses-20261114/scripts/row_deficient_sat.js)
 
 - [K0810](../items/K0810-sat-row-deficient-witnesses.md) (source): census完全列挙・SAT符号化（sequential counter）・自作CDCL/DPLL・census不使用独立検証器
+## [research/experiments/row-mirror-class-count-20261114/output/counts.json](../../../research/experiments/row-mirror-class-count-20261114/output/counts.json)
+
+- [K0822](../items/K0822-row-mirror-canonical-class-count.md) (data): w=1..14 orbits vs formula, all match (19 at w=5, 35 at w=6, 71 at w=7, 135 at w=8); sandbox-computed during the bash outage, reproducible by rerunning the script
+## [research/experiments/row-mirror-class-count-20261114/report.md](../../../research/experiments/row-mirror-class-count-20261114/report.md)
+
+- [K0822](../items/K0822-row-mirror-canonical-class-count.md) (proof): Burnside proof (fixed subsets under the mirror: 2^ceil(w/2) including empty), machinery identification, cross-checks against the recorded 19/35-class sweeps, w=7 prediction
+## [research/experiments/row-mirror-class-count-20261114/scripts/orbit_count.js](../../../research/experiments/row-mirror-class-count-20261114/scripts/orbit_count.js)
+
+- [K0822](../items/K0822-row-mirror-canonical-class-count.md) (source): standalone brute-force orbit counter vs the closed form (no dependencies)
 ## [research/experiments/sa-frontier-extension-20261114/output/results.jsonl](../../../research/experiments/sa-frontier-extension-20261114/output/results.jsonl)
 
 - [K0811](../items/K0811-sa-row-deficient-witnesses.md) (data): 第2弾29実行・6×26/6×27/6×21 witness座標・独立検証・抵抗run（SAパラメータ多様化込み）
@@ -12981,13 +13020,13 @@
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 2x8/2x9 q=4 controls (fastsat 121/535 conflicts bit-exact; kissat SAT 37 / UNSAT 316)
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/records.jsonl)
 
-- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 44 records m=19..60 all UNSAT: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 for m=19..51 (band1.sh, both solvers); m=52..60 kissat-only lean extension (lean2.sh/genfast.js) with def+lex cross-checks at 52/60
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 85 records m=19..100 all UNSAT: fastsat calibration (bit-exact with seven-row-inband results.jsonl for m=19..40) + kissat 4.0.4 for m=19..51 (band1.sh, both solvers); m=52..100 kissat-only lean extension (lean2.sh/genfast.js) with def+lex cross-checks at 52/60/100
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q10-band/summary.json)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): aggregate: all 44 UNSAT, per-width conflicts of both solvers (m=19..51) and lean extension rows (m=52..60)
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/records.jsonl)
 
-- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 50 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..60 (kissat def-no-lex, complete encoding; m=34..45 lean1.sh/sat2.js, m=46..60 lean2.sh/genfast.js) + def+lex cross-checks at m=24/33/52/60
+- [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): 91 records: SAT m=15..23 (witnesses dual-verified) + UNSAT m=24..100 (kissat def-no-lex, complete encoding; m=34..45 lean1.sh/sat2.js, m=46..100 lean2.sh/genfast.js) + def+lex cross-checks at m=24/33/52/60/100
 ## [research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json](../../../research/experiments/seven-row-q9-q10-bands-20261114/output/q9-witness-search/s7x23q9_none.witness.json)
 
 - [K0820](../items/K0820-seven-row-q9-q10-witness-bands.md) (data): largest-width (7,9) witness (55 stones at 7x23, rows 8,8,8,7,8,8,8); all 9 witnesses s7x15..23q9_none.witness.json dual-verified (sat.js verifyConfig + Python Fraction)
@@ -13033,6 +13072,15 @@
 ## [research/experiments/short-board-unique-carrier-20261031/verify.py](../../../research/experiments/short-board-unique-carrier-20261031/verify.py)
 
 - [K0578](../items/K0578-short-board-unique-curve-strong-solution.md) (verifier): 4×4格子31616盤の禁止辺全列挙、160盤の全安全局面再帰、q=4とq=5の鋭い境界反例
+## [research/experiments/sigma-side-window-p-inverse-20261114/output/sigma_table.json](../../../research/experiments/sigma-side-window-p-inverse-20261114/output/sigma_table.json)
+
+- [K0823](../items/K0823-sigma-side-window-p-inverse.md) (data): σ表・witness計数照合・U(84..90)の機械出力（all_census_match=true）
+## [research/experiments/sigma-side-window-p-inverse-20261114/report.md](../../../research/experiments/sigma-side-window-p-inverse-20261114/report.md)
+
+- [K0823](../items/K0823-sigma-side-window-p-inverse.md) (proof): 恒等式・σ全表・中心窓版n=26..34・解消されるopen項目・独立検証
+## [research/experiments/sigma-side-window-p-inverse-20261114/scripts/sigma_p_inverse.js](../../../research/experiments/sigma-side-window-p-inverse-20261114/scripts/sigma_p_inverse.js)
+
+- [K0823](../items/K0823-sigma-side-window-p-inverse.md) (verifier): P表逆像+6証人円のrep列挙・窓計数の独立実装（決定的・Node実行・照合失敗時exit 1）
 ## [research/experiments/six-row-deficient-witnesses-20261113/output/scan_results.json](../../../research/experiments/six-row-deficient-witnesses-20261113/output/scan_results.json)
 
 - [K0808](../items/K0808-six-row-deficient-witnesses-q568.md) (data): 全スキャン結果・witness座標・独立検証詳細・制御
@@ -13117,6 +13165,7 @@
 ## [research/experiments/six-row-q8-m20-class-split-20261114/scripts/sat3.js](../../../research/experiments/six-row-q8-m20-class-split-20261114/scripts/sat3.js)
 
 - [K0819](../items/K0819-six-row-q8-m20-deficient-nonexistence.md) (solver): class-split / exact-count (--krow) / minpos / lex encoder on the K0810 sat.js census + sat2.js counter core (verbatim from the K0818 lane), plus kissat model decoding with census-free verifyConfig
+- [K0822](../items/K0822-row-mirror-canonical-class-count.md) (solver): the class-split encoder whose --class=D semantics (rows in D <= q-2 stones, rows outside exactly q-1) and mirror-canonical sweep protocol define the classes counted
 ## [research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json](../../../research/experiments/solver-benchmarks/output/8x8-o-primary-summary.json)
 
 - [K0089](../items/K0089-n8-replication-of-n9-o-strata.md) (data): 凍結primary endpoint
@@ -14192,6 +14241,9 @@
 
 - [K0812](../items/K0812-new-exceptional-primes-3719-3727.md) (log): 発見の経緯（d走査の候補→単一CNF→証明書）と範囲の注意
 - [K0814](../items/K0814-attained-equality-3793-3803-3863.md) (log): 3701..3899 の走査全体（達成3・不達成2・未決18）
+## [research/log/2026-11-14-sigma-side-window-p-inverse.md](../../../research/log/2026-11-14-sigma-side-window-p-inverse.md)
+
+- [K0823](../items/K0823-sigma-side-window-p-inverse.md) (log): 発見経緯・重複回避の確認（P(w) witness探索がK0791/K0785に包含）・将来の再探索防止の記録
 ## [research/log/2026-11-14-width2-5-circle-point-max.md](../../../research/log/2026-11-14-width2-5-circle-point-max.md)
 
 - [K0813](../items/K0813-width2-5-circle-point-max-and-q9-q10-row-formula.md) (log): 判断・経緯・レジューム
