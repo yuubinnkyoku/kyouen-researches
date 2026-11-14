@@ -7,7 +7,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
 OUT = HERE / "output"
-MANIFEST_DIR = HERE.parents[1] / "n11-s2-5960-milestone5-20261112" / "output"
+MANIFEST_DIR = HERE.parent / "n11-s2-5960-milestone5-20261112" / "output"
 
 def load(name):
     return json.loads((OUT / name).read_text())
